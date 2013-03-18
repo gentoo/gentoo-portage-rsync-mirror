@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>radio</herd>
 	<use>
-		<flag name='audio'>enable audio output</flag>
-		<flag name='dot'>create dot graphs in documentation</flag>
 		<flag name='fcd'>enable Funcube Dongle source block</flag>
 		<flag name='filter'>enable filter signal processing blocks</flag>
 		<flag name='grc'>enable GNU Radio Companion graphical tool to design signal processing flow graphs</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.2 2013/03/16 17:58:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.3 2013/03/18 21:47:00 ulm Exp $
 
 EAPI=5
 
@@ -37,6 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.3.2-sanitise-paths.patch"
 	epatch "${FILESDIR}/${P}-parallel-make.patch"
 	epatch "${FILESDIR}/${P}-install-dirs.patch"
+	epatch "${FILESDIR}/${P}-fc-config.patch"
 	[[ ${CHOST} == *-solaris2.11 ]] \
 		&& epatch "${FILESDIR}/${PN}-2.3.2-solaris-2.11.patch"
 
