@@ -1,6 +1,14 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.305 2013/03/14 12:43:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.306 2013/03/18 09:05:20 polynomial-c Exp $
+
+*pidgin-2.10.7-r1 (18 Mar 2013)
+
+  18 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> -pidgin-2.10.7.ebuild,
+  +pidgin-2.10.7-r1.ebuild, +files/pidgin-2.10.7-link_sasl_in_irc_plugin.patch,
+  metadata.xml:
+  Fixed linking sasl with irc plugin (bug #461530). Comitted revbump straight
+  to stable. Added epatch_user. Added myself as maintainer.
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pidgin-2.10.7.ebuild:
   Stable for sparc, wrt bug #457580
