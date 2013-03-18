@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7597 2013/03/16 19:09:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7598 2013/03/18 03:18:19 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/package.use.force:
+  Force USE=xattr on sys-apps/portage for hardened for XATTR_PAX marking
 
   16 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Unmask wxGTK/wxpython:2.9 (bug #446998).
