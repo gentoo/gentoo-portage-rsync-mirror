@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.39 2013/01/03 01:18:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.40 2013/03/18 22:14:48 fauli Exp $
+
+  18 Mar 2013; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-pdf-viewer-0.9.3.ebuild:
+  Add subslot operator from EAPI 5 to rebuild automatically on poppler update,
+  see bug 462020
 
   03 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-pdf-viewer-0.9.3.ebuild:
