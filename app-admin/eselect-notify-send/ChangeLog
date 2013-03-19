@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-notify-send
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-notify-send/ChangeLog,v 1.1 2013/03/19 16:15:10 ssuominen Exp $
+
+*eselect-notify-send-0.1 (19 Mar 2013)
+
+  19 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +files/notify-send.eselect-0.1, +eselect-notify-send-0.1.ebuild:
+  Initial commit wrt #379941 by Michał Górny
+

@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.92 2013/03/19 15:47:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.93 2013/03/19 16:17:27 ssuominen Exp $
+
+*libnotify-0.7.5-r1 (19 Mar 2013)
+
+  19 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +libnotify-0.7.5-r1.ebuild:
+  Remove flawed USE="symlink" logic for /usr/bin/notify-send and convert to
+  app-admin/eselect-notify-send wrt #379941 by Michał Górny
 
   19 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> libnotify-0.7.5.ebuild:
   Use new EAPI to gain --disable-silent-rules for econf wrt #462320 by Agostino
