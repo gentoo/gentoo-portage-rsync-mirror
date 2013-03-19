@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1-r2.ebuild,v 1.2 2012/10/07 16:12:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1-r2.ebuild,v 1.4 2013/03/19 10:30:00 ago Exp $
 
 EAPI="3"
 # don't work with ruby19
@@ -15,7 +15,7 @@ SRC_URI="http://prime.sourceforge.jp/src/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
 IUSE=""
 
 ruby_add_bdepend "virtual/rubygems"

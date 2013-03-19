@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.197 2013/01/31 14:16:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.198 2013/03/19 09:55:37 chithanh Exp $
+
+  19 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-ati-7.1.0.ebuild:
+  Add configuration check for radeon KMS and against radeonfb, bug #461718.
 
 *xf86-video-ati-7.1.0 (31 Jan 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/shake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/ChangeLog,v 1.9 2013/03/19 00:01:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/ChangeLog,v 1.11 2013/03/19 10:30:11 ago Exp $
+
+  19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> shake-0.999.ebuild:
+  Stable for x86, wrt bug #462256
+
+  19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> shake-0.999.ebuild:
+  Stable for amd64, wrt bug #462256
 
   18 Mar 2013; Bernard Cafarelli <voyageur@gentoo.org> shake-0.999.ebuild:
   Use EAPI 5 to really fix bug #451768 (and #460572 at the same time)
@@ -35,4 +41,3 @@
 
   10 Feb 2008; Bernard Cafarelli <voyageur@gentoo.org> +shake-0.31.ebuild:
   Initial commit, bug #144042
-

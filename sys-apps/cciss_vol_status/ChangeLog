@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/cciss_vol_status
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.13 2013/01/14 12:33:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.15 2013/03/19 10:30:53 ago Exp $
+
+  19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> cciss_vol_status-1.10.ebuild:
+  Stable for x86, wrt bug #457466
+
+  19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> cciss_vol_status-1.10.ebuild:
+  Stable for amd64, wrt bug #457466
 
 *cciss_vol_status-1.10 (14 Jan 2013)
 
@@ -77,4 +83,3 @@
   Initial commit. Ebuild by me, but based on the submission by Peter Molnar
   <mp428@hszk.bme.hu> in bug #171244. AMD64 keyword approval from KingTaco,
   tested by me on a HP Proliant DL365 G1.
-
