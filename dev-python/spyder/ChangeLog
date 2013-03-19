@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.30 2013/03/01 13:49:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.31 2013/03/19 06:41:01 grozin Exp $
+
+*spyder-2.1.13-r1 (19 Mar 2013)
+
+  19 Mar 2013; Andrey Grozin <grozin@gentoo.org>
+  -files/spyder-2.1.2-disable_sphinx_dependency.patch, -spyder-2.1.9.ebuild,
+  -spyder-2.1.13.ebuild, +spyder-2.1.13-r1.ebuild,
+  +files/spyder-2.1.13-qt_requirements.patch:
+  Qt version detection fixed, closing #461658; thanks to Reinis Danne
+  <rei4dan@gmail.com> for the patch.
 
   01 Mar 2013; Kacper Kowalik <xarthisius@gentoo.org> spyder-2.1.13.ebuild:
   Fix dependency on PyQt4[svg]

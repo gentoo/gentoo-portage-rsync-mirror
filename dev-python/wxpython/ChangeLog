@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.176 2013/03/04 08:53:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.177 2013/03/19 06:41:44 mgorny Exp $
+
+  19 Mar 2013; Michał Górny <mgorny@gentoo.org> wxpython-2.8.12.1-r1.ebuild,
+  wxpython-2.9.4.1-r1.ebuild:
+  Use separate platlib & purelib build directory, fixes bug #455332.
 
   04 Mar 2013; Ian Delaney <idella4@gentoo.org>
   files/wxpython-2.8.12-drop-categories.patch:

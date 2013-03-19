@@ -1,0 +1,11 @@
+--- spyderlib/requirements.py	2013-03-13 18:55:51.363304516 +0200
++++ spyderlib/requirements.py	2013-03-13 18:58:07.200608283 +0200
+@@ -14,6 +14,8 @@
+     """Return True if actual_str version fit required_str requirement"""
+     actual = actual_str.split('.')
+     required = required_str.split('.')
++    actual = [int(i) for i in actual]
++    required = [int(i.strip('+')) for i in required]
+     return actual[0] < required[0] or \
+            (actual[0] == required[0] and actual[1] < required[1])
+ 

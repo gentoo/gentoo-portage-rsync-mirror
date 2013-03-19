@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r1.ebuild,v 1.2 2013/03/04 06:15:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r1.ebuild,v 1.3 2013/03/19 06:41:44 mgorny Exp $
 
 EAPI=5
 
@@ -84,8 +84,15 @@ python_configure_all() {
 	)
 }
 
+python_compile() {
+	# We need to have separate libdirs due to hackery, bug #455332.
+	distutils-r1_python_compile \
+		build --build-purelib "${BUILD_DIR}"/lib.common
+}
+
 python_install() {
-	distutils-r1_python_install
+	distutils-r1_python_install \
+		build --build-purelib "${BUILD_DIR}"/lib.common
 
 	# adjust the filenames for wxPython slots.
 	local file
