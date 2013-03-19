@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.125 2013/01/08 09:14:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.126 2013/03/19 08:47:33 nirbheek Exp $
+
+*libmtp-1.1.6 (19 Mar 2013)
+
+  19 Mar 2013; Nirbheek Chauhan <nirbheek@gentoo.org> +libmtp-1.1.6.ebuild:
+  Add libmtp 1.1.6, adds several Android devices and bug fixes
 
   08 Jan 2013; Tim Harder <radhermit@gentoo.org> libmtp-9999.ebuild:
   Update git repo uri for live ebuild.

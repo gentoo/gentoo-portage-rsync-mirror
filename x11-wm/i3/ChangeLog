@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.29 2013/03/12 14:19:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.30 2013/03/19 08:53:16 xarthisius Exp $
+
+*i3-4.5.1 (19 Mar 2013)
+
+  19 Mar 2013; Kacper Kowalik <xarthisius@gentoo.org> +i3-4.5.1.ebuild,
+  -i3-4.5.ebuild:
+  Version bump, drop buggy release
 
 *i3-4.5 (12 Mar 2013)
 
