@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.195 2013/03/10 16:23:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.196 2013/03/19 21:27:27 ago Exp $
+
+  19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> -git-1.7.12-r1.ebuild,
+  -git-1.7.12-r2.ebuild, -git-1.7.12.3-r1.ebuild, -git-1.7.12.3.ebuild,
+  -git-1.7.12.ebuild, -git-1.8.0-r1.ebuild, -git-1.8.0.ebuild,
+  -git-1.8.1.1.ebuild, -git-1.8.1.2.ebuild, -git-1.8.1.4.ebuild,
+  -git-1.8.1.ebuild:
+  Remove old
 
   10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> git-1.8.1.5.ebuild:
   Stable for s390, wrt bug #459158
