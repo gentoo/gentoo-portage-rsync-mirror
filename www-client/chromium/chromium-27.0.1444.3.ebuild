@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1430.0.ebuild,v 1.6 2013/03/09 05:25:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1444.3.ebuild,v 1.1 2013/03/19 22:49:07 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux system-sqlite tcmalloc"
+IUSE="cups gnome gnome-keyring gps kerberos selinux system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -56,9 +56,8 @@ RDEPEND="app-accessibility/speech-dispatcher:=
 	!arm? ( !x86? ( >=media-libs/mesa-9.1:=[gles2] ) )
 	media-libs/opus:=
 	media-libs/speex:=
-	pulseaudio? ( media-sound/pulseaudio:= )
+	media-sound/pulseaudio:=
 	>=media-video/ffmpeg-1.0:=[opus]
-	>=net-libs/libsrtp-1.4.4_p20121108:=
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -124,17 +123,17 @@ pkg_setup() {
 src_prepare() {
 	if ! use arm; then
 		mkdir -p out/Release/obj/gen/sdk/toolchain || die
-		cp -a /usr/$(get_libdir)/nacl-toolchain-newlib \
+		# Do not preserve SELinux context, bug #460892 .
+		cp -a --no-preserve=context /usr/$(get_libdir)/nacl-toolchain-newlib \
 			out/Release/obj/gen/sdk/toolchain/linux_x86_newlib || die
 		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
 
-	# Fix build without NaCl glibc toolchain.
-	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
-
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
+
+	# Fix build issue with smhasher, bug #459126 .
+	epatch "${FILESDIR}/${PN}-smhasher-r0.patch"
 
 	epatch_user
 
@@ -155,6 +154,7 @@ src_prepare() {
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
+		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
@@ -214,6 +214,7 @@ src_configure() {
 
 	# Use system-provided libraries.
 	# TODO: use_system_hunspell (upstream changes needed).
+	# TODO: use_system_libsrtp (bug #459932).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
@@ -226,7 +227,6 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
-		-Duse_system_libsrtp=1
 		-Duse_system_libusb=1
 		-Duse_system_libvpx=1
 		-Duse_system_libwebp=1
@@ -267,7 +267,6 @@ src_configure() {
 		$(gyp_use gps linux_use_libgps)
 		$(gyp_use gps linux_link_libgps)
 		$(gyp_use kerberos)
-		$(gyp_use pulseaudio)
 		$(gyp_use selinux selinux)"
 
 	if use system-sqlite; then

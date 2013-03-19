@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.848 2013/03/19 16:42:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.849 2013/03/19 22:49:07 phajdan.jr Exp $
+
+*chromium-27.0.1444.3 (19 Mar 2013)
+
+  19 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-27.0.1430.0.ebuild, +chromium-27.0.1444.3.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Remove old.
 
 *chromium-26.0.1410.33-r1 (19 Mar 2013)
 
