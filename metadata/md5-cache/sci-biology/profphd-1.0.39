@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=dev-lang/perl
+DESCRIPTION=Secondary structure and solvent accessibility predictor
+EAPI=5
+HOMEPAGE=https://rostlab.org/owiki/index.php/PROFphd_-_Secondary_Structure,_Solvent_Accessibility_and_Transmembrane_Helices_Prediction
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl
+SLOT=0
+SRC_URI=mirror://debian/pool/main/p/profphd/profphd_1.0.39.orig.tar.xz
+_md5_=3b9b799edbb5310b537b86f52f5e48e9

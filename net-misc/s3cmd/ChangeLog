@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/s3cmd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.21 2013/03/19 10:34:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.22 2013/03/19 11:05:31 titanofold Exp $
+
+  19 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org> -s3cmd-0.9.9.91.ebuild,
+  -s3cmd-1.0.0.ebuild:
+  Clean out old versions.
 
   19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> s3cmd-1.0.1.ebuild:
   Stable for x86, wrt bug #460766
