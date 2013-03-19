@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.743 2013/03/18 10:07:44 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.744 2013/03/19 06:13:41 mgorny Exp $
+
+  19 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Pass --build-platlib and --build-purelib separately to distutils. This allows
+  to change them to different locations if necessary (bug #455332).
 
   18 Mar 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
   Update the maintainer to systemd@.

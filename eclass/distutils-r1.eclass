@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.64 2013/03/13 21:51:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.65 2013/03/19 06:13:41 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -234,8 +234,17 @@ esetup.py() {
 		add_args+=(
 			build
 			--build-base "${BUILD_DIR}"
-			# using a single directory for them helps us export ${PYTHONPATH}
-			--build-lib "${BUILD_DIR}/lib"
+
+			# using a single directory for them helps us export
+			# ${PYTHONPATH} and ebuilds find the sources independently
+			# of whether the package installs extensions or not
+			#
+			# note: due to some packages (wxpython) relying on separate
+			# platlib & purelib dirs, we do not set --build-lib (which
+			# can not be overriden with --build-*lib)
+			--build-platlib "${BUILD_DIR}/lib"
+			--build-purelib "${BUILD_DIR}/lib"
+
 			# make the ebuild writer lives easier
 			--build-scripts "${BUILD_DIR}/scripts"
 		)
