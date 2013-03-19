@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r7.ebuild,v 1.2 2013/03/17 14:46:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r7.ebuild,v 1.3 2013/03/19 07:07:15 jlec Exp $
 
 EAPI=5
 
@@ -170,10 +170,7 @@ src_install(){
 	find "${ED}"/usr/libexec/${PN} -type f -exec chmod 755 '{}' \;
 
 	cd "${MY_S}"
-	insinto $(python_get_sitedir)
-	doins -r *
-	exeinto $(python_get_sitedir)
-	doexe "${MY_B}"/lib/*
+	python_domodule * "${MY_B}"/lib/*
 	rm -rvf "${MY_B}/lib" >> "${T}"/clean.log || die
 
 	sed \
