@@ -1,7 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/shake-0.999.ebuild,v 1.2 2013/01/21 12:33:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/shake-0.999.ebuild,v 1.3 2013/03/19 00:01:48 voyageur Exp $
 
+EAPI=5
 inherit cmake-utils eutils
 
 DESCRIPTION="defragmenter that runs in userspace while the system is used"
