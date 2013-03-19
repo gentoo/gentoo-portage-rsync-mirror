@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.229 2013/02/24 17:36:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.230 2013/03/19 19:13:28 flameeyes Exp $
+
+  19 Mar 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  actionmailer-3.2.12.ebuild:
+  Fix dependency on dev-ruby/mail slot.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> actionmailer-2.3.17.ebuild:
   Stable for x86, wrt bug #456840

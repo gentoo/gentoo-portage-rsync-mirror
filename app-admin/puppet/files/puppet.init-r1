@@ -14,11 +14,11 @@ command="/usr/bin/puppet"
 command_args="agent --pidfile ${pidfile} ${PUPPET_EXTRA_OPTS}"
 
 depend() {
-	need localmount net
+	need localmount
 	use dns logger puppetmaster netmount nfsmount
 }
 
 start_pre() {
 	checkpath --directory --owner puppet:puppet "${PUPPET_PID_DIR}"
-    checkpath --directory --owner puppet:puppet --mode 750 ${PUPPET_LOG_DIR}
+	checkpath --directory --owner puppet:puppet --mode 750 ${PUPPET_LOG_DIR}
 }
