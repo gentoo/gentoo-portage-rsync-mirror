@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1102 2013/03/17 19:14:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1103 2013/03/19 10:33:33 ago Exp $
+
+  19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.4.34.ebuild:
+  Stable for x86, wrt bug #459814
 
 *gentoo-sources-3.2.40-r1 (17 Mar 2013)
 *gentoo-sources-3.7.10-r1 (17 Mar 2013)
