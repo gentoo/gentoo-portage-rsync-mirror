@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3-r3.ebuild,v 1.11 2013/03/19 03:33:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3-r3.ebuild,v 1.12 2013/03/19 04:04:21 vapier Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -168,6 +168,7 @@ src_configure() {
 
 		# The configure script assumes it's buggy when cross-compiling.
 		export ac_cv_buggy_getaddrinfo=no
+		export ac_cv_have_long_long_format=yes
 	fi
 
 	# Export CXX so it ends up in /usr/lib/python2.X/config/Makefile.
@@ -285,6 +286,10 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins -r Tools || die "doins failed"
 	fi
+	insinto /usr/share/gdb/auto-load/usr/$(get_libdir) #443510
+	local libname=$(printf 'e:\n\t@echo $(INSTSONAME)\ninclude Makefile\n' | \
+		emake --no-print-directory -s -f - 2>/dev/null)
+	newins Tools/gdb/libpython.py "${libname}"-gdb.py
 
 	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
 	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
