@@ -6,10 +6,12 @@
 		<email>billie@gentoo.org</email>
 		<name>Daniel Pielmeier</name>
 	</maintainer>
-	<maintainer>
-		<email>bugs@portagefilelist.de</email>
-		<description>Upstream author, please CC on bugs</description>
-	</maintainer>
+	<upstream>
+		<maintainer>
+			<email>bugs@portagefilelist.de</email>
+			<description>Upstream author, please CC on bugs</description>
+		</maintainer>
+	</upstream>
 	<use>
 		<flag name='network-cron'>Adds a cron job which does a weekly submit of the package database</flag>
 	</use>
