@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyspf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.19 2012/05/09 03:20:55 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.20 2013/03/19 20:52:40 nimiux Exp $
+
+  19 Mar 2013; Chema Alonso <nimiux@gentoo.org> pyspf-2.0.7.ebuild:
+  Stable for amd64 wrt bug #459542
 
   09 May 2012; Mike Gilbert <floppym@gentoo.org> pyspf-2.0.5.ebuild,
   pyspf-2.0.6.ebuild, pyspf-2.0.7.ebuild:
