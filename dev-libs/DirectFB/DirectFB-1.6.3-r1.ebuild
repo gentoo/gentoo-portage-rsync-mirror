@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.6.3-r1.ebuild,v 1.1 2013/02/09 16:10:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.6.3-r1.ebuild,v 1.2 2013/03/19 20:13:40 vapier Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -60,7 +60,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-flags.patch \
 		"${FILESDIR}"/${P}-pkgconfig.patch \
 		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-setregion.patch
+		"${FILESDIR}"/${P}-setregion.patch \
+		"${FILESDIR}"/${P}-atomic-fix-compiler-error-when-building-for-thumb2.patch
 
 	mv configure.{in,ac} || die
 	eautoreconf

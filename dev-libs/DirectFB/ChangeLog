@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.131 2013/02/09 16:10:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.132 2013/03/19 20:13:40 vapier Exp $
+
+  19 Mar 2013; Mike Frysinger <vapier@gentoo.org> +files/DirectFB-1.6.3-atomic-f
+  ix-compiler-error-when-building-for-thumb2.patch, DirectFB-1.6.3-r1.ebuild:
+  Add fix from ChromiumOS for building on arm targets.
 
 *DirectFB-1.6.3-r1 (09 Feb 2013)
 
