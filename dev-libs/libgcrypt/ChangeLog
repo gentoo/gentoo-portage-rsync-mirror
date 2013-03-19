@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.166 2013/02/20 22:58:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.167 2013/03/19 03:36:02 radhermit Exp $
+
+*libgcrypt-1.5.1 (19 Mar 2013)
+
+  19 Mar 2013; Tim Harder <radhermit@gentoo.org> +libgcrypt-1.5.1.ebuild:
+  Version bump and add subslot.
 
   20 Feb 2013; Zac Medico <zmedico@gentoo.org> libgcrypt-1.5.0-r4.ebuild:
   Add ~arm-linux keyword.
