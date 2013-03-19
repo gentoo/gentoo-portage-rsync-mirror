@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.5.ebuild,v 1.11 2013/02/25 09:15:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.5.ebuild,v 1.12 2013/03/19 15:47:15 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools gnome.org
 
 DESCRIPTION="A library for sending desktop notifications"
@@ -35,7 +35,7 @@ src_prepare() {
 		sed -i -e '/PKG_CHECK_MODULES(TESTS/d' configure.ac || die
 	fi
 
-	if has_version 'dev-libs/gobject-introspection'; then
+	if has_version dev-libs/gobject-introspection; then
 		eautoreconf
 	else
 		AT_M4DIR=${WORKDIR} eautoreconf
@@ -50,7 +50,7 @@ src_configure() {
 
 src_install() {
 	default
-	rm -f "${ED}"usr/lib*/${PN}.la
+	prune_libtool_files
 
 	mv -vf "${ED}"usr/bin/{,${PN}-}notify-send #379941
 	use symlink && dosym ${PN}-notify-send /usr/bin/notify-send

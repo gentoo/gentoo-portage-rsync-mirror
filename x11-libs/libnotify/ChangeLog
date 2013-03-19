@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.90 2013/02/25 09:15:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.92 2013/03/19 15:47:15 ssuominen Exp $
+
+  19 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> libnotify-0.7.5.ebuild:
+  Use new EAPI to gain --disable-silent-rules for econf wrt #462320 by Agostino
+  Sarubbo
+
+  19 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -libnotify-0.7.4.ebuild,
+  -libnotify-0.7.4-r1.ebuild:
+  old
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> libnotify-0.7.5.ebuild:
   Add ~arm-linux keyword.
