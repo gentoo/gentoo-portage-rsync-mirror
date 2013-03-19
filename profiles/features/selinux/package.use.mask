@@ -1,11 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.use.mask,v 1.4 2012/08/08 19:37:41 swift Exp $
-
-# Sven Vermeulen <swift@gentoo.org> (08 Aug 2012)
-# sys-apps/portage SELinux integration code still requires Python 2.
-# See bug #430488
-sys-apps/portage python3
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.use.mask,v 1.5 2013/03/19 19:47:50 swift Exp $
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
 # Unmask when we get HAL 0.5.10 straightened out

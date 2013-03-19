@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.63 2013/03/17 10:35:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.64 2013/03/19 19:47:50 swift Exp $
+
+  19 Mar 2013; Sven Vermeulen <swift@gentoo.org> selinux/package.use.mask:
+  Fix bug #430488 - forgot to remove package.use.mask entry
 
   17 Mar 2013; Sven Vermeulen <swift@gentoo.org> selinux/package.use.force:
   Python 3 support back on track for SELinux integrated code in Portage (bug
