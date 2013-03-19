@@ -1,0 +1,21 @@
+diff -ur Werkzeug-0.8.3.orig/werkzeug/testsuite/debug.py Werkzeug-0.8.3/werkzeug/testsuite/debug.py
+--- werkzeug/testsuite/debug.py	2011-09-30 18:49:32.000000000 +0800
++++ werkzeug/testsuite/debug.py	2013-03-20 00:31:07.850897531 +0800
+@@ -92,9 +92,14 @@
+             def __repr__(self):
+                 1/0
+ 
+-        assert debug_repr(Foo()) == \
+-            u'<span class="brokenrepr">&lt;broken repr (ZeroDivisionError: ' \
+-            u'integer division or modulo by zero)&gt;</span>'
++        if hasattr(sys, 'pypy_version_info'):
++            assert debug_repr(Foo()) == \
++                u'<span class="brokenrepr">&lt;broken repr (ZeroDivisionError: ' \
++                u'integer division by zero)&gt;</span>'
++        else:
++            assert debug_repr(Foo()) == \
++                u'<span class="brokenrepr">&lt;broken repr (ZeroDivisionError: ' \
++                u'integer division or modulo by zero)&gt;</span>'
+ 
+ 
+ class DebugHelpersTestCase(WerkzeugTestCase):
