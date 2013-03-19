@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.6.0.1.ebuild,v 1.2 2012/08/14 13:51:17 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.2.ebuild,v 1.1 2013/03/19 13:45:04 chithanh Exp $
 
 EAPI=4
-inherit cmake-utils nsplugins multilib
+inherit cmake-utils nsplugins multilib toolchain-funcs
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="http://lightspark.sourceforge.net/"
@@ -18,11 +18,11 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	>=dev-libs/boost-1.42
 	dev-libs/libpcre[cxx]
 	media-fonts/liberation-fonts
+	media-libs/libpng
 	media-libs/libsdl
-	|| (
-		>=sys-devel/llvm-3
-		=sys-devel/llvm-2.8*
-	)
+	>=sys-devel/gcc-4.6.0[cxx]
+	>=sys-devel/llvm-3
+	<sys-devel/llvm-3.3
 	x11-libs/cairo
 	x11-libs/gtk+:2
 	x11-libs/libX11
@@ -45,7 +45,8 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	)
 	rtmp? (
 		media-video/rtmpdump
-	)"
+	)
+	virtual/jpeg"
 DEPEND="${RDEPEND}
 	amd64? ( dev-lang/nasm )
 	x86? ( dev-lang/nasm )
@@ -53,15 +54,14 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P/_rc*/}
 
-PATCHES=(
-	"${FILESDIR}"/${P}-gcc-4.5_0000.patch
-	"${FILESDIR}"/${P}-gcc-4.5_0001.patch
-	"${FILESDIR}"/${P}-gcc-4.5_0002.patch
-	"${FILESDIR}"/${P}-gcc-4.5_0003.patch
-	"${FILESDIR}"/${P}-gcc-4.5_0004.patch
-	"${FILESDIR}"/${P}-gcc-4.5_0005.patch
-	"${FILESDIR}"/${P}-gcc-4.5_0006.patch
-)
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		if [[ $(gcc-major-version) == 4 && $(gcc-minor-version) -lt 6 || $(gcc-major-version) -lt 4 ]] ; then
+			eerror "You need at least sys-devel/gcc-4.6.0"
+			die "You need at least sys-devel/gcc-4.6.0"
+		fi
+	fi
+}
 
 src_configure() {
 	local audiobackends
