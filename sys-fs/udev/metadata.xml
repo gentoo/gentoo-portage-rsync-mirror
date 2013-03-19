@@ -8,6 +8,7 @@
   <flag name="action_modeswitch">switch Mobile Action cables into serial mode</flag>
   <flag name="edd">create /dev/disk/by-id/edd-* links for BIOS EDD data</flag>
   <flag name="extras">Compile udev-extras requiring external dependencies</flag>
+  <flag name="firmware-loader">Enable deprecated firmware loader for use with older kernels</flag>
   <flag name="floppy">create historical floppy kernel device nodes (/dev/fd0h1440, ...)</flag>
   <flag name="gudev">enable libudev gobject interface</flag>
   <flag name="hwdb">read vendor/device string database and add it to udev database</flag>

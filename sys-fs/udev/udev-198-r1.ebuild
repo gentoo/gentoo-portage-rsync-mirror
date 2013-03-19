@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.13 2013/03/13 23:48:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.14 2013/03/19 12:30:32 ssuominen Exp $
 
 EAPI=4
 
@@ -75,8 +75,6 @@ PDEPEND=">=virtual/udev-197-r1
 	openrc? ( >=sys-fs/udev-init-scripts-23 )"
 
 S=${WORKDIR}/systemd-${PV}
-
-QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV() {
 	if kernel_is lt ${KV_min//./ }; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.200 2013/03/13 23:48:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.201 2013/03/19 12:30:32 ssuominen Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
+IUSE="acl doc firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
@@ -75,8 +75,6 @@ PDEPEND=">=virtual/udev-197-r1
 	openrc? ( >=sys-fs/udev-init-scripts-23 )"
 
 S=${WORKDIR}/systemd-${PV}
-
-QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV() {
 	if kernel_is lt ${KV_min//./ }; then
@@ -236,6 +234,11 @@ src_configure() {
 	if use introspection; then
 		econf_args+=(
 			--enable-introspection=$(usex introspection)
+		)
+	fi
+	if use firmware-loader; then
+		econf_args+=(
+			--with-firmware-dirs="/lib/firmware/updates:/lib/firmware"
 		)
 	fi
 	econf "${econf_args[@]}"

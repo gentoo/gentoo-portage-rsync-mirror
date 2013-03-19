@@ -5823,6 +5823,7 @@ sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app
 sys-fs/udev:action_modeswitch - switch Mobile Action cables into serial mode
 sys-fs/udev:edd - create /dev/disk/by-id/edd-* links for BIOS EDD data
 sys-fs/udev:extras - Compile udev-extras requiring external dependencies
+sys-fs/udev:firmware-loader - Enable deprecated firmware loader for use with older kernels
 sys-fs/udev:floppy - create historical floppy kernel device nodes (/dev/fd0h1440, ...)
 sys-fs/udev:gudev - enable libudev gobject interface
 sys-fs/udev:hwdb - read vendor/device string database and add it to udev database
