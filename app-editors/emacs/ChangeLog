@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.564 2013/03/18 23:13:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.565 2013/03/19 21:35:54 ulm Exp $
+
+  19 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r5.ebuild,
+  emacs-24.3.ebuild:
+  Prefer motif to athena if both USE flags are set.
 
   18 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
   The emul-linux-x86 libs are not needed for the x32 ABI.

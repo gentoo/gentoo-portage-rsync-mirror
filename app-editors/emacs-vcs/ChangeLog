@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.126 2013/03/13 07:27:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.127 2013/03/19 21:33:37 ulm Exp $
+
+  19 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.3.9999.ebuild:
+  Prefer motif to athena if both USE flags are set.
 
   13 Mar 2013; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-24.2.93.ebuild,
   emacs-vcs-24.3.9999.ebuild:

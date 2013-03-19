@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.5 2013/03/13 07:21:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.6 2013/03/19 21:33:37 ulm Exp $
 
 EAPI=5
 
@@ -73,10 +73,10 @@ RDEPEND="sys-libs/ncurses
 			!gtk3? ( x11-libs/gtk+:2 )
 		)
 		!gtk? (
-			Xaw3d? ( x11-libs/libXaw3d )
-			!Xaw3d? (
-				athena? ( x11-libs/libXaw )
-				!athena? ( motif? ( >=x11-libs/motif-2.3:0 ) )
+			motif? ( >=x11-libs/motif-2.3:0 )
+			!motif? (
+				Xaw3d? ( x11-libs/libXaw3d )
+				!Xaw3d? ( athena? ( x11-libs/libXaw ) )
 			)
 		)
 	)"
@@ -169,22 +169,24 @@ src_configure() {
 				"USE flag \"m17n-lib\" has no effect if \"xft\" is not set."
 		fi
 
+		local f
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
 			myconf+=" --with-x-toolkit=$(usex gtk3 gtk3 gtk2)"
-			local f
-			for f in athena Xaw3d motif; do
-				use ${f} && ewarn "USE flag \"${f}\" ignored" \
-					"(superseded by \"gtk\")"
+			for f in motif Xaw3d athena; do
+				use ${f} && ewarn \
+					"USE flag \"${f}\" has no effect if \"gtk\" is set."
+			done
+		elif use motif; then
+			einfo "Configuring to build with Motif toolkit"
+			myconf+=" --with-x-toolkit=motif"
+			for f in Xaw3d athena; do
+				use ${f} && ewarn \
+					"USE flag \"${f}\" has no effect if \"motif\" is set."
 			done
 		elif use athena || use Xaw3d; then
 			einfo "Configuring to build with Athena/Lucid toolkit"
 			myconf+=" --with-x-toolkit=lucid $(use_with Xaw3d xaw3d)"
-			use motif && ewarn "USE flag \"motif\" ignored" \
-				"(superseded by \"athena\" or \"Xaw3d\")"
-		elif use motif; then
-			einfo "Configuring to build with Motif toolkit"
-			myconf+=" --with-x-toolkit=motif"
 		else
 			einfo "Configuring to build with no toolkit"
 			myconf+=" --with-x-toolkit=no"

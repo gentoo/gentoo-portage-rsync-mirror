@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.14 2013/03/11 08:27:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.15 2013/03/19 21:35:54 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -49,10 +49,10 @@ RDEPEND="sys-libs/ncurses
 		)
 		gtk? ( x11-libs/gtk+:2 )
 		!gtk? (
-			Xaw3d? ( x11-libs/libXaw3d )
-			!Xaw3d? (
-				athena? ( x11-libs/libXaw )
-				!athena? ( motif? ( >=x11-libs/motif-2.3:0 ) )
+			motif? ( >=x11-libs/motif-2.3:0 )
+			!motif? (
+				Xaw3d? ( x11-libs/libXaw3d )
+				!Xaw3d? ( athena? ( x11-libs/libXaw ) )
 			)
 		)
 	)"
@@ -141,22 +141,24 @@ src_configure() {
 		# GTK+ is the default toolkit if USE=gtk is chosen with other
 		# possibilities. Emacs upstream thinks this should be standard
 		# policy on all distributions
+		local f
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
 			myconf="${myconf} --with-x-toolkit=gtk"
-			local f
-			for f in athena Xaw3d motif; do
-				use ${f} && ewarn "USE flag \"${f}\" ignored" \
-					"(superseded by \"gtk\")"
+			for f in motif Xaw3d athena; do
+				use ${f} && ewarn \
+					"USE flag \"${f}\" has no effect if \"gtk\" is set."
+			done
+		elif use motif; then
+			einfo "Configuring to build with Motif toolkit"
+			myconf="${myconf} --with-x-toolkit=motif"
+			for f in Xaw3d athena; do
+				use ${f} && ewarn \
+					"USE flag \"${f}\" has no effect if \"motif\" is set."
 			done
 		elif use athena || use Xaw3d; then
 			einfo "Configuring to build with Athena/Lucid toolkit"
 			myconf="${myconf} --with-x-toolkit=lucid $(use_with Xaw3d xaw3d)"
-			use motif && ewarn "USE flag \"motif\" ignored" \
-				"(superseded by \"athena\" or \"Xaw3d\")"
-		elif use motif; then
-			einfo "Configuring to build with Motif toolkit"
-			myconf="${myconf} --with-x-toolkit=motif"
 		else
 			einfo "Configuring to build with no toolkit"
 			myconf="${myconf} --with-x-toolkit=no"
