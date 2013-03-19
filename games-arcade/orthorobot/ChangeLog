@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/orthorobot
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/orthorobot/ChangeLog,v 1.1 2013/03/19 08:11:29 pinkbyte Exp $
+
+*orthorobot-0 (19 Mar 2013)
+
+  19 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +orthorobot-0.ebuild,
+  +metadata.xml:
+  Initial import from lua overlay. Ebuild by Vadim Misbakh-Soloviov <mva AT
+  mva.name>
+
