@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.34 2013/02/10 02:55:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.35 2013/03/19 02:25:59 floppym Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ IUSE="test"
 DEPEND="
 	>=dev-python/feedparser-5.1.3[${PYTHON_USEDEP}]
 	>=dev-python/sqlalchemy-0.7
+	<dev-python/sqlalchemy-0.7.99
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup:4[${PYTHON_USEDEP}]

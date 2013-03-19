@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.37 2013/02/14 19:08:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.38 2013/03/19 02:25:59 floppym Exp $
+
+  19 Mar 2013; Mike Gilbert <floppym@gentoo.org> -flexget-1.0.3279.ebuild,
+  -flexget-1.0.3344.ebuild, flexget-1.0.3352.ebuild, flexget-9999.ebuild:
+  Add upper bound on sqlalchemy dependency, bug 462260.
 
 *flexget-1.0.3352 (14 Feb 2013)
 
