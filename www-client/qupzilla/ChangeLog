@@ -1,6 +1,12 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.24 2013/03/12 12:34:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.25 2013/03/19 13:17:43 yngwin Exp $
+
+*qupzilla-1.4.1 (19 Mar 2013)
+
+  19 Mar 2013; Ben de Groot <yngwin@gentoo.org> +qupzilla-1.4.1.ebuild,
+  -qupzilla-1.4.0.ebuild:
+  Version bump (bugfix release). Remove previous version.
 
 *qupzilla-1.4.0 (12 Mar 2013)
 

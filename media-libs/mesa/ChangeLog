@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.464 2013/03/10 21:54:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.465 2013/03/19 13:03:09 chithanh Exp $
+
+  19 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-9.1.ebuild:
+  Add patches for llvm-3.3 compatibility and depend on llvm with r600 shader
+  compiler enabled.
 
   10 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-9.0.1.ebuild, mesa-9.0.2.ebuild, mesa-9.0.3.ebuild, mesa-9.1.ebuild:
