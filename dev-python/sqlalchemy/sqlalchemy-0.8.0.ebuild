@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.8.0.ebuild,v 1.1 2013/03/17 05:38:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.8.0.ebuild,v 1.2 2013/03/19 03:06:24 floppym Exp $
 
 EAPI=5
 # py3 appears underdone, 
@@ -24,8 +24,8 @@ IUSE="doc examples firebird mssql mysql postgres +sqlite test"
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	firebird? ( dev-python/kinterbasdb )
 	mssql? ( dev-python/pymssql )
-	mysql? ( dev-python/mysql-python )
-	postgres? ( >=dev-python/psycopg-2 )
+	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
+	postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )
 	sqlite? (
 		>=dev-db/sqlite-3.3.13 )"
 DEPEND="${RDEPEND}
@@ -34,8 +34,6 @@ DEPEND="${RDEPEND}
 		>=dev-python/nose-0.10.4[${PYTHON_USEDEP}]
 	)"
 
-# py26 tests needs
-DISTUTILS_NO_PARALLEL_BUILD=1
 S="${WORKDIR}/${MY_P}"
 
 python_prepare_all() {
@@ -45,6 +43,7 @@ python_prepare_all() {
 }
 
 python_configure_all() {
+	# Make sure to disable this if python3 support is added.
 	append-flags -fno-strict-aliasing
 }
 
@@ -52,7 +51,14 @@ python_test() {
 	"${PYTHON}" sqla_nose.py || die
 }
 
-src_install_all() {
+src_test() {
+	# Possible problem in test.ext.test_serializer.SerializeTest.test_query
+	# AssertionError: desired statement count 1 does not match 2
+	# Investigate if you are bored.
+	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
+}
+
+python_install_all() {
 	if use doc; then
 		pushd doc > /dev/null
 		rm -fr build

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.15.ebuild,v 1.2 2013/02/22 19:52:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.17.ebuild,v 1.1 2013/03/19 03:09:54 tetromino Exp $
 
 EAPI="5"
 
