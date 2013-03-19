@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.8.ebuild,v 1.16 2012/07/30 18:09:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.8.ebuild,v 1.17 2013/03/19 02:45:18 vapier Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -20,7 +20,7 @@ LICENSE="PSF-2"
 SLOT="2.6"
 PYTHON_ABI="${SLOT}"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
+IUSE="-berkdb build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
 RDEPEND="app-arch/bzip2
 		>=sys-libs/zlib-1.1.3

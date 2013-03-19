@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0.ebuild,v 1.3 2012/10/02 02:26:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0.ebuild,v 1.4 2013/03/19 02:45:18 vapier Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -20,7 +20,7 @@ LICENSE="PSF-2"
 SLOT="3.3"
 PYTHON_ABI="${SLOT}"
 KEYWORDS=""
-IUSE="build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk wininst +xml"
+IUSE="build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk wininst +xml"
 
 RDEPEND="app-arch/bzip2
 		>=sys-libs/zlib-1.1.3
