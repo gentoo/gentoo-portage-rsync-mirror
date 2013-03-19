@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.201 2013/03/19 12:30:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.202 2013/03/19 12:39:23 ssuominen Exp $
 
 EAPI=4
 
@@ -238,7 +238,7 @@ src_configure() {
 	fi
 	if use firmware-loader; then
 		econf_args+=(
-			--with-firmware-dirs="/lib/firmware/updates:/lib/firmware"
+			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
 		)
 	fi
 	econf "${econf_args[@]}"

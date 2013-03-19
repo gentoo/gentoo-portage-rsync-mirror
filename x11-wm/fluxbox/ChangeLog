@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.306 2013/01/08 21:32:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.307 2013/03/19 12:42:54 jer Exp $
+
+*fluxbox-1.3.5 (19 Mar 2013)
+
+  19 Mar 2013; Jeroen Roovers <jer@gentoo.org> +fluxbox-1.3.5.ebuild:
+  Version bump.
 
 *fluxbox-1.3.3 (08 Jan 2013)
 

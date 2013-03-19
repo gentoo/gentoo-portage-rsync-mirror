@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.446 2013/03/16 11:28:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.447 2013/03/19 12:58:56 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Mar 2013)
+# Depends on llvm-3.3 which is not in ~arch yet
+=media-libs/mesa-9.1* r600-llvm-compiler video_cards_radeonsi
 
 # Christoph Junghans <ottxor@gentoo.org> (10 Mar 2013)
 # log4cxx has known memory leaking issues wrt bug #287697,
@@ -154,11 +158,6 @@ dev-lang/idb eclipse
 # Michael Weber<xmw@gentoo.org>  (18 Jun 2012)
 # Not fit for production
 www-client/netsurf pdf-writer javascript gstreamer
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (16 Jul 2012)
-# Needs x11-libs/glamor stable/keyworded first #414295 #440872
-<x11-drivers/xf86-video-intel-2.20 glamor
-=x11-drivers/xf86-video-ati-7* glamor
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
 # Stop glibc/uclibc from using iconv in blender

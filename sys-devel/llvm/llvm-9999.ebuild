@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.39 2013/02/02 23:41:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.40 2013/03/19 12:42:12 chithanh Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/llvm/trunk"
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug doc gold +libffi multitarget ocaml test udis86 vim-syntax"
+IUSE="debug doc gold +libffi multitarget ocaml test udis86 vim-syntax video_cards_radeon"
 
 DEPEND="dev-lang/perl
 	dev-python/sphinx
@@ -133,6 +133,10 @@ src_configure() {
 
 	if use udis86; then
 		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
+	fi
+
+	if use video_cards_radeon; then
+		CONF_FLAGS="${CONF_FLAGS} --enable-experimental-targets=R600"
 	fi
 
 	if use libffi; then
