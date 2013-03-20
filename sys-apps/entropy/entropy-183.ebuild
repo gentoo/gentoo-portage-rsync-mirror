@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-183.ebuild,v 1.3 2013/03/20 07:32:29 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-183.ebuild,v 1.4 2013/03/20 16:25:50 lxnay Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -39,6 +39,8 @@ pkg_setup() {
 	# Create unprivileged entropy user
 	enewgroup entropy-nopriv || die "failed to create entropy-nopriv group"
 	enewuser entropy-nopriv -1 -1 -1 entropy-nopriv || die "failed to create entropy-nopriv user"
+
+	python_pkg_setup
 }
 
 src_compile() {
