@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=>=sys-fs/mtools-4 sys-apps/texinfo virtual/os-headers doc? ( virtual/texi2dvi )
+DESCRIPTION=utilities for configuring and debugging the Linux floppy driver
+EAPI=5
+HOMEPAGE=http://fdutils.linux.lu/
+IUSE=doc
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-fs/mtools-4
+SLOT=0
+SRC_URI=mirror://debian/pool/main/f/fdutils/fdutils_5.5-20060227.orig.tar.gz mirror://debian/pool/main/f/fdutils/fdutils_5.5-20060227-6.debian.tar.gz
+_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=4f4d5738b985041f48726069c38cf1e7

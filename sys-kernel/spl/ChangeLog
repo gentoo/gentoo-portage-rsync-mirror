@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.48 2013/03/16 18:05:53 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.49 2013/03/20 18:54:04 ryao Exp $
+
+  20 Mar 2013; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
+  Remove dodoc INSTALL from 9999 ebuild to reflect upstream change.
 
   16 Mar 2013; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc10.ebuild,
   spl-0.6.0_rc11-r2.ebuild, spl-0.6.0_rc12-r1.ebuild, spl-0.6.0_rc13-r2.ebuild,

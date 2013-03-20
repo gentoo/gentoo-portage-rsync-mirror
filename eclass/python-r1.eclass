@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.49 2013/03/09 13:52:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.50 2013/03/20 19:00:55 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -661,24 +661,18 @@ python_parallel_foreach_impl() {
 python_export_best() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	_python_validate_useflags
-
 	[[ ${#} -gt 0 ]] || set -- EPYTHON PYTHON
 
-	local impl best
-	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
-		if has "${impl}" "${PYTHON_COMPAT[@]}" \
-			&& _python_impl_supported "${impl}" \
-			&& use "python_targets_${impl}"
-		then
-			best=${impl}
-		fi
-	done
+	local best MULTIBUILD_VARIANTS
+	_python_obtain_impls
 
-	[[ ${best+1} ]] || die "python_export_best(): no implementation found!"
+	_python_set_best() {
+		best=${MULTIBUILD_VARIANT}
+	}
+	multibuild_for_best_variant _python_set_best
 
-	debug-print "${FUNCNAME}: Best implementation is: ${impl}"
-	python_export "${impl}" "${@}"
+	debug-print "${FUNCNAME}: Best implementation is: ${best}"
+	python_export "${best}" "${@}"
 }
 
 # @FUNCTION: python_replicate_script

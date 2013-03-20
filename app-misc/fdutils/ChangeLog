@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/fdutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.25 2010/09/09 18:24:17 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/ChangeLog,v 1.26 2013/03/20 18:38:33 ssuominen Exp $
+
+*fdutils-5.5.20060227 (20 Mar 2013)
+
+  20 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +fdutils-5.5.20060227.ebuild:
+  Version bump wrt #337721 by Diego Elio Pettenò and Michael Mair-Keimberger;
+  and respect LDFLAGS using one-liner sed in ebuild. Fix building with recent
+  linux headers wrt #425316 by Peter Sliepenbeek. Import quite large Debian
+  patchset, containing 20 patches in total.
 
 *fdutils-5.5-r2 (09 Sep 2010)
 
