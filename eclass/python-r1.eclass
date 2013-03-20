@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.50 2013/03/20 19:00:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.51 2013/03/20 19:01:54 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -73,6 +73,25 @@ if ! declare -p PYTHON_COMPAT &>/dev/null; then
 		die 'PYTHON_COMPAT not declared.'
 	fi
 fi
+
+# @ECLASS-VARIABLE: PYTHON_COMPAT_OVERRIDE
+# @INTERNAL
+# @DESCRIPTION:
+# This variable can be used when working with ebuilds to override
+# the in-ebuild PYTHON_COMPAT. It is a string listing all
+# the implementations which package will be built for. It need be
+# specified in the calling environment, and not in ebuilds.
+#
+# It should be noted that in order to preserve metadata immutability,
+# PYTHON_COMPAT_OVERRIDE does not affect IUSE nor dependencies.
+# The state of PYTHON_TARGETS is ignored, and all the implementations
+# in PYTHON_COMPAT_OVERRIDE are built. Dependencies need to be satisfied
+# manually.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT_OVERRIDE='pypy2_0 python3_3' emerge -1v dev-python/foo
+# @CODE
 
 # @ECLASS-VARIABLE: PYTHON_REQ_USE
 # @DEFAULT_UNSET
@@ -576,6 +595,21 @@ _python_check_USE_PYTHON() {
 # @DESCRIPTION:
 # Set up the enabled implementation list.
 _python_obtain_impls() {
+	if [[ ${PYTHON_COMPAT_OVERRIDE} ]]; then
+		if [[ ! ${_PYTHON_COMPAT_OVERRIDE_WARNED} ]]; then
+			ewarn "WARNING: PYTHON_COMPAT_OVERRIDE in effect. The following Python"
+			ewarn "implementations will be enabled:"
+			ewarn
+			ewarn "	${PYTHON_COMPAT_OVERRIDE}"
+			ewarn
+			ewarn "Dependencies won't be satisfied, and PYTHON_TARGETS will be ignored."
+			_PYTHON_COMPAT_OVERRIDE_WARNED=1
+		fi
+
+		MULTIBUILD_VARIANTS=( ${PYTHON_COMPAT_OVERRIDE} )
+		return
+	fi
+
 	_python_validate_useflags
 	_python_check_USE_PYTHON
 
