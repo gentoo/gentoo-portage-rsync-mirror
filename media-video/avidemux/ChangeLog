@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.211 2013/03/17 14:22:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.212 2013/03/20 14:07:06 tomwij Exp $
+
+*avidemux-2.6.2-r1 (20 Mar 2013)
+
+  20 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-2.6.2-r1.ebuild,
+  -avidemux-2.6.2.ebuild, -files/avidemux-2.6.2-config-h.patch:
+  Revision bump: Removed gtk USE flag, fixes bug #461988. Split plugins to its
+  own package, fixes bug #462098.
 
   17 Mar 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/avidemux-2.6.2-config-h.patch, avidemux-2.6.2.ebuild:

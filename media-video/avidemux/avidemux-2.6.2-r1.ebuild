@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2.ebuild,v 1.3 2013/03/17 14:22:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2-r1.ebuild,v 1.1 2013/03/20 14:07:06 tomwij Exp $
 
 EAPI="5"
 
@@ -17,25 +17,19 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
 KEYWORDS="~amd64 ~x86"
-IUSE="aften a52 alsa amr debug dts fontconfig gtk jack lame libsamplerate mmx oss nls qt4 sdl vorbis truetype xvid x264 xv"
+IUSE="aften a52 alsa amr debug dts fontconfig jack lame libsamplerate mmx oss nls qt4 sdl vorbis truetype xvid x264 xv"
 
 # TODO: Figure out which dependencies can be moved out of avidemux-core into here.
-RDEPEND="=media-libs/avidemux-core-${PV}[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?]
-	gtk? ( >=x11-libs/gtk+-2.6.0:2 )
+RDEPEND="=media-libs/avidemux-core-${PVR}[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?]
 	qt4? ( >=dev-qt/qtgui-4.8.3:4 )"
 DEPEND="$RDEPEND"
+PDEPEND="=media-libs/avidemux-plugins-${PVR}[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?]"
 
 S="${WORKDIR}/${MY_P}"
 
-PROCESSES="buildCli:avidemux/cli
-	buildPluginsCommon:avidemux_plugins
-	buildPluginsCLI:avidemux_plugins"
+PROCESSES="buildCli:avidemux/cli"
 
-use qt4 && PROCESSES+=" buildQt4:avidemux/qt4
-	buildPluginsQt4:avidemux_plugins"
-
-use gtk && PROCESSES+=" buildGtk:avidemux/gtk
-	buildPluginsGtk:avidemux_plugins"
+use qt4 && PROCESSES+=" buildQt4:avidemux/qt4"
 
 src_prepare() {
 	base_src_prepare
@@ -50,24 +44,16 @@ src_prepare() {
 	# Now rename the desktop file to not collide with 2.5.
 	mv ${PN}2.desktop ${PN}-2.6.desktop || die "Collision rename failed."
 
-	# Fix major issues in desktop files wrt bugs #291453, #316599, #430500
-	# duplicate desktop file.
-	cp ${PN}-2.6.desktop ${PN}-2.6-gtk.desktop || die "Desktop file copy failed."
-
 	# The desktop file is broken. It uses avidemux2 instead of avidemux3
 	# so it will actually launch avidemux-2.5 if it is installed.
 	sed -i -re '/^Exec/ s:(avidemux3_)gtk:\1qt4:' ${PN}-2.6.desktop || die "Desktop file fix failed."
 
 	# Fix QA warnings that complain a trailing ; is missing and Application is deprecated.
 	sed -i -e 's/Application;AudioVideo/AudioVideo;/g' ${PN}-2.6.desktop
-	sed -i -e 's/Application;AudioVideo/AudioVideo;/g' ${PN}-2.6-gtk.desktop
-
-	# Force the config checks to pass.
-	epatch "${FILESDIR}"/avidemux-2.6.2-config-h.patch
 }
 
 src_configure() {
-	local x mycmakeargs plugin_ui
+	local x mycmakeargs
 
 	mycmakeargs="
 		$(for x in ${IUSE}; do cmake-utils_use ${x/#-/}; done)
@@ -87,19 +73,9 @@ src_configure() {
 		mkdir "${S}"/${SOURCE} || die "Can't create build folder."
 		cd "${S}"/${SOURCE} || die "Can't enter build folder."
 
-		if [[ "${SOURCE}" == "buildPluginsCommon" ]] ; then
-			plugin_ui="-DPLUGIN_UI=COMMON"
-		elif [[ "${SOURCE}" == "buildPluginsCLI" ]] ; then
-			plugin_ui="-DPLUGIN_UI=CLI"
-		elif [[ "${SOURCE}" == "buildPluginsQt4" ]] ; then
-			plugin_ui="-DPLUGIN_UI=QT4"
-		elif [[ "${SOURCE}" == "buildPluginsGtk" ]]; then
-			plugin_ui="-DPLUGIN_UI=GTK"
-		fi
-
 		cmake -DAVIDEMUX_SOURCE_DIR="${S}" \
 			-DCMAKE_INSTALL_PREFIX="/usr" \
-			${mycmakeargs} ${plugin_ui} -G "Unix Makefiles" ../"${DEST}${POSTFIX}/" || die "cmake failed."
+			${mycmakeargs} -G "Unix Makefiles" ../"${DEST}${POSTFIX}/" || die "cmake failed."
 	done
 }
 
@@ -125,11 +101,7 @@ src_install() {
 		SOURCE="${PROCESS%%:*}"
 
 		cd "${S}/${SOURCE}" || die "Can't enter build folder."
-		if [[ "${SOURCE}" == "buildPluginsCLI" || "${SOURCE}" == "buildPluginsQt4" || "${SOURCE}" == "buildPluginsGtk" ]] ; then
-			emake DESTDIR="${ED}" preinstall
-		else
-			emake DESTDIR="${ED}" install
-		fi
+		emake DESTDIR="${ED}" install
 	done
 
 	cd "${S}" || die "Can't enter source folder."
@@ -141,11 +113,9 @@ src_install() {
 	if [[ -f "${ED}"/usr/bin/avidemux3_jobs ]] ; then
 		fperms +x /usr/bin/avidemux3_jobs
 	fi
-	use gtk && fperms +x /usr/bin/avidemux3_gtk
 	use qt4 && fperms +x /usr/bin/avidemux3_qt4
 
 	newicon ${PN}_icon.png ${PN}-2.6.png
-	use gtk && domenu ${PN}-2.6-gtk.desktop
 	use qt4 && domenu ${PN}-2.6.desktop
 
 	dodoc AUTHORS README
