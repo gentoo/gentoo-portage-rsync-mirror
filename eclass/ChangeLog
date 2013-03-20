@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.745 2013/03/20 07:55:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.746 2013/03/20 16:45:56 tomwij Exp $
+
+  20 Mar 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Use UID 0 instead of 'root' to assign permissions to super user, bug #315807.
 
   20 Mar 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
   Added sys-devel/bc as a RDEPEND as per bug #461848.
