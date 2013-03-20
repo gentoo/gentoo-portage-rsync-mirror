@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.54 2013/03/19 10:34:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.55 2013/03/20 21:09:37 jer Exp $
+
+  20 Mar 2013; Jeroen Roovers <jer@gentoo.org> localepurge-0.5.4-r2.ebuild:
+  Stable for HPPA (bug #461052).
 
   19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> localepurge-0.5.4-r2.ebuild:
   Stable for x86, wrt bug #461052
