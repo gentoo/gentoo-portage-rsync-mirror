@@ -5,4 +5,7 @@
 	<maintainer>
 		<email>freedesktop-bugs@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name='deprecated'>Use <pkg>sys-power/pm-utils</pkg> (deprecated) instead of <pkg>sys-apps/systemd</pkg></flag>
+	</use>
 </pkgmetadata>
