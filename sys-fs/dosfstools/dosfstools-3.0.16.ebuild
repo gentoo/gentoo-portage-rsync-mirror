@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.16.ebuild,v 1.1 2013/03/09 05:04:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.16.ebuild,v 1.2 2013/03/20 03:44:54 radhermit Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs flag-o-matic eutils
 
 DESCRIPTION="DOS filesystem tools - provides mkdosfs, mkfs.msdos, mkfs.vfat"
 HOMEPAGE="http://www.daniel-baumann.ch/software/dosfstools/"
-SRC_URI="http://www.daniel-baumann.ch/files/software/${PN}/${P}.orig.tar.xz"
+SRC_URI="http://www.daniel-baumann.ch/files/software/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
