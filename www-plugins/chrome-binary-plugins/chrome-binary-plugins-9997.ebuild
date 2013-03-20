@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.7 2013/03/19 23:06:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9997.ebuild,v 1.1 2013/03/19 23:06:23 floppym Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit multilib unpacker
 
 DESCRIPTION="Binary plugins -- native API Flash and PDF -- from Google Chrome for use in Chromium."
 HOMEPAGE="http://www.google.com/chrome"
-SLOT="unstable"
+SLOT="stable"
 URI_BASE="https://dl.google.com/linux/direct/"
 URI_BASE_NAME="google-chrome-${SLOT}_current_"
 SRC_URI="" # URI is left blank on live ebuild
