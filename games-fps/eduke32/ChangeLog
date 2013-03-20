@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/eduke32
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/ChangeLog,v 1.4 2013/03/17 21:16:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/ChangeLog,v 1.5 2013/03/20 00:50:49 hasufell Exp $
+
+*eduke32-20130317.3572-r1 (20 Mar 2013)
+
+  20 Mar 2013; Julian Ospald <hasufell@gentoo.org>
+  +eduke32-20130317.3572-r1.ebuild, metadata.xml:
+  add offensive, opl-musicpack, sc55-musicpack, textures useflags wrt #172183
 
 *eduke32-20130317.3572 (17 Mar 2013)
 
