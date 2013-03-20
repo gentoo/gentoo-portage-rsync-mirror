@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.41 2013/01/15 18:22:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.42 2013/03/20 21:58:13 bicatali Exp $
+
+*gretl-1.9.12 (20 Mar 2013)
+
+  20 Mar 2013; Sébastien Fabbro <bicatali@gentoo.org> +gretl-1.9.12.ebuild:
+  Version bump
 
   15 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> -gretl-1.9.9.ebuild,
   gretl-1.9.11.ebuild:
