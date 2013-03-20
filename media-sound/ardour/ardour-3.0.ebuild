@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.0.ebuild,v 1.1 2013/03/18 12:34:30 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.0.ebuild,v 1.2 2013/03/20 20:28:16 nativemad Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs waf-utils
@@ -42,6 +42,7 @@ RDEPEND="media-libs/aubio
 	media-libs/libart_lgpl
 	virtual/libusb:0
 	dev-libs/boost
+	>=media-libs/taglib-1.7
 	curl? ( net-misc/curl )
 	lv2? (
 		>=media-libs/slv2-0.6.1
@@ -53,7 +54,7 @@ RDEPEND="media-libs/aubio
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen[dot] )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-syslibs.patch
