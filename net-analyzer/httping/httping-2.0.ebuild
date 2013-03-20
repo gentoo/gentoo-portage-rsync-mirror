@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-2.0.ebuild,v 1.1 2013/03/20 17:06:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-2.0.ebuild,v 1.2 2013/03/20 18:13:35 jer Exp $
 
 EAPI=5
-inherit flag-o-matic toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="http protocol ping-like program"
 HOMEPAGE="http://www.vanheusden.com/httping/"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 RESTRICT="test"
 
 src_prepare() {
-	sed -i "/^OFLAGS/d" Makefile || die
+	epatch "${FILESDIR}"/${PN}-2.0-flags.patch
 }
 
 src_compile() {
