@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.8.0-r1.ebuild,v 1.4 2011/01/20 16:39:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.8.1.ebuild,v 1.1 2013/03/20 17:19:50 chithanh Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A proxy/masquerading daemon for the SIP protocol"
 HOMEPAGE="http://siproxd.sourceforge.net/"
@@ -12,15 +12,16 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples doc static"
 # TODO: debug can be used but dmalloc is breaking the build
 # upstream has been contacted, see bug 2649238 in their bugtracker
 
-RDEPEND=">=net-libs/libosip-3.0.0"
+RDEPEND=">=net-libs/libosip-3.0.0
+	<net-libs/libosip-4.0.0"
 #	debug? ( dev-libs/dmalloc[threads] )"
 DEPEND="${RDEPEND}
-	<sys-devel/libtool-2.4:2
+	>=sys-devel/libtool-2.4
 	doc? ( app-text/docbook-sgml-utils
 		app-text/docbook-sgml-dtd:4.2 )"
 # docbook-sgml-utils is for building doc
@@ -36,10 +37,12 @@ src_prepare() {
 	sed -i -e "s:nobody:siproxd:" doc/siproxd.conf.example \
 		|| die "patching doc/siproxd.conf.example failed"
 	# do not fail when building with external libltdl
-	sed -i 's/libltdl //' Makefile.in Makefile.am || die "patching Makefile failed"
-	epatch "${FILESDIR}/${PN}-libtool-2.2.patch"
+	sed -i 's/libltdl //' Makefile.am || die "patching Makefile failed"
+	epatch "${FILESDIR}/${PN}-libtool-2.4.patch"
 	# do not crash when building with external libltdl, bug 308495
 	sed -i 's|"../libltdl/ltdl.h"|<ltdl.h>|' src/plugins.h || die "patching plugins.h failed"
+
+	eautoreconf
 }
 
 src_configure() {
@@ -69,7 +72,7 @@ src_configure() {
 src_install() {
 	einstall || die "einstall failed"
 
-	newinitd "${FILESDIR}"/${PN}.rc6 ${PN} || die "newinitd failed"
+	newinitd "${FILESDIR}"/${PN}.rc7 ${PN} || die "newinitd failed"
 
 	dodoc AUTHORS ChangeLog NEWS README RELNOTES TODO \
 		doc/FAQ doc/FLI4L_HOWTO.txt doc/KNOWN_BUGS \
@@ -81,7 +84,7 @@ src_install() {
 		# upstream has been contacted, see bug 2649333 in their bugtracker
 		dohtml -r doc/html/ || die "dohtml failed"
 		# pdf is not build all the time
-		if built_with_use app-text/docbook-sgml-utils jadetex; then
+		if has_version app-text/docbook-sgml-utils[jadetex]; then
 			dodoc doc/pdf/*.pdf || die "dodoc failed"
 		fi
 	fi
@@ -92,8 +95,8 @@ src_install() {
 	fi
 
 	# set up siproxd directories
-	keepdir /var/{lib,run}/${PN} || die "keepdir failed"
-	fowners siproxd:siproxd /var/{lib,run}/${PN} || die "fowners failed"
+	keepdir /var/lib/${PN} || die "keepdir failed"
+	fowners siproxd:siproxd /var/lib/${PN} || die "fowners failed"
 }
 
 pkg_postinst() {

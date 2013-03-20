@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.5-r1.ebuild,v 1.1 2013/03/19 16:17:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.5-r1.ebuild,v 1.2 2013/03/20 17:11:19 ssuominen Exp $
 
 EAPI=5
 inherit autotools gnome.org
 
 DESCRIPTION="A library for sending desktop notifications"
 HOMEPAGE="http://git.gnome.org/browse/libnotify"
-SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~ssuominen/introspection-1.34.2.m4.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -18,8 +16,9 @@ IUSE="doc +introspection test"
 RDEPEND="app-admin/eselect-notify-send
 	>=dev-libs/glib-2.26
 	x11-libs/gdk-pixbuf:2
-	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )"
+	introspection? ( >=dev-libs/gobject-introspection-1.32 )"
 DEPEND="${RDEPEND}
+	>=dev-libs/gobject-introspection-common-1.32
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.14 )
@@ -33,10 +32,6 @@ src_prepare() {
 
 	if ! use test; then
 		sed -i -e '/PKG_CHECK_MODULES(TESTS/d' configure.ac || die
-	fi
-
-	if ! has_version dev-libs/gobject-introspection; then
-		mv -f "${WORKDIR}"/introspection-1.34.2.m4 m4/introspection.m4 || die
 	fi
 
 	eautoreconf

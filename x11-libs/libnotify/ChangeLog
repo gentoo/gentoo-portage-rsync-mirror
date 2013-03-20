@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.93 2013/03/19 16:17:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.94 2013/03/20 17:11:19 ssuominen Exp $
+
+  20 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  libnotify-0.7.5-r1.ebuild:
+  Use dev-libs/gobject-introspection-common instead of shipping own copy of
+  introspection.m4 from SRC_URI.
 
 *libnotify-0.7.5-r1 (19 Mar 2013)
 

@@ -23,7 +23,11 @@
 		<flag name="v8">Use V8 JavaScript engine
 			(<pkg>dev-lang/v8</pkg>) instead of SpiderMonkey
 			(<pkg>dev-lang/spidermonkey</pkg>)</flag>
+		<flag name="spidermonkey">Use embedded SpiderMonkey engine
+			(<pkg>dev-lang/spidermonkey</pkg>) instead of v8
+			(<pkg>dev-lang/v8</pkg>)</flag>
 		<flag name="mms-agent">Install the MongoDB Monitoring Service agent</flag>
+		<flag name="sharedclient">build client shared library libmongoclient.so</flag>
 	</use>
 </pkgmetadata>
 

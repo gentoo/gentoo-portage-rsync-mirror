@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.47 2013/02/28 17:04:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.48 2013/03/20 17:20:50 ulm Exp $
+
+*mg-20110905-r1 (20 Mar 2013)
+
+  20 Mar 2013; Ulrich Müller <ulm@gentoo.org> mg-20110905.ebuild,
+  +mg-20110905-r1.ebuild:
+  Specify LICENSE more precisely. Merge changes from Emacs overlay.
 
   28 Feb 2013; Ulrich Müller <ulm@gentoo.org> mg-20110905.ebuild:
   Don't call pkg-config directly, in order not to break cross compilation.
