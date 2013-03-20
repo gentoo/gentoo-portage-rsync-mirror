@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netctl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/ChangeLog,v 1.1 2013/03/10 22:56:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/ChangeLog,v 1.2 2013/03/20 00:01:10 floppym Exp $
+
+*netctl-0.7 (20 Mar 2013)
+
+  20 Mar 2013; Mike Gilbert <floppym@gentoo.org> +netctl-0.7.ebuild,
+  netctl-9999.ebuild:
+  Version bump.
 
 *netctl-9999 (10 Mar 2013)
 *netctl-0.6 (10 Mar 2013)
