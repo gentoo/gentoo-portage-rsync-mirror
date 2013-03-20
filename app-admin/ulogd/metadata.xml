@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>itumaykin@gmail.com</email>
 	</maintainer>
 	<use>
-		<flag name='pcap'>Build PCAP output plugin to save packets in PCAP format. Uses the <pkg>net-libs/libpcap</pkg> library</flag>
-		<flag name='mysql'>Build MYSQL output plugin to save packets in a mysql database.</flag>
+		<flag name='pcap'>Build PCAP output plugin to save packets in libpcap file format.</flag>
+		<flag name='mysql'>Build MySQL output plugin to save packets in a mysql database.</flag>
 		<flag name='postgres'>Build PGSQL output plugin to save packets in a postgres database.</flag>
-		<flag name='sqlite'>Build SQLITE3 output plugin to save packets in an sqlite database.</flag>
+		<flag name='sqlite'>Build SQLITE3 output plugin to save packets in a sqlite database.</flag>
+		<flag name='nflog'>Build NFLOG input plugin to support stateless packet-based logging via nfnetlink_queue.</flag>
+		<flag name='nfct'>Build NFCT input plugin to support stateful flow-based via nf_conntrack_netlink.</flag>
+		<flag name='nfacct'>Build NFACCT input plugin to support traffic accounting via nfnetlink_acct.</flag>
 	</use>
 </pkgmetadata>

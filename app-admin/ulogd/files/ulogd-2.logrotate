@@ -1,0 +1,18 @@
+/var/log/ulogd/ulogd.log {
+    notifempty
+    size 1M
+    create 0640 ulogd
+    postrotate
+        /etc/init.d/ulogd reopen_logs > /dev/null
+    endscript
+}
+
+/var/log/ulogd/ulogd_syslogemu.log {
+    rotate 12
+    size 5M
+    notifempty
+    create 0640 ulogd
+    postrotate
+        /etc/init.d/ulogd reopen_logs > /dev/null
+    endscript
+}
