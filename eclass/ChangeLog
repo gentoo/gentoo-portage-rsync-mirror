@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.744 2013/03/19 06:13:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.745 2013/03/20 07:55:54 tomwij Exp $
+
+  20 Mar 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Added sys-devel/bc as a RDEPEND as per bug #461848.
 
   19 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Pass --build-platlib and --build-purelib separately to distutils. This allows
