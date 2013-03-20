@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.9.5.ebuild,v 1.5 2013/02/23 17:18:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.9.5.ebuild,v 1.6 2013/03/20 13:34:19 kensington Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit python kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
 KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
-IUSE="debug google-gadgets gps python qalculate +rss semantic-desktop"
+IUSE="debug gps python qalculate +rss semantic-desktop"
 
 COMMONDEPEND="
 	$(add_kdebase_dep kactivities)
@@ -28,7 +28,6 @@ COMMONDEPEND="
 	x11-libs/libXdamage
 	x11-libs/libXfixes
 	x11-libs/libXrender
-	google-gadgets? ( >=x11-misc/google-gadgets-0.11.0[qt4] )
 	gps? ( >=sci-geosciences/gpsd-2.37 )
 	python? (
 		>=dev-python/PyQt4-4.4.0[X]
@@ -88,7 +87,6 @@ src_unpack() {
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use_with google-gadgets Googlegadgets)
 		$(cmake-utils_use_with gps libgps)
 		$(cmake-utils_use_with python PythonLibrary)
 		$(cmake-utils_use_with qalculate)
@@ -96,6 +94,7 @@ src_configure() {
 		$(cmake-utils_use_with semantic-desktop Akonadi)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with semantic-desktop Soprano)
+		-DWITH_Googlegadgets=OFF
 		-DWITH_Xmms=OFF
 	)
 
