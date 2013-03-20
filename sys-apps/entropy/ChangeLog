@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/entropy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.32 2013/03/14 18:08:47 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.33 2013/03/20 07:30:00 lxnay Exp $
+
+  20 Mar 2013; Fabio Erculiani <lxnay@gentoo.org> entropy-136.ebuild,
+  entropy-144.ebuild, entropy-183.ebuild:
+  update dev-db/sqlite dependencies as per bug #462398
 
 *entropy-183 (14 Mar 2013)
 
