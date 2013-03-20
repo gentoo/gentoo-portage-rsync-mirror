@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/emacs-updater-1.10.ebuild,v 1.1 2012/10/11 15:56:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/emacs-updater-1.13.ebuild,v 1.1 2013/03/20 20:32:29 ulm Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Rebuild Emacs packages"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
@@ -18,7 +18,7 @@ RDEPEND=">=app-portage/portage-utils-0.3
 	virtual/emacs"
 
 src_prepare() {
-	if [ -n "${EPREFIX}" ]; then
+	if [[ -n ${EPREFIX} ]]; then
 		sed -i -e "1s:/:${EPREFIX%/}/:" \
 			-e "s:^\(EMACS\|SITELISP\)=:&${EPREFIX%/}:" \
 			emacs-updater || die
