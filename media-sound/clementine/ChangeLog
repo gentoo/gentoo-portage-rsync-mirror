@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.75 2013/03/05 16:44:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.76 2013/03/20 13:28:34 pinkbyte Exp $
+
+  20 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> clementine-1.0.1-r1.ebuild,
+  clementine-1.1.1.ebuild:
+  Change sqlite dependency, wrt bug #462394
 
   05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> clementine-1.1.1.ebuild:
   Stable for amd64, wrt bug #455314
