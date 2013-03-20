@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.863 2013/03/19 12:30:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.864 2013/03/20 05:42:26 ssuominen Exp $
+
+*udev-198-r2 (20 Mar 2013)
+
+  20 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-198-r2.ebuild:
+  Move builtins section before permissions section in
+  /lib/udev/rules.d/50-udev-default.rules to fix eg. USB printing wrt #462346
 
   19 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-198-r1.ebuild,
   udev-9999.ebuild, metadata.xml:
