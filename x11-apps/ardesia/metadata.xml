@@ -3,11 +3,6 @@
 <pkgmetadata>
 <herd>proxy-maintainers</herd>
 <maintainer>
-	<email>lxnay@gentoo.org</email>
-	<name>Fabio Erculiani</name>
-	<description>Feel free to touch my pkgs (tm)</description>
-</maintainer>
-<maintainer>
 	<email>ziapannocchia@gmail.com</email>
 	<name>Marco Clocchiatti</name>
 	<description>Proxy maintainer. CC him on bugs</description>
