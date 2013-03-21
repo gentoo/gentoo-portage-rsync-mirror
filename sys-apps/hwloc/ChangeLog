@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.34 2013/02/28 14:32:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.35 2013/03/21 04:33:07 alexxy Exp $
+
+*hwloc-1.6.2 (21 Mar 2013)
+
+  21 Mar 2013; Alexey Shvetsov <alexxy@gentoo.org> +hwloc-1.6.2.ebuild:
+  Version bump for 1.6 series
 
   28 Feb 2013; Jeroen Roovers <jer@gentoo.org> hwloc-1.6.1.ebuild:
   Stable for HPPA (bug #458206).
