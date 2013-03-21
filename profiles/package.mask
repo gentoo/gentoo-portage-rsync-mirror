@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14566 2013/03/21 13:20:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14567 2013/03/21 13:37:05 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -473,10 +473,6 @@ net-dialup/hsfmodem
 # Dead upstream, replaced by gitolite
 dev-vcs/gitosis
 dev-vcs/gitosis-gentoo
-
-# Ole Markus With <olemarkus@gentoo.org> (15 Nov 2012)
-# Masked for testing
->=dev-lang/php-5.4.9999
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (14 Nov 2012)
 # Masked for testing as too many packages fail.

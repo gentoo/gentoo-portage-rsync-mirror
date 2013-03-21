@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/molecule-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule-core/ChangeLog,v 1.1 2013/03/21 12:59:27 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule-core/ChangeLog,v 1.2 2013/03/21 13:31:56 lxnay Exp $
+
+  21 Mar 2013; Fabio Erculiani <lxnay@gentoo.org> molecule-core-1.0.1.ebuild:
+  nit, fix DESCRIPTION
 
 *molecule-core-1.0.1 (21 Mar 2013)
 

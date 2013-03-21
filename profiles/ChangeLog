@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7606 2013/03/21 13:20:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7607 2013/03/21 13:37:05 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Mar 2013; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Removing mask of php 5.5
 
   21 Mar 2013; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Last rites for dev-libs/dv{acm4,net,ssl,thread,util}, bug #462590

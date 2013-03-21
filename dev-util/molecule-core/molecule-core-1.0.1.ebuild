@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule-core/molecule-core-1.0.1.ebuild,v 1.1 2013/03/21 12:59:27 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule-core/molecule-core-1.0.1.ebuild,v 1.2 2013/03/21 13:31:56 lxnay Exp $
 
 EAPI="5"
 PYTHON_DEPEND="*"
 
 inherit python
 
-DESCRIPTION="Sabayon distro-agnostic images builder tool"
+DESCRIPTION="Sabayon distro-agnostic images build tool"
 HOMEPAGE="http://www.sabayon.org"
 SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.bz2"
 

@@ -1,13 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_alpha4.ebuild,v 1.1 2013/02/07 13:58:17 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_beta1.ebuild,v 1.1 2013/03/21 13:33:45 olemarkus Exp $
 
 EAPI=5
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-SUHOSIN_VERSION=""
-FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
@@ -20,9 +18,6 @@ function php_get_uri ()
 		;;
 		"php")
 			echo "http://www.php.net/distributions/${2}"
-		;;
-		"suhosin")
-			echo "http://download.suhosin.org/${2}"
 		;;
 		"olemarkus")
 			echo "http://dev.gentoo.org/~olemarkus/php/${2}"
@@ -46,6 +41,7 @@ PHP_PV="${PHP_PV/_alpha/alpha}"
 PHP_PV="${PHP_PV/_beta/beta}"
 PHP_RELEASE="php"
 [[ ${PV} == ${PV/_alpha/} ]] || PHP_RELEASE="php-pre"
+[[ ${PV} == ${PV/_beta/} ]] || PHP_RELEASE="php-pre"
 [[ ${PV} == ${PV/_rc/} ]] || PHP_RELEASE="php-pre"
 PHP_P="${PN}-${PHP_PV}"
 
@@ -53,34 +49,16 @@ PHP_PATCHSET_LOC="olemarkus"
 
 PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 
-PHP_PATCHSET="0"
+PHP_PATCHSET="1"
 PHP_PATCHSET_URI="
 	$(php_get_uri "${PHP_PATCHSET_LOC}" "php-patchset-${SLOT}-r${PHP_PATCHSET}.tar.bz2")"
 
 PHP_FPM_INIT_VER="4"
 PHP_FPM_CONF_VER="1"
 
-if [[ ${SUHOSIN_VERSION} == *-gentoo ]]; then
-	# in some cases we use our own suhosin patch (very recent version,
-	# patch conflicts, etc.)
-	SUHOSIN_TYPE="olemarkus"
-else
-	SUHOSIN_TYPE="suhosin"
-fi
-
-if [[ -n ${SUHOSIN_VERSION} ]]; then
-	SUHOSIN_PATCH="suhosin-patch-${SUHOSIN_VERSION}.patch";
-	SUHOSIN_URI="$(php_get_uri ${SUHOSIN_TYPE} ${SUHOSIN_PATCH}.gz )"
-fi
-
 SRC_URI="
 	${PHP_SRC_URI}
 	${PHP_PATCHSET_URI}"
-
-if [[ -n ${SUHOSIN_VERSION} ]]; then
-	SRC_URI="${SRC_URI}
-		suhosin? ( ${SUHOSIN_URI} )"
-fi
 
 DESCRIPTION="The PHP language runtime engine: CLI, CGI, FPM/FastCGI, Apache2 and embed SAPIs."
 HOMEPAGE="http://php.net/"
@@ -90,9 +68,6 @@ S="${WORKDIR}/${PHP_P}"
 
 # We can build the following SAPIs in the given order
 SAPIS="embed cli cgi fpm apache2"
-
-# Gentoo-specific, common features
-IUSE="kolab"
 
 # SAPIs and SAPI-specific USE flags (cli SAPI is default on):
 IUSE="${IUSE}
@@ -105,18 +80,15 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	flatfile ftp gd gdbm gmp +hash +iconv imap inifile
 	intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit mhash
 	mssql mysql mysqlnd mysqli nls
-	oci8-instant-client odbc pcntl pdo +phar pic +posix postgres qdbm
+	oci8-instant-client odbc opcache pcntl pdo +phar +posix postgres qdbm
 	readline recode selinux +session sharedmem
 	+simplexml snmp soap sockets spell sqlite ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
 	+xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
-# Enable suhosin if available
-[[ -n $SUHOSIN_VERSION ]] && IUSE="${IUSE} suhosin"
-
 DEPEND="
 	>=app-admin/eselect-php-0.6.2
-	>=dev-libs/libpcre-8.12[unicode]
+	>=dev-libs/libpcre-8.32[unicode]
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
 	bzip2? ( app-arch/bzip2 )
@@ -143,7 +115,6 @@ DEPEND="
 	intl? ( dev-libs/icu:= )
 	iodbc? ( dev-db/libiodbc )
 	kerberos? ( virtual/krb5 )
-	kolab? ( >=net-libs/c-client-2004g-r1 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	ldap-sasl? ( dev-libs/cyrus-sasl >=net-nds/openldap-1.2.11 )
 	libedit? ( || ( sys-freebsd/freebsd-lib dev-libs/libedit ) )
@@ -207,7 +178,6 @@ REQUIRED_USE="
 	xmlreader? ( xml )
 	xsl? ( xml )
 	ldap-sasl? ( ldap )
-	kolab? ( imap )
 	mhash? ( hash )
 	phar? ( hash )
 	mysqlnd? ( || (
@@ -225,9 +195,6 @@ REQUIRED_USE="
 
 RDEPEND="${DEPEND}"
 
-[[ -n $SUHOSIN_VERSION ]] && RDEPEND="${RDEPEND} suhosin? (
-=${CATEGORY}/${PN}-${SLOT}*[unicode] )"
-
 RDEPEND="${RDEPEND} fpm? ( selinux? ( sec-policy/selinux-phpfpm ) )"
 
 DEPEND="${DEPEND}
@@ -237,10 +204,6 @@ DEPEND="${DEPEND}
 
 # They are in PDEPEND because we need PHP installed first!
 PDEPEND="doc? ( app-doc/php-docs )"
-
-# No longer depend on the extension. The suhosin USE flag only installs the
-# patch
-#[[ -n $SUHOSIN_VERSION ]] && PDEPEND="${PDEPEND} suhosin? ( dev-php${PHP_MV}/suhosin )"
 
 # Allow users to install production version if they want to
 
@@ -344,9 +307,6 @@ src_prepare() {
 	addpredict /session_mm_cli250.sem
 	addpredict /session_mm_cli0.sem
 
-	# kolab support (support for imap annotations)
-	use kolab && epatch "${WORKDIR}/patches/opt/imap-kolab-annotations.patch"
-
 	# Change PHP branding
 	# Get the alpha/beta/rc version
 	local ver=$(get_version_component_range 3)
@@ -375,15 +335,6 @@ src_prepare() {
 			|| die "Failed to fix heimdal libname"
 		sed -e 's|PHP_ADD_LIBRARY(k5crypto, 1, $1)||g' -i acinclude.m4 \
 			|| die "Failed to fix heimdal crypt library reference"
-	fi
-
-	# Suhosin support
-	if [[ -n $SUHOSIN_VERSION ]] ; then
-		if use suhosin ; then
-			epatch "${WORKDIR}/${SUHOSIN_PATCH}"
-		fi
-	else
-		ewarn "Please note that this version of PHP does not yet come with a suhosin patch"
 	fi
 
 	#Add user patches #357637
@@ -451,6 +402,7 @@ src_configure() {
 	$(use_enable pcntl pcntl )
 	$(use_enable phar phar )
 	$(use_enable pdo pdo )
+	$(use_enable opcache opcache )
 	$(use_with postgres pgsql "${EPREFIX}"/usr)
 	$(use_enable posix posix )
 	$(use_with spell pspell "${EPREFIX}"/usr)
@@ -599,9 +551,8 @@ src_configure() {
 		$(use_enable session session )"
 	fi
 
-	if use pic ; then
-		my_conf="${my_conf} --with-pic"
-	fi
+	#Build shared modules such as libphp5.so with pic support
+	my_conf="${my_conf} --with-pic"
 
 	# we use the system copy of pcre
 	# --with-pcre-regex affects ext/pcre
@@ -851,14 +802,6 @@ pkg_postinst() {
 	elog "For more details on how minor version slotting works (PHP_TARGETS) please read the upgrade guide:"
 	elog "http://www.gentoo.org/proj/en/php/php-upgrading.xml"
 	elog
-
-	if ( [[ -z SUHOSIN_VERSION ]] && use suhosin && version_is_at_least 5.3.6_rc1 ) ; then
-		ewarn
-		ewarn "The suhosin USE flag now only installs the suhosin patch!"
-		ewarn "If you want the suhosin extension, make sure you install"
-		ewarn " dev-php/suhosin"
-		ewarn
-	fi
 }
 
 pkg_prerm() {

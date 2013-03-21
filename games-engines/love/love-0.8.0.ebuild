@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.7 2012/11/21 13:37:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.8 2013/03/21 13:43:21 chithanh Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-games/physfs
-	dev-lang/lua
+	dev-lang/lua[deprecated]
 	media-libs/devil[mng,png,tiff]
 	media-libs/freetype
 	media-libs/libmodplug

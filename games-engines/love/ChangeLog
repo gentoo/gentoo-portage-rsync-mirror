@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/love
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.11 2012/11/21 13:37:08 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.12 2013/03/21 13:43:22 chithanh Exp $
+
+  21 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  love-0.7.2-r1.ebuild, love-0.8.0.ebuild:
+  Add dependency on deprecated lua features, bug #462586.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> love-0.8.0.ebuild:
   revert, it was a keywordreq for ppc
