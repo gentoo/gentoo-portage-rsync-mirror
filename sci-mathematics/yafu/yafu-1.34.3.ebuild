@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-1.34.3.ebuild,v 1.3 2013/03/08 03:05:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-1.34.3.ebuild,v 1.4 2013/03/21 08:09:43 patrick Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}/fix-Makefile.patch"
 	# This is not nice. But then the Makefile is quite special :)
 	sed -i -e 's:../gmp/include:gmp:' Makefile 		|| die "Failed to rectify things"
 	sed -i -e 's:../gmp-ecm/include:gmp-ecm:' Makefile 	|| die "Failed to rectify things"
