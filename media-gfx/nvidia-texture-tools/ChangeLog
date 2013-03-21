@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/nvidia-texture-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/ChangeLog,v 1.7 2012/06/29 08:26:26 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/ChangeLog,v 1.8 2013/03/20 23:56:25 hasufell Exp $
+
+*nvidia-texture-tools-2.0.8-r2 (20 Mar 2013)
+
+  20 Mar 2013; Julian Ospald <hasufell@gentoo.org>
+  +nvidia-texture-tools-2.0.8-r2.ebuild,
+  +files/nvidia-texture-tools-2.0.8-openexr.patch:
+  use pkg-config for openexr detection wrt #462494
 
   29 Jun 2012; Julian Ospald <hasufell@gentoo.org>
   nvidia-texture-tools-2.0.8-r1.ebuild,
