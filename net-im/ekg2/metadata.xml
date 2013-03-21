@@ -31,7 +31,7 @@
 			<pkg>net-libs/libgadu</pkg>).</flag>
 		<flag name='gpg'>Enable jabber message encryption through
 			<pkg>app-crypt/gpgme</pkg>.</flag>
-		<flag name='inotify'>Enable inotify-based filesystem moniotoring support
+		<flag name='inotify'>Enable inotify-based filesystem monitoring support
 			for xmsg&amp;mail plugins.</flag>
 		<flag name='minimal'>Disable building extra plugins with no additional
 			deps.</flag>

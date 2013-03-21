@@ -6,7 +6,7 @@
 	<name>Markos Chandras</name>
 </maintainer>
 <use>
-	<flag name='inotify'>Use the Linux Kenrel notification subsystem for monitoring file alterations in realtime</flag>
+	<flag name='inotify'>Use the Linux Kernel notification subsystem for monitoring file alterations in realtime</flag>
 	<flag name='camelcase'>Enable indexing for camelCase sentences and words</flag>
 	<flag name='audio'>Index audio files</flag>
 	<flag name='chm'>Index chm files</flag>
