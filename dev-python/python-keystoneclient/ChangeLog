@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.4 2013/03/11 01:12:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.5 2013/03/21 18:48:39 prometheanfire Exp $
+
+  21 Mar 2013; Matthew Thode <prometheanfire@gentoo.org>
+  -python-keystoneclient-0.2.1-r1.ebuild:
+  removing the old keystoneclient ebuild
 
 *python-keystoneclient-0.2.2 (11 Mar 2013)
 
@@ -29,4 +33,3 @@
   +python-keystoneclient-2012.2.ebuild, +python-keystoneclient-9999.ebuild,
   +metadata.xml:
   initial add of python-keystoneclient
-

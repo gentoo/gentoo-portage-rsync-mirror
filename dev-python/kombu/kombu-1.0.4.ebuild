@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-1.0.4.ebuild,v 1.1 2013/01/26 05:27:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-1.0.4.ebuild,v 1.2 2013/03/21 18:40:40 prometheanfire Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
 RDEPEND=">=dev-python/anyjson-0.3.3
-	>=dev-python/amqplib-1.0.2"
+	>=dev-python/amqplib-0.6"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose-cover3
 	dev-python/mock
