@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1-r1.ebuild,v 1.10 2012/05/05 08:02:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1-r1.ebuild,v 1.11 2013/03/21 04:01:31 ssuominen Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="OpenEXR CTL libraries"
@@ -12,23 +12,29 @@ SRC_URI="mirror://sourceforge/ampasctl/${P}.tar.gz"
 LICENSE="AMPAS"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE=""
+IUSE="static-libs"
 
-RDEPEND="media-libs/ilmbase
-	media-libs/openexr
-	media-libs/ctl"
+RDEPEND="media-libs/ilmbase:=
+	media-libs/openexr:=
+	media-libs/ctl:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+DOCS="AUTHORS ChangeLog NEWS README"
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-configure_gcc43.patch \
+	epatch \
+		"${FILESDIR}"/${P}-{,configure_}gcc43.patch \
 		"${FILESDIR}"/${P}-pkgconfig.patch \
 		"${FILESDIR}"/${P}-gcc44.patch
 	eautoreconf
 }
 
+src_configure() {
+	econf $(use_enable static-libs static)
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	default
+	prune_libtool_files
 }

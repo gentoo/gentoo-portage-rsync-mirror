@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.134 2013/02/16 12:27:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.135 2013/03/21 04:06:27 ssuominen Exp $
+
+  21 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> djvu-3.5.25.3.ebuild:
+  Use prune_libtool_files to remove unnecessary libtool archive (.la) of
+  libdjvulibre.
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436
