@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/nightsky
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/nightsky/ChangeLog,v 1.1 2013/03/21 22:08:02 hasufell Exp $
+
+*nightsky-20111222 (21 Mar 2013)
+
+  21 Mar 2013; Julian Ospald <hasufell@gentoo.org> +nightsky-20111222.ebuild,
+  +files/nightsky-wrapper, +metadata.xml:
+  initial import wrt #395887
+

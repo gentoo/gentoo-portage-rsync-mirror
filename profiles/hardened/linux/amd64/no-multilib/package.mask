@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.12 2013/03/21 22:00:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.15 2013/03/21 22:14:33 hasufell Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 games-action/shadowgrounds-bin
@@ -18,3 +18,6 @@ games-action/swordandsworcery
 games-action/beathazardultra
 games-action/solar2
 games-arcade/dynamitejack
+games-kids/crayon-physics
+games-rpg/dungeon-defenders
+games-rpg/bastion

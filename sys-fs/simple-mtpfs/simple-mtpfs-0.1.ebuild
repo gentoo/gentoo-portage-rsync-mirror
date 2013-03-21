@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/simple-mtpfs/simple-mtpfs-0.1.ebuild,v 1.2 2013/03/21 20:28:09 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/simple-mtpfs/simple-mtpfs-0.1.ebuild,v 1.3 2013/03/21 22:16:18 sochotnicky Exp $
 
 EAPI=5
 
@@ -24,9 +24,3 @@ DEPEND="virtual/pkgconfig
 RDEPEND="${CDEPEND}"
 
 AUTOTOOLS_AUTORECONF=1
-
-src_install()
-{
-	default
-	doman man/${PN}.1
-}
