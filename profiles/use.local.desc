@@ -2066,6 +2066,7 @@ dev-vcs/subversion:dso - Enable runtime module search
 dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
 dev-vcs/subversion:webdav-neon - Enable WebDAV support using net-libs/neon
 dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
+games-action/beathazardultra:bundled-libs - Use the upstream provided bundled libraries.
 games-action/chromium-bsu:mixer - Enables media-libs/sdl-mixer sound backend instead of media-libs/openal one.
 games-action/d1x-rebirth:awe32 - Enable AWE32 support
 games-action/d1x-rebirth:demo - Use the demo data instead of the full game
@@ -2083,6 +2084,10 @@ games-action/d2x-rebirth:music - Support for ingame music
 games-action/d2x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d2x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
 games-action/openlierox:breakpad - Compile with support for breakpad crash reporting system
+games-action/solar2:bundled-libs - Use the upstream provided bundled libraries.
+games-action/super-hexagon:bundled-glew - Use the upstream provided bundled glew.
+games-action/super-hexagon:bundled-libs - Use the upstream provided bundled libraries.
+games-action/swordandsworcery:bundled-libs - Use the upstream provided bundled libraries.
 games-action/trine2:launcher - Install gtk+ launcher
 games-action/trine2:system-libs - Use system provided libraries.
 games-arcade/bomns:editor - enables building the level editor
