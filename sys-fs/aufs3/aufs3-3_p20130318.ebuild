@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20130318.ebuild,v 1.1 2013/03/15 09:36:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20130318.ebuild,v 1.2 2013/03/21 08:39:21 jlec Exp $
 
 EAPI=5
 
@@ -76,8 +76,8 @@ pkg_setup() {
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${T}"/${P}/${PN}-standalone/${PN}-standalone-base-combined.patch >/dev/null
-			epatch "${T}"/${P}/${PN}-standalone/${PN}-standalone-base-combined.patch
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${T}"/${PN}-standalone/${PN}-standalone-base-combined.patch >/dev/null
+			epatch "${T}"/${PN}-standalone/${PN}-standalone-base-combined.patch
 			ewarn "You need to compile your kernel with the applied patch"
 			ewarn "to be able to load and use the aufs kernel module"
 		else
@@ -142,7 +142,7 @@ src_install() {
 
 	use doc && doins -r Documentation
 
-	use kernel-patch || doins "${T}"/${P}/${PN}-standalone/${PN}-standalone-base-combined.patch
+	use kernel-patch || doins "${T}"/${PN}-standalone/${PN}-standalone-base-combined.patch
 
 	dodoc Documentation/filesystems/aufs/README
 }
