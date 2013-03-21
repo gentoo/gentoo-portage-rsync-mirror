@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.17 2013/03/17 19:23:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.18 2013/03/21 18:09:40 hwoarang Exp $
+
+  21 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tt-rss-1.7.4.ebuild:
+  Add epatch_user per #462578
 
 *tt-rss-1.7.4 (17 Mar 2013)
 

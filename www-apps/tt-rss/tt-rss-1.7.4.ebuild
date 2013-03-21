@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.4.ebuild,v 1.1 2013/03/17 19:23:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.4.ebuild,v 1.2 2013/03/21 18:09:40 hwoarang Exp $
 
 EAPI="2"
 
@@ -45,6 +45,8 @@ src_prepare() {
 
 	sed -e "/define('DB_TYPE',/{s:// \(or mysql\):// pgsql \1:}" -i config.php \
 			|| die "sed failed"
+	# per 462578
+	epatch_user
 }
 
 src_install() {
