@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare
+DEPEND=dev-python/simplejson >=dev-python/mozinfo-0.3.3 >=dev-python/mozprocess-0.7 >=dev-python/mozprofile-0.4 dev-python/setuptools =dev-lang/python-2*
+DESCRIPTION=Reliable start/stop/configuration of Mozilla Applications (Firefox, Thunderbird, etc.)
+EAPI=3
+HOMEPAGE=http://pypi.python.org/pypi/mozrunner
+KEYWORDS=~amd64 ~x86
+LICENSE=MPL-2.0
+RDEPEND=dev-python/simplejson >=dev-python/mozinfo-0.3.3 >=dev-python/mozprocess-0.7 >=dev-python/mozprofile-0.4 dev-python/setuptools =dev-lang/python-2*
+SLOT=0
+SRC_URI=mirror://pypi/m/mozrunner/mozrunner-5.15.tar.gz
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=6cb728881976a1070f5e7b5812d07f01
