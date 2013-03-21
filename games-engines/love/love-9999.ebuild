@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.6 2012/09/25 11:21:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.7 2013/03/21 14:02:27 chithanh Exp $
 
-EAPI=3
+EAPI=5
 
 inherit base games
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-games/physfs
-	dev-lang/lua
+	dev-lang/lua[deprecated]
 	media-libs/devil[mng,png,tiff]
 	media-libs/freetype
 	media-libs/libmodplug
@@ -42,6 +42,8 @@ DOCS=( "readme.md" "changes.txt" )
 src_prepare() {
 	if [[ ${PV} == 9999* ]]; then
 		sh platform/unix/gen-makefile || die
+		cp platform/unix/Makefile.am . || die
+		cp platform/unix/configure.ac . || die
 		mkdir platform/unix/m4 || die
 		eautoreconf
 	fi

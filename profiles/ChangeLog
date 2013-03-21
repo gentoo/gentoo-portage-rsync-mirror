@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7607 2013/03/21 13:37:05 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7608 2013/03/21 14:22:57 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Mar 2013; Ulrich Müller <ulm@gentoo.org> use.desc:
+  Describe inotify global USE flag.
 
   21 Mar 2013; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Removing mask of php 5.5

@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/love
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.12 2013/03/21 13:43:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.13 2013/03/21 14:02:27 chithanh Exp $
+
+  21 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  love-9999.ebuild:
+  Copy autotools files to build directory before eautoreconf, bug #462588.
 
   21 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   love-0.7.2-r1.ebuild, love-0.8.0.ebuild:

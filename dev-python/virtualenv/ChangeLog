@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.81 2013/03/17 05:40:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.82 2013/03/21 14:18:11 idella4 Exp $
+
+*virtualenv-1.9.1-r1 (21 Mar 2013)
+
+  21 Mar 2013; Ian Delaney <idella4@gentoo.org>
+  +files/virtualenv-1.9.1-pypy.patch, +virtualenv-1.9.1-r1.ebuild:
+  migration revbump, patch added skips 1 test affecting only pypy
 
 *virtualenv-1.9.1 (17 Mar 2013)
 
