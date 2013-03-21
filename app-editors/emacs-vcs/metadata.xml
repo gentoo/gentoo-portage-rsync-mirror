@@ -30,7 +30,6 @@
   <flag name='hesiod'>Enable support for <pkg>net-dns/hesiod</pkg></flag>
   <flag name='imagemagick'>Use <pkg>media-gfx/imagemagick</pkg> for image
     processing</flag>
-  <flag name='inotify'>Enable inotify filesystem monitoring support</flag>
   <flag name='libxml2'>Use <pkg>dev-libs/libxml2</pkg> to parse XML instead
     of the internal Lisp implementations</flag>
   <flag name='pax_kernel'>Enable building under a PaX enabled kernel

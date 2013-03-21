@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.105 2013/03/20 15:44:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.106 2013/03/21 17:59:52 ssuominen Exp $
+
+*upower-0.9.20-r2 (21 Mar 2013)
+
+  21 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.20-r2.ebuild,
+  +files/upower-0.9.20-hidraw_with_udev-196.patch:
+  Backport patch from upstream for hidraw compatibility issues with current
+  udev.
 
 *upower-0.9.20-r1 (20 Mar 2013)
 

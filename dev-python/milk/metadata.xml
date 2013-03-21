@@ -17,4 +17,7 @@
   most of the performance sensitive code is in C++. This is behind
   Python-based interfaces for convenience.
 </longdescription>
+<upstream>
+  <remote-id type="pypi">milk</remote-id>
+</upstream>
 </pkgmetadata>
