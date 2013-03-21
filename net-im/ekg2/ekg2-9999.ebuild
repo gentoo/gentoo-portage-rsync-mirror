@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.5 2012/12/17 00:37:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.6 2013/03/21 16:30:49 mgorny Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SRC_URI="http://pl.ekg2.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gadu gpm gpg gtk inotify minimal ncurses nls nntp openssl
+IUSE="gadu gpm gpg gtk minimal ncurses nls nntp openssl
 	perl python readline rss spell sqlite sqlite2 ssl xmpp unicode zlib"
 
 RDEPEND="dev-libs/glib:2
@@ -98,7 +98,7 @@ src_configure() {
 
 		# optional deps
 		$(use_with gpm)
-		$(use_with inotify)
+		# do not pass --with-inotify as it will fail if check fails
 		$(use_with spell aspell)
 		$(use_with ssl gnutls)
 		$(use_with zlib)

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/vatnumber
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vatnumber/ChangeLog,v 1.3 2012/11/25 12:49:23 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vatnumber/ChangeLog,v 1.4 2013/03/21 16:16:28 idella4 Exp $
+
+*vatnumber-1.0-r1 (21 Mar 2013)
+
+  21 Mar 2013; Ian Delaney <idella4@gentoo.org> +vatnumber-1.0-r1.ebuild:
+  migration revbump
 
   26 Nov 2012; Ian Delaney <idella4@gentoo.org>
   files/vatnumber-1.0-skiptest.patch, vatnumber-1.0.ebuild:

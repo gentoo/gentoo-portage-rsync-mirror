@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.4 2012/12/17 00:37:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.5 2013/03/21 16:30:49 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -13,7 +13,7 @@ SRC_URI="http://pl.ekg2.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gadu gif gnutls gpg gpm gsm gtk idn inotify jpeg ncurses nls
+IUSE="gadu gif gnutls gpg gpm gsm gtk idn jpeg ncurses nls
 	oracle perl python readline rss spell sqlite sqlite3 ssl threads unicode
 	xmpp xosd zlib"
 
@@ -83,7 +83,6 @@ src_configure() {
 		$(use_with gsm libgsm)
 		$(use_with gtk)
 		$(use_with idn libidn)
-		$(use_with inotify)
 		$(use xmpp && echo '--with-expat' || use_with rss expat)
 		$(use_with jpeg libjpeg)
 		$(use_with ncurses)
@@ -100,6 +99,7 @@ src_configure() {
 		$(use_with zlib)
 		$(use_enable nls)
 		$(use_enable unicode)
+		--with-inotify
 		--without-ioctld
 		--disable-remote
 		--enable-skip-relative-plugins-dir
