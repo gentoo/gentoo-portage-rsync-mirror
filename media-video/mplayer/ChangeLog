@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.882 2013/02/14 21:01:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.883 2013/03/21 07:08:36 ssuominen Exp $
+
+  21 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> mplayer-1.1-r1.ebuild,
+  mplayer-9999.ebuild:
+  Use /dev/cdrom instead of /dev/dvd as default DVD device:
+  http://forums.gentoo.org/viewtopic-t-954272-highlight-.html
 
   14 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   It seems fine with libav-9 so allow it in the deps

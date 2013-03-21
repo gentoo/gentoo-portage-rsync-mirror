@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.140 2013/02/14 21:01:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.141 2013/03/21 07:08:36 ssuominen Exp $
 
 EAPI=4
 
@@ -254,6 +254,9 @@ src_prepare() {
 	sed -i -e "1c\#!${EPREFIX}/bin/bash" configure version.sh || die
 
 	base_src_prepare
+
+	# Use sane default for >=virtual/udev-197
+	sed -i -e '/default_dvd_device/s:/dev/dvd:/dev/cdrom:' configure || die
 }
 
 src_configure() {

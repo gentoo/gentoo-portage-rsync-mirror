@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.20 2013/02/08 13:41:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.21 2013/03/21 07:08:36 ssuominen Exp $
 
 EAPI=4
 
@@ -273,6 +273,9 @@ src_prepare() {
 			"${FILESDIR}/${P}-planaraudio.patch" \
 			"${FILESDIR}/${P}-missingbreak.patch"
 	fi
+
+	# Use sane default for >=virtual/udev-197
+	sed -i -e '/default_dvd_device/s:/dev/dvd:/dev/cdrom:' configure || die
 }
 
 src_configure() {

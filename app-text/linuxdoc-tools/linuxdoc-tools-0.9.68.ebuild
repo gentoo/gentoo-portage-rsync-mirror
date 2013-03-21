@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.68.ebuild,v 1.1 2013/03/20 10:09:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.68.ebuild,v 1.2 2013/03/21 07:09:04 pinkbyte Exp $
 
 EAPI=2
 
@@ -36,6 +36,11 @@ src_prepare() {
 		"${FILESDIR}/${PN}-0.9.21-malloc.patch" \
 		"${FILESDIR}/${P}-compiler.patch" \
 		"${FILESDIR}/${P}-lex.patch"
+
+	# Wrong path for the catalog.
+	sed -i -e \
+		's,/iso-entities-8879.1986/iso-entities.cat,/sgml-iso-entities-8879.1986/catalog,' \
+		perl5lib/LinuxDocTools.pm || die 'sed failed'
 }
 
 src_configure() {
@@ -61,13 +66,8 @@ src_install() {
 		LINUXDOCDOC="${D}/usr/share/doc/${PF}/guide" \
 		|| die "Installation failed"
 
-	# Wrong path for the catalog.
-	sed -i -e \
-		's,/iso-entities-8879.1986/iso-entities.cat,/sgml-iso-entities-8879.1986/catalog,' \
-		/usr/share/linuxdoc-tools/LinuxDocTools.pm || die 'sed failed'
-
 	insinto /usr/share/texmf/tex/latex/misc
-	doins "${S}"/lib/*.sty || die
+	doins tex/*.sty || die
 
 	dodoc ChangeLog README || die
 }
