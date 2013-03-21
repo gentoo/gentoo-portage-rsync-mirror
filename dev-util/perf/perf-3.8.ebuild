@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.8.ebuild,v 1.1 2013/03/04 08:08:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.8.ebuild,v 1.2 2013/03/21 05:38:48 patrick Exp $
 
 EAPI="4"
 
@@ -116,7 +116,7 @@ src_prepare() {
 
 puse() { usex $1 "" no; }
 perf_make() {
-	emake V=1 \
+	emake -j1 V=1 \
 		CC="$(tc-getCC)" AR="$(tc-getAR)" \
 		prefix="/usr" bindir_relative="sbin" \
 		CFLAGS_OPTIMIZE="${CFLAGS}" \

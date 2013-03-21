@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.21 2013/03/04 08:08:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.22 2013/03/21 05:38:48 patrick Exp $
+
+  21 Mar 2013; Patrick Lauer <patrick@gentoo.org> perf-3.8.ebuild:
+  Avoiding parallel make failure #461710
 
 *perf-3.8 (04 Mar 2013)
 
