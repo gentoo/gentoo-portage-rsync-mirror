@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.0.ebuild,v 1.1 2013/03/19 12:20:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.0-r1.ebuild,v 1.1 2013/03/21 16:39:47 jlec Exp $
 
 EAPI=5
 
@@ -63,6 +63,7 @@ pkg_setup() {
 		--disable-schemas-compile
 		--disable-desktop-update
 		--disable-icon-update
+		--prefix=/usr
 		--lib=$(get_libdir)"
 }
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.51 2013/03/19 12:20:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.52 2013/03/21 16:39:47 jlec Exp $
+
+*shotwell-0.14.0-r1 (21 Mar 2013)
+
+  21 Mar 2013; Justin Lecher <jlec@gentoo.org> -shotwell-0.14.0.ebuild,
+  +shotwell-0.14.0-r1.ebuild:
+  Install in /usr not in /usr/local, #462556
 
 *shotwell-0.14.0 (19 Mar 2013)
 
