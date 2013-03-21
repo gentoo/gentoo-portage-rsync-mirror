@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install unpack
-DEPEND=sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs dev-vcs/git
+DEPEND=dev-libs/lzo sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs dev-vcs/git
 DESCRIPTION=Btrfs filesystem utilities
 EAPI=4
 HOMEPAGE=https://btrfs.wiki.kernel.org
 LICENSE=GPL-2
-RDEPEND=sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
+RDEPEND=dev-libs/lzo sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=7369dcfa285fb036f6c1f81800b625a0
+_md5_=1f0b1705fe1cae1b126e8dea8c66c519

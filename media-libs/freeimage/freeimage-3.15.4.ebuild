@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.1 2013/02/19 20:01:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.2 2013/03/21 15:48:09 bicatali Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip
 
 LICENSE="|| ( GPL-2 FIPL-1.0 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="jpeg jpeg2k mng openexr png raw static-libs tiff"
 
 # The tiff/ilmbase isn't a typo.  The TIFF plugin cheats and

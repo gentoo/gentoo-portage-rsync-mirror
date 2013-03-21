@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.25 2013/03/18 22:50:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.26 2013/03/21 15:40:27 floppym Exp $
 
 EAPI=4
 
@@ -22,9 +22,12 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="sys-libs/zlib
+DEPEND="
+	dev-libs/lzo
+	sys-libs/zlib
 	sys-apps/acl
-	sys-fs/e2fsprogs"
+	sys-fs/e2fsprogs
+"
 RDEPEND="${DEPEND}"
 
 src_compile() {
