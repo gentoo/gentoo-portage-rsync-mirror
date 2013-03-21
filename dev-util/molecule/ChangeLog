@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/molecule
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/ChangeLog,v 1.38 2013/02/12 11:19:00 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/ChangeLog,v 1.39 2013/03/21 13:14:38 lxnay Exp $
+
+*molecule-1 (21 Mar 2013)
+
+  21 Mar 2013; Fabio Erculiani <lxnay@gentoo.org> +molecule-1.ebuild:
+  version bump, turn into meta package to ease migration
 
 *molecule-0.9.24.8 (12 Feb 2013)
 

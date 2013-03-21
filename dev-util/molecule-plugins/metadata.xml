@@ -5,7 +5,4 @@
 		<email>lxnay@gentoo.org</email>
 		<name>Fabio Erculiani</name>
 	</maintainer>
-	<use>
-		<flag name='plugins'>Add plugins provided by dev-util/molecule-plugins</flag>
-	</use>
 </pkgmetadata>
