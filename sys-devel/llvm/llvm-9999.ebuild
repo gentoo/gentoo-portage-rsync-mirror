@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.40 2013/03/19 12:42:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.41 2013/03/21 09:12:55 chithanh Exp $
 
 EAPI=5
 
@@ -99,7 +99,8 @@ src_prepare() {
 		|| die "FileCheck Makefile sed failed"
 
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
-	epatch "${FILESDIR}"/${PN}-3.0-PPC_macro.patch
+#	Patch fails to apply, bug #462444
+#	epatch "${FILESDIR}"/${PN}-3.0-PPC_macro.patch
 
 	# User patches
 	epatch_user

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst preinst prepare setup test
-DEPEND=dev-lang/v8 >=dev-libs/boost-1.50[threads(+)] dev-libs/libpcre[cxx] dev-util/google-perftools net-libs/libpcap app-arch/snappy sys-libs/readline sys-libs/ncurses >=dev-util/scons-1.2.0
+DEPEND=dev-lang/v8 >=dev-libs/boost-1.50[threads(+)] dev-libs/libpcre[cxx] dev-util/google-perftools net-libs/libpcap app-arch/snappy ssl? ( dev-libs/openssl ) sys-libs/readline sys-libs/ncurses >=dev-util/scons-1.2.0
 DESCRIPTION=A high-performance, open source, schema-free document-oriented database
 EAPI=4
 HOMEPAGE=http://www.mongodb.org
@@ -7,8 +7,8 @@ IUSE=mms-agent sharedclient spidermonkey ssl static-libs
 KEYWORDS=~amd64 ~x86
 LICENSE=AGPL-3 Apache-2.0
 PDEPEND=mms-agent? ( dev-python/pymongo )
-RDEPEND=dev-lang/v8 >=dev-libs/boost-1.50[threads(+)] dev-libs/libpcre[cxx] dev-util/google-perftools net-libs/libpcap app-arch/snappy
+RDEPEND=dev-lang/v8 >=dev-libs/boost-1.50[threads(+)] dev-libs/libpcre[cxx] dev-util/google-perftools net-libs/libpcap app-arch/snappy ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://downloads.mongodb.org/src/mongodb-src-r2.4.0.tar.gz mms-agent? ( http://dev.gentoo.org/~ultrabug/20130319-10gen-mms-agent.zip )
 _eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=cf29ccb3e31ad59d7d83c6509ed31a3a
+_md5_=90f487363045f557da0fa60ee586cb8a

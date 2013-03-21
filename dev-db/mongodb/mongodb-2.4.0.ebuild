@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.0.ebuild,v 1.1 2013/03/20 17:30:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.0.ebuild,v 1.2 2013/03/21 09:02:33 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -26,7 +26,8 @@ RDEPEND="
 	dev-libs/libpcre[cxx]
 	dev-util/google-perftools
 	net-libs/libpcap
-	app-arch/snappy"
+	app-arch/snappy
+	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	sys-libs/readline
 	sys-libs/ncurses"

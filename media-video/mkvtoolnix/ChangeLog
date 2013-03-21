@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.185 2013/03/03 05:49:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.186 2013/03/21 09:25:13 radhermit Exp $
+
+*mkvtoolnix-6.1.0-r1 (21 Mar 2013)
+
+  21 Mar 2013; Tim Harder <radhermit@gentoo.org> +mkvtoolnix-6.1.0-r1.ebuild:
+  Revision bump, update deps to use system libs for libebml and libmatroska
+  (fixes bug #461424 by dev-zero).
 
 *mkvtoolnix-6.1.0 (03 Mar 2013)
 

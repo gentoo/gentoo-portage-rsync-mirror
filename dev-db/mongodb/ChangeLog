@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.60 2013/03/20 17:30:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.61 2013/03/21 09:02:33 ultrabug Exp $
+
+  21 Mar 2013; Ultrabug <ultrabug@gentoo.org> mongodb-2.4.0.ebuild:
+  add missing dep for ssl USE flag
 
 *mongodb-2.4.0 (20 Mar 2013)
 

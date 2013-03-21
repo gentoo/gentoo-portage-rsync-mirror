@@ -1,4 +1,4 @@
-DEFINED_PHASES=-
+DEFINED_PHASES=compile install prepare
 DEPEND=dev-lang/perl
 DESCRIPTION=Secondary structure and solvent accessibility predictor
 EAPI=5
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/profphd/profphd_1.0.39.orig.tar.xz
-_md5_=3b9b799edbb5310b537b86f52f5e48e9
+_md5_=be62d6361caeef229501c162a3077531

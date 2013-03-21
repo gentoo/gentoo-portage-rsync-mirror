@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.9 2011/07/02 10:27:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.10 2013/03/21 09:07:11 pinkbyte Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,6 +25,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	EPATCH_OPTS="-F3" \
 		epatch "${WORKDIR}/${PN}-glsa-200701.patch"
+
+	# bug #285376
+	epatch "${FILESDIR}/${P}-fix-include-in-libipulog-Makefile.patch"
 }
 
 src_compile() {
