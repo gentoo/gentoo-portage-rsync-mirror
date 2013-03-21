@@ -1,6 +1,13 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.368 2013/03/17 16:02:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.369 2013/03/20 23:02:33 dilfridge Exp $
+
+*poppler-0.22.2-r2 (20 Mar 2013)
+
+  20 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +poppler-0.22.2-r2.ebuild, +files/poppler-0.22.2-findgio.patch:
+  Revision bump to fix broken glib backend, bug 462524. Thanks to leio for
+  analysis and help.
 
   17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> poppler-0.22.2-r1.ebuild:
   Stable for sparc, wrt bug #459866
