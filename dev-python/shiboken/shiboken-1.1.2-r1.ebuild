@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2-r1.ebuild,v 1.4 2013/03/07 18:17:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2-r1.ebuild,v 1.5 2013/03/21 10:48:36 jlec Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ src_configure() {
 	configuration() {
 		local mycmakeargs=(
 			-DPYTHON_EXECUTABLE="${PYTHON}"
-			-DPYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)"
+			-DPYTHON_SITE_PACKAGES="$(python_get_sitedir)"
 			-DPYTHON_SUFFIX="-${EPYTHON}"
 			$(cmake-utils_use_build test TESTS)
 		)
@@ -60,8 +60,8 @@ src_configure() {
 		if [[ ${EPYTHON} == python3* ]]; then
 			mycmakeargs+=(
 				-DUSE_PYTHON3=ON
-				-DPYTHON3_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)"
-				-DPYTHON3_LIBRARY="${EPREFIX}$(python_get_library_path)"
+				-DPYTHON3_INCLUDE_DIR="$(python_get_includedir)"
+				-DPYTHON3_LIBRARY="$(python_get_library_path)"
 			)
 		fi
 

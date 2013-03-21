@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.43 2013/03/08 08:36:48 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.44 2013/03/21 10:48:36 jlec Exp $
+
+  21 Mar 2013; Justin Lecher <jlec@gentoo.org> shiboken-1.1.2-r1.ebuild,
+  metadata.xml:
+  python-r1 getter are EPREFIXed
 
   08 Mar 2013; Davide Pesavento <pesa@gentoo.org> -shiboken-1.1.2.ebuild:
   old
