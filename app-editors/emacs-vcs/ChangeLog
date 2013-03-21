@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.127 2013/03/19 21:33:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.128 2013/03/21 01:16:09 ulm Exp $
+
+  21 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.3.9999.ebuild,
+  metadata.xml:
+  Add USE flags for inotify and acl support. The --with-crt-dir option is
+  gone, so don't pass it to configure.
 
   19 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.3.9999.ebuild:
   Prefer motif to athena if both USE flags are set.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8-r2.ebuild,v 1.1 2013/03/20 23:56:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8-r2.ebuild,v 1.2 2013/03/21 01:24:41 hasufell Exp $
 
 EAPI=4
 inherit cmake-utils eutils multilib toolchain-funcs
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cg cuda glew glut openexr"
 
-DEPEND="media-libs/libpng:0
+RDEPEND="media-libs/libpng:0
 	media-libs/ilmbase
 	media-libs/tiff:0
 	sys-libs/zlib
@@ -28,7 +28,8 @@ DEPEND="media-libs/libpng:0
 	glut? ( media-libs/freeglut )
 	openexr? ( media-libs/openexr )
 	"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}
 

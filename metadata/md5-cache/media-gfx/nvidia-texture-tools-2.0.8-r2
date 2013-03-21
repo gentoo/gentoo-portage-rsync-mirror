@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=media-libs/libpng:0 media-libs/ilmbase media-libs/tiff:0 sys-libs/zlib virtual/jpeg virtual/opengl x11-libs/libX11 cg? ( media-gfx/nvidia-cg-toolkit ) cuda? ( dev-util/nvidia-cuda-toolkit ) glew? ( media-libs/glew ) glut? ( media-libs/freeglut ) openexr? ( media-libs/openexr ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=media-libs/libpng:0 media-libs/ilmbase media-libs/tiff:0 sys-libs/zlib virtual/jpeg virtual/opengl x11-libs/libX11 cg? ( media-gfx/nvidia-cg-toolkit ) cuda? ( dev-util/nvidia-cuda-toolkit ) glew? ( media-libs/glew ) glut? ( media-libs/freeglut ) openexr? ( media-libs/openexr ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A set of cuda-enabled texture tools and compressors
 EAPI=4
 HOMEPAGE=http://developer.nvidia.com/object/texture_tools.html
@@ -10,4 +10,4 @@ RDEPEND=media-libs/libpng:0 media-libs/ilmbase media-libs/tiff:0 sys-libs/zlib v
 SLOT=0
 SRC_URI=http://nvidia-texture-tools.googlecode.com/files/nvidia-texture-tools-2.0.8-1.tar.gz http://dev.gentoo.org/~ssuominen/nvidia-texture-tools-2.0.8-patchset-1.tar.xz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=5303d13b4c84a54e66b0ee9679d242ab
+_md5_=c4cc4bd9e548722db88f8af0e45b5d5f
