@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/pygtk:2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] x11-libs/gtk+:2 >=dev-util/intltool-0.40.1 virtual/pkgconfig >=sys-devel/gettext-0.17-r1 || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Jabber client written in PyGTK
+EAPI=5
+HOMEPAGE=http://www.gajim.org/
+IUSE=avahi crypt dbus gnome kde idle jingle libnotify networkmanager nls spell +srv test X xhtml python_targets_python2_6 python_targets_python2_7
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+LICENSE=GPL-3
+RDEPEND=dev-python/pygtk:2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] x11-libs/gtk+:2 dev-python/pyasn1[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/pyopenssl[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] crypt? ( app-crypt/gnupg dev-python/pycrypto[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) dbus? ( dev-python/dbus-python[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-libs/dbus-glib libnotify? ( dev-python/notify-python[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) avahi? ( net-dns/avahi[dbus,gtk,python] ) ) gnome? ( dev-python/libgnome-python dev-python/gnome-keyring-python dev-python/egg-python ) idle? ( x11-libs/libXScrnSaver ) jingle? ( net-libs/farstream:0.1[python] ) kde? ( kde-base/kwallet ) networkmanager? ( dev-python/dbus-python[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] net-misc/networkmanager ) spell? ( app-text/gtkspell:2 ) srv? ( || ( dev-python/libasyncns-python net-dns/bind-tools ) ) xhtml? ( dev-python/docutils )
+REQUIRED_USE=libnotify? ( dbus ) avahi? ( dbus )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.gajim.org/downloads/0.15/gajim-0.15.3.tar.bz2
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	autotools-utils	c3608254689d959486b175186734d10d	eutils	50d18ebffcbd8bd63614b89c2d664d0d	libtool	2b273eea1976cfaed3449345d94331ac	multibuild	09ecc885e84a763742480174a993ee70	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	ec14ac1ad9c7920d5f5c20950dda44bb	python-utils-r1	c5012e18184f3e0473a1f1a7b9662ab0	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=88bb7905a51923f4d9a2f7a5a871d459
