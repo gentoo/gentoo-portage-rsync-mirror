@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7604 2013/03/20 14:37:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7605 2013/03/21 12:35:36 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Mask new app-text/linuxdoc-tools, wrt bug #442482
 
   20 Mar 2013; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Last rites for x11-misc/google-gadgets, bug #462472

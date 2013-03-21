@@ -1,6 +1,13 @@
 # ChangeLog for app-text/linuxdoc-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/ChangeLog,v 1.20 2013/03/21 07:09:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/ChangeLog,v 1.21 2013/03/21 12:54:43 pinkbyte Exp $
+
+*linuxdoc-tools-0.9.68-r1 (21 Mar 2013)
+
+  21 Mar 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +linuxdoc-tools-0.9.68-r1.ebuild:
+  Fix incorrect prefix path, that is saved in scripts at install phase, wrt bug
+  #442482. Thanks to Manfred Knick for discovering this issue
 
   21 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> linuxdoc-tools-0.9.68.ebuild:
   Move sed for setting proper sgml catalog path to src_prepare, fix tex-related
