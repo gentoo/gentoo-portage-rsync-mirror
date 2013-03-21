@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/simutrans
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.30 2013/01/22 22:33:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.31 2013/03/21 01:44:13 mr_bones_ Exp $
+
+*simutrans-0.112.2 (21 Mar 2013)
+
+  21 Mar 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/simutrans-0.112.2-Makefile.patch,
+  +files/simutrans-0.112.2-overflow.patch, +simutrans-0.112.2.ebuild:
+  version bump
 
 *simutrans-0.112.1 (22 Jan 2013)
 
