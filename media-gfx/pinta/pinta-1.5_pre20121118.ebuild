@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-9999.ebuild,v 1.6 2013/03/21 17:03:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-1.5_pre20121118.ebuild,v 1.1 2013/03/21 17:03:38 hasufell Exp $
 
 EAPI=5
 
-inherit autotools fdo-mime gnome2-utils git-2 mono
+inherit fdo-mime gnome2-utils mono
 
 DESCRIPTION="Simple Painting for Gtk"
 HOMEPAGE="http://pinta-project.com"
-EGIT_REPO_URI="git://github.com/PintaProject/Pinta.git"
+SRC_URI="mirror://github/PintaProject/Pinta/${P/_pre/-preview-}.tar.gz"
 
 LICENSE="MIT CC-BY-3.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="dev-dotnet/atk-sharp:2
 	dev-dotnet/gdk-sharp:2
@@ -29,6 +29,8 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	virtual/pkgconfig"
 
+S=${WORKDIR}/${P%_pre*}
+
 src_prepare() {
 	local i
 	if [[ -n "${LINGUAS+x}" ]] ; then
@@ -38,7 +40,6 @@ src_prepare() {
 			fi
 		done
 	fi
-	eautoreconf
 }
 
 pkg_preinst() {
