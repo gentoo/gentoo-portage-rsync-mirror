@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7617 2013/03/21 22:14:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7618 2013/03/21 23:02:46 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Mar 2013; Zac Medico <zmedico@gentoo.org> desc/python_targets.desc:
+  Add python_targets_python3_4 description (it's not available in the main tree
+  yet, but may be useful for ebuilds that want to support it anyway).
 
   21 Mar 2013; Julian Ospald <hasufell@gentoo.org>
   hardened/linux/amd64/no-multilib/package.mask:
