@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.64 2013/03/17 05:28:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.65 2013/03/22 20:26:35 maksbotan Exp $
+
+  22 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> astng-0.24.2.ebuild:
+  Add Python 3.3 to PYTHON_COMPAT, bug #462566. Thanks to Nikolaj Sjujskij
 
   17 Mar 2013; Patrick Lauer <patrick@gentoo.org> astng-0.24.2.ebuild:
   Bump
