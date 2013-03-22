@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/suikyo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.47 2012/02/05 02:38:28 matsuu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.48 2013/03/22 17:21:57 ago Exp $
+
+  22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> suikyo-2.1.0-r3.ebuild:
+  Stable for ppc, wrt bug #457238
 
 *suikyo-2.1.0-r4 (05 Feb 2012)
 
@@ -184,4 +187,3 @@
   files/50suikyo-gentoo.el:
   Initial import. Ebuild submitted by Hattya <hattya@inter7.jp>.
   This closes bug #31496.
-

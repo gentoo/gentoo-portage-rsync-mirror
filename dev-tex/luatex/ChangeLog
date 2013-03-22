@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.127 2013/03/21 16:00:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.128 2013/03/22 17:29:03 ago Exp $
+
+  22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> luatex-0.70.1-r2.ebuild:
+  Stable for ppc, wrt bug #459866
 
   21 Mar 2013; Jeroen Roovers <jer@gentoo.org> luatex-0.70.1-r2.ebuild:
   Stable for HPPA (bug #459866).

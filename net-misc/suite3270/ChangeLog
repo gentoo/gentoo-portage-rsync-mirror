@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.46 2013/03/22 16:21:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.47 2013/03/22 17:27:14 ago Exp $
+
+  22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> suite3270-3.3.12_p12.ebuild:
+  Stable for ppc, wrt bug #462614
 
   22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> suite3270-3.3.12_p12.ebuild:
   Stable for x86, wrt bug #462614
