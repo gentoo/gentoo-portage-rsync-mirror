@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-15.ebuild,v 1.1 2013/03/21 21:58:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-15.ebuild,v 1.2 2013/03/22 21:31:22 hasufell Exp $
 
 EAPI=5
 
@@ -42,13 +42,6 @@ RDEPEND="
 	!bundled-glew? ( ~media-libs/glew-1.6.0 )"
 
 S=${WORKDIR}/data
-
-pkg_pretend() {
-	if has splitdebug ${FEATURES}; then
-		eerror "FEATURES=splitdebug is broken for this package, disable it locally"
-		die "FEATURES=splitdebug is broken for this package, disable it locally"
-	fi
-}
 
 pkg_nofetch() {
 	einfo "Please buy & download ${SRC_URI} from:"

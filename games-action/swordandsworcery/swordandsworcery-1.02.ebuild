@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/swordandsworcery/swordandsworcery-1.02.ebuild,v 1.1 2013/03/21 21:49:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/swordandsworcery/swordandsworcery-1.02.ebuild,v 1.2 2013/03/22 21:31:44 hasufell Exp $
 
 # TODO: unbundle liblua-5.1 when available for multilib
 
@@ -58,13 +58,6 @@ RDEPEND="
 	)"
 
 S=${WORKDIR}
-
-pkg_pretend() {
-	if has splitdebug ${FEATURES}; then
-		eerror "FEATURES=splitdebug is broken for this package, disable it locally"
-		die "FEATURES=splitdebug is broken for this package, disable it locally"
-	fi
-}
 
 pkg_nofetch() {
 	einfo "Please buy & download ${SRC_URI} from:"

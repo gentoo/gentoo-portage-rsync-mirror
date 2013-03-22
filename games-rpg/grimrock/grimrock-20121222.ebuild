@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.3 2013/02/01 20:02:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.4 2013/03/22 21:34:37 hasufell Exp $
 
 EAPI=5
 
@@ -50,13 +50,6 @@ RDEPEND="
 DEPEND="app-arch/xz-utils"
 
 S=${WORKDIR}
-
-pkg_pretend() {
-	if has splitdebug ${FEATURES}; then
-		eerror "FEATURES=splitdebug is broken for this package, disable it locally"
-		die "FEATURES=splitdebug is broken for this package, disable it locally"
-	fi
-}
 
 pkg_nofetch() {
 	einfo "Please buy & download ${SRC_URI} from:"

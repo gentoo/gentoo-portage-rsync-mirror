@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620.ebuild,v 1.1 2013/03/21 22:17:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620.ebuild,v 1.2 2013/03/22 21:34:09 hasufell Exp $
 
 # TODO: - unbundle mono when multilib
 #       - unbundle fmodex when multilib
@@ -51,15 +51,6 @@ RDEPEND="
 	)"
 
 CHECKREQS_DISK_BUILD="2400M"
-
-pkg_pretend() {
-	if has splitdebug ${FEATURES}; then
-		eerror "FEATURES=splitdebug is broken for this package, disable it locally"
-		die "FEATURES=splitdebug is broken for this package, disable it locally"
-	fi
-
-	check-reqs_pkg_pretend
-}
 
 pkg_nofetch() {
 	einfo "Please buy & download ${SRC_URI} from:"
