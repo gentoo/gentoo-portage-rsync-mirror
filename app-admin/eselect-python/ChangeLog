@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.67 2013/03/22 03:25:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.69 2013/03/22 16:20:46 ago Exp $
+
+  22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> eselect-python-20111108.ebuild:
+  Stable for x86, wrt bug #462644
+
+  22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> eselect-python-20111108.ebuild:
+  Stable for amd64, wrt bug #462644
 
   22 Mar 2013; Mike Frysinger <vapier@gentoo.org>
   eselect-python-99999999.ebuild:

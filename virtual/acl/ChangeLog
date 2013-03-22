@@ -1,6 +1,9 @@
 # ChangeLog for virtual/acl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.5 2012/04/26 13:26:16 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.6 2013/03/22 16:03:21 jer Exp $
+
+  22 Mar 2013; Jeroen Roovers <jer@gentoo.org> acl-0-r1.ebuild:
+  Stable for HPPA (bug #212517).
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> acl-0-r1.ebuild:
   keyword ~amd64-fbsd
