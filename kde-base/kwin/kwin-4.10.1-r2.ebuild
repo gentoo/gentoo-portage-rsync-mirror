@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.1.ebuild,v 1.1 2013/03/06 13:41:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.1-r2.ebuild,v 1.1 2013/03/22 22:41:47 dilfridge Exp $
 
 EAPI=5
 
@@ -48,6 +48,11 @@ KMEXTRACTONLY="
 
 # you need one of these
 REQUIRED_USE="!opengl? ( gles ) !gles? ( opengl )"
+
+PATCHES=(
+	"${FILESDIR}/${P}-nulluuid.patch"
+	"${FILESDIR}/${P}-unref.patch"
+)
 
 src_configure() {
 	# FIXME Remove when activity API moved away from libkworkspace
