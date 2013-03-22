@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7621 2013/03/22 11:12:17 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7625 2013/03/22 20:59:25 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  app-misc/ccal removal. Fixes bug #350559
+
+  22 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  sys-apps/i2c removal. Fixes bug #450594
+
+  22 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  net-misc/wxdfast is gone. Fixes #457832
+
+  22 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask net-misc/gwibber for removal. Bug #388913
 
   22 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
   eapi-5-files/use.stable.mask:

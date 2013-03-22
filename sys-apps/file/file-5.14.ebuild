@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.14.ebuild,v 1.1 2013/03/21 21:18:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.14.ebuild,v 1.2 2013/03/22 20:41:22 vapier Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
@@ -16,7 +16,8 @@ SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+# Slightly bad output #462714
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="python static-libs zlib"
 
 RDEPEND="zlib? ( sys-libs/zlib )"
