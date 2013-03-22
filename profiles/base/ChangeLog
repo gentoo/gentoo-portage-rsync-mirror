@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.520 2013/03/19 12:58:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.521 2013/03/22 01:20:27 zmedico Exp $
+
+  22 Mar 2013; Zac Medico <zmedico@gentoo.org> use.mask:
+  Mask python_targets_python3_4, since Python 3.4 pre-releases not available in
+  main tree yet.
 
   19 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:

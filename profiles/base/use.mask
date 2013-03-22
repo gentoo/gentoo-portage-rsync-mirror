@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.164 2013/03/06 23:35:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.165 2013/03/22 01:20:27 zmedico Exp $
 
 # not ready for primetime
 packagekit
@@ -332,3 +332,7 @@ python_single_target_pypy2_0
 abi_x86_32
 abi_x86_64
 abi_x86_x32
+
+# Zac Medico <zmedico@gentoo.org> (21 Mar 2013)
+# Python 3.4 pre-releases not available in main tree yet.
+python_targets_python3_4
