@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.28.ebuild,v 1.3 2013/03/14 00:59:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.40.ebuild,v 1.1 2013/03/22 02:55:43 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -50,13 +50,13 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/harfbuzz
 	>=media-libs/libjpeg-turbo-1.2.0-r1
 	media-libs/libpng
+	media-libs/libvpx
 	>=media-libs/libwebp-0.2.0_rc1
 	!arm? ( !x86? ( >=media-libs/mesa-9.1[gles2] ) )
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0[opus] )
-	>=net-libs/libsrtp-1.4.4_p20121108
 	sys-apps/dbus
 	sys-apps/pciutils
 	sys-libs/zlib[minizip]
@@ -160,7 +160,7 @@ src_prepare() {
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
-		\! -path 'third_party/libvpx/*' \
+		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
@@ -220,9 +220,9 @@ src_configure() {
 
 	# Use system-provided libraries.
 	# TODO: use_system_hunspell (upstream changes needed).
+	# TODO: use_system_libsrtp (bug #459932).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
-	# TODO: use_system_libvpx (http://crbug.com/174287).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
@@ -232,8 +232,8 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
-		-Duse_system_libsrtp=1
 		-Duse_system_libusb=1
+		-Duse_system_libvpx=1
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_minizip=1
@@ -258,6 +258,10 @@ src_configure() {
 		myconf+="
 			-Duse_system_yasm=1"
 	fi
+
+	# TODO: re-enable on vp9 libvpx release (http://crbug.com/174287).
+	myconf+="
+		-Dmedia_use_libvpx=0"
 
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.
@@ -350,7 +354,7 @@ src_configure() {
 src_compile() {
 	local test_targets
 	for x in base cacheinvalidation crypto \
-		googleurl gpu media net printing sql; do
+		googleurl gpu net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
 
