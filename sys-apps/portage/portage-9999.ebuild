@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.69 2013/03/21 23:39:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.70 2013/03/22 00:04:25 zmedico Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -288,6 +288,7 @@ src_install() {
 					"${dest_mod_dir}/${x}" || die
 			done
 		done < <(cd "${S}"/pym || die ; find * -type d ! -path "portage/tests*")
+		dest_mod_dir=/usr/$(get_libdir)/${impl/_/.}/site-packages
 		case "${impl}" in
 			python*)
 				python=${impl/_/.}
