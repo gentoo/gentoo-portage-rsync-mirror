@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.200 2013/03/20 13:34:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.201 2013/03/22 22:30:08 dilfridge Exp $
+
+  22 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  plasma-workspace-4.10.0-r2.ebuild, plasma-workspace-4.10.1.ebuild:
+  We need the bugfix in qtcore here, see bug 450818
 
   20 Mar 2013; Michael Palimaka <kensington@gentoo.org> metadata.xml,
   plasma-workspace-4.10.0-r2.ebuild, plasma-workspace-4.10.1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.1.ebuild,v 1.2 2013/03/18 23:21:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.1-r1.ebuild,v 1.1 2013/03/22 22:27:48 dilfridge Exp $
 
 EAPI=5
 
@@ -135,6 +135,7 @@ PATCHES=(
 	"${FILESDIR}/dist/02_gentoo_append_xdg_config_dirs-1.patch"
 	"${FILESDIR}/${PN}-4.7.96-mimetypes.patch"
 	"${FILESDIR}/${PN}-4.4.90-xslt.patch"
+	"${FILESDIR}/${PN}-4.6.2-armlinking.patch"
 	"${FILESDIR}/${PN}-4.6.3-no_suid_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.8.1-norpath.patch"
 	"${FILESDIR}/${PN}-4.9.3-werror.patch"
@@ -152,7 +153,6 @@ pkg_pretend() {
 
 src_prepare() {
 	kde4-base_src_prepare
-	use arm && epatch "${FILESDIR}/${PN}-4.6.2-armlinking.patch"
 
 	# Rename applications.menu (needs 01_gentoo_set_xdg_menu_prefix-1.patch to work)
 	sed -e 's|FILES[[:space:]]applications.menu|FILES applications.menu RENAME kde-4-applications.menu|g' \

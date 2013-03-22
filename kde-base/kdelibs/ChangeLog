@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.899 2013/03/18 23:21:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.900 2013/03/22 22:27:48 dilfridge Exp $
+
+*kdelibs-4.10.1-r1 (22 Mar 2013)
+
+  22 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdelibs-4.10.1.ebuild, +kdelibs-4.10.1-r1.ebuild:
+  Never add -Wl,--fatal-warnings in kde build system
 
   18 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> kdelibs-4.10.1.ebuild,
   +files/kdelibs-4.10.1-giflib5.patch:
