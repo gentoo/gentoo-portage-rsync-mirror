@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.293 2013/03/22 16:27:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.294 2013/03/22 16:58:27 floppym Exp $
+
+  22 Mar 2013; Mike Gilbert <floppym@gentoo.org> v8-3.16.14.9-r1.ebuild:
+  Just set soname to ${PV} instead. Bug 462618.
 
 *v8-3.16.14.9-r1 (22 Mar 2013)
 

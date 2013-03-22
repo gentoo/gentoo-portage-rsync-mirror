@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.565 2013/03/19 21:35:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.566 2013/03/22 16:34:00 ulm Exp $
 
   19 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r5.ebuild,
   emacs-24.3.ebuild:
@@ -102,7 +102,7 @@
 
   01 Oct 2012; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r4.ebuild,
   emacs-24.1-r1.ebuild, emacs-24.2.ebuild:
-  Don't hardcore ar, but get AR and ARFLAGS from configure, bug 436758.
+  Don't hardcode ar, but get AR and ARFLAGS from configure, bug 436758.
 
   01 Oct 2012; Agostino Sarubbo <ago@gentoo.org> emacs-24.2.ebuild:
   Stable for amd64, wrt bug #436520
