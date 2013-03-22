@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7618 2013/03/21 23:02:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7619 2013/03/22 07:06:08 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Removing mask on app-text/linuxdoc-tools
 
   21 Mar 2013; Zac Medico <zmedico@gentoo.org> desc/python_targets.desc:
   Add python_targets_python3_4 description (it's not available in the main tree

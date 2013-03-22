@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.68-r1.ebuild,v 1.1 2013/03/21 12:54:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.68-r1.ebuild,v 1.2 2013/03/22 07:04:38 pinkbyte Exp $
 
 EAPI=5
 
@@ -39,6 +39,11 @@ src_prepare() {
 	sed -i -e \
 		's,/iso-entities-8879.1986/iso-entities.cat,/sgml-iso-entities-8879.1986/catalog,' \
 		perl5lib/LinuxDocTools.pm || die 'sed failed'
+
+	# Fix incorrect version string in upstream tarball
+	sed -i -e "s/0.9.66/${PV}/" VERSION || die 'sed on VERSION failed'
+
+	epatch_user
 }
 
 src_configure() {
