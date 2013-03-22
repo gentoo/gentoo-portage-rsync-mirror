@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p130318-r1.ebuild,v 1.1 2013/03/21 10:26:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p130318-r1.ebuild,v 1.2 2013/03/22 10:38:35 jlec Exp $
 
 EAPI=5
 
@@ -145,9 +145,7 @@ src_install() {
 		-i ${i} || die
 	done
 
-	insinto ${in_path}
-
-	dodir ${in_path%${EPREFIX}}/c
+	dodir ${in_path#${EPREFIX}}/c
 
 	ebegin "Installing main files"
 		python_moduleinto ${PN}

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/matio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/ChangeLog,v 1.5 2013/03/20 21:33:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/ChangeLog,v 1.6 2013/03/22 10:50:10 grozin Exp $
+
+  22 Mar 2013; Andrey Grozin <grozin@gentoo.org> matio-1.5.1.ebuild:
+  Fixed docs installation
 
 *matio-1.5.1 (20 Mar 2013)
 

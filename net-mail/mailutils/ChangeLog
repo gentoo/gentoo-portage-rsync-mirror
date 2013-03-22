@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.64 2013/02/28 13:03:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.65 2013/03/22 10:41:58 eras Exp $
+
+*mailutils-2.99.98 (22 Mar 2013)
+
+  22 Mar 2013; Eray Aslan <eras@gentoo.org>
+  +files/mailutils-2.99.98-array_bounds.patch, +mailutils-2.99.98.ebuild:
+  Version bump
 
   28 Feb 2013; Eray Aslan <eras@gentoo.org> mailutils-2.99.97.ebuild:
   Use tc-getPKG_CONFIG instead of calling pkg-config directly

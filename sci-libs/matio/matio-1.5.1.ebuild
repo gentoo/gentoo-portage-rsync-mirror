@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.1.ebuild,v 1.1 2013/03/20 21:33:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.1.ebuild,v 1.2 2013/03/22 10:50:10 grozin Exp $
 
 EAPI=5
 
@@ -37,7 +37,10 @@ src_compile() {
 
 src_install() {
 	autotools-utils_src_install
-	use doc && dodoc documentation/matio_user_guide.pdf
+	if use doc; then
+		insinto /usr/share/doc/${PF}
+		doins "${WORKDIR}"/${P}_build/documentation/matio_user_guide.pdf
+	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins test/test*

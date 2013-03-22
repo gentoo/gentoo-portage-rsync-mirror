@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14569 2013/03/22 07:06:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14570 2013/03/22 10:39:20 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -324,13 +324,6 @@ net-voip/telepathy-butterfly
 # The package was not pkg-moved to fix the upstream versioning mess.
 # Removal in 30 days
 www-client/xxxterm
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Jan 2013)
-# Uncompatible with current udev and baselayout
-# Bug 220121 and the ones it Blocks
-# Removal in 30 days
-x11-misc/mkxf86config
-<app-misc/livecd-tools-2.0
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jan 2013)
 # Beta versions masked for testing
