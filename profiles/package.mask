@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14570 2013/03/22 10:39:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14571 2013/03/22 19:33:13 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -230,11 +230,6 @@ net-misc/wxdfast
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Development versions of net-analyzer/wireshark
 =net-analyzer/wireshark-1.9*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (18 Feb 2013)
-# Quite dead.  Use games-engines/stratagus instead.
-# Masked for removal on 20130320.
-games-strategy/freecraft
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
 # Does not build with libav-0.8

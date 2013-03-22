@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/triplea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.51 2013/02/10 17:23:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.52 2013/03/22 19:40:44 hasufell Exp $
+
+*triplea-1.6.1.4 (22 Mar 2013)
+
+  22 Mar 2013; Julian Ospald <hasufell@gentoo.org> +triplea-1.6.1.4.ebuild:
+  version bump wrt #349341
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> triplea-1.6.1.2.ebuild:
   Stable for ppc, wrt bug #456058
