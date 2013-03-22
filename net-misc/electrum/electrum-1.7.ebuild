@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.7.ebuild,v 1.1 2013/03/19 12:39:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.7.ebuild,v 1.2 2013/03/22 11:23:14 blueness Exp $
 
 EAPI="5"
 
@@ -54,11 +54,12 @@ src_prepare() {
 
 	# Remove unrequested GUI implementations:
 	if use !gtk; then
-		rm lib/gui.py || die
+		rm gui/gui_gtk.py || die
 	fi
 	if use !qt4; then
-		rm lib/gui_qt.py lib/gui_lite.py || die
-		sed -i 's/default="lite"/default="gtk"/' electrum || die
+		rm gui/gui_{classic,lite}.py || die
+		sed -i "/config.get('gui','classic')/s/classic/gtk/" electrum \
+			|| die
 	fi
 
 	distutils-r1_src_prepare
