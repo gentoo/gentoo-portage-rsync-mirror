@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.1 2013/03/21 21:53:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.2 2013/03/22 21:30:23 hasufell Exp $
 
 # TODO: unbundle allegro on amd64 when multilib support
 
@@ -44,13 +44,6 @@ RDEPEND="
 	)"
 
 S=${WORKDIR}/data
-
-pkg_pretend() {
-	if has splitdebug ${FEATURES}; then
-		eerror "FEATURES=splitdebug is broken for this package, disable it locally"
-		die "FEATURES=splitdebug is broken for this package, disable it locally"
-	fi
-}
 
 pkg_nofetch() {
 	einfo "Please buy & download ${SRC_URI} from:"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/solar2-1.10.ebuild,v 1.1 2013/03/21 21:55:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/solar2-1.10.ebuild,v 1.2 2013/03/22 21:30:57 hasufell Exp $
 
 # TODO: - unbundle libmono for 64bit
 #       - unbundling libSDL_mixer breaks the game
@@ -48,13 +48,6 @@ RDEPEND="
 	)"
 
 S=${WORKDIR}/Solar2
-
-pkg_pretend() {
-	if has splitdebug ${FEATURES}; then
-		eerror "FEATURES=splitdebug is broken for this package, disable it locally"
-		die "FEATURES=splitdebug is broken for this package, disable it locally"
-	fi
-}
 
 pkg_nofetch() {
 	einfo "Please buy & download ${GAMEBALL} from:"

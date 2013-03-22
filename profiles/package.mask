@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14575 2013/03/22 20:59:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14576 2013/03/22 21:11:42 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -304,12 +304,6 @@ dev-ruby/mysql2:0.2
 # possible security issues (#360539). You can use Windows
 # version with PlayOnLinux. Removal in a month.
 media-gfx/picasa
-
-# Pacho Ramos <pacho@gentoo.org> (10 Feb 2013)
-# Abandoned by upstream, problems building (#362611).
-# Removal in a month.
-dev-python/papyon
-net-voip/telepathy-butterfly
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
