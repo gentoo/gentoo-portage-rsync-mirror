@@ -1,9 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.68 2013/02/06 19:46:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.69 2013/03/21 23:39:11 zmedico Exp $
 
 EAPI=3
-inherit git-2 eutils python
+PYTHON_COMPAT=(
+	pypy1_9 pypy2_0
+	python3_1 python3_2 python3_3 python3_4
+	python2_6 python2_7
+)
+inherit git-2 eutils multilib python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -11,6 +16,11 @@ LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_ru pypy2_0 python2 python3 selinux xattr"
+
+for _pyimpl in ${PYTHON_COMPAT[@]} ; do
+	IUSE+=" python_targets_${_pyimpl}"
+done
+unset _pyimpl
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
@@ -23,6 +33,17 @@ python_dep_ssl="python3? ( =dev-lang/python-3*[ssl] )
 python_dep="${python_dep_ssl//\[ssl\]}"
 python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
+
+python_dep="${python_dep}
+	python_targets_pypy1_9? ( dev-python/pypy:1.9 )
+	python_targets_pypy2_0? ( dev-python/pypy:2.0 )
+	python_targets_python2_6? ( dev-lang/python:2.6 )
+	python_targets_python2_7? ( dev-lang/python:2.7 )
+	python_targets_python3_1? ( dev-lang/python:3.1 )
+	python_targets_python3_2? ( dev-lang/python:3.2 )
+	python_targets_python3_3? ( dev-lang/python:3.3 )
+	python_targets_python3_4? ( dev-lang/python:3.4 )
+"
 
 # The pysqlite blocker is for bug #282760.
 # make-3.82 is for bug #455858
@@ -100,8 +121,8 @@ pkg_setup() {
 		! compatible_python_is_selected ; then
 		ewarn "Attempting to select a compatible default python interpreter"
 		local x success=0
-		for x in /usr/bin/python2.* ; do
-			x=${x#/usr/bin/python2.}
+		for x in "${EPREFIX}"/usr/bin/python2.* ; do
+			x=${x#${EPREFIX}/usr/bin/python2.}
 			if [[ $x -ge 6 ]] 2>/dev/null ; then
 				eselect python set python2.$x
 				if compatible_python_is_selected ; then
@@ -240,12 +261,47 @@ src_install() {
 	# Use dodoc for compression, since the Makefile doesn't do that.
 	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES} || die
 
-	# Set PYTHONPATH for portage API consumers. This way we don't have
-	# to rely on patched python having the correct path, since it has
-	# been known to incorrectly add /usr/libx32/portage/pym to sys.path.
-	echo "PYTHONPATH=\"${EPREFIX}/usr/lib/portage/pym\"" > \
-		"${T}/05portage" || die
-	doenvd "${T}/05portage"
+	# Allow external portage API consumers to import portage python modules
+	# (this used to be done with PYTHONPATH setting in /etc/env.d).
+	# For each of PYTHON_TARGETS, install a tree of *.py symlinks in
+	# site-packages, and compile with the corresponding interpreter.
+	local impl files mod_dir dest_mod_dir python relative_path files x
+	for impl in "${PYTHON_COMPAT[@]}" ; do
+		use "python_targets_${impl}" || continue
+		while read -r mod_dir ; do
+			cd "${S}/pym/${mod_dir}" || die
+			files=$(echo *.py)
+			if [ -z "${files}" ] || [ "${files}" = "*.py" ]; then
+				# __pycache__ directories contain no py files
+				continue
+			fi
+			dest_mod_dir=/usr/$(get_libdir)/${impl/_/.}/site-packages/${mod_dir}
+			dodir "${dest_mod_dir}" || die
+			relative_path=../../../lib/portage/pym/${mod_dir}
+			x=/${mod_dir}
+			while [ -n "${x}" ] ; do
+				relative_path=../${relative_path}
+				x=${x%/*}
+			done
+			for x in ${files} ; do
+				dosym "${relative_path}/${x}" \
+					"${dest_mod_dir}/${x}" || die
+			done
+		done < <(cd "${S}"/pym || die ; find * -type d ! -path "portage/tests*")
+		case "${impl}" in
+			python*)
+				python=${impl/_/.}
+				python=${EPREFIX}/usr/bin/${python}
+				"${python}" -m compileall -q -f -d "${EPREFIX}${dest_mod_dir}" "${ED}${dest_mod_dir#/}" || die
+				"${python}" -OO -m compileall -q -f -d "${EPREFIX}${dest_mod_dir}" "${ED}${dest_mod_dir#/}" || die
+				;;
+			pypy*)
+				python=${impl/_/.}
+				python=${EPREFIX}/usr/bin/${python/pypy/pypy-c}
+				"${python}" -m compileall -q -f -d "${EPREFIX}${dest_mod_dir}" "${ED}${dest_mod_dir#/}" || die
+				;;
+		esac
+	done
 }
 
 pkg_preinst() {
@@ -276,10 +332,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	# Compile all source files recursively. Any orphans
-	# will be identified and removed in postrm.
-	python_mod_optimize /usr/lib/portage/pym
-
 	if $WORLD_MIGRATION_UPGRADE && \
 		grep -q "^@" "${EROOT}/var/lib/portage/world"; then
 		einfo "moving set references from the worldfile into world_sets"
