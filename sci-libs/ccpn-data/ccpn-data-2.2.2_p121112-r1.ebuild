@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.2_p121112-r1.ebuild,v 1.1 2013/03/21 10:06:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.2_p121112-r1.ebuild,v 1.2 2013/03/22 09:06:42 jlec Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ src_prepare() {
 }
 
 src_install() {
-	local i pydocs in_path
+	local i pydocs in_path ein_path
 
 	dodir /usr/share/doc/${PF}/html
 	sed \
@@ -48,12 +48,13 @@ src_install() {
 
 	linking() {
 		in_path=$(python_get_sitedir)/ccpn
-		dosym ../../../../share/doc/${PF}/html ${in_path}/doc
+		ein_path="${in_path#${EPREFIX}}"
+		dosym ../../../../share/doc/${PF}/html ${ein_path}/doc
 		for i in ${pydocs}; do
-			dosym /usr/share/doc/${PF}/html/${i} ${in_path}/${i}
+			dosym /usr/share/doc/${PF}/html/${i} ${ein_path}/${i}
 		done
-		dosym /usr/share/ccpn/data ${in_path}/data
-		dosym /usr/share/ccpn/model ${in_path}/model
+		dosym /usr/share/ccpn/data ${ein_path}/data
+		dosym /usr/share/ccpn/model ${ein_path}/model
 	}
 	python_foreach_impl linking
 
