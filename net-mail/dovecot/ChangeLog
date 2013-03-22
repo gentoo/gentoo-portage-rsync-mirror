@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.415 2013/03/15 13:24:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.416 2013/03/22 09:57:06 eras Exp $
+
+*dovecot-2.2_rc3 (22 Mar 2013)
+
+  22 Mar 2013; Eray Aslan <eras@gentoo.org> +dovecot-2.2_rc3.ebuild,
+  -dovecot-2.2_rc2.ebuild:
+  Version bump
 
   15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dovecot-2.1.15.ebuild:
   Stable for sh, wrt bug #461378
