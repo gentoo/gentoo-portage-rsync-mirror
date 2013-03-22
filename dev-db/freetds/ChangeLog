@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.52 2012/01/06 21:12:32 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.53 2013/03/22 17:48:10 ago Exp $
+
+  22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> freetds-0.91.ebuild:
+  Stable for ppc, wrt bug #461558
 
   06 Jan 2012; Mike Frysinger <vapier@gentoo.org> freetds-0.82-r3.ebuild,
   freetds-0.91.ebuild, -files/config.rpath:
