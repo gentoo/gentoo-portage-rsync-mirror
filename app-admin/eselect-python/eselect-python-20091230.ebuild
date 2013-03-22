@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20091230.ebuild,v 1.8 2010/02/13 16:35:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20091230.ebuild,v 1.9 2013/03/22 03:09:50 vapier Exp $
 
 EAPI="1"
 
 inherit toolchain-funcs
 
 DESCRIPTION="Eselect module for management of multiple Python versions"
-HOMEPAGE="http://www.gentoo.org"
+HOMEPAGE="http://www.gentoo.org/proj/en/Python/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"

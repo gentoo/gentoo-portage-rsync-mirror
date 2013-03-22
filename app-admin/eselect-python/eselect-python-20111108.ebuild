@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20111108.ebuild,v 1.2 2012/04/26 14:53:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20111108.ebuild,v 1.3 2013/03/22 03:09:50 vapier Exp $
 
 # Keep the EAPI low here because everything else depends on it.
 # We want to make upgrading simpler.
@@ -16,7 +16,7 @@ else
 fi
 
 DESCRIPTION="Eselect module for management of multiple Python versions"
-HOMEPAGE="http://www.gentoo.org"
+HOMEPAGE="http://www.gentoo.org/proj/en/Python/"
 
 LICENSE="GPL-2"
 SLOT="0"

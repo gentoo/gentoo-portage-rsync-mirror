@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/eselect-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.65 2012/04/26 14:53:20 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.67 2013/03/22 03:25:53 vapier Exp $
+
+  22 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  eselect-python-99999999.ebuild:
+  Update to git and simplify wrapper selection #441008 by Michał Górny.
+
+  22 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  eselect-python-20091230.ebuild, eselect-python-20100321.ebuild,
+  eselect-python-20111108.ebuild, eselect-python-99999999.ebuild:
+  Set HOMEPAGE to the Gentoo Python project.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   eselect-python-20111108.ebuild, eselect-python-99999999.ebuild:
@@ -303,4 +312,3 @@
   24 Jan 2008; Ali Polatel <hawking@gentoo.org> +metadata.xml,
   +eselect-python-20080124.ebuild:
   eselect-python, initial version
-

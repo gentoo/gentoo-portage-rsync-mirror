@@ -1,22 +1,20 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-99999999.ebuild,v 1.7 2012/04/26 14:53:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-99999999.ebuild,v 1.9 2013/03/22 03:25:53 vapier Exp $
 
 # Keep the EAPI low here because everything else depends on it.
 # We want to make upgrading simpler.
 
-ESVN_PROJECT="eselect-python"
-ESVN_REPO_URI="https://overlays.gentoo.org/svn/proj/python/projects/eselect-python/trunk"
-
 if [[ ${PV} == "99999999" ]] ; then
-	inherit autotools subversion
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git"
+	inherit autotools git-2
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 DESCRIPTION="Eselect module for management of multiple Python versions"
-HOMEPAGE="http://www.gentoo.org"
+HOMEPAGE="http://www.gentoo.org/proj/en/Python/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,9 +29,13 @@ else
 fi
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	[[ -x configure ]] || eautoreconf
+	if [[ ${PV} == "99999999" ]] ; then
+		git-2_src_unpack
+		cd "${S}"
+		eautoreconf
+	else
+		unpack ${A}
+	fi
 }
 
 src_install() {
@@ -41,16 +43,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 }
 
-pkg_preinst() {
-	if has_version "<${CATEGORY}/${PN}-20090804" || ! has_version "${CATEGORY}/${PN}"; then
-		run_eselect_python_update="1"
-	fi
-}
-
 pkg_postinst() {
-	if [[ "${run_eselect_python_update}" == "1" ]]; then
-		ebegin "Running \`eselect python update\`"
-		eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2 > /dev/null
-		eend "$?"
-	fi
+	local ret=0
+	ebegin "Running 'eselect python update'"
+	eselect python update --python2 --if-unset || ret=1
+	eselect python update --python3 --if-unset || ret=1
+	eend ${ret}
 }
