@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.111 2013/03/18 11:59:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.112 2013/03/23 19:15:21 floppym Exp $
+
+  23 Mar 2013; Mike Gilbert <floppym@gentoo.org> ipsec-tools-0.8.0-r5.ebuild,
+  ipsec-tools-0.8.1.ebuild:
+  Don't rename /etc/ipsec.conf if openswan is installed. Bug 462782 by Plüss
+  Roland.
 
   18 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
   ipsec-tools-0.8.0-r5.ebuild:
