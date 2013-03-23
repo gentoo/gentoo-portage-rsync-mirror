@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1438.7.ebuild,v 1.3 2013/03/14 00:59:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1448.0.ebuild,v 1.1 2013/03/23 03:39:48 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -14,7 +14,8 @@ inherit chromium eutils flag-o-matic multilib \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.xz"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.xz
+	test? ( https://commondatastorage.googleapis.com/chromium-browser-official/${P}-testdata.tar.xz )"
 
 LICENSE="BSD"
 SLOT="0"
@@ -58,7 +59,6 @@ RDEPEND="app-accessibility/speech-dispatcher:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
 	>=media-video/ffmpeg-1.0:=[opus]
-	>=net-libs/libsrtp-1.4.4_p20121108:=
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -155,6 +155,7 @@ src_prepare() {
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
+		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
@@ -214,6 +215,7 @@ src_configure() {
 
 	# Use system-provided libraries.
 	# TODO: use_system_hunspell (upstream changes needed).
+	# TODO: use_system_libsrtp (bug #459932).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
@@ -226,7 +228,6 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
-		-Duse_system_libsrtp=1
 		-Duse_system_libusb=1
 		-Duse_system_libvpx=1
 		-Duse_system_libwebp=1
@@ -355,9 +356,10 @@ src_configure() {
 }
 
 src_compile() {
+	# TODO: add media_unittests after fixing compile (bug #462546).
 	local test_targets
 	for x in base cacheinvalidation crypto \
-		googleurl gpu printing sql; do
+		googleurl gpu net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
 
@@ -411,6 +413,7 @@ src_test() {
 	local excluded_base_unittests=(
 		"ICUStringConversionsTest.*" # bug #350347
 		"MessagePumpLibeventTest.*" # bug #398591
+		"TimeTest.JsTime" # bug #459614
 	)
 	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 
@@ -419,20 +422,20 @@ src_test() {
 	runtest out/Release/googleurl_unittests
 	runtest out/Release/gpu_unittests
 
-	# TODO: re-enable when we get the test data in a separate tarball.
+	# TODO: add media_unittests after fixing compile (bug #462546).
 	# runtest out/Release/media_unittests
 
-	# local excluded_net_unittests=(
-	#	"NetUtilTest.IDNToUnicode*" # bug 361885
-	#	"NetUtilTest.FormatUrl*" # see above
-	#	"DnsConfigServiceTest.GetSystemConfig" # bug #394883
-	#	"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
-	#	"URLFetcher*" # bug #425764
-	#	"HTTPSOCSPTest.*" # bug #426630
-	#	"HTTPSEVCRLSetTest.*" # see above
-	#	"HTTPSCRLSetTest.*" # see above
-	#)
-	# runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
+	local excluded_net_unittests=(
+		"NetUtilTest.IDNToUnicode*" # bug 361885
+		"NetUtilTest.FormatUrl*" # see above
+		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
+		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
+		"URLFetcher*" # bug #425764
+		"HTTPSOCSPTest.*" # bug #426630
+		"HTTPSEVCRLSetTest.*" # see above
+		"HTTPSCRLSetTest.*" # see above
+	)
+	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
 	runtest out/Release/printing_unittests
 	runtest out/Release/sql_unittests

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.447 2013/03/19 12:58:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.448 2013/03/23 03:46:44 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -325,11 +325,9 @@ gnome-base/gvfs bluray
 media-tv/tvtime alsa
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (12 Oct 2011)
-# Upstream support not yet ready:
+# Upstream support before 27.x not ready:
 # http://code.google.com/p/chromium/issues/detail?id=32757
-# Feel free to file a Gentoo bug to unmask the flag
-# when above upstream bug is closed.
-www-client/chromium pulseaudio
+<www-client/chromium-27.0.1448.0 pulseaudio
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (17 Sep 2011)
 # Systemtap is not keyworded on anything except amd64/x86

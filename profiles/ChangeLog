@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7630 2013/03/22 23:14:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7631 2013/03/23 03:46:44 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> base/package.use.mask:
+  Unmask pulseaudio flag for chromium-27.x
 
   22 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Add alternatives for media-tv/tvtime
