@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.73 2013/03/21 09:07:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.76 2013/03/23 13:18:03 pinkbyte Exp $
+
+  23 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> -ulogd-2.0.0_beta4.ebuild:
+  Drop ebuild for beta version
+
+  23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.2.ebuild:
+  Add ~ia64, wrt bug #462480
+
+  23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.2.ebuild:
+  Add ~ppc, wrt bug #450016
 
   21 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> ulogd-1.23-r1.ebuild,
   +files/ulogd-1.23-fix-include-in-libipulog-Makefile.patch,
@@ -322,4 +331,3 @@
   24 May 2002; George Shapovalov <george@gentoo.org> Changelog :
 
   Initial release
-
