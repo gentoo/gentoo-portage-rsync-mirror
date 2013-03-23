@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.44.ebuild,v 1.11 2013/01/01 19:21:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.47.ebuild,v 1.1 2013/03/23 18:22:00 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Debian/Ubuntu bootstrap scripts"
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
