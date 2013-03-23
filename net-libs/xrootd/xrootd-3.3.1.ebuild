@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.2.6.ebuild,v 1.2 2012/12/05 18:22:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.3.1.ebuild,v 1.1 2013/03/23 15:22:10 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils eutils user
 
@@ -12,7 +12,7 @@ DESCRIPTION="Extended ROOT remote file server"
 HOMEPAGE="http://xrootd.org/"
 SRC_URI="${HOMEPAGE}/download/v${PV}/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc fuse kerberos perl readline ssl"
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[dot] )
 	perl? ( dev-lang/swig )"
 
-ppkg_setup() {
+pkg_setup() {
 	enewgroup xrootd
 	enewuser xrootd -1 -1 "${EPREFIX}"/var/spool/xrootd xrootd
 }
