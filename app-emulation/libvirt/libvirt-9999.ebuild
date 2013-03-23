@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.44 2012/11/29 02:13:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.45 2013/03/23 20:30:09 cardoe Exp $
 
-EAPI=4
+EAPI=5
 
-#BACKPORTS=85e8c146
+#BACKPORTS=9bf6bec4
 AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
@@ -22,8 +22,8 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://libvirt.org/sources/stable_updates/${MY_P}.tar.gz
-		ftp://libvirt.org/libvirt/stable_updates/${MY_P}.tar.gz
+	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
+		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
 			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~x86"
@@ -34,7 +34,7 @@ DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="audit avahi +caps debug iscsi +libvirtd lvm +lxc +macvtap nfs \
+IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm +lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
@@ -44,7 +44,9 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	uml? ( libvirtd )
 	vepa? ( macvtap )
 	virtualbox? ( libvirtd )
-	xen? ( libvirtd )"
+	xen? ( libvirtd )
+	virt-network? ( libvirtd )
+	firewalld? ( virt-network )"
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
@@ -67,6 +69,7 @@ RDEPEND="sys-libs/readline
 	audit? ( sys-process/audit )
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
+	fuse? ( >=sys-fs/fuse-2.8.6 )
 	iscsi? ( sys-block/open-iscsi )
 	lxc? ( sys-power/pm-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
@@ -97,7 +100,9 @@ RDEPEND="sys-libs/readline
 		>=net-firewall/iptables-1.4.10
 		net-misc/radvd
 		net-firewall/ebtables
-		sys-apps/iproute2[-minimal] )
+		sys-apps/iproute2[-minimal]
+		firewalld? ( net-firewall/firewalld )
+	)
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
@@ -160,6 +165,7 @@ pkg_setup() {
 						LXC_CONFIG_CHECK+=" ~MEMCG"
 
 	CONFIG_CHECK=""
+	use fuse && CONFIG_CHECK+=" ~FUSE_FS"
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
 	use macvtap && CONFIG_CHECK+="${MACVTAP}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
@@ -194,11 +200,14 @@ src_prepare() {
 	local avahi_init=
 	local iscsi_init=
 	local rbd_init=
-	cp "${FILESDIR}/libvirtd.init-r10" "${S}/libvirtd.init"
+	local firewalld_init=
+	cp "${FILESDIR}/libvirtd.init-r11" "${S}/libvirtd.init"
 	use avahi && avahi_init='avahi-daemon'
 	use iscsi && iscsi_init='iscsid'
 	use rbd && rbd_init='ceph'
+	use firewalld && firewalld_init='need firewalld'
 
+	sed -e "s/USE_FLAG_FIREWALLD/${firewalld_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_AVAHI/${avahi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_ISCSI/${iscsi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_RBD/${rbd_init}/" -i "${S}/libvirtd.init"
@@ -206,8 +215,6 @@ src_prepare() {
 
 src_configure() {
 	local myconf=""
-
-	myconf="${myconf} $(use_enable debug)"
 
 	## enable/disable daemon, otherwise client only utils
 	myconf="${myconf} $(use_with libvirtd)"
@@ -217,9 +224,12 @@ src_configure() {
 
 	## hypervisors on the local host
 	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
-	 # leave it automagic as it depends on the version of xen used.
-	use xen || myconf+=" --without-libxl"
-	use xen || myconf+=" --without-xenapi"
+	myconf+=" --without-xenapi"
+	if use xen && has_version ">=app-emulation/xen-tools-4.2.0"; then
+		myconf+=" --with-libxl"
+	else
+		myconf+=" --without-libxl"
+	fi
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then
@@ -245,6 +255,7 @@ src_configure() {
 	myconf="${myconf} $(use_with numa numactl)"
 	myconf="${myconf} $(use_with numa numad)"
 	myconf="${myconf} $(use_with selinux)"
+	myconf="${myconf} $(use_with fuse)"
 
 	# udev for device support details
 	myconf="${myconf} $(use_with udev)"
@@ -260,6 +271,7 @@ src_configure() {
 	myconf="${myconf} $(use_with macvtap)"
 	myconf="${myconf} $(use_with pcap libpcap)"
 	myconf="${myconf} $(use_with vepa virtualport)"
+	myconf="${myconf} $(use_with firewalld)"
 
 	## other
 	myconf="${myconf} $(use_enable nls)"
@@ -285,9 +297,6 @@ src_configure() {
 
 	# locking support
 	myconf="${myconf} --without-sanlock"
-
-	# DBus access to iptables/ebtables and friends
-	myconf="${myconf} --without-firewalld"
 
 	# this is a nasty trick to work around the problem in bug
 	# #275073. The reason why we don't solve this properly is that
@@ -355,11 +364,15 @@ pkg_preinst() {
 	fi
 
 	# Only sysctl files ending in .conf work
-	mv "${D}"/etc/sysctl.d/libvirtd "${D}"/etc/sysctl.d/libvirtd.conf
+	mv "${D}"/usr/lib/sysctl.d/libvirtd "${D}"/etc/sysctl.d/libvirtd.conf
 }
 
 pkg_postinst() {
 	use python && python_mod_optimize libvirt.py
+
+	if [[ -e "${ROOT}"/etc/libvirt/qemu/networks/default.xml ]]; then
+		touch "${ROOT}"/etc/libvirt/qemu/networks/default.xml
+	fi
 
 	# support for dropped privileges
 	if use qemu; then

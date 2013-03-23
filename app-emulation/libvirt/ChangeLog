@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.260 2013/03/20 19:10:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.261 2013/03/23 20:30:09 cardoe Exp $
+
+  23 Mar 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-9999.ebuild:
+  Update the live ebuild with the fixes from recent releases.
 
   20 Mar 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.3-r2.ebuild:
   Fix issue with location of sysctl.d file being installed to the correct path.
