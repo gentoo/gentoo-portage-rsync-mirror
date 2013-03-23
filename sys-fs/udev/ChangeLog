@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.869 2013/03/23 02:22:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.872 2013/03/23 07:27:53 mgorny Exp $
+
+  23 Mar 2013; Michał Górny <mgorny@gentoo.org> udev-198-r5.ebuild:
+  Add a proper blocker due to collision with systemd.
+
+  23 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-198-r3.ebuild,
+  -udev-198-r4.ebuild:
+  old
+
+*udev-198-r5 (23 Mar 2013)
+
+  23 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-198-r5.ebuild,
+  udev-9999.ebuild:
+  Move udevd back to /sbin where it has been always; remove redudant
+  /lib/systemd directory since our sys-apps/systemd is using /usr/lib/systemd.
 
   23 Mar 2013; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   sync live ebuild

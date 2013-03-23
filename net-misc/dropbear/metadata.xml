@@ -20,5 +20,6 @@ under a MIT-style license.
   <use>
     <flag name="bsdpty">Add support for legacy BSD pty's rather than dynamic UNIX pty's -- do not use this flag unless you are absolutely sure you actually want it</flag>
     <flag name="multicall">Build all the programs as one little binary (to save space)</flag>
+    <flag name="shadow">Enable shadow password support</flag>
   </use>
 </pkgmetadata>

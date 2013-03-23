@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.203 2013/03/23 02:22:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.204 2013/03/23 07:05:24 ssuominen Exp $
 
 EAPI=4
 
@@ -76,7 +76,7 @@ PDEPEND=">=virtual/udev-197-r1
 
 S=${WORKDIR}/systemd-${PV}
 
-QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
+#QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV() {
 	if kernel_is lt ${KV_min//./ }; then
@@ -88,7 +88,7 @@ udev_check_KV() {
 check_default_rules() {
 	# Make sure there are no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
-	local udev_rules_md5=a3e16362de3750807b52eae9525c102c
+	local udev_rules_md5=e602584bcabf09cde0f7f9a3c1adda28
 	MD5=$(md5sum < "${S}"/rules/50-udev-default.rules)
 	MD5=${MD5/  -/}
 	if [[ ${MD5} != ${udev_rules_md5} ]]; then
@@ -346,9 +346,22 @@ src_install() {
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
 
-	# install compatibility symlinks
+	# install udevadm symlink
 	dosym ../bin/udevadm /sbin/udevadm
-	dosym ../lib/systemd/systemd-udevd /sbin/udevd
+
+	# move udevd where it used to be and prevent it from showing up
+	# as systemd-udevd named process
+	mv "${ED}"/{lib/systemd/systemd-udevd,sbin/udevd} || die
+	rm -r "${ED}"/lib/systemd
+
+	# with systemd installing to /usr/lib/systed having /lib/systemd
+	# is redudant (and confusing)
+	local systemddir=/usr/lib/systemd
+	dosym /sbin/udevd ${systemddir}/systemd-udevd
+	find "${ED}"/${systemddir} -name '*systemd-udev*.service' -exec \
+		sed -i -e "/ExecStart/s:/lib/systemd:${systemddir}:" {} +
+	find "${ED}"/${systemddir} -name '*udevadm*.service' -exec \
+		sed -i -e "/ExecStart/s:/usr/bin/udevadm:/bin/udevadm:" {} +
 
 	# see src_prepare() where this is created
 	doman "${T}"/udevd.8
@@ -365,6 +378,7 @@ pkg_preinst() {
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
+	preserve_old_lib /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 }
 
 # This function determines if a directory is a mount point.
@@ -477,7 +491,8 @@ pkg_postinst() {
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
-	ewarn "For example, /etc/init.d/udev restart if you are using OpenRc."
+
+	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"

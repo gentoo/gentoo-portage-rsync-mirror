@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dropbear
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.97 2012/08/12 03:56:20 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.98 2013/03/23 07:08:35 vapier Exp $
+
+*dropbear-2013.56 (23 Mar 2013)
+
+  23 Mar 2013; Mike Frysinger <vapier@gentoo.org> +dropbear-2013.56.ebuild,
+  metadata.xml:
+  Version bump.
 
   12 Aug 2012; Mike Frysinger <vapier@gentoo.org> dropbear-0.52-r1.ebuild,
   dropbear-0.52.ebuild, dropbear-0.53.1.ebuild, dropbear-2011.54.ebuild,
