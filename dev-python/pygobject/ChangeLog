@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.196 2013/03/23 12:36:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.197 2013/03/23 13:43:08 ago Exp $
+
+  23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pygobject-3.2.2-r1.ebuild:
+  Stable for alpha, wrt bug #458992
 
   23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pygobject-3.2.2-r1.ebuild:
   Stable for arm, wrt bug #458992
