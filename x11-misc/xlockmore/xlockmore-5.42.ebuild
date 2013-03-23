@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.38.ebuild,v 1.11 2012/12/27 16:52:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.42.ebuild,v 1.1 2013/03/23 16:46:59 jer Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic pam
@@ -11,18 +11,13 @@ SRC_URI="http://ftp.tux.org/pub/tux/bagleyd/${PN}/${P}/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt debug gtk imagemagick motif nas opengl pam truetype xinerama xlockrc"
 
 REQUIRED_USE="
 	|| ( crypt pam )
 "
-
-RDEPEND="x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXmu
-	x11-libs/libXpm
-	x11-libs/libXt
+RDEPEND="
 	gtk? ( x11-libs/gtk+:2 )
 	imagemagick? ( media-gfx/imagemagick )
 	motif? ( >=x11-libs/motif-2.3:0 )
@@ -31,10 +26,16 @@ RDEPEND="x11-libs/libX11
 		virtual/opengl
 		virtual/glu
 		truetype? ( >=media-libs/ftgl-2.1.3_rc5 )
-		)
+	)
 	pam? ( virtual/pam )
 	truetype? ( media-libs/freetype:2 )
-	xinerama? ( x11-libs/libXinerama )"
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libXt
+	xinerama? ( x11-libs/libXinerama )
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	x11-proto/xineramaproto"
@@ -60,24 +61,24 @@ src_configure() {
 	fi
 
 	econf \
-		--enable-vtlock \
-		--enable-syslog \
-		$(use_enable xlockrc) \
 		$(use_enable pam) \
+		$(use_enable xlockrc) \
+		$(use_with crypt) \
+		$(use_with debug editres) \
+		$(use_with gtk gtk2) \
+		$(use_with imagemagick magick) \
+		$(use_with motif) \
+		$(use_with nas) \
+		$(use_with opengl mesa) \
+		$(use_with opengl) \
+		$(use_with truetype freetype) \
+		$(use_with truetype ttf) \
+		$(use_with xinerama) \
 		--disable-use-mb \
 		--enable-appdefaultdir=/usr/share/X11/app-defaults \
-		$(use_with motif) \
-		$(use_with imagemagick magick) \
-		$(use_with debug editres) \
-		$(use_with truetype ttf) \
-		$(use_with truetype freetype) \
-		$(use_with opengl) \
-		$(use_with opengl mesa) \
-		$(use_with xinerama) \
+		--enable-syslog \
+		--enable-vtlock \
 		--without-esound \
-		$(use_with nas) \
-		$(use_with crypt) \
-		$(use_with gtk gtk2) \
 		--without-gtk \
 		${myconf}
 }

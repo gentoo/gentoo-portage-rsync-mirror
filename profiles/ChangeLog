@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7634 2013/03/23 10:44:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7635 2013/03/23 16:33:32 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Add amsn* to the MSN-only packages that going away
 
   23 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking net-im/kmess for removal

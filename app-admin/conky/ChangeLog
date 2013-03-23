@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.207 2013/03/19 17:18:48 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.208 2013/03/23 16:48:21 billie Exp $
+
+  23 Mar 2013; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
+  Remove proxy-maintainers. They are not required if the user in metadata is
+  upstream.
 
   19 Mar 2013; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
   Add upstream tag to metadata.
