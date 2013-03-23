@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14583 2013/03/23 19:34:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14584 2013/03/23 20:34:38 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (23 Mar 2013)
+# Dead upstream. No maintainer
+# Does not seem to work anymore
+# Removal in 30 days. Bug #457254
+app-text/gonzui
 
 # Markos Chandras <hwoarang@gentoo.org> (23 Mar 2013)
 # MSN service terminated.

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.7.ebuild,v 1.1 2013/03/23 16:58:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.7.ebuild,v 1.2 2013/03/23 20:51:22 maekke Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit multilib python-single-r1 cmake-utils
 

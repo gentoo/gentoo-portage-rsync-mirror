@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7636 2013/03/23 19:34:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7637 2013/03/23 20:34:38 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask app-text/gonzui for removal
 
   23 Mar 2013; Rick Farina <zerochaos@gentoo.org> package.mask:
   Removing iwl{3945,4965}-ucode mask as packages have been removed
