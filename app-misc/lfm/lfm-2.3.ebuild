@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lfm/lfm-2.3.ebuild,v 1.1 2012/09/16 09:26:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lfm/lfm-2.3.ebuild,v 1.2 2013/03/23 08:36:40 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -11,8 +11,8 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils eutils
 
 DESCRIPTION="Last File Manager is a powerful file manager for the console"
-HOMEPAGE="http://www.terra.es/personal7/inigoserna/lfm"
-SRC_URI="http://www.terra.es/personal7/inigoserna/lfm/${P}.tar.gz"
+HOMEPAGE="http://katxi.org/devel/lfm/ http://code.google.com/p/lfm/"
+SRC_URI="http://lfm.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

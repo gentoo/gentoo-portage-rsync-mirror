@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lfm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lfm/ChangeLog,v 1.1 2012/09/16 09:26:38 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lfm/ChangeLog,v 1.2 2013/03/23 08:36:40 radhermit Exp $
+
+  23 Mar 2013; Tim Harder <radhermit@gentoo.org> lfm-2.3.ebuild:
+  Update HOMEPAGE and SRC_URI.
 
 *lfm-2.3 (16 Sep 2012)
 

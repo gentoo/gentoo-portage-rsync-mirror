@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/automatictexplugin-11.1.ebuild,v 1.3 2012/08/04 20:32:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/automatictexplugin-12.2.ebuild,v 1.1 2013/03/23 08:10:43 radhermit Exp $
 
-EAPI="4"
-VIM_PLUGIN_VIM_VERSION="7.3"
+EAPI=5
 
 inherit vim-plugin
 
@@ -12,10 +11,9 @@ DESCRIPTION="vim plugin: a comprehensive plugin for editing LaTeX files"
 HOMEPAGE="http://atp-vim.sourceforge.net/"
 SRC_URI="mirror://sourceforge/atp-vim/releases/${MY_P}.tar.gz"
 LICENSE="GPL-3"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 VIM_PLUGIN_HELPFILES="automatic-tex-plugin.txt"
 
