@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.106 2013/03/02 19:37:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.107 2013/03/23 10:01:03 grozin Exp $
+
+*texmacs-1.0.7.18 (23 Mar 2013)
+
+  23 Mar 2013; Andrey Grozin <grozin@gentoo.org> -texmacs-1.0.7.15-r1.ebuild,
+  -files/texmacs-1.0.7.15-tm-files.patch, texmacs-1.0.7.16-r1.ebuild,
+  +texmacs-1.0.7.18.ebuild, -files/texmacs-ldflags.patch:
+  Version bump; removed unused erroneous file in 1.0.7.16-r1 (closing #459430)
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> texmacs-1.0.7.15-r1.ebuild,
   texmacs-1.0.7.16-r1.ebuild:

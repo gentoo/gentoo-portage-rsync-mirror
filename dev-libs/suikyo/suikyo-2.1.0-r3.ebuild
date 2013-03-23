@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-2.1.0-r3.ebuild,v 1.4 2013/03/22 17:21:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-2.1.0-r3.ebuild,v 1.5 2013/03/23 09:56:21 ago Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -12,7 +12,7 @@ SRC_URI="http://prime.sourceforge.jp/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ppc ppc64 ~sparc x86"
 IUSE="emacs"
 
 DEPEND="$(ruby_implementation_depend ruby18)

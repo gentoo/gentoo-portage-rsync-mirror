@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.16-r1.ebuild,v 1.2 2013/03/02 19:37:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.16-r1.ebuild,v 1.3 2013/03/23 10:01:03 grozin Exp $
 
 EAPI=4
 
@@ -35,6 +35,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	# this file is included in the tarball erroneously
+	rm -f plugins/maxima/bin/maxima_filter
+
 	# respect LDFLAGS, bug #338459
 	epatch "${FILESDIR}"/${PN}-plugins.patch
 

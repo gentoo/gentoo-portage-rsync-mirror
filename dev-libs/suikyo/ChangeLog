@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/suikyo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.48 2013/03/22 17:21:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.49 2013/03/23 09:56:21 ago Exp $
+
+  23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> suikyo-2.1.0-r3.ebuild:
+  Stable for ppc64, wrt bug #457238
 
   22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> suikyo-2.1.0-r3.ebuild:
   Stable for ppc, wrt bug #457238
