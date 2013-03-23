@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/libdbx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/ChangeLog,v 1.4 2010/08/26 19:07:17 phosphan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/ChangeLog,v 1.5 2013/03/23 17:08:52 ago Exp $
+
+  23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libdbx-1.0.3.ebuild:
+  Add ~amd64, wrt bug #462816
 
   26 Aug 2010; Patrick Kursawe <phosphan@gentoo.org> libdbx-1.0.3.ebuild:
   Respects LDFLAGS now, see bug #331887.
@@ -14,4 +17,3 @@
   05 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> libdbx-1.0.3.ebuild,
   metadata.xml:
   Initial import.
-
