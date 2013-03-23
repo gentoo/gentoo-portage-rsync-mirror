@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.47.ebuild,v 1.1 2013/03/23 18:22:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.47.ebuild,v 1.2 2013/03/23 18:45:41 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -38,6 +38,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To check Release files against a keyring"
-	elog " (--keyring=K), please install app-crypt/gnupg."
+	if ! has_version ${CATEGORY}/${PN} && ! has_version app-crypt/gnupg; then
+		elog "To check Release files against a keyring"
+		elog " (--keyring=K), please install app-crypt/gnupg."
+	fi
 }

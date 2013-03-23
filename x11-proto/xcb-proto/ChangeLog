@@ -1,6 +1,13 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.96 2013/03/06 13:05:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.97 2013/03/23 18:45:54 pacho Exp $
+
+*xcb-proto-1.8-r2 (23 Mar 2013)
+
+  23 Mar 2013; Pacho Ramos <pacho@gentoo.org> +xcb-proto-1.8-r2.ebuild,
+  xcb-proto-1.8-r1.ebuild:
+  Use -r1 for new python eclasses usage and -r2 for also include multilib
+  support, see bug #462178
 
   06 Mar 2013; Michał Górny <mgorny@gentoo.org> xcb-proto-1.8-r1.ebuild:
   Migrate to python-r1.
