@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libiscsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/ChangeLog,v 1.3 2013/03/16 05:18:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/ChangeLog,v 1.4 2013/03/23 14:42:31 ryao Exp $
+
+  23 Mar 2013; Richard Yao <ryao@gentoo.org> libiscsi-1.9.0.ebuild,
+  libiscsi-9999.ebuild:
+  Fix net-libs/libiscsi-1.9.0 builds, bug #462140
 
   16 Mar 2013; Doug Goldstein <cardoe@gentoo.org> libiscsi-1.9.0.ebuild:
   Use a cursor for a better file name when downloaded
