@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.11 2013/02/28 17:49:32 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.13 2013/03/23 18:00:38 grobian Exp $
 
 EAPI="3"
 
@@ -93,6 +93,13 @@ src_prepare() {
 		cp "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch . || die
 		epatch "${FILESDIR}"/${PN}-4.76-dsn.patch
 		epatch exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
+	fi
+
+	if use ipv6 ; then
+		# set a sensible default, bug #448314
+		sed -i \
+			-e '/^hostlist\s\+relay_from_hosts/s/\(127.0.0.1\)/\1 : ::::1/' \
+			src/configure.default || die
 	fi
 
 	# user Exim believes it should be
@@ -354,5 +361,5 @@ pkg_postinst() {
 	einfo "Exim maintains some db files under its spool directory that need"
 	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"
 	einfo "Please use the exim_tidydb tool as documented in the Exim manual:"
-	einfo "http://www.exim.org/exim-html-current/doc/html/spec_html/ch50.html#SECThindatmai"
+	einfo "http://www.exim.org/exim-html-current/doc/html/spec_html/ch-exim_utilities.html#SECThindatmai"
 }
