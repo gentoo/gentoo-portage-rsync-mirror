@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.868 2013/03/23 01:48:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.869 2013/03/23 02:22:58 williamh Exp $
+
+  23 Mar 2013; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  sync live ebuild
 
   23 Mar 2013; William Hubbs <williamh@gentoo.org> udev-198-r4.ebuild:
   add back qa_multilib_paths

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.202 2013/03/19 12:39:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.203 2013/03/23 02:22:58 williamh Exp $
 
 EAPI=4
 
@@ -75,6 +75,8 @@ PDEPEND=">=virtual/udev-197-r1
 	openrc? ( >=sys-fs/udev-init-scripts-23 )"
 
 S=${WORKDIR}/systemd-${PV}
+
+QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV() {
 	if kernel_is lt ${KV_min//./ }; then
@@ -321,7 +323,8 @@ src_install() {
 				units/systemd-udevd-kernel.socket"
 		nodist_systemunit_DATA="units/systemd-udevd.service \
 				units/systemd-udev-trigger.service \
-				units/systemd-udev-settle.service"
+				units/systemd-udev-settle.service \
+				units/initrd-udevadm-cleanup-db.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
 		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
@@ -343,17 +346,9 @@ src_install() {
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
 
-	# install udevadm symlink
+	# install compatibility symlinks
 	dosym ../bin/udevadm /sbin/udevadm
-
-	# move udevd where it should be and remove unlogical /lib/systemd
-	mv "${ED}"/lib/systemd/systemd-udevd "${ED}"/sbin/udevd || die
-	rm -r "${ED}"/lib/systemd
-
-	# install compability symlink for systemd and initramfs tools
-	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
-	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
-		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
+	dosym ../lib/systemd/systemd-udevd /sbin/udevd
 
 	# see src_prepare() where this is created
 	doman "${T}"/udevd.8
@@ -370,7 +365,6 @@ pkg_preinst() {
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
-	preserve_old_lib /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 }
 
 # This function determines if a directory is a mount point.
@@ -483,8 +477,7 @@ pkg_postinst() {
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
-
-	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
+	ewarn "For example, /etc/init.d/udev restart if you are using OpenRc."
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"
