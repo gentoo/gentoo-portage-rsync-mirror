@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/huludesktop/huludesktop-0.9.8-r1.ebuild,v 1.3 2012/11/05 16:38:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/huludesktop/huludesktop-0.9.8-r1.ebuild,v 1.4 2013/03/23 19:52:24 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ EAPI="2"
 # to switch to/from multilib in the ebuild
 NATIVE64="y"
 
-inherit eutils
+inherit eutils unpacker
 
 DESCRIPTION="Hulu desktop"
 HOMEPAGE="http://www.hulu.com/labs/hulu-desktop-linux"
@@ -45,10 +45,6 @@ fi
 DEPEND=""
 
 QA_PREBUILT="opt/bin/huludesktop.bin"
-
-src_unpack() {
-	unpack ${A} ./data.tar.gz
-}
 
 src_install() {
 	insinto /etc/${PN}

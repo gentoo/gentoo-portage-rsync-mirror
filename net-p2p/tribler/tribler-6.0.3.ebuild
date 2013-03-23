@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.0.3.ebuild,v 1.4 2013/02/18 19:01:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.0.3.ebuild,v 1.5 2013/03/23 19:46:34 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite"
 
-inherit eutils python
+inherit eutils python unpacker
 
 MY_PV="${PN}_${PV}_all"
 
@@ -43,13 +43,6 @@ QA_PREBUILT="/usr/share/tribler/swift"
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
-}
-
-src_unpack() {
-	for i in ${A}; do
-		unpack ${i}
-		unpack ./data.tar.gz
-	done
 }
 
 src_prepare() {

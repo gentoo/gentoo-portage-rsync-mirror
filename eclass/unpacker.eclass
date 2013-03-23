@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.10 2012/08/22 01:41:12 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.11 2013/03/23 19:35:59 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -274,6 +274,10 @@ unpack_deb() {
 	fi
 
 	unpacker ./data.tar*
+
+	# Clean things up #458658.  No one seems to actually care about
+	# these, so wait until someone requests to do something else ...
+	rm -f debian-binary {control,data}.tar*
 }
 
 # @FUNCTION: unpack_cpio

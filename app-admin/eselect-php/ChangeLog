@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-php
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.38 2012/09/12 03:04:01 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.39 2013/03/23 19:42:13 olemarkus Exp $
+
+*eselect-php-0.7.0 (23 Mar 2013)
+
+  23 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +eselect-php-0.7.0.ebuild,
+  +files/70_mod_php5.conf-apache2, +files/php-fpm, +files/php-fpm.init,
+  metadata.xml:
+  Version bump. Resolving bug 323783, 389805 and 412913
 
   12 Sep 2012; Christoph Junghans <ottxor@gentoo.org> eselect-php-0.6.7.ebuild:
   added prefix keywords

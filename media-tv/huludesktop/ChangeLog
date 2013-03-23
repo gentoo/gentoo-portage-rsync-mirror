@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/huludesktop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/huludesktop/ChangeLog,v 1.8 2012/11/05 16:38:14 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/huludesktop/ChangeLog,v 1.9 2013/03/23 19:52:24 vapier Exp $
+
+  23 Mar 2013; Mike Frysinger <vapier@gentoo.org> huludesktop-0.9.8-r1.ebuild:
+  Convert to unpacker eclass for .deb unpacking.
 
   05 Nov 2012; Mike Frysinger <vapier@gentoo.org> huludesktop-0.9.8-r1.ebuild:
   Use QA_PREBUILT #431132 by Diego Elio Pettenò.

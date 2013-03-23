@@ -19,7 +19,6 @@
 		<flag name='pic'>Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)</flag>
 		<flag name='pdo'>Enable the bundled PDO extensions</flag>
 		<flag name='phar'>Enables the phar extension to provide phar archive support</flag>
-		<flag name='suhosin'>Add Suhosin support (patch and extension from http://www.suhosin.org/)</flag>
 		<flag restrict="&gt;=dev-lang/php-5.3.6_rc1" name='suhosin'>Add the Suhosin patch  from http://www.suhosin.org/)</flag>
 		<flag name='sqlite2'>Add sqlite2 support. Will be removed</flag>
 		<flag name='xmlreader'>Enable XMLReader support</flag>

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-4.7.9948.ebuild,v 1.4 2013/03/02 19:12:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-4.7.9948.ebuild,v 1.5 2013/03/23 19:44:29 vapier Exp $
 
 EAPI="4"
 
-inherit eutils versionator
+inherit eutils versionator unpacker
 
 REV=$(get_version_component_range 3)
 SRC_URI_BASE="https://spideroak.com/directdownload?platform=ubuntulucid"
@@ -57,13 +57,6 @@ RDEPEND="
 S=${WORKDIR}
 
 QA_PREBUILT="*"
-
-src_unpack() {
-	unpack ${A}
-	unpack ./data.tar.gz
-	rm -f control.tar.gz data.tar.gz debian-binary
-	rm -f usr/share/doc/spideroak/copyright
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PF}-opt-path.patch
@@ -141,8 +134,7 @@ src_install() {
 	doins -r etc
 
 	#install the changelog
-	insinto /usr/share/doc/${P}
-	doins usr/share/doc/spideroak/changelog.gz
+	dodoc usr/share/doc/spideroak/changelog.gz
 
 	if ! use headless ; then
 		domenu usr/share/applications/spideroak.desktop

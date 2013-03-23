@@ -1,8 +1,0 @@
-DEFINED_PHASES=compile install
-DESCRIPTION=Intel (R) Wireless WiFi Link 4965AGN ucode
-HOMEPAGE=http://intellinuxwireless.org/?p=iwlwifi
-KEYWORDS=amd64 x86
-LICENSE=ipw3945
-SLOT=0
-SRC_URI=http://intellinuxwireless.org/iwlwifi/downloads/iwlwifi-4965-ucode-228.57.1.21.tgz
-_md5_=31509a3abf7d97dbeb1e6e0d01efe17d

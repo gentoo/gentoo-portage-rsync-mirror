@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.17147-r1.ebuild,v 1.1 2013/02/21 15:51:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.17147-r1.ebuild,v 1.2 2013/03/23 19:55:59 vapier Exp $
 
 EAPI=5
 
-inherit eutils gnome2-utils systemd
+inherit eutils gnome2-utils systemd unpacker
 
 # Major version
 MV=${PV/\.*}
@@ -54,11 +54,6 @@ EOF
 	chmod go+rx "${T}/${MY_PN}"
 	exeinto /opt/bin
 	doexe "${T}/${MY_PN}"
-}
-
-src_unpack() {
-	default
-	unpack ./data.tar.gz
 }
 
 src_prepare() {

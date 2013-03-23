@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323-r1.ebuild,v 1.6 2013/03/02 22:04:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323-r1.ebuild,v 1.7 2013/03/23 19:59:15 vapier Exp $
 
 EAPI=4
-inherit eutils pax-utils
+inherit eutils pax-utils unpacker
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
@@ -19,6 +19,7 @@ LICENSE="Spotify"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome pax_kernel pulseaudio"
+RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -59,17 +60,10 @@ RDEPEND="${DEPEND}
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )
 		gnome? ( gnome-extra/gnome-integration-spotify )"
 
-RESTRICT="mirror strip"
+S=${WORKDIR}
 
 QA_PREBUILT="/opt/spotify/spotify-client/spotify
 			/opt/spotify/spotify-client/libcef.so"
-
-src_unpack() {
-	mkdir "${P}"
-	cd "${P}"
-	unpack ${A}
-	unpack ./data.tar.gz
-}
 
 src_prepare() {
 	# link against openssl-1.0.0 as it crashes with 0.9.8

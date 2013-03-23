@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.686 2013/03/23 18:30:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.688 2013/03/23 19:45:32 olemarkus Exp $
+
+  23 Mar 2013; Ole Markus With <olemarkus@gentoo.org> metadata.xml:
+  Removing suhosin USE flag description from metadata.xml
+
+*php-5.4.13-r2 (23 Mar 2013)
+*php-5.5.0_beta1-r2 (23 Mar 2013)
+*php-5.3.23-r1 (23 Mar 2013)
+
+  23 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +php-5.3.23-r1.ebuild,
+  +php-5.4.13-r2.ebuild, +php-5.5.0_beta1-r2.ebuild:
+  Revbumps. Resolving bug 323783, 389805 and 412913
 
   23 Mar 2013; Jeroen Roovers <jer@gentoo.org> php-5.3.23.ebuild,
   php-5.4.13.ebuild:

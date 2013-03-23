@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.14 2013/03/14 06:02:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.15 2013/03/23 19:59:15 vapier Exp $
+
+  23 Mar 2013; Mike Frysinger <vapier@gentoo.org> spotify-0.8.8.323-r1.ebuild,
+  spotify-0.8.8.323-r2.ebuild:
+  Convert to unpacker eclass for .deb unpacking.
 
 *spotify-0.8.8.323-r2 (14 Mar 2013)
 

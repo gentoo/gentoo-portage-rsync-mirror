@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.9 2013/01/11 22:36:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.10 2013/03/23 19:51:07 ottxor Exp $
+
+  23 Mar 2013; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0.ebuild:
+  used new include json-c include path (bug #462632)
 
   11 Jan 2013; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0.ebuild:
   updated SRC_URI
