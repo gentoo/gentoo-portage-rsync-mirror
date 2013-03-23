@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.7 2013/02/23 21:53:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.8 2013/03/22 23:08:21 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ DESCRIPTION="Digital video jukebox (PVR, DVR)."
 HOMEPAGE="http://www.freevo.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="directfb doc dvd fbcon gphoto2 ivtv lirc matrox minimal mixer nls tv X"
+IUSE="directfb doc dvd fbcon gphoto2 lirc matrox minimal mixer nls tv X"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,8 +41,7 @@ RDEPEND=">=dev-python/pygame-1.5.6
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
 	matrox? ( >=media-video/matroxset-0.3 )
 	mixer? ( media-sound/aumix )
-	tv? (	!ivtv? ( media-tv/tvtime )
-		!minimal? ( media-tv/xmltv ) )"
+	tv? ( media-tv/xmltv )"
 
 pkg_setup() {
 	if ! { use X || use directfb || use fbcon || use matrox ; } ; then
