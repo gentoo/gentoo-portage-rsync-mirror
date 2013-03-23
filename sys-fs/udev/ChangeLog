@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.866 2013/03/21 23:04:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.867 2013/03/23 00:44:50 williamh Exp $
+
+*udev-198-r4 (23 Mar 2013)
+
+  23 Mar 2013; William Hubbs <williamh@gentoo.org> +udev-198-r4.ebuild:
+  rev bump for #462132.
+  Also, this moves the systemd-udevd binary back to upstream's location. I
+  spoke with robbat2 about this, and he agrees that if we want
+  compatibility we should do that with symlinks and not by moving the
+  binary. To that end, this ebuild provides a /sbin/udevd symbolic link.
+  Also, the systemd units we install are set up to point to the correct
+  binary.
 
   21 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-198-r1.ebuild,
   -udev-198-r2.ebuild:
