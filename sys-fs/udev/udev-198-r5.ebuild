@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r5.ebuild,v 1.2 2013/03/23 07:27:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r5.ebuild,v 1.3 2013/03/23 07:38:11 ssuominen Exp $
 
 EAPI=4
 
@@ -350,8 +350,8 @@ src_install() {
 	rm -r "${ED}"/lib/systemd
 
 	# with systemd installing to /usr/lib/systed having /lib/systemd
-	# is redudant (and confusing)
-	local systemddir=/usr/lib/systemd
+	# is redudant (and breaking initramfs tools)
+	local systemddir=$(systemd_get_utildir)
 	dosym /sbin/udevd ${systemddir}/systemd-udevd
 	find "${ED}"/${systemddir} -name '*systemd-udev*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:${systemddir}:" {} +

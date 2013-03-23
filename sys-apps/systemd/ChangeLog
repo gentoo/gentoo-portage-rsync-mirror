@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.88 2013/03/14 09:25:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.89 2013/03/23 07:46:53 mgorny Exp $
+
+*systemd-198-r2 (23 Mar 2013)
+
+  23 Mar 2013; Michał Górny <mgorny@gentoo.org> +systemd-198-r2.ebuild,
+  files/199-0001-Disable-udev-targets.patch, systemd-9999.ebuild:
+  Handle moving initrd-udevadm-cleanup.service to sys-fs/udev. Update the live
+  version patch.
 
 *systemd-198-r1 (14 Mar 2013)
 

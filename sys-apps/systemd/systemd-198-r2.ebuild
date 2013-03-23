@@ -1,16 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.22 2013/03/23 07:46:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r2.ebuild,v 1.1 2013/03/23 07:46:53 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-2
-#endif
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils linux-info multilib pam python-single-r1 systemd user
@@ -30,6 +22,7 @@ MINKV="2.6.39"
 COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	>=sys-apps/util-linux-2.20
 	~sys-fs/udev-${PV}[acl?]
+	!<sys-fs/udev-198-r4
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
@@ -70,28 +63,15 @@ DEPEND+=" dev-libs/gobject-introspection
 	>=dev-libs/libgcrypt-1.4.5
 	>=dev-util/gtk-doc-1.18"
 
-#if LIVE
-SRC_URI=
-KEYWORDS=
-
-pkg_pretend() {
-	ewarn "Please note that the live systemd ebuild is not actively maintained"
-	ewarn "and since the udev split, it is an easy way to get your system broken"
-	ewarn "and unbootable. Please consider using the release ebuilds instead."
-}
-#endif
-
 src_prepare() {
 	# link against external udev.
 	sed -i -e 's:lib\(udev\)\.la:-l\1:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/199-0001-Disable-udev-targets.patch
+		"${FILESDIR}"/198-0001-Disable-udev-targets.patch
+		"${FILESDIR}"/198-0002-build-sys-break-dependency-loop-between-libsystemd-i.patch
+		"${FILESDIR}"/198-0003-build-sys-link-libsystemd-login-also-against-libsyst.patch
 	)
-
-#if LIVE
-	gtkdocize --docdir docs/ || die
-#endif
 
 	autotools-utils_src_prepare
 
@@ -143,6 +123,9 @@ src_install() {
 	autotools-utils_src_install \
 		udevlibexecdir=/lib/udev
 
+	# Moved to udev
+	rm "${D}$(systemd_get_unitdir)/initrd-udevadm-cleanup-db.service" || die
+
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
 	newins shell-completion/systemd-zsh-completion.zsh "_${PN}"
@@ -177,7 +160,8 @@ src_install() {
 	fi
 
 	# Disable storing coredumps in journald, bug #433457
-	mv "${D}"/usr/lib/sysctl.d/50-coredump.conf{,.disabled} || die
+	mv "${D}"/usr/lib/sysctl.d/coredump.conf \
+		"${D}"/etc/sysctl.d/coredump.conf.disabled || die
 
 	# Preserve empty dirs in /etc & /var, bug #437008
 	keepdir /etc/binfmt.d /etc/modules-load.d /etc/tmpfiles.d \
