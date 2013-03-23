@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.92 2013/03/23 08:40:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.93 2013/03/23 10:23:25 scarabeus Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -34,6 +34,10 @@ ELIBC="glibc"
 KERNEL="linux"
 USERLAND="GNU"
 INPUT_DEVICES="keyboard mouse"
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (23 Mar 2013)
+# By default enable libreoffice implementation only.
+OFFICE_IMPLEMENTATION="libreoffice"
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (12 Aug 2011)
 # By default do not build any grub platform and let it guess.

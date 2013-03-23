@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fb2edit/fb2edit-0.0.7.ebuild,v 1.3 2013/03/02 19:20:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fb2edit/fb2edit-0.0.7.ebuild,v 1.4 2013/03/23 10:30:10 pinkbyte Exp $
 
 EAPI=4
 
@@ -28,4 +28,6 @@ DOCS=( AUTHORS README )
 src_prepare() {
 	# drop -g from CFLAGS
 	sed -i -e '/^add_definitions(-W/s/-g//' CMakeLists.txt || die 'sed failed'
+
+	cmake-utils_src_prepare
 }

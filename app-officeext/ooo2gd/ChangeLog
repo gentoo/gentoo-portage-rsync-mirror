@@ -1,6 +1,11 @@
 # ChangeLog for app-officeext/ooo2gd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooo2gd/ChangeLog,v 1.3 2012/05/23 08:54:32 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooo2gd/ChangeLog,v 1.4 2013/03/23 10:19:32 scarabeus Exp $
+
+*ooo2gd-3.0.0-r1 (23 Mar 2013)
+
+  23 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +ooo2gd-3.0.0-r1.ebuild:
+  migrate to office-ext-r1 eclass
 
   23 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> ooo2gd-3.0.0.ebuild:
   Stable on amd64 and x86.
@@ -13,4 +18,3 @@
   09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
   +ooo2gd-3.0.0.ebuild:
   Initial commit. Google docs export extension.
-
