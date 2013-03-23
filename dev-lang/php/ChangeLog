@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.680 2013/03/23 12:22:52 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.681 2013/03/23 12:33:33 olemarkus Exp $
+
+  23 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  +files/missing-openssl-include.patch, php-5.3.23.ebuild, php-5.4.13.ebuild:
+  Added patch for bug 455040
 
   23 Mar 2013; Ole Markus With <olemarkus@gentoo.org> -php-5.3.20.ebuild,
   -php-5.3.21-r1.ebuild, -php-5.3.21-r2.ebuild, -php-5.3.22.ebuild,

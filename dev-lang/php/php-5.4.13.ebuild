@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.13.ebuild,v 1.3 2013/03/22 16:19:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.13.ebuild,v 1.4 2013/03/23 12:33:33 olemarkus Exp $
 
 EAPI=5
 
@@ -337,6 +337,9 @@ src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/patches/generic" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
 		EPATCH_MULTI_MSG="Applying generic patches and fixes from upstream..." epatch
+
+	# Patch for pkg-config-0.28 (Bug 455040)
+	epatch "${FILESDIR}"/missing-openssl-include.patch
 
 	# Patch PHP to show Gentoo as the server platform
 	sed -e 's/PHP_UNAME=`uname -a | xargs`/PHP_UNAME=`uname -s -n -r -v | xargs`/g' \

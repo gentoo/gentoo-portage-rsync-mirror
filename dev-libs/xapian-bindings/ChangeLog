@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.60 2013/03/17 15:14:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.61 2013/03/23 12:39:47 ago Exp $
+
+  23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xapian-bindings-1.2.13.ebuild:
+  Stable for arm, wrt bug #461108
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
