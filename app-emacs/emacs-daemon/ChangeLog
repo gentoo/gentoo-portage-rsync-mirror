@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emacs-daemon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.58 2012/10/04 07:53:06 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.59 2013/03/23 22:08:32 ulm Exp $
+
+*emacs-daemon-0.20 (23 Mar 2013)
+
+  23 Mar 2013; Ulrich Müller <ulm@gentoo.org> -emacs-daemon-0.18.ebuild,
+  emacs-daemon-0.19.ebuild, +emacs-daemon-0.20.ebuild:
+  Version bump. Specify LICENSE more precisely. Remove old.
 
   04 Oct 2012;  <naota@gentoo.org> emacs-daemon-0.19.ebuild:
   Add ~x86-fbsd wrt bug #263222

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.10-r2.ebuild,v 1.1 2013/01/23 19:22:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.12.ebuild,v 1.1 2013/03/23 22:02:25 flameeyes Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ REQUIRED_USE="cgi? ( !minimal ) apache? ( cgi )"
 # Some of the mysql plugins use DBD::mysql, while others call mysqladmin directly.
 # We replace the original ipmi plugins with the freeipmi_ plugin which at least works.
 DEPEND_COM="dev-lang/perl[berkdb]
-			sys-process/procps
+			kernel_linux? ( sys-process/procps )
 			doc? ( dev-python/sphinx )
 			asterisk? ( dev-perl/Net-Telnet )
 			irc? ( dev-perl/Net-IRC )
@@ -178,8 +178,9 @@ src_install() {
 	# with.
 	rm -rf "${D}"/run
 
-	# remove the plugins for non-Gentoo package managers
-	rm "${D}"/usr/libexec/munin/plugins/{apt{,_all},yum} || die
+	# remove the plugins for non-Gentoo package managers; use -f so that
+	# it doesn't fail when installing on non-Linux platforms.
+	rm -f "${D}"/usr/libexec/munin/plugins/{apt{,_all},yum} || die
 
 	insinto /etc/munin/plugin-conf.d/
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
@@ -366,7 +367,7 @@ pkg_postinst() {
 	if use cgi; then
 		chown $(usex apache apache munin) \
 			"${ROOT}"/var/cache/munin-cgi \
-			"${ROOT}"/var/log/munin-cgi-{graph,html}.log
+			"${ROOT}"/var/log/munin/munin-cgi-{graph,html}.log
 
 		if use apache; then
 			elog "To use Munin with CGI you should include /etc/apache2/vhosts.d/munin.include"
