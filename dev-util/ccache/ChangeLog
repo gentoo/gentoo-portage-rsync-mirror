@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.120 2013/03/01 12:47:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.121 2013/03/23 09:10:24 vapier Exp $
+
+  23 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/ccache-3.1.9-test-gcc-3.8.patch, ccache-3.1.9.ebuild:
+  Add fix from upstream for tests w/gcc-3.8 #461966 by Ryan Hill.
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ccache-3.1.9.ebuild:
   Stable for sh, wrt bug #457342

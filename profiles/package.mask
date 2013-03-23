@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14579 2013/03/22 23:14:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14580 2013/03/23 09:25:58 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -147,13 +147,6 @@ sys-fs/device-mapper
 # for people who don't have python-3.3 yet.
 # Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
 =media-gfx/blender-2.64a
-
-# Tom Wijsman <TomWij@gentoo.org> (09 Mar 2013)
-# 3.0.17-r2 will be removed as it is over a year old, also removing
-# 3.5.7-r1 which branch is no longer listed upstream. Removal in 14 days.
-# If you still use one of these, I advice you to upgrade. Bug #439546.
-=sys-kernel/gentoo-sources-3.0.17-r2
-=sys-kernel/gentoo-sources-3.5.7-r1
 
 # Tim Harder <radhermit@gentoo.org> (07 Mar 2013)
 # Masked for testing
