@@ -11,8 +11,8 @@
 	</maintainer>
 	<use>
 		<flag name="freerdp">Add support for the net-misc/freerdp application</flag>
-		<flag name="ssh">Enable support for SSH/SFTP using <pkg>net-libs/libssh</pkg></flag>
+		<flag name="ssh">Enable support for SSH/SFTP protocol; see also 'vte'</flag>
 		<flag name="telepathy">Enable telepathy support</flag>
-		<flag name="vte">Enable Terminal support using <pkg>x11-libs/vte</pkg></flag>
+		<flag name="vte">Enable virtual terminal support (for SSH sessions)</flag>
 	</use>
 </pkgmetadata>

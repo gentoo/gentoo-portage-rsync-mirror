@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-3.1.0-r1.ebuild,v 1.1 2013/03/22 12:30:55 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-3.1.1.ebuild,v 1.1 2013/03/23 11:51:54 grozin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2} )
