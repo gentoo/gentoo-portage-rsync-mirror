@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/sandbox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.166 2012/12/26 22:08:11 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.167 2013/03/23 21:43:04 vapier Exp $
+
+*sandbox-2.6-r1 (23 Mar 2013)
+
+  23 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/sandbox-2.6-check-empty-paths-at.patch,
+  +files/sandbox-2.6-desktop.patch, +files/sandbox-2.6-log-var.patch,
+  +files/sandbox-2.6-open-nofollow.patch,
+  +files/sandbox-2.6-static-close-fd.patch, +sandbox-2.6-r1.ebuild,
+  -sandbox-2.6.ebuild:
+  Apply random set of bugfixes.
 
   26 Dec 2012; Mike Frysinger <vapier@gentoo.org> sandbox-2.6.ebuild:
   Add epatch_user #413441#9.

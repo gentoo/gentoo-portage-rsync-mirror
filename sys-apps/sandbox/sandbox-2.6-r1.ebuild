@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.6.ebuild,v 1.3 2012/12/26 22:08:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.6-r1.ebuild,v 1.1 2013/03/23 21:43:04 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -47,6 +47,11 @@ src_unpack() {
 	unpacker
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-trace-hppa.patch #425062
+	epatch "${FILESDIR}"/${P}-log-var.patch
+	epatch "${FILESDIR}"/${P}-static-close-fd.patch #364877
+	epatch "${FILESDIR}"/${P}-desktop.patch #443672
+	epatch "${FILESDIR}"/${P}-open-nofollow.patch #413441
+	epatch "${FILESDIR}"/${P}-check-empty-paths-at.patch #346929
 	epatch_user
 }
 
