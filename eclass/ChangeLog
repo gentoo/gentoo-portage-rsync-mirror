@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.751 2013/03/23 10:24:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.752 2013/03/23 21:18:25 hasufell Exp $
+
+  23 Mar 2013; Julian Ospald <hasufell@gentoo.org> unpacker.eclass:
+  add unpack_zip function to unpacker.eclass wrt #462612
 
   23 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> office-ext-r1.eclass:
   Do not use-default here as we enable it by profile variable.

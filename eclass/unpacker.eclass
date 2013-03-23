@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.11 2013/03/23 19:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.12 2013/03/23 21:18:25 hasufell Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -299,6 +299,23 @@ unpack_cpio() {
 	fi
 }
 
+# @FUNCTION: unpack_zip
+# @USAGE: <zip file>
+# @DESCRIPTION:
+# Unpack zip archives.
+# This function ignores all non-fatal errors (i.e. warnings).
+# That is useful for zip archives with extra crap attached
+# (e.g. self-extracting archives).
+unpack_zip() {
+	[[ $# -eq 1 ]] || die "Usage: ${FUNCNAME} <file>"
+
+	local zip=$(find_unpackable_file "$1")
+	unpack_banner "${zip}"
+	unzip -qo "${zip}"
+
+	[[ $? -le 1 ]] || die "unpacking ${zip} failed (arch=unpack_zip)"
+}
+
 # @FUNCTION: _unpacker
 # @USAGE: <one archive to unpack>
 # @INTERNAL
@@ -350,6 +367,8 @@ _unpacker() {
 			arch="unpack_makeself"
 		fi
 		;;
+	*.zip)
+		arch="unpack_zip" ;;
 	esac
 
 	# finally do the unpack
@@ -414,6 +433,8 @@ unpacker_src_uri_depends() {
 			d="app-arch/p7zip" ;;
 		*.xz)
 			d="app-arch/xz-utils" ;;
+		*.zip)
+			d="app-arch/unzip" ;;
 		esac
 		deps+=" ${d}"
 	done

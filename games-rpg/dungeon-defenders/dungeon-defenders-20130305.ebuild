@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dungeon-defenders/dungeon-defenders-20130305.ebuild,v 1.1 2013/03/21 22:15:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dungeon-defenders/dungeon-defenders-20130305.ebuild,v 1.2 2013/03/23 21:30:54 hasufell Exp $
 
 # TODO: unbundle SDL-2 when it gets released
 
 EAPI=5
 
-inherit check-reqs eutils gnome2-utils games
+inherit check-reqs eutils gnome2-utils unpacker games
 
 TIMESTAMP="${PV:4:2}${PV:6:2}${PV:0:4}"
 MY_PN="DungeonDefenders"
@@ -60,9 +60,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	# self unpacking zip archive; unzip warns about the exe stuff
-	unzip -q "${DISTDIR}"/${A}
-	[[ $? -gt 1 ]] && die "unpacking failed"
+	unpack_zip ${A}
 }
 
 src_prepare() {

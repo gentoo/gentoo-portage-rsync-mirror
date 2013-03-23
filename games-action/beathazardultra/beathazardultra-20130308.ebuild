@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.2 2013/03/22 21:30:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.3 2013/03/23 21:23:50 hasufell Exp $
 
 # TODO: unbundle allegro on amd64 when multilib support
 
 EAPI=5
 
-inherit eutils games
+inherit eutils unpacker games
 
 DESCRIPTION="Intense music-driven arcade shooter powered by your music"
 HOMEPAGE="http://www.coldbeamgames.com/"
@@ -53,9 +53,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	# self unpacking zip archive; unzip warns about the exe stuff
-	unzip -q "${DISTDIR}"/${A}
-	[[ $? -gt 1 ]] && die "unpacking failed"
+	unpack_zip ${A}
 }
 
 src_prepare() {
