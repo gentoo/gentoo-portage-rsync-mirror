@@ -12,10 +12,8 @@
 		<name>Sergey Popov</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
-<longdescription lang="en">
-Aewan is a multi-layered ascii-art/animation editor that produces both
-stand-alone cat-able art files and an easy-to-parse format for integration in
-your terminal applications.
-</longdescription>
+	<upstream>
+		<remote-id type="cpan">Unix-Getrusage</remote-id>
+		<remote-id type="cpan-module">Unix::Getrusage</remote-id>
+	</upstream>
 </pkgmetadata>
-
