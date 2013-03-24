@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtinst
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.43 2012/10/17 03:49:36 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.44 2013/03/24 03:12:05 cardoe Exp $
+
+  24 Mar 2013; Doug Goldstein <cardoe@gentoo.org> -virtinst-0.600.0.ebuild,
+  -virtinst-0.600.1.ebuild:
+  Remove older versions
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> virtinst-0.600.3.ebuild:
   x86 stable wrt bug #437202
@@ -217,4 +221,3 @@
   +files/virtinst-0.103.0-urlgrabber-import.patch, +metadata.xml,
   +virtinst-0.103.0.ebuild:
   Add Python modules for starting virtualized guest installations.
-
