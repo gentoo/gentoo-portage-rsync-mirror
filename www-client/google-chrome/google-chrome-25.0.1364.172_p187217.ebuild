@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-25.0.1364.172_p187217.ebuild,v 1.1 2013/03/12 23:28:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-25.0.1364.172_p187217.ebuild,v 1.2 2013/03/24 22:54:13 floppym Exp $
 
 EAPI="4"
 
@@ -37,11 +37,9 @@ MY_P="${MY_PN}_${MY_PV}"
 SRC_URI="
 	amd64? (
 		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_amd64.deb
-		mirror://gentoo/google-chrome-libudev-0.13.1-amd64.tar.xz
 	)
 	x86? (
 		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
-		mirror://gentoo/google-chrome-libudev-0.13.1-x86.tar.xz
 	)
 "
 
@@ -111,6 +109,8 @@ src_install() {
 	mv opt usr "${D}" || die
 
 	fperms u+s "/${CHROME_HOME}chrome-sandbox" || die
+
+	dosym /usr/$(get_libdir)/libudev.so ${CHROME_HOME}/libudev.so.0
 
 	if use plugins ; then
 		local plugins="--extra-plugin-dir=/usr/$(get_libdir)/nsbrowser/plugins"
