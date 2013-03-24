@@ -1,6 +1,11 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.103 2013/03/20 13:38:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.104 2013/03/24 18:42:02 dilfridge Exp $
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  akonadi-server-1.9.0.ebuild, akonadi-server-1.9.1.ebuild,
+  akonadi-server-1.9.1-r1.ebuild:
+  Enable both sqlite and mysql by default to ease user transition
 
 *akonadi-server-1.9.1-r1 (20 Mar 2013)
 

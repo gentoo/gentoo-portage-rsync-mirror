@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.9.1-r1.ebuild,v 1.1 2013/03/20 13:38:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.9.1-r1.ebuild,v 1.2 2013/03/24 18:42:02 dilfridge Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://pim.kde.org/akonadi"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+mysql postgres sqlite test"
+IUSE="+mysql postgres +sqlite test"
 
 CDEPEND="
 	dev-libs/boost
@@ -72,13 +72,18 @@ pkg_setup() {
 	fi
 
 	# Notify about MySQL not being default anymore
-	if ! use sqlite && has_version "<=${CATEGORY}/${PN}-1.9.0[sqlite]"; then
+	if has_version "<=${CATEGORY}/${PN}-1.9.0[sqlite]"; then
 		ewarn
-		ewarn "The default storage drive has changed from SQLite to MySQL."
-		ewarn "If you want to stay with SQLite, enable the sqlite USE flag and reinstall"
-		ewarn "${CATEGORY}/${PN}."
-		ewarn "Otherwise, select a different driver in your ~/.config/akonadi/akonadiserverrc."
+		ewarn "We strongly recommend you change your Akonadi database backend to MySQL in your"
+		ewarn "user configuration. This is the backend recommended by KDE upstream."
+		ewarn "In particular, kde-base/kmail-4.10 does not work properly with the sqlite"
+		ewarn "backend anymore."
+		ewarn "To ease the transition, this akonadi-server ebuild has enabled both sqlite"
+		ewarn "and mysql backend by default. Future stable versions will by default"
+		ewarn "disable the sqlite backend."
+		ewarn "You can select the backend in your ~/.config/akonadi/akonadiserverrc."
 		ewarn "Available drivers are:${AVAILABLE}"
+		ewarn
 	fi
 }
 

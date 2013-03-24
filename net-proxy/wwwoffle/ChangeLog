@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.58 2013/01/08 18:43:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.59 2013/03/24 18:33:16 vincent Exp $
+
+  24 Mar 2013; Vicente Olivert Riera <vincent@gentoo.org> wwwoffle-2.9i.ebuild:
+  amd64, ppc and x86 stable wrt bug #457462
 
   08 Jan 2013; Jeroen Roovers <jer@gentoo.org> wwwoffle-2.9i.ebuild:
   Update HOMEPAGE and SRC_URI.

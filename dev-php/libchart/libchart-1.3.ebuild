@@ -1,10 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libchart/libchart-1.2.1.ebuild,v 1.1 2011/04/09 19:15:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libchart/libchart-1.3.ebuild,v 1.1 2013/03/24 18:46:26 mabi Exp $
 
-EAPI="2"
-
-inherit php-lib-r1 depend.php
+EAPI="4"
 
 DESCRIPTION="Libchart is a chart creation PHP library that is easy to use."
 HOMEPAGE="http://naku.dohcrew.com/libchart"
@@ -15,20 +13,22 @@ KEYWORDS="~x86 ~amd64"
 SLOT=0
 IUSE="examples"
 
-need_php5
-
 DEPEND=""
 RDEPEND="dev-lang/php[truetype]
 	|| ( dev-lang/php[gd] dev-lang/php[gd-external] )"
 
+S="${WORKDIR}/${PN}"
+
 src_install() {
-	php-lib-r1_src_install ${PN} `cd ${PN}; find . -type f -print`
-	for i in ${PN}/{ChangeLog,README} ; do
-		dodoc-php ${i}
-		rm -f ${i}
-	done
+	dodoc "${PN}/ChangeLog" "${PN}/README"
+	rm -f "${PN}/ChangeLog" "${PN}/ChangeLog" "${PN}/COPYING"
+
 	if use examples ; then
-		insinto /usr/share/doc/${CATEGORY}/${PF}
-		doins -r demo/
+		# no point making users unzip all files individually
+		docompress -x "/usr/share/doc/${PF}/demo"
+		dodoc -r demo/
 	fi
+
+	insinto "/usr/share/php/${PN}"
+	doins -r ${PN}
 }
