@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.24 2013/03/24 21:42:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.25 2013/03/24 22:12:25 floppym Exp $
 
 EAPI=5
 
@@ -134,7 +134,7 @@ src_configure() {
 }
 
 src_install() {
-	autotools-utils_src_install dist_udevhwdb_DATA=
+	autotools-utils_src_install -j1 dist_udevhwdb_DATA=
 
 	# zsh completion
 	insinto /usr/share/zsh/site-functions

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.92 2013/03/24 21:42:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.93 2013/03/24 22:12:25 floppym Exp $
+
+  24 Mar 2013; Mike Gilbert <floppym@gentoo.org> systemd-198-r4.ebuild,
+  systemd-9999.ebuild:
+  Run the install phase with a single make job, bug 463156 by Ray Griffin.
 
 *systemd-198-r4 (24 Mar 2013)
 
