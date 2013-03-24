@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/geomyidae
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geomyidae/ChangeLog,v 1.2 2013/03/08 12:42:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geomyidae/ChangeLog,v 1.3 2013/03/24 13:41:44 pinkbyte Exp $
+
+*geomyidae-0.26.2 (24 Mar 2013)
+
+  24 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +geomyidae-0.26.2.ebuild:
+  Version bump
 
   08 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> geomyidae-0.26.1.ebuild:
   Add ~arm keyword

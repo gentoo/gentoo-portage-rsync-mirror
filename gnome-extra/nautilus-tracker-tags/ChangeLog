@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/nautilus-tracker-tags
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/ChangeLog,v 1.15 2013/02/02 22:40:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/ChangeLog,v 1.16 2013/03/24 13:35:27 eva Exp $
+
+*nautilus-tracker-tags-0.14.5 (24 Mar 2013)
+
+  24 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -nautilus-tracker-tags-0.12.10.ebuild, -nautilus-tracker-tags-0.14.3.ebuild,
+  +nautilus-tracker-tags-0.14.5.ebuild:
+  Version bump. Clean up old revisions.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   nautilus-tracker-tags-0.14.4.ebuild:
