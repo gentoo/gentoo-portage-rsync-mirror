@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.146 2013/03/17 15:56:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.147 2013/03/24 04:24:42 vapier Exp $
+
+*openafs-kernel-1.6.2 (24 Mar 2013)
+
+  24 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/openafs-1.6.2-kernel-3.8-1.patch,
+  +files/openafs-1.6.2-kernel-3.8-2.patch,
+  +files/openafs-1.6.2-kernel-3.8-3.patch,
+  +files/openafs-1.6.2-kernel-3.8-4.patch,
+  +files/openafs-1.6.2-kernel-3.8-5.patch, +openafs-kernel-1.6.2.ebuild:
+  Version bump #460646 by Andrej Filipcic.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

@@ -1,0 +1,37 @@
+From 7e8731d4971f6c93c5edaf28d8582d6accc5c42c Mon Sep 17 00:00:00 2001
+From: Marc Dionne <marc.c.dionne@gmail.com>
+Date: Thu, 24 Jan 2013 21:38:28 -0500
+Subject: [PATCH] Linux: crset should use passed credentials
+
+When copying credentials in crset, take the passed credentials as
+the source instead of the current process credentials.
+
+This doesn't cause any problems currently since crset always gets
+called with the current credentials.
+
+Reviewed-on: http://gerrit.openafs.org/8980
+Tested-by: BuildBot <buildbot@rampaginggeek.com>
+Reviewed-by: Derrick Brashear <shadow@your-file-system.com>
+(cherry picked from commit 3b733db8bf2bc3a1366554ae97814cc722437149)
+
+Change-Id: I4d0000a139d16fafe480f7ebccc6759da7dea6bb
+---
+ src/afs/LINUX/osi_cred.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/afs/LINUX/osi_cred.c b/src/afs/LINUX/osi_cred.c
+index 20be594..f271321 100644
+--- a/src/afs/LINUX/osi_cred.c
++++ b/src/afs/LINUX/osi_cred.c
+@@ -117,7 +117,7 @@ crset(cred_t * cr)
+     new_creds = prepare_creds();
+     /* Drop the reference to group_info - we'll overwrite it in afs_copy_creds */
+     put_group_info(new_creds->group_info);
+-    afs_copy_creds(new_creds, current_cred());
++    afs_copy_creds(new_creds, cr);
+ 
+     commit_creds(new_creds);
+ #else
+-- 
+1.7.2.5
+
