@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.205 2013/03/23 07:38:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.206 2013/03/24 06:22:19 ssuominen Exp $
 
 EAPI=4
 
@@ -350,11 +350,11 @@ src_install() {
 	dosym ../bin/udevadm /sbin/udevadm
 
 	# move udevd where it used to be and prevent it from showing up
-	# as systemd-udevd named process
+	# as process with name "systemd-udevd"
 	mv "${ED}"/{lib/systemd/systemd-udevd,sbin/udevd} || die
 	rm -r "${ED}"/lib/systemd
 
-	# with systemd installing to /usr/lib/systed having /lib/systemd
+	# with systemd installing to /usr/lib/systemd having /lib/systemd
 	# is redudant (and breaking initramfs tools)
 	local systemddir=$(systemd_get_utildir)
 	dosym /sbin/udevd ${systemddir}/systemd-udevd
