@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/libyubikey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libyubikey/ChangeLog,v 1.4 2013/03/17 17:37:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libyubikey/ChangeLog,v 1.5 2013/03/24 14:08:53 flameeyes Exp $
+
+*libyubikey-1.10 (24 Mar 2013)
+
+  24 Mar 2013; Diego E. Pettenò <flameeyes@gentoo.org> +libyubikey-1.10.ebuild:
+  Version bump; use autotools-utils.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

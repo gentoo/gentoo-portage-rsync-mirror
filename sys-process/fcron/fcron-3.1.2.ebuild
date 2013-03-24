@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r5.ebuild,v 1.1 2012/09/16 16:08:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2.ebuild,v 1.1 2013/03/24 14:06:20 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
-inherit cron pam eutils flag-o-matic user
+WANT_AUTOMAKE=none
+
+inherit cron pam eutils flag-o-matic user autotools
 
 MY_P=${P/_/-}
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
@@ -13,10 +15,11 @@ SRC_URI="http://fcron.free.fr/archives/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug pam selinux linguas_fr +system-crontab"
+IUSE="debug pam selinux linguas_fr +system-crontab readline"
 
 DEPEND="selinux? ( sys-libs/libselinux )
-	pam? ( virtual/pam )"
+	pam? ( virtual/pam )
+	readline? ( sys-libs/readline )"
 
 # see bug 282214 for the reason to depend on bash
 RDEPEND="${DEPEND}
@@ -36,12 +39,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-buffer-overflow.patch
-
 	# respect LDFLAGS
 	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
 
 	sed -i -e 's:/etc/fcrontab:/etc/fcron/fcrontab:' script/check_system_crontabs.sh || die
+
+	epatch "${FILESDIR}"/${PN}-3.1.1-noreadline.patch
+	eautoconf
 }
 
 src_configure() {
@@ -58,6 +62,8 @@ src_configure() {
 		--bindir=/usr/libexec \
 		$(use_with pam) \
 		$(use_with selinux) \
+		$(use_with readline) \
+		--without-audit \
 		--sysconfdir=/etc/fcron \
 		--with-username=fcron \
 		--with-groupname=fcron \
