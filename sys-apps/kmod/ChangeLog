@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.77 2013/03/22 08:50:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.78 2013/03/24 11:49:43 ssuominen Exp $
+
+  24 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-12-r1.ebuild,
+  kmod-9999.ebuild:
+  Temporarily remove running of update_depmod() from linux-mod.eclass because
+  it's introducing circulars wrt #462926
 
   22 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-12-r1.ebuild,
   kmod-9999.ebuild:
