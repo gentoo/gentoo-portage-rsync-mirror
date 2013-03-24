@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/sshproxy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.15 2011/04/05 21:46:43 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.16 2013/03/24 12:54:41 tomwij Exp $
+
+  24 Mar 2013; Tom Wijsman <TomWij@gentoo.org> sshproxy-0.6.0_beta2-r1.ebuild:
+  EAPI 5. Removed paramiko version check, fixes bug #453786 reported by
+  flameeyes.
 
   05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   sshproxy-0.6.0_beta2-r1.ebuild:
@@ -76,4 +80,3 @@
   +metadata.xml, +sshproxy-0.4.2.ebuild:
   Initial import from bug #138058, thanks to David Guerizec
   <david@guerizec.net> which is also the author of sshproxy.
-

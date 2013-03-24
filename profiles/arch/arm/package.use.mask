@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.130 2013/03/18 07:01:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.131 2013/03/24 12:39:47 maekke Exp $
 
 # Agostino Sarubbo <ago@gentoo.org> (18 Mar 2013)
 # Mask java because of bug #461108 comment #7
@@ -37,6 +37,7 @@ media-gfx/pstoedit emf
 =net-print/cups-1.5.2-r4 java
 =sys-devel/gettext-0.18.1.1-r1 java
 =sys-devel/gettext-0.18.1.1-r3 java
+=sys-devel/gettext-0.18.2 java
 =sys-libs/db-1.85-r3 java
 =sys-libs/db-3.2.9_p2 java
 =sys-libs/db-4.2.52_p5-r1 java

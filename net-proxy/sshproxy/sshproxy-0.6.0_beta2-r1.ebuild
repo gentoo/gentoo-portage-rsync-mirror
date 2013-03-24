@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.4 2011/04/05 21:46:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.5 2013/03/24 12:54:41 tomwij Exp $
 
-EAPI="3"
+EAPI="5"
 PYTHON_DEPEND="2"
 
 inherit distutils eutils
@@ -21,7 +21,7 @@ IUSE="client-only mysql minimal"
 # client-only: install only the client wrappers
 
 DEPEND="!client-only? (
-		>=dev-python/paramiko-1.6.2
+		>=dev-python/paramiko-1.6.3
 		mysql? ( >=dev-python/mysql-python-1.2.0 )
 	)"
 RDEPEND="${DEPEND}
@@ -46,11 +46,14 @@ src_prepare() {
 		mv doc/pssh.1 doc/spssh.1 || die "failed to rename pscp or pssh files"
 	ewarn "For avoiding conflicts with net-misc/putty and net-misc/pssh,"
 	ewarn "pscp and pssh scripts have been renamed as spscp respectively spssh."
+
+	sed -i -e 's/if paramiko.__version_info__ < (1, 6, 3):/if False:/g' "${S}"/sshproxy/__init__.py || die 'Sed failed.'
 }
 
 src_install () {
-	dobin bin/spssh
 	dobin bin/spscp
+	dobin bin/spssh
+
 	if ! use client-only; then
 		distutils_src_install
 
@@ -105,7 +108,7 @@ src_install () {
 		else
 			rm -rf "${D}/usr/lib/sshproxy/mysql_db"
 			sed -i -e 's/[ \t]\+mysql//' \
-				"${D}/etc/init.d/sshproxyd"
+				"${D}/etc/init.d/sshproxyd" || die 'Sed failed.'
 		fi
 	fi
 }
