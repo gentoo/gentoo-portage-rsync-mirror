@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.30.ebuild,v 1.1 2013/01/07 00:39:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.30.ebuild,v 1.2 2013/03/24 18:13:49 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,8 +20,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc +introspection systemd vala"
 REQUIRED_USE="vala? ( introspection )"
 
-# Want glib-2.30 for gdbus
-RDEPEND=">=dev-libs/glib-2.30:2
+# Want glib-2.34 for g_clear_pointer, bug #462938
+RDEPEND=">=dev-libs/glib-2.34.0:2
 	sys-auth/polkit
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	systemd? ( >=sys-apps/systemd-186 )
