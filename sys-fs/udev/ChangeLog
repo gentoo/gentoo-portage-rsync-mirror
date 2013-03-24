@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.872 2013/03/23 07:27:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.873 2013/03/24 09:26:55 ssuominen Exp $
+
+  24 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-198-r5.ebuild,
+  udev-9999.ebuild:
+  Stop installing .service files of systemd-udevd, systemd-udevd-kernel,
+  systemd-udevd-control, systemd-udev-trigger, systemd-udev-settle and
+  initrd-udevadm-cleanup-db. Stop creating symlink from /sbin/udevd to
+  /usr/lib/systemd/systemd-udevd. These should all be handled by
+  sys-apps/systemd now wrt #462750.
 
   23 Mar 2013; Michał Górny <mgorny@gentoo.org> udev-198-r5.ebuild:
   Add a proper blocker due to collision with systemd.

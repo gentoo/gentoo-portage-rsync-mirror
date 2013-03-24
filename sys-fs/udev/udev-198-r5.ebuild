@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r5.ebuild,v 1.4 2013/03/24 06:22:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r5.ebuild,v 1.5 2013/03/24 09:26:55 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 # accept4() patch is only in non-live version
 if [[ ${PV} = 9999* ]]; then
@@ -11,7 +11,7 @@ else
 	KV_min=2.6.32
 fi
 
-inherit autotools eutils linux-info multilib systemd toolchain-funcs versionator
+inherit autotools eutils linux-info multilib toolchain-funcs versionator
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
@@ -223,7 +223,6 @@ src_configure() {
 		--disable-tcpwrap
 		--disable-timedated
 		--disable-xz
-		--disable-silent-rules
 		--disable-polkit
 		$(use_enable acl)
 		$(use_enable doc gtk-doc)
@@ -281,7 +280,6 @@ src_install() {
 		install-binPROGRAMS
 		install-rootlibexecPROGRAMS
 		install-udevlibexecPROGRAMS
-		install-dist_systemunitDATA
 		install-dist_udevconfDATA
 		install-dist_udevhomeSCRIPTS
 		install-dist_udevkeymapDATA
@@ -291,7 +289,6 @@ src_install() {
 		install-man3
 		install-man7
 		install-man8
-		install-nodist_systemunitDATA
 		install-pkgconfiglibDATA
 		install-sharepkgconfigDATA
 		install-typelibsDATA
@@ -314,14 +311,7 @@ src_install() {
 		MANPAGES="man/udev.7 man/udevadm.8 \
 				man/systemd-udevd.service.8"
 		MANPAGES_ALIAS="man/systemd-udevd.8"
-		dist_systemunit_DATA="units/systemd-udevd-control.socket \
-				units/systemd-udevd-kernel.socket"
-		nodist_systemunit_DATA="units/systemd-udevd.service \
-				units/systemd-udev-trigger.service \
-				units/systemd-udev-settle.service \
-				units/initrd-udevadm-cleanup-db.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
-		systemunitdir="$(systemd_get_unitdir)"
 		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
 				$(sysconfdir)/udev/hwdb.d'
 		dist_bashcompletion_DATA="shell-completion/bash/udevadm"
@@ -334,32 +324,22 @@ src_install() {
 	dodoc TODO
 
 	prune_libtool_files --all
-	rm -f "${D}"/lib/udev/rules.d/99-systemd.rules
-	rm -rf "${D}"/usr/share/doc/${PF}/LICENSE.*
+	rm -f \
+		"${D}"/lib/udev/rules.d/99-systemd.rules \
+		"${D}"/usr/share/doc/${PF}/LICENSE.*
 
-	# install gentoo-specific rules
+	# see src_prepare() for content of these files
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
-
-	# install udevadm symlink
-	dosym ../bin/udevadm /sbin/udevadm
-
-	# move udevd where it used to be and prevent it from showing up
-	# as process with name "systemd-udevd"
-	mv "${ED}"/{lib/systemd/systemd-udevd,sbin/udevd} || die
-	rm -r "${ED}"/lib/systemd
-
-	# with systemd installing to /usr/lib/systemd having /lib/systemd
-	# is redudant (and breaking initramfs tools)
-	local systemddir=$(systemd_get_utildir)
-	dosym /sbin/udevd ${systemddir}/systemd-udevd
-	find "${ED}"/${systemddir} -name '*systemd-udev*.service' -exec \
-		sed -i -e "/ExecStart/s:/lib/systemd:${systemddir}:" {} +
-	find "${ED}"/${systemddir} -name '*udevadm*.service' -exec \
-		sed -i -e "/ExecStart/s:/usr/bin/udevadm:/bin/udevadm:" {} +
-
-	# see src_prepare() where this is created
 	doman "${T}"/udevd.8
+
+	# install udevadm compatibility symlink
+	dosym {../bin,sbin}/udevadm
+
+	# install udevd to /sbin and remove empty and redudant directory
+	# /lib/systemd because systemd is installed to /usr wrt #462750
+	mv "${D}"/{lib/systemd/systemd-,sbin/}udevd || die
+	rm -r "${D}"/lib/systemd
 }
 
 pkg_preinst() {
