@@ -1,16 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.23 2013/03/24 17:03:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r3.ebuild,v 1.1 2013/03/24 17:03:21 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-2
-#endif
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils linux-info multilib pam python-single-r1 systemd user
@@ -68,28 +60,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 
-#if LIVE
-DEPEND="${DEPEND}
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
-	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5
-	>=dev-util/gtk-doc-1.18"
-
-SRC_URI=
-KEYWORDS=
-
-pkg_pretend() {
-	ewarn "Please note that the live systemd ebuild is not actively maintained"
-	ewarn "and it is an easy way to get your system broken and unbootable."
-	ewarn "Please consider using the release ebuilds instead."
-}
-#endif
-
 src_prepare() {
-#if LIVE
-	gtkdocize --docdir docs/ || die
-#endif
 
 	autotools-utils_src_prepare
 }
@@ -170,7 +141,8 @@ src_install() {
 	fi
 
 	# Disable storing coredumps in journald, bug #433457
-	mv "${D}"/usr/lib/sysctl.d/50-coredump.conf{,.disabled} || die
+	mv "${D}"/usr/lib/sysctl.d/coredump.conf \
+		"${D}"/etc/sysctl.d/coredump.conf.disabled || die
 
 	# Preserve empty dirs in /etc & /var, bug #437008
 	keepdir /etc/binfmt.d /etc/modules-load.d /etc/tmpfiles.d \

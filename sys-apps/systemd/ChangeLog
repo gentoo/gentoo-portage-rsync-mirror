@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.90 2013/03/24 10:30:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.91 2013/03/24 17:03:21 mgorny Exp $
+
+*systemd-198-r3 (24 Mar 2013)
+
+  24 Mar 2013; Michał Górny <mgorny@gentoo.org> +systemd-198-r3.ebuild,
+  -files/199-0001-Disable-udev-targets.patch, metadata.xml, systemd-9999.ebuild:
+  Install udev along with systemd again. Using a separate provider has proven to
+  be unmaintainable.
 
   24 Mar 2013; Michał Górny <mgorny@gentoo.org> -systemd-198-r2.ebuild,
   systemd-198-r1.ebuild:

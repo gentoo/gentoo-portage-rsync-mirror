@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/mythplugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.9 2013/02/14 12:08:15 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.10 2013/03/24 17:24:46 cardoe Exp $
+
+*mythplugins-0.25.3_p20130131 (24 Mar 2013)
+
+  24 Mar 2013; Doug Goldstein <cardoe@gentoo.org>
+  +mythplugins-0.25.3_p20130131.ebuild, -mythplugins-0.25.2_p20120716.ebuild,
+  -mythplugins-0.25.2_p20120825.ebuild:
+  Bump mythplugins version to match MythTV version. bug #459802. Remove older
+  versions giving repoman grief
 
 *mythplugins-0.26.0_p20130207 (14 Feb 2013)
 
@@ -49,4 +57,3 @@
   +metadata.xml:
   Initial version of MythPlugins, which combines all the plugins into one
   ebuild to match how upstream ships their tarball of everything combined.
-

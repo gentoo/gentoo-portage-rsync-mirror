@@ -1,6 +1,12 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.35 2013/03/06 19:58:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.36 2013/03/24 17:06:04 mgorny Exp $
+
+*udev-197-r2 (24 Mar 2013)
+
+  24 Mar 2013; Michał Górny <mgorny@gentoo.org> +udev-197-r2.ebuild,
+  -udev-197-r1.ebuild:
+  Add sys-apps/systemd to the provider list.
 
   06 Mar 2013; Raúl Porcel <armin76@gentoo.org> udev-197-r1.ebuild:
   m68k/s390/sh/sparc stable wrt #457568
