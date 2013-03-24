@@ -6,6 +6,10 @@
 	  <email>yaleks@gentoo.ru</email>
 	  <name>Aleksandr Yakimov</name>
 	</maintainer>
+	<maintainer>
+	  <email>rich0@gentoo.org></email>
+	  <name>Richard Freeman</name>
+	</maintainer>
 	<longdescription lang="en">
 		Cuneiform is an multi-language OCR system.
 	</longdescription>

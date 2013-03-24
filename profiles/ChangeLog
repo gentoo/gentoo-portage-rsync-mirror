@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7638 2013/03/24 01:22:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7639 2013/03/24 09:48:52 rich0 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2013; Richard Freeman <rich0@gentoo.org> package.mask:
+  Taking over cuneiform maintainership.
 
   24 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
   +hardened/linux/13.0/amd64/deprecated,
