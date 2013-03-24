@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/automx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.6 2013/01/02 14:11:31 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.7 2013/03/24 19:11:12 vincent Exp $
+
+  24 Mar 2013; Vicente Olivert Riera <vincent@gentoo.org> automx-0.8-r1.ebuild:
+  amd64 and x86 stable wrt bug #462812
 
 *automx-0.8-r1 (02 Jan 2013)
 
@@ -35,4 +38,3 @@
   28 Feb 2012; Marc Schiffbauer <mschiff@gentoo.org> +automx-0.8_beta1.ebuild,
   +metadata.xml:
   New ebuild for automx.
-

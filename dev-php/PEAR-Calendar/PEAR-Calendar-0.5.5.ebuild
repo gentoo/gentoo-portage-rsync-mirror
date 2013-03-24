@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Calendar/PEAR-Calendar-0.5.3.ebuild,v 1.5 2007/12/05 23:38:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Calendar/PEAR-Calendar-0.5.5.ebuild,v 1.1 2013/03/24 19:12:59 mabi Exp $
+
+EAPI="4"
 
 inherit php-pear-r1
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.27 2013/01/28 20:17:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.28 2013/03/24 19:18:31 anarchy Exp $
+
+*jemalloc-3.3.1 (24 Mar 2013)
+
+  24 Mar 2013; Jory A. Pratt <anarchy@gentoo.org> -jemalloc-3.2.0.ebuild,
+  -jemalloc-3.3.0.ebuild, -files/jemalloc-3.3.0-s390.patch,
+  +jemalloc-3.3.1.ebuild:
+  Version bump, multiple bug fixes, bug #461582
 
   28 Jan 2013; Mike Frysinger <vapier@gentoo.org>
   +files/jemalloc-3.3.0-s390.patch, jemalloc-3.3.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.4 2013/02/10 15:41:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.5 2013/03/24 19:09:16 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -40,15 +40,9 @@ DEPEND="${RDEPEND}
 # FIXME: needs xmppstream python module
 #               >=net-dns/avahi-0.6.22[python]
 
-pkg_setup() {
-	python-any-r1_pkg_setup
-}
-
 src_prepare() {
 	# Fix uninitialized variable, upstream bug #37701
 	epatch "${FILESDIR}/${PN}-0.5.0-uninitialized.patch"
-
-	_python_rewrite_shebangs .
 }
 
 src_configure() {

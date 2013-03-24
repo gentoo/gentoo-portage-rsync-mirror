@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.10.1.ebuild,v 1.1 2013/03/06 13:42:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.10.1.ebuild,v 1.2 2013/03/24 19:03:31 dilfridge Exp $
 
 EAPI=5
 
@@ -84,5 +84,18 @@ pkg_postinst() {
 		echo
 		elog "For certificate management and the gnupg log viewer, please install kde-base/kleopatra:${SLOT}"
 		echo
+	fi
+
+	if has_version "app-office/akonadi-server[sqlite]"; then
+		ewarn
+		ewarn "We strongly recommend you set your Akonadi database backend to QMYSQL in your"
+		ewarn "user configuration. This is the backend recommended by KDE upstream."
+		ewarn "Reports indicate that kde-base/kmail-4.10 does not work properly with the sqlite"
+		ewarn "backend anymore."
+		if has_version "app-office/akonadi-server[-mysql]"; then
+			ewarn "FOR THAT, YOU WILL HAVE TO RE-BUILD app-office/akonadi-server WITH mysql USEFLAG ENABLED."
+		fi
+		ewarn "You can select the backend in your ~/.config/akonadi/akonadiserverrc."
+		ewarn
 	fi
 }
