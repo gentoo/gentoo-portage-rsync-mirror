@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virt-manager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.77 2012/12/06 04:26:39 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.78 2013/03/24 00:40:35 cardoe Exp $
+
+  24 Mar 2013; Doug Goldstein <cardoe@gentoo.org> -virt-manager-0.9.1.ebuild,
+  virt-manager-0.9.4.ebuild:
+  Directly depend on sys-apps/dbus for USE=X since there is no way to depend on
+  that via dev-python/dbus-python. bug #462734. Remove older version.
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   virt-manager-0.9.4.ebuild:
@@ -393,4 +398,3 @@
   +virt-manager-0.4.0.ebuild:
   Add a graphical tool for administering virtual machines including Xen, QEMU
   and KVM.
-

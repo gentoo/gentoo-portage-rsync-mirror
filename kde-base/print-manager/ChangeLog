@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/print-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.4 2013/03/06 13:41:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.5 2013/03/24 00:31:39 dilfridge Exp $
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  print-manager-4.10.1.ebuild:
+  Dependency on Cups-1.6 not really needed anymore
 
 *print-manager-4.10.1 (06 Mar 2013)
 
