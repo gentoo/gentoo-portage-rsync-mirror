@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.0.ebuild,v 1.1 2013/03/16 18:11:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.ebuild,v 1.1 2013/03/24 02:05:20 floppym Exp $
 
 EAPI=5
 # py3.2 support almost ready to add
@@ -9,7 +9,7 @@ PYTHON_REQ_USE='sqlite?'
 
 inherit bash-completion-r1 distutils-r1 versionator webapp
 
-MY_P="Django-${PV/.0/}"
+MY_P="Django-${PV}"
 
 DESCRIPTION="High-level Python web framework"
 HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
