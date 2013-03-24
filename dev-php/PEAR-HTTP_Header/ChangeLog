@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTTP_Header
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Header/ChangeLog,v 1.4 2010/10/20 14:17:17 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Header/ChangeLog,v 1.5 2013/03/24 21:34:23 mabi Exp $
+
+*PEAR-HTTP_Header-1.2.1 (24 Mar 2013)
+
+  24 Mar 2013; Matti Bickel <mabi@gentoo.org> +PEAR-HTTP_Header-1.2.1.ebuild:
+  version bump
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   PEAR-HTTP_Header-1.2.0.ebuild:
@@ -23,4 +28,3 @@
   29 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-HTTP_Header-1.2.0.ebuild:
   Initial ebuild, closes bug #146999.
-

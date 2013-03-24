@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r3.ebuild,v 1.1 2013/03/24 17:03:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r4.ebuild,v 1.1 2013/03/24 21:42:44 floppym Exp $
 
 EAPI=5
 
@@ -61,7 +61,6 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 
 src_prepare() {
-
 	autotools-utils_src_prepare
 }
 
@@ -105,7 +104,7 @@ src_configure() {
 }
 
 src_install() {
-	autotools-utils_src_install
+	autotools-utils_src_install dist_udevhwdb_DATA=
 
 	# zsh completion
 	insinto /usr/share/zsh/site-functions

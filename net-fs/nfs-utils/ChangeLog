@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.212 2013/03/24 20:29:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.214 2013/03/24 21:44:02 vapier Exp $
+
+  24 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.2.7-libio.patch, nfs-utils-1.2.6.ebuild,
+  nfs-utils-1.2.7.ebuild:
+  Fix uClibc build w/missing libio.h #459200 by Mark Reiche.
+
+*nfs-utils-1.2.7 (24 Mar 2013)
+
+  24 Mar 2013; Mike Frysinger <vapier@gentoo.org> +nfs-utils-1.2.7.ebuild,
+  metadata.xml:
+  Version bump #445288 by teidakankan.
 
   24 Mar 2013; Mike Frysinger <vapier@gentoo.org> +files/nfsmount.confd,
   files/nfsmount.initd, nfs-utils-1.2.6.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.91 2013/03/24 17:03:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.92 2013/03/24 21:42:44 floppym Exp $
+
+*systemd-198-r4 (24 Mar 2013)
+
+  24 Mar 2013; Mike Gilbert <floppym@gentoo.org> +systemd-198-r4.ebuild,
+  -systemd-198-r3.ebuild, systemd-9999.ebuild:
+  Fix collision with sys-apps/hwids.
 
 *systemd-198-r3 (24 Mar 2013)
 
