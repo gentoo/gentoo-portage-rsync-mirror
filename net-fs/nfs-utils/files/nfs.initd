@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.26 2011/09/18 01:51:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.27 2013/03/24 19:37:22 vapier Exp $
 
 extra_started_commands="reload"
 
@@ -17,20 +17,18 @@ smnotify=/usr/sbin/sm-notify
 
 depend() {
 	local myneed=""
-	if [ -e /etc/exports ] ; then
-		# XXX: no way to detect NFSv4 is desired and so need rpc.idmapd
-		myneed="${myneed} $(
-			awk '!/^[[:space:]]*#/ {
-				# clear the path to avoid spurious matches
-				$1 = "";
-				if ($0 ~ /[(][^)]*sec=(krb|spkm)[^)]*[)]/) {
-					print "rpc.svcgssd"
-					exit 0
-				}
-				}' /etc/exports
-			)"
-	fi
-	config /etc/exports
+	# XXX: no way to detect NFSv4 is desired and so need rpc.idmapd
+	myneed="${myneed} $(
+		awk '!/^[[:space:]]*#/ {
+			# clear the path to avoid spurious matches
+			$1 = "";
+			if ($0 ~ /[(][^)]*sec=(krb|spkm)[^)]*[)]/) {
+				print "rpc.svcgssd"
+				exit 0
+			}
+		}' /etc/exports /etc/exports.d/*.exports 2>/dev/null
+	)"
+	config /etc/exports /etc/exports.d/*.exports
 	need portmap rpc.statd ${myneed} ${NFS_NEEDED_SERVICES}
 	use ypbind net dns rpc.rquotad rpc.idmapd rpc.svcgssd
 	after quota
@@ -46,7 +44,7 @@ mkdir_nfsdirs() {
 
 waitfor_exportfs() {
 	local pid=$1
-	( sleep ${EXPORTFS_TIMEOUT:-30}; kill -9 $pid 2>/dev/null ) &
+	( sleep ${EXPORTFS_TIMEOUT:-30}; kill -9 ${pid} 2>/dev/null ) &
 	wait $1
 }
 
@@ -91,7 +89,7 @@ start() {
 	# Exportfs likes to hang if networking isn't working.
 	# If that's the case, then try to kill it so the
 	# bootup process can continue.
-	if grep -qs '^[[:space:]]*/' /etc/exports ; then
+	if grep -qs '^[[:space:]]*/' /etc/exports /etc/exports.d/*.exports ; then
 		ebegin "Exporting NFS directories"
 		${exportfs} -r &
 		waitfor_exportfs $!

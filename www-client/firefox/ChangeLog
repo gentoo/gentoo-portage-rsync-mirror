@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.224 2013/03/14 15:12:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.225 2013/03/24 19:59:02 anarchy Exp $
+
+  24 Mar 2013; Jory A. Pratt <anarchy@gentoo.org> firefox-17.0.4.ebuild:
+  Fix ld.gold linker issues in elfhack, bug #460450
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.4.ebuild:
   Stable for ppc64, wrt bug #460818

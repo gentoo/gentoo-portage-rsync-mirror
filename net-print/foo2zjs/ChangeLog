@@ -1,6 +1,14 @@
 # ChangeLog for net-print/foo2zjs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.48 2012/12/11 03:38:32 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.50 2013/03/24 19:50:36 dilfridge Exp $
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/foo2zjs-usbbackend.patch, foo2zjs-99999999.ebuild:
+  Fix cups usb backend path, bug 435188
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  foo2zjs-99999999.ebuild:
+  Remove hplip blocker, bug 410459
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> foo2zjs-99999999.ebuild:
   virtualized the udev dependency
