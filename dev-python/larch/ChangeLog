@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/larch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/larch/ChangeLog,v 1.4 2012/12/18 15:40:27 mschiff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/larch/ChangeLog,v 1.5 2013/03/24 12:18:50 mschiff Exp $
+
+*larch-1.20130316 (24 Mar 2013)
+
+  24 Mar 2013; Marc Schiffbauer <mschiff@gentoo.org> +larch-1.20130316.ebuild:
+  Version bump
 
 *larch-1.20121216 (18 Dec 2012)
 
@@ -24,4 +29,3 @@
   15 Jun 2012; Marc Schiffbauer <mschiff@gentoo.org> +larch-1.20120527.ebuild,
   +metadata.xml:
   Initial commit of larch.
-
