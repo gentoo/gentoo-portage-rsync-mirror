@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14590 2013/03/24 11:29:40 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14591 2013/03/24 15:16:02 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -41,7 +41,7 @@ app-text/gonzui
 # MSN service terminated.
 # You can still use your MSN account in net-im/skype
 # or switch to an open protocol instead
-# Removal in 30 days
+# These clients may work until Oct 2013 (or even longer in China)
 net-im/kmess
 net-im/amsn
 x11-themes/amsn-skins
