@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0.ebuild,v 1.6 2013/03/19 04:04:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0.ebuild,v 1.7 2013/03/24 01:41:31 floppym Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -39,7 +39,8 @@ RDEPEND="app-arch/bzip2
 				dev-tcltk/blt
 			)
 			xml? ( >=dev-libs/expat-2.1 )
-		)"
+		)
+		!!<sys-apps/sandbox-2.6-r1"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig
 		>=sys-devel/autoconf-2.65

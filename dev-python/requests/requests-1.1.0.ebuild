@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-1.1.0.ebuild,v 1.2 2013/01/11 18:13:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-1.1.0.ebuild,v 1.3 2013/03/24 01:45:45 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
@@ -29,7 +29,6 @@ RESTRICT="test"
 PATCHES=(
 	"${FILESDIR}"/${P}-system-cacerts.patch
 	"${FILESDIR}"/${P}-system-libs.patch
-	"${FILESDIR}"/${P}-workaround-sandbox-bug.patch
 )
 
 DOCS=( README.rst HISTORY.rst )

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.466 2013/02/21 05:30:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.467 2013/03/24 01:55:26 vapier Exp $
+
+*openssh-6.2_p1 (24 Mar 2013)
+
+  24 Mar 2013; Mike Frysinger <vapier@gentoo.org> +openssh-6.2_p1.ebuild:
+  Initial version.  Needs ldap, and a little more testing w/custom hpn patch.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> openssh-6.1_p1-r1.ebuild:
   Fix for prefix and add ~arm-linux + ~x86-linux keywords.
