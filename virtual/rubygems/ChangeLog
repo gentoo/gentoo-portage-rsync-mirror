@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.43 2013/01/28 15:16:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.44 2013/03/24 17:49:43 hasufell Exp $
+
+  24 Mar 2013; Julian Ospald <hasufell@gentoo.org> Manifest:
+  fix Manifest
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> rubygems-1.ebuild,
   rubygems-4.ebuild:

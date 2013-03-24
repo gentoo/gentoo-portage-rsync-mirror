@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.390 2013/03/02 22:05:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.391 2013/03/24 17:37:37 cardoe Exp $
+
+*mythtv-0.25.3_p20130322 (24 Mar 2013)
+
+  24 Mar 2013; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.25.3_p20130322.ebuild:
+  Snapshot of upstream bug fixes
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   mythtv-0.25.3_p20130101.ebuild, mythtv-0.25.3_p20130131.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r3.ebuild,v 1.9 2012/12/16 19:56:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r3.ebuild,v 1.10 2013/03/24 17:58:01 pinkbyte Exp $
 
 EAPI="4"
 
@@ -10,8 +10,7 @@ PATCH_VER="3"
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.xz
-	http://dev.gentoo.org/~floppym/distfiles/${P}-patches-${PATCH_VER}.tar.xz
+	http://dev.gentoo.org/~floppym/dist/${P}-patches-${PATCH_VER}.tar.xz
 	http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz"
 
 LICENSE="BSD GPL-2"
