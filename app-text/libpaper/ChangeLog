@@ -1,6 +1,14 @@
 # ChangeLog for app-text/libpaper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.53 2012/04/26 20:47:07 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.55 2013/03/24 20:24:23 dilfridge Exp $
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/libpaper-1.1.14.8-malloc.patch, -libpaper-1.1.23.ebuild:
+  Remove old
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  libpaper-1.1.24-r1.ebuild:
+  show elog only on first install, bug 440440
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libpaper-1.1.24-r1.ebuild:
   keyword ~amd64-fbsd

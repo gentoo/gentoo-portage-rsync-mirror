@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy-migrate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/ChangeLog,v 1.24 2013/02/24 17:48:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/ChangeLog,v 1.25 2013/03/24 20:05:38 floppym Exp $
+
+  24 Mar 2013; Mike Gilbert <floppym@gentoo.org>
+  sqlalchemy-migrate-0.7.1.ebuild, sqlalchemy-migrate-0.7.2.ebuild:
+  Adjust sqlalchemy dependency, thanks to Arfrever.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   sqlalchemy-migrate-0.7.2.ebuild:

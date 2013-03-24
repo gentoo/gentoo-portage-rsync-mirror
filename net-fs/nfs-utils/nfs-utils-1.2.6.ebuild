@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.12 2013/01/01 19:47:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.14 2013/03/24 20:29:48 vapier Exp $
 
 EAPI="4"
 
@@ -58,6 +58,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.6-cross-build.patch
 	epatch "${FILESDIR}"/${PN}-1.2.6-osd-install.patch
 	epatch "${FILESDIR}"/${PN}-1.2.6-conditionals.patch
+	epatch "${FILESDIR}"/${PN}-1.2.7-nfsiostat-python3.patch #458934
 	eautoreconf
 }
 
@@ -108,7 +109,9 @@ src_install() {
 	for f in nfs nfsmount rpc.statd ${list} ; do
 		newinitd "${FILESDIR}"/${f}.initd ${f}
 	done
-	newconfd "${FILESDIR}"/nfs.confd nfs
+	for f in nfs nfsmount ; do
+		newconfd "${FILESDIR}"/${f}.confd ${f}
+	done
 	sed -i \
 		-e "/^NFS_NEEDED_SERVICES=/s:=.*:=\"${opt_need}\":" \
 		"${ED}"/etc/conf.d/nfs || die #234132

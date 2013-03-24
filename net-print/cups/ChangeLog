@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.522 2013/03/24 19:58:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.523 2013/03/24 20:31:06 dilfridge Exp $
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.2.ebuild,
+  cups-9999.ebuild:
+  EAPI bump to 5, clean up elog messages, (also) bug 440502
 
   24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.2.ebuild,
   cups-9999.ebuild:

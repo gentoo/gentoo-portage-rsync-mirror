@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.159 2012/11/18 17:40:33 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.160 2013/03/24 20:14:28 fauli Exp $
+
+*gramps-3.4.3 (24 Mar 2013)
+
+  24 Mar 2013; Christian Faulhammer <fauli@gentoo.org> +gramps-3.4.3.ebuild:
+  version bump, bug 463016 by Jonas Stein
 
   18 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove beandog wrt #131511

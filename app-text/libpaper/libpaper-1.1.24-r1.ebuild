@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24-r1.ebuild,v 1.9 2012/04/26 20:47:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24-r1.ebuild,v 1.10 2013/03/24 20:22:41 dilfridge Exp $
 
 EAPI=4
 
@@ -37,11 +37,11 @@ src_install() {
 	dodir /etc
 	(paperconf 2>/dev/null || echo a4) > "${ED}"/etc/papersize \
 		|| die "papersize config failed"
-}
 
-pkg_postinst() {
-	echo
-	elog "run \"paperconf -p letter\" as root to use letter-pagesizes"
-	elog "or paperconf with normal user privileges."
-	echo
+	if ! has_version app-text/libpaper ; then
+		echo
+		elog "run \"paperconf -p letter\" as root to use letter-pagesizes"
+		elog "or paperconf with normal user privileges."
+		echo
+	fi
 }

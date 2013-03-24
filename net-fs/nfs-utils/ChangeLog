@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.210 2013/03/24 19:37:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.212 2013/03/24 20:29:48 vapier Exp $
+
+  24 Mar 2013; Mike Frysinger <vapier@gentoo.org> +files/nfsmount.confd,
+  files/nfsmount.initd, nfs-utils-1.2.6.ebuild:
+  Move net usage to conf.d (defaults are unchanged) #439660 by Matthew Schultz.
+
+  24 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.2.7-nfsiostat-python3.patch, nfs-utils-1.2.6.ebuild:
+  Make nfsiostat work under python 3 #458934 by Jim Faulkner.
 
   24 Mar 2013; Mike Frysinger <vapier@gentoo.org> files/nfs.initd:
   Process /etc/exports.d/*.exports too #459600 by Joakim Tjernlund.
