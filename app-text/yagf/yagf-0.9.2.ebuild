@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/yagf-0.9.2.ebuild,v 1.6 2013/03/24 12:08:05 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/yagf-0.9.2.ebuild,v 1.7 2013/03/24 15:39:45 hwoarang Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="http://symmetrica.net/cuneiform-linux/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="scanner +cuneiform tesseract pdf"
+IUSE="scanner cuneiform +tesseract pdf"
 
 REQUIRED_USE="|| ( cuneiform tesseract )"
 

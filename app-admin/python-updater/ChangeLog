@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/python-updater
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.78 2012/05/28 16:14:43 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.79 2013/03/24 15:38:57 floppym Exp $
+
+*python-updater-0.11 (24 Mar 2013)
+
+  24 Mar 2013; Mike Gilbert <floppym@gentoo.org> +python-updater-0.11.ebuild,
+  python-updater-9999.ebuild:
+  Version bump. Update the ebuilds to point at gentoo infrastructure.
 
   28 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   -files/python-updater-0.9-sed.patch, -python-updater-0.10-r1.ebuild,
@@ -308,4 +314,3 @@
   06 May 2007; Bryan Østergaard <kloeri@gentoo.org>
   +python-updater-0.1.ebuild:
   Initial import of stand-alone python-updater.
-

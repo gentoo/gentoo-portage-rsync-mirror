@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/kteatime-4.10.1.ebuild,v 1.1 2013/03/06 13:42:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/kteatime-4.10.1.ebuild,v 1.2 2013/03/24 15:32:15 dastergon Exp $
 
 EAPI=5
 
@@ -13,6 +13,6 @@ fi
 KDE_HANDBOOK="optional"
 inherit ${eclass}
 
-DESCRIPTION="KDE utility for making a fine cup of tea"
+DESCRIPTION="KDE timer for making a fine cup of tea"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"

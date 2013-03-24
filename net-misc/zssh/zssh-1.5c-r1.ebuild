@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5c-r1.ebuild,v 1.1 2013/03/18 08:22:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5c-r1.ebuild,v 1.2 2013/03/24 15:44:06 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="nls readline"
 
 DEPEND="readline? ( sys-libs/readline )"
