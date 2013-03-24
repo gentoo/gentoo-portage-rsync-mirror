@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20111230.ebuild,v 1.2 2012/07/25 12:47:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20120926.ebuild,v 1.1 2013/03/24 10:51:01 jlec Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils
 
@@ -29,27 +29,25 @@ src_unpack() {
 }
 
 src_install() {
+	local suffix bin
 	exeinto /opt/${PN}
-	doexe * || die
-	if use smp; then
-		rm "${D}"/opt/${PN}/{xds,mintegrate,mcolspot,xscale}
-		dosym xds_par /opt/${PN}/xds || die
-		dosym xscale_par /opt/${PN}/xscale || die
-		dosym mintegrate_par /opt/${PN}/mintegrate || die
-		dosym mcolspot_par /opt/${PN}/mcolspot || die
-	else
-		rm "${D}"/opt/${PN}/*par
-	fi
-	dohtml -r "${WORKDIR}"/XDS_html_doc/* || die
-	insinto /usr/share/${PN}/INPUT_templates
-	doins "${WORKDIR}"/XDS_html_doc/html_doc/INPUT_templates/* || die
+	doexe *
 
-	cat >> "${T}"/20xds <<- EOF
-	PATH="/opt/${PN}/"
-	EOF
-	doenvd "${T}"/20xds || die
+	use smp && suffix="_par"
+
+	for bin in xds mintegrate mcolspot xscale; do
+		dosym ../${PN}/${bin}${suffix} /opt/bin/${bin}
+	done
+
+	for bin in 2cbf cellparm forkcolspot forkintegrate merge2cbf xdsconv; do
+		dosym ../${PN}/${bin} /opt/bin/${bin}
+	done
+
+	dohtml -r "${WORKDIR}"/XDS_html_doc/*
+	insinto /usr/share/${PN}/INPUT_templates
+	doins "${WORKDIR}"/XDS_html_doc/html_doc/INPUT_templates/*
 }
 
 pkg_postinst() {
-	elog "This package will expire on December 31, 2011"
+	elog "This package will expire on June 30, 2013"
 }

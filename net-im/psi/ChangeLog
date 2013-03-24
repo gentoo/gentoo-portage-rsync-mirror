@@ -1,6 +1,11 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.233 2013/03/17 15:21:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.234 2013/03/24 10:41:41 pinkbyte Exp $
+
+*psi-0.15 (24 Mar 2013)
+
+  24 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +psi-0.15.ebuild:
+  Version bump, wrt bug #410911. Psi+ support has been removed for now
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

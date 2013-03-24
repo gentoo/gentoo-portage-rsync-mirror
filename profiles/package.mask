@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14585 2013/03/24 09:48:52 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14587 2013/03/24 10:58:13 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -365,16 +365,6 @@ dev-lang/ruby-enterprise
 # Release made by unofficial maintainer. Drops support for Python 3 with
 # very few improvements. Should be replaced by dev-python/charade eventually.
 =dev-python/chardet-2.1.1
-
-# Pacho Ramos <pacho@gentoo.org>
-# Dead since 2003, doesn't work with journaling filesystems.
-# Also collides with dev-util/smem (#288721). Removal in a month.
-app-misc/secure-delete
-
-# Michał Górny <mgorny@gentoo.org>
-# Unmaintained and replaced by built-in sqlite3 module in Python.
-# Masked for removal in 30 days, bug 452122.
->=dev-python/pysqlite-2
 
 # Alexis Ballier <aballier@gentoo.org>
 # Not really compatible with TeX Live 2012, breaks texdoc, produces some non

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmdtest
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/ChangeLog,v 1.1 2012/10/07 00:35:56 mschiff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/ChangeLog,v 1.2 2013/03/24 10:42:00 mschiff Exp $
+
+*cmdtest-0.6 (24 Mar 2013)
+
+  24 Mar 2013; Marc Schiffbauer <mschiff@gentoo.org> +cmdtest-0.6.ebuild:
+  Version bump. EAPI bump. Migration to python-r1.
 
 *cmdtest-0.5 (07 Oct 2012)
 

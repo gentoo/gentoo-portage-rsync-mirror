@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.21 2013/01/19 00:25:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.22 2013/03/24 10:33:31 grobian Exp $
+
+  24 Mar 2013; Fabian Groffen <grobian@gentoo.org> qpdf-4.0.1.ebuild:
+  Marked ~m68k-mint, bug #458766
 
 *qpdf-4.0.1 (19 Jan 2013)
 
