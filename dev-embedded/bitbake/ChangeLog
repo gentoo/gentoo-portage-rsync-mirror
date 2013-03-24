@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.55 2013/01/14 04:07:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.56 2013/03/24 20:40:06 vapier Exp $
+
+  24 Mar 2013; Mike Frysinger <vapier@gentoo.org> bitbake-1.17.0.ebuild:
+  Stabilize for all #456482.
 
   14 Jan 2013; Tim Harder <radhermit@gentoo.org> bitbake-9999.ebuild:
   Fix live ebuild too.

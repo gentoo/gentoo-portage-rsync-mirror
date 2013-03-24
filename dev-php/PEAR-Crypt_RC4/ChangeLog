@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Crypt_RC4
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_RC4/ChangeLog,v 1.23 2007/12/05 23:52:56 jokey Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_RC4/ChangeLog,v 1.24 2013/03/24 20:31:19 mabi Exp $
+
+*PEAR-Crypt_RC4-1.0.3 (24 Mar 2013)
+
+  24 Mar 2013; Matti Bickel <mabi@gentoo.org> +PEAR-Crypt_RC4-1.0.3.ebuild:
+  version bump
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   PEAR-Crypt_RC4-1.0.2-r1.ebuild:
@@ -98,4 +103,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Crypt_RC4-1.0.2.ebuild:
   Initial ebuild for the Crypt_RC4 PEAR package.
-

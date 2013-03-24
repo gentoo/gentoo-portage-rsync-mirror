@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.17 2012/09/09 14:07:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.19 2013/03/24 20:43:25 dilfridge Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86"
 IUSE="acl avahi dbus debug +filters gnutls java +jpeg kerberos ldap pam perl
 	+png python selinux slp +ssl static-libs +threads +tiff usb X xinetd"
 
-LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
+LANGS="es"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done

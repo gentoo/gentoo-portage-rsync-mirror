@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-File
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/ChangeLog,v 1.51 2012/02/07 16:39:34 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/ChangeLog,v 1.52 2013/03/24 20:46:25 mabi Exp $
+
+*PEAR-File-1.4.1 (24 Mar 2013)
+
+  24 Mar 2013; Matti Bickel <mabi@gentoo.org> +PEAR-File-1.4.1.ebuild:
+  version bump
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-File-1.4.0.ebuild:
   Stable for HPPA (bug #396965).
@@ -190,4 +195,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-File-1.0.3.ebuild:
   Initial ebuild for the File PEAR package.
-

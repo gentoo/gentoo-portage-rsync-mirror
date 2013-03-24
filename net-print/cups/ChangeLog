@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.523 2013/03/24 20:31:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.525 2013/03/24 20:43:25 dilfridge Exp $
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r4.ebuild,
+  cups-1.5.3.ebuild:
+  Remove non-functional localizations
+
+  24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r4.ebuild:
+  Remove de locale since it is nonfunctional, bug 450220
 
   24 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.2.ebuild,
   cups-9999.ebuild:
