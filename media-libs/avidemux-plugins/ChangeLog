@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.1 2013/03/20 14:03:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.2 2013/03/24 11:12:34 tomwij Exp $
+
+*avidemux-plugins-2.6.2-r2 (24 Mar 2013)
+
+  24 Mar 2013; Tom Wijsman <TomWij@gentoo.org>
+  +avidemux-plugins-2.6.2-r2.ebuild, -avidemux-plugins-2.6.2-r1.ebuild:
+  Revision bump. Now that the package is revised, the install target for
+  avidemux-plugins became available because avidemux is seen as present on the
+  system; changed preinstall to install in the avidemux-plugins ebuild such that
+  the plugins are properly installed. Fixes bug #462514 and bug #462516.
 
 *avidemux-plugins-2.6.2-r1 (20 Mar 2013)
 

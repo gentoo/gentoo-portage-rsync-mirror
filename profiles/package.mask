@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14587 2013/03/24 10:58:13 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14590 2013/03/24 11:29:40 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -325,12 +325,6 @@ media-gfx/picasa
 # Breaks everything (bug #456108)
 =dev-libs/openssl-1.0.1d
 
-# Rafael G. Martins <rafaelmartins@gentoo.org> (31 Jan 2013)
-# Renamed to xombrero. Please install www-client/xombrero (bug #417555)
-# The package was not pkg-moved to fix the upstream versioning mess.
-# Removal in 30 days
-www-client/xxxterm
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jan 2013)
 # Beta versions masked for testing
 =net-misc/modemmanager-0.7*
@@ -344,18 +338,6 @@ www-client/xxxterm
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
 =sys-block/open-iscsi-2.0.873
-
-# Hans de Graaff <graaff@gentoo.org> (20 Jan 2013) Mask
-# dev-lang/ruby-enterprise for removal, bug 453178.  The current
-# versions have minor security issues, the latest versions are masked
-# and don't work, and upstream announced end-of-life almost a year
-# ago. Ruby 1.9 has almost all of the benefits of REE, so the
-# recommendation is to switch to that if you are still using REE.
-dev-lang/ruby-enterprise
-=virtual/rubygems-3
-=virtual/ruby-rdoc-3
-=virtual/ruby-ssl-3
-=virtual/ruby-threads-3
 
 # Marien Zwart <marienz@gentoo.org>
 # Patch tarball is broken, meaning this builds 1.2.0 (bug #452918)
@@ -709,12 +691,6 @@ sci-chemistry/webmo
 # Torsten Veller <tove@gentoo.org> (18 Jun 2011)
 # Mask perl-5.14. See tracker bug #356171
 =dev-lang/perl-5.14*
-
-# Hans de Graaff <graaff@gentoo.org> (15 May 2011)
-# Mask new versions until thread-related crashes have been fixed.
-# See bug 367423.
-=dev-lang/ruby-enterprise-1.8.7.2011.03
-=dev-lang/ruby-enterprise-1.8.7.2012.02
 
 # Alexis Ballier <aballier@gentoo.org> (20 Apr 2011)
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)

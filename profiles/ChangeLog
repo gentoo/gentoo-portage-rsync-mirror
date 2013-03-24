@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7641 2013/03/24 10:58:13 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7644 2013/03/24 11:29:40 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Remove www-client/xxxterm mask as package has been removed
+
+  24 Mar 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Remove bug #367423 dev-lang/ruby-enterprise masks as package has been removed
+  and bug marked as WONTFIX
+
+  24 Mar 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Remove dev-lang/ruby-enterprise and associated virtuals mask as packages have
+  been removed
 
   24 Mar 2013; Dion Moult <moult@gentoo.org> package.mask:
   Remove app-misc/secure-delete mask as package has been removed

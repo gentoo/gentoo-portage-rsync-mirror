@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.2-r1.ebuild,v 1.1 2013/03/20 14:03:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.2-r2.ebuild,v 1.1 2013/03/24 11:12:34 tomwij Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="aften a52 alsa amr debug dts fontconfig jack lame libsamplerate mmx oss nls qt4 sdl vorbis truetype xvid x264 xv"
 
 # TODO: Figure out which dependencies can be moved out of avidemux-core and avidemux into here.
-RDEPEND="=media-video/avidemux-${PVR}"
+RDEPEND="=media-video/avidemux-${PV}-r1"
 DEPEND="$RDEPEND"
 
 S="${WORKDIR}/${MY_P}"
@@ -88,10 +88,6 @@ src_install() {
 		SOURCE="${PROCESS%%:*}"
 
 		cd "${S}/${SOURCE}" || die "Can't enter build folder."
-		if [[ "${SOURCE}" == "buildPluginsCLI" || "${SOURCE}" == "buildPluginsQt4" ]] ; then
-			emake DESTDIR="${ED}" preinstall
-		else
-			emake DESTDIR="${ED}" install
-		fi
+		emake DESTDIR="${ED}" install
 	done
 }

@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/rodent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.12 2012/11/28 12:32:59 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.13 2013/03/24 11:18:41 angelos Exp $
+
+*rodent-4.9.2 (24 Mar 2013)
+
+  24 Mar 2013; Christoph Mende <angelos@gentoo.org>
+  +files/rodent-4.9.2-rupo.patch, +rodent-4.9.2.ebuild:
+  Version bump
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> rodent-4.8.0.ebuild:
   EAPI5
