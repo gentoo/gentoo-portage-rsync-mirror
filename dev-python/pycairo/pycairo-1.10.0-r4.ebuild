@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.7 2013/03/23 21:44:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.8 2013/03/24 13:04:32 maekke Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} python3_{1,2,3} )
@@ -19,7 +19,7 @@ SRC_URI="http://cairographics.org/releases/py2cairo-${PYCAIRO_PYTHON2_VERSION}.t
 # || ( LGPL-2.1 MPL-1.1 ) for pycairo 1.8.10.
 LICENSE="LGPL-3 || ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc examples +svg test xcb"
 
 # Note: xpyb is used as the C header, not Python modules

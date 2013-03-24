@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.3.3.ebuild,v 1.1 2012/10/20 21:47:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.12.4.ebuild,v 1.1 2013/03/24 13:27:12 caster Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ SRC_URI="
 	source? ( ${dist}/${PN}-src-${TARBALL_VERSION}.tar.bz2 )"
 
 LICENSE="GPL-2-with-linking-exception"
-SLOT="7"
+SLOT="6"
 KEYWORDS="-* ~amd64 ~x86"
 
 IUSE="+X +alsa cjk +cups doc examples nsplugin source"
@@ -42,33 +42,32 @@ ALSA_COMMON_DEP="
 CUPS_COMMON_DEP="
 	>=net-print/cups-1.4"
 X_COMMON_DEP="
-		>=dev-libs/atk-1.30.0
-		>=dev-libs/glib-2.20.5:2
-		>=media-libs/fontconfig-2.6.0-r2:1.0
-		>=media-libs/freetype-2.3.9:2
-		>=x11-libs/cairo-1.8.8
-		x11-libs/gdk-pixbuf:2
-		>=x11-libs/gtk+-2.20.1:2
-		>=x11-libs/libX11-1.3
-		>=x11-libs/libXext-1.1
-		>=x11-libs/libXi-1.3
-		x11-libs/libXrender
-		>=x11-libs/libXtst-1.1
-	>=x11-libs/pango-1.24.5"
+	dev-libs/glib
+	>=media-libs/freetype-2.3.9:2
+	>=x11-libs/gtk+-2.20.1:2
+	>=x11-libs/libX11-1.3
+	>=x11-libs/libXext-1.1
+	>=x11-libs/libXi-1.3
+	>=x11-libs/libXtst-1.1"
 
 COMMON_DEP="
 	>=media-libs/giflib-4.1.6-r1
-	media-libs/lcms:2
 	>=media-libs/libpng-1.5
 	>=sys-devel/gcc-4.3
 	>=sys-libs/glibc-2.11.2
 	>=sys-libs/zlib-1.2.3-r1
-	virtual/jpeg"
+	virtual/jpeg
+	nsplugin? (
+		>=dev-libs/atk-1.30.0
+		>=dev-libs/glib-2.20.5:2
+		>=dev-libs/nspr-4.8
+		>=x11-libs/cairo-1.8.8
+		>=x11-libs/pango-1.24.5
 
-# cups is needed for X. #390945 #390975
+	)"
+
 RDEPEND="${COMMON_DEP}
 	X? (
-		${CUPS_COMMON_DEP}
 		${X_COMMON_DEP}
 		media-fonts/dejavu
 		cjk? (
@@ -127,7 +126,18 @@ src_install() {
 
 	set_java_env
 	java-vm_revdep-mask "${dest}"
-	java-vm_sandbox-predict /proc/self/coredump_filter
+}
+
+pkg_preinst() {
+	if has_version "<=dev-java/icedtea-bin-1.10.4:${SLOT}"; then
+		# portage would preserve the symlink otherwise, related to bug #384397
+		rm -f "${EROOT}/usr/lib/jvm/icedtea6-bin"
+		elog "To unify the layout and simplify scripts, the identifier of Icedtea-bin-6*"
+		elog "has changed from 'icedtea6-bin' to 'icedtea-bin-6' starting from version 6.1.10.4"
+		elog "If you had icedtea6-bin as system VM, the change should be automatic, however"
+		elog "build VM settings in /etc/java-config-2/build/jdk.conf are not changed"
+		elog "and the same holds for any user VM settings. Sorry for the inconvenience."
+	fi
 }
 
 pkg_postinst() {
