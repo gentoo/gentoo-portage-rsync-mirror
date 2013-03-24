@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7637 2013/03/23 20:34:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7638 2013/03/24 01:22:39 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/13.0/amd64/deprecated,
+  +hardened/linux/13.0/amd64/no-multilib/deprecated,
+  +hardened/linux/13.0/amd64/no-multilib/selinux/deprecated,
+  +hardened/linux/13.0/amd64/selinux/deprecated,
+  +hardened/linux/13.0/amd64/x32/deprecated,
+  +hardened/linux/13.0/x86/deprecated,
+  +hardened/linux/13.0/x86/selinux/deprecated, hardened/linux/parent:
+  Switch hardened profiles to inherit from 13.0
 
   23 Mar 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask app-text/gonzui for removal
