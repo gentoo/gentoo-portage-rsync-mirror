@@ -1,6 +1,18 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.18 2013/03/21 18:09:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.20 2013/03/24 10:23:19 scarabeus Exp $
+
+  24 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> tt-rss-1.7.5.ebuild:
+  Also inherit user eclass just to make repoman happy (it is taken from eutils
+  eclass for now).
+
+*tt-rss-1.7.5 (24 Mar 2013)
+
+  24 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +files/ttrssd.confd-r1,
+  +files/ttrssd.initd-r1, +tt-rss-1.7.5.ebuild:
+  Version bump to latest. Add required use to at-least-one db as otherwise the
+  app does not work. Cleanup the initscript/config so it copes with my nginx
+  instance nicely (checkconfig and obeying user/group settings defined by user).
 
   21 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tt-rss-1.7.4.ebuild:
   Add epatch_user per #462578

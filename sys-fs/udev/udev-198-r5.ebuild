@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r5.ebuild,v 1.5 2013/03/24 09:26:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r5.ebuild,v 1.6 2013/03/24 10:27:46 mgorny Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	kmod? ( >=sys-apps/kmod-12 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
-	!<sys-apps/systemd-${PV}-r2"
+	!sys-apps/systemd"
 
 DEPEND="${COMMON_DEPEND}
 	virtual/os-headers

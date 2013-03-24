@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libtaginfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtaginfo/ChangeLog,v 1.2 2013/03/16 08:08:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtaginfo/ChangeLog,v 1.3 2013/03/24 10:30:19 angelos Exp $
+
+*libtaginfo-0.1.4 (24 Mar 2013)
+
+  24 Mar 2013; Christoph Mende <angelos@gentoo.org> +libtaginfo-0.1.4.ebuild:
+  Version bump
 
 *libtaginfo-0.1.3 (16 Mar 2013)
 

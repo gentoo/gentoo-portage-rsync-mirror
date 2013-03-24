@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r1.ebuild,v 1.1 2013/03/14 09:25:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r1.ebuild,v 1.2 2013/03/24 10:30:13 mgorny Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ MINKV="2.6.39"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	>=sys-apps/util-linux-2.20
+	<sys-fs/udev-${PV}-r5[acl?]
 	~sys-fs/udev-${PV}[acl?]
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
