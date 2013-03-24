@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/sun-templates/sun-templates-1.0.0-r1.ebuild,v 1.1 2013/03/23 10:17:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/sun-templates/sun-templates-1.0.0-r1.ebuild,v 1.2 2013/03/24 08:35:08 scarabeus Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ OFFICE_EXTENSIONS=(
 	"09ec2dac030e1dcd5ef7fa1692691dc0-Sun-ODF-Template-Pack-hu_${PV}.oxt"
 	"b33775feda3bcf823cad7ac361fd49a6-Sun-ODF-Template-Pack-it_${PV}.oxt"
 )
-URI_EXTENSIONS="${OO_EXTENSIONS[@]/#/http://ooo.itc.hu/oxygenoffice/download/libreoffice/}"
+URI_EXTENSIONS="${OFFICE_EXTENSIONS[@]/#/http://ooo.itc.hu/oxygenoffice/download/libreoffice/}"
 
 inherit office-ext-r1
 
