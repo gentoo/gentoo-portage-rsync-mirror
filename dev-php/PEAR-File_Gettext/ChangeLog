@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-File_Gettext
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Gettext/ChangeLog,v 1.29 2012/06/09 14:43:51 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Gettext/ChangeLog,v 1.30 2013/03/24 21:02:31 mabi Exp $
+
+*PEAR-File_Gettext-0.4.2 (24 Mar 2013)
+
+  24 Mar 2013; Matti Bickel <mabi@gentoo.org> +PEAR-File_Gettext-0.4.2.ebuild:
+  version bump
 
   09 Jun 2012; Matti Bickel <mabi@gentoo.org> -PEAR-File_Gettext-0.4.1.ebuild:
   remove old
@@ -120,4 +125,3 @@
   28 Feb 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-File_Gettext-0.4.0.ebuild:
   Initial ebuild.
-

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.17 2013/01/14 17:41:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.18 2013/03/24 21:06:04 xarthisius Exp $
+
+  24 Mar 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  ekopath-4.0.12.1_pre20121102.ebuild, ekopath-5.0.0_pre20130113.ebuild:
+  Install docs unconditionally, add proper dir to MANPATH. Thanks to
+  nanikata@gmail.com for the patch. Fixes bug 460428
 
 *ekopath-5.0.0_pre20130113 (14 Jan 2013)
 

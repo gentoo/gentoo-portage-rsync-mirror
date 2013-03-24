@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTML_Common2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common2/ChangeLog,v 1.9 2012/02/07 16:40:39 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common2/ChangeLog,v 1.10 2013/03/24 21:15:03 mabi Exp $
+
+*PEAR-HTML_Common2-2.1.0 (24 Mar 2013)
+
+  24 Mar 2013; Matti Bickel <mabi@gentoo.org> +PEAR-HTML_Common2-2.1.0.ebuild:
+  version bump
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-HTML_Common2-2.0.0.ebuild:
   Marked ~hppa (bug #396967).
@@ -54,4 +59,3 @@
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +PEAR-HTML_Common2-2.0.0_beta1.ebuild:
   Add a replacement for superseded PEAR-HTML_Common
-

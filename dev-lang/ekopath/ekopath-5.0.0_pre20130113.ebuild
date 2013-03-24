@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-5.0.0_pre20130113.ebuild,v 1.1 2013/01/14 17:41:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-5.0.0_pre20130113.ebuild,v 1.2 2013/03/24 21:06:04 xarthisius Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="http://c591116.r16.cf2.rackcdn.com/${PN}/nightly/Linux/${PN}-${DATE}-in
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="doc"
+IUSE=""
 
 DEPEND="!!app-arch/rpm"
 RDEPEND=""
@@ -47,12 +47,12 @@ src_prepare() {
 		PATH=/opt/${PN}/bin
 		ROOTPATH=/opt/${PN}/bin
 		LDPATH=/opt/${PN}/lib:/opt/${PN}/lib/${MY_PV}/x8664/64
+		MANPATH=/opt/${PN}/docs/man
 	EOF
 }
 
 src_install() {
 	local opts
-	use doc || opts="${opts} --disable-components documentation"
 	# You must paxmark -m EI_PAX (not PT_PAX) to run the installer
 	# on a pax enabled kernel.  Adding PT_PAX breaks the binary.
 	/usr/bin/scanelf -Xxz m ${P}.run >> /dev/null

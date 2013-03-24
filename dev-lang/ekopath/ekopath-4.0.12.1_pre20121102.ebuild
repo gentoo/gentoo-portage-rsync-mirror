@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.12.1_pre20121102.ebuild,v 1.1 2013/01/03 07:45:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.12.1_pre20121102.ebuild,v 1.2 2013/03/24 21:06:04 xarthisius Exp $
 
 EAPI=4
 
@@ -47,6 +47,7 @@ src_prepare() {
 		PATH=/opt/${PN}/bin
 		ROOTPATH=/opt/${PN}/bin
 		LDPATH=/opt/${PN}/lib:/opt/${PN}/lib/${MY_PV}/x8664/64
+		MANPATH=/opt/${PN}/docs/man
 	EOF
 }
 
