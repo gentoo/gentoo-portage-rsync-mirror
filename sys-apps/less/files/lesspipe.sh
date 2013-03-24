@@ -15,6 +15,7 @@ guesscompress() {
 		*.bz2|*.bz) echo "bunzip2 -c" ;;
 		*.lz)       echo "lzip -dc" ;;
 		*.lzma)     echo "unlzma -c" ;;
+		*.lzo)      echo "lzop -dc" ;;
 		*.xz)       echo "xzdec" ;;
 		*)          echo "cat" ;;
 	esac
@@ -46,7 +47,7 @@ lesspipe() {
 	local match=$2
 	[[ -z ${match} ]] && match=$1
 
-	local DECOMPRESSOR=$(guesscompress "$match")
+	local DECOMPRESSOR=$(guesscompress "${match}")
 
 	# User filters
 	if [[ -x ~/.lessfilter ]] ; then
@@ -58,13 +59,14 @@ lesspipe() {
 		[[ ${match} == *.${ignore} ]] && exit 0
 	done
 
-	case "$match" in
+	case "${match}" in
 
 	### Doc files ###
 	*.[0-9n]|*.man|\
 	*.[0-9n].bz2|*.man.bz2|\
 	*.[0-9n].gz|*.man.gz|\
 	*.[0-9n].lzma|*.man.lzma|\
+	*.[0-9n].xz|*.man.xz|\
 	*.[0-9][a-z].gz|*.[0-9][a-z].gz)
 		local out=$(${DECOMPRESSOR} -- "$1" | file -)
 		case ${out} in
@@ -233,8 +235,8 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.50 2013/01/30 07:08:38 vapier Exp $
-		Copyright 2001-2010 Gentoo Foundation
+		$Id: lesspipe.sh,v 1.51 2013/03/24 05:01:40 vapier Exp $
+		Copyright 2001-2013 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
 
