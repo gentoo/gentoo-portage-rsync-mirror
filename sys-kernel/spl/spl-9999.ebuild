@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.32 2013/03/20 18:54:04 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.33 2013/03/23 23:48:08 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -9,7 +9,6 @@ inherit flag-o-matic linux-info linux-mod autotools-utils
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
-	MY_PV=9999
 	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
 else
 	inherit eutils versionator
@@ -71,6 +70,9 @@ src_prepare() {
 
 		# Linux 3.9 Support
 		epatch "${FILESDIR}/${P}-linux-3.9-compat.patch"
+
+		# Free memory under load quickly
+		epatch "${FILESDIR}/${P}-no-cond_resched.patch"
 	fi
 
 	# splat is unnecessary unless we are debugging
@@ -101,7 +103,7 @@ src_install() {
 	dodoc AUTHORS DISCLAIMER README.markdown
 
 	# Provide /usr/src/spl symlink for lustre
-	dosym "spl-${MY_PV}/${KV_FULL}" /usr/src/spl
+	dosym "$(basename $(echo "${ED}/usr/src/spl-"*))/${KV_FULL}" /usr/src/spl
 }
 
 src_test() {

@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.49 2013/03/20 18:54:04 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.50 2013/03/23 23:48:08 ryao Exp $
+
+*spl-0.6.0_rc14-r3 (23 Mar 2013)
+
+  23 Mar 2013; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc14-no-cond_resched.patch, +spl-0.6.0_rc14-r3.ebuild,
+  -spl-0.6.0_rc14-r2.ebuild, spl-9999.ebuild:
+  Free memory more quickly under memory pressure; do not dodoc INSTALL
+  (deprecated upstream); fix /usr/src/spl symlink in 9999 ebuild (thanks
+  likewhoa)
 
   20 Mar 2013; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
   Remove dodoc INSTALL from 9999 ebuild to reflect upstream change.

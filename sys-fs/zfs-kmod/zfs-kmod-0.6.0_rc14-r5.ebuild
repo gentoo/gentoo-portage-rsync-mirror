@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14-r4.ebuild,v 1.3 2013/03/16 18:06:07 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14-r5.ebuild,v 1.1 2013/03/23 23:50:17 ryao Exp $
 
 EAPI="4"
 
@@ -83,6 +83,9 @@ src_prepare() {
 
 		# Linux 3.9 Support
 		epatch "${FILESDIR}/${P}-linux-3.9-compat.patch"
+
+		# Do not second guess Linux's memory management
+		epatch "${FILESDIR}/${P}-zfs_arc_memory_throttle_disable.patch"
 	fi
 
 	# Remove GPLv2-licensed ZPIOS unless we are debugging

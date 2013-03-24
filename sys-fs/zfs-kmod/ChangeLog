@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.23 2013/03/16 18:06:07 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.24 2013/03/23 23:50:17 ryao Exp $
+
+*zfs-kmod-0.6.0_rc14-r5 (23 Mar 2013)
+
+  23 Mar 2013; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.0_rc14-zfs_arc_memory_throttle_disable.patch,
+  +zfs-kmod-0.6.0_rc14-r5.ebuild, -zfs-kmod-0.6.0_rc14-r4.ebuild:
+  Enable zfs_arc_memory_throttle_disable by default
 
   16 Mar 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10-r2.ebuild,
   zfs-kmod-0.6.0_rc11-r3.ebuild, zfs-kmod-0.6.0_rc12-r3.ebuild,
