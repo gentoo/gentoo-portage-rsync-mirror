@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.9.ebuild,v 1.2 2013/03/25 15:35:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.9.ebuild,v 1.3 2013/03/25 16:14:13 ago Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/${PN}/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="evo"
 
 DOCS="ChangeLog README TODO doc/BUGS doc/cuecat_support.rdoc doc/FAQ doc/HACKING doc/NEWS"

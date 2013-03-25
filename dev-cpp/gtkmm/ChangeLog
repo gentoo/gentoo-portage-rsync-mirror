@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.245 2013/03/25 15:38:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.246 2013/03/25 16:17:34 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gtkmm-3.4.2.ebuild:
+  Stable for x86, wrt bug #458984
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gtkmm-3.4.2.ebuild:
   Stable for amd64, wrt bug #458984

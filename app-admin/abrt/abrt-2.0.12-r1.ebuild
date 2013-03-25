@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.12-r1.ebuild,v 1.2 2013/03/25 15:33:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.12-r1.ebuild,v 1.3 2013/03/25 16:12:42 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="https://fedorahosted.org/released/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 COMMON_DEPEND=">=dev-libs/btparser-0.18

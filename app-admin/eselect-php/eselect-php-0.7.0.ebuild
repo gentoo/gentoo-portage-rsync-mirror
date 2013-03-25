@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/eselect-php-0.7.0.ebuild,v 1.1 2013/03/23 19:42:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/eselect-php-0.7.0.ebuild,v 1.2 2013/03/25 16:13:04 olemarkus Exp $
 
 EAPI=5
 
@@ -16,9 +16,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="fpm apache2"
 
 DEPEND=">=app-admin/eselect-1.2.4
-		!!<dev-lang/php-5.3.23-r1:5.3
-		!!<dev-lang/php-5.4.13-r1:5.4
-		!!<dev-lang/php-5.5.0_beta1-r2:5.5
+		!<dev-lang/php-5.3.23-r1:5.3
+		!<dev-lang/php-5.4.13-r1:5.4
+		!<dev-lang/php-5.5.0_beta1-r2:5.5
 		"
 RDEPEND="${DEPEND}"
 

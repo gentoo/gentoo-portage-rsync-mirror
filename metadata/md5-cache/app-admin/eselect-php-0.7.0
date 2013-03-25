@@ -1,13 +1,13 @@
 DEFINED_PHASES=install setup
-DEPEND=>=app-admin/eselect-1.2.4 !!<dev-lang/php-5.3.23-r1:5.3 !!<dev-lang/php-5.4.13-r1:5.4 !!<dev-lang/php-5.5.0_beta1-r2:5.5 apache2? ( =www-servers/apache-2* )
+DEPEND=>=app-admin/eselect-1.2.4 !<dev-lang/php-5.3.23-r1:5.3 !<dev-lang/php-5.4.13-r1:5.4 !<dev-lang/php-5.5.0_beta1-r2:5.5 apache2? ( =www-servers/apache-2* )
 DESCRIPTION=PHP eselect module
 EAPI=5
 HOMEPAGE=http://www.gentoo.org
 IUSE=fpm apache2 apache2
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2
-RDEPEND=>=app-admin/eselect-1.2.4 !!<dev-lang/php-5.3.23-r1:5.3 !!<dev-lang/php-5.4.13-r1:5.4 !!<dev-lang/php-5.5.0_beta1-r2:5.5 apache2? ( =www-servers/apache-2* )
+RDEPEND=>=app-admin/eselect-1.2.4 !<dev-lang/php-5.3.23-r1:5.3 !<dev-lang/php-5.4.13-r1:5.4 !<dev-lang/php-5.5.0_beta1-r2:5.5 apache2? ( =www-servers/apache-2* )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~olemarkus/eselect-php/eselect-php-0.7.0.bz2
 _eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=1ae76e792d6ffe26112764ae70fe0e17
+_md5_=1be4ce5d9aac74b17c8a9849081f5e68
