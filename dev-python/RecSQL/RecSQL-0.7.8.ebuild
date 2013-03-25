@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/RecSQL/RecSQL-0.7.8.ebuild,v 1.1 2013/03/23 13:13:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/RecSQL/RecSQL-0.7.8.ebuild,v 1.2 2013/03/25 11:44:16 alexxy Exp $
 
 EAPI=5
 
@@ -27,5 +27,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-python/numpy"
+DEPEND="
+	dev-lang/python[sqlite]
+	dev-python/numpy"
 RDEPEND="${DEPEND}"

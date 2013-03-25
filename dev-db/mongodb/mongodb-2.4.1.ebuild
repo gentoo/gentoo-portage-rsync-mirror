@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.0.ebuild,v 1.2 2013/03/21 09:02:33 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.1.ebuild,v 1.1 2013/03/25 12:00:42 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -17,7 +17,7 @@ SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="mms-agent sharedclient spidermonkey ssl static-libs"
+IUSE="kerberos mms-agent sharedclient spidermonkey ssl static-libs"
 
 PDEPEND="mms-agent? ( dev-python/pymongo )"
 RDEPEND="
@@ -30,7 +30,8 @@ RDEPEND="
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	sys-libs/readline
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	kerberos? ( net-libs/libgsasl )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -44,14 +45,18 @@ pkg_setup() {
 	scons_opts+=" --use-system-snappy"
 	scons_opts+=" --use-system-boost"
 
-	if use spidermonkey; then
-		scons_opts+=" --usesm"
-	else
-		scons_opts+=" --use-system-v8"
+	if use kerberos; then
+		scons_opts+=" --use-sasl-client"
 	fi
 
 	if use sharedclient; then
 		scons_opts+=" --sharedclient"
+	fi
+
+	if use spidermonkey; then
+		scons_opts+=" --usesm"
+	else
+		scons_opts+=" --use-system-v8"
 	fi
 
 	if use ssl; then
@@ -66,6 +71,11 @@ src_prepare() {
 	if use sharedclient; then
 		sed -i -e '/env.Append( LINKFLAGS=" -Wl,--as-needed -Wl,-zdefs " )/d' SConstruct || die
 		sed -i -e 's/#env.SharedLibrary/env.SharedLibrary/g' src/SConscript.client || die
+	fi
+
+	# bug #462606
+	if use !prefix && [[ "$(get_libdir)" == "lib" ]]; then
+		sed -i -e 's/^env.Install(prefix/env.InstallAs(prefix/g' src/SConscript.client || die
 	fi
 }
 
