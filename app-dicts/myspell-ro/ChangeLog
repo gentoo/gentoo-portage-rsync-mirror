@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-ro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.20 2012/06/13 16:03:22 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.21 2013/03/25 07:40:27 scarabeus Exp $
+
+*myspell-ro-3.3.8 (25 Mar 2013)
+
+  25 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-ro-3.3.8.ebuild:
+  Version bump to latest release.
 
   13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-ro-3.3.7.ebuild:
   Keyword accidentaly dropped amd64-fbsd
@@ -74,4 +79,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-ro-20060316.ebuild:
   New ebuild for Romanian myspell dictionary
-

@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r2.ebuild,v 1.3 2013/03/25 07:55:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.6.0_rc1.ebuild,v 1.1 2013/03/25 07:55:32 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="tk"
 
-inherit distutils-r1 fdo-mime prefix versionator
+inherit distutils-r1 fdo-mime versionator
 
 DESCRIPTION="A Python-extensible molecular graphics system"
 HOMEPAGE="http://pymol.sourceforge.net/"
@@ -18,10 +18,9 @@ SRC_URI="
 LICENSE="PSF-2.2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
-IUSE="apbs numpy vmd web"
+IUSE="apbs web"
 
 DEPEND="
-	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/pmw[${PYTHON_USEDEP}]
 	media-libs/freetype:2
 	media-libs/glew
@@ -39,26 +38,12 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 python_prepare_all() {
-	local PATCHES=(
-		"${FILESDIR}"/${PN}-1.5.0.1-setup.py.patch
-		"${FILESDIR}"/${PN}-1.5.0.1-data-path.patch
-		"${FILESDIR}"/${PN}-1.5.0.1-flags.patch
-		"${FILESDIR}"/${P}-prefix.patch
-		)
-
-	use web || PATCHES+=( "${FILESDIR}"/${P}-web.patch )
-	use vmd && PATCHES+=( "${FILESDIR}"/${PN}-1.5.0.1-vmd.patch )
-
-	if use numpy; then
-		sed \
-			-e '/PYMOL_NUMPY/s:^#::g' \
-			-i setup.py || die
-	fi
+	sed \
+		-e "s:\"/usr:\"${EPREFIX}/usr:g" \
+		-e "/ext_comp_args/s:=\[.*\]$:= \[\]:g" \
+		-i setup.py || die
 
 	rm ./modules/pmg_tk/startup/apbs_tools.py || die
-
-	python_export python2_7 EPYTHON PYTHON_SITEDIR
-	echo "site_packages = \'$(python_get_sitedir)\'" > setup3.py || die
 
 	sed \
 		-e "s:/opt/local:${EPREFIX}/usr:g" \
@@ -66,8 +51,10 @@ python_prepare_all() {
 		-i setup.py || die
 
 	distutils-r1_python_prepare_all
+}
 
-	eprefixify setup.py
+python_install() {
+	distutils-r1_python_install --pymol-path="${EPREFIX}/usr/share/pymol"
 }
 
 python_install_all() {
@@ -85,32 +72,17 @@ python_install_all() {
 
 	doenvd "${T}"/20pymol
 
-	cat >> "${T}"/pymol <<- EOF
-	#!/bin/sh
-	${EPYTHON} -O \${PYMOL_PATH}/__init__.py -q \$*
-	EOF
-
-	dobin "${T}"/pymol
-
-	insinto /usr/share/pymol
-	doins -r test data scripts
-
-	insinto /usr/share/pymol/examples
-	doins -r examples
-
-	dodoc DEVELOPERS README
-
 	doicon "${WORKDIR}"/${PN}.{xpm,png}
 	make_desktop_entry pymol PyMol ${PN} "Graphics;Education;Science;Chemistry" "MimeType=chemical/x-pdb;"
+
+	if ! use web; then
+		rm -rf "${D}/$(python_get_sitedir)/web" || die
+	fi
+
+	rm -f "${ED}"/usr/share/${PN}/LICENSE || die
 }
 
 pkg_postinst() {
-	elog "\t USE=shaders was removed,"
-	elog "please use pymol config settings (~/.pymolrc)"
-	elog "\t set use_shaders, 1"
-	elog "in case of crashes, please deactivate this experimental feature by setting"
-	elog "\t set use_shaders, 0"
-	elog "\t set sphere_mode, 0"
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }

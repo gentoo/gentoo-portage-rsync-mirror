@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IP
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.36 2012/12/03 17:34:38 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.37 2013/03/25 07:57:58 pinkbyte Exp $
+
+  25 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> Net-IP-1.260.0.ebuild:
+  Stable on amd64, wrt bug #456580
 
 *Net-IP-1.260.0 (03 Dec 2012)
 
