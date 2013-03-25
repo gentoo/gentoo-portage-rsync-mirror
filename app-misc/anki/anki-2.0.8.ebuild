@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.8.ebuild,v 1.1 2013/02/17 05:53:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.8.ebuild,v 1.2 2013/03/25 04:50:27 tomka Exp $
 
 EAPI=4
 
@@ -67,6 +67,5 @@ pkg_preinst() {
 		elog "converted to the new format and a backup of your Anki-1"
 		elog "decks is created.  Please read the following:"
 		elog "http://ankisrs.net/anki2.html"
-		elog "The mobile clients for Anki 2 are still under development."
 	fi
 }
