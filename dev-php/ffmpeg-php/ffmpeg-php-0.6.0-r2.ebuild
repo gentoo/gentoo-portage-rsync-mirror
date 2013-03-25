@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r2.ebuild,v 1.2 2013/03/05 10:41:09 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r2.ebuild,v 1.3 2013/03/25 10:00:50 aballier Exp $
 
 EAPI="5"
 
@@ -39,6 +39,8 @@ src_prepare() {
 		epatch "${FILESDIR}/${P}-ffmpeg.patch"
 		epatch "${FILESDIR}/${P}-log.patch"
 		epatch "${FILESDIR}/${P}-php5-4.patch"
+		epatch "${FILESDIR}/${P}-ffincludes.patch"
+		epatch "${FILESDIR}/${P}-ffmpeg1.patch"
 	done
 	php-ext-source-r2_src_prepare
 }

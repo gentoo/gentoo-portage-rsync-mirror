@@ -1,0 +1,11 @@
+--- mupdf-1.1/debian/mupdf.desktop
++++ mupdf-1.1/debian/mupdf.desktop
+@@ -10,6 +10,8 @@
+ Type=Application
+ MimeType=application/pdf;application/x-pdf;
+ Categories=Viewer;Graphics;
++Actions=View;
+ 
+ [Desktop Action View]
++Name=View with mupdf
+ Exec=mupdf %f

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.1 2013/03/25 09:19:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.2 2013/03/25 09:50:29 xmw Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ src_prepare() {
 	rm -rf thirdparty || die
 
 	epatch "${FILESDIR}"/${PN}-1.1_p20121127-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-1.1_p20121127-desktop-integration.patch
 	epatch "${FILESDIR}"/${PN}-1.2-mubusy_rename_fix.patch
 
 	if ! use vanilla ; then
