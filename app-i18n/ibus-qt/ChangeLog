@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.18 2013/03/02 19:27:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.19 2013/03/25 11:23:46 naota Exp $
+
+  25 Mar 2013; Naohiro Aota <naota@gentoo.org>
+  +files/ibus-qt-1.3.1-qvariant.patch, -ibus-qt-1.3.0.ebuild,
+  ibus-qt-1.3.1.ebuild:
+  Add upstream patch to deal with clang. #439676; Drop old version.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ibus-qt-1.3.0.ebuild,
   ibus-qt-1.3.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.1.ebuild,v 1.8 2013/03/02 19:27:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.1.ebuild,v 1.9 2013/03/25 11:23:46 naota Exp $
 
 EAPI="5"
 inherit cmake-utils eutils multilib
@@ -35,7 +35,8 @@ mycmakeargs="-DLIBDIR=$(get_libdir) -DDOCDIR=/usr/share/doc/${PF} all"
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.2.0.20091217-doc.patch" \
 		"${FILESDIR}"/${PN}-1.3.1-display-unset.patch \
-		"${FILESDIR}"/${PN}-1.3.1-gold.patch
+		"${FILESDIR}"/${PN}-1.3.1-gold.patch \
+		"${FILESDIR}"/${PN}-1.3.1-qvariant.patch
 }
 
 src_compile() {
