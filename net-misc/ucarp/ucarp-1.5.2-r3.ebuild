@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.5.2-r2.ebuild,v 1.1 2013/03/11 10:45:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.5.2-r3.ebuild,v 1.1 2013/03/25 10:32:03 dev-zero Exp $
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ src_install() {
 
 	keepdir /etc/ucarp
 
-	newinitd "${FILESDIR}"/ucarp.initd ucarp
+	newinitd "${FILESDIR}"/ucarp.initd-r1 ucarp
 	newconfd "${FILESDIR}"/ucarp.confd ucarp
 }
 
