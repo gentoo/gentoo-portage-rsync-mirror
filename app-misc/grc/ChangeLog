@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/grc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.31 2013/01/08 14:54:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.32 2013/03/25 05:56:05 pinkbyte Exp $
+
+  25 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> grc-1.4-r1.ebuild:
+  Stable on amd64, wrt bug #457246
 
 *grc-1.4-r1 (08 Jan 2013)
 

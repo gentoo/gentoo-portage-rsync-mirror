@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.152 2013/02/22 17:32:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.154 2013/03/25 05:50:36 ssuominen Exp $
+
+*usbutils-006-r1 (25 Mar 2013)
+
+  25 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +usbutils-006-r1.ebuild:
+  Convert from python.eclass to python-single-r1.eclass.
+  Do not install the usbmodules script from ${FILESDIR} because sys-apps/kmod
+  does not generate the required modules.usbmap file wrt #462982 by
+  Mike Frysinger.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> usbutils-006.ebuild:
   Add ~arm-linux keyword.
