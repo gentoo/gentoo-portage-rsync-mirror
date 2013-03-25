@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/libguestfs-appliance
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs-appliance/ChangeLog,v 1.1 2013/03/25 12:06:45 maksbotan Exp $
+
+*libguestfs-appliance-1.20.0 (25 Mar 2013)
+
+  25 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> +files/env.file,
+  +libguestfs-appliance-1.20.0.ebuild, +metadata.xml:
+  Add app-emulation/libguestfs-appliance, thanks to slepnoga

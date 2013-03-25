@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r4.ebuild,v 1.2 2013/03/24 22:12:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r5.ebuild,v 1.1 2013/03/25 12:19:36 mgorny Exp $
 
 EAPI=5
 
@@ -60,8 +60,22 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 
+# eautomake
+DEPEND="${DEPEND}
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
+	dev-libs/gobject-introspection
+	>=dev-libs/libgcrypt-1.4.5
+	>=dev-util/gtk-doc-1.18"
+
 src_prepare() {
+	local PATCHES=(
+		"${FILESDIR}"/198-0002-build-sys-break-dependency-loop-between-libsystemd-i.patch
+		"${FILESDIR}"/198-0003-build-sys-link-libsystemd-login-also-against-libsyst.patch
+	)
 	autotools-utils_src_prepare
+
+	eautomake
 }
 
 src_configure() {
@@ -112,6 +126,9 @@ src_install() {
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules
+
+	# remove useless 'README' files
+	rm "${D}"/{etc/init.d,var/log}/README || die
 
 	# move nss_myhostname to rootfs (bug #460640)
 	dodir /$(get_libdir)
