@@ -1,27 +1,30 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.5-r4.ebuild,v 1.8 2011/09/21 15:49:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7.ebuild,v 1.1 2013/03/25 19:27:27 hwoarang Exp $
 
 EAPI="4"
 inherit eutils multilib autotools linux-info
 
 DESCRIPTION="Kernel based automounter"
 HOMEPAGE="http://www.linux-consulting.com/Amd_AutoFS/autofs.html"
-PATCH_VER="4"
+PATCH_VER="1"
+[[ -n ${PATCH_VER} ]] && \
+	PATCHSET_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}-patches-${PATCH_VER}.tar.lzma"
 SRC_URI="mirror://kernel/linux/daemons/${PN}/v5/${P}.tar.bz2
-	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.lzma"
+	${PATCHSET_URI}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
-IUSE="hesiod ldap sasl"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="hesiod ldap mount-locking sasl"
 
 # USE="sasl" adds SASL support to the LDAP module which will not be build. If
 # SASL support should be available, please add "ldap" to the USE flags.
 REQUIRED_USE="sasl? ( ldap )"
 
 # currently, sasl code assumes the presence of kerberosV
-RDEPEND="hesiod? ( net-dns/hesiod )
+RDEPEND="
+	hesiod? ( net-dns/hesiod )
 	ldap? ( >=net-nds/openldap-2.0
 		sasl? ( dev-libs/cyrus-sasl
 			dev-libs/libxml2
@@ -32,8 +35,10 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# Upstream's patchset
-	EPATCH_SUFFIX="patch" \
-		epatch "${WORKDIR}"/patches
+	if [[ -n ${PATCH_VER} ]]; then
+		EPATCH_SUFFIX="patch" \
+			epatch "${WORKDIR}"/patches
+	fi
 
 	# Fix for bug #210762
 	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/4203
@@ -43,25 +48,20 @@ src_prepare() {
 	#    #154797: Respect CC and CFLAGS
 	#    #253412: Respect LDFLAGS
 	#    #247969: Link order for --as-needed
-	epatch "${FILESDIR}"/${P}-respect-user-flags-and-fix-asneeded-v1.patch
-
-	# do not include <nfs/nfs.h>, rather <linux/nfs.h>,
-	# as the former is a lame header for the latter (bug #157968)
-	sed 's@nfs/nfs.h@linux/nfs.h@' -i include/rpc_subs.h || die
-
-	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/5591
-	epatch "${FILESDIR}"/${P}-fix-building-without-sasl.patch
+	epatch "${FILESDIR}"/${PN}-5.0.6-respect-user-flags-and-fix-asneeded-r2.patch
 
 	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/5371
-	epatch "${FILESDIR}"/${P}-fix-install-deadlink.patch
+	epatch "${FILESDIR}"/${PN}-5.0.5-fix-install-deadlink.patch
 
 	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/6039
 	# Disable LDAP specific code if USE="-ldap", let's see what upstream says...
-	epatch "${FILESDIR}"/${P}-fix-building-without-ldap.patch
+	epatch "${FILESDIR}"/${PN}-5.0.5-fix-building-without-ldap.patch
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=361899
-	epatch "${FILESDIR}"/${P}-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch
+	epatch "${FILESDIR}"/${PN}-5.0.5-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch
 
+	# https://bugs.gentoo.org/show_bug.cgi?id=381315
+	epatch "${FILESDIR}"/${PN}-5.0.6-revert-ldap.patch
 	eautoreconf
 }
 
@@ -71,11 +71,17 @@ src_configure() {
 	addpredict "/etc/mtab"
 
 	# --with-confdir is for bug #361481
+	# --with-mapdir is for bug #385113
+	# for systemd support (not enabled yet):
+	#   --with-systemd
+	#   --disable-move-mount: requires kernel >=2.6.39
 	econf \
 		--with-confdir=/etc/conf.d \
+		--with-mapdir=/etc/autofs \
 		$(use_with ldap openldap) \
 		$(use_with sasl) \
 		$(use_with hesiod) \
+		$(use_enable mount-locking) \
 		--enable-ignore-busy
 }
 
