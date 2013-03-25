@@ -31,5 +31,6 @@
 		<flag name='apache2_modules_unixd'>Basic (required) security for Unix-family platforms.</flag>
 		<flag name='apache2_modules_proxy_fcgi'>FCGI support module for mod_proxy.</flag>
 		<flag name='apache2_modules_ratelimit'>Ratelimit module for transfer rate management</flag>
+		<flag name='apache2_modules_remoteip'>Remotip module for logging</flag>
 	</use>
 </pkgmetadata>
