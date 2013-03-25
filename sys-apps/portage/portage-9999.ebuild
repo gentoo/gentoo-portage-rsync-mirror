@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.70 2013/03/22 00:04:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.71 2013/03/25 00:05:39 zmedico Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -100,8 +100,28 @@ compatible_python_is_selected() {
 }
 
 current_python_has_xattr() {
-	[[ $("${EPREFIX}/usr/bin/python" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x3030000 and "yes" or "no")') = yes ]] || \
-	"${EPREFIX}/usr/bin/python" -c 'import xattr' 2>/dev/null
+	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+	local PYTHON=${EPREFIX}/usr/bin/${EPYTHON}
+	[[ $("${PYTHON}" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x3030000 and "yes" or "no")') = yes ]] || \
+	"${PYTHON}" -c 'import xattr' 2>/dev/null
+}
+
+python_compileall() {
+	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+	local d=${EPREFIX}$1 PYTHON=${EPREFIX}/usr/bin/${EPYTHON}
+	local d_image=${D}${d#/}
+	[[ -d ${d_image} ]] || die "directory does not exist: ${d_image}"
+	case "${EPYTHON}" in
+		python*)
+			"${PYTHON}" -m compileall -q -f -d "${d}" "${d_image}" || die
+			"${PYTHON}" -OO -m compileall -q -f -d "${d}" "${d_image}" || die
+			;;
+		pypy*)
+			"${PYTHON}" -m compileall -q -f -d "${d}" "${d_image}" || die
+			;;
+		*)
+			die "Unrecognized EPYTHON value: ${EPYTHON}"
+	esac
 }
 
 pkg_setup() {
@@ -144,6 +164,9 @@ pkg_setup() {
 		python_set_active_version 2
 	elif use pypy2_0; then
 		python_set_active_version 2.7-pypy-2.0
+	else
+		# Used by python_compileall and current_python_has_xattr
+		EPYTHON=python
 	fi
 }
 
@@ -265,7 +288,7 @@ src_install() {
 	# (this used to be done with PYTHONPATH setting in /etc/env.d).
 	# For each of PYTHON_TARGETS, install a tree of *.py symlinks in
 	# site-packages, and compile with the corresponding interpreter.
-	local impl files mod_dir dest_mod_dir python relative_path files x
+	local impl files mod_dir dest_mod_dir python relative_path x
 	for impl in "${PYTHON_COMPAT[@]}" ; do
 		use "python_targets_${impl}" || continue
 		while read -r mod_dir ; do
@@ -287,22 +310,24 @@ src_install() {
 				dosym "${relative_path}/${x}" \
 					"${dest_mod_dir}/${x}" || die
 			done
-		done < <(cd "${S}"/pym || die ; find * -type d ! -path "portage/tests*")
-		dest_mod_dir=/usr/$(get_libdir)/${impl/_/.}/site-packages
+		done < <(cd "${ED}"/usr/lib/portage/pym || die ; find * -type d ! -path "portage/tests*")
 		case "${impl}" in
 			python*)
 				python=${impl/_/.}
-				python=${EPREFIX}/usr/bin/${python}
-				"${python}" -m compileall -q -f -d "${EPREFIX}${dest_mod_dir}" "${ED}${dest_mod_dir#/}" || die
-				"${python}" -OO -m compileall -q -f -d "${EPREFIX}${dest_mod_dir}" "${ED}${dest_mod_dir#/}" || die
 				;;
 			pypy*)
 				python=${impl/_/.}
-				python=${EPREFIX}/usr/bin/${python/pypy/pypy-c}
-				"${python}" -m compileall -q -f -d "${EPREFIX}${dest_mod_dir}" "${ED}${dest_mod_dir#/}" || die
+				python=${python/pypy/pypy-c}
 				;;
+			*)
+				die "Unrecognized python target: ${impl}"
 		esac
+		EPYTHON=${python} python_compileall /usr/$(get_libdir)/${impl/_/.}/site-packages
 	done
+
+	# Compile /usr/lib/portage/pym with the active interpreter, since portage
+	# internal commands force this directory to the beginning of sys.path.
+	python_compileall /usr/lib/portage/pym
 }
 
 pkg_preinst() {
