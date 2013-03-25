@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.98 2013/01/06 18:53:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.99 2013/03/25 20:17:24 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> MailTools-2.120.0.ebuild:
+  Stable for amd64, wrt bug #457312
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -MailTools-2.90.0.ebuild:
   Cleanup

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/caps-plugins
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.32 2012/11/27 00:04:49 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.33 2013/03/25 20:21:25 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> caps-plugins-0.4.5-r1.ebuild:
+  Stable for amd64, wrt bug #457382
 
 *caps-plugins-0.4.5-r1 (27 Nov 2012)
 
@@ -139,4 +142,3 @@
   05 Mar 2004; <torbenh@gentoo.org> caps-plugins-0.1.10.ebuild,
   caps-plugins-0.1.5.ebuild, metadata.xml:
   Initial Import.
-

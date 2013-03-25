@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/thread
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.19 2013/01/09 21:28:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.20 2013/03/25 20:19:49 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> thread-2.7.0.ebuild:
+  Stable for amd64, wrt bug #457340
 
 *thread-2.7.0 (09 Jan 2013)
 
@@ -78,4 +81,3 @@
   02 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +thread-2.6.1.ebuild:
   initial ebuild. Bug 97357.
-

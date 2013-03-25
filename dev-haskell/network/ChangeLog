@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.73 2013/02/09 19:11:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.74 2013/03/25 20:15:10 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> network-2.4.0.1.ebuild:
+  Stable for amd64, wrt bug #457280
 
 *network-2.4.1.0 (09 Feb 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/json
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.9 2012/12/26 07:50:42 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.10 2013/03/25 20:24:41 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> json-0.7.ebuild:
+  Stable for amd64, wrt bug #456498
 
   26 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> json-0.4.3.ebuild,
   json-0.4.4.ebuild, json-0.5.ebuild, json-0.7.ebuild:

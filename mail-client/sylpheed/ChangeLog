@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.321 2012/12/03 12:25:35 hattya Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.322 2013/03/25 20:20:35 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> sylpheed-3.3.0.ebuild:
+  Stable for amd64, wrt bug #457358
 
   03 Dec 2012; Akinori Hattori <hattya@gentoo.org> -files/sylpheed-r3033.diff,
   -sylpheed-3.1.2.ebuild, -sylpheed-3.1.4.ebuild:

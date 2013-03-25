@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.7-r3.ebuild,v 1.1 2012/11/17 03:30:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.7-r3.ebuild,v 1.2 2013/03/25 20:27:32 ago Exp $
 
 EAPI=4
 JAVA_PKG_IUSE="doc"
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/xmlgraphics/${PN}/${PN}-src-${PV}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="1.7"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc python tcl"
 
 CDEPEND="dev-java/xalan:0

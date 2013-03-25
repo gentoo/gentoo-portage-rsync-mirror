@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/mod_limitipconn-0.24.ebuild,v 1.2 2012/12/09 16:57:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/mod_limitipconn-0.24.ebuild,v 1.3 2013/03/25 20:23:02 ago Exp $
 
 inherit apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://dominia.org/djao/limit/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""

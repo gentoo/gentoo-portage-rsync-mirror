@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-3.2.0.3.ebuild,v 1.1 2012/11/18 07:21:36 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-3.2.0.3.ebuild,v 1.2 2013/03/25 20:25:42 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="3/${PV}"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/deepseq-1.1:=[profile?]

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hslogger
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.16 2012/12/07 10:35:20 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.17 2013/03/25 20:24:15 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> hslogger-1.2.1.ebuild:
+  Stable for amd64, wrt bug #456494
 
   07 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> hslogger-1.1.5.ebuild:
   Get rid of 'dev-haskell/time' depend as it's a ghc's core library.

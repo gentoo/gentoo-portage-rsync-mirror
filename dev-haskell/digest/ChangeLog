@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/digest
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.23 2012/11/18 12:01:03 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.24 2013/03/25 20:23:51 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> digest-0.0.1.2.ebuild:
+  Stable for amd64, wrt bug #456490
 
 *digest-0.0.1.2 (18 Nov 2012)
 

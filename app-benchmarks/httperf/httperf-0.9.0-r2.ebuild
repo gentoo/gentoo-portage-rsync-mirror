@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.9.0-r2.ebuild,v 1.1 2012/10/30 16:10:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.9.0-r2.ebuild,v 1.2 2013/03/25 20:22:31 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://httperf.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~mips ~x64-macos ~x86"
+KEYWORDS="amd64 ~mips ~x86 ~amd64-linux ~x64-macos"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl"

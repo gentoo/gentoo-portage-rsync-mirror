@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.2.0.ebuild,v 1.1 2012/10/07 11:23:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.2.0.ebuild,v 1.2 2013/03/25 20:21:16 ago Exp $
 
 EAPI=4
 inherit autotools eutils unpacker
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/libs/ieee1394/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples"
 
 RDEPEND=">=sys-libs/libraw1394-1.2.1"
