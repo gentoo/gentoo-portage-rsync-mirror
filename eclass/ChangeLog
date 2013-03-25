@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.753 2013/03/24 19:08:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.754 2013/03/25 13:08:39 anarchy Exp $
+
+  25 Mar 2013; Jory A. Pratt <anarchy@gentoo.org> mozcoreconf-2.eclass:
+  Fix a typo for svg support in older versions, bug #462994
 
   24 Mar 2013; Jory A. Pratt <anarchy@gentoo.org> mozconfig-3.eclass mozcoreconf-2.eclass:
   Cleanup of obsolete options, address bug #446662,460592

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.28 2013/03/24 19:08:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.29 2013/03/25 13:08:39 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -209,7 +209,7 @@ mozconfig_init() {
 		--enable-pango \
 		--enable-system-cairo
 		if ! $(mozversion_is_new_enough) ; then
-			mozconfig annotate system-libs --enable-svg
+			mozconfig_annotate system-libs --enable-svg
 		fi
 
 	mozconfig_annotate disable_update_strip \

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4-r2.ebuild,v 1.3 2013/03/14 13:24:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4-r2.ebuild,v 1.4 2013/03/25 13:23:11 pinkbyte Exp $
 
 EAPI="5"
 
@@ -29,6 +29,9 @@ src_prepare() {
 	PPPD_VER=${PPPD_VER%%[_-]*} # main version without beta/pre/patch/revision
 	sed -i -e "s:\\(#define[ \\t]*VERSION[ \\t]*\\)\".*\":\\1\"${PPPD_VER}\":" plugins/patchlevel.h || die
 	sed -i -e "/^LDFLAGS/{s:=:+=:}" plugins/Makefile || die
+
+	# respect compiler, bug #461722
+	tc-export CC
 
 	eautoreconf
 }

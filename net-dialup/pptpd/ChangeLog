@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/pptpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.47 2013/03/14 13:28:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.48 2013/03/25 13:23:11 pinkbyte Exp $
+
+  25 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> pptpd-1.3.4-r2.ebuild,
+  files/pptpd-1.3.4-gentoo.patch:
+  Respect compiler during plugins build, wrt bug #461722. Thanks to Agostino
+  Sarubbo for discovering this issue
 
   14 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> -pptpd-1.3.4.ebuild,
   -pptpd-1.3.4-r1.ebuild, -files/pptpd-init, -files/pptpd-init-r1:
