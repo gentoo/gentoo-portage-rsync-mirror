@@ -3,9 +3,8 @@
 <pkgmetadata>
 <herd>benchmarks</herd>
 <maintainer>
-  <email>hwoarang@gentoo.org</email>
-    <name>Markos Chandras</name>
-    <description>Maintainer</description>
+	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
 </maintainer>
 <use>
 	<flag name="open-posix">Build and install the POSIX testsuite</flag>

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/basenji
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/ChangeLog,v 1.13 2013/03/25 20:12:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/ChangeLog,v 1.14 2013/03/25 20:33:42 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> basenji-1.0.0.ebuild:
+  Stable for x86, wrt bug #457242
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> basenji-1.0.0.ebuild:
   Stable for amd64, wrt bug #457242

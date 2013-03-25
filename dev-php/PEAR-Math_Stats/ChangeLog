@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Math_Stats
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.20 2007/12/06 00:38:21 jokey Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.21 2013/03/25 21:01:07 mabi Exp $
+
+*PEAR-Math_Stats-0.9.1 (25 Mar 2013)
+
+  25 Mar 2013; Matti Bickel <mabi@gentoo.org> +PEAR-Math_Stats-0.9.1.ebuild:
+  version bump
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   PEAR-Math_Stats-0.9.0_beta3-r1.ebuild:
@@ -88,4 +93,3 @@
   07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Math_Stats-0.9.0_beta3.ebuild:
   Initial ebuild, closes bug 103609.
-

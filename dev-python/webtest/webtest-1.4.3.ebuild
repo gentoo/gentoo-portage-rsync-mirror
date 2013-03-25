@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3.ebuild,v 1.2 2012/12/08 08:30:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3.ebuild,v 1.4 2013/03/25 20:51:58 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6 3:3.2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-python/webob-0.9.2"

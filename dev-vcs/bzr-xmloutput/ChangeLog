@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-xmloutput
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.16 2012/11/29 16:09:15 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.17 2013/03/25 20:52:41 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> bzr-xmloutput-0.8.8-r1.ebuild:
+  Stable for x86, wrt bug #456632
 
   29 Nov 2012; <ago@gentoo.org> bzr-xmloutput-0.8.8-r1.ebuild:
   Stable for amd64, wrt bug #418969
@@ -71,4 +74,3 @@
   30 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   +bzr-xmloutput-0.8.6.ebuild, +metadata.xml:
   initial commit, ebuild taken from Mark Lee's Bazaar overlay
-

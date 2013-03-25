@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/Mail-Sender-0.8.22.ebuild,v 1.3 2013/03/25 20:17:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/Mail-Sender-0.8.22.ebuild,v 1.4 2013/03/25 20:37:19 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Module for sending mails with attachments through an SMTP server"
 
 LICENSE="Mail-Sender"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/perl-MIME-Base64"

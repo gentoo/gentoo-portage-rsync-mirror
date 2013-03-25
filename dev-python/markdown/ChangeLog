@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.31 2013/03/25 20:18:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.32 2013/03/25 20:38:50 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> markdown-2.2.1-r1.ebuild:
+  Stable for x86, wrt bug #457328
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> markdown-2.2.1-r1.ebuild:
   Stable for amd64, wrt bug #457328
