@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/aewan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aewan/ChangeLog,v 1.4 2013/03/24 16:26:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aewan/ChangeLog,v 1.5 2013/03/25 19:34:04 hwoarang Exp $
+
+*aewan-1.0.01-r1 (25 Mar 2013)
+
+  25 Mar 2013; Markos Chandras <hwoarang@gentoo.org> +aewan-1.0.01-r1.ebuild:
+  Revbump for EAPI5. Thanks to Mikle Zlogene Kolyada. Bug #463214
 
   24 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Package will be maintained by Mikle Kolyada, through proxy maintainers

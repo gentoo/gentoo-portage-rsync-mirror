@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/openstack-nose-plugin/openstack-nose-plugin-0.11.ebuild,v 1.2 2013/02/21 08:23:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openstack-nose-plugin/openstack-nose-plugin-0.11-r1.ebuild,v 1.1 2013/03/25 19:31:45 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,9 +19,6 @@ IUSE=""
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
+RDEPEND="dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/colorama[${PYTHON_USEDEP}]
-		<=dev-python/prettytable-0.7
-		>=dev-python/requests-1.0[${PYTHON_USEDEP}]
-		dev-python/simplejson
 		dev-python/termcolor[${PYTHON_USEDEP}]"
