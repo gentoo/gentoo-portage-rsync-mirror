@@ -1,0 +1,31 @@
+From b5a8845c515fa6f6b40d58748f05b626d2356f17 Mon Sep 17 00:00:00 2001
+From: Jekyll Wu <adaptee@gmail.com>
+Date: Mon, 25 Mar 2013 11:53:35 +0800
+Subject: [PATCH] Connect to the new signal, instead of the non-existent one
+
+I made a stupid mistake in the final revised patch for review 108411,
+which makes drkonqi never realize the attachment has been successfully
+uploaded to the bugzilla.
+
+BUG:  316958
+FIXED-IN: 4.10.2
+---
+ drkonqi/reportinterface.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drkonqi/reportinterface.cpp b/drkonqi/reportinterface.cpp
+index f911b77..b29652c 100644
+--- a/drkonqi/reportinterface.cpp
++++ b/drkonqi/reportinterface.cpp
+@@ -345,7 +345,7 @@ void ReportInterface::sendUsingDefaultProduct() const
+ void ReportInterface::addedToCC()
+ {
+     //The user was added to the CC list, proceed with the attachment
+-    connect(m_bugzillaManager, SIGNAL(attachToReportSent(int,int)), this, SLOT(attachSent(int,int)));
++    connect(m_bugzillaManager, SIGNAL(attachToReportSent(int)), this, SLOT(attachSent(int)));
+     connect(m_bugzillaManager, SIGNAL(attachToReportError(QString,QString)),
+             this, SIGNAL(sendReportError(QString,QString)));
+     BugReport report = newBugReportTemplate();
+-- 
+1.8.1.5
+

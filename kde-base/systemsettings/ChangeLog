@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.185 2013/03/06 13:41:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.186 2013/03/25 22:11:18 dilfridge Exp $
+
+*systemsettings-4.10.1-r1 (25 Mar 2013)
+
+  25 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +systemsettings-4.10.1-r1.ebuild,
+  +files/systemsettings-4.10.1-noplasmalock.patch:
+  Disable the widget lock option in the systemsettings gui, as it poses a
+  security risk, bug 462152
 
 *systemsettings-4.10.1 (06 Mar 2013)
 
