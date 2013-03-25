@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.1.ebuild,v 1.6 2013/03/25 09:19:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.1 2013/03/25 09:19:23 xmw Exp $
 
 EAPI=4
 
@@ -8,11 +8,11 @@ inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-SRC_URI="http://${PN}.googlecode.com/files/${P/_rc/-rc}-source.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${P}-source.zip"
 
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="X vanilla"
 
 RDEPEND="media-libs/freetype:2
@@ -24,10 +24,13 @@ RDEPEND="media-libs/freetype:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-S=${WORKDIR}/${P/_rc/-rc}-source
+S=${WORKDIR}/${P}-source
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1_rc1-buildsystem.patch
+	rm -rf thirdparty || die
+
+	epatch "${FILESDIR}"/${PN}-1.1_p20121127-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-1.2-mubusy_rename_fix.patch
 
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-1.1_rc1-zoom-2.patch
@@ -57,5 +60,5 @@ src_install() {
 		domenu debian/mupdf.desktop
 		doicon debian/mupdf.xpm
 	fi
-	dodoc README doc/{example.c,overview.txt}
+	dodoc CHANGES README doc/{example.c,overview.txt}
 }
