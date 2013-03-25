@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.59 2013/03/25 09:50:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.60 2013/03/25 16:44:44 xmw Exp $
+
+  25 Mar 2013; Michael Weber <xmw@gentoo.org>
+  files/mupdf-1.1_p20121127-desktop-integration.patch:
+  Fix redundand and obsolete .dekstop keys.
 
   25 Mar 2013; Michael Weber <xmw@gentoo.org> -mupdf-1.1_p20120816.ebuild,
   mupdf-1.1_p20121127.ebuild,

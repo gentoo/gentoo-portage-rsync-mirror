@@ -1,6 +1,15 @@
 --- mupdf-1.1/debian/mupdf.desktop
 +++ mupdf-1.1/debian/mupdf.desktop
-@@ -10,6 +10,8 @@
+@@ -1,8 +1,6 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=MuPDF
+ GenericName=PDF file viewer
+-Comment=PDF file viewer
+ Exec=mupdf %f
+ TryExec=mupdf
+ Icon=mupdf
+@@ -10,6 +8,8 @@
  Type=Application
  MimeType=application/pdf;application/x-pdf;
  Categories=Viewer;Graphics;
