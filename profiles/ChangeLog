@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7649 2013/03/25 13:09:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7650 2013/03/25 14:51:43 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Mar 2013; Michał Górny <mgorny@gentoo.org>
+  targets/desktop/package.use:
+  Request the same set on flags on sys-apps/systemd as required by
+  virtual/udev.
 
   25 Mar 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask =x11-misc/xlockmore-5.42 (bug #463180).
