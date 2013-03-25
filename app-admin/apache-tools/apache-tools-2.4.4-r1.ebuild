@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.4.ebuild,v 1.6 2013/03/05 09:52:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.4-r1.ebuild,v 1.1 2013/03/25 03:21:12 patrick Exp $
 
 EAPI="3"
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils multilib
 
 DESCRIPTION="Useful Apache tools - htdigest, htpasswd, ab, htdbm"
 HOMEPAGE="http://httpd.apache.org/"
@@ -36,6 +36,7 @@ src_configure() {
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too
 	econf \
+		--libexecdir=/usr/$(get_libdir)/apache2/modules \
 		--sbindir="${EPREFIX}"/usr/sbin \
 		--with-perl="${EPREFIX}"/usr/bin/perl \
 		--with-expat="${EPREFIX}"/usr \
