@@ -8,4 +8,4 @@ LICENSE=LGPL-2.1
 RDEPEND=app-text/libwpd:0.9 app-text/libwpg:0.2 dev-libs/libxml2 sys-libs/zlib
 SLOT=0
 _eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	git-2	e92e09651292b1bef5656592364550f7	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=3d819f8079a8b8f16db1b0fc6b5e3179
+_md5_=c655e304f529765f7c8ed706c742c5ee

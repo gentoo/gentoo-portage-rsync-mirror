@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.8 2013/03/23 13:26:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.9 2013/03/25 08:32:58 pesa Exp $
+
+*qtcore-4.8.4-r5 (25 Mar 2013)
+
+  25 Mar 2013; Davide Pesavento <pesa@gentoo.org> +qtcore-4.8.4-r5.ebuild:
+  Backport upstream patch to fix the default numbering system for Slovak and
+  some Indic locales, spotted by Milan Freml.
 
   23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> qtcore-4.8.4-r4.ebuild:
   Stable for alpha, wrt bug #462636
