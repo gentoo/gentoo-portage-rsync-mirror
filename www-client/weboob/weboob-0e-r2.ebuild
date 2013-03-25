@@ -1,6 +1,6 @@
 # Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/weboob-0e-r1.ebuild,v 1.1 2013/03/25 02:54:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/weboob-0e-r2.ebuild,v 1.1 2013/03/25 03:42:27 patrick Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.5"
@@ -31,7 +31,7 @@ LICENSE="AGPL-3"
 SLOT="0"
 IUSE="X +secure-updates fast-libs"
 
-DEPEND="X? ( >=dev-python/PyQt4-4.9.4-r1[X] dev-python/pyxdg )"
+DEPEND="X? ( >=dev-python/PyQt4-4.9.4-r1[X,phonon] dev-python/pyxdg )"
 RDEPEND="${DEPEND}
 	dev-python/prettytable
 	dev-python/html2text

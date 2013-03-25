@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.65 2013/03/02 22:55:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.66 2013/03/25 03:34:39 patrick Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ SERVER_RDEPEND="
 		app-crypt/qca:2
 		app-crypt/qca-ossl
 	)
-	!postgres? ( >=dev-qt/qtsql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite[threadsafe,-secure-delete] )
+	!postgres? ( >=dev-qt/qtsql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
 	postgres? ( >=dev-qt/qtsql-${QT_MINIMAL}:4[postgres] )
 	syslog? ( virtual/logger )
 "
