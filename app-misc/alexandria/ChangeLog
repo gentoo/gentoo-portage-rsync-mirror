@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.57 2013/03/17 17:33:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.58 2013/03/25 15:35:08 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> alexandria-0.6.9.ebuild:
+  Stable for amd64, wrt bug #458984
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

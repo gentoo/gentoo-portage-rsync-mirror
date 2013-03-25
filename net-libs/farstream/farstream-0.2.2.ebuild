@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.2.2.ebuild,v 1.1 2012/12/08 01:23:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.2.2.ebuild,v 1.2 2013/03/25 15:57:06 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/Farstream"
 SRC_URI="http://freedesktop.org/software/farstream/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1+"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+introspection msn test upnp"
 
 SLOT="0.2"

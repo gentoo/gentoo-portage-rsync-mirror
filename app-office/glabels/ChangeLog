@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.65 2012/09/22 09:56:44 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.66 2013/03/25 15:35:39 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> glabels-3.0.1.ebuild:
+  Stable for amd64, wrt bug #458984
 
 *glabels-3.0.1 (22 Sep 2012)
 

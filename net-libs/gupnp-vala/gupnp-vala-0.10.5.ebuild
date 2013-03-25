@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.10.5.ebuild,v 1.1 2012/10/19 19:03:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.10.5.ebuild,v 1.2 2013/03/25 15:57:17 ago Exp $
 
 EAPI="4"
 VALA_MIN_API_VERSION="0.14"
@@ -13,7 +13,7 @@ HOMEPAGE="http://gupnp.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="$(vala_depend)

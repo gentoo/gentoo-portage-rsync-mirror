@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libreport
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.16 2013/03/05 23:18:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.17 2013/03/25 15:42:20 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libreport-2.0.13.ebuild:
+  Stable for amd64, wrt bug #458984
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -files/libreport-2.0.7-gentoo.patch,

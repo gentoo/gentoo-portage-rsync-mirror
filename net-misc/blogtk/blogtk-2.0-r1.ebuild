@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0-r1.ebuild,v 1.1 2013/01/17 15:48:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0-r1.ebuild,v 1.2 2013/03/25 15:58:13 ago Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -13,7 +13,7 @@ SRC_URI="http://launchpad.net/${PN}/${PV}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RESTRICT="mirror"

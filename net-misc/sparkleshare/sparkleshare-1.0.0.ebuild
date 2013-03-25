@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sparkleshare/sparkleshare-1.0.0.ebuild,v 1.1 2012/12/24 09:29:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sparkleshare/sparkleshare-1.0.0.ebuild,v 1.2 2013/03/25 15:58:24 ago Exp $
 
 EAPI=5
 GCONF_DEBUG="no" # --enable-debug does not do anything
@@ -11,7 +11,7 @@ DESCRIPTION="Git-based collaboration and file sharing tool"
 HOMEPAGE="http://www.sparkleshare.org"
 SRC_URI="http://github.com/downloads/hbons/SparkleShare/${PN}-linux-${PV}.tar.gz"
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE="" # ayatana
 

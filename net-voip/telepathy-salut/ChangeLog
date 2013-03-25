@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-salut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.49 2013/03/24 19:09:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.50 2013/03/25 15:59:42 ago Exp $
+
+  25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> telepathy-salut-0.8.1.ebuild:
+  Stable for amd64, wrt bug #458984
 
   24 Mar 2013; Pacho Ramos <pacho@gentoo.org> telepathy-salut-0.8.1.ebuild:
   Use python-any-r1.eclass properly: pkg_setup is exported by eclass and it
