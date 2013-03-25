@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.11.ebuild,v 1.8 2013/01/16 19:02:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.11.ebuild,v 1.9 2013/03/25 14:07:25 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -37,7 +37,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 -sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha ~hppa ia64 -sparc"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="bindist +ipc +minimal pgo selinux system-sqlite +webm"
@@ -57,7 +57,10 @@ RDEPEND="
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.5.9[apng]
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
+	system-sqlite? ( || (
+		>=dev-db/sqlite-3.7.16:3[secure-delete,debug=]
+		<dev-db/sqlite-3.7.16:3[fts3,secure-delete,threadsafe,unlock-notify,debug=]
+	) )
 	webm? ( >=media-libs/libvpx-1.0.0
 		media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"

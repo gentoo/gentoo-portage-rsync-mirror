@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.225 2013/03/24 19:59:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.226 2013/03/25 14:07:25 polynomial-c Exp $
+
+  25 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> firefox-10.0.11.ebuild,
+  -firefox-17.0.2.ebuild, -firefox-17.0.3.ebuild, firefox-17.0.4.ebuild,
+  -firefox-18.0.1.ebuild, firefox-19.0.2.ebuild:
+  Adjusted sqlite dependencies as requested in bug #462402. Removed old
+  versions. Dropped KEYWORDS from ancient ff-10.0.11 version.
 
   24 Mar 2013; Jory A. Pratt <anarchy@gentoo.org> firefox-17.0.4.ebuild:
   Fix ld.gold linker issues in elfhack, bug #460450
