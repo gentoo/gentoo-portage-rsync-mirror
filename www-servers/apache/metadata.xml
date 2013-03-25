@@ -30,5 +30,6 @@
 		<flag name='apache2_modules_socache_shmcb'>A shared object cache provider using a high-performance cyclic buffer inside a shared memory segment.</flag>
 		<flag name='apache2_modules_unixd'>Basic (required) security for Unix-family platforms.</flag>
 		<flag name='apache2_modules_proxy_fcgi'>FCGI support module for mod_proxy.</flag>
+		<flag name='apache2_modules_ratelimit'>Ratelimit module for transfer rate management</flag>
 	</use>
 </pkgmetadata>

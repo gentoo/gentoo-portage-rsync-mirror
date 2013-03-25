@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.225 2013/03/17 15:34:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.226 2013/03/25 06:21:43 patrick Exp $
+
+*apache-2.4.4-r2 (25 Mar 2013)
+
+  25 Mar 2013; Patrick Lauer <patrick@gentoo.org> +apache-2.4.4-r2.ebuild,
+  -apache-2.4.4-r1.ebuild, metadata.xml:
+  Enable mod_ratelimit #460410
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
