@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-10.0_pre577.ebuild,v 1.1 2013/03/15 08:23:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-10.0_pre607.ebuild,v 1.1 2013/03/26 05:42:47 radhermit Exp $
 
 EAPI=5
 
@@ -46,7 +46,6 @@ src_prepare() {
 
 	sed -i "/^dist_doc_DATA/d" Makefile.am || die
 
-	epatch "${FILESDIR}"/${PN}-0.7.0-underlinking.patch
 	epatch "${FILESDIR}"/${PN}-9.0_pre477-buffer-overflows.patch
 
 	eautoreconf
