@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14594 2013/03/25 13:09:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14595 2013/03/26 15:41:17 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sebastien Fabbro <bicatali@gentoo.org> (26 Mar 2013)
+# Now included in sci-mathematics/mathgl
+# Removal in 30 days.
+sci-visualization/udav
+=sci-libs/mathgl-1*
 
 # Jeroen Roovers <jer@gentoo.org> (25 Mar 2013)
 # Unlocking fails (bug #463180)

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7652 2013/03/25 22:10:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7653 2013/03/26 15:41:17 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Mar 2013; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masked sci-visualization/udav for removal
 
   25 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
   hardened/linux/uclibc/mips/package.mask:

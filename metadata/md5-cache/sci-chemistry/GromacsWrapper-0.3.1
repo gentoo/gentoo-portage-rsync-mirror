@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-python/matplotlib-0.91.3 >=dev-python/RecSQL-0.3 >=sci-libs/scipy-0.9 python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_5(-)?,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_5(-),-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
-DESCRIPTION=GromacsWrapper - a python framework for Gromacs
+DEPEND=>=dev-python/matplotlib-0.91.3[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=dev-python/RecSQL-0.3[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=sci-libs/scipy-0.9[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+DESCRIPTION=Python framework for Gromacs
 EAPI=5
 HOMEPAGE=http://orbeckst.github.com/GromacsWrapper/
-IUSE=python_targets_python2_5 python_targets_python2_6 python_targets_python2_7
+IUSE=python_targets_python2_6 python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3 LGPL-3
-RDEPEND=>=dev-python/matplotlib-0.91.3 >=dev-python/RecSQL-0.3 >=sci-libs/scipy-0.9 python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_5(-)?,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_5(-),-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+RDEPEND=>=dev-python/matplotlib-0.91.3[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=dev-python/RecSQL-0.3[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=sci-libs/scipy-0.9[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 SLOT=0
 SRC_URI=https://github.com/orbeckst/GromacsWrapper/archive/release-0.3.1.tar.gz -> GromacsWrapper-0.3.1.tar.gz
 _eclasses_=distutils-r1	ca3b0f2e4faf3dc61cddde93db59a47e	eutils	50d18ebffcbd8bd63614b89c2d664d0d	multibuild	09ecc885e84a763742480174a993ee70	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	ec14ac1ad9c7920d5f5c20950dda44bb	python-utils-r1	c5012e18184f3e0473a1f1a7b9662ab0	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
-_md5_=5b3cbe045583ce905ebddf41d78dd26f
+_md5_=9eebb786fb84180d4ad8abbf0d1be747

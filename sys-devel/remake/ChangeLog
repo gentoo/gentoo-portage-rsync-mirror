@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/remake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.12 2012/10/23 21:39:08 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.14 2013/03/26 15:54:22 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> remake-3.82.0.9.ebuild:
+  Stable for x86, wrt bug #457480
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> remake-3.82.0.9.ebuild:
+  Stable for amd64, wrt bug #457480
 
 *remake-3.82.0.9 (23 Oct 2012)
 

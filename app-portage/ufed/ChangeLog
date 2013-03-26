@@ -1,6 +1,23 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.95 2013/03/17 16:04:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.97 2013/03/26 15:56:45 fuzzyray Exp $
+
+*ufed-0.90_rc1 (26 Mar 2013)
+
+  26 Mar 2013; Paul Varner <fuzzyray@gentoo.org> +ufed-0.90_rc1.ebuild:
+  Version bump for first release candidate version. See
+  http://git.overlays.gentoo.org/gitweb/?p=proj/ufed.git;a=summary for
+  detailed changes in this release.
+
+  26 Mar 2013; Paul Varner <fuzzyray@gentoo.org> -ufed-0.40-r6.ebuild,
+  -ufed-0.40-r10.ebuild, -ufed-0.40-r11.ebuild, -ufed-0.40.1.ebuild,
+  -ufed-0.40.1-r1.ebuild, -files/ufed-0.40.1-make.globals-path.patch,
+  -ufed-0.40.2.ebuild, -files/ufed-0.40-comments.patch,
+  -files/ufed-0.40-masked.patch, -files/ufed-0.40-multiple-inheritance.patch,
+  -files/ufed-0.40-noremove.patch, -files/ufed-0.40-packageusemask.patch,
+  -files/ufed-0.40-source.patch, -files/ufed-0.40-termsize.patch,
+  -files/ufed-0.40-termsize-2.patch, -files/ufed-0.40-useorder.patch:
+  Remove old unused versions.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
