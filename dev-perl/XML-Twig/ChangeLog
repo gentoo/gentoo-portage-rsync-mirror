@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.96 2013/03/25 20:49:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.97 2013/03/26 10:12:20 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> XML-Twig-3.420.0.ebuild:
+  Stable for ppc, wrt bug #456588
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> XML-Twig-3.420.0.ebuild:
   Stable for x86, wrt bug #456588

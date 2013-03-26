@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclreadline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.20 2013/03/25 20:52:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.21 2013/03/26 10:26:27 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> tclreadline-2.1.0-r2.ebuild:
+  Stable for ppc, wrt bug #456622
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> tclreadline-2.1.0-r2.ebuild:
   Stable for x86, wrt bug #456622

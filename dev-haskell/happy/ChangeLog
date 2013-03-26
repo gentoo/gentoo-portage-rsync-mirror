@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.67 2013/03/25 20:43:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.68 2013/03/26 10:26:05 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> happy-1.18.10.ebuild:
+  Stable for ppc, wrt bug #456492
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> happy-1.18.10.ebuild:
   Stable for x86, wrt bug #456492
