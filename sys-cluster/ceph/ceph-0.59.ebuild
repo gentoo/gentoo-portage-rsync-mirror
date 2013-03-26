@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.59.ebuild,v 1.1 2013/03/26 04:49:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.59.ebuild,v 1.2 2013/03/26 08:24:17 patrick Exp $
 
 EAPI=5
 
@@ -30,6 +30,7 @@ CDEPEND="
 	dev-libs/fcgi
 	dev-libs/libaio
 	dev-libs/libedit
+	dev-libs/leveldb
 	dev-libs/crypto++
 	sys-apps/keyutils
 	fuse? ( sys-fs/fuse )
@@ -61,7 +62,7 @@ src_prepare() {
 	sed -e '/testsnaps/d' -i src/Makefile.am || die
 	sed -e "/bin=/ s:lib:$(get_libdir):" "${FILESDIR}"/${PN}.initd \
 		> "${T}"/${PN}.initd || die
-	sed -i -e '/AM_INIT_AUTOMAKE/s:-Werror ::' src/leveldb/configure.ac || die #423755
+	rm -rf src/leveldb
 	eautoreconf
 }
 

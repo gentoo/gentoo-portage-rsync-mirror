@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.51 2013/03/24 14:17:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.52 2013/03/26 08:14:18 ssuominen Exp $
 
 EAPI=4
+
+VIRTUAL_MODUTILS=1
 
 inherit autotools eutils libtool multilib linux-mod
 

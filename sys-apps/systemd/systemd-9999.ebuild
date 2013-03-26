@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.25 2013/03/24 22:12:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.26 2013/03/26 08:02:07 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit git-2
 #endif
 
 PYTHON_COMPAT=( python2_7 )
-inherit autotools-utils linux-info multilib pam python-single-r1 systemd user
+inherit autotools-utils linux-info multilib pam python-single-r1 systemd udev user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -130,11 +130,21 @@ src_configure() {
 		$(use_enable xattr)
 	)
 
+	# Keep using the one where the rules were installed.
+	MY_UDEVDIR=$(udev_get_udevdir)
+
 	autotools-utils_src_configure
 }
 
+src_compile() {
+	autotools-utils_src_compile \
+		udevlibexecdir="${MY_UDEVDIR}"
+}
+
 src_install() {
-	autotools-utils_src_install -j1 dist_udevhwdb_DATA=
+	autotools-utils_src_install -j1 \
+		udevlibexecdir="${MY_UDEVDIR}" \
+		dist_udevhwdb_DATA=
 
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
