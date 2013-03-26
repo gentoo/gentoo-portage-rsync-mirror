@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-1.1-r3.ebuild,v 1.1 2013/02/11 12:41:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/libx86-1.1-r3.ebuild,v 1.3 2013/03/26 11:44:11 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.codon.org.uk/~mjg59/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 src_prepare() {

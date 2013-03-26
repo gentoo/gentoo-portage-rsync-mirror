@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.7-r1.ebuild,v 1.1 2013/02/18 19:14:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.7-r1.ebuild,v 1.3 2013/03/26 11:45:12 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://easysw/mxml/${PV}/${MY_P}.tar.gz"
 
 LICENSE="Mini-XML"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="threads static-libs"
 
 DEPEND="virtual/pkgconfig"
