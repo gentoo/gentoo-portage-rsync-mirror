@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.10-r1.ebuild,v 1.2 2012/10/16 21:49:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.10-r1.ebuild,v 1.3 2013/03/26 14:54:47 floppym Exp $
 
 EAPI=4
 
-inherit eutils linux-info flag-o-matic
+inherit eutils linux-info flag-o-matic udev
 
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 HOMEPAGE="http://www.apcupsd.org/"
@@ -96,8 +96,7 @@ src_install() {
 
 	# replace it with our udev rules if we're in Linux
 	if use kernel_linux; then
-		insinto /lib/udev/rules.d
-		newins "${FILESDIR}"/apcupsd-udev.rules 60-${PN}.rules
+		udev_newrules "${FILESDIR}"/apcupsd-udev.rules 60-${PN}.rules
 	fi
 
 	# Without this it'll crash at startup. When merging in ROOT= this

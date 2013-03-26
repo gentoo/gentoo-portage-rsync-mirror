@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.81 2012/10/16 21:49:04 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.82 2013/03/26 14:54:47 floppym Exp $
+
+  26 Mar 2013; Mike Gilbert <floppym@gentoo.org> apcupsd-3.14.10-r1.ebuild:
+  Use udev.eclass for udev rules installation.
 
   16 Oct 2012; Markus Meier <maekke@gentoo.org> apcupsd-3.14.10-r1.ebuild:
   add ~arm, bug #433657
