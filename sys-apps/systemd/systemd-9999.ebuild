@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.26 2013/03/26 08:02:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.27 2013/03/26 16:24:26 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 IUSE="acl audit cryptsetup doc efi gcrypt gudev http
-	introspection +kmod lzma pam python qrcode selinux tcpd vanilla xattr"
+	introspection +kmod lzma pam python qrcode selinux static-libs
+	tcpd vanilla xattr"
 
 MINKV="2.6.39"
 
@@ -107,6 +108,9 @@ src_configure() {
 		--enable-split-usr
 		# no deps
 		--enable-keymap
+		# disable sysv compatibility
+		--with-sysvinit-path=
+		--with-sysvrcnd-path=
 		# just text files
 		--enable-polkit
 		# optional components/dependencies
@@ -131,7 +135,7 @@ src_configure() {
 	)
 
 	# Keep using the one where the rules were installed.
-	MY_UDEVDIR=$(udev_get_udevdir)
+	MY_UDEVDIR=$(get_udevdir)
 
 	autotools-utils_src_configure
 }

@@ -5,4 +5,4 @@ KEYWORDS=amd64 ~arm ppc sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gnu/macchanger/macchanger-1.5.0.tar.gz mirror://gentoo/OUI.list-20091029.gz
-_md5_=aef6dd8eb4b4a94cace79db994620586
+_md5_=8197821f900c19298f9411bad4ddb405

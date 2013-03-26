@@ -1,0 +1,7 @@
+diff -r -U1 mathgl-1.11.1.1.orig/configure.ac mathgl-1.11.1.1/configure.ac
+--- mathgl-1.11.1.1.orig/configure.ac	2011-03-22 02:13:29.000000000 +0600
++++ mathgl-1.11.1.1/configure.ac	2011-03-29 22:04:59.000000000 +0700
+@@ -364,2 +364,3 @@
+     OCTAVE_INCFLAGS="-I`$OCTAVE -p OCTINCLUDEDIR`"
++    OCTAVE_INCFLAGS=`echo ${OCTAVE_INCFLAGS} | sed -e 's|/octave$||'`
+     AC_MSG_RESULT([$OCTAVE_ARCH])

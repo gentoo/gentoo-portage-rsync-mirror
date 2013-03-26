@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.95 2013/03/26 08:02:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.96 2013/03/26 16:24:26 mgorny Exp $
+
+  26 Mar 2013; Michał Górny <mgorny@gentoo.org> systemd-198-r5.ebuild,
+  systemd-9999.ebuild:
+  Use get_udevdir rather than the deprecated one. Support installing static-libs
+  wrt bug #463250. Disable SysV compat wrt bug #463270.
 
   26 Mar 2013; Michał Górny <mgorny@gentoo.org> systemd-198-r5.ebuild,
   systemd-9999.ebuild:

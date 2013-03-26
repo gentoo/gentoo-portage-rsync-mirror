@@ -1,0 +1,206 @@
+--- mgl/mgl_eps.cpp.ORIG	2011-05-30 13:12:29.000000000 +0200
++++ mgl/mgl_eps.cpp	2012-02-29 11:26:55.651230100 +0100
+@@ -19,7 +19,7 @@
+  ***************************************************************************/
+ #include <stdlib.h>
+ #include <time.h>
+-#include <zlib.h>
++#include <zlib.h>
+ #include "mgl/mgl_eps.h"
+ #include "mgl/mgl_c.h"
+ #include "mgl/mgl_f.h"
+@@ -85,7 +85,7 @@
+ 	a.x[0]=p1[0];	a.y[0]=p1[1];	a.x[1]=p2[0];	a.y[1]=p2[1];
+ 	a.zz[0]=p1[2];	a.zz[1]=p2[2];
+ 	a.c[0]=(c1[0]+c2[0])/2;	a.c[1]=(c1[1]+c2[1])/2;	a.c[2]=(c1[2]+c2[2])/2;
+-//	a.c[0]=c1[0];	a.c[1]=c1[1];	a.c[2]=c1[2];
++//	a.c[0]=c1[0];	a.c[1]=c1[1];	a.c[2]=c1[2];
+ 	a.style=all? 0xffff:PDef;	a.s = pPos;
+ 	add_prim(a);
+ 	pPos = fmod(pPos+hypot(p2[0]-p1[0], p2[1]-p1[1])/pw/1.5, 16);
+@@ -197,7 +197,7 @@
+ {
+ 	mglPrim a(4);
+ 	a.s = fscl/PlotFactor;	a.w = ftet;
+-	a.x[0] = (xPos - zoomx1*Width) /zoomx2;
++	a.x[0] = (xPos - zoomx1*Width) /zoomx2;
+ 	a.y[0] = (yPos - zoomy1*Height)/zoomy2;
+ 	a.x[1] = x;		a.y[1] = y;
+ 	a.zz[1] = f/fnt->GetFact(s&3);
+@@ -260,10 +260,10 @@
+ }
+ //-----------------------------------------------------------------------------
+ void mglGraphPS::add_light(mreal *b, mreal n0,mreal n1, mreal n2)
+-{
+-	mreal n[3]={n0,n1,n2};
+-	unsigned char r[4];
+-	col2int(b,n,r);
++{
++	mreal n[3]={n0,n1,n2};
++	unsigned char r[4];
++	col2int(b,n,r);
+ 	b[0]=r[0]/255.;	b[1]=r[1]/255.;	b[2]=r[2]/255.;	b[3]=r[3]/255.;
+ }
+ //-----------------------------------------------------------------------------
+@@ -303,9 +303,9 @@
+ 	if(!Finished)	Finish();
+ 	time_t now;
+ 	time(&now);
+-
+-	bool gz = fname[strlen(fname)-1]=='z';
+-	void *fp = gz ? gzopen(fname,"wt") : fopen(fname,"wt");
++
++	bool gz = fname[strlen(fname)-1]=='z';
++	void *fp = gz ? (void*)gzopen(fname,"wt") : (void*)fopen(fname,"wt");
+ 	if(!fp)		{	SetWarn(mglWarnOpen,fname);	return;	}
+ 	mgl_printf(fp, gz, "%%!PS-Adobe-3.0 EPSF-3.0\n%%%%BoundingBox: 0 0 %d %d\n",Width,Height);
+ 	mgl_printf(fp, gz, "%%%%Creator: MathGL library\n%%%%Title: %s\n",descr ? descr : fname);
+@@ -320,9 +320,9 @@
+ 	mgl_printf(fp, gz, "/m_c {ss 0.3 mul 0 360 arc} def\n");
+ 	mgl_printf(fp, gz, "/d0 {[] 0 setdash} def\n/sd {setdash} def\n");
+ 
+-	bool m_p=false,m_x=false,m_d=false,m_v=false,m_t=false,
+-		m_s=false,m_a=false,m_o=false,m_T=false,
+-		m_V=false,m_S=false,m_D=false,m_Y=false,m_l=false,
++	bool m_p=false,m_x=false,m_d=false,m_v=false,m_t=false,
++		m_s=false,m_a=false,m_o=false,m_T=false,
++		m_V=false,m_S=false,m_D=false,m_Y=false,m_l=false,
+ 		m_L=false,m_r=false,m_R=false,m_X=false,m_P=false;
+ 	register long i;
+ 	// add mark definition if present
+@@ -336,11 +336,11 @@
+ 		if(P[i].m=='S')	m_S = true;		if(P[i].m=='D')	m_D = true;
+ 		if(P[i].m=='V')	m_V = true;		if(P[i].m=='T')	m_T = true;
+ 		if(P[i].m=='<')	m_l = true;		if(P[i].m=='L')	m_L = true;
+-		if(P[i].m=='>')	m_r = true;		if(P[i].m=='R')	m_R = true;
+-		if(P[i].m=='Y')	m_Y = true;
++		if(P[i].m=='>')	m_r = true;		if(P[i].m=='R')	m_R = true;
++		if(P[i].m=='Y')	m_Y = true;
+ 		if(P[i].m=='P')	m_P = true;		if(P[i].m=='X')	m_X = true;
+-	}
+-	if(m_P)	{	m_p=true;	m_s=true;	}
++	}
++	if(m_P)	{	m_p=true;	m_s=true;	}
+ 	if(m_X)	{	m_x=true;	m_s=true;	}
+ 	if(m_p)	mgl_printf(fp, gz, "/m_p {sm 0 rm s2 0 rl sm sm rm 0 s2 rl d0} def\n");
+ 	if(m_x)	mgl_printf(fp, gz, "/m_x {sm sm rm s2 s2 rl 0 sm 2 mul rm sm 2 mul s2 rl d0} def\n");
+@@ -453,7 +453,7 @@
+ 	}
+ 	for(i=0;i<pNum;i++)		if(P[i].type==-1)	P[i].type = 1;
+ 	mgl_printf(fp, gz, "\nshowpage\n%%%%EOF\n");
+-	if(gz)	gzclose(fp);	else	fclose((FILE *)fp);
++	if(gz)	gzclose((gzFile_s*)fp);	else	fclose((FILE *)fp);
+ }
+ //-----------------------------------------------------------------------------
+ void mglGraphPS::WriteSVG(const char *fname,const char *descr)
+@@ -463,8 +463,8 @@
+ 	time_t now;
+ 	time(&now);
+ 
+-	bool gz = fname[strlen(fname)-1]=='z';
+-	void *fp = gz ? gzopen(fname,"wt") : fopen(fname,"wt");
++	bool gz = fname[strlen(fname)-1]=='z';
++	void *fp = gz ? (void*)gzopen(fname,"wt") : (void*)fopen(fname,"wt");
+ 	if(!fp)		{	SetWarn(mglWarnOpen,fname);	return;	}
+ 	mgl_printf(fp, gz, "<?xml version=\"1.0\" standalone=\"no\"?>\n");
+ 	mgl_printf(fp, gz, "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 20000303 Stylable//EN\" \"http://www.w3.org/TR/2000/03/WD-SVG-20000303/DTD/svg-20000303-stylable.dtd\">\n");
+@@ -576,10 +576,10 @@
+ //			const char *dash[]={"", "8 8","4 4","1 3","7 4 1 4","3 2 1 2"};
+ 			mgl_printf(fp, gz, "<g stroke=\"#%02x%02x%02x\"",
+ 					int(255*P[i].c[0]),int(255*P[i].c[1]),int(255*P[i].c[2]));
+-			if(P[i].style)
+-			{
+-				mgl_printf(fp, gz, " stroke-dasharray=\"%s\"", mgl_get_dash(P[i].style,P[i].w));
+-				mgl_printf(fp, gz, " stroke-dashoffset=\"%g\"", P[i].s*P[i].w);
++			if(P[i].style)
++			{
++				mgl_printf(fp, gz, " stroke-dasharray=\"%s\"", mgl_get_dash(P[i].style,P[i].w));
++				mgl_printf(fp, gz, " stroke-dashoffset=\"%g\"", P[i].s*P[i].w);
+ 			}
+ 			if(P[i].w>1)	mgl_printf(fp, gz, " stroke-width=\"%g\"", P[i].w);
+ 			memcpy(cp,P[i].c,3*sizeof(mreal));
+@@ -620,7 +620,7 @@
+ 
+ 	for(i=0;i<pNum;i++)		if(P[i].type==-1)	P[i].type = 1;
+ 	mgl_printf(fp, gz, "</g></svg>");
+-	if(gz)	gzclose(fp);	else	fclose((FILE *)fp);
++	if(gz)	gzclose((gzFile_s*)fp);	else	fclose((FILE *)fp);
+ }
+ //-----------------------------------------------------------------------------
+ void mglGraphPS::Finish()
+@@ -643,31 +643,31 @@
+ #define imax(a,b)	(a)>(b) ? (a) : (b)
+ #define imin(a,b)	(a)<(b) ? (a) : (b)
+ void mglPrim::Draw(mglGraphPS *gr)
+-{
+-	mreal pp[12]={x[0],y[0],z,	x[1],y[1],z,	x[2],y[2],z,	x[3],y[3],z};
+-	gr->draw_prim(this, pp, c);
+-}
++{
++	mreal pp[12]={x[0],y[0],z,	x[1],y[1],z,	x[2],y[2],z,	x[3],y[3],z};
++	gr->draw_prim(this, pp, c);
++}
+ //-----------------------------------------------------------------------------
+-void mglGraphPS::draw_prim(mglPrim *pr, mreal *pp, mreal *c)
+-{
++void mglGraphPS::draw_prim(mglPrim *pr, mreal *pp, mreal *c)
++{
+ 	ObjId = pr->id;	memcpy(CDef,c,4*sizeof(mreal));
+-	bool ul=UseLight;	UseLight=false;
+-	int m = pr->m, s = pr->style;
+-	switch(pr->type)
+-	{
+-	case 0:	mglGraphAB::mark_plot(pp,pr->m);	break;
+-	case 1:	PDef = pr->style;	pPos = pr->s;
++	bool ul=UseLight;	UseLight=false;
++	int m = pr->m, s = pr->style;
++	switch(pr->type)
++	{
++	case 0:	mglGraphAB::mark_plot(pp,pr->m);	break;
++	case 1:	PDef = pr->style;	pPos = pr->s;
+ 			mglGraphAB::line_plot(pp,pp+3,c,c);	break;
+ 	case 2:	mglGraphAB::trig_plot(pp,pp+3,pp+6,c,c,c);	break;
+ 	case 3:	mglGraphAB::quad_plot(pp,pp+3,pp+6,pp+9,c,c,c,c);	break;
+ 	case 4:
+ 		mreal pf=PlotFactor;	Push();
+-		SetPosScale(pp[0],pp[1],pp[2],pr->s*PlotFactor);	RotateN(pr->w,0,0,1);
++		SetPosScale(pp[0],pp[1],pp[2],pr->s*PlotFactor);	RotateN(pr->w,0,0,1);
+ 		mglGraphAB::Glyph(pr->x[1],pr->y[1],pr->zz[1]*fnt->GetFact(s&3),s,m,0);
+-		Pop();	PlotFactor=pf;
++		Pop();	PlotFactor=pf;
+ 		break;
+ 	}
+-	UseLight=ul;
++	UseLight=ul;
+ }
+ //-----------------------------------------------------------------------------
+ void mglGraphPS::pnt_plot(long x,long y, mreal, unsigned char c[4])
+--- mgl/mgl_export.cpp.ORIG	2011-05-30 13:12:29.000000000 +0200
++++ mgl/mgl_export.cpp	2012-02-29 11:52:31.496163039 +0100
+@@ -232,7 +232,7 @@
+ 	va_start(lst,str);
+ 	vsprintf(buf,str,lst);
+ 	va_end(lst);
+-	if(gz)	gzprintf(fp, "%s", buf);
++	if(gz)	gzprintf((gzFile_s*)fp, "%s", buf);
+ 	else	fprintf((FILE *)fp, "%s", buf);
+ }
+ //---------------------------------------------------------------------------
+@@ -243,7 +243,7 @@
+ 	register long i,j;
+ 	bool gz = fname[strlen(fname)-1]=='z';
+ 
+-	void *fp = gz ? gzopen(fname,"wt") : fopen(fname,"wt");
++	void *fp = gz ? (void*)gzopen(fname,"wt") : (void*)fopen(fname,"wt");
+ 	mgl_printf(fp, gz, "%%!PS-Adobe-3.0 EPSF-3.0\n%%%%BoundingBox: 0 0 %d %d\n",w,h);
+ 	mgl_printf(fp, gz, "%%%%Creator: MathGL library\n%%%%Title: %s\n", fname);
+ 	mgl_printf(fp, gz, "%%%%CreationDate: %s\n",ctime(&now));
+@@ -255,7 +255,7 @@
+ 		mgl_printf(fp, gz, "%02x%02x%02x",p[j][3*i],p[j][3*i+1],p[j][3*i+2]);
+ 	}
+ 	mgl_printf(fp, gz, "\n\nshowpage\n%%%%EOF\n");
+-	if(gz)	gzclose(fp);	else	fclose((FILE *)fp);
++	if(gz)	gzclose((gzFile_s*)fp);	else	fclose((FILE *)fp);
+ 	return 0;
+ }
+ //-----------------------------------------------------------------------------
