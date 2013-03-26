@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.11-r1.ebuild,v 1.3 2013/03/25 16:15:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.11-r1.ebuild,v 1.4 2013/03/26 16:47:41 ago Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="chipcard debug +doc hbci mysql ofx postgres python quotes sqlite webkit"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.ac)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.141 2013/03/26 14:01:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.142 2013/03/26 16:49:10 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> vala-0.18.1.ebuild:
+  Stable for ppc, wrt bug #458984
 
   26 Mar 2013; Jeroen Roovers <jer@gentoo.org> vala-0.10.4-r2.ebuild,
   vala-0.12.1-r1.ebuild, vala-0.14.2-r2.ebuild, vala-0.16.1-r2.ebuild,

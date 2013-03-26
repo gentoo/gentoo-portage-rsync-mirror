@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.65 2013/03/25 16:32:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.66 2013/03/26 16:53:24 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> clutter-1.12.2.ebuild:
+  Stable for ppc, wrt bug #458984
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> clutter-1.12.2.ebuild:
   Stable for x86, wrt bug #458984

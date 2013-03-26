@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.4.2.ebuild,v 1.6 2013/03/25 16:31:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.4.2.ebuild,v 1.7 2013/03/26 16:53:17 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ DESCRIPTION="Library for embedding a Clutter canvas (stage) in GTK+"
 HOMEPAGE="http://live.gnome.org/Clutter"
 
 SLOT="1.0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ppc ~ppc64 ~sparc x86"
 IUSE="examples +introspection"
 
 RDEPEND="

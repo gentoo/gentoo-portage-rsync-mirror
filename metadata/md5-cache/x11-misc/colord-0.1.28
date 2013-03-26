@@ -4,7 +4,7 @@ DESCRIPTION=System service to accurately color manage input and output devices
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/software/colord/
 IUSE=doc examples extra-print-profiles +gusb +introspection systemd +udev vala
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=GPL-2+
 RDEPEND=dev-db/sqlite:3= >=dev-libs/glib-2.28.0:2 >=media-libs/lcms-2.2:2= >=sys-auth/polkit-0.103 gusb? ( >=dev-libs/libgusb-0.1.1 ) introspection? ( >=dev-libs/gobject-introspection-0.9.8 ) systemd? ( >=sys-apps/systemd-44 ) udev? ( virtual/udev:=[gudev] ) !media-gfx/shared-color-profiles
 REQUIRED_USE=vala? ( introspection )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0/1
 SRC_URI=http://www.freedesktop.org/software/colord/releases/colord-0.1.28.tar.xz
 _eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	base	ec46b36a6f6fd1d0b505a33e0b74e413	bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	50d18ebffcbd8bd63614b89c2d664d0d	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	systemd	0c62b9aceddad24eb96da235b42eded1	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	vala	ad1e7234faa2244a7e10f1c864371475
-_md5_=174820a2b8b2e9570f3ca505d5a8cce2
+_md5_=0d2dcac853aa803157c51f04085c27c6

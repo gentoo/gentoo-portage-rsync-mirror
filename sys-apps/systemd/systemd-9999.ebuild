@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.27 2013/03/26 16:24:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.28 2013/03/26 16:35:45 mgorny Exp $
 
 EAPI=5
 
@@ -47,7 +47,9 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	tcpd? ( sys-apps/tcp-wrappers )
 	xattr? ( sys-apps/attr )"
 
+# baselayout-2.2 has /run
 RDEPEND="${COMMON_DEPEND}
+	>=sys-apps/baselayout-2.2
 	>=sys-apps/hwids-20130309-r1[udev]
 	|| (
 		>=sys-apps/util-linux-2.22
@@ -228,7 +230,6 @@ pkg_postinst() {
 	fi
 	systemd_update_catalog
 
-	mkdir -p "${ROOT}"/run || ewarn "Unable to mkdir /run, this could mean trouble."
 	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
 		ewarn "Upstream suggests that the /etc/mtab file should be a symlink to /proc/mounts."
 		ewarn "It is known to cause users being unable to unmount user mounts. If you don't"
@@ -241,13 +242,6 @@ pkg_postinst() {
 	elog "be installed:"
 	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
 		'sys-apps/systemd-ui'
-	elog
-
-	ewarn "Please note this is a work-in-progress and many packages in Gentoo"
-	ewarn "do not supply systemd unit files yet. You are testing it on your own"
-	ewarn "responsibility. Please remember than you can pass:"
-	ewarn "	init=/sbin/init"
-	ewarn "to your kernel to boot using sysvinit / OpenRC."
 }
 
 pkg_prerm() {

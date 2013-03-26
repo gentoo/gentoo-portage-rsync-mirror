@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.55 2013/03/25 16:43:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.56 2013/03/26 16:56:40 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> colord-0.1.28.ebuild:
+  Stable for ppc, wrt bug #458984
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> colord-0.1.28.ebuild:
   Stable for x86, wrt bug #458984

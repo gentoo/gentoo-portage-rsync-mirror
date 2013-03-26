@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.190 2013/03/25 16:28:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.191 2013/03/26 16:52:11 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> orbit-2.14.19-r2.ebuild:
+  Stable for ppc, wrt bug #458984
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> orbit-2.14.19-r2.ebuild:
   Stable for x86, wrt bug #458984

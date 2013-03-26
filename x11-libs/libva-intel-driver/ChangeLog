@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.19 2013/03/17 15:04:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.21 2013/03/26 16:41:01 aballier Exp $
+
+*libva-intel-driver-1.0.20 (26 Mar 2013)
+
+  26 Mar 2013; Alexis Ballier <aballier@gentoo.org>
+  +libva-intel-driver-1.0.20.ebuild:
+  version bump
+
+  26 Mar 2013; Alexis Ballier <aballier@gentoo.org>
+  libva-intel-driver-9999.ebuild:
+  add explicit wayland dep rather than the transitive dep with libva[wayland]
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

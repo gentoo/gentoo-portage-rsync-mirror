@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia2code
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.28 2013/03/25 16:14:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.29 2013/03/26 16:47:34 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dia2code-0.8.5.ebuild:
+  Stable for ppc, wrt bug #458984
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dia2code-0.8.5.ebuild:
   Stable for x86, wrt bug #458984
