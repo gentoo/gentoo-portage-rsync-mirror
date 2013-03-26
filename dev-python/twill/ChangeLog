@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twill
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.9 2012/02/01 22:02:32 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.10 2013/03/26 09:38:45 pinkbyte Exp $
+
+  26 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> twill-0.9.ebuild:
+  Add ~arm keyword, wrt bug #458248
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> twill-0.9.ebuild:
   Marking twill-0.9 ppc for bug 386727
