@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.28 2013/03/26 16:35:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.30 2013/03/26 17:29:23 mgorny Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
-IUSE="acl audit cryptsetup doc efi gcrypt gudev http
+IUSE="acl audit cryptsetup doc gcrypt gudev http
 	introspection +kmod lzma pam python qrcode selinux static-libs
 	tcpd vanilla xattr"
 
@@ -108,19 +108,19 @@ src_configure() {
 		--with-pamlibdir=/$(get_libdir)/security
 		# make sure we get /bin:/sbin in $PATH
 		--enable-split-usr
-		# no deps
-		--enable-keymap
 		# disable sysv compatibility
 		--with-sysvinit-path=
 		--with-sysvrcnd-path=
 		# just text files
 		--enable-polkit
+		# no deps
+		--enable-keymap
+		--enable-efi
 		# optional components/dependencies
 		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable doc gtk-doc)
-		$(use_enable efi)
 		$(use_enable gcrypt)
 		$(use_enable gudev)
 		$(use_enable http microhttpd)
@@ -242,6 +242,19 @@ pkg_postinst() {
 	elog "be installed:"
 	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
 		'sys-apps/systemd-ui'
+
+	# read null-terminated argv[0] from PID 1
+	# and see which path to systemd was used (if any)
+	local init_path
+	IFS= read -r -d '' init_path < /proc/1/cmdline
+	if [[ ${init_path} == */bin/systemd ]]; then
+		ewarn
+		ewarn "You are using a compatibility symlink to run systemd. The symlink"
+		ewarn "will be removed in near future. Please update your bootloader"
+		ewarn "to use:"
+		ewarn
+		ewarn "	init=/usr/lib/systemd/systemd"
+	fi
 }
 
 pkg_prerm() {
