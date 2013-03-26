@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.4 2011/02/26 14:45:16 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.5 2013/03/25 23:26:51 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -26,6 +26,7 @@ UIRDEPEND="media-libs/libogg
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
+	x11-libs/libXpm
 	x11-libs/libXext
 	x11-libs/libXxf86dga
 	x11-libs/libXxf86vm

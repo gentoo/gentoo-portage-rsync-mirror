@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/nexuiz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.38 2011/02/26 14:45:16 signals Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.39 2013/03/25 23:26:51 mr_bones_ Exp $
+
+  25 Mar 2013; Michael Sterrett <mr_bones_@gentoo.org> nexuiz-2.5.2.ebuild:
+  add x11-libs/libXpm dep (bug #463288)
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> nexuiz-2.5.2.ebuild:
   Updated depends from media-libs/jpeg to virtual/jpeg
@@ -152,4 +155,3 @@
   18 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +nexuiz-1.2.1.ebuild:
   initial commit - ebuild submitted by fabien Zouaoui via bug #94764
-
