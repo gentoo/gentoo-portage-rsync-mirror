@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.117 2013/03/02 20:45:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.118 2013/03/26 20:18:49 slyfox Exp $
+
+# Sergei Trofimovich <slyfox@gentoo.org> (26 Mar 2013)
+# sys-devel/llvm has no ia64 keywords
+dev-lang/ghc llvm
 
 # Agostino Sarubbo <ago@gentoo.org> (09 Feb 2013)
 # Mask media-video/libav[hardcoded-tables] bug #453328

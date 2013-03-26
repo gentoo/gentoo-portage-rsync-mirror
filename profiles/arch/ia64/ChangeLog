@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.186 2013/03/12 21:49:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.187 2013/03/26 20:18:49 slyfox Exp $
+
+  26 Mar 2013; Sergei Trofimovich <slyfox@gentoo.org> package.use.mask:
+  masked dev-lang/ghc[llvm]
 
   12 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask USE="cg" since it is a toolkit for nvidia binary drivers.
