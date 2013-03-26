@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.105 2013/03/25 16:26:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.106 2013/03/26 14:27:14 jer Exp $
+
+  26 Mar 2013; Jeroen Roovers <jer@gentoo.org> gnome-common-3.6.0.ebuild:
+  Stable for HPPA (bug #458984).
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gnome-common-3.6.0.ebuild:
   Stable for x86, wrt bug #458984

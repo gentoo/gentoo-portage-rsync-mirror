@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.85 2013/03/25 16:20:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.86 2013/03/26 14:04:01 jer Exp $
+
+  26 Mar 2013; Jeroen Roovers <jer@gentoo.org> libcroco-0.6.8.ebuild:
+  Stable for HPPA (bug #458984).
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libcroco-0.6.8.ebuild:
   Stable for x86, wrt bug #458984
