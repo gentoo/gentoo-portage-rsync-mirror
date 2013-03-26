@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.56.3.ebuild,v 1.1 2013/03/11 16:50:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.56.3.ebuild,v 1.3 2013/03/26 09:25:56 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ $PV = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://ceph.com/download/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 inherit autotools eutils multilib udev ${scm_eclass}

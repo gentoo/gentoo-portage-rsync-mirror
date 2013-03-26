@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.9.0-r2.ebuild,v 1.1 2013/03/11 03:56:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.9.0-r3.ebuild,v 1.1 2013/03/26 09:11:42 patrick Exp $
 EAPI=4
 
 PYTHON_DEPEND="2:2.6"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/snappy"
 RDEPEND="${DEPEND}"
 
 src_compile() {
