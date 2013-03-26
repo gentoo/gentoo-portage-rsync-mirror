@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.207 2013/03/24 09:26:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.208 2013/03/26 17:43:31 ssuominen Exp $
 
 EAPI=5
 
@@ -361,15 +361,6 @@ pkg_preinst() {
 	preserve_old_lib /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 }
 
-# This function determines if a directory is a mount point.
-# It was lifted from dracut.
-ismounted() {
-	while read a m a; do
-		[[ $m = $1 ]] && return 0
-	done < "${ROOT}"/proc/mounts
-	return 1
-}
-
 pkg_postinst() {
 	mkdir -p "${ROOT}"run
 
@@ -390,24 +381,6 @@ pkg_postinst() {
 	if [[ -f ${old_dm_rules} ]]; then
 		rm -f "${old_dm_rules}"
 		einfo "Removed unneeded file ${old_dm_rules}"
-	fi
-
-	if ismounted /usr; then
-		ewarn
-		ewarn "Your system has /usr on a separate partition. This means"
-		ewarn "you will need to use an initramfs to pre-mount /usr before"
-		ewarn "udev runs."
-		ewarn
-		ewarn "If this is not set up before your next reboot, udev may work;"
-		ewarn "However, you also may experience failures which are very"
-		ewarn "difficult to troubleshoot."
-		ewarn
-		ewarn "For a more detailed explanation, see the following URL:"
-		ewarn "http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken"
-		ewarn
-		ewarn "For more information on setting up an initramfs, see the"
-		ewarn "following URL:"
-		ewarn "http://www.gentoo.org/doc/en/initramfs-guide.xml"
 	fi
 
 	local fstab="${ROOT}"etc/fstab dev path fstype rest
