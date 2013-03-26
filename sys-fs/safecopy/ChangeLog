@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/safecopy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.13 2013/03/26 11:43:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.14 2013/03/26 13:21:44 kensington Exp $
+
+  26 Mar 2013; Michael Palimaka <kensington@gentoo.org> -safecopy-1.6.ebuild:
+  Remove old.
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> safecopy-1.7.ebuild:
   Stable for x86, wrt bug #463148
