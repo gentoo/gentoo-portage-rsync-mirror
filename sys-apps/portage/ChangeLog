@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1236 2013/03/25 00:36:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1237 2013/03/26 05:17:45 zmedico Exp $
+
+  26 Mar 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.11.58.ebuild,
+  portage-2.2.0_alpha169.ebuild, portage-9999.ebuild:
+  Stop using python.eclass, since it seems like overkill for our simple needs.
 
   25 Mar 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.11.58.ebuild,
   portage-2.2.0_alpha169.ebuild, portage-9999.ebuild:

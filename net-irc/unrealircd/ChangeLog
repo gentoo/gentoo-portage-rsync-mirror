@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.101 2013/03/17 15:11:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.102 2013/03/26 05:23:25 binki Exp $
+
+  26 Mar 2013; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Drop <herd>proxy-maintainers</herd> added incorrectly by hwoarang.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

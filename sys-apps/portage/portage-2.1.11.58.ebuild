@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.58.ebuild,v 1.3 2013/03/25 00:36:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.58.ebuild,v 1.4 2013/03/26 05:17:45 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -10,7 +10,7 @@ PYTHON_COMPAT=(
 	python3_1 python3_2 python3_3 python3_4
 	python2_6 python2_7
 )
-inherit eutils python
+inherit eutils multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -123,6 +123,37 @@ current_python_has_xattr() {
 	"${PYTHON}" -c 'import xattr' 2>/dev/null
 }
 
+call_with_python_impl() {
+	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+	env EPYTHON=${EPYTHON} "$@"
+}
+
+get_python_interpreter() {
+	[ $# -eq 1 ] || die "expected 1 argument, got $#: $*"
+	local impl=$1 python
+	case "${impl}" in
+		python*)
+			python=${impl/_/.}
+			;;
+		pypy*)
+			python=${impl/_/.}
+			python=${python/pypy/pypy-c}
+			;;
+		*)
+			die "Unrecognized python target: ${impl}"
+	esac
+	echo ${python}
+}
+
+get_python_sitedir() {
+	[ $# -eq 1 ] || die "expected 1 argument, got $#: $*"
+	local impl=$1
+	local site_dir=/usr/$(get_libdir)/${impl/_/.}/site-packages
+	[[ -d ${ROOT}${site_dir} ]] || \
+		ewarn "site-packages dir missing for ${impl}: ${ROOT}${site_dir}"
+	echo "${site_dir}"
+}
+
 python_compileall() {
 	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
 	local d=$1 PYTHON=/usr/bin/${EPYTHON}
@@ -177,15 +208,16 @@ pkg_setup() {
 		fi
 	fi
 
+	# We use EPYTHON to designate the active python interpreter,
+	# but we only export when needed, via call_with_python_impl.
+	EPYTHON=python
+	export -n EPYTHON
 	if use python3; then
-		python_set_active_version 3
+		EPYTHON=python3
 	elif use python2; then
-		python_set_active_version 2
+		EPYTHON=python2
 	elif use pypy2_0; then
-		python_set_active_version 2.7-pypy-2.0
-	else
-		# Used by python_compileall and current_python_has_xattr
-		EPYTHON=python
+		EPYTHON=pypy-c2.0
 	fi
 }
 
@@ -218,15 +250,23 @@ src_prepare() {
 			|| die "failed to append to make.globals"
 	fi
 
+	local set_shebang=
 	if use python3; then
-		einfo "Converting shebangs for python3..."
-		python_convert_shebangs -r 3 .
+		set_shebang=python3
 	elif use python2; then
-		einfo "Converting shebangs for python2..."
-		python_convert_shebangs -r 2 .
+		set_shebang=python2
 	elif use pypy2_0; then
-		einfo "Converting shebangs for pypy-c2.0..."
-		python_convert_shebangs -r 2.7-pypy-2.0 .
+		set_shebang=pypy-c2.0
+	fi
+	if [[ -n ${set_shebang} ]] ; then
+		einfo "Converting shebangs for ${set_shebang}..."
+		while read -r -d $'\0' ; do
+			local shebang=$(head -n1 "$REPLY")
+			if [[ ${shebang} == "#!/usr/bin/python"* ]] ; then
+				sed -i -e "1s:python:${set_shebang}:" "$REPLY" || \
+					die "sed failed"
+			fi
+		done < <(find . -type f -print0)
 	fi
 
 	cd "${S}/cnf" || die
@@ -243,20 +283,24 @@ src_prepare() {
 
 src_compile() {
 	if use doc; then
+		call_with_python_impl \
 		emake docbook || die
 	fi
 
 	if use epydoc; then
 		einfo "Generating api docs"
+		call_with_python_impl \
 		emake epydoc || die
 	fi
 }
 
 src_test() {
+	call_with_python_impl \
 	emake test || die
 }
 
 src_install() {
+	call_with_python_impl \
 	emake DESTDIR="${D}" \
 		sysconfdir="/etc" \
 		prefix="/usr" \
@@ -281,13 +325,13 @@ src_install() {
 	for impl in "${PYTHON_COMPAT[@]}" ; do
 		use "python_targets_${impl}" || continue
 		while read -r mod_dir ; do
-			cd "${S}/pym/${mod_dir}" || die
+			cd "${D}/usr/lib/portage/pym/${mod_dir}" || die
 			files=$(echo *.py)
 			if [ -z "${files}" ] || [ "${files}" = "*.py" ]; then
 				# __pycache__ directories contain no py files
 				continue
 			fi
-			dest_mod_dir=/usr/$(get_libdir)/${impl/_/.}/site-packages/${mod_dir}
+			dest_mod_dir=$(get_python_sitedir ${impl})/${mod_dir}
 			dodir "${dest_mod_dir}" || die
 			relative_path=../../../lib/portage/pym/${mod_dir}
 			x=/${mod_dir}
@@ -300,18 +344,9 @@ src_install() {
 					"${dest_mod_dir}/${x}" || die
 			done
 		done < <(cd "${D}"/usr/lib/portage/pym || die ; find * -type d ! -path "portage/tests*")
-		case "${impl}" in
-			python*)
-				python=${impl/_/.}
-				;;
-			pypy*)
-				python=${impl/_/.}
-				python=${python/pypy/pypy-c}
-				;;
-			*)
-				die "Unrecognized python target: ${impl}"
-		esac
-		EPYTHON=${python} python_compileall /usr/$(get_libdir)/${impl/_/.}/site-packages
+		cd "${S}" || die
+		EPYTHON=$(get_python_interpreter ${impl}) \
+		python_compileall "$(get_python_sitedir ${impl})"
 	done
 
 	# Compile /usr/lib/portage/pym with the active interpreter, since portage
@@ -351,8 +386,4 @@ pkg_preinst() {
 		ewarn "This causes the CONFIG_PROTECT behavior to be skipped for"
 		ewarn "files that have not been modified since they were installed."
 	fi
-}
-
-pkg_postrm() {
-	python_mod_cleanup /usr/lib/portage/pym
 }
