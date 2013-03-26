@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendoptimizerplus/pecl-zendoptimizerplus-7.0.0.ebuild,v 1.1 2013/03/04 14:39:30 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendopcache/pecl-zendopcache-7.0.1.ebuild,v 1.2 2013/03/26 18:54:00 olemarkus Exp $
 
 EAPI="5"
-PHP_EXT_NAME="ZendOptimizerPlus"
+PHP_EXT_NAME="opcache"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="yes"
 

@@ -1,9 +1,0 @@
-# ChangeLog for dev-php/pecl-zendoptimizerplus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendoptimizerplus/ChangeLog,v 1.1 2013/03/04 14:39:30 olemarkus Exp $
-
-*pecl-zendoptimizerplus-7.0.0 (04 Mar 2013)
-
-  04 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +metadata.xml,
-  +pecl-zendoptimizerplus-7.0.0.ebuild:
-  New package: Zend Optimizer Plus

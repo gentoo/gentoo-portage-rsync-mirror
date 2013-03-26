@@ -94,3 +94,4 @@ move x11-plugins/leechcraft-lhtr app-leechcraft/lc-lhtr
 move x11-plugins/leechcraft-tpi app-leechcraft/lc-tpi
 move app-leechcraft/leechraft-meta app-leechcraft/leechcraft-meta
 slotmove www-plugins/chrome-binary-plugins 0 unstable
+move dev-php/pecl-zendoptimizerplus dev-php/pecl-zendopcache

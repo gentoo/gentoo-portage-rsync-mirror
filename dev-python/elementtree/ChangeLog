@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/elementtree
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.39 2010/07/08 15:43:42 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.40 2013/03/26 19:00:04 mgorny Exp $
+
+*elementtree-1.2.6-r3 (26 Mar 2013)
+
+  26 Mar 2013; Michał Górny <mgorny@gentoo.org> +elementtree-1.2.6-r3.ebuild:
+  Migrate to distutils-r1.
 
   08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   elementtree-1.2.6-r2.ebuild:
@@ -155,4 +160,3 @@
 
   05 Jun 2004; <lucass@gentoo.org> :
   Initial commit. Bug #44870. Thanks for Martin Klaffenboeck and Jacob Smullyan.
-

@@ -1,0 +1,17 @@
+# ChangeLog for dev-php/pecl-zendopcache
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendopcache/ChangeLog,v 1.2 2013/03/26 18:54:00 olemarkus Exp $
+
+  26 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  pecl-zendopcache-7.0.1.ebuild:
+  Fixed extension name
+
+  26 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  pecl-zendoptimizerplus-7.0.0.ebuild:
+  Hardcode SRC_URI due to name change
+
+*pecl-zendoptimizerplus-7.0.0 (04 Mar 2013)
+
+  04 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +metadata.xml,
+  +pecl-zendoptimizerplus-7.0.0.ebuild:
+  New package: Zend Optimizer Plus
