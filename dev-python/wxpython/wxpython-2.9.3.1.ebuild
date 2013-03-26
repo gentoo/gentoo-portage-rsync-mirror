@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.3.1.ebuild,v 1.5 2012/09/05 09:36:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.3.1.ebuild,v 1.6 2013/03/26 03:23:52 dirtyepic Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -51,6 +51,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-${SLOT}-wxversion-scripts.patch
 	# drop editra - we have it as a separate package now
 	epatch "${FILESDIR}"/${PN}-2.8.11-drop-editra.patch
+	epatch "${FILESDIR}"/${PN}-2.8-no-preservatives-added.patch
 
 	if use examples; then
 		cd "${DOC_S}"

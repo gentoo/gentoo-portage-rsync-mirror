@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2012.11.ebuild,v 1.1 2012/11/23 06:34:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2013.03.ebuild,v 1.1 2013/03/26 03:30:58 patrick Exp $
 
 EAPI=3
 
