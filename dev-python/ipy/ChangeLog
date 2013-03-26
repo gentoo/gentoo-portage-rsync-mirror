@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.34 2011/06/23 14:51:09 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.35 2013/03/26 03:41:40 patrick Exp $
+
+*ipy-0.76 (26 Mar 2013)
+
+  26 Mar 2013; Patrick Lauer <patrick@gentoo.org> +ipy-0.76.ebuild:
+  Bump
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -ipy-0.74.ebuild:
   Remove old ebuilds. Requested by Arfrever
@@ -142,4 +147,3 @@
   05 Jun 2006; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
   +ipy-0.42.ebuild:
   Initial commit, bug #59037.
-

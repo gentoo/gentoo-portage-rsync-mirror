@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.3.1.ebuild,v 1.6 2012/11/23 04:53:30 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.3.1.ebuild,v 1.7 2013/03/26 03:47:46 dirtyepic Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
 	doc? ( mirror://sourceforge/wxpython/wxPython-docs-${PV}.tar.bz2 )"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="X aqua doc debug gnome gstreamer opengl pch sdl tiff"
+IUSE="X aqua doc debug gnome gstreamer opengl pch sdl tiff webkit"
 
 RDEPEND="
 	dev-libs/expat
@@ -37,6 +37,7 @@ RDEPEND="
 			media-libs/gst-plugins-base:0.10 )
 		opengl? ( virtual/opengl )
 		tiff?   ( media-libs/tiff:0 )
+		webkit? ( net-libs/webkit-gtk:2 )
 		)
 	aqua? (
 		>=x11-libs/gtk+-2.4[aqua=]
@@ -52,7 +53,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xineramaproto
 		x11-proto/xf86vidmodeproto
 		)"
-#		test? ( dev-util/cppunit )
+#	test? ( dev-util/cppunit )
 
 PDEPEND=">=app-admin/eselect-wxwidgets-1.4"
 
@@ -104,6 +105,7 @@ src_configure() {
 			--with-libjpeg=sys
 			--without-gnomevfs
 			$(use_enable gstreamer mediactrl)
+			$(use_enable webkit webview)
 			$(use_with opengl)
 			$(use_with gnome gnomeprint)
 			$(use_with !gnome gtkprint)

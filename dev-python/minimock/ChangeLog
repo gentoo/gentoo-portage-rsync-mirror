@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/minimock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/minimock/ChangeLog,v 1.14 2012/06/09 08:19:55 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/minimock/ChangeLog,v 1.15 2013/03/26 03:45:16 patrick Exp $
+
+*minimock-1.2.8 (26 Mar 2013)
+
+  26 Mar 2013; Patrick Lauer <patrick@gentoo.org> +minimock-1.2.8.ebuild:
+  Bump
 
   09 Jun 2012; Mike Frysinger <vapier@gentoo.org> minimock-1.2.7.ebuild:
   Add arm love for ChromiumOS.
@@ -54,4 +59,3 @@
   11 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +minimock-1.2.5.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-

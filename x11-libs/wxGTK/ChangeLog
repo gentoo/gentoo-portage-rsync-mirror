@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.298 2013/02/04 01:50:56 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.299 2013/03/26 03:47:46 dirtyepic Exp $
+
+  26 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.9.3.1.ebuild,
+  wxGTK-2.9.4.1.ebuild:
+  Add webkit USE flag to control building of webview library (bug #462544).
+  Drop cppunit dep since we don't run tests (bug #462876).
 
   04 Feb 2013; Benda Xu <heroxbd@gentoo.org> wxGTK-2.8.12.1.ebuild:
   fix Prefix library location in configure. bug 394123
