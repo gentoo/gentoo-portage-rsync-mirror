@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1-r1.ebuild,v 1.3 2013/03/25 16:23:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1-r1.ebuild,v 1.4 2013/03/26 08:47:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
-PYTHON_COMPAT=(python2_{5,6,7} )
+PYTHON_COMPAT=(python2_{6,7} )
 
 inherit gnome2 python-r1
 
@@ -19,9 +19,9 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="examples"
 
 RDEPEND="
-	>=dev-python/pygobject-2.11.3:2
-	>=dev-python/pygtk-2.10.4:2
-	>=dev-python/pycairo-1.8.4
+	>=dev-python/pygobject-2.11.3:2[${PYTHON_USEDEP}]
+	>=dev-python/pygtk-2.10.4:2[${PYTHON_USEDEP}]
+	>=dev-python/pycairo-1.8.4[${PYTHON_USEDEP}]
 	>=x11-libs/goocanvas-0.14:0
 "
 DEPEND="${RDEPEND}
