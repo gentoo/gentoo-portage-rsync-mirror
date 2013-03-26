@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.210 2013/03/17 23:01:03 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.211 2013/03/26 07:35:48 ulm Exp $
+
+*gnuplot-4.6.2-r1 (26 Mar 2013)
+
+  26 Mar 2013; Ulrich Müller <ulm@gentoo.org> +gnuplot-4.6.2-r1.ebuild,
+  +files/gnuplot-4.6.2-gdversion.patch:
+  Update test for GD version, bug 462996. Thanks to Bernardo Costa
+  <bernardofpc@gmail.com> for the bug report and the patch.
 
 *gnuplot-4.6.2 (17 Mar 2013)
 
