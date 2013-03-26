@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.30 2013/03/26 17:29:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.31 2013/03/26 22:02:45 mgorny Exp $
 
 EAPI=5
 
@@ -158,11 +158,6 @@ src_install() {
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules
-
-	# move nss_myhostname to rootfs (bug #460640)
-	dodir /$(get_libdir)
-	mv "${D}"/usr/$(get_libdir)/libnss_myhostname* "${D}"/$(get_libdir)/ \
-		|| die "Unable to move nss_myhostname to rootfs"
 
 	# compat for init= use
 	dosym ../usr/lib/systemd/systemd /bin/systemd

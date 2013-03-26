@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.243 2013/03/06 13:41:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.244 2013/03/26 22:09:24 dilfridge Exp $
+
+*ksmserver-4.10.1-r1 (26 Mar 2013)
+
+  26 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +ksmserver-4.10.1-r1.ebuild, +files/ksmserver-4.10.1-noplasmalock.patch:
+  Hard-disable plasma screen locker, bug 462152
 
 *ksmserver-4.10.1 (06 Mar 2013)
 

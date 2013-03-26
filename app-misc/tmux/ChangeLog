@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.93 2013/03/07 22:48:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.94 2013/03/26 22:16:00 wired Exp $
+
+*tmux-1.8 (26 Mar 2013)
+
+  26 Mar 2013; Alex Alexander <wired@gentoo.org> +tmux-1.8.ebuild:
+  version bump - bug #463414
 
   07 Mar 2013; Tim Harder <radhermit@gentoo.org> tmux-9999.ebuild:
   Don't install NOTES for live ebuild (bug #460726 by Joe M).
