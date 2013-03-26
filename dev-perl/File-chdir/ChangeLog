@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-chdir
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.38 2013/03/25 20:48:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.39 2013/03/26 10:46:58 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> File-chdir-0.100.800.ebuild:
+  Stable for ppc, wrt bug #456570
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> File-chdir-0.100.800.ebuild:
   Stable for x86, wrt bug #456570

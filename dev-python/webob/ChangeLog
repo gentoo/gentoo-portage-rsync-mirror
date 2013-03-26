@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.65 2013/03/25 20:51:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.66 2013/03/26 10:41:39 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> webob-1.2.3.ebuild:
+  Stable for ppc, wrt bug #456614
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> webob-1.2.3.ebuild:
   Stable for x86, wrt bug #456614

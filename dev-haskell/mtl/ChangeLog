@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.62 2013/03/25 20:45:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.63 2013/03/26 10:32:36 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> mtl-2.1.2-r1.ebuild:
+  Stable for ppc, wrt bug #456506
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> mtl-2.1.2-r1.ebuild:
   Stable for x86, wrt bug #456506

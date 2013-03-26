@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Address
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.75 2013/03/25 20:36:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.76 2013/03/26 10:38:42 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Email-Address-1.897.0.ebuild:
+  Stable for ppc, wrt bug #457302
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Email-Address-1.897.0.ebuild:
   Stable for x86, wrt bug #457302
