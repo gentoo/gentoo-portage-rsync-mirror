@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-SOAP
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.37 2009/08/22 18:35:10 beandog Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.38 2013/03/26 21:11:34 mabi Exp $
+
+*PEAR-SOAP-0.13.0 (26 Mar 2013)
+
+  26 Mar 2013; Matti Bickel <mabi@gentoo.org> +PEAR-SOAP-0.13.0.ebuild,
+  -PEAR-SOAP-0.9.1.ebuild:
+  cleanup, version bump
 
 *PEAR-SOAP-0.12.0 (22 Aug 2009)
 
@@ -145,4 +151,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-SOAP-0.8.1.ebuild:
   Initial ebuild for the SOAP PEAR package.
-

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.8-r1.ebuild,v 1.13 2013/03/23 13:28:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.8-r1.ebuild,v 1.14 2013/03/26 21:29:32 vapier Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
 WANT_LIBTOOL="none"
 
-inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs
+inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs multiprocessing
 
 MY_P="Python-${PV}"
 PATCHSET_REVISION="0"
@@ -151,17 +151,21 @@ src_configure() {
 		use hardened && replace-flags -O3 -O2
 	fi
 
+	# Run the configure scripts in parallel.
+	multijob_init
+
+	mkdir -p "${WORKDIR}"/{${CBUILD},${CHOST}}
+
 	if tc-is-cross-compiler; then
-		OPT="-O1" CFLAGS="" LDFLAGS="" CC="" \
-		./configure --{build,host}=${CBUILD} || die "cross-configure failed"
-		emake python Parser/pgen || die "cross-make failed"
-		mv python hostpython
-		mv Parser/pgen Parser/hostpgen
-		make distclean
-		sed -i \
-			-e "/^HOSTPYTHON/s:=.*:=./hostpython:" \
-			-e "/^HOSTPGEN/s:=.*:=./Parser/hostpgen:" \
-			Makefile.pre.in || die "sed failed"
+		(
+		multijob_child_init
+		cd "${WORKDIR}"/${CBUILD} >/dev/null
+		OPT="-O1" CFLAGS="" CPPFLAGS="" LDFLAGS="" CC="" \
+		"${S}"/configure \
+			--{build,host}=${CBUILD} \
+			|| die "cross-configure failed"
+		) &
+		multijob_post_fork
 	fi
 
 	# Export CXX so it ends up in /usr/lib/python2.X/config/Makefile.
@@ -175,7 +179,9 @@ src_configure() {
 	# Please query BSD team before removing this!
 	append-ldflags "-L."
 
-	OPT="" econf \
+	cd "${WORKDIR}"/${CHOST}
+	ECONF_SOURCE=${S} OPT="" \
+	econf \
 		--with-fpectl \
 		--enable-shared \
 		$(use_enable ipv6) \
@@ -185,9 +191,41 @@ src_configure() {
 		--mandir='${prefix}/share/man' \
 		--with-libc="" \
 		--with-system-ffi
+
+	if tc-is-cross-compiler; then
+		# Modify the Makefile.pre so we don't regen for the host/ one.
+		# We need to link the host python programs into $PWD and run
+		# them from here because the distutils sysconfig module will
+		# parse Makefile/etc... from argv[0], and we need it to pick
+		# up the target settings, not the host ones.
+		sed -i \
+			-e '1iHOSTPYTHONPATH = ./hostpythonpath:' \
+			-e '/^HOSTPYTHON/s:=.*:= ./hostpython:' \
+			-e '/^HOSTPGEN/s:=.*:= ./Parser/hostpgen:' \
+			Makefile{.pre,} || die "sed failed"
+	fi
+
+	multijob_finish
 }
 
 src_compile() {
+	if tc-is-cross-compiler; then
+		cd "${WORKDIR}"/${CBUILD}
+		# Disable as many modules as possible -- but we need a few to install.
+		PYTHON_DISABLE_MODULES=$(
+			sed -n "/Extension('/{s:^.*Extension('::;s:'.*::;p}" "${S}"/setup.py | \
+				egrep -v '(unicodedata|time|cStringIO|_struct|binascii)'
+		) \
+		PTHON_DISABLE_SSL="1" \
+		SYSROOT= \
+		emake || die "cross-make failed"
+		# See comment in src_configure about these.
+		ln python ../${CHOST}/hostpython || die
+		ln Parser/pgen ../${CHOST}/Parser/hostpgen || die
+		ln -s ../${CBUILD}/build/lib.*/ ../${CHOST}/hostpythonpath || die
+	fi
+
+	cd "${WORKDIR}"/${CHOST}
 	default
 
 	# Work around bug 329499. See also bug 413751.
@@ -201,11 +239,13 @@ src_test() {
 		return
 	fi
 
+	cd "${WORKDIR}"/${CHOST}
+
 	# Skip failing tests.
 	local skipped_tests="distutils tcl"
 
 	for test in ${skipped_tests}; do
-		mv Lib/test/test_${test}.py "${T}"
+		mv "${S}"/Lib/test/test_${test}.py "${T}"
 	done
 
 	# Rerun failed tests in verbose mode (regrtest -w).
@@ -213,7 +253,7 @@ src_test() {
 	local result="$?"
 
 	for test in ${skipped_tests}; do
-		mv "${T}/test_${test}.py" Lib/test
+		mv "${T}/test_${test}.py" "${S}"/Lib/test
 	done
 
 	elog "The following tests have been skipped:"
@@ -237,6 +277,7 @@ src_install() {
 
 	local libdir=${ED}/usr/$(get_libdir)/python${SLOT}
 
+	cd "${WORKDIR}"/${CHOST}
 	emake DESTDIR="${D}" altinstall maninstall || die "emake altinstall maninstall failed"
 
 	# Backwards compat with Gentoo divergence.
@@ -261,11 +302,11 @@ src_install() {
 	use threads || rm -fr "${libdir}/multiprocessing"
 	use wininst || rm -f "${libdir})/distutils/command/"wininst-*.exe
 
-	dodoc Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
+	dodoc "${S}"/Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins -r Tools || die "doins failed"
+		doins -r "${S}"/Tools || die "doins failed"
 	fi
 
 	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
