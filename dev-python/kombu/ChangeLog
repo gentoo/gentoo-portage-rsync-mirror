@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.21 2013/03/26 04:21:15 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.22 2013/03/26 06:24:38 prometheanfire Exp $
+
+  26 Mar 2013; Matthew Thode <prometheanfire@gentoo.org> kombu-1.0.4-r1.ebuild:
+  fixing kombu's 1.0.4 deps (anyjson was versioned and should not have been)
 
 *kombu-1.0.4-r1 (26 Mar 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.3 2013/03/11 01:12:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.4 2013/03/26 06:09:02 prometheanfire Exp $
 
 EAPI=5
 #restricted due to packages missing and bad depends in the test ==webob-1.0.8
@@ -35,7 +35,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-python/unittest2[${PYTHON_USEDEP}]
 			=dev-python/webob-1.0.8 )"
 RDEPEND="dev-python/iso8601[${PYTHON_USEDEP}]
-		dev-python/prettytable[${PYTHON_USEDEP}]
+		dev-python/prettytable
 		>=dev-python/requests-0.8.8
 		<=dev-python/requests-1.0
 		dev-python/simplejson[${PYTHON_USEDEP}]
