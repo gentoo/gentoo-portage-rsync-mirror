@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120725-r12.ebuild,v 1.2 2013/03/09 13:52:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120725-r12.ebuild,v 1.3 2013/03/26 19:16:52 swift Exp $
 EAPI="4"
 
 inherit eutils
@@ -11,8 +11,8 @@ DESCRIPTION="SELinux policy for core modules"
 IUSE="+unconfined"
 BASEPOL="2.20120725-r12"
 
-RDEPEND=">=sec-policy/selinux-base-${PVR}
-		unconfined? ( sec-policy/selinux-unconfined )"
+RDEPEND=">=sec-policy/selinux-base-${PVR}"
+PDEPEND="unconfined? ( sec-policy/selinux-unconfined )"
 DEPEND=""
 SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 		http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${PN}-${BASEPOL}.tar.bz2"

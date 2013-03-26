@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.3 2013/03/09 12:36:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.4 2013/03/26 19:16:52 swift Exp $
 EAPI="4"
 
 inherit eutils git-2
@@ -11,8 +11,8 @@ DESCRIPTION="SELinux policy for core modules"
 IUSE="+unconfined"
 BASEPOL="9999"
 
-RDEPEND="=sec-policy/selinux-base-9999
-		unconfined? ( sec-policy/selinux-unconfined )"
+RDEPEND="=sec-policy/selinux-base-9999"
+PDEPEND="unconfined? ( sec-policy/selinux-unconfined )"
 DEPEND=""
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/hardened-refpolicy.git"
 EGIT_SOURCEDIR="${WORKDIR}/refpolicy"
