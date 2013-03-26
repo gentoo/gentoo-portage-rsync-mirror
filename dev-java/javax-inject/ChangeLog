@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/javax-inject
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javax-inject/ChangeLog,v 1.1 2013/03/26 04:17:41 radhermit Exp $
+
+*javax-inject-1 (26 Mar 2013)
+
+  26 Mar 2013; Tim Harder <radhermit@gentoo.org> +javax-inject-1.ebuild,
+  +metadata.xml:
+  Initial import.
+

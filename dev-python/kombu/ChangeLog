@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.20 2013/03/21 18:40:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.21 2013/03/26 04:21:15 prometheanfire Exp $
+
+*kombu-1.0.4-r1 (26 Mar 2013)
+
+  26 Mar 2013; Matthew Thode <prometheanfire@gentoo.org> +kombu-1.0.4-r1.ebuild:
+  kombu 1.0.4 to eapi5
 
   21 Mar 2013; Matthew Thode <prometheanfire@gentoo.org> kombu-1.0.4.ebuild:
   changing the deps of kombu-1.0.4 to be more in line with what they actually

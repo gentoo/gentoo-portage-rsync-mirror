@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/guava
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/ChangeLog,v 1.6 2013/03/07 04:05:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/ChangeLog,v 1.7 2013/03/26 04:21:47 radhermit Exp $
+
+*guava-14.0.1 (26 Mar 2013)
+
+  26 Mar 2013; Tim Harder <radhermit@gentoo.org> +guava-14.0.1.ebuild:
+  Version bump.
 
 *guava-13.0.1 (07 Mar 2013)
 

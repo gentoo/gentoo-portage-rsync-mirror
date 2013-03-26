@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/geoip-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.27 2012/05/29 19:56:43 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.28 2013/03/26 04:01:30 patrick Exp $
+
+*geoip-python-1.2.8 (26 Mar 2013)
+
+  26 Mar 2013; Patrick Lauer <patrick@gentoo.org> +geoip-python-1.2.8.ebuild:
+  Bump
 
   29 May 2012; Brent Baude <ranger@gentoo.org> geoip-python-1.2.7.ebuild:
   Marking geoip-python-1.2.7 ppc for bug 415867
@@ -105,4 +110,3 @@
 
   30 Aug 2003; Alastair Tse <liquidx@gentoo.org> geoip-python-0.2.0.ebuild:
   initial ebuild for python bindings to GeoIP.
-

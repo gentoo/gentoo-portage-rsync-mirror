@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2012.2.3-r1.ebuild,v 1.1 2013/03/25 19:35:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2012.2.3-r1.ebuild,v 1.2 2013/03/26 04:08:27 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -47,7 +47,7 @@ RDEPEND="=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		dev-python/pyudev
 		>dev-python/sqlalchemy-0.6.4
 		<=dev-python/sqlalchemy-0.7.9
-		=dev-python/webob-1.0.8"
+		=dev-python/webob-1.0.8-r1[${PYTHON_USEDEP}]"
 
 python_install() {
 	distutils-r1_python_install
