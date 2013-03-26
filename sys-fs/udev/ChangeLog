@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.879 2013/03/26 19:23:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.880 2013/03/26 19:57:38 ssuominen Exp $
+
+  26 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-199.ebuild,
+  udev-9999.ebuild:
+  Build libudev-private.la early enough to prevent parallel make failure:
+  http://forums.gentoo.org/viewtopic-t-955212-highlight-.html
 
   26 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Synchronize the sys-apps/systemd blocker with ones in 198-r6 and 199 as

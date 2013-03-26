@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/bozohttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.16 2013/02/02 12:10:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.17 2013/03/26 19:54:50 tomwij Exp $
+
+*bozohttpd-20111118 (26 Mar 2013)
+
+  26 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +bozohttpd-20111118.ebuild:
+  Version bump to 20111118, EAPI 5. Non maintainer commit.
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup up due #48914
