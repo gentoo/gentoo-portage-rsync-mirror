@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.42.ebuild,v 1.1 2013/03/23 16:46:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.42.ebuild,v 1.2 2013/03/26 13:52:19 jer Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic pam
@@ -74,7 +74,7 @@ src_configure() {
 		$(use_with truetype freetype) \
 		$(use_with truetype ttf) \
 		$(use_with xinerama) \
-		--disable-use-mb \
+		--disable-mb \
 		--enable-appdefaultdir=/usr/share/X11/app-defaults \
 		--enable-syslog \
 		--enable-vtlock \

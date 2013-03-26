@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.10 2013/03/18 10:07:44 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.11 2013/03/26 13:49:39 scarabeus Exp $
 
 # @ECLASS: obs-service.eclass
 # @MAINTAINER:
@@ -84,6 +84,9 @@ obs-service_src_prepare() {
 	debug-print "Replacing all paths to find suse-build in Gentoo"
 	find "${S}" -type f -exec \
 		sed -i 's|/usr/lib/build|/usr/libexec/suse-build|g' {} +
+	debug-print "Replacing all paths from hardcoded suse libexec"
+	find "${S}" -type f -exec \
+		sed -i 's|/usr/lib/obs|/usr/libexec/obs|g' {} +
 }
 
 # @FUNCTION: obs-service_src_install

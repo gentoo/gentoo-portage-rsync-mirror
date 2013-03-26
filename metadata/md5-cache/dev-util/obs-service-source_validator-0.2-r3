@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/TimeDate dev-util/osc dev-util/suse-build
 SLOT=0
 SRC_URI=https://api.opensuse.org/public/source/openSUSE:Tools/obs-service-source_validator/obs-service-source_validator-0.2.tar.bz2
-_eclasses_=obs-download	8b22473fde39f5051ce00b61062dd086	obs-service	286f42d5fbcbbd975d008793625119a0
+_eclasses_=obs-download	8b22473fde39f5051ce00b61062dd086	obs-service	0fc1a1ab792dd8a4e38c10901ff57032
 _md5_=637b40e0d1b2ebb1f974d4e4348e9eb8

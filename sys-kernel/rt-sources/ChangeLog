@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/rt-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.19 2013/03/17 15:35:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.20 2013/03/26 14:01:09 psomas Exp $
+
+*rt-sources-3.8.4_p1 (26 Mar 2013)
+*rt-sources-3.6.11_p31 (26 Mar 2013)
+
+  26 Mar 2013; <psomas@gentoo.org> +rt-sources-3.6.11_p31.ebuild,
+  +rt-sources-3.8.4_p1.ebuild:
+  Version bump
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
