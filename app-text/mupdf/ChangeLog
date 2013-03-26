@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.62 2013/03/26 11:44:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.63 2013/03/26 18:16:32 ago Exp $
+
+  26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> mupdf-1.1_p20121127.ebuild:
+  Stable for ppc, wrt bug #463196
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> mupdf-1.1_p20121127.ebuild:
   Stable for x86, wrt bug #463196

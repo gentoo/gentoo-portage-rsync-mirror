@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.3.ebuild,v 1.3 2013/03/26 11:41:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.3.ebuild,v 1.4 2013/03/26 18:25:00 xarthisius Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="mirror/replicate block-devices across a network-connection"
 SRC_URI="http://oss.linbit.com/drbd/$(get_version_component_range 1-2 ${PV})/${P}.tar.gz"
 HOMEPAGE="http://www.drbd.org"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="bash-completion heartbeat pacemaker +udev xen"
 SLOT="0"
 
