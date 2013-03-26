@@ -693,8 +693,6 @@ app-leechcraft/lc-poshuku:wyfv - Build WYFV for replacing Flash-based video play
 app-leechcraft/lc-vrooby:udisks - Use sys-fs/udisks:0 for block device access (e.g., automounting)
 app-leechcraft/lc-vrooby:udisks2 - Use sys-fs/udisks:2 for block device access (e.g., automounting)
 app-leechcraft/leechcraft-meta:unstable - Pull plugins from ~arch
-app-misc/anki:furigana - Enable support for furigana generation
-app-misc/anki:graph - Enable support for making graphs
 app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
 app-misc/byobu:screen - Use app-misc/screen as the default backend

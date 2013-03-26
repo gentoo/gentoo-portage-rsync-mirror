@@ -15,12 +15,6 @@
 		quickly, easily and efficiently as possible.
 	</longdescription>
 	<use>
-		<flag name="furigana">
-			Enable support for furigana generation
-		</flag>
-		<flag name="graph">
-			Enable support for making graphs
-		</flag>
 		<flag name="recording">
 			Enable support for audio recording
 		</flag>
