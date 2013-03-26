@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.2 2012/12/19 00:40:55 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.3 2013/03/26 00:51:44 chutzpah Exp $
 
 EAPI=5
 
@@ -62,5 +62,5 @@ src_install() {
 }
 
 python_test() {
-	SHELL="/bin/bash" ./tests/runtests.py --unit-tests --no-report || die
+	SHELL="/bin/bash" TMPDIR=/tmp ./tests/runtests.py --unit-tests --no-report || die
 }
