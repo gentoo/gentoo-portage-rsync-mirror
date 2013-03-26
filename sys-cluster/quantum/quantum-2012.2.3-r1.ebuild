@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2012.2.3-r1.ebuild,v 1.2 2013/03/26 04:08:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2012.2.3-r1.ebuild,v 1.3 2013/03/26 04:38:57 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -40,7 +40,7 @@ RDEPEND="=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
 		dev-python/httplib2[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
-		=dev-python/kombu-1.0.4
+		=dev-python/kombu-1.0.4-r1[${PYTHON_USEDEP}]
 		dev-python/lxml[${PYTHON_USEDEP}]
 		dev-python/netaddr
 		>=dev-python/python-quantumclient-2.0[${PYTHON_USEDEP}]
