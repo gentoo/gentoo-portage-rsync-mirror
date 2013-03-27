@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.218 2013/02/27 05:40:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.219 2013/03/27 10:40:54 chithanh Exp $
+
+*libdrm-2.4.43 (27 Mar 2013)
+
+  27 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.43.ebuild:
+  Version bump, drop exynos and freedreno support as they are broken in this
+  release.
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> libdrm-2.4.42.ebuild:
   Add ~arm-linux keyword.

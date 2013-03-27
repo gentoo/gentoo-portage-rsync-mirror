@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-input-mouse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.136 2013/03/07 12:26:06 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.137 2013/03/27 10:56:09 chithanh Exp $
+
+*xf86-input-mouse-1.9.0 (27 Mar 2013)
+
+  27 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-input-mouse-1.9.0.ebuild, -xf86-input-mouse-1.7.0.ebuild,
+  -xf86-input-mouse-1.7.1.ebuild, -xf86-input-mouse-1.7.2.ebuild,
+  -xf86-input-mouse-1.8.0.ebuild:
+  Version bump.
 
   07 Mar 2013; Benda Xu <heroxbd@gentoo.org> xf86-input-mouse-1.8.1.ebuild:
   keyword ~amd64-linux and ~x86-linux
