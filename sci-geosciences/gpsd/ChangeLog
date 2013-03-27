@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.95 2013/03/11 17:24:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.97 2013/03/27 20:12:36 vapier Exp $
+
+  27 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/gpsd-3.7-gps_regress.patch, gpsd-3.7.ebuild, gpsd-3.8.ebuild,
+  gpsd-9999.ebuild:
+  Fix build error when USE=-sockets #441760 by Conrad Kostecki.
+
+  27 Mar 2013; Mike Frysinger <vapier@gentoo.org> gpsd-3.8.ebuild,
+  gpsd-9999.ebuild, metadata.xml:
+  Sync gpsd protocol list with current source #461622 by Thomas Witt.
 
 *gpsd-3.8 (11 Mar 2013)
 

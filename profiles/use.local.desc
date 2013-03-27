@@ -5212,6 +5212,7 @@ sci-geosciences/googleearth:qt-bundled - Use bundled Qt4 libraries instead of sy
 sci-geosciences/googleearth:system-mdns - Use nss-mdns library from portagen instead of the bundled one.
 sci-geosciences/googleearth:system-qt - Use Qt4 libraries from portage instead of the bundled ones.
 sci-geosciences/gpsd:dbus - export gpsd data over dbus connections
+sci-geosciences/gpsd:latency_timing - support latency timing information
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
 sci-geosciences/gpsd:shm - export gpsd over shared memory
 sci-geosciences/gpsd:sockets - export gpsd over unix sockets

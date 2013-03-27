@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.8.ebuild,v 1.1 2013/03/11 17:24:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.8.ebuild,v 1.3 2013/03/27 20:12:36 vapier Exp $
 
 EAPI="4"
 
@@ -26,14 +26,15 @@ LICENSE="BSD"
 SLOT="0"
 
 GPSD_PROTOCOLS=(
-	ashtech aivdm clientdebug earthmate evermore fv18 garmin
-	garmintxt gpsclock itrax mtk3301 nmea ntrip navcom oceanserver
-	oldstyle oncore rtcm104v2 rtcm104v3 sirf superstar2 timing tsip
-	tripmate tnt ubx
+	aivdm ashtech earthmate evermore fury fv18 garmin garmintxt
+	geostar gpsclock itrax mtk3301 navcom nmea nmea2000 ntrip
+	oceanserver oncore rtcm104v2 rtcm104v3 sirf superstar2 tnt
+	tripmate tsip ubx
 )
 IUSE_GPSD_PROTOCOLS=${GPSD_PROTOCOLS[@]/#/gpsd_protocols_}
-IUSE="${IUSE_GPSD_PROTOCOLS} bluetooth cxx debug dbus ipv6 ncurses ntp python qt4 +shm +sockets test udev usb X"
-REQUIRED_USE="X? ( python )"
+IUSE="${IUSE_GPSD_PROTOCOLS} bluetooth cxx debug dbus ipv6 latency_timing ncurses ntp python qt4 +shm +sockets test udev usb X"
+REQUIRED_USE="X? ( python )
+	gpsd_protocols_nmea2000? ( gpsd_protocols_aivdm )"
 
 RDEPEND="X? ( dev-python/pygtk:2 )
 	ncurses? ( sys-libs/ncurses )
@@ -60,12 +61,27 @@ pkg_setup() {
 	use python && python_pkg_setup
 }
 
+src_unpack() {
+	default
+
+	# Make sure our list matches the source.
+	local src_protocols=$(echo $(
+		sed -n '/GPS protocols/,/Time service/{s:#.*::;s:[(",]::g;p}' "${S}"/SConstruct | awk '{print $1}' | LC_ALL=C sort
+	) )
+	if [[ ${src_protocols} != ${GPSD_PROTOCOLS[*]} ]] ; then
+		eerror "Detected protocols: ${src_protocols}"
+		eerror "Ebuild protocols:   ${GPSD_PROTOCOLS[*]}"
+		die "please sync ebuild & source"
+	fi
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.8-ldflags.patch
 	epatch "${FILESDIR}"/${PN}-3.8-libgps.patch
 	epatch "${FILESDIR}"/${PN}-3.8-udev.patch
 	epatch "${FILESDIR}"/${PN}-3.4-no-man-gen.patch
 	epatch "${FILESDIR}"/${PN}-3.7-rpath.patch
+	epatch "${FILESDIR}"/${PN}-3.7-gps_regress.patch #441760
 
 	# Avoid useless -L paths to the install dir
 	sed -i \
@@ -105,9 +121,10 @@ src_configure() {
 		python=False
 		$(use_scons bluetooth bluez)
 		$(use_scons cxx libgpsmm)
-		$(use_scons debug)
+		$(use_scons debug clientdebug)
 		$(use_scons dbus dbus_export)
 		$(use_scons ipv6)
+		$(use_scons latency_timing timing)
 		$(use_scons ncurses)
 		$(use_scons ntp ntpshm)
 		$(use_scons ntp pps)

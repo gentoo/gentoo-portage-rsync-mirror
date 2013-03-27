@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.2_rc1.ebuild,v 1.1 2013/03/15 17:58:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.2_rc1-r1.ebuild,v 1.1 2013/03/27 20:28:17 jer Exp $
 
 EAPI=5
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://libnet-dev.sourceforge.net/"
@@ -24,6 +24,10 @@ DOCS=(
 
 S=${WORKDIR}/${P/_/-}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.2-rc.patch
+	eautoreconf
+}
 src_configure() {
 	econf $(use_enable static-libs static)
 }
