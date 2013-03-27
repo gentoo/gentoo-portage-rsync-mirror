@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14597 2013/03/27 13:18:31 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14600 2013/03/27 14:00:49 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -250,12 +250,6 @@ app-emacs/yow
 # Working on the next stable patchset
 =app-emulation/qemu-1.2.2-r4
 
-# Markos Chandras <hwoarang@gentoo.org> (24 Feb 2013)
-# Not functional as cia.vc is gone
-# No maintainer, dead upstream, last bump in 2005
-# See #445644. Removal in 30 days
-dev-util/ciabot-svn
-
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Masked until bug #456788 is fixed.
 =net-analyzer/mtr-0.83
@@ -275,12 +269,6 @@ dev-util/ciabot-svn
 # <vlc-2.0.6 break.
 >=media-video/ffmpeg-1.1
 
-# Michael Sterrett <mr_bones_@gentoo.org> (13 Feb 2013)
-# No longer licensed for sale upstream.
-# Masked for removal on 20130315.
-games-strategy/x2
-games-strategy/x2-demo
-
 # Eray Aslan <eras@gentoo.org> (13 Feb 2013)
 # Mask experimental software
 =mail-mta/postfix-2.11*
@@ -290,26 +278,6 @@ games-strategy/x2-demo
 # but followed by very keen users.  It will be either
 # abandonned or implemented down the track pending further support
 =app-emulation/xen-tools-4.2.1-r2
-
-# Hans de Graaff <graaff@gentoo.org> (11 Feb 2013)
-# No longer supported upstream even for security bugs.
-# Port your application to another version of Rails.
-# The Rails 3.0 version in the tree has security issues
-# and no new 3.0 versions will be released anymore.
-# Removal in 30 days.
-dev-ruby/rails:3.0
-dev-ruby/railties:3.0
-dev-ruby/activerecord:3.0
-dev-ruby/actionmailer:3.0
-dev-ruby/actionpack:3.0
-dev-ruby/activeresource:3.0
-dev-ruby/activemodel:3.0
-dev-ruby/activesupport:3.0
-dev-ruby/arel:2.0
-dev-ruby/i18n:0.5
-dev-ruby/rack-mount:0.6
-dev-ruby/rack-test:0.5
-dev-ruby/mysql2:0.2
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Feb 2013)
 # For most use cases you can unmask this and use this

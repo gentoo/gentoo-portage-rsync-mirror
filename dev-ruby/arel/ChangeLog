@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.31 2013/01/15 02:39:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.32 2013/03/27 13:44:41 moult Exp $
+
+  27 Mar 2013; Dion Moult <moult@gentoo.org> -arel-2.0.10-r1.ebuild:
+  Remove dev-ruby/arel:2.0 due to lack of upstream support
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> arel-2.0.10-r1.ebuild,
   arel-2.2.3.ebuild, arel-3.0.2-r1.ebuild:

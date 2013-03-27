@@ -2262,10 +2262,6 @@ games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
 games-strategy/warzone2100:qt4 - Use qt-gui/qt-opengl for backend rendering instead of sdl
 games-strategy/wesnoth:server - Enable compilation of server
-games-strategy/x2:bonusscripts - Add bonus scripts
-games-strategy/x2:dynamic - Use dynamic binaries instead of static
-games-strategy/x2:langpacks - Install additional language packs
-games-strategy/x2:modkit - Install the modkit
 games-util/gslist:web - Enable the web interface
 games-util/pyfa:graph - Enable support for graphs
 gnome-base/dconf:vala - Add support for dev-lang/vala
