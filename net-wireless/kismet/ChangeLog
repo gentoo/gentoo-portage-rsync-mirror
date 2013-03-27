@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.132 2013/03/17 19:33:57 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.133 2013/03/27 16:16:54 zerochaos Exp $
+
+*kismet-2013.03.1 (27 Mar 2013)
+
+  27 Mar 2013; Rick Farina <zerochaos@gentoo.org> +kismet-2013.03.1.ebuild:
+  new version of kismet, mostly a bugfix release but very worthwhile due to
+  changes in kernel and userspace wifi device handling
 
   17 Mar 2013; Rick Farina <zerochaos@gentoo.org> kismet-9999.ebuild:
   update in line with plugin structure changes

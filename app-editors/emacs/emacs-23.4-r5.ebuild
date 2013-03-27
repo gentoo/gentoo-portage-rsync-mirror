@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.15 2013/03/19 21:35:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.16 2013/03/27 16:01:44 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -164,7 +164,7 @@ src_configure() {
 			myconf="${myconf} --with-x-toolkit=no"
 		fi
 	elif use aqua; then
-		einfo "Configuring to build with Cocoa support"
+		einfo "Configuring to build with Nextstep (Cocoa) support"
 		myconf="${myconf} --with-ns --disable-ns-self-contained"
 		myconf="${myconf} --without-x"
 	else
@@ -230,25 +230,27 @@ src_install () {
 	# remove unused <version>/site-lisp dir
 	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
 
-	local c=";;"
+	local cdir
 	if use source; then
-		insinto /usr/share/emacs/${FULL_VERSION}/src
+		cdir="/usr/share/emacs/${FULL_VERSION}/src"
+		insinto "${cdir}"
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
 		doins src/*.{c,h,m}
 		doins -r src/{m,s}
 		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/Makefile.c
 		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/{m,s}/README
-		c=""
+	elif has installsources ${FEATURES}; then
+		cdir="/usr/src/debug/${CATEGORY}/${PF}/${S#"${WORKDIR}/"}/src"
 	fi
 
-	sed 's/^X//' >"${T}/${SITEFILE}" <<-EOF
+	sed -e "${cdir:+#}/^Y/d" -e "s/^[XY]//" >"${T}/${SITEFILE}" <<-EOF
 	X
 	;;; ${PN}-${SLOT} site-lisp configuration
 	X
 	(when (string-match "\\\\\`${FULL_VERSION//./\\\\.}\\\\>" emacs-version)
-	X  ${c}(setq find-function-C-source-directory
-	X  ${c}      "${EPREFIX}/usr/share/emacs/${FULL_VERSION}/src")
+	Y  (setq find-function-C-source-directory
+	Y	"${EPREFIX}${cdir}")
 	X  (let ((path (getenv "INFOPATH"))
 	X	(dir "${EPREFIX}/usr/share/info/${EMACS_SUFFIX}")
 	X	(re "\\\\\`${EPREFIX}/usr/share/info\\\\>"))

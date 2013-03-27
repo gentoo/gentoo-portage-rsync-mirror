@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/autossh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.35 2011/12/04 19:33:37 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.36 2013/03/27 16:14:02 josejx Exp $
+
+  27 Mar 2013; Joseph Jezak <josejx@gentoo.org> autossh-1.4c.ebuild:
+  Marked ppc stable, ~ppc64.
 
   04 Dec 2011; Tim Harder <radhermit@gentoo.org> -autossh-1.4b.ebuild:
   Remove old.
