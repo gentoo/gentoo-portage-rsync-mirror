@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=dev-lang/perl virtual/perl-File-Path virtual/perl-File-Temp >=dev-vcs/git-1.6.6 dev-lang/perl[-build]
+DESCRIPTION=Highly flexible server for git directory version tracker
+EAPI=5
+HOMEPAGE=http://github.com/sitaramc/gitolite
+IUSE=tools vim-syntax
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl virtual/perl-File-Path virtual/perl-File-Temp >=dev-vcs/git-1.6.6 !dev-vcs/gitolite-gentoo vim-syntax? ( app-vim/gitolite-syntax ) dev-lang/perl[-build]
+SLOT=0
+SRC_URI=https://github.com/sitaramc/gitolite/archive/v3.5.tar.gz -> gitolite-3.5.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=6d7ef35f37874b312ae56e0750d1a84e
