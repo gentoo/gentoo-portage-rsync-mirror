@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/kexec-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.46 2012/03/18 07:46:02 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.47 2013/03/27 11:50:54 jlec Exp $
+
+*kexec-tools-2.0.4 (27 Mar 2013)
+
+  27 Mar 2013; Justin Lecher <jlec@gentoo.org> files/kexec.init-2.0.3,
+  +files/kexec.conf-2.0.4, +files/kexec.init-2.0.4, +kexec-tools-2.0.4.ebuild,
+  +files/kexec-tools-2.0.4-disable-kexec-test.patch, metadata.xml:
+  Version BUmp; drop bashism from initscript, #447548; enhanced detection of
+  kernel and initrd image, #412039
 
 *kexec-tools-2.0.3-r1 (18 Mar 2012)
 
