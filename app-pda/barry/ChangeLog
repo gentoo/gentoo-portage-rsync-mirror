@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/barry
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.30 2013/02/07 21:40:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.31 2013/03/27 05:24:30 ssuominen Exp $
+
+  27 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -barry-0.17.1-r1.ebuild,
+  -files/barry-0.17.1-gcc47.patch:
+  old
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> barry-0.18.3.ebuild:
   Move Creative Commons licenses to shorter names.
