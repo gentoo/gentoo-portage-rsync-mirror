@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnfc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/ChangeLog,v 1.9 2011/10/17 21:29:54 ikelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/ChangeLog,v 1.10 2013/03/26 23:58:46 ikelos Exp $
+
+  26 Mar 2013; Mike Auty <ikelos@gentoo.org> libnfc-1.5.1.ebuild,
+  +files/libnfc-1.5.1-glibc-2.17.patch:
+  Apply patch for glibc-2.17, fixes bug 452212.
 
 *libnfc-1.5.1 (17 Oct 2011)
 

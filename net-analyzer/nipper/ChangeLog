@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nipper
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.28 2008/08/30 19:08:47 ikelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.29 2013/03/26 23:53:09 ikelos Exp $
+
+  26 Mar 2013; Mike Auty <ikelos@gentoo.org> nipper-0.12.0.ebuild:
+  Bump to EAPI 4, see bug 460572.
 
 *nipper-0.12.0 (30 Aug 2008)
 

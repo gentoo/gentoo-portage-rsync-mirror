@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/nipper-0.12.0.ebuild,v 1.1 2008/08/30 19:08:47 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/nipper-0.12.0.ebuild,v 1.2 2013/03/26 23:53:09 ikelos Exp $
+
+EAPI="4"
 
 inherit cmake-utils
 

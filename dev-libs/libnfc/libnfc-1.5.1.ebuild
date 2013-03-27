@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/libnfc-1.5.1.ebuild,v 1.1 2011/10/17 21:29:54 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/libnfc-1.5.1.ebuild,v 1.2 2013/03/26 23:58:46 ikelos Exp $
 
 EAPI="4"
 
@@ -19,6 +19,10 @@ RDEPEND="sys-apps/pcsc-lite
 	virtual/libusb:0"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-1.5.1-glibc-2.17.patch"
+}
 
 src_compile() {
 	emake || die "Failed to compile."
