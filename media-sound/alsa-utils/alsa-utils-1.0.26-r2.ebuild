@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.26-r2.ebuild,v 1.1 2013/02/08 19:37:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.26-r2.ebuild,v 1.2 2013/03/27 10:12:43 ssuominen Exp $
 
 EAPI=5
-inherit eutils systemd udev toolchain-funcs
+inherit eutils systemd udev
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -66,14 +66,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	elog "To take advantage of the init script, and automate the process of"
-	elog "saving and restoring sound-card mixer levels you should"
-	elog "add alsasound to the boot runlevel. You can do this as"
-	elog "root like so:"
-	elog "	# rc-update add alsasound boot"
-	echo
-	ewarn "The ALSA core should be built into the kernel or loaded through other"
-	ewarn "means. There is no longer any modular auto(un)loading in alsa-utils."
-	echo
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		elog
+		elog "To take advantage of the init script, and automate the process of"
+		elog "saving and restoring sound-card mixer levels you should"
+		elog "add alsasound to the boot runlevel. You can do this as"
+		elog "root like so:"
+		elog "# rc-update add alsasound boot"
+		ewarn
+		ewarn "The ALSA core should be built into the kernel or loaded through other"
+		ewarn "means. There is no longer any modular auto(un)loading in alsa-utils."
+	fi
 }

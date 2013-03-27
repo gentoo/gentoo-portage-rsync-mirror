@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.4.ebuild,v 1.8 2013/03/26 16:53:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.4.ebuild,v 1.9 2013/03/27 10:29:01 ago Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.clutter-project.org/"
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0/9"
 IUSE="doc examples +introspection +opengl gles2 +pango"
-KEYWORDS="~alpha amd64 ~mips ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~mips ppc ppc64 x86"
 
 # XXX: need uprof for optional profiling support
 COMMON_DEPEND=">=dev-libs/glib-2.28.0:2

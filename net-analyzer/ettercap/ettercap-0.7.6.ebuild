@@ -1,20 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.4 2013/03/27 10:07:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.6.ebuild,v 1.1 2013/03/27 10:07:10 ago Exp $
 
 EAPI=5
 
 CMAKE_MIN_VERSION=2.8
 
-inherit cmake-utils git-2
+inherit cmake-utils
 
 DESCRIPTION="A suite for man in the middle attacks"
-HOMEPAGE="http://ettercap.sourceforge.net https://github.com/Ettercap/ettercap"
-EGIT_REPO_URI="https://github.com/Ettercap/ettercap.git"
+HOMEPAGE="https://github.com/Ettercap/ettercap"
+SRC_URI="https://github.com/Ettercap/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz" #mirror does not work
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gtk ipv6 ncurses +plugins ssl"
 
 RDEPEND="dev-libs/libpcre

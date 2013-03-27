@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.272 2013/03/26 16:52:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.273 2013/03/27 10:25:55 ago Exp $
+
+  27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gtkhtml-4.6.4.ebuild:
+  Stable for ppc64, wrt bug #458984
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gtkhtml-4.6.4.ebuild:
   Stable for ppc, wrt bug #458984
