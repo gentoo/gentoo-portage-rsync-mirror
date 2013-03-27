@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.880 2013/03/26 19:57:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.881 2013/03/27 08:38:47 ssuominen Exp $
+
+  27 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-199.ebuild,
+  udev-9999.ebuild:
+  Remove install-man3 target to remove empty /usr/share/man/man3 directory
+  (relic from udev-197 when we installed manpages for libsystemd-daemon) by
+  Lars Wendler
 
   26 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-199.ebuild,
   udev-9999.ebuild:

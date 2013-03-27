@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-199.ebuild,v 1.2 2013/03/26 19:57:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-199.ebuild,v 1.3 2013/03/27 08:38:47 ssuominen Exp $
 
 EAPI=5
 
@@ -292,7 +292,6 @@ src_install() {
 		install-dist_udevkeymapforcerelDATA
 		install-dist_udevrulesDATA
 		install-girDATA
-		install-man3
 		install-man7
 		install-man8
 		install-pkgconfiglibDATA

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.initd-r4,v 1.1 2013/03/25 14:34:52 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.initd-r4,v 1.2 2013/03/27 08:52:03 eras Exp $
 
 daemon_clamd="/usr/sbin/clamd"
 daemon_freshclam="/usr/bin/freshclam"
@@ -30,6 +30,9 @@ get_config() {
 }
 
 start() {
+	clamd_socket=$(get_config clamd LocalSocket /var/run/clamav/clamd.sock)
+	clamd_user=$(get_config clamd User clamav)
+	freshclam_user=$(get_config freshclam DatabaseOwner clamav)
 	logfix
 
 	if [ "${START_CLAMD}" = "yes" ]; then
@@ -92,9 +95,6 @@ stop() {
 }
 
 logfix() {
-	clamd_socket=$(get_config clamd LocalSocket /var/run/clamav/clamd.sock)
-	clamd_user=$(get_config clamd User clamav)
-	freshclam_user=$(get_config freshclam DatabaseOwner clamav)
 	if [ "${START_CLAMD}" = "yes" ]; then
 		# fix clamd log permissions
 		# (might be clobbered by logrotate or something)
