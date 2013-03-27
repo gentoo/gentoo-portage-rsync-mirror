@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40-r1.ebuild,v 1.3 2012/06/08 11:53:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40-r1.ebuild,v 1.4 2013/03/27 19:13:57 jlec Exp $
 
 EAPI=4
 
@@ -49,7 +49,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)"
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {

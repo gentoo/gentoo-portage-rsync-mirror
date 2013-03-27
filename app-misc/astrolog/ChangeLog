@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/astrolog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.15 2012/06/08 11:53:40 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.16 2013/03/27 19:13:57 jlec Exp $
+
+*astrolog-5.40-r2 (27 Mar 2013)
+
+  27 Mar 2013; Justin Lecher <jlec@gentoo.org> -astrolog-5.40.ebuild,
+  astrolog-5.40-r1.ebuild, +astrolog-5.40-r2.ebuild, metadata.xml:
+  Drop old; respect LDFLAGS , #336971; thanks Michael Mair-Keimberger (iamnr3)
+  for the patch
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> astrolog-5.40-r1.ebuild:
   x86 stable wrt bug #418597

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.14 2010/01/11 16:41:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40-r2.ebuild,v 1.1 2013/03/27 19:13:57 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.astrolog.org/ftp/ast54unx.shr"
 
 LICENSE="astrolog"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X"
 
 DEPEND="X? ( x11-libs/libX11 )"
@@ -21,17 +21,19 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
 src_unpack() {
-	sh "${DISTDIR}"/ast54unx.shr
+	sh "${DISTDIR}"/ast54unx.shr || die
 }
 
 src_prepare() {
 	# remove stripping of created binary, dump hardcoded CFLAGS,
 	# respect CC (bug #243606), and CFLAGS (bug #240057)
-	sed -i -e 's:strip:#strip:' -e 's:^CFLAGS = :#CFLAGS = :' \
-		-e 's:\tcc :\t$(CC) $(CFLAGS) :' Makefile
+	sed \
+		-e 's:strip:#strip:' -e 's:^CFLAGS = :#CFLAGS = :' \
+		-e 's:\tcc :\t$(CC) $(CFLAGS) $(LDFLAGS) :' \
+		-i Makefile || die
 
 	# we use /usr/share/astrolog for config and (optional) ephemeris-data-files
-	sed -i -e "s:~/astrolog:/usr/share/astrolog:g" astrolog.h
+	sed -i -e "s:~/astrolog:/usr/share/astrolog:g" astrolog.h || die
 
 	# if we use X, we need to add -L/usr/X11R6/lib to compile succesful
 	#use X && sed -i -e "s:-lm -lX11:-lm -lX11 -L/usr/X11R6/lib:g" Makefile
@@ -47,14 +49,14 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed"
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin astrolog || die
+	dobin astrolog
 	dodoc Helpfile.540 README.1ST README.540 Update.540
 	insinto /usr/share/astrolog
-	doins astrolog.dat || die
+	doins astrolog.dat
 }
 
 pkg_postinst() {

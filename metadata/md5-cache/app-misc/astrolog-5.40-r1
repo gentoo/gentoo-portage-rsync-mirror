@@ -10,4 +10,4 @@ RDEPEND=X? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=http://www.astrolog.org/ftp/ast54unx.shr
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=f228d37f7bad2cf600f55e0375f956fb
+_md5_=b674089d587aece07401ab14e6cf1f4c
