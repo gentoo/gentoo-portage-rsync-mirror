@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.208 2013/03/05 23:03:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.209 2013/03/27 21:38:19 eva Exp $
+
+*gnome-doc-utils-0.20.10-r1 (27 Mar 2013)
+
+  27 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-doc-utils-0.20.10-r1.ebuild:
+  Version bump. Switch to EAPI=5 and python-r1 support.
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-doc-utils-0.20.6.ebuild, -gnome-doc-utils-0.20.9.ebuild:
