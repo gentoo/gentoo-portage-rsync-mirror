@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.91 2012/12/27 11:09:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.92 2013/03/27 17:59:07 ryao Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -9,6 +9,7 @@ app-accessibility/perlbox-voice
 app-arch/stuffit
 app-benchmarks/cpuburn
 =app-editors/emacs-18*
+app-emulation/crossover-bin
 app-emulation/crossover-office-bin
 app-emulation/crossover-office-pro-bin
 app-emulation/playonlinux
