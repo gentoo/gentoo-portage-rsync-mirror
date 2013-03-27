@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.5 2012/07/12 16:59:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.6 2013/03/27 12:41:51 kensington Exp $
+
+EAPI=5
 
 if [[ "${PV}" != "9999" ]]; then
 	MODULE_AUTHOR="AKHUETTEL"
@@ -25,7 +27,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="
-	dev-lang/perl
+	dev-lang/perl[ithreads]
 	dev-perl/Clone
 	dev-perl/Exception-Class
 	dev-perl/TermReadKey
