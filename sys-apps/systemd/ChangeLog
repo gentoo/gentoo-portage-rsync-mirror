@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.100 2013/03/26 22:02:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.101 2013/03/27 07:54:17 mgorny Exp $
+
+*systemd-199 (27 Mar 2013)
+
+  27 Mar 2013; Michał Górny <mgorny@gentoo.org> +systemd-199.ebuild:
+  Version bump.
 
   26 Mar 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Move nss_myhostname back to /usr -- it seems that nss handles this well.
