@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.27 2013/03/23 12:12:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.28 2013/03/27 15:58:43 floppym Exp $
 
 EAPI="4"
 
@@ -28,6 +28,7 @@ IUSE="ayatana avahi crypt debug freerdp gnome-keyring nls ssh telepathy vte"
 
 RDEPEND="
 	x11-libs/gtk+:3
+	>=dev-libs/glib-2.31.18:2
 	>=net-libs/libvncserver-0.9.8.2
 	x11-libs/libxkbfile
 	avahi? ( net-dns/avahi[gtk3] )

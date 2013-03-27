@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.8.ebuild,v 1.1 2013/03/26 22:16:00 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.8.ebuild,v 1.2 2013/03/27 15:33:02 wired Exp $
 
 EAPI=5
 
@@ -54,6 +54,9 @@ src_prepare() {
 	# bug 438558
 	# 1.7 segfaults when entering copy mode if compiled with -Os
 	replace-flags -Os -O2
+
+	# regenerate aclocal.m4 to support earlier automake versions
+	rm aclocal.m4
 
 	autotools-utils_src_prepare
 }
