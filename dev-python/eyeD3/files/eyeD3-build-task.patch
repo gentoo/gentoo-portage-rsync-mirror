@@ -1,0 +1,19 @@
+Remove broken build task.
+https://bugs.gentoo.org/show_bug.cgi?id=463340
+--- a/pavement.py
++++ b/pavement.py
+@@ -144,14 +144,6 @@
+         target_file.close()
+ 
+ @task
+-@needs("eyed3_info",
+-       "setuptools.command.build_py")
+-@consume_args
+-def build():
+-    '''Build the code'''
+-    pass
+-
+-@task
+ @needs("test_clean", "uncog")
+ def clean():
+     '''Cleans mostly everything'''

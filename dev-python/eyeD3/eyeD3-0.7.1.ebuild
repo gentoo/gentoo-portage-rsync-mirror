@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.1.ebuild,v 1.4 2013/02/03 19:33:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.1.ebuild,v 1.5 2013/03/26 23:10:08 floppym Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ RDEPEND="!<${CATEGORY}/${PN}-0.6.18-r1:0"
 DEPEND="${RDEPEND}
 	dev-python/paver"
 
-src_install() {
+PATCHES=( "${FILESDIR}/${PN}-build-task.patch" )
+
+python_install_all() {
 	dodoc AUTHORS ChangeLog README.rst
-	distutils-r1_src_install
 }
