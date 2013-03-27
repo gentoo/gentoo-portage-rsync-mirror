@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.368 2013/03/26 16:51:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.369 2013/03/27 09:49:54 ago Exp $
+
+  27 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
+  gnome-applets-2.32.1.1-r2.ebuild:
+  Stable for ppc64, wrt bug #458984
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   gnome-applets-2.32.1.1-r2.ebuild:

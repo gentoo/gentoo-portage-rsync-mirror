@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.2.2.ebuild,v 1.11 2013/03/26 16:48:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.2.2.ebuild,v 1.12 2013/03/27 09:41:09 ago Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/libgxps"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86"
 IUSE="debug doc +introspection jpeg lcms static-libs tiff"
 
 RDEPEND=">=app-arch/libarchive-2.8
