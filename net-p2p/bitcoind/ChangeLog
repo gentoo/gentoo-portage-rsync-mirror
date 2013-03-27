@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.58 2013/03/17 16:22:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.59 2013/03/27 22:52:42 blueness Exp $
+
+*bitcoind-0.8.1 (27 Mar 2013)
+
+  27 Mar 2013; Anthony G. Basile <blueness@gentoo.org> +bitcoind-0.8.1.ebuild:
+  Version bump
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

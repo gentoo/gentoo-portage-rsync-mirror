@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.294 2013/03/22 16:58:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.295 2013/03/27 22:31:13 phajdan.jr Exp $
+
+*v8-3.17.15.3 (27 Mar 2013)
+
+  27 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> -v8-3.17.6.ebuild,
+  +v8-3.17.15.3.ebuild:
+  Dev channel bump. Set SONAME to PV (bug #462618 by Piotr Mitas). Remove old.
 
   22 Mar 2013; Mike Gilbert <floppym@gentoo.org> v8-3.16.14.9-r1.ebuild:
   Just set soname to ${PV} instead. Bug 462618.

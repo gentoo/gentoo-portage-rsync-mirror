@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.852 2013/03/27 02:38:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.853 2013/03/27 22:41:11 phajdan.jr Exp $
+
+*chromium-27.0.1453.3 (27 Mar 2013)
+
+  27 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-pnacl-r0.patch, -chromium-27.0.1444.3.ebuild,
+  +chromium-27.0.1453.3.ebuild:
+  Dev channel bump. Remove old.
 
 *chromium-26.0.1410.43 (27 Mar 2013)
 

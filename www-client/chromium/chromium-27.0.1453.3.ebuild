@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1444.3.ebuild,v 1.1 2013/03/19 22:49:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1453.3.ebuild,v 1.1 2013/03/27 22:41:11 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -14,12 +14,13 @@ inherit chromium eutils flag-o-matic multilib \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.xz"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.xz
+	test? ( https://commondatastorage.googleapis.com/chromium-browser-official/${P}-testdata.tar.xz )"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups gnome gnome-keyring gps kerberos selinux system-sqlite tcmalloc"
+IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -56,7 +57,7 @@ RDEPEND="app-accessibility/speech-dispatcher:=
 	!arm? ( !x86? ( >=media-libs/mesa-9.1:=[gles2] ) )
 	media-libs/opus:=
 	media-libs/speex:=
-	media-sound/pulseaudio:=
+	pulseaudio? ( media-sound/pulseaudio:= )
 	>=media-video/ffmpeg-1.0:=[opus]
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
@@ -134,6 +135,9 @@ src_prepare() {
 
 	# Fix build issue with smhasher, bug #459126 .
 	epatch "${FILESDIR}/${PN}-smhasher-r0.patch"
+
+	# Fix build without pnacl, to be upstreamed.
+	epatch "${FILESDIR}/${PN}-pnacl-r0.patch"
 
 	epatch_user
 
@@ -267,6 +271,7 @@ src_configure() {
 		$(gyp_use gps linux_use_libgps)
 		$(gyp_use gps linux_link_libgps)
 		$(gyp_use kerberos)
+		$(gyp_use pulseaudio)
 		$(gyp_use selinux selinux)"
 
 	if use system-sqlite; then
@@ -354,9 +359,10 @@ src_configure() {
 }
 
 src_compile() {
+	# TODO: add media_unittests after fixing compile (bug #462546).
 	local test_targets
 	for x in base cacheinvalidation crypto \
-		googleurl gpu printing sql; do
+		googleurl gpu net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
 
@@ -410,6 +416,7 @@ src_test() {
 	local excluded_base_unittests=(
 		"ICUStringConversionsTest.*" # bug #350347
 		"MessagePumpLibeventTest.*" # bug #398591
+		"TimeTest.JsTime" # bug #459614
 	)
 	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 
@@ -418,20 +425,20 @@ src_test() {
 	runtest out/Release/googleurl_unittests
 	runtest out/Release/gpu_unittests
 
-	# TODO: re-enable when we get the test data in a separate tarball.
+	# TODO: add media_unittests after fixing compile (bug #462546).
 	# runtest out/Release/media_unittests
 
-	# local excluded_net_unittests=(
-	#	"NetUtilTest.IDNToUnicode*" # bug 361885
-	#	"NetUtilTest.FormatUrl*" # see above
-	#	"DnsConfigServiceTest.GetSystemConfig" # bug #394883
-	#	"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
-	#	"URLFetcher*" # bug #425764
-	#	"HTTPSOCSPTest.*" # bug #426630
-	#	"HTTPSEVCRLSetTest.*" # see above
-	#	"HTTPSCRLSetTest.*" # see above
-	#)
-	# runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
+	local excluded_net_unittests=(
+		"NetUtilTest.IDNToUnicode*" # bug 361885
+		"NetUtilTest.FormatUrl*" # see above
+		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
+		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
+		"URLFetcher*" # bug #425764
+		"HTTPSOCSPTest.*" # bug #426630
+		"HTTPSEVCRLSetTest.*" # see above
+		"HTTPSCRLSetTest.*" # see above
+	)
+	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
 	runtest out/Release/printing_unittests
 	runtest out/Release/sql_unittests
