@@ -5510,6 +5510,13 @@ sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
 sys-apps/kmod:tools - Install module loading/unloading tools.
+sys-apps/kmscon:drm - Enable Linux DRM for backend
+sys-apps/kmscon:fbdev - Enable Linux FBDev for backend
+sys-apps/kmscon:gles2 - Enable GLES2 for backend
+sys-apps/kmscon:multiseat - Enable multiseat support via systemd
+sys-apps/kmscon:optimizations - Enable optimizations
+sys-apps/kmscon:pango - Enable pango font rendering
+sys-apps/kmscon:pixman - Enable pixman font rendering
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:floppy - Install a script to create floppy disks containing memtest86+ binaries.
