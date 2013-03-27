@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.38 2013/02/25 08:30:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.39 2013/03/27 05:52:16 radhermit Exp $
+
+*p11-kit-0.17.4 (27 Mar 2013)
+
+  27 Mar 2013; Tim Harder <radhermit@gentoo.org> +p11-kit-0.17.4.ebuild:
+  Version bump.
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> p11-kit-0.14.ebuild:
   Add ~arm-linux and ~x86-linux keywords.
