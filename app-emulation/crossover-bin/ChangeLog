@@ -1,0 +1,14 @@
+# ChangeLog for app-emulation/crossover-bin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/ChangeLog,v 1.2 2013/03/27 18:30:31 ryao Exp $
+
+  27 Mar 2013; Richard Yao <ryao@gentoo.org> crossover-bin-12.1.2.ebuild:
+  Fix mistake caused by last minute correction to make repoman happy.
+
+*crossover-bin-12.1.2 (27 Mar 2013)
+
+  27 Mar 2013; Richard Yao <ryao@gentoo.org> +crossover-bin-12.1.2.ebuild,
+  +metadata.xml:
+  New package app-emulation/crossover-bin. Ebuild written by me with
+  app-emulation/crossover-office-pro-bin as template; influenced by feedback
+  from hasufell.

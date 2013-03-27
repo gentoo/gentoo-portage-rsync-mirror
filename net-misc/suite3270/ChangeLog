@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.47 2013/03/22 17:27:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.48 2013/03/27 18:04:27 vapier Exp $
+
+  27 Mar 2013; Mike Frysinger <vapier@gentoo.org> +files/Makefile.in,
+  suite3270-3.3.12_p12.ebuild:
+  Build/install in parallel across all subdirs.
 
   22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> suite3270-3.3.12_p12.ebuild:
   Stable for ppc, wrt bug #462614

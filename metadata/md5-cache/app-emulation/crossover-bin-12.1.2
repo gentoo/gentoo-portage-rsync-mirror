@@ -1,0 +1,14 @@
+DEFINED_PHASES=install nofetch prepare setup unpack
+DEPEND=dev-lang/perl app-arch/unzip
+DESCRIPTION=Commercial version of app-emulation/wine with paid support.
+EAPI=5
+HOMEPAGE=http://www.codeweavers.com/products/crossover/
+IUSE=+capi +cups doc +gphoto2 +gsm +jpeg +lcms +ldap +mp3 +nls +openal +opengl +png +scanner +ssl +v4l python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_single_target_python2_5 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=CROSSOVER-2
+RDEPEND=dev-lang/perl app-arch/unzip !prefix? ( sys-libs/glibc ) >=dev-python/pygtk-2.10 dev-util/desktop-file-utils sys-apps/dbus !app-emulation/crossover-office-pro-bin !app-emulation/crossover-office-bin amd64? ( openal? ( app-emulation/emul-linux-x86-sdl ) opengl? ( app-emulation/emul-linux-x86-opengl ) scanner? ( app-emulation/emul-linux-x86-medialibs ) v4l? ( app-emulation/emul-linux-x86-medialibs ) app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-soundlibs app-emulation/emul-linux-x86-xlibs ) x86? ( capi? ( net-dialup/capi4k-utils ) cups? ( net-print/cups ) gsm? ( media-sound/gsm ) jpeg? ( virtual/jpeg ) lcms? ( media-libs/lcms:0 ) ldap? ( net-nds/openldap ) gphoto2? ( media-libs/libgphoto2 ) mp3? ( >=media-sound/mpg123-1.5.0 ) nls? ( sys-devel/gettext ) openal? ( media-libs/openal ) opengl? ( virtual/glu virtual/opengl ) png? ( media-libs/libpng:0 ) scanner? ( media-gfx/sane-backends ) ssl? ( dev-libs/openssl:0 ) v4l? ( media-libs/libv4l ) media-libs/alsa-lib >=media-libs/freetype-2.0.0 media-libs/mesa sys-apps/util-linux sys-libs/zlib x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext x11-libs/libXi x11-libs/libXrandr x11-libs/libXxf86vm x11-libs/libxcb )
+RESTRICT=fetch test
+SLOT=0
+SRC_URI=install-crossover-12.1.2.bin
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	c5012e18184f3e0473a1f1a7b9662ab0	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	0e3a1fb79ec6a7c47f2a223d19c6385f
+_md5_=e5a14c8fc2cfc1a3e30aa3c95d00e3c2

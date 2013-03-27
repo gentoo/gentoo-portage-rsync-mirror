@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.12_p12.ebuild,v 1.4 2013/03/22 17:27:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.12_p12.ebuild,v 1.5 2013/03/27 18:04:27 vapier Exp $
 
 EAPI="4"
 
@@ -71,28 +71,25 @@ src_configure() {
 			$(use_enable ssl) \
 			"${myconf[@]}"
 	done
+	sed \
+		-e "s:@SUBDIRS@:$(suite3270_makelist):" \
+		-e "s:@VER@:${SUB_PV}:" \
+		"${FILESDIR}"/Makefile.in > "${S}"/Makefile || die
 	multijob_finish
-}
-
-src_compile() {
-	local p
-	for p in $(suite3270_makelist) ; do
-		emake -C "${S}/${p}-${SUB_PV}"
-	done
 }
 
 src_install() {
 	use X && dodir "${FONTDIR}"
+	EXTRA_TARGETS='install.man' default
 	local p
 	for p in $(suite3270_makelist) ; do
 		cd "${S}/${p}-${SUB_PV}"
-		emake DESTDIR="${D}" install install.man
 		docinto ${p}
 		local d=$(echo README*)
 		[[ -n ${d} ]] && dodoc ${d}
 		use doc && dohtml html/*
 	done
-	chmod a-x "${D}"/usr/share/man/*/*
+	find "${ED}"/usr/share/man/ -type f -exec chmod a-x {} +
 
 	use X && font_src_install
 }
