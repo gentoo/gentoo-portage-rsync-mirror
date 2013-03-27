@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.12_p12.ebuild,v 1.5 2013/03/27 18:04:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.12_p12.ebuild,v 1.7 2013/03/27 18:41:27 vapier Exp $
 
 EAPI="4"
 
@@ -36,7 +36,6 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
 	X? (
-		x11-misc/imake
 		x11-misc/xbitmaps
 		x11-proto/xproto
 		app-text/rman
@@ -51,6 +50,22 @@ suite3270_makelist() {
 		$(usex X x3270 '')
 }
 
+src_prepare() {
+	# Some subdirs (like c3270/x3270/s3270) install the same set of data files
+	# (they have the same contents).  Wrap that in a retry to avoid errors.
+	cat <<-EOF > _install
+	#!/bin/sh
+	for n in {1..5}; do
+		install "\$@" && exit
+		echo "retrying ..."
+	done
+	EOF
+	chmod a+rx _install
+	sed -i \
+		-e "s:@INSTALL@:${S}/_install:" \
+		*/Makefile.in
+}
+
 src_configure() {
 	local p myconf
 	# Run configures in parallel!
@@ -59,6 +74,7 @@ src_configure() {
 		cd "${S}/${p}-${SUB_PV}"
 		if [[ ${p} == "x3270" ]] ; then
 			myconf=(
+				--without-xmkmf
 				$(use_with X x)
 				$(use_with X fontdir "${FONTDIR}")
 			)
