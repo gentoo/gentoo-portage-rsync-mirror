@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.8.ebuild,v 1.2 2013/03/28 12:22:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.8-r1.ebuild,v 1.1 2013/03/28 12:34:56 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_2 pypy{1_9,2_0} )
+PYTHON_COMPAT=( python3_2 )
 
 inherit autotools-utils python-r1
 

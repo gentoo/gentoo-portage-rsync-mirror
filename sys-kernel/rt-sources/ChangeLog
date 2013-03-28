@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/rt-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.21 2013/03/26 14:03:28 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.22 2013/03/28 12:47:45 psomas Exp $
+
+*rt-sources-3.4.36_p50 (28 Mar 2013)
+
+  28 Mar 2013; <psomas@gentoo.org> -rt-sources-3.4.33_p47.ebuild,
+  +rt-sources-3.4.36_p50.ebuild:
+  Version bump for 3.4
 
   26 Mar 2013; <psomas@gentoo.org> -rt-sources-3.0.27_p46.ebuild,
   -rt-sources-3.2.14_p24.ebuild:

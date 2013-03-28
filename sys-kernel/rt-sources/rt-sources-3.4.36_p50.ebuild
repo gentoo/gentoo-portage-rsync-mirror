@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/rt-sources-3.4.33_p47.ebuild,v 1.2 2013/03/09 21:07:33 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/rt-sources-3.4.36_p50.ebuild,v 1.1 2013/03/28 12:47:45 psomas Exp $
 
 EAPI="5"
 ETYPE="sources"
@@ -19,7 +19,7 @@ inherit kernel-2
 detect_version
 
 K_BRANCH_ID="${KV_MAJOR}.${KV_MINOR}"
-RT_FILE="patch-${K_BRANCH_ID}.${KV_PATCH}-rt${RT_PATCHSET}.patch.bz2"
+RT_FILE="patch-${K_BRANCH_ID}.${KV_PATCH}-rt${RT_PATCHSET}.patch.xz"
 RT_URI="mirror://kernel/linux/kernel/projects/rt/${K_BRANCH_ID}/${RT_FILE}"
 
 DESCRIPTION="Full Linux ${K_BRANCH_ID} kernel sources with the CONFIG_PREEMPT_RT patch"

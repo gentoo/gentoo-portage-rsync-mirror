@@ -1643,6 +1643,7 @@ dev-php/pecl-apc:lock_pthreadrw - Enable pthread read/write locking
 dev-php/pecl-apc:lock_semaphore - Enable semaphore locks instead of fcntl
 dev-php/pecl-apc:lock_spinlock - Enable spin locks (EXPERIMENTAL)
 dev-php/pecl-memcached:igbinary - Enable support for the igbinary serializer
+dev-php/pecl-memcached:json - Enable support for json serialization
 dev-php/smarty-docs:html - Install the documentation in HTML format
 dev-php/smarty-docs:pdf - Install the documentation in PDF format
 dev-python/PyFoam:extras - Enable optional dependencies
