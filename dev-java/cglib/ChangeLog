@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/cglib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.51 2010/04/24 17:47:55 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.52 2013/03/28 03:39:38 radhermit Exp $
+
+*cglib-2.2.3 (28 Mar 2013)
+
+  28 Mar 2013; Tim Harder <radhermit@gentoo.org> +cglib-2.2.3.ebuild,
+  +files/cglib-2.2.3-build.patch:
+  Version bump.
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> cglib-2.2.ebuild:
   Marked ~sparc-solaris ~x86-solaris, bug #314093
