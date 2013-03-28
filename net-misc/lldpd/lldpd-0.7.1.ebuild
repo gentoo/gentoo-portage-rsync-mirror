@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.1.ebuild,v 1.4 2013/03/14 13:23:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.1.ebuild,v 1.5 2013/03/28 20:14:56 chutzpah Exp $
 
 EAPI=5
 
 inherit eutils user
 
 DESCRIPTION="Implementation of IEEE 802.1ab (LLDP)"
-HOMEPAGE="http://github.com/vincentbernat/lldpd/wiki"
+HOMEPAGE="http://vincentbernat.github.com/lldpd/"
 SRC_URI="http://media.luffy.cx/files/${PN}/${P}.tar.gz"
 
 LICENSE="ISC"
