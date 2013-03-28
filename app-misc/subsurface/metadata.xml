@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>bmangentoo@gmail.com</email>
+    <name>Aaron Bauman</name>
+    <description>Proxy maintainer. Assign bugs to him.</description>
+  </maintainer>
+  <maintainer>
+    <email>TomWij@gentoo.org</email>
+    <name>Tom Wijsman</name>
+    <description>Committer. CC bugs to him.</description>
+  </maintainer>
+  <herd>proxy-maintainers</herd>
+  <longdescription lang="en">
+    An open source dive log program.
+  </longdescription>
+  <use>
+    <flag name="map">Adds support for OpenStreetMap maps that can be used with your dive logs.</flag>
+  </use>
+</pkgmetadata>

@@ -1,0 +1,12 @@
+# ChangeLog for app-misc/subsurface
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.1 2013/03/28 19:17:56 tomwij Exp $
+
+*subsurface-3.0.2 (28 Mar 2013)
+*subsurface-9999 (28 Mar 2013)
+
+  28 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +metadata.xml,
+  +subsurface-3.0.2.ebuild, +subsurface-9999.ebuild:
+  New package for subsurface, an open source dive log program. Ebuild
+  contributed by Martin Gysel aka bearsh, corrected by Aaron Bauman aka B-Man.
+  Fixes bug #462526.
