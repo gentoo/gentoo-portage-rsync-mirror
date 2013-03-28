@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/sugarcrm-6.5.1.ebuild,v 1.1 2012/10/24 14:19:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/sugarcrm-6.5.10.ebuild,v 1.1 2013/03/28 14:43:03 maksbotan Exp $
 
 EAPI="2"
 
@@ -10,13 +10,13 @@ inherit webapp eutils
 
 DESCRIPTION="A complete CRM and groupware system for businesses of all sizes."
 HOMEPAGE="http://www.sugarforge.org/"
-SRC_URI="mirror://sourceforge/project/sugarcrm/SugarCRM%20Release%20Archive/SugarCRM%206.5.X/SugarCommunityEdition-${PV}/${MY_PN}-${PV}.zip"
+SRC_URI="mirror://sourceforge/project/${PN}/1%20-%20SugarCRM%206.5.X/SugarCommunityEdition-6.5.X/SugarCE-${PV}.zip"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 IUSE="curl imap +json +zlib +mysql +mysqli freetds ldap mssql"
 
-DEPEND=">=dev-lang/php-5.2.10[ssl,soap,unicode,xml,session,tokenizer,ldap?,mssql?,mysql?,mysqli?,zlib?,curl?,imap?,json?]
+DEPEND=">=dev-lang/php-5.2.10[ssl,soap,unicode,xml,session,tokenizer,zip,ldap?,mssql?,mysql?,mysqli?,zlib?,curl?,imap?,json?]
 		dev-php/PEAR-DB
 		dev-php/PEAR-Cache_Lite
 		dev-php/PEAR-Mail_Mime
@@ -39,12 +39,13 @@ src_install () {
 	webapp_configfile "${MY_HTDOCSDIR}"/config.php
 	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess
 
-	for foo in cache custom data modules include ; do
+	for foo in cache custom data modules include upload; do
 		webapp_serverowned -R "${MY_HTDOCSDIR}"/"${foo}"  || die
 
 	done
 
 	webapp_serverowned "${MY_HTDOCSDIR}"/config.php
+	webapp_serverowned "${MY_HTDOCSDIR}"/config_override.php
 
 	elog "Please make adjustment of your php.ini or .htaccess file"
 	elog "Change value \"session.path = \"  according to your desire"
