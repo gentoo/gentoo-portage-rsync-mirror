@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.19.1.ebuild,v 1.4 2013/01/04 14:34:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.20.2.ebuild,v 1.1 2013/03/28 17:17:54 chainsaw Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools base eutils linux-info multilib
 
 MY_P="${PN}-${PV/_/-}"
@@ -10,10 +10,10 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-1.16.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-1.17.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file
@@ -234,7 +234,7 @@ src_install() {
 	diropts -m 0750 -o asterisk -g asterisk
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.8.0/asterisk.initd4 asterisk
+	newinitd "${FILESDIR}"/1.8.0/asterisk.initd5 asterisk
 	newconfd "${FILESDIR}"/1.8.0/asterisk.confd asterisk
 
 	# install the upgrade documentation
