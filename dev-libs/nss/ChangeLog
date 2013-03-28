@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.295 2013/03/14 19:48:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.296 2013/03/28 00:28:23 vapier Exp $
+
+  28 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  -files/nss-3.13.1-pkcs11n-header-fix.patch:
+  Drop unused file.
 
   14 Mar 2013; Mike Frysinger <vapier@gentoo.org> nss-3.14.3.ebuild:
   Fix nssbits handling when cross-compiling.
