@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.6 2013/03/27 12:41:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.7 2013/03/27 23:08:31 dilfridge Exp $
 
 EAPI=5
 
@@ -24,10 +24,9 @@ HOMEPAGE="http://www.labmeasurement.de/"
 LICENSE="|| ( Artistic GPL-2 )"
 
 SLOT="0"
-IUSE=""
+IUSE="debug"
 
 RDEPEND="
-	dev-lang/perl[ithreads]
 	dev-perl/Clone
 	dev-perl/Exception-Class
 	dev-perl/TermReadKey
@@ -44,6 +43,10 @@ RDEPEND="
 	virtual/perl-Time-HiRes
 	!dev-perl/Lab-Instrument
 	!dev-perl/Lab-Tools
+	debug? (
+		dev-lang/perl[ithreads]
+		dev-perl/wxperl
+	)
 "
 DEPEND="
 	${RDEPEND}
