@@ -1,0 +1,13 @@
+# ChangeLog for sci-geosciences/osm-gps-map
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/ChangeLog,v 1.1 2013/03/28 18:57:59 tomwij Exp $
+
+*osm-gps-map-0.7.3 (28 Mar 2013)
+
+  28 Mar 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/osm-gps-map-0.7.3-disable-compiler-warnings.patch,
+  +files/osm-gps-map-0.7.3-fix-docs-location.patch, +metadata.xml,
+  +osm-gps-map-0.7.3.ebuild:
+  New ebuild for osm-gps-map. Made by Jorge Manuel B. S. Vicetto aka
+  jmbsvicetto, corrected by Aaron Bauman aka B-Man. Partially fixes bug #373809
+  which still awaits Python bindings.
