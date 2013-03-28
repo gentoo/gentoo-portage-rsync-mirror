@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Socket-SSL
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.195 2013/03/23 13:27:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.196 2013/03/28 22:19:41 ago Exp $
+
+  28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> IO-Socket-SSL-1.840.0.ebuild:
+  Stable for ia64, wrt bug #461676
 
   23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> IO-Socket-SSL-1.840.0.ebuild:
   Stable for alpha, wrt bug #461676

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc11-r3.ebuild,v 1.1 2013/02/06 01:48:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc11-r3.ebuild,v 1.2 2013/03/28 22:19:57 ryao Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/downloads/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
+	SRC_URI="mirror://github/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
 	S="${WORKDIR}/${PN}-${MY_PV}"
 	KEYWORDS="~amd64"
 fi

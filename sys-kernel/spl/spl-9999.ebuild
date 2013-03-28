@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.33 2013/03/23 23:48:08 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.34 2013/03/28 22:19:21 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -62,17 +62,8 @@ src_prepare() {
 
 	if [ ${PV} != "9999" ]
 	then
-		# Fix x86 build failures on Linux 3.4 and later, bug #450646
-		epatch "${FILESDIR}/${P}-fix-atomic64-checks.patch"
-
-		# Fix autotools check that fails on ~ppc64
-		epatch "${FILESDIR}/${P}-fix-mutex-owner-check.patch"
-
-		# Linux 3.9 Support
-		epatch "${FILESDIR}/${P}-linux-3.9-compat.patch"
-
-		# Free memory under load quickly
-		epatch "${FILESDIR}/${P}-no-cond_resched.patch"
+		# Be more like FreeBSD and Illumos when handling hostids
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-simplify-hostid-logic.patch"
 	fi
 
 	# splat is unnecessary unless we are debugging
@@ -106,19 +97,16 @@ src_install() {
 	dosym "$(basename $(echo "${ED}/usr/src/spl-"*))/${KV_FULL}" /usr/src/spl
 }
 
-src_test() {
-	if [[ ! -e /proc/modules ]]
+pkg_postinst() {
+	linux-mod_pkg_postinst
+
+	# Remove old modules
+	if [ -d "${EROOT}lib/modules/${KV_FULL}/addon/spl" ]
 	then
-		die  "Missing /proc/modules"
-	elif [[ $UID -ne 0 ]]
-	then
-		ewarn "Cannot run make check tests with FEATURES=userpriv."
-		ewarn "Skipping make check tests."
-	elif grep -q '^spl ' /proc/modules
-	then
-		ewarn "Cannot run make check tests with module spl loaded."
-		ewarn "Skipping make check tests."
-	else
-		autotools-utils_src_test
+		ewarn "${PN} now installs modules in ${EROOT}lib/modules/${KV_FULL}/extra/spl"
+		ewarn "Old modules were detected in ${EROOT}lib/modules/${KV_FULL}/addon/spl"
+		ewarn "Automatically removing old modules to avoid problems."
+		rm -r "${EROOT}lib/modules/${KV_FULL}/addon/spl" || die "Cannot remove modules"
+		rmdir --ignore-fail-on-non-empty "${EROOT}lib/modules/${KV_FULL}/addon"
 	fi
 }

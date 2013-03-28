@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-backgrounds
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.145 2012/12/26 22:09:06 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.146 2013/03/28 22:25:13 pacho Exp $
+
+*gnome-backgrounds-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +gnome-backgrounds-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
 *gnome-backgrounds-3.6.1 (26 Dec 2012)
 
@@ -642,4 +647,3 @@
   09 Mar 2005; Joe McCann <joem@gentoo.org> +metadata.xml,
   +gnome-backgrounds-2.10.0.ebuild:
   First Release. Contains various backgrounds for the default gnome desktop
-

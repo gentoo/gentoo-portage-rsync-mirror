@@ -1,6 +1,14 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.95 2013/03/09 17:37:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.96 2013/03/28 22:06:54 chithanh Exp $
+
+*gnash-0.8.10_p20120903-r1 (28 Mar 2013)
+
+  28 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +gnash-0.8.10_p20120903-r1.ebuild, -files/gnash-0.8.10-cve-2012-1175.patch,
+  -files/gnash-0.8.10-jemalloc-aslr-fix.patch, -gnash-0.8.10-r2.ebuild,
+  gnash-0.8.10_p20120903.ebuild:
+  Do not install eglinfo, bug #463654.
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gnash-0.8.10_p20120903.ebuild:
   Stable for x86, wrt bug #456328

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r2.ebuild,v 1.10 2012/11/04 04:38:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20120903-r1.ebuild,v 1.1 2013/03/28 22:06:54 chithanh Exp $
 
-EAPI=4
+EAPI=5
 CMAKE_REQUIRED="never"
 KDE_REQUIRED="optional"
 AT_M4DIR="cygnal"
@@ -21,13 +21,13 @@ if [[ ${PV} = 9999* ]]; then
 else
 # Release tarball is b0rked, upstream #35612
 #	SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
-	SRC_URI="mirror://gentoo/${P}.tar.gz"
+	SRC_URI="mirror://gentoo/${P}.tar.xz"
 fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
-IUSE="X +agg cairo cygnal dbus directfb doc dump egl fbcon +ffmpeg gconf gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openvg python sdl +sdl-sound ssh ssl test vaapi"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="X +agg cairo cygnal dbus directfb doc dump egl fbcon +ffmpeg gconf gnome gstreamer gtk harden kde lirc mysql +nls nsplugin opengl openvg python sdl +sdl-sound ssh ssl test vaapi"
 REQUIRED_USE="dump? ( agg ffmpeg )
 	fbcon? ( agg )
 	nsplugin? ( gtk )
@@ -124,6 +124,12 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	default
+	# rename git snapshot directory to what portage expects
+	mv ${PN}-*/ ${P} || die
+}
+
 src_prepare() {
 	# Fix paths for klash, bug #339610
 	epatch "${FILESDIR}"/${PN}-0.8.9-klash.patch
@@ -146,11 +152,13 @@ src_prepare() {
 	# Allow building against npapi-sdk, bug #383071
 	epatch "${FILESDIR}"/${PN}-0.8.10-npapi-sdk.patch
 
-	# Fix broken jemalloc, bug #405993
-	epatch "${FILESDIR}"/${PN}-0.8.10-jemalloc-aslr-fix.patch
+	# Allow building against boost-1.50, bug #425442
+	epatch "${FILESDIR}"/${PN}-0.8.10-boost-1.50.patch
 
-	# Fix security bug bug #408209
-	epatch "${FILESDIR}"/${PN}-0.8.10-cve-2012-1175.patch
+	# fix build with ffmpeg-1 / libav-9, bug #443184
+	epatch "${FILESDIR}/${P}-ffmpeg1.patch" \
+		"${FILESDIR}/${P}-libav9.patch" \
+		"${FILESDIR}/${P}-bytesfmt.patch"
 
 	eautoreconf
 }
@@ -183,7 +191,8 @@ src_configure() {
 			--with-kde4-prefix=${KDEDIR}
 			--with-kde4-lib=${KDEDIR}/$(get_libdir)
 			--with-kde-appsdatadir=${KDEDIR}/share/apps/klash
-			--with-kde4-servicesdir=${KDEDIR}/share/kde4/services"
+			--with-kde4-servicesdir=${KDEDIR}/share/kde4/services
+			--with-kde4-plugindir=${KDEDIR}/$(get_libdir)/kde4"
 	fi
 
 	# Set media handler.
@@ -225,6 +234,7 @@ src_configure() {
 		$(use_enable cygnal cgibins) \
 		$(use_enable doc docbook) \
 		$(use_enable gnome ghelp) \
+		$(use_enable harden) \
 		$(use_enable kde kparts4) \
 		$(use_enable nls) \
 		$(use_enable nsplugin npapi) \
@@ -262,7 +272,12 @@ src_install() {
 		popd >& /dev/null
 	fi
 	# Create a symlink in /usr/$(get_libdir)/nsbrowser/plugins to the nsplugin install directory.
-	use nsplugin && inst_plugin /usr/$(get_libdir)/gnash/npapi/libgnashplugin.so \
+	use nsplugin && inst_plugin /usr/$(get_libdir)/gnash/npapi/libgnashplugin.so
+
+	# Remove eglinfo, bug #463654
+	if use egl; then
+		rm -f "${D}"/usr/bin/eglinfo || die
+	fi
 
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }

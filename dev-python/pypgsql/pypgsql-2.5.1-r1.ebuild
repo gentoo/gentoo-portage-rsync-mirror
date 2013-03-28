@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.5.1-r1.ebuild,v 1.3 2013/03/25 20:51:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.5.1-r1.ebuild,v 1.4 2013/03/28 22:25:27 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/pypgsql/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="amd64 ia64 x86"
 IUSE=""
 
 DEPEND="dev-db/postgresql-base"

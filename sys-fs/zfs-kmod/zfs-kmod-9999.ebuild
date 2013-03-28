@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.13 2013/03/24 00:02:31 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.14 2013/03/28 22:19:35 ryao Exp $
 
 EAPI="4"
 
@@ -64,27 +64,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if [ ${PV} != "9999" ]
-	then
-		# Cast constant for 32-bit compatibility
-		epatch "${FILESDIR}/${P}-cast-const-for-32bit-compatibility.patch"
-
-		# Handle missing name length check in Linux VFS
-		epatch "${FILESDIR}/${P}-vfs-name-length-compatibility.patch"
-
-		# Fix NULL pointer exception on hardened kernels, bug #457176
-		epatch "${FILESDIR}/${P}-improved-hardened-support.patch"
-
-		# Fix barrier regression on Linux 2.6.37 and later
-		epatch "${FILESDIR}/${P}-flush-properly.patch"
-
-		# Improve accuracy of autotools checks
-		epatch "${FILESDIR}/${P}-improved-autotools-checks.patch"
-
-		# Linux 3.9 Support
-		epatch "${FILESDIR}/${P}-linux-3.9-compat.patch"
-	fi
-
 	# Remove GPLv2-licensed ZPIOS unless we are debugging
 	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
 
@@ -118,13 +97,23 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
+	# Remove old modules
+	if [ -d "${EROOT}lib/modules/${KV_FULL}/addon/zfs" ]
+	then
+		ewarn "${PN} now installs modules in ${EROOT}lib/modules/${KV_FULL}/extra/zfs"
+		ewarn "Old modules were detected in ${EROOT}lib/modules/${KV_FULL}/addon/zfs"
+		ewarn "Automatically removing old modules to avoid problems."
+		rm -r "${EROOT}lib/modules/${KV_FULL}/addon/zfs" || die "Cannot remove modules"
+		rmdir --ignore-fail-on-non-empty "${EROOT}lib/modules/${KV_FULL}/addon"
+	fi
+
 	if use x86 || use arm
 	then
 		ewarn "32-bit kernels will likely require increasing vmalloc to"
 		ewarn "at least 256M and decreasing zfs_arc_max to some value less than that."
 	fi
 
-	ewarn "This version of ZFSOnLinux introduces support for features flags."
+	ewarn "This version of ZFSOnLinux includes support for features flags."
 	ewarn "If you upgrade your pools to make use of feature flags, you will lose"
 	ewarn "the ability to import them using older versions of ZFSOnLinux."
 	ewarn "Any new pools will be created with feature flag support and will"
