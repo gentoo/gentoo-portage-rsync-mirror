@@ -1,14 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.0.8-r1.ebuild,v 1.1 2013/03/25 15:28:35 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.0.8-r1.ebuild,v 1.2 2013/03/28 10:51:19 mgorny Exp $
 
-EAPI="5"
-PYTHON_COMPAT=( python2_{5,6,7} )
+EAPI=5
 
-inherit distutils-r1 eutils
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-MY_PN="WebOb"
-MY_P="${MY_PN}-${PV}"
+inherit distutils-r1
+
+MY_PN=WebOb
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="WSGI request and response object"
 HOMEPAGE="http://webob.org/ http://pypi.python.org/pypi/WebOb"
@@ -17,31 +18,32 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="doc"
+IUSE="doc" # test"
 
 DEPEND="app-arch/unzip
-	dev-python/setuptools
-	doc? ( dev-python/sphinx )"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+#	test? ( dev-python/nose[${PYTHON_USEDEP}]
+#		dev-python/webtest[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
-S="${WORKDIR}/${MY_P}"
+# Almost impossible to solve circ-dep with dev-python/webtest.
+# (due to different PYTHON_COMPAT)
+RESTRICT=test
 
-src_compile() {
-	distutils-r1_python_compile
+S=${WORKDIR}/${MY_P}
 
+python_compile_all() {
 	if use doc; then
-		einfo "Generation of documentation"
-		"$(PYTHON -f)" setup.py build_sphinx || die "Generation of documentation failed"
+		"${PYTHON}" setup.py build_sphinx || die
 	fi
 }
 
-src_install() {
-	distutils-r1_python_install
+python_test() {
+	nosetests -w tests || die "Tests fail with ${EPYTHON}"
+}
 
-	if use doc; then
-		pushd build/sphinx/html > /dev/null
-		insinto /usr/share/doc/${PF}/html
-		doins -r [a-z]* _static || die "Installation of documentation failed"
-		popd > /dev/null
-	fi
+python_install_all() {
+	use doc && local HTML_DOCS=( build/sphinx/html/. )
+	distutils-r1_python_install_all
 }

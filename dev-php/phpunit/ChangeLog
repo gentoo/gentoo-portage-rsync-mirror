@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/phpunit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.12 2012/06/22 17:44:32 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.13 2013/03/28 10:35:54 olemarkus Exp $
+
+*phpunit-3.7.19 (28 Mar 2013)
+
+  28 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +phpunit-3.7.19.ebuild:
+  Bump. Changed to using a phar with all the bundled deps (which is only used by
+  phpunit anyway)
 
 *phpunit-3.6.11 (22 Jun 2012)
 
@@ -235,4 +241,3 @@
   08 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +phpunit-2.3.6.ebuild:
   Initial ebuild.
-
