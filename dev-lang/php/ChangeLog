@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.689 2013/03/25 20:45:12 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.690 2013/03/28 21:41:38 olemarkus Exp $
+
+*php-5.5.0_beta2 (28 Mar 2013)
+
+  28 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  +files/all_mysql_socket_location-gentoo.patch,
+  +files/all_strict_aliasing.patch, +php-5.5.0_beta2.ebuild:
+  Bumping php 5.5 to beta2. Also does proper install of opcache using ext and
+  ext-active
 
 *php-5.5.0_beta1-r3 (25 Mar 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2_p1-r1.ebuild,v 1.1 2013/02/28 22:45:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2_p1-r1.ebuild,v 1.2 2013/03/28 21:45:20 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -106,6 +106,9 @@ src_prepare() {
 			-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
 			"${i}" || die "sed failed, ${i} doesn't exist"
 	done
+
+	# Fix libxml-2.9.x detection, bug 463626
+	epatch "${FILESDIR}/${P}-libxml.patch"
 
 	if use dlz; then
 		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
