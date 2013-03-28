@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.164 2013/03/05 22:53:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.165 2013/03/28 16:29:29 pacho Exp $
+
+*seahorse-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +seahorse-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -seahorse-3.4.1.ebuild,
   -files/seahorse-3.4.1-g_clear_object.patch:

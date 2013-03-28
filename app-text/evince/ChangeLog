@@ -1,6 +1,11 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.257 2013/03/05 23:03:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.258 2013/03/28 16:11:40 pacho Exp $
+
+*evince-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +evince-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -evince-3.4.0.ebuild,
   -files/evince-3.4.0-glib-gold.patch:
@@ -1077,4 +1082,3 @@
   +evince-0.3.1.ebuild:
   Initial version of evince in portage.  Thanks to numerous people in 
   bug #78956 for the initial ebuild and comments.
-

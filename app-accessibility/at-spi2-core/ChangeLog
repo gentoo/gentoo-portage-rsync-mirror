@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.39 2013/03/28 15:45:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.40 2013/03/28 16:24:06 pacho Exp $
+
+*at-spi2-core-2.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +at-spi2-core-2.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> at-spi2-core-2.6.3.ebuild:
   Stable for arm, wrt bug #458984

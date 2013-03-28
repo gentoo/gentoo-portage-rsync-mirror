@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.43 2013/02/25 08:33:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.44 2013/03/28 16:03:52 pacho Exp $
+
+*gdbus-codegen-2.36.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +gdbus-codegen-2.36.0.ebuild:
+  Version bump for Gnome 3.8
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> gdbus-codegen-2.34.3.ebuild:
   Add ~arm-linux keyword.

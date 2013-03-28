@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14601 2013/03/28 15:50:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14603 2013/03/28 16:22:05 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,9 +34,9 @@
 # Pacho Ramos <pacho@gentoo.org> (28 Mar 2013)
 # Gnome 3.8 Mask
 >=app-accessibility/accerciser-3.8
->=app-accessibility/at-spi2-atk-3.8
->=app-accessibility/at-spi2-core-3.8
->=app-accessibility/caribou-3.8
+>=app-accessibility/at-spi2-atk-2.8
+>=app-accessibility/at-spi2-core-2.8
+>=app-accessibility/caribou-0.4.8
 >=app-accessibility/orca-3.8
 >=app-admin/gnome-system-log-3.8
 >=app-arch/file-roller-3.8

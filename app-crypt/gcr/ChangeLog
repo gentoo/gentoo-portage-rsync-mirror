@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.16 2013/02/25 08:49:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.17 2013/03/28 16:27:51 pacho Exp $
+
+*gcr-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +gcr-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> gcr-3.6.2.ebuild:
   Add ~arm-linux keyword.

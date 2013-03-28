@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.553 2013/02/19 00:08:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.554 2013/03/28 16:05:06 pacho Exp $
+
+*glib-2.36.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/glib-2.35.x-external-gdbus-codegen.patch, +glib-2.36.0.ebuild:
+  Version bump for Gnome 3.8
 
   19 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.30.3.ebuild,
   glib-2.32.4-r1.ebuild, glib-2.34.2.ebuild, glib-2.34.3.ebuild:

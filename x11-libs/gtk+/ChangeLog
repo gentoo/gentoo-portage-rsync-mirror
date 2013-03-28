@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.642 2013/03/27 10:32:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.644 2013/03/28 16:09:58 pacho Exp $
+
+*gtk+-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +gtk+-3.8.0.ebuild:
+  Version bump for Gnome 3.8
+
+  28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.16.ebuild:
+  Stable for arm, wrt bug #458984
 
   27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.16.ebuild:
   Stable for ppc64, wrt bug #458984
