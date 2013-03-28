@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/textedit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.18 2012/08/29 10:59:23 voyageur Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.19 2013/03/28 15:03:25 voyageur Exp $
+
+*textedit-0.95_pre20100427-r1 (28 Mar 2013)
+
+  28 Mar 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  -textedit-0.95_pre20060928.ebuild, +textedit-0.95_pre20100427-r1.ebuild,
+  +files/textedit-0.95_pre20100427-nsinvalidargument.patch:
+  Fix NSInvalidArgumentException on document creation, patch from Debian in bug
+  #462786
 
   29 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org>
   textedit-0.95_pre20100427.ebuild,
