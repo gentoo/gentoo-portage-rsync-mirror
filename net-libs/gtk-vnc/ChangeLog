@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.103 2013/03/26 19:17:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.104 2013/03/28 17:50:09 pacho Exp $
+
+*gtk-vnc-0.5.1-r1 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +gtk-vnc-0.5.1-r1.ebuild:
+  Version bump for Gnome 3.8
 
   26 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> gtk-vnc-0.5.2.ebuild:
   Drop trailing whitespace.

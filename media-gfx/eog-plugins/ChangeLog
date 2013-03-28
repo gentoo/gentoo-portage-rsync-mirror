@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog-plugins
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.3 2012/12/26 22:03:15 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.4 2013/03/28 17:36:19 pacho Exp $
+
+*eog-plugins-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +eog-plugins-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
 *eog-plugins-3.6.1-r1 (26 Dec 2012)
 
@@ -21,4 +26,3 @@
   +eog-plugins-3.4.0.ebuild, +metadata.xml:
   New package with official eog plugins (bug #389413, thanks to Christian
   Strahl for reporting).
-

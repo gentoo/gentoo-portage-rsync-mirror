@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gnome-font-viewer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/ChangeLog,v 1.4 2013/01/25 22:53:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/ChangeLog,v 1.5 2013/03/28 17:37:31 pacho Exp $
+
+*gnome-font-viewer-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +gnome-font-viewer-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
 *gnome-font-viewer-3.6.2 (25 Jan 2013)
 
@@ -25,4 +30,3 @@
   +gnome-font-viewer-3.4.0.ebuild, +metadata.xml:
   New separate gnome font viewer package, formerly part of
   gnome-extra/gnome-utils.
-

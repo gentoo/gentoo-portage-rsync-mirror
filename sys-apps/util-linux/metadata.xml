@@ -11,5 +11,9 @@
 	<flag name='ddate'>build ddate helper (Discordian dates)</flag>
 	<flag name='loop-aes'>include support for Loop AES encryption</flag>
 	<flag name='perl'>install the chkdupexe helper script</flag>
+	<flag name='suid'>
+		install mount/umount as setuid so non-root users may mount/umount devices,
+		and wall/write as setgid so non-root users can notify other users
+	</flag>
 </use>
 </pkgmetadata>

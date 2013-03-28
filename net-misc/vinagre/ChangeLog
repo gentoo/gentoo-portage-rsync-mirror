@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.88 2013/02/02 23:07:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.89 2013/03/28 17:57:56 pacho Exp $
+
+*vinagre-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +vinagre-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> vinagre-3.6.2.ebuild:
   Add ~arm, wrt bug #449220

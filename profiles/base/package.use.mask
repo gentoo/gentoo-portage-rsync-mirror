@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.451 2013/03/28 12:16:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.452 2013/03/28 17:59:29 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -238,8 +238,8 @@ media-sound/pulseaudio webrtc-aec xen
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
 # Requires libxkbcommon from the x11 overlay
-dev-cpp/gtkmm wayland
-x11-libs/gtk+ egl wayland
+<dev-cpp/gtkmm-3.7 wayland
+<x11-libs/gtk+-3.7 egl wayland
 
 # Johannes Huber <johu@gentoo.org> (23 Mar 2012)
 # Broken dep upnp, see bug #389833.

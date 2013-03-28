@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.31 2013/01/10 22:40:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.32 2013/03/28 17:57:34 pacho Exp $
+
+*rygel-0.18.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +rygel-0.18.0.ebuild:
+  Version bump for Gnome 3.8
 
 *rygel-0.16.4 (10 Jan 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.168 2013/03/09 07:26:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.169 2013/03/28 17:42:05 pacho Exp $
+
+*fontconfig-2.10.91 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +fontconfig-2.10.91.ebuild:
+  Version bump for Gnome 3.8
 
   09 Mar 2013; Zac Medico <zmedico@gentoo.org> fontconfig-2.10.2.ebuild:
   Fix for prefix and add ~arm-linux + ~x86-linux keywords.

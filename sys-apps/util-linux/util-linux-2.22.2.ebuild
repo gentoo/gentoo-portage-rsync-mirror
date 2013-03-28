@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.2.ebuild,v 1.16 2013/03/23 08:50:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.2.ebuild,v 1.18 2013/03/28 17:49:23 vapier Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ fi
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="+cramfs crypt ddate ncurses nls old-linux perl selinux slang static-libs test udev unicode"
+IUSE="+cramfs crypt ddate ncurses nls old-linux perl selinux slang static-libs +suid test udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -90,6 +90,8 @@ src_configure() {
 		--disable-su \
 		--disable-wall \
 		--enable-write \
+		$(use_enable suid makeinstall-chown) \
+		$(use_enable suid makeinstall-setuid) \
 		$(use_with selinux) \
 		$(use_with slang) \
 		$(use_enable static-libs static) \
