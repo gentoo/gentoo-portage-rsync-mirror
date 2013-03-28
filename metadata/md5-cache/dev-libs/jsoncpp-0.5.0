@@ -9,5 +9,5 @@ LICENSE=public-domain
 RDEPEND=!<dev-libs/json-c-0.10
 SLOT=0
 SRC_URI=mirror://sourceforge/jsoncpp/jsoncpp-src-0.5.0.tar.gz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-any-r1	9bedbe95123c76570994470ea4e0cc5b	python-utils-r1	c5012e18184f3e0473a1f1a7b9662ab0	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-any-r1	9bedbe95123c76570994470ea4e0cc5b	python-utils-r1	72a6ebbb13ee8f95b6725848df4deb4d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=7e136d49ec3c067b0f3b5f38c79cdb90

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.83 2013/03/27 15:07:53 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.84 2013/03/28 12:22:25 jlec Exp $
+
+  28 Mar 2013; Justin Lecher <jlec@gentoo.org> speech-dispatcher-0.8.ebuild:
+  Add fix for not wanted maintainer-mode, #463600
 
 *speech-dispatcher-0.8 (27 Mar 2013)
 

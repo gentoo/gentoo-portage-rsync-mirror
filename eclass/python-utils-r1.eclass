@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.19 2013/03/07 20:58:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.20 2013/03/28 12:21:46 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -34,7 +34,7 @@ fi
 
 if [[ ! ${_PYTHON_UTILS_R1} ]]; then
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 # @ECLASS-VARIABLE: _PYTHON_ALL_IMPLS
 # @INTERNAL
@@ -134,6 +134,34 @@ _python_impl_supported() {
 # Example value:
 # @CODE
 # /usr/lib64/libpython2.6.so
+# @CODE
+
+# @ECLASS-VARIABLE: PYTHON_CFLAGS
+# @DESCRIPTION:
+# Proper C compiler flags for building against Python. Obtained from
+# pkg-config or python-config.
+#
+# Set and exported on request using python_export().
+# Valid only for CPython. Requires a proper build-time dependency
+# on the Python implementation and on pkg-config.
+#
+# Example value:
+# @CODE
+# -I/usr/include/python2.7
+# @CODE
+
+# @ECLASS-VARIABLE: PYTHON_LIBS
+# @DESCRIPTION:
+# Proper C compiler flags for linking against Python. Obtained from
+# pkg-config or python-config.
+#
+# Set and exported on request using python_export().
+# Valid only for CPython. Requires a proper build-time dependency
+# on the Python implementation and on pkg-config.
+#
+# Example value:
+# @CODE
+# -lpython2.7
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_PKG_DEP
@@ -238,7 +266,7 @@ python_export() {
 						libname=lib${impl}
 						;;
 					*)
-						die "${EPYTHON} lacks a dynamic library"
+						die "${impl} lacks a dynamic library"
 						;;
 				esac
 
@@ -246,6 +274,46 @@ python_export() {
 
 				export PYTHON_LIBPATH=${path}/${libname}$(get_libname)
 				debug-print "${FUNCNAME}: PYTHON_LIBPATH = ${PYTHON_LIBPATH}"
+				;;
+			PYTHON_CFLAGS)
+				local val
+
+				case "${impl}" in
+					python2.5|python2.6)
+						# old versions support python-config only
+						val=$("${impl}-config" --includes)
+						;;
+					python*)
+						# python-2.7, python-3.2, etc.
+						val=$($(tc-getPKG_CONFIG) --cflags ${impl/n/n-})
+						;;
+					*)
+						die "${impl}: obtaining ${var} not supported"
+						;;
+				esac
+
+				export PYTHON_CFLAGS=${val}
+				debug-print "${FUNCNAME}: PYTHON_CFLAGS = ${PYTHON_CFLAGS}"
+				;;
+			PYTHON_LIBS)
+				local val
+
+				case "${impl}" in
+					python2.5|python2.6)
+						# old versions support python-config only
+						val=$("${impl}-config" --libs)
+						;;
+					python*)
+						# python-2.7, python-3.2, etc.
+						val=$($(tc-getPKG_CONFIG) --libs ${impl/n/n-})
+						;;
+					*)
+						die "${impl}: obtaining ${var} not supported"
+						;;
+				esac
+
+				export PYTHON_LIBS=${val}
+				debug-print "${FUNCNAME}: PYTHON_LIBS = ${PYTHON_LIBS}"
 				;;
 			PYTHON_PKG_DEP)
 				local d
@@ -351,6 +419,40 @@ python_get_library_path() {
 
 	python_export "${@}" PYTHON_LIBPATH
 	echo "${PYTHON_LIBPATH}"
+}
+
+# @FUNCTION: python_get_CFLAGS
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Obtain and print the compiler flags for building against Python,
+# for the given implementation. If no implementation is provided,
+# ${EPYTHON} will be used.
+#
+# Please note that this function can be used with CPython only.
+# It requires Python and pkg-config installed, and therefore proper
+# build-time dependencies need be added to the ebuild.
+python_get_CFLAGS() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export "${@}" PYTHON_CFLAGS
+	echo "${PYTHON_CFLAGS}"
+}
+
+# @FUNCTION: python_get_LIBS
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Obtain and print the compiler flags for linking against Python,
+# for the given implementation. If no implementation is provided,
+# ${EPYTHON} will be used.
+#
+# Please note that this function can be used with CPython only.
+# It requires Python and pkg-config installed, and therefore proper
+# build-time dependencies need be added to the ebuild.
+python_get_LIBS() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export "${@}" PYTHON_LIBS
+	echo "${PYTHON_LIBS}"
 }
 
 # @FUNCTION: _python_rewrite_shebang

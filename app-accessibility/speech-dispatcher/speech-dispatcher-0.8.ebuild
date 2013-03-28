@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.8.ebuild,v 1.1 2013/03/27 15:07:53 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.8.ebuild,v 1.2 2013/03/28 12:22:25 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python3_2 pypy{1_9,2_0} )
 
 inherit autotools-utils python-r1
@@ -29,16 +30,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
 	virtual/pkgconfig"
 
-src_prepare() {
-	# Python bindings are built/installed manually.
-	sed -e "/SUBDIRS += python/d" -i src/Makefile.am || die
-
-	autotools-utils_src_prepare
-}
-
 src_configure() {
 	local myeconfargs=(
-		$(use_enable python)
+		--disable-python
 		$(use_with alsa)
 		$(use_with ao libao)
 		$(use_with espeak)

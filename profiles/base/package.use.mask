@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.450 2013/03/24 12:07:36 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.451 2013/03/28 12:16:01 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -178,13 +178,6 @@ app-crypt/johntheripper cuda
 # Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
 # sys-fs/zfs is not available everywhere.
 sys-boot/grub libzfs
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Jun 2012)
-# mask wayland flag for stable mesa, #419473
-=media-libs/mesa-8.0.3 wayland
-=media-libs/mesa-8.0.4-r1 wayland
-=media-libs/mesa-9.0 wayland
-=media-libs/mesa-9.0.1 wayland
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (03 Jun 2012)
 # needs libpqxx-3* which is not in the tree anymore

@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-oauth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-oauth/ChangeLog,v 1.4 2013/03/05 10:18:54 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-oauth/ChangeLog,v 1.5 2013/03/28 12:15:30 olemarkus Exp $
+
+*pecl-oauth-1.2.3 (28 Mar 2013)
+
+  28 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +pecl-oauth-1.2.3.ebuild,
+  pecl-oauth-1.2.2-r1.ebuild:
+  Version bump. Bug 452516
 
   05 Mar 2013; Ole Markus With <olemarkus@gentoo.org> -pecl-oauth-1.2.2.ebuild:
   Removed older ebuilds
