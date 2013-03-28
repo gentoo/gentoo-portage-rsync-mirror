@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14603 2013/03/28 16:22:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14604 2013/03/28 20:53:55 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -229,11 +229,6 @@ dev-libs/dvutil
 # plasma-workspace does not work with it,
 # does not work with current webkit-gtk
 x11-misc/google-gadgets
-
-# Mike Gilbert <floppym@gentoo.org> (20 Mar 2013)
-# Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (20 Mar 2013)
-# Masked until reverse dependencies are updated.
->=dev-db/sqlite-3.7.16:3
 
 # Tim Harder <radhermit@gentoo.org> (18 Mar 2013)
 # Masked for testing
