@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.1.0.ebuild,v 1.1 2013/03/28 13:21:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.1.0.ebuild,v 1.2 2013/03/28 21:01:34 chithanh Exp $
 
 EAPI=5
 
@@ -33,14 +33,11 @@ RDEPEND="
 	media-libs/mesa[egl?,gles1?,gles2?]
 	virtual/opengl
 	x11-libs/libX11"
-# glew and glu are only needed by the configure script which is only used
-# when building EGL/GLESv1/GLESv2 programs. They are not actually required
-# by the installed programs.
+# glew and glu are only needed by the configure script when building.
+# They are not actually required by the installed programs.
 DEPEND="${RDEPEND}
-	egl? (
-		media-libs/glew
-		virtual/glu
-	)
+	media-libs/glew
+	virtual/glu
 	x11-proto/xproto"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cplus/log4cplus-1.1.0.ebuild,v 1.2 2013/03/02 20:02:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cplus/log4cplus-1.1.0.ebuild,v 1.3 2013/03/28 21:30:11 idl0r Exp $
 
 EAPI=5
 
@@ -11,14 +11,14 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PN}-stable/${PV}/${P}.tar.bz2"
 LICENSE="|| ( Apache-2.0 BSD-2 )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="iconv test threads working-locale working-c-locale qt"
+IUSE="iconv test threads working-locale working-c-locale qt4"
 
 REQUIRED_USE="iconv? ( !working-locale !working-c-locale )
 	working-locale? ( !iconv !working-c-locale )
 	working-c-locale? ( !iconv !working-locale )"
 
 RDEPEND="iconv? ( virtual/libiconv )
-	qt? ( dev-qt/qtcore )"
+	qt4? ( dev-qt/qtcore:4 )"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
@@ -39,7 +39,7 @@ src_configure() {
 		$(use_with iconv) \
 		$(use_with working-locale) \
 		$(use_with working-c-locale) \
-		$(use_with qt)
+		$(use_with qt4 qt)
 }
 
 src_test() {

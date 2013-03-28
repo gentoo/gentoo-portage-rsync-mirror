@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.94 2013/03/28 13:21:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.95 2013/03/28 21:01:34 chithanh Exp $
+
+  28 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-progs-8.1.0.ebuild:
+  Depend on glew/glu unconditionally, bug #463650.
 
 *mesa-progs-8.1.0 (28 Mar 2013)
 

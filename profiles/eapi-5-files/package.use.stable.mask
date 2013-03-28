@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.4 2013/03/27 19:01:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.5 2013/03/28 21:23:57 dilfridge Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (28 Mar 2013)
+# No stable sci-chemistry/avogadro yet but we want kde-4.10 to go stable
+>=kde-base/kalzium-4.10.0 editor
 
 # Mike Gilbert <floppym@gentoo.org> (27 Mar 2013)
 # sci-geosciences/gpsd-3.7 has a regresson preventing immediate stabilization.
