@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/CPAN-Changes
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Changes/ChangeLog,v 1.1 2013/03/28 08:26:13 pinkbyte Exp $
+
+*CPAN-Changes-0.190.0 (28 Mar 2013)
+
+  28 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +CPAN-Changes-0.190.0.ebuild,
+  +metadata.xml:
+  Initial import from perl-experimental overlay, needed by new
+  dev-perl/Sys-Virt
+
