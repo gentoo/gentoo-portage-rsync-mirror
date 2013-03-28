@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r2.ebuild,v 1.2 2013/02/10 14:23:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r2.ebuild,v 1.3 2013/03/28 19:53:03 slyfox Exp $
 
 EAPI="4"
 
@@ -13,9 +13,8 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-# ia64 lost as we don't have ghc-7 there yet
 # ppc64 needs to be rekeyworded due to xhtml not being keyworded
-KEYWORDS="~alpha ~amd64 -ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND="dev-haskell/ghc-paths[profile?]
