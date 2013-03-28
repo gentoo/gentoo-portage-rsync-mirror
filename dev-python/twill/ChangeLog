@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twill
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.10 2013/03/26 09:38:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.11 2013/03/28 04:12:21 floppym Exp $
+
+*twill-0.9-r1 (28 Mar 2013)
+
+  28 Mar 2013; Mike Gilbert <floppym@gentoo.org> +twill-0.9-r1.ebuild:
+  Convert to distutils-r1.
 
   26 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> twill-0.9.ebuild:
   Add ~arm keyword, wrt bug #458248
@@ -38,4 +43,3 @@
   24 Apr 2007; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +twill-0.9_beta1.ebuild:
   Initial commit.
-

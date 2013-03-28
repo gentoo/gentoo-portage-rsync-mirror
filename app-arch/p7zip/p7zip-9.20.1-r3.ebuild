@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r3.ebuild,v 1.1 2012/06/09 14:43:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r3.ebuild,v 1.2 2013/03/28 04:16:17 vapier Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1 rar? ( unRAR )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 IUSE="doc kde rar +pch static wxwidgets"
 
 REQUIRED_USE="kde? ( wxwidgets )"
