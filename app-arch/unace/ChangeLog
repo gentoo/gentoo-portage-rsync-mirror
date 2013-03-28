@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/unace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.46 2013/02/20 09:54:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.47 2013/03/28 03:07:37 vapier Exp $
+
+*unace-1.2b-r2 (28 Mar 2013)
+
+  28 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/unace-1.2b-64bit-fmt.patch, +files/unace-1.2b-aliasing.patch,
+  +unace-1.2b-r2.ebuild:
+  Clean up build a bit and use Debian patches.
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> unace-2.5-r2.ebuild:
   Stable for s390, wrt bug #431696

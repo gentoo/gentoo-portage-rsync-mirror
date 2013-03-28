@@ -1,0 +1,20 @@
+--- a/portable.h
++++ b/portable.h
+@@ -79,11 +79,13 @@
+ 
+ #else /* HI_LO_BYTE_ORDER */
+ 
+-#define BUFP2WORD(p) *(UWORD*)((p+=2)-2)
+-#define BUFP2LONG(p) *(ULONG*)((p+=4)-4)
++#define _MAGIC_UNION(type, p) ({ union { UCHAR *_c; type *_u; } _x = { ._c = (p) }; *_x._u; })
+ 
+-#define BUF2WORD(p) (*(UWORD*)p)
+-#define BUF2LONG(p) (*(ULONG*)p)
++#define BUFP2WORD(p) _MAGIC_UNION(UWORD, ((p+=2)-2))
++#define BUFP2LONG(p) _MAGIC_UNION(ULONG, ((p+=4)-4))
++
++#define BUF2WORD(p) _MAGIC_UNION(UWORD, p)
++#define BUF2LONG(p) _MAGIC_UNION(ULONG, p)
+ 
+ #endif /* !HI_LO_BYTE_ORDER */
+ 

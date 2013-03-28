@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.446 2013/03/17 18:01:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.447 2013/03/28 03:02:10 axs Exp $
+
+*eix-0.28.3 (28 Mar 2013)
+
+  28 Mar 2013; Ian Stakenvicius <axs@gentoo.org> +eix-0.28.3.ebuild,
+  metadata.xml:
+  version bump; now supports gpo.zugiana.org as a secondary (or primary, if USE
+  =+swap-remote) remote database
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
