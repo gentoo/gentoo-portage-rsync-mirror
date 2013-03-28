@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.9_beta.ebuild,v 1.1 2013/01/13 07:15:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.9_rc2.ebuild,v 1.1 2013/03/28 02:40:25 radhermit Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit webapp
 
