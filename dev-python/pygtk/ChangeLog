@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.282 2013/03/27 09:48:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.283 2013/03/28 15:53:25 ago Exp $
+
+  28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pygtk-2.24.0-r3.ebuild:
+  Stable for arm, wrt bug #458984
 
   27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pygtk-2.24.0-r3.ebuild:
   Stable for ppc64, wrt bug #458984

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.81 2013/03/03 09:02:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.82 2013/03/28 15:57:58 pacho Exp $
+
+*gdk-pixbuf-2.28.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +gdk-pixbuf-2.28.0.ebuild:
+  Version bump
 
   03 Mar 2013; Mike Frysinger <vapier@gentoo.org> gdk-pixbuf-2.26.4.ebuild,
   gdk-pixbuf-2.26.5.ebuild:

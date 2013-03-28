@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.138 2013/03/27 09:40:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.139 2013/03/28 15:46:46 ago Exp $
+
+  28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> iso-codes-3.40.ebuild:
+  Stable for arm, wrt bug #458984
 
   27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> iso-codes-3.40.ebuild:
   Stable for ppc64, wrt bug #458984
