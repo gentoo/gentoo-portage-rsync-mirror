@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/mesa-progs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.93 2011/05/16 07:55:20 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.94 2013/03/28 13:21:58 chithanh Exp $
+
+*mesa-progs-8.1.0 (28 Mar 2013)
+
+  28 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-progs-8.1.0.ebuild, metadata.xml:
+  Version bump, bug #462056.
 
   16 May 2011; Michał Górny <mgorny@gentoo.org> mesa-progs-8.0.1.ebuild:
   Fix implicit libX11 linkage (bug #367451).
@@ -358,4 +364,3 @@
   +mesa-progs-6.4.1.ebuild:
   This provides glxgears and glxinfo. In the future, it may be enhanced to
   optionally build more of the programs and demos Mesa distributes.
-

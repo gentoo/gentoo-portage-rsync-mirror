@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-openchrome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.69 2013/03/28 12:26:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.70 2013/03/28 13:10:02 chithanh Exp $
+
+  28 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-openchrome-0.3.2.ebuild:
+  Use correct ebuild phase to set XORG_CONFIGURE_OPTIONS
 
 *xf86-video-openchrome-0.3.2 (28 Mar 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.3.2.ebuild,v 1.1 2013/03/28 12:26:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.3.2.ebuild,v 1.2 2013/03/28 13:10:02 chithanh Exp $
 
 EAPI=5
 XORG_DRI="always"
@@ -26,13 +26,13 @@ DEPEND="
 
 DOCS=( ChangeLog NEWS README )
 
-src_prepare() {
+src_configure() {
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable debug)
 		$(use_enable debug xv-debug)
 		$(use_enable viaregtool)
 	)
-	xorg-2_src_prepare
+	xorg-2_src_configure
 }
 
 pkg_postinst() {
