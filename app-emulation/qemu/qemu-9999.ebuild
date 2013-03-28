@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.47 2013/02/28 16:07:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.48 2013/03/28 02:06:23 steev Exp $
 
 EAPI="4"
 
@@ -280,7 +280,7 @@ src_configure() {
 		$(use_enable kernel_linux kvm) \
 		$(use_enable kernel_linux nptl) \
 		$(use_enable ncurses curses) \
-		$(use_enable opengl) \
+		$(use_enable opengl glx) \
 		$(use_enable png vnc-png) \
 		$(use_enable rbd) \
 		$(use_enable sasl vnc-sasl) \

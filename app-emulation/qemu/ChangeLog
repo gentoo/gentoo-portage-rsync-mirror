@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.203 2013/03/19 17:34:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.204 2013/03/28 02:06:23 steev Exp $
+
+  28 Mar 2013; Steev Klimaszewski <steev@gentoo.org> qemu-9999.ebuild:
+  Upstream has changed the qemu configure script, change requested by Cardoe
+  via email
 
   19 Mar 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.4.0-r1.ebuild:
   Always ensure the check-report is generated. fixes bug #462010
