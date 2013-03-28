@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gobject-introspection-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.16 2013/02/18 01:21:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.17 2013/03/28 16:41:43 pacho Exp $
+
+*gobject-introspection-common-1.36.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  +gobject-introspection-common-1.36.0.ebuild:
+  Version bump for Gnome 3.8
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org>
   gobject-introspection-common-1.34.2.ebuild:

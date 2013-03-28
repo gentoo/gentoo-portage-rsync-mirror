@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse-sharing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/ChangeLog,v 1.5 2013/03/05 22:54:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/ChangeLog,v 1.6 2013/03/28 16:31:14 pacho Exp $
+
+*seahorse-sharing-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +seahorse-sharing-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -seahorse-sharing-3.4.0.ebuild:
@@ -24,4 +29,3 @@
   21 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   +seahorse-sharing-3.4.0.ebuild, +metadata.xml:
   Add seahorse's key sharing daemon; part of app-crypt/seahorse before 3.2.0.
-

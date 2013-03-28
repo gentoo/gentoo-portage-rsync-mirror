@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install
+DEPEND=app-arch/xz-utils
+DESCRIPTION=Build infrastructure for GObject Introspection
+EAPI=5
+HOMEPAGE=http://live.gnome.org/GObjectIntrospection/
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=HPND
+RDEPEND=!<dev-libs/gobject-introspection-1.32.0
+SLOT=0
+SRC_URI=mirror://gnome/sources/gobject-introspection/1.36/gobject-introspection-1.36.0.tar.xz
+_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=81eb7629d6cd29d9f979879e488e474b
