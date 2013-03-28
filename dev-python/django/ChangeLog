@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.100 2013/03/24 02:05:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.101 2013/03/28 04:51:53 floppym Exp $
+
+  28 Mar 2013; Mike Gilbert <floppym@gentoo.org> django-1.5.ebuild:
+  Add python3 support.
 
 *django-1.5 (24 Mar 2013)
 

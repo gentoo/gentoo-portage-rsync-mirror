@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.ebuild,v 1.1 2013/03/24 02:05:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.ebuild,v 1.2 2013/03/28 04:51:53 floppym Exp $
 
 EAPI=5
 # py3.2 support almost ready to add
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 PYTHON_REQ_USE='sqlite?'
 
 inherit bash-completion-r1 distutils-r1 versionator webapp
@@ -20,9 +20,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc mysql postgres sqlite test"
 
-RDEPEND="dev-python/imaging[$(python_gen_usedep python2*)]
+py2dep=$(python_gen_usedep 'python2*')
+RDEPEND="dev-python/imaging[${py2dep}]
 	postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )
-	mysql? ( >=dev-python/mysql-python-1.2.3[${PYTHON_USEDEP}] )"
+	mysql? ( >=dev-python/mysql-python-1.2.3[${py2dep}] )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.7[${PYTHON_USEDEP}] )
 	test? ( ${PYTHON_DEPS//sqlite?/sqlite} )"
