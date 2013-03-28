@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.234 2013/03/28 19:41:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.236 2013/03/28 22:45:39 ago Exp $
+
+  28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ghc-7.4.2.ebuild:
+  Stable for x86, wrt bug #457780
+
+  28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ghc-7.4.2.ebuild:
+  Stable for amd64, wrt bug #457780
 
   28 Mar 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.4.2.ebuild:
   Allow haddock-2.10 (ghc has incorrect version in it's source).

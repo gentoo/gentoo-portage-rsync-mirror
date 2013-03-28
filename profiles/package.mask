@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14604 2013/03/28 20:53:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14605 2013/03/28 22:38:25 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -96,7 +96,7 @@
 >=gnome-extra/gnome-power-manager-3.8
 >=gnome-extra/gnome-shell-extensions-3.8
 >=gnome-extra/gnome-system-monitor-3.8
->=gnome-extra/gnome-tweak-tool-3.8
+>=gnome-extra/gnome-tweak-tool-3.7
 >=gnome-extra/gnome-user-docs-3.8
 >=gnome-extra/gnome-user-share-3.8
 >=gnome-extra/gucharmap-3.8

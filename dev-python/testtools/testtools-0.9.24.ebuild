@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.24.ebuild,v 1.6 2013/03/27 14:13:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.24.ebuild,v 1.7 2013/03/28 22:51:16 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
@@ -17,7 +17,7 @@ SRC_URI="http://launchpad.net/${PN}/${SERIES}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND=""

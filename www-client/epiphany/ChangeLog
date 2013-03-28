@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.292 2013/02/02 23:13:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.293 2013/03/28 22:34:00 pacho Exp $
+
+*epiphany-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +epiphany-3.8.0.ebuild,
+  +files/epiphany-3.7.5-test-gwarning.patch:
+  Version bump for Gnome 3.8
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> epiphany-3.6.1.ebuild:
   Add ~arm, wrt bug #449220

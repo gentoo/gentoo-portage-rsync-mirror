@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MRO-Compat/MRO-Compat-0.120.0.ebuild,v 1.6 2013/03/27 10:11:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MRO-Compat/MRO-Compat-0.120.0.ebuild,v 1.7 2013/03/28 22:56:40 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Lets you build groups of accessors"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86 ~ppc-aix ~ppc-macos ~x64-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ia64 ppc ppc64 ~sparc x86 ~ppc-aix ~ppc-macos ~x64-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND="

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.96 2013/02/03 11:22:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.97 2013/03/28 22:39:56 pacho Exp $
+
+*nm-applet-0.9.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +nm-applet-0.9.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #333419

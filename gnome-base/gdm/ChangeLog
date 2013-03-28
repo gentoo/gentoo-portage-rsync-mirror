@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.369 2013/03/14 04:32:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.370 2013/03/28 22:47:35 pacho Exp $
+
+*gdm-3.8.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gdm-3.7.3.1-disable-accessibility.patch,
+  +files/gdm-3.7.90-fix-daemonize-regression.patch, +gdm-3.8.0.ebuild:
+  Version bump for Gnome 3.8
 
   14 Mar 2013; Alexandre Rostovtsev <tetromino@gentoo.org> gdm-3.6.2.ebuild:
   Remove unnecessary dependency on consolekit[pam] and pam[consolekit], thanks

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.58 2013/03/23 13:34:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.59 2013/03/28 22:41:20 ago Exp $
+
+  28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> freetds-0.91.ebuild:
+  Stable for ia64, wrt bug #461558
 
   23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> freetds-0.91.ebuild:
   Stable for alpha, wrt bug #461558

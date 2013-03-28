@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-199.ebuild,v 1.1 2013/03/27 07:54:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-199.ebuild,v 1.2 2013/03/28 22:57:21 floppym Exp $
 
 EAPI=5
 
@@ -64,7 +64,9 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 
 src_prepare() {
-
+	local PATCHES=(
+		"${FILESDIR}/199-firmware.patch"
+	)
 	autotools-utils_src_prepare
 }
 
