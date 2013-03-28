@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.5.ebuild,v 1.2 2013/03/04 23:13:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.5.ebuild,v 1.3 2013/03/28 07:44:55 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -40,7 +40,7 @@ REQUIRED_USE="
 # glibc-2.12 needed for SCHED_IDLE (see bug #385003)
 RDEPEND="
 	>=app-i18n/enca-1.9
-	>=dev-db/sqlite-3.7.14:=[threadsafe]
+	>=dev-db/sqlite-3.7.14:=[threadsafe(+)]
 	>=dev-libs/glib-2.28:2
 	>=dev-libs/gobject-introspection-0.9.5
 	>=dev-libs/icu-4:=
