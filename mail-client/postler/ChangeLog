@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/postler
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.7 2012/10/21 11:49:49 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.8 2013/03/29 21:27:25 angelos Exp $
+
+  29 Mar 2013; Christoph Mende <angelos@gentoo.org> postler-0.1.1.ebuild:
+  Convert to vala.eclass
 
   21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> postler-0.1.1.ebuild:
   Keyword ~x86. Fix .desktop file validation. Missing sys-libs/db dependency
@@ -29,4 +32,3 @@
 
   27 Feb 2011; <angelos@gentoo.org> +postler-0.1.0.ebuild:
   Initial import
-

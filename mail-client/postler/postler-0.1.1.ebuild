@@ -1,11 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.1.ebuild,v 1.3 2012/10/21 11:49:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.1.ebuild,v 1.4 2013/03/29 21:27:25 angelos Exp $
 
 EAPI=4
-inherit gnome2-utils python waf-utils
-
-POSTLER_VALA_VERSION=0.10
+inherit gnome2-utils python waf-utils vala
 
 DESCRIPTION="A super sexy, ultra simple desktop mail client built in vala"
 HOMEPAGE="http://launchpad.net/postler"
@@ -28,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.26
 # ayatana? ( dev-libs/libindicate )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
-	dev-lang/vala:${POSTLER_VALA_VERSION}
+	$(vala_depend)
 	dev-util/intltool
 	sys-devel/gettext"
 
@@ -40,13 +38,13 @@ pkg_setup() {
 src_prepare() {
 	sed -i -e 's:Categories=.*:&Office;:' data/${PN}.desktop.in || die
 	base_src_prepare
+	vala_src_prepare
 }
 
 src_configure() {
-	VALAC="$(type -P valac-${POSTLER_VALA_VERSION})" \
-		   waf-utils_src_configure \
-		   --disable-docs \
-		   --disable-libindicate
+	waf-utils_src_configure \
+		--disable-docs \
+		--disable-libindicate
 # $(use_enable ayatana libindicate)
 }
 
