@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-demo/etqw-demo-2.0_p1.ebuild,v 1.4 2013/01/26 21:03:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-demo/etqw-demo-2.0_p1.ebuild,v 1.5 2013/03/29 16:08:35 hasufell Exp $
 
-inherit eutils versionator games
+inherit unpacker eutils versionator games
 
 MY_MAJOR=$(get_major_version)
 MY_REV=$(get_version_component_range 3)
@@ -37,10 +37,8 @@ QA_PREBUILT="${dir:1}/guis/libmojosetupgui_ncurses.so
 	${dir:1}/data/pb/*.so"
 
 src_unpack() {
-	einfo "Ignore 'extra bytes' message from unzip"
-	unzip -q "${DISTDIR}/${A}"
 	# exit status of 1 should just be warnings, not corrupt archive
-	[[ $? -eq 0 || $? -eq 1 ]] || die "unpacking failed"
+	unpack_zip ${A}
 }
 
 src_install() {

@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.7 2009/11/19 18:36:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.8 2013/03/29 16:13:55 hasufell Exp $
 
-inherit eutils versionator games
+inherit unpacker eutils versionator games
 
 MY_PV=$(delete_all_version_separators)
 MY_PN="quake2"
@@ -54,7 +54,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unzip -qo "${DISTDIR}/${FILE}" || die "unzip failed"
+	unpack_zip ${A}
 }
 
 src_install() {

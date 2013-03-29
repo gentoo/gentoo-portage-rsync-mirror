@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/duke3d
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.36 2010/10/08 12:55:49 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.37 2013/03/29 16:06:54 hasufell Exp $
+
+  29 Mar 2013; Julian Ospald <hasufell@gentoo.org> duke3d-20040817-r2.ebuild:
+  use unpack_zip from unpacker.eclass instead of unzip
 
   08 Oct 2010; Tupone Alfredo <tupone@gentoo.org> duke3d-20040817-r2.ebuild,
   +files/duke3d-20040817-ldflags.patch:

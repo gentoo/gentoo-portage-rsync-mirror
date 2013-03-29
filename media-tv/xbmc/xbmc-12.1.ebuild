@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.1.ebuild,v 1.1 2013/03/23 09:38:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.1.ebuild,v 1.2 2013/03/29 16:14:44 vapier Exp $
 
 EAPI="4"
 
@@ -50,7 +50,7 @@ COMMON_DEPEND="virtual/glu
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio[-minimal]
-	cec? ( >=dev-libs/libcec-2 )
+	cec? ( >=dev-libs/libcec-2.1 )
 	dev-libs/libpcre[cxx]
 	>=dev-libs/lzo-2.04
 	dev-libs/tinyxml[stl]

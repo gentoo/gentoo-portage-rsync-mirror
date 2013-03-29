@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.26 2012/01/16 19:20:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.27 2013/03/29 16:10:32 hasufell Exp $
 
 EAPI=2
-inherit eutils cdrom games
+inherit unpacker eutils cdrom games
 
 DESCRIPTION="iD Software's Quake 2 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/"
@@ -31,8 +31,7 @@ src_unpack() {
 	export CDROM_NAME_SET=("Existing Install" "Ultimate Quake Edition" "Quake2 CD" "Quake4 Bonus DVD")
 	cdrom_get_cds baseq2:Install/patch:Install:Movies
 	# The .exe is just a self-extracting .zip
-	echo ">>> Unpacking ${A} to ${PWD}"
-	unzip -qo "${DISTDIR}/${A}" || die "Failed to unpack ${A}"
+	unpack_zip ${A}
 }
 
 src_install() {
