@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.0.ebuild,v 1.1 2013/03/28 22:39:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.0.ebuild,v 1.2 2013/03/29 17:40:45 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ src_configure() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	gnome2_src_configure \
 		--with-gtkver=3 \
-		--with-modem-manager \
+		--with-modem-manager-1 \
 		--disable-more-warnings \
 		--disable-static \
 		--localstatedir=/var \

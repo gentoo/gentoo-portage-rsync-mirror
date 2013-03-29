@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.97 2013/03/28 22:39:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.98 2013/03/29 17:40:45 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org> nm-applet-0.9.8.0.ebuild:
+  Fix configure option
 
 *nm-applet-0.9.8.0 (28 Mar 2013)
 
