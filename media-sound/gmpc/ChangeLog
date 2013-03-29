@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gmpc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.88 2012/05/27 08:59:47 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.89 2013/03/29 20:46:57 angelos Exp $
+
+  29 Mar 2013; Christoph Mende <angelos@gentoo.org>
+  +files/gmpc-11.8.16-underlinking.patch, -files/gmpc-0.20.0-underlinking.patch,
+  gmpc-11.8.16.ebuild:
+  Fix underlinking, convert to vala eclass
 
   27 May 2012; Christoph Mende <angelos@gentoo.org> -gmpc-0.20.0.ebuild:
   Remove old
@@ -339,4 +344,3 @@
 
   23 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
   ebuild submitted by Bert Geens <theblackdragon@linux.be>
-

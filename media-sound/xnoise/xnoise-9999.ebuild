@@ -1,9 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.15 2013/03/16 08:11:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.16 2013/03/29 20:53:58 angelos Exp $
 
 EAPI=4
-inherit fdo-mime gnome2-utils git-2
+VALA_MIN_API_VERSION=0.18
+
+inherit fdo-mime gnome2-utils git-2 vala
 
 DESCRIPTION="A media player for Gtk+ with a slick GUI, great speed and lots of
 features"
@@ -30,7 +32,7 @@ RDEPEND="x11-libs/gtk+:3
 	lyrics? ( net-libs/libsoup:2.4
 		dev-libs/libxml2:2 )"
 DEPEND="${RDEPEND}
-	dev-lang/vala:0.18
+	$(vala_depend)
 	dev-util/intltool
 	virtual/pkgconfig
 	gnome-base/gnome-common:3
@@ -41,10 +43,10 @@ DOCS=( AUTHORS README )
 
 src_prepare() {
 	NOCONFIGURE=yes ./autogen.sh || die
+	vala_src_prepare
 }
 
 src_configure() {
-	VALAC=$(type -p valac-0.18) \
 	econf \
 		$(use_enable ayatana appindicator) \
 		$(use_enable lyrics lyricwiki) \

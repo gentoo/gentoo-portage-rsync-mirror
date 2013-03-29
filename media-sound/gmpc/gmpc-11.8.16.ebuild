@@ -1,9 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.8 2012/05/27 07:51:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.9 2013/03/29 20:46:57 angelos Exp $
 
 EAPI=4
-inherit gnome2-utils
+VALA_MIN_API_VERSION=0.12
+
+inherit autotools eutils gnome2-utils vala
 
 DESCRIPTION="A GTK+2 client for the Music Player Daemon"
 HOMEPAGE="http://gmpc.wikia.com/wiki/Gnome_Music_Player_Client"
@@ -25,7 +27,7 @@ RDEPEND="dev-db/sqlite:3
 	unique? ( dev-libs/libunique:1 )
 	xspf? ( >=media-libs/libxspf-1.2 )"
 DEPEND="${RDEPEND}
-	dev-lang/vala:0.12
+	$(vala_depend)
 	>=dev-util/gob-2.0.17
 	virtual/pkgconfig
 	nls? ( dev-util/intltool
@@ -33,8 +35,13 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS README )
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-underlinking.patch
+	eautoreconf
+	vala_src_prepare
+}
+
 src_configure() {
-	VALAC=$(type -p valac-0.12) \
 	econf \
 		--disable-static \
 		--disable-libspiff \

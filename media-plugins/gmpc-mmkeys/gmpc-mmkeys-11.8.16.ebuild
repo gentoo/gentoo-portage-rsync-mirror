@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-11.8.16.ebuild,v 1.4 2012/05/05 08:27:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-11.8.16.ebuild,v 1.5 2013/03/29 20:55:45 angelos Exp $
 
 EAPI=4
+inherit vala
 
 DESCRIPTION="Bind multimedia keys via gnome settings daemon"
 HOMEPAGE="http://gmpc.wikia.com/wiki/Plugins"
@@ -16,7 +17,7 @@ IUSE=""
 RDEPEND="dev-libs/dbus-glib
 	>=media-sound/gmpc-${PV}"
 DEPEND="${RDEPEND}
-	dev-lang/vala:0.10
+	$(vala_depend)
 	virtual/pkgconfig"
 
 src_configure() {

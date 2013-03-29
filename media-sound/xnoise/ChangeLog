@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xnoise
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.31 2013/03/16 08:11:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.32 2013/03/29 20:53:58 angelos Exp $
+
+  29 Mar 2013; Christoph Mende <angelos@gentoo.org> xnoise-9999.ebuild:
+  Convert to vala.eclass
 
 *xnoise-0.2.17 (16 Mar 2013)
 

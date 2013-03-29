@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-mmkeys
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/ChangeLog,v 1.8 2012/05/27 08:14:30 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/ChangeLog,v 1.9 2013/03/29 20:55:45 angelos Exp $
+
+  29 Mar 2013; Christoph Mende <angelos@gentoo.org> gmpc-mmkeys-11.8.16.ebuild:
+  Convert to vala.eclass
 
   27 May 2012; Christoph Mende <angelos@gentoo.org> -gmpc-mmkeys-0.20.0.ebuild:
   Remove old
@@ -32,4 +35,3 @@
 
   19 Feb 2011; <angelos@gentoo.org> +gmpc-mmkeys-0.20.0.ebuild:
   Initial import (bug #351642)
-
