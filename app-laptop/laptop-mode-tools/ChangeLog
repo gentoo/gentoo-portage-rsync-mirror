@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.72 2013/03/23 17:41:47 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.73 2013/03/29 07:59:39 alonbl Exp $
+
+*laptop-mode-tools-1.63-r1 (29 Mar 2013)
+
+  29 Mar 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/laptop-mode-tools-1.63-pcie-aspm-silencing-stderr.patch,
+  +laptop-mode-tools-1.63-r1.ebuild:
+  Fix pcie-aspm issue, per bug#462900, thanks to Manuel Rüger
 
 *laptop-mode-tools-1.63 (23 Mar 2013)
 

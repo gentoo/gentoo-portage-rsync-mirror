@@ -1,0 +1,34 @@
+From f52e9afc8966d3804e6a432b0a98bfa2a758c416 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Manuel=20R=C3=BCger?= <mrueg@rueg.eu>
+Date: Thu, 28 Mar 2013 01:24:39 +0100
+Subject: [PATCH] pcie-aspm: Silencing stderr.
+
+---
+ usr/share/laptop-mode-tools/modules/pcie-aspm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/usr/share/laptop-mode-tools/modules/pcie-aspm b/usr/share/laptop-mode-tools/modules/pcie-aspm
+index 1f6eec9..57fe31e 100755
+--- a/usr/share/laptop-mode-tools/modules/pcie-aspm
++++ b/usr/share/laptop-mode-tools/modules/pcie-aspm
+@@ -7,7 +7,7 @@ if [ x$CONTROL_PCIE_ASPM = x1 ] || [ x$ENABLE_AUTO_MODULES = x1 -a x$CONTROL_PCI
+     if [ $ON_AC -eq 1 ]; then
+         log "VERBOSE" "On AC power: setting pcie_aspm to default"
+         if [ -f /sys/module/pcie_aspm/parameters/policy ]; then
+-            echo default > /sys/module/pcie_aspm/parameters/policy
++            echo default > /sys/module/pcie_aspm/parameters/policy 2>/dev/null
+             if [ $? -eq 0 ]; then
+                 log "VERBOSE" "PCIe ASPM set to 'default'"
+             else
+@@ -19,7 +19,7 @@ if [ x$CONTROL_PCIE_ASPM = x1 ] || [ x$ENABLE_AUTO_MODULES = x1 -a x$CONTROL_PCI
+     else
+         log "VERBOSE" "On battery: setting pcie_aspm to powersave"
+         if [ -f /sys/module/pcie_aspm/parameters/policy ]; then
+-            echo powersave > /sys/module/pcie_aspm/parameters/policy
++            echo powersave > /sys/module/pcie_aspm/parameters/policy 2>/dev/null
+             if [ $? -eq 0 ]; then
+                 log "VERBOSE" "PCIe ASPM set to 'powersave'"
+             else
+-- 
+1.8.1.5
+
