@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.6.0-r1.ebuild,v 1.13 2013/02/28 15:47:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.6.0-r1.ebuild,v 1.14 2013/03/29 01:55:22 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ src_prepare() {
 	sed -i -r \
 		-e '/^install-(data|exec)-local:/s|^.*$|&\ndisabled-&|' \
 		Makefile.am || die
-	epatch "${FILESDIR}"/configure-fix-pthread-linking.patch || die
+	epatch "${FILESDIR}"/configure-fix-pthread-linking.patch #371647
 	eautoreconf
 
 	python_convert_shebangs -r 2 .
