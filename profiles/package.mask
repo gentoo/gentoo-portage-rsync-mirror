@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14608 2013/03/29 09:57:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14609 2013/03/29 12:01:18 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -159,6 +159,7 @@
 >=x11-wm/mutter-3.8
 >=net-libs/libgrss-0.5
 >=media-gfx/gthumb-3.2
+>=app-editors/latexila-2.8
 
 # Michał Górny <mgorny@gentoo.org> (27 Mar 2013)
 # Mask new systemd for testing.
