@@ -1351,13 +1351,13 @@ dev-lang/php:hash - Enable the hash extension
 dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:json - Enable JSON support
 dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension
+dev-lang/php:libmysqlclient - Use libmyslclient driver for mysql, mysqli, PDO_Mysql (not recommended)
 dev-lang/php:mysqlnd - Use native driver for mysql, mysqli, PDO_Mysql
 dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et.al
 dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
 dev-lang/php:pic - Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)
 dev-lang/php:sqlite2 - Add sqlite2 support. Will be removed
-dev-lang/php:suhosin - Add the Suhosin patch from http://www.suhosin.org/)
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:zip - Enable ZIP file support
@@ -2824,11 +2824,16 @@ media-libs/allegro:vga - Enables the VGA graphics driver
 media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for advanced features.
 media-libs/alure:dumb - Enable media-libs/dumb module library support
 media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
-media-libs/avidemux-core:aften - Enable A/52 (AC-3) audio encoder support
-media-libs/avidemux-core:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
+media-libs/avidemux-core:aften - Enable A/52 (AC-3) audio encoder support.
+media-libs/avidemux-core:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-libs/avidemux-core:system-ffmpeg - Use the ffmpeg provided by the system.
-media-libs/avidemux-plugins:aften - Enable A/52 (AC-3) audio encoder support
-media-libs/avidemux-plugins:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
+media-libs/avidemux-plugins:aften - Enable A/52 (AC-3) audio encoder support.
+media-libs/avidemux-plugins:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
+media-libs/avidemux-plugins:faac - Enable free MPEG-4 audio codecs support via media-libs/faac.
+media-libs/avidemux-plugins:faad - Enable AAC audio decoding library support via media-libs/faad2.
+media-libs/avidemux-plugins:fribidi - Enable unicode bidirectional algorithm support via dev-libs/fribidi.
+media-libs/avidemux-plugins:twolame - Enable TwoLAME support via media-sound/twolame, an optimised MPEG Audio Layer 2 (MP2) encoder.
+media-libs/avidemux-plugins:vpx - Enable WebM VP8 Codec SDK support via media-libs/libvpx.
 media-libs/babl:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/babl:vala - Enable bindings for dev-lang/vala
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
@@ -3464,9 +3469,9 @@ media-video/aravis:X - Build the GTK+-based video viewer for aravis. This requir
 media-video/aravis:gstreamer - Build the GStreamer plugin for aravis, but not the video viewer.
 media-video/arista:faac - Use external faac library for AAC encoding
 media-video/arista:nautilus - Add an entry in the Nautilus context menu to transcode media files for a specified device.
-media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support
-media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
-media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx
+media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support.
+media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
+media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/bombono-dvd:gnome - Use GVFS for desktop integration
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/cheese:sendto - Build the gnome-extra/nautilus-sendto plugin

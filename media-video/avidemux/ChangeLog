@@ -1,6 +1,14 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.213 2013/03/24 11:11:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.216 2013/03/29 15:21:36 tomwij Exp $
+
+*avidemux-2.6.3 (29 Mar 2013)
+
+  29 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-2.6.3.ebuild,
+  metadata.xml:
+  Version bump to 2.6.3. Reworked USE flags to be more specific to each avidemux
+  package, the way it is meant to be; introduced additional support for some
+  libraries through USE flags as a consequence.
 
   24 Mar 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.2-r1.ebuild:
   Revision bump. Now that the package is revised, the install target for

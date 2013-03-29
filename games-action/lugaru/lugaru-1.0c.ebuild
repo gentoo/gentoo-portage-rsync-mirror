@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c.ebuild,v 1.2 2010/05/12 15:48:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c.ebuild,v 1.3 2013/03/29 15:30:29 hasufell Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 DESCRIPTION="3D arcade with unique fighting system and anthropomorphic characters"
 HOMEPAGE="http://www.wolfire.com/lugaru"
@@ -26,10 +26,7 @@ S=${WORKDIR}/data
 
 src_unpack() {
 	# self unpacking zip archive; unzip warns about the exe stuff
-	local a=${DISTDIR}/${A}
-	echo ">>> Unpacking ${a} to ${PWD}"
-	unzip -q "${a}"
-	[ $? -gt 1 ] && die "unpacking failed"
+	unpack_zip ${A}
 
 	# Duplicate file and can't be handled by portage, bug #14983
 	rm -f "${S}/Data/Textures/Quit.png "

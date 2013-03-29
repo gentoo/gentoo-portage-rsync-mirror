@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.4 2010/01/31 05:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.5 2013/03/29 15:28:31 hasufell Exp $
 
-inherit eutils games
+inherit eutils unpacker games
 
 MY_PV=${PV/./}
 DEMO="desc${MY_PV}sw.exe"
@@ -27,7 +27,7 @@ DEPEND="app-arch/unzip
 S=${WORKDIR}
 
 src_unpack() {
-	unzip -qo "${DISTDIR}/${A}" || die "unzip failed"
+	unpack_zip ${A}
 
 	unarj e DESCENT1.SOW || die "unarj DESCENT1.SOW failed"
 	mv descent.pig{,1}

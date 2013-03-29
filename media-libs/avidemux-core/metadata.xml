@@ -7,8 +7,8 @@
   </maintainer>
   <herd>video</herd>
   <use>
-    <flag name="aften">Enable A/52 (AC-3) audio encoder support</flag>
-    <flag name="amr">Enable Adaptive Multi-Rate format support via <pkg>media-libs/opencore-amr</pkg></flag>
+    <flag name="aften">Enable A/52 (AC-3) audio encoder support.</flag>
+    <flag name="amr">Enable Adaptive Multi-Rate format support via <pkg>media-libs/opencore-amr</pkg>.</flag>
     <flag name="system-ffmpeg">Use the ffmpeg provided by the system.</flag>
   </use>
 </pkgmetadata>

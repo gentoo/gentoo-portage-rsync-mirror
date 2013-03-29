@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.102 2013/03/28 22:57:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.103 2013/03/29 15:26:52 mgorny Exp $
+
+  29 Mar 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Move udev executables to rootfs to avoid breaking the few systems which
+  install systemd but aren't prepared for it. Symlink to the new locations for
+  compat.
 
   28 Mar 2013; Mike Gilbert <floppym@gentoo.org> +files/199-firmware.patch,
   systemd-199.ebuild:

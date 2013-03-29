@@ -1,6 +1,9 @@
 # ChangeLog for games-action/lugaru
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/ChangeLog,v 1.1 2010/05/12 04:21:55 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/ChangeLog,v 1.2 2013/03/29 15:30:29 hasufell Exp $
+
+  29 Mar 2013; Julian Ospald <hasufell@gentoo.org> lugaru-1.0c.ebuild:
+  use unpack_zip from unpacker.eclass instead of unzip
 
 *lugaru-1.0c (12 May 2010)
 

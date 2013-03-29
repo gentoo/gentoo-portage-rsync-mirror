@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.2 2013/03/24 11:12:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.4 2013/03/29 15:21:43 tomwij Exp $
+
+*avidemux-plugins-2.6.3 (29 Mar 2013)
+
+  29 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-plugins-2.6.3.ebuild,
+  metadata.xml:
+  Version bump to 2.6.3. Reworked USE flags to be more specific to each avidemux
+  package, the way it is meant to be; introduced additional support for some
+  libraries through USE flags as a consequence.
 
 *avidemux-plugins-2.6.2-r2 (24 Mar 2013)
 
