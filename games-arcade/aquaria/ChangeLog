@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/aquaria
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/aquaria/ChangeLog,v 1.3 2010/11/09 15:29:21 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/aquaria/ChangeLog,v 1.4 2013/03/29 15:49:03 hasufell Exp $
+
+  29 Mar 2013; Julian Ospald <hasufell@gentoo.org> aquaria-1.1.3.ebuild:
+  use unpack_zip from unpacker.eclass instead of unzip
 
   09 Nov 2010; Tupone Alfredo <tupone@gentoo.org> aquaria-1.1.3.ebuild:
   Fix using of ${A} in pkg_nofetch. Bug #343179 by Dennis Schridde
@@ -14,4 +17,3 @@
   12 May 2010; Mike Frysinger <vapier@gentoo.org> +aquaria-1.1.3.ebuild,
   +metadata.xml:
   Initial ebuild by James Le Cuirot #319041.
-

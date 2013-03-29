@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine-bin/trine-bin-1.08.ebuild,v 1.3 2011/04/21 08:52:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine-bin/trine-bin-1.08.ebuild,v 1.5 2013/03/29 15:48:19 hasufell Exp $
 
 # these are ELFs that include a ZIP (504b0304) appended to it
 #   dd if=Trine.64.run of=Trine.64.zip ibs=$((0x342a8)) skip=1
@@ -8,7 +8,7 @@
 # but `unzip` will skip the ELF at the start.  both ELFs contain
 # the same zip appended, so only need to hash one of them.
 
-inherit games eutils
+inherit unpacker games eutils
 
 DESCRIPTION="a physics-based action game where diff characters allow diff solutions to challenges"
 HOMEPAGE="http://trine-thegame.com/"
@@ -39,7 +39,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	# manually run unzip as the initial seek causes it to exit(1)
-	unzip -q "${DISTDIR}/${A}"
+	unpack_zip ${A}
 	rm lib*/lib{gcc_s,m,rt,selinux}.so.?
 }
 

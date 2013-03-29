@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/shadowgrounds-bin-0_beta12.ebuild,v 1.2 2011/04/21 08:49:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/shadowgrounds-bin-0_beta12.ebuild,v 1.3 2013/03/29 15:35:58 hasufell Exp $
 
-inherit games eutils
+inherit unpacker games eutils
 
 DESCRIPTION="an epic action experience combining modern technology with addictive playability"
 HOMEPAGE="http://shadowgroundsgame.com/"
@@ -37,7 +37,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	# manually run unzip as the initial seek causes it to exit(1)
-	unzip -q "${DISTDIR}/${A}"
+	unpack_zip ${A}
 	rm lib*/lib{gcc_s,m,rt,selinux}.so.?
 }
 

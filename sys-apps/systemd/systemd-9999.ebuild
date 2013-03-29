@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.32 2013/03/29 15:26:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.33 2013/03/29 15:49:38 mgorny Exp $
 
 EAPI=5
 
@@ -73,8 +73,6 @@ DEPEND="${COMMON_DEPEND}
 
 #if LIVE
 DEPEND="${DEPEND}
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
 	dev-libs/gobject-introspection
 	>=dev-libs/libgcrypt-1.4.5
 	>=dev-util/gtk-doc-1.18"
@@ -87,15 +85,13 @@ pkg_pretend() {
 	ewarn "and it is an easy way to get your system broken and unbootable."
 	ewarn "Please consider using the release ebuilds instead."
 }
-#endif
 
 src_prepare() {
-#if LIVE
 	gtkdocize --docdir docs/ || die
-#endif
 
 	autotools-utils_src_prepare
 }
+#endif
 
 src_configure() {
 	local myeconfargs=(

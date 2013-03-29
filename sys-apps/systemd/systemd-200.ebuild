@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-199.ebuild,v 1.2 2013/03/28 22:57:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-200.ebuild,v 1.1 2013/03/29 15:49:38 mgorny Exp $
 
 EAPI=5
 
@@ -63,13 +63,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 
-src_prepare() {
-	local PATCHES=(
-		"${FILESDIR}/199-firmware.patch"
-	)
-	autotools-utils_src_prepare
-}
-
 src_configure() {
 	local myeconfargs=(
 		--localstatedir=/var
@@ -125,6 +118,13 @@ src_install() {
 		udevlibexecdir="${MY_UDEVDIR}" \
 		dist_udevhwdb_DATA=
 
+	# keep udev working without initramfs, for openrc compat
+	dodir /sbin
+	mv "${D}"/usr/lib/systemd/systemd-udevd "${D}"/sbin/udevd || die
+	mv "${D}"/usr/bin/udevadm "${D}"/sbin/udevadm || die
+	dosym ../../../sbin/udevd /usr/lib/systemd/systemd-udevd
+	dosym ../../sbin/udevadm /usr/bin/udevadm
+
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
 	newins shell-completion/systemd-zsh-completion.zsh "_${PN}"
@@ -161,8 +161,12 @@ src_install() {
 		/etc/systemd/ntp-units.d /etc/systemd/user /var/lib/systemd
 
 	# Check whether we won't break user's system.
-	[[ -x "${D}"/bin/systemd ]] || die '/bin/systemd symlink broken, aborting.'
-	[[ -x "${D}"/usr/bin/systemd ]] || die '/usr/bin/systemd symlink broken, aborting.'
+	local x
+	for x in /bin/systemd /usr/bin/systemd \
+		/usr/bin/udevadm /usr/lib/systemd/systemd-udevd
+	do
+		[[ -x ${D}${x} ]] || die "${x} symlink broken, aborting."
+	done
 }
 
 pkg_preinst() {
