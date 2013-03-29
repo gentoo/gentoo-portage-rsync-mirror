@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.36.0.ebuild,v 1.1 2013/03/28 16:03:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.36.0.ebuild,v 1.2 2013/03/29 14:13:29 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="glib"
@@ -26,7 +26,7 @@ PDEPEND=">=dev-libs/glib-${PV}:2"
 S="${WORKDIR}/glib-${PV}/gio/gdbus-2.0/codegen"
 
 python_prepare_all() {
-	epatch "${FILESDIR}/${PN}-2.32.4-sitedir.patch"
+	epatch "${FILESDIR}/${PN}-2.36.0-sitedir.patch"
 	sed -e "s:\"/usr/local\":\"${EPREFIX}/usr\":" \
 		-i config.py || die "sed config.py failed"
 

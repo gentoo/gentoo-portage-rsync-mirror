@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.44 2013/03/28 16:03:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.45 2013/03/29 14:13:29 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gdbus-codegen-2.36.0-sitedir.patch, gdbus-codegen-2.36.0.ebuild:
+  Forgot to commit ebuild using updated patch (#463656 by Maciej Piechotka)
 
 *gdbus-codegen-2.36.0 (28 Mar 2013)
 
