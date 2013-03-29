@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.389 2013/03/29 16:53:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.390 2013/03/29 22:59:30 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -evolution-3.4.4.ebuild,
+  -evolution-3.6.2-r1.ebuild:
+  Clean up old revisions.
 
   29 Mar 2013; Pacho Ramos <pacho@gentoo.org> evolution-3.8.0.ebuild:
   Be ready for unsplitted libsoup (#463748)

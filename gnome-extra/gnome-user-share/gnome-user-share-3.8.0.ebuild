@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-3.8.0.ebuild,v 1.1 2013/03/28 17:24:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-3.8.0.ebuild,v 1.2 2013/03/29 22:43:21 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,12 +41,14 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		ITSTOOL=$(type -P true)
-		--with-httpd=apache2
-		--with-modules-path=/usr/$(get_libdir)/apache2/modules/"
-
 	# Rebuild marshalers for <glib-2.31 compatibility
 	rm -v src/marshal.{c,h} || die
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		ITSTOOL=$(type -P true) \
+		--with-httpd=apache2 \
+		--with-modules-path=/usr/$(get_libdir)/apache2/modules/
 }

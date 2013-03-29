@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-packagekit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/ChangeLog,v 1.9 2012/12/24 00:20:41 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/ChangeLog,v 1.10 2013/03/29 22:35:40 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-packagekit-3.4.2.ebuild:
+  Clean up old revision.
 
 *gnome-packagekit-3.6.1-r1 (24 Dec 2012)
 

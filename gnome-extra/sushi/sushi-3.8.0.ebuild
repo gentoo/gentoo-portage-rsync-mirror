@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-3.8.0.ebuild,v 1.1 2013/03/28 17:30:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-3.8.0.ebuild,v 1.2 2013/03/29 22:55:08 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -50,11 +50,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 src_configure() {
-	G2CONF="${G2CONF}
-		UNOCONV=$(type -P false)
-		--disable-static"
-	if use office; then
-		G2CONF="${G2CONF} UNOCONV=$(type -P unoconv)"
-	fi
-	gnome2_src_configure
+	gnome2_src_configure \
+		--disable-static \
+		UNOCONV=$(usex office $(type -P unoconv) $(type -P false))
 }

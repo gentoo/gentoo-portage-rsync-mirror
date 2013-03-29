@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.4.ebuild,v 1.8 2012/06/08 04:52:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.4.ebuild,v 1.9 2013/03/29 22:45:18 vapier Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -138,7 +138,7 @@ cleanup_chk() {
 	done
 }
 
-src_install () {
+src_install() {
 	MINOR_VERSION=12
 	cd "${S}"/mozilla/security/dist || die
 
@@ -182,7 +182,7 @@ src_install () {
 		symkeyutil tstclnt vfychain vfyserv"
 	fi
 	cd "${S}"/mozilla/security/dist/*/bin/ || die
-	for f in $nssutils; do
+	for f in ${nssutils}; do
 		dobin ${f} || die
 	done
 

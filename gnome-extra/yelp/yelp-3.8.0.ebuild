@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.8.0.ebuild,v 1.1 2013/03/28 17:32:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.8.0.ebuild,v 1.2 2013/03/29 22:56:20 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -36,12 +36,6 @@ DEPEND="${RDEPEND}
 #	gnome-base/gnome-common
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		--disable-static
-		--enable-bz2
-		--enable-lzma
-		ITSTOOL=$(type -P true)"
-
 	# Fix compatibility with Gentoo's sys-apps/man
 	# https://bugzilla.gnome.org/show_bug.cgi?id=648854
 	epatch "${FILESDIR}/${PN}-3.0.3-man-compatibility.patch"
@@ -49,4 +43,12 @@ src_prepare() {
 	eautoreconf
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--disable-static \
+		--enable-bz2 \
+		--enable-lzma \
+		ITSTOOL=$(type -P true)
 }

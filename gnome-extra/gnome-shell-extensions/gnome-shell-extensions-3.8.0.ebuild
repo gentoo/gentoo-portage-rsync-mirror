@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.0.ebuild,v 1.1 2013/03/28 23:00:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.0.ebuild,v 1.2 2013/03/29 22:39:03 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,9 +41,7 @@ DEPEND="${COMMON_DEPEND}
 # eautoreconf needs gnome-base/gnome-common
 
 src_configure() {
-	G2CONF="${G2CONF}
-		--enable-extensions=all"
-	gnome2_src_configure
+	gnome2_src_configure --enable-extensions=all
 }
 
 src_install() {
