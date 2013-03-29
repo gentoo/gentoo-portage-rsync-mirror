@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cfengine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.160 2012/10/27 15:42:36 idl0r Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.161 2013/03/28 23:35:20 idl0r Exp $
+
+*cfengine-3.4.4 (28 Mar 2013)
+
+  28 Mar 2013; Christian Ruppert <idl0r@gentoo.org> +cfengine-3.4.4.ebuild,
+  +files/cfengine-3.4.4-acl.patch, +files/cfengine-3.4.4-ifconfig.patch:
+  Version bump, bug 462664 also fixes the ifconfig path, bug 444532
 
 *cfengine-3.3.9 (27 Oct 2012)
 

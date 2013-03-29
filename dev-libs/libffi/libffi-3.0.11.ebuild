@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.19 2013/01/27 19:57:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.20 2013/03/28 23:48:12 vapier Exp $
 
 EAPI=4
 
@@ -40,6 +40,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-x86-pic-check.patch #417179
+	sed -i 's:@toolexeclibdir@:$(libdir):g' Makefile.in || die #462814
 	epatch_user
 	elibtoolize
 }

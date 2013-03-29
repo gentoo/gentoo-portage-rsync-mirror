@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.165 2013/03/20 17:16:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.166 2013/03/28 23:48:12 vapier Exp $
+
+  28 Mar 2013; Mike Frysinger <vapier@gentoo.org> libffi-3.0.11.ebuild,
+  libffi-3.0.12.ebuild, libffi-3.0.13.ebuild:
+  Disable tooldir related hack that breaks --libdir usage #462814 by Thomas
+  Sachau.
 
 *libffi-3.0.13 (20 Mar 2013)
 
