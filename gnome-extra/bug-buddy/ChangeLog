@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/bug-buddy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.197 2012/05/05 06:25:18 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.198 2013/03/29 14:44:07 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org> bug-buddy-2.32.0-r2.ebuild:
+  It needs <gnome-extra/evolution-data-server-3.6 as it won't ever be ported.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> bug-buddy-2.32.0-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

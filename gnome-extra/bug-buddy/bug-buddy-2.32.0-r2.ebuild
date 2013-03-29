@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.32.0-r2.ebuild,v 1.8 2012/05/05 06:25:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.32.0-r2.ebuild,v 1.9 2013/03/29 14:44:07 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=gnome-base/libbonobo-2
 	>=gnome-base/gconf-2:2
 	|| ( dev-libs/elfutils dev-libs/libelf )
 	>=sys-devel/gdb-5.1
-	eds? ( >=gnome-extra/evolution-data-server-1.3 )"
+	eds? ( <gnome-extra/evolution-data-server-3.6 )"
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	virtual/pkgconfig

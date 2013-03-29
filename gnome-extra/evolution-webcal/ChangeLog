@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/evolution-webcal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.125 2012/08/28 15:47:58 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.126 2013/03/29 14:34:47 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org> evolution-webcal-2.32.0.ebuild:
+  It needs <gnome-extra/evolution-data-server-3.6 as it won't ever be ported.
 
   28 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   evolution-webcal-2.32.0.ebuild,

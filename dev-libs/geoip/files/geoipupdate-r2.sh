@@ -16,7 +16,7 @@ if [ -d "${GEOIPDIR}" ]; then
 		for db in $DATABASES; do
 			fname=$(basename $db)
 
-			if [ -f ${GEOPDIR}/${fname} ]; then
+			if [ -f "${GEOIPDIR}/${fname}.dat" ]; then
 				wget --no-verbose -t 3 -T 60 \
 					"${GEOIP_MIRROR}/${db}.dat.gz" \
 					-O "${TMPDIR}/${fname}.dat.gz"
