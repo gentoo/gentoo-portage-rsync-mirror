@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
+		<flag name="bogofilter">Build <pkg>mail-filter/bogofilter</pkg> plugin</flag>
 		<flag name="clutter">Build with clutter support for animation effects</flag>
 		<flag name="connman">Enable <pkg>net-misc/connman</pkg>	support (requires 
 		'networkmanager' USE flag to be disabled).</flag>
@@ -10,6 +11,8 @@
 			<pkg>app-crypt/gnupg</pkg> and <pkg>app-crypt/pinentry</pkg></flag>
 		<flag name="gnome-online-accounts">Enable using
 			<pkg>net-libs/gnome-online-accounts</pkg> for authorization</flag>
+		<flag name="highlight">Enable text highlighting
+			plugin</flag>
 		<flag name="ldap">Enable support for fetching contacts from an LDAP or
 			Active Directory server using <pkg>net-nds/openldap</pkg></flag>
 		<flag name="map">Enable support for displaying contacts on a map inside
@@ -17,6 +20,8 @@
 		<flag name="networkmanager">Allows Evolution to automagically toggle
 			online/offline mode by talking to <pkg>net-misc/networkmanager</pkg>
 			and getting the current network state</flag>
+		<flag name="spamassassin">Build <pkg>mail-filter/spamassassin</pkg>
+			plugin</flag>
 		<flag name="weather">Enable optional weather calendar support</flag>
 	</use>
 </pkgmetadata>

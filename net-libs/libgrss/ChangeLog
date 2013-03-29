@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libgrss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.6 2013/02/02 23:04:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.7 2013/03/28 23:14:50 pacho Exp $
+
+*libgrss-0.5.0 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +libgrss-0.5.0.ebuild:
+  Version bump for Gnome 3.8
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libgrss-0.3.0.ebuild:
   Add ~arm, wrt bug #449220

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.26 2013/02/02 22:24:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.27 2013/03/28 23:07:48 pacho Exp $
+
+*folks-0.9.1 (28 Mar 2013)
+
+  28 Mar 2013; Pacho Ramos <pacho@gentoo.org> +folks-0.9.1.ebuild:
+  Version bump for Gnome 3.8
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> folks-0.8.0.ebuild:
   Add ~arm, wrt bug #449220
