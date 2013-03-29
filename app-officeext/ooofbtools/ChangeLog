@@ -1,0 +1,10 @@
+# ChangeLog for app-officeext/ooofbtools
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.1 2013/03/29 10:02:39 scarabeus Exp $
+
+*ooofbtools-2.12 (29 Mar 2013)
+
+  29 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +ooofbtools-2.12.ebuild,
+  +metadata.xml:
+  Initial commit of this extension wrt bug#463536.
+

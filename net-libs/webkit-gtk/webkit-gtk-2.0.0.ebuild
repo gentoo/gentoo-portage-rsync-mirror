@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.0.ebuild,v 1.1 2013/03/28 17:55:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.0.ebuild,v 1.2 2013/03/29 10:17:21 pacho Exp $
 
 EAPI="5"
 
@@ -26,6 +26,7 @@ RDEPEND="
 	app-crypt/libsecret
 	dev-libs/libxml2:2
 	dev-libs/libxslt
+	media-libs/harfbuzz
 	media-libs/libwebp
 	virtual/jpeg:=
 	>=media-libs/libpng-1.4:0=

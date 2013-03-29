@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext-r1.eclass,v 1.3 2013/03/23 10:24:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext-r1.eclass,v 1.4 2013/03/29 10:02:23 scarabeus Exp $
 
 # @ECLASS: office-ext-r1.eclass
 # @MAINTAINER:
@@ -57,6 +57,16 @@ if [[ "$(declare -p OFFICE_EXTENSIONS 2>/dev/null 2>&1)" != "declare -a"* ]]; th
 	die "OFFICE_EXTENSIONS variable is not an array."
 fi
 
+# @ECLASS-VARIABLE: OFFICE_EXTENSIONS_LOCATION
+# @DESCRIPTION:
+# Path to the extensions location. Defaults to ${DISTDIR}.
+#
+# Example:
+# @CODE
+# OFFICE_EXTENSIONS_LOCATION="${S}/unpacked/"
+# @CODE
+: ${OFFICE_EXTENSIONS_LOCATION:=${DISTDIR}}
+
 IUSE=""
 RDEPEND=""
 
@@ -97,12 +107,15 @@ office-ext-r1_src_unpack() {
 	for i in ${OFFICE_EXTENSIONS[@]}; do
 		# Unpack the extensions where required and add case for oxt
 		# which should be most common case for the extensions.
-		if [[ -f "${DISTDIR}/${i}" ]] ; then
+		if [[ -f "${OFFICE_EXTENSIONS_LOCATION}/${i}" ]] ; then
 			case ${i} in
 				*.oxt)
-					echo ">>> Unpacking "${DISTDIR}/${i}" to ${PWD}"
-					unzip -qo ${DISTDIR}/${i}
-					assert "failed unpacking ${DISTDIR}/${i}"
+					mkdir -p "${WORKDIR}/${i}/"
+					pushd "${WORKDIR}/${i}/" > /dev/null
+					echo ">>> Unpacking "${OFFICE_EXTENSIONS_LOCATION}/${i}" to ${PWD}"
+					unzip -qo ${OFFICE_EXTENSIONS_LOCATION}/${i}
+					assert "failed unpacking ${OFFICE_EXTENSIONS_LOCATION}/${i}"
+					popd > /dev/null
 					;;
 				*) unpack ${i} ;;
 			esac
@@ -127,11 +140,15 @@ office-ext-r1_src_install() {
 				# fixing it myself.
 				insinto /usr/$(get_libdir)/${i}/share/extension/install
 				for j in ${OFFICE_EXTENSIONS[@]}; do
-					doins ${DISTDIR}/${j}
+					doins ${OFFICE_EXTENSIONS_LOCATION}/${j}
 				done
 			else
-				insinto /usr/$(get_libdir)/${i}/share/extensions/${PN}
-				doins -r *
+				for j in ${OFFICE_EXTENSIONS[@]}; do
+					pushd "${WORKDIR}/${j}/" > /dev/null
+					insinto /usr/$(get_libdir)/${i}/share/extensions/${j/.oxt/}
+					doins -r *
+					popd > /dev/null
+				done
 			fi
 		fi
 	done

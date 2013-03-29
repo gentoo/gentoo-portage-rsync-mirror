@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.756 2013/03/28 12:21:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.757 2013/03/29 10:02:23 scarabeus Exp $
+
+  29 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> office-ext-r1.eclass:
+  Allow specification of directory where the extensions are. Also allow one
+  package providing multiple oxts correctly. Wrt bug#463536.
 
   28 Mar 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Support obtaining CFLAGS and LIBS for the Python implementation (similarly to
