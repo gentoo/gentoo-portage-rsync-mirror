@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/gitg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.20 2012/06/11 09:19:31 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.21 2013/03/29 08:22:05 scarabeus Exp $
+
+*gitg-0.2.6 (29 Mar 2013)
+
+  29 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/gitg-0.2.6-fix-libreoffice.patch, +gitg-0.2.6.ebuild,
+  -files/gitg-0.2.1-fix-disable-debug.patch, -gitg-0.1.0.ebuild,
+  -gitg-0.2.2.ebuild, -gitg-0.2.4.ebuild:
+  Version bump to latest and add patch to make it work with huge repos
+  (libreoffice). Drop overshadowed packages to reduce versions clutter.
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gitg-0.1.2.ebuild:
   Stable for amd64, wrt bug #419893
@@ -134,4 +143,3 @@
   08 Mar 2009; Mike Auty <ikelos@gentoo.org> +metadata.xml,
   +gitg-0.0.1.ebuild:
   Initial import, ebuild courtesy of Thorsten Vollmer (bug 258741).
-
