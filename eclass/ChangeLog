@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.757 2013/03/29 10:02:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.758 2013/03/29 12:27:04 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org> vala.eclass:
+  Update VALA_MAX_API_VERSION
 
   29 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> office-ext-r1.eclass:
   Allow specification of directory where the extensions are. Also allow one

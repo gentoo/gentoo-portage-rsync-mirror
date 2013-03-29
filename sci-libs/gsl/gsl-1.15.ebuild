@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.15.ebuild,v 1.5 2013/02/21 21:36:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.15.ebuild,v 1.6 2013/03/29 12:17:43 jlec Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ pkg_pretend() {
 	fi
 }
 
-pkg_setup() {
+src_prepare() {
 	ESELECT_PROF="gsl"
 
 	# bug 349005
@@ -45,9 +45,7 @@ pkg_setup() {
 		[[ $(gcc-major-version)$(gcc-minor-version) -eq 44 ]] \
 		&& filter-mfpmath sse
 	filter-flags -ffast-math
-}
 
-src_prepare() {
 	epatch "${FILESDIR}"/${P}-cblas.patch
 	eautoreconf
 

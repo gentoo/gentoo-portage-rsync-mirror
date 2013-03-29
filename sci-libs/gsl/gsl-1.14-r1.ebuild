@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.7 2013/02/21 21:36:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.8 2013/03/29 12:17:43 jlec Exp $
 
 EAPI="3"
 
@@ -30,16 +30,16 @@ pkg_setup() {
 		ewarn "Please install and/or eselect another cblas"
 		die "Circular gsl dependency"
 	fi
+}
 
+src_prepare() {
 	# bug 349005
 	[[ $(tc-getCC)$ == *gcc* ]] && \
 		[[ $(tc-getCC)$ != *apple* ]] && \
 		[[ $(gcc-major-version)$(gcc-minor-version) -eq 44 ]] \
 		&& filter-mfpmath sse
 	filter-flags -ffast-math
-}
 
-src_prepare() {
 	epatch "${FILESDIR}"/${P}-cblas.patch
 	eautoreconf
 
