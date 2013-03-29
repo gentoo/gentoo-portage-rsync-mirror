@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.198 2013/03/28 17:25:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.199 2013/03/29 13:35:32 ago Exp $
+
+  29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gucharmap-3.6.1.ebuild:
+  Stable for ia64, wrt bug #458984
 
 *gucharmap-3.8.0 (28 Mar 2013)
 

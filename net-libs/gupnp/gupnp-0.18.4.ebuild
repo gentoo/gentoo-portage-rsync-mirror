@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.18.4.ebuild,v 1.5 2013/03/25 16:36:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.18.4.ebuild,v 1.6 2013/03/29 13:41:06 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gupnp.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 ~sparc x86"
 IUSE="connman +introspection kernel_linux networkmanager"
 
 RDEPEND=">=net-libs/gssdp-0.11.2[introspection?]

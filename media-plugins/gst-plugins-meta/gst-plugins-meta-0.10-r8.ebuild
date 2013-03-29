@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r8.ebuild,v 1.15 2013/03/28 15:59:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r8.ebuild,v 1.16 2013/03/29 13:38:32 ago Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org"
 
 LICENSE="metapackage"
 SLOT="0.10"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-solaris"
 IUSE="aac a52 alsa cdda dts dv dvb dvd ffmpeg flac http jack lame libass libvisual mms mp3 mpeg musepack ogg opus oss pulseaudio taglib theora v4l vcd vorbis vpx wavpack X x264 xv xvid"
 REQUIRED_USE="opus? ( ogg ) theora? ( ogg ) vorbis? ( ogg )"
 

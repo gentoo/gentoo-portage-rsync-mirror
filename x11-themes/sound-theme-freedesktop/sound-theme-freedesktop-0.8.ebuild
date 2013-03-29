@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sound-theme-freedesktop/sound-theme-freedesktop-0.8.ebuild,v 1.8 2013/03/28 16:06:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sound-theme-freedesktop/sound-theme-freedesktop-0.8.ebuild,v 1.9 2013/03/29 13:47:51 ago Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freedesktop.org/~mccann/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2 CC-BY-3.0 CC-BY-SA-2.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=""

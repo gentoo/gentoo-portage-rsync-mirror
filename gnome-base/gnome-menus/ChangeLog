@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.189 2013/03/28 17:08:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.190 2013/03/29 13:33:10 ago Exp $
+
+  29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gnome-menus-2.30.5-r1.ebuild:
+  Stable for ia64, wrt bug #458984
 
 *gnome-menus-3.8.0 (28 Mar 2013)
 

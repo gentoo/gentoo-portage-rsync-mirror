@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.4_p1.ebuild,v 1.1 2013/02/28 22:45:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.4_p2.ebuild,v 1.1 2013/03/29 13:32:48 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -45,7 +45,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	sdb-ldap? (
 		http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2
 	)
-	rrl? ( http://ss.vix.com/~vixie/rl-${RRL_PV}.patch )"
+	rrl? ( http://ss.vix.su/~vjs/rl-${RRL_PV}.patch )"
 
 LICENSE="ISC BSD BSD-2 HPND JNIC RSA openssl"
 SLOT="0"
@@ -129,6 +129,8 @@ src_prepare() {
 #		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
 #			-e 's:RELEASEVER=:RELEASEVER=1:' \
 #			${GEOIP_PATCH_A} || die
+		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' \
+			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
