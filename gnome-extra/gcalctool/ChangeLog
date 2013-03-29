@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gcalctool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.224 2012/12/24 17:25:25 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.225 2013/03/29 20:13:32 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gcalctool-6.4.2.1.ebuild:
+  Clean up old revision.
 
 *gcalctool-6.6.2 (24 Dec 2012)
 

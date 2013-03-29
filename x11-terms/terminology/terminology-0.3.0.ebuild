@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/terminology-0.3.0.ebuild,v 1.1 2013/03/24 14:55:17 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/terminology-0.3.0.ebuild,v 1.2 2013/03/29 20:12:34 sera Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=media-libs/edje-${EFL_VERSION}
 	>=media-libs/elementary-${EFL_VERSION}
 	>=media-libs/emotion-${EFL_VERSION}
-	>=media-libs/ethumb-${EFL_VERSION}
+	>=media-libs/ethumb-${EFL_VERSION}[dbus]
 	>=media-libs/evas-${EFL_VERSION}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

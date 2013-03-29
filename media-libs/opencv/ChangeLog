@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.89 2013/03/29 17:29:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.90 2013/03/29 20:05:47 dilfridge Exp $
+
+  29 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.4a.ebuild:
+  Add java support, thanks to sera for the help
 
 *opencv-2.4.4a (29 Mar 2013)
 

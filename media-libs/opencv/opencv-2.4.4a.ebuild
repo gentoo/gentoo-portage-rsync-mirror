@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.4a.ebuild,v 1.1 2013/03/29 17:29:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.4a.ebuild,v 1.2 2013/03/29 20:05:47 dilfridge Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.6"
 
-inherit base toolchain-funcs cmake-utils python
-#java-pkg-opt-2 java-ant-2
+inherit base toolchain-funcs cmake-utils python java-pkg-opt-2 java-ant-2
 
 MY_P=OpenCV-${PV}
 
@@ -34,6 +33,7 @@ RDEPEND="
 		dev-libs/glib:2
 		x11-libs/gtk+:2
 	)
+	java? ( >=virtual/jre-1.6 )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	ieee1394? (
@@ -57,6 +57,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
+	java? ( >=virtual/jdk-1.6 )
 "
 
 # REQUIRED_USE="opengl? ( qt )"
@@ -73,7 +74,7 @@ S=${WORKDIR}/opencv-2.4.4
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
-#	java-pkg-opt-2_pkg_setup
+	java-pkg-opt-2_pkg_setup
 }
 
 src_prepare() {
@@ -85,11 +86,14 @@ src_prepare() {
 		-e '/add_subdirectory(3rdparty)/ d' \
 		CMakeLists.txt || die
 
-#	java-pkg-opt-2_src_prepare
+	java-pkg-opt-2_src_prepare
 }
 
 src_configure() {
-#	java-ant-2_src_configure
+	JAVA_ANT_ENCODING="iso-8859-1"
+	# set encoding so even this cmake build will pick it up.
+	export ANT_OPTS+=" -Dfile.encoding=iso-8859-1"
+	java-ant-2_src_configure
 
 	# please dont sort here, order is the same as in CMakeLists.txt
 	local mycmakeargs=(
@@ -102,8 +106,7 @@ src_configure() {
 		$(cmake-utils_use_with gstreamer)
 		$(cmake-utils_use_with gtk)
 		$(cmake-utils_use_with ipp)
-	#	$(cmake-utils_use_with java)
-		-DWITH_JAVA=OFF
+		$(cmake-utils_use_with java)
 		$(cmake-utils_use_with jpeg2k JASPER)
 		$(cmake-utils_use_with jpeg)
 		$(cmake-utils_use_with opencl)
