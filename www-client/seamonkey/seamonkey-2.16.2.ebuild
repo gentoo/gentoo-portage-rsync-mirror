@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.16.2.ebuild,v 1.4 2013/03/25 14:08:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.16.2.ebuild,v 1.5 2013/03/29 00:43:27 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -283,7 +283,7 @@ src_install() {
 	# Without methodjit and tracejit there's no conflict with PaX
 	if use jit ; then
 		# Pax mark xpcshell for hardened support, only used for startupcache creation.
-		pax-mark m "${S}"/mozilla/dist/bin/xpcshell
+		pax-mark m "${S}/${obj_dir}/mozilla/dist/bin/xpcshell"
 	fi
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
