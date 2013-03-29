@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.7.ebuild,v 1.1 2013/03/14 17:08:10 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.7.ebuild,v 1.2 2013/03/29 03:25:30 patrick Exp $
 
 EAPI="5"
 
@@ -67,7 +67,7 @@ src_install () {
 	   "${S}"/"${PN}".pc.in > "${S}"/"${PN}".pc || die "sed in install failed"
 
 	emake  install || die "make failed"
-	local MY_S="${WORKDIR}"/"${P}"/mozilla/dist/
+	local MY_S="${WORKDIR}"/dist/
 
 	rm -rf "${MY_S}/bin/"lib*.so
 	rm -rf "${MY_S}/public/ldap-private"
