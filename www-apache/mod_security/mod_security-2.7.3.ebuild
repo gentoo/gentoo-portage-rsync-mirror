@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.1.ebuild,v 1.6 2013/02/12 20:25:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.3.ebuild,v 1.1 2013/03/29 17:22:41 flameeyes Exp $
 
 EAPI=4
 
@@ -12,11 +12,11 @@ MY_P=${MY_PN}_${MY_PV}
 
 DESCRIPTION="Web application firewall and Intrusion Detection System for Apache."
 HOMEPAGE="http://www.modsecurity.org/"
-SRC_URI="mirror://github/SpiderLabs/ModSecurity/${MY_P}.tar.gz"
+SRC_URI="http://www.modsecurity.org/tarball/${PV}/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="geoip curl lua jit"
 
 DEPEND=">=dev-libs/libxml2-2.7.8

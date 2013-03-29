@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.447 2013/03/28 17:17:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.448 2013/03/29 17:06:26 chainsaw Exp $
+
+*asterisk-11.3.0 (29 Mar 2013)
+*asterisk-1.8.21.0 (29 Mar 2013)
+
+  29 Mar 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.21.0.ebuild,
+  +asterisk-11.3.0.ebuild:
+  Bugfix releases on both branches. Native RTP bridging is no longer attempted
+  if packetisation differs, this helps to prevent fax failures. Improved
+  locking to prevent deadlocks.
 
 *asterisk-11.2.2 (28 Mar 2013)
 *asterisk-1.8.20.2 (28 Mar 2013)

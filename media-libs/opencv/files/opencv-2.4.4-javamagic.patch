@@ -1,0 +1,33 @@
+diff -ruN opencv-2.4.4.orig/CMakeLists.txt opencv-2.4.4/CMakeLists.txt
+--- opencv-2.4.4.orig/CMakeLists.txt	2013-03-01 16:44:17.000000000 +0100
++++ opencv-2.4.4/CMakeLists.txt	2013-03-29 18:01:36.463227214 +0100
+@@ -144,7 +144,7 @@
+ OCV_OPTION(WITH_OPENCL         "Include OpenCL Runtime support"              OFF  IF (NOT ANDROID AND NOT IOS) )
+ OCV_OPTION(WITH_OPENCLAMDFFT   "Include AMD OpenCL FFT library support"      OFF  IF (NOT ANDROID AND NOT IOS) )
+ OCV_OPTION(WITH_OPENCLAMDBLAS  "Include AMD OpenCL BLAS library support"     OFF  IF (NOT ANDROID AND NOT IOS) )
+-
++OCV_OPTION(WITH_JAVA           "Include Java support"                        ON)
+ 
+ # OpenCV build components
+ # ===================================================
+@@ -392,6 +392,8 @@
+ include(cmake/OpenCVDetectPython.cmake)
+ 
+ # --- Java Support ---
++if(WITH_JAVA)
++
+ include(cmake/OpenCVDetectApacheAnt.cmake)
+ if(ANDROID)
+   include(cmake/OpenCVDetectAndroidSDK.cmake)
+@@ -409,6 +411,11 @@
+   SET(CAN_BUILD_ANDROID_PROJECTS FALSE)
+ endif()
+ 
++else()
++  SET(ANT_EXECUTABLE "")
++  SET(CAN_BUILD_ANDROID_PROJECTS FALSE)
++endif()
++
+ # --- OpenCL ---
+ if(WITH_OPENCL)
+   include(cmake/OpenCVDetectOpenCL.cmake)
