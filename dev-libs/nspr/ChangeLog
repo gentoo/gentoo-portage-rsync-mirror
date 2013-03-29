@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.228 2013/03/12 15:16:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.229 2013/03/29 01:24:59 anarchy Exp $
+
+*nspr-4.9.6 (29 Mar 2013)
+
+  29 Mar 2013; Jory A. Pratt <anarchy@gentoo.org> +nspr-4.9.6.ebuild:
+  Version bump, bmo #807883,782214,812085 includes aarch64 support
 
 *nspr-4.9.5-r2 (12 Mar 2013)
 
