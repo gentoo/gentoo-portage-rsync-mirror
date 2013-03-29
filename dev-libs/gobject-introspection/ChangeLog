@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.89 2013/03/28 16:43:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.90 2013/03/29 11:05:47 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  gobject-introspection-1.36.0.ebuild:
+  tests configure options were dropped by upstream, thanks to plaes for noticing
 
 *gobject-introspection-1.36.0 (28 Mar 2013)
 

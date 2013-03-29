@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.36.0.ebuild,v 1.1 2013/03/28 16:43:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.36.0.ebuild,v 1.2 2013/03/29 11:05:47 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -48,18 +48,11 @@ src_prepare() {
 	# avoid GNU-isms
 	sed -i -e 's/\(if test .* \)==/\1=/' configure || die
 
-	gi_skip_tests=
 	if ! has_version "x11-libs/cairo[glib]"; then
 		# Bug #391213: enable cairo-gobject support even if it's not installed
 		# We only PDEPEND on cairo to avoid circular dependencies
 		export CAIRO_LIBS="-lcairo -lcairo-gobject"
 		export CAIRO_CFLAGS="-I${EPREFIX}/usr/include/cairo"
-		if use test; then
-			G2CONF="${G2CONF} --disable-tests"
-			gi_skip_tests=yes
-			ewarn "Tests will be skipped because x11-libs/cairo[glib] is not present"
-			ewarn "on your system. Consider installing it to get tests to run."
-		fi
 	fi
 }
 src_configure(){
@@ -67,11 +60,7 @@ src_configure(){
 		--disable-static \
 		YACC=$(type -p yacc) \
 		$(use_with cairo) \
-		$(use_enable doctool) \
-		$(use_enable test tests)
-}
-src_test() {
-	[[ -z ${gi_skip_tests} ]] && default
+		$(use_enable doctool)
 }
 
 src_install() {
