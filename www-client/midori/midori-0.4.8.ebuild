@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.8.ebuild,v 1.3 2013/02/06 18:18:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.8.ebuild,v 1.4 2013/03/29 21:37:00 angelos Exp $
 
 EAPI=5
+VALA_MIN_API_VERSION=0.14
 
 PYTHON_COMPAT=( python2_7 )
 
@@ -16,9 +17,7 @@ else
 	SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 fi
 
-inherit eutils fdo-mime gnome2-utils python-any-r1 waf-utils ${_live_inherits}
-
-VALA_VERSION=0.18
+inherit eutils fdo-mime gnome2-utils python-any-r1 waf-utils vala ${_live_inherits}
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://twotoasts.de/index.php/midori/"
@@ -48,7 +47,7 @@ RDEPEND=">=dev-db/sqlite-3.6.19:3
 	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	dev-lang/vala:${VALA_VERSION}
+	$(vala_depend)
 	dev-util/intltool
 	gnome-base/librsvg
 	doc? ( dev-util/gtk-doc )
@@ -75,12 +74,13 @@ src_prepare() {
 
 # FIXME: The code is not compatible with X- in the names
 #	epatch "${FILESDIR}"/${P}-desktop_file_validation.patch
+
+	vala_src_prepare
 }
 
 src_configure() {
 	strip-linguas -i po
 
-	VALAC="$(type -P valac-${VALA_VERSION})" \
 	waf-utils_src_configure \
 		--disable-docs \
 		$(use_enable doc apidocs) \

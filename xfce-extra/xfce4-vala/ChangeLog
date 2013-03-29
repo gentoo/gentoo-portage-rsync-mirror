@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-vala
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/ChangeLog,v 1.8 2012/11/16 12:37:26 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/ChangeLog,v 1.9 2013/03/29 21:40:29 angelos Exp $
+
+  29 Mar 2013; Christoph Mende <angelos@gentoo.org> xfce4-vala-4.10.2.ebuild:
+  Convert to vala.eclass
 
   16 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> -xfce4-vala-4.8.1.ebuild:
   old
@@ -18,4 +21,3 @@
 
   25 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +xfce4-vala-4.8.1.ebuild:
   Initial commit.
-

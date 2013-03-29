@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.9.ebuild,v 1.1 2013/03/12 10:19:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.9.ebuild,v 1.2 2013/03/29 21:37:00 angelos Exp $
 
 EAPI=5
+VALA_MIN_API_VERSION=0.14
 
 PYTHON_COMPAT=( python2_7 )
 
@@ -16,9 +17,7 @@ else
 	SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 fi
 
-inherit eutils fdo-mime gnome2-utils python-any-r1 waf-utils ${_live_inherits}
-
-VALA_VERSION=0.18
+inherit eutils fdo-mime gnome2-utils python-any-r1 waf-utils vala ${_live_inherits}
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://twotoasts.de/index.php/midori/"
@@ -48,7 +47,7 @@ RDEPEND=">=dev-db/sqlite-3.6.19:3
 	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	dev-lang/vala:${VALA_VERSION}
+	$(vala_depend)
 	dev-util/intltool
 	gnome-base/librsvg
 	doc? ( dev-util/gtk-doc )
@@ -72,6 +71,8 @@ src_unpack() {
 src_prepare() {
 	# Force disabled because we don't have this custom renamed in Portage
 	sed -i -e 's:gcr-3-gtk2:&dIsAbLe:' wscript || die
+
+	vala_src_prepare
 }
 
 src_configure() {
@@ -80,7 +81,6 @@ src_configure() {
 	local myconf
 	use deprecated || myconf="$(use_enable webkit2)"
 
-	VALAC="$(type -P valac-${VALA_VERSION})" \
 	waf-utils_src_configure \
 		--disable-docs \
 		$(use_enable doc apidocs) \

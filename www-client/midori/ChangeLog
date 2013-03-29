@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.106 2013/03/12 10:19:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.107 2013/03/29 21:37:00 angelos Exp $
+
+  29 Mar 2013; Christoph Mende <angelos@gentoo.org> midori-0.4.6-r1.ebuild,
+  midori-0.4.8.ebuild, midori-0.4.9.ebuild, midori-9999.ebuild:
+  Convert to vala.eclass
 
 *midori-0.4.9 (12 Mar 2013)
 
@@ -446,4 +450,3 @@
 
   27 Mar 2008; Markus Ullmann <jokey@gentoo.org> +metadata.xml:
   Add ebuild for bug #215036
-
