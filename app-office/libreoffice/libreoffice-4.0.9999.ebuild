@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.24 2013/03/18 09:50:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.25 2013/03/29 09:41:28 scarabeus Exp $
 
 EAPI=5
 
@@ -320,6 +320,11 @@ src_prepare() {
 	export ARCH_FLAGS="${CXXFLAGS}"
 	export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 	export GMAKE_OPTIONS="${MAKEOPTS}"
+	# System python 2.7 enablement:
+	export PYTHON="${PYTHON}"
+	export PYTHON_CFLAGS=$(python_get_CFLAGS)
+	export PYTHON_LIBS=$(python_get_LIBS)
+
 
 	# patchset
 	if [[ -n ${PATCHSET} ]]; then
@@ -342,6 +347,11 @@ src_prepare() {
 		-e "s:%libdir%:$(get_libdir):g" \
 		-i pyuno/source/module/uno.py \
 		-i scripting/source/pyprov/officehelper.py || die
+
+	if use branding; then
+		# hack...
+		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
+	fi
 }
 
 src_configure() {
@@ -400,16 +410,6 @@ src_configure() {
 			"
 		fi
 	fi
-
-	if use branding; then
-		# hack...
-		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
-	fi
-
-	# System python 2.7 enablement:
-	export PYTHON="${PYTHON}"
-	export PYTHON_CFLAGS=`pkg-config --cflags python-${EPYTHON#python}`
-	export PYTHON_LIBS=`pkg-config --libs python-${EPYTHON#python}`
 
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster

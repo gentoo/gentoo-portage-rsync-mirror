@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.167 2013/03/18 18:59:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.168 2013/03/29 09:41:28 scarabeus Exp $
 
 EAPI=5
 
@@ -313,6 +313,9 @@ src_unpack() {
 src_prepare() {
 	# optimization flags
 	export GMAKE_OPTIONS="${MAKEOPTS}"
+	# System python 2.7 enablement:
+	export PYTHON_CFLAGS=$(python_get_CFLAGS)
+	export PYTHON_LIBS=$(python_get_LIBS)
 
 	# patchset
 	if [[ -n ${PATCHSET} ]]; then
@@ -324,8 +327,7 @@ src_prepare() {
 
 	base_src_prepare
 
-	AT_M4DIR="m4"
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 	# hack in the autogen.sh
 	touch autogen.lastrun
 
@@ -343,6 +345,11 @@ src_prepare() {
 		-e 's#check: dev-install subsequentcheck#check: unitcheck slowcheck dev-install subsequentcheck#g' \
 		-e 's#Makefile.gbuild all slowcheck#Makefile.gbuild all#g' \
 		Makefile.in || die
+
+	if use branding; then
+		# hack...
+		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
+	fi
 }
 
 src_configure() {
@@ -400,15 +407,6 @@ src_configure() {
 			"
 		fi
 	fi
-
-	if use branding; then
-		# hack...
-		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
-	fi
-
-	# System python 2.7 enablement:
-	export PYTHON_CFLAGS=`pkg-config --cflags python-${EPYTHON#python}`
-	export PYTHON_LIBS=`pkg-config --libs python-${EPYTHON#python}`
 
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster

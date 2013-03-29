@@ -1,6 +1,17 @@
 # ChangeLog for media-video/noad
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.54 2012/07/05 15:41:01 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.55 2013/03/29 09:41:14 ssuominen Exp $
+
+*noad-0.7.3-r1 (29 Mar 2013)
+
+  29 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +files/patches-0.7.x/noad-0.7.3_missing_include.diff, +noad-0.7.3-r1.ebuild:
+  Enable building marcpics utility because there was no need to disable both,
+  marcpics and showindex when only showindex fails to compile. Remove redudant
+  append-flags -D__STDC_CONSTANT_MACROS because -D__STDC_CONSTANT_MACROS is
+  part of upstream configure.ac. Fix building with recent libc wrt #425288 by
+  Markus Rathgeb and Diego Elio Pettenò. Respect environment CXXFLAGS wrt
+  #426746 by Diego Elio Pettenò.
 
   05 Jul 2012; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.7.3.ebuild:
   typo

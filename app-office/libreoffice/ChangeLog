@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.454 2013/03/28 16:49:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.455 2013/03/29 09:41:28 scarabeus Exp $
+
+  29 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Update the pythoncflags/libs detection with the eclass functions. Put the
+  branding mv call to prepare phase.
 
   28 Mar 2013; Markus Meier <maekke@gentoo.org> libreoffice-4.0.1.2.ebuild:
   add ~arm, bug #451464
