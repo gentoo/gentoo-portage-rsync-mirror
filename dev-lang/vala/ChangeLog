@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.145 2013/03/28 16:54:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.146 2013/03/29 13:25:31 ago Exp $
+
+  29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> vala-0.18.1.ebuild:
+  Stable for ia64, wrt bug #458984
 
 *vala-0.20.0 (28 Mar 2013)
 

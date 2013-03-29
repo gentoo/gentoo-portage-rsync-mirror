@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vala-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.24 2013/03/28 16:53:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.25 2013/03/29 13:29:36 ago Exp $
+
+  29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> vala-common-0.18.1.ebuild:
+  Stable for ia64, wrt bug #458984
 
 *vala-common-0.20.0 (28 Mar 2013)
 

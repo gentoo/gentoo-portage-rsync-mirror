@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.224 2013/03/28 15:50:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.225 2013/03/29 13:26:39 ago Exp $
+
+  29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gmime-2.6.13.ebuild:
+  Stable for ia64, wrt bug #458984
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gmime-2.6.13.ebuild:
   Stable for arm, wrt bug #458984

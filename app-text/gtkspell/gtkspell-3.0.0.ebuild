@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.0.ebuild,v 1.7 2013/03/28 15:46:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.0.ebuild,v 1.8 2013/03/29 13:21:55 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="3/0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE="+introspection"
 
 RDEPEND=">=app-text/enchant-1.1.6
