@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.6-r2.ebuild,v 1.7 2013/02/07 22:14:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.6-r2.ebuild,v 1.9 2013/03/29 16:55:07 hasufell Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ for L in ${LANGS} ; do
 done
 unset L
 
-DEPEND="
+RDEPEND="
 	>=dev-games/cegui-0.7.6-r1[ogre]
 	!>=dev-games/cegui-0.8
 	>=dev-games/ogre-1.7.4-r1[freeimage,opengl]
@@ -37,6 +37,7 @@ DEPEND="
 	>=net-libs/enet-1.3.0
 	x11-libs/libXrandr
 	tools? ( dev-libs/poco )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}-${PV%_*}
 
@@ -57,7 +58,7 @@ src_configure() {
 		fi
 	done
 
-	[ -z "${langs}" ] && langs="en"
+	[[ -z "${langs}" ]] && langs="en"
 
 	# configure sumwars with cmake
 	local mycmakeargs=(

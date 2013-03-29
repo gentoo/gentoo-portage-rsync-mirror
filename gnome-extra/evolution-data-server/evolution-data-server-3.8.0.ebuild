@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.0.ebuild,v 1.1 2013/03/28 22:55:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.0.ebuild,v 1.2 2013/03/29 16:57:52 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3,3} )
@@ -108,10 +108,9 @@ src_install() {
 	gnome2_src_install
 
 	if use ldap; then
-		MY_MAJORV=$(get_version_component_range 1-2)
 		insinto /etc/openldap/schema
-		doins "${FILESDIR}"/calentry.schema || die "doins failed"
-		dosym /usr/share/${PN}-${MY_MAJORV}/evolutionperson.schema /etc/openldap/schema/evolutionperson.schema
+		doins "${FILESDIR}"/calentry.schema
+		dosym /usr/share/${PN}/evolutionperson.schema /etc/openldap/schema/evolutionperson.schema
 	fi
 }
 

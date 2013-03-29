@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.363 2013/03/28 22:55:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.364 2013/03/29 16:57:52 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  evolution-data-server-3.8.0.ebuild:
+  Update symlink to new evolutionperson.schema location
 
 *evolution-data-server-3.8.0 (28 Mar 2013)
 

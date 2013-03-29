@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.5.ebuild,v 1.8 2013/03/09 19:37:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.5.ebuild,v 1.9 2013/03/29 16:44:20 jlec Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -20,6 +20,15 @@ RDEPEND="dev-libs/icu
 	kernel_linux? ( sys-apps/util-linux )" # libuuid
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	sed \
+		-e '/g++/s:=:?=:g' \
+		-e "s:-lncurses:$($(tc-getPKG_CONFIG) --libs ncurses):g" \
+		-i Makefile || die
+
+	tc-export CXX
+}
 
 src_compile() {
 	emake CXX="$(tc-getCXX) $($(tc-getPKG_CONFIG) --variable=CXXFLAGS icu-io icu-uc) ${CXXFLAGS}" #439696

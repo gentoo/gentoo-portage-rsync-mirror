@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/sumwars
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.9 2013/03/17 17:51:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.11 2013/03/29 16:55:07 hasufell Exp $
+
+  29 Mar 2013; Julian Ospald <hasufell@gentoo.org> sumwars-0.5.6-r2.ebuild:
+  use bash syntax
+
+  29 Mar 2013; Julian Ospald <hasufell@gentoo.org> sumwars-0.5.6-r2.ebuild:
+  fix dependencies
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

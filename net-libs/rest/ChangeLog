@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.14 2013/02/02 23:05:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.15 2013/03/29 16:54:30 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org> rest-0.7.90.ebuild:
+  Be ready for unsplitted libsoup (#463748)
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> rest-0.7.90.ebuild:
   Add ~arm, wrt bug #449220

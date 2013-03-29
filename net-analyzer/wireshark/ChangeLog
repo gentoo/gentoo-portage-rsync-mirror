@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.467 2013/03/18 19:49:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.468 2013/03/29 16:54:56 jer Exp $
+
+*wireshark-1.9.2 (29 Mar 2013)
+
+  29 Mar 2013; Jeroen Roovers <jer@gentoo.org> +wireshark-1.9.2.ebuild:
+  Version bump.
 
   18 Mar 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.9.1.ebuild:
   Depend on net-libs/libpcap[-netlink] to avoid segmentation fault in libnl.

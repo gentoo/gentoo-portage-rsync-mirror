@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.129 2013/03/29 13:29:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.130 2013/03/29 16:49:51 pacho Exp $
+
+  29 Mar 2013; Pacho Ramos <pacho@gentoo.org> totem-pl-parser-3.4.4.ebuild:
+  Be ready for unsplitted libsoup (#463748)
 
   29 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   totem-pl-parser-2.32.6-r3.ebuild:
