@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnome-keyring
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/ChangeLog,v 1.39 2013/03/28 17:15:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/ChangeLog,v 1.40 2013/03/29 19:36:23 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgnome-keyring-3.4.1.ebuild, libgnome-keyring-3.8.0.ebuild:
+  Clean up old revision, small policy fixes to 3.8 ebuild.
 
 *libgnome-keyring-3.8.0 (28 Mar 2013)
 

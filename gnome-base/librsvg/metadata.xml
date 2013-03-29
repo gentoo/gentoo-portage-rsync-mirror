@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-	<flag name="gtk3">Build with gtk+-3 support</flag>
 	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for
 	introspection</flag>
 	<flag name="tools">Build miscellaneous tools</flag>

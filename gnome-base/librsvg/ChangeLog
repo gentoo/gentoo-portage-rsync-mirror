@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.299 2013/03/29 13:34:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.301 2013/03/29 19:54:48 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/librsvg-2.34.0-automagic-gtk.patch,
+  -files/librsvg-2.34.2-gir-filename.patch,
+  -files/librsvg-2.36.0-rsvg-convert.1.patch:
+  Clean up old patches.
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -librsvg-2.34.2.ebuild,
+  librsvg-2.36.1.ebuild, librsvg-2.36.3.ebuild, metadata.xml:
+  Clean up old revisions. Clean up keywords of older revisions. Clean up
+  USE=gtk3 from metadata.xml.
 
   29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> librsvg-2.36.4.ebuild:
   Stable for ia64, wrt bug #458984
