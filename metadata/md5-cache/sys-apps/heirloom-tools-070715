@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst
-DEPEND=sys-apps/ed sys-libs/zlib
+DEPEND=sys-apps/ed sys-libs/zlib[static-libs]
 DESCRIPTION=Heirloom toolchest - original Unix tools
+EAPI=5
 HOMEPAGE=http://heirloom.sourceforge.net/tools.html
 KEYWORDS=~amd64 ~x86
 LICENSE=CDDL GPL-2 LGPL-2.1 9base ZLIB
@@ -8,4 +9,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://downloads.sourceforge.net/project/heirloom/heirloom/070715/heirloom-070715.tar.bz2
 _eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=10c36c5d3b57adcc0f855a14af8404db
+_md5_=60a1b6e2866618df4c4884d298c4c9bd

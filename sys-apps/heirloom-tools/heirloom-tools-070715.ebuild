@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/heirloom-tools/heirloom-tools-070715.ebuild,v 1.2 2013/03/07 09:02:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/heirloom-tools/heirloom-tools-070715.ebuild,v 1.3 2013/03/29 06:36:21 patrick Exp $
+
+EAPI="5"
 
 inherit flag-o-matic toolchain-funcs
 
@@ -17,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-apps/ed
-	sys-libs/zlib"
+	sys-libs/zlib[static-libs]"
 RDEPEND=""
 
 S="${WORKDIR}/heirloom-${PV}"

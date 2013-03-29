@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.884 2013/03/28 21:53:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.886 2013/03/29 06:54:57 ssuominen Exp $
+
+  29 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-199-r1.ebuild,
+  udev-200.ebuild, udev-9999.ebuild:
+  Force more recent sys-apps/hwids and sys-fs/udev-init-scripts.
+
+*udev-200 (29 Mar 2013)
+
+  29 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-200.ebuild:
+  Version bump.
+  Pull in upstream patch for checking return value of uname:
+  http://cgit.freedesktop.org/systemd/systemd/commit/?id=f45928521249bbaf5dbea8
+  4933ae2fcaf5354080
 
   28 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-199-r1.ebuild,
   udev-9999.ebuild:
