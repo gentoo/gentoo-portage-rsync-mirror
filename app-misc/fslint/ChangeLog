@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/fslint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/ChangeLog,v 1.1 2013/03/28 15:15:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/ChangeLog,v 1.2 2013/03/29 18:31:15 tomwij Exp $
+
+  29 Mar 2013; Tom Wijsman <TomWij@gentoo.org> fslint-2.42.ebuild:
+  Removed fperms calls, instead the doins calls have been replaced by doexe
+  calls. Reported by jannis, fix by rej. Fixes bug #463708.
 
 *fslint-2.42 (28 Mar 2013)
 

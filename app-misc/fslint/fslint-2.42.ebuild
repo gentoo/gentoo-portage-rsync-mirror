@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.42.ebuild,v 1.1 2013/03/28 15:15:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.42.ebuild,v 1.2 2013/03/29 18:31:15 tomwij Exp $
 
 EAPI="5"
 
@@ -33,25 +33,19 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins ${PN}{.glade,.gladep,_icon.png}
 
-	insinto /usr/share/${PN}/${PN}
-	doins ${PN}/find*
-	doins ${PN}/${PN}
-	doins ${PN}/zipdir
+	exeinto /usr/share/${PN}/${PN}
+	doexe ${PN}/find*
+	doexe ${PN}/${PN}
+	doexe ${PN}/zipdir
 
-	insinto /usr/share/${PN}/${PN}/fstool/
-	doins ${PN}/fstool/*
+	exeinto /usr/share/${PN}/${PN}/fstool/
+	doexe ${PN}/fstool/*
 
-	insinto /usr/share/${PN}/${PN}/supprt/
-	doins ${PN}/supprt/*
+	exeinto /usr/share/${PN}/${PN}/supprt/
+	doexe ${PN}/supprt/{fslver,getffl,getffp,getfpf,md5sum_approx}
 
-	insinto /usr/share/${PN}/${PN}/supprt/rmlint
-	doins ${PN}/supprt/rmlint/*
-
-	fperms +x /usr/share/${PN}/${PN}/find*
-	fperms +x /usr/share/${PN}/${PN}/zipdir
-	fperms +x /usr/share/${PN}/${PN}/fstool/*
-	fperms +x /usr/share/${PN}/${PN}/supprt/*
-	fperms +x /usr/share/${PN}/${PN}/supprt/rmlint/{fixdup,merge_hardlinks}
+	exeinto /usr/share/${PN}/${PN}/supprt/rmlint
+	doexe ${PN}/supprt/rmlint/*
 
 	dobin ${PN}-gui
 
