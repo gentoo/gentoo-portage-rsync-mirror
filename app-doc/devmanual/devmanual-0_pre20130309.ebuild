@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20130309.ebuild,v 1.1 2013/03/09 17:13:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20130309.ebuild,v 1.2 2013/03/29 00:01:12 hwoarang Exp $
 
 EAPI=5
 
@@ -28,6 +28,16 @@ DEPEND="dev-libs/libxslt
 DOC_CONTENTS="In order to browse the Gentoo Development Guide in
 	offline mode, point your browser to the following url:
 	/usr/share/doc/devmanual/html/index.html"
+
+src_compile() {
+	# Imagemagick uses inkscape (if present) to delegate
+	# svg conversions.
+	# Inkscape uses g_get_user_config_dir () which in turn
+	# uses XDG_CONFIG_HOME to get the config directory for this
+	# user. See bug 463380
+	export XDG_CONFIG_HOME="${T}/inkscape_home"
+	emake
+}
 
 src_install() {
 	dohtml -r *
