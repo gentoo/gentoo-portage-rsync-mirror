@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-ldap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ldap/ChangeLog,v 1.26 2013/03/09 12:36:51 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ldap/ChangeLog,v 1.27 2013/03/29 10:51:00 swift Exp $
+
+  29 Mar 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-ldap-2.20120725-r12.ebuild:
+  Stabilize r12, fixes 455080, 453724, 461880, 453722, 452166, 458876, 457618,
+  456910, 456194, 453990 and 460152
 
 *selinux-ldap-2.20120725-r12 (09 Mar 2013)
 

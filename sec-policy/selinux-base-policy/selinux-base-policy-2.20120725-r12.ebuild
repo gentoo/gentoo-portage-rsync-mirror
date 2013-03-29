@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120725-r12.ebuild,v 1.3 2013/03/26 19:16:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120725-r12.ebuild,v 1.4 2013/03/29 10:50:56 swift Exp $
 EAPI="4"
 
 inherit eutils
@@ -16,7 +16,7 @@ PDEPEND="unconfined? ( sec-policy/selinux-unconfined )"
 DEPEND=""
 SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 		http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${PN}-${BASEPOL}.tar.bz2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 MODS="application authlogin bootloader clock consoletype cron dmesg fstools getty hostname hotplug init iptables libraries locallogin logging lvm miscfiles modutils mount mta netutils nscd portage raid rsync selinuxutil ssh staff storage su sysadm sysnetwork udev userdomain usermanage unprivuser xdg"
 LICENSE="GPL-2"

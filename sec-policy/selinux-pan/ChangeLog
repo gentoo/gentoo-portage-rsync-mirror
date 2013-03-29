@@ -1,4 +1,9 @@
 
+  29 Mar 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-pan-2.20120725-r12.ebuild:
+  Stabilize r12, fixes 455080, 453724, 461880, 453722, 452166, 458876, 457618,
+  456910, 456194, 453990 and 460152
+
 *selinux-pan-2.20120725-r12 (09 Mar 2013)
 
   09 Mar 2013; Sven Vermeulen <swift@gentoo.org>
