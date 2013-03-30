@@ -1,6 +1,22 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.140 2013/02/22 17:59:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.143 2013/03/30 15:21:25 ssuominen Exp $
+
+  30 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -libarchive-3.1.1.ebuild,
+  -libarchive-3.1.2.ebuild:
+  old
+
+*libarchive-3.1.2-r1 (30 Mar 2013)
+
+  30 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +libarchive-3.1.2-r1.ebuild, +files/libarchive-3.1.2-CVE-2013-0211.patch:
+  Backport upstream patch for CVE-2013-0211 wrt security #463632 by Agostino
+  Sarubbo
+
+*libarchive-3.1.2 (30 Mar 2013)
+
+  30 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +libarchive-3.1.2.ebuild:
+  Version bump.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> libarchive-3.1.1.ebuild:
   Add ~arm-linux keyword.

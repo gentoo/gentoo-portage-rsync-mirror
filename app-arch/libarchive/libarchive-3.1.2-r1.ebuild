@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.1.1.ebuild,v 1.3 2013/02/22 17:59:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.1.2-r1.ebuild,v 1.1 2013/03/30 15:19:17 ssuominen Exp $
 
 EAPI=5
-inherit autotools eutils multilib
+inherit eutils libtool multilib
 
 DESCRIPTION="BSD tar command"
-HOMEPAGE="http://libarchive.github.com/"
-SRC_URI="http://github.com/${PN}/${PN}/${PN/lib}/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="http://www.libarchive.org/"
+SRC_URI="http://www.libarchive.org/downloads/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD BSD-2 BSD-4 public-domain"
 SLOT="0/13"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="acl +bzip2 +e2fsprogs expat +iconv kernel_linux +lzma lzo nettle static-libs xattr +zlib"
@@ -36,8 +36,8 @@ DEPEND="${RDEPEND}
 DOCS="NEWS README"
 
 src_prepare() {
-	# If removed, restore elibtoolize to allow building shared libs on Solaris/x64!
-	eautoreconf
+	epatch "${FILESDIR}"/${P}-CVE-2013-0211.patch
+	elibtoolize
 }
 
 src_configure() {

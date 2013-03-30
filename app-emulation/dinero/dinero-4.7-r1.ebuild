@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7-r1.ebuild,v 1.4 2013/02/10 19:24:56 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7-r1.ebuild,v 1.5 2013/03/30 15:03:18 ulm Exp $
 
 EAPI=4
 
@@ -12,9 +12,9 @@ DESCRIPTION="Cache simulator"
 HOMEPAGE="http://www.cs.wisc.edu/~markhill/DineroIV/"
 SRC_URI="ftp://ftp.cs.wisc.edu/markhill/DineroIV/${MY_P}.tar.gz"
 
+LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-LICENSE="as-is"
 IUSE=""
 
 src_prepare() {

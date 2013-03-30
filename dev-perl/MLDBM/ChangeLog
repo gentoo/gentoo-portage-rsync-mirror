@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MLDBM
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.38 2013/03/28 22:47:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.39 2013/03/30 15:05:16 ago Exp $
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> MLDBM-2.40.0.ebuild:
+  Stable for alpha, wrt bug #457308
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> MLDBM-2.40.0.ebuild:
   Stable for ia64, wrt bug #457308

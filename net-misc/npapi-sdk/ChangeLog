@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/npapi-sdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.23 2013/03/27 14:10:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.24 2013/03/30 15:08:23 ago Exp $
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> npapi-sdk-0.27.2.ebuild:
+  Stable for alpha, wrt bug #457452
 
   27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> npapi-sdk-0.27.2.ebuild:
   Stable for arm, wrt bug #457452
