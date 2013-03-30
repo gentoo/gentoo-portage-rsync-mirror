@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.4.ebuild,v 1.1 2013/03/12 06:21:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.4.ebuild,v 1.2 2013/03/30 13:05:13 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}"
 	=dev-lang/python-2*
 	sys-devel/bison
 	sys-devel/flex
-	doc? ( dev-python/sphinx[$(python_gen_usedep python2*)] )
+	doc? ( dev-python/sphinx[$(python_gen_usedep 'python2*')] )
 "
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-2.4-r1.ebuild,v 1.2 2013/02/11 14:54:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-2.4-r1.ebuild,v 1.3 2013/03/30 13:10:10 floppym Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="curl"
 
-RDEPEND="curl? ( dev-python/pycurl[$(python_gen_usedep python2*)] )
+RDEPEND="curl? ( dev-python/pycurl[$(python_gen_usedep 'python2*')] )
 	python_targets_python2_5? (
 		dev-python/simplejson[python_targets_python2_5] )"
 DEPEND="${RDEPEND}

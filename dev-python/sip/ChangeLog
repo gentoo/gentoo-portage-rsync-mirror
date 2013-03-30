@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.249 2013/03/12 06:21:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.250 2013/03/30 13:05:14 floppym Exp $
+
+  30 Mar 2013; Mike Gilbert <floppym@gentoo.org> sip-4.14.3.ebuild,
+  sip-4.14.4.ebuild:
+  Quote patterns for python_gen_usedep.
 
 *sip-4.14.4 (12 Mar 2013)
 

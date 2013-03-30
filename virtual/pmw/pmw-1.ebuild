@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pmw/pmw-1.ebuild,v 1.1 2013/01/22 19:23:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pmw/pmw-1.ebuild,v 1.2 2013/03/30 13:08:28 floppym Exp $
 
 EAPI=5
 
@@ -19,8 +19,8 @@ IUSE=""
 
 RDEPEND="
 	$(python_gen_cond_dep \
-		"dev-python/pmw:py2[$(python_gen_usedep python2*)]" \
+		"dev-python/pmw:py2[$(python_gen_usedep 'python2*')]" \
 		python2*)
 	$(python_gen_cond_dep \
-		"dev-python/pmw:py3[$(python_gen_usedep python3*)]" \
+		"dev-python/pmw:py3[$(python_gen_usedep 'python3*')]" \
 		python3*)"
