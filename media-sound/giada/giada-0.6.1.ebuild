@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.6.1.ebuild,v 1.1 2013/03/23 02:33:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.6.1.ebuild,v 1.2 2013/03/30 05:09:09 radhermit Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="+alsa jack pulseaudio"
 REQUIRED_USE="|| ( alsa jack pulseaudio )"
 
 RDEPEND="media-libs/libsndfile
-	media-libs/libsamplerate
+	>=media-libs/libsamplerate-0.1.8
 	media-libs/rtaudio[alsa?,jack?,pulseaudio?]
 	x11-libs/fltk:1
 	x11-libs/libXpm"
