@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.217 2013/03/30 12:02:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.219 2013/03/30 15:40:52 ssuominen Exp $
 
 EAPI=5
 
@@ -46,6 +46,8 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	!sys-apps/systemd"
 
 DEPEND="${COMMON_DEPEND}
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
@@ -54,8 +56,6 @@ DEPEND="${COMMON_DEPEND}
 
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
-		app-text/docbook-xsl-stylesheets
-		dev-libs/libxslt
 		dev-util/gperf
 		>=dev-util/intltool-0.50"
 fi
@@ -127,7 +127,7 @@ src_prepare() {
 		fi
 
 		# gperf disable if keymaps are not requested wrt bug #452760
-	if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
+		if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
 			eerror "The line count for gperf references failed, see bug 452760"
 			die
 		fi

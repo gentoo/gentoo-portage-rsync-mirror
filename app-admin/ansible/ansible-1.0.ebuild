@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-0.8.ebuild,v 1.1 2013/01/05 13:38:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.0.ebuild,v 1.1 2013/03/30 15:56:34 pinkbyte Exp $
 
 EAPI="5"
 
@@ -10,24 +10,23 @@ inherit distutils-r1
 
 DESCRIPTION="Radically simple deployment, model-driven configuration management, and command execution framework"
 HOMEPAGE="http://ansible.cc/"
-SRC_URI="https://github.com/ansible/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/ansible/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="examples paramiko +sudo test"
+IUSE="examples test"
 
-DEPEND="${PYTHON_DEPS}
-	test? (
+DEPEND="test? (
 		dev-python/nose
 		dev-vcs/git
 	)"
 RDEPEND="
 	dev-python/jinja
 	dev-python/pyyaml
-	paramiko? ( dev-python/paramiko )
-	!paramiko? ( virtual/ssh )
-	sudo? ( app-admin/sudo )
+	dev-python/paramiko
+	net-misc/sshpass
+	virtual/ssh
 "
 
 src_prepare() {
@@ -49,7 +48,7 @@ src_install() {
 	doman docs/man/man1/*.1
 	if use examples; then
 		dodoc -r examples
-		docompress -x /usr/share/doc/${P}/examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 	# Hint: do not install example config files into /etc
 	# let this choice to user
