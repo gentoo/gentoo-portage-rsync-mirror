@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.6.6.ebuild,v 1.9 2013/03/25 16:33:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.6.6.ebuild,v 1.10 2013/03/30 22:44:35 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ DESCRIPTION="Library that provides DLNA-related functionality for MediaServers"
 HOMEPAGE="http://gupnp.org/"
 
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="1.0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc +introspection"
 
@@ -29,4 +29,10 @@ pkg_setup() {
 		--disable-static
 		$(use_enable introspection)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
+}
+
+src_compile() {
+	# gst-plugin-scanner tries to open dri
+	unset DISPLAY
+	gnome2_src_compile
 }

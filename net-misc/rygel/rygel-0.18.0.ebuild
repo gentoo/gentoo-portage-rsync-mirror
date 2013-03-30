@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.0.ebuild,v 1.1 2013/03/28 17:57:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.0.ebuild,v 1.2 2013/03/30 22:48:38 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RESTRICT=test # Tries to access /dev/dri/*
 RDEPEND="
 	>=dev-libs/glib-2.32:2
 	>=dev-libs/libgee-0.8.0:0.8
-	>=media-libs/gupnp-dlna-0.9.4
+	>=media-libs/gupnp-dlna-0.9.4:2.0
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0
 	>=net-libs/gssdp-0.13.0

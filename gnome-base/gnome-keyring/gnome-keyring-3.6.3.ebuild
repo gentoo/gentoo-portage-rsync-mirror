@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.8.0.ebuild,v 1.2 2013/03/30 23:01:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.6.3.ebuild,v 1.1 2013/03/30 23:01:13 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
@@ -19,9 +19,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd
 RDEPEND="
 	>=app-crypt/gcr-3.5.3:=
 	>=dev-libs/glib-2.32.0:2
+	>=x11-libs/gtk+-3.0:3
 	app-misc/ca-certificates
 	>=dev-libs/libgcrypt-1.2.2:=
-	>=sys-apps/dbus-1.1.1
+	>=sys-apps/dbus-1.0
 	caps? ( sys-libs/libcap-ng )
 	pam? ( virtual/pam )
 "

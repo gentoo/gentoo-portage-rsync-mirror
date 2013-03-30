@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.10.0.ebuild,v 1.1 2013/03/28 17:42:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.10.0.ebuild,v 1.2 2013/03/30 22:44:35 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,28 +14,49 @@ DESCRIPTION="Library that provides DLNA-related functionality for MediaServers"
 HOMEPAGE="http://gupnp.org/"
 
 LICENSE="LGPL-2"
-SLOT="0/3"
+SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+introspection"
 
-RDEPEND=">=dev-libs/glib-2.32:2
+RDEPEND="
+	>=dev-libs/glib-2.34:2
 	>=dev-libs/libxml2-2.5:2
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0[introspection?]
-	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )
+"
 DEPEND="${RDEPEND}
-	dev-util/gtk-doc-am
+	>=dev-util/gtk-doc-am-1.11
 	virtual/pkgconfig
-	$(vala_depend)"
+	introspection? ( $(vala_depend) )
+"
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		--disable-static
-		$(use_enable introspection)"
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	# Make doc parallel installable
+	cd "${S}"/doc/gupnp-dlna
+	sed -e "s/\(DOC_MODULE.*=\).*/\1${PN}-${SLOT}/" \
+		-e "s/\(DOC_MAIN_SGML_FILE.*=\).*/\1${PN}-docs-${SLOT}.sgml/" \
+		-i Makefile.am Makefile.in || die
+	sed -e "s/\(<book.*name=\"\)${PN}/\1${PN}-${SLOT}/" \
+		-i html/${PN}.devhelp2 || die
+	mv ${PN}-docs{,-${SLOT}}.sgml || die
+	mv ${PN}-overrides{,-${SLOT}}.txt || die
+	mv ${PN}-sections{,-${SLOT}}.txt || die
+	mv ${PN}{,-${SLOT}}.types || die
+	mv html/${PN}{,-${SLOT}}.devhelp2
 
+	cd "${S}"
+	if use introspection ; then
+		vala_src_prepare --ignore-use
+	fi
 	gnome2_src_prepare
-	vala_src_prepare
+}
+
+src_configure() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	gnome2_src_configure \
+		--disable-static \
+		$(use_enable introspection)
 }
 
 src_install() {

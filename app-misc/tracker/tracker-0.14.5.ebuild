@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.5.ebuild,v 1.3 2013/03/28 07:44:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.5.ebuild,v 1.4 2013/03/30 22:46:31 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -95,7 +95,7 @@ RDEPEND="
 		>=mail-client/thunderbird-5.0
 		>=mail-client/thunderbird-bin-5.0 ) )
 	tiff? ( media-libs/tiff )
-	upnp-av? ( >=media-libs/gupnp-dlna-0.5 )
+	upnp-av? ( >=media-libs/gupnp-dlna-0.5:1.0 )
 	vorbis? ( >=media-libs/libvorbis-0.22 )
 	xine? ( >=media-libs/xine-lib-1 )
 	xml? ( >=dev-libs/libxml2-2.6 )

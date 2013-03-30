@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7672 2013/03/30 18:44:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7675 2013/03/30 22:55:09 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Drop some more packages from Gnome 3.8 mask, they are safe.
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Split DLNA stack mask out of Gnome 3.8 mask, they are most likely not
+  blocking each other.
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> updates/1Q-2013:
+  Move old gupnp-dlna to slot 1.0.
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Drop libgdata and vala from Gnome 3.8 mask, they are fine for ~arch.

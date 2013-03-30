@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14614 2013/03/30 18:44:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14616 2013/03/30 22:55:09 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,12 +31,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Gilles Dartiguelongue <eva@gentoo.org> (30 Mar 2013)
+# the DLNA stack mask, may or may not be related to Gnome 3.8
+>=media-libs/gupnp-dlna-0.10
+>=net-libs/gssdp-0.14
+>=net-libs/gupnp-av-0.12
+>=net-libs/gupnp-0.20
+>=net-misc/rygel-0.18
+
 # Pacho Ramos <pacho@gentoo.org> (28 Mar 2013)
 # Gnome 3.8 Mask
 >=app-accessibility/accerciser-3.8
 >=app-accessibility/at-spi2-atk-2.8
 >=app-accessibility/at-spi2-core-2.8
->=app-accessibility/caribou-0.4.8
 >=app-accessibility/orca-3.8
 >=app-admin/gnome-system-log-3.8
 >=app-arch/file-roller-3.8
@@ -58,7 +65,6 @@
 >=dev-libs/glib-2.36
 >=dev-libs/gobject-introspection-common-1.36
 >=dev-libs/gobject-introspection-1.36
->=dev-libs/libgee-0.10
 >=dev-libs/libgweather-3.8
 >=dev-libs/libpeas-1.8
 >=dev-libs/libwacom-0.7
@@ -98,7 +104,6 @@
 >=gnome-extra/gnome-user-share-3.8
 >=gnome-extra/gucharmap-3.8
 >=gnome-extra/mousetweaks-3.8
->=gnome-extra/nautilus-open-terminal-0.20
 >=gnome-extra/nautilus-sendto-3.8
 >=gnome-extra/nautilus-tracker-tags-0.16
 >=gnome-extra/nm-applet-0.9.8
@@ -117,21 +122,16 @@
 >=media-libs/clutter-1.14
 >=media-libs/cogl-1.14
 >=media-libs/fontconfig-2.10.91
->=media-libs/gupnp-dlna-0.10
 >=media-video/cheese-3.8
 >=media-video/totem-3.8
 >=net-im/empathy-3.8
 >=net-im/telepathy-logger-0.8
 >=net-libs/glib-networking-2.36
 >=net-libs/gnome-online-accounts-3.8
->=net-libs/gssdp-0.14
->=net-libs/gupnp-av-0.12
->=net-libs/gupnp-0.20
 >=net-libs/libsoup-2.42
 >=net-libs/libzapojit-0.0.3
 >=net-libs/webkit-gtk-2
 >=net-misc/networkmanager-0.9.8
->=net-misc/rygel-0.18
 >=net-misc/vinagre-3.8
 >=net-misc/vino-3.8
 >=net-wireless/gnome-bluetooth-3.8
