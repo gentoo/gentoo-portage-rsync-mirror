@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.97 2013/03/27 20:12:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.98 2013/03/30 20:37:24 vapier Exp $
+
+  30 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/gpsd-3.7-no-export-t.patch, +files/gpsd-3.8-no-export-t.patch,
+  gpsd-3.7.ebuild, gpsd-3.8.ebuild, gpsd-9999.ebuild:
+  Fix building when USE="-dbus -shm -sockets" #463850 by Agostino Sarubbo.
 
   27 Mar 2013; Mike Frysinger <vapier@gentoo.org>
   +files/gpsd-3.7-gps_regress.patch, gpsd-3.7.ebuild, gpsd-3.8.ebuild,

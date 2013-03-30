@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.7.ebuild,v 1.5 2013/03/27 20:12:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.7.ebuild,v 1.6 2013/03/30 20:37:24 vapier Exp $
 
 EAPI="4"
 
@@ -66,6 +66,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.4-no-man-gen.patch
 	epatch "${FILESDIR}"/${PN}-3.7-rpath.patch
 	epatch "${FILESDIR}"/${PN}-3.7-gps_regress.patch #441760
+	epatch "${FILESDIR}"/${PN}-3.7-no-export-t.patch #463850
 
 	# Avoid useless -L paths to the install dir
 	sed -i \
