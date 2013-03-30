@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.54 2013/03/28 17:49:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.55 2013/03/29 23:35:08 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -gssdp-0.7.2.ebuild:
+  Clean up old revision.
 
 *gssdp-0.14.2 (28 Mar 2013)
 

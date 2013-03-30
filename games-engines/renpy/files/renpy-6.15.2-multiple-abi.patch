@@ -3,7 +3,7 @@ Date: Mon Feb 25 21:35:31 UTC 2013
 Subject: fix multiple abi support
 
 --- /dev/null
-+++ renpy-6.15.0-source/renpy/common.py
++++ renpy-6.15.2-source/renpy/common.py
 @@ -0,0 +1,79 @@
 +# (the "Software"), to deal in the Software without restriction,
 +# including without limitation the rights to use, copy, modify, merge,
@@ -84,8 +84,8 @@ Subject: fix multiple abi support
 +    renpy_base = os.path.abspath(renpy_base)
 +
 +    return renpy_base
---- renpy-6.15.0-source/renpy.py
-+++ renpy-6.15.0-source/renpy.py
+--- renpy-6.15.2-source/renpy.py
++++ renpy-6.15.2-source/renpy.py
 @@ -25,64 +25,9 @@
  import sys
  import warnings
@@ -188,8 +188,8 @@ Subject: fix multiple abi support
      renpy.bootstrap.bootstrap(renpy_base)
  
  if __name__ == "__main__":
---- renpy-6.15.0-source/renpy/main.py
-+++ renpy-6.15.0-source/renpy/main.py
+--- renpy-6.15.2-source/renpy/main.py
++++ renpy-6.15.2-source/renpy/main.py
 @@ -27,7 +27,7 @@
  import zipfile
  import subprocess
