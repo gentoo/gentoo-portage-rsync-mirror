@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.7.4.ebuild,v 1.1 2013/03/28 22:40:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.7.4.ebuild,v 1.2 2013/03/30 14:55:10 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	# Add contents of Gentoo's cursor theme directory to cursor theme list
-	epatch "${FILESDIR}/${PN}-3.0.4-gentoo-cursor-themes.patch"
+	epatch "${FILESDIR}/${PN}-3.7.4-gentoo-cursor-themes.patch"
 
 	gnome2_src_prepare
 	python_copy_sources
@@ -65,10 +65,4 @@ src_install() {
 		python_doscript gnome-tweak-tool || die
 	}
 	python_foreach_impl run_in_build_dir install_python
-}
-
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
 }

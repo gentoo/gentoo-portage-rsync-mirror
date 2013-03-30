@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sagan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.20 2013/03/17 15:29:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.21 2013/03/30 14:57:54 maksbotan Exp $
+
+  30 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> +files/mysql_check.patch,
+  sagan-0.2.2_p2-r2.ebuild:
+  Fix compilation with MySQL, bug #463570. Thanks to slepnoga.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

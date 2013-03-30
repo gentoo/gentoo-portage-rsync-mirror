@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.20 2011/02/06 10:06:08 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.21 2013/03/30 14:52:04 ulm Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -19,7 +19,7 @@ SRC_URI="
 "
 HOMEPAGE="http://www.ezmlm.org"
 SLOT="0"
-LICENSE="as-is"
+LICENSE="GPL-2"
 KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 IUSE=""
 DEPEND="sys-apps/grep sys-apps/groff"

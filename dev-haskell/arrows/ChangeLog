@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/arrows
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.41 2013/03/28 22:29:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.42 2013/03/30 14:46:38 ago Exp $
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> arrows-0.4.4.1-r1.ebuild:
+  Stable for alpha, wrt bug #456484
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> arrows-0.4.4.1-r1.ebuild:
   Stable for ia64, wrt bug #456484

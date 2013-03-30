@@ -20,7 +20,7 @@ These three functions form the basis of the countless applications for your eID.
 </longdescription>
 <use>
   <flag name="gtk">
-    Enable the dialog pages, by using <pkg>x11-libs/gtk:2</pkg>
+    Enable the dialog pages, by using <pkg>x11-libs/gtk+:2</pkg>
   </flag>
   <flag name="xpi">
     Build and install an extension for Mozilla browsers.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cpphs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.44 2013/03/28 22:45:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.45 2013/03/30 14:55:47 ago Exp $
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> cpphs-1.15.ebuild:
+  Stable for alpha, wrt bug #457272
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> cpphs-1.15.ebuild:
   Stable for ia64, wrt bug #457272

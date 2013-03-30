@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/tirc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/tirc/ChangeLog,v 1.5 2011/05/16 16:38:38 binki Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/tirc/ChangeLog,v 1.6 2013/03/30 14:43:52 ulm Exp $
+
+  30 Mar 2013; Ulrich Müller <ulm@gentoo.org> tirc-0.54_alpha.ebuild:
+  Fix LICENSE, BSD according to COPYRIGHT file.
 
   16 May 2011; Nathan Phillip Brink <binki@gentoo.org> tirc-1.2.ebuild:
   Fix bug #367505. Bump to EAPI=4, add ~amd64 keyword, and fix spelling

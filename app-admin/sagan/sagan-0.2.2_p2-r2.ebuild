@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.2_p2-r2.ebuild,v 1.3 2013/01/18 10:03:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.2_p2-r2.ebuild,v 1.4 2013/03/30 14:57:54 maksbotan Exp $
 
 EAPI=4
-
+AUTOTOOLS_AUTORECONF=1
 MY_PV="0.2.2-r2"
+
 inherit eutils autotools-utils user
 
 DESCRIPTION="Sagan is a multi-threaded, real time system and event log monitoring system"
@@ -14,7 +15,7 @@ SRC_URI="http://sagan.softwink.com/download/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="smtp mysql postgres prelude snort +lognorm +libdnet +pcap"
+IUSE="smtp +mysql postgres prelude snort +lognorm +libdnet +pcap"
 
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
@@ -33,6 +34,8 @@ RDEPEND="dev-libs/libpcre
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=(AUTHORS ChangeLog FAQ INSTALL README NEWS TODO)
+PATCHES=( "${FILESDIR}"/mysql_check.patch )
+
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_setup() {
