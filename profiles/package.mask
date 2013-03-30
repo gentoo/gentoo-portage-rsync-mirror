@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14612 2013/03/29 22:24:52 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14613 2013/03/30 17:45:25 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -128,7 +128,6 @@
 >=net-libs/glib-networking-2.36
 >=net-libs/gnome-online-accounts-3.8
 >=net-libs/gssdp-0.14
->=net-libs/gtk-vnc-0.5.1-r1
 >=net-libs/gupnp-av-0.12
 >=net-libs/gupnp-0.20
 >=net-libs/libsoup-2.42

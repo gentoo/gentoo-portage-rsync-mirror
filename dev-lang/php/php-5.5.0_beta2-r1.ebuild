@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_beta2-r1.ebuild,v 1.1 2013/03/29 15:13:18 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_beta2-r1.ebuild,v 1.2 2013/03/30 17:47:16 olemarkus Exp $
 
 EAPI=5
 
@@ -288,6 +288,7 @@ src_prepare() {
 		-i configure.in || die "Unable to change PHP branding"
 
 
+	epatch "${FILESDIR}"/stricter-libc-client-symlink-check.patch
 	epatch "${FILESDIR}"/all_strict_aliasing.patch
 
 	# Patch PHP to show Gentoo as the server platform

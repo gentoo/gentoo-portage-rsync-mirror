@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.691 2013/03/29 15:13:18 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.692 2013/03/30 17:47:16 olemarkus Exp $
+
+  30 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  +files/stricter-libc-client-symlink-check.patch, php-5.5.0_beta2-r1.ebuild:
+  Bugfix for 463800
 
 *php-5.5.0_beta2-r1 (29 Mar 2013)
 
