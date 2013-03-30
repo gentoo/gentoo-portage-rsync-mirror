@@ -1,6 +1,10 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.91 2013/03/29 13:42:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.92 2013/03/30 17:10:20 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgnomecups-0.2.3.ebuild, -libgnomecups-0.2.3-r1.ebuild:
+  Clean up old revisions.
 
   29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libgnomecups-0.2.3-r3.ebuild:
   Stable for ia64, wrt bug #458984

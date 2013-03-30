@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.440 2013/03/23 18:06:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.441 2013/03/30 17:02:36 jer Exp $
+
+  30 Mar 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.36.ebuild,
+  nvidia-drivers-304.64.ebuild, nvidia-drivers-304.84.ebuild,
+  nvidia-drivers-310.32.ebuild, nvidia-drivers-310.40.ebuild,
+  nvidia-drivers-313.18.ebuild, nvidia-drivers-313.26.ebuild,
+  nvidia-drivers-96.43.23.ebuild:
+  Update NVIDIA license (bug #463872 by Richard Yao).
 
   23 Mar 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild:
   Fix building against kernel *.4 (bug #462830 by dizstu).

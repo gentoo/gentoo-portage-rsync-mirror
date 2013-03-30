@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.37 2013/02/02 23:08:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.38 2013/03/30 17:10:44 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -telepathy-haze-0.5.0.ebuild:
+  Clean up old revision.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> telepathy-haze-0.6.0.ebuild:
   Add ~arm, wrt bug #449220

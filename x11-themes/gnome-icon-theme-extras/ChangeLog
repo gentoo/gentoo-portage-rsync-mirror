@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme-extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/ChangeLog,v 1.22 2013/03/25 16:44:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/ChangeLog,v 1.23 2013/03/30 17:24:36 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-icon-theme-extras-3.4.0.ebuild:
+  Clean up old revision.
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   gnome-icon-theme-extras-3.6.2.ebuild:

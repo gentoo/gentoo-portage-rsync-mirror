@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.100 2012/11/04 09:17:06 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.101 2013/03/30 17:09:25 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -pan-0.137.ebuild:
+  Clean up old revision.
 
 *pan-0.139 (04 Nov 2012)
 

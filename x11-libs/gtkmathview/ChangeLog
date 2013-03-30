@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkmathview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.57 2012/12/19 16:46:43 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.58 2013/03/30 17:18:44 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtkmathview-0.8.0.ebuild, -gtkmathview-0.8.0-r1.ebuild:
+  Clean up old revisions.
 
   19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gtkmathview-0.8.0.ebuild, gtkmathview-0.8.0-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.36 2013/03/30 09:58:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.37 2013/03/30 17:02:32 floppym Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit git-2
 #endif
 
 PYTHON_COMPAT=( python2_7 )
-inherit autotools-utils linux-info multilib pam python-single-r1 systemd udev user
+inherit autotools-utils linux-info multilib pam python-single-r1 systemd toolchain-funcs udev user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -135,6 +135,9 @@ src_configure() {
 
 	# Keep using the one where the rules were installed.
 	MY_UDEVDIR=$(get_udevdir)
+
+	# Work around bug 463846.
+	tc-export CC
 
 	autotools-utils_src_configure
 }

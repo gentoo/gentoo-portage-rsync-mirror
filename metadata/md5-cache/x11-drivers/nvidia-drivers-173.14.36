@@ -5,10 +5,10 @@ EAPI=2
 HOMEPAGE=http://www.nvidia.com/
 IUSE=acpi multilib kernel_linux tools kernel_linux
 KEYWORDS=-* amd64 x86 ~x86-fbsd
-LICENSE=GPL-2 NVIDIA
+LICENSE=GPL-2 NVIDIA-r1
 RDEPEND=<x11-base/xorg-server-1.13.99 kernel_linux? ( >=sys-libs/glibc-2.6.1 ) multilib? ( app-emulation/emul-linux-x86-opengl ) >=app-admin/eselect-opengl-1.0.9 acpi? ( sys-power/acpid ) tools? ( dev-libs/atk dev-libs/glib x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXext x11-libs/pango[X] || ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] ) ) kernel_linux? ( virtual/modutils )
 RESTRICT=bindist mirror strip
 SLOT=0
 SRC_URI=x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/173.14.36/NVIDIA-Linux-x86-173.14.36-pkg0.run ) amd64? ( ftp://download.nvidia.com/XFree86/Linux-x86_64/173.14.36/NVIDIA-Linux-x86_64-173.14.36-pkg2.run ) x86-fbsd? ( ftp://download.nvidia.com/freebsd/173.14.36/NVIDIA-FreeBSD-x86-173.14.36.tar.gz )
 _eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	linux-mod	c9d4931960ba253061ad823a8508bff5	multilib	ded93e450747134a079e647d888aa80b	nvidia-driver	80e162b87fb4c2e236684d64adc96ed4	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	0e3a1fb79ec6a7c47f2a223d19c6385f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=bed66e82f65d8e047689d0b7e6d4eed0
+_md5_=2172569b29e0796f20b54b85cd56cf9f

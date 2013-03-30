@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.264 2013/03/29 13:46:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.265 2013/03/30 17:22:27 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-terminal-2.32.1.ebuild, -gnome-terminal-3.4.1.1-r1.ebuild,
+  -gnome-terminal-3.6.1-r1.ebuild:
+  Clean up old revisions.
 
   29 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   gnome-terminal-2.32.1-r1.ebuild:

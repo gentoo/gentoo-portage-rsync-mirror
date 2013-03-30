@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.146 2013/03/28 22:25:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.147 2013/03/30 17:24:03 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-backgrounds-3.4.2.ebuild:
+  Clean up old revision.
 
 *gnome-backgrounds-3.8.0 (28 Mar 2013)
 

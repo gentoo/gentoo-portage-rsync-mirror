@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/experience
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/experience/ChangeLog,v 1.12 2009/09/18 16:35:39 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/experience/ChangeLog,v 1.13 2013/03/30 17:23:10 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -experience-3.03.ebuild:
+  Clean up old revision.
 
   18 Sep 2009; Torsten Veller <tove@gentoo.org> experience-3.04.ebuild:
   Fix typo: s/RDPEND/RDEPEND/

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/colord-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/ChangeLog,v 1.20 2013/03/28 16:02:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/ChangeLog,v 1.21 2013/03/30 17:16:01 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/colord-gtk-0.1.22-automagic-vala.patch,
+  -files/colord-gtk-0.1.22-includes-1.patch,
+  -files/colord-gtk-0.1.22-includes-2.patch, -colord-gtk-0.1.23.ebuild:
+  Clean up old revisions.
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> colord-gtk-0.1.23.ebuild:
   Stable for arm, wrt bug #458984

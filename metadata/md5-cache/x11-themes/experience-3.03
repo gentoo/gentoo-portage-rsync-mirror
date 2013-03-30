@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile install unpack
-DESCRIPTION=GTK+2 themes which copy and improve the look of XP Luna
-HOMEPAGE=http://art.gnome.org/themes/gtk2/1058
-KEYWORDS=~ppc sparc x86 ~amd64
-LICENSE=GPL-2
-RDEPEND=x11-themes/gtk-engines-experience
-SLOT=0
-SRC_URI=http://art.gnome.org/download/themes/gtk2/1058/GTK2-EXperience.tar.gz
-_md5_=16fb5bc924fe58e79f00cbc4312c13fe

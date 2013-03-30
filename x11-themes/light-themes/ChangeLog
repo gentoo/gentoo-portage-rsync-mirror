@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/light-themes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.16 2013/02/07 23:00:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.17 2013/03/30 17:26:56 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -light-themes-0.1.8.29.ebuild, -light-themes-0.1.9.1.ebuild,
+  -light-themes-0.1.9.1-r1.ebuild, -light-themes-0.1.9.2.ebuild:
+  Clean up old revisions.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> light-themes-0.1.8.29.ebuild,
   light-themes-0.1.8.32.ebuild, light-themes-0.1.9.1.ebuild,
