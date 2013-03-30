@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.33 2013/03/29 15:49:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.36 2013/03/30 09:58:53 floppym Exp $
 
 EAPI=5
 
@@ -50,7 +50,6 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 # baselayout-2.2 has /run
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
-	>=sys-apps/hwids-20130309-r1[udev]
 	|| (
 		>=sys-apps/util-linux-2.22
 		<sys-apps/sysvinit-2.88-r4
@@ -58,6 +57,8 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.10
 	!sys-fs/udev"
+
+PDEPEND=">=sys-apps/hwids-20130326.1[udev]"
 
 # sys-fs/quota is necessary to store correct paths in unit files
 DEPEND="${COMMON_DEPEND}
@@ -231,6 +232,12 @@ pkg_postinst() {
 		enewuser systemd-journal-gateway -1 -1 -1 systemd-journal-gateway
 	fi
 	systemd_update_catalog
+
+	# Keep this here in case the database format changes so it gets updated
+	# when required. Despite that this file is owned by sys-apps/hwids.
+	if has_version "sys-apps/hwids[udev]"; then
+		udevadm hwdb --update --root="${ROOT%/}"
+	fi
 
 	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
 		ewarn "Upstream suggests that the /etc/mtab file should be a symlink to /proc/mounts."

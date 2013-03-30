@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.220 2013/03/27 13:42:49 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.221 2013/03/30 09:31:34 graaff Exp $
+
+*activesupport-2.3.18 (30 Mar 2013)
+
+  30 Mar 2013; Hans de Graaff <graaff@gentoo.org> +activesupport-2.3.18.ebuild:
+  Version bump for security bug 462452.
 
   27 Mar 2013; Dion Moult <moult@gentoo.org> -activesupport-3.0.20.ebuild:
   Remove dev-ruby/activesupport:3.0 due to lack of upstream support.

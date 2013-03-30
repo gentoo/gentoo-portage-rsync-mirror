@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.215 2013/03/30 09:28:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.216 2013/03/30 09:44:22 ssuominen Exp $
 
 EAPI=5
 
@@ -455,7 +455,7 @@ pkg_postinst() {
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 
 	# Update hwdb database in case the format is changed by udev version.
-	if use hwdb && has_version sys-apps/hwids[udev]; then
+	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
 	fi
 }

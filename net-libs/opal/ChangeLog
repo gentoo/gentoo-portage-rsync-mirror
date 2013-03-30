@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.89 2013/03/28 22:45:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.90 2013/03/30 09:38:20 ago Exp $
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> opal-3.10.10.ebuild:
+  Stable for ppc, wrt bug #461842
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> opal-3.10.10.ebuild:
   Stable for x86, wrt bug #461842

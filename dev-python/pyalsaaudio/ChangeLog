@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.23 2013/01/08 21:57:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.25 2013/03/30 09:44:14 ago Exp $
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pyalsaaudio-0.7.ebuild:
+  Stable for x86, wrt bug #463451
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pyalsaaudio-0.7.ebuild:
+  Stable for amd64, wrt bug #463451
 
   08 Jan 2013; Mike Frysinger <vapier@gentoo.org> pyalsaaudio-0.6.ebuild,
   pyalsaaudio-0.7.ebuild:
