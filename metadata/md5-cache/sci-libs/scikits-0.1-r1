@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 SLOT=0
 SRC_URI=mirror://pypi/s/scikits.example/scikits.example-0.1.tar.gz
-_eclasses_=multibuild	09ecc885e84a763742480174a993ee70	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	ec14ac1ad9c7920d5f5c20950dda44bb	python-utils-r1	72a6ebbb13ee8f95b6725848df4deb4d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multibuild	09ecc885e84a763742480174a993ee70	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	229b6c0beb07e81171f83d87efc9d65e	python-utils-r1	72a6ebbb13ee8f95b6725848df4deb4d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=eb13503ab2ca159666fe50ebf22fe8c7

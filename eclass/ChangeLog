@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.758 2013/03/29 12:27:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.759 2013/03/30 12:56:24 floppym Exp $
+
+  30 Mar 2013; Mike Gilbert <floppym@gentoo.org> python-r1.eclass:
+  Add note about quoting patterns for python_gen_usedep.
 
   29 Mar 2013; Pacho Ramos <pacho@gentoo.org> vala.eclass:
   Update VALA_MAX_API_VERSION

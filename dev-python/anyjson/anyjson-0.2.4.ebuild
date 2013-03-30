@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/anyjson-0.2.4.ebuild,v 1.1 2013/01/26 08:51:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/anyjson-0.2.4.ebuild,v 1.2 2013/03/30 12:58:55 floppym Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/simplejson[$(python_gen_usedep python2* python3_3 pypy*)]
+		dev-python/simplejson[$(python_gen_usedep 'python2*' python3_3 'pypy*')]
 	)"
 
 python_test() {

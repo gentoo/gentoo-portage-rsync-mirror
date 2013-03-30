@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.1-r1.ebuild,v 1.1 2013/02/14 17:49:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.1-r1.ebuild,v 1.2 2013/03/30 13:00:41 floppym Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="test"
 RDEPEND=">=dev-python/logilab-common-0.53.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( >=dev-python/egenix-mx-base-3.0.0[$(python_gen_usedep python2*)] )"
+	test? ( >=dev-python/egenix-mx-base-3.0.0[$(python_gen_usedep 'python2*')] )"
 
 S="${WORKDIR}/logilab-${P}"
 

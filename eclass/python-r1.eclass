@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.51 2013/03/20 19:01:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.52 2013/03/30 12:56:24 floppym Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -230,6 +230,9 @@ _python_validate_useflags() {
 # are both in PYTHON_COMPAT and match any of the patterns passed
 # as parameters to the function.
 #
+# Remember to escape or quote the patterns to premature evaluation as a file
+# name glob.
+#
 # When all implementations are requested, please use ${PYTHON_USEDEP}
 # instead. Please also remember to set an appropriate REQUIRED_USE
 # to avoid ineffective USE flags.
@@ -237,7 +240,7 @@ _python_validate_useflags() {
 # Example:
 # @CODE
 # PYTHON_COMPAT=( python{2_7,3_2} )
-# DEPEND="doc? ( dev-python/epydoc[$(python_gen_usedep python2*)] )"
+# DEPEND="doc? ( dev-python/epydoc[$(python_gen_usedep 'python2*')] )"
 # @CODE
 #
 # It will cause the dependency to look like:
