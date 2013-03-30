@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.467 2013/03/24 01:55:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.468 2013/03/30 04:29:24 radhermit Exp $
+
+  30 Mar 2013; Tim Harder <radhermit@gentoo.org> openssh-6.2_p1.ebuild,
+  +files/openssh-6.2_p1-x509-glue.patch,
+  +files/openssh-6.2_p1-x509-hpn-glue.patch:
+  Update glue patches for X509 support.
 
 *openssh-6.2_p1 (24 Mar 2013)
 

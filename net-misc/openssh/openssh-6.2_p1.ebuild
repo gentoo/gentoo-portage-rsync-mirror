@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p1.ebuild,v 1.1 2013/03/24 01:55:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p1.ebuild,v 1.2 2013/03/30 04:29:24 radhermit Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -101,10 +101,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	if use X509 ; then
 		pushd .. >/dev/null
-		epatch "${FILESDIR}"/${PN}-6.1_p1-x509-glue.patch
+		epatch "${FILESDIR}"/${PN}-6.2_p1-x509-glue.patch
 		popd >/dev/null
 		epatch "${WORKDIR}"/${X509_PATCH%.*}
-		epatch "${FILESDIR}"/${PN}-6.1_p1-x509-hpn-glue.patch
+		epatch "${FILESDIR}"/${PN}-6.2_p1-x509-hpn-glue.patch
 		save_version X509
 	fi
 	if ! use X509 ; then
