@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.9 2012/05/04 03:33:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.10 2013/03/30 18:02:49 jer Exp $
 
 EAPI=4
+inherit autotools
 
 DESCRIPTION="Sary: suffix array library and tools"
 HOMEPAGE="http://sary.sourceforge.net/"
@@ -18,6 +19,10 @@ RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+src_prepare() {
+	echo "libsary_la_LIBADD = @GLIB_LIBS@" >> sary/Makefile.am || die
+	eautoreconf
+}
 src_configure() {
 	econf $(use_enable static-libs static)
 }

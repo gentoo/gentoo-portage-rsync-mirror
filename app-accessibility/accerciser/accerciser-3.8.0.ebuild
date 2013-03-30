@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.8.0.ebuild,v 1.1 2013/03/28 16:25:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.8.0.ebuild,v 1.2 2013/03/30 18:19:54 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/Accerciser"
 
 LICENSE="BSD CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -41,13 +41,17 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	G2CONF="${G2CONF} ITSTOOL=$(type -P true)"
 	gnome2_src_prepare
+
+	# Leave shebang alone
+	sed 's:@PYTHON@:/usr/bin/python:' -i src/accerciser.in || die
+
 	python_copy_sources
 }
 
 src_configure() {
-	python_foreach_impl run_in_build_dir gnome2_src_configure
+	python_foreach_impl run_in_build_dir gnome2_src_configure \
+		ITSTOOL=$(type -P true)
 }
 
 src_compile() {
@@ -57,12 +61,7 @@ src_compile() {
 src_install() {
 	installing() {
 		gnome2_src_install
+		python_doscript src/accerciser
 	}
 	python_foreach_impl run_in_build_dir installing
-}
-
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
 }

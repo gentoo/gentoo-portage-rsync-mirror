@@ -1,5 +1,5 @@
-DEFINED_PHASES=configure install
-DEPEND=dev-libs/glib:2 virtual/pkgconfig
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/glib:2 virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Sary: suffix array library and tools
 EAPI=4
 HOMEPAGE=http://sary.sourceforge.net/
@@ -10,4 +10,5 @@ RDEPEND=dev-libs/glib:2
 RESTRICT=test
 SLOT=0
 SRC_URI=http://sary.sourceforge.net/sary-1.2.0.tar.gz
-_md5_=e2fecf09253c5b90856b9f8eb0df9f9c
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=fa98874167198966e23eafce99977e16

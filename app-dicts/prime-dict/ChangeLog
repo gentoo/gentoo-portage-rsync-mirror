@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/prime-dict
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.42 2012/08/20 21:48:19 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.43 2013/03/30 18:12:00 jer Exp $
+
+  30 Mar 2013; Jeroen Roovers <jer@gentoo.org> prime-dict-1.0.0-r1.ebuild:
+  Stable for HPPA (bug #457238).
 
   20 Aug 2012; Johannes Huber <johu@gentoo.org> prime-dict-1.0.0-r1.ebuild:
   Stable for x86, wrt bug #428846
