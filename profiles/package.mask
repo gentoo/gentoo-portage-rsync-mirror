@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14613 2013/03/30 17:45:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14614 2013/03/30 18:44:20 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -51,7 +51,6 @@
 >=app-misc/tracker-0.16
 >=app-text/evince-3.8
 >=dev-cpp/gtkmm-3.7
->=dev-lang/vala-0.20
 >=dev-libs/atk-2.8
 >=dev-libs/folks-0.9
 >=dev-libs/gdl-3.8
@@ -59,13 +58,11 @@
 >=dev-libs/glib-2.36
 >=dev-libs/gobject-introspection-common-1.36
 >=dev-libs/gobject-introspection-1.36
->=dev-libs/libgdata-0.13.3
 >=dev-libs/libgee-0.10
 >=dev-libs/libgweather-3.8
 >=dev-libs/libpeas-1.8
 >=dev-libs/libwacom-0.7
 >=dev-libs/totem-pl-parser-3.4.4
->=dev-libs/vala-common-0.20
 >=dev-python/pyatspi-2.8
 >=dev-python/pygobject-3.8
 >=dev-util/anjuta-3.8

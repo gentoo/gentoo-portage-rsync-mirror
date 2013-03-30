@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.62 2013/03/28 16:47:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.63 2013/03/30 18:34:59 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -libgdata-0.10.2.ebuild,
+  -libgdata-0.12.0.ebuild, libgdata-0.13.3.ebuild, metadata.xml:
+  Clean up old revisions. Add missing vala support for 0.13.3.
 
 *libgdata-0.13.3 (28 Mar 2013)
 

@@ -1,19 +1,22 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.3.ebuild,v 1.1 2013/03/28 16:47:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.3.ebuild,v 1.2 2013/03/30 18:34:59 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
+VALA_MIN_API_VERSION="0.20"
+VALA_USE_DEPEND="vapigen"
 
-inherit gnome2
+inherit gnome2 vala
 
 DESCRIPTION="GLib-based library for accessing online service APIs using the GData protocol"
 HOMEPAGE="http://live.gnome.org/libgdata"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/13" # subslot = libgdata soname version
-IUSE="gnome +introspection static-libs"
+IUSE="gnome +introspection static-libs vala"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+REQUIRED_IUSE="vala? ( introspection )"
 
 # gtk+ is needed for gdk
 # configure checks for gtk:3, but only uses it for demos which are not installed
@@ -26,7 +29,9 @@ RDEPEND="
 	gnome? (
 		app-crypt/gcr:=
 		>=net-libs/gnome-online-accounts-3.2
-		>=net-libs/libsoup-gnome-2.37.91:2.4[introspection?] )
+		|| (
+			>=net-libs/libsoup-2.42
+			>=net-libs/libsoup-gnome-2.37.91:2.4[introspection?] ) )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )
 "
 DEPEND="${RDEPEND}
@@ -34,21 +39,26 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=gnome-base/gnome-common-3.6
 	virtual/pkgconfig
+	vala? ( $(vala_depend) )
 "
 
 src_prepare() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS README"
-	G2CONF="${G2CONF}
-		$(use_enable static-libs static)
-		$(use_enable gnome)
-		$(use_enable gnome goa)
-		$(use_enable introspection)"
-
-	gnome2_src_prepare
-
 	# Disable tests requiring network access, bug #307725
 	sed -e '/^TEST_PROGS = / s:\(.*\):TEST_PROGS = general perf\nOLD_\1:' \
-		-i gdata/tests/Makefile.in || die "network test disable failed"
+		-i gdata/tests/Makefile.{am,in} || die "network test disable failed"
+
+	vala_src_prepare
+	gnome2_src_prepare
+}
+
+src_configure() {
+	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+	gnome2_src_configure \
+		$(use_enable gnome) \
+		$(use_enable gnome goa) \
+		$(use_enable introspection) \
+		$(use_enable vala) \
+		$(use_enable static-libs static)
 }
 
 src_test() {

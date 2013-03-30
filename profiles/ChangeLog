@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7671 2013/03/30 17:45:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7672 2013/03/30 18:44:20 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Drop libgdata and vala from Gnome 3.8 mask, they are fine for ~arch.
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Remove gtk-vnc from Gnome 3.8 mask, it has no relation to the release.

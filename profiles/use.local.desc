@@ -1465,6 +1465,7 @@ dev-libs/libcgroup:daemon - Install the configuration tools and init/config file
 dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
 dev-libs/libdbusmenu:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
+dev-libs/libgdata:vala - Enable bindings for dev-lang/vala
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgusb:vala - Enable bindings for dev-lang/vala
 dev-libs/libindicate:introspection - Use dev-libs/gobject-introspection for introspection
