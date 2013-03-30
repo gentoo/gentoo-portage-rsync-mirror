@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.161 2013/03/29 13:32:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.162 2013/03/30 21:27:48 eva Exp $
+
+*meld-1.7.1 (30 Mar 2013)
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> +meld-1.7.1.ebuild:
+  Version bump. Switch to python-single-r1.
 
   29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> meld-1.7.0.ebuild:
   Stable for ia64, wrt bug #458984
