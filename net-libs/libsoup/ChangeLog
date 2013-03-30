@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.299 2013/03/28 17:53:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.300 2013/03/30 16:59:42 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/libsoup-2.34.2-fix-build-without-gnome-with-doc.patch,
+  -libsoup-2.40.2.ebuild:
+  Clean up old revision.
 
 *libsoup-2.42.0 (28 Mar 2013)
 

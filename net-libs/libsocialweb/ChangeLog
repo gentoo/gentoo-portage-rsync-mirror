@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsocialweb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.19 2013/02/02 23:04:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.20 2013/03/30 16:58:40 eva Exp $
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -libsocialweb-0.25.20.ebuild:
+  Clean up old revision.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libsocialweb-0.25.21.ebuild:
   Add ~arm, wrt bug #449220
