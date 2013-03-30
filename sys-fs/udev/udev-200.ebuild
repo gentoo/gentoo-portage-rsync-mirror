@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.2 2013/03/29 06:54:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.3 2013/03/30 09:28:27 ssuominen Exp $
 
 EAPI=5
 
@@ -454,9 +454,9 @@ pkg_postinst() {
 	elog "         fixing known issues visit:"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 
-	# Keep this here in case the database format changes so it gets updated
-	# when required. Despite that this file is owned by sys-apps/hwids.
-	if use hwdb && has_version sys-apps/hwids; then
+	# Update hwdb database in case the format is changed by udev version.
+	if use hwdb && has_version sys-apps/hwids[udev]; then
+		echo YES
 		udevadm hwdb --update --root="${ROOT%/}"
 	fi
 }

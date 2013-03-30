@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.886 2013/03/29 06:54:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.887 2013/03/30 09:28:27 ssuominen Exp $
+
+  30 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-200.ebuild,
+  udev-9999.ebuild:
+  Missing USE="udev" check for sys-apps/hwids in pkg_postinst() hwdb database
+  update.
 
   29 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-199-r1.ebuild,
   udev-200.ebuild, udev-9999.ebuild:
