@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.56 2013/02/17 13:54:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.57 2013/03/30 13:45:35 ulm Exp $
+
+*pymacs-0.25-r1 (16 Mar 2013)
+
+  16 Mar 2013; Ulrich Müller <ulm@gentoo.org> -pymacs-0.25.ebuild,
+  +pymacs-0.25-r1.ebuild:
+  Further fixes from bug 457942 to work better with python eclasses.
 
 *pymacs-0.25 (17 Feb 2013)
 

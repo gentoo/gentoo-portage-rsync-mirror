@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.25.ebuild,v 1.1 2013/02/17 13:54:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.25-r1.ebuild,v 1.1 2013/03/30 13:45:35 ulm Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 
-inherit distutils-r1 elisp vcs-snapshot
+inherit elisp distutils-r1 vcs-snapshot
 
 DESCRIPTION="A tool that allows both-side communication beetween Python and Emacs Lisp"
 HOMEPAGE="http://pymacs.progiciels-bpi.ca/"
@@ -20,27 +20,24 @@ DEPEND="doc? ( >=dev-python/docutils-0.7
 			virtual/latex-base )"
 RDEPEND=""
 
+DISTUTILS_IN_SOURCE_BUILD=1
 SITEFILE="50${PN}-gentoo.el"
 
-python_configure_all() {
+# called by distutils-r1 for every python implementation
+python_configure() {
 	# pre-process the files but don't run distutils
-	emake PYSETUP=:
+	emake PYSETUP=: PYTHON=${EPYTHON}
 }
 
-src_configure() {
-	distutils-r1_src_configure
-}
-
-src_compile() {
-	distutils-r1_src_compile
-	elisp-compile pymacs.el || die
+# called once
+python_compile_all() {
+	elisp_src_compile
 	if use doc; then
 		VARTEXFONTS="${T}"/fonts emake RST2LATEX=rst2latex.py pymacs.pdf
 	fi
 }
 
-src_install() {
-	distutils-r1_src_install
+python_install_all() {
 	elisp_src_install
 	dodoc pymacs.rst
 	use doc && dodoc pymacs.pdf
