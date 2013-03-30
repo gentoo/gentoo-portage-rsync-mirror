@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.759 2013/03/30 12:56:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.760 2013/03/30 20:14:41 hd_brummy Exp $
+
+  30 Mar 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  fixed missing VDRVERSION up from >=vdr-1.7.34
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> python-r1.eclass:
   Add note about quoting patterns for python_gen_usedep.

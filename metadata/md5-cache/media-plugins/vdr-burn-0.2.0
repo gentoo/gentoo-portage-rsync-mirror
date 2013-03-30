@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-1.6 media-libs/gd[png,truetype,jpeg] >=dev-libs/libcdio-0.71 >=media-video/dvdauthor-0.6.14 >=media-video/mjpegtools-1.6.2[png] media-video/transcode media-fonts/ttf-bitstream-vera virtual/eject >=app-cdr/dvd+rw-tools-5.21 >=media-video/projectx-0.90.4.00_p32 dvdarchive? ( media-video/vdrtools-genindex ) >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://vdr-developerorg/832/vdr-burn-0.2.0.tgz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin-2	49bf8c96532d6e3b26fb8058db516592
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin-2	a630612296af62be9c8d5211d3702ae8
 _md5_=79979ddc5376a3b2bce3ac334afc2c5c
