@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/single-unix-specification
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.18 2012/07/01 22:23:36 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.19 2013/03/30 16:24:23 ulm Exp $
+
+  30 Mar 2013; Ulrich Müller <ulm@gentoo.org>
+  single-unix-specification-3.ebuild:
+  Fix LICENSE.
 
   01 Jul 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Maintainer -> app-doc.
