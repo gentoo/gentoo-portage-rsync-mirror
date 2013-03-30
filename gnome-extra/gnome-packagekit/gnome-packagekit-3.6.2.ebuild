@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.6.1-r1.ebuild,v 1.2 2013/03/30 21:52:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.6.2.ebuild,v 1.1 2013/03/30 21:52:58 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -89,7 +89,8 @@ src_prepare() {
 }
 
 src_configure() {
-	G2CONF="${G2CONF}
+	local myconf
+	myconf="
 		--localstatedir=/var
 		--enable-compile-warnings=yes
 		--enable-iso-c
@@ -101,13 +102,9 @@ src_configure() {
 		ITSTOOL=$(type -P true)"
 
 	cd "${S}_default" || die
-	ECONF_SOURCE="${S}" gnome2_src_configure
-	configure_python() {
-		mkdir -p "${BUILD_DIR}" || die
-		cd "${BUILD_DIR}" || die
-		ECONF_SOURCE="${S}" gnome2_src_configure
-	}
-	python_foreach_impl configure_python
+	ECONF_SOURCE="${S}" gnome2_src_configure ${myconf}
+	ECONF_SOURCE="${S}" python_foreach_impl run_in_build_dir \
+		gnome2_src_configure ${myconf}
 }
 
 src_compile() {
@@ -127,6 +124,8 @@ src_test() {
 }
 
 src_install() {
+	dodoc AUTHORS MAINTAINERS NEWS README TODO
+
 	cd "${S}_default" || die
 	gnome2_src_install
 
@@ -135,7 +134,4 @@ src_install() {
 		emake install DESTDIR="${D}" VPATH="${S}/python/packagekit:${BUILD_DIR}" || die
 	}
 	python_foreach_impl install_python
-
-	cd "${S}" || die
-	dodoc AUTHORS MAINTAINERS NEWS README TODO
 }
