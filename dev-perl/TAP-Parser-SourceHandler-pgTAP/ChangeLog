@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/TAP-Parser-SourceHandler-pgTAP
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TAP-Parser-SourceHandler-pgTAP/ChangeLog,v 1.1 2013/03/30 19:15:22 titanofold Exp $
+
+*TAP-Parser-SourceHandler-pgTAP-3.29 (30 Mar 2013)
+
+  30 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +TAP-Parser-SourceHandler-pgTAP-3.29.ebuild, +metadata.xml:
+  New ebuild used by dev-db/pgtap.
+

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.220 2013/03/29 22:48:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.221 2013/03/30 19:23:10 eva Exp $
+
+*libgsf-1.14.26 (30 Mar 2013)
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> +libgsf-1.14.26.ebuild:
+  Version bump. Python support is now only provided by introspection.
 
   29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> libgsf-1.14.23.ebuild,
   -libgsf-1.14.24.ebuild:
