@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libart_lgpl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.76 2012/05/15 23:31:32 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.77 2013/03/29 23:15:20 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/libart_lgpl-2.3.19-alloc.patch,
+  -files/libart_lgpl-2.3.19-crosscompile.patch, -libart_lgpl-2.3.20.ebuild:
+  Clean up old revision.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org>
   libart_lgpl-2.3.21-r1.ebuild:

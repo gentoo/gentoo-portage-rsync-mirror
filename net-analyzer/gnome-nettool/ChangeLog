@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.119 2012/05/04 06:08:10 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.120 2013/03/29 23:24:31 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-nettool-3.0.1.ebuild:
+  Clean up old revision.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-nettool-2.32.0.ebuild,
   gnome-nettool-3.0.1.ebuild, gnome-nettool-3.2.0.ebuild:

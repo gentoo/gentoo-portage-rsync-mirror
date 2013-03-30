@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.4.4.ebuild,v 1.1 2013/03/28 17:40:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.4.4.ebuild,v 1.2 2013/03/29 23:11:10 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -20,18 +20,19 @@ RDEPEND="
 	>=x11-libs/gtk+-3.6.0:3[introspection?]
 	>=media-libs/clutter-1.13.7:1.0[introspection?]
 	media-libs/cogl:1.0=[introspection?]
-	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
+"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	>=sys-devel/gettext-0.18
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
-src_prepare() {
+src_configure() {
 	DOCS="NEWS README"
 	EXAMPLES="examples/{*.c,redhand.png}"
-	G2CONF="${G2CONF}
-		--disable-maintainer-flags
-		--enable-deprecated
-		$(use_enable introspection)"
-	gnome2_src_prepare
+	gnome2_src_configure \
+		--disable-maintainer-flags \
+		--enable-deprecated \
+		$(use_enable introspection)
 }

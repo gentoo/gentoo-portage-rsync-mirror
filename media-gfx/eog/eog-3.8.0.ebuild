@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.8.0.ebuild,v 1.1 2013/03/28 17:35:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.8.0.ebuild,v 1.2 2013/03/29 23:02:24 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -46,14 +46,13 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
-	G2CONF="${G2CONF}
-		$(use_enable introspection)
-		$(use_with jpeg libjpeg)
-		$(use_with exif libexif)
-		$(use_with lcms cms)
-		$(use_with xmp)
-		$(use_with svg librsvg)
-		ITSTOOL=$(type -P true)"
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
-	gnome2_src_configure
+	gnome2_src_configure \
+		$(use_enable introspection) \
+		$(use_with jpeg libjpeg) \
+		$(use_with exif libexif) \
+		$(use_with lcms cms) \
+		$(use_with xmp) \
+		$(use_with svg librsvg) \
+		ITSTOOL=$(type -P true)
 }

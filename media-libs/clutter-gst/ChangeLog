@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/clutter-gst
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.41 2013/03/25 16:31:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.42 2013/03/29 23:11:53 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -clutter-gst-1.4.6.ebuild, -clutter-gst-1.9.92.ebuild,
+  clutter-gst-2.0.0.ebuild:
+  Clean up old revisions. Add back ~arm to 2.0 slot, it seems it was mistakenly
+  dropped.
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> clutter-gst-1.6.0-r1.ebuild,
   clutter-gst-2.0.0.ebuild:

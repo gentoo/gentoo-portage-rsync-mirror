@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.303 2013/03/28 17:35:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.304 2013/03/29 23:02:24 eva Exp $
+
+  29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -eog-3.4.3-r1.ebuild,
+  -files/eog-3.4.3-libm.patch, -files/eog-3.4.3-require-librsvg-2.36.2.patch,
+  -files/eog-3.6.0-eog.desktop.patch, eog-3.8.0.ebuild:
+  Clean up old revision.
 
 *eog-3.8.0 (28 Mar 2013)
 
