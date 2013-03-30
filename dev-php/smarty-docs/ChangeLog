@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/smarty-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.57 2013/01/21 18:10:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.58 2013/03/30 11:13:56 mabi Exp $
+
+  30 Mar 2013; Matti Bickel <mabi@gentoo.org> -smarty-docs-2.6.11.ebuild,
+  -smarty-docs-2.6.ebuild:
+  cleanup
 
   21 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup as talked with him
