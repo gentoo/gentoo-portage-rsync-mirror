@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.216 2013/03/30 09:44:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.217 2013/03/30 12:02:37 ssuominen Exp $
 
 EAPI=5
 
@@ -190,6 +190,7 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-export CC #463846
 	use keymap || export ac_cv_path_GPERF=true #452760
 
 	local econf_args

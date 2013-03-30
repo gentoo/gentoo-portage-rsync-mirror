@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.888 2013/03/30 09:44:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.891 2013/03/30 12:09:26 ago Exp $
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> udev-200.ebuild:
+  Stable for x86, wrt bug #463614
+
+  30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> udev-200.ebuild:
+  Stable for amd64, wrt bug #463614
+
+  30 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-200.ebuild,
+  udev-9999.ebuild:
+  Use tc-export function from toolchain-funcs.eclass to export CC to
+  environment for /usr/lib/gobject-introspection/giscanner/dumper.py (used with
+  USE=introspection) wrt #463846 by Agostino Sarubbo
 
   30 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-200.ebuild,
   udev-9999.ebuild:
