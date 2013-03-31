@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.1.19.075.ebuild,v 1.2 2013/03/02 21:57:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.1.21.080.ebuild,v 1.1 2013/03/31 13:36:41 hwoarang Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils qt4-r2
 

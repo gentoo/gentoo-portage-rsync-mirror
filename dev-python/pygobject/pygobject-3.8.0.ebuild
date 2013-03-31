@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.0.ebuild,v 1.1 2013/03/28 16:57:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.0.ebuild,v 1.2 2013/03/31 13:36:16 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,6 +62,9 @@ src_prepare() {
 
 	# Run tests with older python too
 #	epatch "${FILESDIR}/${PN}-3.7.90-run-tests-with-old-python.patch"
+
+	# Fix stack corruption due to incorrect format for argument parser (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-stack-corruption.patch"
 
 	eautoreconf
 	gnome2_src_prepare
