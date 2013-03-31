@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.23 2013/03/30 17:30:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.24 2013/03/31 13:23:41 pacho Exp $
+
+  31 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/mutter-3.8.0-build-redefine.patch,
+  +files/mutter-3.8.0-font-crash.patch, mutter-3.8.0.ebuild:
+  Apply two upstream patches fixing a crash and a build failure (#463940 by
+  Torsten Stets)
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -files/mutter-3.2.2-disable-introspection.patch,

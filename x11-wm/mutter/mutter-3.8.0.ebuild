@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.0.ebuild,v 1.1 2013/03/28 22:31:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.0.ebuild,v 1.2 2013/03/31 13:23:41 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="yes"
+
 inherit eutils gnome2
 
 DESCRIPTION="GNOME 3 compositing window manager based on Clutter"
@@ -68,6 +70,12 @@ src_prepare() {
 
 	# Compat with Ubuntu metacity themes (e.g. x11-themes/light-themes)
 	epatch "${FILESDIR}/${PN}-3.2.1-ignore-shadow-and-padding.patch"
+
+	# Fix crash getting default font (from master)
+	epatch "${FILESDIR}/${PN}-3.8.0-font-crash.patch"
+
+	# Don't redefine MetaBackgroundPrivate, fixing a build issue (from master)
+	epatch "${FILESDIR}/${PN}-3.8.0-build-redefine.patch"
 
 	gnome2_src_prepare
 }

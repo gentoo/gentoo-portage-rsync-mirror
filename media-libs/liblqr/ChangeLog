@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/liblqr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.17 2012/05/09 17:32:37 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.18 2013/03/31 13:22:49 hwoarang Exp $
+
+*liblqr-0.4.2 (31 Mar 2013)
+
+  31 Mar 2013; Markos Chandras <hwoarang@gentoo.org> +liblqr-0.4.2.ebuild:
+  Version bump
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> liblqr-0.4.1.ebuild:
   keyword ~amd64-fbsd
@@ -57,4 +62,3 @@
   Initial commit of liblqr library. Fixes bug 203143. Thanks to Piotr
   Szymaniak
   <lazy_bum@o2.pl> for the initial ebuild
-

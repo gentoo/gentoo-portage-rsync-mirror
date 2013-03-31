@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.8.0.ebuild,v 1.2 2013/03/31 12:54:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.8.0.ebuild,v 1.3 2013/03/31 13:02:59 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes" # Needed with USE 'sendto'
 
 inherit eutils gnome2 virtualx
 

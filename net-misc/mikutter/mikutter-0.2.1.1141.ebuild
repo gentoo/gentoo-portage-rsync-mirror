@@ -1,21 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.1.1127.ebuild,v 1.1 2013/02/20 15:35:05 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.1.1141.ebuild,v 1.1 2013/03/31 13:15:44 naota Exp $
 
-EAPI=3
+EAPI=5
 
 USE_RUBY="ruby19"
 
-inherit ruby-ng
+inherit ruby-ng eutils
 
 if [ "${PV}" = "9999" ]; then
-	ESVN_REPO_URI="svn://toshia.dip.jp/mikutter/trunk"
-	inherit subversion
+	EGIT_REPO_URI="git://toshia.dip.jp/mikutter.git"
+	inherit git-2
 	KEYWORDS=""
+	EGIT_SOURCEDIR="${WORKDIR}/all"
 else
 	MY_P="${PN}.${PV}"
 	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
+	RUBY_S="${PN}"
 fi
 
 DESCRIPTION="mikutter is simple, powerful and moeful twitter client"
@@ -29,13 +31,22 @@ DEPEND=""
 RDEPEND="libnotify? ( x11-libs/libnotify )
 	sound? ( media-sound/alsa-utils )"
 
-ruby_add_rdepend "dev-ruby/bsearch
+ruby_add_rdepend "dev-ruby/addressable
+	dev-ruby/bsearch
+	dev-ruby/json
+	dev-ruby/memoize
+	>=dev-ruby/oauth-0.4.7
 	dev-ruby/ruby-gtk2
-	dev-ruby/rcairo
-	dev-ruby/httpclient
+	dev-ruby/typed-array
 	virtual/ruby-ssl"
 
-S="${WORKDIR}/${PN}"
+all_ruby_unpack() {
+	if [ "${PV}" = "9999" ];then
+		git-2_src_unpack
+	else
+		default
+	fi
+}
 
 each_ruby_install() {
 	exeinto /usr/share/mikutter
@@ -45,4 +56,6 @@ each_ruby_install() {
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
 	dodoc README
+	make_desktop_entry mikutter Mikutter \
+		/usr/share/mikutter/core/skin/data/icon.png
 }

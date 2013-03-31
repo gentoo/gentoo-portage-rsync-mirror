@@ -1,0 +1,22 @@
+From 992a15e6401114a67450dcf10b080044caab6b31 Mon Sep 17 00:00:00 2001
+From: Jasper Lievisse Adriaanse <jasper@humppa.nl>
+Date: Fri, 29 Mar 2013 15:59:26 +0000
+Subject: Don't redefine MetaBackgroundPrivate, fixing a build issue:
+
+compositor/meta-background.c:64: error: redefinition of typedef 'MetaBackgroundPrivate'
+./meta/meta-background.h:51: error: previous declaration of 'MetaBackgroundPrivate' was here
+---
+diff --git a/src/compositor/meta-background.c b/src/compositor/meta-background.c
+index d15b06c..727000f 100644
+--- a/src/compositor/meta-background.c
++++ b/src/compositor/meta-background.c
+@@ -61,7 +61,6 @@
+  *
+  * This object provides a ClutterContent object to assist in sharing between actors.
+  */
+-typedef struct _MetaBackgroundPrivate MetaBackgroundPrivate;
+ 
+ struct _MetaBackgroundPrivate
+ {
+--
+cgit v0.9.1
