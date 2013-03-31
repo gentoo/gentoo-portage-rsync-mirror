@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.5 2013/02/18 16:45:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.6 2013/03/31 17:04:36 floppym Exp $
 
 EAPI=4
 
@@ -241,6 +241,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${P}-freebsd.patch" #442050
 		epatch "${FILESDIR}/${P}-compression.patch" #424527
 		epatch "${FILESDIR}/${P}-zfs-feature-flag-support.patch" #455358
+		epatch "${FILESDIR}/${P}-20_linux_xen.patch" #463992
 	fi
 
 	# fix texinfo file name, bug 416035
