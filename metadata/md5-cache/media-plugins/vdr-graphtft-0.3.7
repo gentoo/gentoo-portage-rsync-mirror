@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile config configure install postinst postrm prepare setup unpack
+DEPEND=>=media-video/vdr-1.7.27[graphtft] media-libs/imlib2[png,jpeg] gnome-base/libgtop >=virtual/ffmpeg-0.4.8_p20090201 imagemagick? ( media-gfx/imagemagick[png,jpeg,cxx] ) directfb? ( dev-libs/DirectFB ) graphtft-fe? ( media-libs/imlib2[png,jpeg,X] ) >=media-tv/gentoo-vdr-scripts-0.4.2 virtual/linuxtv-dvb-headers
+DESCRIPTION=VDR plugin: GraphTFT
+EAPI=5
+HOMEPAGE=http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin
+IUSE=+theme_deepblue theme_avp theme_deeppurple theme_poetter directfb graphtft-fe imagemagick touchscreen
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2.1
+PDEPEND=theme_deepblue? ( =x11-themes/vdrgraphtft-deepblue-0.3.1 ) theme_avp? ( =x11-themes/vdrgraphtft-avp-0.3.1 ) theme_deeppurple? ( =x11-themes/vdrgraphtft-deeppurple-0.3.2 ) theme_poetter? ( =x11-themes/vdrgraphtft-poetter-0.3.2 )
+RDEPEND=>=media-video/vdr-1.7.27[graphtft] media-libs/imlib2[png,jpeg] gnome-base/libgtop >=virtual/ffmpeg-0.4.8_p20090201 imagemagick? ( media-gfx/imagemagick[png,jpeg,cxx] ) directfb? ( dev-libs/DirectFB ) graphtft-fe? ( media-libs/imlib2[png,jpeg,X] ) >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.jwendel.de/vdr/vdr-graphtft-0.3.7.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin-2	a630612296af62be9c8d5211d3702ae8
+_md5_=9ab4b29453dab3d826697c5221ab7870
