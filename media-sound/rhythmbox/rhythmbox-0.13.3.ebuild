@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.14 2012/12/20 15:58:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.15 2013/03/31 19:02:20 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -25,8 +25,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	>=gnome-base/gconf-2
 	>=gnome-extra/gnome-media-2.14
 	<gnome-extra/gnome-media-2.91
-	>=net-libs/libsoup-2.26:2.4
-	>=net-libs/libsoup-gnome-2.26:2.4
+	|| ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.26:2.4 )
 
 	>=media-libs/gst-plugins-base-0.10.20:0.10
 	|| (

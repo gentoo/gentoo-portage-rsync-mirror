@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.4.ebuild,v 1.1 2013/02/24 21:59:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.4.ebuild,v 1.2 2013/03/31 19:09:03 pacho Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
@@ -22,8 +22,7 @@ REQUIRED_USE="vala? ( introspection )"
 RDEPEND=">=dev-libs/glib-2:2
 	>=dev-libs/libxslt-1.0.0:=
 	dev-libs/libxml2:=
-	net-libs/libsoup:2.4
-	net-libs/libsoup-gnome:2.4
+	|| ( >=net-libs/libsoup-2.42:2.4 net-libs/libsoup-gnome:2.4 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.0:= )"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am

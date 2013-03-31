@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.107 2013/03/29 21:37:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.108 2013/03/31 19:10:56 pacho Exp $
+
+  31 Mar 2013; Pacho Ramos <pacho@gentoo.org> midori-0.4.9.ebuild,
+  midori-9999.ebuild:
+  Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702)
 
   29 Mar 2013; Christoph Mende <angelos@gentoo.org> midori-0.4.6-r1.ebuild,
   midori-0.4.8.ebuild, midori-0.4.9.ebuild, midori-9999.ebuild:

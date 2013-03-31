@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21.ebuild,v 1.8 2013/02/02 23:04:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21.ebuild,v 1.9 2013/03/31 19:05:17 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	dev-libs/json-glib
 	net-libs/libsoup:2.4
 
-	gnome? ( >=net-libs/libsoup-gnome-2.25.1:2.4 )
+	gnome? ( || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.25.1:2.4 ) )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	networkmanager? ( net-misc/networkmanager )
 	!networkmanager? ( connman? ( net-misc/connman ) )"

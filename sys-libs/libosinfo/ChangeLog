@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libosinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.25 2013/03/30 18:40:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.26 2013/03/31 19:09:03 pacho Exp $
+
+  31 Mar 2013; Pacho Ramos <pacho@gentoo.org> libosinfo-0.2.4.ebuild,
+  libosinfo-0.2.6.ebuild:
+  Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702)
 
 *libosinfo-0.2.6 (30 Mar 2013)
 

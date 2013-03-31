@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsocialweb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.20 2013/03/30 16:58:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.21 2013/03/31 19:05:17 pacho Exp $
+
+  31 Mar 2013; Pacho Ramos <pacho@gentoo.org> libsocialweb-0.25.21.ebuild:
+  Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702)
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -libsocialweb-0.25.20.ebuild:
