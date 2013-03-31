@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/archivemail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.23 2013/03/23 21:37:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.24 2013/03/31 09:53:49 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> archivemail-0.9.0.ebuild:
+  Stable for sparc, wrt bug #462806
 
   23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> archivemail-0.9.0.ebuild:
   Stable for amd64, wrt bug #462806
