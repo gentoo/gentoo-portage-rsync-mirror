@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2-r2.ebuild,v 1.2 2012/05/03 17:00:12 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2-r2.ebuild,v 1.3 2013/03/31 09:03:29 maksbotan Exp $
 
-EAPI=4
+EAPI=5
 
 WANT_AUTOMAKE="1.11"
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -51,6 +51,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	sed -i -e '/gets is a security/d' gnulib/lib/stdio.in.h || die "sed failed"
 	autotools-utils_src_prepare
 }
 
