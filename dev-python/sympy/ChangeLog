@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sympy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.20 2012/10/20 18:17:24 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.21 2013/03/31 06:04:50 grozin Exp $
+
+*sympy-0.7.2-r1 (31 Mar 2013)
+
+  31 Mar 2013; Andrey Grozin <grozin@gentoo.org> +sympy-0.7.2-r1.ebuild metadata.xml:
+  Python-3.2 support
 
 *sympy-0.7.2 (20 Oct 2012)
 
