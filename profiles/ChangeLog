@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7679 2013/03/31 20:50:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7680 2013/03/31 21:07:26 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Mar 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Removal of mask on dev-ruby/cgi_multipart_eof_fix, immediate
+  removal was requested by flameeyes and hwoarang.
 
   31 Mar 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Masked net-proxy/swiftiply and dev-ruby/cgi_multipart_eof_fix,

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14619 2013/03/31 20:50:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14620 2013/03/31 21:07:26 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,14 +36,6 @@
 # is masked for removal, we need to fix net-proxy/swiftiply
 # to no longer depend on it and then apply more testing.
 net-proxy/swiftiply
-
-# Tom Wijsman <TomWij@gentoo.org> (31 Mar 2013)
-# Package only applies to versions of Ruby which are no
-# longer in the Portage tree; it was introduced because
-# net-proxy/swiftiply needed it, but I will instead fix
-# that package to no longer need this package.
-# Removal in 30 days.
-dev-ruby/cgi_multipart_eof_fix
 
 # Pacho Ramos <pacho@gentoo.org> (28 Mar 2013)
 # Gnome 3.8 Mask

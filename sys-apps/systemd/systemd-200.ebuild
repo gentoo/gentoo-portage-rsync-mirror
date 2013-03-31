@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-200.ebuild,v 1.3 2013/03/30 17:02:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-200.ebuild,v 1.4 2013/03/31 21:18:56 mgorny Exp $
 
 EAPI=5
 
@@ -72,7 +72,7 @@ src_configure() {
 		--with-rootprefix=/usr
 		--with-rootlibdir=/usr/$(get_libdir)
 		# but pam modules have to lie in /lib*
-		--with-pamlibdir=/$(get_libdir)/security
+		--with-pamlibdir=$(getpam_mod_dir)
 		# make sure we get /bin:/sbin in $PATH
 		--enable-split-usr
 		# disable sysv compatibility
