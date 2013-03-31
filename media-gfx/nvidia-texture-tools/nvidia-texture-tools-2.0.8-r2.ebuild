@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8-r2.ebuild,v 1.2 2013/03/21 01:24:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8-r2.ebuild,v 1.3 2013/03/31 15:51:54 hasufell Exp $
 
 EAPI=4
 inherit cmake-utils eutils multilib toolchain-funcs
@@ -51,6 +51,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
 	# fix bug #462494
 	epatch "${FILESDIR}"/${P}-openexr.patch
+	# fix clang build
+	epatch "${FILESDIR}"/${P}-clang.patch
 }
 
 src_configure() {

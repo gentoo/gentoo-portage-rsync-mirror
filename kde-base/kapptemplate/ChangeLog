@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.214 2013/03/06 13:41:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.215 2013/03/31 15:34:05 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> kapptemplate-4.10.1.ebuild:
+  Stable for amd64, wrt bug #462890
 
 *kapptemplate-4.10.1 (06 Mar 2013)
 

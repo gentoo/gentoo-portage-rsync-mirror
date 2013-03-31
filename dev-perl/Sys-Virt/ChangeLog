@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-Virt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.22 2013/03/28 12:38:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.23 2013/03/31 16:00:39 jdhore Exp $
+
+  31 Mar 2013; Jeff Horelick <jdhore@gentoo.org> Sys-Virt-1.0.0.ebuild:
+  marked x86 per bug 463520
 
   28 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> -Sys-Virt-0.9.11.ebuild,
   -Sys-Virt-0.9.12.ebuild, -Sys-Virt-0.9.13.ebuild, -Sys-Virt-0.10.2.ebuild:

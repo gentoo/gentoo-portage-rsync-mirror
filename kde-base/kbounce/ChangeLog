@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.236 2013/03/06 13:41:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.237 2013/03/31 15:34:52 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> kbounce-4.10.1.ebuild:
+  Stable for amd64, wrt bug #462890
 
 *kbounce-4.10.1 (06 Mar 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.136 2013/03/06 13:41:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.137 2013/03/31 15:58:56 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> kubrick-4.10.1.ebuild:
+  Stable for amd64, wrt bug #462890
 
 *kubrick-4.10.1 (06 Mar 2013)
 
