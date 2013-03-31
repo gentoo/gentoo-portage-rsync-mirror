@@ -1,0 +1,10 @@
+# ChangeLog for app-accessibility/julius
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/julius/ChangeLog,v 1.1 2013/03/31 22:45:37 hasufell Exp $
+
+*julius-4.2.2 (31 Mar 2013)
+
+  31 Mar 2013; Julian Ospald <hasufell@gentoo.org> +julius-4.2.2.ebuild,
+  +files/julius-4.2.2-install.patch, +files/julius-4.2.2-ldflags.patch:
+  initial import wrt #245475
+
