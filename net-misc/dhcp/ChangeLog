@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.231 2013/01/01 12:44:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.232 2013/03/31 02:39:24 vapier Exp $
+
+*dhcp-4.2.5_p1 (31 Mar 2013)
+
+  31 Mar 2013; Mike Frysinger <vapier@gentoo.org> +dhcp-4.2.5_p1.ebuild:
+  Version bump #463848 by Agostino Sarubbo.
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> dhcp-4.2.4_p2-r1.ebuild:
   Add ~ia64, wrt bug #449220

@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=media-libs/gd[jpeg,png] media-libs/libpng virtual/latex-base sys-libs/zlib t1lib? ( media-libs/t1lib ) truetype? ( >=media-libs/freetype-2.1.5 )
 SLOT=0
 SRC_URI=mirror://sourceforge/dvipng/dvipng-1.14.tar.gz
-_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0b06cd83db3736043d0b9245c70c169a

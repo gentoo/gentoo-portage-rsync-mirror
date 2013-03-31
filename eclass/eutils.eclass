@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.415 2013/03/12 14:16:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.416 2013/03/31 02:17:12 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -261,6 +261,11 @@ EPATCH_MULTI_MSG="Applying various patches (bugfixes/updates) ..."
 # Only require patches to match EPATCH_SUFFIX rather than the extended
 # arch naming style.
 EPATCH_FORCE="no"
+# @VARIABLE: EPATCH_USER_EXCLUDE
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# List of patches not to apply.	 Note this is only file names,
+# and not the full path.  Globs accepted.
 
 # @FUNCTION: epatch
 # @USAGE: [options] [patches] [dirs of patches]
@@ -405,6 +410,15 @@ epatch() {
 			local ex
 			for ex in ${EPATCH_EXCLUDE} ; do
 				if [[ ${patchname} == ${ex} ]] ; then
+					einfo "  Skipping ${patchname} due to EPATCH_EXCLUDE ..."
+					eshopts_pop
+					continue 2
+				fi
+			done
+
+			for ex in ${EPATCH_USER_EXCLUDE} ; do
+				if [[ ${patchname} == ${ex} ]] ; then
+					einfo "  Skipping ${patchname} due to EPATCH_USER_EXCLUDE ..."
 					eshopts_pop
 					continue 2
 				fi

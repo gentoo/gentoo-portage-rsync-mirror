@@ -8,5 +8,5 @@ LICENSE=LGPL-3
 RDEPEND=virtual/ooo virtual/ooo
 SLOT=0
 SRC_URI=http://extensions.libreoffice.org/extension-center/ct2n-convert-text-to-number-and-dates/releases/1.4.0/converttexttonumber-1.4.0.oxt
-_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	office-ext	0b53adeeef509a84561c86037cc92d8e	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	office-ext	0b53adeeef509a84561c86037cc92d8e	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=98644fa2fe83d2f8333378e3cf9ae451

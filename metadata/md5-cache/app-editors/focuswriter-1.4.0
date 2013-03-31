@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=app-text/enchant dev-libs/libzip media-libs/sdl-mixer[wav] dev-qt/qtcore:4 dev-qt/qtgui:4
 SLOT=0
 SRC_URI=http://gottcode.org/focuswriter/focuswriter-1.4.0-src.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8b07d56bbae2c0a6169a6a914bd68aee

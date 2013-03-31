@@ -9,5 +9,5 @@ LICENSE=GPL-3+ FDL-1.3+
 RDEPEND=virtual/latex-base preview-latex? ( app-text/dvipng app-text/ghostscript-gpl ) >=virtual/emacs-21 virtual/latex-base
 SLOT=0
 SRC_URI=mirror://gnu/auctex/auctex-11.86.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	50d18ebffcbd8bd63614b89c2d664d0d	latex-package	e7bfe03b27224512702eac009812cc50	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	36e6377b0e31856b6d62af831661c4f3	latex-package	e7bfe03b27224512702eac009812cc50	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=91cb1fb09fb7df19811f3b6ef351ebfa

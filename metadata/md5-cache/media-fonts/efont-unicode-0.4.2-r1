@@ -8,5 +8,5 @@ LICENSE=public-domain BAEKMUK BSD MIT HPND free-noncomm
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=http://openlab.jp/efont/dist/unicode-bdf/efont-unicode-bdf-0.4.2.tar.bz2
-_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	font	9aa70ebc5cefbdd9056687b550a2fdc4	font-ebdftopcf	cfc12172831c46e51665e6ec2d3e918a	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	font	9aa70ebc5cefbdd9056687b550a2fdc4	font-ebdftopcf	cfc12172831c46e51665e6ec2d3e918a	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d140485a83b1b99fedde60071110eecc

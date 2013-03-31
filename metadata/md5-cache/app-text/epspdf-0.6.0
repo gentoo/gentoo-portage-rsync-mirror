@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!<dev-texlive/texlive-pictures-2011-r1 dev-tex/luatex app-text/ghostscript-gpl tk? ( dev-lang/tk )
 SLOT=0
 SRC_URI=http://tex.aanhet.net/epspdf/epspdf.0.6.0.tgz
-_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	texlive-common	dcab7201316e43f118d20a1d6dab09a9	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	texlive-common	dcab7201316e43f118d20a1d6dab09a9	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=cb0a16135dd9450d0a57637d66aa663c

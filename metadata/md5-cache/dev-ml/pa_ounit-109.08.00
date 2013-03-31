@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-ml/type-conv-3.0.5:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/109.08.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.08.00/individual/pa_ounit-109.08.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/pa_ounit-109.08.00.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	ded93e450747134a079e647d888aa80b	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	ded93e450747134a079e647d888aa80b	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=440ce2601c4573db84f0bae5ea8db7ae

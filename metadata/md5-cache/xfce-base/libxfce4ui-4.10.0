@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.24 >=x11-libs/gtk+-2.20:2 x11-libs/libX11 x11-libs/libICE x11-libs/libSM >=xfce-base/libxfce4util-4.10 >=xfce-base/xfconf-4.10 glade? ( dev-util/glade:3 ) startup-notification? ( x11-libs/startup-notification ) !xfce-base/xfce-utils
 SLOT=0
 SRC_URI=mirror://xfce/src/xfce/libxfce4ui/4.10/libxfce4ui-4.10.0.tar.bz2
-_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	xfconf	ba58c6f43e7fdfc116752aa58b488d83
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	xfconf	ba58c6f43e7fdfc116752aa58b488d83
 _md5_=74ec3093383bbc7f9cd11c86b24d0d4c

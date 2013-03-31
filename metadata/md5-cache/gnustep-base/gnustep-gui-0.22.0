@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=doc? ( virtual/texi2dvi dev-tex/latex2html app-text/texi2html ) app-text/aspell >=gnustep-base/gnustep-base-1.24.0 media-libs/audiofile >=media-libs/tiff-3 x11-libs/libXt cups? ( >=net-print/cups-1.1 ) gif? ( >=media-libs/giflib-4.1 ) jpeg? ( virtual/jpeg ) png? ( >=media-libs/libpng-1.2 ) speech? ( app-accessibility/flite )
 SLOT=0
 SRC_URI=ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-gui-0.22.0.tar.gz
-_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b4daeeb23e00d979184697abe7bd1152

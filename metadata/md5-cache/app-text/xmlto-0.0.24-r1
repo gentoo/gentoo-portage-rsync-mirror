@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash || ( sys-apps/which sys-freebsd/freebsd-ubin ) dev-libs/libxslt >=app-text/docbook-xsl-stylesheets-1.62.0-r1 ~app-text/docbook-xml-dtd-4.2 || ( sys-apps/util-linux app-misc/getopt ) || ( >=sys-apps/coreutils-6.10-r1 sys-freebsd/freebsd-ubin ) latex? ( >=app-text/passivetex-1.25 >=dev-tex/xmltex-1.9-r2 )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/x/m/xmlto/xmlto-0.0.24.tar.bz2 mirror://gentoo/xmlto-0.0.24-mans.tar.bz2 http://dev.gentoo.org/~vapier/dist/xmlto-0.0.24-mans.tar.bz2
-_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=9d37fffb5153dc1c793de892d5337099

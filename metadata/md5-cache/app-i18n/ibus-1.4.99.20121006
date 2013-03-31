@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( gtk gtk3 X ) deprecated? ( python ) python? ( || ( deprecated 
 RESTRICT=test
 SLOT=0
 SRC_URI=http://ibus.googlecode.com/files/ibus-1.4.99.20121006.tar.gz
-_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vala	aa890daf29e67d32e9bff8e12ef653ca	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vala	aa890daf29e67d32e9bff8e12ef653ca	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=3acfb6c55ffca2f1cef659d4964cd995
