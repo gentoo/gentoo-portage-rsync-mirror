@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-menuorg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.11 2012/02/08 14:09:48 idl0r Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/ChangeLog,v 1.12 2013/03/31 18:10:02 hd_brummy Exp $
+
+*vdr-menuorg-0.5.1 (31 Mar 2013)
+
+  31 Mar 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-menuorg-0.5.1.ebuild:
+  bump
 
   08 Feb 2012; Christian Ruppert <idl0r@gentoo.org> vdr-menuorg-0.4.5.ebuild:
   Use thirdpartymirror

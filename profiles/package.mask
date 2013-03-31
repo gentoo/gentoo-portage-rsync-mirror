@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14617 2013/03/30 23:41:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14618 2013/03/31 18:19:57 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,14 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Gilles Dartiguelongue <eva@gentoo.org> (30 Mar 2013)
-# the DLNA stack mask, may or may not be related to Gnome 3.8
->=media-libs/gupnp-dlna-0.10
->=net-libs/gssdp-0.14
->=net-libs/gupnp-av-0.12
->=net-libs/gupnp-0.20
->=net-misc/rygel-0.18
 
 # Pacho Ramos <pacho@gentoo.org> (28 Mar 2013)
 # Gnome 3.8 Mask
