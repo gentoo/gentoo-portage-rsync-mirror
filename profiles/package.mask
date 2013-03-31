@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14616 2013/03/30 22:55:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14617 2013/03/30 23:41:51 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -339,12 +339,6 @@ dev-php/PEAR-PEAR_PackageFileManager_Cli
 # Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
 # Depends on blender, which is masked.
 media-gfx/yafaray
-
-# Ulrich Müller <ulm@gentoo.org> (26 Feb 2013)
-# Declared as obsolete by upstream. Use fortune.el with
-# the zippy file from games-misc/fortune-mod instead.
-# Masked for removal in 30 days, bug #459358.
-app-emacs/yow
 
 # Mike Gilbert <floppym@gentoo.org> (26 Feb 2013)
 # Dev channel releases are only for people who are developers or want more

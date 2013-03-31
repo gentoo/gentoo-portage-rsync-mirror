@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7675 2013/03/30 22:55:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7676 2013/03/30 23:41:51 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove mask for app-emacs/yow, package removed.
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Drop some more packages from Gnome 3.8 mask, they are safe.
