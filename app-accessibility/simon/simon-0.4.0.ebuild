@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.0.ebuild,v 1.1 2013/03/31 18:28:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.0.ebuild,v 1.2 2013/03/31 22:20:15 hasufell Exp $
 
 # KEEP KDE ECLASSES OUT OF HERE
 
@@ -35,10 +35,7 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXtst
 	x11-libs/qwt:6
-	kdepim? (
-		kde-base/akonadi:4
-		kde-base/kdepimlibs:4
-	)
+	kdepim? ( kde-base/kdepimlibs:4 )
 	libsamplerate? ( media-libs/libsamplerate )
 	nls? (
 		kde-base/kde-l10n
@@ -79,7 +76,6 @@ pkg_postinst() {
 
 	elog "optional dependencies:"
 	elog "  kde-base/jovie (support for Jovie TTS system)"
-	elog "  media-libs/portaudio (support for microphone input with Julius)"
 }
 
 pkg_postrm() {
