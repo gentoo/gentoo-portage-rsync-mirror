@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.1 2013/03/29 16:44:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.2 2013/03/31 01:29:40 floppym Exp $
 
 EAPI=5
 
@@ -24,13 +24,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	if ! use icu; then
+	if use icu; then
+		append-cxxflags $($(tc-getPKG_CONFIG) --variable=CXXFLAGS icu-io icu-uc)
+	else
 		sed \
 			-e 's:-licuio::g' \
 			-e 's:-licuuc::g' \
 			-e 's:-D USE_UTF16::g' \
 			-i Makefile || die
-		append-cxxflags $($(tc-getPKG_CONFIG) --variable=CXXFLAGS icu-io icu-uc)
 	fi
 
 	sed \
