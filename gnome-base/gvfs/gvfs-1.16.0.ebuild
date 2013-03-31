@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.0.ebuild,v 1.1 2013/03/28 22:51:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.0.ebuild,v 1.2 2013/03/31 12:49:52 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README
 SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~tetromino/distfiles/aclocal/libgcrypt.m4.bz2"
 
-IUSE="afp archive avahi bluetooth bluray cdda doc fuse gdu gnome-keyring gnome-online-accounts gphoto2 gtk +http ios samba systemd +udev udisks"
+IUSE="afp archive avahi bluetooth bluray cdda doc fuse gdu gnome-keyring gnome-online-accounts gphoto2 gtk +http mtp ios samba systemd +udev udisks"
 REQUIRED_USE="systemd? ( udisks )"
 
 # Can use libgphoto-2.5.0 as well. Automagic detection.
@@ -49,6 +49,7 @@ RDEPEND=">=dev-libs/glib-2.35:2
 	ios? (
 		>=app-pda/libimobiledevice-1.1.0
 		>=app-pda/libplist-1 )
+	mtp? ( >=media-libs/libmtp-1.1.5 )
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
 	systemd? ( sys-apps/systemd )
 	udev? (
@@ -68,7 +69,7 @@ REQUIRED_USE="cdda? ( udev )"
 
 src_prepare() {
 	if use archive; then
-		epatch "${FILESDIR}"/${PN}-1.2.2-expose-archive-backend.patch
+		epatch "${FILESDIR}"/${PN}-1.16.0-expose-archive-backend.patch
 		echo mount-archive.desktop.in >> po/POTFILES.in
 		echo mount-archive.desktop.in.in >> po/POTFILES.in
 	fi
@@ -108,6 +109,7 @@ src_configure() {
 		$(use_enable gphoto2)
 		$(use_enable gtk)
 		$(use_enable ios afc)
+		$(use_enable mtp libmtp)
 		$(use_enable udev)
 		$(use_enable udev gudev)
 		$(use_enable http)

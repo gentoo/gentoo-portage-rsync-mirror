@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.407 2013/03/29 19:58:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.408 2013/03/31 12:54:56 pacho Exp $
+
+  31 Mar 2013; Pacho Ramos <pacho@gentoo.org> nautilus-3.8.0.ebuild:
+  Update gsettings-desktop-schemas dependency (#463908 by Chris Mayo).
 
   29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -files/nautilus-3.2.1-delete.patch,
