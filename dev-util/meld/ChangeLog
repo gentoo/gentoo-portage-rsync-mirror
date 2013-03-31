@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.162 2013/03/30 21:27:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.163 2013/03/31 04:18:04 tetromino Exp $
+
+  31 Mar 2013; Alexandre Rostovtsev <tetromino@gentoo.org> meld-1.7.1.ebuild:
+  Fix .desktop file sed.
 
 *meld-1.7.1 (30 Mar 2013)
 

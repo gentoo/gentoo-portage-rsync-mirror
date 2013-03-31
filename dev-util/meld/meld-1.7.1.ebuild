@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.7.1.ebuild,v 1.1 2013/03/30 21:27:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.7.1.ebuild,v 1.2 2013/03/31 04:18:04 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,9 +62,8 @@ src_prepare() {
 			-i po/Makefile || die "sed 6 failed"
 	fi
 
-	# Fix .desktop entry, upstream bug #686978
-	sed -e '/Encoding/d' \
-		-e 's/(MimeType.*)/\1/' \
+	# Fix .desktop entry
+	sed -e 's/\(MimeType.*\)/\1;/' \
 		-i data/meld.desktop.in || die
 
 	gnome2_src_prepare
