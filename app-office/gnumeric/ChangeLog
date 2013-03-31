@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.244 2013/03/29 13:21:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.245 2013/03/31 14:53:31 eva Exp $
+
+*gnumeric-1.12.1 (31 Mar 2013)
+
+  31 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> +gnumeric-1.12.1.ebuild:
+  Version bump.
 
   29 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gnumeric-1.12.0-r1.ebuild:
   Stable for ia64, wrt bug #458984

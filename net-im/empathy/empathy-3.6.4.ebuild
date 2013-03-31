@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.2-r2.ebuild,v 1.8 2013/02/07 22:32:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.4.ebuild,v 1.1 2013/03/31 14:57:15 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_{5,6,7} )
 
 inherit gnome2 python-any-r1 virtualx
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="
 	>=media-libs/libcanberra-0.25[gtk3]
 	>=net-libs/gnutls-2.8.5:=
 	>=net-libs/webkit-gtk-1.3.13:3
-	>=x11-libs/libnotify-0.7
+	>=x11-libs/libnotify-0.7:=
 
 	media-libs/gstreamer:1.0
 	>=media-libs/clutter-1.10.0:1.0
@@ -63,7 +63,7 @@ COMMON_DEPEND="
 		>=app-text/iso-codes-0.35 )
 	v4l? (
 		media-plugins/gst-plugins-v4l2:1.0
-		>=media-video/cheese-3.4
+		>=media-video/cheese-3.4:=
 		virtual/udev[gudev] )"
 # >=empathy-3.4 is incompatible with telepathy-rakia-0.6, bug #403861
 RDEPEND="${COMMON_DEPEND}
@@ -73,7 +73,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
 	gnome? ( gnome-extra/gnome-contacts )"
 DEPEND="${COMMON_DEPEND}
-	${PYTHON_DEPENDS}
+	${PYTHON_DEPS}
 	dev-libs/libxml2:2
 	dev-libs/libxslt
 	>=dev-util/intltool-0.50.0
@@ -86,23 +86,22 @@ PDEPEND=">=net-im/telepathy-mission-control-5.14"
 
 src_configure() {
 	DOCS="CONTRIBUTORS AUTHORS ChangeLog NEWS README"
-	G2CONF="${G2CONF}
-		--disable-ubuntu-online-accounts
-		--disable-coding-style-checks
-		--disable-static
-		--disable-Werror
-		--enable-gst-1.0
-		$(use_enable debug)
-		$(use_enable geocode)
-		$(use_enable geoloc location)
-		$(use_enable gnome-online-accounts goa)
-		$(use_enable map)
-		$(use_enable sendto nautilus-sendto)
-		$(use_enable spell)
-		$(use_with v4l cheese)
-		$(use_enable v4l gudev)
-		ITSTOOL=$(type -P true)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--disable-Werror \
+		--disable-coding-style-checks \
+		--disable-static \
+		--disable-ubuntu-online-accounts \
+		--enable-gst-1.0 \
+		$(use_enable debug) \
+		$(use_enable geocode) \
+		$(use_enable geoloc location) \
+		$(use_enable gnome-online-accounts goa) \
+		$(use_enable map) \
+		$(use_enable sendto nautilus-sendto) \
+		$(use_enable spell) \
+		$(use_enable v4l gudev) \
+		$(use_with v4l cheese) \
+		ITSTOOL=$(type -P true)
 }
 
 src_test() {

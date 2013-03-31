@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.3.ebuild,v 1.1 2013/03/28 17:54:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.3.ebuild,v 1.2 2013/03/31 14:35:37 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-#GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -34,15 +33,14 @@ DEPEND="${RDEPEND}
 #	gnome-base/gnome-common:3
 
 src_configure() {
-	G2CONF="${G2CONF}
-		--enable-compile-warnings=minimum
-		--disable-static
-		$(use_enable introspection)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--enable-compile-warnings=minimum \
+		--disable-static \
+		$(use_enable introspection)
 }
 
 src_install() {
 	gnome2_src_install
 	# Drop self-installed documentation
-	rm -r "${ED}"/usr/share/doc/libzapojit/ || die
+	rm -r "${ED}"/usr/share/doc/${PN}/ || die
 }

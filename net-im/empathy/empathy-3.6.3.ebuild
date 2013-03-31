@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.3.ebuild,v 1.2 2013/02/07 22:32:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.3.ebuild,v 1.3 2013/03/31 14:57:15 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://live.gnome.org/Empathy"
 LICENSE="GPL-2 CC-BY-SA-3.0 FDL-1.3 LGPL-2.1"
 SLOT="0"
 IUSE="debug +geocode +geoloc gnome gnome-online-accounts +map sendto spell test +v4l"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 
 # gdk-pixbuf and pango extensively used in libempathy-gtk
 COMMON_DEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.138 2013/03/30 15:13:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.139 2013/03/31 14:58:28 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pycairo-1.10.0-r4.ebuild:
+  Stable for sparc, wrt bug #458988
 
   30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pycairo-1.10.0-r4.ebuild:
   Stable for alpha, wrt bug #458988
