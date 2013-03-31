@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.34 2013/03/31 02:39:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.35 2013/03/31 14:29:27 hasufell Exp $
+
+*hexchat-2.9.4-r1 (31 Mar 2013)
+
+  31 Mar 2013; Julian Ospald <hasufell@gentoo.org> +hexchat-2.9.4-r1.ebuild,
+  +files/hexchat-2.9.4-build.patch, metadata.xml:
+  revbump: rework, add theme-manager, fix deps, convert to plugin-<..> syntax,
+  use python-single-r1, fix build system instead of sedding it, use eautoreconf
+  rather than autogen.sh, remove obsolete sed, update icon cache and gconf
+  schemas properly
 
   31 Mar 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   add myself to metadata.xml

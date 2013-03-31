@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.118 2013/03/26 20:18:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.119 2013/03/31 14:28:45 hasufell Exp $
+
+# Julian Ospald <hasufell@gentoo.org> (31 Mar 2013)
+# depends on mono/monodevelop
+>=net-irc/hexchat-2.9.4-r1 theme-manager
 
 # Sergei Trofimovich <slyfox@gentoo.org> (26 Mar 2013)
 # sys-devel/llvm has no ia64 keywords
