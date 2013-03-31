@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.4.ebuild,v 1.2 2013/03/29 16:49:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.4.ebuild,v 1.3 2013/03/31 18:49:27 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ IUSE="archive crypt +introspection +quvi test"
 
 RDEPEND=">=dev-libs/glib-2.31:2
 	dev-libs/gmime:2.6
-	|| ( >=net-libs/libsoup-gnome-2.30:2.4 net-libs/libsoup[gnome] )
+	|| ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.30:2.4 )
 	archive? ( >=app-arch/libarchive-2.8.4 )
 	crypt? ( dev-libs/libgcrypt )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )

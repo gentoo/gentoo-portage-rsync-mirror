@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.162 2013/02/24 11:28:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.163 2013/03/31 18:59:18 pacho Exp $
+
+  31 Mar 2013; Pacho Ramos <pacho@gentoo.org> -banshee-2.2.1.ebuild,
+  -banshee-2.4.1.ebuild, -files/banshee-1.7.4-make-webkit-optional.patch,
+  -files/banshee-2.2.0-fix-equalizer-values.patch,
+  -files/banshee-2.4.0-libgpod-082.patch, -files/banshee-2.4.0-upnp-crash.patch,
+  banshee-2.6.0.ebuild:
+  Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702), drop old.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> banshee-2.6.0.ebuild:
   Stable for amd64, wrt bug #458494

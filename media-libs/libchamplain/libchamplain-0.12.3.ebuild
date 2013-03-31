@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.11 2013/02/02 22:48:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.12 2013/03/31 18:56:47 pacho Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-libs/glib:2
 	media-libs/clutter:1.0[introspection?]
 	media-libs/memphis:0.2[introspection?]
-	net-libs/libsoup-gnome:2.4
+	|| ( >=net-libs/libsoup-2.42:2.4 net-libs/libsoup-gnome:2.4 )
 	x11-libs/cairo
 	gtk? (
 		x11-libs/gtk+:3[introspection?]

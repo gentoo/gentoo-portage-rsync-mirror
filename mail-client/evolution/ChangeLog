@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.391 2013/03/31 14:31:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.392 2013/03/31 18:50:53 pacho Exp $
+
+  31 Mar 2013; Pacho Ramos <pacho@gentoo.org> evolution-3.8.0.ebuild:
+  Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702)
 
 *evolution-3.6.4 (31 Mar 2013)
 

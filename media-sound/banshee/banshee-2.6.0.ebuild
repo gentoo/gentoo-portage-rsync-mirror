@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.0.ebuild,v 1.5 2013/02/24 11:28:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.0.ebuild,v 1.6 2013/03/31 18:59:18 pacho Exp $
 
 EAPI="4"
 
@@ -59,8 +59,7 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	)
 	web? (
 		>=net-libs/webkit-gtk-1.2.2:2
-		>=net-libs/libsoup-2.26:2.4
-		>=net-libs/libsoup-gnome-2.26:2.4
+		|| ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.26:2.4 )
 	)
 	youtube? (
 		>=dev-dotnet/google-gdata-sharp-1.4
