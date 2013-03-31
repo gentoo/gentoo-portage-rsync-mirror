@@ -9,6 +9,7 @@
 	</maintainer>
 	<use>
 		<flag name="analogtv">Add support for the analogtv plugin</flag>
+		<flag name="alternatechannel">Use alternate channel on record</flag>
 		<flag name="atsc">Support for NorthAmerican Broadcast ( rudimentary )</flag>
 		<flag name="cmdreccmdi18n">loads translated commands and reccommands files if existing</flag>
 		<flag name="cmdsubmenu">Allows the creation of submenus in the commands menu</flag>
@@ -29,17 +30,21 @@
 		<flag name="em84xx">Add support for em84xx plugin</flag>
 		<flag name="graphtft">support for grapftft plugin up from vdr-graphtft-0.1.7</flag>
 		<flag name="hardlinkcutter">Speed up cutting by hardlinking unchanged files</flag>
+		<flag name="html">Install HTML documentation</flag>
 		<flag name="iptv">Enables channel parameters for vdr-iptv and other input plugins</flag>
 		<flag name="jumpplay">Enables automatic jumping over cut marks while watching a recording</flag>
+		<flag name="jumpingseconds">skip seconds in played records</flag>
 		<flag name="liemikuutio">Formerly known as AIO (all-in-one) patch, adds some nice must haves, plus changes from extensions patch</flag>
 		<flag name="lircsettings">Allows to change lirc settings delay, freq and timeout values in OSD</flag>
 		<flag name="livebuffer">does timeshifting/background recording all the time, allows to rewind live TV</flag>
 		<flag name="lnbshare">Enables support for two or more dvb cards sharing the same cable to the lnb</flag>
 		<flag name="mainmenuhooks">Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)</flag>
 		<flag name="menuorg">Enables support for the menuorg-plugin</flag>
+		<flag name="naludump">Removes NALU fill data from h.264-Streams of TS files</flag>
 		<flag name="noepg">Adds code to selectively disable epg-reception for specific channels</flag>
 		<flag name="osdmaxitems">Support for text2skin</flag>
 		<flag name="parentalrating">Support Parental Rating</flag>
+		<flag name="permashift">permanent timeshift by recording live TV on hard disk, need plugin vdr-permashift</flag>
 		<flag name="pinplugin">Support for pin plugin</flag>
 		<flag name="rotor">Enable support for plugin vdr-rotor for dish-positioner.</flag>
 		<flag name="settime">set system time per script instead of via syscal</flag>
@@ -52,6 +57,7 @@
 		<flag name="timerinfo">Show with chars +/- if space on HD will suffice for a timer</flag>
 		<flag name="ttxtsubs">support for ttxtsubs plugin</flag>
 		<flag name="validinput">Signal if it is possible to go left/right in lists with chars &lt; &gt;</flag>
+		<flag name="vasarajanauloja">replacement for the liemikuutio patch, adds some nice must haves features</flag>
 		<flag name="volctrl">allows volume control using left/right keys</flag>
 		<flag name="wareagleicon">Replace original icon set in menu</flag>
 		<flag name="yaepg">Enables support for the plugin vdr-yaepg</flag>

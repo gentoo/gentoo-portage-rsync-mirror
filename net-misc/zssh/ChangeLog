@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.18 2013/03/30 12:59:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.19 2013/03/31 10:32:42 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> zssh-1.5c-r1.ebuild:
+  Stable for sparc, wrt bug #462902
 
   30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> zssh-1.5c-r1.ebuild:
   Stable for x86, wrt bug #462902

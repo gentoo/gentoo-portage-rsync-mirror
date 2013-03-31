@@ -3658,6 +3658,7 @@ media-video/transcode:pic - disable optimized assembly code that is not PIC frie
 media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/tsmuxer:qt4 - Installs tsMuxerGUI (needs Qt4)
 media-video/ushare:dlna - Add DLNA (media-libs/libdlna) support
+media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:analogtv - Add support for the analogtv plugin
 media-video/vdr:atsc - Support for NorthAmerican Broadcast ( rudimentary )
 media-video/vdr:cmdreccmdi18n - loads translated commands and reccommands files if existing
@@ -3679,7 +3680,9 @@ media-video/vdr:dxr3 - Enable tweaks to improve vdr behaviour on dxr3-cards
 media-video/vdr:em84xx - Add support for em84xx plugin
 media-video/vdr:graphtft - support for grapftft plugin up from vdr-graphtft-0.1.7
 media-video/vdr:hardlinkcutter - Speed up cutting by hardlinking unchanged files
+media-video/vdr:html - Install HTML documentation
 media-video/vdr:iptv - Enables channel parameters for vdr-iptv and other input plugins
+media-video/vdr:jumpingseconds - skip seconds in played records
 media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
 media-video/vdr:liemikuutio - Formerly known as AIO (all-in-one) patch, adds some nice must haves, plus changes from extensions patch
 media-video/vdr:lircsettings - Allows to change lirc settings delay, freq and timeout values in OSD
@@ -3687,9 +3690,11 @@ media-video/vdr:livebuffer - does timeshifting/background recording all the time
 media-video/vdr:lnbshare - Enables support for two or more dvb cards sharing the same cable to the lnb
 media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)
 media-video/vdr:menuorg - Enables support for the menuorg-plugin
+media-video/vdr:naludump - Removes NALU fill data from h.264-Streams of TS files
 media-video/vdr:noepg - Adds code to selectively disable epg-reception for specific channels
 media-video/vdr:osdmaxitems - Support for text2skin
 media-video/vdr:parentalrating - Support Parental Rating
+media-video/vdr:permashift - permanent timeshift by recording live TV on hard disk, need plugin vdr-permashift
 media-video/vdr:pinplugin - Support for pin plugin
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:settime - set system time per script instead of via syscal
@@ -3702,6 +3707,7 @@ media-video/vdr:timercmd - Adds submenu for user defined commands in timer menu
 media-video/vdr:timerinfo - Show with chars +/- if space on HD will suffice for a timer
 media-video/vdr:ttxtsubs - support for ttxtsubs plugin
 media-video/vdr:validinput - Signal if it is possible to go left/right in lists with chars < >
+media-video/vdr:vasarajanauloja - replacement for the liemikuutio patch, adds some nice must haves features
 media-video/vdr:volctrl - allows volume control using left/right keys
 media-video/vdr:wareagleicon - Replace original icon set in menu
 media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg

@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.57 2013/01/16 06:38:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.58 2013/03/31 10:54:45 hd_brummy Exp $
+
+*vdr-burn-0.2.2 (31 Mar 2013)
+
+  31 Mar 2013; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-burn-0.2.2.ebuild,
+  +files/vdr-burn-0.2.2-missing-include-for-function-setpriority.patch,
+  +files/vdr-burn-0.2.2_gentoo-path.diff, +files/vdr-burn-0.2.2_makefile.diff,
+  +files/vdr-burn-0.2.2_setdefaults.diff:
+  bump
 
   16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> vdr-burn-0.2.0.ebuild,
   +files/vdr-burn-0.2.0-missing-include-for-function-setpriority.patch:
