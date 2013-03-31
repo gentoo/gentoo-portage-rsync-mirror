@@ -1,0 +1,11 @@
+# ChangeLog for media-tv/v4l-dvb-saa716x
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-saa716x/ChangeLog,v 1.1 2013/03/31 16:42:29 hd_brummy Exp $
+
+*v4l-dvb-saa716x-0.0.1_p20130224 (31 Mar 2013)
+
+  31 Mar 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/OSD_RAW_CMD_patch_2.diff, +v4l-dvb-saa716x-0.0.1_p20130224.ebuild,
+  +files/v4l-dvb-saa716x-Makefilepatch-2.diff, +metadata.xml:
+  initial ebuild, taken from vdr-devel overlay
+

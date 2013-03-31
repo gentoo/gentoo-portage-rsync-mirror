@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/SphinxTrain
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.18 2012/12/28 18:14:24 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.19 2013/03/31 16:40:32 hasufell Exp $
+
+*SphinxTrain-1.0.8 (31 Mar 2013)
+
+  31 Mar 2013; Julian Ospald <hasufell@gentoo.org> +SphinxTrain-1.0.8.ebuild:
+  version bump
 
   28 Dec 2012; Ulrich Müller <ulm@gentoo.org> SphinxTrain-0.9.1-r1.ebuild:
   Fix LICENSE, see COPYING file, bug 447268.

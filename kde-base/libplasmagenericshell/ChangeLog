@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libplasmagenericshell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmagenericshell/ChangeLog,v 1.102 2013/03/31 16:02:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmagenericshell/ChangeLog,v 1.103 2013/03/31 16:52:14 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
+  libplasmagenericshell-4.10.1.ebuild:
+  Stable for x86, wrt bug #462890
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   libplasmagenericshell-4.10.1.ebuild:

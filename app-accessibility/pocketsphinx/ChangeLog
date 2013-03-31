@@ -1,0 +1,10 @@
+# ChangeLog for app-accessibility/pocketsphinx
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pocketsphinx/ChangeLog,v 1.1 2013/03/31 16:35:59 hasufell Exp $
+
+*pocketsphinx-0.8 (31 Mar 2013)
+
+  31 Mar 2013; Julian Ospald <hasufell@gentoo.org> +pocketsphinx-0.8.ebuild,
+  +metadata.xml:
+  initial import
+
