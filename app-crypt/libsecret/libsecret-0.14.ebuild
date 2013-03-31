@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.14.ebuild,v 1.1 2013/03/05 01:26:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.14.ebuild,v 1.2 2013/03/30 23:16:06 eva Exp $
 
 EAPI="5"
+PYTHON_COMPAT=( python2_{6,7} )
 VALA_MIN_API_VERSION=0.18
 VALA_USE_DEPEND=vapigen
 
-inherit eutils gnome2 python vala virtualx
+inherit eutils gnome2 python-any-r1 vala virtualx
 
 DESCRIPTION="GObject library for accessing the freedesktop.org Secret Service API"
 HOMEPAGE="https://live.gnome.org/Libsecret"
@@ -34,31 +35,13 @@ DEPEND="${COMMON_DEPEND}
 	test? (
 		dev-python/mock
 		introspection? (
-			=dev-lang/python-2*
+			${PYTHON_DEPS}
 			>=dev-libs/gjs-1.32
 			dev-python/pygobject:3 )
 	)
 	vala? ( $(vala_depend) )"
 
-pkg_setup() {
-	# python is only needed for tests
-	if use test && use introspection; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
 src_prepare() {
-	DOCS="AUTHORS ChangeLog NEWS README"
-	G2CONF="${G2CONF}
-		--enable-manpages
-		--disable-strict
-		--disable-coverage
-		--disable-static
-		$(use_enable crypt gcrypt)
-		$(use_enable introspection)
-		$(use_enable vala)"
-
 	# FIXME: disable failing test
 	sed -e '/test_get_sync);/d' \
 		-e '/test_get_async);/d' \
@@ -66,6 +49,18 @@ src_prepare() {
 
 	use vala && vala_src_prepare
 	gnome2_src_prepare
+}
+
+src_configure() {
+	DOCS="AUTHORS ChangeLog NEWS README"
+	gnome2_src_configure \
+		--enable-manpages \
+		--disable-strict \
+		--disable-coverage \
+		--disable-static \
+		$(use_enable crypt gcrypt) \
+		$(use_enable introspection) \
+		$(use_enable vala)
 }
 
 src_test() {
