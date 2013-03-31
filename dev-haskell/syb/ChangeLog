@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/syb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.17 2013/03/30 14:59:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.18 2013/03/31 10:08:39 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> syb-0.3.7.ebuild:
+  Stable for sparc, wrt bug #456500
 
   30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> syb-0.3.7.ebuild:
   Stable for alpha, wrt bug #457276

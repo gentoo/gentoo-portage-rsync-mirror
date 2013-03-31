@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/terminfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.33 2013/03/30 15:01:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.34 2013/03/31 10:27:09 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> terminfo-0.3.2.5.ebuild:
+  Stable for sparc, wrt bug #456518
 
   30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> terminfo-0.3.2.5.ebuild:
   Stable for alpha, wrt bug #456518

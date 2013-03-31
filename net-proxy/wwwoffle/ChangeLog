@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.60 2013/03/27 09:28:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.61 2013/03/31 10:26:44 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> wwwoffle-2.9i.ebuild:
+  Stable for sparc, wrt bug #457462
 
   27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> wwwoffle-2.9i.ebuild:
   Stable for ppc64, wrt bug #457462
