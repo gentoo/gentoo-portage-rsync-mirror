@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-x264
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.46 2013/03/30 14:49:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.47 2013/03/31 17:31:48 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-x264-0.10.19.ebuild:
+  Stable for sparc, wrt bug #458994
 
   30 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-x264-0.10.19.ebuild:

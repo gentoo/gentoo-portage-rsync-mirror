@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.4.ebuild,v 1.3 2012/12/15 18:41:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.6.ebuild,v 1.1 2013/03/31 17:33:28 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -13,7 +13,7 @@ HOMEPAGE="https://live.gnome.org/Grilo"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="daap +dvd tracker upnp-av +vimeo +youtube"
 
 RDEPEND="
@@ -45,17 +45,19 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-src_prepare() {
+src_configure() {
 	DOCS="AUTHORS NEWS README"
+
+	local myconf
 	# --enable-debug only changes CFLAGS, useless for us
-	G2CONF="${G2CONF}
+	myconf="${myconf}
 		--disable-static
 		--disable-debug
 		--disable-uninstalled"
 
 	# Plugins
 	# shoutcast seems to be broken
-	G2CONF="${G2CONF}
+	myconf="${myconf}
 		--enable-bliptv
 		--enable-apple-trailers
 		--enable-bookmarks
@@ -67,6 +69,7 @@ src_prepare() {
 		--enable-localmetadata
 		--enable-metadata-store
 		--enable-podcasts
+		--enable-raitv
 		--disable-shoutcast
 		--enable-tmdb
 		$(use_enable daap dmap)
@@ -76,5 +79,5 @@ src_prepare() {
 		$(use_enable vimeo)
 		$(use_enable youtube)"
 
-	gnome2_src_prepare
+	gnome2_src_configure ${myconf}
 }
