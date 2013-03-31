@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-vompserver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.19 2013/03/17 15:33:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.20 2013/03/31 16:28:07 hd_brummy Exp $
+
+*vdr-vompserver-0.4.0 (31 Mar 2013)
+
+  31 Mar 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-vompserver-0.4.0.ebuild, +files/vompserver.mk:
+  bump, taken from vdr-devel overlay
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

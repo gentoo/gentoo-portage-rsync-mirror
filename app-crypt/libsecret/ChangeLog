@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/libsecret
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.17 2013/03/30 23:16:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.18 2013/03/31 16:06:16 eva Exp $
+
+*libsecret-0.15 (31 Mar 2013)
+
+  31 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> +libsecret-0.15.ebuild:
+  Version bump.
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> libsecret-0.14.ebuild:
   Policy fixups, switch to python-any-r1.

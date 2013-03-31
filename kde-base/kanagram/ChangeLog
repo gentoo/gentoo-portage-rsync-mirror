@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kanagram
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.217 2013/03/31 15:33:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.218 2013/03/31 16:23:58 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> kanagram-4.10.1.ebuild:
+  Stable for x86, wrt bug #462890
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> kanagram-4.10.1.ebuild:
   Stable for amd64, wrt bug #462890

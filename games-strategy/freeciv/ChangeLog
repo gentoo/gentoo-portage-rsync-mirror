@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.144 2013/03/10 08:20:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.145 2013/03/31 16:16:02 jdhore Exp $
+
+  31 Mar 2013; Jeff Horelick <jdhore@gentoo.org> freeciv-2.3.4.ebuild:
+  marked x86 per bug 463568
 
   10 Mar 2013; Michael Sterrett <mr_bones_@gentoo.org> freeciv-2.3.3.ebuild,
   freeciv-2.3.4.ebuild:

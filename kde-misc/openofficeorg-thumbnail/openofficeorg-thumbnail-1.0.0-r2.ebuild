@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/openofficeorg-thumbnail/openofficeorg-thumbnail-1.0.0-r2.ebuild,v 1.1 2013/03/05 11:48:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/openofficeorg-thumbnail/openofficeorg-thumbnail-1.0.0-r2.ebuild,v 1.2 2013/03/31 16:08:02 ago Exp $
 
 EAPI=5
 MY_PN="OpenOfficeorgThumbnail"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.kde-apps.org/content/show.php?content=110864"
 SRC_URI="http://arielch.fedorapeople.org/devel/src/${MY_P}.tar.gz"
 
 LICENSE="LGPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="debug"
 

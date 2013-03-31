@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/guidedog-1.1-r1.ebuild,v 1.1 2013/03/04 18:32:03 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/guidedog-1.1-r1.ebuild,v 1.2 2013/03/31 16:09:29 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -13,7 +13,7 @@ SRC_URI="http://www.simonzone.com/software/guidedog/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND="
