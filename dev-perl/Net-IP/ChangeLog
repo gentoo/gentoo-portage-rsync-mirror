@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IP
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.44 2013/03/31 09:53:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IP/ChangeLog,v 1.45 2013/03/31 11:10:31 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Net-IP-1.260.0.ebuild:
+  Stable for sh, wrt bug #456580
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Net-IP-1.260.0.ebuild:
   Stable for sparc, wrt bug #456580
