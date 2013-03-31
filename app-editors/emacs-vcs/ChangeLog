@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.130 2013/03/25 12:13:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.131 2013/03/31 11:51:18 ulm Exp $
+
+  31 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.3.9999.ebuild:
+  Correct name of installed man pages.
 
   25 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.3.9999.ebuild:
   Use installsources dir for find-function-C-source-directory if that feature
