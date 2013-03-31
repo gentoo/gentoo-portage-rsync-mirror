@@ -1,0 +1,10 @@
+# ChangeLog for net-proxy/swiftiply
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/ChangeLog,v 1.1 2013/03/31 15:21:44 tomwij Exp $
+
+*swiftiply-0.6.1.1 (31 Mar 2013)
+
+  31 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +metadata.xml,
+  +swiftiply-0.6.1.1.ebuild:
+  New ebuild for swiftiply. Ebuild contributed by Jochen Schalanda which has
+  been updated to use the new eclasses. Fixes bug #198500.

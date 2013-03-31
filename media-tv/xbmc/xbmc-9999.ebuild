@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.136 2013/03/29 16:14:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.137 2013/03/31 15:13:14 scarabeus Exp $
 
 EAPI="4"
 
@@ -238,11 +238,10 @@ src_install() {
 	rm -rf "${ED}"/usr/share/xbmc/system/players/dvdplayer/etc
 
 	# Replace bundled fonts with system ones
-	# corefonts: arial ; unknown source teletext.ttf
-	rm -rf "${ED}"/usr/share/xbmc/media/Fonts/arial.ttf
-	dosym /usr/share/fonts/corefonts/arial.ttf \
-		/usr/share/xbmc/media/Fonts/arial.ttf
-	# roboto: roboto-bold, roboto-regular ; unknown source: bold-caps
+	# teletext.ttf: unknown
+	# bold-caps.ttf: unknown
+	# roboto: roboto-bold, roboto-regular
+	# arial.ttf: font mashed from droid/roboto, not removed wrt bug#460514
 	rm -rf "${ED}"/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-*
 	dosym /usr/share/fonts/roboto/Roboto-Regular.ttf \
 		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Regular.ttf

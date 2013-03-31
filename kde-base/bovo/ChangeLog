@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.146 2013/03/06 13:41:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.147 2013/03/31 15:30:49 ago Exp $
+
+  31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> bovo-4.10.1.ebuild:
+  Stable for amd64, wrt bug #462890
 
 *bovo-4.10.1 (06 Mar 2013)
 

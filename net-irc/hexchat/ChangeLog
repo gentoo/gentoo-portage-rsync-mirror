@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.35 2013/03/31 14:29:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.37 2013/03/31 15:17:14 hasufell Exp $
+
+  31 Mar 2013; Julian Ospald <hasufell@gentoo.org> hexchat-2.9.4-r1.ebuild:
+  remove -O3 hack wrt #461520
+
+  31 Mar 2013; Julian Ospald <hasufell@gentoo.org>
+  files/hexchat-2.9.4-build.patch:
+  make plugin header installation dependent on plugins
 
 *hexchat-2.9.4-r1 (31 Mar 2013)
 
