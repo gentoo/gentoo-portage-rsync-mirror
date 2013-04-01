@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7681 2013/04/01 10:52:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7683 2013/04/01 12:11:08 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  arch/alpha/package.use.mask, arch/arm/package.use.mask,
+  arch/ia64/package.use.mask:
+  Mask ivorbis USE flag on media-libs/gst-plugins-base, bug #453200.
+
+  01 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  arch/alpha/package.use.mask:
+  Clean up package.mask, lots of keywording has been done.
 
   01 Apr 2013; Pacho Ramos <pacho@gentoo.org>
   eapi-5-files/package.use.stable.mask:
