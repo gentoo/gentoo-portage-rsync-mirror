@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.140 2013/01/06 09:52:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.141 2013/04/01 18:02:11 scarabeus Exp $
+
+*raptor-2.0.9 (01 Apr 2013)
+
+  01 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> +raptor-2.0.9.ebuild,
+  -raptor-2.0.7.ebuild, raptor-2.0.8.ebuild:
+  Version bump to latest 2.0.9 wrt bug#460800. Needed in libo testing.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> raptor-2.0.8.ebuild:
   Add ~sparc, wrt bug #449220

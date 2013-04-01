@@ -1,13 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.7.ebuild,v 1.9 2012/05/18 08:48:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.9.ebuild,v 1.1 2013/04/01 18:02:11 scarabeus Exp $
 
-# FIXME: It should be possible to use net-nntp/inn for libinn.h and -linn!
+EAPI=5
+inherit eutils libtool
 
-EAPI=4
-inherit libtool
-
-MY_P=${PN}2-${PV}
+MY_PN=${PN}2
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="The RDF Parser Toolkit"
 HOMEPAGE="http://librdf.org/raptor/"
@@ -15,7 +14,7 @@ SRC_URI="http://download.librdf.org/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="2"
-KEYWORDS="amd64 arm hppa ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+curl debug json static-libs unicode"
 
 RDEPEND="dev-libs/libxml2
@@ -25,18 +24,20 @@ RDEPEND="dev-libs/libxml2
 	unicode? ( dev-libs/icu )
 	!media-libs/raptor:0"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	sys-devel/flex"
+	sys-devel/flex
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
 DOCS="AUTHORS ChangeLog NEWS NOTICE README"
 
 src_prepare() {
-	elibtoolize
+	elibtoolize # Keep this for ~*-fbsd
 }
 
 src_configure() {
+	# FIXME: It should be possible to use net-nntp/inn for libinn.h and -linn!
+
 	local myconf='--with-www=xml'
 	use curl && myconf='--with-www=curl'
 
@@ -52,5 +53,6 @@ src_configure() {
 src_install() {
 	default
 	dohtml {NEWS,README,RELEASE,UPGRADING}.html
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
+	dosym /usr/share/doc/${PF}/html/${MY_PN} /usr/share/gtk-doc/html/${MY_PN}
 }
