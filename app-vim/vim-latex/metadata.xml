@@ -10,5 +10,6 @@
 	</maintainer>
 	<use>
 		<flag name="html">Install HTML documentation</flag>
+		<flag name="python">Enable python support which can help speed up some functionality</flag>
 	</use>
 </pkgmetadata>

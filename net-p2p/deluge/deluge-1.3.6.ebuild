@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.6.ebuild,v 1.1 2013/04/01 05:11:47 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.6.ebuild,v 1.2 2013/04/01 08:38:38 heroxbd Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="http://download.deluge-torrent.org/source/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
-IUSE="geoip gtk libnotify setproctitle webinterface"
+IUSE="geoip gtk libnotify setproctitle sound webinterface"
 
 DEPEND=">=net-libs/rb_libtorrent-0.14.9[python]
 	dev-python/setuptools
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 	>=dev-python/twisted-web-8.1
 	geoip? ( dev-libs/geoip )
 	gtk? (
-		dev-python/pygame
+		sound? ( dev-python/pygame )
 		dev-python/pygobject:2
 		>=dev-python/pygtk-2.12
 		gnome-base/librsvg
