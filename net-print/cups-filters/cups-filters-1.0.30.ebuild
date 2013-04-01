@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.30.ebuild,v 1.1 2013/03/17 15:39:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.30.ebuild,v 1.2 2013/04/01 22:55:53 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdf
 
 LICENSE="MIT GPL-2"
 SLOT="0"
-IUSE="avahi jpeg perl png static-libs tiff"
+IUSE="jpeg perl png static-libs tiff zeroconf"
 
 RDEPEND="
 	app-text/ghostscript-gpl
@@ -34,11 +34,11 @@ RDEPEND="
 	!<=net-print/cups-1.5.9999
 	sys-devel/bc
 	sys-libs/zlib
-	avahi? ( net-dns/avahi )
 	jpeg? ( virtual/jpeg )
 	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
+	zeroconf? ( net-dns/avahi )
 "
 DEPEND="${RDEPEND}"
 
@@ -55,7 +55,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		$(use_enable avahi) \
+		$(use_enable zeroconf avahi) \
 		$(use_enable static-libs static) \
 		--with-fontdir="fonts/conf.avail" \
 		--with-pdftops=pdftops \
@@ -89,16 +89,15 @@ src_install() {
 
 	prune_libtool_files --all
 
-	use avahi && newinitd "${FILESDIR}"/cups-browsed.init.d cups-browsed
+	use zeroconf && newinitd "${FILESDIR}"/cups-browsed.init.d cups-browsed
 }
 
 pkg_postinst() {
 	perl-module_pkg_postinst
 
-	if use avahi; then
+	if use zeroconf; then
 		elog "This version of cups-filters includes cups-browsed, a daemon that autodiscovers"
 		elog "remote queues via avahi and adds them to your cups configuration. You may want"
-		elog "to add it to your default runlevel. Then again, you may not want to do that,"
-		elog "since it is completely untested, may kill kittens or get you r00ted. Your choice."
+		elog "to add it to your default runlevel. Not much tested so far, though."
 	fi
 }

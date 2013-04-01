@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.2-r1.ebuild,v 1.1 2013/04/01 22:21:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.2-r1.ebuild,v 1.2 2013/04/01 22:49:57 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.cups.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="acl avahi dbus debug +filters gnutls java kerberos pam
+IUSE="acl dbus debug +filters gnutls java kerberos pam
 	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
 LANGS="ca es fr ja ru"
@@ -41,7 +41,6 @@ RDEPEND="
 			sys-apps/attr
 		)
 	)
-	avahi? ( net-dns/avahi )
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.6 )
 	kerberos? ( virtual/krb5 )
@@ -58,7 +57,7 @@ RDEPEND="
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
-	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
+	zeroconf? ( net-dns/avahi )
 "
 
 DEPEND="${RDEPEND}
@@ -169,7 +168,7 @@ src_configure() {
 		--with-languages="${LINGUAS}" \
 		--with-system-groups=lpadmin \
 		$(use_enable acl) \
-		$(use_enable avahi) \
+		$(use_enable zeroconf avahi) \
 		$(use_enable dbus) \
 		$(use_enable debug) \
 		$(use_enable debug debug-guards) \
@@ -178,7 +177,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable threads) \
 		$(use_enable usb libusb) \
-		$(use_enable zeroconf dnssd) \
+		--disable-dnssd \
 		$(use_with java) \
 		--without-perl \
 		--without-php \
@@ -211,7 +210,7 @@ src_install() {
 
 	# install our init script
 	local neededservices
-	use avahi && neededservices+=" avahi-daemon"
+	use zeroconf && neededservices+=" avahi-daemon"
 	use dbus && neededservices+=" dbus"
 	[[ -n ${neededservices} ]] && neededservices="need${neededservices}"
 	cp "${FILESDIR}"/cupsd.init.d-r1 "${T}"/cupsd || die
