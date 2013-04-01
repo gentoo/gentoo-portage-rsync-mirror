@@ -20,6 +20,7 @@ app-accessibility/gnome-speech:festival - Adds support for the festival speech d
 app-accessibility/gnome-speech:freetts - Adds support for the freetts speech driver
 app-accessibility/simon:kdepim - Use kde-base/kdepimlibs
 app-accessibility/simon:opencv - Use media-libs/opencv
+app-accessibility/simon:sphinx - Build sphinx backend (pulls app-accessibility/julius if disabled
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-accessibility/speechd-el:brltty - brltty support

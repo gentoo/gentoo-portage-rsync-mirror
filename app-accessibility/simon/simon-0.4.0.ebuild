@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.0.ebuild,v 1.2 2013/03/31 22:20:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.0.ebuild,v 1.3 2013/03/31 23:07:57 hasufell Exp $
 
 # KEEP KDE ECLASSES OUT OF HERE
 
@@ -19,12 +19,9 @@ SRC_URI="mirror://kde/stable/simon/${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="kdepim libsamplerate nls opencv"
+IUSE="kdepim libsamplerate nls opencv sphinx"
 
 RDEPEND="
-	>=app-accessibility/pocketsphinx-0.8
-	>=app-accessibility/sphinxbase-0.8
-	>=app-accessibility/SphinxTrain-1
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
@@ -41,7 +38,13 @@ RDEPEND="
 		kde-base/kde-l10n
 		virtual/libintl
 	)
-	opencv? ( media-libs/opencv )"
+	opencv? ( media-libs/opencv )
+	sphinx? (
+		>=app-accessibility/pocketsphinx-0.8
+		>=app-accessibility/sphinxbase-0.8
+		>=app-accessibility/SphinxTrain-1
+	)
+	!sphinx? ( app-accessibility/julius )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
@@ -51,17 +54,20 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libdir.patch \
 		"${FILESDIR}"/${P}-linguas.patch \
-		"${FILESDIR}"/${P}-opencv.patch
+		"${FILESDIR}"/${P}-opencv.patch \
+		"${FILESDIR}"/${P}-sphinx.patch
 }
 
 src_configure() {
 	local mycmakeargs=(
 		-DSIMON_LIB_INSTALL_DIR=/usr/$(get_libdir)
-		-DBackendType=both
-		$(cmake-utils_use_enable nls NLS)
+		-DBackendType=$(usex sphinx "both" "jhtk")
+		$(cmake-utils_use_with sphinx Sphinxbase)
+		$(cmake-utils_use_with sphinx Pocketsphinx)
 		$(cmake-utils_use_with kdepim KdepimLibs)
 		$(cmake-utils_use_with libsamplerate LibSampleRate)
 		$(cmake-utils_use_with opencv OpenCV)
+		$(cmake-utils_use_enable nls NLS)
 	)
 
 	cmake-utils_src_configure
@@ -76,6 +82,7 @@ pkg_postinst() {
 
 	elog "optional dependencies:"
 	elog "  kde-base/jovie (support for Jovie TTS system)"
+	use sphinx && elog "  app-accessibility/julius (alternative backend)"
 }
 
 pkg_postrm() {
