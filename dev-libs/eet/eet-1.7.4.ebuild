@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.4.ebuild,v 1.1 2012/12/21 19:41:59 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.4.ebuild,v 1.2 2013/04/01 19:39:00 tommy Exp $
 
 EAPI=2
 
@@ -17,7 +17,8 @@ IUSE="debug examples gnutls ssl static-libs test"
 RDEPEND=">=dev-libs/eina-1.7.0
 	virtual/jpeg
 	sys-libs/zlib
-	gnutls? ( net-libs/gnutls )
+	gnutls? ( net-libs/gnutls
+		dev-libs/libgcrypt )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )"
 DEPEND="${RDEPEND}
 	test? ( dev-libs/check

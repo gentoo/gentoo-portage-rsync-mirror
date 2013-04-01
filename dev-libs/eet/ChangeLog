@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.25 2012/12/21 19:41:59 tommy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.26 2013/04/01 19:39:00 tommy Exp $
+
+  01 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> eet-1.7.4.ebuild:
+  Add missing dependency: dev-libs/libgcrypt, fixes bug 454344
 
 *eet-1.7.4 (21 Dec 2012)
 

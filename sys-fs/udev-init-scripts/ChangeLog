@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.61 2013/03/31 15:03:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.62 2013/04/01 19:55:50 ago Exp $
+
+  01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> udev-init-scripts-25.ebuild:
+  Stable for alpha, wrt bug #463614
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> udev-init-scripts-25.ebuild:
   Stable for sparc, wrt bug #463614
