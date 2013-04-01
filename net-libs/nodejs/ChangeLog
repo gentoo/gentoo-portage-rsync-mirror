@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.77 2013/03/22 03:48:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.78 2013/04/01 05:09:29 patrick Exp $
+
+*nodejs-0.10.2 (01 Apr 2013)
+
+  01 Apr 2013; Patrick Lauer <patrick@gentoo.org> +nodejs-0.10.2.ebuild:
+  Bump for #463948
 
 *nodejs-0.10.1 (22 Mar 2013)
 

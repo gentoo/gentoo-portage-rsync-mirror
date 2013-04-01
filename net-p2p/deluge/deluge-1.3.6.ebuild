@@ -1,26 +1,24 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.33 2013/04/01 05:11:47 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.6.ebuild,v 1.1 2013/04/01 05:11:47 heroxbd Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
-inherit distutils git-2
-
-EGIT_REPO_URI="git://deluge-torrent.org/${PN}.git
-	http://git.deluge-torrent.org/${PN}/"
+inherit distutils eutils python
 
 DESCRIPTION="BitTorrent client with a client/server model."
 HOMEPAGE="http://deluge-torrent.org/"
-SRC_URI=""
+SRC_URI="http://download.deluge-torrent.org/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="geoip gtk libnotify setproctitle webinterface"
 
 DEPEND=">=net-libs/rb_libtorrent-0.14.9[python]
-	dev-python/setuptools"
+	dev-python/setuptools
+	dev-util/intltool"
 RDEPEND="${DEPEND}
 	dev-python/chardet
 	dev-python/pyopenssl
@@ -48,6 +46,7 @@ src_prepare() {
 	distutils_src_prepare
 	python_convert_shebangs -r 2 .
 	epatch "${FILESDIR}/${PN}-1.3.5-disable_libtorrent_internal_copy.patch"
+
 }
 
 src_install() {
