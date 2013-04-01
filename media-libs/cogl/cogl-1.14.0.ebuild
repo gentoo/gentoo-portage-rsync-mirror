@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.14.0.ebuild,v 1.1 2013/03/28 17:39:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.14.0.ebuild,v 1.2 2013/04/01 09:28:49 pacho Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
 HOMEPAGE="http://www.clutter-project.org/"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
-SLOT="1.0/11"
+SLOT="1.0/12" # subslot = .so version
 IUSE="doc examples +introspection +opengl gles2 +pango profile"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 

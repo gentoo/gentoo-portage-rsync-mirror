@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.63 2013/03/03 00:22:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.64 2013/04/01 09:16:07 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -183,6 +183,23 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # @CODE
 # PATCHES=( "${FILESDIR}"/${P}-mypatch.patch )
 # @CODE
+
+# @ECLASS-VARIABLE: AUTOTOOLS_PRUNE_LIBTOOL_FILES
+# @DEFAULT-UNSET
+# @DESCRIPTION:
+# Sets the mode of pruning libtool files. The values correspond to
+# prune_libtool_files parameters, with leading dashes stripped.
+#
+# Defaults to pruning the libtool files when static libraries are not
+# installed or can be linked properly without them. Libtool files
+# for modules (plugins) will be kept in case plugin loader needs them.
+#
+# If set to 'modules', the .la files for modules will be removed
+# as well. This is often the preferred option.
+#
+# If set to 'all', all .la files will be removed unconditionally. This
+# option is discouraged and shall be used only if 'modules' does not
+# remove the files.
 
 # Determine using IN or OUT source build
 _check_build_dir() {
@@ -511,7 +528,8 @@ autotools-utils_src_install() {
 	fi
 
 	# Remove libtool files and unnecessary static libs
-	prune_libtool_files
+	local prune_ltfiles=${AUTOTOOLS_PRUNE_LIBTOOL_FILES}
+	prune_libtool_files ${prune_ltfiles:+--${prune_ltfiles}}
 }
 
 # @FUNCTION: autotools-utils_src_test

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.22.ebuild,v 1.6 2013/03/15 10:38:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.22.ebuild,v 1.8 2013/04/01 09:21:22 pinkbyte Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -18,6 +18,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-libs/tiff
 	virtual/jpeg
 	media-libs/libpng
+	x11-libs/libXft
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -58,4 +59,13 @@ src_install() {
 	dodir /usr/share
 	mv "${ED}"usr/Ted "${ED}"usr/share/Ted
 	dosym /usr/share/Ted/rtf2pdf.sh /usr/bin/rtf2pdf.sh
+
+	# bug #461252, desktop file is inaccessible during src_prepare, so fix it here
+	sed -i \
+		-e '/^Encoding/d' \
+		-e '/^Categories/s/Application;//' \
+		-e 's/^Categories.*/\0;/' \
+		-e 's/^MimeType.*/\0;/' \
+		-e '/^Terminal/s/0/false/' \
+		"${D}/usr/share/applications/Ted.desktop" || die 'sed on Ted.desktop failed'
 }

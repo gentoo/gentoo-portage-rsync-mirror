@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.8 2013/03/10 21:44:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.9 2013/04/01 09:17:53 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -236,6 +236,58 @@ run_in_build_dir() {
 	popd >/dev/null || die
 
 	return ${ret}
+}
+
+# @FUNCTION: multibuild_merge_root
+# @USAGE: <src-root> <dest-root>
+# @DESCRIPTION:
+# Merge the directory tree (fake root) from <src-root> to <dest-root>
+# (the real root). Both directories have to be real, absolute paths
+# (i.e. including ${D}). Source root will be removed.
+#
+# This functions uses locking to support merging during parallel
+# installs.
+multibuild_merge_root() {
+	local src=${1}
+	local dest=${2}
+
+	local lockfile=${T}/multibuild_merge_lock
+	local ret
+
+	if use userland_BSD; then
+		# Locking is done by 'lockf' which can wrap a command.
+		# 'cp -a -n' is broken:
+		# http://www.freebsd.org/cgi/query-pr.cgi?pr=174489
+		# using tar instead which is universal but terribly slow.
+
+		tar -C "${src}" -f - -c . \
+			| lockf "${lockfile}" tar -x -f - -C "${dest}"
+		[[ ${PIPESTATUS[*]} == '0 0' ]]
+		ret=${?}
+	elif use userland_GNU; then
+		# GNU has 'flock' which can't wrap commands but can lock
+		# a fd which is good enough for us.
+		# and cp works with '-a -n'.
+
+		local lock_fd
+		redirect_alloc_fd lock_fd "${lockfile}" '>>'
+		flock ${lock_fd}
+
+		cp -a -l -n "${src}"/. "${dest}"/
+		ret=${?}
+
+		# Close the lock file when we are done with it.
+		# Prevents deadlock if we aren't in a subshell.
+		eval "exec ${lock_fd}>&-"
+	else
+		die "Unsupported userland (${USERLAND}), please report."
+	fi
+
+	if [[ ${ret} -ne 0 ]]; then
+		die "${MULTIBUILD_VARIANT:-(unknown)}: merging image failed."
+	fi
+
+	rm -rf "${src}"
 }
 
 _MULTIBUILD=1

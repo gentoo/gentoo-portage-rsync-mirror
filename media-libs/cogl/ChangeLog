@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.32 2013/03/29 23:12:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.33 2013/04/01 09:28:49 pacho Exp $
+
+  01 Apr 2013; Pacho Ramos <pacho@gentoo.org> cogl-1.14.0.ebuild:
+  Fix subslot value, #463938 by Andreas Mielke.
 
   29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -cogl-1.8.2.ebuild:
   Clean up old revision.

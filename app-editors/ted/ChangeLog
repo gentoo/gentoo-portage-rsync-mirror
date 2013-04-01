@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/ted
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.55 2013/03/15 10:38:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.57 2013/04/01 09:21:22 pinkbyte Exp $
+
+  01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> ted-2.22.ebuild:
+  Fix QA issues in desktop file, wrt bug #461252. Thanks to Agostino Sarubbo
+  for discovering this issue
+
+  01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> ted-2.22.ebuild:
+  Add missing dependency on x11-libs/libXft
 
   15 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> ted-2.22.ebuild:
   Respect AR and RANLIB, wrt bug #461256. Thanks to Agostino Sarubbo for

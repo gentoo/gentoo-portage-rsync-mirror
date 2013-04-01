@@ -1,6 +1,18 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.760 2013/03/30 20:14:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.763 2013/04/01 09:18:57 mgorny Exp $
+
+  01 Apr 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
+  Support wrapping headers for multilib.
+
+  01 Apr 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  multibuild.eclass:
+  Introduce multibuild_merge_root, as an universal interim-install merging
+  function.
+
+  01 Apr 2013; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Support setting mode of prune_libtool_files through
+  AUTOTOOLS_PRUNE_LIBTOOL_FILES.
 
   30 Mar 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   fixed missing VDRVERSION up from >=vdr-1.7.34
