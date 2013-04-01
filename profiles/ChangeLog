@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7680 2013/03/31 21:07:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7681 2013/04/01 10:52:32 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Apr 2013; Pacho Ramos <pacho@gentoo.org>
+  eapi-5-files/package.use.stable.mask:
+  Mask gedit USE flag for next stable devhelp-3.6
 
   31 Mar 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Removal of mask on dev-ruby/cgi_multipart_eof_fix, immediate

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/unison
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.69 2012/06/18 15:55:24 heroxbd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.70 2013/04/01 10:32:20 heroxbd Exp $
+
+*unison-2.40.102 (01 Apr 2013)
+
+  01 Apr 2013; Benda Xu <heroxbd@gentoo.org> +unison-2.40.102.ebuild,
+  unison-2.45.4.ebuild:
+  version bump for bug #445055. update to EAPI=5. keyword ~arm.
 
   18 Jun 2012; Benda Xu <heroxbd@gentoo.org> unison-2.27.157.ebuild:
   fix patch filename

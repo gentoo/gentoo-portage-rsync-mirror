@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.12 2013/03/31 18:56:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.13 2013/04/01 10:47:26 pacho Exp $
 
 EAPI=4
 GCONF_DEBUG=no
 GNOME2_LA_PUNT=yes
+VALA_MIN_API_VERSION=0.14
+VALA_USE_DEPEND=vapigen
 
-inherit eutils gnome2
+inherit eutils gnome2 vala
 
 DESCRIPTION="Clutter based world map renderer"
 HOMEPAGE="http://projects.gnome.org/libchamplain/"
@@ -32,7 +34,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
-	vala? ( dev-lang/vala:0.14[vapigen] )"
+	vala? ( $(vala_depend) )"
 # segfaults with vala:0.12
 # vala-0.14.2-r1 required for bug #402013
 
@@ -44,11 +46,9 @@ src_prepare() {
 		--disable-maemo
 		--disable-vala-demos
 		--enable-memphis
-		VAPIGEN=$(type -p vapigen-0.14)
 		$(use_enable debug)
 		$(use_enable gtk)
-		$(use_enable introspection)
-		$(use_enable vala)"
+		$(use_enable introspection)"
 
 	# Fix documentation slotability
 	sed \
