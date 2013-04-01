@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r6.ebuild,v 1.6 2013/04/01 13:47:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r6.ebuild,v 1.7 2013/04/01 16:33:23 pinkbyte Exp $
 
 inherit eutils autotools flag-o-matic multilib python
 
@@ -49,6 +49,9 @@ src_unpack() {
 
 	# Compability with current SOX (bug #250320)
 	epatch "${FILESDIR}/${P}-sox.patch"
+
+	# Compatibility with automake >= 1.11.2 (bug #424892)
+	epatch "${FILESDIR}/${P}-automake-1.11.patch"
 
 	# run autotools
 	eautoreconf

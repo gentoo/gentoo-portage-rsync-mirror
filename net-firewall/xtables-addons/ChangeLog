@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.39 2013/03/06 15:39:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.40 2013/04/01 16:47:30 pinkbyte Exp $
+
+  01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> xtables-addons-1.47.1.ebuild,
+  xtables-addons-2.1.ebuild:
+  Enable verbose build of kernel modules, wrt bug #458012
 
   06 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xtables-addons-2.1.ebuild:
   Stable for x86, wrt bug #460148

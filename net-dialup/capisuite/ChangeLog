@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.41 2013/04/01 13:47:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.42 2013/04/01 16:33:23 pinkbyte Exp $
+
+  01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> capisuite-0.4.5-r6.ebuild,
+  +files/capisuite-0.4.5-automake-1.11.patch:
+  Fix building with automake >=1.11.2, wrt bug #424892. Thanks to Dennis Freise
+  for discovering this issue and for providing patch
 
   01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> capisuite-0.4.5-r6.ebuild:
   Fix HOMEPAGE and SRC_URI, wrt bug #327787. Thanks to René Neumann for

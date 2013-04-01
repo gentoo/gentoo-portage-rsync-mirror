@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.47.1.ebuild,v 1.4 2013/03/06 15:39:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.47.1.ebuild,v 1.5 2013/04/01 16:47:30 pinkbyte Exp $
 
 EAPI="5"
 
@@ -161,7 +161,7 @@ src_configure() {
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" V=1
-	use modules && BUILD_TARGETS="modules" linux-mod_src_compile
+	use modules && BUILD_PARAMS="V=1" BUILD_TARGETS="modules" linux-mod_src_compile
 }
 
 src_install() {
