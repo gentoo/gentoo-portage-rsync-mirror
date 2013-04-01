@@ -1,6 +1,16 @@
 # ChangeLog for games-engines/renpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.7 2013/03/29 23:49:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.9 2013/04/01 12:42:09 hasufell Exp $
+
+  01 Apr 2013; Julian Ospald <hasufell@gentoo.org> -renpy-6.15.2.ebuild,
+  -files/renpy-6.15.2-multiple-abi.patch:
+  remove old
+
+*renpy-6.15.3 (01 Apr 2013)
+
+  01 Apr 2013; Julian Ospald <hasufell@gentoo.org> +renpy-6.15.3.ebuild,
+  +files/renpy-6.15.3-multiple-abi.patch:
+  version bump
 
 *renpy-6.15.2 (29 Mar 2013)
 

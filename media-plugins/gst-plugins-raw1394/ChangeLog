@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-raw1394
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.89 2013/03/05 08:38:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.90 2013/04/01 13:00:09 eva Exp $
+
+*gst-plugins-raw1394-1.0.6 (01 Apr 2013)
+
+  01 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-raw1394-1.0.6.ebuild:
+  Version bump.
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -gst-plugins-raw1394-0.10.30.ebuild, -gst-plugins-raw1394-1.0.3.ebuild:
