@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.58 2013/03/31 10:54:45 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.59 2013/04/01 19:20:13 hd_brummy Exp $
+
+  01 Apr 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/0.1.0_pre21/vdr-burn-0.1.0_pre21-gentoo.diff,
+  files/vdr-burn-0.2.0_gentoo-path.diff, files/vdr-burn-0.2.2_gentoo-path.diff:
+  fixed changes in depende projectx install from projectx_nogui to
+  projectx_cli; thx to S. Schreier, reported on IRC #gentoo-vdr
 
 *vdr-burn-0.2.2 (31 Mar 2013)
 

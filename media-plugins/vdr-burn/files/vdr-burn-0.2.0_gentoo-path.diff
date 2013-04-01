@@ -28,7 +28,7 @@ diff -Naur burn-0.2.0.orig/vdrburn-dvd.sh burn-0.2.0/vdrburn-dvd.sh
 -		$IO_NICE $JAVA_EXE -Djava.awt.headless=true \
 -				-jar $PROJECTX_JAR \
 -				-ini $CONFIG_PATH/ProjectX.ini \
-+				/usr/bin/projectx_nogui \
++				/usr/bin/projectx_cli \
 +				-ini /usr/share/vdr/burn/projectx-vdr.ini \
  				$TTXT_OPTS \
  				$CUT -id $USED_TRACKS \

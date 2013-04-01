@@ -31,7 +31,7 @@ diff -Naur burn-0.1.0-pre21.orig/vdrburn-dvd.sh burn-0.1.0-pre21/vdrburn-dvd.sh
 -		$JAVA_HOME/bin/java -Djava.awt.headless=true \
 -				-jar $PROJECTX_HOME/ProjectX.jar \
 -				-ini $CONFIG_PATH/ProjectX.ini \
-+				/usr/bin/projectx_nogui \
++				/usr/bin/projectx_cli \
 +				-ini /usr/share/vdr/burn/projectx-vdr.ini \
  				$CUT -id $USED_TRACKS,0x1f,0x20 \
  				-demux -out "$MPEG_DATA_PATH" -name vdrsync \
