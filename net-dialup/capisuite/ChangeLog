@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.42 2013/04/01 16:33:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.44 2013/04/01 17:29:19 pinkbyte Exp $
+
+*capisuite-0.4.5-r7 (01 Apr 2013)
+
+  01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +capisuite-0.4.5-r7.ebuild:
+  Revision bump: EAPI 5, use autotools-utils and python-single-r1 eclasses,
+  fixes bugs #315089 and #425332
 
   01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> capisuite-0.4.5-r6.ebuild,
   +files/capisuite-0.4.5-automake-1.11.patch:
