@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.6.4.3.ebuild,v 1.4 2013/03/02 19:35:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.6.4.3.ebuild,v 1.5 2013/04/01 17:54:08 dilfridge Exp $
 
 EAPI=5
 
@@ -93,6 +93,7 @@ COMMON_DEPEND="
 	>=media-libs/libcdr-0.0.5
 	media-libs/libvisio
 	>=net-misc/curl-7.21.4
+	net-nds/openldap
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg

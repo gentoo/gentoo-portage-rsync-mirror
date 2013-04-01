@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/manaplus-1.3.3.17.ebuild,v 1.1 2013/03/24 16:20:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/manaplus-1.3.3.31.ebuild,v 1.1 2013/04/01 17:35:48 hasufell Exp $
 
 EAPI=5
 

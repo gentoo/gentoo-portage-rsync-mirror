@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/pcsc-perl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/ChangeLog,v 1.7 2011/10/18 09:43:38 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/ChangeLog,v 1.8 2013/04/01 17:33:04 flameeyes Exp $
+
+*pcsc-perl-1.4.13 (01 Apr 2013)
+
+  01 Apr 2013; Diego E. Pettenò <flameeyes@gentoo.org> +pcsc-perl-1.4.13.ebuild:
+  Version bump.
 
 *pcsc-perl-1.4.12 (18 Oct 2011)
 
@@ -47,4 +52,3 @@
   Tested with a USB smartcard reader (Axalto Reflex USB v3).  The older 
   reader I tried (mentioned on several forum posts) won't work without 
   a firmware update.
-
