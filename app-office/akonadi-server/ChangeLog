@@ -1,6 +1,9 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.106 2013/03/31 16:19:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.107 2013/04/01 13:10:16 ago Exp $
+
+  01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> akonadi-server-1.9.1-r1.ebuild:
+  Stable for ppc, wrt bug #462890
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> akonadi-server-1.9.1-r1.ebuild:
   Stable for x86, wrt bug #462890

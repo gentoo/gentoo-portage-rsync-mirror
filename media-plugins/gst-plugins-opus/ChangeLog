@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-opus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-opus/ChangeLog,v 1.31 2013/03/31 17:31:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-opus/ChangeLog,v 1.32 2013/04/01 13:11:43 eva Exp $
+
+*gst-plugins-opus-1.0.6 (01 Apr 2013)
+
+  01 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-opus-1.0.6.ebuild:
+  Version bump.
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-opus-0.10.23.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit-kde-agent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.12 2013/03/31 16:59:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.13 2013/04/01 13:10:41 ago Exp $
+
+  01 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  polkit-kde-agent-0.99.0-r1.ebuild:
+  Stable for ppc, wrt bug #462890
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   polkit-kde-agent-0.99.0-r1.ebuild:

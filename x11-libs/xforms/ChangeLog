@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.58 2013/02/24 17:53:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.59 2013/04/01 13:10:38 kensington Exp $
+
+  01 Apr 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/xforms-1.0.90-Makefile.am.patch, -files/xforms-1.0.90-as-needed.patch,
+  -xforms-1.0.90-r1.ebuild, -xforms-1.0.92.ebuild, -xforms-1.0.92_p2.ebuild,
+  -xforms-1.0.93_p1.ebuild:
+  Remove old.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xforms-1.0.93_p1-r1.ebuild:
   Stable for sh, wrt bug #454438

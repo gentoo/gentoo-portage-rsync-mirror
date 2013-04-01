@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-rtmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.11 2013/03/05 08:40:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.12 2013/04/01 13:12:47 eva Exp $
+
+*gst-plugins-rtmp-1.0.6 (01 Apr 2013)
+
+  01 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-rtmp-1.0.6.ebuild:
+  Version bump.
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -gst-plugins-rtmp-0.10.22.ebuild, -gst-plugins-rtmp-1.0.3.ebuild:

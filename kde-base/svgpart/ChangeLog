@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/svgpart
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.150 2013/03/31 16:57:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/svgpart/ChangeLog,v 1.151 2013/04/01 13:06:05 ago Exp $
+
+  01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> svgpart-4.10.1.ebuild:
+  Stable for ppc, wrt to bug #462890
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> svgpart-4.10.1.ebuild:
   Stable for x86, wrt bug #462890

@@ -1,11 +1,11 @@
 DEFINED_PHASES=install
-DEPEND=|| ( app-arch/xz-utils app-arch/lzma-utils )
+DEPEND=app-arch/xz-utils
 DESCRIPTION=the Linkers and Loaders book
 HOMEPAGE=http://linker.iecc.com/
 IUSE=doc
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
-LICENSE=as-is
-RESTRICT=mirror
+LICENSE=all-rights-reserved
+RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://wh0rd.org/linkers-and-loaders-1.tar.lzma
-_md5_=ed1250ef1c5d1e9f50b885e98d813d99
+_md5_=0c32418117d0986767c6408dc40044d5

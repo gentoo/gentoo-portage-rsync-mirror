@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.242 2013/03/31 16:33:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.243 2013/04/01 13:06:27 ago Exp $
+
+  01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> kdetoys-meta-4.10.1.ebuild:
+  Stable for ppc, wrt to bug #462890
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> kdetoys-meta-4.10.1.ebuild:
   Stable for x86, wrt bug #462890
