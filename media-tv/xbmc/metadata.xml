@@ -7,6 +7,7 @@
  <flag name='bluray'>Enable playback of Blu-ray filesystems</flag>
  <flag name='cec'>Enable support for HDMI-CEC devices via libcec</flag>
  <flag name='fishbmc'>Enable fishBMC visualization plugin</flag>
+ <flag name='gles'>Enable support for GLES</flag>
  <flag name='goom'>Enable GOOM visualization plugin</flag>
  <flag name='midi'>Support MIDI files</flag>
  <flag name='nfs'>Enable NFS client support</flag>

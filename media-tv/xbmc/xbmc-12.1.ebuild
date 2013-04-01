@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.1.ebuild,v 1.3 2013/04/01 05:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.1.ebuild,v 1.4 2013/04/01 06:35:52 vapier Exp $
 
 EAPI="4"
 
@@ -36,12 +36,14 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluetooth bluray cec css debug goom java joystick midi mysql neon nfs profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 sftp udev upnp vaapi vdpau webserver +xrandr"
-REQUIRED_USE="pvr? ( mysql )"
+IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug gles goom java joystick midi mysql neon nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl sse sse2 sftp udev upnp +usb vaapi vdpau webserver +X +xrandr"
+REQUIRED_USE="
+	pvr? ( mysql )
+	rsxs? ( X )
+	xrandr? ( X )
+"
 
-COMMON_DEPEND="virtual/glu
-	virtual/opengl
-	app-arch/bzip2
+COMMON_DEPEND="app-arch/bzip2
 	app-arch/unzip
 	app-arch/zip
 	app-i18n/enca
@@ -73,14 +75,16 @@ COMMON_DEPEND="virtual/glu
 	media-libs/libpng
 	projectm? ( media-libs/libprojectm )
 	media-libs/libsamplerate
-	media-libs/libsdl[audio,opengl,video,X]
+	sdl? ( media-libs/libsdl[audio,opengl,video,X] )
 	alsa? ( media-libs/libsdl[alsa] )
 	>=media-libs/taglib-1.8
 	media-libs/libvorbis
-	media-libs/sdl-gfx
-	>=media-libs/sdl-image-1.2.10[gif,jpeg,png]
-	media-libs/sdl-mixer
-	media-libs/sdl-sound
+	sdl? (
+		media-libs/sdl-gfx
+		>=media-libs/sdl-image-1.2.10[gif,jpeg,png]
+		media-libs/sdl-mixer
+		media-libs/sdl-sound
+	)
 	media-libs/tiff
 	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
@@ -95,26 +99,35 @@ COMMON_DEPEND="virtual/glu
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
 	bluetooth? ( net-wireless/bluez )
 	sys-apps/dbus
+	caps? ( sys-libs/libcap )
 	sys-libs/zlib
 	virtual/jpeg
+	usb? ( virtual/libusb )
 	mysql? ( virtual/mysql )
-	x11-apps/xdpyinfo
-	x11-apps/mesa-progs
+	opengl? (
+		virtual/glu
+		virtual/opengl
+	)
+	gles? ( virtual/opengl )
 	vaapi? ( x11-libs/libva[opengl] )
 	vdpau? (
 		|| ( x11-libs/libvdpau >=x11-drivers/nvidia-drivers-180.51 )
 		virtual/ffmpeg[vdpau]
 	)
-	x11-libs/libXinerama
-	xrandr? ( x11-libs/libXrandr )
-	x11-libs/libXrender"
+	X? (
+		x11-apps/xdpyinfo
+		x11-apps/mesa-progs
+		x11-libs/libXinerama
+		xrandr? ( x11-libs/libXrandr )
+		x11-libs/libXrender
+	)"
 RDEPEND="${COMMON_DEPEND}
 	udev? (	sys-fs/udisks:0 sys-power/upower )"
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
 	dev-lang/swig
 	dev-util/gperf
-	x11-proto/xineramaproto
+	X? ( x11-proto/xineramaproto )
 	dev-util/cmake
 	x86? ( dev-lang/nasm )
 	java? ( virtual/jre )"
@@ -196,9 +209,11 @@ src_configure() {
 		$(use_enable airplay) \
 		$(use_enable avahi) \
 		$(use_enable bluray libbluray) \
+		$(use_enable caps libcap) \
 		$(use_enable cec libcec) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \
+		$(use_enable gles) \
 		$(use_enable goom) \
 		--disable-hal \
 		$(use_enable joystick) \
@@ -206,6 +221,7 @@ src_configure() {
 		$(use_enable mysql) \
 		$(use_enable neon) \
 		$(use_enable nfs) \
+		$(use_enable opengl gl) \
 		$(use_enable profile profiling) \
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
@@ -213,11 +229,14 @@ src_configure() {
 		$(use_enable rsxs) \
 		$(use_enable rtmp) \
 		$(use_enable samba) \
+		$(use_enable sdl) \
 		$(use_enable sftp ssh) \
+		$(use_enable usb libusb) \
 		$(use_enable upnp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
 		$(use_enable webserver) \
+		$(use_enable X x11) \
 		$(use_enable xrandr)
 }
 

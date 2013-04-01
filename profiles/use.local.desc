@@ -3424,6 +3424,7 @@ media-tv/xbmc:airplay - enable AirPlay support
 media-tv/xbmc:bluray - Enable playback of Blu-ray filesystems
 media-tv/xbmc:cec - Enable support for HDMI-CEC devices via libcec
 media-tv/xbmc:fishbmc - Enable fishBMC visualization plugin
+media-tv/xbmc:gles - Enable support for GLES
 media-tv/xbmc:goom - Enable GOOM visualization plugin
 media-tv/xbmc:midi - Support MIDI files
 media-tv/xbmc:nfs - Enable NFS client support

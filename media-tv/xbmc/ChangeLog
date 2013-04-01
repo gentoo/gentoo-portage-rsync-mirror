@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.176 2013/04/01 05:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.177 2013/04/01 06:35:52 vapier Exp $
+
+  01 Apr 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  xbmc-12.1.ebuild, xbmc-9999.ebuild:
+  Add USE="caps gles opengl sdl usb X" flags to control the now (optional)
+  dependencies.
 
   01 Apr 2013; Mike Frysinger <vapier@gentoo.org> xbmc-12.1.ebuild,
   xbmc-9999.ebuild:
