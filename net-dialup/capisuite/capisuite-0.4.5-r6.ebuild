@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r6.ebuild,v 1.5 2011/04/05 05:45:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r6.ebuild,v 1.6 2013/04/01 13:47:49 pinkbyte Exp $
 
 inherit eutils autotools flag-o-matic multilib python
 
 DESCRIPTION="ISDN telecommunication suite providing fax and voice services"
-HOMEPAGE="http://www.capisuite.de"
-SRC_URI="http://www.capisuite.de/${P}.tar.gz"
+HOMEPAGE="http://www.capisuite.org"
+SRC_URI="http://www.capisuite.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

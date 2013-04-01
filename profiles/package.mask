@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14620 2013/03/31 21:07:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14621 2013/04/01 13:49:37 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Palimaka <kensington@gentoo.org> (01 Apr 2013)
+# Obsoleted by kde-base/print-manager. Removal in 30 days.
+kde-base/printer-applet
+kde-base/system-config-printer-kde
 
 # Tom Wijsman <TomWij@gentoo.org> (31 Mar 2013)
 # Broken because dependency dev-ruby/cgi_multipart_eof_fix

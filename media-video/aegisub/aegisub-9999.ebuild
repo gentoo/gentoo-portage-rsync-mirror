@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-2.1.9999.ebuild,v 1.4 2013/03/31 19:37:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-9999.ebuild,v 1.1 2013/04/01 13:54:09 pinkbyte Exp $
 
 EAPI="5"
 

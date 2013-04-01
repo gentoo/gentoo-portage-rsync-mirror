@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/capisuite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.39 2011/04/05 05:45:47 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.41 2013/04/01 13:47:49 pinkbyte Exp $
+
+  01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> capisuite-0.4.5-r6.ebuild:
+  Fix HOMEPAGE and SRC_URI, wrt bug #327787. Thanks to René Neumann for
+  discovering this issue
+
+  01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -capisuite-0.4.5-r5.ebuild:
+  Drop old revision
 
   05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> capisuite-0.4.5-r5.ebuild,
   capisuite-0.4.5-r6.ebuild:
