@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/igbinary-1.1.1-r2.ebuild,v 1.1 2013/03/28 12:23:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/igbinary-1.1.1-r2.ebuild,v 1.2 2013/04/01 07:32:33 olemarkus Exp $
 
 EAPI="5"
 PHP_EXT_NAME="igbinary"
@@ -24,6 +24,15 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	local slot
+	for slot in $(php_get_slots); do
+		php_init_slot_env ${slot}
+		epatch "${FILESDIR}/zts-fix.patch"
+	done
+	php-ext-source-r2_src_prepare
+}
 
 src_configure() {
 	my_conf="--enable-igbinary"

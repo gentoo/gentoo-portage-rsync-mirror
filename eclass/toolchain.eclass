@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.570 2013/03/16 05:44:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.572 2013/04/01 08:00:05 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -163,7 +163,6 @@ if in_iuse graphite ; then
 fi
 
 DEPEND="${RDEPEND}
-	>=sys-apps/texinfo-4.8
 	>=sys-devel/bison-1.875
 	>=sys-devel/flex-2.5.4
 	test? (
@@ -795,6 +794,10 @@ toolchain_src_unpack() {
 
 	gnuconfig_update
 
+	# keep info pages from regenerating due to our custom version/bug url
+	# settings.  there's no real gain from doing so, but there is pain. #464008
+	touch -r . gcc/gcc-vers.texi
+
 	# update configure files
 	local f
 	einfo "Fixing misc issues in configure files"
@@ -1192,7 +1195,7 @@ gcc_do_configure() {
 	# destructors", but apparently requires glibc.
 	case ${CTARGET} in
 	*-uclibc*)
-		confgcc+=" --disable-__cxa_atexit --enable-target-optspace $(use_enable nptl tls)"
+		confgcc+=" --disable-__cxa_atexit $(use_enable nptl tls)"
 		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && confgcc+=" --enable-sjlj-exceptions"
 		if tc_version_is_at_least 3.4 && ! tc_version_is_at_least 4.3 ; then
 			confgcc+=" --enable-clocale=uclibc"

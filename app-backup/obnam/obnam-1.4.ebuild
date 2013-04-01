@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.4.ebuild,v 1.1 2013/03/24 13:02:44 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.4.ebuild,v 1.2 2013/04/01 07:47:02 patrick Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="threads"
 PYTHON_MODNAME="${PN}lib"
 MY_P="${PN}_${PV}.orig"
 
