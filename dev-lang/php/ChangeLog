@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.694 2013/03/31 11:09:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.695 2013/04/01 16:08:22 olemarkus Exp $
+
+*php-5.3.23-r2 (01 Apr 2013)
+*php-5.5.0_beta2-r3 (01 Apr 2013)
+*php-5.4.13-r3 (01 Apr 2013)
+
+  01 Apr 2013; Ole Markus With <olemarkus@gentoo.org> +php-5.3.23-r2.ebuild,
+  +php-5.4.13-r3.ebuild, +php-5.5.0_beta2-r3.ebuild:
+  Revbump removing the doc USE flag
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> php-5.3.23.ebuild,
   php-5.4.13.ebuild:

@@ -1,6 +1,17 @@
 # ChangeLog for dev-php/pecl-timezonedb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-timezonedb/ChangeLog,v 1.4 2012/03/01 17:04:42 olemarkus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-timezonedb/ChangeLog,v 1.6 2013/04/01 16:13:18 olemarkus Exp $
+
+  01 Apr 2013; Ole Markus With <olemarkus@gentoo.org>
+  -pecl-timezonedb-2011.13.ebuild, -pecl-timezonedb-2011.14.ebuild,
+  -pecl-timezonedb-2012.1.ebuild:
+  Removing older versions
+
+*pecl-timezonedb-2013.2 (01 Apr 2013)
+
+  01 Apr 2013; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-timezonedb-2013.2.ebuild:
+  Bumping as requested in bug 452488
 
 *pecl-timezonedb-2012.1 (01 Mar 2012)
 
@@ -185,4 +196,3 @@
 
   27 Oct 2007; Jakub Moc <jakub@gentoo.org> +pecl-timezonedb-2007.8.ebuild:
   New ebuild, Bug 197059
-
