@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-unison
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.14 2012/02/06 17:14:22 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-unison/ChangeLog,v 1.15 2013/04/01 10:25:07 heroxbd Exp $
+
+  01 Apr 2013; Benda Xu <heroxbd@gentoo.org> eselect-unison-0.3.ebuild:
+  keyword ~arm
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> eselect-unison-0.3.ebuild:
   Marking eselect-unison-0.3 ppc for bug 391507
@@ -57,4 +60,3 @@
   +files/unison.eselect-0.1, +metadata.xml, +eselect-unison-0.1.ebuild:
   Initial import. eselect module for SLOTted net-misc/unison by Martin von
   Gagern <Martin.vGagern@gmx.net>, bug #207746
-

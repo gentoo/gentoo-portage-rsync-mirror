@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.54 2013/03/04 12:13:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.55 2013/04/01 10:28:30 tomwij Exp $
+
+*dansguardian-2.12.0.3-r1 (01 Apr 2013)
+
+  01 Apr 2013; Tom Wijsman <TomWij@gentoo.org> +dansguardian-2.12.0.3-r1.ebuild:
+  Revision bump. Package was forcing debug on everyone, resolved by only passing
+  debug parameter to econf when USE="debug". Reported by Tomas Mozen. Fixes bug
+  #463978.
 
 *dansguardian-2.12.0.3 (04 Mar 2013)
 

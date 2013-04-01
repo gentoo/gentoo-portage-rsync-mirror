@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.132 2013/03/31 14:23:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.133 2013/04/01 10:22:02 heroxbd Exp $
+
+# Benda Xu <heroxbd@gentoo.org> (1 Apr 2013)
+# dev-ml/lablgtk not keyworded
+net-misc/unison gtk
 
 # Julian Ospald <hasufell@gentoo.org> (31 Mar 2013)
 # depends on mono
