@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1241 2013/03/31 02:59:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1243 2013/04/01 18:56:46 zmedico Exp $
+
+*portage-2.2.0_alpha171 (01 Apr 2013)
+
+  01 Apr 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha171.ebuild:
+  2.2.0_alpha171 version bump. This includes all of the fixes in 2.1.11.60. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.60 (01 Apr 2013)
+
+  01 Apr 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.60.ebuild:
+  2.1.11.60 version bump. This fixes bug #433561 (allow repo-name setting in
+  metadata/layout.conf) and bug #462936 (fix automatic manpage decompression
+  code and related broken man page symlinks). Bug #462382 tracks all bugs fixed
+  since portage-2.1.11.55.
 
   31 Mar 2013; Zac Medico <zmedico@gentoo.org> -portage-2.1.11.58.ebuild,
   -portage-2.2.0_alpha169.ebuild:
