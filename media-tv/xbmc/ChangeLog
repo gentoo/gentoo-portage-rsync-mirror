@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.175 2013/03/31 15:13:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.176 2013/04/01 05:39:52 vapier Exp $
+
+  01 Apr 2013; Mike Frysinger <vapier@gentoo.org> xbmc-12.1.ebuild,
+  xbmc-9999.ebuild:
+  Add USE=neon #463742 by Code_Bleu.
 
   31 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> xbmc-9999.ebuild:
   Do not remove arial.ttf wrt bug#460514.
