@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4-r1.ebuild,v 1.2 2013/03/31 15:17:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4-r1.ebuild,v 1.3 2013/04/01 14:42:14 hasufell Exp $
 
 EAPI=5
 
@@ -40,6 +40,10 @@ DEPEND="${RDEPEND}
 	theme-manager? ( dev-util/monodevelop )"
 
 DOCS="share/doc/changelog.md share/doc/readme.md"
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	epatch \
