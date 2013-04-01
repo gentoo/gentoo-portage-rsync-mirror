@@ -17,5 +17,9 @@
 	<longdescription lang="pl">
 		Kategoria x11-drivers zawiera sterowniki dla serwera X11.
 	</longdescription>
+	<longdescription lang="es">
+		x11-drivers contiene controladores que interactúan con el servidor
+		principal X11.
+	</longdescription>
 </catmetadata>
 

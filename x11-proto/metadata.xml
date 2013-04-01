@@ -17,5 +17,8 @@
 	<longdescription lang="pl">
 		Kategoria x11-proto zawiera nagłówki protokołu X11.
 	</longdescription>
+	<longdescription lang="es">
+		x11-proto contiene las cabeceras del protocolo X11.
+	</longdescription>
 </catmetadata>
 
