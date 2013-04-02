@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/bbswitch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.7 2013/03/17 16:14:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.9 2013/04/02 16:53:16 zerochaos Exp $
+
+  02 Apr 2013; Rick Farina <zerochaos@gentoo.org> bbswitch-0.6.ebuild:
+  fixing license per bug #463956
+
+*bbswitch-0.6 (02 Apr 2013)
+
+  02 Apr 2013; Rick Farina <zerochaos@gentoo.org> +bbswitch-0.6.ebuild:
+  version bump with pax fixes, commited with permission of mva
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

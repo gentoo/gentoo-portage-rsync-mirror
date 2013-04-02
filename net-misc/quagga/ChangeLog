@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/quagga
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.145 2012/12/22 15:20:38 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.146 2013/04/02 16:32:48 pinkbyte Exp $
+
+*quagga-0.99.22 (02 Apr 2013)
+
+  02 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +quagga-0.99.22.ebuild,
+  metadata.xml:
+  Version bump, wrt bug #464156. Assign myself as maintainer, fix whitespaces
+  in metadata
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.21.ebuild:
   Stable for ppc, wrt bug #408507
