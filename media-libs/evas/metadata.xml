@@ -10,6 +10,7 @@
  <flag name='ppm'>Support PPM image loader</flag>
  <flag name='psd'>Support PSD image loader</flag>
  <flag name='tga'>Support tga image loader</flag>
+ <flag name='wayland'>Add support for <pkg>dev-libs/wayland</pkg></flag>
 </use>
 <longdescription>
 Evas is a hardware-accelerated canvas API for X-Windows that can draw 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ecore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.15 2013/01/04 18:09:30 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.16 2013/04/02 08:59:48 tommy Exp $
+
+*ecore-1.7.5-r1 (02 Apr 2013)
+
+  02 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +ecore-1.7.5-r1.ebuild, metadata.xml:
+  Add USE flag support for wayland, fixes bug 459872
 
 *ecore-1.7.5 (04 Jan 2013)
 

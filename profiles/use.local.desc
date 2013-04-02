@@ -1428,9 +1428,11 @@ dev-libs/e_dbus:ofono - Enable interfacing with net-misc/ofono DBus API.
 dev-libs/e_dbus:test-binaries - Enable building of test binaries for enabled features
 dev-libs/ecore:ares - Enables support for asynchronous DNS using the net-dns/c-ares library
 dev-libs/ecore:evas - Provides easy to use canvas by gluing media-libs/evas and various input/output systems.
+dev-libs/ecore:gles - Add gles support to the ecore-evas-wayland module
 dev-libs/ecore:glib - Enable dev-libs/glib eventloop support
 dev-libs/ecore:inotify - Enable support for inotify
 dev-libs/ecore:tslib - Build with tslib support for touchscreen devices.
+dev-libs/ecore:wayland - Add support for dev-libs/wayland
 dev-libs/ecore:xprint - Enable X11 Xprint support
 dev-libs/eeze:utilities - Install some test utilities for mount/umount support in eeze
 dev-libs/eina:default-mempool - By default use system's allocator (pass-through) instead of custom choice for Eina's own data structures.
@@ -2864,6 +2866,7 @@ media-libs/evas:ico - Support windows icon (ico) image loader
 media-libs/evas:ppm - Support PPM image loader
 media-libs/evas:psd - Support PSD image loader
 media-libs/evas:tga - Support tga image loader
+media-libs/evas:wayland - Add support for dev-libs/wayland
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/flickcurl:oauth - Enable experimental OAuth support
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
