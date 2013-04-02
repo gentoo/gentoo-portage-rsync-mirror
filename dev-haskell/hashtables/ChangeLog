@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hashtables
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.11 2013/03/17 16:09:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.12 2013/04/02 07:27:51 gienah Exp $
+
+*hashtables-1.1.0.2 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org> +hashtables-1.1.0.2.ebuild:
+  Bump hashtables to 1.1.0.2
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

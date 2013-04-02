@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/agda
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.20 2012/12/28 05:47:39 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.21 2013/04/02 07:23:23 gienah Exp $
+
+*agda-2.3.2-r5 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org> +agda-2.3.2-r5.ebuild:
+  Loosen hashtables and quickcheck deps in agda 2.3.2-r5
 
 *agda-2.3.2-r2 (28 Dec 2012)
 

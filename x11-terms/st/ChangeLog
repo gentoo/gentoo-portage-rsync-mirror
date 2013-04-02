@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/st
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.12 2013/02/23 22:52:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.13 2013/04/02 07:11:39 xmw Exp $
+
+*st-0.4 (02 Apr 2013)
+
+  02 Apr 2013; Michael Weber <xmw@gentoo.org> +st-0.4.ebuild:
+  Version bump.
 
   23 Feb 2013; Michael Weber <xmw@gentoo.org> st-9999.ebuild:
   Fix missing git-2 eclass.
@@ -51,4 +56,3 @@
   31 May 2011; Michael Weber <xmw@gentoo.org> +st-0.1.1.ebuild,
   +st-9999.ebuild, +metadata.xml:
   Initial import
-
