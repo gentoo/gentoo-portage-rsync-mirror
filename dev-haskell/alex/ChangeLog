@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/alex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.60 2012/09/12 14:51:30 qnikst Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.61 2013/04/02 04:13:22 gienah Exp $
+
+*alex-3.0.5 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org> +alex-3.0.5.ebuild:
+  Bump alex to 3.0.5
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> alex-2.3.5.ebuild,
   alex-3.0.2.ebuild:
