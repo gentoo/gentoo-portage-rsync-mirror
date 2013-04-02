@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.66 2013/03/30 13:00:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.67 2013/04/02 08:06:04 jlec Exp $
+
+  02 Apr 2013; Justin Lecher <jlec@gentoo.org> astng-0.24.2.ebuild,
+  metadata.xml:
+  Drop py 3.3 as dev-python/logilab-common doesn't support it, #464108
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> astng-0.24.1-r1.ebuild,
   astng-0.24.2.ebuild:

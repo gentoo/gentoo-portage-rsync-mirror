@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.23-r2.ebuild,v 1.1 2013/04/01 16:08:22 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.23-r2.ebuild,v 1.2 2013/04/02 08:12:17 olemarkus Exp $
 
 EAPI=5
 
@@ -295,6 +295,9 @@ src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/patches/generic" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
 		EPATCH_MULTI_MSG="Applying generic patches and fixes from upstream..." epatch
+
+	#Fix bug 463498
+	epatch "${FILESDIR}/fix-libstdc++-underlinking.patch"
 
 	# Patch for pkg-config-0.28 (Bug 455040)
 	epatch "${FILESDIR}"/missing-openssl-include.patch

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.67 2013/03/26 10:27:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.68 2013/04/02 08:23:47 keri Exp $
+
+  01 Apr 2013; <keri@gentoo.org> -gprolog-1.4.0.ebuild, -gprolog-1.4.1.ebuild:
+  Remove old versions
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gprolog-1.4.2.ebuild:
   Stable for ppc, wrt bug #457288
