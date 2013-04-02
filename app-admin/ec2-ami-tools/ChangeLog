@@ -1,6 +1,21 @@
 # ChangeLog for app-admin/ec2-ami-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.12 2013/03/13 21:01:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.14 2013/04/02 22:50:49 tomwij Exp $
+
+  02 Apr 2013; Tom Wijsman <TomWij@gentoo.org> -ec2-ami-tools-1.4.0.5.ebuild,
+  ec2-ami-tools-1.4.0.5-r1.ebuild:
+  Removal of left behind license file, listed those licenses in the LICENSE
+  variable. Clarified die calls.
+
+*ec2-ami-tools-1.4.0.5-r1 (02 Apr 2013)
+
+  02 Apr 2013; Tom Wijsman <TomWij@gentoo.org> +ec2-ami-tools-1.4.0.5-r1.ebuild,
+  metadata.xml:
+  Taking maintainership. Extensively tested. Removed unnecessary removal of
+  *.cmd files which does not affect installation. Clarified reasoning why there
+  is an explicit Ruby 1.8 dependency. Revision bump as we now install to /
+  instead of /opt, dropped ROOT and ROOTPATH environment variables since the
+  binaries are already accessible through their defaults.
 
 *ec2-ami-tools-1.4.0.5 (13 Mar 2013)
 
