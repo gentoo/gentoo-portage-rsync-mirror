@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.50 2013/04/02 11:23:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.51 2013/04/02 13:23:07 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> Try-Tiny-0.120.0.ebuild:
+  Stable for s390, wrt bug #457318
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> Try-Tiny-0.120.0.ebuild:
   Stable for hppa, wrt bug #457318

@@ -16,6 +16,6 @@
 		slide shows.
 	</longdescription>
 	<use>
-		<flag name="highlight">Add support for syntax highlighting with <pkg>dev-haskell/highlighting-kate</pkg></flag>
+                <flag name="embed_data_files">Embed data files in binary for relocatable executable.</flag>
 	</use>
 </pkgmetadata>

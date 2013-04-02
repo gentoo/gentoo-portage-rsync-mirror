@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.905 2013/04/02 12:58:50 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.906 2013/04/02 13:03:13 kensington Exp $
+
+  02 Apr 2013; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Remove unused USE flag description.
 
   02 Apr 2013; Michael Palimaka <kensington@gentoo.org>
   -files/dist/01_gentoo_set_xdg_menu_prefix.patch,

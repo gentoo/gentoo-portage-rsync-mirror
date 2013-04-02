@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-2.5-r3.ebuild,v 1.7 2013/04/01 19:51:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-2.5-r3.ebuild,v 1.8 2013/04/02 13:22:40 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/non-free/u/unace-nonfree/unace-nonfree_${PV}.orig.
 
 LICENSE="freedist"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ppc ppc64 ~s390 x86 ~amd64-linux ~x86-linux ~sparc-solaris"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 s390 x86 ~amd64-linux ~x86-linux ~sparc-solaris"
 IUSE=""
 
 src_prepare() {

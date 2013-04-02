@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pandoc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.14 2012/12/29 07:32:40 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.15 2013/04/02 13:05:32 gienah Exp $
+
+*pandoc-1.11.1 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org>
+  +files/pandoc-1.11.1-no-man-tests.patch, +pandoc-1.11.1.ebuild, metadata.xml:
+  Bump pandoc to 1.11.1
 
   29 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> pandoc-1.9.4.5.ebuild:
   Tie diff depend to 0.1 (fails tests with 0.2 for now).
