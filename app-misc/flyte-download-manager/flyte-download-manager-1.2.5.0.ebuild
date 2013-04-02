@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flyte-download-manager/flyte-download-manager-1.2.4.0.ebuild,v 1.1 2013/02/28 03:41:51 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flyte-download-manager/flyte-download-manager-1.2.5.0.ebuild,v 1.1 2013/04/02 06:50:44 ford_prefect Exp $
 
 EAPI=4
 
@@ -10,8 +10,9 @@ MY_PN="FlyteDownloadManager"
 
 DESCRIPTION="The Flipkart Download Manager for Flyte MP3s"
 HOMEPAGE="http://www.flipkart.com/"
-SRC_URI="amd64? ( http://downloadi.flipkart.com/fkdm/${PV}/${MY_PN}-amd64.deb )
-	x86? ( http://downloadi.flipkart.com/fkdm/${PV}/${MY_PN}-i386.deb )"
+SRC_URI="amd64? ( http://downloadi.flipkart.com/fkdm/${PV}/${MY_PN}-amd64.deb ->
+${MY_PN}-${PV}-amd64.deb )
+	x86? ( http://downloadi.flipkart.com/fkdm/${PV}/${MY_PN}-i386.deb -> ${MY_PN}-${PV}-x86.deb )"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
