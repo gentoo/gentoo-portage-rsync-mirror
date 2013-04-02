@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/emotion
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/ChangeLog,v 1.9 2012/12/27 16:41:19 tommy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/ChangeLog,v 1.10 2013/04/02 19:40:10 tommy Exp $
+
+*emotion-1.7.4-r1 (02 Apr 2013)
+
+  02 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +emotion-1.7.4-r1.ebuild, metadata.xml:
+  Add USE flag for vlc player backend, fixes bug 464200
 
   27 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> emotion-1.7.4.ebuild:
   Fix configure options for USE=doc
