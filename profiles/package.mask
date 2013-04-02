@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14621 2013/04/01 13:49:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14622 2013/04/02 09:36:50 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (02 Apr 2013)
+# Masking =media-libs/ffmpegsource-2.17.4_pre753
+# by maintainer's request.
+# This version does not work properly, see bug #464078
+=media-libs/ffmpegsource-2.17.4_pre753
 
 # Michael Palimaka <kensington@gentoo.org> (01 Apr 2013)
 # Obsoleted by kde-base/print-manager. Removal in 30 days.

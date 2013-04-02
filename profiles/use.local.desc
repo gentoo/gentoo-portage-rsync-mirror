@@ -1209,6 +1209,7 @@ dev-haskell/json:parsec - Add support for parsing with Parsec
 dev-haskell/json:pretty - Add support for using pretty printing combinators
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
 dev-haskell/texmath:cgi - Build texmath-cgi executable.
+dev-haskell/unix-compat:old-time - build against old-time package
 dev-java/ant:antlr - Enable ANTLR Ant tasks
 dev-java/ant:bcel - Enable bcel (bytecode manipulation) Ant tasks
 dev-java/ant:commonslogging - Enable commons-logging Ant tasks

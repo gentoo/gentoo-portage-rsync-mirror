@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/unix-compat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.17 2013/03/31 09:59:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.18 2013/04/02 09:57:50 gienah Exp $
+
+*unix-compat-0.4.1.1 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org> +unix-compat-0.4.1.1.ebuild,
+  metadata.xml:
+  Bump unix-compat to 0.4.1.1
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> unix-compat-0.4.1.0.ebuild:
   Stable for sparc, wrt bug #457284
