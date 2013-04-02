@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-9999.ebuild,v 1.5 2012/12/27 11:37:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-9999.ebuild,v 1.6 2013/04/02 01:51:48 titanofold Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ EAPI=4
 ECVS_SERVER="cvs.pgfoundry.org:/cvsroot/pgpool"
 ECVS_MODULE="pgpool-II"
 [[ ${PV} == 9999 ]] && SCM_ECLASS="cvs"
-inherit base autotools ${SCM_ECLASS}
+inherit base ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="Connection pool server for PostgreSQL"

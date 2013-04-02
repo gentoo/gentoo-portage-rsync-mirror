@@ -1,25 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.3.ebuild,v 1.1 2013/03/22 05:32:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.3.ebuild,v 1.2 2013/04/02 01:51:48 titanofold Exp $
 
 EAPI=4
 
-[[ ${PV} == 9999 ]] && MY_P=${PN/2/-II} || MY_P="${PN/2/-II}-${PV}"
+MY_P="${PN/2/-II}-${PV}"
 
-ECVS_SERVER="cvs.pgfoundry.org:/cvsroot/pgpool"
-ECVS_MODULE="pgpool-II"
-[[ ${PV} == 9999 ]] && SCM_ECLASS="cvs"
-inherit base autotools ${SCM_ECLASS}
-unset SCM_ECLASS
+inherit base
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://www.pgpool.net/"
-[[ ${PV} == 9999 ]] || SRC_URI="http://www.pgpool.net/download.php?f=${MY_P}.tar.gz -> ${MY_P}.tar.gz"
+SRC_URI="http://www.pgpool.net/download.php?f=${MY_P}.tar.gz -> ${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 
-# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
-[[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~x86"
 
 IUSE="memcached pam ssl static-libs"
@@ -34,8 +28,6 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	!!dev-db/pgpool
 "
-
-AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 S=${WORKDIR}/${MY_P}
 
@@ -81,15 +73,13 @@ src_configure() {
 src_compile() {
 	emake
 
-	cd sql
-	emake
+	emake -C sql
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
 
-	cd sql
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" -C sql install
 	cd "${S}"
 
 	# `contrib' moved to `extension' with PostgreSQL 9.1

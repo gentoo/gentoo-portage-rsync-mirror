@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgpool2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.16 2013/03/22 05:32:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.17 2013/04/02 01:51:48 titanofold Exp $
+
+  02 Apr 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -pgpool2-3.2.0-r1.ebuild, -pgpool2-3.2.1.ebuild, -pgpool2-3.2.1-r1.ebuild,
+  -pgpool2-3.2.2.ebuild, pgpool2-3.2.3.ebuild:
+  Version bump. Clean out old versions. Remove autotools
+  inherit. Fixes bug 459030.
 
 *pgpool2-3.2.3 (22 Mar 2013)
 
