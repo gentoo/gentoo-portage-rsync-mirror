@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.203 2013/01/28 15:17:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.204 2013/04/02 18:25:38 graaff Exp $
+
+*rubygems-1.8.25 (30 Jan 2013)
+
+  30 Jan 2013; Hans de Graaff <graaff@gentoo.org> +rubygems-1.8.25.ebuild:
+  Version bump. Fixes bug 454668.
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> rubygems-1.8.24.ebuild:
   keyword ~amd64-fbsd

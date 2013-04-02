@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.4.0a.ebuild,v 1.8 2011/07/15 16:05:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.4.0a.ebuild,v 1.9 2013/04/02 18:19:55 radhermit Exp $
 
 EAPI="3"
 
@@ -33,6 +33,7 @@ pkg_setup() {
 		python_set_active_version 2
 		python_pkg_setup
 	fi
+	use java && java-pkg-opt-2_pkg_setup
 }
 
 src_prepare() {
