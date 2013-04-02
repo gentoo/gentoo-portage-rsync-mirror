@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.36 2013/03/31 10:04:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.37 2013/04/02 11:19:40 gienah Exp $
+
+*http-4000.2.8 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org> +http-4000.2.8.ebuild:
+  Bump http to 4000.2.8
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> http-4000.2.6.ebuild:
   Stable for sparc, wrt bug #456496

@@ -1,10 +1,12 @@
 # ChangeLog for sys-fs/f2fs-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/f2fs-tools/ChangeLog,v 1.1 2013/02/24 18:21:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/f2fs-tools/ChangeLog,v 1.2 2013/04/02 11:25:14 blueness Exp $
+
+  02 Apr 2013; Anthony G. Basile <blueness@gentoo.org> f2fs-tools-1.1.0.ebuild:
+  Keyword ~arm ~x86, bug #464178
 
 *f2fs-tools-1.1.0 (24 Feb 2013)
 
   24 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
   +f2fs-tools-1.1.0.ebuild, +metadata.xml:
   Initial commit, bug #458872
-

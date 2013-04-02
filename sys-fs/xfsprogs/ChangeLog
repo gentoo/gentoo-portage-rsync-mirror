@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.163 2013/03/31 11:13:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.164 2013/04/02 11:18:09 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xfsprogs-3.1.10.ebuild:
+  Stable for hppa, wrt bug #457486
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xfsprogs-3.1.10.ebuild:
   Stable for sh, wrt bug #457486

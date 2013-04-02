@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.51 2013/03/31 10:00:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.52 2013/04/02 11:20:37 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ladspa-cmt-1.16-r2.ebuild:
+  Stable for hppa, wrt bug #457374
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ladspa-cmt-1.16-r2.ebuild:
   Stable for sparc, wrt bug #457374
