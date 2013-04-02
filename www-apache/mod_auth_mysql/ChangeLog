@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_auth_mysql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/ChangeLog,v 1.12 2012/11/27 19:04:54 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/ChangeLog,v 1.13 2013/04/02 07:31:59 patrick Exp $
+
+*mod_auth_mysql-3.0.0-r3 (02 Apr 2013)
+
+  02 Apr 2013; Patrick Lauer <patrick@gentoo.org>
+  +mod_auth_mysql-3.0.0-r3.ebuild:
+  Compile fix #442488
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-
