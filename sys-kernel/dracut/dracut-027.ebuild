@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-027.ebuild,v 1.1 2013/04/02 12:22:23 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-027.ebuild,v 1.2 2013/04/02 14:16:51 aidecoe Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ IUSE="debug device-mapper optimization net selinux ${IUSE_DRACUT_MODULES}"
 
 RESTRICT="test"
 
-CDEPEND="|| ( virtual/udev )
+CDEPEND="virtual/udev
 	dracut_modules_systemd? ( >=sys-apps/systemd-199 )
 	"
 RDEPEND="${CDEPEND}

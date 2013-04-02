@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r6.ebuild,v 1.5 2013/01/05 19:14:01 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r6.ebuild,v 1.6 2013/04/02 14:16:51 aidecoe Exp $
 
 EAPI=4
 
@@ -59,7 +59,7 @@ IUSE="debug device-mapper optimization net selinux ${IUSE_DRACUT_MODULES}"
 
 RESTRICT="test"
 
-CDEPEND=">=sys-fs/udev-166"
+CDEPEND="virtual/udev"
 RDEPEND="${CDEPEND}
 	app-arch/cpio
 	>=app-shells/bash-4.0
