@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.57 2013/03/11 13:01:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.58 2013/04/02 03:28:10 creffett Exp $
+
+*libzip-0.11 (02 Apr 2013)
+
+  02 Apr 2013; Chris Reffett <creffett@gentoo.org>
+  +files/libzip-0.11-fix_pkgconfig.patch, +libzip-0.11.ebuild:
+  Version bump wrt bug 463280. Respin pkgconfig patch, no longer need the crypto
+  patch. Some tests failing, restricting for now until I have a chance to look
+  at them more.
 
   11 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> libzip-0.10.1-r1.ebuild:
   Convert remove_libtool_files to prune_libtool_files.
