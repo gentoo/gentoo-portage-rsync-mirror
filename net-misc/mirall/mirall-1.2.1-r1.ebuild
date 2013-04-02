@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.1-r1.ebuild,v 1.1 2013/03/11 19:57:18 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.1-r1.ebuild,v 1.2 2013/04/02 14:42:15 kensington Exp $
 
 EAPI=5
 
@@ -25,23 +25,29 @@ RDEPEND="
 	dev-qt/qttest:4
 "
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx virtual/latex-base )
+	doc? (
+		dev-python/sphinx
+		dev-texlive/texlive-latexextra
+		virtual/latex-base
+	)
 "
 
-S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	# Yay for fcked detection.
-	export CSYNC_DIR="${EPREFIX}/usr/include/ocsync/"
-
-	epatch "${FILESDIR}/${PN}-1.2.0_beta2-automagicness.patch"
-}
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
+	export CSYNC_DIR="${EPREFIX}/usr/include/ocsync/"
+
 	local mycmakeargs=(
-		$(cmake-utils_use_with doc SPHINX)
+		-DCMAKE_INSTALL_DOCDIR=/usr/share/doc/${PF}
+		$(cmake-utils_use_find_package doc Sphinx)
 	)
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
+
+	use doc && cmake-utils_src_compile -j1 -C doc doc
 }
 
 src_install() {

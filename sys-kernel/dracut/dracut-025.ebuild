@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-025.ebuild,v 1.3 2013/04/02 14:16:51 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-025.ebuild,v 1.4 2013/04/02 14:51:03 aidecoe Exp $
 
 EAPI=4
 
@@ -109,7 +109,7 @@ DEPEND="${CDEPEND}
 
 DOCS=( AUTHORS HACKING NEWS README README.generic README.kernel README.modules
 	README.testsuite TODO )
-DRACUT_LIBDIR="/usr/lib"
+MY_LIBDIR="/usr/lib"
 
 #
 # Helper functions
@@ -153,6 +153,7 @@ rm_module() {
 #
 
 src_prepare() {
+	epatch "${FILESDIR}/${PV}-0000-fix-version-print.patch"
 	epatch "${FILESDIR}/${PV}-0001-dracut-functions.sh-support-for-altern.patch"
 	epatch "${FILESDIR}/${PV}-0002-gentoo.conf-let-udevdir-be-handled-by-.patch"
 	epatch "${FILESDIR}/${PV}-0003-rootfs-block-mount-root.sh-fixup-for-8.patch"
@@ -178,7 +179,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --libdir="${DRACUT_LIBDIR}"
+	econf --libdir="${MY_LIBDIR}"
 }
 
 src_compile() {
@@ -196,6 +197,10 @@ src_install() {
 
 	local libdir="${DRACUT_LIBDIR}"
 
+	local dracutlibdir="${MY_LIBDIR#/}/dracut"
+
+	echo "DRACUT_VERSION=$PVR" > "${D%/}/${dracutlibdir}/dracut-version.sh"
+
 	insinto /etc/dracut.conf.d
 	newins dracut.conf.d/gentoo.conf.example gentoo.conf
 
@@ -210,7 +215,7 @@ src_install() {
 	# Modules
 	#
 	local module
-	modules_dir="${D%/}/${libdir#/}/dracut/modules.d"
+	modules_dir="${D%/}/${dracutlibdir}/modules.d"
 
 	# Remove modules not enabled by USE flags
 	for module in ${IUSE_DRACUT_MODULES} ; do
@@ -226,6 +231,11 @@ src_install() {
 	# for others and as so have no practical use, so remove these modules.
 	use device-mapper || rm_module 90dm
 	use net || rm_module 40network 45ifcfg 45url-lib
+
+	if use dracut_modules_systemd; then
+		# With systemd following modules do not make sense
+		rm_module 96securityfs 98selinux
+	fi
 
 	# Remove S/390 modules which are not tested at all
 	rm_module 80cms 95dasd 95dasd_mod 95zfcp 95znet
