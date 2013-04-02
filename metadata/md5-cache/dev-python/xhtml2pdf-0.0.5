@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/html5lib dev-python/imaging dev-python/pyPdf dev-python/reportlab !<sys-apps/portage-2.1.10.58 python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 )
+DESCRIPTION=PDF generator using HTML and CSS
+EAPI=4
+HOMEPAGE=http://www.xhtml2pdf.com/ http://pypi.python.org/pypi/xhtml2pdf
+IUSE=python_targets_python2_5 python_targets_python2_6 python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=dev-python/html5lib dev-python/imaging dev-python/pyPdf dev-python/reportlab python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 )
+REQUIRED_USE=|| ( python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://pypi/x/xhtml2pdf/xhtml2pdf-0.0.5.tar.gz
+_eclasses_=python-distutils-ng	b6176485a30153729ae856cd37d0174c
+_md5_=8940193128fa992593111ba4fc09e9f9

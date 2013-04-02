@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/bloomfilter-1.2.6.10-r1.ebuild,v 1.1 2013/01/01 13:17:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/bloomfilter-1.2.6.10-r1.ebuild,v 1.2 2013/04/02 04:34:33 gienah Exp $
 
 EAPI=5
 
@@ -21,8 +21,8 @@ IUSE=""
 RDEPEND="dev-haskell/deepseq:=[profile?]
 		>=dev-lang/ghc-6.8.2:="
 DEPEND="${RDEPEND}
-		test? ( >=dev-haskell/quickcheck-2.4
-			<dev-haskell/quickcheck-2.6
+		test? ( >=dev-haskell/quickcheck-2.4:2
+			<dev-haskell/quickcheck-2.7:2
 			dev-haskell/random
 			dev-haskell/test-framework
 			dev-haskell/test-framework-quickcheck2
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	cabal_chdeps \
-		'QuickCheck == 2.4.*' 'QuickCheck >= 2.4 && < 2.6'
+		'QuickCheck == 2.4.*' 'QuickCheck >= 2.4 && < 2.7'
 
 	if has_version ">=dev-haskell/quickcheck-2.5"; then
 		epatch "${FILESDIR}/${PN}-1.2.6.10-quickcheck-2.6.patch"
