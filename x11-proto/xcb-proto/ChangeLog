@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.106 2013/03/31 14:54:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.107 2013/04/02 10:04:32 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xcb-proto-1.8-r1.ebuild:
+  Stable for sh, wrt bug #462178
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xcb-proto-1.8-r1.ebuild:
   Stable for sparc, wrt bug #462178

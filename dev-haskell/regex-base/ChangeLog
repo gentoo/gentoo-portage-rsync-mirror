@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/regex-base
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.37 2012/09/12 15:38:10 qnikst Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.38 2013/04/02 10:26:03 gienah Exp $
+
+*regex-base-0.93.2-r1 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org> +regex-base-0.93.2-r1.ebuild:
+  regex-base-0.93.2-r1 rev bump to add EAPI=5 ebuild
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> regex-base-0.71.ebuild,
   regex-base-0.72.0.1.ebuild, regex-base-0.72.0.2.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.138 2013/03/31 10:01:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.139 2013/04/02 10:03:33 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> diffstat-1.56.ebuild:
+  Stable for sh, wrt bug #463088
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> diffstat-1.56.ebuild:
   Stable for sparc, wrt bug #463088
