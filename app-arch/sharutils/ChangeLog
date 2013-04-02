@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.100 2013/03/01 12:37:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.101 2013/04/02 05:35:19 radhermit Exp $
+
+*sharutils-4.13.4 (02 Apr 2013)
+
+  02 Apr 2013; Tim Harder <radhermit@gentoo.org> +sharutils-4.13.4.ebuild:
+  Version bump.
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> sharutils-4.13.3.ebuild:
   Stable for sh, wrt bug #457220
