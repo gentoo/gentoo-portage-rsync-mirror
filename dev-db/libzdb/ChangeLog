@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libzdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.9 2013/03/27 22:55:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.10 2013/04/02 15:03:17 floppym Exp $
+
+  02 Apr 2013; Mike Gilbert <floppym@gentoo.org> libzdb-2.10.3.ebuild,
+  libzdb-2.10.5.ebuild, libzdb-2.11.1.ebuild:
+  Fix typo, bug 463906 by Chris Mayo.
 
   27 Mar 2013; Mike Gilbert <floppym@gentoo.org> libzdb-2.10.3.ebuild,
   libzdb-2.10.5.ebuild, libzdb-2.11.1.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/eclean-kernel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.8 2012/12/17 20:02:34 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.9 2013/04/02 15:08:47 mgorny Exp $
+
+*eclean-kernel-0.3.3 (02 Apr 2013)
+
+  02 Apr 2013; Michał Górny <mgorny@gentoo.org> +eclean-kernel-0.3.3.ebuild,
+  -eclean-kernel-0.3.1.ebuild, eclean-kernel-0.3.2.ebuild,
+  eclean-kernel-9999.ebuild:
+  Bump to 0.3.3, fixing Python3 KV decoding (bug #464198). Drop ancient, and
+  disable py3 in old (since it suffers KV decoding issues).
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> eclean-kernel-0.3.1.ebuild,
   eclean-kernel-0.3.2.ebuild, eclean-kernel-9999.ebuild:

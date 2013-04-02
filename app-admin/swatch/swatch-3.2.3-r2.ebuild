@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/swatch-3.2.3-r2.ebuild,v 1.1 2013/01/07 16:42:42 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/swatch-3.2.3-r2.ebuild,v 1.2 2013/04/02 15:10:40 nimiux Exp $
 
 EAPI=5
 
@@ -15,13 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="
-	dev-perl/DateManip
-	dev-perl/Date-Calc
-	dev-perl/File-Tail
-	dev-perl/TimeDate
-	>=virtual/perl-Time-HiRes-1.12
-"
+RDEPEND="dev-perl/DateManip
+		dev-perl/Date-Calc
+		dev-perl/File-Tail
+		dev-perl/TimeDate
+		>=virtual/perl-Time-HiRes-1.12"
 
 src_install() {
 	emake install
