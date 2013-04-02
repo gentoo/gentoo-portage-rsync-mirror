@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.8.ebuild,v 1.1 2013/03/14 06:33:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.8.ebuild,v 1.2 2013/04/02 03:59:04 patrick Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 
-ruby_add_bdepend "doc? ( dev-ruby/yard )"
+ruby_add_bdepend "dev-ruby/yard"
 
 ruby_add_bdepend "test? ( dev-ruby/test-unit:2 dev-ruby/test-unit-rr )"
 
