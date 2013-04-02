@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.468 2013/03/29 16:54:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.469 2013/04/02 21:04:02 jer Exp $
+
+  02 Apr 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.14.ebuild,
+  wireshark-1.6.14-r1.ebuild, wireshark-1.8.6.ebuild,
+  wireshark-1.8.6-r1.ebuild, wireshark-1.9.1.ebuild, wireshark-1.9.2.ebuild:
+  Remove pointless compiler version check (bug #464118 by SN (Enlik)).
 
 *wireshark-1.9.2 (29 Mar 2013)
 

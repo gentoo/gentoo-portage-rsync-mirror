@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.14.ebuild,v 1.9 2013/03/08 16:54:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.14.ebuild,v 1.10 2013/04/02 21:04:02 jer Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
-inherit autotools eutils fcaps flag-o-matic python toolchain-funcs user
+inherit autotools eutils fcaps flag-o-matic python user
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -56,14 +56,6 @@ DEPEND="
 "
 
 S=${WORKDIR}/${MY_P}
-
-pkg_pretend() {
-	if [[ $(gcc-major-version) -lt 3 ||
-		( $(gcc-major-version) -eq 3 &&
-		$(gcc-minor-version) -le 4 ) ]] ; then
-		die "Unsupported compiler version, please upgrade."
-	fi
-}
 
 pkg_setup() {
 	if ! use gtk; then
