@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-9999.ebuild,v 1.5 2013/04/01 19:37:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-9999.ebuild,v 1.6 2013/04/02 15:35:59 mr_bones_ Exp $
 
 EAPI=2
 ESVN_REPO_URI="https://dosbox.svn.sourceforge.net/svnroot/dosbox/dosbox/trunk"
@@ -14,14 +14,11 @@ SLOT="0"
 KEYWORDS=""
 IUSE="alsa debug hardened opengl"
 
-DEPEND="alsa? ( media-libs/alsa-lib
-		media-libs/libsdl[alsa] )
-	opengl? (
-		virtual/glu
-		virtual/opengl )
+DEPEND="alsa? ( media-libs/alsa-lib )
+	opengl? ( virtual/glu virtual/opengl )
 	debug? ( sys-libs/ncurses )
 	media-libs/libpng:0
-	media-libs/libsdl[joystick,video]
+	media-libs/libsdl[joystick,video,X]
 	media-libs/sdl-net
 	media-libs/sdl-sound"
 
