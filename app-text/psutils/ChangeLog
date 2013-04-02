@@ -1,6 +1,9 @@
 # ChangeLog for app-text/psutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.27 2012/12/12 08:16:41 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.28 2013/04/02 10:55:31 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> psutils-1.17-r2.ebuild:
+  Stable for sparc, wrt bug #460618
 
 *psutils-1.17-r2 (12 Dec 2012)
 

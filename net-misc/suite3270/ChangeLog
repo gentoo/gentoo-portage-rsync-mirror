@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.50 2013/03/27 18:41:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.51 2013/04/02 10:56:42 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> suite3270-3.3.12_p12.ebuild:
+  Stable for sparc, wrt bug #462614
 
   27 Mar 2013; Mike Frysinger <vapier@gentoo.org> suite3270-3.3.12_p12.ebuild:
   Avoid use of xmkmf/imake #462699 by Agostino Sarubbo.
