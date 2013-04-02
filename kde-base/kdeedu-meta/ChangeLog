@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.247 2013/04/01 16:03:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.248 2013/04/02 17:16:11 kensington Exp $
+
+  02 Apr 2013; Michael Palimaka <kensington@gentoo.org>
+  kdeedu-meta-4.10.1.ebuild:
+  Don't pull in kde-base/rocs on ppc64 wrt bug #462550.
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> -kdeedu-meta-4.10.0.ebuild,
   -kdeedu-meta-4.9.5.ebuild:
