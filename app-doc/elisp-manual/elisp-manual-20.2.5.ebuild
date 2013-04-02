@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-20.2.5.ebuild,v 1.5 2012/07/29 17:34:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-20.2.5.ebuild,v 1.6 2013/04/01 23:27:09 ulm Exp $
+
+EAPI=5
 
 inherit eutils
 
@@ -13,24 +15,23 @@ SRC_URI="ftp://ftp.gnu.org/old-gnu/emacs/${MY_P}.tar.gz
 LICENSE="Texinfo-manual"
 SLOT="20"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+
+DEPEND="sys-apps/texinfo"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# remove pre-made info files
 	rm -f elisp elisp-[0-9]*
 	EPATCH_SUFFIX=patch epatch
 }
 
 src_compile() {
-	ln -s index.unperm index.texi
-	makeinfo elisp.texi || die "makeinfo failed"
+	ln -s index.unperm index.texi || die
+	makeinfo elisp.texi || die
 }
 
 src_install() {
-	doinfo elisp20.info* || die "doinfo failed"
+	doinfo elisp20.info*
 	dodoc README
 }

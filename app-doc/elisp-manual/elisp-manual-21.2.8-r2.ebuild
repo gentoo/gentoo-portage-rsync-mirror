@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-21.2.8-r2.ebuild,v 1.12 2013/03/15 08:41:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-21.2.8-r2.ebuild,v 1.13 2013/04/01 23:27:09 ulm Exp $
+
+EAPI=5
 
 inherit eutils
 
@@ -13,24 +15,23 @@ SRC_URI="mirror://gnu/emacs/${MY_P}.tar.gz
 LICENSE="FDL-1.1+"
 SLOT="21"
 KEYWORDS="amd64 ppc x86"
-IUSE=""
+
+DEPEND="sys-apps/texinfo"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# remove pre-made info files
 	rm -f elisp elisp-[0-9]*
 	EPATCH_SUFFIX=patch epatch
 }
 
 src_compile() {
-	ln -s index.unperm index.texi
-	makeinfo elisp.texi || die "makeinfo failed"
+	ln -s index.unperm index.texi || die
+	makeinfo elisp.texi || die
 }
 
 src_install() {
-	doinfo elisp21.info* || die "doinfo failed"
+	doinfo elisp21.info*
 	dodoc README
 }
