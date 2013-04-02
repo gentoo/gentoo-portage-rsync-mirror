@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.254 2013/04/01 16:03:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.255 2013/04/02 12:45:26 kensington Exp $
+
+  02 Apr 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/kmix-4.10.0-mousewheel-step-313579.patch:
+  Remove unused patch.
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> -kmix-4.10.0-r1.ebuild,
   -kmix-4.9.5.ebuild:

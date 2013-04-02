@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/bytestring-show
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bytestring-show/ChangeLog,v 1.4 2012/12/22 21:14:29 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bytestring-show/ChangeLog,v 1.5 2013/04/02 12:42:59 gienah Exp $
+
+*bytestring-show-0.3.5.4-r2 (02 Apr 2013)
+
+  02 Apr 2013; Mark Wright <gienah@gentoo.org>
+  +bytestring-show-0.3.5.4-r2.ebuild:
+  Loosen binary dep in bytestring-show-0.3.5.4-r2
 
 *bytestring-show-0.3.5.4-r1 (22 Dec 2012)
 
