@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.21.0.ebuild,v 1.2 2012/05/05 08:51:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.21.4.ebuild,v 1.1 2013/04/02 06:24:57 radhermit Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2:2.6"
-PYTHON_USE_WITH="sqlite"
+EAPI="5"
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="sqlite"
 
-inherit python
+inherit python-single-r1
 
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
 HOMEPAGE="http://www.solfege.org"
@@ -17,11 +17,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa oss"
 
-RDEPEND=">=dev-python/pygtk-2.12
+RDEPEND="${PYTHON_DEPS}
+	>=dev-python/pygtk-2.12
 	gnome-base/librsvg
 	alsa? ( dev-python/pyalsa )
 	!oss? ( media-sound/timidity++ )"
-DEPEND="dev-lang/swig
+DEPEND="${PYTHON_DEPS}
+	dev-lang/swig
 	sys-devel/gettext
 	sys-apps/texinfo
 	virtual/pkgconfig
@@ -29,14 +31,11 @@ DEPEND="dev-lang/swig
 	app-text/txt2man
 	>=app-text/docbook-xsl-stylesheets-1.60"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
+RESTRICT="test"
 
 src_prepare() {
 	sed -i -e '/^CFLAGS/s:-I/usr/src/linux/include::' \
-		solfege/soundcard/Makefile || die
+		solfege/soundcard/Makefile || die "sed failed"
 }
 
 src_configure() {
@@ -48,10 +47,10 @@ src_configure() {
 }
 
 src_compile() {
-	emake skipmanual=yes || die "emake failed"
+	emake skipmanual=yes
 }
 
 src_install() {
-	emake DESTDIR="${ED}" nopycompile=YES skipmanual=yes install || die "emake install failed"
+	emake DESTDIR="${ED}" nopycompile=YES skipmanual=yes install
 	dodoc AUTHORS *hange*og FAQ README
 }
