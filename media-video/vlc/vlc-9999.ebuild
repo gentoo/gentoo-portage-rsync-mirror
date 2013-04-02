@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.183 2013/03/02 22:44:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.184 2013/04/02 13:55:46 lu_zero Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 
-PATCHLEVEL="108"
+# PATCHLEVEL="108"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -32,8 +32,8 @@ else
 	SRC_URI="http://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.xz"
 fi
 
-SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
+# SRC_URI="${SRC_URI}
+#	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
@@ -44,18 +44,18 @@ else
 	KEYWORDS=""
 fi
 IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
-	+avformat bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
-	directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
+	+avformat bidi bluray cdda cddb dbus dc1394 debug dirac
+	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libproxy libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opengl optimisememory oss png
-	+postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger
-	sdl sdl-image shine shout sid skins speex sqlite sse svg +swscale switcher
+	+postproc projectm pulseaudio +qt4 rtsp run-as-root samba schroedinger
+	sdl sdl-image shine shout sid skins speex sse svg +swscale
 	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
-	win32codecs wingdi wma-fixed +X x264 +xcb xml xv zvbi"
+	wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2[minizip]
@@ -123,7 +123,6 @@ RDEPEND="
 		sid? ( media-libs/libsidplay:2 )
 		skins? ( x11-libs/libXext x11-libs/libXpm x11-libs/libXinerama )
 		speex? ( media-libs/speex )
-		sqlite? ( >=dev-db/sqlite-3.6.0:3 )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
 		swscale? ( virtual/ffmpeg )
 		taglib? ( >=media-libs/taglib-1.5 sys-libs/zlib )
@@ -166,11 +165,9 @@ REQUIRED_USE="
 	libcaca? ( X )
 	libtar? ( skins )
 	libtiger? ( kate )
-	media-library? ( sqlite )
 	qt4? ( X )
 	sdl? ( X )
 	skins? ( truetype qt4 X )
-	switcher? ( avcodec )
 	vaapi? ( avcodec X )
 	vlm? ( encode )
 	xv? ( xcb )
@@ -179,7 +176,6 @@ REQUIRED_USE="
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-	unpack ${A}
 	if [ "${PV%9999}" != "${PV}" ] ; then
 		git-2_src_unpack
 	fi
@@ -189,7 +185,7 @@ src_prepare() {
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
 
-	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+#	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	eautoreconf
 }
 
@@ -198,7 +194,16 @@ src_configure() {
 	# FIXME!
 	use sid && append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
 
+	if use truetype || use projectm; then
+		local dejavu="/usr/share/fonts/dejavu/"
+		myconf="--with-default-font=${dejavu}/DejaVuSans.ttf \
+			    --with-default-font-family=Sans \
+			    --with-default-monospace-font=${dejavu}/DejaVuSansMono.ttf
+				--with-default-monospace-font-family=Monospace"
+	fi
+
 	econf \
+		${myconf} \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable a52) \
 		$(use_enable aalib aa) \
@@ -214,14 +219,12 @@ src_configure() {
 		$(use_enable bluray) \
 		$(use_enable cdda vcd) \
 		$(use_enable cddb libcddb) \
-		$(use_enable dbus) $(use_enable dbus dbus-control) \
+		$(use_enable dbus) \
 		$(use_enable dirac) \
-		$(use_enable direct2d) \
 		$(use_enable directfb) \
 		$(use_enable directx) \
 		$(use_enable dc1394) \
 		$(use_enable debug) \
-		$(use_enable dshow) \
 		$(use_enable dts dca) \
 		$(use_enable dvbpsi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
@@ -260,7 +263,6 @@ src_configure() {
 		$(use_enable macosx-quartztext) \
 		$(use_enable macosx-vout) \
 		$(use_enable matroska mkv) \
-		$(use_enable media-library) \
 		$(use_enable mmx) \
 		$(use_enable modplug mod) \
 		$(use_enable mp3 mad) \
@@ -278,11 +280,10 @@ src_configure() {
 		$(use_enable postproc) \
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable pvr) \
 		$(use_enable qt4 qt) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
-		$(use_enable samba smb) \
+		$(use_enable samba smbclient) \
 		$(use_enable schroedinger) \
 		$(use_enable sdl) \
 		$(use_enable sdl-image) \
@@ -291,10 +292,8 @@ src_configure() {
 		$(use_enable shout) \
 		$(use_enable skins skins2) \
 		$(use_enable speex) \
-		$(use_enable sqlite) \
 		$(use_enable sse) \
 		$(use_enable svg) \
-		$(use_enable switcher) \
 		$(use_enable swscale) \
 		$(use_enable taglib) \
 		$(use_enable theora) \
@@ -308,8 +307,6 @@ src_configure() {
 		$(use_enable vlm) \
 		$(use_enable vorbis) \
 		$(use_enable waveout) \
-		$(use_enable win32codecs loader) \
-		$(use_enable wingdi) \
 		$(use_enable wma-fixed) \
 		$(use_with X x) \
 		$(use_enable x264) \

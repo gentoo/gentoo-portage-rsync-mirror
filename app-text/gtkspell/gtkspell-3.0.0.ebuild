@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.0.ebuild,v 1.10 2013/04/01 18:23:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.0.ebuild,v 1.11 2013/04/02 13:56:10 tetromino Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Spell checking widget for GTK"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
@@ -27,6 +27,12 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	# https://sourceforge.net/p/gtkspell/bugs/17/
+	epatch "${FILESDIR}/${PN}-3.0.2-GTK_SPELL_CFLAGS.patch" #463674
+	eautoreconf
+}
 
 src_configure() {
 	econf \

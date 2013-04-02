@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.101 2013/04/01 18:23:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.102 2013/04/02 13:56:10 tetromino Exp $
+
+  02 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtkspell-3.0.0.ebuild, +files/gtkspell-3.0.2-GTK_SPELL_CFLAGS.patch:
+  Fix "@GTK_SPELL_CFLAGS@: No such file or directory" build failure (bug
+  #463674, thanks to Nick Novikov).
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gtkspell-3.0.0.ebuild:
   Stable for sparc, wrt bug #458984
