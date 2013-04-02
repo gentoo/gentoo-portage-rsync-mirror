@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-200.ebuild,v 1.4 2013/03/31 21:18:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-200-r1.ebuild,v 1.1 2013/04/02 12:28:53 mgorny Exp $
 
 EAPI=5
 
@@ -123,11 +123,11 @@ src_install() {
 		dist_udevhwdb_DATA=
 
 	# keep udev working without initramfs, for openrc compat
-	dodir /sbin
+	dodir /bin /sbin
 	mv "${D}"/usr/lib/systemd/systemd-udevd "${D}"/sbin/udevd || die
-	mv "${D}"/usr/bin/udevadm "${D}"/sbin/udevadm || die
+	mv "${D}"/usr/bin/udevadm "${D}"/bin/udevadm || die
 	dosym ../../../sbin/udevd /usr/lib/systemd/systemd-udevd
-	dosym ../../sbin/udevadm /usr/bin/udevadm
+	dosym ../../bin/udevadm /usr/bin/udevadm
 
 	# zsh completion
 	insinto /usr/share/zsh/site-functions

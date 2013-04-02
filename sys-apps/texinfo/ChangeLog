@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.123 2013/04/02 10:34:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.124 2013/04/02 12:13:14 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texinfo-4.13-r2.ebuild:
+  Stable for arm, wrt bug #432282
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texinfo-4.13-r2.ebuild:
   Stable for sh, wrt bug #432282

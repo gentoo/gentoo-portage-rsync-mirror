@@ -1,6 +1,45 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.114 2013/03/30 16:25:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.115 2013/04/02 12:22:23 aidecoe Exp $
+
+*dracut-027 (02 Apr 2013)
+
+  02 Apr 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/027-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/027-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +dracut-027.ebuild:
+  Version bump.
+
+  Dracut 027 depends on virtual/udev now and no longer needs CONFIG_MODULES in
+  kernel.
+
+  Following changes relates to systemd module only:
+  - at least systemd-199 is required
+  - systemd-bootchart module replaces bootchart module
+  - selinux module is removed if systemd module is installed, because systemd
+    handles selinux setup; the same is for securityfs
+
+  NEWS
+  ~~~~
+  (from announcement on mailing list)
+
+  dracut-027
+  ==========
+  - dracut now has bash-completion
+  - require bash version 4
+  - systemd module now requires systemd >= 199
+  - dracut makes use of native systemd initrd units
+  - added hooks for new-kernel-pkg and kernel-install
+  - hostonly is now default for fedora
+  - comply with the BootLoaderSpec paths
+    http://www.freedesktop.org/wiki/Specifications/BootLoaderSpec
+  - added rescue module
+  - host_fs_types is now a hashmap
+  - new dracut argument "--regenerate-all"
+  - new dracut argument "--noimageifnotneeded"
+  - new man page dracut.bootup
+  - install all host filesystem drivers
+  - use -D_FILE_OFFSET_BITS=64 to build dracut-install
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> dracut-026-r1.ebuild:
   Depend on udev or a recent version of systemd.
