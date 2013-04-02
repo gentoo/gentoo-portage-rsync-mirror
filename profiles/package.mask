@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14624 2013/04/02 14:45:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14625 2013/04/02 16:15:42 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (02 Apr 2013)
+# masked for removal on 20130502
+# replaced by games-emulation/sdlmess
+games-emulation/xmess
 
 # Lars Wendler <polynomial-c@gentoo.org> (02 Apr 2013)
 # Dead upstream. Masked for removal in 30 days.
