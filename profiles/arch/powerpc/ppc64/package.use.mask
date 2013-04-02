@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.52 2013/04/02 17:58:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.53 2013/04/02 19:17:21 ago Exp $
 
 # Michael Palimaka <kensington@gentoo.org> (02 Apr 2013)
 # Requires dev-lang/mono which currently has some issues
 # on ppc64.
 kde-base/kdebindings-meta csharp
+net-libs/libkolabxml csharp
 
 # Sergey Popov <pinkbyte@gentoo.org> (18 Feb 2013)
 # sys-cluster/ploop can not be build on ppc64, bug #447644

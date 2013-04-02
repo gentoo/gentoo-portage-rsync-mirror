@@ -13,4 +13,9 @@
 		That's a break-through for all Atari users - now you can turn almost
 		any hardware into your familiar TOS/GEM system.
 	</longdescription>
+	<use>
+		<flag name="fullmmu">Enable full 68040 MMU emulation</flag>
+		<flag name="lilo">Enable Linux-m68k loader</flag>
+		<flag name="usbhost">Enable NatFeat USB</flag>
+	</use>
 </pkgmetadata>

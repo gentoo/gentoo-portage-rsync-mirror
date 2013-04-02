@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.13-r3.ebuild,v 1.1 2013/04/01 16:08:22 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.13-r3.ebuild,v 1.2 2013/04/02 19:10:34 grobian Exp $
 
 EAPI=5
 
@@ -364,7 +364,7 @@ src_configure() {
 	$(use_with gmp gmp "${EPREFIX}"/usr)
 	$(use_enable hash hash )
 	$(use_with mhash mhash "${EPREFIX}"/usr)
-	$(use_with iconv iconv )
+	$(use_with iconv iconv $(use elibc_glibc || echo "${EPREFIX}"/usr))
 	$(use_enable intl intl )
 	$(use_enable ipv6 ipv6 )
 	$(use_enable json json )
