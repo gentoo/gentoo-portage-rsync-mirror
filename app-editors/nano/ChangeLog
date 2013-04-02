@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.287 2013/02/21 05:32:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.288 2013/04/02 20:14:20 vapier Exp $
+
+*nano-2.3.2 (02 Apr 2013)
+
+  02 Apr 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/nano-2.3.2-bind-unbind-docs.patch, +nano-2.3.2.ebuild:
+  Version bump #464222 by Joe M.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> nano-2.3.1-r2.ebuild:
   Add ~arm-linux keyword.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/evolution-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/evolution-python/ChangeLog,v 1.51 2013/03/29 14:37:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/evolution-python/ChangeLog,v 1.52 2013/04/02 20:10:40 pacho Exp $
+
+  02 Apr 2013; Pacho Ramos <pacho@gentoo.org> evolution-python-2.32.0.ebuild:
+  Fix previous commit (#463930 by pschuprikov)
 
   29 Mar 2013; Pacho Ramos <pacho@gentoo.org> evolution-python-2.32.0.ebuild:
   It needs <gnome-extra/evolution-data-server-3.6 as it won't ever be ported.

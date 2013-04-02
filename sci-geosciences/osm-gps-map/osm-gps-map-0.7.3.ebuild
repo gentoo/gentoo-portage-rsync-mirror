@@ -1,42 +1,77 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/osm-gps-map-0.7.3.ebuild,v 1.1 2013/03/28 18:57:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/osm-gps-map-0.7.3.ebuild,v 1.2 2013/04/02 20:27:16 maksbotan Exp $
 
-EAPI="5"
+EAPI=5
 
-inherit autotools gnome2
+PYTHON_COMPAT=( python2_{6,7} )
+DISTUTILS_OPTIONAL=1
 
-DESCRIPTION="A gtk+ viewer for OpenStreetMap files."
+inherit autotools gnome2 distutils-r1
+
+DESCRIPTION="A gtk+ viewer for OpenStreetMap files"
 HOMEPAGE="http://nzjrs.github.com/${PN}/"
-SRC_URI="http://www.johnstowers.co.nz/files/${PN}/${P}.tar.gz"
+SRC_URI="http://www.johnstowers.co.nz/files/${PN}/${P}.tar.gz
+python? ( http://www.johnstowers.co.nz/files/${PN}/python-osmgpsmap-${PV}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="introspection python"
 
-DEPEND="
+RDEPEND="
 	>=dev-libs/glib-2.16.0
-	gnome-base/gnome-common
 	>=net-libs/libsoup-2.4.0
 	>=x11-libs/cairo-1.6.0
-	>=x11-libs/gtk+-2.14.0
+	>=x11-libs/gtk+-2.14.0:2
+	x11-libs/gdk-pixbuf
 	introspection? ( dev-libs/gobject-introspection )
+	python? ( ${PYTHON_DEPS}
+		dev-python/pygtk[${PYTHON_USEDEP}]
+		dev-python/pygobject:2[${PYTHON_USEDEP}]
+	)
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
+	gnome-base/gnome-common"
 
-G2CONF="
-	$(use_enable introspection)
-	--docdir=/usr/share/doc/${PN}
-	--disable-dependency-tracking
-	--enable-fast-install
-	--disable-static
-"
+PYTHON_S="${WORKDIR}/python-osmgpsmap-${PV}"
+
+pkg_setup() {
+	#configure script does not accept quoted EPREFIX...
+	G2CONF="
+		$(use_enable introspection)
+		--docdir=/usr/share/doc/${PF}
+		--enable-fast-install
+		--disable-static
+	"
+}
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix-docs-location.patch"
-#	epatch "${FILESDIR}/${P}-disable-compiler-warnings.patch"
+	epatch "${FILESDIR}/${P}-fix-docs-location.patch" \
+	       "${FILESDIR}/${P}-fix-introspection.patch"
 	eautoreconf
 
 	gnome2_src_prepare
+
+	cd "${PYTHON_S}" || die
+	epatch "${FILESDIR}/${P}-fix-python-setup.py.patch"
+}
+
+src_compile() {
+	gnome2_src_compile
+
+	if use python; then
+		cd "${PYTHON_S}" || die
+		CFLAGS="${CFLAGS} -I\"${S}\"/src" LDFLAGS="${LDFLAGS} -L\"${S}\"/src/.libs" distutils-r1_src_compile
+	fi
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use python; then
+		cd "${PYTHON_S}" || die
+		distutils-r1_src_install
+	fi
 }
