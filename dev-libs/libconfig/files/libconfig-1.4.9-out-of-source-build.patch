@@ -1,0 +1,17 @@
+diff -ur libconfig-1.4.9.orig/tests/Makefile.am libconfig-1.4.9/tests/Makefile.am
+--- libconfig-1.4.9.orig/tests/Makefile.am	2011-08-04 05:36:33.000000000 +0200
++++ libconfig-1.4.9/tests/Makefile.am	2013-04-01 21:50:54.413811947 +0200
+@@ -3,10 +3,10 @@
+ 
+ libconfig_tests_SOURCES = tests.c
+ 
+-libconfig_tests_CPPFLAGS = -I../tinytest -I../lib
++libconfig_tests_CPPFLAGS = -I$(top_srcdir)/tinytest -I$(top_srcdir)/lib
+ 
+-libconfig_tests_LDADD = -L../tinytest -ltinytest \
+-	-L../lib/.libs -lconfig
++libconfig_tests_LDADD = -L$(top_builddir)/tinytest -ltinytest \
++	-L$(top_builddir)/lib/.libs -lconfig
+ 
+ 
+ EXTRA_DIST = \
