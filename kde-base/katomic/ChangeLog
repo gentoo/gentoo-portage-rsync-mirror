@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katomic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.241 2013/04/01 16:03:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.242 2013/04/02 20:51:31 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> katomic-4.10.1.ebuild:
+  Stable for ppc64, wrt to bug #462890
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> -katomic-4.10.0.ebuild,
   -katomic-4.9.5.ebuild:

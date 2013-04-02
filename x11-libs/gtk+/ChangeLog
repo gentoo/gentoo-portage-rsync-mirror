@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.647 2013/04/01 18:25:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.648 2013/04/02 20:52:48 pacho Exp $
+
+  02 Apr 2013; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.17.ebuild:
+  Add missing x11-themes/hicolor-icon-theme DEPEND for tests (#461768 by Roman
+  Zilka and Patrick Lauer)
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.16.ebuild:
   Stable for sparc, wrt bug #458984

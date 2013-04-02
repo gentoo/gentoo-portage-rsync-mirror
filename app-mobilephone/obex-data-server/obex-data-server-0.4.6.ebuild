@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.6.ebuild,v 1.7 2013/02/28 15:45:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.6.ebuild,v 1.8 2013/04/02 20:55:49 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://tadas.dailyda.com/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 x86"
 
 IUSE="debug gtk imagemagick usb"
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.77 2013/03/28 22:21:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.78 2013/04/02 20:58:42 pacho Exp $
+
+  02 Apr 2013; Pacho Ramos <pacho@gentoo.org> gnome-disk-utility-3.8.0.ebuild:
+  Fix g-s-d dependency, bug #463912 by Chris Mayo
 
 *gnome-disk-utility-3.8.0 (28 Mar 2013)
 

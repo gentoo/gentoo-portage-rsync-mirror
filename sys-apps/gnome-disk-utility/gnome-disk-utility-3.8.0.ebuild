@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.8.0.ebuild,v 1.1 2013/03/28 22:21:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.8.0.ebuild,v 1.2 2013/04/02 20:58:42 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=x11-libs/libnotify-0.7
 	>=x11-themes/gnome-icon-theme-symbolic-2.91
 	fat? ( sys-fs/dosfstools )
-	gnome? ( >=gnome-base/gnome-settings-daemon-3.6 )
+	gnome? ( >=gnome-base/gnome-settings-daemon-3.8 )
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.50

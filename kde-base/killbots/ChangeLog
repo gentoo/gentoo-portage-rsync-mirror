@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/killbots
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.136 2013/04/01 16:03:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.137 2013/04/02 20:51:33 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> killbots-4.10.1.ebuild:
+  Stable for ppc64, wrt to bug #462890
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> -killbots-4.10.0.ebuild,
   -killbots-4.9.5.ebuild:

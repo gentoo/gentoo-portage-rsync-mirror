@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.7.2.ebuild,v 1.10 2013/02/24 13:25:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.7.2.ebuild,v 1.11 2013/04/02 20:56:06 ago Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="!tao? ( http://download.dre.vanderbilt.edu/previous_versions/ACE-${PV}.
 
 LICENSE="ACE BSD BSD-4 BSD-2 tao? ( sun-iiop RSA )"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="X ipv6 tao ciao"
 
 COMMON_DEPEND="dev-libs/openssl"

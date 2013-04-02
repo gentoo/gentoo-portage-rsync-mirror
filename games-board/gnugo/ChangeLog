@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnugo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.31 2013/01/31 09:11:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.32 2013/04/02 20:56:22 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gnugo-3.9.1.ebuild:
+  Stable for ppc64, wrt bug #462890
 
   31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -gnugo-3.8.ebuild:
   old

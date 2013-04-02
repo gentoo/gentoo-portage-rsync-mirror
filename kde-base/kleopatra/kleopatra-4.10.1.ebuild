@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.10.1.ebuild,v 1.4 2013/04/01 13:06:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.10.1.ebuild,v 1.5 2013/04/02 20:51:26 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="Kleopatra - KDE X.509 key manager"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

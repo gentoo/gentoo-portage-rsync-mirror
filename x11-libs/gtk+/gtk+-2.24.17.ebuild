@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.17.ebuild,v 1.1 2013/03/19 03:09:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.17.ebuild,v 1.2 2013/04/02 20:52:48 pacho Exp $
 
 EAPI="5"
 
@@ -54,6 +54,7 @@ DEPEND="${COMMON_DEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 	>=dev-util/gtk-doc-am-1.11
 	test? (
+		x11-themes/hicolor-icon-theme
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )"
 # gtk+-2.24.8 breaks Alt key handling in <=x11-libs/vte-0.28.2:0

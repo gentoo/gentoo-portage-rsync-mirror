@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.2.ebuild,v 1.8 2013/03/02 20:00:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.2.ebuild,v 1.9 2013/04/02 20:56:12 ago Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ else
 	# upstream has no permissions to use some kde written code so repack git
 	# repo every time
 	SRC_URI="http://dev.gentoo.org/~creffett/${P}.tar.xz"
-	KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
 LICENSE="LGPL-2"
