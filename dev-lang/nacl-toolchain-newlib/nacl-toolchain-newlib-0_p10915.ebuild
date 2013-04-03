@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p10915.ebuild,v 1.1 2013/02/28 04:44:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p10915.ebuild,v 1.2 2013/04/03 18:26:51 floppym Exp $
 
 EAPI="4"
 
@@ -84,6 +84,12 @@ src_prepare() {
 
 	# Parallel build failure, bug #437048.
 	epatch "${FILESDIR}/gcc-parallel-build-r0.patch"
+
+	cd "${S}/SRC/binutils" || die
+	epatch "${FILESDIR}/binutils-texinfo-r0.patch"
+
+	cd "${S}/SRC/gcc" || die
+	epatch "${FILESDIR}/gcc-texinfo-r0.patch"
 }
 
 src_compile() {

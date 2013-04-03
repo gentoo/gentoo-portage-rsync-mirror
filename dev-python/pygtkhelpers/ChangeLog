@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtkhelpers
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkhelpers/ChangeLog,v 1.4 2012/01/11 23:38:52 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkhelpers/ChangeLog,v 1.5 2013/04/03 18:04:32 ago Exp $
+
+  03 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pygtkhelpers-0.4.3.ebuild:
+  Stable for amd64, wrt bug #457898
 
 *pygtkhelpers-0.4.3 (11 Jan 2012)
 
@@ -23,4 +26,3 @@
   23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +pygtkhelpers-0.4.1.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-

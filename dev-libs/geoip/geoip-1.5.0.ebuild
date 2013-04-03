@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.0.ebuild,v 1.1 2013/03/09 17:31:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.0.ebuild,v 1.2 2013/04/03 18:07:03 jer Exp $
 
 EAPI=5
 
@@ -59,11 +59,11 @@ src_install() {
 
 	insinto /usr/share/GeoIP
 	doins "${WORKDIR}/GeoIPASNum.dat"
-	use city && doins "${WORKDIR}/GeoLiteCity.dat"
+	use city && newins "${WORKDIR}"/GeoLiteCity.dat GeoIPCity.dat
 
 	if use ipv6; then
 		doins "${WORKDIR}/GeoIPv6.dat"
-		use city && doins "${WORKDIR}/GeoLiteCityv6.dat"
+		use city && newins "${WORKDIR}"/GeoLiteCityv6.dat GeoIPCityv6.dat
 	fi
 
 	newsbin "${FILESDIR}/geoipupdate-r2.sh" geoipupdate.sh

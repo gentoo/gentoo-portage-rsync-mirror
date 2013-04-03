@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.3.1.201212250029.ebuild,v 1.1 2013/03/02 03:32:55 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.3.1.201212250029.ebuild,v 1.2 2013/04/03 18:14:01 creffett Exp $
 
 EAPI=5
 
@@ -11,7 +11,8 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A brainstorming and mind mapping software tool."
 HOMEPAGE="http://www.xmind.net"
-SRC_URI="http://dl2.xmind.net/xmind-downloads/${MY_P}.zip"
+SRC_URI="http://dl2.xmind.net/xmind-downloads/${MY_P}.zip
+	http://dev.gentoo.org/~creffett/distfiles/xmind-icons.tar.xz"
 LICENSE="EPL-1.0 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -64,7 +65,7 @@ src_install() {
 	local res
 		for res in 16 32 48; do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins "${FILESDIR}/xmind.${res}.png" xmind.png
+		newins "${WORKDIR}/xmind-icons/xmind.${res}.png" xmind.png
 	done
 
 	# insall MIME type

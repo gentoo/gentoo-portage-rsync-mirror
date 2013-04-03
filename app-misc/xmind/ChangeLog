@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/xmind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.1 2013/03/02 03:32:55 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.2 2013/04/03 18:14:01 creffett Exp $
+
+  03 Apr 2013; Chris Reffett <creffett@gentoo.org> -files/xmind.16.png,
+  -files/xmind.32.png, -files/xmind.48.png, xmind-3.3.1.201212250029.ebuild:
+  Move binary icon files to a tarball in my devspace wrt bug 464296.
 
 *xmind-3.3.1.201212250029 (02 Mar 2013)
 
