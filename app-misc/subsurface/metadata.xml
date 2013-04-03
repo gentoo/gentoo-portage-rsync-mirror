@@ -2,14 +2,19 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
+    <email>me@bearsh.org</email>
+    <name>Martin Gysel</name>
+    <description>Proxy maintainer. Assign bugs to him.</description>    
+  </maintainer>
+  <maintainer>
     <email>bmangentoo@gmail.com</email>
     <name>Aaron Bauman</name>
-    <description>Proxy maintainer. Assign bugs to him.</description>
+    <description>Proxy maintainer. Please CC bugs to him.</description>
   </maintainer>
   <maintainer>
     <email>TomWij@gentoo.org</email>
     <name>Tom Wijsman</name>
-    <description>Committer. CC bugs to him.</description>
+    <description>Committer. Please CC bugs to him.</description>
   </maintainer>
   <herd>proxy-maintainers</herd>
   <longdescription lang="en">
@@ -17,5 +22,7 @@
   </longdescription>
   <use>
     <flag name="map">Adds support for OpenStreetMap maps that can be used with your dive logs.</flag>
+    <flag name="linguas_de_CH">Language support for de_CH</flag>
+    <flag name="linguas_hr_HR">Language support for hr_HR</flag>
   </use>
 </pkgmetadata>

@@ -1,17 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-9999.ebuild,v 1.1 2013/03/28 19:17:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-9999.ebuild,v 1.2 2013/04/03 21:16:11 tomwij Exp $
 
 EAPI="5"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://subsurface.hohndel.org/subsurface.git"
 	GIT_ECLASS="git-2"
-	KEYWORDS=""
-	SRC_URI=""
 	LIBDC_V="0.3.0"
 else
-	#SRC_URI="http://git.hohndel.org/?p=subsurface.git;a=snapshot;h=v${PV};sf=tgz -> ${P}.tar.gz"
 	SRC_URI="http://subsurface.hohndel.org/downloads/Subsurface-${PV}.tgz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 	LIBDC_V="0.3.0"
@@ -19,11 +16,17 @@ fi
 
 inherit eutils gnome2-utils ${GIT_ECLASS}
 
+LINGUAS="bg bg_BG de de_DE de_CH es es_ES fi fi_FI fr fr_FR hr hr_HR it it_IT
+	nb nb_NO nl nl_NL nn no ru ru_RU sk sk_SK sv sv_SE"
+
 DESCRIPTION="An open source dive log program"
 HOMEPAGE="http://subsurface.hohndel.org"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc map usb"
+for LINGUA in ${LINGUAS}; do
+	IUSE+=" linguas_${LINGUA}"
+done
 
 RDEPEND="dev-libs/glib:2
 	dev-libs/libxml2
@@ -32,6 +35,7 @@ RDEPEND="dev-libs/glib:2
 	gnome-base/gconf:2
 	map? ( sci-geosciences/osm-gps-map )
 	net-libs/libsoup:2.4
+	sys-libs/glibc
 	virtual/libusb
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
@@ -49,24 +53,27 @@ src_unpack() {
 		git-2_src_unpack
 	elif [[ "${SRC_URI}" == *git* ]]; then
 		unpack ${A}
-		mv subsurface-v${PV}-* ${P} || die "failed to mv the failes to ${P}"
+		mv subsurface-v${PV}-* ${P} || die "Failed to mv the failes to ${P}."
 	else
-		mkdir "${P}" && cd "${P}" || die "failed to create/change to ${P}"
+		mkdir "${P}" && cd "${P}" || die "Failed to create/change to ${P}."
 		unpack ${A}
 	fi
 }
 
 src_prepare() {
-	# don't hardcode gcc
-	sed -i 's|CC\=gcc||' Makefile || die "failed to fix gcc hardcode issues"
-	# don't hardcode CFLAGS
-	sed -i 's|CFLAGS\=.*||' Makefile || die "failed to fix hardcoded CFLAGS"
-	# don't call gtk_update_icon_cache
-	sed -i -e "s|\$(gtk_update_icon_cache)|:|" Makefile || die "failed to disable gtk_update_icon_cache call"
+	# Don't hardcode gcc.
+	sed -i 's|CC\=gcc||' Makefile || die "Failed to fix gcc hardcode issues."
+
+	# Don't hardcode CFLAGS.
+	sed -i 's|CFLAGS\=.*||' Makefile || die "Failed to fix hardcoded CFLAGS."
+
+	# Don't call gtk_update_icon_cache.
+	sed -i -e "s|\$(gtk_update_icon_cache)|:|" Makefile || die "Failed to disable gtk_update_icon_cache call."
 }
 
 src_compile() {
 	emake CC=$(tc-getCC)
+
 	if use doc; then
 		emake doc
 	fi
