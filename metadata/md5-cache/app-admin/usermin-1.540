@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst unpack
+DEFINED_PHASES=install postinst prepare
 DEPEND=dev-lang/perl
 DESCRIPTION=A web-based user administration interface
 EAPI=5
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/perl sys-process/lsof ssl? ( dev-perl/Net-SSLeay )
 SLOT=0
 SRC_URI=mirror://sourceforge/webadmin/usermin-1.540.tar.gz
 _eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d57dce209e46f7fefcc4bf0d70c7384b
+_md5_=66e17316700a95eade512f974b0f3167

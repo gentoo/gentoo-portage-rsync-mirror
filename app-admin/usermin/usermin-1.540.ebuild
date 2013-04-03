@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.540.ebuild,v 1.1 2013/03/13 21:24:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.540.ebuild,v 1.2 2013/04/03 02:24:22 tomwij Exp $
 
 EAPI="5"
 
@@ -24,11 +24,7 @@ RDEPEND="${DEPEND}
 
 #	 pam? ( dev-perl/Authen-PAM )
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-
+src_prepare() {
 	# Point to the correct mysql location
 	sed -i -e "s:/usr/local/mysql:/usr:g" mysql/config
 
