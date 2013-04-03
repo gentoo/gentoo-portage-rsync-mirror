@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-calendar
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/ChangeLog,v 1.9 2007/03/13 00:25:50 nattfodd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/ChangeLog,v 1.10 2013/04/03 22:23:08 ulm Exp $
+
+  03 Apr 2013; Ulrich Müller <ulm@gentoo.org> latex-calendar-3.1.ebuild:
+  Fix LICENSE, bug 464114. Minor QA fixes to make repoman happy.
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
