@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-novaclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/ChangeLog,v 1.8 2013/03/20 17:37:31 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/ChangeLog,v 1.9 2013/04/03 16:06:27 prometheanfire Exp $
+
+*python-novaclient-2.13.0 (03 Apr 2013)
+
+  03 Apr 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +python-novaclient-2.13.0.ebuild:
+  just a bump of python-novaclient to 2.13.0
 
 *python-novaclient-2.11.1-r1 (20 Mar 2013)
 
