@@ -16,6 +16,7 @@
 		<flag name='mythnetvision'>Adds the ability to view netvision devices within MythTV</flag>
 		<flag name='mythnews'>Adds a news viewer within MythTV</flag>
 		<flag name='mythweather'>Adds weather information within MythTV</flag>
+		<flag name='mythzoneminder'>Adds support for zoneminder (requires a server with the appropriate mythtv daemon somewhere on the network).</flag>
 	</use>
 </pkgmetadata>
 

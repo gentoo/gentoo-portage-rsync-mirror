@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.26.0_p20130322.ebuild,v 1.1 2013/03/29 20:54:22 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.26.0_p20130322.ebuild,v 1.2 2013/04/03 12:42:15 rich0 Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 MYTHPLUGINS="mytharchive mythbrowser mythgallery mythgame \
-mythmusic mythnetvision mythnews mythweather"
+mythmusic mythnetvision mythnews mythweather mythzoneminder"
 
 IUSE="${MYTHPLUGINS} cdda cdr exif fftw raw"
 
@@ -108,7 +108,7 @@ src_configure() {
 		--prefix=/usr \
 		--python=python2 \
 		--enable-opengl \
-		--disable-mythzoneminder \
+		$(use_enable mythzoneminder) \
 		$(use_enable mytharchive) \
 		$(use_enable mythbrowser) \
 		$(use_enable mythgallery) \

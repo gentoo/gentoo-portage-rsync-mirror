@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythplugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.12 2013/03/29 20:54:22 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.13 2013/04/03 12:42:15 rich0 Exp $
+
+  03 Apr 2013; Richard Freeman <rich0@gentoo.org>
+  mythplugins-0.26.0_p20130322.ebuild, metadata.xml:
+  Add zoneminder support to latest version.
 
 *mythplugins-0.26.0_p20130322 (29 Mar 2013)
 

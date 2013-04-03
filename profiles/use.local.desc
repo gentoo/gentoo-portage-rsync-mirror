@@ -3106,6 +3106,7 @@ media-plugins/mythplugins:mythmusic - Adds the ability for MythTV to act as a mu
 media-plugins/mythplugins:mythnetvision - Adds the ability to view netvision devices within MythTV
 media-plugins/mythplugins:mythnews - Adds a news viewer within MythTV
 media-plugins/mythplugins:mythweather - Adds weather information within MythTV
+media-plugins/mythplugins:mythzoneminder - Adds support for zoneminder (requires a server with the appropriate mythtv daemon somewhere on the network).
 media-plugins/mythplugins:raw - Allows MythGallery to view photos saved in RAW format
 media-plugins/vdr-burn:dvdarchive - DMH DVD - Archive
 media-plugins/vdr-burn:projectx - Enables support for media-video/projectx
