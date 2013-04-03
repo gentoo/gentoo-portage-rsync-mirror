@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/emacs-updater
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.66 2013/03/20 20:32:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.67 2013/04/03 16:33:02 grobian Exp $
+
+  03 Apr 2013; Fabian Groffen <grobian@gentoo.org> emacs-updater-1.13.ebuild:
+  Marked ~x64-macos, bug #419199
 
 *emacs-updater-1.13 (20 Mar 2013)
 
@@ -245,4 +248,3 @@
   +emacs-updater-1.0.ebuild:
   Initial import of stand-alone emacs-updater, package split off from
   app-admin/eselect-emacs.
-

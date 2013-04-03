@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.2-r1.ebuild,v 1.1 2013/03/26 07:35:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.2-r1.ebuild,v 1.2 2013/04/03 16:55:39 ulm Exp $
 
 EAPI=5
 
@@ -20,7 +20,8 @@ if [[ -z ${PV%%*9999} ]]; then
 	SRC_URI=""
 else
 	MY_P="${P/_/.}"
-	SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
+	SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz
+		mirror://gentoo/${PN}.info-${PV}.tar.xz"
 fi
 
 LICENSE="gnuplot GPL-2 bitmap? ( free-noncomm )"
