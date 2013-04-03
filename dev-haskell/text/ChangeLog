@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.27 2013/03/31 10:28:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.28 2013/04/03 09:28:19 gienah Exp $
+
+  03 Apr 2013; Mark Wright <gienah@gentoo.org> text-0.11.2.2.ebuild:
+  Fix Bug 462310 - dev-haskell/text-0.11.2.2 - setup: At least the following
+  dependencies are missing: integer-gmp >=0.2 && <0.5
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> text-0.11.2.3.ebuild:
   Stable for sparc, wrt bug #456520
