@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.130 2013/04/03 20:28:11 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.131 2013/04/03 21:47:12 mabi Exp $
+
+  03 Apr 2013; Matti Bickel <mabi@gentoo.org> adodb-5.18.ebuild:
+  much nicer way of installing required files, thanks to floppym for the idea
 
   03 Apr 2013; Matti Bickel <mabi@gentoo.org> adodb-5.18.ebuild:
   fix whitespace

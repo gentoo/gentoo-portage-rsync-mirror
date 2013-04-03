@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.18.ebuild,v 1.2 2013/04/03 20:28:11 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.18.ebuild,v 1.3 2013/04/03 21:47:12 mabi Exp $
 
 EAPI=4
 
@@ -26,16 +26,10 @@ pkg_setup() {
 }
 
 src_install() {
-	# install php files
-	local INSTDIR="/usr/share/php/${PN}"
-	insinto "$INSTDIR"
-	doins -r ./*
-
-	for f in $DOCS ; do
-		rm "${INSTDIR}/${f}"
-	done
-	rm -rf "${INSTDIR}/cute_icons_for_site"
-	find "${D}" -type d -empty -exec rm -r {} \+
+	# install php and xsl files
+	dodir "/usr/share/php/${PN}"
+	find . \( -name '*.php' -o -name '*.xsl' \) -exec tar -c '{}' \+ \
+		| tar -x -C "${D}/usr/share/php/${PN}"
 
 	default_src_install # copy DOCS
 }

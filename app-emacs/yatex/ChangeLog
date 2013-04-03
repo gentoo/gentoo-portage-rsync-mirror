@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/yatex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.41 2012/10/17 11:26:05 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.42 2013/04/03 21:50:25 ulm Exp $
+
+*yatex-1.77 (03 Apr 2013)
+
+  03 Apr 2013; Ulrich Müller <ulm@gentoo.org> -files/yatex-1.73-gentoo.patch,
+  -yatex-1.74.ebuild, +yatex-1.77.ebuild, +files/yatex-1.77-texinfo-5.patch:
+  Version bump. Fix build failure with texinfo-5.1, bug 464316. Remove old.
 
   17 Oct 2012; Anthony G. Basile <blueness@gentoo.org> yatex-1.76.ebuild:
   stable ppc, bug #433187
