@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta4.ebuild,v 1.1 2013/02/06 12:34:24 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta4-r1.ebuild,v 1.1 2013/04/03 19:10:39 wschlich Exp $
 
 EAPI=4
 
@@ -76,10 +76,12 @@ src_install() {
 	fowners nsd:nsd /var/lib/nsd
 	fperms 750 /var/lib/nsd
 
-	# install munin plugin
+	# install munin plugin and config
 	if use munin; then
 		exeinto /usr/libexec/munin/plugins
 		doexe contrib/nsd_munin_
+		insinto /etc/munin/plugin-conf.d
+		newins "${FILESDIR}"/nsd.munin-conf nsd_munin
 	fi
 
 	# remove the /run directory that usually resides on tmpfs and is
