@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/arduino
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.14 2013/02/07 21:49:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.15 2013/04/03 20:18:11 miknix Exp $
+
+*arduino-1.0.4 (03 Apr 2013)
+
+  03 Apr 2013; Angelo Arrifano <miknix@gentoo.org> -arduino-1.0.3-r1.ebuild,
+  +arduino-1.0.4.ebuild:
+  Version bump, #462558
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> arduino-1.0.3-r1.ebuild:
   Move Creative Commons licenses to shorter names.

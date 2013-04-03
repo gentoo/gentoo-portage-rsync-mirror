@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/adodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.128 2013/03/16 17:02:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.130 2013/04/03 20:28:11 mabi Exp $
+
+  03 Apr 2013; Matti Bickel <mabi@gentoo.org> adodb-5.18.ebuild:
+  fix whitespace
+
+*adodb-5.18 (03 Apr 2013)
+
+  03 Apr 2013; Matti Bickel <mabi@gentoo.org> +adodb-5.18.ebuild,
+  -adodb-5.14.ebuild, -adodb-5.17.ebuild:
+  cleanup, version bump
 
   16 Mar 2013; Jeroen Roovers <jer@gentoo.org> adodb-5.17-r1.ebuild:
   Stable for HPPA (bug #461152).
