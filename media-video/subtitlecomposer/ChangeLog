@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitlecomposer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.12 2013/03/04 18:33:44 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.13 2013/04/03 11:31:08 pinkbyte Exp $
+
+  03 Apr 2013; Sergey Popov <pinkbyte@gentoo.org>
+  subtitlecomposer-0.5.3-r1.ebuild:
+  Stable on amd64, wrt bug #464294
 
   04 Mar 2013; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Add KDE herd.

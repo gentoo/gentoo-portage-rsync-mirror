@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/mendeleydesktop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.10 2013/03/02 23:26:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.11 2013/04/03 11:02:18 miknix Exp $
+
+*mendeleydesktop-1.8.3 (03 Apr 2013)
+
+  03 Apr 2013; Angelo Arrifano <miknix@gentoo.org> -mendeleydesktop-1.8.ebuild,
+  +mendeleydesktop-1.8.3.ebuild:
+  Version bump #461040
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mendeleydesktop-1.8.ebuild:
   Move Qt dependencies to the new category

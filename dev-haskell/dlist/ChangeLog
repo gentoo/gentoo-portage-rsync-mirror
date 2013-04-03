@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/dlist
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/ChangeLog,v 1.3 2012/12/22 21:27:49 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/ChangeLog,v 1.4 2013/04/03 11:25:43 gienah Exp $
+
+  03 Apr 2013; Mark Wright <gienah@gentoo.org> dlist-0.5-r1.ebuild:
+  dlist is a dep of data-default which is a dep of dev-haskell/x11 - dlist and
+  x11 were written by the same author
 
 *dlist-0.5-r1 (22 Dec 2012)
 
