@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fotoxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.49 2013/03/22 06:20:18 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.50 2013/04/03 14:40:58 grozin Exp $
+
+*fotoxx-13.04 (03 Apr 2013)
+
+  03 Apr 2013; Andrey Grozin <grozin@gentoo.org> -fotoxx-13.02.ebuild,
+  -files/fotoxx-13.02.patch, +fotoxx-13.04.ebuild, +files/fotoxx-13.04.patch:
+  Version bump
 
   22 Mar 2013; Andrey Grozin <grozin@gentoo.org> files/fotoxx-13.03.patch:
   Fix linking with gold (bug #462286), thanks to Adrian.Bassett@hotmail.co.uk
