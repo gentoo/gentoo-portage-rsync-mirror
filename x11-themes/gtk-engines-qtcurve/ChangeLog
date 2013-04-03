@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.126 2013/01/17 05:24:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.127 2013/04/03 17:51:04 ago Exp $
+
+  03 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  gtk-engines-qtcurve-1.8.16.ebuild:
+  Stable for amd64, wrt bug #464342
 
 *gtk-engines-qtcurve-1.8.16 (17 Jan 2013)
 

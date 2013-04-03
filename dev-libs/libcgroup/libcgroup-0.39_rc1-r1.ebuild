@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.39_rc1-r1.ebuild,v 1.2 2013/01/05 11:24:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.39_rc1-r1.ebuild,v 1.3 2013/04/03 17:50:24 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/project/libcg/${PN}/v0.39.rc/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="+daemon debug pam static-libs +tools debug"
 
 RDEPEND="pam? ( virtual/pam )"

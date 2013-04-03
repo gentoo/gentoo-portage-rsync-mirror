@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.6.ebuild,v 1.1 2013/03/22 17:30:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.6.ebuild,v 1.2 2013/04/03 17:49:49 aballier Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
-	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
+	aac aacplus alsa amr +avresample bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gnutls gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca
 	libv4l modplug mp3 network openal openssl opus oss pic pulseaudio rtmp

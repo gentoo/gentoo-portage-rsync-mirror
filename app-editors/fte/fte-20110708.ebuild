@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20110708.ebuild,v 1.1 2013/03/13 22:30:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20110708.ebuild,v 1.2 2013/04/03 17:57:32 tomwij Exp $
 
 EAPI="5"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Lightweight text-mode editor"
-HOMEPAGE="http://${PN}.sourceforge.net"
+HOMEPAGE="http://fte.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
 	mirror://sourceforge/${PN}/${P}-common.zip"
 
