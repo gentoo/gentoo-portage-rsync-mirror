@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bcm2835/bcm2835-1.17.ebuild,v 1.1 2013/01/22 18:50:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bcm2835/bcm2835-1.25.ebuild,v 1.1 2013/04/03 13:48:29 chithanh Exp $
 
 EAPI=4
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.50 2013/02/25 12:07:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.51 2013/04/03 13:44:00 polynomial-c Exp $
+
+*cifs-utils-6.0 (03 Apr 2013)
+
+  03 Apr 2013; Lars Wendler <polynomial-c@gentoo.org> +cifs-utils-6.0.ebuild:
+  Non-maintainer commit: Version bump.
 
 *cifs-utils-5.9-r1 (25 Feb 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.104 2013/03/30 13:21:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.105 2013/04/03 13:52:49 floppym Exp $
+
+*django-1.5-r1 (03 Apr 2013)
+
+  03 Apr 2013; Mike Gilbert <floppym@gentoo.org> +django-1.5-r1.ebuild,
+  -django-1.5.ebuild, django-9999.ebuild:
+  Fix src_install function, bug 464270 by Tom Samstag.
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> django-1.5.ebuild,
   django-9999.ebuild:
