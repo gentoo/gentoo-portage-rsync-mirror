@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.2.0.ebuild,v 1.4 2012/12/06 17:31:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.2.0.ebuild,v 1.5 2013/04/03 08:59:47 patrick Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -26,13 +26,14 @@ RDEPEND="dev-python/numpy
 	>=dev-python/traitsui-4
 	>=media-libs/freetype-2
 	virtual/opengl
+	virtual/glu
 	x11-libs/libX11"
-DEPEND="dev-python/setuptools
+DEPEND="${RDEPEND}
+	dev-python/setuptools
 	dev-lang/swig
 	dev-python/cython
 	doc? ( dev-python/sphinx )
 	test? (
-		${RDEPEND}
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"

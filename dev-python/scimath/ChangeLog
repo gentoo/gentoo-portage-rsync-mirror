@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/scimath
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/ChangeLog,v 1.13 2012/12/06 19:16:15 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/ChangeLog,v 1.14 2013/04/03 08:50:40 patrick Exp $
+
+*scimath-4.1.2 (03 Apr 2013)
+
+  03 Apr 2013; Patrick Lauer <patrick@gentoo.org> +scimath-4.1.2.ebuild:
+  Bump
 
   06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> scimath-4.1.0.ebuild:
   Keyword amd64-linux and x86-linux
