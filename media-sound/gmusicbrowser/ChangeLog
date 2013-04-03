@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmusicbrowser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/ChangeLog,v 1.21 2013/03/02 18:46:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/ChangeLog,v 1.22 2013/04/03 15:06:47 hasufell Exp $
+
+  03 Apr 2013; Julian Ospald <hasufell@gentoo.org> gmusicbrowser-9999.ebuild:
+  fix live ebuild
 
   02 Mar 2013; Julian Ospald <hasufell@gentoo.org> gmusicbrowser-9999.ebuild:
   update live ebuild

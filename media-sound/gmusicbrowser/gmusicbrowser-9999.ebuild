@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.7 2013/03/02 18:46:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.8 2013/04/03 15:06:47 hasufell Exp $
 
 EAPI=5
 
@@ -40,8 +40,7 @@ DEPEND="sys-devel/gettext
 	doc? ( dev-perl/Text-Markdown )"
 
 src_compile() {
-	default
-	Markdown.pl layout_doc.mkd > layout_doc.html
+	emake MARKDOWN=$(usex doc "Markdown.pl" "echo")
 }
 
 src_install() {
