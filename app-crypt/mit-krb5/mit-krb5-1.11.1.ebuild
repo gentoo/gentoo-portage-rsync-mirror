@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.11.1.ebuild,v 1.12 2013/03/06 10:23:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.11.1.ebuild,v 1.13 2013/04/03 07:18:05 eras Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="doc +keyutils openldap +pkinit +threads test xinetd"
 
 RDEPEND="!!app-crypt/heimdal
 	>=sys-libs/e2fsprogs-libs-1.41.0
-	dev-libs/libverto
+	|| ( dev-libs/libverto[libev] dev-libs/libverto[libevent] dev-libs/libverto[tevent] )
 	keyutils? ( sys-apps/keyutils )
 	openldap? ( net-nds/openldap )
 	pkinit? ( dev-libs/openssl )

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/swaks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.23 2013/03/27 15:30:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.24 2013/04/03 07:25:08 eras Exp $
+
+  03 Apr 2013; Eray Aslan <eras@gentoo.org> -swaks-20120320.0.ebuild:
+  Remove old
 
   27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> swaks-20130209.0.ebuild:
   Stable for x86, wrt bug #462822
