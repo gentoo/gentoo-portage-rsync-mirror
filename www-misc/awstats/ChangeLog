@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/awstats
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.33 2012/11/15 12:23:20 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.34 2013/04/03 10:09:04 flameeyes Exp $
+
+*awstats-7.1.1 (03 Apr 2013)
+
+  03 Apr 2013; Diego E. Pettenò <flameeyes@gentoo.org> +awstats-7.1.1.ebuild,
+  -awstats-7.1-r2.ebuild:
+  Version bump; remove old.
 
   15 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   awstats-7.1_p20121017.ebuild:
