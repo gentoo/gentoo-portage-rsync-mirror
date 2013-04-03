@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14-r2.ebuild,v 1.1 2013/04/03 10:48:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14-r2.ebuild,v 1.2 2013/04/03 17:06:29 jlec Exp $
 
 EAPI=5
 
@@ -55,34 +55,34 @@ src_configure() {
 #		$(use_enable test extended-tests)
 		)
 	autotools-utils_src_configure
-	python_copy_sources
+	use introspection && python_copy_sources
 }
 
 src_compile() {
 	autotools-utils_src_compile
 
 	compilation() {
-		cd "${BUILD_DIR}"/bindings || die
+		cd bindings || die
 		emake \
 			pyexecdir="$(python_get_sitedir)"
 	}
-	use introspection && python_foreach_impl compilation
+	use introspection && python_foreach_impl run_in_build_dir compilation
 }
 
 src_install() {
 	autotools-utils_src_install
 
+	if use examples; then
+		insinto /usr/share/doc/${PN}/
+		doins -r examples
+	fi
+
 	installation() {
-		cd "${BUILD_DIR}"/bindings || die
+		cd bindings || die
 		emake \
 			PYGI_OVERRIDES_DIR="$(python_get_sitedir)"/gi/overrides \
 			DESTDIR="${D}" \
 			install
 	}
-	use introspection && python_foreach_impl installation
-
-	if use examples; then
-		insinto /usr/share/doc/${PN}/
-		doins -r examples
-	fi
+	use introspection && python_foreach_impl run_in_build_dir installation
 }

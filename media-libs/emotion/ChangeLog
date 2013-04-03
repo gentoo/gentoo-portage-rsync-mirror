@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/emotion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/ChangeLog,v 1.10 2013/04/02 19:40:10 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/ChangeLog,v 1.11 2013/04/03 17:17:16 tommy Exp $
+
+  03 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/respect-ldflags-with-gstreamer-backend.patch, emotion-1.7.4-r1.ebuild:
+  Add missing respect for LDFLAGS var, when using gstreamer backend, fixes bug
+  464066
 
 *emotion-1.7.4-r1 (02 Apr 2013)
 

@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.4-r1.ebuild,v 1.1 2013/04/02 19:40:10 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.4-r1.ebuild,v 1.2 2013/04/03 17:17:16 tommy Exp $
 
-inherit enlightenment
+EAPI=2
+
+inherit autotools enlightenment
 
 DESCRIPTION="video libraries for e17"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
@@ -25,7 +27,12 @@ DEPEND=">=media-libs/evas-1.7.4
 	)"
 RDEPEND=${DEPEND}
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/respect-ldflags-with-gstreamer-backend.patch
+	eautoreconf
+}
+
+src_configure() {
 	if ! use vlc && ! use xine && ! use gstreamer ; then
 		export MY_ECONF="--enable-xine --disable-gstreamer --disable-generic-vlc"
 	else
@@ -45,5 +52,5 @@ src_compile() {
 		addpredict "/root/.gconf"
 	fi
 
-	enlightenment_src_compile
+	enlightenment_src_configure
 }
