@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.12 2013/01/06 09:19:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.13 2013/04/03 05:29:37 gienah Exp $
+
+*gtk-0.12.4-r1 (03 Apr 2013)
+
+  03 Apr 2013; Mark Wright <gienah@gentoo.org> +files/gtk-0.12.0-ghc-7.2.patch,
+  +gtk-0.12.4-r1.ebuild, -gtk-0.12.3.1.ebuild, -gtk-0.12.3.ebuild,
+  -gtk-0.12.4.ebuild, gtk-0.12.0.ebuild:
+  Move gtk2hs to slot 2 fix bug 464260. Patch gtk-0.12.0 to fix bugs 464266 -
+  dev-haskell/gtk-0.12.0: build fails with >=ghc-7.4.1 Ambiguous module name and
+  455012 - dev-haskell/gtk-0.12.0: fails to build with glib-2.32
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gtk-0.12.4.ebuild:
   Add ~sparc, wrt bug #449220

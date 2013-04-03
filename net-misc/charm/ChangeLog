@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/charm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.8 2010/11/14 15:03:36 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.9 2013/04/03 05:30:08 patrick Exp $
+
+*charm-1.9.2 (03 Apr 2013)
+
+  03 Apr 2013; Patrick Lauer <patrick@gentoo.org> +charm-1.9.2.ebuild:
+  Bump
 
   14 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   charm-1.9.1.ebuild:
@@ -77,4 +82,3 @@
 
   08 Mar 2003; Alastair Tse <liquidx@gentoo.org> charm-1.3.0.ebuild:
   initial ebuild. thanks to Björn Lindström <bkhl@privat.utfors.se>.
-

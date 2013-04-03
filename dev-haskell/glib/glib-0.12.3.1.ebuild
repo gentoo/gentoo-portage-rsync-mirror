@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/glib-0.12.3.1.ebuild,v 1.5 2012/11/25 05:43:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/glib-0.12.3.1.ebuild,v 1.6 2013/04/03 05:26:58 gienah Exp $
 
 EAPI=4
 
@@ -13,14 +13,14 @@ HOMEPAGE="http://projects.haskell.org/gtk2hs/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="2"
 KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.10.1
 		dev-libs/glib:2"
 DEPEND="${RDEPEND}
-		dev-haskell/gtk2hs-buildtools"
+		dev-haskell/gtk2hs-buildtools:2"
 
 src_prepare() {
 	# c2hs ignores #if __GLASGOW_HASKELL__ >= 706

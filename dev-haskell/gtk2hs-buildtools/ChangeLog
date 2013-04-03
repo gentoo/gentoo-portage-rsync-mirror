@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/gtk2hs-buildtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.18 2013/01/06 09:19:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.19 2013/04/03 05:30:09 gienah Exp $
+
+*gtk2hs-buildtools-0.12.4-r2 (03 Apr 2013)
+
+  03 Apr 2013; Mark Wright <gienah@gentoo.org>
+  +gtk2hs-buildtools-0.12.4-r2.ebuild, -gtk2hs-buildtools-0.12.4-r1.ebuild,
+  -gtk2hs-buildtools-0.12.4.ebuild, gtk2hs-buildtools-0.12.0.ebuild,
+  gtk2hs-buildtools-0.12.3-r3.ebuild, gtk2hs-buildtools-0.12.3.1.ebuild:
+  Move gtk2hs to slot 2 fix bug 464260.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   gtk2hs-buildtools-0.12.4-r1.ebuild:
