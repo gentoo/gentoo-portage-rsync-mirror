@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emms
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.14 2010/08/09 20:19:30 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.15 2013/04/03 20:54:16 ulm Exp $
+
+  03 Apr 2013; Ulrich Müller <ulm@gentoo.org>
+  -files/2.0-taglib-Makefile-gentoo.patch, -emms-3.0.ebuild,
+  emms-3.0-r1.ebuild, +files/emms-3.0-texinfo-5.patch:
+  Fix build failure with texinfo-5.1, bug 464308. Update EAPI. Specify LICENSE
+  more precisely. Remove old.
 
 *emms-3.0-r1 (09 Aug 2010)
 
