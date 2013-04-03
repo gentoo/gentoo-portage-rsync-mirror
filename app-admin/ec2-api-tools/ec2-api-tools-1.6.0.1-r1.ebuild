@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.0.1.ebuild,v 1.1 2013/03/13 21:20:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.0.1-r1.ebuild,v 1.1 2013/04/03 00:59:13 tomwij Exp $
 
 EAPI="5"
 
@@ -15,29 +15,24 @@ S=${WORKDIR}/${PN}-${PV}
 LICENSE="Amazon"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-DEPEND="app-arch/unzip"
-RDEPEND="virtual/jre"
 RESTRICT="mirror"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}" || die
-	find . -name '*.cmd' -delete || die
+DEPEND="app-arch/unzip"
+RDEPEND="virtual/jre"
+
+src_prepare() {
+	find . -name '*.cmd' -delete || die "Failed to remove redundant cmd files."
 }
 
 src_install() {
-	dodir /opt/${PN}
-	insinto /opt/${PN}/lib
-	doins -r "${S}"/lib/*
-	exeinto /opt/${PN}/bin
-	doexe "${S}"/bin/*
+	exeinto /usr/bin
+	doexe bin/*
+
+	insinto /usr/lib
+	doins lib/*.jar
 
 	dodir /etc/env.d
-	cat - > "${T}"/99${PN} <<EOF
-EC2_HOME=/opt/${PN}
-PATH=/opt/${PN}/bin
-ROOTPATH=/opt/${PN}/bin
-EOF
+	echo "EC2_HOME=/usr" > "${T}"/99${PN} || die "Failed to write configuration variable."
 	doenvd "${T}"/99${PN}
 
 	dodoc THIRDPARTYLICENSE.TXT
@@ -47,7 +42,6 @@ pkg_postinst() {
 	ewarn "Remember to run: env-update && source /etc/profile if you plan"
 	ewarn "to use these tools in a shell before logging out (or restarting"
 	ewarn "your login manager)"
-	elog ""
 	elog ""
 	elog "You need to put the following in your ~/.bashrc replacing the"
 	elog "values with the full paths to your key and certificate."

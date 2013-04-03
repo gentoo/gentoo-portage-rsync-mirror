@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/ec2-api-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.16 2013/03/13 21:20:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.17 2013/04/03 00:59:13 tomwij Exp $
+
+*ec2-api-tools-1.6.0.1-r1 (03 Apr 2013)
+
+  03 Apr 2013; Tom Wijsman <TomWij@gentoo.org> +ec2-api-tools-1.6.0.1-r1.ebuild,
+  -ec2-api-tools-1.6.0.1.ebuild, metadata.xml:
+  Taking maintainership. Extensively tested, all commands run without giving an
+  immediate error. Replaced src_unpack phase by a EAPI 5 compliant src_prepare
+  phase. Revision bump as we now install to / instead of /opt, dropped ROOT and
+  ROOTPATH environment variables since the binaries are already accessible
+  through their defaults.
 
 *ec2-api-tools-1.6.0.1 (13 Mar 2013)
 
