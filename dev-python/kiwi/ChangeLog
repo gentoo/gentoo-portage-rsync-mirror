@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.22 2013/01/22 06:02:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.23 2013/04/03 05:57:38 patrick Exp $
+
+*kiwi-1.9.37 (03 Apr 2013)
+
+  03 Apr 2013; Patrick Lauer <patrick@gentoo.org> +kiwi-1.9.37.ebuild:
+  Bump
 
 *kiwi-1.9.36.2 (22 Jan 2013)
 
