@@ -1,32 +1,32 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.4.ebuild,v 1.2 2013/03/21 18:09:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.6.ebuild,v 1.1 2013/04/03 08:22:10 scarabeus Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit eutils webapp depend.php depend.apache
+inherit user eutils webapp depend.php depend.apache vcs-snapshot
 
 DESCRIPTION="Tiny Tiny RSS - A web-based news feed (RSS/Atom) aggregator using AJAX"
 HOMEPAGE="http://tt-rss.org/"
-SRC_URI="http://tt-rss.org/download/${P}.tar.gz"
+SRC_URI="https://github.com/gothfox/Tiny-Tiny-RSS/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="daemon mysql postgres"
+IUSE="daemon +mysql postgres"
 
-DEPEND=" daemon? ( dev-lang/php[mysql?,postgres?,pcntl,curl] )
-	!daemon? ( dev-lang/php[mysql?,postgres?,curl] )"
+DEPEND="
+	daemon? ( dev-lang/php[mysql?,postgres?,pcntl,curl] )
+	!daemon? ( dev-lang/php[mysql?,postgres?,curl] )
+"
 RDEPEND="${DEPEND}"
+
+REQUIRED_USE="|| ( mysql postgres )"
 
 need_httpd_cgi
 need_php_httpd
-use daemon && need_php_cli
 
 pkg_setup() {
 	webapp_pkg_setup
-
-	use mysql && require_php_with_use mysql
-	use postgres && require_php_with_use postgres
 
 	if use daemon; then
 			enewgroup ttrssd
@@ -40,11 +40,15 @@ src_prepare() {
 	mv config.php{-dist,} || die "Could not rename config.php-dist to config.php."
 
 	if use mysql && ! use postgres; then
-			sed -e "/define('DB_TYPE',/{s:pgsql:mysql:}" -i config.php || die "sed failed"
+			sed -i \
+				-e "/define('DB_TYPE',/{s:pgsql:mysql:}" \
+				config.php || die
 	fi
 
-	sed -e "/define('DB_TYPE',/{s:// \(or mysql\):// pgsql \1:}" -i config.php \
-			|| die "sed failed"
+	sed -i \
+		-e "/define('DB_TYPE',/{s:// \(or mysql\):// pgsql \1:}" \
+		config.php || die
+
 	# per 462578
 	epatch_user
 }
@@ -56,18 +60,17 @@ src_install() {
 	doins -r * || die "Could not copy the files to ${MY_HTDOCSDIR}."
 	keepdir "/${MY_HTDOCSDIR}"/feed-icons
 
-	insinto /etc/logrotate.d/
-	newins "${FILESDIR}"/ttrssd.logrotated ttrssd || die "Installing ttrssd logrotate config failed."
-
 	for DIR in cache cache/simplepie cache/images cache/export lock feed-icons; do
-			webapp_serverowned "${MY_HTDOCSDIR}/${DIR}"
+			webapp_serverowned -R "${MY_HTDOCSDIR}/${DIR}"
 	done
 
 	webapp_configfile "${MY_HTDOCSDIR}"/config.php
 	if use daemon; then
 			webapp_postinst_txt en "${FILESDIR}"/postinstall-en-with-daemon.txt
-			newinitd "${FILESDIR}"/ttrssd.initd ttrssd
-			newconfd "${FILESDIR}"/ttrssd.confd ttrssd
+			newinitd "${FILESDIR}"/ttrssd.initd-r1 ttrssd
+			newconfd "${FILESDIR}"/ttrssd.confd-r1 ttrssd
+			insinto /etc/logrotate.d/
+			newins "${FILESDIR}"/ttrssd.logrotated ttrssd
 	else
 			webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	fi
