@@ -8,4 +8,11 @@
 	<use>
 		<flag name="plugins">Enable support for installing plugins with <pkg>dev-vcs/git</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="github">gbin/err</remote-id>
+		<maintainer status="active">
+			<email>gbin@gootz.net</email>
+			<name>Guillaume BINET</name>
+		</maintainer>
+	</upstream>
 </pkgmetadata>

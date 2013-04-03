@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.15 2013/02/07 08:27:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.16 2013/04/03 10:48:51 jlec Exp $
+
+*dee-1.0.14-r2 (03 Apr 2013)
+
+  03 Apr 2013; Justin Lecher <jlec@gentoo.org> +dee-1.0.14-r2.ebuild:
+  Add correct handling of vala and introspection
 
 *dee-1.0.14-r1 (07 Feb 2013)
 
