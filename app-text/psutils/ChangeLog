@@ -1,6 +1,9 @@
 # ChangeLog for app-text/psutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.30 2013/04/02 14:38:51 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.31 2013/04/02 23:07:46 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> psutils-1.17-r2.ebuild:
+  Stable for hppa, wrt bug #460618
 
   02 Apr 2013; Chema Alonso <nimiux@gentoo.org> psutils-1.17-r2.ebuild:
   Stable for amd64 wrt bug #460618

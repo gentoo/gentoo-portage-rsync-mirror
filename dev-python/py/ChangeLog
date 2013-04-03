@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.139 2013/04/02 10:34:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.140 2013/04/02 23:06:29 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> py-1.4.12-r1.ebuild:
+  Stable for hppa, wrt bug #462852
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> py-1.4.12-r1.ebuild:
   Stable for sh, wrt bug #462852

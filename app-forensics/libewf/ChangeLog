@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.42 2013/03/26 18:11:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.43 2013/04/02 23:08:33 ago Exp $
+
+  02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libewf-20130128.ebuild:
+  Stable for hppa, wrt bug #463020
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libewf-20130128.ebuild:
   Stable for ppc, wrt bug #463020
