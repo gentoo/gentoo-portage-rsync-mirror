@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/yaala
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.17 2013/03/13 21:45:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.18 2013/04/03 14:26:31 tomwij Exp $
+
+*yaala-0.7.3-r1 (03 Apr 2013)
+
+  03 Apr 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/yaala-0.7.3-r1-correct-paths.patch, +yaala-0.7.3-r1.ebuild,
+  metadata.xml:
+  Taking maintainership. Bump: Added required perl dependencies and two optional
+  dependencies gd and storable as per the scripts and site which users, this
+  will bring more functionality to the user. Revised the install function to
+  install to the proper locations (eg. /etc), also added patches in src_prepare
+  such that the proper config and var directories are used by Yaala by default.
+  Also made the ebuild slightly more maintainable. Extensively tested.
 
   13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> yaala-0.6.3.ebuild,
   yaala-0.7.2.ebuild, yaala-0.7.3.ebuild:
