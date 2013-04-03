@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/opengl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.15 2012/11/18 12:53:31 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.16 2013/04/03 11:52:33 gienah Exp $
+
+*opengl-2.8.0.0 (03 Apr 2013)
+
+  03 Apr 2013; Mark Wright <gienah@gentoo.org> +opengl-2.8.0.0.ebuild,
+  metadata.xml:
+  Bump opengl to 2.8.0.0
 
 *opengl-2.6.0.1 (18 Nov 2012)
 
