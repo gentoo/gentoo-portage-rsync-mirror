@@ -1,0 +1,21 @@
+commit 8caf3656bf636fd9903b9c4abaf7a439dd65f7a4
+Author: Anton Berezin <tobez@tobez.org>
+Date:   Tue Jan 8 11:28:23 2013 +0100
+
+    Fix testing past the signature expiration date.
+    
+    Reported by:	Casper Gielen
+
+diff --git a/t/test.pl b/t/test.pl
+index d08997c..b69cd8d 100644
+--- a/t/test.pl
++++ b/t/test.pl
+@@ -129,7 +129,7 @@ like(shift @e, qr/DNAME must not have any children \(but z.zzzz5.galaxyplus.org.
+ is(+@e, 0, "no unaccounted errors");
+ #like(stdout, qr/validation errors: XX/, "error count");
+ 
+-run('./validns', @threads, '-s', 't/zones/example.sec.signed.with-errors');
++run('./validns', @threads, '-s', '-t1320094109', 't/zones/example.sec.signed.with-errors');
+ isnt(rc, 0, 'bad signed zone returns an error');
+ @e = split /\n/, stderr;
+ 

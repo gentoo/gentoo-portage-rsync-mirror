@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/validns/validns-0.6.ebuild,v 1.2 2013/04/02 08:27:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/validns/validns-0.6-r1.ebuild,v 1.1 2013/04/03 19:55:33 wschlich Exp $
 
 EAPI=4
 
@@ -14,11 +14,13 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="test? ( dev-perl/Test-Command-Simple )"
 RDEPEND="dev-libs/judy"
+DEPEND="${RDEPEND}
+	test? ( dev-perl/Test-Command-Simple )"
 
-# tests are broken, bug #464170
-RESTRICT="test"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fixtests.patch"
+}
 
 src_install() {
 	dobin validns
