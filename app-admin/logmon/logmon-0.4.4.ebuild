@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.9 2008/12/18 22:26:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.10 2013/04/03 01:26:29 tomwij Exp $
 
 inherit eutils autotools
 
@@ -17,6 +17,7 @@ KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/logmon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.12 2013/03/13 20:49:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.13 2013/04/03 01:26:29 tomwij Exp $
+
+*logmon-0.4.4-r1 (03 Apr 2013)
+
+  03 Apr 2013; Tom Wijsman <TomWij@gentoo.org> +logmon-0.4.4-r1.ebuild,
+  logmon-0.4.4.ebuild, metadata.xml:
+  Extensively tested. Cleaned up ebuild; EAPI 5, replaced src_unpack by
+  src_prepare and removed unnecessary die. Added missing glibc dependency, bump
+  because binary changed as well as to avoid breaking stable.
 
   13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Took maintainership.

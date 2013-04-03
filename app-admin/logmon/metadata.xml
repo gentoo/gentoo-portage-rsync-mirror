@@ -5,5 +5,7 @@
     <email>TomWij@gentoo.org</email>
     <name>Tom Wijsman</name>
   </maintainer>
-  <longdescription>Split-screen terminal/ncurses based log viewer</longdescription>
+  <longdescription>
+    Split-screen terminal/ncurses based log viewer.
+  </longdescription>
 </pkgmetadata>
