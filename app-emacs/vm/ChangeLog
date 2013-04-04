@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/vm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.98 2012/07/29 17:14:56 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.99 2013/04/04 21:17:46 ulm Exp $
+
+  04 Apr 2013; Ulrich Müller <ulm@gentoo.org> vm-7.19-r4.ebuild,
+  -vm-8.0.12-r6.ebuild, -files/vm-8.0.12-autoload-vm-pine.patch,
+  -files/vm-8.0.12-charset-displayable.patch, -files/vm-8.0.12-emacs-23.patch,
+  -files/vm-8.0.12-folder-corruption.patch,
+  -files/vm-8.0.12-supercite-yank-1.patch, -vm-8.1.0.ebuild, -vm-8.1.1.ebuild,
+  vm-8.1.2.ebuild, vm-8.2.0_beta.ebuild, +files/vm-8.2.0_beta-texinfo-5.patch:
+  Fix build failure with texinfo-5.1, bug 464312. Specify LICENSE more
+  precisely. Remove old.
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> vm-7.19-r4.ebuild,
   vm-8.0.12-r6.ebuild, vm-8.1.0.ebuild, vm-8.1.1.ebuild, vm-8.1.2.ebuild,

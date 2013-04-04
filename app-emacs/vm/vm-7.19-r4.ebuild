@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19-r4.ebuild,v 1.6 2012/07/29 17:14:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.19-r4.ebuild,v 1.7 2013/04/04 21:17:46 ulm Exp $
 
 inherit elisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.wonderworks.com/vm/"
 SRC_URI="ftp://ftp.uni-mainz.de/pub/software/gnu/${PN}/${P}.tar.gz
 	ftp://ftp.uu.net/networking/mail/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-1"
+LICENSE="GPL-1+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""

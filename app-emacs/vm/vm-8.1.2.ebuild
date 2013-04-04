@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.2.ebuild,v 1.5 2012/07/29 17:14:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.2.ebuild,v 1.6 2013/04/04 21:17:46 ulm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="The VM mail reader for Emacs"
 HOMEPAGE="http://www.nongnu.org/viewmail/"
 SRC_URI="http://launchpad.net/vm/${PV%.*}.x/${MY_PV}/+download/${MY_P}.tgz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="bbdb ssl"
@@ -45,6 +45,6 @@ src_compile() {
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	dodoc CHANGES NEWS README TODO example.vm
 }
