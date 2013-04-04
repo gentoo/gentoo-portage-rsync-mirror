@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.18.ebuild,v 1.9 2013/02/23 21:59:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.18.ebuild,v 1.10 2013/04/04 22:19:49 vapier Exp $
 
 EAPI="4"
-WANT_AUTOMAKE=1.9
 
 inherit eutils flag-o-matic autotools
 
@@ -15,9 +14,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux"
 IUSE="debug doc ipv6 static-libs"
-
-RDEPEND=""
-DEPEND="${RDEPEND}"
 
 DOCS="NEWS README ChangeLog"
 
