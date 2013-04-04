@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.51 2013/03/02 18:17:11 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.52 2013/04/04 17:26:13 nimiux Exp $
+
+  04 Apr 2013; Chema Alonso <nimiux@gentoo.org> rdate-1.4-r4.ebuild:
+  Stable for amd64 wrt bug #464384
 
 *rdate-1.4-r4 (02 Mar 2013)
 

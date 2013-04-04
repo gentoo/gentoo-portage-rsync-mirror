@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.928 2013/04/01 04:22:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.929 2013/04/04 17:04:47 jer Exp $
+
+  04 Apr 2013; Jeroen Roovers <jer@gentoo.org> glibc-2.17.ebuild:
+  Marked ~hppa too.
 
   01 Apr 2013; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_install.eblit:
