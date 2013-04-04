@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/re2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.5 2013/03/07 23:19:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.7 2013/04/04 20:16:33 ago Exp $
+
+  04 Apr 2013; Agostino Sarubbo <ago@gentoo.org> re2-0_p20130115.ebuild:
+  Stable for x86, wrt bug #463426
+
+  04 Apr 2013; Agostino Sarubbo <ago@gentoo.org> re2-0_p20130115.ebuild:
+  Stable for amd64, wrt bug #463426
 
 *re2-0_p20130115 (07 Mar 2013)
 
@@ -30,4 +36,3 @@
   +metadata.xml:
   Initial import. Ebuild by me, Mike Gilbert (floppym) and Jauhien Piatlicki.
   Bug #310605 by Alex Efros.
-

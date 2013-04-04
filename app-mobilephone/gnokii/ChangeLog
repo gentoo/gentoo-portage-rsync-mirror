@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnokii
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.116 2012/09/13 18:15:39 reavertm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.117 2013/04/04 20:10:26 grobian Exp $
+
+  04 Apr 2013; Fabian Groffen <grobian@gentoo.org>
+  files/gnokii-9999-translations.patch:
+  Fix patch to apply to latest sources
 
   13 Sep 2012; Maciej Mrozowski <reavertm@gentoo.org>
   +files/gnokii-0.6.31-fix_xgnokii_inclusion.patch:
