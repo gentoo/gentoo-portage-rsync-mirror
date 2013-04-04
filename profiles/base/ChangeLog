@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.527 2013/04/02 04:12:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.528 2013/04/04 18:34:22 voyageur Exp $
+
+  04 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
+  Mask USE=flac for gnustep-apps/cynthiune
 
   02 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask USE=udisks for <gvfs-1.14, thanks to Samuli Suominen (bug #463792).

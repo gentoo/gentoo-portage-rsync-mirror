@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.343 2013/04/02 12:13:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.344 2013/04/04 18:36:26 je_fro Exp $
+
+*alsa-lib-1.0.26-r2 (04 Apr 2013)
+
+  04 Apr 2013; Jeff Gardner <je_fro@gentoo.org>
+  +files/1.0.26-r2.types-fix.diff, +alsa-lib-1.0.26-r2.ebuild:
+  Fix compiling alsa programs that need u_int*_t since new glibc. Thanks to
+  David Henningsson, Richard Shaw, Gary Buhrmaster, Matthieu Baerts and Adam
+  Conrad
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> alsa-lib-1.0.26-r1.ebuild:
   Stable for arm, wrt bug #463451
