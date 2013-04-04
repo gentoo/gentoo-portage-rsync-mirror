@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.43.ebuild,v 1.2 2013/04/03 16:26:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.43.ebuild,v 1.3 2013/04/04 02:52:27 patrick Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -138,6 +138,11 @@ src_prepare() {
 
 	# Fix build issue with smhasher, bug #459126 .
 	epatch "${FILESDIR}/${PN}-smhasher-r0.patch"
+
+	# Fix build with speech-dispatcher-0.8, bug #463550 .
+	if has_version ">=app-accessibility/speech-dispatcher-0.8"; then
+		epatch "${FILESDIR}/${PN}-speech-dispatcher-0.8-r0.patch"
+	fi
 
 	epatch_user
 
