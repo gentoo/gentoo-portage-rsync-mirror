@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha171.ebuild,v 1.1 2013/04/01 18:56:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha171.ebuild,v 1.2 2013/04/04 17:45:27 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -357,6 +357,12 @@ src_install() {
 	local impl files mod_dir dest_mod_dir python relative_path x
 	for impl in "${PYTHON_COMPAT[@]}" ; do
 		use "python_targets_${impl}" || continue
+		if use build && [[ ${ROOT} == / &&
+			! -x ${EPREFIX}/usr/bin/$(get_python_interpreter ${impl}) ]] ; then
+			# Tolerate --nodeps at beginning of stage1 for catalyst
+			ewarn "skipping python_targets_${impl}, interpreter not found"
+			continue
+		fi
 		while read -r mod_dir ; do
 			cd "${ED}/usr/lib/portage/pym/${mod_dir}" || die
 			files=$(echo *.py)

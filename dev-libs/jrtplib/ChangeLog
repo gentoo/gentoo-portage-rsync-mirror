@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/jrtplib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/ChangeLog,v 1.10 2013/02/22 15:15:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/ChangeLog,v 1.11 2013/04/04 17:32:15 pinkbyte Exp $
+
+  04 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -jrtplib-3.7.1-r1.ebuild,
+  -files/jrtplib-3.7.1-gcc-4.4.patch, -files/jrtplib-3.7.1-gcc43.patch:
+  Drop old version
 
 *jrtplib-3.9.1 (22 Feb 2013)
 
