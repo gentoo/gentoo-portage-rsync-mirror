@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.1.2.ebuild,v 1.1 2013/03/31 12:52:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.1.2.ebuild,v 1.2 2013/04/04 09:28:08 aballier Exp $
 
 EAPI="4"
 
@@ -27,4 +27,6 @@ src_prepare() {
 
 	# UINT64_C is needed by ffmpeg headers
 	append-cxxflags -D__STDC_CONSTANT_MACROS
+
+	epatch "${FILESDIR}/${PN}-0.1.1-ffmpeg-1.patch"
 }

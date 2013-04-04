@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.191 2013/02/02 22:49:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.192 2013/04/04 09:10:37 aballier Exp $
+
+  04 Apr 2013; Alexis Ballier <aballier@gentoo.org>
+  -libquicktime-1.2.3-r1.ebuild:
+  remove old
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libquicktime-1.2.4.ebuild:
   Add ~arm, wrt bug #449220

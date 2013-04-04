@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-apps/gworkspace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.39 2012/09/23 07:51:40 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.40 2013/04/04 09:15:00 voyageur Exp $
+
+*gworkspace-0.9.2 (04 Apr 2013)
+
+  04 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/gworkspace-0.8.6-popplerkit.patch,
+  -files/gworkspace-0.8.6-rpath.patch, +gworkspace-0.9.2.ebuild,
+  +files/gworkspace-0.9.2-rpath-link.patch, metadata.xml:
+  Version bump, reported and initial ebuild update by adr in bug #463457. EAPI
+  bump, remove unused files
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gworkspace-0.9.1.ebuild:
   x86 stable wrt bug #429076
