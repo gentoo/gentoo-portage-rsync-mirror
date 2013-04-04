@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.1.2.ebuild,v 1.5 2013/03/28 16:49:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.2.2.ebuild,v 1.2 2013/04/04 11:41:00 scarabeus Exp $
 
 EAPI=5
 
@@ -229,8 +229,6 @@ PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
 	"${FILESDIR}/${PN}-3.7-separate-checks.patch"
-	# bug 454274
-	"${FILESDIR}/${PN}-4.0.1.2-boost-1.53.0.patch"
 )
 
 REQUIRED_USE="
@@ -322,6 +320,10 @@ src_prepare() {
 	export ARCH_FLAGS="${CXXFLAGS}"
 	export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 	export GMAKE_OPTIONS="${MAKEOPTS}"
+	# System python 2.7 enablement:
+	export PYTHON="${PYTHON}"
+	export PYTHON_CFLAGS=$(python_get_CFLAGS)
+	export PYTHON_LIBS=$(python_get_LIBS)
 
 	# patchset
 	if [[ -n ${PATCHSET} ]]; then
@@ -344,6 +346,11 @@ src_prepare() {
 		-e "s:%libdir%:$(get_libdir):g" \
 		-i pyuno/source/module/uno.py \
 		-i scripting/source/pyprov/officehelper.py || die
+
+	if use branding; then
+		# hack...
+		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
+	fi
 }
 
 src_configure() {
@@ -402,16 +409,6 @@ src_configure() {
 			"
 		fi
 	fi
-
-	if use branding; then
-		# hack...
-		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
-	fi
-
-	# System python 2.7 enablement:
-	export PYTHON="${PYTHON}"
-	export PYTHON_CFLAGS=`pkg-config --cflags ${EPYTHON}`
-	export PYTHON_LIBS=`pkg-config --libs ${EPYTHON}`
 
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
