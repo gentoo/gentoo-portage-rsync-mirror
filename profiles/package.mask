@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14626 2013/04/04 03:48:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14627 2013/04/04 19:10:05 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (04 Apr 2013)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-28
+>=dev-lang/v8-3.18
 
 # Ryan Hill <dirtyepic@gentoo.org> (03 Apr 2013)
 # masked for porting (bug #461954)
@@ -367,15 +373,6 @@ media-gfx/yafaray
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/google-chrome-27
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (26 Feb 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-27
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (26 Feb 2013)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.17
 
 # Eray Aslan <eras@gentoo.org> (26 Feb 2013)
 # Mask release candidates
