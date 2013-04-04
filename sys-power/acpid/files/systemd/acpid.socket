@@ -1,8 +1,8 @@
 [Unit]
-Description=ACPI Event Daemon Listen Socket
+Description=ACPID Listen Socket
 
 [Socket]
-ListenStream=/run/acpid.socket
+ListenStream=/var/run/acpid.socket
 
 [Install]
 WantedBy=sockets.target
