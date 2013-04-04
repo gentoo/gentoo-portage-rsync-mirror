@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.13 2013/04/02 12:15:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.15 2013/04/04 12:53:32 ssuominen Exp $
 
 EAPI=5
 
@@ -249,11 +249,14 @@ src_configure() {
 src_compile() {
 	echo 'BUILT_SOURCES: $(BUILT_SOURCES)' > "${T}"/Makefile.extra
 	emake -f Makefile -f "${T}"/Makefile.extra BUILT_SOURCES
-	local targets=(
+	local pretargets=(
+		libsystemd-shared.la
 		libudev-private.la
+		libudev.la
+	)
+	local targets=(
 		systemd-udevd
 		udevadm
-		libudev.la
 		ata_id
 		cdrom_id
 		collect
@@ -269,6 +272,7 @@ src_compile() {
 	use keymap && targets+=( keymap )
 	use gudev && targets+=( libgudev-1.0.la )
 
+	emake "${pretargets[@]}"
 	emake "${targets[@]}"
 	if use doc; then
 		emake -C docs/libudev
@@ -441,7 +445,7 @@ pkg_postinst() {
 	ewarn "(replace <ifname> with, for example, eth0):"
 	ewarn "# udevadm test-builtin net_id /sys/class/net/<ifname> 2> /dev/null"
 	ewarn
-	ewarn "You can use kernel command net.ifnames= to control this feature."
+	ewarn "You can use kernel commandline net.ifnames=0 to disable this feature."
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
@@ -451,8 +455,9 @@ pkg_postinst() {
 	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 
 	elog
-	elog "For more information on udev on Gentoo, writing udev rules, and"
+	elog "For more information on udev on Gentoo, upgrading, writing udev rules, and"
 	elog "         fixing known issues visit:"
+	elog "         http://wiki.gentoo.org/wiki/Udev/upgrade"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 
 	# Update hwdb database in case the format is changed by udev version.

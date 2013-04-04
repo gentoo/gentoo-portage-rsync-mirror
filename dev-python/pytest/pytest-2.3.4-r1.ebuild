@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.3.4.ebuild,v 1.16 2013/04/04 12:38:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.3.4-r1.ebuild,v 1.1 2013/04/04 12:38:16 patrick Exp $
 
 EAPI="5"
 
@@ -13,12 +13,12 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc test"
 
 # When bumping, please check setup.py for the proper py version
 PY_VER="1.4.12"
-RDEPEND=">=dev-python/py-${PY_VER}[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/py-${PY_VER}"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]"
@@ -43,7 +43,15 @@ python_compile_all() {
 }
 
 python_test() {
-	"${PYTHON}" "${BUILD_DIR}"/lib/pytest.py || die "tests failed with ${EPYTHON}"
+	cd "${BUILD_DIR}"/lib/ || die
+	# pytest.py draws from "${S}" if / when absent of a local testing folder; Bug 462552
+	if [[ "${EPYTHON:6:1}" == 3 ]]; then
+		cp -a "${S}"/testing/ . || die
+		"${PYTHON}" pytest.py || die "tests failed with ${EPYTHON}"
+		rm -rf testing/
+	else
+		"${PYTHON}" pytest.py || die "tests failed with ${EPYTHON}"
+	fi
 }
 
 python_install_all() {
