@@ -5759,6 +5759,7 @@ sys-cluster/torque:nvidia - Enable management of Nvidia GPUs
 sys-cluster/torque:server - Enable compilation of pbs_server and pbs_sched
 sys-cluster/vzctl:cgroup - Add support to Linux kernel cgroup subsytem
 sys-cluster/vzctl:ploop - Add support for ploop devices via sys-cluster/ploop
+sys-devel/autoconf:multislot - Allow for multiple versions to be installed at once
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils-apple:lto - Add support for Link-Time Optimization with LLVM
