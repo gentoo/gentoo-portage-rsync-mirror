@@ -1,30 +1,29 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.3.23.ebuild,v 1.12 2013/02/26 18:51:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1.9.ebuild,v 1.1 2013/04/04 16:21:44 titanofold Exp $
 
 EAPI="4"
 
 WANT_AUTOMAKE="none"
 
-inherit autotools eutils multilib prefix versionator
+inherit autotools eutils flag-o-matic multilib prefix versionator
+
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 SLOT="$(get_version_component_range 1-2)"
-
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+S="${WORKDIR}/postgresql-${PV}"
 
 DESCRIPTION="PostgreSQL libraries and clients"
 HOMEPAGE="http://www.postgresql.org/"
 SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
-		 http://dev.gentoo.org/~titanofold/postgresql-patches-8.3-r3.tbz2"
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-9.1-r2.tbz2"
 LICENSE="POSTGRESQL"
-
-S="${WORKDIR}/postgresql-${PV}"
 
 # No tests to be done for clients and libraries
 RESTRICT="test"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr zh_CN zh_TW"
-IUSE="doc kerberos ldap nls pam pg-intdatetime readline ssl threads zlib"
+IUSE="doc kerberos ldap nls pam pg_legacytimestamp readline ssl threads zlib"
 
 for lingua in ${LINGUAS} ; do
 	IUSE+=" linguas_${lingua}"
@@ -40,31 +39,33 @@ wanted_languages() {
 	echo -n ${enable_langs}
 }
 
-RDEPEND=">=app-admin/eselect-postgresql-1.0.10
-		 virtual/libintl
-		 !!dev-db/libpq
+RDEPEND="!!dev-db/libpq
 		 !!dev-db/postgresql
 		 !!dev-db/postgresql-client
 		 !!dev-db/postgresql-libs
+		 >=app-admin/eselect-postgresql-1.0.10
+		 virtual/libintl
 		 kerberos? ( virtual/krb5 )
 		 ldap? ( net-nds/openldap )
 		 pam? ( virtual/pam )
-		 readline? ( >=sys-libs/readline-4.1 )
+		 readline? ( sys-libs/readline )
 		 ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-		 zlib? ( >=sys-libs/zlib-1.1.3 )"
+		 zlib? ( sys-libs/zlib )
+"
 
 DEPEND="${RDEPEND}
 		!!<sys-apps/sandbox-2.0
-		>=sys-devel/bison-1.875
+		sys-devel/bison
 		sys-devel/flex
-		nls? ( sys-devel/gettext )"
+		nls? ( sys-devel/gettext )
+"
 
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 src_prepare() {
-	epatch "${WORKDIR}/autoconf.patch" "${WORKDIR}/base.patch" \
-		"${WORKDIR}/bool.patch" "${WORKDIR}/darwin.patch" \
-		"${WORKDIR}/relax_ssl_perms.patch" "${WORKDIR}/SuperH.patch"
+	epatch "${WORKDIR}/autoconf.patch" \
+		"${WORKDIR}/base.patch" \
+		"${WORKDIR}/bool.patch"
 
 	eprefixify src/include/pg_config_manual.h
 
@@ -84,31 +85,41 @@ src_prepare() {
 }
 
 src_configure() {
+	case ${CHOST} in
+		*-darwin*|*-solaris*)
+			use nls && append-libs intl
+			;;
+	esac
+
 	export LDFLAGS_SL="${LDFLAGS}"
+	export LDFLAGS_EX="${LDFLAGS}"
+
 	local PO="${EPREFIX%/}"
-	econf --prefix="${PO}/usr/$(get_libdir)/postgresql-${SLOT}" \
+
+	econf \
+		--prefix="${PO}/usr/$(get_libdir)/postgresql-${SLOT}" \
 		--datadir="${PO}/usr/share/postgresql-${SLOT}" \
+		--docdir="${PO}/usr/share/doc/postgresql-${SLOT}" \
+		--sysconfdir="${PO}/etc/postgresql-${SLOT}" \
 		--includedir="${PO}/usr/include/postgresql-${SLOT}" \
 		--mandir="${PO}/usr/share/postgresql-${SLOT}/man" \
-		--sysconfdir="${PO}/etc/postgresql-${SLOT}" \
-		--without-docdir \
+		--without-tcl \
 		--without-perl \
 		--without-python \
-		--without-tcl \
+		$(use_with readline) \
 		$(use_with kerberos krb5) \
 		$(use_with kerberos gssapi) \
-		$(use_with ldap) \
 		"$(use_enable nls nls "$(wanted_languages)")" \
 		$(use_with pam) \
-		$(use_enable pg-intdatetime integer-datetimes ) \
-		$(use_with readline) \
+		$(use_enable !pg_legacytimestamp integer-datetimes) \
 		$(use_with ssl openssl) \
 		$(use_enable threads thread-safety) \
-		$(use_with zlib)
+		$(use_with zlib) \
+		$(use_with ldap)
 }
 
 src_compile() {
-	emake
+	emake -j1
 
 	cd "${S}/contrib"
 	emake
@@ -118,24 +129,24 @@ src_install() {
 	emake DESTDIR="${D}" install
 	insinto /usr/include/postgresql-${SLOT}/postmaster
 	doins "${S}"/src/include/postmaster/*.h
-	dodir /usr/share/postgresql-${SLOT}/man/man1
 
-	rm "${ED}"/usr/share/postgresql-${SLOT}/man/man1/{initdb,ipcclean,pg_{controldata,ctl,resetxlog},post{gres,master}}.1
+	dodir /usr/share/postgresql-${SLOT}/man/
+	cp -r "${S}"/doc/src/sgml/man{1,7} "${ED}"/usr/share/postgresql-${SLOT}/man/ || die
+	rm "${ED}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}.1
 	docompress /usr/share/postgresql-${SLOT}/man/man{1,7}
 
 	# Don't use ${PF} here as three packages
 	# (dev-db/postgresql-{docs,base,server}) have the same set of docs.
 	insinto /usr/share/doc/postgresql-${SLOT}
-	doins README HISTORY doc/{FAQ*,README.*,TODO,bug.template}
+	doins README HISTORY doc/{TODO,bug.template}
 
 	cd "${S}/contrib"
 	emake DESTDIR="${D}" install
 	cd "${S}"
 
 	dodir /etc/eselect/postgresql/slots/${SLOT}
-
-	echo "postgres_ebuilds=\"\${postgres_ebuilds} ${PF}\"" \
-		> "${ED}/etc/eselect/postgresql/slots/${SLOT}/base"
+	echo "postgres_ebuilds=\"\${postgres_ebuilds} ${PF}\"" > \
+		"${ED}/etc/eselect/postgresql/slots/${SLOT}/base"
 
 	keepdir /etc/postgresql-${SLOT}
 }

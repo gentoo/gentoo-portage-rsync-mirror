@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-5.0.3.ebuild,v 1.1 2013/04/03 13:14:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-5.0.3-r1.ebuild,v 1.1 2013/04/04 16:01:42 voyageur Exp $
 
 EAPI=5
 
@@ -27,6 +27,11 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	webapp_pkg_setup
+}
+
+src_prepare() {
+	# https://github.com/owncloud/core/issues/2666
+	epatch "${FILESDIR}"/${P}-postgresql_update.patch
 }
 
 src_install() {

@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.85 2013/03/28 12:34:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.86 2013/04/04 16:09:31 williamh Exp $
+
+*speech-dispatcher-0.8-r2 (04 Apr 2013)
+
+  04 Apr 2013; William Hubbs <williamh@gentoo.org>
+  +speech-dispatcher-0.8-r2.ebuild:
+  Drop unnecessary usage of autotools-utils and add support for
+  static-libs use flag, thanks to Samuli Suominen.
 
 *speech-dispatcher-0.8-r1 (28 Mar 2013)
 

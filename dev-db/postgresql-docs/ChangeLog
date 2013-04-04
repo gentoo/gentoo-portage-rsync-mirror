@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.198 2013/02/26 19:13:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.199 2013/04/04 16:18:50 titanofold Exp $
+
+*postgresql-docs-9.2.4 (04 Apr 2013)
+*postgresql-docs-9.1.9 (04 Apr 2013)
+*postgresql-docs-9.0.13 (04 Apr 2013)
+*postgresql-docs-8.4.17 (04 Apr 2013)
+
+  04 Apr 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-docs-8.3.23.ebuild, +postgresql-docs-8.4.17.ebuild,
+  +postgresql-docs-9.0.13.ebuild, +postgresql-docs-9.1.9.ebuild,
+  +postgresql-docs-9.2.4.ebuild:
+  Security bump. Bug 463884.
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> -postgresql-docs-8.3.20.ebuild,
   -postgresql-docs-8.3.21.ebuild, -postgresql-docs-8.3.22-r1.ebuild,

@@ -1,40 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.8 2013/04/04 16:24:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1.9.ebuild,v 1.1 2013/04/04 16:24:14 titanofold Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3}} )
 WANT_AUTOMAKE="none"
 
-inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user versionator base git-2
+inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user versionator
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-SLOT="9.3"
+SLOT="$(get_version_component_range 1-2)"
+S="${WORKDIR}/postgresql-${PV}"
 
-EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
-
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.4.tbz2
-	http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2"
-
-# Comment the following six lines when not a beta or rc.
-#MY_PV="${PV//_}"
-#MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
-#S="${WORKDIR}/postgresql-${MY_FILE_PV}"
-#SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_FILE_PV}.tar.bz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${MY_FILE_PV}.tbz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2"
-
-# Comment the following four lines when a beta or rc.
-#S="${WORKDIR}/postgresql-${PV}"
-#SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${PV}.tbz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.1.tbz2"
-
-LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-9.1-r2.tbz2
+		 http://dev.gentoo.org/~titanofold/postgresql-initscript-pre92-2.4.tbz2"
+LICENSE="POSTGRESQL GPL-2"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr zh_CN zh_TW"
 IUSE="doc kerberos kernel_linux nls pam perl -pg_legacytimestamp python selinux tcl test uuid xml"
@@ -63,12 +48,7 @@ RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[kerberos?,pam?,pg_legacytimestamp
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	xml? ( virtual/pkgconfig )"
-#PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
-
-src_unpack() {
-	base_src_unpack
-	git-2_src_unpack
-}
+PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 pkg_setup() {
 	enewgroup postgres 70
@@ -80,6 +60,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/bool.patch" \
+		"${WORKDIR}/pg_ctl-exit-status.patch" \
 		"${WORKDIR}/server.patch"
 
 	eprefixify src/include/pg_config_manual.h
@@ -97,8 +78,6 @@ src_prepare() {
 		echo "all install:" > "${S}/src/test/regress/GNUmakefile"
 	fi
 
-	sed -e "s|@RUNDIR@||g" \
-		-i src/include/pg_config_manual.h || die "RUNDIR sed failed"
 	sed -e "s|@SLOT@|${SLOT}|g" \
 		-i "${WORKDIR}/postgresql.init" "${WORKDIR}/postgresql.confd" || \
 		die "SLOT sed failed"
@@ -197,7 +176,7 @@ pkg_prerm() {
 		ewarn "Have you dumped and/or migrated the ${SLOT} database cluster?"
 		ewarn "\thttp://www.gentoo.org/doc/en/postgres-howto.xml#doc_chap5"
 
-		ebegin "Resuming removal 10 seconds. Control-C to cancel"
+		ebegin "Resuming removal in 10 seconds. Control-C to cancel"
 		sleep 10
 		eend 0
 	fi
@@ -356,7 +335,7 @@ src_test() {
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 
 	if [ ${UID} -ne 0 ] ; then
-		emake check
+		emake -j1 check
 
 		einfo "If you think other tests besides the regression tests are necessary, please"
 		einfo "submit a bug including a patch for this ebuild to enable them."

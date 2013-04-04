@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.244 2013/02/26 19:14:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.245 2013/04/04 16:24:14 titanofold Exp $
+
+*postgresql-server-9.2.4 (04 Apr 2013)
+*postgresql-server-9.1.9 (04 Apr 2013)
+*postgresql-server-9.0.13 (04 Apr 2013)
+*postgresql-server-8.4.17 (04 Apr 2013)
+
+  04 Apr 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-server-8.3.23-r1.ebuild, +postgresql-server-8.4.17.ebuild,
+  +postgresql-server-9.0.13.ebuild, +postgresql-server-9.1.9.ebuild,
+  +postgresql-server-9.2.4.ebuild, postgresql-server-9999.ebuild:
+  Security bump. Bug 463884.
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   -postgresql-server-8.3.20.ebuild, -postgresql-server-8.3.21.ebuild,
