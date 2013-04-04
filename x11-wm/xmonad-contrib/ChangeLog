@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/xmonad-contrib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.21 2013/01/02 00:01:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.22 2013/04/04 01:52:03 gienah Exp $
+
+*xmonad-contrib-0.11.1 (04 Apr 2013)
+
+  04 Apr 2013; Mark Wright <gienah@gentoo.org> +xmonad-contrib-0.11.1.ebuild,
+  metadata.xml:
+  Thanks to eternalfuzzy1 for reporting, fix Bug 464496 - x11-wm/xmonad-
+  contrib-0.11.1 version bump (fixes compile error with latest dev-haskell/x11).
 
 *xmonad-contrib-0.11 (02 Jan 2013)
 

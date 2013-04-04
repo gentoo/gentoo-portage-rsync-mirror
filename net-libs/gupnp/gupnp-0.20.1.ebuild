@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.1.ebuild,v 1.2 2013/03/30 23:36:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.1.ebuild,v 1.3 2013/04/04 01:31:52 patrick Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION="0.14"
@@ -25,12 +25,12 @@ RDEPEND="
 		>=sys-apps/util-linux-2.16
 		<sys-libs/e2fsprogs-libs-1.41.8 )
 	introspection? (
-			>=dev-libs/gobject-introspection-0.6.4
-			$(vala_depend) )
+			>=dev-libs/gobject-introspection-0.6.4 )
 	connman? (
 		>=dev-libs/glib-2.28:2
 		>=net-misc/connman-0.80 )
 	networkmanager? ( >=dev-libs/glib-2.26:2 )
+	$(vala_depend)
 	!net-libs/gupnp-vala
 "
 DEPEND="${RDEPEND}
