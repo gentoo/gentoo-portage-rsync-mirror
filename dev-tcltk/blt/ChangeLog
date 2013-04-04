@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.66 2013/03/09 07:48:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.67 2013/04/04 18:24:39 jlec Exp $
+
+*blt-2.4z-r12 (04 Apr 2013)
+
+  04 Apr 2013; Justin Lecher <jlec@gentoo.org> +blt-2.4z-r12.ebuild,
+  +files/blt-2.4z-aclocal.patch:
+  Run eautoreconf to fix problems on prefix
 
   09 Mar 2013; Zac Medico <zmedico@gentoo.org> blt-2.4z-r11.ebuild:
   Add ~arm-linux keyword.

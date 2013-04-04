@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-3.3.ebuild,v 1.1 2013/04/04 06:55:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-3.3.ebuild,v 1.2 2013/04/04 18:17:48 vapier Exp $
 
 EAPI=4
 
@@ -20,6 +20,10 @@ DEPEND="app-arch/xz-utils
 	nls? ( sys-devel/gettext )"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
+
+src_prepare() {
+	sed -i 's:@mkdir_p@:@MKDIR_P@:g' po/Makefile.in.in || die #464604
+}
 
 src_configure() {
 	use static && append-ldflags -static
