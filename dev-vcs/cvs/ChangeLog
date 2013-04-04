@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/cvs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.9 2013/02/18 04:41:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.10 2013/04/04 13:43:12 slyfox Exp $
+
+  04 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/cvs-1.12.13.1-use-include_next.patch, cvs-1.12.13.1-r1.ebuild:
+  Fixed build failure (unknown type name 'intmax_t').
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> cvs-1.12.12-r10.ebuild:
   Add ~arm-linux keyword.

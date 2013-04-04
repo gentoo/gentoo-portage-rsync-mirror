@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.13.1-r1.ebuild,v 1.1 2013/01/11 13:47:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.13.1-r1.ebuild,v 1.2 2013/04/04 13:43:12 slyfox Exp $
 
 EAPI=3
 
@@ -28,9 +28,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 
 IUSE="crypt doc kerberos nls pam server"
 
-DEPEND=">=sys-libs/zlib-1.1.4
+RDEPEND=">=sys-libs/zlib-1.1.4
 		kerberos? ( virtual/krb5 )
 		pam? ( virtual/pam )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
@@ -44,6 +45,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.12.13.1-hash-nameclash.patch # for AIX
 	epatch "${FILESDIR}"/${PN}-1.12.13.1-gl-mempcpy.patch # for AIX
 	epatch "${FILESDIR}"/${PN}-1.12.12-fix-massive-leak.patch
+	epatch "${FILESDIR}"/${PN}-1.12.13.1-use-include_next.patch
 	# Applied by upstream:
 	#epatch "${FILESDIR}"/${PN}-1.12.13-openat.patch
 	#epatch "${FILESDIR}"/${PN}-1.12.13-zlib.patch

@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/pwgen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.65 2012/10/14 21:52:18 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.66 2013/04/04 13:46:28 jlec Exp $
+
+*pwgen-2.06-r2 (04 Apr 2013)
+
+  04 Apr 2013; Justin Lecher <jlec@gentoo.org> -pwgen-2.04.ebuild,
+  -pwgen-2.05.ebuild, -pwgen-2.06.ebuild, +pwgen-2.06-r2.ebuild, metadata.xml:
+  Add to autotools-utils.eclass; eautoreconf for sane prefix header detection;
+  drop old
 
   14 Oct 2012; Alexis Ballier <aballier@gentoo.org> pwgen-2.06-r1.ebuild:
   keyword ~amd64-fbsd
