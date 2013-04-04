@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-python/celery-3.0.11 >=dev-python/django-1.3 dev-python/pytz test? ( virtual/python-unittest2 dev-python/django-nose dev-python/nose-cover3 dev-python/python-memcached ) dev-python/setuptools !<sys-apps/portage-2.1.10.58 python_targets_python2_7? ( dev-lang/python:2.7 )
+DESCRIPTION=Celery Integration for Django
+EAPI=4
+HOMEPAGE=http://celeryproject.org/
+IUSE=test python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-python/celery-3.0.11 >=dev-python/django-1.3 dev-python/pytz python_targets_python2_7? ( dev-lang/python:2.7 )
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://pypi/d/django-celery/django-celery-3.0.17.tar.gz
+_eclasses_=python-distutils-ng	b6176485a30153729ae856cd37d0174c
+_md5_=3010b9114990b9ede84f03fd852d1c80

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/progressbar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/ChangeLog,v 1.9 2013/02/10 02:31:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/ChangeLog,v 1.10 2013/04/04 07:22:10 jlec Exp $
+
+  04 Apr 2013; Justin Lecher <jlec@gentoo.org> progressbar-2.3-r1.ebuild,
+  metadata.xml:
+  Keyword for ~-linux, tested by me
 
 *progressbar-2.3-r1 (10 Feb 2013)
 
