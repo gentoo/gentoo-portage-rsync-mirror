@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/urbanterror
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.20 2013/02/14 12:10:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.21 2013/04/05 15:52:36 hasufell Exp $
+
+*urbanterror-4.2.010 (05 Apr 2013)
+
+  05 Apr 2013; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.2.010.ebuild,
+  +files/urbanterror-4.2.010-build.patch:
+  version bump
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> urbanterror-4.2.009.ebuild:
   Stable for x86, wrt bug #457124
