@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitlecomposer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.13 2013/04/03 11:31:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.14 2013/04/05 21:48:51 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  subtitlecomposer-0.5.3-r1.ebuild:
+  Stable for x86, wrt bug #464294
 
   03 Apr 2013; Sergey Popov <pinkbyte@gentoo.org>
   subtitlecomposer-0.5.3-r1.ebuild:

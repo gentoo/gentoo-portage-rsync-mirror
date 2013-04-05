@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1453.3.ebuild,v 1.1 2013/03/27 22:41:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1453.3.ebuild,v 1.2 2013/04/05 21:44:11 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -51,7 +51,7 @@ RDEPEND="app-accessibility/speech-dispatcher:=
 	media-libs/flac:=
 	media-libs/harfbuzz:=
 	>=media-libs/libjpeg-turbo-1.2.0-r1:=
-	media-libs/libpng:=
+	media-libs/libpng:0=
 	media-libs/libvpx:=
 	>=media-libs/libwebp-0.2.0_rc1:=
 	!arm? ( !x86? ( >=media-libs/mesa-9.1:=[gles2] ) )

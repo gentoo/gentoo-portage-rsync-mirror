@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.859 2013/04/04 20:16:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.861 2013/04/05 21:44:11 floppym Exp $
+
+  05 Apr 2013; Mike Gilbert <floppym@gentoo.org> chromium-26.0.1410.43.ebuild,
+  chromium-27.0.1453.12.ebuild, chromium-27.0.1453.3.ebuild,
+  chromium-9999-r1.ebuild:
+  Fixup slot-operater deps on libpng.
+
+  05 Apr 2013; Mike Gilbert <floppym@gentoo.org> -chromium-25.0.1364.160.ebuild,
+  -chromium-25.0.1364.172.ebuild, -chromium-26.0.1410.40.ebuild:
+  Remove old.
 
   04 Apr 2013; Agostino Sarubbo <ago@gentoo.org> chromium-26.0.1410.43.ebuild:
   Stable for x86, wrt bug #463426
