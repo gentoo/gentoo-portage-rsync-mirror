@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.19-r4.ebuild,v 1.3 2013/04/04 19:46:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.19-r4.ebuild,v 1.4 2013/04/05 17:11:05 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.shrubbery.net/pub/tac_plus/${MY_P}.tar.gz"
 
 LICENSE="HPND RSA GPL-2" # GPL-2 only for init script
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug finger maxsess tcpd skey static-libs"
 
 DEPEND="skey? ( >=sys-auth/skey-1.1.5-r1 )

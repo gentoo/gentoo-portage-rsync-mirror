@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/swatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.31 2013/04/02 15:10:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.32 2013/04/05 17:04:29 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> swatch-3.2.3-r2.ebuild:
+  Stable for ppc, wrt bug #464410
 
   02 Apr 2013; Chema Alonso <nimiux@gentoo.org> swatch-3.2.3-r2.ebuild:
   Cosmetic change in RDEPEND
