@@ -3,8 +3,6 @@ Fixes build with recent FFmpeg versions.
 https://bugs.gentoo.org/show_bug.cgi?id=443218
 https://sourceforge.net/tracker/?func=detail&aid=3601992&group_id=223021&atid=1057619
 
-Index: vice-2.4/src/gfxoutputdrv/ffmpegdrv.c
-===================================================================
 --- vice-2.4.orig/src/gfxoutputdrv/ffmpegdrv.c
 +++ vice-2.4/src/gfxoutputdrv/ffmpegdrv.c
 @@ -343,7 +343,7 @@ static int ffmpegmovie_init_audio(int sp
@@ -59,8 +57,6 @@ Index: vice-2.4/src/gfxoutputdrv/ffmpegdrv.c
          }
      }
      
-Index: vice-2.4/src/gfxoutputdrv/ffmpeglib.c
-===================================================================
 --- vice-2.4.orig/src/gfxoutputdrv/ffmpeglib.c
 +++ vice-2.4/src/gfxoutputdrv/ffmpeglib.c
 @@ -208,13 +208,12 @@ static int load_avformat(ffmpeglib_t *li
@@ -99,8 +95,6 @@ Index: vice-2.4/src/gfxoutputdrv/ffmpeglib.c
      lib->p_av_guess_format = NULL;
  #ifndef HAVE_FFMPEG_SWSCALE
      lib->p_img_convert = NULL;
-Index: vice-2.4/src/gfxoutputdrv/ffmpeglib.h
-===================================================================
 --- vice-2.4.orig/src/gfxoutputdrv/ffmpeglib.h
 +++ vice-2.4/src/gfxoutputdrv/ffmpeglib.h
 @@ -80,13 +80,12 @@ typedef int (*avpicture_get_size_t) (int

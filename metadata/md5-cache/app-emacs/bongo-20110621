@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile install postinst postrm setup unpack
-DEPEND=app-emacs/volume >=virtual/emacs-22
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=app-emacs/volume sys-apps/texinfo >=virtual/emacs-22
 DESCRIPTION=Buffer-oriented media player for Emacs
+EAPI=5
 HOMEPAGE=http://www.brockman.se/software/bongo/
 IUSE=mplayer taglib
 KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2 FDL-1.2
+LICENSE=GPL-2+ FDL-1.2+
 RDEPEND=app-emacs/volume taglib? ( dev-ruby/ruby-taglib ) >=virtual/emacs-22
 SLOT=0
-SRC_URI=mirror://gentoo/bongo-20070619.tar.bz2 mplayer? ( mirror://gentoo/bongo-mplayer-20070204.tar.bz2 )
+SRC_URI=mirror://gentoo/bongo-20110621.tar.xz mplayer? ( mirror://gentoo/bongo-mplayer-20070204.tar.bz2 )
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7931faec569293527f3453f9d2f25c6f
+_md5_=6e8f2cf485c2862954c3b7ba24171bd7

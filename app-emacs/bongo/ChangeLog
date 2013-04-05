@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/bongo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/ChangeLog,v 1.6 2009/10/16 17:48:46 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/ChangeLog,v 1.7 2013/04/05 18:58:32 ulm Exp $
+
+*bongo-20110621 (05 Apr 2013)
+
+  05 Apr 2013; Ulrich Müller <ulm@gentoo.org> -bongo-20070619-r2.ebuild,
+  bongo-20090713.ebuild, +bongo-20110621.ebuild,
+  +files/bongo-20110621-texinfo-5.patch:
+  Version bump. Fix build failure with texinfo-5.1, bug 464678. Remove old.
 
 *bongo-20090713 (16 Oct 2009)
 

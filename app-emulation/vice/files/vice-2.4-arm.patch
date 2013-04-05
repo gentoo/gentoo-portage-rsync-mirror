@@ -1,7 +1,5 @@
-Index: vice/configure.in
-===================================================================
---- vice/configure.in	(Revision 26764)
-+++ vice/configure.in	(Revision 26765)
+--- vice/configure.in
++++ vice/configure.in
 @@ -2299,6 +2299,7 @@
  
      if test x"$PARSID_SUPPORT" = "xno"; then
@@ -10,10 +8,8 @@ Index: vice/configure.in
      fi
  
      if test x"$PARSID_SUPPORT" = "xyes"; then
-Index: vice/src/arch/unix/parsid.c
-===================================================================
---- vice/src/arch/unix/parsid.c	(Revision 26764)
-+++ vice/src/arch/unix/parsid.c	(Revision 26765)
+--- vice/src/arch/unix/parsid.c
++++ vice/src/arch/unix/parsid.c
 @@ -217,8 +217,12 @@
  #endif
  #endif
