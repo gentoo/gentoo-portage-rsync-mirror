@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/webdavcgi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/ChangeLog,v 1.4 2013/03/17 17:45:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/ChangeLog,v 1.5 2013/04/05 16:03:32 dev-zero Exp $
+
+*webdavcgi-0.8.4 (30 Mar 2013)
+
+  30 Mar 2013; Christian Affolter <c.affolter@stepping-stone.ch>
+  +webdavcgi-0.8.4.ebuild, +files/apache-webdavcgi-0.8-example.conf,
+  +files/webdav-0.8.conf:
+  Version bump to 0.8.4. Complete rewrite with droped webapp eclass, as there's
+  no need to install WebDAV CGI via webapp-config. All the files can be
+  centrally installed and shared by multiple instances, without a single file
+  residing within the web server's document root.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

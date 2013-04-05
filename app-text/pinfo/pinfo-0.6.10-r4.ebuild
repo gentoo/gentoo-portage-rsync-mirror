@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r4.ebuild,v 1.2 2013/04/05 15:19:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r4.ebuild,v 1.3 2013/04/05 16:14:44 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic
@@ -16,6 +16,7 @@ IUSE="nls readline"
 
 RDEPEND="
 	sys-libs/ncurses
+	sys-libs/readline
 	nls? ( virtual/libintl )
 "
 
