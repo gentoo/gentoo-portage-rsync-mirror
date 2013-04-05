@@ -10,5 +10,5 @@ RDEPEND=!minimal? ( >=dev-libs/openssl-0.9.7:0 ) mpi? ( virtual/mpi )
 REQUIRED_USE=openmp? ( !minimal ) mpi? ( !minimal )
 SLOT=0
 SRC_URI=http://www.openwall.com/john/g/john-1.7.9.tar.bz2 !minimal? ( http://www.openwall.com/john/g/john-1.7.9-jumbo-5.diff.gz )
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	pax-utils	a0cae5abb25d0ff197d56bf838502fa1	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b3cb9f1b94aa7828544358fd6b33f0d2
