@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.17 2013/01/15 04:48:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.18 2013/04/05 11:56:02 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ruby-ffi-1.ebuild:
+  Stable for amd64, wrt bug #464366
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> ruby-ffi-0.ebuild,
   ruby-ffi-1.ebuild:

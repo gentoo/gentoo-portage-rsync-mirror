@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.5 2013/04/05 04:33:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.6 2013/04/05 11:38:49 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils-r1 eutils
+inherit distutils-r1
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -22,19 +22,25 @@ IUSE="test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/django
-	test? ( dev-python/nose )"
+	dev-python/django[${PYTHON_USEDEP}]
+	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 S=${WORKDIR}/${MY_P}
+
+python_prepare_all() {
+	# Fix installing 'tests' package in the global scope.
+	# http://code.google.com/p/django-evolution/issues/detail?id=134
+	sed -i -e 's:find_packages(:&exclude=("tests",):' setup.py || die
+
+	distutils-r1_python_prepare_all
+}
 
 python_test() {
 	# This is tested, any delay in die subsequent to (implicitly inherited) multiprocessing eclass
 	"${PYTHON}" tests/runtests.py || die
 }
 
-src_install() {
-	einfo "Remove tests to avoid file collisions"
-	rm -rf $(find ../ -name tests) || die
-	distutils-r1_src_install
+python_install_all() {
+	distutils-r1_python_install_all
 	dodoc -r docs/
 }

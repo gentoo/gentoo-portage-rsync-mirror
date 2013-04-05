@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.110 2013/01/15 02:36:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.111 2013/04/05 11:55:41 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> tzinfo-0.3.35.ebuild:
+  Stable for amd64, wrt bug #464366
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> tzinfo-0.3.33.ebuild,
   tzinfo-0.3.35.ebuild:
