@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.25 2013/04/05 10:18:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.26 2013/04/05 10:38:47 scarabeus Exp $
 
 EAPI=5
 
@@ -91,6 +91,7 @@ src_configure() {
 		"-DENABLE_LARGEFILE=ON"
 		"-DENABLE_DEMO=OFF"
 		"-DENABLE_GTK=OFF"
+		"-DPYTHON_EXECUTABLE=${PYTHON}"
 		$(cmake-utils_use_enable nls)
 		$(cmake-utils_use_enable crypt GCRYPT)
 		$(cmake-utils_use_enable spell ASPELL)

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.57 2013/03/08 11:15:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.58 2013/04/05 10:48:46 lu_zero Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ SLOT="0/9"
 ~x64-solaris ~x86-solaris"
 IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
 	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
-	network openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl
+	network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
 	x264 xvid +zlib"
 
@@ -75,6 +75,7 @@ RDEPEND="
 	)
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
+	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	ssl? (
@@ -203,7 +204,7 @@ src_configure() {
 
 	# Decoders
 	use amr && myconf+=" --enable-libopencore-amrwb --enable-libopencore-amrnb"
-	uses="gsm rtmp schroedinger speex vpx"
+	uses="gsm opus rtmp schroedinger speex vpx"
 	for i in ${uses}; do
 		use ${i} && myconf+=" --enable-lib${i}"
 	done

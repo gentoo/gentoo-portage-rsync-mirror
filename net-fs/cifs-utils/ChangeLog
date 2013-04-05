@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.51 2013/04/03 13:44:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.52 2013/04/05 11:00:28 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> cifs-utils-5.9-r1.ebuild:
+  Stable for amd64, wrt bug #464356
 
 *cifs-utils-6.0 (03 Apr 2013)
 

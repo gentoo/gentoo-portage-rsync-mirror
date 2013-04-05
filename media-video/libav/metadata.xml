@@ -26,6 +26,7 @@
 	<flag name="mmxext">Enable mmx2 support.</flag>
 	<flag name="network">Enable network streaming support.</flag>
 	<flag name="openssl">Prefer <pkg>dev-libs/openssl</pkg> over <pkg>net-libs/gnutls</pkg> to provide SSL/TLS support (notice: the resulting binaries are unredistributable).</flag>
+	<flag name="opus">Use the external opus library for encoding and decoding.</flag>
 	<flag name="pulseaudio">Enable pulseaudio input support.</flag>
 	<flag name="pic">Force shared libraries to be built as PIC (this is slower).</flag>
 	<flag name="qt-faststart">Build and install qt-faststart application.</flag>
