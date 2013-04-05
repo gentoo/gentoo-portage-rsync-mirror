@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.17.5.ebuild,v 1.1 2013/03/31 07:07:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.18.0.ebuild,v 1.1 2013/04/05 06:32:55 radhermit Exp $
 
 EAPI=5
 
