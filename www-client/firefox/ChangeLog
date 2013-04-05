@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.227 2013/04/04 14:37:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.228 2013/04/05 22:49:56 anarchy Exp $
+
+*firefox-20.0 (05 Apr 2013)
+
+  05 Apr 2013; Jory A. Pratt <anarchy@gentoo.org> -firefox-19.0.2.ebuild,
+  +firefox-20.0.ebuild:
+  Security/Version bump, bug #464226. pax-mark unconditional even when no jit
+  is enabled, needs major rework.
 
 *firefox-17.0.5 (04 Apr 2013)
 
