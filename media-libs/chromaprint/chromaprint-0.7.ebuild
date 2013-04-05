@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.7.ebuild,v 1.5 2013/04/05 10:59:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.7.ebuild,v 1.6 2013/04/05 11:04:22 ago Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://github/lalinsky/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="test tools"
 
 # note: use ffmpeg instead of fftw because it's recommended and required for tools

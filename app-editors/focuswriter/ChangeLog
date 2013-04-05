@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/focuswriter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.14 2013/03/02 19:20:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.15 2013/04/05 11:09:50 yngwin Exp $
+
+*focuswriter-1.4.2 (05 Apr 2013)
+
+  05 Apr 2013; Ben de Groot <yngwin@gentoo.org> +focuswriter-1.4.2.ebuild,
+  -focuswriter-1.4.0.ebuild:
+  version bump, drop old, add message about optional sound support (bug #442414)
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> focuswriter-1.4.0.ebuild,
   focuswriter-1.4.1.ebuild:
