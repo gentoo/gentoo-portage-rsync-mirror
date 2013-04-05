@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.24 2013/04/05 20:45:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta3.ebuild,v 1.1 2013/04/05 20:45:09 axs Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
-	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~axs/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
 fi
 
@@ -66,19 +66,20 @@ udev_check_KV()
 
 pkg_pretend()
 {
-	ewarn "As of 2013-01-29, eudev-9999 provides the new interface renaming"
-	ewarn "functionality, as described in the URL below:"
+	ewarn "Eudev now implements predictable network interface renaming rules, as per"
 	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
-	ewarn " "
-	ewarn "This functionality is enabled BY DEFAULT because eudev has no means of synchronizing"
-	ewarn "between the default or user-modified choice of sys-fs/udev.  If you wish to disable"
-	ewarn "this new iface naming, please be sure that /etc/udev/rules.d/80-net-name-slot.rules"
-	ewarn "exists:"
-	ewarn "\ttouch /etc/udev/rules.d/80-net-name-slot.rules"
-	ewarn " "
-	ewarn "We are working on a better solution for the next beta release."
-	ewarn " "
+	ewarn
+	ewarn "Unless you are upgrading from eudev-1_beta3, this functionality is DISABLED"
+	ewarn "BY DEFAULT using a stub rule file called /etc/udev/rules.d/80-net-name-slot.rules"
+	ewarn
+	ewarn "If you are migrating from sys-fs/udev-197 and above, and you already use this"
+	ewarn "feature, please make sure to remove that stub file before rebooting, otherwise"
+	ewarn "your network interface ids will be supplied by the kernel."
+	ewarn
+	ewarn "To enable support for these new interface names in eudev, please remove the stub:"
+	ewarn "\trm /etc/udev/rules.d/80-net-name-slot.rules\t\t(as root)"
 	if has_version "<sys-fs/udev-180" && ! use legacy-libudev; then
+	ewarn
 	ewarn "This version of eudev does not contain the libudev.so.0 library by "
 	ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
 	ewarn ""
@@ -89,12 +90,15 @@ pkg_pretend()
 	ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
 	ewarn "you wish to continue to use your system while migrating to libudev.so.1"
 	else
+	if use legacy-libudev ; then
+	ewarn
 	ewarn "You are installing eudev with USE=legacy-libudev , this should only be used"
 	ewarn "to support binary-only applications or legacy applications while in the"
 	ewarn "process of doing a full systems upgrade, that require libudev.so.0 -- it is"
 	ewarn "HIGHLY RECOMMENDED to leave this flag disabled unless absolutely necessary."
-	ewarn ""
 	fi
+	fi
+	ewarn
 }
 
 pkg_setup()
@@ -234,6 +238,19 @@ pkg_postinst()
 	fi
 
 	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
+
+	# handling of default-disabling of 80-net-name-slot.rules
+	if [[ -z $REPLACING_VERSIONS ]] || \
+	   [[ ${REPLACING_VERSIONS/-r*/} == "1_beta2" ]] || \
+	   [[ ${REPLACING_VERSIONS/-r*/} == "1_beta1" ]]; then
+		if [[ ! -e ${EROOT}etc/udev/rules.d/80-net-name-slot.rules ]]; then
+		elog
+		elog "Writing override rule /etc/udev/rules.d/80-net-name-slot.rules to disable"
+		elog "new predictable net iface rename functionality by default"
+		echo "# disabling predictible iface rename rules by default, remove this file to enable" \
+			>${EROOT}etc/udev/rules.d/80-net-name-slot.rules
+		fi
+	fi
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"

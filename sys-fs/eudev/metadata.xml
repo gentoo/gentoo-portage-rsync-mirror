@@ -13,6 +13,9 @@
   <flag name="kmod">enable module loading through libkmod (requires modules)</flag>
   <flag name="modutils">enable module loading support</flag>
   <flag name="openrc">install the OpenRC init scripts</flag>
+  <flag name="rule-generator">install legacy rule generator rules and support scripts - note
+	that the functionality within was dropped from sys-fs/udev as it is not stable in
+	all cases; use at your own risk</flag>
   <flag name="legacy-libudev">install libudev.so.0 to help with migration from udev-179 or older</flag>
 </use>
 </pkgmetadata>

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14632 2013/04/05 15:52:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14633 2013/04/05 20:43:42 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Stakenvicius <axs@gentoo.org> (05 Apr 2013)
+# <eudev@gentoo.org>
+# masking initial tree commit of eudev-1_beta3
+# until further testing can occur to guarantee
+# there is no large end-user failures once package
+# is unmasked; should be unmasked next week
+=sys-fs/eudev-1_beta3
 
 # Tom Wijsman <TomWij@gentoo.org> (05 Apr 2013)
 # Meteor has switched to a different installation approach;
