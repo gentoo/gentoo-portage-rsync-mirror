@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.21 2013/03/23 11:25:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.22 2013/04/05 08:31:58 idella4 Exp $
+
+*pyspf-2.0.7-r1 (05 Apr 2013)
+
+  05 Apr 2013; Ian Delaney <idella4@gentoo.org>
+  +files/pyspf-2.0.7-catch_unicode.patch, +pyspf-2.0.7-r1.ebuild:
+  Patch acquired from bugs.launchpad.net/pypolicyd-spf/+bug/832480, fixes Bug
+  #463892 + migration of eclass
 
   23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pyspf-2.0.7.ebuild:
   Stable for x86, wrt bug #459542
