@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbi/ChangeLog,v 1.6 2013/04/05 12:08:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbi/ChangeLog,v 1.7 2013/04/05 17:38:34 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dbi-0.4.5.ebuild:
+  Stable for ppc, wrt bug #464366
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dbi-0.4.5.ebuild:
   Stable for x86, wrt bug #464366

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbi/dbi-0.4.5.ebuild,v 1.3 2013/04/05 12:08:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbi/dbi-0.4.5.ebuild,v 1.4 2013/04/05 17:38:34 ago Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -19,7 +19,7 @@ HOMEPAGE="http://ruby-dbi.rubyforge.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="odbc postgres mysql sqlite sqlite3 test"
 
 ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.5.1-r1 )"
