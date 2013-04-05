@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.17.ebuild,v 1.10 2013/04/04 17:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.17.ebuild,v 1.11 2013/04/05 18:23:27 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -150,6 +150,10 @@ for x in setup {pre,post}inst ; do
 		eval "pkg_${x}() { eblit-run pkg_${x} ; }"
 	fi
 done
+
+eblit-src_unpack-pre() {
+	GLIBC_PATCH_EXCLUDE+=" 6600_mips_librt-mips.patch" #456912
+}
 
 eblit-src_unpack-post() {
 	if use hardened ; then

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.8.ebuild,v 1.7 2012/12/01 19:36:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.8.ebuild,v 1.8 2013/04/05 18:14:09 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -26,6 +26,7 @@ REQUIRED_USE="gnome? ( gtk )"
 DOCS="AUTHORS ChangeLog README"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-memcpy.patch
 	elibtoolize
 }
 

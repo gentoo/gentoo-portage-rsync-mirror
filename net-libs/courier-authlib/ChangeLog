@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.152 2013/04/02 12:09:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.153 2013/04/05 18:26:06 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  courier-authlib-0.65.0-r3.ebuild:
+  Stable for ppc64, wrt bug #463483
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   courier-authlib-0.65.0-r3.ebuild:

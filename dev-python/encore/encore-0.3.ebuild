@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/encore-0.3.ebuild,v 1.1 2013/04/05 14:19:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/encore-0.3.ebuild,v 1.2 2013/04/05 18:17:20 floppym Exp $
 
 EAPI=5
 
@@ -18,30 +18,31 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
 RDEPEND=""
-DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/futures[${PYTHON_USEDEP}] )"
+DEPEND="${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	test? (
+		dev-python/futures[${PYTHON_USEDEP}]
+		dev-python/nose[${PYTHON_USEDEP}]
+	)"
 
-DOCS="dataflow.txt"
-
-python_prepare_all() {
-	# use of port 8080 is highly prone to prior use on testing
-	sed -e 's:self.port = 8080:self.port = 8020:' \
-		 -i encore/storage/tests/static_url_store_test.py || die
-}
+DOCS=( dataflow.txt )
 
 python_compile_all() {
-	use doc && PYTHONPATH="$(ls -1d ${S}/build*/lib | head -n1)" \
-		emake -C docs html
+	use doc && emake -C docs html
 }
 
 python_test() {
-	# as set for py2.6 in 0.2, likely due to tests coded to import only unittest
-	[[ "${EPYTHON:6:3}" = '2.6' ]] && return
+	if [[ ${EPYTHON} == python2.6 ]]; then
+		ewarn "Tests disabled for ${EPYTHON}"
+		return 0
+	fi
 	nosetests || die
 }
 
 python_install_all() {
-	find -name "*LICENSE*.txt" -delete
+	distutils-r1_python_install_all
+
 	use doc && dohtml -r docs/build/html/*
 
 	if use examples; then

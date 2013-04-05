@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.53 2013/04/05 17:02:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.54 2013/04/05 18:10:21 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rdate-1.4-r4.ebuild:
+  Stable for ppc64, wrt bug #464384
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rdate-1.4-r4.ebuild:
   Stable for ppc, wrt bug #464384
