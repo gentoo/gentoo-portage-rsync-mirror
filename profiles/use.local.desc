@@ -705,6 +705,7 @@ app-leechcraft/lc-vrooby:udisks2 - Use sys-fs/udisks:2 for block device access (
 app-leechcraft/leechcraft-meta:unstable - Pull plugins from ~arch
 app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
+app-misc/binwalk:graph - Enable support for generating entropy graphs
 app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ddccontrol:ddcpci - enable direct PCI memory access (the setuid ddcpci util)
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
