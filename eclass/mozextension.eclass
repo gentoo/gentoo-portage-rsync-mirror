@@ -1,12 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.7 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.8 2013/04/05 15:27:40 floppym Exp $
 #
 # @ECLASS: mozextension.eclass
 # @MAINTAINER:
 # Mozilla team <mozilla@gentoo.org>
-# @DESCRIPTION:
-# Install extensions for use in mozilla products.
+# @BLURB: Install extensions for use in mozilla products.
 
 
 inherit eutils

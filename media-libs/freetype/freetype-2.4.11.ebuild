@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11.ebuild,v 1.15 2013/02/18 01:04:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11.ebuild,v 1.16 2013/04/05 15:22:16 yngwin Exp $
 
 EAPI="4"
 
@@ -67,8 +67,8 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
-
 	epatch "${FILESDIR}"/${P}-auto-hinter_compile_fix.patch # 453956
+	epatch "${FILESDIR}"/${P}-locale.patch # 454804
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${PV}"
@@ -80,7 +80,6 @@ src_prepare() {
 	fi
 
 	elibtoolize
-	epunt_cxx
 }
 
 src_configure() {
