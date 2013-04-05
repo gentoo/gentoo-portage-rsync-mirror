@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.10.ebuild,v 1.1 2013/03/10 14:47:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.10.ebuild,v 1.2 2013/04/05 05:44:01 idella4 Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
+RESTRICT="test"
 
 RDEPEND="dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/sqlalchemy
