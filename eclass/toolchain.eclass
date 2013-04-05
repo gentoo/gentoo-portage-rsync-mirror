@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.573 2013/04/02 03:02:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.574 2013/04/05 05:23:22 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1360,6 +1360,7 @@ gcc_do_make() {
 
 # This is mostly a stub function to be overwritten in an ebuild
 gcc_do_filter_flags() {
+
 	strip-flags
 
 	# In general gcc does not like optimization, and add -O2 where
@@ -1409,9 +1410,13 @@ gcc_do_filter_flags() {
 		;;
 	esac
 
-	# Compile problems with these (bug #6641 among others)...
-	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
-
+	case ${GCC_BRANCH_VER} in
+	4.6)
+		# https://bugs.gentoo.org/411333
+		replace-cpu-flags pentium2 pentium3 pentium3m pentium-m i686
+		;;
+	esac
+	
 	# CFLAGS logic (verified with 3.4.3):
 	# CFLAGS:
 	#	This conflicts when creating a crosscompiler, so set to a sane
