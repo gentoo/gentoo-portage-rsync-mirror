@@ -1,5 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.930 2013/04/05 00:25:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.931 2013/04/05 00:33:24 vapier Exp $
+
+  05 Apr 2013; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit:
+  Disable info manual generation to simplify older builds #464394 by Jason
+  Mours.
 
   05 Apr 2013; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_install.eblit, files/eblits/src_unpack.eblit,
