@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7694 2013/04/05 13:51:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7695 2013/04/05 14:17:30 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Apr 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Modified mask message.
 
   05 Apr 2013; Ben de Groot <yngwin@gentoo.org> package.mask:
   media-libs/freetype non-maintainer ebuild with experimental multilib features

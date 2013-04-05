@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14630 2013/04/05 13:51:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14631 2013/04/05 14:17:30 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,7 +58,7 @@ games-emulation/xmess
 
 # Lars Wendler <polynomial-c@gentoo.org> (02 Apr 2013)
 # Dead upstream. Masked for removal in 30 days.
-# net-irc/hexchat can be used as drop-in replacement.
+# Use net-irc/hexchat instead which is a fork of xchat.
 net-irc/xchat
 
 # Sergey Popov <pinkbyte@gentoo.org> (02 Apr 2013)
