@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/futures-2.1.3-r1.ebuild,v 1.1 2013/04/05 13:51:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/futures-2.1.3-r1.ebuild,v 1.2 2013/04/05 20:06:13 floppym Exp $
 
 EAPI=5
 
@@ -27,9 +27,10 @@ python_compile_all() {
 }
 
 python_test() {
-	"${PYTHON}" test_futures.py || die "no tests today"
+	"${PYTHON}" test_futures.py || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
+	distutils-r1_python_install_all
 	use doc && dohtml -r docs/_build/html/
 }
