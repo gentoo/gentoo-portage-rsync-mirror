@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-27.0.1453.12_alpha191631.ebuild,v 1.1 2013/04/03 00:17:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-27.0.1453.12_alpha191631.ebuild,v 1.2 2013/04/05 14:31:53 floppym Exp $
 
 EAPI="4"
 
@@ -98,7 +98,7 @@ pkg_setup() {
 }
 
 src_install() {
-	pax-mark m ${CHROME_HOME}chrome || die
+	pax-mark m ${CHROME_HOME}chrome
 	rm -rf usr/share/menu || die
 	mv usr/share/doc/${PN} usr/share/doc/${PF} || die
 

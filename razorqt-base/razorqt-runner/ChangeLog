@@ -1,6 +1,12 @@
 # ChangeLog for razorqt-base/razorqt-runner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-runner/ChangeLog,v 1.8 2013/03/02 23:14:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-runner/ChangeLog,v 1.10 2013/04/05 14:41:03 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> razorqt-runner-0.5.2.ebuild:
+  Stable for x86, wrt bug #464706
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> razorqt-runner-0.5.2.ebuild:
+  Stable for amd64, wrt bug #464706
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   razorqt-runner-0.5.1.ebuild, razorqt-runner-0.5.2.ebuild:

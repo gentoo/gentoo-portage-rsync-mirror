@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.64 2013/04/01 09:16:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.65 2013/04/05 14:54:48 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -185,7 +185,7 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # @CODE
 
 # @ECLASS-VARIABLE: AUTOTOOLS_PRUNE_LIBTOOL_FILES
-# @DEFAULT-UNSET
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Sets the mode of pruning libtool files. The values correspond to
 # prune_libtool_files parameters, with leading dashes stripped.

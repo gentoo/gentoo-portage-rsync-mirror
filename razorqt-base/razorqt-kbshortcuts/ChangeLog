@@ -1,6 +1,14 @@
 # ChangeLog for razorqt-base/razorqt-kbshortcuts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-kbshortcuts/ChangeLog,v 1.7 2013/01/20 19:07:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-kbshortcuts/ChangeLog,v 1.9 2013/04/05 14:40:44 ago Exp $
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  razorqt-kbshortcuts-0.5.2.ebuild:
+  Stable for x86, wrt bug #464706
+
+  05 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  razorqt-kbshortcuts-0.5.2.ebuild:
+  Stable for amd64, wrt bug #464706
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   razorqt-kbshortcuts-0.5.1.ebuild:
