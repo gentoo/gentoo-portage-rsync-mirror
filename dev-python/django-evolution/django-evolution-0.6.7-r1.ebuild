@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.4 2013/03/15 09:33:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.5 2013/04/05 04:33:30 idella4 Exp $
 
 EAPI=5
 
@@ -33,10 +33,8 @@ python_test() {
 }
 
 src_install() {
-	distutils-r1_src_install
-
 	einfo "Remove tests to avoid file collisions"
-	rm -rf $(find "${ED}" -name tests) || die
-
+	rm -rf $(find ../ -name tests) || die
+	distutils-r1_src_install
 	dodoc -r docs/
 }
