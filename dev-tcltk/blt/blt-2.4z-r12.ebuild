@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r12.ebuild,v 1.1 2013/04/04 18:24:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r12.ebuild,v 1.2 2013/04/05 07:01:52 jlec Exp $
 
 EAPI=5
 
@@ -61,6 +61,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-darwin.patch \
 		"${FILESDIR}"/${P}-gbsd.patch \
 		"${FILESDIR}"/${P}-tk8.6.patch \
+		"${FILESDIR}"/${P}-tcl8.6.patch \
 		"${FILESDIR}"/${P}-aclocal.patch
 
 	append-cflags -fPIC
