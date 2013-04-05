@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.121 2013/04/03 22:14:52 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.122 2013/04/05 03:54:15 naota Exp $
+
+  05 Apr 2013; Naohiro Aota <naota@gentoo.org> ibus-1.5.1-r2.ebuild:
+  Depend on gnome-base/gconf. #464562
 
 *ibus-1.5.1-r2 (03 Apr 2013)
 

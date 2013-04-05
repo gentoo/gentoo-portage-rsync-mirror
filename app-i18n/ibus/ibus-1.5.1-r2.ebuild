@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.1-r2.ebuild,v 1.1 2013/04/03 22:14:52 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.1-r2.ebuild,v 1.2 2013/04/05 03:54:15 naota Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
@@ -18,7 +18,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-# USE=vala is temporaly removed due to fix patch:
+# USE=vala and DEPEND=gnome-base/gconf is temporaly removed due to fix patch:
 # ${P}-use-system-keyboard-layout.patch
 IUSE="dconf deprecated +gconf gtk +gtk3 +introspection nls +python test +X"
 REQUIRED_USE="|| ( gtk gtk3 X )
@@ -58,7 +58,8 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )
-	$(vala_depend)"
+	$(vala_depend)
+	gnome-base/gconf"
 
 # stress test in bus/ fails
 # IBUS-CRITICAL **: bus_test_client_init: assertion `ibus_bus_is_connected (_bus)' failed
