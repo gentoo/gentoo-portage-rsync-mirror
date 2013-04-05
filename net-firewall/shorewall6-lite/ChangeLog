@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall6-lite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.48 2013/03/17 16:01:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.49 2013/04/05 12:12:35 constanze Exp $
+
+*shorewall6-lite-4.5.15 (05 Apr 2013)
+
+  05 Apr 2013; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.5.15.ebuild:
+  Version Bump see Bug #462490
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

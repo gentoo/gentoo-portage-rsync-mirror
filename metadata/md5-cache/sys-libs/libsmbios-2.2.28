@@ -1,13 +1,13 @@
-DEFINED_PHASES=configure install postinst postrm prepare
-DEPEND=dev-libs/libxml2 sys-libs/zlib nls? ( virtual/libintl ) virtual/pkgconfig doc? ( app-doc/doxygen ) graphviz? ( media-gfx/graphviz ) nls? ( sys-devel/gettext ) test? ( >=dev-util/cppunit-1.9.6 ) python? ( || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEFINED_PHASES=configure install prepare setup
+DEPEND=dev-libs/libxml2 sys-libs/zlib nls? ( virtual/libintl ) python? ( python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) virtual/pkgconfig doc? ( app-doc/doxygen ) graphviz? ( media-gfx/graphviz ) nls? ( sys-devel/gettext ) test? ( >=dev-util/cppunit-1.9.6 ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Provide access to (SM)BIOS information
-EAPI=2
+EAPI=5
 HOMEPAGE=http://linux.dell.com/libsmbios/main/index.html
-IUSE=doc graphviz nls python static-libs test
+IUSE=doc graphviz nls python static-libs test python_targets_python2_7 python_single_target_python2_7
 KEYWORDS=amd64 ia64 x86
 LICENSE=GPL-2 OSL-2.0
-RDEPEND=dev-libs/libxml2 sys-libs/zlib nls? ( virtual/libintl ) python? ( || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
+RDEPEND=dev-libs/libxml2 sys-libs/zlib nls? ( virtual/libintl ) python? ( python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] )
 SLOT=0
 SRC_URI=http://linux.dell.com/libsmbios/download/libsmbios/libsmbios-2.2.28/libsmbios-2.2.28.tar.bz2
-_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4018e806445b49bdb94220b74c157130
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	72a6ebbb13ee8f95b6725848df4deb4d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f814f2f018b7d1a4ad543554d703106c
