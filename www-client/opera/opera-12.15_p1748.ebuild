@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.15_pre1742.ebuild,v 1.1 2013/03/19 20:18:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.15_p1748.ebuild,v 1.1 2013/04/05 09:36:01 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -19,7 +19,7 @@ O_B="$(get_version_component_range 3)"   # Build number, i.e. 1156
 # == Variables that often change ==
 # All other variables should be accounted for by _pre/_p
 
-O_K="nohi" # The key to the snapshot URL
+O_K="noserch" # The key to the snapshot URL
 
 O_LINGUAS="
 	af ar az be bg bn cs da de el en-GB es-ES es-LA et fa fi fr fr-CA fy gd he

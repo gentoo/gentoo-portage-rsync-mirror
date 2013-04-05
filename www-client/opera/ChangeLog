@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.807 2013/03/22 19:28:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.808 2013/04/05 09:36:01 jer Exp $
+
+*opera-12.15_p1748 (05 Apr 2013)
+
+  05 Apr 2013; Jeroen Roovers <jer@gentoo.org> -opera-12.15_pre1742.ebuild,
+  -opera-12.15_pre1745.ebuild, +opera-12.15_p1748.ebuild:
+  http://my.opera.com/desktopteam/blog/2013/04/04/12-15-final-released
 
 *opera-12.15_pre1745 (22 Mar 2013)
 
