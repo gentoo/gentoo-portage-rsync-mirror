@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.54 2011/08/29 01:28:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.55 2013/04/05 13:25:25 yngwin Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
@@ -56,6 +56,7 @@ DEPEND="X? (
 		media-fonts/encodings
 	)
 	>=media-libs/fontconfig-2.4.0"
+RDEPEND="${DEPEND}"
 
 # @FUNCTION: font_xfont_config
 # @DESCRIPTION:
