@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dibbler
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.16 2012/07/12 18:54:58 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.17 2013/04/05 13:59:31 pinkbyte Exp $
+
+*dibbler-0.8.3 (05 Apr 2013)
+
+  05 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +dibbler-0.8.3.ebuild:
+  Version bump, wrt bug #461556. Add epatch_user, use readme.gentoo eclass,
+  some generic cleanups
 
   12 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/dibbler-0.8.2-gcc47.patch, dibbler-0.8.2.ebuild:
