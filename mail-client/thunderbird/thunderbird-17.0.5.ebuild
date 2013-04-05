@@ -1,15 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.11.ebuild,v 1.7 2013/03/25 14:06:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.5.ebuild,v 1.1 2013/04/05 09:30:16 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 MOZ_ESR="1"
 
 # This list can be updated using scripts/get_langs.sh from the mozilla overlay
-MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu fi
-fr fy-NL ga-IE gd gl he hu id is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR pt-PT
-rm ro ru si sk sl sq sr sv-SE ta-LK tr uk vi zh-CN zh-TW)
+MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR
+es-ES et eu fi fr fy-NL ga-IE gd gl he hr hu hy-AM id is it ja ko lt nb-NO
+nl nn-NO pa-IN pl pt-BR pt-PT rm ro ru si sk sl sq sr sv-SE ta-LK tr uk vi
+zh-CN zh-TW )
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_beta/b}"
@@ -20,7 +21,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.3.5"
+EMVER="1.5.1"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -30,38 +31,40 @@ inherit flag-o-matic toolchain-funcs mozconfig-3 makeedit multilib autotools pax
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
-LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE="bindist gconf +crypt +ipc +lightning +minimal mozdom +webm selinux"
+LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
+IUSE="bindist gconf +crypt +jit +ipc ldap +lightning +minimal mozdom selinux"
 
-PATCH="thunderbird-10.0-patches-0.1"
-PATCHFF="firefox-10.0-patches-0.9"
+PATCH="thunderbird-17.0-patches-01"
+PATCHFF="firefox-17.0-patches-0.5"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
 	crypt? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz )
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz"
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
+	http://dev.gentoo.org/~nirbheek/mozilla/patchsets/${PATCHFF}.tar.xz
+	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.6
-	>=dev-libs/nspr-4.9.2
+	>=dev-libs/nss-3.14.1
+	>=dev-libs/nspr-4.9.4
 	>=dev-libs/glib-2.26
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
-	>=media-libs/libpng-1.5.9[apng]
+	>=media-libs/libpng-1.5.11[apng]
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.14.0
 	>=x11-libs/gtk+-2.14
-	webm? ( >=media-libs/libvpx-1.0.0
-		media-libs/alsa-lib )
+	kernel_linux? ( media-libs/alsa-lib )
+	>=media-libs/libvpx-1.0.0
 	virtual/libffi
 	!x11-plugins/enigmail
 	system-sqlite? ( || (
 		>=dev-db/sqlite-3.7.16:3[secure-delete,debug=]
-		<dev-db/sqlite-3.7.16:3[fts3,secure-delete,unlock-notify,debug=]
+		<dev-db/sqlite-3.7.16:3[fts3,secure-delete,threadsafe,unlock-notify,debug=]
 	) )
 	selinux? ( sec-policy/selinux-thunderbird )
 	crypt?  ( || (
@@ -75,11 +78,16 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	) )"
 
 DEPEND="${RDEPEND}
+	!elibc_glibc? ( dev-libs/libexecinfo )
 	virtual/pkgconfig
-	webm? ( x86? ( ${ASM_DEPEND} )
-		amd64? ( ${ASM_DEPEND} ) )"
+	amd64? ( ${ASM_DEPEND}
+		virtual/opengl )
+	x86? ( ${ASM_DEPEND}
+		virtual/opengl )"
 
-if [[ ${MOZ_ESR} == 1 ]]; then
+if [[ ${PV} =~ beta ]]; then
+	S="${WORKDIR}/comm-beta"
+elif [[ ${MOZ_ESR} == 1 ]]; then
 	S="${WORKDIR}/comm-esr${PV%%.*}"
 else
 	S="${WORKDIR}/comm-release"
@@ -118,9 +126,6 @@ src_prepare() {
 
 	# Apply our patchset from firefox to thunderbird as well
 	pushd "${S}"/mozilla &>/dev/null || die
-	EPATCH_EXCLUDE="5005_use_resource_urls_appropriately.patch
-		6012_fix_shlibsign.patch
-		6013_fix_abort_declaration.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
@@ -131,12 +136,21 @@ src_prepare() {
 		cd "${S}"
 	fi
 
+	# Disable gnomevfs extension
+	sed -i -e "s:gnomevfs::" "${S}/"mozilla/browser/confvars.sh \
+		-e "s:gnomevfs::" "${S}/"mozilla/xulrunner/confvars.sh \
+		|| die "Failed to remove gnomevfs extension"
+
 	#Fix compilation with curl-7.21.7 bug 376027
 	sed -e '/#include <curl\/types.h>/d'  \
 		-i "${S}"/mozilla/toolkit/crashreporter/google-breakpad/src/common/linux/http_upload.cc \
 		-i "${S}"/mozilla/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc \
 		-i "${S}"/mozilla/config/system-headers \
 		-i "${S}"/mozilla/js/src/config/system-headers || die "Sed failed"
+
+	# Don't error out when there's no files to be removed:
+	sed 's@\(xargs rm\)$@\1 -f@' \
+		-i "${S}"/mozilla/toolkit/mozapps/installer/packager.mk || die
 
 	# Shell scripts sometimes contain DOS line endings; bug 391889
 	grep -rlZ --include="*.sh" $'\r$' . |
@@ -149,6 +163,7 @@ src_prepare() {
 	epatch_user
 
 	eautoreconf
+	# Ensure we run eautoreconf in mozilla to regenerate configure
 	cd "${S}"/mozilla
 	eautoconf
 }
@@ -169,6 +184,9 @@ src_configure() {
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
 
+	# We must force enable jemalloc 3 threw .mozconfig
+	echo "export MOZ_JEMALLOC=1" >> ${S}/.mozconfig
+
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
@@ -177,11 +195,15 @@ src_configure() {
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
-	mozconfig_annotate 'regression' --disable-tracejit
+	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"
 
 	# Use enable features
 	mozconfig_use_enable lightning calendar
 	mozconfig_use_enable gconf
+	mozconfig_use_enable ldap
+	# Features know to cause problems with hardened.
+	mozconfig_use_enable jit methodjit
+	mozconfig_use_enable jit tracejit
 
 	# Bug #72667
 	if use mozdom; then
@@ -237,8 +259,11 @@ src_install() {
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs-1.js-1 \
 		"${S}/${obj_dir}/mozilla/dist/bin/defaults/pref/all-gentoo.js" || die
 
-	# Pax mark xpcshell for hardened support, only used for startupcache creation.
-	pax-mark m "${S}"/${obj_dir}/mozilla/dist/bin/xpcshell
+	# Without methodjit and tracejit there's no conflict with PaX
+	if use jit; then
+		# Pax mark xpcshell for hardened support, only used for startupcache creation.
+		pax-mark m "${S}"/${obj_dir}/mozilla/dist/bin/xpcshell
+	fi
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 
@@ -253,7 +278,7 @@ src_install() {
 		newmenu "${FILESDIR}"/icon/${PN}-unbranded.desktop \
 			${PN}.desktop
 
-		sed -i -e "s:Mozilla\ Thunderbird:Lanikai:g" \
+		sed -i -e "s:Mozilla\ Thunderbird:EarlyBird:g" \
 			"${ED}"/usr/share/applications/${PN}.desktop
 	fi
 
@@ -290,8 +315,15 @@ src_install() {
 			-i "${ED}"/usr/share/applications/${PN}.desktop
 	fi
 
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/thunderbird-bin
+	if use jit ; then
+		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{thunderbird-bin,thunderbird}
+	fi
 
+	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
+	# continue to work as expected.
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
+
+	# Plugins dir
 	share_plugins_dir
 
 	if use minimal; then

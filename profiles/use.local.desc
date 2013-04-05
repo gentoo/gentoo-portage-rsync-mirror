@@ -2618,7 +2618,6 @@ mail-client/thunderbird:lightning - Enable calendar support
 mail-client/thunderbird:minimal - Remove the software development kit and headers
 mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
 mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
-mail-client/thunderbird:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 mail-client/thunderbird-bin:crashreporter - Enable crash reporter for bugs
 mail-filter/MailScanner:exim - Set mail-mta to used MTA
 mail-filter/MailScanner:postfix - Set mail-mta/postfix to used MTA

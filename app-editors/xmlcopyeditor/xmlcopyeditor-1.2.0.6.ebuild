@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.2.0.6.ebuild,v 1.6 2012/11/27 10:13:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.2.0.6.ebuild,v 1.7 2013/04/05 09:27:26 pinkbyte Exp $
 
 EAPI="4"
 
 WX_GTK_VER="2.8"
 MY_P=${P}-2
 
-inherit autotools wxwidgets
+inherit autotools eutils wxwidgets
 
 DESCRIPTION="XML Copy Editor is a fast, free, validating XML editor"
 HOMEPAGE="http://xml-copy-editor.sourceforge.net/"
@@ -40,6 +40,9 @@ src_prepare() {
 	sed -i  -e 's/ -Wall -g -fexceptions//g' \
 		-e '/CXXFLAGS/s/CPPFLAGS/CXXFLAGS/' \
 		configure.in || die 'sed on configure.in failed'
+	# bug #464280
+	epatch "${FILESDIR}/${P}-gcc-4.8.patch"
+
 	eautoreconf
 }
 
