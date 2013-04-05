@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.27 2013/04/01 04:22:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.28 2013/04/05 00:25:16 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -147,23 +147,6 @@ toolchain-glibc_src_install() {
 			dosym /usr/$(get_libdir)/locale /usr/$(get_abi_LIBDIR ${a})/locale
 		fi
 	done
-
-	if ! has noinfo ${FEATURES} && [[ -n ${INFOPAGE_VER} ]] ; then
-		einfo "Installing info pages..."
-
-		emake \
-			-C "${GBUILDDIR}" \
-			install_root="${install_root}" \
-			info -i || die
-	fi
-
-	if [[ -n ${MANPAGE_VER} ]] ; then
-		einfo "Installing man pages..."
-
-		# Install linuxthreads man pages even if nptl is enabled
-		cd "${WORKDIR}"/man
-		doman *.3thr
-	fi
 
 	cd "${S}"
 

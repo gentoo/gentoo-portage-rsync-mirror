@@ -1,5 +1,15 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.929 2013/04/04 17:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.930 2013/04/05 00:25:16 vapier Exp $
+
+  05 Apr 2013; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_install.eblit, files/eblits/src_unpack.eblit,
+  glibc-2.10.1-r1.ebuild, glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild,
+  glibc-2.12.2.ebuild, glibc-2.13-r2.ebuild, glibc-2.13-r4.ebuild,
+  glibc-2.14.1-r2.ebuild, glibc-2.14.1-r3.ebuild, glibc-2.14.ebuild,
+  glibc-2.15-r1.ebuild, glibc-2.15-r2.ebuild, glibc-2.15-r3.ebuild,
+  glibc-2.16.0.ebuild, glibc-2.17.ebuild, glibc-2.9_p20081201-r3.ebuild,
+  glibc-9999.ebuild:
+  Drop MANPAGE_VER/INFOPAGE_VER support as we haven't used it in a long time.
 
   04 Apr 2013; Jeroen Roovers <jer@gentoo.org> glibc-2.17.ebuild:
   Marked ~hppa too.

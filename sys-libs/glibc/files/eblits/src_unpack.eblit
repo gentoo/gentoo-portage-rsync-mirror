@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.21 2013/02/09 04:42:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.22 2013/04/05 00:25:16 vapier Exp $
 
 int_to_KV() {
 	local version=$1 major minor micro
@@ -120,16 +120,6 @@ toolchain-glibc_src_unpack() {
 		# Snapshot date patch
 		einfo "Patching version to display snapshot date ..."
 		sed -i -e "s:\(#define RELEASE\).*:\1 \"${BRANCH_UPDATE}\":" version.h
-	fi
-
-	if [[ -n ${MANPAGE_VER} ]] ; then
-		cd "${WORKDIR}"
-		unpack glibc-manpages-${MANPAGE_VER}.tar.bz2
-	fi
-
-	if [[ -n ${INFOPAGE_VER} ]] ; then
-		cd "${S}"
-		unpack glibc-infopages-${INFOPAGE_VER}.tar.bz2
 	fi
 
 	# tag, glibc is it

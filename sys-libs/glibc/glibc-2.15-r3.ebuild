@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r3.ebuild,v 1.12 2013/02/12 08:16:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r3.ebuild,v 1.13 2013/04/05 00:25:16 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -30,8 +30,6 @@ case ${PV} in
 	RELEASE_VER=${PV}
 	;;
 esac
-MANPAGE_VER=""                                 # pregenerated manpages
-INFOPAGE_VER=""                                # pregenerated infopages
 LIBIDN_VER=""                                  # it's integrated into the main tarball now
 PATCH_VER="23"                                 # Gentoo patchset
 PORTS_VER=${RELEASE_VER}                       # version of glibc ports addon
@@ -123,8 +121,6 @@ SRC_URI=$(
 	[[ -n ${PORTS_VER}     ]] && upstream_uris ${TARNAME}-ports-${PORTS_VER}.tar.xz
 	[[ -n ${BRANCH_UPDATE} ]] && gentoo_uris glibc-${RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 	[[ -n ${PATCH_VER}     ]] && gentoo_uris glibc-${RELEASE_VER}-patches-${PATCH_VER}.tar.bz2
-	[[ -n ${MANPAGE_VER}   ]] && gentoo_uris glibc-manpages-${MANPAGE_VER}.tar.bz2
-	[[ -n ${INFOPAGE_VER}  ]] && gentoo_uris glibc-infopages-${INFOPAGE_VER}.tar.bz2
 )
 
 # eblit-include [--skip] <function> [version]
