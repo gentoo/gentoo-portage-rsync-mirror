@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.11.ebuild,v 1.3 2012/07/26 18:04:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.11.ebuild,v 1.4 2013/04/06 01:04:10 naota Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa debug dbus gif gtk jpeg mmx nls png svg tiff xinerama"
 
 RDEPEND="media-libs/freetype
@@ -43,6 +43,7 @@ S=${WORKDIR}/AfterStep-${PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.9-{alpha,ldflags,libpng15}.patch
+	epatch "${FILESDIR}"/${PN}-2.2.11-{execinfo,configure}.patch
 
 	sed -i -e '/^install:/s:install.alternative ::' Makefile.in || die
 	sed -i -e '/CFLAGS="-O3"/d' libAfter{Base,Image}/configure || die
@@ -53,6 +54,10 @@ src_prepare() {
 	eautoreconf
 	cp autoconf/config.h.in ./ || die
 	cp configure ../ || die
+	popd >/dev/null
+
+	pushd libAfterBase >/dev/null
+	eautoreconf
 	popd >/dev/null
 }
 
