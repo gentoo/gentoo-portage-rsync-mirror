@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14634 2013/04/05 21:48:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14635 2013/04/06 13:20:00 swift Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sven Vermeulen <swift@gentoo.org> (06 Apr 2013)
+# Mask python-selinux for removal in 30 days.
+# The python selinux module is offered by Portage since
+# portage-2.1.6.8; the python-selinux code is no longer 
+# maintained. 
+dev-python/python-selinux
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (05 Apr 2013)
 # Mask prerelease snapshot

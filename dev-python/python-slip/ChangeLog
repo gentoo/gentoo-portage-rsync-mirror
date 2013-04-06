@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-slip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.5 2013/03/06 23:28:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.6 2013/04/06 13:12:26 swift Exp $
+
+  06 Apr 2013; Sven Vermeulen <swift@gentoo.org> python-slip-0.2.21.ebuild:
+  SELinux python module is provided by Portage, not python-selinux anymore
+  (python-selinux will be removed from tree)
 
   06 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -python-slip-0.2.20.ebuild:

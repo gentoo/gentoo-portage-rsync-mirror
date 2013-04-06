@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.55 2013/03/16 15:12:29 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.56 2013/04/06 13:20:01 swift Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -19,7 +19,6 @@ sys-libs/uclibc
 # Please keep this mask in sync between profiles/package.mask and
 # selinux/package.mask (with - prefix there).
 app-admin/setools
-dev-python/python-selinux
 dev-python/sepolgen
 sys-apps/checkpolicy
 sys-apps/policycoreutils
