@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.112 2013/04/05 11:00:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.113 2013/04/06 01:39:15 floppym Exp $
+
+  06 Apr 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  systemd-200-r1.ebuild, systemd-9999.ebuild:
+  Add openrc use flag to control dependency on sys-fs/udev-init-scripts, bug
+  464502.
 
   05 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-200-r1.ebuild,
   systemd-9999.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for www-client/w3m
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.79 2012/11/25 22:01:55 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.80 2013/04/06 01:52:14 naota Exp $
+
+*w3m-0.5.3-r3 (06 Apr 2013)
+
+  06 Apr 2013; Naohiro Aota <naota@gentoo.org>
+  +files/w3m-0.5.3-input-type-default.patch, +w3m-0.5.3-r3.ebuild:
+  Add optional patch to assume default input type to text #413795
 
   25 Nov 2012;  <naota@gentoo.org> -w3m-0.5.2-r4.ebuild, w3m-0.5.3-r2.ebuild:
   Set AR properly. #444376; Drop old version.
