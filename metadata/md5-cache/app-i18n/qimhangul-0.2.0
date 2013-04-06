@@ -1,9 +1,11 @@
 DEFINED_PHASES=-
+DEPEND=>=app-i18n/libhangul-0.0.12 dev-qt/qtgui
 DESCRIPTION=a qt-based imhangul
 EAPI=5
 HOMEPAGE=https://code.google.com/p/qimhangul/
 KEYWORDS=~amd64
 LICENSE=LGPL-3
+RDEPEND=>=app-i18n/libhangul-0.0.12 dev-qt/qtgui
 SLOT=0
 SRC_URI=https://qimhangul.googlecode.com/files/qimhangul-0.2.0.tar.gz
-_md5_=7572b5405de7b219a32ae1970ca73707
+_md5_=0db8095b405214015cc909a1cb3232b6

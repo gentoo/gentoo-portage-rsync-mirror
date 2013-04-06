@@ -1,6 +1,17 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.260 2013/04/06 01:37:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.261 2013/04/06 02:45:32 naota Exp $
+
+*uim-1.8.2-r1 (06 Apr 2013)
+*uim-1.8.4-r1 (06 Apr 2013)
+*uim-1.8.0-r1 (06 Apr 2013)
+*uim-1.7.3-r1 (06 Apr 2013)
+*uim-1.8.3-r1 (06 Apr 2013)
+
+  06 Apr 2013; Naohiro Aota <naota@gentoo.org> +files/uim-1.7.3-linguas.patch,
+  +uim-1.7.3-r1.ebuild, +uim-1.8.0-r1.ebuild, +uim-1.8.2-r1.ebuild,
+  +uim-1.8.3-r1.ebuild, +uim-1.8.4-r1.ebuild:
+  Honor LINGUAS setting. #402891
 
   06 Apr 2013; Naohiro Aota <naota@gentoo.org> -files/uim-1.5.4-gcc43.patch,
   -files/uim-1.5.4-gentoo.patch, -files/uim-1.6.0-linker.patch,
