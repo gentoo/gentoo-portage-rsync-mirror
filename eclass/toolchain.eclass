@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.574 2013/04/05 05:23:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.575 2013/04/06 03:47:30 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1226,6 +1226,10 @@ gcc_do_configure() {
 		--with-bugurl=http://bugs.gentoo.org/ \
 		--with-pkgversion="${BRANDING_GCC_PKGVERSION}"
 	set -- ${confgcc} "$@" ${EXTRA_ECONF}
+
+	# Disable gcc info regeneration -- it ships with generated info pages
+	# already.  Our custom version/urls/etc... trigger it.  #464008
+	export gcc_cv_prog_makeinfo_modern=no
 
 	# Do not let the X detection get in our way.  We know things can be found
 	# via system paths, so no need to hardcode things that'll break multilib.
