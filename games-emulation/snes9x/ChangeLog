@@ -1,9 +1,10 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.63 2013/04/06 16:06:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.64 2013/04/06 20:32:18 ulm Exp $
 
   06 Apr 2013; Ulrich Müller <ulm@gentoo.org> snes9x-1.53.ebuild:
-  Fix LICENSE, bug 436220.
+  Fix LICENSE, bug 436220. Add bindist restriction, because the resulting
+  binary links code with non-commercial restriction with GPLed code.
 
   07 Feb 2013; Mike Frysinger <vapier@gentoo.org>
   +files/snes9x-1.53-cross-compile.patch, snes9x-1.53.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.6 2013/04/05 18:14:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.7 2013/04/06 20:43:12 zmedico Exp $
 
 EAPI=2
 inherit cmake-utils flag-o-matic multilib toolchain-funcs
@@ -12,9 +12,10 @@ SRC_URI="mirror://sourceforge/podofo/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ppc64 ~sparc x86"
-IUSE="+boost debug test"
+IUSE="+boost idn debug test"
 
 RDEPEND="dev-lang/lua
+	idn? ( net-dns/libidn )
 	dev-libs/openssl
 	media-libs/fontconfig
 	media-libs/freetype:2
@@ -35,6 +36,9 @@ src_prepare() {
 	sed -i \
 		-e "s:LIBDIRNAME \"lib\":LIBDIRNAME \"$(get_libdir)\":" \
 		CMakeLists.txt || die
+
+	sed -i \
+		-e "s:LIBIDN_FOUND:HAVE_LIBIDN:g" CMakeLists.txt || die
 
 	# Use pkg-config to find headers for bug #459404.
 	sed_args=
@@ -106,6 +110,7 @@ src_configure() {
 		"-DWANT_FONTCONFIG=1"
 		"-DUSE_STLPORT=0"
 		$(cmake-utils_use_want boost)
+		$(cmake-utils_use_has idn LIBIDN)
 		$(cmake-utils_use_has test CPPUNIT)
 		)
 
