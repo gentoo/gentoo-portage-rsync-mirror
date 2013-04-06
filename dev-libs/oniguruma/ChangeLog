@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/oniguruma
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.58 2012/12/01 19:50:36 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.59 2013/04/06 00:43:16 naota Exp $
+
+*oniguruma-5.9.3 (06 Apr 2013)
+
+  06 Apr 2013; Naohiro Aota <naota@gentoo.org>
+  +files/oniguruma-5.9.3-makefile.patch, +oniguruma-5.9.3.ebuild:
+  version bump wrt #443032
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> oniguruma-5.9.2-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #441196
