@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.4.ebuild,v 1.12 2013/03/30 22:46:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.4.ebuild,v 1.13 2013/04/06 03:06:30 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -51,7 +51,7 @@ RDEPEND="
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 		media-gfx/graphicsmagick[imagemagick,png,jpeg=] )
-	>=media-libs/libpng-1.2:=
+	>=media-libs/libpng-1.2:0=
 	>=x11-libs/pango-1:=
 	sys-apps/util-linux
 

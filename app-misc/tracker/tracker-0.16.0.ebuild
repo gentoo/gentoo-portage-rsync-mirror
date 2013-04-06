@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.0.ebuild,v 1.3 2013/04/05 21:19:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.0.ebuild,v 1.4 2013/04/06 03:06:30 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,8 +15,7 @@ HOMEPAGE="http://projects.gnome.org/tracker/"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/16"
-IUSE="cue doc eds elibc_glibc exif firefox-bookmarks flac gif
-libsecret gsf gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
+IUSE="cue doc eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="${IUSE} nautilus"
 
@@ -55,7 +54,6 @@ RDEPEND="
 		>=www-client/firefox-bin-4.0 ) )
 	flac? ( >=media-libs/flac-1.2.1 )
 	gif? ( media-libs/giflib )
-	libsecret? ( >=app-crypt/libsecret-0.5 )
 	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? (
 		media-libs/gstreamer:1.0
@@ -67,6 +65,7 @@ RDEPEND="
 	iso? ( >=sys-libs/libosinfo-0.0.2:= )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? ( >=sys-power/upower-0.9 )
+	libsecret? ( >=app-crypt/libsecret-0.5 )
 	mp3? (
 		>=media-libs/taglib-1.6
 		gtk? ( x11-libs/gdk-pixbuf:2 ) )
@@ -218,7 +217,6 @@ src_configure() {
 		$(use_with firefox-bookmarks firefox-plugin-dir "${EPREFIX}"/usr/$(get_libdir)/firefox/extensions) \
 		FIREFOX="${S}"/firefox-version.sh \
 		$(use_enable flac libflac) \
-		$(use_enable libsecret) \
 		$(use_enable gsf libgsf) \
 		$(use_enable gtk tracker-needle) \
 		$(use_enable gtk tracker-preferences) \
@@ -226,6 +224,7 @@ src_configure() {
 		$(use_enable iso libosinfo) \
 		$(use_enable jpeg libjpeg) \
 		$(use_enable laptop upower) \
+		$(use_enable libsecret) \
 		$(use_enable miner-fs) \
 		$(use_enable mp3 taglib) \
 		$(use_enable networkmanager network-manager) \

@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.151 2013/04/05 21:19:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.152 2013/04/06 03:06:30 tetromino Exp $
+
+  06 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  tracker-0.14.4.ebuild, tracker-0.14.5.ebuild, tracker-0.16.0.ebuild,
+  tracker-9999.ebuild:
+  Fix libpng dependencies in 0.14.x, alphabetize a few things in 0.16.0, and
+  update live ebuild.
 
   05 Apr 2013; Pacho Ramos <pacho@gentoo.org> tracker-0.16.0.ebuild:
   Fix subslot dep on libpng

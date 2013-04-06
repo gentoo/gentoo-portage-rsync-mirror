@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.60 2013/03/30 22:46:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.61 2013/04/06 03:06:30 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,9 +18,8 @@ EGIT_REPO_URI="git://git.gnome.org/${PN}
 [[ ${PV} = 9999 ]] && SRC_URI=""
 
 LICENSE="GPL-2+ LGPL-2.1+"
-SLOT="0/14"
-IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif
-gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
+SLOT="0/16"
+IUSE="cue doc eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
 if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 	IUSE="${IUSE} doc"
@@ -41,20 +40,16 @@ REQUIRED_USE="
 RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7.14:=[threadsafe(+)]
-	>=dev-libs/glib-2.28:2
+	>=dev-libs/glib-2.35.1:2
 	>=dev-libs/gobject-introspection-0.9.5
 	>=dev-libs/icu-4:=
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 		media-gfx/graphicsmagick[imagemagick,png,jpeg=] )
-	>=media-libs/libpng-1.2:=
+	>=media-libs/libpng-1.2:0=
 	>=x11-libs/pango-1:=
 	sys-apps/util-linux
 
-	applet? (
-		>=gnome-base/gnome-panel-2.91.6
-		>=x11-libs/gdk-pixbuf-2.12:2
-		>=x11-libs/gtk+-3:3 )
 	cue? ( media-libs/libcue )
 	eds? (
 		>=mail-client/evolution-3.3.5:=
@@ -67,13 +62,11 @@ RDEPEND="
 		>=www-client/firefox-4.0
 		>=www-client/firefox-bin-4.0 ) )
 	flac? ( >=media-libs/flac-1.2.1 )
-	flickr? ( net-libs/rest:0.7 )
 	gif? ( media-libs/giflib )
-	gnome-keyring? ( >=gnome-base/gnome-keyring-2.26 )
 	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10.31:0.10
-		>=media-libs/gst-plugins-base-0.10.31:0.10 )
+		media-libs/gstreamer:1.0
+		media-libs/gst-plugins-base:1.0 )
 	gtk? (
 		>=dev-libs/libgee-0.3:0.8
 		>=x11-libs/gtk+-3:3 )
@@ -81,6 +74,7 @@ RDEPEND="
 	iso? ( >=sys-libs/libosinfo-0.0.2:= )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? ( >=sys-power/upower-0.9 )
+	libsecret? ( >=app-crypt/libsecret-0.5 )
 	mp3? (
 		>=media-libs/taglib-1.6
 		gtk? ( x11-libs/gdk-pixbuf:2 ) )
@@ -90,12 +84,12 @@ RDEPEND="
 		>=app-text/poppler-0.16:=[cairo,utils]
 		>=x11-libs/gtk+-2.12:2 )
 	playlist? ( dev-libs/totem-pl-parser )
-	rss? ( net-libs/libgrss )
+	rss? ( >=net-libs/libgrss-0.5 )
 	thunderbird? ( || (
 		>=mail-client/thunderbird-5.0
 		>=mail-client/thunderbird-bin-5.0 ) )
 	tiff? ( media-libs/tiff )
-	upnp-av? ( >=media-libs/gupnp-dlna-0.5:1.0 )
+	upnp-av? ( >=media-libs/gupnp-dlna-0.9.4:2.0 )
 	vorbis? ( >=media-libs/libvorbis-0.22 )
 	xine? ( >=media-libs/xine-lib-1 )
 	xml? ( >=dev-libs/libxml2-2.6 )
@@ -206,7 +200,6 @@ src_configure() {
 		--enable-tracker-fts \
 		--with-enca \
 		--with-unicode-support=libicu \
-		$(use_enable applet tracker-search-bar) \
 		$(use_enable cue libcue) \
 		$(use_enable eds miner-evolution) \
 		$(use_enable exif libexif) \
@@ -214,16 +207,14 @@ src_configure() {
 		$(use_with firefox-bookmarks firefox-plugin-dir "${EPREFIX}"/usr/$(get_libdir)/firefox/extensions) \
 		FIREFOX="${S}"/firefox-version.sh \
 		$(use_enable flac libflac) \
-		$(use_enable flickr miner-flickr) \
-		$(use_enable gnome-keyring) \
 		$(use_enable gsf libgsf) \
-		$(use_enable gtk tracker-explorer) \
 		$(use_enable gtk tracker-needle) \
 		$(use_enable gtk tracker-preferences) \
 		$(use_enable iptc libiptcdata) \
 		$(use_enable iso libosinfo) \
 		$(use_enable jpeg libjpeg) \
 		$(use_enable laptop upower) \
+		$(use_enable libsecret) \
 		$(use_enable miner-fs) \
 		$(use_enable mp3 taglib) \
 		$(use_enable networkmanager network-manager) \
