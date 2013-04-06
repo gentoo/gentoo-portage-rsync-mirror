@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=a qt-based imhangul
+EAPI=5
+HOMEPAGE=https://code.google.com/p/qimhangul/
+KEYWORDS=~amd64
+LICENSE=LGPL-3
+SLOT=0
+SRC_URI=https://qimhangul.googlecode.com/files/qimhangul-0.2.0.tar.gz
+_md5_=7572b5405de7b219a32ae1970ca73707

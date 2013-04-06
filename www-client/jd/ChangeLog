@@ -1,6 +1,11 @@
 # ChangeLog for www-client/jd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.26 2012/05/03 06:01:03 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.27 2013/04/06 02:13:44 naota Exp $
+
+*jd-2.8.5_p120826 (06 Apr 2013)
+
+  06 Apr 2013; Naohiro Aota <naota@gentoo.org> +jd-2.8.5_p120826.ebuild:
+  version bump
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> jd-2.6.5_p100425.ebuild,
   jd-2.7.5_p101228.ebuild, jd-2.8.0_p110203.ebuild:
@@ -157,4 +162,3 @@
   23 May 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +jd-2.0.0_beta080418.ebuild:
   Initial import. ebuild is submitted by Ryoichiro Suzuki, bug #211400.
-
