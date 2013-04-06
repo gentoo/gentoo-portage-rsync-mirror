@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kstartupconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.155 2013/04/02 20:51:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.156 2013/04/06 00:04:58 dilfridge Exp $
+
+*kstartupconfig-4.10.2 (05 Apr 2013)
+
+  05 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kstartupconfig-4.10.2.ebuild:
+  Version bump KDE SC 4.10.2
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> kstartupconfig-4.10.1.ebuild:
   Stable for ppc64, wrt to bug #462890

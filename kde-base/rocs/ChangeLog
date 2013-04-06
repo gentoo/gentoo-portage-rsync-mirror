@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.108 2013/04/01 16:04:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.109 2013/04/06 00:05:06 dilfridge Exp $
+
+*rocs-4.10.2 (05 Apr 2013)
+
+  05 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org> +rocs-4.10.2.ebuild:
+  Version bump KDE SC 4.10.2
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> -rocs-4.10.0.ebuild,
   -rocs-4.9.5.ebuild:

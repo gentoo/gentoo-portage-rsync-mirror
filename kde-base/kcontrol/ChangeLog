@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.286 2013/04/02 20:51:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.287 2013/04/06 00:04:04 dilfridge Exp $
+
+*kcontrol-4.10.2 (05 Apr 2013)
+
+  05 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kcontrol-4.10.2.ebuild:
+  Version bump KDE SC 4.10.2
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> kcontrol-4.10.1.ebuild:
   Stable for ppc64, wrt to bug #462890
