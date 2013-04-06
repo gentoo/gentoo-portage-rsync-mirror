@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.55 2012/08/24 22:05:44 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.56 2013/04/06 06:39:46 ssuominen Exp $
+
+  06 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> vigra-1.8.0.ebuild:
+  Use subslotting for libpng, openexr and tiff dependencies.
 
   24 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> vigra-1.8.0.ebuild,
   +files/vigra-1.8.0-gcc47.patch:

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=media-libs/lcms:2 media-libs/libpng:0 media-libs/tiff:0 sys-libs/zlib doc? ( app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=media-libs/lcms:2= media-libs/libpng:0= media-libs/tiff:0= sys-libs/zlib:= doc? ( app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=An open-source JPEG 2000 library
-EAPI=4
+EAPI=5
 HOMEPAGE=http://code.google.com/p/openjpeg/
 IUSE=doc test
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=BSD-2
-RDEPEND=media-libs/lcms:2 media-libs/libpng:0 media-libs/tiff:0 sys-libs/zlib
+RDEPEND=media-libs/lcms:2= media-libs/libpng:0= media-libs/tiff:0= sys-libs/zlib:=
 RESTRICT=test
 SLOT=0
 SRC_URI=http://openjpeg.googlecode.com/files/openjpeg-1.5.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=78f16e177536576ee4bcc09093bedc6c
+_md5_=d685966acc10e290ed9a18d5cf6fb727
