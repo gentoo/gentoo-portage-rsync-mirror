@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.29 2013/03/28 16:01:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.30 2013/04/06 22:53:14 eva Exp $
+
+  06 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -accountsservice-0.6.22.ebuild:
+  Clean up old revision.
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   accountsservice-0.6.29-r1.ebuild:

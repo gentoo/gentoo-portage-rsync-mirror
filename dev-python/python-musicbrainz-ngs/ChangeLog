@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-musicbrainz-ngs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.3 2012/05/30 12:47:38 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.4 2013/04/06 22:35:02 sochotnicky Exp $
+
+*python-musicbrainz-ngs-0.3 (06 Apr 2013)
+
+  06 Apr 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +python-musicbrainz-ngs-0.3.ebuild:
+  Bump to 0.3 and add Python 3 support
 
   30 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   python-musicbrainz-ngs-0.2.ebuild:
