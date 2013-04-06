@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.44 2013/02/09 18:58:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.45 2013/04/06 16:48:05 slyfox Exp $
+
+  06 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org> -darcs-2.8.3-r1.ebuild,
+  -files/darcs-2.8.1-tar-0.4.patch, -files/darcs-2.8.3-ghc-7.6.patch.bz2,
+  -files/darcs-2.8.3-hack-for-haskeline-0.7-breaks-non-utf8.patch,
+  -files/darcs-2.8.3-tf-0.8.patch:
+  Drop binary data from tree along with old darcs (bug #464180 by Michał Górny).
 
 *darcs-2.8.4 (09 Feb 2013)
 
