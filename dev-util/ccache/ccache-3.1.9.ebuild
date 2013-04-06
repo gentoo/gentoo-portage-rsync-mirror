@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.9.ebuild,v 1.13 2013/03/23 09:10:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.9.ebuild,v 1.14 2013/04/06 18:28:19 vapier Exp $
 
 EAPI="4"
 
@@ -45,14 +45,18 @@ pkg_postinst() {
 	[[ -d "${ROOT}/usr/$(get_libdir)/ccache.backup" ]] && \
 		rm -rf "${ROOT}/usr/$(get_libdir)/ccache.backup"
 
-	elog "To use ccache with **non-Portage** C compiling, add"
-	elog "/usr/$(get_libdir)/ccache/bin to the beginning of your path, before /usr/bin."
-	elog "Portage 2.0.46-r11+ will automatically take advantage of ccache with"
-	elog "no additional steps.  If this is your first install of ccache, type"
-	elog "something like this to set a maximum cache size of 2GB:"
-	elog "# ccache -M 2G"
-	elog
-	elog "If you are upgrading from an older version than 3.x you should clear"
-	elog "all of your caches like so:"
-	elog "# CCACHE_DIR='${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}' ccache -C"
+	if [[ -z ${REPLACING_VERSIONS} ]] ; then
+		elog "To use ccache with **non-Portage** C compiling, add"
+		elog "/usr/$(get_libdir)/ccache/bin to the beginning of your path, before /usr/bin."
+		elog "Portage 2.0.46-r11+ will automatically take advantage of ccache with"
+		elog "no additional steps."
+		elog
+		elog "You might want to set a maximum cache size:"
+		elog "# ccache -M 2G"
+	fi
+	if has_version "<${CATEGORY}/${PN}-3" ; then
+		elog "If you are upgrading from an older version than 3.x you should clear"
+		elog "all of your caches like so:"
+		elog "# CCACHE_DIR='${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}' ccache -C"
+	fi
 }
