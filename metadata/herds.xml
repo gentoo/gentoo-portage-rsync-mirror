@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1017 2013/04/05 18:10:18 hwoarang Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1018 2013/04/06 10:19:56 hwoarang Exp $
 
 -->
 <herds>
@@ -483,11 +483,6 @@
   <email>base-system@gentoo.org</email>
   <description>Core system utilities and libraries.</description>
   <maintainer>
-    <email>pebenito@gentoo.org</email>
-    <name>Chris Pebenito</name>
-    <role>Selinux guy</role>
-  </maintainer>
-  <maintainer>
     <email>vapier@gentoo.org</email>
     <role>Miscellaneous leet stuff</role>
   </maintainer>
@@ -534,11 +529,6 @@
   <name>hardened</name>
   <email>hardened@gentoo.org</email>
   <description>Hardened Gentoo project packages and policy</description>
-  <maintainer>
-    <email>pebenito@gentoo.org</email>
-    <name>Chris PeBenito</name>
-    <role>SELinux developer</role>
-  </maintainer>
   <maintainer>
     <email>solar@gentoo.org</email>
     <name>Ned Ludd</name>
@@ -1545,10 +1535,7 @@
   <name>embedded</name>
   <email>embedded@gentoo.org</email>
   <description>Embedded systems packages</description>
-  <!-- Either maintainers or a maintaining project is allowed, not both -->    <maintainer>
-    <email>pebenito@gentoo.org</email>
-    <name>Chris PeBenito</name>
-  </maintainer>
+  <!-- Either maintainers or a maintaining project is allowed, not both -->
   <maintainer>
     <email>solar@gentoo.org</email>
     <name>Ned Ludd</name>
@@ -2220,10 +2207,6 @@
     <name>selinux</name>
     <email>selinux@gentoo.org</email>
     <description>Gentoo's Security-Enhanced Linux (SELinux) packages</description>
-    <maintainer>
-        <email>pebenito@gentoo.org</email>
-        <name>Chris PeBenito</name>
-    </maintainer>
     <maintainer>
         <email>blueness@gentoo.org</email>
         <name>Anthony G. Basile</name>

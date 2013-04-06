@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.277 2013/01/21 14:08:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.278 2013/04/06 10:21:50 caster Exp $
+
+  06 Apr 2013; Vlastimil Babka <caster@gentoo.org> -java-config-2.1.10.ebuild,
+  java-config-2.1.11.ebuild, -java-config-2.1.11-r1.ebuild,
+  -java-config-2.1.11-r2.ebuild, -java-config-2.1.11-r3.ebuild,
+  -java-config-2.1.12.ebuild, java-config-2.1.12-r1.ebuild:
+  Add blockers for upcoming packages related to java-config-2.2, so that they
+  are mutual. Remove old.
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> java-config-2.1.12-r1.ebuild:
   Stable for ppc, wrt bug #451998

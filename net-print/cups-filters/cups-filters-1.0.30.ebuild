@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.30.ebuild,v 1.2 2013/04/01 22:55:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.30.ebuild,v 1.3 2013/04/06 10:20:47 dilfridge Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ RDEPEND="
 	sys-libs/zlib
 	jpeg? ( virtual/jpeg )
 	perl? ( dev-lang/perl )
-	png? ( media-libs/libpng )
+	png? ( media-libs/libpng:0= )
 	tiff? ( media-libs/tiff )
 	zeroconf? ( net-dns/avahi )
 "

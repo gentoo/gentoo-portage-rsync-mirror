@@ -1,0 +1,13 @@
+libs/auxfun/image.cpp: In member function ‘bool Image::SavePNG(const char*)’:
+libs/auxfun/image.cpp:258:42: error: ‘memset’ was not declared in this scope
+
+--- libs/auxfun/image.cpp
++++ libs/auxfun/image.cpp
+@@ -6,6 +6,7 @@
+ #include "image.h"
+ #include <zlib.h>
+ #include <png.h>
++#include <string.h>
+ #include <stdlib.h>
+ #ifdef _MSC_VER
+ #define _USE_MATH_DEFINES 1

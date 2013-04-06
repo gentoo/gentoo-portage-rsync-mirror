@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.90 2013/03/29 20:05:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.91 2013/04/06 10:17:50 dilfridge Exp $
+
+  06 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  opencv-2.3.1a-r1.ebuild, -opencv-2.4.2.ebuild, opencv-2.4.3.ebuild,
+  opencv-2.4.4a.ebuild:
+  Remove old; libpng slot dependency
 
   29 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.4a.ebuild:
   Add java support, thanks to sera for the help

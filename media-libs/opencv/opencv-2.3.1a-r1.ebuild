@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a-r1.ebuild,v 1.10 2013/03/02 21:46:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a-r1.ebuild,v 1.11 2013/04/06 10:17:50 dilfridge Exp $
 
 EAPI=3
 
@@ -37,7 +37,7 @@ RDEPEND="
 	jpeg2k? ( media-libs/jasper )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	openexr? ( media-libs/openexr )
-	png? ( media-libs/libpng )
+	png? ( media-libs/libpng:0 )
 	python? ( dev-python/numpy )
 	qt4? (
 		dev-qt/qtgui:4

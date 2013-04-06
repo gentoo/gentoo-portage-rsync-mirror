@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/eselect-ecj-0.7.ebuild,v 1.7 2012/09/16 13:10:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/eselect-ecj-0.7.ebuild,v 1.8 2013/04/06 10:23:49 caster Exp $
 
 EAPI=4
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE=""
 
-RDEPEND=">=app-admin/eselect-1.2.3"
+RDEPEND=">=app-admin/eselect-1.2.3
+	!app-admin/eselect-java"
 
 S="${WORKDIR}"
 

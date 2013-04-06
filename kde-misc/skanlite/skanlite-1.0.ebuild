@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-1.0.ebuild,v 1.1 2013/03/15 21:35:08 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-1.0.ebuild,v 1.2 2013/04/06 10:11:46 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS="be bs ca ca@valencia cs da de el en_GB eo es et eu fi fr ga gl hr
 hu ia is it ja km ko lt lv mai nb nds nl nn pa pl pt pt_BR ro ru sk sl sq sv tr ug
@@ -22,7 +22,7 @@ IUSE="debug"
 
 DEPEND="
 	$(add_kdebase_dep libksane)
-	media-libs/libpng:0
+	media-libs/libpng:0=
 	sys-devel/gettext
 "
 RDEPEND=${DEPEND}

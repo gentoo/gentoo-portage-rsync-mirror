@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.12-r1.ebuild,v 1.6 2013/01/21 14:08:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.12-r1.ebuild,v 1.7 2013/04/06 10:21:50 caster Exp $
 
 EAPI="5"
 
@@ -19,7 +19,9 @@ KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-java/java-config-wrapper-0.15"
+RDEPEND=">=dev-java/java-config-wrapper-0.15
+	!sys-apps/baselayout-java
+	!app-admin/eselect-java"
 # https://bugs.gentoo.org/show_bug.cgi?id=315229
 PDEPEND=">=virtual/jre-1.5"
 # Tests fail when java-config isn't already installed.

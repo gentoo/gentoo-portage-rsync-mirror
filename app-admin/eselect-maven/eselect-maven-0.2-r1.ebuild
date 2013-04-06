@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-maven/eselect-maven-0.2-r1.ebuild,v 1.4 2012/03/06 21:09:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-maven/eselect-maven-0.2-r1.ebuild,v 1.5 2013/04/06 10:25:13 caster Exp $
 
 EAPI=3
 
@@ -14,7 +14,8 @@ KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 IUSE=""
 
 RDEPEND=">=app-admin/eselect-1.2.8
-	!<dev-java/maven-bin-2.0.10-r1:2.1"
+	!<dev-java/maven-bin-2.0.10-r1:2.1
+	!app-admin/eselect-java"
 PDEPEND="
 || (
 	dev-java/maven-bin:3.0

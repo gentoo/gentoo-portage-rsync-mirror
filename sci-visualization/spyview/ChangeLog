@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/spyview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.21 2012/08/11 15:53:48 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.22 2013/04/06 10:25:18 dilfridge Exp $
+
+  06 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  spyview-20110803.ebuild, spyview-20111018.ebuild:
+  Does not actually use libpng
 
   11 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   spyview-20111018.ebuild:

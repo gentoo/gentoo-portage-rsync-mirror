@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0.ebuild,v 1.5 2013/03/31 16:59:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0.ebuild,v 1.6 2013/04/06 10:19:32 dilfridge Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ DEPEND="
 	dev-libs/libxslt
 	dev-libs/qjson
 	gpssync?	( media-libs/libkgeomap )
-	media-libs/libpng
+	media-libs/libpng:0=
 	media-libs/tiff
 	virtual/jpeg
 	calendar?	( $(add_kdebase_dep kdepimlibs) )

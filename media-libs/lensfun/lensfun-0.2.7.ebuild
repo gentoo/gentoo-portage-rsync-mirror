@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.7.ebuild,v 1.2 2013/03/23 20:51:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.7.ebuild,v 1.3 2013/04/06 10:08:14 ssuominen Exp $
 
 EAPI=5
 
@@ -18,14 +18,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd6
 IUSE="doc sse sse2"
 
 RDEPEND=">=dev-libs/glib-2.28
-	media-libs/libpng:0
-	sys-libs/zlib"
+	media-libs/libpng:0=
+	sys-libs/zlib:="
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-build.patch
 	"${FILESDIR}"/${PN}-0.2.6-auxfun.patch
+	"${FILESDIR}"/${P}-memset.patch
 	)
 
 DOCS=( README docs/mounts.txt )

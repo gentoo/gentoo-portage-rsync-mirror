@@ -5,6 +5,6 @@ HOMEPAGE=http://www.gentoo.org/
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2
 PDEPEND=|| ( dev-java/maven-bin:3.0 dev-java/maven-bin:2.2 dev-java/maven-bin:2.1 dev-java/maven-bin:2.0 )
-RDEPEND=>=app-admin/eselect-1.2.8 !<dev-java/maven-bin-2.0.10-r1:2.1
+RDEPEND=>=app-admin/eselect-1.2.8 !<dev-java/maven-bin-2.0.10-r1:2.1 !app-admin/eselect-java
 SLOT=0
-_md5_=37debc8244fd14082fea2510b00a97fc
+_md5_=7c15182f96ac58fb3128425602c99eec
