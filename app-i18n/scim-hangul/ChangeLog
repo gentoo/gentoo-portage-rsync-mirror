@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-hangul
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.33 2013/03/04 07:43:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.34 2013/04/06 00:00:19 naota Exp $
+
+  05 Apr 2013; Naohiro Aota <naota@gentoo.org>
+  +files/scim-hangul-0.4.0+gtk.patch, scim-hangul-0.4.0.ebuild:
+  Add patch to support >=gtk-2.24.0. #460714
 
 *scim-hangul-0.4.0 (04 Mar 2013)
 

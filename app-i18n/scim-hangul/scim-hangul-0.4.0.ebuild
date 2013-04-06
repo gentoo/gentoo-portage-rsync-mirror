@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.4.0.ebuild,v 1.1 2013/03/04 07:43:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.4.0.ebuild,v 1.2 2013/04/06 00:00:19 naota Exp $
 
 EAPI=5
 
@@ -24,7 +24,8 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.3.2+gcc-4.3.patch"
-	"${FILESDIR}/${PN}-0.3.2+gcc-4.7.patch" )
+	"${FILESDIR}/${PN}-0.3.2+gcc-4.7.patch"
+	"${FILESDIR}/${PN}-0.4.0+gtk.patch" )
 
 DOCS=(AUTHORS NEWS)
 
