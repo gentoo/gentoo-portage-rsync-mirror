@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-0.5.70-r1.ebuild,v 1.1 2013/03/08 21:56:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-0.5.70-r1.ebuild,v 1.2 2013/04/06 08:36:42 pinkbyte Exp $
 
 EAPI="4"
 
@@ -38,5 +38,5 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	make_desktop_entry leechcraft "LeechCraft" leechcraft.png
+	make_desktop_entry leechcraft "LeechCraft" leechcraft
 }

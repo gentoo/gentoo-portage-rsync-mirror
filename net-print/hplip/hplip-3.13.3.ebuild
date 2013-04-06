@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.3.ebuild,v 1.1 2013/03/08 17:55:39 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.3.ebuild,v 1.2 2013/04/06 08:38:40 billie Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 		!libusb0? ( virtual/libusb:1 )
 		libusb0? ( virtual/libusb:0 )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
-		fax? ( sys-apps/dbus )
+		fax? ( >=sys-apps/dbus-1.6.8-r1 )
 		snmp? (
 			net-analyzer/net-snmp
 			dev-libs/openssl:0
