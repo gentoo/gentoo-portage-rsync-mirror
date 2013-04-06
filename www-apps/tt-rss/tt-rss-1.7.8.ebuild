@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.5.ebuild,v 1.2 2013/03/24 10:23:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.8.ebuild,v 1.1 2013/04/06 07:40:52 scarabeus Exp $
 
 EAPI=5
 
@@ -60,7 +60,7 @@ src_install() {
 	doins -r * || die "Could not copy the files to ${MY_HTDOCSDIR}."
 	keepdir "/${MY_HTDOCSDIR}"/feed-icons
 
-	for DIR in cache cache/simplepie cache/images cache/export lock feed-icons; do
+	for DIR in cache lock feed-icons; do
 			webapp_serverowned -R "${MY_HTDOCSDIR}/${DIR}"
 	done
 
