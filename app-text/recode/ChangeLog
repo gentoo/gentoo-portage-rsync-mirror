@@ -1,6 +1,12 @@
 # ChangeLog for app-text/recode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.97 2012/06/13 13:23:02 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.98 2013/04/06 09:43:33 jlec Exp $
+
+*recode-3.6_p20 (06 Apr 2013)
+
+  06 Apr 2013; Justin Lecher <jlec@gentoo.org> +recode-3.6_p20.ebuild,
+  metadata.xml:
+  Bump to latest debian patches
 
   13 Jun 2012; Jeremy Olexa <darkside@gentoo.org> recode-3.6_p17-r2.ebuild:
   Set WANT_AUTOMAKE=1.11 to workaround bug 419455

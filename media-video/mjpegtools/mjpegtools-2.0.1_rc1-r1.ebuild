@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.1_rc1.ebuild,v 1.5 2013/03/04 19:23:34 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.1_rc1-r1.ebuild,v 1.1 2013/04/06 09:58:44 billie Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ REQUIRED_USE="sdlgfx? ( sdl )"
 RDEPEND="virtual/jpeg
 	quicktime? ( media-libs/libquicktime )
 	dv? ( >=media-libs/libdv-0.99 )
-	png? ( media-libs/libpng )
+	png? ( media-libs/libpng:0= )
 	dga? ( x11-libs/libXxf86dga )
 	gtk? ( x11-libs/gtk+:2 )
 	sdl? ( >=media-libs/libsdl-1.2.7-r3

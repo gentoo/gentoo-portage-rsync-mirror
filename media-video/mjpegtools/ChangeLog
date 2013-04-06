@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.194 2013/03/04 19:23:34 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.195 2013/04/06 09:58:44 billie Exp $
+
+*mjpegtools-2.0.1_rc1-r1 (06 Apr 2013)
+
+  06 Apr 2013; Daniel Pielmeier <billie@gentoo.org> mjpegtools-2.0.0-r3.ebuild,
+  -mjpegtools-2.0.1_rc1.ebuild, +mjpegtools-2.0.1_rc1-r1.ebuild:
+  Add slot deps for libpng. Switch to EAPI 5 where necessary.
 
   04 Mar 2013; Daniel Pielmeier <billie@gentoo.org>
   mjpegtools-2.0.1_rc1.ebuild:
