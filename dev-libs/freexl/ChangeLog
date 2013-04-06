@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/freexl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/freexl/ChangeLog,v 1.4 2012/12/01 22:36:07 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/freexl/ChangeLog,v 1.5 2013/04/06 14:11:15 titanofold Exp $
+
+*freexl-1.0.0e (06 Apr 2013)
+
+  06 Apr 2013; Aaron W. Swenson <titanofold@gentoo.org> +freexl-1.0.0e.ebuild:
+  version bump
 
 *freexl-1.0.0d (01 Dec 2012)
 
