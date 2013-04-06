@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.181 2013/02/21 00:12:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.182 2013/04/06 09:06:25 jlec Exp $
+
+  06 Apr 2013; Justin Lecher <jlec@gentoo.org> screen-4.0.3-r6.ebuild,
+  screen-4.0.3-r7.ebuild, screen-4.0.3-r8.ebuild, metadata.xml:
+  Add fix for detection of tgetent in ncurses/tinfo, #458614
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> screen-4.0.3-r7.ebuild,
   screen-4.0.3-r8.ebuild:

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.6.1.ebuild,v 1.2 2013/03/30 05:09:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.6.1.ebuild,v 1.3 2013/04/06 09:14:00 radhermit Exp $
 
 EAPI=5
 
 inherit flag-o-matic eutils autotools
 
-DESCRIPTION="A free, minimal, hardcore audio tool for djs and live performers"
+DESCRIPTION="A free, minimal, hardcore audio tool for DJs and live performers"
 HOMEPAGE="http://www.giadamusic.com/"
 SRC_URI="http://www.giadamusic.com/download-action.php?os=source&version=${PV} -> ${P}.tar.gz"
 

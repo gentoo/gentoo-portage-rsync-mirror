@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.2 2013/02/21 00:12:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.3 2013/04/06 09:06:25 jlec Exp $
 
 EAPI=4
 
@@ -93,6 +93,10 @@ src_prepare() {
 
 	# support CPPFLAGS
 	epatch "${FILESDIR}"/${P}-cppflags.patch
+
+	sed \
+		-e 's:termlib:tinfo:g' \
+		-i configure.in || die
 
 	# reconfigure
 	eautoconf

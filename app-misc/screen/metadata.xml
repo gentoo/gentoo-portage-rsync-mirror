@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>shell-tools</herd>
-	<maintainer>
-		<email>swegener@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
-	<longdescription>
+  <herd>shell-tools</herd>
+  <maintainer>
+    <email>swegener@gentoo.org</email>
+    <description>Primary Maintainer</description>
+  </maintainer>
+  <longdescription>
 Screen is a full-screen window manager that multiplexes a physical terminal
 between several processes, typically interactive shells. Each virtual terminal
 provides the functions of the DEC VT100 terminal and, in addition, several
@@ -24,9 +24,9 @@ run their programs completely independent of each other. Programs continue to
 run when their window is currently not visible and even when the whole screen
 session is detached from the users terminal.
 </longdescription>
-	<use>
-		<flag name="multiuser">Enable multiuser support (by setting correct
+  <use>
+    <flag name="multiuser">Enable multiuser support (by setting correct
     permissions)</flag>
-		<flag name="nethack">Express error messages in nethack style</flag>
-	</use>
+    <flag name="nethack">Express error messages in nethack style</flag>
+  </use>
 </pkgmetadata>

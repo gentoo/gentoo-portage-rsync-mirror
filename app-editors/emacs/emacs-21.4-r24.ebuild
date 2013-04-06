@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r24.ebuild,v 1.8 2012/10/24 18:52:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r24.ebuild,v 1.9 2013/04/06 09:23:46 ulm Exp $
 
-EAPI=4
+EAPI=5
 WANT_AUTOMAKE="none"
 
 inherit elisp-common flag-o-matic eutils multilib toolchain-funcs autotools
@@ -30,7 +30,7 @@ DEPEND="sys-libs/ncurses
 		>=media-libs/giflib-4.1.0.1b
 		virtual/jpeg
 		>=media-libs/tiff-3.5.5-r3
-		>=media-libs/libpng-1.4:0
+		>=media-libs/libpng-1.4:0=
 		Xaw3d? ( x11-libs/libXaw3d )
 		!Xaw3d? ( motif? ( >=x11-libs/motif-2.3:0 ) )
 	)"

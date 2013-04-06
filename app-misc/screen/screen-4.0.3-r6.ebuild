@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r6.ebuild,v 1.1 2012/11/07 16:04:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r6.ebuild,v 1.2 2013/04/06 09:06:25 jlec Exp $
 
 EAPI=4
 
@@ -88,6 +88,10 @@ src_prepare() {
 	# Allow TERM string large enough to use with rxvt-unicode-256color
 	# Allow usernames up to 32 chars
 	epatch "${FILESDIR}"/${PV}-extend-d_termname-ng2.patch
+
+	sed \
+		-e 's:termlib:tinfo:g' \
+		-i configure.in || die
 
 	# reconfigure
 	eautoconf

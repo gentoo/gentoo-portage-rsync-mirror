@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.17 2013/04/03 18:44:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r6.ebuild,v 1.1 2013/04/06 09:23:46 ulm Exp $
 
-EAPI=4
+EAPI=5
 WANT_AUTOMAKE="none"
 
 inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
@@ -16,7 +16,7 @@ LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
 SLOT="23"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="alsa aqua athena dbus games gconf gif gpm gtk gzip-el hesiod jpeg kerberos livecd m17n-lib motif pax_kernel png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
-REQUIRED_USE="aqua? ( !X )"
+REQUIRED_USE="?? ( aqua X )"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
@@ -34,7 +34,7 @@ RDEPEND="sys-libs/ncurses
 		gconf? ( >=gnome-base/gconf-2.26.2 )
 		gif? ( media-libs/giflib )
 		jpeg? ( virtual/jpeg )
-		png? ( >=media-libs/libpng-1.4:0 )
+		png? ( >=media-libs/libpng-1.4:0= )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff )
 		xpm? ( x11-libs/libXpm )
@@ -67,7 +67,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	!<app-editors/emacs-vcs-${PV}"
 
-EMACS_SUFFIX="emacs-${SLOT}"
+EMACS_SUFFIX="${PN/emacs/emacs-${SLOT}}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 # FULL_VERSION keeps the full version number, which is needed in
 # order to determine some path information correctly for copy/move
@@ -114,26 +114,29 @@ src_configure() {
 	if use alsa && ! use sound; then
 		einfo "Although sound USE flag is disabled you chose to have alsa,"
 		einfo "so sound is switched on anyway."
-		myconf="${myconf} --with-sound"
+		myconf+=" --with-sound"
 	else
-		myconf="${myconf} $(use_with sound)"
+		myconf+=" $(use_with sound)"
 	fi
 
 	if use X; then
-		myconf="${myconf} --with-x --without-ns"
-		myconf="${myconf} $(use_with gconf)"
-		myconf="${myconf} $(use_with toolkit-scroll-bars)"
-		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
-		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
-		myconf="${myconf} $(use_with tiff) $(use_with xpm)"
+		myconf+=" --with-x --without-ns"
+		myconf+=" $(use_with gconf)"
+		myconf+=" $(use_with toolkit-scroll-bars)"
+		myconf+=" $(use_with gif)"
+		myconf+=" $(use_with jpeg)"
+		myconf+=" $(use_with png)"
+		myconf+=" $(use_with svg rsvg)"
+		myconf+=" $(use_with tiff)"
+		myconf+=" $(use_with xpm)"
 
 		if use xft; then
-			myconf="${myconf} --with-xft"
-			myconf="${myconf} $(use_with m17n-lib libotf)"
-			myconf="${myconf} $(use_with m17n-lib m17n-flt)"
+			myconf+=" --with-xft"
+			myconf+=" $(use_with m17n-lib libotf)"
+			myconf+=" $(use_with m17n-lib m17n-flt)"
 		else
-			myconf="${myconf} --without-xft"
-			myconf="${myconf} --without-libotf --without-m17n-flt"
+			myconf+=" --without-xft"
+			myconf+=" --without-libotf --without-m17n-flt"
 			use m17n-lib && ewarn \
 				"USE flag \"m17n-lib\" has no effect if \"xft\" is not set."
 		fi
@@ -144,36 +147,36 @@ src_configure() {
 		local f
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
-			myconf="${myconf} --with-x-toolkit=gtk"
+			myconf+=" --with-x-toolkit=gtk"
 			for f in motif Xaw3d athena; do
 				use ${f} && ewarn \
 					"USE flag \"${f}\" has no effect if \"gtk\" is set."
 			done
 		elif use motif; then
 			einfo "Configuring to build with Motif toolkit"
-			myconf="${myconf} --with-x-toolkit=motif"
+			myconf+=" --with-x-toolkit=motif"
 			for f in Xaw3d athena; do
 				use ${f} && ewarn \
 					"USE flag \"${f}\" has no effect if \"motif\" is set."
 			done
 		elif use athena || use Xaw3d; then
 			einfo "Configuring to build with Athena/Lucid toolkit"
-			myconf="${myconf} --with-x-toolkit=lucid $(use_with Xaw3d xaw3d)"
+			myconf+=" --with-x-toolkit=lucid $(use_with Xaw3d xaw3d)"
 		else
 			einfo "Configuring to build with no toolkit"
-			myconf="${myconf} --with-x-toolkit=no"
+			myconf+=" --with-x-toolkit=no"
 		fi
 	elif use aqua; then
 		einfo "Configuring to build with Nextstep (Cocoa) support"
-		myconf="${myconf} --with-ns --disable-ns-self-contained"
-		myconf="${myconf} --without-x"
+		myconf+=" --with-ns --disable-ns-self-contained"
+		myconf+=" --without-x"
 	else
-		myconf="${myconf} --without-x --without-ns"
+		myconf+=" --without-x --without-ns"
 	fi
 
 	# Save version information in the Emacs binary. It will be available
 	# in variable "system-configuration-options".
-	myconf="${myconf} GENTOO_PACKAGE=${CATEGORY}/${PF}"
+	myconf+=" GENTOO_PACKAGE=${CATEGORY}/${PF}"
 
 	# According to configure, this option is only used for GNU/Linux
 	# (x86_64 and s390). For Gentoo Prefix we have to explicitly spell
@@ -183,7 +186,7 @@ src_configure() {
 	crtdir=${crtdir%/*}
 
 	econf \
-		--program-suffix=-${EMACS_SUFFIX} \
+		--program-suffix="-${EMACS_SUFFIX}" \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-crt-dir="${crtdir}" \
@@ -274,9 +277,9 @@ src_install () {
 	fi
 
 	DOC_CONTENTS="You can set the version to be started by /usr/bin/emacs
-		through the Emacs eselect module, which also redirects man and
-		info pages. Therefore, several Emacs versions can be installed at
-		the same time. \"man emacs.eselect\" for details.
+		through the Emacs eselect module, which also redirects man and info
+		pages. Therefore, several Emacs versions can be installed at the
+		same time. \"man emacs.eselect\" for details.
 		\\n\\nIf you upgrade from a previous major version of Emacs, then
 		it is strongly recommended that you use app-admin/emacs-updater
 		to rebuild all byte-compiled elisp files of the installed Emacs

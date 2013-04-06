@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/giada
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/ChangeLog,v 1.10 2013/04/05 09:50:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/ChangeLog,v 1.11 2013/04/06 09:14:00 radhermit Exp $
+
+  06 Apr 2013; Tim Harder <radhermit@gentoo.org> giada-0.6.1.ebuild,
+  giada-0.6.2.ebuild:
+  Minor DESCRIPTION change.
 
 *giada-0.6.2 (05 Apr 2013)
 
