@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/joe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.77 2012/08/21 14:21:30 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.78 2013/04/06 14:40:39 tomk Exp $
+
+*joe-3.7-r2 (06 Apr 2013)
+*joe-3.5-r1 (06 Apr 2013)
+
+  06 Apr 2013; Tom Knight <tomk@gentoo.org> +files/joe-3.5-ftyperc.patch,
+  +files/joe-3.7-ftyperc.patch, +joe-3.5-r1.ebuild, +joe-3.7-r2.ebuild:
+  Added Gentoo-specific file types to ftyperc
 
   21 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> joe-3.7-r1.ebuild:
   QA: restore src_compile after prefix screwup.
