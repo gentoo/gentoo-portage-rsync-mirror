@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.39 2013/03/11 22:01:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.40 2013/04/05 23:05:12 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -84,7 +84,7 @@ src_compile() {
 
 	# Build everything else.
 	emake "${makeargs[@]}"
-	pax-mark m out/${mytarget}/{cctest,d8,shell}
+	pax-mark m out/${mytarget}/{cctest,d8}
 }
 
 src_test() {

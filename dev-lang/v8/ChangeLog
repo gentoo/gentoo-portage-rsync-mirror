@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.298 2013/04/05 14:36:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.300 2013/04/05 23:05:12 floppym Exp $
+
+  05 Apr 2013; Mike Gilbert <floppym@gentoo.org> v8-9999.ebuild:
+  Ditto for live ebuild.
+
+  05 Apr 2013; Mike Gilbert <floppym@gentoo.org> v8-3.17.15.3.ebuild:
+  Don't bother pax-marking the 'shell' binary. We don't use it for tests and we
+  don't install it.
 
   05 Apr 2013; Mike Gilbert <floppym@gentoo.org> -v8-3.15.11.15.ebuild,
   -v8-3.16.14.2.ebuild, -v8-3.16.14.9.ebuild, v8-3.16.14.9-r1.ebuild:
