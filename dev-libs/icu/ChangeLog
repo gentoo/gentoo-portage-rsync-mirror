@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.229 2013/03/06 21:41:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.230 2013/04/06 15:46:34 blueness Exp $
+
+*icu-51.1 (06 Apr 2013)
+
+  06 Apr 2013; Anthony G. Basile <blueness@gentoo.org> +icu-51.1.ebuild:
+  Version bug, addresses bug #436364
 
   06 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> -icu-50.1.1.ebuild,
   icu-50.1-r2.ebuild, icu-50.1.2.ebuild:
