@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.699 2013/04/02 19:10:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.700 2013/04/06 10:45:25 olemarkus Exp $
+
+*php-5.5.0_beta2-r4 (06 Apr 2013)
+
+  06 Apr 2013; Ole Markus With <olemarkus@gentoo.org>
+  +files/iodbc-pkgconfig.patch, +php-5.5.0_beta2-r4.ebuild:
+  Use pkg-config for iodbc dependencies. Bug 464300
 
   02 Apr 2013; Fabian Groffen <grobian@gentoo.org> php-5.4.13-r3.ebuild,
   php-5.5.0_beta2-r3.ebuild:
