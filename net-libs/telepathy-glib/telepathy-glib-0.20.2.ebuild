@@ -1,11 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.18.1.ebuild,v 1.12 2013/03/30 17:04:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.20.2.ebuild,v 1.1 2013/04/06 20:21:20 pacho Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.5"
+EAPI="5"
+PYTHON_COMPAT=( python2_{5,6,7} )
+VALA_MIN_API_VERSION="0.18"
+VALA_USE_DEPEND="vapigen"
 
-inherit python virtualx
+inherit eutils gnome2-utils python-r1 vala virtualx
 
 DESCRIPTION="GLib bindings for the Telepathy D-Bus protocol."
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -13,52 +15,39 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="alpha sparc"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="debug +introspection +vala"
+REQUIRED_USE="vala? ( introspection )"
 
-RDEPEND=">=dev-libs/glib-2.30.0:2
+RDEPEND=">=dev-libs/glib-2.32.0:2
 	>=dev-libs/dbus-glib-0.90
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
+	dev-util/gtk-doc-am
 	virtual/pkgconfig
-	vala? (
-		>=dev-lang/vala-0.14.0:0.14[vapigen]
-		>=dev-libs/gobject-introspection-1.30 )"
-
-src_prepare() {
-	python_convert_shebangs -r 2 examples tests tools
-	default
-}
+	vala? ( $(vala_depend) )
+	${PYTHON_DEPS}
+"
 
 src_configure() {
-	local myconf
-
-	if use vala; then
-		myconf="--enable-introspection
-			VALAC=$(type -p valac-0.14)
-			VAPIGEN=$(type -p vapigen-0.14)"
-	fi
-
+	python_export_best
 	econf --disable-static \
 		--disable-installed-tests \
-		PYTHON=$(PYTHON -2 -a) \
 		$(use_enable debug backtrace) \
 		$(use_enable debug debug-cache) \
 		$(use_enable introspection) \
-		$(use_enable vala vala-bindings) \
-		${myconf}
+		$(use_enable vala vala-bindings)
 }
 
 src_test() {
+	gnome2_environment_reset
 	unset DBUS_SESSION_BUS_ADDRESS
 	# Needs dbus for tests (auto-launched)
 	Xemake -j1 check
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
-	dodoc AUTHORS ChangeLog NEWS README
-
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	default
+	prune_libtool_files
 }

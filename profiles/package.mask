@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14635 2013/04/06 13:20:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14636 2013/04/06 20:27:25 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ryan Hill <dirtyepic@gentoo.org> (06 Apr 2013)
+# Restrictive licence, basically demo versions of paid software.  14 versions
+# have been released in the past 4 years and not one person has requested a
+# bump. Use dev-util/codeblocks for all your wxWidgets IDE needs.
+# Bug #464768.  Removal May 5/13.
+dev-util/dialogblocks
+dev-util/helpblocks
 
 # Sven Vermeulen <swift@gentoo.org> (06 Apr 2013)
 # Mask python-selinux for removal in 30 days.
