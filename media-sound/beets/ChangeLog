@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/beets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/ChangeLog,v 1.12 2013/02/20 00:01:07 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/ChangeLog,v 1.13 2013/04/06 23:56:35 sochotnicky Exp $
+
+*beets-1.1.0_beta3 (06 Apr 2013)
+
+  06 Apr 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +files/0001-fix-VFS-tests.patch, -beets-1.0_rc2.ebuild,
+  +beets-1.1.0_beta3.ebuild:
+  Bump media-sound/beets to 1.1.0_beta3, remove old version
+
+  Updated dependencies on more recent mutagen and python-musicbrainz-ngs
 
   20 Feb 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org> beets-1.0.0.ebuild:
   Fix up test patching for stable version

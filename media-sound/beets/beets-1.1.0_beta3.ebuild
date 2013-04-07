@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0_rc2.ebuild,v 1.2 2013/01/03 00:08:39 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.1.0_beta3.ebuild,v 1.1 2013/04/06 23:56:35 sochotnicky Exp $
 
 EAPI="4"
 
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="2:2.7"
 PYTHON_USE_WITH="sqlite"
 SUPPORT_PYTHON_ABIS="1"
 #There a few test failures with 2.6, worth investigating
-RESTRICT_PYTHON_ABIS="2.5 3.* 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.5 2.6 3.* 2.7-pypy-*"
 
 inherit distutils eutils
 
-MY_PV=${PV/_rc/rc}
+MY_PV=${PV/_beta/-beta.}
 MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="A media library management system for obsessive-compulsive music geeks"
@@ -26,9 +26,10 @@ IUSE="bpd chroma convert doc echonest_tempo lastgenre replaygain web"
 
 RDEPEND="
 	dev-python/munkres
-	dev-python/python-musicbrainz-ngs
+	>=dev-python/python-musicbrainz-ngs-0.3
 	dev-python/unidecode
-	media-libs/mutagen
+	>=media-libs/mutagen-0.21
+	dev-python/pyyaml
 	bpd? ( dev-python/bluelet )
 	chroma? ( dev-python/pyacoustid )
 	convert? ( media-video/ffmpeg[encode] )
@@ -50,7 +51,10 @@ src_prepare() {
 	# we'll need this as long as portage doesn't have proper python
 	# namespace support (without this we would try to load modules from
 	# previous installation during updates)
-	use test && epatch "${FILESDIR}/${P}-test-namespace.patch"
+	if use test;then
+		epatch "${FILESDIR}/${PN}-1.0_rc2-test-namespace.patch"
+		epatch "${FILESDIR}/0001-fix-VFS-tests.patch"
+	fi
 
 	# remove plugins that do not have appropriate dependencies installed
 	for flag in bpd chroma convert echonest_tempo lastgenre replaygain web;do

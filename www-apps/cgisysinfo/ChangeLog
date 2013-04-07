@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/cgisysinfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgisysinfo/ChangeLog,v 1.3 2012/11/20 01:59:12 rafaelmartins Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgisysinfo/ChangeLog,v 1.4 2013/04/06 23:48:46 rafaelmartins Exp $
+
+*cgisysinfo-0.4.1 (06 Apr 2013)
+
+  06 Apr 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -cgisysinfo-0.4.ebuild, +cgisysinfo-0.4.1.ebuild:
+  Version bump.
 
 *cgisysinfo-0.4 (20 Nov 2012)
 
