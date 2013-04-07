@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.0.ebuild,v 1.1 2013/03/28 16:05:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.0.ebuild,v 1.2 2013/04/07 17:33:00 eva Exp $
 
 EAPI="5"
-PYTHON_DEPEND="utils? 2"
+PYTHON_COMPAT=( python2_{5,6,7} )
 # Avoid runtime dependency on python when USE=test
 
-inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python toolchain-funcs virtualx linux-info
+inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs virtualx linux-info
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -18,7 +18,8 @@ SLOT="2"
 IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
-RDEPEND="virtual/libiconv
+RDEPEND="
+	virtual/libiconv
 	virtual/libffi
 	sys-libs/zlib
 	|| (
@@ -26,7 +27,10 @@ RDEPEND="virtual/libiconv
 		>=dev-libs/libelf-0.8.12 )
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )
-	utils? ( >=dev-util/gdbus-codegen-${PV} )"
+	utils? (
+		${PYTHON_DEPS}
+		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}] )
+"
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=dev-libs/libxslt-1.0
@@ -35,22 +39,17 @@ DEPEND="${RDEPEND}
 	systemtap? ( >=dev-util/systemtap-1.3 )
 	test? (
 		sys-devel/gdb
-		=dev-lang/python-2*
-		>=dev-util/gdbus-codegen-${PV}
+		${PYTHON_DEPS}
+		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}]
 		>=sys-apps/dbus-1.2.14 )
-	!<dev-util/gtk-doc-1.15-r2"
+	!<dev-util/gtk-doc-1.15-r2
+"
 PDEPEND="x11-misc/shared-mime-info
 	!<gnome-base/gvfs-1.6.4-r990"
 # shared-mime-info needed for gio/xdgmime, bug #409481
 # Earlier versions of gvfs do not work with glib
 
 pkg_setup() {
-	# Needed for gio/tests/gdbus-testserver.py
-	if use test; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-
 	if use kernel_linux ; then
 		CONFIG_CHECK="~INOTIFY_USER"
 		linux-info_pkg_setup
@@ -109,10 +108,11 @@ src_prepare() {
 	# bashcomp goes in /usr/share/bash-completion
 	epatch "${FILESDIR}/${PN}-2.32.4-bashcomp.patch"
 
-	epatch_user
+	# leave python shebang alone
+	sed -e '/${PYTHON}/d' \
+		-i glib/Makefile.{am,in} || die
 
-	# disable pyc compiling
-	use test && python_clean_py-compile_files
+	epatch_user
 
 	# Needed for the punt-python-check patch, disabling timeout test
 	# Also needed to prevent croscompile failures, see bug #267603
@@ -145,12 +145,6 @@ src_configure() {
 	# -- compnerd (3/27/06)
 	use debug && myconf="--enable-debug"
 
-	if use test; then
-		myconf="${myconf} --enable-modular-tests"
-	else
-		myconf="${myconf} --disable-modular-tests"
-	fi
-
 	# Always use internal libpcre, bug #254659
 	econf ${myconf} \
 		$(use_enable xattr) \
@@ -159,6 +153,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable systemtap dtrace) \
 		$(use_enable systemtap systemtap) \
+		$(use_enable test modular-tests) \
 		--enable-man \
 		--with-pcre=internal \
 		--with-threads=posix \
@@ -166,13 +161,13 @@ src_configure() {
 }
 
 src_install() {
-	local f
+	emake install DESTDIR="${D}"
 
-	# install-exec-hook substitutes ${PYTHON} in glib/gtester-report
-	emake DESTDIR="${D}" PYTHON="${EPREFIX}/usr/bin/python2" install
-
-	if ! use utils; then
+	if use utils ; then
+		python_replicate_script "${ED}"/usr/bin/gtester-report
+	else
 		rm "${ED}usr/bin/gtester-report"
+		rm "${ED}usr/share/man/man1/gtester-report.1"
 	fi
 
 	# Do not install charset.alias even if generated, leave it to libiconv
@@ -197,6 +192,7 @@ src_test() {
 	export G_DBUS_COOKIE_SHA1_KEYRING_DIR="${T}/temp"
 	unset GSETTINGS_BACKEND # bug 352451
 	export LC_TIME=C # bug #411967
+	python_export_best
 
 	# Related test is a bit nitpicking
 	mkdir "$G_DBUS_COOKIE_SHA1_KEYRING_DIR"

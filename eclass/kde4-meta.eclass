@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.69 2013/02/07 03:38:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.70 2013/04/07 17:46:23 kensington Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -11,6 +11,9 @@
 #
 # You must define KMNAME to use this eclass, and do so before inheriting it. All other variables are optional.
 # Do not include the same item in more than one of KMMODULE, KMMEXTRA, KMCOMPILEONLY, KMEXTRACTONLY.
+
+if [[ ${___ECLASS_ONCE_KDE4_META} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_KDE4_META="recur -_+^+_- spank"
 
 [[ -z ${KMNAME} ]] && die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
 
@@ -482,8 +485,8 @@ kde4-meta_change_cmakelists() {
 		find "${S}"/${i} -name CMakeLists.txt -print0 | \
 			xargs -0 sed -i \
 				-e 's/^#DONOTCOMPILE //g' \
-				-e '/install(.*)/{s/^/#DONOTINSTALL /;}' \
-				-e '/^install(/,/)/{s/^/#DONOTINSTALL /;}' \
+				-e '/install(.*)/I{s/^/#DONOTINSTALL /;}' \
+				-e '/^install(/,/)/I{s/^/#DONOTINSTALL /;}' \
 				-e '/kde4_install_icons(.*)/{s/^/#DONOTINSTALL /;}' || \
 				die "${LINENO}: sed died in the KMCOMPILEONLY section while processing ${i}"
 		_change_cmakelists_parent_dirs ${i}
@@ -682,3 +685,5 @@ kde4-meta_pkg_postrm() {
 
 	kde4-base_pkg_postrm
 }
+
+fi
