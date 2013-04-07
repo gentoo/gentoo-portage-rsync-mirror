@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.2 2013/04/07 20:20:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.3 2013/04/07 20:51:03 floppym Exp $
 
 EAPI="5"
 WANT_AUTOMAKE="none"
@@ -31,7 +31,19 @@ RDEPEND="app-arch/bzip2
 	virtual/libffi
 	virtual/libintl
 	!build? (
-		berkdb? ( >=sys-libs/db-4.2:= )
+		berkdb? ( || (
+			sys-libs/db:5.3=
+			sys-libs/db:5.2=
+			sys-libs/db:5.1=
+			sys-libs/db:5.0=
+			sys-libs/db:4.8=
+			sys-libs/db:4.7=
+			sys-libs/db:4.6=
+			sys-libs/db:4.5=
+			sys-libs/db:4.4=
+			sys-libs/db:4.3=
+			sys-libs/db:4.2=
+		) )
 		gdbm? ( sys-libs/gdbm[berkdb] )
 		ncurses? (
 			>=sys-libs/ncurses-5.2
@@ -74,9 +86,9 @@ pkg_setup() {
 
 src_prepare() {
 	# Ensure that internal copies of expat, libffi and zlib are not used.
-	rm -fr Modules/expat
-	rm -fr Modules/_ctypes/libffi*
-	rm -fr Modules/zlib
+	rm -r Modules/expat || die
+	rm -r Modules/_ctypes/libffi* || die
+	rm -r Modules/zlib || die
 
 	local excluded_patches
 	if ! tc-is-cross-compiler; then
@@ -187,7 +199,7 @@ src_configure() {
 	fi
 
 	cd "${WORKDIR}"/${CHOST}
-	ECONF_SOURCE=${S} OPT="" \
+	ECONF_SOURCE="${S}" OPT="" \
 	econf \
 		--with-fpectl \
 		--enable-shared \
@@ -281,8 +293,6 @@ src_test() {
 }
 
 src_install() {
-	[[ -z "${ED}" ]] && ED="${D%/}${EPREFIX}/"
-
 	local libdir=${ED}/usr/$(get_libdir)/python${SLOT}
 
 	cd "${WORKDIR}"/${CHOST}
@@ -303,27 +313,27 @@ src_install() {
 		rm -fr "${ED}usr/bin/idle${SLOT}" "${libdir}/"{bsddb,dbhash.py,idlelib,lib-tk,sqlite3,test}
 	else
 		use elibc_uclibc && rm -fr "${libdir}/"{bsddb/test,test}
-		use berkdb || rm -fr "${libdir}/"{bsddb,dbhash.py,test/test_bsddb*}
-		use sqlite || rm -fr "${libdir}/"{sqlite3,test/test_sqlite*}
-		use tk || rm -fr "${ED}usr/bin/idle${SLOT}" "${libdir}/"{idlelib,lib-tk}
+		use berkdb || rm -r "${libdir}/"{bsddb,dbhash.py,test/test_bsddb*} || die
+		use sqlite || rm -r "${libdir}/"{sqlite3,test/test_sqlite*} || die
+		use tk || rm -r "${ED}usr/bin/idle${SLOT}" "${libdir}/"{idlelib,lib-tk} || die
 	fi
 
-	use threads || rm -fr "${libdir}/multiprocessing"
-	use wininst || rm -f "${libdir}/distutils/command/"wininst-*.exe
+	use threads || rm -r "${libdir}/multiprocessing" || die
+	use wininst || rm -r "${libdir}/distutils/command/"wininst-*.exe || die
 
 	dodoc "${S}"/Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins -r "${S}"/Tools || die "doins failed"
+		doins -r "${S}"/Tools
 	fi
 	insinto /usr/share/gdb/auto-load/usr/$(get_libdir) #443510
 	local libname=$(printf 'e:\n\t@echo $(INSTSONAME)\ninclude Makefile\n' | \
 		emake --no-print-directory -s -f - 2>/dev/null)
 	newins "${S}"/Tools/gdb/libpython.py "${libname}"-gdb.py
 
-	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
-	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
+	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
+	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
 	sed \
 		-e "s:@PYDOC_PORT_VARIABLE@:PYDOC${SLOT/./_}_PORT:" \
 		-e "s:@PYDOC@:pydoc${SLOT}:" \
@@ -350,8 +360,6 @@ pkg_preinst() {
 }
 
 eselect_python_update() {
-	[[ -z "${EROOT}" || (! -d "${EROOT}" && -d "${ROOT}") ]] && EROOT="${ROOT%/}${EPREFIX}/"
-
 	if [[ -z "$(eselect python show)" || ! -f "${EROOT}usr/bin/$(eselect python show)" ]]; then
 		eselect python update
 	fi

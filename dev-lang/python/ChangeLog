@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.645 2013/04/07 20:20:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.646 2013/04/07 20:51:03 floppym Exp $
+
+  07 Apr 2013; Mike Gilbert <floppym@gentoo.org> python-2.7.4.ebuild:
+  Adjust the sys-libs/db dep and add some || die.
 
   07 Apr 2013; Michał Górny <mgorny@gentoo.org> python-2.6.8-r1.ebuild,
   python-2.7.3-r3.ebuild, python-2.7.4.ebuild:
