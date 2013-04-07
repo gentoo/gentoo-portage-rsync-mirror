@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/re2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.7 2013/04/04 20:16:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.8 2013/04/06 23:01:55 floppym Exp $
+
+*re2-0_p20130115-r1 (06 Apr 2013)
+
+  06 Apr 2013; Mike Gilbert <floppym@gentoo.org> +re2-0_p20130115-r1.ebuild:
+  Add multilib support and install the static library as requested by Alex Efros
+  in bug 464806. Thanks for the patch, even if I didn't use it.
 
   04 Apr 2013; Agostino Sarubbo <ago@gentoo.org> re2-0_p20130115.ebuild:
   Stable for x86, wrt bug #463426

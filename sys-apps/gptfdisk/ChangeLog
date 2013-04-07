@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.27 2013/03/31 01:29:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.28 2013/04/06 23:29:57 floppym Exp $
+
+  06 Apr 2013; Mike Gilbert <floppym@gentoo.org> gptfdisk-0.8.6.ebuild:
+  Add slot-operator to dev-libs/icu dependency.
 
   31 Mar 2013; Mike Gilbert <floppym@gentoo.org> gptfdisk-0.8.6.ebuild:
   Append ICU flags to CXXFLAGS with USE=icu, not USE=-icu. Patch by Arfrever.

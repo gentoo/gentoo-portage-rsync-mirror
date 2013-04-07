@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/b43-firmware/b43-firmware-5.100.138.ebuild,v 1.1 2013/02/13 18:52:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/b43-firmware/b43-firmware-5.100.138.ebuild,v 1.2 2013/04/06 23:09:56 zerochaos Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.lwfinger.com/b43-firmware/${MY_P}.tar.bz2"
 
 LICENSE="Broadcom"
 SLOT="b43"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RESTRICT="mirror binchecks strip"
 

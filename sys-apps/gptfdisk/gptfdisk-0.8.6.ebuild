@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.2 2013/03/31 01:29:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.3 2013/04/06 23:29:57 floppym Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="kernel_linux +icu"
 RDEPEND="
 	dev-libs/popt
 	>=sys-libs/ncurses-5.7-r7
-	icu? ( dev-libs/icu )
+	icu? ( dev-libs/icu:= )
 	kernel_linux? ( sys-apps/util-linux )" # libuuid
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
