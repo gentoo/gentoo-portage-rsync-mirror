@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-23.4.ebuild,v 1.5 2013/01/25 06:29:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-23.4.ebuild,v 1.6 2013/04/07 21:21:53 tupone Exp $
 
 EAPI=2
-inherit flag-o-matic toolchain-funcs games
+inherit flag-o-matic toolchain-funcs eutils games
 
 DESCRIPTION="Bob Hyatt's strong chess engine"
 HOMEPAGE="http://www.craftychess.com/"
@@ -30,6 +30,7 @@ src_prepare() {
 	sed -i \
 		-e "s:\"crafty.hlp\":\"${GAMES_DATADIR}/${PN}/crafty.hlp\":" option.c \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-64bits.patch
 }
 
 src_compile() {

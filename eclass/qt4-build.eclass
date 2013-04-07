@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.144 2013/03/03 00:22:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.145 2013/04/07 21:14:46 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -527,15 +527,6 @@ setqtenv() {
 # @DESCRIPTION:
 # Generates Makefiles for the given list of directories.
 prepare_directories() {
-	# avoid running over the maximum argument number, bug #299810
-	{
-		echo "${S}"/mkspecs/common/*.conf
-		find "${S}" -name '*.pr[io]'
-	} | xargs sed -i \
-		-e "s:\$\$\[QT_INSTALL_LIBS\]:${QTLIBDIR}:g" \
-		-e "s:\$\$\[QT_INSTALL_PLUGINS\]:${QTPLUGINDIR}:g" \
-		|| die
-
 	for x in "$@"; do
 		pushd "${S}"/${x} >/dev/null || die
 		einfo "Running qmake in: ${x}"

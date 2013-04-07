@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.66 2013/03/25 03:34:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.67 2013/04/07 21:28:23 floppym Exp $
 
 EAPI=4
 
@@ -113,7 +113,7 @@ src_install() {
 
 	if use server ; then
 		# needs PAX marking wrt bug#346255
-		pax-mark m "${ED}/usr/bin/quasselcore" || die
+		pax-mark m "${ED}/usr/bin/quasselcore"
 
 		# prepare folders in /var/
 		keepdir "${QUASSEL_DIR}"
