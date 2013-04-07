@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.8.0.ebuild,v 1.1 2013/03/28 22:16:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.8.0.ebuild,v 1.2 2013/04/07 21:57:37 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -30,7 +30,7 @@ COMMON_DEPEND="
 		=app-crypt/gnupg-1.4* )
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )
-	libnotify? ( >=x11-libs/libnotify-0.7.0 )
+	libnotify? ( >=x11-libs/libnotify-0.7:= )
 "
 DEPEND="${COMMON_DEPEND}
 	>=app-text/scrollkeeper-0.3
@@ -54,11 +54,10 @@ src_prepare() {
 }
 
 src_configure() {
-	G2CONF="${G2CONF}
-		--disable-static
-		--disable-update-mime-database
-		$(use_enable introspection)
-		$(use_enable libnotify)
-		$(use_enable test tests)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--disable-static \
+		--disable-update-mime-database \
+		$(use_enable introspection) \
+		$(use_enable libnotify) \
+		$(use_enable test tests)
 }

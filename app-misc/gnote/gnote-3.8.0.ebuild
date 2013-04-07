@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.8.0.ebuild,v 1.1 2013/03/28 15:53:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.8.0.ebuild,v 1.2 2013/04/07 21:40:18 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -38,13 +38,15 @@ DEPEND="${DEPEND}
 "
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		--disable-static
-		$(use_enable debug)
-		ITSTOOL=$(type -P true)"
-
 	# Do not alter CFLAGS
 	sed 's/-DDEBUG -g/-DDEBUG/' -i configure.ac configure || die
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--disable-static \
+		$(use_enable debug) \
+		ITSTOOL=$(type -P true)
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-3.8.0.ebuild,v 1.1 2013/03/28 16:38:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-3.8.0.ebuild,v 1.2 2013/04/07 21:48:31 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -29,7 +29,5 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-	G2CONF="${G2CONF}
-		$(use_enable introspection)"
-	gnome2_src_configure
+	gnome2_src_configure $(use_enable introspection)
 }
