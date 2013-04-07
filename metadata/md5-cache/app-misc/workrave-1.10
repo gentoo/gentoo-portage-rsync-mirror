@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=>=dev-libs/glib-2.28.0:2 >=x11-libs/gtk+-3.0:3 >=dev-cpp/gtkmm-3.0.0:3.0 >=dev-cpp/glibmm-2.28.0:2 >=dev-libs/libsigc++-2.2.4.2:2 >=gnome-base/gnome-shell-3.6.2 dbus? ( >=sys-apps/dbus-1.2 dev-libs/dbus-glib ) distribution? ( >=net-libs/gnet-2 ) gstreamer? ( >=media-libs/gstreamer-0.10:0.10 >=media-libs/gst-plugins-base-0.10:0.10 ) pulseaudio? ( >=media-sound/pulseaudio-0.9.15 ) x11-libs/libSM x11-libs/libX11 x11-libs/libXtst x11-libs/libXt x11-libs/libXmu >=dev-util/intltool-0.40.0 x11-proto/xproto x11-proto/inputproto x11-proto/recordproto dev-python/cheetah virtual/pkgconfig doc? ( app-text/docbook-sgml-utils app-text/xmlto ) nls? ( >=sys-devel/gettext-0.17 ) app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Helpful utility to attack Repetitive Strain Injury (RSI)
+EAPI=5
+HOMEPAGE=http://www.workrave.org/
+IUSE=dbus doc distribution gstreamer nls pulseaudio test debug python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3+
+RDEPEND=>=dev-libs/glib-2.28.0:2 >=x11-libs/gtk+-3.0:3 >=dev-cpp/gtkmm-3.0.0:3.0 >=dev-cpp/glibmm-2.28.0:2 >=dev-libs/libsigc++-2.2.4.2:2 >=gnome-base/gnome-shell-3.6.2 dbus? ( >=sys-apps/dbus-1.2 dev-libs/dbus-glib ) distribution? ( >=net-libs/gnet-2 ) gstreamer? ( >=media-libs/gstreamer-0.10:0.10 >=media-libs/gst-plugins-base-0.10:0.10 ) pulseaudio? ( >=media-sound/pulseaudio-0.9.15 ) x11-libs/libSM x11-libs/libX11 x11-libs/libXtst x11-libs/libXt x11-libs/libXmu
+SLOT=0
+SRC_URI=mirror://sourceforge/workrave/workrave-1.10.tar.gz
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	96ca31031ada9967bcf96a4fd8977ae4	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	72a6ebbb13ee8f95b6725848df4deb4d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=a1560a34d65b525fa2ab7694c1697d81
