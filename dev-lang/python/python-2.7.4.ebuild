@@ -1,24 +1,24 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3-r3.ebuild,v 1.20 2013/04/07 20:20:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.2 2013/04/07 20:20:18 mgorny Exp $
 
-EAPI="2"
+EAPI="5"
 WANT_AUTOMAKE="none"
 WANT_LIBTOOL="none"
 
 inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs multiprocessing
 
 MY_P="Python-${PV}"
-PATCHSET_REVISION="1"
+PATCHSET_REVISION="0"
 
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
-SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
-	mirror://gentoo/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.bz2"
+SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
+	mirror://bitbucket/gentoo/cpython/downloads/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.xz"
 
 LICENSE="PSF-2"
 SLOT="2.7"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="-berkdb build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
 # Do not add a dependency on dev-lang/python to this ebuild.
@@ -31,15 +31,7 @@ RDEPEND="app-arch/bzip2
 	virtual/libffi
 	virtual/libintl
 	!build? (
-		berkdb? ( || (
-			sys-libs/db:4.8
-			sys-libs/db:4.7
-			sys-libs/db:4.6
-			sys-libs/db:4.5
-			sys-libs/db:4.4
-			sys-libs/db:4.3
-			sys-libs/db:4.2
-		) )
+		berkdb? ( >=sys-libs/db-4.2:= )
 		gdbm? ( sys-libs/gdbm[berkdb] )
 		ncurses? (
 			>=sys-libs/ncurses-5.2
@@ -282,8 +274,6 @@ src_test() {
 	elog "If you would like to run them, you may:"
 	elog "cd '${EPREFIX}/usr/$(get_libdir)/python${SLOT}/test'"
 	elog "and run the tests separately."
-
-	python_disable_pyc
 
 	if [[ "${result}" -ne 0 ]]; then
 		die "emake test failed"
