@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.65 2012/07/23 16:01:24 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.66 2013/04/07 00:14:42 vincent Exp $
+
+  07 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  libstdc++-v3-3.3.6.ebuild:
+  filter-flags -Wno-pointer-sign, wrt bug #442784
 
   23 Jul 2012; Mike Frysinger <vapier@gentoo.org> libstdc++-v3-3.3.6-r1.ebuild:
   Fix building with newer glibc and siginfo changes #427220 by Martin Jansa.

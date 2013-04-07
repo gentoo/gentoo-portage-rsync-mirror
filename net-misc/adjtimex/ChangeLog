@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/adjtimex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.26 2010/08/26 20:43:55 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.27 2013/04/07 00:11:12 robbat2 Exp $
+
+*adjtimex-1.29-r1 (07 Apr 2013)
+
+  07 Apr 2013; Robin H. Johnson <robbat2@gentoo.org> +adjtimex-1.29-r1.ebuild,
+  +files/adjtimex-1.29-r1-gentoo-utc.patch:
+  BL2 support per bug #395839.
 
   26 Aug 2010; Jeroen Roovers <jer@gentoo.org> adjtimex-1.29.ebuild:
   Remove commented patch calls.
@@ -109,4 +115,3 @@
   05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> adjtimex-1.16.ebuild,
   files/adjtimex.init:
   initial commit, ebuild by robbat2@gentoo.org, solves bug #8459
-
