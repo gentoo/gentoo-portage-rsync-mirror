@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.0.1.ebuild,v 1.1 2013/03/28 22:43:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.0.1.ebuild,v 1.2 2013/04/07 10:23:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -116,16 +116,11 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.7.90-bluetooth-flag.patch"
 
 	# Make networkmanager optional, bug #398593
-	epatch "${FILESDIR}/${PN}-3.8.0-networkmanager-flag.patch"
+	epatch "${FILESDIR}/${PN}-3.8.0-networkmanager-flag-r1.patch"
 
 	# Revert suspend break, upstream bug #693162 (from Debian)
 	epatch "${FILESDIR}/${PN}-3.8.0-suspend.patch"
 
-	eautoreconf
-	gnome2_src_prepare
-}
-
-src_configure() {
 	# Do not error out on warnings
 	G2CONF="${G2CONF}
 		--enable-man
@@ -134,7 +129,9 @@ src_configure() {
 		$(use_with bluetooth)
 		$(use_enable networkmanager)
 		BROWSER_PLUGIN_DIR=${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins"
-	gnome2_src_configure
+
+	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {
