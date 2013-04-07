@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.40.3.ebuild,v 1.2 2013/02/25 09:21:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.40.3.ebuild,v 1.3 2013/04/07 09:30:15 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.10
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	!>=net-libs/libsoup-2.42"
 
 S=${WORKDIR}/${MY_P}
 
