@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5.ebuild,v 1.9 2013/04/07 16:14:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5-r1.ebuild,v 1.1 2013/04/07 16:14:52 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 AUTOTOOLS_AUTORECONF=true
 VALA_MIN_API_VERSION=0.16
 
-inherit autotools-utils eutils python versionator vala
+inherit autotools-utils eutils python-r1 versionator vala
 
 DIR_PV=$(get_version_component_range 1-2)
 EXT_VER=0.0.13
@@ -25,9 +25,9 @@ IUSE="+dbus extensions +fts icu nls passiv plugins sql-debug"
 
 RDEPEND="
 	dev-libs/xapian[inmemory]
-	dev-python/dbus-python
-	dev-python/pygobject:2
-	dev-python/pyxdg
+	dev-python/dbus-python[${PYTHON_USEDEP}]
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/rdflib
 	media-libs/raptor:2
 	dev-libs/glib:2
@@ -42,14 +42,11 @@ DEPEND="${RDEPEND}
 
 PATCHES=( "${FILESDIR}"/${PN}-0.9.0-doc.patch )
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_prepare() {
+	sed \
+		-e 's:python::g' \
+		-i Makefile.am || die
 	vala_src_prepare
-	python_clean_py-compile_files
 	autotools-utils_src_prepare
 }
 
@@ -63,4 +60,11 @@ src_configure() {
 	use nls || myeconfargs+=(--disable-nls)
 	use fts || myeconfargs+=(--disable-fts)
 	autotools-utils_src_configure
+}
+
+src_install() {
+	autotools-utils_src_install
+	cd python || die
+	python_moduleinto ${PN}
+	python_foreach_impl python_domodule *py
 }
