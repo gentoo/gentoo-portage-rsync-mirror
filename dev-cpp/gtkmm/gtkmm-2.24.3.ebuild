@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.3.ebuild,v 1.1 2013/04/06 20:34:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.3.ebuild,v 1.2 2013/04/07 10:53:22 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,25 +15,23 @@ SLOT="2.4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-cpp/glibmm-2.27.93:2
+RDEPEND="
+	>=dev-cpp/glibmm-2.27.93:2
 	>=x11-libs/gtk+-2.24:2
 	>=dev-cpp/atkmm-2.22.2
 	>=dev-cpp/cairomm-1.2.2
 	>=dev-cpp/pangomm-2.27.1:1.4
-	dev-libs/libsigc++:2"
+	dev-libs/libsigc++:2
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
 		media-gfx/graphviz
 		dev-libs/libxslt
-		app-doc/doxygen )"
+		app-doc/doxygen )
+"
 
 src_prepare() {
-	DOCS="AUTHORS ChangeLog PORTING NEWS README"
-	G2CONF="${G2CONF}
-		--enable-api-atkmm
-		$(use_enable doc documentation)"
-
 	if ! use test; then
 		# don't waste time building tests
 		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
@@ -47,4 +45,11 @@ src_prepare() {
 	fi
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	DOCS="AUTHORS ChangeLog PORTING NEWS README"
+	gnome2_src_configure \
+		--enable-api-atkmm \
+		$(use_enable doc documentation)
 }

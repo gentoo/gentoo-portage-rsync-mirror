@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.7.12.ebuild,v 1.1 2013/03/28 16:13:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.7.12.ebuild,v 1.2 2013/04/07 10:53:22 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,15 +36,6 @@ DEPEND="${RDEPEND}
 # eautoreconf needs mm-common
 
 src_prepare() {
-	DOCS="AUTHORS ChangeLog PORTING NEWS README"
-	targets=
-	G2CONF="${G2CONF}
-		--enable-api-atkmm
-		$(use_enable doc documentation)
-		$(use_enable aqua quartz-backend)
-		$(use_enable wayland wayland-backend)
-		$(use_enable X x11-backend)"
-
 	if ! use test; then
 		# don't waste time building tests
 		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
@@ -58,4 +49,14 @@ src_prepare() {
 	fi
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	DOCS="AUTHORS ChangeLog PORTING NEWS README"
+	gnome2_src_configure \
+		--enable-api-atkmm \
+		$(use_enable doc documentation) \
+		$(use_enable aqua quartz-backend) \
+		$(use_enable wayland wayland-backend) \
+		$(use_enable X x11-backend)
 }
