@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.0.ebuild,v 1.2 2013/03/29 10:17:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.0.ebuild,v 1.3 2013/04/07 08:06:13 pacho Exp $
 
 EAPI="5"
 
@@ -62,7 +62,7 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	sys-devel/bison
 	>=sys-devel/flex-2.5.33
-	sys-devel/gcc:4.7
+	|| ( sys-devel/gcc:4.7 >=sys-devel/clang-3.0 )
 	sys-devel/gettext
 	>=sys-devel/make-3.82-r4
 	virtual/pkgconfig
@@ -84,8 +84,8 @@ pkg_pretend() {
 		check-reqs_pkg_pretend
 	fi
 
-	if [[ $(tc-getCC) == *gcc ]] && ! version_is_at_least 4.7 $(gcc-version); then
-		die "You need at least GCC 4.7.x for C++11-specific compiler flags"
+	if ! test-flag-CXX -std=c++11; then
+		die "You need at least GCC 4.7.x or Clang >= 3.0 for C++11-specific compiler flags"
 	fi
 }
 

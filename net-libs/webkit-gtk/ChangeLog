@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.195 2013/03/29 10:17:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.196 2013/04/07 08:06:13 pacho Exp $
+
+  07 Apr 2013; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-1.6.3-r200.ebuild,
+  -webkit-gtk-1.6.3-r300.ebuild, webkit-gtk-2.0.0.ebuild:
+  Improve compiler check (#463704 by Alphat-PC), drop old.
 
   29 Mar 2013; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.0.0.ebuild:
   Add missing media-libs/harfbuzz RDEPEND (thanks to plaes for noticing).
