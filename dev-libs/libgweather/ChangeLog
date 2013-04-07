@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.91 2013/03/31 18:47:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.92 2013/04/07 09:40:16 pacho Exp $
+
+  07 Apr 2013; Pacho Ramos <pacho@gentoo.org> libgweather-3.8.0.ebuild:
+  Fix libsoup deps
 
   31 Mar 2013; Pacho Ramos <pacho@gentoo.org> libgweather-3.8.0.ebuild:
   Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702)

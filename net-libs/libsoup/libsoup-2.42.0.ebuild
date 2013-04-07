@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.0.ebuild,v 1.3 2013/04/07 09:27:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.0.ebuild,v 1.4 2013/04/07 09:36:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -48,6 +48,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# FIXME: we need addpredict to workaround bug #324779 until
+	# root cause (bug #249496) is solved  
+	addpredict /usr/share/snmp/mibs/.index
+
 	# Disable apache tests until they are usable on Gentoo, bug #326957
 	gnome2_src_configure \
 		--disable-static \
@@ -56,9 +60,4 @@ src_configure() {
 		--without-apache-httpd \
 		$(use_enable introspection) \
 		$(use_with samba ntlm-auth ${EPREFIX}/usr/bin/ntlm_auth)
-
-	# FIXME: we need addpredict to workaround bug #324779 until
-	# root cause (bug #249496) is solved
-	addpredict /usr/share/snmp/mibs/.index
-	gnome2_src_configure
 }

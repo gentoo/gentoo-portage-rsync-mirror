@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
-DEPEND=>=x11-libs/gtk+-2.90.0:3[introspection?] >=dev-libs/glib-2.35.1:2 || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-2.34:2.4[gnome] ) >=dev-libs/libxml2-2.6.0 >=sys-libs/timezone-data-2010k introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) >=dev-util/gtk-doc-am-1.9 >=dev-util/intltool-0.50 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
+DEPEND=>=x11-libs/gtk+-2.90.0:3[introspection?] >=dev-libs/glib-2.35.1:2 || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34:2.4 ) >=dev-libs/libxml2-2.6.0 >=sys-libs/timezone-data-2010k introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) >=dev-util/gtk-doc-am-1.9 >=dev-util/intltool-0.50 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
 DESCRIPTION=Library to access weather information from online services
 EAPI=5
 HOMEPAGE=https://live.gnome.org/LibGWeather
 IUSE=+introspection
 KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris
 LICENSE=GPL-2+
-RDEPEND=>=x11-libs/gtk+-2.90.0:3[introspection?] >=dev-libs/glib-2.35.1:2 || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-2.34:2.4[gnome] ) >=dev-libs/libxml2-2.6.0 >=sys-libs/timezone-data-2010k introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) !<gnome-base/gnome-applets-2.22.0
+RDEPEND=>=x11-libs/gtk+-2.90.0:3[introspection?] >=dev-libs/glib-2.35.1:2 || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34:2.4 ) >=dev-libs/libxml2-2.6.0 >=sys-libs/timezone-data-2010k introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) !<gnome-base/gnome-applets-2.22.0
 SLOT=2/3-1
 SRC_URI=mirror://gnome/sources/libgweather/3.8/libgweather-3.8.0.tar.xz
 _eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	96ca31031ada9967bcf96a4fd8977ae4	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=322bb0bc651f9858ab441eb6f8f359df
+_md5_=ad3c12d30e6cedc9e7382e8f9bca2be1

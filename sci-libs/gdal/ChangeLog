@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.134 2013/03/17 12:34:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.136 2013/04/07 09:59:25 ago Exp $
+
+  07 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gdal-1.9.2.ebuild:
+  Stable for x86, wrt bug #450682
+
+  07 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gdal-1.9.2.ebuild:
+  Stable for amd64, wrt bug #450682
 
   17 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Fix missing bracket in USE description

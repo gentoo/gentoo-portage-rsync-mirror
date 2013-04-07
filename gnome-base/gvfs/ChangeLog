@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.212 2013/04/01 18:24:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.213 2013/04/07 09:43:07 pacho Exp $
+
+  07 Apr 2013; Pacho Ramos <pacho@gentoo.org> gvfs-1.16.0.ebuild:
+  Fix libsoup deps
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gvfs-1.12.3-r1.ebuild:
   Stable for sparc, wrt bug #458984
