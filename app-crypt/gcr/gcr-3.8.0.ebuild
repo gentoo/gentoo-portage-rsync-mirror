@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.8.0.ebuild,v 1.1 2013/03/28 16:27:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.8.0.ebuild,v 1.2 2013/04/07 22:19:14 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -21,8 +21,8 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
 	>=dev-libs/libgcrypt-1.2.2:=
 	>=dev-libs/libtasn1-1:=
-	>=sys-apps/dbus-1.0
-	gtk? ( >=x11-libs/gtk+-3.0:3 )
+	>=sys-apps/dbus-1
+	gtk? ( >=x11-libs/gtk+-3:3 )
 	introspection? ( >=dev-libs/gobject-introspection-1.34 )
 "
 RDEPEND="${COMMON_DEPEND}
@@ -41,20 +41,22 @@ DEPEND="${COMMON_DEPEND}
 #	dev-libs/gobject-introspection-common
 
 src_prepare() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS README"
-	G2CONF="${G2CONF}
-		$(use_with gtk)
-		$(use_enable introspection)
-		$(usex debug --enable-debug=yes --enable-debug=default)
-		--disable-update-icon-cache
-		--disable-update-mime"
-
 	# Disable stupid flag changes
 	sed -e 's/CFLAGS="$CFLAGS -g"//' \
 		-e 's/CFLAGS="$CFLAGS -O0"//' \
 		-i configure.ac configure || die
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+	gnome2_src_configure \
+		$(use_with gtk) \
+		$(use_enable introspection) \
+		$(usex debug --enable-debug=yes --enable-debug=default) \
+		--disable-update-icon-cache \
+		--disable-update-mime
 }
 
 src_test() {
