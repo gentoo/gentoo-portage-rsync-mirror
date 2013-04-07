@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.92.ebuild,v 1.2 2013/03/02 21:32:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.92.ebuild,v 1.3 2013/04/07 13:59:47 dilfridge Exp $
 
 EAPI=4
 
 QT_REQUIRED="4.6.0"
-EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git"
+EGIT_REPO_URI="git://anongit.kde.org/${PN}.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
 inherit qt4-r2 virtualx ${GIT_ECLASS}
 

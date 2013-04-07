@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1.ebuild,v 1.14 2012/08/05 14:56:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1-r1.ebuild,v 1.1 2013/04/07 13:46:33 xarthisius Exp $
 
-EAPI=4
+EAPI=5
+WANT_AUTOMAKE="1.11"
 
 inherit eutils flag-o-matic gnome2 autotools pax-utils
 
@@ -18,7 +19,7 @@ IUSE="cairo gnome gtk nls pch theora threads"
 RDEPEND="
 	virtual/opengl
 	virtual/jpeg
-	media-libs/libpng
+	media-libs/libpng:0=
 	<dev-lang/lua-5.2
 	gtk? ( !gnome? ( x11-libs/gtk+:2 >=x11-libs/gtkglext-1.0 ) )
 	gnome? (
@@ -62,6 +63,9 @@ src_prepare() {
 
 	# gcc-47, #414015
 	epatch "${FILESDIR}"/${P}-gcc47.patch
+
+	# libpng16 #464764
+	epatch "${FILESDIR}"/${P}-libpng16.patch
 
 	# remove flags to let the user decide
 	local

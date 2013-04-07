@@ -1,4 +1,5 @@
 http://bugs.gentoo.org/show_bug.cgi?id=366073
+http://celestia.svn.sourceforge.net/viewvc/celestia?view=revision&revision=5178
 
 Patch written by Nils Larsson <ni1s@nerdshack.com>
 --- src/celengine/frametree.h

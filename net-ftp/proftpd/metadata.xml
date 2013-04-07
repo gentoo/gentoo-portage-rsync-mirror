@@ -11,6 +11,11 @@
 	<name>Bernard Cafarelli</name>
 	<description>Proxy maintainer</description>
 </maintainer>
+	<maintainer>
+		<email>slyfox@gentoo.org</email>
+		<name>Sergei Trofimovich</name>
+		<description>Mostly user.</description>
+	</maintainer>
 <herd>net-ftp</herd>
 <herd>proxy-maintainers</herd>
 

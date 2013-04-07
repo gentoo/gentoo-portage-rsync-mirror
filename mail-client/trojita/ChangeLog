@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.23 2013/03/02 21:32:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.24 2013/04/07 13:59:47 dilfridge Exp $
+
+  07 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org> trojita-0.3.92.ebuild,
+  trojita-9999.ebuild:
+  Trojita has moved to kde git, bug 464646
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> trojita-0.3.92.ebuild,
   trojita-9999.ebuild:

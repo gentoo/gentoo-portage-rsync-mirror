@@ -1,6 +1,15 @@
 # ChangeLog for sci-astronomy/celestia
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.86 2012/08/05 14:56:28 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.87 2013/04/07 13:46:33 xarthisius Exp $
+
+*celestia-1.6.1-r1 (07 Apr 2013)
+
+  07 Apr 2013; Kacper Kowalik <xarthisius@gentoo.org> +celestia-1.6.1-r1.ebuild,
+  +files/celestia-1.6.1-libpng16.patch, -celestia-1.6.1.ebuild,
+  files/celestia-1.6.1-gcc46.patch:
+  Depend on autotools-1.11. Fixes #456370 by Diego Elio Pettenò
+  <flameeyes@gentoo.org> Fix building with libpng-1.6 wrt #464764 by Lars
+  Wendler <polynomial-c@gentoo.org>
 
   05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> celestia-1.6.1.ebuild,
   metadata.xml:
