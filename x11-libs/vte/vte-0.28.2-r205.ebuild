@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r205.ebuild,v 1.1 2013/04/07 19:18:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r205.ebuild,v 1.2 2013/04/07 19:38:16 hasufell Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -37,6 +37,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext"
 
+wrap_phase() {
+	if use python; then
+		python_foreach_impl run_in_build_dir "${@}"
+	else
+		"${@}"
+	fi
+}
+
 src_prepare() {
 	# Do not disable gnome-pty-helper, bug #401389
 	G2CONF="${G2CONF}
@@ -67,18 +75,18 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.28.2-limit-arguments.patch
 
 	gnome2_src_prepare
-	python_copy_sources
+	use python && python_copy_sources
 }
 
 src_configure() {
-	python_foreach_impl run_in_build_dir gnome2_src_configure
+	wrap_phase gnome2_src_configure
 }
 
 src_compile() {
-	python_foreach_impl run_in_build_dir gnome2_src_compile
+	wrap_phase gnome2_src_compile
 }
 
 src_install() {
-	python_foreach_impl run_in_build_dir gnome2_src_install
+	wrap_phase gnome2_src_install
 	rm -v "${ED}usr/libexec/gnome-pty-helper" || die
 }

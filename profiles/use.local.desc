@@ -2445,7 +2445,6 @@ kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-base/kalzium:solver - Enable the equation solver
-kde-base/kate:pate - Add support for pate plugins
 kde-base/kde-meta:sdk - Pull in developer-specific meta-packages
 kde-base/kdeartwork-kscreensaver:eigen - Enable various arithmetic screensavers which use Eigen2 for computations.
 kde-base/kdeartwork-kscreensaver:kexiv2 - Enable image rotation based on exif tags with libkexiv2.
