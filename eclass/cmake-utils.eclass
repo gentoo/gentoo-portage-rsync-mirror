@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.93 2013/02/08 13:43:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.94 2013/04/07 17:21:11 kensington Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -17,6 +17,9 @@
 # It provides all inherited features (DOCS, HTML_DOCS, PATCHES) along with out-of-source
 # builds (default), in-source builds and an implementation of the well-known use_enable
 # and use_with functions for CMake.
+
+if [[ ${___ECLASS_ONCE_CMAKE_UTILS} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_CMAKE_UTILS="recur -_+^+_- spank"
 
 # @ECLASS-VARIABLE: WANT_CMAKE
 # @DESCRIPTION:
@@ -400,6 +403,7 @@ enable_cmake-utils_src_configure() {
 		SET (CMAKE_CXX_COMPILER $(type -P $(tc-getCXX)) CACHE FILEPATH "C++ compiler" FORCE)
 		SET (CMAKE_CXX_COMPILE_OBJECT "<CMAKE_CXX_COMPILER> <DEFINES> ${CPPFLAGS} <FLAGS> -o <OBJECT> -c <SOURCE>" CACHE STRING "C++ compile command" FORCE)
 		SET (CMAKE_RANLIB $(type -P $(tc-getRANLIB)) CACHE FILEPATH "Archive index generator" FORCE)
+		SET (PKG_CONFIG_EXECUTABLE $(type -P $(tc-getPKG_CONFIG)) CACHE FILEPATH "pkg-config executable" FORCE)
 	_EOF_
 
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
@@ -621,3 +625,5 @@ _execute_optionaly() {
 		use ${WANT_CMAKE} && enable_cmake-utils_${phase} "$@"
 	fi
 }
+
+fi

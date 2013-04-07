@@ -9,5 +9,5 @@ LICENSE=vim
 RDEPEND=|| ( app-editors/vim[python?] app-editors/gvim[python?] ) virtual/latex-base || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
 SRC_URI=mirror://sourceforge/vim-latex/vim-latex-1.8.23-20130116.788-git2ef9956.tar.gz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	72a6ebbb13ee8f95b6725848df4deb4d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	3e2b8e3b7a061cd56a91f1583248b89f
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	python-single-r1	b4f112abff5d77f982f83e1a9e554093	python-utils-r1	1aecc1aa688dad02e66772dcd9d0053d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	3e2b8e3b7a061cd56a91f1583248b89f
 _md5_=a352e8a67b38816081882ab9e1abebee

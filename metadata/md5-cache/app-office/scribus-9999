@@ -7,5 +7,5 @@ IUSE=cairo debug examples +minimal +pdf spell templates linguas_af linguas_ar li
 LICENSE=GPL-2
 RDEPEND=dev-libs/hyphen dev-libs/libxml2 media-libs/fontconfig media-libs/freetype:2 media-libs/lcms:2 media-libs/libpng:0 media-libs/tiff:0 net-print/cups sys-libs/zlib dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 virtual/jpeg spell? ( app-text/aspell ) pdf? ( app-text/podofo ) cairo? ( x11-libs/cairo[X,svg] ) app-text/ghostscript-gpl =dev-lang/python-2*
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	subversion	877d251a42b69543c01f6a36b4707b3b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	subversion	877d251a42b69543c01f6a36b4707b3b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=353d15f098abf2b5f0a8741f4c017a76

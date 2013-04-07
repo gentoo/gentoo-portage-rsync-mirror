@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.6 2013/01/21 19:28:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.7 2013/04/07 17:02:52 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -205,7 +205,10 @@ python-any-r1_pkg_setup() {
 	local PYTHON_PKG_DEP
 	for i in "${rev_impls[@]}"; do
 		python_export "${i}" PYTHON_PKG_DEP EPYTHON PYTHON
-		ROOT=/ has_version "${PYTHON_PKG_DEP}" && return
+		if ROOT=/ has_version "${PYTHON_PKG_DEP}"; then
+			python_wrapper_setup "${T}"
+			return
+		fi
 	done
 }
 

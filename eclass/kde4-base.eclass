@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.124 2013/03/03 00:22:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.125 2013/04/07 17:30:35 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -12,6 +12,9 @@
 #
 # NOTE: KDE 4 ebuilds currently support EAPIs 3, 4, and 5.  This will be
 # reviewed over time as new EAPI versions are approved.
+
+if [[ ${___ECLASS_ONCE_KDE4_BASE} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_KDE4_BASE="recur -_+^+_- spank"
 
 # @ECLASS-VARIABLE: KDE_SELINUX_MODULE
 # @DESCRIPTION:
@@ -176,7 +179,7 @@ case ${KDEBASE} in
 		# packages that will never be mirrored. (As they only will ever be in
 		# the overlay).
 		case ${PV} in
-			*9999* | 4.?.[6-9]?)
+			*9999* | 4.?.[6-9]? | 4.??.[6-9]?)
 				RESTRICT+=" mirror"
 				;;
 		esac
@@ -190,12 +193,7 @@ esac
 # @ECLASS-VARIABLE: QT_MINIMAL
 # @DESCRIPTION:
 # Determine version of qt we enforce as minimal for the package.
-if version_is_at_least 4.8.50 "${KDE_MINIMAL}"; then
-	# Upstream has added an *undeclared* dependency on Qt 4.8...
-	QT_MINIMAL="${QT_MINIMAL:-4.8.0}"
-else
-	QT_MINIMAL="${QT_MINIMAL:-4.7.4}"
-fi
+QT_MINIMAL="${QT_MINIMAL:-4.8.0}"
 
 # Declarative dependencies
 qtdeclarativedepend="
@@ -375,6 +373,28 @@ case ${KDE_SELINUX_MODULE} in
 	*)
 		IUSE+=" selinux"
 		kdecommondepend+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
+		;;
+esac
+
+# These dependencies are added as they are unconditionally required by kde-workspace.
+# They are not necessarily required by individual applications but are pulled in to prevent
+# bugs like bug #444438. This list is subject to change in the future so do not rely on it
+# in ebuilds - always set correct dependencies.
+case ${KMNAME} in
+	kde-workspace)
+		kdedepend+="
+			x11-libs/xcb-util
+			x11-libs/libX11
+			x11-libs/libXcomposite
+			x11-libs/libXcursor
+			x11-libs/libXdamage
+			x11-libs/libXfixes
+			x11-libs/libxkbfile
+			x11-libs/libXrandr
+			x11-libs/libXrender
+		"
+		;;
+	*)
 		;;
 esac
 
@@ -906,3 +926,5 @@ kde4-base_pkg_postrm() {
 	fdo-mime_mime_database_update
 	buildsycoca
 }
+
+fi

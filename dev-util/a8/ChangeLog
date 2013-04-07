@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/a8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/ChangeLog,v 1.11 2013/04/07 16:54:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/ChangeLog,v 1.12 2013/04/07 17:11:49 hasufell Exp $
+
+*a8-0.11-r2 (07 Apr 2013)
+
+  07 Apr 2013; Julian Ospald <hasufell@gentoo.org> -a8-0.11-r1.ebuild,
+  +a8-0.11-r2.ebuild, +files/a8-0.11-argparse.patch:
+  fix startup problems due to changed argparse ebuild
 
   07 Apr 2013; Julian Ospald <hasufell@gentoo.org> a8-0.11-r1.ebuild:
   fix deps

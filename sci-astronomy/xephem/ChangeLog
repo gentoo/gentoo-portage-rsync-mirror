@@ -1,6 +1,15 @@
 # ChangeLog for sci-astronomy/xephem
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.44 2012/10/24 19:25:50 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.45 2013/04/07 17:18:11 xarthisius Exp $
+
+*xephem-3.7.6 (07 Apr 2013)
+
+  07 Apr 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/xephem-3.7.6-implicits.patch,
+  +files/xephem-3.7.6-respect_env_vars.patch, +xephem-3.7.6.ebuild,
+  -files/3.7.2.patch, -files/xephem-3.7.3-use-system-lib.patch,
+  -xephem-3.7.3.ebuild, xephem-3.7.5.ebuild:
+  Version bump, drop old. Use subslot dependency on libpng
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> xephem-3.7.3.ebuild,
   xephem-3.7.5.ebuild:

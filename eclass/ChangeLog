@@ -1,6 +1,22 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.769 2013/04/07 16:56:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.772 2013/04/07 17:30:35 kensington Exp $
+
+  07 Apr 2013; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass:
+  Guard against multiple inheritance. Fix fetching for KDE SC 4.11
+  pre-releases. Drop old QT_MINIMAL logic. Add a set of base dependencies for
+  kde-workspace packages to work around bugs like #444438 and #464614.
+
+  07 Apr 2013; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Guard against multiple inheritance. Improve cross-compilation support by
+  always using the correct pkg-config.
+
+  07 Apr 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
+  python-r1.eclass, python-single-r1.eclass, python-utils-r1.eclass:
+  Create temporary symlinks for executables and pkg-config files, and add them
+  to $PATH and $PKG_CONFIG_PATH respectively. This makes it easier for broken
+  build systems to find Python, and gives us the possibility of dropping
+  python-wrapper.
 
   07 Apr 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
   multilib-build.eclass, multilib-minimal.eclass:

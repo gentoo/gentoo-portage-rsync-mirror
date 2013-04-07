@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.20 2013/03/28 12:21:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.21 2013/04/07 17:02:52 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -816,6 +816,100 @@ python_doheader() {
 
 	insinto "${d}"
 	doins -r "${@}" || die
+}
+
+# @FUNCTION: python_wrapper_setup
+# @USAGE: <path> [<impl>]
+# @DESCRIPTION:
+# Create proper 'python' executable and pkg-config wrappers
+# (if available) in the directory named by <path>. Set up PATH
+# and PKG_CONFIG_PATH appropriately.
+#
+# The wrappers will be created for implementation named by <impl>,
+# or for one named by ${EPYTHON} if no <impl> passed.
+#
+# If the named directory contains a python symlink already, it will
+# be assumed to contain proper wrappers already and only environment
+# setup will be done. If wrapper update is requested, the directory
+# shall be removed first.
+python_wrapper_setup() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local workdir=${1}
+	local impl=${2:-${EPYTHON}}
+
+	[[ ${workdir} ]] || die "${FUNCNAME}: no workdir specified."
+	[[ ${impl} ]] || die "${FUNCNAME}: no impl nor EPYTHON specified."
+
+	if [[ ! -x ${workdir}/bin/python ]]; then
+		mkdir -p "${workdir}"/{bin,pkgconfig} || die
+
+		# Clean up, in case we were supposed to do a cheap update.
+		rm -f "${workdir}"/bin/python{,2,3,-config}
+		rm -f "${workdir}"/bin/2to3
+		rm -f "${workdir}"/pkgconfig/python{,2,3}.pc
+
+		local EPYTHON PYTHON
+		python_export "${impl}" EPYTHON PYTHON
+
+		local pyver
+		if [[ ${EPYTHON} == python3* ]]; then
+			pyver=3
+		else # includes pypy & jython
+			pyver=2
+		fi
+
+		# Python interpreter
+		ln -s "${PYTHON}" "${workdir}"/bin/python || die
+		ln -s python "${workdir}"/bin/python${pyver} || die
+
+		local nonsupp=()
+
+		# CPython-specific
+		if [[ ${EPYTHON} == python* ]]; then
+			ln -s "${PYTHON}-config" "${workdir}"/bin/python-config || die
+
+			# Python 2.6+.
+			if [[ ${EPYTHON} != python2.5 ]]; then
+				ln -s "${PYTHON/python/2to3-}" "${workdir}"/bin/2to3 || die
+			else
+				nonsupp+=( 2to3 )
+			fi
+
+			# Python 2.7+.
+			if [[ ${EPYTHON} != python2.[56] ]]; then
+				ln -s "${EPREFIX}"/usr/$(get_libdir)/pkgconfig/${EPYTHON/n/n-}.pc \
+					"${workdir}"/pkgconfig/python.pc || die
+			else
+				# XXX?
+				ln -s /dev/null "${workdir}"/pkgconfig/python.pc || die
+			fi
+			ln -s python.pc "${workdir}"/pkgconfig/python${pyver}.pc || die
+		else
+			nonsupp+=( 2to3 python-config )
+		fi
+
+		local x
+		for x in "${nonsupp[@]}"; do
+			echo >"${workdir}"/bin/${x} <<__EOF__ || die
+#!/bin/sh
+echo "${x} is not supported by ${EPYTHON}" >&2
+exit 1
+__EOF__
+			chmod +x "${workdir}"/bin/${x} || die
+		done
+
+		# Now, set the environment.
+		# But note that ${workdir} may be shared with something else,
+		# and thus already on top of PATH.
+		if [[ ${PATH##:*} != ${workdir}/bin ]]; then
+			PATH=${workdir}/bin${PATH:+:${PATH}}
+		fi
+		if [[ ${PKG_CONFIG_PATH##:*} != ${workdir}/pkgconfig ]]; then
+			PKG_CONFIG_PATH=${workdir}/pkgconfig${PKG_CONFIG_PATH:+:${PKG_CONFIG_PATH}}
+		fi
+		export PATH PKG_CONFIG_PATH
+	fi
 }
 
 _PYTHON_UTILS_R1=1
