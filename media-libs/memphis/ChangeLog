@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.19 2013/02/02 22:52:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.20 2013/04/07 16:44:43 jlec Exp $
+
+  07 Apr 2013; Justin Lecher <jlec@gentoo.org> memphis-0.2.3.ebuild,
+  metadata.xml:
+  Make all ebuilds use vala.eclass, #463720
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> memphis-0.2.3.ebuild:
   Add ~arm, wrt bug #449220

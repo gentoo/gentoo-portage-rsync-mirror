@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.1 2013/03/09 20:33:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.2 2013/04/07 16:56:14 mgorny Exp $
 
 # @ECLASS: multilib-minimal.eclass
 # @MAINTAINER:
@@ -86,10 +86,12 @@ multilib-minimal_src_install() {
 		else
 			default_src_install	
 		fi
+		multilib_prepare_wrappers
 		multilib_check_headers
 		popd >/dev/null || die
 	}
 	multilib_foreach_abi multilib-minimal_abi_src_install
+	multilib_install_wrappers
 
 	if declare -f multilib_src_install_all >/dev/null ; then
 		multilib_src_install_all
