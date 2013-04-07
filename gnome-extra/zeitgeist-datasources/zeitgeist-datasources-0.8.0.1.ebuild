@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.11 2013/02/02 22:43:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.12 2013/04/07 14:58:18 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=true
+VALA_MIN_API_VERSION=0.14
 
-inherit autotools-utils eutils mono multilib python versionator
+inherit autotools-utils eutils mono multilib python versionator vala
 
 DIR_PV=$(get_version_component_range 1-2)
 DIR_PV2=$(get_version_component_range 1-3)
@@ -48,12 +49,13 @@ RDEPEND="
 #		|| ( >=www-client/firefox-4.0 >=www-client/firefox-bin-4.0 )
 #		net-libs/xulrunner )
 DEPEND="${RDEPEND}
-	dev-lang/vala:0.14"
+	${vala_depend}"
 PDEPEND="gnome-extra/zeitgeist"
 
 PLUGINS="bzr chrome eog geany vim emacs tomboy telepathy xchat firefox-40-libzg"
 
 src_prepare() {
+	rm bzr/bzr-icon-64.png || die
 	sed \
 		-e '/^allowed_plugin/s:^:#:g' \
 		-i configure.ac || die
@@ -69,12 +71,11 @@ src_prepare() {
 	sed \
 		-e "s:/xchat/:/xchat-gnome/:g" \
 		-i xchat/Makefile.* || die
+	vala_src_prepare
 	autotools-utils_src_prepare
 }
 
 src_configure() {
-	export VALAC=$(type -p valac-0.14)
-
 	local i myplugins
 
 	for i in ${PLUGINS}; do
@@ -98,11 +99,6 @@ src_configure() {
 		allowed_plugins="${myplugins[@]}"
 		)
 	autotools-utils_src_configure
-}
-
-src_install() {
-	autotools-utils_src_install
-	find "${ED}" -name "*.la" -delete || die
 }
 
 pkg_postinst() {

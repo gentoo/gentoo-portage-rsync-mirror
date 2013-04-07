@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/deja-dup-22.1.ebuild,v 1.7 2013/04/07 14:20:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/deja-dup-22.1.ebuild,v 1.8 2013/04/07 14:31:19 jlec Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-devel/gettext"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="NEWS AUTHORS"
 	G2CONF="${G2CONF}
 		$(use_with nautilus)
@@ -49,6 +49,9 @@ pkg_setup() {
 		--without-unity
 		--disable-schemas-compile
 		--disable-static"
+
+	vala_src_prepare
+	gnome2_src_prepare
 }
 
 src_install() {

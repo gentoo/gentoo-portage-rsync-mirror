@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.9.5.ebuild,v 1.7 2013/02/02 22:42:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.9.5.ebuild,v 1.8 2013/04/07 14:47:29 jlec Exp $
 
 EAPI=4
 
-inherit autotools-utils versionator
+VALA_MIN_API_VERSION=0.16
+
+inherit autotools-utils versionator vala
 
 MY_PV=$(get_version_component_range 1-2)
 
@@ -17,17 +19,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="download telepathy"
 
-VALA_VER="0.16"
-
 CDEPEND="
 	dev-libs/libzeitgeist
 	>=dev-libs/json-glib-0.14.0
 	dev-libs/glib:2
 	x11-libs/gtk+:2
-	dev-lang/vala:${VALA_VER}
 	telepathy? ( >=net-libs/telepathy-glib-0.18.0 )"
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}
+	${vala_depend}
 	virtual/pkgconfig"
 PDEPEND="gnome-extra/zeitgeist"
 
@@ -36,6 +36,7 @@ src_prepare() {
 		-e '/Encoding/d' \
 		-i src/${PN}.desktop.in || die
 	rm -f src/zeitgeist-datahub.c || die
+	vala_src_prepare
 	autotools-utils_src_prepare
 }
 
@@ -44,7 +45,6 @@ src_configure() {
 		$(use_enable telepathy)
 		$(use_enable download downloads-monitor)
 		--disable-silent-rules
-		VALAC=$(type -P valac-${VALA_VER})
 	)
 	autotools-utils_src_configure
 }
