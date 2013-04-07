@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.77 2013/04/07 15:14:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.78 2013/04/07 18:03:55 zerochaos Exp $
+
+  07 Apr 2013; Rick Farina <zerochaos@gentoo.org> powertop-9999.ebuild:
+  fix build of live ebuild
 
 *powertop-2.3 (07 Apr 2013)
 

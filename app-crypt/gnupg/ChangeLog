@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.458 2013/02/21 19:29:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.459 2013/04/07 18:18:37 alonbl Exp $
+
+*gnupg-2.0.19-r2 (07 Apr 2013)
+
+  07 Apr 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnupg-2.0.19-support-sc-key-3072.patch, +gnupg-2.0.19-r2.ebuild:
+  Backport openpgp key>=3072 support from upstream master, per bug#464890,
+  thanks to Andreas K. Hüttel
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> gnupg-2.0.19-r1.ebuild:
   Add ~arm-linux keyword.

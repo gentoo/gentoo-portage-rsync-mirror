@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.577 2013/04/07 08:56:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.578 2013/04/07 18:27:18 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1498,7 +1498,8 @@ toolchain_src_install() {
 	find gcc/include*/ -type l -delete
 	# Copy over the info pages.  We disabled their generation earlier, but the
 	# build system only expects to install out of the build dir, not the source.  #464008
-	cp "${S}"/gcc/doc/*.info gcc/doc/ || die
+	mkdir -p gcc/doc
+	cp "${S}"/gcc/doc/*.info* gcc/doc/ || die
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
 	while read x ; do

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0.ebuild,v 1.1 2013/04/06 06:21:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0-r1.ebuild,v 1.1 2013/04/07 18:20:39 hd_brummy Exp $
 
 EAPI="5"
 
@@ -63,10 +63,10 @@ src_prepare() {
 src_install() {
 	vdr-plugin-2_src_install
 
-	insinto /etc/vdr/plugins/live
+	insinto /usr/share/vdr/plugins/live
 	doins -r live/*
 
-	fowners -R vdr:vdr /etc/vdr/plugins/live
+	fowners -R vdr:vdr /usr/share/vdr/plugins/live
 }
 
 pkg_postinst() {
