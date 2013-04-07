@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.010.ebuild,v 1.1 2013/04/05 15:52:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.011.ebuild,v 1.1 2013/04/07 15:20:24 hasufell Exp $
 
 EAPI=5
 
@@ -8,15 +8,15 @@ inherit check-reqs eutils gnome2-utils games
 
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://www.urbanterror.info/home/"
-SRC_URI="http://cdn.urbanterror.info/urt/42/zips/UrbanTerror42_full_${PV:4:3}.zip
-	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/${PV}.tar.gz -> ${P}.tar.gz
+SRC_URI="http://cdn.urbanterror.info/urt/42/zips/UrbanTerror42_full${PV:4:3}.zip
+	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-${PV}.tar.gz -> ${P}.tar.gz
 	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
 LICENSE="GPL-2 Q3AEULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+curl debug dedicated openal +sdl server smp vorbis"
-#RESTRICT="mirror"
+RESTRICT="mirror"
 
 RDEPEND="
 	!dedicated? (
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	dedicated? ( curl? ( net-misc/curl ) )"
 
-S=${WORKDIR}/ioq3-for-UrbanTerror-4-${PV}
+S=${WORKDIR}/ioq3-for-UrbanTerror-4-release-${PV}
 S_DATA=${WORKDIR}/UrbanTerror42
 
 CHECKREQS_DISK_BUILD="2700M"
