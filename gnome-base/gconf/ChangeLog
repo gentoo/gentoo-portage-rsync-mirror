@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.278 2013/04/03 18:43:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.279 2013/04/07 11:46:49 eva Exp $
+
+*gconf-3.2.6-r1 (07 Apr 2013)
+
+  07 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org> +gconf-3.2.6-r1.ebuild:
+  Make gsettings-schema-convert support multiple python, needed for correct
+  build of ibus-1.5.
 
   03 Apr 2013; Fabian Groffen <grobian@gentoo.org> gconf-3.2.6.ebuild:
   No EPREFIX in CONFIG_PROTECT*
