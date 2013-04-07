@@ -1,6 +1,16 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.47 2012/05/02 20:10:08 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.49 2013/04/07 07:54:31 pacho Exp $
+
+  07 Apr 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  The package is in fact maintained only by gnome herd for a long time
+
+*gnome-phone-manager-0.69 (07 Apr 2013)
+
+  07 Apr 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/0001-Adapt-to-Evolution-Data-Server-API-changes.patch,
+  +gnome-phone-manager-0.69.ebuild:
+  Version bump, also fixes building with eds-3.6
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gnome-phone-manager-0.66.ebuild, gnome-phone-manager-0.68.ebuild:
@@ -226,4 +236,3 @@
   +files/gnome-phone-manager-0.4-gcc3.patch, +metadata.xml,
   +gnome-phone-manager-0.4.ebuild:
   Initial import from bug #54448.
-

@@ -1,0 +1,82 @@
+From 6b7d7e831e5542b6ea3c15802fa882a42399fc15 Mon Sep 17 00:00:00 2001
+From: Jasper Lievisse Adriaanse <jasper@humppa.nl>
+Date: Mon, 01 Apr 2013 08:53:59 +0000
+Subject: unbreak with evolution-data-server >= 3.6.0
+
+https://bugzilla.gnome.org/show_bug.cgi?id=685130
+---
+diff --git a/src/merge-evolution.c b/src/merge-evolution.c
+index bd14483..c3c2639 100644
+--- a/src/merge-evolution.c
++++ b/src/merge-evolution.c
+@@ -29,7 +29,7 @@
+ 
+ #include "merge-evolution.h"
+ 
+-#include <libebook/e-book.h>
++#include <libebook/libebook.h>
+ #include <glib/gi18n.h>
+ #include <stdio.h>
+ #include <string.h>
+@@ -297,6 +297,31 @@ static gint sort_contact_by_file_as(gconstpointer *a, gconstpointer *b)
+ /*--------------------------------------------------------------------------*/
+ /* Open merge source.                                                       */
+ /*--------------------------------------------------------------------------*/
++static EBook *
++gl_open_system_addressbook (GError **error)
++{
++   ESourceRegistry *registry;
++   EBook *book = NULL;
++   ESource *source;
++
++   registry = e_source_registry_new_sync (NULL, error);
++   if (!registry)
++       return NULL;
++
++   source = e_source_registry_ref_builtin_address_book (registry);
++   if (!source) {
++       g_object_unref (registry);
++       return NULL;
++   }
++
++   book = e_book_new (source, error);
++
++   g_object_unref (source);
++   g_object_unref (registry);
++
++   return book;
++}
++
+ static void
+ gl_merge_evolution_open (glMerge *merge)
+ {
+@@ -317,12 +342,12 @@ gl_merge_evolution_open (glMerge *merge)
+                 return;
+         }
+ 
+-        merge_evolution->priv->book = e_book_new_system_addressbook(&error);
++        merge_evolution->priv->book = gl_open_system_addressbook(&error);
+         if (!merge_evolution->priv->book) {
+                 g_warning ("Couldn't open addressbook.");
+                 if (error)
+                 {
+-                        g_warning ("e_book_new_system_addressbook: %s", error->message);
++                        g_warning ("gl_open_system_addressbook: %s", error->message);
+                         g_error_free (error);
+                 }
+                 e_book_query_unref(query);
+diff --git a/src/merge-vcard.c b/src/merge-vcard.c
+index da1deff..6554015 100644
+--- a/src/merge-vcard.c
++++ b/src/merge-vcard.c
+@@ -27,7 +27,7 @@
+ 
+ #include "merge-vcard.h"
+ 
+-#include <libebook/e-contact.h>
++#include <libebook/libebook.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
+--
+cgit v0.9.1

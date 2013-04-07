@@ -1,6 +1,15 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.68 2013/04/01 18:23:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.69 2013/04/07 07:34:38 pacho Exp $
+
+*glabels-3.0.1-r1 (07 Apr 2013)
+
+  07 Apr 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/glabels-3.0.1-eds-3.6.patch, +glabels-3.0.1-r1.ebuild,
+  -files/glabels-2.2.6-documentation.patch,
+  -files/glabels-2.2.7-documentation.patch, -glabels-3.0.0.ebuild:
+  Fix building with eds-3.6 (from upstream master branch), drop 'doc' USE and
+  drop old versions.
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> glabels-3.0.1.ebuild:
   Stable for sparc, wrt bug #458984
