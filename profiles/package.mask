@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14637 2013/04/07 15:06:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14638 2013/04/07 19:08:51 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -394,11 +394,6 @@ sys-fs/device-mapper
 # didn't with module-init-tools.
 # Later removal at 01-01-2014 by request from eudev maintainers
 sys-apps/module-init-tools
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (05 Mar 2013)
-# Outdated and not needed anymore; does not build.
-# Masked for removal in 30 days.
-sys-auth/polkit-kde
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Mar 2013)
 # Fails to compile unless system has previously installed copy
