@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.21-r1.ebuild,v 1.3 2012/09/05 07:42:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.21-r1.ebuild,v 1.4 2013/04/07 08:43:56 ulm Exp $
 
 EAPI=1
 
@@ -13,6 +13,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
+RESTRICT="mirror bindist"
 
 DEPEND=""
 RDEPEND="x11-libs/gtk+:2

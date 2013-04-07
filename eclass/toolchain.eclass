@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.575 2013/04/06 03:47:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.577 2013/04/07 08:56:52 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1495,20 +1495,23 @@ toolchain_src_install() {
 
 	cd "${WORKDIR}"/build
 	# Do allow symlinks in private gcc include dir as this can break the build
-	find gcc/include*/ -type l -print0 | xargs -0 rm -f
+	find gcc/include*/ -type l -delete
+	# Copy over the info pages.  We disabled their generation earlier, but the
+	# build system only expects to install out of the build dir, not the source.  #464008
+	cp "${S}"/gcc/doc/*.info gcc/doc/ || die
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
-	for x in $(find gcc/include*/ -name '*.h') ; do
+	while read x ; do
 		grep -q 'It has been auto-edited by fixincludes from' "${x}" \
 			&& rm -f "${x}"
-	done
+	done < <(find gcc/include*/ -name '*.h')
 	# Do the 'make install' from the build directory
 	S=${WORKDIR}/build \
 	emake -j1 DESTDIR="${D}" install || die
 	# Punt some tools which are really only useful while building gcc
 	find "${D}" -name install-tools -prune -type d -exec rm -rf "{}" \;
 	# This one comes with binutils
-	find "${D}" -name libiberty.a -exec rm -f "{}" \;
+	find "${D}" -name libiberty.a -delete
 
 	# Move the libraries to the proper location
 	gcc_movelibs

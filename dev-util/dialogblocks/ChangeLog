@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialogblocks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.25 2013/02/05 18:44:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.26 2013/04/07 08:43:26 ulm Exp $
+
+  07 Apr 2013; Ulrich Müller <ulm@gentoo.org> dialogblocks-4.33.ebuild:
+  RESTRICT="mirror bindist" since distribution is not allowed, bug 464768.
 
   05 Feb 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove whitespace.

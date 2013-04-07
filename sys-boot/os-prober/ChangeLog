@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/os-prober
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.17 2013/03/17 16:14:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.18 2013/04/07 08:42:42 abcd Exp $
+
+*os-prober-1.57-r1 (07 Apr 2013)
+
+  07 Apr 2013; Jonathan Callen <abcd@gentoo.org> +os-prober-1.57-r1.ebuild:
+  Replace calls to grub-mount with grub2-mount, as we rename it in Gentoo (to
+  allow parallel installation of grub:0)
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

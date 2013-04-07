@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/helpblocks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.14 2013/02/05 18:46:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.15 2013/04/07 08:43:56 ulm Exp $
+
+  07 Apr 2013; Ulrich Müller <ulm@gentoo.org> helpblocks-1.21-r1.ebuild:
+  RESTRICT="mirror bindist" since distribution is not allowed, bug 464768.
 
   05 Feb 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Use herd instead of maintainer for metadata.

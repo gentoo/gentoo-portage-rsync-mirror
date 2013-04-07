@@ -1,15 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.10.ebuild,v 1.7 2012/09/19 18:21:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.12.ebuild,v 1.1 2013/04/07 08:50:28 pacho Exp $
 
-EAPI="4"
-GNOME2_LA_PUNT="yes"
+EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="python? 2:2.5"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit gnome2 python eutils
-
-DOC_VER="2.2.0"
+inherit gnome2 python-single-r1 eutils
 
 DESCRIPTION="A personal finance manager"
 HOMEPAGE="http://www.gnucash.org/"
@@ -17,11 +14,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~ppc64 x86"
-IUSE="chipcard cxx debug +doc hbci mysql ofx postgres python quotes sqlite webkit"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="chipcard debug +doc hbci mysql ofx postgres python quotes sqlite webkit"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.ac)
-RDEPEND=">=dev-libs/glib-2.13:2
+RDEPEND=">=dev-libs/glib-2.32.0:2
 	>=dev-libs/popt-1.5
 	>=dev-libs/libxml2-2.5.10:2
 	>=dev-scheme/guile-1.8.3:12[deprecated,regex]
@@ -36,18 +33,19 @@ RDEPEND=">=dev-libs/glib-2.13:2
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/goffice:0.8[gnome]
 	x11-libs/pango
-	cxx? ( dev-cpp/gtkmm:2.4 )
 	ofx? ( >=dev-libs/libofx-0.9.1 )
 	hbci? ( >=net-libs/aqbanking-5[gtk,ofx?]
 		sys-libs/gwenhywfar[gtk]
 		chipcard? ( sys-libs/libchipcard )
 	)
+	python? ( ${PYTHON_DEPS} )
 	quotes? ( dev-perl/DateManip
 		>=dev-perl/Finance-Quote-1.11
 		dev-perl/HTML-TableExtract )
 	webkit? ( net-libs/webkit-gtk:2 )
 	!webkit? ( >=gnome-extra/gtkhtml-3.16:3.14 )
-	sqlite? ( dev-db/libdbi dev-db/libdbi-drivers[sqlite] )
+	sqlite? ( >=dev-db/libdbi-0.8.4
+		>=dev-db/libdbi-drivers-0.8.3-r2[sqlite] )
 	postgres? ( dev-db/libdbi dev-db/libdbi-drivers[postgres] )
 	mysql? ( dev-db/libdbi dev-db/libdbi-drivers[mysql] )
 "
@@ -59,9 +57,13 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 "
 
-PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
+PDEPEND="doc? ( >=app-doc/gnucash-docs-2.2.0 )"
 
 pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
+
+src_configure() {
 	DOCS="doc/README.OFX doc/README.HBCI"
 
 	if use webkit ; then
@@ -77,7 +79,6 @@ pkg_setup() {
 	fi
 
 	G2CONF+="
-		$(use_enable cxx gtkmm)
 		$(use_enable debug)
 		$(use_enable ofx)
 		$(use_enable hbci aqbanking)
@@ -86,26 +87,9 @@ pkg_setup() {
 		--enable-locale-specific-tax
 		--disable-error-on-warning"
 
-	if use python ; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
+	# gtkmm is experimental and shouldn't be enabled, upstream bug #684166
+	G2CONF+=" --disable-gtkmm"
 
-src_prepare() {
-	: > "${S}"/py-compile
-
-	use python && python_convert_shebangs -r 2 .
-
-	# Disable python binding tests because of missing file
-	sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' \
-		-i src/optional/python-bindings/Makefile.{am,in} \
-		|| die "python tests sed failed"
-
-	gnome2_src_prepare
-}
-
-src_configure() {
 	# guile wrongly exports LDFLAGS as LIBS which breaks modules
 	# Filter until a better ebuild is available, bug #202205
 	local GUILE_LIBS=""
@@ -133,14 +117,4 @@ src_install() {
 	rm -rf "${ED}"/usr/share/doc/${PF}/{examples/,COPYING,INSTALL,*win32-bin.txt,projects.html}
 	mv "${ED}"/usr/share/doc/${PF} "${T}"/cantuseprepalldocs || die
 	dodoc "${T}"/cantuseprepalldocs/*
-}
-
-pkg_postinst() {
-	gnome2_pkg_postinst
-	use python && python_mod_optimize gnucash
-}
-
-pkg_postrm() {
-	gnome2_pkg_postrm
-	use python && python_mod_cleanup gnucash
 }
