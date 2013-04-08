@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.101 2013/03/03 11:59:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.102 2013/04/08 22:41:26 tommy Exp $
+
+*subversion-1.7.9 (08 Apr 2013)
+
+  08 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +subversion-1.7.9.ebuild:
+  Version bump for bug 463860
 
   03 Mar 2013; Michał Górny <mgorny@gentoo.org> subversion-1.7.8.ebuild:
   Unconditionally set proper Python version for build-time. Fixes bug #459708.
