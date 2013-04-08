@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.141 2013/02/10 17:18:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.142 2013/04/08 08:28:30 ssuominen Exp $
+
+  08 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> allegro-4.4.2-r1.ebuild:
+  Use subslot operator for the libpng dependency (and thus, libpng16 upgrade)
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> allegro-5.0.8.ebuild:
   Stable for ppc, wrt bug #455488

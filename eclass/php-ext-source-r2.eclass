@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.30 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.31 2013/04/08 08:11:29 olemarkus Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -262,13 +262,9 @@ php-ext-source-r2_createinifiles() {
 		local inifile
 		for inifile in ${PHPINIFILELIST} ; do
 			if [[ -n "${PHP_EXT_INIFILE}" ]]; then
-				cat "${FILESDIR}/${PHP_EXT_INIFILE}" > "${inifile}"
+				cat "${FILESDIR}/${PHP_EXT_INIFILE}" >> "${ED}/${inifile}"
 				einfo "Added content of ${FILESDIR}/${PHP_EXT_INIFILE} to ${inifile}"
 			fi
-
-
-
-
 			inidir="${inifile/${PHP_EXT_NAME}.ini/}"
 			inidir="${inidir/ext/ext-active}"
 			dodir "/${inidir}"

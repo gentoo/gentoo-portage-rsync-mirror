@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.7 2013/02/09 10:48:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.8 2013/04/08 08:28:30 ssuominen Exp $
 
-EAPI=2
+EAPI=5
 CMAKE_IN_SOURCE_BUILD=1
 inherit cmake-utils eutils
 
@@ -18,7 +18,7 @@ IUSE="alsa fbcon jack jpeg opengl oss png svga test vga vorbis X"
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( virtual/jpeg )
-	png? ( media-libs/libpng:0 )
+	png? ( media-libs/libpng:0= )
 	svga? ( media-libs/svgalib )
 	vorbis? ( media-libs/libvorbis )
 	X? (
@@ -94,20 +94,20 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	dohtml docs/html/*.html || die
+	nonfatal dohtml docs/html/*.html
 
 	#176020 (init_dialog.3), #409305 (key.3)
 	pushd docs/man >/dev/null
 	local manpage
 	for manpage in $(ls -d *.3); do
-		newman ${manpage} ${PN}-${manpage} || die
+		newman ${manpage} ${PN}-${manpage}
 	done
 	popd >/dev/null
 
 	if use X; then
-		newbin setup/setup ${PN}-setup || die
+		newbin setup/setup ${PN}-setup
 		insinto /usr/share/${PN}
-		doins {keyboard,language,setup/setup}.dat || die
+		doins {keyboard,language,setup/setup}.dat
 		newicon misc/icon.png ${PN}.png
 		make_desktop_entry ${PN}-setup "Allegro Setup" ${PN} "Settings"
 	fi

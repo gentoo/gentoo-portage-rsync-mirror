@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.776 2013/04/08 03:37:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.777 2013/04/08 08:11:29 olemarkus Exp $
+
+  08 Apr 2013; Ole Markus With <olemarkus@gentoo.org> php-ext-source-r2.eclass:
+  Fix for installing ini files in the tree. Bug 464900
 
   08 Apr 2013; Patrick Lauer <patrick@gentoo.org> toolchain.eclass:
   Fix for gcc info page installation #464008
