@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.3.ebuild,v 1.13 2013/03/11 07:38:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.3.ebuild,v 1.14 2013/04/08 13:47:50 eras Exp $
 
 EAPI=4
 # PYTHON_BDEPEND="2"
@@ -51,6 +51,7 @@ src_prepare() {
 	epatch "${FILESDIR}/heimdal_disable-check-iprop.patch"
 	epatch "${FILESDIR}/heimdal_link_order.patch"
 	epatch "${FILESDIR}/heimdal_missing_symbols.patch"
+	epatch "${FILESDIR}/heimdal_texinfo-5.patch"
 	eautoreconf
 }
 

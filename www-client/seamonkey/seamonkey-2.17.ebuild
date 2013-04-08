@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.17.ebuild,v 1.1 2013/04/03 07:02:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.17.ebuild,v 1.2 2013/04/08 13:47:38 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -280,11 +280,8 @@ src_install() {
 		"${S}/${obj_dir}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
 
-	# Without methodjit and tracejit there's no conflict with PaX
-	if use jit ; then
-		# Pax mark xpcshell for hardened support, only used for startupcache creation.
-		pax-mark m "${S}/${obj_dir}/mozilla/dist/bin/xpcshell"
-	fi
+	# Pax mark xpcshell for hardened support, only used for startupcache creation.
+	pax-mark m "${S}/${obj_dir}/mozilla/dist/bin/xpcshell"
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install || die "emake install failed"
@@ -320,15 +317,8 @@ src_install() {
 		|| die
 	domenu "${T}"/${PN}.desktop || die
 
-	# Without methodjit and tracejit there's no conflict with PaX
-	if use jit ; then
-		# Required in order to use plugins and even run firefox on hardened.
-		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin}
-	fi
-
-	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
-	# continue to work as expected.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
+	# Required in order to use plugins and even run firefox on hardened.
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}
 
 	# Handle plugins dir through nsplugins.eclass
 	share_plugins_dir

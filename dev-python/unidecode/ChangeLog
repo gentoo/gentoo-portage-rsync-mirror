@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/unidecode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.4 2012/05/30 12:53:56 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.5 2013/04/08 13:41:18 idella4 Exp $
+
+*unidecode-0.04.9-r1 (08 Apr 2013)
+
+  08 Apr 2013; Ian Delaney <idella4@gentoo.org> +unidecode-0.04.9-r1.ebuild:
+  migration revbump
 
   30 May 2012; Kacper Kowalik <xarthisius@gentoo.org> unidecode-0.04.9.ebuild:
   Restrict not working ABIs, add proper PYTHON_DEPEND, drop empty (R)DEPEND
@@ -17,4 +22,3 @@
   27 May 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   +unidecode-0.04.9.ebuild, +metadata.xml:
   New ebuild for unidecode python module
-
