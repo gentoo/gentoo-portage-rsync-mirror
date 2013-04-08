@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.0.ebuild,v 1.2 2013/03/20 20:28:16 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.0.ebuild,v 1.3 2013/04/08 21:24:03 nativemad Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs waf-utils
@@ -67,7 +67,7 @@ src_configure() {
 	waf-utils_src_configure \
 		--destdir="${D}" \
 		--prefix=/usr \
-		--jobs=${MAKEOPTS:2} \
+		--jobs=${MAKEOPTS:2:1} \
 		$(use lv2 && echo "--lv2" || echo "--no-lv2") \
 		$(use nls && echo "--nls" || echo "--no-nls") \
 		$(use debug && echo "--stl-debug" && echo "--rt-alloc-debug") \

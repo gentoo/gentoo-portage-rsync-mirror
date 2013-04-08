@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.47 2013/04/07 22:49:31 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.48 2013/04/08 21:09:02 pchrist Exp $
+
+*chicken-4.8.0.3 (08 Apr 2013)
+
+  08 Apr 2013; Panagiotis Christopoulos <pchrist@gentoo.org>
+  -chicken-4.8.0.2.ebuild, -files/chicken-4.8.0.2-parallel-build.patch,
+  +chicken-4.8.0.3.ebuild, +files/chicken-4.8.0.3-parallel-build.patch:
+  pushd chicken-4.8.0.3, remove 4.8.0.2
 
 *chicken-4.8.0.2 (07 Apr 2013)
 
