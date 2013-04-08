@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.18.ebuild,v 1.1 2013/04/08 03:52:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.18.ebuild,v 1.2 2013/04/08 17:41:50 radhermit Exp $
 
 EAPI=5
-inherit toolchain-funcs eutils autotools
+inherit toolchain-funcs eutils
 
 MY_P=${P/graphicsm/GraphicsM}
 
@@ -46,7 +46,6 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3.18-freetype.patch
-	eautoreconf
 }
 
 src_configure() {

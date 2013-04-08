@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnswalk
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/ChangeLog,v 1.13 2012/08/06 01:18:44 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/ChangeLog,v 1.14 2013/04/08 18:00:48 ulm Exp $
+
+  08 Apr 2013; Ulrich Müller <ulm@gentoo.org> dnswalk-2.0.2.ebuild:
+  Fix LICENSE, "may be freely distributed" according to README.
 
   06 Aug 2012; Christoph Junghans <ottxor@gentoo.org> dnswalk-2.0.2.ebuild:
   EAPI bumped to 4 and add prefix tweak
