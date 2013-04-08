@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.61 2013/01/14 03:59:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.62 2013/04/08 06:56:42 patrick Exp $
+
+*twisted-runner-13.0.0 (08 Apr 2013)
+
+  08 Apr 2013; Patrick Lauer <patrick@gentoo.org> +twisted-runner-13.0.0.ebuild:
+  Bump
 
 *twisted-runner-12.3.0 (14 Jan 2013)
 

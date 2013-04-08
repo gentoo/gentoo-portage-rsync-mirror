@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.18 2012/11/27 17:39:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.19 2013/04/08 06:44:05 mr_bones_ Exp $
 
 # @ECLASS: nvidia-driver.eclass
 # @MAINTAINER:
@@ -50,50 +50,51 @@ mask_304x=">=x11-drivers/nvidia-drivers-305.0.0"
 # @DESCRIPTION:
 # Retrieve the PCI device ID for each Nvidia video card you have
 nvidia-driver-get-card() {
-	local NVIDIA_CARD="$(/usr/sbin/lspci -d 10de: -n | \
-	awk '/ 0300: /{print $3}' | cut -d: -f2 | tr '\n' ' ')"
+	local NVIDIA_CARD="$(/usr/sbin/lspci -d 10de: -n | awk -F'[: ]' '/ 0300: /{print $6}')"
 
 	if [ -n "$NVIDIA_CARD" ]; then
-		echo "$NVIDIA_CARD";
+		echo "$NVIDIA_CARD"
 	else
-		echo "0000";
+		echo 0000
 	fi
 }
 
 nvidia-driver-get-mask() {
 	local NVIDIA_CARDS="$(nvidia-driver-get-card)"
+	local card drv
+
 	for card in $NVIDIA_CARDS; do
 		for drv in $drv_96xx; do
 			if [ "x$card" = "x$drv" ]; then
-				echo "$mask_96xx";
-				return 0;
+				echo "$mask_96xx"
+				return 0
 			fi
 		done
 
 		for drv in $drv_71xx; do
 			if [ "x$card" = "x$drv" ]; then
-				echo "$mask_71xx";
-				return 0;
+				echo "$mask_71xx"
+				return 0
 			fi
 		done
 
 		for drv in $drv_173x; do
 			if [ "x$card" = "x$drv" ]; then
-				echo "$mask_173x";
-				return 0;
+				echo "$mask_173x"
+				return 0
 			fi
 		done
 
 		for drv in $drv_304x; do
 			if [ "x$card" = "x$drv" ]; then
-				echo "$mask_304x";
-				return 0;
+				echo "$mask_304x"
+				return 0
 			fi
 		done
 	done
 
-	echo "";
-	return 1;
+	echo ''
+	return 1
 }
 
 # @FUNCTION: nvidia-driver-check-warning
@@ -101,6 +102,7 @@ nvidia-driver-get-mask() {
 # Prints out a warning if the driver does not work w/ the installed video card
 nvidia-driver-check-warning() {
 	local NVIDIA_MASK="$(nvidia-driver-get-mask)"
+
 	if [ -n "$NVIDIA_MASK" ]; then
 		version_compare "${NVIDIA_MASK##*-}" "${PV}"
 		r=$?
