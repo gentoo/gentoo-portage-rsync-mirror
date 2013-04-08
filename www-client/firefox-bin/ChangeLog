@@ -1,6 +1,20 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.144 2013/04/03 00:34:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.146 2013/04/08 14:30:50 anarchy Exp $
+
+*firefox-bin-17.0.5-r1 (08 Apr 2013)
+
+  08 Apr 2013; Jory A. Pratt <anarchy@gentoo.org> -firefox-bin-17.0.5.ebuild,
+  +firefox-bin-17.0.5-r1.ebuild, -firefox-bin-20.0.ebuild,
+  firefox-bin-20.0-r1.ebuild:
+  Fix bug #434542 on 17.0.5-r1 and re-keyword 20.0
+
+*firefox-bin-20.0-r1 (08 Apr 2013)
+
+  08 Apr 2013; Rick Farina <zerochaos@gentoo.org> +files/all-gentoo.js,
+  +files/local-settings.js, +firefox-bin-20.0-r1.ebuild:
+  adding in discussed fixes for bug #434542 with no keywords. waiting 24 hours
+  for maintainer to add keywords or complain
 
 *firefox-bin-17.0.5 (03 Apr 2013)
 *firefox-bin-20.0 (03 Apr 2013)
