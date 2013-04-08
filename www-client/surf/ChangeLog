@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.26 2013/03/31 17:37:17 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.27 2013/04/08 11:57:06 jer Exp $
+
+  08 Apr 2013; Jeroen Roovers <jer@gentoo.org> -surf-0.5.ebuild:
+  Old.
 
   31 Mar 2013; Chema Alonso <nimiux@gentoo.org> surf-0.6.ebuild:
   Stable for amd64 wrt bug #463150
@@ -100,4 +103,3 @@
   12 Feb 2010; Jeroen Roovers <jer@gentoo.org> +surf-0.3.ebuild,
   +metadata.xml:
   Initial commit.
-
