@@ -1,0 +1,11 @@
+[Unit]
+Description=Chrony Network Time Service
+After=syslog.target ntpdate.service
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/chronyd -r -s
+ControlGroup=cpu:/
+
+[Install]
+WantedBy=multi-user.target

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r3.ebuild,v 1.9 2013/04/05 18:26:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r3.ebuild,v 1.10 2013/04/08 11:30:24 eras Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib user
@@ -104,7 +104,7 @@ finduserdb() {
 		/usr/local/share/sqwebmail /usr/local/etc/courier-imap ; do
 		if [[ -e "${dir}/userdb" ]] ; then
 			einfo "Found userdb at: ${dir}/userdb"
-			cp -f "${dir}/userdb" "${D}/etc/courier/authlib/" || die
+			cp -fR "${dir}/userdb" "${D}/etc/courier/authlib/" || die
 			chmod go-rwx "${D}/etc/courier/authlib/userdb" || die
 			continue
 		fi

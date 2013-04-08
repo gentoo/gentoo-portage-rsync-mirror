@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.92 2013/02/04 12:27:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.93 2013/04/08 11:11:09 jer Exp $
+
+*chrony-1.27-r1 (08 Apr 2013)
+
+  08 Apr 2013; Jeroen Roovers <jer@gentoo.org> +files/50-chrony.list,
+  +chrony-1.27-r1.ebuild, +files/chronyd.service:
+  Add systemd support (bug #464948 by Enrico Tagliavini).
 
 *chrony-1.27 (04 Feb 2013)
 
