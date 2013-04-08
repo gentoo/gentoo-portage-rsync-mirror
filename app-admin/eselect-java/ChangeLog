@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/eselect-java
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-java/ChangeLog,v 1.1 2013/04/08 16:42:06 sera Exp $
+
+*eselect-java-0.1.0 (08 Apr 2013)
+
+  08 Apr 2013; Ralph Sennhauser <sera@gentoo.org> +eselect-java-0.1.0.ebuild,
+  +metadata.xml:
+  New package containing the Java projects eselect modules formerly in
+  java-config, eselect-maven and eselect-ecj
+

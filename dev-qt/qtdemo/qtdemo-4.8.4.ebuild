@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.4.ebuild,v 1.1 2013/03/02 15:27:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.4.ebuild,v 1.2 2013/04/08 16:56:00 pinkbyte Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SLOT="4"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="amd64 ppc ppc64 x86 ~x64-macos"
+	KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x64-macos"
 fi
 IUSE="dbus declarative kde multimedia opengl openvg qt3support webkit xmlpatterns"
 

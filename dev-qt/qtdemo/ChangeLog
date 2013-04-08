@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtdemo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.2 2013/03/03 04:12:38 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.3 2013/04/08 16:56:00 pinkbyte Exp $
+
+  08 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> qtdemo-4.8.4.ebuild:
+  Add ~arm keyword, wrt bug #454916
 
   31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.

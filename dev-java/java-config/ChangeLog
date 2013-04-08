@@ -1,6 +1,21 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.278 2013/04/06 10:21:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.279 2013/04/08 16:45:48 sera Exp $
+
+*java-config-2.2.0 (08 Apr 2013)
+
+  08 Apr 2013; Ralph Sennhauser <sera@gentoo.org> +java-config-2.2.0.ebuild:
+  bug 455798: Use recorded VM dependency for launcher
+  bug 402315: Don't lock on active VM in presence of virtuals.
+  bug 464608: Make Portage dependency explicit.
+  ROOT support.
+  Gentoo Prefix support.
+  Install man page.
+  Eselect modules and run-java-tool are split-out into separate package
+  eselect-java.
+  Desktop files, icons, env.d and profile.d files as well as revdep-rebuild
+  control file now part of baselayout-java.
+  Fix running tests.
 
   06 Apr 2013; Vlastimil Babka <caster@gentoo.org> -java-config-2.1.10.ebuild,
   java-config-2.1.11.ebuild, -java-config-2.1.11-r1.ebuild,
