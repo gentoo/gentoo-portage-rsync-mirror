@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.3.ebuild,v 1.3 2013/04/08 01:47:55 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.3.ebuild,v 1.4 2013/04/08 03:12:19 zerochaos Exp $
 
 EAPI="5"
 
@@ -78,9 +78,9 @@ pkg_setup() {
 			if linux_chkconfig_present SND_HDA_INTEL; then
 				CONFIG_CHECK="~SND_HDA_POWER_SAVE"
 				ERROR_KERNEL_SND_HDA_POWER_SAVE="SND_HDA_POWER_SAVE should be enabled in the kernel for full powertop function"
+				check_extra_config
 			fi
 		fi
-		check_extra_config
 	fi
 }
 
