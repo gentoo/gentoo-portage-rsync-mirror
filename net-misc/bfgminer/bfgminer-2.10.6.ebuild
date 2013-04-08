@@ -1,22 +1,22 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.6.5.ebuild,v 1.2 2012/12/03 02:26:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.10.6.ebuild,v 1.1 2013/04/08 00:24:47 blueness Exp $
 
 EAPI="4"
 
 inherit eutils
 
 DESCRIPTION="Modular Bitcoin CPU/GPU/FPGA miner in C"
-HOMEPAGE="https://bitcointalk.org/index.php?topic=78192.0"
+HOMEPAGE="https://bitcointalk.org/?topic=168174"
 SRC_URI="http://luke.dashjr.org/programs/bitcoin/files/${PN}/${PV}/${P}.tbz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="+adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev ztex"
+IUSE="+adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev x6500 ztex"
 REQUIRED_USE="
-	|| ( bitforce cpumining icarus modminer opencl ztex )
+	|| ( bitforce cpumining icarus modminer opencl x6500 ztex )
 	adl? ( opencl )
 	altivec? ( cpumining ppc ppc64 )
 	padlock? ( cpumining || ( amd64 x86 ) )
@@ -30,9 +30,12 @@ DEPEND="
 	ncurses? (
 		sys-libs/ncurses
 	)
-	dev-libs/jansson
+	>=dev-libs/jansson-2
 	udev? (
 		virtual/udev
+	)
+	x6500? (
+		virtual/libusb:1
 	)
 	ztex? (
 		virtual/libusb:1
@@ -88,6 +91,7 @@ src_configure() {
 		$(use_enable opencl) \
 		$(use_enable scrypt) \
 		$(use_with udev libudev) \
+		$(use_enable x6500) \
 		$(use_enable ztex)
 	# sanitize directories
 	sed -i 's~^\(\#define CGMINER_PREFIX \).*$~\1"'"${EPREFIX}/usr/lib/bfgminer"'"~' config.h
@@ -95,6 +99,7 @@ src_configure() {
 
 src_install() {
 	dobin bfgminer
+	dobin bfgminer-rpc
 	dodoc AUTHORS NEWS README API-README
 	if use scrypt; then
 		dodoc SCRYPT-README
@@ -105,9 +110,9 @@ src_install() {
 	if use bitforce; then
 		dobin bitforce-firmware-flash
 	fi
-	if use modminer; then
-		insinto /usr/lib/bfgminer/modminer
-		doins bitstreams/*.ncd
+	if use modminer || use x6500; then
+		insinto /usr/lib/bfgminer/bitstreams
+		doins bitstreams/fpgaminer*.bit
 		dodoc bitstreams/COPYING_fpgaminer
 	fi
 	if use opencl; then
@@ -116,11 +121,13 @@ src_install() {
 	fi
 	if use ztex; then
 		insinto /usr/lib/bfgminer/ztex
-		doins bitstreams/*.bit
+		doins bitstreams/ztex*.bit
 		dodoc bitstreams/COPYING_ztex
 	fi
 	if use examples; then
 		docinto examples
 		dodoc api-example.php miner.php API.java api-example.c
 	fi
+	cd libblkmaker
+	emake DESTDIR="$D" install
 }

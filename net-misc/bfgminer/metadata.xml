@@ -12,7 +12,8 @@
 	</maintainer>
 	<use>
 		<flag name='adl'>Enable support for controlling fans and overclocking on AMD cards with AMD Display Library</flag>
-		<flag name='bitforce'>Enable support for mining with ButterFly Labs BitFORCE FPGAs</flag>
+		<flag name='avalon'>Enable support for mining with Avalon ASIC modules</flag>
+		<flag name='bitforce'>Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs</flag>
 		<flag name='cpumining'>Enable support for mining with CPUs</flag>
 		<flag name='icarus'>Enable support for mining with Icarus FPGAs</flag>
 		<flag name='modminer'>Enable support for mining with ModMiner FPGAs</flag>
