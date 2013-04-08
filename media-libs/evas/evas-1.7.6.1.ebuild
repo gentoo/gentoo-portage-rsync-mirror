@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.4.ebuild,v 1.1 2012/12/21 19:50:46 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.6.1.ebuild,v 1.1 2013/04/08 22:07:16 tommy Exp $
 
 EAPI=2
 
@@ -12,9 +12,9 @@ SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 static-libs tga +threads tiff X xcb xpm"
+IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 static-libs tga tiff wayland X xcb xpm"
 
-RDEPEND=">=dev-libs/eina-1.7.0
+RDEPEND=">=dev-libs/eina-1.7.6
 	>=media-libs/freetype-2.3.9
 	fontconfig? ( media-libs/fontconfig )
 	gles? ( media-libs/mesa[gallium,gles2] )
@@ -24,6 +24,7 @@ RDEPEND=">=dev-libs/eina-1.7.0
 	bidi? ( >=dev-libs/fribidi-0.19.1 )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
 	tiff? ( media-libs/tiff )
+	wayland? ( dev-libs/wayland )
 	xpm? ( x11-libs/libXpm )
 	X? (
 		x11-libs/libX11
@@ -35,7 +36,7 @@ RDEPEND=">=dev-libs/eina-1.7.0
 		xcb? (
 			x11-libs/xcb-util
 		) )
-	eet? ( >=dev-libs/eet-1.7.0 )"
+	eet? ( >=dev-libs/eet-1.7.6 )"
 DEPEND="${RDEPEND}"
 
 src_configure() {
@@ -59,6 +60,25 @@ src_configure() {
 			--disable-gl-xlib
 			--disable-software-xcb
 			--disable-gl-xcb
+		"
+	fi
+	if use wayland ; then
+		MY_ECONF+="
+			--enable-wayland-shm
+		"
+		if use gles ; then
+			MY_ECONF+="
+				--enable-wayland-egl
+			"
+		else
+			MY_ECONF+="
+				--disable-wayland-egl
+			"
+		fi
+	else
+		MY_ECONF+="
+			--disable-wayland-egl
+			--disable-wayland-shm
 		"
 	fi
 
@@ -87,9 +107,9 @@ src_configure() {
 		--disable-image-loader-svg
 		$(use_enable tga image-loader-tga)
 		$(use_enable tiff image-loader-tiff)
-		$(use_enable threads pthreads)
-		$(use_enable threads async-events)
-		$(use_enable threads async-preload)
+		--enable-pthreads
+		--enable-async-events)
+		--enable-async-preload)
 		$(use_enable X software-xlib)
 		$(use_enable xpm image-loader-xpm)
 		--enable-evas-magic-debug \

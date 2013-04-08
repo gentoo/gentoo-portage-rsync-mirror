@@ -1,33 +1,37 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.5.ebuild,v 1.1 2013/01/04 18:09:30 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.6.ebuild,v 1.1 2013/04/08 22:14:54 tommy Exp $
 
 EAPI=2
 
 #virtualx is required for tests, which are currently broken
 #inherit virtualx
-inherit autotools enlightenment eutils
+inherit enlightenment eutils
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="ares curl directfb +evas examples fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
+IUSE="ares curl directfb +evas examples fbcon gles glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib wayland +X xcb xinerama xprint xscreensaver"
 
-RDEPEND=">=dev-libs/eina-1.7.0
+RDEPEND=">=dev-libs/eina-1.7.6
 	ares? ( net-dns/c-ares )
 	glib? ( dev-libs/glib )
 	curl? ( net-misc/curl )
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )
 	evas? (
-		>=media-libs/evas-1.7.5[directfb?,fbcon?,opengl?,X?,xcb?]
+		>=media-libs/evas-1.7.6[directfb?,fbcon?,opengl?,X?,xcb?]
 		opengl? ( virtual/opengl )
+		wayland? (
+			>=media-libs/evas-1.7.6[directfb?,fbcon?,gles?,opengl?,wayland?,X?,xcb?]
+		)
 	)
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
 	tslib? ( x11-libs/tslib )
 	sdl? ( media-libs/libsdl )
+	wayland? ( dev-libs/wayland )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXcomposite
@@ -48,11 +52,10 @@ DEPEND="${RDEPEND}"
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
 
-src_prepare() {
-
-	sed -i "s:1.7.5:1.7.4:g" configure.ac
-	eautoreconf
-}
+#src_prepare() {
+#	sed -i "s:1.7.5:1.7.4:g" configure.ac
+#	eautoreconf
+#}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
@@ -106,6 +109,25 @@ src_configure() {
 			$(use_enable fbcon ecore-evas-fb)
 			$(use_enable opengl ecore-evas-opengl-x11)
 		"
+		if use wayland ; then
+			EVAS_FLAGS+="
+				--enable-ecore-evas-wayland-shm
+			"
+			if use gles ; then
+				EVAS_FLAGS+="
+					--enable-ecore-evas-wayland-egl
+				"
+			else
+				EVAS_FLAGS+="
+					--enable-ecore-evas-wayland-egl
+				"
+			fi
+		else
+			EVAS_FLAGS+="
+				--disable-ecore-evas-wayland-egl
+				--disable-ecore-evas-wayland-shm
+			"
+		fi
 	else
 		EVAS_FLAGS+="
 			--disable-ecore-evas-directfb
@@ -113,6 +135,8 @@ src_configure() {
 			--disable-ecore-evas-software-x11
 			--disable-ecore-evas-software-16-x11
 			--disable-ecore-evas-opengl-x11
+			--disable-ecore-evas-wayland-egl
+			--disable-ecore-evas-wayland-shm
 		"
 		if use opengl; then
 			ewarn "Ecore usage of OpenGL is dependent on media-libs/evas."
@@ -194,6 +218,7 @@ src_configure() {
 	$(use_enable test tests)
 	$(use_enable threads posix-threads)
 	$(use_enable tslib)
+	$(use_enable wayland ecore-wayland)
 	$(use_enable X xim)
 	${SSL_FLAGS}
 	${EVAS_FLAGS}
