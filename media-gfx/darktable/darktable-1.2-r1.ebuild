@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.2.ebuild,v 1.1 2013/04/08 01:09:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.2-r1.ebuild,v 1.1 2013/04/08 17:03:38 radhermit Exp $
 
 EAPI=5
 
@@ -14,15 +14,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="colord doc facebook flickr geo gnome-keyring gphoto2 graphicsmagick
-jpeg2k kde nls opencl openmp pax_kernel +rawspeed +slideshow"
+IUSE="colord doc flickr geo gnome-keyring gphoto2 graphicsmagick
+jpeg2k kde nls opencl openmp pax_kernel +rawspeed +slideshow web-services"
 
 CDEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.28:2
 	dev-libs/libxml2:2
 	colord? ( x11-misc/colord )
-	facebook? ( dev-libs/json-glib )
 	flickr? ( media-libs/flickcurl )
 	geo? ( net-libs/libsoup:2.4 )
 	gnome-keyring? ( gnome-base/gnome-keyring )
@@ -44,6 +43,7 @@ CDEPEND="
 		virtual/opengl
 	)
 	virtual/jpeg
+	web-services? ( dev-libs/json-glib )
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
@@ -71,7 +71,6 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_use colord COLORD)
-		$(cmake-utils_use_use facebook GLIBJSON)
 		$(cmake-utils_use_use flickr FLICKR)
 		$(cmake-utils_use_use geo GEO)
 		$(cmake-utils_use_use gnome-keyring GNOME_KEYRING)
@@ -83,6 +82,7 @@ src_configure() {
 		$(cmake-utils_use_use openmp OPENMP)
 		$(cmake-utils_use !rawspeed DONT_USE_RAWSPEED)
 		$(cmake-utils_use_build slideshow SLIDESHOW)
+		$(cmake-utils_use_use web-services GLIBJSON)
 		-DCUSTOM_CFLAGS=ON
 		-DINSTALL_IOP_EXPERIMENTAL=ON
 		-DINSTALL_IOP_LEGACY=ON
