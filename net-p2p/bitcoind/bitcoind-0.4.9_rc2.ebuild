@@ -1,29 +1,27 @@
 # Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.0.ebuild,v 1.2 2013/02/19 12:44:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.4.9_rc2.ebuild,v 1.1 2013/04/07 23:18:41 blueness Exp $
 
-EAPI="4"
+EAPI=4
 
 DB_VER="4.8"
 
-inherit db-use eutils versionator toolchain-funcs
-
-MyPV="${PV/_/}"
-MyPN="bitcoin"
-MyP="${MyPN}-${MyPV}"
+inherit db-use eutils versionator
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyPN}-v${PV}.tgz
+SRC_URI="http://gitorious.org/bitcoin/${PN}-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+	bip16? ( http://luke.dashjr.org/programs/bitcoin/files/bip16/0.4.7-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch.xz )
 "
 
 LICENSE="MIT ISC GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
-IUSE="examples ipv6 logrotate upnp"
+KEYWORDS="~amd64 ~x86"
+IUSE="+bip16 logrotate ssl upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0[threads(+)]
+	dev-libs/crypto++
 	dev-libs/openssl[-bindist]
 	logrotate? (
 		app-admin/logrotate
@@ -32,13 +30,12 @@ RDEPEND="
 		net-libs/miniupnpc
 	)
 	sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
-	=dev-libs/leveldb-1.9.0*
 "
 DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/${MyP}"
+S="${WORKDIR}/bitcoin-${PN}-stable"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -47,37 +44,28 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-sys_leveldb.patch"
-	rm -r src/leveldb
+	cd src || die
+	cp "${FILESDIR}/0.4.2-Makefile.gentoo" "Makefile" || die
+	if use bip16; then
+		epatch "${WORKDIR}/0.4.7-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch"
+	fi
+	use logrotate && epatch "${FILESDIR}/0.4.7-reopen_log_file.patch"
 }
 
 src_compile() {
-	OPTS=()
+	local OPTS=()
 
-	OPTS+=("DEBUGFLAGS=")
 	OPTS+=("CXXFLAGS=${CXXFLAGS}")
-	OPTS+=("LDFLAGS=${LDFLAGS}")
+	OPTS+=( "LDFLAGS=${LDFLAGS}")
 
-	OPTS+=("BDB_INCLUDE_PATH=$(db_includedir "${DB_VER}")")
-	OPTS+=("BDB_LIB_SUFFIX=-${DB_VER}")
+	OPTS+=("DB_CXXFLAGS=-I$(db_includedir "${DB_VER}")")
+	OPTS+=("DB_LDFLAGS=-ldb_cxx-${DB_VER}")
 
-	if use upnp; then
-		OPTS+=(USE_UPNP=1)
-	else
-		OPTS+=(USE_UPNP=)
-	fi
-	use ipv6 || OPTS+=("USE_IPV6=-")
-
-	OPTS+=("USE_SYSTEM_LEVELDB=1")
+	use ssl  && OPTS+=(USE_SSL=1)
+	use upnp && OPTS+=(USE_UPNP=1)
 
 	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
-}
-
-src_test() {
-	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" test_bitcoin
-	./test_bitcoin || die 'Tests failed'
+	emake "${OPTS[@]}" ${PN}
 }
 
 src_install() {
@@ -98,11 +86,6 @@ src_install() {
 	dosym /etc/bitcoin/bitcoin.conf /var/lib/bitcoin/.bitcoin/bitcoin.conf
 
 	dodoc doc/README
-
-	if use examples; then
-		docinto examples
-		dodoc -r contrib/{bitrpc,pyminer,spendfrom,tidy_datadir.sh,wallettools}
-	fi
 
 	if use logrotate; then
 		insinto /etc/logrotate.d
