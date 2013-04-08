@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.33 2013/04/05 20:45:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.34 2013/04/08 01:19:36 blueness Exp $
+
+  08 Apr 2013; Anthony G. Basile <blueness@gentoo.org> eudev-1_beta3.ebuild:
+  Remove 40-gentoo.rules which is now 40-mem-null.rules in eudev
 
 *eudev-1_beta3 (05 Apr 2013)
 

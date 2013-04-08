@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.41 2013/03/15 19:04:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.42 2013/04/08 01:09:44 radhermit Exp $
+
+*darktable-1.2 (08 Apr 2013)
+
+  08 Apr 2013; Tim Harder <radhermit@gentoo.org> +darktable-1.2.ebuild:
+  Version bump, add graphicsmagick and jpeg2k use flags.
 
 *darktable-1.1.4 (15 Mar 2013)
 

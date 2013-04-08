@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta3.ebuild,v 1.1 2013/04/05 20:45:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta3.ebuild,v 1.2 2013/04/08 01:19:36 blueness Exp $
 
 EAPI=5
 
@@ -191,8 +191,6 @@ src_install()
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
 
 	# install gentoo-specific rules
-	insinto /lib/udev/rules.d
-	doins "${FILESDIR}"/40-gentoo.rules
 	use rule-generator && use openrc && doinitd "${FILESDIR}"/udev-postmount
 
 	# drop distributed hwdb files, they override sys-apps/hwids
