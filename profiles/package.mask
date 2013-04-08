@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14639 2013/04/07 20:01:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14640 2013/04/08 12:21:36 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -405,11 +405,6 @@ sys-apps/module-init-tools
 # wrt bugs 411443 and 413753
 # Masked temporarily until fixed
 =media-libs/libcaca-0.99_beta18
-
-# Ole Markus With <olemarkus@gentoo.org> (05 Mar 2013)
-# Conflicts with app-misc/pfm (bug 460222). Upstream gone.
-# Masked for removal in 30 days.
-dev-php/PEAR-PEAR_PackageFileManager_Cli
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Mar 2013)
 # MySQL 5.6 is not yet GA.

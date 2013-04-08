@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.106 2013/04/02 20:56:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.107 2013/04/08 12:14:07 kensington Exp $
+
+  08 Apr 2013; Michael Palimaka <kensington@gentoo.org> -soprano-2.7.6.ebuild,
+  -soprano-2.8.0.ebuild, metadata.xml:
+  Remove old.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> soprano-2.9.0.ebuild:
   Stable for ppc64, wrt bug #462890
