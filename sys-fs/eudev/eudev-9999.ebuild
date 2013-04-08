@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.24 2013/04/05 20:45:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.25 2013/04/08 01:35:57 blueness Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
-	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~axs/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
 fi
 
@@ -69,32 +69,36 @@ pkg_pretend()
 	ewarn "As of 2013-01-29, eudev-9999 provides the new interface renaming"
 	ewarn "functionality, as described in the URL below:"
 	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
-	ewarn " "
+	ewarn
 	ewarn "This functionality is enabled BY DEFAULT because eudev has no means of synchronizing"
 	ewarn "between the default or user-modified choice of sys-fs/udev.  If you wish to disable"
 	ewarn "this new iface naming, please be sure that /etc/udev/rules.d/80-net-name-slot.rules"
 	ewarn "exists:"
 	ewarn "\ttouch /etc/udev/rules.d/80-net-name-slot.rules"
-	ewarn " "
+	ewarn
 	ewarn "We are working on a better solution for the next beta release."
-	ewarn " "
+	ewarn
 	if has_version "<sys-fs/udev-180" && ! use legacy-libudev; then
+	ewarn
 	ewarn "This version of eudev does not contain the libudev.so.0 library by "
 	ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
-	ewarn ""
+	ewarn
 	ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and"
 	ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
 	ewarn "is required to resolve these issues."
-	ewarn ""
+	ewarn
 	ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
 	ewarn "you wish to continue to use your system while migrating to libudev.so.1"
 	else
+	if use legacy-libudev ; then
+	ewarn
 	ewarn "You are installing eudev with USE=legacy-libudev , this should only be used"
 	ewarn "to support binary-only applications or legacy applications while in the"
 	ewarn "process of doing a full systems upgrade, that require libudev.so.0 -- it is"
 	ewarn "HIGHLY RECOMMENDED to leave this flag disabled unless absolutely necessary."
-	ewarn ""
 	fi
+	fi
+	ewarn
 }
 
 pkg_setup()
@@ -186,9 +190,6 @@ src_install()
 	prune_libtool_files --all
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
 
-	# install gentoo-specific rules
-	insinto /lib/udev/rules.d
-	doins "${FILESDIR}"/40-gentoo.rules
 	use rule-generator && use openrc && doinitd "${FILESDIR}"/udev-postmount
 
 	# drop distributed hwdb files, they override sys-apps/hwids

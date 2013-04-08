@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta3.ebuild,v 1.2 2013/04/08 01:19:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta3.ebuild,v 1.3 2013/04/08 01:35:57 blueness Exp $
 
 EAPI=5
 
@@ -82,11 +82,11 @@ pkg_pretend()
 	ewarn
 	ewarn "This version of eudev does not contain the libudev.so.0 library by "
 	ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
-	ewarn ""
+	ewarn
 	ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and"
 	ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
 	ewarn "is required to resolve these issues."
-	ewarn ""
+	ewarn
 	ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
 	ewarn "you wish to continue to use your system while migrating to libudev.so.1"
 	else
@@ -190,7 +190,6 @@ src_install()
 	prune_libtool_files --all
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
 
-	# install gentoo-specific rules
 	use rule-generator && use openrc && doinitd "${FILESDIR}"/udev-postmount
 
 	# drop distributed hwdb files, they override sys-apps/hwids

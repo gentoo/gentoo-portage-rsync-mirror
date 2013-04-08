@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.3.ebuild,v 1.2 2013/04/07 18:31:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.3.ebuild,v 1.3 2013/04/08 01:47:55 zerochaos Exp $
 
 EAPI="5"
 
@@ -40,46 +40,47 @@ RDEPEND="
 DOCS=( TODO README )
 
 pkg_setup() {
+	CONFIG_CHECK="
+		~X86_MSR
+		~DEBUG_FS
+		~PERF_EVENTS
+		~TRACEPOINTS
+		~NO_HZ
+		~HIGH_RES_TIMERS
+		~HPET_TIMER
+		~CPU_FREQ_STAT
+		~CPU_FREQ_GOV_ONDEMAND
+		~USB_SUSPEND
+		~FTRACE
+		~BLK_DEV_IO_TRACE
+		~TIMER_STATS
+		~EVENT_POWER_TRACING_DEPRECATED
+		~TRACING
+	"
+	ERROR_KERNEL_X86_MSR="X86_MSR is not enabled in the kernel, you almost certainly need it"
+	ERROR_KERNEL_DEBUG_FS="DEBUG_FS is not enabled in the kernel, you almost certainly need it"
+	ERROR_KERNEL_PERF_EVENTS="PERF_EVENTS should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_TRACEPOINTS="TRACEPOINTS should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_NO_HZ="NO_HZ should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_HIGH_RES_TIMERS="HIGH_RES_TIMERS should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_HPET_TIMER="HPET_TIMER should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_CPU_FREQ_STAT="CPU_FREQ_STAT should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_CPU_FREQ_GOV_ONDEMAND="CPU_FREQ_GOV_ONDEMAND should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_USB_SUSPEND="USB_SUSPEND should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_FTRACE="FTRACE needs to be turned on to enable BLK_DEV_IO_TRACE"
+	ERROR_KERNEL_BLK_DEV_IO_TRACE="BLK_DEV_IO_TRACE needs to be turned on to enable TIMER_STATS, TRACING and EVENT_POWER_TRACING_DEPRECATED"
+	ERROR_KERNEL_TIMER_STATS="TIMER_STATS should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_EVENT_POWER_TRACING_DEPRECATED="EVENT_POWER_TRACING_DEPRECATED should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_TRACING="TRACING should be enabled in the kernel for full powertop function"
 	linux-info_pkg_setup
 	if linux_config_exists; then
-		CONFIG_CHECK="
-			~X86_MSR
-			~DEBUG_FS
-			~PERF_EVENTS
-			~TRACEPOINTS
-			~NO_HZ
-			~HIGH_RES_TIMERS
-			~HPET_TIMER
-			~CPU_FREQ_STAT
-			~CPU_FREQ_GOV_ONDEMAND
-			~USB_SUSPEND
-			~FTRACE
-			~BLK_DEV_IO_TRACE
-			~TIMER_STATS
-			~EVENT_POWER_TRACING_DEPRECATED
-			~TRACING
-		"
 		if kernel_is -lt 3 7 0; then
-			linux_chkconfig_present SND_HDA_INTEL && CONFIG_CHECK+="~SND_HDA_POWER_SAVE"
-			linux_chkconfig_present SND_HDA_INTEL && ERROR_KERNEL_SND_HDA_POWER_SAVE="SND_HDA_POWER_SAVE should be enabled in the kernel for full powertop function"
+			if linux_chkconfig_present SND_HDA_INTEL; then
+				CONFIG_CHECK="~SND_HDA_POWER_SAVE"
+				ERROR_KERNEL_SND_HDA_POWER_SAVE="SND_HDA_POWER_SAVE should be enabled in the kernel for full powertop function"
+			fi
 		fi
-		ERROR_KERNEL_X86_MSR="X86_MSR is not enabled in the kernel, you almost certainly need it"
-		ERROR_KERNEL_DEBUG_FS="DEBUG_FS is not enabled in the kernel, you almost certainly need it"
-		ERROR_KERNEL_PERF_EVENTS="PERF_EVENTS should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_TRACEPOINTS="TRACEPOINTS should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_NO_HZ="NO_HZ should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_HIGH_RES_TIMERS="HIGH_RES_TIMERS should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_HPET_TIMER="HPET_TIMER should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_CPU_FREQ_STAT="CPU_FREQ_STAT should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_CPU_FREQ_GOV_ONDEMAND="CPU_FREQ_GOV_ONDEMAND should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_USB_SUSPEND="USB_SUSPEND should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_FTRACE="FTRACE needs to be turned on to enable BLK_DEV_IO_TRACE"
-		ERROR_KERNEL_BLK_DEV_IO_TRACE="BLK_DEV_IO_TRACE needs to be turned on to enable TIMER_STATS, TRACING and EVENT_POWER_TRACING_DEPRECATED"
-		ERROR_KERNEL_TIMER_STATS="TIMER_STATS should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_EVENT_POWER_TRACING_DEPRECATED="EVENT_POWER_TRACING_DEPRECATED should be enabled in the kernel for full powertop function"
-		ERROR_KERNEL_TRACING="TRACING should be enabled in the kernel for full powertop function"
-	else
-		ewarn "unable to find kernel config, all checks disabled"
+		check_extra_config
 	fi
 }
 
