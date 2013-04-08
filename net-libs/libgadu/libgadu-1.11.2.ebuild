@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.2.ebuild,v 1.1 2012/08/05 21:56:01 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.2.ebuild,v 1.2 2013/04/08 21:48:13 reavertm Exp $
 
-EAPI="4"
+EAPI="5"
 
 MY_P="${P/_/-}"
 

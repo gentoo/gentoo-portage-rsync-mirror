@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.71 2013/03/14 07:09:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.72 2013/04/08 21:48:13 reavertm Exp $
+
+  08 Apr 2013; Maciej Mrozowski <reavertm@gentoo.org> libgadu-1.11.2.ebuild:
+  Bump to EAPI5, fix bug 461692.
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libgadu-1.11.1.ebuild:
   Stable for arm, wrt bug #457580
