@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/sxiv-1.1.ebuild,v 1.1 2013/04/01 23:24:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/sxiv-1.1-r1.ebuild,v 1.1 2013/04/08 07:57:06 radhermit Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.1-fix-segfault.patch
 	tc-export CC
 
 	restore_config config.h
