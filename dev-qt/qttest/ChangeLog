@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qttest
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.1 2013/03/02 15:34:43 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.2 2013/04/08 15:24:42 pesa Exp $
+
+  08 Apr 2013; Davide Pesavento <pesa@gentoo.org> qttest-4.8.4.ebuild:
+  Improve description.
 
   31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.4-r5.ebuild,v 1.1 2013/03/25 08:32:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.4-r5.ebuild,v 1.2 2013/04/08 15:04:10 pesa Exp $
 
 EAPI=5
 
 inherit qt4-build
 
-DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
+DESCRIPTION="Cross-platform application development framework"
 
 SRC_URI+=" http://dev.gentoo.org/~pesa/patches/${P}-update-defaultNumberingSystem.patch.gz"
 

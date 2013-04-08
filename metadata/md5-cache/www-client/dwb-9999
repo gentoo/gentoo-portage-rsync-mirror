@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare unpack
-DEPEND=>=net-libs/libsoup-2.32:2.4 dev-libs/json-c !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 ) virtual/pkgconfig dev-vcs/mercurial
+DEPEND=>=net-libs/libsoup-2.32:2.4 dev-libs/json-c !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 ) virtual/pkgconfig dev-vcs/git
 DESCRIPTION=Dynamic web browser based on WebKit and GTK+
 EAPI=5
 HOMEPAGE=http://portix.bitbucket.org/dwb/
@@ -7,5 +7,5 @@ IUSE=examples gtk3
 LICENSE=GPL-3
 RDEPEND=>=net-libs/libsoup-2.32:2.4 dev-libs/json-c !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 )
 SLOT=0
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	mercurial	7e8c2c49cfd90701e20a78850f066802	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=23502797233dac23efcb5267d43e7968
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=3f42b8cf4a985cc3f4177c56d647b2c4

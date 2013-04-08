@@ -1,6 +1,15 @@
 # ChangeLog for www-client/dwb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.15 2013/03/05 09:38:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.17 2013/04/08 15:28:35 radhermit Exp $
+
+*dwb-2013.03.30 (08 Apr 2013)
+
+  08 Apr 2013; Tim Harder <radhermit@gentoo.org> +dwb-2013.03.30.ebuild,
+  +files/dwb-2013.03.30-verbose-build.patch:
+  Version bump.
+
+  08 Apr 2013; Tim Harder <radhermit@gentoo.org> dwb-9999.ebuild:
+  Upstream switched to git repo (bug #465072 by Lukas Durdak).
 
   05 Mar 2013; Tim Harder <radhermit@gentoo.org> dwb-9999.ebuild:
   Add dep on json-c (bug #460380 by Nikolaj Sjujskij).

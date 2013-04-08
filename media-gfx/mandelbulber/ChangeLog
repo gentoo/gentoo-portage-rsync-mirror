@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/mandelbulber
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.10 2012/12/22 19:07:18 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.11 2013/04/08 15:05:56 ssuominen Exp $
+
+  08 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  mandelbulber-1.12.1.ebuild,
+  +files/mandelbulber-1.12.1-memcpy_and_memset.patch:
+  Include string.h where required for memcpy() or memset() since it's no longer
+  implicitly pulled in by libpng since 1.6.0 wrt #464972 by Kacper Kowalik
 
   22 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop myself from metadata.xml

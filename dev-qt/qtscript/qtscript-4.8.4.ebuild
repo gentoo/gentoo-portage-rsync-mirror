@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/qtscript-4.8.4.ebuild,v 1.2 2013/03/02 20:14:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/qtscript-4.8.4.ebuild,v 1.3 2013/04/08 15:18:21 pesa Exp $
 
 EAPI=4
 
 inherit qt4-build
 
-DESCRIPTION="The ECMAScript module for the Qt toolkit"
+DESCRIPTION="The QtScript module for the Qt toolkit"
 SLOT="4"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""

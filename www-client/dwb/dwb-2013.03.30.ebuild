@@ -1,20 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.6 2013/04/08 15:17:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-2013.03.30.ebuild,v 1.1 2013/04/08 15:28:35 radhermit Exp $
 
 EAPI=5
 
-inherit git-2 toolchain-funcs
-
-EGIT_REPO_URI="https://bitbucket.org/portix/dwb.git"
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Dynamic web browser based on WebKit and GTK+"
 HOMEPAGE="http://portix.bitbucket.org/dwb/"
-SRC_URI=""
+SRC_URI="mirror://bitbucket/portix/dwb/downloads/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="examples gtk3"
 
 RDEPEND=">=net-libs/libsoup-2.32:2.4
@@ -31,6 +29,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-verbose-build.patch
 	sed -i "/^CFLAGS += -\(pipe\|g\|O2\)/d" config.mk || die
 }
 

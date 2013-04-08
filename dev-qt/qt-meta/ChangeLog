@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt-meta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/ChangeLog,v 1.1 2013/03/02 15:24:49 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/ChangeLog,v 1.2 2013/04/08 15:07:15 pesa Exp $
+
+  08 Apr 2013; Davide Pesavento <pesa@gentoo.org> qt-meta-4.8.ebuild:
+  Improve description.
 
   29 Dec 2012; Michael Palimaka <kensington@gentoo.org> -qt-meta-4.7.ebuild:
   Remove old.

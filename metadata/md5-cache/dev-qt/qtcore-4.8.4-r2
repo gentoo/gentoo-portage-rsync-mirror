@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=sys-libs/zlib glib? ( dev-libs/glib:2 ) icu? ( >=dev-libs/icu-49:= ) ssl? ( dev-libs/openssl ) !<x11-libs/cairo-1.10.2-r2 virtual/pkgconfig
-DESCRIPTION=The Qt toolkit is a comprehensive C++ application development framework
+DESCRIPTION=Cross-platform application development framework
 EAPI=5
 HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
 IUSE=+glib iconv icu qt3support ssl aqua debug pch c++0x +exceptions
@@ -11,4 +11,4 @@ RDEPEND=sys-libs/zlib glib? ( dev-libs/glib:2 ) icu? ( >=dev-libs/icu-49:= ) ssl
 SLOT=4
 SRC_URI=http://releases.qt-project.org/qt4/source/qt-everywhere-opensource-src-4.8.4.tar.gz
 _eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	qt4-build	e47af8e569a8a0680e57fbe8bb24aea8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=73c55f596fb441fe270472d044708dd3
+_md5_=6c7dc17268cecdddd349719b4f2cdb1b

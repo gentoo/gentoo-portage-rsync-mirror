@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/qttest-4.8.4.ebuild,v 1.1 2013/03/02 15:34:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/qttest-4.8.4.ebuild,v 1.2 2013/04/08 15:24:42 pesa Exp $
 
 EAPI=4
 
 inherit qt4-build
 
-DESCRIPTION="The testing framework module for the Qt toolkit"
+DESCRIPTION="The QtTest module for unit testing Qt applications and libraries"
 SLOT="4"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""

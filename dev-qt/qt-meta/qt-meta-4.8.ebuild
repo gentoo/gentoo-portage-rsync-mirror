@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/qt-meta-4.8.ebuild,v 1.1 2013/03/02 15:24:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/qt-meta-4.8.ebuild,v 1.2 2013/04/08 15:07:15 pesa Exp $
 
 EAPI=2
 
-DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
+DESCRIPTION="Cross-platform application development framework"
 HOMEPAGE="http://qt-project.org/ http://qt.nokia.com/"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"

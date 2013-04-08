@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-1.12.1.ebuild,v 1.1 2012/08/03 08:35:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-1.12.1.ebuild,v 1.2 2013/04/08 15:05:56 ssuominen Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils toolchain-funcs versionator
 
 MY_P=${PN}$(replace_version_separator 2 '-' )
@@ -19,7 +18,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
 	>=media-libs/libsndfile-1
-	>=media-libs/libpng-1.4
+	>=media-libs/libpng-1.4:0=
 	virtual/jpeg"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -27,7 +26,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.11-qa.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.11-qa.patch \
+		"${FILESDIR}"/${P}-memcpy_and_memset.patch
 }
 
 src_compile() {
