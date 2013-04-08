@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/openvswitch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.4 2012/07/18 08:41:29 dev-zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.5 2013/04/08 19:37:58 dev-zero Exp $
+
+*openvswitch-1.9.0 (08 Apr 2013)
+
+  08 Apr 2013; Tiziano Müller <dev-zero@gentoo.org> +files/ovs-controller-r1,
+  +files/ovs-vswitchd-r1, +files/ovsdb-server-r1, +openvswitch-1.9.0.ebuild:
+  Version bump to 1.9.0 (bug #443558). Configuration database moved to
+  /var/lib/openvswitch (which is a solution for bug #438862). initscript-rewrite
+  to follow new declarative style and fixed bug #447630. Moved PKI to
+  /etc/ssl/openvswitch and make sure the directory has sane permissions (Bug
+  #431744). Added modules USE flag to build the openvswitch and brcompat kernel
+  modules.
 
 *openvswitch-1.6.1-r2 (18 Jul 2012)
 
