@@ -2,8 +2,8 @@ Fixing as-needed issues
 
 http://bugs.gentoo.org/show_bug.cgi?id=310727
 
---- src/Makefile.am
-+++ src/Makefile.am
+--- a/src/Makefile.am
++++ b/src/Makefile.am
 @@ -22,8 +22,9 @@
  bin_PROGRAMS		= ratpoison
  MAINTAINERCLEANFILES = Makefile.in config.h.in
