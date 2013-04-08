@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/networkmanagement
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.29 2013/03/31 16:57:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.30 2013/04/08 12:46:39 kensington Exp $
+
+  08 Apr 2013; Michael Palimaka <kensington@gentoo.org>
+  -networkmanagement-0.9.0.6.ebuild:
+  Remove old.
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   networkmanagement-0.9.0.7.ebuild:
