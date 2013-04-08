@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/ujson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.1 2013/02/24 09:56:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.2 2013/04/08 14:33:13 idella4 Exp $
+
+*ujson-1.30-r1 (08 Apr 2013)
+
+  08 Apr 2013; Ian Delaney <idella4@gentoo.org> +ujson-1.30-r1.ebuild:
+  migration revbump, added missing test phase
 
 *ujson-1.30 (24 Feb 2013)
 
   24 Feb 2013; Sven Wegener <swegener@gentoo.org> +ujson-1.30.ebuild,
   +metadata.xml:
   Initial commit, ebuild written by me.
-

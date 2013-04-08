@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/shishi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/ChangeLog,v 1.7 2013/02/20 15:21:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/ChangeLog,v 1.8 2013/04/08 14:31:20 eras Exp $
+
+*shishi-1.0.2 (08 Apr 2013)
+
+  08 Apr 2013; Eray Aslan <eras@gentoo.org>
+  +files/shishi-1.0.2_automake-1.12.patch, +shishi-1.0.2.ebuild:
+  Version bump
 
 *shishi-1.0.1-r2 (20 Feb 2013)
 

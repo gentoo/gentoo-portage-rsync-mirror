@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngquant/pngquant-1.8.3.ebuild,v 1.1 2013/04/05 09:40:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngquant/pngquant-1.8.3.ebuild,v 1.3 2013/04/08 14:49:47 ssuominen Exp $
 
 EAPI=5
-inherit toolchain-funcs flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="a command-line utility for converting 24/32-bit PNG images to paletted (8-bit) PNGs"
 HOMEPAGE="http://pngquant.org/"
@@ -18,13 +18,9 @@ RDEPEND="media-libs/libpng:0=
 	sys-libs/zlib:="
 DEPEND=${RDEPEND}
 
-pkg_pretend() {
-	if use openmp ; then
-		tc-has-openmp || die "Please switch to an openmp compatible compiler"
-	fi
-}
-
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng16.patch
+
 	# Failure in upstream logic. Otherwise we lose the -I and -L flags
 	# from Makefile.
 	sed -i \
@@ -38,7 +34,7 @@ src_compile() {
 	use sse2 && append-cflags -DUSE_SSE=1
 
 	local openmp
-	if use openmp ; then
+	if use openmp && tc-has-openmp; then
 		append-cflags -fopenmp
 		openmp="-lgomp"
 	fi
