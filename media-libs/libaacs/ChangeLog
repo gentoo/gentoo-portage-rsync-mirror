@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.19 2013/01/05 08:12:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.20 2013/04/08 05:18:38 radhermit Exp $
+
+*libaacs-0.6.0 (08 Apr 2013)
+
+  08 Apr 2013; Tim Harder <radhermit@gentoo.org> +libaacs-0.6.0.ebuild:
+  Version bump (bug #464348).
 
   05 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove whitespace from metadata.
