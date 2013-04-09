@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.2.ebuild,v 1.1 2012/10/06 20:50:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.4.ebuild,v 1.1 2013/04/09 08:20:28 angelos Exp $
 
 EAPI=4
-inherit eutils flag-o-matic linux-info multilib systemd user
+inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
-SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
+SRC_URI="http://www.musicpd.org/download/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,7 +37,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( dev-libs/libcdio[-minimal] )
+	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	curl? ( net-misc/curl )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
@@ -88,8 +88,17 @@ pkg_setup() {
 }
 
 src_prepare() {
+	DOC_CONTENTS="If you will be starting mpd via /etc/init.d/mpd, please make
+		sure that MPD's pid_file is unset."
+
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
 	epatch "${FILESDIR}"/${PN}-0.16.conf.patch
+
+	if has_version dev-libs/libcdio-paranoia; then
+		sed -i \
+			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
+			src/input/cdio_paranoia_input_plugin.c || die
+	fi
 }
 
 src_configure() {
@@ -179,11 +188,12 @@ src_install() {
 	keepdir /var/lib/mpd/music
 	dodir /var/lib/mpd/playlists
 	keepdir /var/lib/mpd/playlists
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	elog "If you will be starting mpd via /etc/init.d/mpd, please make"
-	elog "sure that MPD's pid_file is unset."
+	readme.gentoo_print_elog
 
 	# also change the homedir if the user has existed before
 	usermod -d "/var/lib/mpd" mpd
