@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.6.4.3.ebuild,v 1.3 2013/04/09 11:42:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.6.6.2.ebuild,v 1.1 2013/04/09 11:42:21 scarabeus Exp $
 
 EAPI=4
 
@@ -10,11 +10,11 @@ MY_PV=$(get_version_component_range 1-3)
 
 DESCRIPTION="Translations for the Libreoffice suite."
 HOMEPAGE="http://www.libreoffice.org"
-BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm"
+BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/${MY_PV}/rpm"
 
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp"
 
 LANGUAGES_HELP="ast bg bn_IN bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo
@@ -27,13 +27,13 @@ st sw_TZ ta te th tn ts tt uz ve xh zu"
 for lang in ${LANGUAGES_HELP}; do
 	helppack=""
 	[[ ${lang} == en ]] && lang2=${lang/en/en_US} || lang2=${lang}
-	helppack="offlinehelp? ( ${BASE_SRC_URI}/x86/LibO_${MY_PV}_Linux_x86_helppack-rpm_${lang2/_/-}.tar.gz )"
+	helppack="offlinehelp? ( ${BASE_SRC_URI}/x86/LibO_${PV}_Linux_x86_helppack-rpm_${lang2/_/-}.tar.gz )"
 	SRC_URI+=" linguas_${lang}? ( ${helppack} )"
 done
 for lang in ${LANGUAGES}; do
 	langpack=""
 	[[ ${lang} == en ]] \
-		|| langpack="${BASE_SRC_URI}/x86/LibO_${MY_PV}_Linux_x86_langpack-rpm_${lang/_/-}.tar.gz"
+		|| langpack="${BASE_SRC_URI}/x86/LibO_${PV}_Linux_x86_langpack-rpm_${lang/_/-}.tar.gz"
 	[[ -z ${langpack} ]] || SRC_URI+=" linguas_${lang}? ( ${langpack} )"
 	IUSE+=" linguas_${lang}"
 done
