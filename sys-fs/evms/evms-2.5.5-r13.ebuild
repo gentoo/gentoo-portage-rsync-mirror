@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r13.ebuild,v 1.4 2012/05/24 04:17:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r13.ebuild,v 1.5 2013/04/09 10:09:30 ssuominen Exp $
 
 EAPI=4
 
@@ -22,10 +22,7 @@ IUSE="ncurses nls"
 RDEPEND="
 	sys-apps/util-linux
 	sys-libs/readline
-	|| (
-		sys-fs/device-mapper
-		>=sys-fs/lvm2-2.02.45
-	)
+	>=sys-fs/lvm2-2.02.45
 	ncurses? (
 		>=dev-libs/glib-2.12.4-r1
 		sys-libs/ncurses

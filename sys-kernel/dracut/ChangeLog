@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.117 2013/04/02 14:51:03 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.118 2013/04/09 10:09:20 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> dracut-014-r3.ebuild,
+  dracut-018-r3.ebuild, dracut-019-r6.ebuild, dracut-022-r6.ebuild,
+  dracut-023-r4.ebuild, dracut-024-r4.ebuild, dracut-025.ebuild,
+  dracut-026.ebuild, dracut-026-r1.ebuild, dracut-026-r2.ebuild,
+  dracut-027.ebuild:
+  Remove sys-fs/device-mapper from || () syntax in favour of sys-fs/lvm2 wrt
+  #461382
 
   02 Apr 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
   +files/025-0000-fix-version-print.patch, dracut-025.ebuild:

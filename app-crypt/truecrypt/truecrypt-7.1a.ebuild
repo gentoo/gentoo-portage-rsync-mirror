@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.5 2012/12/22 00:10:44 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.6 2013/04/09 10:14:47 ssuominen Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE="X +asm"
 RESTRICT="mirror fetch bindist"
 
-RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
+RDEPEND=">=sys-fs/lvm2-2.02.45
 	sys-fs/fuse
 	x11-libs/wxGTK:2.8[X?]
 	app-admin/sudo"

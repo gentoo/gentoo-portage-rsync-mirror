@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.6-r2.ebuild,v 1.16 2012/11/29 00:15:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.6-r2.ebuild,v 1.17 2013/04/09 10:06:06 ssuominen Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
@@ -13,10 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="dynamic nls selinux"
 
-RDEPEND="|| (
-		>=sys-fs/lvm2-2.02.45
-		>=sys-fs/device-mapper-1.00.07-r1
-	)
+RDEPEND=">=sys-fs/lvm2-2.02.45
 	>=dev-libs/libgcrypt-1.1.42
 	>=dev-libs/libgpg-error-1.0-r1
 	>=dev-libs/popt-1.7

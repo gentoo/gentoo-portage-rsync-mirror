@@ -4,7 +4,7 @@
 <herd>livecd</herd>
 <use>
 	<flag name='device-mapper'>
-	Enable <pkg>sys-fs/device-mapper</pkg> support in parted
+	Enable device-mapper support from <pkg>sys-fs/lvm2</pkg> in parted
 	</flag>
 	<flag name="debug">
 	Enable debugging as encouraged by upstream: [The default configuration]

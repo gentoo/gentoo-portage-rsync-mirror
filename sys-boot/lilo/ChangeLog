@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.74 2013/03/04 17:04:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.75 2013/04/09 10:05:19 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> lilo-22.8-r2.ebuild,
+  lilo-23.2-r1.ebuild, lilo-23.2-r2.ebuild, metadata.xml:
+  Remove sys-fs/device-mapper from || () syntax in favour of sys-fs/lvm2 wrt
+  #461382
 
   04 Mar 2013; Agostino Sarubbo <ago@gentoo.org> lilo-23.2-r2.ebuild:
   Stable for x86, wrt bug #436916

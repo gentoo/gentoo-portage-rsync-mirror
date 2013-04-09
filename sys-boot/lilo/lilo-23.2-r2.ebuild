@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.2-r2.ebuild,v 1.3 2013/03/04 17:04:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.2-r2.ebuild,v 1.4 2013/04/09 10:05:19 ssuominen Exp $
 
 EAPI="2"
 
@@ -23,9 +23,7 @@ LICENSE="BSD GPL-2"
 KEYWORDS="-* amd64 x86"
 
 DEPEND=">=sys-devel/bin86-0.15.5"
-RDEPEND="device-mapper? ( || (
-	>=sys-fs/lvm2-2.02.45
-	>=sys-fs/device-mapper-1.02.12 ) )"
+RDEPEND="device-mapper? ( >=sys-fs/lvm2-2.02.45 )"
 
 src_prepare() {
 	# this patch is needed when booting PXE and the device you're using

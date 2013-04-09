@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.74 2012/12/22 00:10:44 alonbl Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.75 2013/04/09 10:14:47 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> truecrypt-7.1a.ebuild:
+  Remove sys-fs/device-mapper from || () syntax in favour of sys-fs/lvm2 wrt
+  #461382
 
   22 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml,
   truecrypt-7.1a.ebuild:

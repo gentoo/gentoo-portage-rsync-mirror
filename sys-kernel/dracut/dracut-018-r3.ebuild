@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018-r3.ebuild,v 1.5 2013/01/05 19:14:01 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018-r3.ebuild,v 1.6 2013/04/09 10:09:20 ssuominen Exp $
 
 EAPI=4
 
@@ -71,7 +71,7 @@ RDEPEND="
 	!>=sys-fs/udev-186
 
 	debug? ( dev-util/strace )
-	device-mapper? ( || ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 ) )
+	device-mapper? ( >=sys-fs/lvm2-2.02.33 )
 	net? ( net-misc/curl >=net-misc/dhcp-4.2.4_p2-r1[client] sys-apps/iproute2 )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
 	dracut_modules_biosdevname? ( sys-apps/biosdevname )

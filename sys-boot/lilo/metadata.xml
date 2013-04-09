@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <use>
- <flag name='device-mapper'>Enable support for
-  <pkg>sys-fs/device-mapper</pkg></flag>
+ <flag name='device-mapper'>Enable support for device-mapper from <pkg>sys-fs/lvm2</pkg></flag>
  <flag name='minimal'>Do not install the dolilo helper script</flag>
  <flag name='pxeserial'>Avoid character echo on PXE serial console</flag>
 </use>

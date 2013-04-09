@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.148 2013/01/21 21:00:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.149 2013/04/09 10:06:06 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  cryptsetup-1.0.6-r2.ebuild:
+  Remove sys-fs/device-mapper from || () syntax in favour of sys-fs/lvm2 wrt
+  #461382
 
   21 Jan 2013; Mike Frysinger <vapier@gentoo.org> cryptsetup-1.4.3.ebuild,
   cryptsetup-1.5.1.ebuild, cryptsetup-1.6.0.ebuild:
