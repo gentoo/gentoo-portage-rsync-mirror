@@ -4094,6 +4094,7 @@ net-ftp/proftpd:ctrls - Enable support for the mod_ctrls and mod_ctrls_admin mod
 net-ftp/proftpd:deflate - Enable support for the mod_deflate module
 net-ftp/proftpd:diskuse - Enable support for the mod_diskuse module
 net-ftp/proftpd:dso - Enable support for the mod_dso module
+net-ftp/proftpd:dynmasq - Enable support for the mod_dynmasq module, for dynamically updating MasqueradeAddress for dyndns-like scenarios)
 net-ftp/proftpd:exec - Enable support for the mod_exec module. WARNING: this could be a security risk
 net-ftp/proftpd:ident - Enable support for the mod_ident module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
@@ -4104,6 +4105,7 @@ net-ftp/proftpd:linguas_it_IT - Language support for it_IT
 net-ftp/proftpd:linguas_ja_JP - Language support for ja_JP
 net-ftp/proftpd:linguas_ru_RU - Language support for ru_RU
 net-ftp/proftpd:memcache - Enable support for the mod_memcache module, for using memcached servers
+net-ftp/proftpd:msg - Enable support for the mod_msg module, allows system users to send messages to connected clients via the ftpdctl program.
 net-ftp/proftpd:openssl - Enable dev-libs/openssl support
 net-ftp/proftpd:qos - Enable support for the mod_qos module
 net-ftp/proftpd:ratio - Enable support for the mod_ratio module

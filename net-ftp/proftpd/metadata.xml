@@ -31,6 +31,7 @@ server.</longdescription>
 	<flag name='deflate'>Enable support for the mod_deflate module</flag>
 	<flag name='diskuse'>Enable support for the mod_diskuse module</flag>
 	<flag name='dso'>Enable support for the mod_dso module</flag>
+	<flag name='dynmasq'>Enable support for the mod_dynmasq module, for dynamically updating MasqueradeAddress for dyndns-like scenarios)</flag>
 	<flag name='exec'>Enable support for the mod_exec module. WARNING: this could be a security risk</flag>
 	<flag name='ident'>Enable support for the mod_ident module</flag>
 	<flag name='ifsession'>Enable support for the ifsession module</flag>
@@ -41,6 +42,7 @@ server.</longdescription>
 	<flag name='linguas_ja_JP'>Language support for ja_JP</flag>
 	<flag name='linguas_ru_RU'>Language support for ru_RU</flag>
 	<flag name='memcache'>Enable support for the mod_memcache module, for using memcached servers</flag>
+	<flag name='msg'>Enable support for the mod_msg module, allows system users to send messages to connected clients via the ftpdctl program.</flag>
 	<flag name='openssl'>Enable <pkg>dev-libs/openssl</pkg> support</flag>
 	<flag name='qos'>Enable support for the mod_qos module</flag>
 	<flag name='ratio'>Enable support for the mod_ratio module</flag>
