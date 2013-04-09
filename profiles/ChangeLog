@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7707 2013/04/09 08:07:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7708 2013/04/09 11:03:27 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Drop lastrite entry for sys-fs/device-mapper which has been removed from
+  gentoo-x86 wrt #461382
 
   09 Apr 2013; Christoph Mende <angelos@gentoo.org> package.mask:
   Mask mail-client/postler for removal

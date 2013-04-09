@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14645 2013/04/09 08:07:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14646 2013/04/09 11:03:28 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -375,15 +375,6 @@ sys-kernel/linuxwacom-module
 # Removal in 30 days
 x11-drivers/xf86-input-citron
 
-# Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2013)
-# Too many blockers with current stable, incompatible
-# with current udev for example.
-# Should be redudant in favour of the device-mapper
-# packaged in sys-fs/lvm2.
-# See, http://bugs.gentoo.org/show_bug.cgi?id=461382
-# Removal in 30 days
-sys-fs/device-mapper
-
 # Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
 # Depends on maked dev-lang/python:3.3
 =media-gfx/blender-2.66
@@ -401,10 +392,9 @@ sys-fs/device-mapper
 # Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2013)
 # Remove redudant version of udev now that 197-r8 will
 # work down to Linux 2.6.32.60 on most arches.
-# Removal in 90 days.
+# Removal in 60 days.
 ~sys-fs/udev-171
 ~virtual/udev-171
-<sys-fs/lvm2-2.02.95
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2013)
 # Masked in favour of sys-apps/kmod. Now is the time to file

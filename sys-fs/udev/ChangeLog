@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.900 2013/04/05 18:26:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.901 2013/04/09 11:20:43 ssuominen Exp $
+
+*udev-201 (09 Apr 2013)
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-201.ebuild:
+  Version bump.
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> udev-200.ebuild:
   Stable for ppc64, wrt bug #463614
