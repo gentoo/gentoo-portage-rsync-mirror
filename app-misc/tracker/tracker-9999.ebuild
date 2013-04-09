@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.61 2013/04/06 03:06:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.62 2013/04/09 21:26:48 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ EGIT_REPO_URI="git://git.gnome.org/${PN}
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/16"
-IUSE="cue doc eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
+IUSE="cue eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
 if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 	IUSE="${IUSE} doc"
@@ -37,9 +37,10 @@ REQUIRED_USE="
 
 # According to NEWS, introspection is non-optional
 # glibc-2.12 needed for SCHED_IDLE (see bug #385003)
+# sqlite-3.7.16 for FTS4 support
 RDEPEND="
 	>=app-i18n/enca-1.9
-	>=dev-db/sqlite-3.7.14:=[threadsafe(+)]
+	>=dev-db/sqlite-3.7.16:=
 	>=dev-libs/glib-2.35.1:2
 	>=dev-libs/gobject-introspection-0.9.5
 	>=dev-libs/icu-4:=
@@ -83,8 +84,8 @@ RDEPEND="
 		>=x11-libs/cairo-1:=
 		>=app-text/poppler-0.16:=[cairo,utils]
 		>=x11-libs/gtk+-2.12:2 )
-	playlist? ( dev-libs/totem-pl-parser )
-	rss? ( >=net-libs/libgrss-0.5 )
+	playlist? ( >=dev-libs/totem-pl-parser-3 )
+	rss? ( net-libs/libgrss:0.5 )
 	thunderbird? ( || (
 		>=mail-client/thunderbird-5.0
 		>=mail-client/thunderbird-bin-5.0 ) )
@@ -110,11 +111,16 @@ DEPEND="${RDEPEND}
 		>=dev-libs/dbus-glib-0.82-r1
 		>=sys-apps/dbus-1.3.1[X] )
 "
-[[ ${PV} = 9999 ]] && DEPEND="${DEPEND}
-	doc? ( media-gfx/graphviz )
-	>=dev-util/gtk-doc-1.8
-	$(vala_depend)
-"
+
+if [[ ${PV} = 9999 ]]; then
+	DEPEND="${DEPEND}
+		doc? (
+			>=dev-util/gtk-doc-1.8
+			media-gfx/graphviz )
+		$(vala_depend)
+	"
+fi
+
 [[ ${PV} = 9999 ]] || PDEPEND="nautilus? ( >=gnome-extra/nautilus-tracker-tags-${PV} )"
 
 function inotify_enabled() {

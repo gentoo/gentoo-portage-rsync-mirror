@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.0.ebuild,v 1.4 2013/04/06 03:06:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.0.ebuild,v 1.5 2013/04/09 21:26:48 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,9 +15,8 @@ HOMEPAGE="http://projects.gnome.org/tracker/"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/16"
-IUSE="cue doc eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
+IUSE="cue eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="${IUSE} nautilus"
 
 REQUIRED_USE="
 	^^ ( gstreamer xine )
@@ -28,9 +27,10 @@ REQUIRED_USE="
 
 # According to NEWS, introspection is non-optional
 # glibc-2.12 needed for SCHED_IDLE (see bug #385003)
+# sqlite-3.7.16 for FTS4 support
 RDEPEND="
 	>=app-i18n/enca-1.9
-	>=dev-db/sqlite-3.7.14:=[threadsafe(+)]
+	>=dev-db/sqlite-3.7.16:=
 	>=dev-libs/glib-2.35.1:2
 	>=dev-libs/gobject-introspection-0.9.5
 	>=dev-libs/icu-4:=
@@ -74,8 +74,8 @@ RDEPEND="
 		>=x11-libs/cairo-1:=
 		>=app-text/poppler-0.16:=[cairo,utils]
 		>=x11-libs/gtk+-2.12:2 )
-	playlist? ( dev-libs/totem-pl-parser )
-	rss? ( >=net-libs/libgrss-0.5 )
+	playlist? ( >=dev-libs/totem-pl-parser-3 )
+	rss? ( net-libs/libgrss:0.5 )
 	thunderbird? ( || (
 		>=mail-client/thunderbird-5.0
 		>=mail-client/thunderbird-bin-5.0 ) )
@@ -101,12 +101,7 @@ DEPEND="${RDEPEND}
 		>=dev-libs/dbus-glib-0.82-r1
 		>=sys-apps/dbus-1.3.1[X] )
 "
-[[ ${PV} = 9999 ]] && DEPEND="${DEPEND}
-	doc? ( media-gfx/graphviz )
-	>=dev-util/gtk-doc-1.8
-	$(vala_depend)
-"
-[[ ${PV} = 9999 ]] || PDEPEND="nautilus? ( >=gnome-extra/nautilus-tracker-tags-0.14 )"
+PDEPEND="nautilus? ( >=gnome-extra/nautilus-tracker-tags-0.16 )"
 
 function inotify_enabled() {
 	if linux_config_exists; then
@@ -126,14 +121,6 @@ pkg_setup() {
 	inotify_enabled
 
 	python-any-r1_pkg_setup
-}
-
-src_unpack() {
-	if [[ ${PV} = 9999 ]]; then
-		git_src_unpack
-	else
-		gnome2_src_unpack
-	fi
 }
 
 src_prepare() {
@@ -161,10 +148,6 @@ src_prepare() {
 	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+1 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
 
-	if [[ ${PV} = 9999 ]]; then
-		eautoreconf
-		vala_src_prepare
-	fi
 	gnome2_src_prepare
 }
 
@@ -188,10 +171,6 @@ src_configure() {
 	if use mp3 && use gtk; then
 		#myconf="${myconf} $(use_enable !qt4 gdkpixbuf) $(use_enable qt4 qt)"
 		myconf="${myconf} --enable-gdkpixbuf"
-	fi
-
-	if [[ ${PV} = 9999 ]]; then
-		myconf="${myconf} $(use_enable doc gtk-doc)"
 	fi
 
 	# unicode-support: libunistring, libicu or glib ?
