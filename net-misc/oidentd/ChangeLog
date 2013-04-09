@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.59 2012/09/30 16:26:50 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.60 2013/04/09 08:38:19 angelos Exp $
+
+  09 Apr 2013; Christoph Mende <angelos@gentoo.org> -oidentd-2.0.8-r3.ebuild:
+  Remove old
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> oidentd-2.0.8-r4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #433339

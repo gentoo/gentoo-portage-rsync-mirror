@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/docky
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/ChangeLog,v 1.12 2012/12/07 04:58:48 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/ChangeLog,v 1.13 2013/04/09 08:34:31 angelos Exp $
+
+  09 Apr 2013; Christoph Mende <angelos@gentoo.org> -docky-2.1.3.ebuild:
+  Remove old
 
   07 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> docky-2.1.4.ebuild:
   x86 stable wrt bug #435202

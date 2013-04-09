@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ruledispatch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ChangeLog,v 1.10 2012/02/22 09:47:37 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ChangeLog,v 1.11 2013/04/09 08:55:34 idella4 Exp $
+
+*ruledispatch-0.5_pre2306-r2 (09 Apr 2013)
+
+  09 Apr 2013; Ian Delaney <idella4@gentoo.org>
+  +ruledispatch-0.5_pre2306-r2.ebuild:
+  migration revbump
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   ruledispatch-0.5_pre2306-r1.ebuild:
@@ -52,4 +58,3 @@
   +ruledispatch-0.5_pre2115.ebuild, -ruledispatch-0.5_pre2247.ebuild,
   +metadata.xml:
   Initial ebuild.
-

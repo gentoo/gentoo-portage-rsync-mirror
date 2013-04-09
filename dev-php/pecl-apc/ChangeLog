@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-apc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.16 2013/03/02 15:26:49 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.17 2013/04/09 08:49:14 olemarkus Exp $
+
+  09 Apr 2013; Ole Markus With <olemarkus@gentoo.org> pecl-apc-3.1.13.ebuild,
+  pecl-apc-3.1.9-r2.ebuild:
+  Add blocker on incompatible cache installations
 
   02 Mar 2013; Ole Markus With <olemarkus@gentoo.org> -pecl-apc-3.1.14.ebuild:
   Version was pulled from upstream

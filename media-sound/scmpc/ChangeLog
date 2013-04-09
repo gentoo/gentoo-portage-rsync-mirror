@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/scmpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/ChangeLog,v 1.24 2013/04/04 19:45:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/ChangeLog,v 1.25 2013/04/09 08:36:31 angelos Exp $
+
+  09 Apr 2013; Christoph Mende <angelos@gentoo.org> -scmpc-0.4.0.ebuild:
+  Remove old
 
   04 Apr 2013; Agostino Sarubbo <ago@gentoo.org> scmpc-0.4.1.ebuild:
   Stable for x86, wrt bug #464460
