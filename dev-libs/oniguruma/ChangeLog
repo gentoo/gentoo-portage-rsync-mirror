@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/oniguruma
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.59 2013/04/06 00:43:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.60 2013/04/08 23:53:22 naota Exp $
+
+*oniguruma-5.9.4 (08 Apr 2013)
+
+  08 Apr 2013; Naohiro Aota <naota@gentoo.org> +oniguruma-5.9.4.ebuild:
+  version bump wrt #464796
 
 *oniguruma-5.9.3 (06 Apr 2013)
 
