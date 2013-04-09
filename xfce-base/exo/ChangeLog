@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.89 2012/12/27 14:45:04 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.90 2013/04/09 15:34:17 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -exo-0.10.1.ebuild:
+  old
 
 *exo-0.10.2 (27 Dec 2012)
 

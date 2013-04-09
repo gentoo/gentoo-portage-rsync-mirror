@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.9.0.ebuild,v 1.1 2013/04/08 19:37:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.9.0.ebuild,v 1.2 2013/04/09 15:41:04 dev-zero Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ IUSE="debug modules monitor +pyside +ssl"
 RDEPEND=">=sys-apps/openrc-0.10.5
 	ssl? ( dev-libs/openssl )
 	monitor? (
-        ${PYTHON_DEPS}
-        dev-python/twisted
+		${PYTHON_DEPS}
+		dev-python/twisted
 		dev-python/twisted-conch
 		dev-python/twisted-web
 		pyside? ( dev-python/pyside[${PYTHON_USEDEP}] )
@@ -56,7 +56,7 @@ src_configure() {
 	set_arch_to_kernel
 	use monitor || export ovs_cv_python="no"
 	use pyside || export ovs_cv_pyuic4="no"
-	
+
 	local linux_config
 	use modules && linux_config="--with-linux=${KERNEL_DIR}"
 
@@ -86,7 +86,7 @@ src_install() {
 	if use monitor ; then
 		python_domodule "${ED}"/usr/share/openvswitch/python/*
 		rm -r "${ED}/usr/share/openvswitch/python"
-        python_optimize "${ED}/usr/share/ovsdbmonitor"
+		python_optimize "${ED}/usr/share/ovsdbmonitor"
 	fi
 	# not working without the brcompat_mod kernel module which did not get
 	# included in the kernel and we can't build it anymore
@@ -123,7 +123,7 @@ pkg_postinst() {
 			ewarn "to"
 			ewarn "    /var/lib/openvswitch"
 			ewarn "Please copy/move the database manually before running the schema upgrade."
-            ewarn "The PKI files are now supposed to go to /etc/ssl/openvswitch"
+			ewarn "The PKI files are now supposed to go to /etc/ssl/openvswitch"
 		fi
 	done
 

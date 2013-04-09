@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.109 2013/04/09 07:33:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.110 2013/04/09 15:56:57 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -midori-0.4.8.ebuild,
+  -files/midori-0.4.8-desktop_file_validation.patch, -midori-0.4.9.ebuild:
+  old
 
 *midori-0.5.0 (09 Apr 2013)
 
