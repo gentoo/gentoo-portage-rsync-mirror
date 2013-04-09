@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.15.3.ebuild,v 1.2 2013/04/05 23:04:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.15.3.ebuild,v 1.3 2013/04/09 17:31:52 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -108,6 +108,7 @@ src_install() {
 	fi
 
 	dobin out/${mytarget}/d8
+	pax-mark m "${ED}usr/bin/d8"
 
 	dolib out/${mytarget}/lib.target/libv8$(get_libname ${soname_version})
 	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname)

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.120 2013/04/05 20:31:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.121 2013/04/09 17:35:04 graaff Exp $
+
+*json-1.7.7-r1 (09 Apr 2013)
+
+  09 Apr 2013; Hans de Graaff <graaff@gentoo.org> +json-1.7.7-r1.ebuild:
+  Respect user CFLAGS, bug 464716.
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> json-1.7.7.ebuild:
   Stable for arm, wrt bug #464366

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.6.1.ebuild,v 1.1 2013/04/08 22:07:16 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.6.1.ebuild,v 1.2 2013/04/09 17:39:46 tommy Exp $
 
 EAPI=2
 
@@ -108,8 +108,8 @@ src_configure() {
 		$(use_enable tga image-loader-tga)
 		$(use_enable tiff image-loader-tiff)
 		--enable-pthreads
-		--enable-async-events)
-		--enable-async-preload)
+		--enable-async-events
+		--enable-async-preload
 		$(use_enable X software-xlib)
 		$(use_enable xpm image-loader-xpm)
 		--enable-evas-magic-debug \
