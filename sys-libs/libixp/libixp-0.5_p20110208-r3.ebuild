@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.5_p20110208-r3.ebuild,v 1.1 2012/03/05 13:36:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.5_p20110208-r3.ebuild,v 1.2 2013/04/09 13:22:45 naota Exp $
 
 # hg clone http://hg.suckless.org/libixp
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""

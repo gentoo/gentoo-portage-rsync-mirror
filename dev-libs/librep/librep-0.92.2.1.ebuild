@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.92.2.1.ebuild,v 1.7 2012/10/28 15:42:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.92.2.1.ebuild,v 1.8 2013/04/09 13:26:53 naota Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.tuxfamily.org/librep/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="emacs readline"
 
 RDEPEND=">=sys-libs/gdbm-1.8.0

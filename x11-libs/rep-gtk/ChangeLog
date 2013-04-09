@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.85 2012/10/28 16:36:31 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.86 2013/04/09 13:28:54 naota Exp $
+
+  09 Apr 2013; Naohiro Aota <naota@gentoo.org> rep-gtk-0.90.8.1.ebuild:
+  Add ~x86-fbsd wrt bug #157553
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> rep-gtk-0.90.8.1.ebuild:
   ia64/sparc stable wrt #427544

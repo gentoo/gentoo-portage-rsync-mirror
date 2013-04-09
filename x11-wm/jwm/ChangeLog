@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/jwm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.26 2012/07/03 16:41:03 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.27 2013/04/09 13:30:54 naota Exp $
+
+  09 Apr 2013; Naohiro Aota <naota@gentoo.org> jwm-2.1.0.ebuild:
+  Add ~x86-fbsd wrt bug #157553
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> jwm-2.1.0.ebuild:
   Marking jwm-2.1.0 ppc for bug 422443
@@ -106,4 +109,3 @@
   +jwm-0.21.ebuild:
   Initial import. Ebuild submitted by Rafal Glazar <rafal_glazar@o2.pl>;
   bug #74744.
-

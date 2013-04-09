@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libixp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.21 2012/03/05 13:36:50 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.22 2013/04/09 13:22:46 naota Exp $
+
+  09 Apr 2013; Naohiro Aota <naota@gentoo.org> libixp-0.5_p20110208-r3.ebuild:
+  Add ~x86-fbsd wrt bug #157553
 
 *libixp-0.5_p20110208-r3 (05 Mar 2012)
 
@@ -106,4 +109,3 @@
   28 Dec 2006; David Shakaryan <omp@gentoo.org> +libixp-0.2.ebuild,
   +metadata.xml:
   Add sys-libs/libixp to tree.
-
