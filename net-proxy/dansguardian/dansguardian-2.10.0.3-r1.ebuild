@@ -1,8 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.1.1-r2.ebuild,v 1.2 2013/03/04 12:13:11 tomwij Exp $
-
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.0.3-r1.ebuild,v 1.1 2013/04/09 18:36:01 tomwij Exp $
 
 inherit eutils
 
@@ -16,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="clamav kaspersky debug ntlm pcre"
 
 RDEPEND="sys-libs/zlib
-	pcre? ( dev-libs/libpcre )
+	pcre? ( >=dev-libs/libpcre-8.32 )
 	clamav? ( >=app-antivirus/clamav-0.93 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -38,26 +36,21 @@ pkg_setup() {
 			die "Obsolete config files detected"
 		fi
 	fi
-
-	if ! use clamav; then
-		enewgroup dansguardian
-		enewuser dansguardian -1 -1 /dev/null dansguardian
-	fi
 }
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+
 	epatch "${FILESDIR}"/${P}-gcc44.patch
-	epatch "${FILESDIR}"/${P}-pcre830.patch
 }
 
-src_configure() {
+src_compile() {
 	local myconf="--with-logdir=/var/log/dansguardian
 		--with-piddir=/var/run
 		--docdir=/usr/share/doc/${PF}
 		--htmldir=/usr/share/doc/${PF}/html
 		$(use_enable pcre)
 		$(use_enable ntlm)
-		--enable-orig-ip
 		--enable-fancydm
 		--enable-email"
 	if use clamav; then
@@ -65,10 +58,6 @@ src_configure() {
 		myconf="${myconf} --enable-clamd
 			--with-proxyuser=clamav
 			--with-proxygroup=clamav"
-	else
-		myconf="${myconf}
-			--with-proxyuser=dansguardian
-			--with-proxygroup=dansguardian"
 	fi
 	if use kaspersky; then
 		myconf="${myconf} --enable-kavd"
@@ -78,14 +67,12 @@ src_configure() {
 	fi
 
 	econf ${myconf} || die "configure failed"
-}
 
-src_compile() {
 	emake OPTIMISE="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	emake "DESTDIR=${D}" install || die "emake install failed"
+	make "DESTDIR=${D}" install || die "make install failed"
 
 	# Move html documents to html dir
 	mkdir "${D}"/usr/share/doc/${PF}/html \
@@ -112,14 +99,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	local runas="dansguardian:dansguardian"
+	local runas="nobody:nobody"
 	if use clamav ; then
 		runas="clamav:clamav"
-	else
-		elog "dansguardian runs as a dedicated user now"
-		elog "You may need to remove old ipc files or adjust their ownership."
-		elog "By default, those files are /tmp/.dguardianipc"
-		elog "and /tmp/.dguardianurlipc"
 	fi
 	einfo "The dansguardian daemon will run by default as ${runas}"
 

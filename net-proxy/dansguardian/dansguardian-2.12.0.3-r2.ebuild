@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.12.0.3.ebuild,v 1.1 2013/03/04 12:13:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.12.0.3-r2.ebuild,v 1.1 2013/04/09 18:36:01 tomwij Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/zlib
 	clamav? ( app-antivirus/clamav )
 	logrotate? ( app-admin/logrotate )
 	ntlm? ( virtual/libiconv )
-	pcre? ( dev-libs/libpcre )"
+	pcre? ( >=dev-libs/libpcre-8.32 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -31,12 +31,17 @@ pkg_setup() {
 }
 
 src_configure() {
+	local debug
+	if use debug ; then
+		debug="$(use_with debug dgdebug)"
+	fi
+
 	econf \
 		$(use_enable avast avastd) \
 		$(use_enable backtrace segv-backtrace) \
 		$(use_enable clamav clamd) \
 		$(use_enable commandline) \
-		$(use_with debug dgdebug) \
+		${debug} \
 		$(use_enable email) \
 		$(use_enable fancydm) \
 		$(use_enable icap) \

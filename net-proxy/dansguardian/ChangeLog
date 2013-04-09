@@ -1,6 +1,17 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.55 2013/04/01 10:28:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.56 2013/04/09 18:36:01 tomwij Exp $
+
+*dansguardian-2.10.0.3-r1 (09 Apr 2013)
+*dansguardian-2.12.0.3-r2 (09 Apr 2013)
+
+  09 Apr 2013; Tom Wijsman <TomWij@gentoo.org> +dansguardian-2.10.0.3-r1.ebuild,
+  +dansguardian-2.12.0.3-r2.ebuild, -dansguardian-2.10.1.1-r1.ebuild,
+  -dansguardian-2.10.1.1-r2.ebuild, -dansguardian-2.10.1.1.ebuild,
+  -dansguardian-2.12.0.3.ebuild:
+  Revision bump, force people that are not running stable to use >=dev-
+  libs/libpcre-8.32. Fixes bug #417679 reported by Tomas Mozes. Dropped old,
+  will drop current stable once future stabilization is done.
 
 *dansguardian-2.12.0.3-r1 (01 Apr 2013)
 
