@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/parted
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.26 2012/12/16 19:32:29 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.27 2013/04/09 09:59:44 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> parted-2.3.ebuild,
+  parted-2.3-r1.ebuild, parted-2.3-r2.ebuild, parted-2.4.ebuild,
+  parted-3.0.ebuild, parted-3.1.ebuild, parted-3.1-r1.ebuild:
+  Remove sys-fs/device-mapper from || () syntax in favour of sys-fs/lvm2 wrt
+  #461382
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> parted-3.1-r1.ebuild:
   Re-add ~alpha/~ia64/~s390/~sh/~sparc wrt #443048

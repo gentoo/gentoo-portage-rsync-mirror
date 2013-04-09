@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.3-r1.ebuild,v 1.3 2012/05/03 04:46:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.3-r1.ebuild,v 1.4 2013/04/09 09:59:44 ssuominen Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ RDEPEND="
 	nls? ( >=sys-devel/gettext-0.12.1-r2 )
 	readline? ( >=sys-libs/readline-5.2 )
 	selinux? ( sys-libs/libselinux )
-	device-mapper? ( || ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper ) )
+	device-mapper? ( >=sys-fs/lvm2-2.02.45 )
 "
 DEPEND="
 	${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.14.1.ebuild,v 1.3 2013/03/25 16:39:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.14.1.ebuild,v 1.4 2013/04/09 09:59:40 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -30,9 +30,8 @@ RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/util-linux-2.20
 	>=sys-fs/e2fsprogs-1.41
 	btrfs? ( sys-fs/btrfs-progs )
-	dmraid? ( || (
-			>=sys-fs/lvm2-2.02.45
-			sys-fs/device-mapper )
+	dmraid? (
+		>=sys-fs/lvm2-2.02.45
 		sys-fs/dmraid
 		sys-fs/multipath-tools )
 	fat? (

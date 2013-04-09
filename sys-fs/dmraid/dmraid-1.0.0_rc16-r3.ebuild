@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r3.ebuild,v 1.9 2013/02/02 23:12:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r3.ebuild,v 1.10 2013/04/09 09:53:57 ssuominen Exp $
 
 EAPI=5
 
@@ -18,8 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dietlibc intel_led klibc led mini static"
 REQUIRED_USE="klibc? ( !dietlibc )"
 
-RDEPEND="|| ( >=sys-fs/lvm2-2.02.45
-		sys-fs/device-mapper )
+RDEPEND=">=sys-fs/lvm2-2.02.45
 	klibc? ( dev-libs/klibc )
 	dietlibc? ( dev-libs/dietlibc )"
 DEPEND="${RDEPEND}
