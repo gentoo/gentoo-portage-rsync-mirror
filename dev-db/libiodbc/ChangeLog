@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.59 2013/03/31 14:03:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.60 2013/04/09 12:17:42 olemarkus Exp $
+
+*libiodbc-3.52.8-r1 (09 Apr 2013)
+
+  09 Apr 2013; Ole Markus With <olemarkus@gentoo.org> +files/fix-runpaths.patch,
+  +libiodbc-3.52.8-r1.ebuild, libiodbc-3.52.8.ebuild:
+  Remove support for static-libs. Cleaner fix for bug 421603
 
   31 Mar 2013; Ole Markus With <olemarkus@gentoo.org> metadata.xml:
   Dropping from php-herd, adding myself as maintainer
