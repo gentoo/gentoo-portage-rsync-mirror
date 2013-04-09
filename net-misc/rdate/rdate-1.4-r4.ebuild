@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-1.4-r4.ebuild,v 1.6 2013/04/05 21:47:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-1.4-r4.ebuild,v 1.7 2013/04/09 13:48:12 jer Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://people.redhat.com/sopwith/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
 IUSE="ipv6"
 
 DEPEND=""

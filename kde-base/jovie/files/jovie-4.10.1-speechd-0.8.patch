@@ -1,0 +1,40 @@
+From e31b78b183c7c8a74f5bae8974e00daad5f581a3 Mon Sep 17 00:00:00 2001
+From: Sven-Hendrik Haase <sh@lutzhaase.com>
+Date: Thu, 4 Apr 2013 06:27:43 +0159
+Subject: [PATCH] Support for Speechd 0.8 in CMake
+
+Reviewed-by: Jeremy Whiting
+BUG: 317758
+FIXED-IN: 4.10.3
+---
+ cmake/FindSpeechd.cmake | 2 +-
+ jovie/CMakeLists.txt    | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cmake/FindSpeechd.cmake b/cmake/FindSpeechd.cmake
+index cf78d32..0902cdd 100644
+--- a/cmake/FindSpeechd.cmake
++++ b/cmake/FindSpeechd.cmake
+@@ -9,7 +9,7 @@
+ # Redistribution and use is allowed according to the terms of the BSD license.
+ # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
+ 
+-find_path(SPEECHD_INCLUDE_DIR libspeechd.h)
++find_path(SPEECHD_INCLUDE_DIR libspeechd.h PATH_SUFFIXES speech-dispatcher)
+ 
+ find_library(SPEECHD_LIBRARIES NAMES speechd)
+ 
+diff --git a/jovie/CMakeLists.txt b/jovie/CMakeLists.txt
+index bd9dcfc..f3191d4 100644
+--- a/jovie/CMakeLists.txt
++++ b/jovie/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ 
+-include_directories( /usr/local/include ${CMAKE_SOURCE_DIR}/jovie/libkttsd  )
++include_directories( /usr/local/include ${CMAKE_SOURCE_DIR}/jovie/libkttsd ${SPEECHD_INCLUDE_DIR} )
+ 
+ add_definitions(-DKDE_DEFAULT_DEBUG_AREA=2400)
+ 
+-- 
+1.8.1.5
+
