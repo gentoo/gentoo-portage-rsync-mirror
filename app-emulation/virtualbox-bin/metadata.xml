@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>proxy-maintainers</herd>
   <maintainer>
     <email>patrick@gentoo.org</email>
     <name>Patrick Lauer</name>
   </maintainer>
-<maintainer>
-  <email>swapon@gmail.com</email>
-  <name>Alessio Cassibba</name>
-</maintainer>
 <use>
 	<flag name='additions'>Install Guest System Tools ISO</flag>
 	<flag name='chm'>Install kchmviewer binary to enable online help (in MS CHM format)</flag>
