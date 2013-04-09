@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logstalgia/logstalgia-1.0.3.ebuild,v 1.1 2012/12/07 09:08:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logstalgia/logstalgia-1.0.3-r1.ebuild,v 1.1 2013/04/09 07:12:46 pinkbyte Exp $
 
 EAPI="5"
 
@@ -12,11 +12,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE=""
-
 RDEPEND="dev-libs/libpcre
 	media-libs/libsdl[opengl]
-	media-libs/libpng
+	media-libs/libpng:0=
 	media-libs/sdl-image
 	media-libs/ftgl
 	virtual/jpeg

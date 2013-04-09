@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r1.ebuild,v 1.3 2012/10/11 07:45:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r3.ebuild,v 1.1 2013/04/09 07:26:11 pinkbyte Exp $
 
-EAPI=4
-inherit autotools eutils gnome2-utils toolchain-funcs
+EAPI=5
+
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="OpenGL window and compositing manager"
 HOMEPAGE="http://www.compiz.org/"
@@ -18,7 +19,7 @@ COMMONDEPEND="
 	>=dev-libs/glib-2
 	dev-libs/libxml2
 	dev-libs/libxslt
-	media-libs/libpng:0
+	media-libs/libpng:0=
 	>=media-libs/mesa-6.5.1-r1
 	>=x11-base/xorg-server-1.1.1-r1
 	>=x11-libs/libX11-1.4
@@ -75,12 +76,14 @@ RDEPEND="${COMMONDEPEND}
 	x11-apps/xvinfo
 "
 
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
+
 src_prepare() {
 	echo gtk/gnome/compiz-wm.desktop.in >> po/POTFILES.skip
 	echo metadata/core.xml.in >> po/POTFILES.skip
 
-	# Patch for compatibility with gcc 4.7 or higher
-	[[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -ge 7 ]] && epatch "${FILESDIR}"/${PN}-gcc-4.7.patch
+	# Patch for compatibility with gcc 4.7
+	epatch "${FILESDIR}"/${PN}-gcc-4.7.patch
 
 	if ! use gnome || ! use gconf; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
@@ -90,6 +93,8 @@ src_prepare() {
 		has_version ">=kde-base/kwin-4.8" && epatch "${FILESDIR}"/${PN}-kde-4.8.patch
 		# patch for KDE 4.9 compatibility. Picked up from http://cgit.compiz.org
 		has_version ">=kde-base/kwin-4.9" && epatch "${FILESDIR}"/${PN}-kde-4.9.patch
+		# patch for KDE 4.10 compatibility. Picked up from stuff overlay
+		has_version ">=kde-base/kwin-4.10" && epatch "${FILESDIR}"/${PN}-kde-4.10.patch
 	fi
 	eautoreconf
 }
@@ -124,8 +129,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
+	default
 	prune_libtool_files --all
 
 	# Install compiz-manager
@@ -149,8 +153,6 @@ src_install() {
 	METACITY="$(type -p metacity)"
 	SKIP_CHECKS="yes"
 	EOF
-
-	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	domenu "${FILESDIR}"/compiz.desktop
 }
