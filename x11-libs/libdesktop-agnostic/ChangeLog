@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libdesktop-agnostic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/ChangeLog,v 1.5 2013/03/29 21:13:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/ChangeLog,v 1.7 2013/04/09 18:25:26 ago Exp $
+
+  09 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  libdesktop-agnostic-0.3.92.ebuild:
+  Stable for x86, wrt bug #465222
+
+  09 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  libdesktop-agnostic-0.3.92.ebuild:
+  Stable for amd64, wrt bug #465222
 
   29 Mar 2013; Christoph Mende <angelos@gentoo.org>
   libdesktop-agnostic-0.3.92.ebuild:

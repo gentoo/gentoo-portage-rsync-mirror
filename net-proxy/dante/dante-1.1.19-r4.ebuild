@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r4.ebuild,v 1.9 2012/03/13 12:07:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r4.ebuild,v 1.10 2013/04/09 18:09:40 tomwij Exp $
 
 inherit eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="A free socks4,5 and msproxy implementation"
 HOMEPAGE="http://www.inet.no/dante/"
 SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="tcpd debug selinux pam"

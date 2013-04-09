@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/libdesktop-agnostic-0.3.92.ebuild,v 1.5 2013/03/29 21:13:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/libdesktop-agnostic-0.3.92.ebuild,v 1.7 2013/04/09 18:25:26 ago Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7"
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/0.4/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug +gconf glade gnome +introspection"
 
 RDEPEND=">=dev-libs/glib-2

@@ -1,37 +1,44 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.5.0.ebuild,v 1.1 2013/03/28 23:14:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.5.0.ebuild,v 1.2 2013/04/09 18:21:12 eva Exp $
 
-EAPI=5
+EAPI="5"
 GCONF_DEBUG="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="LibGRSS is a library for easy management of RSS/Atom/Pie feeds"
 HOMEPAGE="http://live.gnome.org/Libgrss"
 SRC_URI="http://gtk.mplat.es/libgrss/tarballs/${P}.tar.gz"
 
 LICENSE="LGPL-3"
-SLOT="0"
+SLOT="0.5"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc examples"
+IUSE="examples"
 
-RDEPEND=">=dev-libs/glib-2.30.2:2
+RDEPEND="
+	>=dev-libs/glib-2.30.2:2
 	>=dev-libs/libxml2-2.7.8:2
-	>=net-libs/libsoup-2.36.1:2.4"
+	>=net-libs/libsoup-2.36.1:2.4
+"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	sys-devel/gettext
+	app-text/gnome-doc-utils
+	>=dev-util/gtk-doc-am-1.10
 	dev-util/intltool
-	doc? ( dev-util/gtk-doc )
-	gnome-base/gnome-common
-	sys-devel/autoconf:2.5
-	sys-devel/automake:1.10
-	sys-devel/libtool"
+	sys-devel/gettext
+	virtual/pkgconfig
+"
+
+src_prepare() {
+	# Fix soname/.pc
+	epatch "${FILESDIR}"/${P}-fix-slotting.patch
+
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_install() {
 	gnome2_src_install
-	rm -rf "${D}/var" || die "removing empty dir failed"
 
 	if use examples ; then
 		insinto /usr/share/doc/${PF}

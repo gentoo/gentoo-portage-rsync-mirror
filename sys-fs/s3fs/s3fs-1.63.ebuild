@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/s3fs-1.63.ebuild,v 1.1 2013/03/02 07:01:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/s3fs-1.63.ebuild,v 1.3 2013/04/09 18:24:38 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://s3fs.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 CDEPEND=">=dev-libs/libxml2-2.6:2
 	dev-libs/openssl

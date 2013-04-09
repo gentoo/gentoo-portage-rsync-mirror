@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0_pre1.ebuild,v 1.3 2013/04/09 18:09:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0_pre1-r1.ebuild,v 1.1 2013/04/09 18:09:40 tomwij Exp $
 
 EAPI="5"
 
@@ -65,7 +65,7 @@ src_install() {
 	popd > /dev/null
 
 	# init script
-	newinitd "${FILESDIR}/dante-sockd-init" dante-sockd
+	newinitd "${FILESDIR}/${PN}-1.3.2-sockd-init" dante-sockd
 	newconfd "${FILESDIR}/dante-sockd-conf" dante-sockd
 
 	# example configuration files

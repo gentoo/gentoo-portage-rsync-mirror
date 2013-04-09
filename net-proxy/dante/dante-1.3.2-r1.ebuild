@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0_pre1.ebuild,v 1.3 2013/04/09 18:09:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.3.2-r1.ebuild,v 1.1 2013/04/09 18:09:40 tomwij Exp $
 
 EAPI="5"
 
@@ -8,8 +8,7 @@ inherit autotools eutils
 
 DESCRIPTION="A free socks4,5 and msproxy implementation"
 HOMEPAGE="http://www.inet.no/dante/"
-MY_P="${P/_/-}"
-SRC_URI="ftp://ftp.inet.no/pub/socks/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
@@ -27,11 +26,10 @@ DEPEND="${RDEPEND}
 
 DOCS="BUGS CREDITS NEWS README SUPPORT doc/README* doc/*.txt doc/SOCKS4.protocol"
 
-S="${WORKDIR}/${MY_P}"
-
 src_prepare() {
-	epatch	"${FILESDIR}"/${PN}-1.3.0-socksify.patch \
-		"${FILESDIR}"/${PN}-1.4.0-osdep-format-macro.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.3.0-socksify.patch \
+		"${FILESDIR}"/${PN}-1.3.1-flags.patch
 
 	sed -i \
 		-e 's:/etc/socks\.conf:"${EPREFIX}"/etc/socks/socks.conf:' \
@@ -65,7 +63,7 @@ src_install() {
 	popd > /dev/null
 
 	# init script
-	newinitd "${FILESDIR}/dante-sockd-init" dante-sockd
+	newinitd "${FILESDIR}/${P}-sockd-init" dante-sockd
 	newconfd "${FILESDIR}/dante-sockd-conf" dante-sockd
 
 	# example configuration files

@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.430 2013/04/08 09:30:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.432 2013/04/09 18:25:10 ago Exp $
+
+  09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> postfix-2.10.0.ebuild:
+  Stable for x86, wrt bug #465060
+
+  09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> postfix-2.10.0.ebuild:
+  Stable for amd64, wrt bug #465060
 
 *postfix-2.11_pre20130405 (08 Apr 2013)
 
