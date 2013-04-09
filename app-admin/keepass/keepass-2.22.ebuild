@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.20.1.ebuild,v 1.1 2012/10/08 08:09:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.22.ebuild,v 1.1 2013/04/09 10:54:20 kensington Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils fdo-mime gnome2-utils mono multilib
 
@@ -26,9 +26,9 @@ S=${WORKDIR}
 
 src_prepare() {
 	# Remove Windows-specific things
-	pushd Build || die
+	pushd Build > /dev/null || die
 	. PrepMonoDev.sh || die
-	popd || die
+	popd > /dev/null || die
 
 	# KeePass looks for some XSL files in the same folder as the executable,
 	# we prefer to have it in /usr/share/KeePass
@@ -89,8 +89,10 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	fdo-mime_desktop_database_update
 
-	elog "Optional dependencies:"
-	elog "	x11-misc/xdotool (enables autotype)"
+	if ! has_version x11-misc/xdotool ; then
+		elog "Optional dependencies:"
+		elog "	x11-misc/xdotool (enables autotype)"
+	fi
 }
 
 pkg_postrm() {

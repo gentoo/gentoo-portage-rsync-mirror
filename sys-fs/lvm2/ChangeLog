@@ -1,6 +1,25 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.298 2013/03/17 16:19:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.300 2013/04/09 11:00:26 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Revert adding proxy-maintainers to metadata.xml since it's only upstream
+  there for reading bugmail. Remove unused USE description for "nolvmstatic".
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/1.02.22-dmeventd.initd, -files/device-mapper.rc-1.02.51-r2,
+  -lvm2-2.01.13.ebuild, -files/lvm.rc-2.02.51-r2,
+  -files/lvm2-2.02.64-dmeventd-libs.patch, -files/device-mapper.rc-2.02.67-r1,
+  -files/lvm.rc-2.02.67-r1, -files/lvm2-stop.sh-2.02.67-r1,
+  -lvm2-2.02.67-r2.ebuild, -files/lvm2-2.02.70-locale-muck.patch,
+  -files/lvm2-2.02.72-dynamic-static-ldflags.patch, -lvm2-2.02.73.ebuild,
+  -lvm2-2.02.73-r1.ebuild, -files/lvm2-2.02.73-asneeded.patch,
+  -files/lvm2-2.02.73-locale-muck.patch,
+  -files/lvm2-2.02.84-udev-pkgconfig.patch, -lvm2-2.02.88.ebuild,
+  -files/dm-start.sh, -files/lvm2-start.sh, -files/lvm2-start.sh-2.02.49-r3,
+  -files/lvm2-start.sh-2.02.67-r1, -files/lvm2-start.sh-2.02.95,
+  -files/lvm2-stop.sh, -files/lvm2-stop.sh-2.02.49-r3:
+  old
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>robbat2@gentoo.org</email>
 		<name>Robin H. Johnson</name>
@@ -19,7 +18,6 @@
 		<flag name='clvm'>Allow users to build clustered lvm2</flag>
 		<flag name='cman'>Cman support for clustered lvm</flag>
 		<flag name='lvm1'>Allow users to build lvm2 with lvm1 support</flag>
-		<flag name='nolvmstatic'>Allow users to build lvm2 dynamically</flag>
 		<flag name='thin'>Support for thin volumes</flag>
 	</use>
 </pkgmetadata>
