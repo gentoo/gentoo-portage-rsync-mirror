@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/decoratortools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.20 2011/09/05 04:58:24 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.21 2013/04/09 15:25:34 idella4 Exp $
+
+*decoratortools-1.8-r1 (09 Apr 2013)
+
+  09 Apr 2013; Ian Delaney <idella4@gentoo.org> +decoratortools-1.8-r1.ebuild:
+  migration to distutils-r1 revbump
 
   05 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> decoratortools-1.8.ebuild:
   License fix, changed to PSF-2
@@ -81,4 +86,3 @@
   02 May 2007; Rob Cakebread <pythonhead@gentoo.org>
   +decoratortools-1.4.ebuild:
   Initial commit.
-
