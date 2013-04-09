@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-12.09.0.ebuild,v 1.1 2012/09/16 15:57:30 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-12.09.0.ebuild,v 1.2 2013/04/09 06:40:05 jlec Exp $
 
-EAPI=4
+EAPI=5
+
 WX_GTK_VER="2.8"
-inherit eutils wxwidgets fdo-mime
+
+inherit eutils gnome2-utils wxwidgets fdo-mime
 
 MYP=wxMaxima-${PV}
 
@@ -15,10 +17,10 @@ SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="unicode"
 
-DEPEND="dev-libs/libxml2:2
-	x11-libs/wxGTK:2.8"
+DEPEND="
+	dev-libs/libxml2:2
+	x11-libs/wxGTK:${WX_GTK_VER}"
 RDEPEND="${DEPEND}
 	media-fonts/jsmath
 	sci-visualization/gnuplot[wxwidgets]
@@ -27,6 +29,8 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
+	local i
+
 	# consistent package names
 	sed -e "s:\${datadir}/wxMaxima:\${datadir}/${PN}:g" \
 		-i Makefile.in data/Makefile.in || die "sed failed"
@@ -34,28 +38,43 @@ src_prepare() {
 	sed -e 's:share/wxMaxima:share/wxmaxima:g' \
 		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp src/Config.cpp \
 		|| die "sed failed"
+
+	# correct gettext behavior
+	if [[ -n "${LINGUAS+x}" ]] ; then
+		for i in $(cd "${S}"/locales ; echo *.mo) ; do
+			if ! has ${i%.mo} ${LINGUAS} ; then
+				sed -i \
+					-e "/^WXMAXIMA_LINGUAS/s# ${i%.mo}##" \
+					-e "/^WXWIN_LINGUAS/s# ${i%.mo}##" \
+					locales/Makefile.in || die
+			fi
+		done
+	fi
 }
 
 src_configure() {
 	econf \
-		--enable-dnd \
 		--enable-printing \
-		--with-wx-config=${WX_CONFIG} \
-		$(use_enable unicode unicode-glyphs)
+		--with-wx-config=${WX_CONFIG}
 }
 
 src_install () {
 	default
-	doicon data/wxmaxima.png
+	doicon -s 128 data/wxmaxima.png
 	make_desktop_entry wxmaxima wxMaxima wxmaxima
-	dodir /usr/share/doc/${PF}
 	dosym /usr/share/${PN}/README /usr/share/doc/${PF}/README
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
+	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
+	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
 }

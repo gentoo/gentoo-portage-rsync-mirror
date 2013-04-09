@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/wxmaxima
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.40 2012/09/16 15:57:30 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.41 2013/04/09 06:40:05 jlec Exp $
+
+  09 Apr 2013; Justin Lecher <jlec@gentoo.org> wxmaxima-12.09.0.ebuild,
+  metadata.xml:
+  Add LINGUAS support and various other fixes, thanks Julian Ospald (hasufell)
+  for the patch, #463624
 
 *wxmaxima-12.09.0 (16 Sep 2012)
 
