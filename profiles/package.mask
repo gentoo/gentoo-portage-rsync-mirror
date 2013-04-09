@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14641 2013/04/09 03:59:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14643 2013/04/09 05:52:28 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -409,6 +409,7 @@ sys-apps/module-init-tools
 # wrt bugs 411443 and 413753
 # Masked temporarily until fixed
 =media-libs/libcaca-0.99_beta18
+=app-misc/toilet-0.3
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Mar 2013)
 # MySQL 5.6 is not yet GA.
