@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.34 2013/04/01 18:25:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.35 2013/04/09 16:44:26 ago Exp $
+
+  09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gnome-pty-helper-0.34.2.ebuild:
+  Stable for sh, wrt bug #458984
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gnome-pty-helper-0.34.2.ebuild:
   Stable for sparc, wrt bug #458984

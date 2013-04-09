@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.6.ebuild,v 1.1 2013/03/14 08:56:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.6.ebuild,v 1.2 2013/04/09 16:55:50 tomwij Exp $
 
 EAPI="5"
 inherit multilib versionator
@@ -10,7 +10,7 @@ MY_P=${PN}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
-HOMEPAGE="http://${PN}.org/"
+HOMEPAGE="http://lcdproc.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"

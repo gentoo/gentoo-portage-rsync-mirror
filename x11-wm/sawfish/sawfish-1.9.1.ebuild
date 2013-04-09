@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.9.1.ebuild,v 1.7 2013/04/01 18:26:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.9.1.ebuild,v 1.8 2013/04/09 16:45:38 ago Exp $
 
 EAPI="4"
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://download.tuxfamily.org/sawfish/${P}.tar.xz"
 
 LICENSE="GPL-2 Artistic-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sh sparc x86"
 IUSE="nls xinerama"
 
 RDEPEND=">=dev-libs/librep-0.92.1

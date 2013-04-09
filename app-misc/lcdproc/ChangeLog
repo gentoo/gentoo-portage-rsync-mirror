@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.74 2013/03/14 08:56:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.75 2013/04/09 16:55:50 tomwij Exp $
+
+  09 Apr 2013; Tom Wijsman <TomWij@gentoo.org> lcdproc-0.5.6.ebuild:
+  No PN variable in HOMEPAGE as per the dev manual.
 
 *lcdproc-0.5.6 (14 Mar 2013)
 
