@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.2 2013/02/26 23:00:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.3 2013/04/09 16:27:35 lxnay Exp $
 
 EAPI=3
 inherit autotools eutils perl-module user systemd
@@ -336,13 +336,10 @@ src_install() {
 		insinto /etc/cron.daily
 		newins "${MYFILESDIR}/amanda-cron" amanda
 	fi
-	
-	if use systemd; then
-		einfo "Installing systemd service and socket files for Amanda"
+
+	einfo "Installing systemd service and socket files for Amanda"
 	systemd_dounit "${FILESDIR}"/amanda.socket || die
 	systemd_newunit "${FILESDIR}"/amanda.service 'amanda@.service' || die
-	fi
-
 
 	insinto /etc/amanda
 	einfo "Installing .amandahosts File for ${AMANDA_USER_NAME} user"

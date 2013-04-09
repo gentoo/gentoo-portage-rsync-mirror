@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.6.ebuild,v 1.1 2013/03/14 08:40:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.6.ebuild,v 1.2 2013/04/09 16:26:14 tomwij Exp $
 
 EAPI="5"
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=app-misc/graphlcd-base-0.1.3"
+DEPEND=">=app-misc/graphlcd-base-0.1.3
+	sys-libs/glibc"
 RDEPEND=${DEPEND}
 
 src_compile() {
