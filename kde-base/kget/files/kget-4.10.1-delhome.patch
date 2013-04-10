@@ -1,0 +1,14 @@
+Backport of fix for Bug 464318 - kde-base/kget deletes home
+(is in 4.10.2)
+
+--- branches/KDE/4.10/kdenetwork/kget/transfer-plugins/multisegmentkio/transfermultisegkio.cpp	2013/03/07 10:29:45	1343275
++++ branches/KDE/4.10/kdenetwork/kget/transfer-plugins/multisegmentkio/transfermultisegkio.cpp	2013/03/07 10:33:10	1343276
+@@ -166,6 +166,8 @@
+     if (change & Tc_FileName) {
+         QList<KUrl> urls = m_dataSourceFactory->mirrors().keys();
+         QString filename = urls.first().fileName();
++        if (filename.isEmpty())
++            return;
+         foreach (const KUrl url, urls) {
+             if (filename != url.fileName())
+                 return;
