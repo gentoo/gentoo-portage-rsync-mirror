@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.778 2013/04/09 23:43:53 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.779 2013/04/10 02:33:48 anarchy Exp $
+
+  10 Apr 2013; Jory A. Pratt <anarchy@gentoo.org> mozconfig-3.eclass:
+  Disable debug symbols unless debug is enabled.
 
   10 Apr 2013; Magnus Granberg <zorry@gentoo.org> pax-utils.eclass:
   Make PT default pax marking and change ewarn to elog

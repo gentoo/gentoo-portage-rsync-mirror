@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.35 2013/03/24 19:08:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.36 2013/04/10 02:33:48 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -64,6 +64,9 @@ mozconfig_config() {
 	mozconfig_use_enable dbus
 	mozconfig_use_enable debug
 	mozconfig_use_enable debug tests
+	if ! use debug ; then
+		mozconfig_annotate 'disabled by Gentoo' --disable-debug-symbols
+	fi
 	mozconfig_use_enable startup-notification
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_enable wifi necko-wifi
