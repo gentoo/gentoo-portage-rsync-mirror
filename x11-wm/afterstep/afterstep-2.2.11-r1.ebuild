@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.11-r1.ebuild,v 1.2 2013/04/10 09:53:06 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.11-r1.ebuild,v 1.3 2013/04/10 10:05:57 voyageur Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -92,6 +92,12 @@ src_configure() {
 		--disable-staticlibs \
 		--enable-ascp=no \
 		${myconf}
+}
+
+src_compile() {
+	# gcc: ../libAfterConf/libAfterConf.a: No such file or directory
+	# make[1]: *** [PrintDesktopEntries] Error 1
+	emake -j1
 }
 
 src_install() {
