@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.80 2013/03/26 08:14:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.81 2013/04/10 02:04:51 williamh Exp $
+
+*kmod-13 (10 Apr 2013)
+
+  10 Apr 2013; William Hubbs <williamh@gentoo.org> +kmod-13.ebuild,
+  kmod-9999.ebuild:
+  version bump, eapi bump and sync live ebuild.
 
   26 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-12-r1.ebuild,
   kmod-9999.ebuild:
