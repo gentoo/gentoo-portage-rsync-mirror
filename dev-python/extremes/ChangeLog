@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/extremes
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extremes/ChangeLog,v 1.1 2013/04/10 04:28:06 idella4 Exp $
+
+*extremes-1.1.1 (10 Apr 2013)
+
+  10 Apr 2013; Ian Delaney <idella4@gentoo.org> +extremes-1.1.1.ebuild,
+  +metadata.xml:
+  New package, dep to PEAK-Rules, ebuild written by me
