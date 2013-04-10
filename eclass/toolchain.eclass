@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.580 2013/04/08 06:19:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.581 2013/04/10 19:16:41 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1969,18 +1969,22 @@ setup_multilib_osdirnames() {
 	esac
 	config+="/t-linux64"
 
+	local sed_args=()
+	if tc_version_is_at_least 4.8 ; then
+		sed_args+=( -e 's:$[(]call if_multiarch[^)]*[)]::g' )
+	fi
 	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
 		einfo "updating multilib directories to be: ${libdirs}"
 		if tc_version_is_at_least 4.7 ; then
-			set -- -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:'
+			sed_args+=( -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:' )
 		else
-			set -- -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:"
+			sed_args+=( -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:" )
 		fi
 	else
 		einfo "using upstream multilib; disabling lib32 autodetection"
-		set -- -r -e 's:[$][(]if.*,(.*)[)]:\1:'
+		sed_args+=( -r -e 's:[$][(]if.*,(.*)[)]:\1:' )
 	fi
-	sed -i "$@" "${S}"/gcc/config/${config} || die
+	sed -i "${sed_args[@]}" "${S}"/gcc/config/${config} || die
 }
 
 # make sure the libtool archives have libdir set to where they actually
