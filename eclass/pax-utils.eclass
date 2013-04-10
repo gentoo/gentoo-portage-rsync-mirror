@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.19 2013/04/05 02:08:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.20 2013/04/09 23:43:53 zorry Exp $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:
@@ -29,8 +29,8 @@ ___ECLASS_ONCE_PAX_UTILS="recur -_+^+_- spank"
 # @DESCRIPTION:
 # Control which markings are made:
 # PT = PT_PAX markings, XT = XATTR_PAX markings
-# Default to both PT and XT markings.
-PAX_MARKINGS=${PAX_MARKINGS:="PT XT"}
+# Default to PT markings.
+PAX_MARKINGS=${PAX_MARKINGS:="PT"}
 
 # @FUNCTION: pax-mark
 # @USAGE: <flags> {<ELF files>}
@@ -118,8 +118,8 @@ pax-mark() {
 		fi
 
 		if [[ ${pt_fail} == 1 ]]; then
-			ewarn "Failed to set PT_PAX markings -${flags} for:"
-			_pax_list_files ewarn ${pt_failures}
+			elog "Failed to set PT_PAX markings -${flags} for:"
+			_pax_list_files elog ${pt_failures}
 			ret=1
 		fi
 	fi
@@ -159,13 +159,13 @@ pax-mark() {
 		fi
 
 		if [[ ${xt_fail} == 1 ]]; then
-			ewarn "Failed to set XATTR_PAX markings -${flags} for:"
-			_pax_list_files ewarn ${xt_failures}
+			elog "Failed to set XATTR_PAX markings -${flags} for:"
+			_pax_list_files elog ${xt_failures}
 			ret=1
 		fi
 	fi
 
-	[[ ${ret} == 1 ]] && ewarn "Executables may be killed by PaX kernels."
+	# [[ ${ret} == 1 ]] && elog "Executables may be killed by PaX kernels."
 
 	return ${ret}
 }

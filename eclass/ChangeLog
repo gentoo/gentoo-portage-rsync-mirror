@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.777 2013/04/08 08:11:29 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.778 2013/04/09 23:43:53 zorry Exp $
+
+  10 Apr 2013; Magnus Granberg <zorry@gentoo.org> pax-utils.eclass:
+  Make PT default pax marking and change ewarn to elog
 
   08 Apr 2013; Ole Markus With <olemarkus@gentoo.org> php-ext-source-r2.eclass:
   Fix for installing ini files in the tree. Bug 464900
