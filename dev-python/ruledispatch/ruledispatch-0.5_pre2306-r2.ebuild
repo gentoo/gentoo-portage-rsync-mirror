@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2306-r2.ebuild,v 1.1 2013/04/09 08:55:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ruledispatch-0.5_pre2306-r2.ebuild,v 1.2 2013/04/10 14:15:40 idella4 Exp $
 
 EAPI="5"
-# For now, only py2.7 handles _d_speedups.pyx
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
 inherit distutils-r1 eutils versionator flag-o-matic
 
@@ -22,7 +21,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-RDEPEND=">=dev-python/pyprotocols-1.0_pre2306"
+RDEPEND=">=dev-python/pyprotocols-1.0_pre2306[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
@@ -35,5 +34,13 @@ python_configure_all() {
 }
 
 python_test() {
-	esetup.py && einfo "Tests effective under python2.7" || die "Tests failed under ${EPYTHON}"
+	cd "${BUILD_DIR}/lib" || die
+	# parallel build makes a salad; einfo msg lets us see what's occuring
+	for test in dispatch/tests/test_*.py; do
+		"${PYTHON}" $test && einfo "Tests $test passed under ${EPYTHON}" \
+		|| die "Tests failed under ${EPYTHON}"
+	done
+	# doctest appears old and unmaintained, left for just in case
+	# "${PYTHON}" dispatch/tests/doctest.py
+	einfo "Tests passed under ${EPYTHON}"
 }

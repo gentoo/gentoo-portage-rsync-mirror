@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ruledispatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ChangeLog,v 1.11 2013/04/09 08:55:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ruledispatch/ChangeLog,v 1.12 2013/04/10 14:15:40 idella4 Exp $
+
+  10 Apr 2013; Ian Delaney <idella4@gentoo.org>
+  ruledispatch-0.5_pre2306-r2.ebuild:
+  Update / fix to 0.5_pre2306-r2 subsequent to migrating deps
 
 *ruledispatch-0.5_pre2306-r2 (09 Apr 2013)
 

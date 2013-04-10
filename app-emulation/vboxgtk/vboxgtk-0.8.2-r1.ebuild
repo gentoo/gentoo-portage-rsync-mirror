@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.2-r1.ebuild,v 1.4 2013/01/06 19:03:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.2-r1.ebuild,v 1.5 2013/04/10 14:26:52 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -27,9 +27,9 @@ DEPEND="dev-util/intltool
 DOCS=( AUTHORS README )
 
 python_prepare_all() {
-	distutils-r1_python_prepare_all
 	rm_locale() { rm -r po/"${1}".po || die "LINGUAS removal failed" ;}
 	l10n_for_each_disabled_locale_do rm_locale
+	distutils-r1_python_prepare_all
 }
 
 pkg_preinst() {
