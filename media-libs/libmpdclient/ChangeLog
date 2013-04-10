@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmpdclient
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.45 2012/07/29 17:41:29 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.46 2013/04/10 13:11:48 angelos Exp $
+
+*libmpdclient-2.8 (10 Apr 2013)
+
+  10 Apr 2013; Christoph Mende <angelos@gentoo.org> +libmpdclient-2.8.ebuild:
+  Version bump
 
   29 Jul 2012; Christoph Mende <angelos@gentoo.org> -libmpdclient-2.4.ebuild,
   -libmpdclient-2.5.ebuild, -libmpdclient-2.6.ebuild:
