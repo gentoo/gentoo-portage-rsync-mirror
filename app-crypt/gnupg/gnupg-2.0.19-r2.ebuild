@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.19-r2.ebuild,v 1.1 2013/04/07 18:18:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.19-r2.ebuild,v 1.2 2013/04/10 22:11:45 alonbl Exp $
 
 EAPI="4"
 
@@ -59,6 +59,7 @@ REQUIRED_USE="smartcard? ( !static )"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.17-gpgsm-gencert.patch
 	epatch -l "${FILESDIR}/${P}-support-sc-key-3072.patch"
+	epatch -l "${FILESDIR}/${P}-texinfo-5.patch"
 }
 
 src_configure() {

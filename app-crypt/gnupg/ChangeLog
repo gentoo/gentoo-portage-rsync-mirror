@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.459 2013/04/07 18:18:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.460 2013/04/10 22:11:45 alonbl Exp $
+
+  10 Apr 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnupg-2.0.19-texinfo-5.patch, gnupg-2.0.19-r2.ebuild:
+  Fix texinfo-5 comatibility, per bug#464162, thanks to Denys Duchier and Ian
+  Abbott
 
 *gnupg-2.0.19-r2 (07 Apr 2013)
 
