@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.1-r1.ebuild,v 1.13 2013/01/01 18:46:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.1-r1.ebuild,v 1.14 2013/04/10 20:43:51 vincent Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic user versionator toolchain-funcs udev
 

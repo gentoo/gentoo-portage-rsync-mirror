@@ -1,7 +1,7 @@
 DEFINED_PHASES=configure install postinst setup test
 DEPEND=>=media-libs/libsndfile-1.0.20 X? ( >=x11-libs/libX11-1.4.0 >=x11-libs/libxcb-1.6 >=x11-libs/xcb-util-0.3.1 x11-libs/libSM x11-libs/libICE x11-libs/libXtst ) caps? ( sys-libs/libcap ) libsamplerate? ( >=media-libs/libsamplerate-0.1.1-r1 ) alsa? ( >=media-libs/alsa-lib-1.0.19 ) glib? ( >=dev-libs/glib-2.4.0 ) avahi? ( >=net-dns/avahi-0.6.12[dbus] ) jack? ( >=media-sound/jack-audio-connection-kit-0.117 ) tcpd? ( sys-apps/tcp-wrappers ) lirc? ( app-misc/lirc ) dbus? ( >=sys-apps/dbus-1.0.0 ) gtk? ( x11-libs/gtk+:2 ) gnome? ( >=gnome-base/gconf-2.4.0 ) bluetooth? ( >=net-wireless/bluez-4.99 >=sys-apps/dbus-1.0.0 media-libs/sbc ) asyncns? ( net-libs/libasyncns ) udev? ( >=virtual/udev-143[hwdb] ) realtime? ( sys-auth/rtkit ) equalizer? ( sci-libs/fftw:3.0 ) orc? ( >=dev-lang/orc-0.4.9 ) ssl? ( dev-libs/openssl ) >=media-libs/speex-1.2_rc1 gdbm? ( sys-libs/gdbm ) webrtc-aec? ( media-libs/webrtc-audio-processing ) xen? ( app-emulation/xen ) systemd? ( >=sys-apps/systemd-39 ) dev-libs/json-c >=sys-devel/libtool-2.2.4 sys-devel/m4 doc? ( app-doc/doxygen ) test? ( dev-libs/check ) X? ( x11-proto/xproto >=x11-libs/libXtst-1.0.99.2 ) dev-libs/libatomic_ops virtual/pkgconfig system-wide? ( || ( dev-util/unifdef sys-freebsd/freebsd-ubin ) ) dev-util/intltool virtual/pkgconfig
 DESCRIPTION=A networked sound server with an advanced plugin system
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.pulseaudio.org/
 IUSE=+alsa +asyncns avahi bluetooth +caps dbus doc equalizer +gdbm +glib gnome gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd system-wide tcpd test +udev +webrtc-aec +X xen
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux
@@ -12,4 +12,4 @@ REQUIRED_USE=bluetooth? ( dbus )
 SLOT=0
 SRC_URI=http://freedesktop.org/software/pulseaudio/releases/pulseaudio-3.0.tar.xz
 _eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=ce07577b1e8949b9c24948eb5f4b07a0
+_md5_=c3e8949fc64054fb95b6207f1c57b285
