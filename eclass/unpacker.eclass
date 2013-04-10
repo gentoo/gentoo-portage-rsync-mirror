@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.12 2013/03/23 21:18:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.13 2013/04/10 14:47:49 jer Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -178,7 +178,7 @@ unpack_makeself() {
 		local skip=0
 		exe=tail
 		case ${ver} in
-			1.5.*|1.6.0-nv)	# tested 1.5.{3,4,5} ... guessing 1.5.x series is same
+			1.5.*|1.6.0-nv*)	# tested 1.5.{3,4,5} ... guessing 1.5.x series is same
 				skip=$(grep -a ^skip= "${src}" | cut -d= -f2)
 				;;
 			2.0|2.0.1)
@@ -233,6 +233,9 @@ unpack_makeself() {
 			;;
 		compress*)
 			eval ${exe} | gunzip | tar --no-same-owner -xf -
+			;;
+		XZ*)
+			eval ${exe} | unxz | tar --no-same-owner -xf -
 			;;
 		*)
 			eerror "Unknown filetype \"${filetype}\" ?"

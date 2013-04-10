@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.779 2013/04/10 02:33:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.780 2013/04/10 14:47:49 jer Exp $
+
+  10 Apr 2013; Jeroen Roovers <jer@gentoo.org> unpacker.eclass:
+  Add support for 1.6.0-nv2 (bug #465340).
 
   10 Apr 2013; Jory A. Pratt <anarchy@gentoo.org> mozconfig-3.eclass:
   Disable debug symbols unless debug is enabled.

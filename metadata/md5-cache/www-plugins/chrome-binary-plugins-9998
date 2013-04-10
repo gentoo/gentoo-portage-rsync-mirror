@@ -7,5 +7,5 @@ LICENSE=google-chrome
 RDEPEND=www-client/chromium !www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:stable !www-plugins/chrome-binary-plugins:unstable
 RESTRICT=bindist mirror strip
 SLOT=beta
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	0e3a1fb79ec6a7c47f2a223d19c6385f
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	658a981a81fd7cb0767315a541bab01d
 _md5_=ca140e249ea4a2d89e455951faa4f624
