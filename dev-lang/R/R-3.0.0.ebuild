@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.0.ebuild,v 1.1 2013/04/04 22:10:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.0.ebuild,v 1.2 2013/04/10 07:09:19 patrick Exp $
 
 EAPI=5
 
@@ -167,7 +167,7 @@ src_compile() {
 
 src_install() {
 	default
-	emake -C src/nmath/standalone DESTDIR="${D}" install
+	emake -j1 -C src/nmath/standalone DESTDIR="${D}" install
 
 	if use doc; then
 		emake DESTDIR="${D}" install-info install-pdf

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-201.ebuild,v 1.1 2013/04/09 11:20:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-201.ebuild,v 1.2 2013/04/10 07:15:33 ssuominen Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	acl? ( sys-apps/acl )
 	gudev? ( >=dev-libs/glib-2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	kmod? ( >=sys-apps/kmod-12 )
+	kmod? ( >=sys-apps/kmod-13 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
 	!sys-apps/systemd"
@@ -48,6 +48,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
+	>=sys-devel/make-3.82-r4
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
@@ -249,12 +250,8 @@ src_configure() {
 src_compile() {
 	echo 'BUILT_SOURCES: $(BUILT_SOURCES)' > "${T}"/Makefile.extra
 	emake -f Makefile -f "${T}"/Makefile.extra BUILT_SOURCES
-	local pretargets=(
-		libsystemd-shared.la
-		libudev-private.la
-		libudev.la
-	)
 	local targets=(
+		libudev.la
 		systemd-udevd
 		udevadm
 		ata_id
@@ -272,7 +269,6 @@ src_compile() {
 	use keymap && targets+=( keymap )
 	use gudev && targets+=( libgudev-1.0.la )
 
-	emake "${pretargets[@]}"
 	emake "${targets[@]}"
 	if use doc; then
 		emake -C docs/libudev
