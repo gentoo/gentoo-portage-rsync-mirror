@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.4.4.ebuild,v 1.6 2013/01/03 05:33:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.4.4.ebuild,v 1.7 2013/04/10 06:04:30 jlec Exp $
 
 EAPI=4
 
@@ -35,13 +35,13 @@ src_configure() {
 	if use blas; then
 		mycmakeargs+=(
 			-DBLAS_FOUND=ON
-			-DBLAS_LIBRARIES="$($(tc-getPKGCONFIG) --libs blas)"
+			-DBLAS_LIBRARIES="$($(tc-getPKG_CONFIG) --libs blas)"
 		)
 	fi
 	if use lapack; then
 		mycmakeargs+=(
 			-DLAPACK_FOUND=ON
-			-DLAPACK_LIBRARIES="$($(tc-getPKGCONFIG) --libs lapack)"
+			-DLAPACK_LIBRARIES="$($(tc-getPKG_CONFIG) --libs lapack)"
 		)
 	fi
 	cmake-utils_src_configure

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-2.0.1.ebuild,v 1.4 2013/01/03 05:26:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-2.0.1.ebuild,v 1.5 2013/04/10 06:06:12 jlec Exp $
 
 EAPI=4
 
@@ -39,8 +39,8 @@ src_configure() {
 	local lapack_libs=no
 	local blas_libs=no
 	if use lapack; then
-		blas_libs=$($(tc-getPKGCONFIG) --libs blas)
-		lapack_libs=$($(tc-getPKGCONFIG) --libs lapack)
+		blas_libs=$($(tc-getPKG_CONFIG) --libs blas)
+		lapack_libs=$($(tc-getPKG_CONFIG) --libs lapack)
 	fi
 	local myeconfargs=(
 		--with-blas="${blas_libs}"

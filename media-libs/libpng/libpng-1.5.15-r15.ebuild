@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.15-r15.ebuild,v 1.1 2013/04/09 20:13:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.15-r15.ebuild,v 1.2 2013/04/10 06:02:07 ssuominen Exp $
 
 # this ebuild is only for the libpng15.so.15 SONAME for ABI compat
 
@@ -22,6 +22,11 @@ RDEPEND="sys-libs/zlib:=
 	!=media-libs/libpng-1.5*:0"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
+
+pkg_setup() {
+	local _preserved_lib=${EROOT}/usr/$(get_libdir)/libpng15.so.15
+	[[ -e ${_preserved_lib} ]] && rm -f "${_preserved_lib}"
+}
 
 src_prepare() {
 	if use apng; then

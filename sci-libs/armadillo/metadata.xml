@@ -14,7 +14,4 @@
   need for temporaries. This is accomplished through recursive
   templates and template meta-programming.
 </longdescription>
-  <use>
-    <flag name="atlas">Link with ATLAS libraries for cblas and clapack (needs <pkg>sci-libs/lapack-atlas</pkg>)</flag>
-  </use>
 </pkgmetadata>

@@ -5299,7 +5299,6 @@ sci-libs/acml:gfortran - Fetch and install acml compiled with GNU gfortran
 sci-libs/acml:ifc - Fetch and install acml compiled with Intel Fortran Compiler (dev-lang/ifc)
 sci-libs/acml:int64 - Install the 64 bits integer library
 sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colpack
-sci-libs/armadillo:atlas - Link with ATLAS libraries for cblas and clapack (needs sci-libs/lapack-atlas)
 sci-libs/arprec:fma - Use the Fused Multiply Add instruction set
 sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
