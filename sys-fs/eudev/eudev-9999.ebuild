@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.25 2013/04/08 01:35:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.26 2013/04/10 01:05:58 blueness Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ then
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~axs/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
@@ -22,7 +22,7 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev hwdb kmod introspection legacy-libudev keymap +modutils +openrc rule-generator selinux static-libs"
+IUSE="doc gudev hwdb kmod introspection legacy-libudev keymap +modutils +openrc +rule-generator selinux static-libs"
 
 RESTRICT="test"
 
@@ -66,39 +66,42 @@ udev_check_KV()
 
 pkg_pretend()
 {
-	ewarn "As of 2013-01-29, eudev-9999 provides the new interface renaming"
-	ewarn "functionality, as described in the URL below:"
-	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
-	ewarn
-	ewarn "This functionality is enabled BY DEFAULT because eudev has no means of synchronizing"
-	ewarn "between the default or user-modified choice of sys-fs/udev.  If you wish to disable"
-	ewarn "this new iface naming, please be sure that /etc/udev/rules.d/80-net-name-slot.rules"
-	ewarn "exists:"
-	ewarn "\ttouch /etc/udev/rules.d/80-net-name-slot.rules"
-	ewarn
-	ewarn "We are working on a better solution for the next beta release."
-	ewarn
+	if ! use rule-generator; then
+		ewarn
+		ewarn "As of 2013-01-29, eudev-9999 provides the new interface renaming functionality,"
+		ewarn "as described in the URL below:"
+		ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
+		ewarn
+		ewarn "This functionality is enabled BY DEFAULT because eudev has no means of synchronizing"
+		ewarn "between the default or user-modified choice of sys-fs/udev.  If you wish to disable"
+		ewarn "this new iface naming, please be sure that /etc/udev/rules.d/80-net-name-slot.rules"
+		ewarn "exists:"
+		ewarn "\ttouch /etc/udev/rules.d/80-net-name-slot.rules"
+		ewarn
+		ewarn "We are working on a better solution for the next beta release."
+		ewarn
+	fi
+
 	if has_version "<sys-fs/udev-180" && ! use legacy-libudev; then
-	ewarn
-	ewarn "This version of eudev does not contain the libudev.so.0 library by "
-	ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
-	ewarn
-	ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and"
-	ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
-	ewarn "is required to resolve these issues."
-	ewarn
-	ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
-	ewarn "you wish to continue to use your system while migrating to libudev.so.1"
-	else
-	if use legacy-libudev ; then
-	ewarn
-	ewarn "You are installing eudev with USE=legacy-libudev , this should only be used"
-	ewarn "to support binary-only applications or legacy applications while in the"
-	ewarn "process of doing a full systems upgrade, that require libudev.so.0 -- it is"
-	ewarn "HIGHLY RECOMMENDED to leave this flag disabled unless absolutely necessary."
+		ewarn
+		ewarn "This version of eudev does not contain the libudev.so.0 library by "
+		ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
+		ewarn
+		ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and"
+		ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
+		ewarn "is required to resolve these issues."
+		ewarn
+		ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
+		ewarn "you wish to continue to use your system while migrating to libudev.so.1"
+		ewarn
+	elif use legacy-libudev ; then
+		ewarn
+		ewarn "You are installing eudev with USE=legacy-libudev , this should only be used"
+		ewarn "to support binary-only applications or legacy applications while in the"
+		ewarn "process of doing a full systems upgrade, that require libudev.so.0 -- it is"
+		ewarn "HIGHLY RECOMMENDED to leave this flag disabled unless absolutely necessary."
+		ewarn
 	fi
-	fi
-	ewarn
 }
 
 pkg_setup()
@@ -109,10 +112,11 @@ pkg_setup()
 
 	linux-info_pkg_setup
 
-	if ! udev_check_KV
-	then
+	if ! udev_check_KV; then
+		eerror
 		eerror "Your kernel version (${KV_FULL}) is too old to run ${P}"
 		eerror "It must be at least ${KV_min}!"
+		eerror
 	fi
 
 	KV_FULL_SRC=${KV_FULL}
@@ -123,6 +127,7 @@ pkg_setup()
 		eerror "Your running kernel version (${KV_FULL}) is too old"
 		eerror "for this version of udev."
 		eerror "You must upgrade your kernel or downgrade udev."
+		eerror
 	fi
 
 	# for USE=legacy-libudev
