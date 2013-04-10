@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.305 2013/04/09 08:20:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.306 2013/04/10 11:10:45 angelos Exp $
+
+*mpd-0.17.4-r1 (10 Apr 2013)
+
+  10 Apr 2013; Christoph Mende <angelos@gentoo.org>
+  +files/mpd-0.17.4-mikmod-crash.patch, +mpd-0.17.4-r1.ebuild,
+  mpd-0.17.4.ebuild:
+  Fix segfault when trying to parse mod files with mikmod (bug #453928)
 
 *mpd-0.17.4 (09 Apr 2013)
 
