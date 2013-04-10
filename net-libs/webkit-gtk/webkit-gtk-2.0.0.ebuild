@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.0.ebuild,v 1.3 2013/04/07 08:06:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.0.ebuild,v 1.4 2013/04/10 21:58:20 pacho Exp $
 
 EAPI="5"
 
@@ -62,7 +62,7 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	sys-devel/bison
 	>=sys-devel/flex-2.5.33
-	|| ( sys-devel/gcc:4.7 >=sys-devel/clang-3.0 )
+	|| ( >=sys-devel/gcc-4.7 >=sys-devel/clang-3.0 )
 	sys-devel/gettext
 	>=sys-devel/make-3.82-r4
 	virtual/pkgconfig

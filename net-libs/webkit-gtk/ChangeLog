@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.196 2013/04/07 08:06:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.197 2013/04/10 21:58:20 pacho Exp $
+
+  10 Apr 2013; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.0.0.ebuild:
+  use proper gcc dependency version (#465304 by Andrew John Hughes)
 
   07 Apr 2013; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-1.6.3-r200.ebuild,
   -webkit-gtk-1.6.3-r300.ebuild, webkit-gtk-2.0.0.ebuild:
