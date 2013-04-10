@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farsight2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.73 2012/12/14 15:52:35 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.74 2013/04/10 20:22:08 ago Exp $
+
+  10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> farsight2-0.0.31.ebuild:
+  Stable for hppa, wrt bug #458984
 
   14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove redundant USE=upnp description; it matches the global flag meaning.
