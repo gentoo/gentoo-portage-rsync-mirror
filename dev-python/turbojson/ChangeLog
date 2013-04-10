@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/turbojson
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/ChangeLog,v 1.10 2012/02/20 14:20:08 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/ChangeLog,v 1.11 2013/04/10 15:39:34 idella4 Exp $
+
+*turbojson-1.3-r1 (10 Apr 2013)
+
+  10 Apr 2013; Ian Delaney <idella4@gentoo.org> +turbojson-1.3-r1.ebuild:
+  migration to distutils-r1, adding of required deps listed in setup.py
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> turbojson-1.1.4.ebuild,
   turbojson-1.3.2.ebuild, turbojson-1.3.ebuild:
@@ -47,4 +52,3 @@
   -turbojson-0.9.9.ebuild, +turbojson-1.0.ebuild, +metadata.xml:
   Initial ebuild. Version bump. Changed SRC_URI and dependencies.. Fixed tests
   and added ~amd64 keyword and NEED_PYTHON
-
