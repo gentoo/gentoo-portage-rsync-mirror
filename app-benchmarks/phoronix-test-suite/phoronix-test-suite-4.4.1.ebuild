@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-3.2.1.ebuild,v 1.3 2012/03/22 06:17:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-4.4.1.ebuild,v 1.1 2013/04/10 08:56:01 patrick Exp $
 
 EAPI=4
 
-inherit eutils bash-completion
+inherit eutils bash-completion-r1
 
 DESCRIPTION="Phoronix's comprehensive, cross-platform testing and benchmark suite"
 HOMEPAGE="http://www.phoronix-test-suite.com"
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=""
 
 # php 5.3 doesn't have pcre and reflection useflags anymore
-RDEPEND="dev-lang/php:5.3[cli,curl,gd,json,posix,pcntl,truetype,zip]
+RDEPEND="dev-lang/php[cli,curl,gd,json,posix,pcntl,truetype,zip]
 	dev-php/pecl-ps"
 
 S="${WORKDIR}/${PN}"

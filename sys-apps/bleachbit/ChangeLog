@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/bleachbit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bleachbit/ChangeLog,v 1.8 2013/04/01 08:51:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bleachbit/ChangeLog,v 1.10 2013/04/10 08:43:50 pinkbyte Exp $
+
+  10 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -bleachbit-0.9.4.ebuild:
+  Drop old version
+
+  10 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> bleachbit-0.9.5.ebuild:
+  Choose correct Python implementation during package building, wrt bug
+  #465254. Thanks to Chris <blackstar86 AT gmx.net> for discovering this issue
 
   01 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> bleachbit-0.9.4.ebuild,
   bleachbit-0.9.5.ebuild:

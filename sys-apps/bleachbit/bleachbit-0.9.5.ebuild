@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bleachbit/bleachbit-0.9.5.ebuild,v 1.2 2013/04/01 08:51:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bleachbit/bleachbit-0.9.5.ebuild,v 1.3 2013/04/10 08:43:19 pinkbyte Exp $
 
 EAPI=5
 
@@ -29,6 +29,10 @@ src_prepare() {
 
 	# warning: key "Encoding" in group "Desktop Entry" is deprecated
 	sed -i -e '/Encoding/d' ${PN}.desktop || die
+
+	# choose correct Python implementation, bug #465254
+	python_export_best
+	sed -i -e 's/python/$(PYTHON)/g' po/Makefile || die
 
 	distutils-r1_src_prepare
 }
