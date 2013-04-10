@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.6 2012/02/14 19:33:14 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.7 2013/04/10 18:14:42 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,7 @@ RESTRICT="test"
 
 RDEPEND="media-libs/libsdl[audio,joystick,opengl,video]
 	media-libs/sdl-ttf
-	media-libs/libpng
+	media-libs/libpng:0
 	virtual/jpeg
 	media-libs/libvorbis
 	virtual/opengl
@@ -39,7 +39,9 @@ src_prepare() {
 		-e "/^MAPC_TARG/s/mapc/${PN}-mapc/" \
 		Makefile \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-underlink.patch
+	epatch \
+		"${FILESDIR}"/${P}-underlink.patch \
+		"${FILESDIR}"/${P}-libpng.patch
 }
 
 src_compile() {

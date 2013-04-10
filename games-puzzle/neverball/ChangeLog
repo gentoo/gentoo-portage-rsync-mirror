@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/neverball
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.43 2012/02/14 19:33:14 tristan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.44 2013/04/10 18:14:42 mr_bones_ Exp $
+
+  10 Apr 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/neverball-1.5.4-libpng.patch, neverball-1.5.4.ebuild:
+  add patch from Bernard Cafarelli to fix building against libpng-1.6 (bug
+  #465416)
 
   14 Feb 2012; Tristan Heaven <tristan@gentoo.org> neverball-1.5.4.ebuild:
   Respect LINGUAS, bug #402311
@@ -200,4 +205,3 @@
   initial commit of neverball. package was renamed upstream from Super Empty
   Ball which was in portage as seb (which will be removed). (bug 25955) ebuild
   from Brent Kelly via bug report and then modified.
-
