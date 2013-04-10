@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.2.1.ebuild,v 1.1 2013/02/07 06:02:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.2.4.ebuild,v 1.1 2013/04/10 08:19:36 patrick Exp $
 
 EAPI=2
 
-inherit eutils confutils
+inherit eutils confutils user
 
 DESCRIPTION="OTRS is an Open source Ticket Request System"
 HOMEPAGE="http://otrs.org/"
@@ -125,7 +125,7 @@ src_prepare() {
 }
 
 src_install() {
-	dodoc CHANGES CREDITS INSTALL README* UPGRADING \
+	dodoc CHANGES README* \
 	 	doc/X-OTRS-Headers.txt || die
 
 	dodoc doc/manual/en/otrs_admin_book.pdf
