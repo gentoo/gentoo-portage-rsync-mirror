@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.4-r1.ebuild,v 1.1 2013/04/10 11:10:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.4-r2.ebuild,v 1.1 2013/04/10 12:11:44 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -181,6 +181,9 @@ src_install() {
 		sed -i -e 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' \
 			"${ED}"/etc/mpd.conf || die "sed failed"
 	fi
+
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/${PN}.logrotate ${PN}
 
 	use prefix || diropts -m0755 -o mpd -g audio
 	dodir /var/lib/mpd
