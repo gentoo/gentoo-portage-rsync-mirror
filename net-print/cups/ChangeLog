@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.529 2013/04/01 22:51:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.530 2013/04/10 16:39:19 lxnay Exp $
+
+*cups-1.6.2-r2 (10 Apr 2013)
+
+  10 Apr 2013; Fabio Erculiani <lxnay@gentoo.org>
+  +files/cups-1.5.0-systemd-socket-2.patch, -cups-1.6.2-r1.ebuild,
+  +cups-1.6.2-r2.ebuild, cups-9999.ebuild:
+  detect systemd at runtime and try not to fail if it's not found, this makes
+  possible to support systems with both systemd and openrc installed
 
   01 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.6.1.ebuild,
   -cups-1.6.2.ebuild:

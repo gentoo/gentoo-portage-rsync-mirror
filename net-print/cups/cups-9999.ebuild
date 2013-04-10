@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.28 2013/04/01 22:49:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.29 2013/04/10 16:39:19 lxnay Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.cups.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="acl dbus debug +filters gnutls java kerberos pam
-	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
+	python selinux +ssl static-libs +threads usb X xinetd zeroconf"
 
 LANGS="ca es fr ja ru"
 for X in ${LANGS} ; do
@@ -53,7 +53,6 @@ RDEPEND="
 		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
-	systemd? ( sys-apps/systemd )
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
@@ -82,7 +81,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
-	"${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"		# systemd support
+	"${FILESDIR}/${PN}-1.5.0-systemd-socket-2.patch"	# systemd support
 	"${FILESDIR}/${PN}-1.6.2-statedir.patch"
 )
 
@@ -184,7 +183,7 @@ src_configure() {
 		$(use_with python) \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
-		$(use_with systemd systemdsystemunitdir "$(systemd_get_unitdir)") \
+		--with-systemdsystemunitdir="$(systemd_get_unitdir)" \
 		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that

@@ -5978,6 +5978,7 @@ sys-libs/gdbm:exporter - enable gdbmexport binary for exporting data from gdbm-1
 sys-libs/glibc:gd - build memusage and memusagestat tools
 sys-libs/glibc:linuxthreads - Build linuxthreads support (only for kernels older than linux-2.6)
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
+sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
 sys-libs/glibc:systemtap - enable systemtap static probe points
 sys-libs/gwenhywfar:fox - Use x11-libs/fox graphical toolkit
 sys-libs/libosinfo:introspection - Use dev-libs/gobject-introspection for introspection

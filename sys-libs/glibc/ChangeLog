@@ -1,5 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.933 2013/04/05 18:25:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.934 2013/04/10 16:40:27 vapier Exp $
+
+  10 Apr 2013; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/pkg_preinst.eblit, files/eblits/src_install.eblit,
+  glibc-2.16.0.ebuild, glibc-2.17.ebuild, glibc-9999.ebuild, metadata.xml:
+  Add USE=suid to control pt_chown setuid behavior #465308 by Nikoli.
 
   05 Apr 2013; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit:
