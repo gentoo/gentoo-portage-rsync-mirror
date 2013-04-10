@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.7.0.ebuild,v 1.4 2013/03/02 21:52:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.7.0.ebuild,v 1.7 2013/04/10 18:35:15 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ppc x86"
 else
 	KEYWORDS=""
 fi

@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.200 2013/03/17 18:02:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.201 2013/04/10 18:33:19 chainsaw Exp $
+
+*snort-2.9.2.3-r1 (10 Apr 2013)
+
+  10 Apr 2013; Tony Vroon <chainsaw@gentoo.org> +snort-2.9.2.3-r1.ebuild,
+  +files/snort.rc12:
+  Init script fixes by Brian De Wolf to cease using deprecated opts variable,
+  closes bug #447780. /run tmpfs coping measures by Peter Wilmott close bug
+  #452786. Ebuild ported to EAPI 5, using REQUIRED_USE and dropping now
+  unnecessary die statements for ebuild helper functions.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
