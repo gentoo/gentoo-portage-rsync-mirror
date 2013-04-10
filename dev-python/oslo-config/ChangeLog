@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/oslo-config
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.1 2013/04/10 16:04:44 prometheanfire Exp $
+
+*oslo-config-1.1.0 (10 Apr 2013)
+
+  10 Apr 2013; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +oslo-config-1.1.0.ebuild:
+  initial add of oslo.config (as oslo-config) for sys-auth/keystone-2013.1

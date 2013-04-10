@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.7.4.ebuild,v 1.2 2013/01/11 22:29:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.8.0.ebuild,v 1.1 2013/04/10 16:24:16 prometheanfire Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils linux-info
 
 DESCRIPTION="A highly available, distributed, eventually consistent object/blob store"
 HOMEPAGE="https://launchpad.net/swift"
-SRC_URI="http://launchpad.net/${PN}/folsom/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -17,24 +17,25 @@ KEYWORDS="~amd64 ~x86"
 IUSE="proxy account container object test +memcache"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( dev-python/nose
-				dev-python/coverage
+		test? ( dev-python/nose[${PYTHON_USEDEP}]
+				dev-python/coverage[${PYTHON_USEDEP}]
 				dev-python/nosexcover
-				dev-python/pep8
-				dev-python/mock
-				>=dev-python/sphinx-1.1.2 )"
+				dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
+				dev-python/nosehtmloutput[${PYTHON_USEDEP}]
+				=dev-python/pep8-1.3.3
+				>=dev-python/mock-0.8.0[${PYTHON_USEDEP}]
+				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}] )"
 
-RDEPEND="dev-python/eventlet
-		dev-python/greenlet
+RDEPEND="dev-python/eventlet[${PYTHON_USEDEP}]
+		dev-python/greenlet[${PYTHON_USEDEP}]
 		dev-python/netifaces
-		dev-python/pastedeploy
+		dev-python/pastedeploy[${PYTHON_USEDEP}]
 		dev-python/simplejson[${PYTHON_USEDEP}]
-		dev-python/pyxattr
-		dev-python/configobj
-		dev-python/webob
-		>=dev-python/webob-1.0.8
-		<dev-python/webob-1.3
-		>=dev-python/python-swiftclient-1.2.0
+		dev-python/pyxattr[${PYTHON_USEDEP}]
+		dev-python/configobj[${PYTHON_USEDEP}]
+		>=dev-python/webob-1.0.8[${PYTHON_USEDEP}]
+		<dev-python/webob-1.3[${PYTHON_USEDEP}]
+		dev-python/python-swiftclient[${PYTHON_USEDEP}]
 		memcache? ( net-misc/memcached )
 		net-misc/rsync"
 
@@ -83,7 +84,7 @@ python_install() {
 		newins "etc/container-server.conf-sample" "container-server.conf"
 	fi
 	if use object; then
-		newinitd "${FILESDIR}/swift-object.initd" "swift-obect"
+		newinitd "${FILESDIR}/swift-object.initd" "swift-object"
 		newins "etc/object-server.conf-sample" "object-server.conf"
 		newins "etc/object-expirer.conf-sample" "object-expirer.conf"
 	fi
