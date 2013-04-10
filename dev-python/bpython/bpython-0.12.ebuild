@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.12.ebuild,v 1.1 2012/12/14 06:58:42 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.12.ebuild,v 1.2 2013/04/10 17:18:00 floppym Exp $
 
 EAPI="3"
-PYTHON_DEPEND="*:2.5"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 *-jython"
+RESTRICT_PYTHON_ABIS="2.[45] *-jython"
 PYTHON_USE_WITH="ncurses"
 
 inherit distutils eutils

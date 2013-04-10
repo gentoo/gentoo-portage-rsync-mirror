@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.39 2013/04/06 20:43:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.40 2013/04/10 17:08:47 jer Exp $
+
+  10 Apr 2013; Jeroen Roovers <jer@gentoo.org> podofo-0.9.2.ebuild:
+  Stable for HPPA (bug #464416).
 
   06 Apr 2013; Zac Medico <zmedico@gentoo.org> podofo-0.9.2.ebuild:
   Add idn USE flag for bug #464884.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.2_rc1-r1.ebuild,v 1.1 2013/03/27 20:28:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.2_rc2.ebuild,v 1.1 2013/04/10 17:20:00 jer Exp $
 
 EAPI=5
 inherit autotools eutils

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.36 2012/12/14 06:58:42 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.37 2013/04/10 17:18:00 floppym Exp $
+
+  10 Apr 2013; Mike Gilbert <floppym@gentoo.org> bpython-0.12.ebuild:
+  Restrict python2.5 due to syntax error in autocomplete.py.
 
 *bpython-0.12 (14 Dec 2012)
 
@@ -161,4 +164,3 @@
   02 Jun 2009; Andrey Grozin <grozin@gentoo.org> +bpython-0.9.1.ebuild,
   +metadata.xml:
   Initial import
-
