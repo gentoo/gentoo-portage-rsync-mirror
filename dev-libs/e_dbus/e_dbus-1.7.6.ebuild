@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.4.ebuild,v 1.1 2012/12/21 20:22:28 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.6.ebuild,v 1.1 2013/04/10 19:53:50 tommy Exp $
 
 EAPI="2"
 
@@ -13,14 +13,19 @@ LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="bluetooth +connman +libnotify ofono static-libs test-binaries +udev"
 
-RDEPEND=">=dev-libs/eina-1.7.0
-	>=dev-libs/ecore-1.7.0
+RDEPEND=">=dev-libs/eina-1.7.6
+	>=dev-libs/ecore-1.7.6
 	sys-apps/dbus
 	connman? ( >=net-misc/connman-0.75 )
-	libnotify? ( >=media-libs/evas-1.7.0 )
+	libnotify? ( >=media-libs/evas-1.7.6 )
 	udev? ( sys-power/upower sys-fs/udisks:0 )
 "
 DEPEND="${RDEPEND}"
+
+#src_prepare() {
+#	sed -i "s:1.7.5:1.7.4:g" configure.ac
+#	eautoreconf
+#}
 
 src_configure() {
 	MY_ECONF="

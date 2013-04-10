@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.15.3.ebuild,v 1.3 2013/04/09 17:31:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.15.3.ebuild,v 1.4 2013/04/10 19:44:03 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils multilib multiprocessing pax-utils python-any-r1 toolchain-funcs versionator
+inherit chromium eutils multilib multiprocessing pax-utils python-any-r1 \
+	toolchain-funcs versionator
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -25,65 +26,61 @@ src_configure() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
 
-	local hardfp=off
+	local myconf=""
+
+	# Always build v8 as a shared library with proper SONAME.
+	myconf+=" -Dcomponent=shared_library -Dsoname_version=${soname_version}"
 
 	# Use target arch detection logic from bug #354601.
 	case ${CHOST} in
-		i?86-*) myarch=ia32 ;;
+		i?86-*) myconf+=" -Dv8_target_arch=ia32" ;;
 		x86_64-*)
 			if [[ $ABI = x86 ]] ; then
-				myarch=ia32
+				myconf+=" -Dv8_target_arch=ia32"
 			else
-				myarch=x64
+				myconf+=" -Dv8_target_arch=x64"
 			fi ;;
 		arm*-hardfloat-*)
-			hardfp=on
-			myarch=arm ;;
-		arm*-*) myarch=arm ;;
+			myconf+=" -Dv8_target_arch=arm -Dv8_use_arm_eabi_hardfloat=true" ;;
+		arm*-*) myconf+=" -Dv8_target_arch=arm" ;;
 		*) die "Unrecognized CHOST: ${CHOST}"
 	esac
-	mytarget=${myarch}.release
 
-	if use readline; then
-		console=readline
-	else
-		console=dumb
-	fi
+	myconf+=" $(gyp_use readline console readline dumb)"
 
-	# Generate the real Makefile.
-	emake V=1 \
-		library=shared \
-		werror=no \
-		soname_version=${soname_version} \
-		snapshot=on \
-		hardfp=${hardfp} \
-		console=${console} \
-		out/Makefile.${myarch}
+	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
+	# Depending on GCC version the warnings are different and we don't
+	# want the build to fail because of that.
+	myconf+=" -Dwerror="
+
+	EGYP_CHROMIUM_COMMAND=build/gyp_v8 egyp_chromium ${myconf} || die
 }
 
 src_compile() {
 	local makeargs=(
 		-C out
-		-f Makefile.${myarch}
+		builddir="${S}/out/Release"
 		V=1
 		BUILDTYPE=Release
-		builddir="${S}/out/${mytarget}"
 	)
 
 	# Build mksnapshot so we can pax-mark it.
 	emake "${makeargs[@]}" mksnapshot
-	pax-mark m out/${mytarget}/mksnapshot
+	pax-mark m out/Release/mksnapshot
 
 	# Build everything else.
 	emake "${makeargs[@]}"
-	pax-mark m out/${mytarget}/{cctest,d8}
+	pax-mark m out/Release/{cctest,d8}
 }
 
 src_test() {
-	tools/test-wrapper-gypbuild.py \
+	LD_LIBRARY_PATH=out/Release/lib.target tools/run-tests.py \
 		-j$(makeopts_jobs) \
-		--arch-and-mode=${mytarget} \
 		--no-presubmit \
+		--outdir=out \
+		--buildbot \
+		--arch=native \
+		--mode=Release \
 		--progress=dots || die
 }
 
@@ -93,25 +90,40 @@ src_install() {
 
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		# buildsystem is too horrific to get this built correctly
-		mkdir -p out/${mytarget}/lib.target || die
-		mv out/${mytarget}/libv8.so.${soname_version} \
-			out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) || die
+		mkdir -p out/Release/lib.target || die
+		mv out/Release/libv8.so.${soname_version} \
+			out/Release/lib.target/libv8$(get_libname ${soname_version}) || die
 		install_name_tool \
 			-id "${EPREFIX}"/usr/$(get_libdir)/libv8$(get_libname) \
-			out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) \
+			out/Release/lib.target/libv8$(get_libname ${soname_version}) \
 			|| die
 		install_name_tool \
 			-change \
 			/usr/local/lib/libv8.so.${soname_version} \
 			"${EPREFIX}"/usr/$(get_libdir)/libv8$(get_libname) \
-			out/${mytarget}/d8 || die
+			out/Release/d8 || die
 	fi
 
-	dobin out/${mytarget}/d8
+	dobin out/Release/d8
 	pax-mark m "${ED}usr/bin/d8"
 
-	dolib out/${mytarget}/lib.target/libv8$(get_libname ${soname_version})
+	dolib out/Release/lib.target/libv8$(get_libname ${soname_version})
 	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname)
 
 	dodoc AUTHORS ChangeLog || die
+}
+
+# TODO: remove functions below after they are removed from chromium.eclass'
+# EXPORT_FUNCTIONS .
+
+pkg_preinst() {
+	return
+}
+
+pkg_postinst() {
+	return
+}
+
+pkg_postrm() {
+	return
 }

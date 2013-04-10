@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.15.ebuild,v 1.6 2013/03/14 07:14:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.15.ebuild,v 1.7 2013/04/10 19:33:28 maksbotan Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -76,6 +76,9 @@ src_prepare() {
 
 	# bug  #408025
 	epatch "${FILESDIR}/${PN}-3.4.11-convert-path.patch"
+
+	#bug #465288
+	sed -e '/NoDisplay/d' -i awesome.desktop || die
 }
 
 src_configure() {

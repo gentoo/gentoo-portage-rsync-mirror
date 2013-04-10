@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/e_dbus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/ChangeLog,v 1.12 2013/01/04 18:35:47 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/ChangeLog,v 1.13 2013/04/10 19:53:50 tommy Exp $
+
+*e_dbus-1.7.6 (10 Apr 2013)
+
+  10 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +e_dbus-1.7.6.ebuild,
+  -e_dbus-1.7.4.ebuild:
+  Version bump, drop old
 
 *e_dbus-1.7.5 (04 Jan 2013)
 
