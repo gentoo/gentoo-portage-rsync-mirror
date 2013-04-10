@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/kuroo4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo4/ChangeLog,v 1.8 2013/03/17 16:02:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo4/ChangeLog,v 1.9 2013/04/10 21:22:15 ago Exp $
+
+*kuroo4-0.90.4 (10 Apr 2013)
+
+  10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> +kuroo4-0.90.4.ebuild:
+  version bump, wrt to bug #465168
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
