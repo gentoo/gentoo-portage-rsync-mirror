@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/multi_xml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/ChangeLog,v 1.14 2013/01/16 07:25:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/ChangeLog,v 1.16 2013/04/10 05:35:26 graaff Exp $
+
+  10 Apr 2013; Hans de Graaff <graaff@gentoo.org> multi_xml-0.5.3.ebuild:
+  Actually remove the now-unneeded prepare phase.
+
+*multi_xml-0.5.3 (10 Apr 2013)
+
+  10 Apr 2013; Hans de Graaff <graaff@gentoo.org> +multi_xml-0.5.3.ebuild:
+  Version bump.
 
   16 Jan 2013; Hans de Graaff <graaff@gentoo.org> -multi_xml-0.5.1.ebuild:
   Cleanup.
