@@ -1,11 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7711 2013/04/09 18:46:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7712 2013/04/09 23:02:49 zorry Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
+  11 Apr 2013; Magnus Granberg <zorry@gentoo.org>
+  hardened/linux/amd64/package.mask, hardened/linux/x86/package.mask:
+  Mask media-video/nvidia-settings
+  
   09 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add LambdaMOO license to MISC-FREE group, bug 465280.
 
