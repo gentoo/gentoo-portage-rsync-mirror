@@ -1,13 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.4.ebuild,v 1.2 2013/04/10 23:37:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.4.ebuild,v 1.3 2013/04/11 10:26:26 ssuominen Exp $
 
 EAPI=5
 inherit multilib xfconf
 
 DESCRIPTION="A time managing application (and panel plug-in) for the Xfce desktop environment"
 HOMEPAGE="http://www.xfce.org/projects/"
-SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2
+	http://dev.gentoo.org/~ssuominen/${P}-nn.po.xz
+	http://dev.gentoo.org/~ssuominen/${P}-sr.po.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,6 +43,15 @@ pkg_setup() {
 
 	# PM doesn't let directory to be replaced by a symlink, see src_install()
 	rm -rf "${EROOT}"/usr/share/${PN}/doc
+}
+
+src_prepare() {
+	# http://bugzilla.xfce.org/show_bug.cgi?id=9990
+	local lang
+	for lang in nn sr; do
+		mv "${WORKDIR}"/${P}-${lang}.po po/${lang}.po || die
+	done
+	xfconf_src_prepare
 }
 
 src_install() {
