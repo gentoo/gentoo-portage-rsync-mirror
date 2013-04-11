@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.69 2013/01/17 03:20:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.70 2013/04/11 12:18:26 ssuominen Exp $
+
+  11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -libraw1394-2.0.4.ebuild,
+  -libraw1394-2.0.5.ebuild, -libraw1394-2.0.7.ebuild:
+  old
 
 *libraw1394-2.1.0 (17 Jan 2013)
 
