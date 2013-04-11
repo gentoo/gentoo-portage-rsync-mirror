@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.392 2013/03/31 18:50:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.393 2013/04/11 19:14:57 pacho Exp $
+
+  11 Apr 2013; Pacho Ramos <pacho@gentoo.org> evolution-3.6.3.ebuild,
+  evolution-3.6.4.ebuild, evolution-3.8.0.ebuild:
+  3.6.2-r1 was keyworded on arm, but later versions dropped it again by error
+  leading to repoman failure with gnome-base/gnome-extra-apps
 
   31 Mar 2013; Pacho Ramos <pacho@gentoo.org> evolution-3.8.0.ebuild:
   Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702)

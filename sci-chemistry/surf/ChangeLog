@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/surf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/surf/ChangeLog,v 1.6 2012/05/08 03:55:30 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/surf/ChangeLog,v 1.7 2013/04/11 18:33:54 ulm Exp $
+
+  11 Apr 2013; Ulrich Müller <ulm@gentoo.org> surf-1.0.ebuild:
+  Fix LICENSE, see README file.
 
   08 May 2012; Christoph Junghans <ottxor@gentoo.org> surf-1.0.ebuild:
   added ~x86-macos keyword

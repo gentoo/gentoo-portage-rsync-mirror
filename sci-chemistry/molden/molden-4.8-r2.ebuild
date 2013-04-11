@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8-r2.ebuild,v 1.7 2013/02/04 08:07:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8-r2.ebuild,v 1.8 2013/04/11 18:51:34 ulm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and M
 HOMEPAGE="http://www.cmbi.kun.nl/~schaft/molden/molden.html"
 SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MOLDEN"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="opengl"
