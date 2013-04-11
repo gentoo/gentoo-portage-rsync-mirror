@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14649 2013/04/11 13:17:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14650 2013/04/11 16:34:48 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -247,7 +247,6 @@ net-proxy/swiftiply
 >=sys-apps/baobab-3.8
 >=sys-apps/gnome-disk-utility-3.8
 >=www-client/epiphany-3.8
->=x11-libs/gdk-pixbuf-2.28
 >=x11-libs/gnome-pty-helper-0.34.3
 >=x11-libs/gtk+-3.8
 >=x11-libs/gtksourceview-3.8

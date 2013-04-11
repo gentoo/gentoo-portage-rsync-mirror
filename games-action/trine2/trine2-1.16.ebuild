@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.3 2013/03/22 21:29:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.4 2013/04/11 16:47:01 hasufell Exp $
 
 EAPI=5
 inherit eutils unpacker gnome2-utils games
@@ -41,7 +41,7 @@ RDEPEND="
 		virtual/opengl
 		launcher? (
 			media-libs/fontconfig
-			media-libs/libpng:0
+			media-libs/libpng:1.5
 			x11-libs/gtk+:2
 			x11-libs/libSM
 			x11-libs/libX11
