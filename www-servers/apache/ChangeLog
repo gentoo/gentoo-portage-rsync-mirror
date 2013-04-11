@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.227 2013/03/25 06:31:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.228 2013/04/11 09:24:14 polynomial-c Exp $
+
+  11 Apr 2013; Lars Wendler <polynomial-c@gentoo.org> apache-2.2.24.ebuild,
+  apache-2.4.4-r3.ebuild:
+  echangelog Non-maintainer commit: Pin automake to 1.11 slot (bug #465392).
+  Permission kindly granted by patrick. Fixed whitespace and quoting errors
+  mentioned by repoman.
 
 *apache-2.4.4-r3 (25 Mar 2013)
 

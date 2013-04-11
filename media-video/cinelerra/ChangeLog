@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.60 2012/10/17 03:25:31 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.61 2013/04/11 09:10:43 ssuominen Exp $
+
+  11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  cinelerra-20120707.ebuild, +files/cinelerra-std_and_str_h.patch:
+  Include bunch of missing headers semi-related to libpng16 upgrade wrt #465478
+  by Martin von Gagern
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   cinelerra-20120707.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.103 2013/04/01 17:54:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.104 2013/04/11 09:24:54 ssuominen Exp $
+
+  11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  libreoffice-bin-3.6.4.3.ebuild:
+  Fix libpng dependency to pull in libpng15.so.15 wrt #465484 by Martin von
+  Gagern
 
   01 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-bin-3.6.4.3.ebuild:

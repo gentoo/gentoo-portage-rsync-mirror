@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.4-r3.ebuild,v 1.1 2013/03/25 06:31:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.4-r3.ebuild,v 1.2 2013/04/11 09:24:14 polynomial-c Exp $
 
 EAPI="2"
 
@@ -38,8 +38,8 @@ charset_lite cgi cgid dav dav_fs dav_lock dbd deflate dir dumpio
 env expires ext_filter file_cache filter headers ident imagemap include info
 lbmethod_byrequests lbmethod_bytraffic lbmethod_bybusyness lbmethod_heartbeat
 log_config log_forensic logio mime mime_magic negotiation proxy
-proxy_ajp proxy_balancer proxy_connect proxy_ftp proxy_http proxy_scgi proxy_fcgi 
-rewrite ratelimit remoteip reqtimeout setenvif slotmem_shm speling socache_shmcb status substitute 
+proxy_ajp proxy_balancer proxy_connect proxy_ftp proxy_http proxy_scgi proxy_fcgi
+rewrite ratelimit remoteip reqtimeout setenvif slotmem_shm speling socache_shmcb status substitute
 unique_id userdir usertrack unixd version vhost_alias"
 # The following are also in the source as of this version, but are not available
 # for user selection:
