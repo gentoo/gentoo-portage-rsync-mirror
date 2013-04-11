@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.145 2013/03/28 17:00:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.147 2013/04/11 21:43:52 ago Exp $
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for amd64, wrt bug #463660
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for x86, wrt bug #463660
 
 *devhelp-3.8.0 (28 Mar 2013)
 
