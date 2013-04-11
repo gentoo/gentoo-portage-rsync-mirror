@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.8-r1.ebuild,v 1.1 2013/03/18 19:45:29 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.8-r1.ebuild,v 1.2 2013/04/11 17:52:00 swift Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -16,7 +16,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20120924/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/libselinux-2.0[python]

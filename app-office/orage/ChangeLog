@@ -1,6 +1,9 @@
 # ChangeLog for app-office/orage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.68 2013/04/11 10:26:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.69 2013/04/11 17:58:03 ago Exp $
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> orage-4.8.4.ebuild:
+  Stable for amd64, wrt bug #465286
 
   11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> orage-4.8.4.ebuild:
   Import 2 missing translation files from git. Thanks to Agostino Sarubbo for
@@ -375,4 +378,3 @@
   20 Apr 2006; Daniel Ostrow <dostrow@gentoo.org> +metadata.xml,
   +orage-4.3.90.1.ebuild:
   Version bump for 4.4_beta1.
-

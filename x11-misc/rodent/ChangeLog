@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rodent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.13 2013/03/24 11:18:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.14 2013/04/11 17:58:24 ago Exp $
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rodent-4.9.2.ebuild:
+  Stable for amd64, wrt bug #465286
 
 *rodent-4.9.2 (24 Mar 2013)
 

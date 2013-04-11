@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.155 2013/04/09 15:34:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.156 2013/04/11 17:54:53 ago Exp $
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> thunar-1.6.2.ebuild:
+  Stable for amd64, wrt bug #465286
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -thunar-1.6.1.ebuild:
   old
@@ -585,4 +588,3 @@
   20 Apr 2006; Daniel Ostrow <dostrow@gentoo.org> +metadata.xml,
   +thunar-0.3.0_beta1.ebuild:
   Version bump for 4.4_beta1.
-

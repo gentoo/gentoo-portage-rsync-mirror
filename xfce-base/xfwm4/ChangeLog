@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.205 2013/04/10 23:43:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.206 2013/04/11 17:55:19 ago Exp $
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xfwm4-4.10.0-r1.ebuild:
+  Stable for amd64, wrt bug #465286
 
   10 Apr 2013; Jeroen Roovers <jer@gentoo.org> xfwm4-4.10.0-r1.ebuild:
   Stable for HPPA (bug #465286).
@@ -723,4 +726,3 @@
 
   13 Jun 2003; Brad Cowan <bcowan@gentoo.org> xfwm4-3.90.0.ebuild:
   Initial import.
-

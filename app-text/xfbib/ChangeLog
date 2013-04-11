@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xfbib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/ChangeLog,v 1.5 2012/11/30 23:43:45 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/ChangeLog,v 1.6 2013/04/11 17:57:52 ago Exp $
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xfbib-0.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #465286
 
 *xfbib-0.0.2-r1 (30 Nov 2012)
 
@@ -22,4 +25,3 @@
 
   24 Sep 2008; Christoph Mende <angelos@gentoo.org> +xfbib-0.0.2.ebuild:
   Initial import, bug 233377
-

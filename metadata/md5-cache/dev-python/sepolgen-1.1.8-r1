@@ -3,10 +3,10 @@ DEPEND=>=sys-libs/libselinux-2.0[python] app-admin/setools[python] dev-lang/pyth
 DESCRIPTION=SELinux policy generation library
 EAPI=3
 HOMEPAGE=http://userspace.selinuxproject.org
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=sys-libs/libselinux-2.0[python] app-admin/setools[python] dev-lang/python
 SLOT=0
 SRC_URI=http://userspace.selinuxproject.org/releases/20120924/sepolgen-1.1.8.tar.gz http://dev.gentoo.org/~swift/patches/sepolgen/patchbundle-sepolgen-1.1.8-r1.tar.gz
 _eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6ed08261180670528b96d9b91e160d93
+_md5_=0b377c6ce39f17bc87a51916a6157538

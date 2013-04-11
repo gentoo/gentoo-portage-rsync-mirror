@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/xfbib-0.0.2-r1.ebuild,v 1.1 2012/11/30 23:43:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/xfbib-0.0.2-r1.ebuild,v 1.2 2013/04/11 17:57:52 ago Exp $
 
 EAPI=5
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12

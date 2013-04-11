@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.8.0.ebuild,v 1.3 2013/04/06 06:39:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.8.0.ebuild,v 1.4 2013/04/11 17:35:21 vincent Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://hci.iwr.uni-heidelberg.de/vigra/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc +fftw +hdf5 +jpeg openexr +png +python test +tiff"
 
 RDEPEND="
