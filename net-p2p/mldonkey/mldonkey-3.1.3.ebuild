@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.1.3.ebuild,v 1.1 2013/01/31 08:47:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.1.3.ebuild,v 1.2 2013/04/11 08:49:32 ssuominen Exp $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
@@ -78,7 +78,7 @@ src_configure() {
 
 	local my_extra_libs
 	if use gd; then
-		my_extra_libs="-lpng15"
+		my_extra_libs="-lpng"
 	fi
 
 	econf LIBS="${my_extra_libs}"\
