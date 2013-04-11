@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.10.2.ebuild,v 1.1 2013/04/06 00:03:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.10.2.ebuild,v 1.2 2013/04/11 05:01:19 creffett Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="KDE internationalization package"
 DEPEND="
 	sys-devel/gettext
 "
-RDEPEND="!<kde-misc/konq-plugins-4.6"
+RDEPEND="!<kde-base/konq-plugins-4.6"
 
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="+handbook"

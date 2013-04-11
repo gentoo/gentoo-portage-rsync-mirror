@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.330 2013/04/09 22:05:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.332 2013/04/11 05:20:33 polynomial-c Exp $
+
+  11 Apr 2013; Lars Wendler <polynomial-c@gentoo.org> cairo-1.12.14.ebuild:
+  Fixed patch command.
+
+*cairo-1.12.14 (11 Apr 2013)
+
+  11 Apr 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +files/cairo-libpng16.patch, +cairo-1.12.14.ebuild:
+  Non-maintainer commit: Version bump (bug #456818). Added libpng16 patch (bug
+  #465044). Committed with kind permission from yngwin.
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> cairo-1.12.10-r2.ebuild,
   cairo-1.12.12.ebuild, cairo-1.12.12-r1.ebuild, cairo-9999.ebuild:
