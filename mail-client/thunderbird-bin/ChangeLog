@@ -1,6 +1,18 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.112 2013/04/11 03:02:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.116 2013/04/11 14:00:58 zerochaos Exp $
+
+  11 Apr 2013; Rick Farina <zerochaos@gentoo.org> thunderbird-bin-17.0.5.ebuild:
+  adding new rdep as identified in bug #455832
+
+  11 Apr 2013; Rick Farina <zerochaos@gentoo.org> thunderbird-bin-17.0.5.ebuild:
+  fix minor whitespace damage, fix bug #431382
+
+  11 Apr 2013; Rick Farina <zerochaos@gentoo.org> thunderbird-bin-17.0.5.ebuild:
+  slightly better style for fix, and minor rename
+
+  11 Apr 2013; Rick Farina <zerochaos@gentoo.org> thunderbird-bin-17.0.5.ebuild:
+  fix bug 465494 and ship all icons properly
 
   11 Apr 2013; Rick Farina <zerochaos@gentoo.org> thunderbird-bin-17.0.5.ebuild:
   add missing rdepends per bug #457036
