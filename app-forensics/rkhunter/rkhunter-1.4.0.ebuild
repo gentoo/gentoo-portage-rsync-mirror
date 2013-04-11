@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.4.0.ebuild,v 1.4 2012/11/21 11:01:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.4.0.ebuild,v 1.6 2013/04/11 06:20:32 patrick Exp $
 
 EAPI=4
 
@@ -18,8 +18,9 @@ IUSE=""
 RDEPEND="
 	app-shells/bash
 	dev-lang/perl
-	sys-process/lsof
+	sys-process/lsof[rpc]
 	virtual/cron
+	virtual/mailx
 "
 
 S="${WORKDIR}/${P}/files"

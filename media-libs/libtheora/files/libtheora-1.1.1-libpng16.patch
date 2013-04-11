@@ -1,4 +1,5 @@
 http://bugs.gentoo.org/465450
+http://trac.xiph.org/ticket/1947
 
 --- examples/png2theora.c
 +++ examples/png2theora.c
