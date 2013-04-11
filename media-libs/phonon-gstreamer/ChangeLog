@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.43 2013/04/10 19:35:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.44 2013/04/11 11:13:10 kensington Exp $
+
+  11 Apr 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/phonon-gstreamer-4.6.2-desktop.patch,
+  -phonon-gstreamer-4.6.2-r1.ebuild:
+  Remove old.
 
   10 Apr 2013; Jeroen Roovers <jer@gentoo.org> phonon-gstreamer-4.6.3.ebuild:
   Stable for HPPA (bug #464700).

@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.530 2013/04/10 16:39:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.531 2013/04/11 11:05:05 lxnay Exp $
+
+*cups-1.6.2-r3 (11 Apr 2013)
+
+  11 Apr 2013; Fabio Erculiani <lxnay@gentoo.org>
+  files/cups-1.5.0-systemd-socket-2.patch, -cups-1.6.2-r2.ebuild,
+  +cups-1.6.2-r3.ebuild:
+  fix systemd units path variable setup, see bug #465474
 
 *cups-1.6.2-r2 (10 Apr 2013)
 

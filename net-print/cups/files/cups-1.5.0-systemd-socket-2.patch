@@ -20,7 +20,7 @@ diff -up cups-1.5.0/config-scripts/cups-systemd.m4.systemd-socket cups-1.5.0/con
 +++ cups-1.5.0/config-scripts/cups-systemd.m4	2011-10-18 15:33:16.861989058 +0100
 @@ -0,0 +1,36 @@
 +dnl
-+dnl "$Id: cups-1.5.0-systemd-socket-2.patch,v 1.1 2013/04/10 16:39:19 lxnay Exp $"
++dnl "$Id: cups-1.5.0-systemd-socket-2.patch,v 1.2 2013/04/11 11:05:05 lxnay Exp $"
 +dnl
 +dnl   systemd stuff for CUPS.
 +
@@ -32,11 +32,11 @@ diff -up cups-1.5.0/config-scripts/cups-systemd.m4.systemd-socket cups-1.5.0/con
 +        [], [with_systemdsystemunitdir=$($PKGCONFIG --variable=systemdsystemunitdir systemd)])
 +if test "x$with_systemdsystemunitdir" != xno; then
 +        AC_MSG_CHECKING(for libsystemd-daemon)
++	AC_SUBST([systemdsystemunitdir], [$with_systemdsystemunitdir])
 +        if $PKGCONFIG --exists libsystemd-daemon; then
 +		AC_MSG_RESULT(yes)
 +        	SDCFLAGS=`$PKGCONFIG --cflags libsystemd-daemon`
 +        	SDLIBS=`$PKGCONFIG --libs libsystemd-daemon`
-+		AC_SUBST([systemdsystemunitdir], [$with_systemdsystemunitdir])
 +		AC_DEFINE(HAVE_SYSTEMD)
 +	else
 +		AC_MSG_RESULT(no)
@@ -53,7 +53,7 @@ diff -up cups-1.5.0/config-scripts/cups-systemd.m4.systemd-socket cups-1.5.0/con
 +AC_SUBST(SDLIBS)
 +
 +dnl
-+dnl "$Id: cups-1.5.0-systemd-socket-2.patch,v 1.1 2013/04/10 16:39:19 lxnay Exp $"
++dnl "$Id: cups-1.5.0-systemd-socket-2.patch,v 1.2 2013/04/11 11:05:05 lxnay Exp $"
 +dnl
 diff -up cups-1.5.0/configure.in.systemd-socket cups-1.5.0/configure.in
 --- cups-1.5.0/configure.in.systemd-socket	2010-11-20 01:03:46.000000000 +0000
