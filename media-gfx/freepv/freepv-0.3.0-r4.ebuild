@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r4.ebuild,v 1.1 2013/04/10 09:40:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r4.ebuild,v 1.2 2013/04/11 13:06:43 voyageur Exp $
 
 EAPI=5
 inherit cmake-utils eutils
@@ -28,7 +28,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch \
 		"${FILESDIR}"/${P}-gcc46.patch \
 		"${FILESDIR}"/${P}-noplugin.patch \
-		"${FILESDIR}"/${P}-libpng14.patch
+		"${FILESDIR}"/${P}-libpng14.patch \
+		"${FILESDIR}"/${P}-stringh.patch
 
 	sed -i \
 		-e 's:jpeg_mem_src:freepv_jpeg_mem_src:g' \

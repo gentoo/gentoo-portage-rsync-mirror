@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.63 2013/03/26 18:16:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.64 2013/04/11 13:15:07 xmw Exp $
+
+  11 Apr 2013; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  Upstream included desktop-integration.patch (bug 444924)
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> mupdf-1.1_p20121127.ebuild:
   Stable for ppc, wrt bug #463196

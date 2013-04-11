@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freepv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.15 2013/04/10 09:40:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.16 2013/04/11 13:06:43 voyageur Exp $
+
+  11 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org> freepv-0.3.0-r4.ebuild,
+  +files/freepv-0.3.0-stringh.patch:
+  Add missing string.h include revealed by libpng-1.6 bump, thanks Helmut
+  Jarausch <jarausch@igpm.rwth-aachen.de> in bug #465476
 
 *freepv-0.3.0-r4 (10 Apr 2013)
 
