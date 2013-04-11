@@ -1,6 +1,18 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.109 2013/04/09 16:06:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.111 2013/04/11 02:29:29 jdhore Exp $
+
+  11 Apr 2013; Jeff Horelick <jdhore@gentoo.org>
+  -files/icon/thunderbird-bin-icon.png, thunderbird-bin-17.0.5.ebuild:
+  Remove binary icon, use icon from tarball instead. closes bug #370873
+
+  11 Apr 2013; Jeff Horelick <jdhore@gentoo.org>
+  -thunderbird-bin-10.0.10.ebuild, -thunderbird-bin-10.0.11.ebuild,
+  -thunderbird-bin-10.0.12.ebuild, -thunderbird-bin-15.0.1.ebuild,
+  -thunderbird-bin-16.0.2.ebuild, -thunderbird-bin-17.0.2.ebuild,
+  -thunderbird-bin-17.0.3.ebuild, -thunderbird-bin-17.0.4.ebuild,
+  -thunderbird-bin-17.0.ebuild:
+  Remove old
 
   09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-17.0.5.ebuild:
   Stable for x86, wrt bug #464226
