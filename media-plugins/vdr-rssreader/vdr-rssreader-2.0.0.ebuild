@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-1.7.3.ebuild,v 1.1 2013/03/31 16:11:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-2.0.0.ebuild,v 1.1 2013/04/11 17:15:56 hd_brummy Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.7.37
+DEPEND=">=media-video/vdr-2.0.0
 		>=dev-libs/expat-1.95.8
 		>=net-misc/curl-7.15.1-r1"
 

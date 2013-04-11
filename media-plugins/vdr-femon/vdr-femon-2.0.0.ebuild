@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/vdr-femon-1.7.19.ebuild,v 1.1 2013/03/31 12:06:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/vdr-femon-2.0.0.ebuild,v 1.1 2013/04/11 17:08:51 hd_brummy Exp $
 
 EAPI="5"
 
@@ -15,5 +15,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.7.37"
+DEPEND=">=media-video/vdr-2.0.0"
 RDEPEND="${DEPEND}"
