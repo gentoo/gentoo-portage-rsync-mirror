@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.183.68.ebuild,v 1.1 2013/03/14 15:37:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.183.75.ebuild,v 1.2 2013/04/11 14:46:51 jer Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -78,7 +78,7 @@ src_install() {
 		insinto /$(dirname $icon)
 		doins $icon
 	done
-	elog "Done with icons."
+
 	insinto usr/share/applications
 	sed -i usr/share/applications/flash-player-properties.desktop \
 		-e "s:^Exec=:Exec=/${BASE}/bin/:" || die "sed of .desktop file failed"
