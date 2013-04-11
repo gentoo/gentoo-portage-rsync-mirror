@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.703 2013/04/11 10:28:46 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.704 2013/04/11 10:31:21 olemarkus Exp $
+
+  11 Apr 2013; Ole Markus With <olemarkus@gentoo.org> -php-5.3.23-r1.ebuild,
+  -php-5.3.23-r2.ebuild, -php-5.4.13-r2.ebuild, -php-5.4.13-r3.ebuild:
+  Removing older unstable versions
 
 *php-5.4.14 (11 Apr 2013)
 *php-5.3.24 (11 Apr 2013)
