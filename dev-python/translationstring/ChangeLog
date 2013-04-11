@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/translationstring
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.8 2012/02/22 23:12:14 marienz Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.9 2013/04/11 05:43:02 idella4 Exp $
+
+*translationstring-1.1-r1 (11 Apr 2013)
+
+  11 Apr 2013; Ian Delaney <idella4@gentoo.org>
+  +translationstring-1.1-r1.ebuild:
+  revbump, migration -> distutils-r1
 
   22 Feb 2012; Marien Zwart <marienz@gentoo.org> translationstring-1.1.ebuild:
   Fix unnecessarily strict PYTHON_DEPEND.
@@ -40,4 +46,3 @@
   30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
   +translationstring-0.3.ebuild, +metadata.xml:
   Initial version. Based on ebuild by Jan Matějka (bug #353769).
-
