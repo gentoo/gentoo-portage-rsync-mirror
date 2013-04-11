@@ -6,7 +6,7 @@
  INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/weechat.pc DESTINATION ${LIBDIR}/../pkgconfig)
 +# icon
 +CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/weechat_icon_32.png
-+    ${CMAKE_CURRENT_BINARY_DIR}/weechat.png @ONLY)
++    ${CMAKE_CURRENT_BINARY_DIR}/weechat.png COPYONLY)
 +INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/weechat.png DESTINATION
 +    ${SHAREDIR}/icons/hicolor/32x32/apps)
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.26 2013/04/05 10:38:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.27 2013/04/11 09:37:13 scarabeus Exp $
 
 EAPI=5
 
@@ -78,8 +78,6 @@ src_prepare() {
 				po/CMakeLists.txt || die
 		fi
 	done
-
-	epatch "${FILESDIR}/${PN}-icon.patch"
 }
 
 # alias, rmodifier, xfer
