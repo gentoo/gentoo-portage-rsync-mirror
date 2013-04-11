@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.5.ebuild,v 1.9 2013/04/11 14:00:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.5.ebuild,v 1.10 2013/04/11 14:22:17 zerochaos Exp $
 
 EAPI="5"
 MOZ_ESR="1"
@@ -45,6 +45,7 @@ RDEPEND="virtual/freedesktop-icon-theme
 	dev-libs/dbus-glib
 	gnome-base/gconf
 	gnome-base/orbit
+	=media-libs/libpng-1.5*
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu

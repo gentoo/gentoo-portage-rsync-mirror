@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.61 2013/03/23 12:39:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.63 2013/04/11 14:19:12 blueness Exp $
+
+  11 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  -files/fix-LUA_LIB-envvar.patch:
+  Remove LUA lib path fix that went upstream
+
+  11 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-bindings-1.2.12-r1.ebuild, -xapian-bindings-1.2.12.ebuild:
+  Drop older stable
 
   23 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xapian-bindings-1.2.13.ebuild:
   Stable for arm, wrt bug #461108
