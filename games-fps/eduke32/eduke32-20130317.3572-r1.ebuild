@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20130317.3572-r1.ebuild,v 1.1 2013/03/20 00:50:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20130317.3572-r1.ebuild,v 1.2 2013/04/11 00:23:55 hasufell Exp $
 
 # TODO/FIXME:
 # lunatic broken
@@ -101,7 +101,9 @@ src_prepare() {
 
 src_compile() {
 	local MY_OPTS=(
+		AS=$(type -P nasm)
 		ARCH=
+		SYSARCH=
 		LTO=0
 		PRETTY_OUTPUT=0
 		RELEASE=1
