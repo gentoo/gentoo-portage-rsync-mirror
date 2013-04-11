@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-3.0-r1.ebuild,v 1.4 2013/03/02 20:19:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-3.0-r1.ebuild,v 1.5 2013/04/11 11:44:52 ssuominen Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils eutils python multilib vcs-snapshot
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="egl multilib qt4"
 
 RDEPEND="app-arch/snappy
-	media-libs/libpng
+	media-libs/libpng:0=
 	sys-libs/zlib
 	media-libs/mesa[egl?]
 	egl? ( || (
@@ -40,6 +40,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-system-libs.patch
 	"${FILESDIR}"/${P}-glxtrace-only.patch
 	"${FILESDIR}"/${PN}-3.0-gcc47.patch
+	"${FILESDIR}"/${P}-memcpy.patch
 )
 
 pkg_setup() {

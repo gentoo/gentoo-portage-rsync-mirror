@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20120725-r12.ebuild,v 1.2 2013/03/29 10:51:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20120725-r12.ebuild,v 1.3 2013/04/11 11:57:46 swift Exp $
 EAPI="4"
 
 inherit eutils
@@ -143,6 +143,8 @@ src_install() {
 		doins doc/policy.xml;
 
 	done
+
+	doman man/man8/*.8;
 
 	dodoc doc/Makefile.example doc/example.{te,fc,if}
 
