@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.863 2013/04/10 22:44:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.864 2013/04/10 23:32:50 phajdan.jr Exp $
+
+  10 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-27.0.1453.12.ebuild, chromium-9999-r1.ebuild:
+  Improve src_test: run content_unittests; exclude failing net_unittests
+  (http://crbug.com/224612 , bug #465444); exclude failing sql_unittests (bug
+  #461286 by Alphat-PC).
 
   10 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-26.0.1410.43.ebuild, chromium-27.0.1453.12.ebuild:

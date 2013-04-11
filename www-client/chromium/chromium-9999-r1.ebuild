@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.186 2013/04/05 21:44:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.187 2013/04/10 23:32:50 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -414,8 +414,8 @@ src_configure() {
 
 src_compile() {
 	# TODO: add media_unittests after fixing compile (bug #462546).
-	local test_targets
-	for x in base cacheinvalidation crypto \
+	local test_targets=""
+	for x in base cacheinvalidation content crypto \
 		googleurl gpu net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
@@ -425,7 +425,7 @@ src_compile() {
 		make_targets+=" chrome_sandbox"
 	fi
 	if use test; then
-		make_targets+=$test_targets
+		make_targets+=" $test_targets"
 	fi
 
 	# See bug #410883 for more info about the .host mess.
@@ -475,6 +475,12 @@ src_test() {
 	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 
 	runtest out/Release/cacheinvalidation_unittests
+
+	local excluded_content_unittests=(
+		"RendererDateTimePickerTest.*" # bug #465452
+	)
+	runtest out/Release/content_unittests "${excluded_content_unittests[@]}"
+
 	runtest out/Release/crypto_unittests
 	runtest out/Release/googleurl_unittests
 	runtest out/Release/gpu_unittests
@@ -487,15 +493,21 @@ src_test() {
 		"NetUtilTest.FormatUrl*" # see above
 		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
 		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
+		"CertDatabaseNSSTest.TrustIntermediateCa*" # http://crbug.com/224612
 		"URLFetcher*" # bug #425764
 		"HTTPSOCSPTest.*" # bug #426630
 		"HTTPSEVCRLSetTest.*" # see above
 		"HTTPSCRLSetTest.*" # see above
+		"*SpdyFramerTest.BasicCompression*" # bug #465444
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
 	runtest out/Release/printing_unittests
-	runtest out/Release/sql_unittests
+
+	local excluded_sql_unittests=(
+		"SQLiteFeaturesTest.FTS2" # bug #461286
+	)
+	runtest out/Release/sql_unittests "${excluded_sql_unittests[@]}"
 }
 
 src_install() {
