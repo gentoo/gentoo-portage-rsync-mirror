@@ -34,9 +34,8 @@ store_persistent_rules()
 
 start()
 {
-	RUNDIR=$(udevadm info --run)
 	# check if this system uses udev
-	[ -d "${RUNDIR}" ] || return 0
+	[ -d /run/udev ] || return 0
 
 	# store persistent-rules that got created while booting
 	# when / was still read-only

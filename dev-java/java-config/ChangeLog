@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.279 2013/04/08 16:45:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.280 2013/04/11 15:49:11 mgorny Exp $
+
+  11 Apr 2013; Michał Górny <mgorny@gentoo.org> java-config-2.1.12-r1.ebuild,
+  java-config-2.2.0.ebuild:
+  Disable pypy support since data install layout is incompatible with java-
+  config.
 
 *java-config-2.2.0 (08 Apr 2013)
 
