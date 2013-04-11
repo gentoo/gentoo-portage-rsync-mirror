@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.11 2013/02/22 15:51:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.12 2013/04/11 03:02:28 ssuominen Exp $
 
-EAPI=3
+EAPI=5
 inherit autotools eutils flag-o-matic
 
 DESCRIPTION="The Theora Video Compression Codec"
@@ -14,46 +14,48 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~ppc-aix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc +encode examples static-libs"
 
-RDEPEND="media-libs/libogg
-	encode? ( media-libs/libvorbis )
-	examples? ( media-libs/libpng
-		media-libs/libvorbis
-		>=media-libs/libsdl-0.11.0 )"
+RDEPEND="media-libs/libogg:=
+	encode? ( media-libs/libvorbis:= )
+	examples? (
+		media-libs/libpng:0=
+		>=media-libs/libsdl-0.11.0
+		media-libs/libvorbis:=
+		)"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig"
+REQUIRED_USE="examples? ( encode )" #285895
 
-VARTEXFONTS=${T}/fonts
 S=${WORKDIR}/${P/_}
 
+VARTEXFONTS=${T}/fonts
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.0_beta2-flags.patch
-	AT_M4DIR="m4" eautoreconf
+	epatch \
+		"${FILESDIR}"/${PN}-1.0_beta2-flags.patch \
+		"${FILESDIR}"/${P}-libpng16.patch #465450
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_configure() {
 	use x86 && filter-flags -fforce-addr -frename-registers #200549
-	use doc || export ac_cv_prog_HAVE_DOXYGEN="false"
-
-	local myconf
-	use examples && myconf="--enable-encode"
+	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
 
 	# --disable-spec because LaTeX documentation has been prebuilt
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
 		--disable-spec \
 		$(use_enable encode) \
-		$(use_enable examples) \
-		${myconf}
+		$(use_enable examples)
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		install || die "emake install failed"
+	emake \
+		DESTDIR="${D}" \
+		docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		install
 
 	dodoc AUTHORS CHANGES README
-	prepalldocs
 
 	if use examples; then
 		if use doc; then
@@ -61,11 +63,11 @@ src_install() {
 			doins examples/*.[ch]
 		fi
 
-		dobin examples/.libs/png2theora || die "dobin failed"
+		dobin examples/.libs/png2theora
 		for bin in dump_{psnr,video} {encoder,player}_example; do
-			newbin examples/.libs/${bin} theora_${bin} || die "newbin failed"
+			newbin examples/.libs/${bin} theora_${bin}
 		done
 	fi
 
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	prune_libtool_files
 }
