@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/idlmarkwardt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/idlmarkwardt/ChangeLog,v 1.3 2012/12/18 17:48:17 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/idlmarkwardt/ChangeLog,v 1.4 2013/04/11 18:29:13 ulm Exp $
+
+  11 Apr 2013; Ulrich Müller <ulm@gentoo.org> idlmarkwardt-20120524.ebuild,
+  idlmarkwardt-20121110.ebuild, metadata.xml:
+  Fix LICENSE. Fix typo in description.
 
 *idlmarkwardt-20121110 (18 Dec 2012)
 

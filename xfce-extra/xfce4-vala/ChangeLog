@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-vala
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/ChangeLog,v 1.11 2013/04/11 17:57:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/ChangeLog,v 1.12 2013/04/11 18:08:06 ago Exp $
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xfce4-vala-4.10.2.ebuild:
+  Stable for x86, wrt bug #465286
 
   11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xfce4-vala-4.10.2.ebuild:
   Stable for amd64, wrt bug #465286

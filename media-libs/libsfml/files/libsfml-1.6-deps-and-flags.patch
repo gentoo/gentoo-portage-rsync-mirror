@@ -1,4 +1,4 @@
---- SFML-1.6.orig/src/SFML/Audio/Makefile
+--- SFML-1.6/src/SFML/Audio/Makefile
 +++ SFML-1.6/src/SFML/Audio/Makefile
 @@ -25,7 +25,7 @@
  	$(CPP) -o $@ -c $< $(CFLAGS)
@@ -9,7 +9,7 @@
  
  .PHONY: clean mrproper
  
---- SFML-1.6.orig/src/SFML/Graphics/GraphicsContext.hpp
+--- SFML-1.6/src/SFML/Graphics/GraphicsContext.hpp
 +++ SFML-1.6/src/SFML/Graphics/GraphicsContext.hpp
 @@ -30,7 +30,7 @@
  ////////////////////////////////////////////////////////////
@@ -20,9 +20,9 @@
  #include <iostream>
  #include <string>
  
---- SFML-1.6.orig/src/SFML/Graphics/ImageLoader.cpp
+--- SFML-1.6/src/SFML/Graphics/ImageLoader.cpp
 +++ SFML-1.6/src/SFML/Graphics/ImageLoader.cpp
-@@ -28,10 +28,10 @@
+@@ -28,11 +28,12 @@
  #include <SFML/Graphics/ImageLoader.hpp>
  extern "C"
  {
@@ -32,11 +32,13 @@
 +    #include <jerror.h>
  }
 -#include <SFML/Graphics/libpng/png.h>
-+#include <png.h>
  #include <SFML/Graphics/SOIL/SOIL.h>
++#include <png.h>
++#include <string.h>
  #include <iostream>
  
---- SFML-1.6.orig/src/SFML/Graphics/Makefile
+ 
+--- SFML-1.6/src/SFML/Graphics/Makefile
 +++ SFML-1.6/src/SFML/Graphics/Makefile
 @@ -1,15 +1,7 @@
  SRC     = $(wildcard *.cpp)
@@ -84,7 +86,7 @@
  
  mrproper: clean
  	@rm -rf $(LIBNAME)
---- SFML-1.6.orig/src/SFML/Makefile
+--- SFML-1.6/src/SFML/Makefile
 +++ SFML-1.6/src/SFML/Makefile
 @@ -4,7 +4,7 @@
  ifeq ($(DEBUGBUILD), yes)

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/xfce4-vala-4.10.2.ebuild,v 1.4 2013/04/11 17:57:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/xfce4-vala-4.10.2.ebuild,v 1.5 2013/04/11 18:08:06 ago Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION=0.16
@@ -14,7 +14,7 @@ SRC_URI="mirror://xfce/src/bindings/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="$(vala_depend)

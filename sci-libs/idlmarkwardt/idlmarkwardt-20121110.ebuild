@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/idlmarkwardt/idlmarkwardt-20121110.ebuild,v 1.1 2012/12/18 17:48:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/idlmarkwardt/idlmarkwardt-20121110.ebuild,v 1.2 2013/04/11 18:29:13 ulm Exp $
 
 EAPI=4
 
-DESCRIPTION="Craig Marqwardt IDL procedures (MPFIT, CMSVLIB, etc)"
+DESCRIPTION="Craig Markwardt IDL procedures (MPFIT, CMSVLIB, etc)"
 HOMEPAGE="http://cow.physics.wisc.edu/~craigm/idl/idl.html"
 SRC_URI="http://www.physics.wisc.edu/~craigm/idl/down/cmtotal.tar.gz -> ${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="Markwardt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
