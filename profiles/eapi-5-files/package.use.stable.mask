@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.7 2013/04/01 13:22:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.8 2013/04/11 21:01:11 phajdan.jr Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (11 Apr 2013)
+# Usually requires recent ffmpeg/libav, not ready for stable.
+www-client/chromium system-ffmpeg
 
 # Pacho Ramos <pacho@gentoo.org> (01 Apr 2013)
 # Needed to stabilize anjuta-3.6
