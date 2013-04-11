@@ -1,6 +1,17 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.149 2013/04/09 16:16:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.151 2013/04/11 02:59:29 zerochaos Exp $
+
+  11 Apr 2013; Rick Farina <zerochaos@gentoo.org> firefox-bin-17.0.5-r1.ebuild:
+  add missing rdepends per bug #457036
+
+  11 Apr 2013; Rick Farina <zerochaos@gentoo.org> -firefox-bin-10.0.10.ebuild,
+  -firefox-bin-10.0.11.ebuild, -firefox-bin-10.0.12.ebuild,
+  -firefox-bin-16.0.2.ebuild, -firefox-bin-17.0.1.ebuild,
+  -firefox-bin-17.0.2.ebuild, -firefox-bin-17.0.3.ebuild,
+  -firefox-bin-17.0.4.ebuild, -firefox-bin-18.0.2.ebuild,
+  -firefox-bin-19.0.2.ebuild, -firefox-bin-20.0-r1.ebuild:
+  cleanup old ebuilds
 
 *firefox-bin-20.0-r2 (09 Apr 2013)
 
