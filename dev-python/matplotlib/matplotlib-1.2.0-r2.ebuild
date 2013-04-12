@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.8 2013/03/30 13:03:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.9 2013/04/12 00:18:43 floppym Exp $
 
 EAPI=5
 
@@ -33,8 +33,6 @@ COMMON_DEPEND="dev-python/numpy[${PYTHON_USEDEP}]
 	media-libs/freetype:2
 	media-libs/libpng
 	gtk? ( dev-python/pygtk[${PY2_USEDEP}] )
-	gtk3? ( dev-python/pygobject:3[${PYTHON_USEDEP}]
-		x11-libs/gtk+:3[introspection] )
 	wxwidgets? ( dev-python/wxpython:2.8[${PY2_USEDEP}] )"
 
 # internal copy of pycxx highly patched
@@ -60,6 +58,8 @@ RDEPEND="${COMMON_DEPEND}
 	cairo? ( dev-python/pycairo[${PYTHON_USEDEP}] )
 	excel? ( dev-python/xlwt[${PY2_USEDEP}] )
 	fltk? ( dev-python/pyfltk[${PY2_USEDEP}] )
+	gtk3? ( dev-python/pygobject:3[${PYTHON_USEDEP}]
+		x11-libs/gtk+:3[introspection] )
 	latex? (
 		virtual/latex-base
 		app-text/ghostscript-gpl
