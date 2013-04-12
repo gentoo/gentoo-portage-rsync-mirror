@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1-r3.ebuild,v 1.1 2012/12/16 19:23:02 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1-r4.ebuild,v 1.1 2013/04/12 03:27:55 zerochaos Exp $
 
-EAPI="3"
+EAPI="5"
 
 inherit eutils toolchain-funcs versionator
 
@@ -15,7 +15,8 @@ SRC_URI="http://download.aircrack-ng.org/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="+sqlite kernel_linux kernel_FreeBSD"
+
+IUSE="kernel_linux kernel_FreeBSD +sqlite +unstable"
 
 DEPEND="dev-libs/openssl
 	sqlite? ( >=dev-db/sqlite-3.4 )"
@@ -28,12 +29,23 @@ have_sqlite() {
 	use sqlite && echo "true" || echo "false"
 }
 
+have_unstable() {
+	use unstable && echo "true" || echo "false"
+}
+
 src_prepare() {
-	epatch "${FILESDIR}/${P}-respect_LDFLAGS.patch"
 	epatch "${FILESDIR}/${PN}-1.0_rc4-fix_build.patch"
 	epatch "${FILESDIR}/${P}-parallelmake.patch"
 	epatch "${FILESDIR}/${P}-sse-pic.patch"
 	epatch "${FILESDIR}/${P}-CVE-2010-1159.patch"
+	epatch "${FILESDIR}/${P}-respect_LDFLAGS.patch"
+	epatch "${FILESDIR}"/diff-wpa-migration-mode-aircrack-ng.diff
+	epatch "${FILESDIR}"/ignore-channel-1-error.patch
+	epatch "${FILESDIR}"/airodump-ng.ignore-negative-one.v4.patch
+	epatch "${FILESDIR}"/changeset_r1921_backport.diff
+
+	#likely to stay after version bump
+	epatch "${FILESDIR}"/airodump-ng-oui-update-path-fix.patch
 }
 
 src_compile() {
@@ -43,21 +55,21 @@ src_compile() {
 		AR="$(tc-getAR)" \
 		RANLIB="$(tc-getRANLIB)" \
 		sqlite="$(have_sqlite)" \
-		UNSTABLE=true || die "emake failed"
+		UNSTABLE="$(have_unstable)"
 }
 
 src_install() {
-	# UNSTABLE=true enables installation of buddy-ng, easside-ng, tkiptun-ng and wesside-ng
 	emake \
 		prefix="${EPREFIX}/usr" \
 		mandir="${EPREFIX}/usr/share/man/man1" \
-		DESTDIR="${D}" \
+		DESTDIR="${ED}" \
 		sqlite="$(have_sqlite)" \
-		UNSTABLE=true \
-		install \
-		|| die "emake install failed"
+		unstable="$(have_unstable)" \
+		install
 
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS ChangeLog INSTALLING README
+	#dodir /etc/aircrack-ng/
+	#wget http://standards.ieee.org/regauth/oui/oui.txt -O "${ED}"/etc/aircrack-ng/airodump-ng-oui.txt
 }
 
 pkg_postinst() {

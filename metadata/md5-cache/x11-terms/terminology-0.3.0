@@ -3,9 +3,9 @@ DEPEND=>=dev-libs/ecore-1.7.0[evas] >=dev-libs/eet-1.7.0 >=dev-libs/efreet-1.7.0
 DESCRIPTION=Feature rich terminal emulator using the Enlightenment Foundation Libraries
 EAPI=5
 HOMEPAGE=http://www.enlightenment.org/p.php?p=about/terminology
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2
 RDEPEND=>=dev-libs/ecore-1.7.0[evas] >=dev-libs/eet-1.7.0 >=dev-libs/efreet-1.7.0 >=dev-libs/eina-1.7.0 >=media-libs/edje-1.7.0 >=media-libs/elementary-1.7.0 >=media-libs/emotion-1.7.0 >=media-libs/ethumb-1.7.0[dbus] >=media-libs/evas-1.7.0
 SLOT=0
 SRC_URI=http://download.enlightenment.org/releases/terminology-0.3.0.tar.bz2
-_md5_=52ed4af4bbc00b98be863d71a0df8421
+_md5_=7af3833b1f2310ff07a85120858e1416

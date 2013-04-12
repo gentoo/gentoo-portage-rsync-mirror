@@ -13,4 +13,10 @@
 	aircrack-ng is the next generation of aircrack with lots of new features.
 	(from http://www.aircrack-ng.org)
 </longdescription>
+<use>
+	<flag name="airdrop-ng">Build airdrop-ng</flag>
+	<flag name="airgraph-ng">Build airgraph-ng</flag>
+	<flag name="netlink">Use netlink for channel control instead of WEXT</flag>
+	<flag name="unstable">Build the "unstable" tools which may randomly fail to run properly</flag>
+</use>
 </pkgmetadata>

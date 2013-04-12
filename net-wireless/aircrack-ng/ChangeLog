@@ -1,6 +1,20 @@
 # ChangeLog for net-wireless/aircrack-ng
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.71 2012/12/23 18:15:03 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.72 2013/04/12 03:27:55 zerochaos Exp $
+
+*aircrack-ng-9999 (12 Apr 2013)
+*aircrack-ng-1.1-r4 (12 Apr 2013)
+
+  12 Apr 2013; Rick Farina <zerochaos@gentoo.org> +aircrack-ng-1.1-r4.ebuild,
+  +aircrack-ng-9999.ebuild, +files/airodump-ng-oui-update-path-fix.patch,
+  +files/airodump-ng.ignore-negative-one.v4.patch,
+  +files/changeset_r1921_backport.diff,
+  +files/diff-wpa-migration-mode-aircrack-ng.diff, +files/eapol_fix.patch,
+  +files/ignore-channel-1-error.patch, -aircrack-ng-0.9.3.ebuild,
+  -aircrack-ng-1.0.ebuild, -aircrack-ng-1.1-r3.ebuild, -aircrack-ng-1.1.ebuild,
+  metadata.xml:
+  some reasonably major improvements to aircrack-ng as I merge pentoo changeset
+  into gentoo
 
   23 Dec 2012; Markus Meier <maekke@gentoo.org> aircrack-ng-1.1-r2.ebuild:
   arm stable, bug #311797
