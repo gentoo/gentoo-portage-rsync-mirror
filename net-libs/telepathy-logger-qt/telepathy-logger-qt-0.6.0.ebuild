@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.6.0.ebuild,v 1.2 2013/04/12 17:48:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.6.0.ebuild,v 1.3 2013/04/12 18:12:51 kensington Exp $
 
 EAPI=5
 
@@ -31,6 +31,11 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	${PYTHON_DEPS}
 "
+
+pkg_setup() {
+	python-any-r1_pkg_setup
+	kde4-base_pkg_setup
+}
 
 src_configure() {
 	local mycmakeargs=(
