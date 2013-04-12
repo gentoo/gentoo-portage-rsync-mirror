@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.5.4.ebuild,v 1.1 2013/04/03 13:43:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.5.4.ebuild,v 1.2 2013/04/12 10:33:40 alexxy Exp $
 
 EAPI=4
 
@@ -57,7 +57,7 @@ LIBSLURMDB_PERL_S="${WORKDIR}/${P}/contribs/perlapi/libslurmdb/perl"
 RESTRICT="primaryuri"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-2.5.0-nogtk.patch"
+	"${FILESDIR}/${PN}-2.5.4-nogtk.patch"
 )
 
 src_unpack() {

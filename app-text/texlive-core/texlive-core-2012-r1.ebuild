@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012-r1.ebuild,v 1.1 2013/02/19 15:13:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012-r1.ebuild,v 1.2 2013/04/12 10:36:10 aballier Exp $
 
-EAPI=3
+EAPI=5
 
 #TL_UPSTREAM_PATCHLEVEL="1"
 PATCHLEVEL="37"
@@ -86,7 +86,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	!<dev-texlive/texlive-metapost-2011
 	!app-text/dvibook
 	sys-libs/zlib
-	>=media-libs/libpng-1.2.43-r2:0
+	>=media-libs/libpng-1.2.43-r2:0=
 	>=app-text/poppler-0.12.3-r3
 	xetex? (
 		app-text/teckit
@@ -117,8 +117,12 @@ PDEPEND=">=dev-tex/luatex-0.70"
 S="${WORKDIR}/${P}_build"
 B="${WORKDIR}/${MY_PV}"
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
 	mkdir -p "${S}" || die "failed to create build dir"
+}
+
+src_prepare() {
 	mv "${WORKDIR}"/texmf* "${B}" || die "failed to move texmf files"
 
 	cd "${B}"
