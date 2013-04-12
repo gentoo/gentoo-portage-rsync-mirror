@@ -11,7 +11,7 @@ Subject: respect DESTDIR
 -	${INSTALL} -d ${libdir}
 -	${INSTALL_DATA} $(TARGET) ${libdir}
 +	${INSTALL} -d $(DESTDIR)/${libdir}
-+	${INSTALL_DATA} $(DESTDIR)/$(TARGET) ${libdir}
++	${INSTALL_DATA} $(TARGET) $(DESTDIR)/${libdir}
  
  install.include:
 -	${INSTALL} -d ${includedir}/sent

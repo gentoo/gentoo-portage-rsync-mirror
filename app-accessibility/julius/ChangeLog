@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/julius
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/julius/ChangeLog,v 1.1 2013/03/31 22:45:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/julius/ChangeLog,v 1.2 2013/04/12 14:37:20 hasufell Exp $
+
+  12 Apr 2013; Julian Ospald <hasufell@gentoo.org>
+  files/julius-4.2.2-install.patch:
+  fix installation of libsent wrt #465680
 
 *julius-4.2.2 (31 Mar 2013)
 
