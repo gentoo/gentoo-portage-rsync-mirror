@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.268 2013/04/06 08:38:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.269 2013/04/12 15:39:45 billie Exp $
+
+*hplip-3.13.4 (12 Apr 2013)
+
+  12 Apr 2013; Daniel Pielmeier <billie@gentoo.org> +hplip-3.13.4.ebuild:
+  Version bump.
 
   06 Apr 2013; Daniel Pielmeier <billie@gentoo.org> hplip-3.13.3.ebuild:
   Raise dbus dependency for new python-r1 eclass.
