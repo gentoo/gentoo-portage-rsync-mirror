@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.64 2013/03/31 10:27:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.65 2013/04/12 13:58:47 jer Exp $
+
+  12 Apr 2013; Jeroen Roovers <jer@gentoo.org> -pv-1.3.9.ebuild,
+  -pv-1.4.4.ebuild, -pv-1.4.5.ebuild:
+  Old.
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pv-1.4.6.ebuild:
   Stable for sparc, wrt bug #463140
