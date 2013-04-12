@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.69 2013/04/11 12:14:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.70 2013/04/12 08:58:51 ago Exp $
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> coderay-1.0.9.ebuild:
+  Stable for alpha, wrt bug #464366
 
   11 Apr 2013; Jeroen Roovers <jer@gentoo.org> coderay-1.0.9.ebuild:
   Stable for HPPA (bug #464366).

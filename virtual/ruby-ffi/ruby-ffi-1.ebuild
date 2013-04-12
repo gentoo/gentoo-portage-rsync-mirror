@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ruby-ffi-1.ebuild,v 1.9 2013/04/05 18:24:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ruby-ffi-1.ebuild,v 1.10 2013/04/12 08:58:29 ago Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND="ruby_targets_ruby18? ( dev-ruby/ffi[ruby_targets_ruby18] )

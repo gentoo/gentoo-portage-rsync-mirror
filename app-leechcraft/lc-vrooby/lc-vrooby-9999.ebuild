@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vrooby/lc-vrooby-9999.ebuild,v 1.1 2013/03/08 22:08:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-vrooby/lc-vrooby-9999.ebuild,v 1.2 2013/04/12 08:44:34 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit leechcraft
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 		udisks2? ( sys-fs/udisks:2 )
 		"
 
-REQUIRED_USE="^^ ( udisks udisks2 )"
+REQUIRED_USE="|| ( udisks udisks2 )"
 
 src_configure() {
 	local mycmakeargs=(
