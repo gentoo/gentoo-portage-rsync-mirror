@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-27.9.ebuild,v 1.3 2013/02/04 13:18:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-27.9.ebuild,v 1.4 2013/04/12 10:07:19 tomka Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="
 	x86? ( ftp://mersenne.org/gimps/p95v${PV/./}.linux32.tar.gz )"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="GIMPS"
 KEYWORDS="-* amd64 x86"
 IUSE=""
 

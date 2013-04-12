@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7718 2013/04/11 21:01:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7720 2013/04/12 10:08:07 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Remove obsolete mask on febootstrap
+
+  12 Apr 2013; Thomas Kahle <tomka@gentoo.org> license_groups:
+  Add the new GIMPS license to EULA group
 
   11 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   eapi-5-files/package.use.stable.mask, base/package.use.mask:

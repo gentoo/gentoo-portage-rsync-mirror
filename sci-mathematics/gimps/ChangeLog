@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.59 2013/02/04 13:21:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.60 2013/04/12 10:07:19 tomka Exp $
+
+  12 Apr 2013; Thomas Kahle <tomka@gentoo.org> gimps-27.9.ebuild:
+  Migrate from as-is license to GIMPS (bug 465568)
 
   04 Feb 2013; Justin Lecher <jlec@gentoo.org> -gimps-26.6-r1.ebuild,
   -gimps-27.7-r1.ebuild, metadata.xml:

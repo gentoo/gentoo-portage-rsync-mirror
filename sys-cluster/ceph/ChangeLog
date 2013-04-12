@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.36 2013/04/04 09:54:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.37 2013/04/12 10:21:14 alexxy Exp $
+
+*ceph-0.60-r1 (12 Apr 2013)
+
+  12 Apr 2013; Alexey Shvetsov <alexxy@gentoo.org> +ceph-0.60-r1.ebuild,
+  +files/ceph-0.60-mds_sessionmap.patch, -ceph-0.58.ebuild, -ceph-0.59.ebuild,
+  -ceph-0.60.ebuild, ceph-9999.ebuild:
+  Add patch to fix mds crash, also fix deps #465120
 
   04 Apr 2013; Alexey Shvetsov <alexxy@gentoo.org> ceph-0.60.ebuild,
   ceph-9999.ebuild:

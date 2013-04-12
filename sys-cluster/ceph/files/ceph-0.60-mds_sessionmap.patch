@@ -1,0 +1,29 @@
+commit 01f99c9d6cc0c3494bcb81e914b28bcc4ca2f7a1
+Author: Yan, Zheng <zheng.z.yan@intel.com>
+Date:   Fri Apr 5 13:58:36 2013 +0800
+
+    mds: fix session_info_t decoding
+
+    commit 0bcf2ac081 changes session_info_t's format, but there is
+    a typo in the code that decodes old format. We also need to
+    decode struct_v == 1 in the same way as struct_v == 2.
+
+    Signed-off-by: Yan, Zheng <zheng.z.yan@intel.com>
+    Signed-off-by: Greg Farnum <greg@inktank.com>
+
+diff --git a/src/mds/mdstypes.cc b/src/mds/mdstypes.cc
+index ad4a71a..b1ce640 100644
+--- a/src/mds/mdstypes.cc
++++ b/src/mds/mdstypes.cc
+@@ -541,9 +541,9 @@ void session_info_t::decode(bufferlist::iterator& p)
+ {
+   DECODE_START_LEGACY_COMPAT_LEN(3, 2, 2, p);
+   ::decode(inst, p);
+-  if (struct_v == 2) {
++  if (struct_v <= 2) {
+     set<tid_t> s;
+-    ::decode(completed_requests, p);
++    ::decode(s, p);
+     while (!s.empty()) {
+       completed_requests[*s.begin()] = inodeno_t();
+       s.erase(s.begin());
