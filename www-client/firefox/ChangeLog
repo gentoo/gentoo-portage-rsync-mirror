@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.230 2013/04/09 16:06:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.231 2013/04/12 12:38:57 anarchy Exp $
+
+*firefox-20.0.1 (12 Apr 2013)
+
+  12 Apr 2013; Jory A. Pratt <anarchy@gentoo.org> -firefox-20.0.ebuild,
+  +firefox-20.0.1.ebuild:
+  Version bump, misc upstream bug fixes refer to release notes
 
   09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.5.ebuild:
   Stable for x86, wrt bug #464226
