@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.12.ebuild,v 1.4 2013/04/07 09:59:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.12.ebuild,v 1.5 2013/04/12 15:08:44 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 arm x86"
 IUSE="+atmodem bluetooth +cdmamodem +datafiles doc dundee examples +isimodem +phonesim +provision +qmimodem threads test tools +udev"
 
 REQUIRED_USE="dundee? ( bluetooth )"

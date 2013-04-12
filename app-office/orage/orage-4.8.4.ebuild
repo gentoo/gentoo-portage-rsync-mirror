@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.4.ebuild,v 1.7 2013/04/12 08:22:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.4.ebuild,v 1.8 2013/04/12 15:06:59 ago Exp $
 
 EAPI=5
 inherit multilib xfconf
@@ -13,7 +13,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="berkdb dbus debug libnotify +xfce_plugins_clock"
 
 RDEPEND=">=dev-libs/libical-0.48:=
