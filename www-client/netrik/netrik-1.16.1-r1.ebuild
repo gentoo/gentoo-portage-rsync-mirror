@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.1 2013/04/10 09:46:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.2 2013/04/12 05:01:00 pinkbyte Exp $
 
 EAPI=5
 
@@ -24,6 +24,7 @@ src_prepare() {
 
 	# bug #459660
 	epatch "${FILESDIR}/${P}-ncurses-tinfo.patch"
+	epatch "${FILESDIR}/${P}-configure.patch"
 	epatch_user
 
 	eautoreconf

@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.8 2013/04/11 21:01:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.9 2013/04/12 04:54:19 ssuominen Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2013)
+# Waiting for >=app-cdr/brasero-3 stabilization
+app-pda/gtkpod cdr
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (11 Apr 2013)
 # Usually requires recent ffmpeg/libav, not ready for stable.

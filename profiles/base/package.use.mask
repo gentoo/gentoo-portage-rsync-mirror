@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.455 2013/04/11 21:01:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.456 2013/04/12 04:54:58 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -135,10 +135,6 @@ www-client/chromium tcmalloc
 # Johannes Huber <johu@gentoo.org> (14 Sep 2012)
 # Masked for stabilization as the use flag pulls a dep tree of hell.
 media-libs/phonon zeitgeist
-
-# Samuli Suominen <ssuominen@gentoo.org> (31 Aug 2012)
-# Pending on GNOME 3.x stabilization (brasero-3 to be precise)
-app-pda/gtkpod cdr
 
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.

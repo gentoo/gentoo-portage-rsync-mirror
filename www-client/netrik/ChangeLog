@@ -1,6 +1,10 @@
 # ChangeLog for www-client/netrik
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.15 2013/04/10 09:46:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.16 2013/04/12 05:01:00 pinkbyte Exp $
+
+  12 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> netrik-1.16.1-r1.ebuild,
+  +files/netrik-1.16.1-configure.patch:
+  Respect CFLAGS, wrt bug #459660, thanks to Agostino Sarubbo
 
 *netrik-1.16.1-r1 (10 Apr 2013)
 
