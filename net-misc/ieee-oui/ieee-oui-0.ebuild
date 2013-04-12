@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ieee-oui/ieee-oui-0.ebuild,v 1.1 2012/09/05 20:56:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ieee-oui/ieee-oui-0.ebuild,v 1.2 2013/04/12 02:37:55 zerochaos Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ src_install() {
 	keepdir /var/lib/misc
 	exeinto /etc/cron.weekly
 	newexe "${FILESDIR}"/${P}.sh ${PN}
+	touch "${ED}"/var/lib/misc/oui.txt
 }
 
 pkg_postinst() {
@@ -32,8 +33,4 @@ pkg_postinst() {
 		eerror "Could not download current copy of oui.txt from standards.ieee.org ;"
 		eerror "Please re-emerge or manually run /etc/cron.weekly/${P} to update."
 	fi
-}
-
-pkg_prerm() {
-	rm -f /var/lib/misc/oui.txt
 }

@@ -1,10 +1,12 @@
 # ChangeLog for net-misc/ieee-oui
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ieee-oui/ChangeLog,v 1.1 2012/09/05 20:56:58 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ieee-oui/ChangeLog,v 1.2 2013/04/12 02:37:55 zerochaos Exp $
+
+  12 Apr 2013; Rick Farina <zerochaos@gentoo.org> ieee-oui-0.ebuild:
+  had an issue where /var/lib/misc/oui.txt was unclaimed, now it is
 
 *ieee-oui-0 (05 Sep 2012)
 
   05 Sep 2012; Ian Stakenvicius <axs@gentoo.org> +ieee-oui-0.ebuild,
   +files/ieee-oui-0.sh, +metadata.xml:
   initial commit
-
