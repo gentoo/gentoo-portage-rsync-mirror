@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/traitsui-4.3.0-r1.ebuild,v 1.1 2013/04/11 18:45:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/traitsui-4.3.0-r1.ebuild,v 1.2 2013/04/12 05:51:09 idella4 Exp $
 
 EAPI=5
 
@@ -29,19 +29,17 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 DOCS=( docs/traitsuidocreadme.txt )
 
+PATCHES=( "${FILESDIR}"/${P}-tests.patch )
+
 python_compile_all() {
 	use doc && emake -C docs html
 }
 
 python_test() {
-	# https://github.com/enthought/traitsui/issues/74; 
-	# upstream can't be relied upon to fix, unpassable tests here excluded
 	export ETS_TOOLKIT=qt4
 	export QT_API=pyqt
-	VIRTUALX_COMMAND="nosetests -e test_qt_show_labels_right_without_colon* \
-		-e test_qt_labels_right_resizing_vertical* \
-		-e test_visible_when_layout* \
-		-e test_qt_labels_right_resizing_horizontal*" virtualmake
+	VIRTUALX_COMMAND="nosetests -v" virtualmake
+
 }
 
 python_install_all() {

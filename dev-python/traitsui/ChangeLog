@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/traitsui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/ChangeLog,v 1.7 2013/04/11 18:45:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/ChangeLog,v 1.8 2013/04/12 05:51:09 idella4 Exp $
+
+  12 Apr 2013; Ian Delaney <idella4@gentoo.org>
+  +files/traitsui-4.3.0-tests.patch, traitsui-4.3.0-r1.ebuild:
+  test phase fixed again, upstream provided (an unexpected) fix in tracker
+  issues#74
 
 *traitsui-4.3.0-r1 (11 Apr 2013)
 
