@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-datetime-plugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/ChangeLog,v 1.17 2013/04/12 15:05:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/ChangeLog,v 1.18 2013/04/12 17:18:38 ago Exp $
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  xfce4-datetime-plugin-0.6.2.ebuild:
+  Stable for ia64, wrt bug #465286
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   xfce4-datetime-plugin-0.6.2.ebuild:

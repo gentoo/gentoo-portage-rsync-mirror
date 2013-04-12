@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.123 2013/04/12 08:59:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.124 2013/04/12 17:30:18 ago Exp $
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> json-1.7.7.ebuild:
+  Stable for ia64, wrt bug #464366
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> json-1.7.7.ebuild:
   Stable for alpha, wrt bug #464366
