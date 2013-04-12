@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.77 2013/04/05 20:31:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.78 2013/04/12 07:08:26 vincent Exp $
+
+  12 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org> geos-3.3.8-r1.ebuild:
+  x86 stable, wrt bug #436432
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> geos-3.3.8-r1.ebuild:
   Stable for arm, wrt bug #436432
