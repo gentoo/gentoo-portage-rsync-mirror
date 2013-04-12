@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.58 2013/04/12 09:11:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.59 2013/04/12 09:37:48 ssuominen Exp $
+
+  12 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> tkimg-1.4-r8.ebuild:
+  Use subslot operators for the libpng, tiff and zlib dependencies.
 
 *tkimg-1.4-r8 (12 Apr 2013)
 

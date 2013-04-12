@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r8.ebuild,v 1.1 2013/04/12 09:11:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r8.ebuild,v 1.2 2013/04/12 09:37:48 ssuominen Exp $
 
 EAPI=5
 
@@ -24,9 +24,9 @@ IUSE="doc test static-libs"
 RDEPEND="
 	dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
-	media-libs/tiff:0
-	media-libs/libpng:0
-	>=sys-libs/zlib-1.2.7
+	media-libs/tiff:0=
+	media-libs/libpng:0=
+	>=sys-libs/zlib-1.2.7:=
 	x11-libs/libX11
 	virtual/jpeg"
 DEPEND="${RDEPEND}
