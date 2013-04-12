@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.73 2013/03/29 07:59:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.74 2013/04/12 06:22:54 lxnay Exp $
+
+  12 Apr 2013; Fabio Erculiani <lxnay@gentoo.org>
+  laptop-mode-tools-1.62-r2.ebuild, laptop-mode-tools-1.63.ebuild,
+  laptop-mode-tools-1.63-r1.ebuild:
+  QA violation, looking at the build system, USE=systemd, SYSTEMD=yes is only
+  used for installing unit files and tmpfiles.d
 
 *laptop-mode-tools-1.63-r1 (29 Mar 2013)
 

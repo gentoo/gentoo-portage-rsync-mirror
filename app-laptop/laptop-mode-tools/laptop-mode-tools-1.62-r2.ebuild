@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.62-r2.ebuild,v 1.1 2013/03/16 22:53:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.62-r2.ebuild,v 1.2 2013/04/12 06:22:54 lxnay Exp $
 
 EAPI=5
 inherit eutils multilib systemd udev
@@ -14,7 +14,7 @@ SRC_URI="http://www.samwel.tk/laptop_mode/tools/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="+acpi apm bluetooth scsi systemd"
+IUSE="+acpi apm bluetooth scsi"
 
 RDEPEND="net-wireless/wireless-tools
 	sys-apps/ethtool
@@ -22,8 +22,7 @@ RDEPEND="net-wireless/wireless-tools
 	acpi? ( sys-power/acpid )
 	apm? ( sys-apps/apmd )
 	bluetooth? ( net-wireless/bluez:= )
-	scsi? ( sys-apps/sdparm )
-	systemd? ( sys-apps/systemd )"
+	scsi? ( sys-apps/sdparm )"
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
@@ -50,7 +49,7 @@ src_install() {
 		ACPI="$(use acpi && echo force || echo disabled)" \
 		PMU="$(false && echo force || echo disabled)" \
 		APM="$(use apm && echo force || echo disabled)" \
-		SYSTEMD="$(use systemd && echo yes || echo no)" \
+		SYSTEMD=yes \
 		sh ./install.sh || die
 
 	dodoc Documentation/*.txt README
