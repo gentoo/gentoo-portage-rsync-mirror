@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.3-r1.ebuild,v 1.4 2013/04/10 20:13:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.3-r1.ebuild,v 1.5 2013/04/12 04:25:34 ssuominen Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ COMMON_DEPEND="
 	>=dev-libs/gdl-3.6:3
 	>=dev-libs/glib-2.28.5
 	>=dev-libs/libxml2-2.7.7
-	>=dev-util/anjuta-2.91
+	>=dev-util/anjuta-3.6
 	>=media-libs/libgpod-0.7.0
 	>=media-libs/libid3tag-0.15
 	>=x11-libs/gtk+-3.0.8:3

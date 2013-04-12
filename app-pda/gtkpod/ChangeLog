@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.124 2013/04/10 20:13:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.125 2013/04/12 04:25:34 ssuominen Exp $
+
+  12 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> gtkpod-2.1.3-r1.ebuild:
+  Force more recent dev-util/anjuta too in addition to dev-libs/gdl
+  wrt #452608 by Andrew John Hughes
 
   10 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> gtkpod-2.1.3-r1.ebuild:
   Pull in correct SLOT of media-libs/gstreamer to get gst-element-check-0.10.m4
