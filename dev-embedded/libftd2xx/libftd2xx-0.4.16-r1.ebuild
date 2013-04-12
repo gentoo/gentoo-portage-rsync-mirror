@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.16-r1.ebuild,v 1.3 2013/01/17 16:16:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.16-r1.ebuild,v 1.4 2013/04/12 22:53:34 ulm Exp $
 
 EAPI=5
 inherit multilib
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.ftdichip.com/Drivers/D2XX.htm"
 SRC_URI="amd64? ( http://www.ftdichip.com/Drivers/D2XX/Linux/${MY_P}_x86_64.tar.gz )
 	x86? ( http://www.ftdichip.com/Drivers/D2XX/Linux/${MY_P}.tar.gz )"
 
-LICENSE="as-is"
+LICENSE="FTDI LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
