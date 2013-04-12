@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/etsprojecttools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsprojecttools/ChangeLog,v 1.8 2012/11/08 10:20:21 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsprojecttools/ChangeLog,v 1.9 2013/04/12 14:15:12 idella4 Exp $
+
+*etsprojecttools-0.6.0-r1 (12 Apr 2013)
+
+  12 Apr 2013; Ian Delaney <idella4@gentoo.org>
+  +etsprojecttools-0.6.0-r1.ebuild:
+  migration -> distutils-r1 revbump
 
   09 Nov 2012; Ian Delaney <idella4@gentoo.org> etsprojecttools-0.6.0.ebuild:
   Setting ets as antogonist to resolve file collisions, fixes Bug #430558

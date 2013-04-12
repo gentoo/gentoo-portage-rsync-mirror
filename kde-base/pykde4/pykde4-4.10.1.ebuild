@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.1.ebuild,v 1.5 2013/04/02 20:51:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.1.ebuild,v 1.6 2013/04/12 14:06:12 kensington Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -58,7 +58,7 @@ src_prepare() {
 	fi
 
 	# See bug 322351
-	use arm && epatch "${FILESDIR}/${PN}-4.4.4-arm-sip.patch"
+	use arm && epatch "${FILESDIR}/${PN}-4.10.1-arm-sip.patch"
 
 	sed -e 's/kpythonpluginfactory /kpython${PYTHON_SHORT_VERSION}pluginfactory /g' \
 		-i kpythonpluginfactory/CMakeLists.txt || die
