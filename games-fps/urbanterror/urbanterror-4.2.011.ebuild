@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.011.ebuild,v 1.1 2013/04/07 15:20:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.011.ebuild,v 1.2 2013/04/12 20:08:43 hasufell Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2 Q3AEULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+curl debug dedicated openal +sdl server smp vorbis"
-RESTRICT="mirror"
+#RESTRICT="mirror"
 
 RDEPEND="
 	!dedicated? (
