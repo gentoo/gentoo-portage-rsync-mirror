@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.19 2013/03/02 22:44:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.20 2013/04/12 21:58:25 lu_zero Exp $
 
 EAPI="4"
 
@@ -21,7 +21,6 @@ MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 
-PATCHLEVEL="101"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -31,9 +30,6 @@ elif [[ "${MY_P}" == "${P}" ]]; then
 else
 	SRC_URI="http://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.xz"
 fi
-
-SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
@@ -183,7 +179,6 @@ REQUIRED_USE="
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-	unpack ${A}
 	if [ "${PV%9999}" != "${PV}" ] ; then
 		git-2_src_unpack
 	fi
@@ -193,7 +188,6 @@ src_prepare() {
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
 
-	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	eautoreconf
 }
 
