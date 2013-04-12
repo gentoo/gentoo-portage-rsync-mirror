@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.5.3.ebuild,v 1.1 2013/04/12 07:22:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.5.3.ebuild,v 1.2 2013/04/12 17:48:26 scarabeus Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit kde4-base python-r1
+inherit kde4-base python-any-r1
 
 DESCRIPTION="Qt4 bindings for the Telepathy logger"
 HOMEPAGE="https://projects.kde.org/projects/extragear/network/telepathy/telepathy-logger-qt"
@@ -29,6 +29,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
+	${PYTHON_DEPS}
 "
 
 src_configure() {
