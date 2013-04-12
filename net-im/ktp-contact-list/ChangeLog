@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ktp-contact-list
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-list/ChangeLog,v 1.11 2013/04/11 15:09:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-list/ChangeLog,v 1.12 2013/04/12 07:35:51 scarabeus Exp $
+
+*ktp-contact-list-0.5.3 (12 Apr 2013)
+
+  12 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +ktp-contact-list-0.5.3.ebuild, -ktp-contact-list-0.5.2.ebuild:
+  Version bump to 0.5.3. Remove 0.5.2.
 
 *ktp-contact-list-0.6.0 (11 Apr 2013)
 

@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1247 2013/04/11 23:43:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1249 2013/04/12 07:48:03 zmedico Exp $
+
+*portage-2.2.0_alpha173 (12 Apr 2013)
+
+  12 Apr 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha173.ebuild:
+  2.2.0_alpha172 version bump. This includes all of the fixes in 2.1.11.62. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.62 (12 Apr 2013)
+
+  12 Apr 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.62.ebuild:
+  2.1.11.62 version bump. This fixes a repoman bug which randomly triggered
+  incorrect package.use.stable.* handling. Bug #462382 tracks all bugs fixed
+  since portage-2.1.11.55.
 
 *portage-2.2.0_alpha172 (11 Apr 2013)
 

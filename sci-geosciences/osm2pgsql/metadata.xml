@@ -9,4 +9,7 @@ osm2pgsql is a lossy conversion utility. It only adds features that have certain
 
 osm2pgsql has two main modes of running - normal (is this what it's called?) and slim mode. The first uses RAM for intermediate storage, the second uses a temporary database on-disk. As of early 2009, you must use slim-mode for planet imports on 32-bit systems, since there are too many nodes to store in RAM otherwise. This limitation doesn't apply to 64-bit systems
 </longdescription>
+<use>
+<flag name="pbf">Add support for importing the new "Protocolbuffer Binary Format"</flag>
+</use>
 </pkgmetadata>

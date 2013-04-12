@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ktp-contact-runner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-runner/ChangeLog,v 1.7 2013/04/11 15:14:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-runner/ChangeLog,v 1.8 2013/04/12 07:39:38 scarabeus Exp $
+
+*ktp-contact-runner-0.5.3 (12 Apr 2013)
+
+  12 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +ktp-contact-runner-0.5.3.ebuild, -ktp-contact-runner-0.5.2.ebuild:
+  Version bump to 0.5.3. Remove 0.5.2.
 
 *ktp-contact-runner-0.6.0 (11 Apr 2013)
 

@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.57 2013/04/11 17:35:21 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.58 2013/04/12 07:52:53 ssuominen Exp $
+
+*vigra-1.8.0-r1 (12 Apr 2013)
+
+  12 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +vigra-1.8.0-r1.ebuild:
+  Use python-single-r1.eclass instead of python.eclass. This ebuild should be
+  converted to python-r1.eclass if upstream gets Python 3.x support working in
+  the future. Use eutils.eclass instead of base.eclass for patching. Always
+  pull in dev-lang/python:2.7 and correct shebang for /usr/bin/vigra-config wrt
+  #465510, Comment #1 by Vicente Olivert Riera
 
   11 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org> vigra-1.8.0.ebuild:
   amd64, ppc, ppc64 and x86 stable, wrt bug #465510
