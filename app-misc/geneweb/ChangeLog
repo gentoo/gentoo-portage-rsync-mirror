@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/geneweb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.20 2012/06/01 01:56:55 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.21 2013/04/12 09:13:27 tupone Exp $
+
+*geneweb-6.02 (12 Apr 2013)
+
+  12 Apr 2013; Alfredo Tupone <tupone@gentoo.org> +geneweb-6.02.ebuild,
+  +files/geneweb-6.02-amd64.patch, +files/geneweb-6.02-gentoo.patch,
+  +files/geneweb-6.02-parallellbuild.patch:
+  Version bump to 6.02
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> geneweb-5.02.ebuild:
   inherit user for enewuser
