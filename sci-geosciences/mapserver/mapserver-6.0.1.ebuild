@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1.ebuild,v 1.2 2011/11/17 11:33:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1.ebuild,v 1.3 2013/04/13 21:04:01 olemarkus Exp $
 
-EAPI=3
+EAPI=4
 
 MY_P="${PN}-${PV/_/-}"
 
@@ -194,7 +194,7 @@ src_install() {
 
 	for i in ${extra_dir}; do
 		docinto /usr/share/doc/${PF}/${i}
-		dodoc ${i}/* || die
+		dodoc -r ${i}/* || die
 	done
 
 	use python && _enter_build_dir "${S}/mapscript/python" "distutils_src_install"

@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mapserver
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.45 2011/11/17 11:33:21 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.46 2013/04/13 21:04:01 olemarkus Exp $
+
+  13 Apr 2013; Ole Markus With <olemarkus@gentoo.org> mapserver-6.0.1.ebuild:
+  Non-maintainer commit: EAPI bump. Timeout of bug 460500
 
   17 Nov 2011; Justin Lecher <jlec@gentoo.org> mapserver-6.0.1.ebuild,
   metadata.xml:
@@ -224,4 +227,3 @@
    * Aran Deltac <bluefeet@gmail.com>,
    * Luca <luca.casagrande@gmail.com>
    for their help (bug #69417).
-
