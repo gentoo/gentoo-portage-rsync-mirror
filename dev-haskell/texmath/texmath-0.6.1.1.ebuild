@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/texmath/texmath-0.6.1.1.ebuild,v 1.1 2012/11/25 06:09:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/texmath/texmath-0.6.1.1.ebuild,v 1.2 2013/04/13 05:53:55 qnikst Exp $
 
 EAPI=5
 
@@ -29,6 +29,10 @@ RDEPEND=">=dev-haskell/parsec-3:=[profile?]
 	"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.6"
+
+src_prepare() {
+	epatch "${FILESDIR}/01-${PN}-locale.patch"
+}
 
 src_configure() {
 	cabal_src_configure \

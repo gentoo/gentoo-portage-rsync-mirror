@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-12.11.ebuild,v 1.1 2013/03/04 04:57:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-12.11.ebuild,v 1.2 2013/04/13 05:37:04 dirtyepic Exp $
 
 EAPI="5"
 WX_GTK_VER="2.8"
@@ -20,7 +20,7 @@ RDEPEND="app-arch/zip
 	x11-libs/wxGTK:2.8[X]
 	contrib? (
 		app-text/hunspell
-		dev-libs/boost
+		dev-libs/boost:=
 		dev-libs/libgamin
 	)"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-9999.ebuild,v 1.5 2013/03/04 04:57:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-9999.ebuild,v 1.6 2013/04/13 05:37:04 dirtyepic Exp $
 
 EAPI="5"
 WX_GTK_VER="2.8"
@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 SRC_URI=""
-ESVN_REPO_URI="svn://svn.berlios.de/${PN}/trunk"
+ESVN_REPO_URI="svn://svn.code.sf.net/p/${PN}/code/trunk"
 
 IUSE="contrib debug pch static-libs"
 
@@ -21,7 +21,7 @@ RDEPEND="app-arch/zip
 	x11-libs/wxGTK:2.8[X]
 	contrib? (
 		app-text/hunspell
-		dev-libs/boost
+		dev-libs/boost:=
 		dev-libs/libgamin
 	)"
 DEPEND="${RDEPEND}

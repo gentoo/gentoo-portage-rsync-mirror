@@ -1,0 +1,19 @@
+This patch fixes locale as texmath failed for systems with
+non UTF locale
+
+AUTHOR: Alexander Vershilov (qnikst@gentoo.org)
+FIXES: bug #423049 by Diego Elio Pettenò
+diff --git a/texmath.hs b/texmath.hs
+index 373127f..da214bd 100644
+--- a/texmath.hs
++++ b/texmath.hs
+@@ -39,6 +39,9 @@ main = do
+                           then fmap show . parseFormula
+                           else fmap ppTopElement . inHtml . texMathToMathML dt
+   inp <- getUTF8Contents
++#if MIN_VERSION_base(4,2,0)
++  hSetEncoding stdout utf8
++#endif
+   let (ms, rest) = parseMacroDefinitions inp
+   case (converter $! applyMacros ms rest) of
+         Left err         -> hPutStrLn stderr err
