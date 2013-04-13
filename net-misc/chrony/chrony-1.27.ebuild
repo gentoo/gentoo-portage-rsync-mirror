@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.27.ebuild,v 1.3 2013/04/09 13:43:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.27.ebuild,v 1.4 2013/04/13 08:31:00 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~mips ppc ~sparc x86"
+KEYWORDS="amd64 ~arm hppa ~mips ppc sparc x86"
 IUSE="caps ipv6 +readline +rtc"
 
 DEPEND="
