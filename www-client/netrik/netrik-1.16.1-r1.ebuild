@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.2 2013/04/12 05:01:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.3 2013/04/13 10:13:30 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 
 RDEPEND=">=sys-libs/ncurses-5.1[unicode]
 	sys-libs/readline"
