@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.111 2013/04/13 08:28:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.112 2013/04/13 13:22:34 jlec Exp $
+
+  13 Apr 2013; Justin Lecher <jlec@gentoo.org> -vpnc-0.5.3.ebuild,
+  -vpnc-0.5.3_p451.ebuild, -vpnc-0.5.3_p457-r1.ebuild,
+  -vpnc-0.5.3_p457-r2.ebuild, -vpnc-0.5.3_p514.ebuild:
+  Drop old
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> vpnc-0.5.3_p527.ebuild:
   Stable for sparc, wrt bug #463990

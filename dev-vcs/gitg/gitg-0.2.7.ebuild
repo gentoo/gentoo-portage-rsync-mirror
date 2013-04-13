@@ -1,12 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.2.5.ebuild,v 1.4 2012/06/09 14:29:42 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.2.7.ebuild,v 1.1 2013/04/13 13:14:04 ikelos Exp $
 
-EAPI="3"
-GNOME2_LA_PUNT="yes"
+EAPI=5
+
 GCONF_DEBUG="no"
-
-inherit eutils gnome2
+inherit base eutils gnome2
 
 DESCRIPTION="git repository viewer for GNOME"
 HOMEPAGE="http://git.gnome.org/browse/gitg/"
@@ -30,7 +29,18 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40"
 
-pkg_setup() {
+PATCHES=(
+	"${FILESDIR}/${PN}-0.2.6-fix-libreoffice.patch"
+)
+
+DOCS="AUTHORS ChangeLog NEWS README"
+
+src_prepare() {
+	base_src_prepare
+	gnome2_src_prepare
+}
+
+src_configure() {
 	# Disable maintainer to get rid of -Werror  (bug #363009)
 	G2CONF="${G2CONF}
 		--disable-static
@@ -40,9 +50,9 @@ pkg_setup() {
 		$(use_enable debug)
 		$(use_enable glade glade-catalog)"
 
-	DOCS="AUTHORS ChangeLog NEWS README"
+	gnome2_src_configure
 }
 
 src_test() {
-	emake check || die
+	default
 }
