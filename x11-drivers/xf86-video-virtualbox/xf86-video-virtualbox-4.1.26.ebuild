@@ -1,17 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.8.ebuild,v 1.1 2013/02/28 16:04:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.26.ebuild,v 1.1 2013/04/13 20:34:42 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils linux-mod multilib python versionator toolchain-funcs
 
-MY_PV="${PV/beta/BETA}"
-MY_PV="${PV/rc/RC}"
-MY_P=VirtualBox-${MY_PV}
+MY_P=VirtualBox-${PV}
 DESCRIPTION="VirtualBox video driver"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,9 +19,10 @@ IUSE="dri"
 RDEPEND="<x11-base/xorg-server-1.13.99[-minimal]
 	x11-libs/libXcomposite"
 DEPEND="${RDEPEND}
-	>=dev-util/kbuild-0.1.9998_pre20120806
+	>=dev-util/kbuild-0.1.999
 	=dev-lang/python-2*
 	>=dev-lang/yasm-0.6.2
+	sys-devel/dev86
 	sys-power/iasl
 	x11-proto/fontsproto
 	x11-proto/randrproto
@@ -128,20 +127,20 @@ src_install() {
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
 
 	# xorg-server-1.13.x
-	if has_version ">=x11-base/xorg-server-1.12.99" ; then
-		newins vboxvideo_drv_113.so vboxvideo_drv.so || die
+	if has_version ">=x11-base/xorg-server-1.13" ; then
+		newins vboxvideo_drv_113.so vboxvideo_drv.so
 	# xorg-server-1.12.x
 	elif has_version ">=x11-base/xorg-server-1.12" ; then
-		newins vboxvideo_drv_112.so vboxvideo_drv.so || die
+		newins vboxvideo_drv_112.so vboxvideo_drv.so
 	# xorg-server-1.11.x
 	elif has_version ">=x11-base/xorg-server-1.11" ; then
-		newins vboxvideo_drv_111.so vboxvideo_drv.so || die
+		newins vboxvideo_drv_111.so vboxvideo_drv.so
 	# xorg-server-1.10.x
 	elif has_version ">=x11-base/xorg-server-1.10" ; then
-		newins vboxvideo_drv_110.so vboxvideo_drv.so || die
+		newins vboxvideo_drv_110.so vboxvideo_drv.so
 	# xorg-server-1.9.x
 	else
-		newins vboxvideo_drv_19.so vboxvideo_drv.so || die
+		newins vboxvideo_drv_19.so vboxvideo_drv.so
 	fi
 
 	# Guest OpenGL driver

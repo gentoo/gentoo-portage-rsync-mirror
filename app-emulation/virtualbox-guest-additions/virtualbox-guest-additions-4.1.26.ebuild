@@ -1,17 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.8.ebuild,v 1.1 2013/02/28 16:05:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.26.ebuild,v 1.1 2013/04/13 20:35:58 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils linux-mod user
 
-MY_PV="${PV/beta/BETA}"
-MY_PV="${PV/rc/RC}"
-MY_P=VirtualBox-${MY_PV}
+MY_P=VirtualBox-${PV}
 DESCRIPTION="VirtualBox kernel modules and user-space tools for Linux guests"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,12 +27,12 @@ RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
 			 x11-libs/libXdmcp
 			 x11-libs/libSM
 			 x11-libs/libICE )
-	sys-apps/dbus
 	!!x11-drivers/xf86-input-virtualbox"
 DEPEND="${RDEPEND}
-		>=dev-util/kbuild-0.1.9998_pre20120806
+		>=dev-util/kbuild-0.1.999
 		>=dev-lang/yasm-0.6.2
 		sys-devel/bin86
+		sys-devel/dev86
 		sys-libs/pam
 		sys-power/iasl
 		X? ( x11-proto/renderproto )
@@ -128,7 +126,7 @@ src_install() {
 		newins mount.vboxsf mount.vboxsf
 		fperms 4755 /sbin/mount.vboxsf
 
-		newinitd "${FILESDIR}"/${PN}-8.initd ${PN}
+		newinitd "${FILESDIR}"/${PN}-7.initd ${PN}
 
 		insinto /usr/sbin/
 		newins VBoxService vboxguest-service

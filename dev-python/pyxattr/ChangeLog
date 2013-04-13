@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.53 2013/04/13 07:40:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.54 2013/04/13 20:52:41 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pyxattr-0.5.2.ebuild:
+  Stable for s390, wrt bug #458436
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pyxattr-0.5.2.ebuild:
   Stable for sparc, wrt bug #458436

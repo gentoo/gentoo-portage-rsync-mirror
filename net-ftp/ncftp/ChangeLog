@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.139 2013/04/02 10:06:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.140 2013/04/13 20:47:34 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ncftp-3.2.5-r2.ebuild:
+  Stable for s390, wrt bug #463110
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ncftp-3.2.5-r2.ebuild:
   Stable for sh, wrt bug #463110

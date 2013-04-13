@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.646 2013/04/07 20:51:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.647 2013/04/13 20:54:00 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> python-2.5.4-r5.ebuild,
+  python-2.6.8-r1.ebuild, python-2.7.3-r3.ebuild, python-3.1.5-r1.ebuild,
+  python-3.2.3-r2.ebuild:
+  Stable for s390, wrt bug #458318
 
   07 Apr 2013; Mike Gilbert <floppym@gentoo.org> python-2.7.4.ebuild:
   Adjust the sys-libs/db dep and add some || die.

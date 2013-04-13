@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.220 2013/04/02 23:09:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.221 2013/04/13 20:59:12 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gettext-0.18.2.ebuild:
+  Stable for s390, wrt bug #460792
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gettext-0.18.2.ebuild:
   Stable for hppa, wrt bug #460792

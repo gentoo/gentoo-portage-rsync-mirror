@@ -1,6 +1,9 @@
 # ChangeLog for app-text/psutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.36 2013/04/12 17:24:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.37 2013/04/13 20:53:15 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> psutils-1.17-r2.ebuild:
+  Stable for s390, wrt bug #460618
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> psutils-1.17-r2.ebuild:
   Stable for ia64, wrt bug #460618

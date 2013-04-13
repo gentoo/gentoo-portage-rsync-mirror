@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.704 2013/04/11 10:31:21 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.705 2013/04/13 20:46:03 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> php-5.3.23.ebuild,
+  php-5.4.13.ebuild:
+  Stable for s390, wrt bug #459904
 
   11 Apr 2013; Ole Markus With <olemarkus@gentoo.org> -php-5.3.23-r1.ebuild,
   -php-5.3.23-r2.ebuild, -php-5.4.13-r2.ebuild, -php-5.4.13-r3.ebuild:

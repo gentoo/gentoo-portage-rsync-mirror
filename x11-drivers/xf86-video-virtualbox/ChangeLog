@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.112 2013/03/17 16:02:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.113 2013/04/13 20:34:42 polynomial-c Exp $
+
+*xf86-video-virtualbox-4.2.12 (13 Apr 2013)
+*xf86-video-virtualbox-4.1.26 (13 Apr 2013)
+
+  13 Apr 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +xf86-video-virtualbox-4.1.26.ebuild, -xf86-video-virtualbox-4.2.8.ebuild,
+  +xf86-video-virtualbox-4.2.12.ebuild:
+  Version bump. Removed old.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
