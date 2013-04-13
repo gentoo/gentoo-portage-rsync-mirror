@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.6.2.ebuild,v 1.3 2013/02/14 12:08:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.6.2.ebuild,v 1.4 2013/04/13 12:42:01 ikelos Exp $
 
 EAPI="5"
 
@@ -33,3 +33,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 G2CONF="$(use_enable eds evolution-data-server)"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.6.2-gtksourceview-3.8.0.patch"
+}

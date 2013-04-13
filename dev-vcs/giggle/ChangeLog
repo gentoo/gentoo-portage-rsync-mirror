@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.19 2013/02/14 12:08:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.20 2013/04/13 12:42:01 ikelos Exp $
+
+  13 Apr 2013; Mike Auty <ikelos@gentoo.org> -giggle-0.5.ebuild,
+  giggle-0.6.2.ebuild, +files/giggle-0.6.2-gtksourceview-3.8.0.patch:
+  Fix compilation with >= gtksourceview-3.8.0 by adding the appropriate include
+  statements at the right locations. Fixes bug 465652.
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> giggle-0.6.2.ebuild:
   Stable for x86, wrt bug #457352
