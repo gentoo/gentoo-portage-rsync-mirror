@@ -1,6 +1,23 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.11 2013/04/12 23:54:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.12 2013/04/13 00:28:42 xmw Exp $
+
+*oyranos-0.9.1-r2 (13 Apr 2013)
+
+  13 Apr 2013; Michael Weber <xmw@gentoo.org> +oyranos-0.9.1-r2.ebuild,
+  +files/oyranos-0.9.1-fix-array-access.patch,
+  +files/oyranos-0.9.1-fix-crash-over-missed-output-image.patch,
+  +files/oyranos-0.9.1-fix-double-object-release.patch,
+  +files/oyranos-0.9.1-fix-more-compiler-warnings.patch,
+  +files/oyranos-0.9.1-fix-oyRankMap-helper-functions-crashes.patch,
+  +files/oyranos-0.9.1-fix-oyStringSegment-crash.patch,
+  +files/oyranos-0.9.1-fix-pseq-crash.patch,
+  +files/oyranos-0.9.1-fix-real-compiler-warnings.patch,
+  +files/oyranos-0.9.1-initialise-memory-for-strtod.patch,
+  +files/oyranos-0.9.1-omit-profile-with-error.patch,
+  +files/oyranos-0.9.1-support-pur-xrandr-without-xinerama.patch:
+  Revbump fix RDEPEND on icc profiles (bug 464094), compiler/runtime issues
+  (bug 463900), add fltk IUSE (bug 464102). Thanks to Andreas Sturmlechner.
 
   12 Apr 2013; Michael Weber <xmw@gentoo.org> oyranos-0.9.4.ebuild:
   Fix libXcm dependency (bug 463412 by Mario Kicherer)
