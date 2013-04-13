@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.177 2013/04/01 06:35:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.178 2013/04/13 19:20:10 vapier Exp $
+
+  13 Apr 2013; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Patch by hal to punt unused addons #465108.
 
   01 Apr 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml,
   xbmc-12.1.ebuild, xbmc-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.23 2013/03/30 20:14:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.24 2013/04/13 19:07:31 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -300,7 +300,7 @@ remove_i18n_include() {
 		-e "s:^#include[[:space:]]*\"i18n.h\"://:"
 	done
 
-	dev_check "removed i18n.h for ${@}"
+	dev_check "removed i18n.h include in ${@}"
 }
 # end new vdr-plugin-2.eclass content
 
