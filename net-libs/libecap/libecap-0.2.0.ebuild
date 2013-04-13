@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/libecap-0.2.0.ebuild,v 1.13 2013/03/03 18:16:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/libecap-0.2.0.ebuild,v 1.14 2013/04/13 18:01:47 tomwij Exp $
 
 EAPI="4"
 
-inherit autotools-utils eutils
+inherit autotools-utils eutils toolchain-funcs
 
 DESCRIPTION="API for implementing ICAP content analysis and adaptation"
 HOMEPAGE="http://www.e-cap.org/"
@@ -18,3 +18,10 @@ IUSE="static-libs"
 RDEPEND="!net-libs/libecap:0"
 
 DOCS=( CREDITS NOTICE README change.log )
+
+src_prepare() {
+	default
+
+	# Respect AR. (bug #457734)
+	tc-export AR
+}
