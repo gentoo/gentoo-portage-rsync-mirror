@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.1-r2.ebuild,v 1.1 2013/04/13 00:28:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.1-r2.ebuild,v 1.2 2013/04/13 00:39:08 xmw Exp $
 
 EAPI=4
 
@@ -66,6 +66,10 @@ src_prepare() {
 			-i makefile.in || die
 		sed -e '/all:/s:oyranos-xforms-fltk::' \
 			-i oforms/oyranos_xforms.makefile || die
+	fi
+	if has_version "<app-admin/elektra-0.8.3" ; then
+		sed -e '/^#include/s:kdb.h:elektra-kdb.h:' \
+			-i test.c test2.cpp oyranos_elektra.c || die
 	fi
 }
 
