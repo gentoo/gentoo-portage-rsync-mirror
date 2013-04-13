@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/pdf-inspector
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.7 2012/12/01 15:26:44 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.9 2013/04/13 06:42:32 graaff Exp $
+
+*pdf-inspector-1.1.0 (13 Apr 2013)
+
+  13 Apr 2013; Hans de Graaff <graaff@gentoo.org> +pdf-inspector-1.1.0.ebuild:
+  Version bump.
+
+  13 Apr 2013; Hans de Graaff <graaff@gentoo.org> -pdf-inspector-1.0.1.ebuild:
+  Cleanup.
 
 *pdf-inspector-1.0.2 (01 Dec 2012)
 
