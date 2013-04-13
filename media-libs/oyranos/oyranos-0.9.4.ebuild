@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4.ebuild,v 1.1 2013/03/23 18:17:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4.ebuild,v 1.2 2013/04/12 23:54:12 xmw Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND=">=app-admin/elektra-0.8.3-r1
 	|| ( media-libs/lcms:0 media-libs/lcms:2 )
 	media-libs/libpng:0
 	media-libs/libraw
-	>=media-libs/libXcm-0.5.1
+	>=media-libs/libXcm-0.5.2
 	fltk? ( x11-libs/fltk:1 )
 	X? ( x11-libs/libXfixes
 		x11-libs/libXrandr

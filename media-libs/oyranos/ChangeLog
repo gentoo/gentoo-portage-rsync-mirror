@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.10 2013/03/23 18:17:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.11 2013/04/12 23:54:12 xmw Exp $
+
+  12 Apr 2013; Michael Weber <xmw@gentoo.org> oyranos-0.9.4.ebuild:
+  Fix libXcm dependency (bug 463412 by Mario Kicherer)
 
 *oyranos-0.9.4 (23 Mar 2013)
 
@@ -59,4 +62,3 @@
   05 Feb 2012; Michael Weber <xmw@gentoo.org> +oyranos-0.3.2.ebuild,
   +metadata.xml:
   Initial import from sunrise (bug 287353)
-
