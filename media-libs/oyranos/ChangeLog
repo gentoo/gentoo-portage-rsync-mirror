@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.13 2013/04/13 00:39:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.14 2013/04/13 02:23:48 xmw Exp $
+
+  13 Apr 2013; Michael Weber <xmw@gentoo.org> oyranos-0.4.0-r1.ebuild,
+  oyranos-0.9.1-r1.ebuild, oyranos-0.9.1-r2.ebuild:
+  Move elektra include file in subdir (bug 447246, Andreas Sturmlechner)
 
   13 Apr 2013; Michael Weber <xmw@gentoo.org> oyranos-0.9.1-r2.ebuild:
   Re-add include kdb.h patch for old elektra.

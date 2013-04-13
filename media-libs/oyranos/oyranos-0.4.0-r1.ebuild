@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.4.0-r1.ebuild,v 1.2 2012/11/23 21:55:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.4.0-r1.ebuild,v 1.3 2013/04/13 02:23:48 xmw Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X doc static-libs test xinerama"
 
-RDEPEND="<app-admin/elektra-0.8.3
+RDEPEND="<app-admin/elektra-0.7.1-r3
 	dev-libs/libxml2
 	dev-libs/yajl
 	media-gfx/exiv2

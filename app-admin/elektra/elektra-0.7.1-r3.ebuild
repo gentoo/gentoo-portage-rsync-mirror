@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r3.ebuild,v 1.2 2013/04/13 01:48:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r3.ebuild,v 1.3 2013/04/13 02:08:44 xmw Exp $
 
 EAPI=4
 
-inherit autotools eutils
+inherit autotools eutils multilib
 
 DESCRIPTION="universal and secure framework to store config parameters in a hierarchical key-value pair mechanism"
 HOMEPAGE="http://freedesktop.org/wiki/Software/Elektra"
@@ -64,14 +64,17 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	local my_f=""
-	#avoid collision with kerberos (bug 403025)
+	#avoid collision with kerberos (bug 403025, 447246)
+	mkdir "${D}"/usr/include/elektra || die
 	for my_f in kdb kdbbackend.h kdbos.h kdbtools.h keyset kdb.h \
 		kdbloader.h kdbprivate.h key ; do
-		mv "${D}"/usr/include/{,elektra-}"${my_f}" || die
-		elog "/usr/include/${my_f} installed as elektra-${my_f}"
+		mv "${D}"/usr/include/{,elektra\/}"${my_f}" || die
+		elog "/usr/include/${my_f} installed as elektra/${my_f}"
 	done
-	sed -e '/^#include/s:kdbos.h:elektra-kdbos.h:' \
-		-i "${D}"/usr/include/elektra-kdb.h || die
+	sed -e '/^includedir/s/$/\/elektra/' \
+		-i "${D}"/usr/$(get_libdir)/pkgconfig/elektra*.pc || die
+	sed -e '/^Cflags/s/$/\/elektra/' \
+		-i "${D}"/usr/$(get_libdir)/pkgconfig/elektra*.pc || die
 
 	#avoid collision with allegro (bug 409305)
 	for my_f in $(find "${D}"/usr/share/man/man3 -name "key.3*") ; do

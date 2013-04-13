@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14653 2013/04/12 10:08:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14654 2013/04/13 02:19:34 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Weber <xmw@gentoo.org> (13 Apr 2013)
+# Does not work with rdeps, mask for testing (bug #447246)
+=media-libs/oyranos-0.9.4
 
 # Pacho Ramos <pacho@gentoo.org> (11 Apr 2013)
 # Breaks reverse deps, bug #464994

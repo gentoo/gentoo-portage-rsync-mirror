@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7720 2013/04/12 10:08:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7722 2013/04/13 02:19:33 xmw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Apr 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Does not work with rdeps, mask for testing (bug #447246)
+
+  13 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  targets/desktop/gnome/package.use:
+  Enable USE=theora for gst-plugins-base:1.0 on gnome, needed for default
+  gnome3 apps such as cheese.
 
   12 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Remove obsolete mask on febootstrap
