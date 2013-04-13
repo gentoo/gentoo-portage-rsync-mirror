@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/bitset-2.8.3.ebuild,v 1.1 2013/02/18 13:57:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/bitset-2.8.3.ebuild,v 1.2 2013/04/13 10:47:06 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/chriso/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="jemalloc static-libs tcmalloc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND="tcmalloc? ( dev-util/google-perftools )
 	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
