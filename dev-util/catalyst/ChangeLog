@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.261 2013/03/09 02:35:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.262 2013/04/13 07:04:57 mattst88 Exp $
+
+  13 Apr 2013; Matt Turner <mattst88@gentoo.org> catalyst-9999.ebuild:
+  syslinux is only available on x86/amd64. Only require it there.
 
   09 Mar 2013; Matt Turner <mattst88@gentoo.org> catalyst-9999.ebuild:
   Don't install ChangeLog. It's not updated.

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.453 2013/04/12 17:19:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.454 2013/04/13 07:22:10 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> bind-9.9.2_p2.ebuild:
+  Stable for sparc, wrt bug #463497
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> bind-9.9.2_p2.ebuild:
   Stable for ia64, wrt bug #463497

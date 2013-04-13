@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.162 2013/04/12 17:16:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.163 2013/04/13 07:19:29 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> thunar-1.6.2.ebuild:
+  Stable for sparc, wrt bug #465286
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> thunar-1.6.2.ebuild:
   Stable for ia64, wrt bug #465286

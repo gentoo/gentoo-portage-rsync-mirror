@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.59 2013/04/12 17:15:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.60 2013/04/13 07:17:55 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rdate-1.4-r4.ebuild:
+  Stable for sparc, wrt bug #464384
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rdate-1.4-r4.ebuild:
   Stable for ia64, wrt bug #464384
