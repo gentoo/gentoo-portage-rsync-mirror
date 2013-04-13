@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.10.1.ebuild,v 1.5 2013/04/02 20:51:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.10.1.ebuild,v 1.6 2013/04/13 15:43:28 kensington Exp $
 
 EAPI=5
 
@@ -68,6 +68,7 @@ src_configure() {
 		$(cmake-utils_use_with shapefile libshp)
 		-DBUILD_MARBLE_TESTS=OFF
 		-DWITH_liblocation=0
+		-DWITH_QextSerialPort=OFF
 		$(use kde && cmake-utils_use_with python PyKDE4)
 	)
 
