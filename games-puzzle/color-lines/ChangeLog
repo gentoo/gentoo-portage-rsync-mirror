@@ -1,0 +1,11 @@
+# ChangeLog for games-puzzle/color-lines
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/color-lines/ChangeLog,v 1.1 2013/04/13 09:39:27 pinkbyte Exp $
+
+*color-lines-0.6 (13 Apr 2013)
+
+  13 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +color-lines-0.6.ebuild,
+  +files/color-lines-0.6-Makefile.patch, +metadata.xml:
+  Initial commit, wrt bug #459732. Thanks to <warmcharm AT yandex.ru> for
+  initial ebuild and Julian Ospald for ebuild fixes
+
