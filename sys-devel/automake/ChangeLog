@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.190 2013/04/12 17:24:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.191 2013/04/13 07:39:30 ago Exp $
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> automake-1.12.6.ebuild:
+  Stable for sparc, wrt bug #459962
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> automake-1.12.6.ebuild:
   Stable for ia64, wrt bug #459962

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/vdr-channel-logos
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/ChangeLog,v 1.5 2011/01/17 20:35:04 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/ChangeLog,v 1.6 2013/04/13 07:44:25 ulm Exp $
+
+  13 Apr 2013; Ulrich Müller <ulm@gentoo.org> vdr-channel-logos-0.2.ebuild,
+  vdr-channel-logos-0.2-r1.ebuild:
+  Change LICENSE to fairuse, bug 448412.
 
 *vdr-channel-logos-0.2-r1 (17 Jan 2011)
 

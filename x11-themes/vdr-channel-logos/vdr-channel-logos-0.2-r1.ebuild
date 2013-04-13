@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/vdr-channel-logos-0.2-r1.ebuild,v 1.1 2011/01/17 20:35:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/vdr-channel-logos-0.2-r1.ebuild,v 1.2 2013/04/13 07:44:25 ulm Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Logos for vdr-skin*"
 HOMEPAGE="http://www.vdrskins.org/"
 SRC_URI="http://www.vdrskins.org/vdrskins/albums/userpics/10138/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="fairuse"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""

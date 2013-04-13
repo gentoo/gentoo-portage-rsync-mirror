@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.101 2013/04/02 05:35:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.102 2013/04/13 07:49:19 radhermit Exp $
+
+*sharutils-4.13.5 (13 Apr 2013)
+
+  13 Apr 2013; Tim Harder <radhermit@gentoo.org> -sharutils-4.13.4.ebuild,
+  +sharutils-4.13.5.ebuild:
+  Version bump and remove old (fixes bug #465380).
 
 *sharutils-4.13.4 (02 Apr 2013)
 

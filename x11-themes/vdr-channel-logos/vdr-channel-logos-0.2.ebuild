@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/vdr-channel-logos-0.2.ebuild,v 1.5 2010/02/24 14:21:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/vdr-channel-logos-0.2.ebuild,v 1.6 2013/04/13 07:44:25 ulm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Logos for vdr-skin*"
 HOMEPAGE="http://www.vdrskins.org/"
 SRC_URI="http://www.vdrskins.org/vdrskins/albums/userpics/10138/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="fairuse"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE=""
