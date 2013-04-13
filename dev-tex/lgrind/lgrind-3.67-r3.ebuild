@@ -1,16 +1,17 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r3.ebuild,v 1.4 2012/03/06 14:21:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r3.ebuild,v 1.5 2013/04/13 17:47:50 ulm Exp $
 
 inherit latex-package toolchain-funcs eutils
 
 DESCRIPTION="A source pretty printer for LaTeX - styles to stylise your source and code examples."
 SRC_URI="mirror://gentoo/${PN}.tar.gz"
-LICENSE="as-is"
 
-IUSE="examples"
+LICENSE="BSD LGrind-Jacobson"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
+IUSE="examples"
+
 S=${WORKDIR}/${PN}
 
 src_unpack() {
