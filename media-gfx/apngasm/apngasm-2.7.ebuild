@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngasm/apngasm-2.7.ebuild,v 1.1 2012/10/03 09:52:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngasm/apngasm-2.7.ebuild,v 1.2 2013/04/13 14:30:07 ssuominen Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="create an APNG from multiple PNG files"
 HOMEPAGE="http://sourceforge.net/projects/apngasm/"
@@ -15,13 +15,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libpng[apng]
-	sys-libs/zlib"
+RDEPEND="media-libs/libpng:0=[apng]
+	sys-libs/zlib:="
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	app-arch/unzip"
+	app-arch/unzip
+	virtual/pkgconfig"
 
 S=${WORKDIR}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-string_h.patch #465780
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" LDLIBS="$($(tc-getPKG_CONFIG) --libs libpng --libs zlib)" ${PN}
