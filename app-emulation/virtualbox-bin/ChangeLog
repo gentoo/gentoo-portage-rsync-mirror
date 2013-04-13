@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.152 2013/04/09 07:38:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.153 2013/04/13 20:12:51 polynomial-c Exp $
+
+*virtualbox-bin-4.2.12 (13 Apr 2013)
+*virtualbox-bin-4.1.26 (13 Apr 2013)
+
+  13 Apr 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-bin-4.1.26.ebuild, -virtualbox-bin-4.2.8.ebuild,
+  +virtualbox-bin-4.2.12.ebuild:
+  Version bump. Removed old.
 
   09 Apr 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Removing Alessio from metadata

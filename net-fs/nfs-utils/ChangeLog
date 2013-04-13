@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.214 2013/03/24 21:44:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.215 2013/04/13 20:02:02 vapier Exp $
+
+  13 Apr 2013; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.6.ebuild,
+  nfs-utils-1.2.7.ebuild:
+  Force sqlite test to work even when cross-compiling #465576 by Dennis
+  Schridde.
 
   24 Mar 2013; Mike Frysinger <vapier@gentoo.org>
   +files/nfs-utils-1.2.7-libio.patch, nfs-utils-1.2.6.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.15 2013/03/24 21:44:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.16 2013/04/13 20:02:02 vapier Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 	sys-libs/e2fsprogs-libs
 	net-nds/rpcbind
 	net-libs/libtirpc
-	nfsdcld? ( dev-db/sqlite )
+	nfsdcld? ( >=dev-db/sqlite-3.3 )
 	nfsv4? (
 		>=dev-libs/libevent-1.0b
 		>=net-libs/libnfsidmap-0.21-r1
@@ -64,6 +64,7 @@ src_prepare() {
 }
 
 src_configure() {
+	export libsqlite3_cv_is_recent=yes # Our DEPEND forces this.
 	export ac_cv_header_keyutils_h=$(usex nfsidmap)
 	econf \
 		--with-statedir=/var/lib/nfs \
