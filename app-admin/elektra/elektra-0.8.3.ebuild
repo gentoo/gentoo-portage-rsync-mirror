@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.8.3.ebuild,v 1.2 2012/11/04 12:01:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.8.3.ebuild,v 1.3 2013/04/13 01:48:20 xmw Exp $
 
 EAPI=4
 
@@ -53,6 +53,11 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	dodir /usr/share/man/man3
+	cmake-utils_src_compile
 }
 
 src_install() {

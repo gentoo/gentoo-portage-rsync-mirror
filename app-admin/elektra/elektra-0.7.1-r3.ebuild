@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r3.ebuild,v 1.1 2013/04/13 00:24:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r3.ebuild,v 1.2 2013/04/13 01:48:20 xmw Exp $
 
 EAPI=4
 
@@ -53,6 +53,11 @@ src_configure() {
 		$(use_enable static-libs static) \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-develdocdir=/usr/share/doc/${PF}
+}
+
+src_compile() {
+	dodir /usr/share/man/man3
+	emake
 }
 
 src_install() {
