@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-ssh-multi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.8 2012/08/14 18:44:14 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.9 2013/04/13 06:03:26 graaff Exp $
+
+*net-ssh-multi-1.2.0 (13 Apr 2013)
+
+  13 Apr 2013; Hans de Graaff <graaff@gentoo.org> +net-ssh-multi-1.2.0.ebuild:
+  Version bump.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.

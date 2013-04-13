@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.61 2013/04/02 20:55:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.62 2013/04/13 06:02:03 yngwin Exp $
+
+*fcitx-4.2.7-r1 (13 Apr 2013)
+
+  13 Apr 2013; Ben de Groot <yngwin@gentoo.org> +fcitx-4.2.7-r1.ebuild:
+  Apply fixed PNGs from upstream git commit to fix cairo/libpng-1.6 crash (bug
+  #465658)
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> fcitx-4.2.7.ebuild:
   Stable for ppc64, wrt bug #462890
