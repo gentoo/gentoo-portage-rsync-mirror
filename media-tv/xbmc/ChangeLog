@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.178 2013/04/13 19:20:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.179 2013/04/13 19:45:21 vapier Exp $
+
+  13 Apr 2013; Mike Frysinger <vapier@gentoo.org> files/generate.sh,
+  xbmc-9999.ebuild:
+  Refresh generated python interfaces #464048 by Marcel Unbehaun.
 
   13 Apr 2013; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Patch by hal to punt unused addons #465108.
