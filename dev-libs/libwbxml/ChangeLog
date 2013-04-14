@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libwbxml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/ChangeLog,v 1.26 2013/04/14 16:21:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/ChangeLog,v 1.27 2013/04/14 17:13:29 pinkbyte Exp $
+
+  14 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -libwbxml-0.10.1.ebuild:
+  Drop old version, wrt bug #460598
 
   14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libwbxml-0.10.9.ebuild:
   Stable for ppc, wrt bug #460598
