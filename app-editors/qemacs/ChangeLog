@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.60 2013/02/28 00:33:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.61 2013/04/14 16:05:04 ulm Exp $
+
+  14 Apr 2013; Ulrich Müller <ulm@gentoo.org>
+  qemacs-0.4.0_pre20090420-r1.ebuild:
+  Add slot operator to libpng dependency. Update EAPI to 5. Specify LICENSE
+  more precisely.
 
   28 Feb 2013; Mike Frysinger <vapier@gentoo.org>
   qemacs-0.4.0_pre20090420-r1.ebuild:

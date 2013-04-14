@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.236 2013/01/21 19:49:23 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.239 2013/04/14 16:20:46 ago Exp $
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.21-r12.ebuild:
+  Stable for ppc, wrt bug #465390
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.21-r12.ebuild:
+  Stable for x86, wrt bug #465390
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.21-r12.ebuild:
+  Stable for amd64, wrt bug #465390
 
   21 Jan 2013; Steev Klimaszewski <steev@gentoo.org> mutt-1.5.21-r12.ebuild:
   Add ~arm keyword

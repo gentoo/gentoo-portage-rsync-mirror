@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.158 2013/04/13 07:37:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.159 2013/04/14 16:19:51 ago Exp $
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> anjuta-3.6.2-r1.ebuild:
+  Stable for ppc, wrt bug #463660
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> anjuta-3.6.2-r1.ebuild:
   Stable for sparc, wrt bug #463660
