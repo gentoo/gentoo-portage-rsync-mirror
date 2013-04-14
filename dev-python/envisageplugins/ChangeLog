@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/envisageplugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/ChangeLog,v 1.12 2013/02/04 02:39:31 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/ChangeLog,v 1.13 2013/04/14 10:31:36 idella4 Exp $
+
+*envisageplugins-3.2.0-r1 (14 Apr 2013)
+
+  14 Apr 2013; Ian Delaney <idella4@gentoo.org>
+  +envisageplugins-3.2.0-r1.ebuild, +files/set-INFO.patch,
+  envisageplugins-3.2.0.ebuild:
+  migration -> distutils-r1
 
   04 Feb 2013; Benda Xu <heroxbd@gentoo.org> envisageplugins-3.2.0.ebuild:
   keyword ~amd64-linux
