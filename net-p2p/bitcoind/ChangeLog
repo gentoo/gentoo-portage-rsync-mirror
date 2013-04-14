@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.60 2013/04/07 23:18:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.61 2013/04/14 18:49:43 blueness Exp $
+
+  14 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  bitcoind-0.4.9_rc2.ebuild, bitcoind-0.5.8_rc2.ebuild, bitcoind-0.6.3.ebuild,
+  bitcoind-0.6.5_rc2.ebuild, bitcoind-0.7.3_rc2.ebuild, bitcoind-0.8.1.ebuild:
+  Fix dependency on openssl, bug #465888
 
 *bitcoind-0.4.9_rc2 (07 Apr 2013)
 *bitcoind-0.7.3_rc2 (07 Apr 2013)

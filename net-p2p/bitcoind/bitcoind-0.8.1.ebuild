@@ -1,6 +1,6 @@
 # Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.1.ebuild,v 1.1 2013/03/27 22:52:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.1.ebuild,v 1.2 2013/04/14 18:49:43 blueness Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ IUSE="examples ipv6 logrotate upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0[threads(+)]
-	dev-libs/openssl[-bindist]
+	dev-libs/openssl:0[-bindist]
 	logrotate? (
 		app-admin/logrotate
 	)

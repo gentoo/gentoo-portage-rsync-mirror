@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.57 2013/04/08 00:08:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.59 2013/04/14 18:54:52 blueness Exp $
+
+  14 Apr 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix Manifest signing
+
+  14 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.5.8_rc2.ebuild, bitcoin-qt-0.6.3.ebuild,
+  bitcoin-qt-0.6.5_rc2.ebuild, bitcoin-qt-0.7.3_rc2.ebuild,
+  bitcoin-qt-0.8.1.ebuild:
+  Fix dependency on openssl, bug #465888
 
 *bitcoin-qt-0.5.8_rc2 (08 Apr 2013)
 *bitcoin-qt-0.6.5_rc2 (08 Apr 2013)

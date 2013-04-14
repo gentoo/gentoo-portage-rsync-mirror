@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.6.3.ebuild,v 1.8 2013/03/02 23:08:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.6.3.ebuild,v 1.9 2013/04/14 18:53:10 blueness Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ IUSE="$IUSE 1stclassmsg dbus +eligius +qrcode upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0[threads(+)]
-	dev-libs/openssl[-bindist]
+	dev-libs/openssl:0[-bindist]
 	qrcode? (
 		media-gfx/qrencode
 	)
