@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-11.8.16.ebuild,v 1.5 2013/03/29 20:55:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-11.8.16.ebuild,v 1.6 2013/04/14 12:22:24 angelos Exp $
 
 EAPI=4
 inherit vala
@@ -21,8 +21,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_configure() {
-	VALAC=$(type -p valac-0.10) \
-		econf --disable-static
+	econf --disable-static
 }
 
 src_install() {
