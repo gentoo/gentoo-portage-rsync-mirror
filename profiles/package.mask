@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14657 2013/04/14 17:46:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14658 2013/04/14 18:31:20 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -394,11 +394,6 @@ sys-kernel/linuxwacom-module
 # See 461608. Unmask it only if you want abi_x86_32
 # which means you have ABI_X86=32 set in your make.conf
 =app-emulation/emul-linux-x86-xlibs-20130224-r1
-
-# Sergey Popov <pinkbyte@gentoo.org> (13 Mar 2013)
-# Old kernels, not supported by current sys-fs/udev
-# Masked by maintainer's request, removal in 30 days
-=sys-kernel/openvz-sources-2.6.18*
 
 # Tom Wijsman <TomWij@gentoo.org> (12 Mar 2013)
 # 2.5.* has known security and other issues due to an affected

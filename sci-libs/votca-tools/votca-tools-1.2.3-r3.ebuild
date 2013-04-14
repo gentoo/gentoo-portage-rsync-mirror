@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3-r2.ebuild,v 1.1 2013/02/06 17:25:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3-r3.ebuild,v 1.1 2013/04/14 18:08:09 ottxor Exp $
 
-EAPI="3"
+EAPI="5"
 
 inherit cmake-utils eutils multilib
 
@@ -27,7 +27,7 @@ IUSE="doc +fftw +gsl sqlite +system-boost"
 RDEPEND="fftw? ( sci-libs/fftw:3.0 )
 	dev-libs/expat
 	gsl? ( sci-libs/gsl )
-	system-boost? ( dev-libs/boost )
+	system-boost? ( dev-libs/boost:= )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
@@ -60,15 +60,15 @@ src_configure() {
 		-DWITH_RC_FILES=OFF
 		-DLIB=$(get_libdir)
 	)
-	cmake-utils_src_configure || die
+	cmake-utils_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install || die
+	cmake-utils_src_install
 	if use doc; then
 		cd "${CMAKE_BUILD_DIR}" || die
 		cd share/doc || die
 		doxygen || die
-		dohtml -r html/* || die
+		dohtml -r html/*
 	fi
 }

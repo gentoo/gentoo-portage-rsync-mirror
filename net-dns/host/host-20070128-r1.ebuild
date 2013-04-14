@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128-r1.ebuild,v 1.10 2012/10/05 18:06:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128-r1.ebuild,v 1.11 2013/04/14 18:06:00 ulm Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs multilib
@@ -9,7 +9,7 @@ DESCRIPTION="A powerful command-line DNS query and test tool implementing many a
 HOMEPAGE="http://www.weird.com/~woods/projects/host.html"
 SRC_URI="ftp://ftp.weird.com/pub/Planix/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="debug"

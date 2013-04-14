@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.5.0.ebuild,v 1.7 2013/02/25 13:30:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.5.0.ebuild,v 1.8 2013/04/14 18:14:58 blueness Exp $
 
 EAPI="4"
 
 inherit eutils
 
 DESCRIPTION="Modular Bitcoin CPU/GPU/FPGA miner in C"
-HOMEPAGE="https://bitcointalk.org/index.php?topic=78192.0"
+HOMEPAGE="https://bitcointalk.org/?topic=168174"
 SRC_URI="http://luke.dashjr.org/programs/bitcoin/files/${PN}/${PV}/${P}.tbz2"
 
 LICENSE="GPL-3"
