@@ -1,6 +1,19 @@
 # ChangeLog for dev-php/xdebug-client
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.55 2013/03/09 12:04:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.57 2013/04/14 06:29:24 olemarkus Exp $
+
+  14 Apr 2013; Ole Markus With <olemarkus@gentoo.org>
+  -xdebug-client-2.1.0.ebuild, -xdebug-client-2.1.1.ebuild,
+  -xdebug-client-2.1.2.ebuild, -xdebug-client-2.1.3.ebuild,
+  -xdebug-client-2.1.4.ebuild, -xdebug-client-2.2.0_rc1.ebuild,
+  -xdebug-client-2.2.0_rc2.ebuild:
+  Removing older versions
+
+*xdebug-client-2.2.2 (14 Apr 2013)
+
+  14 Apr 2013; Ole Markus With <olemarkus@gentoo.org>
+  +xdebug-client-2.2.2.ebuild:
+  Version bump
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xdebug-client-2.2.1.ebuild:
   Stable for ppc64, wrt bug #456598

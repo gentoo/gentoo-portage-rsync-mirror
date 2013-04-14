@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.1.1.ebuild,v 1.2 2012/09/09 17:37:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.2.2.ebuild,v 1.1 2013/04/14 06:27:09 olemarkus Exp $
+
+EAPI=4
 
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 
@@ -19,14 +21,8 @@ S="${WORKDIR}/xdebug-${MY_PV}/debugclient"
 DEPEND="libedit? ( dev-libs/libedit )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	chmod +x "${S}"/configure
-}
-
-src_compile() {
-	econf $(use_with libedit) --disable-dependency-tracking
-	emake || die "Build of debug client failed!"
+src_configure() {
+	econf $(use_with libedit)
 }
 
 src_install() {
