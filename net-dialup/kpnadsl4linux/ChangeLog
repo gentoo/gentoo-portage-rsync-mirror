@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/kpnadsl4linux
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.13 2006/03/12 14:42:32 mrness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.14 2013/04/14 13:02:40 pinkbyte Exp $
+
+*kpnadsl4linux-1.11 (14 Apr 2013)
+
+  14 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +kpnadsl4linux-1.11.ebuild,
+  +files/kpnadsl4linux-1.11-Makefile.patch:
+  Version bump: EAPI 5, epatch_user, show post-installation message only at
+  first install. Respect CC, CFLAGS and LDFLAGS variables, wrt bug #336109
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> kpnadsl4linux-1.10-r1.ebuild:
   Simplify dependencies and quote $FILESDIR.
