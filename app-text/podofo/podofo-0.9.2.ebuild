@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.8 2013/04/10 17:08:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.9 2013/04/14 20:02:59 zmedico Exp $
 
-EAPI=2
+EAPI=5
 inherit cmake-utils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="PoDoFo is a C++ library to work with the PDF file format."
@@ -14,15 +14,15 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="+boost idn debug test"
 
-RDEPEND="dev-lang/lua
-	idn? ( net-dns/libidn )
-	dev-libs/openssl
-	media-libs/fontconfig
-	media-libs/freetype:2
-	virtual/jpeg
-	>=media-libs/libpng-1.4:0
-	media-libs/tiff:0
-	sys-libs/zlib"
+RDEPEND="dev-lang/lua:=
+	idn? ( net-dns/libidn:= )
+	dev-libs/openssl:=
+	media-libs/fontconfig:=
+	media-libs/freetype:2=
+	virtual/jpeg:=
+	>=media-libs/libpng-1.4:0=
+	media-libs/tiff:0=
+	sys-libs/zlib:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	boost? ( dev-util/boost-build )
@@ -35,10 +35,8 @@ src_prepare() {
 
 	sed -i \
 		-e "s:LIBDIRNAME \"lib\":LIBDIRNAME \"$(get_libdir)\":" \
+		-e "s:LIBIDN_FOUND:HAVE_LIBIDN:g" \
 		CMakeLists.txt || die
-
-	sed -i \
-		-e "s:LIBIDN_FOUND:HAVE_LIBIDN:g" CMakeLists.txt || die
 
 	# Use pkg-config to find headers for bug #459404.
 	sed_args=
