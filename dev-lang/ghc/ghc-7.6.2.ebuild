@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.2.ebuild,v 1.1 2013/02/09 18:33:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.2.ebuild,v 1.2 2013/04/14 08:28:34 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -53,7 +53,7 @@ arch_binaries=""
 #arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~slyfox/ghc-alpha/ghc-bin-${PV}-alpha.tbz2 )"
 #arch_binaries="$arch_binaries arm? ( http://code.haskell.org/~slyfox/ghc-arm/ghc-bin-${PV}-arm.tbz2 )"
 arch_binaries="$arch_binaries amd64? ( http://code.haskell.org/~slyfox/ghc-amd64/ghc-bin-${PV}-amd64.tbz2 )"
-#arch_binaries="$arch_binaries ia64?  ( http://code.haskell.org/~slyfox/ghc-ia64/ghc-bin-${PV}-ia64-fixed-fiw.tbz2 )"
+arch_binaries="$arch_binaries ia64?  ( http://code.haskell.org/~slyfox/ghc-ia64/ghc-bin-${PV}-ia64.tbz2 )"
 #arch_binaries="$arch_binaries ppc? ( http://code.haskell.org/~slyfox/ghc-ppc/ghc-bin-${PV}-ppc.tbz2 )"
 #arch_binaries="$arch_binaries ppc64? ( http://code.haskell.org/~slyfox/ghc-ppc64/ghc-bin-${PV}-ppc64.tbz2 )"
 #arch_binaries="$arch_binaries sparc? ( http://code.haskell.org/~slyfox/ghc-sparc/ghc-bin-${PV}-sparc.tbz2 )"
@@ -71,6 +71,7 @@ yet_binary() {
 		#	return 0
 		#;;
 		amd64) return 0 ;;
+		ia64) return 0 ;;
 		#ppc) return 0 ;;
 		#ppc64) return 0 ;;
 		#sparc) return 0 ;;
@@ -84,8 +85,8 @@ SRC_URI="!binary? ( http://www.haskell.org/ghc/dist/${PV}/${P}-src.tar.bz2 )"
 LICENSE="BSD"
 SLOT="0/${PV}"
 # ghc on ia64 needs gcc to support -mcmodel=medium (or some dark hackery) to avoid TOC overflow
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
-IUSE="doc ghcbootstrap ghcmakebinary llvm"
+KEYWORDS="~amd64 ~ia64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+IUSE="doc ghcbootstrap ghcmakebinary +gmp llvm"
 IUSE+=" binary" # don't forget about me later!
 IUSE+=" elibc_glibc" # system stuff
 
@@ -118,6 +119,9 @@ PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1.2* )"
 PDEPEND="
 	${PDEPEND}
 	llvm? ( sys-devel/llvm )"
+
+# ia64 fails to return from STG GMP primitives (stage2 always SIGSEGVs)
+REQUIRED_USE="ia64? ( !gmp )"
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
@@ -389,11 +393,21 @@ src_prepare() {
 		# epatch "${FILESDIR}"/${PN}-7.4-rc2-macos-prefix-respect-gcc.patch
 		# epatch "${FILESDIR}"/${PN}-7.2.1-freebsd-CHOST.patch
 
+		we_want_libffi_workaround() {
+			use ghcmakebinary && return 1
+
+			# pick only registerised arches
+			# http://bugs.gentoo.org/463814
+			use amd64 && return 0
+			use x86 && return 0
+			return 1
+		}
 		# one mode external depend with unstable ABI be careful to stash it
 		# avoid external libffi runtime when we build binaries
-		use ghcmakebinary || epatch "${FILESDIR}"/${PN}-7.5.20120505-system-libffi.patch
+		we_want_libffi_workaround && epatch "${FILESDIR}"/${PN}-7.5.20120505-system-libffi.patch
 
 		epatch "${FILESDIR}"/${PN}-7.4.1-ticket-7339-fix-unaligned-unreg.patch
+		epatch "${FILESDIR}"/${PN}-7.6.2-integer-simple-div-mod.patch
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix
@@ -500,6 +514,12 @@ src_configure() {
 		# except when bootstrapping we just pick ghc up off the path
 		if ! use ghcbootstrap; then
 			export PATH="${WORKDIR}/usr/bin:${PATH}"
+		fi
+
+		if use gmp; then
+			echo "INTEGER_LIBRARY=integer-gmp" >> mk/build.mk
+		else
+			echo "INTEGER_LIBRARY=integer-simple" >> mk/build.mk
 		fi
 
 		# Since GHC 6.12.2 the GHC wrappers store which GCC version GHC was

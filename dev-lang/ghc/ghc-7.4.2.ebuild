@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.2.ebuild,v 1.7 2013/03/28 22:45:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.2.ebuild,v 1.8 2013/04/14 08:28:34 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -368,9 +368,18 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-7.4.1-darwin-CHOST.patch
 		epatch "${FILESDIR}"/${PN}-7.2.1-freebsd-CHOST.patch
 
+		we_want_libffi_workaround() {
+			use ghcmakebinary && return 1
+
+			# pick only registerised arches
+			# http://bugs.gentoo.org/463814
+			use amd64 && return 0
+			use x86 && return 0
+			return 1
+		}
 		# one mode external depend with unstable ABI be careful to stash it
 		# avoid external libffi runtime when we build binaries
-		use ghcmakebinary || epatch "${FILESDIR}"/${PN}-7.4.2-system-libffi.patch
+		we_want_libffi_workaround && epatch "${FILESDIR}"/${PN}-7.4.2-system-libffi.patch
 
 		epatch "${FILESDIR}"/${PN}-7.4.1-ticket-7339-fix-unaligned-unreg.patch
 

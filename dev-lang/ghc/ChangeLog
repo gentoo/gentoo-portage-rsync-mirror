@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.236 2013/03/28 22:45:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.237 2013/04/14 08:28:34 slyfox Exp $
+
+  14 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.6.2-integer-simple-div-mod.patch, ghc-7.4.2.ebuild,
+  ghc-7.6.2.ebuild:
+  Disabled usage of system's libffi workaround on unregisterised arches (fixes
+  bug #463814 by Agostino Sarubbo). Added USE=gmp (using ineteger-simple
+  restores ia64 support).
 
   28 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ghc-7.4.2.ebuild:
   Stable for x86, wrt bug #457780
