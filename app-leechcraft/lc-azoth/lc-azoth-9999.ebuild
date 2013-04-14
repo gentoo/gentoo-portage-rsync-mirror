@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.1 2013/03/08 21:55:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.2 2013/04/14 15:12:46 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit leechcraft
 
-DESCRIPTION="Azoth, the modular IM client for LeechCraft."
+DESCRIPTION="Azoth, the modular IM client for LeechCraft"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
+IUSE="debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt +depester +embedmedia +herbicide +hili +isterique
 		+juick +keeso +lastseen	+metacontacts media +msn +latex +nativeemoticons
 		+otroid +p100q +spell shx +standardstyles +xmpp +xtazy"
 
-DEPEND="~app-leechcraft/lc-core-${PV}
+COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 		dev-qt/qtwebkit:4
 		dev-qt/qtmultimedia:4
 		autoidler? ( x11-libs/libXScrnSaver )
@@ -27,7 +27,9 @@ DEPEND="~app-leechcraft/lc-core-${PV}
 		xmpp? ( =net-libs/qxmpp-9999 media-libs/speex )
 		xtazy? ( dev-qt/qtdbus:4 )
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	doc? ( app-doc/doxygen )"
+RDEPEND="${COMMON_DEPEND}
 	astrality? (
 		net-im/telepathy-mission-control
 		net-voip/telepathy-haze
@@ -45,6 +47,7 @@ REQUIRED_USE="|| ( standardstyles adiumstyles )"
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_enable crypt CRYPT)
+		$(cmake-utils_use_with doc DOCS)
 		$(cmake-utils_use_enable acetamide AZOTH_ACETAMIDE)
 		$(cmake-utils_use_enable adiumstyles AZOTH_ADIUMSTYLES)
 		$(cmake-utils_use_enable astrality AZOTH_ASTRALITY)
@@ -75,6 +78,11 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	use doc && dohtml -r "${CMAKE_BUILD_DIR}"/out/html/*
 }
 
 pkg_postinst() {
