@@ -1,6 +1,10 @@
 # ChangeLog for games-action/battalion
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.11 2010/10/15 10:53:31 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.12 2013/04/14 06:34:19 ulm Exp $
+
+  14 Apr 2013; Ulrich Müller <ulm@gentoo.org> battalion-1.4b.ebuild:
+  Fix LICENSE, see README file; also includes some code from tcltk that has a
+  HPND notice.
 
   15 Oct 2010; Tupone Alfredo <tupone@gentoo.org> battalion-1.4b.ebuild:
   Respect LDFLAGS. Bug #335136 by flameeyes@gentoo.org

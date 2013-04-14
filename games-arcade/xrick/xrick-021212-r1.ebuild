@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.15 2011/02/11 03:01:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.16 2013/04/14 06:58:59 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -9,11 +9,11 @@ DESCRIPTION="Clone of the Rick Dangerous adventure game from the 80's"
 HOMEPAGE="http://www.bigorno.net/xrick/"
 SRC_URI="http://www.bigorno.net/xrick/${P}.tgz"
 
-LICENSE="GPL-2 as-is"
+LICENSE="GPL-1+ xrick"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
-RESTRICT="mirror" # bug #149097
+RESTRICT="mirror bindist" # bug #149097
 
 DEPEND="media-libs/libsdl[video]"
 
