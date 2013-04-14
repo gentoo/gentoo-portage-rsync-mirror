@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.70 2013/01/15 22:43:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.74 2013/04/14 19:24:59 ago Exp $
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libvpx-1.1.0.ebuild:
+  Stable for ia64, wrt bug #465926
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libvpx-1.1.0.ebuild:
+  Stable for alpha, wrt bug #465926
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libvpx-1.1.0.ebuild:
+  Stable for x86, wrt bug #465926
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libvpx-1.1.0.ebuild:
+  Stable for amd64, wrt bug #465926
 
   15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> libvpx-1.0.0.ebuild,
   libvpx-1.0.0-r1.ebuild, libvpx-1.1.0.ebuild, libvpx-9999.ebuild:
