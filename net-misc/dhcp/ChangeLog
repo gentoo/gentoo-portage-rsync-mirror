@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.242 2013/04/13 20:58:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.243 2013/04/14 11:44:39 ago Exp $
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dhcp-4.2.5_p1.ebuild:
+  Stable for sh, wrt bug #463848
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dhcp-4.2.5_p1.ebuild:
   Stable for s390, wrt bug #463848
