@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.6 2007/02/12 17:35:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.7 2013/04/14 07:03:39 ulm Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="An x86 binary-only emulator for the Sony ZN-1, ZN-2, and Namco Syst
 HOMEPAGE="http://www.emuhype.com/"
 SRC_URI="http://www.emuhype.com/files/${P//[-.]/}-lnx.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="freedist"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
 IUSE=""

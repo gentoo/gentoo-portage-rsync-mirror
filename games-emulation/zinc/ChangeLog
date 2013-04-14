@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/zinc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/ChangeLog,v 1.10 2007/02/12 17:35:51 blubb Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/ChangeLog,v 1.11 2013/04/14 07:03:39 ulm Exp $
+
+  14 Apr 2013; Ulrich Müller <ulm@gentoo.org> zinc-1.1.ebuild:
+  Fix LICENSE, see readme.txt file: "This emulator may be freely distributed
+  as long as the ROM files are not included and the executable is not modified
+  in any way."
 
   12 Feb 2007; Simon Stelling <blubb@gentoo.org> zinc-1.1.ebuild:
   fix deps for amd64
