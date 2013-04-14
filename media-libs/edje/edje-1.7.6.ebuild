@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.6.ebuild,v 1.1 2013/04/10 19:47:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.6.ebuild,v 1.2 2013/04/14 22:18:49 tommy Exp $
 
 EAPI=2
 
@@ -15,11 +15,11 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug +cache static-libs vim-syntax"
 
 DEPEND="dev-lang/lua
-	>=dev-libs/eet-1.7.0
-	>=dev-libs/eina-1.7.0
-	>=dev-libs/embryo-1.7.0
-	>=media-libs/evas-1.7.0
-	>=dev-libs/ecore-1.7.0"
+	>=dev-libs/eet-1.7.6
+	>=dev-libs/eina-1.7.6
+	>=dev-libs/embryo-1.7.4
+	>=media-libs/evas-1.7.6
+	>=dev-libs/ecore-1.7.6"
 RDEPEND=${DEPEND}
 
 src_prepare() {
