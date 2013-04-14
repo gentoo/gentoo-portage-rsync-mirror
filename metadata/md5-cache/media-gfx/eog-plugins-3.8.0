@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.32:2 >=dev-libs/libpeas-0.7.4:= >=media-gfx/eog-3.5.5 
 REQUIRED_USE=map? ( exif )
 SLOT=0
 SRC_URI=mirror://gnome/sources/eog-plugins/3.8/eog-plugins-3.8.0.tar.xz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	96ca31031ada9967bcf96a4fd8977ae4	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	python-single-r1	b4f112abff5d77f982f83e1a9e554093	python-utils-r1	1aecc1aa688dad02e66772dcd9d0053d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	96ca31031ada9967bcf96a4fd8977ae4	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	python-single-r1	b4f112abff5d77f982f83e1a9e554093	python-utils-r1	1abc4a4828358a8fc1c4d65e74ae4a19	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=d57f98f72e3c265c35e95c9b240053c6

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.21 2013/04/07 17:02:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.22 2013/04/14 00:10:00 floppym Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -493,7 +493,7 @@ _python_rewrite_shebang() {
 
 	local f
 	for f; do
-		local shebang=$(head -n 1 "${f}")
+		local shebang=$(head -n 1 "${f}" | sed 's/\r$//')
 		local from
 		debug-print "${FUNCNAME}: path = ${f}"
 		debug-print "${FUNCNAME}: shebang = ${shebang}"

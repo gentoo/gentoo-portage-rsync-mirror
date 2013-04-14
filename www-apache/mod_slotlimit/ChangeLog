@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_slotlimit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_slotlimit/ChangeLog,v 1.4 2013/03/17 15:53:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_slotlimit/ChangeLog,v 1.5 2013/04/14 00:07:32 patrick Exp $
+
+  14 Apr 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Removing ghelm from metadata
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
