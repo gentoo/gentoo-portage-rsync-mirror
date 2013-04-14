@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/jedi
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jedi/ChangeLog,v 1.1 2013/04/14 20:53:23 hasufell Exp $
+
+*jedi-0.5_beta5 (14 Apr 2013)
+
+  14 Apr 2013; Julian Ospald <hasufell@gentoo.org> +jedi-0.5_beta5.ebuild,
+  +metadata.xml:
+  initial import
+

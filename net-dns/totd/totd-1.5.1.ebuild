@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.8 2012/06/13 12:08:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.9 2013/04/14 20:49:26 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Trick Or Treat Daemon, a DNS proxy for 6to4"
 HOMEPAGE="http://www.dillema.net/software/totd.html"
 SRC_URI="http://www.dillema.net/software/${PN}/${P}.tar.gz"
 
-LICENSE="BSD as-is"
+LICENSE="totd BSD BSD-4"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""

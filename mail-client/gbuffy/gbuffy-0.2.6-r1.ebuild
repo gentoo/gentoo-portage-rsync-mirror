@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/gbuffy-0.2.6-r1.ebuild,v 1.5 2012/06/14 15:41:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/gbuffy-0.2.6-r1.ebuild,v 1.6 2013/04/14 20:46:15 ulm Exp $
 
 EAPI=1
 
@@ -10,7 +10,7 @@ DESCRIPTION="A multi-mailbox biff-like monitor"
 HOMEPAGE="http://www.fiction.net/blong/programs/gbuffy/"
 SRC_URI="http://www.fiction.net/blong/programs/${PN}/${P}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="GBuffy GPL-2+"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="ssl"

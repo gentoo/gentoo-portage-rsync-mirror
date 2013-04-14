@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7726 2013/04/14 18:31:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7727 2013/04/14 20:44:08 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add GBuffy and totd licenses to MISC-FREE group, bugs 464770 and 465142.
 
   14 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Remove obsolete mask on sys-kernel/openvz-sources
