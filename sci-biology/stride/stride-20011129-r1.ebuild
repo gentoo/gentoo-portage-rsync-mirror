@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129-r1.ebuild,v 1.5 2012/05/08 03:58:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129-r1.ebuild,v 1.6 2013/04/14 14:03:08 jlec Exp $
 
 EAPI=4
 
@@ -12,11 +12,13 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/${PN}/src/${PN}.tar.gz
 	mirror://gentoo/${PN}-20060723-update.patch.bz2"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="STRIDE"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 S="${WORKDIR}"
+
+RESTRICT="mirror bindist"
 
 src_prepare() {
 	# this patch updates the source to the most recent

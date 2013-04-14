@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7724 2013/04/14 09:42:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7725 2013/04/14 14:29:04 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask new media-gfx/imagemagick temporarily for testing.
 
   14 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask broken libpng release to force upgrade.
