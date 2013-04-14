@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.12.ebuild,v 1.1 2013/04/13 20:34:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.12.ebuild,v 1.2 2013/04/14 08:00:46 polynomial-c Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dri"
 
-RDEPEND="<x11-base/xorg-server-1.13.99[-minimal]
+RDEPEND="<x11-base/xorg-server-1.14.99[-minimal]
 	x11-libs/libXcomposite"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.9998_pre20120806
