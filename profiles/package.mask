@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14656 2013/04/14 14:29:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14657 2013/04/14 17:46:08 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,8 +32,7 @@
 #--- END OF EXAMPLES ---
 
 # Samuli Suominen <ssuominen@gentoo.org> (14 Apr 2013)
-# Masked for testing. For example, dev-util/cmake is broken:
-# http://cmake.org/gitweb?p=cmake.git;a=commitdiff;h=5fe98556
+# Masked for testing.
 >=media-gfx/imagemagick-6.8.4.9
 
 # Samuli Suominen <ssuominen@gentoo.org> (14 Apr 2013)

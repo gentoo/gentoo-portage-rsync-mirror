@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/grive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.10 2013/03/23 19:51:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.11 2013/04/14 17:44:13 ottxor Exp $
+
+*grive-0.2.0-r1 (14 Apr 2013)
+
+  14 Apr 2013; Christoph Junghans <ottxor@gentoo.org> +grive-0.2.0-r1.ebuild,
+  -grive-0.2.0.ebuild:
+  added subslot deps
 
   23 Mar 2013; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0.ebuild:
   used new include json-c include path (bug #462632)

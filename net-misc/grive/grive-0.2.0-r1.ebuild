@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0.ebuild,v 1.7 2013/03/23 19:51:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0-r1.ebuild,v 1.1 2013/04/14 17:44:13 ottxor Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils eutils multilib
 
@@ -23,11 +23,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-libs/boost
+	dev-libs/boost:=
 	dev-libs/expat
-	dev-libs/json-c
-	dev-libs/libgcrypt
-	dev-libs/libgpg-error
+	dev-libs/json-c:=
+	dev-libs/libgcrypt:=
 	net-misc/curl
 	sys-devel/binutils
 	sys-libs/glibc
