@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.0.ebuild,v 1.4 2013/03/02 23:04:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.4.ebuild,v 1.1 2013/04/15 17:43:10 kensington Exp $
 
 EAPI=5
 
@@ -18,30 +18,42 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="
-	>=net-misc/csync-0.70.3
+	>=net-misc/csync-0.70.4
 	sys-fs/inotify-tools
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qttest:4
 "
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx virtual/latex-base )
+	doc? (
+		dev-python/sphinx
+		dev-texlive/texlive-latexextra
+		virtual/latex-base
+	)
 "
 
-S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	# Yay for fcked detection.
-	export CSYNC_DIR="${EPREFIX}/usr/include/ocsync/"
-
-	epatch "${FILESDIR}/${PN}-1.2.0_beta2-automagicness.patch"
-}
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
+	export CSYNC_DIR="${EPREFIX}/usr/include/ocsync/"
+
 	local mycmakeargs=(
-		$(cmake-utils_use_with doc SPHINX)
+		-DCMAKE_INSTALL_DOCDIR=/usr/share/doc/${PF}
+		$(cmake-utils_use_with doc)
 	)
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	use doc && cmake-utils_src_compile -j1 doc
+	cmake-utils_src_compile
+}
+
+src_install() {
+	cmake-utils_src_install
+	mkdir "${D}/etc/"
+	mv "${D}/usr/etc/sync-exclude.lst" "${D}/etc/"
+	rm -r "${D}/usr/etc/"
 }
 
 pkg_postinst() {
