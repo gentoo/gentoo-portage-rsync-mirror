@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-3.4.2.ebuild,v 1.1 2012/10/30 06:34:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-8.2.ebuild,v 1.1 2013/04/15 07:02:53 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
@@ -26,7 +26,7 @@ RDEPEND="!>=dev-python/python-irclib-3.2.2"
 src_prepare() {
 	# Prevent setup from downloading hgtools package
 	dos2unix setup.py || die "Oops :("
-	epatch "${FILESDIR}/irc-setup.py.${PV}.patch"
+	epatch "${FILESDIR}/irc-setup.py.8.0.1.patch"
 
 	# Don't rely on hgtools for version
 	sed -e "s/use_hg_version=True/version=\"${PV}\"/" -i setup.py || die
