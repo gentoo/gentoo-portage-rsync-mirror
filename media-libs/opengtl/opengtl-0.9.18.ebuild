@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/opengtl-0.9.18.ebuild,v 1.1 2013/03/14 15:24:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/opengtl-0.9.18.ebuild,v 1.2 2013/04/15 16:16:57 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug test"
 
 RDEPEND="
-	media-libs/libpng:0
+	media-libs/libpng:0=
 	>=sys-devel/llvm-3.1
 	<sys-devel/llvm-3.3
 "
@@ -31,6 +31,7 @@ RESTRICT="test"
 S=${WORKDIR}/${MY_P}
 
 PATCHES=(
+	"${FILESDIR}/${PN}-0.9.18-memcpy.patch"
 	"${FILESDIR}/${PN}-0.9.18-underlinking.patch"
 )
 

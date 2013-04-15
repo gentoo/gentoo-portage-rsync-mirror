@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.91 2013/02/25 09:16:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.92 2013/04/15 16:20:47 ssuominen Exp $
+
+  15 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -notification-daemon-0.7.3.ebuild, -notification-daemon-0.7.4.ebuild:
+  old
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> notification-daemon-0.7.6.ebuild:
   Add ~arm-linux keyword.
