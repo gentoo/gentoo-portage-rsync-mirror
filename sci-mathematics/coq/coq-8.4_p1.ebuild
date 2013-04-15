@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p1.ebuild,v 1.3 2013/03/05 16:44:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p1.ebuild,v 1.4 2013/04/15 08:47:14 ago Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.inria.fr/V${MY_PV}/files/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="gtk debug +ocamlopt doc camlp5"
 
 RDEPEND=">=dev-lang/ocaml-3.11.2[ocamlopt?]

@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.77 2013/03/05 16:44:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.78 2013/04/15 08:47:14 ago Exp $
+
+  15 Apr 2013; Agostino Sarubbo <ago@gentoo.org> coq-8.4_p1.ebuild:
+  Stable for x86, wrt bug #460136
 
   05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> coq-8.4_p1.ebuild:
   Stable for amd64, wrt bug #460136

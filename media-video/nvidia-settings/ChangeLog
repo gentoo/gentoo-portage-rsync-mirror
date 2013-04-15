@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.123 2013/03/28 22:29:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.124 2013/04/15 08:50:07 ago Exp $
+
+  15 Apr 2013; Agostino Sarubbo <ago@gentoo.org> nvidia-settings-304.60.ebuild:
+  Stable for x86, wrt bug #443594
 
 *nvidia-settings-313.26 (28 Mar 2013)
 
