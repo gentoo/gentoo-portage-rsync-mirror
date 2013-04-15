@@ -1,7 +1,8 @@
-diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/char2db.cpp ./plugins/IMs/jianpin/dict/char2db.cpp
---- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/char2db.cpp	2002-09-23 06:22:39.000000000 +0200
-+++ ./plugins/IMs/jianpin/dict/char2db.cpp	2004-08-07 16:18:49.654735809 +0200
-@@ -74,11 +74,7 @@
+diff --git a/plugins/IMs/jianpin/dict/char2db.cpp b/plugins/IMs/jianpin/dict/char2db.cpp
+index d881f20..e4ddbab 100644
+--- a/plugins/IMs/jianpin/dict/char2db.cpp
++++ b/plugins/IMs/jianpin/dict/char2db.cpp
+@@ -74,11 +74,7 @@ void build_freq_tab(char * filename)
  {
          filebuf f;
  
@@ -13,7 +14,7 @@ diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/char2db.cpp ./plugin
  	istream in(&f);
  
  	char cbuf[10];
-@@ -154,11 +150,7 @@
+@@ -154,11 +150,7 @@ int main(int argc, char * argv[])
  
          filebuf f;
  
@@ -25,10 +26,11 @@ diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/char2db.cpp ./plugin
  	istream in(&f);
  
  	char mark;
-diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/word2db.cpp ./plugins/IMs/jianpin/dict/word2db.cpp
---- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/word2db.cpp	2002-09-23 06:24:17.000000000 +0200
-+++ ./plugins/IMs/jianpin/dict/word2db.cpp	2004-08-07 16:19:16.271589168 +0200
-@@ -83,11 +83,7 @@
+diff --git a/plugins/IMs/jianpin/dict/word2db.cpp b/plugins/IMs/jianpin/dict/word2db.cpp
+index 806f6c4..5baa630 100644
+--- a/plugins/IMs/jianpin/dict/word2db.cpp
++++ b/plugins/IMs/jianpin/dict/word2db.cpp
+@@ -83,11 +83,7 @@ int main(int argc, char * argv[])
  
          filebuf f;
  
@@ -40,10 +42,11 @@ diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/word2db.cpp ./plugin
  	istream in(&f);
  
  	char mark;
-diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/table/dict/word2db.cpp ./plugins/IMs/table/dict/word2db.cpp
---- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/table/dict/word2db.cpp	2002-09-23 06:34:06.000000000 +0200
-+++ ./plugins/IMs/table/dict/word2db.cpp	2004-08-07 16:23:56.841264376 +0200
-@@ -90,11 +90,7 @@
+diff --git a/plugins/IMs/table/dict/word2db.cpp b/plugins/IMs/table/dict/word2db.cpp
+index 17d0dcf..275ee61 100644
+--- a/plugins/IMs/table/dict/word2db.cpp
++++ b/plugins/IMs/table/dict/word2db.cpp
+@@ -90,11 +90,7 @@ int main(int argc, char * argv[])
  
          filebuf f;
  
@@ -55,10 +58,11 @@ diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/table/dict/word2db.cpp ./plugins/
  	istream in(&f);
  
  	char mark;
-diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/wubi/dict/word2db.cpp ./plugins/IMs/wubi/dict/word2db.cpp
---- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/wubi/dict/word2db.cpp	2002-09-23 06:28:45.000000000 +0200
-+++ ./plugins/IMs/wubi/dict/word2db.cpp	2004-08-07 16:23:35.738361690 +0200
-@@ -81,11 +81,7 @@
+diff --git a/plugins/IMs/wubi/dict/word2db.cpp b/plugins/IMs/wubi/dict/word2db.cpp
+index 0dbc7e4..e191aa8 100644
+--- a/plugins/IMs/wubi/dict/word2db.cpp
++++ b/plugins/IMs/wubi/dict/word2db.cpp
+@@ -81,11 +81,7 @@ int main(int argc, char * argv[])
  
          filebuf f;
  
@@ -70,10 +74,11 @@ diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/wubi/dict/word2db.cpp ./plugins/I
  	istream in(&f);
  
  	char mark;
-diff -urN ../tmp-orig/xsim-0.3.9.4/xsim/conf.cpp ./xsim/conf.cpp
---- ../tmp-orig/xsim-0.3.9.4/xsim/conf.cpp	2002-09-17 09:53:37.000000000 +0200
-+++ ./xsim/conf.cpp	2004-08-07 16:22:35.792001180 +0200
-@@ -133,11 +133,7 @@
+diff --git a/xsim/conf.cpp b/xsim/conf.cpp
+index a073bb2..a2bffb0 100644
+--- a/xsim/conf.cpp
++++ b/xsim/conf.cpp
+@@ -133,11 +133,7 @@ int TConf::init()
          filebuf f;
  
  	char dummy[MAX_PATH_LEN + 1];
@@ -85,7 +90,7 @@ diff -urN ../tmp-orig/xsim-0.3.9.4/xsim/conf.cpp ./xsim/conf.cpp
  		cerr << "XSIM: failed opening config file" << endl;
  		return 1;
  		}
-@@ -340,11 +336,7 @@
+@@ -340,11 +336,7 @@ void TConf::save_config(const wchar_t * configname, vector<TWstring> & name, vec
  
          filebuf f;
  
@@ -97,7 +102,7 @@ diff -urN ../tmp-orig/xsim-0.3.9.4/xsim/conf.cpp ./xsim/conf.cpp
  		ostream out(&f);
  		for (size_t i = 0; i < name.size(); i++){
  			out << name[i].tombs(dummy, MAX_PATH_LEN) << '\t';
-@@ -372,11 +364,7 @@
+@@ -372,11 +364,7 @@ int TConf::load_config(const wchar_t * configname, vector<TWstring> & name, vect
  
          filebuf f;
  
