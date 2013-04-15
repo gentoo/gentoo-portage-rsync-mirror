@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wv2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.74 2012/12/20 15:03:40 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.75 2013/04/15 12:35:54 kensington Exp $
+
+*wv2-0.4.2-r2 (15 Apr 2013)
+
+  15 Apr 2013; Michael Palimaka <kensington@gentoo.org>
+  +files/wv2-0.4.2-libgsf.patch, +wv2-0.4.2-r2.ebuild:
+  Migrate to EAPI 5. Add a patch to fix build failure with newer libgsf, wrt bug
+  #465882.
 
   20 Dec 2012; Michael Palimaka <kensington@gentoo.org> -wv2-0.4.2.ebuild:
   Remove old.

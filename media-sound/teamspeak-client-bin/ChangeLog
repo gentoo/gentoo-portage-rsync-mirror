@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.30 2013/04/12 09:16:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.31 2013/04/15 12:54:05 tomwij Exp $
+
+  15 Apr 2013; Tom Wijsman <TomWij@gentoo.org>
+  teamspeak-client-bin-3.0.10.1.ebuild, teamspeak-client-bin-3.0.10.ebuild,
+  teamspeak-client-bin-3.0.9.2.ebuild:
+  FEATURES="fetch" since we are not allowed to directly link (therefore not
+  directly download) their files without express, written permission; this is
+  stated at the bottom of their Downloads page, let's comply with that.
 
 *teamspeak-client-bin-3.0.10.1 (12 Apr 2013)
 
