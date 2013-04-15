@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=!static? ( pcre? ( dev-libs/libpcre ) spoof-source? ( net-libs/libnet ) ssl? ( dev-libs/openssl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) !static? ( >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 ) json? ( >=dev-libs/json-glib-0.12 ) caps? ( sys-libs/libcap ) sql? ( >=dev-db/libdbi-0.8.3 ) ) spoof-source? ( net-libs/libnet ) ssl? ( dev-libs/openssl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) !static? ( >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 ) json? ( >=dev-libs/json-glib-0.12 ) caps? ( sys-libs/libcap ) sql? ( >=dev-db/libdbi-0.8.3 ) static? ( >=dev-libs/eventlog-0.2.12[static-libs] >=dev-libs/glib-2.10.1:2[static-libs] ) virtual/pkgconfig sys-devel/flex || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=!static? ( pcre? ( dev-libs/libpcre ) spoof-source? ( net-libs/libnet ) ssl? ( dev-libs/openssl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) !static? ( >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 ) json? ( >=dev-libs/json-glib-0.12 ) caps? ( sys-libs/libcap ) sql? ( >=dev-db/libdbi-0.8.3 ) ) spoof-source? ( net-libs/libnet ) ssl? ( dev-libs/openssl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) !static? ( >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 ) json? ( >=dev-libs/json-glib-0.12 ) caps? ( sys-libs/libcap ) sql? ( >=dev-db/libdbi-0.8.3 ) static? ( >=dev-libs/eventlog-0.2.12[static-libs] >=dev-libs/glib-2.10.1:2[static-libs] ) virtual/pkgconfig sys-devel/flex || ( >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=syslog replacement with advanced filtering features
 EAPI=2
 HOMEPAGE=http://www.balabit.com/products/syslog_ng/
@@ -10,5 +10,5 @@ RDEPEND=!static? ( pcre? ( dev-libs/libpcre ) spoof-source? ( net-libs/libnet ) 
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.balabit.com/downloads/files/syslog-ng/sources/3.3.5/source/syslog-ng_3.3.5.tar.gz
-_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e86bae5f576ff0d28330e1c9dcb773ee

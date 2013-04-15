@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=dev-libs/openssl-0.9.6 dev-libs/libxml2 sys-libs/ncurses crypt? ( >=app-crypt/gnupg-1.0.4 ) fam? ( virtual/fam ) gnutls? ( net-libs/gnutls ) idn? ( net-dns/libidn ) ipv6? ( net-dns/libidn ) ldap? ( net-nds/openldap ) spell? ( app-text/aspell ) dev-lang/perl || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/openssl-0.9.6 dev-libs/libxml2 sys-libs/ncurses crypt? ( >=app-crypt/gnupg-1.0.4 ) fam? ( virtual/fam ) gnutls? ( net-libs/gnutls ) idn? ( net-dns/libidn ) ipv6? ( net-dns/libidn ) ldap? ( net-nds/openldap ) spell? ( app-text/aspell ) dev-lang/perl || ( >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=CONE: COnsole News reader and Emailer
 EAPI=4
 HOMEPAGE=http://www.courier-mta.org/cone/
@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/openssl-0.9.6 dev-libs/libxml2 sys-libs/ncurses crypt? ( >=app-crypt/gnupg-1.0.4 ) fam? ( virtual/fam ) gnutls? ( net-libs/gnutls ) idn? ( net-dns/libidn ) ipv6? ( net-dns/libidn ) ldap? ( net-nds/openldap ) spell? ( app-text/aspell )
 SLOT=0
 SRC_URI=mirror://sourceforge/courier/cone-0.90.tar.bz2
-_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=cffd58a40e8f4cdf9e33be06a24e8663
