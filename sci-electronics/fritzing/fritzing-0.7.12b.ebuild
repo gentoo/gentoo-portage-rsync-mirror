@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.12b.ebuild,v 1.1 2013/03/28 22:16:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.12b.ebuild,v 1.2 2013/04/15 18:04:27 idl0r Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ src_prepare() {
 	rm -rf src/lib/quazip/ pri/quazip.pri src/lib/boost*
 
 	# Fritzing doesn't need zlib
-	sed -i -e 's:LIBS += -lz::' phoenix.pro || die
+	sed -i -e 's:LIBS += -lz::' -e 's:-lminizip::' phoenix.pro || die
 
 	edos2unix ${PN}.desktop
 
