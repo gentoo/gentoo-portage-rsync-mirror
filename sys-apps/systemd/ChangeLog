@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.115 2013/04/15 13:31:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.117 2013/04/15 20:15:07 mgorny Exp $
+
+  15 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild:
+  Backport quota dep removal and configure cleanup from -9999. No need to
+  revbump since the changes affect build process only.
+
+  15 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Remove redundant configure args. Disable deps which are not supported in
+  Gentoo and therefore can result in automagic deps.
 
   15 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Inline paths to quota tools and drop the dep.

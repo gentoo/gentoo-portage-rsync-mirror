@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.42 2013/04/15 13:31:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.43 2013/04/15 20:13:01 mgorny Exp $
 
 EAPI=5
 
@@ -97,9 +97,6 @@ src_configure() {
 	local myeconfargs=(
 		--localstatedir=/var
 		--with-firmware-path="/lib/firmware/updates:/lib/firmware"
-		# install everything to /usr
-		--with-rootprefix=/usr
-		--with-rootlibdir=/usr/$(get_libdir)
 		# but pam modules have to lie in /lib*
 		--with-pamlibdir=$(getpam_mod_dir)
 		# make sure we get /bin:/sbin in $PATH
@@ -130,6 +127,10 @@ src_configure() {
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
 		$(use_enable xattr)
+
+		# not supported (avoid automagic deps in the future)
+		--disable-chkconfig
+		--disable-ima
 
 		# hardcode a few paths to spare some deps
 		QUOTAON=/usr/sbin/quotaon
