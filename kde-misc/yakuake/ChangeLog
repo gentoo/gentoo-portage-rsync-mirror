@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.60 2013/01/28 17:11:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.61 2013/04/15 15:51:41 kensington Exp $
+
+*yakuake-2.9.9-r2 (15 Apr 2013)
+
+  15 Apr 2013; Michael Palimaka <kensington@gentoo.org>
+  +files/yakuake-2.9.9-lastsession.patch, +yakuake-2.9.9-r2.ebuild:
+  Backport patch from upstream adding an option to restore previous behaviour
+  where the window remains open after the last session is closed. Fixes bug
+  #465844.
 
   28 Jan 2013; Michael Palimaka <kensington@gentoo.org>
   -yakuake-2.9.8-r1.ebuild:
