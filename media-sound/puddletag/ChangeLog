@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/puddletag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.28 2013/03/22 18:36:45 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.30 2013/04/15 19:23:06 billie Exp $
+
+  15 Apr 2013; Daniel Pielmeier <billie@gentoo.org> +puddletag-1.0.1-r1.ebuild,
+  -puddletag-1.0.1-r2.ebuild:
+  Revert previous commit and add slot operator for sip.
+
+*puddletag-1.0.1-r2 (15 Apr 2013)
+
+  15 Apr 2013; Daniel Pielmeier <billie@gentoo.org> -puddletag-1.0.1-r1.ebuild,
+  +puddletag-1.0.1-r2.ebuild:
+  Revision bump. Remove old. Sip is already pulled in via PyQt.
 
   22 Mar 2013; Daniel Pielmeier <billie@gentoo.org> puddletag-1.0.1-r1.ebuild:
   PyQt4 needs to be built with the svg USE flag. This fixes bug #462428. Thanks
