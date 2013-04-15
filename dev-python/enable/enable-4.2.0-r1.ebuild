@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.2.0-r1.ebuild,v 1.1 2013/04/15 19:12:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.2.0-r1.ebuild,v 1.2 2013/04/15 19:31:48 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -29,8 +29,8 @@ RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-lang/swig
-	dev-python/cython
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )           
+	dev-python/cython[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
@@ -47,8 +47,6 @@ python_compile_all() {
 }
 
 python_test() {
-	# Hardcoding build-2.7, 2.7 being the only fully capable candidate
-
 	VIRTUALX_COMMAND="nosetests" virtualmake
 }
 
