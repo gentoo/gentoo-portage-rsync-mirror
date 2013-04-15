@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7727 2013/04/14 20:44:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7728 2013/04/15 21:04:10 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Release new ImageMagick >= 6.8 to ~arch now that FindImageMagick.cmake from
+  dev-util/cmake is fixed.
 
   14 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add GBuffy and totd licenses to MISC-FREE group, bugs 464770 and 465142.

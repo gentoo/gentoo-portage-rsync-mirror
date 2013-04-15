@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r2.ebuild,v 1.7 2013/02/02 22:45:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r2.ebuild,v 1.8 2013/04/15 21:13:42 ssuominen Exp $
 
 EAPI=4
 
@@ -40,7 +40,10 @@ RDEPEND="gpm? ( sys-libs/gpm[static-libs(+)] )
 		app-arch/bzip2[static-libs(+)]
 		sys-libs/zlib[static-libs(+)]
 	)
-	png? ( >=media-libs/libpng-1.4.3[static-libs] )
+	png? (
+		>=media-libs/libpng-1.4.3[static-libs]
+		sys-libs/zlib[static-libs(+)]
+	)
 	mng? (
 		media-libs/lcms:0[static-libs]
 		media-libs/libmng[static-libs(+)]

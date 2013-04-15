@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.215 2013/02/02 22:45:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.216 2013/04/15 21:13:42 ssuominen Exp $
+
+  15 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  splashutils-1.5.4.4-r2.ebuild:
+  Pull in sys-libs/zlib with USE="static-libs" enabled for USE="png" also when
+  USE="freetype" is disabled wrt #466022 by "dottomi"
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> splashutils-1.5.4.4-r2.ebuild:
   Add ~arm, wrt bug #449220

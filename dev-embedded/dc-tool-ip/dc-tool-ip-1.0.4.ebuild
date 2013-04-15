@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/dc-tool-ip-1.0.4.ebuild,v 1.4 2010/09/17 07:02:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/dc-tool-ip-1.0.4.ebuild,v 1.5 2013/04/15 21:24:53 vapier Exp $
 
-inherit eutils toolchain-funcs
+EAPI="4"
+
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="ethernet program loader for the Dreamcast"
 HOMEPAGE="http://cadcdev.sourceforge.net/"
@@ -15,11 +17,10 @@ IUSE="doc"
 
 S=${WORKDIR}/dcload-ip-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PV}-bfd-update.patch
 	epatch "${FILESDIR}"/${P}-headers.patch
+	append-cppflags -DPACKAGE -DPACKAGE_VERSION #465952
 	sed -i \
 		-e "/^HOSTCC/s:gcc:$(tc-getCC):" \
 		-e "/^HOSTCFLAGS/s:-O2:${CFLAGS} ${CPPFLAGS}:" \
@@ -29,18 +30,14 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -C host-src/tool || die
+	emake -C host-src/tool
 }
 
 src_install() {
-	dobin host-src/tool/dc-tool || die "tool"
+	dobin host-src/tool/dc-tool
 	dodoc README NETWORK CHANGES
-
-	docinto make-cd
-	dodoc make-cd/*
-
+	dodoc -r make-cd
 	if use doc ; then
-		docinto example-src
-		dodoc example-src/*
+		dodoc -r example-src
 	fi
 }

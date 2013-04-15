@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14658 2013/04/14 18:31:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14659 2013/04/15 21:04:10 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Samuli Suominen <ssuominen@gentoo.org> (14 Apr 2013)
-# Masked for testing.
->=media-gfx/imagemagick-6.8.4.9
 
 # Samuli Suominen <ssuominen@gentoo.org> (14 Apr 2013)
 # Upgrade your media-libs/libpng to at least 1.6.1-r1 to avoid
