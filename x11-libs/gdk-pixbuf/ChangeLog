@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.82 2013/03/28 15:57:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.83 2013/04/15 22:50:10 ssuominen Exp $
+
+  15 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> gdk-pixbuf-2.28.0.ebuild,
+  +files/gdk-pixbuf-2.28.0-string_h.patch:
+  Fix missing include string.h in gdk-pixbuf/io-png.c for strcmp, strlen and
+  strncmp (revealed by the libpng16 upgrade) wrt #466034
 
 *gdk-pixbuf-2.28.0 (28 Mar 2013)
 

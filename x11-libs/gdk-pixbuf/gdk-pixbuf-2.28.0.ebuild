@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.28.0.ebuild,v 1.1 2013/03/28 15:57:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.28.0.ebuild,v 1.2 2013/04/15 22:50:10 ssuominen Exp $
 
 EAPI="5"
 inherit eutils gnome.org multilib libtool
@@ -33,6 +33,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<x11-libs/gtk+-2.90.4:3"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-string_h.patch #466034
 	# This will avoid polluting the pkg-config file with versioned libpng,
 	# which is causing problems with libpng14 -> libpng15 upgrade
 	# See upstream bug #667068

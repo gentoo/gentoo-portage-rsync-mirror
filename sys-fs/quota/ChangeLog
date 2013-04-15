@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.64 2013/01/06 22:37:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.65 2013/04/15 22:38:13 vapier Exp $
+
+  15 Apr 2013; Mike Frysinger <vapier@gentoo.org> quota-4.01.ebuild:
+  Avoid building rpc related code when USE=-rpc #465810 by darwinskernel.
 
 *quota-4.01 (06 Jan 2013)
 

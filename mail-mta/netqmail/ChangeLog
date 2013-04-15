@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/netqmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.61 2012/11/06 11:17:40 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.62 2013/04/15 22:55:10 robbat2 Exp $
+
+*netqmail-1.06-r1 (15 Apr 2013)
+
+  15 Apr 2013; Robin H. Johnson <robbat2@gentoo.org> +netqmail-1.06-r1.ebuild:
+  Bug #323517: lists.g.o has DNSSEC now, so qmail servers will fail to send to
+  it. Tested with all combinations of USE flags.
 
   06 Nov 2012; Eray Aslan <eras@gentoo.org> netqmail-1.05-r4.ebuild,
   netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:
