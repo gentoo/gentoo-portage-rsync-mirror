@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/dar-2.4.10.ebuild,v 1.1 2013/03/11 20:26:58 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/dar-2.4.10.ebuild,v 1.2 2013/04/15 14:34:59 rich0 Exp $
 
-EAPI="3"
+EAPI="5"
 inherit confutils eutils flag-o-matic
 
 DESCRIPTION="A full featured backup tool, aimed for disks (floppy,CDR(W),DVDR(W),zip,jazz etc.)"
@@ -16,11 +16,11 @@ IUSE="acl dar32 dar64 doc gcrypt lzo nls static static-libs"
 
 RESTRICT="test" # need to be run as root
 
-RDEPEND=">=sys-libs/zlib-1.2.3
-	!static? ( app-arch/bzip2 )
-	acl? ( !static? ( sys-apps/attr ) )
-	gcrypt? ( dev-libs/libgcrypt )
-	lzo? ( !static? ( dev-libs/lzo ) )
+RDEPEND=">=sys-libs/zlib-1.2.3:=
+	!static? ( app-arch/bzip2:= )
+	acl? ( !static? ( sys-apps/attr:= ) )
+	gcrypt? ( dev-libs/libgcrypt:= )
+	lzo? ( !static? ( dev-libs/lzo:= ) )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	static? ( app-arch/bzip2[static-libs] )

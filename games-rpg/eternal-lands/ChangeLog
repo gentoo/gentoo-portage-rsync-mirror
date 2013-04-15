@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.69 2013/01/24 23:20:08 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.70 2013/04/15 14:46:08 rich0 Exp $
+
+  15 Apr 2013; Richard Freeman <rich0@gentoo.org>
+  eternal-lands-1.9.3-r2.ebuild:
+  Add slot operator deps to latest version.
 
   24 Jan 2013; Richard Freeman <rich0@gentoo.org>
   eternal-lands-1.9.3-r2.ebuild:

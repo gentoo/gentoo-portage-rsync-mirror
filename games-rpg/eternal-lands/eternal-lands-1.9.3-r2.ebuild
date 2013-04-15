@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.6 2013/01/24 23:20:08 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.7 2013/04/15 14:46:08 rich0 Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils flag-o-matic gnome2-utils games
 
 DESCRIPTION="An online MMORPG written in C and SDL"
@@ -15,23 +15,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="debug doc kernel_linux"
 
-RDEPEND="dev-libs/libxml2
-	media-libs/cal3d[-16bit-indices]
+RDEPEND="dev-libs/libxml2:=
+	media-libs/cal3d:=[-16bit-indices]
 	media-libs/freealut
-	media-libs/libpng:0
-	media-libs/libsdl[X,opengl,video]
-	media-libs/libvorbis
-	media-libs/openal
-	media-libs/sdl-image
-	media-libs/sdl-net
+	media-libs/libpng:0=
+	media-libs/libsdl:=[X,opengl,video]
+	media-libs/libvorbis:=
+	media-libs/openal:=
+	media-libs/sdl-image:=
+	media-libs/sdl-net:=
 	>=games-rpg/eternal-lands-data-1.9.3
-	sys-libs/zlib[minizip]
+	sys-libs/zlib:=[minizip]
 	virtual/glu
 	virtual/opengl
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	x11-libs/libXext"
+	x11-libs/libX11:=
+	x11-libs/libXau:=
+	x11-libs/libXdmcp:=
+	x11-libs/libXext:="
 DEPEND="${RDEPEND}
 	>=app-admin/eselect-opengl-1.0.6-r1
 	app-arch/unzip
