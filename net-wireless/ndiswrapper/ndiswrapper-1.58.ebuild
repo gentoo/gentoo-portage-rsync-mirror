@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.58.ebuild,v 1.1 2013/02/23 19:09:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.58.ebuild,v 1.3 2013/04/16 16:53:48 ago Exp $
 
 EAPI=4
 inherit base linux-mod toolchain-funcs
@@ -10,7 +10,7 @@ HOMEPAGE="http://ndiswrapper.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug usb"
 
 DEPEND="sys-apps/pciutils"

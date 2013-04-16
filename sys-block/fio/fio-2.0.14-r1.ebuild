@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.0.14-r1.ebuild,v 1.1 2013/03/27 01:59:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.0.14-r1.ebuild,v 1.3 2013/04/16 16:54:11 ago Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://brick.kernel.dk/snaps/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="dev-libs/libaio"
