@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.9 2013/04/16 06:33:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.11 2013/04/16 16:10:18 williamh Exp $
+
+  16 Apr 2013; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  sync live ebuild
+
+  16 Apr 2013; William Hubbs <williamh@gentoo.org> ChangeLog:
+  Add tool directory to QA_MULTILIB_PATHS for #463546
 
   16 Apr 2013; William Hubbs <williamh@gentoo.org> go-1.0.3.ebuild,
   go-9999.ebuild:
