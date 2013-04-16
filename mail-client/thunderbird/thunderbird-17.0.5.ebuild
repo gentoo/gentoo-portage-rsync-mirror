@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.5.ebuild,v 1.6 2013/04/13 08:42:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.5.ebuild,v 1.7 2013/04/16 05:56:30 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -64,7 +64,9 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	!x11-plugins/enigmail
 	system-sqlite? ( || (
 		>=dev-db/sqlite-3.7.16:3[secure-delete,debug=]
-		<dev-db/sqlite-3.7.16:3[fts3,secure-delete,threadsafe,unlock-notify,debug=]
+		=dev-db/sqlite-3.7.15*[fts3,secure-delete,threadsafe,unlock-notify,debug=]
+		=dev-db/sqlite-3.7.14*[fts3,secure-delete,threadsafe,unlock-notify,debug=]
+		=dev-db/sqlite-3.7.13*[fts3,secure-delete,threadsafe,unlock-notify,debug=]
 	) )
 	selinux? ( sec-policy/selinux-thunderbird )
 	crypt?  ( || (
