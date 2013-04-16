@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.85 2013/02/04 13:05:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.86 2013/04/16 20:41:17 chutzpah Exp $
+
+  16 Apr 2013; Patrick McLean <chutz@gentoo.org> x264-0.0.20120707.ebuild,
+  +files/x264-0.0.20120707-gcc48.patch:
+  Add patch from upstream to fix crashes when compiled with gcc 4.8
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> x264-0.0.20120707.ebuild:
   revert to ~arm, it was stabilized for a mistake

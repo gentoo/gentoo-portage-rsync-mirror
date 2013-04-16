@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Singleton
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.31 2012/09/01 11:21:57 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.32 2013/04/16 20:36:54 ago Exp $
+
+  16 Apr 2013; Agostino Sarubbo <ago@gentoo.org> Class-Singleton-1.400.0.ebuild:
+  Stable for ppc64, wrt bug #456568
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   Class-Singleton-1.400.0.ebuild:

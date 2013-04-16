@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.10 2013/02/04 13:05:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.11 2013/04/16 20:41:17 chutzpah Exp $
 
 EAPI=4
 
@@ -55,6 +55,9 @@ src_prepare() {
 	# for OSX
 	sed -i -e "s|-arch x86_64||g" configure || die
 	epatch "${FILESDIR}"/x264-x32.patch #420241
+
+	# fix crashes when compiled with gcc 4.8
+	epatch "${FILESDIR}"/${P}-gcc48.patch
 }
 
 src_configure() {

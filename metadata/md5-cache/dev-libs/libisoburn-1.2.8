@@ -4,10 +4,10 @@ DESCRIPTION=Enables creation and expansion of ISO-9660 filesystems on all CD/DVD
 EAPI=5
 HOMEPAGE=http://libburnia-project.org/
 IUSE=acl cdio debug external-filters external-filters-setuid frontend-optional launch-frontend launch-frontend-setuid readline static-libs xattr zlib
-KEYWORDS=~alpha amd64 ~hppa ~ppc ~ppc64 x86
+KEYWORDS=~alpha amd64 ~hppa ~ppc ppc64 x86
 LICENSE=GPL-2 GPL-3
 RDEPEND=>=dev-libs/libburn-1.2.8 >=dev-libs/libisofs-1.2.8 readline? ( sys-libs/readline ) acl? ( virtual/acl ) xattr? ( sys-apps/attr ) zlib? ( sys-libs/zlib ) cdio? ( >=dev-libs/libcdio-0.83 ) launch-frontend? ( dev-lang/tcl dev-lang/tk ) launch-frontend-setuid? ( dev-lang/tcl dev-lang/tk ) frontend-optional? ( dev-tcltk/bwidget )
 REQUIRED_USE=frontend-optional? ( || ( launch-frontend launch-frontend-setuid ) )
 SLOT=0
 SRC_URI=http://files.libburnia-project.org/releases/libisoburn-1.2.8.tar.gz
-_md5_=9f22a87f48968d766f860608d1e166ea
+_md5_=81ed10e4bbcbc4b6cca2512a34d824f3
