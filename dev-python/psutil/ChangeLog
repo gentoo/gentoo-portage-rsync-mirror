@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psutil
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.15 2012/11/20 20:54:11 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.16 2013/04/16 08:00:45 patrick Exp $
+
+*psutil-0.7.0 (16 Apr 2013)
+
+  16 Apr 2013; Patrick Lauer <patrick@gentoo.org> +psutil-0.7.0.ebuild:
+  Bump
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> psutil-0.6.1.ebuild:
   Stable for x86, wrt bug #441286

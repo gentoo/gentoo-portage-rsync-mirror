@@ -1,14 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.2 2012/10/14 19:18:45 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.3 2013/04/16 07:34:04 jlec Exp $
 
 EAPI=4
 
 inherit bash-completion-r1 git-2
 
-DESCRIPTION="Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git."
+DESCRIPTION="Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git"
 HOMEPAGE="http://zx2c4.com/projects/password-store/"
 EGIT_REPO_URI="http://git.zx2c4.com/password-store"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS=""
