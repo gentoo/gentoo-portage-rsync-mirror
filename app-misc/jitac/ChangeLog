@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jitac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.29 2012/12/29 06:06:09 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.30 2013/04/16 15:29:21 nimiux Exp $
+
+  16 Apr 2013; Chema Alonso <nimiux@gentoo.org> jitac-0.3.0.ebuild:
+  Stable for amd64 wrt bug #465246
 
 *jitac-0.3.0 (29 Dec 2012)
 
