@@ -1,15 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.5 2013/02/15 14:19:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.6 2013/04/15 23:19:22 robbat2 Exp $
 
 EAPI=2
 
-inherit eutils git-2 perl-app user
+inherit eutils perl-app user git-2
 
 DESCRIPTION="qpsmtpd is a flexible smtpd daemon written in Perl"
 HOMEPAGE="http://smtpd.develooper.com"
-EGIT_REPO_URI="git://git.develooper.com/qpsmtpd.git
-	http://git.develooper.com/qpsmtpd.git"
+# This is a spotted development fork with many improvements
+EGIT_REPO_URI="git://github.com/qpsmtpd-dev/qpsmtpd-dev.git
+       https://github.com/qpsmtpd-dev/qpsmtpd-dev.git"
 
 LICENSE="MIT"
 SLOT="0"
@@ -17,13 +18,14 @@ KEYWORDS=""
 IUSE="postfix ipv6 syslog"
 
 RDEPEND=">=dev-lang/perl-5.8.0
-	dev-perl/Net-DNS
+	>=dev-perl/Net-DNS-0.690.0
 	virtual/perl-MIME-Base64
 	dev-perl/MailTools
 	dev-perl/IPC-Shareable
 	dev-perl/Socket6
 	dev-perl/Danga-Socket
 	dev-perl/ParaDNS
+	dev-perl/UNIVERSAL-isa
 	ipv6? ( dev-perl/IO-Socket-INET6 )
 	syslog? ( virtual/perl-Sys-Syslog )
 	virtual/inetd"
@@ -35,11 +37,6 @@ pkg_setup() {
 		additional_groups="${additional_groups},postdrop"
 	fi
 	enewuser smtpd -1 -1 /var/spool/qpsmtpd smtpd${additional_groups}
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.40-badrcptto_allowrelay.patch
-	epatch "${FILESDIR}"/${PN}-0.83-clamd_conf.patch
 }
 
 src_install() {

@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/qpsmtpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.18 2013/02/15 14:25:49 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.19 2013/04/15 23:19:22 robbat2 Exp $
+
+*qpsmtpd-0.84-r2 (15 Apr 2013)
+
+  15 Apr 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/qpsmtpd-0.84-Net-DNS-id.patch, +qpsmtpd-0.84-r2.ebuild,
+  qpsmtpd-0.84-r1.ebuild, qpsmtpd-0.84.ebuild, qpsmtpd-9999.ebuild:
+  Net::DNS nextid() changed to be id(). Ensure that we are patched for it.
 
   15 Feb 2013; Eray Aslan <eras@gentoo.org>
   -files/qpsmtpd-0.40-badhelo_disconnect.patch,

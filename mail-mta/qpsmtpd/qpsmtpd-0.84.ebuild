@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.84.ebuild,v 1.3 2012/11/30 23:10:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.84.ebuild,v 1.4 2013/04/15 23:19:22 robbat2 Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="postfix ipv6 syslog"
 
 RDEPEND=">=dev-lang/perl-5.8.0
-	dev-perl/Net-DNS
+	<dev-perl/Net-DNS-0.690.0
 	virtual/perl-MIME-Base64
 	dev-perl/MailTools
 	dev-perl/IPC-Shareable

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.84-r1.ebuild,v 1.2 2013/04/15 23:19:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.84-r2.ebuild,v 1.1 2013/04/15 23:19:22 robbat2 Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="postfix ipv6 syslog"
 
 RDEPEND=">=dev-lang/perl-5.8.0
-	<dev-perl/Net-DNS-0.690.0
+	>=dev-perl/Net-DNS-0.690.0
 	virtual/perl-MIME-Base64
 	dev-perl/MailTools
 	dev-perl/IPC-Shareable
@@ -40,6 +40,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.40-badrcptto_allowrelay.patch
 	#epatch "${FILESDIR}"/${PN}-0.83-clamd_conf.patch
 	epatch "${FILESDIR}"/${PN}-0.83-accept-empty-email.patch
+	epatch "${FILESDIR}"/${PN}-0.84-Net-DNS-id.patch
 }
 
 src_install() {
