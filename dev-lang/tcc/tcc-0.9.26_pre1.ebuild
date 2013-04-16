@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.26_pre1.ebuild,v 1.1 2013/01/29 09:31:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.26_pre1.ebuild,v 1.2 2013/04/16 09:35:47 patrick Exp $
 
 EAPI="5"
 
@@ -47,6 +47,7 @@ src_configure() {
 
 src_install() {
 	emake \
+		DESTDIR="${D}" \
 		bindir="${D}"/usr/bin \
 		libdir="${D}"/usr/lib \
 		tccdir="${D}"/usr/lib/tcc \
