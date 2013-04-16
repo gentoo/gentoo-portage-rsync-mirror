@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-vpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vpx/ChangeLog,v 1.8 2013/04/01 13:03:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vpx/ChangeLog,v 1.9 2013/04/16 19:31:40 pacho Exp $
+
+  16 Apr 2013; Pacho Ramos <pacho@gentoo.org> gst-plugins-vpx-1.0.5.ebuild,
+  gst-plugins-vpx-1.0.6.ebuild:
+  This was already keyworded but only for 1.0.3, breaking repoman due dropping
+  old versions
 
 *gst-plugins-vpx-1.0.6 (01 Apr 2013)
 
