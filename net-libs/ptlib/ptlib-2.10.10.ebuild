@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.10.ebuild,v 1.7 2013/04/05 18:11:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.10.ebuild,v 1.8 2013/04/16 13:27:50 chithanh Exp $
 
 EAPI="5"
 
@@ -71,6 +71,11 @@ src_prepare() {
 		rm -f samples/*/*.sln
 		rm -f samples/*/*.dsp
 		rm -f samples/*/*.dsw
+	fi
+
+	if [[ ! -z ${TARGET+set} ]]; then
+		ewarn "TARGET variable is set. Removing as it would break the build, bug #465722."
+		unset TARGET
 	fi
 }
 
