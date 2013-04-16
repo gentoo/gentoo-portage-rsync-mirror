@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.0.ebuild,v 1.1 2013/03/28 17:00:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.1.ebuild,v 1.1 2013/04/16 19:15:10 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -8,10 +8,10 @@ GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
 # libanjuta-language-vala.so links to a specific slot of libvala; we want to
 # avoid automagic behavior.
-VALA_MIN_API_VERSION="0.18"
+VALA_MIN_API_VERSION="0.20"
 VALA_MAX_API_VERSION="${VALA_MIN_API_VERSION}"
 
-inherit eutils gnome2 flag-o-matic multilib python-single-r1 vala
+inherit autotools eutils gnome2 flag-o-matic multilib readme.gentoo python-single-r1 vala
 
 DESCRIPTION="A versatile IDE for GNOME"
 HOMEPAGE="http://www.anjuta.org"
@@ -22,7 +22,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug devhelp glade +introspection packagekit subversion test vala"
 
 # FIXME: make python dependency non-automagic
-COMMON_DEPEND=">=dev-libs/glib-2.32:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.32:2
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.4:3
 	>=x11-libs/vte-0.27.6:2.90
@@ -70,26 +71,25 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/gobject-introspection-common
 	gnome-base/gnome-common
 "
-# eautoreconf requires: gtk-doc-am, gnome-common, gobject-introspection-common, yelp-tools
+# eautoreconf requires: gnome-common, gobject-introspection-common, yelp-tools
 
 pkg_setup() {
 	python-single-r1_pkg_setup
 }
 
 src_prepare() {
+	if use vala; then
+		DISABLE_AUTOFORMATTING="yes"
+		DOC_CONTENTS="To create a generic vala project you will need to specify
+desired valac versioned binary to be used, to do that you
+will need to:
+1. Go to 'Build' -> 'Configure project'
+2. Add 'VALAC=/usr/bin/valac-X.XX' (respecting quotes) to
+'Configure options'."
+	fi
+
 	# COPYING is used in Anjuta's help/about entry
 	DOCS="AUTHORS ChangeLog COPYING FUTURE MAINTAINERS NEWS README ROADMAP THANKS TODO"
-
-	G2CONF="${G2CONF}
-		--disable-static
-		--docdir=/usr/share/doc/${PF}
-		$(use_enable debug)
-		$(use_enable devhelp plugin-devhelp)
-		$(use_enable glade plugin-glade)
-		$(use_enable introspection)
-		$(use_enable packagekit)
-		$(use_enable subversion plugin-subversion)
-		$(use_enable vala)"
 
 	# Conflicts with -pg in a plugin, bug #266777
 	filter-flags -fomit-frame-pointer
@@ -98,8 +98,25 @@ src_prepare() {
 	sed -e 's:$PYTHON-config:$PYTHON$PYTHON_VERSION-config:g' \
 		-i plugins/am-project/tests/anjuta.lst || die "sed failed"
 
+	# Let it build with vala-0.20, upstream bug #698158
+	epatch "${FILESDIR}/${PN}-3.8.1-vala-0.20.patch"
+
+	eautoreconf
 	use vala && vala_src_prepare
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--disable-static \
+		--docdir=/usr/share/doc/${PF} \
+		$(use_enable debug) \
+		$(use_enable devhelp plugin-devhelp) \
+		$(use_enable glade plugin-glade) \
+		$(use_enable introspection) \
+		$(use_enable packagekit) \
+		$(use_enable subversion plugin-subversion) \
+		$(use_enable vala)
 }
 
 src_install() {
@@ -109,17 +126,11 @@ src_install() {
 	# Anjuta uses a custom rule to install DOCS, get rid of it
 	gnome2_src_install
 	rm -rf "${ED}"/usr/share/doc/${PN} || die "rm failed"
+
+	use vala && readme.gentoo_create_doc
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	if use vala; then
-		elog ""
-		elog "To create a generic vala project you will need to specify"
-		elog "desired valac versioned binary to be used, to do that you"
-		elog "will need to:"
-		elog "1. Go to 'Build' -> 'Configure project'"
-		elog "2. Add 'VALAC=/usr/bin/valac-X.XX' (respecting quotes) to"
-		elog "'Configure options'."
-	fi
+	use vala && readme.gentoo_print_elog
 }

@@ -1,0 +1,23 @@
+diff -uNr anjuta-3.8.0.old/configure.ac anjuta-3.8.0/configure.ac
+--- anjuta-3.8.0.old/configure.ac	2013-03-25 05:32:20.000000000 +0100
++++ anjuta-3.8.0/configure.ac	2013-03-30 21:56:06.603174301 +0100
+@@ -285,11 +285,14 @@
+ else
+         AC_MSG_RESULT(no)
+ 	AC_MSG_CHECKING(if libvala is available)
+-	PKG_CHECK_EXISTS([ libvala-0.18 ],
+-			 [ valaver="-0.18" ],
+-			 [ PKG_CHECK_EXISTS([ libvala-0.16 ],
+-					    [ valaver="-0.16" ],
+-					    [ valaver="" ])
++	PKG_CHECK_EXISTS([ libvala-0.20 ],
++			 [ valaver="-0.20" ],
++			 [ PKG_CHECK_EXISTS([ libvala-0.18 ],
++		       			    [ valaver="-0.18" ],
++					    [ PKG_CHECK_EXISTS([ libvala-0.16 ],
++							       [ valaver="-0.16" ],
++							       [ valaver="" ])
++					    ])
+ 			 ])
+ 	if test "x$valaver" != "x"; then
+ 		AC_MSG_RESULT(yes)
