@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0-r1.ebuild,v 1.4 2007/12/09 13:30:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0-r1.ebuild,v 1.5 2013/04/16 18:48:03 ulm Exp $
 
 inherit versionator java-pkg-2
 
@@ -9,7 +9,7 @@ DESCRIPTION="Java(TM) Look and Feel Graphics Repository"
 HOMEPAGE="http://java.sun.com/developer/techDocs/hi/repository/"
 SRC_URI="mirror://gentoo/jlfgr-${MY_PV}.zip"
 
-LICENSE="as-is"
+LICENSE="sun-jlfgr"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""

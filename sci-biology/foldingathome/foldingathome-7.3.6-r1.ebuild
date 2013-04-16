@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.3.6.ebuild,v 1.1 2013/04/16 17:18:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.3.6-r1.ebuild,v 1.1 2013/04/16 18:37:52 axs Exp $
 
 EAPI="4"
 

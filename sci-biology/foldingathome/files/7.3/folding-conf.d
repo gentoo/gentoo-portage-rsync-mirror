@@ -7,4 +7,4 @@
 # by running /opt/foldingathome/FAHClient --help
 #
 FOLD_OPTS=""
-PIDFILE=/var/run/folding
+PIDFILE=/run/folding

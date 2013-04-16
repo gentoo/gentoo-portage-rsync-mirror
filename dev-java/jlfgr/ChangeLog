@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jlfgr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/ChangeLog,v 1.10 2007/12/25 02:07:35 betelgeuse Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/ChangeLog,v 1.11 2013/04/16 18:48:03 ulm Exp $
+
+  16 Apr 2013; Ulrich Müller <ulm@gentoo.org> jlfgr-1.0-r1.ebuild:
+  Fix LICENSE, bug 464000.
 
   25 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> -jlfgr-1.0.ebuild:
   Remove generation 1 ebuild.

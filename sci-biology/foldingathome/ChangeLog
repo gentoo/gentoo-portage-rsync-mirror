@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.37 2013/04/16 17:18:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.38 2013/04/16 18:37:52 axs Exp $
+
+*foldingathome-7.3.6-r1 (16 Apr 2013)
+
+  16 Apr 2013; Ian Stakenvicius <axs@gentoo.org> +foldingathome-7.3.6-r1.ebuild,
+  -foldingathome-7.3.6.ebuild, files/7.3/fah-init, files/7.3/folding-conf.d:
+  minor fixes to conf.d and init.d files
 
 *foldingathome-7.3.6 (16 Apr 2013)
 

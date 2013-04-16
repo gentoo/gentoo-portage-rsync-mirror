@@ -22,6 +22,9 @@ start() {
 stop() {
 	ebegin "Stopping Folding@Home"
 	start-stop-daemon --stop --user foldingathome --pidfile "${PIDFILE}"
+	if [ $? -ne 0 ]; then
+		killall --user foldingathome --signal SIGKILL
+		ewarn "killing all processes running as user 'foldingathome' ..."
+	fi
 	eend $?
-	killall --user foldingathome --signal SIGKILL
 }
