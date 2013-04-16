@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14659 2013/04/15 21:04:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14661 2013/04/16 01:50:09 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -124,7 +124,8 @@ www-servers/meteor
 # Mike Gilbert <floppym@gentoo.org> (04 Apr 2013)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
->=www-client/google-chrome-28
+www-client/google-chrome:unstable
+www-plugins/chrome-binary-plugins:unstable
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (04 Apr 2013)
 # Dev channel releases are only for people who are developers or want more

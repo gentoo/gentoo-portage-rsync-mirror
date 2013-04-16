@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9997.ebuild,v 1.1 2013/03/19 23:06:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-26.0.1410.63_p192696.ebuild,v 1.1 2013/04/16 01:43:40 floppym Exp $
 
 EAPI=4
 
@@ -8,15 +8,41 @@ inherit multilib unpacker
 
 DESCRIPTION="Binary plugins -- native API Flash and PDF -- from Google Chrome for use in Chromium."
 HOMEPAGE="http://www.google.com/chrome"
-SLOT="stable"
-URI_BASE="https://dl.google.com/linux/direct/"
-URI_BASE_NAME="google-chrome-${SLOT}_current_"
-SRC_URI="" # URI is left blank on live ebuild
-RESTRICT="bindist mirror strip"
+
+case ${PV} in
+	*_alpha*)
+		SLOT="unstable"
+		MY_PV=${PV/_alpha/-r}
+		;;
+	*_beta*)
+		SLOT="beta"
+		MY_PV=${PV/_beta/-r}
+		;;
+	*_p*)
+		SLOT="stable"
+		MY_PV=${PV/_p/-r}
+		;;
+	*)
+		die "Invalid value for \${PV}: ${PV}"
+		;;
+esac
+
+MY_PN="google-chrome-${SLOT}"
+MY_P="${MY_PN}_${MY_PV}"
+
+SRC_URI="
+	amd64? (
+		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_amd64.deb
+	)
+	x86? (
+		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
+	)
+"
 
 LICENSE="google-chrome"
-KEYWORDS="" # KEYWORDS is also left blank on live ebuild
+KEYWORDS="~amd64 ~x86"
 IUSE="+flash +pdf"
+RESTRICT="bindist mirror strip"
 
 RDEPEND="www-client/chromium"
 
@@ -27,23 +53,7 @@ for x in 0 beta stable unstable; do
 done
 
 S="${WORKDIR}/opt/google/chrome"
-
-QA_FLAGS_IGNORED="/usr/$(get_libdir)/chromium-browser/PepperFlash/libpepflashplayer.so
-				  /usr/$(get_libdir)/chromium-browser/libpdf.so"
-
-src_unpack() {
-	# We have to do this inside of here, since it's a live ebuild. :-(
-
-	if use x86; then
-		G_ARCH="i386";
-	elif use amd64; then
-		G_ARCH="amd64";
-	else
-		die "This only supports x86 and amd64."
-	fi
-	wget "${URI_BASE}${URI_BASE_NAME}${G_ARCH}.deb"
-	unpack_deb "./${URI_BASE_NAME}${G_ARCH}.deb"
-}
+QA_PREBUILT="*"
 
 src_install() {
 	local version flapper
