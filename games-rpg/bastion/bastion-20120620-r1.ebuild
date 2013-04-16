@@ -1,9 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620.ebuild,v 1.2 2013/03/22 21:34:09 hasufell Exp $
-
-# TODO: - unbundle mono when multilib
-#       - unbundle fmodex when multilib
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620-r1.ebuild,v 1.1 2013/04/16 14:46:20 hasufell Exp $
 
 EAPI=5
 
@@ -21,18 +18,13 @@ IUSE="bundled-libs"
 RESTRICT="bindist fetch"
 
 MYGAMEDIR=${GAMES_PREFIX_OPT}/${PN}
-QA_PREBUILT="${MYGAMEDIR#/}/Bastion.bin.x86
-	${MYGAMEDIR#/}/lib/*"
+QA_PREBUILT="${MYGAMEDIR#/}/Bastion.bin*
+	${MYGAMEDIR#/}/lib/*
+	${MYGAMEDIR#/}/lib64/*"
 
 # mono shit: vague dependencies
 RDEPEND="
 	virtual/opengl
-	amd64? (
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-soundlibs
-		app-emulation/emul-linux-x86-xlibs
-	)
-	x86? (
 		media-libs/freealut
 		media-libs/openal
 		media-libs/sdl-gfx
@@ -47,8 +39,7 @@ RDEPEND="
 			dev-lang/mono
 			media-libs/fmod:1
 			media-libs/libsdl[X,audio,video,opengl,joystick]
-		)
-	)"
+		)"
 
 CHECKREQS_DISK_BUILD="2400M"
 
@@ -59,7 +50,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	local myarch=$(usex amd64 "x86" "x86_64")
+	myarch=$(usex amd64 "x86_64" "x86")
 
 	unpack_makeself
 
@@ -75,8 +66,9 @@ src_unpack() {
 src_prepare() {
 	if ! use bundled-libs ; then
 		einfo "Removing bundles libs..."
-		rm -v lib/libSDL-1.2.so* || die
-		use x86 && { rm -v lib/libmono-2.0.so* lib/libfmodex.so* || die ;}
+		rm -v $(get_libdir)/libmono-2.0.so* \
+			$(get_libdir)/libfmodex.so* \
+			$(get_libdir)/libSDL-1.2.so*|| die
 	fi
 }
 
@@ -86,9 +78,9 @@ src_install() {
 
 	newicon -s 256 Bastion.png ${PN}.png
 	make_desktop_entry ${PN}
-	games_make_wrapper ${PN} "./Bastion.bin.x86" "${MYGAMEDIR}" "${MYGAMEDIR}/lib"
+	games_make_wrapper ${PN} "./Bastion.bin.${myarch}" "${MYGAMEDIR}" "${MYGAMEDIR}/$(get_libdir)"
 
-	fperms +x "${MYGAMEDIR}"/Bastion.bin.x86
+	fperms +x "${MYGAMEDIR}"/Bastion.bin.${myarch}
 	prepgamesdirs
 }
 
