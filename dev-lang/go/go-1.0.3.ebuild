@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.3.ebuild,v 1.3 2013/04/16 06:33:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.3.ebuild,v 1.4 2013/04/16 15:56:38 williamh Exp $
 
 EAPI=4
 
@@ -29,6 +29,9 @@ RDEPEND="bash-completion? ( app-shells/bash-completion )
 	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	zsh-completion? ( app-shells/zsh-completion )"
+
+# The tools in /usr/lib/go should not cause the multilib-strict check to fail.
+QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/linux*/*"
 
 	# The go language stores binary data for packages in *.a files.
 	# These are _NOT_ libraries, and should not be stripped.
