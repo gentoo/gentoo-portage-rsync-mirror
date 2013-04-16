@@ -1,12 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.18 2012/10/24 21:49:34 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.19 2013/04/16 20:22:45 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 GCONF_DEBUG="no" # debug managed by the ebuild
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit eutils kde4-base gnome2
 # gnome2 at the end to make it default
@@ -138,7 +139,7 @@ src_prepare() {
 
 src_test() {
 	# must be explicit because kde4-base in exporting a src_test function
-	emake -j1 check || die "emake check failed"
+	emake -j1 check
 }
 
 src_install() {
@@ -146,7 +147,7 @@ src_install() {
 
 	if use doc && use dbus; then
 		insinto "/usr/share/doc/${PF}/"
-		doins doc/using_dbus.html || die "doins failed"
+		doins doc/using_dbus.html
 	fi
 }
 
