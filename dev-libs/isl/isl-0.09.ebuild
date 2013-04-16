@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.09.ebuild,v 1.1 2012/02/20 06:42:42 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.09.ebuild,v 1.2 2013/04/16 08:01:43 jlec Exp $
 
 EAPI=4
 inherit eutils
 
-DESCRIPTION="A library for manipulating integer points bounded by affine constraints."
+DESCRIPTION="A library for manipulating integer points bounded by affine constraints"
 HOMEPAGE="http://www.kotnet.org/~skimo/isl/"
 SRC_URI="http://www.kotnet.org/~skimo/isl/${P}.tar.bz2"
 

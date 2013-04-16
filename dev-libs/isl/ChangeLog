@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.10 2013/01/07 00:23:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.11 2013/04/16 08:01:43 jlec Exp $
+
+  16 Apr 2013; Justin Lecher <jlec@gentoo.org> isl-0.09.ebuild,
+  isl-0.10.ebuild, isl-0.11.1.ebuild, metadata.xml:
+  Fix punctuation
 
 *isl-0.11.1 (07 Jan 2013)
 

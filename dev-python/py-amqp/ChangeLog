@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py-amqp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.5 2013/03/13 17:39:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.6 2013/04/16 08:21:38 patrick Exp $
+
+*py-amqp-1.0.11 (16 Apr 2013)
+
+  16 Apr 2013; Patrick Lauer <patrick@gentoo.org> +py-amqp-1.0.11.ebuild:
+  Bump
 
 *py-amqp-1.0.9 (13 Mar 2013)
 
