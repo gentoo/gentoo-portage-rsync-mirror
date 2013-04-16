@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.114 2013/04/16 09:59:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.116 2013/04/16 10:14:04 swift Exp $
+
+*policycoreutils-2.1.13-r10 (16 Apr 2013)
+
+  16 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.13-r10.ebuild:
+  Fix bugs #463222 (newrole O_RDWR) and #464808 (hardcoded python3.1 in rlpkg)
+
+  16 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  -policycoreutils-2.1.10-r1.ebuild, -policycoreutils-2.1.10-r3.ebuild,
+  -policycoreutils-2.1.10-r4.ebuild, -policycoreutils-2.1.10.ebuild:
+  Some cleanup (older release unstables)
 
   16 Apr 2013; Sven Vermeulen <swift@gentoo.org>
   policycoreutils-2.1.13-r9.ebuild:

@@ -1,26 +1,26 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.10-r4.ebuild,v 1.1 2012/07/10 20:01:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.13-r10.ebuild,v 1.1 2013/04/16 10:14:04 swift Exp $
 
 EAPI="4"
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="2:2.7"
 PYTHON_USE_WITH="xml"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-* 3.*"
 
 inherit multilib python toolchain-funcs eutils
 
-EXTRAS_VER="1.21"
-SEMNG_VER="2.1.6"
-SELNX_VER="2.1.9"
-SEPOL_VER="2.1.4"
+EXTRAS_VER="1.27"
+SEMNG_VER="2.1.9"
+SELNX_VER="2.1.12"
+SEPOL_VER="2.1.8"
 
 IUSE="audit pam dbus sesandbox"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://userspace.selinuxproject.org"
-SRC_URI="http://userspace.selinuxproject.org/releases/20120216/${P}.tar.gz
-	http://dev.gentoo.org/~swift/patches/policycoreutils/patchbundle-${P}-gentoo-r2.tar.gz
+SRC_URI="http://userspace.selinuxproject.org/releases/20120924/${P}.tar.gz
+http://dev.gentoo.org/~swift/patches/policycoreutils/patchbundle-${P}-gentoo-r5.tar.gz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -72,9 +72,8 @@ src_prepare() {
 	cp "${S}/po/sq.po" "${S}/po/gl.po" || die "failed to copy ${S}/po/sq.po to gl.po"
 	cp "${S}/po/sq.po" "${S}/po/id.po" || die "failed to copy ${S}/po/sq.po to id.po"
 	cp "${S}/po/sq.po" "${S}/po/et.po" || die "failed to copy ${S}/po/sq.po to et.po"
-	# Fixes for Python 3 support in the extras
-	cd "${S2}";
-	epatch "${FILESDIR}/policycoreutils-extra-1.21-fix-python3.patch"
+
+	epatch_user
 }
 
 src_compile() {
