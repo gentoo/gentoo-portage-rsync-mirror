@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.3.ebuild,v 1.1 2012/10/29 15:57:40 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.3.ebuild,v 1.2 2013/04/16 06:19:21 williamh Exp $
 
 EAPI=4
 
@@ -42,6 +42,7 @@ src_prepare()
 {
 	if [[ ${PV} != 9999 ]]; then
 		epatch "${FILESDIR}"/${P}-hardened.patch
+		epatch "${FILESDIR}"/${P}-no-Werror.patch
 	fi
 	epatch_user
 }
