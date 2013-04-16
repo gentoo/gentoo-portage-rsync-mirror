@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7731 2013/04/16 02:27:30 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7732 2013/04/16 05:15:22 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> updates/2Q-2013:
+  Move alsa-firmware from media-sound category to sys-firmware category.
 
   16 Apr 2013; Christoph Junghans <ottxor@gentoo.org> package.mask:
   masked media-sound/google-musicmanager

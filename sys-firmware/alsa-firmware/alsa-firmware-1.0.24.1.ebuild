@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.24.1.ebuild,v 1.6 2012/12/03 16:10:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/alsa-firmware-1.0.24.1.ebuild,v 1.1 2013/04/16 05:15:36 ssuominen Exp $
 
 EAPI=5
 inherit udev

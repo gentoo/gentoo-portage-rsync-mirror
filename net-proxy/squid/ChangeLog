@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.406 2013/04/03 06:42:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.407 2013/04/16 05:02:02 eras Exp $
+
+*squid-3.3.3-r1 (16 Apr 2013)
+*squid-3.2.9-r1 (16 Apr 2013)
+
+  16 Apr 2013; Eray Aslan <eras@gentoo.org> +files/squid-3.3.3-ncsa_auth.patch,
+  +squid-3.2.9-r1.ebuild, +squid-3.3.3-r1.ebuild:
+  Fix ncsa_auth with glibc-2.17 - bug #464406
 
   03 Apr 2013; Eray Aslan <eras@gentoo.org> -files/squid.initd-logrotate-r2,
   -files/squid.initd-r2, -squid-3.1.22.ebuild, -squid-3.2.5.ebuild,

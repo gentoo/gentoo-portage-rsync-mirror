@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.2 2013/04/15 20:15:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.3 2013/04/16 05:21:34 mgorny Exp $
 
 EAPI=5
 
@@ -79,6 +79,7 @@ src_configure() {
 		# no deps
 		--enable-keymap
 		--enable-efi
+		--enable-ima
 		# optional components/dependencies
 		$(use_enable acl)
 		$(use_enable audit)
@@ -100,7 +101,6 @@ src_configure() {
 
 		# not supported (avoid automagic deps in the future)
 		--disable-chkconfig
-		--disable-ima
 
 		# hardcode a few paths to spare some deps
 		QUOTAON=/usr/sbin/quotaon
