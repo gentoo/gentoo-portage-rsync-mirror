@@ -1,10 +1,10 @@
 # ChangeLog for dev-perl/MooseX-Role-Parameterized
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Role-Parameterized/ChangeLog,v 1.11 2013/04/16 17:19:51 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Role-Parameterized/ChangeLog,v 1.12 2013/04/16 17:58:21 vincent Exp $
 
   16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
   MooseX-Role-Parameterized-1.0.0.ebuild:
-  Adding ~ppc keyword for dev-perl/PDL and his dependences, wrt bug #464970
+  Adding ~ppc keyword for dev-perl/PDL and his dependences, wrt bug #449762
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org>
   MooseX-Role-Parameterized-1.0.0.ebuild:

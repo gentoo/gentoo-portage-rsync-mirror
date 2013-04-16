@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.118 2013/04/16 05:21:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.119 2013/04/16 17:55:08 mgorny Exp $
+
+  16 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Perform kernel checks in pkg_pretend() to warn the user early. Use MERGE_TYPE
+  as an efficient replacement for pkg_preinst() implications.
 
   16 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
   systemd-9999.ebuild:
