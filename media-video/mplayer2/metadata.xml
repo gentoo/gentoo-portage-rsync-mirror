@@ -4,9 +4,6 @@
 <herd>video</herd>
 <herd>proxy-maintainers</herd>
 <maintainer>
-	<email>media-video@gentoo.org</email>
-</maintainer>
-<maintainer>
 	<email>nikoli@lavabit.com</email>
 	<description>Maintainer. Assign bugs to him</description>
 </maintainer>

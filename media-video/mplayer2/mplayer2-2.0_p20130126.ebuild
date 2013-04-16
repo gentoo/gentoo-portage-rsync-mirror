@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130126.ebuild,v 1.2 2013/02/02 01:13:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130126.ebuild,v 1.3 2013/04/16 07:24:39 pinkbyte Exp $
 
 EAPI=4
 
@@ -80,7 +80,7 @@ RDEPEND+="
 	alsa? ( media-libs/alsa-lib )
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
-	cdio? ( dev-libs/libcdio )
+	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdca )
 	dv? ( media-libs/libdv )
