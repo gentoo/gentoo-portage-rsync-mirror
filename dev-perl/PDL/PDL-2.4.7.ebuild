@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.5 2013/01/03 08:30:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.6 2013/04/16 18:23:04 ulm Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit perl-module eutils multilib
 
 DESCRIPTION="PDL Perl Module"
 
-LICENSE="Artistic as-is"
+LICENSE="|| ( Artistic GPL-1+ ) public-domain PerlDL"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="badval fftw gsl"
