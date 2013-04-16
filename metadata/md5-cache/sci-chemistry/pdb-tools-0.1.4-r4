@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare setup
+DEPEND=virtual/fortran
+DESCRIPTION=Tools for manipulating and doing calculations on wwPDB macromolecule structure files
+EAPI=5
+HOMEPAGE=http://code.google.com/p/pdb-tools/
+IUSE=python_targets_python2_6 python_targets_python2_7 python_targets_pypy1_9 python_single_target_python2_6 python_single_target_python2_7 python_single_target_pypy1_9
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-3
+RDEPEND=sci-chemistry/dssp virtual/fortran
+SLOT=0
+SRC_URI=http://pdb-tools.googlecode.com/files/pdb-tools_0.1.4.tar.gz
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fortran-2	ea80967500d9deda5468aed13b0bfca8	multilib	ded93e450747134a079e647d888aa80b	python-single-r1	b4f112abff5d77f982f83e1a9e554093	python-utils-r1	1abc4a4828358a8fc1c4d65e74ae4a19	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=516776009eca5912e8d9c2b012eb5a43

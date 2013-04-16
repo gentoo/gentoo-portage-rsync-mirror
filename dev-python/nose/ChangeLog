@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.102 2013/03/02 12:40:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.103 2013/04/16 08:37:44 patrick Exp $
+
+*nose-1.3.0 (16 Apr 2013)
+
+  16 Apr 2013; Patrick Lauer <patrick@gentoo.org> +nose-1.3.0.ebuild:
+  Bump
 
   02 Mar 2013; Ian Delaney <idella4@gentoo.org>
   +files/nose-1.2.1-skiptest.patch, nose-1.1.2-r1.ebuild, nose-1.2.1.ebuild,
