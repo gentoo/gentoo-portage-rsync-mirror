@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r3.ebuild,v 1.1 2012/11/19 10:28:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r3.ebuild,v 1.2 2013/04/16 11:55:13 ulm Exp $
 
 EAPI=4
 
@@ -9,7 +9,8 @@ inherit base toolchain-funcs user
 DESCRIPTION="System & Network Integrated Polling Software"
 HOMEPAGE="http://www.netplex-tech.com/snips/"
 SRC_URI="http://www.netplex-tech.com/software/downloads/${PN}/${P}.tar.gz"
-LICENSE="as-is"
+
+LICENSE="SNIPS BSD HPND GPL-1+ RSA free-noncomm"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
