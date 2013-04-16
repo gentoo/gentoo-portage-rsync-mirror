@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooseX-Getopt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.41 2013/02/10 08:45:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.42 2013/04/16 17:19:50 vincent Exp $
+
+  16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  MooseX-Getopt-0.540.0.ebuild:
+  Adding ~ppc keyword for dev-perl/PDL and his dependences, wrt bug #464970
 
   10 Feb 2013; Torsten Veller <tove@gentoo.org> MooseX-Getopt-0.520.0.ebuild,
   MooseX-Getopt-0.540.0.ebuild:

@@ -1,10 +1,13 @@
 # ChangeLog for dev-perl/Devel-Hide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Hide/ChangeLog,v 1.1 2013/02/09 12:55:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Hide/ChangeLog,v 1.2 2013/04/16 17:19:54 vincent Exp $
+
+  16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  Devel-Hide-0.0.900.ebuild:
+  Adding ~ppc keyword for dev-perl/PDL and his dependences, wrt bug #464970
 
 *Devel-Hide-0.0.900 (09 Feb 2013)
 
   09 Feb 2013; Torsten Veller <tove@gentoo.org> +Devel-Hide-0.0.900.ebuild,
   +metadata.xml:
   Initial commit for dev-perl/Path-Tiny
-

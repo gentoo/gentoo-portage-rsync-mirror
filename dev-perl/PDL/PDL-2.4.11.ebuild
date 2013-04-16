@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.7 2013/02/08 23:08:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.8 2013/04/16 17:19:53 vincent Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ DESCRIPTION="Perl Data Language for scientific computing"
 
 LICENSE="Artistic as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+badval doc fftw fortran gd gsl hdf netpbm pdl2 proj pgplot plplot threads"
 
 RDEPEND="sys-libs/ncurses

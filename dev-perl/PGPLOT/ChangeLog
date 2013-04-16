@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PGPLOT
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/ChangeLog,v 1.18 2013/01/13 12:41:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PGPLOT/ChangeLog,v 1.19 2013/04/16 17:19:49 vincent Exp $
+
+  16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org> PGPLOT-2.210.0.ebuild:
+  Adding ~ppc keyword for dev-perl/PDL and his dependences, wrt bug #464970
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org> PGPLOT-2.210.0.ebuild:
   add ~arm, bug #449762

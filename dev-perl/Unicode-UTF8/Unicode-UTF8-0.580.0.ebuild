@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8/Unicode-UTF8-0.580.0.ebuild,v 1.1 2013/02/10 07:33:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8/Unicode-UTF8-0.580.0.ebuild,v 1.2 2013/04/16 17:19:52 vincent Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Encoding and decoding of UTF-8 encoding form"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test"
 
 RDEPEND="

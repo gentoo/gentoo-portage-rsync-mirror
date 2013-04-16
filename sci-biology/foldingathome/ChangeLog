@@ -1,6 +1,16 @@
 # ChangeLog for sci-biology/foldingathome
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.36 2012/09/24 00:47:31 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.37 2013/04/16 17:18:07 axs Exp $
+
+*foldingathome-7.3.6 (16 Apr 2013)
+
+  16 Apr 2013; Ian Stakenvicius <axs@gentoo.org> +files/7.3/fah-init,
+  +files/7.3/folding-conf.d, +files/7.3/initfolding,
+  +foldingathome-7.3.6.ebuild, -files/6.34/fah-init, -files/6.34/folding-conf.d,
+  -files/6.34/initfolding, -foldingathome-6.34-r1.ebuild,
+  -foldingathome-6.34-r2.ebuild, metadata.xml:
+  version bump, remove old; updated license and added RESTRICT as per license
+  requirements, also added 32bit variant
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> foldingathome-6.34-r1.ebuild,
   foldingathome-6.34-r2.ebuild:
