@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.9.4-r1.ebuild,v 1.3 2013/03/02 20:22:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.9.4-r1.ebuild,v 1.4 2013/04/17 09:00:30 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib qt4-r2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/kscope/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-qt/qtcore:4

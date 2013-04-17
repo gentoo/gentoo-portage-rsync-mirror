@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.11.0.ebuild,v 1.4 2013/03/15 11:56:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.11.0.ebuild,v 1.5 2013/04/17 08:47:05 pinkbyte Exp $
 
 EAPI=5
 
@@ -17,9 +17,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND="dev-qt/qtcore:4
+DEPEND="dev-db/sqlite:3
+	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtsql:4
+	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
 

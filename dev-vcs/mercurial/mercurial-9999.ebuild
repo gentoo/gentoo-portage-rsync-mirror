@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.18 2013/04/08 18:38:49 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.19 2013/04/17 08:52:32 maksbotan Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="threads"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
+EAPI=5
 
-inherit bash-completion-r1 elisp-common eutils distutils mercurial
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_REQ_USE="threads"
+
+inherit bash-completion-r1 elisp-common eutils distutils-r1 mercurial flag-o-matic
 
 DESCRIPTION="Scalable distributed SCM"
 HOMEPAGE="http://mercurial.selenic.com/"
@@ -20,86 +19,87 @@ SLOT="0"
 KEYWORDS=""
 IUSE="bugzilla emacs gpg test tk zsh-completion"
 
-RDEPEND="bugzilla? ( dev-python/mysql-python )
+RDEPEND="bugzilla? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
 	gpg? ( app-crypt/gnupg )
 	tk? ( dev-lang/tk )
 	zsh-completion? ( app-shells/zsh )
 	app-misc/ca-certificates"
 DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
-		dev-python/pygments )
-	app-text/asciidoc
-	dev-python/docutils"
+		dev-python/pygments[${PYTHON_USEDEP}] )
+	dev-python/docutils[${PYTHON_USEDEP}]"
 
-PYTHON_CFLAGS=(
-	"2.* + -fno-strict-aliasing"
-	"* - -ftracer -ftree-vectorize"
-)
-
-PYTHON_MODNAME="${PN} hgext"
 SITEFILE="70${PN}-gentoo.el"
 
-src_prepare() {
-	distutils_src_prepare
+python_prepare_all() {
 	# fix up logic that won't work in Gentoo Prefix (also won't outside in
 	# certain cases), bug #362891
 	sed -i -e 's:xcodebuild:nocodebuild:' setup.py || die
+
+	distutils-r1_python_prepare_all
 }
 
-src_compile() {
-	distutils_src_compile
-	make doc || die
+python_configure_all() {
+	strip-flags -ftracer -ftree-vectorize
+	# Note: make it impl-conditional if py3 is supported
+	append-flags -fno-strict-aliasing
+
+	"${PYTHON}" setup.py build_mo || die
+}
+
+python_compile_all() {
+	rm -r contrib/{win32,macosx} || die
+	emake doc
 	if use emacs; then
-		cd "${S}"/contrib || die
+		cd contrib || die
 		elisp-compile mercurial.el || die "elisp-compile failed!"
 	fi
-	rm -rf contrib/{win32,macosx} || die
 }
 
-src_install() {
-	distutils_src_install
-	python_convert_shebangs 2 contrib/hg-ssh
+python_install_all() {
+	distutils-r1_python_install_all
 
-	newbashcomp contrib/bash_completion ${PN} || die
+	newbashcomp contrib/bash_completion ${PN}
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
-		newins contrib/zsh_completion _hg || die
+		newins contrib/zsh_completion _hg
 	fi
 
 	rm -f doc/*.?.txt || die
-	dodoc CONTRIBUTORS README doc/*.txt || die
+	dodoc CONTRIBUTORS doc/*.txt
 	cp hgweb*.cgi "${ED}"/usr/share/doc/${PF}/ || die
+
+	dobin hgeditor
+	dobin contrib/hgk
+	python_foreach_impl python_doscript contrib/hg-ssh
 
 	if use emacs; then
 		elisp-install ${PN} contrib/mercurial.el* || die "elisp-install failed!"
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	fi
 
-	dobin hgeditor || die
-	dobin contrib/hgk || die
-	dobin contrib/hg-ssh || die
-
 	local RM_CONTRIB=(hgk hg-ssh bash_completion zsh_completion wix buildrpm plan9
-		              *.el mercurial.spec)
+	                  *.el mercurial.spec)
 	for f in ${RM_CONTRIB[@]}; do
 		rm -rf contrib/$f || die
 	done
 
-	cp -r contrib "${ED}"/usr/share/doc/${PF}/ || die
-	doman doc/*.? || die
+	dodoc -r contrib
+	docompress -x /usr/share/doc/${PF}/contrib
+	doman doc/*.?
 
 	cat > "${T}/80mercurial" <<-EOF
 HG="${EPREFIX}/usr/bin/hg"
 EOF
-	doenvd "${T}/80mercurial" || die
+	doenvd "${T}/80mercurial"
 
 	insinto /etc/mercurial/hgrc.d
 	doins "${FILESDIR}/cacerts.rc"
 }
 
 src_test() {
-	cd "${S}/tests/" || die
+	cd tests || die
 	rm -rf *svn* || die					# Subversion tests fail with 1.5
 	rm -f test-archive* || die			# Fails due to verbose tar output changes
 	rm -f test-convert-baz* || die		# GNU Arch baz
@@ -122,16 +122,23 @@ src_test() {
 		rm -f test-repair-strip* || die
 	fi
 
-	testing() {
-		local testdir="${T}/tests-${PYTHON_ABI}"
-		rm -rf "${testdir}" || die
-		"$(PYTHON)" run-tests.py --tmpdir="${testdir}"
-	}
-	python_execute_function testing
+	cd .. || die
+	distutils-r1_src_test
+}
+
+python_test() {
+	local TEST_DIR
+
+	rm -rf "${TMPDIR}"/test
+	distutils_install_for_testing
+	cd tests || die
+	"${PYTHON}" run-tests.py --verbose \
+		--tmpdir="${TMPDIR}"/test \
+		--with-hg="${TEST_DIR}"/scripts/hg \
+		|| die "Tests fail with ${EPYTHON}"
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
 	use emacs && elisp-site-regen
 
 	elog "If you want to convert repositories from other tools using convert"
@@ -144,6 +151,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	distutils_pkg_postrm
 	use emacs && elisp-site-regen
 }
