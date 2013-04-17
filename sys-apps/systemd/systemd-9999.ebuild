@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.46 2013/04/16 18:47:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.47 2013/04/17 11:01:30 mgorny Exp $
 
 EAPI=5
 
@@ -22,9 +22,9 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
-IUSE="acl audit cryptsetup doc gcrypt gudev http introspection +kmod
-	lzma openrc pam policykit python qrcode selinux static-libs tcpd
-	vanilla xattr"
+IUSE="acl audit cryptsetup doc gcrypt gudev http introspection keymap
+	+kmod lzma openrc pam policykit python qrcode selinux static-libs
+	tcpd vanilla xattr"
 
 MINKV="2.6.39"
 
@@ -115,7 +115,6 @@ src_configure() {
 		# just text files
 		--enable-polkit
 		# no deps
-		--enable-keymap
 		--enable-efi
 		--enable-ima
 		# optional components/dependencies
@@ -127,6 +126,7 @@ src_configure() {
 		$(use_enable gudev)
 		$(use_enable http microhttpd)
 		$(use_enable introspection)
+		$(use_enable keymap)
 		$(use_enable kmod)
 		$(use_enable lzma xz)
 		$(use_enable pam)
