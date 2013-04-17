@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/expect-lite-4.4.0.ebuild,v 1.1 2013/01/21 21:25:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/expect-lite-4.4.0.ebuild,v 1.2 2013/04/17 03:02:29 vapier Exp $
 
 DESCRIPTION="quick and easy command line automation tool built on top of expect"
 HOMEPAGE="http://expect-lite.sourceforge.net/"
@@ -24,6 +24,6 @@ src_install() {
 
 	if use examples ; then
 		docinto examples
-		dodoc Examples/* || die
+		dodoc examples/* || die
 	fi
 }

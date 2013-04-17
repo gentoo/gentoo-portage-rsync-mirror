@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/snobol/snobol-1.4.1.ebuild,v 1.1 2013/04/06 12:11:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/snobol/snobol-1.4.1.ebuild,v 1.2 2013/04/17 03:06:28 patrick Exp $
 
 EAPI=5
 
@@ -30,6 +30,9 @@ src_prepare() {
 	echo "ADD_OPT([${CFLAGS}])" >>${S}/local-config
 	echo "ADD_CPPFLAGS([-DUSE_STDARG_H])" >>${S}/local-config
 	echo "ADD_CPPFLAGS([-DHAVE_STDARG_H])" >>${S}/local-config
+
+	# this cannot work and will cause funny sandbox violations
+	sed -i -e 's~/usr/bin/emerge info~~' timing || die "Failed to exorcise the sandbox violations"
 }
 
 src_configure() {
