@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.271 2013/04/12 19:24:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.272 2013/04/17 07:41:25 zmedico Exp $
+
+  17 Apr 2013; Zac Medico <zmedico@gentoo.org> calibre-0.9.20.ebuild,
+  calibre-0.9.26.ebuild, calibre-0.9.27.ebuild:
+  Add tc-export CC CXX, for bug #465860.
 
 *calibre-0.9.27 (12 Apr 2013)
 

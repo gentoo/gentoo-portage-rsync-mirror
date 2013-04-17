@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7735 2013/04/16 18:41:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7736 2013/04/17 07:56:19 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add shmux license to BINARY-REDISTRIBUTABLE group, bug 464870.
 
   16 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add sun-concurrent-util and sun-jlfgr licenses to BINARY-REDISTRIBUTABLE

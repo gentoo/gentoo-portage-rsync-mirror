@@ -10,4 +10,4 @@ RDEPEND=>=app-text/podofo-0.8.2:= >=app-text/poppler-0.12.3-r3:=[qt4,xpdf-header
 SLOT=0
 SRC_URI=http://sourceforge.net/projects/calibre/files/0.9.26/calibre-0.9.26.tar.xz
 _eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9130d835e8fd952e340ecaaa8f281f69
+_md5_=54f4f81820161f7a740813cf77bd5de6

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.20.ebuild,v 1.3 2013/03/02 19:40:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.20.ebuild,v 1.4 2013/04/17 07:41:25 zmedico Exp $
 
 EAPI=5
 PYTHON_DEPEND=2:2.7
 PYTHON_USE_WITH="ssl sqlite"
 
-inherit python eutils fdo-mime bash-completion-r1 multilib
+inherit python eutils fdo-mime bash-completion-r1 multilib toolchain-funcs
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
@@ -127,6 +127,7 @@ src_install() {
 	export CALIBRE_CONFIG_DIRECTORY="${XDG_CONFIG_HOME}/calibre"
 	mkdir -p "${XDG_CONFIG_HOME}" "${CALIBRE_CONFIG_DIRECTORY}"
 
+	tc-export CC CXX
 	# Bug #334243 - respect LDFLAGS when building calibre-mount-helper
 	export OVERRIDE_CFLAGS="$CFLAGS" OVERRIDE_LDFLAGS="$LDFLAGS"
 	local libdir=$(get_libdir)
