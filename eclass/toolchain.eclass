@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.582 2013/04/17 02:12:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.583 2013/04/17 02:31:58 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1970,12 +1970,12 @@ setup_multilib_osdirnames() {
 	config+="/t-linux64"
 
 	local sed_args=()
-	if tc_version_is_at_least 4.7 ; then
+	if tc_version_is_at_least 4.6 ; then
 		sed_args+=( -e 's:$[(]call if_multiarch[^)]*[)]::g' )
 	fi
 	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
 		einfo "updating multilib directories to be: ${libdirs}"
-		if tc_version_is_at_least 4.7 ; then
+		if tc_version_is_at_least 4.6.4 || tc_version_is_at_least 4.7 ; then
 			sed_args+=( -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:' )
 		else
 			sed_args+=( -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:" )
