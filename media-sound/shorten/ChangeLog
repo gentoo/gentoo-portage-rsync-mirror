@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/shorten
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.22 2008/11/15 17:57:47 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.23 2013/04/17 08:08:16 ulm Exp $
+
+  17 Apr 2013; Ulrich Müller <ulm@gentoo.org> shorten-3.6.1.ebuild:
+  Fix LICENSE, see COPYING and doc/LICENSE files, bug 465050.
 
   15 Nov 2008; Raúl Porcel <armin76@gentoo.org> shorten-3.6.1.ebuild:
   alpha stable wrt #246550
