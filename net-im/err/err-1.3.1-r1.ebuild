@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.3.1-r1.ebuild,v 1.1 2012/12/25 20:39:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.3.1-r1.ebuild,v 1.2 2013/04/17 07:24:39 pinkbyte Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ IUSE="+plugins"
 DEPEND="dev-python/setuptools"
 RDEPEND="dev-python/xmpppy
 	dev-python/python-daemon
-	dev-python/yapsy
+	<dev-python/yapsy-1.10
 	plugins? ( dev-vcs/git )"
 
 pkg_setup() {
