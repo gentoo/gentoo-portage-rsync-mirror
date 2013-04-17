@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.1.0_rc2.ebuild,v 1.1 2012/08/01 11:01:33 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.1.0_rc2.ebuild,v 1.2 2013/04/17 10:51:17 olemarkus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ PECL_PKG_V="${PECL_PKG}-${MY_PV}"
 FILENAME="${PECL_PKG_V}.tgz"
 S="${WORKDIR}/${PECL_PKG_V}"
 
-USE_PHP="php5-3 php5-4"
+USE_PHP="php5-5 php5-3 php5-4"
 
 inherit php-ext-pecl-r2
 
@@ -32,3 +32,12 @@ RDEPEND="${DEPEND}"
 SRC_URI="http://pecl.php.net/get/${FILENAME}"
 
 my_conf="--with-imagick=/usr"
+
+src_prepare() {
+    local slot
+    for slot in $(php_get_slots) ; do
+        cd "${WORKDIR}/${slot}"
+        epatch "${FILESDIR}/remove-header-check.patch"
+    done
+    php-ext-source-r2_src_prepare
+}
