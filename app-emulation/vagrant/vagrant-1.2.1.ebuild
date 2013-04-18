@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.1.5.ebuild,v 1.1 2013/04/16 09:09:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.2.1.ebuild,v 1.1 2013/04/18 07:03:50 radhermit Exp $
 
 EAPI="5"
 USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 RUBY_FAKEGEM_GEMSPEC="vagrant.gemspec"
-RUBY_FAKEGEM_EXTRAINSTALL="config keys templates"
+RUBY_FAKEGEM_EXTRAINSTALL="config keys plugins templates"
 RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem
@@ -25,6 +25,7 @@ IUSE="test"
 RESTRICT="test"
 
 RDEPEND="${RDEPEND}
+	net-misc/curl
 	!x64-macos? ( || ( app-emulation/virtualbox app-emulation/virtualbox-bin ) )"
 
 ruby_add_rdepend "
@@ -33,8 +34,8 @@ ruby_add_rdepend "
 	dev-ruby/i18n:0.6
 	>=dev-ruby/json-1.5.1
 	>=dev-ruby/log4r-1.1.9
-	>=dev-ruby/net-scp-1.1.0
 	>=dev-ruby/net-ssh-2.6.6
+	>=dev-ruby/net-scp-1.1.0
 "
 
 ruby_add_bdepend "
@@ -50,6 +51,13 @@ all_ruby_prepare() {
 	# loosen unslotted dependencies
 	sed -e '/childprocess\|erubis\|log4r\|net-scp\|net-ssh/s/~>/>=/' \
 		-i ${PN}.gemspec || die
+}
+
+all_ruby_install() {
+	all_fakegem_install
+
+	# suppress official installer warning
+	sed -i '/^require/a ENV["VAGRANT_INSTALLER_ENV"] = "1"' "${D}"/usr/bin/vagrant || die
 }
 
 pkg_postinst() {
