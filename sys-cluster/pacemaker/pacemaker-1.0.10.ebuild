@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.10.ebuild,v 1.5 2012/05/24 09:24:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.10.ebuild,v 1.6 2013/04/18 09:53:17 ultrabug Exp $
 
 EAPI="2"
 
@@ -28,7 +28,9 @@ RDEPEND="
 	snmp? ( net-analyzer/net-snmp )
 	!heartbeat? ( !ais? ( sys-cluster/openais ) )
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	!=dev-libs/glib-2.32*
+"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.10-asneeded.patch"

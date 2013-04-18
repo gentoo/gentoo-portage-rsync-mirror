@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.12.ebuild,v 1.2 2012/07/11 16:05:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.12.ebuild,v 1.3 2013/04/18 09:53:17 ultrabug Exp $
 
 EAPI="2"
 
@@ -31,7 +31,9 @@ DEPEND="
 	smtp? ( net-libs/libesmtp )
 	snmp? ( net-analyzer/net-snmp )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!=dev-libs/glib-2.32*
+"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.10-asneeded.patch"
