@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.61 2013/03/31 10:09:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.62 2013/04/18 17:34:10 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> c2hs-0.16.4.ebuild:
+  Stable for alpha, wrt bug #457270
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> c2hs-0.16.4.ebuild:
   Stable for sparc, wrt bug #457270

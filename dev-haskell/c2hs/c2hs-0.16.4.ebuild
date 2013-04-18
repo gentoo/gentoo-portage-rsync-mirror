@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.4.ebuild,v 1.7 2013/03/31 10:09:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.4.ebuild,v 1.8 2013/04/18 17:34:10 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND=">=dev-lang/ghc-6.10.4
