@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-humanities
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-humanities/ChangeLog,v 1.53 2013/04/17 14:59:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-humanities/ChangeLog,v 1.54 2013/04/18 13:52:42 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-humanities-2012.ebuild:
+  Stable for amd64, wrt bug #449298
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org> texlive-humanities-2012.ebuild:
   Stable for HPPA (bug #449298).
@@ -217,4 +220,3 @@
   14 Oct 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +texlive-humanities-2007.ebuild:
   initial import
-

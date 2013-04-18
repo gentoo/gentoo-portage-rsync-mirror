@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.118 2013/04/09 10:09:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.119 2013/04/18 13:37:10 aidecoe Exp $
+
+*dracut-027-r1 (18 Apr 2013)
+
+  18 Apr 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/027-0003-Do-not-call-plymouth-with-full-path.patch,
+  +files/027-0004-plymouth-plymouth-pretrigger.sh-fixup-.patch,
+  +dracut-027-r1.ebuild:
+  Rev-bump. Fixes bug #465518.
+
+  Thanks to Enrico Tagliavini <enrico.tagliavini@gmail.com> for report and
+  handling it and to Harald Hoyer for fixing it.
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> dracut-014-r3.ebuild,
   dracut-018-r3.ebuild, dracut-019-r6.ebuild, dracut-022-r6.ebuild,

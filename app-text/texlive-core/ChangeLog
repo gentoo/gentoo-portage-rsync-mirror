@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.189 2013/04/18 08:44:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.190 2013/04/18 13:50:52 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-core-2012-r1.ebuild:
+  Stable for amd64, wrt bug #449298
 
   18 Apr 2013; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2012-r1.ebuild:
@@ -862,4 +865,3 @@
   +files/2007/texlive-core-2007-mpware.patch, +files/texmf-update,
   +metadata.xml, +texlive-core-2007.ebuild:
   Initial import
-

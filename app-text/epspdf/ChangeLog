@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epspdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.13 2013/04/17 15:42:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.14 2013/04/18 13:50:40 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> epspdf-0.6.0.ebuild:
+  Stable for amd64, wrt bug #449298
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org> epspdf-0.6.0.ebuild:
   Stable for HPPA (bug #449298).
@@ -45,4 +48,3 @@
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org> +epspdf-0.5.3.ebuild,
   +metadata.xml:
   initial import, ebuild by me for bug #369745
-

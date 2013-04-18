@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-slovenian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/ChangeLog,v 1.40 2013/04/17 14:53:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/ChangeLog,v 1.41 2013/04/18 13:52:06 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  texlive-documentation-slovenian-2012.ebuild:
+  Stable for amd64, wrt bug #449298
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org>
   texlive-documentation-slovenian-2012.ebuild:
@@ -174,4 +178,3 @@
   09 Sep 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +texlive-documentation-slovenian-2008.ebuild:
   Initial import: New package for TeX Live 2008.
-

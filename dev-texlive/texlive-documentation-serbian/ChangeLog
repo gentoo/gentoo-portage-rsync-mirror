@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-serbian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.26 2013/04/17 14:52:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.27 2013/04/18 13:52:04 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  texlive-documentation-serbian-2012.ebuild:
+  Stable for amd64, wrt bug #449298
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org>
   texlive-documentation-serbian-2012.ebuild:
@@ -111,4 +115,3 @@
   24 Oct 2010; Alexis Ballier <aballier@gentoo.org>
   +texlive-documentation-serbian-2010.ebuild, +metadata.xml:
   Bump to TeX Live 2010
-

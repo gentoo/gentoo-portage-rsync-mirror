@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ps2eps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ChangeLog,v 1.23 2013/04/17 14:23:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ChangeLog,v 1.24 2013/04/18 13:50:44 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ps2eps-1.68.ebuild:
+  Stable for amd64, wrt bug #449298
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org> ps2eps-1.68.ebuild:
   Stable for HPPA (bug #449298).
@@ -78,4 +81,3 @@
   10 Nov 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +ps2eps-1.64.ebuild:
   initial import, bug #125153
-

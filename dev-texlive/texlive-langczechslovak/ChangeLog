@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langczechslovak
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.52 2013/04/17 15:03:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.53 2013/04/18 13:53:00 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  texlive-langczechslovak-2012.ebuild:
+  Stable for amd64, wrt bug #449298
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org>
   texlive-langczechslovak-2012.ebuild:
@@ -223,4 +227,3 @@
   14 Oct 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +texlive-langczechslovak-2007.ebuild:
   initial import
-
