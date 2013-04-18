@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1453.3.ebuild,v 1.2 2013/04/05 21:44:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1453.56.ebuild,v 1.1 2013/04/18 00:21:00 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,12 +20,12 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux system-sqlite tcmalloc"
+IUSE="bindist cups gnome gnome-keyring gps kerberos pulseaudio selinux +system-ffmpeg system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
 
-RDEPEND="app-accessibility/speech-dispatcher:=
+RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
 	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
@@ -33,6 +33,7 @@ RDEPEND="app-accessibility/speech-dispatcher:=
 		>=net-print/cups-1.3.11:=
 	)
 	>=dev-lang/v8-3.17.6:=
+	=dev-lang/v8-3.17*
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
 	>=dev-libs/icu-49.1.1-r1:=
@@ -58,7 +59,7 @@ RDEPEND="app-accessibility/speech-dispatcher:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	>=media-video/ffmpeg-1.0:=[opus]
+	system-ffmpeg? ( >=media-video/ffmpeg-1.0:=[opus] )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -113,12 +114,12 @@ pkg_setup() {
 		chromium_suid_sandbox_check_kernel_config
 	fi
 
-	# if use bindist && ! use system-ffmpeg; then
-	#	elog "bindist enabled: H.264 video support will be disabled."
-	# fi
-	# if ! use bindist; then
-	#	elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
-	# fi
+	if use bindist && ! use system-ffmpeg; then
+		elog "bindist enabled: H.264 video support will be disabled."
+	fi
+	if ! use bindist; then
+		elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
+	fi
 }
 
 src_prepare() {
@@ -138,6 +139,12 @@ src_prepare() {
 
 	# Fix build without pnacl, to be upstreamed.
 	epatch "${FILESDIR}/${PN}-pnacl-r0.patch"
+
+	# Fix build with speech-dispatcher-0.8, bug #463550 .
+	epatch "${FILESDIR}/${PN}-speech-dispatcher-0.8-r0.patch"
+
+	# Fix build with system v8.
+	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
 
 	epatch_user
 
@@ -224,7 +231,6 @@ src_configure() {
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
-		-Duse_system_ffmpeg=1
 		-Duse_system_harfbuzz=1
 		-Duse_system_icu=1
 		-Duse_system_jsoncpp=1
@@ -243,7 +249,8 @@ src_configure() {
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
-		-Duse_system_zlib=1"
+		-Duse_system_zlib=1
+		$(gyp_use system-ffmpeg use_system_ffmpeg)"
 
 	# TODO: Use system mesa on x86, bug #457130 .
 	if ! use x86 && ! use arm; then
@@ -309,10 +316,10 @@ src_configure() {
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
-	# if ! use bindist && ! use system-ffmpeg; then
-	#	# Enable H.624 support in bundled ffmpeg.
-	#	myconf+=" -Dffmpeg_branding=Chrome"
-	# fi
+	if ! use bindist && ! use system-ffmpeg; then
+		# Enable H.624 support in bundled ffmpeg.
+		myconf+=" -Dffmpeg_branding=Chrome"
+	fi
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 	# Note: these are for Gentoo use ONLY. For your own distribution,
@@ -360,8 +367,8 @@ src_configure() {
 
 src_compile() {
 	# TODO: add media_unittests after fixing compile (bug #462546).
-	local test_targets
-	for x in base cacheinvalidation crypto \
+	local test_targets=""
+	for x in base cacheinvalidation content crypto \
 		googleurl gpu net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
@@ -371,7 +378,7 @@ src_compile() {
 		make_targets+=" chrome_sandbox"
 	fi
 	if use test; then
-		make_targets+=$test_targets
+		make_targets+=" $test_targets"
 	fi
 
 	# See bug #410883 for more info about the .host mess.
@@ -417,10 +424,17 @@ src_test() {
 		"ICUStringConversionsTest.*" # bug #350347
 		"MessagePumpLibeventTest.*" # bug #398591
 		"TimeTest.JsTime" # bug #459614
+		"SecurityTest.NewOverflow" # bug #465724
 	)
 	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 
 	runtest out/Release/cacheinvalidation_unittests
+
+	local excluded_content_unittests=(
+		"RendererDateTimePickerTest.*" # bug #465452
+	)
+	runtest out/Release/content_unittests "${excluded_content_unittests[@]}"
+
 	runtest out/Release/crypto_unittests
 	runtest out/Release/googleurl_unittests
 	runtest out/Release/gpu_unittests
@@ -433,15 +447,21 @@ src_test() {
 		"NetUtilTest.FormatUrl*" # see above
 		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
 		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
+		"CertDatabaseNSSTest.TrustIntermediateCa*" # http://crbug.com/224612
 		"URLFetcher*" # bug #425764
 		"HTTPSOCSPTest.*" # bug #426630
 		"HTTPSEVCRLSetTest.*" # see above
 		"HTTPSCRLSetTest.*" # see above
+		"*SpdyFramerTest.BasicCompression*" # bug #465444
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
 	runtest out/Release/printing_unittests
-	runtest out/Release/sql_unittests
+
+	local excluded_sql_unittests=(
+		"SQLiteFeaturesTest.FTS2" # bug #461286
+	)
+	runtest out/Release/sql_unittests "${excluded_sql_unittests[@]}"
 }
 
 src_install() {
@@ -496,9 +516,9 @@ src_install() {
 	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
 	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
 
-	# if ! use system-ffmpeg; then
-	#	doexe out/Release/libffmpegsumo.so || die
-	# fi
+	if ! use system-ffmpeg; then
+		doexe out/Release/libffmpegsumo.so || die
+	fi
 
 	# Install icons and desktop entry.
 	local branding size
