@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/sk1libs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.18 2012/09/11 03:02:14 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.19 2013/04/18 06:35:36 jlec Exp $
+
+*sk1libs-0.9.1-r2 (18 Apr 2013)
+
+  18 Apr 2013; Justin Lecher <jlec@gentoo.org> +sk1libs-0.9.1-r2.ebuild,
+  metadata.xml:
+  Bump to distutils-r1.eclass, #466278; thanks Nikoli for a first patch
 
   11 Sep 2012; Christoph Junghans <ottxor@gentoo.org> sk1libs-0.9.1-r1.ebuild:
   added ~x86-linux
