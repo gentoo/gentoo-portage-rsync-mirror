@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.68 2013/04/13 14:01:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.69 2013/04/18 15:47:28 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -532,11 +532,16 @@ distutils-r1_run_phase() {
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
-	local MULTIBUILD_VARIANTS
-	_python_obtain_impls
+	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
+		local MULTIBUILD_VARIANTS
+		_python_obtain_impls
 
-	multibuild_for_best_variant _python_multibuild_wrapper \
-		distutils-r1_run_phase "${@}"
+		multibuild_for_best_variant _python_multibuild_wrapper \
+			distutils-r1_run_phase "${@}"
+	else
+		# semi-hack, be careful.
+		_distutils-r1_run_foreach_impl "${@}"
+	fi
 }
 
 # @FUNCTION: _distutils-r1_run_foreach_impl
