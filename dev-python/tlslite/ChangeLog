@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.17 2013/01/20 12:19:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.18 2013/04/18 12:34:15 idella4 Exp $
+
+*tlslite-0.4.3-r1 (18 Apr 2013)
+
+  18 Apr 2013; Ian Delaney <idella4@gentoo.org> +tlslite-0.4.3-r1.ebuild:
+  migration -> distutils-r1
 
 *tlslite-0.4.3 (20 Jan 2013)
 
