@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/unifdef
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.25 2012/01/05 10:15:14 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.26 2013/04/18 05:20:29 radhermit Exp $
+
+*unifdef-2.7 (18 Apr 2013)
+
+  18 Apr 2013; Tim Harder <radhermit@gentoo.org> +unifdef-2.7.ebuild:
+  Version bump (bug #466232).
 
   05 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -unifdef-1.20.ebuild,
   -unifdef-2.3.ebuild:
