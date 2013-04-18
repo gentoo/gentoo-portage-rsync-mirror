@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.42 2013/04/10 19:44:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.43 2013/04/18 03:58:18 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -15,7 +15,7 @@ LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="readline"
+IUSE="readline neon"
 
 RDEPEND="readline? ( sys-libs/readline:0 )"
 DEPEND="${PYTHON_DEPS}
@@ -48,9 +48,19 @@ src_configure() {
 			else
 				myconf+=" -Dv8_target_arch=x64"
 			fi ;;
-		arm*-hardfloat-*)
-			myconf+=" -Dv8_target_arch=arm -Dv8_use_arm_eabi_hardfloat=true" ;;
-		arm*-*) myconf+=" -Dv8_target_arch=arm" ;;
+		arm*-*)
+			myconf+=" -Dv8_target_arch=arm -Darm_fpu="
+			if [[ ${CHOST} == *-hardfloat-* ]] ; then
+				myconf+=" -Dv8_use_arm_eabi_hardfloat=true"
+			else
+				myconf+=" -Dv8_use_arm_eabi_hardfloat=false"
+			fi
+			if [[ ${CHOST} == armv7*-* ]] ; then
+				myconf+=" -Darmv7=1"
+			else
+				myconf+=" -Darmv7=0"
+			fi
+			myconf+=" $(gyp_use neon arm_neon)" ;;
 		*) die "Unrecognized CHOST: ${CHOST}"
 	esac
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.303 2013/04/16 17:27:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.304 2013/04/18 03:58:18 phajdan.jr Exp $
+
+  18 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> v8-3.17.16.2.ebuild,
+  v8-9999.ebuild:
+  Apply ARM fixes, bug #462200 + patch by Matt Whitlock.
 
 *v8-3.17.16.2 (16 Apr 2013)
 

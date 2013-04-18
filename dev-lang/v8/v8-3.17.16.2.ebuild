@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.16.2.ebuild,v 1.1 2013/04/16 17:27:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.16.2.ebuild,v 1.2 2013/04/18 03:58:18 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -16,7 +16,7 @@ LICENSE="BSD"
 soname_version="${PV}"
 SLOT="0/${soname_version}"
 KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
-IUSE="readline"
+IUSE="neon readline"
 
 RDEPEND="readline? ( sys-libs/readline:0 )"
 DEPEND="${PYTHON_DEPS}
@@ -40,9 +40,19 @@ src_configure() {
 			else
 				myconf+=" -Dv8_target_arch=x64"
 			fi ;;
-		arm*-hardfloat-*)
-			myconf+=" -Dv8_target_arch=arm -Dv8_use_arm_eabi_hardfloat=true" ;;
-		arm*-*) myconf+=" -Dv8_target_arch=arm" ;;
+		arm*-*)
+			myconf+=" -Dv8_target_arch=arm -Darm_fpu="
+			if [[ ${CHOST} == *-hardfloat-* ]] ; then
+				myconf+=" -Dv8_use_arm_eabi_hardfloat=true"
+			else
+				myconf+=" -Dv8_use_arm_eabi_hardfloat=false"
+			fi
+			if [[ ${CHOST} == armv7*-* ]] ; then
+				myconf+=" -Darmv7=1"
+			else
+				myconf+=" -Darmv7=0"
+			fi
+			myconf+=" $(gyp_use neon arm_neon)" ;;
 		*) die "Unrecognized CHOST: ${CHOST}"
 	esac
 
