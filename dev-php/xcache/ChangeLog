@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xcache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/ChangeLog,v 1.15 2013/04/16 16:53:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/ChangeLog,v 1.16 2013/04/17 12:52:36 olemarkus Exp $
+
+  17 Apr 2013; Ole Markus With <olemarkus@gentoo.org> -xcache-2.0.0.ebuild:
+  Remove old stable
 
   16 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xcache-3.0.1.ebuild:
   Stable for x86, wrt bug #466064

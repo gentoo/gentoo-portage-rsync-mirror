@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.121 2013/04/17 11:01:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.123 2013/04/17 20:58:36 mgorny Exp $
+
+  17 Apr 2013; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  systemd-201.ebuild, systemd-9999.ebuild:
+  Introduce USE=firmware-loader, as suggested by williamh. Check whether kernel
+  supports loading firmwares and warn properly.
+
+  17 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Fix duplicated --enable-polkit.
 
   17 Apr 2013; Michał Górny <mgorny@gentoo.org> metadata.xml,
   systemd-201.ebuild, systemd-9999.ebuild:

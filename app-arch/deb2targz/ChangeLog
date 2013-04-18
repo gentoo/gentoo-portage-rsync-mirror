@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/deb2targz
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.22 2012/07/25 15:42:31 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.23 2013/04/17 21:02:26 floppym Exp $
+
+  17 Apr 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop myself due to lack of interest.
 
   25 Jul 2012; Jeremy Olexa <darkside@gentoo.org> deb2targz-1-r2.ebuild:
   add keywords tested in prefix overlay
@@ -77,4 +80,3 @@
   31 Jul 2005; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
   +deb2targz-1.ebuild:
   Initial commit, ebuild by me.
-

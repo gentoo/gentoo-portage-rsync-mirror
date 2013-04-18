@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.47 2013/04/17 11:01:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.50 2013/04/17 22:29:15 williamh Exp $
 
 EAPI=5
 
@@ -22,8 +22,8 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
-IUSE="acl audit cryptsetup doc gcrypt gudev http introspection keymap
-	+kmod lzma openrc pam policykit python qrcode selinux static-libs
+IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
+	keymap +kmod lzma openrc pam policykit python qrcode selinux static-libs
 	tcpd vanilla xattr"
 
 MINKV="2.6.39"
@@ -97,6 +97,15 @@ pkg_pretend() {
 		if kernel_is -lt ${MINKV//./ }; then
 			ewarn "Kernel version at least ${MINKV} required"
 		fi
+
+		if use firmware-loader; then
+			CONFIG_CHECK+=" ~FW_LOADER"
+		elif kernel_is -lt 3 8; then
+			ewarn "You seem to be using kernel older than 3.8. Those kernel versions"
+			ewarn "require systemd with USE=firmware-loader to support loading"
+			ewarn "firmware. Missing this flag may cause some hardware not to work."
+		fi
+
 		check_extra_config
 	fi
 }
@@ -104,16 +113,12 @@ pkg_pretend() {
 src_configure() {
 	local myeconfargs=(
 		--localstatedir=/var
-		--with-firmware-path="/lib/firmware/updates:/lib/firmware"
-		# but pam modules have to lie in /lib*
 		--with-pamlibdir=$(getpam_mod_dir)
 		# make sure we get /bin:/sbin in $PATH
 		--enable-split-usr
 		# disable sysv compatibility
 		--with-sysvinit-path=
 		--with-sysvrcnd-path=
-		# just text files
-		--enable-polkit
 		# no deps
 		--enable-efi
 		--enable-ima
@@ -148,6 +153,12 @@ src_configure() {
 
 	# Keep using the one where the rules were installed.
 	MY_UDEVDIR=$(get_udevdir)
+
+	if use firmware-loader; then
+		myeconfargs+=(
+			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
+		)
+	fi
 
 	# Work around bug 463846.
 	tc-export CC

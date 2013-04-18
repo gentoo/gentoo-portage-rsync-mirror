@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.43 2012/09/21 12:09:04 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.44 2013/04/17 14:32:38 jer Exp $
+
+  17 Apr 2013; Jeroen Roovers <jer@gentoo.org> chktex-1.7.1.ebuild:
+  Stable for HPPA (bug #449298).
 
 *chktex-1.7.1 (21 Sep 2012)
 

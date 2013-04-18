@@ -1,6 +1,25 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.729 2013/03/08 11:00:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.731 2013/04/17 23:24:01 chithanh Exp $
+
+  17 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.13.4.ebuild:
+  Change postinstall message for xorg-server-1.13.4 too, bug #460844.
+
+*xorg-server-1.10.6-r2 (17 Apr 2013)
+*xorg-server-1.14.1 (17 Apr 2013)
+*xorg-server-1.13.4 (17 Apr 2013)
+*xorg-server-1.11.4-r2 (17 Apr 2013)
+*xorg-server-1.9.5-r2 (17 Apr 2013)
+*xorg-server-1.12.4-r1 (17 Apr 2013)
+
+  17 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xorg-server-1.12-cve-2013-1940.patch,
+  +files/xorg-server-1.9-cve-2013-1940.patch, +xorg-server-1.10.6-r2.ebuild,
+  +xorg-server-1.11.4-r2.ebuild, +xorg-server-1.12.4-r1.ebuild,
+  +xorg-server-1.13.4.ebuild, +xorg-server-1.14.1.ebuild,
+  +xorg-server-1.9.5-r2.ebuild:
+  Bump/patch for security bug #466222.
 
 *xorg-server-1.13.3 (08 Mar 2013)
 

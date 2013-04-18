@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.110 2013/04/05 09:15:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.111 2013/04/17 18:15:43 ssuominen Exp $
+
+*pngcrush-1.7.57 (17 Apr 2013)
+
+  17 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +pngcrush-1.7.57.ebuild:
+  Version bump to downgrade internal copy of libpng back to 1.5.15 for fixing
+  images with invalid IDAT wrt #466190
 
 *pngcrush-1.7.56 (05 Apr 2013)
 

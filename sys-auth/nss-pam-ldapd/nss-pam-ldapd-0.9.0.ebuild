@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.0.ebuild,v 1.1 2013/04/05 15:04:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.0.ebuild,v 1.2 2013/04/17 17:58:01 radhermit Exp $
 
 EAPI=4
 
-inherit multilib user
+inherit eutils multilib user
 
 DESCRIPTION="NSS module for name lookups using LDAP"
 HOMEPAGE="http://arthurdejong.org/nss-pam-ldapd/"
@@ -26,6 +26,11 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	enewgroup nslcd
 	enewuser nslcd -1 -1 -1 nslcd
+}
+
+src_prepare() {
+	# support user patches
+	epatch_user
 }
 
 src_configure() {

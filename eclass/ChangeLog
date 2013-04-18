@@ -1,6 +1,27 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.790 2013/04/14 06:54:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.793 2013/04/17 20:59:24 tomwij Exp $
+
+  17 Apr 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Reverted .tmp_gas_check patch, see bug #336732.
+
+  17 Apr 2013; Ralph Sennhauser <sera@gentoo.org> java-utils-2.eclass:
+  Request package specific emerge --info in death hook.
+
+  17 Apr 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Added a warning after the variables that modifying other variables in
+  the eclass is not supported, there is a chance that we will not fix
+  resulting bugs. Fixes bug #421721.
+  Clarify the default DESCRIPTION and make it not use versions, a
+  directory with ebuilds that inherit this eclass may contain multiple
+  versions and we also don't want to give the impression that a new
+  directory needs to made if that's not the case. Fixes bug #445110.
+  Clarified which patch depths are used in the normal output and error
+  output when applying patches. Fixes bug #436402.
+  Made sure .tmp_gas_check is created inside the temp folder, it
+  accidentally created temp.tmp_gas_check instead. Fixes bug #336732.
+  Make UNIPATCH_DOCS work again, install 0000_README document when
+  using genpatches. Fixes bug #301478.
 
   14 Apr 2013; Ole Markus With <olemarkus@gentoo.org> php-ext-source-r2.eclass:
   Remove support for EAPI 2 and 3 for php-ext-source-r2. Use REQUIRED_USE for

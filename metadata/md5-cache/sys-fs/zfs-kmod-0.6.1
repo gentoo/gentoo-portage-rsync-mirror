@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
-DEPEND==sys-kernel/spl-0.6.1* virtual/awk kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) || ( >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND==sys-kernel/spl-0.6.1* dev-lang/perl virtual/awk kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) || ( >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Linux ZFS kernel module for sys-fs/zfs
 EAPI=4
 HOMEPAGE=http://zfsonlinux.org/
 IUSE=custom-cflags debug +rootfs kernel_linux
 KEYWORDS=~amd64
 LICENSE=CDDL debug? ( GPL-2+ )
-RDEPEND==sys-kernel/spl-0.6.1* virtual/awk !sys-fs/zfs-fuse kernel_linux? ( virtual/modutils )
+RDEPEND==sys-kernel/spl-0.6.1* dev-lang/perl virtual/awk !sys-fs/zfs-fuse kernel_linux? ( virtual/modutils )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/zfsonlinux/zfs/archive/zfs-0.6.1.tar.gz
 _eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	autotools-utils	7c1dc0608214b369c4dc38ab6427e729	bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	linux-mod	c9d4931960ba253061ad823a8508bff5	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=8036c11e72b82abee22cb4c7c27e2c40
+_md5_=72cd0bab15a9ad9ff6557559b747f84a

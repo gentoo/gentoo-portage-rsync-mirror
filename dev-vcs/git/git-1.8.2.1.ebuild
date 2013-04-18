@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.1 2013/04/16 16:04:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.2 2013/04/17 19:06:31 robbat2 Exp $
 
 EAPI=4
 
@@ -233,7 +233,7 @@ src_prepare() {
 		-e 's:^\(AR = \).*$:\1$(OPTAR):' \
 		-e "s:\(PYTHON_PATH = \)\(.*\)$:\1${EPREFIX}\2:" \
 		-e "s:\(PERL_PATH = \)\(.*\)$:\1${EPREFIX}\2:" \
-		Makefile || die "sed failed"
+		Makefile contrib/svn-fe/Makefile || die "sed failed"
 
 	# Never install the private copy of Error.pm (bug #296310)
 	sed -i \
@@ -249,11 +249,6 @@ src_prepare() {
 		-e '/$(INSTALL)/s/ $(libexecdir)/ $(DESTDIR)$(libexecdir)/g' \
 		-e '/$(INSTALL)/s/ $(man1dir)/ $(DESTDIR)$(man1dir)/g'  \
 		contrib/subtree/Makefile
-
-	# Fix svn-fe ignoring LDFLAGS
-	sed -i \
-		-e '/^LDFLAGS/s,^,#,g' \
-		contrib/svn-fe/Makefile
 }
 
 git_emake() {

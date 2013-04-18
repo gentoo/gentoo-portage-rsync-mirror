@@ -9,5 +9,5 @@ LICENSE=netlogo GPL-2 LGPL-2.1 LGPL-3 BSD Apache-2.0
 RDEPEND=>=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/netlogo.gif.tar http://ccl.northwestern.edu/netlogo/5.0.3/netlogo-5.0.3.tar.gz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	dcda71e114d638cdf01db57b8445337d	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=a3c7ab7bf6c0c0610452bcc8e4e31d5a

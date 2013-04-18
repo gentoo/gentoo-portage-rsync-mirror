@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/sjphone-1.60.2235.ebuild,v 1.4 2010/10/28 12:31:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/sjphone-1.60.2235.ebuild,v 1.5 2013/04/17 18:29:48 ulm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION=" VOIP softphone supports both SIP and H.323 standards "
 HOMEPAGE="http://www.sjlabs.com/sjp.html"
 SRC_URI="http://www.sjlabs.com/preview/linux/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="SJ-Labs IJG libpng ZLIB RSA W3C BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/transmissionrpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.7 2013/02/03 21:28:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.8 2013/04/17 17:07:29 floppym Exp $
+
+*transmissionrpc-0.10 (17 Apr 2013)
+
+  17 Apr 2013; Mike Gilbert <floppym@gentoo.org> +transmissionrpc-0.10.ebuild,
+  -files/transmissionrpc-timestamp-test.patch, transmissionrpc-9999.ebuild:
+  Version bump with python3 support.
 
   03 Feb 2013; Zac Medico <zmedico@gentoo.org> transmissionrpc-0.9.ebuild:
   Fix SRC_URI.

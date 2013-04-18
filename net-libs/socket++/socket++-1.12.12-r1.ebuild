@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.8 2010/10/28 14:38:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.9 2013/04/17 17:59:50 ulm Exp $
 
 inherit autotools
 
@@ -8,10 +8,11 @@ DESCRIPTION="C++ Socket Library"
 HOMEPAGE="http://www.linuxhacker.at/socketxx/"
 SRC_URI="http://www.linuxhacker.at/linux/downloads/src/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="freedist GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~mips x86"
 IUSE="debug doc"
+RESTRICT="bindist"
 
 DEPEND="sys-devel/libtool
 	sys-apps/texinfo"

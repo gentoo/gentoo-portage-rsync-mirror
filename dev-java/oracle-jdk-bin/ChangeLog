@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.34 2013/03/07 18:45:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.35 2013/04/17 13:26:24 sera Exp $
+
+*oracle-jdk-bin-1.7.0.21 (17 Apr 2013)
+
+  17 Apr 2013; Ralph Sennhauser <sera@gentoo.org>
+  -oracle-jdk-bin-1.7.0.10.ebuild, -oracle-jdk-bin-1.7.0.15.ebuild,
+  +oracle-jdk-bin-1.7.0.21.ebuild:
+  Security bump. #466212
+  arm has no server vm. #464974
 
   07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> oracle-jdk-bin-1.7.0.17.ebuild:
   Stable for x86, wrt bug #460360

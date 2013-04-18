@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-gnokii/libopensync-plugin-gnokii-9999.ebuild,v 1.1 2007/11/26 20:15:41 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-gnokii/libopensync-plugin-gnokii-9999.ebuild,v 1.2 2013/04/17 14:20:03 creffett Exp $
+
+EAPI="2"
 
 inherit cmake-utils subversion
 

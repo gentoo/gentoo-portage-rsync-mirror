@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7737 2013/04/17 10:48:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7739 2013/04/17 18:41:03 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -10,7 +10,9 @@
   USE=keymap has been added to sys-apps/systemd.
 
   17 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
-  Add shmux license to BINARY-REDISTRIBUTABLE group, bug 464870.
+  Add shmux and Dina licenses to BINARY-REDISTRIBUTABLE group, bugs 464870
+  and 465102. Add canfep and Snd to MISC-FREE group, bugs 445310 and 465112.
+  Add SJ-Labs license to EULA group, bug 465196.
 
   16 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add sun-concurrent-util and sun-jlfgr licenses to BINARY-REDISTRIBUTABLE

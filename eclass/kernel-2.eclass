@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.281 2013/03/20 16:45:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.283 2013/04/17 20:59:24 tomwij Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -68,6 +68,11 @@
 #						  the doc dir
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of
 #						  order, so they are applied in the order passed
+
+# Changing any other variable in this eclass is not supported; you can request
+# for additional variables to be added by contacting the current maintainer.
+# If you do change them, there is a chance that we will not fix resulting bugs;
+# that of course does not mean we're not willing to help.
 
 inherit eutils toolchain-funcs versionator multilib
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_preinst pkg_postinst pkg_postrm
@@ -421,7 +426,7 @@ if [[ ${ETYPE} == sources ]]; then
 	PDEPEND="!build? ( virtual/dev-manager )"
 
 	SLOT="${PVR}"
-	DESCRIPTION="Sources for the ${KV_MAJOR}.${KV_MINOR:-$KV_PATCH} linux kernel"
+	DESCRIPTION="Sources based on the Linux Kernel."
 	IUSE="symlink build"
 
 	# Bug #266157, deblob for libre support
@@ -736,6 +741,10 @@ install_sources() {
 	fi
 
 	mv ${WORKDIR}/linux* "${D}"/usr/src
+
+	if [[ -z ${UNIPATCH_DOCS} ]] ; then
+		dodoc ${UNIPATCH_DOCS}
+	fi
 }
 
 # pkg_preinst functions
@@ -985,12 +994,12 @@ unipatch() {
 
 			if [ -z "${PATCH_DEPTH}" ]; then PATCH_DEPTH=0; fi
 
-			ebegin "Applying ${i/*\//} (-p${PATCH_DEPTH}+)"
 			while [ ${PATCH_DEPTH} -lt 5 ]; do
 				echo "Attempting Dry-run:" >> ${STDERR_T}
 				echo "cmd: patch -p${PATCH_DEPTH} --no-backup-if-mismatch --dry-run -f < ${i}" >> ${STDERR_T}
 				echo "=======================================================" >> ${STDERR_T}
 				if [ $(patch -p${PATCH_DEPTH} --no-backup-if-mismatch --dry-run -f < ${i} >> ${STDERR_T}) $? -eq 0 ]; then
+					ebegin "Applying ${i/*\//} (-p${PATCH_DEPTH})"
 					echo "Attempting patch:" > ${STDERR_T}
 					echo "cmd: patch -p${PATCH_DEPTH} --no-backup-if-mismatch -f < ${i}" >> ${STDERR_T}
 					echo "=======================================================" >> ${STDERR_T}
@@ -1003,28 +1012,38 @@ unipatch() {
 						eerror "Failed to apply patch ${i/*\//}"
 						eerror "Please attach ${STDERR_T} to any bug you may post."
 						eshopts_pop
-						die "Failed to apply ${i/*\//}"
+						die "Failed to apply ${i/*\//} on patch depth ${PATCH_DEPTH}."
 					fi
 				else
 					PATCH_DEPTH=$((${PATCH_DEPTH} + 1))
 				fi
 			done
 			if [ ${PATCH_DEPTH} -eq 5 ]; then
-				eend 1
+				eerror "Failed to dry-run patch ${i/*\//}"
 				eerror "Please attach ${STDERR_T} to any bug you may post."
 				eshopts_pop
-				die "Unable to dry-run patch."
+				die "Unable to dry-run patch on any patch depth lower than 5."
 			fi
 		done
 	done
 
-	# This is a quick, and kind of nasty hack to deal with UNIPATCH_DOCS which
-	# sit in KPATCH_DIR's. This is handled properly in the unipatch rewrite,
-	# which is why I'm not taking too much time over this.
+	# When genpatches is used, we want to install 0000_README which documents
+	# the patches that were used; such that the user can see them, bug #301478.
+	if [[ ! -z ${K_WANT_GENPATCHES} ]] ; then
+		UNIPATCH_DOCS="${UNIPATCH_DOCS} 0000_README"
+	fi
+
+	# When files listed in UNIPATCH_DOCS are found in KPATCH_DIR's, we copy it
+	# to the temporary directory and remember them in UNIPATCH_DOCS to install
+	# them during the install phase.
 	local tmp
-	for i in ${UNIPATCH_DOCS}; do
-		tmp="${tmp} ${i//*\/}"
-		cp -f ${i} "${T}"/
+	for x in ${KPATCH_DIR}; do
+		for i in ${UNIPATCH_DOCS}; do
+			if [[ -f "${x}/${i}" ]] ; then
+				tmp="${tmp} \"${T}/${i}\""
+				cp -f "${x}/${i}" "${T}"/
+			fi
+		done
 	done
 	UNIPATCH_DOCS="${tmp}"
 
@@ -1152,11 +1171,11 @@ kernel-2_src_unpack() {
 	if [[ -n ${KV_MINOR} &&  ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} < 2.6.27 ]]
 	then
 		sed -i \
-			-e 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
+			-e 's|TOUT      := .tmp_gas_check|TOUT  := $(T).tmp_gas_check|' \
 			"${S}"/arch/ppc/Makefile
 	else
 		sed -i \
-			-e 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
+			-e 's|TOUT      := .tmp_gas_check|TOUT  := $(T).tmp_gas_check|' \
 			"${S}"/arch/powerpc/Makefile
 	fi
 }

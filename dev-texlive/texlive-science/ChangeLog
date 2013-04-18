@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-science
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.55 2012/12/08 13:07:16 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.56 2013/04/17 15:35:17 jer Exp $
+
+  17 Apr 2013; Jeroen Roovers <jer@gentoo.org> texlive-science-2012-r1.ebuild:
+  Stable for HPPA (bug #449298).
 
 *texlive-science-2012-r1 (08 Dec 2012)
 

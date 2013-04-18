@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.41 2012/05/09 17:22:50 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.42 2013/04/17 14:33:35 jer Exp $
+
+  17 Apr 2013; Jeroen Roovers <jer@gentoo.org> svninfo-0.7.4.ebuild:
+  Stable for HPPA (bug #449298).
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> svninfo-0.7.4.ebuild:
   keyword ~amd64-fbsd

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync-plugin-gpe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-gpe/ChangeLog,v 1.7 2009/11/15 23:48:24 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-gpe/ChangeLog,v 1.8 2013/04/17 14:23:37 creffett Exp $
+
+  17 Apr 2013; Chris Reffett <creffett@gentoo.org>
+  libopensync-plugin-gpe-0.36.ebuild, libopensync-plugin-gpe-9999.ebuild:
+  0.36 and 9999 versions EAPI bumped to 2 wrt bug 460572
 
   15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libopensync-plugin-gpe-0.21.ebuild, -libopensync-plugin-gpe-0.35.ebuild:
@@ -41,4 +45,3 @@
   13 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
   +libopensync-plugin-gpe-0.20.ebuild:
   New package.
-

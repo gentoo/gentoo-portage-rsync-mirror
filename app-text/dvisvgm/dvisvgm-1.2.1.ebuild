@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.2.1.ebuild,v 1.1 2013/04/10 09:50:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.2.1.ebuild,v 1.2 2013/04/17 14:26:42 jer Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="test"
 # Tests don't work from $WORKDIR: kpathsea tries to search in relative
 # directories from where the binary is executed.

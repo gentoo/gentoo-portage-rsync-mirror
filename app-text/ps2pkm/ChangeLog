@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ps2pkm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.27 2012/07/26 11:54:00 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.28 2013/04/17 14:28:06 jer Exp $
+
+  17 Apr 2013; Jeroen Roovers <jer@gentoo.org> ps2pkm-1.5_p20120701.ebuild:
+  Stable for HPPA (bug #449298).
 
 *ps2pkm-1.5_p20120701 (26 Jul 2012)
 

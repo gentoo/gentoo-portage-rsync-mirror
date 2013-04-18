@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.238 2013/03/07 18:45:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.239 2013/04/17 11:55:00 sera Exp $
+
+*sun-jre-bin-1.6.0.45 (17 Apr 2013)
+
+  17 Apr 2013; Ralph Sennhauser <sera@gentoo.org> -sun-jre-bin-1.6.0.41.ebuild,
+  +sun-jre-bin-1.6.0.45.ebuild:
+  Security bump. #466212
+  ia64 has no server vm. #465540
 
   07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> sun-jre-bin-1.6.0.43.ebuild:
   Stable for x86, wrt bug #460360

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.14 2013/03/28 22:19:35 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.17 2013/04/17 14:30:18 ryao Exp $
 
 EAPI="4"
 
@@ -32,6 +32,7 @@ RESTRICT="test"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
+	dev-lang/perl
 	virtual/awk
 "
 
@@ -89,9 +90,6 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
-
-	# Provide /usr/src/zfs symlink for lustre
-	dosym "$(basename $(echo "${ED}/usr/src/zfs-"*))/${KV_FULL}" /usr/src/zfs
 }
 
 pkg_postinst() {

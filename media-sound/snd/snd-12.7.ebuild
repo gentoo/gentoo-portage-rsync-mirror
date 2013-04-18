@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.7.ebuild,v 1.5 2012/10/24 19:16:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.7.ebuild,v 1.6 2013/04/17 18:22:42 ulm Exp $
 
 EAPI="4"
 
@@ -10,8 +10,8 @@ DESCRIPTION="Snd is a sound editor"
 HOMEPAGE="http://ccrma.stanford.edu/software/snd/"
 SRC_URI="ftp://ccrma-ftp.stanford.edu/pub/Lisp/${P}.tar.gz"
 
+LICENSE="Snd BSD-2 HPND GPL-2+ LGPL-2.1+ LGPL-3+ ruby? ( free-noncomm ) s7? ( free-noncomm )"
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="alsa doc fam fftw gmp gsl gtk jack ladspa motif opengl oss portaudio pulseaudio readline ruby +s7"
 

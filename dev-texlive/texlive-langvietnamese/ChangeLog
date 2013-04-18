@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langvietnamese
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langvietnamese/ChangeLog,v 1.51 2012/10/03 18:19:54 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langvietnamese/ChangeLog,v 1.52 2013/04/17 15:19:26 jer Exp $
+
+  17 Apr 2013; Jeroen Roovers <jer@gentoo.org>
+  texlive-langvietnamese-2012.ebuild:
+  Stable for HPPA (bug #449298).
 
   03 Oct 2012; Ulrich Müller <ulm@gentoo.org>
   texlive-langvietnamese-2011.ebuild, texlive-langvietnamese-2012.ebuild:

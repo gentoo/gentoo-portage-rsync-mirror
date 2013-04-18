@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install nofetch postinst postrm prerm setup unpack
+DEPEND=pax_kernel? ( sys-apps/paxctl ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+DESCRIPTION=Oracle's Java SE Runtime Environment (32bit)
+EAPI=5
+HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
+IUSE=+X alsa nsplugin pax_kernel
+KEYWORDS=-* ~amd64
+LICENSE=Oracle-BCLA-JavaSE
+RDEPEND=X? ( app-emulation/emul-linux-x86-xlibs ) alsa? ( app-emulation/emul-linux-x86-soundlibs ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+RESTRICT=fetch strip
+SLOT=1.6
+SRC_URI=jre-6u45-linux-i586.bin
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	ded93e450747134a079e647d888aa80b	pax-utils	d727728a240d5f59bf9370a64259fd61	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=b28966a0a8d3518ef4b8226e96d44ced

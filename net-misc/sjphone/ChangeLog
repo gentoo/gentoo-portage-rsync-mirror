@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sjphone
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/ChangeLog,v 1.5 2008/10/10 10:49:58 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/ChangeLog,v 1.6 2013/04/17 18:29:48 ulm Exp $
+
+  17 Apr 2013; Ulrich Müller <ulm@gentoo.org> sjphone-1.60.2235.ebuild:
+  Fix LICENSE, see LICENSE and README files, bug 465196.
 
   10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   sjphone-1.60.2235.ebuild:

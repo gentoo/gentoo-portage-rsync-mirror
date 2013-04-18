@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-pictures
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.75 2012/12/17 20:14:22 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.76 2013/04/17 15:21:34 jer Exp $
+
+  17 Apr 2013; Jeroen Roovers <jer@gentoo.org> texlive-pictures-2012.ebuild:
+  Stable for HPPA (bug #449298).
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> texlive-pictures-2012.ebuild:
   Add ~ppc64, wrt bug #428248

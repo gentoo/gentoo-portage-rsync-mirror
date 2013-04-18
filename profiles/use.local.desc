@@ -3015,6 +3015,9 @@ media-libs/openimageio:colorio - Use media-gfx/opencolorio
 media-libs/openimageio:opencv - Use media-libs/opencv
 media-libs/openimageio:tbb - Use dev-cpp/tbb
 media-libs/opus:custom-modes - Build with custom-modes.
+media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
+media-libs/opusfile:float - Enable floating point arithmetic operations
+media-libs/opusfile:http - Enable http connections
 media-libs/phonon:vlc - Install VLC Phonon backend
 media-libs/phonon:zeitgeist - Add support for Zeitgeist event tracking system
 media-libs/phonon-gstreamer:network - Enable network streaming support via libsoup
@@ -4702,7 +4705,6 @@ net-misc/csync:webdav - Adds support for HTTP/dav content via net-libs/neon
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/curl:gnutls - Prefer gnutls over nss and openssl as the crypto engine
 net-misc/curl:metalink - Enable metalink support
-net-misc/curl:nonblocking - Enable nonblocking communication
 net-misc/curl:nss - Prefer NSS over openssl as the crypto engine
 net-misc/curl:rtmp - Enable Enables RTMPDump Streaming Media support
 net-misc/curl:ssh - Enabled SSH urls in curl using libssh2
@@ -5630,6 +5632,7 @@ sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT
 sys-apps/systemd:audit - Enable support for sys-process/audit
 sys-apps/systemd:cryptsetup - Use libcryptsetup
 sys-apps/systemd:efi - Enable EFI support (installs bootctl)
+sys-apps/systemd:firmware-loader - Enable user-space firmware loader (for kernels prior to 3.8)
 sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt
 sys-apps/systemd:gudev - enable libudev gobject interface
 sys-apps/systemd:http - Enable embedded HTTP server in journald

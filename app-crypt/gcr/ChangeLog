@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.18 2013/04/07 22:19:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.19 2013/04/17 19:51:42 pacho Exp $
+
+*gcr-3.8.1 (17 Apr 2013)
+
+  17 Apr 2013; Pacho Ramos <pacho@gentoo.org> +gcr-3.8.1.ebuild:
+  Version bump
 
   07 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org> gcr-3.8.0.ebuild:
   Apply team policy.

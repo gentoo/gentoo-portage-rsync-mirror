@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-thai
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-thai/ChangeLog,v 1.50 2012/07/27 01:45:08 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-thai/ChangeLog,v 1.51 2013/04/17 14:54:26 jer Exp $
+
+  17 Apr 2013; Jeroen Roovers <jer@gentoo.org>
+  texlive-documentation-thai-2012.ebuild:
+  Stable for HPPA (bug #449298).
 
 *texlive-documentation-thai-2012 (27 Jul 2012)
 
