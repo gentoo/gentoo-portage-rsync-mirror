@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.11 2013/04/18 05:36:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.12 2013/04/18 16:55:20 mgorny Exp $
 
 EAPI=5
 
@@ -71,8 +71,8 @@ pkg_pretend() {
 		~SYSFS ~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 
 	if [[ ${MERGE_TYPE} != binary ]]; then
-		if [[ $(gcc-major-version) -lt 3
-			|| ( $(gcc-major-version) -eq 3 && $(gcc-minor-version) -lt 6 ) ]]
+		if [[ $(gcc-major-version) -lt 4
+			|| ( $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 6 ) ]]
 		then
 			eerror "systemd requires at least gcc 4.6 to build. Please switch the active"
 			eerror "gcc version using gcc-config."

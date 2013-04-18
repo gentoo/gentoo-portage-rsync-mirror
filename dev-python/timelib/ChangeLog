@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/timelib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/ChangeLog,v 1.8 2012/10/09 13:07:41 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/ChangeLog,v 1.9 2013/04/18 16:59:57 idella4 Exp $
+
+*timelib-0.2.4-r1 (18 Apr 2013)
+
+  18 Apr 2013; Ian Delaney <idella4@gentoo.org> +timelib-0.2.4-r1.ebuild:
+  migration -> distutils-r1
 
 *timelib-0.2.4 (09 Oct 2012)
 

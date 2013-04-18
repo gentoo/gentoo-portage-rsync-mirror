@@ -9,7 +9,6 @@
 		<!-- XXX: describe those two better -->
 		<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
 		<flag name='cryptsetup'>Use libcryptsetup</flag>
-		<flag name='efi'>Enable EFI support (installs bootctl)</flag>
 		<flag name='firmware-loader'>Enable user-space firmware loader (for kernels prior to 3.8)</flag>
 		<flag name='gcrypt'>Enable sealing of journal files using gcrypt</flag>
 		<flag name="gudev">enable libudev gobject interface</flag>
