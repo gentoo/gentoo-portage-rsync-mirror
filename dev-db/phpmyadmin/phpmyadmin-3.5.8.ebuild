@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.5.7.ebuild,v 1.1 2013/02/19 18:23:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.5.8.ebuild,v 1.1 2013/04/18 13:19:02 a3li Exp $
 
 EAPI="4"
 

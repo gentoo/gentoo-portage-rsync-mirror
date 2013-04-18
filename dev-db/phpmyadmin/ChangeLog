@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.481 2013/02/19 18:23:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.482 2013/04/18 13:19:02 a3li Exp $
+
+*phpmyadmin-3.5.8 (18 Apr 2013)
+
+  18 Apr 2013; Alex Legler <a3li@gentoo.org> +phpmyadmin-3.5.8.ebuild,
+  -phpmyadmin-3.4.9.ebuild, -phpmyadmin-3.5.2.2.ebuild,
+  -phpmyadmin-3.5.7.ebuild:
+  Version bump for bug 465420; removing old
 
 *phpmyadmin-3.5.7 (19 Feb 2013)
 

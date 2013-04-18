@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.17147-r1.ebuild,v 1.2 2013/03/23 19:55:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.17147-r2.ebuild,v 1.1 2013/04/18 13:04:03 hasufell Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils gnome2-utils systemd unpacker
 
 # Major version
 MV=${PV/\.*}
-MY_PN=${PN}-${MV}
+MY_PN=${PN}${MV}
 DESCRIPTION="All-In-One Solution for Remote Access and Support over the Internet"
 HOMEPAGE="http://www.teamviewer.com"
 SRC_URI="http://www.teamviewer.com/download/version_${MV}x/teamviewer_linux.deb -> ${P}.deb"
@@ -41,7 +41,7 @@ RDEPEND="
 	)
 	system-wine? ( app-emulation/wine )"
 
-QA_PREBUILT="opt/teamviewer-${MV}/*"
+QA_PREBUILT="opt/teamviewer${MV}/*"
 
 S=${WORKDIR}/opt/teamviewer${MV}/tv_bin
 
@@ -62,7 +62,7 @@ src_prepare() {
 
 	sed \
 		-e "s/@TVV@/${MV}/g" \
-		"${FILESDIR}"/${PN}d.init > "${T}"/${PN}d-${MV} || die
+		"${FILESDIR}"/${PN}d.init > "${T}"/${PN}d${MV} || die
 }
 
 src_install () {
@@ -88,16 +88,28 @@ src_install () {
 		find "${D}"/opt/${MY_PN} -type f -name "*.so*" -execdir chmod 755 '{}' \;
 	fi
 
+	# necessary symlinks
+	dosym ./script/teamviewer /opt/${MY_PN}/TeamViewer
+	dosym ./script/teamviewer_desktop /opt/${MY_PN}/TeamViewer_Desktop
+
 	# install daemon binary
 	exeinto /opt/${MY_PN}
 	doexe ${PN}d
 
-	doinitd "${T}"/${PN}d-${MV}
+	# set up logdir
+	keepdir /var/log/${MY_PN}
+	dosym /var/log/${MY_PN} /opt/${MY_PN}/logfiles
+
+	# set up config dir
+	keepdir /etc/${MY_PN}
+	dosym /etc/${MY_PN} /opt/${MY_PN}/config
+
+	doinitd "${T}"/${PN}d${MV}
 	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	newicon -s 48 desktop/${PN}.png ${MY_PN}.png
 	dodoc ../linux_FAQ_{EN,DE}.txt
-	make_desktop_entry ${MY_PN} TeamViewer-${MV} ${MY_PN}
+	make_desktop_entry ${MY_PN} TeamViewer ${MY_PN}
 }
 
 pkg_preinst() {
@@ -115,12 +127,19 @@ pkg_postinst() {
 		echo
 	fi
 
-	ewarn "STARTUP NOTICE:"
+	eerror "STARTUP NOTICE:"
 	elog "You cannot start the daemon via \"teamviewer --daemon start\"."
 	elog "Instead use the provided gentoo initscript:"
-	elog "  /etc/init.d/${PN}d-${MV} start"
+	elog "  /etc/init.d/${PN}d${MV} start"
 	elog
-	elog "Logs are written to \"~/.config/teamviewer8/logfiles\""
+	elog "Logs are written to \"/var/log/teamviewer8\""
+
+	echo
+
+	eerror "UPDATE NOTICE!"
+	ewarn "If you update from teamviewer-8.0.17147"
+	ewarn "then you might have to remove \"~/.config/teamviewer8\", because"
+	ewarn "the install destination changed and the config might be invalid."
 }
 
 pkg_postrm() {

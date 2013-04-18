@@ -7,7 +7,7 @@
 	delaycompress
 	compress
 	postrotate
-		/etc/init.d/rsyslog reload &>/dev/null || true
+		kill -HUP $(cat /run/rsyslogd.pid) &>/dev/null || true
 	endscript
 }
 
@@ -32,6 +32,6 @@
 	delaycompress
 	sharedscripts
 	postrotate
-		/etc/init.d/rsyslog reload &>/dev/null || true
+		kill -HUP $(cat /run/rsyslogd.pid) &>/dev/null || true
 	endscript
 }
