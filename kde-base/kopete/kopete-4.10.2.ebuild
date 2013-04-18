@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.2.ebuild,v 1.2 2013/04/18 18:47:04 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.2.ebuild,v 1.3 2013/04/18 19:17:14 creffett Exp $
 
 EAPI=5
 
@@ -136,6 +136,8 @@ src_configure() {
 		esac
 		mycmakeargs+=($(cmake-utils_use_with ${x/+/} ${x2}))
 	done
+
+	mycmakeargs+="-DWITH_qq=OFF"
 
 	# enable plugins
 	for x in ${PLUGINS}; do
