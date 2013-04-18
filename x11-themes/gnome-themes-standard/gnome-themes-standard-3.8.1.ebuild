@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.6.2.ebuild,v 1.5 2013/02/25 21:13:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.8.1.ebuild,v 1.1 2013/04/18 19:43:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -21,8 +21,8 @@ COMMON_DEPEND="
 	x11-libs/cairo
 	>=x11-themes/gtk-engines-2.15.3:2
 	gtk? (
-		x11-libs/gtk+:2
-		>=x11-libs/gtk+-3.5.17:3 )
+		>=x11-libs/gtk+-2.24.15:2
+		>=x11-libs/gtk+-3.6.2:3 )
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
@@ -39,20 +39,21 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	# The icon cache needs to be generated in pkg_postinst()
-	G2CONF="${G2CONF}
-		--disable-static
-		--disable-placeholders
-		$(use_enable gtk gtk2-engine)
-		$(use_enable gtk gtk3-engines)
-		GTK_UPDATE_ICON_CACHE=$(type -P true)"
-
 	# Install cursors in the right place
 	sed -e 's:^\(cursordir.*\)icons\(.*\):\1cursors/xorg-x11\2:' \
 		-i themes/Adwaita/cursors/Makefile.am \
 		-i themes/Adwaita/cursors/Makefile.in || die
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	# The icon cache needs to be generated in pkg_postinst()
+	gnome2_src_configure \
+		--disable-static \
+		$(use_enable gtk gtk2-engine) \
+		$(use_enable gtk gtk3-engine) \
+		GTK_UPDATE_ICON_CACHE=$(type -P true)
 }
 
 src_install() {
