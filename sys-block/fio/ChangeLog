@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/fio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.32 2013/04/16 20:35:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.33 2013/04/18 14:22:18 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> fio-2.0.14-r1.ebuild:
+  Stable for ia64, wrt bug #422197
 
   16 Apr 2013; Agostino Sarubbo <ago@gentoo.org> fio-2.0.14-r1.ebuild:
   Stable for ppc64, wrt bug #422197
