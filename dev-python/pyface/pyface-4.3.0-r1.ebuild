@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.3.0-r1.ebuild,v 1.1 2013/04/11 16:05:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.3.0-r1.ebuild,v 1.2 2013/04/18 16:18:54 idella4 Exp $
 
 EAPI=5
 
@@ -32,16 +32,16 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 DOCS=( docs/*.txt )
 
 python_compile_all() {
-	use doc && emake -C docs html
+	use doc && virtualmake -C docs html
 }
 
 python_test() {
 	export ETS_TOOLKIT=qt4
 	export QT_API=pyqt
 	# set nosetests to ignore tests unpassable by these vars.
-	VIRTUALX_COMMAND="nosetests -v -I composite_grid_model_test_case* \
-		-I simple_grid_model_test_case* \
-		-I test_split_editor_area_pane*" virtualmake
+	VIRTUALX_COMMAND="nosetests" virtualmake -v -I 'composite_grid_model_test_case*' \
+		-I 'simple_grid_model_test_case*' \
+		-I 'test_split_editor_area_pane*'
 }
 
 python_install_all() {
