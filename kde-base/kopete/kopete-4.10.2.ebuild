@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.2.ebuild,v 1.1 2013/04/06 00:04:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.2.ebuild,v 1.2 2013/04/18 18:47:04 creffett Exp $
 
 EAPI=5
 
@@ -49,18 +49,18 @@ PLUGINS="+addbookmarks +autoreplace +contactnotes +highlight +history latex
 #	meanwhile: net-libs/meanwhile
 #	msn: libmsn == this is wlm plugin, we disable msn one
 #	oscar: NO DEPS
-#	qq: NO DEPS
 #   telepathy: net-libs/decibel
 #   testbed: NO DEPS
 #	winpopup: NO DEPS (we're adding samba as RDEPEND so it works)
 #	yahoo: media-libs/jasper
 #	zeroconf (bonjour): NO DEPS
-PROTOCOLS="gadu groupwise jingle meanwhile msn oscar qq skype
+PROTOCOLS="gadu groupwise jingle meanwhile msn oscar skype
 sms testbed winpopup +xmpp yahoo zeroconf"
 
 # disabled protocols
 #   telepathy: net-libs/decibel
 #   irc: NO DEPS
+#	qq: NO DEPS
 
 IUSE="${IUSE} ${PLUGINS} ${PROTOCOLS}"
 

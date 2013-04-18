@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.359 2013/04/06 00:04:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.360 2013/04/18 18:47:04 creffett Exp $
+
+  18 Apr 2013; Chris Reffett <creffett@gentoo.org> kopete-4.10.2.ebuild:
+  Remove USE="qq" wrt bug 464660.
 
 *kopete-4.10.2 (05 Apr 2013)
 
