@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.904 2013/04/13 21:00:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.905 2013/04/18 02:14:20 ssuominen Exp $
+
+  18 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-198-r6.ebuild,
+  -udev-199-r1.ebuild:
+  old
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> udev-200.ebuild:
   Stable for s390, wrt bug #463614
