@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/OLE-StorageLite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.34 2013/04/17 15:25:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.35 2013/04/18 21:37:59 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> OLE-StorageLite-0.190.0.ebuild:
+  Stable for ppc64, wrt bug #449298
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org> OLE-StorageLite-0.190.0.ebuild:
   Stable for HPPA (bug #449298).
