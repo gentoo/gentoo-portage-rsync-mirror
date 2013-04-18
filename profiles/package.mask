@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14663 2013/04/16 07:21:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14664 2013/04/18 05:00:32 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -537,10 +537,6 @@ media-gfx/yafaray
 # Not really compatible with TeX Live 2012, breaks texdoc, produces some non
 # fatal errors in some documents, mask until fixed or TeX Live 2013 is out.
 >=dev-tex/luatex-0.74
-
-# Tim Harder <radhermit@gentoo.org> (13 Jan 2013)
-# Masked for testing
-=mail-client/roundcube-0.9*
 
 # Doug Goldstein <cardoe@gentoo.org> (12 Jan 2013)
 # Under development

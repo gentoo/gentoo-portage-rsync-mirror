@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.111 2013/04/02 12:09:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.113 2013/04/18 04:57:51 radhermit Exp $
+
+  18 Apr 2013; Tim Harder <radhermit@gentoo.org> -roundcube-0.8.4.ebuild,
+  -roundcube-0.8.5.ebuild, -roundcube-0.9_rc2.ebuild:
+  Remove old.
+
+*roundcube-0.9.0 (18 Apr 2013)
+
+  18 Apr 2013; Tim Harder <radhermit@gentoo.org> +roundcube-0.9.0.ebuild:
+  Version bump.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> roundcube-0.8.6.ebuild:
   Stable for arm, wrt bug #463554
