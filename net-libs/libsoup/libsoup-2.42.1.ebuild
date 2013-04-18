@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.1.ebuild,v 1.1 2013/04/17 17:30:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.1.ebuild,v 1.2 2013/04/18 20:11:25 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit gnome2 python-any-r1
+inherit eutils gnome2 python-any-r1
 
 DESCRIPTION="An HTTP library implementation in C"
 HOMEPAGE="http://live.gnome.org/LibSoup"
@@ -45,6 +45,9 @@ src_prepare() {
 		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
 			|| die "sed failed"
 	fi
+
+	# Skip the IPv6 server test if there's no IPv6, upstream bug #698220
+	epatch "${FILESDIR}/${P}-ipv6-tests.patch"
 
 	gnome2_src_prepare
 }
