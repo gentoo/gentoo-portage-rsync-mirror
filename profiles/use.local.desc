@@ -745,6 +745,8 @@ app-misc/lcd4linux:mpd - Add support for display of mpd controlled music (media-
 app-misc/lcdproc:ftdi - Enable support for FTDI connections in some selected LCD_DEVICES (currently hd44780)
 app-misc/lcdproc:hid - Enable HID support using libhid
 app-misc/lcdproc:irman - Enable support for IRMan (media-libs/libirman)
+app-misc/lcdproc:lcd_devices_sdeclcd - Enable support for VLSYS M428 display
+app-misc/lcdproc:lcd_devices_vlsys_m428 - Enable support for VLSYS M428 display
 app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.75 2013/04/09 16:55:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.76 2013/04/18 21:10:22 xmw Exp $
+
+  18 Apr 2013; Michael Weber <xmw@gentoo.org> -lcdproc-0.5.6.ebuild,
+  +lcdproc-0.5.6-r1.ebuild, metadata.xml:
+  Fix IUSE_LCD_DRIVERS alignment (bug 462170), add additional drivers, add IUSE
+  png and truetype.
 
   09 Apr 2013; Tom Wijsman <TomWij@gentoo.org> lcdproc-0.5.6.ebuild:
   No PN variable in HOMEPAGE as per the dev manual.
