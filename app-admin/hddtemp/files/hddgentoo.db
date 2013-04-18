@@ -191,4 +191,8 @@
 "Hitachi HTS545050B9A300"					194 C "Hitachi Travelstar 500GB SATA2 2.5 5400RPM 8MB"
 "ST9500325AS"							194 C "Seagate Momentus 5400.6 500GB SATA2 5400RPM 8MB"
 "WDC WD30EFRX-68AX9N0"						194 C "Western Digital Red 3TB SATA3 64MB"
+
 "Samsung SSD 840 Series"					190 C "Samsung SSD 840 Series"
+"SAMSUNG HD203WI"						194 C "Samsung SpinPoint F3 EcoGreen 2TB SATA2 5400RPM 32MB"
+"SAMSUNG SSD 830 Series"					190 C "Samsung SSD 830 Series"
+"SanDisk SDSSDH2128G"						194 C "Sandisk SSD Ultra Plus 128GB"
