@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.241 2013/04/17 16:32:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.242 2013/04/18 08:34:54 ago Exp $
+
+  18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.21-r12.ebuild:
+  Stable for alpha, wrt bug #465390
 
   17 Apr 2013; Jeroen Roovers <jer@gentoo.org> mutt-1.5.21-r12.ebuild:
   Stable for HPPA (bug #465390).
