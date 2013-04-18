@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.51 2013/04/18 05:31:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.52 2013/04/18 05:36:01 mgorny Exp $
 
 EAPI=5
 
@@ -110,7 +110,11 @@ pkg_pretend() {
 		fi
 
 		if use firmware-loader; then
-			CONFIG_CHECK+=" ~FW_LOADER"
+			if kernel_is -ge 3 9; then
+				CONFIG_CHECK+=" ~FW_LOADER_USER_HELPER"
+			else
+				CONFIG_CHECK+=" ~FW_LOADER"
+			fi
 		elif kernel_is -lt 3 8; then
 			ewarn "You seem to be using kernel older than 3.8. Those kernel versions"
 			ewarn "require systemd with USE=firmware-loader to support loading"
