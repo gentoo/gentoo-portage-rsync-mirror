@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.12 2013/04/07 14:58:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.13 2013/04/18 07:53:39 jlec Exp $
 
 EAPI=4
 
@@ -56,6 +56,9 @@ PLUGINS="bzr chrome eog geany vim emacs tomboy telepathy xchat firefox-40-libzg"
 
 src_prepare() {
 	rm bzr/bzr-icon-64.png || die
+	sed \
+		-e '/bzr-icon-64.png/d' \
+		-i bzr/Makefile.am || die
 	sed \
 		-e '/^allowed_plugin/s:^:#:g' \
 		-i configure.ac || die

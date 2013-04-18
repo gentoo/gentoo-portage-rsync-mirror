@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vagrant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.17 2013/04/18 07:04:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.18 2013/04/18 07:59:49 radhermit Exp $
+
+*vagrant-1.2.1-r1 (18 Apr 2013)
+
+  18 Apr 2013; Tim Harder <radhermit@gentoo.org> -vagrant-1.2.1.ebuild,
+  +vagrant-1.2.1-r1.ebuild, +files/vagrant-1.2.1-no-warning.patch:
+  Revbump and remove old. Patch out official install warning instead of setting
+  environment variable so curl uses system ca-certs by default.
 
   18 Apr 2013; Tim Harder <radhermit@gentoo.org> -vagrant-1.0.6.ebuild,
   -vagrant-1.1.0.ebuild, -vagrant-1.1.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.2.1.ebuild,v 1.1 2013/04/18 07:03:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.2.1-r1.ebuild,v 1.1 2013/04/18 07:59:49 radhermit Exp $
 
 EAPI="5"
 USE_RUBY="ruby19"
@@ -10,7 +10,7 @@ RUBY_FAKEGEM_GEMSPEC="vagrant.gemspec"
 RUBY_FAKEGEM_EXTRAINSTALL="config keys plugins templates"
 RUBY_FAKEGEM_TASK_DOC=""
 
-inherit ruby-fakegem
+inherit ruby-fakegem eutils
 
 DESCRIPTION="A tool for building and distributing virtual machines using VirtualBox"
 HOMEPAGE="http://vagrantup.com/"
@@ -51,13 +51,8 @@ all_ruby_prepare() {
 	# loosen unslotted dependencies
 	sed -e '/childprocess\|erubis\|log4r\|net-scp\|net-ssh/s/~>/>=/' \
 		-i ${PN}.gemspec || die
-}
 
-all_ruby_install() {
-	all_fakegem_install
-
-	# suppress official installer warning
-	sed -i '/^require/a ENV["VAGRANT_INSTALLER_ENV"] = "1"' "${D}"/usr/bin/vagrant || die
+	epatch "${FILESDIR}"/${P}-no-warning.patch
 }
 
 pkg_postinst() {
