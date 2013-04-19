@@ -1,6 +1,12 @@
 # ChangeLog for app-text/jadetex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.62 2012/05/09 14:27:46 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.63 2013/04/19 14:44:11 aballier Exp $
+
+*jadetex-3.13-r4 (19 Apr 2013)
+
+  19 Apr 2013; Alexis Ballier <aballier@gentoo.org> +jadetex-3.13-r4.ebuild:
+  Install pdfjadetex.ini as it is needed to rebuild the format. Bug #456646 by
+  Ian Abbott.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> jadetex-3.13-r3.ebuild:
   keyword ~amd64-fbsd
