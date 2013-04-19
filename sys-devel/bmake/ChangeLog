@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.16 2013/02/26 08:06:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.17 2013/04/19 09:28:50 naota Exp $
+
+*bmake-20130330 (19 Apr 2013)
+
+  19 Apr 2013; Naohiro Aota <naota@gentoo.org> +bmake-20130330.ebuild:
+  Version bump
 
 *bmake-20130123 (26 Feb 2013)
 

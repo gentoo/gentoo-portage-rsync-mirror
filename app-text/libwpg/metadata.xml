@@ -3,7 +3,4 @@
 <pkgmetadata>
 <herd>kde</herd>
 <herd>openoffice</herd>
-<use>
-	<flag name="tools">Build miscellaneous tools</flag>
-</use>
 </pkgmetadata>

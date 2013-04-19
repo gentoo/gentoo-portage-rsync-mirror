@@ -980,7 +980,6 @@ app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search libra
 app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
-app-text/libwpg:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
 app-text/mathtex:png - Generate png images by default instead of gif
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
