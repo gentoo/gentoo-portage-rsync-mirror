@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.161 2013/02/19 18:06:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.162 2013/04/19 12:00:27 blueness Exp $
+
+  19 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  -files/valgrind-3.2.3-pkg-config.patch, -files/valgrind-3.3.0-only64bit.patch,
+  -files/valgrind-3.3.1-local-labels.patch,
+  -files/valgrind-3.4.1-local-labels.patch,
+  -files/valgrind-3.4.1-respect-LDFLAGS.patch,
+  -files/valgrind-3.4.1-x86_64-ldso-strlen.patch, -valgrind-3.4.0.ebuild,
+  -valgrind-3.4.1.ebuild:
+  Remove older 3.4 branch
 
   19 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
   +files/valgrind-3.8.1-glibc-2.17.patch, valgrind-3.8.1.ebuild:
