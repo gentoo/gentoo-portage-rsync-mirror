@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.10-r1.ebuild,v 1.1 2013/04/19 15:19:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.10-r1.ebuild,v 1.2 2013/04/19 17:43:06 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
 
-inherit autotools-utils python-r1
+inherit autotools-utils python-single-r1
 
 DESCRIPTION="A streaming protocol for test results"
 HOMEPAGE="https://launchpad.net/subunit http://pypi.python.org/pypi/python-subunit"
@@ -33,18 +33,8 @@ src_prepare() {
 	autotools-utils_src_prepare
 }
 
-src_configure() {
-	python_parallel_foreach_impl autotools-utils_src_configure
-}
-
-src_compile() {
-	python_foreach_impl autotools-utils_src_compile
-}
-
-src_test() {
-	python_parallel_foreach_impl autotools-utils_src_test
-}
-
 src_install() {
-	python_foreach_impl autotools-utils_src_install
+	autotools-utils_src_install
+
+	python_fix_shebang "${D}"/usr/bin
 }

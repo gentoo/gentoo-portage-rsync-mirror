@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.90 2013/03/30 17:08:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.91 2013/04/19 18:00:27 pacho Exp $
+
+*vinagre-3.8.1 (19 Apr 2013)
+
+  19 Apr 2013; Pacho Ramos <pacho@gentoo.org> +vinagre-3.8.1.ebuild:
+  Version bump
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -vinagre-3.4.2.ebuild:
   Clean up old revision.

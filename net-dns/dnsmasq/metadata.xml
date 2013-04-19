@@ -6,6 +6,7 @@
 <name>Patrick McLean</name>
 </maintainer>
 <use>
+	<flag name='auth-dns'>Add support for acting as an authorative DNS server.</flag>
 	<flag name='conntrack'>Add support for Linux conntrack connection marking.</flag>
 	<flag name='dhcp'>Enable support for reading ISC DHCPd lease files</flag>
 	<flag name='script'>Enable support for calling scripts when leases change</flag>
