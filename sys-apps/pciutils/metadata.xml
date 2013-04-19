@@ -4,6 +4,7 @@
 <herd>base-system</herd>
 <use>
  <flag name='compress-db'>Compress pci.ids database by default</flag>
+ <flag name='kmod'>Enable <pkg>sys-apps/kmod</pkg> support for the -k switch in lspci command</flag>
  <flag name='network-cron'>Monthly cronjob the update-pciids script</flag>
  <flag name='zlib'>Support compressed pci.ids database</flag>
 </use>

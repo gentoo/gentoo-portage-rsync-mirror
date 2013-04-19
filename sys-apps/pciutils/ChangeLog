@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.214 2013/02/22 17:31:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.215 2013/04/19 15:22:29 ssuominen Exp $
+
+*pciutils-3.2.0 (19 Apr 2013)
+
+  19 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +pciutils-3.2.0.ebuild,
+  metadata.xml:
+  Version bump. Use libkmod instead of "modules.pcimap" which is no longer
+  generated using the depmod from sys-apps/kmod like it was with
+  sys-apps/module-init-tools wrt #462982 by Mike Frysinger.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> pciutils-3.1.10.ebuild:
   Add ~arm-linux keyword.

@@ -1,6 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.165 2013/03/22 01:20:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.166 2013/04/19 15:25:19 ssuominen Exp $
+
+# masking here and unmasking in default/linux/
+kmod
 
 # not ready for primetime
 packagekit
