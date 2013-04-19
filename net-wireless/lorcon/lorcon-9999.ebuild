@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/lorcon-9999.ebuild,v 1.1 2013/04/12 03:14:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/lorcon-9999.ebuild,v 1.2 2013/04/19 13:34:39 zerochaos Exp $
 
 EAPI=5
 
@@ -22,9 +22,10 @@ SLOT="0"
 KEYWORDS=""
 IUSE="python ruby"
 
-DEPEND="ruby? ( $(ruby_implementations_depend) )"
-RDEPEND="${DEPEND}
-	dev-libs/libnl"
+DEPEND="ruby? ( $(ruby_implementations_depend) )
+	dev-libs/libnl
+	net-libs/libpcap"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/all
 

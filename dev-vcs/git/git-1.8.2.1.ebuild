@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.2 2013/04/17 19:06:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.3 2013/04/19 13:38:05 vapier Exp $
 
 EAPI=4
 
@@ -141,7 +141,7 @@ exportmakeopts() {
 	myopts="${myopts} NO_EXTERNAL_GREP="
 
 	# For svn-fe
-	extlibs="-lz -lssl ${S}/xdiff/lib.a"
+	extlibs="-lz -lssl ${S}/xdiff/lib.a $(usex threads -lpthread '')"
 
 	# can't define this to null, since the entire makefile depends on it
 	sed -i -e '/\/usr\/local/s/BASIC_/#BASIC_/' Makefile
