@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.59 2013/04/09 04:35:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.60 2013/04/19 03:14:58 radhermit Exp $
+
+*nut-18.8 (19 Apr 2013)
+
+  19 Apr 2013; Tim Harder <radhermit@gentoo.org> +nut-18.8.ebuild:
+  Version bump.
 
 *nut-18.7 (09 Apr 2013)
 
