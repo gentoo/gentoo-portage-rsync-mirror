@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.15 2013/04/18 20:02:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.16 2013/04/19 00:25:16 floppym Exp $
 
 EAPI=5
 
@@ -94,6 +94,10 @@ pkg_pretend() {
 
 		check_extra_config
 	fi
+}
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
 }
 
 src_configure() {

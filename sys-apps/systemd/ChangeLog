@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.129 2013/04/18 20:02:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.130 2013/04/19 00:25:16 floppym Exp $
+
+  19 Apr 2013; Mike Gilbert <floppym@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Skip python-single-r1_pkg_setup when python is disabled, bug 466408.
 
   18 Apr 2013; William Hubbs <williamh@gentoo.org> systemd-201.ebuild,
   systemd-9999.ebuild:
