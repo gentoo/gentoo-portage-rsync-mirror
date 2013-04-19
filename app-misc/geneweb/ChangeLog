@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.23 2013/04/16 17:27:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.24 2013/04/19 06:08:47 tupone Exp $
+
+*geneweb-6.06 (19 Apr 2013)
+
+  19 Apr 2013; Alfredo Tupone <tupone@gentoo.org> +geneweb-6.06.ebuild,
+  +files/geneweb-6.06-gentoo.patch, +files/geneweb-6.06-parallellbuild.patch:
+  Version bump to 6.06
 
   16 Apr 2013; Tupone Alfredo <tupone@gentoo.org> -geneweb-6.02.ebuild,
   -files/geneweb-6.02-amd64.patch:

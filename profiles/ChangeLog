@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7742 2013/04/18 16:21:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7743 2013/04/19 06:20:50 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Change mask message for ~sys-fs/udev-171 so it won't be removed before bug
+  466424 is solved somehow.
 
   18 Apr 2013; Michael Weber <xmw@gentoo.org> package.mask:
   app-arch/advancecomp-1.17 masked due test failures

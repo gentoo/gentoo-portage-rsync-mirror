@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-006.ebuild,v 1.11 2013/02/22 17:32:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-006.ebuild,v 1.12 2013/04/19 06:03:22 ssuominen Exp $
 
 EAPI="4"
 
@@ -33,7 +33,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libusbx-1.0.13.patch
 	epatch "${FILESDIR}"/${P}-stdint.patch
 
 	if use python; then
