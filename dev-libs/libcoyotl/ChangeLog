@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libcoyotl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/ChangeLog,v 1.12 2011/01/09 18:50:21 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/ChangeLog,v 1.13 2013/04/19 02:53:52 patrick Exp $
+
+*libcoyotl-3.1.0-r1 (19 Apr 2013)
+
+  19 Apr 2013; Patrick Lauer <patrick@gentoo.org> +files/3.1.0-gcc-4.7.patch,
+  +libcoyotl-3.1.0-r1.ebuild:
+  Fix for newer gcc #465646
 
   09 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -libcoyotl-3.0.1.ebuild, libcoyotl-3.1.0.ebuild:
@@ -45,4 +51,3 @@
 
   07 May 2004; Daniel Ahlberg <aliz@gentoo.org> libcoyotl-3.0.1.ebuild:
   Initial import.
-
