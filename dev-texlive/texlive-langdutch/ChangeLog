@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langdutch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langdutch/ChangeLog,v 1.56 2013/04/18 21:36:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langdutch/ChangeLog,v 1.57 2013/04/19 20:44:51 ago Exp $
+
+  19 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-langdutch-2012.ebuild:
+  Stable for ia64, wrt bug #449298
 
   18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-langdutch-2012.ebuild:
   Stable for ppc64, wrt bug #449298

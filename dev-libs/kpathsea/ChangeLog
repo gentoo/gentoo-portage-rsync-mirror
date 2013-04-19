@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.35 2013/04/18 21:34:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.36 2013/04/19 20:42:43 ago Exp $
+
+  19 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  kpathsea-6.1.0_p20120701.ebuild:
+  Stable for ia64, wrt bug #449298
 
   18 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   kpathsea-6.1.0_p20120701.ebuild:

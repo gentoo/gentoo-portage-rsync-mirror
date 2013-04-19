@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.46 2013/04/18 21:37:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.47 2013/04/19 20:46:40 ago Exp $
+
+  19 Apr 2013; Agostino Sarubbo <ago@gentoo.org> svninfo-0.7.4.ebuild:
+  Stable for ia64, wrt bug #449298
 
   18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> svninfo-0.7.4.ebuild:
   Stable for ppc64, wrt bug #449298

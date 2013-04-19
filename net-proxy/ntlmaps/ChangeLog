@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/ntlmaps
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.17 2010/10/15 21:44:40 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.18 2013/04/19 20:33:58 tomwij Exp $
+
+*ntlmaps-0.9.9.6-r2 (19 Apr 2013)
+
+  19 Apr 2013; Tom Wijsman <TomWij@gentoo.org> +ntlmaps-0.9.9.6-r2.ebuild,
+  -ntlmaps-0.9.9.6-r1.ebuild, ntlmaps-0.9.9-r2.ebuild:
+  EAPI 5. Bump, prevent file collision by removing lib/utils.py. Fixes bug
+  #351305.
 
   15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ntlmaps-0.9.9.6-r1.ebuild:
@@ -122,4 +129,3 @@
 
   10 Jun 2004; satya@gentoo.org :
   New ebuild, as per bug #49958. Initscripts.
-
