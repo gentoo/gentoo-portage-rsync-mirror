@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.116 2013/04/16 10:14:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.117 2013/04/19 10:27:45 swift Exp $
+
+*policycoreutils-2.1.13-r11 (19 Apr 2013)
+
+  19 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.13-r11.ebuild:
+  Add selocal command to policycoreutils
 
 *policycoreutils-2.1.13-r10 (16 Apr 2013)
 
