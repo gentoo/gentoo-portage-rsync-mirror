@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.342 2013/04/12 17:27:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.343 2013/04/19 15:45:54 ssuominen Exp $
+
+*alsa-utils-1.0.26-r3 (19 Apr 2013)
+
+  19 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +alsa-utils-1.0.26-r3.ebuild:
+  Remove alsaconf utility; doesn't work with depmod from sys-apps/kmod because
+  it doesn't generate "modules.pcimap" and "modules.usbmap" files anymore like
+  sys-apps/module-init-tools used to wrt #456214
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> alsa-utils-1.0.26-r2.ebuild:
   Stable for ia64, wrt bug #463451

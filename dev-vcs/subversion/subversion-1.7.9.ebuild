@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.9.ebuild,v 1.1 2013/04/08 22:41:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.9.ebuild,v 1.2 2013/04/19 15:35:46 tommy Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -31,7 +31,8 @@ COMMON_DEPEND=">=dev-db/sqlite-3.4
 	kde? ( sys-apps/dbus dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=kde-base/kdelibs-4:4 )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
-	ruby? ( >=dev-lang/ruby-1.8.2:1.8 )
+	ruby? ( >=dev-lang/ruby-1.8.2:1.8
+		dev-ruby/rubygems[ruby_targets_ruby18] )
 	sasl? ( dev-libs/cyrus-sasl )
 	webdav-neon? ( >=net-libs/neon-0.28 )
 	webdav-serf? ( >=net-libs/serf-0.3.0 )"
