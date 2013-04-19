@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.2.ebuild,v 1.1 2013/04/18 10:47:08 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.2.ebuild,v 1.2 2013/04/19 09:51:02 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -70,6 +70,7 @@ src_prepare() {
 	epatch "${FILESDIR}/mongodb-2.4-fix-sharedclient.patch"
 
 	# bug #462606
+	sed -i -e "s@\prefix + \"/lib\"@prefix + \"/$(get_libdir)\"@g" src/SConscript.client || die
 	if use !prefix && [[ "$(get_libdir)" == "lib" ]]; then
 		sed -i -e 's/^env.Install(prefix/env.InstallAs(prefix/g' src/SConscript.client || die
 	fi

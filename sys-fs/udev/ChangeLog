@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.906 2013/04/18 17:57:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.907 2013/04/19 09:35:40 ssuominen Exp $
+
+*udev-202 (19 Apr 2013)
+
+  19 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-202.ebuild,
+  udev-9999.ebuild:
+  Version bump. Update line count for secure_getenv() which still looks safe to
+  ignore.
 
   18 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Use ac_cv_prog_ac_ct_GPERF instead of ac_cv_path_GPERF to disable
