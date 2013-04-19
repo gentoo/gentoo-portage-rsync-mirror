@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.21.65.ebuild,v 1.1 2013/01/02 08:07:58 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.21.70.ebuild,v 1.1 2013/04/19 11:04:20 tomjbe Exp $
 
 EAPI=4
 
