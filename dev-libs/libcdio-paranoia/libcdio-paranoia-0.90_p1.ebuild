@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/libcdio-paranoia-0.90_p1.ebuild,v 1.1 2013/04/15 20:57:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/libcdio-paranoia-0.90_p1.ebuild,v 1.2 2013/04/19 16:54:41 ssuominen Exp $
 
 EAPI=5
 MY_P=${PN}-10.2+${PV/_p/+}
@@ -30,6 +30,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.90-mkdir_p.patch
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #466410
 	eautoreconf
 }
 
