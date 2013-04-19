@@ -1,0 +1,20 @@
+--- a/test/TC_Deque.rb	2008-09-30 09:59:24.000000000 +0200
++++ b/test/TC_Deque.rb	2013-04-19 22:05:01.010997265 +0200
+@@ -2,14 +2,14 @@
+ require 'external/test_support'
++require 'ext/deque/deque'
+ SwiftcoreTestSupport.set_src_dir
+ require 'rbconfig'
+-require 'swiftcore/deque'
+ 
+ class TC_Deque < Test::Unit::TestCase
+ 	@@testdir = SwiftcoreTestSupport.test_dir(__FILE__)
+ 	
+ 	def setup
+ 		Dir.chdir(@@testdir)
+-		SwiftcoreTestSupport.announce(:proxybag,"ProxyBag")
++		SwiftcoreTestSupport.announce(:deque,"Deque")
+ 	end
+ 
+ 	def teardown
+
