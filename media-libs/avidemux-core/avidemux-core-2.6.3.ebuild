@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.3.ebuild,v 1.1 2013/03/29 15:10:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.3.ebuild,v 1.2 2013/04/19 18:54:14 tomwij Exp $
 
 EAPI="5"
 
@@ -35,6 +35,7 @@ RDEPEND="
 DEPEND="
 	$DEPEND
 	virtual/pkgconfig
+	!system-ffmpeg? ( dev-lang/yasm[nls=] )
 "
 
 S="${WORKDIR}/${MY_P}"
