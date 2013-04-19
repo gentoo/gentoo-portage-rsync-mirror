@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/workerpool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/workerpool/ChangeLog,v 1.5 2013/03/19 15:39:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/workerpool/ChangeLog,v 1.6 2013/04/19 12:34:47 idella4 Exp $
+
+  19 Apr 2013; Ian Delaney <idella4@gentoo.org> workerpool-0.9.2-r1.ebuild:
+  Add PYTHON_USEDEP in deps
 
 *workerpool-0.9.2-r1 (19 Mar 2013)
 
