@@ -9,7 +9,7 @@
 # Modified by:  Mike Frysinger, <vapier@gentoo.org>
 # Modified by:  Robin H. Johnson, <robbat2@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/files/inittab-2.87,v 1.1 2010/01/08 16:55:07 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/files/inittab-2.87,v 1.2 2013/04/20 03:51:26 vapier Exp $
 
 # Default runlevel.
 id:3:initdefault:
@@ -44,8 +44,8 @@ c5:2345:respawn:/sbin/agetty 38400 tty5 linux
 c6:2345:respawn:/sbin/agetty 38400 tty6 linux
 
 # SERIAL CONSOLES
-#s0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100
-#s1:12345:respawn:/sbin/agetty 9600 ttyS1 vt100
+#s0:12345:respawn:/sbin/agetty -L 9600 ttyS0 vt100
+#s1:12345:respawn:/sbin/agetty -L 9600 ttyS1 vt100
 
 # What to do at the "Three Finger Salute".
 ca:12345:ctrlaltdel:/sbin/shutdown -r now
@@ -56,4 +56,3 @@ ca:12345:ctrlaltdel:/sbin/shutdown -r now
 # extra at boot if /etc/init.d/xdm is not added
 # to the "default" runlevel.
 x:a:once:/etc/X11/startDM.sh
-
