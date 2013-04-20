@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/pyelftools-0.21.ebuild,v 1.1 2013/04/19 19:26:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/pyelftools-0.21-r1.ebuild,v 1.1 2013/04/20 17:15:54 mgorny Exp $
 
-EAPI="4"
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
-inherit distutils
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+inherit distutils-r1
 
-DESCRIPTION="pure-Python library for parsing and analyzing ELF files and DWARF debugging information"
+DESCRIPTION="Pure-Python library for parsing and analyzing ELF files and DWARF debugging information"
 HOMEPAGE="http://pypi.python.org/pypi/pyelftools https://bitbucket.org/eliben/pyelftools"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -20,10 +20,6 @@ python_test() {
 	# readelf_tests often fails due to host `readelf` changing output format
 	local t
 	for t in all_unittests examples_test ; do
-		PYTHONPATH=$(_distutils_get_PYTHONPATH) "$(PYTHON)" ./test/run_${t}.py || die
+		"${PYTHON}" ./test/run_${t}.py || die "Tests fail with ${EPYTHON}"
 	done
-}
-
-src_test() {
-	python_execute_function python_test
 }

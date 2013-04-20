@@ -1,0 +1,113 @@
+From 72f017641cf7acdb1d3caf408bbcdaec39de8ce3 Mon Sep 17 00:00:00 2001
+From: Tomas Chvatal <tchvatal@suse.cz>
+Date: Sat, 23 Feb 2013 11:21:44 +0100
+Subject: [PATCH] Allow usage of system ProjectM
+
+Conflicts:
+	configure.in
+---
+ configure.in                                 | 45 ++++++++++++++++++++++++----
+ xbmc/visualizations/XBMCProjectM/Makefile.in | 12 ++++----
+ 2 files changed, 45 insertions(+), 12 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 78104ad..296eb4d 100644
+--- a/configure.in
++++ b/configure.in
+@@ -302,9 +302,15 @@ AC_ARG_ENABLE([rsxs],
+ 
+ AC_ARG_ENABLE([projectm],
+   [AS_HELP_STRING([--enable-projectm],
+-  [enable ProjectM visualisation (default is yes)])],
++  [enable ProjectM visualisation (default is auto)])],
+   [use_projectm=$enableval],
+-  [use_projectm=yes])
++  [use_projectm=auto])
++
++AC_ARG_WITH([projectm-presets-dir],
++  [AS_HELP_STRING([--with-projectm-presets-dir],
++  [path to ProjectM presets to incude in default list (default is bundled path)])],
++  [projectm_presets_dir=$withval],
++  [projectm_presets_dir=bundled])
+ 
+ AC_ARG_ENABLE([x11],
+   [AS_HELP_STRING([--enable-x11],
+@@ -1257,9 +1263,38 @@ fi
+ if test "$use_projectm" = "no" || test "$use_gl" = "no"; then
+   AC_MSG_NOTICE($projectm_disabled)
+   DISABLE_PROJECTM=1
++  DISABLE_INTERNAL_PROJECTM=1
+ else
+-  AC_MSG_NOTICE($projectm_enabled)
+-  DISABLE_PROJECTM=0
++  if test "$host_vendor" != "apple" ; then
++    if test "$use_projectm" = "yes"; then
++      PKG_CHECK_MODULES([PROJECTM],[libprojectM],,[use_projectm="no";AC_MSG_ERROR([$projectm_disabled])])
++    else
++      PKG_CHECK_MODULES([PROJECTM],[libprojectM],,[use_projectm="no";AC_MSG_RESULT([$projectm_disabled])])
++    fi
++    if test "$use_projectm" != "no"; then
++      INCLUDES="$INCLUDES $PROJECTM_CFLAGS";LIBS="$LIBS $PROJECTM_LIBS"
++    fi
++    DISABLE_INTERNAL_PROJECTM=1
++  else
++    DISABLE_INTERNAL_PROJECTM=0
++  fi
++  if test "$use_projectm" != "no"; then
++    AC_MSG_NOTICE($projectm_enabled)
++    DISABLE_PROJECTM=0
++    # verify preset dir actually exist if user don't want to use bundled one
++    if test "$projectm_presets_dir" != "bundled" ; then
++      if ! test -d "$projectm_presets_dir"; then
++        AC_MSG_ERROR([$projectm_presets_dir is not existing directory])
++      fi
++      PROJECTM_PRESETS_DIR=$projectm_presets_dir
++    else
++      PROJECTM_PRESETS_DIR=libprojectM/presets/
++    fi
++    AC_SUBST(PROJECTM_PRESETS_DIR)
++  else
++    AC_MSG_NOTICE($projectm_disabled)
++    DISABLE_PROJECTM=1
++  fi
+ fi
+ 
+ # skin touched
+@@ -2661,7 +2696,7 @@ XB_CONFIG_MODULE([xbmc/visualizations/XBMCProjectM/libprojectM],[
+     sed -ie "s|-I/opt/local/include| |" CMakeFiles/projectM.dir/flags.make
+   fi
+   set +x
+-], [$DISABLE_PROJECTM])
++], [$DISABLE_INTERNAL_PROJECTM])
+ 
+ XB_CONFIG_MODULE([xbmc/visualizations/Goom/goom2k4-0],[
+   ./configure  \
+diff --git a/xbmc/visualizations/XBMCProjectM/Makefile.in b/xbmc/visualizations/XBMCProjectM/Makefile.in
+index 249338c..2c16306 100644
+--- a/xbmc/visualizations/XBMCProjectM/Makefile.in
++++ b/xbmc/visualizations/XBMCProjectM/Makefile.in
+@@ -18,16 +18,14 @@ $(SLIB): $(OBJS) libprojectM/libprojectM.dylib
+ libprojectM/libprojectM.dylib:
+ 	$(MAKE) -C libprojectM
+ else
+-$(SLIB): $(OBJS) libprojectM/libprojectM.so
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) ./libprojectM/CMakeFiles/projectM.dir/*.o -fPIC -shared -o $(SLIB) $(OBJS) `cat @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.def` @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.o
++$(SLIB): $(OBJS)
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -fPIC -shared $(OBJS) `cat @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.def` @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.o -o $(SLIB)
+ 	$(MAKE) $(PRESETS)
+-
+-libprojectM/libprojectM.so: 
+-	$(MAKE) -C libprojectM
+ endif
+ 
+-$(PRESETS): libprojectM/presets/*
+-	zip -j $@ libprojectM/presets/*
++$(PRESETS):
++	zip -j $@ @PROJECTM_PRESETS_DIR@/*
++
+ 
+ CLEAN_FILES = \
+ 	libprojectM/libprojectM.so \
+-- 
+1.8.1.5
+
