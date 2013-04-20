@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/make.defaults,v 1.4 2012/12/01 20:20:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/make.defaults,v 1.5 2013/04/20 14:46:13 grobian Exp $
 
 # Some USE-flags that only die-hards don't want:
 # readline:  to have some sane command line editing, e.g. in python
@@ -27,6 +27,3 @@ FEATURES="${FEATURES} -sandbox"
 # this probably already is like this, but we assure that in prefix we
 # have a GNU userland
 USERLAND="GNU"
-
-# override base/make.defaults with versions we have in Prefix
-PYTHON_TARGETS="python2_7 python3_3"

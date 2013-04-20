@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/clozurecl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.10 2013/03/14 04:09:37 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.11 2013/04/20 14:37:10 grozin Exp $
+
+*clozurecl-1.9_p1 (20 Apr 2013)
+
+  20 Apr 2013; Andrey Grozin <grozin@gentoo.org> +clozurecl-1.9_p1.ebuild:
+  Version bump from the lisp overlay (pmasked)
 
   14 Mar 2013; Andrey Grozin <grozin@gentoo.org> clozurecl-1.9.ebuild:
   EAPI bump to 5
