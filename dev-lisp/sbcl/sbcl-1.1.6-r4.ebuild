@@ -1,18 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.3.ebuild,v 1.1 2013/01/08 10:29:40 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.6-r4.ebuild,v 1.1 2013/04/20 14:17:21 grozin Exp $
 
-EAPI=3
+EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
 
 #same order as http://www.sbcl.org/platform-table.html
 BV_X86=1.0.58
-BV_AMD64=1.1.3
+BV_AMD64=1.1.6
 BV_PPC=1.0.28
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
-BV_MIPS=1.0.23
-BV_MIPSEL=1.0.28
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -21,25 +19,28 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
-	alpha? ( mirror://sourceforge/sbcl/${PN}-${BV_ALPHA}-alpha-linux-binary.tar.bz2 )
-	mips? ( !cobalt? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.bz2 ) )
-	mips? ( cobalt? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPSEL}-mipsel-linux-binary.tar.bz2 ) )"
-RESTRICT="mirror"
+	alpha? ( mirror://sourceforge/sbcl/${PN}-${BV_ALPHA}-alpha-linux-binary.tar.bz2 )"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="+asdf ldb source +threads +unicode debug doc cobalt"
+IUSE="debug doc source +threads +unicode zlib"
 
-DEPEND="doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )"
-RDEPEND="elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) )
-		asdf? ( >=dev-lisp/gentoo-init-1.0 )"
+CDEPEND=">=dev-lisp/asdf-2.33-r3:="
+DEPEND="${CDEPEND}
+		doc? ( <sys-apps/texinfo-5.0 >=media-gfx/graphviz-2.26.0 )"
+RDEPEND="${CDEPEND}
+		 elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) )"
 
 # Disable warnings about executable stacks, as this won't be fixed soon by upstream
 QA_EXECSTACK="usr/bin/sbcl"
 
 CONFIG="${S}/customize-target-features.lisp"
 ENVD="${T}/50sbcl"
+
+# Prevent ASDF from using the system libraries
+CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)"
+ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)"
 
 usep() {
 	use ${1} && echo "true" || echo "false"
@@ -58,9 +59,10 @@ EOF
 	if use x86 || use amd64; then
 		sbcl_feature "$(usep threads)" ":sb-thread"
 	fi
-	sbcl_feature "$(usep ldb)" ":sb-ldb"
+	sbcl_feature "true" ":sb-ldb"
 	sbcl_feature "false" ":sb-test"
 	sbcl_feature "$(usep unicode)" ":sb-unicode"
+	sbcl_feature "$(usep zlib)" ":sb-core-compression"
 	sbcl_feature "$(usep debug)" ":sb-xref-for-internals"
 	cat >> "${CONFIG}" <<'EOF'
 	)
@@ -71,13 +73,14 @@ EOF
 
 src_unpack() {
 	unpack ${A}
-	mv sbcl-*-linux sbcl-binary
+	mv sbcl-*-linux sbcl-binary || die
 	cd "${S}"
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/gentoo-fix_install_man.patch
 	epatch "${FILESDIR}"/gentoo-fix_linux-os-c.patch
+	epatch "${FILESDIR}"/1.1.6-fix-svref.patch
 
 	# To make the hardened compiler NOT compile with -fPIE -pie
 	if gcc-specs-pie ; then
@@ -85,13 +88,16 @@ src_prepare() {
 		epatch "${FILESDIR}"/gentoo-fix_nopie_for_hardened_toolchain.patch
 	fi
 
+	cp /usr/share/common-lisp/source/asdf/build/asdf.lisp contrib/asdf/ || die
+
 	use source && sed 's%"$(BUILD_ROOT)%$(MODULE).lisp "$(BUILD_ROOT)%' -i contrib/vanilla-module.mk
 
 	# Some shells(such as dash) don't have "time" as builtin
 	# and we don't want to DEPEND on sys-process/time
-	sed "s,^time ,," -i make.sh
-	sed "s,/lib,/$(get_libdir),g" -i install.sh
-	sed "s,/usr/local/lib,/usr/$(get_libdir),g" -i src/runtime/runtime.c # #define SBCL_HOME ...
+	sed "s,^time ,," -i make.sh || die
+	sed "s,/lib,/$(get_libdir),g" -i install.sh || die
+	# #define SBCL_HOME ...
+	sed "s,/usr/local/lib,/usr/$(get_libdir),g" -i src/runtime/runtime.c || die
 
 	find . -type f -name .cvsignore -delete
 }
@@ -131,8 +137,14 @@ src_compile() {
 
 	# need to set HOME because libpango(used by graphviz) complains about it
 	if use doc; then
-		env - HOME="${T}" make -C doc/manual info html || die "Cannot build manual"
-		env - HOME="${T}" make -C doc/internals info html || die "Cannot build internal docs"
+		env - HOME="${T}" \
+			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
+			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
+			make -C doc/manual info html || die "Cannot build manual"
+		env - HOME="${T}" \
+			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
+			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
+			make -C doc/internals info html || die "Cannot build internal docs"
 	fi
 }
 
@@ -154,14 +166,10 @@ src_install() {
 (setf (logical-pathname-translations "SYS")
 	'(("SYS:SRC;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/src/**/*.*")
 	  ("SYS:CONTRIB;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/**/*.*")))
-EOF
-	if use asdf; then
-		cat >> "${D}"/etc/sbclrc <<EOF
 
 ;;; Setup ASDF2
 (load "/etc/common-lisp/gentoo-init.lisp")
 EOF
-	fi
 
 	# Install documentation
 	unset SBCL_HOME
@@ -178,15 +186,15 @@ EOF
 		doinfo doc/internals/sbcl-internals.info
 		docinto internals-notes && dodoc doc/internals-notes/*
 	else
-		rm -Rv "${D}/usr/share/doc/${PF}"
+		rm -Rv "${D}/usr/share/doc/${PF}" || die
 	fi
 
-	dodoc BUGS CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE TLA TODO
+	dodoc BUGS CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README TLA TODO
 
 	# install the SBCL source
 	if use source; then
 		./clean.sh
-		cp -av src "${D}/usr/$(get_libdir)/sbcl/"
+		cp -av src "${D}/usr/$(get_libdir)/sbcl/" || die
 	fi
 
 	# necessary for running newly-saved images

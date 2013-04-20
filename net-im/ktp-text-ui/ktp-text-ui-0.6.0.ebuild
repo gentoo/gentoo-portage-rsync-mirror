@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ktp-text-ui-0.6.0.ebuild,v 1.1 2013/04/11 15:12:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ktp-text-ui-0.6.0.ebuild,v 1.2 2013/04/20 14:14:11 johu Exp $
 
 EAPI=4
 
@@ -28,11 +28,3 @@ DEPEND="
 RDEPEND="${DEPEND}
 	>=net-im/ktp-contact-list-${PV}
 "
-
-src_configure() {
-	mycmakeargs=(
-		$(cmake-utils_use_with history TelepathyLoggerQt4)
-	)
-
-	cmake-utils_src_configure
-}

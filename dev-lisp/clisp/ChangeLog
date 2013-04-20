@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/clisp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.105 2012/12/04 00:00:48 pchrist Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.106 2013/04/20 14:26:22 grozin Exp $
+
+*clisp-2.49-r7 (20 Apr 2013)
+
+  20 Apr 2013; Andrey Grozin <grozin@gentoo.org> +clisp-2.49-r7.ebuild,
+  +files/clisp-2.49-bits_ipctypes_to_sys_ipc.patch,
+  +files/clisp-2.49-get_hostname.patch:
+  Version bump from the lisp overlay (pmasked)
 
   03 Dec 2012; Panagiotis Christopoulos <pchrist@gentoo.org>
   clisp-2.48-r2.ebuild, +files/clisp-2.48-bits_ipctypes_to_sys_ipc.patch:
