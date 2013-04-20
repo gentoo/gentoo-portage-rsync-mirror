@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.34 2011/11/21 20:12:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.35 2013/04/20 09:38:08 ulm Exp $
 
 EAPI=4
 
@@ -9,12 +9,13 @@ inherit toolchain-funcs
 MY_P="${PN}_v${PV}"
 DESCRIPTION="MPEG Library"
 HOMEPAGE="http://www.mpeg.org/"
-SRC_URI="ftp://ftp.mpeg.org/pub/mpeg/mssg/${MY_P}.tar.gz"
+SRC_URI="http://www.mpeg.org/pub_ftp/mpeg/mssg/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="mpeg2enc"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE=""
+RESTRICT="mirror bindist" #465088
 
 S=${WORKDIR}/mpeg2
 

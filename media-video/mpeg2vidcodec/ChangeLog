@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg2vidcodec
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.23 2011/11/21 20:12:27 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.24 2013/04/20 09:38:08 ulm Exp $
+
+  20 Apr 2013; Ulrich Müller <ulm@gentoo.org> mpeg2vidcodec-12-r1.ebuild:
+  Fix LICENSE, see COPYING file, bug 465088. Must not be redistributed,
+  therefore add mirror and bindist restrictions. Update SRC_URI.
 
   21 Nov 2011; Tim Harder <radhermit@gentoo.org> mpeg2vidcodec-12-r1.ebuild:
   Update to EAPI 4. Respect LDFLAGS, CFLAGS, and CC (bugs #240844 and #335268).
