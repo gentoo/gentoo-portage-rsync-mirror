@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ktp-common-internals
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-common-internals/ChangeLog,v 1.14 2013/04/20 20:04:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-common-internals/ChangeLog,v 1.15 2013/04/20 21:03:32 johu Exp $
+
+  20 Apr 2013; Johannes Huber <johu@gentoo.org>
+  -ktp-common-internals-0.5.3.ebuild:
+  Remove KDE Telepathy 0.5.3.
 
 *ktp-common-internals-0.6.1 (20 Apr 2013)
 
