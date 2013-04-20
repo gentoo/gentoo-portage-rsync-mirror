@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.198 2013/03/19 09:55:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.199 2013/04/20 20:21:53 chithanh Exp $
+
+  20 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-ati-7.1.0.ebuild:
+  Import David Heidelberger's CONFIG_CHECK improvements from the x11 overlay.
 
   19 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xf86-video-ati-7.1.0.ebuild:

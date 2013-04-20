@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.14 2013/04/19 20:42:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.15 2013/04/20 20:05:23 ago Exp $
 
 EAPI=4
 inherit eutils flag-o-matic elisp-common toolchain-funcs multilib
@@ -9,7 +9,7 @@ DESCRIPTION="DVI previewer for X Window System"
 HOMEPAGE="http://xdvi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz"
 
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="motif neXt Xaw3d emacs"

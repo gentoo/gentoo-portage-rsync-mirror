@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.325 2013/03/19 11:54:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.326 2013/04/20 20:27:33 chithanh Exp $
+
+*ati-drivers-13.3_beta3 (20 Apr 2013)
+
+  20 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-13.3_beta3.ebuild:
+  Bump to latest beta. Import of Emil Karlson's ebuild from the x11 overlay.
 
   19 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ati-drivers-13.1.ebuild, ati-drivers-13.1_pre897.ebuild:

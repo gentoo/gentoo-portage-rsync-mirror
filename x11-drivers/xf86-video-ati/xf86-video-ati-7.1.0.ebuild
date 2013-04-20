@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-7.1.0.ebuild,v 1.2 2013/03/19 09:55:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-7.1.0.ebuild,v 1.3 2013/04/20 20:21:53 chithanh Exp $
 
 EAPI=5
 
@@ -17,7 +17,16 @@ RDEPEND=">=x11-libs/libdrm-2.4.36[video_cards_radeon]
 	udev? ( virtual/udev )"
 DEPEND="${RDEPEND}"
 
-CONFIG_CHECK="~DRM_RADEON_KMS ~!FB_RADEON"
+pkg_pretend() {
+	if use kernel_linux ; then
+		if kernel_is -ge 3 9; then
+			CONFIG_CHECK="~!DRM_RADEON_UMS ~!FB_RADEON"
+		else
+			CONFIG_CHECK="~DRM_RADEON_KMS ~!FB_RADEON"
+		fi
+	fi
+	check_extra_config
+}
 
 src_configure() {
 	XORG_CONFIGURE_OPTIONS=(
