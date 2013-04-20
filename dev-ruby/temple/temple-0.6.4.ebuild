@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.5.4.ebuild,v 1.2 2012/11/25 18:49:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.6.4.ebuild,v 1.1 2013/04/20 07:03:16 graaff Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19 ree18"
+EAPI=5
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGES EXPRESSIONS.md README.md"
