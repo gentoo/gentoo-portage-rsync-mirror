@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.13 2012/05/09 13:16:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.14 2013/04/20 00:07:18 vapier Exp $
 
 EAPI="2"
 # PYTHON_BDEPEND="2"
@@ -48,6 +48,8 @@ src_prepare() {
 src_configure() {
 	append-flags -fno-strict-aliasing # bug reported upstream
 	export ac_cv_path_XMLTO= # man pages are bundled in .tar's
+	# Disable aclocal probing as the default path works #449156
+	ACLOCAL=true \
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable sdl) \

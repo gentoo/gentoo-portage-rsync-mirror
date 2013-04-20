@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.109 2013/01/30 23:59:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.110 2013/04/20 00:07:18 vapier Exp $
+
+  20 Apr 2013; Mike Frysinger <vapier@gentoo.org> zziplib-0.13.60-r1.ebuild:
+  Disable aclocal checking since the default path works #449156 by Diego Elio
+  Pettenò.
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -zziplib-0.13.60.ebuild:
   old
