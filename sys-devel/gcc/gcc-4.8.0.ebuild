@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.0.ebuild,v 1.3 2013/04/12 06:47:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.0.ebuild,v 1.4 2013/04/20 02:51:25 vapier Exp $
 
 PATCH_VER="1.1"
 UCLIBC_VER="1.0"
@@ -65,6 +65,8 @@ pkg_setup() {
 }
 
 pkg_postinst() {
+	toolchain_pkg_postinst
+
 	elog
 	elog "Packages failing to build with GCC 4.8 are tracked at"
 	elog "https://bugs.gentoo.org/461954"
