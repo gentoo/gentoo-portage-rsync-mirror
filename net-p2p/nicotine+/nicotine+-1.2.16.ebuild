@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.16.ebuild,v 1.6 2011/08/31 01:02:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.16.ebuild,v 1.7 2013/04/20 18:13:32 dirtyepic Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,6 +24,11 @@ PYTHON_MODNAME="pynicotine"
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	sed -i -e 's:\(Icon=\).*:\1nicotine-plus-32px:' \
+		"${S}"/files/nicotine.desktop
 }
 
 src_install() {

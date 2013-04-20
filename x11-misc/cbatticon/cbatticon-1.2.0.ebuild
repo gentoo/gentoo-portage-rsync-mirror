@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.0.ebuild,v 1.1 2013/03/10 20:29:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.2.0.ebuild,v 1.1 2013/04/20 18:11:35 hasufell Exp $
 
 EAPI=5
 
@@ -16,15 +16,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
-	x11-libs/libnotify
-	virtual/udev"
+	x11-libs/libnotify"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare() {
-	sed -i \
-		-e 's/V = 0/V = 1/' \
-		-e "s:DOCDIR =.*$:DOCDIR = /usr/share/doc/${PF}:" \
-		Makefile || die
+src_compile() {
 	tc-export CC
+	emake V=1 VERSION="${PF}"
+}
+
+src_install() {
+	emake DESTDIR="${D}" V=1 VERSION="${PF}" install
 }

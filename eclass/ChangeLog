@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.794 2013/04/18 15:47:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.795 2013/04/20 18:23:57 sera Exp $
+
+  20 Apr 2013; Ralph Sennhauser <sera@gentoo.org> java-ant-2.eclass:
+  Raise ant-core dep to version 1.8.2. #466558
 
   18 Apr 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Fix python_*_all() phases with DISTUTILS_SINGLE_IMPL.

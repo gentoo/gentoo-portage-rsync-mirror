@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.4.ebuild,v 1.15 2013/03/16 15:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.4.ebuild,v 1.16 2013/04/20 18:10:27 vapier Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ RESTRICT="test" # Fixed in 3.3.6, see bug #404389
 
 src_configure() {
 	econf \
-		--exec-prefix="${EPREFIX}/" \
+		--exec-prefix="${EPREFIX}" \
 		--docdir='$(datarootdir)'/doc/${PF} \
 		$(use_with ncurses) \
 		$(use_enable nls) \

@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.83 2013/03/16 15:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.84 2013/04/20 18:10:27 vapier Exp $
+
+  20 Apr 2013; Mike Frysinger <vapier@gentoo.org> procps-3.3.4.ebuild,
+  procps-3.3.6.ebuild:
+  Use an empty exec-prefix so we don't end up with double slashes in the
+  libpaths (//lib) which causes libtool to generate rpaths.
 
   16 Mar 2013; Mike Frysinger <vapier@gentoo.org> procps-3.3.4.ebuild,
   procps-3.3.6.ebuild:
