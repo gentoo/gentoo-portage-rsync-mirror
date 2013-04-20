@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gwnum/gwnum-277.ebuild,v 1.2 2012/11/28 08:19:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gwnum/gwnum-277.ebuild,v 1.3 2013/04/20 21:54:01 ulm Exp $
 
 EAPI=4
 DESCRIPTION="George Woltman's GWNUM library"
@@ -10,11 +10,12 @@ SRC_URI="http://gentooexperimental.org/~patrick/${P}.tar.bz2"
 
 inherit eutils
 
-LICENSE="as-is" # No explicit license info, but some files have as-is
+LICENSE="gwnum BSD GPL-2+"
 SLOT="0"
 # Need to test if it actually compiles on x86
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="bindist" #465566
 
 DEPEND=""
 RDEPEND="${DEPEND}"
