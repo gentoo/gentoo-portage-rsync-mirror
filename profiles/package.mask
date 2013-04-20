@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14668 2013/04/19 09:16:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14669 2013/04/20 13:06:40 grozin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,21 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andrey Grozin <grozin@gentoo.org> (20 Apr 2013)
+# New stuff ported from the lisp overlay
+# and computer algebra systems which depend on it
+# masked for testing
+>=dev-lisp/gentoo-init-1.0
+>=dev-lisp/asdf-2.26
+>=dev-lisp/uiop-2.33-r1
+>=dev-lisp/sbcl-1.1.2
+>=dev-lisp/cmucl-20d-r3
+>=dev-lisp/clozurecl-1.9_p1
+>=dev-lisp/ecls-12.12.1-r4
+>=dev-lisp/clisp-2.49-r7
+>=sci-mathematics/maxima-5.30.0
+>=sci-mathematics/fricas-1.2.0
 
 # Michael Weber <xmw@gentoo.org> (18 Apr 2013)
 # Masked due test failures
@@ -567,12 +582,6 @@ dev-perl/Class-MOP
 dev-haskell/wxc:2.9
 dev-haskell/wxcore:2.9
 dev-haskell/wxhaskell:2.9
-
-# Panagiotis Christopoulos <pchrist@gentoo.org> (25 Dec 2012)
-# mask again these, temporarily, because more testing must be done.
->=dev-lisp/gentoo-init-1.0
->=dev-lisp/asdf-2.26
->=dev-lisp/sbcl-1.1.2
 
 # Christian Ruppert <idl0r@gentoo.org> (22 Dec 2012)
 # Experimental
