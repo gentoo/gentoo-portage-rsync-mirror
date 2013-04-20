@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.3 2013/04/06 08:36:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.4 2013/04/20 08:44:12 pinkbyte Exp $
+
+  20 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -lc-core-0.5.70-r1.ebuild:
+  Remove old version
 
   06 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> lc-core-0.5.70-r1.ebuild,
   lc-core-0.5.85.ebuild, lc-core-0.5.90.ebuild, lc-core-9999.ebuild:
