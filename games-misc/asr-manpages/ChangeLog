@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/asr-manpages
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/ChangeLog,v 1.16 2010/10/08 02:35:51 leio Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/ChangeLog,v 1.17 2013/04/20 22:09:16 ulm Exp $
+
+  20 Apr 2013; Ulrich Müller <ulm@gentoo.org> asr-manpages-1.3_rc6.ebuild:
+  Change LICENSE to "freedist", bug 465704.
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> asr-manpages-1.3_rc5.ebuild:
   Drop to ~mips
