@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.583 2013/04/17 02:31:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.584 2013/04/20 04:12:00 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1413,7 +1413,8 @@ gcc_do_filter_flags() {
 	case ${GCC_BRANCH_VER} in
 	4.6)
 		# https://bugs.gentoo.org/411333
-		replace-cpu-flags pentium2 pentium3 pentium3m pentium-m i686
+		# https://bugs.gentoo.org/466454
+		replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
 		;;
 	esac
 	
