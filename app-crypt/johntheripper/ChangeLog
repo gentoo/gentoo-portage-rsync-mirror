@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.157 2013/02/06 19:38:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.158 2013/04/20 16:11:24 zerochaos Exp $
+
+*johntheripper-1.7.9-r7 (20 Apr 2013)
+
+  20 Apr 2013; Rick Farina <zerochaos@gentoo.org>
+  +johntheripper-1.7.9-r7.ebuild:
+  new rev for subslot dep operations
 
   06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> johntheripper-1.7.9-r6.ebuild:
   Stable for sparc, wrt bug #450180
