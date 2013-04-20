@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/simage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/ChangeLog,v 1.8 2013/02/14 18:44:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/ChangeLog,v 1.9 2013/04/20 09:27:38 ulm Exp $
+
+  20 Apr 2013; Ulrich Müller <ulm@gentoo.org> simage-1.7.0.ebuild:
+  Fix LICENSE, see COPYING file, bug 465086. Must not be redistributed,
+  therefore add mirror and bindist restrictions. Update SRC_URI.
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> simage-1.7.0.ebuild:
   Stable for x86, wrt bug #456402

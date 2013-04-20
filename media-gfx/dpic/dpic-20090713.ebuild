@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dpic/dpic-20090713.ebuild,v 1.3 2009/09/27 12:11:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dpic/dpic-20090713.ebuild,v 1.4 2013/04/20 09:14:16 ulm Exp $
 
 inherit toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Converts PIC plots into pstricks, PGF/TikZ, PostScript, MetaPost an
 HOMEPAGE="http://ece.uwaterloo.ca/~aplevich/dpic"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="examples"

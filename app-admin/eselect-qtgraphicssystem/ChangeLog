@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-qtgraphicssystem
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-qtgraphicssystem/ChangeLog,v 1.12 2012/07/09 04:12:30 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-qtgraphicssystem/ChangeLog,v 1.13 2013/04/20 09:22:07 hwoarang Exp $
+
+  20 Apr 2013; Markos Chandras <hwoarang@gentoo.org>
+  eselect-qtgraphicssystem-1.1.1.ebuild:
+  HOMEPAGE moved to https://github.com/gentoo/eselect-qtgraphicssystem
 
   09 Jul 2012; Joseph Jezak <josejx@gentoo.org>
   eselect-qtgraphicssystem-1.1.1.ebuild:
