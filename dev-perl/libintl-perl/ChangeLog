@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.51 2013/01/16 19:52:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.52 2013/04/20 04:47:15 patrick Exp $
+
+  20 Apr 2013; Patrick Lauer <patrick@gentoo.org> libintl-perl-1.210.0.ebuild:
+  Adding blocker #350039
 
 *libintl-perl-1.210.0 (16 Jan 2013)
 
