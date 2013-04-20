@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/snmplib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.43 2012/09/28 22:09:18 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.45 2013/04/20 06:44:00 graaff Exp $
+
+*snmplib-1.1.1 (20 Apr 2013)
+
+  20 Apr 2013; Hans de Graaff <graaff@gentoo.org> +snmplib-1.1.1.ebuild:
+  Version bump.
+
+  20 Apr 2013; Hans de Graaff <graaff@gentoo.org> -snmplib-1.0.3.ebuild:
+  Cleanup.
 
   28 Sep 2012; Anthony G. Basile <blueness@gentoo.org> snmplib-1.1.0.ebuild:
   stable ppc, bug #435966

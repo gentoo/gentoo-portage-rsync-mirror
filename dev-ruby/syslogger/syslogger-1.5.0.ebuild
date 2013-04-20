@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/syslogger-1.4.0.ebuild,v 1.1 2012/09/23 09:11:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/syslogger-1.5.0.ebuild,v 1.1 2013/04/20 06:59:47 graaff Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+EAPI=5
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -13,7 +13,6 @@ RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 # if ever needed
 #GITHUB_USER="crohr"
 #GITHUB_PROJECT="${PN}"
-#RUBY_S="${GITHUB_USER}-${GITHUB_PROJECT}-*"
 
 inherit ruby-fakegem
 

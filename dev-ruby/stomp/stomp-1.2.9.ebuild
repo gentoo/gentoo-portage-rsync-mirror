@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/stomp-1.2.6.ebuild,v 1.1 2012/10/16 09:52:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/stomp-1.2.9.ebuild,v 1.1 2013/04/20 06:49:41 graaff Exp $
 
-EAPI=4
+EAPI=5
 
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc README.rdoc"
