@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.3.ebuild,v 1.1 2013/04/06 00:43:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/oniguruma-5.9.3.ebuild,v 1.2 2013/04/20 07:55:48 naota Exp $
 
 EAPI=4
+# Needed for a sane .so versionning on fbsd, please dont drop
+AUTOTOOLS_AUTORECONF=1
 
 inherit eutils autotools-utils
 
@@ -19,8 +21,6 @@ IUSE="combination-explosion-check crnl-as-line-terminator static-libs"
 
 PATCHES=( "${FILESDIR}"/${P}-makefile.patch )
 DOCS=( AUTHORS HISTORY README{,.ja} doc/{API,FAQ,RE}{,.ja} )
-# Needed for a sane .so versionning on fbsd, please dont drop
-AUTOTOOLS_AUTORECONF=1
 
 S=${WORKDIR}/${MY_P}
 
