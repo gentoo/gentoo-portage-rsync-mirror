@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/uiop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.1 2013/04/20 14:05:55 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.2 2013/04/20 16:55:21 grozin Exp $
+
+  20 Apr 2013; Andrey Grozin <grozin@gentoo.org> uiop-2.33-r1.ebuild:
+  Fixed an installation problem, thanks to Tom Wijsman <TomWij@gentoo.org>
 
 *uiop-2.33-r1 (20 Apr 2013)
 
