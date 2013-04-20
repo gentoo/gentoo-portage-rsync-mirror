@@ -16,6 +16,7 @@
 	<flag name="midi">Enable midi support using wildmidi library</flag>
 	<flag name="mpris">Enable MPRIS support</flag>
 	<flag name="notifier">Enable qmmps' notifier system</flag>
+	<flag name="opus">Enable the opus plugin</flag>
 	<flag name="stereo">Enable stereo effect</flag>
 	<flag name="tray">Build tray icon</flag>
 	<flag name="kde">Use kde4 notifier system</flag>

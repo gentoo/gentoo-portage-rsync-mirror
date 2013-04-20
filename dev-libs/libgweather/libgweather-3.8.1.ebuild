@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.8.0.ebuild,v 1.3 2013/04/07 09:40:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.8.1.ebuild,v 1.1 2013/04/20 11:53:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,13 +11,14 @@ DESCRIPTION="Library to access weather information from online services"
 HOMEPAGE="https://live.gnome.org/LibGWeather"
 
 LICENSE="GPL-2+"
-SLOT="2/3-1" # subslot = 3-(libgweather-3 soname suffix)
+SLOT="2/3-3" # subslot = 3-(libgweather-3 soname suffix)
 IUSE="+introspection"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 
 # libsoup-gnome is to be used because libsoup[gnome] might not
 # get libsoup-gnome installed by the time ${P} is built
-COMMON_DEPEND=">=x11-libs/gtk+-2.90.0:3[introspection?]
+COMMON_DEPEND="
+	>=x11-libs/gtk+-2.90.0:3[introspection?]
 	>=dev-libs/glib-2.35.1:2
 	|| ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34:2.4 )
 	>=dev-libs/libxml2-2.6.0
@@ -38,9 +39,8 @@ DEPEND="${COMMON_DEPEND}
 src_configure() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS"
 	# Do not add --disable-all-translations-in-one-xml : it will enable them
-	G2CONF="${G2CONF}
-		--enable-locations-compression
-		--disable-static
-		$(use_enable introspection)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--enable-locations-compression \
+		--disable-static \
+		$(use_enable introspection)
 }
