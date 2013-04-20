@@ -1,0 +1,3 @@
+In order to setup baïkal:
+- create /etc/${PN}/ENABLE_INSTALL owner apache:apache
+- point your browser at the instal's URL and follow the setup

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/baikal/baikal-0.2.4.ebuild,v 1.1 2013/03/12 18:43:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/baikal/baikal-0.2.4.ebuild,v 1.2 2013/04/20 15:23:34 grobian Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ IUSE="+mysql sqlite"
 REQUIRED_USE="|| ( mysql sqlite )"
 
 RDEPEND=">=dev-lang/php-5.3[pdo,xml,mysql?,sqlite?]
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	sqlite? ( dev-db/sqlite )
 	virtual/httpd-php"
 
@@ -48,13 +48,8 @@ src_install() {
 	dosym /etc/${PN} "${MY_HTDOCSDIR}"/Specific
 	dosym . "${MY_HTDOCSDIR}"/html
 
+	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
 	webapp_src_install
 
 	fowners -R apache:apache /etc/${PN}
-}
-
-pkg_postinst() {
-	einfo "In order to setup baïkal:"
-	einfo "- create /etc/${PN}/ENABLE_INSTALL owner apache:apache"
-	einfo "- point your browser at the instal's URL and follow the setup"
 }
