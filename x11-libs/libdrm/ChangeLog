@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.219 2013/03/27 10:40:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.221 2013/04/20 20:35:12 chithanh Exp $
+
+  20 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libdrm-2.4.42.ebuild:
+  Revert accidental keyword change.
+
+*libdrm-2.4.44 (20 Apr 2013)
+
+  20 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.44.ebuild, libdrm-2.4.42.ebuild:
+  Version bump, bug #466550.
 
 *libdrm-2.4.43 (27 Mar 2013)
 

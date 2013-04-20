@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.155 2013/04/19 06:03:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.157 2013/04/20 20:46:57 ago Exp $
+
+  20 Apr 2013; Agostino Sarubbo <ago@gentoo.org> usbutils-006-r1.ebuild:
+  Stable for x86, wrt bug #466434
+
+  20 Apr 2013; Agostino Sarubbo <ago@gentoo.org> usbutils-006-r1.ebuild:
+  Stable for amd64, wrt bug #466434
 
   19 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> usbutils-006.ebuild,
   usbutils-006-r1.ebuild, -files/usbutils-006-libusbx-1.0.13.patch:

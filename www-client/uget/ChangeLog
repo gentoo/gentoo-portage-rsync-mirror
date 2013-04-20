@@ -1,6 +1,12 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.35 2013/02/02 04:51:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.37 2013/04/20 20:47:55 ago Exp $
+
+  20 Apr 2013; Agostino Sarubbo <ago@gentoo.org> uget-1.10.3.ebuild:
+  Stable for x86, wrt bug #463152
+
+  20 Apr 2013; Agostino Sarubbo <ago@gentoo.org> uget-1.10.3.ebuild:
+  Stable for amd64, wrt bug #463152
 
 *uget-1.10.3 (02 Feb 2013)
 
@@ -163,4 +169,3 @@
   08 Dec 2009; Alex Alexander <wired@gentoo.org> +uget-1.5.0.ebuild,
   +metadata.xml:
   ebuild for uget - new version of urlgfe - renamed by upstream
-
