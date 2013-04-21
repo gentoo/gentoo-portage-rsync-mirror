@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tilt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.25 2013/01/15 06:25:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.26 2013/04/21 05:14:05 graaff Exp $
+
+  21 Apr 2013; Hans de Graaff <graaff@gentoo.org> -tilt-1.3.2.ebuild:
+  Cleanup.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> tilt-1.3.3.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps
