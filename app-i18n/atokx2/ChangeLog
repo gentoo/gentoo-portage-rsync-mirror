@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/atokx2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.14 2012/07/12 09:19:06 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.15 2013/04/21 09:47:32 lxnay Exp $
+
+  21 Apr 2013; Fabio Erculiani <lxnay@gentoo.org> atokx2-17.0.ebuild,
+  atokx2-17.0-r2.ebuild:
+  override mantainer due to bug inactivity after 1 year, fix bug #413495
 
   12 Jul 2012; Naohiro Aota <naota@gentoo.org> atokx2-17.0-r2.ebuild,
   atokx2-17.0.ebuild:

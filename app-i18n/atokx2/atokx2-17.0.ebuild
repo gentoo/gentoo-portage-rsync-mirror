@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0.ebuild,v 1.11 2012/07/12 09:19:06 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0.ebuild,v 1.12 2013/04/21 09:47:32 lxnay Exp $
 
 EAPI="1"
 
-inherit cdrom eutils
+inherit cdrom eutils gnome2-utils
 
 DESCRIPTION="ATOK for Linux - The most famous Japanese Input Method Engine"
 HOMEPAGE="http://www.justsystem.co.jp/linux/atok.html"
@@ -79,9 +79,9 @@ pkg_postinst() {
 	elog "# /sbin/rc-update add iiim default"
 	elog "Also, call /opt/atokx2/bin/atokx2_client.sh from appropriate file."
 	elog
-	gtk-query-immodules-2.0 > "${ROOT}/$(get_gtk_confdir)/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > "${ROOT}/$(get_gtk_confdir)/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }

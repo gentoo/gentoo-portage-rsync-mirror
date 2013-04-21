@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r6.ebuild,v 1.3 2012/01/26 21:47:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r6.ebuild,v 1.4 2013/04/21 09:54:17 lxnay Exp $
 
 EAPI="1"
 
-inherit cdrom eutils multilib
+inherit cdrom eutils gnome2-utils multilib
 
 MY_UPDATE_P="${PN}up2"
 MY_UPDATE_GTK="${PN}gtk216"
@@ -166,9 +166,9 @@ pkg_postinst() {
 	elog
 	elog ". /opt/atokx3/bin/atokx3start.sh"
 	elog
-	[ "${ROOT}" == "/" ] && gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }
 
 pkg_postrm() {
-	[ "${ROOT}" == "/" ] && gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }

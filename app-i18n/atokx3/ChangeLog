@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/atokx3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.15 2013/02/13 10:19:11 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.16 2013/04/21 09:54:17 lxnay Exp $
+
+  21 Apr 2013; Fabio Erculiani <lxnay@gentoo.org> atokx3-3.0.0-r6.ebuild,
+  atokx3-3.0.0-r7.ebuild, atokx3-3.0.0-r8.ebuild:
+  override mantainer due to bug inactivity after 1 year, standardize to
+  gnome2_query_immodules_gtk2, fix bug #413497
 
 *atokx3-3.0.0-r8 (12 Feb 2013)
 

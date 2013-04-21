@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r8.ebuild,v 1.1 2013/02/13 10:19:11 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r8.ebuild,v 1.2 2013/04/21 09:54:17 lxnay Exp $
 
 EAPI="3"
 
-inherit cdrom eutils multilib
+inherit cdrom eutils gnome2-utils multilib
 
 MY_UPDATE_P="${PN}up2"
 MY_UPDATE_GTK="${PN}gtk216"
@@ -62,25 +62,6 @@ RDEPEND="!app-i18n/atokx2
 EMULTILIB_PKG="true"
 
 S="${WORKDIR}"
-
-update_gtk_immodules() {
-	local GTK2_CONFDIR="/etc/gtk-2.0"
-	# bug #366889
-	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
-		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
-	fi
-	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
-
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
-	fi
-
-	if use amd64 && has_multilib_profile ; then
-		if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" ] ; then
-			"${EPREFIX}/usr/bin/gtk-query-immodules-2.0-32" > "${EPREFIX}/etc/gtk-2.0/$(get_abi_CHOST x86)/gtk.immodules"
-		fi
-	fi
-}
 
 pkg_setup() {
 	if ! cdrom_get_cds atokx3index ; then
@@ -198,9 +179,9 @@ pkg_postinst() {
 	elog
 	elog ". /opt/atokx3/bin/atokx3start.sh"
 	elog
-	update_gtk_immodules
+	gnome2_query_immodules_gtk2
 }
 
 pkg_postrm() {
-	update_gtk_immodules
+	gnome2_query_immodules_gtk2
 }
