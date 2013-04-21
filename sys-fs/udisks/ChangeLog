@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.140 2013/04/12 17:21:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.141 2013/04/21 14:55:16 ssuominen Exp $
+
+  21 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> udisks-2.1.0.ebuild,
+  +files/udisks-2.1.0-W_define.patch:
+  Fix missing #include <sys/wait.h> for #define's of WIFEXITED and WEXITSTATUS
+  (to fix building on arch sh) wrt #462784
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> udisks-1.0.4-r5.ebuild,
   udisks-2.1.0.ebuild:
