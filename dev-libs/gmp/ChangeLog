@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.175 2013/02/18 00:47:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.176 2013/04/21 02:21:21 vapier Exp $
+
+  21 Apr 2013; Mike Frysinger <vapier@gentoo.org> +files/gmp-5.1.0-armv4.patch,
+  gmp-5.1.0.ebuild, gmp-5.1.1.ebuild:
+  Fix builds for armv4 targets.
 
 *gmp-5.1.1 (18 Feb 2013)
 
