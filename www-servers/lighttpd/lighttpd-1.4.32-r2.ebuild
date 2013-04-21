@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.32-r1.ebuild,v 1.2 2013/02/16 11:28:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.32-r2.ebuild,v 1.1 2013/04/21 09:27:39 lxnay Exp $
 
 EAPI="4"
-inherit base autotools eutils depend.php readme.gentoo user
+inherit base autotools eutils depend.php readme.gentoo user systemd
 
 DESCRIPTION="Lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
@@ -193,6 +193,8 @@ src_install() {
 	rm -f "${D}"/usr/bin/spawn-fcgi "${D}"/usr/share/man/man1/spawn-fcgi.*
 
 	use minimal && remove_non_essential
+
+	systemd_dounit "${FILESDIR}/${PN}.service"
 }
 
 pkg_postinst () {
