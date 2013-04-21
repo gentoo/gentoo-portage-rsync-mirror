@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/im-canna-0.3.2.2.ebuild,v 1.8 2012/10/27 12:40:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/im-canna-0.3.2.2.ebuild,v 1.9 2013/04/21 10:14:37 lxnay Exp $
 
 EAPI=4
+
+inherit gnome2-utils
 
 DESCRIPTION="Japanese Canna input method module for GTK+2"
 HOMEPAGE="http://bonobo.gnome.gr.jp/~nakai/immodule/"
@@ -21,9 +23,9 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog NEWS README )
 
 pkg_postinst() {
-	gtk-query-immodules-2.0 > "${ROOT}/etc/gtk-2.0/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > "${ROOT}/etc/gtk-2.0/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }

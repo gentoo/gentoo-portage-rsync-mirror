@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r1.ebuild,v 1.4 2012/05/03 19:24:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r1.ebuild,v 1.5 2013/04/21 10:24:27 lxnay Exp $
 
 EAPI="1"
 
-inherit autotools gnome2 eutils multilib
+inherit autotools gnome2 gnome2-utils eutils multilib
 
 DESCRIPTION="A Japanese input module for GTK2 and XIM"
 HOMEPAGE="http://im-ja.sourceforge.net/"
@@ -67,9 +67,7 @@ src_compile() {
 }
 
 pkg_postinst() {
-	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
-		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
-	fi
+	gnome2_query_immodules_gtk2
 	gnome2_pkg_postinst
 	elog
 	elog "This version of im-ja comes with experimental XIM support."
@@ -82,8 +80,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
-		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
-	fi
+	gnome2_query_immodules_gtk2
 	gnome2_pkg_postrm
 }

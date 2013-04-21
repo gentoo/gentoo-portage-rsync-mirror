@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.6 2011/07/08 11:02:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.7 2013/04/21 10:10:12 lxnay Exp $
 
 EAPI="1"
+
+inherit gnome2-utils
 
 DESCRIPTION="Yet another PRIME client for GTK+2"
 HOMEPAGE="http://gtkimprime.sourceforge.jp/"
@@ -31,9 +33,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }

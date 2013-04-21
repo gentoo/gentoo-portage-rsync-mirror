@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.6 2012/02/05 06:03:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.7 2013/04/21 10:10:53 ulm Exp $
 
 inherit eutils unpacker games
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://legendsthegame.net/"
 SRC_URI="http://legendsthegame.net/files/${MY_P}.run
 	mirror://gentoo/${PN}.png"
 
-LICENSE="as-is"
+LICENSE="Legends LGPL-2.1+"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE="dedicated"

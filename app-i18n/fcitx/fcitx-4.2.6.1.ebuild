@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.4 2013/03/02 19:26:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.5 2013/04/21 10:04:51 lxnay Exp $
 
 EAPI=4
 
-inherit multilib cmake-utils eutils
+inherit multilib cmake-utils gnome2-utils eutils
 
 _en_dict_version=20121020  # see https://code.google.com/p/fcitx/downloads/list
 
@@ -57,25 +57,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	x11-proto/xproto"
 
-update_gtk_immodules() {
-	local GTK2_CONFDIR="/etc/gtk-2.0"
-	# bug #366889
-	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
-		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
-	fi
-	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
-
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
-	fi
-}
-
-update_gtk3_immodules() {
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
-	fi
-}
-
 src_prepare() {
 	cp "${DISTDIR}/pinyin.tar.gz" "${S}/data" || die "pinyin data file is not found"
 	cp "${DISTDIR}/en_dict-${_en_dict_version}.tar.gz" "${S}/data" \
@@ -119,8 +100,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	use gtk && update_gtk_immodules
-	use gtk3 && update_gtk3_immodules
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk3
 	elog
 	elog "You should export the following variables to use fcitx:"
 	elog "  export XMODIFIERS=\"@im=fcitx\""
@@ -130,6 +111,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use gtk && update_gtk_immodules
-	use gtk3 && update_gtk3_immodules
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk3
 }

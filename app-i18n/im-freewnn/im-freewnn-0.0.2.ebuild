@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2.ebuild,v 1.9 2012/05/03 19:24:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2.ebuild,v 1.10 2013/04/21 10:16:49 lxnay Exp $
 
 EAPI="1"
 
-inherit eutils
+inherit eutils gnome2-utils
 
 DESCRIPTION="Japanese FreeWnn input method module for GTK+2"
 HOMEPAGE="http://bonobo.gnome.gr.jp/~nakai/immodule/"
@@ -37,9 +37,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	gtk-query-immodules-2.0 > "${ROOT}/etc/gtk-2.0/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > "${ROOT}/etc/gtk-2.0/gtk.immodules"
+	gnome2_query_immodules_gtk2
 }

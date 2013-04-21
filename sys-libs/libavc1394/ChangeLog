@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libavc1394
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.40 2012/08/27 17:31:56 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.41 2013/04/21 10:18:24 maekke Exp $
+
+  21 Apr 2013; Markus Meier <maekke@gentoo.org> libavc1394-0.5.4.ebuild:
+  add ~arm, bug #458100
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org> libavc1394-0.5.4.ebuild:
   alpha/ia64/sparc stable wrt #422229

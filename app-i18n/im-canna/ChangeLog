@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/im-canna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.10 2012/10/27 12:40:32 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.11 2013/04/21 10:14:37 lxnay Exp $
+
+  21 Apr 2013; Fabio Erculiani <lxnay@gentoo.org> im-canna-0.3.2.2.ebuild:
+  override mantainer due to bug inactivity after 1 year, standardize to
+  gnome2_query_immodules_gtk2, fix bug #413511
 
   27 Oct 2012; Agostino Sarubbo <ago@gentoo.org> im-canna-0.3.2.2.ebuild:
   eapi4, add ~amd64
