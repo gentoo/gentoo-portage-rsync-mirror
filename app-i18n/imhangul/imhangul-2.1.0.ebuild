@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-2.1.0.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-2.1.0.ebuild,v 1.3 2013/04/21 10:32:24 lxnay Exp $
 
 EAPI="3"
-inherit multilib
+inherit gnome2-utils multilib
 
 DESCRIPTION="Gtk+-2.0 Hangul Input Modules"
 HOMEPAGE="http://code.google.com/p/imhangul/"
@@ -29,16 +29,6 @@ get_gtk_confdir() {
 		GTK2_CONFDIR="${GTK2_CONFDIR:=${EPREFIX}/etc/gtk-2.0}"
 	fi
 	echo ${GTK2_CONFDIR}
-}
-
-update_gtk_immodules() {
-	local GTK2_CONFDIR=$(get_gtk_confdir)
-
-	mkdir -p "${GTK2_CONFDIR}"
-
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${GTK2_CONFDIR}/gtk.immodules"
-	fi
 }
 
 src_prepare() {
@@ -72,8 +62,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	update_gtk_immodules
-
+	gnome2_query_immodules_gtk2
 	elog ""
 	elog "If you want to use one of the module as a default input method, "
 	elog ""
@@ -83,5 +72,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	update_gtk_immodules
+	gnome2_query_immodules_gtk2
 }

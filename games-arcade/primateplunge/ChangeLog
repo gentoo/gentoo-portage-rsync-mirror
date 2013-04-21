@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/primateplunge
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.10 2009/10/15 16:24:06 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.11 2013/04/21 10:31:44 ulm Exp $
+
+  21 Apr 2013; Ulrich Müller <ulm@gentoo.org> primateplunge-1.1-r1.ebuild:
+  Fix LICENSE, add mirror and bindist restriction, bug 465850. Update SRC_URI.
 
   15 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
   primateplunge-1.1-r1.ebuild:

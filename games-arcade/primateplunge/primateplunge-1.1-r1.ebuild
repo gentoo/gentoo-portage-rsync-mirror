@@ -1,18 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/primateplunge-1.1-r1.ebuild,v 1.6 2009/10/15 16:24:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/primateplunge-1.1-r1.ebuild,v 1.7 2013/04/21 10:31:44 ulm Exp $
 
 EAPI=2
 inherit eutils games
 
 DESCRIPTION="Help poor Monkey navigate his way down through treacherous areas"
 HOMEPAGE="http://www.aelius.com/primateplunge/"
-SRC_URI="http://www.ecs.soton.ac.uk/~njh/${PN}/${P}.tar.gz"
+SRC_URI="http://www.aelius.com/${PN}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="Primate-Plunge"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
+RESTRICT="mirror bindist" #465850
 
 DEPEND="media-libs/libsdl[audio,video]
 	media-libs/sdl-mixer"

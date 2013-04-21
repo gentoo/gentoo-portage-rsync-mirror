@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-3.0.0.ebuild,v 1.4 2012/05/03 19:24:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-3.0.0.ebuild,v 1.5 2013/04/21 10:32:24 lxnay Exp $
 
 EAPI="3"
-inherit multilib
+inherit gnome2-utils multilib
 
 DESCRIPTION="Gtk+-3.0 Hangul Input Modules"
 HOMEPAGE="http://kldp.net/projects/imhangul/"
@@ -20,12 +20,6 @@ RDEPEND=">=app-i18n/libhangul-0.0.12
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext"
-
-update_gtk_immodules() {
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
-	fi
-}
 
 src_prepare() {
 	# Drop DEPRECATED flags, bug #387825
@@ -56,8 +50,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	update_gtk_immodules
-
+	gnome2_query_immodules_gtk3
 	elog ""
 	elog "If you want to use one of the module as a default input method, "
 	elog ""
@@ -67,5 +60,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	update_gtk_immodules
+	gnome2_query_immodules_gtk3
 }
