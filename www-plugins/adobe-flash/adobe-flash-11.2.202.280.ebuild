@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.280.ebuild,v 1.3 2013/04/11 21:44:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.280.ebuild,v 1.4 2013/04/21 19:14:15 mgorny Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -36,7 +36,12 @@ NATIVE_DEPS="x11-libs/gtk+:2
 	kde? ( kde-base/kcmshell )
 	>=sys-libs/glibc-2.4"
 
-EMUL_DEPS="vdpau? ( >=app-emulation/emul-linux-x86-xlibs-20110129 )
+EMUL_DEPS="vdpau? (
+		|| (
+			x11-libs/libvdpau[abi_x86_32]
+			>=app-emulation/emul-linux-x86-xlibs-20110129
+		)
+	)
 	>=app-emulation/emul-linux-x86-gtklibs-20100409-r1
 	app-emulation/emul-linux-x86-soundlibs"
 

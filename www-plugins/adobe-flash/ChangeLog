@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.186 2013/04/12 13:38:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.187 2013/04/21 19:14:15 mgorny Exp $
+
+  21 Apr 2013; Michał Górny <mgorny@gentoo.org> adobe-flash-10.3.183.75.ebuild,
+  adobe-flash-11.2.202.280.ebuild:
+  Support multilib libraries alternatively to emul-linux-x86-xlibs.
 
   12 Apr 2013; Jeroen Roovers <jer@gentoo.org> -adobe-flash-11.2.202.275.ebuild:
   Old.

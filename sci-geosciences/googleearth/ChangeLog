@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.48 2013/03/02 23:20:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.49 2013/04/21 19:21:12 mgorny Exp $
+
+  21 Apr 2013; Michał Górny <mgorny@gentoo.org>
+  googleearth-5.1.3535.3218-r1.ebuild, googleearth-5.2.1.1588.ebuild,
+  googleearth-6.0.2.2074.ebuild, googleearth-6.0.3.2197.ebuild,
+  googleearth-6.2.2.6613.ebuild, googleearth-7.0.2.8415-r2.ebuild,
+  googleearth-7.0.2.8415.ebuild, googleearth-7.0.3.8542.ebuild:
+  Support multilib libraries alternatively to emul-linux-x86-xlibs.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   googleearth-5.1.3535.3218-r1.ebuild, googleearth-5.2.1.1588.ebuild,

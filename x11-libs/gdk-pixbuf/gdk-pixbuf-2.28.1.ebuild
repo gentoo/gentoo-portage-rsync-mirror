@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.28.0.ebuild,v 1.2 2013/04/15 22:50:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.28.1.ebuild,v 1.1 2013/04/21 19:09:39 leio Exp $
 
 EAPI="5"
 inherit eutils gnome.org multilib libtool
@@ -33,12 +33,14 @@ RDEPEND="${COMMON_DEPEND}
 	!<x11-libs/gtk+-2.90.4:3"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-string_h.patch #466034
+	epatch "${FILESDIR}"/${PN}-2.28.0-string_h.patch #466034
 	# This will avoid polluting the pkg-config file with versioned libpng,
 	# which is causing problems with libpng14 -> libpng15 upgrade
 	# See upstream bug #667068
-	sed -e 's:libpng15:libpng libpng15:' \
-		-i configure || die
+	# First check that the pattern is present, to catch upstream changes on bumps,
+	# because sed doesn't return failure code if it doesn't do any replacements
+	grep -q  'l in libpng16' configure || die "libpng check order has changed upstream"
+	sed -e 's:l in libpng16:l in libpng libpng16:' -i configure || die
 	default
 	elibtoolize # for Darwin modules
 }

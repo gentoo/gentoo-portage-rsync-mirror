@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.74.ebuild,v 1.8 2009/06/15 21:12:04 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.74.ebuild,v 1.9 2013/04/21 19:30:48 williamh Exp $
 
 inherit eutils
 
 DESCRIPTION="braille translator from the National Federation of the Blind"
-HOMEPAGE="http://www.nfb.org/nfb/nfbtrans.asp"
+HOMEPAGE="http://www.nfb.org/nfbtrans"
 SRC_URI="http://www.nfb.org/Images/nfb/Products_Technology/nfbtr774.zip"
 
 LICENSE="public-domain"

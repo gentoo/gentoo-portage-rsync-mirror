@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.2.0.ebuild,v 1.1 2013/03/27 03:45:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.2.0.ebuild,v 1.2 2013/04/21 19:25:45 chithanh Exp $
 
 EAPI=5
+XORG_EAUTORECONF="yes"
 
 if [[ ${PV} = *9999* ]]; then
 	GIT_ECLASS="git-2"
@@ -18,7 +19,6 @@ fi
 inherit xorg-2 ${GIT_ECLASS}
 
 DESCRIPTION="X.Org xkbcommon library"
-XORG_EAUTORECONF="yes"
 
 IUSE="doc"
 
