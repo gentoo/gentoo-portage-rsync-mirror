@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.11.1-r1.ebuild,v 1.1 2013/04/20 01:20:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.11.1-r1.ebuild,v 1.4 2013/04/21 13:07:42 ago Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KDE_HANDBOOK=optional
 inherit kde4-meta
 
 DESCRIPTION="Kleopatra - KDE X.509 key manager"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 SRC_URI+=" http://dev.gentoo.org/~dilfridge/distfiles/${PN}-4.4.11.1-libassuan2.patch.bz2"

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdlna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.9 2012/11/15 05:39:24 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.10 2013/04/21 13:26:35 lu_zero Exp $
+
+  21 Apr 2013; Luca Barbato <lu_zero@gentoo.org>
+  -files/libdlna-0.2.3-ffmpeg_api.patch,
+  -files/libdlna-0.2.3-libavcodec-libavformat-include-paths.patch,
+  +files/libdlna-libav9.patch, libdlna-0.2.4.ebuild:
+  Fix bug #443238
 
   15 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Reassign to maintainer-needed as the email address is not registered in
