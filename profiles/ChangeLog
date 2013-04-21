@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7749 2013/04/21 13:32:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7750 2013/04/21 20:15:43 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Apr 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  sys-kernel/linuxwacom-module removed
 
   21 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

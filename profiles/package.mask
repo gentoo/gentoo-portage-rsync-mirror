@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14671 2013/04/21 13:32:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14672 2013/04/21 20:15:43 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -401,13 +401,6 @@ dev-libs/dvutil
 # does not work with current webkit-gtk
 x11-misc/google-gadgets
 
-# Markos Chandras <hwoarang@gentoo.org> (17 Mar 2013)
-# module is included in the mainline kernel.
-# Enable CONFIG_TABLET_USB_WACOM to get it
-# Bug #347892. Removal in 30 days
-sys-kernel/linuxwacom-module
-
-#
 # Aaron W. Swenson <titanofold@gentoo.org> (16 Mar 2013)
 # The PostgreSQL 8.3 series has reached End of Life and is no longer
 # supported here or upstream. Please migrate to a more recent series
