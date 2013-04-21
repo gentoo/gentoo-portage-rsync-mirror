@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2e.ebuild,v 1.1 2013/02/20 13:15:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2e.ebuild,v 1.2 2013/04/21 19:58:57 mgorny Exp $
 
 EAPI="5"
 
@@ -43,7 +43,10 @@ DEPEND="!sci-chemistry/icm-browser
 			)
 			32bit? (
 					app-emulation/emul-linux-x86-compat
-					app-emulation/emul-linux-x86-xlibs
+					|| (
+						x11-libs/libX11[abi_x86_32]
+						app-emulation/emul-linux-x86-xlibs
+					)
 			)
 		)
 		x86? (

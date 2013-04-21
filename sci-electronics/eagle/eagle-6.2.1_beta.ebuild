@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-6.2.1_beta.ebuild,v 1.1 2012/07/07 13:00:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-6.2.1_beta.ebuild,v 1.2 2013/04/21 19:50:41 mgorny Exp $
 
 EAPI="4"
 
@@ -32,11 +32,23 @@ RDEPEND="sys-libs/glibc
 		media-libs/fontconfig
 		dev-libs/openssl
 		virtual/jpeg
-		)
+	)
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-		)"
+		|| (
+			(
+				x11-libs/libX11[abi_x86_32]
+				x11-libs/libXext[abi_x86_32]
+				x11-libs/libXrender[abi_x86_32]
+				x11-libs/libXrandr[abi_x86_32]
+				x11-libs/libXcursor[abi_x86_32]
+				x11-libs/libXi[abi_x86_32]
+				media-libs/freetype[abi_x86_32]
+				media-libs/fontconfig[abi_x86_32]
+			)
+			app-emulation/emul-linux-x86-xlibs
+		)
+	)"
 
 S=${WORKDIR}/${P/_beta/}
 

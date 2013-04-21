@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.12.0.ebuild,v 1.2 2013/03/02 23:15:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.12.0.ebuild,v 1.3 2013/04/21 20:00:03 mr_bones_ Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ DOCS=( AUTHORS ChangeLog README )
 
 LANGS=(
 	af ak am ar as ast az be bg bn bo br bs ca cs
-	cy da de el en en_CA en_GB en_US eo es et eu fa fi fil fr fy
+	cy da de el en en_CA en_GB en_US eo es et eu fa fi fil fr
 	ga gd gl gu he hi hr hu hy ia id is it ja ka kk kn ko ky
 	la lb lo lt lv mk ml mn mr ms mt nan nb nl nn oc pa pl pt pt_BR ro
 	ru sco se si sk sl sq sr sv sw ta te tg th tl tr tt uk uz vi zh

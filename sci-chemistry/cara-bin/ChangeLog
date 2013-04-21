@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cara-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.6 2012/09/10 16:20:51 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.7 2013/04/21 19:55:14 mgorny Exp $
+
+  21 Apr 2013; Michał Górny <mgorny@gentoo.org> cara-bin-1.8.4.ebuild:
+  Support multilib libraries alternatively to emul-linux-x86-xlibs.
 
   10 Sep 2012; Justin Lecher <jlec@gentoo.org> cara-bin-1.8.4.ebuild:
   Add QA_PREBUILT beause we are binary
@@ -21,4 +24,3 @@
   07 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +cara-bin-1.8.4.ebuild, +metadata.xml:
   New addition for NMR assignment software, bug 209124
-
