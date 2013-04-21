@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.2.ebuild,v 1.3 2013/02/05 17:38:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.2.ebuild,v 1.4 2013/04/21 18:47:04 mgorny Exp $
 
 EAPI="4"
 inherit cmake-utils multilib
@@ -23,9 +23,18 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXv
-	multilib? ( app-emulation/emul-linux-x86-xlibs
+	multilib? (
+		|| (
+			(
+				x11-libs/libX11[abi_x86_32]
+				x11-libs/libXext[abi_x86_32]
+				x11-libs/libXv[abi_x86_32]
+			)
+			app-emulation/emul-linux-x86-xlibs
+		)
 		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-opengl )
+		app-emulation/emul-linux-x86-opengl
+	)
 	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}"

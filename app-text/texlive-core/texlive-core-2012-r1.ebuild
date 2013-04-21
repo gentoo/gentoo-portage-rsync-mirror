@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012-r1.ebuild,v 1.12 2013/04/21 12:15:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012-r1.ebuild,v 1.13 2013/04/21 18:52:22 aballier Exp $
 
 EAPI=5
 
 #TL_UPSTREAM_PATCHLEVEL="1"
-PATCHLEVEL="38"
+PATCHLEVEL="39"
 TL_SOURCE_VERSION=20120701
 
 inherit eutils flag-o-matic toolchain-funcs libtool texlive-common
