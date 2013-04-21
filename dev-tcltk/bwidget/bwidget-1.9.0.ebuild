@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.9.0.ebuild,v 1.8 2013/04/18 15:51:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.9.0.ebuild,v 1.9 2013/04/21 13:44:52 maekke Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/tcllib/${MY_P}.tar.gz"
 
 LICENSE="tcltk"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ppc ppc64 ~sparc x86"
 IUSE="doc"
 
 DEPEND="dev-lang/tk"

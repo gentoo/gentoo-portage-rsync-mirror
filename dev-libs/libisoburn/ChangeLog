@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.110 2013/04/18 15:52:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.111 2013/04/21 13:48:13 maekke Exp $
+
+  21 Apr 2013; Markus Meier <maekke@gentoo.org> libisoburn-1.2.8-r1.ebuild:
+  add ~arm, bug #452728
 
   18 Apr 2013; Jeroen Roovers <jer@gentoo.org> libisoburn-1.2.8.ebuild:
   Stable for HPPA (bug #461100).

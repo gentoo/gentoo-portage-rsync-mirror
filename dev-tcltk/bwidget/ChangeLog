@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.26 2013/04/18 15:51:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.27 2013/04/21 13:44:52 maekke Exp $
+
+  21 Apr 2013; Markus Meier <maekke@gentoo.org> bwidget-1.9.0.ebuild:
+  add ~arm, bug #452728
 
   18 Apr 2013; Jeroen Roovers <jer@gentoo.org> bwidget-1.9.0.ebuild:
   Stable for HPPA (bug #461100).
