@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/jedit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.104 2012/12/08 12:32:50 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.105 2013/04/21 11:45:23 sera Exp $
+
+*jedit-5.0.0 (21 Apr 2013)
+
+  21 Apr 2013; Ralph Sennhauser <sera@gentoo.org> +jedit-5.0.0.ebuild:
+  Version bump. #448114
+  Drop dependency on ant-nodeps and convert WANT_ANT_TASKS. #466558
+  No longer filter jikes, can't be select for >=jdk-1.6.
+  Drop unused dependencies
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> jedit-4.4.2-r1.ebuild:
   Stable for ppc64, wrt bug #426218

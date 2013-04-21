@@ -1,0 +1,213 @@
+From 4068d8504b2155168b82144a4d45b138e0579ef2 Mon Sep 17 00:00:00 2001
+From: Stefan Becker <chemobejk@gmail.com>
+Date: Thu, 11 Apr 2013 12:45:34 +0000
+Subject: request: fix more resource leaks
+
+Triggered by Will's review comments.
+
+- check callback pointers to be non-NULL before calling them
+- call cancel_cb also in destroy idle callback
+- reset connection's password request field on closing
+- coding style cleanup
+
+https://bugs.freedesktop.org/show_bug.cgi?id=63326
+---
+diff --git a/src/connection.c b/src/connection.c
+index 6e9121d..424802e 100644
+--- a/src/connection.c
++++ b/src/connection.c
+@@ -452,7 +452,7 @@ _haze_connection_password_manager_prompt_cb (GObject *source,
+ 
+       if (priv->password_request)
+         {
+-          haze_request_password_cb(priv->password_request, NULL);
++          haze_request_password_cb (priv->password_request, NULL);
+         }
+ 
+       if (base_conn->status != TP_CONNECTION_STATUS_DISCONNECTED)
+@@ -481,7 +481,8 @@ _haze_connection_password_manager_prompt_cb (GObject *source,
+   if (priv->password_request)
+     {
+       haze_request_password_cb (priv->password_request, priv->password);
+-    } else
++    }
++  else
+     {
+       purple_account_set_password (self->account, priv->password);
+ 
+@@ -537,8 +538,9 @@ _haze_connection_start_connecting (TpBaseConnection *base,
+     return TRUE;
+ }
+ 
+-void haze_connection_request_password (PurpleAccount *account,
+-                                       void *user_data)
++void
++haze_connection_request_password (PurpleAccount *account,
++                                  void *user_data)
+ {
+     HazeConnection *self = ACCOUNT_GET_HAZE_CONNECTION (account);
+     HazeConnectionPrivate *priv = self->priv;
+@@ -551,6 +553,15 @@ void haze_connection_request_password (PurpleAccount *account,
+                                              self);
+ }
+ 
++void
++haze_connection_cancel_password_request (PurpleAccount *account)
++{
++    HazeConnection *self = ACCOUNT_GET_HAZE_CONNECTION (account);
++    HazeConnectionPrivate *priv = self->priv;
++
++    priv->password_request = NULL;
++}
++
+ static void
+ _haze_connection_shut_down (TpBaseConnection *base)
+ {
+diff --git a/src/connection.h b/src/connection.h
+index 2e68935..7fc8668 100644
+--- a/src/connection.h
++++ b/src/connection.h
+@@ -113,6 +113,7 @@ const gchar **haze_connection_get_guaranteed_interfaces (void);
+ 
+ void haze_connection_request_password (PurpleAccount *account,
+                                        gpointer user_data);
++void haze_connection_cancel_password_request (PurpleAccount *account);
+ 
+ G_END_DECLS
+ 
+diff --git a/src/request.c b/src/request.c
+index db54317..8aa7bc9 100644
+--- a/src/request.c
++++ b/src/request.c
+@@ -102,39 +102,62 @@ haze_request_action (const char *title,
+ #endif
+ 
+ struct fields_data {
++    PurpleAccount *account;
+     PurpleRequestFields *fields;
+     PurpleRequestField *password;
+-    GCallback ok_cb;
+-    GCallback cancel_cb;
++    PurpleRequestFieldsCb ok_cb;
++    PurpleRequestFieldsCb cancel_cb;
+     void *user_data;
+ };
+ 
+-static void haze_close_request(PurpleRequestType type, void *ui_handle)
++static void
++haze_close_request (PurpleRequestType type,
++                    void *ui_handle)
+ {
+     struct fields_data *fd = ui_handle;
+ 
+-    purple_request_fields_destroy(fd->fields);
+-    g_free(fd);
++    haze_connection_cancel_password_request (fd->account);
++    purple_request_fields_destroy (fd->fields);
++    g_slice_free (struct fields_data, fd);
+ }
+ 
+-void haze_request_password_cb (gpointer user_data,
+-                               const gchar *password)
++void
++haze_request_password_cb (gpointer user_data,
++                          const gchar *password)
+ {
+     struct fields_data *fd = user_data;
+ 
+-    if (password) {
+-        purple_request_field_string_set_value(fd->password, password);
+-        ((PurpleRequestFieldsCb)fd->ok_cb)(fd->user_data, fd->fields);
+-    } else {
+-        ((PurpleRequestFieldsCb)fd->cancel_cb)(fd->user_data, fd->fields);
+-    }
+-
+-    purple_request_close(PURPLE_REQUEST_FIELDS, fd);
++    if (password)
++      {
++        purple_request_field_string_set_value (fd->password, password);
++        if (fd->ok_cb)
++          {
++            (fd->ok_cb) (fd->user_data, fd->fields);
++          }
++      }
++    else
++      {
++        if (fd->cancel_cb)
++          {
++            (fd->cancel_cb) (fd->user_data, fd->fields);
++          }
++      }
++
++    purple_request_close (PURPLE_REQUEST_FIELDS, fd);
+ }
+ 
+-static gboolean haze_request_fields_destroy(gpointer user_data)
++static gboolean
++haze_request_fields_destroy (gpointer user_data)
+ {
+-    purple_request_close(PURPLE_REQUEST_FIELDS, user_data);
++    struct fields_data *fd = user_data;
++
++    if (fd->cancel_cb)
++      {
++        (fd->cancel_cb) (fd->user_data, fd->fields);
++      }
++
++    purple_request_close (PURPLE_REQUEST_FIELDS, user_data);
++
+     return FALSE;
+ }
+ 
+@@ -157,32 +180,36 @@ haze_request_fields (const char *title,
+                      PurpleConversation *conv,
+                      void *user_data)
+ {
+-    struct fields_data *fd = g_new0(struct fields_data, 1);
++    struct fields_data *fd = g_slice_new0 (struct fields_data);
+ 
+     /* it is our responsibility to destroy this data */
+-    fd->fields = fields;
++    fd->account   = account;
++    fd->fields    = fields;
++    fd->cancel_cb = (PurpleRequestFieldsCb) cancel_cb;
++    fd->user_data = user_data;
+ 
+-    if (purple_request_fields_exists(fields, "password") &&
+-        purple_request_fields_exists(fields, "remember")) {
++    if (purple_request_fields_exists (fields, "password") &&
++        purple_request_fields_exists (fields, "remember"))
++      {
+ 
+         DEBUG ("triggering password request");
+ 
+-        fd->password  = purple_request_fields_get_field(fields, "password");
+-        fd->ok_cb     = ok_cb;
+-        fd->cancel_cb = cancel_cb;
+-        fd->user_data = user_data;
++        fd->password = purple_request_fields_get_field (fields, "password");
++        fd->ok_cb    = (PurpleRequestFieldsCb) ok_cb;
+ 
+-        haze_connection_request_password(account, fd);
++        haze_connection_request_password (account, fd);
+ 
+-    } else {
++      }
++    else
++      {
+         DEBUG ("ignoring request:");
+         DEBUG ("    title: %s", (title ? title : "(null)"));
+         DEBUG ("    primary: %s", (primary ? primary : "(null)"));
+         DEBUG ("    secondary: %s", (secondary ? secondary : "(null)"));
+ 
+-	/* Avoid leaking of "fields" */
+-	g_idle_add(haze_request_fields_destroy, fd);
+-    }
++        /* Avoid leaking of "fields" and "user_data" */
++        g_idle_add (haze_request_fields_destroy, fd);
++      }
+ 
+     return fd;
+ }
+--
+cgit v0.9.0.2-2-gbebe
