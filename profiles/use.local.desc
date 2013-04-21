@@ -6129,7 +6129,6 @@ www-client/midori:unique - Enable single instance support using dev-libs/libuniq
 www-client/midori:webkit2 - Enable WebKit2 API that splits web content rendering and application UI into separate processes
 www-client/midori:zeitgeist - Add support for Zeitgeist event tracking system
 www-client/netsurf:bmp - enable bmp bitmap support (media-libs/libnsbmp)
-www-client/netsurf:freetype - use media-libs/freetype for font rendering on framebuffer
 www-client/netsurf:pdf-writer - Enable pdf output support (media-libs/libharu)
 www-client/netsurf:rosprite - enable RISC OS Sprite bitmap support (media-libs/librosprite)
 www-client/netsurf:svgtiny - enable svg image support via media-libs/svgatiny instead of gnome-base/librsvg

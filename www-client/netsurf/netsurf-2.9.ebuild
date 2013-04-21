@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.5 2013/02/28 08:15:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.6 2013/04/21 07:48:27 xmw Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.netsurf-browser.org/${PN}/releases/source-full/${P}-ful
 LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="bmp fbcon freetype gif gstreamer gtk javascript jpeg mng pdf-writer png rosprite svg svgtiny webp"
+IUSE="bmp fbcon truetype gif gstreamer gtk javascript jpeg mng pdf-writer png rosprite svg svgtiny webp"
 
 RDEPEND="dev-libs/libcss
 	dev-libs/libxml2
@@ -22,7 +22,7 @@ RDEPEND="dev-libs/libcss
 	net-misc/curl
 	bmp? ( media-libs/libnsbmp )
 	fbcon? ( dev-libs/libnsfb )
-	freetype? ( media-fonts/dejavu
+	truetype? ( media-fonts/dejavu
 		media-libs/freetype )
 	gif? ( media-libs/libnsgif )
 	gtk? ( dev-libs/glib:2
@@ -103,7 +103,7 @@ src_configure() {
 	fi
 	if use fbcon ; then
 		netsurf_set NETSURF_FB_FRONTEND linux
-		netsurf_use NETSURF_FB_FONTLIB freetype freetype internal
+		netsurf_use NETSURF_FB_FONTLIB truetype freetype internal
 		netsurf_set NETSURF_FB_FONTPATH /usr/share/fonts/dejavu
 	fi
 	netsurf_use NETSURF_USE_ROSPRITE rosprite
