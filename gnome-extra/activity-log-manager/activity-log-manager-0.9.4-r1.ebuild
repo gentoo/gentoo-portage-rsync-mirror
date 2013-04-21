@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.4-r1.ebuild,v 1.1 2013/04/21 15:26:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/activity-log-manager-0.9.4-r1.ebuild,v 1.2 2013/04/21 17:52:06 jlec Exp $
 
 EAPI=5
 
 GNOME2_LA_PUNT="yes"
 VALA_MIN_API_VERSION="0.10"
-VALA_MAX_API_VERSION="0.18"
 
 inherit autotools eutils gnome2 vala versionator
 
