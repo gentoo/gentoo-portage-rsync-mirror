@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.733 2013/04/20 21:48:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.734 2013/04/21 13:01:04 ago Exp $
+
+  21 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.10.6-r2.ebuild,
+  xorg-server-1.11.4-r2.ebuild, xorg-server-1.12.4-r1.ebuild,
+  xorg-server-1.13.4.ebuild, xorg-server-1.9.5-r2.ebuild:
+  Stable for arm, wrt bug #466222
 
   20 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.10.6-r2.ebuild,
   xorg-server-1.11.4-r2.ebuild, xorg-server-1.12.4-r1.ebuild,

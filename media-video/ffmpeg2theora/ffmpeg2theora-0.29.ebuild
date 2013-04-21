@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29.ebuild,v 1.2 2013/04/04 10:00:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29.ebuild,v 1.3 2013/04/21 12:55:51 lu_zero Exp $
 
 EAPI=4
 inherit eutils scons-utils
@@ -14,9 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug kate"
 
-# || ( media-libs/libpostproc <media-video/libav-0.8.2-r1 media-video/ffmpeg )
 RDEPEND="
-	>=media-video/ffmpeg-0.10
+    || ( media-libs/libpostproc
+		 <media-video/libav-0.8.2-r1 media-video/ffmpeg )
+	>=virtual/ffmpeg-0.10
 	>=media-libs/libvorbis-1.1
 	>=media-libs/libogg-1.1
 	>=media-libs/libtheora-1.1[encode]
@@ -33,6 +34,10 @@ pkg_setup() {
 		mandir=PREFIX/share/man
 		libkate=$(usex kate 1 0)
 		)
+}
+
+src_prepare() {
+	sed -i -e "/swresample/d" SConstruct || die
 }
 
 src_compile() {
