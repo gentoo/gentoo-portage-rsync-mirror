@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.134 2013/04/01 12:10:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.135 2013/04/21 11:18:30 ago Exp $
 
 # Gilles Dartiguelongue <eva@gentoo.org> (1 Apr 2013)
 # missing keyword on media-libs/tremor, bug #453200
@@ -35,7 +35,7 @@ media-gfx/pstoedit emf
 =dev-libs/cyrus-sasl-2.1.25-r3 java
 =dev-libs/xapian-bindings-1.2.12 java
 =dev-libs/xapian-bindings-1.2.12-r1 java
-=dev-tex/tex4ht-20090611_p1038-r1 java
+dev-tex/tex4ht java
 =dev-vcs/subversion-1.6.17-r7 java
 =dev-vcs/subversion-1.7.7 java
 =media-gfx/graphviz-2.26.3-r3 java
