@@ -3308,7 +3308,7 @@ media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:ice - Use dev-cpp/Ice to enable remote control capabilities.
 media-sound/ncmpc:artist-screen - Enable artist screen
-media-sound/ncmpc:chat - Enable chat support
+media-sound/ncmpc:chat-screen - Enable the chat screen
 media-sound/ncmpc:colors - Enable color support
 media-sound/ncmpc:help-screen - Enable the help screen
 media-sound/ncmpc:key-screen - Enable key editor screen

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.77 2013/04/20 17:03:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.78 2013/04/21 22:39:11 jer Exp $
+
+  21 Apr 2013; Jeroen Roovers <jer@gentoo.org> ncmpc-0.21.ebuild, metadata.xml:
+  Add some USE flag consistency.
 
   20 Apr 2013; Jeroen Roovers <jer@gentoo.org> ncmpc-0.21.ebuild, metadata.xml:
   Enable chat support.

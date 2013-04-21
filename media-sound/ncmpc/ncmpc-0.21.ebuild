@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.21.ebuild,v 1.2 2013/04/20 17:03:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.21.ebuild,v 1.3 2013/04/21 22:39:11 jer Exp $
 
 EAPI=4
 inherit multilib
@@ -12,7 +12,7 @@ SRC_URI="http://www.musicpd.org/download/${PN}/${PV%.*}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="artist-screen chat colors debug +help-screen key-screen lirc lyrics-screen mouse nls search-screen song-screen"
+IUSE="artist-screen chat-screen colors debug +help-screen key-screen lirc lyrics-screen mouse nls search-screen song-screen"
 
 RDEPEND=">=dev-libs/glib-2.12:2
 	>=media-libs/libmpdclient-2.2
@@ -35,7 +35,7 @@ src_configure() {
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable artist-screen) \
-		$(use_enable chat chat-screen) \
+		$(use_enable chat-screen) \
 		$(use_enable colors) \
 		$(use_enable debug) \
 		$(use_enable help-screen) \

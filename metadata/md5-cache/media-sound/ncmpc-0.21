@@ -3,11 +3,11 @@ DEPEND=>=dev-libs/glib-2.12:2 >=media-libs/libmpdclient-2.2 sys-libs/ncurses lir
 DESCRIPTION=A ncurses client for the Music Player Daemon (MPD)
 EAPI=4
 HOMEPAGE=http://mpd.wikia.com/wiki/Client:Ncmpc
-IUSE=artist-screen chat colors debug +help-screen key-screen lirc lyrics-screen mouse nls search-screen song-screen
+IUSE=artist-screen chat-screen colors debug +help-screen key-screen lirc lyrics-screen mouse nls search-screen song-screen
 KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.12:2 >=media-libs/libmpdclient-2.2 sys-libs/ncurses lirc? ( app-misc/lirc ) nls? ( sys-libs/ncurses[unicode] )
 SLOT=0
 SRC_URI=http://www.musicpd.org/download/ncmpc/0/ncmpc-0.21.tar.bz2
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=80317051c5cc1ebed05dd0ece68982be
+_md5_=7664481fafb4af56ca9756a6f510e74d
