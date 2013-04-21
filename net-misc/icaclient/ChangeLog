@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.89 2013/03/16 11:49:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.90 2013/04/21 20:36:03 mgorny Exp $
+
+  21 Apr 2013; Michał Górny <mgorny@gentoo.org> icaclient-12.1.0.ebuild:
+  Support multilib libraries alternatively to emul-linux-x86-xlibs.
 
   16 Mar 2013; Ulrich Müller <ulm@gentoo.org> icaclient-12.1.0.ebuild:
   Update dependency, multilib-enabled x11-libs/motif will replace

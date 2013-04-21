@@ -6,9 +6,9 @@ HOMEPAGE=http://www.citrix.com/
 IUSE=nsplugin linguas_de linguas_ja
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=icaclient
-RDEPEND=x11-terms/xterm media-fonts/font-adobe-100dpi media-fonts/font-misc-misc media-fonts/font-cursor-misc media-fonts/font-xfree86-type1 media-fonts/font-misc-ethiopic x86? ( x11-libs/libXp x11-libs/libXaw x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXinerama >=x11-libs/motif-2.3.1:0 ) amd64? ( >=app-emulation/emul-linux-x86-xlibs-20110129 || ( >=x11-libs/motif-2.3.4:0[abi_x86_32] >=app-emulation/emul-linux-x86-motif-20110129 ) >=app-emulation/emul-linux-x86-soundlibs-20110928 >=app-emulation/emul-linux-x86-gtklibs-20110928 nsplugin? ( www-plugins/nspluginwrapper ) )
+RDEPEND=x11-terms/xterm media-fonts/font-adobe-100dpi media-fonts/font-misc-misc media-fonts/font-cursor-misc media-fonts/font-xfree86-type1 media-fonts/font-misc-ethiopic x86? ( x11-libs/libXp x11-libs/libXaw x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXinerama >=x11-libs/motif-2.3.1:0 ) amd64? ( || ( ( x11-libs/libXp[abi_x86_32] x11-libs/libXaw[abi_x86_32] x11-libs/libX11[abi_x86_32] x11-libs/libSM[abi_x86_32] x11-libs/libICE[abi_x86_32] x11-libs/libXinerama[abi_x86_32] ) >=app-emulation/emul-linux-x86-xlibs-20110129 ) || ( >=x11-libs/motif-2.3.4:0[abi_x86_32] >=app-emulation/emul-linux-x86-motif-20110129 ) >=app-emulation/emul-linux-x86-soundlibs-20110928 >=app-emulation/emul-linux-x86-gtklibs-20110928 nsplugin? ( www-plugins/nspluginwrapper ) )
 RESTRICT=mirror strip userpriv fetch
 SLOT=0
 SRC_URI=x86? ( ICAClient-12.1.0-0.i386.rpm ) amd64? ( ICAClient_12.1.0-0.x86_64.rpm )
 _eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=061c892641f7cadd8cc12205533e56b2
+_md5_=0df5e92719635826d59e07aff7bb6c64

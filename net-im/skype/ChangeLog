@@ -1,6 +1,10 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.145 2013/03/02 22:54:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.146 2013/04/21 20:41:03 mgorny Exp $
+
+  21 Apr 2013; Michał Górny <mgorny@gentoo.org> skype-2.2.0.35-r99.ebuild,
+  skype-4.0.0.8-r1.ebuild, skype-4.1.0.20.ebuild:
+  Support multilib libraries alternatively to emul-linux-x86-xlibs.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> skype-2.2.0.35-r99.ebuild,
   skype-4.0.0.8-r1.ebuild, skype-4.1.0.20.ebuild:

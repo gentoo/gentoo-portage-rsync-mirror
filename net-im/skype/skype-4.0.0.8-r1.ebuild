@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.3 2013/03/02 22:54:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.4 2013/04/21 20:41:03 mgorny Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils
@@ -25,7 +25,22 @@ RDEPEND="virtual/ttf-fonts
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-${EMUL_X86_VER}
 		>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}
-		>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
+		|| (
+			(
+				x11-libs/libX11[abi_x86_32]
+				x11-libs/libXext[abi_x86_32]
+				x11-libs/libXScrnSaver[abi_x86_32]
+				x11-libs/libXv[abi_x86_32]
+				qt-static? (
+					x11-libs/libICE[abi_x86_32]
+					x11-libs/libSM[abi_x86_32]
+					x11-libs/libXrender[abi_x86_32]
+					media-libs/fontconfig[abi_x86_32]
+					>=media-libs/freetype-2[abi_x86_32]
+				)
+			)
+			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
+		)
 		!qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER} )
 	)
 	x86? (

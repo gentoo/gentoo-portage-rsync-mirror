@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.81 2013/02/24 12:15:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.82 2013/04/21 20:33:22 mgorny Exp $
+
+*imaging-1.1.7-r3 (21 Apr 2013)
+
+  21 Apr 2013; Michał Górny <mgorny@gentoo.org> +imaging-1.1.7-r3.ebuild:
+  Backport the ebuild improvements from dev-python/pillow. Remove unnecessary
+  inherits. Add a fine-grained control over features, and a simpler feature
+  switch mechanism. Remove unused USE=X, add shebangs to all Python scripts. Use
+  the new python_doinclude function and EXAMPLES support.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> imaging-1.1.7-r2.ebuild:
   Stable for x86, wrt bug #447470
