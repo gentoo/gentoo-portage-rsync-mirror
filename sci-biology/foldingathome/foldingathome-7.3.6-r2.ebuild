@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.3.6-r1.ebuild,v 1.1 2013/04/16 18:37:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.3.6-r2.ebuild,v 1.1 2013/04/20 23:51:53 axs Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://folding.stanford.edu/FAQ-SMP.html"
 SRC_URI="x86? ( ${MY_32B_URI} )
 	amd64? ( ${MY_64B_URI} )"
 
-RESTRICT="fetch bindist"
+RESTRICT="fetch bindist strip"
 
 LICENSE="FAH-EULA-2009"
 SLOT="0"

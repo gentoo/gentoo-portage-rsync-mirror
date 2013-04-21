@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.38 2013/04/16 18:37:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.39 2013/04/20 23:51:53 axs Exp $
+
+*foldingathome-7.3.6-r2 (20 Apr 2013)
+
+  20 Apr 2013; Ian Stakenvicius <axs@gentoo.org> +foldingathome-7.3.6-r2.ebuild,
+  -foldingathome-7.3.6-r1.ebuild:
+  restricted strip as technically that modifies the binaries, and we want to be
+  as safe as possible wrt to the EULA
 
 *foldingathome-7.3.6-r1 (16 Apr 2013)
 
