@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/opensmtpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.6 2013/03/17 22:19:43 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.7 2013/04/22 12:04:30 zx2c4 Exp $
+
+*opensmtpd-5.3.1_p1 (22 Apr 2013)
+
+  22 Apr 2013; Jason A. Donenfeld <zx2c4@gentoo.org> +opensmtpd-5.3.1_p1.ebuild,
+  -opensmtpd-5.3_p1.ebuild:
+  Version bump.
 
   17 Mar 2013; Jason A. Donenfeld <zx2c4@gentoo.org> opensmtpd-5.3_p1.ebuild:
   Add optional sqlite support.

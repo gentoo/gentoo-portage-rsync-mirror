@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.114 2013/04/22 11:48:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.115 2013/04/22 12:24:40 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.9.ebuild:
+  Stable for alpha, wrt bug #463860
 
   22 Apr 2013; Jeroen Roovers <jer@gentoo.org> subversion-1.7.9.ebuild:
   Stable for HPPA (bug #463860).
