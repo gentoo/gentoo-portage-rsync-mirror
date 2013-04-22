@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.73 2013/04/02 13:19:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.74 2013/04/22 07:22:56 idella4 Exp $
+
+  22 Apr 2013; Ian Delaney <idella4@gentoo.org> webob-1.2.3-r1.ebuild:
+  drop pypy1.9 in 1.2.3-r1 due to failing testsuite
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> webob-1.2.3.ebuild:
   Stable for s390, wrt bug #456614
