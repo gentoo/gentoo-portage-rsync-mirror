@@ -1,0 +1,63 @@
+From a021eacfbd2f2e8cb1f1caf1b66204880c1e7992 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fredrik=20H=C3=B6glund?= <fredrik@kde.org>
+Date: Tue, 9 Apr 2013 18:55:21 +0200
+Subject: [PATCH] kwin/glx: Avoid MSAA configs in initDrawableConfigs()
+
+This is the same fix that was applied to initBufferConfigs() in commit
+6cf057777555a5d0c834de3a0165a62916cf3b40.
+
+CCBUG: 315089
+---
+ kwin/glxbackend.cpp | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+
+diff --git a/kwin/glxbackend.cpp b/kwin/glxbackend.cpp
+index be11497..acb564d 100644
+--- a/kwin/glxbackend.cpp
++++ b/kwin/glxbackend.cpp
+@@ -323,11 +323,13 @@ bool GlxBackend::initDrawableConfigs()
+     GLXFBConfig *fbconfigs = glXGetFBConfigs(display(), DefaultScreen(display()), &cnt);
+ 
+     for (int i = 0; i <= 32; i++) {
+-        int back, stencil, depth, caveat, alpha, mipmap, rgba;
++        int back, stencil, depth, caveat, alpha, mipmap, msaa_buffers, msaa_samples, rgba;
+         back = INT_MAX;
+         stencil = INT_MAX;
+         depth = INT_MAX;
+         caveat = INT_MAX;
++        msaa_buffers = INT_MAX;
++        msaa_samples = INT_MAX;
+         mipmap = 0;
+         rgba = 0;
+         fbcdrawableinfo[ i ].fbconfig = NULL;
+@@ -395,12 +397,27 @@ bool GlxBackend::initDrawableConfigs()
+                                  GLX_CONFIG_CAVEAT, &caveat_value);
+             if (caveat_value > caveat)
+                 continue;
++
++            int msaa_buffers_value;
++            glXGetFBConfigAttrib(display(), fbconfigs[j], GLX_SAMPLE_BUFFERS,
++                                 &msaa_buffers_value);
++            if (msaa_buffers_value > msaa_buffers)
++                continue;
++
++            int msaa_samples_value;
++            glXGetFBConfigAttrib(display(), fbconfigs[j], GLX_SAMPLES,
++                                 &msaa_samples_value);
++            if (msaa_samples_value > msaa_samples)
++                continue;
++
+             // ok, config passed all tests, it's the best one so far
+             fbcdrawableinfo[ i ].fbconfig = fbconfigs[ j ];
+             caveat = caveat_value;
+             back = back_value;
+             stencil = stencil_value;
+             depth = depth_value;
++            msaa_buffers = msaa_buffers_value;
++            msaa_samples = msaa_samples_value;
+             mipmap = 0;
+             glXGetFBConfigAttrib(display(), fbconfigs[ j ],
+                                  GLX_BIND_TO_TEXTURE_TARGETS_EXT, &value);
+-- 
+1.8.2.1
+
