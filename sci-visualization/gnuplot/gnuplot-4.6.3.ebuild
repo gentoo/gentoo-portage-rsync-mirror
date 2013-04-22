@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.3.ebuild,v 1.2 2013/04/22 01:37:34 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.3.ebuild,v 1.3 2013/04/22 16:49:42 ottxor Exp $
 
 EAPI=5
 
@@ -82,6 +82,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-4.6.3-eldoc.patch"
 		epatch "${FILESDIR}/${PN}-4.6.2-gdversion.patch" #462996
 		mv "${WORKDIR}"/gnuplot-4.6.2/docs/gnuplot.info docs || die
+		touch docs/gnuplot.info || die #464092#c12 and #466758
 	else
 		local dir
 		for dir in config demo m4 term tutorial; do
