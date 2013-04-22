@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/revolution
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/revolution/ChangeLog,v 1.8 2011/10/12 18:20:16 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/revolution/ChangeLog,v 1.9 2013/04/22 18:20:12 graaff Exp $
+
+  22 Apr 2013; Hans de Graaff <graaff@gentoo.org> revolution-0.5-r1.ebuild:
+  Update evolution-data-server dependency to include only versions with the old
+  API, e.g. for Gnome 2.x. Fixes bug 462954.
 
   12 Oct 2011; Hans de Graaff <graaff@gentoo.org> -revolution-0.5.ebuild:
   Remove old version.

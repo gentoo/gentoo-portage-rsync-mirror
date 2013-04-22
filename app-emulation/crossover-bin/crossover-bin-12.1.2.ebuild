@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.1.2.ebuild,v 1.2 2013/03/27 18:30:31 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.1.2.ebuild,v 1.3 2013/04/22 18:05:45 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -37,7 +37,22 @@ MLIB_DEPS="amd64? (
 	v4l? ( app-emulation/emul-linux-x86-medialibs )
 	app-emulation/emul-linux-x86-baselibs
 	app-emulation/emul-linux-x86-soundlibs
-	app-emulation/emul-linux-x86-xlibs
+	|| (
+		(
+			>=media-libs/freetype-2.0.0[abi_x86_32]
+			x11-libs/libICE[abi_x86_32]
+			x11-libs/libSM[abi_x86_32]
+			x11-libs/libX11[abi_x86_32]
+			x11-libs/libXau[abi_x86_32]
+			x11-libs/libXdmcp[abi_x86_32]
+			x11-libs/libXext[abi_x86_32]
+			x11-libs/libXi[abi_x86_32]
+			x11-libs/libXrandr[abi_x86_32]
+			x11-libs/libXxf86vm[abi_x86_32]
+			x11-libs/libxcb[abi_x86_32]
+		)
+		app-emulation/emul-linux-x86-xlibs
+	)
 )"
 
 X86_DEPS="x86? (

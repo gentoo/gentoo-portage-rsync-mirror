@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-auth-handler/ktp-auth-handler-0.6.1.ebuild,v 1.1 2013/04/20 20:04:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-auth-handler/ktp-auth-handler-0.6.1.ebuild,v 1.2 2013/04/22 18:13:56 johu Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SLOT="4"
 IUSE="debug"
 
 DEPEND="
-	dev-libs/qjson
+	>=dev-libs/qjson-0.8
 	>=net-im/ktp-common-internals-${PV}
 	>=net-libs/telepathy-qt-0.9.3
 "
