@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/hashcat-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.8 2013/01/07 04:12:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.9 2013/04/22 15:31:23 zerochaos Exp $
+
+*hashcat-bin-0.44 (22 Apr 2013)
+
+  22 Apr 2013; Rick Farina <zerochaos@gentoo.org> +hashcat-bin-0.44.ebuild:
+  version bump, avx and xop support similar to jtr ebuild
 
 *hashcat-bin-0.42 (07 Jan 2013)
 
