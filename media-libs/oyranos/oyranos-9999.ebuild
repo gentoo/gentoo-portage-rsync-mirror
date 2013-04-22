@@ -1,24 +1,26 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4.ebuild,v 1.2 2013/04/12 23:54:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.1 2013/04/22 17:07:37 xmw Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic cmake-utils cmake-multilib
+inherit eutils flag-o-matic cmake-utils cmake-multilib git-2
 
 DESCRIPTION="colour management system allowing to share various settings across applications and services"
 HOMEPAGE="http://www.oyranos.org/"
-SRC_URI="mirror://sourceforge/oyranos/Oyranos/Oyranos%200.4/${P}.tar.bz2"
+EGIT_REPO_URI="git://www.${PN}.org/git/${PN}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="X cairo cups doc exif fltk qt4 raw test"
 
-RDEPEND=">=app-admin/elektra-0.8.3-r1
+RDEPEND="=app-admin/elektra-0.7*
 	dev-libs/libxml2
 	dev-libs/yajl
 	media-gfx/exiv2
+	media-libs/icc-profiles-basiccolor-printing2009
+	media-libs/icc-profiles-basiccolor-printing2009
 	|| ( media-libs/lcms:0 media-libs/lcms:2 )
 	media-libs/libpng:0
 	media-libs/libraw
@@ -35,16 +37,21 @@ RDEPEND=">=app-admin/elektra-0.8.3-r1
 	raw? ( media-libs/libraw )"
 DEPEND="${RDEPEND}
 	app-doc/doxygen
-	media-gfx/graphviz
-	test? ( media-libs/icc-profiles-basiccolor-printing2009
-		media-libs/icc-profiles-openicc )"
+	media-gfx/graphviz"
 
-#RESTRICT="test"
+RESTRICT="test"
 
-CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindElektra FindXcm FindCUPS"
+CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindXcm FindCUPS"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}"-buildsystem.patch
+	einfo remove bundled libs
+	rm -rf elektra* yajl || die
+
+	epatch "${FILESDIR}/${PN}"-0.9.4-buildsystem-r1.patch
+ 
+	#fix really ugly and prominently visible typo (solved in 0.9.5)
+	sed -e 's/Promt/Prompt/' \
+		-i src/liboyranos_config/oyranos_texts.c po/*.{po,pot} settings/*xml || die
 
 	if use fltk ; then
 		#src/examples does not include fltk flags
@@ -53,9 +60,6 @@ src_prepare() {
 	fi
 
 	cmake-utils_src_prepare
-
-	einfo remove bundled libs
-	rm -rf elektra* yajl || die
 
 	mycmakeargs=(
 		$(usex X -DWANT_X11=1 "")

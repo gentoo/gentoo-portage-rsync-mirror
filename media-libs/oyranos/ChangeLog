@@ -1,6 +1,26 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.14 2013/04/13 02:23:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.15 2013/04/22 17:07:37 xmw Exp $
+
+*oyranos-9999 (22 Apr 2013)
+*oyranos-0.9.4-r1 (22 Apr 2013)
+
+  22 Apr 2013; Michael Weber <xmw@gentoo.org> -oyranos-0.4.0-r1.ebuild,
+  -oyranos-0.9.1-r1.ebuild, -oyranos-0.9.4.ebuild, +oyranos-0.9.4-r1.ebuild,
+  +files/oyranos-0.9.4-be-more-verbose.patch,
+  -files/oyranos-0.9.4-buildsystem.patch,
+  +files/oyranos-0.9.4-buildsystem-r1.patch,
+  +files/oyranos-0.9.4-fix-array-access.patch,
+  +files/oyranos-0.9.4-fix-double-object-release.patch,
+  +files/oyranos-0.9.4-fix-oyRankMap-helper-functions-crashes.patch,
+  +files/oyranos-0.9.4-fix-oyStringSegment-crash.patch,
+  +files/oyranos-0.9.4-fix-runpaths.patch,
+  +files/oyranos-0.9.4-fix-typos-and-grammar.patch,
+  +files/oyranos-0.9.4-omit-profile-with-error.patch,
+  +files/oyranos-0.9.4-set-xcalib-to-screen-if-ge-xrandr-12.patch,
+  +files/oyranos-0.9.4-use-more-internal-xrandr-info.patch,
+  +oyranos-9999.ebuild:
+  Improve multi abi support
 
   13 Apr 2013; Michael Weber <xmw@gentoo.org> oyranos-0.4.0-r1.ebuild,
   oyranos-0.9.1-r1.ebuild, oyranos-0.9.1-r2.ebuild:

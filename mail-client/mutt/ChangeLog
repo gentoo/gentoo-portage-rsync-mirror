@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.243 2013/04/18 14:18:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.244 2013/04/22 17:11:24 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.21-r12.ebuild:
+  Stable for sparc, wrt bug #465390
 
   18 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.21-r12.ebuild:
   Stable for ia64, wrt bug #465390
