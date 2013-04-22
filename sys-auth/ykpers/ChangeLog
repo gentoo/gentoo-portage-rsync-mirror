@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/ykpers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ChangeLog,v 1.8 2013/03/17 17:37:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ChangeLog,v 1.9 2013/04/22 13:23:20 zerochaos Exp $
+
+*ykpers-1.13.0 (22 Apr 2013)
+
+  22 Apr 2013; Rick Farina <zerochaos@gentoo.org> +ykpers-1.13.0.ebuild:
+  version bump, quick tests show it works
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
