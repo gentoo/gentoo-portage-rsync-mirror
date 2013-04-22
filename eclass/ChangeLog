@@ -1,6 +1,18 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.795 2013/04/20 18:23:57 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.799 2013/04/21 23:26:59 radhermit Exp $
+
+  21 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Use python-r1 in EAPI 5 (patch by mgorny, bug #458794).
+
+  21 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Remove pre-EAPI 2 code blocks (patch by mgorny, bug #458794).
+
+  21 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Disable python.eclass inherit in vim-core (patch by mgorny, bug #458794).
+
+  21 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Move EAPI check earlier (patch by mgorny, bug #458794).
 
   20 Apr 2013; Ralph Sennhauser <sera@gentoo.org> java-ant-2.eclass:
   Raise ant-core dep to version 1.8.2. #466558
