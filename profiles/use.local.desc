@@ -4670,6 +4670,7 @@ net-misc/badvpn:tun2socks - Build tun2socks, a program which implements a TUN de
 net-misc/badvpn:udpgw - Build udpgw, a small daemon which allows tun2socks to forward UDP traffic.
 net-misc/batman-adv:bla - B.A.T.M.A.N. bridge loop avoidance
 net-misc/batman-adv:dat - B.A.T.M.A.N. distributed arp table
+net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
