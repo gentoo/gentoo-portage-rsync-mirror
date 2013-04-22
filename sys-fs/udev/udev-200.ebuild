@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.19 2013/04/13 21:00:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-200.ebuild,v 1.20 2013/04/22 11:52:16 jer Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ else
 					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
 					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.xz"
 			fi
-	KEYWORDS="alpha amd64 arm ~hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86"
 fi
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"

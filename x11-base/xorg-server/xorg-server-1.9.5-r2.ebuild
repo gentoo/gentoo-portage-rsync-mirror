@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.5-r2.ebuild,v 1.10 2013/04/22 10:40:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.5-r2.ebuild,v 1.11 2013/04/22 11:46:18 jer Exp $
 
 EAPI=5
 inherit flag-o-matic xorg-2 multilib versionator
@@ -11,7 +11,7 @@ OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="X.Org X servers"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 IUSE_SERVERS="dmx kdrive xnest xorg xvfb"
 IUSE="${IUSE_SERVERS} doc ipv6 minimal nptl tslib +udev"
