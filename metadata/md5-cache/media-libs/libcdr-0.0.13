@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=app-text/libwpd:0.9 app-text/libwpg:0.2 dev-libs/icu:= media-libs/lcms:2 sys-libs/zlib virtual/pkgconfig sys-devel/libtool doc? ( app-doc/doxygen )
+DEPEND=app-text/libwpd:0.9 app-text/libwpg:0.2 dev-libs/icu:= media-libs/lcms:2 sys-libs/zlib dev-libs/boost sys-devel/libtool virtual/pkgconfig doc? ( app-doc/doxygen )
 DESCRIPTION=Library parsing the Corel cdr documents
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/libcdr
@@ -8,6 +8,6 @@ KEYWORDS=amd64 ~arm ppc x86
 LICENSE=LGPL-2.1
 RDEPEND=app-text/libwpd:0.9 app-text/libwpg:0.2 dev-libs/icu:= media-libs/lcms:2 sys-libs/zlib
 SLOT=0
-SRC_URI=http://dev-www.libreoffice.org/src/libcdr-0.0.11.tar.xz
+SRC_URI=http://dev-www.libreoffice.org/src/libcdr-0.0.13.tar.xz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=72c401e6c16b57be27d8246ced5f2573
+_md5_=0441ab68935a35e3bc918e0ae049048f

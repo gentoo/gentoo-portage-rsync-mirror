@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nose-cover3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/ChangeLog,v 1.2 2012/06/12 11:37:53 iksaif Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/ChangeLog,v 1.3 2013/04/22 14:12:38 idella4 Exp $
+
+*nose-cover3-0.1.0-r1 (22 Apr 2013)
+
+  22 Apr 2013; Ian Delaney <idella4@gentoo.org> +nose-cover3-0.1.0-r1.ebuild:
+  migration -> distutils-r1
 
   12 Jun 2012; Corentin Chary <iksaif@gentoo.org> nose-cover3-0.1.0.ebuild:
   Fix HOMEPAGE.
@@ -10,4 +15,3 @@
   30 May 2012; Corentin Chary <iksaif@gentoo.org> +metadata.xml,
   +nose-cover3-0.1.0.ebuild:
   New ebuild for nose-cover3.
-

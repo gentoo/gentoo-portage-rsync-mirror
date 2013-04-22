@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_yubico/pam_yubico-2.13.ebuild,v 1.1 2013/04/22 13:57:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_yubico/pam_yubico-2.13.ebuild,v 1.2 2013/04/22 14:04:54 zerochaos Exp $
 
 EAPI=5
 inherit eutils autotools
@@ -16,7 +16,8 @@ IUSE="ldap"
 
 DEPEND="virtual/pam
 	>=sys-auth/ykclient-2.4
-	>=sys-auth/ykpers-1.6"
+	>=sys-auth/ykpers-1.6
+	ldap? ( net-nds/openldap )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -35,6 +36,6 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README doc/*
-	prune_libtool_files
+	#prune_libtool_files #why doesn't this work?
+	find "${D}" -name '*.la' -delete || die
 }
-
