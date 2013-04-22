@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=media-video/vlc-1.1 x11-libs/libX11 !gtk? ( x11-libs/libXpm x11-libs/libSM x11-libs/libICE ) gtk? ( x11-libs/gtk+:2 ) !<media-video/vlc-1.2[nsplugin]
 SLOT=0
 SRC_URI=http://download.videolan.org/pub/videolan/vlc/2.0.0/npapi-vlc-2.0.0.tar.xz
-_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=51971246dc2b65099ef16ad50fd43888

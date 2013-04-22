@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=>=dev-python/axiom-0.5.7 >=dev-python/cssutils-0.9.5.1 >=dev-python/imaging-1.1.6 >=dev-python/nevow-0.9.5 >=dev-python/pytz-2005m >=dev-python/twisted-8.0.1 dev-python/twisted-mail >=dev-python/vertex-0.2.0 =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/M/Mantissa/Mantissa-0.7.0.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	twisted	fcb518bd0ad842f8f6ed16168341f5d4	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	twisted	fcb518bd0ad842f8f6ed16168341f5d4	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=4b1f2f4198c2d88ea03747f573bb5664

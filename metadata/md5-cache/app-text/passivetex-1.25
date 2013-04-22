@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=virtual/latex-base >=dev-tex/xmltex-1.9 virtual/latex-base
 SLOT=0
 SRC_URI=mirror://gentoo/passivetex-1.25.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	latex-package	e7bfe03b27224512702eac009812cc50	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	latex-package	e7bfe03b27224512702eac009812cc50	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=04c5951abbe85d6b7a8bf22a1f29cf85

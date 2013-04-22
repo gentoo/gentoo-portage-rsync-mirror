@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=~app-leechcraft/lc-core-9999[postgres?,sqlite?] dev-qt/qtwebkit:4 idn? ( net-dns/libidn ) onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 ) pcre? ( >=dev-libs/libpcre-8.12 ) virtual/leechcraft-downloader-http
 REQUIRED_USE=pcre? ( cleanweb )
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	leechcraft	1f478939dab25982bd1b5ac03a64451f	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	leechcraft	1f478939dab25982bd1b5ac03a64451f	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=5aaad0302619f3f75e34bdc3050cea62

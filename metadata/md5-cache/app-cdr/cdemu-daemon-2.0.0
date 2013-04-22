@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=>=dev-libs/glib-2.26:2 >=dev-libs/libmirage-2.0.0:= >=media-libs/libao-0.8.0[pulseaudio?] sys-apps/dbus >=sys-fs/vhba-20101015 !pulseaudio? ( >=media-libs/libao-0.8.0[alsa] )
 SLOT=0/4
 SRC_URI=mirror://sourceforge/cdemu/cdemu-daemon-2.0.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f97d1dfd84de7338356a9fc0f4ba19f5

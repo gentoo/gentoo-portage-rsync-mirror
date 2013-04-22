@@ -6,5 +6,5 @@ LICENSE=MIT
 RDEPEND=x11-misc/afbinit
 SLOT=0
 SRC_URI=http://dlc.sun.com/osol/sparc-gfx/downloads/afb-ucode.tar.bz2 mirror://gentoo/afb-ucode.tar.bz2
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=c53d63dc3ed615c2152dc60344d3bb24

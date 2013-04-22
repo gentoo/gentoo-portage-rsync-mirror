@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1-with-linking-exception
 RDEPEND=dev-ml/pcre-ocaml:= dev-ml/res:= >=dev-ml/core-109.08.00:= >=dev-ml/sexplib-109.08.00:= >=dev-ml/bin-prot-109.08.00:= >=dev-ml/fieldslib-109.08.00:= >=dev-ml/pa_ounit-109.08.00:= >=dev-ml/variantslib-109.08.00:= >=dev-ml/comparelib-109.08.00:= >=dev-ml/pipebang-109.08.00:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/109.08.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.08.00/individual/core_extended-109.08.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/core_extended-109.08.00.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	ded93e450747134a079e647d888aa80b	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=41f0f6b78ebd66b1be8ff625183c2208

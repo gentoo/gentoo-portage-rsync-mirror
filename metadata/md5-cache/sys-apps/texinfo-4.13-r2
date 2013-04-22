@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=!=app-text/tetex-2* >=sys-libs/ncurses-5.2-r2 nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://gnu/texinfo/texinfo-4.13.tar.lzma
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=4e6dd8dd4abd89b692ff1cfd89774eb3

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils !sys-apps/linux-misc-apps
 SLOT=0
 SRC_URI=mirror://kernel/linux/kernel/v3.0/testing/linux-3.8-rc4.tar.bz2
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=4728331f30aa6da5bf8ae2a669660d9f

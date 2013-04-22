@@ -6,5 +6,5 @@ KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=ftp://ftp.habets.pp.se/pub/synscan/pipebench-0.40.tar.gz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=a7952f79833a6ea2cb28baa865f6577b

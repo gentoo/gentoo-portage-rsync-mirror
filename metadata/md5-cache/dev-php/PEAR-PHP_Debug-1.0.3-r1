@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=!minimal? ( dev-php/PEAR-Text_Highlighter dev-php/PEAR-Services_W3C_HTMLValidator ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/PHP_Debug-1.0.3.tgz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=bf36f468a20bbe0212420644f214b575

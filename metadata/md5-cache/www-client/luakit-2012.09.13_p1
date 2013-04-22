@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=luajit? ( dev-lang/luajit:2 ) !luajit? ( >=dev-lang/lua-5.1 ) dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libunique:1 net-libs/libsoup:2.4 net-libs/webkit-gtk:2 x11-libs/gtk+:2 dev-lua/luafilesystem vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 SLOT=0
 SRC_URI=https://github.com/mason-larobina/luakit/tarball/2012.09.13-r1 -> luakit-2012.09.13_p1.tar.gz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=9e70242bbbf0b38ba4bb1c649395f0ec

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfce4-panel-4.10 ssl? ( dev-libs/libgcrypt >=net-libs/gnutls-2 )
 SLOT=0
 SRC_URI=mirror://gentoo/xfce4-mailwatch-plugin-1.1.0.tar.bz2
-_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	xfconf	ba58c6f43e7fdfc116752aa58b488d83
+_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	xfconf	ba58c6f43e7fdfc116752aa58b488d83
 _md5_=56efe3ad8d1a26da8d521013070e1d34

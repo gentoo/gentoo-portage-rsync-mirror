@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1+
 RDEPEND=app-arch/cabextract app-arch/unzip app-emulation/wine gtk? ( gnome-extra/zenity ) kde? ( kde-base/kdialog )
 SLOT=0
 SRC_URI=http://winetricks.googlecode.com/svn-history/r947/trunk/src/winetricks -> winetricks-947 http://winetricks.googlecode.com/svn-history/r947/trunk/src/winetricks.1 -> winetricks-947.1 gtk? ( http://dev.gentoo.org/~tetromino/distfiles/wine/winetricks-gentoo-2012.11.24.tar.bz2 ) kde? ( http://dev.gentoo.org/~tetromino/distfiles/wine/winetricks-gentoo-2012.11.24.tar.bz2 )
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=cc768e74e3ae1115e9027772c6c721c4

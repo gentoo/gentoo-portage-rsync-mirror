@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/ilbc-rfc3951 >=media-libs/mediastreamer-2.0.0
 SLOT=0
 SRC_URI=http://download.savannah.nongnu.org/releases/linphone/plugins/sources/msilbc-2.0.0.tar.gz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=8259d3bc68b99513b5c0d75b8c8f6c10

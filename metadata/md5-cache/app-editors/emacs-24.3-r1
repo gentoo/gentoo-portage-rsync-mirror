@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses >=app-admin/eselect-emacs-1.2 >=app-emacs/emacs-common-
 REQUIRED_USE=?? ( aqua X )
 SLOT=24
 SRC_URI=mirror://gnu/emacs/emacs-24.3.tar.xz mirror://gentoo/emacs-24.3-patches-1.tar.xz
-_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	readme.gentoo	2705553a0f031d715b57878cc0d9bf64	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	readme.gentoo	2705553a0f031d715b57878cc0d9bf64	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ff2c1a43b52df2b0a3b06e19a0e827a6

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND==dev-lang/python-2*
 SLOT=0
 SRC_URI=https://github.com/alejandrogomez/turses/tarball/v0.2.11 -> turses-0.2.11.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	36e6377b0e31856b6d62af831661c4f3	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=25084d2e8f662bab8bfcb1fe6667641b

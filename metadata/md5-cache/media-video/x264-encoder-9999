@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=ffmpeg? ( virtual/ffmpeg ) ffmpegsource? ( media-libs/ffmpegsource ) mp4? ( >=media-video/gpac-0.4.1_pre20060122 ) ~media-libs/x264-9999
 REQUIRED_USE=ffmpegsource? ( ffmpeg )
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=3ed0508899166d24b7126ee350ace65b

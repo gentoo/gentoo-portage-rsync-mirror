@@ -10,5 +10,5 @@ RDEPEND=|| ( >=sys-devel/gcc-4.2[cxx] >=sys-devel/gcc-4.2[-nocxx] ) x86? ( media
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=x86? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb -> GoogleEarthLinux-7.0.2.8415_i386.deb ) amd64? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -> GoogleEarthLinux-7.0.2.8415_amd64.deb ) http://dev.gentoo.org/~hasufell/distfiles/googleearth-libexpat-2.1.0-novisibility.tar.xz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	pax-utils	d727728a240d5f59bf9370a64259fd61	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	d727728a240d5f59bf9370a64259fd61	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=8a7b31d6282075e2ab4ea83d6f8ff03b

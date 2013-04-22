@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-lang/php[curl?,fileinfo?,ssl?,zlib?] >=dev-php/PEAR-Net_URL2-0.3.0 dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTTP_Request2-2.0.0.tgz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=5753666f8ca360a7cf2b0d81fbefeeeb

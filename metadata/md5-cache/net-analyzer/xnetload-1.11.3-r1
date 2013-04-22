@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-libs/libX11-1.0.0 >=x11-libs/libXmu-1.0.0 >=x11-libs/libXt-1.0.0 >=x11-libs/libXaw-1.0.1
 SLOT=0
 SRC_URI=http://www.xs4all.nl/~rsmith/software/xnetload-1.11.3.tar.gz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=c9d50f7da30c236d7e21828e6537de75

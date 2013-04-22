@@ -10,5 +10,5 @@ RDEPEND=>=app-emulation/emul-linux-x86-xlibs-20100611 !<app-emulation/emul-linux
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-opengl-20121202.tar.xz https://dev.gentoo.org/~pacho/emul-linux-x86-20121202/glu-9.0.0.tbz2
-_eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=4f5c6d79b22e95d69050f11f24b59007
