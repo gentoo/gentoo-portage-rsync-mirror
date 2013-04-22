@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.80 2013/01/06 11:10:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.81 2013/04/22 21:42:17 radhermit Exp $
+
+*nbd-3.3 (22 Apr 2013)
+
+  22 Apr 2013; Tim Harder <radhermit@gentoo.org> +nbd-3.3.ebuild:
+  Version bump.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> nbd-3.2.ebuild:
   Add ~sparc, wrt bug #449220
