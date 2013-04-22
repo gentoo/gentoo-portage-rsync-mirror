@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r1.ebuild,v 1.5 2013/04/10 03:44:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r1.ebuild,v 1.6 2013/04/22 16:19:35 mgorny Exp $
 
 EAPI=5
 
@@ -66,6 +66,8 @@ python_prepare_all() {
 		"${FILESDIR}"/${PN}-2.8.12-drop-editra.patch
 		"${FILESDIR}"/${PN}-2.8.12-drop-categories.patch
 		"${FILESDIR}"/${PN}-2.8-no-preservatives-added.patch
+		# fix handling egg_info command
+		"${FILESDIR}"/${PN}-2.8.12.1-disable-egging-mode.patch
 	)
 
 	distutils-r1_python_prepare_all

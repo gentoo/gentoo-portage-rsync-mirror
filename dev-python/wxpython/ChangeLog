@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.179 2013/04/10 03:44:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.180 2013/04/22 16:19:35 mgorny Exp $
+
+  22 Apr 2013; Michał Górny <mgorny@gentoo.org>
+  +files/wxpython-2.8.12.1-disable-egging-mode.patch,
+  wxpython-2.8.12.1-r1.ebuild, wxpython-2.9.4.1-r1.ebuild:
+  Fix alternating install design by the egg_info command. Fixes bug #466302.
 
   10 Apr 2013; Ryan Hill <dirtyepic@gentoo.org> wxpython-2.8.12.1-r1.ebuild,
   -wxpython-2.9.4.1.ebuild, wxpython-2.9.4.1-r1.ebuild:

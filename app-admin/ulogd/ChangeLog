@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.77 2013/04/19 18:58:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.79 2013/04/22 16:02:36 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.2.ebuild:
+  Stable for x86, wrt bug #466590
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.2.ebuild:
+  Stable for amd64, wrt bug #466590
 
   19 Apr 2013; Christian Ruppert <idl0r@gentoo.org> files/ulogd-2.logrotate:
   Add "missingok" to the logrotate file to avoid errors about non-existent logs
