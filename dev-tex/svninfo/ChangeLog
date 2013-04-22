@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.50 2013/04/21 22:37:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.51 2013/04/22 08:07:46 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> svninfo-0.7.4.ebuild:
+  Stable for s390, wrt bug #449298
 
   21 Apr 2013; Agostino Sarubbo <ago@gentoo.org> svninfo-0.7.4.ebuild:
   Stable for sparc, wrt bug #449298

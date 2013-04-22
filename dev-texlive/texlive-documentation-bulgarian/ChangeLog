@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-bulgarian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-bulgarian/ChangeLog,v 1.59 2013/04/21 22:34:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-bulgarian/ChangeLog,v 1.60 2013/04/22 08:04:21 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  texlive-documentation-bulgarian-2012.ebuild:
+  Stable for s390, wrt bug #449298
 
   21 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   texlive-documentation-bulgarian-2012.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langother
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langother/ChangeLog,v 1.61 2013/04/21 22:36:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langother/ChangeLog,v 1.62 2013/04/22 08:06:33 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-langother-2012.ebuild:
+  Stable for s390, wrt bug #449298
 
   21 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-langother-2012.ebuild:
   Stable for sparc, wrt bug #449298

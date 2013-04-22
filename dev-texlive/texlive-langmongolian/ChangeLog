@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langmongolian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langmongolian/ChangeLog,v 1.60 2013/04/21 22:36:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langmongolian/ChangeLog,v 1.61 2013/04/22 08:06:29 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  texlive-langmongolian-2012.ebuild:
+  Stable for s390, wrt bug #449298
 
   21 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   texlive-langmongolian-2012.ebuild:
