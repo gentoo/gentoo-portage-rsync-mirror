@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/CryptX
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CryptX/ChangeLog,v 1.1 2013/04/22 15:10:22 chainsaw Exp $
+
+*CryptX-0.006 (22 Apr 2013)
+
+  22 Apr 2013; Tony Vroon <chainsaw@gentoo.org> +CryptX-0.006.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by g-cpan with some minor modifications by me.
+

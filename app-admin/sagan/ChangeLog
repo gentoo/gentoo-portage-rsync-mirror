@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sagan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.21 2013/03/30 14:57:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.23 2013/04/22 15:28:38 pinkbyte Exp $
+
+  22 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Metadata whitespaces cleanup, add missing name for maintainer
+
+*sagan-0.2.3 (22 Apr 2013)
+
+  22 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +sagan-0.2.3.ebuild:
+  Version bump, wrt bug #466416, thanks to Andreis Vinogradovs
 
   30 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> +files/mysql_check.patch,
   sagan-0.2.2_p2-r2.ebuild:
