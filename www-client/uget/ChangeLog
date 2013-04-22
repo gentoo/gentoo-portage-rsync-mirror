@@ -1,6 +1,9 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.37 2013/04/20 20:47:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.38 2013/04/22 09:09:11 ago Exp $
+
+  22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> uget-1.10.3.ebuild:
+  Stable for ppc, wrt bug #463152
 
   20 Apr 2013; Agostino Sarubbo <ago@gentoo.org> uget-1.10.3.ebuild:
   Stable for x86, wrt bug #463152

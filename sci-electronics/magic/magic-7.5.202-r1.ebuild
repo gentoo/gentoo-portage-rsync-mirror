@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-8.0.125.ebuild,v 1.1 2013/01/21 11:12:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.202-r1.ebuild,v 1.1 2013/04/22 09:18:03 xmw Exp $
 
-EAPI=2
+EAPI=5
 
 inherit multilib eutils autotools
 
@@ -25,37 +25,40 @@ DEPEND="${RDEPEND}
 	app-shells/tcsh"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-8.0.109-ldflags.patch"
+	epatch "${FILESDIR}/${PN}-ldflags.patch"
+	epatch "${FILESDIR}/${P}-install.patch" #422687
+	epatch "${FILESDIR}/${P}-include.patch"
 	cd scripts
 	eautoreconf
 	cd ..
-	sed -i -e "s: -pg : :" tcltk/Makefile || die "tcltk patch failed"
+	sed -i -e "s: -pg : :" tcltk/Makefile || die
 }
 
 src_configure() {
 	# Short-circuit top-level configure script to retain CFLAGS
+	# fix tcl/tk detection #447868
 	cd scripts
-	CPP="cpp" econf
+	CPP="cpp" econf --with-tcllibs="/usr/$(get_libdir)" --with-tklibs="/usr/$(get_libdir)"
 }
 
 src_compile() {
-	emake -j1 || die "Compilation failed"
+	emake -j1
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install
 
-	dodoc README README.Tcl TODO || die
+	dodoc README README.Tcl TODO
 
 	# Move docs from libdir to docdir and add symlink.
 	mv "${D}/usr/$(get_libdir)/magic/doc"/* "${D}/usr/share/doc/${PF}/" || die
 	rmdir "${D}/usr/$(get_libdir)/magic/doc" || die
-	dosym "/usr/share/doc/${PF}" "/usr/$(get_libdir)/magic/doc" || die
+	dosym "/usr/share/doc/${PF}" "/usr/$(get_libdir)/magic/doc"
 
 	# Move tutorial from libdir to datadir and add symlink.
-	dodir /usr/share/${PN} || die
+	dodir /usr/share/${PN}
 	mv "${D}/usr/$(get_libdir)/magic/tutorial" "${D}/usr/share/${PN}/" || die
-	dosym "/usr/share/${PN}/tutorial" "/usr/$(get_libdir)/magic/tutorial" || die
+	dosym "/usr/share/${PN}/tutorial" "/usr/$(get_libdir)/magic/tutorial"
 
 	# Install latest MOSIS tech files
 	cp -pPR "${WORKDIR}"/2002a "${D}"/usr/$(get_libdir)/magic/sys/current || die
