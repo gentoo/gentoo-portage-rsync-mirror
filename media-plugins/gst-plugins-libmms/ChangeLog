@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-libmms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.85 2013/04/01 13:09:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.86 2013/04/22 19:01:02 pacho Exp $
+
+  22 Apr 2013; Pacho Ramos <pacho@gentoo.org> gst-plugins-libmms-1.0.5.ebuild,
+  gst-plugins-libmms-1.0.6.ebuild:
+  arm keyword was only added to old version of slot 1.0 and later versions don't
+  have it, causing repoman to complain
 
 *gst-plugins-libmms-1.0.6 (01 Apr 2013)
 
