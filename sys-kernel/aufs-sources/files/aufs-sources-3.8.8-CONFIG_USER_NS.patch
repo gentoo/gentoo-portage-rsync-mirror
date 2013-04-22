@@ -1,0 +1,29 @@
+commit 1b7299ead151d838a6ac328e828d6ed520d40a47
+Author: J. R. Okajima <hooanon05@yahoo.co.jp>
+Date:   Sun Apr 21 13:54:47 2013 +0900
+
+    aufs: bugfix, no i_[ug]id_write() for USER_NS
+    
+    i_[ug]id_write() using kstat is unnecessary. Replace it by direct
+    assignment. Otherwise it causes a compilation error when CONFIG_USER_NS
+    is enabled.
+    
+    Reported-by: justin <jlec@gentoo.org>
+    Signed-off-by: J. R. Okajima <hooanon05@yahoo.co.jp>
+
+diff --git a/fs/aufs/i_op.c b/fs/aufs/i_op.c
+index d223d7d..ab140e1 100644
+--- a/fs/aufs/i_op.c
++++ b/fs/aufs/i_op.c
+@@ -821,8 +821,9 @@ static void au_refresh_iattr(struct inode *inode, struct kstat *st,
+ 	unsigned int n;
+ 
+ 	inode->i_mode = st->mode;
+-	i_uid_write(inode, st->uid);
+-	i_gid_write(inode, st->gid);
++	/* don't i_[ug]id_write() here */
++	inode->i_uid = st->uid;
++	inode->i_gid = st->gid;
+ 	inode->i_atime = st->atime;
+ 	inode->i_mtime = st->mtime;
+ 	inode->i_ctime = st->ctime;

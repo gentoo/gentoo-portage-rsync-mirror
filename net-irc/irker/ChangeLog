@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.11 2013/02/06 08:45:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.12 2013/04/22 06:36:52 patrick Exp $
+
+*irker-1.18 (22 Apr 2013)
+
+  22 Apr 2013; Patrick Lauer <patrick@gentoo.org> +irker-1.18.ebuild:
+  Bump
 
 *irker-1.17 (06 Feb 2013)
 
