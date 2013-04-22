@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.232 2013/04/02 19:17:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.233 2013/04/22 09:31:55 voyageur Exp $
+
+  22 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org> ppc64/package.use.mask:
+  x11-misc/google-gadgets removed from tree
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ppc64/package.use.mask:
   Add net-libs/libkolabxml to the previous mask

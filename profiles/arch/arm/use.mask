@@ -79,7 +79,6 @@ debug-utils
 schroedinger
 hardened
 frei0r
-google-gadgets
 libvirt
 pdfannotextractor
 prelude

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.53 2013/04/02 19:17:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.54 2013/04/22 09:31:55 voyageur Exp $
 
 # Michael Palimaka <kensington@gentoo.org> (02 Apr 2013)
 # Requires dev-lang/mono which currently has some issues
@@ -92,8 +92,3 @@ sys-auth/pambase passwdqc
 # Joseph Jezak <josejx@gentoo.org> (12 February 2010)
 # Mask unstable pidgin deps until we can mark them stable (farsight2)
 net-im/pidgin gstreamer
-
-# Joseph Jezak <josejx@gentoo.org> (23 February 2010)
-# Mask webkit flag due to minimal-toc breakage
-x11-misc/google-gadgets	webkit
-

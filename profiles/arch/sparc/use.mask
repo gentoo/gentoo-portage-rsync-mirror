@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.107 2013/03/12 21:48:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.108 2013/04/22 09:31:55 voyageur Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -107,7 +107,6 @@ wicd
 indi
 chm
 ebook
-google-gadgets
 celt
 capi
 lensfun

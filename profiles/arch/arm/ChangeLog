@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.229 2013/04/21 12:57:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.230 2013/04/22 09:31:55 voyageur Exp $
+
+  22 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org> use.mask:
+  x11-misc/google-gadgets removed from tree
 
   21 Apr 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
   Remove the version from dev-vcs/subversion

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7750 2013/04/21 20:15:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7751 2013/04/22 09:31:52 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Removing mask on x11-misc/google-gadgets after last rites
 
   21 Apr 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   sys-kernel/linuxwacom-module removed
