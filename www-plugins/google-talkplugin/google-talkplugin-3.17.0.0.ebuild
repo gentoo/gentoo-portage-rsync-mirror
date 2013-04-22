@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.17.0.0.ebuild,v 1.1 2013/04/04 19:09:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.17.0.0.ebuild,v 1.2 2013/04/22 13:58:04 ottxor Exp $
 
 EAPI=4
 
@@ -35,7 +35,6 @@ RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	system-libCg? ( media-gfx/nvidia-cg-toolkit )
 	media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/libpng:1.2
 	sys-libs/glibc
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf

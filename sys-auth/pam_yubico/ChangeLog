@@ -1,0 +1,9 @@
+# ChangeLog for sys-auth/pam_yubico
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_yubico/ChangeLog,v 1.1 2013/04/22 13:57:20 zerochaos Exp $
+
+*pam_yubico-2.13 (22 Apr 2013)
+
+  22 Apr 2013; Rick Farina <zerochaos@gentoo.org> +files/2.11-drop_privs.patch,
+  +metadata.xml, +pam_yubico-2.13.ebuild:
+  initial commit, deps are likely a bit more complex than this
