@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.106 2013/04/20 14:26:22 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.107 2013/04/22 10:17:08 pchrist Exp $
+
+  22 Apr 2013; Panagiotis Christopoulos <pchrist@gentoo.org>
+  files/clisp-2.48-bits_ipctypes_to_sys_ipc.patch:
+  Apply trivial patch, fix Bug #465384, thanks to Christopher J. Volny [cvolny
+  gmail com]
 
 *clisp-2.49-r7 (20 Apr 2013)
 
