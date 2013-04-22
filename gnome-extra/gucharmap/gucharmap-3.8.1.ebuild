@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.8.0.ebuild,v 1.1 2013/03/28 17:25:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.8.1.ebuild,v 1.1 2013/04/22 17:47:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 VALA_MIN_API_VERSION="0.16"
 VALA_USE_DEPEND="vapigen"
 
-inherit autotools gnome2 vala
+inherit gnome2 vala
 
 DESCRIPTION="Unicode character map viewer and library"
 HOMEPAGE="http://live.gnome.org/Gucharmap"
@@ -39,22 +39,23 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		--disable-static
-		$(use_enable introspection)
-		$(use_enable cjk unihan)
-		$(use_enable vala)"
-	# Do not add ITSTOOL=$(type -P true); yelp-tools is a true required
-	# dependency here for some LINGUAS.
-
 	# prevent file collisions with slot 0
 	sed -e "s:GETTEXT_PACKAGE=gucharmap$:GETTEXT_PACKAGE=gucharmap-${SLOT}:" \
 		-i configure.ac configure || die "sed configure.ac configure failed"
 
-	eautoreconf
-	use vala && vala_src_prepare
-	gnome2_src_prepare
-
 	# avoid autoreconf
 	sed -e 's/-Wall //g' -i configure || die "sed failed"
+
+	use vala && vala_src_prepare
+	gnome2_src_prepare
+}
+
+src_configure() {
+	# Do not add ITSTOOL=$(type -P true); yelp-tools is a true required
+	# dependency here for some LINGUAS.
+	gnome2_src_configure \
+		--disable-static \
+		$(use_enable introspection) \
+		$(use_enable cjk unihan) \
+		$(use_enable vala)
 }
