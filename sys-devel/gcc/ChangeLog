@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.945 2013/04/21 02:31:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.946 2013/04/23 06:32:01 dirtyepic Exp $
+
+*gcc-4.6.4 (23 Apr 2013)
+
+  23 Apr 2013; Ryan Hill <dirtyepic@gentoo.org> +gcc-4.6.4.ebuild:
+  Version bump. Fixes bug #411691 (ICE building stable boost) and bug #454426
+  (bootstrap fails on alpha).
 
   21 Apr 2013; Mike Frysinger <vapier@gentoo.org> gcc-4.4.7.ebuild,
   gcc-4.5.4.ebuild, gcc-4.6.3.ebuild, gcc-4.7.2-r1.ebuild, gcc-4.8.0.ebuild:
