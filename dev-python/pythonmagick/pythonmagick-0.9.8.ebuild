@@ -1,12 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.3 2012/11/12 19:06:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.4 2013/04/23 05:35:51 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 *-jython 2.7-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
+
+WANT_AUTOMAKE="1.12"
 
 inherit autotools eutils python
 
@@ -26,7 +28,7 @@ RDEPEND=">=dev-libs/boost-1.48[python]
 	>=media-gfx/imagemagick-6.4"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	>=sys-devel/automake-1.12"
+	"
 
 S="${WORKDIR}/${MY_P}"
 

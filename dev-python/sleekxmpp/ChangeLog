@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/sleekxmpp
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sleekxmpp/ChangeLog,v 1.1 2013/04/23 05:38:02 radhermit Exp $
+
+*sleekxmpp-1.1.11 (23 Apr 2013)
+
+  23 Apr 2013; Tim Harder <radhermit@gentoo.org> +sleekxmpp-1.1.11.ebuild,
+  +files/sleekxmpp-1.1.11-tests-exit-code.patch, +metadata.xml:
+  Initial import, ebuild by me (bug #354849).
+

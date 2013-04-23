@@ -1,0 +1,13 @@
+--- sleekxmpp-1.1.11/testall.py
++++ sleekxmpp-1.1.11/testall.py
+@@ -52,7 +52,9 @@
+         pass
+ 
+     def run(self):
+-        run_tests()
++        result = run_tests()
++        if not result.wasSuccessful():
++            sys.exit(1)
+ 
+ 
+ if __name__ == '__main__':

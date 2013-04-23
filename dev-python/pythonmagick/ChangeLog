@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pythonmagick
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.42 2012/11/12 19:06:58 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.43 2013/04/23 05:35:51 patrick Exp $
+
+  23 Apr 2013; Patrick Lauer <patrick@gentoo.org> pythonmagick-0.9.8.ebuild:
+  Better fix for automake dependency
 
   13 Nov 2012; Ian Delaney <idella4@gentoo.org> pythonmagick-0.9.8.ebuild:
   Antiquated sed statement removed from src_prepare correcting runtime import

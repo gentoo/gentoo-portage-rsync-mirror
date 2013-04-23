@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.1 2013/04/21 14:11:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.2 2013/04/23 05:57:17 jlec Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+datahub +dbus downloads-monitor extensions +fts icu introspection nls plugins sql-debug telepathy"
 
-REQUIERED_USE="datahub? ( downloads-monitor )"
+REQUIRED_USE="datahub? ( downloads-monitor )"
 
 RDEPEND="
 	!gnome-extra/zeitgeist-datahub
