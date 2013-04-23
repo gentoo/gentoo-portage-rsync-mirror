@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.146 2013/04/02 16:32:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.147 2013/04/23 09:25:18 pinkbyte Exp $
+
+*quagga-0.99.22.1 (23 Apr 2013)
+
+  23 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +quagga-0.99.22.1.ebuild,
+  files/quagga-services.init.3:
+  Version bump, wrt bug #466578, thanks to David Lamparter. Minor path fix in
+  initscript
 
 *quagga-0.99.22 (02 Apr 2013)
 
