@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1-r1.ebuild,v 1.1 2013/04/23 14:30:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1-r1.ebuild,v 1.2 2013/04/23 15:11:28 jlec Exp $
 
 EAPI=5
 
@@ -30,8 +30,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS="CHANGES README"
-
 python_prepare_all() {
 	if ! use twisted; then
 		sed -i \
@@ -44,7 +42,6 @@ python_prepare_all() {
 
 python_install_all() {
 	distutils-r1_python_install_all
-
 	if use doc; then
 		dohtml doc/*.{html,css,png}
 	fi
