@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.5 2013/03/28 15:43:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.6 2013/04/23 19:27:24 hwoarang Exp $
 
 EAPI=4
 
-inherit eutils multilib toolchain-funcs
+inherit autotools eutils multilib toolchain-funcs
 
 DESCRIPTION="highly optimized and portable routines for integer based number theoretic applications"
 HOMEPAGE="http://www.libtom.org/"
@@ -20,12 +20,28 @@ DEPEND="sys-devel/libtool"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 
-	[[ ${CHOST} == *-darwin* ]] && \
+	if [[ ${CHOST} == *-darwin* ]]; then
 		sed -i -e 's/libtool/glibtool/g' makefile.shared
+		export LT="glibtool"
+	else
+		# need libtool for cross compilation. Bug #376643
+		cat <<-EOF > configure.ac
+		AC_INIT(libtommath, 0)
+		AM_INIT_AUTOMAKE
+		LT_INIT
+		AC_CONFIG_FILES(Makefile)
+		AC_OUTPUT
+		EOF
+		touch NEWS README AUTHORS ChangeLog Makefile.am
+		eautoreconf
+		export LT="${S}"/libtool
+	fi
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) -f makefile.shared IGNORE_SPEED=1 LIBPATH="${EPREFIX}/usr/$(get_libdir)"
+	emake CC=$(tc-getCC) -f makefile.shared \
+		IGNORE_SPEED=1 \
+		LIBPATH="${EPREFIX}/usr/$(get_libdir)"
 }
 
 src_install() {

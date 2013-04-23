@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=sys-libs/zlib dev-libs/tinyxml2 >=media-libs/libzen-0.4.28[static-libs=] curl? ( net-misc/curl ) mms? ( >=media-libs/libmms-0.6.1[static-libs=] ) virtual/pkgconfig doc? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=sys-libs/zlib dev-libs/tinyxml2 >=media-libs/libzen-0.4.28[static-libs=] curl? ( net-misc/curl ) mms? ( >=media-libs/libmms-0.6.1[static-libs=] ) virtual/pkgconfig doc? ( app-doc/doxygen ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=MediaInfo libraries
 EAPI=5
 HOMEPAGE=http://mediainfo.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=sys-libs/zlib dev-libs/tinyxml2 >=media-libs/libzen-0.4.28[static-libs=] curl? ( net-misc/curl ) mms? ( >=media-libs/libmms-0.6.1[static-libs=] )
 SLOT=0
 SRC_URI=mirror://sourceforge/mediainfo/source/libmediainfo/0.7.62/libmediainfo_0.7.62.tar.bz2
-_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	0dc7b870a088cde4081c57cc7b394ad2	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=371d6d23cd5fb329bf1e08db7d07c8f5

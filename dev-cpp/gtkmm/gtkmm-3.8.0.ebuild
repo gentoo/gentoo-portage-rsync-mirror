@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.7.12.ebuild,v 1.2 2013/04/07 10:53:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.8.0.ebuild,v 1.1 2013/04/23 19:26:36 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,8 +17,8 @@ IUSE="aqua doc examples test wayland +X"
 REQUIRED_USE="|| ( aqua wayland X )"
 
 RDEPEND="
-	>=dev-cpp/glibmm-2.34:2
-	>=x11-libs/gtk+-3.7.10:3[aqua?,wayland?,X?]
+	>=dev-cpp/glibmm-2.36.0:2
+	>=x11-libs/gtk+-3.8.0:3[aqua?,wayland?,X?]
 	>=x11-libs/gdk-pixbuf-2.22.1:2
 	>=dev-cpp/atkmm-2.22.2
 	>=dev-cpp/cairomm-1.9.2.2

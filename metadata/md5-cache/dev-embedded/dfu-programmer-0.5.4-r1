@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=virtual/libusb:1 virtual/udev || ( >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DEPEND=virtual/libusb:1 virtual/udev || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
 DESCRIPTION=A Device Firmware Update based USB programmer for Atmel chips
 EAPI=4
 HOMEPAGE=http://dfu-programmer.sourceforge.net
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/libusb:1 virtual/udev
 SLOT=0
 SRC_URI=mirror://sourceforge/dfu-programmer/dfu-programmer-0.5.4.tar.gz
-_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	0dc7b870a088cde4081c57cc7b394ad2	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c41f90f4308478cdaae57a32199e4b14

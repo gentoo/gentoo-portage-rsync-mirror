@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.59 2013/04/07 17:25:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.60 2013/04/23 19:10:15 pacho Exp $
+
+*glib-networking-2.36.1 (23 Apr 2013)
+
+  23 Apr 2013; Pacho Ramos <pacho@gentoo.org> +glib-networking-2.36.1.ebuild,
+  -glib-networking-2.30.2.ebuild:
+  Version bump, drop old
 
   07 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org>
   glib-networking-2.36.0.ebuild:

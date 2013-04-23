@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.152 2013/04/15 21:46:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.153 2013/04/23 19:16:00 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -38,12 +38,15 @@ inherit libtool multiprocessing
 # @DESCRIPTION:
 # CONSTANT!
 # The latest major version/slot of automake available on each arch.  #312315
+# We should list both the latest stable, and the latest unstable.  #465732
+# This way the stable builds will still work, but the unstable are allowed
+# to build & test things for us ahead of time (if they have it installed).
 # If a newer slot is stable on any arch, and is NOT reflected in this list,
 # then circular dependencies may arise during emerge @system bootstraps.
 # Do NOT change this variable in your ebuilds!
 # If you want to force a newer minor version, you can specify the correct
 # WANT value by using a colon:  <PV>:<WANT_AUTOMAKE>
-_LATEST_AUTOMAKE=( 1.12:1.12 )
+_LATEST_AUTOMAKE=( 1.12:1.12 1.13:1.13 )
 
 _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"

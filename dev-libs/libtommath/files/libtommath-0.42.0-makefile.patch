@@ -1,31 +1,33 @@
---- libtommath-0.42.0/makefile.shared.orig
-+++ libtommath-0.42.0/makefile.shared
-@@ -3,7 +3,7 @@
+--- makefile.shared.ori	2011-07-27 20:21:13.014592928 +0200
++++ makefile.shared	2011-07-27 20:22:09.942872962 +0200
+@@ -3,7 +3,8 @@
  #Tom St Denis
  VERSION=0:41
  
 -CC = libtool --mode=compile --tag=CC gcc
-+LTCOMPILE = libtool --mode=compile --tag=CC $(CC)
++LT	?= libtool
++LTCOMPILE = $(LT) --mode=compile --tag=CC $(CC)
  
  CFLAGS  +=  -I./ -Wall -W -Wshadow -Wsign-compare
  
-@@ -82,21 +82,24 @@
+@@ -82,21 +83,24 @@
  
  objs: $(OBJECTS)
  
-+.c.o:
++.c.o:                                                                                                                                                                                                                                         
 +	$(LTCOMPILE) $(CFLAGS) $(LDFLAGS) -o $@ -c $<
 +
  $(LIBNAME):  $(OBJECTS)
 -	libtool --mode=link gcc *.lo -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
-+	libtool --mode=link --tag=CC $(CC) $(LDFLAGS) *.lo -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
++	$(LT) --mode=link --tag=CC $(CC) $(LDFLAGS) *.lo -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
  
  install: $(LIBNAME)
 -	install -d -g $(GROUP) -o $(USER) $(DESTDIR)$(LIBPATH)
-+	install -d $(DESTDIR)$(LIBPATH)
- 	libtool --mode=install install -c $(LIBNAME) $(DESTDIR)$(LIBPATH)/$(LIBNAME)
+-	libtool --mode=install install -c $(LIBNAME) $(DESTDIR)$(LIBPATH)/$(LIBNAME)
 -	install -d -g $(GROUP) -o $(USER) $(DESTDIR)$(INCPATH)
 -	install -g $(GROUP) -o $(USER) $(HEADERS) $(DESTDIR)$(INCPATH)
++	install -d $(DESTDIR)$(LIBPATH)
++	$(LT) --mode=install install -c $(LIBNAME) $(DESTDIR)$(LIBPATH)/$(LIBNAME)
 +	install -d $(DESTDIR)$(INCPATH)
 +	install -m 644 $(HEADERS) $(DESTDIR)$(INCPATH)
  
@@ -33,7 +35,7 @@
 -	gcc $(CFLAGS) -c demo/demo.c -o demo/demo.o
 -	libtool --mode=link gcc -o test demo/demo.o $(LIBNAME_S)
 +	$(CC) $(CFLAGS) -c demo/demo.c -o demo/demo.o
-+	libtool --mode=link $(CC) $(LDFLAGS) -o test demo/demo.o $(LIBNAME_S)
++	$(LT) --mode=link $(CC) $(LDFLAGS) -o test demo/demo.o $(LIBNAME_S)
  	
  mtest: test	
 -	cd mtest ; gcc $(CFLAGS) mtest.c -o mtest
@@ -41,4 +43,4 @@
          
  timing: $(LIBNAME)
 -	gcc $(CFLAGS) -DTIMER demo/timing.c $(LIBNAME_S) -o ltmtest
-+	libtool --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -DTIMER demo/timing.c $(LIBNAME_S) -o ltmtest
++	$(LT) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -DTIMER demo/timing.c $(LIBNAME_S) -o ltmtest

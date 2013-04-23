@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.256 2013/04/09 16:41:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.257 2013/04/23 19:26:36 pacho Exp $
+
+*gtkmm-3.8.0 (23 Apr 2013)
+
+  23 Apr 2013; Pacho Ramos <pacho@gentoo.org> +gtkmm-3.8.0.ebuild,
+  -gtkmm-3.4.0.ebuild, -gtkmm-3.7.12.ebuild:
+  Version bump, drop old
 
   09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gtkmm-3.4.2.ebuild:
   Stable for sh, wrt bug #458984

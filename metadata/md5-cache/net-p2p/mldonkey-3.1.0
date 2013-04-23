@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup
-DEPEND=dev-lang/perl guionly? ( >=gnome-base/librsvg-2.4.0 >=dev-ml/lablgtk-2.6 ) gtk? ( >=gnome-base/librsvg-2.4.0 >=dev-ml/lablgtk-2.6[svg] ) gd? ( >=media-libs/gd-2.0.28[truetype] ) magic? ( sys-apps/file ) >=dev-lang/ocaml-3.10.2[ocamlopt?] || ( >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-lang/perl guionly? ( >=gnome-base/librsvg-2.4.0 >=dev-ml/lablgtk-2.6 ) gtk? ( >=gnome-base/librsvg-2.4.0 >=dev-ml/lablgtk-2.6[svg] ) gd? ( >=media-libs/gd-2.0.28[truetype] ) magic? ( sys-apps/file ) >=dev-lang/ocaml-3.10.2[ocamlopt?] || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=MLDonkey is a multi-network P2P application written in Ocaml, coming with its own Gtk GUI, web and telnet interface.
 EAPI=2
 HOMEPAGE=http://mldonkey.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl guionly? ( >=gnome-base/librsvg-2.4.0 >=dev-ml/lablgtk-2.6 ) gtk? ( >=gnome-base/librsvg-2.4.0 >=dev-ml/lablgtk-2.6[svg] ) gd? ( >=media-libs/gd-2.0.28[truetype] ) magic? ( sys-apps/file )
 SLOT=0
 SRC_URI=mirror://sourceforge/mldonkey/mldonkey-3.1.0.tar.bz2
-_eclasses_=autotools	e0c52691b90adf25cf1fe11cded8fd5f	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	0dc7b870a088cde4081c57cc7b394ad2	eutils	36e6377b0e31856b6d62af831661c4f3	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ccde0da131747410cf00e08de9f9e3f7
