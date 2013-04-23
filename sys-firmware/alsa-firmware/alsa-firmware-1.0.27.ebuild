@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/alsa-firmware-1.0.24.1.ebuild,v 1.3 2013/04/23 10:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/alsa-firmware-1.0.27.ebuild,v 1.1 2013/04/23 10:26:50 ssuominen Exp $
 
 EAPI=5
 inherit udev
@@ -11,23 +11,21 @@ SRC_URI="mirror://alsaproject/firmware/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20
-alsa_cards_layla20 alsa_cards_darla24 alsa_cards_gina24
-alsa_cards_layla24 alsa_cards_mona alsa_cards_mia alsa_cards_indigo
-alsa_cards_indigoio alsa_cards_echo3g"
+ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20 alsa_cards_layla20
+alsa_cards_darla24 alsa_cards_gina24 alsa_cards_layla24 alsa_cards_mona
+alsa_cards_mia alsa_cards_indigo alsa_cards_indigoio alsa_cards_echo3g"
 
 EMU_CARDS="alsa_cards_emu1212 alsa_cards_emu1616 alsa_cards_emu1820
 alsa_cards_emu10k1"
 
-IUSE="alsa_cards_pcxhr alsa_cards_vx222 alsa_cards_usb-usx2y
-alsa_cards_hdsp alsa_cards_hdspm alsa_cards_mixart alsa_cards_asihpi
-alsa_cards_sb16 alsa_cards_korg1212 alsa_cards_maestro3 alsa_cards_emi26
-alsa_cards_ymfpci alsa_cards_wavefront alsa_cards_msnd-pinnacle
-alsa_cards_aica ${ECHOAUDIO_CARDS} ${EMU_CARDS}"
+IUSE="alsa_cards_pcxhr alsa_cards_vx222 alsa_cards_usb-usx2y alsa_cards_hdsp
+alsa_cards_hdspm alsa_cards_mixart alsa_cards_asihpi alsa_cards_sb16
+alsa_cards_korg1212 alsa_cards_maestro3 alsa_cards_ymfpci alsa_cards_wavefront
+alsa_cards_msnd-pinnacle alsa_cards_aica alsa_cards_ca0132 ${ECHOAUDIO_CARDS}
+${EMU_CARDS}"
 
-DEPEND=""
 RDEPEND="alsa_cards_usb-usx2y? ( sys-apps/fxload )
 	alsa_cards_hdsp? ( media-sound/alsa-tools )
 	alsa_cards_hdspm? ( media-sound/alsa-tools )"
@@ -50,11 +48,11 @@ src_install() {
 	use alsa_cards_sb16 || rm -rf "${ED}"/lib/firmware/sb16
 	use alsa_cards_korg1212 || rm -rf "${ED}"/lib/firmware/korg
 	use alsa_cards_maestro3 || rm -rf "${ED}"/lib/firmware/ess
-	use alsa_cards_emi26 || rm -rf "${ED}"/lib/firmware/emagic
 	use alsa_cards_ymfpci || rm -rf "${ED}"/lib/firmware/yamaha
 	use alsa_cards_wavefront || rm -rf "${ED}"/lib/firmware/wavefront
 	use alsa_cards_msnd-pinnacle || rm -rf "${ED}"/lib/firmware/turtlebeach
 	use alsa_cards_aica || rm -rf "${ED}"/lib/firmware/aica_firmware.bin
+	use alsa_cards_ca0132 || rm -rf "${ED}"/lib/firmware/c{tefx,tspeq}.bin
 
 	local ea="no"
 	for card in ${ECHOAUDIO_CARDS}; do
