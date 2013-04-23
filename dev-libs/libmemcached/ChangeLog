@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/libmemcached
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.44 2012/11/16 08:17:49 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.48 2013/04/23 12:52:38 ago Exp $
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libmemcached-0.50.ebuild:
+  Stable for ppc64, wrt bug #443518
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libmemcached-0.50.ebuild:
+  Stable for ppc, wrt bug #443518
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libmemcached-0.50.ebuild:
+  Stable for x86, wrt bug #443518
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libmemcached-0.50.ebuild:
+  Stable for amd64, wrt bug #443518
 
 *libmemcached-1.0.14 (16 Nov 2012)
 
