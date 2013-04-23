@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-libs/cenonlibrary
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.12 2012/06/07 15:06:00 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.13 2013/04/23 22:56:04 voyageur Exp $
+
+*cenonlibrary-4.0.0 (23 Apr 2013)
+
+  23 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  +cenonlibrary-4.0.0.ebuild:
+  Version bump
 
   07 Jun 2012; Michael Weber <xmw@gentoo.org> cenonlibrary-3.9.4.ebuild:
   ppc stable (bug 410601)

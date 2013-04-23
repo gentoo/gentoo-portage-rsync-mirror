@@ -7,4 +7,7 @@
   the core functionality and some common tools needed for performing
   astronomy and astrophysics with Python.
 </longdescription>
+<upstream>
+  <remote-id type="pypi">astropy</remote-id>
+</upstream>
 </pkgmetadata>
