@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.181 2013/04/22 17:13:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.182 2013/04/23 08:57:49 jlec Exp $
+
+  23 Apr 2013; Justin Lecher <jlec@gentoo.org> -gajim-0.15.2-r3.ebuild,
+  -gajim-0.15.2-r4.ebuild, -gajim-0.15.3.ebuild:
+  Drop old
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gajim-0.15.3-r1.ebuild:
   Stable for sparc, wrt bug #465198

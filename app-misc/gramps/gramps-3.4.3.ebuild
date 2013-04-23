@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.4.3.ebuild,v 1.3 2013/04/22 13:46:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.4.3.ebuild,v 1.4 2013/04/23 08:39:50 ago Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gramps/Stable/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="gnome reports spell webkit"
 
 RDEPEND="dev-python/bsddb3

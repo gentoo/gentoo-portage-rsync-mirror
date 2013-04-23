@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.8.0.ebuild,v 1.4 2013/04/23 08:20:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.8.0.ebuild,v 1.5 2013/04/23 08:41:26 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 else
 	SRC_URI="mirror://kernel/linux/utils/net/${PN}/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 fi
 
 DESCRIPTION="kernel routing and traffic control utilities"

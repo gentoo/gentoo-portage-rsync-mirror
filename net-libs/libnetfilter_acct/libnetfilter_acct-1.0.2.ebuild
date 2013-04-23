@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.2.ebuild,v 1.4 2013/04/22 16:02:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.2.ebuild,v 1.5 2013/04/23 08:42:09 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ~ppc x86 ~amd64-linux"
+KEYWORDS="amd64 ~arm ~ia64 ppc x86 ~amd64-linux"
 IUSE="examples"
 
 RDEPEND="net-libs/libmnl"

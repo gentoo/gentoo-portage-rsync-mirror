@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.2 2013/04/23 05:57:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.3 2013/04/23 08:53:25 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
-
+AUTOTOOLS_AUTORECONF=true
 VALA_MIN_API_VERSION=0.18
 
 inherit autotools-utils eutils python-r1 versionator vala
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+datahub +dbus downloads-monitor extensions +fts icu introspection nls plugins sql-debug telepathy"
 
-REQUIRED_USE="datahub? ( downloads-monitor )"
+REQUIRED_USE="downloads-monitor? ( datahub )"
 
 RDEPEND="
 	!gnome-extra/zeitgeist-datahub
@@ -43,6 +43,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	${vala_depend}
 	virtual/pkgconfig"
+
+PATCHES=( "${FILESDIR}"/${P}-download_monitor.patch )
 
 src_prepare() {
 	vala_src_prepare
