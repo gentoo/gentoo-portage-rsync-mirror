@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/language-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.25 2013/04/19 07:05:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.26 2013/04/23 08:21:47 ago Exp $
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> language-c-0.4.2.ebuild:
+  Stable for ppc64, wrt bug #456500
 
   19 Apr 2013; Agostino Sarubbo <ago@gentoo.org> language-c-0.4.2.ebuild:
   Stable for ia64, wrt bug #456500

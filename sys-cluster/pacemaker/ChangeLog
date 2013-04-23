@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/pacemaker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.32 2013/04/18 09:53:17 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.33 2013/04/23 08:04:02 ultrabug Exp $
+
+*pacemaker-1.1.8-r2 (23 Apr 2013)
+
+  23 Apr 2013; Ultrabug <ultrabug@gentoo.org> -pacemaker-1.1.8-r1.ebuild,
+  +pacemaker-1.1.8-r2.ebuild, pacemaker-1.1.10_rc1.ebuild:
+  drop sys-cluster/crmsh dependency fix #466672 thx to Eric Renfro
 
   18 Apr 2013; Ultrabug <ultrabug@gentoo.org> pacemaker-1.0.10.ebuild,
   pacemaker-1.0.12.ebuild:

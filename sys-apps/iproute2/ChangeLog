@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.210 2013/03/03 03:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.213 2013/04/23 08:20:53 ago Exp $
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> iproute2-3.8.0.ebuild:
+  Stable for ppc64, wrt bug #458004
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> iproute2-3.8.0.ebuild:
+  Stable for x86, wrt bug #458004
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> iproute2-3.8.0.ebuild:
+  Stable for amd64, wrt bug #458004
 
   03 Mar 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Document USE=berkdb as disabling arpd only #459008 by Luis Ressel.
