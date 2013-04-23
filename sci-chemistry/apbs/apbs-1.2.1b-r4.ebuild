@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.16 2013/02/27 14:06:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.17 2013/04/23 14:01:32 jlec Exp $
 
 EAPI="3"
 
@@ -11,8 +11,8 @@ inherit autotools eutils flag-o-matic fortran-2 python toolchain-funcs versionat
 MY_PV=$(get_version_component_range 1-3)
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="Software for evaluating the electrostatic properties of nanoscale biomolecular systems"
-HOMEPAGE="http://apbs.sourceforge.net/"
+DESCRIPTION="Evaluation of electrostatic properties of nanoscale biomolecular systems"
+HOMEPAGE="http://www.poissonboltzmann.org/apbs/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 
 SLOT="0"
