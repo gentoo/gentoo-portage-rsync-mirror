@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
+	<maintainer>
+		<email>vapier@gentoo.org</email>
+	</maintainer>
 	<upstream>
 		<remote-id type="pypi">pyelftools</remote-id>
 		<remote-id type="bitbucket">eliben/pyelftools</remote-id>

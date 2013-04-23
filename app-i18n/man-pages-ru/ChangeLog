@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.26 2013/03/01 12:46:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.27 2013/04/23 16:36:08 vapier Exp $
+
+  23 Apr 2013; Mike Frysinger <vapier@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild,
+  man-pages-ru-3.41.2145.1724.20130102.ebuild:
+  Mark m68k stable.
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   man-pages-ru-3.41.2145.1724.20130102.ebuild:
