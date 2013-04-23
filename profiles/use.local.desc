@@ -309,6 +309,8 @@ app-crypt/mit-krb5:doc - Creates and installs the API and implementation documen
 app-crypt/mit-krb5:keyutils - Enable for the keyring ccache using keyutils.
 app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend.
 app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket.
+app-crypt/oclhashcat-lite-bin:virtualcl - Support for Mosix VirtualCL Clustering Platform
+app-crypt/oclhashcat-plus-bin:virtualcl - Support for Mosix VirtualCL Clustering Platform
 app-crypt/ophcrack:tables - Require the additional tables used to carry out cracking (app-crypt/ophcrack-tables)
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
