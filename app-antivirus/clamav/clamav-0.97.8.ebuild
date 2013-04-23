@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.5-r1.ebuild,v 1.10 2013/04/23 18:02:01 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.8.ebuild,v 1.1 2013/04/23 18:02:01 lordvan Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic user
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
-IUSE="bzip2 clamdtop iconv ipv6 milter selinux static-libs"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
+IUSE="bzip2 clamdtop iconv ipv6 milter selinux static-libs uclibc"
 
 CDEPEND="bzip2? ( app-arch/bzip2 )
 	clamdtop? ( sys-libs/ncurses )
@@ -41,7 +41,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use ppc64 && append-flags -mminimal-toc
+	use ppc64 && append-flags -mminimal-toic
+	use uclibc && export ac_cv_type_error_t=yes
 }
 
 src_configure() {
@@ -63,13 +64,11 @@ src_install() {
 	default
 
 	rm -rf "${ED}"/var/lib/clamav
-	newinitd "${FILESDIR}"/clamd.initd clamd
+	newinitd "${FILESDIR}"/clamd.initd-r5 clamd
 	newconfd "${FILESDIR}"/clamd.conf clamd
 
 	keepdir /var/lib/clamav
 	fowners clamav:clamav /var/lib/clamav
-	keepdir /var/run/clamav
-	fowners clamav:clamav /var/run/clamav
 	keepdir /var/log/clamav
 	fowners clamav:clamav /var/log/clamav
 
@@ -113,7 +112,7 @@ src_install() {
 		EOF
 	fi
 
-	prune_libtool_files
+	prune_libtool_files --all
 }
 
 pkg_postinst() {

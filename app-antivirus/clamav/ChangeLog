@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.455 2013/04/16 05:52:39 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.456 2013/04/23 18:02:01 lordvan Exp $
+
+*clamav-0.97.8 (23 Apr 2013)
+
+  23 Apr 2013; <lordvan@gentoo.org> +clamav-0.97.8.ebuild:
+  new version
 
   16 Apr 2013; Eray Aslan <eras@gentoo.org> files/clamd.initd-r5:
   Check pid file directory before starting freshclam - bug #333783
