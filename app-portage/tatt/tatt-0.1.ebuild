@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-9999.ebuild,v 1.5 2013/04/23 12:07:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-0.1.ebuild,v 1.1 2013/04/23 12:07:05 tomka Exp $
 
 EAPI=5
 
 #configobj does not support python-3
 PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit distutils-r1 git-2
+inherit distutils-r1
 
 DESCRIPTION="tatt is an arch testing tool"
-HOMEPAGE="http://github.com/tom111/tatt"
-EGIT_REPO_URI="https://github.com/tom111/tatt.git"
+HOMEPAGE="https://github.com/tom111/tatt"
+SRC_URI="https://github.com/tom111/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+templates"
 
 RDEPEND="
@@ -25,8 +25,6 @@ RDEPEND="
 	www-client/pybugz
 	dev-python/configobj"
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/${PN}"
 
 python_install_all() {
 	distutils-r1_python_install_all
