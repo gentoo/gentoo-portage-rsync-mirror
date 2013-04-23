@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2-r2.ebuild,v 1.1 2013/04/14 17:41:44 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2-r2.ebuild,v 1.2 2013/04/23 19:42:17 grobian Exp $
 
 EAPI=5
 
@@ -52,6 +52,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.7-FindLAPACK.patch
 	"${FILESDIR}"/${PN}-2.8.8-FindPkgConfig.patch
 	"${FILESDIR}"/${PN}-2.8.10-darwin-bundle.patch
+	"${FILESDIR}"/${PN}-2.8.10-darwin-isysroot.patch
 	"${FILESDIR}"/${PN}-2.8.10-desktop.patch
 	"${FILESDIR}"/${PN}-2.8.10-libform.patch
 	"${FILESDIR}"/${PN}-2.8.10-more-no_host_paths.patch

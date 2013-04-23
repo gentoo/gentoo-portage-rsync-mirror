@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.234 2013/04/15 21:02:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.235 2013/04/23 19:42:17 grobian Exp $
+
+  23 Apr 2013; Fabian Groffen <grobian@gentoo.org>
+  +files/cmake-2.8.10-darwin-isysroot.patch, cmake-2.8.10.2-r2.ebuild:
+  Fix compilation on Darwin, bug #445308
 
   15 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> cmake-2.8.9.ebuild,
   cmake-2.8.10.2-r1.ebuild:
