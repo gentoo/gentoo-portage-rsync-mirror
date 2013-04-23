@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/alsa-firmware-1.0.24.1.ebuild,v 1.1 2013/04/16 05:15:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/alsa-firmware-1.0.24.1.ebuild,v 1.2 2013/04/23 09:56:24 ssuominen Exp $
 
 EAPI=5
 inherit udev
@@ -31,9 +31,9 @@ DEPEND=""
 RDEPEND="alsa_cards_usb-usx2y? ( sys-apps/fxload )
 	alsa_cards_hdsp? ( media-sound/alsa-tools )
 	alsa_cards_hdspm? ( media-sound/alsa-tools )
-	alsa_cards_mixart? ( || ( virtual/udev media-sound/alsa-tools ) )
-	alsa_cards_vx222? ( || ( virtual/udev media-sound/alsa-tools ) )
-	alsa_cards_pcxhr? ( || ( virtual/udev media-sound/alsa-tools ) )"
+	alsa_cards_mixart? ( media-sound/alsa-tools )
+	alsa_cards_vx222? ( media-sound/alsa-tools )
+	alsa_cards_pcxhr? ( media-sound/alsa-tools )"
 
 DOCS="README"
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/alsa-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/ChangeLog,v 1.1 2013/04/16 05:15:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/ChangeLog,v 1.2 2013/04/23 09:56:24 ssuominen Exp $
+
+  23 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  alsa-firmware-1.0.24.1.ebuild:
+  Remove the superflous virtual/udev dependency (in favour of the in-kernel
+  firmware-loader)
 
   16 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   +files/52-usx2yaudio.rules, +alsa-firmware-1.0.24.1.ebuild, +metadata.xml:
