@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.8_rc4.ebuild,v 1.3 2013/01/24 14:05:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.8.ebuild,v 1.2 2013/04/23 01:54:05 ssuominen Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
 
 DESCRIPTION="Shows and sets processor power related values"
 HOMEPAGE="http://www.kernel.org/"
-SRC_URI="mirror://kernel/linux/kernel/v3.0/testing/linux-${PV/_/-}.tar.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v3.x/linux-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/linux-${PV/_/-}/tools/power/${PN}
+S=${WORKDIR}/linux-${PV}/tools/power/${PN}
 
 pkg_setup() {
 	myemakeargs=(
@@ -61,4 +61,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" "${myemakeargs[@]}" install
 	dodoc README ToDo
+
+	newconfd "${FILESDIR}"/conf.d ${PN}
+	newinitd "${FILESDIR}"/init.d ${PN}
 }
