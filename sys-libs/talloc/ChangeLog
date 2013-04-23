@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.45 2013/03/06 10:27:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.47 2013/04/23 21:40:26 ago Exp $
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> talloc-2.0.8.ebuild:
+  Stable for x86, wrt bug #466710
+
+  23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> talloc-2.0.8.ebuild:
+  Stable for amd64, wrt bug #466710
 
   06 Mar 2013; Agostino Sarubbo <ago@gentoo.org> talloc-2.0.7.ebuild:
   Stable for sh, wrt bug #458712

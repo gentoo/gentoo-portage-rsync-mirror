@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.167 2013/04/12 17:28:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.168 2013/04/23 21:56:12 lu_zero Exp $
+
+  23 Apr 2013; Luca Barbato <lu_zero@gentoo.org> alsa-plugins-1.0.26.ebuild,
+  +files/alsa-plugins-1.0.26-libav9.patch:
+  Add libav9 support, patch derived from Ubuntu/Debian, thanks to Jiří
+  Moravec <qjim@volny.cz> for preparing it.
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> alsa-plugins-1.0.26.ebuild:
   Stable for ia64, wrt bug #463451
