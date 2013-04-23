@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.30.ebuild,v 1.11 2013/02/28 17:51:38 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.31.ebuild,v 1.1 2013/04/23 00:01:33 radhermit Exp $
 
-EAPI=4
+EAPI=5
 inherit multilib python eutils
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/msmtp/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc gnome-keyring gnutls idn +mta nls sasl ssl vim-syntax"
 
 CDEPEND="
@@ -99,10 +99,22 @@ src_install() {
 		doins scripts/vim/msmtp.vim
 	fi
 
+	insinto /etc
+	newins doc/msmtprc-system.example msmtprc
+
 	src_install_contrib find_alias find_alias_for_msmtp.sh
 	src_install_contrib msmtpqueue "*.sh" "README ChangeLog"
 	src_install_contrib msmtpq "msmtpq msmtp-queue" README.msmtpq
 	src_install_contrib set_sendmail set_sendmail.sh set_sendmail.conf
+}
+
+pkg_postinst() {
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		einfo "Please edit ${ROOT}etc/msmtprc before first use."
+		einfo "In addition, per user configuration files can be placed"
+		einfo "as '~/.msmtprc'.  See the msmtprc-user.example file under"
+		einfo "/usr/share/doc/${PF}/ for an example."
+	fi
 }
 
 src_install_contrib() {

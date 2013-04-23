@@ -1,40 +1,32 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.44 2013/04/23 00:23:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.18.1.ebuild,v 1.1 2013/04/23 00:23:55 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
 
 inherit chromium eutils multilib multiprocessing pax-utils python-any-r1 \
-	subversion toolchain-funcs
+	toolchain-funcs versionator
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-ESVN_REPO_URI="http://v8.googlecode.com/svn/trunk"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 LICENSE="BSD"
 
-SLOT="0"
-KEYWORDS=""
-IUSE="readline neon"
+soname_version="${PV}"
+SLOT="0/${soname_version}"
+KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
+IUSE="neon readline"
 
 RDEPEND="readline? ( sys-libs/readline:0 )"
 DEPEND="${PYTHON_DEPS}
 	${RDEPEND}"
-
-src_unpack() {
-	subversion_src_unpack
-	cd "${S}"
-	make dependencies || die
-}
 
 src_configure() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
 
 	local myconf=""
-
-	subversion_wc_info
-	soname_version="${PV}.${ESVN_WC_REVISION}"
 
 	# Always build v8 as a shared library with proper SONAME.
 	myconf+=" -Dcomponent=shared_library -Dsoname_version=${soname_version}"
