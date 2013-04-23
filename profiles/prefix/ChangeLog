@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.381 2013/04/20 14:46:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.382 2013/04/23 20:06:05 grobian Exp $
+
+  23 Apr 2013; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Unmask dev-util/cmake-2.8.10.2 now I've fixed it
 
   20 Apr 2013; Fabian Groffen <grobian@gentoo.org> make.defaults:
   Drop PYTHON_TARGETS we can only append, not remove (which is the only thing

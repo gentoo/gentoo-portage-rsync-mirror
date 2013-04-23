@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14678 2013/04/23 20:01:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14679 2013/04/23 20:04:10 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -357,8 +357,6 @@ x11-themes/amsn-skins
 # Fails with automake-1.12 (#424289)
 # Problems with the alsa patches (#403389)
 # Herd has not interest in it and needs a maintainer
-# Removal in a month unless a new maintainer steps up
-# and fix all the bugs
 # Alternatives: media-tv/me-tv, media-tv/mythtv
 media-tv/tvtime
 

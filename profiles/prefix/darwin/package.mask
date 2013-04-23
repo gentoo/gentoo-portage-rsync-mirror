@@ -1,11 +1,7 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.36 2013/03/05 01:41:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.37 2013/04/23 20:06:05 grobian Exp $
 
-
-# Fabian Groffen <grobian@gentoo.org> (02 Dec 2012)
-# fails to compile, bug #445308
-~dev-util/cmake-2.8.10.2
 
 # Fabian Groffen <grobian@gentoo.org> (19 Feb 2012)
 # Using FSF GCC on Mac OS X is not supported by Gentoo Prefix.  While
