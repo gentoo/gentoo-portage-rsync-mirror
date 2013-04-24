@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.19.13.ebuild,v 1.6 2012/06/17 17:36:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.19.13.ebuild,v 1.7 2013/04/24 20:15:36 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -32,6 +32,7 @@ src_prepare() {
 	sed -i \
 		-e '/GTK_DISABLE_DEPRECATED/ d' \
 		-e '/^GENTOO_CFLAGS=/s|".*"|"${CFLAGS}"|g' \
+		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
 		configure.in || die #357343
 	eautoreconf
 }

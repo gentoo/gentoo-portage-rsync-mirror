@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liblqr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.18 2013/03/31 13:22:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.19 2013/04/24 20:23:49 hwoarang Exp $
+
+  24 Apr 2013; Markos Chandras <hwoarang@gentoo.org> liblqr-0.4.2.ebuild:
+  Drop doc useflag because man pages are not included in the tarball anymore.
+  Bug #464040
 
 *liblqr-0.4.2 (31 Mar 2013)
 

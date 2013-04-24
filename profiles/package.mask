@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14681 2013/04/24 18:49:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14682 2013/04/24 20:14:42 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -339,6 +339,7 @@ net-proxy/swiftiply
 >=gnome-base/gnome-light-3.8.0
 >=dev-cpp/glibmm-2.36
 >=dev-cpp/atkmm-2.22.7
+>=gnome-extra/gnome-getting-started-docs-3.8
 
 # Sebastien Fabbro <bicatali@gentoo.org> (26 Mar 2013)
 # Now included in sci-mathematics/mathgl
