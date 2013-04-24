@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpx-viewer/gpx-viewer-0.3.0.ebuild,v 1.3 2013/04/07 16:47:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpx-viewer/gpx-viewer-0.3.0.ebuild,v 1.4 2013/04/24 07:08:08 jlec Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="
 	media-libs/libchamplain:0.12[gtk]
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
-	${vala_depend}
+	$(vala_depend)
 	>=dev-util/intltool-0.21
 	virtual/pkgconfig"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.2.ebuild,v 1.2 2013/03/26 19:17:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.2.ebuild,v 1.3 2013/04/24 07:06:11 jlec Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -43,7 +43,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 	vala? (
-		${vala_depend}
+		$(vala_depend)
 		>=dev-libs/gobject-introspection-0.9.4 )
 "
 # eautoreconf requires gnome-common

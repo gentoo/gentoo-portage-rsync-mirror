@@ -1,0 +1,10 @@
+# ChangeLog for media-video/subliminal
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subliminal/ChangeLog,v 1.1 2013/04/24 07:14:12 maksbotan Exp $
+
+*subliminal-0.6.3 (24 Apr 2013)
+*subliminal-9999 (24 Apr 2013)
+
+  24 Apr 2013; Maxim Koltsov <maksbotan@gentoo.org> +metadata.xml,
+  +subliminal-0.6.3.ebuild, +subliminal-9999.ebuild:
+  Add media-video/subliminal, bug #449654. Thanks to Nikoli.

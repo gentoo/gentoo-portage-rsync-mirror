@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.1.ebuild,v 1.2 2013/04/16 13:10:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.3.ebuild,v 1.1 2013/04/24 07:28:14 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -67,13 +67,10 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-scons.patch"
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-boost.patch"
-
-	if use sharedclient; then
-		sed -i -e '/env.Append( LINKFLAGS=" -Wl,--as-needed -Wl,-zdefs " )/d' SConstruct || die
-		sed -i -e 's/#env.SharedLibrary/env.SharedLibrary/g' src/SConscript.client || die
-	fi
+	epatch "${FILESDIR}/mongodb-2.4-fix-sharedclient.patch"
 
 	# bug #462606
+	sed -i -e "s@\prefix + \"/lib\"@prefix + \"/$(get_libdir)\"@g" src/SConscript.client || die
 	if use !prefix && [[ "$(get_libdir)" == "lib" ]]; then
 		sed -i -e 's/^env.Install(prefix/env.InstallAs(prefix/g' src/SConscript.client || die
 	fi

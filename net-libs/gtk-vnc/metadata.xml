@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
-<use>
-	<flag name="gtk3">Build the gtk3 gtk-vnc library and other gtk3 assets</flag>
-	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
+  <herd>gnome</herd>
+  <use>
+    <flag name="gtk3">Build the gtk3 gtk-vnc library and other gtk3 assets</flag>
+    <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
 		for introspection</flag>
-	<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
-</use>
+    <flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
+  </use>
 </pkgmetadata>
