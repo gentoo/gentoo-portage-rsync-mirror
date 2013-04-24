@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/ninja-ide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.12 2013/03/17 17:52:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.14 2013/04/24 22:03:25 hasufell Exp $
+
+  24 Apr 2013; Julian Ospald <hasufell@gentoo.org> ninja-ide-2.1.1-r3.ebuild,
+  ninja-ide-2.1.1-r5.ebuild:
+  fix deps
+
+*ninja-ide-2.2 (24 Apr 2013)
+
+  24 Apr 2013; Julian Ospald <hasufell@gentoo.org> +ninja-ide-2.2.ebuild,
+  +files/ninja-ide-2.2-python2_6.patch, +files/ninja-ide-2.2-syntax.patch:
+  version bump
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
