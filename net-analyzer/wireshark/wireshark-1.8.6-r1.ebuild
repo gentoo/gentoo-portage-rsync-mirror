@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.6-r1.ebuild,v 1.5 2013/04/24 06:23:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.6-r1.ebuild,v 1.6 2013/04/24 14:50:58 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -74,15 +74,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.8.3-gnutls3.patch
-
-	sed -i \
-		-e '/^Icon/s|.png||g' \
-		${PN}.desktop || die
-
-	sed \
-		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
-		-i configure.in || die
-
+	sed -i -e '/^Icon/s|.png||g' ${PN}.desktop || die
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' configure.in || die
 	eautoreconf
 }
 

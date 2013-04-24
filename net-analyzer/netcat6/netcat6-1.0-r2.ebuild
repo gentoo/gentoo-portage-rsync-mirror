@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.11 2013/02/21 00:01:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.12 2013/04/24 14:37:55 jer Exp $
 
-inherit eutils autotools
+EAPI=5
+inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="netcat clone with better IPv6 support, improved code, etc..."
 HOMEPAGE="http://netcat6.sourceforge.net/"
@@ -20,25 +21,27 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/nc6-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS=( AUTHORS BUGS README NEWS TODO CREDITS ChangeLog )
 
+src_prepare() {
 	epatch "${FILESDIR}/netcat6-1.0-unix-sockets.patch"
+	sed -i configure.ac -e 's|^AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable ipv6) \
 		$(use_enable bluetooth bluez) \
 		$(use_enable nls)
-	emake || die
+}
+
+src_compile() {
+	emake AR=$(tc-getAR)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	default
 	dodir /usr/bin
 	dosym /usr/bin/nc6 /usr/bin/nc
-	dodoc AUTHORS BUGS README NEWS TODO CREDITS ChangeLog
 }
