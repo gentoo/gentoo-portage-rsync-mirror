@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.27 2013/03/25 12:59:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.28 2013/04/24 18:03:00 maksbotan Exp $
+
+*libguestfs-1.20.6 (24 Apr 2013)
+
+  24 Apr 2013; Maxim Koltsov <maksbotan@gentoo.org> +libguestfs-1.20.6.ebuild:
+  Bump to 1.20.6, add lua support. Thanks to slepnoga.
 
   25 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org>
   +files/1.20/0001_add_gentoo_names_to_configure.patch,
