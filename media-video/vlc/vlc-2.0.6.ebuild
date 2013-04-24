@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.6.ebuild,v 1.1 2013/04/12 21:25:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.6.ebuild,v 1.2 2013/04/24 07:43:06 lu_zero Exp $
 
 EAPI="4"
 
@@ -20,6 +20,7 @@ inherit eutils multilib autotools toolchain-funcs flag-o-matic ${SCM}
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
+PATCHLEVEL="101"
 
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
@@ -30,6 +31,11 @@ elif [[ "${MY_P}" == "${P}" ]]; then
 else
 	SRC_URI="http://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.xz"
 fi
+
+SRC_URI="${SRC_URI}
+	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2
+"
+
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
@@ -190,6 +196,8 @@ src_unpack() {
 src_prepare() {
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
+
+	epatch "${WORKDIR}/patches/010_all_freetype-font.patch"
 
 	eautoreconf
 }

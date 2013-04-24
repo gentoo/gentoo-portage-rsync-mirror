@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.838 2013/04/12 21:58:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.839 2013/04/24 07:43:06 lu_zero Exp $
+
+  24 Apr 2013; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.6.ebuild:
+  Reinstate the freetype patch
 
   12 Apr 2013; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.9999.ebuild:
   Drop patches, they should be all upstreamed now
