@@ -22,8 +22,8 @@ index db1d012..3e11588 100644
 -  [use_projectm=yes])
 +  [use_projectm=auto])
 +
-+AC_ARG_WITH([projectm-presets-dir], [
-+  [AS_HELP_STRING([--with-projectm-presets-dir], [
++AC_ARG_WITH([projectm-presets-dir],
++  [AS_HELP_STRING([--with-projectm-presets-dir],
 +  [path to ProjectM presets to incude in default list (default is bundled path)])],
 +  [projectm_presets_dir=$withval],
 +  [projectm_presets_dir=bundled])
