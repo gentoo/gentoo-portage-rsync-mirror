@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gsnmp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.8 2012/11/10 08:19:44 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.9 2013/04/24 17:23:26 jer Exp $
+
+  24 Apr 2013; Jeroen Roovers <jer@gentoo.org>
+  +files/gsnmp-0.3.0-underquoting.patch, gsnmp-0.3.0.ebuild:
+  Fix underquoting in gsnmp.m4.
 
   10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> gsnmp-0.3.0.ebuild:
   Add ~amd64-linux keyword
@@ -29,4 +33,3 @@
   01 Jun 2011; Jeroen Roovers <jer@gentoo.org> +gsnmp-0.3.0.ebuild,
   +metadata.xml:
   Initial commit (for net-analyzer/scli-0.4).
-
