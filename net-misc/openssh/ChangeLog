@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.469 2013/04/04 21:58:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.470 2013/04/24 03:13:03 vapier Exp $
+
+  24 Apr 2013; Mike Frysinger <vapier@gentoo.org> files/sshd.rc6.4:
+  Use new -A flag with ssh-keygen to take care of generating all the right keys
+  #457026 by Mike Gilbert.
 
   04 Apr 2013; Mike Gilbert <floppym@gentoo.org> files/sshd.service:
   Add ExecStartPre=/usr/bin/ssh-keygen -A to sshd.service. Bug 457026.
