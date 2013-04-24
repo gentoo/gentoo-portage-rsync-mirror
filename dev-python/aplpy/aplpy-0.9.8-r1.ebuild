@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.8-r1.ebuild,v 1.1 2013/02/05 22:42:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.8-r1.ebuild,v 1.2 2013/04/24 21:00:11 bicatali Exp $
 
 EAPI=5
 
@@ -22,8 +22,8 @@ IUSE="test"
 RDEPEND="
 	dev-python/numpy
 	dev-python/matplotlib
-	dev-python/pyfits
-	dev-python/pywcs"
+	virtual/pyfits
+	virtual/pywcs"
 DEPEND="
 	dev-python/numpy
 	test? (
