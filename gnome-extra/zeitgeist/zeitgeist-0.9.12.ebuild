@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.3 2013/04/23 08:53:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.4 2013/04/24 06:47:12 jlec Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ RDEPEND="
 	telepathy? ( net-libs/telepathy-glib )
 "
 DEPEND="${RDEPEND}
-	${vala_depend}
+	$(vala_depend)
 	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/${P}-download_monitor.patch )

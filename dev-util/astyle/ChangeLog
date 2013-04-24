@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/astyle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.46 2012/10/07 08:58:26 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.47 2013/04/24 06:46:17 xarthisius Exp $
+
+*astyle-2.03 (24 Apr 2013)
+
+  24 Apr 2013; Kacper Kowalik <xarthisius@gentoo.org> +astyle-2.03.ebuild,
+  -astyle-1.22.ebuild, -astyle-1.24.ebuild, -files/astyle-1.22-Makefile.patch,
+  metadata.xml:
+  Version bump wrt #466198 by David Hallas <david@cgp.dk>. Drop old
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #24135.
@@ -112,7 +119,7 @@
   Dropped ppc-macos keyword, see you in prefix
 
   14 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> astyle-1.21.ebuild:
-  Fix $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.46 2012/10/07 08:58:26 pacho Exp $ string.
+  Fix $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.47 2013/04/24 06:46:17 xarthisius Exp $ string.
 
 *astyle-1.21 (07 Oct 2007)
 

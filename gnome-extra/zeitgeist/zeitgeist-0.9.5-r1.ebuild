@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5-r1.ebuild,v 1.1 2013/04/07 16:14:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5-r1.ebuild,v 1.2 2013/04/24 06:47:12 jlec Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ RDEPEND="
 	passiv? ( gnome-extra/zeitgeist-datahub )
 	plugins? ( gnome-extra/zeitgeist-datasources )"
 DEPEND="${RDEPEND}
-	${vala_depend}
+	$(vala_depend)
 	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/${PN}-0.9.0-doc.patch )
