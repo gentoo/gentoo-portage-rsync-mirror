@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.6 2013/04/07 14:43:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.7 2013/04/24 06:23:37 jlec Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ RDEPEND="
 		)"
 	#ayatana? ( dev-libs/libappindicator )
 DEPEND="${RDEPEND}
-	${vala_depend}
+	$(vala_depend)
 	dev-util/intltool
 	virtual/pkgconfig"
 

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7757 2013/04/23 20:04:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7758 2013/04/24 06:04:24 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Apr 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add baudline license to EULA group, bug 445942.
 
   23 Apr 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   postpone media-tv/tvtime removal as there is some activity on #424289

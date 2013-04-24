@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14-r2.ebuild,v 1.3 2013/04/10 06:04:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14-r2.ebuild,v 1.4 2013/04/24 06:06:30 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 	dev-libs/icu:=
 	introspection? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
-	${vala_depend}
+	$(vala_depend)
 	doc? ( dev-util/gtk-doc )
 	test? (
 		dev-libs/gtx
