@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/torrentinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.7 2013/04/23 20:12:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.8 2013/04/24 20:00:04 hwoarang Exp $
+
+*torrentinfo-1.8.6 (24 Apr 2013)
+
+  24 Apr 2013; Markos Chandras <hwoarang@gentoo.org> +torrentinfo-1.8.6.ebuild:
+  Version bump
 
 *torrentinfo-1.8.4 (23 Apr 2013)
 

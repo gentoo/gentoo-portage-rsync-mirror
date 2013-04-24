@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.908 2013/04/22 11:52:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.910 2013/04/24 19:45:07 ssuominen Exp $
+
+  24 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-171-r10.ebuild,
+  -udev-201.ebuild, metadata.xml:
+  old
 
   22 Apr 2013; Jeroen Roovers <jer@gentoo.org> udev-200.ebuild:
   Stable for HPPA (bug #463614).

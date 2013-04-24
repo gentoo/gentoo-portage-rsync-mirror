@@ -1,6 +1,11 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.188 2013/01/04 10:08:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.189 2013/04/24 19:35:29 ssuominen Exp $
+
+  24 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> links-2.7.ebuild:
+  Remove broken 045e.png from the tarball wrt #466190#c12. Use
+  AC_CONFIG_HEADERS instead of obsolete AM_CONFIG_HEADER wrt #467020 by
+  Alphat-PC. Use subslot operator for the libpng dependency.
 
   04 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> -links-2.6.ebuild:
   old

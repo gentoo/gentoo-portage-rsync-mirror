@@ -5924,18 +5924,12 @@ sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/s3ql:contrib - Install additional contributed scripts
 sys-fs/snapraid:ssl - use the MD5 fast implementation of the OpenSSL
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
-sys-fs/udev:action_modeswitch - switch Mobile Action cables into serial mode (DEPRECATED, replaced by sys-apps/usb_modeswitch)
-sys-fs/udev:edd - create /dev/disk/by-id/edd-* links for BIOS EDD data
-sys-fs/udev:extras - no-op USE flag (DEPRECATED, replaced by other USE flags in sys-fs/udev)
-sys-fs/udev:firmware-loader - Enable userspace firmware loader (DEPRECATED, replaced by loader in kernels 3.8 and newer)
-sys-fs/udev:floppy - create historical floppy kernel device nodes (/dev/fd0h1440, ...)
-sys-fs/udev:gudev - enable libudev gobject interface
-sys-fs/udev:hwdb - read vendor/device string database and add it to udev database
-sys-fs/udev:introspection - Use dev-libs/gobject-introspection for introspection
-sys-fs/udev:keymap - map custom hardware's multimedia keys
-sys-fs/udev:kmod - enable udev to load kernel modules
-sys-fs/udev:openrc - install the OpenRC init scripts
-sys-fs/udev:rule_generator - enable persistent network and optical device rule generator (DEPRECATED, replaced by the new predictable network interface names in udev 197 and newer
+sys-fs/udev:firmware-loader - Enable userspace firmware loader (DEPRECATED, replaced by in-kernel loader in 3.8+)
+sys-fs/udev:gudev - Build the gobject interface library
+sys-fs/udev:hwdb - Read vendor/device string database and add it to udev database
+sys-fs/udev:keymap - Map custom hardware's multimedia keys
+sys-fs/udev:kmod - Enable kernel module loading/unloading support using sys-apps/kmod
+sys-fs/udev:openrc - Install the OpenRC init scripts
 sys-fs/udisks:gptfdisk - Pull in sys-apps/gptfdisk for sgdisk command as used by partitioning functionality
 sys-fs/udisks:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/udisks:remote-access - Control whether connections from other clients over LAN are allowed

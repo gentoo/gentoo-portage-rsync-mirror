@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.10 2012/09/24 18:44:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.11 2013/04/24 19:35:29 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils fdo-mime
 
 DEBIAN_REVISION=2.7-1
@@ -17,7 +17,7 @@ SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bzip2 +deprecated directfb fbcon gpm jpeg livecd lzma ssl suid svga tiff unicode X zlib"
 
-GRAPHICS_DEPEND="media-libs/libpng:0"
+GRAPHICS_DEPEND="media-libs/libpng:0="
 
 RDEPEND=">=sys-libs/ncurses-5.7-r7
 	bzip2? ( app-arch/bzip2 )
@@ -67,7 +67,13 @@ src_prepare() {
 	fi
 
 	# error: conditional "am__fastdepCXX" was never defined (for eautoreconf)
-	sed -i -e '/AC_PROG_CXX/s:#::' configure.in || die
+	sed -i \
+		-e '/AC_PROG_CXX/s:#::' \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		configure.in || die #467020
+
+	# This image file has bogus distance in IDAT information wrt #466190#c12
+	rm -f graphics/font/century_school-medium-roman-serif-vari/045e.png
 
 	# Upstream configure produced by broken autoconf-2.13. This also fixes
 	# toolchain detection.
