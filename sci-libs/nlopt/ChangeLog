@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.21 2013/03/04 17:19:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.22 2013/04/24 12:20:01 jlec Exp $
+
+  24 Apr 2013; Justin Lecher <jlec@gentoo.org> nlopt-2.2.4.ebuild,
+  nlopt-2.3-r1.ebuild, nlopt-2.3-r2.ebuild, metadata.xml:
+  Fix deprecated macro usage, #466988
 
   04 Mar 2013; Sébastien Fabbro <bicatali@gentoo.org> nlopt-2.3-r2.ebuild:
   Remove pure C++ tests when testing C library, bug #460284

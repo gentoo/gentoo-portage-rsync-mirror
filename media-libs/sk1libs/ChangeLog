@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.19 2013/04/18 06:35:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.20 2013/04/24 12:07:21 jlec Exp $
+
+*sk1libs-0.9.1-r3 (24 Apr 2013)
+
+  24 Apr 2013; Justin Lecher <jlec@gentoo.org> +sk1libs-0.9.1-r3.ebuild:
+  Fix problems with double prefixes reported by Johan Hattne
 
 *sk1libs-0.9.1-r2 (18 Apr 2013)
 

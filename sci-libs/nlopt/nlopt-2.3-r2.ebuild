@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3-r2.ebuild,v 1.2 2013/03/04 17:19:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3-r2.ebuild,v 1.3 2013/04/24 12:20:01 jlec Exp $
 
 EAPI=5
 
@@ -33,6 +33,9 @@ PATCHES=(
 )
 
 src_prepare() {
+	sed \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
+		-i configure.ac || die
 	autotools-utils_src_prepare
 	if use python; then
 		sed -i \
@@ -106,7 +109,7 @@ src_install() {
 		installation() {
 			cd "${AUTOTOOLS_BUILD_DIR}"
 			rm *.la
-			emake DESTDIR=${D} install \
+			emake DESTDIR="${D}" install \
 				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
 				pythondir="${EPREFIX}$(python_get_sitedir)"
 		}

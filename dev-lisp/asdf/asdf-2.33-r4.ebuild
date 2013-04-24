@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-2.33-r4.ebuild,v 1.1 2013/04/20 14:03:59 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-2.33-r4.ebuild,v 1.2 2013/04/24 12:10:08 grozin Exp $
 
 EAPI=5
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="http://common-lisp.net/project/${PN}/archives/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="doc"
 
 SLOT="0/${PVR}"
 
@@ -27,6 +27,7 @@ S="${WORKDIR}"
 
 src_compile() {
 	make
+	use doc && make doc
 }
 
 src_install() {
@@ -34,6 +35,10 @@ src_install() {
 	doins -r build version.lisp-expr
 	dodoc README TODO
 	dohtml doc/*.{html,css,ico,png}
+	if use doc; then
+		insinto /usr/share/doc/${PF}
+		doins doc/${PN}.pdf
+	fi
 
 	insinto /etc/common-lisp
 	doins "${FILESDIR}"/gentoo-init.lisp "${FILESDIR}"/source-registry.conf

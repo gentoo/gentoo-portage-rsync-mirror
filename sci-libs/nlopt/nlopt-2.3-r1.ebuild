@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3-r1.ebuild,v 1.1 2012/08/03 17:43:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3-r1.ebuild,v 1.2 2013/04/24 12:20:01 jlec Exp $
 
 EAPI=4
 
@@ -93,7 +93,7 @@ src_install() {
 		installation() {
 			cd "${AUTOTOOLS_BUILD_DIR}"
 			rm *.la
-			emake DESTDIR=${D} install \
+			emake DESTDIR="${D}" install \
 				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
 				pythondir="${EPREFIX}$(python_get_sitedir)"
 		}

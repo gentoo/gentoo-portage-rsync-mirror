@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.9 2012/07/09 17:14:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.10 2013/04/24 12:20:01 jlec Exp $
 
 EAPI=4
 
@@ -78,7 +78,7 @@ src_install() {
 	if use python; then
 		installation() {
 			rm *.la
-			emake DESTDIR=${D} install \
+			emake DESTDIR="${D}" install \
 				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
 				pythondir="${EPREFIX}$(python_get_sitedir)"
 		}
