@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.40 2013/04/23 02:40:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.41 2013/04/24 11:19:53 blueness Exp $
+
+  24 Apr 2013; Anthony G. Basile <blueness@gentoo.org> +files/tincd,
+  +files/tincd.conf, +files/tincd.lo, -files/tincd.1, -files/tincd.conf.1,
+  -files/tincd.lo.1, -tinc-1.0.19.ebuild, -tinc-1.0.20.ebuild,
+  tinc-1.0.21.ebuild:
+  Remove older exploitables and name cleanup, bug #466904
 
 *tinc-1.0.21 (23 Apr 2013)
 
