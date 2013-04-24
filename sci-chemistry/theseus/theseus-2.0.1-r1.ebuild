@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/theseus/theseus-2.0.1.ebuild,v 1.1 2013/04/09 09:57:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/theseus/theseus-2.0.1-r1.ebuild,v 1.1 2013/04/24 10:21:00 jlec Exp $
 
 EAPI=5
 
@@ -52,8 +52,9 @@ src_prepare() {
 		-i Makefile || die
 
 	sed \
-		-e 's:/usr/local/bin/::g' \
-		-e 's:/usr/bin/::g' \
+		-e 's:/usr/bin/sed:sed:g' \
+		-e "s:/usr/local/bin/:${EPREFIX}/usr/bin/:g" \
+		-e "s:/usr/bin/:${EPREFIX}/usr/bin/:g" \
 		-i theseus_align || die
 }
 
