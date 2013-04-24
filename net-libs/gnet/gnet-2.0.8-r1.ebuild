@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.12 2012/05/05 02:54:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.13 2013/04/24 17:38:39 jer Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
@@ -41,7 +41,11 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.8-network-tests.patch"
 
 	# Do not pass silly cflags with USE=debug, bug #320759
-	sed 's/-Werror//' -i configure.ac configure || die "sed failed"
+	sed -i \
+		-e 's:-Werror::' \
+		-e '/AM_PROG_CC_STDC/d' \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
+		configure.ac || die
 
 	eautoreconf
 	gnome2_src_prepare

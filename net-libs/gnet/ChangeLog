@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.79 2012/05/05 02:54:30 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.80 2013/04/24 17:38:39 jer Exp $
+
+  24 Apr 2013; Jeroen Roovers <jer@gentoo.org> gnet-2.0.8-r1.ebuild:
+  Fix building with automake-1.13 (bug #467090).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnet-2.0.8-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

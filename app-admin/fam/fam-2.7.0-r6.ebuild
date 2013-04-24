@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.10 2012/02/25 15:11:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.11 2013/04/24 17:53:43 jer Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils autotools
 
 DEBIAN_PATCH="17"
@@ -21,10 +20,13 @@ DEPEND="|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 )
 	!app-admin/gamin"
 RDEPEND="${DEPEND}"
 
+DOCS=( AUTHORS ChangeLog INSTALL NEWS TODO README )
+
 src_prepare() {
 	epatch "${WORKDIR}/${P/-/_}-${DEBIAN_PATCH}.diff"
 	edos2unix "${S}"/${P}/debian/patches/10_debianbug375967.patch
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch "${S}"/${P}/debian/patches
+	sed -i configure.ac -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 
 	eautoreconf
 }
@@ -34,15 +36,12 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/libfam.la
-	fi
+	default
+	prune_libtool_files
 
 	sed -i "${D}"/etc/fam.conf \
 		-e "s:local_only = false:local_only = true:g" \
 		|| die "sed fam.conf"
 
 	doinitd "${FILESDIR}/famd"
-	dodoc AUTHORS ChangeLog INSTALL NEWS TODO README
 }

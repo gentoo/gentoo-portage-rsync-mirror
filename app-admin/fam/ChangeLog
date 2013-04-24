@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.75 2012/02/25 15:54:05 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.76 2013/04/24 17:53:43 jer Exp $
+
+  24 Apr 2013; Jeroen Roovers <jer@gentoo.org> fam-2.7.0-r6.ebuild:
+  Fix building with automake-1.13.
 
   25 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -fam-2.7.0-r5.ebuild,
   -files/fam-2.7.0-gcc41.patch, -files/fam-2.7.0-gcc43.patch,
