@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/git-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.8 2011/08/27 21:00:30 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.9 2013/04/24 01:07:32 zx2c4 Exp $
+
+  24 Apr 2013; Jason A. Donenfeld <zx2c4@gentoo.org>
+  git-python-0.3.2_rc1.ebuild:
+  Library is needed at runtime.
 
   27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org>
   git-python-0.3.2_rc1.ebuild:
@@ -36,4 +40,3 @@
   21 Jun 2009; Patrick Lauer <patrick@gentoo.org> +git-python-0.1.6.ebuild,
   +metadata.xml:
   Initial import of git-python. Ebuild by Juergen Geuter.
-
