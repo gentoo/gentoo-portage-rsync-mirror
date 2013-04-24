@@ -54,24 +54,6 @@ index 3ed9069..3e38387 100755
  
      rm -f other.d
  
-@@ -698,7 +701,7 @@ EOF
-     checkstat 'cache hit (direct)' 0
-     checkstat 'cache hit (preprocessed)' 0
-     checkstat 'cache miss' 1
--    checkfile other.d "test.o: test.c test1.h test3.h test2.h"
-+    checkfile other.d "$expected_d_content"
- 
-     rm -f other.d
- 
-@@ -706,7 +709,7 @@ EOF
-     checkstat 'cache hit (direct)' 1
-     checkstat 'cache hit (preprocessed)' 0
-     checkstat 'cache miss' 1
--    checkfile other.d "test.o: test.c test1.h test3.h test2.h"
-+    checkfile other.d "$expected_d_content"
- 
-     rm -f other.d
- 
 @@ -760,7 +763,7 @@ EOF
      checkstat 'cache hit (direct)' 0
      checkstat 'cache hit (preprocessed)' 0

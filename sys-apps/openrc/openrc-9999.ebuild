@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.119 2013/03/10 20:58:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.120 2013/04/24 05:33:11 williamh Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic multilib pam toolchain-funcs
 
@@ -22,7 +22,7 @@ SLOT="0"
 IUSE="debug elibc_glibc ncurses pam newnet prefix selinux static-libs tools
 	unicode kernel_linux kernel_FreeBSD"
 
-RDEPEND="virtual/init
+COMMON_DEPEND="virtual/init
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
@@ -35,8 +35,10 @@ RDEPEND="virtual/init
 	selinux? ( sec-policy/selinux-openrc )
 	!<sys-fs/udev-init-scripts-17
 	!<sys-fs/udev-133"
-DEPEND="${RDEPEND}
-	virtual/os-headers"
+DEPEND="${COMMON_DEPEND}
+	virtual/os-headers
+	ncurses? ( virtual/pkgconfig )"
+RDEPEND="${COMMON_DEPEND}"
 
 src_prepare() {
 	sed -i 's:0444:0644:' mk/sys.mk || die
@@ -56,7 +58,10 @@ src_compile() {
 
 	MAKE_ARGS="${MAKE_ARGS}
 		LIBNAME=$(get_libdir)
-		LIBEXECDIR=${EPREFIX}/$(get_libdir)/rc"
+		LIBEXECDIR=${EPREFIX}/$(get_libdir)/rc
+		MKSELINUX=$(usex selinux)
+		MKSTATICLIBS=$(usex static-libs)
+	MKTOOLS=$(usex tools)"
 
 	local brand="Unknown"
 	if use kernel_linux ; then
@@ -66,16 +71,9 @@ src_compile() {
 		MAKE_ARGS="${MAKE_ARGS} OS=FreeBSD"
 		brand="FreeBSD"
 	fi
-	if use selinux; then
-			MAKE_ARGS="${MAKE_ARGS} MKSELINUX=yes"
-	fi
 	export BRANDING="Gentoo ${brand}"
-	if ! use static-libs; then
-			MAKE_ARGS="${MAKE_ARGS} MKSTATICLIBS=no"
-	fi
 	use newnet || MAKE_ARGS="${MAKE_ARGS} MKNET=oldnet"
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
-	use tools && MAKE_ARGS="${MAKE_ARGS} MKTOOLS=yes"
 	export DEBUG=$(usev debug)
 	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
@@ -189,52 +187,8 @@ pkg_preinst() {
 		)
 	fi
 
-	# upgrade timezone file ... do it before moving clock
-	if [[ -e ${EROOT}etc/conf.d/clock && ! -e ${EROOT}/etc/timezone ]] ; then
-		(
-		unset TIMEZONE
-		source "${EROOT}"etc/conf.d/clock
-		[[ -n ${TIMEZONE} ]] && echo "${TIMEZONE}" > "${EROOT}"etc/timezone
-		)
-	fi
-
-	# /etc/conf.d/clock moved to /etc/conf.d/hwclock
-	local clock
-	use kernel_FreeBSD && clock="adjkerntz" || clock="hwclock"
-	if [[ -e "${EROOT}"etc/conf.d/clock ]] ; then
-		mv "${EROOT}"etc/conf.d/clock "${EROOT}"etc/conf.d/${clock}
-	fi
-	if [[ -e "${EROOT}"etc/init.d/clock ]] ; then
-		rm -f "${EROOT}"etc/init.d/clock
-	fi
-	if [[ -L "${EROOT}"etc/runlevels/boot/clock ]] ; then
-		rm -f "${EROOT}"etc/runlevels/boot/clock
-		ln -snf /etc/init.d/${clock} "${EROOT}"etc/runlevels/boot/${clock}
-	fi
-	if [[ -L "${EROOT}"${LIBDIR}/rc/init.d/started/clock ]] ; then
-		rm -f "${EROOT}"${LIBDIR}/rc/init.d/started/clock
-		ln -snf /etc/init.d/${clok} "${EROOT}"${LIBDIR}/rc/init.d/started/${clock}
-	fi
-
-	# /etc/conf.d/rc is no longer used for configuration
-	if [[ -e "${EROOT}"etc/conf.d/rc ]] ; then
-		elog "/etc/conf.d/rc is no longer used for configuration."
-		elog "Please migrate your settings to /etc/rc.conf as applicable"
-		elog "and delete /etc/conf.d/rc"
-	fi
-
-	# force net init.d scripts into symlinks
-	for f in "${EROOT}"etc/init.d/net.* ; do
-		[[ -e ${f} ]] || continue # catch net.* not matching anything
-		[[ ${f} == */net.lo ]] && continue # real file now
-		[[ ${f} == *.openrc.bak ]] && continue
-		if [[ ! -L ${f} ]] ; then
-			elog "Moved net service '${f##*/}' to '${f##*/}.openrc.bak' to force a symlink."
-			elog "You should delete '${f##*/}.openrc.bak' if you don't need it."
-			mv "${f}" "${f}.openrc.bak"
-			ln -snf net.lo "${f}"
-		fi
-	done
+	# set default interactive shell to sulogin if it exists
+	set_config /etc/rc.conf rc_shell /sbin/sulogin "#" test -e /sbin/sulogin
 
 	# termencoding was added in 0.2.1 and needed in boot
 	has_version ">=sys-apps/openrc-0.2.1" || add_boot_init termencoding
@@ -246,36 +200,13 @@ pkg_preinst() {
 		add_boot_init sysfs sysinit
 	fi
 
-	# set default interactive shell to sulogin if it exists
-	set_config /etc/rc.conf rc_shell /sbin/sulogin "#" test -e /sbin/sulogin
-
-	has_version sys-apps/openrc || migrate_from_baselayout_1
-	has_version ">=sys-apps/openrc-0.4.0" || migrate_udev_init_script
 	if ! has_version ">=sys-apps/openrc-0.11.3" ; then
 		migrate_udev_mount_script
 		add_boot_init tmpfiles.setup boot
 	fi
-}
 
-# >=openrc-0.4.0 no longer loads the udev addon
-migrate_udev_init_script() {
-	# make sure udev is in sysinit if it was enabled before
-	local enable_udev=false
-	local rc_devices=$(
-		[[ -f /etc/rc.conf ]] && source /etc/rc.conf
-		[[ -f /etc/conf.d/rc ]] && source /etc/conf.d/rc
-		echo "${rc_devices:-${RC_DEVICES:-auto}}"
-	)
-	case ${rc_devices} in
-		udev|auto)
-			enable_udev=true
-			;;
-	esac
-
-	if $enable_udev; then
-		add_boot_init udev sysinit
-		add_boot_init udev-postmount default
-	fi
+	# loopback was added in 0.12 and needed in boot (february 2012)
+	has_version ">=sys-apps/openrc-0.12" || add_boot_init loopback
 }
 
 # >=OpenRC-0.11.3 requires udev-mount to be in the sysinit runlevel with udev.
@@ -287,88 +218,8 @@ migrate_udev_mount_script() {
 	return 0
 }
 
-migrate_from_baselayout_1() {
-	# baselayout boot init scripts have been split out
-	for f in $(cd "${ED}"/usr/share/${PN}/runlevels/boot || exit; echo *) ; do
-		# baselayout-1 is always "old" net, so ignore "new" net
-		[[ ${f} == "network" ]] && continue
-
-		add_boot_init ${f}
-	done
-
-	# Try to auto-add some addons when possible
-	add_boot_init_mit_config /etc/conf.d/cryptfs dmcrypt
-	add_boot_init_mit_config /etc/conf.d/dmcrypt dmcrypt
-	add_boot_init_mit_config /etc/mdadm.conf mdraid
-	add_boot_init_mit_config /etc/evms.conf evms
-	[[ -e "${EROOT}"sbin/dmsetup ]] && add_boot_init device-mapper
-	[[ -e "${EROOT}"sbin/vgscan ]] && add_boot_init lvm
-	elog "Add on services (such as RAID/dmcrypt/LVM/etc...) are now stand alone"
-	elog "init.d scripts.  If you use such a thing, make sure you have the"
-	elog "required init.d scripts added to your boot runlevel."
-
-	# Upgrade our state for baselayout-1 users
-	if [[ ! -e "${EROOT}"${LIBDIR}/rc/init.d/started ]] ; then
-		(
-		[[ -e "${EROOT}"etc/conf.d/rc ]] && source "${EROOT}"/etc/conf.d/rc
-		svcdir=${svcdir:-/var/lib/init.d}
-		if [[ ! -d "${EROOT}"${svcdir}/started ]] ; then
-			ewarn "No state found, and no state exists"
-			elog "You should reboot this host"
-		else
-			mkdir -p "${EROOT}"${LIBDIR}/rc/init.d
-			einfo "Moving state from ${EROOT}${svcdir} to ${EROOT}${LIBDIR}/rc/init.d"
-			mv "${EROOT}${svcdir}"/* "${EROOT}${LIBDIR}"/rc/init.d
-			rm -rf "${EROOT}${LIBDIR}"/rc/init.d/daemons \
-				"${EROOT}${LIBDIR}"/rc/init.d/console
-			umount "${EROOT}${svcdir}" 2>/dev/null
-			rm -rf "${EROOT}${svcdir}"
-		fi
-		)
-	fi
-
-	# Handle the /etc/modules.autoload.d -> /etc/conf.d/modules transition
-	if [[ -d "${EROOT}"etc/modules.autoload.d ]] ; then
-		elog "Converting your /etc/modules.autoload.d/ files to /etc/conf.d/modules"
-		rm -f "${EROOT}"etc/modules.autoload.d/.keep*
-		rmdir "${EROOT}"etc/modules.autoload.d 2>/dev/null
-		if [[ -d "${EROOT}"etc/modules.autoload.d ]] ; then
-			local f v
-			for f in "${EROOT}"etc/modules.autoload.d/* ; do
-				v=${f##*/}
-				v=${v#kernel-}
-				v=${v//[^[:alnum:]]/_}
-				gawk -v v="${v}" -v f="${f##*/}" '
-				BEGIN { print "\n### START: Auto-converted from " f "\n" }
-				{
-					if ($0 ~ /^[^#]/) {
-						print "modules_" v "=\"${modules_" v "} " $1 "\""
-						gsub(/[^[:alnum:]]/, "_", $1)
-						printf "module_" $1 "_args_" v "=\""
-						for (i = 2; i <= NF; ++i) {
-							if (i > 2)
-								printf " "
-							printf $i
-						}
-						print "\"\n"
-					} else
-						print
-				}
-				END { print "\n### END: Auto-converted from " f "\n" }
-				' "${f}" >> "${ED}"/etc/conf.d/modules
-			done
-				rm -f "${f}"
-			rmdir "${EROOT}"etc/modules.autoload.d 2>/dev/null
-		fi
-	fi
-}
-
 pkg_postinst() {
 	local LIBDIR=$(get_libdir)
-
-	# Remove old baselayout links
-	rm -f "${EROOT}"etc/runlevels/boot/{check{fs,root},rmnologin}
-	rm -f "${EROOT}"etc/init.d/{depscan,runscript}.sh
 
 	# Make our runlevels if they don't exist
 	if [[ ! -e "${EROOT}"etc/runlevels ]] || [[ -e "${EROOT}"etc/runlevels/.add_boot_init.created ]] ; then
@@ -386,41 +237,6 @@ pkg_postinst() {
 			cp -RPp "${EROOT}"usr/share/${PN}/runlevels/shutdown/* \
 				"${EROOT}"etc/runlevels/shutdown
 		fi
-	fi
-
-	# /etc/conf.d/net.example is no longer valid
-	local NET_EXAMPLE="${EROOT}etc/conf.d/net.example"
-	local NET_MD5='8ebebfa07441d39eb54feae0ee4c8210'
-	if [[ -e "${NET_EXAMPLE}" ]] ; then
-		if [[ $(md5sum "${NET_EXAMPLE}") == ${NET_MD5}* ]]; then
-			rm -f "${NET_EXAMPLE}"
-			elog "${NET_EXAMPLE} has been removed."
-		else
-			sed -i '1i# This file is obsolete.\n' "${NET_EXAMPLE}"
-			elog "${NET_EXAMPLE} should be removed."
-		fi
-		elog "The new file is ${EROOT}usr/share/doc/${PF}/net.example"
-	fi
-
-	# /etc/conf.d/wireless.example is no longer valid
-	local WIRELESS_EXAMPLE="${EROOT}etc/conf.d/wireless.example"
-	local WIRELESS_MD5='d1fad7da940bf263c76af4d2082124a3'
-	if [[ -e "${WIRELESS_EXAMPLE}" ]] ; then
-		if [[ $(md5sum "${WIRELESS_EXAMPLE}") == ${WIRELESS_MD5}* ]]; then
-			rm -f "${WIRELESS_EXAMPLE}"
-			elog "${WIRELESS_EXAMPLE} is deprecated and has been removed."
-		else
-			sed -i '1i# This file is obsolete.\n' "${WIRELESS_EXAMPLE}"
-			elog "${WIRELESS_EXAMPLE} is deprecated and should be removed."
-		fi
-		elog "If you are using the old style network scripts,"
-		elog "Configure wireless settings in ${EROOT}etc/conf.d/net"
-		elog "after reviewing ${EROOT}usr/share/doc/${PF}/net.example"
-	fi
-
-	if [[ -d "${EROOT}"etc/modules.autoload.d ]] ; then
-		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
-		ewarn "your files to /etc/conf.d/modules and delete the directory."
 	fi
 
 	if use hppa; then

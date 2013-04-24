@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/coccinelle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.27 2012/12/13 22:12:25 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.28 2013/04/24 05:58:22 radhermit Exp $
+
+*coccinelle-1.0.0_rc17 (24 Apr 2013)
+
+  24 Apr 2013; Tim Harder <radhermit@gentoo.org> +coccinelle-1.0.0_rc17.ebuild:
+  Version bump, migrate to python-single-r1.
 
   13 Dec 2012; Tim Harder <radhermit@gentoo.org> -coccinelle-1.0.0_rc14.ebuild,
   -coccinelle-1.0.0_rc15.ebuild:

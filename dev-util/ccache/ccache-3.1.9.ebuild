@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.9.ebuild,v 1.14 2013/04/06 18:28:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.9.ebuild,v 1.15 2013/04/24 05:44:24 dirtyepic Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ src_prepare() {
 	# make sure we always use system zlib
 	rm -rf zlib
 	epatch "${FILESDIR}"/${PN}-3.1.7-no-perl.patch #421609
-	epatch "${FILESDIR}"/${P}-test-gcc-3.8.patch #461966
+	epatch "${FILESDIR}"/${P}-test-gcc-4.8.patch #461966
 	sed \
 		-e "/^LIBDIR=/s:lib:$(get_libdir):" \
 		"${FILESDIR}"/ccache-config > ccache-config || die
