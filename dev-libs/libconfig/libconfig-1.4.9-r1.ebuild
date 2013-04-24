@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.9-r1.ebuild,v 1.1 2013/04/02 18:55:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.9-r1.ebuild,v 1.2 2013/04/24 16:50:22 jer Exp $
 
-EAPI="5"
-
+EAPI=5
 inherit eutils autotools-multilib
 
 DESCRIPTION="Libconfig is a simple library for manipulating structured configuration files"
@@ -18,11 +17,15 @@ IUSE="+cxx examples static-libs"
 DEPEND="
 	sys-devel/libtool
 	sys-devel/bison"
-RDEPEND=""
 
 PATCHES=( "${FILESDIR}/${P}-out-of-source-build.patch" )
 
 AUTOTOOLS_AUTORECONF="1"
+
+src_prepare() {
+	sed -i configure.ac -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
+	autotools-multilib_src_prepare
+}
 
 src_configure() {
 	local myeconfargs=(
