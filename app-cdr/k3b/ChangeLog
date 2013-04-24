@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.279 2012/12/10 16:56:44 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.280 2013/04/23 23:54:55 lu_zero Exp $
+
+  23 Apr 2013; Luca Barbato <lu_zero@gentoo.org> k3b-2.0.2-r4.ebuild,
+  +files/k3b-2.0.2-libav9.patch:
+  Add libav9 support, patch derived from upstream, thanks to Jiří Moravec
+  <qjim@volny.cz> for preparing it.
 
   10 Dec 2012; Michael Palimaka <kensington@gentoo.org> k3b-2.0.2-r4.ebuild,
   metadata.xml:
