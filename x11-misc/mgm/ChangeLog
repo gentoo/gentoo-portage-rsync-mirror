@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mgm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.22 2012/12/17 19:19:02 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.23 2013/04/24 15:44:19 ulm Exp $
+
+  24 Apr 2013; Ulrich Müller <ulm@gentoo.org> mgm-1.2.ebuild:
+  Fix LICENSE, released into the public domain, bug 446782.
 
   17 Dec 2012; Jeroen Roovers <jer@gentoo.org> -mgm-1.1.ebuild,
   -mgm-1.1_p14506.ebuild, -files/mgm-1.1-gentoo.patch:
