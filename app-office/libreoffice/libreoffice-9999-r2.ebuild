@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.169 2013/04/19 10:42:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.170 2013/04/24 12:40:32 scarabeus Exp $
 
 EAPI=5
 
@@ -119,6 +119,7 @@ COMMON_DEPEND="
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
+	>=media-libs/harfbuzz-0.9.10:=
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.0.5
@@ -412,6 +413,7 @@ src_configure() {
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-graphite: disabling causes build breakages
+	# --enable-harfbuzz: disabling uses ICU LE which is unmaintained and broken
 	# --enable-*-link: link to the library rather than just dlopen on runtime
 	# --enable-release-build: build the libreoffice as release
 	# --disable-fetch-external: prevent dowloading during compile phase
@@ -432,6 +434,7 @@ src_configure() {
 		--with-system-dicts \
 		--enable-cairo-canvas \
 		--enable-graphite \
+		--enable-harfbuzz \
 		--enable-largefile \
 		--enable-mergelibs \
 		--enable-python=system \
