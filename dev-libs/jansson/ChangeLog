@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/jansson
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.7 2012/09/28 17:31:34 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.8 2013/04/23 23:29:35 radhermit Exp $
+
+  23 Apr 2013; Tim Harder <radhermit@gentoo.org> jansson-2.3.1.ebuild,
+  jansson-2.4.ebuild:
+  Set AUTOTOOLS_AUTORECONF=1 so autotools deps are properly pulled in.
 
 *jansson-2.4 (28 Sep 2012)
 

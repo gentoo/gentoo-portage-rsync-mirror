@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/jansson-2.4.ebuild,v 1.1 2012/09/28 17:31:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/jansson-2.4.ebuild,v 1.2 2013/04/23 23:29:35 radhermit Exp $
 
 EAPI="4"
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils
 
@@ -22,7 +23,6 @@ DOCS=(CHANGES README.rst)
 
 src_prepare() {
 	sed -ie 's/-Werror//' src/Makefile.am || die
-	eautoreconf
 	autotools-utils_src_prepare
 }
 
