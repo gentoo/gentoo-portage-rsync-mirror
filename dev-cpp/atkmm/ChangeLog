@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/atkmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.33 2013/03/05 23:07:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.34 2013/04/24 18:50:57 pacho Exp $
+
+*atkmm-2.22.7 (24 Apr 2013)
+
+  24 Apr 2013; Pacho Ramos <pacho@gentoo.org> +atkmm-2.22.7.ebuild:
+  Version bump
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -atkmm-2.22.5.ebuild:
   Clean up old revision.
@@ -119,4 +124,3 @@
   30 Oct 2010; Pacho Ramos <pacho@gentoo.org> +atkmm-2.22.0.ebuild,
   +metadata.xml:
   C++ interface for the ATK library has been splitted off from gtkmm.
-
