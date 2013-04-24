@@ -1,8 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25-r4.ebuild,v 1.14 2013/03/01 12:43:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25-r4.ebuild,v 1.15 2013/04/24 08:48:34 eras Exp $
 
 EAPI=4
+
+# should be fixed in automake-1.13.2(?).  Please test and remove if appropriate.
+# See automake bug #13514
+WANT_AUTOMAKE="1.12"
+
 inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2 db-use
 
 SASLAUTHD_CONF_VER="2.1.21"
@@ -58,6 +63,9 @@ src_prepare() {
 	# Use plugindir for sasldir
 	sed -i '/^sasldir =/s:=.*:= $(plugindir):' \
 		"${S}"/plugins/Makefile.{am,in} || die "sed failed"
+
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
+		configure.in || die
 
 	AT_M4DIR="${S}/cmulocal ${S}/config" eautoreconf
 }
