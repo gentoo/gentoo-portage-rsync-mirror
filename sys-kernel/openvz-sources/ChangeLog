@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.192 2013/04/14 18:30:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.193 2013/04/24 11:59:30 pinkbyte Exp $
+
+  24 Apr 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -files/openvz-sources-2.6.32.10.1-cpt_process.c-build.patch,
+  -files/openvz-sources-2.6.32.39-binutils.patch:
+  Drop old unused patches
 
   14 Apr 2013; Sergey Popov <pinkbyte@gentoo.org>
   -files/openvz-sources-2.6.18.028.064.7-bridgemac.patch,
