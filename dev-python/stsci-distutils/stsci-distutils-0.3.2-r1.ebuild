@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.2-r1.ebuild,v 1.2 2013/04/24 18:49:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.2-r1.ebuild,v 1.3 2013/04/24 21:01:38 bicatali Exp $
 
 EAPI=5
 
@@ -11,8 +11,7 @@ MY_P=${MY_PN}-${PV}
 inherit distutils-r1
 
 DESCRIPTION="Utilities used to package some of STScI's Python projects"
-HOMEPAGE="http://www.stsci.edu/resources/software_hardware/stsci_python
-	http://pypi.python.org/pypi/stsci.distutils/"
+HOMEPAGE="http://www.stsci.edu/resources/software_hardware/stsci_python"
 SRC_URI="mirror://pypi/${PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
@@ -24,4 +23,4 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/d2to1[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"

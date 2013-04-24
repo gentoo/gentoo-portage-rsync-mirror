@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.14 2013/02/20 23:36:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.15 2013/04/24 21:30:07 pchrist Exp $
 
 EAPI=3
+WANT_AUTOMAKE=1.12
 inherit eutils autotools flag-o-matic elisp-common
 
 DESCRIPTION="Scheme interpreter"
