@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/cvs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.10 2013/04/04 13:43:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.11 2013/04/24 09:58:07 slyfox Exp $
+
+*cvs-1.12.13.1-r2 (24 Apr 2013)
+
+  24 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org> +cvs-1.12.13.1-r2.ebuild,
+  +files/cvs-1.12.13.1-fix-gnulib-SEGV-vasnprintf.patch:
+  Fixed SIGSEGV (writable %n is forbidden by glibc-2.3+).
 
   04 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org>
   +files/cvs-1.12.13.1-use-include_next.patch, cvs-1.12.13.1-r1.ebuild:

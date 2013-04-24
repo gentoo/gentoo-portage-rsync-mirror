@@ -1,0 +1,24 @@
+# /etc/conf.d/cpupower: config file for /etc/init.d/cpupower
+
+# Options when starting cpufreq (given to the `cpupower` program)
+START_OPTS="--governor ondemand"
+
+# Options when stopping cpufreq (given to the `cpupower` program)
+STOP_OPTS="--governor performance"
+
+# Extra settings to write to sysfs cpufreq values.
+#
+# up_threshold: threshold for stepping up frequency, where the value represents
+# the percentage of cpu load. 
+#
+# down_threshold: threshold for stepping down frequency, where the value
+# represents the percentage of cpu load.
+#
+# sampling_down_factor: determines how frequently the governor polls the cpu, a
+# value greater than 1 improves performance by reducing the polling when the
+# load is high. This tunable has no effect on behavior at lower CPU frequencies
+#
+# ignore_nice_load: when set to '1' the processes that are run with a 'nice'
+# value will not count in the usage calculation.
+
+#SYSFS_EXTRA="ondemand/ignore_nice_load=1 ondemand/up_threshold=15 ondemand/sampling_down_factor=10"
