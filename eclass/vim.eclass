@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.210 2013/04/21 23:26:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.212 2013/04/24 01:49:40 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -43,7 +43,7 @@ MY_PN=${PN%-cvs}
 if [[ ${MY_PN} != "vim-core" ]] ; then
 	if [[ ${HAS_PYTHON_R1} ]]; then
 		PYTHON_REQ_USE=threads
-		inherit python-r1
+		inherit python-single-r1
 	else
 		# vim supports python-2 only
 		PYTHON_DEPEND="python? 2"
@@ -90,13 +90,6 @@ else
 			python? ( ${PYTHON_DEPS} )"
 		RDEPEND="${RDEPEND}
 			python? ( ${PYTHON_DEPS} )"
-		# at most one version of py2 and one of py3
-		REQUIRED_USE="${REQUIRED_USE}
-			python? (
-				|| ( $(python_gen_useflags '*') )
-				?? ( $(python_gen_useflags 'python2*') )
-				?? ( $(python_gen_useflags 'python3*') )
-			)"
 	fi
 
 	DEPEND="${DEPEND}
@@ -255,8 +248,10 @@ vim_pkg_setup() {
 	mkdir -p "${T}/home"
 	export HOME="${T}/home"
 
-	if [[ ! ${HAS_PYTHON_R1} ]]; then
-		if [[ ${MY_PN} != "vim-core" ]] && use python; then
+	if [[ ${MY_PN} != "vim-core" ]] && use python; then
+		if [[ ${HAS_PYTHON_R1} ]]; then
+			python-single-r1_pkg_setup
+		else
 			# vim supports python-2 only
 			python_set_active_version 2
 			# python.eclass only defines python_pkg_setup for EAPIs that support
@@ -436,19 +431,15 @@ vim_src_configure() {
 		myconf="${myconf} `use_enable perl perlinterp`"
 		if [[ ${HAS_PYTHON_R1} ]]; then
 			if use python; then
-				py_add_interp() {
-					local v
-
-					[[ ${EPYTHON} == python3* ]] && v=3
-
-					myconf="${myconf} --enable-python${v}interp
-						vi_cv_path_python${v}=${PYTHON}"
-				}
-
-				python_foreach_impl py_add_interp
+				if [[ ${EPYTHON} == python3* ]]; then
+					myconf="${myconf} --enable-python3interp"
+					export vi_cv_path_python3="${PYTHON}"
+				else
+					myconf="${myconf} --enable-pythoninterp"
+					export vi_cv_path_python="${PYTHON}"
+				fi
 			else
-				myconf="${myconf} --disable-pythoninterp
-					--disable-python3interp"
+				myconf="${myconf} --disable-pythoninterp --disable-python3interp"
 			fi
 		else
 			myconf="${myconf} `use_enable python pythoninterp`"
@@ -540,8 +531,6 @@ vim_src_configure() {
 }
 
 vim_src_compile() {
-	has src_configure ${TO_EXPORT} || vim_src_configure
-
 	# The following allows emake to be used
 	emake -j1 -C src auto/osdef.h objects || die "make failed"
 

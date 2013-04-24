@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/pyelftools-0.20-r1.ebuild,v 1.2 2013/01/21 02:39:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/pyelftools-0.21-r2.ebuild,v 1.1 2013/04/24 01:35:21 vapier Exp $
 
 EAPI="4"
 
@@ -17,14 +17,17 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-dyntags-{1,2}.patch
-	distutils_src_prepare
+	epatch "${FILESDIR}"/${P}-dyntable.patch
+}
+
+python_test() {
+	# readelf_tests often fails due to host `readelf` changing output format
+	local t
+	for t in all_unittests examples_test ; do
+		PYTHONPATH=$(_distutils_get_PYTHONPATH) "$(PYTHON)" ./test/run_${t}.py || die
+	done
 }
 
 src_test() {
-	local t
-	# readelf_tests fails
-	for t in all_unittests examples_test ; do
-		./test/run_${t}.py || die
-	done
+	python_execute_function python_test
 }

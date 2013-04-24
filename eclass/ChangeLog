@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.799 2013/04/21 23:26:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.801 2013/04/24 01:49:40 radhermit Exp $
+
+  24 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Remove old, conditional src_configure call in src_compile.
+
+  24 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Migrate from python-r1 to python-single-r1.
 
   21 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
   Use python-r1 in EAPI 5 (patch by mgorny, bug #458794).
