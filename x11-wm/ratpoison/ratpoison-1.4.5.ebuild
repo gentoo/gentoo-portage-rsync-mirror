@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.5.ebuild,v 1.8 2010/08/16 19:44:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.5.ebuild,v 1.9 2013/04/24 15:26:13 jer Exp $
 
 EAPI=3
 
@@ -32,6 +32,7 @@ src_prepare() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-1.4.4-glibc210.patch" \
 		"${FILESDIR}/${P}-asneeded.patch"
+	sed -i configure.in -e 's|^AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 	eautoreconf
 }
 

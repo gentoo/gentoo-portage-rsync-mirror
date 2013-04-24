@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/librg-utils-perl/librg-utils-perl-1.0.43.ebuild,v 1.1 2013/04/24 14:10:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/librg-utils-perl/librg-utils-perl-1.0.43.ebuild,v 1.2 2013/04/24 15:13:21 jlec Exp $
 
 EAPI=5
 
@@ -31,6 +31,8 @@ src_install() {
 	rm mat/Makefile* || die
 	perl-module_src_install
 	insinto /usr/share/${PN}
-	doins -r mat *.pl dbSwiss
+	doins -r mat
+	exeinto /usr/share/${PN}
+	doexe *.pl dbSwiss
 	doman blib/libdoc/*
 }

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.1.2.ebuild,v 1.2 2012/11/19 21:12:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.1.2.ebuild,v 1.3 2013/04/24 15:01:32 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils libtool
 
 MY_P="${P}-alpha"
@@ -50,7 +50,5 @@ DOCS="README ChangeLog*"
 
 src_install() {
 	default
-	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/libevent*.la
-	fi
+	prune_libtool_files
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.259 2013/03/08 17:46:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.260 2013/04/24 15:01:32 jer Exp $
+
+  24 Apr 2013; Jeroen Roovers <jer@gentoo.org> -libevent-2.1.1.ebuild,
+  libevent-2.0.21.ebuild, libevent-2.1.2.ebuild:
+  Use prune_libtool_files. Remove old.
 
   08 Mar 2013; Jeroen Roovers <jer@gentoo.org> -libevent-2.0.19.ebuild,
   -libevent-2.0.20.ebuild:

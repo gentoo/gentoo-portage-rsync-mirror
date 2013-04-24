@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.21.ebuild,v 1.15 2013/02/24 18:05:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.21.ebuild,v 1.16 2013/04/24 15:01:32 jer Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils libtool
 
 MY_P="${P}-stable"
@@ -24,6 +23,8 @@ RDEPEND="
 "
 
 S=${WORKDIR}/${MY_P}
+
+DOCS=( README ChangeLog )
 
 src_prepare() {
 	elibtoolize
@@ -48,9 +49,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc README ChangeLog
-	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/libevent*.la
-	fi
+	default
+	prune_libtool_files
 }
