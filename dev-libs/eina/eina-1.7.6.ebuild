@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.7.6.ebuild,v 1.1 2013/04/07 14:23:20 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.7.6.ebuild,v 1.2 2013/04/24 08:26:15 ago Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Enlightenment's data types library (List, hash, etc) in C"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="altivec debug default-mempool mempool-buddy +mempool-chained
 	mempool-fixed-bitmap +mempool-pass-through
 	mmx sse sse2 static-libs test"

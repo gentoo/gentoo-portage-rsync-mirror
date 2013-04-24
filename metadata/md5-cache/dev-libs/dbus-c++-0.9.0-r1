@@ -4,10 +4,10 @@ DESCRIPTION=provide a C++ API for D-BUS
 EAPI=4
 HOMEPAGE=http://sourceforge.net/projects/dbus-cplusplus/ http://sourceforge.net/apps/mediawiki/dbus-cplusplus/index.php?title=Main_Page
 IUSE=doc ecore glib static-libs test
-KEYWORDS=~amd64 ~arm ~x86
+KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=sys-apps/dbus ecore? ( dev-libs/ecore ) glib? ( dev-libs/glib )
 SLOT=0
 SRC_URI=mirror://sourceforge/dbus-cplusplus/libdbus-c++-0.9.0.tar.gz
 _eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=3d773bfd3b1f476a8a7784ff2df1c065
+_md5_=6b1051b1060bb40388403c34e2baba91

@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/webmcp
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webmcp/ChangeLog,v 1.1 2013/04/24 08:15:15 tupone Exp $
+
+*webmcp-1.2.5 (24 Apr 2013)
+
+  24 Apr 2013; Alfredo Tupone <tupone@gentoo.org> +webmcp-1.2.5.ebuild,
+  +files/webmcp-1.2.5-gentoo.patch, +metadata.xml:
+  New package
+

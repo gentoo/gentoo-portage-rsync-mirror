@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.6.ebuild,v 1.1 2013/04/08 22:14:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.6.ebuild,v 1.2 2013/04/24 08:26:01 ago Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction lay
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="ares curl directfb +evas examples fbcon gles glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib wayland +X xcb xinerama xprint xscreensaver"
 
 RDEPEND=">=dev-libs/eina-1.7.6

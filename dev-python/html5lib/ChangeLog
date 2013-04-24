@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.13 2013/03/27 13:33:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.14 2013/04/24 08:27:57 ago Exp $
+
+  24 Apr 2013; Agostino Sarubbo <ago@gentoo.org> html5lib-0.95-r1.ebuild:
+  Add ~ppc, wrt bug #461346
 
   27 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> html5lib-0.95-r1.ebuild:
   Add ~arm keyword, wrt bug #461346
