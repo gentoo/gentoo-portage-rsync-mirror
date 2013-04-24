@@ -81,7 +81,7 @@
 -""" % (WCSVERSION, determine_64_bit_int()))
 -write_if_different(join(srcroot, 'src', 'wcsconfig.h'), h_file.getvalue())
 +WCSLIB = pkgconfig('wcslib')
-+WCSVERSION = WCSLIB['version'][0]
++WCSVERSION = Popen(["pkg-config --modversion"],stdout=PIPE, shell=True).communicate()[0].split()
  
  ######################################################################
  # GENERATE DOCSTRINGS IN C

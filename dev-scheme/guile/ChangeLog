@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.102 2013/04/24 21:30:07 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.103 2013/04/24 22:53:08 pchrist Exp $
+
+  24 Apr 2013; Panagiotis Christopoulos <pchrist@gentoo.org>
+  guile-1.8.8-r1.ebuild, +files/guile-1.8.8-makeinfo-5.patch:
+  Trivial fixes for latest automake(1.13) and makeinfo-5*, fix bug #467064 and
+  bug #464044, sed hack by Arfrever Frehtes Taifersar Arahesis [arfrever.fta
+  gmail com] and texinfo patch by Cyprien Nicolas (fulax) [gentoo-bugzie fulax
+  fr]
 
   24 Apr 2013; Panagiotis Christopoulos <pchrist@gentoo.org>
   guile-1.8.8-r1.ebuild:

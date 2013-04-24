@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/atpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.11 2013/02/27 07:29:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.12 2013/04/24 22:45:29 bicatali Exp $
+
+*atpy-0.9.6-r1 (24 Apr 2013)
+
+  24 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> +atpy-0.9.6-r1.ebuild,
+  metadata.xml:
+  Switched to distutils-r1 and virtual/pyfits
 
   27 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> -atpy-0.9.5.3.ebuild:
   Drop old

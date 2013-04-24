@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.1 2013/04/12 03:27:55 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.3 2013/04/24 22:53:28 zerochaos Exp $
 
 EAPI="5"
 
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}
 		sys-apps/ethtool
 		sys-apps/usbutils
 		sys-apps/pciutils )
-	net-misc/ieee-oui
+	sys-apps/hwids
 	airdrop-ng? ( net-wireless/lorcon[python] )"
 
 S="${WORKDIR}/${PN}"
@@ -66,6 +66,9 @@ src_install() {
 		cd "${S}/scripts/airdrop-ng"
 		emake prefix="${ED}/usr" install
 	fi
+
+	#we don't need aircrack-ng's oui updater, we have our own
+	rm "${ED}"/usr/sbin/airodump-ng-oui-update
 }
 
 pkg_postinst() {

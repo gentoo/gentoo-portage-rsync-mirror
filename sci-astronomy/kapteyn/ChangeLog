@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/kapteyn
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.11 2012/08/05 17:57:22 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.12 2013/04/24 22:32:19 bicatali Exp $
+
+*kapteyn-2.2-r1 (24 Apr 2013)
+
+  24 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> +kapteyn-2.2-r1.ebuild,
+  files/kapteyn-2.2-debundle_wcs.patch:
+  Switched to distutils-r1 and depend on virtual/pyfits
 
   05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> kapteyn-2.2.ebuild:
   keyword amd64-linux, x86-linux

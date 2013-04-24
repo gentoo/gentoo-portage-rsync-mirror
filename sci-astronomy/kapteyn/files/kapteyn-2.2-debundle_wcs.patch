@@ -45,7 +45,7 @@ Patch written by Kacper Kowalik <xarthisius@gentoo.org>
 -include_dirs.append(wcslib_dir)
 +
 +WCSLIB = pkgconfig('wcslib')
-+WCSVERSION = WCSLIB['version'][0]
++WCSVERSION = Popen(["pkg-config --modversion"],stdout=PIPE, shell=True).communicate()[0].split()
 +
 +include_dirs += WCSLIB['include_dirs']
  

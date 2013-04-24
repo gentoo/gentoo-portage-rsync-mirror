@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.72 2013/04/12 03:27:55 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.74 2013/04/24 22:53:28 zerochaos Exp $
+
+  24 Apr 2013; Rick Farina <zerochaos@gentoo.org> aircrack-ng-9999.ebuild:
+  don't install aircrack-ng's tool to update oui file, we already handle that
+  with the package manager
+
+  24 Apr 2013; Rick Farina <zerochaos@gentoo.org> aircrack-ng-9999.ebuild:
+  fix for bug #466270, migrated upstream and ebuild to use hwids instead of
+  ieee-oui package
 
 *aircrack-ng-9999 (12 Apr 2013)
 *aircrack-ng-1.1-r4 (12 Apr 2013)

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<longdescription lang="en">
+<herd>sci</herd>
+<longdescription lang="en">
   A Qt based scientific plotting package written in Python using PyQt. It is
   designed to produce publication ready Postscript output. It provides a GUI,
   command line and scripting interface (based on Python) to its plotting
   facilities.
 </longdescription>
-	<use>
-		<flag name="fits">Add FITS format via <pkg>dev-python/pyfits</pkg></flag>
-	</use>
+<use>
+  <flag name="fits">Add FITS format via <pkg>dev-python/pyfits</pkg></flag>
+</use>
+<upstream>
+  <remote-id type="pypi">veusz</remote-id>
+</upstream>
 </pkgmetadata>

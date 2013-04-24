@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.15 2013/04/24 21:30:07 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.16 2013/04/24 22:53:08 pchrist Exp $
 
 EAPI=3
-WANT_AUTOMAKE=1.12
 inherit eutils autotools flag-o-matic elisp-common
 
 DESCRIPTION="Scheme interpreter"
@@ -29,9 +28,13 @@ SLOT="12"
 MAJOR="1.8"
 
 src_prepare() {
-	#
 	epatch "${FILESDIR}/${P}-fix_guile-config.patch" \
-		"${FILESDIR}"/${P}-gcc46.patch
+		"${FILESDIR}/${P}-gcc46.patch" \
+		"${FILESDIR}/${P}-makeinfo-5.patch"
+	sed \
+		-e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g" \
+		-e "/AM_PROG_CC_STDC/d" \
+		-i guile-readline/configure.in
 	eautoreconf
 }
 

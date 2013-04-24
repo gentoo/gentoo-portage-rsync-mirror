@@ -14,11 +14,14 @@
   and PostgreSQL.
 </longdescription>
 <use>
-  <flag name="fits">
-    Enable support for reading and FITS with <pkg>dev-python/pyfits</pkg>.
-  </flag>
-  <flag name="votable">
-    Enable support for reading and VOTABLE with <pkg>dev-python/vo</pkg>.
-  </flag>
+<flag name="fits">
+  Enable support for reading and FITS with <pkg>dev-python/pyfits</pkg>.
+</flag>
+<flag name="votable">
+  Enable support for reading and VOTABLE with <pkg>dev-python/vo</pkg>.
+</flag>
 </use>
+<upstream>
+  <remote-id type="pypi">ATpy</remote-id>
+</upstream>
 </pkgmetadata>
