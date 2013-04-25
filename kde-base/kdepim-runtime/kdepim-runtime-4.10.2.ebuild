@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.10.2.ebuild,v 1.1 2013/04/06 00:04:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.10.2.ebuild,v 1.2 2013/04/25 10:30:11 kensington Exp $
 
 EAPI=5
 
@@ -33,6 +33,8 @@ RDEPEND="${DEPEND}
 
 # nepomuk_email_feeder moved here in 4.8
 add_blocker kdepim-common-libs 4.7.50
+
+PATCHES=( "${FILESDIR}/${P}-gcc-4.4.patch" )
 
 src_prepare() {
 	sed -e "s:find_package(LibKGAPI QUIET NO_MODULE):macro_optional_find_package(LibKGAPI):g" \
