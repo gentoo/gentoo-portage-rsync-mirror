@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.11 2012/11/02 10:37:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.12 2013/04/25 10:35:50 patrick Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -36,7 +36,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gpsd.patch
 
 	sed -i -e '/CFLAGS/s:-g ::' configure.ac || die #399177
-
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 
