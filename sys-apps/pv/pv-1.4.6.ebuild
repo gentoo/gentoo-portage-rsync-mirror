@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.4.6.ebuild,v 1.6 2013/03/31 10:27:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.4.6.ebuild,v 1.7 2013/04/25 15:29:47 jer Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -39,8 +39,6 @@ src_configure() {
 }
 
 src_test() {
-	if ! has_version sys-apps/usleep; then
-		sed -i -e 's:usleep 200000 || ::g' tests/019-remote-cksum || die
-	fi
+	sed -i -e 's:usleep 200000 || ::g' tests/019-remote-cksum || die
 	default
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.05.ebuild,v 1.3 2013/04/06 21:22:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.05.ebuild,v 1.4 2013/04/25 15:18:00 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,8 @@ RDEPEND="
 	dev-perl/perl-tk
 	dev-perl/Config-Simple
 	dev-perl/X11-Protocol
-	x11-apps/xlsfonts"
+	x11-apps/xlsfonts
+	x11-terms/xterm"
 DEPEND="
 	${RDEPEND}
 	dev-perl/File-Which
