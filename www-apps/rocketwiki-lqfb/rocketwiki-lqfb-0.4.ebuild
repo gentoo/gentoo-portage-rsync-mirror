@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rocketwiki-lqfb/rocketwiki-lqfb-0.4.ebuild,v 1.1 2013/04/09 20:34:25 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rocketwiki-lqfb/rocketwiki-lqfb-0.4.ebuild,v 1.2 2013/04/25 19:56:46 tupone Exp $
 
 EAPI=4
 
+inherit eutils
 MY_P=${PN}-v${PV}
 
 DESCRIPTION="Small parser which translates a wiki dialect to HTML"
@@ -21,6 +22,10 @@ DEPEND="${RDEPEND}
 	dev-lang/ghc"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-utf8.patch
+}
 
 src_install() {
 	dobin ${PN}{,-compat}

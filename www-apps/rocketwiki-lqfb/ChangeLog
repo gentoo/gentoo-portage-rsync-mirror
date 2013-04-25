@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rocketwiki-lqfb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rocketwiki-lqfb/ChangeLog,v 1.1 2013/04/09 20:34:25 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rocketwiki-lqfb/ChangeLog,v 1.2 2013/04/25 19:56:46 tupone Exp $
+
+  25 Apr 2013; Alfredo Tupone <tupone@gentoo.org> rocketwiki-lqfb-0.4.ebuild,
+  +files/rocketwiki-lqfb-0.4-utf8.patch:
+  Enabling utf-8 support
 
 *rocketwiki-lqfb-0.4 (09 Apr 2013)
 

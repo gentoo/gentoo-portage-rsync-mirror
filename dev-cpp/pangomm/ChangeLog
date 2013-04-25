@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.61 2013/03/05 23:11:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.62 2013/04/25 19:46:40 pacho Exp $
+
+*pangomm-2.34.0 (25 Apr 2013)
+
+  25 Apr 2013; Pacho Ramos <pacho@gentoo.org> +pangomm-2.34.0.ebuild:
+  Version bump
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -pangomm-2.28.2.ebuild,
   -pangomm-2.28.3.ebuild:
@@ -219,4 +224,3 @@
   08 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +pangomm-2.14.0.ebuild:
   New package for GNOME 2.24, pango bindings splitted off gtkmm sources.
-

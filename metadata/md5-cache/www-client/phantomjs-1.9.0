@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=media-libs/fontconfig media-libs/freetype
+DESCRIPTION=A headless WebKit scriptable with a JavaScript API.
+EAPI=5
+HOMEPAGE=http://phantomjs.org/
+IUSE=examples
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=media-libs/fontconfig media-libs/freetype
+SLOT=0
+SRC_URI=https://phantomjs.googlecode.com/files/phantomjs-1.9.0-source.zip
+_md5_=1df5db7c0c103c042766cda954e0874d

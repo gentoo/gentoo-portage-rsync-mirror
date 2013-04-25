@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.1 2013/04/22 17:07:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.3 2013/04/25 19:46:07 xmw Exp $
 
 EAPI=5
 
@@ -13,9 +13,10 @@ SRC_URI="mirror://sourceforge/oyranos/Oyranos/Oyranos%200.4/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X cairo cups doc exif fltk qt4 test"
+IUSE="X cairo cups doc exif fltk qt4 raw test"
 
 RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
+	dev-libs/yajl[${MULTILIB_USEDEP}]
 	media-libs/icc-profiles-basiccolor-printing2009
 	media-libs/icc-profiles-basiccolor-printing2009
 	>=media-libs/libXcm-0.5.2[${MULTILIB_USEDEP}]
@@ -28,6 +29,7 @@ RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
 		cairo? ( x11-libs/cairo ) 
 		cups? ( net-print/cups )
 		qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
+		raw? ( media-libs/libraw )
 		)
 	amd64? ( 
 		abi_x86_64? (
@@ -37,6 +39,7 @@ RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
 			cairo? ( x11-libs/cairo ) 
 			cups? ( net-print/cups )
 			qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
+			raw? ( media-libs/libraw )
 		)
 		abi_x86_32? (
 			app-emulation/emul-linux-x86-baselibs
@@ -46,14 +49,14 @@ RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
 		)
 	)
 	media-gfx/graphviz
-	dev-libs/yajl
 	exif? ( media-gfx/exiv2 )
 	fltk? ( x11-libs/fltk:1 )"
 DEPEND="${RDEPEND}
 	app-doc/doxygen"
 
 RESTRICT="test"
-REQUIRED_USE="amd64? ( exif? ( !abi_x86_32 ) )"
+REQUIRED_USE="amd64? ( exif? ( !abi_x86_32 ) 
+	raw? ( !abi_x86_32 ) )"
 CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindXcm FindCUPS"
 
 src_prepare() {
@@ -95,7 +98,7 @@ src_prepare() {
 		$(usex exif -DWANT_EXIV2=1 "")
 		$(usex fltk -DWANT_FLTK=1 "")
 		$(usex qt4 -DWANT_QT4=1 "")
-		-DWANT_LIBRAW=1
+		$(usex raw -DWANT_LIBRAW=1 "")
 	)
 }
 

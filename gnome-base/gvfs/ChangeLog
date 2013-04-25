@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.214 2013/04/09 16:43:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.215 2013/04/25 20:00:34 pacho Exp $
+
+*gvfs-1.16.1 (25 Apr 2013)
+
+  25 Apr 2013; Pacho Ramos <pacho@gentoo.org> +gvfs-1.16.1.ebuild,
+  -gvfs-1.12.3.ebuild:
+  Version bump, rely on libgcrypt.m4 provided by libgcrypt to be sure we use
+  latest upstream file, drop expose archive backend changes as upstream
+  disagrees with its utility
+  (https://bugzilla.gnome.org/show_bug.cgi?id=602147#c9) and me too. Drop old.
 
   09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gvfs-1.12.3-r1.ebuild:
   Stable for sh, wrt bug #458984

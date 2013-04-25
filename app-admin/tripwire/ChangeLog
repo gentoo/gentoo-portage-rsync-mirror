@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tripwire
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.47 2012/09/20 19:31:43 nimiux Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.48 2013/04/25 19:40:49 nimiux Exp $
+
+  25 Apr 2013; Chema Alonso <nimiux@gentoo.org> -tripwire-2.4.2.ebuild,
+  -tripwire-2.4.2-r1.ebuild, -files/tripwire-2.4.2-version.patch:
+  Drop old versions
 
   20 Sep 2012; Chema Alonso <nimiux@gentoo.org>
   -files/tripwire-2.3.0-50-rfc822.patch, -files/tripwire-2.3.1-2-fhs.patch,
