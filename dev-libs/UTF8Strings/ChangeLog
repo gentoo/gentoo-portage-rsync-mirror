@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/UTF8Strings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.10 2013/03/18 14:49:19 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.11 2013/04/25 17:06:40 nimiux Exp $
+
+  25 Apr 2013; Chema Alonso <nimiux@gentoo.org> UTF8Strings-1.13.2.ebuild:
+  Stable for amd64 wrt bug #464802
 
 *UTF8Strings-1.13.2 (18 Mar 2013)
 
