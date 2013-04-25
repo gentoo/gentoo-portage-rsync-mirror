@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/cmockery-0.1.2.ebuild,v 1.11 2012/05/20 08:19:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/cmockery-0.1.2.ebuild,v 1.12 2013/04/25 18:29:10 radhermit Exp $
 
 EAPI=4
 
@@ -15,11 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ~hppa ppc ppc64 ~s390 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="examples static-libs"
 
-DEPEND=""
-RDEPEND=""
-
 src_prepare() {
-	sed -i -e "/dist_doc_DATA/{N;d}" Makefile.am
+	sed -i "/dist_doc_DATA/{N;d}" Makefile.am || die
+	sed -i "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" configure.ac || die
 	AT_M4DIR="m4" eautoreconf
 }
 

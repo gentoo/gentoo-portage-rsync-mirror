@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/socketpool-0.5.2-r1.ebuild,v 1.4 2013/04/24 21:03:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/socketpool-0.5.2-r1.ebuild,v 1.5 2013/04/25 18:20:02 pinkbyte Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2} pypy{1_9,2_0} )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="examples"
-LICENSE="MIT"
+LICENSE="|| ( MIT public-domain )"
 SLOT="0"
 
 RDEPEND="dev-python/gevent"

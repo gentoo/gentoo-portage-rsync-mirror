@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/gnome-pty-helper-0.32.2.ebuild,v 1.9 2012/10/28 16:34:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/gnome-pty-helper-0.34.4.ebuild,v 1.1 2013/04/25 18:19:11 pacho Exp $
 
-EAPI="4"
+EAPI="5"
 GNOME_ORG_MODULE="vte"
 
 inherit gnome.org
@@ -13,7 +13,7 @@ HOMEPAGE="http://git.gnome.org/browse/vte/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="+hardened"
 
 # gnome-pty-helper was spit out with 0.27.90
@@ -22,7 +22,7 @@ DEPEND=""
 
 S="${WORKDIR}/vte-${PV}/gnome-pty-helper"
 
-pkg_setup() {
+src_prepare() {
 	# As recommended by upstream (/usr/libexec/$PN is a setgid binary)
 	if use hardened; then
 		export SUID_CFLAGS="-fPIE ${SUID_CFLAGS}"

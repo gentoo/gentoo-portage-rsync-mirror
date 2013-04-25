@@ -1,0 +1,21 @@
+--- python-mpd-0.5.1/setup.py	2013-03-21 23:45:53.000000000 +0400
++++ python-mpd-0.5.1/setup.py	2013-04-25 22:01:52.000000000 +0400
+@@ -6,6 +6,9 @@
+ import sys,os
+ import mpd
+ 
++if sys.version_info[0] == 2:
++    from io import open
++
+ CLASSIFIERS = [
+     "Development Status :: 5 - Production/Stable",
+     "Intended Audience :: Developers",
+@@ -45,7 +48,7 @@
+         sys.exit(errno)
+ 
+ def read(fname):
+-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
++    return open(os.path.join(os.path.dirname(__file__), fname), encoding="utf8").read()
+ 
+ VERSION = ".".join(map(str, mpd.VERSION))
+ 

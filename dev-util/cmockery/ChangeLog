@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmockery
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.11 2012/05/20 08:19:21 halcy0n Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.12 2013/04/25 18:29:10 radhermit Exp $
+
+  25 Apr 2013; Tim Harder <radhermit@gentoo.org> cmockery-0.1.2.ebuild:
+  Fix automake failure (bug #466972) and remove empty DEPEND/RDEPEND.
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> cmockery-0.1.2.ebuild:
   Stable for ppc64; bug #382499
