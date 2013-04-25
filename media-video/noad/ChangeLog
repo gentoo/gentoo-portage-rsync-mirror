@@ -1,6 +1,10 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.56 2013/04/04 10:49:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.57 2013/04/25 05:03:28 ssuominen Exp $
+
+  25 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> noad-0.7.3-r1.ebuild:
+  Fix building with media-gfx/imagemagick >= 6.8 wrt #467134. Fix building with
+  recent media-video/ffmpeg (missing -lavutil linkage)
 
   04 Apr 2013; Alexis Ballier <aballier@gentoo.org>
   +files/patches-0.7.x/noad-0.7.3-ffmpeg_detection.diff:

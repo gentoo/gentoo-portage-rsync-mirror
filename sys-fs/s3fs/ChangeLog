@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/s3fs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.23 2013/04/09 18:24:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.24 2013/04/25 05:24:26 radhermit Exp $
+
+*s3fs-1.67 (25 Apr 2013)
+
+  25 Apr 2013; Tim Harder <radhermit@gentoo.org> +s3fs-1.67.ebuild:
+  Version bump.
 
   09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> s3fs-1.63.ebuild:
   Stable for x86, wrt bug #464480
