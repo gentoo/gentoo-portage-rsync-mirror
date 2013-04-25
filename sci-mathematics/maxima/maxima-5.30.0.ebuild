@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.30.0.ebuild,v 1.1 2013/04/20 14:50:53 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.30.0.ebuild,v 1.2 2013/04/25 03:09:10 grozin Exp $
 
 EAPI=5
 
@@ -75,7 +75,7 @@ RDEPEND="${RDEPEND}
 	${DEF_DEP}"
 
 DEPEND="${RDEPEND}
-	sys-apps/texinfo"
+	<sys-apps/texinfo-5.0"
 
 TEXMF="${EPREFIX}"/usr/share/texmf-site
 
