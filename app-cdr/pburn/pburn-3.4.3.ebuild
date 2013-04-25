@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/pburn/pburn-3.4.3.ebuild,v 1.2 2012/03/21 06:52:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/pburn/pburn-3.4.3.ebuild,v 1.3 2013/04/25 14:28:43 ssuominen Exp $
 
 # wget --user puppy --password linux "http://www.meownplanet.net/zigbert/${P}.pet"
 
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-cdr/cddetect
+RDEPEND="app-admin/killproc
+	app-cdr/cddetect
 	app-cdr/dvd+rw-tools
 	sys-apps/hotplug2stdout
-	sys-apps/usleep
 	virtual/cdrtools
 	>=x11-misc/gtkdialog-0.8.0"
 DEPEND="app-arch/pet2tgz"
@@ -34,6 +34,8 @@ src_prepare() {
 	#!/bin/bash
 	"/usr/share/${PN}/${PN}" "\$@"
 	EOF
+
+	sed -i -e 's:usleep:/sbin/&:' usr/local/pburn/box_splash || die
 }
 
 src_install() {

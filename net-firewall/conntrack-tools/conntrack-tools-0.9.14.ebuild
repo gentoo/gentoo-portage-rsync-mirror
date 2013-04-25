@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.14.ebuild,v 1.8 2012/09/11 16:20:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.14.ebuild,v 1.9 2013/04/25 14:14:01 jer Exp $
 
 EAPI="2"
-inherit linux-info eutils
+inherit eutils linux-info
 
 DESCRIPTION="Connection tracking userspace tools"
 HOMEPAGE="http://conntrack-tools.netfilter.org"
@@ -46,6 +46,10 @@ pkg_setup() {
 		linux_chkconfig_present "NF_CONNTRACK_IPV6" || \
 		ewarn "CONFIG_NF_CONNTRACK_IPV4 or CONFIG_NF_CONNTRACK_IPV6 " \
 			"are not set when one at least should be."
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-include.patch
 }
 
 src_install() {

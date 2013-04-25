@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/atokx3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.16 2013/04/21 09:54:17 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.17 2013/04/25 14:22:01 matsuu Exp $
+
+*atokx3-3.0.0-r9 (25 Apr 2013)
+
+  25 Apr 2013; MATSUU Takuto <matsuu@gentoo.org> +atokx3-3.0.0-r9.ebuild:
+  Support multilib packages aside emul-linux. The patch was submitted by
+  Michał Górny. Fixed dependency. Fixed initial install issue.
 
   21 Apr 2013; Fabio Erculiani <lxnay@gentoo.org> atokx3-3.0.0-r6.ebuild,
   atokx3-3.0.0-r7.ebuild, atokx3-3.0.0-r8.ebuild:
