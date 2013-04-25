@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.146 2013/04/22 20:32:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.147 2013/04/25 16:27:34 bicatali Exp $
+
+*matplotlib-1.2.1 (25 Apr 2013)
+
+  25 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> +matplotlib-1.2.1.ebuild,
+  -files/matplotlib-1.0.1-libpng15.patch, -files/matplotlib-1.0.1-linux3.patch,
+  -files/matplotlib-1.0.1-sphinx.patch, -matplotlib-1.0.1-r1.ebuild,
+  -matplotlib-1.1.0.ebuild, -matplotlib-1.2.0-r1.ebuild,
+  -matplotlib-1.2.0.ebuild:
+  Version bump
 
   22 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Added remote-id for upstream tracking
