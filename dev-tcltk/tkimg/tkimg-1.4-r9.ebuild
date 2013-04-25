@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r8.ebuild,v 1.2 2013/04/12 09:37:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r9.ebuild,v 1.1 2013/04/25 12:04:26 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
 	media-libs/tiff:0=
-	media-libs/libpng:0=
+	>=media-libs/libpng-1.6:0=
 	>=sys-libs/zlib-1.2.7:=
 	x11-libs/libX11
 	virtual/jpeg"
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 		media-fonts/font-cursor-misc )"
 
 # Fails with jpeg-turbo silently, #386253
-RESTRICT="test"
+#RESTRICT="test"
 
 S="${WORKDIR}/${MYP}"
 
@@ -45,6 +45,7 @@ src_prepare() {
 		"${WORKDIR}"/${P}-jpeg.patch \
 		"${WORKDIR}"/${P}-tiff.patch \
 		"${WORKDIR}"/${P}-png.patch \
+		"${FILESDIR}"/${P}-png2.patch \
 		"${WORKDIR}"/${P}-zlib.patch
 
 	find compat/{libjpeg,libpng,zlib,libtiff} -delete
