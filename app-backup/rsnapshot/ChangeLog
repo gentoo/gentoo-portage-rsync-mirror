@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/rsnapshot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/ChangeLog,v 1.34 2013/03/17 15:13:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/ChangeLog,v 1.35 2013/04/25 07:16:54 jlec Exp $
+
+*rsnapshot-1.3.1-r2 (25 Apr 2013)
+
+  25 Apr 2013; Justin Lecher <jlec@gentoo.org> +rsnapshot-1.3.1-r2.ebuild:
+  Add dev-perl/Lchown as dep, #342643
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20100608.ebuild,v 1.2 2012/12/14 11:09:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20100608.ebuild,v 1.3 2013/04/25 07:27:21 gienah Exp $
 
-inherit eutils
+inherit base eutils
 
 DESCRIPTION="Standard ML optimizing compiler and libraries"
 BASE_URI="mirror://sourceforge/${PN}"
@@ -31,6 +31,10 @@ QA_PRESTRIPPED="binary? (
 	usr/bin/mlyacc
 	usr/lib/mlton/mlton-compile
 )"
+
+# Fix Bug 452558 - dev-lang/mlton-20100608 fails to build, unknown type name '__gmp_const'
+# Fixed by upstream: https://github.com/MLton/mlton/commit/a658a1f4a76a01f568116598800f49b80cf8ee1a
+PATCHES=("${FILESDIR}/${P}-gmp-const.patch")
 
 src_compile() {
 	if use !binary; then
