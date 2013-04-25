@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.11 2013/04/18 14:23:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.12 2013/04/25 17:39:47 ulm Exp $
 
 EAPI=5
+WANT_AUTOMAKE="1.12"
 
 inherit autotools eutils flag-o-matic multilib multilib-minimal
 
