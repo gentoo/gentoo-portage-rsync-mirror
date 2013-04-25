@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-1.4.1.ebuild,v 1.2 2013/04/25 13:31:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-1.4.1.ebuild,v 1.3 2013/04/25 15:42:24 jer Exp $
 
 EAPI=5
 inherit autotools eutils linux-info
@@ -58,6 +58,9 @@ src_prepare() {
 	eautoreconf
 }
 
+src_configure() {
+	econf --disable-silent-rules
+}
 src_compile() {
 	default
 	use doc && emake -C doc/manual
