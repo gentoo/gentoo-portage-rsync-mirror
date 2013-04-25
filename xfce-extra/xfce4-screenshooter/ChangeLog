@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-screenshooter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.101 2012/11/28 12:19:26 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.102 2013/04/25 08:52:42 ssuominen Exp $
+
+  25 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-screenshooter-1.8.1.ebuild:
+  Use AC_CONFIG_HEADERS instead of AM_CONFIG_HEADER for automake-1.13
+  compability.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-screenshooter-1.8.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/xfce4-screenshooter-1.8.1.ebuild,v 1.8 2012/11/28 12:19:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/xfce4-screenshooter-1.8.1.ebuild,v 1.9 2013/04/25 08:52:42 ssuominen Exp $
 
 EAPI=5
 EAUTORECONF=yes
@@ -43,5 +43,7 @@ pkg_setup() {
 src_prepare() {
 	# http://bugzilla.xfce.org/show_bug.cgi?id=8822
 	sed -i -e 's:$(datadir)/xfce4/doc:$(docdir)/html:' Makefile.am || die
+	# http://bugzilla.xfce.org/show_bug.cgi?id=10030
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 	xfconf_src_prepare
 }
