@@ -1,0 +1,10 @@
+# systemd tmpfile settings for nginx
+# See tmpfiles.d(5) for details
+
+d /var/log/nginx 0755 root root -
+d /var/tmp/nginx 0755 nginx nginx
+d /var/tmp/nginx/client 0755 nginx nginx
+d /var/tmp/nginx/proxy 0755 nginx nginx
+d /var/tmp/nginx/fastcgi 0755 nginx nginx
+d /var/tmp/nginx/scgi 0755 nginx nginx
+d /var/tmp/nginx/uwsgi 0755 nginx nginx

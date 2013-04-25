@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.3.11.ebuild,v 1.2 2013/02/18 14:30:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.0.ebuild,v 1.1 2013/04/25 06:45:08 hollow Exp $
 
-EAPI="4"
+EAPI="5"
 
 # Maintainer notes:
 # - http_rewrite-independent pcre-support makes sense for matching locations without an actual rewrite
@@ -18,8 +18,8 @@ EAPI="4"
 GENTOO_DEPEND_ON_PERL="no"
 
 # syslog
-SYSLOG_MODULE_PV="0.24"
-SYSLOG_MODULE_NGINX_PV="1.3.11"
+SYSLOG_MODULE_PV="0.25"
+SYSLOG_MODULE_NGINX_PV="1.3.14"
 SYSLOG_MODULE_P="ngx_syslog-${SYSLOG_MODULE_PV}"
 SYSLOG_MODULE_URI="https://github.com/yaoweibin/nginx_syslog_patch/archive/v${SYSLOG_MODULE_PV}.tar.gz"
 SYSLOG_MODULE_WD="${WORKDIR}/nginx_syslog_patch-${SYSLOG_MODULE_PV}"
@@ -49,16 +49,10 @@ HTTP_PUSH_MODULE_URI="http://pushmodule.slact.net/downloads/nginx_http_push_modu
 HTTP_PUSH_MODULE_WD="${WORKDIR}/nginx_http_push_module-${HTTP_PUSH_MODULE_PV}"
 
 # http_cache_purge (http://labs.frickle.com/nginx_ngx_cache_purge/, BSD-2 license)
-HTTP_CACHE_PURGE_MODULE_PV="2.0"
+HTTP_CACHE_PURGE_MODULE_PV="2.1"
 HTTP_CACHE_PURGE_MODULE_P="ngx_http_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}"
 HTTP_CACHE_PURGE_MODULE_URI="http://labs.frickle.com/files/ngx_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}.tar.gz"
 HTTP_CACHE_PURGE_MODULE_WD="${WORKDIR}/ngx_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}"
-
-# http_upload (http://www.grid.net.ru/nginx/upload.en.html, BSD license)
-HTTP_UPLOAD_MODULE_PV="2.2.0"
-HTTP_UPLOAD_MODULE_P="ngx_http_upload-${HTTP_UPLOAD_MODULE_PV}"
-HTTP_UPLOAD_MODULE_URI="http://www.grid.net.ru/nginx/download/nginx_upload_module-${HTTP_UPLOAD_MODULE_PV}.tar.gz"
-HTTP_UPLOAD_MODULE_WD="${WORKDIR}/nginx_upload_module-${HTTP_UPLOAD_MODULE_PV}"
 
 # http_slowfs_cache (http://labs.frickle.com/nginx_ngx_slowfs_cache/, BSD-2 license)
 HTTP_SLOWFS_CACHE_MODULE_PV="1.9"
@@ -84,7 +78,7 @@ HTTP_AUTH_PAM_MODULE_P="ngx_http_auth_pam-${HTTP_AUTH_PAM_MODULE_PV}"
 HTTP_AUTH_PAM_MODULE_URI="http://web.iti.upv.es/~sto/nginx/ngx_http_auth_pam_module-${HTTP_AUTH_PAM_MODULE_PV}.tar.gz"
 HTTP_AUTH_PAM_MODULE_WD="${WORKDIR}/ngx_http_auth_pam_module-${HTTP_AUTH_PAM_MODULE_PV}"
 
-inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user
+inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user systemd
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.org"
@@ -95,7 +89,6 @@ SRC_URI="http://nginx.org/download/${P}.tar.gz
 	nginx_modules_http_headers_more? ( ${HTTP_HEADERS_MORE_MODULE_URI} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
 	nginx_modules_http_push? ( ${HTTP_PUSH_MODULE_URI} -> ${HTTP_PUSH_MODULE_P}.tar.gz )
 	nginx_modules_http_cache_purge? ( ${HTTP_CACHE_PURGE_MODULE_URI} -> ${HTTP_CACHE_PURGE_MODULE_P}.tar.gz )
-	nginx_modules_http_upload? ( ${HTTP_UPLOAD_MODULE_URI} -> ${HTTP_UPLOAD_MODULE_P}.tar.gz )
 	nginx_modules_http_slowfs_cache? ( ${HTTP_SLOWFS_CACHE_MODULE_URI} -> ${HTTP_SLOWFS_CACHE_MODULE_P}.tar.gz )
 	nginx_modules_http_fancyindex? ( ${HTTP_FANCYINDEX_MODULE_URI} -> ${HTTP_FANCYINDEX_MODULE_P}.tar.gz )
 	nginx_modules_http_lua? ( ${HTTP_LUA_MODULE_URI} -> ${HTTP_LUA_MODULE_P}.tar.gz )
@@ -109,14 +102,13 @@ NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_conn map memcached proxy referer rewrite scgi ssi
 split_clients upstream_ip_hash userid uwsgi"
 NGINX_MODULES_OPT="addition dav degradation flv geoip gzip_static image_filter
-mp4 perl random_index realip secure_link stub_status sub xslt"
+mp4 perl random_index realip secure_link spdy stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
 NGINX_MODULES_3RD="
 	http_upload_progress
 	http_headers_more
 	http_push
 	http_cache_purge
-	http_upload
 	http_slowfs_cache
 	http_fancyindex
 	http_lua
@@ -154,6 +146,7 @@ CDEPEND="
 	nginx_modules_http_perl? ( >=dev-lang/perl-5.8 )
 	nginx_modules_http_rewrite? ( >=dev-libs/libpcre-4.2 )
 	nginx_modules_http_secure_link? ( userland_GNU? ( dev-libs/openssl ) )
+	nginx_modules_http_spdy? ( >=dev-libs/openssl-1.0.1c )
 	nginx_modules_http_xslt? ( dev-libs/libxml2 dev-libs/libxslt )
 	nginx_modules_http_lua? ( || ( dev-lang/lua dev-lang/luajit ) )
 	nginx_modules_http_auth_pam? ( virtual/pam )"
@@ -255,11 +248,6 @@ src_configure() {
 		myconf+=" --add-module=${HTTP_CACHE_PURGE_MODULE_WD}"
 	fi
 
-	if use nginx_modules_http_upload; then
-		http_enabled=1
-		myconf+=" --add-module=${HTTP_UPLOAD_MODULE_WD}"
-	fi
-
 	if use nginx_modules_http_slowfs_cache; then
 		http_enabled=1
 		myconf+=" --add-module=${HTTP_SLOWFS_CACHE_MODULE_WD}"
@@ -323,8 +311,8 @@ src_configure() {
 		--prefix="${EPREFIX}"/usr \
 		--conf-path="${EPREFIX}"/etc/${PN}/${PN}.conf \
 		--error-log-path="${EPREFIX}"/var/log/${PN}/error_log \
-		--pid-path="${EPREFIX}"/var/run/${PN}.pid \
-		--lock-path="${EPREFIX}"/var/lock/nginx.lock \
+		--pid-path="${EPREFIX}"/run/${PN}.pid \
+		--lock-path="${EPREFIX}"/run/lock/${PN}.lock \
 		--with-cc-opt="-I${EROOT}usr/include" \
 		--with-ld-opt="-L${EROOT}usr/lib" \
 		--http-log-path="${EPREFIX}"/var/log/${PN}/access_log \
@@ -348,6 +336,9 @@ src_install() {
 	cp "${FILESDIR}"/nginx.conf "${ED}"/etc/nginx/nginx.conf || die
 
 	newinitd "${FILESDIR}"/nginx.initd nginx
+
+	systemd_newtmpfilesd "${FILESDIR}"/nginx.tmpfiles nginx.conf
+	systemd_dounit "${FILESDIR}"/nginx.service
 
 	doman man/nginx.8
 	dodoc CHANGES* README
@@ -379,11 +370,6 @@ src_install() {
 	if use nginx_modules_http_cache_purge; then
 		docinto ${HTTP_CACHE_PURGE_MODULE_P}
 		dodoc "${HTTP_CACHE_PURGE_MODULE_WD}"/{CHANGES,README.md,TODO.md}
-	fi
-
-	if use nginx_modules_http_upload; then
-		docinto ${HTTP_UPLOAD_MODULE_P}
-		dodoc "${HTTP_UPLOAD_MODULE_WD}"/{Changelog,README}
 	fi
 
 	if use nginx_modules_http_slowfs_cache; then

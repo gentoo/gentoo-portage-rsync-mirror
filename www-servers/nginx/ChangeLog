@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.347 2013/04/19 05:28:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.348 2013/04/25 06:45:08 hollow Exp $
+
+*nginx-1.4.0 (25 Apr 2013)
+
+  25 Apr 2013; Benedikt Böhm <hollow@gentoo.org> nginx-1.2.8.ebuild,
+  -nginx-1.3.11.ebuild, -nginx-1.3.15.ebuild, -nginx-1.3.16.ebuild,
+  +nginx-1.4.0.ebuild, +files/nginx.service, +files/nginx.tmpfiles,
+  files/nginx.initd:
+  version bump. fixes #446734, #462214, #467106, #466526, #466246
 
 *nginx-1.3.16 (19 Apr 2013)
 

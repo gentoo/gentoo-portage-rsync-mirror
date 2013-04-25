@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.5.2-r1.ebuild,v 1.1 2013/03/17 12:27:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.5.2-r1.ebuild,v 1.2 2013/04/25 06:35:59 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,6 @@ COMMON_DEPEND="
 	>=dev-qt/qtcore-4.6.1:4
 	>=dev-qt/qtscript-4.6.1:4
 	>=dev-qt/qttest-4.6.1:4
-	>=dev-qt/qtwebkit-4.6.1:4
 	video? ( media-libs/phonon )"
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base

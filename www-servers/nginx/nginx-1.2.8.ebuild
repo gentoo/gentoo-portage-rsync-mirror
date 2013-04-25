@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.2.8.ebuild,v 1.1 2013/04/19 05:08:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.2.8.ebuild,v 1.2 2013/04/25 06:45:08 hollow Exp $
 
-EAPI="4"
+EAPI="5"
 
 # Maintainer notes:
 # - http_rewrite-independent pcre-support makes sense for matching locations without an actual rewrite
@@ -18,8 +18,8 @@ EAPI="4"
 GENTOO_DEPEND_ON_PERL="no"
 
 # syslog
-SYSLOG_MODULE_PV="0.24"
-SYSLOG_MODULE_NGINX_PV="1.2.0"
+SYSLOG_MODULE_PV="0.25"
+SYSLOG_MODULE_NGINX_PV="1.2.7"
 SYSLOG_MODULE_P="ngx_syslog-${SYSLOG_MODULE_PV}"
 SYSLOG_MODULE_URI="https://github.com/yaoweibin/nginx_syslog_patch/archive/v${SYSLOG_MODULE_PV}.tar.gz"
 SYSLOG_MODULE_WD="${WORKDIR}/nginx_syslog_patch-${SYSLOG_MODULE_PV}"
@@ -84,7 +84,7 @@ HTTP_AUTH_PAM_MODULE_P="ngx_http_auth_pam-${HTTP_AUTH_PAM_MODULE_PV}"
 HTTP_AUTH_PAM_MODULE_URI="http://web.iti.upv.es/~sto/nginx/ngx_http_auth_pam_module-${HTTP_AUTH_PAM_MODULE_PV}.tar.gz"
 HTTP_AUTH_PAM_MODULE_WD="${WORKDIR}/ngx_http_auth_pam_module-${HTTP_AUTH_PAM_MODULE_PV}"
 
-inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user
+inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user systemd
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.org"
@@ -323,8 +323,8 @@ src_configure() {
 		--prefix="${EPREFIX}"/usr \
 		--conf-path="${EPREFIX}"/etc/${PN}/${PN}.conf \
 		--error-log-path="${EPREFIX}"/var/log/${PN}/error_log \
-		--pid-path="${EPREFIX}"/var/run/${PN}.pid \
-		--lock-path="${EPREFIX}"/var/lock/nginx.lock \
+		--pid-path="${EPREFIX}"/run/${PN}.pid \
+		--lock-path="${EPREFIX}"/run/lock/${PN}.lock \
 		--with-cc-opt="-I${EROOT}usr/include" \
 		--with-ld-opt="-L${EROOT}usr/lib" \
 		--http-log-path="${EPREFIX}"/var/log/${PN}/access_log \
@@ -348,6 +348,9 @@ src_install() {
 	cp "${FILESDIR}"/nginx.conf "${ED}"/etc/nginx/nginx.conf || die
 
 	newinitd "${FILESDIR}"/nginx.initd nginx
+
+	systemd_newtmpfilesd "${FILESDIR}"/nginx.tmpfiles nginx.conf
+	systemd_dounit "${FILESDIR}"/nginx.service
 
 	doman man/nginx.8
 	dodoc CHANGES* README
