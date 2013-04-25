@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guessit/guessit-0.5.4.ebuild,v 1.1 2013/04/24 06:59:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guessit/guessit-0.5.4.ebuild,v 1.2 2013/04/25 14:50:50 maksbotan Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2} )
@@ -22,9 +22,17 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
 
-# tests are fixed in next release
-RESTRICT="test"
+PATCHES=(
+	"${FILESDIR}"/${P}-python3.patch
+	"${FILESDIR}"/${P}-tests.patch
+)
+
+python_prepare_all() {
+	distutils-r1_python_prepare_all
+	#Patch fails to create this file, so use touch
+	touch tests/__init__.py || die
+}
 
 python_test() {
-	esetup.py test
+	PYTHONPATH="${S}/tests" esetup.py test
 }

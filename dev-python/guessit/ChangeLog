@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/guessit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guessit/ChangeLog,v 1.1 2013/04/24 06:59:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guessit/ChangeLog,v 1.2 2013/04/25 14:50:50 maksbotan Exp $
+
+  25 Apr 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/guessit-0.5.4-python3.patch, +files/guessit-0.5.4-tests.patch,
+  guessit-0.5.4.ebuild:
+  Fix compilation with python3 and tests
 
 *guessit-9999 (24 Apr 2013)
 *guessit-0.5.4 (24 Apr 2013)
