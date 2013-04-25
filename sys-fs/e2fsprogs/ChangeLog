@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.257 2013/03/07 12:18:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.258 2013/04/25 02:09:13 jer Exp $
+
+  25 Apr 2013; Jeroen Roovers <jer@gentoo.org> e2fsprogs-1.42.7.ebuild:
+  Stable for HPPA (bug #467008).
 
 *e2fsprogs-1.42.7 (07 Mar 2013)
 
