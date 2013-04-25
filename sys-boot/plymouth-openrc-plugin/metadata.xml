@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
 <maintainer>
-	<email>enrico.tagliavini@gmail.com</email>
-	<name>Enrico Tagliavini</name>
+	<email>maintainer-needed@gentoo.org</email>
+	<name>Default maintainer for orphaned packages</name>
 </maintainer>
 </pkgmetadata>
