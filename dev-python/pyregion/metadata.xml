@@ -6,4 +6,7 @@
   pyregion is a python module to parse ds9 region files. It also
   support ciao region files, and can draw regions using matplotlib.
 </longdescription>
+<upstream>
+  <remote-id type="pypi">pyregion</remote-id>
+</upstream>
 </pkgmetadata>
