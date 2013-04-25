@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.36 2013/04/13 20:52:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.37 2013/04/25 07:31:49 polynomial-c Exp $
+
+  25 Apr 2013; Lars Wendler <polynomial-c@gentoo.org>
+  kbuild-0.1.9998_pre20120806.ebuild:
+  Fixed eautoreconf with >=automake-1.13 (bug #467104).
 
   13 Apr 2013; Lars Wendler <polynomial-c@gentoo.org>
   -kbuild-0.1.9998_pre20110817.ebuild, -kbuild-0.1.9998_pre20110817-r1.ebuild:

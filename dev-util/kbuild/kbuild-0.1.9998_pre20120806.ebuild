@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20120806.ebuild,v 1.5 2013/04/09 18:26:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20120806.ebuild,v 1.6 2013/04/25 07:31:49 polynomial-c Exp $
 
 EAPI=4
 
@@ -38,6 +38,8 @@ src_prepare() {
 	cd "${S}/src/kmk" || die
 	eautoreconf
 	cd "${S}/src/sed" || die
+	# AM_CONFIG_HEADER is obsolete since automake-1.13 (bug #467104)
+	sed 's@AM_CONFIG_HEADER@AC_CONFIG_HEADERS@' -i configure.ac || die
 	eautoreconf
 
 	sed -e "s@_LDFLAGS\.${ARCH}*.*=@& ${LDFLAGS}@g" \
