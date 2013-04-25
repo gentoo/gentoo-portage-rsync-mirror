@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-fontsextra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.72 2013/04/22 08:05:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.73 2013/04/25 21:27:15 ago Exp $
+
+  25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-fontsextra-2012.ebuild:
+  Stable for sh, wrt bug #449298
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-fontsextra-2012.ebuild:
   Stable for s390, wrt bug #449298

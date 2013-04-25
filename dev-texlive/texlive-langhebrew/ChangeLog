@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langhebrew
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhebrew/ChangeLog,v 1.60 2013/04/22 08:06:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhebrew/ChangeLog,v 1.61 2013/04/25 21:28:15 ago Exp $
+
+  25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-langhebrew-2012.ebuild:
+  Stable for sh, wrt bug #449298
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-langhebrew-2012.ebuild:
   Stable for s390, wrt bug #449298

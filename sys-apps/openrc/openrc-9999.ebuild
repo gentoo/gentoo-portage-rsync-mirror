@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.120 2013/04/24 05:33:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.121 2013/04/25 21:04:45 williamh Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
 
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git"
+	EGIT_REPO_URI="git://github.com/OpenRC/${PN}.git"
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"

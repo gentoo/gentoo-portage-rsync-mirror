@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.0.ebuild,v 1.1 2013/04/25 19:36:22 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.0.ebuild,v 1.2 2013/04/25 21:11:29 zx2c4 Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND="media-libs/fontconfig media-libs/freetype"
+DEPEND="media-libs/fontconfig media-libs/freetype dev-libs/icu"
 RDEPEND="${DEPEND}"
 
 
