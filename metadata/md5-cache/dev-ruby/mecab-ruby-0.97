@@ -7,5 +7,5 @@ LICENSE=|| ( BSD LGPL-2.1 GPL-2 )
 RDEPEND=>=app-text/mecab-0.97 =dev-lang/ruby-1.8*
 SLOT=0
 SRC_URI=mirror://sourceforge/mecab/mecab-ruby-0.97.tar.gz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	ruby	d0d4dafe867eb79ce8953e27d88fc00f	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	ruby	d0d4dafe867eb79ce8953e27d88fc00f	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=1e8873367345d085bdb659bee3786983

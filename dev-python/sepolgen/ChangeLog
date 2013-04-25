@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.29 2013/04/11 17:52:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.30 2013/04/25 18:58:10 swift Exp $
+
+*sepolgen-1.1.9 (25 Apr 2013)
+
+  25 Apr 2013; Sven Vermeulen <swift@gentoo.org> +sepolgen-1.1.9.ebuild:
+  New upstream release
 
   11 Apr 2013; Sven Vermeulen <swift@gentoo.org> sepolgen-1.1.8-r1.ebuild:
   Stabilize

@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gutenprint
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.48 2012/12/30 15:03:55 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.49 2013/04/25 18:43:59 radhermit Exp $
+
+  25 Apr 2013; Tim Harder <radhermit@gentoo.org> gutenprint-5.2.9.ebuild:
+  Fix autoreconf failures with automake-1.13 (bug #467206).
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gutenprint-5.2.9.ebuild:
   Stable for alpha, wrt bug #442448

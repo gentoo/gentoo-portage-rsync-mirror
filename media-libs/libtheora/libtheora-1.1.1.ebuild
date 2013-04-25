@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.12 2013/04/11 03:02:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.13 2013/04/25 18:54:13 radhermit Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -34,6 +34,10 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.0_beta2-flags.patch \
 		"${FILESDIR}"/${P}-libpng16.patch #465450
+
+	# bug 467006
+	sed -i "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" configure.ac || die
+
 	AT_M4DIR=m4 eautoreconf
 }
 

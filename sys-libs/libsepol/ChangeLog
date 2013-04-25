@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsepol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.54 2012/12/30 15:19:13 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.55 2013/04/25 18:50:52 swift Exp $
+
+*libsepol-2.1.9-r1 (25 Apr 2013)
+
+  25 Apr 2013; Sven Vermeulen <swift@gentoo.org> +libsepol-2.1.9-r1.ebuild:
+  New upstream release
 
   30 Dec 2012; Sven Vermeulen libsepol-2.1.8-r1.ebuild:
   Stabilize

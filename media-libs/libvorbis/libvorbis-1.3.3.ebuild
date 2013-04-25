@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.3.3.ebuild,v 1.12 2013/02/21 18:11:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.3.3.ebuild,v 1.13 2013/04/25 18:50:00 radhermit Exp $
 
 EAPI=4
 inherit autotools
@@ -23,6 +23,7 @@ src_prepare() {
 	sed -i \
 		-e '/CFLAGS/s:-O20::' \
 		-e '/CFLAGS/s:-mcpu=750::' \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
 		configure.ac || die
 
 	AT_M4DIR="m4" eautoreconf

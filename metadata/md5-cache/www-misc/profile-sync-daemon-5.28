@@ -8,5 +8,5 @@ LICENSE=GPL-2 GPL-3
 RDEPEND=app-shells/bash net-misc/rsync cron? ( virtual/cron )
 SLOT=0
 SRC_URI=https://github.com/graysky2/profile-sync-daemon/archive/v5.28.tar.gz -> profile-sync-daemon-5.28.tar.gz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=b35b4b0971fefd1a0d91003ffa4d967f

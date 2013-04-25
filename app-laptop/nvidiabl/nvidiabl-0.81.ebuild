@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.81.ebuild,v 1.1 2013/02/09 19:43:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.81.ebuild,v 1.2 2013/04/25 18:36:57 angelos Exp $
 
 EAPI=4
 inherit linux-mod
@@ -17,6 +17,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+RESTRICT="test"
 
 BUILD_TARGETS="modules"
 MODULE_NAMES="nvidiabl()"

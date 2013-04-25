@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.0.ebuild,v 1.4 2013/04/07 09:36:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.2.ebuild,v 1.1 2013/04/25 19:25:11 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit gnome2 python-any-r1
+inherit eutils gnome2 python-any-r1
 
 DESCRIPTION="An HTTP library implementation in C"
 HOMEPAGE="http://live.gnome.org/LibSoup"
@@ -17,12 +17,14 @@ SLOT="2.4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="debug +introspection samba ssl test"
 
-RDEPEND=">=dev-libs/glib-2.35.0:2
+RDEPEND="
+	>=dev-libs/glib-2.36.0:2
 	>=dev-libs/libxml2-2:2
 	dev-db/sqlite:3
 	>=net-libs/glib-networking-2.30.0[ssl?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
-	samba? ( net-fs/samba )"
+	samba? ( net-fs/samba )
+"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	>=dev-util/intltool-0.35
@@ -43,7 +45,6 @@ src_prepare() {
 		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
 			|| die "sed failed"
 	fi
-
 	gnome2_src_prepare
 }
 
@@ -59,5 +60,5 @@ src_configure() {
 		--with-gnome \
 		--without-apache-httpd \
 		$(use_enable introspection) \
-		$(use_with samba ntlm-auth ${EPREFIX}/usr/bin/ntlm_auth)
+		$(use_with samba ntlm-auth '${EPREFIX}'/usr/bin/ntlm_auth)
 }

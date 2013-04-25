@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.86 2013/01/04 14:45:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.87 2013/04/25 19:10:59 radhermit Exp $
+
+  25 Apr 2013; Tim Harder <radhermit@gentoo.org> gd-2.0.35-r3.ebuild:
+  Fix autoreconf failures with automake-1.13 (bug #466996).
 
   04 Jan 2013; Ulrich Müller <ulm@gentoo.org> gd-2.0.35-r3.ebuild:
   Fix LICENSE, see COPYING and notices in source files, bug 450244.

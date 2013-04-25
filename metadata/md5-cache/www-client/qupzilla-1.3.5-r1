@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-qt/qtcore-4.7:4 >=dev-qt/qtgui-4.7:4 >=dev-qt/qtscript-4.7:4 >=dev-qt/qtsql-4.7:4 >=dev-qt/qtwebkit-4.7:4 dbus? ( >=dev-qt/qtdbus-4.7:4 )
 SLOT=0
 SRC_URI=mirror://github/QupZilla/qupzilla/QupZilla-1.3.5.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=1f10cfe1c628b796fa45c4e5bb1c289b

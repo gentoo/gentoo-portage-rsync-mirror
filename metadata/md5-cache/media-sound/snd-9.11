@@ -8,5 +8,5 @@ LICENSE=Snd BSD-2 HPND GPL-2+ LGPL-2.1+ free-noncomm
 RDEPEND=media-libs/audiofile motif? ( >=x11-libs/motif-2.3:0 ) alsa? ( media-libs/alsa-lib ) fam? ( virtual/fam ) fftw? ( sci-libs/fftw ) gsl? ( >=sci-libs/gsl-0.8 ) gtk? ( x11-libs/gtk+:2 opengl? ( x11-libs/gtkglext ) cairo? ( x11-libs/cairo ) ) guile? ( >=dev-scheme/guile-1.3.4 ) jack? ( media-sound/jack-audio-connection-kit ) ladspa? ( media-libs/ladspa-sdk ) nls? ( sys-devel/gettext ) opengl? ( virtual/opengl ) ruby? ( dev-lang/ruby ) xpm? ( x11-libs/libXpm )
 SLOT=0
 SRC_URI=ftp://ccrma-ftp.stanford.edu/pub/Lisp/snd-9.11.tar.gz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=68daed0643c91755dc6c19d91256cd1f

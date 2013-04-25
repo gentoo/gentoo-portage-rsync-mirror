@@ -9,5 +9,5 @@ RDEPEND=|| ( >=games-rpg/nwn-data-1.29-r3[sou?,hou?,linguas_en] >=games-rpg/nwn-
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~calchan/distfiles/nwn-libs-1.tar.bz2 !sou? ( !hou? ( http://files.bioware.com/neverwinternights/updates/linux/169/English_linuxclient169_orig.tar.gz ) ) sou? ( !hou? ( http://files.bioware.com/neverwinternights/updates/linux/169/English_linuxclient169_xp1.tar.gz ) ) hou? ( http://files.bioware.com/neverwinternights/updates/linux/169/English_linuxclient169_xp2.tar.gz )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	36e6377b0e31856b6d62af831661c4f3	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=834b76b35c078c20f4bafb662778165d

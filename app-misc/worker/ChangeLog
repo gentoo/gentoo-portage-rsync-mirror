@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.108 2013/04/15 19:03:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.110 2013/04/25 19:15:53 pinkbyte Exp $
+
+  25 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> worker-2.19.6.ebuild:
+  Add ~arm keyword
+
+  25 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -worker-2.18.1.ebuild,
+  worker-2.19.6.ebuild:
+  Respect AR, wrt bug #467222. Thanks to Agostino Sarubbo for discovering this
+  issue. Drop old version
 
   15 Apr 2013; Agostino Sarubbo <ago@gentoo.org> worker-2.19.6.ebuild:
   Stable for x86, wrt bug #465910

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.47 2013/03/17 16:18:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.48 2013/04/25 19:15:26 pinkbyte Exp $
+
+  25 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> avfs-1.0.1.ebuild:
+  Add ~arm keyword
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

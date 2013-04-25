@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.1.ebuild,v 1.1 2013/03/19 03:36:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.1.ebuild,v 1.2 2013/04/25 19:23:12 radhermit Exp $
 
 EAPI="5"
 
@@ -26,6 +26,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.0-uscore.patch
 	epatch "${FILESDIR}"/${PN}-multilib-syspath.patch
 	epatch "${WORKDIR}"/${PN}-1.5.0-idea.patch
+
+	# bug 466938
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac || die
+
 	epatch_user
 	eautoreconf
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.9.ebuild,v 1.9 2012/12/30 15:03:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.9.ebuild,v 1.10 2013/04/25 18:43:59 radhermit Exp $
 
 EAPI=4
 
@@ -36,7 +36,11 @@ DOCS=( AUTHORS ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt} )
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.2.4-CFLAGS.patch
 	epatch "${FILESDIR}"/${PN}-5.2.8-genppd.patch # bug 382927
-	sed -i -e "s:m4local:m4extra:" Makefile.am || die
+	sed -i "s:m4local:m4extra:" Makefile.am || die
+
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" \
+		-e "s/AM_PROG_CC_STDC/AC_PROG_CC/" \
+		-i configure.ac || die
 
 	eautoreconf
 }

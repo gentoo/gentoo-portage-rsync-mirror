@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=|| ( sys-libs/libutempter sys-apps/utempter ) x11-libs/libX11 x11-libs/libICE x11-libs/libSM gtk? ( x11-libs/gtk+:2 ) !gtk? ( imlib? ( >=media-libs/imlib-1.9.14 ) ) truetype? ( x11-libs/libXft ) bidi? ( >=dev-libs/fribidi-0.10.4 ) nls? ( virtual/libintl ) uim? ( >=app-i18n/uim-1.0 ) scim? ( >=app-i18n/scim-1.4 ) m17n-lib? ( >=dev-libs/m17n-lib-1.2.0 )
 SLOT=0
 SRC_URI=mirror://sourceforge/mlterm/mlterm-2.9.4.tar.gz http://shinh.skr.jp/dat_dir/mlterm-2.9.4_256.patch
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=a6fb9144893ba122bb161a61d0974359

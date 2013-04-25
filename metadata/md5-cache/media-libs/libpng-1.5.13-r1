@@ -9,5 +9,5 @@ LICENSE=libpng
 RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/libpng/libpng-1.5.13.tar.xz apng? ( mirror://sourceforge/apng/libpng-1.5.13-apng.patch.gz )
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=923e5b059bf0ba82f81193a4fa5f36b7

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.141 2012/09/07 22:30:48 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.142 2013/04/25 19:15:13 radhermit Exp $
+
+  25 Apr 2013; Tim Harder <radhermit@gentoo.org> faad2-2.7-r2.ebuild:
+  Fix autoreconf failures with automake-1.13 (bug #466986).
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

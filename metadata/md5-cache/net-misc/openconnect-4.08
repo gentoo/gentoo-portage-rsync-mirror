@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/libxml2 net-libs/libproxy sys-libs/zlib !gnutls? ( dev-libs/openssl[static-libs?] ) gnutls? ( || ( ( >=net-libs/gnutls-3[static-libs?] dev-libs/nettle ) ( =net-libs/gnutls-2.12*[nettle,static-libs?] dev-libs/nettle ) ( =net-libs/gnutls-2.12*[-nettle,static-libs?] dev-libs/libgcrypt[static-libs?] ) ) app-misc/ca-certificates ) doc? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) ) sys-apps/iproute2
 SLOT=0
 SRC_URI=ftp://ftp.infradead.org/pub/openconnect/openconnect-4.08.tar.gz http://dev.gentoo.org/~hwoarang/distfiles/openconnect-script-20121108205904.tar.gz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	a6778a259dc0aab7e2c3bbf70e694fad	python-utils-r1	1abc4a4828358a8fc1c4d65e74ae4a19	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	a6778a259dc0aab7e2c3bbf70e694fad	python-utils-r1	1abc4a4828358a8fc1c4d65e74ae4a19	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=f61e5d5ff060928080a59114c6560601

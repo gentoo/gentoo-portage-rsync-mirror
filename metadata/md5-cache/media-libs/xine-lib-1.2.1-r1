@@ -10,5 +10,5 @@ RDEPEND=dev-libs/libxdg-basedir media-libs/libdvdnav sys-libs/zlib || ( media-vi
 REQUIRED_USE=vidix? ( || ( X fbcon ) ) xv? ( X ) xinerama? ( X )
 SLOT=1
 SRC_URI=mirror://sourceforge/xine/xine-lib-1.2.1.tar.xz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	libtool	2b273eea1976cfaed3449345d94331ac	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d4141dc0a667276168228d3157e362d6

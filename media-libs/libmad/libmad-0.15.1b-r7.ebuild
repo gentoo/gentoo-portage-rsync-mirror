@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r7.ebuild,v 1.10 2013/03/12 19:33:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r7.ebuild,v 1.11 2013/04/25 19:18:11 radhermit Exp $
 
 EAPI=4
 
@@ -25,6 +25,9 @@ src_prepare() {
 		"${FILESDIR}"/libmad-0.15.1b-cflags.patch \
 		"${FILESDIR}"/libmad-0.15.1b-cflags-O2.patch \
 		"${FILESDIR}"/libmad-0.15.1b-gcc44-mips-h-constraint-removal.patch
+
+	# bug 467002
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac || die
 
 	eautoreconf
 	# unnecessary when eautoreconf'd

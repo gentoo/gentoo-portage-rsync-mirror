@@ -10,5 +10,5 @@ RDEPEND=dev-perl/Config-Simple media-fonts/font-cursor-misc media-fonts/font-mis
 REQUIRED_USE=|| ( postgres sqlite )
 SLOT=0
 SRC_URI=http://code.x2go.org/releases/source/x2goserver/x2goserver-3.1.1.4.tar.gz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6a1b5bb551dffccb22233b9962d0d6f2

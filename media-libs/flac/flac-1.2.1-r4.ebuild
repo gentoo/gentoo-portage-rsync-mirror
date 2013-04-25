@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r4.ebuild,v 1.3 2012/05/15 13:39:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r4.ebuild,v 1.4 2013/04/25 19:02:23 radhermit Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -32,6 +32,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ogg-m4.patch
 
 	cp "${WORKDIR}"/*.m4 m4 || die
+
+	# bug 466990
+	sed -i "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" configure.in || die
 
 	AT_M4DIR="m4" eautoreconf
 }

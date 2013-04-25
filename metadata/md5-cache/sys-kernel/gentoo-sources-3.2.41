@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=3.2.41
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.2.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-3.2 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-check -> deblob-check-3.2 ) mirror://gentoo/genpatches-3.2-21.base.tar.xz mirror://gentoo/genpatches-3.2-21.extras.tar.xz
-_eclasses_=eutils	36e6377b0e31856b6d62af831661c4f3	kernel-2	51a0d69630b9267532863bc985ed02f6	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	kernel-2	51a0d69630b9267532863bc985ed02f6	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=f7d71d13c5321fe083e20894d9a03710
