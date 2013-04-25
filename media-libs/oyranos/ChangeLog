@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.15 2013/04/22 17:07:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.17 2013/04/25 11:40:00 xmw Exp $
+
+  25 Apr 2013; Michael Weber <xmw@gentoo.org> oyranos-9999.ebuild:
+  Re-establish manifest signature.
+
+  25 Apr 2013; Michael Weber <xmw@gentoo.org> oyranos-9999.ebuild,
+  +files/oyranos-9999-buildsystem.patch:
+  Update live version buildsystem patch (thanks Andreas Sturmlechner, bug
+  447246)
 
 *oyranos-9999 (22 Apr 2013)
 *oyranos-0.9.4-r1 (22 Apr 2013)

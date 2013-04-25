@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.1 2013/04/22 17:07:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.3 2013/04/25 11:40:00 xmw Exp $
 
 EAPI=5
 
@@ -41,18 +41,14 @@ DEPEND="${RDEPEND}
 
 RESTRICT="test"
 
-CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindXcm FindCUPS"
+CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindCUPS"
 
 src_prepare() {
 	einfo remove bundled libs
 	rm -rf elektra* yajl || die
 
-	epatch "${FILESDIR}/${PN}"-0.9.4-buildsystem-r1.patch
+	epatch "${FILESDIR}/${PN}"-9999-buildsystem.patch
  
-	#fix really ugly and prominently visible typo (solved in 0.9.5)
-	sed -e 's/Promt/Prompt/' \
-		-i src/liboyranos_config/oyranos_texts.c po/*.{po,pot} settings/*xml || die
-
 	if use fltk ; then
 		#src/examples does not include fltk flags
 		append-cflags $(fltk-config --cflags)
