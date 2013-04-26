@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.1.0.ebuild,v 1.2 2013/01/15 19:59:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.1.0.ebuild,v 1.3 2013/04/26 17:54:55 hwoarang Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="dev-python/pygtk
 	dev-python/numpy
 	>=dev-python/pycairo-1.4
 	dev-libs/protobuf[python]
-	dev-libs/json-c
+	>=dev-libs/json-c-0.11
 	>=media-libs/lcms-2.0
 	media-libs/libpng"
 DEPEND="${RDEPEND}
@@ -44,6 +44,8 @@ src_prepare() {
 		SConstruct SConscript || die
 	# respect CXXFLAGS,CXX,LDFLAGS
 	epatch "${FILESDIR}"/${PN}-1.1.0-gentoo.patch
+	# pkgconfig patch for json-c-0.11. 467322
+	epatch "${FILESDIR}"/${P}-json-c-0.11.patch
 }
 
 src_compile() {

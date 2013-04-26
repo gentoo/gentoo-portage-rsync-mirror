@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/speex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.100 2012/09/07 22:41:11 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.101 2013/04/26 17:47:39 ssuominen Exp $
+
+  26 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> speex-1.2_rc1-r1.ebuild:
+  Use AC_CONFIG_HEADERS instead of the obsolete AM_CONFIG_HEADER wrt #467012 by
+  Alphat-PC
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
