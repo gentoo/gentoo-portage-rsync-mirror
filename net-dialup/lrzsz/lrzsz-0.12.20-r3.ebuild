@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r3.ebuild,v 1.10 2013/04/26 15:30:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r3.ebuild,v 1.11 2013/04/26 15:37:10 jer Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-autotools.patch
 	epatch "${FILESDIR}"/${PN}-implicit-decl.patch
-	epatch "${FILESDIR}"/${P}-automake-2.12.patch
+	epatch "${FILESDIR}"/${P}-automake-1.12.patch
+	epatch "${FILESDIR}"/${P}-automake-1.13.patch
 
 	# automake is unhappy if this is missing
 	>> config.rpath
@@ -29,8 +30,6 @@ src_prepare() {
 	rm -f missing
 	# Autoheader does not like seeing this file.
 	rm -f acconfig.h
-
-	sed -i configure.in -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 
 	eautoreconf
 }

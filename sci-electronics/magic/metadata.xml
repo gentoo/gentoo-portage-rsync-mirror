@@ -13,4 +13,14 @@
   as being the easiest tool to use for circuit layout, even for people who
   ultimately rely on commercial tools for their product design flow.
   </longdescription>
+<upstream>
+    <maintainer status="active">
+    <email>tim@opencircuitdesign.com</email>
+	<name>Timothy Edwards</name>
+    </maintainer>
+    <changelog>http://www.opencircuitdesign.com/magic/release.html</changelog>
+    <doc lang="en">http://www.opencircuitdesign.com/magic/magic_docs.html</doc>
+	<bugs-to>tim@opencircuitdesign.com</bugs-to>
+</upstream>
+
 </pkgmetadata>

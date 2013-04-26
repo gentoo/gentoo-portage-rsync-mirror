@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/lrzsz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.31 2013/04/26 15:30:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.32 2013/04/26 15:37:10 jer Exp $
+
+  26 Apr 2013; Jeroen Roovers <jer@gentoo.org> lrzsz-0.12.20-r3.ebuild,
+  +files/lrzsz-0.12.20-automake-1.12.patch,
+  +files/lrzsz-0.12.20-automake-1.13.patch,
+  -files/lrzsz-0.12.20-automake-2.12.patch:
+  Use patch by Shunsuke Shimizu (bug #467330) instead of sed script. Rename
+  automake-1.12 patch to avoid future confusion.
 
   26 Apr 2013; Jeroen Roovers <jer@gentoo.org> lrzsz-0.12.20-r3.ebuild:
   Fix building with automake-1.13 (bug #467330 by Shunsuke Shimizu).
