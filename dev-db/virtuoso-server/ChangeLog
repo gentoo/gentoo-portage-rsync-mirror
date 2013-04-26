@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/virtuoso-server
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.44 2012/09/20 17:45:54 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.45 2013/04/26 00:43:55 creffett Exp $
+
+  26 Apr 2013; Chris Reffett <creffett@gentoo.org>
+  +files/virtuoso-server-6.1.6-am_config_header.patch,
+  virtuoso-server-6.1.6.ebuild:
+  Add patch for automake-1.13 build wrt bug 466954
 
   20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/virtuoso-server-6.1.4-strncat-overflow.patch,

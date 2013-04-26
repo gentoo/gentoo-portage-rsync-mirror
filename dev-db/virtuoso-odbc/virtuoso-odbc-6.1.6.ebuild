@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.6.ebuild,v 1.4 2012/09/20 17:45:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.6.ebuild,v 1.5 2013/04/26 00:48:51 creffett Exp $
 
 EAPI=4
 
@@ -15,6 +15,8 @@ RDEPEND="
 	>=dev-libs/openssl-0.9.7i:0
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-6.1.6-am_config_header.patch" )
 
 VOS_EXTRACT="
 	libsrc/Dk
