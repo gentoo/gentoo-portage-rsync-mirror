@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.15 2013/04/23 17:59:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.16 2013/04/26 19:03:20 scarabeus Exp $
+
+  26 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.3.0.ebuild,
+  liborcus-0.5.1.ebuild:
+  Fix the autoreconf crash wrt bug#466964. Fixed also in git.
 
   23 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/liborcus-0.5.1-linking.patch, liborcus-0.5.1.ebuild:

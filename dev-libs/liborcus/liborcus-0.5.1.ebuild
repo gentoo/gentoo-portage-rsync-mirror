@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.2 2013/04/23 17:59:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.3 2013/04/26 19:03:20 scarabeus Exp $
 
 EAPI=5
 
@@ -30,6 +30,10 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
+		configure.ac || die
+
 	epatch \
 		"${FILESDIR}"/${P}-linking.patch
 	eautoreconf
