@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011-r1.ebuild,v 1.10 2012/10/07 10:07:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011-r1.ebuild,v 1.11 2013/04/26 14:42:02 yngwin Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 	>=${TEXLIVE_CAT}/texlive-texinfo-${PV}
 	app-text/t1utils
 	>=app-text/lcdf-typetools-2.69[kpathsea]
-	truetype? ( || ( app-text/ttf2pk2 media-libs/freetype:1[kpathsea] ) )
+	truetype? ( app-text/ttf2pk2 )
 	detex? ( dev-tex/detex )
 	app-text/ps2eps
 	dvipdfm? ( >=app-text/dvipdfm-0.13.2d )

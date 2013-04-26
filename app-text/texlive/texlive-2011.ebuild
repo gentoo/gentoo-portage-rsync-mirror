@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011.ebuild,v 1.12 2012/10/07 10:07:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011.ebuild,v 1.13 2013/04/26 14:42:02 yngwin Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="cjk context detex doc dvi2tty dvipdfm extra games graphics
 	humanities jadetex luatex music omega pdfannotextractor png pstricks publishers science tex4ht
-	truetype xetex xindy xml X"
+	xetex xindy xml X"
 
 LANGS="af ar as bg bn bo ca cs cy da de el en en_GB eo es et eu fa fi fr ga gl
 	gu he hi hr hsb hu hy ia id is it ja ko kn la lo lt lv ml mn mr nb nl nn no
@@ -35,7 +35,6 @@ RDEPEND="${DEPEND}
 	>=${TEXLIVE_CAT}/texlive-texinfo-${PV}
 	app-text/t1utils
 	>=app-text/lcdf-typetools-2.69[kpathsea]
-	truetype? ( media-libs/freetype:1[kpathsea] )
 	detex? ( dev-tex/detex )
 	app-text/ps2eps
 	dvipdfm? ( >=app-text/dvipdfm-0.13.2d )

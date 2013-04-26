@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.ebuild,v 1.2 2013/01/07 04:04:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.ebuild,v 1.3 2013/04/26 15:00:10 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -81,31 +81,31 @@ src_configure() {
 	use python && export PYTHON_DIR="$(python_get_sitedir)"
 
 	econf \
-		--with-install-prefix="${D}" \
-		--with-sys-location="Unknown" \
-		--with-sys-contact="root@Unknown" \
-		--with-default-snmp-version="3" \
-		--with-mib-modules="${mibs}" \
-		--with-logfile="/var/log/net-snmpd.log" \
-		--with-persistent-directory="/var/lib/net-snmp" \
-		$(use_enable ucd-compat ucd-snmp-compatibility) \
-		--enable-shared --disable-static \
-		--with-ldflags="${LDFLAGS}" \
+		$(use_enable !ssl internal-md5) \
 		$(use_enable ipv6) \
 		$(use_enable mfd-rewrites) \
 		$(use_enable perl embedded-perl) \
-		$(use_enable !ssl internal-md5) \
-		$(use_with elf) \
-		$(use_with perl perl-modules INSTALLDIRS=vendor) \
-		$(use_with python python-modules) \
-		$(use_with ssl openssl) \
-		$(use_with tcpd libwrap) \
+		$(use_enable ucd-compat ucd-snmp-compatibility) \
 		$(use_with bzip2) \
-		$(use_with zlib) \
-		$(use_with rpm) \
+		$(use_with elf) \
+		$(use_with mysql) \
 		$(use_with netlink nl) \
 		$(use_with pci) \
-		$(use_with mysql)
+		$(use_with perl perl-modules INSTALLDIRS=vendor) \
+		$(use_with python python-modules) \
+		$(use_with rpm) \
+		$(use_with ssl openssl) \
+		$(use_with tcpd libwrap) \
+		$(use_with zlib) \
+		--enable-shared --disable-static \
+		--with-default-snmp-version="3" \
+		--with-install-prefix="${D}" \
+		--with-ldflags="${LDFLAGS}" \
+		--with-logfile="/var/log/net-snmpd.log" \
+		--with-mib-modules="${mibs}" \
+		--with-persistent-directory="/var/lib/net-snmp" \
+		--with-sys-contact="root@Unknown" \
+		--with-sys-location="Unknown"
 }
 
 src_compile() {
