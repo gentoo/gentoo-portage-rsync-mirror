@@ -1,0 +1,29 @@
+This patch is only for the 1.6.2 release, see bug #465010#c39
+
+--- a/arm/filter_neon.S
++++ b/arm/filter_neon.S
+@@ -16,11 +16,11 @@
+ #define PNG_VERSION_INFO_ONLY
+ #include "../pngpriv.h"
+ 
+-#if defined(PNG_FILTER_OPTIMIZATIONS) && defined(__arm__) && \
+-   defined(__ARM_NEON__)
+ #if defined(__linux__) && defined(__ELF__)
+ .section .note.GNU-stack,"",%progbits /* mark stack as non-executable */
+ #endif
++#if defined(PNG_FILTER_OPTIMIZATIONS) && defined(__arm__) && \
++   defined(__ARM_NEON__)
+ 
+ #ifdef __ELF__
+ #   define ELF
+--- a/configure
++++ b/configure
+@@ -12812,7 +12812,7 @@ fi
+ # Because GCC by default assembles code with an executable stack, even though it
+ # compiles C code with a non-executable stack, it is necessary to do a fixup
+ # here (this may by GCC specific)
+-AM_CCASFLAGS=-Wa,--noexecstack
++AM_CCASFLAGS=
+ 
+ 
+ # Check whether --enable-arm-neon was given.

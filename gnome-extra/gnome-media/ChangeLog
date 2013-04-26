@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.251 2012/11/07 21:59:00 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.252 2013/04/26 06:31:44 patrick Exp $
+
+  26 Apr 2013; Patrick Lauer <patrick@gentoo.org>
+  gnome-media-2.32.0-r300.ebuild:
+  Automake 1.13 fix for 2.32
 
   07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-media-2.32.0-r1.ebuild, gnome-media-2.32.0-r300.ebuild,

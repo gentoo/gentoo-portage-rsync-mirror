@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.403 2013/04/22 17:10:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.404 2013/04/26 06:40:55 ssuominen Exp $
+
+*libpng-1.6.2 (26 Apr 2013)
+
+  26 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +libpng-1.6.2.ebuild,
+  +files/libpng-1.6.2-noexecstack.patch:
+  Version bump.
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libpng-1.5.15.ebuild:
   Stable for sparc, wrt bug #462314
