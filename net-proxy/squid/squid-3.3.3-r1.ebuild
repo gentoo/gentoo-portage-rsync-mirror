@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.3-r1.ebuild,v 1.2 2013/04/26 09:18:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.3-r1.ebuild,v 1.3 2013/04/26 09:32:25 eras Exp $
 
 EAPI=5
 
@@ -152,7 +152,7 @@ src_configure() {
 		fi
 	fi
 
-	export CC=$(tc-getCC)
+	tc-export CC AR
 
 	econf \
 		--sysconfdir=/etc/squid \
