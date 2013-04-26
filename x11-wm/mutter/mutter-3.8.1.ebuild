@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.1.ebuild,v 1.1 2013/04/20 09:55:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.1.ebuild,v 1.2 2013/04/26 19:36:11 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,11 +15,12 @@ SLOT="0"
 IUSE="+introspection test"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-COMMON_DEPEND=">=x11-libs/pango-1.2[X,introspection?]
+COMMON_DEPEND="
+	>=x11-libs/pango-1.2[X,introspection?]
 	>=x11-libs/cairo-1.10[X]
 	x11-libs/gdk-pixbuf:2[introspection?]
 	>=x11-libs/gtk+-3.3.7:3[X,introspection?]
-	>=dev-libs/glib-2.25.11:2
+	>=dev-libs/glib-2.36.0:2
 	>=media-libs/clutter-1.13.5:1.0[introspection?]
 	>=media-libs/cogl-1.13.3:1.0=[introspection?]
 	>=media-libs/libcanberra-0.26[gtk3]

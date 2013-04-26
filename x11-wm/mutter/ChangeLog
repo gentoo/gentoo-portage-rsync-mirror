@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.25 2013/04/20 09:55:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.26 2013/04/26 19:36:11 pacho Exp $
+
+  26 Apr 2013; Pacho Ramos <pacho@gentoo.org>
+  -files/mutter-3.4.1-meta_window_move_frame-crash.patch,
+  -files/mutter-3.8.0-build-redefine.patch,
+  -files/mutter-3.8.0-font-crash.patch, -mutter-3.8.0.ebuild,
+  mutter-3.8.1.ebuild:
+  Fix glib dependency, bug #467334 by Pim Vullers; drop old.
 
 *mutter-3.8.1 (20 Apr 2013)
 
