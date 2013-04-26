@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2.ebuild,v 1.5 2012/10/30 07:22:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2.ebuild,v 1.6 2013/04/26 20:48:14 pacho Exp $
 
 EAPI=4
+VALA_MIN_API_VERSION=0.16
+VALA_USE_DEPEND=vapigen
 
-AYATANA_VALA_VERSION=0.16
-
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic vala
 
 DESCRIPTION="Library to pass menu structure across DBus"
 HOMEPAGE="http://launchpad.net/dbusmenu"
@@ -27,12 +27,17 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	dev-util/intltool
 	virtual/pkgconfig
-	introspection? ( dev-lang/vala:${AYATANA_VALA_VERSION}[vapigen] )"
+	introspection? ( $(vala_depend) )"
+
+src_prepare() {
+	if use introspection; then
+		vala_src_prepare
+		export VALA_API_GEN="${VAPIGEN}"
+	fi
+}
 
 src_configure() {
 	append-flags -Wno-error #414323
-
-	use introspection && export VALA_API_GEN="$(type -P vapigen-${AYATANA_VALA_VERSION})"
 
 	# dumper extra tool is only for GTK+-2.x, tests use valgrind which is stupid
 	econf \

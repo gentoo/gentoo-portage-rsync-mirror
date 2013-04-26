@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/opencascade
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/ChangeLog,v 1.9 2013/03/03 10:08:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/ChangeLog,v 1.10 2013/04/26 20:33:00 xmw Exp $
+
+*opencascade-6.5.4 (26 Apr 2013)
+*opencascade-6.5.0 (26 Apr 2013)
+
+  26 Apr 2013; Michael Weber <xmw@gentoo.org> +opencascade-6.5.0.ebuild,
+  +opencascade-6.5.4.ebuild, +files/opencascade-6.5.4-fixed-DESTDIR.patch,
+  +files/opencascade-6.5.4-tcl8.6.patch, metadata.xml:
+  Taking maint, version bumps (thanks Sławek Lis, bug 438466, thanks
+  Jimmy.Jazz@gmx.net, bug 451406). No keywords, needs further testing of slots
+  etc.
 
   03 Mar 2013; Justin Lecher <jlec@gentoo.org> opencascade-6.5.ebuild,
   +files/opencascade-6.5-tcl8.6.patch, metadata.xml:

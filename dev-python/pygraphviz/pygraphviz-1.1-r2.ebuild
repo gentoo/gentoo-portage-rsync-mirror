@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/pygraphviz-1.1-r2.ebuild,v 1.1 2013/04/26 08:40:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/pygraphviz-1.1-r2.ebuild,v 1.2 2013/04/26 20:45:13 mgorny Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="examples"
 
-RDEPEND="media-gfx/graphviz[${PYTHON_USEDEP}]"
+# Note: only C API of graphviz is used, PYTHON_USEDEP unnecessary.
+RDEPEND="media-gfx/graphviz"
 DEPEND="${RDEPEND}"
 
 PATCHES=(
@@ -26,21 +27,14 @@ PATCHES=(
 )
 
 python_test() {
-	${PYTHON} \
-		-c "import sys; sys.path.insert(0, \"${BUILD_DIR}/lib/pygraphviz\"); import pygraphviz.tests; pygraphviz.tests.run()" || die
+	PYTHONPATH=${PYTHONPATH}:${BUILD_DIR}/lib/pygraphviz \
+	"${PYTHON}" \
+		-c "import pygraphviz.tests; pygraphviz.tests.run()" \
+		|| die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
+	use examples && local EXAMPLES=( examples/. )
+
 	distutils-r1_python_install_all
-
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
-}
-
-python_install() {
-	distutils-r1_python_install
-
-	rm -fr "${ED}$(python_get_sitedir)/${PN}/tests"
 }

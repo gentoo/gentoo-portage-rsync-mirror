@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.22 2012/10/30 07:22:29 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.23 2013/04/26 20:48:14 pacho Exp $
+
+  26 Apr 2013; Pacho Ramos <pacho@gentoo.org> libdbusmenu-0.6.2.ebuild:
+  Migrate to vala.eclass, bug #467390
 
   30 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> libdbusmenu-0.6.2.ebuild:
   Stop using testsuite because upstream is now using valgrind which randomly

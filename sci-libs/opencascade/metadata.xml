@@ -2,9 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>xmw@gentoo.org</email>
+	<name>Michael Weber</name>
   </maintainer>
   <use>
     <flag name="gl2ps">Use gl2ps PostScript printing library</flag>
+    <flag name="tbb">tEnable multithreading with the Intel Threads Building Block dev-cpp/tbb</flag>
   </use>
 </pkgmetadata>
