@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r3.ebuild,v 1.9 2012/06/13 22:43:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r3.ebuild,v 1.10 2013/04/26 15:30:42 jer Exp $
 
 EAPI="2"
 
@@ -29,6 +29,8 @@ src_prepare() {
 	rm -f missing
 	# Autoheader does not like seeing this file.
 	rm -f acconfig.h
+
+	sed -i configure.in -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 
 	eautoreconf
 }
