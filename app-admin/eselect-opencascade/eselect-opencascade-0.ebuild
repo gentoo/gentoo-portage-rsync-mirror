@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opencascade/eselect-opencascade-0.ebuild,v 1.2 2013/04/26 20:53:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opencascade/eselect-opencascade-0.ebuild,v 1.3 2013/04/26 22:45:25 xmw Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -25,5 +25,5 @@ src_install() {
 }
 
 pkg_postrm() {
-	rm -v "${EROOT}"etc/env.d/50opencascade
+	rm -v "${EROOT}"etc/env.d/51opencascade
 }

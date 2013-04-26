@@ -16,7 +16,7 @@
 # eselect.  If not, see <http://www.gnu.org/licenses/>.
 
 MODULE=opencascade
-TARGET=${EROOT}/etc/env.d/50${MODULE}
+TARGET=${EROOT}/etc/env.d/51${MODULE}
 CONFDIR=${EROOT}/etc/env.d/${MODULE}
 
 inherit tests path-manipulation
