@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.10 2013/04/25 23:48:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-2012.10.1-r1.ebuild,v 1.1 2013/04/25 23:48:07 zerochaos Exp $
 
 EAPI="5"
 
@@ -11,10 +11,8 @@ MY_PV=${MY_PV/./-R}
 S="${WORKDIR}/ubertooth-${MY_PV}"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="http://git.code.sf.net/p/ubertooth/code"
-	EGIT_PROJECT="ubertooth"
-	#EGIT_REPO_URI="git://ubertooth.git.sourceforge.net/gitroot/ubertooth/ubertooth"
-	#SRC_URI=""
+	EGIT_REPO_URI="git://ubertooth.git.sourceforge.net/gitroot/ubertooth/ubertooth"
+	SRC_URI=""
 	inherit git-2
 	KEYWORDS=""
 else
@@ -30,8 +28,8 @@ SLOT="0/${PV}"
 IUSE=""
 
 DEPEND=">=net-wireless/kismet-2011.03.2-r1:= \
-	=net-wireless/ubertooth-${PV} \
-	=net-libs/libbtbb-${PV} \
+	>=net-wireless/ubertooth-${PV} \
+	>=net-libs/libbtbb-${PV} \
 	virtual/libusb:1"
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-9999.ebuild,v 1.9 2013/04/25 23:38:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2013.03.1-r1.ebuild,v 1.1 2013/04/25 23:38:11 zerochaos Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils multilib user
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://www.kismetwireless.net/${PN}.git"

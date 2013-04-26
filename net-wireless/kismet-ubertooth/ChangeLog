@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/kismet-ubertooth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/ChangeLog,v 1.12 2013/02/05 04:37:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/ChangeLog,v 1.13 2013/04/25 23:48:07 zerochaos Exp $
+
+*kismet-ubertooth-2012.10.1-r1 (25 Apr 2013)
+
+  25 Apr 2013; Rick Farina <zerochaos@gentoo.org>
+  +kismet-ubertooth-2012.10.1-r1.ebuild, kismet-ubertooth-9999.ebuild:
+  subslot dep on kismet to prevent incorrect plugin from crashing kismet (forces
+  rebuild of plugin when kismet changes)
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> kismet-ubertooth-9999.ebuild:
   fixing EGIT_PROJECT, thanks to radhermit for pointing out the issue
