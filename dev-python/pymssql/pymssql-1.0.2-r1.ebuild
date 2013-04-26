@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-1.0.2-r1.ebuild,v 1.1 2013/04/26 07:51:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-1.0.2-r1.ebuild,v 1.2 2013/04/26 08:01:57 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
@@ -20,3 +20,7 @@ DEPEND=">=dev-db/freetds-0.63[mssql]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 RDEPEND="${DEPEND}"
+
+python_configure_all() {
+	append-flags -fno-strict-aliasing
+}

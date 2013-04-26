@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pymssql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.36 2013/04/26 07:54:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.37 2013/04/26 08:01:57 idella4 Exp $
+
+  26 Apr 2013; Ian Delaney <idella4@gentoo.org> pymssql-1.0.2-r1.ebuild,
+  pymssql-1.0.2.ebuild:
+  oops, re-add flag -fno-strict-aliasing
 
   26 Apr 2013; Ian Delaney <idella4@gentoo.org> pymssql-1.0.2.ebuild:
   Manifests
