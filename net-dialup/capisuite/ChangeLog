@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.46 2013/04/25 15:05:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.48 2013/04/26 08:59:24 pinkbyte Exp $
+
+  26 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -capisuite-0.4.5-r6.ebuild:
+  Drop old revision
+
+  26 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> capisuite-0.4.5-r7.ebuild,
+  +files/capisuite-0.4.5-respect-ar.patch:
+  Respect AR, wrt bug #467222. Thanks to Agostino Sarubbo for discovering this
+  issue
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> capisuite-0.4.5-r7.ebuild:
   Stable for x86, wrt bug #467208

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r7.ebuild,v 1.3 2013/04/25 15:05:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r7.ebuild,v 1.4 2013/04/26 08:58:35 pinkbyte Exp $
 
 EAPI=5
 
@@ -46,6 +46,8 @@ PATCHES=(
 	"${FILESDIR}/${P}-sox.patch"
 	# Compatibility with automake >= 1.11.2 (bug #424892)
 	"${FILESDIR}/${P}-automake-1.11.patch"
+	# Respect AR (bug #467222)
+	"${FILESDIR}/${P}-respect-ar.patch"
 )
 
 src_configure() {
