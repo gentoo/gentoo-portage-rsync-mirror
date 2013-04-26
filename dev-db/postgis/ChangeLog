@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.80 2013/04/15 08:47:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.81 2013/04/26 13:21:42 ago Exp $
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> postgis-2.0.3.ebuild:
+  Stable for ppc, wrt bug #457958
 
   15 Apr 2013; Agostino Sarubbo <ago@gentoo.org> postgis-2.0.3.ebuild:
   Stable for x86, wrt bug #457958
