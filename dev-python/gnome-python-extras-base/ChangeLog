@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras-base
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.24 2012/08/13 09:22:14 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.25 2013/04/26 02:14:32 patrick Exp $
+
+  26 Apr 2013; Patrick Lauer <patrick@gentoo.org>
+  gnome-python-extras-base-2.25.3.ebuild:
+  Automake fix for #467004
 
   13 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-python-extras-base-2.25.3.ebuild,
@@ -102,4 +106,3 @@
   +gnome-python-extras-base-2.19.1.ebuild:
   Initial import of split gnome-python-extras. This package installs a
   common .pc file for all the bindings.
-

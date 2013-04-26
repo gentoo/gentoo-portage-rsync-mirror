@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3.ebuild,v 1.11 2012/08/13 09:22:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3.ebuild,v 1.12 2013/04/26 02:14:32 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -43,6 +43,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python-libs.patch" #344231
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 	gnome2_src_prepare
 }
