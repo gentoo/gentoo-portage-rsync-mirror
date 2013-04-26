@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.25.3.ebuild,v 1.10 2012/08/13 09:29:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.25.3.ebuild,v 1.11 2013/04/26 02:58:00 patrick Exp $
 
 EAPI="2"
 G_PY_PN="gnome-python-extras"
@@ -31,6 +31,7 @@ EXAMPLES="examples/gtkspell/*"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python-libs.patch" #344231
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 	gnome-python-common_src_prepare
 }

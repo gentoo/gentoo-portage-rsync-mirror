@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gtkhtml-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkhtml-python/ChangeLog,v 1.23 2012/08/13 09:28:20 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkhtml-python/ChangeLog,v 1.24 2013/04/26 02:49:33 patrick Exp $
+
+  26 Apr 2013; Patrick Lauer <patrick@gentoo.org> gtkhtml-python-2.25.3.ebuild:
+  Automake 1.13 fix
 
   13 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gtkhtml-python-2.25.3.ebuild, +files/gtkhtml-python-2.25.3-python-libs.patch:
@@ -91,4 +94,3 @@
   +gtkhtml-python-2.19.1.ebuild:
   Initial import of gnome-python-extras split ebuilds. This package installs
   bindings for gtkhtml-2.
-
