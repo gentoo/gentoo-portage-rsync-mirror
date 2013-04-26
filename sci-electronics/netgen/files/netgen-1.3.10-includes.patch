@@ -1,0 +1,51 @@
+--- netgen-1.4.40/base/config.h
++++ netgen-1.4.40/base/config.h
+@@ -192,6 +192,7 @@
+   extern char *Tcl_Strdup(const char *);
+   #define STRDUP(a)	Tcl_Strdup((const char *)a)
+ #else
++  #include <stdlib.h>
+   #define CALLOC(a, s)	calloc(a, s)
+   #define MALLOC(s)	malloc(s)
+   #define FREE(a)	free(a)
+--- netgen-1.4.40/base/place.c
++++ netgen-1.4.40/base/place.c
+@@ -34,6 +34,7 @@
+ #include "config.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <math.h>
+ #include <setjmp.h>
+ #include <signal.h>
+--- netgen-1.3.10/tcltk/tclnetgen.c
++++ netgen-1.3.10/tcltk/tclnetgen.c
+@@ -19,6 +19,8 @@
+ /* tclnetgen.c ---  Tcl interpreter interface for using netgen */
+ 
+ #include <stdio.h>
++#include <string.h>
++#include <stdlib.h>
+ 
+ #include <tcl.h>
+ 
+--- netgen-1.3.10/base/netcmp.c
++++ netgen-1.3.10/base/netcmp.c
+@@ -21,6 +21,7 @@
+ #include "config.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <setjmp.h>
+ #include <signal.h>
+ #include <time.h>    /* for time() as a seed for random number generator */
+--- netgen-1.3.10/base/spice.c
++++ netgen-1.3.10/base/spice.c
+@@ -21,6 +21,7 @@
+ #include "config.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #if 0
+ #include <stdarg.h>  /* what about varargs, like in pdutils.c ??? */
+ #endif

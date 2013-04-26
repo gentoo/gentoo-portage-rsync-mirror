@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=X? ( dev-lang/tcl dev-lang/tk x11-libs/libX11 )
+DESCRIPTION=LVS tool (layout versus schematic comparison)
+EAPI=4
+HOMEPAGE=http://www.opencircuitdesign.com/netgen/index.html
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=GPL-1
+RDEPEND=X? ( dev-lang/tcl dev-lang/tk x11-libs/libX11 )
+SLOT=0
+SRC_URI=http://www.opencircuitdesign.com/netgen/archive/netgen-1.3.10.tgz
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=84a53507c259b07a455d1da89209536c

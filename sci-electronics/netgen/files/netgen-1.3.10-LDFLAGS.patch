@@ -1,0 +1,87 @@
+--- netgen-1.3.10/scripts/configure
++++ netgen-1.3.10/scripts/configure
+@@ -8487,11 +8487,11 @@
+       ;;
+ 
+     *-linux*)
+-      LDDL_FLAGS='-shared -Wl,-soname,$@'
++      LDDL_FLAGS+=' -shared -Wl,-soname,$@'
+       if test "x${loader_run_path}" != "x" ; then
+         LD_RUN_PATH="${LD_RUN_PATH} -Wl,-rpath,${loader_run_path}"
+       fi
+-      LDFLAGS=""
++      LDFLAGS+=" "
+       EXTRA_LIB_SPECS="-ldl"
+       ;;
+ 
+--- netgen-1.3.10/tcltk/Makefile
++++ netgen-1.3.10/tcltk/Makefile
+@@ -24,7 +24,7 @@
+ 
+ netgenexec${EXEEXT}: netgenexec.c
+ 	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} netgenexec.c -o netgenexec${EXEEXT} \
+-		${LIBS} ${LIB_SPECS}
++		${LIBS} ${LIB_SPECS} ${LDFLAGS}
+ 
+ netgen.tcl: netgen.tcl.in
+ 	sed -e /TCL_DIR/s%TCL_DIR%${TCLDIR}%g \
+--- netgen-1.3.10/rules.mak
++++ netgen-1.3.10/rules.mak
+@@ -28,7 +28,7 @@
+ ${MODULE}: lib${MODULE}.o ${EXTRA_LIBS}
+ 	@echo --- building main ${MODULE}
+ 	${RM} ${MODULE}
+-	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} lib${MODULE}.o ${EXTRA_LIBS} -o ${MODULE} ${LIBS}
++	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} lib${MODULE}.o ${EXTRA_LIBS} -o ${MODULE} ${LIBS} ${LDFLAGS}
+ 
+ ${BINDIR}/${MODULE}${EXEEXT}: ${MODULE}${EXEEXT}
+ 	${RM} ${BINDIR}/${MODULE}${EXEEXT}
+--- netgen-1.3.10/netgen/Makefile
++++ netgen-1.3.10/netgen/Makefile
+@@ -22,7 +22,7 @@
+ 	@echo --- making netgen Tcl library \(tclnetgen${SHDLIB_EXT}\)
+ 	${RM} tclnetgen${SHDLIB_EXT}
+ 	${CC} ${CFLAGS} ${CPPFLAGS} -o $@ ${LDDL_FLAGS} \
+-		${LD_RUN_PATH} ${EXTRA_LIBS} ${LD_EXTRA_LIBS} -lc ${LIBS}
++		${LD_RUN_PATH} ${EXTRA_LIBS} ${LD_EXTRA_LIBS} -lc ${LIBS} ${LDFLAGS}
+ 
+ $(DESTDIR)${BINDIR}/netgen:
+ 	${RM} $@
+@@ -46,19 +46,19 @@
+ 
+ netcomp: netcomp.c
+ 	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} netcomp.c -o $@ ${LIBS} \
+-		${EXTRA_LIBS}
++		${EXTRA_LIBS} ${LDFLAGS}
+ 
+ inetcomp: inetcomp.c
+ 	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} inetcomp.c -o $@ ${LIBS} \
+-		${EXTRA_LIBS}
++		${EXTRA_LIBS} ${LDFLAGS}
+ 
+ ntk2adl: ntk2adl.c
+ 	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} ntk2adl.c -o $@ ${LIBS} \
+-		${EXTRA_LIBS}
++		${EXTRA_LIBS} ${LDFLAGS}
+ 
+ ntk2xnf: ntk2xnf.c
+ 	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} ntk2xnf.c -o $@ ${LIBS} \
+-		${EXTRA_LIBS}
++		${EXTRA_LIBS} ${LDFLAGS}
+ 
+ install: $(DESTDIR)${BINDIR}/netgen $(DESTDIR)${BINDIR}/netcomp \
+ 		$(DESTDIR)${BINDIR}/inetcomp $(DESTDIR)${BINDIR}/ntk2adl \
+--- netgen-1.4.40/scripts/defs.mak.in
++++ netgen-1.4.40/scripts/defs.mak.in
+@@ -47,9 +47,9 @@
+ 
+ RM                     = rm -f
+ CP                     = cp
+-AR                     = ar
++AR                     = @AR@
+ ARFLAGS                = crv
+-LINK		       = ld -r
++LINK		       = @LD@ -r
+ LD                     = @LD@
+ M4		       = @M4@
+ RANLIB                 = @RANLIB@

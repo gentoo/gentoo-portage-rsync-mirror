@@ -1,0 +1,20 @@
+--- netgen-1.4.40/base/config.h
++++ netgen-1.4.40/base/config.h
+@@ -192,6 +192,7 @@
+   extern char *Tcl_Strdup(const char *);
+   #define STRDUP(a)	Tcl_Strdup((const char *)a)
+ #else
++  #include <stdlib.h>
+   #define CALLOC(a, s)	calloc(a, s)
+   #define MALLOC(s)	malloc(s)
+   #define FREE(a)	free(a)
+--- netgen-1.4.40/base/place.c
++++ netgen-1.4.40/base/place.c
+@@ -34,6 +34,7 @@
+ #include "config.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <math.h>
+ #include <setjmp.h>
+ #include <signal.h>
