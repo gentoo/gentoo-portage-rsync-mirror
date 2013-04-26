@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/freesmee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.13 2013/03/17 15:49:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.14 2013/04/26 17:15:22 ago Exp $
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
