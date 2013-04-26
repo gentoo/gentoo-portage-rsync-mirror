@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14.ebuild,v 1.1 2013/01/16 09:43:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14.ebuild,v 1.2 2013/04/26 20:29:33 pva Exp $
 
 EAPI="4"
 
@@ -22,6 +22,8 @@ AUTOTOOLS_AUTORECONF=2.52
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-remove-dirty-path-hack.patch
+	epatch "${FILESDIR}"/${P}-automake-1.13.patch
+	rm missing # too old, automake will update it
 	# fix crosscompilation, bug #424473
 	if tc-is-cross-compiler; then
 		sed -e "s#./make_hash#./native_make_hash#" -i tools/Makefile.am || die

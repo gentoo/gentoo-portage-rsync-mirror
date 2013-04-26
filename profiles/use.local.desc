@@ -379,7 +379,6 @@ app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/latexila:latexmk - Install dev-tex/latexmk (used by default for the build tools)
 app-editors/latexila:rubber - Install dev-tex/rubber (can be used for the build tools)
-app-editors/latexila:vala - Enable bindings for dev-lang/vala
 app-editors/leafpad:emacs - Enable Emacs key theme
 app-editors/nano:debug - Enable debug messages and assert warnings. Note that these will all be sent straight to stderr rather than some logging facility.
 app-editors/nano:justify - Enable justify/unjustify functions for text formatting.

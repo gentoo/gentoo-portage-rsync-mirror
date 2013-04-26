@@ -7,6 +7,5 @@
 		for the build tools)</flag>
 	<flag name="rubber">Install <pkg>dev-tex/rubber</pkg> (can be used for the
 		build tools)</flag>
-	<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
 </use>
 </pkgmetadata>
