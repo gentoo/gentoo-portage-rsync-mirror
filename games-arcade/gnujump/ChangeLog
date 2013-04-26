@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/gnujump
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/ChangeLog,v 1.5 2009/10/25 12:52:15 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/ChangeLog,v 1.6 2013/04/26 01:03:53 mr_bones_ Exp $
+
+*gnujump-1.0.8 (26 Apr 2013)
+
+  26 Apr 2013; Michael Sterrett <mr_bones_@gentoo.org> +gnujump-1.0.8.ebuild:
+  version bump (bug #467284)
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org> gnujump-1.0.6.ebuild:
   amd64/x86 stable, bug #288806
@@ -47,4 +52,3 @@
   +files/sdljump-0.91.1-configure.patch, +metadata.xml,
   +sdljump-0.91.1.ebuild:
   initial commit - ebuild submitted by Paul Bredbury via bug #116915
-
