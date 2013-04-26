@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.13 2013/04/22 13:58:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.14 2013/04/25 23:05:31 ottxor Exp $
 
 EAPI=4
 
@@ -14,6 +14,7 @@ if [ "${PV}" != "9999" ]; then
 	SRC_URI="x86? ( ${MY_URL}/${MY_PKG} )
 		amd64? ( ${MY_URL}/${MY_PKG/i386/amd64} )"
 else
+	inherit cvs #hack to make it part of @live-rebuild
 	MY_URL="http://dl.google.com/linux/direct"
 	MY_PKG="${PN}_current_i386.deb"
 	SRC_URI=""
