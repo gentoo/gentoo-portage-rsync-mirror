@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.9 2013/04/02 20:55:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.10 2013/04/26 06:07:57 patrick Exp $
 
 EAPI=4
 
@@ -325,6 +325,7 @@ src_prepare() {
 	done
 	echo "#define LIRC_DRIVER_DEVICE \"${LIRC_DRIVER_DEVICE}\"" >> acconfig.h
 
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die # automake 1.13
 	eautoreconf
 }
 
