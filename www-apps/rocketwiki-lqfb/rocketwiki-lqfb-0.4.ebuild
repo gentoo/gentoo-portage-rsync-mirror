@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rocketwiki-lqfb/rocketwiki-lqfb-0.4.ebuild,v 1.2 2013/04/25 19:56:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rocketwiki-lqfb/rocketwiki-lqfb-0.4.ebuild,v 1.3 2013/04/26 07:37:49 tupone Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.public-software-group.org/pub/projects/rocketwiki/liquid_fee
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/gmp"
