@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.30 2013/04/25 18:14:24 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.32 2013/04/26 12:42:28 ago Exp $
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> python-mpd-0.5.1.ebuild:
+  Stable for x86, wrt bug #467224
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> python-mpd-0.5.1.ebuild:
+  Stable for amd64, wrt bug #467224
 
   25 Apr 2013; Maxim Koltsov <maksbotan@gentoo.org>
   +files/python-mpd-0.5.1-non-unicode-locale.patch, python-mpd-0.5.1.ebuild:

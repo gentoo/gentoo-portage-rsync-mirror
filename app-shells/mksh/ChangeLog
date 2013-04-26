@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/mksh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.39 2013/04/07 06:05:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.41 2013/04/26 12:41:23 ago Exp $
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mksh-44-r1.ebuild:
+  Stable for x86, wrt bug #467318
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mksh-44-r1.ebuild:
+  Stable for amd64, wrt bug #467318
 
 *mksh-44-r1 (07 Apr 2013)
 
