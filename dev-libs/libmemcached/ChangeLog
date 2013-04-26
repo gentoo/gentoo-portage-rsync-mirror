@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.49 2013/04/23 14:02:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.50 2013/04/26 09:23:10 ago Exp $
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libmemcached-0.50.ebuild:
+  Stable for sparc, wrt bug #443518
 
   23 Apr 2013; Jeroen Roovers <jer@gentoo.org> libmemcached-0.50.ebuild:
   Stable for HPPA (bug #443518).

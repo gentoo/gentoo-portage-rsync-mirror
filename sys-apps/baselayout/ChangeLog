@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.538 2013/04/23 15:12:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.539 2013/04/26 09:18:29 ago Exp $
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> baselayout-2.2.ebuild:
+  Stable for sparc, wrt bug #455872
 
   23 Apr 2013; Jeroen Roovers <jer@gentoo.org> baselayout-2.2.ebuild:
   Stable for HPPA (bug #455872).

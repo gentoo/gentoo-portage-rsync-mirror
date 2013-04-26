@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sary
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.40 2013/03/30 18:02:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.42 2013/04/26 09:08:10 patrick Exp $
+
+  26 Apr 2013; Patrick Lauer <patrick@gentoo.org> sary-1.2.0-r1.ebuild:
+  More better fix that actually works now
+
+  26 Apr 2013; Patrick Lauer <patrick@gentoo.org> sary-1.2.0-r1.ebuild:
+  Automake 1.13 fix
 
   30 Mar 2013; Jeroen Roovers <jer@gentoo.org> -sary-1.2.0.ebuild,
   sary-1.2.0-r1.ebuild:
@@ -129,4 +135,3 @@
   sary-1.0.5_pre20030426.ebuild:
   Initial import. Ebuild submitted by Hattya <hattya@inter7.jp>.
   This closes bug #31494.
-

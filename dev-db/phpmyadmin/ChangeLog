@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.488 2013/04/22 12:23:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.489 2013/04/26 09:20:22 ago Exp $
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> phpmyadmin-3.5.8.ebuild:
+  Stable for sparc, wrt bug #465420
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> phpmyadmin-3.5.8.ebuild:
   Stable for alpha, wrt bug #465420

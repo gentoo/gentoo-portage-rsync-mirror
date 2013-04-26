@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.3-r1.ebuild,v 1.1 2013/04/16 05:02:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.3-r1.ebuild,v 1.2 2013/04/26 09:18:16 eras Exp $
 
 EAPI=5
+
+# Workaround to avoid failing make check until we have a proper fix
+WANT_AUTOMAKE="1.12"
+
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
 
 DESCRIPTION="A full-featured web proxy cache"
@@ -61,6 +65,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.2.1-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-3.3.3-ncsa_auth.patch"
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		lib/libTrie/configure.ac || die
 	sed -i -e 's:/usr/local/squid/etc:/etc/squid:' \
 		INSTALL QUICKSTART \
 		helpers/basic_auth/MSNT/README.html \

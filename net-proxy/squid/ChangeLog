@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.407 2013/04/16 05:02:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.408 2013/04/26 09:18:16 eras Exp $
+
+  26 Apr 2013; Eray Aslan <eras@gentoo.org> squid-3.3.3-r1.ebuild:
+  Fix and work around build failures with automake-1.13
 
 *squid-3.3.3-r1 (16 Apr 2013)
 *squid-3.2.9-r1 (16 Apr 2013)
