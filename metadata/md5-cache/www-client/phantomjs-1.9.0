@@ -9,4 +9,5 @@ LICENSE=BSD
 RDEPEND=media-libs/fontconfig media-libs/freetype dev-libs/icu
 SLOT=0
 SRC_URI=https://phantomjs.googlecode.com/files/phantomjs-1.9.0-source.zip
-_md5_=b537258182009f83debb860a4baeeae0
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	d727728a240d5f59bf9370a64259fd61	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=6cf165b3f76e96719e414934e5aa984f
