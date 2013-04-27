@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.910 2013/04/24 19:45:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.911 2013/04/27 11:10:43 ssuominen Exp $
+
+  27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> udev-200.ebuild,
+  udev-202.ebuild, udev-9999.ebuild:
+  Fix parallel make problem with creation of systemd-udevd.8 manpage alias wrt
+  #467346 by Jaroslav Rakhmatoullin
 
   24 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-171-r10.ebuild,
   -udev-201.ebuild, metadata.xml:

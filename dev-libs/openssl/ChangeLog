@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.476 2013/02/20 19:14:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.477 2013/04/27 11:06:19 vapier Exp $
+
+*openssl-1.0.1e-r1 (27 Apr 2013)
+
+  27 Apr 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.1e-bad-mac-aes-ni.patch, +openssl-1.0.1e-r1.ebuild:
+  Tweak DESCRIPTION to remove protocol version info to be lazy and avoid keeping
+  it up-to-date #458204 by Walter.  Automatically enable optimized EC 64bit code
+  when the compiler supports it #460790 by Ameretat.Reith.  Add fix from
+  upstream when running on AES NI platforms #463444 by Markus Oehme.
 
 *openssl-1.0.1e (20 Feb 2013)
 
