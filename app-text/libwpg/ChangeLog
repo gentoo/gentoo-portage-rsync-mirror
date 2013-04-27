@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.18 2013/04/19 09:28:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.19 2013/04/27 17:22:02 jer Exp $
+
+  27 Apr 2013; Jeroen Roovers <jer@gentoo.org> libwpg-0.2.2.ebuild:
+  Stable for HPPA (bug #467450).
 
   19 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Cleanup metadata.xml.

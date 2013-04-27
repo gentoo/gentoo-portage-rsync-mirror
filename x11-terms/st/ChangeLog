@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/st
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.14 2013/04/02 23:33:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.15 2013/04/27 17:19:31 jer Exp $
+
+*st-0.4.1 (27 Apr 2013)
+
+  27 Apr 2013; Jeroen Roovers <jer@gentoo.org> st-0.4.ebuild, +st-0.4.1.ebuild,
+  st-9999.ebuild:
+  DEPEND on virtual/pkgconfig, X11 protos. Version bump.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> -st-0.3.ebuild, st-0.4.ebuild:
   Add ~x86, remove old, wrt to bug #464252

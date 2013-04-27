@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.9 2013/02/23 22:52:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.10 2013/04/27 17:19:31 jer Exp $
 
 EAPI=5
 
@@ -20,7 +20,10 @@ RDEPEND="media-libs/fontconfig
 	x11-libs/libXext
 	x11-libs/libXft"
 DEPEND="${RDEPEND}
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	virtual/pkgconfig
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 src_prepare() {
 	sed -e '/^CFLAGS/s:[[:space:]]-Wall[[:space:]]: :' \

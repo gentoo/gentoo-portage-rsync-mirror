@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-2.3.ebuild,v 1.6 2013/01/25 19:06:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-2.3.ebuild,v 1.7 2013/04/27 17:26:33 ulm Exp $
 
 inherit eutils games
 
@@ -11,11 +11,11 @@ DESCRIPTION="On the Rain-Slick Precipice of Darkness, Episode Two"
 HOMEPAGE="http://rainslick.com/"
 SRC_URI="http://a.pa-cdn.com/greenhouse/rainslickep${EP}_linux_r${REV}.tgz"
 
-LICENSE="as-is"
+LICENSE="Rain-Slick LGPL-2.1+ BSD BSD-2 fmod MIT"
 SLOT="${EP}"
 KEYWORDS="amd64 x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="bindist mirror strip"
 
 RDEPEND="sys-libs/glibc
 	virtual/opengl
