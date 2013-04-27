@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.6.3.ebuild,v 1.1 2013/04/27 05:36:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.6.3.ebuild,v 1.2 2013/04/27 12:06:42 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 

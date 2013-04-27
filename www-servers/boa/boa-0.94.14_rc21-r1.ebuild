@@ -1,38 +1,37 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.6 2011/08/02 06:23:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21-r1.ebuild,v 1.1 2013/04/27 12:20:10 mgorny Exp $
 
-inherit eutils
+EAPI=5
+inherit eutils systemd
 
-MY_PV=${PV/_/}
-DESCRIPTION="A very small and very fast http daemon."
-SRC_URI="http://www.boa.org/${PN}-${MY_PV}.tar.gz"
+MY_P=${P/_/}
+DESCRIPTION="A very small and very fast http daemon"
+SRC_URI="http://www.boa.org/${MY_P}.tar.gz"
 HOMEPAGE="http://www.boa.org/"
 
-KEYWORDS="~x86 ~sparc ~mips ~ppc ~amd64"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
-S=${WORKDIR}/${PN}-${MY_PV}
 
 RDEPEND=""
 DEPEND="sys-devel/bison
 	sys-devel/flex
 	doc? ( virtual/latex-base )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+S=${WORKDIR}/${MY_P}
 
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-texi.patch
 	epatch "${FILESDIR}"/${P}-ENOSYS.patch
 }
 
 src_compile() {
-	econf || die
-	emake || die
+	default
+
 	use doc || sed -i -e '/^all:/s/boa.dvi //' docs/Makefile
-	emake docs || die
+	emake docs
 }
 
 src_install() {
@@ -46,18 +45,18 @@ src_install() {
 	fi
 
 	keepdir /var/log/boa
-	dodir /var/www/localhost/htdocs
-	dodir /var/www/localhost/cgi-bin
-	dodir /var/www/localhost/icons
+	keepdir /var/www/localhost/htdocs
+	keepdir /var/www/localhost/cgi-bin
+	keepdir /var/www/localhost/icons
 
+	newinitd "${FILESDIR}"/boa.rc6 boa
 	newconfd "${FILESDIR}"/boa.conf.d boa
+
+	systemd_dounit "${FILESDIR}"/boa.service
 
 	exeinto /usr/lib/boa
 	doexe src/boa_indexer
 
-	newinitd "${FILESDIR}"/boa.rc6 boa
-
-	dodir /etc/boa
 	insinto /etc/boa
 	doins "${FILESDIR}"/boa.conf
 	doins "${FILESDIR}"/mime.types
