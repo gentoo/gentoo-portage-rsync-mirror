@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.18 2012/11/14 14:14:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.19 2013/04/27 06:55:20 patrick Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-underlink.patch
 #	AT_M4DIR=m4 eautoreconf
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 
