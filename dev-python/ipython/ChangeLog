@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.105 2013/03/30 13:02:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.106 2013/04/27 19:32:41 chutzpah Exp $
+
+*ipython-0.13.2 (27 Apr 2013)
+
+  27 Apr 2013; Patrick McLean <chutzpah@gentoo.org> +ipython-0.13.2.ebuild:
+  Version bump.
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> ipython-0.13.1-r1.ebuild:
   Quote patterns for python_gen_usedep.
