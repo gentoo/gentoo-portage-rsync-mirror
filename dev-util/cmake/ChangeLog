@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.235 2013/04/23 19:42:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.237 2013/04/27 22:36:51 ago Exp $
+
+  27 Apr 2013; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.10.2-r2.ebuild:
+  Stable for x86, wrt bug #464648
+
+  27 Apr 2013; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.10.2-r2.ebuild:
+  Stable for amd64, wrt bug #464648
 
   23 Apr 2013; Fabian Groffen <grobian@gentoo.org>
   +files/cmake-2.8.10-darwin-isysroot.patch, cmake-2.8.10.2-r2.ebuild:

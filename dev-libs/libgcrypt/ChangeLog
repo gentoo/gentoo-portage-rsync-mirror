@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.168 2013/04/25 19:23:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.169 2013/04/27 22:40:18 radhermit Exp $
+
+*libgcrypt-1.5.2 (27 Apr 2013)
+
+  27 Apr 2013; Tim Harder <radhermit@gentoo.org> +libgcrypt-1.5.2.ebuild:
+  Version bump (bug #467466), add caps use flag.
 
   25 Apr 2013; Tim Harder <radhermit@gentoo.org> libgcrypt-1.5.1.ebuild:
   Fix autoreconf failures with automake-1.13 (bug #466938).

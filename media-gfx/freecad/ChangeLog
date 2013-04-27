@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.14 2013/03/07 15:54:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.15 2013/04/27 22:49:15 xmw Exp $
+
+*freecad-0.13.1830 (27 Apr 2013)
+*freecad-0.12.5284-r3 (27 Apr 2013)
+
+  27 Apr 2013; Michael Weber <xmw@gentoo.org> +freecad-0.12.5284-r3.ebuild,
+  +files/freecad-0.12.5284-no-3rdParty.patch,
+  +files/freecad-0.12.5284-no-permissive.patch,
+  +files/freecad-0.12.5284-occ-6.5.5.patch, +freecad-0.13.1830.ebuild,
+  +files/freecad-0.13.1830-remove-qt3-support.patch, metadata.xml:
+  Taking main, revbump to fix automagic dep on libspnav[x] (bug 454150), add
+  launcher icon (bug 416327), remove bundled libs (bug 467482), fix install
+  path (bug 464854)
 
   07 Mar 2013; Ian Stakenvicius <axs@gentoo.org> freecad-0.12.5284-r2.ebuild:
   adjust dependency of xerces-c, re-fixing bug 295849

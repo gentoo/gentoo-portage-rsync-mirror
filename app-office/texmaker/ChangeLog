@@ -1,6 +1,12 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.127 2013/03/18 17:35:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.129 2013/04/27 22:37:36 ago Exp $
+
+  27 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texmaker-4.0.1.ebuild:
+  Stable for x86, wrt bug #467478
+
+  27 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texmaker-4.0.1.ebuild:
+  Stable for amd64, wrt bug #467478
 
   18 Mar 2013; Justin Lecher <jlec@gentoo.org> texmaker-4.0.1.ebuild:
   Add some more PREFIX love

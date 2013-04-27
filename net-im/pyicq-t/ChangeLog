@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pyicq-t
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/ChangeLog,v 1.22 2013/03/18 15:55:08 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/ChangeLog,v 1.24 2013/04/27 22:37:04 ago Exp $
+
+  27 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pyicq-t-0.8.1.5-r1.ebuild:
+  Stable for x86, wrt bug #467506
+
+  27 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pyicq-t-0.8.1.5-r1.ebuild:
+  Stable for amd64, wrt bug #467506
 
 *pyicq-t-0.8.1.5-r1 (18 Mar 2013)
 
@@ -108,4 +114,3 @@
   +metadata.xml, +pyicq-t-0.8.ebuild:
   Added pyicq-t 0.8 ebuild from sunrise overlay (closes bug #88283). 
   Thanks to all involved for creating and maintaining the ebuild.
-
