@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20110311.ebuild,v 1.14 2012/06/17 16:28:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20110311.ebuild,v 1.15 2013/04/27 08:32:07 patrick Exp $
 
 EAPI=3
 inherit autotools eutils texlive-common
@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/20090708-fix_file_collisions.patch
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in || die
 	eautoreconf
 }
 

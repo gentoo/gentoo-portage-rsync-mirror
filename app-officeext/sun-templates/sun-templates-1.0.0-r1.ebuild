@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/sun-templates/sun-templates-1.0.0-r1.ebuild,v 1.2 2013/03/24 08:35:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/sun-templates/sun-templates-1.0.0-r1.ebuild,v 1.3 2013/04/27 08:31:48 scarabeus Exp $
 
 EAPI=5
 
@@ -22,5 +22,5 @@ SRC_URI="${URI_EXTENSIONS}"
 
 LICENSE="sun-bcla-j2me"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
