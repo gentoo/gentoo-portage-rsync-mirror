@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.13 2013/04/10 19:51:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.14 2013/04/27 15:57:14 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -50,6 +50,11 @@ src_prepare() {
 	# Fix warning spam
 	epatch "${FILESDIR}/${P}-set_qdata.patch"
 	epatch "${FILESDIR}/${P}-gio-types-2.32.patch"
+
+	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		-e 's:AM_PROG_CC_STDC:AC_PROG_CC:' \
+		configure.ac || die
 
 	eautoreconf
 	gnome2_src_prepare

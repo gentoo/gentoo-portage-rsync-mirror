@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.1.ebuild,v 1.1 2013/04/20 12:22:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.1.ebuild,v 1.2 2013/04/27 15:58:32 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -66,7 +66,7 @@ src_configure() {
 	# Hard-enable libffi support since both gobject-introspection and
 	# glib-2.29.x rdepend on it anyway
 	# docs disabled by upstream default since they are very out of date
-	
+
 	python_foreach_impl run_in_build_dir \
 		gnome2_src_configure \
 			--with-ffi \

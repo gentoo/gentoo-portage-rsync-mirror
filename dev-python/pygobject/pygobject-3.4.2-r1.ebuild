@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.2-r1.ebuild,v 1.6 2013/01/28 13:43:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.2-r1.ebuild,v 1.7 2013/04/27 15:57:14 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,6 +62,11 @@ src_prepare() {
 
 	# Run tests with older python too
 	epatch "${FILESDIR}/${PN}-3.4.2-run-tests-with-old-python.patch"
+
+	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		-e 's:AM_PROG_CC_STDC:AC_PROG_CC:' \
+		configure.ac || die
 
 	eautoreconf
 	gnome2_src_prepare
