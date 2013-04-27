@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.1 2013/04/27 15:17:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.2 2013/04/27 17:44:41 scarabeus Exp $
 
 EAPI=5
 
@@ -10,14 +10,14 @@ inherit toolchain-funcs flag-o-matic multilib base
 [[ ${PV} == *9999* ]] && inherit git-2
 
 DESCRIPTION="Video player based on MPlayer/mplayer2"
-HOMEPAGE="https://github.com/mpv-player/mpv/"
-[[ ${PV} == *9999* ]] || SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.xz"
+HOMEPAGE="http://mpv.io/"
+[[ ${PV} == *9999* ]] || \
+SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-
 IUSE="+alsa aqua bluray bs2b cddb +cdio debug +dts dvb +dvd +enca encode fbcon ftp
 +iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mng +mp3
 +network -openal +opengl oss portaudio +postproc pulseaudio pvr quvi radio samba +shm
@@ -106,7 +106,7 @@ pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
 		elog
 		elog "This is a live ebuild which installs the latest from upstream's"
-		elog "${VCS_ECLASS} repository, and is unsupported by Gentoo."
+		elog "git repository, and is unsupported by Gentoo."
 		elog "Everything but bugs in the ebuild itself will be ignored."
 		elog
 	fi

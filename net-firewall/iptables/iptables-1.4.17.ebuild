@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.17.ebuild,v 1.2 2012/12/30 23:11:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.17.ebuild,v 1.3 2013/04/27 17:45:54 vapier Exp $
 
 EAPI="4"
 
@@ -36,6 +36,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# Some libs use $(AR) rather than libtool to build #444282
+	tc-export AR
+
 	sed -i \
 		-e "/nfnetlink=[01]/s:=[01]:=$(usex netlink 1 0):" \
 		configure || die
