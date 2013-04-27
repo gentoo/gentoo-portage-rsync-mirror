@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14692 2013/04/27 17:00:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14693 2013/04/27 18:24:52 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (27 Apr 2013)
+# HOMEPAGE and SRC_URI dead, no license, upstream cannot
+# be contacted. Use app-text/dos2unix or app-text/recode
+# as replacement. Masked for removal in 30 days, bug #444576.
+app-text/duconv
 
 # Ben de Groot <yngwin@gentoo.org> (25 Apr 2013)
 # freetype:1 has multiple issues, including security vulnerabilities,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.4.ebuild,v 1.2 2013/04/27 08:25:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.4.ebuild,v 1.3 2013/04/27 18:15:48 xmw Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DEPEND="app-admin/eselect-opencascade
 	x11-libs/libXmu
 	freeimage? ( media-libs/freeimage )
 	gl2ps? ( x11-libs/gl2ps )
+	java? ( >=virtual/jdk-0 )
 	tbb? ( dev-cpp/tbb )"
 RDEPEND="${DEPEND}"
 
@@ -49,7 +50,7 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${P}-fixed-DESTDIR.patch \
-		"${FILESDIR}"/${P}-tcl8.6.patch
+		"${FILESDIR}"/${P}-tcl8.6.patch \
 		"${FILESDIR}"/${P}-fixed-tbb-VERSION.patch
 
 	# Feed environment variables used by Opencascade compilation
@@ -108,6 +109,7 @@ TCL_LIBRARY=${my_sys_lib}/tcl$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*
 	append-cxxflags "-fpermissive"
 
 	sed -e "/^AM_C_PROTOTYPES$/d" \
+		-e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" \
 		-e "s:\$qt/include:\$qt/include/qt4:g"\
 		-e "s:\$qt/lib:\$qt/$(get_libdir)/qt4:g"\
 		-i configure.* || die
