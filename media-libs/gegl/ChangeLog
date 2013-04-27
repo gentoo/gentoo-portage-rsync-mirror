@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.78 2013/02/22 20:53:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.79 2013/04/27 00:33:36 sping Exp $
+
+  27 Apr 2013; Sebastian Pipping <sping@gentoo.org> gegl-0.2.0.ebuild,
+  gegl-0.2.0-r1.ebuild, files/gegl-0.2.0-ffmpeg-0.11.diff:
+  Upgrade to libavformat v54 using upstream patch (bug #459312), thanks to
+  Andrew Karpow!
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> gegl-0.2.0-r1.ebuild:
   Add ~arm-linux keyword.
