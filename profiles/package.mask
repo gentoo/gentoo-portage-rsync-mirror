@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14688 2013/04/26 14:21:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14689 2013/04/27 05:25:16 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -88,13 +88,6 @@ net-im/ktp-presence-applet
 # needs a network interface named eth* or wlan* (bug #455896)
 # collides with predictable network interface names of udev
 <=media-sound/google-musicmanager-1.0.60.7918_beta
-
-# Samuli Suominen <ssuominen@gentoo.org> (14 Apr 2013)
-# Upgrade your media-libs/libpng to at least 1.6.1-r1 to avoid
-# problems with exporting commented PNGs with, for example,
-# media-gfx/gimp.
-# Use at least =media-libs/libpng-1.6.1-r1
-=media-libs/libpng-1.6.1
 
 # Michael Weber <xmw@gentoo.org> (13 Apr 2013)
 # Does not work with rdeps, mask for testing (bug #447246)
@@ -444,13 +437,6 @@ x11-drivers/xf86-input-citron
 # Tim Harder <radhermit@gentoo.org> (07 Mar 2013)
 # Masked for testing
 =dev-java/jython-2.7*
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2013)
-# Old version of udev is kept for OpenVZ users since they can't enable
-# CONFIG_DEVTMPFS=y and CONFIG_VE=y together, see http://bugs.gentoo.org/466424
-# Broken and unsupported. Removed at any time OpenVZ is ready.
-~sys-fs/udev-171
-~virtual/udev-171
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2013)
 # Masked in favour of sys-apps/kmod. Now is the time to file

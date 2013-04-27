@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.332 2013/04/11 05:20:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.333 2013/04/27 05:20:41 ssuominen Exp $
+
+*cairo-1.12.14-r1 (27 Apr 2013)
+
+  27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +cairo-1.12.14-r1.ebuild:
+  Stop applying bogus -libpng16.patch wrt #467426 by Richard Grenville
 
   11 Apr 2013; Lars Wendler <polynomial-c@gentoo.org> cairo-1.12.14.ebuild:
   Fixed patch command.
