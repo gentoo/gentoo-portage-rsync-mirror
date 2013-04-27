@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.16 2013/02/18 22:06:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.17 2013/04/27 04:15:22 vapier Exp $
 
 EAPI="2"
 
@@ -33,6 +33,7 @@ src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
 		eautoreconf
 	else
+		sed -i 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.in || die #467018
 		epatch "${FILESDIR}"/${P}-pkgconfig.patch
 		epatch "${FILESDIR}"/${P}-no-nss.patch
 		eautoreconf
