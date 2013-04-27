@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/static-dev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/ChangeLog,v 1.13 2011/07/21 01:56:04 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/ChangeLog,v 1.14 2013/04/27 09:51:05 vapier Exp $
+
+  27 Apr 2013; Mike Frysinger <vapier@gentoo.org> static-dev-0.1.ebuild:
+  Check for devtmpfs too #454404 by Alexander Tsoy.
 
   21 Jul 2011; Mike Frysinger <vapier@gentoo.org> static-dev-0.1.ebuild:
   Switch to newer makedev package and drop arch-specific logic #373625 by
@@ -45,4 +48,3 @@
   20 Mar 2006; John Mylchreest <johnm@gentoo.org> +metadata.xml,
   +static-dev-0.1.ebuild:
   initial commit. A basic static /dev
-

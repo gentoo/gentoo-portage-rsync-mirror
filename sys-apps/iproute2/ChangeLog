@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.219 2013/04/26 09:22:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.220 2013/04/27 09:57:57 vapier Exp $
+
+  27 Apr 2013; Mike Frysinger <vapier@gentoo.org> iproute2-3.8.0.ebuild:
+  Do not bother installing sgml/tex source files as docs #455988 by C W Rose.
 
   26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> iproute2-3.8.0.ebuild:
   Stable for sparc, wrt bug #458004

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.2.ebuild,v 1.9 2013/01/01 18:52:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.2.ebuild,v 1.10 2013/04/27 09:45:08 hwoarang Exp $
 
 EAPI="4"
 
@@ -92,6 +92,9 @@ src_install() {
 	newinitd "${FILESDIR}/${PN}.init" ${PN}
 
 	keepdir /usr/share/${PN}/empty
+
+	exeinto /usr/libexec
+	doexe "${FILESDIR}/vsftpd-checkconfig.sh"
 }
 
 pkg_preinst() {

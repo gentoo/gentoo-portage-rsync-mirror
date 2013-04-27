@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.8.0.ebuild,v 1.10 2013/04/26 09:22:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.8.0.ebuild,v 1.11 2013/04/27 09:57:57 vapier Exp $
 
 EAPI="4"
 
@@ -92,6 +92,8 @@ src_install() {
 		MANDIR="${EPREFIX}"/usr/share/man \
 		ARPDDIR="${EPREFIX}"/var/lib/arpd \
 		install
+
+	rm "${ED}"/usr/share/doc/${PF}/*.{sgml,tex} || die #455988
 
 	dodir /bin
 	mv "${ED}"/{s,}bin/ip || die #330115

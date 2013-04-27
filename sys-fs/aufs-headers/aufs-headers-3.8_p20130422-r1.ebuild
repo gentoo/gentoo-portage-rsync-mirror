@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/aufs-headers-3.8_p20130422.ebuild,v 1.1 2013/04/27 09:28:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/aufs-headers-3.8_p20130422-r1.ebuild,v 1.1 2013/04/27 09:52:25 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,9 @@ IUSE=""
 S="${WORKDIR}"
 
 src_install() {
-	sed -e "s:3.x-rcN:${PV/_p/-}:g" -i include/linux/aufs_type.h || die
+	sed \
+		-e "/define AUFS_VERSION/s:\(AUFS_VERSION\).*$:\1 \"$(get_version_component_range 1-2)\":g" \
+		-i include/linux/aufs_type.h || die
 	insinto /usr
 	doins -r include
 }
