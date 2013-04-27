@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libqmi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.4 2013/01/29 00:50:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.5 2013/04/27 21:06:57 vapier Exp $
+
+  27 Apr 2013; Mike Frysinger <vapier@gentoo.org> libqmi-1.0.0.ebuild,
+  libqmi-9999.ebuild:
+  Fix building with newer automake #467326 by Mauro Crociara.
 
   29 Jan 2013; Zac Medico <zmedico@gentoo.org> Manifest:
   Update Manifest with digests for a snapshot which I've manually uploaded to

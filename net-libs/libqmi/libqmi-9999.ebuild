@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.2 2013/01/28 23:21:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.3 2013/04/27 21:06:57 vapier Exp $
 
 EAPI="4"
 
@@ -31,6 +31,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-more-warnings \
 		$(use_enable static{-libs,}) \
 		$(use_with doc{,s}) \
 		$(use_with test{,s})

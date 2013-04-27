@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.0.0.ebuild,v 1.1 2013/01/28 23:21:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.0.0.ebuild,v 1.2 2013/04/27 21:06:57 vapier Exp $
 
 EAPI="4"
 
@@ -26,11 +26,18 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	[[ -e configure ]] || eautoreconf
+	if [[ ! -e configure ]] ; then
+		find -name Makefile.am -exec sed -i 's:^INCLUDES:AM_CPPFLAGS:' {} + || die
+		sed -i \
+			-e 's:noinst_PROGRAMS:check_PROGRAMS:' \
+			{cli/test,libqmi-glib/test}/Makefile.am || die
+		eautoreconf
+	fi
 }
 
 src_configure() {
 	econf \
+		--disable-more-warnings \
 		$(use_enable static{-libs,}) \
 		$(use_with doc{,s}) \
 		$(use_with test{,s})
