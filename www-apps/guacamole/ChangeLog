@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/guacamole
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.3 2012/12/05 21:13:04 nativemad Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.4 2013/04/27 18:49:45 nativemad Exp $
+
+  27 Apr 2013; Andreas Schuerch <nativemad@gentoo.org> guacamole-0.6.2.ebuild,
+  guacamole-0.7.0.ebuild:
+  mvn-config-path corrected, see bug 466486
 
   06 Dec 2012; Andreas Schuerch <nativemad@gentoo.org> guacamole-0.7.0.ebuild:
   removed some nasty stuff and added some elog about it

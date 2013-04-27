@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.2 2013/04/27 17:44:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.3 2013/04/27 18:57:40 scarabeus Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b cddb +cdio debug +dts dvb +dvd +enca encode fbcon ftp
 +iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mng +mp3
 +network -openal +opengl oss portaudio +postproc pulseaudio pvr quvi radio samba +shm
-v4l vcd vdpau +X xinerama +xscreensaver +xv"
+v4l vcd vdpau wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
 	cddb? ( cdio network )
@@ -83,6 +83,7 @@ RDEPEND+="
 	pulseaudio? ( media-sound/pulseaudio )
 	quvi? ( >=media-libs/libquvi-0.4.1 )
 	samba? ( net-fs/samba )
+	wayland? ( >=dev-libs/wayland-1.1.0 )
 	>=virtual/ffmpeg-9[encode?]
 "
 ASM_DEP="dev-lang/yasm"
@@ -150,8 +151,6 @@ src_configure() {
 	###################
 	# SDL output is fallback for platforms where nothing better is available
 	myconf+=" --disable-sdl --disable-sdl2"
-	# wayland needs xkbcommon, not in portage yet
-	myconf+=" --disable-wayland"
 	use encode || myconf+=" --disable-encoding"
 	use network || myconf+=" --disable-networking"
 	myconf+=" $(use_enable joystick)"
@@ -265,7 +264,7 @@ src_configure() {
 	# X enabled configuration #
 	###########################
 	use X || myconf+=" --disable-x11"
-	uses="vdpau xinerama xv"
+	uses="vdpau wayland xinerama xv"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
