@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.12.ebuild,v 1.1 2013/04/13 20:35:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.12.ebuild,v 1.2 2013/04/27 09:15:09 lxnay Exp $
 
 EAPI=2
 
-inherit eutils linux-mod user
+inherit eutils linux-mod systemd user
 
 MY_PV="${PV/beta/BETA}"
 MY_PV="${PV/rc/RC}"
@@ -164,6 +164,8 @@ src_install() {
 		# sample xorg.conf
 		insinto /usr/share/doc/${PF}
 		doins "${FILESDIR}"/xorg.conf.vbox
+
+		systemd_dounit "${FILESDIR}/${PN}.service"
 }
 
 pkg_postinst() {
