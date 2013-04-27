@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.16.2.ebuild,v 1.2 2013/04/18 03:58:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.16.2.ebuild,v 1.3 2013/04/27 10:47:03 grobian Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -62,6 +62,13 @@ src_configure() {
 	# Depending on GCC version the warnings are different and we don't
 	# want the build to fail because of that.
 	myconf+=" -Dwerror="
+
+	# gyp does this only for linux, but we always want to use "out" dir, or
+	# all else below fails due to not finding "out" dir
+	myconf+=" --generator-output=out"
+	# gyp defaults to whatever makes the most sense on the platform at hand,
+	# but we want to build using Makefiles, so force that
+	myconf+=" -f make"
 
 	EGYP_CHROMIUM_COMMAND=build/gyp_v8 egyp_chromium ${myconf} || die
 }
