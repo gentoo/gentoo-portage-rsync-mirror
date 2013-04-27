@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.247 2013/04/01 18:23:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.248 2013/04/27 14:19:19 pacho Exp $
+
+*gnumeric-1.12.2 (27 Apr 2013)
+
+  27 Apr 2013; Pacho Ramos <pacho@gentoo.org> +gnumeric-1.12.2.ebuild,
+  -gnumeric-1.10.17.ebuild:
+  Version bump, drop old
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> gnumeric-1.12.0-r1.ebuild:
   Stable for sparc, wrt bug #458984
