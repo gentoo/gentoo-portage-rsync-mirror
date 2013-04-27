@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.5.ebuild,v 1.2 2013/04/27 18:15:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.5.ebuild,v 1.3 2013/04/27 21:53:52 xmw Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://files.opencascade.com/OCCT/OCC_${PV}_release/OpenCASCADE${PV//\.
 
 LICENSE="Open-CASCADE-Technology-Public-License-6.5"
 SLOT="${PV}"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples freeimage gl2ps java qt4 +tbb"
 
 DEPEND="app-admin/eselect-opencascade

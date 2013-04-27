@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.0.0.ebuild,v 1.2 2013/04/27 21:06:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.0.0.ebuild,v 1.3 2013/04/27 21:42:57 vapier Exp $
 
 EAPI="4"
 
-inherit multilib autotools
+inherit multilib autotools eutils
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 	EGIT_REPO_URI="git://anongit.freedesktop.org/libqmi"
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.0.0-python3.patch #464314
 	if [[ ! -e configure ]] ; then
 		find -name Makefile.am -exec sed -i 's:^INCLUDES:AM_CPPFLAGS:' {} + || die
 		sed -i \
