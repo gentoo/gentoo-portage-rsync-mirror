@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14.ebuild,v 1.2 2013/04/11 05:20:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14-r2.ebuild,v 1.1 2013/04/27 10:25:10 ssuominen Exp $
 
 EAPI=5
 
@@ -73,9 +73,9 @@ REQUIRED_USE="
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
 	use legacy-drivers && epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
-	epatch "${FILESDIR}"/${PN}-libpng16.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
 	epatch "${FILESDIR}"/${PN}-1.12.12-disable-test-suite.patch
+	epatch "${FILESDIR}"/${PN}-1.12.14-libpng16.patch
 	epatch_user
 
 	# Slightly messed build system YAY
