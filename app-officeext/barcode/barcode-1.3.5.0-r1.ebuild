@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/barcode/barcode-1.3.5.0-r1.ebuild,v 1.1 2013/03/23 10:17:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/barcode/barcode-1.3.5.0-r1.ebuild,v 1.2 2013/04/27 08:14:56 scarabeus Exp $
 
 EAPI=5
 
@@ -15,5 +15,5 @@ SRC_URI="http://extensions.libreoffice.org/extension-center/${PN}/releases/${PV}
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""

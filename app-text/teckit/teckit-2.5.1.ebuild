@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/teckit-2.5.1.ebuild,v 1.23 2012/05/09 13:15:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/teckit-2.5.1.ebuild,v 1.24 2013/04/27 08:28:54 patrick Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	epatch "${FILESDIR}/${P}-mixcflagscxxflags.patch"
 	rm -f configure
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 

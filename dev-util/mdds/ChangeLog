@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.25 2013/03/25 08:44:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.26 2013/04/27 08:24:58 scarabeus Exp $
+
+  27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> -mdds-0.6.1.ebuild:
+  Actually binpkg does not need this.
 
   25 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> mdds-0.7.1.ebuild:
   Stabilise 0.7.1 on amd64 x86 and ppc. Not removing older due to binpkg.

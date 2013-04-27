@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.0.ebuild,v 1.2 2013/04/27 08:25:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.5.ebuild,v 1.1 2013/04/27 08:25:37 xmw Exp $
 
 EAPI=5
 
@@ -8,12 +8,12 @@ inherit autotools eutils check-reqs multilib java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="Software development platform for CAD/CAE, 3D surface/solid modeling and data exchange"
 HOMEPAGE="http://www.opencascade.org/"
-SRC_URI="http://files.opencascade.com/OCCT/OCC_${PV}_release/OpenCASCADE${PV//\./}.tar.gz"
+SRC_URI="http://files.opencascade.com/OCCT/OCC_${PV}_release/OpenCASCADE${PV//\./}.tgz"
 
 LICENSE="Open-CASCADE-Technology-Public-License-6.5"
 SLOT="${PV}"
 KEYWORDS=""
-IUSE="debug doc examples freeimage gl2ps java +tbb"
+IUSE="debug doc examples freeimage gl2ps java qt4 +tbb"
 
 DEPEND="app-admin/eselect-opencascade
 	dev-lang/tcl
@@ -48,9 +48,8 @@ src_prepare() {
 	java-pkg-opt-2_src_prepare
 
 	epatch \
-		"${FILESDIR}"/${PN}-6.5-ftgl.patch \
-		"${FILESDIR}"/${PN}-6.5-fixed-DESTDIR.patch \
-		"${FILESDIR}"/${PN}-6.5-tcl8.6.patch \
+		"${FILESDIR}"/${PN}-6.5.4-fixed-DESTDIR.patch \
+		"${FILESDIR}"/${PN}-6.5.4-tcl8.6.patch \
 		"${FILESDIR}"/${PN}-6.5.4-fixed-tbb-VERSION.patch
 
 	# Feed environment variables used by Opencascade compilation
@@ -109,6 +108,8 @@ TCL_LIBRARY=${my_sys_lib}/tcl$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*
 	append-cxxflags "-fpermissive"
 
 	sed -e "/^AM_C_PROTOTYPES$/d" \
+		-e "s:\$qt/include:\$qt/include/qt4:g"\
+		-e "s:\$qt/lib:\$qt/$(get_libdir)/qt4:g"\
 		-i configure.* || die
 	eautoreconf
 }
@@ -121,6 +122,7 @@ src_configure() {
 		--with-ftgl="${EROOT}usr" \
 		$(usex freeimage "--with-freeimage=${EROOT}usr" "") \
 		$(usex gl2ps "--with-gl2ps=${EROOT}usr" "") \
+		$(usex qt4 "--with-qt=${EROOT}usr" "") \
 		$(usex tbb "--with-tbb-include=${EROOT}usr" "") \
 		$(usex tbb "--with-tbb-library=${EROOT}usr" "") \
 		$(use java && echo "--with-java-include=$(java-config -O)/include" || echo "--without-java-include") \

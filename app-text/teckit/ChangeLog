@@ -1,6 +1,9 @@
 # ChangeLog for app-text/teckit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.23 2012/05/09 13:15:00 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.24 2013/04/27 08:28:54 patrick Exp $
+
+  27 Apr 2013; Patrick Lauer <patrick@gentoo.org> teckit-2.5.1.ebuild:
+  Automake 1.13 fix
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> teckit-2.5.1.ebuild:
   keyword ~amd64-fbsd
@@ -75,4 +78,3 @@
   +files/teckit-2.5.1-gcc43.patch, +files/teckit-2.5.1-rc.patch,
   +metadata.xml:
   Initial import, will be needed for TL 2009, ebuild by me
-

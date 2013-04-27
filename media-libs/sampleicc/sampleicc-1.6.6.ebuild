@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/sampleicc-1.6.6.ebuild,v 1.3 2012/04/26 07:33:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/sampleicc-1.6.6.ebuild,v 1.4 2013/04/27 08:31:12 scarabeus Exp $
 
-EAPI=4
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="C++ library for reading, writing, manipulating, and applying ICC profiles"
 HOMEPAGE="http://sampleicc.sourceforge.net/"
@@ -25,5 +27,6 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
+
+	prune_libtool_files --all
 }

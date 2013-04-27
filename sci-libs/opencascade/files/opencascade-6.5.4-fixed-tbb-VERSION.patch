@@ -1,0 +1,10 @@
+--- src/Standard/Standard_MMgrTBBalloc.cxx.ori	2012-04-07 01:28:01.492233539 +0200
++++ src/Standard/Standard_MMgrTBBalloc.cxx	2012-04-07 01:27:52.491891129 +0200
+@@ -12,6 +12,7 @@
+ 
+ // paralleling with Intel TBB
+ #ifdef HAVE_TBB
++#undef VERSION
+ #include <tbb/scalable_allocator.h>
+ using namespace tbb;
+ #else
