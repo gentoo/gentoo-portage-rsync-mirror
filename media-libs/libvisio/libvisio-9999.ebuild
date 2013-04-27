@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.18 2013/04/22 10:33:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.19 2013/04/27 19:02:42 scarabeus Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="doc static-libs"
 RDEPEND="
 	app-text/libwpd:0.9
 	app-text/libwpg:0.2
-	dev-libs/icu
+	dev-libs/icu:=
 	dev-libs/libxml2
 	sys-libs/zlib
 "
