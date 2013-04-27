@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.184 2013/04/02 13:55:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.185 2013/04/27 15:05:06 scarabeus Exp $
 
 EAPI="4"
 
@@ -48,7 +48,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
-	libproxy libsamplerate libtiger linsys libtar lirc live lua +macosx
+	libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opengl optimisememory oss png
@@ -92,7 +92,6 @@ RDEPEND="
 		libass? ( >=media-libs/libass-0.9.8 media-libs/fontconfig )
 		libcaca? ( >=media-libs/libcaca-0.99_beta14 )
 		libnotify? ( x11-libs/libnotify x11-libs/gtk+:2 )
-		libproxy? ( net-libs/libproxy )
 		libsamplerate? ( media-libs/libsamplerate )
 		libtar? ( >=dev-libs/libtar-1.2.11-r3 )
 		libtiger? ( media-libs/libtiger )
@@ -248,7 +247,6 @@ src_configure() {
 		$(use_enable libass) \
 		$(use_enable libcaca caca) \
 		$(use_enable libnotify notify) \
-		$(use_enable libproxy) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable libtar) \
 		$(use_enable libtiger tiger) \

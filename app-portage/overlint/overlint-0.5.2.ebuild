@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/overlint-0.5.2.ebuild,v 1.2 2013/04/26 21:14:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/overlint-0.5.2.ebuild,v 1.3 2013/04/27 15:25:39 sping Exp $
 
 EAPI="5"
 
@@ -18,4 +18,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="virtual/python-argparse"
+RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]"

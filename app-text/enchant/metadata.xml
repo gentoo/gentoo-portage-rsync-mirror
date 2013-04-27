@@ -3,11 +3,6 @@
 <pkgmetadata>
 	<herd>gnome-office</herd>
 	<herd>app-dicts</herd>
-	<maintainer>
-		<email>serkan@gentoo.org</email>
-		<name>Serkan Kaba</name>
-		<description>Co-maintainer</description>
-	</maintainer>
 	<use>
 		<flag name="aspell">Adds support for <pkg>app-text/aspell</pkg> spell checker</flag>
 		<flag name="hunspell">Adds support for <pkg>app-text/hunspell</pkg> spell checker</flag>

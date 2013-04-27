@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/stardict-freedict-tur-deu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-deu/ChangeLog,v 1.6 2010/11/30 23:53:51 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-deu/ChangeLog,v 1.7 2013/04/27 15:20:06 pacho Exp $
+
+  27 Apr 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #215231
 
   30 Nov 2010; Michael Weber <xmw@gentoo.org>
   stardict-freedict-tur-deu-2.4.2.ebuild:
@@ -27,4 +30,3 @@
   09 Oct 2008; Serkan Kaba <serkan@gentoo.org> +metadata.xml,
   +stardict-freedict-tur-deu-2.4.2.ebuild:
   Add Turkish to German stardict dictionary.
-

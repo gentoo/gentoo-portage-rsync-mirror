@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>net-im</herd>
-	<maintainer>
-		<email>serkan@gentoo.org</email>
-		<name>Serkan Kaba</name>
-		<description>Co-maintainer</description>
-	</maintainer>
 	<upstream>
 		<remote-id type="google-code">pidgin-musictracker</remote-id>
 	</upstream>

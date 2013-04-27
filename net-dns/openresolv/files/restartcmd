@@ -10,10 +10,10 @@ fi
 
 if [ -e /run/openrc/softlevel ]; then
     if /sbin/rc-service -e ${1}; then
-        exec /sbin/rc-service ${1} -- -Ds restart
+        exec rc-service ${1} -- -Ds restart
     fi
 elif [ -d /run/systemd/system ]; then
-    exec /usr/bin/systemctl try-restart ${1}
+    exec systemctl try-restart ${1}
 else
     echo "Unsupported init system." >&2
     exit 1

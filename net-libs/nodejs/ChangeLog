@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.83 2013/04/24 02:26:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.84 2013/04/27 15:17:39 grobian Exp $
+
+  27 Apr 2013; Fabian Groffen <grobian@gentoo.org> nodejs-0.10.5.ebuild,
+  nodejs-0.11.0.ebuild:
+  Disable dtrace support (can't assume it's there) and fix installation for
+  Prefix
 
 *nodejs-0.10.5 (24 Apr 2013)
 

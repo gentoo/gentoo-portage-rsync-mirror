@@ -3671,6 +3671,18 @@ media-video/mplayer2:symlink - Copy all binaries and configuration into location
 media-video/mplayer2:tga - Enables Targa video output
 media-video/mplayer2:xanim - Enables support for xanim based codecs
 media-video/mplayer2:yuv4mpeg - Enables yuv4mpeg video output
+media-video/mpv:bluray - Enable playback of Blu-ray filesystems
+media-video/mpv:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
+media-video/mpv:cdio - Use libcdio for CD support (instead of cdparanoia)
+media-video/mpv:enca - Enables support for charset discovery and conversion
+media-video/mpv:mng - MNG input support
+media-video/mpv:mp3 - Enable support for mp3 decoding over media-sound/mpg123 instead of relying on ffmpeg support.
+media-video/mpv:network - Enables network streaming support
+media-video/mpv:postproc - Enable image post-processing via libpostproc
+media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
+media-video/mpv:quvi - Enable support for streaming sites using media-libs/libquvi
+media-video/mpv:radio - Enable V4L2 radio interface and support
+media-video/mpv:shm - Enable support for shm
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/pgcedit:video - Add support for video preview
@@ -3697,6 +3709,7 @@ media-video/ushare:dlna - Add DLNA (media-libs/libdlna) support
 media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:analogtv - Add support for the analogtv plugin
 media-video/vdr:atsc - Support for NorthAmerican Broadcast ( rudimentary )
+media-video/vdr:bidi - fribid support, for languages, written from right to left
 media-video/vdr:cmdreccmdi18n - loads translated commands and reccommands files if existing
 media-video/vdr:cmdsubmenu - Allows the creation of submenus in the commands menu
 media-video/vdr:cutterlimit - Limit IO bandwith used for cutting

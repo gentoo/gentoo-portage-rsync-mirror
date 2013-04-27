@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zpspell
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.5 2011/08/26 17:08:00 serkan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.6 2013/04/27 15:23:38 pacho Exp $
+
+  27 Apr 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #215231
 
   26 Aug 2011; Serkan Kaba <serkan@gentoo.org> zpspell-0.4.3.ebuild:
   Bump EAPI to 2 to really fix bug #369651.
@@ -22,4 +25,3 @@
   18 Jul 2008; Serkan Kaba <serkan@gentoo.org> +files/gcc-4.3.patch,
   +metadata.xml, +zpspell-0.4.1.ebuild:
   Initial ebuild. Fixes bug #156099.
-

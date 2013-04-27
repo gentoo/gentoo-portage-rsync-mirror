@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gmso2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gmso2/ChangeLog,v 1.7 2012/05/21 12:21:05 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gmso2/ChangeLog,v 1.8 2013/04/27 15:25:56 pacho Exp $
+
+  27 Apr 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #215231
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gmso2-0.1-r1.ebuild:
   x86 stable wrt bug #414607
@@ -27,4 +30,3 @@
   27 Mar 2010; Serkan Kaba <serkan@gentoo.org> +gmso2-0.1.ebuild,
   +metadata.xml:
   Initial ebuild.
-

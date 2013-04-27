@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/slashtime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.18 2012/03/04 12:00:14 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.19 2013/04/27 15:21:43 pacho Exp $
+
+  27 Apr 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #215231
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #206112
@@ -90,4 +93,3 @@
   29 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> +metadata.xml,
   +slashtime-0.5.4.ebuild:
   Initial commit
-

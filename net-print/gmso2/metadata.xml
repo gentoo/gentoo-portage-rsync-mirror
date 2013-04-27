@@ -5,11 +5,6 @@
 	<maintainer>
 		<email>java@gentoo.org</email>
 	</maintainer>
-	<maintainer>
-		<email>serkan@gentoo.org</email>
-		<name>Serkan Kaba</name>
-		<description>Maintainer</description>
-	</maintainer>
 	<upstream>
 		<remote-id type="google-code">mso</remote-id>
 	</upstream>

@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://nodejs.org/dist/v0.11.0/node-v0.11.0.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	d727728a240d5f59bf9370a64259fd61	python-any-r1	a6778a259dc0aab7e2c3bbf70e694fad	python-utils-r1	1abc4a4828358a8fc1c4d65e74ae4a19	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=9384dcf946964cc07db7353b6e8daa2d
+_md5_=5fe1e210931d7daf82ba77683eed18da

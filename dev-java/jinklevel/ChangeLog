@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jinklevel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jinklevel/ChangeLog,v 1.5 2010/08/01 20:24:02 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jinklevel/ChangeLog,v 1.6 2013/04/27 15:24:24 pacho Exp $
+
+  27 Apr 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #215231
 
   01 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jinklevel-0.1.ebuild:
   x86 stable wrt bug #330707
@@ -15,4 +18,3 @@
 
   27 Mar 2010; Serkan Kaba <serkan@gentoo.org> +jinklevel-0.1.ebuild, +metadata.xml:
   Initial ebuild.
-

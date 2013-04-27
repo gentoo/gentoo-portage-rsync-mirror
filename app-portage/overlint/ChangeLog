@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/overlint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.6 2013/04/26 21:14:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.7 2013/04/27 15:25:39 sping Exp $
+
+  27 Apr 2013; Sebastian Pipping <sping@gentoo.org> overlint-0.5.2.ebuild:
+  Add missing [${PYTHON_USEDEP}], again thanks to Nikoli (bug #466322)
 
   26 Apr 2013; Sebastian Pipping <sping@gentoo.org> -overlint-0.4.1.ebuild,
   -overlint-0.4.2.ebuild, -overlint-0.5.ebuild, -overlint-0.5.1.ebuild,

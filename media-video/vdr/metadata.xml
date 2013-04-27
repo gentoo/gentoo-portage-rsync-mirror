@@ -11,6 +11,7 @@
 		<flag name="analogtv">Add support for the analogtv plugin</flag>
 		<flag name="alternatechannel">Use alternate channel on record</flag>
 		<flag name="atsc">Support for NorthAmerican Broadcast ( rudimentary )</flag>
+		<flag name="bidi">fribid support, for languages, written from right to left</flag>
 		<flag name="cmdreccmdi18n">loads translated commands and reccommands files if existing</flag>
 		<flag name="cmdsubmenu">Allows the creation of submenus in the commands menu</flag>
 		<flag name="cutterlimit">Limit IO bandwith used for cutting</flag>
