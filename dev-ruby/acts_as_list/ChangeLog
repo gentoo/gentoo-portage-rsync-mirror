@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/acts_as_list
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/ChangeLog,v 1.1 2013/01/25 20:01:43 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/ChangeLog,v 1.2 2013/04/27 06:09:35 graaff Exp $
+
+*acts_as_list-0.2.0 (27 Apr 2013)
+
+  27 Apr 2013; Hans de Graaff <graaff@gentoo.org> +acts_as_list-0.2.0.ebuild:
+  Version bump.
 
   19 Dec 2012; Hans de Graaff <graaff@gentoo.org> acts_as_list-0.1.9.ebuild:
   Add x86 keyword.

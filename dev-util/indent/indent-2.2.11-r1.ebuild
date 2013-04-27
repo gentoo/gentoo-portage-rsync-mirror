@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.11-r1.ebuild,v 1.10 2012/08/19 21:14:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.11-r1.ebuild,v 1.11 2013/04/27 06:18:23 patrick Exp $
 
 EAPI=4
 
@@ -42,6 +42,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-segfault.patch \
 		"${FILESDIR}"/${PV}-texi2html-5.patch
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautomake
 }
 

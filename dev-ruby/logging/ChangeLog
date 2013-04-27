@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/logging
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logging/ChangeLog,v 1.1 2013/04/27 06:28:57 graaff Exp $
+
+*logging-1.8.1 (27 Apr 2013)
+
+  27 Apr 2013; Hans de Graaff <graaff@gentoo.org> +logging-1.8.1.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for adhearsion-2.x.
+
