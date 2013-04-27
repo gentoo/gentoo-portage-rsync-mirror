@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.4.1.ebuild,v 1.1 2013/03/17 19:51:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.4.1.ebuild,v 1.2 2013/04/27 14:37:58 hasufell Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ pkg_setup(){
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-flags.patch"
+	epatch "${FILESDIR}"/${P}-{flags,automake-1.13}.patch
 	eautoreconf
 }
 

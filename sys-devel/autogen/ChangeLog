@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.93 2013/04/14 01:47:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.94 2013/04/27 14:35:06 grobian Exp $
+
+  27 Apr 2013; Fabian Groffen <grobian@gentoo.org> autogen-5.17.3.ebuild:
+  Suppress -R directions in autoopts-config output for some platforms don't grok
+  this
 
 *autogen-5.17.3 (14 Apr 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.26 2013/03/17 19:51:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.27 2013/04/27 14:37:57 hasufell Exp $
+
+  27 Apr 2013; Julian Ospald <hasufell@gentoo.org> udevil-0.4.1.ebuild,
+  +files/udevil-0.4.1-automake-1.13.patch:
+  fix automake-1.13 build
 
 *udevil-0.4.1 (17 Mar 2013)
 

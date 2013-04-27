@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.6.2-r1.ebuild,v 1.2 2013/02/03 00:39:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.1.ebuild,v 1.1 2013/04/27 14:32:44 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -20,7 +20,7 @@ IUSE="doc elibc_FreeBSD gconf ipv6 systemd"
 # xdg-user-dirs-update is run during login (see 10-user-dirs-update-gnome below).
 # gdk-pixbuf used in the inhibit dialog
 COMMON_DEPEND="
-	>=dev-libs/glib-2.33.4:2
+	>=dev-libs/glib-2.35.0:2
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.90.7:3
 	>=dev-libs/json-glib-0.10
@@ -52,6 +52,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gsettings-desktop-schemas-0.1.7
 	>=x11-themes/gnome-themes-standard-2.91.92
 	sys-apps/dbus[X]
+	>=gnome-base/gnome-desktop-3.7.90:3
 	systemd? ( >=sys-apps/systemd-183 )
 	!systemd? ( sys-auth/consolekit )
 "
@@ -70,11 +71,12 @@ DEPEND="${COMMON_DEPEND}
 # gnome-base/gdm does not provide gnome.desktop anymore
 
 src_prepare() {
-	# upower-client problems, bug #450150; fixed in 3.6.3
-	epatch "${FILESDIR}/${P}-upower.patch"
-
 	# Silence errors due to weird checks for libX11
 	sed -e 's/\(PANGO_PACKAGES="\)pangox/\1/' -i configure.ac configure || die
+
+	# Allow people to configure startup apps, bug #464968, upstream bug #663767
+	sed -i -e '/NoDisplay/d' data/session-properties.desktop.in.in || die
+
 	gnome2_src_prepare
 }
 
@@ -82,6 +84,7 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-deprecation-flags \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--enable-session-selector \
 		$(use_enable doc docbook-docs) \
 		$(use_enable gconf) \
 		$(use_enable ipv6) \
@@ -97,7 +100,7 @@ src_install() {
 
 	dodir /usr/share/gnome/applications/
 	insinto /usr/share/gnome/applications/
-	doins "${FILESDIR}/defaults.list"
+	newins "${FILESDIR}/defaults.list-r1" defaults.list
 
 	dodir /etc/X11/xinit/xinitrc.d/
 	exeinto /etc/X11/xinit/xinitrc.d/
