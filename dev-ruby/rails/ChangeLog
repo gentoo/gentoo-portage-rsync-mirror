@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.269 2013/04/01 14:53:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.270 2013/04/27 05:58:30 graaff Exp $
+
+  27 Apr 2013; Hans de Graaff <graaff@gentoo.org> -rails-2.3.16.ebuild,
+  -rails-2.3.17.ebuild, -rails-3.1.10.ebuild, -rails-3.1.11.ebuild,
+  -rails-3.2.11.ebuild, -rails-3.2.12.ebuild:
+  Cleanup.
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rails-2.3.18.ebuild:
   Stable for ppc64, wrt bug #462452

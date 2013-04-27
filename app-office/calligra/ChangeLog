@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.81 2013/03/17 15:55:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.82 2013/04/27 05:35:52 creffett Exp $
+
+*calligra-2.6.3 (27 Apr 2013)
+
+  27 Apr 2013; Chris Reffett <creffett@gentoo.org> +calligra-2.6.3.ebuild:
+  Bump to 2.6.3 wrt bug 448686
 
   17 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> calligra-2.5.5.ebuild,
   calligra-2.5.49.9999.ebuild, calligra-9999.ebuild:
