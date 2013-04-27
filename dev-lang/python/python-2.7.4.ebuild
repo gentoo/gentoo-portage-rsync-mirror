@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.4 2013/04/27 15:41:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.5 2013/04/27 16:53:55 floppym Exp $
 
-EAPI="5"
+EAPI="4"
 WANT_AUTOMAKE="none"
 WANT_LIBTOOL="none"
 
@@ -32,17 +32,17 @@ RDEPEND="app-arch/bzip2
 	virtual/libintl
 	!build? (
 		berkdb? ( || (
-			sys-libs/db:5.3=
-			sys-libs/db:5.2=
-			sys-libs/db:5.1=
-			sys-libs/db:5.0=
-			sys-libs/db:4.8=
-			sys-libs/db:4.7=
-			sys-libs/db:4.6=
-			sys-libs/db:4.5=
-			sys-libs/db:4.4=
-			sys-libs/db:4.3=
-			sys-libs/db:4.2=
+			sys-libs/db:5.3
+			sys-libs/db:5.2
+			sys-libs/db:5.1
+			sys-libs/db:5.0
+			sys-libs/db:4.8
+			sys-libs/db:4.7
+			sys-libs/db:4.6
+			sys-libs/db:4.5
+			sys-libs/db:4.4
+			sys-libs/db:4.3
+			sys-libs/db:4.2
 		) )
 		gdbm? ( sys-libs/gdbm[berkdb] )
 		ncurses? (

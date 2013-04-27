@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libgksu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.85 2012/06/08 13:06:20 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.86 2013/04/27 16:39:20 ssuominen Exp $
+
+  27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> libgksu-2.0.12-r1.ebuild:
+  Fix automake-1.13 compability by using AC_CONFIG_HEADERS instead of the
+  obsolete AM_CONFIG_HEADER wrt #467026 by Alphat-PC
 
   08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer from metadata as talked with him, bug #90641.

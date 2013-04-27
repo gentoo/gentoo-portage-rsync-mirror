@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2-r1.ebuild,v 1.9 2012/10/28 16:33:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2-r1.ebuild,v 1.10 2013/04/27 16:41:01 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -48,6 +48,8 @@ src_prepare() {
 		# Conditional patch to avoid eautoreconf
 		# https://savannah.nongnu.org/bugs/index.php?36129
 		epatch "${FILESDIR}/${PN}-2.0.2-nautilus-dir.patch"
+
+		sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467024
 		eautoreconf
 	else
 		sed 's/dist_desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)/dist_desktop_DATA =/' \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.648 2013/04/27 15:41:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.649 2013/04/27 16:53:55 floppym Exp $
+
+  27 Apr 2013; Mike Gilbert <floppym@gentoo.org> python-2.7.4.ebuild:
+  Downgrade to EAPI 4.
 
   27 Apr 2013; Mike Gilbert <floppym@gentoo.org> python-2.7.4.ebuild:
   Increment patchset.

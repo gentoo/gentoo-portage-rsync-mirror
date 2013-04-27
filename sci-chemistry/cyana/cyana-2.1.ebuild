@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.11 2013/02/08 12:14:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.12 2013/04/27 16:50:37 ulm Exp $
 
 EAPI=4
 
@@ -10,8 +10,8 @@ DESCRIPTION="Combined assignment and dynamics algorithm for NMR applications"
 HOMEPAGE="http://www.las.jp/english/products/s08_cyana/index.html"
 SRC_URI="${P}.tar.gz"
 
+LICENSE="CYANA"
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 

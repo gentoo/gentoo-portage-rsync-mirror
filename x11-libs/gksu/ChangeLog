@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.73 2013/03/30 17:16:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.74 2013/04/27 16:41:01 ssuominen Exp $
+
+  27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> gksu-2.0.2-r1.ebuild:
+  Fix automake-1.13 compability by using AC_CONFIG_HEADERS instead of the
+  obsolete AM_CONFIG_HEADER wrt #467024 by Alphat-PC
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -gksu-2.0.2.ebuild:
   Clean up old revision.

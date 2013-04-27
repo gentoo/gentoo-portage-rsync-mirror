@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14691 2013/04/27 13:23:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14692 2013/04/27 17:00:33 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -478,7 +478,7 @@ media-gfx/yafaray
 
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Development versions of net-analyzer/wireshark
-=net-analyzer/wireshark-1.9*
+>net-analyzer/wireshark-1.9
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
 # Does not build with libav-0.8
