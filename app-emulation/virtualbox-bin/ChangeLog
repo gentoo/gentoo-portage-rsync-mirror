@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.153 2013/04/13 20:12:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.154 2013/04/28 11:49:20 hwoarang Exp $
+
+  28 Apr 2013; Markos Chandras <hwoarang@gentoo.org>
+  virtualbox-bin-4.2.10.ebuild, virtualbox-bin-4.2.12.ebuild:
+  Add dev-libs/json-c to RDEPEND and restrict v0.11 since the library name
+  changed. Bug #467310
 
 *virtualbox-bin-4.2.12 (13 Apr 2013)
 *virtualbox-bin-4.1.26 (13 Apr 2013)

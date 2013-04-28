@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.12.ebuild,v 1.1 2013/04/13 20:12:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.12.ebuild,v 1.2 2013/04/28 11:49:20 hwoarang Exp $
 
 EAPI=2
 
@@ -48,6 +48,7 @@ RDEPEND="!!app-emulation/virtualbox
 		dev-libs/glib
 		chm? ( dev-libs/expat )
 	)
+	<dev-libs/json-c-0.11
 	x11-libs/libXt
 	dev-libs/libxml2
 	x11-libs/libXau
