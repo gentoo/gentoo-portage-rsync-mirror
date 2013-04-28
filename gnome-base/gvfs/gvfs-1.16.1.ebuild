@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.1.ebuild,v 1.1 2013/04/25 20:00:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.1.ebuild,v 1.2 2013/04/28 12:36:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -42,7 +42,7 @@ RDEPEND="
 	gnome-keyring? ( app-crypt/libsecret )
 	gphoto2? ( >=media-libs/libgphoto2-2.4.7:= )
 	gtk? ( >=x11-libs/gtk+-3.0:3 )
-	http? ( || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34.0[gnome] ) )
+	http? ( || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34.0 ) )
 	ios? (
 		>=app-pda/libimobiledevice-1.1.0
 		>=app-pda/libplist-1 )

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14694 2013/04/28 04:47:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14695 2013/04/28 12:54:04 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (28 Apr 2013)
+# HOMEPAGE and SRC_URI dead, license issues.
+# Use timidity-freepats or timidity-eawpatches as replacement.
+# Masked for removal in 30 days, bug #441640.
+media-sound/timidity-shompatches
 
 # Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2013)
 # testing mask for new syslog-ng
