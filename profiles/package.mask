@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14696 2013/04/28 14:57:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14697 2013/04/28 20:34:35 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -141,11 +141,6 @@ mail-client/postler
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2013)
 # Masked to get 0.10 tested
 =net-libs/nodejs-0.11*
-
-# Mike Gilbert <floppym@gentoo.org> (07 Apr 2013)
-# Masked for testing.
-=dev-lang/python-2.7.4
-=dev-lang/python-3.2.4
 
 # Ryan Hill <dirtyepic@gentoo.org> (06 Apr 2013)
 # Restrictive licence, basically demo versions of paid software.  14 versions
