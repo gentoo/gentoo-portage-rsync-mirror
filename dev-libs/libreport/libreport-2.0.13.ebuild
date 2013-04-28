@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.13.ebuild,v 1.3 2013/03/25 16:21:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.13.ebuild,v 1.4 2013/04/28 14:38:45 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -59,6 +59,9 @@ src_prepare() {
 
 	# automake-1.12
 	epatch "${FILESDIR}/${PN}-2.0.13-automake-1.12.patch"
+
+	# json-c-0.11, https://github.com/abrt/libreport/pull/159
+	epatch "${FILESDIR}/${PN}-2.0.13-json-c-0.11.patch"
 
 	python_clean_py-compile_files
 

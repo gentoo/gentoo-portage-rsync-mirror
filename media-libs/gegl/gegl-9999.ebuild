@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.2 2013/01/23 23:09:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.3 2013/04/28 14:32:10 sping Exp $
 
 EAPI=4
 
@@ -54,7 +54,6 @@ RESTRICT="test"
 DOCS=( ChangeLog NEWS )
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.2.0-ffmpeg-0.11.diff"
 	# fix OSX loadable module filename extension
 	sed -i -e 's/\.dylib/.bundle/' configure.ac || die
 	# don't require Apple's OpenCL on versions of OSX that don't have it

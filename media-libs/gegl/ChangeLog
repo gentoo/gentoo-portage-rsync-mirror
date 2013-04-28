@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.79 2013/04/27 00:33:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.80 2013/04/28 14:32:10 sping Exp $
+
+  28 Apr 2013; Sebastian Pipping <sping@gentoo.org> gegl-9999.ebuild:
+  Drop patch from live ebuild (bug #460778)
 
   27 Apr 2013; Sebastian Pipping <sping@gentoo.org> gegl-0.2.0.ebuild,
   gegl-0.2.0-r1.ebuild, files/gegl-0.2.0-ffmpeg-0.11.diff:

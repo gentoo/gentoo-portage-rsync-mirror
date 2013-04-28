@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libreport
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.18 2013/03/25 16:21:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.19 2013/04/28 14:38:45 tetromino Exp $
+
+  28 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libreport-2.0.13.ebuild, +files/libreport-2.0.13-json-c-0.11.patch:
+  Fix building with json-c-0.11 (bug #467700, thanks to Markos Chandras for the
+  patch).
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libreport-2.0.13.ebuild:
   Stable for x86, wrt bug #458984
