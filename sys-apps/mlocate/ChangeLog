@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.109 2013/04/28 13:57:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.110 2013/04/28 19:21:30 fauli Exp $
+
+  28 Apr 2013; Christian Faulhammer <fauli@gentoo.org> mlocate-0.26.ebuild:
+  use system AR not unconditional call to /usr/bin/ar, bug 467640 by ago
 
   28 Apr 2013; Jeroen Roovers <jer@gentoo.org> mlocate-0.26.ebuild:
   Stable for HPPA (bug #467514).

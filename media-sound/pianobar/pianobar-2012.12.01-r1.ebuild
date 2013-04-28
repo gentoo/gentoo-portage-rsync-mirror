@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2012.12.01.ebuild,v 1.2 2013/04/28 19:07:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2012.12.01-r1.ebuild,v 1.1 2013/04/28 19:07:44 hwoarang Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ IUSE="+aac mp3 static-libs"
 RDEPEND="media-libs/libao
 	net-libs/gnutls
 	dev-libs/libgcrypt
-	<dev-libs/json-c-0.11
+	>=dev-libs/json-c-0.11
 	aac? ( media-libs/faad2 )
 	mp3? ( media-libs/libmad )"
 DEPEND="${RDEPEND}
@@ -28,6 +28,7 @@ REQUIRED_USE="|| ( aac mp3 )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2011.12.11-tests.patch
+	epatch "${FILESDIR}"/${P}-json-c-0.11.patch
 }
 
 src_compile() {
