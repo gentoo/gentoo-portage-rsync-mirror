@@ -2211,6 +2211,9 @@ games-fps/qudos:qmax - Build the pretty version (quake max)
 games-fps/qudos:textures - Install the enhanced textures (quake2-textures)
 games-fps/rott:demo - Install the shareware version
 games-fps/sauerbraten:server - Compile server support
+games-fps/turtlearena:mumble - Adds player-location (positional audio) support to VoIP
+games-fps/turtlearena:server - Build server target
+games-fps/turtlearena:voice - Adds VoIP support
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 games-fps/urbanterror:server - Build server target
 games-fps/warsow:angelscript - Enable AngelScript support

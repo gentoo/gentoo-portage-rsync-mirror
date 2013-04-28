@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.7 2012/05/05 04:53:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.8 2013/04/28 22:18:35 jer Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils multilib
 
 MY_P=${PN}_${PV}
@@ -30,12 +30,15 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-apps/sed"
 
+DOCS="ChangeLog README*"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -e '/CFLAGS=/s:-O2:${CFLAGS}:' \
+	sed -i \
+		-e '/CFLAGS=/s:-O2:${CFLAGS}:' \
 		-e '/CXXFLAGS=/s:-O2:${CXXFLAGS}:' \
-		-i configure.in || die "sed failed"
+		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
+		configure.in || die
 	epatch "${FILESDIR}"/${P}-quesoglc.patch \
 		"${FILESDIR}"/${P}-asneeded.patch
 	eautoreconf
@@ -50,11 +53,6 @@ src_configure() {
 		$(use_enable openal sound) \
 		$(use_with quesoglc) \
 		--with-configdir=/usr/share/xscreensaver/config
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README* || die
 }
 
 pkg_postinst() {
