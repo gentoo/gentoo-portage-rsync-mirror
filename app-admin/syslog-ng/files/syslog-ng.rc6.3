@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6.3,v 1.5 2011/12/04 09:53:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6.3,v 1.6 2013/04/28 05:24:13 mr_bones_ Exp $
 
 extra_commands="checkconfig"
 extra_started_commands="reload"
@@ -17,6 +17,7 @@ depend() {
 	config /etc/syslog-ng/syslog-ng.conf
 	use clock
 	need hostname localmount
+	after bootmisc
 	provide logger
 }
 

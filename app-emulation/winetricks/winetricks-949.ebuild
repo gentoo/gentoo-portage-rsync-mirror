@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-941.ebuild,v 1.1 2013/02/18 20:58:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-949.ebuild,v 1.1 2013/04/28 05:09:03 tetromino Exp $
 
 EAPI=4
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.460 2013/04/14 00:32:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.461 2013/04/28 05:02:34 tetromino Exp $
+
+*wine-1.5.29 (28 Apr 2013)
+
+  28 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.5.29.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.5.29 for the announcement.
 
 *wine-1.5.28 (14 Apr 2013)
 
