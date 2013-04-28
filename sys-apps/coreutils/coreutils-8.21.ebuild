@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.21.ebuild,v 1.2 2013/02/20 22:37:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.21.ebuild,v 1.3 2013/04/28 01:07:58 vapier Exp $
 
 EAPI="3"
 
@@ -28,7 +28,7 @@ LIB_DEPEND="acl? ( sys-apps/acl[static-libs] )
 	xattr? ( !userland_BSD? ( sys-apps/attr[static-libs] ) )"
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs]} )
 	selinux? ( sys-libs/libselinux )
-	nls? ( >=sys-devel/gettext-0.15 )
+	nls? ( virtual/libintl )
 	!app-misc/realpath
 	!<sys-apps/util-linux-2.13
 	!sys-apps/stat

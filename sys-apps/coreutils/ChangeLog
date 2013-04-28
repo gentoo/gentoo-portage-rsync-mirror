@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.371 2013/02/20 22:37:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.372 2013/04/28 01:07:58 vapier Exp $
+
+  28 Apr 2013; Mike Frysinger <vapier@gentoo.org> coreutils-8.21.ebuild:
+  Use virtual/libintl for runtime nls dependency #398983 by Maxim Kammerer.
 
   20 Feb 2013; Zac Medico <zmedico@gentoo.org> coreutils-8.21.ebuild:
   Fix for prefix and add ~arm-linux + ~x86-linux keywords.
