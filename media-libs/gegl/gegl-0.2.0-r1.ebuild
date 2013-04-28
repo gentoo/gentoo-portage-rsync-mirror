@@ -1,10 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.4 2013/04/27 00:33:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.6 2013/04/28 15:29:57 sping Exp $
 
 EAPI=4
 
-inherit gnome2-utils eutils autotools
+VALA_MIN_API_VERSION=0.14
+VALA_USE_DEPEND=vapigen
+
+inherit vala gnome2-utils eutils autotools
 
 DESCRIPTION="A graph based image processing framework"
 HOMEPAGE="http://www.gegl.org/"
@@ -15,8 +18,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 IUSE="cairo debug exif ffmpeg graphviz introspection jpeg jpeg2k lensfun lua mmx openexr png raw sdl sse svg umfpack v4l vala"
-
-VALASLOT="0.14"
 
 RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	>=dev-libs/glib-2.28:2
@@ -37,15 +38,15 @@ RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	svg? ( >=gnome-base/librsvg-2.14:2 )
 	umfpack? ( sci-libs/umfpack )
 	v4l? ( media-libs/libv4l )
-	dev-lang/perl
 	introspection? ( >=dev-libs/gobject-introspection-0.10
 			>=dev-python/pygobject-2.26:2 )
 	lensfun? ( >=media-libs/lensfun-0.2.5 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.1
+	dev-lang/perl
 	virtual/pkgconfig
 	>=sys-devel/libtool-2.2
-	vala? ( dev-lang/vala:${VALASLOT}[vapigen] )"
+	vala? ( $(vala_depend) )"
 
 # tests fail in various ways:
 #   see bug #362215
@@ -66,6 +67,8 @@ src_prepare() {
 		sed -i -e 's/#ifdef __APPLE__/#if 0/' gegl/opencl/* || die
 	fi
 	eautoreconf
+
+	use vala && vala_src_prepare
 }
 
 src_configure() {
@@ -73,7 +76,6 @@ src_configure() {
 	# libspiro: not in portage main tree
 	# disable documentation as the generating is bit automagic
 	#    if anyone wants to work on it just create bug with patch
-	VAPIGEN="$(type -p vapigen-${VALASLOT})" \
 	econf \
 		--disable-silent-rules \
 		--disable-profile \

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND=>=dev-libs/glib-2.18:2 dev-qt/qtgui:4 dev-qt/qtdbus:4 >=x11-libs/gtk+-2.22.1:2 >=lxde-base/menu-cache-0.3.2 >=x11-libs/libfm-9999 >=dev-util/intltool-0.40 virtual/pkgconfig sys-devel/gettext sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Fast lightweight tabbed filemanager (Qt4 port)
+EAPI=5
+HOMEPAGE=http://pcmanfm.sourceforge.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/glib-2.18:2 dev-qt/qtgui:4 dev-qt/qtdbus:4 >=x11-libs/gtk+-2.22.1:2 >=lxde-base/menu-cache-0.3.2 >=x11-libs/libfm-9999 virtual/eject virtual/freedesktop-icon-theme
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/pcmanfm-qt-0.1.0.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	readme.gentoo	2705553a0f031d715b57878cc0d9bf64	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d2d62be7239e64b2e33ae96e9c6a659f
