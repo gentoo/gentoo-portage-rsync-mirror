@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.5 2013/04/28 15:29:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.6 2013/04/28 17:41:14 sping Exp $
 
 EAPI=4
 
@@ -47,10 +47,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-devel/libtool-2.2
 	vala? ( $(vala_depend) )"
-
-# tests fail in various ways:
-#   see bug #362215
-RESTRICT="test"
 
 DOCS=( ChangeLog NEWS )
 
