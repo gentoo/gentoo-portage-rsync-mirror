@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.9 2013/04/27 23:03:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-2012.10.3-r2.ebuild,v 1.1 2013/04/27 23:03:47 zerochaos Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://libbtbb.sourceforge.net/"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="http://git.code.sf.net/p/libbtbb/code"
-	EGIT_PROJECT="libbtbb"
+	SRC_URI=""
 	inherit git-2
 	KEYWORDS=""
 else
@@ -23,7 +23,7 @@ else
 fi
 
 LICENSE="GPL-2"
-SLOT="0/${PV}"
+SLOT="0/1"
 IUSE="+wireshark"
 
 RDEPEND="

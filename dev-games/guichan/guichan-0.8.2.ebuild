@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.2.ebuild,v 1.6 2011/03/26 17:22:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.2.ebuild,v 1.7 2013/04/27 23:10:19 hasufell Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -22,7 +22,9 @@ DEPEND="allegro? ( <media-libs/allegro-5 )
 	)"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-automake-1.13.patch
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 

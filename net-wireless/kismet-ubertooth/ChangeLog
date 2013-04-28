@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/kismet-ubertooth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/ChangeLog,v 1.13 2013/04/25 23:48:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/ChangeLog,v 1.14 2013/04/27 23:12:42 zerochaos Exp $
+
+*kismet-ubertooth-2012.10.1-r2 (27 Apr 2013)
+
+  27 Apr 2013; Rick Farina <zerochaos@gentoo.org>
+  +kismet-ubertooth-2012.10.1-r2.ebuild:
+  adjust subslot deps for auto-rebuild on libbtbb or libubertooth changes
 
 *kismet-ubertooth-2012.10.1-r1 (25 Apr 2013)
 

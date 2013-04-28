@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0-r1.ebuild,v 1.1 2013/04/14 17:44:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0-r1.ebuild,v 1.2 2013/04/27 23:02:56 ottxor Exp $
 
 EAPI=5
 
@@ -40,10 +40,15 @@ DOCS=( "README" )
 src_prepare() {
 	epatch "${FILESDIR}"/"${P}"-check-bfd.h.patch
 
-	#bug #462632 due to bug #452234
-	if has_version ">=dev-libs/json-c-0.10-r1" ; then
+	#include dir change in json-c-0.10 #462632 and #452234
+	if has_version ">=dev-libs/json-c-0.10" ; then
 		sed -i -e '/\(include\|INCLUDE\)/s@json/@json-c/@' \
 			libgrive/src/protocol/Json.cc \
+			cmake/Modules/FindJSONC.cmake || die
+	fi
+	#json-c library changed in 0.11, bug #467432
+	if has_version ">=dev-libs/json-c-0.11" ; then
+		sed -i -e '/LIBRARY/s@json)@json-c)@' \
 			cmake/Modules/FindJSONC.cmake || die
 	fi
 }
