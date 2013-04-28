@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.0.ebuild,v 1.5 2013/04/09 21:26:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.0.ebuild,v 1.6 2013/04/28 14:27:32 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
 VALA_MIN_API_VERSION="0.14"
 
-inherit gnome2 linux-info multilib python-any-r1 vala versionator virtualx
+inherit autotools gnome2 linux-info multilib python-any-r1 vala versionator virtualx
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
 HOMEPAGE="http://projects.gnome.org/tracker/"
@@ -148,6 +148,7 @@ src_prepare() {
 	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+1 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
 
+	eautoreconf # See bug #367975
 	gnome2_src_prepare
 }
 
