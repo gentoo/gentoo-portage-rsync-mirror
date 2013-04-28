@@ -198,6 +198,7 @@ app-admin/sudo:offensive - Let sudo print insults when the user types the wrong 
 app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-glib
 app-admin/syslog-ng:mongodb - Enable support for mongodb destinations
+app-admin/syslog-ng:smtp - Enable support for SMTP destinations
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
 app-admin/syslog-ng:sql - Enable support for SQL destinations
 app-admin/sysstat:cron - Install /etc/cron.d script to periodically run sar

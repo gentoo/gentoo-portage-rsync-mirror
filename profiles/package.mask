@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14693 2013/04/27 18:24:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14694 2013/04/28 04:47:00 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2013)
+# testing mask for new syslog-ng
+>=app-admin/syslog-ng-3.4.0
 
 # Ulrich Müller <ulm@gentoo.org> (27 Apr 2013)
 # HOMEPAGE and SRC_URI dead, no license, upstream cannot
