@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.0.3.ebuild,v 1.3 2013/02/26 10:59:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.0.3.ebuild,v 1.4 2013/04/28 07:14:41 maksbotan Exp $
 
-EAPI="4"
+EAPI="5"
 
 AUTOTOOLS_AUTORECONF=1
 
@@ -34,8 +34,15 @@ PATCHES=( "${FILESDIR}"/disable_rtf_gen_doxy.patch
 		  "${FILESDIR}"/install_gcrypt.m4_file.patch
 		  "${FILESDIR}"/gcrypt_autotools.patch )
 
-#"${FILESDIR}/${P}-address.patch"
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
+src_prepare() {
+
+	# Aclocal 1.13 deprecated error #467674	
+	sed -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' -i configure.ac || die
+
+	autotools-utils_src_prepare
+}
 
 src_configure() {
 	local myconf=""

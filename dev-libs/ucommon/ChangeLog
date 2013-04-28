@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.17 2013/02/26 10:59:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.18 2013/04/28 07:14:41 maksbotan Exp $
+
+  28 Apr 2013; Maxim Koltsov <maksbotan@gentoo.org> -ucommon-5.5.0.ebuild,
+  -ucommon-6.0.0.ebuild, ucommon-6.0.3.ebuild:
+  Fix compilation with new automake-1.13, bug #467674. Thanks to slepnoga
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ucommon-6.0.3.ebuild:
   Stable for x86, wrt bug #457292
