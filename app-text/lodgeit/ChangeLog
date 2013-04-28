@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lodgeit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.11 2012/10/11 08:17:28 qnikst Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.12 2013/04/28 13:25:39 ulm Exp $
+
+  28 Apr 2013; Ulrich Müller <ulm@gentoo.org> lodgeit-0.3_p20120507.ebuild,
+  lodgeit-0.3_p20120618-r1.ebuild:
+  Fix LICENSE, bug 444580.
 
   10 Oct 2012; Alexander Vershilov <qnikst@gentoo.org> metadata.xml:
   Add qnikst@gentoo.org as current maintainer

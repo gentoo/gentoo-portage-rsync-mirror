@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgamin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.38 2012/09/30 16:18:22 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.39 2013/04/28 13:01:20 ssuominen Exp $
+
+  28 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  libgamin-0.1.10-r3.ebuild:
+  Fix automake-1.13 compability wrt #466962 by Alphat-PC
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> libgamin-0.1.10-r3.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #433227

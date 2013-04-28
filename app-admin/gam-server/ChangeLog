@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gam-server
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.23 2012/09/26 11:13:57 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.24 2013/04/28 13:04:13 ssuominen Exp $
+
+  28 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
+  gam-server-0.1.10-r1.ebuild:
+  Fix automake-1.13 compability wrt #466948 by Alphat-PC
 
   26 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
   -gam-server-0.1.10.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/gam-server-0.1.10-r1.ebuild,v 1.9 2012/09/26 11:12:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/gam-server-0.1.10-r1.ebuild,v 1.10 2013/04/28 13:04:13 ssuominen Exp $
 
 EAPI="3"
 GNOME_ORG_MODULE="gamin"
@@ -50,6 +50,11 @@ src_prepare() {
 
 	# Drop DEPRECATED flags
 	sed -i -e 's:-DG_DISABLE_DEPRECATED:$(NULL):g' server/Makefile.am || die
+
+	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		-e 's:AM_PROG_CC_STDC:AC_PROG_CC:' \
+		configure.in || die #466948
 
 	# autoconf is required as the user-cflags patch modifies configure.in
 	# however, elibtoolize is also required, so when the above patch is

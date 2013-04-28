@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120507.ebuild,v 1.3 2012/05/21 12:30:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120507.ebuild,v 1.4 2013/04/28 13:25:39 ulm Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI="https://bitbucket.org/skrattaren/lodgeit-script-gentoo/raw/${MY_REV}/sc
 	vim? ( http://www.vim.org/scripts/download_script.php?src_id=8848
 	-> ${P}.vim )"
 
-LICENSE="as-is"
+LICENSE="BSD MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="vim"
