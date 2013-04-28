@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.209 2013/02/21 05:15:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.210 2013/04/28 02:22:45 vapier Exp $
+
+*libpcre-8.32-r1 (28 Apr 2013)
+
+  28 Apr 2013; Mike Frysinger <vapier@gentoo.org> +libpcre-8.32-r1.ebuild,
+  libpcre-8.32.ebuild:
+  Add -pthread to static pkg-config entries when appropriate #454478 by Till
+  Heikamp.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> libpcre-8.32.ebuild:
   Add ~arm-linux keyword.

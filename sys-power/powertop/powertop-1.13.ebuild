@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.13.ebuild,v 1.6 2011/01/13 22:36:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.13.ebuild,v 1.7 2013/04/28 02:10:19 zerochaos Exp $
 
 EAPI=3
 
@@ -17,7 +17,8 @@ IUSE="unicode"
 
 DEPEND="sys-libs/ncurses[unicode?]
 	sys-devel/gettext"
-RDEPEND="${DEPEND}
+RDEPEND="sys-libs/ncurses[unicode?]
+	virtual/libintl
 	sys-apps/pciutils"
 
 src_prepare() {

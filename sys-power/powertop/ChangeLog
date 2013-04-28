@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.81 2013/04/08 03:12:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.82 2013/04/28 02:10:19 zerochaos Exp $
+
+  28 Apr 2013; Rick Farina <zerochaos@gentoo.org> powertop-1.13.ebuild:
+  powertop 1.x has been staying around longer than I orginally thought, fixing
+  libintl rdep like powertop2
 
   08 Apr 2013; Rick Farina <zerochaos@gentoo.org> powertop-2.3.ebuild,
   powertop-9999.ebuild:

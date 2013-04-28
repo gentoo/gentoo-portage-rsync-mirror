@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.14.ebuild,v 1.1 2013/04/23 02:36:57 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.14.ebuild,v 1.2 2013/04/28 02:17:02 zerochaos Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ src_test() {
 	if use video_cards_nvidia; then
 		if [ ! -w /dev/nvidia0 ]; then
 			einfo "To run these tests, portage likely must be in the video group."
-			einfo "Please run \"passwd -a portage video\" if the tests will fail"
+			einfo "Please run \"gpasswd -a portage video\" if the tests will fail"
 		fi
 		./cudaExample0.sh || die
 		./cudaExample400.sh || die

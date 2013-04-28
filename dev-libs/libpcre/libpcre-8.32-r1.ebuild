@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.32.ebuild,v 1.3 2013/04/28 02:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.32-r1.ebuild,v 1.1 2013/04/28 02:22:44 vapier Exp $
 
 EAPI="4"
 
