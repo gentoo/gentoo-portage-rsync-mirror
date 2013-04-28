@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.936 2013/04/11 20:42:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.937 2013/04/28 04:00:36 vapier Exp $
+
+  28 Apr 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild:
+  Add fix from upstream for arm ld.so.cache lib tags #454200.
 
   11 Apr 2013; Mike Frysinger <vapier@gentoo.org> files/eblits/src_test.eblit:
   Fix return code checking in src_test for both multilib & non-multilib builds
