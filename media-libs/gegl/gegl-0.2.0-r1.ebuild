@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.6 2013/04/28 15:29:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.7 2013/04/28 16:47:56 sping Exp $
 
 EAPI=4
 
@@ -58,6 +58,9 @@ src_prepare() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=442016
 	epatch "${FILESDIR}/${P}-cve-2012-4433-1e92e523.patch"
 	epatch "${FILESDIR}/${P}-cve-2012-4433-4757cdf7.patch"
+
+	# https://bugs.gentoo.org/show_bug.cgi?id=416587
+	epatch "${FILESDIR}/${P}-introspection-version.patch"
 
 	epatch "${FILESDIR}/${P}-ffmpeg-0.11.diff"
 	# fix OSX loadable module filename extension
