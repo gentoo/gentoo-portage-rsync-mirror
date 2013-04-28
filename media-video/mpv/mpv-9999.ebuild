@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.3 2013/04/27 18:57:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.4 2013/04/28 08:07:39 scarabeus Exp $
 
 EAPI=5
 
@@ -27,9 +27,10 @@ REQUIRED_USE="
 	cddb? ( cdio network )
 	lcms? ( opengl )
 	libass? ( iconv )
-	opengl? ( || ( aqua X ) )
+	opengl? ( || ( aqua wayland X ) )
 	radio? ( || ( dvb v4l ) )
 	vdpau? ( X )
+	wayland? ( opengl )
 	xinerama? ( X )
 	xscreensaver? ( X )
 	xv? ( X )
@@ -83,7 +84,11 @@ RDEPEND+="
 	pulseaudio? ( media-sound/pulseaudio )
 	quvi? ( >=media-libs/libquvi-0.4.1 )
 	samba? ( net-fs/samba )
-	wayland? ( >=dev-libs/wayland-1.1.0 )
+	wayland? (
+		>=dev-libs/wayland-1.0.0
+		media-libs/mesa[egl,wayland]
+		>=x11-libs/libxkbcommon-0.2.0
+	)
 	>=virtual/ffmpeg-9[encode?]
 "
 ASM_DEP="dev-lang/yasm"
@@ -151,6 +156,7 @@ src_configure() {
 	###################
 	# SDL output is fallback for platforms where nothing better is available
 	myconf+=" --disable-sdl --disable-sdl2"
+	use wayland || myconf+=" --disable-wayland"
 	use encode || myconf+=" --disable-encoding"
 	use network || myconf+=" --disable-networking"
 	myconf+=" $(use_enable joystick)"
@@ -264,7 +270,7 @@ src_configure() {
 	# X enabled configuration #
 	###########################
 	use X || myconf+=" --disable-x11"
-	uses="vdpau wayland xinerama xv"
+	uses="vdpau xinerama xv"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
