@@ -1,13 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.0.1.ebuild,v 1.2 2012/02/22 09:52:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.1.ebuild,v 1.1 2013/04/28 11:23:45 xarthisius Exp $
 
-EAPI=3
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Fast numerical array expression evaluator for Python and NumPy."
 HOMEPAGE="http://code.google.com/p/numexpr/ http://pypi.python.org/pypi/numexpr"
@@ -18,10 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="mkl"
 
-RDEPEND="dev-python/numpy
+RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]
 	mkl? ( sci-libs/mkl )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
+
+DOCS=( ANNOUNCE.txt AUTHORS.txt README.txt RELEASE_NOTES.txt )
 
 src_prepare() {
 	# TODO: mkl can be used but it fails for me
@@ -39,10 +40,7 @@ src_prepare() {
 	fi
 }
 
-src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" \
-			"$(PYTHON)" ${PN}/tests/test_${PN}.py
-	}
-	python_execute_function testing
+python_test() {
+	cd "${BUILD_DIR}"/lib* || die
+	"${PYTHON}" -c "import numexpr; numexpr.test()" || die
 }
