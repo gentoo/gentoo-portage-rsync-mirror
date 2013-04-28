@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.28 2013/04/06 23:29:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.29 2013/04/28 10:21:25 scarabeus Exp $
+
+  28 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> gptfdisk-0.8.6.ebuild:
+  Stable on amd64 x86 and ppc.
 
   06 Apr 2013; Mike Gilbert <floppym@gentoo.org> gptfdisk-0.8.6.ebuild:
   Add slot-operator to dev-libs/icu dependency.

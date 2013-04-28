@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.3 2013/04/06 23:29:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.4 2013/04/28 10:21:25 scarabeus Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="kernel_linux +icu"
 
 RDEPEND="

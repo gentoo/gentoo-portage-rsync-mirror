@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20120701.ebuild,v 1.12 2013/04/25 21:26:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20120701.ebuild,v 1.13 2013/04/28 10:17:36 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="8-bit Implementation of BibTeX 0.99 with a Very Large Capacity"
 HOMEPAGE="http://tug.org/texlive/"
@@ -14,14 +14,15 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbs
 IUSE=""
 
 RDEPEND=">=dev-libs/kpathsea-6.1.0_p20120701
-		>=dev-libs/icu-4.4"
+		>=dev-libs/icu-4.4:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/texlive-${PV#*_p}-source/texk/${PN}
 
 src_configure() {
-	econf --with-system-kpathsea \
+	econf \
+		--with-system-kpathsea \
 		--with-system-icu
 }
 
