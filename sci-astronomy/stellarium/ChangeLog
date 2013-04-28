@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.111 2013/04/21 20:00:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.113 2013/04/28 13:48:22 mr_bones_ Exp $
+
+  28 Apr 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/stellarium-0.11.4a-desktop.patch, -stellarium-0.11.4a.ebuild:
+  old
+
+  28 Apr 2013; Michael Sterrett <mr_bones_@gentoo.org> stellarium-0.12.0.ebuild:
+  marked stable (bug #466306)
 
   21 Apr 2013; Michael Sterrett <mr_bones_@gentoo.org> stellarium-0.12.0.ebuild:
   remove lang unsupported in skycultures (bug #466680)

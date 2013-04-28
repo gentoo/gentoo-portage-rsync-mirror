@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.230 2013/03/30 23:01:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.231 2013/04/28 13:38:52 pacho Exp $
+
+*gnome-keyring-3.8.1 (28 Apr 2013)
+
+  28 Apr 2013; Pacho Ramos <pacho@gentoo.org> +gnome-keyring-3.8.1.ebuild,
+  -gnome-keyring-3.6.2.ebuild:
+  Version bump, use fcaps.eclass (#454908 by SpanKY), fix dependencies (#467416
+  by Tolga Dalman), drop unexisting configure options. Drop old
 
 *gnome-keyring-3.6.3 (30 Mar 2013)
 
