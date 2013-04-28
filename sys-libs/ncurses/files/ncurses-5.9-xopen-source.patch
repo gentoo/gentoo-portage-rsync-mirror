@@ -1,0 +1,15 @@
+fix from upstream
+
+https://bugs.gentoo.org/462116
+
+--- a/include/curses.h.in
++++ b/include/curses.h.in
+@@ -154,7 +154,7 @@ typedef unsigned @cf_cv_typeof_mmask_t@ mmask_t;
+  * conflicting) when _XOPEN_SOURCE is 500 or greater.
+  */
+ #undef NCURSES_WIDECHAR
+-#if defined(_XOPEN_SOURCE_EXTENDED) || defined(_XPG5)
++#if defined(_XOPEN_SOURCE_EXTENDED) || (defined(_XOPEN_SOURCE) && (_XOPEN_SOURCE - 0 >= 500))
+ #define NCURSES_WIDECHAR
+ #endif
+ 

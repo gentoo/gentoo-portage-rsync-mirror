@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.213 2013/01/17 04:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.214 2013/04/28 00:56:50 vapier Exp $
+
+*ncurses-5.9-r3 (28 Apr 2013)
+
+  28 Apr 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/ncurses-5.9-xopen-source.patch, +ncurses-5.9-r3.ebuild:
+  Fix from upstream for handling of the _XOPEN_SOURCE define #462116 by William
+  Throwe.
 
   17 Jan 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml,
   ncurses-5.9-r2.ebuild:
