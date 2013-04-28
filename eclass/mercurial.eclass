@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.21 2013/03/15 21:47:58 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.22 2013/04/28 16:15:33 zmedico Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -36,7 +36,7 @@ DEPEND="dev-vcs/mercurial"
 
 # @ECLASS-VARIABLE: EHG_STORE_DIR
 # @DESCRIPTION:
-# Mercurial sources store directory. Users may override this in /etc/make.conf
+# Mercurial sources store directory. Users may override this in /etc/portage/make.conf
 [[ -z "${EHG_STORE_DIR}" ]] && EHG_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}/hg-src"
 
 # @ECLASS-VARIABLE: EHG_PROJECT

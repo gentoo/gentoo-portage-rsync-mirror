@@ -21,7 +21,7 @@
 		<flag name='p2p'>Add support for Wi-Fi Direct mode</flag>
 		<flag name='ps3'>Add support for ps3 hypervisor driven gelic wifi</flag>
 		<flag name='wps'>Add support for Wi-Fi Protected Setup</flag>
-		<flag name='wimax'>Add support for Wimax EAP-PEER authentication
-		algorithm</flag>
+		<flag name='wimax'>Add support for Wimax EAP-PEER authentication algorithm</flag>
+		<flag name='smartcard'>Add support for smartcards</flag>
 	</use>
 </pkgmetadata>

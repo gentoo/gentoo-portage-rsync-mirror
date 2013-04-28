@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.3.ebuild,v 1.1 2013/04/09 22:13:24 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.3.ebuild,v 1.3 2013/04/28 16:24:59 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info user
@@ -80,6 +80,10 @@ pkg_setup() {
 		enewgroup ${UGID}
 		enewuser ${UGID} -1 -1 -1 ${UGID}
 	fi
+}
+
+src_prepare() {
+	epatch_user
 }
 
 src_configure() {
@@ -245,10 +249,9 @@ pkg_postinst() {
 		elog "user \"ipsec\" the appropriate rights."
 		elog "For example (the default case):"
 		elog "/etc/sudoers:"
-		elog "  Defaults:ipsec always_set_home,!env_reset"
-		elog "  ipsec ALL=(ALL) NOPASSWD: /usr/sbin/ipsec"
+		elog "  ipsec ALL=(ALL) NOPASSWD: SETENV: /usr/sbin/ipsec"
 		elog "Under the specific connection block in /etc/ipsec.conf:"
-		elog "  leftupdown=\"sudo ipsec _updown\""
+		elog "  leftupdown=\"sudo -E ipsec _updown iptables\""
 		elog
 	fi
 	elog

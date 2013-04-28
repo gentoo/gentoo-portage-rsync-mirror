@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.109 2013/04/09 22:13:24 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.111 2013/04/28 16:24:59 gurligebis Exp $
+
+  28 Apr 2013; <gurligebis@gentoo.org> strongswan-5.0.3.ebuild:
+  Adding epatch_user support, fixing bug #458982
+
+  28 Apr 2013; <gurligebis@gentoo.org> strongswan-5.0.3.ebuild:
+  Fixing info regarding running with non-root flag, fixing bug #461652
 
 *strongswan-5.0.3 (09 Apr 2013)
 

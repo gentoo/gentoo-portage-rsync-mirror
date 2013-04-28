@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.13.ebuild,v 1.13 2013/04/13 20:46:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.13.ebuild,v 1.14 2013/04/28 16:24:59 zmedico Exp $
 
 EAPI=5
 
@@ -816,8 +816,8 @@ pkg_postinst() {
 		fi
 	done
 
-	elog "Make sure that PHP_TARGETS in ${EPREFIX}/etc/make.conf includes php${SLOT/./-} in order"
-	elog "to compile extensions for the ${SLOT} ABI"
+	elog "Make sure that PHP_TARGETS in ${EPREFIX}/etc/portage/make.conf includes php${SLOT/./-}"
+	elog "in order to compile extensions for the ${SLOT} ABI"
 	elog
 	if ! use readline && use cli ; then
 		ewarn "Note that in order to use php interactivly, you need to enable"
@@ -826,7 +826,7 @@ pkg_postinst() {
 	elog
 	elog "This ebuild installed a version of php.ini based on php.ini-${PHP_INI_VERSION} version."
 	elog "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
-	elog "'production' or 'development' in ${EPREFIX}/etc/make.conf"
+	elog "'production' or 'development' in ${EPREFIX}/etc/portage/make.conf"
 	elog "Both versions of php.ini can be found in ${EPREFIX}/usr/share/doc/${PF}"
 
 	elog

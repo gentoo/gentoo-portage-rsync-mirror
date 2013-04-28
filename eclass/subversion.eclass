@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.83 2012/07/29 05:54:17 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.84 2013/04/28 16:15:33 zmedico Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -31,7 +31,7 @@ DEPEND+=" net-misc/rsync"
 
 # @ECLASS-VARIABLE: ESVN_STORE_DIR
 # @DESCRIPTION:
-# subversion sources store directory. Users may override this in /etc/make.conf
+# subversion sources store directory. Users may override this in /etc/portage/make.conf
 [[ -z ${ESVN_STORE_DIR} ]] && ESVN_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}/svn-src"
 
 # @ECLASS-VARIABLE: ESVN_FETCH_CMD

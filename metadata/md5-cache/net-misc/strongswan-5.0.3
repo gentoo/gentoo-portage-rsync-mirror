@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install postinst preinst setup
+DEFINED_PHASES=configure install postinst preinst prepare setup
 DEPEND=!net-misc/openswan >=dev-libs/gmp-4.1.5 gcrypt? ( dev-libs/libgcrypt ) caps? ( sys-libs/libcap ) curl? ( net-misc/curl ) ldap? ( net-nds/openldap ) openssl? ( >=dev-libs/openssl-0.9.8[-bindist] ) mysql? ( virtual/mysql ) sqlite? ( >=dev-db/sqlite-3.3.1 ) pam? ( sys-libs/pam ) virtual/linux-sources sys-kernel/linux-headers
 DESCRIPTION=IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE
 EAPI=2
@@ -10,4 +10,4 @@ RDEPEND=!net-misc/openswan >=dev-libs/gmp-4.1.5 gcrypt? ( dev-libs/libgcrypt ) c
 SLOT=0
 SRC_URI=http://download.strongswan.org/strongswan-5.0.3.tar.bz2
 _eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=0484b86150ce189024b643c738f546fb
+_md5_=c764f4559f36f402274fbb7c7eec5ae0

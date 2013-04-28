@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.708 2013/04/25 16:41:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.709 2013/04/28 16:24:59 zmedico Exp $
+
+  28 Apr 2013; Zac Medico <zmedico@gentoo.org> php-5.3.23.ebuild,
+  php-5.3.24.ebuild, php-5.4.13.ebuild, php-5.4.14.ebuild,
+  php-5.5.0_beta4.ebuild:
+  Bug #467648 - Refer to /etc/portage/make.conf, not /etc/make.conf.
 
   25 Apr 2013; Ian Stakenvicius <axs@gentoo.org> ChangeLog:
   updated manifest for php-5.5.0_beta4 , per bug #467232

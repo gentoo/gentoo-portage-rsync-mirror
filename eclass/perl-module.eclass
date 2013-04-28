@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.135 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.136 2013/04/28 16:15:33 zmedico Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -175,7 +175,7 @@ perl-module_src_compile() {
 #  and apply them to Test::Harness.
 #
 #  If you want more verbose testing, set TEST_VERBOSE=1
-#  in your bashrc | /etc/make.conf | ENV
+#  in your bashrc | /etc/portage/make.conf | ENV
 #
 # For ebuild writers:
 #  If you wish to enable default tests w/ 'make test' ,

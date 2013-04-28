@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.145 2013/04/07 21:14:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.146 2013/04/28 16:15:33 zmedico Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -152,7 +152,7 @@ qt4-build_src_unpack() {
 # @FUNCTION: qt4-build_src_prepare
 # @DESCRIPTION:
 # Prepare the sources before the configure phase. Strip CFLAGS if necessary, and fix
-# the build system in order to respect CFLAGS/CXXFLAGS/LDFLAGS specified in /etc/make.conf.
+# the build system in order to respect CFLAGS/CXXFLAGS/LDFLAGS specified in make.conf.
 qt4-build_src_prepare() {
 	setqtenv
 

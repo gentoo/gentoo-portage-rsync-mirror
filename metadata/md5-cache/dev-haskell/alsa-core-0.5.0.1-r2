@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-haskell/extensible-exceptions-0.1.1:=[profile?] <dev-haskell/extensible-exceptions-0.2:=[profile?] >=dev-lang/ghc-6.10.4:= media-libs/alsa-lib
 SLOT=0/0.5.0.1
 SRC_URI=mirror://hackage/packages/archive/alsa-core/0.5.0.1/alsa-core-0.5.0.1.tar.gz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	ghc-package	f8674c44668a01a8b05d66a7c140008b	haskell-cabal	a2a8de4cff4a18a175b08057c65a7c4d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	ghc-package	f8674c44668a01a8b05d66a7c140008b	haskell-cabal	bdaf0bf9cbad275400b5e5817981f9ef	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=06abdcca579a3eacddd812b8786c6836

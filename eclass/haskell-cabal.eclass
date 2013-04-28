@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.38 2013/01/06 13:06:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.39 2013/04/28 16:15:33 zmedico Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -38,20 +38,20 @@ inherit ghc-package multilib
 # @ECLASS-VARIABLE: CABAL_EXTRA_CONFIGURE_FLAGS
 # @DESCRIPTION:
 # User-specified additional parameters passed to 'setup configure'.
-# example: /etc/make.conf: CABAL_EXTRA_CONFIGURE_FLAGS=--enable-shared
+# example: /etc/portage/make.conf: CABAL_EXTRA_CONFIGURE_FLAGS=--enable-shared
 : ${CABAL_EXTRA_CONFIGURE_FLAGS:=}
 
 # @ECLASS-VARIABLE: CABAL_EXTRA_BUILD_FLAGS
 # @DESCRIPTION:
 # User-specified additional parameters passed to 'setup build'.
-# example: /etc/make.conf: CABAL_EXTRA_BUILD_FLAGS=-v
+# example: /etc/portage/make.conf: CABAL_EXTRA_BUILD_FLAGS=-v
 : ${CABAL_EXTRA_BUILD_FLAGS:=}
 
 # @ECLASS-VARIABLE: GHC_BOOTSTRAP_FLAGS
 # @DESCRIPTION:
 # User-specified additional parameters for ghc when building
 # _only_ 'setup' binary bootstrap.
-# example: /etc/make.conf: GHC_BOOTSTRAP_FLAGS=-dynamic to make
+# example: /etc/portage/make.conf: GHC_BOOTSTRAP_FLAGS=-dynamic to make
 # linking 'setup' faster.
 : ${GHC_BOOTSTRAP_FLAGS:=}
 

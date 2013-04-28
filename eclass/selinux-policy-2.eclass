@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.17 2013/03/09 12:07:50 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.18 2013/04/28 16:15:33 zmedico Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -52,7 +52,7 @@
 # This variable informs the eclass for which SELinux policies the module should
 # be built. Currently, Gentoo supports targeted, strict, mcs and mls.
 # This variable is the same POLICY_TYPES variable that we tell SELinux
-# users to set in /etc/make.conf. Therefor, it is not the module that should
+# users to set in make.conf. Therefore, it is not the module that should
 # override it, but the user.
 : ${POLICY_TYPES:="targeted strict mcs mls"}
 
