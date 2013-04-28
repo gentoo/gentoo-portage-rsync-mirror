@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.3 2013/01/30 07:15:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.4 2013/04/28 03:11:47 vapier Exp $
 
 # @ECLASS: fcaps.eclass
 # @MAINTAINER:
@@ -125,16 +125,25 @@ fcaps() {
 			chmod ${caps_mode} "${file}" || die
 
 			if ! out=$(LC_ALL=C setcap "${caps}" "${file}" 2>&1) ; then
-				if [[ ${out} != *"Operation not supported"* ]] ; then
-					eerror "Setting caps '${caps}' on file '${file}' failed:"
-					eerror "${out}"
-					die "could not set caps"
-				else
+				case ${out} in
+				*"command not found"*)
+					if [[ -z ${__FCAPS_WARNED} ]] ; then
+						__FCAPS_WARNED="true"
+						ewarn "Could not find cap utils.  Please make sure libcap is available."
+					fi
+					;;
+				*"Operation not supported"*)
 					local fstype=$(stat -f -c %T "${file}")
 					ewarn "Could not set caps on '${file}' due to missing filesystem support."
 					ewarn "Make sure you enable XATTR support for '${fstype}' in your kernel."
 					ewarn "You might also have to enable the relevant FS_SECURITY option."
-				fi
+					;;
+				*)
+					eerror "Setting caps '${caps}' on file '${file}' failed:"
+					eerror "${out}"
+					die "could not set caps"
+					;;
+				esac
 			else
 				# Sanity check that everything took.
 				setcap -v "${caps}" "${file}" >/dev/null \
