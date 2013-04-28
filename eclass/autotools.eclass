@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.154 2013/04/28 16:45:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.155 2013/04/28 18:59:59 tetromino Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -245,7 +245,7 @@ _at_uses_pkg() {
 		egrep -q "${args[@]}" configure.??
 	fi
 }
-_at_uses_autoheader()  { _at_uses_pkg A{C,M}_CONFIG_HEADER{S,}; }
+_at_uses_autoheader()  { _at_uses_pkg AC_CONFIG_HEADERS; }
 _at_uses_automake()    { _at_uses_pkg AM_INIT_AUTOMAKE; }
 _at_uses_gettext()     { _at_uses_pkg AM_GNU_GETTEXT_VERSION; }
 _at_uses_glibgettext() { _at_uses_pkg AM_GLIB_GNU_GETTEXT; }

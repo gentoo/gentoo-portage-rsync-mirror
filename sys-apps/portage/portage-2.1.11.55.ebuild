@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.55.ebuild,v 1.6 2013/03/28 13:30:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.55.ebuild,v 1.7 2013/04/28 18:39:20 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
 EAPI=2
-inherit eutils python
+inherit eutils
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -100,6 +100,31 @@ current_python_has_xattr() {
 	/usr/bin/python -c 'import xattr' 2>/dev/null
 }
 
+call_with_python_impl() {
+	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+	env EPYTHON=${EPYTHON} "$@"
+}
+
+python_compileall() {
+	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+	local d=$1 PYTHON=/usr/bin/${EPYTHON}
+	local d_image=${D}${d#/}
+	[[ -d ${d_image} ]] || die "directory does not exist: ${d_image}"
+	case "${EPYTHON}" in
+		python*)
+			"${PYTHON}" -m compileall -q -f -d "${d}" "${d_image}" || die
+			# Note: Using -OO breaks emaint, since it requires __doc__,
+			# and __doc__ is None when -OO is used.
+			"${PYTHON}" -O -m compileall -q -f -d "${d}" "${d_image}" || die
+			;;
+		pypy*)
+			"${PYTHON}" -m compileall -q -f -d "${d}" "${d_image}" || die
+			;;
+		*)
+			die "Unrecognized EPYTHON value: ${EPYTHON}"
+	esac
+}
+
 pkg_setup() {
 	if use python2 && use python3 ; then
 		ewarn "Both python2 and python3 USE flags are enabled, but only one"
@@ -134,12 +159,16 @@ pkg_setup() {
 		fi
 	fi
 
+	# We use EPYTHON to designate the active python interpreter,
+	# but we only export when needed, via call_with_python_impl.
+	EPYTHON=python
+	export -n EPYTHON
 	if use python3; then
-		python_set_active_version 3
+		EPYTHON=python3
 	elif use python2; then
-		python_set_active_version 2
+		EPYTHON=python2
 	elif use pypy2_0; then
-		python_set_active_version 2.7-pypy-2.0
+		EPYTHON=pypy-c2.0
 	fi
 }
 
@@ -172,15 +201,23 @@ src_prepare() {
 			|| die "failed to append to make.globals"
 	fi
 
+	local set_shebang=
 	if use python3; then
-		einfo "Converting shebangs for python3..."
-		python_convert_shebangs -r 3 .
+		set_shebang=python3
 	elif use python2; then
-		einfo "Converting shebangs for python2..."
-		python_convert_shebangs -r 2 .
+		set_shebang=python2
 	elif use pypy2_0; then
-		einfo "Converting shebangs for pypy-c2.0..."
-		python_convert_shebangs -r 2.7-pypy-2.0 .
+		set_shebang=pypy-c2.0
+	fi
+	if [[ -n ${set_shebang} ]] ; then
+		einfo "Converting shebangs for ${set_shebang}..."
+		while read -r -d $'\0' ; do
+			local shebang=$(head -n1 "$REPLY")
+			if [[ ${shebang} == "#!/usr/bin/python"* ]] ; then
+				sed -i -e "1s:python:${set_shebang}:" "$REPLY" || \
+					die "sed failed"
+			fi
+		done < <(find . -type f -print0)
 	fi
 
 	cd "${S}/cnf" || die
@@ -197,20 +234,24 @@ src_prepare() {
 
 src_compile() {
 	if use doc; then
+		call_with_python_impl \
 		emake docbook || die
 	fi
 
 	if use epydoc; then
 		einfo "Generating api docs"
+		call_with_python_impl \
 		emake epydoc || die
 	fi
 }
 
 src_test() {
+	call_with_python_impl \
 	emake test || die
 }
 
 src_install() {
+	call_with_python_impl \
 	emake DESTDIR="${D}" \
 		sysconfdir="/etc" \
 		prefix="/usr" \
@@ -233,6 +274,8 @@ src_install() {
 	echo "PYTHONPATH=\"/usr/lib/portage/pym\"" > \
 		"${T}/05portage" || die
 	doenvd "${T}/05portage" || die
+
+	python_compileall /usr/lib/portage/pym
 }
 
 pkg_preinst() {
@@ -267,14 +310,4 @@ pkg_preinst() {
 		ewarn "This causes the CONFIG_PROTECT behavior to be skipped for"
 		ewarn "files that have not been modified since they were installed."
 	fi
-}
-
-pkg_postinst() {
-	# Compile all source files recursively. Any orphans
-	# will be identified and removed in postrm.
-	python_mod_optimize /usr/lib/portage/pym
-}
-
-pkg_postrm() {
-	python_mod_cleanup /usr/lib/portage/pym
 }

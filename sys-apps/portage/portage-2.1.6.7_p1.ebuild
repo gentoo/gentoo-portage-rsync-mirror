@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7_p1.ebuild,v 1.6 2013/03/22 20:15:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7_p1.ebuild,v 1.7 2013/04/28 18:39:20 zmedico Exp $
 
-inherit eutils multilib python
+inherit eutils multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -205,6 +205,9 @@ src_install() {
 
 	dodir /etc/portage
 	keepdir /etc/portage
+
+	/usr/bin/python -m compileall -q -f -d "${portage_base}/pym" "${D%/}${portage_base}/pym" || die
+	/usr/bin/python -O -m compileall -q -f -d "${portage_base}/pym" "${D%/}${portage_base}/pym" || die
 }
 
 pkg_preinst() {
@@ -218,10 +221,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	# Compile all source files recursively. Any orphans
-	# will be identified and removed in postrm.
-	python_mod_optimize /usr/$(get_libdir)/portage/pym
-
 	local warning_shown=0
 	if [ $DOWNGRADE_FROM_2_2 = 0 ] ; then
 		ewarn
@@ -256,8 +255,4 @@ pkg_postinst() {
 	if [ $warning_shown = 1 ] ; then
 		ewarn # for symmetry
 	fi
-}
-
-pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/portage/pym
 }
