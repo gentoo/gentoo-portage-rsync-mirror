@@ -8,6 +8,7 @@
   <herd>x11</herd>
   <herd>proxy-maintainers</herd>
   <use>
+    <flag name="openpty">Use openpty() in preference to posix_openpt()</flag>
     <flag name="toolbar">Enable the xterm toolbar to be built</flag>
   </use>
 </pkgmetadata>

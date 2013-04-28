@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.155 2013/04/28 18:59:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.156 2013/04/28 21:55:32 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -245,7 +245,7 @@ _at_uses_pkg() {
 		egrep -q "${args[@]}" configure.??
 	fi
 }
-_at_uses_autoheader()  { _at_uses_pkg AC_CONFIG_HEADERS; }
+_at_uses_autoheader()  { _at_uses_pkg A{C,M}_CONFIG_HEADER{S,}; }
 _at_uses_automake()    { _at_uses_pkg AM_INIT_AUTOMAKE; }
 _at_uses_gettext()     { _at_uses_pkg AM_GNU_GETTEXT_VERSION; }
 _at_uses_glibgettext() { _at_uses_pkg AM_GLIB_GNU_GETTEXT; }
@@ -488,8 +488,8 @@ autotools_run_tool() {
 # Keep a list of all the macros we might use so that we only
 # have to run the trace code once.  Order doesn't matter.
 ALL_AUTOTOOLS_MACROS=(
-	AC_PROG_LIBTOOL AM_PROG_LIBTOOL LT_INIT
-	AC_CONFIG_HEADERS
+	A{C,M}_PROG_LIBTOOL LT_INIT
+	A{C,M}_CONFIG_HEADER{S,}
 	AC_CONFIG_SUBDIRS
 	AC_CONFIG_AUX_DIR AC_CONFIG_MACRO_DIR
 	AM_INIT_AUTOMAKE
