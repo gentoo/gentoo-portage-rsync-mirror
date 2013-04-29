@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.89 2013/04/28 19:44:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.90 2013/04/28 23:50:44 floppym Exp $
 
 EAPI=5
 AUTOTOOLS_AUTO_DEPEND=yes
@@ -167,8 +167,8 @@ grub_configure() {
 	local myeconfargs=(
 		--disable-werror
 		--program-prefix=
-		--libdir=/usr/lib
-		--htmldir=/usr/share/doc/${PF}/html
+		--libdir="${EPREFIX}"/usr/lib
+		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html
 		$(use_enable debug mm-debug)
 		$(use_enable debug grub-emu-usb)
 		$(use_enable efiemu)
@@ -217,7 +217,7 @@ src_install() {
 		emake -C docs DESTDIR="${D}" install-html
 
 	if use multislot; then
-		mv "${ED}"usr/share/info/grub{,2}.info || die
+		mv "${ED%/}"/usr/share/info/grub{,2}.info || die
 	fi
 
 	insinto /etc/default

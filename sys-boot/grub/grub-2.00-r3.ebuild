@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r3.ebuild,v 1.1 2013/04/27 20:56:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r3.ebuild,v 1.2 2013/04/28 23:50:44 floppym Exp $
 
 EAPI=4
 
@@ -180,7 +180,7 @@ grub_src_configure() {
 
 	ECONF_SOURCE="${S}" \
 	econf \
-		--libdir=/usr/lib \
+		--libdir="${EPREFIX}"/usr/lib \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-werror \
 		--program-prefix= \
@@ -333,7 +333,7 @@ src_install() {
 
 	use doc && grub_run_phase install_docs ${i}
 
-	mv "${ED}"usr/share/info/grub{,2}.info || die
+	mv "${ED%/}"/usr/share/info/grub{,2}.info || die
 
 	# can't be in docs array as we use default_src_install in different builddir
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
