@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkipi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.146 2013/04/06 00:04:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.147 2013/04/29 12:44:12 ago Exp $
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libkipi-4.10.2.ebuild:
+  Stable for amd64, wrt to bug #466074
 
 *libkipi-4.10.2 (05 Apr 2013)
 

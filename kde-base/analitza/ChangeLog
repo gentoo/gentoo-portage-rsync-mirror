@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/analitza
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/ChangeLog,v 1.48 2013/04/06 00:04:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/ChangeLog,v 1.49 2013/04/29 12:44:39 ago Exp $
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org> analitza-4.10.2.ebuild:
+  Stable for amd64, wrt to bug #466074
 
 *analitza-4.10.2 (05 Apr 2013)
 

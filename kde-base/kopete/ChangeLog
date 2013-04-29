@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.361 2013/04/18 19:17:14 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.362 2013/04/29 12:44:48 ago Exp $
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org> kopete-4.10.2.ebuild:
+  Stable for amd64, wrt to bug #466074
 
   18 Apr 2013; Chris Reffett <creffett@gentoo.org> kopete-4.10.2.ebuild:
   Also actually disable QQ by default, thanks to kensington for the catch

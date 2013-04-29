@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-strigi-analyzer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.142 2013/04/06 00:04:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.143 2013/04/29 12:44:33 ago Exp $
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  kdegraphics-strigi-analyzer-4.10.2.ebuild:
+  Stable for amd64, wrt to bug #466074
 
 *kdegraphics-strigi-analyzer-4.10.2 (05 Apr 2013)
 

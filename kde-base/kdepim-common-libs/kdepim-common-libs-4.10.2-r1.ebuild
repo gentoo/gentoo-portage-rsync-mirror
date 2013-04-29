@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.10.2-r1.ebuild,v 1.2 2013/04/13 10:31:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.10.2-r1.ebuild,v 1.3 2013/04/29 12:43:55 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KMNOMODULE="true"
 inherit kde4-meta
 
 DESCRIPTION="Common libraries for KDE PIM apps"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
