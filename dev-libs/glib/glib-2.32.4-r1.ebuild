@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4-r1.ebuild,v 1.11 2013/02/19 00:08:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4-r1.ebuild,v 1.12 2013/04/29 01:23:26 tetromino Exp $
 
 EAPI="4"
-PYTHON_DEPEND="utils? 2"
-# Avoid runtime dependency on python when USE=test
+PYTHON_DEPEND="utils? 2" # Avoid runtime dependency on python when USE=test
+WANT_AUTOMAKE="1.12"
 
 inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python toolchain-funcs virtualx linux-info
 
