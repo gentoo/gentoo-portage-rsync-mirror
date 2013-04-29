@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Sendmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.27 2012/06/24 12:58:51 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.28 2013/04/29 15:56:58 ulm Exp $
+
+  29 Apr 2013; Ulrich Müller <ulm@gentoo.org> Mail-Sendmail-0.790.0.ebuild:
+  Fix LICENSE, bug 446164.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

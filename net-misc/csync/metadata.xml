@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>kde</herd>
 	<use>
-		<flag name="log">Enable logging support via <pkg>dev-libs/log4c</pkg></flag>
 		<flag name="sftp">Enable sftp transfer support via <pkg>net-libs/libssh</pkg></flag>
-		<flag name="webdav">Adds support for HTTP/dav content via <pkg>net-libs/neon</pkg></flag>
 	</use>
 </pkgmetadata>

@@ -4724,9 +4724,7 @@ net-misc/connman:openvpn - Use net-misc/openvpn for openvpn support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:vpnc - Use net-misc/vpnc for cisco VPN support.
 net-misc/connman:wimax - Use net-wireless/wimax for WiMAX support.
-net-misc/csync:log - Enable logging support via dev-libs/log4c
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
-net-misc/csync:webdav - Adds support for HTTP/dav content via net-libs/neon
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/curl:gnutls - Prefer gnutls over nss and openssl as the crypto engine
 net-misc/curl:metalink - Enable metalink support
