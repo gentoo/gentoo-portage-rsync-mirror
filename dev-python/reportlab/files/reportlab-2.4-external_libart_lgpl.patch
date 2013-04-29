@@ -5,7 +5,7 @@
          infoline( '#Attempting install of _renderPM')
          infoline( '#extensions from %r'%RENDERPM)
 -        LIBART_DIR=pjoin(RENDERPM,'libart_lgpl')
-+        LIBART_DIR='/usr/include/libart-2.0'
++        LIBART_DIR='@GENTOO_PORTAGE_EPREFIX@/usr/include/libart-2.0'
 +        LIBART_LIB=['art_lgpl_2']
          GT1_DIR=pjoin(RENDERPM,'gt1')
          MACROS=[('ROBIN_DEBUG',None)]

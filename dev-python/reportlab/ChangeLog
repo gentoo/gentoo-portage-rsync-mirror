@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.86 2013/01/22 21:30:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.87 2013/04/29 10:27:49 jlec Exp $
+
+  29 Apr 2013; Justin Lecher <jlec@gentoo.org> reportlab-2.6.ebuild,
+  files/reportlab-2.4-external_libart_lgpl.patch, metadata.xml:
+  Fix detection of libart header on prefix
 
 *reportlab-2.5 (22 Jan 2013)
 
