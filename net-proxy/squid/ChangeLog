@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.409 2013/04/26 09:32:25 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.410 2013/04/29 08:28:30 eras Exp $
+
+*squid-3.2.10 (29 Apr 2013)
+*squid-3.3.4 (29 Apr 2013)
+
+  29 Apr 2013; Eray Aslan <eras@gentoo.org> +files/squid-3.3.4-gentoo.patch,
+  +squid-3.2.10.ebuild, +squid-3.3.4.ebuild:
+  Version bump
 
   26 Apr 2013; Eray Aslan <eras@gentoo.org> squid-3.3.3-r1.ebuild:
   Respect AR - bug #461730

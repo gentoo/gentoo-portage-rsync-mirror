@@ -1,6 +1,10 @@
 # ChangeLog for games-action/powermanga
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.25 2013/02/01 00:13:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.26 2013/04/29 08:16:42 hasufell Exp $
+
+  29 Apr 2013; Julian Ospald <hasufell@gentoo.org> powermanga-0.91.ebuild,
+  +files/powermanga-0.91-automake-1.13.patch:
+  fix build with automake-1.13 wrt #467838
 
 *powermanga-0.91 (31 Jan 2013)
 
