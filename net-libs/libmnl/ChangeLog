@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.28 2013/02/21 16:41:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.29 2013/04/29 12:24:56 jer Exp $
+
+*libmnl-1.0.3-r1 (29 Apr 2013)
+
+  29 Apr 2013; Jeroen Roovers <jer@gentoo.org> -libmnl-1.0.2.ebuild,
+  +libmnl-1.0.3-r1.ebuild:
+  Add USE=static-libs.
 
   21 Feb 2013; Jeroen Roovers <jer@gentoo.org> libmnl-1.0.3.ebuild:
   Stable for HPPA (bug #457806).

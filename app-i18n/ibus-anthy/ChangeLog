@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.42 2013/02/09 13:04:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.43 2013/04/29 12:13:35 naota Exp $
+
+  29 Apr 2013; Naohiro Aota <naota@gentoo.org> ibus-anthy-1.5.0.ebuild:
+  Use python-single-r1. PYTHON is exported properly. #467526
 
   09 Feb 2013; Naohiro Aota <naota@gentoo.org>
   +files/ibus-anthy-1.5.0-configure.patch, ibus-anthy-1.5.0.ebuild,

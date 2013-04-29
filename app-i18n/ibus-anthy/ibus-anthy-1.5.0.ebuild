@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.5.0.ebuild,v 1.2 2013/02/09 13:04:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.5.0.ebuild,v 1.3 2013/04/29 12:13:35 naota Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.5"
-inherit eutils python autotools gnome2-utils
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+inherit eutils python-single-r1 autotools gnome2-utils
 
 DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -16,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="deprecated nls"
 
-RDEPEND=">=app-i18n/ibus-1.5.0
+RDEPEND="${PYTHON_DEPS}
+	>=app-i18n/ibus-1.5.0
 	app-i18n/anthy
 	deprecated? ( >=dev-python/pygtk-2.15.2 )
 	nls? ( virtual/libintl )"
@@ -27,15 +29,8 @@ DEPEND="${RDEPEND}
 	deprecated? ( dev-lang/swig )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_prepare() {
 	>py-compile #397497
-	sed -i -e "s/python/python2/" \
-		engine/ibus-engine-anthy.in setup/ibus-setup-anthy.in || die
 	epatch "${FILESDIR}"/${P}-configure.patch
 	eautoreconf
 	cp "${DISTDIR}"/anthy.i "${S}"/engine # deal with packaging bug
@@ -66,10 +61,9 @@ pkg_postinst() {
 	elog "# emerge app-dicts/kasumi"
 	elog
 
-	python_mod_optimize /usr/share/${PN}
+	python_optimize
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/share/${PN}
 	gnome2_icon_cache_update
 }
