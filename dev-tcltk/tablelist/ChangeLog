@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tablelist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.19 2013/01/19 10:23:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.20 2013/04/29 06:33:00 jlec Exp $
+
+*tablelist-5.8 (29 Apr 2013)
+
+  29 Apr 2013; Justin Lecher <jlec@gentoo.org> +tablelist-5.8.ebuild:
+  Version Bump
 
   19 Jan 2013; Ulrich Müller <ulm@gentoo.org> tablelist-5.6.ebuild,
   tablelist-5.7.ebuild:
