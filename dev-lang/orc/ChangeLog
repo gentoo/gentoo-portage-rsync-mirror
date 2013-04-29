@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/orc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.30 2012/12/04 15:37:34 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.31 2013/04/29 13:49:11 tetromino Exp $
+
+*orc-0.4.17 (29 Apr 2013)
+
+  29 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -orc-0.4.9.ebuild,
+  -orc-0.4.10.ebuild, -orc-0.4.11.ebuild, -orc-0.4.14.ebuild,
+  -orc-0.4.16.ebuild, orc-0.4.16-r1.ebuild, +orc-0.4.17.ebuild,
+  -files/orc-0.4.9-make-valgrind-optional.patch,
+  +files/orc-0.4.17-AM_CONFIG_HEADER.patch:
+  Version bump. Remove obsolete versions. Fix building with automake-1.13 (bug
+  #466956, thanks to Alphat-PC).
 
   04 Dec 2012; <ago@gentoo.org> orc-0.4.16-r1.ebuild:
   Stable for x86, wrt bug #442438

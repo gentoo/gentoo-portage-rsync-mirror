@@ -1,0 +1,28 @@
+From 8905d3d5bf8005944268c3500eec20b61923de89 Mon Sep 17 00:00:00 2001
+From: Josep Torra <n770galaxy@gmail.com>
+Date: Sat, 30 Mar 2013 12:52:33 +0100
+Subject: [PATCH] configure: replace deprecated AM_CONFIG_HEADER with
+ AC_CONFIG_HEADERS
+
+AM_CONFIG_HEADER has been removed in the just-released automake 1.13:
+https://lists.gnu.org/archive/html/automake/2012-12/msg00038.html
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 89812ba..4ebebd1 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -10,7 +10,7 @@ AM_INIT_AUTOMAKE(1.6)
+ ORC_MAJORMINOR=0.4
+ AC_SUBST(ORC_MAJORMINOR)
+ 
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADER(config.h)
+ 
+ dnl CURRENT, REVISION, AGE
+ dnl - library source changed -> increment REVISION
+-- 
+1.8.2.1
+

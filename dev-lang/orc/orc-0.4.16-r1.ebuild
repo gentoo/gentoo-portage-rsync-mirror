@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.16-r1.ebuild,v 1.5 2012/12/04 15:37:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.16-r1.ebuild,v 1.6 2013/04/29 13:49:11 tetromino Exp $
 
 EAPI=4
-inherit autotools flag-o-matic
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="The Oil Runtime Compiler, a just-in-time compiler for array operations"
 HOMEPAGE="http://code.entropywave.com/projects/orc/"
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	if ! use examples; then
 		sed -i -e '/SUBDIRS/s:examples::' Makefile.am || die
+		epatch "${FILESDIR}/${PN}-0.4.17-AM_CONFIG_HEADER.patch" # in 0.4.18
 		AT_M4DIR="m4" eautoreconf
 	fi
 }
