@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14698 2013/04/29 08:16:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14699 2013/04/29 11:53:37 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (29 Apr 2013)
+# Issues with python implementations in deps
+# This pacakge and version needs further work re its deps.
+# Makes for a 'start'
+=dev-python/celery-3.0.19
 
 # Markos Chandras <hwoarang@gentoo.org> (28 Apr 2013)
 # Early release of pcmanfm Qt4 port
