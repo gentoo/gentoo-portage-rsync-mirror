@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.803 2013/04/28 18:59:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.804 2013/04/29 22:14:23 tomwij Exp $
+
+  29 Apr 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Corrected UNIPATCH_DOCS functionality, this went unnoticed since
+  dodoc can be called without arguments in Portage. Thanks to the
+  Paludis user Alexandros Diamantidis in bug #467916 for reporting.
 
   28 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org> autotools.eclass:
   Reverting autotools.eclass commit that broke eautoreconf (bug #467772), acked

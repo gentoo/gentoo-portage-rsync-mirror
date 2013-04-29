@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=3.9_rc4
 SRC_URI=mirror://kernel/linux/kernel/v3.x/testing/patch-3.9-rc4.xz mirror://kernel/linux/kernel/v3.x/linux-3.8.tar.xz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	kernel-2	51a0d69630b9267532863bc985ed02f6	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	kernel-2	353d0aef1046938e432ba587875e2027	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=d95b87a44fe142614b1d2914e5ceb250

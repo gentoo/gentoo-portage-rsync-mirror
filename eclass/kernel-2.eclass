@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.283 2013/04/17 20:59:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.284 2013/04/29 22:14:23 tomwij Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -742,8 +742,10 @@ install_sources() {
 
 	mv ${WORKDIR}/linux* "${D}"/usr/src
 
-	if [[ -z ${UNIPATCH_DOCS} ]] ; then
-		dodoc ${UNIPATCH_DOCS}
+	if [[ -n "${UNIPATCH_DOCS}" ]] ; then
+		for i in ${UNIPATCH_DOCS}; do
+			dodoc "${T}"/${i}
+		done
 	fi
 }
 
@@ -1040,7 +1042,7 @@ unipatch() {
 	for x in ${KPATCH_DIR}; do
 		for i in ${UNIPATCH_DOCS}; do
 			if [[ -f "${x}/${i}" ]] ; then
-				tmp="${tmp} \"${T}/${i}\""
+				tmp="${tmp} ${i}"
 				cp -f "${x}/${i}" "${T}"/
 			fi
 		done
