@@ -151,10 +151,10 @@ lesspipe() {
 	*.squashfs)   unsquashfs -s "$1" && unsquashfs -ll "$1" ;;
 
 	### Media ###
-	*.bmp|*.gif|*.jpeg|*.jpg|*.ico|*.pcd|*.pcx|*.png|*.ppm|*.tga|*.tiff|*.tif)
+	*.bmp|*.gif|*.jpeg|*.jpg|*.ico|*.pcd|*.pcx|*.png|*.ppm|*.tga|*.tiff|*.tif|*.webp)
 		identify "$1" || file -L -- "$1"
 		;;
-	*.avi|*.mpeg|*.mpg|*.mov|*.qt|*.wmv|*.asf|*.rm|*.ram)
+	*.asf|*.avi|*.mov|*.mp4|*.mpeg|*.mpg|*.qt|*.ram|*.rm|*.webm|*.wmv)
 		midentify "$1" || file -L -- "$1"
 		;;
 	*.mp3)        mp3info "$1" || id3info "$1" ;;
@@ -235,7 +235,7 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.51 2013/03/24 05:01:40 vapier Exp $
+		$Id: lesspipe.sh,v 1.52 2013/04/29 18:37:49 vapier Exp $
 		Copyright 2001-2013 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)

@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.137 2013/04/29 18:30:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.138 2013/04/29 18:35:53 scarabeus Exp $
+
+  29 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/hostapd-1.0-libnl_path_fix.patch,
+  -files/hostapd-1.0-tls_length_fix.patch,
+  -files/hostapd-1.1-libnl_path_fix.patch,
+  -files/hostapd-1.1-tls_length_fix.patch, -hostapd-1.0-r4.ebuild,
+  -hostapd-1.1.ebuild, hostapd-2.0.ebuild:
+  Stabilise 2.0 on amd64 x86 and ppc. Drop overshadowed versions.
 
   29 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> hostapd-2.0.ebuild:
   Drop debug useflag. As without it all messages are muted, which kills any

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.10-r1.ebuild,v 1.1 2013/02/01 21:16:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.10-r1.ebuild,v 1.2 2013/04/29 18:51:01 hwoarang Exp $
 
 EAPI=5
 
@@ -22,6 +22,8 @@ PATCHES=(
 
 	# bug 452234
 	"${FILESDIR}"/${P}-headers.patch
+	# bug 466960
+	"${FILESDIR}"/${P}-automake-1.13.patch
 	)
 
 # tests break otherwise

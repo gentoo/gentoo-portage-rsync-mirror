@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/json-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.27 2013/04/25 19:21:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.28 2013/04/29 18:51:01 hwoarang Exp $
+
+  29 Apr 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/json-c-0.10-automake-1.13.patch, json-c-0.10-r1.ebuild:
+  Backport upstream patch for automake-1.13 to json-c-0.10. Bug #466960
 
 *json-c-0.11 (25 Apr 2013)
 
