@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/plymouth-openrc-plugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/ChangeLog,v 1.16 2013/04/25 13:38:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/ChangeLog,v 1.17 2013/04/29 10:43:43 lxnay Exp $
+
+  29 Apr 2013; Fabio Erculiani <lxnay@gentoo.org>
+  plymouth-openrc-plugin-0.1.2.ebuild:
+  do not block systemd, just warn user
 
   25 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Drop maintainer by his request, remove proxy maintainers herd, reassigning to
