@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.0.ebuild,v 1.1 2013/01/21 10:42:21 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.0.ebuild,v 1.2 2013/04/29 18:30:35 scarabeus Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
-IUSE="debug ipv6 logwatch madwifi +ssl +wps +crda"
+IUSE="ipv6 logwatch madwifi +ssl +wps +crda"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	kernel_linux? (
@@ -109,10 +109,6 @@ src_configure() {
 	if use ipv6; then
 		# IPv6 support
 		echo "CONFIG_IPV6=y" >> ${CONFIG}
-	fi
-
-	if ! use debug; then
-		echo "CONFIG_NO_STDOUT_DEBUG=y" >> ${CONFIG}
 	fi
 
 	# If we are using libnl 2.0 and above, enable support for it
