@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.651 2013/04/28 06:13:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.652 2013/04/29 04:40:26 chutzpah Exp $
+
+  28 Apr 2013; Patrick McLean <chutzpah@gentoo.org> python-3.3.1.ebuild:
+  Re-add patch from Arfrever to fix compilation on non-UTF-8 platforms, drop
+  patches that are no longer needed.
 
 *python-3.3.1 (28 Apr 2013)
 
