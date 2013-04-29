@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/doom3-lms-4.ebuild,v 1.2 2009/10/10 17:13:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/doom3-lms-4.ebuild,v 1.3 2013/04/29 16:21:08 ulm Exp $
 
 EAPI=2
 
@@ -13,10 +13,10 @@ inherit games games-mods
 HOMEPAGE="http://doom3coop.com/"
 SRC_URI="LastManStandingCoop4Multiplatform.zip"
 
-LICENSE="freedist"
+LICENSE="GameFront"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
-RESTRICT="fetch"
+RESTRICT="fetch bindist"
 
 pkg_nofetch() {
 	elog "Please download ${SRC_URI} from:"

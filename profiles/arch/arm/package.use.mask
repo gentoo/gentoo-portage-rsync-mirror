@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.136 2013/04/21 12:57:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.137 2013/04/29 16:10:27 ottxor Exp $
+
+# Christoph Junghans <ottxor@gentoo.org> (29 Apr 2013)
+# MKL not available on this arch
+media-gfx/povray mkl
 
 # Gilles Dartiguelongue <eva@gentoo.org> (1 Apr 2013)
 # missing keyword on media-libs/tremor, bug #453200

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-unwheel/ut2004-unwheel-0_beta5.ebuild,v 1.5 2009/10/09 01:39:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-unwheel/ut2004-unwheel-0_beta5.ebuild,v 1.6 2013/04/29 16:23:09 ulm Exp $
 
 EAPI=2
 
@@ -14,10 +14,10 @@ HOMEPAGE="http://unwheel.beyondunreal.com/"
 SRC_URI="unwheel_r5.zip
 	UnWheel-R5_BonusPack-Volume_1.zip"
 
-LICENSE="freedist"
+LICENSE="GameFront"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
-RESTRICT="fetch"
+RESTRICT="fetch bindist"
 
 pkg_nofetch() {
 	elog "Please download the following files:"

@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004-unwheel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-unwheel/ChangeLog,v 1.5 2009/10/09 01:39:46 nyhm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-unwheel/ChangeLog,v 1.6 2013/04/29 16:23:09 ulm Exp $
+
+  29 Apr 2013; Ulrich Müller <ulm@gentoo.org> ut2004-unwheel-0_beta5.ebuild:
+  Fix LICENSE, bug 467512.
 
   09 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
   ut2004-unwheel-0_beta5.ebuild:

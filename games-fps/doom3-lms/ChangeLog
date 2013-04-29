@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-lms
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.10 2009/10/10 17:13:34 nyhm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.11 2013/04/29 16:21:08 ulm Exp $
+
+  29 Apr 2013; Ulrich Müller <ulm@gentoo.org> doom3-lms-4.ebuild:
+  Fix LICENSE, bug 467512.
 
   10 Oct 2009; Tristan Heaven <nyhm@gentoo.org> doom3-lms-4.ebuild:
   Stable on amd64/x86

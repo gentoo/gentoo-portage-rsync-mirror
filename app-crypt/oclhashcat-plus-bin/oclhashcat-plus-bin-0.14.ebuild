@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.14.ebuild,v 1.2 2013/04/28 02:17:02 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.14.ebuild,v 1.3 2013/04/29 16:06:38 zerochaos Exp $
 
 EAPI=5
 
@@ -32,31 +32,10 @@ S="${WORKDIR}/${MY_P}"
 RESTRICT="strip"
 QA_PREBUILT="*Hashcat-plus*.bin"
 
-src_test() {
-	printf "%02x" ${PV#0.} > "${S}"/eula.accepted
-	if use video_cards_nvidia; then
-		if [ ! -w /dev/nvidia0 ]; then
-			einfo "To run these tests, portage likely must be in the video group."
-			einfo "Please run \"gpasswd -a portage video\" if the tests will fail"
-		fi
-		./cudaExample0.sh || die
-		./cudaExample400.sh || die
-		./cudaExample500.sh || die
-	fi
-	if use video_cards_fglrx; then
-		./oclExample0.sh || die
-		./oclExample400.sh || die
-		./oclExample500.sh || die
-	fi
-	rm "${S}"/eula.accepted
-}
-
-src_install() {
-	dodoc docs/*
-	rm -r "${S}"/*.exe "${S}"/*.cmd "${S}"/docs || die
+src_prepare() {
 	use x86 && rm *Hashcat-plus64*
 	use amd64 && rm *Hashcat-plus32*
-	use virtualcl || { rm vclHashcat-plus* || die; }
+	use virtualcl || rm vclHashcat-plus*
 
 	if ! use video_cards_fglrx; then
 		rm -r kernels/4098 || die
@@ -66,7 +45,40 @@ src_install() {
 		rm -r kernels/4318 || die
 		rm cudaHashcat-plus*.bin || die
 	fi
-	pax-mark m *Hashcat-plus*.bin
+
+	#paxmark goes here so test and install works
+	pax-mark r *Hashcat-plus*.bin
+}
+
+src_test() {
+	printf "%02x" ${PV#0.} > "${S}"/eula.accepted
+	if use video_cards_nvidia; then
+		addwrite /dev/nvidia0
+		addwrite /dev/nvidiactl
+		if [ ! -w /dev/nvidia0 ]; then
+			einfo "To run these tests, portage likely must be in the video group."
+			einfo "Please run \"gpasswd -a portage video\" if the tests will fail"
+		fi
+		if use amd64; then
+			./cudaHashcat-plus64.bin -a 3 -m 1500 nQCk49SiErOgk || die
+		elif use x86; then
+			./cudaHashcat-plus32.bin -a 3 -m 1500 nQCk49SiErOgk || die
+		fi
+	fi
+	if use video_cards_fglrx; then
+		addwrite /dev/ati
+		if use amd64; then
+			./oclHashcat-plus64.bin -a 3 -m 1500 nQCk49SiErOgk || die
+		elif use x86; then
+			./oclHashcat-plus32.bin -a 3 -m 1500 nQCk49SiErOgk || die
+		fi
+	fi
+	rm eula.accepted hashcat.pot hashcat.dictstat
+}
+
+src_install() {
+	dodoc docs/*
+	rm -r "${S}"/*.exe "${S}"/*.cmd "${S}"/docs || die
 
 	insinto /opt/${PN}
 	doins -r "${S}"/* || die "Copy files failed"
@@ -119,7 +131,8 @@ src_install() {
 	done
 
 	fperms +x /opt/bin/oclhashcat-plus
-	fowners root:video /opt/${PN}
+	fowners -R root:video /opt/${PN}
+	fperms g+w /opt/${PN}
 	einfo "oclhashcat-plus can be run as user if you are in the video group"
 }
 
