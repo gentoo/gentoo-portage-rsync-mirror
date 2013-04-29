@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-5.0.5.ebuild,v 1.1 2013/04/19 21:38:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-5.0.5.ebuild,v 1.2 2013/04/29 20:46:27 voyageur Exp $
 
 EAPI=5
 
@@ -27,6 +27,10 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	webapp_pkg_setup
+}
+
+src_prepare() {
+	epatch_user
 }
 
 src_install() {
