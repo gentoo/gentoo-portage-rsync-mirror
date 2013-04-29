@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.43 2013/04/09 20:26:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.44 2013/04/29 05:21:17 caster Exp $
+
+*icedtea-bin-7.2.3.9 (29 Apr 2013)
+
+  29 Apr 2013; Vlastimil Babka <caster@gentoo.org> +icedtea-bin-7.2.3.9.ebuild:
+  Version bump, security bug #466822. Installs libpng-1.5 or libpng-1.6 file
+  depending on what is detected, bug #464914.
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   icedtea-bin-6.1.12.2.ebuild, icedtea-bin-6.1.12.4.ebuild,
