@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.458 2013/04/26 13:42:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.459 2013/04/29 21:59:46 sping Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -203,7 +203,11 @@ dev-libs/gobject-introspection doctool
 # Compilation fails due to a bug in dev-libs/gobject-introspection
 # that has yet to be resolved upstream.
 # See <https://bugzilla.gnome.org/show_bug.cgi?id=673580#c5> for details
->=media-libs/babl-0.1.8 introspection
+~media-libs/babl-0.1.8 introspection
+
+# Sebastian Pipping <sping@gentoo.org> (12 Apr 2012)
+# Compile errors
+# https://bugs.gentoo.org/show_bug.cgi?id=416587
 >=media-libs/gegl-0.2 introspection
 
 # Michał Górny <mgorny@gentoo.org> (11 Apr 2012)

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.45 2013/02/21 18:07:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.46 2013/04/29 21:46:02 sping Exp $
+
+  29 Apr 2013; Sebastian Pipping <sping@gentoo.org> babl-0.1.10.ebuild,
+  +files/babl-0.1.10-g-ir-compiler-crash.patch,
+  +files/babl-0.1.10-introspection.patch:
+  Fix build with USE=introspection (bug #413663), patches by upstream and
+  openSUSE
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> babl-0.1.10.ebuild:
   Add ~arm-linux keyword.
