@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.1.0.ebuild,v 1.1 2013/03/03 05:49:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.2.0.ebuild,v 1.1 2013/04/29 07:17:29 radhermit Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs versionator wxwidgets multiprocessing autotools
@@ -12,11 +12,11 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="bzip2 debug lzo pch qt4 wxwidgets"
+IUSE="debug pch qt4 wxwidgets"
 
 RDEPEND="
-	>=dev-libs/libebml-1.2.2
-	>=media-libs/libmatroska-1.3.0
+	>=dev-libs/libebml-1.3.0:=
+	>=media-libs/libmatroska-1.4.0:=
 	>=dev-libs/boost-1.46.0
 	dev-libs/pugixml
 	media-libs/flac
@@ -25,8 +25,6 @@ RDEPEND="
 	sys-apps/file
 	>=sys-devel/gcc-4.6
 	sys-libs/zlib
-	bzip2? ( app-arch/bzip2 )
-	lzo? ( dev-libs/lzo )
 	qt4? (
 		dev-qt/qtcore:4
 		dev-qt/qtgui:4
@@ -64,9 +62,7 @@ src_configure() {
 	fi
 
 	econf \
-		$(use_enable bzip2 bz2) \
 		$(use_enable debug) \
-		$(use_enable lzo) \
 		$(use_enable qt4 qt) \
 		$(use_enable wxwidgets) \
 		$(usex pch "" --disable-precompiled-headers) \

@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.186 2013/03/21 09:25:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.188 2013/04/29 07:20:12 radhermit Exp $
+
+  29 Apr 2013; Tim Harder <radhermit@gentoo.org> -mkvtoolnix-5.8.0.ebuild,
+  -mkvtoolnix-5.9.0.ebuild, -mkvtoolnix-6.0.0.ebuild, -mkvtoolnix-6.1.0.ebuild:
+  Remove old.
+
+*mkvtoolnix-6.2.0 (29 Apr 2013)
+
+  29 Apr 2013; Tim Harder <radhermit@gentoo.org> +mkvtoolnix-6.2.0.ebuild:
+  Version bump, drop bzip2 and lzo use flags since upstream dropped support.
 
 *mkvtoolnix-6.1.0-r1 (21 Mar 2013)
 
