@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.4.ebuild,v 1.1 2013/04/15 17:43:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.4.ebuild,v 1.2 2013/04/29 15:24:18 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="
-	>=net-misc/csync-0.70.4
+	>=net-misc/csync-0.70.6
 	sys-fs/inotify-tools
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
