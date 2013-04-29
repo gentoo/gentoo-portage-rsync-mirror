@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-ducttape
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-ducttape/ChangeLog,v 1.6 2009/10/07 14:39:00 nyhm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-ducttape/ChangeLog,v 1.7 2013/04/29 16:47:52 ulm Exp $
+
+  29 Apr 2013; Ulrich Müller <ulm@gentoo.org> doom3-ducttape-0006-r1.ebuild:
+  Fix LICENSE, see readme.txt, bug 467890.
 
   07 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
   doom3-ducttape-0006-r1.ebuild:

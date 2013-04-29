@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.0.ebuild,v 1.4 2013/04/25 22:16:43 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.0.ebuild,v 1.5 2013/04/29 16:46:25 vapier Exp $
 
 EAPI=5
 
-inherit toolchain-funcs pax-utils
+inherit toolchain-funcs pax-utils multiprocessing
 
-DESCRIPTION="A headless WebKit scriptable with a JavaScript API."
+DESCRIPTION="A headless WebKit scriptable with a JavaScript API"
 HOMEPAGE="http://phantomjs.org/"
 SRC_URI="https://phantomjs.googlecode.com/files/${P}-source.zip"
 
@@ -15,15 +15,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND="media-libs/fontconfig media-libs/freetype dev-libs/icu"
-RDEPEND="${DEPEND}"
-
+RDEPEND="dev-libs/icu
+	dev-libs/openssl
+	media-libs/fontconfig
+	media-libs/freetype"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
-	sed -i 's/# CONFIG += text_breaking_with_icu/CONFIG += text_breaking_with_icu/' \
-	src/qt/src/3rdparty/webkit/Source/JavaScriptCore/JavaScriptCore.pri
+	sed -i \
+		-e '/^# CONFIG += text_breaking_with_icu/s:#::' \
+		src/qt/src/3rdparty/webkit/Source/JavaScriptCore/JavaScriptCore.pri \
+		|| die
+
 	# Respect CC, CXX, {C,CXX,LD}FLAGS in .qmake.cache
-	sed -e "/^SYSTEM_VARIABLES=/i \
+	sed -i \
+		-e "/^SYSTEM_VARIABLES=/i \
 		CC='$(tc-getCC)'\n\
 		CXX='$(tc-getCXX)'\n\
 		CFLAGS='${CFLAGS}'\n\
@@ -35,19 +42,23 @@ src_prepare() {
 		QMakeVar set QMAKE_CXXFLAGS_DEBUG\n\
 		QMakeVar set QMAKE_LFLAGS_RELEASE\n\
 		QMakeVar set QMAKE_LFLAGS_DEBUG\n"\
-		-i src/qt/configure \
-		|| die "sed SYSTEM_VARIABLES failed"
+		src/qt/configure \
+		|| die
 
 	# Respect CC, CXX, LINK and *FLAGS in config.tests
-	find src/qt/config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
+	find src/qt/config.tests/unix -name '*.test' -type f -exec \
 		sed -i -e "/bin\/qmake/ s: \"\$SRCDIR/: \
 			'QMAKE_CC=$(tc-getCC)'    'QMAKE_CXX=$(tc-getCXX)'      'QMAKE_LINK=$(tc-getCXX)' \
 			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
-		|| die "sed config.tests failed"
+		{} + || die
 }
 
 src_compile() {
-	./build.sh --confirm --qt-config $(pkg-config --cflags-only-I freetype2) || die
+	./build.sh \
+		--confirm \
+		--jobs $(makeopts_jobs) \
+		--qt-config "$($(tc-getPKG_CONFIG) --cflags-only-I freetype2)" \
+		|| die
 }
 
 src_test() {
@@ -56,10 +67,10 @@ src_test() {
 
 src_install() {
 	pax-mark m bin/phantomjs || die
-	dobin bin/phantomjs || die
+	dobin bin/phantomjs
 	dodoc ChangeLog README.md
 	if use examples ; then
 		docinto examples
-		dodoc examples/* || die
+		dodoc examples/*
 	fi
 }
