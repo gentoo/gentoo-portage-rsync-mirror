@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=dev-python/jsonpickle[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/pyinotify[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/PyQt4[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-vcs/git doc? ( app-text/asciidoc dev-python/sphinx[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] app-text/xmlto ) sys-devel/gettext test? ( dev-python/nose[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) python_single_target_python2_6? ( dev-lang/python:2.6 ) python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
+DESCRIPTION=The highly caffeinated git GUI
+EAPI=5
+HOMEPAGE=http://git-cola.github.com/
+IUSE=doc test python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=dev-python/jsonpickle[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/pyinotify[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/PyQt4[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-vcs/git python_single_target_python2_6? ( dev-lang/python:2.6 ) python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/git-cola/git-cola/archive/v1.8.2.tar.gz -> git-cola-1.8.2.tar.gz
+_eclasses_=distutils-r1	28f569122728e4a4b52d45c00fc45fff	eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	b4f112abff5d77f982f83e1a9e554093	python-utils-r1	1abc4a4828358a8fc1c4d65e74ae4a19	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=527ff290580bd75db3075f4ae20b96f5
