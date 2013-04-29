@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.21.ebuild,v 1.3 2013/02/18 02:23:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.21.ebuild,v 1.4 2013/04/29 05:39:43 vapier Exp $
 
 EAPI="3"
 
@@ -57,10 +57,12 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "${EPREFIX}/etc/portage/postsync.d/q-reinitialize has been installed for convenience"
-	elog "If you wish for it to be automatically run at the end of every --sync:"
-	elog "   # chmod +x ${EPREFIX}/etc/portage/postsync.d/q-reinitialize"
-	elog "Normally this should only take a few seconds to run but file systems"
-	elog "such as ext3 can take a lot longer.  To disable, simply do:"
-	elog "   # chmod -x ${EPREFIX}/etc/portage/postsync.d/q-reinitialize"
+	if [[ -z ${REPLACING_VERSIONS} ]] ; then
+		elog "${EPREFIX}/etc/portage/postsync.d/q-reinitialize has been installed for convenience"
+		elog "If you wish for it to be automatically run at the end of every --sync:"
+		elog "   # chmod +x ${EPREFIX}/etc/portage/postsync.d/q-reinitialize"
+		elog "Normally this should only take a few seconds to run but file systems"
+		elog "such as ext3 can take a lot longer.  To disable, simply do:"
+		elog "   # chmod -x ${EPREFIX}/etc/portage/postsync.d/q-reinitialize"
+	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.36 2013/03/31 07:45:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.37 2013/04/29 05:38:29 idella4 Exp $
+
+  29 Apr 2013; Ian Delaney <idella4@gentoo.org> requests-1.2.0.ebuild:
+  pypy support added
 
 *requests-1.2.0 (31 Mar 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.140 2013/02/18 02:23:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.141 2013/04/29 05:39:43 vapier Exp $
+
+  29 Apr 2013; Mike Frysinger <vapier@gentoo.org> portage-utils-0.21.ebuild:
+  Show init messages on first install only #440420 by poletti.marco.
 
   18 Feb 2013; Mike Frysinger <vapier@gentoo.org> portage-utils-0.21.ebuild:
   Pull in xz-utils to unpack tarball #456740 by Brian Dolbec.

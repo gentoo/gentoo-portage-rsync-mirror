@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.48 2013/03/03 19:57:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.49 2013/04/29 05:42:52 graaff Exp $
+
+  29 Apr 2013; Hans de Graaff <graaff@gentoo.org> -bundler-1.2.3.ebuild,
+  -bundler-1.2.4.ebuild:
+  Cleanup.
 
 *bundler-1.2.5 (03 Mar 2013)
 
