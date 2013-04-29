@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.12.0.ebuild,v 1.1 2013/04/25 16:27:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.12.0.ebuild,v 1.2 2013/04/29 18:00:33 bicatali Exp $
 
 EAPI=5
 
@@ -116,12 +116,17 @@ r = scipy.test('fast',verbose=2)
 sys.exit(0 if r.wasSuccessful() else 1)" || die "Tests fail with ${EPYTHON}"
 }
 
-python_install() {
-	distutils-r1_python_install ${SCIPY_FCONFIG}
+
+python_install_all() {
 	if use doc; then
 		dohtml -r "${WORKDIR}"/html/.
 		dodoc "${DISTDIR}"/${P}*pdf
 	fi
+	distutils-r1_python_install_all
+}
+
+python_install() {
+	distutils-r1_python_install ${SCIPY_FCONFIG}
 }
 
 pkg_postinst() {

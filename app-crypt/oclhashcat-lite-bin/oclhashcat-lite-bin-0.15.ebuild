@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/oclhashcat-lite-bin-0.15.ebuild,v 1.1 2013/04/23 02:49:26 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/oclhashcat-lite-bin-0.15.ebuild,v 1.2 2013/04/29 17:40:09 zerochaos Exp $
 
 EAPI=5
 
@@ -32,28 +32,7 @@ S="${WORKDIR}/${MY_P}"
 RESTRICT="strip"
 QA_PREBUILT="*Hashcat-lite*.bin"
 
-src_test() {
-	printf "%02x" ${PV#0.} > "${S}"/eula.accepted
-	if use video_cards_nvidia; then
-		if [ ! -w /dev/nvidia0 ]; then
-			einfo "To run these tests, portage likely must be in the video group."
-			einfo "Please run \"passwd -a portage video\" if the tests will fail"
-		fi
-		./cudaExample0.sh || die
-		./cudaExample400.sh || die
-		./cudaExample500.sh || die
-	fi
-	if use video_cards_fglrx; then
-		./oclExample0.sh || die
-		./oclExample400.sh || die
-		./oclExample500.sh || die
-	fi
-	rm "${S}"/eula.accepted
-}
-
-src_install() {
-	dodoc docs/*
-	rm -r "${S}"/*.exe "${S}"/*.cmd "${S}"/docs || die
+src_prepare() {
 	if use x86; then
 		rm oclHashcat-lite64.bin || die
 		rm cudaHashcat-lite64.bin || die
@@ -71,8 +50,39 @@ src_install() {
 		rm cudaHashcat-lite*.bin || die
 	fi
 	use virtualcl || { rm vclHashcat-lite* || die; }
-	#I assume this is needed but I didn't check
-	pax-mark m *Hashcat-lite*.bin
+
+	pax-mark r *Hashcat-lite*.bin
+}
+
+src_test() {
+	printf "%02x" ${PV#0.} > "${S}"/eula.accepted
+	if use video_cards_nvidia; then
+		addwrite /dev/nvidia0
+		addwrite /dev/nvidiactl
+		if [ ! -w /dev/nvidia0 ]; then
+			einfo "To run these tests, portage likely must be in the video group."
+			einfo "Please run \"passwd -a portage video\" if the tests will fail"
+		fi
+		if use amd64; then
+			./cudaHashcat-lite64.bin 6fc33db981c6c55189bbda9625eacd6d
+		elif use x86; then
+			./cudaHashcat-lite32.bin 6fc33db981c6c55189bbda9625eacd6d
+		fi
+	fi
+	if use video_cards_fglrx; then
+		addwrite /dev/ati
+		if use amd64; then
+			./oclHashcat-lite64.bin 6fc33db981c6c55189bbda9625eacd6d
+		elif use x86; then
+			./oclHashcat-lite32.bin 6fc33db981c6c55189bbda9625eacd6d
+		fi
+	fi
+	rm eula.accepted cudaHashcat-lite.restore
+}
+
+src_install() {
+	dodoc docs/*
+	rm -r "${S}"/*.exe "${S}"/*.cmd "${S}"/docs || die
 
 	insinto /opt/${PN}
 	doins -r "${S}"/*
@@ -125,7 +135,8 @@ src_install() {
 	done
 
 	fperms +x /opt/bin/oclhashcat-lite
-	fowners root:video /opt/${PN}
+	fowners -R root:video /opt/${PN}
+	fperms g+w /opt/${PN}
 	einfo "oclhashcat-lite can be run as user if you are in the video group"
 }
 
