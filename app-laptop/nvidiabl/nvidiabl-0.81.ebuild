@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.81.ebuild,v 1.2 2013/04/25 18:36:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.81.ebuild,v 1.3 2013/04/30 13:24:03 vincent Exp $
 
-EAPI=4
+EAPI=5
 inherit linux-mod
 
 DESCRIPTION="Linux driver for setting the backlight brightness on laptops using
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/guillaumezin/${PN}/archive/v${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
@@ -33,5 +33,6 @@ Note that you cannot use FB_NVIDIA with nvidia's proprietary driver"
 
 src_compile() {
 	BUILD_PARAMS="KVER=${KV_FULL}"
+	MAKEOPTS+=" V=1"
 	linux-mod_src_compile
 }
