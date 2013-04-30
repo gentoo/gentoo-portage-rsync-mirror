@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpwatch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.103 2012/11/27 19:06:27 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.104 2013/04/30 19:37:00 fauli Exp $
+
+  30 Apr 2013; Christian Faulhammer <fauli@gentoo.org> tmpwatch-2.11.ebuild:
+  use system AR not unconditional call to /usr/bin/ar, bug 468018 by nimiux
 
   23 Nov 2012; <swift@gentoo.org> tmpwatch-2.10.1.ebuild,
   tmpwatch-2.10.3.ebuild, tmpwatch-2.11.ebuild:
