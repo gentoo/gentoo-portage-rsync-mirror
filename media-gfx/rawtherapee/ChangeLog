@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/rawtherapee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.12 2013/03/15 08:11:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.13 2013/04/30 21:15:18 radhermit Exp $
+
+  30 Apr 2013; Tim Harder <radhermit@gentoo.org> rawtherapee-4.0.10.ebuild:
+  Fix libcanberra dep to require gtk support (bug #467904).
 
   15 Mar 2013; Tim Harder <radhermit@gentoo.org> -rawtherapee-4.0.8.ebuild,
   -files/rawtherapee-4.0.8-nohg.patch, -rawtherapee-4.0.9.ebuild:

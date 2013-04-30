@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.10.ebuild,v 1.1 2013/03/15 08:07:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.10.ebuild,v 1.2 2013/04/30 21:15:18 radhermit Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	>=dev-cpp/glibmm-2.16:2
 	dev-libs/expat
 	dev-libs/libsigc++:2
-	media-libs/libcanberra
+	media-libs/libcanberra[gtk]
 	media-libs/tiff
 	media-libs/libpng
 	media-libs/libiptcdata

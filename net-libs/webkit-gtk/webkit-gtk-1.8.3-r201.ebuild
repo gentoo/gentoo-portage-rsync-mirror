@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r201.ebuild,v 1.1 2013/04/11 21:41:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r201.ebuild,v 1.2 2013/04/30 21:07:17 slyfox Exp $
 
 EAPI=5
 
@@ -174,6 +174,10 @@ src_prepare() {
 
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC
+
+	# AM_PROG_CC_STDC is obsolete with sys-devel/automake-1.13.1, #467244
+	sed -i -e 's/AM_PROG_CC_STDC/AM_PROG_CC/g' aclocal.m4 || die
+	sed -i -e '/AM_PROG_CC_STDC/d' configure.ac || die
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf

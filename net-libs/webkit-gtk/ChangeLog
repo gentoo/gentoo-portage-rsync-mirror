@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.200 2013/04/30 16:55:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.201 2013/04/30 21:07:17 slyfox Exp $
+
+  30 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  webkit-gtk-1.8.3-r201.ebuild:
+  Backport build fix to slot:2 for automake-1.13.1 (bug #467244).
 
   30 Apr 2013; Justin Lecher <jlec@gentoo.org> webkit-gtk-1.10.2-r300.ebuild,
   metadata.xml:
