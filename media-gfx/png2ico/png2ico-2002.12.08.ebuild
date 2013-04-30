@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/png2ico/png2ico-2002.12.08.ebuild,v 1.1 2011/10/09 09:04:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/png2ico/png2ico-2002.12.08.ebuild,v 1.2 2013/04/30 06:47:27 ssuominen Exp $
 
-EAPI=4
-inherit toolchain-funcs
+EAPI=5
+inherit eutils toolchain-funcs
 
 DESCRIPTION="PNG to icon converter"
 HOMEPAGE="http://winterdrache.de/freeware/png2ico/index.html"
@@ -14,13 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libpng
-	sys-libs/zlib"
+RDEPEND="media-libs/libpng:0=
+	sys-libs/zlib:="
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-memset_and_strcmp.patch
+
 	sed -i \
 		-e 's:CPPFLAGS=-W -Wall -O2:CXXFLAGS+=-W -Wall:' \
 		-e 's:g++ $(CPPFLAGS):$(CXX) $(LDFLAGS) $(CXXFLAGS):' \

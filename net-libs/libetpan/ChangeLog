@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.101 2012/08/05 20:17:03 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.102 2013/04/30 06:38:46 eras Exp $
+
+  30 Apr 2013; Eray Aslan <eras@gentoo.org> libetpan-1.1.ebuild:
+  Fix building with automake-1.13 - bug #467788
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> libetpan-1.1.ebuild:
   Keyword ~arm
@@ -376,4 +379,3 @@
   23 Jun 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +libetpan-0.36.ebuild:
   Initial import.
-

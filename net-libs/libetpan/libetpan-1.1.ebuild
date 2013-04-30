@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.1.ebuild,v 1.10 2012/08/05 20:17:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.1.ebuild,v 1.11 2013/04/30 06:38:46 eras Exp $
 
 EAPI="4"
 
@@ -24,8 +24,12 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0-nonnull.patch
-	# respect CFLAGS - bug #373723
-	sed -i -e "s/-O2 -g//" configure.ac
+
+	sed -i \
+		-e "s/-O2 -g//" \
+		-e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" \
+		configure.ac
+
 	eautoreconf
 }
 

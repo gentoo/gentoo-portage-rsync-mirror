@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemon_controller/daemon_controller-1.1.0.ebuild,v 1.2 2012/11/04 13:45:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemon_controller/daemon_controller-1.1.2.ebuild,v 1.1 2013/04/30 06:37:58 graaff Exp $
 
-EAPI=4
+EAPI=5
 
 # jruby → fails tests, looks like Unix sockets are bad on JRuby
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://github.com/FooBarWidget/daemon_controller"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 all_ruby_prepare() {
