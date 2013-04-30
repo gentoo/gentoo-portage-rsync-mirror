@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.47 2013/04/30 20:13:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.48 2013/04/30 20:37:44 sping Exp $
+
+  30 Apr 2013; Sebastian Pipping <sping@gentoo.org> babl-0.1.10.ebuild,
+  babl-9999.ebuild:
+  Migrate to vala eclass (bug #467394)
 
   30 Apr 2013; Sebastian Pipping <sping@gentoo.org> babl-0.1.8.ebuild:
   Apply g-ir crash patch to 0.1.8, too (bug #413663)

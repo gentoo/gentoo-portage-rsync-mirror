@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.5 2013/03/17 12:25:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.6 2013/04/30 20:35:56 dilfridge Exp $
 
 EAPI=5
 
@@ -58,6 +58,7 @@ src_prepare() {
 	if ! use vanilla; then
 		sed -e "s:n       http:n       Gentoo release ${PVR}\\\\n       http:" -i "${S}"/src/xo-interface.c
 	fi
+	epatch "${FILESDIR}/${PN}-0.4.7-am113.patch"
 	eautoreconf
 }
 

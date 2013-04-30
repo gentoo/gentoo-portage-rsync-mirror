@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.44 2013/03/17 12:25:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.45 2013/04/30 20:35:56 dilfridge Exp $
+
+  30 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org> xournal-0.4.7.ebuild,
+  +files/xournal-0.4.7-am113.patch, xournal-9999.ebuild:
+  add patch for automake-1.13 compatibility, bug 467626
 
   17 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> xournal-0.4.7.ebuild,
   xournal-9999.ebuild:

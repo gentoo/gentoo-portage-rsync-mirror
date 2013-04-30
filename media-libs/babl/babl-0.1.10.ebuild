@@ -1,11 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.10.ebuild,v 1.7 2013/04/29 21:46:02 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.10.ebuild,v 1.8 2013/04/30 20:37:44 sping Exp $
 
-EAPI=3
-VALASLOT=0.14
+EAPI=4
 
-inherit autotools eutils
+VALA_MIN_API_VERSION=0.14
+VALA_USE_DEPEND=vapigen
+
+inherit vala autotools eutils
 
 DESCRIPTION="A dynamic, any to any, pixel format conversion library"
 HOMEPAGE="http://www.gegl.org/babl/"
@@ -19,7 +21,7 @@ IUSE="altivec +introspection sse mmx vala"
 RDEPEND="introspection? ( >=dev-libs/gobject-introspection-0.10 )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
-	vala? ( dev-lang/vala:${VALASLOT}[vapigen] )
+	vala? ( $(vala_depend) )
 	virtual/pkgconfig"
 
 src_prepare() {
@@ -31,6 +33,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-introspection.patch
 	epatch "${FILESDIR}"/${P}-g-ir-compiler-crash.patch
 	eautoreconf
+
+	use vala && vala_src_prepare
 }
 
 src_configure() {
@@ -38,7 +42,6 @@ src_configure() {
 	#     so we don't need to fix it
 	# w3m is used for dist target thus no issue for us that it is automagically
 	#     detected
-	VAPIGEN="$(type -p vapigen-${VALASLOT})" \
 	econf \
 		--disable-static \
 		--disable-maintainer-mode \
@@ -50,7 +53,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	default
 	find "${ED}" -name '*.la' -delete
-	dodoc AUTHORS ChangeLog README NEWS || die "dodoc failed"
+	dodoc AUTHORS ChangeLog README NEWS
 }
