@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/aalib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.46 2012/05/09 13:18:37 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.47 2013/04/30 16:59:33 slyfox Exp $
+
+  30 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org> aalib-1.4_rc5-r4.ebuild,
+  aalib-1.4_rc5.ebuild:
+  Fixed build failure against automake-1.13 (use of outdated AM_CONFIG_HEADER),
+  bug #467988 by Lars Wendler (Polynomial-C).
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> aalib-1.4_rc5-r4.ebuild:
   keyword ~amd64-fbsd

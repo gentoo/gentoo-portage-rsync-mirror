@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.26 2011/02/06 12:08:49 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.27 2013/04/30 16:59:33 slyfox Exp $
 
 inherit eutils libtool toolchain-funcs autotools
 
@@ -35,6 +35,9 @@ src_unpack() {
 	use gpm && sed -i \
 		's/gpm_mousedriver_test=yes/gpm_mousedriver_test=no/' "${S}/configure.in"
 
+	#467988 automake-1.13
+	mv configure.{in,ac} || die
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	eautoreconf
 }
 

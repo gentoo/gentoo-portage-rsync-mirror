@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>gnome</herd>
-	<use>
-		<flag name="coverage">Enable code coverage support</flag>
-		<flag name="geoloc">Enable geolocation support through
+  <herd>gnome</herd>
+  <use>
+    <flag name="coverage">Enable code coverage support</flag>
+    <flag name="geoloc">Enable geolocation support through
 			<pkg>app-misc/geoclue</pkg></flag>
-		<flag name="webgl">Build support for the WebGL HTML API using
+    <flag name="webgl">Build support for the WebGL HTML API using
 			<pkg>virtual/opengl</pkg></flag>
-		<flag name="webkit2">Enable WebKit2 API that splits web content rendering
+    <flag name="webkit2">Enable WebKit2 API that splits web content rendering
 			and application UI into separate processes</flag>
-	</use>
+  </use>
 </pkgmetadata>

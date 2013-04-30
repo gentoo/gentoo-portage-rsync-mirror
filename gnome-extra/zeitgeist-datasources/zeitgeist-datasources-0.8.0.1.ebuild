@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.13 2013/04/18 07:53:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.14 2013/04/30 16:41:26 jlec Exp $
 
 EAPI=4
 
@@ -49,7 +49,7 @@ RDEPEND="
 #		|| ( >=www-client/firefox-4.0 >=www-client/firefox-bin-4.0 )
 #		net-libs/xulrunner )
 DEPEND="${RDEPEND}
-	${vala_depend}"
+	$(vala_depend)"
 PDEPEND="gnome-extra/zeitgeist"
 
 PLUGINS="bzr chrome eog geany vim emacs tomboy telepathy xchat firefox-40-libzg"
