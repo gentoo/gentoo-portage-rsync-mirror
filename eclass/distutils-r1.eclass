@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.69 2013/04/18 15:47:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.70 2013/04/30 05:36:19 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -394,9 +394,11 @@ _distutils-r1_rename_scripts() {
 	while IFS= read -r -d '' f; do
 		debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 
-		if [[ "$(head -n 1 "${f}")" == '#!'*${EPYTHON}* ]]
+		local shebang
+		read -r shebang < "${f}"
+		if [[ ${shebang} == '#!'*${EPYTHON}* ]]
 		then
-			debug-print "${FUNCNAME}: matching shebang: $(head -n 1 "${f}")"
+			debug-print "${FUNCNAME}: matching shebang: ${shebang}"
 
 			local newf=${f}-${EPYTHON}
 			debug-print "${FUNCNAME}: renaming to ${newf#${D}/}"

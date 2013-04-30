@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.96 2013/03/13 07:10:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.97 2013/04/30 05:54:45 idella4 Exp $
+
+  30 Apr 2013; Ian Delaney <idella4@gentoo.org> pylint-0.27.0-r1.ebuild:
+  Correction to install phase in 0.27.0-r1 migrate -> distutils-r1
 
   13 Mar 2013; Ian Delaney <idella4@gentoo.org> pylint-0.27.0-r1.ebuild:
   tidyup

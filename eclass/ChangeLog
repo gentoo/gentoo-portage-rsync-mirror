@@ -1,6 +1,20 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.804 2013/04/29 22:14:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.808 2013/04/30 05:36:19 mgorny Exp $
+
+  30 Apr 2013; Michal Gorny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-utils-r1.eclass:
+  Use bash built-ins rather than external tools.
+
+  30 Apr 2013; Michal Gorny <mgorny@gentoo.org> python-any-r1.eclass:
+  Support declaring python_check_deps() in ebuilds, to check Python impl for
+  proper deps.
+
+  30 Apr 2013; Michal Gorny <mgorny@gentoo.org> python-any-r1.eclass:
+  Report no matching impl properly.
+
+  30 Apr 2013; Michal Gorny <mgorny@gentoo.org> python-any-r1.eclass:
+  Improve consistency in Python version checks and wrapper setup.
 
   29 Apr 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
   Corrected UNIPATCH_DOCS functionality, this went unnoticed since
