@@ -1,0 +1,23 @@
+Replace macros deprecated in automake-1.13; fixed upstream in glib-2.36
+
+diff --git a/configure.ac b/configure.ac
+index a3567b3..3e3d697 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -56,7 +56,7 @@ m4_define([glib_debug_default],
+ AC_INIT(glib, [glib_version],
+         [http://bugzilla.gnome.org/enter_bug.cgi?product=glib])
+ 
+-AC_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ AC_CONFIG_SRCDIR([glib/glib.h])
+ AC_CONFIG_MACRO_DIR([m4macros])
+ 
+@@ -291,7 +291,6 @@ AC_TRY_COMPILE(,[class a { int b; } c;], ,CXX=)
+ AM_CONDITIONAL(HAVE_CXX, [test "$CXX" != ""])
+ AC_LANG_RESTORE
+ 
+-AM_PROG_CC_STDC
+ AM_PROG_CC_C_O
+ AC_PROG_INSTALL
+ 

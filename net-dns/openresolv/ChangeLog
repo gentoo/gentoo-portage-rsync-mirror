@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.72 2013/04/27 15:07:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.73 2013/04/30 14:21:05 floppym Exp $
+
+*openresolv-3.5.4-r1 (30 Apr 2013)
+
+  30 Apr 2013; Mike Gilbert <floppym@gentoo.org> +openresolv-3.5.4-r1.ebuild,
+  -openresolv-3.5.4.ebuild:
+  Revbump for previous two changes.
 
   27 Apr 2013; William Hubbs <williamh@gentoo.org> files/restartcmd:
   non-maintainer commit: fix restartcmd to not hard code paths to systemctl or

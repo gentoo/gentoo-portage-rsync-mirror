@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.12 2012/11/17 13:31:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.13 2013/04/30 14:04:19 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -57,6 +57,7 @@ src_prepare() {
 	# emul-linux-x86-gtklibs
 	if multilib_enabled ; then
 		epatch "${FILESDIR}/${PN}-1.26.0-lib64.patch"
+		epatch "${FILESDIR}/${P}-AM_CONFIG_HEADER.patch" # fixed in 1.34
 		eautoreconf
 	fi
 

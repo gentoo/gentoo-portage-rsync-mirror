@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.3.ebuild,v 1.4 2013/04/29 01:23:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.3.ebuild,v 1.5 2013/04/30 14:29:12 tetromino Exp $
 
 EAPI="5"
 PYTHON_DEPEND="utils? 2" # Avoid runtime dependency on python when USE=test
-WANT_AUTOMAKE="1.12"
 
 inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python toolchain-funcs virtualx linux-info
 
@@ -104,6 +103,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.34.0-testsuite-skip-thread4.patch"
 	# https://bugzilla.gnome.org/show_bug.cgi?id=679308
 	epatch "${FILESDIR}/${PN}-2.34.0-testsuite-skip-gdbus-auth-tests.patch"
+
+	# build failure with automake-1.13; fixed upstream in 2.36
+	epatch "${FILESDIR}/${PN}-2.34.3-automake-1.13.patch"
 
 	epatch_user
 

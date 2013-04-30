@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-0.8.ebuild,v 1.1 2013/04/07 04:11:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-0.8.ebuild,v 1.2 2013/04/30 14:27:32 floppym Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE=""
 
 RDEPEND="
 	>=app-shells/bash-4.0
-	>=net-dns/openresolv-3.5.4[systemd]
+	>=net-dns/openresolv-3.5.4-r1
 	sys-apps/iproute2
 	sys-apps/systemd
 "
