@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.6.ebuild,v 1.1 2013/03/20 03:22:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.6.ebuild,v 1.2 2013/04/30 19:24:24 radhermit Exp $
 
 EAPI="5"
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="A RSS/Atom feed reader for the text console"
 HOMEPAGE="http://www.newsbeuter.org/index.html"
@@ -38,6 +38,8 @@ src_prepare() {
 		-e "s:-ggdb:${CXXFLAGS}:" \
 		-e "s:^CXX=.*:CXX=$(tc-getCXX):" \
 		Makefile
+
+	epatch "${FILESDIR}"/${P}-json-c.patch
 }
 
 src_configure() {
