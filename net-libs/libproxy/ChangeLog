@@ -1,6 +1,20 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.99 2013/03/25 01:32:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.100 2013/04/30 03:46:47 tetromino Exp $
+
+*libproxy-0.4.11-r1 (30 Apr 2013)
+
+  30 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libproxy-0.4.6-r3.ebuild, -libproxy-0.4.7.ebuild, -libproxy-0.4.10.ebuild,
+  libproxy-0.4.10-r1.ebuild, libproxy-0.4.11.ebuild,
+  +libproxy-0.4.11-r1.ebuild, -files/libproxy-0.4.6-backports.patch,
+  -files/libproxy-0.4.6-flags-mixing.patch,
+  -files/libproxy-0.4.6-mozjs-link_directory.patch,
+  -files/libproxy-0.4.6-xulrunner-2.patch, -files/libproxy-0.4.7-gcc-4.7.patch,
+  +files/libproxy-0.4.11-avoid-nm-build-dep.patch:
+  Update to EAPI5 and python-r1.eclass. Drop obsolete versions. Add patch to
+  avoid build-time dependency on networkmanager to fix a dependency loop (bug
+  #467696, thanks to Ling Kun).
 
 *libproxy-0.4.11 (25 Mar 2013)
 

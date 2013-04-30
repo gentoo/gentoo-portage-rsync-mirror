@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10.ebuild,v 1.9 2012/10/21 03:57:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.11-r1.ebuild,v 1.1 2013/04/30 03:46:47 tetromino Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2:2.6"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit cmake-utils eutils mono python
+inherit cmake-utils eutils flag-o-matic mono python-r1
 
 DESCRIPTION="Library for automatic proxy configuration management"
 HOMEPAGE="http://code.google.com/p/libproxy/"
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="gnome kde mono networkmanager perl python spidermonkey test webkit"
 
 # NOTE: mozjs/spidermonkey might still cause problems like #373397 ?
@@ -21,32 +21,34 @@ IUSE="gnome kde mono networkmanager perl python spidermonkey test webkit"
 RDEPEND="gnome? ( >=dev-libs/glib-2.26:2 )
 	kde? ( >=kde-base/kdelibs-4.4.5 )
 	mono? ( dev-lang/mono )
-	networkmanager? ( net-misc/networkmanager )
+	networkmanager? ( sys-apps/dbus )
 	perl? (	dev-lang/perl )
-	spidermonkey? ( >=dev-lang/spidermonkey-1.8.5 )
-	webkit? ( >=net-libs/webkit-gtk-1.6:3 )"
+	python? ( ${PYTHON_DEPS} )
+	spidermonkey? ( >=dev-lang/spidermonkey-1.8.5:= )
+	webkit? ( >=net-libs/webkit-gtk-1.6:3= )"
 DEPEND="${RDEPEND}
+	kde? ( dev-util/automoc )
 	virtual/pkgconfig"
-
-pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README"
-
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
+# avoid dependency loop, bug #467696
+PDEPEND="networkmanager? ( net-misc/networkmanager )"
 
 src_prepare() {
-	# Gentoo's spidermonkey doesn't set Version: in mozjs185.pc
-	epatch "${FILESDIR}/${PN}-0.4.10-mozjs185.pc.patch"
+	# Gentoo's spidermonkey doesn't set Version: in mozjs18[57].pc
+	epatch "${FILESDIR}/${P}-mozjs.pc.patch"
 
 	# get-pac-test freezes when run by the ebuild, succeeds when building
 	# manually; virtualx.eclass doesn't help :(
 	epatch "${FILESDIR}/${PN}-0.4.10-disable-pac-test.patch"
+
+	epatch "${FILESDIR}"/${P}-macosx.patch
+
+	# prevent dependency loop with networkmanager, libsoup, glib-networking; bug #467696
+	epatch "${FILESDIR}/${PN}-0.4.11-avoid-nm-build-dep.patch"
 }
 
 src_configure() {
+	[[ ${CHOST} == *-solaris* ]] && append-libs -lsocket -lnsl
+
 	# WITH_VALA just copies the .vapi file over and needs no deps,
 	# hence always enable it unconditionally
 	local mycmakeargs=(
@@ -65,13 +67,15 @@ src_configure() {
 			-DWITH_VALA=ON
 			$(cmake-utils_use test BUILD_TESTING)
 	)
+	use python && python_export_best
 	cmake-utils_src_configure
 }
 
-pkg_postinst() {
-	use python && python_mod_optimize ${PN}.py
-}
+src_install() {
+	DOCS="AUTHORS ChangeLog NEWS README"
+	cmake-utils_src_install
 
-pkg_postrm() {
-	use python && python_mod_cleanup ${PN}.py
+	if use python; then
+		python_foreach_impl python_domodule bindings/python/libproxy.py || die
+	fi
 }

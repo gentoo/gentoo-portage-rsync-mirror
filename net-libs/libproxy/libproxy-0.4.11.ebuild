@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.11.ebuild,v 1.1 2013/03/25 01:32:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.11.ebuild,v 1.2 2013/04/30 03:46:47 tetromino Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -21,13 +21,15 @@ IUSE="gnome kde mono networkmanager perl python spidermonkey test webkit"
 RDEPEND="gnome? ( >=dev-libs/glib-2.26:2 )
 	kde? ( >=kde-base/kdelibs-4.4.5 )
 	mono? ( dev-lang/mono )
-	networkmanager? ( net-misc/networkmanager )
+	networkmanager? ( sys-apps/dbus )
 	perl? (	dev-lang/perl )
 	spidermonkey? ( >=dev-lang/spidermonkey-1.8.5 )
 	webkit? ( >=net-libs/webkit-gtk-1.6:3 )"
 DEPEND="${RDEPEND}
 	kde? ( dev-util/automoc )
 	virtual/pkgconfig"
+# avoid dependency loop, bug #467696
+PDEPEND="networkmanager? ( net-misc/networkmanager )"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
@@ -47,6 +49,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.4.10-disable-pac-test.patch"
 
 	epatch "${FILESDIR}"/${P}-macosx.patch
+
+	# prevent dependency loop with networkmanager, libsoup, glib-networking; bug #467696
+	epatch "${FILESDIR}/${PN}-0.4.11-avoid-nm-build-dep.patch"
 }
 
 src_configure() {
