@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/suspend
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.23 2012/05/22 13:26:18 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.24 2013/04/30 12:49:50 xmw Exp $
+
+  30 Apr 2013; Michael Weber <xmw@gentoo.org>
+  +files/suspend-1.0-automake-1.13.patch, suspend-1.0.ebuild:
+  Fix automake-1.13, thanks F. Delente, bug 467950.
 
   22 May 2012; Michael Weber <xmw@gentoo.org> suspend-1.0.ebuild,
   +files/suspend-1.0-bzip2.patch:
@@ -104,4 +108,3 @@
   17 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> +metadata.xml,
   +suspend-0.9_pre20070917.ebuild:
   Initial add, bug#156431
-

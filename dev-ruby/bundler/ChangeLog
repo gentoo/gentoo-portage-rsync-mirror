@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.51 2013/04/30 12:30:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.52 2013/04/30 12:31:35 ago Exp $
+
+  30 Apr 2013; Agostino Sarubbo <ago@gentoo.org> bundler-1.2.5.ebuild:
+  Stable for x86, wrt bug #467832
 
   30 Apr 2013; Agostino Sarubbo <ago@gentoo.org> bundler-1.2.5.ebuild:
   Stable for amd64, wrt bug #467832
