@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libsexy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.58 2012/06/19 10:14:45 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.59 2013/04/30 12:09:02 jlec Exp $
+
+*libsexy-0.1.11-r4 (30 Apr 2013)
+
+  30 Apr 2013; Justin Lecher <jlec@gentoo.org> +libsexy-0.1.11-r4.ebuild,
+  metadata.xml:
+  Fix deprecated use of AM_CONFIG_HEADER, #467028; move to
+  autotools-utils.eclass
 
   19 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> libsexy-0.1.11-r3.ebuild:
   Use prune_libtool_files from eutils.eclass. Punt acinclude.m4 to ensure

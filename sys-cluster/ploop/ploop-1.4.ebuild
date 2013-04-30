@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ploop-1.4.ebuild,v 1.2 2013/01/15 11:44:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ploop-1.4.ebuild,v 1.4 2013/04/30 12:31:23 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.openvz.org/utils/ploop/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2"

@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.12.2.ebuild,v 1.1 2012/12/24 13:15:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.12.2.ebuild,v 1.2 2013/04/30 12:12:55 jlec Exp $
 
 EAPI="5"
+
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -44,6 +45,11 @@ src_prepare() {
 
 	# Force gmime-2.6 usage, upstream bug #686510
 	epatch "${FILESDIR}/${PN}-1.12.1-force-gmime26.patch"
+
+	sed	\
+		-e "s:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g" \
+		-i configure.in || die
+
 	eautoreconf
 	gnome2_src_prepare
 }
