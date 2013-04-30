@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7784 2013/04/29 21:59:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7785 2013/04/30 20:19:12 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Apr 2013; Sebastian Pipping <sping@gentoo.org> base/package.use.mask:
+  Unmask ~media-libs/babl-0.1.8[introspection] (bug #413663)
 
   29 Apr 2013; Sebastian Pipping <sping@gentoo.org> base/package.use.mask:
   Unmask ~media-libs/babl-0.1.10[introspection] (bug #413663)

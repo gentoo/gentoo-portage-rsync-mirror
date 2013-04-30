@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dissembler/dissembler-0.9.ebuild,v 1.3 2008/10/25 21:01:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dissembler/dissembler-0.9.ebuild,v 1.4 2013/04/30 20:10:02 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,12 +9,10 @@ DESCRIPTION="polymorphs bytecode to a printable ASCII string"
 HOMEPAGE="http://www.phiral.com/research/dissembler.html"
 SRC_URI="http://www.phiral.com/research/${MY_P}.tgz"
 
-LICENSE="as-is"
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-
-DEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
