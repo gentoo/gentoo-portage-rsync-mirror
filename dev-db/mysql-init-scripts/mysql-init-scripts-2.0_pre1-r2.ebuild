@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1-r2.ebuild,v 1.8 2012/03/08 14:57:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1-r2.ebuild,v 1.9 2013/04/30 01:01:59 jer Exp $
 
 DESCRIPTION="Gentoo MySQL init scripts."
 HOMEPAGE="http://www.gentoo.org/"
@@ -36,8 +36,8 @@ pkg_postinst() {
 	egrep -sq 'MY_ARGS|STOP_TIMEOUT' "${ROOT}"/etc/init.d/mysql
 	new_init_present=$?
 
-	einfo "Please note if you are using multiple internal 'slots' in the old"
-	einfo "conf.d fille, that you should use multiple init files now."
+	einfo "Please note that if you are using multiple internal 'slots' in the"
+	einfo "old conf.d file, you should use multiple init files now."
 	echo old $old_conf_present $old_init_present
 	echo new $new_conf_present $new_init_present
 
