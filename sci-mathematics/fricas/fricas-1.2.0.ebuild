@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.2.0.ebuild,v 1.1 2013/04/20 14:56:08 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.2.0.ebuild,v 1.2 2013/04/30 16:22:04 grozin Exp $
 EAPI=5
 inherit eutils multilib elisp-common autotools
 
@@ -12,9 +12,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 # Supported lisps, number 0 is the default
-LISPS=( sbcl cmucl     gcl ecl    clisp clozurecl )
+LISPS=( sbcl cmucl     gcl ecls   clisp clozurecl )
 # command name: . means just ${LISP}
-COMS=(  .    lisp      .   .      .     ccl       )
+COMS=(  .    lisp      .   ecl    .     ccl       )
 
 IUSE="${LISPS[*]} X emacs gmp"
 RDEPEND="X? ( x11-libs/libXpm x11-libs/libICE )
@@ -37,6 +37,11 @@ DEPEND="${RDEPEND}"
 
 # necessary for clisp and gcl
 RESTRICT="strip"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-noinit.patch
+	eautoreconf
+}
 
 src_configure() {
 	local LISP n

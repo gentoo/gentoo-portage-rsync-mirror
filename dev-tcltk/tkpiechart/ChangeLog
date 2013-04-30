@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkpiechart
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/ChangeLog,v 1.9 2011/05/23 07:14:35 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/ChangeLog,v 1.10 2013/04/30 16:26:31 ulm Exp $
+
+  30 Apr 2013; Ulrich Müller <ulm@gentoo.org> tkpiechart-6.5.ebuild,
+  tkpiechart-6.5-r1.ebuild:
+  Fix LICENSE, see COPYRIGHT file, bug 464988.
 
   23 May 2011; Thomas Kahle <tomka@gentoo.org> tkpiechart-6.5-r1.ebuild:
   x86 stable per bug 364825

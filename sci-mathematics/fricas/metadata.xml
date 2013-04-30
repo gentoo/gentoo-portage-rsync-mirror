@@ -20,6 +20,8 @@ FriCAS is a fork of Axiom computer algebra system.
     (<pkg>dev-lisp/sbcl</pkg>)</flag>
   <flag name='ecl'>Add support for Embeddable Common Lisp
     (<pkg>dev-lisp/ecls</pkg>)</flag>
+  <flag name='ecls'>Add support for Embeddable Common Lisp
+    (<pkg>dev-lisp/ecls</pkg>)</flag>
   <flag name='clozurecl'>Add support for Clozure Common Lisp
     (<pkg>dev-lisp/clozurecl</pkg>)</flag>
 </use>

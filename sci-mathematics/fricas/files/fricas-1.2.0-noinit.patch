@@ -1,0 +1,13 @@
+diff -r -U1 fricas-1.2.0.orig/configure.ac fricas-1.2.0/configure.ac
+--- fricas-1.2.0.orig/configure.ac	2013-04-08 10:26:54.000000000 +0700
++++ fricas-1.2.0/configure.ac	2013-05-01 01:34:31.338461653 +0700
+@@ -424,3 +424,3 @@
+     cmucl)
+-       fricas_quiet_flags='-batch -noinit'
++       fricas_quiet_flags='-batch -nositeinit -noinit'
+        fricas_eval_flags='-eval'
+@@ -432,3 +432,3 @@
+     openmcl)
+-       fricas_quiet_flags=
++       fricas_quiet_flags='--no-init'
+        fricas_eval_flags='--eval'

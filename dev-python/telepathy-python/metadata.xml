@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>gnome</herd>
-	<herd>voip</herd>
-	<maintainer>
-		<email>peper@gentoo.org</email>
-		<name>Piotr Jaroszyński</name>
-	</maintainer>
-	<longdescription lang="en">
+  <herd>gnome</herd>
+  <herd>voip</herd>
+  <maintainer>
+    <email>peper@gentoo.org</email>
+    <name>Piotr Jaroszyński</name>
+  </maintainer>
+  <longdescription lang="en">
 	</longdescription>
 </pkgmetadata>
-

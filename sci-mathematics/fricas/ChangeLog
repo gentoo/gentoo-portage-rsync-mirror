@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/fricas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/ChangeLog,v 1.18 2013/04/20 14:56:08 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/ChangeLog,v 1.19 2013/04/30 16:22:04 grozin Exp $
+
+  30 Apr 2013; Andrey Grozin <grozin@gentoo.org> fricas-1.2.0.ebuild,
+  +files/fricas-1.2.0-noinit.patch, metadata.xml:
+  A patch not to load init files in some lisps
 
 *fricas-1.2.0 (20 Apr 2013)
 

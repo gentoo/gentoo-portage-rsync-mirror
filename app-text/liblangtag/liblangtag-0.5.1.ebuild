@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.5.0.ebuild,v 1.1 2013/04/27 08:07:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.5.1.ebuild,v 1.1 2013/04/30 16:02:07 scarabeus Exp $
 
 EAPI=5
 

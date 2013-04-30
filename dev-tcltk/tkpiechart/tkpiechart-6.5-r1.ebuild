@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/tkpiechart-6.5-r1.ebuild,v 1.3 2011/05/23 07:14:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/tkpiechart-6.5-r1.ebuild,v 1.4 2013/04/30 16:26:31 ulm Exp $
 
 inherit multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="create and update 2D or 3D pie charts in a Tcl/Tk application"
 HOMEPAGE="http://jfontain.free.fr/piechart6.htm"
 SRC_URI="http://jfontain.free.fr/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="jfontain"
 KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
