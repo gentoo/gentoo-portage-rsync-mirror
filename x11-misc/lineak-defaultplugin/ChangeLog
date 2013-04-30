@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineak-defaultplugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.29 2013/01/12 16:58:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.30 2013/04/30 04:50:57 zmedico Exp $
+
+  30 Apr 2013; Zac Medico <zmedico@gentoo.org>
+  lineak-defaultplugin-0.9.0-r1.ebuild:
+  Fix double ${D} for bug #467886.
 
 *lineak-defaultplugin-0.9.0-r1 (12 Jan 2013)
 
@@ -130,4 +134,3 @@
   +lineak-defaultplugin-0.8.2.ebuild:
   Adding ebuild from bug 72658 thanks to Bernd Westermann
   <Bernd.Westermann@it-west.de> and Raskasi <raskasi@gmx.net>
-

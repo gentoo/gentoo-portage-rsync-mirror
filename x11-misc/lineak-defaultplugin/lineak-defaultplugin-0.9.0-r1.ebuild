@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/lineak-defaultplugin-0.9.0-r1.ebuild,v 1.1 2013/01/12 16:58:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/lineak-defaultplugin-0.9.0-r1.ebuild,v 1.2 2013/04/30 04:50:57 zmedico Exp $
 
 EAPI=5
 inherit eutils multilib
@@ -31,7 +31,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-gcc47.patch
 
-	sed -i -e 's:$(DESTDIR)${DESTDIR}:$(DESTDIR):' default_plugin/Makefile
+	sed -i -e 's:$(DESTDIR)${DESTDIR}:$(DESTDIR):' default_plugin/Makefile.in || die
 }
 
 src_configure() {
