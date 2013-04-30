@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-1.0.5.ebuild,v 1.4 2010/05/21 15:37:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-1.0.5.ebuild,v 1.5 2013/04/30 13:35:15 qnikst Exp $
 
 EAPI="2"
 
@@ -17,6 +17,7 @@ IUSE=""
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-parallel-make.patch"
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	eautoreconf
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo eapi-5-files profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.8 2013/04/12 04:54:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.9 2013/04/30 13:44:09 tetromino Exp $
+
+  30 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org> use.stable.mask:
+  Temporarily stable.mask PYTHON_TARGETS=python3_3 and
+  PYTHON_SINGLE_TARGET=python3_3 for convenience of python:3.3 testers since
+  python:3.3 is masked and certainly not stable (bug #467894).
 
   12 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> package.use.stable.mask:
   Move app-pda/gtkpod[cdr] mask from base/package.use.mask to here.
