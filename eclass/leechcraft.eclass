@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.8 2013/03/09 19:52:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.9 2013/04/30 07:51:24 pinkbyte Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -47,7 +47,11 @@ else
 fi
 
 HOMEPAGE="http://leechcraft.org/"
-LICENSE="GPL-3"
+if version_is_at_least 0.5.95; then
+	LICENSE="Boost-1.0"
+else
+	LICENSE="GPL-3"
+fi
 
 # @ECLASS-VARIABLE: LEECHCRAFT_PLUGIN_CATEGORY
 # @DEFAULT_UNSET

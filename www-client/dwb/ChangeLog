@@ -1,6 +1,16 @@
 # ChangeLog for www-client/dwb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.17 2013/04/08 15:28:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.19 2013/04/30 07:59:25 radhermit Exp $
+
+  30 Apr 2013; Tim Harder <radhermit@gentoo.org> -dwb-2012.08.22.ebuild,
+  -dwb-2012.10.28-r1.ebuild, -files/dwb-2012.10.28-search-engine.patch,
+  -files/dwb-2012.10.28-verbose-build.patch, -dwb-2012.12.03.ebuild:
+  Remove old.
+
+  30 Apr 2013; Tim Harder <radhermit@gentoo.org> dwb-2013.03.30.ebuild,
+  +files/dwb-2013.03.30-json-c.patch, dwb-9999.ebuild:
+  Fix compile with >=json-c-0.11 (bug #467940), fix compile on uclibc and other
+  systems without execinfo.h (bug #465170), and add dep on gnutls.
 
 *dwb-2013.03.30 (08 Apr 2013)
 
