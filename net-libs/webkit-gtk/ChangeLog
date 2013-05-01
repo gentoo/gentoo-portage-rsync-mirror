@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.201 2013/04/30 21:07:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.202 2013/05/01 03:40:59 tetromino Exp $
+
+  01 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-1.8.3-r201.ebuild,
+  webkit-gtk-1.8.3-r300.ebuild, webkit-gtk-1.10.2-r300.ebuild,
+  webkit-gtk-2.0.0.ebuild, webkit-gtk-2.0.1.ebuild:
+  Don't treat -g0 as a debugging flag (bug #465406, thanks to Tom Wijsman and
+  Agostino Sarubbo).
 
   30 Apr 2013; Sergei Trofimovich <slyfox@gentoo.org>
   webkit-gtk-1.8.3-r201.ebuild:
