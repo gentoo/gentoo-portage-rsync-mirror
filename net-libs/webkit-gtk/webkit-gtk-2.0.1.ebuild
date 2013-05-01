@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.1.ebuild,v 1.2 2013/05/01 03:40:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.1.ebuild,v 1.3 2013/05/01 09:31:28 pacho Exp $
 
 EAPI="5"
 inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils toolchain-funcs versionator virtualx
@@ -158,10 +158,6 @@ src_prepare() {
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
-
-	# Ugly hack of a workaround for bizarre paludis behavior, bug #406117
-	# http://paludis.exherbo.org/trac/ticket/1230
-	sed -e '/  --\(en\|dis\)able-dependency-tracking/ d' -i configure || die
 }
 
 src_configure() {

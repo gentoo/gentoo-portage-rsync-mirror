@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.202 2013/05/01 03:40:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.203 2013/05/01 09:31:28 pacho Exp $
+
+  01 May 2013; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.0.0.ebuild,
+  webkit-gtk-2.0.1.ebuild:
+  Workaround to paludis behavior is no longer needed (#406117#c26 by Ulm and
+  mgorny), drop old.
 
   01 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-1.8.3-r201.ebuild,
