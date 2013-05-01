@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.10_rc2-r1.ebuild,v 1.1 2011/08/30 16:59:58 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.10_rc2-r1.ebuild,v 1.2 2013/05/01 07:46:34 tomjbe Exp $
 
-EAPI="2"
+EAPI="5"
 inherit autotools eutils
 
 MY_P=${P/_/-}
@@ -26,6 +26,8 @@ RDEPEND=${DEPEND}
 src_prepare() {
 	epatch "${FILESDIR}/${P}-parallel-make.patch" \
 		"${FILESDIR}/${P}-cve-2011-2910.patch" # see bug # 379293
+	# Fix deprecated AM_CONFIG_HEADER in automake 1.13 (bug #467752)
+	sed -i -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" configure.ac || die
 	eautoreconf
 }
 
@@ -34,18 +36,18 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install installconf || die "emake install failed"
+	emake DESTDIR="${D}" install installconf
 
 	# Package does not respect --docdir
-	rm -rf "${D}"/usr/share/doc/ax25-tools || die "clean-up doc failed"
+	rm -rf "${D}"/usr/share/doc/ax25-tools || die
 	dodoc AUTHORS ChangeLog NEWS README tcpip/ttylinkd.README \
 	user_call/README.user_call yamdrv/README.yamdrv dmascc/README.dmascc \
-	tcpip/ttylinkd.INSTALL || die "dodoc failed"
+	tcpip/ttylinkd.INSTALL
 
-	newinitd "${FILESDIR}"/ax25d.rc ax25d || die "ax25d rc install failed"
-	newinitd "${FILESDIR}"/mheardd.rc mheardd || die "mheardd rc install failed"
-	newinitd "${FILESDIR}"/netromd.rc netromd || die "netromd rc install failed"
-	newinitd "${FILESDIR}"/rip98d.rc rip98d || die "rip98d rc install failed"
-	newinitd "${FILESDIR}"/rxecho.rc rxecho || die "rxecho rc install failed"
-	newinitd "${FILESDIR}"/ttylinkd.rc ttylinkd || die "ttylinkd install failed"
+	newinitd "${FILESDIR}"/ax25d.rc ax25d
+	newinitd "${FILESDIR}"/mheardd.rc mheardd
+	newinitd "${FILESDIR}"/netromd.rc netromd
+	newinitd "${FILESDIR}"/rip98d.rc rip98d
+	newinitd "${FILESDIR}"/rxecho.rc rxecho
+	newinitd "${FILESDIR}"/ttylinkd.rc ttylinkd
 }

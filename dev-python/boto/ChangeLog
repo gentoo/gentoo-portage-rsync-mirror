@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.57 2013/02/20 06:18:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.58 2013/05/01 08:00:05 radhermit Exp $
+
+*boto-2.9.2 (01 May 2013)
+
+  01 May 2013; Tim Harder <radhermit@gentoo.org> +boto-2.9.2.ebuild:
+  Version bump.
 
   20 Feb 2013; Matthew Thode <prometheanfire@gentoo.org> boto-2.1.1.ebuild:
   added comment to boto-2.1.1 to hopefully prevent bad pruning
