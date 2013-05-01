@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.ebuild,v 1.1 2013/05/01 11:52:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.ebuild,v 1.2 2013/05/01 16:26:03 ssuominen Exp $
 
 EAPI=5
 
@@ -29,6 +29,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/1.0.25-extraneous-cflags.diff
 	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.in || die #466980
+
+	epatch_user
+
 	eautoreconf
 	# if eautoreconf'd with recent autoconf, then epunt_cxx is
 	# unncessary wrt #460974

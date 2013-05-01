@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.27.ebuild,v 1.1 2013/05/01 12:49:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.27.ebuild,v 1.2 2013/05/01 16:25:03 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -69,6 +69,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/envy24control-config-dir.patch
+
+	epatch_user
 
 	# This block only deals with the tools that still use GTK and the
 	# AM_PATH_GTK macro.

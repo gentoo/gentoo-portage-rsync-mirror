@@ -1,6 +1,24 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.345 2013/05/01 12:16:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.348 2013/05/01 16:23:48 ssuominen Exp $
+
+  01 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  alsa-utils-1.0.27-r1.ebuild:
+  Call epatch_user wrt #468162 by Doug Goldstein
+
+  01 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -alsa-utils-1.0.27.ebuild:
+  old
+
+*alsa-utils-1.0.27-r1 (01 May 2013)
+
+  01 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +alsa-utils-1.0.27-r1.ebuild, +files/alsa-utils-1.0.27-alsactl.patch,
+  +files/alsa-utils-1.0.27-arecord.patch,
+  +files/alsa-utils-1.0.27-service.patch:
+  Fix typing error in alsa-restore.service systemd file. Fix missing break to
+  the capture loop in arecord. Fix buffer overflow in alsactl wrt #468160 by
+  "John"
 
   01 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -alsa-utils-1.0.24.2-r1.ebuild, -alsa-utils-1.0.25-r1.ebuild,

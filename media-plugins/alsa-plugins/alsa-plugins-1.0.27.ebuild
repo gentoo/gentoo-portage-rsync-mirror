@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27.ebuild,v 1.1 2013/05/01 13:16:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27.ebuild,v 1.2 2013/05/01 16:26:28 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib
@@ -27,6 +27,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.0.19-missing-avutil.patch \
 		"${FILESDIR}"/${PN}-1.0.23-automagic.patch
+
+	epatch_user
 
 	# For some reasons the polyp/pulse plugin does fail with alsaplayer with a
 	# failed assert. As the code works just fine with asserts disabled, for now
