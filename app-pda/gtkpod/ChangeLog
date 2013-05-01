@@ -1,6 +1,21 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.125 2013/04/12 04:25:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.127 2013/05/01 19:22:48 ssuominen Exp $
+
+*gtkpod-2.1.4_pre20130428 (01 May 2013)
+
+  01 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +gtkpod-2.1.4_pre20130428.ebuild:
+  Use upstream git 8f833a3 snapshot dated 20130428 for multiple upstream fixes,
+  including a fix for the "Track filter" wrt #466240 by David De Sousa
+
+  01 May 2013; Samuli Suominen <ssuominen@gentoo.org> gtkpod-2.1.3-r1.ebuild:
+  Use AC_CONFIG_HEADERS instead of AM_CONFIG_HEADER for automake-1.13
+  compability wrt #467598 by Ian Stakenvicius.
+  Punt GTK+ related "DEPRECATED" preprocessor flags for forward compability.
+  Fix USE="cdr" dependencies since the plug-in links to -lgstreamer-0.10.
+  Compress gst-element-check-0.10.m4 to SRC_URI instead of using hard DEPEND
+  for media-libs/gstreamer (as required by eautoreconf).
 
   12 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> gtkpod-2.1.3-r1.ebuild:
   Force more recent dev-util/anjuta too in addition to dev-libs/gdl

@@ -1,19 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.3-r1.ebuild,v 1.6 2013/05/01 19:09:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.4_pre20130428.ebuild,v 1.1 2013/05/01 19:22:48 ssuominen Exp $
 
 EAPI=5
 
 inherit autotools eutils gnome2-utils
 
+MY_P=${P/_pre*/~8f833a3}
+
 DESCRIPTION="A graphical user interface to the Apple productline"
 HOMEPAGE="http://gtkpod.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	http://dev.gentoo.org/~ssuominen/gst-element-check-0.10.m4.xz"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="aac clutter curl cdr flac gstreamer mp3 vorbis webkit"
 
 # watch out for possible musicbrainz:5 compability in next version?
@@ -54,10 +56,10 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 REQUIRED_USE="cdr? ( gstreamer )"
 
+S=${WORKDIR}/${MY_P}
+
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-gdl-3.6.patch \
-		"${FILESDIR}"/${P}-gold.patch
+	epatch "${FILESDIR}"/${PN}-2.1.3-gold.patch
 
 	sed -i -e 's:python:python2:' scripts/sync-palm-jppy.py || die
 	# punt deprecated flags for forward compability
