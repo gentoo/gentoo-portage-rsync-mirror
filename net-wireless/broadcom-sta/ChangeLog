@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.47 2013/03/08 04:59:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.48 2013/05/01 07:22:47 pinkbyte Exp $
+
+*broadcom-sta-6.30.223.30 (01 May 2013)
+
+  01 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +broadcom-sta-6.30.223.30.ebuild,
+  +files/broadcom-sta-6.30.223.30-makefile.patch, metadata.xml:
+  Version bump, wrt bug #438622. Ebuild by M. B. <tomboy64 AT sina.cn>, who
+  will maintain this package through proxy maintainers
 
   08 Mar 2013; Sergey Popov <pinkbyte@gentoo.org>
   broadcom-sta-5.100.82.112-r2.ebuild:
