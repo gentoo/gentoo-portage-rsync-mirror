@@ -1,6 +1,19 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.871 2013/04/27 02:40:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.873 2013/05/01 21:30:19 phajdan.jr Exp $
+
+  01 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-27.0.1453.65.ebuild, chromium-28.0.1490.2.ebuild,
+  chromium-9999-r1.ebuild:
+  Disable unmaintained upstream SELinux mode, bug #465574 by swift, bug #467954
+  by Dominik Kriegner.
+
+*chromium-28.0.1490.2 (01 May 2013)
+
+  01 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-shim-headers-r0.patch, -chromium-28.0.1478.0.ebuild,
+  +chromium-28.0.1490.2.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump. Remove old.
 
 *chromium-27.0.1453.65 (27 Apr 2013)
 

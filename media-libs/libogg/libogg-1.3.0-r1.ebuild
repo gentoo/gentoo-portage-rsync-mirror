@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0-r1.ebuild,v 1.2 2013/05/01 20:20:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0-r1.ebuild,v 1.4 2013/05/01 21:30:07 mgorny Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
 inherit autotools-multilib
 
 DESCRIPTION="the Ogg media file format library"
@@ -24,7 +26,18 @@ MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/ogg/config_types.h
 )
 
-src_install() {
-	# docdir, http://trac.xiph.org/ticket/1758
-	autotools-multilib_src_install docdir=/usr/share/doc/${PF}/ogg
+src_prepare() {
+	# Fix automake-1.13 compat, copied from libvorbis.
+	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		configure.in || die
+
+	# Un-hack docdir redefinition.
+	# https://trac.xiph.org/ticket/1758
+	find -name 'Makefile.am' \
+		-exec sed -i \
+			-e 's:$(datadir)/doc/$(PACKAGE)-$(VERSION):@docdir@/html:' \
+			{} + || die
+
+	autotools-multilib_src_prepare
 }
