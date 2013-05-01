@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.2.ebuild,v 1.1 2013/04/02 20:14:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.2.ebuild,v 1.2 2013/05/01 22:08:31 vapier Exp $
 
 EAPI="3"
 
@@ -38,6 +38,10 @@ src_prepare() {
 
 src_configure() {
 	eval export ac_cv_{header_magic_h,lib_magic_magic_open}=$(usex magic)
+	local myconf=()
+	case ${CHOST} in
+	*-gnu*|*-uclibc*) myconf+=( "--with-wordbounds" ) ;; #467848
+	esac
 	econf \
 		--bindir="${EPREFIX}"/bin \
 		$(use_enable !minimal color) \
@@ -50,7 +54,8 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable unicode utf8) \
 		$(use_enable minimal tiny) \
-		$(usex ncurses --without-slang $(use_with slang))
+		$(usex ncurses --without-slang $(use_with slang)) \
+		"${myconf[@]}"
 }
 
 src_install() {

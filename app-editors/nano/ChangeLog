@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.288 2013/04/02 20:14:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.289 2013/05/01 22:08:31 vapier Exp $
+
+  01 May 2013; Mike Frysinger <vapier@gentoo.org> nano-2.3.2.ebuild:
+  Force --with-wordbounds for glibc/uclibc targets so cross-compiles do not end
+  up using *BSD styles on GNU systems #467848 by Dennis Schridde.
 
 *nano-2.3.2 (02 Apr 2013)
 

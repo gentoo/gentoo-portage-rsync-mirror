@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.1 2013/05/01 21:40:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.2 2013/05/01 22:11:27 mgorny Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
-WANT_AUTOMAKE=1.12
+AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 inherit autotools-multilib
 
 DESCRIPTION="free lossless audio encoder and decoder"
@@ -25,20 +25,24 @@ DEPEND="${RDEPEND}
 	!elibc_uclibc? ( sys-devel/gettext )
 	virtual/pkgconfig"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-asneeded.patch
-	"${FILESDIR}"/${P}-cflags.patch
-	"${FILESDIR}"/${P}-asm.patch
-	"${FILESDIR}"/${P}-dontbuild-tests.patch
-	"${FILESDIR}"/${P}-dontbuild-examples.patch
-	"${FILESDIR}"/${P}-gcc-4.3-includes.patch
-	"${FILESDIR}"/${P}-ogg-m4.patch
-)
-
 src_prepare() {
+	local PATCHES=(
+		"${FILESDIR}"/${P}-asneeded.patch
+		"${FILESDIR}"/${P}-cflags.patch
+		"${FILESDIR}"/${P}-asm.patch
+		"${FILESDIR}"/${P}-dontbuild-tests.patch
+		"${FILESDIR}"/${P}-dontbuild-examples.patch
+		"${FILESDIR}"/${P}-gcc-4.3-includes.patch
+		"${FILESDIR}"/${P}-ogg-m4.patch
+	)
+
 	cp "${WORKDIR}"/*.m4 m4 || die
 
-	# html docgen seems to cause trouble
+	# bug 466990
+	sed -i "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" configure.in || die
+
+	# html install fails with out-of-source build
+	# XXX: take a closer look at it
 	sed -i -e '/SUBDIRS/s:html::' doc/Makefile.am || die
 
 	AT_M4DIR="m4" \
