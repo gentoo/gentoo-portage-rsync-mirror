@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.36.ebuild,v 1.9 2013/03/30 17:02:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.36.ebuild,v 1.10 2013/05/01 20:31:38 jer Exp $
 
 EAPI="2"
 
@@ -24,14 +24,24 @@ IUSE="acpi multilib kernel_linux tools"
 RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
 
-COMMON="<x11-base/xorg-server-1.13.99
+COMMON="
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
-	multilib? ( app-emulation/emul-linux-x86-opengl )
-	>=app-admin/eselect-opengl-1.0.9"
+	>=app-admin/eselect-opengl-1.0.9
+"
 DEPEND="${COMMON}
 	kernel_linux? ( virtual/linux-sources )"
 RDEPEND="${COMMON}
+	<x11-base/xorg-server-1.13.99
 	acpi? ( sys-power/acpid )
+	multilib? (
+		|| (
+			(
+				x11-libs/libX11[abi_x86_32]
+				x11-libs/libXext[abi_x86_32]
+			)
+			app-emulation/emul-linux-x86-opengl
+		)
+	)
 	tools? (
 		dev-libs/atk
 		dev-libs/glib
@@ -41,7 +51,8 @@ RDEPEND="${COMMON}
 		x11-libs/libXext
 		x11-libs/pango[X]
 		|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
-	)"
+	)
+"
 
 QA_TEXTRELS_x86="usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-313.30.ebuild,v 1.2 2013/04/07 13:07:12 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-313.30.ebuild,v 1.3 2013/05/01 20:31:38 jer Exp $
 
 EAPI=5
 
@@ -28,9 +28,7 @@ EMULTILIB_PKG="true"
 
 COMMON="app-admin/eselect-opencl
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
-	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	X? (
-		<x11-base/xorg-server-1.14.99
 		>=app-admin/eselect-opengl-1.0.9
 	)"
 DEPEND="${COMMON}
@@ -48,7 +46,20 @@ RDEPEND="${COMMON}
 		x11-libs/libXext
 		x11-libs/pango[X]
 	)
-	X? ( >=x11-libs/libvdpau-0.3-r1 )"
+	X? (
+		>=x11-libs/libvdpau-0.3-r1
+		<x11-base/xorg-server-1.14.99
+		multilib? (
+			|| (
+				(
+					x11-libs/libX11[abi_x86_32]
+					x11-libs/libXext[abi_x86_32]
+				)
+				app-emulation/emul-linux-x86-xlibs
+			)
+		)
+	)
+"
 
 REQUIRED_USE="tools? ( X )"
 
@@ -153,8 +164,8 @@ src_prepare() {
 		ewarn "Using PAX patches is not supported. You will be asked to"
 		ewarn "use a standard kernel should you have issues. Should you"
 		ewarn "need support with these patches, contact the PaX team."
-	    epatch "${FILESDIR}"/nvidia-drivers-pax-const.patch
-	    epatch "${FILESDIR}"/nvidia-drivers-pax-usercopy.patch
+		epatch "${FILESDIR}"/nvidia-drivers-pax-const.patch
+		epatch "${FILESDIR}"/nvidia-drivers-pax-usercopy.patch
 	fi
 
 	# Allow user patches so they can support RC kernels and whatever else

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.88.ebuild,v 1.3 2013/04/07 13:07:12 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.88.ebuild,v 1.4 2013/05/01 20:31:38 jer Exp $
 
 EAPI=4
 
@@ -28,9 +28,7 @@ EMULTILIB_PKG="true"
 
 COMMON="app-admin/eselect-opencl
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
-	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	X? (
-		<x11-base/xorg-server-1.14.99
 		>=app-admin/eselect-opengl-1.0.9
 	)"
 DEPEND="${COMMON}
@@ -50,7 +48,20 @@ RDEPEND="${COMMON}
 		x11-libs/pango[X]
 		|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
 	)
-	X? ( x11-libs/libXvMC )"
+	X? (
+		<x11-base/xorg-server-1.14.99
+		x11-libs/libXvMC
+		multilib? (
+			|| (
+				(
+					x11-libs/libX11[abi_x86_32]
+					x11-libs/libXext[abi_x86_32]
+				)
+				app-emulation/emul-linux-x86-xlibs
+			)
+		)
+	)
+"
 PDEPEND="X? ( >=x11-libs/libvdpau-0.3-r1 )"
 
 REQUIRED_USE="tools? ( X )"

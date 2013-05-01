@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mp3splt-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.32 2013/01/27 23:50:05 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.33 2013/05/01 20:55:02 sping Exp $
+
+*mp3splt-gtk-0.8.2 (01 May 2013)
+
+  01 May 2013; Sebastian Pipping <sping@gentoo.org> +mp3splt-gtk-0.8.2.ebuild,
+  +files/mp3splt-gtk-0.8.2-desktop-file.patch:
+  Bump to 0.8.2
 
 *mp3splt-gtk-0.8.1 (27 Jan 2013)
 
