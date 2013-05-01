@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-notify-send
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-notify-send/ChangeLog,v 1.9 2013/04/22 17:12:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-notify-send/ChangeLog,v 1.10 2013/05/01 11:14:54 ago Exp $
+
+  01 May 2013; Agostino Sarubbo <ago@gentoo.org> eselect-notify-send-0.1.ebuild:
+  Stable for sh, wrt bug #466004
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> eselect-notify-send-0.1.ebuild:
   Stable for sparc, wrt bug #466004

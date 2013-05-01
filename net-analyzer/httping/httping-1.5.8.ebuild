@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.5.8.ebuild,v 1.4 2013/03/20 18:20:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.5.8.ebuild,v 1.5 2013/05/01 11:15:21 jer Exp $
 
 EAPI=5
 inherit flag-o-matic toolchain-funcs
@@ -39,5 +39,4 @@ src_compile() {
 src_install() {
 	dobin httping
 	doman httping.1
-	dodoc readme.txt
 }

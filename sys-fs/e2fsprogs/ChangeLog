@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.262 2013/04/26 13:20:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.263 2013/05/01 11:10:03 ago Exp $
+
+  01 May 2013; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-1.42.7.ebuild:
+  Stable for sh, wrt bug #467008
 
   26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-1.42.7.ebuild:
   Stable for ppc, wrt bug #467008

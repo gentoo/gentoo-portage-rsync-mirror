@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.102 2013/04/22 17:12:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.103 2013/05/01 11:14:34 ago Exp $
+
+  01 May 2013; Agostino Sarubbo <ago@gentoo.org> libnotify-0.7.5-r1.ebuild:
+  Stable for sh, wrt bug #466004
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libnotify-0.7.5-r1.ebuild:
   Stable for sparc, wrt bug #466004
