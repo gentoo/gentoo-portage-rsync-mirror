@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/rcs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.14 2013/02/21 03:51:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.15 2013/04/30 23:13:39 titanofold Exp $
+
+*rcs-5.8.2 (30 Apr 2013)
+
+  30 Apr 2013; Aaron W. Swenson <titanofold@gentoo.org> +rcs-5.8.2.ebuild:
+  Version bump. Tests work now. (Thanks Paolo Pedroni.) Fixes bug 457074.
 
   21 Feb 2013; Jeroen Roovers <jer@gentoo.org> -rcs-5.7-r3.ebuild,
   rcs-5.8.ebuild:
