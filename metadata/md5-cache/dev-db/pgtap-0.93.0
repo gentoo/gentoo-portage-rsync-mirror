@@ -3,10 +3,10 @@ DEPEND=>=dev-db/postgresql-base-8.4 dev-perl/TAP-Parser-SourceHandler-pgTAP
 DESCRIPTION=Unit testing for PostgreSQL
 EAPI=5
 HOMEPAGE=http://pgtap.org/
-KEYWORDS=~amd64
+KEYWORDS=amd64
 LICENSE=POSTGRESQL
 RDEPEND=>=dev-db/postgresql-base-8.4 dev-perl/TAP-Parser-SourceHandler-pgTAP
 SLOT=0
 SRC_URI=http://api.pgxn.org/dist/pgtap/0.93.0/pgtap-0.93.0.zip
 _eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=c249c20b3168f8c9ac14f46fe5feaeb1
+_md5_=6f7a1b7e9141970516e96fa513db8d7d

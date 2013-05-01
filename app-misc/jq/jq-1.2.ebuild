@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/jq-1.2.ebuild,v 1.2 2013/02/07 21:39:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/jq-1.2.ebuild,v 1.4 2013/05/01 10:37:17 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/stedolan/jq/archive/${P}.tar.gz"
 
 LICENSE="MIT CC-BY-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 DEPEND="sys-devel/bison

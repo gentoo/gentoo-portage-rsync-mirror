@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgtap/pgtap-0.93.0.ebuild,v 1.1 2013/03/30 19:19:20 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgtap/pgtap-0.93.0.ebuild,v 1.2 2013/05/01 10:32:11 ago Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://api.pgxn.org/dist/${PN}/${PV}/${P}.zip"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=">=dev-db/postgresql-base-8.4

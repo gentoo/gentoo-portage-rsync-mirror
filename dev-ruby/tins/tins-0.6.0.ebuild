@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/tins-0.6.0.ebuild,v 1.2 2013/04/22 10:13:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/tins-0.6.0.ebuild,v 1.3 2013/05/01 10:36:51 ago Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -19,7 +19,7 @@ HOMEPAGE="http://github.com/flori/tins"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ppc64 x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.5.1-r1 ) "
