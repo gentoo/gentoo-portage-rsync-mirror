@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/flac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.153 2013/04/25 19:02:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.154 2013/05/01 21:40:00 mgorny Exp $
+
+*flac-1.2.1-r5 (01 May 2013)
+
+  01 May 2013; Michał Górny <mgorny@gentoo.org> +flac-1.2.1-r5.ebuild:
+  Convert to multilib, wrt bug #464490. Add doc hack thanks to Karl Lindén. Add
+  USE=doc to control doc install.
 
   25 Apr 2013; Tim Harder <radhermit@gentoo.org> flac-1.2.1-r4.ebuild:
   Fix autoreconf failures with automake-1.13 (bug #466990).
@@ -582,5 +588,3 @@
 
   08 Jul 2002; Daniel Robbins <drobbins@gentoo.org> : New version of FLAC with
   better faster decoding and new C++ API.
-
-

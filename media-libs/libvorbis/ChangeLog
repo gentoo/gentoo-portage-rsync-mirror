@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.157 2013/04/25 18:50:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.158 2013/05/01 21:31:46 mgorny Exp $
+
+*libvorbis-1.3.3-r1 (01 May 2013)
+
+  01 May 2013; Michał Górny <mgorny@gentoo.org> +libvorbis-1.3.3-r1.ebuild:
+  Convert to multilib, wrt bug #464594. Respect docdir wrt bug #468194.
 
   25 Apr 2013; Tim Harder <radhermit@gentoo.org> libvorbis-1.3.3.ebuild:
   Fix autoreconf failures with automake-1.13 (bug #467010).
