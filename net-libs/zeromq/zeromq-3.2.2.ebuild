@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.2.ebuild,v 1.2 2013/02/05 00:23:39 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.2.ebuild,v 1.3 2013/05/01 04:45:57 qnikst Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ RDEPEND=""
 
 src_prepare() {
 	einfo "Removing bundled OpenPGM library"
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 	rm -r "${S}"/foreign/openpgm/libpgm* || die
 	eautoreconf
 }

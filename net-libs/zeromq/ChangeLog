@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.33 2013/02/05 00:23:39 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.34 2013/05/01 04:45:57 qnikst Exp $
+
+  01 May 2013;  <qnikst@gentoo.org> zeromq-3.2.2.ebuild:
+  add automake-1.13 compatibility, due #468016
 
   05 Feb 2013; Benda Xu <heroxbd@gentoo.org> zeromq-3.2.2.ebuild:
   keyword ~arm
