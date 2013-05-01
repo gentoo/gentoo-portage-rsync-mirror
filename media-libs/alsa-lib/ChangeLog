@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.350 2013/05/01 11:52:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.351 2013/05/01 12:13:46 ssuominen Exp $
+
+  01 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -alsa-lib-1.0.24.1.ebuild, -alsa-lib-1.0.25-r1.ebuild,
+  -alsa-lib-1.0.26.ebuild, -alsa-lib-1.0.26-r2.ebuild,
+  -files/1.0.26-r2.types-fix.diff:
+  old
 
 *alsa-lib-1.0.27 (01 May 2013)
 
