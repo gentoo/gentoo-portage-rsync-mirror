@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.4.ebuild,v 1.1 2013/04/27 19:54:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.4.ebuild,v 1.2 2013/05/01 02:16:37 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -9,12 +9,12 @@ WANT_LIBTOOL="none"
 inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs multiprocessing
 
 MY_P="Python-${PV}"
-PATCHSET_REVISION="0"
+PATCHSET_REVISION="1"
 
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
-	mirror://bitbucket/gentoo/cpython/downloads/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.xz"
+	mirror://gentoo/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.xz"
 
 LICENSE="PSF-2"
 SLOT="3.2"
@@ -65,9 +65,9 @@ pkg_setup() {
 
 src_prepare() {
 	# Ensure that internal copies of expat, libffi and zlib are not used.
-	rm -fr Modules/expat
-	rm -fr Modules/_ctypes/libffi*
-	rm -fr Modules/zlib
+	rm -r Modules/expat
+	rm -r Modules/_ctypes/libffi*
+	rm -r Modules/zlib
 
 	local excluded_patches
 	if ! tc-is-cross-compiler; then
@@ -216,7 +216,7 @@ src_compile() {
 		) \
 		PTHON_DISABLE_SSL="1" \
 		SYSROOT= \
-		emake || die "cross-make failed"
+		emake
 		# See comment in src_configure about these.
 		ln python ../${CHOST}/hostpython || die
 		ln Parser/pgen ../${CHOST}/Parser/hostpgen || die
@@ -224,7 +224,7 @@ src_compile() {
 	fi
 
 	cd "${WORKDIR}"/${CHOST}
-	emake CPPFLAGS="" CFLAGS="" LDFLAGS="" || die "emake failed"
+	emake CPPFLAGS="" CFLAGS="" LDFLAGS=""
 
 	# Work around bug 329499. See also bug 413751.
 	pax-mark m python
@@ -272,7 +272,7 @@ src_install() {
 	local libdir=${ED}/usr/$(get_libdir)/python${SLOT}
 
 	cd "${WORKDIR}"/${CHOST}
-	emake DESTDIR="${D}" altinstall || die "emake altinstall failed"
+	emake DESTDIR="${D}" altinstall
 
 	sed \
 		-e "s/\(CONFIGURE_LDFLAGS=\).*/\1/" \
@@ -280,10 +280,10 @@ src_install() {
 		-i "${libdir}/config-${SLOT}/Makefile" || die "sed failed"
 
 	# Backwards compat with Gentoo divergence.
-	dosym python${SLOT}-config /usr/bin/python-config-${SLOT} || die
+	dosym python${SLOT}-config /usr/bin/python-config-${SLOT}
 
 	# Fix collisions between different slots of Python.
-	rm -f "${ED}usr/$(get_libdir)/libpython3.so"
+	rm "${ED}usr/$(get_libdir)/libpython3.so" || die
 
 	if use build; then
 		rm -fr "${ED}usr/bin/idle${SLOT}" "${libdir}/"{idlelib,sqlite3,test,tkinter}
@@ -296,20 +296,20 @@ src_install() {
 	use threads || rm -fr "${libdir}/multiprocessing"
 	use wininst || rm -f "${libdir}/distutils/command/"wininst-*.exe
 
-	dodoc "${S}"/Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
+	dodoc "${S}"/Misc/{ACKS,HISTORY,NEWS}
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		find "${S}"/Tools -name __pycache__ -print0 | xargs -0 rm -fr
-		doins -r "${S}"/Tools || die "doins failed"
+		doins -r "${S}"/Tools
 	fi
 	insinto /usr/share/gdb/auto-load/usr/$(get_libdir) #443510
 	local libname=$(printf 'e:\n\t@echo $(INSTSONAME)\ninclude Makefile\n' | \
 		emake --no-print-directory -s -f - 2>/dev/null)
 	newins "${S}"/Tools/gdb/libpython.py "${libname}"-gdb.py
 
-	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
-	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
+	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
+	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
 	sed \
 		-e "s:@PYDOC_PORT_VARIABLE@:PYDOC${SLOT/./_}_PORT:" \
 		-e "s:@PYDOC@:pydoc${SLOT}:" \

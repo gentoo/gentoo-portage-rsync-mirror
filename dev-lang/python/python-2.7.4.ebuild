@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.5 2013/04/27 16:53:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.6 2013/05/01 02:16:37 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -9,12 +9,12 @@ WANT_LIBTOOL="none"
 inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs multiprocessing
 
 MY_P="Python-${PV}"
-PATCHSET_REVISION="1"
+PATCHSET_REVISION="2"
 
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
-	mirror://bitbucket/gentoo/cpython/downloads/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.xz"
+	mirror://gentoo/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.xz"
 
 LICENSE="PSF-2"
 SLOT="2.7"
@@ -240,7 +240,7 @@ src_compile() {
 		) \
 		PTHON_DISABLE_SSL="1" \
 		SYSROOT= \
-		emake || die "cross-make failed"
+		emake
 		# See comment in src_configure about these.
 		ln python ../${CHOST}/hostpython || die
 		ln Parser/pgen ../${CHOST}/Parser/hostpgen || die
@@ -296,12 +296,12 @@ src_install() {
 	local libdir=${ED}/usr/$(get_libdir)/python${SLOT}
 
 	cd "${WORKDIR}"/${CHOST}
-	emake DESTDIR="${D}" altinstall maninstall || die "emake altinstall maninstall failed"
+	emake DESTDIR="${D}" altinstall maninstall
 
 	sed -e "s/\(LDFLAGS=\).*/\1/" -i "${libdir}/config/Makefile" || die "sed failed"
 
 	# Backwards compat with Gentoo divergence.
-	dosym python${SLOT}-config /usr/bin/python-config-${SLOT} || die
+	dosym python${SLOT}-config /usr/bin/python-config-${SLOT}
 
 	# Fix collisions between different slots of Python.
 	mv "${ED}usr/bin/2to3" "${ED}usr/bin/2to3-${SLOT}"
