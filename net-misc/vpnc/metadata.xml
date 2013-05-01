@@ -16,7 +16,6 @@
   </maintainer>
   <use>
     <flag name="bindist">Using GnuTLS for SSL support as redistribution with OpenSSL as provider violates GPL</flag>
-    <flag name="hybrid-auth">Enable hybrid authentication (certificates), only if not redistributed as compiled binary</flag>
     <flag name="resolvconf">Enable support for DNS managing framework <pkg>net-dns/openresolv</pkg></flag>
   </use>
 </pkgmetadata>

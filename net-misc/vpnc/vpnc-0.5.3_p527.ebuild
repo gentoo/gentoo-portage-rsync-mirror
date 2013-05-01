@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527.ebuild,v 1.7 2013/04/13 08:28:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527.ebuild,v 1.8 2013/05/01 13:12:58 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ REQUIRED_USE="bindist? ( gnutls )"
 
 DEPEND="
 	dev-lang/perl
-	dev-libs/libgcrypt
+	|| ( >=dev-libs/libgcrypt-1.5.2[-caps] <dev-libs/libgcrypt-1.5.2 )
 	>=sys-apps/iproute2-2.6.19.20061214[-minimal]
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( dev-libs/openssl )"
@@ -54,7 +54,7 @@ src_install() {
 	newconfd "${FILESDIR}/vpnc.confd" vpnc
 	sed -e "s:/usr/local:/usr:" -i "${D}"/etc/vpnc/vpnc-script || die
 	# COPYING file resides here, should not be installed
-	rm -rf "${D}"/usr/share/doc/vpnc/ || die
+	rm -rf "${ED}"/usr/share/doc/vpnc/ || die
 }
 
 pkg_postinst() {
