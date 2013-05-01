@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/jq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/ChangeLog,v 1.5 2013/05/01 10:37:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/ChangeLog,v 1.6 2013/05/01 16:49:47 radhermit Exp $
+
+  01 May 2013; Tim Harder <radhermit@gentoo.org> -jq-1.1.ebuild,
+  -files/jq-1.1-makefile.patch:
+  Remove old.
 
   01 May 2013; Agostino Sarubbo <ago@gentoo.org> jq-1.2.ebuild:
   Stable for x86, wrt bug #468074
