@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.335 2013/04/30 09:40:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.336 2013/05/01 11:50:51 ago Exp $
+
+  01 May 2013; Agostino Sarubbo <ago@gentoo.org> kdm-4.10.2.ebuild:
+  Stable for ppc, wrt to bug #466074
 
   30 Apr 2013; Agostino Sarubbo <ago@gentoo.org> kdm-4.10.2.ebuild:
   Stable for x86, wrt to bug #466074

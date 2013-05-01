@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/rar2fs-1.16.0.ebuild,v 1.1 2013/03/13 07:53:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/rar2fs-1.16.0.ebuild,v 1.2 2013/05/01 11:37:08 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -22,6 +22,7 @@ DOCS="AUTHORS ChangeLog"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-destdir.patch
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 	eautoreconf
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.10.2.ebuild,v 1.3 2013/04/30 09:40:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.10.2.ebuild,v 1.4 2013/05/01 11:51:17 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ fi
 inherit ${eclass}
 
 DESCRIPTION="kioslaves from kdesdk package"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug subversion"
 
 DEPEND="

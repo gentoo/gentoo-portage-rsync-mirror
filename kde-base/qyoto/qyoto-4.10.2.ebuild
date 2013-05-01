@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/qyoto-4.10.2.ebuild,v 1.3 2013/04/30 09:40:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/qyoto-4.10.2.ebuild,v 1.4 2013/05/01 11:50:51 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_REQUIRED="never"
 inherit kde4-base mono
 
 DESCRIPTION="C# bindings for Qt"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug +phonon qscintilla webkit"
 
 DEPEND="

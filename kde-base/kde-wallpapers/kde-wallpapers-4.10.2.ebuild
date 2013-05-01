@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/kde-wallpapers-4.10.2.ebuild,v 1.3 2013/04/30 09:40:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/kde-wallpapers-4.10.2.ebuild,v 1.4 2013/05/01 11:51:15 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KDE_SCM="svn"
 inherit kde4-base
 
 DESCRIPTION="KDE wallpapers"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 add_blocker kdebase-wallpapers

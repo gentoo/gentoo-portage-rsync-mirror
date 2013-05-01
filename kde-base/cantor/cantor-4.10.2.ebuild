@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.10.2.ebuild,v 1.3 2013/04/30 09:39:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.10.2.ebuild,v 1.4 2013/05/01 11:50:23 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="KDE4 interface for doing mathematics and scientific computing"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="analitza debug postscript qalculate +R"
 
 # TODO Add Sage Mathematics Software backend (http://www.sagemath.org)

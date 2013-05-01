@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.14.ebuild,v 1.13 2013/04/24 14:50:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.14.ebuild,v 1.14 2013/05/01 11:47:21 jer Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -32,7 +32,7 @@ RDEPEND="
 	)
 	kerberos? ( virtual/krb5 )
 	libadns? ( net-libs/adns )
-	lua? ( >=dev-lang/lua-5.1 )
+	lua? ( <dev-lang/lua-5.2 )
 	pcap? ( net-libs/libpcap )
 	portaudio? ( media-libs/portaudio )
 	selinux? ( sec-policy/selinux-wireshark )
