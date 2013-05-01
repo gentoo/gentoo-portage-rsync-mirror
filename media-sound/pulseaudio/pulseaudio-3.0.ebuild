@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-3.0.ebuild,v 1.5 2013/04/10 20:43:51 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-3.0.ebuild,v 1.6 2013/05/01 03:23:59 ford_prefect Exp $
 
 EAPI="5"
 
@@ -58,7 +58,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	webrtc-aec? ( media-libs/webrtc-audio-processing )
 	xen? ( app-emulation/xen )
 	systemd? ( >=sys-apps/systemd-39 )
-	dev-libs/json-c
+	<dev-libs/json-c-0.11
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
 DEPEND="${RDEPEND}

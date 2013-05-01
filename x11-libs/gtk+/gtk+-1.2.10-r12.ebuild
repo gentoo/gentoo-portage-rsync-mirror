@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.16 2012/09/25 15:19:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.17 2013/05/01 03:22:51 tetromino Exp $
 
+EAPI=4
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils toolchain-funcs autotools
 
@@ -19,7 +20,7 @@ IUSE="nls debug"
 MY_AVAILABLE_LINGUAS=" az ca cs da de el es et eu fi fr ga gl hr hu it ja ko lt nl nn no pl pt_BR pt ro ru sk sl sr sv tr uk vi"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
-RDEPEND="=dev-libs/glib-1.2*
+RDEPEND=">=dev-libs/glib-1.2:1
 	x11-libs/libXi
 	x11-libs/libXt"
 DEPEND="${RDEPEND}
@@ -27,9 +28,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	nls? ( sys-devel/gettext dev-util/intltool )"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${FILESDIR}"/${P}-automake.patch
 	epatch "${FILESDIR}"/${P}-cleanup.patch
@@ -37,10 +36,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.2-locale_fix.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	sed -i '/libtool.m4/,/AM_PROG_NM/d' acinclude.m4 #168198
+	epatch "${FILESDIR}"/${P}-automake-1.13.patch #467520
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 	strip-linguas ${MY_AVAILABLE_LINGUAS}
@@ -55,13 +55,15 @@ src_compile() {
 		--sysconfdir=/etc \
 		--with-xinput=xfree \
 		--with-x \
-		${myconf} || die
+		${myconf}
+}
 
-	emake CC="$(tc-getCC)" || die
+src_compile() {
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	default
 
 	dodoc AUTHORS ChangeLog* HACKING
 	dodoc NEWS* README* TODO

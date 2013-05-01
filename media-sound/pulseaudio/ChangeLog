@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.301 2013/04/27 03:56:05 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.303 2013/05/01 03:23:59 ford_prefect Exp $
+
+  01 May 2013; Arun Raghavan <ford_prefect@gentoo.org>
+  pulseaudio-2.1-r1.ebuild, pulseaudio-3.0.ebuild:
+  Restrict json-c version in older ebuilds since they are incompatible with
+  current unstable json-c 0.11.
+
+  01 May 2013; Arun Raghavan <ford_prefect@gentoo.org>
+  -pulseaudio-1.1-r1.ebuild:
+  Drop old version
 
 *pulseaudio-3.0-r1 (27 Apr 2013)
 
