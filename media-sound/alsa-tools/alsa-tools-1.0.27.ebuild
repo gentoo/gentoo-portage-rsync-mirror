@@ -1,15 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.24.1.ebuild,v 1.3 2011/03/22 09:59:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.27.ebuild,v 1.1 2013/05/01 12:49:15 ssuominen Exp $
 
-EAPI=3
-inherit base flag-o-matic autotools
-
-MY_P="${P/_rc/rc}"
+EAPI=5
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org/"
-SRC_URI="mirror://alsaproject/tools/${MY_P}.tar.bz2"
+SRC_URI="mirror://alsaproject/tools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
@@ -27,17 +25,13 @@ alsa_cards_rme32 alsa_cards_rme96 alsa_cards_sscape alsa_cards_pcxhr
 ${ECHOAUDIO_CARDS}"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
-	>=dev-python/pyalsa-1.0.24
+	>=dev-python/pyalsa-1.0.26
 	fltk? ( >=x11-libs/fltk-1.1.10-r2:1 )
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
-PATCHES=( "${FILESDIR}/envy24control-config-dir.patch" )
-
 pkg_setup() {
-
-	ALSA_TOOLS="ac3dec seq/sbiload us428control hwmixvolume"
+	ALSA_TOOLS="seq/sbiload us428control hwmixvolume"
 
 	if use gtk; then
 		use alsa_cards_ice1712 && \
@@ -74,14 +68,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	base_src_prepare()
+	epatch "${FILESDIR}"/envy24control-config-dir.patch
 
 	# This block only deals with the tools that still use GTK and the
 	# AM_PATH_GTK macro.
 	for dir in echomixer envy24control rmedigicontrol; do
 		has "${dir}" "${ALSA_TOOLS}" || continue
 		pushd "${dir}" &> /dev/null
-		sed -i -e '/AM_PATH_GTK/d' configure.in
 		eautoreconf
 		popd &> /dev/null
 	done
@@ -124,7 +117,7 @@ src_compile() {
 	for f in ${ALSA_TOOLS}
 	do
 		cd "${S}/${f}"
-		emake || die "emake ${f} failed"
+		emake
 	done
 }
 
@@ -134,15 +127,19 @@ src_install() {
 	do
 		# Install the main stuff
 		cd "${S}/${f}"
-		emake DESTDIR="${D}" install || die
+		# hotplugdir is for usx2yloader/Makefile.am
+		emake DESTDIR="${D}" hotplugdir=/lib/firmware install
 
 		# Install the text documentation
 		local doc
 		for doc in README TODO ChangeLog AUTHORS; do
 			if [[ -f "${doc}" ]]; then
 				mv "${doc}" "${doc}.$(basename ${f})" || die
-				dodoc "${doc}.$(basename ${f})" || die
+				dodoc "${doc}.$(basename ${f})"
 			fi
 		done
 	done
+
+	# Punt at least /usr/lib/liblo10k1.la (last checked, 1.0.27)
+	prune_libtool_files
 }
