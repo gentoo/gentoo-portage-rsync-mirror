@@ -20,7 +20,6 @@ acpi
 avi
 lm_sensors
 rar
-cmucl
 hdf
 fmod
 i8x0

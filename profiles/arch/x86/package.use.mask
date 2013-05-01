@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.112 2013/03/02 20:45:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.113 2013/05/01 06:27:01 grozin Exp $
 
 # Agostino Sarubbo <ago@gentoo.org> (16 Feb 2012)
 # mask because requires unstable depends not ready for the stabilization
@@ -117,10 +117,6 @@ dev-libs/glib -systemtap
 =sys-cluster/glusterfs-3.1.2 infiniband
 =sys-cluster/corosync-1.3.0 infiniband
 
-# Andrey Grozin <grozin@gentoo.org> (28 Apr 2011)
-# cmucl is only available on x86
-sci-mathematics/fricas -cmucl
-
 # Luca Barbato <lu_zero@gentoo.org> (28 Feb 2011)
 # # Masked in base, unmask for amd64/x86
 media-video/mplayer2 -bluray
@@ -155,10 +151,6 @@ sys-power/pm-utils -video_cards_intel -video_cards_radeon
 # Jim Ramsay <lack@gentoo.org> (24 March 2011)
 # '64bit' '32bit' 'nspluginwrapper' are for amd64 only
 www-plugins/adobe-flash 32bit 64bit
-
-# Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
-# openmcl (aka clozurecl) is only available on x86 and amd64
-sci-mathematics/maxima -clozurecl
 
 # Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)
 # Masked in base, unmak for amd64/x86. Bug 267264

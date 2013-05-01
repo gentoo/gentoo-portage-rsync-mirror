@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7786 2013/05/01 00:58:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7788 2013/05/01 06:29:59 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 May 2013; Andrey Grozin <grozin@gentoo.org> package.mask:
+  Unmasking new ebuilds for maxima, fricas, and related common-lisp stuff
+
+  01 May 2013; Andrey Grozin <grozin@gentoo.org> arch/amd64/package.use.mask,
+  arch/amd64/use.mask, arch/powerpc/use.mask, arch/sparc/use.mask,
+  arch/x86/package.use.mask, arch/x86/use.mask, base/package.use.mask,
+  base/use.mask:
+  Manage use masks gcl, cmucl, clozurecl (for maxima and fricas) centrally and
+  consistently
 
   01 May 2013; Sebastian Pipping <sping@gentoo.org> base/package.use.mask:
   Unmask ~media-libs/gegl-0.2.0[introspection] (bug #416587)
