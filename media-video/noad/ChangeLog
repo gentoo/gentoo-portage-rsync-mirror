@@ -1,6 +1,10 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.57 2013/04/25 05:03:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.58 2013/05/01 14:35:49 ssuominen Exp $
+
+  01 May 2013; Samuli Suominen <ssuominen@gentoo.org> noad-0.7.3-r1.ebuild:
+  Remove pointless subslot operator from media-gfx/imagemagick dependency
+  because it's meant only for dev-ruby/rmagick.
 
   25 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> noad-0.7.3-r1.ebuild:
   Fix building with media-gfx/imagemagick >= 6.8 wrt #467134. Fix building with
