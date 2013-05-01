@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14703 2013/05/01 15:23:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14704 2013/05/01 18:35:50 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (01 May 2013)
+# HOMEPAGE and SRC_URI dead, tarball not redistributable.
+# Last upstream release in 2004.
+# Masked for removal in 30 days, bug #464938.
+www-apache/mod_loopback
+
+# Ulrich Müller <ulm@gentoo.org> (01 May 2013)
+# HOMEPAGE and SRC_URI dead, tarball not redistributable.
+# Last upstream release in 2004.
+# Masked for removal in 30 days, bug #464934.
+www-apache/mod_watch
 
 # Kacper Kowalik <xarthisius@gentoo.org> (01 May 2013)
 # Removal due to licensing issue wrt #452420
