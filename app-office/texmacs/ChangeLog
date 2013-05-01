@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.108 2013/03/28 13:41:15 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.109 2013/05/01 05:08:23 grozin Exp $
+
+  01 May 2013; Andrey Grozin <grozin@gentoo.org> texmacs-1.0.7.19.ebuild:
+  Downloading from ftp.texmacs.org works again
 
 *texmacs-1.0.7.19 (28 Mar 2013)
 
