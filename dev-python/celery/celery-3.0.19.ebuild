@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.19.ebuild,v 1.1 2013/04/29 11:24:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.19.ebuild,v 1.3 2013/05/01 00:42:44 floppym Exp $
 
 EAPI=5
 
@@ -15,7 +15,10 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples sql test"
+IUSE="doc examples test"
+
+# sqlalchemy deps should be replaced once a version supporting py3k is committed
+PY2_USEDEP=$(python_gen_usedep python2_7)
 
 RDEPEND="<dev-python/kombu-3
 		>=dev-python/kombu-2.5.10[${PYTHON_USEDEP}]
@@ -23,18 +26,17 @@ RDEPEND="<dev-python/kombu-3
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 		virtual/pyparsing[${PYTHON_USEDEP}]
 		>=dev-python/billiard-2.7.3.28[${PYTHON_USEDEP}]
-		dev-python/pytz[${PYTHON_USEDEP}]
-		sql? ( dev-python/sqlalchemy[$(python_gen_usedep python2_7)] )"
+		dev-python/pytz[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-		dev-python/gevent[$(python_gen_usedep python2_7)]
+		dev-python/gevent[${PY2_USEDEP}]
 		>=dev-python/mock-0.7.0[${PYTHON_USEDEP}]
 		virtual/python-unittest2[${PYTHON_USEDEP}]
 		dev-python/pyopenssl[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]
-		dev-python/sqlalchemy[$(python_gen_usedep python2_7)]
-		dev-python/pymongo[$(python_gen_usedep python2_7)]
+		dev-python/sqlalchemy[${PY2_USEDEP}]
+		dev-python/pymongo[${PY2_USEDEP}]
 		dev-python/redis-py[${PYTHON_USEDEP}]
 		dev-db/redis
 	)
@@ -43,7 +45,7 @@ DEPEND="${RDEPEND}
 		dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/sphinxcontrib-issuetracker
-		dev-python/sqlalchemy[$(python_gen_usedep python2_7)]
+		dev-python/sqlalchemy[${PY2_USEDEP}]
 	)"
 
 PATCHES=( "${FILESDIR}"/celery-docs.patch )
@@ -57,9 +59,9 @@ python_compile_all() {
 
 python_test() {
 	if [[ "$EPYTHON}" = python3* ]]; then
-		einfo "Some dependencies of testsuite do no support python3"
+		ewarn "Some dependencies of testsuite do no support python3"
 	else
-		nosetests || die
+		nosetests || die "Tests fail with ${EPYTHON}"
 #		einfo "running funtests"
 #		"${PYTHON}" funtests/setup.py test || die "Failure occured in funtests"
 	fi

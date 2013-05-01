@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.460 2013/04/30 20:19:13 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.461 2013/05/01 00:58:17 sping Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -198,11 +198,6 @@ net-misc/networkmanager systemd
 # Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
 # gobject-introspection[doctool], bug #411761
 dev-libs/gobject-introspection doctool
-
-# Sebastian Pipping <sping@gentoo.org> (12 Apr 2012)
-# Compile errors
-# https://bugs.gentoo.org/show_bug.cgi?id=416587
->=media-libs/gegl-0.2 introspection
 
 # Michał Górny <mgorny@gentoo.org> (11 Apr 2012)
 # JIT compilation in libzpaq generates code for x86/amd64.

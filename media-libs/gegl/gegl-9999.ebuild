@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.6 2013/04/28 17:41:14 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.7 2013/05/01 00:46:15 sping Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
 KEYWORDS=""
 
-IUSE="cairo debug exif ffmpeg graphviz introspection jpeg jpeg2k lensfun lua mmx openexr png raw sdl sse svg umfpack v4l vala"
+IUSE="cairo debug ffmpeg introspection jpeg jpeg2k lensfun mmx openexr png raw sdl sse svg umfpack vala"
 
 RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	>=dev-libs/glib-2.28:2
@@ -25,19 +25,15 @@ RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	x11-libs/pango
 	sys-libs/zlib
 	cairo? ( x11-libs/cairo )
-	exif? ( media-gfx/exiv2 )
 	ffmpeg? ( virtual/ffmpeg )
-	graphviz? ( media-gfx/graphviz )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( >=media-libs/jasper-1.900.1 )
-	lua? ( >=dev-lang/lua-5.1 )
 	openexr? ( media-libs/openexr )
 	png? ( media-libs/libpng )
 	raw? ( >=media-libs/libopenraw-0.0.5 )
 	sdl? ( media-libs/libsdl )
 	svg? ( >=gnome-base/librsvg-2.14:2 )
 	umfpack? ( sci-libs/umfpack )
-	v4l? ( media-libs/libv4l )
 	introspection? ( >=dev-libs/gobject-introspection-0.10
 			>=dev-python/pygobject-2.26:2 )
 	lensfun? ( >=media-libs/lensfun-0.2.5 )"
@@ -67,6 +63,27 @@ src_configure() {
 	# libspiro: not in portage main tree
 	# disable documentation as the generating is bit automagic
 	#    if anyone wants to work on it just create bug with patch
+
+	# Also please note that:
+	#
+	#  - Some auto-detections are not patched away since the docs are
+	#    not built (--disable-docs, lack of --enable-gtk-doc) and these
+	#    tools affect re-generation of docs, only
+	#    (e.g. ruby, asciidoc, dot (of graphviz), enscript)
+	#
+	#  - Parameter --with-exiv2 compiles a noinst-app only, no use
+	#
+	#  - Parameter --disable-workshop disables any use of Lua, effectivly
+	# 
+	#  - v4l support does not work with our media-libs/libv4l-0.8.9,
+	#    upstream bug https://bugzilla.gnome.org/show_bug.cgi?id=654675
+	#
+	#  - There are two checks for dot, one controlled by --with(out)-graphviz
+	#    which toggles HAVE_GRAPHVIZ that is not used anywhere.  Yes.
+	#
+	# So that's why USE="exif graphviz lua v4l" got resolved.  More at:
+	# https://bugs.gentoo.org/show_bug.cgi?id=451136
+	#
 	econf \
 		--disable-silent-rules \
 		--disable-profile \
@@ -78,19 +95,19 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_with cairo) \
 		$(use_with cairo pangocairo) \
-		$(use_with exif exiv2) \
+		--without-exiv2 \
 		$(use_with ffmpeg libavformat) \
-		$(use_with graphviz) \
+		--without-graphviz \
 		$(use_with jpeg libjpeg) \
 		$(use_with jpeg2k jasper) \
-		$(use_with lua) \
+		--without-lua \
 		$(use_with openexr) \
 		$(use_with png libpng) \
 		$(use_with raw libopenraw) \
 		$(use_with sdl) \
 		$(use_with svg librsvg) \
 		$(use_with umfpack) \
-		$(use_with v4l libv4l) \
+		--without-libv4l \
 		$(use_enable introspection) \
 		$(use_with lensfun) \
 		$(use_with vala)

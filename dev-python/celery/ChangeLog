@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.22 2013/04/29 11:24:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.24 2013/05/01 00:42:44 floppym Exp $
+
+  01 May 2013; Mike Gilbert <floppym@gentoo.org> celery-3.0.19.ebuild:
+  Tweak python_test.
+
+  01 May 2013; Mike Gilbert <floppym@gentoo.org> celery-3.0.19.ebuild:
+  Drop sql use flag and tidy-up python2 deps.
 
 *celery-3.0.19 (29 Apr 2013)
 
