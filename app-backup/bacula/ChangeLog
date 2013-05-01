@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/bacula
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.159 2013/04/23 04:27:00 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.160 2013/05/01 15:10:27 tomjbe Exp $
+
+  01 May 2013; Thomas Beierlein <tomjbe@gentoo.org> bacula-5.2.13.ebuild:
+  Fix logrotate config file (bug 258187, comment #4). Thanks Ortwin.
 
   23 Apr 2013; Thomas Beierlein <tomjbe@gentoo.org> bacula-5.2.13.ebuild:
   Fix desktop file category (bug #466688). Use CXXFLAGS instead CFLAGS (bug

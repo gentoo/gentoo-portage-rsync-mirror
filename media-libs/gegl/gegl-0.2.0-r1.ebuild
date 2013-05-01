@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.10 2013/05/01 00:46:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.11 2013/05/01 15:08:07 sping Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	x11-libs/pango
 	sys-libs/zlib
 	cairo? ( x11-libs/cairo )
-	ffmpeg? ( || ( >=media-video/ffmpeg-0.11 >=media-video/libav-0.8.5 ) )
+	ffmpeg? ( virtual/ffmpeg )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( >=media-libs/jasper-1.900.1 )
 	openexr? ( media-libs/openexr )

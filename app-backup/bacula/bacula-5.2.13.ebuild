@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13.ebuild,v 1.6 2013/04/23 04:27:00 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13.ebuild,v 1.7 2013/05/01 15:10:27 tomjbe Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -195,6 +195,7 @@ src_configure() {
 		--sysconfdir=/etc/bacula \
 		--with-subsys-dir=/var/lock/subsys \
 		--with-working-dir=/var/lib/bacula \
+		--with-logdir=/var/lib/bacula \
 		--with-scriptdir=/usr/libexec/bacula \
 		--with-dir-user=bacula \
 		--with-dir-group=bacula \

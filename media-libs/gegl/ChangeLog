@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.87 2013/05/01 00:55:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.88 2013/05/01 15:08:07 sping Exp $
+
+  01 May 2013; Sebastian Pipping <sping@gentoo.org> gegl-0.2.0-r1.ebuild:
+  Restore use of virtual/ffmpeg for ffmpeg/libav (bug #467810)
 
   01 May 2013; Sebastian Pipping <sping@gentoo.org> -gegl-0.1.8.ebuild,
   -gegl-0.2.0.ebuild:

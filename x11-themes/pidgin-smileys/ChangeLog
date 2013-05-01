@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/pidgin-smileys
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.10 2011/08/07 03:09:18 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.11 2013/05/01 15:20:14 xarthisius Exp $
+
+  01 May 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  pidgin-smileys-20080819.ebuild, pidgin-smileys-20100821.ebuild:
+  Block x11-themes/pidgin-penguins-smileys
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pidgin-smileys-20100821.ebuild:
@@ -51,4 +55,3 @@
   24 Oct 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
   +pidgin-smileys-20071023.ebuild:
   Initial import, bug 178912
-
