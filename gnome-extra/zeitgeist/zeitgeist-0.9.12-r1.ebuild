@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12-r1.ebuild,v 1.1 2013/04/30 16:42:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12-r1.ebuild,v 1.2 2013/05/01 10:21:55 jlec Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ REQUIRED_USE="downloads-monitor? ( datahub )"
 
 RDEPEND="
 	!gnome-extra/zeitgeist-datahub
+	dev-libs/json-glib
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
@@ -68,8 +69,8 @@ src_configure() {
 }
 
 src_install() {
+	dobashcomp data/completions/zeitgeist-daemon
 	autotools-utils_src_install
-	dobashcomp bash-completion/completions/zeitgeist-daemon
 	cd python || die
 	python_moduleinto ${PN}
 	python_foreach_impl python_domodule *py

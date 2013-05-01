@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.4 2013/04/24 06:47:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.5 2013/05/01 10:21:55 jlec Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ REQUIRED_USE="downloads-monitor? ( datahub )"
 
 RDEPEND="
 	!gnome-extra/zeitgeist-datahub
+	dev-libs/json-glib
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
