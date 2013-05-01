@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.92 2013/04/29 01:13:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.93 2013/05/01 13:48:04 floppym Exp $
 
 EAPI=5
 AUTOTOOLS_AUTO_DEPEND=yes
@@ -40,7 +40,7 @@ HOMEPAGE="http://www.gnu.org/software/grub/"
 
 LICENSE="GPL-3"
 SLOT="2"
-IUSE="custom-cflags debug device-mapper doc efiemu mount multislot nls static sdl test truetype libzfs"
+IUSE="custom-cflags debug device-mapper doc efiemu mount +multislot nls static sdl test truetype libzfs"
 
 GRUB_ALL_PLATFORMS=(
 	# everywhere:

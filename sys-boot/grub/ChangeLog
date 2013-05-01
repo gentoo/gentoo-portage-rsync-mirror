@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.261 2013/04/29 01:13:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.262 2013/05/01 13:48:04 floppym Exp $
+
+  01 May 2013; Mike Gilbert <floppym@gentoo.org> grub-9999.ebuild:
+  Enable mulitslot by default.
 
   29 Apr 2013; Mike Gilbert <floppym@gentoo.org> grub-9999.ebuild:
   Add test dependencies.

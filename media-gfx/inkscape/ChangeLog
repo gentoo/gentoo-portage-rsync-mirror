@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/inkscape
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.196 2012/12/27 17:25:24 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.197 2013/05/01 13:33:22 hasufell Exp $
+
+*inkscape-0.48.4-r1 (01 May 2013)
+
+  01 May 2013; Julian Ospald <hasufell@gentoo.org> +inkscape-0.48.4-r1.ebuild,
+  +files/inkscape-0.48.4-automake-1.3.patch,
+  +files/inkscape-0.48.4-epython.patch:
+  convert to python-single-r1 wrt #467234 and fix build with automake-1.13 wrt
+  #467228
 
   27 Dec 2012; Agostino Sarubbo <ago@gentoo.org> -inkscape-0.48.3.1.ebuild:
   Remove old
