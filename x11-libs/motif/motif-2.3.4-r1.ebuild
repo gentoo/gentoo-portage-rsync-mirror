@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.14 2013/05/01 11:15:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.15 2013/05/01 15:32:55 ulm Exp $
 
 EAPI=5
-WANT_AUTOMAKE="1.12"
 
 inherit autotools eutils flag-o-matic multilib multilib-minimal
 
@@ -45,6 +44,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-parallel-make.patch"
 	epatch "${FILESDIR}/${P}-install-dirs.patch"
 	epatch "${FILESDIR}/${P}-fc-config.patch"
+	epatch "${FILESDIR}/${P}-automake-1.13.patch"
 	[[ ${CHOST} == *-solaris2.11 ]] \
 		&& epatch "${FILESDIR}/${PN}-2.3.2-solaris-2.11.patch"
 

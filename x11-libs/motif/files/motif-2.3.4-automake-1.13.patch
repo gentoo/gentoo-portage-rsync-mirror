@@ -1,0 +1,18 @@
+http://bugs.motifzone.net/show_bug.cgi?id=1595
+
+--- motif-2.3.4-orig/configure.ac
++++ motif-2.3.4/configure.ac
+@@ -31,12 +31,11 @@
+ dnl
+ dnl AC_DISABLE_STATIC
+ 
+-AM_CONFIG_HEADER(include/config.h lib/Xm/Xm.h)
++AC_CONFIG_HEADERS(include/config.h lib/Xm/Xm.h)
+ 
+ dnl Checks for programs.
+ AC_PROG_CC
+ AC_PROG_CPP
+-AM_PROG_CC_STDC
+ AM_PROG_LIBTOOL
+ 
+ AC_EXEEXT
