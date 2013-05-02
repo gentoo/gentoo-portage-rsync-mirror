@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.37 2013/03/31 15:30:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.38 2013/05/02 19:45:58 tomwij Exp $
+
+*polipo-1.0.4.1-r2 (02 May 2013)
+
+  02 May 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/polipo-1.0.4.1-dns-timeout-fix.patch, +polipo-1.0.4.1-r2.ebuild:
+  EAPI 5. Fix incorrect timeout reporting for domains that are available,
+  revision bump. Thanks to Andrew Savchenko for reporting. Fixes bug #389675.
 
 *polipo-9999 (31 Mar 2013)
 
