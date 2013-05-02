@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/cmdtest-0.6.ebuild,v 1.2 2013/03/24 11:47:55 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/cmdtest-0.6.ebuild,v 1.3 2013/05/02 08:35:10 mschiff Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND="
 	dev-python/ttystatus
 "
 
-src_prepare() {
-	addpredict /proc/self/comm
-	distutils-r1_src_prepare
+src_compile() {
+	addwrite /proc/self/comm
+	distutils-r1_src_compile
 }
