@@ -1,0 +1,15 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Thu May  2 19:58:42 UTC 2013
+Subject: fix build with libpng-1.6
+
+--- src/engine/video/image.cpp
++++ src/engine/video/image.cpp
+@@ -698,7 +698,7 @@
+     png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_STRIP_16 | PNG_TRANSFORM_PACKING | PNG_TRANSFORM_EXPAND, NULL);
+ 
+     // grab the relevant data...
+-#if PNG_LIBPNG_VER_SONUM == 15
++#if PNG_LIBPNG_VER_SONUM >= 15
+     cols = png_get_image_width(png_ptr, info_ptr);
+     rows = png_get_image_height(png_ptr, info_ptr);
+     bpp = png_get_bit_depth(png_ptr, info_ptr) * 8;
