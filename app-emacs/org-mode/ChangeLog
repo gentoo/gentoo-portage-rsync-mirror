@@ -1,6 +1,16 @@
 # ChangeLog for app-emacs/org-mode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.154 2012/12/09 10:23:41 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.156 2013/05/02 19:28:24 ulm Exp $
+
+*org-mode-8.0.2 (02 May 2013)
+
+  02 May 2013; Ulrich Müller <ulm@gentoo.org> +org-mode-8.0.2.ebuild,
+  +files/50org-mode-gentoo-8.el:
+  Version bump, bug 466720. Thanks to Christoph Lange <langec@web.de>.
+
+  02 May 2013; Ulrich Müller <ulm@gentoo.org> org-mode-7.9.2.ebuild,
+  -files/org-mode-7.8.03-Makefile.patch, -files/50org-mode-gentoo-7.8.03.el:
+  Fix install location, "org-mode" instead of "org". Remove stale files.
 
   09 Dec 2012; Ulrich Müller <ulm@gentoo.org> org-mode-7.9.2.ebuild:
   Fix sed options.

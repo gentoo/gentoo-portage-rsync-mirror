@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/swiftiply
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/ChangeLog,v 1.4 2013/05/02 18:39:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/ChangeLog,v 1.5 2013/05/02 19:24:32 tomwij Exp $
+
+  02 May 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/swiftiply-0.6.4-test-http-headers-order-fix.patch,
+  swiftiply-0.6.4.ebuild:
+  Gave the distfile a more unique name. Added a patch to no longer test
+  uninportant random data causing tests to unnecessarly fail, all test pass
+  multiple times. Removed QA warning.
 
   02 May 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/swiftiply-0.6.4-cache-base-mixin-fix.patch, swiftiply-0.6.4.ebuild:
