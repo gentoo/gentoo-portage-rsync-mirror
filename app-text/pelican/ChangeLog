@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pelican
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.6 2013/04/03 22:20:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.7 2013/05/02 05:56:24 patrick Exp $
+
+*pelican-3.2 (02 May 2013)
+
+  02 May 2013; Patrick Lauer <patrick@gentoo.org> +pelican-3.2.ebuild:
+  Bump
 
 *pelican-3.1.1-r1 (03 Apr 2013)
 
