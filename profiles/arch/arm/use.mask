@@ -196,6 +196,10 @@ video_cards_i965
 # vmware wasn't added with mesa-8.0, but it should still be masked
 video_cards_vmware
 
+# Chí-Thanh Christopher Nguyễn
+# Requires radeon support in llvm
+r600-llvm-compiler
+
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask the ARM-specific ALSA drivers
 -alsa_cards_pxa2xx-i2sound

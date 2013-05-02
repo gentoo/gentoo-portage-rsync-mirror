@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.231 2013/04/29 16:10:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.232 2013/05/02 17:00:13 chithanh Exp $
+
+  02 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Mask r600-llvm-compiler on arm
 
   29 Apr 2013; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   masked mkl for media-gfx/povray

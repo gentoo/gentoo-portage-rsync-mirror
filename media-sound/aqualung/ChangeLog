@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aqualung
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.28 2013/01/20 10:05:03 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.29 2013/05/02 16:35:04 billie Exp $
+
+  02 May 2013; Daniel Pielmeier <billie@gentoo.org>
+  aqualung-0.9_beta11-r2.ebuild,
+  +files/aqualung-0.9_beta11-automake-1.13.patch:
+  Fix building with automake-1.13. Thanks to Ulenrich in bug #468214.
 
   20 Jan 2013; Daniel Pielmeier <billie@gentoo.org>
   aqualung-0.9_beta11-r1.ebuild, aqualung-0.9_beta11-r2.ebuild:

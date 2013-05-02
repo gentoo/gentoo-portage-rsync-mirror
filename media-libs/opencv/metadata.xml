@@ -15,10 +15,7 @@ Face Recognition; Gesture Recognition; Motion Tracking, Ego Motion, Motion Under
 	<flag name="cuda">Enable NVIDIA Cuda computations support</flag>
 	<flag name="eigen">Enable usage of <pkg>dev-cpp/eigen</pkg> for computations</flag>
 	<flag name="ipp">Enable Intel Integrated Primitive support</flag>
-	<flag name="sse3">Enable optimization for SSE3 capable chips</flag>
-	<flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
 	<flag name="opencl">Add support for OpenCL</flag>
-	<flag name="tbb">Add support for the Intel threadingbuildingblocks library</flag>
 	<flag name="testprograms">Build and install programs for testing OpenCV (performance)</flag>
 </use>
 </pkgmetadata>
