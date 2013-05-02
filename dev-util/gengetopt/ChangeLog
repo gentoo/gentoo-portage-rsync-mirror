@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gengetopt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gengetopt/ChangeLog,v 1.1 2012/11/24 13:11:04 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gengetopt/ChangeLog,v 1.2 2013/05/02 03:56:39 patrick Exp $
+
+  02 May 2013; Patrick Lauer <patrick@gentoo.org> gengetopt-2.22.6.ebuild:
+  Automake 1.13 fix
 
 *gengetopt-2.22.6 (24 Nov 2012)
 
@@ -9,4 +12,3 @@
   +files/gengetopt-2.22.6-makefile.patch,
   +files/gengetopt-2.22.6-no-docs.patch, +metadata.xml:
   Initial import, ebuild by me (bug #115541).
-
