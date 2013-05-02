@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hddled/hddled-0.2.ebuild,v 1.2 2012/04/16 13:19:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hddled/hddled-0.3.ebuild,v 1.1 2013/05/02 10:42:20 ulm Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs
 
 DESCRIPTION="Show hard disk activity using the scroll lock LED"
 HOMEPAGE="http://members.optusnet.com.au/foonly/whirlpool/code/"
-SRC_URI="http://xmw.de/mirror/${PN}/${P}.c"
+SRC_URI="mirror://gentoo/${P}.c.xz"
 
-LICENSE="as-is"
+LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X"
@@ -21,7 +21,8 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 src_unpack() {
-	cp -v "${DISTDIR}"/${A} ${PN}.c || die
+	unpack ${A}
+	mv ${P}.c ${PN}.c || die
 }
 
 src_compile() {

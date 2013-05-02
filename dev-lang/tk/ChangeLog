@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.194 2013/03/01 12:52:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.195 2013/05/02 10:37:42 jlec Exp $
+
+*tk-8.5.14 (02 May 2013)
+
+  02 May 2013; Justin Lecher <jlec@gentoo.org> +tk-8.5.14.ebuild,
+  +files/tk-8.5.14-conf.patch:
+  Version Bump, thanks Arfrever reminding me
 
   01 Mar 2013; Justin Lecher <jlec@gentoo.org> -tk-8.5.10-r1.ebuild:
   Drop old
