@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.37 2013/02/23 10:45:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.38 2013/05/01 23:26:22 dilfridge Exp $
+
+*tbb-4.1.20130116-r1 (01 May 2013)
+
+  01 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +tbb-4.1.20130116-r1.ebuild:
+  Try to fix bug 462130, where arch is mis-detected based on kernel
 
   23 Feb 2013; Justin Lecher <jlec@gentoo.org> -tbb-4.0.297.ebuild,
   metadata.xml:
