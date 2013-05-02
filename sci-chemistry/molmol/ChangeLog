@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.33 2013/01/27 14:41:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.34 2013/05/02 10:17:43 jlec Exp $
+
+*molmol-2k_p2-r4 (02 May 2013)
+
+  02 May 2013; Justin Lecher <jlec@gentoo.org> +molmol-2k_p2-r4.ebuild:
+  Respect AR, #468178
 
   27 Jan 2013; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r2.ebuild,
   molmol-2k_p2-r3.ebuild, metadata.xml:
