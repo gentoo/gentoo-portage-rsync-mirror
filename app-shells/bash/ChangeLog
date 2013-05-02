@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.333 2013/05/02 01:41:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.334 2013/05/02 11:34:04 ago Exp $
+
+  02 May 2013; Agostino Sarubbo <ago@gentoo.org> bash-4.2_p45.ebuild:
+  Stable for amd64, wrt bug #467184
 
   02 May 2013; Mike Frysinger <vapier@gentoo.org> files/bashrc:
   Handle all Eterm/screen TERM variants #359389 by Christian Birchinger.
