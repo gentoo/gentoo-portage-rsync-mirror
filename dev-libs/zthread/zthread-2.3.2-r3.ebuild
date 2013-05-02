@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r3.ebuild,v 1.1 2013/02/19 10:13:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r3.ebuild,v 1.2 2013/05/02 04:13:53 ssuominen Exp $
 
 EAPI="5"
 
@@ -29,6 +29,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-m4-quote.patch \
 		"${FILESDIR}"/${P}-automake-r2.patch \
 		"${FILESDIR}"/${P}-gcc47.patch
+
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467778
 
 	AT_M4DIR="share" eautoreconf
 }

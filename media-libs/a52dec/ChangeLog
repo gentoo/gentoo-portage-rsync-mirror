@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/a52dec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.66 2012/05/17 13:55:59 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.67 2013/05/02 04:09:12 ssuominen Exp $
+
+  02 May 2013; Samuli Suominen <ssuominen@gentoo.org> a52dec-0.7.4-r6.ebuild:
+  Fix automake-1.13 compability wrt #466978 by Alphat-PC and Thomas. Remove
+  unnecessary epunt_cxx call (unnecessary when eautoreconf is executed to
+  modernize files)
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> a52dec-0.7.4-r6.ebuild:
   keyword ~amd64-fbsd

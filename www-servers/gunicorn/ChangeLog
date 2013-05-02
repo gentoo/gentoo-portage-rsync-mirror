@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.30 2013/03/26 11:42:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.31 2013/05/02 04:05:08 rafaelmartins Exp $
+
+*gunicorn-0.17.4 (02 May 2013)
+
+  02 May 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -gunicorn-0.13.4.ebuild, -gunicorn-0.14.6.ebuild, -gunicorn-0.15.0.ebuild,
+  -gunicorn-0.16.1.ebuild, +gunicorn-0.17.4.ebuild, metadata.xml:
+  Version bump. Remove old. Removed proxy-maint.
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gunicorn-0.17.2.ebuild:
   Stable for x86, wrt bug #463154
