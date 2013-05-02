@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-9999.ebuild,v 1.3 2013/02/19 01:41:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-9999.ebuild,v 1.4 2013/05/02 17:28:35 vapier Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ DEPEND="aio? ( >=dev-libs/libaio-0.3.106 )
 RDEPEND=""
 
 src_prepare() {
-	if [[ ! -e configure ]] ; then
+	if epatch_user || [[ ! -e configure ]] ; then
 		# git generation
 		eautoreconf
 		[[ ! -e CREDITS ]] && cp CREDITS{.in,}
