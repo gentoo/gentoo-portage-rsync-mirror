@@ -1,6 +1,9 @@
-# ChangeLog for app-leechcraft/leechraft-meta
+# ChangeLog for app-leechcraft/leechcraft-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.1 2013/03/09 19:33:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.2 2013/05/02 14:30:29 pinkbyte Exp $
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org> leechcraft-meta-9999.ebuild:
+  Add lc-gmailnotifier, lc-nacheku and lc-kbswitch
 
 *leechraft-meta-9999 (08 Mar 2013)
 *leechraft-meta-0.5.90-r1 (08 Mar 2013)

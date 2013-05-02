@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.1 2013/03/09 19:33:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.2 2013/05/02 14:30:29 pinkbyte Exp $
 
 EAPI="4"
 
@@ -58,5 +58,8 @@ RDEPEND="
 		~app-leechcraft/lc-pogooglue-${PV}
 		~app-leechcraft/lc-seekthru-${PV}
 		~app-leechcraft/lc-tpi-${PV}
+		~app-leechcraft/lc-gmailnotifier-${PV}
+		~app-leechcraft/lc-nacheku-${PV}
+		~app-leechcraft/lc-kbswitch-${PV}
 		"
 DEPEND=""
