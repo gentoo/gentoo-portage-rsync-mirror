@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.06.ebuild,v 1.2 2012/08/13 17:45:27 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.06.ebuild,v 1.3 2013/05/02 02:03:32 tgurr Exp $
 
 EAPI=4
 
@@ -119,6 +119,9 @@ src_prepare() {
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
 		-e 's:-L$(BINDIR):$(LDFLAGS) &:g' \
 		base/Makefile.in base/*.mak || die "sed failed"
+
+	# bug 467100
+	sed -i -e '/AM_PROG_CC_STDC/d' ijs/configure.ac || die "sed failed"
 
 	cd "${S}"
 	eautoreconf
