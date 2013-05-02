@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mimeparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.5 2013/05/02 10:37:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.6 2013/05/02 12:36:31 jer Exp $
+
+  02 May 2013; Jeroen Roovers <jer@gentoo.org> mimeparse-0.1.3-r1.ebuild:
+  Marked ~hppa (bug #468268).
 
   02 May 2013; Ian Delaney <idella4@gentoo.org> mimeparse-0.1.3-r1.ebuild:
   Elected to add py3.1 support for long term benefit of aligning with

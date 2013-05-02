@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.135 2013/04/10 20:21:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.136 2013/05/02 12:50:30 mgorny Exp $
+
+*audiofile-0.3.6-r1 (02 May 2013)
+
+  02 May 2013; Michał Górny <mgorny@gentoo.org> +audiofile-0.3.6-r1.ebuild:
+  Introduce multilib support wrt bug #464704.
 
   10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> audiofile-0.3.5.ebuild:
   Stable for hppa, wrt bug #458984
