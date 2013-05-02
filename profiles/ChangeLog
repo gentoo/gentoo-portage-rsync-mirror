@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7792 2013/05/01 21:13:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7793 2013/05/02 04:31:58 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 May 2013; Ian Delaney <idella4@gentoo.org> package.mask:
+  unmask celery-3.0.19
 
   01 May 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask new multilib libvorbis & flac.
