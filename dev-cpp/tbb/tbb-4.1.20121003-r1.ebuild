@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20121003.ebuild,v 1.6 2013/02/22 17:26:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20121003-r1.ebuild,v 1.1 2013/05/02 15:58:05 dilfridge Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib versionator toolchain-funcs
@@ -38,6 +38,16 @@ src_prepare() {
 		-e 's/-O2/$(CXXFLAGS)/g' \
 		-e "/^ASM/s/as/$(tc-getAS)/g" \
 		build/*.gcc.inc || die
+
+	# force 64bit where applicable, 32bit where applicable... 
+	# built-in detection is based on running kernel, which messes up
+	# e.g. in a x86 chroot on amd64 kernel. Bug 462130
+	# see build/linux.inc for values
+	use amd64 && export arch=x86_64
+	use amd64-linux && export arch=x86_64
+	use x86 && export arch=ia32
+	use x86-linux && export arch=ia32
+	# no idea what to do with ppc but so far it seems to work
 
 	find include -name \*.html -delete || die
 

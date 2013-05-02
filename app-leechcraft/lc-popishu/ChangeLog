@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-popishu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-popishu/ChangeLog,v 1.1 2013/03/08 22:04:52 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-popishu/ChangeLog,v 1.2 2013/05/02 15:34:46 pinkbyte Exp $
+
+*lc-popishu-0.5.95 (02 May 2013)
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org> +lc-popishu-0.5.95.ebuild:
+  Bump app-leechcraft/lc-popishu to 0.5.95, thanks to 0xd34df00d
 
 *lc-popishu-9999 (08 Mar 2013)
 *lc-popishu-0.5.90 (08 Mar 2013)

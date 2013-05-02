@@ -1,6 +1,17 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.38 2013/05/01 23:26:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.40 2013/05/02 15:58:05 dilfridge Exp $
+
+*tbb-4.1.20121003-r1 (02 May 2013)
+
+  02 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +tbb-4.1.20121003-r1.ebuild, -tbb-4.1.20121003.ebuild:
+  Backport needs a revbump to take effect
+
+  02 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  tbb-4.1.20121003.ebuild, -tbb-4.1.20130116.ebuild,
+  tbb-4.1.20130116-r1.ebuild:
+  Backport build fix to stable (bug 462130), restore keywords, remove old
 
 *tbb-4.1.20130116-r1 (01 May 2013)
 

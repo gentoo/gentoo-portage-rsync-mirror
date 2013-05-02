@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14711 2013/05/02 13:41:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14712 2013/05/02 15:51:32 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -777,8 +777,7 @@ dev-ml/ocamlduce
 
 # Maxim Koltsov <maksbotan@gentoo.org> (19 Apr 2012)
 # Broken, masking by maintainer's request
-net-ftp/leechcraft-lcftp
-net-p2p/leechcraft-eiskaltdcpp
+app-leechcraft/lc-lcftp
 
 # Jeroen Roovers <jer@gentoo.org> (04 Apr 2012)
 # Alpha versions of dev-libs/libevent are considered unstable
