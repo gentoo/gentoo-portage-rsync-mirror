@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.27-r1.ebuild,v 1.2 2013/05/01 16:23:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.27-r1.ebuild,v 1.3 2013/05/02 00:15:14 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd udev
@@ -50,7 +50,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-
 	dodoc ChangeLog README TODO seq/*/README.*
 
 	newbin "${WORKDIR}"/alsa-driver-*/utils/alsa-info.sh alsa-info
@@ -62,6 +61,11 @@ src_install() {
 	newins "${FILESDIR}"/alsa-modules.conf-rc alsa.conf
 
 	keepdir /var/lib/alsa
+
+	# ALSA lib parser.c:1266:(uc_mgr_scan_master_configs) error: could not
+	# scan directory /usr/share/alsa/ucm: No such file or directory
+	# alsaucm: unable to obtain card list: No such file or directory
+	keepdir /usr/share/alsa/ucm
 }
 
 pkg_postinst() {
