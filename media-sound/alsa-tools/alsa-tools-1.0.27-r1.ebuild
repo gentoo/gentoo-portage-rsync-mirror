@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.27.ebuild,v 1.2 2013/05/01 16:25:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.27-r1.ebuild,v 1.2 2013/05/02 01:11:23 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -26,14 +26,19 @@ ${ECHOAUDIO_CARDS}"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
 	>=dev-python/pyalsa-1.0.26
-	fltk? ( >=x11-libs/fltk-1.1.10-r2:1 )
-	gtk? ( x11-libs/gtk+:2 )"
-DEPEND="${RDEPEND}"
+	fltk? ( >=x11-libs/fltk-1.3.0:1 )
+	gtk? (
+		x11-libs/gtk+:2
+		x11-libs/gtk+:3
+		)"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 pkg_setup() {
-	ALSA_TOOLS="seq/sbiload us428control hwmixvolume"
+	ALSA_TOOLS="seq/sbiload us428control hwmixvolume hda-verb"
 
 	if use gtk; then
+		ALSA_TOOLS="${ALSA_TOOLS} hdajackretask"
 		use alsa_cards_ice1712 && \
 			ALSA_TOOLS="${ALSA_TOOLS} envy24control"
 		use alsa_cards_rme32 && use alsa_cards_rme96 && \
