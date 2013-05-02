@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/flam3/flam3-3.0.1.ebuild,v 1.3 2011/10/08 16:51:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/flam3/flam3-3.0.1.ebuild,v 1.4 2013/05/02 03:25:24 patrick Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -26,6 +26,7 @@ DOCS=( README.txt )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng15.patch
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in || die
 	eautoreconf
 }
 

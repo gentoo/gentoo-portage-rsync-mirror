@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/flam3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/flam3/ChangeLog,v 1.14 2011/10/23 19:55:10 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/flam3/ChangeLog,v 1.15 2013/05/02 03:25:24 patrick Exp $
+
+  02 May 2013; Patrick Lauer <patrick@gentoo.org> flam3-3.0.1.ebuild,
+  flam3-9999.ebuild:
+  Automake 1.13 fix #468134
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -flam3-2.7.18-r1.ebuild,
   -flam3-3.0.ebuild:
@@ -77,4 +81,3 @@
   11 Sep 2008; David Bitseff (useer) <dbitsef@zipcon.net>
   +flam3-2.7.16.ebuild, +metadata.xml:
   New ebuild for bug #237107
-
