@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rackspace-novaclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-novaclient/ChangeLog,v 1.1 2013/03/04 20:33:07 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-novaclient/ChangeLog,v 1.2 2013/05/02 00:53:04 floppym Exp $
+
+  02 May 2013; Mike Gilbert <floppym@gentoo.org>
+  rackspace-novaclient-1.2.ebuild, rackspace-novaclient-9999.ebuild:
+  Create BUILD_DIR in python_prepare since setup.py build does nothing.
 
 *rackspace-novaclient-9999 (04 Mar 2013)
 *rackspace-novaclient-1.2 (04 Mar 2013)
@@ -9,4 +13,3 @@
   +rackspace-novaclient-1.2.ebuild, +rackspace-novaclient-9999.ebuild,
   +metadata.xml:
   initial add of rackspace-novaclient
-
