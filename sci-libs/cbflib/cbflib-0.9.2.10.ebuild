@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.2.10.ebuild,v 1.1 2013/03/12 13:00:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.2.10.ebuild,v 1.2 2013/05/02 12:24:17 jlec Exp $
 
 EAPI=5
 
@@ -25,6 +25,9 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 S=${WORKDIR}/${MY_P1}
+
+RDEPEND="sci-libs/hdf5"
+DEPEND="${RDEPEND}"
 
 RESTRICT="test"
 

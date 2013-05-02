@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.19.6.ebuild,v 1.1 2013/05/01 16:38:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.19.6.ebuild,v 1.3 2013/05/02 12:03:57 ago Exp $
 
 EAPI=5
 inherit webapp versionator
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mediawiki.org"
 SRC_URI="http://download.wikimedia.org/mediawiki/${MY_BRANCH}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE="imagemagick mysql postgres sqlite"
 
 RDEPEND=">=dev-lang/php-5.3[mysql?,postgres?,session,xml,xmlreader]

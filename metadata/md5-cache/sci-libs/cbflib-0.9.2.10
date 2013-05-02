@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile install prepare setup test
-DEPEND=virtual/fortran
+DEPEND=sci-libs/hdf5 virtual/fortran
 DESCRIPTION=Library providing a simple mechanism for accessing CBF files and imgCIF files
 EAPI=5
 HOMEPAGE=http://www.bernstein-plus-sons.com/software/CBF/
 IUSE=doc test
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
-RDEPEND=virtual/fortran
+RDEPEND=sci-libs/hdf5 virtual/fortran
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/cbflib/CBFlib-0.9.2.10.tar.gz
 _eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	fortran-2	ea80967500d9deda5468aed13b0bfca8	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=1d0c9d469365048aff55960df85c44b6
+_md5_=8a281ea6deb25e81ef8b5da379227e25
