@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r12.ebuild,v 1.11 2013/04/22 17:11:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r12.ebuild,v 1.12 2013/05/02 07:47:35 grobian Exp $
 
 EAPI="3"
 
@@ -104,6 +104,9 @@ src_prepare() {
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}${upatches}"')"/' \
 		muttlib.c || die "failed patching in Gentoo version"
+
+	# automake-1.13, #467822
+	sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac || die
 
 	# many patches touch the buildsystem, we always need this
 	AT_M4DIR="m4" eautoreconf

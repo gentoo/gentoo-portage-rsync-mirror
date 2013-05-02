@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.36.1.ebuild,v 1.1 2013/05/01 17:53:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.36.2.ebuild,v 1.1 2013/05/02 07:57:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
