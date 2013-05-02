@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinxcontrib-issuetracker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-issuetracker/ChangeLog,v 1.16 2013/04/30 09:44:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-issuetracker/ChangeLog,v 1.17 2013/05/02 20:21:06 johu Exp $
+
+  02 May 2013; Johannes Huber <johu@gentoo.org>
+  -sphinxcontrib-issuetracker-0.10.1.ebuild:
+  Remove old.
 
   30 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   sphinxcontrib-issuetracker-0.11.ebuild:

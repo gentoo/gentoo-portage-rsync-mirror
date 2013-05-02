@@ -1,0 +1,8 @@
+# ChangeLog for media-gfx/pycam
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pycam/ChangeLog,v 1.1 2013/05/02 20:25:39 slis Exp $
+
+*pycam-0.5.1 (02 May 2013)
+
+  02 May 2013; Sławek Lis <slis@gentoo.org> +metadata.xml, +pycam-0.5.1.ebuild:
+  Added PyCAM package
