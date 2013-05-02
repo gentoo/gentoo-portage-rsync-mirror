@@ -1,6 +1,12 @@
 # ChangeLog for virtual/leechcraft-notifier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-notifier/ChangeLog,v 1.1 2013/04/30 08:24:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-notifier/ChangeLog,v 1.2 2013/05/02 15:09:57 pinkbyte Exp $
+
+*leechcraft-notifier-0.5.95 (02 May 2013)
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-notifier-0.5.95.ebuild:
+  Bump virtual/leechcraft-notifier to 0.5.95, thanks to 0xd34df00d
 
 *leechcraft-notifier-9999 (30 Apr 2013)
 

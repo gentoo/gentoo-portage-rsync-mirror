@@ -1,6 +1,12 @@
 # ChangeLog for app-leechcraft/lc-gmailnotifier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-gmailnotifier/ChangeLog,v 1.1 2013/05/01 08:09:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-gmailnotifier/ChangeLog,v 1.2 2013/05/02 15:29:00 pinkbyte Exp $
+
+*lc-gmailnotifier-0.5.95 (02 May 2013)
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +lc-gmailnotifier-0.5.95.ebuild:
+  Bump app-leechcraft/lc-gmailnotifier to 0.5.95, thanks to 0xd34df00d
 
 *lc-gmailnotifier-9999 (01 May 2013)
 

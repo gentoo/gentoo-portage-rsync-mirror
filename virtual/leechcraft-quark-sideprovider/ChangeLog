@@ -1,6 +1,12 @@
 # ChangeLog for virtual/leechcraft-quark-sideprovider
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-quark-sideprovider/ChangeLog,v 1.5 2013/03/09 07:03:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-quark-sideprovider/ChangeLog,v 1.6 2013/05/02 15:10:10 pinkbyte Exp $
+
+*leechcraft-quark-sideprovider-0.5.95 (02 May 2013)
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-quark-sideprovider-0.5.95.ebuild:
+  Bump virtual/leechcraft-quark-sideprovider to 0.5.95, thanks to 0xd34df00d
 
   09 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org>
   leechcraft-quark-sideprovider-0.5.90.ebuild,

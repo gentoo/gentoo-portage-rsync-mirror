@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-auscrie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-auscrie/ChangeLog,v 1.1 2013/03/08 21:55:06 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-auscrie/ChangeLog,v 1.2 2013/05/02 15:26:31 pinkbyte Exp $
+
+*lc-auscrie-0.5.95 (02 May 2013)
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org> +lc-auscrie-0.5.95.ebuild:
+  Bump app-leechcraft/lc-auscrie to 0.5.95, thanks to 0xd34df00d
 
 *lc-auscrie-9999 (08 Mar 2013)
 *lc-auscrie-0.5.90 (08 Mar 2013)

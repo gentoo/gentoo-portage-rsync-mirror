@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-gacts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-gacts/ChangeLog,v 1.1 2013/03/08 21:57:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-gacts/ChangeLog,v 1.2 2013/05/02 15:28:34 pinkbyte Exp $
+
+*lc-gacts-0.5.95 (02 May 2013)
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org> +lc-gacts-0.5.95.ebuild:
+  Bump app-leechcraft/lc-gacts to 0.5.95, thanks to 0xd34df00d
 
 *lc-gacts-9999 (08 Mar 2013)
 *lc-gacts-0.5.90 (08 Mar 2013)

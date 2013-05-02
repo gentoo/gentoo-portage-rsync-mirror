@@ -1,6 +1,12 @@
 # ChangeLog for virtual/leechcraft-browser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.21 2013/03/09 07:02:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.22 2013/05/02 15:09:30 pinkbyte Exp $
+
+*leechcraft-browser-0.5.95 (02 May 2013)
+
+  02 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-browser-0.5.95.ebuild:
+  Bump virtual/leechcraft-browser to 0.5.95, thanks to 0xd34df00d
 
   09 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org>
   leechcraft-browser-0.5.85.ebuild, leechcraft-browser-0.5.90.ebuild,
