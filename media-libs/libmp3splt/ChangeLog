@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmp3splt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.33 2013/05/01 20:52:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.34 2013/05/03 00:11:47 sping Exp $
+
+  03 May 2013; Sebastian Pipping <sping@gentoo.org> libmp3splt-0.8.2.ebuild,
+  +files/libmp3splt-0.8.2-automake-1.13.patch:
+  Fix build with automake 1.13 (bug #468242), patch by upstream
 
 *libmp3splt-0.8.2 (01 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.1.ebuild,v 1.2 2013/04/18 20:11:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.1.ebuild,v 1.3 2013/05/03 00:27:33 zmedico Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -24,14 +24,14 @@ RDEPEND="
 	>=net-libs/glib-networking-2.30.0[ssl?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	samba? ( net-fs/samba )
+	!net-libs/libsoup-gnome
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	>=dev-util/intltool-0.35
 	>=dev-util/gtk-doc-am-1.10
 	sys-devel/gettext
-	virtual/pkgconfig
-	!net-libs/libsoup-gnome"
+	virtual/pkgconfig"
 #	test? (	www-servers/apache[ssl,apache2_modules_auth_digest,apache2_modules_alias,apache2_modules_auth_basic,
 #		apache2_modules_authn_file,apache2_modules_authz_host,apache2_modules_authz_user,apache2_modules_dir,
 #		apache2_modules_mime,apache2_modules_proxy,apache2_modules_proxy_http,apache2_modules_proxy_connect]

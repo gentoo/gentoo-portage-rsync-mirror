@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.8.2.ebuild,v 1.1 2013/05/01 20:52:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.8.2.ebuild,v 1.2 2013/05/03 00:11:47 sping Exp $
 
 EAPI=4
 inherit versionator autotools eutils multilib
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7-libltdl.patch
+	epatch "${FILESDIR}"/${P}-automake-1.13.patch
 	eautoreconf
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.306 2013/04/25 19:25:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.307 2013/05/03 00:27:33 zmedico Exp $
+
+  03 May 2013; Zac Medico <zmedico@gentoo.org> libsoup-2.42.1.ebuild,
+  libsoup-2.42.2.ebuild:
+  Move libsoup-gnome blocker to RDEPEND for file collisions reported in bug
+  #468274.
 
 *libsoup-2.42.2 (25 Apr 2013)
 
