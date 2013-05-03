@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.106 2013/04/23 09:18:27 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.107 2013/05/03 12:35:36 keri Exp $
+
+  03 May 2013; <keri@gentoo.org> mercury-extras-11.07.2.ebuild:
+  Do not install lex module for non-C grades
 
   23 Apr 2013; <keri@gentoo.org> mercury-extras-11.07.2.ebuild:
   Do not build lex modules for non-C grades

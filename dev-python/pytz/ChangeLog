@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.133 2013/01/13 21:27:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.135 2013/05/03 12:33:23 djc Exp $
+
+*pytz-2013b (03 May 2013)
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> +pytz-2013b.ebuild:
+  Version bump pytz to 2013b.
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> -pytz-2011e.ebuild,
+  -pytz-2012d.ebuild, -pytz-2012f.ebuild, -pytz-2012g.ebuild,
+  -pytz-2012h-r1.ebuild, -pytz-2012h.ebuild:
+  Remove old versions of pytz.
 
   13 Jan 2013; Michał Górny <mgorny@gentoo.org> pytz-2012j.ebuild:
   Enable pypy2.0.

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.07.2.ebuild,v 1.3 2013/04/23 09:18:27 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.07.2.ebuild,v 1.4 2013/05/03 12:35:36 keri Exp $
 
 EAPI=2
 
 inherit eutils multilib
 
-PATCHSET_VER="2"
+PATCHSET_VER="3"
 MY_P=${PN}-${PV}
 
 DESCRIPTION="Additional libraries and tools that are not part of the Mercury standard library"
