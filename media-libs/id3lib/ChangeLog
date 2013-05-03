@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/id3lib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.80 2012/03/22 12:33:36 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.81 2013/05/03 17:33:56 jlec Exp $
+
+*id3lib-3.8.3-r9 (03 May 2013)
+
+  03 May 2013; Justin Lecher <jlec@gentoo.org> +id3lib-3.8.3-r9.ebuild,
+  metadata.xml:
+  Fix obsolete macros to work with automake-1.13, #467704; bumped to EAPI=5 and
+  autotools-utils.eclass
 
   22 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> id3lib-3.8.3-r8.ebuild:
   USE="static-libs" and remove libid3.la when it's disabled.

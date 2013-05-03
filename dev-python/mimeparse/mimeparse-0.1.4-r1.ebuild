@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/mimeparse-0.1.4.ebuild,v 1.2 2013/05/03 01:08:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/mimeparse-0.1.4-r1.ebuild,v 1.1 2013/05/03 17:42:31 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
@@ -23,4 +23,19 @@ S="${WORKDIR}/${MY_P}"
 
 python_test() {
 	"${PYTHON}" mimeparse_test.py || die "Tests fail with ${EPYTHON}"
+}
+
+python_install() {
+	distutils-r1_python_install
+
+	if [[ ${EPYTHON} == pypy* ]]; then
+		local pyver=2.7
+	else
+		local pyver=${EPYTHON#python}
+	fi
+	python_export PYTHON_SITEDIR
+
+	# Previous versions were just called 'mimeparse'
+	cp "${D%/}${PYTHON_SITEDIR}/python_mimeparse-${PV}-py${pyver}.egg-info" \
+		"${D%/}${PYTHON_SITEDIR}/mimeparse-${PV}-py${pyver}.egg-info" || die
 }
