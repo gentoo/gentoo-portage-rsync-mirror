@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14716 2013/05/03 14:22:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14717 2013/05/03 14:45:00 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -410,7 +410,7 @@ dev-libs/dvutil
 # Waiting for new emul-linux-x86-{media,sound}libs without
 # the duplicate files.
 >=media-libs/audiofile-0.3.6-r1
->=media-libs/alsa-lib-1.0.27-r1
+>=media-libs/alsa-lib-1.0.27-r3
 >=media-libs/flac-1.2.1-r5
 >=media-libs/libmikmod-3.2.0-r1
 >=media-libs/libv4l-0.8.9-r1

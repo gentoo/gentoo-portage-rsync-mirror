@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=python? ( python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 ) >=media-sound/alsa-headers-1.0.25-r1 doc? ( >=app-doc/doxygen-1.2.6 ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Advanced Linux Sound Architecture Library
+EAPI=5
+HOMEPAGE=http://www.alsa-project.org/
+IUSE=doc debug alisp python abi_x86_32 abi_x86_64 abi_x86_x32 python_targets_python2_7 python_single_target_python2_7
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux
+LICENSE=LGPL-2.1
+RDEPEND=python? ( python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )
+SLOT=0
+SRC_URI=mirror://alsaproject/lib/alsa-lib-1.0.27.tar.bz2
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	384ae111f3649d456ed1754e3e1c4f6e	libtool	2b273eea1976cfaed3449345d94331ac	multibuild	32fd04fe3ee97494341710886fd70dfe	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	64d8186c893b4ba109fe29c632a72a58	multilib-minimal	17ae39785bd22c9cf6159d6f11f87a04	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-single-r1	b4f112abff5d77f982f83e1a9e554093	python-utils-r1	345dcecf1ef156d1d86a98f16d3c385c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d53cb06768a6ae778106bc57391e2baa
