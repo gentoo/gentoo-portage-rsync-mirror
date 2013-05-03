@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0-r1.ebuild,v 1.1 2013/03/16 10:49:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0-r1.ebuild,v 1.2 2013/05/03 14:28:34 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -25,6 +25,7 @@ ECONF_SOURCE=${S}
 
 src_prepare() {
 	EPATCH_SOURCE="${FILESDIR}"/${PV} EPATCH_SUFFIX=patch epatch
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.in || die #468212
 	eautoreconf
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.288 2013/04/10 20:21:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.290 2013/05/03 14:26:01 ssuominen Exp $
+
+  03 May 2013; Samuli Suominen <ssuominen@gentoo.org> -pygtk-2.24.0-r2.ebuild:
+  old
+
+  03 May 2013; Samuli Suominen <ssuominen@gentoo.org> pygtk-2.24.0-r3.ebuild:
+  Use AC_CONFIG_HEADERS instead of AM_CONFIG_HEADER for automake-1.13
+  compability wrt #466968 by Alphat-PC
 
   10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pygtk-2.24.0-r3.ebuild:
   Stable for hppa, wrt bug #458984

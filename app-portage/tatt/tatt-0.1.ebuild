@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-0.1.ebuild,v 1.1 2013/04/23 12:07:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-0.1.ebuild,v 1.2 2013/05/03 14:06:36 tomka Exp $
 
 EAPI=5
 
@@ -24,7 +24,9 @@ RDEPEND="
 	app-portage/gentoolkit
 	www-client/pybugz
 	dev-python/configobj"
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_install_all() {
 	distutils-r1_python_install_all

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.106 2013/03/16 10:57:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.107 2013/05/03 14:28:34 ssuominen Exp $
+
+  03 May 2013; Samuli Suominen <ssuominen@gentoo.org> libmikmod-3.2.0.ebuild,
+  libmikmod-3.2.0-r1.ebuild:
+  Use AC_CONFIG_HEADERS instead of AM_CONFIG_HEADER for automake-1.13
+  compability wrt #468212 by Ulenrich
 
   16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove unused USE description "raw" (raw file format)

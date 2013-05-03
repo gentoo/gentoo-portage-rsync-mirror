@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r3.ebuild,v 1.11 2013/04/10 20:21:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r3.ebuild,v 1.12 2013/05/03 14:23:59 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -42,6 +42,8 @@ src_prepare() {
 	# Examples is handled "manually"
 	sed -e 's/\(SUBDIRS = .* \)examples/\1/' \
 		-i Makefile.am Makefile.in || die
+
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #466968
 
 	AT_M4DIR="m4" eautoreconf
 
