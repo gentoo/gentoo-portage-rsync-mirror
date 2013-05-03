@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.584 2013/04/20 04:12:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.585 2013/05/03 06:01:27 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1496,7 +1496,11 @@ toolchain_src_install() {
 	# Copy over the info pages.  We disabled their generation earlier, but the
 	# build system only expects to install out of the build dir, not the source.  #464008
 	mkdir -p gcc/doc
-	cp "${S}"/gcc/doc/*.info* gcc/doc/ || die
+	for x in "${S}"/gcc/doc/*.info* ; do
+		if [[ -f ${x} ]] ; then
+			cp "${x}" gcc/doc/ || die
+		fi
+	done
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
 	while read x ; do
