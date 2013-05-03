@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.334 2013/05/02 11:34:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.335 2013/05/03 09:43:20 pinkbyte Exp $
+
+  03 May 2013; Sergey Popov <pinkbyte@gentoo.org> bash-4.2_p45.ebuild:
+  Stable for arm, wrt bug #467184
 
   02 May 2013; Agostino Sarubbo <ago@gentoo.org> bash-4.2_p45.ebuild:
   Stable for amd64, wrt bug #467184
