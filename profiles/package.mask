@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14713 2013/05/02 19:28:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14714 2013/05/03 13:11:23 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -119,11 +119,6 @@ net-im/ktp-presence-applet
 # Pacho Ramos <pacho@gentoo.org> (11 Apr 2013)
 # Breaks reverse deps, bug #464994
 =dev-cpp/gtkmm-2.24.3
-
-# Jeroen Roovers <jer@gentoo.org> (10 Apr 2013)
-# Mask beta Nvidia driver because of severe instability
-# Please report any usage issues upstream (bug #465462)
->x11-drivers/nvidia-drivers-319
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Apr 2013)
 # Broken. Should be bumped to 0.13.0 but needs a dedicated

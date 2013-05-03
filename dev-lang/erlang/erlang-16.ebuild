@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-15.2.3.1.ebuild,v 1.5 2013/05/03 13:22:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.ebuild,v 1.1 2013/05/03 13:18:48 djc Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -15,21 +15,20 @@ inherit elisp-common eutils java-pkg-opt-2 multilib versionator wxwidgets
 # make it more sane (see e.g. #26420)
 
 # the next line selects the right source.
-ERL_VER=($(get_version_components))
-MY_PV="R$(get_major_version)B0${ERL_VER[2]}"
+MY_PV="R16B"
 
 # ATTN!! Take care when processing the C, etc version!
 MY_P=otp_src_${MY_PV}
 
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"
 HOMEPAGE="http://www.erlang.org/"
-SRC_URI="http://www.erlang.org/download/${MY_P}-${ERL_VER[3]}.tar.gz
-	http://erlang.org/download/otp_doc_man_${MY_PV}-${ERL_VER[3]}.tar.gz
-	doc? ( http://erlang.org/download/otp_doc_html_${MY_PV}-${ERL_VER[3]}.tar.gz )"
+SRC_URI="http://www.erlang.org/download/otp_src_${MY_PV}.tar.gz
+	http://erlang.org/download/otp_doc_man_${MY_PV}.tar.gz
+	doc? ( http://erlang.org/download/otp_doc_html_${MY_PV}.tar.gz )"
 
 LICENSE="ErlPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris"
 IUSE="compat-ethread doc emacs halfword hipe java kpoll odbc smp sctp ssl tk wxwidgets"
 
 RDEPEND=">=dev-lang/perl-5.6.1
@@ -42,7 +41,7 @@ DEPEND="${RDEPEND}
 	sctp? ( net-misc/lksctp-tools )
 	tk? ( dev-lang/tk )"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/otp_src_${MY_PV}"
 
 SITEFILE=50${PN}-gentoo.el
 

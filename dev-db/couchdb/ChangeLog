@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.71 2013/05/03 11:46:22 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.72 2013/05/03 13:23:59 djc Exp $
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> couchdb-1.2.1.ebuild,
+  couchdb-1.3.0.ebuild, files/couchdb.conf-0.10, files/couchdb.init-3,
+  metadata.xml:
+  Restrict couchdb-1.3.0 to <erlang-16.
 
   03 May 2013; Dirkjan Ochtman <djc@gentoo.org> couchdb-1.2.1.ebuild,
   couchdb-1.3.0.ebuild, files/couchdb.conf-0.10, files/couchdb.init-3,

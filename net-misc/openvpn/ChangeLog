@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.252 2013/05/03 11:13:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.253 2013/05/03 13:24:59 ago Exp $
+
+  03 May 2013; Agostino Sarubbo <ago@gentoo.org> openvpn-2.3.0.ebuild:
+  Stable for ppc, wrt bug #468364
 
   03 May 2013; Agostino Sarubbo <ago@gentoo.org> openvpn-2.3.0.ebuild:
   Stable for x86, wrt bug #468364
