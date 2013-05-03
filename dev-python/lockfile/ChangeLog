@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lockfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.14 2013/05/02 05:25:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.15 2013/05/03 05:03:34 idella4 Exp $
+
+  03 May 2013; Ian Delaney <idella4@gentoo.org> +files/py3-support.patch,
+  lockfile-0.9.1-r1.ebuild:
+  on closer review dropped py2.5; added py3 support & matching patch prepared by
+  'solj' in Bug #464766, closes same Bug by 'solj'
 
 *lockfile-0.9.1-r1 (02 May 2013)
 
