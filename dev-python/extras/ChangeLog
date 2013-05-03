@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.2 2013/05/02 12:38:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.3 2013/05/03 20:21:55 pinkbyte Exp $
+
+  03 May 2013; Sergey Popov <pinkbyte@gentoo.org> extras-0.0.3.ebuild:
+  Add ~arm keyword, wrt bug #468270
 
   02 May 2013; Jeroen Roovers <jer@gentoo.org> extras-0.0.3.ebuild:
   Marked ~hppa (bug #468270).
