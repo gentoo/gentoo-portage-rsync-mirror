@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.114 2012/11/10 09:14:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.115 2013/05/03 18:19:24 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -22,8 +22,8 @@
 =sys-apps/coreutils-8.20
 
 # Benda Xu <heroxbd@gentoo.org> (07 Aug 2012)
-# mask new revision for testing out openrc. bug #415895. 
->=sys-apps/baselayout-prefix-1.12.14-r1
+# mask revision for testing out openrc. bug #415895. 
+=sys-apps/baselayout-prefix-1.12.14-r1
 
 # Fabian Groffen <grobian@gentoo.org> (01 Aug 2012)
 # Causes spurious errors due to considering some small files being

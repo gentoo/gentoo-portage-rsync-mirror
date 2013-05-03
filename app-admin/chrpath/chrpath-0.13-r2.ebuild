@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.11 2012/11/12 19:19:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.12 2013/05/03 18:14:51 grobian Exp $
 
 EAPI="2"
 
@@ -22,6 +22,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-testsuite-1.patch
 	# disable installing redundant docs in the wrong dir
 	sed -i -e '/doc_DATA/d' Makefile.am || die
+	# fix for automake-1.13, #467538
+	sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac || die
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.81 2013/05/03 17:33:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.82 2013/05/03 18:05:14 ssuominen Exp $
+
+  03 May 2013; Samuli Suominen <ssuominen@gentoo.org> id3lib-3.8.3-r8.ebuild,
+  -id3lib-3.8.3-r9.ebuild:
+  Revert unnecessary revision bump and autotools-utils.eclass port.
 
 *id3lib-3.8.3-r9 (03 May 2013)
 
