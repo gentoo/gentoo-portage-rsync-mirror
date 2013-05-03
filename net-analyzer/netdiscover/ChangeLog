@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netdiscover
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.12 2013/02/02 12:06:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.13 2013/05/03 15:07:14 jer Exp $
+
+  03 May 2013; Jeroen Roovers <jer@gentoo.org> -netdiscover-0.3_beta6-r2.ebuild,
+  netdiscover-0.3_beta6-r3.ebuild:
+  Fix building with automake-1.13 (bug #468368 by Aleksandr Yakimov).
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup up due #48914
