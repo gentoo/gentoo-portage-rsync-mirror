@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20071007-r4.ebuild,v 1.5 2012/05/29 15:45:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20071007-r4.ebuild,v 1.6 2013/05/03 15:35:03 ulm Exp $
 
 inherit multilib
 
@@ -16,7 +16,7 @@ RDEPEND="real? ( =virtual/libstdc++-3.3* )"
 
 S="${WORKDIR}/all-${PV}"
 
-RESTRICT="strip binchecks"
+RESTRICT="mirror strip binchecks"
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20071007.ebuild,v 1.3 2008/10/28 17:13:07 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/amd64codecs-20071007.ebuild,v 1.4 2013/05/03 15:35:52 ulm Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* amd64"
 S="${WORKDIR}/essential-amd64-${PV}"
-RESTRICT="strip"
+RESTRICT="mirror strip"
 IUSE=""
 
 src_install() {

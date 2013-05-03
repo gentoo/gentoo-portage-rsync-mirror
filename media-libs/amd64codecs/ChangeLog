@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amd64codecs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/ChangeLog,v 1.7 2008/10/28 17:13:07 beandog Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amd64codecs/ChangeLog,v 1.8 2013/05/03 15:35:52 ulm Exp $
+
+  03 May 2013; Ulrich Müller <ulm@gentoo.org> amd64codecs-20071007.ebuild:
+  Add mirror restriction, bug 441662.
 
   28 Oct 2008; Steve Dibb <beandog@gentoo.org> amd64codecs-20071007.ebuild:
   amd64 stable, bug 240706

@@ -5,8 +5,8 @@ IUSE=real
 KEYWORDS=-* ~amd64 x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-linux
 LICENSE=as-is
 RDEPEND=real? ( =virtual/libstdc++-3.3* )
-RESTRICT=strip binchecks
+RESTRICT=mirror strip binchecks
 SLOT=0
 SRC_URI=mirror://mplayer/releases/codecs/all-20071007.tar.bz2
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=8846147f9e453f73da1def9383f92fb3
+_md5_=c2d1220017346e0f3944103e595d7c36

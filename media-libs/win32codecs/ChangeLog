@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/win32codecs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.55 2012/05/29 15:45:01 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.56 2013/05/03 15:35:03 ulm Exp $
+
+  03 May 2013; Ulrich Müller <ulm@gentoo.org> win32codecs-20071007-r4.ebuild:
+  Add mirror restriction, bug 441656.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org>
   win32codecs-20071007-r4.ebuild:
