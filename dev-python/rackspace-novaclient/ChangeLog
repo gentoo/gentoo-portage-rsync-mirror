@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rackspace-novaclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-novaclient/ChangeLog,v 1.2 2013/05/02 00:53:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-novaclient/ChangeLog,v 1.3 2013/05/03 02:31:12 prometheanfire Exp $
+
+  03 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  rackspace-novaclient-1.2.ebuild, rackspace-novaclient-9999.ebuild:
+  rackspace-novaclient was moved from the rackspace github org to the rackerlabs
+  one
 
   02 May 2013; Mike Gilbert <floppym@gentoo.org>
   rackspace-novaclient-1.2.ebuild, rackspace-novaclient-9999.ebuild:
