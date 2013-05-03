@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.4.ebuild,v 1.11 2012/12/29 17:45:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.4.ebuild,v 1.12 2013/05/03 18:41:06 ssuominen Exp $
 
 EAPI=4
 
@@ -60,6 +60,8 @@ src_prepare() {
 		php-ext-source-r2_phpize
 		cd "${S}"
 	fi
+
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.in || die
 
 	autotools-utils_src_prepare
 }

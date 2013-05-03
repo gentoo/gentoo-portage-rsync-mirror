@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-2.1.532.ebuild,v 1.1 2013/04/29 20:15:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-2.1.532.ebuild,v 1.2 2013/05/03 19:00:22 grobian Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
@@ -15,7 +15,7 @@ HOMEPAGE="http://wiki.github.com/camping/camping"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 ruby_add_bdepend "test? ( dev-ruby/rack-test )"

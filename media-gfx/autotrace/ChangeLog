@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/autotrace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.56 2012/10/04 15:27:10 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.57 2013/05/03 18:45:11 ssuominen Exp $
+
+  03 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  autotrace-0.31.1-r6.ebuild:
+  Use AC_CONFIG_HEADERS instead of AM_CONFIG_HEADER for automake-1.13
+  compability wrt #468496 by Ulenrich
 
   04 Oct 2012; Samuli Suominen <ssuominen@gentoo.org>
   autotrace-0.31.1-r6.ebuild:
