@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.50 2013/04/02 20:51:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.51 2013/05/03 21:03:32 johu Exp $
+
+*kdebase-pam-9 (03 May 2013)
+
+  03 May 2013; Johannes Huber <johu@gentoo.org> +files/kde-np.pam-9,
+  +files/kde.pam-9, +kdebase-pam-9.ebuild:
+  Version bump, fixes bugs #422495, #436948. Thanks to all who were involved.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> kdebase-pam-7.ebuild:
   Stable for ppc64, wrt to bug #462890

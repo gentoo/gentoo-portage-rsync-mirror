@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxdm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.20 2012/08/14 17:39:47 vostorga Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.21 2013/05/03 21:02:01 lxnay Exp $
+
+*lxdm-0.4.1-r6 (03 May 2013)
+
+  03 May 2013; Fabio Erculiani <lxnay@gentoo.org> +lxdm-0.4.1-r6.ebuild,
+  +files/lxdm-0.4.1-pam-use-system-local-login.patch:
+  revision bump, fix pam module as per bug #422495. This makes pam_systemd.so
+  back working
 
   14 Aug 2012; Víctor Ostorga <vostorga@gentoo.org> lxdm-0.4.1-r5.ebuild,
   +files/lxdm-0.4.1-selinux-support.patch:

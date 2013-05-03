@@ -1,14 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-0.5.1.ebuild,v 1.2 2013/05/03 14:24:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-0.5.1.ebuild,v 1.3 2013/05/03 21:09:52 hasufell Exp $
 
 EAPI=5
 
 inherit eutils cmake-utils games
 
+MY_P=ValyriaTear-${PV}
+
 DESCRIPTION="A free 2D J-RPG based on the Hero of Allacrost engine"
 HOMEPAGE="http://valyriatear.blogspot.de/"
-SRC_URI="https://github.com/Bertram25/ValyriaTear/archive/${PV}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/valyriatear/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 GPL-2+ GPL-3 CC-BY-SA-3.0 CC-BY-3.0 CC0-1.0 OFL-1.1"
 SLOT="0"
@@ -39,7 +41,7 @@ DEPEND="${RDEPEND}
 	dev-libs/boost
 	nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/ValyriaTear-${PV}
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-{paths,libpng-1.6}.patch

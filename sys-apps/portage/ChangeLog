@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1260 2013/04/28 18:39:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1262 2013/05/03 21:09:58 zmedico Exp $
+
+*portage-2.2.0_alpha174 (03 May 2013)
+
+  03 May 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha174.ebuild:
+  2.2.0_alpha174 version bump. This includes all of the fixes in 2.1.11.63. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.63 (03 May 2013)
+
+  03 May 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.63.ebuild:
+  2.1.11.63 version bump. This fixes bug #364427 (RESTRICT=preserve-libs
+  support), bug #466116 (add repoman --include-arches option), bug #466844
+  (preserve SHELL variable setting by ebuilds), bug #467622 (ACCEPT_RESTRICT
+  support), bug #467886 (normalize slashes in ${D}/${D} QA message), and bug
+  #467896 (non-greedy library consumer search for @preserved-rebuild). Bug
+  #468524 tracks all bugs fixed since portage-2.1.11.62.
 
   28 Apr 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.11.55.ebuild,
   portage-2.1.6.7_p1.ebuild:
