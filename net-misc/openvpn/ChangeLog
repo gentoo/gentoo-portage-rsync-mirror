@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.250 2013/05/03 07:59:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.252 2013/05/03 11:13:08 ago Exp $
+
+  03 May 2013; Agostino Sarubbo <ago@gentoo.org> openvpn-2.3.0.ebuild:
+  Stable for x86, wrt bug #468364
+
+  03 May 2013; Agostino Sarubbo <ago@gentoo.org> openvpn-2.3.0.ebuild:
+  Stable for amd64, wrt bug #468364
 
   03 May 2013; Dirkjan Ochtman <djc@gentoo.org> openvpn-2.3.1.ebuild:
   Fix USE flag order for 2.3.1.
