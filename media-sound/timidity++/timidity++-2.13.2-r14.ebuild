@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r14.ebuild,v 1.5 2012/10/24 19:17:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r14.ebuild,v 1.6 2013/05/03 12:03:50 ulm Exp $
 
 EAPI=4
 inherit autotools eutils elisp-common user
@@ -37,7 +37,7 @@ RDEPEND="${DEPEND}
 	alsa? ( media-sound/alsa-utils )
 	app-admin/eselect-timidity"
 
-PDEPEND="|| ( media-sound/timidity-eawpatches media-sound/timidity-shompatches media-sound/timidity-freepats )"
+PDEPEND="|| ( media-sound/timidity-eawpatches media-sound/timidity-freepats )"
 
 SITEFILE=50${PN}-gentoo.el
 

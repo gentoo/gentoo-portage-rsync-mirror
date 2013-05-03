@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.226 2013/05/03 12:00:09 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.227 2013/05/03 12:13:47 ssuominen Exp $
+
+  03 May 2013; Samuli Suominen <ssuominen@gentoo.org> tiff-3.9.7.ebuild,
+  +files/tiff-3.9.7-CVE-2012-4447.patch, +files/tiff-3.9.7-CVE-2012-4564.patch,
+  +files/tiff-3.9.7-CVE-2012-5581.patch,
+  +files/tiff-3.9.7-printdir-width.patch,
+  +files/tiff-3.9.7-tiffinfo-exif.patch:
+  Import Fedora 17 security patchset for the compability SLOT.
 
   03 May 2013; Vicente Olivert Riera <vincent@gentoo.org> tiff-3.9.7.ebuild,
   tiff-4.0.3-r2.ebuild:

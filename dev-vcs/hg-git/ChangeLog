@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.43 2013/03/24 09:36:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.45 2013/05/03 12:22:33 djc Exp $
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> -hg-git-0.3.1.ebuild,
+  -hg-git-0.3.2.ebuild:
+  Remove old versions.
+
+*hg-git-0.4.0 (03 May 2013)
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> +hg-git-0.4.0.ebuild:
+  Version bump hg-git to 0.4.0.
 
 *hg-git-0.3.4 (24 Mar 2013)
 

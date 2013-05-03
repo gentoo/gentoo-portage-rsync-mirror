@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.156 2013/02/10 06:54:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.157 2013/05/03 12:03:50 ulm Exp $
+
+  03 May 2013; Ulrich Müller <ulm@gentoo.org> timidity++-2.13.2-r13.ebuild,
+  timidity++-2.13.2-r14.ebuild, timidity++-2.14.0.ebuild,
+  timidity++-2.14.0-r1.ebuild:
+  Don't depend on timidity-shompatches, since that package has been masked for
+  removal, bug 441640.
 
 *timidity++-2.14.0-r1 (10 Feb 2013)
 

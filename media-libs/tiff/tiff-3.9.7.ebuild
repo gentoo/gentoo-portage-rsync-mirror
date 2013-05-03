@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7.ebuild,v 1.4 2013/05/03 12:00:09 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7.ebuild,v 1.5 2013/05/03 12:13:47 ssuominen Exp $
 
 EAPI=5
 
@@ -25,6 +25,11 @@ RDEPEND="jpeg? ( virtual/jpeg )
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-CVE-2012-{4447,4564,5581}.patch \
+		"${FILESDIR}"/${P}-tiffinfo-exif.patch \
+		"${FILESDIR}"/${P}-printdir-width.patch
+
 	elibtoolize
 }
 
