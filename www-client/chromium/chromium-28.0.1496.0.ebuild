@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1485.0.ebuild,v 1.1 2013/04/23 00:34:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1496.0.ebuild,v 1.1 2013/05/03 16:54:01 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -70,10 +70,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	x11-libs/libXScrnSaver:=
 	x11-libs/libXtst:=
 	kerberos? ( virtual/krb5 )
-	selinux? (
-		sec-policy/selinux-chromium
-		sys-libs/libselinux:=
-	)"
+	selinux? ( sec-policy/selinux-chromium )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	!arm? (
@@ -110,9 +107,7 @@ pkg_setup() {
 	# Make sure the build system will use the right python, bug #344367.
 	python-any-r1_pkg_setup
 
-	if ! use selinux; then
-		chromium_suid_sandbox_check_kernel_config
-	fi
+	chromium_suid_sandbox_check_kernel_config
 
 	if use bindist && ! use system-ffmpeg; then
 		elog "bindist enabled: H.264 video support will be disabled."
@@ -134,8 +129,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
 
-	# Fix build with system minizip, to be upstreamed.
-	epatch "${FILESDIR}/${PN}-system-minizip-r0.patch"
+	# Fix build with system libraries, to be upstreamed.
+	epatch "${FILESDIR}/${PN}-shim-headers-r0.patch"
 
 	epatch_user
 
@@ -173,6 +168,7 @@ src_prepare() {
 		\! -path 'third_party/sfntly/*' \
 		\! -path 'third_party/skia/*' \
 		\! -path 'third_party/smhasher/*' \
+		\! -path 'third_party/snappy/*' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/tlslite/*' \
@@ -269,8 +265,7 @@ src_configure() {
 		$(gyp_use gps linux_use_libgps)
 		$(gyp_use gps linux_link_libgps)
 		$(gyp_use kerberos)
-		$(gyp_use pulseaudio)
-		$(gyp_use selinux selinux)"
+		$(gyp_use pulseaudio)"
 
 	if use system-sqlite; then
 		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
@@ -293,12 +288,10 @@ src_configure() {
 	myconf+="
 		-Dusb_ids_path=/usr/share/misc/usb.ids"
 
-	if ! use selinux; then
-		# Enable SUID sandbox.
-		myconf+="
-			-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
-			-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
-	fi
+	# Enable SUID sandbox.
+	myconf+="
+		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
+		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
 	# Never use bundled gold binary. Disable gold linker flags for now.
 	myconf+="
@@ -354,6 +347,7 @@ src_configure() {
 	# Tools for building programs to be executed on the build system, bug #410883.
 	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
 
+	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
 }
 
@@ -365,10 +359,7 @@ src_compile() {
 		test_targets+=" ${x}_unittests"
 	done
 
-	local make_targets="chrome chromedriver"
-	if ! use selinux; then
-		make_targets+=" chrome_sandbox"
-	fi
+	local make_targets="chrome chrome_sandbox chromedriver"
 	if use test; then
 		make_targets+=" $test_targets"
 	fi
@@ -460,10 +451,8 @@ src_install() {
 	exeinto "${CHROMIUM_HOME}"
 	doexe out/Release/chrome || die
 
-	if ! use selinux; then
-		doexe out/Release/chrome_sandbox || die
-		fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
-	fi
+	doexe out/Release/chrome_sandbox || die
+	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
 
 	doexe out/Release/chromedriver || die
 

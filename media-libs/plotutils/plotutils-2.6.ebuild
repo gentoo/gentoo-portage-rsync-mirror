@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.6.ebuild,v 1.10 2013/02/20 13:14:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.6.ebuild,v 1.11 2013/05/03 17:01:16 dilfridge Exp $
 
 EAPI=3
 inherit libtool eutils autotools
@@ -24,6 +24,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.5.1-rangecheck.patch"
 	epatch "${FILESDIR}/${P}-makefile.patch"
 	epatch "${FILESDIR}/${P}-libpng-1.5.patch"
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
 	eautoreconf
 	elibtoolize
 }

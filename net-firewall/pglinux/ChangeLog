@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/pglinux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.13 2013/03/02 22:50:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.14 2013/05/03 16:43:51 hasufell Exp $
+
+  03 May 2013; Julian Ospald <hasufell@gentoo.org> pglinux-2.2.2.ebuild:
+  ensure that empty pgl specific dirs are not removed by PM
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   pglinux-2.2.1_p20120711.ebuild, pglinux-2.2.2.ebuild:

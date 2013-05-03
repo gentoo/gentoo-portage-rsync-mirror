@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.2.ebuild,v 1.4 2013/03/02 22:50:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.2.ebuild,v 1.5 2013/05/03 16:43:51 hasufell Exp $
 
 EAPI=4
 
@@ -74,6 +74,12 @@ src_configure() {
 		--with-iconsdir=/usr/share/icons/hicolor/128x128/apps \
 		--with-gentoo-init \
 		$(use_with qt4)
+}
+
+src_install() {
+	default
+	keepdir /var/{lib,log,spool}/pgl
+	rm -rf "${ED}"/tmp
 }
 
 pkg_preinst() {
