@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.2.ebuild,v 1.7 2012/06/28 12:44:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.2.ebuild,v 1.8 2013/05/03 16:29:48 ssuominen Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="Blu-ray playback libraries"
 HOMEPAGE="http://www.videolan.org/developers/libbluray.html"
-SRC_URI="ftp://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2"
+SRC_URI="http://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

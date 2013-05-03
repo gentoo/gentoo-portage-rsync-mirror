@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.54 2013/02/27 16:46:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.55 2013/05/03 16:19:50 jlec Exp $
+
+*ccp4-libs-6.1.3-r12 (03 May 2013)
+
+  03 May 2013; Justin Lecher <jlec@gentoo.org> +ccp4-libs-6.1.3-r12.ebuild,
+  +files/6.1.3-no-pypath.patch:
+  Bump to EAPI=5 and new python eclasses, respect AR and RANLIB, #446350; drop
+  silly PYTHONPATH from init files, #390715
 
   27 Feb 2013; Justin Lecher <jlec@gentoo.org> files/6.1.3-lapack.patch,
   ccp4-libs-6.1.3-r11.ebuild:
