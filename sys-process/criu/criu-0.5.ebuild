@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/crtools/crtools-0.4.ebuild,v 1.1 2013/02/23 22:27:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-0.5.ebuild,v 1.1 2013/05/03 07:51:26 radhermit Exp $
 
 EAPI=5
 
@@ -13,7 +13,6 @@ SRC_URI="http://download.openvz.org/criu/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 RDEPEND="dev-libs/protobuf-c"
 DEPEND="${RDEPEND}
@@ -26,7 +25,7 @@ CONFIG_CHECK="~CHECKPOINT_RESTORE ~FHANDLE ~EVENTFD ~EPOLL ~INOTIFY_USER
 RESTRICT="test"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-flags.patch
+	epatch "${FILESDIR}"/crtools-0.4-flags.patch
 }
 
 src_compile() {
@@ -44,5 +43,5 @@ src_test() {
 src_install() {
 	dobin ${PN}
 	dodoc CREDITS README
-	doman Documentation/${PN}.1
+	newman Documentation/crtools.1 ${PN}.1
 }

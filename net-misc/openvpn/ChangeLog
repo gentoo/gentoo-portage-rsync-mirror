@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.247 2013/02/20 23:45:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.250 2013/05/03 07:59:44 djc Exp $
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> openvpn-2.3.1.ebuild:
+  Fix USE flag order for 2.3.1.
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> openvpn-9999.ebuild:
+  Add polarssl for 9999 ebuild (thanks to josh.cepek@usa.net).
+
+*openvpn-2.3.1 (03 May 2013)
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> +openvpn-2.3.1.ebuild:
+  Version bump to 2.3.1, add polarssl support (bug 463984, thanks to
+  josh.cepek@usa.net).
 
   20 Feb 2013; Zac Medico <zmedico@gentoo.org> openvpn-2.3.0.ebuild:
   Add ~arm-linux keyword.

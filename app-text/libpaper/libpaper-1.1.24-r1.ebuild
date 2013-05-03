@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24-r1.ebuild,v 1.11 2013/03/24 22:23:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24-r1.ebuild,v 1.12 2013/05/03 07:51:59 patrick Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 DOCS=( README ChangeLog debian/changelog )
 
 src_prepare() {
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 

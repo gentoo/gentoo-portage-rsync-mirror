@@ -10,3 +10,4 @@ slotmove =media-sound/ardour-2.8* 0 2
 slotmove =net-libs/libgrss-0.5.0* 0 0.5
 move games-engines/gambatte games-emulation/gambatte
 move media-sound/alsa-firmware sys-firmware/alsa-firmware
+move sys-process/crtools sys-process/criu

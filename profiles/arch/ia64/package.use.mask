@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.120 2013/04/01 12:10:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.121 2013/05/03 07:48:18 djc Exp $
+
+# Dirkjan Ochtman <djc@gentoo.org> (3 May 2013)
+# depends on net-libs/polarssl
+>=net-misc/openvpn-2.3.1 polarssl
 
 # Gilles Dartiguelongue <eva@gentoo.org> (1 Apr 2013)
 # missing keyword on media-libs/tremor, bug #453200

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7799 2013/05/02 19:28:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7800 2013/05/03 07:54:57 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 May 2013; Tim Harder <radhermit@gentoo.org> updates/2Q-2013:
+  Upstream renamed sys-process/crtools to sys-process/criu.
 
   02 May 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Removed package mask on net-proxy/swiftiply, see bug #198500.

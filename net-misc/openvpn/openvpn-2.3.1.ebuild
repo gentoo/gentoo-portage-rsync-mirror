@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-9999.ebuild,v 1.7 2013/05/03 07:56:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.1.ebuild,v 1.2 2013/05/03 07:59:44 djc Exp $
 
 EAPI=4
 
-inherit multilib autotools flag-o-matic user git-2
+inherit multilib autotools flag-o-matic user systemd
 
 DESCRIPTION="Robust and highly flexible tunneling application compatible with many OSes"
-EGIT_REPO_URI="https://github.com/OpenVPN/${PN}.git"
+SRC_URI="http://swupdate.openvpn.net/community/releases/${P}.tar.gz"
 HOMEPAGE="http://openvpn.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-linux"
 IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins polarssl selinux +ssl +lzo static userland_BSD"
 
 REQUIRED_USE="static? ( !plugins !pkcs11 )
@@ -77,6 +77,9 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins -r sample contrib
 	fi
+
+	systemd_newtmpfilesd "${FILESDIR}"/${PN}.tmpfile ${PN}.conf || die
+	systemd_newunit "${FILESDIR}"/${PN}.service 'openvpn@.service' || die
 }
 
 pkg_postinst() {
@@ -118,8 +121,7 @@ pkg_postinst() {
 		einfo "plugins have been installed into /usr/$(get_libdir)/${PN}"
 	fi
 
-	ewarn ""
-	ewarn "You are using a live ebuild building from the sources of openvpn"
-	ewarn "repository from http://openvpn.git.sourceforge.net. For reporting"
-	ewarn "bugs please contact: openvpn-devel@lists.sourceforge.net."
+	einfo ""
+	einfo "OpenVPN 2.3.0 no longer includes the easy-rsa suite of utilities."
+	einfo "They can now be emerged via app-crypt/easy-rsa."
 }
