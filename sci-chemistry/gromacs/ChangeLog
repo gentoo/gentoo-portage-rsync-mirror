@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.122 2013/03/09 15:18:52 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.123 2013/05/03 17:04:13 ottxor Exp $
+
+*gromacs-4.5.7 (03 May 2013)
+
+  03 May 2013; Christoph Junghans <ottxor@gentoo.org>
+  +files/gromacs-4.5.7-cmake-cpp-asm.patch, +gromacs-4.5.7.ebuild:
+  added recent 4.5.x version (bug #468454)
 
   09 Mar 2013; Christoph Junghans <ottxor@gentoo.org> gromacs-4.6.1.ebuild:
   fix cuda build (bug #460518)

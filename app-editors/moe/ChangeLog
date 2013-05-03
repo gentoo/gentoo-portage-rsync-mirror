@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/moe
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.1 2013/05/03 17:10:03 pinkbyte Exp $
+
+*moe-1.5 (03 May 2013)
+
+  03 May 2013; Sergey Popov <pinkbyte@gentoo.org> +moe-1.5.ebuild,
+  +metadata.xml:
+  Initial commit, wrt bug #263658. Ebuild by Mikle Kolyada, who will maintain
+  this package through proxy maintainers
+
