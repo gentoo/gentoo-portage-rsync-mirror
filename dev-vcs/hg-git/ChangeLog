@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.45 2013/05/03 12:22:33 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.46 2013/05/03 13:42:19 ago Exp $
+
+  03 May 2013; Agostino Sarubbo <ago@gentoo.org> hg-git-0.3.4.ebuild:
+  Stable for amd64, wrt bug #468420
 
   03 May 2013; Dirkjan Ochtman <djc@gentoo.org> -hg-git-0.3.1.ebuild,
   -hg-git-0.3.2.ebuild:

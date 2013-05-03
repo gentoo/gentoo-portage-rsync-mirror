@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22-r1.ebuild,v 1.1 2013/01/20 22:49:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22-r1.ebuild,v 1.2 2013/05/03 13:50:40 jlec Exp $
 
 EAPI="5"
 
@@ -40,6 +40,10 @@ src_prepare() {
 	# Leave examples alone
 	sed -e 's/\(SUBDIRS = .*\)examples/\1/' \
 		-i Makefile.am Makefile.in || die
+
+	sed \
+		-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' \
+		-i configure.ac || die
 
 	epatch "${FILESDIR}"/${PN}-0.10.9-lazy.patch
 	AT_M4DIR="common/m4" eautoreconf

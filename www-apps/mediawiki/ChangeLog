@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.227 2013/05/02 12:03:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.228 2013/05/03 13:32:38 ago Exp $
+
+  03 May 2013; Agostino Sarubbo <ago@gentoo.org> mediawiki-1.19.6.ebuild,
+  mediawiki-1.20.5.ebuild:
+  Stable for ppc, wrt bug #468110
 
   02 May 2013; Agostino Sarubbo <ago@gentoo.org> mediawiki-1.19.6.ebuild,
   mediawiki-1.20.5.ebuild:

@@ -3,8 +3,11 @@
 <pkgmetadata>
   <herd>desktop-misc</herd>
   <maintainer>
-    <email>cedk@gentoo.org</email>
-    <name>Cédric Krier</name>
+	<email>cedk@gentoo.org</email>
+	<name>Cédric Krier</name>
+  </maintainer>
+  <maintainer>
+    <email>jer@gentoo.org</email>
   </maintainer>
   <use>
   <flag name="xft">Enable unofficial <pkg>x11-libs/libXft</pkg> support</flag>
