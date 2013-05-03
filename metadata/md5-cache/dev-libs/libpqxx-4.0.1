@@ -1,5 +1,5 @@
-DEFINED_PHASES=configure install test
-DEPEND=dev-db/postgresql-base
+DEFINED_PHASES=configure install prepare setup test
+DEPEND=|| ( dev-lang/python:2.7 dev-lang/python:2.6 ) dev-db/postgresql-base
 DESCRIPTION=C++ client API for PostgreSQL. The standard front-end for writing C++ programs that use PostgreSQL.
 EAPI=4
 HOMEPAGE=http://pqxx.org/development/libpqxx/
@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-db/postgresql-base
 SLOT=0
 SRC_URI=http://pqxx.org/download/software/libpqxx/libpqxx-4.0.1.tar.gz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=27044d12106e7094a2f26b855f3b0eae
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	2bfb0c9cefbef0b3cfde3d96e3d53f46	python-utils-r1	345dcecf1ef156d1d86a98f16d3c385c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=3317dd5a8feebcb364be26391b0c8d41

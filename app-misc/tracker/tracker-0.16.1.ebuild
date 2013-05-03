@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.1.ebuild,v 1.1 2013/05/01 19:44:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.1.ebuild,v 1.2 2013/05/03 10:36:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -130,9 +130,6 @@ src_prepare() {
 	create_version_script "mail-client/thunderbird" "Mozilla Thunderbird" thunderbird-version.sh
 
 	# Skip broken tests
-	# https://bugzilla.gnome.org/show_bug.cgi?id=699401
-	sed -e '\%"/libtracker-common/tracker-dbus/request"%,+1 d' \
-		-i tests/libtracker-common/tracker-dbus-test.c || die
 	# https://bugzilla.gnome.org/show_bug.cgi?id=699408
 	sed -e '\%/libtracker-common/file-utils/has_write_access_or_was_created%,+1 d' \
 		-i tests/libtracker-common/tracker-file-utils-test.c || die
@@ -140,17 +137,14 @@ src_prepare() {
 	sed -e '\%/libtracker-miner/tracker-password-provider/setting%,+1 d' \
 		-e '\%/libtracker-miner/tracker-password-provider/getting%,+1 d' \
 		-i tests/libtracker-miner/tracker-password-provider-test.c || die
-	# https://bugzilla.gnome.org/show_bug.cgi?id=699411
-	sed -e '\%"datetime/functions-localtime-1"%,\%"datetime/functions-timezone-1"% d' \
-		-i tests/libtracker-data/tracker-sparql-test.c || die
 	# https://bugzilla.gnome.org/show_bug.cgi?id=699412
 	sed -e '/#if HAVE_TRACKER_FTS/,/#endif/ d' \
 		-i tests/libtracker-sparql/tracker-test.c || die
-	# https://bugzilla.gnome.org/show_bug.cgi?id=699413
-	sed -e 's/\({ "本州最主流的风味",.*TRUE,  \) 8/\1 5/' \
-		-e 's/\({ "ホモ・サピエンス.*TRUE, \) 13/\1 10/' \
-		-i tests/libtracker-fts/tracker-parser-test.c || die
-	# Fails inside portage, not outside
+	# upstream bug #????
+#	sed -e 's/\({ "本州最主流的风味",.*TRUE,  \) 8/\1 5/' \
+#		-e 's/\({ "ホモ・サピエンス.*TRUE, \) 13/\1 10/' \
+#		-i tests/libtracker-fts/tracker-parser-test.c || die
+	# Fails inside portage, not outside, still fails, upstream bug #699413
 	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+1 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
 
@@ -232,6 +226,7 @@ src_configure() {
 }
 
 src_test() {
+	export G_MESSAGES_DEBUG=all # upstream bug #699401#c1
 	unset DBUS_SESSION_BUS_ADDRESS
 	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}"
 }

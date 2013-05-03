@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.156 2013/05/02 08:03:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.157 2013/05/03 10:36:31 pacho Exp $
+
+  03 May 2013; Pacho Ramos <pacho@gentoo.org> tracker-0.16.1.ebuild:
+  Update tests handling
 
   02 May 2013; Pacho Ramos <pacho@gentoo.org> tracker-0.14.5.ebuild:
   Run eautoreconf also for 0.14 (#367975#c49)

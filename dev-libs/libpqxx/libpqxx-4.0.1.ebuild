@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0.1.ebuild,v 1.1 2013/02/02 07:58:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-4.0.1.ebuild,v 1.2 2013/05/03 10:37:55 titanofold Exp $
 
 EAPI="4"
 
-inherit eutils
+PYTHON_COMPAT=( python{2_6,2_7} )
+inherit python-any-r1
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
@@ -15,8 +16,16 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="doc static-libs"
 
-DEPEND="dev-db/postgresql-base"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-db/postgresql-base"
+DEPEND="${PYTHON_DEPS}
+		${RDEPEND}
+"
+
+src_prepare() {
+	sed -e 's/python/python2/' \
+		-i tools/{splitconfig,template2mak.py} \
+		|| die "Couldn't fix Python shebangs"
+}
 
 src_configure() {
 	if use static-libs ; then

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.0.ebuild,v 1.3 2013/05/03 10:07:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.0.ebuild,v 1.4 2013/05/03 10:31:24 pacho Exp $
 
-EAPI="4"
+EAPI=5
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_ORG_MODULE="network-manager-applet"
@@ -16,10 +16,11 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="bluetooth gconf"
+IUSE="bluetooth gconf modemmanager"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND=">=dev-libs/glib-2.26:2
+RDEPEND="
+	>=dev-libs/glib-2.26:2
 	>=dev-libs/dbus-glib-0.88
 	>=gnome-base/gnome-keyring-2.20
 	>=sys-apps/dbus-1.4.1
@@ -33,11 +34,13 @@ RDEPEND=">=dev-libs/glib-2.26:2
 
 	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6 )
 	gconf? ( >=gnome-base/gconf-2.20:2 )
-	virtual/freedesktop-icon-theme"
-
+	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
+	virtual/freedesktop-icon-theme
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	>=dev-util/intltool-0.40"
+	>=dev-util/intltool-0.40
+"
 
 src_prepare() {
 	mv -f "${WORKDIR}"/nm-signal-*.png icons/22/
@@ -45,13 +48,12 @@ src_prepare() {
 }
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog NEWS README"
 	gnome2_src_configure \
 		--with-gtkver=3 \
-		--with-modem-manager-1 \
 		--disable-more-warnings \
 		--disable-static \
 		--localstatedir=/var \
 		$(use_with bluetooth) \
-		$(use_enable gconf migration)
+		$(use_enable gconf migration) \
+		$(use_with modemmanager modem-manager-1)
 }
