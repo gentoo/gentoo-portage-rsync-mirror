@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.122 2013/05/01 11:12:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.123 2013/05/03 21:54:17 jlec Exp $
+
+*tcsh-6.18.01-r1 (03 May 2013)
+
+  03 May 2013; Justin Lecher <jlec@gentoo.org> +tcsh-6.18.01-r1.ebuild,
+  metadata.xml:
+  Add fix for compilation with ncurses[tinfo], #459484
 
   01 May 2013; Agostino Sarubbo <ago@gentoo.org> tcsh-6.18.01.ebuild:
   Stable for sh, wrt bug #466834

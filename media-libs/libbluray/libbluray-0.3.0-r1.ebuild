@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.3.0.ebuild,v 1.2 2013/05/03 16:29:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.3.0-r1.ebuild,v 1.1 2013/05/03 21:43:35 radhermit Exp $
 
 EAPI=5
 
@@ -17,17 +17,20 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="aacs java static-libs +truetype utils +xml"
 
 COMMON_DEPEND="
-	truetype? ( media-libs/freetype:2 )
 	xml? ( dev-libs/libxml2 )
 "
 RDEPEND="
 	${COMMON_DEPEND}
 	aacs? ( media-libs/libaacs )
-	java? ( >=virtual/jre-1.6 )
+	java? (
+		truetype? ( media-libs/freetype:2 )
+		>=virtual/jre-1.6
+	)
 "
 DEPEND="
 	${COMMON_DEPEND}
 	java? (
+		truetype? ( media-libs/freetype:2 )
 		>=virtual/jdk-1.6
 		dev-java/ant-core
 	)
@@ -42,7 +45,7 @@ src_prepare() {
 		export JDK_HOME="$(java-config -g JAVA_HOME)"
 
 		# upstream 0.3.0 tarball is missing a lot of java files
-		epatch "${WORKDIR}"/${P}-java.patch
+		EPATCH_OPTS="-p1" epatch "${WORKDIR}"/${P}-java.patch
 
 		# don't install a duplicate jar file
 		sed -i '/^jar_DATA/d' src/Makefile.am || die
@@ -54,9 +57,11 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
 	if use java; then
 		export JAVACFLAGS="$(java-pkg_javac-args)"
 		append-cflags "$(java-pkg_get-jni-cflags)"
+		myconf="$(use_with truetype freetype)"
 	fi
 
 	econf \
@@ -65,7 +70,7 @@ src_configure() {
 		$(use_enable java bdjava) \
 		$(use_enable static-libs static) \
 		$(use_with xml libxml2) \
-		$(use_with truetype freetype)
+		${myconf}
 }
 
 src_install() {

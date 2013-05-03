@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre2.ebuild,v 1.5 2013/01/18 14:55:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre2.ebuild,v 1.6 2013/05/03 21:39:15 jlec Exp $
 
-EAPI=4
+EAPI=5
+
+inherit autotools eutils
 
 DESCRIPTION="display bandwidth usage on an interface"
 SRC_URI="http://www.ex-parrot.com/~pdw/iftop/download/${P/_/}.tar.gz"
@@ -18,6 +20,12 @@ DEPEND="
 	sys-libs/ncurses"
 
 S="${WORKDIR}"/${P/_/}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tinfo.patch
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
+	eautoreconf
+}
 
 src_install() {
 	dosbin iftop
