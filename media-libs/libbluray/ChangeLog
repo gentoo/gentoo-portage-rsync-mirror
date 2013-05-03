@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.42 2013/01/16 18:51:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.43 2013/05/03 09:01:41 radhermit Exp $
+
+*libbluray-0.3.0 (03 May 2013)
+
+  03 May 2013; Tim Harder <radhermit@gentoo.org> +libbluray-0.3.0.ebuild:
+  Version bump, add truetype use flag.
 
   16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libbluray-0.2.3.ebuild:
   Stable for ppc64, wrt bug #450336

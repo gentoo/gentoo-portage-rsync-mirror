@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.66 2013/05/01 15:48:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.67 2013/05/03 09:20:56 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -200,6 +200,9 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # If set to 'all', all .la files will be removed unconditionally. This
 # option is discouraged and shall be used only if 'modules' does not
 # remove the files.
+#
+# If set to 'none', no .la files will be pruned ever. Use in corner
+# cases only.
 
 # Determine using IN or OUT source build
 _check_build_dir() {
@@ -529,7 +532,9 @@ autotools-utils_src_install() {
 
 	# Remove libtool files and unnecessary static libs
 	local prune_ltfiles=${AUTOTOOLS_PRUNE_LIBTOOL_FILES}
-	prune_libtool_files ${prune_ltfiles:+--${prune_ltfiles}}
+	if [[ ${prune_ltfiles} != none ]]; then
+		prune_libtool_files ${prune_ltfiles:+--${prune_ltfiles}}
+	fi
 }
 
 # @FUNCTION: autotools-utils_src_test

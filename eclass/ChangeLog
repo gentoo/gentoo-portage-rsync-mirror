@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.810 2013/05/01 15:48:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.811 2013/05/03 09:20:56 mgorny Exp $
+
+  03 May 2013; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Support disabling .la pruning completely.
 
   01 May 2013; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Inline src_test and allow passing arguments.
