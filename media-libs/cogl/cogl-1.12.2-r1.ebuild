@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2.ebuild,v 1.6 2013/02/02 22:47:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2-r1.ebuild,v 1.1 2013/05/03 05:43:15 leio Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -66,6 +66,15 @@ src_configure() {
 		$(usex gles2 --with-default-driver=$(usex opengl gl gles2)) \
 		$(use_enable introspection) \
 		$(use_enable pango cogl-pango)
+}
+
+src_prepare() {
+	# Don't accidentally use MSAA visuals - it degrades performance and could
+	# crash gnome-shell with SIGBUS on large textures
+	# http://lists.freedesktop.org/archives/cogl/2013-April/001090.html
+	# https://bugs.freedesktop.org/show_bug.cgi?id=61182
+	epatch "${FILESDIR}/${P}-dont-use-MSAA.patch"
+	gnome2_src_prepare
 }
 
 src_test() {
