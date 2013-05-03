@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.7.ebuild,v 1.1 2013/05/02 23:59:34 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.7.ebuild,v 1.2 2013/05/03 22:29:11 sping Exp $
 
 EAPI="4"
 
@@ -25,6 +25,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.44.1+zlib-1.2.5.1.patch
 	epatch "${FILESDIR}"/${PN}-3.45.4-htmldir.patch
 	epatch "${FILESDIR}"/${PN}-3.47.7-cflags.patch
+	epatch "${FILESDIR}"/${PN}-3.47.7-warnings.patch
 	eautoreconf
 }
 

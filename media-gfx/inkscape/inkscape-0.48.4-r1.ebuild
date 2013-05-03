@@ -1,28 +1,24 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.2 2013/05/01 13:42:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.3 2013/05/03 22:30:28 radhermit Exp $
 
 EAPI=5
-
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="xml"
 GCONF_DEBUG=no
 
-PYTHON_COMPAT=( python2_6 python2_7 )
-PYTHON_REQ_USE="xml"
 inherit autotools eutils flag-o-matic gnome2 toolchain-funcs python-single-r1
 
-MY_P="${P/_/}"
-S="${WORKDIR}/${MY_P}"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+MY_P=${P/_/}
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE="dia gnome postscript inkjar lcms nls spell wmf"
-
-RESTRICT="test"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -57,8 +53,7 @@ COMMON_DEPEND="
 # See share/extensions for more details. inkscape can tell you to
 # install these so we could of course just not depend on those and rely
 # on that.
-RDEPEND="
-	${COMMON_DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	dev-python/numpy[${PYTHON_USEDEP}]
 	media-gfx/uniconvertor
 	dia? ( app-office/dia )
@@ -71,7 +66,9 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.29"
 
-DOCS="AUTHORS ChangeLog NEWS README*"
+S=${WORKDIR}/${MY_P}
+
+RESTRICT="test"
 
 src_prepare() {
 	gnome2_src_prepare

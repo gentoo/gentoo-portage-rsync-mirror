@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.197 2013/05/01 13:33:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.198 2013/05/03 22:30:28 radhermit Exp $
+
+  03 May 2013; Tim Harder <radhermit@gentoo.org> inkscape-0.48.4-r1.ebuild:
+  Remove unnecessary quoting and move variables into more standard locations.
 
 *inkscape-0.48.4-r1 (01 May 2013)
 
