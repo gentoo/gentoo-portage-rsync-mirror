@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.0.ebuild,v 1.2 2013/03/29 17:40:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.0.ebuild,v 1.3 2013/05/03 10:07:43 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,6 +11,8 @@ inherit eutils gnome2
 
 DESCRIPTION="GNOME applet for NetworkManager"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~ssuominen/pngcrush-fixed-nm-signal-icons.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -36,6 +38,11 @@ RDEPEND=">=dev-libs/glib-2.26:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40"
+
+src_prepare() {
+	mv -f "${WORKDIR}"/nm-signal-*.png icons/22/
+	gnome2_src_prepare
+}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog NEWS README"
