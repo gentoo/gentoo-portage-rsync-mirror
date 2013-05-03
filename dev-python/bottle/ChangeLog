@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.5 2013/03/05 09:23:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.6 2013/05/03 20:34:08 pinkbyte Exp $
+
+  03 May 2013; Sergey Popov <pinkbyte@gentoo.org> bottle-0.11.6.ebuild:
+  Add ~arm keyword, wrt bug #468426
 
 *bottle-0.11.6 (05 Mar 2013)
 

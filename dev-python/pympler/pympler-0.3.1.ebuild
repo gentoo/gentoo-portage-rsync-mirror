@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/pympler-0.3.1.ebuild,v 1.1 2013/05/03 13:06:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/pympler-0.3.1.ebuild,v 1.2 2013/05/03 20:39:44 pinkbyte Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/P/${MY_PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="Apache-2.0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="dev-python/bottle"
