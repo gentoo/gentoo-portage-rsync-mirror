@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/gimp-gmic-1.5.2.2.ebuild,v 1.1 2012/11/13 06:10:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/gimp-gmic-1.5.5.2.ebuild,v 1.1 2013/05/03 08:47:51 radhermit Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -24,11 +24,11 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/gmic-${PV}/src
 
 src_prepare() {
-	epatch "${FILESDIR}"/gmic-${PV}-makefile.patch
+	epatch "${FILESDIR}"/gmic-1.5.2.2-makefile.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCXX)" gimp
+	emake CC="$(tc-getCXX)" CFLAGS="${CXXFLAGS}" gimp
 }
 
 src_install() {
