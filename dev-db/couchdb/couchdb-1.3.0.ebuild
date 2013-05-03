@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.3.0.ebuild,v 1.1 2013/05/03 11:25:55 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.3.0.ebuild,v 1.4 2013/05/03 11:46:22 djc Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils multilib pax-utils user
 
@@ -30,6 +30,10 @@ pkg_setup() {
 	enewuser couchdb -1 -1 /var/lib/couchdb couchdb
 }
 
+src_prepare() {
+	sed -i ./src/couchdb/priv/Makefile.* -e 's|-Werror||g'
+}
+
 src_configure() {
 	econf \
 		--with-erlang=/usr/lib/erlang/usr/include \
@@ -50,12 +54,9 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-
-	insinto /var/run/couchdb
+	emake DESTDIR="${D}" install
 
 	fowners couchdb:couchdb \
-		/var/run/couchdb \
 		/var/lib/couchdb \
 		/var/log/couchdb
 
@@ -65,8 +66,8 @@ src_install() {
 	done
 	fperms 664 /etc/couchdb/default.ini
 
-	newinitd "${FILESDIR}/couchdb.init-4" couchdb || die
-	newconfd "${FILESDIR}/couchdb.conf-2" couchdb || die
+	newinitd "${FILESDIR}/couchdb.init-4" couchdb
+	newconfd "${FILESDIR}/couchdb.conf-2" couchdb
 
 	sed -i -e "s:LIBDIR:$(get_libdir):" "${D}/etc/conf.d/couchdb"
 }

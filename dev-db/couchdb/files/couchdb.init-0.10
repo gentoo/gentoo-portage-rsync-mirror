@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 2008 Dirkjan Ochtman
+# Copyright 2008-2013 Dirkjan Ochtman
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
