@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.17 2013/04/06 21:22:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.18 2013/05/03 19:35:02 robbat2 Exp $
+
+  03 May 2013; Robin H. Johnson <robbat2@gentoo.org> pip-1.2.1.ebuild,
+  pip-1.3.1.ebuild:
+  Needs to block the old versions of app-misc/pip before that tool was moved to
+  /usr/bin/gpip in -r1.
 
   06 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pip-1.3.1.ebuild:
   Stable for x86, wrt bug #462616

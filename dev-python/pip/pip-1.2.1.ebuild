@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.2.1.ebuild,v 1.3 2012/10/30 17:03:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.2.1.ebuild,v 1.4 2013/05/03 19:35:01 robbat2 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*"
@@ -17,7 +17,8 @@ KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="zsh-completion"
 
-RDEPEND="dev-python/setuptools"
+RDEPEND="dev-python/setuptools
+		!<=app-misc/pip-1.2"
 DEPEND="${RDEPEND}"
 
 # Tests require a couple libraries not yet in the tree, aren't bundled with

@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.136 2013/01/01 19:33:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.137 2013/05/03 19:37:22 jlec Exp $
+
+*htop-1.0.2-r1 (03 May 2013)
+
+  03 May 2013; Justin Lecher <jlec@gentoo.org> +htop-1.0.2-r1.ebuild,
+  +files/htop-1.0.2-tinfo.patch, metadata.xml:
+  Add compatibility patch for ncurses[tinfo]
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> htop-1.0.2.ebuild:
   sh stable wrt #447952

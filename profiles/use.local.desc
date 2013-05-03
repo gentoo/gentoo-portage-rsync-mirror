@@ -5047,6 +5047,7 @@ net-p2p/transmission-remote-gtk:unique - Enable single instance support using de
 net-p2p/tribler:vlc - Enable vlc support.
 net-print/cups:filters - Pull in net-print/foomatic-filters for filtering by default.
 net-print/cups:java - Add support for the Java interpeter in the web server CGIs.
+net-print/cups:lprng-compat - Do not install lp... binaries so cups and lprng can coexist.
 net-print/cups:perl - Add support for the Perl interpeter in the web server CGIs.
 net-print/cups:php - Add support for the PHP interpeter in the web server CGIs.
 net-print/cups:python - Add support for the Python interpeter in the web server CGIs.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.2-r3.ebuild,v 1.1 2013/04/11 11:05:05 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.2-r3.ebuild,v 1.2 2013/05/03 20:00:49 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.cups.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="acl dbus debug +filters gnutls java kerberos pam
+IUSE="acl dbus debug +filters gnutls java kerberos lprng-compat pam
 	python selinux +ssl static-libs +threads usb X xinetd zeroconf"
 
 LANGS="ca es fr ja ru"
@@ -44,6 +44,7 @@ RDEPEND="
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.6 )
 	kerberos? ( virtual/krb5 )
+	!lprng-compat? ( !net-print/lprng )
 	pam? ( virtual/pam )
 	selinux? ( sec-policy/selinux-cups )
 	ssl? (
@@ -249,6 +250,17 @@ src_install() {
 	# the following files are now provided by cups-filters:
 	rm -r "${ED}"/usr/share/cups/banners || die
 	rm -r "${ED}"/usr/share/cups/data/testprint || die
+
+	# for the special case of running lprng and cups together, bug 467226
+	if use lprng-compat ; then
+		rm -fv "${ED}"/usr/bin/lp*
+		rm -fv "${ED}"/usr/sbin/lp*
+		rm -fv "${ED}"/usr/share/man/man1/lp*
+		rm -fv "${ED}"/usr/share/man/man8/lp*
+		ewarn "Not installing lp... binaries, since the lprng-compat useflag is set."
+		ewarn "Unless you plan to install an exotic server setup, you most likely"
+		ewarn "do not want this. Disable the useflag then and all will be fine."
+	fi
 }
 
 pkg_preinst() {
