@@ -1,12 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.10.2.ebuild,v 1.2 2012/12/02 17:09:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.10.3-r1.ebuild,v 1.1 2013/05/03 04:08:22 wired Exp $
 
 EAPI="4"
 
+inherit base autotools
+
 IUSE="aria2 +curl gstreamer hide-temp-files libnotify nls"
 if [[ ${PV} == *9999* ]]; then
-	inherit autotools git-2
+	inherit git-2
 	KEYWORDS=""
 	SRC_URI=""
 	EGIT_REPO_URI="git://urlget.git.sourceforge.net/gitroot/urlget/uget"
@@ -37,11 +39,16 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-ar-hardcoded.patch
+	eautoreconf
+
 	if [[ ${PV} == *9999* ]]; then
-		eautoreconf
 		intltoolize || die "intltoolize failed"
 		eautoreconf
 	fi
+
+	# fix the .desktop file for QA
+	sed -i 's/Network;FileTransfer/Network;FileTransfer;/g' uget-gtk.desktop
 }
 
 src_configure() {

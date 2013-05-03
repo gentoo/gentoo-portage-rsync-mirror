@@ -4410,9 +4410,7 @@ net-irc/xchat:hires-icons - Install custom high-resolution icons instead of the 
 net-irc/xchat:ntlm - Enable NTLM authentication
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
-net-irc/znc:ares - Enables support for asynchronous DNS using the c-ares library
 net-irc/znc:daemon - Allow znc to run as a system-wide service. Installs an init script and creates a znc user:group.
-net-irc/znc:extras - Enable some additional modules
 net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
 net-libs/axtls:cgi-lua - Enables lua backed cgi for axhttpd server
 net-libs/axtls:cgi-php - Enables php backed cgi for axhttpd server
