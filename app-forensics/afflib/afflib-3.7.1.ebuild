@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.1.ebuild,v 1.5 2012/08/08 14:05:13 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.1.ebuild,v 1.6 2013/05/03 08:15:11 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -39,8 +39,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e "/FLAGS/s: -g::" configure.ac || die
-	sed -i -e "/-static/d" tools/Makefile.am || die
+	sed -e '/FLAGS/s: -g::' \
+		-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
+		-i configure.ac || die
+
+	sed -i -e '/-static/d' tools/Makefile.am || die
 
 	autotools-utils_src_prepare
 }

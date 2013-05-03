@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.6.7.ebuild,v 1.1 2012/12/26 11:15:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.6.13.ebuild,v 1.1 2013/05/03 08:07:23 djc Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools eutils flag-o-matic user
+inherit autotools eutils flag-o-matic toolchain-funcs user
 
 DESCRIPTION="A persistent caching system, key-value and data structures database."
 HOMEPAGE="http://redis.io/"
@@ -31,7 +31,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}"-{shared,config}.patch
+	epatch "${FILESDIR}/${PN}-2.6.7"-{shared,config}.patch
+
+	# bug 467172, 467174
+	sed -i -e 's:AR=:AR?=:g' -e 's:RANLIB=:RANLIB?=:g' "${S}/deps/lua/src/Makefile" || die
+
 	# now we will rewrite present Makefiles
 	local makefiles=""
 	for MKF in $(find -name 'Makefile' | cut -b 3-); do
@@ -53,7 +57,17 @@ src_prepare() {
 	eautoconf
 }
 
+src_configure() {
+	econf
+
+	# Linenoise can't be built with -std=c99, see https://bugs.gentoo.org/451164
+	# also, don't define ANSI/c99 for lua twice
+	sed -i -e "s:-std=c99::g" deps/linenoise/Makefile deps/Makefile || die
+}
+
 src_compile() {
+	tc-export CC AR RANLIB
+
 	local myconf=""
 
 	if use tcmalloc ; then
@@ -64,7 +78,7 @@ src_compile() {
 		myconf="${myconf} MALLOC=yes"
 	fi
 
-	emake ${myconf}
+	emake ${myconf} V=1 CC="${CC}" AR="${AR} rcu" RANLIB="${RANLIB}"
 }
 
 src_install() {
