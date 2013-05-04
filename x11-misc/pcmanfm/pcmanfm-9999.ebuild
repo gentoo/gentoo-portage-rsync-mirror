@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.18 2012/07/21 10:50:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.19 2013/05/04 08:57:20 hwoarang Exp $
 
-EAPI=3
+EAPI=5
 
 EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
 
@@ -19,7 +19,7 @@ KEYWORDS=""
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.22.1:2
 	>=lxde-base/menu-cache-0.3.2
-	>=x11-libs/libfm-9999"
+	>=x11-libs/libfm-9999:="
 RDEPEND="${COMMON_DEPEND}
 	virtual/eject
 	virtual/freedesktop-icon-theme"

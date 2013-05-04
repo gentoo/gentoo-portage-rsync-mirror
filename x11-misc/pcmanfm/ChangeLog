@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.89 2013/02/16 11:43:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.90 2013/05/04 08:57:20 hwoarang Exp $
+
+*pcmanfm-1.1.0-r1 (04 May 2013)
+
+  04 May 2013; Markos Chandras <hwoarang@gentoo.org> +pcmanfm-1.1.0-r1.ebuild,
+  pcmanfm-9999.ebuild:
+  Revbump to use libfm subslot deps
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> pcmanfm-1.1.0.ebuild:
   Don't show elog messages always (#457596)
