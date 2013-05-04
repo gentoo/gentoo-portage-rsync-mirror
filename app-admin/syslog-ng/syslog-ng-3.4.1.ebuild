@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.1 2013/04/28 04:50:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.2 2013/05/04 02:21:08 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd
@@ -12,7 +12,7 @@ SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/${MY_PV}/sourc
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="caps hardened ipv6 json mongodb +pcre selinux smtp spoof-source sql ssl tcpd"
 
 RDEPEND="
