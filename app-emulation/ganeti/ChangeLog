@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/ganeti
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.69 2012/12/31 12:57:03 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.70 2013/05/04 21:13:54 floppym Exp $
+
+  04 May 2013; Mike Gilbert <floppym@gentoo.org> ganeti-2.6.0.ebuild,
+  ganeti-2.6.1.ebuild, ganeti-2.6.2.ebuild:
+  Drop dependency on dev-python/elementtree; this is included in the python
+  standard library.
 
   31 Dec 2012; Michał Górny <mgorny@gentoo.org> ganeti-1.2.9.ebuild,
   ganeti-2.0.6.ebuild, ganeti-2.1.8.ebuild, ganeti-2.2.2.ebuild,

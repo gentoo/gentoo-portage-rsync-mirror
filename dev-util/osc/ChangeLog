@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/osc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.14 2013/03/18 10:29:48 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.15 2013/05/04 21:28:50 floppym Exp $
+
+  04 May 2013; Mike Gilbert <floppym@gentoo.org> osc-0.139.1.ebuild,
+  osc-9999.ebuild:
+  Drop dependency on dev-python/elementtree.
 
   18 Mar 2013; Michal Hrusecky <miska@gentoo.org> -osc-0.137.0.ebuild,
   osc-0.139.1.ebuild:

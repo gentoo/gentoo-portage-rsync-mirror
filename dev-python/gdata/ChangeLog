@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.106 2013/02/21 15:03:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.107 2013/05/04 21:22:22 floppym Exp $
+
+  04 May 2013; Mike Gilbert <floppym@gentoo.org> gdata-2.0.14.ebuild:
+  Drop dependency on dev-python/elementtree.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> gdata-2.0.17.ebuild:
   Add ~arm-linux and ~x86-linux keywords.

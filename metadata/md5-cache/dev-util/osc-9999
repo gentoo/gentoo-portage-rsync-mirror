@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup unpack
-DEPEND=dev-python/urlgrabber dev-python/pyxml dev-python/elementtree app-arch/rpm[python] dev-python/m2crypto || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) dev-vcs/git
+DEPEND=dev-python/urlgrabber dev-python/pyxml app-arch/rpm[python] dev-python/m2crypto || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) dev-vcs/git
 DESCRIPTION=Command line tool for Open Build Service
 EAPI=5
 HOMEPAGE=http://en.opensuse.org/openSUSE:OSC
 LICENSE=GPL-2
-RDEPEND=dev-python/urlgrabber dev-python/pyxml dev-python/elementtree app-arch/rpm[python] dev-python/m2crypto app-admin/sudo dev-util/obs-service-meta || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+RDEPEND=dev-python/urlgrabber dev-python/pyxml app-arch/rpm[python] dev-python/m2crypto app-admin/sudo dev-util/obs-service-meta || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=ff53b93c9d51ba1c4394c7becb537087
+_md5_=ed046aeade770cf51a7cd48501faf8d6

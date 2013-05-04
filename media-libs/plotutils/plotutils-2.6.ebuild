@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.6.ebuild,v 1.11 2013/05/03 17:01:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.6.ebuild,v 1.12 2013/05/04 21:06:53 jlec Exp $
 
 EAPI=3
 inherit libtool eutils autotools
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris"
 IUSE="+png static-libs X"
 
-DEPEND="png? ( media-libs/libpng
+DEPEND="
+	!media-libs/libxmi
+	png? ( media-libs/libpng
 		sys-libs/zlib )
 	X? ( x11-libs/libXaw
 		x11-proto/xextproto )"

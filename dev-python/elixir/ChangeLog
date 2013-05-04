@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elixir
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.8 2012/11/15 23:56:23 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.9 2013/05/04 21:20:52 floppym Exp $
+
+  04 May 2013; Mike Gilbert <floppym@gentoo.org> elixir-0.7.1-r1.ebuild:
+  Drop dependency on dev-python/elementtree.
 
   16 Nov 2012; Ian Delaney <idella4@gentoo.org> -elixir-0.7.1.ebuild:
   dropped 0.7.1 wrt Bug #434576

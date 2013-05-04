@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/elixir-0.7.1-r1.ebuild,v 1.1 2012/11/10 13:09:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/elixir-0.7.1-r1.ebuild,v 1.2 2013/05/04 21:20:52 floppym Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -24,7 +24,6 @@ RDEPEND=">=dev-python/sqlalchemy-0.4.0"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( >=dev-python/docutils-0.4-r3
-		>=dev-python/elementtree-1.2.6
 		>=dev-python/kid-0.9
 		>=dev-python/pygments-0.8.1
 		>=dev-python/pudge-0.1.3

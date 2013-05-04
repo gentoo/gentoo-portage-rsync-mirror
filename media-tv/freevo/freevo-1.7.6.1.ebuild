@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.8 2013/03/22 23:08:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.9 2013/05/04 21:31:17 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,6 @@ RDEPEND=">=dev-python/pygame-1.5.6
 	>=media-libs/libsdl-1.2.5[directfb?,fbcon?]
 	media-libs/sdl-image[jpeg,png]
 	>=sys-apps/sed-4
-	>=dev-python/elementtree-1.2.6
 	>=dev-python/beautifulsoup-3.0
 	>=dev-python/kaa-base-0.2.0
 	>=dev-python/kaa-metadata-0.7.1
