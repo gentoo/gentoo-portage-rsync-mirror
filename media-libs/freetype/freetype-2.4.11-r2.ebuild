@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r2.ebuild,v 1.3 2013/04/26 14:57:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r2.ebuild,v 1.4 2013/05/04 07:25:29 mgorny Exp $
 
 EAPI=5
 
@@ -73,6 +73,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
 
 	epatch "${FILESDIR}"/${P}-auto-hinter_compile_fix.patch # 453956
+	epatch "${FILESDIR}"/${P}-locale.patch # 454804
 	epatch "${FILESDIR}"/${P}-sizeof-types.patch # 459966
 
 	if use utils; then

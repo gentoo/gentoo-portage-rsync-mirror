@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.369 2013/04/29 14:44:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.370 2013/05/04 07:25:29 mgorny Exp $
+
+  04 May 2013; Michał Górny <mgorny@gentoo.org> freetype-2.4.11-r2.ebuild:
+  Forward-port the locale patch.
 
   29 Apr 2013; Michal Gorny <mgorny@gentoo.org> metadata.xml:
   Add multilib@ as the co-maintainer for multilib conversion.
