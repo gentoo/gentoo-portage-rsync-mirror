@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/angelscript
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.6 2013/04/01 12:57:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.7 2013/05/04 22:05:59 hasufell Exp $
+
+*angelscript-2.26.2-r1 (04 May 2013)
+
+  04 May 2013; Julian Ospald <hasufell@gentoo.org>
+  +angelscript-2.26.2-r1.ebuild:
+  add multilib support
 
 *angelscript-2.26.2 (01 Apr 2013)
 

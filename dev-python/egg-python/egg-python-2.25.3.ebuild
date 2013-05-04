@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.25.3.ebuild,v 1.10 2013/02/02 22:28:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.25.3.ebuild,v 1.11 2013/05/04 22:09:22 jlec Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ EXAMPLES="examples/egg/tray*"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python-libs.patch" #344231
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	eautoreconf
 	gnome-python-common_src_prepare
 }

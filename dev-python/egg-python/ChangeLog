@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egg-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.23 2013/02/02 22:28:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.24 2013/05/04 22:09:22 jlec Exp $
+
+  04 May 2013; Justin Lecher <jlec@gentoo.org> egg-python-2.25.3.ebuild,
+  metadata.xml:
+  Fix obsolete macros to work with automake-1.13, 467676
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> egg-python-2.25.3.ebuild:
   Add ~arm, wrt bug #449220
