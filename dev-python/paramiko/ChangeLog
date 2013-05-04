@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.87 2013/03/02 06:20:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.88 2013/05/04 03:35:52 radhermit Exp $
+
+*paramiko-1.10.1 (04 May 2013)
+
+  04 May 2013; Tim Harder <radhermit@gentoo.org> +paramiko-1.10.1.ebuild:
+  Version bump.
 
 *paramiko-1.10.0 (02 Mar 2013)
 

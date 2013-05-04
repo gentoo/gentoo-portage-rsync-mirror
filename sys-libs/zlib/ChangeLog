@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/zlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.120 2012/09/30 17:26:34 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.121 2013/05/04 03:52:43 vapier Exp $
+
+*zlib-1.2.8 (04 May 2013)
+
+  04 May 2013; Mike Frysinger <vapier@gentoo.org> +zlib-1.2.8.ebuild:
+  Version bump #468014 by Samuli Suominen.
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> zlib-1.2.7.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #435754

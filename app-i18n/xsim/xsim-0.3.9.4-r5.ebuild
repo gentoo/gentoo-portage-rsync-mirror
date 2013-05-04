@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.3 2009/10/21 15:11:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.4 2013/05/04 03:47:12 naota Exp $
 
 EAPI=2
 inherit db-use eutils flag-o-matic multilib
@@ -26,11 +26,15 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-64bit.patch
 	# bug 227117
 	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-eof.patch
 
-	append-flags -DPIC -fPIC -fno-strict-aliasing
+	append-cppflags -DPIC
+	append-flags -fPIC -fno-strict-aliasing
 
 	dbver="$(db_findver sys-libs/db)"
 	sed -i -e "s/\(CFLAGS.*\)-O2/\1${CFLAGS}/" \
+		-e "s/LDFLAGS=\"/LDFLAGS=\"${LDFLAGS} /" \
 		-e "s/libdb_cxx.so/libdb_cxx-${dbver}.so/" \
 		-e "s/bdblib=\"db_cxx\"/bdblib=\"db_cxx-${dbver}\"/" configure* || die
 
@@ -57,7 +61,7 @@ src_install() {
 		xsim_libp="${D}"usr/$(get_libdir)/xsim/plugins \
 		xsim_binp="${D}"/usr/bin \
 		xsim_etcp="${D}"/etc \
-		install-data install || die
+		install install-data || die
 
 	dodoc ChangeLog KNOWNBUG README* TODO
 }

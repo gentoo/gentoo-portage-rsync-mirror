@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/xsim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.23 2013/04/15 05:36:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.24 2013/05/04 03:47:12 naota Exp $
+
+  04 May 2013; Naohiro Aota <naota@gentoo.org> +files/xsim-0.3.9.4-eof.patch,
+  +files/xsim-0.3.9.4-makefile.patch, xsim-0.3.9.4-r5.ebuild:
+  Fix makefile to respect parallel compile; Respect LDFLAGS #336943; Move eof
+  check around to get the data generated properly #390007
 
   15 Apr 2013; Naohiro Aota <naota@gentoo.org> files/xsim-0.3.9.4-gcc-3.4.patch:
   Re-generate xsim-0.3.9.5-gcc-3.4.patch not to include relative path.
