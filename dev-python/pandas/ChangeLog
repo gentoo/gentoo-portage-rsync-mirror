@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.13 2013/02/07 08:52:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.14 2013/05/04 11:13:58 jlec Exp $
+
+*pandas-0.11.0 (04 May 2013)
+
+  04 May 2013; Justin Lecher <jlec@gentoo.org> pandas-0.10.1.ebuild,
+  +pandas-0.11.0.ebuild, metadata.xml:
+  Version Bump, #468498; add support for py-3; correct PYTHON_USEDEP usage and
+  subphase functions, use virtualmake for tests
 
   07 Feb 2013; Ian Delaney <idella4@gentoo.org> pandas-0.10.1.ebuild:
   deps added to build docs and a dep deleted to build docs to avoid circular

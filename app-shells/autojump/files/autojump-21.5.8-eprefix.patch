@@ -1,0 +1,13 @@
+--- autojump-21.5.8/bin/autojump.sh
++++ autojump-21.5.8/bin/autojump.sh
+@@ -11,8 +11,8 @@
+ 	source ~/.autojump/etc/profile.d/autojump.${shell}
+ 
+ # check global install
+-elif [ -s /etc/profile.d/autojump.${shell} ]; then
+-	source /etc/profile.d/autojump.${shell}
++elif [ -s "${EPREFIX}"/etc/profile.d/autojump.${shell} ]; then
++	source "${EPREFIX}"/etc/profile.d/autojump.${shell}
+ 
+ # check custom install locations (modified by Homebrew or using --destdir option)
+ #custom#	elif [ -s destdir_install/autojump.${shell} ]; then

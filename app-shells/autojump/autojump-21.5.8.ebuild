@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.3.0-r1.ebuild,v 1.2 2013/05/04 11:14:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.5.8.ebuild,v 1.1 2013/05/04 11:14:20 xmw Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="bash-completion? ( >=app-shells/bash-4 )
 DEPEND="test? ( ${PYTHON_DEPS} )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-supported-shells.patch
+	epatch "${FILESDIR}"/${P}-eprefix.patch
 }
 
 src_compile() {
@@ -55,7 +55,4 @@ src_install() {
 
 	doman docs/${PN}.1
 	dodoc README.md
-
-	elog "loading of insecure relative path \"custom_install\" has been"
-	elog "remove. See ${EPREFIX}/etc/profile.d/${PN}.sh for details."
 }
