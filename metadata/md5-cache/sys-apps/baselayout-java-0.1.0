@@ -3,10 +3,10 @@ DEPEND=>=sys-apps/sed-4
 DESCRIPTION=Baselayout for Java
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/java/
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=!<dev-java/java-config-2.2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~sera/distfiles/baselayout-java-0.1.0.tar.gz
 _eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297
-_md5_=20f1c5572e45899b0bbcc2ef04233302
+_md5_=2adc1ad20f3b3f301b1f00671f2e543c
