@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia-tomoe/zinnia-tomoe-0.6.0_p20080911.ebuild,v 1.1 2013/05/04 05:22:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia-tomoe/zinnia-tomoe-0.6.0_p20080911.ebuild,v 1.2 2013/05/04 09:35:09 naota Exp $
 
 EAPI=4
 
-inherit autotools-utils
+AUTOTOOLS_AUTORECONF=1
+
+inherit autotools-utils multilib
 
 MY_P=${P/_p/-}
 
@@ -23,3 +25,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"/${MY_P}
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
+src_prepare() {
+	sed -i -e "/^modeldir/s/lib/$(get_libdir)/" Makefile.am || die
+	autotools-utils_src_prepare
+}
