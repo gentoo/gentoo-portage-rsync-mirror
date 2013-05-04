@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/exmap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/ChangeLog,v 1.5 2012/09/19 08:58:36 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/ChangeLog,v 1.6 2013/05/04 04:27:52 xmw Exp $
+
+*exmap-0.10-r1 (04 May 2013)
+
+  04 May 2013; Michael Weber <xmw@gentoo.org> +exmap-0.10-r1.ebuild,
+  +files/exmap-0.10-r1-makefiles.patch:
+  Remove -Werror, thanks patrick and dirtyepic, bug 468246.
 
   19 Sep 2012; Michael Weber <xmw@gentoo.org>
   +files/exmap-0.10-kernel-3.5.patch, exmap-0.10.ebuild:
