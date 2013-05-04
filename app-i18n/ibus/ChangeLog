@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.122 2013/04/05 03:54:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.124 2013/05/03 23:37:09 naota Exp $
+
+  03 May 2013; Naohiro Aota <naota@gentoo.org> -ibus-1.4.99.20121006.ebuild:
+  Drop old development version.
+
+  03 May 2013; Naohiro Aota <naota@gentoo.org> ibus-1.4.1.ebuild,
+  ibus-1.4.2.ebuild:
+  Migrate to vala.eclass #463720
 
   05 Apr 2013; Naohiro Aota <naota@gentoo.org> ibus-1.5.1-r2.ebuild:
   Depend on gnome-base/gconf. #464562

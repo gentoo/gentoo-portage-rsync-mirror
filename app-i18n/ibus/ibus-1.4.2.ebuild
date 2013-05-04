@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.5 2013/01/29 03:19:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.6 2013/05/03 23:33:03 naota Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit eutils gnome2-utils multilib python autotools
+inherit eutils gnome2-utils multilib python autotools vala
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -34,10 +34,10 @@ RDEPEND=">=dev-libs/glib-2.26
 		dev-python/notify-python
 		>=dev-python/dbus-python-0.83
 	)
-	nls? ( virtual/libintl )"
+	nls? ( virtual/libintl )
+	vala? ( $(vala_depend) )"
 #	X? ( x11-libs/libX11 )
 #	gtk? ( x11-libs/gtk+:2 x11-libs/gtk+:3 )
-#	vala? ( dev-lang/vala )
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
 	dev-util/intltool
@@ -64,6 +64,7 @@ pkg_setup() {
 src_prepare() {
 	>py-compile #397497
 	echo ibus/_config.py >> po/POTFILES.skip
+	use vala && vala_src_prepare
 
 	epatch \
 		"${FILESDIR}"/${PN}-gconf-2.m4.patch \
