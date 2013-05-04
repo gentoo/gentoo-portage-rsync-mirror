@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.41 2013/04/02 20:06:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.42 2013/05/04 13:41:58 mgorny Exp $
 
 # Pacho Ramos (02 Apr 2013)
 # brasero-3.4 was removed.
@@ -48,7 +48,6 @@ app-arch/libarchive -e2fsprogs
 # Older versions also had an OSS compatibility wrapper on that USE so
 # they are excluded.
 >=media-sound/pulseaudio-0.9.16_rc5 oss
->=media-sound/pulseaudio-2.1 systemd
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (9 Mar 2011)
 #

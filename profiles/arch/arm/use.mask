@@ -239,3 +239,7 @@ cman
 clvm
 
 -zeitgeist
+
+# Michał Górny <mgorny@gentoo.org> (4 May 2013)
+# Unmask systemd since it is keyworded here.
+-systemd

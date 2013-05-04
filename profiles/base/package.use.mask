@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.462 2013/05/01 06:27:02 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.463 2013/05/04 13:41:44 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -80,10 +80,6 @@ app-misc/tracker eds
 # Christoph Jungans <ottxor@gentoo.org> (26 Dec 2012)
 # cuda/openmm/mkl only works on x86/amd64
 sci-chemistry/gromacs cuda mkl openmm
-
-# Julian Ospald <hasufell@gentoo.org> (25 Dec 2012)
-# mask systemd to allow stabilization wrt #448034
-=sys-apps/udevil-0.3.6 systemd
 
 # Zac Medico <zmedico@gentoo.org> (13 Jun 2012)
 # Mask USE=pypy2_0 for sys-apps/portage, since pypy has limited KEYWORDS.
@@ -187,13 +183,6 @@ media-libs/opencv ipp
 # Causes crashes and build failures, not needed by any package, bug #412177
 x11-libs/cairo qt4
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
-# Packages with optional systemd support. Masked in base and unmasked on arches
-# where sys-apps/systemd is available.
-gnome-extra/gnome-screensaver systemd
-gnome-extra/gnome-system-monitor systemd
-net-misc/networkmanager systemd
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
 # gobject-introspection[doctool], bug #411761
@@ -260,12 +249,6 @@ app-arch/libarchive e2fsprogs
 # it's masked here and unmasked in individual profiles (bug #396313).
 net-libs/webkit-gtk jit
 www-client/epiphany jit
-
-# Samuli Suominen <ssuominen@gentoo.org> (05 Jan 2012)
-# Waiting for >=sys-apps/systemd-197 to stabilize. Then this can be removed.
-sys-auth/polkit systemd
-sys-power/upower systemd
-sys-fs/udisks systemd
 
 # Mike Frysinger <vapier@gentoo.org> (06 Dec 2011)
 # No one should be mucking with libssp unless they really know what they're

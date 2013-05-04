@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.113 2013/05/01 06:27:01 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.114 2013/05/04 13:41:43 mgorny Exp $
 
 # Agostino Sarubbo <ago@gentoo.org> (16 Feb 2012)
 # mask because requires unstable depends not ready for the stabilization
@@ -39,20 +39,6 @@ net-libs/cyassl sha512
 # Rick Farina <zerochaos@gentoo.org> (05 July 2012)
 # masked in base, unmask x86/amd64 only
 app-crypt/johntheripper -cuda
-
-# Robert Piasek <dagger@gentoo.org> (26 Apr 2012)
-# Packages with optional systemd support. Masked in base and unmasked on arches
-# where sys-apps/systemd is available.
-# Samuli Suominen <ssuominen@gentoo.org> (07 Sep 2012)
-# Masked again because this was never allowed before systemd is marked stable.
-#sys-auth/polkit -systemd
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
-# Packages with optional systemd support. Masked in base and unmasked on arches
-# where sys-apps/systemd is available.
-gnome-extra/gnome-screensaver -systemd
-gnome-extra/gnome-system-monitor -systemd
-net-misc/networkmanager -systemd
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for

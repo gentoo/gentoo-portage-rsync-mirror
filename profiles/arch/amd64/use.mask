@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.49 2013/05/01 06:27:01 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.50 2013/05/04 13:38:26 mgorny Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -185,5 +185,9 @@ capslib
 # Andrey Grozin <grozin@gentoo.org> (1 May 2013)
 # available on amd64
 -clozurecl
+
+# Michał Górny <mgorny@gentoo.org> (4 May 2013)
+# Unmask systemd since it is keyworded here.
+-systemd
 
 # NOT NECESSARY - SECTION

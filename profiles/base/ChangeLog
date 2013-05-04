@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.533 2013/04/26 13:42:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.535 2013/05/04 13:41:43 mgorny Exp $
+
+  04 May 2013; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Remove USE=systemd from package.use.mask since the flag is (un)masked
+  globally now.
+
+  04 May 2013; Michał Górny <mgorny@gentoo.org> use.mask:
+  Mask systemd flag globally, unmask on arches on which systemd is keyworded.
 
   26 Apr 2013; Michael Weber <xmw@gentoo.org> package.use.mask:
   expand use mask
