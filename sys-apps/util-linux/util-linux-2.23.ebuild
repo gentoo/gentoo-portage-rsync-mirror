@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.23.ebuild,v 1.1 2013/05/04 04:57:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.23.ebuild,v 1.2 2013/05/04 09:23:12 ssuominen Exp $
 
 EAPI="3"
 
@@ -35,6 +35,7 @@ RDEPEND="!sys-process/schedutils
 	!sys-block/eject
 	!<sys-libs/e2fsprogs-libs-1.41.8
 	!<sys-fs/e2fsprogs-1.41.8
+	!<app-shells/bash-completion-1.3-r2
 	cramfs? ( sys-libs/zlib )
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	selinux? ( sys-libs/libselinux )

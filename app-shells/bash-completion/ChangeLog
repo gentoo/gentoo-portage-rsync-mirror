@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.235 2012/11/01 09:06:05 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.236 2013/05/04 09:23:33 ssuominen Exp $
+
+*bash-completion-1.3-r2 (04 May 2013)
+
+  04 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +bash-completion-1.3-r2.ebuild:
+  Remove "rtcwake" completion since it's part of >=sys-apps/util-linux-2.23 wrt
+  #468544
 
 *bash-completion-1.3-r1 (01 Nov 2012)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/get_flash_videos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.16 2013/02/21 02:55:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.17 2013/05/04 09:06:15 hwoarang Exp $
+
+  04 May 2013; Markos Chandras <hwoarang@gentoo.org>
+  get_flash_videos-9999.ebuild:
+  Add dev-perl/Module-Find to RDEPEND. bug #461324
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> get_flash_videos-1.24-r1.ebuild:
   Add ~arm-linux keyword.

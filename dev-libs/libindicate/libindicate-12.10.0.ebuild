@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-12.10.0.ebuild,v 1.1 2012/07/21 18:28:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-12.10.0.ebuild,v 1.2 2013/05/04 09:16:20 patrick Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.6.1-no-mono.patch
 	sed -i -e "s:vapigen:vapigen-${AYATANA_VALA_VERSION}:" configure.ac || die
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 

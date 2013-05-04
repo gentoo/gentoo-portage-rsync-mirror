@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-9999.ebuild,v 1.1 2012/10/13 20:36:17 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-9999.ebuild,v 1.2 2013/05/04 09:06:15 hwoarang Exp $
 
 EAPI=2
 inherit eutils perl-module git-2
@@ -19,7 +19,8 @@ IUSE="test"
 
 RDEPEND="dev-perl/WWW-Mechanize
 	perl-core/Module-CoreList
-	dev-perl/HTML-TokeParser-Simple"
+	dev-perl/HTML-TokeParser-Simple
+	dev-perl/Module-Find"
 DEPEND="${RDEPEND}
 	dev-perl/UNIVERSAL-require
 	test? ( media-video/rtmpdump
