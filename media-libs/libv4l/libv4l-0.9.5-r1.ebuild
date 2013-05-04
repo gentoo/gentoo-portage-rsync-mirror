@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.8.9-r1.ebuild,v 1.2 2013/03/16 16:54:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.9.5-r1.ebuild,v 1.2 2013/05/04 16:55:25 ssuominen Exp $
 
 EAPI=5
-inherit eutils linux-info multilib toolchain-funcs multilib-minimal
+inherit eutils linux-info udev multilib-minimal
 
 MY_P=v4l-utils-${PV}
 
@@ -17,27 +17,35 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x
 IUSE=""
 
 # baselibs is for 32bit libjpeg, pending on converting libjpeg-turbo to multilib build
-RDEPEND="virtual/jpeg
+RDEPEND="virtual/jpeg:=
+	virtual/glu
+	virtual/opengl
+	x11-libs/libX11:=
+	!media-tv/v4l2-ctl
+	!<media-tv/ivtv-utils-1.4.0-r2
 	amd64? ( abi_x86_32? ( app-emulation/emul-linux-x86-baselibs[development] ) )"
 DEPEND="${RDEPEND}
-	>=sys-kernel/linux-headers-2.6.32"
+	sys-devel/gettext
+	virtual/os-headers
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
-CONFIG_CHECK="~SHMEM"
+pkg_setup() {
+	CONFIG_CHECK="~SHMEM"
+	linux-info_pkg_setup
+}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.8.8-drop-Wp-flags.patch
-	tc-export CC
 	multilib_copy_sources
 }
 
 multilib_src_configure() {
-	sed -i \
-		-e "/^PREFIX =/s:=.*:= ${EPREFIX}/usr:" \
-		-e "/^LIBDIR =/s:/lib:/$(get_libdir):" \
-		-e "/^CFLAGS :=/d" \
-		Make.rules || die
+	econf \
+		--disable-static \
+		--disable-qv4l2 \
+		--disable-v4l-utils \
+		--with-udevdir="$(get_udevdir)"
 }
 
 multilib_src_compile() {
@@ -50,4 +58,5 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	dodoc ChangeLog README.lib* TODO
+	prune_libtool_files --all
 }

@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.86 2013/03/16 16:54:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.89 2013/05/04 16:59:43 ssuominen Exp $
+
+  04 May 2013; Samuli Suominen <ssuominen@gentoo.org> -libv4l-0.8.9-r1.ebuild:
+  old
+
+*libv4l-0.9.5-r1 (04 May 2013)
+*libv4l-0.9.5 (04 May 2013)
+
+  04 May 2013; Samuli Suominen <ssuominen@gentoo.org> +libv4l-0.9.5.ebuild,
+  +libv4l-0.9.5-r1.ebuild:
+  Version bump wrt #458388 by "teidakankan"
 
   16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> libv4l-0.8.9-r1.ebuild:
   Inherit multilib despite inheriting multilib-minimal to silence repoman
