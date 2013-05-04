@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.382 2013/04/13 20:47:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.383 2013/05/04 19:05:39 vapier Exp $
+
+*linux-headers-3.9 (04 May 2013)
+
+  04 May 2013; Mike Frysinger <vapier@gentoo.org> +linux-headers-3.9.ebuild:
+  Version bump.
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.7.ebuild:
   Stable for s390, wrt bug #462980

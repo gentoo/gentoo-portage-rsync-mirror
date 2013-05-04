@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/yum
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.17 2012/04/02 19:54:18 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.18 2013/05/04 19:06:33 floppym Exp $
+
+  04 May 2013; Mike Gilbert <floppym@gentoo.org> yum-3.4.3.ebuild:
+  Drop dependency on dev-python/celementtree; it is included in the standard
+  library.
 
   02 Apr 2012; Pacho Ramos <pacho@gentoo.org> -yum-3.2.27-r1.ebuild,
   -yum-3.2.29.ebuild, yum-3.4.3.ebuild:
@@ -76,4 +80,3 @@
   10 Jun 2006; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
   +yum-2.6.1.ebuild:
   New package, submitted by Andrew Ross in bug #133848
-

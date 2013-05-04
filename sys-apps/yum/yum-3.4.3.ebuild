@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.4.3.ebuild,v 1.3 2012/04/02 19:54:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.4.3.ebuild,v 1.4 2013/05/04 19:06:33 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -22,7 +22,6 @@ DEPEND="dev-util/intltool
 
 RDEPEND="app-arch/rpm[python]
 	dev-python/sqlitecachec
-	dev-python/celementtree
 	dev-libs/libxml2[python]
 	dev-python/urlgrabber"
 
