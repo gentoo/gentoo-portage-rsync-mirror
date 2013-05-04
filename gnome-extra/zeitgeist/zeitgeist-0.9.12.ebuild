@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.5 2013/05/01 10:21:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.6 2013/05/04 07:42:38 jlec Exp $
 
 EAPI=5
 
@@ -34,6 +34,7 @@ RDEPEND="
 	media-libs/raptor:2
 	>=dev-libs/glib-2.26.0:2
 	>=dev-db/sqlite-3.7.11:3
+	datahub? ( x11-libs/gtk+:3 )
 	extensions? ( gnome-extra/zeitgeist-extensions  )
 	fts? ( dev-libs/xapian[inmemory] )
 	icu? ( dev-libs/dee[icu?] )
