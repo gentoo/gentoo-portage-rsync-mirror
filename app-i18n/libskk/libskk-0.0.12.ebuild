@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/libskk-0.0.12.ebuild,v 1.1 2012/07/08 21:26:18 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/libskk-0.0.12.ebuild,v 1.2 2013/05/04 00:09:34 naota Exp $
 
 EAPI=4
 
-inherit virtualx
+VALA_MIN_API_VERSION=0.14
 
-MY_VALA_VERSION=0.14
+inherit virtualx vala
 
 DESCRIPTION="GObject-based library to deal with Japanese kana-to-kanji conversion method"
 HOMEPAGE="https://github.com/ueno/libskk"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-lang/vala:${MY_VALA_VERSION}
+	$(vala_depend)
 	virtual/pkgconfig
 	nls? (
 		dev-util/intltool
@@ -34,7 +34,6 @@ DEPEND="${RDEPEND}
 DOCS="ChangeLog NEWS README"
 
 src_configure() {
-	export VALAC="$(type -P valac-${MY_VALA_VERSION})"
 	econf \
 		$(use_enable nls) \
 		$(use_enable static-libs static) \
