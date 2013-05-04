@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/httpclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.45 2013/01/15 07:07:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.46 2013/05/04 15:59:52 graaff Exp $
+
+*httpclient-2.3.3 (04 May 2013)
+
+  04 May 2013; Hans de Graaff <graaff@gentoo.org> +httpclient-2.3.3.ebuild:
+  Version bump.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> httpclient-2.2.5.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps

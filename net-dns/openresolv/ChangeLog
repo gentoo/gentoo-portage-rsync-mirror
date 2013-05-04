@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.73 2013/04/30 14:21:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.74 2013/05/04 15:36:48 floppym Exp $
+
+*openresolv-3.5.4-r2 (04 May 2013)
+
+  04 May 2013; Mike Gilbert <floppym@gentoo.org> +openresolv-3.5.4-r2.ebuild:
+  Move restartcmd to new 'helpers' subdirectory, bug 468506 by Michał
+  Bartoszkiewicz. Use /lib instead of /$(get_libdir); scripts are abi-agnostic.
+  Drop base.eclass.
 
 *openresolv-3.5.4-r1 (30 Apr 2013)
 

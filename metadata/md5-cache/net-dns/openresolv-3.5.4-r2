@@ -1,0 +1,10 @@
+DEFINED_PHASES=config configure install
+DEPEND=!net-dns/resolvconf-gentoo !<net-dns/dnsmasq-2.40-r1
+DESCRIPTION=A framework for managing DNS information
+EAPI=5
+HOMEPAGE=http://roy.marples.name/projects/openresolv
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+LICENSE=BSD-2
+SLOT=0
+SRC_URI=http://roy.marples.name/downloads/openresolv/openresolv-3.5.4.tar.bz2
+_md5_=8628b584cc67d6e3370efd81d4150fa6
