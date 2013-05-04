@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wiggle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.30 2013/03/02 22:38:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.31 2013/05/04 22:51:51 jlec Exp $
+
+  04 May 2013; Justin Lecher <jlec@gentoo.org> wiggle-0.9.ebuild, metadata.xml:
+  Add compatibility with ncurses[tinfo]
 
   02 Mar 2013; Christoph Junghans <ottxor@gentoo.org> wiggle-0.8-r1.ebuild,
   wiggle-0.9.ebuild:
