@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.17.3.ebuild,v 1.3 2013/05/04 04:44:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.17.3.ebuild,v 1.4 2013/05/04 05:26:51 vapier Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-scheme/guile-1.8
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libintl.patch
+	epatch "${FILESDIR}"/${P}-libintl.patch #466462
 	eautoreconf
 }
 

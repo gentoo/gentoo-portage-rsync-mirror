@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.7.ebuild,v 1.7 2013/05/01 11:10:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.7.ebuild,v 1.8 2013/05/04 05:09:16 vapier Exp $
 
 EAPI=3
 
@@ -42,6 +42,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.8-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 	epatch "${FILESDIR}"/${PN}-1.41.12-darwin-makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.42.7-libext2fs-fix-return-value.patch #467986
 	if [[ ${CHOST} == *-mint* ]] ; then
 		epatch "${FILESDIR}"/${PN}-1.41-mint.patch
 		epatch "${FILESDIR}"/${PN}-1.41.12-mint-blkid.patch

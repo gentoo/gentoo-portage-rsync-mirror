@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.102 2012/09/15 16:16:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.104 2013/05/04 05:24:05 vapier Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -49,6 +49,8 @@ ELT_try_and_apply_patch() {
 	fi
 	printf '\nTrying %s\n' "${disp}" >> "${log}"
 
+	# Save file for permission restoration.  `patch` sometimes resets things.
+	cp -p "${file}" "${file}.gentoo.elt"
 	# We only support patchlevel of 0 - why worry if its static patches?
 	if patch -p0 --dry-run "${file}" "${patch}" >> "${log}" 2>&1 ; then
 		einfo "  Applying ${disp} ..."
@@ -58,6 +60,8 @@ ELT_try_and_apply_patch() {
 	else
 		ret=1
 	fi
+	chmod --reference="${file}.gentoo.elt" "${file}"
+	rm -f "${file}.gentoo.elt"
 
 	return "${ret}"
 }
@@ -132,7 +136,7 @@ elibtoolize() {
 	local deptoremove=
 	local do_shallow="no"
 	local force="false"
-	local elt_patches="install-sh ltmain portage relink max_cmd_len sed test tmp cross as-needed"
+	local elt_patches="install-sh ltmain portage relink max_cmd_len sed test tmp cross as-needed target-nm"
 
 	for x in "$@" ; do
 		case ${x} in
@@ -349,6 +353,10 @@ elibtoolize() {
 						# have at least one patch succeeded.
 						ret=0
 					fi
+					;;
+				target-nm)
+					ELT_walk_patches "${d}/configure" "${p}"
+					ret=$?
 					;;
 				install-sh)
 					ELT_walk_patches "${d}/install-sh" "${p}"

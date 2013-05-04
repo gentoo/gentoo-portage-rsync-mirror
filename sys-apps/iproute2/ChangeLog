@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.223 2013/05/01 06:29:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.224 2013/05/04 05:09:02 vapier Exp $
+
+  04 May 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/iproute2-3.8.0-old-mount-libc.patch, iproute2-3.8.0.ebuild:
+  Fix build with older C libs and missing defines in mount.h #468120 by Agostino
+  Sarubbo.
 
 *iproute2-3.9.0 (01 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.8.0.ebuild,v 1.13 2013/04/29 21:06:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.8.0.ebuild,v 1.14 2013/05/04 05:09:02 vapier Exp $
 
 EAPI="4"
 
@@ -35,6 +35,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.0-mtu.patch #291907
+	epatch "${FILESDIR}"/${P}-old-mount-libc.patch #468120
 	use ipv6 || epatch "${FILESDIR}"/${PN}-3.1.0-no-ipv6.patch #326849
 
 	sed -i \
