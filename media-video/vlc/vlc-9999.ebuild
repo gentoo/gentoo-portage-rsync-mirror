@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.185 2013/04/27 15:05:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.186 2013/05/04 20:02:37 vincent Exp $
 
-EAPI="4"
+EAPI="5"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
@@ -55,7 +55,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+postproc projectm pulseaudio +qt4 rtsp run-as-root samba schroedinger
 	sdl sdl-image shine shout sid skins speex sse svg +swscale
 	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
-	wma-fixed +X x264 +xcb xml xv zvbi"
+	win32codecs wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2[minizip]

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.2 2013/04/07 16:56:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.3 2013/05/04 20:06:42 hasufell Exp $
 
 # @ECLASS: multilib-minimal.eclass
 # @MAINTAINER:
@@ -84,7 +84,13 @@ multilib-minimal_src_install() {
 		if declare -f multilib_src_install >/dev/null ; then
 			multilib_src_install
 		else
-			default_src_install	
+			# default_src_install will not work here as it will
+			# break handling of DOCS wrt #468092
+			# so we split up the emake and doc-install part
+			# this is synced with __eapi4_src_install
+			if [[ -f Makefile || -f GNUmakefile || -f makefile ]] ; then
+				emake DESTDIR="${D}" install
+			fi
 		fi
 		multilib_prepare_wrappers
 		multilib_check_headers
@@ -95,5 +101,18 @@ multilib-minimal_src_install() {
 
 	if declare -f multilib_src_install_all >/dev/null ; then
 		multilib_src_install_all
+	fi
+
+	# this is synced with __eapi4_src_install
+	if ! declare -p DOCS &>/dev/null ; then
+		local d
+		for d in README* ChangeLog AUTHORS NEWS TODO CHANGES \
+				THANKS BUGS FAQ CREDITS CHANGELOG ; do
+			[[ -s "${d}" ]] && dodoc "${d}"
+		done
+	elif [[ $(declare -p DOCS) == "declare -a "* ]] ; then
+		dodoc "${DOCS[@]}"
+	else
+		dodoc ${DOCS}
 	fi
 }

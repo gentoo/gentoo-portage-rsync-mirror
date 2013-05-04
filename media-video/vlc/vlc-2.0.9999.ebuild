@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.20 2013/04/12 21:58:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.21 2013/05/04 20:02:37 vincent Exp $
 
-EAPI="4"
+EAPI="5"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then

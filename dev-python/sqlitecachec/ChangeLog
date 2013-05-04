@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sqlitecachec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/ChangeLog,v 1.5 2012/05/04 15:12:17 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/ChangeLog,v 1.6 2013/05/04 20:18:21 floppym Exp $
+
+*sqlitecachec-1.1.4-r1 (04 May 2013)
+
+  04 May 2013; Mike Gilbert <floppym@gentoo.org> +sqlitecachec-1.1.4-r1.ebuild:
+  Convert to distutils-r1.
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> sqlitecachec-1.1.4.ebuild:
   Migrating dev-util/pkgconfig -> virtual/pkgconfig
