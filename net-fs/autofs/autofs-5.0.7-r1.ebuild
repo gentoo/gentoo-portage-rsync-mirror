@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r1.ebuild,v 1.1 2013/05/03 19:14:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r1.ebuild,v 1.2 2013/05/04 17:18:38 vapier Exp $
 
 EAPI=5
 
@@ -28,13 +28,15 @@ IUSE="hesiod ldap mount-locking sasl"
 REQUIRED_USE="sasl? ( ldap )"
 
 # currently, sasl code assumes the presence of kerberosV
-RDEPEND="
+RDEPEND=">=sys-apps/util-linux-2.20
 	hesiod? ( net-dns/hesiod )
 	ldap? ( >=net-nds/openldap-2.0
 		sasl? (
 			dev-libs/cyrus-sasl
 			dev-libs/libxml2
-			virtual/krb5 ) )"
+			virtual/krb5
+		)
+	)"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/yacc"
@@ -53,11 +55,9 @@ PATCHES=(
 	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/5371
 	"${FILESDIR}"/${PN}-5.0.5-fix-install-deadlink.patch
 
-	# https://bugs.gentoo.org/show_bug.cgi?id=361899
-	"${FILESDIR}"/${PN}-5.0.5-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch
-
-	# https://bugs.gentoo.org/show_bug.cgi?id=381315
-	"${FILESDIR}"/${PN}-5.0.6-revert-ldap.patch
+	"${FILESDIR}"/${PN}-5.0.5-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch #361899
+	"${FILESDIR}"/${PN}-5.0.6-revert-ldap.patch #381315
+	"${FILESDIR}"/${PN}-5.0.7-mount-sloppy.patch #453778
 	)
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -72,10 +72,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# work around bug #355975 (mount modifies timestamp of /etc/mtab)
-	# with >=sys-apps/util-linux-2.19,
-	addpredict "/etc/mtab"
-
 	# --with-confdir is for bug #361481
 	# --with-mapdir is for bug #385113
 	# for systemd support (not enabled yet):
