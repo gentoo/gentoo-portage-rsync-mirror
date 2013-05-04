@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r4.ebuild,v 1.15 2013/05/04 04:57:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r5.ebuild,v 1.1 2013/05/04 04:57:00 vapier Exp $
 
 EAPI="4"
 
@@ -12,11 +12,10 @@ SRC_URI="mirror://nongnu/${PN}/${P}dsf.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux ibm static kernel_FreeBSD"
 
-RDEPEND="selinux? ( >=sys-libs/libselinux-1.28 )
-	!<sys-apps/util-linux-2.23"
+RDEPEND="selinux? ( >=sys-libs/libselinux-1.28 )"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
@@ -27,12 +26,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.86-shutdown-single.patch #158615
 	epatch "${FILESDIR}"/${P}-makefile.patch #319197
 	epatch "${FILESDIR}"/${P}-selinux.patch #326697
+	epatch "${FILESDIR}"/${P}-shutdown-h.patch #449354
 	sed -i '/^CPPFLAGS =$/d' src/Makefile || die
 
-	# mountpoint/sulogin/utmpdump have moved to util-linux
+	# mesg/mountpoint/sulogin/utmpdump/wall have moved to util-linux
 	sed -i -r \
-		-e '/^(USR)?S?BIN/s:\<(mountpoint|sulogin|utmpdump)\>::g' \
-		-e '/^MAN[18]/s:\<(mountpoint|sulogin|utmpdump)[.][18]\>::g' \
+		-e '/^(USR)?S?BIN/s:\<(mesg|mountpoint|sulogin|utmpdump|wall)\>::g' \
+		-e '/^MAN[18]/s:\<(mesg|mountpoint|sulogin|utmpdump|wall)[.][18]\>::g' \
 		src/Makefile || die
 
 	# Mung inittab for specific architectures

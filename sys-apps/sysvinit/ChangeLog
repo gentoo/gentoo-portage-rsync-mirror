@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.122 2013/04/20 03:51:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.123 2013/05/04 04:57:00 vapier Exp $
+
+*sysvinit-2.88-r5 (04 May 2013)
+
+  04 May 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/sysvinit-2.88-shutdown-h.patch, +sysvinit-2.88-r5.ebuild,
+  sysvinit-2.88-r4.ebuild:
+  Make shutdown -h work the same as other inits #449354 by David Weber.  Stop
+  installing mesg/wall as util-linux installs them now #468144 by Samuli
+  Suominen.
 
   20 Apr 2013; Mike Frysinger <vapier@gentoo.org> files/inittab-2.87,
   sysvinit-2.88-r4.ebuild:

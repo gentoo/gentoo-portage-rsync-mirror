@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/deplate/deplate-0.8.5.ebuild,v 1.1 2013/04/06 04:06:11 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/deplate/deplate-0.8.5.ebuild,v 1.2 2013/05/04 04:57:02 naota Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://deplate.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86-fbsd"
 IUSE=""
 
 all_ruby_prepare() {
