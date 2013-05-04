@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.3 2013/05/03 20:21:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.4 2013/05/04 15:28:14 naota Exp $
+
+  04 May 2013; Naohiro Aota <naota@gentoo.org> extras-0.0.3.ebuild:
+  Add ~x86-fbsd #468270
 
   03 May 2013; Sergey Popov <pinkbyte@gentoo.org> extras-0.0.3.ebuild:
   Add ~arm keyword, wrt bug #468270
