@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/opencdk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.70 2010/01/01 20:03:44 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.71 2013/05/04 21:51:30 alonbl Exp $
+
+*opencdk-0.6.6-r1 (04 May 2013)
+
+  04 May 2013; Alon Bar-Lev <alonbl@gentoo.org> +opencdk-0.6.6-r1.ebuild:
+  Fix automake-1.13 compatibility per bug#467554
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> opencdk-0.6.6.ebuild:
   Transfer Prefix keywords
@@ -228,4 +233,3 @@
   02 Sep 2003; Alastair Tse <liquidx@gentoo.org> opencdk-0.4.5.ebuild,
   opencdk-0.5.1.ebuild:
   initial ebuild. thanks to Marshall T. Vandegrift <vandem2@rpi.edu> (#19339)
-

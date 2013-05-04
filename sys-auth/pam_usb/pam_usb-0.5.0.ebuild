@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.9 2012/05/28 19:43:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.10 2013/05/04 21:42:42 floppym Exp $
 
 EAPI=4
 
@@ -21,7 +21,6 @@ COMMON_DEPEND="dev-libs/libxml2
 	sys-apps/dbus
 	virtual/pam"
 RDEPEND="${COMMON_DEPEND}
-	dev-python/celementtree
 	dev-python/dbus-python
 	dev-python/pygobject:2
 	sys-apps/pmount

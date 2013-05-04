@@ -8,7 +8,6 @@
   <maintainer>
     <email>dev-zero@gentoo.org</email>
   </maintainer>
-
   <use>
     <flag name="vanilla">
       Avoid adding Gentoo Linux-specific modifications, which include

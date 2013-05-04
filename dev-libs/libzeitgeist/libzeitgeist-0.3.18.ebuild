@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/libzeitgeist-0.3.18.ebuild,v 1.8 2013/02/02 22:26:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/libzeitgeist-0.3.18.ebuild,v 1.9 2013/05/04 21:59:19 jlec Exp $
 
 EAPI=4
 
@@ -34,5 +34,11 @@ src_prepare() {
 	sed \
 		-e '/TEST_PROGS      += test-log/d' \
 		-i tests/Makefile.am || die
+
+	sed \
+		-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' \
+		-e 's:AM_PROG_CC_STDC:AC_PROG_CC:g' \
+		-i configure.ac || die
+
 	autotools-utils_src_prepare
 }

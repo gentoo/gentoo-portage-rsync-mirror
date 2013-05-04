@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.8.ebuild,v 1.4 2011/04/12 16:22:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.8.ebuild,v 1.5 2013/05/04 21:39:53 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -33,8 +33,6 @@ RDEPEND=">=dev-python/turbojson-1.1.4
 	>=dev-python/configobj-4.3.2
 	|| ( =dev-lang/python-2.4*
 		( =dev-lang/python-2.5* >=dev-python/cheetah-2.0_rc7-r1 ) )
-	|| ( =dev-lang/python-2.5*
-		( =dev-lang/python-2.4* >=dev-python/celementtree-1.0.5 ) )
 	>=dev-python/sqlobject-0.7
 	test? ( >=dev-python/nose-0.9.1 >=dev-python/sqlalchemy-0.3.3
 		|| ( =dev-lang/python-2.5*
