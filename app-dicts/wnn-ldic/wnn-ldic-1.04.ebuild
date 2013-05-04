@@ -1,16 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wnn-ldic/wnn-ldic-1.04.ebuild,v 1.5 2012/10/20 18:37:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wnn-ldic/wnn-ldic-1.04.ebuild,v 1.6 2013/05/04 16:15:53 ulm Exp $
 
 DESCRIPTION="Wnn dictionary for librarian"
 
 HOMEPAGE="http://www.tulips.tsukuba.ac.jp/misc/export/cat/ldic/"
 SRC_URI="http://www.tulips.tsukuba.ac.jp/misc/export/cat/ldic/ldic-${PV}-wnn.txt"
 
-LICENSE="as-is"
+LICENSE="HPND"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 IUSE=""
 
 DEPEND="app-i18n/freewnn"
