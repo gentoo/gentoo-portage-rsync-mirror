@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01-r1.ebuild,v 1.1 2013/05/03 21:54:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01-r1.ebuild,v 1.2 2013/05/04 11:48:32 grobian Exp $
 
 EAPI="3"
 
@@ -33,6 +33,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-6.14-makefile.patch # bug #151951
 	epatch "${FILESDIR}"/${PN}-6.14-use-ncurses.patch
 
+	# fix dependency on ncurses[tinfo], #459484
 	sed \
 		-e "s:\(ncurses\):\1 tinfo:g" \
 		-i configure.in || die

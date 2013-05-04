@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7804 2013/05/04 05:52:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7805 2013/05/04 11:51:48 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 May 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Update Gnome 3.8 mask
 
   04 May 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
   Mask gnome-extra/evolution-groupwise as it has unsatisfiable dependencies

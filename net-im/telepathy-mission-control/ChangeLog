@@ -1,6 +1,13 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.87 2013/04/01 18:25:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.88 2013/05/04 11:43:53 pacho Exp $
+
+*telepathy-mission-control-5.14.1 (04 May 2013)
+
+  04 May 2013; Pacho Ramos <pacho@gentoo.org>
+  +telepathy-mission-control-5.14.1.ebuild,
+  -telepathy-mission-control-5.12.3.ebuild:
+  Version bump, drop old
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   telepathy-mission-control-5.14.0-r1.ebuild:

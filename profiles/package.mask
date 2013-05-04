@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14719 2013/05/04 05:57:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14720 2013/05/04 11:51:48 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -358,6 +358,7 @@ kde-base/system-config-printer-kde
 >=app-misc/bijiben-3.8
 >=gnome-extra/gnome-weather-3.8
 >=media-gfx/gnome-photos-3.8
+>=net-analyzer/gnome-nettool-3.8
 
 # Sebastien Fabbro <bicatali@gentoo.org> (26 Mar 2013)
 # Now included in sci-mathematics/mathgl

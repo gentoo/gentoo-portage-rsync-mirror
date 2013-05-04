@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/rarfile
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rarfile/ChangeLog,v 1.1 2013/05/04 11:43:07 thev00d00 Exp $
+
+*rarfile-2.6 (04 May 2013)
+
+  04 May 2013; Ian Whyman <thev00d00@gentoo.org> +metadata.xml,
+  +rarfile-2.6.ebuild:
+  New addition, ebuild by me

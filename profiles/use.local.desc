@@ -1779,6 +1779,7 @@ dev-python/pyudev:pyqt4 - Install PyQt4 binding
 dev-python/pyudev:pyside - Install PySide binding
 dev-python/pyyaml:libyaml - enable libyaml support
 dev-python/pyzor:pyzord - enable support for pyzord
+dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
 dev-python/scrapy:boto - Add support for Amazon S3 via dev-python/boto
