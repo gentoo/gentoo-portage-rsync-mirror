@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.13.1.ebuild,v 1.1 2013/02/19 18:54:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.15.0.ebuild,v 1.1 2013/05/04 20:40:58 chutzpah Exp $
 
 EAPI=5
 
@@ -24,36 +24,33 @@ fi
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="ldap libvirt mongodb mysql openssl redis test"
+IUSE="ldap libvirt mako mongodb mysql openssl redis test"
 
-RDEPEND=">=dev-python/pyzmq-2.1.9
-		dev-python/msgpack
-		dev-python/pyyaml
-		dev-python/m2crypto
-		dev-python/pycrypto
-		dev-python/pycryptopp
-		dev-python/jinja
-		ldap? ( dev-python/python-ldap )
-		openssl? ( dev-python/pyopenssl )
+RDEPEND=">=dev-python/pyzmq-2.1.9[${PYTHON_USEDEP}]
+		dev-python/msgpack[${PYTHON_USEDEP}]
+		dev-python/pyyaml[${PYTHON_USEDEP}]
+		dev-python/m2crypto[${PYTHON_USEDEP}]
+		dev-python/pycrypto[${PYTHON_USEDEP}]
+		dev-python/pycryptopp[${PYTHON_USEDEP}]
+		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-python/setuptools[${PYTHON_USEDEP}]
+		mako? ( dev-python/mako[${PYTHON_USEDEP}] )
+		ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
+		openssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 		libvirt? ( app-emulation/libvirt[python] )
-		mongodb? ( dev-python/pymongo )
-		mysql? ( dev-python/mysql-python )
-		redis? ( dev-python/redis-py )"
+		mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
+		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
+		redis? ( dev-python/redis-py[${PYTHON_USEDEP}] )"
 DEPEND="test? (
 			dev-python/virtualenv
 			${RDEPEND}
 		)"
 
-src_prepare() {
+python_prepare() {
 	sed -i '/install_requires=/ d' setup.py || die "sed failed"
-	epatch "${FILESDIR}"/${P}-disable-failing-tests.patch
-
-	distutils-r1_src_prepare
 }
 
-src_install() {
-	distutils-r1_src_install
-
+python_install_all() {
 	for s in minion master syndic; do
 		newinitd "${FILESDIR}"/${s}-initd-1 salt-${s}
 		newconfd "${FILESDIR}"/${s}-confd-1 salt-${s}
@@ -63,5 +60,7 @@ src_install() {
 }
 
 python_test() {
+	# testsuite likes lots of files
+	ulimit -n 3072
 	SHELL="/bin/bash" TMPDIR=/tmp ./tests/runtests.py --unit-tests --no-report || die
 }

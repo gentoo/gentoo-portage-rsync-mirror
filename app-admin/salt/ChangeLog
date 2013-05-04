@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.11 2013/04/16 00:51:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.12 2013/05/04 20:40:58 chutzpah Exp $
+
+*salt-0.15.0 (04 May 2013)
+
+  04 May 2013; Patrick McLean <chutzpah@gentoo.org> -salt-0.13.1.ebuild,
+  -salt-0.14.0.ebuild, +salt-0.15.0.ebuild, salt-9999.ebuild, metadata.xml:
+  Version bump, refactor ebuild and 9999 a little for better distutils-r1
+  support. Add mako USE flag. Clean out old versions.
 
 *salt-0.14.1 (16 Apr 2013)
 

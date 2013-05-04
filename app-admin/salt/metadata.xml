@@ -25,6 +25,7 @@ backbone of cloud and data center management.
 		<flag name="libvirt">Support managing virtual machines with app-emulation/libvirt.</flag>
 		<flag name="mongodb">Support returning data to a mongodb server.</flag>
 		<flag name="redis">Support returning data to a redis database.</flag>
+		<flag name="mako">Add support for using the mako template engine for parsing salt states.</flag>
 	</use>
 </pkgmetadata>
 
