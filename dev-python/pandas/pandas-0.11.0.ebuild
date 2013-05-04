@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.11.0.ebuild,v 1.1 2013/05/04 11:13:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.11.0.ebuild,v 1.2 2013/05/04 12:14:52 jlec Exp $
 
 EAPI=5
 
@@ -29,9 +29,9 @@ CDEPEND="
 DEPEND="${CDEPEND}
 	doc? (
 		dev-python/ipython[${PYTHON_USEDEP}]
-		dev-python/rpy
+		dev-python/rpy[$(python_gen_usedep 'python2_7')]
 		dev-python/sphinx[${PYTHON_USEDEP}]
-		sci-libs/scikits_timeseries
+		sci-libs/scikits_timeseries[$(python_gen_usedep 'python2*')]
 		dev-python/matplotlib[${PYTHON_USEDEP}]
 		)
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
@@ -40,15 +40,15 @@ RDEPEND="${CDEPEND}
 	dev-python/numexpr[${PYTHON_USEDEP}]
 	dev-python/bottleneck[${PYTHON_USEDEP}]
 	dev-python/matplotlib[${PYTHON_USEDEP}]
-	dev-python/pytables
+	dev-python/pytables[$(python_gen_usedep 'python2*')]
 	dev-python/pytz[${PYTHON_USEDEP}]
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	excel? (
-		dev-python/openpyxl
-		dev-python/xlrd
-		dev-python/xlwt
+		dev-python/openpyxl[${PYTHON_USEDEP}]
+		dev-python/xlrd[$(python_gen_usedep 'python2*')]
+		dev-python/xlwt[$(python_gen_usedep 'python2*')]
 	)
-	R? ( dev-python/rpy )"
+	R? ( dev-python/rpy[$(python_gen_usedep 'python2_7')] )"
 
 python_prepare_all() {
 	if use doc; then

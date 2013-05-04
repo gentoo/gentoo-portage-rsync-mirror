@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libwmf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.83 2012/05/12 06:59:58 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.84 2013/05/04 12:26:08 jlec Exp $
+
+*libwmf-0.2.8.4-r5 (04 May 2013)
+
+  04 May 2013; Justin Lecher <jlec@gentoo.org> +libwmf-0.2.8.4-r5.ebuild,
+  metadata.xml:
+  Fix obsolete macros to work with automake-1.13, #467462; move to
+  autotools-utils.eclass
 
   12 May 2012; Pacho Ramos <pacho@gentoo.org> libwmf-0.2.8.4-r4.ebuild:
   Fix typo, move from 'disable' to 'without' configure option, bug #415293 by
