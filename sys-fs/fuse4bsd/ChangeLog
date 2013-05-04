@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/fuse4bsd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/ChangeLog,v 1.5 2007/03/02 12:44:36 drizzt Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/ChangeLog,v 1.6 2013/05/04 12:41:15 naota Exp $
+
+*fuse4bsd-0.3.9_pre1 (04 May 2013)
+
+  04 May 2013; Naohiro Aota <naota@gentoo.org>
+  +files/fuse4bsd-0.3.9_pre1-fbsd91.patch,
+  +files/fuse4bsd-0.3.9_pre1-ports.patch, +fuse4bsd-0.3.9_pre1.ebuild:
+  version bump wrt #442708
 
   02 Mar 2007; Timothy Redaelli <drizzt@gentoo.org> fuse4bsd-0.3.0.ebuild:
   Use FreeBSD 6.2 sbin instead of 6.1.
@@ -24,4 +31,3 @@
   +fuse4bsd-0.3.0.ebuild:
   Add fuse4bsd ebuild, for FUSE's FreeBSD kernel module and userland. Ebuild
   by Robert Sebastian Gerus (bug #133548).
-
