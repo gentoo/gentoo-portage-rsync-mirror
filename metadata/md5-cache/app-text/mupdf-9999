@@ -4,8 +4,8 @@ DESCRIPTION=a lightweight PDF viewer and toolkit written in portable C
 EAPI=4
 HOMEPAGE=http://mupdf.com/
 IUSE=X vanilla
-LICENSE=GPL-3
+LICENSE=AGPL-3
 RDEPEND=media-libs/freetype:2 media-libs/jbig2dec >=media-libs/openjpeg-1.5 virtual/jpeg X? ( x11-libs/libX11 x11-libs/libXext )
 SLOT=0
 _eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=47fac8a44982b1ade51108d9cc35b05f
+_md5_=e860798368c9cd3f1e60bbf5e8469818

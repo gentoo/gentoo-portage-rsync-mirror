@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.6 2012/10/24 19:14:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.7 2013/05/04 14:27:43 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
@@ -40,6 +40,7 @@ PATCHES=(
 
 src_prepare() {
 	rm src/{gl,glu,glw} -rf || die
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	autotools-utils_src_prepare
 }
 

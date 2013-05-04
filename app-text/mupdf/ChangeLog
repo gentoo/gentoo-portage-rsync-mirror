@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.64 2013/04/11 13:15:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.65 2013/05/04 14:14:52 xmw Exp $
+
+  04 May 2013; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  Fix LICENSE to AGPL-3
 
   11 Apr 2013; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
   Upstream included desktop-integration.patch (bug 444924)
