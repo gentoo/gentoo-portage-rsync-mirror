@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.36 2013/02/24 07:14:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.37 2013/05/04 17:54:22 vapier Exp $
+
+  04 May 2013; Mike Frysinger <vapier@gentoo.org> lksctp-tools-1.0.13.ebuild:
+  Fix building with newer automake.
 
 *lksctp-tools-1.0.13 (24 Feb 2013)
 

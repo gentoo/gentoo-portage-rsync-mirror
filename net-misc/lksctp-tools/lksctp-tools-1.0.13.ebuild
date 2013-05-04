@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.13.ebuild,v 1.1 2013/02/24 07:14:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.13.ebuild,v 1.2 2013/05/04 17:54:22 vapier Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ REQUIRED_USE="kernel_linux"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.8-prefix.patch #181602
 	epatch "${FILESDIR}"/${P}-build.patch
-
+	sed -i 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.in || die
 	eautoreconf
 }
 
