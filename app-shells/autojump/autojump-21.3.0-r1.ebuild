@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.3.0.ebuild,v 1.1 2013/01/09 09:06:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.3.0-r1.ebuild,v 1.1 2013/05/04 10:43:19 xmw Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="python? *"
-SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 
-inherit python vcs-snapshot
+inherit eutils python-r1 vcs-snapshot
 
 DESCRIPTION="change directory command that learns"
 HOMEPAGE="http://github.com/joelthelion/autojump"
@@ -19,13 +18,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="bash-completion python test zsh-completion"
 
 RDEPEND="bash-completion? ( >=app-shells/bash-4 )
+	python? ( ${PYTHON_DEPS} )
 	zsh-completion? ( app-shells/zsh app-shells/zsh-completion )"
-DEPEND="test? ( dev-lang/python )"
+DEPEND="test? ( ${PYTHON_DEPS} )"
 
 src_prepare() {
-	#https://github.com/joelthelion/autojump/issues/129
-	sed -e '/def test_db_load_migrate/,/autojump.CONFIG_DIR = ORIG_CONFIG_DIR/d' \
-		-i tests/runtests.py || die
+	epatch "${FILESDIR}"/${P}-supported-shells.patch
 }
 
 src_compile() {
@@ -61,4 +59,7 @@ src_install() {
 
 	doman docs/${PN}.1
 	dodoc README.md
+
+	elog "loading of insecure relative path \"custom_install\" has been"
+	elog "remove. See ${EPREFIX}/etc/profile.d/${PN}.sh for details."
 }

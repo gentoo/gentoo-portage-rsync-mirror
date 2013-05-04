@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/luabind/luabind-0.9.1.ebuild,v 1.1 2013/05/02 21:56:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/luabind/luabind-0.9.1.ebuild,v 1.3 2013/05/04 10:38:34 hasufell Exp $
 
 # NOTE: cross compiling is probably broken
 
@@ -31,6 +31,7 @@ src_compile() {
 	bjam release \
 		-d+2 \
 		--prefix="${D}/usr/" \
+		--libdir="${D}/usr/$(get_libdir)" \
 		cflags="${CFLAGS}" \
 		linkflags="${LDFLAGS}" \
 		link=shared || die "compile failed"
@@ -40,13 +41,11 @@ src_install() {
 	bjam release \
 		-d+2 \
 		--prefix="${D}/usr/" \
+		--libdir="${D}/usr/$(get_libdir)" \
 		cflags="${CFLAGS}" \
 		linkflags="${LDFLAGS}" \
 		link=shared \
-		install || die "compile failed"
-
-	# no idea how to fix that in Jamfile
-	mv "${ED}"/usr/lib "${ED}"/usr/$(get_libdir)
+		install || die "install failed"
 }
 
 # generally, this really sucks, patches welcome
