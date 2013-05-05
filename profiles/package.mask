@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14724 2013/05/05 11:09:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14725 2013/05/05 12:20:00 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -163,19 +163,6 @@ dev-python/python-selinux
 # there is no large end-user failures once package
 # is unmasked; should be unmasked next week
 =sys-fs/eudev-1_beta3
-
-# Tom Wijsman <TomWij@gentoo.org> (05 Apr 2013)
-# Meteor has switched to a different installation approach;
-# instead of installing to the system they now install to
-# the user and their code heavily depends on that. Users
-# that want to continue to use Meteor can use the
-# `curl https://install.meteor.com | /bin/sh` approach as
-# suggested in their documentation, which now installs to
-# ~/.meteor instead of /usr/local/meteor or /opt/meteor.
-# They also heavily depend on specific versions of bundled
-# binaries, which we really can't keep supporting.
-# Removal in 30 days.
-www-servers/meteor
 
 # Mike Gilbert <floppym@gentoo.org> (04 Apr 2013)
 # Dev channel releases are only for people who are developers or want more

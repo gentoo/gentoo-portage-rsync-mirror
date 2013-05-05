@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.1.ebuild,v 1.2 2013/04/28 12:36:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.1.ebuild,v 1.3 2013/05/05 12:13:51 jlec Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -76,6 +76,7 @@ src_prepare() {
 			-e 's/burn.mount.in/ /' \
 			-e 's/burn.mount/ /' \
 			-i daemon/Makefile.am || die
+
 		eautoreconf
 	fi
 

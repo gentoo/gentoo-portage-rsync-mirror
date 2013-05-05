@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.7 2013/02/25 09:23:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.8 2013/05/05 12:13:51 jlec Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -97,6 +97,8 @@ src_prepare() {
 	if use archive || ! use udev; then
 		# libgcrypt.m4 needed for eautoreconf, bug #399043
 		mv "${WORKDIR}/libgcrypt.m4" "${S}"/ || die
+
+		sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 
 		[[ ${PV} = 9999 ]] || AT_M4DIR=. eautoreconf
 	fi
