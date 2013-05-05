@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.8.0.ebuild,v 1.2 2013/04/07 22:19:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.8.2.ebuild,v 1.1 2013/05/05 08:02:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome2 virtualx
 
 DESCRIPTION="Libraries for cryptographic UIs and accessing PKCS#11 modules"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://developer.gnome.org/gcr/"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0/1" # subslot = suffix of libgcr-3

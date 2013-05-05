@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.134 2013/03/10 12:26:30 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.135 2013/05/05 08:04:11 mgorny Exp $
+
+*libsndfile-1.0.25-r1 (05 May 2013)
+
+  05 May 2013; Michał Górny <mgorny@gentoo.org> +libsndfile-1.0.25-r1.ebuild:
+  Convert to multilib, bug #466608.
 
   10 Mar 2013; Vicente Olivert Riera <vincent@gentoo.org>
   libsndfile-1.0.25.ebuild:
