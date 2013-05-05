@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r4.ebuild,v 1.10 2013/04/09 18:09:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.19-r4.ebuild,v 1.11 2013/05/05 21:53:24 tomwij Exp $
 
 inherit eutils autotools
 
@@ -33,6 +33,8 @@ src_unpack() {
 		-e 's:/etc/socks\.conf:/etc/socks/socks.conf:' \
 		-e 's:/etc/sockd\.conf:/etc/socks/sockd.conf:' \
 		doc/{faq.ps,faq.tex,sockd.8,sockd.conf.5,socks.conf.5}
+
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 
 	eautoreconf
 }
