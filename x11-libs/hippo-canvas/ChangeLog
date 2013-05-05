@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/hippo-canvas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/ChangeLog,v 1.8 2012/05/05 03:52:28 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/ChangeLog,v 1.9 2013/05/04 23:04:21 elvanor Exp $
+
+  04 May 2013; <elvanor@gentoo.org> -hippo-canvas-0.3.0.ebuild,
+  hippo-canvas-0.3.0-r1.ebuild:
+  Bug #448962.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> hippo-canvas-0.3.0.ebuild,
   hippo-canvas-0.3.0-r1.ebuild:

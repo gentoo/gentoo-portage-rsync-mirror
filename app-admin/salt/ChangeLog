@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.12 2013/05/04 20:40:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.14 2013/05/04 23:11:34 chutzpah Exp $
+
+  04 May 2013; Patrick McLean <chutzpah@gentoo.org> salt-9999.ebuild:
+  Migrate config file fix over to 9999 ebuild
+
+*salt-0.15.0-r1 (04 May 2013)
+
+  04 May 2013; Patrick McLean <chutzpah@gentoo.org> +salt-0.15.0-r1.ebuild:
+  Revision bump, make sure the default config files get installed (fixes bug
+  #449132).
 
 *salt-0.15.0 (04 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.4 2013/05/04 20:40:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.5 2013/05/04 23:11:34 chutzpah Exp $
 
 EAPI=5
 
@@ -55,6 +55,9 @@ python_install_all() {
 		newinitd "${FILESDIR}"/${s}-initd-1 salt-${s}
 		newconfd "${FILESDIR}"/${s}-confd-1 salt-${s}
 	done
+
+	insinto /etc/${PN}
+	doins conf/*
 
 	dodoc README.rst AUTHORS
 }
