@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p45.ebuild,v 1.4 2013/05/03 13:25:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p45.ebuild,v 1.6 2013/05/05 17:36:32 ago Exp $
 
 EAPI="1"
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="afs bashlogger examples mem-scramble +net nls plugins +readline vanilla"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2

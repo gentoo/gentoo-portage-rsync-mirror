@@ -1,0 +1,20 @@
+# ChangeLog for media-video/handbrake
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.1 2013/05/05 17:33:51 tomwij Exp $
+
+*handbrake-0.9.9_pre5441 (05 May 2013)
+*handbrake-9999 (05 May 2013)
+
+  05 May 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/handbrake-9999-expand-MK_SUBTITLE_PGS.patch,
+  +files/handbrake-9999-fix-compilation-with-mp4v2-v1.9.1.patch,
+  +files/handbrake-9999-remove-dvdnav-dup.patch,
+  +files/handbrake-9999-remove-faac-dependency.patch,
+  +files/handbrake-9999-use-older-libmkv.patch,
+  +files/handbrake-9999-use-unpatched-a52.patch,
+  +handbrake-0.9.9_pre5441.ebuild, +handbrake-9999.ebuild, +metadata.xml:
+  Added handbrake; an open-source, GPL-licensed, multiplatform, multithreaded
+  video transcoder. Thanks to all contributors of bug #89432. Stepping up as its
+  maintainer, help is welcome. 0.9.9 will no longer require one to use bundled
+  libraries therefore handbrake can now reside in the Portage tree; once 0.9.9
+  is released and ffmpeg-1.2 is no longer masked, we can unmask handbrake.

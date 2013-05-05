@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.106 2013/05/03 13:24:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.107 2013/05/05 17:32:31 ago Exp $
+
+  05 May 2013; Agostino Sarubbo <ago@gentoo.org> tmpwatch-2.11.ebuild:
+  Stable for alpha, wrt bug #467516
 
   03 May 2013; Agostino Sarubbo <ago@gentoo.org> tmpwatch-2.11.ebuild:
   Stable for ppc, wrt bug #467516
