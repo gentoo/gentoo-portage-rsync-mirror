@@ -1,16 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/unar-1.5.ebuild,v 1.1 2013/01/10 22:17:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/unar-1.5.ebuild,v 1.2 2013/05/05 05:00:38 vapier Exp $
 
 EAPI=4
 
 inherit toolchain-funcs
 
-DESCRIPTION="Unpacker for various archiving formats, e.g. rar v3."
+DESCRIPTION="unpacker for various archiving formats, e.g. rar v3"
 HOMEPAGE="http://unarchiver.c3.cx/"
 SRC_URI="http://theunarchiver.googlecode.com/files/${PN}${PV}_src.zip"
-LICENSE="LGPL-2.1"
 
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -25,16 +25,18 @@ S="${WORKDIR}/The Unarchiver/XADMaster"
 
 src_compile() {
 	emake -f Makefile.linux \
+		AR="$(tc-getAR)" \
 		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
 		OBJCC="$(tc-getCC)" \
-		C_OPTS="-std=gnu99 ${CFLAGS}" \
-		OBJC_OPTS="-std=gnu99 ${CFLAGS}" \
-		LD="$(tc-getCC)" \
-		LDFLAGS="-Wl,--whole-archive -fexceptions -fgnu-runtime \
-		${LDFLAGS}" || die "emake failed"
+		C_OPTS="-std=gnu99 ${CFLAGS} ${CPPFLAGS}" \
+		CXX_OPTS="${CXXFLAGS} ${CPPFLAGS}" \
+		OBJC_OPTS="-std=gnu99 ${CFLAGS} ${CPPFLAGS}" \
+		LD="$(tc-getCXX)" \
+		LDFLAGS="-Wl,--whole-archive -fexceptions -fgnu-runtime ${LDFLAGS}"
 }
 
 src_install() {
-	dobin unar lsar || die "dobin failed"
-	doman ../Extra/lsar.1 ../Extra/unar.1 || die "doman failed"
+	dobin {ls,un}ar
+	doman ../Extra/{ls,un}ar.1
 }
