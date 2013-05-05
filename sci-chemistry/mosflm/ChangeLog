@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mosflm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.19 2012/10/19 10:03:53 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.20 2013/05/05 13:15:00 jlec Exp $
+
+  05 May 2013; Justin Lecher <jlec@gentoo.org> mosflm-7.0.6-r2.ebuild,
+  mosflm-7.0.7-r2.ebuild, mosflm-7.0.9.ebuild, metadata.xml:
+  Fix for ncurses[tinfo]
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> mosflm-7.0.6-r2.ebuild,
   mosflm-7.0.7-r2.ebuild, mosflm-7.0.9.ebuild:

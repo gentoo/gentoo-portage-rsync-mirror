@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.12 2012/10/19 10:03:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.13 2013/05/05 13:15:00 jlec Exp $
 
 EAPI="3"
 
@@ -51,7 +51,7 @@ src_compile() {
 		FLINK=$(tc-getFC) \
 		CC=$(tc-getCC) \
 		AR_FLAGS=vru \
-		MOSLIBS='-lccp4f -lccp4c -lxdl_view -lcurses -lXt -lmmdb -lccif -lstdc++' \
+		MOSLIBS="-lccp4f -lccp4c -lxdl_view $($(tc-getPKG_CONFIG) --libs ncurses) -lXt -lmmdb -lccif -lstdc++" \
 		MCFLAGS="-O0 -fno-second-underscore" \
 		MOSFLAGS="${FFLAGS} -fno-second-underscore" \
 		FFLAGS="${FFLAGS:- -O2}" \

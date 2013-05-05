@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/libxmi-1.3.ebuild,v 1.2 2013/05/04 21:04:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/libxmi-1.3.ebuild,v 1.3 2013/05/05 13:22:14 jer Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~hppa ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 DEPEND="!<=media-libs/plotutils-2.6"
