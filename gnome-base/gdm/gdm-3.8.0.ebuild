@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.0.ebuild,v 1.1 2013/03/28 22:47:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.0.ebuild,v 1.2 2013/05/05 11:24:19 jlec Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -147,6 +147,7 @@ src_prepare() {
 	use accessibility || epatch "${FILESDIR}/${PN}-3.7.3.1-disable-accessibility.patch"
 
 	mkdir -p "${S}"/m4
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	eautoreconf
 
 	gnome2_src_prepare

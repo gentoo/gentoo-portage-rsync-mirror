@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.9 2013/03/14 04:29:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.10 2013/05/05 11:24:19 jlec Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -150,6 +150,7 @@ src_prepare() {
 	fi
 
 	mkdir -p "${S}"/m4
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	eautoreconf
 
 	gnome2_src_prepare

@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.143 2013/03/02 19:15:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.144 2013/05/05 11:13:14 alonbl Exp $
+
+  05 May 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/pinentry-0.8.2-ncurses.patch, pinentry-0.8.2.ebuild:
+  support sys-libs/ncurses[tinfo], per bug#468430
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> pinentry-0.8.1.ebuild,
   pinentry-0.8.2.ebuild:

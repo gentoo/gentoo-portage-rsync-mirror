@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.15 2013/03/02 19:15:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.16 2013/05/05 11:13:14 alonbl Exp $
 
 EAPI=5
 
-inherit multilib eutils flag-o-matic
+inherit autotools multilib eutils flag-o-matic
 
 DESCRIPTION="Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol"
 HOMEPAGE="http://gnupg.org/aegypten2/index.html"
@@ -43,6 +43,9 @@ src_prepare() {
 			"${EPREFIX}"/usr/bin/moc ${f/.moc/.h} > ${f} || die
 		done
 	fi
+	epatch "${FILESDIR}/${P}-ncurses.patch"
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
+	eautoreconf
 }
 
 src_configure() {
