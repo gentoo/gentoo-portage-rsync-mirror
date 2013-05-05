@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/alacarte
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.117 2012/12/19 10:10:21 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.119 2013/05/05 09:37:56 pacho Exp $
+
+  05 May 2013; Pacho Ramos <pacho@gentoo.org> alacarte-3.7.90.ebuild:
+  Drop comment as gnome-panel dep was removed in purpose because its requeriment
+  was lost in 3.7.x
+
+*alacarte-3.7.90 (05 May 2013)
+
+  05 May 2013; Pacho Ramos <pacho@gentoo.org> +alacarte-3.7.90.ebuild:
+  Version bump
 
 *alacarte-3.6.1-r1 (19 Dec 2012)
 
@@ -456,4 +465,3 @@
 
   07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> +alacarte-0.10.0.ebuild:
   New version for gnome 2.16
-
