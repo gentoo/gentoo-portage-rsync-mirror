@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.345 2012/05/15 23:41:59 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.346 2013/05/05 12:00:37 jlec Exp $
+
+  05 May 2013; Justin Lecher <jlec@gentoo.org> gnome-vfs-2.24.4-r1.ebuild,
+  +files/gnome-vfs-2.24.4-automake-1.13.patch:
+  Fix obsolete macros to work with automake-1.13, #466944
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> gnome-vfs-2.24.4-r1.ebuild:
   keyword ~amd64-fbsd

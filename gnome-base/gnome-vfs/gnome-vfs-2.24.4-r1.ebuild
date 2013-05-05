@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r1.ebuild,v 1.6 2012/05/15 23:41:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r1.ebuild,v 1.7 2013/05/05 12:00:37 jlec Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -100,6 +100,9 @@ src_prepare() {
 
 	# Disable broken test, bug #285706
 	epatch "${FILESDIR}"/${PN}-2.24.4-disable-test-async-cancel.patch
+
+	# Fix for automake-1.13 compatibility, #466944
+	epatch "${FILESDIR}"/${P}-automake-1.13.patch
 
 	# Fix deprecated API disabling in used libraries - this is not future-proof, bug 212163
 	# upstream bug #519632

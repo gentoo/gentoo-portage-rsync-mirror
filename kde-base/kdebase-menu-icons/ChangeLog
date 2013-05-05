@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-menu-icons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.138 2013/05/05 10:14:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.139 2013/05/05 11:50:16 ago Exp $
+
+  05 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  -kdebase-menu-icons-4.10.1.ebuild:
+  Remove old
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org>
   kdebase-menu-icons-4.10.2.ebuild:

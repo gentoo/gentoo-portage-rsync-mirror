@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.325 2013/05/05 10:14:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.326 2013/05/05 11:51:00 ago Exp $
+
+  05 May 2013; Agostino Sarubbo <ago@gentoo.org> -kwin-4.10.1-r1.ebuild,
+  -kwin-4.10.1-r2.ebuild:
+  Remove old
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org> kwin-4.10.2-r1.ebuild:
   Stable for ppc64, wrt to bug #466074
