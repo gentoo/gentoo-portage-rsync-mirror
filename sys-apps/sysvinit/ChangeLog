@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.124 2013/05/04 09:04:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.125 2013/05/05 01:15:16 vapier Exp $
+
+  05 May 2013; Mike Frysinger <vapier@gentoo.org> sysvinit-2.88-r4.ebuild,
+  sysvinit-2.88-r5.ebuild:
+  Fix blockers -- older sysvinit cannot be installed with newer util-linux.
 
   04 May 2013; Samuli Suominen <ssuominen@gentoo.org> sysvinit-2.88-r4.ebuild,
   sysvinit-2.88-r5.ebuild:

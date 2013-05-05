@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.10 2013/05/04 21:42:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.11 2013/05/05 01:27:02 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python2_7 )
 
-inherit eutils pam python toolchain-funcs
+inherit eutils pam python-single-r1 toolchain-funcs
 
 DESCRIPTION="A pam module to provide authentication using USB device"
 HOMEPAGE="http://pamusb.org/"
@@ -21,6 +21,7 @@ COMMON_DEPEND="dev-libs/libxml2
 	sys-apps/dbus
 	virtual/pam"
 RDEPEND="${COMMON_DEPEND}
+	${PYTHON_DEPS}
 	dev-python/dbus-python
 	dev-python/pygobject:2
 	sys-apps/pmount
@@ -29,13 +30,12 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-openpam.patch
-	python_convert_shebangs 2 tools/pamusb-{conf,agent} #413025
+	python_fix_shebang tools/pamusb-{conf,agent} #413025
 }
 
 src_compile() {

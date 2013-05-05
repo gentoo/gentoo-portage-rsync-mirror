@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.9.5-r1.ebuild,v 1.2 2013/05/04 16:55:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.9.5-r1.ebuild,v 1.3 2013/05/05 01:16:50 ssuominen Exp $
 
 EAPI=5
 inherit eutils linux-info udev multilib-minimal
@@ -53,7 +53,7 @@ multilib_src_compile() {
 }
 
 multilib_src_install() {
-	emake -C lib DESTDIR="${D}" install
+	emake -j1 -C lib DESTDIR="${D}" install
 }
 
 multilib_src_install_all() {

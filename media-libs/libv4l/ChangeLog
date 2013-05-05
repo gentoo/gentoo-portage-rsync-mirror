@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.89 2013/05/04 16:59:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.90 2013/05/05 01:16:50 ssuominen Exp $
+
+  05 May 2013; Samuli Suominen <ssuominen@gentoo.org> libv4l-0.9.5.ebuild,
+  libv4l-0.9.5-r1.ebuild:
+  Use -j1 for emake install because of the following error:
+
+  libtool: relink: gcc ... -o .libs/v4l2convert.so
+  ld: cannot find -lv4l2
+  collect2: error: ld returned 1 exit status
+  libtool: install: error: relink `v4l2convert.la' with the above command
+  before installing it
 
   04 May 2013; Samuli Suominen <ssuominen@gentoo.org> -libv4l-0.8.9-r1.ebuild:
   old

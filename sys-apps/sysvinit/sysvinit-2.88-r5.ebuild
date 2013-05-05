@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r5.ebuild,v 1.2 2013/05/04 09:04:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r5.ebuild,v 1.3 2013/05/05 01:15:16 vapier Exp $
 
 EAPI="4"
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux ibm static kernel_FreeBSD"
 
-RDEPEND="selinux? ( >=sys-libs/libselinux-1.28 )
-	!<sys-apps/util-linux-2.23"
+RDEPEND="selinux? ( >=sys-libs/libselinux-1.28 )"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
