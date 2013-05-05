@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.1.ebuild,v 1.2 2013/05/03 10:36:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.1.ebuild,v 1.3 2013/05/05 07:38:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -87,6 +87,7 @@ RDEPEND="
 	xmp? ( >=media-libs/exempi-2.1 )
 	xps? ( app-text/libgxps )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
+	$(vala_depend)
 "
 #	strigi? ( >=app-misc/strigi-0.7 )
 #	mp3? ( qt4? (  >=dev-qt/qtgui-4.7.1:4 ) )
@@ -150,6 +151,7 @@ src_prepare() {
 
 	eautoreconf # See bug #367975
 	gnome2_src_prepare
+	vala_src_prepare
 }
 
 src_configure() {
