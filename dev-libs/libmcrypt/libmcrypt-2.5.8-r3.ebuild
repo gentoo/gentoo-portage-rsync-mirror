@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.8-r3.ebuild,v 1.1 2013/05/04 21:15:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.8-r3.ebuild,v 1.2 2013/05/05 08:33:29 alonbl Exp $
 
 EAPI="5"
 
@@ -21,7 +21,8 @@ RDEPEND=""
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-rotate-mask.patch
 	mv configure.in configure.ac
-	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
+	mv libltdl/configure.in libltdl/configure.ac
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac libltdl/configure.ac || die
 	eautoreconf # need new libtool for interix (elibtoolize would suffice for freebsd)
 }
 
