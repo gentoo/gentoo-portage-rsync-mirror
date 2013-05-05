@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/debhelper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.66 2012/10/14 18:55:24 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.67 2013/05/05 14:08:52 jer Exp $
+
+*debhelper-9.20130504 (05 May 2013)
+
+  05 May 2013; Jeroen Roovers <jer@gentoo.org> +debhelper-9.20130504.ebuild,
+  -debhelper-9.20120322.ebuild, -debhelper-9.20120608.ebuild,
+  -debhelper-9.20120830.ebuild, files/debhelper-7.4.13-conditional-nls.patch:
+  Clean up patch. Version bump.
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org> debhelper-9.20120909.ebuild:
   alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #437784

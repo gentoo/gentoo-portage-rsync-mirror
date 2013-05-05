@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20120608.ebuild,v 1.8 2012/08/27 17:34:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20130504.ebuild,v 1.1 2013/05/05 14:08:52 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Collection of programs that can be used to automate common tasks in debian/rules"
@@ -11,35 +11,38 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc s390 sh sparc x86"
-IUSE="nls linguas_de linguas_es linguas_fr test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="nls test"
+DH_LINGUAS=( de es fr )
+IUSE+=" ${DH_LINGUAS[@]/#/linguas_}"
 
-RDEPEND="app-arch/dpkg
+RDEPEND="
+	>=dev-lang/perl-5.10
+	app-arch/dpkg
 	dev-perl/TimeDate
 	virtual/perl-Getopt-Long
-	>=dev-lang/perl-5.10"
-
+"
 DEPEND="${RDEPEND}
 	nls? ( >=app-text/po4a-0.24 )
-	test? ( dev-perl/Test-Pod )"
+	test? ( dev-perl/Test-Pod )
+"
 
 S=${WORKDIR}/${PN}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-7.4.13-conditional-nls.patch
-}
-
 src_compile() {
 	tc-export CC
-	local USE_NLS=no LANGS=""
 
-	use nls && USE_NLS=yes
+	if use nls; then
+		local LANGS="" lingua
+		for lingua in ${DH_LINGUAS[@]}; do
+			use linguas_${lingua} && LANGS+=" ${lingua}"
+		done
+	fi
 
-	use linguas_de && LANGS="${LANGS} de"
-	use linguas_es && LANGS="${LANGS} es"
-	use linguas_fr && LANGS="${LANGS} fr"
-
-	emake USE_NLS=${USE_NLS} LANGS="${LANGS}" build
+	emake \
+		USE_NLS=$(usex nls) \
+		LANGS="${LANGS}" \
+		build
 }
 
 src_install() {

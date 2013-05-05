@@ -1,6 +1,5 @@
-diff -Naurp debhelper.orig/Makefile debhelper/Makefile
---- debhelper.orig/Makefile	2009-12-04 19:56:11.000000000 +0000
-+++ debhelper/Makefile	2010-02-14 03:45:08.000000000 +0000
+--- a/debhelper/Makefile
++++ b/debhelper/Makefile
 @@ -34,12 +34,17 @@ PERLLIBDIR=$(shell perl -MConfig -e 'pri
  
  POD2MAN=pod2man --utf8 -c Debhelper -r "$(VERSION)"
