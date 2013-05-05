@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.480 2013/04/02 17:24:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.481 2013/05/05 04:17:49 vapier Exp $
+
+*binutils-2.23.52.0.2 (05 May 2013)
+
+  05 May 2013; Mike Frysinger <vapier@gentoo.org> +binutils-2.23.52.0.2.ebuild:
+  Version bump.
 
   02 Apr 2013; Mike Frysinger <vapier@gentoo.org> binutils-2.23.2.ebuild:
   Dekeyword until we can get a handle on missing symbol linkage errors #464152
