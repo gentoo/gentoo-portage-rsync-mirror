@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/asunder
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.43 2012/06/08 11:51:29 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.44 2013/05/05 09:24:51 fauli Exp $
+
+  05 May 2013; Christian Faulhammer <fauli@gentoo.org> -asunder-2.1.ebuild:
+  clean up
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> asunder-2.2.ebuild:
   x86 stable wrt bug #419123
