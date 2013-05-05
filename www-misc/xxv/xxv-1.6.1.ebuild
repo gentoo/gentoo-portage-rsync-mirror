@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.6 2012/02/07 10:37:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.7 2013/05/05 12:37:25 hd_brummy Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ IUSE="-mplayer themes"
 RDEPEND=">=media-video/vdr-1.2.6
 	media-video/vdr2jpeg
 	media-fonts/ttf-bitstream-vera
-	dev-db/mysql
+	virtual/mysql
 	virtual/perl-CGI
 	virtual/perl-Digest-MD5
 	virtual/perl-Getopt-Long
