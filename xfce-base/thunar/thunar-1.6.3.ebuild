@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.4.0.ebuild,v 1.11 2012/12/02 22:15:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.6.3.ebuild,v 1.1 2013/05/05 17:02:44 ssuominen Exp $
 
 EAPI=5
 inherit virtualx xfconf
@@ -13,17 +13,19 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/${PV%.*}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="+dbus debug exif libnotify pcre startup-notification test +xfce_plugins_trash udev"
 
 GVFS_DEPEND=">=gnome-base/gvfs-1.10.1"
 COMMON_DEPEND=">=dev-lang/perl-5.6
-	>=dev-libs/glib-2.24
-	>=x11-libs/gtk+-2.20:2
-	>=xfce-base/exo-0.8
+	>=dev-libs/glib-2.30
+	>=x11-libs/gdk-pixbuf-2.14
+	>=x11-libs/gtk+-2.24:2
+	>=xfce-base/exo-0.10
 	>=xfce-base/libxfce4ui-4.10
-	>=xfce-base/libxfce4util-4.10
-	dbus? ( >=dev-libs/dbus-glib-0.98 )
+	>=xfce-base/libxfce4util-4.10.1
+	>=xfce-base/xfconf-4.10
+	dbus? ( >=dev-libs/dbus-glib-0.100 )
 	exif? ( >=media-libs/libexif-0.6.19 )
 	libnotify? ( >=x11-libs/libnotify-0.7 )
 	pcre? ( >=dev-libs/libpcre-6 )

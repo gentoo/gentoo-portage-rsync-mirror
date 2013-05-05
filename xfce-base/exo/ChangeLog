@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.99 2013/04/13 07:19:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.100 2013/05/05 17:04:20 ssuominen Exp $
+
+  05 May 2013; Samuli Suominen <ssuominen@gentoo.org> -exo-0.8.0.ebuild:
+  old
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> exo-0.10.2.ebuild:
   Stable for sparc, wrt bug #465286

@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libmkv
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmkv/ChangeLog,v 1.1 2013/05/05 17:20:34 tomwij Exp $
+
+*libmkv-0.6.5.1 (05 May 2013)
+
+  05 May 2013; Tom Wijsman <TomWij@gentoo.org> +libmkv-0.6.5.1.ebuild,
+  +metadata.xml:
+  Added media-libs/libmkv, a dependency for media-video/handbrake.
