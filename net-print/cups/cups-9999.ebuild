@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.30 2013/05/03 20:00:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.31 2013/05/05 07:09:16 mgorny Exp $
 
 EAPI=5
 
@@ -253,9 +253,9 @@ src_install() {
 
 	# for the special case of running lprng and cups together, bug 467226
 	if use lprng-compat ; then
-		rm -fv "${ED}"/usr/bin/lp*
+		rm -fv "${ED}"/usr/bin/{lp*,cancel}
 		rm -fv "${ED}"/usr/sbin/lp*
-		rm -fv "${ED}"/usr/share/man/man1/lp*
+		rm -fv "${ED}"/usr/share/man/man1/{lp*,cancel*}
 		rm -fv "${ED}"/usr/share/man/man8/lp*
 		ewarn "Not installing lp... binaries, since the lprng-compat useflag is set."
 		ewarn "Unless you plan to install an exotic server setup, you most likely"

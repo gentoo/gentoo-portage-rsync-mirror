@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.21 2012/01/27 14:33:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.35-r2.ebuild,v 1.1 2013/05/05 07:09:26 mgorny Exp $
+
+EAPI=4
 
 inherit eutils flag-o-matic
 
@@ -17,23 +19,21 @@ IUSE="foomaticdb kerberos nls ssl"
 RDEPEND="sys-process/procps
 	ssl? ( dev-libs/openssl )
 	foomaticdb? ( net-print/foomatic-filters net-print/foomatic-db )
-	!net-print/cups"
+	!>=net-print/cups-1.6.2-r4[-lprng-compat]
+	!<net-print/cups-1.6.2-r4"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	kerberos? ( app-crypt/mit-krb5 )"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.8.27-certs.diff
-	epatch "${FILESDIR}"/${P}-lpq.diff
-	epatch "${FILESDIR}"/${P}-make.diff
-	epatch "${FILESDIR}"/${P}-krb.diff
+	epatch "${FILESDIR}"/${PN}-3.8.28-make.diff
+	epatch "${FILESDIR}"/${PN}-3.8.28-krb.diff
 }
 
-src_compile() {
+src_configure() {
 	# wont compile with -O3, needs -O2
 	replace-flags -O[3-9] -O2
 
@@ -49,9 +49,12 @@ src_compile() {
 		--with-lpd_perms_path=/etc/lprng/lpd.perms \
 		--libexecdir=/usr/libexec/lprng \
 		--sysconfdir=/etc/lprng \
-		--disable-strip || die "econf failed"
+		--disable-strip
+}
 
-	emake -j1 || die "printer on fire!"
+src_compile() {
+	# bash is necessary due to bashisms in libtool
+	emake -j1 SHELL=/bin/bash
 }
 
 src_install() {
@@ -62,10 +65,9 @@ src_install() {
 	emake install \
 		DESTDIR="${D}" \
 		POSTINSTALL="NO" \
-		gnulocaledir="${D}"/usr/share/locale || die "emake install failed"
+		gnulocaledir="${D}"/usr/share/locale
 
 	dodoc CHANGES README VERSION "${FILESDIR}"/printcap lpd.conf lpd.perms
-	dohtml HOWTO/*
 
 	insinto /etc/lprng
 	doins "${FILESDIR}"/printcap lpd.conf lpd.perms
