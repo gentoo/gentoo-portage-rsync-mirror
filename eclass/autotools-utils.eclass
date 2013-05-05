@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.67 2013/05/03 09:20:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.68 2013/05/05 20:22:25 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -546,8 +546,11 @@ autotools-utils_src_test() {
 	_check_build_dir
 	pushd "${BUILD_DIR}" > /dev/null || die
 
-	# XXX: do we need to support other targets in autotools?
-	emake check "${@}" || die 'emake check failed.'
+	if make -n check &>/dev/null; then
+		emake check "${@}" || die 'emake check failed.'
+	elif make -n test &>/dev/null; then
+		emake test "${@}" || die 'emake test failed.'
+	fi
 
 	popd > /dev/null || die
 }

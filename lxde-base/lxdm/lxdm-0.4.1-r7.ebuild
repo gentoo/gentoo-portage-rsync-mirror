@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r6.ebuild,v 1.1 2013/05/03 21:02:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r7.ebuild,v 1.1 2013/05/05 20:14:22 lxnay Exp $
 
 EAPI="2"
 
@@ -45,6 +45,9 @@ src_prepare() {
 
 	# 393329 Selinux support
 	epatch "${FILESDIR}"/${P}-selinux-support.patch
+
+	# See https://bugs.launchpad.net/ubuntu/+source/lxdm/+bug/922363
+	epatch "${FILESDIR}/${P}-fix-pam-100-cpu.patch"
 
 	# this replaces the bootstrap/autogen script in most packages
 	eautoreconf
