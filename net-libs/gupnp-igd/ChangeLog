@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.44 2013/05/04 11:50:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.45 2013/05/05 10:25:33 mgorny Exp $
+
+  05 May 2013; Michał Górny <mgorny@gentoo.org> gupnp-igd-0.2.2-r1.ebuild:
+  Drop unnecessary PYTHON_USEDEP on gobject-introspection.
 
 *gupnp-igd-0.2.2-r1 (04 May 2013)
 

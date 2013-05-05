@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.2-r1.ebuild,v 1.1 2013/05/04 11:50:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.2-r1.ebuild,v 1.2 2013/05/05 10:25:33 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/glib-2.16:2
 	introspection? ( >=dev-libs/gobject-introspection-0.10 )
 	python? (
-		>=dev-libs/gobject-introspection-0.10[${PYTHON_USEDEP}]
+		>=dev-libs/gobject-introspection-0.10
 		>=dev-python/pygobject-2.16:2[${PYTHON_USEDEP}]
 		)"
 DEPEND="${RDEPEND}

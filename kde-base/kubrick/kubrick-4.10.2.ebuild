@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/kubrick-4.10.2.ebuild,v 1.4 2013/05/01 11:50:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/kubrick-4.10.2.ebuild,v 1.5 2013/05/05 10:14:31 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ OPENGL_REQUIRED="always"
 inherit kde4-base
 
 DESCRIPTION="A game based on the \"Rubik's Cube\" puzzle."
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="$(add_kdebase_dep libkdegames)

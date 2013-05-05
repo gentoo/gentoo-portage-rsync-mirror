@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.4.1.ebuild,v 1.5 2013/05/01 12:01:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.4.1.ebuild,v 1.6 2013/05/05 10:17:54 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://mirror.kolabsys.com/pub/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2+ LGPL-2.1+ LGPL-3+"
 SLOT="4"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm ppc ppc64 x86"
 IUSE="php python test"
 
 # Tests fail, last checked 0.4.1
