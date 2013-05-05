@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.0.2.ebuild,v 1.1 2013/05/02 19:28:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.0.2.ebuild,v 1.2 2013/05/05 16:51:24 ulm Exp $
 
 EAPI=5
 NEED_EMACS=23
@@ -23,7 +23,7 @@ S="${WORKDIR}/org-${PV}"
 SITEFILE="50${PN}-gentoo-8.el"
 
 src_compile() {
-	emake datadir="${SITEETC}/${PN}"
+	emake datadir="${EPREFIX}${SITEETC}/${PN}"
 	use doc && emake pdf card
 }
 
@@ -31,8 +31,8 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		ETCDIRS="styles $(use odt-schema && echo schema)" \
-		lispdir="${SITELISP}/${PN}" \
-		datadir="${SITEETC}/${PN}" \
+		lispdir="${EPREFIX}${SITELISP}/${PN}" \
+		datadir="${EPREFIX}${SITEETC}/${PN}" \
 		install
 
 	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}"

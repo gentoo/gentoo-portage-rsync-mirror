@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.156 2013/05/02 19:28:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.157 2013/05/05 16:51:24 ulm Exp $
+
+  05 May 2013; Ulrich Müller <ulm@gentoo.org> org-mode-7.9.2.ebuild,
+  org-mode-8.0.2.ebuild:
+  Fix previous commit, EPREFIX was missing from paths, bug 468574.
 
 *org-mode-8.0.2 (02 May 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.0.ebuild,v 1.11 2012/11/28 12:30:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1.ebuild,v 1.1 2013/05/05 16:55:45 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -11,25 +11,23 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="consolekit debug gnome-keyring policykit udev +xscreensaver"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+IUSE="debug policykit udev +xscreensaver"
 
-COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	x11-apps/iceauth
 	x11-libs/libSM
 	>=x11-libs/libwnck-2.30:1
 	x11-libs/libX11
-	>=xfce-base/libxfce4util-4.10
+	>=xfce-base/libxfce4util-4.10.1
 	>=xfce-base/libxfce4ui-4.10
 	>=xfce-base/xfconf-4.10
-	gnome-keyring? ( >=gnome-base/libgnome-keyring-2.22 )
-	!xfce-base/xfce-utils"
+	!xfce-base/xfce-utils
+	policykit? ( >=sys-auth/polkit-0.100 )"
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xrdb
 	x11-misc/xdg-user-dirs
-	consolekit? ( || ( sys-auth/consolekit >=sys-apps/systemd-40 ) )
-	policykit? ( >=sys-auth/polkit-0.104-r1 )
-	udev? ( >=sys-power/upower-0.9.15 )
+	udev? ( >=sys-power/upower-0.9.20 )
 	xscreensaver? ( || (
 		>=x11-misc/xscreensaver-5.15
 		gnome-extra/gnome-screensaver
@@ -38,14 +36,14 @@ RDEPEND="${COMMON_DEPEND}
 		) )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		$(use_enable policykit systemd)
 		--with-xsession-prefix="${EPREFIX}"/usr
-		$(use_enable gnome-keyring libgnome-keyring)
 		$(xfconf_use_debug)
 		)
 

@@ -1,6 +1,14 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.213 2013/04/13 07:20:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.215 2013/05/05 16:40:53 ssuominen Exp $
+
+  05 May 2013; Samuli Suominen <ssuominen@gentoo.org> -xfwm4-4.10.0.ebuild:
+  old
+
+*xfwm4-4.10.1 (05 May 2013)
+
+  05 May 2013; Samuli Suominen <ssuominen@gentoo.org> +xfwm4-4.10.1.ebuild:
+  Version bump.
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> xfwm4-4.10.0-r1.ebuild:
   Stable for sparc, wrt bug #465286
