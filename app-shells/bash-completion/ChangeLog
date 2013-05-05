@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.238 2013/05/05 12:09:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.239 2013/05/05 13:58:50 ago Exp $
+
+  05 May 2013; Agostino Sarubbo <ago@gentoo.org> bash-completion-1.3-r2.ebuild:
+  Stable for arm, wrt bug #468554
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org> bash-completion-1.3-r2.ebuild:
   Stable for x86, wrt bug #468554
