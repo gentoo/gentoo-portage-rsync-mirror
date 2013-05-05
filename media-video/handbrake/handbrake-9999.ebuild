@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.1 2013/05/05 17:33:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.2 2013/05/05 20:59:23 tomwij Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_{5,6,7} )
 
-inherit eutils gnome2-utils python-single-r1
+inherit eutils gnome2-utils python-any-r1
 
 if [[ ${PV} = *9999* ]]; then
 	ESVN_REPO_URI="svn://svn.handbrake.fr/HandBrake/trunk"
@@ -23,10 +23,10 @@ HOMEPAGE="http://handbrake.fr/"
 LICENSE="GPL-2"
 
 SLOT="0"
-IUSE="gtk gst ffmpeg"
+IUSE="gtk gstreamer ffmpeg"
 
 # Use either ffmpeg or gst-plugins/mpeg2dec for decoding MPEG-2.
-REQUIRED_USE="!ffmpeg? ( gst )"
+REQUIRED_USE="!ffmpeg? ( gstreamer )"
 
 RDEPEND="
 	media-libs/a52dec
@@ -45,7 +45,7 @@ RDEPEND="
 	ffmpeg? ( >=media-video/ffmpeg-1.2 )
 	sys-libs/glibc:2.2
 	sys-libs/zlib
-	gst? (
+	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
 		!ffmpeg? ( media-plugins/gst-plugins-mpeg2dec:1.0 )
@@ -67,7 +67,7 @@ DEPEND="${RDEPEND}
 	sys-devel/automake"
 
 pkg_setup() {
-	python-single-r1_pkg_setup
+	python-any-r1_pkg_setup
 }
 
 src_prepare() {
@@ -101,20 +101,20 @@ src_configure() {
 	local myconf=""
 
 	if ! use gtk ; then
-		myconf="${myconf} --disable-gtk"
+		myconf+=" --disable-gtk"
 	fi
 
-	if ! use gst ; then
-		myconf="${myconf} --disable-gst"
+	if ! use gstreamer ; then
+		myconf+=" --disable-gst"
 	fi
 
 	if use ffmpeg ; then
-		myconf="${myconf} --enable-ff-mpeg2"
+		myconf+=" --enable-ff-mpeg2"
 	fi
 
 	./configure \
 		--force \
-		--prefix=/usr \
+		--prefix="${EPREFIX}/usr" \
 		--disable-gtk-update-checks \
 		${myconf} || die "Configure failed."
 }

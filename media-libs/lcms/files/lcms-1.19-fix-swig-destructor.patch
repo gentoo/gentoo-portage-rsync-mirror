@@ -1,0 +1,11 @@
+--- python/lcms.i.orig	2013-04-18 00:11:48.179673481 +0400
++++ python/lcms.i	2013-04-18 00:11:56.769673425 +0400
+@@ -191,7 +191,7 @@
+ 				ZeroMemory(v, sizeof(COLORW));
+                 return v;
+         }
+-        ~COLORB() {
++        ~COLORW() {
+                 _cmsFree(self);
+         }
+ 		const char* __repr__() {                

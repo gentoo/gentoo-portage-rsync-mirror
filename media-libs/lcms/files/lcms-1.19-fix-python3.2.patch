@@ -1,0 +1,17 @@
+--- configure.ac.orig	2013-04-18 00:04:25.940676322 +0400
++++ configure.ac	2013-04-18 00:06:34.233675498 +0400
+@@ -93,10 +93,10 @@
+   AM_PATH_PYTHON(2.2,PYTHON_OK='yes',PYTHON_OK='no')  
+   if test -n "$PYTHON"
+   then
+-	LCMS_PYTHON_PREFIX=`$PYTHON -c "import sys; print sys.prefix"`
+-	LCMS_PYEXECDIR=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(1)"`
+-    LCMS_PYINCLUDE=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_inc()"`	
+-	LCMS_PYLIB=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_lib(0,1)"`
++	LCMS_PYTHON_PREFIX=`$PYTHON -c "import sys; print(sys.prefix)"`
++	LCMS_PYEXECDIR=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1))"`
++    LCMS_PYINCLUDE=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_inc())"`	
++	LCMS_PYLIB=`$PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_lib(0,1))"`
+ 	AC_CHECK_FILE([$LCMS_PYINCLUDE/Python.h],PYTHON_OK='yes',PYTHON_OK='no')
+     AC_SUBST(LCMS_PYEXECDIR)
+     AC_SUBST(LCMS_PYINCLUDE)

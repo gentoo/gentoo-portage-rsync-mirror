@@ -3574,7 +3574,7 @@ media-video/griffith:csv - Enable proper support for csv import (respectively au
 media-video/gxine:gnome-screensaver - Enable dbus support to communicate with gnome-extra/gnome-screensaver
 media-video/h264enc:ogm - Support for OGM container format
 media-video/handbrake:ffmpeg - Use FFmpeg from media-video/ffmpeg to decode MPEG-2 instead of media-plugins/gst-plugins-mpeg2dec.
-media-video/handbrake:gst - Support for the streaming media framework from media-libs/gstreamer.
+media-video/handbrake:gstreamer - Support for the streaming media framework from media-libs/gstreamer.
 media-video/handbrake:gtk - Support for Gimp ToolKit + from x11-libs/gtk+, requirement for a GUI-based HandBrake.
 media-video/hwdecode-demos:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
