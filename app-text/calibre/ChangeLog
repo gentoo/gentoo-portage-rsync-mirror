@@ -1,6 +1,14 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.274 2013/04/27 23:04:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.276 2013/05/05 02:13:32 zmedico Exp $
+
+  05 May 2013; Zac Medico <zmedico@gentoo.org> calibre-0.9.27.ebuild:
+  Migrate off of python.eclass.
+
+*calibre-0.9.29 (05 May 2013)
+
+  05 May 2013; Zac Medico <zmedico@gentoo.org> +calibre-0.9.29.ebuild:
+  0.9.29 version bump.
 
 *calibre-0.9.28 (27 Apr 2013)
 
