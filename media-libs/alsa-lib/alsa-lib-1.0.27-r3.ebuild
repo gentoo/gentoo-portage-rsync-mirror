@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27-r3.ebuild,v 1.1 2013/05/03 14:38:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27-r3.ebuild,v 1.2 2013/05/06 13:50:28 ssuominen Exp $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ IUSE="doc debug alisp python"
 RDEPEND="python? ( ${PYTHON_DEPS} )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
 DEPEND="${RDEPEND}
-	>=media-sound/alsa-headers-1.0.25-r1
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
 pkg_setup() {
