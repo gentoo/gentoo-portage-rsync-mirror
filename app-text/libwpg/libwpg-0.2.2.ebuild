@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.2.2.ebuild,v 1.6 2013/05/05 17:34:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.2.2.ebuild,v 1.7 2013/05/06 11:45:08 scarabeus Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit alternatives eutils
 
 DESCRIPTION="C++ library to read and parse graphics in WPG"
 HOMEPAGE="http://libwpg.sourceforge.net/libwpg.htm"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 MPL-2.0 )"
 SLOT="0.2"

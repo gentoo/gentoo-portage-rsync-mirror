@@ -1,0 +1,10 @@
+# ChangeLog for app-text/libodfgen
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/ChangeLog,v 1.1 2013/05/06 11:43:33 scarabeus Exp $
+
+*libodfgen-0.0.0 (06 May 2013)
+
+  06 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libodfgen-0.0.0.ebuild,
+  +metadata.xml:
+  Initial commit. Code split out libreoffice-core so keeping the same keywords
+  as libo.

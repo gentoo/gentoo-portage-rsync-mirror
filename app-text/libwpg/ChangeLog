@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.23 2013/05/05 17:34:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.24 2013/05/06 11:45:08 scarabeus Exp $
+
+  06 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> libwpg-0.2.2.ebuild:
+  Use .xz instead of bz2.
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org> libwpg-0.2.2.ebuild:
   Stable for alpha, wrt bug #467450
