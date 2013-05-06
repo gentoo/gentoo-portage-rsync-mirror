@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.0.2.ebuild,v 1.2 2013/05/05 16:51:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.0.2.ebuild,v 1.3 2013/05/06 05:07:34 ulm Exp $
 
 EAPI=5
 NEED_EMACS=23
@@ -33,6 +33,7 @@ src_install() {
 		ETCDIRS="styles $(use odt-schema && echo schema)" \
 		lispdir="${EPREFIX}${SITELISP}/${PN}" \
 		datadir="${EPREFIX}${SITEETC}/${PN}" \
+		infodir="${EPREFIX}/usr/share/info" \
 		install
 
 	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}"

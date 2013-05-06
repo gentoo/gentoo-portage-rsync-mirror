@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/lxtask-0.1.4.ebuild,v 1.8 2013/02/23 02:09:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/lxtask-0.1.4.ebuild,v 1.9 2013/05/06 05:26:26 patrick Exp $
 
 EAPI="4"
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# use new patch to remove broken linguas
 	epatch "${FILESDIR}"/${P}-remove-broken-linguas.patch
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 

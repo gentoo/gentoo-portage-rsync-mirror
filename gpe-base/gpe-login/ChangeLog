@@ -1,6 +1,9 @@
 # ChangeLog for gpe-base/gpe-login
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.9 2010/07/23 11:37:59 miknix Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.10 2013/05/06 05:03:40 patrick Exp $
+
+  06 May 2013; Patrick Lauer <patrick@gentoo.org> gpe-login-0.95-r4.ebuild:
+  Automake 1.13 fix
 
 *gpe-login-0.95-r4 (23 Jul 2010)
 
@@ -53,4 +56,3 @@
   +files/gpe-login.setup-gentoo, +files/locale.default-gentoo,
   +metadata.xml, +gpe-login-0.95.ebuild:
   Import gpe-base/gpe-login from the GPE overlay
-

@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxtask
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.27 2013/02/23 02:09:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.28 2013/05/06 05:26:26 patrick Exp $
+
+  06 May 2013; Patrick Lauer <patrick@gentoo.org> lxtask-0.1.4.ebuild:
+  Automake 1.13 fix
 
   23 Feb 2013; Zac Medico <zmedico@gentoo.org> lxtask-0.1.4.ebuild:
   Add ~arm-linux and ~x86-linux keywords.
