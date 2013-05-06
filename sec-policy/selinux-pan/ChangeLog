@@ -1,4 +1,11 @@
 
+
+*selinux-pan-2.20130424-r1 (06 May 2013)
+
+  06 May 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20130424-r1.ebuild:
+  Adding 20130424 release
+
   29 Mar 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20120725-r12.ebuild:
   Stabilize r12, fixes 455080, 453724, 461880, 453722, 452166, 458876, 457618,

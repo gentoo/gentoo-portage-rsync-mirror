@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare pretend
+DESCRIPTION=SELinux policy for core modules
+EAPI=4
+HOMEPAGE=http://www.gentoo.org/proj/en/hardened/selinux/
+IUSE=+unconfined
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+PDEPEND=unconfined? ( sec-policy/selinux-unconfined )
+RDEPEND=>=sec-policy/selinux-base-2.20130424-r1
+SLOT=0
+SRC_URI=http://oss.tresys.com/files/refpolicy/refpolicy-2.20130424.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20130424-r1.tar.bz2
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=edfbed8cad49bc3d97e3ab26e6ea168d

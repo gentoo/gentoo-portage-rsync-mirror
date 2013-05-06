@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.16 2013/05/03 02:50:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.17 2013/05/06 14:33:50 prometheanfire Exp $
+
+  06 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-0.8.8.323-r1.ebuild, -spotify-0.8.8.323-r2.ebuild:
+  removed old (unavailable) versions of spotify
 
 *spotify-0.9.0.133 (03 May 2013)
 
