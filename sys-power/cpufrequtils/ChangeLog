@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.72 2013/04/21 09:21:07 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.73 2013/05/06 11:09:09 lxnay Exp $
+
+*cpufrequtils-008-r3 (06 May 2013)
+
+  06 May 2013; Fabio Erculiani <lxnay@gentoo.org> -cpufrequtils-008-r2.ebuild,
+  +cpufrequtils-008-r3.ebuild, files/cpufrequtils-init.d-007,
+  files/cpufrequtils.service, files/cpufrequtils-change.sh:
+  fix usage with systemd when SYSFS_OPTS is not set
 
 *cpufrequtils-008-r2 (21 Apr 2013)
 
