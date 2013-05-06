@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.222 2013/04/16 04:17:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.223 2013/05/06 14:25:08 ssuominen Exp $
+
+  06 May 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Orphan alsa-headers as it's unrequired wrt #468712#c4
 
   16 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   -alsa-headers-1.0.23.ebuild, -alsa-headers-1.0.24.ebuild:

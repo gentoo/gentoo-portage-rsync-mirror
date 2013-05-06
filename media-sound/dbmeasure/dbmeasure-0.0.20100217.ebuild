@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dbmeasure/dbmeasure-0.0.20100217.ebuild,v 1.2 2012/05/05 08:15:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dbmeasure/dbmeasure-0.0.20100217.ebuild,v 1.3 2013/05/06 14:04:22 ssuominen Exp $
 
-EAPI=3
+EAPI=5
 GIT_COMMITID="ed8105083ab72f9afac9d18b7563fbc3d6c1c925"
 MY_PV="${PV}-${GIT_COMMITID}"
 MY_P="${PN}-${MY_PV}"
 
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="ALSA Volume Control Attenuation Measurement Tool"
 HOMEPAGE="http://pulseaudio.org/wiki/BadDecibel"
@@ -18,24 +18,25 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/alsa-lib"
-DEPEND="media-sound/alsa-headers
-		virtual/pkgconfig
-		${RDEPEND}"
+RDEPEND=">=media-libs/alsa-lib-1.0.26"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_prepare() {
+	tc-export CC
 	# We drop the -g for debug output but we keep the -O0, as we don't want GCC
 	# to optimize out some critical math.
 	strip-flags
 	sed -i \
-		-e '/^CFLAGS/s,=,+=,g' \
-		-e '/^CFLAGS/s,-g,,g' \
-		Makefile || die "Failed to fix makefile"
+		-e 's:$(CC):& $(LDFLAGS):' \
+		-e '/^CFLAGS/s:=:+=:' \
+		-e '/^CFLAGS/s:-g -pipe::' \
+		Makefile || die
 }
 
 src_install() {
-	dobin dbverify dbmeasure
+	dobin db{measure,verify}
 	dodoc README
 }
