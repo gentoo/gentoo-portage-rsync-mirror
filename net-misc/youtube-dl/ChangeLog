@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.166 2013/05/05 13:42:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.167 2013/05/06 07:38:14 jer Exp $
+
+*youtube-dl-2013.05.07 (06 May 2013)
+
+  06 May 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.05.07.ebuild:
+  Version bump.
 
 *youtube-dl-2013.05.05 (05 May 2013)
 
