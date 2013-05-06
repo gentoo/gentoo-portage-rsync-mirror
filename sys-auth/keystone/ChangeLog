@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.13 2013/04/11 07:17:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.14 2013/05/06 15:57:35 prometheanfire Exp $
+
+*keystone-2013.1-r1 (06 May 2013)
+
+  06 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/keystone-grizzly-1-CVE-2013-2006.patch, +keystone-2013.1-r1.ebuild,
+  -keystone-2013.1.ebuild:
+  keystone-2013.1-r1 for bug 467054 CVE-2013-1977
 
   11 Apr 2013; Matthew Thode <prometheanfire@gentoo.org> keystone-9999.ebuild:
   updating keystone 9999 to have better deps

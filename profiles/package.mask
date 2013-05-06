@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14730 2013/05/06 14:15:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14731 2013/05/06 15:32:19 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -50,11 +50,6 @@ media-fonts/adi-dsp-fonts
 # Tom Wijsman <TomWij@gentoo.org> (05 May 2013)
 # Masking media-video/handbrake until =media-video/ffmpeg-1.2 is unmasked.
 media-video/handbrake
-
-# Mike Gilbert <floppym@gentoo.org>
-# Masked until I can figure out how to deal with cffi trying to write files to
-# /usr/lib64/pypy2.0/lib_pypy/__pycache__/.
->=dev-python/pypy-2.0_beta2
 
 # Patrick Lauer <patrick@gentoo.org> (04 May 2013)
 # Dependency on nonexisting =gnome-extra/evolution-data-server-3.4* 

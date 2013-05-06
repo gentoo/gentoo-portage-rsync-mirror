@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4-r1.ebuild,v 1.11 2013/01/21 17:54:17 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4-r1.ebuild,v 1.12 2013/05/06 15:58:11 chithanh Exp $
 
 EAPI=4
 
@@ -111,7 +111,7 @@ for card in ${RADEON_CARDS}; do
 done
 
 DEPEND="${RDEPEND}
-	llvm? ( >=sys-devel/llvm-2.9 )
+	llvm? ( >=sys-devel/llvm-2.9 <sys-devel/llvm-3.3 )
 	=dev-lang/python-2*
 	dev-libs/libxml2[python]
 	virtual/pkgconfig
