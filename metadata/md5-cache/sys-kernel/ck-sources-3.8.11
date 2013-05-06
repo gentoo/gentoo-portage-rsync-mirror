@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( =dev-lang/python-2* )
+DESCRIPTION=Full Linux 3.8 kernel sources with Con Kolivas' high performance patchset and Gentoo's genpatches
+EAPI=5
+HOMEPAGE=http://www.kernel.org/ http://www.gentoo.org/ http://dev.gentoo.org/~mpagano/genpatches/ http://users.on.net/~ckolivas/kernel/ http://www.fsfla.org/svnwiki/selibre/linux-libre/
+IUSE=bfsonly symlink build deblob
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 !deblob? ( freedist )
+PDEPEND=!build? ( virtual/dev-manager )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=3.8.11
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.8.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.8.N/deblob-3.8 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.8.N/deblob-check -> deblob-check-3.8 ) mirror://gentoo/genpatches-3.8-14.base.tar.xz mirror://gentoo/genpatches-3.8-14.extras.tar.xz !bfsonly? ( http://ck.kolivas.org/patches/3.0/3.8/3.8-ck1/patch-3.8-ck1.bz2 ) bfsonly? ( http://ck.kolivas.org/patches/3.0/3.8/3.8-ck1/patches/3.8-sched-bfs-428.patch )
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	kernel-2	353d0aef1046938e432ba587875e2027	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=f4538eec4daf18ca995244407933e078

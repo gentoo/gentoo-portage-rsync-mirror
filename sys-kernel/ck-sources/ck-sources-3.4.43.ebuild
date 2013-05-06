@@ -1,17 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.6.11-r1.ebuild,v 1.2 2013/03/09 21:07:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.4.43.ebuild,v 1.1 2013/05/06 10:33:13 hwoarang Exp $
 
 EAPI="5"
 ETYPE="sources"
 KEYWORDS="~amd64 ~x86"
-IUSE="bfsonly experimental kvm urwlocks"
+IUSE="bfsonly experimental urwlocks"
 
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="12"
+K_GENPATCHES_VER="25"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -21,7 +21,7 @@ detect_arch
 
 K_BRANCH_ID="${KV_MAJOR}.${KV_MINOR}"
 
-DESCRIPTION="Full Linux ${K_BRANCH_ID} kernel sources with Con Kolivas' high performance patchset and Gentoo's genpatches."
+DESCRIPTION="Full Linux ${K_BRANCH_ID} kernel sources with Con Kolivas' high performance patchset and Gentoo's genpatches"
 
 #-- If Gentoo-Sources don't follow then extra incremental patches are needed -
 
@@ -30,18 +30,11 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="1"
-BFS_VERSION="425"
+CK_VERSION="3"
+BFS_VERSION="424"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
 BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
-
-#-- CK messed-up 3.6 branch filenames -----------------------------------------
-
-BFS_FILE="3.5-sched-bfs-${BFS_VERSION}.patch"
-
-#--
-
 XPR_1_FILE="bfs${BFS_VERSION}-grq_urwlocks.patch"
 XPR_2_FILE="urw-locks.patch"
 
@@ -72,8 +65,8 @@ CK_INCP_LIST=""
 
 #-- Local patches needed for the ck-patches to apply smoothly -----------------
 
-PRE_CK_FIX=""
-POST_CK_FIX=""
+PRE_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch"
+POST_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch ${FILESDIR}/${PN}-3.4.9-calc_load_idle-aCOSwt_P3.patch"
 
 #--
 
@@ -97,10 +90,6 @@ if use experimental ; then
 	if use urwlocks ; then
 		UNIPATCH_LIST="${UNIPATCH_LIST} ${DISTDIR}/${XPR_1_FILE} ${DISTDIR}/${XPR_2_FILE}:1"
 	fi
-fi
-
-if use kvm ; then
-	UNIPATCH_LIST="${UNIPATCH_LIST} ${FILESDIR}/${PN}-3.6-Fix_Boot_Issue_On_Kvm-aCOSwt_P6.patch"
 fi
 
 UNIPATCH_STRICTORDER="yes"

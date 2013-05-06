@@ -1,6 +1,11 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.14 2013/04/26 09:51:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.15 2013/05/06 10:35:04 pinkbyte Exp $
+
+*quiterss-9999 (06 May 2013)
+
+  06 May 2013; Sergey Popov <pinkbyte@gentoo.org> +quiterss-9999.ebuild:
+  Add live ebuild, wrt bug #468602, thanks to Nikoli <nikoli AT lavabit.com>
 
 *quiterss-0.12.5 (26 Apr 2013)
 
