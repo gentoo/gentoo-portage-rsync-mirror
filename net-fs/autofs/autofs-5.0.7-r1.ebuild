@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r1.ebuild,v 1.2 2013/05/04 17:18:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r1.ebuild,v 1.3 2013/05/06 08:45:14 jlec Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ PATCHES=(
 	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/5371
 	"${FILESDIR}"/${PN}-5.0.5-fix-install-deadlink.patch
 
-	"${FILESDIR}"/${PN}-5.0.5-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch #361899
+	"${FILESDIR}"/${P}-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch #361899, #468606
 	"${FILESDIR}"/${PN}-5.0.6-revert-ldap.patch #381315
 	"${FILESDIR}"/${PN}-5.0.7-mount-sloppy.patch #453778
 	)

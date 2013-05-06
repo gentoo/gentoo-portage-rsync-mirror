@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.6.13.ebuild,v 1.1 2013/05/03 08:07:23 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.6.13.ebuild,v 1.2 2013/05/06 08:44:59 djc Exp $
 
 EAPI=5
 
@@ -88,7 +88,7 @@ src_install() {
 	fperms 0644 /etc/{redis,sentinel}.conf
 
 	newconfd "${FILESDIR}/redis.confd" redis
-	newinitd "${FILESDIR}/redis.initd" redis
+	newinitd "${FILESDIR}/redis.initd-2" redis
 
 	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING MANIFESTO README
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.63 2013/05/03 08:08:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.64 2013/05/06 08:44:59 djc Exp $
+
+  06 May 2013; Dirkjan Ochtman <djc@gentoo.org> +files/redis.initd-2,
+  redis-2.6.13.ebuild:
+  Update init script for redis-2.6.13 (thanks to jbergstroem).
 
   03 May 2013; Dirkjan Ochtman <djc@gentoo.org> -redis-2.6.7.ebuild,
   -redis-2.6.8.ebuild:

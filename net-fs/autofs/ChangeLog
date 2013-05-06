@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.150 2013/05/05 12:50:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.151 2013/05/06 08:45:14 jlec Exp $
+
+  06 May 2013; Justin Lecher <jlec@gentoo.org> autofs-5.0.7-r1.ebuild,
+  +files/autofs-5.0.7-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patc
+  h:
+  Add missing if statements for non-sasl ldap, #468606
 
   05 May 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Update e-mail address
