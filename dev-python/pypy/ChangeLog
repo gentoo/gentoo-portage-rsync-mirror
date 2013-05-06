@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.35 2013/05/05 04:37:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.36 2013/05/05 23:23:59 floppym Exp $
+
+  05 May 2013; Mike Gilbert <floppym@gentoo.org> pypy-2.0_beta2.ebuild:
+  Pregenerate cffi code for _curses and _sqlite3 modules.
 
 *pypy-2.0_beta2 (05 May 2013)
 

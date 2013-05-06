@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta2.ebuild,v 1.1 2013/05/05 04:37:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta2.ebuild,v 1.2 2013/05/05 23:23:59 floppym Exp $
 
 EAPI=5
 
 # XXX: test other implementations
 PYTHON_COMPAT=( python2_7 pypy{1_8,1_9,2_0} )
-inherit check-reqs eutils multilib multiprocessing python-any-r1 toolchain-funcs vcs-snapshot versionator
+inherit check-reqs eutils flag-o-matic multilib multiprocessing python-any-r1 toolchain-funcs vcs-snapshot versionator
 
 DESCRIPTION="A fast, compliant alternative implementation of the Python language"
 HOMEPAGE="http://pypy.org/"
@@ -52,6 +52,12 @@ src_prepare() {
 src_compile() {
 	tc-export CC
 
+	if version_is_at_least 4.8 "$(gcc-version)"; then
+		# Workaround per PyPy docs
+		# http://pypy.org/download.html#building-from-source
+		append-cflags -fno-aggressive-loop-optimizations
+	fi
+
 	local args=(
 		$(usex jit -Ojit -O2)
 		$(usex shadowstack --gcrootfinder=shadowstack '')
@@ -85,31 +91,39 @@ src_compile() {
 }
 
 src_install() {
-	local INSDESTTREE=/usr/$(get_libdir)/pypy${SLOT}
+	insinto "/usr/$(get_libdir)/pypy${SLOT}"
 	doins -r include lib_pypy lib-python pypy-c
 	fperms a+x ${INSDESTTREE}/pypy-c
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
 	dodoc README.rst
 
 	if ! use sqlite; then
-		rm -fr "${ED}${INSDESTTREE}"/lib-python/{2.7,modified-2.7}/sqlite3
-		rm -f "${ED}${INSDESTTREE}"/lib_pypy/_sqlite3.py
+		rm -fr "${ED%/}${INSDESTTREE}"/lib-python/{2.7,modified-2.7}/sqlite3
+		rm -f "${ED%/}${INSDESTTREE}"/lib_pypy/_sqlite3.py
 	fi
 
 	python_export pypy-c${SLOT} EPYTHON PYTHON PYTHON_SITEDIR
 
 	# if not using a cross-compiler, use the fresh binary
 	if ! tc-is-cross-compiler; then
-		local PYTHON=${ED}${INSDESTTREE}/pypy-c
+		local PYTHON=${ED%/}${INSDESTTREE}/pypy-c
 	fi
 
+	runpython() {
+		PYTHONPATH="${ED%/}${INSDESTTREE}/lib_pypy:${ED%/}${INSDESTTREE}/lib-python/2.7" \
+			"${PYTHON}" "$@"
+	}
+
 	# Generate Grammar and PatternGrammar pickles.
-	PYTHONPATH="${ED}${INSDESTTREE}/lib-python/2.7" \
-		"${PYTHON}" -c "import lib2to3.pygram, lib2to3.patcomp; lib2to3.patcomp.PatternCompiler()" \
+	runpython -c "import lib2to3.pygram, lib2to3.patcomp; lib2to3.patcomp.PatternCompiler()" \
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
 
+	# Generate cffi cache
+	runpython -c "import _curses" || die "Failed to import _curses"
+	use sqlite && runpython -c "import _sqlite3" || die "Failed to import _sqlite3"
+
 	# compile the installed modules
-	python_optimize "${ED}${INSDESTTREE}"
+	python_optimize "${ED%/}${INSDESTTREE}"
 
 	echo "EPYTHON='${EPYTHON}'" > epython.py
 	python_domodule epython.py
