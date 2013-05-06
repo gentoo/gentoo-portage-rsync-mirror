@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.6.ebuild,v 1.1 2013/04/30 07:35:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.6.ebuild,v 1.2 2013/05/06 16:37:11 pva Exp $
 
 EAPI=5
 
@@ -31,6 +31,7 @@ RDEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.1-strictaliasing.patch
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 
 	AT_M4DIR="config" eautoreconf
 }

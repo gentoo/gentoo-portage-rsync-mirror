@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/converseen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.8 2013/05/06 15:13:06 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.9 2013/05/06 16:52:07 maksbotan Exp $
+
+  06 May 2013; Maxim Koltsov <maksbotan@gentoo.org> converseen-0.5.3.ebuild,
+  converseen-0.6.1.ebuild:
+  Fix results coming from misusage of 'patch', now it's correct.
 
 *converseen-0.6.1 (06 May 2013)
 
