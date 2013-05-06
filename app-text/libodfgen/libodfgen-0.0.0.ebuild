@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.0.ebuild,v 1.1 2013/05/06 11:43:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.0.ebuild,v 1.2 2013/05/06 12:01:31 scarabeus Exp $
 
 EAPI=5
 
 inherit eutils
 
-DESCRIPTION="WordPerfect Document import/export library"
+DESCRIPTION="Library to generate ODF documents from libwpd and libwpg"
 HOMEPAGE="http://libwpd.sf.net"
 SRC_URI="mirror://sourceforge/libwpd/${P}.tar.xz"
 
