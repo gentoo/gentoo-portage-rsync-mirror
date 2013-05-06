@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1-r3.ebuild,v 1.1 2013/04/24 12:07:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1-r3.ebuild,v 1.2 2013/05/06 09:42:47 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_8,1_9} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
 inherit distutils-r1 python-r1
 
@@ -21,7 +21,7 @@ DEPEND="
 	media-fonts/ttf-bitstream-vera
 	media-libs/freetype:2
 	virtual/jpeg
-	>=media-libs/lcms-1.15:0[python]
+	>=media-libs/lcms-1.15:0[python,${PYTHON_USEDEP}]
 	sys-libs/zlib
 "
 RDEPEND="${DEPEND}
