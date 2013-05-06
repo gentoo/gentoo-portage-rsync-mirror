@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.40-r2.ebuild,v 1.1 2013/04/22 18:34:13 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.40-r2.ebuild,v 1.2 2013/05/06 18:12:16 swift Exp $
 
 EAPI="3"
 DESCRIPTION="Simplified Wrapper and Interface Generator"
@@ -22,6 +22,8 @@ src_prepare () {
 	# Use swig1.3 as binary instead of swig
 	sed -i -e 's:TARGET_NOEXE= swig:TARGET_NOEXE= swig1.3:' Makefile.in
 	sed -i -e 's:/swig@EXEEXT@:/swig1.3@EXEEXT@:g' Source/Makefile.{am,in}
+	sed -i -e "s:PACKAGE_NAME='ccache-swig':PACKAGE_NAME='ccache-swig1.3':" CCache/configure
+	mv CCache/ccache-swig.1 CCache/ccache-swig1.3.1
 }
 
 src_configure () {
