@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.13 2013/05/02 14:03:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.14 2013/05/06 21:56:42 sping Exp $
 
 EAPI=4
 
 VALA_MIN_API_VERSION=0.14
 VALA_USE_DEPEND=vapigen
 
-inherit vala gnome2-utils eutils autotools
+inherit versionator vala gnome2-utils eutils autotools
 
 DESCRIPTION="A graph based image processing framework"
 HOMEPAGE="http://www.gegl.org/"
@@ -64,6 +64,10 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-g_log_domain.patch
 	eautoreconf
+
+	# https://bugs.gentoo.org/show_bug.cgi?id=468248
+	local deps_file="${PN}/${PN}-$(get_version_component_range 1-2).deps"
+	[[ -f "${deps_file}" ]] || touch "${deps_file}"
 
 	use vala && vala_src_prepare
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha174.ebuild,v 1.1 2013/05/03 21:09:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha174.ebuild,v 1.2 2013/05/06 21:42:24 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -407,6 +407,15 @@ pkg_preinst() {
 		ewarn "For optimal performance in xattr handling, install"
 		ewarn "dev-python/pyxattr, or install >=dev-lang/python-3.3 and"
 		ewarn "enable USE=python3 for $CATEGORY/$PN."
+	fi
+
+	# elog dir must exist to avoid logrotate error for bug #415911.
+	# This code runs in preinst in order to bypass the mapping of
+	# portage:portage to root:root which happens after src_install.
+	keepdir /var/log/portage/elog
+	# This is allowed to fail if the user/group are invalid for prefix users.
+	if chown portage:portage "${ED}"var/log/portage{,/elog} 2>/dev/null ; then
+		chmod g+s,ug+rwx "${ED}"var/log/portage{,/elog}
 	fi
 
 	has_version "<=${CATEGORY}/${PN}-2.2_pre5" \
