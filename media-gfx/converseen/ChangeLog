@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/converseen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.7 2013/03/02 21:34:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.8 2013/05/06 15:13:06 maksbotan Exp $
+
+*converseen-0.6.1 (06 May 2013)
+
+  06 May 2013; Maxim Koltsov <maksbotan@gentoo.org> +converseen-0.6.1.ebuild,
+  converseen-0.5.3.ebuild:
+  Bump to 0.6.1, thanks to Nikoli.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> converseen-0.4.7.ebuild,
   converseen-0.4.9.ebuild, converseen-0.5.1.ebuild, converseen-0.5.3.ebuild,

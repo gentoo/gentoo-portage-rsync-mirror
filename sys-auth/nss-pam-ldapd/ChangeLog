@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.9 2013/04/17 17:58:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.10 2013/05/06 15:04:35 prometheanfire Exp $
+
+*nss-pam-ldapd-0.8.13 (06 May 2013)
+
+  06 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.8.13.ebuild, -nss-pam-ldapd-0.8.11-r1.ebuild,
+  -nss-pam-ldapd-0.8.11.ebuild:
+  out with the old and in with the new for nss-pam-ldapd
 
   17 Apr 2013; Tim Harder <radhermit@gentoo.org> nss-pam-ldapd-0.9.0.ebuild:
   Add epatch_user support.
