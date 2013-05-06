@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.2.2.ebuild,v 1.4 2013/04/29 13:24:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.3.3.ebuild,v 1.1 2013/05/06 17:21:34 scarabeus Exp $
 
 EAPI=5
 
@@ -73,7 +73,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus debug eds gnome gstreamer +gtk
-gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
+jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
 
 LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -142,7 +142,6 @@ COMMON_DEPEND="
 		x11-libs/gdk-pixbuf[X]
 		>=x11-libs/gtk+-2.24:2
 	)
-	gtk3? ( >=x11-libs/gtk+-3.2:3 )
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
@@ -489,7 +488,6 @@ src_configure() {
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
 		$(use_enable gtk) \
-		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
 		$(use_enable odk) \

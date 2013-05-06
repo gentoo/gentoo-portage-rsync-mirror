@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.165.ebuild,v 1.5 2010/07/18 13:36:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.165.ebuild,v 1.6 2013/05/06 17:02:28 xmw Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -23,6 +23,7 @@ DEPEND="x11-libs/libX11
 	app-text/ghostscript-gpl
 	dev-lang/tcl
 	dev-lang/tk"
+RDEPEND="${DEPEND}"
 
 RESTRICT="test" #131024
 
