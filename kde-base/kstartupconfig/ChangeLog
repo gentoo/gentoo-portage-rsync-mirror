@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstartupconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.161 2013/05/05 11:50:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.162 2013/05/06 20:18:17 johu Exp $
+
+*kstartupconfig-4.10.3 (06 May 2013)
+
+  06 May 2013; Johannes Huber <johu@gentoo.org> +kstartupconfig-4.10.3.ebuild:
+  Version bump KDE SC 4.10.3
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org> -kstartupconfig-4.10.1.ebuild:
   Remove old

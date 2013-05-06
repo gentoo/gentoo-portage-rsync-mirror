@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luise-bin/luise-bin-0.1.1.ebuild,v 1.5 2012/05/25 08:17:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luise-bin/luise-bin-0.1.1.ebuild,v 1.6 2013/05/06 20:06:22 ulm Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ DESCRIPTION="Programming interface for the Wallbraun LCD-USB-Interface"
 HOMEPAGE="http://wallbraun-electronics.de/downloadssite/"
 SRC_URI="http://www.wallbraun-electronics.de/downloads/${MY_PN}_${PV}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD GPL-2+"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="doc examples"

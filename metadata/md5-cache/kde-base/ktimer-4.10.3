@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND=>=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-util/automoc virtual/pkgconfig !aqua? ( >=x11-libs/libXtst-1.1.0 x11-proto/xf86vidmodeproto ) handbook? ( app-text/docbook-xml-dtd:4.2 app-text/docbook-xsl-stylesheets ) dev-lang/perl >=dev-qt/qt3support-4.8.0:4[accessibility] >=dev-qt/qtcore-4.8.0:4[qt3support,ssl] >=dev-qt/qtdbus-4.8.0:4 >=dev-qt/qtgui-4.8.0:4[accessibility,dbus] >=dev-qt/qtscript-4.8.0:4 >=dev-qt/qtsql-4.8.0:4[qt3support] >=dev-qt/qtsvg-4.8.0:4 >=dev-qt/qttest-4.8.0:4 >=dev-qt/qtwebkit-4.8.0:4 !aqua? ( x11-libs/libXext x11-libs/libXt x11-libs/libXxf86vm x11-libs/libXcomposite x11-libs/libxkbfile ) >=kde-base/kdelibs-4.10.3:4[aqua=]
+DESCRIPTION=KDE Timer
+EAPI=5
+HOMEPAGE=http://www.kde.org/
+IUSE=debug +handbook aqua
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=>=kde-base/oxygen-icons-4.10.3:4[aqua=] handbook? ( >=kde-base/kdelibs-4.10.3:4[aqua=,handbook] ) dev-lang/perl >=dev-qt/qt3support-4.8.0:4[accessibility] >=dev-qt/qtcore-4.8.0:4[qt3support,ssl] >=dev-qt/qtdbus-4.8.0:4 >=dev-qt/qtgui-4.8.0:4[accessibility,dbus] >=dev-qt/qtscript-4.8.0:4 >=dev-qt/qtsql-4.8.0:4[qt3support] >=dev-qt/qtsvg-4.8.0:4 >=dev-qt/qttest-4.8.0:4 >=dev-qt/qtwebkit-4.8.0:4 !aqua? ( x11-libs/libXext x11-libs/libXt x11-libs/libXxf86vm x11-libs/libXcomposite x11-libs/libxkbfile ) >=kde-base/kdelibs-4.10.3:4[aqua=]
+SLOT=4
+SRC_URI=mirror://kde/stable/4.10.3/src/ktimer-4.10.3.tar.xz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	eutils	384ae111f3649d456ed1754e3e1c4f6e	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	gnome2-utils	794d2847b4af390a1e020924876c8297	kde4-base	2cedb58982ff5f6a497a00d05779530a	kde4-functions	597dae8331dc9b795e3a5797bf7da048	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=47104467ec0a5b32864104906cd822c5

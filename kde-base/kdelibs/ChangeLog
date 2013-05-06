@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.913 2013/05/05 11:50:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.914 2013/05/06 20:18:21 johu Exp $
+
+*kdelibs-4.10.3 (06 May 2013)
+
+  06 May 2013; Johannes Huber <johu@gentoo.org> +kdelibs-4.10.3.ebuild:
+  Version bump KDE SC 4.10.3
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org> -kdelibs-4.10.1-r1.ebuild:
   Remove old
