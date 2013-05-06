@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/bcm2835
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bcm2835/ChangeLog,v 1.8 2013/04/03 13:48:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bcm2835/ChangeLog,v 1.9 2013/05/06 16:28:42 chithanh Exp $
+
+  06 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  bcm2835-1.25.ebuild:
+  Update homepage and download location.
 
 *bcm2835-1.25 (03 Apr 2013)
 
