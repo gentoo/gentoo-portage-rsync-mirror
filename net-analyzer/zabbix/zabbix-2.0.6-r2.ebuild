@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.16.ebuild,v 1.1 2013/01/18 18:51:53 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.6-r2.ebuild,v 1.1 2013/05/06 22:27:12 mattm Exp $
 
 EAPI="2"
 
 # needed to make webapp-config dep optional
 WEBAPP_OPTIONAL="yes"
-inherit flag-o-matic webapp depend.php autotools user
+inherit flag-o-matic webapp depend.php autotools java-pkg-opt-2 user
 
 DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers."
 HOMEPAGE="http://www.zabbix.com/"
@@ -15,8 +15,8 @@ SRC_URI="http://prdownloads.sourceforge.net/zabbix/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="~amd64 ~x86"
-IUSE="agent curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp +sqlite iodbc odbc static"
+KEYWORDS=""
+IUSE="agent java curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp sqlite iodbc odbc static"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
@@ -24,14 +24,15 @@ COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 		=dev-libs/cyrus-sasl-2*
 		net-libs/gnutls
 	)
-	mysql? ( virtual/mysql )
-	sqlite? ( =dev-db/sqlite-3* )
-	postgres? ( dev-db/postgresql-base )
-	oracle? ( dev-db/oracle-instantclient-basic )
+	mysql? ( >=virtual/mysql-5.0 )
+	sqlite? ( >=dev-db/sqlite-3.3.5 )
+	postgres? ( >=dev-db/postgresql-base-8.3.0 )
+	oracle? ( >=dev-db/oracle-instantclient-basic-10.0.0.0 )
 	jabber? ( dev-libs/iksemel )
 	curl? ( net-misc/curl )
 	openipmi? ( sys-libs/openipmi )
 	ssh? ( net-libs/libssh2 )
+	java? ( >=virtual/jdk-1.4 )
 	odbc? (
 		iodbc? ( dev-db/libiodbc )
 		!iodbc? ( dev-db/unixODBC )
@@ -41,15 +42,33 @@ RDEPEND="${COMMON_DEPEND}
 	proxy? ( <=net-analyzer/fping-2.9 )
 	server? ( <=net-analyzer/fping-2.9
 		app-admin/webapp-config )
-	frontend? ( dev-lang/php[bcmath,ctype,sockets,gd,truetype,xml,session]
+	java?	(
+		>=virtual/jre-1.4
+		dev-java/slf4j-api
+		dev-java/json-simple
+	)
+	frontend? (
+		dev-lang/php[bcmath,ctype,sockets,gd,truetype,xml,session,xmlreader,xmlwriter,nls,sysvipc,unicode]
+		|| ( dev-lang/php[apache2] dev-lang/php[cgi] dev-lang/php[fpm] )
 		media-libs/gd[png]
 		app-admin/webapp-config )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
-use frontend && need_php_httpd
+S=${WORKDIR}/${MY_P}
+
+ZABBIXJAVA_BASE="opt/zabbix_java"
+
+java_prepare() {
+	cd "${S}/src/zabbix_java/lib"
+	rm -v *.jar || die
+
+	java-pkg_jar-from slf4j-api
+	java-pkg_jar-from json-simple
+}
 
 src_prepare() {
+	epatch "${FILESDIR}/2.0/patches/zbx282.patch"
 	eautoreconf
 }
 
@@ -101,13 +120,20 @@ pkg_setup() {
 pkg_postinst() {
 	if use server || use proxy ; then
 		elog
-		elog "You need to configure your database for Zabbix."
+		elog "You may need to configure your database for Zabbix,"
+		elog "if you have not already done so.  Most minor version"
+		elog "zabbix updates do not require db changes. However, "
+		elog "you should read the release notes to be sure."
 		elog
-		elog "Have a look at /usr/share/zabbix/database for"
+		elog "Have a look at /usr/share/zabbix for"
 		elog "database creation and upgrades."
+		elog
+		elog "Execute schema, images, and data sql files in that order."
 		elog
 		elog "For more info read the Zabbix manual at"
 		elog "http://www.zabbix.com/documentation.php"
+		elog
+		elog "New use flags: java, odbc, iodbc"
 		elog
 
 		zabbix_homedir=$(egethome zabbix)
@@ -141,7 +167,7 @@ pkg_postinst() {
 
 	elog "--"
 	elog
-	elog "Add these lines in the /etc/services :"
+	elog "You may need to add these lines to /etc/services:"
 	elog
 	elog "zabbix-agent     10050/tcp Zabbix Agent"
 	elog "zabbix-agent     10050/udp Zabbix Agent"
@@ -151,6 +177,9 @@ pkg_postinst() {
 
 	elog "Zabbix is incompatible with fping 3.0 - (Zabbix bug #ZBX-4894)."
 	elog
+	elog "Feel free to download or contribute gentoo specific zabbix templates"
+	elog "via https://github.com/deploylinux/gentooZabbixTemplates (WIP).  We may"
+	elog "eventually create a seperate package in portage for them."
 
 	# repeat fowners/fperms functionality from src_install()
 	# here to catch wrong permissions on existing files in
@@ -160,15 +189,13 @@ pkg_postinst() {
 		"${ROOT}"/var/lib/zabbix \
 		"${ROOT}"/var/lib/zabbix/home \
 		"${ROOT}"/var/lib/zabbix/scripts \
-		"${ROOT}"/var/log/zabbix \
-		"${ROOT}"/var/run/zabbix
+		"${ROOT}"/var/log/zabbix
 	chmod 0750 \
 		"${ROOT}"/etc/zabbix \
 		"${ROOT}"/var/lib/zabbix \
 		"${ROOT}"/var/lib/zabbix/home \
 		"${ROOT}"/var/lib/zabbix/scripts \
-		"${ROOT}"/var/log/zabbix \
-		"${ROOT}"/var/run/zabbix
+		"${ROOT}"/var/log/zabbix
 
 	chmod 0640 \
 		"${ROOT}"/etc/zabbix/zabbix_*
@@ -216,10 +243,11 @@ src_configure() {
 		$(use_enable agent) \
 		$(use_enable ipv6) \
 		$(use_enable static) \
+		$(use_enable java) \
 		$(use_with ldap) \
 		$(use_with snmp net-snmp) \
 		$(use_with mysql) \
-		$(use_with postgres pgsql) \
+		$(use_with postgres postgresql) \
 		$(use_with oracle) \
 		$(use_with sqlite sqlite3) \
 		$(use_with jabber) \
@@ -235,16 +263,14 @@ src_install() {
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 
 	keepdir \
 		/etc/zabbix \
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 
 	if use server; then
 		insinto /etc/zabbix
@@ -252,15 +278,15 @@ src_install() {
 			"${FILESDIR}/1.6.6"/zabbix_server.conf \
 			"${FILESDIR}/1.6.6"/zabbix_trapper.conf
 		doinitd \
-			"${FILESDIR}/1.6.6"/init.d/zabbix-server
+			"${FILESDIR}/2.0"/init.d/zabbix-server
 		dosbin \
 			src/zabbix_server/zabbix_server
 		dodir \
-			/usr/share/zabbix/database
-		insinto /usr/share/zabbix/database
+			/usr/share/zabbix
+		insinto /usr/share/zabbix
 		doins -r \
-			upgrades \
-			create
+			database \
+			upgrades
 		fowners zabbix:zabbix \
 			/etc/zabbix/zabbix_server.conf \
 			/etc/zabbix/zabbix_trapper.conf
@@ -271,17 +297,17 @@ src_install() {
 
 	if use proxy; then
 		doinitd \
-			"${FILESDIR}/1.6.6"/init.d/zabbix-proxy
+			"${FILESDIR}/2.0"/init.d/zabbix-proxy
 		dosbin \
 			src/zabbix_proxy/zabbix_proxy
 		insinto /etc/zabbix
 		doins \
 			"${FILESDIR}/1.6.6"/zabbix_proxy.conf
 		dodir \
-			/usr/share/zabbix/database
-		insinto /usr/share/zabbix/database
+			/usr/share/zabbix
+		insinto /usr/share/zabbix
 		doins -r \
-			upgrades \
+			database \
 			create
 	fi
 
@@ -291,7 +317,7 @@ src_install() {
 			"${FILESDIR}/1.6.6"/zabbix_agent.conf \
 			"${FILESDIR}/1.6.6"/zabbix_agentd.conf
 		doinitd \
-			"${FILESDIR}/1.6.6"/init.d/zabbix-agentd
+			"${FILESDIR}/2.0"/init.d/zabbix-agentd
 		dosbin \
 			src/zabbix_agent/zabbix_agent \
 			src/zabbix_agent/zabbix_agentd
@@ -311,17 +337,21 @@ src_install() {
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 	fperms 0750 \
 		/etc/zabbix \
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 
-	dodoc README INSTALL NEWS ChangeLog
+	dodoc README INSTALL NEWS ChangeLog \
+		conf/zabbix_agent.conf \
+		conf/zabbix_agentd.conf \
+		conf/zabbix_proxy.conf \
+		conf/zabbix_agentd/userparameter_examples.conf \
+		conf/zabbix_agentd/userparameter_mysql.conf \
+		conf/zabbix_server.conf
 
 	if use frontend; then
 		webapp_src_preinst
@@ -332,4 +362,29 @@ src_install() {
 			"${MY_HTDOCSDIR}"/include/config.inc.php
 		webapp_src_install
 	fi
+
+	if use java; then
+	   dodir \
+	   	/${ZABBIXJAVA_BASE} \
+		/${ZABBIXJAVA_BASE}/bin \
+		/${ZABBIXJAVA_BASE}/lib
+	   keepdir /${ZABBIXJAVA_BASE}
+	   exeinto /${ZABBIXJAVA_BASE}/bin
+	   doexe src/zabbix_java/bin/zabbix-java-gateway-${PV}.jar
+	   exeinto /${ZABBIXJAVA_BASE}/lib
+	   doexe \
+	   	src/zabbix_java/lib/logback-classic-0.9.27.jar \
+		src/zabbix_java/lib/logback-console.xml \
+		src/zabbix_java/lib/logback-core-0.9.27.jar \
+		src/zabbix_java/lib/logback.xml \
+		src/zabbix_java/lib/org-json-2010-12-28.jar \
+		src/zabbix_java/lib/slf4j-api-1.6.1.jar
+	   exeinto /${ZABBIXJAVA_BASE}/
+	   doexe \
+	   	src/zabbix_java/settings.sh \
+		src/zabbix_java/startup.sh \
+		src/zabbix_java/shutdown.sh
+	   fowners -R zabbix:zabbix /${ZABBIXJAVA_BASE}
+	fi
+
 }
