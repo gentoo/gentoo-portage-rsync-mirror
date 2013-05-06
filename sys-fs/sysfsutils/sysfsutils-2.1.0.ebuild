@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-2.1.0.ebuild,v 1.13 2013/03/12 15:59:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-2.1.0.ebuild,v 1.14 2013/05/05 23:34:40 vapier Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -15,6 +15,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-lin
 IUSE="static-libs"
 
 src_prepare() {
+	sed -i 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467642
+
 	# workaround maintainer mode
 	AT_M4DIR=m4 eautoreconf
 
@@ -28,8 +30,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO docs/libsysfs.txt
+	default
+	dodoc docs/libsysfs.txt
 	gen_usr_ldscript -a sysfs
 
 	# We do not distribute this
