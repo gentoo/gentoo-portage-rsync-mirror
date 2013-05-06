@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7814 2013/05/05 17:26:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7816 2013/05/06 06:56:55 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 May 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Mask dev-lisp/emacs-cl for removal, bug 466444.
+
+  06 May 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Mask media-fonts/adi-dsp-fonts for removal, bug 452372.
 
   05 May 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Masking media-video/handbrake until =media-video/ffmpeg-1.2 is unmasked.

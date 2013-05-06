@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14727 2013/05/05 17:26:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14729 2013/05/06 06:56:55 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (06 May 2013)
+# Fails to build with Emacs 24.3.
+# Masked for removal in 30 days, bug #466444.
+dev-lisp/emacs-cl
+
+# Ulrich Müller <ulm@gentoo.org> (06 May 2013)
+# No license. Distfile not available upstream and not redistributable.
+# Masked for removal in 30 days, bug #452372.
+media-fonts/adi-dsp-fonts
 
 # Tom Wijsman <TomWij@gentoo.org> (05 May 2013)
 # Masking media-video/handbrake until =media-video/ffmpeg-1.2 is unmasked.
