@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/matchbox-panel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/ChangeLog,v 1.14 2012/06/04 00:27:54 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/ChangeLog,v 1.15 2013/05/06 04:02:24 patrick Exp $
+
+  06 May 2013; Patrick Lauer <patrick@gentoo.org>
+  matchbox-panel-0.9.3-r1.ebuild:
+  Automake 1.13 fix
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> matchbox-panel-0.9.3-r1.ebuild:
   ppc stable (bug 309407)
@@ -58,4 +62,3 @@
   +matchbox-panel-0.9.2.ebuild:
   - Initial import. Original ebuild by Priit Laes, modifications by Björn
   Ruberg and Yuri Vasilevski.
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3-r1.ebuild,v 1.4 2012/06/04 00:27:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3-r1.ebuild,v 1.5 2013/05/06 04:02:24 patrick Exp $
 
 inherit eutils autotools versionator
 
@@ -27,6 +27,7 @@ src_unpack () {
 
 	epatch "${FILESDIR}/"${P}-gcc4-no-nested-functions.patch
 	epatch "${FILESDIR}/"${P}-wifi.patch
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 
 	eautoreconf
 }

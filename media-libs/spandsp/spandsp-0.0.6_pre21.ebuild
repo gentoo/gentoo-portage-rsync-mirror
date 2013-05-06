@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre21.ebuild,v 1.1 2013/02/06 23:20:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre21.ebuild,v 1.2 2013/05/06 04:20:55 mattst88 Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit multilib versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.soft-switch.org/downloads/spandsp/${P/_}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="doc fixed-point static-libs"
+IUSE="doc fixed-point mmx sse sse2 sse3 static-libs"
 
 RDEPEND="media-libs/tiff"
 DEPEND="${RDEPEND}
@@ -32,12 +32,15 @@ src_configure() {
 		--disable-dependency-tracking \
 		$(use_enable doc) \
 		$(use_enable fixed-point) \
+		$(use_enable mmx) \
+		$(use_enable sse2) \
+		$(use_enable sse3) \
 		$(use_enable static-libs static)
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die	"emake install failed"
-	dodoc AUTHORS ChangeLog DueDiligence NEWS README || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog DueDiligence NEWS README
 
 	if ! use static-libs; then
 		# remove useless la file when not installing static lib
@@ -45,6 +48,6 @@ src_install () {
 	fi
 
 	if use doc; then
-		dohtml -r doc/{api/html/*,t38_manual} || die "dohtml failed"
+		dohtml -r doc/{api/html/*,t38_manual}
 	fi
 }
