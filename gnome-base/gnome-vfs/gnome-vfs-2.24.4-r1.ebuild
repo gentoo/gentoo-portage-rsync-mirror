@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r1.ebuild,v 1.7 2013/05/05 12:00:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r1.ebuild,v 1.8 2013/05/06 03:50:08 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -115,6 +115,9 @@ src_prepare() {
 		programs/Makefile.am programs/Makefile.in || die
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
+
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in || die
+
 	eautoreconf
 
 	gnome2_src_prepare

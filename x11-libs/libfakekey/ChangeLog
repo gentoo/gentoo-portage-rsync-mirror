@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfakekey
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.12 2012/06/04 00:18:57 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.13 2013/05/06 03:57:46 patrick Exp $
+
+  06 May 2013; Patrick Lauer <patrick@gentoo.org> libfakekey-0.1-r1.ebuild:
+  Automake 1.13 fix
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> libfakekey-0.1-r1.ebuild:
   ppc stable (bug 309407)
@@ -46,4 +49,3 @@
 
   04 Jun 2006; <yvasilev@gentoo.org> +metadata.xml, +libfakekey-0.1.ebuild:
   - Initial Import.
-

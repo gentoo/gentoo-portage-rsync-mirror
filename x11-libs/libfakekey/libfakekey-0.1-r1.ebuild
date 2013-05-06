@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1-r1.ebuild,v 1.4 2012/06/04 00:18:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/libfakekey-0.1-r1.ebuild,v 1.5 2013/05/06 03:57:46 patrick Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ src_prepare() {
 	# Fix underlinking bug #367595
 	sed -i -e 's/^fakekey_test_LDADD=/fakekey_test_LDADD=-lX11 /' \
 		tests/Makefile.am || die 'Cannot sed Makefile.am'
-
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 
