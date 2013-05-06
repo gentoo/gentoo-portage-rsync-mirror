@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.90-r1.ebuild,v 1.1 2012/10/16 10:59:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.90-r1.ebuild,v 1.2 2013/05/06 06:05:14 patrick Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ src_prepare() {
 	sed -n -e '/# AC_PROG_SYSCONFTOOL/,+33 p' "${S}"/aclocal.m4 > \
 		m4/sysconftool.m4 || die
 	sed -i -e '/^SUBDIRS/i ACLOCAL_AMFLAGS = -I m4' "${S}"/Makefile.am || die
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in */configure.in || die
 	eautoreconf
 }
 
