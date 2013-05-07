@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.110 2013/04/14 11:40:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.111 2013/05/07 05:24:26 graaff Exp $
+
+*minitest-4.7.4 (07 May 2013)
+
+  07 May 2013; Hans de Graaff <graaff@gentoo.org> +minitest-4.7.4.ebuild:
+  Version bump.
 
   14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> minitest-4.5.0.ebuild:
   Stable for sh, wrt bug #464512

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.11.ebuild,v 1.1 2013/05/05 23:49:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.11.ebuild,v 1.2 2013/05/07 05:22:07 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -47,5 +47,5 @@ src_install() {
 	dodoc NEWS README TODO ChangeLog
 
 	# We don't need this, so punt it.
-	rm "${D}"/usr/bin/oldfind "${D}"/usr/share/man/man1/oldfind.1 || die
+	rm "${ED}"/usr/bin/oldfind "${ED}"/usr/share/man/man1/oldfind.1 || die
 }
