@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.33.2-r3.ebuild,v 1.4 2013/03/03 03:54:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.33.2-r3.ebuild,v 1.5 2013/05/07 16:50:58 blueness Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
@@ -259,6 +259,8 @@ src_unpack() {
 	if [[ -n ${PATCH_VER} ]] ; then
 		EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	fi
+
+	epatch_user
 
 	check_cpu_opts
 
