@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.14.2.ebuild,v 1.4 2013/05/03 13:27:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.14.2.ebuild,v 1.5 2013/05/07 17:50:39 ago Exp $
 
 EAPI=5
 # ruby19 → pending on net/sftp
@@ -16,7 +16,7 @@ HOMEPAGE="http://capify.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend "

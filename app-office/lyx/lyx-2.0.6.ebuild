@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.5.ebuild,v 1.3 2013/03/02 19:36:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.6.ebuild,v 1.1 2013/05/07 17:32:51 aballier Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos"
-IUSE="cups debug nls +latex xetex luatex monolithic-build html rtf dot docbook dia subversion rcs svg gnumeric +hunspell aspell enchant"
+IUSE="cups debug nls +latex monolithic-build html rtf dot docbook dia subversion rcs svg gnumeric +hunspell aspell enchant"
 
 LANGS="ar ca cs de da el en es eu fi fr gl he hu ia id it ja nb nn pl pt ro ru sk sr sv tr uk zh_CN zh_TW"
 
@@ -38,7 +38,7 @@ RDEPEND="${COMMONDEPEND}
 	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png] )
 	cups? ( net-print/cups )
 	latex? (
-		virtual/latex-base
+		app-text/texlive
 		app-text/ghostscript-gpl
 		app-text/noweb
 		app-text/dvipng
@@ -57,8 +57,6 @@ RDEPEND="${COMMONDEPEND}
 			dev-tex/tex4ht
 		)
 	)
-	xetex? ( dev-texlive/texlive-xetex )
-	luatex? ( >=dev-texlive/texlive-luatex-2010 )
 	html? ( dev-tex/html2latex )
 	rtf? (
 			dev-tex/latex2rtf
@@ -80,7 +78,6 @@ RDEPEND="${COMMONDEPEND}
 	enchant? ( app-text/enchant )"
 
 DEPEND="${COMMONDEPEND}
-	sys-devel/bc
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
