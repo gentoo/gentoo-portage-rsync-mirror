@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/claws-mail-acpi-notifier-1.0.28.ebuild,v 1.4 2013/01/03 00:58:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/claws-mail-acpi-notifier-1.0.28.ebuild,v 1.5 2013/05/07 18:14:45 fauli Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-RDEPEND=">=mail-client/claws-mail-3.9.0"
+RDEPEND="~mail-client/claws-mail-3.9.0"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig"
 
