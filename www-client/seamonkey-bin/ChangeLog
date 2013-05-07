@@ -1,6 +1,15 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.177 2013/04/11 02:19:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.179 2013/05/07 01:37:51 jdhore Exp $
+
+*seamonkey-bin-2.17.1 (07 May 2013)
+
+  07 May 2013; Jeff Horelick <jdhore@gentoo.org> +seamonkey-bin-2.17.1.ebuild:
+  Version bump
+
+  07 May 2013; Jeff Horelick <jdhore@gentoo.org> -seamonkey-bin-2.16.2.ebuild,
+  seamonkey-bin-2.17.ebuild:
+  Fix icon installation
 
   11 Apr 2013; Jeff Horelick <jdhore@gentoo.org> -files/icon/seamonkey-bin.png,
   seamonkey-bin-2.16.2.ebuild, seamonkey-bin-2.17.ebuild:

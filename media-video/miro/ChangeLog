@@ -1,6 +1,12 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.21 2013/01/26 14:39:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.22 2013/05/07 01:54:26 jdhore Exp $
+
+*miro-6.0 (07 May 2013)
+
+  07 May 2013; Jeff Horelick <jdhore@gentoo.org> +miro-6.0.ebuild,
+  -miro-5.0.1.ebuild:
+  Version bump
 
   26 Jan 2013; Alexis Ballier <aballier@gentoo.org> miro-5.0.4.ebuild,
   +files/miro-5.0.4-ffmpeg-1.patch:

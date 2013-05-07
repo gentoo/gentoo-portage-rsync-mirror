@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.16.2.ebuild,v 1.4 2013/04/11 02:19:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.17.1.ebuild,v 1.1 2013/05/07 01:37:51 jdhore Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip mirror binchecks"
 QA_EXECSTACK="opt/seamonkey/*"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"
@@ -75,7 +75,7 @@ EOF
 	fperms 0755 /usr/bin/seamonkey-bin
 
 	# Install icon and .desktop for menu entry
-	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
+	newicon "${D}${MOZILLA_FIVE_HOME}"/chrome/icons/default/default48.png ${PN}-icon.png
 	domenu "${FILESDIR}/icon/${PN}.desktop"
 
 	if use startup-notification; then
