@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/smmap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/smmap/ChangeLog,v 1.5 2012/04/11 05:29:47 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/smmap/ChangeLog,v 1.6 2013/05/07 14:34:25 idella4 Exp $
+
+*smmap-0.8.2-r1 (07 May 2013)
+
+  07 May 2013; Ian Delaney <idella4@gentoo.org> +smmap-0.8.2-r1.ebuild:
+  migrate -> distutils-r1
 
 *smmap-0.8.2 (11 Apr 2012)
 
@@ -21,4 +26,3 @@
   27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> +smmap-0.8.1.ebuild,
   +metadata.xml:
   Initial commit
-
