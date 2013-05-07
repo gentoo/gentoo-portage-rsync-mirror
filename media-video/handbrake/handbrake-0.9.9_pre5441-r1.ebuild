@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441.ebuild,v 1.4 2013/05/07 17:30:59 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441-r1.ebuild,v 1.1 2013/05/07 18:40:04 thev00d00 Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://handbrake.fr/"
 LICENSE="GPL-2"
 
 SLOT="0"
-IUSE="gtk gstreamer ffmpeg"
+IUSE="fdk ffmpeg gstreamer gtk"
 
 # Use either ffmpeg or gst-plugins/mpeg2dec for decoding MPEG-2.
 REQUIRED_USE="!ffmpeg? ( gstreamer )"
@@ -59,7 +59,9 @@ RDEPEND="
 		x11-libs/libnotify
 		x11-libs/pango
 		>=virtual/udev-171[gudev]
-	)"
+	)
+	fdk? ( media-libs/fdk-aac )
+	"
 
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -122,6 +124,10 @@ src_configure() {
 
 	if use ffmpeg ; then
 		myconf+=" --enable-ff-mpeg2"
+	fi
+
+	if use fdk ; then
+		myconf+=" --enable-fdk-aac"
 	fi
 
 	./configure \

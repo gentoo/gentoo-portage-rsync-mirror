@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/claws-mail-att-remover-1.0.15.ebuild,v 1.5 2013/01/03 01:11:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/claws-mail-att-remover-1.0.15.ebuild,v 1.6 2013/05/07 18:41:45 fauli Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
-RDEPEND=">=mail-client/claws-mail-3.9.0"
+RDEPEND="~mail-client/claws-mail-3.9.0"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig"
 

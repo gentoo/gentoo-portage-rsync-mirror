@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.0-r1.ebuild,v 1.1 2013/04/07 09:19:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.0-r1.ebuild,v 1.2 2013/05/07 18:47:12 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -66,6 +66,7 @@ COMMON_DEPEND="
 "
 # <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
 RDEPEND="${COMMON_DEPEND}
+	|| ( ( app-admin/openrc-settingsd sys-auth/consolekit ) >=sys-apps/systemd-31 )
 	>=sys-apps/accountsservice-0.6.30
 	x11-themes/gnome-icon-theme-symbolic
 	colord? ( >=gnome-extra/gnome-color-manager-3
@@ -73,9 +74,6 @@ RDEPEND="${COMMON_DEPEND}
 	cups? (
 		>=app-admin/system-config-printer-gnome-1.3.5
 		net-print/cups-pk-helper )
-	!systemd? (
-		app-admin/openrc-settingsd
-		sys-auth/consolekit )
 	input_devices_wacom? ( gnome-base/gnome-settings-daemon[input_devices_wacom] )
 
 	!<gnome-base/gdm-2.91.94

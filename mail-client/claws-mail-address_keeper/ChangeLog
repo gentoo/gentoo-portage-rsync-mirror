@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-address_keeper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-address_keeper/ChangeLog,v 1.29 2013/01/03 07:54:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-address_keeper/ChangeLog,v 1.30 2013/05/07 18:31:56 fauli Exp $
+
+  07 May 2013; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-address_keeper-1.0.7.ebuild:
+  prepare plugin for mail-client/claws-mail-3.9.1
 
   03 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-address_keeper-1.0.6.ebuild:

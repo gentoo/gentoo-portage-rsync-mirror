@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.2 2013/05/05 20:59:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.3 2013/05/07 18:40:04 thev00d00 Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_{5,6,7} )
 
-inherit eutils gnome2-utils python-any-r1
+inherit autotools eutils gnome2-utils python-any-r1
 
 if [[ ${PV} = *9999* ]]; then
 	ESVN_REPO_URI="svn://svn.handbrake.fr/HandBrake/trunk"
@@ -23,7 +23,7 @@ HOMEPAGE="http://handbrake.fr/"
 LICENSE="GPL-2"
 
 SLOT="0"
-IUSE="gtk gstreamer ffmpeg"
+IUSE="fdk ffmpeg gstreamer gtk"
 
 # Use either ffmpeg or gst-plugins/mpeg2dec for decoding MPEG-2.
 REQUIRED_USE="!ffmpeg? ( gstreamer )"
@@ -42,7 +42,7 @@ RDEPEND="
 	media-libs/libvorbis
 	media-libs/x264
 	media-sound/lame
-	ffmpeg? ( >=media-video/ffmpeg-1.2 )
+	ffmpeg? ( =virtual/ffmpeg-9 )
 	sys-libs/glibc:2.2
 	sys-libs/zlib
 	gstreamer? (
@@ -59,7 +59,9 @@ RDEPEND="
 		x11-libs/libnotify
 		x11-libs/pango
 		>=virtual/udev-171[gudev]
-	)"
+	)
+	fdk? ( media-libs/fdk-aac )
+	"
 
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -95,6 +97,18 @@ src_prepare() {
 
 	# Make use of an unpatched version of a52 that does not make a private field public.
 	epatch "${FILESDIR}"/handbrake-9999-use-unpatched-a52.patch
+
+	# Fixup configure.ac with newer automake
+	cd "${S}/gtk"
+	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
+		-e 's:AM_PROG_CC_STDC:AC_PROG_CC:g' \
+		-e 's:am_cv_prog_cc_stdc:ac_cv_prog_cc_stdc:g' \
+		configure.ac || die "Fixing up configure.ac failed"
+
+	# Don't run autogen.sh
+	sed -i '/autogen.sh/d' module.rules || die "Removing autogen.sh call failed"
+	eautoreconf
 }
 
 src_configure() {
@@ -110,6 +124,10 @@ src_configure() {
 
 	if use ffmpeg ; then
 		myconf+=" --enable-ff-mpeg2"
+	fi
+
+	if use fdk ; then
+		myconf+=" --enable-fdk-aac"
 	fi
 
 	./configure \
