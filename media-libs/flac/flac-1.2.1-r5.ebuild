@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.2 2013/05/01 22:11:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.3 2013/05/07 11:58:12 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="3dnow altivec +cxx debug doc ogg sse static-libs"
+IUSE="3dnow altivec +cxx debug ogg sse static-libs"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.1.3[${MULTILIB_USEDEP}] )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
@@ -41,9 +41,8 @@ src_prepare() {
 	# bug 466990
 	sed -i "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" configure.in || die
 
-	# html install fails with out-of-source build
-	# XXX: take a closer look at it
-	sed -i -e '/SUBDIRS/s:html::' doc/Makefile.am || die
+	# fix html install with out-of-source build
+	sed -i -e 's:cd api:cd $(srcdir)/api:' doc/html/Makefile.am || die
 
 	AT_M4DIR="m4" \
 	autotools-multilib_src_prepare
@@ -73,9 +72,6 @@ src_test() {
 }
 
 src_install() {
-	use doc && local HTML_DOCS=( doc/html/. )
-
-	autotools-multilib_src_install
-
-	rm -rf "${D}"/usr/share/doc/${P}
+	autotools-multilib_src_install \
+		docdir=/usr/share/doc/${PF}/html
 }
