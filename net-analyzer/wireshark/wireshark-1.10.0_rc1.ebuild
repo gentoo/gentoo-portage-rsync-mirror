@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0_rc1.ebuild,v 1.1 2013/04/27 17:05:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0_rc1.ebuild,v 1.2 2013/05/07 14:14:04 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -111,7 +111,7 @@ src_configure() {
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
 	if use kerberos; then
-		case `krb5-config --libs` in
+		case $(krb5-config --libs) in
 			*-lcrypto*)
 				ewarn "Kerberos was built with ssl support: linkage with openssl is enabled."
 				ewarn "Note there are annoying license incompatibilities between the OpenSSL"
@@ -153,7 +153,7 @@ src_configure() {
 
 src_compile() {
 	default
-	use doc && emake -C docbook
+	use doc && emake -j1 -C docbook
 }
 
 src_install() {

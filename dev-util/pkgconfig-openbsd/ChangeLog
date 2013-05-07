@@ -1,20 +1,17 @@
 # ChangeLog for dev-util/pkgconfig-openbsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.13 2013/05/07 13:59:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.14 2013/05/07 14:01:46 ssuominen Exp $
+
+  07 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -pkgconfig-openbsd-20130225.ebuild:
+  old
 
 *pkgconfig-openbsd-20130507 (07 May 2013)
 
   07 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   +pkgconfig-openbsd-20130507.ebuild:
   Latest version from upstream CVS; include /usr/lib32/pkgconfig,
-  /usr/lib64/pkgconfig, /usr/share/pkgconfig to search paths.
-
-  05 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
-  pkgconfig-openbsd-20130225.ebuild:
-  Remove keywording again because --variable option is not working:
-  $ pkg-config --variable udevdir udev
-  $ echo $?
-  1
+  /usr/lib64/pkgconfig, /usr/share/pkgconfig to .pc directories
 
   25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
   -pkgconfig-openbsd-20120710.ebuild:

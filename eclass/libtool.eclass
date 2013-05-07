@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.104 2013/05/04 05:24:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.105 2013/05/07 14:23:33 vapier Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -48,6 +48,11 @@ ELT_try_and_apply_patch() {
 		printf 'temp patch: %s\n' "${patch}" > "${log}"
 	fi
 	printf '\nTrying %s\n' "${disp}" >> "${log}"
+
+	if [[ ! -e ${file} ]] ; then
+		echo "File not found: ${file}" >> "${log}"
+		return 1
+	fi
 
 	# Save file for permission restoration.  `patch` sometimes resets things.
 	cp -p "${file}" "${file}.gentoo.elt"

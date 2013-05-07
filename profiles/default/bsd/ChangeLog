@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.140 2013/02/18 11:22:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.141 2013/05/07 14:24:38 naota Exp $
+
+  07 May 2013; Naohiro Aota <naota@gentoo.org> +fbsd/x86/9.0/deprecated,
+  fbsd/x86/7.2/deprecated, fbsd/x86/8.0/deprecated, fbsd/x86/8.2/deprecated:
+  Deprecate x86/9.0. #464742
 
   18 Feb 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask ffmpeg[iec61883] as its linux only too

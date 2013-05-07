@@ -9,5 +9,5 @@ LICENSE=Apache-2.0 GPL-2 LGPL-2.1
 RDEPEND=>=media-libs/raptor-2.0.7:2 kernel_linux? ( >=sys-apps/util-linux-2.19 ) pcre? ( dev-libs/libpcre ) xml? ( dev-libs/libxml2 ) !gmp? ( dev-libs/mpfr ) gmp? ( dev-libs/gmp ) crypt? ( !mhash? ( dev-libs/libgcrypt ) mhash? ( app-crypt/mhash ) )
 SLOT=0
 SRC_URI=http://download.librdf.org/source/rasqal-0.9.30.tar.gz
-_eclasses_=libtool	177b3e32837e245539b46f16c43afed8	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=libtool	8b8a9f14a61e27099bda586909dad880	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=4be4b466361431c8fe1224b7b549ddec

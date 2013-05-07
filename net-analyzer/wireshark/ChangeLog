@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.477 2013/05/02 13:38:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.479 2013/05/07 14:16:13 jer Exp $
+
+  07 May 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0_rc1.ebuild:
+  Work around parallel make issue in documentation generation (bug #468356).
 
   02 May 2013; Jeroen Roovers <jer@gentoo.org> -wireshark-1.9.2.ebuild:
   Obsolete.

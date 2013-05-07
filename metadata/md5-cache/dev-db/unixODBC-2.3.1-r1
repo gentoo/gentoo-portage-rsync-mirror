@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=>=sys-devel/libtool-2.2.6b >=sys-libs/readline-6.1 >=sys-libs/ncurses-5.7-r7 virtual/libiconv
 SLOT=0
 SRC_URI=http://ftp.unixodbc.org/pub/unixODBC/unixODBC-2.3.1.tar.gz
-_eclasses_=libtool	177b3e32837e245539b46f16c43afed8	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=libtool	8b8a9f14a61e27099bda586909dad880	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=ab98deb5e06158f3e3602374cdad5fde

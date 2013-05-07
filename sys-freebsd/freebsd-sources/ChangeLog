@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.82 2013/01/29 13:11:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.83 2013/05/07 14:18:08 naota Exp $
+
+*freebsd-sources-9.1-r1 (07 May 2013)
+
+  07 May 2013; Naohiro Aota <naota@gentoo.org>
+  +files/freebsd-sources-9.1-cve-2013-3266.patch,
+  +freebsd-sources-9.1-r1.ebuild, -freebsd-sources-9.1.ebuild:
+  Add patch to deal with CVE-2013-3266. #468422
 
   29 Jan 2013; Alexis Ballier <aballier@gentoo.org> freebsd-sources-9.1.ebuild:
   Install to /usr/src/PN-RV to ease upgrades, bug #454414 by Yuta SATOH

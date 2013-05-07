@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit )
 SLOT=0
 SRC_URI=http://www.portaudio.com/archives/pa_stable_v19_20111121.tgz
-_eclasses_=libtool	177b3e32837e245539b46f16c43afed8	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=libtool	8b8a9f14a61e27099bda586909dad880	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=e33a7c23efce321f4a874e7195e8c7b2
