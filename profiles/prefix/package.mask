@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.116 2013/05/06 18:57:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.117 2013/05/07 06:48:45 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -9,10 +9,6 @@
 # NOTE: Please add your entry at the top!
 #
 
-
-# Fabian Groffen <grobian@gentoo.org> (06 May 2013)
-# EAPI=2 and using ${D}, needs ${ED}, bug #468786
-=sys-apps/findutils-4.5.11
 
 # Fabian Groffen <grobian@gentoo.org> (09 Nov 2012)
 # fails to properly run config.status (and thus create libtool) on
