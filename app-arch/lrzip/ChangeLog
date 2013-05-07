@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lrzip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.22 2012/12/17 18:27:01 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.23 2013/05/07 22:59:23 naota Exp $
+
+  07 May 2013; Naohiro Aota <naota@gentoo.org> lrzip-0.614.ebuild:
+  Add ~x86-fbsd wrt #468854
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> lrzip-0.614.ebuild:
   Add ~ppc64, wrt bug #442188
