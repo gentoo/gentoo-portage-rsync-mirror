@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsamplerate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.74 2012/05/29 13:29:27 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.75 2013/05/07 12:49:53 mgorny Exp $
+
+*libsamplerate-0.1.8-r1 (07 May 2013)
+
+  07 May 2013; Michał Górny <mgorny@gentoo.org> +libsamplerate-0.1.8-r1.ebuild:
+  Convert to multilib wrt bug #466670.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> libsamplerate-0.1.8.ebuild:
   keyword ~amd64-fbsd

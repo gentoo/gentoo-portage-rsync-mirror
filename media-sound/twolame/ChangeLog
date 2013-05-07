@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/twolame
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.46 2012/06/03 13:55:13 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.47 2013/05/07 12:56:37 mgorny Exp $
+
+*twolame-0.3.13-r1 (07 May 2013)
+
+  07 May 2013; Michał Górny <mgorny@gentoo.org> +twolame-0.3.13-r1.ebuild:
+  Convert to multilib wrt bug #468330.
 
   03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> twolame-0.3.13.ebuild:
   Keyword ~mips
@@ -153,4 +158,3 @@
 
   08 Oct 2006; MATSUU Takuto <matsuu@gentoo.org> +twolame-0.3.8.ebuild:
   Initial import, bug 120469.
-

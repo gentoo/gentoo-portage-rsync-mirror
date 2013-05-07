@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wavpack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/ChangeLog,v 1.64 2012/05/17 15:25:01 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/ChangeLog,v 1.65 2013/05/07 12:55:13 mgorny Exp $
+
+*wavpack-4.60.1-r1 (07 May 2013)
+
+  07 May 2013; Michał Górny <mgorny@gentoo.org> +wavpack-4.60.1-r1.ebuild:
+  Convert to multilib wrt bug #468326.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> wavpack-4.60.1.ebuild:
   keyword ~amd64-fbsd
