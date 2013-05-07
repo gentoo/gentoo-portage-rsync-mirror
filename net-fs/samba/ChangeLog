@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.576 2013/05/06 05:37:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.577 2013/05/07 09:07:32 polynomial-c Exp $
+
+  07 May 2013; Lars Wendler <polynomial-c@gentoo.org> -samba-3.5.15.ebuild,
+  -samba-4.0.2.ebuild, -samba-4.0.3.ebuild, samba-4.0.5.ebuild,
+  +files/samba-4.0.5-fix_linking_to_heimdal.patch:
+  Fixed linking error with heimdal (see
+  https://bugzilla.samba.org/show_bug.cgi?id=9781). Removed old versions.
 
 *samba-4.0.5 (06 May 2013)
 *samba-3.6.14 (06 May 2013)

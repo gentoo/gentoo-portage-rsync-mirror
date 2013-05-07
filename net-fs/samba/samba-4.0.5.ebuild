@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.5.ebuild,v 1.1 2013/05/06 05:37:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.5.ebuild,v 1.2 2013/05/07 09:07:32 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -59,6 +59,8 @@ S="${WORKDIR}/${MY_P}"
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
+
+PATCHES=( "${FILESDIR}/${P}-fix_linking_to_heimdal.patch" )
 
 pkg_setup() {
 	python_export_best

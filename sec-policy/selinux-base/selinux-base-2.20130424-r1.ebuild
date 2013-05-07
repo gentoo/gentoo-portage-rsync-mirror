@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20130424-r1.ebuild,v 1.1 2013/05/06 14:46:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20130424-r1.ebuild,v 1.2 2013/05/07 09:21:02 swift Exp $
 EAPI="4"
 
 inherit eutils
@@ -43,6 +43,8 @@ src_prepare() {
 		"${S}/refpolicy/config/appconfig-mls/default_contexts"
 	sed -i -e 's|system_r:cronjob_t|system_r:system_cronjob_t|g' \
 		"${S}/refpolicy/config/appconfig-mcs/default_contexts"
+
+	epatch_user
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20130424-r1.ebuild,v 1.1 2013/05/06 14:46:54 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20130424-r1.ebuild,v 1.2 2013/05/07 09:22:57 swift Exp $
 EAPI="4"
 
 inherit eutils
@@ -69,6 +69,9 @@ src_prepare() {
 			done
 		fi
 	fi
+
+	# Calling user patches
+	epatch_user
 
 	# Collect only those files needed for this particular module
 	for i in ${MODS}; do

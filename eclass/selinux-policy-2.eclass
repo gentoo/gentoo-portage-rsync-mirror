@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.18 2013/04/28 16:15:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.19 2013/05/07 09:25:17 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -151,6 +151,10 @@ selinux-policy-2_src_prepare() {
 		EPATCH_FORCE="yes" \
 		epatch
 	fi
+
+	# Call in epatch_user. We do this early on as we start moving
+	# files left and right hereafter.
+	epatch_user
 
 	# Copy additional files to the 3rd_party/ location
 	if [[ "$(declare -p POLICY_FILES 2>/dev/null 2>&1)" == "declare -a"* ]] ||

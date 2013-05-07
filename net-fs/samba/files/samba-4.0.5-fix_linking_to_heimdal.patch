@@ -1,0 +1,22 @@
+https://bugzilla.samba.org/show_bug.cgi?id=9781
+
+diff --git a/source4/heimdal_build/wscript_build b/source4/heimdal_build/wscript_build
+index f447115..ce4211e 100644
+--- a/source4/heimdal_build/wscript_build
++++ b/source4/heimdal_build/wscript_build
+@@ -948,13 +948,13 @@ HEIMDAL_BINARY('samba4kinit',
+ 
+ HEIMDAL_BINARY('samba4kgetcred',
+     'kuser/kgetcred.c',
+-    deps='krb5 heimntlm roken HEIMDAL_VERS hcrypto',
++    deps='krb5 asn1 heimntlm roken HEIMDAL_VERS hcrypto',
+     install=False
+     )
+ 
+ HEIMDAL_BINARY('samba4kpasswd',
+     'kpasswd/kpasswd.c',
+-    deps='krb5 heimntlm roken HEIMDAL_VERS hcrypto',
++    deps='krb5 asn1 heimntlm roken HEIMDAL_VERS hcrypto',
+     install=False
+     )
+ 
