@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.946 2013/04/23 06:32:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.947 2013/05/07 04:35:01 dirtyepic Exp $
+
+  07 May 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.0.ebuild:
+  4.8.0 p1.3: Fixes bug #465894 (wine memcopy breakage) and a couple of wrong
+  code bugs for -march=bdver2.
 
 *gcc-4.6.4 (23 Apr 2013)
 
