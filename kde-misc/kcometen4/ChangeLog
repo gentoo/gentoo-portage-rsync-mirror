@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcometen4
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/ChangeLog,v 1.10 2011/10/29 00:39:54 abcd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/ChangeLog,v 1.11 2013/05/07 20:50:43 johu Exp $
+
+  07 May 2013; Johannes Huber <johu@gentoo.org> kcometen4-1.0.7.ebuild:
+  Raise KDE_MINIMAL and change use dep to fix bug #468840.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kcometen4-1.0.7.ebuild:
   Bump to EAPI=4
@@ -45,4 +48,3 @@
   +kcometen4-1.0.4.ebuild:
   Initial commit of kcometen4 screensaver ( bug #258768 ) Thanks to
   Shaumyadeep Chaudhuri <shaumya@gmail.com>.
-
