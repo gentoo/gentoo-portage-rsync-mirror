@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r7.ebuild,v 1.1 2013/05/05 20:14:22 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r7.ebuild,v 1.2 2013/05/07 00:32:24 vostorga Exp $
 
 EAPI="2"
 
@@ -76,6 +76,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	elog "LXDM in the early stages of development!"
+	elog "Take into consideration that LXDM is in the early stages of development!"
 	echo
 }
