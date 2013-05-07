@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.20 2013/02/02 23:10:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.21 2013/05/07 10:59:41 pva Exp $
+
+  07 May 2013; Peter Volkov <pva@gentoo.org> libfprint-0.5.0.ebuild,
+  +files/libfprint-0.5.0-automake-1.13.patch:
+  Fixed automake-1.13 build failure, bug #468850
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
   Add ~arm, wrt bug #449220

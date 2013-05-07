@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.0.ebuild,v 1.3 2013/01/08 21:46:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.0.ebuild,v 1.4 2013/05/07 10:59:41 pva Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-automake-1.13.patch"
 	eautoreconf
 }
 
