@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.24 2013/04/07 13:59:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.25 2013/05/07 08:14:42 ago Exp $
+
+*trojita-0.3.93 (07 May 2013)
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> +trojita-0.3.93.ebuild,
+  -trojita-0.3.92.ebuild, trojita-9999.ebuild:
+  Version bump to 0.3.93, update LINGUAS, remove old
 
   07 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org> trojita-0.3.92.ebuild,
   trojita-9999.ebuild:

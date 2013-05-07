@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/volti
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volti/ChangeLog,v 1.4 2011/04/25 14:03:45 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volti/ChangeLog,v 1.5 2013/05/07 08:12:13 prometheanfire Exp $
+
+*volti-0.2.3-r1 (07 May 2013)
+
+  07 May 2013; Matthew Thode <prometheanfire@gentoo.org> +volti-0.2.3-r1.ebuild:
+  updateing volti to eapi5 distutils-r1
 
   25 Apr 2011; Thomas Kahle <tomka@gentoo.org> volti-0.2.3.ebuild:
   x86 stable per bug 361113
@@ -17,4 +22,3 @@
 
   26 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +volti-0.2.2.ebuild:
   Initial commit wrt #314981 by Arthur Spitzer.
-

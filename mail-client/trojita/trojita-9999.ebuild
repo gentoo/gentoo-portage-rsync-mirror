@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.16 2013/04/07 13:59:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.17 2013/05/07 08:14:42 ago Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]]; then
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~ppc ~x86"
-	MY_LANGS="bs cs de es et ga gl hu ia lt nl pl pt pt_BR sk sv tr uk zh_CN zh_TW"
+	MY_LANGS="bs cs da de el es et fr ga gl hu ia lt mr nl pl pt pt_BR sk sv tr uk zh_CN zh_TW"
 fi
 
 LICENSE="|| ( GPL-2 GPL-3 )"
