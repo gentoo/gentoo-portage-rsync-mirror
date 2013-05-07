@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1.ebuild,v 1.1 2013/04/12 00:27:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1.ebuild,v 1.2 2013/05/07 10:18:57 titanofold Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 S=${WORKDIR}
 
 RDEPEND=">=dev-libs/glib-2
-		 =media-video/ffmpeg-0.10.6
+		 media-video/ffmpeg
 		 media-libs/alsa-lib
 		 media-libs/fontconfig
 		 media-libs/freetype
