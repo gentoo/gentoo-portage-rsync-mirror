@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1.ebuild,v 1.2 2013/05/07 10:18:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1.ebuild,v 1.4 2013/05/07 19:33:00 ago Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="amd64? ( https://www.odesk.com/downloads/linux/beta/${P}-1fc17.x86_64.r
 
 LICENSE="ODESK"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 S=${WORKDIR}
 
