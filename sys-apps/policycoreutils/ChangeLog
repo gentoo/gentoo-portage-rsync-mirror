@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.118 2013/04/25 18:55:43 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.119 2013/05/07 09:34:31 swift Exp $
+
+*policycoreutils-2.1.14-r2 (07 May 2013)
+
+  07 May 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.14-r2.ebuild:
+  Fix bugs 467268 (yum bindings), 468832 (key error), 468830 (mls range
+  dependency)
 
 *policycoreutils-2.1.14-r1 (25 Apr 2013)
 
