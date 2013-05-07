@@ -1,6 +1,11 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.2 2013/05/05 20:59:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.3 2013/05/07 17:26:24 thev00d00 Exp $
+
+  07 May 2013; Ian Whyman <thev00d00@gentoo.org> handbrake-0.9.9_pre5441.ebuild,
+  metadata.xml:
+  Fix build with automake 1.13 #468694, call eautoreconf instead of autogen.sh,
+  add myself to maintainers
 
   05 May 2013; Tom Wijsman <TomWij@gentoo.org> handbrake-0.9.9_pre5441.ebuild,
   handbrake-9999.ebuild, metadata.xml:

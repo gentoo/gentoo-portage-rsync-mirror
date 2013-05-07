@@ -5,6 +5,10 @@
     <email>TomWij@gentoo.org</email>
     <name>Tom Wijsman</name>
   </maintainer>
+  <maintainer>
+    <email>thev00d00@gentoo.org</email>
+	<name>Ian Whyman</name>
+  </maintainer>
   <longdescription>
     Open-source, GPL-licensed, multiplatform, multithreaded video transcoder.
   </longdescription>

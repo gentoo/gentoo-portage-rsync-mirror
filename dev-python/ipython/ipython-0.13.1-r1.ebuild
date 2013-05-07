@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.1-r1.ebuild,v 1.2 2013/03/30 13:02:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.1-r1.ebuild,v 1.3 2013/05/07 17:30:28 floppym Exp $
 
 EAPI=5
 
@@ -40,6 +40,7 @@ RDEPEND="${CDEPEND}
 			dev-python/pygments[${PYTHON_USEDEP}]
 			dev-python/pyzmq[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 PY2_REQUSE="|| ( $(python_gen_useflags python2* ) )"
@@ -179,6 +180,18 @@ python_install_all() {
 		elisp-install ${PN} ${PN}.el*
 		elisp-site-file-install "${FILESDIR}"/62ipython-gentoo.el
 	fi
+}
+
+pkg_preinst() {
+	check_egg_info() {
+		python_export PYTHON_SITEDIR
+		local pyver=${EPYTHON#python}
+		local egg_info="${ROOT%/}${PYTHON_SITEDIR}/${P}-py${pyver}.egg-info"
+		if [[ -e ${egg_info} && ! -d ${egg_info} ]]; then
+			rm "${egg_info}" || die "Failed to remove distutils egg-info file"
+		fi
+	}
+	python_parallel_foreach_impl check_egg_info
 }
 
 pkg_postinst() {

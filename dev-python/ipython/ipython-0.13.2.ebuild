@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.1 2013/04/27 19:32:41 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.2 2013/05/07 17:30:28 floppym Exp $
 
 EAPI=5
 
@@ -40,6 +40,7 @@ RDEPEND="${CDEPEND}
 			dev-python/pygments[${PYTHON_USEDEP}]
 			dev-python/pyzmq[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 PY2_REQUSE="|| ( $(python_gen_useflags python2* ) )"
