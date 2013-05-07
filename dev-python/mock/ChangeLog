@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.65 2013/05/05 17:36:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.67 2013/05/07 13:56:43 ago Exp $
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> mock-1.0.1-r1.ebuild:
+  Stable for sparc, wrt bug #467308
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> mock-1.0.1-r1.ebuild:
+  Stable for ia64, wrt bug #467308
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org> mock-1.0.1-r1.ebuild:
   Stable for alpha, wrt bug #467308

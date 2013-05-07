@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.241 2013/05/05 17:28:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.243 2013/05/07 13:52:29 ago Exp $
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.10.2-r2.ebuild:
+  Stable for sparc, wrt bug #464648
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.10.2-r2.ebuild:
+  Stable for ia64, wrt bug #464648
 
   05 May 2013; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.10.2-r2.ebuild:
   Stable for alpha, wrt bug #464648

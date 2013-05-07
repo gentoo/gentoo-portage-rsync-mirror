@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.96 2013/05/07 11:56:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.98 2013/05/07 13:56:14 ago Exp $
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> pyrex-0.9.9-r1.ebuild:
+  Stable for sparc, wrt bug #463080
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> pyrex-0.9.9-r1.ebuild:
+  Stable for ia64, wrt bug #463080
 
   07 May 2013; Sergey Popov <pinkbyte@gentoo.org> pyrex-0.9.9-r1.ebuild:
   Stable on amd64, wrt bug #463080

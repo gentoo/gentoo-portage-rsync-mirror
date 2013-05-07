@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.50.ebuild,v 1.9 2013/05/05 17:37:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.50.ebuild,v 1.10 2013/05/07 13:40:52 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/${PN}/1.0/${PV}/+download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 sh sparc x86 ~sparc-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sh sparc x86 ~sparc-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug doc hsieh +libevent sasl static-libs tcmalloc"
 
 DEPEND="net-misc/memcached

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.16 2013/05/04 16:53:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.17 2013/05/07 13:56:30 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-s
 
 LICENSE="LGPL-2.1+ MIT"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples jpeg +motif22-compatibility png static-libs unicode xft"
 
 RDEPEND="x11-libs/libX11[${MULTILIB_USEDEP}]

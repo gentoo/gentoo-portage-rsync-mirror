@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r2.ebuild,v 1.7 2013/05/05 17:36:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r2.ebuild,v 1.9 2013/05/07 13:56:56 ago Exp $
 
 EAPI=5
 inherit eutils libtool
@@ -12,7 +12,7 @@ SRC_URI="http://download.osgeo.org/libtiff/${P}.tar.gz
 
 LICENSE="libtiff"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cxx jbig jpeg lzma static-libs zlib"
 
 RDEPEND="jpeg? ( virtual/jpeg:= )
