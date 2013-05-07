@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/simple-ccsm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/ChangeLog,v 1.15 2012/08/31 11:36:52 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/ChangeLog,v 1.16 2013/05/07 15:37:10 pinkbyte Exp $
+
+*simple-ccsm-0.8.4-r2 (07 May 2013)
+
+  07 May 2013; Sergey Popov <pinkbyte@gentoo.org> +simple-ccsm-0.8.4-r2.ebuild:
+  Revision bump: migrate to distutils-r1
 
   31 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Remove myself and proxy maintainer from maintainers

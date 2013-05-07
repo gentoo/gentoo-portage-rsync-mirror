@@ -11,5 +11,6 @@
 		<flag name='cg'>Add support for nvidia's cg shaders</flag>
 		<flag name='nvcontrol'>Add NVCONTROL support for OpenGL options</flag>
 		<flag name='plugins'>Build and install additional plugins</flag>
+		<flag name='development'>Install development files including headers</flag>
 	</use>
 </pkgmetadata>
