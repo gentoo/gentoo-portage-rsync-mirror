@@ -7,13 +7,18 @@
 	  <name>Christian Faulhammer</name>
 	</maintainer>
 	<use>
+		<flag name='archive'>Enable archiving plugin</flag>
+		<flag name='gdata'>Enable plugin for access to Google
+		data providers</flag>
+		<flag name='gtk3'>Build support for GTK+3</flag>
+		<flag name='pgp'>Enable PGP support</flag>
+		<flag name='spam-report'>Enable plugin for spam
+		reporting to various services</flag>
 		<flag name='bogofilter'>Build <pkg>mail-filter/bogofilter</pkg>
 			plugin</flag>
 		<flag name='dillo'>Enables support for inline HTTP email viewing with a
 			plugin (which depends on the <pkg>www-client/dillo</pkg> 
 			browser)</flag>
-		<flag name='ssl'>Use gnutls for Secure Socket Layer
-		transactions (deprecated, USE=gnutls should be used)</flag>
 		<flag name='smime'>Build plugin for S/MIME support</flag>
 		<flag name='spamassassin'>Build <pkg>mail-filter/spamassassin</pkg>
 			plugin</flag>

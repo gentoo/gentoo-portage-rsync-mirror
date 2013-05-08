@@ -1,6 +1,24 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.227 2013/02/11 21:38:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.228 2013/05/08 04:36:33 fauli Exp $
+
+*claws-mail-3.9.1 (08 May 2013)
+
+  08 May 2013; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.9.1.ebuild, metadata.xml:
+  Version bump with some bigger organisational changes:
+
+  - all plugins are integrated now
+
+  - dropped Dillo, GTKHtml2 and Trayicon plugins
+
+  - built all plugins that need no special dependencies
+
+  - use EAPI 5
+
+  - cleaned up dependencies
+
+  - reorganised USE flags (name changes crypt -> pgp e.g.)
 
 *claws-mail-3.9.0-r1 (11 Feb 2013)
 
