@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.884 2013/04/13 17:17:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.885 2013/05/08 08:22:34 aballier Exp $
+
+*mplayer-1.1.1 (08 May 2013)
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org> +mplayer-1.1.1.ebuild:
+  Version bump, bug #468880. Not many changes for us: playlist fixes and safety
+  measures.
 
   13 Apr 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   trunk now requires ffmpeg 1.1, reported in bug #463588 by foux

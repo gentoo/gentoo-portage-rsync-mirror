@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-13.1.0.ebuild,v 1.1 2013/05/07 20:44:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-13.1.0.ebuild,v 1.2 2013/05/08 08:22:04 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
+# Need hold off pypy support until https://bugs.pypy.org/issue1480 has a fix, also makes py3 incapable
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1
 
@@ -18,7 +19,8 @@ IUSE="examples test"
 
 PY2_USEDEP=$(python_gen_usedep 'python2*')
 
-RDEPEND=">=net-libs/zeromq-2.1.9"
+RDEPEND=">=net-libs/zeromq-2.1.9
+	dev-python/gevent[${PY2_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? (
 		!arm? ( dev-python/cffi[${PY2_USEDEP}] )
@@ -33,11 +35,16 @@ DISTUTILS_IN_SOURCE_BUILD=1
 REQUIRED_USE="test? ( !arm )"
 
 python_test() {
-	if [[ ${EPYTHON} == python3* ]]; then
-		einfo "Skipping tests for ${EPYTHON}, not supported."
-	else
-		nosetests -svw build/lib* || die "Tests fail with ${EPYTHON}"
-	fi
+#	local test
+	nosetests -svw build/lib* || die "Tests fail with ${EPYTHON}"
+	# For pypy capable; avoids nosetests trawling wrong files triggering erroneous error under pypy
+#	for test in build/lib/zmq/tests/test_*.py; do
+#		if "${PYTHON}" ${test}; then 
+#			einfo "Passed ${test}"
+#		else
+#			die "testsuite failed ${test} under ${EPYTHON}"
+#		fi
+#	done
 }
 
 python_install_all() {
