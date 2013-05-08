@@ -5694,6 +5694,7 @@ sys-apps/ucspi-ssl:tls - Add TLS support (see also http://www.suspectclass.com/~
 sys-apps/udevil:systemd - Support for sys-apps/systemd
 sys-apps/usbutils:network-cron - Monthly cronjob the update-usbids script
 sys-apps/usermode-utilities:fuse - Build tools (currently umlmount) needing fuse
+sys-apps/util-linux:caps - build setpriv helper (run programs with diff capabilities)
 sys-apps/util-linux:cramfs - build mkfs/fsck helpers for cramfs filesystems
 sys-apps/util-linux:cytune - build cytune for Cyclades-Z multiport serial cards
 sys-apps/util-linux:ddate - build ddate helper (Discordian dates)

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.23.ebuild,v 1.2 2013/05/04 09:23:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.23.ebuild,v 1.3 2013/05/08 22:32:07 vapier Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ fi
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="bash-completion +cramfs cytune fdformat ncurses nls old-linux selinux slang static-libs +suid test tty-helpers udev unicode"
+IUSE="bash-completion caps +cramfs cytune fdformat ncurses nls old-linux selinux slang static-libs +suid test tty-helpers udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -36,6 +36,7 @@ RDEPEND="!sys-process/schedutils
 	!<sys-libs/e2fsprogs-libs-1.41.8
 	!<sys-fs/e2fsprogs-1.41.8
 	!<app-shells/bash-completion-1.3-r2
+	caps? ( sys-libs/libcap-ng )
 	cramfs? ( sys-libs/zlib )
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	selinux? ( sys-libs/libselinux )
@@ -75,6 +76,7 @@ src_configure() {
 		--enable-agetty \
 		--with-bashcompletiondir='${datarootdir}/bash-completion' \
 		$(use_enable bash-completion) \
+		$(use_enable caps setpriv) \
 		$(use_enable cramfs) \
 		$(use_enable cytune) \
 		$(use_enable fdformat) \
