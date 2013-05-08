@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r3.ebuild,v 1.1 2013/03/05 13:34:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r3.ebuild,v 1.2 2013/05/08 20:29:39 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic toolchain-funcs versionator
@@ -49,6 +49,11 @@ src_prepare() {
 		"${FILESDIR}"/${P}-openssl-1.0.0.patch \
 		"${FILESDIR}"/${P}-glibc212.patch \
 		"${FILESDIR}"/${P}-gcc47.patch
+
+	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		-e 's:AM_PROG_CC_STDC:AC_PROG_CC:' \
+		configure.ac argp/configure.ac || die
 
 	eautoreconf
 	pushd argp >/dev/null

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.4 2013/05/08 19:59:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.5 2013/05/08 20:29:29 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd
@@ -19,6 +19,7 @@ RDEPEND="
 	pcre? ( dev-libs/libpcre )
 	spoof-source? ( net-libs/libnet:1.1 )
 	ssl? ( dev-libs/openssl:= )
+	smtp? ( net-libs/libesmtp )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	>=dev-libs/eventlog-0.2.12
 	>=dev-libs/glib-2.10.1:2
