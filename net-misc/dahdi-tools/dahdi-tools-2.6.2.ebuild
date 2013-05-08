@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.6.2.ebuild,v 1.1 2013/03/18 10:19:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.6.2.ebuild,v 1.2 2013/05/08 16:26:52 vincent Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.asterisk.org/pub/telephony/${PN}/releases/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ppp"
 
 DEPEND="dev-libs/newt
