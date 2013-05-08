@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-1.2.2.ebuild,v 1.1 2013/05/04 22:56:25 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-1.2.2.ebuild,v 1.2 2013/05/08 09:36:18 elvanor Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ CDEPEND="dev-cpp/commoncpp2
 	pulseaudio? ( media-sound/pulseaudio )
 	net-libs/ccrtp
 	net-libs/libzrtpcpp
-	net-libs/pjsip
+	>=net-libs/pjsip-2.1
 	sys-apps/dbus
 	gnome? ( dev-libs/atk
 		dev-libs/check

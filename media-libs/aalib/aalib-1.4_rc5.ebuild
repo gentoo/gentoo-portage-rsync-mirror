@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.28 2013/05/05 14:42:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.29 2013/05/08 09:49:06 blueness Exp $
 
 inherit eutils libtool toolchain-funcs autotools
 
@@ -38,6 +38,7 @@ src_unpack() {
 	#467988 automake-1.13
 	mv configure.{in,ac} || die
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
+	eautoreconf
 }
 
 src_compile() {
