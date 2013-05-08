@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sagan-rules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/ChangeLog,v 1.13 2013/03/17 15:30:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/ChangeLog,v 1.14 2013/05/08 14:58:08 maksbotan Exp $
+
+*sagan-rules-20130430 (08 May 2013)
+
+  08 May 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +sagan-rules-20130430.ebuild, -sagan-rules-20110822.ebuild,
+  -sagan-rules-20120405.ebuild:
+  Add new rules snapshot: 2013 04 30, clean old snapshots. Thanks to slepnoga
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
