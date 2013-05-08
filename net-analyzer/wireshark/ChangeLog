@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.480 2013/05/07 22:06:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.481 2013/05/08 01:02:08 jer Exp $
+
+  08 May 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0_rc1.ebuild,
+  +files/wireshark-1.10.0-pkg-config.patch:
+  Fix pkg-config use (bug #468490 by Chris Smith).
 
   07 May 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0_rc1.ebuild:
   No need to replace AM_CONFIG_HEADER.

@@ -1,0 +1,12 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -185,6 +185,9 @@
+ AC_CHECK_PROG(HAVE_DOXYGEN, doxygen, "yes", "no")
+ AM_CONDITIONAL(HAVE_DOXYGEN, test x$HAVE_DOXYGEN = xyes)
+ 
++# We need to call this because PKG_CHECK_MODULES is called conditionally
++PKG_PROG_PKG_CONFIG
++
+ #
+ # Try to arrange for large file support.
+ #
