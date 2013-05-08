@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-strigi-analyzer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-strigi-analyzer/ChangeLog,v 1.148 2013/05/06 20:18:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-strigi-analyzer/ChangeLog,v 1.149 2013/05/08 21:33:31 johu Exp $
+
+  08 May 2013; Johannes Huber <johu@gentoo.org>
+  kdepim-strigi-analyzer-4.10.3.ebuild:
+  Restore accidentally dropped keywords.
 
 *kdepim-strigi-analyzer-4.10.3 (06 May 2013)
 
