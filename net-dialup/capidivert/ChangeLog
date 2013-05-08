@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/capidivert
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capidivert/ChangeLog,v 1.2 2010/09/30 12:32:05 sbriesen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capidivert/ChangeLog,v 1.3 2013/05/08 16:57:26 ulm Exp $
+
+  08 May 2013; Ulrich Müller <ulm@gentoo.org> capidivert-0.0.2.ebuild:
+  Fix LICENSE, GPL-2+ according to author, bug 446154.
 
   30 Sep 2010; Stefan Briesenick <sbriesen@gentoo.org>
   capidivert-0.0.2.ebuild:

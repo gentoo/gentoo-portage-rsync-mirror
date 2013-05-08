@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.50 2013/05/08 16:25:31 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.51 2013/05/08 16:45:01 chainsaw Exp $
+
+  08 May 2013; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.5.0.2-r4.ebuild,
+  -dahdi-2.6.1.ebuild, -dahdi-2.6.1-r1.ebuild, -dahdi-2.6.1-r2.ebuild,
+  -dahdi-2.6.1-r3.ebuild:
+  Remove ebuilds that are no longer usable, for bug #469024.
 
   08 May 2013; Vicente Olivert Riera <vincent@gentoo.org> dahdi-2.6.2.ebuild:
   amd64 x86 stable, bug #469024
