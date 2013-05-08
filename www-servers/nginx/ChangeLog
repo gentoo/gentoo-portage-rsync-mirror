@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.349 2013/05/02 20:14:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.350 2013/05/08 08:34:43 dev-zero Exp $
+
+*nginx-1.4.1 (08 May 2013)
+
+  08 May 2013; Tiziano Müller <dev-zero@gentoo.org> +nginx-1.4.1.ebuild:
+  Version bump for bug #468870, added gunzip flag (bug #468770), bumped
+  devel_kit to 0.2.18, headers_more to 0.20, slowfs_cache to 1.10.
 
 *nginx-1.4.0-r1 (02 May 2013)
 
