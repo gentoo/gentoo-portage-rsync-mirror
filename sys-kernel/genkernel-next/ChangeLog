@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/genkernel-next
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.1 2013/05/08 05:54:54 lxnay Exp $
+
+*genkernel-next-7 (08 May 2013)
+
+  08 May 2013; Fabio Erculiani <lxnay@gentoo.org> +genkernel-next-7.ebuild,
+  +files/genkernel.bash, +files/initramfs.mounts, +metadata.xml:
+  new ebuild, ported from systemd-love
+

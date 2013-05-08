@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r2.ebuild,v 1.4 2013/05/07 07:04:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r2.ebuild,v 1.5 2013/05/08 05:51:28 grobian Exp $
 
 EAPI=3
 
@@ -58,8 +58,9 @@ src_install() {
 	popd > /dev/null
 
 	# add the host OS MANPATH
-	[[ -d "${ROOT}"/usr/share/man ]] && \
+	if [[ -d "${ROOT}"/usr/share/man ]] ; then
 		echo 'MANPATH="/usr/share/man"' > "${ED}"/etc/env.d/99basic || die
+	fi
 
 	# rc-scripts version for testing of features that *should* be present
 	echo "Gentoo Prefix Base System release ${PV}" > "${ED}"/etc/gentoo-release
