@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/nepomuk-widgets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-widgets/ChangeLog,v 1.17 2013/05/06 20:18:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-widgets/ChangeLog,v 1.18 2013/05/08 10:35:01 aballier Exp $
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org>
+  nepomuk-widgets-4.10.3.ebuild:
+  Keyword ~amd64-fbsd, untested but split out of nepomuk so to be considered as
+  a version bump
 
 *nepomuk-widgets-4.10.3 (06 May 2013)
 
