@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libircclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.14 2013/05/08 07:57:53 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.15 2013/05/08 21:25:31 mr_bones_ Exp $
+
+  08 May 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  files/libircclient-1.6-include.patch, files/libircclient-1.6-static.patch:
+  fix static patch (bug #469082)
 
 *libircclient-1.6-r2 (08 May 2013)
 

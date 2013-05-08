@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.265 2013/05/06 20:18:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.266 2013/05/08 21:16:00 johu Exp $
+
+  08 May 2013; Johannes Huber <johu@gentoo.org> akregator-4.10.3.ebuild:
+  Restore accidentally dropped keywords.
 
 *akregator-4.10.3 (06 May 2013)
 

@@ -1,10 +1,12 @@
-diff -ru libircclient-1.6.orig/src/Makefile.in libircclient-1.6/src/Makefile.in
---- libircclient-1.6.orig/src/Makefile.in	2013-03-08 14:34:56.583873379 +0100
-+++ libircclient-1.6/src/Makefile.in	2013-03-08 14:35:27.711873000 +0100
-@@ -1,4 +1,6 @@
- # $Id: libircclient-1.6-static.patch,v 1.1 2013/05/08 07:57:53 vincent Exp $
+--- libircclient-1.6.orig/src/Makefile.in
++++ libircclient-1.6/src/Makefile.in
+@@ -9,6 +9,9 @@
+ DESTDIR=
+ APIVERSION = 1
+ 
 +prefix = @prefix@
 +exec_prefix = @exec_prefix@
- CC = @CC@
- CFLAGS = -fPIC -Wall -DIN_BUILDING_LIBIRC @CFLAGS@
- AR=@AR@ cr
++
+ OBJS = libircclient.o
+ 
+ all:	@TARGET@

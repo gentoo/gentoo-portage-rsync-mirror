@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.10.3.ebuild,v 1.1 2013/05/06 20:18:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.10.3.ebuild,v 1.2 2013/05/08 21:30:23 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ DEPEND="
 "
 RDEPEND=""
 
-KEYWORDS=" ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 MY_LANGS="ar bg bs ca ca@valencia cs da de el en_GB es et eu fa fi fr ga gl he

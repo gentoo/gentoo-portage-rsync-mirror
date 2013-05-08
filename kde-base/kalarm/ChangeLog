@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.260 2013/05/06 20:18:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.261 2013/05/08 21:24:32 johu Exp $
+
+  08 May 2013; Johannes Huber <johu@gentoo.org> kalarm-4.10.3.ebuild:
+  Restore accidentally dropped keywords.
 
 *kalarm-4.10.3 (06 May 2013)
 

@@ -1,6 +1,5 @@
-diff -ru libircclient-1.6.orig/include/libircclient.h libircclient-1.6/include/libircclient.h
---- libircclient-1.6.orig/include/libircclient.h	2012-01-18 03:05:39.000000000 -0500
-+++ libircclient-1.6/include/libircclient.h	2012-04-12 13:21:48.544587401 -0400
+--- libircclient-1.6.orig/include/libircclient.h
++++ libircclient-1.6/include/libircclient.h
 @@ -130,6 +130,7 @@
  #define IN_INCLUDE_LIBIRC_H
  #include "libirc_errors.h"

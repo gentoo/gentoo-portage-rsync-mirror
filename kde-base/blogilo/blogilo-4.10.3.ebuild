@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/blogilo-4.10.3.ebuild,v 1.1 2013/05/06 20:18:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/blogilo-4.10.3.ebuild,v 1.2 2013/05/08 21:17:51 johu Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="KDE Blogging Client"
-KEYWORDS=" ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
