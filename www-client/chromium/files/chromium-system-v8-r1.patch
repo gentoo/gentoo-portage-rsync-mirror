@@ -1,0 +1,36 @@
+--- third_party/WebKit/Source/WebKit/chromium/WebKit.gyp.orig	2013-05-08 03:25:30.099601288 +0000
++++ third_party/WebKit/Source/WebKit/chromium/WebKit.gyp	2013-05-08 03:26:53.230037752 +0000
+@@ -782,6 +782,7 @@
+                     'dependencies': [
+                         '../../wtf/wtf.gyp:wtf',
+                         '../../core/core.gyp/core.gyp:webcore_test_support',
++                        '<(DEPTH)/v8/tools/gyp/v8.gyp:v8',
+                     ],
+                     'include_dirs': [
+                         'public',
+--- webkit/media/webkit_media.gypi.orig	2013-05-08 03:30:18.811121879 +0000
++++ webkit/media/webkit_media.gypi	2013-05-08 03:31:14.991419255 +0000
+@@ -40,6 +40,7 @@
+         '<(DEPTH)/media/media.gyp:yuv_convert',
+         '<(DEPTH)/skia/skia.gyp:skia',
+         '<(DEPTH)/third_party/widevine/cdm/widevine_cdm.gyp:widevine_cdm_version_h',
++        '<(DEPTH)/v8/tools/gyp/v8.gyp:v8',
+         '<(DEPTH)/webkit/compositor_bindings/compositor_bindings.gyp:webkit_compositor_bindings',
+         '<(webkit_src_dir)/Source/WebKit/chromium/WebKit.gyp:webkit',
+       ],
+--- build/linux/unbundle/v8.gyp.orig	2013-05-08 15:45:44.679205181 +0000
++++ build/linux/unbundle/v8.gyp	2013-05-08 15:46:00.439292555 +0000
+@@ -41,11 +41,11 @@
+       'variables': {
+         'shim_headers_path': '<(SHARED_INTERMEDIATE_DIR)/shim_headers/<(_target_name)/<(_toolset)',
+       },
+-      'include_dirs++': [
++      'include_dirs+': [
+         '<(shim_headers_path)',
+       ],
+       'all_dependent_settings': {
+-        'include_dirs+++': [
++        'include_dirs++': [
+           '<(shim_headers_path)',
+         ],
+       },

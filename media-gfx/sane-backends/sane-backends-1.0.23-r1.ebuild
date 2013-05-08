@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23-r1.ebuild,v 1.1 2013/03/15 08:15:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23-r1.ebuild,v 1.2 2013/05/08 19:17:34 vapier Exp $
 
 EAPI="5"
 
@@ -113,6 +113,13 @@ REQUIRED_USE="
 
 DESCRIPTION="Scanner Access Now Easy - Backends"
 HOMEPAGE="http://www.sane-project.org/"
+SRC_URI="https://alioth.debian.org/frs/download.php/3752/sane-backends-1.0.23.tar.gz.1
+	https://alioth.debian.org/frs/download.php/3753/sane-backends-1.0.23.tar.gz.2
+	https://alioth.debian.org/frs/download.php/3754/sane-backends-1.0.23.tar.gz.3"
+
+LICENSE="GPL-2 public-domain"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	sane_backends_dc210? ( virtual/jpeg )
@@ -147,24 +154,17 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	!<sys-fs/udev-114"
 
-SRC_URI="https://alioth.debian.org/frs/download.php/3752/sane-backends-1.0.23.tar.gz.1
-	https://alioth.debian.org/frs/download.php/3753/sane-backends-1.0.23.tar.gz.2
-	https://alioth.debian.org/frs/download.php/3754/sane-backends-1.0.23.tar.gz.3"
-SLOT="0"
-LICENSE="GPL-2 public-domain"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-
 pkg_setup() {
 	enewgroup scanner
 	enewuser saned -1 -1 -1 scanner
 }
 
 src_unpack() {
-	rm -f "${P}.tar.gz"
+	local file
 	for file in ${A}; do
-		cat "${DISTDIR}/${file}" >> "${P}.tar.gz"
-	done
-	tar xzf "${P}.tar.gz"
+		cat "${DISTDIR}/${file}"
+	done > "${P}.tar.gz"
+	unpack ./"${P}.tar.gz"
 }
 
 src_prepare() {

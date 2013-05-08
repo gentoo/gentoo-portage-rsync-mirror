@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1490.2.ebuild,v 1.2 2013/05/01 21:30:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.3.ebuild,v 1.1 2013/05/08 19:17:47 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -27,6 +27,7 @@ QA_FLAGS_IGNORED=".*\.nexe"
 
 RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
+	app-arch/snappy:=
 	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
 		dev-libs/libgcrypt:=
@@ -129,8 +130,11 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
 
-	# Fix build with system libraries, to be upstreamed.
-	epatch "${FILESDIR}/${PN}-shim-headers-r0.patch"
+	# Fix build with system libraries. To be upstreamed.
+	epatch "${FILESDIR}/${PN}-system-icu-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-libvpx-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-v8-r1.patch"
+	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
 
 	epatch_user
 
@@ -178,6 +182,7 @@ src_prepare() {
 		\! -path 'third_party/webrtc/*' \
 		\! -path 'third_party/widevine/*' \
 		\! -path 'third_party/x86inc/*' \
+		\! -path 'third_party/zlib/google/*' \
 		-delete || die
 
 	# Remove bundled v8.
@@ -227,11 +232,13 @@ src_configure() {
 		-Duse_system_libvpx=1
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
+		-Duse_system_libxslt=1
 		-Duse_system_minizip=1
 		-Duse_system_nspr=1
 		-Duse_system_opus=1
 		-Duse_system_protobuf=1
 		-Duse_system_re2=1
+		-Duse_system_snappy=1
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
