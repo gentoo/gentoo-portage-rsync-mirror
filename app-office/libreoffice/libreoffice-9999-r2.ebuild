@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.172 2013/05/06 12:08:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.173 2013/05/08 18:28:29 scarabeus Exp $
 
 EAPI=5
 
@@ -412,7 +412,6 @@ src_configure() {
 	fi
 
 	# system headers/libs/...: enforce using system packages
-	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-graphite: disabling causes build breakages
 	# --enable-harfbuzz: disabling uses ICU LE which is unmaintained and broken
@@ -443,7 +442,6 @@ src_configure() {
 		--enable-randr \
 		--enable-randr-link \
 		--enable-release-build \
-		--enable-unix-qstart-libpng \
 		--enable-hardlink-deliver \
 		--disable-ccache \
 		--disable-crashdump \
