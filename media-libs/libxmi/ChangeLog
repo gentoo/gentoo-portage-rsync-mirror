@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxmi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.4 2013/05/05 13:22:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.5 2013/05/07 23:31:58 naota Exp $
+
+  07 May 2013; Naohiro Aota <naota@gentoo.org> libxmi-1.3.ebuild:
+  Add ~x86-fbsd wrt bug #468582
 
   05 May 2013; Jeroen Roovers <jer@gentoo.org> libxmi-1.3.ebuild:
   Marked ~hppa (bug #468582).
@@ -19,4 +22,3 @@
   04 May 2013; Justin Lecher <jlec@gentoo.org> +libxmi-1.2.ebuild,
   +metadata.xml:
   New addition, written by me
-
