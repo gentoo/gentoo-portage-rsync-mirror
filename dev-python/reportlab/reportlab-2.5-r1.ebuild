@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.5-r1.ebuild,v 1.3 2013/01/22 20:28:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.5-r1.ebuild,v 1.4 2013/05/08 02:37:16 yac Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils eutils versionator
+inherit distutils eutils versionator prefix
 
 DESCRIPTION="Tools for generating printable PDF documents from any data source."
 HOMEPAGE="http://www.reportlab.com/ http://pypi.python.org/pypi/reportlab"
@@ -48,6 +48,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.4-external_libart_lgpl.patch"
 
 	epatch "${FILESDIR}/${PN}-2.5-pypy-implicit-PyArg_NoArgs.patch"
+	eprefixify setup.py
 }
 
 src_compile() {

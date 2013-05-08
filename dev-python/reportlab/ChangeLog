@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.87 2013/04/29 10:27:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.88 2013/05/08 02:37:16 yac Exp $
+
+  08 May 2013; Jan Matejka <yac@gentoo.org> reportlab-2.5-r1.ebuild,
+  reportlab-2.5.ebuild:
+  fixes bug 416269  missing eprefixify on patched setup.py
 
   29 Apr 2013; Justin Lecher <jlec@gentoo.org> reportlab-2.6.ebuild,
   files/reportlab-2.4-external_libart_lgpl.patch, metadata.xml:

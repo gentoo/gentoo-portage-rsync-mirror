@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/dfu-programmer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dfu-programmer/ChangeLog,v 1.3 2012/12/11 09:37:32 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dfu-programmer/ChangeLog,v 1.4 2013/05/08 02:47:21 vapier Exp $
+
+*dfu-programmer-0.6.1 (08 May 2013)
+
+  08 May 2013; Mike Frysinger <vapier@gentoo.org> +dfu-programmer-0.6.1.ebuild:
+  Version bump #468746 by Priit Laes.
 
   11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
   dfu-programmer-0.5.4-r1.ebuild:
@@ -21,4 +26,3 @@
   +dfu-programmer-0.5.4.ebuild, +metadata.xml:
   Initial commit. Ebuild & patches were developed by Håvard Wall, Michael
   Mathurin & Mark James in bug #233806. Some minor tweaks by me.
-
