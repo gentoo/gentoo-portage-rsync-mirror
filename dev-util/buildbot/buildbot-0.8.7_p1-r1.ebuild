@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.7_p1-r1.ebuild,v 1.10 2013/05/07 17:49:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.7_p1-r1.ebuild,v 1.11 2013/05/08 13:42:47 ago Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 sh sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc examples irc mail manhole test"
 
 # sqlite3 module of Python 2.5 is not supported.
