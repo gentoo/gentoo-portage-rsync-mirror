@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liboauth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.24 2013/04/10 04:09:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.25 2013/05/08 15:05:15 jer Exp $
+
+  08 May 2013; Jeroen Roovers <jer@gentoo.org> liboauth-1.0.1.ebuild:
+  Marked ~hppa (bug #468984).
 
   10 Apr 2013; Patrick Lauer <patrick@gentoo.org>
   +files/liboauth-1.0.1-doxygen-out-of-tree.patch, liboauth-1.0.1.ebuild:

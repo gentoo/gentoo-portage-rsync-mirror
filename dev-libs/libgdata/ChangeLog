@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.63 2013/03/30 18:34:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.64 2013/05/08 15:05:42 jer Exp $
+
+  08 May 2013; Jeroen Roovers <jer@gentoo.org> libgdata-0.13.3.ebuild:
+  Marked ~hppa (bug #468984).
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -libgdata-0.10.2.ebuild,
   -libgdata-0.12.0.ebuild, libgdata-0.13.3.ebuild, metadata.xml:
