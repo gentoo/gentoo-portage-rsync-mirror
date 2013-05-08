@@ -1,0 +1,23 @@
+--- minidlna-1.0.26/Makefile
++++ minidlna-1.0.26/Makefile
+@@ -12,10 +12,10 @@
+ #
+ #CFLAGS = -Wall -O -D_GNU_SOURCE -g -DDEBUG
+ #CFLAGS = -Wall -g -Os -D_GNU_SOURCE
+-CFLAGS = -Wall -g -O3 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64
++CFLAGS += -Wall -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64
+ #STATIC_LINKING: CFLAGS += -DSTATIC
+ #STATIC_LINKING: LDFLAGS = -static
+-CC = gcc
++CC ?= gcc
+ RM = rm -f
+ INSTALL = install
+ 
+@@ -125,6 +125,4 @@
+ .SUFFIXES: .c .o
+ 
+ .c.o:
+-	@echo Compiling $*.c
+-	@$(CC) $(CFLAGS) -o $@ -c $< && exit 0; \
+-		echo "The following command failed:  $(CC) $(CFLAGS) -o $@ -c $<" && false
++	$(CC) $(CFLAGS) -o $@ -c $<

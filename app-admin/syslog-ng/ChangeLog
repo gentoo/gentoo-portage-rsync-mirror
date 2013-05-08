@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.339 2013/05/08 20:29:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.340 2013/05/08 20:47:41 mr_bones_ Exp $
+
+  08 May 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-3.3.5-r1.ebuild:
+  whitespace
 
   08 May 2013; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.4.1.ebuild:
   add missing net-libs/libesmtp dep (bug #469012)

@@ -1,0 +1,12 @@
+Index: minidlna-1.0.25/minidlna.c
+===================================================================
+--- minidlna-1.0.25.orig/minidlna.c
++++ minidlna-1.0.25/minidlna.c
+@@ -69,6 +69,7 @@
+ 
+ #ifdef ENABLE_NLS
+ #include <libintl.h>
++#include <locale.h>
+ #endif
+ 
+ #include "upnpglobalvars.h"

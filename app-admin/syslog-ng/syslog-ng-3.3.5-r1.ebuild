@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.5-r1.ebuild,v 1.2 2013/05/08 02:42:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.5-r1.ebuild,v 1.3 2013/05/08 20:47:41 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -52,14 +52,14 @@ src_prepare() {
 	sed -i \
 		-e '/libsyslog_ng_crypto_la_LIBADD/s/$/ -lssl -lcrypto/' \
 		lib/Makefile.am || die
-        sed -i \
-                -e 's/AM_PROG_CC_STDC/AC_PROG_CC/' \
-                -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
-                configure.in || die
-        sed -i \
-                -e 's/AM_PROG_CC_STDC/AC_PROG_CC/' \
-                -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
-                modules/afmongodb/libmongo-client/configure.ac || die
+	sed -i \
+			-e 's/AM_PROG_CC_STDC/AC_PROG_CC/' \
+			-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
+			configure.in || die
+	sed -i \
+			-e 's/AM_PROG_CC_STDC/AC_PROG_CC/' \
+			-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
+			modules/afmongodb/libmongo-client/configure.ac || die
 	eautoreconf
 }
 

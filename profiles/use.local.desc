@@ -2479,7 +2479,6 @@ kde-base/kdebase-startkde:wallpapers - Install the KDE wallpapers
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdelibs:udisks - Use udisks for block device access (e.g., automounting)
-kde-base/kdelibs:upnp - Build the Solid backend to provide information about UPnP devices on the network
 kde-base/kdelibs:upower - Use upower for power management
 kde-base/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-base/kdepim-runtime:google - Google service integration via net-libs/libkgapi
@@ -2518,7 +2517,6 @@ kde-base/kopete:nowlistening - Shows song you currently listen to in your status
 kde-base/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
 kde-base/kopete:pipes - Send messages to external pipe.
 kde-base/kopete:privacy - Filter for incoming messages
-kde-base/kopete:qq - enable support for the Chinese network protocol.
 kde-base/kopete:skype - Enable Skype protocol handler (not fully functional yet).
 kde-base/kopete:sms - Enable SMS sendinge functionality.
 kde-base/kopete:statistics - Everybody loves statistic graphs, especially cake ones. ;]
