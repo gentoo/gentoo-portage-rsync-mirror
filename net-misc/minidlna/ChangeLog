@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.28 2013/02/17 17:38:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.29 2013/05/08 07:29:49 xmw Exp $
+
+*minidlna-1.0.25-r2 (08 May 2013)
+
+  08 May 2013; Michael Weber <xmw@gentoo.org> +files/minidlna-1.0.25-r2.initd,
+  +files/minidlna-1.0.25.service, +minidlna-1.0.25-r2.ebuild:
+  Move logfile to /var/log/minidlna (bug 457756 by Marc Schiffbauer), add
+  epatch_user support (bug 437958 by BT), add rescan support (bug 462768 by
+  Fabian Henze), add systemd service (bug 468820 by  Lee Trager).
 
   17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> minidlna-1.0.25-r1.ebuild:
   Stable for x86, wrt bug #456374
