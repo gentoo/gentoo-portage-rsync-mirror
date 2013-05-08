@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.484 2013/05/08 02:38:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.485 2013/05/08 13:30:13 jer Exp $
+
+  08 May 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0_rc1.ebuild:
+  Add more documentation dependencies (bug #468356).
 
   08 May 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.6-r1.ebuild,
   wireshark-1.10.0_rc1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0_rc1.ebuild,v 1.7 2013/05/08 02:38:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0_rc1.ebuild,v 1.8 2013/05/08 13:30:13 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -51,9 +51,11 @@ DEPEND="
 	${RDEPEND}
 	doc? (
 		app-doc/doxygen
+		app-text/asciidoc
 		dev-libs/libxml2
 		dev-libs/libxslt
 		doc-pdf? ( dev-java/fop )
+		www-client/lynx
 	)
 	>=virtual/perl-Pod-Simple-3.170.0
 	sys-apps/sed

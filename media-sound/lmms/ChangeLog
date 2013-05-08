@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lmms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.27 2013/03/17 15:38:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.28 2013/05/08 13:09:35 aballier Exp $
+
+*lmms-0.4.14 (08 May 2013)
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org> +lmms-0.4.14.ebuild,
+  +files/lmms-0.4.14-unembedfltk.patch:
+  version bump, bug #467862
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
