@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.3 2013/05/08 02:42:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.4 2013/05/08 19:59:08 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd
@@ -32,15 +32,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV%.*}/${P}-rollup.patch
-	sed -i \
-		-e 's/AM_PROG_CC_STDC/AC_PROG_CC/' \
-		-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
-		configure.in || die
-	sed -i \
-		-e 's/AM_PROG_CC_STDC/AC_PROG_CC/' \
-		-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
-		modules/afmongodb/libmongo-client/configure.ac || die
+	epatch \
+		"${FILESDIR}"/${PV%.*}/${P}-rollup.patch \
+		"${FILESDIR}"/${PV%.*}/${P}-autotools.patch
 	mv configure.in configure.ac || die
 	eautoreconf
 }

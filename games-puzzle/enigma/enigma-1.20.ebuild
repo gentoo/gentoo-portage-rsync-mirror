@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.20.ebuild,v 1.1 2013/05/08 05:05:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.20.ebuild,v 1.2 2013/05/08 19:44:45 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils gnome2-utils games
@@ -57,15 +57,15 @@ src_install() {
 }
 
 pkg_preinst() {
-    games_pkg_preinst
-    gnome2_icon_savelist
+	games_pkg_preinst
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-    games_pkg_postinst
-    gnome2_icon_cache_update
+	games_pkg_postinst
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-    gnome2_icon_cache_update
+	gnome2_icon_cache_update
 }

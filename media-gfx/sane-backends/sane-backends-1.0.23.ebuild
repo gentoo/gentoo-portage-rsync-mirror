@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.16 2013/02/22 21:02:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.17 2013/05/08 19:35:31 vapier Exp $
 
 EAPI="5"
 
-inherit eutils flag-o-matic multilib udev user
+inherit eutils flag-o-matic multilib udev user toolchain-funcs
 
 # gphoto and v4l are handled by their usual USE flags.
 # The pint backend was disabled because I could not get it to compile.
@@ -229,6 +229,25 @@ src_compile() {
 		cd tools/hotplug
 		grep -v '^$' libsane.usermap > libsane.usermap.new
 		mv libsane.usermap.new libsane.usermap
+	fi
+
+	if tc-is-cross-compiler; then
+		# The build system sucks and doesn't handle this properly.
+		# https://alioth.debian.org/tracker/index.php?func=detail&aid=314236&group_id=30186&atid=410366
+		tc-export_build_env BUILD_CC
+		cd "${S}"/tools
+		${BUILD_CC} ${BUILD_CPPFLAGS} ${BUILD_CFLAGS} -I. -I../include \
+			../sanei/sanei_config.c ../sanei/sanei_constrain_value.c \
+			../sanei/sanei_init_debug.c sane-desc.c -o sane-desc || die
+		local dirs=( hal hotplug hotplug-ng udev )
+		local targets=(
+			hal/libsane.fdi
+			hotplug/libsane.usermap
+			hotplug-ng/libsane.db
+			udev/libsane.rules
+		)
+		mkdir -p "${dirs[@]}" || die
+		emake "${targets[@]}"
 	fi
 }
 
