@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.9 2013/04/30 07:51:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.10 2013/05/08 10:25:48 pinkbyte Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -22,8 +22,8 @@
 # Only EAPI >1 supported
 
 case ${EAPI:-0} in
-	2|3|4|5) ;;
-	0|1) die "EAPI not supported, bug ebuild mantainer" ;;
+	4|5) ;;
+	0|1|2|3) die "EAPI not supported, bug ebuild mantainer" ;;
 	*) die "Unknown EAPI, bug eclass maintainers" ;;
 esac
 
@@ -35,14 +35,8 @@ if [[ ${PV} == 9999 ]]; then
 
 	inherit git-2
 else
-	local suffix
-	if version_is_at_least 0.4.95; then
-		DEPEND="app-arch/xz-utils"
-		suffix="xz"
-	else
-		suffix="bz2"
-	fi
-	SRC_URI="mirror://sourceforge/leechcraft/leechcraft-${PV}.tar.${suffix}"
+	DEPEND="app-arch/xz-utils"
+	SRC_URI="mirror://sourceforge/leechcraft/leechcraft-${PV}.tar.xz"
 	S="${WORKDIR}/leechcraft-${PV}"
 fi
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.96 2013/05/02 12:36:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.97 2013/05/08 10:14:12 radhermit Exp $
+
+*simplejson-3.3.0 (08 May 2013)
+
+  08 May 2013; Tim Harder <radhermit@gentoo.org> +simplejson-3.3.0.ebuild:
+  Version bump.
 
   02 May 2013; Jeroen Roovers <jer@gentoo.org> simplejson-3.2.0.ebuild:
   Marked ~hppa (bug #468268).
