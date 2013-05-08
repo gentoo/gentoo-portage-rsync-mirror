@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.6-r1.ebuild,v 1.7 2013/05/01 11:47:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.6-r1.ebuild,v 1.9 2013/05/08 02:29:17 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -17,6 +17,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
 	adns +caps crypt doc doc-pdf geoip gtk ipv6 kerberos libadns lua +pcap
 	portaudio profile python selinux smi ssl zlib
+"
+REQUIRED_USE="
+	ssl? ( crypt )
 "
 RDEPEND="
 	>=dev-libs/glib-2.14:2
@@ -38,22 +41,24 @@ RDEPEND="
 	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-wireshark )
 	smi? ( net-libs/libsmi )
-	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
+	ssl? ( net-libs/gnutls )
 	zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
 "
 
 DEPEND="
 	${RDEPEND}
-	dev-lang/perl
 	doc? (
 		app-doc/doxygen
 		dev-libs/libxml2
 		dev-libs/libxslt
 		doc-pdf? ( dev-java/fop )
 	)
+	>=perl-core/Pod-Simple-3.170.0
+	perl-core/Time-Local
 	sys-apps/sed
 	sys-devel/bison
 	sys-devel/flex
+	virtual/perl-Getopt-Long
 	virtual/pkgconfig
 "
 
