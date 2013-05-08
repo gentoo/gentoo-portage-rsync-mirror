@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/claws-mail-python-0.11.ebuild,v 1.4 2013/01/03 01:27:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/claws-mail-python-0.11.ebuild,v 1.5 2013/05/08 04:02:52 fauli Exp $
 
 EAPI=4
 inherit multilib
@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-RDEPEND=">=mail-client/claws-mail-3.9.0
+RDEPEND="~mail-client/claws-mail-3.9.0
 	>=dev-lang/python-2.5
 	>=dev-python/pygtk-2.10.3"
 DEPEND="${RDEPEND}

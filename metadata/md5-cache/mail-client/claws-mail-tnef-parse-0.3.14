@@ -1,12 +1,12 @@
 DEFINED_PHASES=install
-DEPEND=>=mail-client/claws-mail-3.9.0 virtual/pkgconfig
+DEPEND=~mail-client/claws-mail-3.9.0 virtual/pkgconfig
 DESCRIPTION=Plugin for Claws to support application/ms-tnef attachments
 EAPI=4
 HOMEPAGE=http://www.claws-mail.org/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-3
-RDEPEND=>=mail-client/claws-mail-3.9.0
+RDEPEND=~mail-client/claws-mail-3.9.0
 SLOT=0
 SRC_URI=http://www.claws-mail.org/downloads/plugins/tnef_parse-0.3.14.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=b448edab8e838c250310d6a711ba7fab
+_md5_=3612fa7812f71b517bf91a198c7a596e

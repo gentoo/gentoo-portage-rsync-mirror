@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.110 2013/05/07 17:49:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.112 2013/05/08 04:30:07 fauli Exp $
+
+*tmpwatch-2.11-r1 (08 May 2013)
+
+  08 May 2013; Christian Faulhammer <fauli@gentoo.org>
+  +tmpwatch-2.11-r1.ebuild, +files/tmpwatch-2.11-boottime.patch:
+  Make detection of boottime non-fatal and add user patch capability, see bug
+  468444 and bug 468882 by Christophe Perez
+
+  08 May 2013; Christian Faulhammer <fauli@gentoo.org> -tmpwatch-2.10.3.ebuild:
+  clean up
 
   07 May 2013; Agostino Sarubbo <ago@gentoo.org> tmpwatch-2.11.ebuild:
   Stable for ppc64, wrt bug #467516
