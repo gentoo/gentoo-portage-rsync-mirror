@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.83 2013/04/24 16:23:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.85 2013/05/07 23:27:25 floppym Exp $
+
+*imaging-1.1.7-r4 (07 May 2013)
+
+  07 May 2013; Mike Gilbert <floppym@gentoo.org> +imaging-1.1.7-r4.ebuild,
+  -imaging-1.1.7-r3.ebuild:
+  Revbump for previous change.
+
+  07 May 2013; Mike Gilbert <floppym@gentoo.org> imaging-1.1.7-r3.ebuild:
+  Fix installation path for sane demos, bug 468960 by Erik Zeek.
 
   24 Apr 2013; Mike Gilbert <floppym@gentoo.org> imaging-1.1.7-r3.ebuild:
   Fix typo in HTML_DOCS, bug 466764 by Martin von Gagern.
