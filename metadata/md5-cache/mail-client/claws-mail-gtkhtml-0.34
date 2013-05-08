@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install
-DEPEND=>=mail-client/claws-mail-3.9.0 net-misc/curl virtual/pkgconfig
+DEPEND=~mail-client/claws-mail-3.9.0 net-misc/curl virtual/pkgconfig
 DESCRIPTION=Renders HTML mail using the gtkhtml2 rendering widget.
 HOMEPAGE=http://www.claws-mail.org/
 KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-3
-RDEPEND=>=mail-client/claws-mail-3.9.0 net-misc/curl
+RDEPEND=~mail-client/claws-mail-3.9.0 net-misc/curl
 SLOT=0
 SRC_URI=http://www.claws-mail.org/downloads/plugins/gtkhtml2_viewer-0.34.tar.gz
 _eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=ea6644829d2ccb71980403dd99c9afbb
+_md5_=9a5da9e5d709b6905ecbf95144d0ae45

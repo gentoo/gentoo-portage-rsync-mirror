@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/claws-mail-fetchinfo-0.4.25.ebuild,v 1.5 2012/12/28 18:17:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/claws-mail-fetchinfo-0.4.25.ebuild,v 1.6 2013/05/08 03:45:35 fauli Exp $
 
 MY_P="${PN#claws-mail-}-plugin-${PV}"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
-RDEPEND=">=mail-client/claws-mail-3.9.0"
+RDEPEND="~mail-client/claws-mail-3.9.0"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig"
 

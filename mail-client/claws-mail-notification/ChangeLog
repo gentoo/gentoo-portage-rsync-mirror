@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-notification
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.85 2013/01/04 11:55:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.86 2013/05/08 04:00:03 fauli Exp $
+
+  08 May 2013; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-notification-0.31.ebuild:
+  prepare plugin for mail-client/claws-mail-3.9.1
 
   04 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-notification-0.30.ebuild:
