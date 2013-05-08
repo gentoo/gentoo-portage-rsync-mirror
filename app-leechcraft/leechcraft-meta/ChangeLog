@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/leechcraft-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.3 2013/05/02 15:38:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.4 2013/05/08 12:15:05 maksbotan Exp $
+
+  08 May 2013; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-meta-9999.ebuild:
+  Add lc-xtazy dependency to 9999
 
 *leechcraft-meta-0.5.95 (02 May 2013)
 

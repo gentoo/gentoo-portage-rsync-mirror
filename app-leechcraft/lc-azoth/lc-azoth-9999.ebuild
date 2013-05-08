@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.3 2013/04/14 16:17:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.4 2013/05/08 12:18:42 maksbotan Exp $
 
 EAPI="5"
 
@@ -25,7 +25,10 @@ COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 		msn? ( net-libs/libmsn )
 		spell? ( app-text/hunspell )
 		xmpp? ( =net-libs/qxmpp-9999 media-libs/speex )
-		xtazy? ( dev-qt/qtdbus:4 )
+		xtazy? (
+			app-leechcraft/lc-xtazy
+			dev-qt/qtdbus:4
+		)
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen[dot] )"

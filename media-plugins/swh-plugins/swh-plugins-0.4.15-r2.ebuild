@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r1.ebuild,v 1.6 2013/05/08 12:06:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r2.ebuild,v 1.2 2013/05/08 12:22:48 aballier Exp $
 
 inherit eutils autotools
 
@@ -28,6 +28,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-plugindir.patch"
 	epatch "${FILESDIR}/${P}-riceitdown.patch"
 	epatch "${FILESDIR}/${P}-gettext.patch"
+	epatch "${FILESDIR}/${P}-x86-asm-optional.patch"
+	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
 
 	# Use system libgsm, bug #252890
 	rm -rf gsm

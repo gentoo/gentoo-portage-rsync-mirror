@@ -1,6 +1,25 @@
 # ChangeLog for media-plugins/swh-plugins
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.42 2012/05/05 08:27:15 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.46 2013/05/08 12:22:48 aballier Exp $
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org>
+  swh-plugins-0.4.15-r2.ebuild, +files/swh-plugins-0.4.15-glibc-2.10.patch:
+  Fix build at -O0 with recent glibcs, bug
+
+*swh-plugins-0.4.15-r2 (08 May 2013)
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org>
+  +swh-plugins-0.4.15-r2.ebuild,
+  +files/swh-plugins-0.4.15-x86-asm-optional.patch:
+  Fix enabling/disabling asm code, bug #391675 by cJ and Risto A. Paju.
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org>
+  swh-plugins-0.4.15-r1.ebuild:
+  remove now unneeded cvs dep, bug #412715 by Kevin Pyle
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org>
+  swh-plugins-0.4.15-r1.ebuild:
+  Fix build with automake 1.13
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> swh-plugins-0.4.15.ebuild,
   swh-plugins-0.4.15-r1.ebuild:
