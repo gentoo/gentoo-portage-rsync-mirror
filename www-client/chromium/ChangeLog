@@ -1,6 +1,23 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.876 2013/05/08 19:17:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.878 2013/05/09 00:42:41 floppym Exp $
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org>
+  -files/chromium-icu50-tests-r0.patch, -files/chromium-mesa-r0.patch,
+  -files/chromium-mesa-r1.patch, -files/chromium-no-pnacl-r0.patch,
+  -files/chromium-system-ffmpeg-r0.patch,
+  -files/chromium-system-ffmpeg-r1.patch,
+  -files/chromium-system-ffmpeg-r2.patch,
+  -files/chromium-system-ffmpeg-r3.patch,
+  -files/chromium-system-libpng-r0.patch,
+  -files/chromium-system-minizip-r0.patch, -files/chromium-system-opus-r0.patch:
+  Remove obsolete patches.
+
+*chromium-27.0.1453.81 (09 May 2013)
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.81.ebuild,
+  -chromium-27.0.1453.65.ebuild:
+  Beta channel bump.
 
 *chromium-28.0.1500.3 (08 May 2013)
 
