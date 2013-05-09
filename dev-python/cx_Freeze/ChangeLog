@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cx_Freeze
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.2 2012/12/27 07:25:09 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.3 2013/05/09 07:00:16 idella4 Exp $
+
+*cx_Freeze-4.3.1-r1 (09 May 2013)
+
+  09 May 2013; Ian Delaney <idella4@gentoo.org> +cx_Freeze-4.3.1-r1.ebuild:
+  migrate -> distutils-r1, fixes Bug #46705
 
   27 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> cx_Freeze-4.3.1.ebuild:
   Drop obsolete USE-flag 'doc', wrt bug #448722. Thanks to Diego Elio Pettenò
@@ -11,4 +16,3 @@
   18 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +cx_Freeze-4.3.1.ebuild,
   +metadata.xml:
   Initial commit, wrt bug #184263
-
