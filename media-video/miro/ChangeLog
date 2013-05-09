@@ -1,6 +1,9 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.22 2013/05/07 01:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.23 2013/05/08 23:50:22 jdhore Exp $
+
+  08 May 2013; Jeff Horelick <jdhore@gentoo.org> miro-6.0.ebuild:
+  Drop ffmpeg patch applied by upstream in 6.0
 
 *miro-6.0 (07 May 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.37 2013/05/08 23:26:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.38 2013/05/08 23:59:43 floppym Exp $
+
+  08 May 2013; Mike Gilbert <floppym@gentoo.org> pypy-2.0_beta2.ebuild:
+  Disable MPROTECT if jit is enabled, bug 448818.
 
   08 May 2013; Mike Gilbert <floppym@gentoo.org> pypy-2.0_beta2.ebuild:
   Die in pkg_pretend if gcc-4.8 is selected.

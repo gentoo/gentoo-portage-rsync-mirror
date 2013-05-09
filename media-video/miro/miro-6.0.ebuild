@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-6.0.ebuild,v 1.1 2013/05/07 01:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-6.0.ebuild,v 1.2 2013/05/08 23:50:21 jdhore Exp $
 
 EAPI=3
 
@@ -57,7 +57,6 @@ pkg_setup() {
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}/${P}-ffmpeg-1.patch"
 }
 
 src_install() {
