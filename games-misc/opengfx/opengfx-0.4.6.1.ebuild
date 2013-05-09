@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.4.6.1.ebuild,v 1.1 2013/01/15 05:42:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.4.6.1.ebuild,v 1.2 2013/05/09 18:41:08 tupone Exp $
 
 EAPI=5
-inherit games
+inherit eutils games
 
 DESCRIPTION="OpenGFX data files for OpenTTD"
 HOMEPAGE="http://bundles.openttdcoop.org/opengfx/"
@@ -28,6 +28,7 @@ src_prepare() {
 	sed -i \
 		-e 's:echo "gimp":echo "":g' \
 		scripts/Makefile.def || die
+	epatch "${FILESDIR}"/${P}-gcc48.patch
 }
 
 src_compile() {

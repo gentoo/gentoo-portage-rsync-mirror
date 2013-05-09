@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/svn2git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.19 2013/05/08 23:59:50 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.20 2013/05/09 18:41:39 sping Exp $
+
+  09 May 2013; Sebastian Pipping <sping@gentoo.org> -svn2git-1.0.8.ebuild:
+  Remove 1.0.8 due to the UTF-8 bug fixed in 1.0.8-r1
 
 *svn2git-1.0.8-r1 (08 May 2013)
 
