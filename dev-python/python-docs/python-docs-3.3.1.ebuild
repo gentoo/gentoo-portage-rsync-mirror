@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.6.7.ebuild,v 1.2 2012/02/19 01:40:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.3.1.ebuild,v 1.2 2013/05/09 21:56:26 floppym Exp $
 
 EAPI="3"
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.python.org/doc/"
 SRC_URI="http://www.python.org/ftp/python/doc/${PV}/python-${PV}-docs-html.tar.bz2"
 
 LICENSE="PSF-2"
-SLOT="2.6"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+SLOT="3.3"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND=""
@@ -19,9 +19,7 @@ RDEPEND=""
 S="${WORKDIR}/python-${PV}-docs-html"
 
 src_install() {
-	docinto html
-	cp -R [a-z]* _static "${ED}usr/share/doc/${PF}/html"
-
+	dohtml -A xml -r ./
 	echo "PYTHONDOCS_${SLOT//./_}=\"${EPREFIX}/usr/share/doc/${PF}/html/library\"" > "60python-docs-${SLOT}"
 	doenvd "60python-docs-${SLOT}"
 }

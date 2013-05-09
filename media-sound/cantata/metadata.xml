@@ -4,10 +4,6 @@
   <herd>kde</herd>
   <herd>proxy-maintainers</herd>
   <herd>qt</herd>
-  <maintainer>
-    <email>dastergon@gentoo.org</email>
-    <name>Pavlos Ratis</name>
-  </maintainer>
   <use>
     <flag name="mpg123">Enable support for mp3 decoding over media-sound/mpg123.</flag>
     <flag name="phonon">Enable support for Phonon</flag>
