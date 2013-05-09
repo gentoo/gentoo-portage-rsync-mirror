@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/netbeans-ide-7.3.ebuild,v 1.1 2013/02/21 15:48:36 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/netbeans-ide-7.3.ebuild,v 1.2 2013/05/09 14:42:21 tomwij Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -109,7 +109,7 @@ CDEPEND="~dev-java/netbeans-harness-${PV}
 #	dev-java/ini4j:0 our version is too old
 #	dev-java/jaxb:2 upstream version contains more stuff so websvccommon does not compile with ours
 #	dev-java/trilead-ssh2:0 in overlay
-DEPEND="virtual/jdk:1.6
+DEPEND=">=virtual/jdk-1.6
 	app-arch/unzip
 	dev-java/commons-codec:0
 	dev-java/jsch:0
