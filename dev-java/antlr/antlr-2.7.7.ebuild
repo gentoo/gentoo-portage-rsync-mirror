@@ -1,16 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.19 2013/05/09 11:45:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7.ebuild,v 1.20 2013/05/09 12:19:24 tomwij Exp $
 
-EAPI="5"
+EAPI="3"
+PYTHON_DEPEND="python? 2"
 
-PYTHON_COMPAT=( python2_{5,6,7} )
-
-DISTUTILS_OPTIONAL="y"
-DISTUTILS_SINGLE_IMPL="y"
-DISTUTILS_IN_SOURCE_BUILD="y"
-
-inherit base java-pkg-2 mono autotools distutils-r1 multilib
+inherit base java-pkg-2 mono distutils multilib
 
 DESCRIPTION="A parser generator for C++, C#, Java, and Python"
 HOMEPAGE="http://www.antlr2.org/"
@@ -22,8 +17,7 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc debug examples mono +cxx +java python script source"
 
 # TODO do we actually need jdk at runtime?
-RDEPEND="python? ( ${PYTHON_DEPS} )
-	>=virtual/jdk-1.3
+RDEPEND=">=virtual/jdk-1.3
 	mono? ( dev-lang/mono )"
 DEPEND="${RDEPEND}
 	script? ( !dev-util/pccts )
@@ -34,17 +28,14 @@ PATCHES=( "${FILESDIR}/2.7.7-gcc-4.3.patch" "${FILESDIR}/2.7.7-gcc-4.4.patch" "$
 pkg_setup() {
 	java-pkg-2_pkg_setup
 
-	if use python ; then
-		python-single-r1_pkg_setup
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
 	fi
 }
 
 src_prepare() {
 	base_src_prepare
-
-	# See bug #468540, this can be removed once bug #469150 is fixed.
-	sed -i 's/tlib lib ar/ar/' configure.in || die
-	eautoreconf
 }
 
 src_configure() {
@@ -105,9 +96,8 @@ src_install() {
 	fi
 
 	if use python ; then
-		pushd "${S}"/lib/python > /dev/null
-		distutils-r1_python_install
-		popd > /dev/null
+		cd "${S}"/lib/python
+		distutils_src_install
 	fi
 
 	if use examples ; then
@@ -123,4 +113,12 @@ src_install() {
 	fi
 
 	newdoc "${S}"/README.txt README || die
+}
+
+pkg_postinst() {
+	use python && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
