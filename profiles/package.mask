@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14739 2013/05/08 22:11:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14740 2013/05/09 07:35:36 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -418,6 +418,7 @@ dev-libs/dvutil
 >=media-sound/portaudio-19_pre20111121-r1
 >=media-sound/twolame-0.3.13-r1
 >=media-sound/wavpack-4.60.1-r1
+>=media-sound/gsm-1.0.13-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (13 Mar 2013)
 # Mask because breaking updates out of the blue is bad
