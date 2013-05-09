@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7824 2013/05/09 09:50:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7825 2013/05/09 15:19:24 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 May 2013; Eray Aslan <eras@gentoo.org> package.mask:
+  Remove mask for dovecot-2.2_rc - no longer in the tree
 
   09 May 2013; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Remove p.mask for dev-libs/dv* since removed.

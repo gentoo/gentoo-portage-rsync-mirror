@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14741 2013/05/09 09:50:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14742 2013/05/09 15:19:24 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -461,10 +461,6 @@ sys-apps/module-init-tools
 # Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
 # Depends on blender, which is masked.
 media-gfx/yafaray
-
-# Eray Aslan <eras@gentoo.org> (26 Feb 2013)
-# Mask release candidates
-=net-mail/dovecot-2.2_rc*
 
 # Doug Goldstein <cardoe@gentoo.org> (24 Feb 2013)
 # Working on the next stable patchset
