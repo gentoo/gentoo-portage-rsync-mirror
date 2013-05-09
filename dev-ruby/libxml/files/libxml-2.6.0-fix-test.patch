@@ -1,0 +1,19 @@
+commit 25b4a6e53c894609b9e4a66bf288423d212407e2
+Author: julp <poinsot.julien@gmail.com>
+Date:   Sun May 5 21:36:47 2013 +0200
+
+    To fix XML::Writer.set_quote_char UT, wrong expected string (#63)
+
+diff --git a/test/tc_writer.rb b/test/tc_writer.rb
+index fcc5e0f..ab89763 100644
+--- a/test/tc_writer.rb
++++ b/test/tc_writer.rb
+@@ -250,7 +250,7 @@ class TestWriter < Test::Unit::TestCase
+           assert(writer.end_attribute)
+         end
+       end
+-      assert_equal(writer.result.strip!, "<?xml version=\"1.0\"?>\n<root><child abc='def'>ghi</child></root>")
++      assert(writer.result.strip!.end_with? "<root abc='def'/>")
+     end
+   end
+ 
