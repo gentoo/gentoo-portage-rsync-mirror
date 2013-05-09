@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.19 2013/04/13 20:54:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.20 2013/05/09 17:48:03 mgorny Exp $
 
 EAPI="1"
 
@@ -103,6 +103,8 @@ src_unpack() {
 
 	# Linux-3 compat. Bug #374579 (upstream issue12571)
 	cp -r "${S}/Lib/plat-linux2" "${S}/Lib/plat-linux3" || die
+
+	epatch_user
 
 	eautoreconf
 }
