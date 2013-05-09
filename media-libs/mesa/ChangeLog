@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.470 2013/05/06 15:58:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.471 2013/05/09 20:15:10 chithanh Exp $
+
+*mesa-9.1.2-r1 (09 May 2013)
+*mesa-9.2_pre20130509 (09 May 2013)
+
+  09 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-9.1.2-r1.ebuild, +mesa-9.2_pre20130509.ebuild, mesa-7.10.3.ebuild,
+  mesa-7.11.2.ebuild, mesa-8.0.4-r1.ebuild, mesa-9.0.1.ebuild,
+  mesa-9.0.2.ebuild, mesa-9.0.3.ebuild:
+  Apply patch for bug #461696 and be more precise with llvm dependencies.
 
   06 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-7.11.2.ebuild, mesa-8.0.4-r1.ebuild, mesa-9.0.1.ebuild,

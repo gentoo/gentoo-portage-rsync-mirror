@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.16 2013/05/06 15:58:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.17 2013/05/09 20:15:10 chithanh Exp $
 
 EAPI=3
 
@@ -74,7 +74,7 @@ RDEPEND="${EXTERNAL_DEPEND}
 		x11-libs/motif
 		!x11-libs/libGLw )
 	gallium? (
-		llvm? ( <sys-devel/llvm-3.3 )
+		llvm? ( <sys-devel/llvm-3.3_rc )
 	)
 	${LIBDRM_DEPSTRING}[video_cards_nouveau?,video_cards_vmware?]
 	video_cards_nouveau? ( <x11-libs/libdrm-2.4.34 )

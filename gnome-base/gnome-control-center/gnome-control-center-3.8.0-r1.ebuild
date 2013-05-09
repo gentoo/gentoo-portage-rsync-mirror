@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.0-r1.ebuild,v 1.2 2013/05/07 18:47:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.0-r1.ebuild,v 1.3 2013/05/09 20:08:56 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -24,7 +24,7 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-3.7.7:3
 	>=gnome-base/gsettings-desktop-schemas-3.7.2.2
 	>=gnome-base/gnome-desktop-3.7.5:3=
-	>=gnome-base/gnome-settings-daemon-3.6[colord?,policykit]
+	>=gnome-base/gnome-settings-daemon-3.7.3[colord?,policykit]
 	>=gnome-base/libgnomekbd-2.91.91
 
 	app-text/iso-codes

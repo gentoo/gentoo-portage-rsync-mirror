@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.73 2013/05/06 11:09:09 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.74 2013/05/09 20:21:43 lxnay Exp $
+
+*cpufrequtils-008-r4 (09 May 2013)
+
+  09 May 2013; Fabio Erculiani <lxnay@gentoo.org> -cpufrequtils-008-r3.ebuild,
+  +cpufrequtils-008-r4.ebuild, files/cpufrequtils-change.sh:
+  fix cpufrequtils-change.sh usage when the default interpreter is not bash,
+  fixes bug #469218
 
 *cpufrequtils-008-r3 (06 May 2013)
 

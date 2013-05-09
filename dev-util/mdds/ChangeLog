@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.26 2013/04/27 08:24:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.27 2013/05/09 20:29:02 scarabeus Exp $
+
+*mdds-0.8.0 (09 May 2013)
+
+  09 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> +mdds-0.8.0.ebuild:
+  Version bump to 0.8.0, we actually should enforce rebuild of libreoffice when
+  the headers change, because some math operations might get fixed in the bump.
 
   27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> -mdds-0.6.1.ebuild:
   Actually binpkg does not need this.
