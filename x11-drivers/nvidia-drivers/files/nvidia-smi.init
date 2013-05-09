@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/files/nvidia-smi.init,v 1.1 2012/07/22 21:08:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/files/nvidia-smi.init,v 1.2 2013/05/09 16:32:00 jer Exp $
 
-pidfile="/var/run/nvidia-smi.pid"
+pidfile="/run/nvidia-smi.pid"
 
 depend() {
     after modules
