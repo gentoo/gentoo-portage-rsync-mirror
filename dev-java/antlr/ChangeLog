@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.95 2013/02/05 06:56:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.96 2013/05/09 11:45:47 tomwij Exp $
+
+  09 May 2013; Tom Wijsman <TomWij@gentoo.org> antlr-2.7.7-r1.ebuild,
+  antlr-2.7.7-r2.ebuild, antlr-2.7.7-r3.ebuild, antlr-2.7.7-r4.ebuild,
+  antlr-2.7.7-r5.ebuild, antlr-2.7.7.ebuild:
+  Do not use /usr/bin/tlib or /usr/bin/lib until bug #469150 is resolved,
+  /usr/bin/ar is used instead. This is a temporary fix for bug #468540. Upgraded
+  to EAPI 5, distutils-r1 and indirect python-single-r1.
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> antlr-3.1.3-r2.ebuild:
   adding ~arm

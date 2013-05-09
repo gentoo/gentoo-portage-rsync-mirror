@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.121 2013/05/03 07:48:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.122 2013/05/09 11:40:03 tomwij Exp $
+
+# Tom Wijsman <TomWij@gentoo.org> (9 May 2013)
+# Unmasking dev-java/antlr[java] as per bug #412223, acked by sera.
+dev-java/antlr -java
 
 # Dirkjan Ochtman <djc@gentoo.org> (3 May 2013)
 # depends on net-libs/polarssl
