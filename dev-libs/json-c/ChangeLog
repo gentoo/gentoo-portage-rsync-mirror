@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/json-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.28 2013/04/29 18:51:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.29 2013/05/09 05:15:10 vapier Exp $
+
+  09 May 2013; Mike Frysinger <vapier@gentoo.org> json-c-0.10-r1.ebuild,
+  json-c-0.11.ebuild, json-c-0.9-r1.ebuild:
+  Spread the s390 love #468972 by Patrick Lauer.
 
   29 Apr 2013; Markos Chandras <hwoarang@gentoo.org>
   +files/json-c-0.10-automake-1.13.patch, json-c-0.10-r1.ebuild:
