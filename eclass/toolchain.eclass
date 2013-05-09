@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.585 2013/05/03 06:01:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.586 2013/05/09 03:03:02 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -113,7 +113,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		tc_version_is_at_least "4.1" && IUSE+=" libssp objc++"
 		tc_version_is_at_least "4.2" && IUSE+=" openmp"
 		tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
-		tc_version_is_at_least "4.4" && IUSE+=" graphite"
+		tc_version_is_at_least "4.6" && IUSE+=" graphite"
 		[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
 		tc_version_is_at_least "4.7" && IUSE+=" go"
 	fi
@@ -150,8 +150,8 @@ if in_iuse graphite ; then
 	if tc_version_is_at_least 4.8 ; then
 		RDEPEND+="
 			graphite? (
-				>=dev-libs/cloog-0.17.0
-				>=dev-libs/isl-0.10
+				>=dev-libs/cloog-0.18.0
+				>=dev-libs/isl-0.11.1
 			)"
 	else
 		RDEPEND+="
@@ -1079,26 +1079,21 @@ gcc_do_configure() {
 	# users to control this feature in the event they need the support.
 	tc_version_is_at_least "4.3" && confgcc+=" $(use_enable fixed-point)"
 
-	# Graphite support was added in 4.4, which depends on external libraries
-	# for optimizations.  Current versions use cloog-ppl (cloog fork with Parma
-	# PPL backend).  Sometime in the future we will use upstream cloog with the
-	# ISL backend (note: PPL will still be a requirement).  cloog-ppl's include
-	# path was modified to prevent collisions between the two packages (library
-	# names are different).
-	#
-	# We disable the PPL version check so we can use >=ppl-0.11.
-	if tc_version_is_at_least "4.4"; then
-		confgcc+=" $(use_with graphite ppl)"
+	# graphite was added in 4.4 but we only support it in 4.6+ due to external
+	# library issues.  4.6/4.7 uses cloog-ppl which is a fork of CLooG with a
+	# PPL backend.  4.8+ uses upstream CLooG with the ISL backend.  We install
+	# cloog-ppl into a non-standard location to prevent collisions.
+	if tc_version_is_at_least "4.8" ; then
 		confgcc+=" $(use_with graphite cloog)"
-		if use graphite; then
-			if tc_version_is_at_least "4.8"; then
-				confgcc+=" --disable-isl-version-check"
-				confgcc+=" --with-cloog"
-			else
-				confgcc+=" --disable-ppl-version-check"
-				confgcc+=" --with-cloog-include=/usr/include/cloog-ppl"
-			fi
-		fi
+		use graphite && confgcc+=" --disable-isl-version-check"
+	elif tc_version_is_at_least "4.6" ; then
+		confgcc+=" $(use_with graphite cloog)"
+		confgcc+=" $(use_with graphite ppl)"
+		use graphite && confgcc+=" --with-cloog-include=/usr/include/cloog-ppl"
+		use graphite && confgcc+=" --disable-ppl-version-check"
+	elif tc_version_is_at_least "4.4" ; then
+		confgcc+=" --without-cloog"
+		confgcc+=" --without-ppl"
 	fi
 
 	# LTO support was added in 4.5, which depends upon elfutils.  This allows

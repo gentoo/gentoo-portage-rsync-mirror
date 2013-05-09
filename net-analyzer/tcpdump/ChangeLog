@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.163 2013/02/21 02:59:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.165 2013/05/09 03:27:21 jer Exp $
+
+  09 May 2013; Jeroen Roovers <jer@gentoo.org>
+  -files/tcpdump-4.0.0-ipv6-build.patch,
+  -files/tcpdump-4.0.0-libsmi-autodep.patch, -files/tcpdump-4.2.0-ipv6.patch,
+  -files/tcpdump-4.2.0-ppi.h, -tcpdump-3.9.8-r1.ebuild, -tcpdump-3.9.8.ebuild,
+  -tcpdump-4.1.1.ebuild, -tcpdump-4.2.0.ebuild, -tcpdump-4.2.1.ebuild:
+  Old.
+
+*tcpdump-4.4.0 (09 May 2013)
+
+  09 May 2013; Jeroen Roovers <jer@gentoo.org> +tcpdump-4.4.0.ebuild:
+  Version bump.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> tcpdump-4.3.0.ebuild:
   Add ~arm-linux keyword.

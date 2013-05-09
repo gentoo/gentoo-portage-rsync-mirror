@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.816 2013/05/08 10:25:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.817 2013/05/09 03:03:02 dirtyepic Exp $
+
+  09 May 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Drop support for graphite in 4.4/4.5 due to incompatibilities with newer ppl
+  versions. Update graphite dependencies for 4.8 based on upstream
+  recommendations. Also fixes some (harmless) configure flags getting applied
+  to incorrect versions.
 
   08 May 2013; Sergey Popov <pinkbyte@gentoo.org> leechcraft.eclass:
   Restict supported EAPIs(due to pkg_pretend), some logic cleanup

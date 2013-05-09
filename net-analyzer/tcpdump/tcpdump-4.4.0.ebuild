@@ -1,9 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.1.ebuild,v 1.6 2012/06/12 03:32:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0.ebuild,v 1.1 2013/05/09 03:19:04 jer Exp $
 
-EAPI="2"
-inherit flag-o-matic user
+EAPI=5
+
+AUTOTOOLS_AUTO_DEPEND="no" # Only cross-compiling
+inherit flag-o-matic user autotools eutils toolchain-funcs
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -12,15 +14,21 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="+chroot smi ssl ipv6 -samba suid test"
 
-RDEPEND="net-libs/libpcap
+RDEPEND="
+	net-libs/libpcap
 	smi? ( net-libs/libsmi )
-	ssl? ( >=dev-libs/openssl-0.9.6m )"
-DEPEND="${RDEPEND}
-	test? ( || ( app-arch/sharutils sys-freebsd/freebsd-ubin )
-		dev-lang/perl )"
+	ssl? ( >=dev-libs/openssl-0.9.6m )
+"
+DEPEND="
+	${RDEPEND}
+	test? (
+		|| ( app-arch/sharutils sys-freebsd/freebsd-ubin )
+		dev-lang/perl
+	)
+"
 
 pkg_setup() {
 	if use samba ; then
@@ -38,6 +46,13 @@ pkg_setup() {
 	enewuser tcpdump -1 -1 -1 tcpdump
 }
 
+src_prepare() {
+	if tc-is-cross-compiler ; then
+		epatch "${FILESDIR}"/${P}-ssl-detect.patch
+		eautoreconf
+	fi
+}
+
 src_configure() {
 	# tcpdump needs some optymalization. see bug #108391
 	( ! is-flag -O? || is-flag -O0 ) && append-flags -O2
@@ -45,28 +60,25 @@ src_configure() {
 	replace-flags -O[3-9] -O2
 	filter-flags -finline-functions
 
-	econf --with-user=tcpdump \
-		$(use_with ssl crypto) \
+	econf \
+		--with-user=tcpdump \
+		$(use_with ssl crypto "${EPREFIX}/usr") \
 		$(use_with smi) \
 		$(use_enable ipv6) \
 		$(use_enable samba smb) \
-		$(use_with chroot chroot /var/lib/tcpdump)
-}
-
-src_compile() {
-	make CCOPT="$CFLAGS" || die "make failed"
+		$(use_with chroot chroot "${EPREFIX}/var/lib/tcpdump")
 }
 
 src_test() {
 	sed '/^\(espudp1\|eapon1\)/d;' -i tests/TESTLIST
-	make check || die "tests failed"
+	emake check
 }
 
 src_install() {
-	dosbin tcpdump || die
-	doman tcpdump.1 || die
-	dodoc *.awk || die
-	dodoc CHANGES CREDITS README || die
+	dosbin tcpdump
+	doman tcpdump.1
+	dodoc *.awk
+	dodoc CHANGES CREDITS README
 
 	if use chroot; then
 		keepdir /var/lib/tcpdump
