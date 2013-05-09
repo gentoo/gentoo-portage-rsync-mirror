@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/joda-convert-1.3.1.ebuild,v 1.4 2013/05/09 18:25:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/joda-convert-1.3.1.ebuild,v 1.5 2013/05/09 22:02:55 radhermit Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc source test"
@@ -38,6 +38,6 @@ src_install() {
 	java-pkg_dojar target/${PN}.jar
 	dodoc NOTICE.txt RELEASE-NOTES.txt
 
-	use doc && java-pkg_dojavadoc doc/api
+	use doc && java-pkg_dojavadoc target/site/apidocs
 	use source && java-pkg_dosrc src/main/java/*
 }

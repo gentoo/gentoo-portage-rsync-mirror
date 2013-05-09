@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/virtualgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.12 2013/04/21 18:47:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.13 2013/05/09 22:07:32 pacho Exp $
+
+*virtualgl-2.3.2-r1 (09 May 2013)
+
+  09 May 2013; Pacho Ramos <pacho@gentoo.org> +virtualgl-2.3.2-r1.ebuild:
+  Build multilib properly (#445784 by mgorny)
 
   21 Apr 2013; Michał Górny <mgorny@gentoo.org> virtualgl-2.3.2.ebuild:
   Support multilib libraries alternatively to emul-linux-x86-xlibs.

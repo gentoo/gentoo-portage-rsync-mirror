@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-2.2.ebuild,v 1.1 2013/05/09 20:52:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-2.2.ebuild,v 1.2 2013/05/09 22:07:46 radhermit Exp $
 
 EAPI="5"
 
@@ -24,8 +24,6 @@ DEPEND=">=virtual/jdk-1.5
 		dev-java/ant-junit:0
 	)"
 RDEPEND=">=virtual/jre-1.5"
-
-S="${WORKDIR}/${P}"
 
 java_prepare() {
 	rm -v *.jar || die "Failed to remove bundled jars."
@@ -52,7 +50,7 @@ src_install() {
 
 	dodoc NOTICE.txt RELEASE-NOTES.txt
 
-	use doc && java-pkg_dojavadoc build/docs
+	use doc && java-pkg_dojavadoc target/site/apidocs
 	use examples && java-pkg_doexamples src/example
-	use source && java-pkg_dosrc src/java/org
+	use source && java-pkg_dosrc src/main/java/*
 }
