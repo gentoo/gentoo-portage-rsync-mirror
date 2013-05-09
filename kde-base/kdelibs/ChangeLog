@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.915 2013/05/08 20:44:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.916 2013/05/09 04:15:35 johu Exp $
+
+*kdelibs-4.10.2-r1 (09 May 2013)
+*kdelibs-4.10.3-r1 (09 May 2013)
+
+  09 May 2013; Johannes Huber <johu@gentoo.org>
+  +files/kdelibs-4.10.2-security-url-dont-show-password.patch,
+  +kdelibs-4.10.2-r1.ebuild, +kdelibs-4.10.3-r1.ebuild:
+  Revision bump. Upstream security fix to not show passwords contained in HTTP
+  URLs in error messages via packagers ml.
 
   08 May 2013; Johannes Huber <johu@gentoo.org> metadata.xml:
   Cleanup unused USE description.
