@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lua-cjson/lua-cjson-2.1.0.ebuild,v 1.1 2013/05/09 02:50:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lua-cjson/lua-cjson-2.1.0.ebuild,v 1.2 2013/05/09 04:45:24 radhermit Exp $
 
 EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="Lua frontend to OpenSSL"
+DESCRIPTION="A fast JSON encoding/parsing module for Lua"
 HOMEPAGE="http://www.kyne.com.au/~mark/software/lua-cjson.php https://github.com/mpx/lua-cjson/"
 SRC_URI="http://www.kyne.com.au/~mark/software/download/${P}.tar.gz"
 
