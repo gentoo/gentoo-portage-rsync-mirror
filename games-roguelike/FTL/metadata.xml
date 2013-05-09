@@ -7,7 +7,7 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<use>
-		<flag name='system-libs'>Use system provided libraries.</flag>
+		<flag name='bundled-libs'>Use bundled libraries.</flag>
 	</use>
 </pkgmetadata>
 

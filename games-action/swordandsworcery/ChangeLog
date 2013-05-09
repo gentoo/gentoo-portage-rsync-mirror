@@ -1,6 +1,9 @@
 # ChangeLog for games-action/swordandsworcery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/swordandsworcery/ChangeLog,v 1.1 2013/03/21 21:49:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/swordandsworcery/ChangeLog,v 1.2 2013/05/09 14:12:39 hasufell Exp $
+
+  09 May 2013; Julian Ospald <hasufell@gentoo.org> swordandsworcery-1.02.ebuild:
+  restrict splitdebug
 
 *swordandsworcery-1.02 (21 Mar 2013)
 
@@ -8,4 +11,3 @@
   +swordandsworcery-1.02.ebuild, +files/swordandsworcery-wrapper,
   +metadata.xml:
   initial import
-

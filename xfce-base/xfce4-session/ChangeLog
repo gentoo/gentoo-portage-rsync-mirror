@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.182 2013/05/05 16:56:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.183 2013/05/09 14:20:08 ssuominen Exp $
+
+  09 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-session-4.10.1.ebuild:
+  Rename USE="policykit" with USE="systemd" because --enable-systemd is
+  disabling ConsoleKit support wrt #469190 by Timo Kamph
 
   05 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-session-4.10.0.ebuild:

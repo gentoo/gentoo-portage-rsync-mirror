@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.4 2013/04/11 16:47:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.6 2013/05/09 14:15:54 hasufell Exp $
 
 EAPI=5
 inherit eutils unpacker gnome2-utils games
@@ -13,13 +13,13 @@ SRC_URI="${PN}_linux_installer.run"
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="+launcher system-libs"
-RESTRICT="fetch bindist"
+IUSE="bundled-libs +launcher"
+RESTRICT="fetch bindist splitdebug"
 
 QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/${PN}*
 	${GAMES_PREFIX_OPT}/${PN}/lib/*"
 
-# TODO: system-libs: no libsdl-1.3, no physx
+# TODO: bundled-libs: no libsdl-1.3, no physx
 RDEPEND="
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
@@ -28,7 +28,7 @@ RDEPEND="
 		app-emulation/emul-linux-x86-soundlibs
 		app-emulation/emul-linux-x86-xlibs
 		launcher? ( app-emulation/emul-linux-x86-gtklibs )
-		system-libs? ( media-gfx/nvidia-cg-toolkit[multilib] )
+		!bundled-libs? ( media-gfx/nvidia-cg-toolkit[multilib] )
 	)
 	x86? (
 		dev-libs/glib:2
@@ -48,7 +48,7 @@ RDEPEND="
 			x11-libs/libXinerama
 			x11-libs/libXxf86vm
 		)
-		system-libs? ( media-gfx/nvidia-cg-toolkit )
+		!bundled-libs? ( media-gfx/nvidia-cg-toolkit )
 	)"
 
 S=${WORKDIR}
@@ -76,7 +76,7 @@ src_install() {
 	newexe "bin/trine2_linux_32bit" ${PN}
 
 	exeinto "${dir}/lib"
-	use system-libs && { find lib/lib32 -type f -name "libCg*.so*" -delete || die ;}
+	use bundled-libs || { find lib/lib32 -type f -name "libCg*.so*" -delete || die ;}
 	doexe lib/lib32/*
 
 	games_make_wrapper ${PN} "./${PN}" "${dir}" "${dir}/lib"

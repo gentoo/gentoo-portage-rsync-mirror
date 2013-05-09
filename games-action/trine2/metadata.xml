@@ -7,8 +7,8 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<use>
+		<flag name='bundled-libs'>Use bundled libraries.</flag>
 		<flag name='launcher'>Install gtk+ launcher</flag>
-		<flag name='system-libs'>Use system provided libraries.</flag>
 	</use>
 </pkgmetadata>
 

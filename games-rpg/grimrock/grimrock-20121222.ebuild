@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.5 2013/04/11 16:51:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.6 2013/05/09 14:26:37 hasufell Exp $
 
 EAPI=5
 
@@ -15,8 +15,8 @@ SRC_URI="LegendOfGrimrock-Linux-${TIMESTAMP}.sh"
 SLOT="0"
 LICENSE="all-rights-reserved"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="+system-libs"
-RESTRICT="fetch bindist"
+IUSE="bundled-libs"
+RESTRICT="fetch bindist splitdebug"
 
 QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/${MY_PN}.bin.*
 	${GAMES_PREFIX_OPT}/${PN}/lib.*"
@@ -40,7 +40,7 @@ RDEPEND="
 	x11-libs/libxcb
 	x11-libs/libXdmcp
 	x11-libs/libXext
-	system-libs? (
+	!bundled-libs? (
 		media-libs/freeimage[png]
 		media-libs/libogg
 		media-libs/libvorbis
@@ -76,7 +76,7 @@ src_unpack() {
 	unpack_makeself
 
 	local i
-	for i in $(use system-libs && echo ${archivelist[@]:0:4} || echo ${archivelist[@]}) ; do
+	for i in $(if use bundled-libs ; then echo ${archivelist[@]} ; else echo ${archivelist[@]:0:4} ; fi) ; do
 		mv "${i}" "${i}.tar.xz" || die
 		unpack ./"${i}.tar.xz"
 	done
@@ -93,7 +93,7 @@ src_install() {
 
 	exeinto "${dir}"/lib
 	doexe $(get_libdir)/libSDL2-2.0.so.0
-	use system-libs || {
+	use bundled-libs && {
 		doexe $(get_libdir)/lib{freeimage.so.3,minizip.so.1,ogg.so.0,openal.so.1,vorbisfile.so.3,vorbis.so.0}
 	}
 

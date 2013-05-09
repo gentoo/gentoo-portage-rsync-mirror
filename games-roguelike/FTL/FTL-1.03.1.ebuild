@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.1.ebuild,v 1.6 2013/04/11 16:50:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.1.ebuild,v 1.7 2013/05/09 14:19:45 hasufell Exp $
 
 # TODO: update libpng to slot 1.5 when stable
 
@@ -12,17 +12,17 @@ DESCRIPTION="Faster Than Light: A spaceship simulation real-time roguelike-like 
 HOMEPAGE="http://www.ftlgame.com/"
 SRC_URI="ftl_faster_than_light-linux-${PV}.tar.gz"
 
-LICENSE="all-rights-reserved Boost-1.0 free-noncomm MIT !system-libs? ( FTL LGPL-2.1 ZLIB libpng )"
+LICENSE="all-rights-reserved Boost-1.0 free-noncomm MIT bundled-libs? ( FTL LGPL-2.1 ZLIB libpng )"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
-IUSE="+system-libs"
-RESTRICT="fetch bindist"
+IUSE="bundled-libs"
+RESTRICT="fetch bindist splitdebug"
 
 RDEPEND="
 	=media-libs/libpng-1.5*
 	sys-devel/gcc[cxx]
 	virtual/opengl
-	system-libs? (
+	!bundled-libs? (
 		media-libs/devil[png,opengl]
 		media-libs/freetype:2
 		media-libs/libsdl[X,audio,joystick,opengl,video]
@@ -42,7 +42,7 @@ pkg_nofetch() {
 }
 
 src_prepare() {
-	if use system-libs ; then
+	if ! use bundled-libs ; then
 		# no system lib for libbass available
 		find data/${ARCH}/lib -type f \! -name "libbass*" -delete || die
 	fi
