@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.8.3-r1.ebuild,v 1.7 2012/02/05 18:21:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.8.3-r1.ebuild,v 1.8 2013/05/09 10:34:45 fauli Exp $
 
 EAPI=3
 
 inherit elisp
 
-DESCRIPTION="A navigator for 2ch"
+DESCRIPTION="A navigator for the Japanese textboard 2ch"
 HOMEPAGE="http://navi2ch.sourceforge.net/"
 SRC_URI="mirror://sourceforge/navi2ch/${P}.tar.gz"
 

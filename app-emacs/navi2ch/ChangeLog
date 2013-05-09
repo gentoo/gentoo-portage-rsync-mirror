@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/navi2ch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.72 2012/03/08 21:25:57 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.73 2013/05/09 10:34:45 fauli Exp $
+
+  09 May 2013; Christian Faulhammer <fauli@gentoo.org> navi2ch-1.8.3-r1.ebuild,
+  navi2ch-1.8.4.ebuild:
+  extend DESCRIPTION field as proposed on bug 458528 by Jonas Stein
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> navi2ch-1.8.4.ebuild:
   Marking navi2ch-1.8.4 ppc64 for bug 392817
