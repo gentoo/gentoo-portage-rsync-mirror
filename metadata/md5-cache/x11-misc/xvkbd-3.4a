@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install
+DEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXaw3d x11-libs/libXmu x11-libs/libXt x11-libs/libXtst app-text/rman x11-misc/gccmakedep x11-misc/imake x11-proto/inputproto x11-proto/xextproto x11-proto/xproto
+DESCRIPTION=virtual keyboard for X window system
+EAPI=5
+HOMEPAGE=http://homepage3.nifty.com/tsato/xvkbd/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXaw3d x11-libs/libXmu x11-libs/libXt x11-libs/libXtst
+SLOT=0
+SRC_URI=http://homepage3.nifty.com/tsato/xvkbd/xvkbd-3.4a.tar.gz
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=0941f5e5e2c1186279b248d0e591a6f5
