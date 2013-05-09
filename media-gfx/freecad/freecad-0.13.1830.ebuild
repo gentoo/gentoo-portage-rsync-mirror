@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.13.1830.ebuild,v 1.1 2013/04/27 22:49:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.13.1830.ebuild,v 1.2 2013/05/09 08:36:38 xmw Exp $
 
 EAPI=5
 
@@ -42,8 +42,6 @@ DEPEND="${RDEPEND}
 # http://bugs.gentoo.org/show_bug.cgi?id=352435
 # http://www.gentoo.org/foundation/en/minutes/2011/20110220_trustees.meeting_log.txt
 RESTRICT="bindist mirror"
-
-S="${WORKDIR}/FreeCAD-${PV}"
 
 pkg_setup() {
 	fortran-2_pkg_setup

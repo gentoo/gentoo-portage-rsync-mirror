@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.15 2013/04/27 22:49:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.16 2013/05/09 08:36:38 xmw Exp $
+
+  09 May 2013; Michael Weber <xmw@gentoo.org> freecad-0.13.1830.ebuild:
+  Fix S (thanks Alessio De Marchi, bug 469064)
 
 *freecad-0.13.1830 (27 Apr 2013)
 *freecad-0.12.5284-r3 (27 Apr 2013)
