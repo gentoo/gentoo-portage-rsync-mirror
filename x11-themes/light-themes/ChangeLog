@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/light-themes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.17 2013/03/30 17:26:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.18 2013/05/09 18:27:38 pacho Exp $
+
+*light-themes-0.1.93-r1 (09 May 2013)
+
+  09 May 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/light-themes-0.1.93-gtk3.8-1.patch,
+  +files/light-themes-0.1.93-gtk3.8-2.patch, +light-themes-0.1.93-r1.ebuild,
+  -light-themes-0.1.11.ebuild:
+  Fix gtk+-3.8 compat (#469062 by Evgeny Bobkin), and fix colors for Gentoo
+  variants.
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -light-themes-0.1.8.29.ebuild, -light-themes-0.1.9.1.ebuild,
@@ -97,4 +106,3 @@
   13 Nov 2011; Sebastian Pipping <sping@gentoo.org>
   +light-themes-0.1.8.25.ebuild, +metadata.xml:
   New package
-
