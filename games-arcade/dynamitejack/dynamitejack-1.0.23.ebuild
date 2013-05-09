@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/dynamitejack/dynamitejack-1.0.23.ebuild,v 1.2 2013/03/22 21:32:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/dynamitejack/dynamitejack-1.0.23.ebuild,v 1.3 2013/05/09 19:46:06 hasufell Exp $
 
 # TODO: icon
 
@@ -16,7 +16,7 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-RESTRICT="bindist fetch"
+RESTRICT="bindist fetch splitdebug"
 
 MYGAMEDIR=${GAMES_PREFIX_OPT}/${PN}
 QA_PREBUILT="${MYGAMEDIR#/}/bin/*"
