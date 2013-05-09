@@ -1,0 +1,10 @@
+# ChangeLog for dev-lua/luacrypto
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luacrypto/ChangeLog,v 1.1 2013/05/08 23:29:36 radhermit Exp $
+
+*luacrypto-0.3.2 (08 May 2013)
+
+  08 May 2013; Tim Harder <radhermit@gentoo.org> +luacrypto-0.3.2.ebuild,
+  +files/luacrypto-0.3.2-test.patch, +metadata.xml:
+  Initial import, ebuild by me (bug #412015 by hasufell).
+

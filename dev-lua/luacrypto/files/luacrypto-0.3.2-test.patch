@@ -1,0 +1,11 @@
+--- luacrypto-0.3.2/tests/test.lua
++++ luacrypto-0.3.2/tests/test.lua
+@@ -20,7 +20,7 @@
+   assert(s == _G[t .. "_KNOWN"])
+ end
+ 
+-F = arg[1] or 'message'
++F = 'message'
+ for i, t in ipairs({"sha1", "md5", "sha1", "hmac"}) do
+   print("testing " .. t)
+   local d
