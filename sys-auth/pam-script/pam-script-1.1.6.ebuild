@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-script/pam-script-1.1.6.ebuild,v 1.2 2013/03/28 21:38:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-script/pam-script-1.1.6.ebuild,v 1.3 2013/05/09 05:44:36 radhermit Exp $
 
 EAPI=5
 
 inherit multilib
 
 DESCRIPTION="PAM module for executing scripts during authorization, password changes, and sessions"
-HOMEPAGE="http://sourceforge.net/projects/pam-script/ https://github.com/chalcy0n/pam_script/"
+HOMEPAGE="http://sourceforge.net/projects/pam-script/ https://github.com/jeroennijhof/pam_script/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
