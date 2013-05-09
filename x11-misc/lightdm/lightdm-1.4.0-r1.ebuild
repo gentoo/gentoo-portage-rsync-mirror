@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.4.0-r1.ebuild,v 1.3 2013/03/02 23:49:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.4.0-r1.ebuild,v 1.4 2013/05/09 15:50:58 maekke Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo
@@ -13,7 +13,7 @@ SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.gz
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="+gtk +introspection kde qt4 razor"
 REQUIRED_USE="|| ( gtk kde razor )"
 

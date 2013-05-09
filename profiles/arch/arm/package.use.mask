@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.139 2013/05/05 19:54:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.140 2013/05/09 15:49:52 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (09 May 2013)
+# unkeyworded deps for x11-misc/lightdm
+x11-misc/lightdm razor
 
 # Agostino Sarubbo <ago@gentoo.org> (05 May 2013)
 # dev-util/google-perftools is not keyworded for arm

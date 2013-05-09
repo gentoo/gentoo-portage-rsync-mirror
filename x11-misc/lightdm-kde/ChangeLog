@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm-kde
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/ChangeLog,v 1.10 2013/03/02 23:50:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/ChangeLog,v 1.11 2013/05/09 15:48:07 maekke Exp $
+
+  09 May 2013; Markus Meier <maekke@gentoo.org> lightdm-kde-0.3.1.ebuild:
+  add ~arm, bug #454326
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> lightdm-kde-0.3.1.ebuild:
   Move Qt dependencies to the new category
