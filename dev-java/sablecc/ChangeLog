@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sablecc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.23 2013/05/09 12:57:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.24 2013/05/09 13:23:22 tomwij Exp $
+
+  09 May 2013; Tom Wijsman <TomWij@gentoo.org> sablecc-3.7.ebuild:
+  Drop deprecated Java 1.4 filter, drop src_unpack and make use of java_prepare.
 
 *sablecc-3.7 (09 May 2013)
 

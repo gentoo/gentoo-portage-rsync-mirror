@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.4.0.ebuild,v 1.1 2013/05/09 03:17:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.4.0.ebuild,v 1.2 2013/05/09 13:04:10 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -53,6 +53,9 @@ src_install() {
 	default
 
 	# remove static libraries (--disable-static does not work)
+	if ! use static-libs; then
+		find "${ED}" -name '*.a' -exec rm {} + || die
+	fi
 	prune_libtool_files
 
 	# We need this to build pppd on G/FBSD systems
