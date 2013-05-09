@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.878 2013/05/09 00:42:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.879 2013/05/09 20:59:28 phajdan.jr Exp $
+
+*chromium-28.0.1500.5 (09 May 2013)
+
+  09 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-ffmpeg-r5.patch, -chromium-28.0.1496.0.ebuild,
+  +chromium-28.0.1500.5.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump. Make it possible to compile against system libav (bug
+  #464676 by Nikos Chantziaras). Fix build with system ffmpeg (bug #466866 by
+  jlec). Remove old.
 
   09 May 2013; Mike Gilbert <floppym@gentoo.org>
   -files/chromium-icu50-tests-r0.patch, -files/chromium-mesa-r0.patch,

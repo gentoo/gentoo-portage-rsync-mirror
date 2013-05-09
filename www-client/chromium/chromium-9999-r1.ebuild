@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.193 2013/05/08 19:17:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.194 2013/05/09 20:59:28 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -59,7 +59,10 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	system-ffmpeg? ( >=media-video/ffmpeg-1.0:=[opus] )
+	system-ffmpeg? ( || (
+		>=media-video/ffmpeg-1.0:=[opus]
+		>=media-video/libav-9.5:=[opus]
+	) )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -184,7 +187,7 @@ src_prepare() {
 		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
 
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r5.patch"
 
 	epatch_user
 

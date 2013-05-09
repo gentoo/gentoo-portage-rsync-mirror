@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1496.0.ebuild,v 1.1 2013/05/03 16:54:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.5.ebuild,v 1.1 2013/05/09 20:59:28 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -27,6 +27,7 @@ QA_FLAGS_IGNORED=".*\.nexe"
 
 RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
+	app-arch/snappy:=
 	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
 		dev-libs/libgcrypt:=
@@ -59,7 +60,10 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	system-ffmpeg? ( >=media-video/ffmpeg-1.0:=[opus] )
+	system-ffmpeg? ( || (
+		>=media-video/ffmpeg-1.0:=[opus]
+		>=media-video/libav-9.5:=[opus]
+	) )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -127,10 +131,13 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r5.patch"
 
-	# Fix build with system libraries, to be upstreamed.
-	epatch "${FILESDIR}/${PN}-shim-headers-r0.patch"
+	# Fix build with system libraries. To be upstreamed.
+	epatch "${FILESDIR}/${PN}-system-icu-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-libvpx-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-v8-r1.patch"
+	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
 
 	epatch_user
 
@@ -168,7 +175,6 @@ src_prepare() {
 		\! -path 'third_party/sfntly/*' \
 		\! -path 'third_party/skia/*' \
 		\! -path 'third_party/smhasher/*' \
-		\! -path 'third_party/snappy/*' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/tlslite/*' \
@@ -179,6 +185,7 @@ src_prepare() {
 		\! -path 'third_party/webrtc/*' \
 		\! -path 'third_party/widevine/*' \
 		\! -path 'third_party/x86inc/*' \
+		\! -path 'third_party/zlib/google/*' \
 		-delete || die
 
 	# Remove bundled v8.
@@ -228,11 +235,13 @@ src_configure() {
 		-Duse_system_libvpx=1
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
+		-Duse_system_libxslt=1
 		-Duse_system_minizip=1
 		-Duse_system_nspr=1
 		-Duse_system_opus=1
 		-Duse_system_protobuf=1
 		-Duse_system_re2=1
+		-Duse_system_snappy=1
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
