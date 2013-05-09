@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.177 2013/04/05 16:09:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.178 2013/05/09 17:12:55 jer Exp $
+
+  09 May 2013; Jeroen Roovers <jer@gentoo.org> opera-next-12.15_pre1745.ebuild:
+  Add x11-misc/xdg-utils to RDEPEND (bug #469142 by Dave Kemper).
 
   05 Apr 2013; Jeroen Roovers <jer@gentoo.org> -opera-next-12.14_pre1737.ebuild,
   -opera-next-12.15_pre1742.ebuild:

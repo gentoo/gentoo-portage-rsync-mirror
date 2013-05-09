@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.15_p1748.ebuild,v 1.3 2013/04/05 14:19:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.15_p1748.ebuild,v 1.4 2013/05/09 17:12:17 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -95,6 +95,7 @@ RDEPEND="
 	x11-libs/libXft
 	x11-libs/libXrender
 	x11-libs/libXt
+	x11-misc/xdg-utils
 	gtk? ( ${GTKRDEPEND} )
 	kde? ( ${KDERDEPEND} )
 	gstreamer? ( ${GSTRDEPEND} )
