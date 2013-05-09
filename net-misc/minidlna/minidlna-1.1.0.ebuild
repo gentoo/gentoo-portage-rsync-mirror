@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.0.ebuild,v 1.1 2013/05/08 21:30:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.0.ebuild,v 1.2 2013/05/09 08:18:30 xmw Exp $
 
 EAPI=4
 
@@ -59,6 +59,9 @@ src_configure() {
 
 src_install() {
 	default
+
+	insinto /etc
+	doins ${PN}.conf
 
 	newconfd "${FILESDIR}"/${PN}-1.0.25.confd ${PN}
 	newinitd "${FILESDIR}"/${PN}-1.0.25-r2.initd ${PN}

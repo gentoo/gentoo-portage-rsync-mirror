@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/fprintd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.13 2013/02/02 23:10:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.14 2013/05/09 08:25:08 xmw Exp $
+
+*fprintd-0.5.0 (09 May 2013)
+
+  09 May 2013; Michael Weber <xmw@gentoo.org> +fprintd-0.5.0.ebuild:
+  Version bump (thanks pva for the suggestions on bug 469088)
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> fprintd-0.4.1.ebuild:
   Add ~arm, wrt bug #449220
