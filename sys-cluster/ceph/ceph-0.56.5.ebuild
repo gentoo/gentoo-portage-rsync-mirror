@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.60-r1.ebuild,v 1.1 2013/04/12 10:21:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.56.5.ebuild,v 1.1 2013/05/09 21:07:35 alexxy Exp $
 
 EAPI=5
 
@@ -26,13 +26,11 @@ SLOT="0"
 IUSE="debug fuse gtk libatomic radosgw static-libs tcmalloc"
 
 CDEPEND="
-	app-arch/snappy
 	dev-libs/boost
 	dev-libs/fcgi
 	dev-libs/libaio
 	dev-libs/libedit
 	dev-libs/crypto++
-	dev-libs/leveldb
 	sys-apps/keyutils
 	fuse? ( sys-fs/fuse )
 	libatomic? ( dev-libs/libatomic_ops )
@@ -55,14 +53,7 @@ RDEPEND="${CDEPEND}
 
 STRIP_MASK="/usr/lib*/rados-classes/*"
 
-PATCHES=(
-	"${FILESDIR}/${P}-mds_sessionmap.patch"
-)
-
 src_prepare() {
-	if [ ! -z ${PATCHES[@]} ]; then
-		epatch ${PATCHES[@]}
-	fi
 	sed -e 's:invoke-rc\.d.*:/etc/init.d/ceph reload >/dev/null:' \
 		-i src/logrotate.conf || die
 	sed -i "/^docdir =/d" src/Makefile.am || die #fix doc path
@@ -70,6 +61,7 @@ src_prepare() {
 	sed -e '/testsnaps/d' -i src/Makefile.am || die
 	sed -e "/bin=/ s:lib:$(get_libdir):" "${FILESDIR}"/${PN}.initd \
 		> "${T}"/${PN}.initd || die
+	sed -i -e '/AM_INIT_AUTOMAKE/s:-Werror ::' src/leveldb/configure.ac || die #423755
 	eautoreconf
 }
 
@@ -109,7 +101,6 @@ src_install() {
 	newinitd "${T}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
-	#install udev rules
+	# install udev rules
 	udev_dorules udev/50-rbd.rules
-	udev_dorules udev/95-ceph-osd.rules
 }

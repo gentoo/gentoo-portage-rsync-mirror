@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup
+DEPEND=idoutils? ( dev-db/libdbi-drivers[mysql?,postgres?] ) perl? ( dev-lang/perl ) virtual/mailx web? ( media-libs/gd[jpeg,png] lighttpd? ( www-servers/lighttpd ) ) !net-analyzer/nagios-core apache2? ( =www-servers/apache-2* )
+DESCRIPTION=Nagios Fork - Check daemon, CGIs, docs, IDOutils
+EAPI=2
+HOMEPAGE=http://www.icinga.org/
+IUSE=+apache2 eventhandler +idoutils lighttpd +mysql perl +plugins postgres ssl +vim-syntax +web apache2
+KEYWORDS=~amd64 ~hppa ~x86
+LICENSE=GPL-2
+RDEPEND=idoutils? ( dev-db/libdbi-drivers[mysql?,postgres?] ) perl? ( dev-lang/perl ) virtual/mailx web? ( media-libs/gd[jpeg,png] lighttpd? ( www-servers/lighttpd ) ) !net-analyzer/nagios-core plugins? ( net-analyzer/nagios-plugins ) apache2? ( =www-servers/apache-2* )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/icinga/icinga-1.9.0.tar.gz
+_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=bc620cb78afc3533c36b2d621e1014e7

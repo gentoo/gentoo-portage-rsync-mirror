@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.153 2013/03/09 21:07:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.154 2013/05/09 21:03:41 pacho Exp $
+
+*tuxonice-sources-3.9.1 (09 May 2013)
+*tuxonice-sources-3.0.77 (09 May 2013)
+*tuxonice-sources-3.6.11-r1 (09 May 2013)
+*tuxonice-sources-3.8.12 (09 May 2013)
+*tuxonice-sources-3.4.44 (09 May 2013)
+
+  09 May 2013; Pacho Ramos <pacho@gentoo.org> +tuxonice-sources-3.0.77.ebuild,
+  +tuxonice-sources-3.4.44.ebuild, +tuxonice-sources-3.6.11-r1.ebuild,
+  +tuxonice-sources-3.8.12.ebuild, +tuxonice-sources-3.9.1.ebuild,
+  -files/tuxonice-sources-3.3-undo-cleanup.patch,
+  -tuxonice-sources-3.0.57.ebuild, -tuxonice-sources-3.3.8-r1.ebuild,
+  -tuxonice-sources-3.3.8-r2.ebuild, -tuxonice-sources-3.3.8.ebuild,
+  -tuxonice-sources-3.4.11.ebuild, -tuxonice-sources-3.4.24.ebuild,
+  -tuxonice-sources-3.5.7.ebuild, -tuxonice-sources-3.7.1.ebuild:
+  Version bump, drop old
 
   09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> tuxonice-sources-3.0.35.ebuild,
   tuxonice-sources-3.0.57.ebuild, tuxonice-sources-3.3.8-r1.ebuild,

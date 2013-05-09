@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.655 2013/05/09 17:48:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.656 2013/05/09 21:22:05 floppym Exp $
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org> python-2.7.4.ebuild:
+  Don't build the 'maninstall' target; this installs generic symlinks python.1
+  and python2.1, which we manage using eselect-python. Bug 469148 by Alphat-PC.
 
   09 May 2013; Michał Górny <mgorny@gentoo.org> python-2.5.4-r5.ebuild,
   python-2.6.8-r1.ebuild, python-2.7.4.ebuild, python-3.1.5-r1.ebuild,
