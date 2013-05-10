@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/siege
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.55 2012/08/08 19:38:48 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.56 2013/05/10 03:13:35 patrick Exp $
+
+*siege-3.0.0 (10 May 2013)
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> +siege-3.0.0.ebuild:
+  Bump
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> siege-2.72.ebuild:
   Marking siege-2.72 ppc for bug 418517
