@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.13 2013/03/05 10:56:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.14 2013/05/10 10:02:47 patrick Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -42,7 +42,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-bg.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-glibc2.10.patch
-	
+
 	# Use pkg-config to query Libs: from ncurses.pc (for eg. -ltinfo) wrt #459652
 	sed -i \
 		-e "/ncurses_lib/s:-lncurses:'$($(tc-getPKG_CONFIG) --libs-only-l ncurses)':" \
