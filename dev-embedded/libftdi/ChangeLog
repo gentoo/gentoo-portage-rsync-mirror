@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.64 2013/03/12 11:17:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.65 2013/05/10 08:29:02 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> libftdi-0.20.ebuild:
+  Fix inherit
 
   12 Mar 2013; Mike Frysinger <vapier@gentoo.org> libftdi-1.0.ebuild,
   libftdi-9999.ebuild:

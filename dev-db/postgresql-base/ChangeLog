@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.244 2013/04/05 19:23:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.245 2013/05/10 08:23:42 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unused flag from metadata
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> -postgresql-base-8.4.16.ebuild,
   -postgresql-base-9.0.12.ebuild, -postgresql-base-9.1.8.ebuild,

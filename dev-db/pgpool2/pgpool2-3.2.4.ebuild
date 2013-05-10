@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.4.ebuild,v 1.1 2013/05/04 12:14:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.4.ebuild,v 1.2 2013/05/10 08:21:43 patrick Exp $
 
 EAPI=4
 
 MY_P="${PN/2/-II}-${PV}"
 
-inherit base
+inherit base user
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://www.pgpool.net/"

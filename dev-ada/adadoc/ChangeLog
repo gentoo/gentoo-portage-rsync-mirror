@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/adadoc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.11 2007/02/05 10:49:07 george Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.12 2013/05/10 08:02:08 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> adadoc-2.1.ebuild:
+  Quoting
 
   05 Feb 2007; George Shapovalov <george@gentoo.org>
   -files/adadoc-2.01-xmlada.patch, -adadoc-2.01.ebuild:
@@ -38,4 +41,3 @@
   or javadoc. ebuild submitted by Timo Warns
   <timo.warns@informatik.uni-oldenburg.de> with some minor updates by me
   (documentation).
-

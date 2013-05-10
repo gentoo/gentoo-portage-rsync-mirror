@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/mtop-0.6.6-r1.ebuild,v 1.1 2010/01/31 07:51:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/mtop-0.6.6-r1.ebuild,v 1.2 2013/05/10 08:15:25 patrick Exp $
 
 EAPI=2
 inherit perl-app
@@ -17,8 +17,7 @@ DEPEND="dev-perl/Curses
 		dev-perl/DBD-mysql
 		virtual/perl-libnet"
 
-src_unpack() {
-	unpack "${A}"
+src_prepare() {
 	epatch "${FILESDIR}"/mtop-0.6.6-globalstatusfix.patch
 }
 
@@ -36,7 +35,7 @@ src_test() {
 
 src_install() {
 	perl-module_src_install || die "Perl module installation failed."
-	dodoc ChangeLog COPYING README README.devel
+	dodoc ChangeLog README README.devel
 }
 
 warnmsg() {

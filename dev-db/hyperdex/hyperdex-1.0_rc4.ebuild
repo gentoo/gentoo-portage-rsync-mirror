@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.0_rc4.ebuild,v 1.1 2013/04/15 06:35:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.0_rc4.ebuild,v 1.2 2013/05/10 08:12:19 patrick Exp $
 EAPI=4
 
 PYTHON_DEPEND="2:2.6"
@@ -42,5 +42,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "Failed to install"
 	newinitd "${FILESDIR}/hyperdex.initd" hyperdex || die "Failed to install init script"
 	newconfd "${FILESDIR}/hyperdex.confd" hyperdex || die "Failed to install config file"
-	find ${D} -name '*.la' -exec rm {} \; # bad buildsystem! bad!
+	find "${D}" -name '*.la' -exec rm {} \; # bad buildsystem! bad!
 }

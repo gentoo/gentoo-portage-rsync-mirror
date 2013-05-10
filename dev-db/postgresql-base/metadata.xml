@@ -3,8 +3,6 @@
 <pkgmetadata>
 <herd>postgresql</herd>
 <use>
-  <flag name='pg-intdatetime'>Enable --enable-integer-datetimes configure
-  option, which changes PG to use 64-bit integers for timestamp storage</flag>
   <flag name='pg_legacytimestamp'>Use double precision floating-point numbers
     instead of 64-bit integers for timestamp storage.
   </flag>

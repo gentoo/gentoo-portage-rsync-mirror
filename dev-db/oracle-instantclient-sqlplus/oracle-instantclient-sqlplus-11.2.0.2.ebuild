@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-11.2.0.2.ebuild,v 1.2 2012/06/04 06:43:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-11.2.0.2.ebuild,v 1.3 2013/05/10 08:18:42 patrick Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ S="${WORKDIR}"
 DESCRIPTION="Oracle 11g client installation for Linux: SQL*Plus"
 HOMEPAGE="http://www.oracle.com/technology/tech/oci/instantclient/index.html"
 SRC_URI="x86? ( ${MY_P_x86}.zip )
-         amd64? ( ${MY_P_amd64}.zip )"
+	amd64? ( ${MY_P_amd64}.zip )"
 
 LICENSE="OTN"
 SLOT="0"

@@ -11,7 +11,4 @@
  	<name>Johan Bergström</name>
 	<description>Proxy Maintainer. CC on bugs</description>
   </maintainer>
-  <use>
-	<flag name="sqliteunlock">Enable SQLite unlock notification api</flag>
-  </use>
 </pkgmetadata>

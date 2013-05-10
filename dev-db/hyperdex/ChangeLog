@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hyperdex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/ChangeLog,v 1.8 2013/04/15 06:35:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/ChangeLog,v 1.9 2013/05/10 08:12:19 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> hyperdex-1.0_rc3.ebuild,
+  hyperdex-1.0_rc4.ebuild:
+  Quoting
 
 *hyperdex-1.0_rc4 (15 Apr 2013)
 

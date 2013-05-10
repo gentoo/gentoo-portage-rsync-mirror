@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.123 2013/04/10 19:49:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.125 2013/05/10 08:23:38 ssuominen Exp $
+
+  10 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -dbus-python-1.0.0.ebuild, -dbus-python-1.1.1.ebuild,
+  -files/dbus-python-1.0.0-test-socket-tmpdir.patch:
+  old
+
+*dbus-python-1.2.0 (10 May 2013)
+
+  10 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +dbus-python-1.2.0.ebuild:
+  Version bump.
 
   10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dbus-python-1.1.1-r1.ebuild:
   Stable for s390, wrt bug #458992

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/myodbc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.32 2013/03/02 19:50:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.33 2013/05/10 08:17:39 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> myodbc-5.1.6.ebuild:
+  Fix src_prepare
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> myodbc-5.1.6.ebuild:
   Move Qt dependencies to the new category

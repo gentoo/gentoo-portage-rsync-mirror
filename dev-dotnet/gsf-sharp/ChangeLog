@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gsf-sharp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.19 2012/06/16 11:59:34 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.20 2013/05/10 08:26:29 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> gsf-sharp-0.8.1.ebuild:
+  Fix inherit
 
   16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -gsf-sharp-0.8.ebuild:
   Remove old as requested by Pacho Ramos, <pacho@gentoo.org>
@@ -77,4 +80,3 @@
   22 Nov 2005; Daniel Drake <dsd@gentoo.org> +metadata.xml,
   +gsf-sharp-0.6.ebuild:
   Initial import; closes bug #111228
-

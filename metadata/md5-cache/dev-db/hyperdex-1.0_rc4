@@ -10,4 +10,4 @@ RDEPEND=dev-cpp/glog dev-libs/cityhash dev-libs/libpo6 dev-libs/libe dev-libs/bu
 SLOT=0
 SRC_URI=http://hyperdex.org/src/hyperdex-1.0.rc4.tar.gz
 _eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=c92df1c046bb162186397b1cd76f48c9
+_md5_=55e3b3dca732027eaba70b02c10e1c9b

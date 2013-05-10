@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/gsf-sharp-0.8.1.ebuild,v 1.4 2012/05/04 03:56:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/gsf-sharp-0.8.1.ebuild,v 1.5 2013/05/10 08:26:29 patrick Exp $
 
-inherit eutils mono autotools
+inherit eutils mono
 
 DESCRIPTION="C# bindings for libgsf"
 HOMEPAGE="http://www.mono-project.com/"

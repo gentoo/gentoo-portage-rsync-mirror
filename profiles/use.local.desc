@@ -1065,7 +1065,6 @@ dev-db/firebird:xinetd - Install ClassicServer
 dev-db/haildb:debug - Enable extra debug codepaths and assertions. If disabled, both the debug code and assertions are removed from the resulting binaries. Optimisations are untouched.
 dev-db/haildb:zlib - Add support for compressed tables through sys-libs/zlib.
 dev-db/hyperdex:trace-player - Build a primitive trace-replay tool
-dev-db/libzdb:sqliteunlock - Enable SQLite unlock notification api
 dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
 dev-db/mariadb:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mariadb:cluster - Add support for NDB clustering (deprecated)
@@ -1109,7 +1108,6 @@ dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't
 dev-db/postgis:geos - Add the sci-libs/geos library for exact topological tests
 dev-db/postgis:gtk - Build shp2pgsql-gui a graphical interface to shp2pgsql
 dev-db/postgis:proj - Add the sci-libs/proj library for reprojection features
-dev-db/postgresql-base:pg-intdatetime - Enable --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage
 dev-db/postgresql-base:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage.
 dev-db/postgresql-server:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage.
 dev-db/postgresql-server:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid)

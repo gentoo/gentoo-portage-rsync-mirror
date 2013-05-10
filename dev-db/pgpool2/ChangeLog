@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgpool2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.18 2013/05/04 12:14:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.19 2013/05/10 08:21:43 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> pgpool2-3.2.3.ebuild,
+  pgpool2-3.2.4.ebuild, pgpool2-9999.ebuild:
+  Fix inherit
 
 *pgpool2-3.2.4 (04 May 2013)
 

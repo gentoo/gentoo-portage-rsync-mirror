@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.20.ebuild,v 1.3 2012/09/11 06:36:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.20.ebuild,v 1.4 2013/05/10 08:29:02 patrick Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit cmake-utils python
 
 if [[ ${PV} == 9999* ]] ; then
 	EGIT_REPO_URI="git://developer.intra2net.com/${PN}"
-	inherit git-2 autotools
+	inherit git-2
 else
 	SRC_URI="http://www.intra2net.com/en/developer/${PN}/download/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"

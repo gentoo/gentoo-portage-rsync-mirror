@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/bucardo-4.5.0-r1.ebuild,v 1.1 2012/08/30 03:02:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/bucardo-4.5.0-r1.ebuild,v 1.2 2013/05/10 08:09:05 patrick Exp $
 
 EAPI="4"
 
@@ -27,6 +27,6 @@ RDEPEND="dev-perl/DBIx-Safe"
 S=${WORKDIR}/${MY_PN}-${PV}
 
 src_install() {
-	emake DESTDIR=${D} INSTALL_BASE=${D} install -j1
+	emake DESTDIR="${D}" INSTALL_BASE="${D}" install -j1
 	keepdir /var/run/bucardo
 }
