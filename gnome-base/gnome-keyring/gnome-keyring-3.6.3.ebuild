@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.6.3.ebuild,v 1.1 2013/03/30 23:01:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.6.3.ebuild,v 1.2 2013/05/10 19:50:49 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 pam versionator virtualx
+inherit fcaps gnome2 pam versionator virtualx
 
 DESCRIPTION="Password and keyring managing daemon"
 HOMEPAGE="http://live.gnome.org/GnomeKeyring"
@@ -76,48 +76,6 @@ src_test() {
 }
 
 pkg_postinst() {
-	use caps && fcaps 0:0 755 cap_ipc_lock "${EROOT}"/usr/bin/gnome-keyring-daemon
+	fcaps cap_ipc_lock usr/bin/gnome-keyring-daemon
 	gnome2_pkg_postinst
-}
-
-# borrowed from GSoC2010_Gentoo_Capabilities by constanze and Flameeyes
-# @FUNCTION: fcaps
-# @USAGE: fcaps {uid:gid} {file-mode} {cap1[,cap2,...]} {file}
-# @RETURN: 0 if all okay; non-zero if failure and fallback
-# @DESCRIPTION:
-# fcaps sets the specified capabilities in the effective and permitted set of
-# the given file. In case of failure fcaps sets the given file-mode.
-# Requires versionator.eclass
-fcaps() {
-	local uid_gid=$1
-	local perms=$2
-	local capset=$3
-	local path=$4
-	local res
-
-	chmod $perms $path && \
-	chown $uid_gid $path
-	res=$?
-
-	use caps || return $res
-
-	#set the capability
-	setcap "$capset=ep" "$path" &> /dev/null
-	#check if the capability got set correctly
-	setcap -v "$capset=ep" "$path" &> /dev/null
-	res=$?
-
-	if [ $res -ne 0 ]; then
-		ewarn "Failed to set capabilities. Probable reason is missing kernel support."
-		ewarn "Your kernel must have <FS>_FS_SECURITY enabled (e.g. EXT4_FS_SECURITY)"
-		ewarn "where <FS> is the filesystem to store ${path}"
-		if ! version_is_at_least 2.6.33 "$(uname -r)"; then
-			ewarn "For kernel 2.6.32 or older, you will also need to enable"
-			ewarn "SECURITY_FILE_CAPABILITIES."
-		fi
-		ewarn
-		ewarn "Falling back to suid now..."
-		chmod u+s ${path}
-	fi
-	return $res
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.2 2013/05/10 19:26:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.3 2013/05/10 19:46:28 fauli Exp $
 
 EAPI="5"
 
@@ -88,6 +88,10 @@ RDEPEND="${COMMONDEPEND}
 		dev-libs/libxml2 )
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}_libsoup-check-fix.patch"
+}
 
 src_configure() {
 	local myeconfargs=(

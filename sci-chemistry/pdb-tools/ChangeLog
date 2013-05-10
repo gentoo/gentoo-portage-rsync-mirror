@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pdb-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.11 2013/04/26 10:20:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.12 2013/05/10 19:57:31 jlec Exp $
+
+*pdb-tools-0.2.1-r1 (10 May 2013)
+
+  10 May 2013; Justin Lecher <jlec@gentoo.org> +pdb-tools-0.2.1-r1.ebuild:
+  Fix double prefix installation
 
 *pdb-tools-0.2.1 (26 Apr 2013)
 

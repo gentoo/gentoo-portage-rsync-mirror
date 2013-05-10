@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.232 2013/05/05 08:09:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.233 2013/05/10 19:50:49 eva Exp $
+
+  10 May 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-keyring-3.6.3.ebuild, metadata.xml:
+  Add longdescription, bug #463542. Use fcaps eclass instead of custom code,
+  bug #468258.
 
 *gnome-keyring-3.8.2 (05 May 2013)
 

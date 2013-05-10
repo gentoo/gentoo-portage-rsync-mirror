@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.2.ebuild,v 1.9 2012/10/29 23:56:50 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.4.ebuild,v 1.1 2013/05/10 19:45:40 nimiux Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/l/o/logrotate/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl selinux"
 
 RDEPEND="
@@ -28,15 +28,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-3.7.7-datehack.patch \
-		"${FILESDIR}"/${PN}-3.8.0-ignore-hidden.patch \
-		"${FILESDIR}"/${PN}-3.8.2-fbsd.patch \
-		"${FILESDIR}"/${PN}-3.8.1-noasprintf.patch \
-		"${FILESDIR}"/${PN}-3.8.2-atomic-create.patch
-}
-
-src_configure() {
-	return
+		"${FILESDIR}"/${P}-datehack.patch \
+		"${FILESDIR}"/${P}-ignore-hidden.patch \
+		"${FILESDIR}"/${P}-fbsd.patch \
+		"${FILESDIR}"/${P}-noasprintf.patch \
+		"${FILESDIR}"/${P}-atomic-create.patch
 }
 
 src_compile() {
@@ -44,7 +40,7 @@ src_compile() {
 	myconf="CC=$(tc-getCC)"
 	use selinux && myconf="${myconf} WITH_SELINUX=yes"
 	use acl && myconf="${myconf} WITH_ACL=yes"
-	emake ${myconf} RPM_OPT_FLAGS="${CFLAGS}" || die "emake failed"
+	emake ${myconf} RPM_OPT_FLAGS="${CFLAGS}"
 }
 
 src_install() {
@@ -54,7 +50,7 @@ src_install() {
 	dodoc CHANGES examples/logrotate*
 
 	exeinto /etc/cron.daily
-	doexe "${FILESDIR}"/logrotate.cron
+	newexe "${S}"/examples/logrotate.cron "${PN}"
 
 	insinto /etc
 	doins "${FILESDIR}"/logrotate.conf
@@ -63,10 +59,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you wish to have logrotate e-mail you updates, please"
-	elog "emerge virtual/mailx and configure logrotate in"
-	elog "/etc/logrotate.conf appropriately"
-	elog
-	elog "Additionally, /etc/logrotate.conf may need to be modified"
-	elog "for your particular needs.  See man logrotate for details."
+	if [[ -z ${REPLACING_VERSIONS} ]] ; then
+		elog "If you wish to have logrotate e-mail you updates, please"
+		elog "emerge virtual/mailx and configure logrotate in"
+		elog "/etc/logrotate.conf appropriately"
+		elog
+		elog "Additionally, /etc/logrotate.conf may need to be modified"
+		elog "for your particular needs.  See man logrotate for details."
+	fi
 }
