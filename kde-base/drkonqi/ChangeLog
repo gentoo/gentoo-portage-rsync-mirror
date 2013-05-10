@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.270 2013/05/06 20:18:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.271 2013/05/10 17:43:11 kensington Exp $
+
+  10 May 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/drkonqi-4.10.1-signal.patch:
+  Remove unused patch.
 
 *drkonqi-4.10.3 (06 May 2013)
 

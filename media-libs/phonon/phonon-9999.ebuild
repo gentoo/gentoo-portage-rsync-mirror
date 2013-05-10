@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.18 2013/03/03 02:37:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.19 2013/05/10 17:39:09 kensington Exp $
 
-EAPI=4
+EAPI=5
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/phonon/${PV}/src/${P}.tar.xz"
@@ -23,7 +23,7 @@ SLOT="0"
 IUSE="aqua debug +gstreamer pulseaudio vlc zeitgeist"
 
 COMMON_DEPEND="
-	!!dev-libs/qtphonon:4
+	!!dev-qt/qtphonon:4
 	>=dev-qt/qtcore-4.6.0:4
 	>=dev-qt/qtdbus-4.6.0:4
 	>=dev-qt/qtgui-4.6.0:4
