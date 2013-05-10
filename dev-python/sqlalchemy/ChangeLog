@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.101 2013/05/02 03:50:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.102 2013/05/10 05:09:56 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> sqlalchemy-0.8.1.ebuild:
+  Whitespace
 
 *sqlalchemy-0.8.1 (02 May 2013)
 

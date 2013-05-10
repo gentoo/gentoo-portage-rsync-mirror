@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.8.1.ebuild,v 1.1 2013/05/02 03:50:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.8.1.ebuild,v 1.2 2013/05/10 05:09:56 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_2,3_3} pypy{1_9,2_0} )
@@ -53,7 +53,7 @@ python_test() {
 	# No longer has postgresql support
 	if [[ "${EPYTHON}" == python3* ]]; then
 		"${PYTHON}" sa2to3.py --no-diffs -w lib test examples
-	fi	
+	fi
 	"${PYTHON}" sqla_nose.py -I test_postgresql || die "Testsuite failed under ${EPYTHON}"
 }
 

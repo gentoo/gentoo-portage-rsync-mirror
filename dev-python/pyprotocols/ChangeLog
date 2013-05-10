@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyprotocols
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.27 2013/04/10 11:50:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.28 2013/05/10 05:31:03 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org>
+  pyprotocols-1.0_pre2306-r1.ebuild:
+  Fix inherit
 
 *pyprotocols-1.0_pre2306-r1 (10 Apr 2013)
 

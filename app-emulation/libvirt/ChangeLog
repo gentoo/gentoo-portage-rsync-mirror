@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.263 2013/05/06 14:51:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.264 2013/05/10 05:06:04 cardoe Exp $
+
+  10 May 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.3-r2.ebuild,
+  libvirt-1.0.4.ebuild, libvirt-1.0.5.ebuild, libvirt-9999.ebuild:
+  Fix up kernel features required for LXC.
 
 *libvirt-1.0.5 (06 May 2013)
 

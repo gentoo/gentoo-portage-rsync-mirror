@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.8.2.ebuild,v 1.1 2012/03/01 09:38:50 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.8.2.ebuild,v 1.2 2013/05/10 05:05:46 patrick Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="examples"
 
 RDEPEND="dev-python/oauth2
-         dev-python/simplejson"
+	dev-python/simplejson"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 RESTRICT_PYTHON_ABIS="3.*"
