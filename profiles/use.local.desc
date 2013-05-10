@@ -5726,6 +5726,7 @@ sys-auth/sssd:sudo - Build helper to let app-admin/sudo use sssd provided inform
 sys-auth/ykpers:consolekit - Use sys-auth/consolekit and virtual/udev to allow access to the YubiKey HID device to the console user.
 sys-block/gparted:btrfs - Include Btrfs support (sys-fs/btrfs-progs)
 sys-block/gparted:dmraid - Support for dmraid devices, also known as ATA-RAID, or Fake RAID.
+sys-block/gparted:f2fs - Include F2FS support (sys-fs/f2fs-tools)
 sys-block/gparted:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
 sys-block/gparted:gtk - Enable .desktop support for gtk+ based desktops.
 sys-block/gparted:hfs - Include HFS support (sys-fs/hfsutils)

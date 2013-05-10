@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.8.2.ebuild,v 1.1 2013/05/10 18:09:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.8.2.ebuild,v 1.2 2013/05/10 22:54:23 idl0r Exp $
 
-EAPI="3"
+EAPI="5"
 
 PYTHON_DEPEND="*:2.6"
 PYTHON_USE_WITH="xml"
 
-inherit python
+inherit python eutils
 
 DESCRIPTION="Collection of developer scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -22,6 +22,10 @@ DEPEND=""
 RDEPEND="sys-apps/portage
 	dev-lang/perl
 	sys-apps/diffutils"
+
+src_prepare() {
+	epatch "${FILESDIR}/echangelog_test.patch"
+}
 
 src_test() {
 	# echangelog test is not able to run as root
