@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-webkit-gtk2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-webkit-gtk2/ChangeLog,v 1.1 2013/05/10 13:22:45 naota Exp $
+
+*ruby-webkit-gtk2-1.2.6 (10 May 2013)
+
+  10 May 2013; Naohiro Aota <naota@gentoo.org> +metadata.xml,
+  +ruby-webkit-gtk2-1.2.6.ebuild:
+  New package dev-ruby/ruby-webkit-gtk2 required for new version of Ruby/Gnome2
