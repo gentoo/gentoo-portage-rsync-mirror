@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.20.10-r1.ebuild,v 1.1 2013/03/27 21:38:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.20.10-r1.ebuild,v 1.2 2013/05/10 11:06:02 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -35,6 +35,9 @@ DEPEND="${RDEPEND}
 # to AT_M4DIR="tools m4", bug #224609 (m4 removes glib build time dep)
 
 src_prepare() {
+	# Stop build from relying on installed package
+	epatch "${FILESDIR}"/${P}-fix-out-of-tree-build.patch
+
 	gnome2_src_prepare
 
 	# Leave shebang alone
