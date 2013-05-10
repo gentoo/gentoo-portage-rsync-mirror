@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter/ruby-clutter-1.2.6.ebuild,v 1.1 2013/05/04 12:52:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter/ruby-clutter-1.2.6.ebuild,v 1.2 2013/05/10 13:49:17 naota Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -15,8 +15,8 @@ RESTRICT="test"
 
 RUBY_S=ruby-gnome2-all-${PV}/clutter
 
-DEPEND="${DEPEND} media-libs/clutter-gtk"
-RDEPEND="${RDEPEND} media-libs/clutter-gtk"
+DEPEND="${DEPEND} media-libs/clutter"
+RDEPEND="${RDEPEND} media-libs/clutter"
 
 ruby_add_bdepend ">=dev-ruby/ruby-glib2-${PV}"
 ruby_add_rdepend ">=dev-ruby/ruby-cairo-gobject-${PV}
