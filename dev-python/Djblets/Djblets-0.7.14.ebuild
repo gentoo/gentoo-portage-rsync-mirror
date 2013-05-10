@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.6.22.ebuild,v 1.3 2013/05/10 04:25:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.7.14.ebuild,v 1.1 2013/05/10 04:25:05 patrick Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -21,8 +21,8 @@ IUSE=""
 RDEPEND="dev-python/django
 	dev-python/imaging"
 DEPEND="${RDEPEND}
-	test? ( dev-python/django-pipeline
-		dev-python/django-evolution
+	dev-python/django-pipeline
+	test? ( dev-python/django-evolution
 		>=dev-python/django-1.4.1 )"
 
 PYTHON_MODNAME="djblets"

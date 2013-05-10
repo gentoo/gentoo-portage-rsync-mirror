@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-python/django dev-python/imaging test? ( dev-python/django-pipeline dev-python/django-evolution >=dev-python/django-1.4.1 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DEPEND=dev-python/django dev-python/imaging dev-python/django-pipeline test? ( dev-python/django-evolution >=dev-python/django-1.4.1 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 DESCRIPTION=A collection of useful extensions for Django
 EAPI=4
 HOMEPAGE=http://github.com/djblets/djblets
@@ -7,6 +7,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 RDEPEND=dev-python/django dev-python/imaging || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
-SRC_URI=http://downloads.reviewboard.org/releases/Djblets/0.6/Djblets-0.6.22.tar.gz
+SRC_URI=http://downloads.reviewboard.org/releases/Djblets/0.7/Djblets-0.7.14.tar.gz
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=f7ab46100294273a173cbdec31975fac
+_md5_=fcc8f8329e8a6f2f00398fc34738f17e
