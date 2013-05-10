@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.126 2013/03/02 22:40:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.127 2013/05/10 09:28:15 abcd Exp $
+
+  10 May 2013; Jonathan Callen <abcd@gentoo.org> kaffeine-1.2.2.ebuild:
+  Remove unused kde-base/solid dependency
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kaffeine-1.2.2.ebuild:
   Move Qt dependencies to the new category

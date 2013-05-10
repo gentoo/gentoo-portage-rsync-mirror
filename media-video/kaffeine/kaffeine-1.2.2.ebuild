@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.2.2.ebuild,v 1.7 2013/03/02 22:40:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.2.2.ebuild,v 1.8 2013/05/10 09:28:15 abcd Exp $
 
 EAPI=4
 
@@ -23,7 +23,6 @@ DEPEND="
 	x11-libs/libXScrnSaver
 	dev-qt/qtsql:4[sqlite]
 	>=media-libs/xine-lib-1.1.18.1
-	$(add_kdebase_dep solid)
 "
 RDEPEND="${DEPEND}"
 

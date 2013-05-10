@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/nekohtml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.12 2012/07/05 19:50:21 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.13 2013/05/10 09:11:41 tomwij Exp $
+
+*nekohtml-1.9.18 (10 May 2013)
+
+  10 May 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/nekohtml-1.9.18-remove-obsolete-xerces-bridges.patch,
+  +nekohtml-1.9.18.ebuild:
+  Version bump to 1.9.18. Fixes bug #426382, reported by Manuel Rüger (mrueg)
+  and contributed by Ivan Baidakou (dmol).
 
   05 Jul 2012; Ralph Sennhauser <sera@gentoo.org> nekohtml-1.9.6.ebuild:
   Fix tests. Thanks to Ivan Baidakou <the.dmol@gmail.com> for the patch.
@@ -47,4 +55,3 @@
   12 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   +files/nekohtml-0.9.5-xerces.patch, +metadata.xml, +nekohtml-0.9.5.ebuild:
   Initial commit, from bug #88617.
-

@@ -3,7 +3,6 @@
 <pkgmetadata>
   <herd>php</herd>
   <use>
-    <flag name="contentcache">Enable content caching</flag>
     <flag name="disassembler">Enable the eA disassembler</flag>
     <flag name="inode">Use inode-based caching</flag>
     <flag name="doccommentinclusion">If you want eAccelerator to retain
