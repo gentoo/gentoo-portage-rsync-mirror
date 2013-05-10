@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/xstow
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.15 2012/03/09 11:16:32 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.16 2013/05/10 06:11:33 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> xstow-0.5.1.ebuild,
+  xstow-1.0.0-r1.ebuild, xstow-1.0.0.ebuild:
+  Cleanups
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xstow-1.0.0-r1.ebuild:
   x86 stable wrt bug #404595
@@ -54,4 +58,3 @@
   03 Apr 2003; Alastair Tse <liquidx@gentoo.org> xstow-0.4.6.ebuild,
   files/xstow-0.4.6-configure-ncurses.diff:
   intial ebuild. thanks to Andrew Mahone (#16783)
-

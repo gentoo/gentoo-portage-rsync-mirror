@@ -4,7 +4,6 @@
 	<herd>java</herd>
 	<herd>gnome-accessibility</herd>
 	<use>
-		<flag name='freetts'>Adds support for the freetts speech driver</flag>
 		<flag name='espeak'>Adds support for the espeak speech driver (default)</flag>
 		<flag name='festival'>Adds support for the festival speech driver</flag>
 	</use>

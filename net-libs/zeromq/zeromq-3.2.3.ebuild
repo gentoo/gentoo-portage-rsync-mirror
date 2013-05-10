@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.3.ebuild,v 1.1 2013/05/06 05:13:59 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.3.ebuild,v 1.2 2013/05/10 06:08:02 qnikst Exp $
 
 EAPI=5
 
@@ -48,4 +48,8 @@ src_install() {
 
 	# remove useless .a (only for non static compilation)
 	use static-libs || find "${D}" -name '*.a' -delete
+}
+
+src_test() {
+	emake -j1 check
 }

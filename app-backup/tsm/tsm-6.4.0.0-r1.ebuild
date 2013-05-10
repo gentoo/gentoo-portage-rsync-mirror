@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/tsm-6.4.0.0-r1.ebuild,v 1.1 2013/01/16 22:29:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/tsm-6.4.0.0-r1.ebuild,v 1.2 2013/05/10 06:19:41 patrick Exp $
 
 EAPI=5
 
@@ -145,7 +145,7 @@ src_install() {
 	# The gscrypt64 postinstall script only deals with s390[x] SELinux.
 
 	# Move stuff from /usr/local to /opt, #452332
-	mv "${D}"/usr/local/ibm ${D}/opt/ || die
+	mv "${D}"/usr/local/ibm "${D}"/opt/ || die
 	rmdir "${D}"/usr/local || die
 
 	# Mimic gskssl64 postinstall script

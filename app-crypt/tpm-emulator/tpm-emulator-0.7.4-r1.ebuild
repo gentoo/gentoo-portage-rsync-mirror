@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.7.4-r1.ebuild,v 1.1 2012/12/24 17:13:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.7.4-r1.ebuild,v 1.2 2013/05/10 06:27:54 patrick Exp $
 
 EAPI=2
 inherit user linux-mod cmake-utils udev
@@ -50,7 +50,7 @@ src_configure() {
 src_compile() {
 	cmake-utils_src_compile
 	use modules && linux-mod_src_compile
-	emake -C ${BUILD_DIR}/tpmd_dev/linux tpmd_dev.rules
+	emake -C "${BUILD_DIR}/tpmd_dev/linux" tpmd_dev.rules
 }
 
 src_install() {

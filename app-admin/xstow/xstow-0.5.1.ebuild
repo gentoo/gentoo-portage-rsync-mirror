@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-0.5.1.ebuild,v 1.4 2008/04/28 21:22:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-0.5.1.ebuild,v 1.5 2013/05/10 06:11:33 patrick Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="ncurses"
 
 DEPEND="ncurses? ( sys-libs/ncurses )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

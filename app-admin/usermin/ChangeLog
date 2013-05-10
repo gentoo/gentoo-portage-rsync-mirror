@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.156 2013/04/03 02:24:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.157 2013/05/10 06:13:37 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> usermin-1.430.ebuild:
+  Fix inherit
 
 *usermin-1.540-r1 (03 Apr 2013)
 

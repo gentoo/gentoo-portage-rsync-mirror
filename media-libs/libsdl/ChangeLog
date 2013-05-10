@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.200 2012/10/21 16:39:45 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.201 2013/05/10 06:20:06 mr_bones_ Exp $
+
+*libsdl-1.2.15-r3 (10 May 2013)
+
+  10 May 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/libsdl-1.2.15-gamma.patch, +libsdl-1.2.15-r3.ebuild,
+  files/libsdl-1.2.15-joystick.patch, files/libsdl-1.2.15-resizing.patch:
+  add patch from Petr Pisar to fix setting gamma (bug #449692)
 
   21 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15.ebuild:
   old

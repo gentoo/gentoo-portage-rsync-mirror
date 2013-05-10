@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.82 2013/02/20 13:16:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.83 2013/05/10 06:29:46 radhermit Exp $
+
+*pstoedit-3.62 (10 May 2013)
+
+  10 May 2013; Tim Harder <radhermit@gentoo.org> +pstoedit-3.62.ebuild,
+  +files/pstoedit-3.62-parallel.patch, metadata.xml:
+  Version bump, add pptx and static-libs use flags.
 
   20 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   pstoedit-3.61.ebuild:

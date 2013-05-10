@@ -14,6 +14,5 @@
 <use>
 	<flag name='headless'>Build without graphic frontend</flag>
 	<flag name='qt-bundled'>Use bundled Qt4 libraries</flag>
-	<flag name='system-libs'>Use the system libraries rather than bundled</flag>
 </use>
 </pkgmetadata>

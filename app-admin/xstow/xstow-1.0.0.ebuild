@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-1.0.0.ebuild,v 1.2 2011/12/12 03:23:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-1.0.0.ebuild,v 1.3 2013/05/10 06:11:33 patrick Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ncurses static"
 
 DEPEND="ncurses? ( sys-libs/ncurses )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -36,7 +37,7 @@ src_install() {
 	dodir /var/lib/xstow
 
 	# env file
-	doenvd ${FILESDIR}/99xstow || die "doenvd failed"
+	doenvd "${FILESDIR}/99xstow" || die "doenvd failed"
 }
 
 pkg_postinst() {

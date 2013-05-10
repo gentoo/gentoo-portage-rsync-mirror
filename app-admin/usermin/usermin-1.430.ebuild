@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.430.ebuild,v 1.2 2012/07/12 15:14:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.430.ebuild,v 1.3 2013/05/10 06:13:37 patrick Exp $
 
 IUSE="ssl"
 
-inherit eutils pam
+inherit eutils pam user
 
 DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
