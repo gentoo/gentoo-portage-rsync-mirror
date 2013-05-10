@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.90 2013/01/12 19:55:17 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.91 2013/05/10 15:43:23 alonbl Exp $
+
+*loop-aes-3.6h (10 May 2013)
+
+  10 May 2013; Alon Bar-Lev <alonbl@gentoo.org> +loop-aes-3.6h.ebuild:
+  Version bump, bug#469306
 
   12 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Remove c1pher as a maintainer

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.63 2012/05/20 15:49:03 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.64 2013/05/10 15:57:02 maekke Exp $
+
+  10 May 2013; Markus Meier <maekke@gentoo.org> jed-0.99.19.ebuild:
+  add ~arm, bug #466712
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org> jed-0.99.19.ebuild:
   Missing build dependencies x11-libs/libXt (for X11/Intrinsic.h) and
