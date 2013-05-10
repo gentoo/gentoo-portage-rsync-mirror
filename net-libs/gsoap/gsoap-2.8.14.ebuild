@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.8.14.ebuild,v 1.1 2013/02/22 09:06:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.8.14.ebuild,v 1.2 2013/05/10 05:37:09 polynomial-c Exp $
 
 EAPI=4
 
@@ -30,6 +30,9 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# Fix Pre-ISO headers
 	epatch "${FILESDIR}/${PN}-2.7.10-fedora-install_soapcpp2_wsdl2h_aux.patch"
+
+	# Fix configure.in for >=automake-1.13
+	sed 's@AM_CONFIG_HEADER@AC_CONFIG_HEADERS@' -i configure.in || die
 
 	eautoreconf
 }

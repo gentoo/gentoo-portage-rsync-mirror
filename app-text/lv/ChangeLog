@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.44 2013/03/04 10:55:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.45 2013/05/10 05:49:26 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> lv-4.51-r3.ebuild:
+  Fix inherit
 
   04 Mar 2013; Naohiro Aota <naota@gentoo.org> +files/lv-4.51-tinfo.patch,
   lv-4.51-r3.ebuild:

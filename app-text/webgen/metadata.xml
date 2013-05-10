@@ -4,9 +4,7 @@
   <herd>ruby</herd>
   <use>
     <flag name="builder">Enable programmatic HTML/XML generation</flag>
-    <flag name="exif">Enable EXIF information in image galleries</flag>
     <flag name="highlight">Enable syntax highlighting for certain plugins</flag>
     <flag name="markdown">Markdown support</flag>
-    <flag name="thumbnail">Thumbnail creation support using rmagick</flag>
   </use>
 </pkgmetadata>

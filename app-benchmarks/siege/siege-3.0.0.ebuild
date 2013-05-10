@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-3.0.0.ebuild,v 1.1 2013/05/10 03:13:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-3.0.0.ebuild,v 1.2 2013/05/10 05:37:04 patrick Exp $
 
 EAPI=4
 
@@ -22,9 +22,9 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 src_prepare() {
-        # bundled macros break recent libtool
+	# bundled macros break recent libtool
 	sed -i -e 's/AC_PROG_SHELL//' configure.ac || die
-        rm *.m4 || die "failed to remove bundled macros"
+	rm *.m4 || die "failed to remove bundled macros"
 	eautoreconf
 }
 

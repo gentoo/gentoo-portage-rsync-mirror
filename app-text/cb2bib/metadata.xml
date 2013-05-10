@@ -5,7 +5,4 @@
 	<upstream>
 		<bugs-to>webmaster@molspaces.com</bugs-to>
 	</upstream>
-	<use>
-		<flag name="poll">Use clipboard polling</flag>
-	</use>
 </pkgmetadata>

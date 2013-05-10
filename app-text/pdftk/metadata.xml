@@ -3,8 +3,4 @@
 <pkgmetadata>
 <herd>printing</herd>
 <herd>java</herd>
-<use>
-  <flag name='nodrm'>Decrypt a document with the user_pw even if it has an
-    owner_pw set</flag>
-</use>
 </pkgmetadata>

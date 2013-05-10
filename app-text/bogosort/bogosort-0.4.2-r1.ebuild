@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/bogosort-0.4.2.ebuild,v 1.16 2013/05/10 05:47:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/bogosort-0.4.2-r1.ebuild,v 1.1 2013/05/10 05:47:53 patrick Exp $
+
+EAPI="5"
 
 inherit eutils toolchain-funcs
 
@@ -10,24 +12,21 @@ SRC_URI="ftp://ulrik.haugen.se/pub/unix/bogosort/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~mips ppc sparc x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/xmalloc.patch \
 		"${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC
-	econf
-	emake || die
+	econf || die
 }
 
 src_install() {

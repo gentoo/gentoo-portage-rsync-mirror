@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.21 2013/03/31 06:04:50 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.22 2013/05/10 05:33:18 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> sympy-0.7.2-r1.ebuild:
+  Fix inherit
 
 *sympy-0.7.2-r1 (31 Mar 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-3.0.4.ebuild,v 1.1 2013/04/04 08:11:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-3.0.4.ebuild,v 1.2 2013/05/10 05:41:24 patrick Exp $
 
 EAPI="5"
 
@@ -38,13 +38,13 @@ src_compile() {
 }
 
 src_install() {
-        # emake install has a sandbox violation in src/Makefile
-        dobin src/rdd-copy
-        dobin src/rdd-verify
-        dobin src/rddi.py
-        doman src/*.1
-        dohtml doxygen-doc/html/*
-        dosym rdd-copy /usr/bin/rdd
-        dosym rddi.py /usr/bin/rddi
+	# emake install has a sandbox violation in src/Makefile
+	dobin src/rdd-copy
+	dobin src/rdd-verify
+	dobin src/rddi.py
+	doman src/*.1
+	dohtml doxygen-doc/html/*
+	dosym rdd-copy /usr/bin/rdd
+	dosym rddi.py /usr/bin/rddi
 }
 

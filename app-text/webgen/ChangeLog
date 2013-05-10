@@ -1,6 +1,9 @@
 # ChangeLog for app-text/webgen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/ChangeLog,v 1.14 2013/02/01 16:12:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/ChangeLog,v 1.15 2013/05/10 05:57:33 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unused flag description from metadata
 
   01 Feb 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop sgml from metadata.

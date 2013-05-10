@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.51-r3.ebuild,v 1.8 2013/03/04 10:55:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.51-r3.ebuild,v 1.9 2013/05/10 05:49:26 patrick Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs autotools
+inherit eutils toolchain-funcs
 
 MY_P="${PN}${PV//./}"
 
