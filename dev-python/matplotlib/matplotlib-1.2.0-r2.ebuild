@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.9 2013/04/12 00:18:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.10 2013/05/10 11:47:43 maekke Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://github/${PN}/${PN}/${P}.tar.gz"
 
 IUSE="cairo doc excel examples fltk gtk gtk3 latex qt4 test tk wxwidgets"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 # Main license: matplotlib
 # Some modules: BSD

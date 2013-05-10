@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.148 2013/05/10 03:42:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.149 2013/05/10 11:47:43 maekke Exp $
+
+  10 May 2013; Markus Meier <maekke@gentoo.org> matplotlib-1.2.0-r2.ebuild:
+  add ~arm, bug #452764
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unused flag description from metadata

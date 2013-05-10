@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.236 2013/05/09 15:49:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.237 2013/05/10 11:51:20 maekke Exp $
+
+  10 May 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask dev-python/ipython[mongodb]
 
   09 May 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask x11-misc/lightdm[razor]

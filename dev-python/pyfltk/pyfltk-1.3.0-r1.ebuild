@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.3.0-r1.ebuild,v 1.1 2013/02/03 23:44:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.3.0-r1.ebuild,v 1.2 2013/05/10 11:44:11 maekke Exp $
 
 # FIXME: MakeSwig.py execution should be made work from pyfltk-1.1.5.ebuild
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
 DEPEND=">=x11-libs/fltk-1.3.0:1[opengl]"
