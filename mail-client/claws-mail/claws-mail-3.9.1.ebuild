@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.3 2013/05/10 19:46:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.4 2013/05/10 20:30:30 fauli Exp $
 
 EAPI="5"
 
-inherit autotools-utils multilib gnome2-utils eutils
+PYTHON_COMPAT=( python2_{5,6,7} )
+
+inherit autotools-utils multilib gnome2-utils eutils python-single-r1
 
 DESCRIPTION="An email client (and news reader) based on GTK+"
 HOMEPAGE="http://www.claws-mail.org/"
@@ -82,7 +84,7 @@ RDEPEND="${COMMONDEPEND}
 	clamav? ( app-antivirus/clamav )
 	networkmanager? ( net-misc/networkmanager )
 	perl? ( dev-lang/perl )
-	python? ( dev-lang/python
+	python? ( ${PYTHON_DEPS}
 		>=dev-python/pygtk-2.10.3 )
 	rss? ( net-misc/curl
 		dev-libs/libxml2 )
