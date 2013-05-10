@@ -1,6 +1,15 @@
 # ChangeLog for games-action/super-hexagon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/ChangeLog,v 1.3 2013/05/09 14:12:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/ChangeLog,v 1.5 2013/05/10 18:47:23 hasufell Exp $
+
+*super-hexagon-16 (10 May 2013)
+
+  10 May 2013; Julian Ospald <hasufell@gentoo.org> +super-hexagon-16.ebuild:
+  version bump
+
+  10 May 2013; Julian Ospald <hasufell@gentoo.org> super-hexagon-15.ebuild,
+  metadata.xml:
+  remove bundled-glew useflag since 1.6 is gone wrt #469284
 
   09 May 2013; Julian Ospald <hasufell@gentoo.org> super-hexagon-15.ebuild:
   restrict splitdebug

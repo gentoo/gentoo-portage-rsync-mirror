@@ -10,9 +10,6 @@
 		<flag name='bundled-libs'>
 			Use the upstream provided bundled libraries.
 		</flag>
-		<flag name='bundled-glew'>
-			Use the upstream provided bundled glew.
-		</flag>
 	</use>
 </pkgmetadata>
 
