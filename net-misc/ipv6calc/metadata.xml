@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
+		<email>pva@gentoo.org</email>
+		<name>Peter Volkov</name>
+	</maintainer>
+	<maintainer>
 		<email>bmangentoo@gmail.com</email>
 		<name>Aaron Bauman</name>
 	</maintainer>
