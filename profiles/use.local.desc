@@ -2593,6 +2593,7 @@ mail-client/claws-mail:pgp - Enable PGP support
 mail-client/claws-mail:smime - Build plugin for S/MIME support
 mail-client/claws-mail:spam-report - Enable plugin for spam reporting to various services
 mail-client/claws-mail:spamassassin - Build mail-filter/spamassassin plugin
+mail-client/claws-mail:valgrind - Add support for memory debugging using valgrind
 mail-client/evolution:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/evolution:clutter - Build with clutter support for animation effects
 mail-client/evolution:connman - Enable net-misc/connman support (requires 'networkmanager' USE flag to be disabled).
