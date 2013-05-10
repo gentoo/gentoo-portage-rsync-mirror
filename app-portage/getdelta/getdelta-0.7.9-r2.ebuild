@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9-r2.ebuild,v 1.1 2013/03/17 04:55:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9-r2.ebuild,v 1.2 2013/05/10 07:47:10 patrick Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ src_prepare() {
 }
 
 src_install () {
-        # portage has moved make.globals, so we just hotfix it
-        sed -i -e "s:/etc/make.globals:/usr/share/portage/config/make.globals:g" "${WORKDIR}"/getdelta.sh || die "Couldn't fix make.globals path"
+	# portage has moved make.globals, so we just hotfix it
+	sed -i -e "s:/etc/make.globals:/usr/share/portage/config/make.globals:g" "${WORKDIR}"/getdelta.sh || die "Couldn't fix make.globals path"
 
 	# make.conf has now two locations. This should fix it ( #461726 )
 	sed -i -e "s:source /etc/make.conf:source /etc/make.conf || source /etc/portage/make.conf:" "${WORKDIR}"/getdelta.sh || die "Couldn't fix make.conf path"

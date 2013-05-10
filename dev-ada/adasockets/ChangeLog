@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/adasockets
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.18 2007/05/27 09:41:18 george Exp $
+# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.19 2013/05/10 07:59:52 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> adasockets-1.8.4.7.ebuild:
+  Fix inherit
 
   27 May 2007; George Shapovalov <george@gentoo.org>
   adasockets-1.8.4.7.ebuild:

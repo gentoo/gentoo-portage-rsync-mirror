@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/getdelta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.25 2013/03/17 16:02:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.26 2013/05/10 07:47:10 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> getdelta-0.7.9-r1.ebuild,
+  getdelta-0.7.9-r2.ebuild:
+  Whitespace
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

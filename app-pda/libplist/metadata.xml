@@ -6,7 +6,6 @@
 		<email>pesa@gentoo.org</email>
 	</maintainer>
 	<use>
-		<flag name="cython">Build cython-based python bindings</flag>
 		<flag name="python">Build swig-based python bindings</flag>
 	</use>
 </pkgmetadata>

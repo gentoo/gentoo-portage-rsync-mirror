@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.3-r2.ebuild,v 1.4 2012/08/22 14:18:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.3-r2.ebuild,v 1.5 2013/05/10 07:51:42 patrick Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -18,7 +18,7 @@ RDEPEND="virtual/ssh"
 
 src_prepare() {
 	sed -i 's:chmod u+s $(:chmod u+s $(DESTDIR)$(:' Makefile.in || die
-    epatch "${FILESDIR}"/rssh-2.3.3-envvars.patch
+	epatch "${FILESDIR}"/rssh-2.3.3-envvars.patch
 }
 
 src_configure() {

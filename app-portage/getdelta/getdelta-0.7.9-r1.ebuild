@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9-r1.ebuild,v 1.1 2012/08/20 02:55:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9-r1.ebuild,v 1.2 2013/05/10 07:47:10 patrick Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ src_prepare() {
 }
 
 src_install () {
-        # portage has moved make.globals, so we just hotfix it
-        sed -i -e "s:/etc/make.globals:/usr/share/portage/config/make.globals:g" "${WORKDIR}"/getdelta.sh || die "Couldn't fix make.globals path"
+	# portage has moved make.globals, so we just hotfix it
+	sed -i -e "s:/etc/make.globals:/usr/share/portage/config/make.globals:g" "${WORKDIR}"/getdelta.sh || die "Couldn't fix make.globals path"
 
 	sed -i -e "s:/bin/sh:/bin/bash:" "${WORKDIR}"/getdelta.sh || die
 	dobin "${WORKDIR}"/getdelta.sh || die

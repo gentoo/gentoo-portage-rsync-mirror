@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/heirloom-sh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/heirloom-sh/ChangeLog,v 1.1 2013/03/07 07:22:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/heirloom-sh/ChangeLog,v 1.2 2013/05/10 07:49:18 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> heirloom-sh-050706.ebuild:
+  Whitespace
 
 *heirloom-sh-050706 (07 Mar 2013)
 

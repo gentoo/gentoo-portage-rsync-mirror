@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.35 2013/01/05 21:35:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.36 2013/05/10 07:51:42 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> rssh-2.3.3-r2.ebuild:
+  Whitespace
 
   05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> rssh-2.3.4.ebuild:
   Respect CFLAGS, wrt bug #450458. Thanks to Diego Elio Pettenò for

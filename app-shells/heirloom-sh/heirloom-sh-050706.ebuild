@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/heirloom-sh/heirloom-sh-050706.ebuild,v 1.1 2013/03/07 07:22:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/heirloom-sh/heirloom-sh-050706.ebuild,v 1.2 2013/05/10 07:49:18 patrick Exp $
 
 inherit flag-o-matic toolchain-funcs
 
 # slightly broken
-RESTRICT="test" 
+RESTRICT="test"
 
 DESCRIPTION="Heirloom Bourne Shell, derived from OpenSolaris code SVR4/SVID3"
 HOMEPAGE="http://heirloom.sourceforge.net/sh.html"

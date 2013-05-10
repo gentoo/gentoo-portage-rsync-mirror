@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.7.ebuild,v 1.4 2008/01/23 22:04:12 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.8.4.7.ebuild,v 1.5 2013/05/10 07:59:52 patrick Exp $
 
 WANT_AUTOCONF="2.1"
 
-inherit gnat autotools
+inherit gnat
 
 DESCRIPTION="An Interface to BSD sockets from Ada (TCP, UDP and multicast)."
 SRC_URI="http://www.rfc1149.net/download/adasockets/${P}.tar.gz"
