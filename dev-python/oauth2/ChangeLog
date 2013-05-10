@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/oauth2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/ChangeLog,v 1.7 2012/01/29 00:18:03 weaver Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/ChangeLog,v 1.8 2013/05/09 23:14:25 floppym Exp $
+
+*oauth2-1.5.211-r1 (09 May 2013)
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/oauth2-exclude-tests.patch, +oauth2-1.5.211-r1.ebuild,
+  -oauth2-1.5.170.ebuild, -oauth2-1.5.211.ebuild:
+  Convert to distutils-r1. Remove old.
 
 *oauth2-1.5.211 (29 Jan 2012)
 
@@ -33,4 +40,3 @@
   28 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> +oauth2-1.2.1.ebuild,
   +metadata.xml:
   Initial version.
-

@@ -1,6 +1,13 @@
 # ChangeLog for net-im/turses
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/turses/ChangeLog,v 1.6 2013/03/21 05:18:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/turses/ChangeLog,v 1.7 2013/05/09 23:24:10 floppym Exp $
+
+*turses-0.2.13-r1 (09 May 2013)
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org> +turses-0.2.13-r1.ebuild,
+  -turses-0.2.10.ebuild, -turses-0.2.11-r1.ebuild, -turses-0.2.11.ebuild,
+  -turses-0.2.12.ebuild, -turses-0.2.9.ebuild:
+  Convert to distutils-r1. Resolves bug 447604 by James Rowe. Remove old.
 
 *turses-0.2.13 (21 Mar 2013)
 
