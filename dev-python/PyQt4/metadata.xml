@@ -5,7 +5,6 @@
 	<herd>python</herd>
 	<use>
 		<flag name="X">Build QtGui, QtDesigner and QtScriptTools modules</flag>
-		<flag name="assistant">Build QtHelp and QtAssistant modules</flag>
 		<flag name="declarative">Build QtDeclarative module</flag>
 		<flag name="help">Build QtHelp module</flag>
 		<flag name="kde">Select <pkg>media-libs/phonon</pkg> as Phonon variant (needed for KDE)</flag>

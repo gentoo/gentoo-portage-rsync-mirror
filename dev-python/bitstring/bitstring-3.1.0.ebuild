@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-3.1.0.ebuild,v 1.1 2013/03/11 08:43:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-3.1.0.ebuild,v 1.2 2013/05/10 03:44:18 patrick Exp $
 
 EAPI=3
 SUPPORT_PYTHON_ABIS=1
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND="app-arch/unzip"
+RDEPEND=""
 
 src_test() {
 	testing() {

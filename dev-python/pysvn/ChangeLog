@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.33 2013/03/19 10:02:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.34 2013/05/10 03:53:45 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> -pysvn-1.7.5.ebuild:
+  Removing 1.7.5 as it depends on removed svn version
 
   19 Mar 2013; Kacper Kowalik <xarthisius@gentoo.org> pysvn-1.7.7.ebuild:
   Split installing python-abi specific files from docs and examples to prevent

@@ -10,8 +10,6 @@
 </longdescription>
 <use>
   <flag name="excel">Pull <pkg>dev-python/xlwt</pkg> for the exceltools toolkit</flag>
-  <flag name="traits">Pull <pkg>dev-python/traits</pkg> for the 
-  experimental enthought traits support</flag>
   <flag name="gtk3">Use <pkg>x11-libs/gtk+:3</pkg> instead of <pkg>x11-libs/gtk+:2</pkg></flag>
 </use>
 <upstream>

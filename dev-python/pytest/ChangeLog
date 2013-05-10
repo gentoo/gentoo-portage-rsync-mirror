@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.62 2013/04/10 19:51:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.63 2013/05/10 03:31:17 patrick Exp $
+
+*pytest-2.3.5 (10 May 2013)
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> +pytest-2.3.5.ebuild,
+  -pytest-2.0.2.ebuild, -pytest-2.0.3.ebuild, -pytest-2.1.1.ebuild,
+  -pytest-2.2.3.ebuild, -pytest-2.2.4.ebuild, -pytest-2.3.2-r1.ebuild,
+  -pytest-2.3.3-r1.ebuild, -pytest-2.3.3.ebuild:
+  Bump, remove old, drop s390 keywords until py catches up
 
   10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pytest-2.3.4.ebuild:
   Stable for s390, wrt bug #458992

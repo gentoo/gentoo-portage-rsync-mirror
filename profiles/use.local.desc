@@ -1683,7 +1683,6 @@ dev-php/smarty-docs:html - Install the documentation in HTML format
 dev-php/smarty-docs:pdf - Install the documentation in PDF format
 dev-python/PyFoam:extras - Enable optional dependencies
 dev-python/PyQt4:X - Build QtGui, QtDesigner and QtScriptTools modules
-dev-python/PyQt4:assistant - Build QtHelp and QtAssistant modules
 dev-python/PyQt4:declarative - Build QtDeclarative module
 dev-python/PyQt4:help - Build QtHelp module
 dev-python/PyQt4:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
@@ -1742,7 +1741,6 @@ dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/n
 dev-python/markdown:pygments - Enable fancy pygments support
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
 dev-python/matplotlib:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
-dev-python/matplotlib:traits - Pull dev-python/traits for the experimental enthought traits support
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/netaddr:cli - Enable netaddr shell with dev-python/ipython
 dev-python/nose:coverage - Utilize dev-python/coverage
