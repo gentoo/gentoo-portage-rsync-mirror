@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2013.03.1-r1.ebuild,v 1.1 2013/04/25 23:38:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2013.03.1-r1.ebuild,v 1.2 2013/05/10 16:12:34 zerochaos Exp $
 
 EAPI=5
 
@@ -30,7 +30,10 @@ IUSE="+client +pcre speech +plugin-autowep +plugin-btscan plugin-dot15d4 +plugin
 RDEPEND="net-wireless/wireless-tools
 	kernel_linux? ( sys-libs/libcap
 			dev-libs/libnl:3
-			net-libs/libpcap[-netlink] )
+			|| (
+				<net-libs/libpcap-1.4.0[-netlink]
+				>=net-libs/libpcap-1.4.0
+			) )
 	pcre? ( dev-libs/libpcre )
 	suid? ( sys-libs/libcap )
 	client? ( sys-libs/ncurses )

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.4.ebuild,v 1.4 2013/01/25 20:01:49 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.4.ebuild,v 1.5 2013/05/10 16:27:03 tomjbe Exp $
 
 EAPI=4
 inherit autotools eutils toolchain-funcs
@@ -45,6 +45,9 @@ src_prepare() {
 
 	# do not filter duplicate flags (see bug 411095)
 	epatch "${FILESDIR}"/${PN}-2.0.0-dont-filter-flags.diff
+
+	# fix deprectated AM_CONFIG_HEADER macro
+	sed -i -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" configure.ac || die
 
 	eautoreconf
 }
