@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.5.ebuild,v 1.1 2013/05/09 20:59:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.5.ebuild,v 1.2 2013/05/10 00:22:30 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -354,7 +354,10 @@ src_configure() {
 	tc-export AR CC CXX RANLIB
 
 	# Tools for building programs to be executed on the build system, bug #410883.
-	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
+	export AR_host=$(tc-getBUILD_AR)
+	export CC_host=$(tc-getBUILD_CC)
+	export CXX_host=$(tc-getBUILD_CXX)
+	export LD_host=${CXX_host}
 
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
@@ -374,11 +377,7 @@ src_compile() {
 	fi
 
 	# See bug #410883 for more info about the .host mess.
-	emake ${make_targets} BUILDTYPE=Release V=1 \
-		CC.host="${BUILD_CC}" CFLAGS.host="${BUILD_CFLAGS}" \
-		CXX.host="${BUILD_CXX}" CXXFLAGS.host="${BUILD_CXXFLAGS}" \
-		LINK.host="${BUILD_CXX}" LDFLAGS.host="${BUILD_LDFLAGS}" \
-		AR.host="${BUILD_AR}" || die
+	emake ${make_targets} BUILDTYPE=Release V=1 || die
 
 	pax-mark m out/Release/chrome
 	if use test; then

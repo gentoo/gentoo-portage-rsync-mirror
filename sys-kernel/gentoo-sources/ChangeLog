@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1120 2013/05/09 20:31:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1121 2013/05/10 00:20:42 tomwij Exp $
+
+*gentoo-sources-3.9.1-r1 (10 May 2013)
+
+  10 May 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.9.1-r1.ebuild,
+  -gentoo-sources-3.0.35.ebuild, -gentoo-sources-3.0.69.ebuild,
+  -gentoo-sources-3.0.70.ebuild, -gentoo-sources-3.0.71.ebuild,
+  -gentoo-sources-3.0.72.ebuild, -gentoo-sources-3.0.73.ebuild,
+  -gentoo-sources-3.2.40-r1.ebuild, -gentoo-sources-3.4.36.ebuild,
+  -gentoo-sources-3.4.37.ebuild, -gentoo-sources-3.4.38.ebuild,
+  -gentoo-sources-3.4.39.ebuild, -gentoo-sources-3.4.40.ebuild,
+  -gentoo-sources-3.8.3-r1.ebuild, -gentoo-sources-3.8.4.ebuild,
+  -gentoo-sources-3.8.5.ebuild, -gentoo-sources-3.8.6.ebuild,
+  -gentoo-sources-3.8.7.ebuild, -gentoo-sources-3.8.8.ebuild:
+  Revision bump for testing kernel 3.9.1, missing -N option when regerating
+  patchset caused a missing file in the radeon uvd code patchset; will take
+  preventive measures to not make this happen again in the future. As we're
+  having way too much kernel versions around, I have removed testing kernels
+  older than a month and a stable kernel older than four months.
 
   09 May 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.9.1.ebuild:
   Remade 2710_radeon-uvd-patchset.patch because the former version passed
