@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.422 2013/05/08 16:23:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.425 2013/05/10 12:51:31 ago Exp $
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> vim-7.3.762.ebuild:
+  Stable for ppc, wrt bug #469010
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> vim-7.3.762.ebuild:
+  Stable for x86, wrt bug #469010
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> vim-7.3.762.ebuild:
+  Stable for amd64, wrt bug #469010
 
   08 May 2013; Jeroen Roovers <jer@gentoo.org> vim-7.3.762.ebuild:
   Stable for HPPA (bug #469010).
@@ -1735,4 +1744,3 @@ vim-6.1-r8.ebuild (06 Jul 2002)
   details about writing correct changelogs are explained in the
   skel.ChangeLog file which you can find in the root directory of the
   portage repository.
-

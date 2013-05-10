@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.54 2013/01/08 18:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.56 2013/05/10 12:43:46 ago Exp $
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> ppl-0.12.1-r1.ebuild:
+  Stable for x86, wrt bug #468988
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> ppl-0.12.1-r1.ebuild:
+  Stable for amd64, wrt bug #468988
 
   08 Jan 2013; Mike Frysinger <vapier@gentoo.org> ppl-0.10.2-r1.ebuild,
   ppl-0.11.2-r1.ebuild, ppl-0.12.1-r1.ebuild, ppl-0.12.1.ebuild,
