@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/soxr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.6 2013/04/15 19:56:14 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.7 2013/05/10 15:17:04 jer Exp $
+
+  10 May 2013; Jeroen Roovers <jer@gentoo.org> soxr-0.1.1.ebuild:
+  Marked ~hppa (bug #469286).
 
   15 Apr 2013; Andreas Schuerch <nativemad@gentoo.org> soxr-0.1.1.ebuild:
   x86 keyworded, see bug 457140

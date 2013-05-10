@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.465 2013/05/09 22:07:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.466 2013/05/10 15:22:47 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -101,12 +101,6 @@ www-client/firefox pgo
 # Sergey Popov <pinkbyte@gentoo.org> (26 Nov 2012)
 # PDF docs building failed with sandbox violation
 media-libs/opencolorio pdf
-
-# Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
-# CMake's PHP module can't find our install location, so
-# libkolab(xml) fails with the php flag enabled.
-net-libs/libkolab php
-net-libs/libkolabxml php
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (3 Nov 2012)
 # Requires net-dns/unbound which is not keyworded by most arches

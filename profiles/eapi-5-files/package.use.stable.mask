@@ -1,9 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.9 2013/04/12 04:54:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.10 2013/05/10 15:21:06 johu Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
+# CMake's PHP module can't find our install location, so
+# libkolab(xml) fails with the php flag enabled, bug #430858.
+net-libs/libkolab php
+net-libs/libkolabxml php
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2013)
 # Waiting for >=app-cdr/brasero-3 stabilization

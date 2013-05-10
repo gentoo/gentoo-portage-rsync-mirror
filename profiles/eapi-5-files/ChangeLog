@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo eapi-5-files profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.9 2013/04/30 13:44:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.10 2013/05/10 15:21:06 johu Exp $
+
+  10 May 2013; Johannes Huber <johu@gentoo.org> package.use.stable.mask:
+  Move use mask on net-libs/libkolabxml[php], net-libs/libkolab[php] to stable
+  for easier testing bug #430858.
 
   30 Apr 2013; Alexandre Rostovtsev <tetromino@gentoo.org> use.stable.mask:
   Temporarily stable.mask PYTHON_TARGETS=python3_3 and
