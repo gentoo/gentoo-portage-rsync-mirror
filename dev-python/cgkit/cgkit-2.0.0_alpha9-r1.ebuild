@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9-r1.ebuild,v 1.4 2012/11/06 07:44:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9-r1.ebuild,v 1.5 2013/05/10 04:31:45 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -51,7 +51,7 @@ src_prepare() {
 
 	# Remove invalid test
 	rm -f unittests/test_pointcloud.py || die
-        epatch "${FILESDIR}"/${PN}-2.0.0-test.patch
+	epatch "${FILESDIR}"/${PN}-2.0.0-test.patch
 }
 
 src_compile() {

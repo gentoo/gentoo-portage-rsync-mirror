@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enaml/enaml-0.6.8.ebuild,v 1.1 2013/04/02 09:48:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enaml/enaml-0.6.8.ebuild,v 1.2 2013/05/10 04:34:39 patrick Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )
 	test? ( dev-python/python-dateutil
-		dev-python/wxpython 
+		dev-python/wxpython
 		|| ( dev-python/PyQt4 dev-python/pyside ) )"
 
 src_prepare() {

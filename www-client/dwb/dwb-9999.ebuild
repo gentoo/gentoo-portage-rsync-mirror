@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.7 2013/04/30 07:57:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.8 2013/05/10 04:32:58 radhermit Exp $
 
 EAPI=5
 
@@ -37,11 +37,6 @@ src_prepare() {
 src_compile() {
 	local myconf
 	use gtk3 && myconf+=" GTK=3"
-
-	# uclibc and other systems don't have execinfo.h (bug #465170)
-	if ! (echo '#include <execinfo.h>' | $(tc-getCC) -E - &>/dev/null) ; then
-		myconf+=" WITHOUT_EXECINFO=1"
-	fi
 
 	emake CC="$(tc-getCC)" ${myconf}
 }

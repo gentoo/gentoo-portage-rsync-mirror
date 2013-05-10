@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dwb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.19 2013/04/30 07:59:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.20 2013/05/10 04:32:58 radhermit Exp $
+
+  10 May 2013; Tim Harder <radhermit@gentoo.org> dwb-9999.ebuild:
+  Drop workaround for uclibc build that's been fixed upstream.
 
   30 Apr 2013; Tim Harder <radhermit@gentoo.org> -dwb-2012.08.22.ebuild,
   -dwb-2012.10.28-r1.ebuild, -files/dwb-2012.10.28-search-engine.patch,

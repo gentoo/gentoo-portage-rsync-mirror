@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cgkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.36 2012/11/08 06:32:24 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.37 2013/05/10 04:31:45 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> cgkit-2.0.0_alpha9-r1.ebuild:
+  Whitespace
 
   08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   -cgkit-2.0.0_alpha9.ebuild:

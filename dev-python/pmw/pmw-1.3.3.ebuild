@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.3.ebuild,v 1.3 2013/02/06 04:38:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.3.ebuild,v 1.4 2013/05/10 04:57:45 patrick Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ python_install_all() {
 }
 
 python_test() {
-	cd ${BUILD_DIR}/lib/Pmw/Pmw_1_3_3/ || die
+	cd "${BUILD_DIR}/lib/Pmw/Pmw_1_3_3/" || die
 	PYTHONPATH=PYTHONPATH=tests:../../
 	cp tests/{flagup.bmp,earthris.gif} . || die
 	for test in tests/*_test.py; do
