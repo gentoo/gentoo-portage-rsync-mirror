@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/tabbed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tabbed/ChangeLog,v 1.5 2012/12/10 19:01:34 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tabbed/ChangeLog,v 1.6 2013/05/10 16:45:05 jer Exp $
+
+*tabbed-0.5 (10 May 2013)
+
+  10 May 2013; Jeroen Roovers <jer@gentoo.org> +tabbed-0.5.ebuild:
+  Version bump.
 
   10 Dec 2012; Jeroen Roovers <jer@gentoo.org> -tabbed-0.4.ebuild,
   tabbed-0.4.1.ebuild:
@@ -25,4 +30,3 @@
   20 Apr 2011; Jeroen Roovers <jer@gentoo.org> +tabbed-0.3.ebuild,
   +metadata.xml:
   Initial commit, thanks to Aidan Taniane (bug #364245).
-
