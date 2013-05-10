@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horizon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.1 2013/04/12 02:00:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.2 2013/05/10 02:59:35 prometheanfire Exp $
+
+*horizon-2013.1.1 (10 May 2013)
+
+  10 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +horizon-2013.1.1.ebuild, -horizon-2013.1.ebuild:
+  update to latest openstack horizon release 2013.1.1
 
 *horizon-9999 (12 Apr 2013)
 *horizon-2013.1 (12 Apr 2013)

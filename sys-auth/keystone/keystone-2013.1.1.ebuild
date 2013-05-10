@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2012.2.3-r2.ebuild,v 1.1 2013/03/20 17:17:08 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.1.ebuild,v 1.1 2013/05/10 02:47:10 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
 RESTRICT="test"
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
 DESCRIPTION="Keystone is the Openstack authentication, authorization, and
 service catalog written in Python."
 HOMEPAGE="https://launchpad.net/keystone"
-SRC_URI="http://launchpad.net/${PN}/folsom/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="folsom"
@@ -24,23 +24,29 @@ REQUIRED_USE="|| ( ldap mysql postgres sqlite )"
 #todo, seperate out rdepend via use flags
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
-	dev-python/eventlet
-	dev-python/greenlet
-	dev-python/iso8601[${PYTHON_USEDEP}]
+	dev-python/eventlet[${PYTHON_USEDEP}]
+	dev-python/greenlet[${PYTHON_USEDEP}]
+	>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
+	>=dev-python/python-keystoneclient-0.2.1[${PYTHON_USEDEP}]
+	<=dev-python/python-keystoneclient-0.3[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/passlib
-	dev-python/paste
-	dev-python/pastedeploy
+	>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
+	dev-python/passlib[${PYTHON_USEDEP}]
+	dev-python/paste[${PYTHON_USEDEP}]
+	dev-python/pastedeploy[${PYTHON_USEDEP}]
 	dev-python/python-daemon
-	dev-python/python-pam[${PYTHON_USEDEP}]
-	dev-python/routes
-	>=dev-python/sqlalchemy-migrate-0.7
-	>=dev-python/webob-1.0.8
+	>=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
+	dev-python/routes[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-migrate-0.7.2
+	=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
-	sqlite? ( dev-python/sqlalchemy[sqlite] )
-	mysql? ( dev-python/sqlalchemy[mysql] )
-	postgres? ( dev-python/sqlalchemy[postgres] )
-	ldap? ( dev-python/python-ldap )"
+	sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite]
+	          <=dev-python/sqlalchemy-0.7.9[sqlite] )
+	mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql]
+	         <=dev-python/sqlalchemy-0.7.9[mysql] )
+	postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres]
+	            <=dev-python/sqlalchemy-0.7.9[postgres] )
+	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 #	test? ( dev-python/Babel
 #			dev-python/decorator
 #			dev-python/eventlet
@@ -63,16 +69,12 @@ RDEPEND="${DEPEND}
 #			>=dev-python/webob-1.0.8
 #			dev-python/webtest
 #			)
-#PATCHES=( "${FILESDIR}"/keystone_test-requires.patch )
+PATCHES=(
+)
 #
 #python_test() {
 #	"${PYTHON}" setup.py nosetests || die
 #}
-
-PATCHES=( "${FILESDIR}/keystone-CVE-2013-0270.patch"
-		"${FILESDIR}/keystone-CVE-2013-0282.patch"
-		"${FILESDIR}/keystone-CVE-2013-1664_1665.patch"
-		"${FILESDIR}/keystone-folsom-3-CVE-2013-1865.patch" )
 
 python_install() {
 	distutils-r1_python_install
