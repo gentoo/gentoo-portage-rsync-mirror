@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/premake-4.3-r1.ebuild,v 1.3 2013/05/07 19:33:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/premake-4.3-r1.ebuild,v 1.4 2013/05/10 09:39:05 patrick Exp $
 
 EAPI=5
 
-inherit versionator
+inherit versionator eutils
 
 DESCRIPTION="A makefile generation tool"
 HOMEPAGE="http://industriousone.com/premake"

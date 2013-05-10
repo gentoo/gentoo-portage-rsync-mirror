@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.198 2013/03/10 10:47:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.199 2013/05/10 09:33:28 abcd Exp $
+
+  10 May 2013; Jonathan Callen <abcd@gentoo.org> ktorrent-4.3.1.ebuild:
+  Remove unused kde-base/solid dependency
 
   10 Mar 2013; Michael Palimaka <kensington@gentoo.org>
   -ktorrent-4.3.0-r1.ebuild, -ktorrent-4.3.0.ebuild:

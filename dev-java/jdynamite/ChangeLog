@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdynamite
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/ChangeLog,v 1.8 2008/06/19 19:54:04 nelchael Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdynamite/ChangeLog,v 1.9 2013/05/10 09:37:31 tomwij Exp $
+
+  10 May 2013; Tom Wijsman <TomWij@gentoo.org> jdynamite-1.2.ebuild:
+  Fixed build with USE +doc and repoman warnings. Fixes bug #453142 reported by
+  Diego Elio Pettenò (flameeyes).
 
   19 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> jdynamite-1.2.ebuild:
   Add ~amd64 keyword.
@@ -29,4 +33,3 @@
   06 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +files/1.2-build.xml,
   +metadata.xml, +jdynamite-1.2.ebuild:
   Initial version.
-

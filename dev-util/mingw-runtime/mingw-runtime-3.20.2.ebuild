@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.20.2.ebuild,v 1.1 2012/12/17 00:04:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.20.2.ebuild,v 1.2 2013/05/10 09:38:39 patrick Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 
-inherit flag-o-matic autotools versionator
+inherit flag-o-matic autotools versionator eutils
 
 MY_P="mingwrt-$(version_format_string '$1.$2-$3')-mingw32"
 DESCRIPTION="Free Win32 runtime and import library definitions"

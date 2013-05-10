@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.645 2013/04/21 10:23:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.647 2013/05/10 09:58:20 aballier Exp $
+
+  10 May 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.6.ebuild,
+  -ffmpeg-1.1.4.ebuild, -ffmpeg-1.2.ebuild:
+  remove old
+
+*ffmpeg-1.2.1 (10 May 2013)
+
+  10 May 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-1.2.1.ebuild:
+  version bump
 
   21 Apr 2013; Markus Meier <maekke@gentoo.org> ffmpeg-1.0.6.ebuild:
   add ~arm, bug #458100
