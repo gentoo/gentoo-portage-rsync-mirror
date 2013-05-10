@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-guest-agent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.8 2013/02/10 21:48:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.9 2013/05/10 07:11:27 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unused flag description from metadata
 
   10 Feb 2013; Doug Goldstein <cardoe@gentoo.org>
   -qemu-guest-agent-1.1.1.ebuild:
@@ -40,4 +43,3 @@
   +files/qemu-ga-systemd.udev, +metadata.xml:
   Add separate ebuild for the QEMU guest agent so it can be used when Gentoo is
   a guest instead of installing the all of QEMU for just the guest.
-

@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/aufs-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.33 2013/05/09 19:32:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.35 2013/05/10 07:27:53 jlec Exp $
+
+*aufs-sources-3.8.12 (10 May 2013)
+*aufs-sources-3.8.11 (10 May 2013)
+
+  10 May 2013; Justin Lecher <jlec@gentoo.org> -aufs-sources-3.8.3-r1.ebuild,
+  -aufs-sources-3.8.4.ebuild, -aufs-sources-3.8.5.ebuild,
+  -aufs-sources-3.8.6.ebuild, -aufs-sources-3.8.7.ebuild,
+  -aufs-sources-3.8.8.ebuild, -aufs-sources-3.8.8-r1.ebuild,
+  +aufs-sources-3.8.11.ebuild, +aufs-sources-3.8.12.ebuild:
+  Equalize with gentoo-sources
+
+*aufs-sources-3.9.1-r1 (10 May 2013)
+
+  10 May 2013; Justin Lecher <jlec@gentoo.org> aufs-sources-3.9.1.ebuild,
+  +aufs-sources-3.9.1-r1.ebuild:
+  Fix to new genpatch releases
 
 *aufs-sources-3.9.1 (09 May 2013)
 

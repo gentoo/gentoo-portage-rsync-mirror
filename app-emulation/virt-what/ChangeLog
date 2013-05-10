@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-what
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.6 2013/04/23 21:40:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.7 2013/05/10 07:07:08 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> virt-what-1.11.ebuild:
+  Fix inherit
 
   23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> virt-what-1.12.ebuild:
   Stable for x86, wrt bug #466644

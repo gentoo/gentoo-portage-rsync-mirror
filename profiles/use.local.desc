@@ -520,7 +520,6 @@ app-emulation/qemu:virtfs - Enable VirtFS via virtio-9p-pci / fsdev. See http://
 app-emulation/qemu:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
 app-emulation/qemu:xen - Enables support for Xen backends
 app-emulation/qemu:xfs - Support xfsctl() notification and syncing for XFS backed virtual disks.
-app-emulation/qemu-guest-agent:systemd - Install SystemD init script instead of OpenRC
 app-emulation/spice:client - Build the spicec client app (does not reduce dependencies at the moment).
 app-emulation/spice:gui - Build some GUI components (inside the guest window).
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard

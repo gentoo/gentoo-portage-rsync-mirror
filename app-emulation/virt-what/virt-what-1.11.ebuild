@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.11.ebuild,v 1.1 2011/07/29 19:10:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.11.ebuild,v 1.2 2013/05/10 07:07:08 patrick Exp $
 
 EAPI=3
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="Detects if the current machine is running in a virtual machine"
 HOMEPAGE="http://people.redhat.com/~rjones/virt-what/"

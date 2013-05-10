@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>qemu</herd>
-	<use>
-		<flag name='systemd'>Install SystemD init script instead of OpenRC</flag>
-	</use>
 </pkgmetadata>
 

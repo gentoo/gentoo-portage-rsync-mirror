@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-uim
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.38 2012/08/24 12:02:22 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.39 2013/05/10 07:25:32 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> -scim-uim-0.2.0-r1.ebuild:
+  Remove version with unsatisfiable deps
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> scim-uim-0.2.0-r2.ebuild:
   ppc stable (bug 421425).

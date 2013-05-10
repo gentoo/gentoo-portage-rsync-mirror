@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintaners</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>nikoli@lavabit.com</email>
 		<name>Nikoli</name>
