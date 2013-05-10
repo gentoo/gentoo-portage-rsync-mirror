@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>redhatter@gentoo.org</email>
-		<name>Stuart Longland</name>
-	</maintainer>
-	<maintainer>
 		<email>tomjbe@gentoo.org</email>
 		<name>Thomas Beierlein</name>
 	</maintainer>
