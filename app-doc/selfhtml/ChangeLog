@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/selfhtml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.19 2010/10/19 09:09:18 leio Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.20 2013/05/10 06:31:57 patrick Exp $
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> selfhtml-8.1.2.ebuild:
+  Quoting
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> selfhtml-8.1.2.ebuild:
   Drop to ~mips
@@ -58,4 +61,3 @@
   08 Mar 2004; Lars Weiler <pylon@gentoo.org> metadata.xml,
   selfhtml-8.0-r1.ebuild:
   SELFHTML 8.0 with errata-pack 1 (therefore the initial ebuild is named -r1)
-
