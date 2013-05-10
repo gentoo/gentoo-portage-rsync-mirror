@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.23 2013/04/30 05:36:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.24 2013/05/10 22:03:30 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -820,11 +820,11 @@ python_doheader() {
 }
 
 # @FUNCTION: python_wrapper_setup
-# @USAGE: <path> [<impl>]
+# @USAGE: [<path> [<impl>]]
 # @DESCRIPTION:
 # Create proper 'python' executable and pkg-config wrappers
 # (if available) in the directory named by <path>. Set up PATH
-# and PKG_CONFIG_PATH appropriately.
+# and PKG_CONFIG_PATH appropriately. <path> defaults to ${T}/${EPYTHON}.
 #
 # The wrappers will be created for implementation named by <impl>,
 # or for one named by ${EPYTHON} if no <impl> passed.
@@ -836,7 +836,7 @@ python_doheader() {
 python_wrapper_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local workdir=${1}
+	local workdir=${1:-${T}/${EPYTHON}}
 	local impl=${2:-${EPYTHON}}
 
 	[[ ${workdir} ]] || die "${FUNCNAME}: no workdir specified."

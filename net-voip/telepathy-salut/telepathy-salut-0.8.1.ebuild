@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.11 2013/04/01 18:25:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.12 2013/05/10 22:08:59 eva Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -26,7 +26,7 @@ RDEPEND="
 	net-libs/libsoup:2.4
 	sys-apps/util-linux
 	gnutls? ( >=net-libs/gnutls-2.10.2 )
-	!gnutls? ( >=dev-libs/openssl-0.9.8g )
+	!gnutls? ( >=dev-libs/openssl-0.9.8g[-bindist] )
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}

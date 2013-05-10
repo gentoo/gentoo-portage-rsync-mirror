@@ -11,5 +11,5 @@ REQUIRED_USE=hvm? ( qemu )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://bits.xensource.com/oss-xen/release/4.2.1/xen-4.2.1.tar.gz http://dev.gentoo.org/~idella4/tarballs/ipxe.tar.gz http://dev.gentoo.org/~idella4/tarballs/seabios-0-20121121.tar.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	b4f112abff5d77f982f83e1a9e554093	python-utils-r1	345dcecf1ef156d1d86a98f16d3c385c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	432ebc09c192bb4c808568896d6145d2	python-utils-r1	9fc80a4f06f33ede447b5647fddca301	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b94b64fe5cfcee918a4dec1541f5f41a

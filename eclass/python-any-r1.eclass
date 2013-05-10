@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.10 2013/04/30 05:34:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.11 2013/05/10 22:03:30 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -216,7 +216,7 @@ python-any-r1_pkg_setup() {
 	if [[ ${EPYTHON} ]]; then
 		if _python_EPYTHON_supported "${EPYTHON}"; then
 			python_export EPYTHON PYTHON
-			python_wrapper_setup "${T}"
+			python_wrapper_setup
 			return
 		fi
 	fi
@@ -231,7 +231,7 @@ python-any-r1_pkg_setup() {
 			break
 		elif _python_EPYTHON_supported "${i}"; then
 			python_export "${i}" EPYTHON PYTHON
-			python_wrapper_setup "${T}"
+			python_wrapper_setup
 			return
 		fi
 	done
@@ -247,7 +247,7 @@ python-any-r1_pkg_setup() {
 	for i in "${rev_impls[@]}"; do
 		python_export "${i}" EPYTHON PYTHON
 		if _python_EPYTHON_supported "${EPYTHON}"; then
-			python_wrapper_setup "${T}"
+			python_wrapper_setup
 			return
 		fi
 	done

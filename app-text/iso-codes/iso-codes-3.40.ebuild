@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-3.40.ebuild,v 1.11 2013/04/09 16:40:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-3.40.ebuild,v 1.12 2013/05/10 22:14:20 eva Exp $
 
 EAPI="5"
 
@@ -25,6 +25,8 @@ src_prepare() {
 	local linguas_bak=${LINGUAS}
 	local mylinguas=""
 
+	[[ -z ${LINGUAS} ]] && return
+
 	for norm in iso_15924 iso_3166 iso_3166_2 iso_4217 iso_639 iso_639_3; do
 		einfo "Preparing ${norm}"
 
@@ -36,11 +38,9 @@ src_prepare() {
 			mylinguas="${mylinguas} ${loc}.po"
 		done
 
-		if [ -n "${mylinguas}" ]; then
-			sed -e "s:pofiles =.*:pofiles = ${mylinguas}:" \
-				-e "s:mofiles =.*:mofiles = ${mylinguas//.po/.mo}:" \
-				-i "${S}/${norm}/Makefile.am" "${S}/${norm}/Makefile.in" \
-				|| die "sed in ${norm} folder failed"
-		fi
+		sed -e "s:pofiles =.*:pofiles = ${mylinguas} ${NULL}:" \
+			-e "s:mofiles =.*:mofiles = ${mylinguas//.po/.mo} ${NULL}:" \
+			-i "${S}/${norm}/Makefile.am" "${S}/${norm}/Makefile.in" \
+			|| die "sed in ${norm} folder failed"
 	done
 }

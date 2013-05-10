@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.53 2013/04/07 17:02:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.54 2013/05/10 22:03:30 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -639,7 +639,7 @@ _python_multibuild_wrapper() {
 	local -x EPYTHON PYTHON
 	local -x PATH=${PATH} PKG_CONFIG_PATH=${PKG_CONFIG_PATH}
 	python_export "${MULTIBUILD_VARIANT}" EPYTHON PYTHON
-	python_wrapper_setup "${T}/${EPYTHON}"
+	python_wrapper_setup
 
 	"${@}"
 }
@@ -712,7 +712,7 @@ python_export_best() {
 
 	debug-print "${FUNCNAME}: Best implementation is: ${best}"
 	python_export "${best}" "${@}"
-	python_wrapper_setup "${T}"
+	python_wrapper_setup
 }
 
 # @FUNCTION: python_replicate_script

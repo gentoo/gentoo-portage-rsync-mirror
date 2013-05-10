@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.16.4.ebuild,v 1.9 2013/04/01 18:25:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.16.4.ebuild,v 1.10 2013/05/10 22:07:47 eva Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.30:2
 	dev-libs/libxml2
 
 	gnutls? ( >=net-libs/gnutls-2.10.2 )
-	!gnutls? ( >=dev-libs/openssl-0.9.8g )
+	!gnutls? ( >=dev-libs/openssl-0.9.8g[-bindist] )
 	jingle? ( || ( net-libs/libsoup:2.4[ssl]
 		>=net-libs/libsoup-2.33.1 )
 		>=net-libs/libnice-0.0.11 )

@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-salut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.55 2013/04/01 18:25:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.56 2013/05/10 22:08:59 eva Exp $
+
+  10 May 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -telepathy-salut-0.8.0.ebuild, telepathy-salut-0.8.1.ebuild:
+  Fix openssl requirements, bug #460456.
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> telepathy-salut-0.8.1.ebuild:
   Stable for sparc, wrt bug #458984

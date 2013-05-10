@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.817 2013/05/09 03:03:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.818 2013/05/10 22:03:30 mgorny Exp $
+
+  10 May 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
+  python-r1.eclass, python-single-r1.eclass, python-utils-r1.eclass:
+  Consistently create ${EPYTHON} subdir for Python wrappers. Fixes conflict
+  between Python & vala wrappers, bug #469312.
 
   09 May 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Drop support for graphite in 4.4/4.5 due to incompatibilities with newer ppl

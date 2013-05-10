@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.16 2013/04/07 17:02:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.17 2013/05/10 22:03:30 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -207,7 +207,7 @@ python-single-r1_pkg_setup() {
 			fi
 
 			python_export "${impl}" EPYTHON PYTHON
-			python_wrapper_setup "${T}"
+			python_wrapper_setup
 		fi
 	done
 
