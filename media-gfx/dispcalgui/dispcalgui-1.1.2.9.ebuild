@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/dispcalgui-1.1.2.9.ebuild,v 1.1 2012/12/14 11:57:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/dispcalgui-1.1.2.9.ebuild,v 1.2 2013/05/10 23:31:00 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -22,7 +22,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-gfx/argyllcms-1.1.0
-	>=dev-python/wxpython-2.8.10.1
+	dev-python/wxpython:2.8
+	!dev-python/wxpython:2.9
 	>=x11-libs/libX11-1.3.3
 	>=x11-apps/xrandr-1.3.2
 	>=x11-libs/libXxf86vm-1.1.0
@@ -58,7 +59,7 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 	#remove udev files
-	rm "${D}"/etc/udev/rules.d/55-Argyll.rules || die
+	rm -rf "${D}"/etc/udev/rules.d
 }
 
 pkg_postinst() {
