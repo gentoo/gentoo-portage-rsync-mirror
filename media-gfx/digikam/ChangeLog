@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.243 2013/05/11 10:37:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.244 2013/05/11 13:02:08 dilfridge Exp $
+
+*digikam-3.2.0_beta2 (11 May 2013)
+
+  11 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +digikam-3.2.0_beta2.ebuild:
+  Add beta version (without keywords)
 
   11 May 2013; Andreas K. Huettel <dilfridge@gentoo.org> digikam-3.1.0.ebuild:
   Remove dependency on kde-base/solid since digikam only uses libsolid from
