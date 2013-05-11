@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/deepseq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/ChangeLog,v 1.15 2013/04/03 10:21:59 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/ChangeLog,v 1.16 2013/05/11 18:50:54 slyfox Exp $
+
+  11 May 2013; Sergei Trofimovich <slyfox@gentoo.org> deepseq-1.3.0.1.ebuild:
+  Restore keywords for deepseq as ghc-7.6 is in the tree.
 
   03 Apr 2013; Mark Wright <gienah@gentoo.org> deepseq-1.3.0.1.ebuild:
   ghc 7.7 head is using deepseq 1.3.0.2. Change to EAPI=5.

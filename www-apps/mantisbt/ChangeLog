@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.120 2013/03/06 04:24:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.121 2013/05/11 18:59:14 pva Exp $
+
+*mantisbt-1.2.15 (11 May 2013)
+
+  11 May 2013; Peter Volkov <pva@gentoo.org> +mantisbt-1.2.15.ebuild,
+  metadata.xml:
+  Version bump. Drop use of system ezc libraries, bug #432230 wrt Ole Markus
+  With. Fixes number of security issues reported in bug #443106.
 
 *mantisbt-1.2.12 (06 Mar 2013)
 

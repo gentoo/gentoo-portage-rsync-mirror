@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.2 2013/01/15 02:41:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.5 2013/05/11 18:45:24 ssuominen Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2:2.7"
-inherit autotools eutils python
-if [[ ${PV} == "9999"* ]] ; then
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
+inherit autotools eutils python-r1
+if [[ ${PV} == 9999* ]] ; then
 	EGIT_REPO_URI="git://github.com/yasm/yasm.git"
 	inherit git-2
 else
@@ -22,30 +22,36 @@ IUSE="nls python"
 
 RDEPEND="nls? ( virtual/libintl )"
 DEPEND="nls? ( sys-devel/gettext )
-	python? ( >=dev-python/cython-0.14 )"
+	python? (
+		${PYTHON_DEPS}
+		>=dev-python/cython-0.14[${PYTHON_USEDEP}]
+		)"
+if [[ ${PV} == 9999* ]]; then
+	DEPEND="${DEPEND} ${PYTHON_DEPS} app-text/xmlto app-text/docbook-xml-dtd:4.1.2"
+fi
 
 DOCS=( AUTHORS )
 
-pkg_setup() {
-	# Python is required for generating x86insns.c, see
-	# modules/arch/x86/Makefile.inc for more details.
-	if use python || [[ ${PV} == "9999" ]] ; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
 src_prepare() {
+	if ! [[ ${PV} == 9999* ]]; then
+		sed -i -e 's:xmlto:&dIsAbLe:' configure.ac || die #459940
+	fi
 	# ksh doesn't grok $(xxx), makes aclocal fail
 	sed -i -e '1c\#!/usr/bin/env sh' YASM-VERSION-GEN.sh || die
 	eautoreconf
 
-	if [[ ${PV} == "9999" ]] ; then
+	if [[ ${PV} == 9999* ]]; then
 		./modules/arch/x86/gen_x86_insn.py || die
 	fi
 }
 
 src_configure() {
+	if [[ ${PV} == 9999* ]]; then
+		python_export_best
+	else
+		use python && python_export_best
+	fi
+
 	econf \
 		--disable-warnerror \
 		$(use_enable python) \
