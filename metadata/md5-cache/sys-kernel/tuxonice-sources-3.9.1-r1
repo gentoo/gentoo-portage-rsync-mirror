@@ -9,7 +9,7 @@ LICENSE=GPL-2 freedist
 PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=>=sys-apps/tuxonice-userui-1.0 || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
-SLOT=3.9.1
-SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.9.tar.xz mirror://gentoo/genpatches-3.9-3.base.tar.xz mirror://gentoo/genpatches-3.9-3.extras.tar.xz http://tuxonice.net/downloads/all/tuxonice-for-linux-3.9-1-2013-05-09.patch.bz2
+SLOT=3.9.1-r1
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.9.tar.xz mirror://gentoo/genpatches-3.9-4.base.tar.xz mirror://gentoo/genpatches-3.9-4.extras.tar.xz http://tuxonice.net/downloads/all/tuxonice-for-linux-3.9-1-2013-05-09.patch.bz2
 _eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	kernel-2	353d0aef1046938e432ba587875e2027	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=f3c81c1acec02929ed63d82159fe5b60
+_md5_=b037af957627fd2d42dc2975f3585b94
