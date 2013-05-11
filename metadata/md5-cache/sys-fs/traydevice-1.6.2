@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
-DEPEND=app-text/docbook2X =dev-lang/python-2*
+DEPEND=app-text/docbook2X || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 DESCRIPTION=A little desktop application displaying systray icon for UDisks
 EAPI=5
 HOMEPAGE=http://savannah.nongnu.org/projects/traydevice/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=dev-python/dbus-python dev-python/lxml dev-python/pyxdg sys-fs/udisks:2 =dev-lang/python-2*
+RDEPEND=dev-python/dbus-python dev-python/lxml dev-python/pyxdg sys-fs/udisks:2 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=mirror://nongnu/traydevice/traydevice-1.6.2.tar.gz
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=361dd38203866790998f8cbb7501d9cf
+_md5_=b106e77e773338e07ff9460872775df6

@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4-r2.ebuild,v 1.6 2013/02/02 22:23:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.5.ebuild,v 1.2 2013/05/11 22:00:19 ssuominen Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2:2.7"
-inherit autotools eutils python
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit eutils python-r1 multilib
 
 DESCRIPTION="Support library to communicate with Apple iPhone/iPod Touch devices"
 HOMEPAGE="http://www.libimobiledevice.org/"
 SRC_URI="http://www.libimobiledevice.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+SLOT="0/4"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="gnutls python"
 
-RDEPEND=">=app-pda/libplist-1.8-r1[python?]
+RDEPEND=">=app-pda/libplist-1.10[python?,${PYTHON_USEDEP}]
 	>=app-pda/usbmuxd-1.0.8
 	gnutls? (
 		dev-libs/libgcrypt
@@ -25,34 +25,28 @@ RDEPEND=">=app-pda/libplist-1.8-r1[python?]
 	!gnutls? ( dev-libs/openssl:0 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	python? ( >=dev-python/cython-0.14.1-r1 )"
+	python? (
+		${PYTHON_DEPS}
+		>=dev-python/cython-0.17[${PYTHON_USEDEP}]
+		)"
 
-DOCS="AUTHORS NEWS README"
+DOCS=( AUTHORS NEWS README )
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
+	# Prevent linking to the installed copy
+	if has_version "<${CATEGORY}/${P}"; then
+		rm -f "${EROOT}"/usr/$(get_libdir)/${PN}$(get_libname)
 	fi
 }
 
-src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-cython.patch \
-		"${FILESDIR}"/${P}-openssl.patch \
-		"${FILESDIR}"/${P}-HOME-segfault.patch
-
-	eautoreconf
-
-	>py-compile
-}
-
 src_configure() {
-	local myconf='--disable-static'
-	use python || myconf+=' --without-cython'
-	use gnutls && myconf+=' --disable-openssl'
+	use python && python_export_best
 
-	econf ${myconf}
+	local myconf
+	use gnutls && myconf='--disable-openssl'
+	use python || myconf+=' --without-cython'
+
+	econf --disable-static ${myconf}
 }
 
 src_install() {
