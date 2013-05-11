@@ -1,23 +1,23 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/remind-03.01.10.ebuild,v 1.2 2012/07/29 17:18:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/remind-03.01.13.ebuild,v 1.1 2013/05/11 16:47:28 jer Exp $
 
-MY_P=${P/_beta/-BETA-}
-S=${WORKDIR}/${MY_P}
+EAPI=5
 
 DESCRIPTION="Ridiculously functional reminder program"
 HOMEPAGE="http://www.roaringpenguin.com/products/remind"
-SRC_URI="http://www.roaringpenguin.com/files/download/${MY_P}.tar.gz"
+SRC_URI="http://www.roaringpenguin.com/files/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="tk"
 
 RDEPEND="tk? ( dev-lang/tk dev-tcltk/tcllib )"
 
-src_unpack() {
-	unpack ${A}
+DOCS="docs/WHATSNEW examples/defs.rem www/README.*"
+
+src_prepare() {
 	sed -i 's:$(MAKE) install:&-nostripped:' "${S}"/Makefile || die
 }
 
@@ -26,14 +26,12 @@ src_test() {
 		ewarn "Testing fails if run as root. Skipping tests."
 		return
 	fi
-	make test || die
+	emake test
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dobin www/rem2html || die "dobin failed"
-
-	dodoc docs/WHATSNEW examples/defs.rem www/README.* || die "dodoc failed"
+	default
+	dobin www/rem2html
 
 	if ! use tk ; then
 		rm "${D}"/usr/bin/tkremind "${D}"/usr/share/man/man1/tkremind* \
