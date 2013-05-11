@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkhotkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.17 2013/03/03 15:44:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.18 2013/05/11 04:11:16 patrick Exp $
+
+  11 May 2013; Patrick Lauer <patrick@gentoo.org> gtkhotkey-0.2.1.ebuild:
+  Fixing inherit
 
   03 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop to maintainer-needed as talked with him
