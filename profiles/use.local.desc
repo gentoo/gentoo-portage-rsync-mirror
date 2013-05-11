@@ -1717,6 +1717,7 @@ dev-python/django-tastypie:lxml - An optional serialiser dev-python/lxml
 dev-python/django-tastypie:oauth - Adds OAuth authentication support
 dev-python/django-tastypie:yaml - An optional serialiser dev-python/yaml
 dev-python/docutils:glep - Install support for GLEPs
+dev-python/falcon:cython - Build cython-based python modules
 dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
 dev-python/ipython:mongodb - Enable support for MongoDB via dev-python/pymongo
