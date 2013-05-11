@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999-r1.ebuild,v 1.5 2013/05/11 10:31:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999-r1.ebuild,v 1.6 2013/05/11 11:47:47 dilfridge Exp $
 
 EAPI=5
 
@@ -41,11 +41,6 @@ RDEPEND="
 	zeroconf? ( net-dns/avahi )
 "
 DEPEND="${RDEPEND}"
-
-PATCHES=(
-	"${FILESDIR}/${PN}-1.0.29-openrc.patch"
-	"${FILESDIR}/${PN}-1.0.30-noavahi.patch"
-)
 
 src_prepare() {
 	base_src_prepare
@@ -92,16 +87,14 @@ src_install() {
 
 	prune_libtool_files --all
 
-	use zeroconf && newinitd "${FILESDIR}"/cups-browsed.init.d cups-browsed
-	use zeroconf && systemd_dounit "${FILESDIR}/cups-browsed.service"
+	newinitd "${FILESDIR}"/cups-browsed.init.d cups-browsed
+	systemd_dounit "${FILESDIR}/cups-browsed.service"
 }
 
 pkg_postinst() {
 	perl-module_pkg_postinst
 
-	if use zeroconf; then
-		elog "This version of cups-filters includes cups-browsed, a daemon that autodiscovers"
-		elog "remote queues via avahi and adds them to your cups configuration. You may want"
-		elog "to add it to your default runlevel. Not much tested so far, though."
-	fi
+	elog "This version of cups-filters includes cups-browsed, a daemon that autodiscovers"
+	elog "remote queues via avahi or cups-1.5 browsing protocol and adds them to your cups"
+	elog "configuration. You may want to add it to your default runlevel."
 }

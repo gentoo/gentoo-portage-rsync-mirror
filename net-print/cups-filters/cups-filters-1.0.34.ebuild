@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.30.ebuild,v 1.4 2013/04/25 09:47:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.34.ebuild,v 1.1 2013/05/11 11:47:47 dilfridge Exp $
 
 EAPI=5
 
 GENTOO_DEPEND_ON_PERL=no
 
-inherit base eutils perl-module autotools
+inherit base eutils perl-module autotools systemd
 
 if [[ "${PV}" == "9999" ]] ; then
 	inherit bzr
@@ -42,11 +42,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-1.0.29-openrc.patch"
-	"${FILESDIR}/${PN}-1.0.30-noavahi.patch"
-)
-
 src_prepare() {
 	base_src_prepare
 	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
@@ -64,6 +59,8 @@ src_configure() {
 		$(use_with jpeg) \
 		$(use_with png) \
 		$(use_with tiff) \
+		--with-rcdir=no \
+ 		--with-browseremoteprotocols=DNSSD,CUPS \
 		--without-php
 }
 
@@ -90,15 +87,14 @@ src_install() {
 
 	prune_libtool_files --all
 
-	use zeroconf && newinitd "${FILESDIR}"/cups-browsed.init.d cups-browsed
+	newinitd "${FILESDIR}"/cups-browsed.init.d cups-browsed
+	systemd_dounit "${FILESDIR}/cups-browsed.service"
 }
 
 pkg_postinst() {
 	perl-module_pkg_postinst
 
-	if use zeroconf; then
-		elog "This version of cups-filters includes cups-browsed, a daemon that autodiscovers"
-		elog "remote queues via avahi and adds them to your cups configuration. You may want"
-		elog "to add it to your default runlevel. Not much tested so far, though."
-	fi
+	elog "This version of cups-filters includes cups-browsed, a daemon that autodiscovers"
+	elog "remote queues via avahi or cups-1.5 browsing protocol and adds them to your cups"
+	elog "configuration. You may want to add it to your default runlevel."
 }
