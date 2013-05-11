@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/apricots
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/ChangeLog,v 1.17 2011/06/01 15:05:41 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/ChangeLog,v 1.18 2013/05/11 05:16:44 mr_bones_ Exp $
+
+  11 May 2013; Michael Sterrett <mr_bones_@gentoo.org> apricots-0.2.6-r1.ebuild:
+  EAPI=5; tidy
 
   01 Jun 2011; Tupone Alfredo <tupone@gentoo.org> apricots-0.2.6-r1.ebuild:
   Fix build with gcc-4.6 Bug #369121 by Diego Elio Pettenò
@@ -65,4 +68,3 @@
   19 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +apricots-0.2.6.ebuild:
   initial commit - ebuild submitted by Greg Watson via bug #64325
-
