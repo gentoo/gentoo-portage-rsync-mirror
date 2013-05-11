@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/notion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/ChangeLog,v 1.5 2013/04/09 06:49:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/ChangeLog,v 1.6 2013/05/11 07:55:07 patrick Exp $
+
+  11 May 2013; Patrick Lauer <patrick@gentoo.org> notion-3_p2013030200.ebuild,
+  notion-9999.ebuild:
+  Fix inherit
 
 *notion-3_p2013030200 (09 Apr 2013)
 

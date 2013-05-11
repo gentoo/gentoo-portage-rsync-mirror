@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-9999.ebuild,v 1.5 2012/10/08 12:34:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-9999.ebuild,v 1.6 2013/05/11 07:55:07 patrick Exp $
 
 EAPI="4"
 
 EGIT_REPO_URI="git://notion.git.sourceforge.net/gitroot/notion/notion"
 EGIT_HAS_SUBMODULES="1"
 
-inherit eutils git-2 toolchain-funcs
+inherit eutils git-2 toolchain-funcs multilib
 
 DESCRIPTION="Notion is a tiling, tabbed window manager for the X window system"
 HOMEPAGE="http://notion.sourceforge.net"

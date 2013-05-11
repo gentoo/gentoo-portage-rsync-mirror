@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/echinus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.11 2013/03/17 15:43:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.12 2013/05/11 07:52:59 patrick Exp $
+
+  11 May 2013; Patrick Lauer <patrick@gentoo.org> echinus-0.4.9.ebuild:
+  Fix inherit
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

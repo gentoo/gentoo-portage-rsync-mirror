@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xac
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.15 2009/09/30 15:52:20 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.16 2013/05/11 07:44:07 patrick Exp $
+
+  11 May 2013; Patrick Lauer <patrick@gentoo.org> xac-0.6_pre4.ebuild:
+  Fix inherit
 
   30 Sep 2009; Joseph Jezak <josejx@gentoo.org> +files/x86-biosfix.patch,
   -xac-0.6_pre3.ebuild, xac-0.6_pre4.ebuild:
@@ -64,4 +67,3 @@
   24 Aug 2006; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
   +xac-0.5.ebuild:
   Added xac to portage.
-
