@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libkvkontakte
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.28 2013/03/31 16:59:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.29 2013/05/11 13:41:27 dilfridge Exp $
+
+*libkvkontakte-3.2.0_beta2 (11 May 2013)
+
+  11 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkvkontakte-2.9.0.ebuild, +libkvkontakte-3.2.0_beta2.ebuild:
+  Add beta version (without keywords)
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libkvkontakte-3.0.0.ebuild:
   Stable for x86, wrt bug #462890

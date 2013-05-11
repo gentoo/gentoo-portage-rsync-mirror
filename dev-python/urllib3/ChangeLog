@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.6 2013/05/09 17:20:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.7 2013/05/11 13:55:43 idella4 Exp $
+
+  11 May 2013; Ian Delaney <idella4@gentoo.org> urllib3-1.6.ebuild:
+  delete stray 'local test'
 
 *urllib3-1.6 (09 May 2013)
 

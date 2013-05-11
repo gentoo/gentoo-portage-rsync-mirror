@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-9999.ebuild,v 1.4 2013/03/09 18:13:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-9999.ebuild,v 1.5 2013/05/11 13:56:33 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS=""
 SLOT="0"
 IUSE="debug doc"
 
-DEPEND=">=dev-util/premake-4.3
+DEPEND="dev-util/premake:4
 	doc? ( app-doc/doxygen )"
 RDEPEND=""
 
