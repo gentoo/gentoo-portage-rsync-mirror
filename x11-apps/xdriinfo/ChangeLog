@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdriinfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.56 2012/05/15 14:20:21 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.57 2013/05/11 03:45:07 patrick Exp $
+
+  11 May 2013; Patrick Lauer <patrick@gentoo.org> xdriinfo-1.0.4.ebuild:
+  Fix inherit
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xdriinfo-1.0.4.ebuild:
   keyword ~amd64-fbsd
@@ -217,4 +220,3 @@
   09 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   +xdriinfo-0.99.0_pre20050908.ebuild:
   Initial snapshot for modular x.
-
