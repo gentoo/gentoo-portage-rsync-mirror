@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.31 2013/05/05 07:09:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.32 2013/05/11 22:16:12 dilfridge Exp $
 
 EAPI=5
 
@@ -160,11 +160,11 @@ src_configure() {
 	fi
 
 	econf \
-		--libdir=/usr/$(get_libdir) \
-		--localstatedir=/var \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--localstatedir="${EPREFIX}"/var \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
-		--with-docdir=/usr/share/cups/html \
+		--with-docdir="${EPREFIX}"/usr/share/cups/html \
 		--with-languages="${LINGUAS}" \
 		--with-system-groups=lpadmin \
 		$(use_enable acl) \
@@ -189,9 +189,9 @@ src_configure() {
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that
 	# makes more sense when facing multilib support.
-	sed -i -e 's:SERVERBIN.*:SERVERBIN = "$(BUILDROOT)"/usr/libexec/cups:' Makedefs || die
-	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "/usr/libexec/cups":' config.h || die
-	sed -i -e 's:cups_serverbin=.*:cups_serverbin=/usr/libexec/cups:' cups-config || die
+	sed -i -e 's:SERVERBIN.*:SERVERBIN = "$(BUILDROOT)${EPREFIX}"/usr/libexec/cups:' Makedefs || die
+	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "${EPREFIX}/usr/libexec/cups":' config.h || die
+	sed -i -e 's:cups_serverbin=.*:cups_serverbin=${EPREFIX}/usr/libexec/cups:' cups-config || die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.77 2013/04/15 08:51:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.78 2013/05/11 22:08:31 ssuominen Exp $
+
+  11 May 2013; Samuli Suominen <ssuominen@gentoo.org> clementine-1.1.1.ebuild:
+  Use subslot operator for the libplist and libimobiledevice dependencies.
 
   15 Apr 2013; Agostino Sarubbo <ago@gentoo.org> clementine-1.1.1.ebuild:
   Stable for x86, wrt bug #455314

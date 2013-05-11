@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.1.2.ebuild,v 1.3 2012/08/16 22:03:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.1.2.ebuild,v 1.4 2013/05/11 22:05:54 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Mount Apple iPhone/iPod Touch file systems for backup purposes"
 HOMEPAGE="http://www.libimobiledevice.org/"
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND=">=app-pda/libimobiledevice-1.1.4
-	>=app-pda/libplist-1.8
+RDEPEND=">=app-pda/libimobiledevice-1.1.4:=
+	>=app-pda/libplist-1.8:=
 	>=sys-fs/fuse-2.7.0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

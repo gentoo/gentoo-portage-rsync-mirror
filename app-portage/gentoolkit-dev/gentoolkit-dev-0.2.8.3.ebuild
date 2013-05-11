@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.8.2.ebuild,v 1.2 2013/05/10 22:54:23 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.8.3.ebuild,v 1.1 2013/05/11 22:02:22 idl0r Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ RDEPEND="sys-apps/portage
 	sys-apps/diffutils"
 
 src_prepare() {
-	epatch "${FILESDIR}/echangelog_test.patch"
+	epatch "${FILESDIR}/${P}-tests.patch"
 }
 
 src_test() {

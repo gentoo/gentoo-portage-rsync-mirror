@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.9 2013/02/03 16:34:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.10 2013/05/11 22:04:47 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="python? 2:2.6"
+PYTHON_DEPEND="python? 2:2.7"
 
 inherit eutils mono python toolchain-funcs
 
@@ -17,13 +17,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="+gtk python +udev ios mono static-libs"
 
-RDEPEND=">=app-pda/libplist-1.0
+RDEPEND=">=app-pda/libplist-1.0:=
 	>=dev-db/sqlite-3
 	>=dev-libs/glib-2.16:2
 	dev-libs/libxml2
 	sys-apps/sg3_utils
 	gtk? ( x11-libs/gdk-pixbuf:2 )
-	ios? ( app-pda/libimobiledevice )
+	ios? ( app-pda/libimobiledevice:= )
 	python? (
 		>=media-libs/mutagen-1.8
 		>=dev-python/pygobject-2.8:2

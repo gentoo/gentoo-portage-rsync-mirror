@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ideviceinstaller/ideviceinstaller-1.0.1.ebuild,v 1.3 2012/08/16 22:01:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ideviceinstaller/ideviceinstaller-1.0.1.ebuild,v 1.4 2013/05/11 22:07:17 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="A tool to interact with the installation_proxy of an Apple's iDevice"
 HOMEPAGE="http://www.libimobiledevice.org/"
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND=">=app-pda/libimobiledevice-1.1.4
-	>=app-pda/libplist-1.8
+RDEPEND=">=app-pda/libimobiledevice-1.1.4:=
+	>=app-pda/libplist-1.8:=
 	>=dev-libs/libzip-0.8"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

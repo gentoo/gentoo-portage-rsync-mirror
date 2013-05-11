@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.19.ebuild,v 1.9 2013/02/06 19:40:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.19.ebuild,v 1.10 2013/05/11 22:04:28 ssuominen Exp $
 
 EAPI=5
 
@@ -27,8 +27,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 		virtual/libusb:1
 		virtual/udev[gudev]
 		ios? (
-			>=app-pda/libimobiledevice-1
-			>=app-pda/libplist-1
+			>=app-pda/libimobiledevice-1:=
+			>=app-pda/libplist-1:=
 			)
 		)
 	systemd? ( sys-apps/systemd )"

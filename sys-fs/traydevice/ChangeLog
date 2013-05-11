@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/traydevice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/ChangeLog,v 1.9 2013/05/11 21:44:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/ChangeLog,v 1.12 2013/05/11 22:30:19 ssuominen Exp $
+
+  11 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  traydevice-1.6.2-r1.ebuild:
+  Punt duplicate documentation files. Use DISTUTILS_SINGLE_IMPL=1.
+
+*traydevice-1.6.2-r1 (11 May 2013)
+
+  11 May 2013; Mike Gilbert <floppym@gentoo.org> +traydevice-1.6.2-r1.ebuild:
+  Convert to distutils-r1.
 
   11 May 2013; Mike Gilbert <floppym@gentoo.org> traydevice-1.6.2.ebuild:
   Restrict python2.5.

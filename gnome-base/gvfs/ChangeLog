@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.217 2013/05/05 12:13:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.218 2013/05/11 22:03:26 ssuominen Exp $
+
+  11 May 2013; Samuli Suominen <ssuominen@gentoo.org> gvfs-1.14.2.ebuild,
+  gvfs-1.16.1.ebuild:
+  Use subslot operator for the libplist and libimobiledevice dependencies.
 
   05 May 2013; Justin Lecher <jlec@gentoo.org> gvfs-1.14.2.ebuild,
   gvfs-1.16.1.ebuild:

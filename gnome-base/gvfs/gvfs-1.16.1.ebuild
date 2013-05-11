@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.1.ebuild,v 1.3 2013/05/05 12:13:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.1.ebuild,v 1.4 2013/05/11 22:03:26 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -44,8 +44,8 @@ RDEPEND="
 	gtk? ( >=x11-libs/gtk+-3.0:3 )
 	http? ( || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34.0 ) )
 	ios? (
-		>=app-pda/libimobiledevice-1.1.0
-		>=app-pda/libplist-1 )
+		>=app-pda/libimobiledevice-1.1.0:=
+		>=app-pda/libplist-1:= )
 	mtp? ( >=media-libs/libmtp-1.1.5 )
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
 	systemd? ( sys-apps/systemd )
