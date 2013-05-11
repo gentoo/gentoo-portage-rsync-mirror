@@ -6006,10 +6006,6 @@ sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/mips-sources:ip32r10k - Enables experimental support for IP32 R10K kernels (SGI O2, 'Moosehead')
 sys-kernel/mips-sources:odysseydebug - Enables use of the IP30 Odyssey Early Console Hack. FOR DEBUGGING ONLY!
-sys-kernel/mkinitcpio:cryptsetup - Add cryptsetup support
-sys-kernel/mkinitcpio:device-mapper - Add device-mapper support
-sys-kernel/mkinitcpio:dmraid - Add dmraid support
-sys-kernel/mkinitcpio:mdadm - Add mdadm support
 sys-kernel/openvz-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/pf-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/pf-sources:experimental - Apply patches that are considered experimental. For more information, check out the ChangeLog or the ebuild that interests you.

@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>kde</herd>
-  <herd>proxy-maintainers</herd>
   <herd>qt</herd>
   <use>
     <flag name="mpg123">Enable support for mp3 decoding over media-sound/mpg123.</flag>
