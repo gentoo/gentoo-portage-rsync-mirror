@@ -1,31 +1,30 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/iroffer-dinoex-3.28.ebuild,v 1.1 2013/02/08 11:44:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/iroffer-dinoex-3.29.ebuild,v 1.1 2013/05/11 18:10:51 pinkbyte Exp $
 
 EAPI=5
 
 PLOCALES="de en fr it"
+PLOCALE_BACKUP="en"
 
 inherit eutils l10n toolchain-funcs user
 
 DESCRIPTION="IRC fileserver using DCC"
 HOMEPAGE="http://iroffer.dinoex.net/"
-SRC_URI="http://iroffer.dinoex.net/${P}.tar.gz"
+SRC_URI="http://iroffer.dinoex.net/${P}.tar.gz
+	http://iroffer.dinoex.net/HISTORY/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+admin +blowfish curl debug geoip gnutls +http kqueue +memsave ruby ssl +telnet upnp"
+IUSE="+admin +blowfish +chroot curl debug geoip gnutls +http kqueue +memsave ruby ssl +telnet upnp"
 
 REQUIRED_USE="
 	admin? ( http )
 	gnutls? ( ssl )
 "
 
-# Dependency on NSS should be optional, but it causes automagic, so it is hard for now.
-#	chroot? ( dev-libs/nss )
-#	$(usex chroot '' '-no-chroot' '' '')\
-RDEPEND="dev-libs/nss
+RDEPEND="chroot? ( dev-libs/nss )
 	curl? (
 		net-misc/curl[ssl?]
 		gnutls? ( net-misc/curl[curl_ssl_gnutls] )
@@ -44,8 +43,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-config.patch"\
+	epatch "${FILESDIR}/${P}-config.patch"\
 	       "${FILESDIR}/${PN}-Werror.patch"
+	epatch_user
 	l10n_find_plocales_changes "" 'help-admin-' '.txt'
 }
 
@@ -60,6 +60,7 @@ src_configure() {
 		$(usex debug '-profiling' '' '' '')\
 		$(usex debug '-debug' '' '' '')\
 		$(usex geoip '-geoip' '' '' '')\
+		$(usex chroot '' '-no-chroot' '' '')\
 		$(usex curl '-curl' '' '' '' )\
 		$(usex gnutls  '-tls' '' '' '' '')\
 		$(usex upnp '-upnp' '' '' '')\
@@ -75,28 +76,34 @@ src_configure() {
 
 src_compile() {
 	# TODO: default compile targets always include chrooted target, which is not good
-	emake CC="$(tc-getCC)"
+	emake CC="$(tc-getCC)" $(l10n_get_locales)
 }
 
 myloc() {
-	use admin && dodoc help-admin-${1}.txt
+	emake DESTDIR="${D}" install-${1}
+
+	dodoc help-admin-${1}.txt
 	use http && dohtml doc/INSTALL-linux-${1}.html
+
+	insinto /etc/${PN}
+	case ${1} in
+	"de")
+		doins beispiel.config;;
+	"fr")
+		doins exemple.config;;
+	*)
+		doins sample.config;;
+	esac
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README* THANKS TODO
-
-	doman iroffer.1
-	doman xdcc.7
-
 	l10n_for_each_locale_do myloc
+
+	dodoc README* THANKS TODO
+	doman iroffer.1 xdcc.7
 
 	newinitd "${FILESDIR}/${PN}.init" ${PN}
 	newconfd "${FILESDIR}/${PN}.conf" ${PN}
-
-	insinto /etc/${PN}
-	doins sample.config
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${PN}.logrotate" ${PN}

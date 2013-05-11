@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.89 2013/03/29 20:46:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.90 2013/05/11 17:56:43 angelos Exp $
+
+  11 May 2013; Christoph Mende <angelos@gentoo.org> gmpc-11.8.16.ebuild:
+  Add gnome-doc-utils dependency (bug #469278), fix AM_CONFIG_HEADER failure
+  (bug #468976)
 
   29 Mar 2013; Christoph Mende <angelos@gentoo.org>
   +files/gmpc-11.8.16-underlinking.patch, -files/gmpc-0.20.0-underlinking.patch,

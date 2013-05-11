@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.16 2013/03/29 20:53:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.17 2013/05/11 17:33:47 angelos Exp $
 
 EAPI=4
-VALA_MIN_API_VERSION=0.18
+VALA_MIN_API_VERSION=0.20
 
 inherit fdo-mime gnome2-utils git-2 vala
 
@@ -18,13 +18,13 @@ KEYWORDS=""
 IUSE="ayatana +lastfm +lyrics"
 
 RDEPEND="x11-libs/gtk+:3
-	>=dev-libs/glib-2.30:2
+	>=dev-libs/glib-2.34:2
 	gnome-base/librsvg:2
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0
 	media-plugins/gst-plugins-meta:1.0
 	dev-db/sqlite:3
-	media-libs/libtaginfo
+	>=media-libs/libtaginfo-0.1.6
 	x11-libs/cairo
 	x11-libs/libX11
 	ayatana? ( dev-libs/libappindicator:3 )

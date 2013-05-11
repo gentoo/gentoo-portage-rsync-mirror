@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r4.ebuild,v 1.7 2012/09/30 16:26:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r4.ebuild,v 1.8 2013/05/11 17:43:31 angelos Exp $
 
 inherit eutils systemd
 
 DESCRIPTION="Another (RFC1413 compliant) ident daemon"
-HOMEPAGE="http://dev.ojnk.net"
+HOMEPAGE="http://ojnk.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
 
 LICENSE="GPL-2"

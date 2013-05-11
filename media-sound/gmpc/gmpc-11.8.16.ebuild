@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.9 2013/03/29 20:46:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.10 2013/05/11 17:56:43 angelos Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION=0.12
@@ -28,6 +28,7 @@ RDEPEND="dev-db/sqlite:3
 	xspf? ( >=media-libs/libxspf-1.2 )"
 DEPEND="${RDEPEND}
 	$(vala_depend)
+	app-text/gnome-doc-utils
 	>=dev-util/gob-2.0.17
 	virtual/pkgconfig
 	nls? ( dev-util/intltool
@@ -37,6 +38,7 @@ DOCS=( AUTHORS README )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-underlinking.patch
+	sed -i -e "s:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:" configure.ac || die
 	eautoreconf
 	vala_src_prepare
 }
