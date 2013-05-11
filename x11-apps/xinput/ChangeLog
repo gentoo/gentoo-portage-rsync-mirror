@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinput
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.50 2012/08/26 20:14:10 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.51 2013/05/11 03:31:07 patrick Exp $
+
+  11 May 2013; Patrick Lauer <patrick@gentoo.org> -xinput-1.5.3.ebuild:
+  Remove old version with unsatisfiable deps
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xinput-1.6.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #419473
@@ -275,4 +278,3 @@
 
   30 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> xinput-1.2.ebuild:
   Initial import, see bug #10580.
-
