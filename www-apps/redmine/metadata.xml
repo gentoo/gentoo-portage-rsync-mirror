@@ -4,6 +4,10 @@
 <maintainer>
 <email>matsuu@gentoo.org</email>
 </maintainer>
+<maintainer>
+<email>pva@gentoo.org</email>
+<name>Peter Volkov</name>
+</maintainer>
 <longdescription lang="en">
 </longdescription>
 <use>
