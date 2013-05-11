@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-HTML
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.8 2013/02/19 03:48:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.9 2013/05/11 01:36:02 mattst88 Exp $
+
+  11 May 2013; Matt Turner <mattst88@gentoo.org> IO-HTML-0.40.0.ebuild:
+  Added ~mips, bug 437532.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> IO-HTML-0.40.0.ebuild:
   Add ~arm-linux + ~x86-linux keywords.
