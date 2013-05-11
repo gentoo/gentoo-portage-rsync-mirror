@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/fasta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.8 2012/12/10 19:48:44 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.9 2013/05/11 15:39:33 jlec Exp $
+
+*fasta-36.3.5e (11 May 2013)
+
+  11 May 2013; Justin Lecher <jlec@gentoo.org> +fasta-36.3.5e.ebuild,
+  +files/fasta-36.3.5e-ldflags.patch:
+  Version BUmp
 
   10 Dec 2012; Justin Lecher <jlec@gentoo.org> fasta-35.4.10.ebuild,
   metadata.xml:
