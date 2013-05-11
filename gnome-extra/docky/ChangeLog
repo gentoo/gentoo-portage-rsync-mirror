@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/docky
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/ChangeLog,v 1.14 2013/04/10 11:17:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/ChangeLog,v 1.15 2013/05/11 17:23:09 angelos Exp $
+
+*docky-2.2.0 (11 May 2013)
+
+  11 May 2013; Christoph Mende <angelos@gentoo.org> +docky-2.2.0.ebuild:
+  Version bump
 
   10 Apr 2013; Christoph Mende <angelos@gentoo.org> docky-2.1.4.ebuild:
   Remove -warnaserror from MCS_FLAGS (bug #429564)
