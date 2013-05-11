@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.93-r1.ebuild,v 1.1 2013/05/09 18:27:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.93-r2.ebuild,v 1.1 2013/05/11 08:51:24 pacho Exp $
 
 EAPI=5
 inherit eutils
@@ -23,6 +23,7 @@ src_prepare() {
 	# upstream: https://bugs.launchpad.net/ubuntu-themes/+bug/1130183
 	epatch "${FILESDIR}/${P}-gtk3.8-1.patch"
 	epatch "${FILESDIR}/${P}-gtk3.8-2.patch"
+	epatch "${FILESDIR}/${P}-gtk3.8-3.patch"
 
 	cp -r Ambiance/ Ambiance-Gentoo || die
 	cp -r Radiance/ Radiance-Gentoo || die
