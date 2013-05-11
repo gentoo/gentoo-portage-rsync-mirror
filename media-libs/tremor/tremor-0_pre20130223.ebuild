@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20130223.ebuild,v 1.1 2013/02/23 10:02:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20130223.ebuild,v 1.2 2013/05/11 14:38:25 ssuominen Exp $
 
 EAPI=5
 
@@ -24,7 +24,11 @@ DEPEND="${RDEPEND}
 DOCS="CHANGELOG README"
 
 src_prepare() {
-	sed -i -e '/CFLAGS/s:-O2::' configure.in || die
+	sed -i \
+		-e '/CFLAGS/s:-O2::' \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		configure.in || die
+
 	eautoreconf
 }
 
