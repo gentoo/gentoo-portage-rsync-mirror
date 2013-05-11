@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.77 2013/05/10 09:42:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.79 2013/05/11 19:37:07 nimiux Exp $
+
+  11 May 2013; Chema Alonso <nimiux@gentoo.org> -inspircd-2.0.10.ebuild,
+  -inspircd-2.0.10-r1.ebuild, -files/inspircd-2.0.10-fix-path-builds.patch,
+  -files/inspircd-2.0.10-init:
+  Clean old
+
+*inspircd-2.0.12 (11 May 2013)
+
+  11 May 2013; Chema Alonso <nimiux@gentoo.org> +inspircd-2.0.12.ebuild,
+  +files/inspircd-2.0.12-fix-path-builds.patch, +files/inspircd-2.0.12-init:
+  Revision bump
 
   10 May 2013; Agostino Sarubbo <ago@gentoo.org> inspircd-2.0.11.ebuild:
   Stable for x86, wrt bug #469200
