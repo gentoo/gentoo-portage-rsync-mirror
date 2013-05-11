@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/neoengine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/ChangeLog,v 1.19 2011/02/28 18:04:44 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/ChangeLog,v 1.20 2013/05/11 20:06:09 tupone Exp $
+
+  11 May 2013; Tupone Alfredo <tupone@gentoo.org> neoengine-0.8.2-r1.ebuild,
+  +files/neoengine-0.8.2-automake113.patch:
+  Fix build with automake-1.13. Bug #467634 by Ian Stakenvicius
 
   28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
   neoengine-0.8.2-r1.ebuild:
