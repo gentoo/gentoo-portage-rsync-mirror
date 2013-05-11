@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.818 2013/05/10 22:03:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.819 2013/05/11 11:17:58 aballier Exp $
+
+  11 May 2013; Alexis Ballier <aballier@gentoo.org> libtool.eclass:
+  use find to get file permissions instead of chmod --reference which is not
+  portable, bug #468952
 
   10 May 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
   python-r1.eclass, python-single-r1.eclass, python-utils-r1.eclass:

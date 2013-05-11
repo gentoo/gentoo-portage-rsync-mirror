@@ -7,5 +7,5 @@ IUSE=doc
 LICENSE=GPL-2+
 RDEPEND=!app-admin/eselect-news sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) sys-apps/file sys-libs/ncurses
 SLOT=0
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	git-2	e92e09651292b1bef5656592364550f7	libtool	8b8a9f14a61e27099bda586909dad880	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	git-2	e92e09651292b1bef5656592364550f7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=dffc77429f6ad88e9b0c115b82194f86

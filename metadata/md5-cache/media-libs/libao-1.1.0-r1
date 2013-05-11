@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=alsa? ( media-libs/alsa-lib ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio )
 SLOT=0
 SRC_URI=http://downloads.xiph.org/releases/ao/libao-1.1.0.tar.gz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	libtool	8b8a9f14a61e27099bda586909dad880	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f5c6c2cb62bc6334a1eee4c3f321eb2f

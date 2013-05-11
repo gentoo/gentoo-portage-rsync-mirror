@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kosd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/ChangeLog,v 1.8 2012/12/20 17:04:33 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/ChangeLog,v 1.9 2013/05/11 11:16:22 dilfridge Exp $
+
+  11 May 2013; Andreas K. Huettel <dilfridge@gentoo.org> kosd-0.8.1.ebuild:
+  Does not really need solid, only libsolid from kdelibs
 
   20 Dec 2012; Michael Palimaka <kensington@gentoo.org> -kosd-0.7.1.ebuild:
   Remove old.

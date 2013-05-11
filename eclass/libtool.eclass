@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.105 2013/05/07 14:23:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.106 2013/05/11 11:17:58 aballier Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -55,7 +55,9 @@ ELT_try_and_apply_patch() {
 	fi
 
 	# Save file for permission restoration.  `patch` sometimes resets things.
-	cp -p "${file}" "${file}.gentoo.elt"
+	# Ideally we'd want 'stat -c %a', but stat is highly non portable and we are
+	# guaranted to have GNU find, so use that instead.
+	local perms="$(find ${file} -maxdepth 0 -printf '%m')"
 	# We only support patchlevel of 0 - why worry if its static patches?
 	if patch -p0 --dry-run "${file}" "${patch}" >> "${log}" 2>&1 ; then
 		einfo "  Applying ${disp} ..."
@@ -65,8 +67,7 @@ ELT_try_and_apply_patch() {
 	else
 		ret=1
 	fi
-	chmod --reference="${file}.gentoo.elt" "${file}"
-	rm -f "${file}.gentoo.elt"
+	chmod "${perms}" "${file}"
 
 	return "${ret}"
 }
