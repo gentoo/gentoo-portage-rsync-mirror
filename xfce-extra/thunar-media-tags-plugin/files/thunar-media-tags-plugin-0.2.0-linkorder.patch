@@ -1,4 +1,4 @@
-Reported only to Freenode, #xfce-dev for now
+http://bugzilla.xfce.org/show_bug.cgi?id=10080
 
 --- thunar-plugin/Makefile.am
 +++ thunar-plugin/Makefile.am
