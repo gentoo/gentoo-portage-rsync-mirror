@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-441.ebuild,v 1.7 2011/05/01 12:21:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-441.ebuild,v 1.8 2013/05/11 22:50:54 hwoarang Exp $
 
 inherit eutils
 
@@ -43,5 +43,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "lesspipe offers colorization options.  Run 'lesspipe -h' for info."
+	elog "lesspipe offers colorization options.  Run 'lesspipe -h' for info."
 }

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.173 2013/04/29 18:37:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.174 2013/05/11 22:50:54 hwoarang Exp $
+
+  11 May 2013; Markos Chandras <hwoarang@gentoo.org> less-436.ebuild,
+  less-441.ebuild, less-443.ebuild, less-444.ebuild, less-445-r1.ebuild,
+  less-445.ebuild, less-449.ebuild, less-450.ebuild, less-451.ebuild,
+  less-456.ebuild, less-457.ebuild, less-458.ebuild:
+  Replace einfo messages with elog. Bug #448268
 
   29 Apr 2013; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
   Add webm/webp formats.

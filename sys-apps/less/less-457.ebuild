@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-457.ebuild,v 1.14 2013/02/24 18:03:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-457.ebuild,v 1.15 2013/05/11 22:50:54 hwoarang Exp $
 
 EAPI="4"
 
@@ -52,5 +52,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "lesspipe offers colorization options.  Run 'lesspipe -h' for info."
+	elog "lesspipe offers colorization options.  Run 'lesspipe -h' for info."
 }

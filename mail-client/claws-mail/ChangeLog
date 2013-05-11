@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.232 2013/05/11 15:07:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.233 2013/05/11 22:36:23 fauli Exp $
+
+  11 May 2013; Christian Faulhammer <fauli@gentoo.org> claws-mail-3.9.1.ebuild:
+  >=net-libs/libsoup-2.42 replace preceeding net-libs/libsoup-gnome versions,
+  reflect this in DEPEND as reported in bug 469446 by Stefan van den Berg
 
   11 May 2013; Jeroen Roovers <jer@gentoo.org> claws-mail-3.9.1.ebuild:
   Marked ~hppa (bug #468984).
