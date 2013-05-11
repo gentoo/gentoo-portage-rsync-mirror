@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.64 2013/04/21 23:40:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.65 2013/05/11 01:14:12 mattst88 Exp $
+
+  11 May 2013; Matt Turner <mattst88@gentoo.org> linux-firmware-20130421.ebuild,
+  linux-firmware-99999999.ebuild:
+  Added ~alpha and ~mips, bug 457082.
 
 *linux-firmware-20130421 (21 Apr 2013)
 
