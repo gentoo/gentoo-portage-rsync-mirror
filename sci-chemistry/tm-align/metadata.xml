@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-chemistry</herd>
-	<maintainer>
-		<email>jlec@gentoo.org</email>
-	</maintainer>
-	<longdescription>
+  <herd>sci-chemistry</herd>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+  </maintainer>
+  <longdescription>
 TM-align is a computer algorithm for protein structure alignment using dynamic 
 programming and TM-score rotation matrix. An optimal alignment between two 
 proteins, as well as the TM-score, will be reported for each comparison. The 

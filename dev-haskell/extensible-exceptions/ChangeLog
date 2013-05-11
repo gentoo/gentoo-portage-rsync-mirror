@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/extensible-exceptions
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/extensible-exceptions/ChangeLog,v 1.5 2012/12/07 16:32:44 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/extensible-exceptions/ChangeLog,v 1.6 2013/05/11 12:59:51 slyfox Exp $
+
+  11 May 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  extensible-exceptions-0.1.1.4.ebuild:
+  stable on alpha/amd64/ia64/ppc64/sparc/x86 as it's a ghc-7.4.2 core library
+  (also unbreaks stable xmonad: bug #468502)
 
   07 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   extensible-exceptions-0.1.1.4.ebuild:

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/fortran
+DESCRIPTION=Quick & Accurate Structural Alignment
+EAPI=5
+HOMEPAGE=http://zhanglab.ccmb.med.umich.edu/TM-align/
+IUSE=static custom-cflags
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=tm-align
+RDEPEND=virtual/fortran
+SLOT=0
+SRC_URI=http://zhanglab.ccmb.med.umich.edu/TM-align/TMtools20130508.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	bc8bbf26de246f74e2901a3696ad96d6	eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	fortran-2	ea80967500d9deda5468aed13b0bfca8	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=5f072d79ca2bae14c40855a4ba636c6d

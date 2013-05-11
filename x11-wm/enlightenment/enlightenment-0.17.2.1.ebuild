@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.2.1.ebuild,v 1.1 2013/04/11 20:34:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.2.1.ebuild,v 1.2 2013/05/11 12:38:20 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Enlightenment DR17 window manager"
 SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 SLOT="0.17/${PV}"
 
 # The @ is just an anchor to expand from

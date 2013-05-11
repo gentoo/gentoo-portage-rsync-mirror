@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.819 2013/05/11 11:17:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.820 2013/05/11 12:46:32 slyfox Exp $
+
+  11 May 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
+  haskell-cabal.eclass:
+  Added 'ghc-supports-smp' and 'ghc-supports-dynamic-by-default' helpers. Added
+  hint for users to run 'haskell-updater' if configure phase failed.
 
   11 May 2013; Alexis Ballier <aballier@gentoo.org> libtool.eclass:
   use find to get file permissions instead of chmod --reference which is not

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.182 2013/04/11 20:34:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.183 2013/05/11 12:38:20 maekke Exp $
+
+  11 May 2013; Markus Meier <maekke@gentoo.org> enlightenment-0.17.2.1.ebuild:
+  add ~arm, bug #456736
 
 *enlightenment-0.17.2.1 (11 Apr 2013)
 

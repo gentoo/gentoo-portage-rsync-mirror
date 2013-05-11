@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.39 2013/04/28 16:15:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.40 2013/05/11 12:46:32 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@
 #                  on cabal, but still use this eclass (e.g. haskell-updater).
 #   test-suite --  add support for cabal test-suites (introduced in Cabal-1.8)
 
-inherit ghc-package multilib
+inherit eutils ghc-package multilib
 
 # @ECLASS-VARIABLE: CABAL_EXTRA_CONFIGURE_FLAGS
 # @DESCRIPTION:
@@ -242,6 +242,26 @@ cabal-hscolour-haddock() {
 	./setup "$@" --hyperlink-source || die "setup haddock --hyperlink-source failed"
 }
 
+cabal-show-brokens() {
+	# pretty-printer
+	$(ghc-getghcpkg) check 2>&1 \
+		| egrep -v '^Warning: haddock-(html|interfaces): ' \
+		| egrep -v '^Warning: include-dirs: '
+
+	set -- $($(ghc-getghcpkg) check --simple-output)
+	[[ "${#@}" == 0 ]] && return 0
+
+	eerror "Detected broken packages: ${@}"
+
+	die "//==-- Please, run 'haskell-updater' to fix broken packages --==//"
+}
+
+cabal-show-brokens-and-die() {
+	cabal-show-brokens
+
+	die "$@"
+}
+
 cabal-configure() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 
@@ -306,7 +326,7 @@ cabal-configure() {
 
 	if $(ghc-supports-shared-libraries); then
 		# maybe a bit lower
-		if version_is_at_least "7.7.20121114" "$(ghc-version)"; then
+		if $(ghc-supports-dynamic-by-default); then
 			cabalconf="${cabalconf} --enable-shared"
 		fi
 	fi
@@ -325,7 +345,7 @@ cabal-configure() {
 		${CABAL_EXTRA_CONFIGURE_FLAGS} \
 		"$@"
 	echo ./setup "$@"
-	./setup "$@" || die "setup configure failed"
+	./setup "$@" || cabal-show-brokens-and-die "setup configure failed"
 }
 
 cabal-build() {
