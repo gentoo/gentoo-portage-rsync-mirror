@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.1.0.ebuild,v 1.2 2013/04/06 10:14:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.1.0.ebuild,v 1.3 2013/05/11 10:37:02 dilfridge Exp $
 
 EAPI=5
 
@@ -37,7 +37,6 @@ CDEPEND="
 	$(add_kdebase_dep libkexiv2)
 	$(add_kdebase_dep libkipi)
 	$(add_kdebase_dep marble plasma)
-	$(add_kdebase_dep solid)
 	media-libs/jasper
 	media-libs/lcms:0
 	media-libs/lensfun

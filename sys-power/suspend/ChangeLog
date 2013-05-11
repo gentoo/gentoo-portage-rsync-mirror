@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/suspend
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.24 2013/04/30 12:49:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.25 2013/05/11 10:37:43 ago Exp $
+
+  11 May 2013; Agostino Sarubbo <ago@gentoo.org> suspend-1.0.ebuild:
+  Stable for amd64, wrt bug #469386
 
   30 Apr 2013; Michael Weber <xmw@gentoo.org>
   +files/suspend-1.0-automake-1.13.patch, suspend-1.0.ebuild:
