@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.74 2013/04/12 06:22:54 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.75 2013/05/11 09:58:27 alonbl Exp $
+
+*laptop-mode-tools-1.63-r2 (11 May 2013)
+
+  11 May 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/laptop-mode-tools-1.63-killall.patch,
+  +laptop-mode-tools-1.63-r2.ebuild:
+  Do not use killall -g,  bug#463944 thanks to  Murray Campbell
 
   12 Apr 2013; Fabio Erculiani <lxnay@gentoo.org>
   laptop-mode-tools-1.62-r2.ebuild, laptop-mode-tools-1.63.ebuild,
