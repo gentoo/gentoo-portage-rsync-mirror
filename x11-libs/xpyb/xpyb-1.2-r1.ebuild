@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.2-r1.ebuild,v 1.4 2010/07/13 13:45:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.2-r1.ebuild,v 1.5 2013/05/11 07:26:11 patrick Exp $
 
-inherit x-modular
+inherit x-modular autotools
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xcb/xpyb"
 SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
