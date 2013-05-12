@@ -2707,10 +2707,7 @@ mail-mta/qmail-ldap:gencertdaily - Generate SSL certificates daily instead of ho
 mail-mta/qmail-ldap:highvolume - Prepare qmail for high volume servers
 mail-mta/qmail-ldap:rfc2307 - Add support for RFC2307 compliant uid/gid attributes
 mail-mta/qmail-ldap:rfc822 - Add support for RFC822 compliant mail attributes
-mail-mta/qpsmtpd:async - Add deps + support for asynchronous mail reception/processing as well as preforked daemon
 mail-mta/qpsmtpd:postfix - create user with permissions for proper postfix interaction
-mail-mta/ssmtp:maxsysuid - Allow to define a MinUserId
-mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 mail-mta/ssmtp:mta - Install symlinks for sendmail-compatible MTA.
 media-fonts/culmus:ancient - Install ancient semitic scripts
 media-fonts/culmus:fancy - Install fancy fonts
