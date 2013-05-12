@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bzflag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.63 2013/01/02 22:41:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.64 2013/05/12 12:32:27 tupone Exp $
+
+  12 May 2013; Alfredo Tupone <tupone@gentoo.org>
+  files/bzflag-2.4.2-nocxxflags.patch:
+  Works with automake-1.13 Bug #469496 by Kobboi
 
   02 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -bzflag-2.0.16.ebuild,
   -bzflag-2.4.0.ebuild:
