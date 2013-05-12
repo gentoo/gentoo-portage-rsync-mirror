@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/gifsicle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.44 2012/06/29 12:48:17 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.46 2013/05/12 08:56:47 ssuominen Exp $
+
+*gifsicle-1.70 (12 May 2013)
+
+  12 May 2013; Samuli Suominen <ssuominen@gentoo.org> +gifsicle-1.70.ebuild:
+  Version bump wrt #453820 by Agostino Sarubbo. Use LICENSE="clp" for
+  include/lcdf/clp.h and src/clp.c.
+
+  12 May 2013; Samuli Suominen <ssuominen@gentoo.org> -gifsicle-1.64.ebuild:
+  old
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org> gifsicle-1.67.ebuild:
   Marking gifsicle-1.67 ppc for bug 422095
@@ -154,4 +163,3 @@
 
   10 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> gifsicle-1.40.ebuild:
   initial commit (bug 23853)
-

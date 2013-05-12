@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7829 2013/05/12 07:28:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7830 2013/05/12 08:58:49 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 May 2013; Samuli Suominen <ssuominen@gentoo.org> license_groups:
+  Include clp license for media-gfx/gifsicle in MISC-FREE group.
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
   Add vflib to freetype-1 mask
