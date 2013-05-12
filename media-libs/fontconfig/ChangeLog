@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.170 2013/04/29 14:42:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.171 2013/05/12 17:56:03 pacho Exp $
+
+*fontconfig-2.10.92 (12 May 2013)
+
+  12 May 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/fontconfig-2.10.92-automake-1.13.patch,
+  +files/fontconfig-2.10.92-closing-fp.patch,
+  +files/fontconfig-2.10.92-fix-check.patch,
+  +files/fontconfig-2.10.92-fix-woff.patch,
+  +files/fontconfig-2.10.92-ft-face.patch,
+  +files/fontconfig-2.10.92-ft-face2.patch,
+  +files/fontconfig-2.10.92-native-fonts.patch,
+  +files/fontconfig-2.10.92-use-glob.patch, +fontconfig-2.10.92.ebuild:
+  Version bump, also include upstream patches that will be in 2.10.93 and
+  incorporate a fix to bug #466432 making fedora patch not needed.
 
   29 Apr 2013; Michal Gorny <mgorny@gentoo.org> metadata.xml:
   Add multilib@ as the co-maintainer for multilib conversion.
