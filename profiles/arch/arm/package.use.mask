@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.144 2013/05/12 18:05:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.145 2013/05/12 22:24:01 idl0r Exp $
+
+# Christian Ruppert <idl0r@gentoo.org> (13 May 2013)
+# Mask nic3com re bug 454024
+sys-apps/flashrom nic3com
 
 # Markus Meier <maekke@gentoo.org> (11 May 2013)
 # unkeyworded deps for x11-wm/enlightenment

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.7.ebuild,v 1.3 2012/07/11 23:44:53 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.4.0.ebuild,v 1.1 2013/05/12 22:03:21 mschiff Exp $
 
 EAPI=4
 
@@ -15,15 +15,13 @@ SRC_URI="http://www.${PN}.org/files/source/${MY_P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="auditor +curl debug doc eppclient mysql +signer +sqlite test ${PKCS11_IUSE}"
+IUSE="debug doc +mysql +signer sqlite test ${PKCS11_IUSE}"
 
 RDEPEND="
 	dev-lang/perl
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=net-libs/ldns-1.6.12
-	auditor? ( dev-lang/ruby[ssl] >=dev-ruby/dnsruby-1.53 )
-	curl? ( net-misc/curl )
+	net-libs/ldns
 	mysql? (
 		virtual/mysql
 		dev-perl/DBD-mysql
@@ -41,18 +39,17 @@ DEPEND="${RDEPEND}
 		app-text/trang
 	)
 "
-# test? dev-util/cunit # Requires running test DB
 
 REQUIRED_USE="
 	^^ ( mysql sqlite )
 	^^ ( softhsm opensc external-hsm )
-	eppclient? ( curl )
 "
 
 PATCHES=(
 	"${FILESDIR}/${PN}-fix-localstatedir.patch"
-	"${FILESDIR}/${PN}-drop-privileges.patch"
-	"${FILESDIR}/${PN}-use-system-trang.patch"
+	"${FILESDIR}/${PN}-fix-run-dir.patch"
+	"${FILESDIR}/${PN}-drop-privileges-${PV}.patch"
+	"${FILESDIR}/${PN}-use-system-trang-${PV}.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
@@ -107,15 +104,6 @@ check_pkcs11_setup() {
 }
 
 pkg_pretend() {
-	local i
-
-	for i in eppclient mysql; do
-		if use ${i}; then
-			ewarn "Usage of ${i} is considered experimental."
-			ewarn "Do not report bugs against this feature."
-		fi
-	done
-
 	check_pkcs11_setup
 }
 
@@ -133,17 +121,13 @@ src_prepare() {
 }
 
 src_configure() {
-	# $(use_with test cunit "${EPREFIX}/usr/") \
 	econf \
 		--without-cunit \
 		--localstatedir="${EPREFIX}/var/" \
 		--disable-static \
 		--with-database-backend=$(use mysql && echo "mysql")$(use sqlite && echo "sqlite3") \
 		--with-pkcs11-${PKCS11_LIB}=${PKCS11_PATH} \
-		$(use_with curl) \
-		$(use_enable auditor) \
 		$(use_enable debug timeshift) \
-		$(use_enable eppclient) \
 		$(use_enable signer)
 }
 
@@ -165,16 +149,20 @@ src_install() {
 
 	# install update scripts
 	insinto /usr/share/opendnssec
-	use sqlite && doins enforcer/utils/migrate_keyshare_sqlite3.pl
-	use mysql && doins enforcer/utils/migrate_keyshare_mysql.pl
+	if use sqlite; then
+		doins enforcer/utils/migrate_keyshare_sqlite3.pl
+		doins enforcer/utils/migrate_adapters_1.sqlite3
+	fi
+	if use mysql; then
+		doins enforcer/utils/migrate_keyshare_mysql.pl
+		doins enforcer/utils/migrate_adapters_1.mysql
+	fi
 
 	# fix permissions
 	fowners root:opendnssec /etc/opendnssec
-	fowners root:opendnssec /etc/opendnssec/{conf,kasp,zonelist,zonefetch}.xml
-	use eppclient && fowners root:opendnssec /etc/opendnssec/eppclientd.conf
-
+	fowners root:opendnssec /etc/opendnssec/{addns,conf,kasp,zonelist}.xml
 	fowners opendnssec:opendnssec /var/lib/opendnssec/{,signconf,unsigned,signed,tmp}
-	fowners opendnssec:opendnssec /var/run/opendnssec
+	fowners opendnssec:opendnssec /run/opendnssec
 
 	# install conf/init script
 	newinitd "${FILESDIR}"/opendnssec.initd opendnssec
@@ -182,6 +170,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	local v
 	if use softhsm; then
 		elog "Please make sure that you create your softhsm database in a location writeable"
 		elog "by the opendnssec user. You can set its location in /etc/softhsm.conf."
@@ -191,29 +180,28 @@ pkg_postinst() {
 		elog "    chown opendnssec:opendnssec /var/lib/opendnssec/softhsm_slot0.db"
 	fi
 
-	# caution if upgrading to 1.3.7
-	if [[ -d /var/lib/opencryptoki ]]; then
-		ewarn
-		ewarn "WARNING:"
-		ewarn "It seems that you have dev-libs/opencryptoki installed."
-		ewarn "If you are using a Sun Crypto Accelerator 6000 (SCA/6000):"
-		ewarn
-		ewarn "Press Ctrl-C now and read the following upstream message"
-		ewarn "carefully before you continue:"
-		ewarn
-		ewarn "HSM SCA 6000 in combination with OpenCryptoki can return RSA key"
-		ewarn "material with leading zeroes. DNSSEC does not allow leading zeroes"
-		ewarn "in key data. You are affected by this bug if your DNSKEY RDATA e.g."
-		ewarn "begins with 'BAABA'."
-		ewarn "Normal keys begin with e.g. 'AwEAA'."
-		ewarn "OpenDNSSEC will now sanitize incoming data before adding it to the"
-		ewarn "DNSKEY. Do not upgrade to this version if you are affected by the bug."
-		ewarn "You first need to go unsigned, then do the upgrade, and finally sign"
-		ewarn "your zone again. SoftHSM and other HSM:s will not produce data with"
-		ewarn "leading zeroes and the bug will thus not affect you."
-		ewarn
-		echo -n " * "
-		for i in {10..1}; do echo -n "$i "; sleep 1; done
-		echo
-	fi
+	for v in $REPLACING_VERSIONS; do
+		case $v in
+			1.3.*)
+				ewarn ""
+				ewarn "You are upgrading from version 1.3."
+				ewarn ""
+				ewarn "Please be aware of the following:"
+				ewarn "  * OpenDNSSEC now supports both input and output adapters for"
+				ewarn "    AXFR and IXFR in addition to file transfer."
+				ewarn "    -> The zonefetch.xml file has been replaced by addns.xml"
+				ewarn "       to support this enhancement."
+				ewarn "    -> changes to the KASP database mean that a database"
+				ewarn "       migration is required to upgrade to 1.4 from earlier"
+				ewarn "       versions of OpenDNSSEC."
+				ewarn "  * The auditor is no longer supported."
+				ewarn ""
+				ewarn "You can find more information here:"
+				ewarn "  * /usr/share/doc/opendnssec*/MIGRATION*"
+				ewarn "  * https://wiki.opendnssec.org/display/DOCS/Migrating+zone+fetcher+to+DNS+adapters"
+				ewarn "  * https://wiki.opendnssec.org/display/DOCS/Migrating+from+earlier+versions+of+OpenDNSSEC"
+				ewarn ""
+			;;
+		esac
+	done
 }
