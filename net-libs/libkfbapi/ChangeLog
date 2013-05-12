@@ -1,6 +1,6 @@
-# ChangeLog for kde-misc/libkfbapi
+# ChangeLog for net-libs/libkfbapi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/libkfbapi/ChangeLog,v 1.1 2013/02/11 03:39:05 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkfbapi/ChangeLog,v 1.1 2013/05/12 16:43:23 johu Exp $
 
 *libkfbapi-1.0_p20130209 (11 Feb 2013)
 

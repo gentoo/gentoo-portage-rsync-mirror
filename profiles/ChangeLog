@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7834 2013/05/12 15:14:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7835 2013/05/12 16:48:15 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 May 2013; Johannes Huber <johu@gentoo.org> updates/2Q-2013:
+  Move libkfbapi from cat kde-misc to net-libs.
 
   12 May 2013; Ian Delaney <idella4@gentoo.org> package.mask:
   Mask dev-python/blockcanvas, dev-python/etsdevtools,

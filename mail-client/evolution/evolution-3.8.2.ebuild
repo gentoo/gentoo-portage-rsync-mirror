@@ -1,17 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.0.ebuild,v 1.4 2013/04/11 19:14:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.2.ebuild,v 1.1 2013/05/12 16:19:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils flag-o-matic readme.gentoo gnome2 versionator
-
-MY_MAJORV=$(get_version_component_range 1-2)
+inherit eutils flag-o-matic readme.gentoo gnome2
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
-HOMEPAGE="http://projects.gnome.org/evolution/"
+HOMEPAGE="https://live.gnome.org/Evolution http://projects.gnome.org/evolution/"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP"
@@ -25,7 +23,8 @@ PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pi
 
 # glade-3 support is for maintainers only per configure.ac
 # pst is not mature enough and changes API/ABI frequently
-COMMON_DEPEND=">=dev-libs/glib-2.34:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.34:2
 	>=x11-libs/cairo-1.9.15:=[glib]
 	>=x11-libs/gtk+-3.4.0:3
 	>=gnome-base/gnome-desktop-2.91.3:3=
@@ -33,7 +32,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.34:2
 	>=media-libs/libcanberra-0.25[gtk3]
 	>=x11-libs/libnotify-0.7:=
 	>=gnome-extra/evolution-data-server-${PV}:=[gnome-online-accounts?,weather?]
-	=gnome-extra/evolution-data-server-${MY_MAJORV}*
 	>=gnome-extra/gtkhtml-4.5.2:4.0
 	dev-libs/atk
 	>=dev-libs/dbus-glib-0.6
@@ -69,12 +67,14 @@ COMMON_DEPEND=">=dev-libs/glib-2.34:2
 	ssl? (
 		>=dev-libs/nspr-4.6.1:=
 		>=dev-libs/nss-3.11:= )
-	weather? ( >=dev-libs/libgweather-3.5.0:2= )"
+	weather? ( >=dev-libs/libgweather-3.5.0:2= )
+"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40.0
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 # eautoreconf needs:
 #	app-text/yelp-tools
 #	>=gnome-base/gnome-common-2.12
@@ -82,7 +82,8 @@ RDEPEND="${COMMON_DEPEND}
 	bogofilter? ( mail-filter/bogofilter )
 	highlight? ( app-text/highlight )
 	spamassassin? ( mail-filter/spamassassin )
-	!<gnome-extra/evolution-exchange-2.32"
+	!<gnome-extra/evolution-exchange-2.32
+"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="To change the default browser if you are not using GNOME, edit
@@ -111,7 +112,6 @@ src_configure() {
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	# image-inline plugin needs a gtk+:3 gtkimageview, which does not exist yet
 	gnome2_src_configure \
-		--disable-schemas-compile \
 		--without-glade-catalog \
 		--disable-image-inline \
 		--disable-pst-import \

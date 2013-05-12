@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.137 2013/05/03 19:37:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.138 2013/05/12 16:41:10 ssuominen Exp $
+
+  12 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  files/htop-1.0.2-tinfo.patch:
+  Explicit call to PKG_PROG_PKG_CONFIG wrt #469566 by Roman Žilka
 
 *htop-1.0.2-r1 (03 May 2013)
 

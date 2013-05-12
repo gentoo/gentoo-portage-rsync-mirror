@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.0.ebuild,v 1.2 2013/03/29 16:57:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.2.ebuild,v 1.1 2013/05/12 16:06:39 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3,3} )
@@ -11,7 +11,7 @@ VALA_USE_DEPEND="vapigen"
 inherit db-use eutils flag-o-matic gnome2 python-any-r1 vala versionator virtualx
 
 DESCRIPTION="Evolution groupware backend"
-HOMEPAGE="http://projects.gnome.org/evolution/"
+HOMEPAGE="http://projects.gnome.org/evolution/arch.shtml"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
@@ -21,7 +21,8 @@ REQUIRED_USE="vala? ( introspection )"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 
-RDEPEND=">=dev-libs/glib-2.34:2
+RDEPEND="
+	>=dev-libs/glib-2.34:2
 	>=dev-db/sqlite-3.5:=
 	>=dev-libs/libgdata-0.10:=
 	>=app-crypt/libsecret-0.5
@@ -118,7 +119,6 @@ src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	unset ORBIT_SOCKETDIR
 	unset SESSION_MANAGER
-	export XDG_DATA_HOME="${T}"
 	unset DISPLAY
-	Xemake check || die "Tests failed."
+	Xemake check
 }

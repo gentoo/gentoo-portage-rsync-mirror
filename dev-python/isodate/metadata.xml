@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>python</herd>
-	<longdescription>
+  <herd>python</herd>
+  <longdescription>
 		This module implements ISO 8601 date, time and duration
 		parsing. The implementation follows ISO8601:2004 standard, and
 		implements only date/time representations mentioned in the standard. If
@@ -15,7 +15,7 @@
 		fractional seconds are limited to microseconds. That means if the parser
 		finds for instance nanoseconds it will round it to microseconds.
 	</longdescription>
-	<upstream>
-		<remote-id type="pypi">isodate</remote-id>
-	</upstream>
+  <upstream>
+    <remote-id type="pypi">isodate</remote-id>
+  </upstream>
 </pkgmetadata>

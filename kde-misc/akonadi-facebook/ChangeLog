@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/akonadi-facebook
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/ChangeLog,v 1.5 2013/02/10 03:08:37 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/ChangeLog,v 1.7 2013/05/12 16:55:22 johu Exp $
+
+  12 May 2013; Johannes Huber <johu@gentoo.org>
+  -akonadi-facebook-0_p20120827.ebuild:
+  Remove old.
+
+  12 May 2013; Johannes Huber <johu@gentoo.org>
+  akonadi-facebook-0_p20130209.ebuild:
+  Update dep on libkfbapi because of package move.
 
 *akonadi-facebook-0_p20130209 (10 Feb 2013)
 
