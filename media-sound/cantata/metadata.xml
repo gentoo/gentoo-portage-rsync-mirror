@@ -4,7 +4,6 @@
   <herd>kde</herd>
   <herd>qt</herd>
   <use>
-    <flag name="mpg123">Enable support for mp3 decoding over media-sound/mpg123.</flag>
     <flag name="phonon">Enable support for Phonon</flag>
     <flag name="replaygain">Enable ReplayGain support, for relative volume adjustments.</flag>
   </use>

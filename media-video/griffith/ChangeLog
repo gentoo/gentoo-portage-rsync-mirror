@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.62 2013/01/17 16:37:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.63 2013/05/12 07:56:10 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove obsolete useflag from metadata.xml
 
   17 Jan 2013; Michał Górny <mgorny@gentoo.org> griffith-9999.ebuild:
   Ah, and the live ebuild.

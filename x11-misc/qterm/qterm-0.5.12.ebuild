@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.8 2013/03/02 23:52:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.9 2013/05/12 07:52:14 naota Exp $
 
 EAPI=3
 inherit cmake-utils eutils
 
 DESCRIPTION="A BBS client for Linux"
-HOMEPAGE="http://www.qterm.org/"
+HOMEPAGE="http://qterm.sourceforge.net"
 SRC_URI="mirror://sourceforge/qterm/${P}.tar.bz2"
 
 LICENSE="GPL-2"

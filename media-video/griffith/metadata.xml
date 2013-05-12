@@ -6,7 +6,4 @@
     <email>hwoarang@gentoo.org</email>
   	<name>Markos Chandras</name>
   </maintainer>
-  <use>
-    <flag name="csv">Enable proper support for csv import (respectively auto-detection encoding of csv files)</flag>
-  </use>
 </pkgmetadata>

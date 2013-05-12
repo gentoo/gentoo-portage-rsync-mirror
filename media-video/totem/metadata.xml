@@ -22,7 +22,6 @@ Totem is movie player for the GNOME desktop. It features a playlist, fullscreen 
 		<flag name="tracker">Enable support for searching media files using the
 			indexer <pkg>app-misc/tracker</pkg></flag>
 		<flag name="youtube">Enable youtube plugin</flag>
-		<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
 		<flag name="zeitgeist">Build the plugin to inject events to <pkg>gnome-extra/zeitgeist</pkg></flag>
 	</use>
 </pkgmetadata>

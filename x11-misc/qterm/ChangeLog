@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.47 2013/03/02 23:52:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.49 2013/05/12 07:52:14 naota Exp $
+
+  12 May 2013; Naohiro Aota <naota@gentoo.org> qterm-0.5.12.ebuild:
+  Update HOMEPAGE. #469372
+
+  12 May 2013; Naohiro Aota <naota@gentoo.org> -qterm-0.5.11.ebuild:
+  Drop old version
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qterm-0.5.11.ebuild,
   qterm-0.5.12.ebuild:
