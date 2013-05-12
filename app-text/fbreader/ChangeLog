@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.36 2013/03/31 16:19:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.37 2013/05/12 15:50:18 johu Exp $
+
+  12 May 2013; Johannes Huber <johu@gentoo.org> metadata.xml:
+  Drop kde from maintainer as it has no references to kde technology.
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> fbreader-0.99.4-r1.ebuild:
   Stable for x86, wrt bug #462890

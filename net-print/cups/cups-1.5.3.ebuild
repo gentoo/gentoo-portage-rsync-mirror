@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.8 2013/03/24 20:43:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.9 2013/05/12 15:52:49 dilfridge Exp $
 
 EAPI=4
 
@@ -64,7 +64,7 @@ RDEPEND="
 	)
 	systemd? ( sys-apps/systemd )
 	tiff? ( >=media-libs/tiff-3.5.5:0 )
-	usb? ( virtual/libusb:0 )
+	usb? ( virtual/libusb:1 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
 	!net-print/cups-filters

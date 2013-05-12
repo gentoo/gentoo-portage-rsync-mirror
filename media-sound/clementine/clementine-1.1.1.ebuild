@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.8 2013/05/11 22:08:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.9 2013/05/12 15:57:51 ssuominen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ COMMON_DEPEND="
 	>=media-libs/taglib-1.7[mp4]
 	>=dev-libs/glib-2.24.1-r1
 	dev-libs/libxml2
-	dev-libs/protobuf
+	dev-libs/protobuf:=
 	dev-libs/qjson
 	media-libs/libechonest
 	>=media-libs/chromaprint-0.6
