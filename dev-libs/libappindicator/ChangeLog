@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libappindicator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.11 2012/07/27 16:34:15 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.12 2013/05/12 14:40:30 pacho Exp $
+
+  12 May 2013; Pacho Ramos <pacho@gentoo.org> libappindicator-12.10.0.ebuild:
+  Use vala.eclass, bug #467388
 
   27 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   libappindicator-12.10.0.ebuild:
@@ -57,4 +60,3 @@
   +libappindicator-0.4.1-r200.ebuild,
   +files/libappindicator-0.4.1-no-mono.patch:
   Initial commit.
-

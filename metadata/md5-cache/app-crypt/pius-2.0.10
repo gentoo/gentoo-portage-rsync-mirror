@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=app-crypt/gnupg =dev-lang/python-2*
+DESCRIPTION=A tool for signing and email all UIDs on a set of PGP keys.
+EAPI=5
+HOMEPAGE=http://www.phildev.net/pius/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=app-crypt/gnupg dev-lang/perl =dev-lang/python-2*
+SLOT=0
+SRC_URI=mirror://sourceforge/pgpius/pius-2.0.10.tar.bz2
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=9e1e28c05bd42a7ddbba3411eb392bea

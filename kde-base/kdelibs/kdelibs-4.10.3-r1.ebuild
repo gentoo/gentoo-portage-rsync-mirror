@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.3-r1.ebuild,v 1.1 2013/05/09 04:15:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.3-r1.ebuild,v 1.2 2013/05/12 14:55:15 johu Exp $
 
 EAPI=5
 
@@ -280,7 +280,7 @@ pkg_postinst() {
 
 	if use zeroconf; then
 		echo
-		elog "To make zeroconf support available in KDE make sure that the 'mdnsd' daemon"
+		elog "To make zeroconf support available in KDE make sure that the avahi daemon"
 		elog "is running."
 		echo
 		einfo "If you also want to use zeroconf for hostname resolution, emerge sys-auth/nss-mdns"

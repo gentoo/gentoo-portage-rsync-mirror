@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.1.0.ebuild,v 1.10 2013/02/04 02:38:43 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.1.0.ebuild,v 1.11 2013/05/12 14:37:51 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,6 @@ RDEPEND="dev-python/setuptools"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
 	test? (
-		dev-python/etsdevtools
 		dev-python/nose
 		dev-python/traits
 		media-fonts/font-cursor-misc

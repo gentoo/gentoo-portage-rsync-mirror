@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enthoughtbase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.31 2013/02/04 02:38:43 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.32 2013/05/12 14:37:51 idella4 Exp $
+
+  12 May 2013; Ian Delaney <idella4@gentoo.org> enthoughtbase-3.1.0.ebuild:
+  Drop dep etsdevtools to be soon dropped from portage
 
   04 Feb 2013; Benda Xu <heroxbd@gentoo.org> enthoughtbase-3.1.0.ebuild:
   keyword ~amd64-linux ~x86-linux
