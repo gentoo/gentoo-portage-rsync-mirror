@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.1.0.ebuild,v 1.2 2012/05/04 18:35:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.1.0.ebuild,v 1.3 2013/05/12 11:56:06 pacho Exp $
 
 EAPI=4
-inherit cmake-utils multilib
+VALA_MIN_API_VERSION="0.14"
 
-MY_vala_version=0.14
+inherit cmake-utils multilib vala
 
 DESCRIPTION="A development library for elementary development"
 HOMEPAGE="http://launchpad.net/granite"
@@ -21,14 +21,15 @@ RDEPEND=">=dev-libs/glib-2
 	dev-libs/libgee:0
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
-	dev-lang/vala:${MY_vala_version}
+	$(vala_depend)
 	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( AUTHORS )
 
 src_prepare() {
-	sed -i -e "/NAMES/s:valac:&-${MY_vala_version}:" cmake/FindVala.cmake || die
+	vala_src_prepare
+	sed -i -e "/NAMES/s:valac:${VALAC}:" cmake/FindVala.cmake || die
 	sed -i -e "/DESTINATION/s:lib:$(get_libdir):" lib/CMakeLists.txt || die
 }
 

@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.5 2012/06/19 13:45:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.6 2013/05/12 11:50:09 pacho Exp $
 
 EAPI=4
-
 GCONF_DEBUG=no
 GNOME2_LA_PUNT=yes
-
 PYTHON_DEPEND="2:2.6"
+VALA_MIN_API_VERSION="0.10"
+VALA_USE_DEPEND="vapigen"
 
-inherit gnome2 python
+inherit gnome2 python vala
 
 DESCRIPTION="A dock-like bar which sits at the bottom of the screen"
 HOMEPAGE="http://launchpad.net/awn"
@@ -20,7 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +gconf vala"
 
-RDEPEND=">=dev-libs/dbus-glib-0.80
+RDEPEND="
+	>=dev-libs/dbus-glib-0.80
 	>=dev-libs/glib-2.16
 	dev-python/dbus-python
 	dev-python/librsvg-python
@@ -45,16 +46,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	!<gnome-extra/avant-window-navigator-extras-${PV}
 	doc? ( dev-util/gtk-doc )
-	vala? ( dev-lang/vala:0.10 )"
+	vala? ( $(vala_depend) )"
 
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
-
-	if use vala; then
-		export VALAC="$(type -P valac-0.10)"
-		export VALA_GEN_INTROSPECT="$(type -P vapigen-0.10)"
-	fi
 
 	G2CONF="--disable-static
 		--disable-pymod-checks
@@ -70,6 +66,7 @@ src_prepare() {
 	>py-compile
 
 	gnome2_src_prepare
+	use vala && vala_src_prepare
 }
 
 pkg_postinst() {
