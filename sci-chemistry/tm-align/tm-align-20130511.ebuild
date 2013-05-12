@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/tm-align-20130508.ebuild,v 1.1 2013/05/11 12:39:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/tm-align-20130511.ebuild,v 1.1 2013/05/12 09:39:11 jlec Exp $
 
 EAPI=5
 
