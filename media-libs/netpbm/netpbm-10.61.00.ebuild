@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.2 2013/01/06 19:16:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.3 2013/05/12 21:25:01 vapier Exp $
 
 EAPI="4"
 
@@ -148,7 +148,7 @@ src_compile() {
 
 src_test() {
 	# The code wants to install everything first and then test the result.
-	emake install.bin
+	emake install.{bin,lib}
 	emake check
 }
 

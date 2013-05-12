@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.268 2013/02/05 17:47:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.269 2013/05/12 21:25:01 vapier Exp $
+
+  12 May 2013; Mike Frysinger <vapier@gentoo.org> netpbm-10.61.00.ebuild:
+  Install local set of libs before testing #467198 by Patrick Lauer.
 
   05 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/netpbm-10.56.00-alloca.patch, -netpbm-10.56.00.ebuild,
