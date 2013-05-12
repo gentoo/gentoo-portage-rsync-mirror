@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.48 2013/05/01 07:22:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.49 2013/05/12 10:02:38 pinkbyte Exp $
+
+*broadcom-sta-6.30.223.30-r1 (12 May 2013)
+
+  12 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +broadcom-sta-6.30.223.30-r1.ebuild,
+  +files/broadcom-sta-6.30.223.30-linux-3.9.0.patch:
+  Revision bump: fix CONFIG_CHECK, add compatibility patch for kernel 3.9.
+  Fixes bugs #468398 and #469458
 
 *broadcom-sta-6.30.223.30 (01 May 2013)
 
