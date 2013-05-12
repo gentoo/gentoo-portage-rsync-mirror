@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.1.ebuild,v 1.1 2013/04/14 19:00:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.1.ebuild,v 1.2 2013/05/12 18:45:00 nirbheek Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3,3} )
@@ -16,7 +16,7 @@ HOMEPAGE="http://projects.gnome.org/evolution/arch.shtml"
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
 SLOT="0/40" # subslot = libcamel-1.2 soname version
-IUSE="api-doc-extras google +gnome-online-accounts +gtk +introspection ipv6 ldap kerberos vala +weather"
+IUSE="api-doc-extras +google +gnome-online-accounts +gtk +introspection ipv6 ldap kerberos vala +weather"
 REQUIRED_USE="vala? ( introspection )"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"

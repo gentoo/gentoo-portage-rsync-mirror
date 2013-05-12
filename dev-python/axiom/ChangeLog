@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.39 2012/10/16 08:58:18 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.40 2013/05/12 18:32:59 floppym Exp $
+
+  12 May 2013; Mike Gilbert <floppym@gentoo.org> axiom-0.6.0.ebuild:
+  Remove dependency on pysqlite.
 
   16 Oct 2012; Patrick Lauer <patrick@gentoo.org> axiom-0.6.0.ebuild:
   Restricting python 2.5

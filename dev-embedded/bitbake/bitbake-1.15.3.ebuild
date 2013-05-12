@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.15.3.ebuild,v 1.1 2012/08/02 02:50:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.15.3.ebuild,v 1.2 2013/05/12 18:31:43 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
+PYTHON_USE_WITH="sqlite"
 
 inherit distutils
 
@@ -25,12 +26,6 @@ SLOT="0"
 IUSE="doc"
 
 RDEPEND="
-	|| (
-		dev-lang/python:2.7[sqlite]
-		dev-lang/python:2.6[sqlite]
-		dev-lang/python:2.5[sqlite]
-		>=dev-python/pysqlite-2.3.2
-	)
 	dev-python/ply
 	dev-python/progressbar"
 DEPEND="${RDEPEND}

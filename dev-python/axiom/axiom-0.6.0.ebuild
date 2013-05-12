@@ -1,11 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.13 2012/10/16 08:58:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.14 2013/05/12 18:32:59 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
+PYTHON_USE_WITH="sqlite"
 
 # setup.py uses epsilon.setuphelper.autosetup(), which tries to use
 # build-${PYTHON_ABI} directories as packages.
@@ -25,8 +26,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 )
-	>=dev-python/epsilon-0.6
+DEPEND=">=dev-python/epsilon-0.6
 	>=dev-python/twisted-2.4
 	>=dev-python/twisted-conch-0.7.0-r1"
 RDEPEND="${DEPEND}"
