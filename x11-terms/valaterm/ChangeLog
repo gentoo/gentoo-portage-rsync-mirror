@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/valaterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/ChangeLog,v 1.8 2012/10/03 17:53:48 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/ChangeLog,v 1.9 2013/05/12 12:03:27 pacho Exp $
+
+  12 May 2013; Pacho Ramos <pacho@gentoo.org> valaterm-0.6.ebuild:
+  Use vala.eclass (#467406)
 
   03 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> -valaterm-0.5.ebuild,
   -valaterm-0.5.1.ebuild:
@@ -34,4 +37,3 @@
 
   14 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +valaterm-0.4.3.ebuild:
   Initial commit wrt #368491 by Jacques-Pascal Deplaix
-

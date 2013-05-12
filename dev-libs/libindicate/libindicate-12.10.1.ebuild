@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-12.10.1.ebuild,v 1.2 2013/05/04 09:16:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-12.10.1.ebuild,v 1.3 2013/05/12 12:25:28 pacho Exp $
 
 EAPI=5
+VALA_MIN_API_VERSION="0.16"
+VALA_USE_DEPEND="vapigen"
 
-AYATANA_VALA_VERSION=0.16
-
-inherit autotools eutils flag-o-matic
+inherit autotools eutils flag-o-matic vala
 
 DESCRIPTION="A library to raise flags on DBus for other components of the desktop to pick up and visualize"
 HOMEPAGE="http://launchpad.net/libindicate"
@@ -30,14 +30,18 @@ EAUTORECONF_DEPEND="dev-util/gtk-doc-am
 	gnome-base/gnome-common"
 DEPEND="${RDEPEND}
 	${EAUTORECONF_DEPEND}
+	$(vala_depend)
 	app-text/gnome-doc-utils
-	dev-lang/vala:${AYATANA_VALA_VERSION}[vapigen]
 	virtual/pkgconfig"
 
 src_prepare() {
+	vala_src_prepare
+
 	epatch "${FILESDIR}"/${PN}-0.6.1-no-mono.patch
-	sed -i -e "s:vapigen:vapigen-${AYATANA_VALA_VERSION}:" configure.ac || die
+
+	sed -i -e "s:vapigen:vapigen-$(vala_best_api_version):" configure.ac || die
 	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
+
 	eautoreconf
 }
 

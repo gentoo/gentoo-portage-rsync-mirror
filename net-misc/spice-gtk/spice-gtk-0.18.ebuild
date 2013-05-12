@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.18.ebuild,v 1.3 2013/04/20 20:47:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.18.ebuild,v 1.4 2013/05/12 12:14:10 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
 WANT_AUTOMAKE="1.12"
+VALA_MIN_API_VERSION="0.14"
+VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils python
+inherit autotools eutils python vala
 
 PYTHON_DEPEND="2"
 
@@ -60,7 +62,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	vala? ( dev-lang/vala:0.14 )"
+	vala? ( $(vala_depend) )"
 
 # Hard-deps while building from git:
 # dev-lang/vala:0.14
@@ -75,6 +77,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	use vala && vala_src_prepare
 	mkdir ${GTK2_BUILDDIR} || die
 	mkdir ${GTK3_BUILDDIR} || die
 
@@ -114,8 +117,6 @@ src_configure() {
 	cd ${GTK2_BUILDDIR}
 	echo "Running configure in ${GTK2_BUILDDIR}"
 	ECONF_SOURCE="${S}" econf --disable-maintainer-mode \
-		VALAC=$(type -P valac-0.14) \
-		VAPIGEN=$(type -P vapigen-0.14) \
 		--with-gtk=2.0 \
 		${myconf}
 
@@ -123,8 +124,6 @@ src_configure() {
 		cd ${GTK3_BUILDDIR}
 		echo "Running configure in ${GTK3_BUILDDIR}"
 		ECONF_SOURCE="${S}" econf --disable-maintainer-mode \
-			VALAC=$(type -P valac-0.14) \
-			VAPIGEN=$(type -P vapigen-0.14) \
 			--with-gtk=3.0 \
 			${myconf}
 	fi
