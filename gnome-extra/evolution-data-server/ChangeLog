@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.369 2013/05/12 18:45:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.370 2013/05/12 19:38:01 pacho Exp $
+
+  12 May 2013; Pacho Ramos <pacho@gentoo.org>
+  evolution-data-server-3.8.2.ebuild:
+  Remove unneeded USE flag and enable google support always as talked with
+  nirbheek.
 
   12 May 2013; Nirbheek Chauhan <nirbheek@gentoo.org>
   evolution-data-server-3.8.1.ebuild, evolution-data-server-3.8.2.ebuild:

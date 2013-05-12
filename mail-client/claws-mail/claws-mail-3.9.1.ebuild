@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.6 2013/05/11 22:36:23 fauli Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.7 2013/05/12 19:50:46 fauli Exp $
 EAPI="5"
 
 PYTHON_COMPAT=( python2_{5,6,7} )
+AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils multilib gnome2-utils eutils python-single-r1
 
@@ -17,8 +17,11 @@ SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~hppa ~mips ~x86 ~x86-fbsd"
 
-IUSE="archive bogofilter calendar clamav dbus debug doc gdata gtk3 +imap ipv6 ldap networkmanager nntp +libnotify pda pdf perl +pgp python rss session smime spamassassin spam-report spell +gnutls startup-notification valgrind webkit xface"
-REQUIRED_USE="networkmanager? ( dbus )"
+IUSE="archive bogofilter calendar clamav dbus debug doc gdata gtk3 +imap ipv6 ldap +libcanberra +libindicate +libnotify networkmanager nntp +notification pda pdf perl +pgp python rss session smime spamassassin spam-report spell +gnutls startup-notification valgrind webkit xface"
+REQUIRED_USE="networkmanager? ( dbus )
+	libcanberra? ( notification )
+	libindicate? ( notification )
+	libnotify? ( notification )"
 
 # Plugins are all integrated or dropped since 3.9.1
 PLUGINBLOCK="!!mail-client/claws-mail-acpi-notifier
@@ -62,9 +65,11 @@ COMMONDEPEND=">=sys-devel/gettext-0.12.1
 	archive? ( app-arch/libarchive
 		>=net-misc/curl-7.9.7 )
 	bogofilter? ( mail-filter/bogofilter )
-	libnotify? ( x11-libs/libnotify
-		media-libs/libcanberra[gtk]
-		dev-libs/libindicate:3[gtk]
+	notification? (
+		libnotify? ( x11-libs/libnotify )
+		libcanberra? (  media-libs/libcanberra[gtk] )
+		libindicate? ( dev-libs/libindicate:3[gtk] )
+		dev-libs/glib
 	)
 	smime? ( >=app-crypt/gpgme-0.4.5 )
 	calendar? ( >=net-misc/curl-7.9.7 )
@@ -92,9 +97,7 @@ RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}_libsoup-check-fix.patch"
-}
+PATCHES=( "${FILESDIR}/${P}_libsoup-check-fix.patch" )
 
 src_configure() {
 	local myeconfargs=(
