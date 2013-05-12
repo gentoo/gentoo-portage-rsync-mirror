@@ -7,5 +7,9 @@
 	<longdescription lang="ru">
 		Категория app-leechcraft содержит ядро LeechCraft'а и его плагины.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría app-leechcraft contiene el núcleo principal de LeechCraft
+		y todos sus añadidos.
+	</longdescription>
 </catmetadata>
 
