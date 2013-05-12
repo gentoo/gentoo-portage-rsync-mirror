@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.46 2013/05/10 05:06:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.47 2013/05/12 01:51:26 cardoe Exp $
 
 EAPI=5
 
@@ -138,8 +138,11 @@ LXC_CONFIG_CHECK="
 
 VIRTNET_CONFIG_CHECK="
 	~BRIDGE_NF_EBTABLES
+	~BRIDGE_EBT_MARK_T
 	~NETFILTER_ADVANCED
 	~NETFILTER_XT_TARGET_CHECKSUM
+	~NETFILTER_XT_CONNMARK
+	~NETFILTER_XT_MARK
 "
 
 MACVTAP_CONFIG_CHECK="~MACVTAP"
@@ -162,7 +165,7 @@ pkg_setup() {
 	# Handle specific kernel versions for different features
 	kernel_is lt 3 5 && LXC_CONFIG_CHECK+=" ~USER_NS"
 	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR"
-	kernel_is ge 3 6 &&	LXC_CONFIG_CHECK+=" ~MEMCG ~MEMCG_SWAP"
+	kernel_is ge 3 6 &&	LXC_CONFIG_CHECK+=" ~MEMCG ~MEMCG_SWAP ~MEMCG_KMEM"
 	kernel_is ge 3 8 && LXC_CONFIG_CHECK+=" ~USER_NS"
 
 	CONFIG_CHECK=""
