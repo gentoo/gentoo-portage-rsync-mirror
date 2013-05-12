@@ -9,7 +9,4 @@
   dimensions, take a look at the actual data values, change color
   maps, invert the data, etc.
 </longdescription>
-<use>
-  <flag name='udunits'>Add <pkg>sci-libs/udunits</pkg> files support</flag>
-</use>
 </pkgmetadata>

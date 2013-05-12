@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mkl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.48 2013/02/28 14:04:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.49 2013/05/12 03:25:13 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Drop obsolete use flags from metadata.xml
 
   28 Feb 2013; Jeroen Roovers <jer@gentoo.org> mkl-10.0.5.025.ebuild:
   check_reqs_pkg_setup -> check-reqs_pkg_setup by julgo (bug #459706).

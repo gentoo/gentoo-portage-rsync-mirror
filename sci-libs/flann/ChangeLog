@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/flann
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.16 2012/08/03 17:33:35 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.17 2013/05/12 03:22:11 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fix metadata.xml encoding
 
   03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> flann-1.7.1.ebuild:
   keyword amd64-linux x86-linux
