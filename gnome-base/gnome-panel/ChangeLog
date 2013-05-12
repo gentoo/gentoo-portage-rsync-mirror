@@ -1,6 +1,20 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.358 2013/03/07 08:37:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.359 2013/05/12 15:07:50 pacho Exp $
+
+*gnome-panel-3.6.2-r1 (12 May 2013)
+
+  12 May 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-panel-3.6.2-drop-commandline.patch,
+  +files/gnome-panel-3.6.2-fix-animation.patch,
+  +files/gnome-panel-3.6.2-fix-black.patch,
+  +files/gnome-panel-3.6.2-generic-marshaller.patch,
+  +files/gnome-panel-3.6.2-gweather-include.patch,
+  +files/gnome-panel-3.6.2-rename-function.patch,
+  +files/gnome-panel-3.6.2-resurrect-function.patch,
+  +gnome-panel-3.6.2-r1.ebuild:
+  Apply upstream patches fixing bugs and making it compatible with gnome 3.8
+  libs
 
   07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -files/gnome-panel-3.2.1-gold.patch, -gnome-panel-3.4.2.1.ebuild,

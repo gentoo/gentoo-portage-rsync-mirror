@@ -134,7 +134,6 @@ x86             default/linux/x86/13.0/desktop/kde              stable
 x86             default/linux/x86/13.0/developer                stable
 
 # Gentoo/FreeBSD Profiles
-amd64-fbsd	default/bsd/fbsd/amd64/9.0			stable
 amd64-fbsd	default/bsd/fbsd/amd64/9.1			stable
 amd64-fbsd	default/bsd/fbsd/amd64/9.1/clang		exp
 sparc-fbsd      default/bsd/fbsd/sparc/8.2                      exp

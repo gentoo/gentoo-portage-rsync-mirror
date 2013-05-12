@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14749 2013/05/12 10:42:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14751 2013/05/12 15:14:38 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (12 May 2013)
+# Recommended by upstream's own maintainer to drop the
+# package, no longer valid.
+# Masked for removal in 30 days
+dev-python/etsdevtools
+
+# Ian Delaney <idella4@gentoo.org> (12 May 2013)
+# Recommended by upstream's own maintainer to drop the
+# package, no longer valid.
+# Masked for removal in 30 days
+dev-python/blockcanvas
+
+# Ian Delaney <idella4@gentoo.org> (12 May 2013)
+# version 3 package now superseded by
+# dev-python/envisage version 4.
+# Masked for removal in 30 days
+dev-python/envisagecore
 
 # Markos Chandras <hwoarang@gentoo.org> (12 May 2013)
 # Does not build. Dead upstream. Bug #467286
@@ -365,6 +383,7 @@ net-irc/xchatosd
 >=media-gfx/gnome-photos-3.8
 >=net-analyzer/gnome-nettool-3.8
 >=x11-misc/alacarte-3.7.90
+>=gnome-base/gnome-panel-3.6.2-r1
 
 # Sebastien Fabbro <bicatali@gentoo.org> (26 Mar 2013)
 # Now included in sci-mathematics/mathgl

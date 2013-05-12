@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.924 2013/05/12 14:55:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.925 2013/05/12 15:24:45 johu Exp $
+
+*kdelibs-4.10.3-r2 (12 May 2013)
+
+  12 May 2013; Johannes Huber <johu@gentoo.org>
+  +files/kdelibs-4.10.3-dialog-quit-crash.patch, +kdelibs-4.10.3-r2.ebuild,
+  -kdelibs-4.10.3-r1.ebuild:
+  Backport upstream patch which fixes crashes on dialog quit spotted by Egor Y.
+  Egorov <egorov_egor@bk.ru> wrt bug #469334.
 
   12 May 2013; Johannes Huber <johu@gentoo.org> kdelibs-4.10.2-r1.ebuild,
   kdelibs-4.10.3-r1.ebuild:

@@ -1,0 +1,65 @@
+From 44eba7db43b227d9b15a2d64d0af97167522891d Mon Sep 17 00:00:00 2001
+From: Philipp Kaluza <phk@src.gnome.org>
+Date: Fri, 08 Mar 2013 17:48:04 +0000
+Subject: panel-run-dialog: rename helper function
+
+that I resurrected earlier from gnome_desktop_prepend_terminal_to_vector
+to panel_run_dialog_prepend_terminal_to_vector (use proper namespace).
+---
+diff --git a/gnome-panel/panel-run-dialog.c b/gnome-panel/panel-run-dialog.c
+index faf3d7e..d89ac06 100644
+--- a/gnome-panel/panel-run-dialog.c
++++ b/gnome-panel/panel-run-dialog.c
+@@ -336,7 +336,7 @@ dummy_child_watch (GPid         pid,
+ 
+ 
+ /**
+- * gnome_desktop_prepend_terminal_to_vector:
++ * panel_run_dialog_prepend_terminal_to_vector:
+  * @argc: a pointer to the vector size
+  * @argv: a pointer to the vector
+  *
+@@ -349,10 +349,10 @@ dummy_child_watch (GPid         pid,
+  * size will first be computed.  Also note that passing in pointers to a vector
+  * that is empty, will just create a new vector for you.
+  **/
++/* TODO: throw out this function if there ever is a proper GAppInfo port */
+ static void
+-gnome_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
++panel_run_dialog_prepend_terminal_to_vector (int *argc, char ***argv)
+ {
+-#ifndef G_OS_WIN32
+         char **real_argv;
+         int real_argc;
+         int i, j;
+@@ -367,8 +367,6 @@ gnome_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
+         g_return_if_fail (argc != NULL);
+         g_return_if_fail (argv != NULL);
+ 
+-        // _gnome_desktop_init_i18n ();
+-
+ 	/* sanity */
+         if(*argv == NULL)
+                 *argc = 0;
+@@ -460,10 +458,6 @@ gnome_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
+ 	/* we use g_free here as we sucked all the inner strings
+ 	 * out from it into real_argv */
+ 	g_free (term_argv);
+-#else
+-	/* FIXME: Implement when needed */
+-	g_warning ("gnome_prepend_terminal_to_vector: Not implemented");
+-#endif
+ }
+ 
+ static gboolean
+@@ -485,7 +479,7 @@ panel_run_dialog_launch_command (PanelRunDialog *dialog,
+ 	screen = gtk_window_get_screen (GTK_WINDOW (dialog->run_dialog));
+ 
+ 	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->terminal_checkbox)))
+-		gnome_desktop_prepend_terminal_to_vector (&argc, &argv);
++		panel_run_dialog_prepend_terminal_to_vector (&argc, &argv);
+ 
+ 	display = gdk_screen_make_display_name (screen);
+ 
+--
+cgit v0.9.1

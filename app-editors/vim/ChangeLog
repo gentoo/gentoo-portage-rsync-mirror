@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.426 2013/05/10 13:16:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.427 2013/05/12 15:15:31 ago Exp $
+
+  12 May 2013; Agostino Sarubbo <ago@gentoo.org> vim-7.3.762.ebuild:
+  Stable for arm, wrt bug #469010
 
   10 May 2013; Agostino Sarubbo <ago@gentoo.org> vim-7.3.762.ebuild:
   Stable for ppc64, wrt bug #469010

@@ -1,0 +1,48 @@
+From 452f59be8f9babf0ae33654e754da65151760a76 Mon Sep 17 00:00:00 2001
+From: Philipp Kaluza <phk@src.gnome.org>
+Date: Fri, 08 Mar 2013 16:51:23 +0000
+Subject: drop support for commandline-based calendar/tasks applications
+
+It's not worth the layering violations this would need.
+(Partial fix for bug #237308 .)
+---
+diff --git a/applets/clock/calendar-window.c b/applets/clock/calendar-window.c
+index 458852c..708e921 100644
+--- a/applets/clock/calendar-window.c
++++ b/applets/clock/calendar-window.c
+@@ -42,9 +42,6 @@
+ #include <glib/gi18n.h>
+ #include <gio/gio.h>
+ 
+-#define GNOME_DESKTOP_USE_UNSTABLE_API
+-#include <libgnome-desktop/gnome-desktop-utils.h>
+-
+ #include "calendar-window.h"
+ 
+ #include "clock.h"
+@@ -168,6 +165,13 @@ clock_launch_calendar_tasks_app (CalendarWindow *calwin,
+ 		return;
+ 	}
+ 
++	/* FIXME: reintroduce terminal support if a proper GAppInfo port of gnome-panel is ever done */
++	if (terminal) {
++		g_printerr ("Terminal-based calendar/tasks applications are no longer supported, sorry. "
++		            "Please configure a different application.\n");
++		return;
++	}
++
+ 	command_line = g_find_program_in_path (program);
+ 	if (command_line == NULL) {
+ 		g_printerr ("Cannot launch calendar/tasks application: %s in path\n", program);
+@@ -189,9 +193,6 @@ clock_launch_calendar_tasks_app (CalendarWindow *calwin,
+ 	screen = gtk_widget_get_screen (calwin->priv->calendar);
+ 	error = NULL;
+ 
+-	if (terminal)
+-		gnome_desktop_prepend_terminal_to_vector (&argc, &argv);
+-
+ 	display = gdk_screen_make_display_name (screen);
+ 
+ 	result = g_spawn_async (NULL, /* working directory */
+--
+cgit v0.9.1
