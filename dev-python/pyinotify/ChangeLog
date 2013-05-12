@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.53 2013/03/24 01:50:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.55 2013/05/12 19:26:46 ago Exp $
+
+  12 May 2013; Agostino Sarubbo <ago@gentoo.org> pyinotify-0.9.4-r1.ebuild:
+  Stable for x86, wrt bug #467130
+
+  12 May 2013; Agostino Sarubbo <ago@gentoo.org> pyinotify-0.9.4-r1.ebuild:
+  Stable for amd64, wrt bug #467130
 
   24 Mar 2013; Mike Gilbert <floppym@gentoo.org>
   -files/pyinotify-0.9.4-workaround-sandbox-bug.patch:
