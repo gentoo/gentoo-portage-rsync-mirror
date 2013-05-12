@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.9.ebuild,v 1.5 2013/01/21 21:18:23 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.9.ebuild,v 1.6 2013/05/12 18:29:40 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_USE_WITH="sqlite"
 
 inherit distutils
 
@@ -22,7 +23,6 @@ RDEPEND=">=dev-python/pygtk-2.3.93:2
 	dev-python/pygobject:2
 	>=dev-python/libgnome-python-2
 	>=gnome-base/libglade-2
-	|| ( =dev-lang/python-2*[sqlite] dev-python/pysqlite:2 )
 	dev-python/sqlalchemy
 	!=dev-python/sqlalchemy-0.6.4
 	dev-python/imaging

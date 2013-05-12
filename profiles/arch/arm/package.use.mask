@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.143 2013/05/12 15:14:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.144 2013/05/12 18:05:45 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (11 May 2013)
 # unkeyworded deps for x11-wm/enlightenment
@@ -21,10 +21,6 @@ x11-misc/lightdm razor
 # Christoph Junghans <ottxor@gentoo.org> (29 Apr 2013)
 # MKL not available on this arch
 media-gfx/povray mkl
-
-# Gilles Dartiguelongue <eva@gentoo.org> (1 Apr 2013)
-# missing keyword on media-libs/tremor, bug #453200
-media-libs/gst-plugins-base ivorbis
 
 # Benda Xu <heroxbd@gentoo.org> (1 Apr 2013)
 # dev-ml/lablgtk not keyworded

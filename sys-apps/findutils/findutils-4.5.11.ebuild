@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.11.ebuild,v 1.3 2013/05/09 17:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.11.ebuild,v 1.4 2013/05/12 18:05:20 vapier Exp $
 
 EAPI="3"
 
@@ -30,7 +30,7 @@ src_prepare() {
 src_configure() {
 	use static && append-ldflags -static
 
-	local program_prefix=$(usex userland_GNU '' g)
+	program_prefix=$(usex userland_GNU '' g)
 	econf \
 		--with-packager="Gentoo" \
 		--with-packager-version="${PVR}" \

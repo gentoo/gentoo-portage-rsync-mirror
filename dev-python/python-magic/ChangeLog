@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-magic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.1 2013/05/12 17:59:43 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.2 2013/05/12 18:09:40 thev00d00 Exp $
+
+  12 May 2013; Ian Whyman <thev00d00@gentoo.org> python-magic-0.4.3.ebuild:
+  RDEPEND isn\'t set automatically anymore
 
 *python-magic-0.4.3 (12 May 2013)
 

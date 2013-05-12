@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tremor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.15 2013/05/11 14:38:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.16 2013/05/12 18:03:00 maekke Exp $
+
+  12 May 2013; Markus Meier <maekke@gentoo.org> tremor-0_pre20130223.ebuild:
+  add ~arm, bug #453200
 
   11 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   tremor-0_pre20130223.ebuild:

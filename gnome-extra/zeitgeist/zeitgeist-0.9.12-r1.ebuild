@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12-r1.ebuild,v 1.3 2013/05/04 07:42:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12-r1.ebuild,v 1.4 2013/05/12 18:04:10 jlec Exp $
 
 EAPI=5
 
@@ -30,14 +30,14 @@ RDEPEND="
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
-	dev-python/rdflib
+	dev-python/rdflib[${PYTHON_USEDEP}]
 	media-libs/raptor:2
 	>=dev-libs/glib-2.26.0:2
 	>=dev-db/sqlite-3.7.11:3
 	datahub? ( x11-libs/gtk+:3 )
 	extensions? ( gnome-extra/zeitgeist-extensions  )
 	fts? ( dev-libs/xapian[inmemory] )
-	icu? ( dev-libs/dee[icu?] )
+	icu? ( dev-libs/dee[icu?,${PYTHON_USEDEP}] )
 	introspection? ( dev-libs/gobject-introspection )
 	plugins? ( gnome-extra/zeitgeist-datasources )
 	telepathy? ( net-libs/telepathy-glib )
@@ -50,6 +50,11 @@ PATCHES=( "${FILESDIR}"/${P}-download_monitor.patch )
 
 src_prepare() {
 	vala_src_prepare
+
+	sed \
+		-e "/import/s: python : ${PYTHON} :g" \
+		-i configure.ac || die
+
 	autotools-utils_src_prepare
 }
 
