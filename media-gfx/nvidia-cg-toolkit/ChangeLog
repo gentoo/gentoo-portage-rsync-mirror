@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.55 2013/01/01 16:24:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.56 2013/05/12 07:19:17 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org>
+  nvidia-cg-toolkit-2.1.0012.ebuild, nvidia-cg-toolkit-2.1.0017-r1.ebuild,
+  nvidia-cg-toolkit-2.1.0017.ebuild, nvidia-cg-toolkit-3.1.0013-r1.ebuild,
+  nvidia-cg-toolkit-3.1.0013-r2.ebuild, nvidia-cg-toolkit-3.1.0013.ebuild:
+  Fix License
 
   01 Jan 2013; Julian Ospald <hasufell@gentoo.org>
   nvidia-cg-toolkit-2.1.0017-r1.ebuild:

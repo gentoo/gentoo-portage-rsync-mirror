@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.8 2012/11/28 20:32:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.9 2013/05/12 07:19:17 patrick Exp $
 
 inherit versionator
 
@@ -14,7 +14,7 @@ SRC_URI="
 	amd64? ( http://developer.download.nvidia.com/cg/Cg_2.0/${PV}/Cg-${MY_PV}_${MY_DATE}_x86_64.tgz )"
 
 SLOT="0"
-LICENSE="NVIDIA"
+LICENSE="NVIDIA-r1"
 KEYWORDS="amd64 x86"
 IUSE=""
 

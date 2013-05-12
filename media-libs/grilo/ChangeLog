@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.24 2013/02/02 22:47:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.25 2013/05/12 07:31:14 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Add doctype to metadata.xml
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> grilo-0.1.20.ebuild,
   grilo-0.2.4.ebuild:

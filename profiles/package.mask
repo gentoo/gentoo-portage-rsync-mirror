@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14745 2013/05/12 04:40:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14747 2013/05/12 07:28:39 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -116,6 +116,7 @@ app-text/duconv
 # and address all issues; (possible candidate for graveyard overlay).
 =media-libs/freetype-1.4*
 games-action/heavygear2
+media-libs/vflib
 
 # Ulrich Müller <ulm@gentoo.org> (25 Apr 2013)
 # Dependency of kernel.eclass which was obsoleted in 2004,
@@ -439,7 +440,7 @@ app-text/cuneiform
 x11-drivers/xf86-input-citron
 
 # Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
-# Depends on maked dev-lang/python:3.3
+# Depends on masked dev-lang/python:3.3
 =media-gfx/blender-2.66
 
 # Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
@@ -447,6 +448,7 @@ x11-drivers/xf86-input-citron
 # for people who don't have python-3.3 yet.
 # Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
 =media-gfx/blender-2.64a
+media-gfx/yablex
 
 # Tim Harder <radhermit@gentoo.org> (07 Mar 2013)
 # Masked for testing

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.61 2013/05/03 14:14:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.62 2013/05/12 07:25:53 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> -schroedinger-1.0.9.ebuild:
+  Remove version with unsatisfiable dependencies
 
   03 May 2013; Justin Lecher <jlec@gentoo.org> schroedinger-1.0.11.ebuild:
   Fix obsolete macros to work with automake-1.13, #468448
@@ -261,4 +264,3 @@
   31 May 2006; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
   +schroedinger-0.2.0.0.ebuild:
   First commit, thanks to Ed Catmur <ed@catmur.co.uk> for the ebuild
-
