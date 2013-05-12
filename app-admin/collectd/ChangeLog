@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.52 2013/05/11 12:18:59 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.53 2013/05/12 10:34:14 hwoarang Exp $
+
+*collectd-5.2.2 (12 May 2013)
+
+  12 May 2013; Markos Chandras <hwoarang@gentoo.org> +collectd-5.2.2.ebuild:
+  Version bump. Bug #465602. Thanks s to Johan Bergström <bugs@bergstroem.nu>
 
 *collectd-5.3.0 (11 May 2013)
 

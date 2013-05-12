@@ -1,27 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-6.30.223.30-r1.ebuild,v 1.2 2013/05/12 10:45:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.112-r3.ebuild,v 1.1 2013/05/12 10:50:32 pinkbyte Exp $
 
 EAPI="5"
-inherit eutils linux-info linux-mod unpacker
+inherit eutils linux-mod
 
-DESCRIPTION="Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver."
-HOMEPAGE="https://launchpad.net/ubuntu/+source/bcmwl http://www.broadcom.com/support/802.11/linux_sta.php"
-BASE_URI="https://launchpad.net/~albertomilone/+archive/broadcom/+files"
-BASE_NAME="bcmwl-kernel-source_${PV}%2Bbdcom-0ubuntu1%7Eppa1_"
-SRC_URI="amd64? ( ${BASE_URI}/${BASE_NAME}amd64.deb )
-		x86? ( ${BASE_URI}/${BASE_NAME}i386.deb )"
+DESCRIPTION="Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver"
+HOMEPAGE="http://www.broadcom.com/support/802.11/linux_sta.php"
+SRC_BASE="http://www.broadcom.com/docs/linux_sta/hybrid-portsrc_x86_"
+SRC_URI="x86? ( ${SRC_BASE}32-v${PV//\./_}.tar.gz )
+	amd64? ( ${SRC_BASE}64-v${PV//\./_}.tar.gz )"
 
 LICENSE="Broadcom"
 KEYWORDS="-* ~amd64 ~x86"
 
-RESTRICT="mirror"
-
 DEPEND="virtual/linux-sources"
 RDEPEND=""
 
-#S="${WORKDIR}"
-S="${WORKDIR}/usr/src/bcmwl-${PV}+bdcom"
+RESTRICT="mirror"
+
+S="${WORKDIR}"
 
 MODULE_NAMES="wl(net/wireless)"
 MODULESD_WL_ALIASES=("wlan0 wl")
@@ -39,9 +37,7 @@ pkg_setup() {
 	ERROR_MAC80211="MAC80211: If you insist on building this, you must blacklist it!"
 	ERROR_PREEMPT_RCU="PREEMPT_RCU: Please do not set the Preemption Model to \"Preemptible Kernel\"; choose something else."
 	ERROR_LIB80211_CRYPT_TKIP="LIB80211_CRYPT_TKIP: You will need this for WPA."
-	if kernel_is ge 3 8 8; then
-		CONFIG_CHECK="${CONFIG_CHECK} ${CONFIG_CHECK2} CFG80211 ~!PREEMPT_RCU"
-	elif kernel_is ge 2 6 32; then
+	if kernel_is ge 2 6 32; then
 		CONFIG_CHECK="${CONFIG_CHECK} ${CONFIG_CHECK2} CFG80211"
 	elif kernel_is ge 2 6 31; then
 		CONFIG_CHECK="${CONFIG_CHECK} ${CONFIG_CHECK2} WIRELESS_EXT ~!MAC80211"
@@ -54,28 +50,24 @@ pkg_setup() {
 	linux-mod_pkg_setup
 
 	BUILD_PARAMS="-C ${KV_DIR} M=${S}"
+	if kernel_is ge 3 6 0; then
+		BUILD_PARAMS="${BUILD_PARAMS} API=WEXT"
+		CONFIG_CHECK="${CONFIG_CHECK} WIRELESS_EXT"
+	fi
 	BUILD_TARGETS="wl.ko"
 }
 
-src_unpack() {
-	local arch_suffix
-	if use amd64; then
-		arch_suffix="amd64"
-	else
-		arch_suffix="i386"
-	fi
-	unpack_deb "${BASE_NAME}${arch_suffix}.deb"
-}
-
 src_prepare() {
-#	Filter the outdated patches here
-	EPATCH_FORCE="yes" EPATCH_EXCLUDE="0002* 0004* 0005*" EPATCH_SOURCE="${S}/patches" EPATCH_SUFFIX=patch epatch
-#	Makefile.patch: keep `emake install` working
-#	linux-3.9.0.patch: add support for kernel 3.9.0
-	epatch "${FILESDIR}/${P}-makefile.patch" \
-		"${FILESDIR}/${P}-linux-3.9.0.patch"
-	mv "${S}/lib/wlc_hybrid.o_shipped_"* "${S}/lib/wlc_hybrid.o_shipped" \
-		|| die "Where is the blob?"
+	epatch "${FILESDIR}/${PN}-5.10.91.9-license.patch" \
+		"${FILESDIR}/${PN}-5.100.82.38-gcc.patch" \
+		"${FILESDIR}/${PN}-5.100.82.111-linux-3.0.patch" \
+		"${FILESDIR}/${P}-linux-2.6.39.patch" \
+		"${FILESDIR}/${P}-linux-3.2-with-multicast.patch" \
+		"${FILESDIR}/${P}-linux-3.4.patch" \
+		"${FILESDIR}/${P}-linux-3.6.patch" \
+		"${FILESDIR}/${P}-linux-3.8.patch" \
+		"${FILESDIR}/${P}-linux-3.9.patch" \
+		"${FILESDIR}/${P}-remove-rssi-errors.patch"
 
 	epatch_user
 }

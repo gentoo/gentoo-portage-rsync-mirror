@@ -1,6 +1,28 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.49 2013/05/12 10:02:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.52 2013/05/12 10:52:13 pinkbyte Exp $
+
+  12 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  broadcom-sta-5.100.82.112-r2.ebuild:
+  Add '-*' to KEYWORDS, as package ships blobs that can not be used on other
+  arches
+
+*broadcom-sta-5.100.82.112-r3 (12 May 2013)
+
+  12 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +broadcom-sta-5.100.82.112-r3.ebuild,
+  +files/broadcom-sta-5.100.82.112-linux-3.2-with-multicast.patch,
+  +files/broadcom-sta-5.100.82.112-linux-3.4.patch,
+  +files/broadcom-sta-5.100.82.112-linux-3.6.patch,
+  +files/broadcom-sta-5.100.82.112-linux-3.8.patch,
+  +files/broadcom-sta-5.100.82.112-linux-3.9.patch,
+  +files/broadcom-sta-5.100.82.112-remove-rssi-errors.patch:
+  Revision bump: add compatibility with more kernel versions, wrt bugs #437898
+  and #468388, thanks to M. B. <tomboy64 AT sina.cn>
+
+  12 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  broadcom-sta-6.30.223.30-r1.ebuild:
+  Remove incorrect explicit call to linux-info_pkg_setup
 
 *broadcom-sta-6.30.223.30-r1 (12 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.112-r2.ebuild,v 1.5 2013/03/08 04:59:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.112-r2.ebuild,v 1.6 2013/05/12 10:52:13 pinkbyte Exp $
 
 EAPI="4"
 inherit eutils linux-mod
@@ -12,7 +12,7 @@ SRC_URI="x86? ( ${SRC_BASE}32-v${PV//\./_}.tar.gz )
 	amd64? ( ${SRC_BASE}64-v${PV//\./_}.tar.gz )"
 
 LICENSE="Broadcom"
-KEYWORDS="amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RESTRICT="mirror"
