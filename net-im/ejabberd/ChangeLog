@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.116 2013/05/09 16:58:48 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.117 2013/05/12 14:07:02 ago Exp $
+
+  12 May 2013; Agostino Sarubbo <ago@gentoo.org> ejabberd-2.1.12.ebuild:
+  Stable for ppc, wrt bug #468728
 
   09 May 2013; Chema Alonso <nimiux@gentoo.org> ejabberd-2.1.12.ebuild:
   Stable for amd64 wrt bug #468728
@@ -575,4 +578,3 @@
   +files/ejabberdctl, +files/inetrc, +ejabberd-0.7.5.ebuild:
   Initial import. This is masked for a reason :) if you have problems bug #63472
   is your friend.
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-4.2.0.ebuild,v 1.1 2012/11/13 09:39:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-4.2.0.ebuild,v 1.2 2013/05/12 14:25:42 idella4 Exp $
 
 EAPI=4
 
@@ -21,12 +21,10 @@ IUSE="doc examples"
 # see the setup_data.py file for version numbers
 RDEPEND="
 	>=dev-python/apptools-4.0.1[doc?,examples?]
-	>=dev-python/blockcanvas-4.0.1[doc?]
 	>=dev-python/chaco-4.1.0[doc?,examples?]
 	>=dev-python/codetools-4.0.0[doc?,examples?]
 	>=dev-python/enable-4.1.0[doc?,examples?]
 	>=dev-python/envisage-4.1.0[doc?,examples?]
-	>=dev-python/etsdevtools-4.0.0[doc?,examples?]
 	>=dev-python/graphcanvas-4.0.0[examples?]
 	>=sci-visualization/mayavi-4.1.0[doc?,examples?]
 	>=dev-python/pyface-4.1.0[doc?,examples?]

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.16 2013/04/18 11:01:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.17 2013/05/12 14:25:42 idella4 Exp $
+
+  12 May 2013; Ian Delaney <idella4@gentoo.org> -ets-4.0.0-r1.ebuild,
+  -ets-4.1.0.ebuild, ets-4.2.0-r1.ebuild, ets-4.2.0.ebuild, ets-4.3.0.ebuild:
+  drop old versions{4.0,4.1}, drop deps to be dropped from portage
 
   18 Apr 2013; Ian Delaney <idella4@gentoo.org> -ets-3.6.0.ebuild:
   drop old

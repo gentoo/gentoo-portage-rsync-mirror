@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.12.ebuild,v 1.2 2013/05/09 16:58:48 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.12.ebuild,v 1.3 2013/05/12 14:07:02 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ia64 ppc ~sparc ~x86"
 EJABBERD_MODULES="mod_irc mod_muc mod_proxy65 mod_pubsub mod_statsdx"
 IUSE="captcha debug ldap odbc pam +web zlib ${EJABBERD_MODULES}"
 
