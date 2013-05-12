@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/geant-python-4.9.5_p01.ebuild,v 1.2 2012/05/20 16:48:17 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/geant-python-4.9.5_p02.ebuild,v 1.1 2013/05/12 03:32:16 patrick Exp $
 
 EAPI=4
 

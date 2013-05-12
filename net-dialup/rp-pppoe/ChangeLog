@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-pppoe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.102 2010/11/22 02:56:12 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.103 2013/05/12 04:00:43 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> rp-pppoe-3.8-r2.ebuild:
+  Remove redundant WANT_AUTOMAKE
 
   22 Nov 2010; Mike Frysinger <vapier@gentoo.org> rp-pppoe-3.10-r1.ebuild,
   +files/rp-pppoe-3.10-posix-source-sigaction.patch:

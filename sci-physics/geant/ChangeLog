@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.71 2013/03/02 23:26:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.72 2013/05/12 03:33:44 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Drop obsolete use flags from metadata.xml
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> geant-4.9.4_p03.ebuild,
   geant-4.9.5_p02.ebuild, geant-4.9.6.ebuild, geant-4.9.6_p01.ebuild:

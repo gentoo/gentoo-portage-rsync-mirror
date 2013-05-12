@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/geant-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/ChangeLog,v 1.6 2012/07/12 02:13:34 heroxbd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/ChangeLog,v 1.7 2013/05/12 03:32:16 patrick Exp $
+
+*geant-python-4.9.5_p02 (12 May 2013)
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org>
+  +geant-python-4.9.5_p02.ebuild, -geant-python-4.9.5_p01.ebuild:
+  [QA] Bump to match sci-physics/geant versions
 
   12 Jul 2012; Benda Xu <heroxbd@gentoo.org> geant-python-4.9.5.ebuild:
   replace sed hacks with configure provided libdir
@@ -22,4 +28,3 @@
   +files/geant-python-4.9.5-visverbose.patch, +geant-python-4.9.5_p01.ebuild,
   +metadata.xml:
   initial commit
-

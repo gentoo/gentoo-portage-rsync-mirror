@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.6.1.ebuild,v 1.2 2010/06/17 21:47:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.6.1.ebuild,v 1.3 2013/05/12 03:58:40 patrick Exp $
 
 EAPI="2"
 
@@ -33,11 +33,7 @@ S="${WORKDIR}/${MY_P}"
 
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-
-	# Portage incorrectly detects missing --run m4 output lines as automake maintainer mode
-	# eautoreconf cannot be used because it will screw up the libtool file
+src_prepare() {
 	epatch "${FILESDIR}/${P}-qa-false-positives.patch"
 }
 

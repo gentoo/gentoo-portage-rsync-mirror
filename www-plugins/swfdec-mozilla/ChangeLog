@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/swfdec-mozilla
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/ChangeLog,v 1.7 2012/05/03 06:08:02 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/ChangeLog,v 1.8 2013/05/12 03:48:02 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fix metadata.xml encoding
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org>
   swfdec-mozilla-0.8.2-r1.ebuild:
@@ -95,4 +98,3 @@
   03 Sep 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
   +swfdec-mozilla-0.5.2.ebuild:
   Initial version from lots of contributors, detail list at #105823
-
