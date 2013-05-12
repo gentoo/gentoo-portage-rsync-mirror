@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.41 2013/04/20 14:44:53 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.42 2013/05/12 11:06:44 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> cmucl-20d-r3.ebuild:
+  Fix inherit
 
 *cmucl-20d-r3 (20 Apr 2013)
 

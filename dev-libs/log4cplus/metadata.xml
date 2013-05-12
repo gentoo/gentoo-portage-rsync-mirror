@@ -9,6 +9,5 @@
 		<flag name="working-locale">Use C++'s std::locale for wchar_t &lt;-&gt; char conversions. See also log4cplus's unicode.txt documentation</flag>
 		<flag name="working-c-locale">Use the C99 locale facilities for wchar_t &lt;-&gt; char conversions. See also log4cplus's unicode.txt documentation </flag>
 		<flag name="iconv">Use inconv for wchar_t &lt;-&gt; char conversions. See also log4cplus's unicode.txt documentation</flag>
-		<flag name="qt">Build the liblog4cplusqt4debugappender library that implements Qt4DebugAppender</flag>
 	</use>
 </pkgmetadata>

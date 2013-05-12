@@ -1498,10 +1498,8 @@ dev-libs/libisofs:verbose-debug - Enable verbose debug messages
 dev-libs/libjit:interpreter - Enable the libjit interpreter
 dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
 dev-libs/libmail:apop - Enables the APOP authentication method
-dev-libs/libmemcached:gtest - Build with libgtest support.
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
-dev-libs/libmix:no-net2 - Disable support for net-libs/libpcap and net-libs/libnet
 dev-libs/libnl:doc - Install development documentation
 dev-libs/libnl:utils - Install command line interface utils
 dev-libs/libowfat:diet - Compile against dev-libs/dietlibc
@@ -1525,7 +1523,6 @@ dev-libs/libverto:tevent - Support event loops using sys-libs/tevent
 dev-libs/link-grammar:aspell - Adds support for app-text/aspell spell checker
 dev-libs/link-grammar:hunspell - Adds support for app-text/hunspell spell checker
 dev-libs/log4cplus:iconv - Use inconv for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
-dev-libs/log4cplus:qt - Build the liblog4cplusqt4debugappender library that implements Qt4DebugAppender
 dev-libs/log4cplus:working-c-locale - Use the C99 locale facilities for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
 dev-libs/log4cplus:working-locale - Use C++'s std::locale for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
 dev-libs/log4cxx:smtp - Offer SMTP support via net-libs/libesmtp

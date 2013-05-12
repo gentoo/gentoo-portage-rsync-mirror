@@ -10,7 +10,6 @@
 	usage, thread safe, and provide full access to server side methods.
 	</longdescription>
 <use>
-	<flag name='gtest'>Build with libgtest support.</flag>
 	<flag name='hsieh'>Use Hsieh hash algorithm.</flag>
 	<flag name='libevent'>Use the libevent event loop interface.</flag>
 </use>
