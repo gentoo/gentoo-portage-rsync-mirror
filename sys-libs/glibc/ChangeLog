@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.938 2013/05/09 04:41:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.939 2013/05/12 02:28:47 patrick Exp $
+
+  12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Drop obsolete use flags from metadata.xml
 
   09 May 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.15-r3.ebuild:
   Mark sh stable.

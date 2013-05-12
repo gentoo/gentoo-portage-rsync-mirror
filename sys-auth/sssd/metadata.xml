@@ -12,9 +12,6 @@
 </maintainer>
 <use>
 	<flag name="locator">Install sssd's Kerberos plugin</flag>
-	<flag name="logrotate">Install logrotate.d file</flag>
-	<flag name="glib">Use <pkg>dev-libs/glib</pkg> as UTF-8 string library</flag>
-	<flag name="libunistring">Use <pkg>dev-libs/libunistring</pkg> as UTF-8 string library</flag>
 	<flag name='netlink'>Add support for netlink protocol via <pkg>dev-libs/libnl</pkg></flag>
 	<flag name='manpages'>Build man pages with <pkg>dev-libs/libxslt</pkg></flag>
 	<flag name='autofs'>Build helper to let <pkg>net-fs/autofs</pkg> use sssd provided information</flag>

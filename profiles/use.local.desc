@@ -5716,10 +5716,7 @@ sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in t
 sys-auth/polkit:introspection - Use dev-libs/gobject-introspection for introspection
 sys-auth/polkit:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 sys-auth/sssd:autofs - Build helper to let net-fs/autofs use sssd provided information
-sys-auth/sssd:glib - Use dev-libs/glib as UTF-8 string library
-sys-auth/sssd:libunistring - Use dev-libs/libunistring as UTF-8 string library
 sys-auth/sssd:locator - Install sssd's Kerberos plugin
-sys-auth/sssd:logrotate - Install logrotate.d file
 sys-auth/sssd:manpages - Build man pages with dev-libs/libxslt
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
 sys-auth/sssd:ssh - Build helper to let net-misc/openssh use sssd provided information
@@ -6019,7 +6016,6 @@ sys-libs/freeipmi:nagios - Install a nagios plugin to check sensors' status.
 sys-libs/gdbm:berkdb - enable compatibility layer for UNIX-like dbm and ndbm interfaces
 sys-libs/gdbm:exporter - enable gdbmexport binary for exporting data from gdbm-1.8 databases into gdbm-1.9
 sys-libs/glibc:gd - build memusage and memusagestat tools
-sys-libs/glibc:linuxthreads - Build linuxthreads support (only for kernels older than linux-2.6)
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
 sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
 sys-libs/glibc:systemtap - enable systemtap static probe points
