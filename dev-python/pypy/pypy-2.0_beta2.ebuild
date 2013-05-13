@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta2.ebuild,v 1.4 2013/05/08 23:59:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta2.ebuild,v 1.5 2013/05/13 18:18:59 floppym Exp $
 
 EAPI=5
 
@@ -124,7 +124,9 @@ src_install() {
 
 	# Generate cffi cache
 	runpython -c "import _curses" || die "Failed to import _curses"
-	use sqlite && runpython -c "import _sqlite3" || die "Failed to import _sqlite3"
+	if use sqlite; then
+		runpython -c "import _sqlite3" || die "Failed to import _sqlite3"
+	fi
 
 	# compile the installed modules
 	python_optimize "${ED%/}${INSDESTTREE}"

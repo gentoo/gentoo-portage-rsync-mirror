@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.39 2013/05/10 04:02:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.40 2013/05/13 18:18:59 floppym Exp $
+
+  13 May 2013; Mike Gilbert <floppym@gentoo.org> pypy-2.0_beta2.ebuild:
+  Fix build with sqlite disabled, bug 469654 by René 'Necoro' Neumann.
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Adding DOCTYPE to metadata

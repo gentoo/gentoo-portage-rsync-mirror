@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.0.ebuild,v 1.1 2013/03/28 16:33:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.2.ebuild,v 1.1 2013/05/13 18:12:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -46,9 +46,11 @@ COMMON_DEPEND="
 	spell? (
 		>=app-text/enchant-1.2:=
 		>=app-text/iso-codes-0.35 )
-	zeitgeist? ( dev-libs/libzeitgeist )"
+	zeitgeist? ( >=gnome-extra/zeitgeist-0.9.12 )
+"
 RDEPEND="${COMMON_DEPEND}
-	x11-themes/gnome-icon-theme-symbolic"
+	x11-themes/gnome-icon-theme-symbolic
+"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/scrollkeeper-0.3.11
@@ -60,19 +62,17 @@ DEPEND="${COMMON_DEPEND}
 "
 # yelp-tools, gnome-common needed to eautoreconf
 
-src_prepare() {
+src_configure() {
 	DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
-	G2CONF="${G2CONF}
-		--disable-deprecations
-		--enable-updater
-		--enable-gvfs-metadata
-		$(use_enable introspection)
-		$(use_enable python)
-		$(use_enable spell)
-		$(use_enable zeitgeist)
-		ITSTOOL=$(type -P true)"
-
-	gnome2_src_prepare
+	gnome2_src_configure \
+		--disable-deprecations \
+		--enable-updater \
+		--enable-gvfs-metadata \
+		$(use_enable introspection) \
+		$(use_enable python) \
+		$(use_enable spell) \
+		$(use_enable zeitgeist) \
+		ITSTOOL=$(type -P true)
 }
 
 src_test() {

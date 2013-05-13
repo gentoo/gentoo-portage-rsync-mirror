@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/baobab-3.8.0.ebuild,v 1.1 2013/03/28 22:19:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/baobab-3.8.2.ebuild,v 1.1 2013/05/13 18:02:30 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
 inherit gnome2
 
-DESCRIPTION="Disk usage browser for GNOME 3"
-HOMEPAGE="https://live.gnome.org/GnomeUtils"
+DESCRIPTION="Disk usage browser for GNOME"
+HOMEPAGE="https://live.gnome.org/Baobab"
 
 LICENSE="GPL-2+ FDL-1.1+"
 SLOT="0"
@@ -20,7 +20,7 @@ COMMON_DEPEND="
 	gnome-base/libgtop:2=
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	>=x11-libs/gtk+-3.7.12:3
+	>=x11-libs/gtk+-3.8.0:3
 	x11-libs/pango
 "
 RDEPEND="${COMMON_DEPEND}
