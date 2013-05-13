@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5.ebuild,v 1.11 2013/05/11 11:13:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5.ebuild,v 1.12 2013/05/13 19:37:35 hasufell Exp $
 
 EAPI=5
 
@@ -31,7 +31,10 @@ RDEPEND="dev-libs/glib:2
 	perl? ( >=dev-lang/perl-5.8.0 )
 	plugin-sysinfo? ( sys-apps/pciutils )
 	python? ( ${PYTHON_DEPS} )
-	spell? ( dev-libs/libxml2 )
+	spell? (
+		app-text/enchant
+		dev-libs/libxml2
+	)
 	ssl? ( >=dev-libs/openssl-0.9.8u )
 	theme-manager? ( dev-lang/mono )"
 DEPEND="${RDEPEND}

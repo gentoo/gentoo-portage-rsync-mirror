@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.0.ebuild,v 1.2 2013/03/31 18:54:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.2.ebuild,v 1.1 2013/05/13 19:52:48 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Image viewer and browser for Gnome"
 HOMEPAGE="https://live.gnome.org/gthumb"
@@ -42,9 +42,11 @@ COMMON_DEPEND="
 	raw? ( >=media-libs/libopenraw-0.0.8:= )
 	!raw? ( media-gfx/dcraw )
 	webkit? ( >=net-libs/webkit-gtk-1.10.0:3 )
-	webp? ( >=media-libs/libwebp-0.2.0 )"
+	webp? ( >=media-libs/libwebp-0.2.0 )
+"
 RDEPEND="${COMMON_DEPEND}
-	>=gnome-base/gsettings-desktop-schemas-0.1.4"
+	>=gnome-base/gsettings-desktop-schemas-0.1.4
+"
 DEPEND="${COMMON_DEPEND}
 	app-text/yelp-tools
 	app-text/scrollkeeper
@@ -57,34 +59,32 @@ DEPEND="${COMMON_DEPEND}
 #	gnome-base/gnome-common
 
 src_prepare() {
-	# Upstream says in configure help that libchamplain support
-	# crashes frequently
-	G2CONF="${G2CONF}
-		--disable-static
-		--disable-libchamplain
-		--with-smclient=xsmp
-		$(use_enable cdr libbrasero)
-		$(use_enable exif exiv2)
-		$(use_enable gstreamer)
-		$(use_enable http libsoup)
-		$(use_enable jpeg)
-		$(use_enable json libjson-glib)
-		$(use_enable libsecret)
-		$(use_enable raw libopenraw)
-		$(use_enable slideshow clutter)
-		$(use_enable svg librsvg)
-		$(use_enable test test-suite)
-		$(use_enable tiff)
-		$(use_enable webkit webkit2)
-		$(use_enable webp libwebp)"
-
-	# Remove unwanted CFLAGS added with USE=debug
+	# Remove unwanted CFLAGS added with USE=debug 
 	sed -e 's/CFLAGS="$CFLAGS -g -O0 -DDEBUG"//' \
 		-i configure.ac -i configure || die
 
-	# Fixed unrecognized option --disable-libjson-glib, upstream bug #696783
-	epatch "${FILESDIR}/${P}-configure-option.patch"
-
-	eautoreconf
 	gnome2_src_prepare
+}
+
+src_configure() {
+	# Upstream says in configure help that libchamplain support
+	# crashes frequently
+	gnome2_src_configure \
+		--disable-static \
+		--disable-libchamplain \
+		--with-smclient=xsmp \
+		$(use_enable cdr libbrasero) \
+		$(use_enable exif exiv2) \
+		$(use_enable gstreamer) \
+		$(use_enable http libsoup) \
+		$(use_enable jpeg) \
+		$(use_enable json libjson-glib) \
+		$(use_enable libsecret) \
+		$(use_enable raw libopenraw) \
+		$(use_enable slideshow clutter) \
+		$(use_enable svg librsvg) \
+		$(use_enable test test-suite) \
+		$(use_enable tiff) \
+		$(use_enable webkit webkit2) \
+		$(use_enable webp libwebp)
 }

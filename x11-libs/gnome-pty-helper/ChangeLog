@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.37 2013/04/25 18:19:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.38 2013/05/13 19:44:37 pacho Exp $
+
+*gnome-pty-helper-0.34.5 (13 May 2013)
+
+  13 May 2013; Pacho Ramos <pacho@gentoo.org> +gnome-pty-helper-0.34.5.ebuild,
+  -gnome-pty-helper-0.34.3.ebuild:
+  Version bump, drop old
 
 *gnome-pty-helper-0.34.4 (25 Apr 2013)
 

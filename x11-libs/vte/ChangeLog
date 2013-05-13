@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.364 2013/04/25 18:21:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.365 2013/05/13 19:47:07 pacho Exp $
+
+*vte-0.34.5 (13 May 2013)
+
+  13 May 2013; Pacho Ramos <pacho@gentoo.org> +vte-0.34.5.ebuild,
+  -vte-0.34.3.ebuild:
+  Version bump, drop old
 
 *vte-0.34.4 (25 Apr 2013)
 
