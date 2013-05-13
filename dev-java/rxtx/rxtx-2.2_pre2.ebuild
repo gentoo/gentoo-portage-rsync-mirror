@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.2_pre2.ebuild,v 1.1 2011/09/22 07:14:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.2_pre2.ebuild,v 1.2 2013/05/13 13:30:11 tomwij Exp $
 
 EAPI="4"
 
@@ -30,9 +30,10 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# some minor fixes
-	sed -i -e "s:UTS_RELEASE::g" configure.in
-	sed -i -e "s:|1.5\*:|1.5*|1.6*|1.7*:g" configure.in
-	sed -i -e "s:\(\$(JAVADOC)\):\1 -d api:g" Makefile.am
+	sed -i -e "s:UTS_RELEASE::g" configure.in || die
+	sed -i -e "s:|1.5\*:|1.5*|1.6*|1.7*:g" configure.in || die
+	sed -i -e "s:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g" configure.in || die
+	sed -i -e "s:\(\$(JAVADOC)\):\1 -d api:g" Makefile.am || die
 
 	# some patches
 	epatch "${FILESDIR}/${PN}-2.1-7r2-lfd.diff"

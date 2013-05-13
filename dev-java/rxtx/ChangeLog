@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/rxtx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.18 2011/09/22 07:33:53 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.19 2013/05/13 13:30:11 tomwij Exp $
+
+  13 May 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml,
+  rxtx-2.2_pre2.ebuild:
+  Support sys-devel/automake:1.13 by replacing obsolete macro. Fixes bug
+  #469322.
 
   22 Sep 2011; Tim Harder <radhermit@gentoo.org>
   files/rxtx-2.2_pre2-add-ttyACM.patch:
@@ -86,4 +91,3 @@
   +rxtx-2.1.7_pre17.ebuild:
   Initial import. Ebuild contributed by Nikolas Coukouma <otto@atrus.org>. Fixes
   #72580.
-

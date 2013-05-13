@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.136 2013/03/05 09:12:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.137 2013/05/13 13:19:13 ssuominen Exp $
+
+  13 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -dbus-glib-0.100-r1.ebuild, -dbus-glib-0.100-r2.ebuild,
+  -dbus-glib-0.100.1.ebuild, -dbus-glib-0.100.ebuild,
+  -files/dbus-glib-0.98-glib-2.31.patch:
+  old
 
   05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dbus-glib-0.100.2.ebuild:
   Stable for sh, wrt bug #457792
