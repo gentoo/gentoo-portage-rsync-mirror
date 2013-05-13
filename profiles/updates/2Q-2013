@@ -12,3 +12,4 @@ move games-engines/gambatte games-emulation/gambatte
 move media-sound/alsa-firmware sys-firmware/alsa-firmware
 move sys-process/crtools sys-process/criu
 move kde-misc/libkfbapi net-libs/libkfbapi
+move app-text/wpd2odt app-text/writerperfect

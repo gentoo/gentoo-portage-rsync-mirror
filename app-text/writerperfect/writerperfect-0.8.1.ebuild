@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/wpd2odt-0.8.1.ebuild,v 1.6 2012/05/04 03:33:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/writerperfect-0.8.1.ebuild,v 1.1 2013/05/13 12:16:06 scarabeus Exp $
 
 EAPI=4
 

@@ -1033,10 +1033,12 @@ app-text/webgen:highlight - Enable syntax highlighting for certain plugins
 app-text/webgen:markdown - Markdown support
 app-text/wgetpaste:lodgeit-default - Set one of lodgeit-like (ex http://paste.pocoo.org) services as default
 app-text/wklej:vim - Install the vim plugin allowing to paste through ':Wklej'.
-app-text/wpd2odt:gsf - Add support for structured files using gnome-extra/libgsf
-app-text/wpd2odt:visio - Add support for visio format using media-libs/libvisio
-app-text/wpd2odt:wpg - Add support for wpg format using app-text/libwpg
-app-text/wpd2odt:wps - Add support for wps format using app-text/libwps
+app-text/writerperfect:gsf - Add support for structured files using gnome-extra/libgsf
+app-text/writerperfect:mspub - Add support to mspub format using app-text/libmspub
+app-text/writerperfect:mwaw - Add support to mwaw formats using app-text/libmwaw
+app-text/writerperfect:visio - Add support for visio format using media-libs/libvisio
+app-text/writerperfect:wpg - Add support for wpg format using app-text/libwpg
+app-text/writerperfect:wps - Add support for wps format using app-text/libwps
 app-text/wv:tools - Install optional utilities considered deprecated in favor of using AbiWord.
 app-text/xiphos:webkit - Use net-libs/webkit-gtk instead of gnome-extra/gtkhtml
 app-text/yagf:cuneiform - Enable support for the app-text/cuneiform OCR engine.

@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7839 2013/05/13 07:00:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7841 2013/05/13 12:16:11 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> updates/2Q-2013:
+  Move wpd2odt to writerperfect
+
+  13 May 2013; Tiziano Müller <dev-zero@gentoo.org>
+  desc/nginx_modules_http.desc:
+  Add use flag descriptions for
+  nginx_modules_http_{gunzip,metrics,upstream_check} (bug #469534).
 
   13 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org> desc/linguas.desc:
   Add sr_RS@cyrillic and sr_RS@latin locales; used by app-emulation/wine.

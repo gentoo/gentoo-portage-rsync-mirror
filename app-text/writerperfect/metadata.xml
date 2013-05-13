@@ -7,5 +7,7 @@
 	<flag name='visio'>Add support for visio format using <pkg>media-libs/libvisio</pkg></flag>
 	<flag name='wpg'>Add support for wpg format using <pkg>app-text/libwpg</pkg></flag>
 	<flag name='wps'>Add support for wps format using <pkg>app-text/libwps</pkg></flag>
+	<flag name='mspub'>Add support to mspub format using <pkg>app-text/libmspub</pkg></flag>
+	<flag name='mwaw'>Add support to mwaw formats using <pkg>app-text/libmwaw</pkg></flag>
 </use>
 </pkgmetadata>
