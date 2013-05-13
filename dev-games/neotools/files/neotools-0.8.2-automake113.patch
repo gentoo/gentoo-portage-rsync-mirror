@@ -1,0 +1,11 @@
+--- configure.in.old	2013-05-13 09:52:34.778345838 +0200
++++ configure.in	2013-05-13 10:09:14.830518747 +0200
+@@ -3,7 +3,7 @@
+ AC_CANONICAL_TARGET
+ AM_INIT_AUTOMAKE(neotools, 0.8.1)
+ AC_CONFIG_SRCDIR(nscemake/main.cpp)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADER(config.h)
+ AC_LANG(C++)
+ AC_PREREQ(2.52)
+ 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2-r1.ebuild,v 1.3 2010/10/15 12:34:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2-r1.ebuild,v 1.4 2013/05/13 08:19:47 tupone Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -40,7 +40,8 @@ src_prepare() {
 		|| die "sed failed"
 
 	epatch "${FILESDIR}"/${P}-errno.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-automake113.patch
 
 	eautoreconf
 }
