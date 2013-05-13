@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-0.3-r2.ebuild,v 1.3 2012/12/26 23:20:34 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-0.3.1.ebuild,v 1.1 2013/05/13 01:32:49 rafaelmartins Exp $
 
 EAPI=4
 
