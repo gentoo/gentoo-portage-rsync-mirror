@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.13-r1.ebuild,v 1.1 2013/01/19 20:12:23 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.13-r1.ebuild,v 1.2 2013/05/13 19:29:38 alonbl Exp $
 
 EAPI="4"
 
@@ -43,6 +43,9 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# Install RU man page in right location
 	sed -e "/^man_MANS =/s/ gpg\.ru\.1//" -i doc/Makefile.in || die "sed doc/Makefile.in failed"
+
+	# bug#469388
+	sed -i -e 's/--batch --dearmor/--homedir . --batch --dearmor/' checks/Makefile.in
 
 	# Fix PIC definitions
 	sed -i -e 's:PIC:__PIC__:' mpi/i386/mpih-{add,sub}1.S intl/relocatable.c \

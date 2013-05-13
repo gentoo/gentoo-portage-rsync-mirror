@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyregion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyregion/ChangeLog,v 1.6 2013/04/25 16:50:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyregion/ChangeLog,v 1.7 2013/05/13 19:18:28 xarthisius Exp $
+
+*pyregion-1.1.1 (13 May 2013)
+
+  13 May 2013; Kacper Kowalik <xarthisius@gentoo.org> +pyregion-1.1.1.ebuild,
+  -pyregion-1.0.1.ebuild, -pyregion-1.1.ebuild:
+  Version bump, drop old
 
 *pyregion-1.1 (25 Apr 2013)
 
