@@ -1,16 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20070815-r3.ebuild,v 1.4 2012/06/08 13:16:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20070815-r3.ebuild,v 1.5 2013/05/12 23:52:16 vapier Exp $
 
-inherit eutils
+EAPI="4"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tools for use with Usermode Linux virtual machines"
-SRC_URI="http://user-mode-linux.sourceforge.net/uml_utilities_${PV}.tar.bz2"
 HOMEPAGE="http://user-mode-linux.sourceforge.net/"
+SRC_URI="http://user-mode-linux.sourceforge.net/uml_utilities_${PV}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* amd64 x86"
+SLOT="0"
+KEYWORDS="amd64 arm x86"
 IUSE="fuse"
 
 RDEPEND="fuse? ( sys-fs/fuse )
@@ -19,9 +21,7 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/tools-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# Merge previous patches with fix for bug #331099
 	epatch "${FILESDIR}"/${P}-rollup.patch
 	# Fix owner of humfsify; bug #364531
@@ -35,9 +35,6 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS} -DTUNTAP -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -g -Wall" all || die "Compilation failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	tc-export AR CC
+	emake CFLAGS="${CFLAGS} ${CPPFLAGS} -DTUNTAP -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -g -Wall" all
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usermode-utilities
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.38 2012/06/08 13:16:07 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.39 2013/05/12 23:52:16 vapier Exp $
+
+  12 May 2013; Mike Frysinger <vapier@gentoo.org>
+  usermode-utilities-20070815-r3.ebuild:
+  Update to EAPI=4.  Add arm love.  Handle AR/CC/CPPFLAGS.
 
   08 Jun 2012; Pacho Ramos <pacho@gentoo.org>
   usermode-utilities-20070815-r3.ebuild:
