@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_radius/mod_auth_radius-1.5.8.ebuild,v 1.1 2013/05/08 13:52:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_radius/mod_auth_radius-1.5.8.ebuild,v 1.2 2013/05/13 13:31:43 chainsaw Exp $
 
 EAPI="5"
 
-inherit apache-module base
+inherit apache-module eutils
 
 DESCRIPTION="Radius authentication for Apache."
 HOMEPAGE="http://freeradius.org/mod_auth_radius/"
@@ -20,14 +20,16 @@ APACHE2_MOD_DEFINE="AUTH_RADIUS"
 
 APXS2_ARGS="-c ${PN}-2.0.c"
 
-PATCHES=(
-	"${FILESDIR}/${PV}-includes.patch"
-	"${FILESDIR}/${PV}-remote_ip-obsolete.patch"
-)
-
 DOCFILES="README"
 
 need_apache2
+
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-includes.patch"
+	if has_version ">=www-servers/apache-2.4"; then
+		epatch "${FILESDIR}/${PV}-remote_ip-obsolete.patch"
+	fi
+}
 
 src_compile() {
 	apache-module_src_compile
