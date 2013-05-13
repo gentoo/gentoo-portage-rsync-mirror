@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.44 2013/03/18 17:49:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.45 2013/05/13 03:09:05 patrick Exp $
+
+  13 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove removed lcd herd from metadata
 
 *g15daemon-1.9.5.3-r8 (18 Mar 2013)
 

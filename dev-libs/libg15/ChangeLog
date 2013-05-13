@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libg15
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.29 2012/10/12 20:01:55 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.30 2013/05/13 03:20:20 patrick Exp $
+
+  13 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Removing removed lcd herd from metadata
 
   12 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +files/g15tools.patch,
   libg15-1.2.7-r1.ebuild, libg15-9999.ebuild:

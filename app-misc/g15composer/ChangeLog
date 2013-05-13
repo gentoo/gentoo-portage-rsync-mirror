@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15composer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.21 2010/03/06 20:15:00 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.22 2013/05/13 03:08:01 patrick Exp $
+
+  13 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove removed lcd herd from metadata
 
   06 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Changing maintainer per emails of Jan 18th.
@@ -102,4 +105,3 @@
   04 Oct 2006; Markus Ullmann <jokey@gentoo.org> +files/g15composer-1.0.rc,
   +metadata.xml, +g15composer-1.0.ebuild:
   Initial import, thanks to Alessio Cassibba and guitoo
-

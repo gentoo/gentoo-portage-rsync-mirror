@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15message
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/ChangeLog,v 1.6 2010/03/06 20:17:34 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15message/ChangeLog,v 1.7 2013/05/13 03:11:02 patrick Exp $
+
+  13 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove removed lcd herd from metadata
 
   06 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Changing maintainer per emails of Jan 18th.
@@ -23,4 +26,3 @@
   15 Mar 2007; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
   +g15message-1.0.0.ebuild:
   Initial version, thanks to Alex Maclean (monkeh) for ~x86
-
