@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.52 2013/05/04 13:38:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.53 2013/05/13 15:56:31 ulm Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -122,7 +122,6 @@
 video_cards_newport
 
 #codec support
--win32codecs
 -x264
 
 # lvm2 cluster

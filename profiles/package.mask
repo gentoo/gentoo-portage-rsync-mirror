@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14754 2013/05/13 04:05:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14755 2013/05/13 15:56:30 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (13 May 2013)
+# Unclear licensing situation. Distfile not redistributable
+# and not available at copyright owner's site.
+# Masked for removal in 30 days, bug #468406
+media-libs/win32codecs
 
 # Ian Delaney <idella4@gentoo.org> (12 May 2013)
 # Recommended by upstream's own maintainer to drop the
@@ -1091,6 +1097,10 @@ dev-embedded/avr-libc
 
 # Steve Dibb <beandog@gentoo.org> (05 Nov 2008)
 # Mask realplayer codecs for security bug 245662
+# Ulrich Müller <ulm@gentoo.org> (13 May 2013)
+# Unclear licensing situation. Distfile not redistributable
+# and not available at copyright owner's site. Fetch failure.
+# Masked for removal in 30 days, bugs #468406 and #468370.
 media-libs/amd64codecs
 media-libs/realcodecs
 
