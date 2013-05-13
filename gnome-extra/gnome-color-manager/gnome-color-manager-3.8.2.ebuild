@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.8.0.ebuild,v 1.1 2013/03/28 22:56:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.8.2.ebuild,v 1.1 2013/05/13 17:16:09 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -54,14 +54,13 @@ RESTRICT="test"
 
 src_configure() {
 	# Always enable tests since they are check_PROGRAMS anyway
-	G2CONF="${G2CONF}
-		--disable-static
-		--enable-tests
-		$(use_enable clutter)
-		$(use_enable packagekit)
-		$(use_enable raw exiv)
-		ITSTOOL=$(type -P true)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--disable-static \
+		--enable-tests \
+		$(use_enable clutter) \
+		$(use_enable packagekit) \
+		$(use_enable raw exiv) \
+		ITSTOOL=$(type -P true)
 }
 
 pkg_postinst() {

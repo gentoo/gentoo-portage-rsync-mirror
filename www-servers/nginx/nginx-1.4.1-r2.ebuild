@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.1-r2.ebuild,v 1.1 2013/05/13 12:18:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.1-r2.ebuild,v 1.2 2013/05/13 17:23:25 zx2c4 Exp $
 
 EAPI="5"
 
@@ -221,6 +221,8 @@ src_prepare() {
 	sed -i 's:.default::' auto/install || die
 	# remove useless files
 	sed -i -e '/koi-/d' -e '/win-/d' auto/install || die
+
+	epatch_user
 }
 
 src_configure() {

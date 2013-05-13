@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-3.8.0.ebuild,v 1.1 2013/03/28 17:20:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-3.8.2.ebuild,v 1.1 2013/05/13 17:27:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
 inherit eutils gnome2 virtualx
 
-DESCRIPTION="Gnome Power Manager"
-HOMEPAGE="http://www.gnome.org/projects/gnome-power-manager/"
+DESCRIPTION="GNOME power management service"
+HOMEPAGE="http://projects.gnome.org/gnome-power-manager/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,20 +41,21 @@ DEPEND="${COMMON_DEPEND}
 # docbook-xml-dtd-4.4 and -4.1.2 are used by the xml files under ${S}/docs.
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		$(use_enable test tests)
-		--enable-compile-warnings=minimum"
-
-	gnome2_src_prepare
-
 	# Drop debugger CFLAGS from configure
-	# XXX: touch configure.ac only if running eautoreconf, otherwise
+	# Touch configure.ac only if running eautoreconf, otherwise
 	# maintainer mode gets triggered -- even if the order is correct
 	sed -e 's:^CPPFLAGS="$CPPFLAGS -g"$::g' \
 		-i configure || die "debugger sed failed"
+	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		$(use_enable test tests) \
+		--enable-compile-warnings=minimum
 }
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check || die "Test phase failed"
+	Xemake check
 }

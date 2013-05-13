@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.8.0.ebuild,v 1.1 2013/04/11 19:11:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.8.0.ebuild,v 1.2 2013/05/13 17:48:43 nirbheek Exp $
 
 EAPI="5"
 
@@ -28,9 +28,7 @@ RDEPEND="
 	>=app-crypt/gcr-${PV}
 	>=gnome-base/nautilus-${PV}
 	>=gnome-base/gnome-keyring-${PV}
-	>=gnome-base/libgnome-keyring-${PV}
 	>=gnome-extra/evolution-data-server-${PV}
-	>=gnome-extra/gnome-power-manager-${PV}
 
 	>=app-crypt/seahorse-${PV}
 	>=app-editors/gedit-${PV}
