@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.3.ebuild,v 1.1 2013/05/08 19:17:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.11.ebuild,v 1.1 2013/05/13 21:38:18 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -60,7 +60,10 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	system-ffmpeg? ( >=media-video/ffmpeg-1.0:=[opus] )
+	system-ffmpeg? ( || (
+		>=media-video/ffmpeg-1.0:=[opus]
+		>=media-video/libav-9.5:=[opus]
+	) )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -128,13 +131,7 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
-
-	# Fix build with system libraries. To be upstreamed.
-	epatch "${FILESDIR}/${PN}-system-icu-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-libvpx-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-v8-r1.patch"
-	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r5.patch"
 
 	epatch_user
 
@@ -351,7 +348,10 @@ src_configure() {
 	tc-export AR CC CXX RANLIB
 
 	# Tools for building programs to be executed on the build system, bug #410883.
-	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
+	export AR_host=$(tc-getBUILD_AR)
+	export CC_host=$(tc-getBUILD_CC)
+	export CXX_host=$(tc-getBUILD_CXX)
+	export LD_host=${CXX_host}
 
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
@@ -371,11 +371,7 @@ src_compile() {
 	fi
 
 	# See bug #410883 for more info about the .host mess.
-	emake ${make_targets} BUILDTYPE=Release V=1 \
-		CC.host="${BUILD_CC}" CFLAGS.host="${BUILD_CFLAGS}" \
-		CXX.host="${BUILD_CXX}" CXXFLAGS.host="${BUILD_CXXFLAGS}" \
-		LINK.host="${BUILD_CXX}" LDFLAGS.host="${BUILD_LDFLAGS}" \
-		AR.host="${BUILD_AR}" || die
+	emake ${make_targets} BUILDTYPE=Release V=1 || die
 
 	pax-mark m out/Release/chrome
 	if use test; then
