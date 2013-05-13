@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.709 2013/04/28 16:24:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.710 2013/05/13 09:27:26 olemarkus Exp $
+
+*php-5.5.0_rc1 (13 May 2013)
+*php-5.3.25 (13 May 2013)
+*php-5.4.15 (13 May 2013)
+
+  13 May 2013; Ole Markus With <olemarkus@gentoo.org> +php-5.3.25.ebuild,
+  +php-5.4.15.ebuild, +php-5.5.0_rc1.ebuild, metadata.xml:
+  Version bumps. xsl USE flag has been renamed to xslt.
 
   28 Apr 2013; Zac Medico <zmedico@gentoo.org> php-5.3.23.ebuild,
   php-5.3.24.ebuild, php-5.4.13.ebuild, php-5.4.14.ebuild,

@@ -1376,6 +1376,7 @@ dev-lang/php:pic - Force shared modules to build as PIC on x86 (speed tradeoff w
 dev-lang/php:sqlite2 - Add sqlite2 support. Will be removed
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
+dev-lang/php:xslt - Enable the XSL extension
 dev-lang/php:zip - Enable ZIP file support
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native.
 dev-lang/python:threads - Enable threading support. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
