@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ccsm-0.8.4-r3.ebuild,v 1.1 2013/05/07 15:13:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ccsm-0.8.4-r4.ebuild,v 1.1 2013/05/13 16:48:50 pinkbyte Exp $
 
 EAPI="5"
 
@@ -34,4 +34,9 @@ python_prepare_all() {
 		ccsm.desktop.in || die 'sed on ccsm.desktop.in failed'
 
 	distutils-r1_python_prepare_all
+}
+
+python_configure_all() {
+	#set prefix
+	mydistutilsargs=( build --prefix=/usr )
 }

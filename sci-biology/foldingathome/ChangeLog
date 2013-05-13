@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.40 2013/05/13 16:22:24 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.42 2013/05/13 16:47:20 axs Exp $
+
+  13 May 2013; Ian Stakenvicius <axs@gentoo.org> foldingathome-7.3.6-r2.ebuild:
+  showing special permission during pkg_setup so that we 'display this notice.'
+
+  13 May 2013; Ian Stakenvicius <axs@gentoo.org> foldingathome-7.3.6-r2.ebuild:
+  put back mirror restriction (was too excited about dropping fetch, forgot to
+  re-add)
 
   13 May 2013; Ian Stakenvicius <axs@gentoo.org> foldingathome-7.3.6-r2.ebuild:
   Dropped fetch restriction and amended license, as Gentoo has been granted

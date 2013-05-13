@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-rally/quake1-rally-1.2.ebuild,v 1.5 2005/11/05 22:55:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-rally/quake1-rally-1.2.ebuild,v 1.6 2013/05/13 16:56:52 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="TC which turns Quake into a Rally racing game"
-HOMEPAGE="http://www.quakerally.com/"
+HOMEPAGE="http://wiki.quakeworld.nu/Quake_Rally"
 SRC_URI="mirror://gentoo/qr12.zip
 	mirror://gentoo/qrlo1.zip"
 

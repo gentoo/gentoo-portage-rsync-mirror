@@ -1,6 +1,14 @@
 # ChangeLog for x11-apps/ccsm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.27 2013/05/07 15:13:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.28 2013/05/13 16:48:50 pinkbyte Exp $
+
+*ccsm-0.8.4-r4 (13 May 2013)
+
+  13 May 2013; Sergey Popov <pinkbyte@gentoo.org> -ccsm-0.8.4-r3.ebuild,
+  +ccsm-0.8.4-r4.ebuild:
+  Revision bump: fix default prefix path, wrt bug #469596, thanks to Alexander
+  E. Patrakov <patrakov AT gmail.com> for discovering this and CBke <cb AT
+  linux.be> for suggested fix. Remove broken revision
 
 *ccsm-0.8.4-r3 (07 May 2013)
 
