@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.10.3.ebuild,v 1.2 2013/05/08 21:00:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.10.3.ebuild,v 1.3 2013/05/13 09:38:38 kensington Exp $
 
 EAPI=5
 
@@ -34,17 +34,11 @@ RDEPEND="${DEPEND}
 # nepomuk_email_feeder moved here in 4.8
 add_blocker kdepim-common-libs 4.7.50
 
-src_prepare() {
-	sed -e "s:find_package(LibKGAPI QUIET NO_MODULE):macro_optional_find_package(LibKGAPI):g" \
-	    -i "${S}/CMakeLists.txt" || die "fixing automagic dependencies failed"
-
-	kde4-base_src_prepare
-}
-
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_with google LibKGAPI)
-		$(cmake-utils_use_with kolab Libkolab)
+		$(cmake-utils_use_find_package google LibKGAPI)
+		$(cmake-utils_use_find_package kolab Libkolab)
+		$(cmake-utils_use_find_package kolab Libkolabxml)
 	)
 
 	kde4-base_src_configure
