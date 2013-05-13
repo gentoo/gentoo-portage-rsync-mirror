@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14753 2013/05/13 03:33:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14754 2013/05/13 04:05:25 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,10 +46,10 @@ dev-python/blockcanvas
 
 # Ian Delaney <idella4@gentoo.org> (12 May 2013)
 # version 3 package now superseded by
-# dev-python/envisage version 4.
+# dev-python/envisage version 4. # envisageplugins-3.2.0-r1 
+# has envisagecore-3 substituted with envisage-4.0.0; #466342
 # Masked for removal in 30 days
 dev-python/envisagecore
-dev-python/envisageplugins
 
 # Markos Chandras <hwoarang@gentoo.org> (12 May 2013)
 # Does not build. Dead upstream. Bug #467286
