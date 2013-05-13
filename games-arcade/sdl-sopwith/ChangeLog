@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdl-sopwith
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.22 2013/02/28 03:12:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.23 2013/05/13 03:49:13 mr_bones_ Exp $
+
+  13 May 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-sopwith-1.7.5-r1.ebuild:
+  tidy
 
   28 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-sopwith-1.7.5-r1.ebuild:

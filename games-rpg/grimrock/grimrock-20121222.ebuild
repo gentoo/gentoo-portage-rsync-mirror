@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.6 2013/05/09 14:26:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.7 2013/05/13 03:56:15 patrick Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="all-rights-reserved"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="bundled-libs"
-RESTRICT="fetch bindist splitdebug"
+RESTRICT="fetch bindist"
 
 QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/${MY_PN}.bin.*
 	${GAMES_PREFIX_OPT}/${PN}/lib.*"

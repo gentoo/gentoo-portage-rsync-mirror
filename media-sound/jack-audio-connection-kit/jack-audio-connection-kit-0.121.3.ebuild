@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.121.3.ebuild,v 1.15 2013/02/14 16:05:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.121.3.ebuild,v 1.16 2013/05/13 03:40:20 blueness Exp $
 
 EAPI=2
 
-inherit flag-o-matic eutils multilib multilib
+inherit flag-o-matic eutils multilib
 
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://www.jackaudio.org"
@@ -55,6 +55,7 @@ src_configure() {
 		$(use_enable sse) \
 		--with-html-dir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
+		--libdir=/usr/$(get_libdir) \
 		${myconf} || die "configure failed"
 }
 
