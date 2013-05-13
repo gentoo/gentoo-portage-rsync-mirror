@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.215 2013/04/27 15:57:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.216 2013/05/13 18:32:36 pacho Exp $
+
+*pygobject-3.8.2 (13 May 2013)
+
+  13 May 2013; Pacho Ramos <pacho@gentoo.org> +pygobject-3.8.2.ebuild,
+  -pygobject-3.8.0.ebuild:
+  Version bump, drop old
 
   27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   pygobject-2.28.6-r53.ebuild, pygobject-3.4.2-r1.ebuild:

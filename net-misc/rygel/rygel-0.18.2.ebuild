@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.0.ebuild,v 1.3 2013/03/31 18:13:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.2.ebuild,v 1.1 2013/05/13 18:38:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -64,7 +64,6 @@ src_prepare() {
 }
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	# We defined xsltproc because man pages are provided by upstream
 	# and we do not want to regenerate them automagically.
 	gnome2_src_configure \

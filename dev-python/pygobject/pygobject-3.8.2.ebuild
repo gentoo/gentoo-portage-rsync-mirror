@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.0.ebuild,v 1.2 2013/03/31 13:36:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.2.ebuild,v 1.1 2013/05/13 18:32:36 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,8 @@ IUSE="+cairo examples test +threads"
 
 REQUIRED_USE="test? ( cairo )"
 
-COMMON_DEPEND=">=dev-libs/glib-2.31.0:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.31.0:2
 	>=dev-libs/gobject-introspection-1.34.1.1
 	virtual/libffi:=
 	cairo? ( >=dev-python/pycairo-1.10.0[${PYTHON_USEDEP}] )
@@ -48,23 +49,9 @@ RDEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	DOCS="AUTHORS ChangeLog* NEWS README"
-	# Hard-enable libffi support since both gobject-introspection and
-	# glib-2.29.x rdepend on it anyway
-	# docs disabled by upstream default since they are very out of date
-	G2CONF="${G2CONF}
-		--disable-dependency-tracking
-		--with-ffi
-		$(use_enable cairo)
-		$(use_enable threads thread)"
 
-	# Do not build tests if unneeded, bug #226345
+	# Do not build tests if unneeded, bug #226345, upstream bug #698444
 	epatch "${FILESDIR}/${PN}-3.7.90-make_check.patch"
-
-	# Run tests with older python too
-#	epatch "${FILESDIR}/${PN}-3.7.90-run-tests-with-old-python.patch"
-
-	# Fix stack corruption due to incorrect format for argument parser (from 3.8 branch)
-	epatch "${FILESDIR}/${P}-stack-corruption.patch"
 
 	eautoreconf
 	gnome2_src_prepare
@@ -73,14 +60,20 @@ src_prepare() {
 }
 
 src_configure() {
-	python_foreach_impl run_in_build_dir gnome2_src_configure
+	# Hard-enable libffi support since both gobject-introspection and
+	# glib-2.29.x rdepend on it anyway
+	# docs disabled by upstream default since they are very out of date
+	python_foreach_impl run_in_build_dir \
+		gnome2_src_configure \
+			--with-ffi \
+			$(use_enable cairo) \
+			$(use_enable threads thread)
 }
 
 src_compile() {
 	python_foreach_impl run_in_build_dir gnome2_src_compile
 }
 
-# FIXME: With python multiple ABI support, tests return 1 even when they pass
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	export GIO_USE_VFS="local" # prevents odd issues with deleting ${T}/.gvfs
@@ -101,10 +94,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-}
-
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
 }
