@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.17 2013/05/07 13:56:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.18 2013/05/13 20:02:26 ulm Exp $
 
 EAPI=5
 
@@ -45,9 +45,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-install-dirs.patch"
 	epatch "${FILESDIR}/${P}-fc-config.patch"
 	epatch "${FILESDIR}/${P}-automake-1.13.patch"
-	[[ ${CHOST} == *-solaris2.11 ]] \
-		&& epatch "${FILESDIR}/${PN}-2.3.2-solaris-2.11.patch"
-
+	epatch "${FILESDIR}/${P}-solaris-11.patch"
 	epatch_user
 
 	# disable compilation of demo binaries
@@ -68,7 +66,8 @@ src_prepare() {
 	append-flags -fno-strict-aliasing
 
 	# For Solaris Xos_r.h :(
-	[[ ${CHOST} == *-solaris2.11 ]] && append-flags -DNEED_XOS_R_H=1
+	[[ ${CHOST} == *-solaris2.11 ]] \
+		&& append-cppflags -DNEED_XOS_R_H -DHAVE_READDIR_R_3
 
 	if use !elibc_glibc && use !elibc_uclibc && use unicode; then
 		# libiconv detection in configure script doesn't always work

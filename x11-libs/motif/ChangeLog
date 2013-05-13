@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.30 2013/05/07 13:56:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.31 2013/05/13 20:02:26 ulm Exp $
+
+  13 May 2013; Ulrich Müller <ulm@gentoo.org> motif-2.3.4-r1.ebuild,
+  +files/motif-2.3.4-solaris-11.patch:
+  Apply Solaris patch unconditionally, bug 465426.
 
   07 May 2013; Agostino Sarubbo <ago@gentoo.org> motif-2.3.4-r1.ebuild:
   Stable for sparc, wrt bug #465788

@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/haproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.79 2013/04/05 17:10:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.80 2013/05/13 20:11:16 idl0r Exp $
+
+*haproxy-9999 (13 May 2013)
+
+  13 May 2013; Christian Ruppert <idl0r@gentoo.org> +haproxy-9999.ebuild:
+  Add haproxy live ebuild
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> haproxy-1.4.23.ebuild:
   Stable for ppc, wrt bug #464340
