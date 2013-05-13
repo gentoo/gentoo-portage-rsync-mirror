@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.50 2013/05/12 17:21:22 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.51 2013/05/13 14:53:06 jer Exp $
+
+  13 May 2013; Jeroen Roovers <jer@gentoo.org> libmpdclient-2.8.ebuild:
+  Stable for HPPA (bug #469468).
 
   12 May 2013; Chema Alonso <nimiux@gentoo.org> libmpdclient-2.8.ebuild:
   Stable for amd64 wrt bug #469468

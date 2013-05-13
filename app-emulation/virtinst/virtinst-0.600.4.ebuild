@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-9999.ebuild,v 1.7 2011/07/28 19:20:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.600.4.ebuild,v 1.1 2013/05/13 14:41:12 cardoe Exp $
 
-#BACKPORTS=1
+#BACKPORTS=2
 
 EAPI=3
 
@@ -22,7 +22,8 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://virt-manager.et.redhat.com/download/sources/${PN}/${P}.tar.gz
-		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
+		${BACKPORTS:+mirror://gentoo/${P}-bp-${BACKPORTS}.tar.bz2
+		http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
 fi
 
