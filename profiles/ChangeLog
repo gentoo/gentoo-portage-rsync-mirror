@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7835 2013/05/12 16:48:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7836 2013/05/13 03:00:44 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Adding app-text/tex-guy to freetype-1 mask
 
   12 May 2013; Johannes Huber <johu@gentoo.org> updates/2Q-2013:
   Move libkfbapi from cat kde-misc to net-libs.

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14751 2013/05/12 15:14:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14752 2013/05/13 03:00:44 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -137,6 +137,7 @@ app-text/duconv
 =media-libs/freetype-1.4*
 games-action/heavygear2
 media-libs/vflib
+app-text/tex-guy
 
 # Ulrich Müller <ulm@gentoo.org> (25 Apr 2013)
 # Dependency of kernel.eclass which was obsoleted in 2004,

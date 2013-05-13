@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.19 2013/04/28 05:09:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.20 2013/05/13 02:47:53 tetromino Exp $
+
+*winetricks-952 (13 May 2013)
+
+  13 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-947.ebuild, +winetricks-952.ebuild:
+  Version bump, fixes .NET 1.1 download. Remove old.
 
 *winetricks-949 (28 Apr 2013)
 
