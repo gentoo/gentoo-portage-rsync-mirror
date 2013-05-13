@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.39 2013/04/20 23:51:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.40 2013/05/13 16:22:24 axs Exp $
+
+  13 May 2013; Ian Stakenvicius <axs@gentoo.org> foldingathome-7.3.6-r2.ebuild:
+  Dropped fetch restriction and amended license, as Gentoo has been granted
+  special permissions
 
 *foldingathome-7.3.6-r2 (20 Apr 2013)
 
