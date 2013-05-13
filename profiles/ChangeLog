@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7838 2013/05/13 04:05:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7839 2013/05/13 07:00:13 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org> desc/linguas.desc:
+  Add sr_RS@cyrillic and sr_RS@latin locales; used by app-emulation/wine.
 
   13 May 2013; Ian Delaney <idella4@gentoo.org> package.mask:
   unfix envisagecore mask
