@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.471 2013/05/09 20:15:10 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.472 2013/05/14 15:25:31 chithanh Exp $
+
+  14 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-9.1.2-r1.ebuild:
+  Fix building against llvm-3.4
 
 *mesa-9.1.2-r1 (09 May 2013)
 *mesa-9.2_pre20130509 (09 May 2013)
