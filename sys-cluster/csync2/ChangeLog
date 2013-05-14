@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/csync2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.36 2013/03/17 16:21:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.37 2013/05/14 08:22:59 ultrabug Exp $
+
+  14 May 2013; Ultrabug <ultrabug@gentoo.org> metadata.xml:
+  fix metadata wrt #469570
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
