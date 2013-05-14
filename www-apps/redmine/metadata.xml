@@ -8,6 +8,10 @@
 <email>pva@gentoo.org</email>
 <name>Peter Volkov</name>
 </maintainer>
+<maintainer>
+<email>itumaykin@gmail.co</email>
+<name>Ilya Tumaykin</name>
+</maintainer>
 <longdescription lang="en">
 </longdescription>
 <use>

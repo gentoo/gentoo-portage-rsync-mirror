@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.54 2013/02/09 11:41:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.55 2013/05/14 09:30:47 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> gtk-syntax-20121015.ebuild:
+  Stable for amd64, wrt bug #469790
 
   09 Feb 2013; Ulrich Müller <ulm@gentoo.org> gtk-syntax-20110214-r1.ebuild,
   gtk-syntax-20121015.ebuild:
@@ -197,4 +200,3 @@
   Hwanjin Choe. His response: "If it makes everybody happy to release this
   syntax file under the Vim license, then I will release them under the Vim
   license."
-

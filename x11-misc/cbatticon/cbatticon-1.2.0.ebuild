@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.2.0.ebuild,v 1.1 2013/04/20 18:11:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.2.0.ebuild,v 1.2 2013/05/14 09:03:45 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/ColinJones/cbatticon/archive/${PV}.tar.gz -> ${P}.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
