@@ -1,0 +1,12 @@
+diff -ur libdbi-drivers-0.8.3-1-old/configure.in libdbi-drivers-0.8.3-1/configure.in
+--- libdbi-drivers-0.8.3-1-old/configure.in	2013-05-14 02:28:23.315926087 +0000
++++ libdbi-drivers-0.8.3-1/configure.in	2013-05-14 02:29:05.655762313 +0000
+@@ -3,7 +3,7 @@
+ AM_MAINTAINER_MODE
+ 
+ AM_INIT_AUTOMAKE(libdbi-drivers, 0.8.3-1)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AC_LIBTOOL_WIN32_DLL
+ 
+ dnl library versioning currently unnecessary...

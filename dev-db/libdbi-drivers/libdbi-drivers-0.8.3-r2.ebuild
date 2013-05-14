@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3-r2.ebuild,v 1.3 2012/09/13 18:43:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3-r2.ebuild,v 1.4 2013/05/14 02:55:38 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -43,6 +43,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
+		"${FILESDIR}"/${P}-fix-ac-macro.patch \
 		"${FILESDIR}"/${PN}-0.8.3-doc-build-fix.patch \
 		"${FILESDIR}"/${PN}-0.8.3-oracle-build-fix.patch \
 		"${FILESDIR}"/${PN}-0.8.3-firebird-fix.patch
