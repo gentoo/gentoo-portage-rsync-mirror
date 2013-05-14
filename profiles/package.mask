@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14756 2013/05/13 19:54:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14757 2013/05/14 03:48:18 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -201,14 +201,6 @@ mail-client/postler
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2013)
 # Masked to get 0.10 tested
 =net-libs/nodejs-0.11*
-
-# Ryan Hill <dirtyepic@gentoo.org> (06 Apr 2013)
-# Restrictive licence, basically demo versions of paid software.  14 versions
-# have been released in the past 4 years and not one person has requested a
-# bump. Use dev-util/codeblocks for all your wxWidgets IDE needs.
-# Bug #464768.  Removal May 5/13.
-dev-util/dialogblocks
-dev-util/helpblocks
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (05 Apr 2013)
 # Mask prerelease snapshot
