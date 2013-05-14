@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.33 2013/05/12 15:52:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.34 2013/05/14 18:44:48 dilfridge Exp $
 
 EAPI=5
 
@@ -189,9 +189,9 @@ src_configure() {
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that
 	# makes more sense when facing multilib support.
-	sed -i -e 's:SERVERBIN.*:SERVERBIN = "$(BUILDROOT)${EPREFIX}"/usr/libexec/cups:' Makedefs || die
-	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "${EPREFIX}/usr/libexec/cups":' config.h || die
-	sed -i -e 's:cups_serverbin=.*:cups_serverbin=${EPREFIX}/usr/libexec/cups:' cups-config || die
+	sed -i -e "s:SERVERBIN.*:SERVERBIN = \"\$\(BUILDROOT\)${EPREFIX}/usr/libexec/cups\":" Makedefs || die
+	sed -i -e "s:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN \"${EPREFIX}/usr/libexec/cups\":" config.h || die
+	sed -i -e "s:cups_serverbin=.*:cups_serverbin=\"${EPREFIX}/usr/libexec/cups\":" cups-config || die
 }
 
 src_install() {
@@ -292,8 +292,15 @@ pkg_postinst() {
 		echo
 		elog "Starting with net-print/cups-filters-1.0.30, that package provides"
 		elog "a daemon cups-browsed which implements printer discovery via the"
-		elog "Cups-1.5 protocol. Not much tested so far though."
+		elog "CUPS-1.5 protocol."
 		echo
+	fi
+
+	if [[ "${REPLACING_VERSIONS}" == "1.6.2-r4" ]]; then
+		ewarn
+		ewarn "You are upgrading from the broken version net-print/cups-1.6.2-r4."
+		ewarn "Please rebuild net-print/cups-filters now to make sure everything is OK."
+		ewarn
 	fi
 }
 

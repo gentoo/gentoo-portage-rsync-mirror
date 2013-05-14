@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.6.ebuild,v 1.1 2013/04/03 08:22:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.9.ebuild,v 1.1 2013/05/14 18:32:25 scarabeus Exp $
 
 EAPI=5
 
@@ -8,7 +8,9 @@ inherit user eutils webapp depend.php depend.apache vcs-snapshot
 
 DESCRIPTION="Tiny Tiny RSS - A web-based news feed (RSS/Atom) aggregator using AJAX"
 HOMEPAGE="http://tt-rss.org/"
-SRC_URI="https://github.com/gothfox/Tiny-Tiny-RSS/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/gothfox/Tiny-Tiny-RSS/archive/${PV}.tar.gz -> ${P}.tar.gz
+	http://dev.gentooexperimental.org/~scarabeus/ttrss-${PV}-patches.tar.xz
+"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -49,6 +51,12 @@ src_prepare() {
 		-e "/define('DB_TYPE',/{s:// \(or mysql\):// pgsql \1:}" \
 		config.php || die
 
+	# broken release fixed in git
+	EPATCH_FORCE="yes" \
+	EPATCH_SOURCE="${WORKDIR}/ttrss-1.7.9-patches" \
+	EPATCH_SUFFIX="patch" \
+	epatch
+
 	# per 462578
 	epatch_user
 }
@@ -57,10 +65,10 @@ src_install() {
 	webapp_src_preinst
 
 	insinto "/${MY_HTDOCSDIR}"
-	doins -r * || die "Could not copy the files to ${MY_HTDOCSDIR}."
+	doins -r .
 	keepdir "/${MY_HTDOCSDIR}"/feed-icons
 
-	for DIR in cache cache/simplepie cache/images cache/export lock feed-icons; do
+	for DIR in cache lock feed-icons; do
 			webapp_serverowned -R "${MY_HTDOCSDIR}/${DIR}"
 	done
 

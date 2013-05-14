@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.586 2013/05/09 03:03:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.587 2013/05/14 18:46:36 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1159,10 +1159,12 @@ gcc_do_configure() {
 			avr)			 confgcc+=" --enable-shared --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
+			local confgcc_no_libc="--disable-shared"
+			tc_version_is_at_least 4.8 && confgcc_no_libc+=" --disable-libatomic"
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
-				confgcc+=" --disable-shared --disable-threads --without-headers"
+				confgcc+=" ${confgcc_no_libc} --disable-threads --without-headers"
 			elif built_with_use --hidden --missing false ${CATEGORY}/${needed_libc} crosscompile_opts_headers-only ; then
-				confgcc+=" --disable-shared --with-sysroot=${PREFIX}/${CTARGET}"
+				confgcc+=" ${confgcc_no_libc} --with-sysroot=${PREFIX}/${CTARGET}"
 			else
 				confgcc+=" --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
