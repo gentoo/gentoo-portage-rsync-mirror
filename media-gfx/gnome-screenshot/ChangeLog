@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gnome-screenshot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/ChangeLog,v 1.6 2013/04/18 06:34:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/ChangeLog,v 1.7 2013/05/14 21:35:02 pacho Exp $
+
+*gnome-screenshot-3.8.2 (14 May 2013)
+
+  14 May 2013; Pacho Ramos <pacho@gentoo.org> +gnome-screenshot-3.8.2.ebuild,
+  -gnome-screenshot-3.8.0.ebuild:
+  Version bump, drop old
 
 *gnome-screenshot-3.8.1 (18 Apr 2013)
 

@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.358 2013/05/14 06:59:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.360 2013/05/14 21:47:27 dev-zero Exp $
+
+  14 May 2013; Tiziano Müller <dev-zero@gentoo.org> nginx-1.4.1-r4.ebuild:
+  Fix pcre dependency for naxsi by using a REQUIRED_USE.
+
+*nginx-1.4.1-r4 (14 May 2013)
+
+  14 May 2013; Tiziano Müller <dev-zero@gentoo.org> +nginx-1.4.1-r4.ebuild:
+  Add support for naxsi (bug #397587).
 
 *nginx-1.4.1-r3 (14 May 2013)
 

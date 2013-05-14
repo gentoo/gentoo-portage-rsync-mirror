@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.1.ebuild,v 1.1 2013/04/23 19:35:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.1.ebuild,v 1.2 2013/05/14 21:41:29 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -37,9 +37,9 @@ RDEPEND="
 	)
 	tracker? ( >=app-misc/tracker-0.14:= )
 	transcode? (
-		>=media-libs/gst-plugins-bad-0.10.14:0.10
-		>=media-plugins/gst-plugins-twolame-0.10.12:0.10
-		>=media-plugins/gst-plugins-ffmpeg-0.10.5:0.10
+		media-libs/gst-plugins-bad:1.0
+		media-plugins/gst-plugins-twolame:1.0
+		media-plugins/gst-plugins-libav:1.0
 	)
 	X? ( >=x11-libs/gtk+-2.90.3:3 )
 "

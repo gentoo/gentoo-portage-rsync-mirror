@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.1.ebuild,v 1.3 2013/05/05 07:38:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.1.ebuild,v 1.4 2013/05/14 21:37:42 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -87,12 +87,12 @@ RDEPEND="
 	xmp? ( >=media-libs/exempi-2.1 )
 	xps? ( app-text/libgxps )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
-	$(vala_depend)
 "
 #	strigi? ( >=app-misc/strigi-0.7 )
 #	mp3? ( qt4? (  >=dev-qt/qtgui-4.7.1:4 ) )
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
+	$(vala_depend)
 	>=dev-util/gtk-doc-am-1.8
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
@@ -141,11 +141,12 @@ src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=699412
 	sed -e '/#if HAVE_TRACKER_FTS/,/#endif/ d' \
 		-i tests/libtracker-sparql/tracker-test.c || die
-	# upstream bug #????
-#	sed -e 's/\({ "本州最主流的风味",.*TRUE,  \) 8/\1 5/' \
-#		-e 's/\({ "ホモ・サピエンス.*TRUE, \) 13/\1 10/' \
-#		-i tests/libtracker-fts/tracker-parser-test.c || die
-	# Fails inside portage, not outside, still fails, upstream bug #699413
+	# https://bugzilla.gnome.org/show_bug.cgi?id=699412
+	sed -e 's/\({ "本州最主流的风味",.*TRUE,  \) 8/\1 5/' \
+		-e 's/\({ "ホモ・サピエンス.*TRUE, \) 13/\1 10/' \
+		-i tests/libtracker-fts/tracker-parser-test.c || die
+	# Fails inside portage, not outside
+	# https://bugzilla.gnome.org/show_bug.cgi?id=699413
 	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+1 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
 
@@ -199,6 +200,7 @@ src_configure() {
 		$(use_with firefox-bookmarks firefox-plugin-dir "${EPREFIX}"/usr/$(get_libdir)/firefox/extensions) \
 		FIREFOX="${S}"/firefox-version.sh \
 		$(use_enable flac libflac) \
+		$(use_enable gif libgif) \
 		$(use_enable gsf libgsf) \
 		$(use_enable gtk tracker-needle) \
 		$(use_enable gtk tracker-preferences) \

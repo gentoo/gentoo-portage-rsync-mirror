@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.5.ebuild,v 1.7 2013/05/02 08:03:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.5.ebuild,v 1.8 2013/05/14 21:37:42 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -96,6 +96,7 @@ RDEPEND="
 #	mp3? ( qt4? (  >=dev-qt/qtgui-4.7.1:4 ) )
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
+	$(vala_depend)
 	>=dev-util/gtk-doc-am-1.8
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
@@ -203,6 +204,7 @@ src_configure() {
 		FIREFOX="${S}"/firefox-version.sh \
 		$(use_enable flac libflac) \
 		$(use_enable flickr miner-flickr) \
+		$(use_enable gif libgif) \
 		$(use_enable gnome-keyring) \
 		$(use_enable gsf libgsf) \
 		$(use_enable gtk tracker-explorer) \

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.158 2013/05/05 07:38:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.159 2013/05/14 21:37:42 eva Exp $
+
+  14 May 2013; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.14.5.ebuild,
+  -tracker-0.16.0.ebuild, tracker-0.16.1.ebuild:
+  Move vala_depend to DEPEND, add missing libgif configure switch (kill
+  automagic), uncomment test workaround which was reported upstream.
 
   05 May 2013; Pacho Ramos <pacho@gentoo.org> tracker-0.16.1.ebuild:
   Really use vala.eclass (reported by Ewgeny B via mail)
