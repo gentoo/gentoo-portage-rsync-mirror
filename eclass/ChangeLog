@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.820 2013/05/11 12:46:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.821 2013/05/14 17:33:08 mgorny Exp $
+
+  14 May 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
+  multilib-build.eclass:
+  Enable EAPI=4 on multilib eclasses.
 
   11 May 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
   haskell-cabal.eclass:

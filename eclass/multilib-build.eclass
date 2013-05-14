@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.11 2013/04/07 16:56:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.12 2013/05/14 17:33:08 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -17,9 +17,9 @@
 
 if [[ ! ${_MULTILIB_BUILD} ]]; then
 
-# EAPI=5 is required for meaningful MULTILIB_USEDEP.
+# EAPI=4 is required for meaningful MULTILIB_USEDEP.
 case ${EAPI:-0} in
-	5) ;;
+	4|5) ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
