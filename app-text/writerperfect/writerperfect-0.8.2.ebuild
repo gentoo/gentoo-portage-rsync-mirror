@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/writerperfect-0.8.2.ebuild,v 1.1 2013/05/13 12:16:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/writerperfect-0.8.2.ebuild,v 1.2 2013/05/14 14:50:27 scarabeus Exp $
 
 EAPI=5
 
@@ -17,9 +17,12 @@ RDEPEND="
 	app-text/libwpd:0.9
 	app-text/libwpg:0.2
 	app-text/libodfgen
-	wps? ( app-text/libwps )
-	visio? ( media-libs/libvisio )
+	cdr? ( media-libs/libcdr )
 	gsf? ( gnome-extra/libgsf )
+	mspub? ( app-text/libmspub )
+	mwaw? ( app-text/libmwaw )
+	visio? ( media-libs/libvisio )
+	wps? ( app-text/libwps )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

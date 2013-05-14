@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.135 2013/05/13 08:51:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.136 2013/05/14 14:55:37 floppym Exp $
+
+  14 May 2013; Mike Gilbert <floppym@gentoo.org> systemd-201.ebuild,
+  systemd-202.ebuild, systemd-203-r1.ebuild, systemd-204.ebuild,
+  systemd-9999.ebuild:
+  Depend on app-text/docbook-xml-dtd:4.2, bug 469668 by Alexander Tsoy.
 
 *systemd-204 (13 May 2013)
 

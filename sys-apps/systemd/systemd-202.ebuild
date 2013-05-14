@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-202.ebuild,v 1.1 2013/04/27 18:26:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-202.ebuild,v 1.2 2013/05/14 14:55:37 floppym Exp $
 
 EAPI=5
 
@@ -56,6 +56,7 @@ PDEPEND=">=sys-apps/hwids-20130326.1[udev]"
 
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
+	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	dev-util/gperf

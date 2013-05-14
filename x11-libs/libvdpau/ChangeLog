@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.27 2013/02/26 16:37:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.28 2013/05/14 14:40:05 cardoe Exp $
+
+*libvdpau-0.6 (14 May 2013)
+
+  14 May 2013; Doug Goldstein <cardoe@gentoo.org> +libvdpau-0.6.ebuild:
+  Version bump. bug #465062
 
 *libvdpau-0.5-r1 (26 Feb 2013)
 

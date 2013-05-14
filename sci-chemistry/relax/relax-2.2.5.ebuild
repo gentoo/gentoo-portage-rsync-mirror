@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-2.2.5.ebuild,v 1.1 2013/05/13 08:42:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-2.2.5.ebuild,v 1.2 2013/05/14 14:36:18 jlec Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE=""
 
 RDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/wxpython
 	sci-chemistry/molmol
 	sci-chemistry/pymol
 	>=sci-libs/bmrblib-1.0.1_pre198[${PYTHON_USEDEP}]
