@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.0.ebuild,v 1.2 2013/04/07 17:33:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.2.ebuild,v 1.1 2013/05/14 22:15:34 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -10,8 +10,6 @@ inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pa
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="${SRC_URI}
-	http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2+"
 SLOT="2"
@@ -52,14 +50,17 @@ PDEPEND="x11-misc/shared-mime-info
 pkg_setup() {
 	if use kernel_linux ; then
 		CONFIG_CHECK="~INOTIFY_USER"
+		if use test; then
+			CONFIG_CHECK="~IPV6"
+			WARNING_IPV6="Your kernel needs IPV6 support for running some tests, skipping them."
+			export IPV6_DISABLED="yes"
+		fi
 		linux-info_pkg_setup
 	fi
 }
 
 src_prepare() {
-	mv -f "${WORKDIR}"/pkg-config-*/pkg.m4 "${WORKDIR}"/ || die
-
-	# Fix gmodule issues on fbsd; bug #184301
+	# Fix gmodule issues on fbsd; bug #184301, upstream bug #107626
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
 
 	if use test; then
@@ -67,7 +68,7 @@ src_prepare() {
 		sed 's:^\(.*"/desktop-app-info/delete".*\):/*\1*/:' \
 			-i "${S}"/gio/tests/desktop-app-info.c || die "sed failed"
 
-		# Disable tests requiring dev-util/desktop-file-utils when not installed, bug #286629
+		# Disable tests requiring dev-util/desktop-file-utils when not installed, bug #286629, upstream bug #629163
 		if ! has_version dev-util/desktop-file-utils ; then
 			ewarn "Some tests will be skipped due dev-util/desktop-file-utils not being present on your system,"
 			ewarn "think on installing it to get these tests run."
@@ -99,6 +100,17 @@ src_prepare() {
 			ln -sfn $(type -P true) gio/tests/gdbus-testserver.py
 		fi
 
+		# Some tests need ipv6, upstream bug #667468
+		if [[ -n "${IPV6_DISABLED}" ]]; then
+			sed -i -e "/socket\/ipv6_sync/d" gio/tests/socket.c || die
+			sed -i -e "/socket\/ipv6_async/d" gio/tests/socket.c || die
+			sed -i -e "/socket\/ipv6_v4mapped/d" gio/tests/socket.c || die
+		fi
+
+		# Test relies on /usr/bin/true, but we have /bin/true, upstream bug #698655
+		sed -i -e "s:/usr/bin/true:/bin/true:" gio/tests/desktop-app-info.c || die
+
+		# thread test fails, upstream bug #679306
 		epatch "${FILESDIR}/${PN}-2.34.0-testsuite-skip-thread4.patch"
 	fi
 
@@ -117,8 +129,9 @@ src_prepare() {
 	# Needed for the punt-python-check patch, disabling timeout test
 	# Also needed to prevent croscompile failures, see bug #267603
 	# Also needed for the no-gdbus-codegen patch
-	AT_M4DIR="${WORKDIR}" eautoreconf
+	eautoreconf
 
+	# FIXME: Really needed when running eautoreconf before? bug#????
 	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 
 	epunt_cxx
