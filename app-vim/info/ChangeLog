@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/info
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.16 2007/02/22 00:03:54 peper Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.17 2013/05/14 05:09:52 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> info-1.7-r1.ebuild:
+  Drop system implied DEPEND on sed to fix RDEPEND QA warning.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

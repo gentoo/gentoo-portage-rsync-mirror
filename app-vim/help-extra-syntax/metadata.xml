@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vim</herd>
-	<longdescription lang="en">
-		This package provides additional syntax highlighting for Vim help
-		files.
-	</longdescription>
 </pkgmetadata>

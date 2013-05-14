@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/help-extra-syntax-20050106-r1.ebuild,v 1.5 2012/12/17 16:35:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/help-extra-syntax-20050106-r1.ebuild,v 1.6 2013/05/14 05:24:39 radhermit Exp $
 
 inherit vim-plugin
 
@@ -14,7 +14,7 @@ VIM_PLUGIN_HELPTEXT=\
 "This plugin provides additional syntax highlighting for help files."
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	# use hi def link, bug #101797 / bug #101804
 	sed -i -e 's,^hi link,hi def link,' \

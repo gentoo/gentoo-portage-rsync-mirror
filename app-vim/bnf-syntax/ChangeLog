@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/bnf-syntax
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bnf-syntax/ChangeLog,v 1.16 2012/12/07 18:28:12 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bnf-syntax/ChangeLog,v 1.17 2013/05/14 05:23:33 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> bnf-syntax-1.2-r1.ebuild:
+  Fix quoting QA warning.
 
   07 Dec 2012; Ulrich Müller <ulm@gentoo.org> bnf-syntax-1.2-r1.ebuild:
   Fix LICENSE, bug 445808.

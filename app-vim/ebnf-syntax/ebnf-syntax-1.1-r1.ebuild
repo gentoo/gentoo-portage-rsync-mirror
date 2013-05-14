@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ebnf-syntax-1.1-r1.ebuild,v 1.10 2012/12/07 18:30:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ebnf-syntax-1.1-r1.ebuild,v 1.11 2013/05/14 05:21:46 radhermit Exp $
 
 inherit vim-plugin
 
@@ -14,7 +14,7 @@ VIM_PLUGIN_HELPTEXT=\
 "This plugin provides syntax highlighting for EBNF (ISO/IEC 14997) files."
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	# don't use hi link, bug #101799.
 	sed -i -e 's,hi link,hi def link,' syntax/ebnf.vim || die "sed failed"

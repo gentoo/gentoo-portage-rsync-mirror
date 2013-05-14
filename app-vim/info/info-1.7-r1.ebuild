@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/info/info-1.7-r1.ebuild,v 1.14 2005/04/24 03:25:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/info/info-1.7-r1.ebuild,v 1.15 2013/05/14 05:09:52 radhermit Exp $
 
 inherit vim-plugin
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=21"
 LICENSE="BSD"
 KEYWORDS="x86 alpha sparc ia64 ppc s390 amd64"
 IUSE=""
-DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 VIM_PLUGIN_HELPTEXT="This plugin adds the :Info command."
 

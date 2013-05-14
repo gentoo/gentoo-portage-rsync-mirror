@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-99999999.ebuild,v 1.4 2013/01/27 11:50:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-99999999.ebuild,v 1.5 2013/05/14 05:15:51 radhermit Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit vim-plugin git-2
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/gentoo-syntax.git"
 
-DESCRIPTION="vim plugin: Gentoo Ebuild, Eclass, GLEP, ChangeLog and Portage Files syntax highlighting, filetype and indent settings"
+DESCRIPTION="vim plugin: Gentoo and portage related syntax highlighting, filetype, and indent settings"
 HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/gentoo-syntax.git"
 unset SRC_URI
 
