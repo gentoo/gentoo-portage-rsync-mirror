@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/etsproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsproxy/ChangeLog,v 1.6 2013/04/24 08:27:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsproxy/ChangeLog,v 1.7 2013/05/14 12:49:47 idella4 Exp $
+
+  14 May 2013; Ian Delaney <idella4@gentoo.org> -etsproxy-0.1.0-r1.ebuild,
+  -etsproxy-0.1.1.ebuild:
+  drop old
 
   24 Apr 2013; Agostino Sarubbo <ago@gentoo.org> etsproxy-0.1.2.ebuild:
   Add ~ppc, wrt bug #465948
