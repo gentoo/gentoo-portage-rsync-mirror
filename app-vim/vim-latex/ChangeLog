@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/vim-latex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/ChangeLog,v 1.22 2013/04/01 08:52:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/ChangeLog,v 1.24 2013/05/14 09:36:46 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  vim-latex-1.8.23.20130116.ebuild:
+  Stable for x86, wrt bug #469782
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  vim-latex-1.8.23.20130116.ebuild:
+  Stable for amd64, wrt bug #469782
 
 *vim-latex-1.8.23.20130116 (01 Apr 2013)
 

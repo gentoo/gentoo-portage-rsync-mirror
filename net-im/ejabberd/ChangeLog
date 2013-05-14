@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.117 2013/05/12 14:07:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.118 2013/05/14 09:42:10 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> ejabberd-2.1.12.ebuild:
+  Stable for x86, wrt bug #468728
 
   12 May 2013; Agostino Sarubbo <ago@gentoo.org> ejabberd-2.1.12.ebuild:
   Stable for ppc, wrt bug #468728

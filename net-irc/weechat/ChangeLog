@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.130 2013/04/11 09:37:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.131 2013/05/14 09:33:56 scarabeus Exp $
+
+  14 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> weechat-9999.ebuild:
+  Fix various deps and use switches wrt bug#469188. Thanks to tomboy64 for the
+  patch.
 
   11 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> files/weechat-icon.patch,
   weechat-9999.ebuild:

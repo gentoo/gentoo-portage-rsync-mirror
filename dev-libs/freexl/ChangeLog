@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/freexl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/freexl/ChangeLog,v 1.12 2013/05/07 17:51:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/freexl/ChangeLog,v 1.13 2013/05/14 09:39:11 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> freexl-1.0.0e.ebuild:
+  Stable for x86, wrt bug #468814
 
   07 May 2013; Agostino Sarubbo <ago@gentoo.org> freexl-1.0.0e.ebuild:
   Stable for ppc64, wrt bug #468814

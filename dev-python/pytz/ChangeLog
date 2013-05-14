@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.144 2013/05/08 13:42:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.145 2013/05/14 09:41:21 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> pytz-2012j.ebuild:
+  Stable for x86, wrt bug #461164
 
   08 May 2013; Agostino Sarubbo <ago@gentoo.org> pytz-2012j.ebuild:
   Stable for sh, wrt bug #461164

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29.ebuild,v 1.4 2013/05/14 09:31:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29.ebuild,v 1.5 2013/05/14 09:37:46 ago Exp $
 
 EAPI=4
 inherit eutils scons-utils
@@ -11,7 +11,7 @@ SRC_URI="http://www.v2v.cc/~j/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug kate"
 
 RDEPEND="

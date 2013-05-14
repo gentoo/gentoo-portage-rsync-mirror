@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.27 2013/04/11 09:37:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.28 2013/05/14 09:33:56 scarabeus Exp $
 
 EAPI=5
 
@@ -26,15 +26,17 @@ NETWORKS="+irc"
 PLUGINS="+alias +charset +fifo +logger +relay +rmodifier +scripts +spell +xfer"
 #INTERFACES="+ncurses gtk"
 SCRIPT_LANGS="guile lua +perl +python ruby tcl"
-IUSE="${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS} +crypt doc nls +ssl"
+IUSE="${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS} doc nls +ssl"
 
 RDEPEND="
+	dev-libs/libgcrypt
 	net-misc/curl[ssl]
 	sys-libs/ncurses
+	sys-libs/zlib
 	charset? ( virtual/libiconv )
 	guile? ( dev-scheme/guile )
-	irc? ( dev-libs/libgcrypt )
 	lua? ( dev-lang/lua[deprecated] )
+	nls? ( virtual/libintl )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( >=dev-lang/ruby-1.9 )
@@ -45,6 +47,10 @@ RDEPEND="
 #	ncurses? ( sys-libs/ncurses )
 #	gtk? ( x11-libs/gtk+:2 )
 DEPEND="${RDEPEND}
+	doc? (
+		app-text/asciidoc
+		dev-util/source-highlight
+	)
 	nls? ( >=sys-devel/gettext-0.15 )
 "
 
@@ -78,9 +84,18 @@ src_prepare() {
 				po/CMakeLists.txt || die
 		fi
 	done
+
+	# install only required documentation ; en always
+	for i in `grep ADD_SUBDIRECTORY doc/CMakeLists.txt \
+			| sed -e 's/.*ADD_SUBDIRECTORY( \(..\) ).*/\1/' -e '/en/d'`; do
+		if ! use linguas_${i} ; then
+			sed -i \
+				-e '/ADD_SUBDIRECTORY( '${i}' )/d' \
+				doc/CMakeLists.txt || die
+		fi
+	done
 }
 
-# alias, rmodifier, xfer
 src_configure() {
 	# $(cmake-utils_use_enable gtk)
 	# $(cmake-utils_use_enable ncurses)
@@ -90,23 +105,26 @@ src_configure() {
 		"-DENABLE_DEMO=OFF"
 		"-DENABLE_GTK=OFF"
 		"-DPYTHON_EXECUTABLE=${PYTHON}"
-		$(cmake-utils_use_enable nls)
-		$(cmake-utils_use_enable crypt GCRYPT)
-		$(cmake-utils_use_enable spell ASPELL)
+		$(cmake-utils_use_enable alias)
+		$(cmake-utils_use_enable doc)
 		$(cmake-utils_use_enable charset)
 		$(cmake-utils_use_enable fifo)
+		$(cmake-utils_use_enable guile)
 		$(cmake-utils_use_enable irc)
 		$(cmake-utils_use_enable logger)
-		$(cmake-utils_use_enable relay)
-		$(cmake-utils_use_enable scripts)
-		$(cmake-utils_use_enable scripts script)
+		$(cmake-utils_use_enable lua)
+		$(cmake-utils_use_enable nls)
 		$(cmake-utils_use_enable perl)
 		$(cmake-utils_use_enable python)
+		$(cmake-utils_use_enable relay)
+		$(cmake-utils_use_enable rmodifier)
 		$(cmake-utils_use_enable ruby)
-		$(cmake-utils_use_enable lua)
+		$(cmake-utils_use_enable scripts)
+		$(cmake-utils_use_enable scripts script)
+		$(cmake-utils_use_enable spell ASPELL)
+		$(cmake-utils_use_enable ssl GNUTLS)
 		$(cmake-utils_use_enable tcl)
-		$(cmake-utils_use_enable guile)
-		$(cmake-utils_use_enable doc)
+		$(cmake-utils_use_enable xfer)
 	)
 
 	cmake-utils_src_configure

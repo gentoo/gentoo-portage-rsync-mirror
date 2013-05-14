@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.18 2013/05/12 20:43:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.19 2013/05/14 09:40:43 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> pyudev-0.16.1.ebuild:
+  Stable for x86, wrt bug #469474
 
   12 May 2013; Agostino Sarubbo <ago@gentoo.org> pyudev-0.16.1.ebuild:
   Stable for amd64, wrt bug #469474

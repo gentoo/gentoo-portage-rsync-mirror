@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.220 2013/05/13 14:51:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.221 2013/05/14 09:37:38 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> pciutils-3.2.0.ebuild:
+  Stable for x86, wrt bug #469554
 
   13 May 2013; Jeroen Roovers <jer@gentoo.org> pciutils-3.2.0.ebuild:
   Stable for HPPA (bug #469554).

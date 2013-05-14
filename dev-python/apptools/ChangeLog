@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.22 2013/05/12 14:10:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.23 2013/05/14 09:57:05 idella4 Exp $
+
+  14 May 2013; Ian Delaney <idella4@gentoo.org> -apptools-4.0.0.ebuild,
+  -apptools-4.0.1.ebuild, -apptools-4.1.0.ebuild:
+  drop old
 
   12 May 2013; Ian Delaney <idella4@gentoo.org> -apptools-3.4.1.ebuild:
   drop old 3. version
