@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/encore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/ChangeLog,v 1.3 2013/04/05 18:17:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/ChangeLog,v 1.4 2013/05/14 13:06:37 idella4 Exp $
+
+  14 May 2013; Ian Delaney <idella4@gentoo.org> -encore-0.2.ebuild:
+  drop old
 
   05 Apr 2013; Mike Gilbert <floppym@gentoo.org> encore-0.3.ebuild:
   Cleanup ebuild. Add missing deps for setuptools and nose.
