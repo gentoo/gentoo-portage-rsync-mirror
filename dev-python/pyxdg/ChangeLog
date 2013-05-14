@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.113 2013/05/06 13:57:28 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.114 2013/05/14 22:45:40 eva Exp $
+
+  14 May 2013; Gilles Dartiguelongue <eva@gentoo.org> pyxdg-0.25.ebuild:
+  Add python3.3 to the list of supported python version, required for
+  speech-dispatcher.
 
   06 May 2013; Jan Matejka <yac@gentoo.org> pyxdg-0.25.ebuild:
   fixes 461356

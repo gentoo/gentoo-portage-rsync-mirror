@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.86 2013/04/04 16:09:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.87 2013/05/14 22:48:07 eva Exp $
+
+  14 May 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  speech-dispatcher-0.8-r2.ebuild:
+  Add python3.3 to the list of supported python version, required for orca-3.8.
 
 *speech-dispatcher-0.8-r2 (04 Apr 2013)
 
