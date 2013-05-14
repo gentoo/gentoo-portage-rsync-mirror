@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.357 2013/05/13 20:18:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.358 2013/05/14 06:59:27 dev-zero Exp $
+
+*nginx-1.4.1-r3 (14 May 2013)
+
+  14 May 2013; Tiziano Müller <dev-zero@gentoo.org> +files/nginx.service-r1,
+  +nginx-1.4.1-r3.ebuild, -files/nginx.initd, -files/nginx.initd-r1,
+  -files/nginx.tmpfiles, -files/nginx.tmpfiles-r1:
+  Fix systemd unit due to removed tmpfiles (bug #469784). Remove left-overs from
+  old-version-cleanup.
 
   13 May 2013; Agostino Sarubbo <ago@gentoo.org> -nginx-1.2.6-r1.ebuild,
   -nginx-1.2.8.ebuild, -nginx-1.4.1-r1.ebuild, -nginx-1.4.1.ebuild:
