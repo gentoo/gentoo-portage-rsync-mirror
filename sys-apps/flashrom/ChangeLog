@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/flashrom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.34 2013/03/17 16:15:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.35 2013/05/14 11:42:05 ago Exp $
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> flashrom-0.9.6.1.ebuild:
+  Stable for arm, wrt bug #454024
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

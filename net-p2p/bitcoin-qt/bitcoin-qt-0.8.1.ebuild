@@ -1,6 +1,6 @@
 # Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.8.1.ebuild,v 1.4 2013/05/14 09:39:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.8.1.ebuild,v 1.5 2013/05/14 11:45:50 ago Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyPN}-v
 
 LICENSE="MIT ISC GPL-3 LGPL-2.1 public-domain || ( CC-BY-SA-3.0 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 arm x86"
 IUSE="$IUSE 1stclassmsg dbus ipv6 +qrcode upnp"
 
 RDEPEND="
