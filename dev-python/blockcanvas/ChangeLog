@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/blockcanvas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.16 2013/04/03 09:04:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.17 2013/05/14 10:03:04 idella4 Exp $
+
+  14 May 2013; Ian Delaney <idella4@gentoo.org> -blockcanvas-3.2.1.ebuild,
+  -blockcanvas-4.0.0.ebuild, -blockcanvas-4.0.1.ebuild:
+  drop old
 
 *blockcanvas-4.0.3 (03 Apr 2013)
 
