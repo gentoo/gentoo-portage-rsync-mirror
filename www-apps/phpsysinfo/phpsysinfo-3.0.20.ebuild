@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-3.0.20.ebuild,v 1.1 2012/12/22 10:09:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-3.0.20.ebuild,v 1.2 2013/05/14 04:49:59 radhermit Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="virtual/httpd-php
-	dev-lang/php[simplexml,xml,xsl,unicode]"
+	dev-lang/php[simplexml,xml,xsl(+),xslt(+),unicode]"
 
 need_httpd_cgi
 

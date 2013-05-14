@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/nerdcommenter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nerdcommenter/ChangeLog,v 1.9 2010/12/09 19:47:42 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nerdcommenter/ChangeLog,v 1.10 2013/05/14 04:59:00 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> -nerdcommenter-2.2.2.ebuild:
+  Remove old.
 
 *nerdcommenter-2.3.0 (09 Dec 2010)
 

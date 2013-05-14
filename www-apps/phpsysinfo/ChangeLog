@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.79 2013/05/09 06:12:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.81 2013/05/14 04:51:08 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> -phpsysinfo-3.1.2-r1.ebuild:
+  Remove old.
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> phpsysinfo-3.0.19.ebuild,
+  phpsysinfo-3.0.20.ebuild, phpsysinfo-3.1.3.ebuild:
+  Fix php use flag deps (xsl was renamed to xslt).
 
 *phpsysinfo-3.1.3 (09 May 2013)
 
