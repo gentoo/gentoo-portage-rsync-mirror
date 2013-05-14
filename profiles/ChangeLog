@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7844 2013/05/14 03:48:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7845 2013/05/14 14:16:08 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 May 2013; Ian Delaney <idella4@gentoo.org> package.mask:
+  Replaced dev-python/ets packages with revised list for masking
 
   14 May 2013; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Removed dev-util/dialogblocks dev-util/helpblocks.

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.98 2013/05/12 14:05:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.99 2013/05/14 14:06:18 jer Exp $
+
+  14 May 2013; Jeroen Roovers <jer@gentoo.org> tmux-1.8.ebuild:
+  Stable for HPPA (bug #469350).
 
   12 May 2013; Agostino Sarubbo <ago@gentoo.org> tmux-1.8.ebuild:
   Stable for ppc, wrt bug #469350

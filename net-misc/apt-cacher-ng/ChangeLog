@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/apt-cacher-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.21 2013/01/14 19:55:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.22 2013/05/14 14:21:23 jer Exp $
+
+  14 May 2013; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.10.ebuild,
+  apt-cacher-ng-0.7.11.ebuild, apt-cacher-ng-0.7.12.ebuild:
+  Add extra HOMEPAGE.
 
 *apt-cacher-ng-0.7.12 (14 Jan 2013)
 
@@ -112,4 +116,3 @@
   +files/confd, +files/cron.daily, +files/initd, +files/logrotate,
   +metadata.xml:
   Initial commit (bug #265840).
-

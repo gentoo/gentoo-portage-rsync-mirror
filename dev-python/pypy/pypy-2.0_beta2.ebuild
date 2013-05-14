@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta2.ebuild,v 1.5 2013/05/13 18:18:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta2.ebuild,v 1.6 2013/05/14 14:27:38 floppym Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ pkg_pretend() {
 	CHECKREQS_MEMORY="2G"
 	use amd64 && CHECKREQS_MEMORY="4G"
 	check-reqs_pkg_pretend
-	if [[ ${MERGE_TYPE} != binary && "$(gcc_version)" == "4.8" ]]; then
+	if [[ ${MERGE_TYPE} != binary && "$(gcc-version)" == "4.8" ]]; then
 		die "PyPy does not build correctly with GCC 4.8"
 	fi
 }

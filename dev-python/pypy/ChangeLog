@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.40 2013/05/13 18:18:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.41 2013/05/14 14:27:38 floppym Exp $
+
+  14 May 2013; Mike Gilbert <floppym@gentoo.org> pypy-2.0_beta2.ebuild:
+  Fix typo in gcc-version, bug 469832 by MiPnamic.
 
   13 May 2013; Mike Gilbert <floppym@gentoo.org> pypy-2.0_beta2.ebuild:
   Fix build with sqlite disabled, bug 469654 by René 'Necoro' Neumann.
