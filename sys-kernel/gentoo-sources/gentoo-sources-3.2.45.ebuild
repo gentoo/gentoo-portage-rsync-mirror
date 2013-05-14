@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.0.74.ebuild,v 1.1 2013/04/17 21:09:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.2.45.ebuild,v 1.1 2013/05/14 17:29:48 tomwij Exp $
 
 EAPI="5"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="45"
+K_GENPATCHES_VER="25"
 K_DEBLOB_AVAILABLE="1"
 inherit kernel-2
 detect_version
