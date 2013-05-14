@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.83 2013/01/24 08:39:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.85 2013/05/14 05:39:59 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> sg3_utils-1.33.ebuild:
+  Inherit multilib eclass for get_libdir usage.
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> -sg3_utils-1.25.ebuild,
+  -sg3_utils-1.26.ebuild, -sg3_utils-1.26-r1.ebuild,
+  -sg3_utils-1.27.20080726.ebuild, -sg3_utils-1.27.20080726-r1.ebuild,
+  -sg3_utils-1.27.20090411.ebuild, -sg3_utils-1.28.ebuild,
+  -sg3_utils-1.29.ebuild, -sg3_utils-1.30.ebuild, -sg3_utils-1.31.ebuild,
+  -sg3_utils-1.32.ebuild, -sg3_utils-1.34.ebuild:
+  Remove old.
 
 *sg3_utils-1.35 (24 Jan 2013)
 

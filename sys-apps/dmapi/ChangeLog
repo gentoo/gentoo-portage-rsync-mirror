@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.75 2013/04/02 11:24:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.77 2013/05/14 05:56:01 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> dmapi-2.2.12.ebuild:
+  Inherit multilib eclass for get_libdir usage.
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org>
+  -files/dmapi-2.2.1-only-symlink-when-needed.patch, -dmapi-2.2.8.ebuild,
+  -files/dmapi-2.2.8-LDFLAGS.patch, -files/dmapi-2.2.8-symlinks.patch,
+  -dmapi-2.2.9.ebuild, -dmapi-2.2.10.ebuild:
+  Remove old.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dmapi-2.2.12.ebuild:
   Stable for hppa, wrt bug #457468

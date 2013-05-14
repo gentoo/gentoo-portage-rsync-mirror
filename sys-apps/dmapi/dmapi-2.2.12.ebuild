@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.12.ebuild,v 1.9 2013/04/02 11:24:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.12.ebuild,v 1.10 2013/05/14 05:56:01 radhermit Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs
+inherit toolchain-funcs multilib
 
 DESCRIPTION="XFS data management API library"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"
