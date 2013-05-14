@@ -1,6 +1,15 @@
 # ChangeLog for games-board/gmchess
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/ChangeLog,v 1.4 2012/02/16 19:15:48 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/ChangeLog,v 1.6 2013/05/14 01:40:19 mr_bones_ Exp $
+
+  14 May 2013; Michael Sterrett <mr_bones_@gentoo.org> gmchess-0.29.6-r1.ebuild:
+  use games_get_libdir
+
+*gmchess-0.29.6-r1 (14 May 2013)
+
+  14 May 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gmchess-0.29.6-gentoo.patch, +gmchess-0.29.6-r1.ebuild:
+  EAPI=5; fix file locations (bug #412705)
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gmchess-0.29.6.ebuild:
   x86 stable wrt bug #401815
@@ -16,4 +25,3 @@
   31 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> +gmchess-0.29.6.ebuild,
   +metadata.xml:
   initial commit - ebuild submitted by Samuel BAUER via bug #391733
-
