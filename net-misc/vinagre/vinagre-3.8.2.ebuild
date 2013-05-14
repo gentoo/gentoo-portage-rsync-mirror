@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.8.0.ebuild,v 1.1 2013/03/28 17:57:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.8.2.ebuild,v 1.1 2013/05/14 19:53:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -44,10 +44,15 @@ DEPEND="${RDEPEND}
 	$(vala_depend)
 "
 
+src_prepare() {
+	gnome2_src_prepare
+	vala_src_prepare
+}
+
 src_configure() {
 	DOCS="AUTHORS ChangeLog ChangeLog.pre-git NEWS README"
-	G2CONF="${G2CONF} ITSTOOL=$(type -P true)"
 	gnome2_src_configure \
+		ITSTOOL=$(type -P true) \
 		$(use_with avahi) \
 		$(use_enable rdp) \
 		$(use_enable ssh) \
@@ -59,5 +64,5 @@ src_install() {
 	gnome2_src_install
 
 	# Remove its own installation of DOCS that go to $PN instead of $P and aren't ecompressed
-	rm -rf "${ED}"/usr/share/doc/vinagre
+	rm -rf "${ED}"/usr/share/doc/vinagre || die
 }

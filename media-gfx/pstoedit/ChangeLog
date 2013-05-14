@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.83 2013/05/10 06:29:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.84 2013/05/14 19:59:47 maekke Exp $
+
+  14 May 2013; Markus Meier <maekke@gentoo.org> pstoedit-3.62.ebuild:
+  add ~arm, bug #469248
 
 *pstoedit-3.62 (10 May 2013)
 
