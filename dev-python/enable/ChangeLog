@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/enable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.23 2013/04/15 19:31:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.24 2013/05/14 13:57:21 idella4 Exp $
+
+*enable-4.3.0 (14 May 2013)
+
+  14 May 2013; Ian Delaney <idella4@gentoo.org> +enable-4.3.0.ebuild,
+  -enable-3.4.0.ebuild, -enable-3.4.1.ebuild, -enable-4.0.0.ebuild,
+  -enable-4.1.0.ebuild, -enable-4.2.0-r1.ebuild, -enable-4.2.0.ebuild,
+  files/enable-4-rogue-tests.patch:
+  bump, re-make of enable-4-rogue-tests.patch for new version, drop old
 
   15 Apr 2013; Ian Delaney <idella4@gentoo.org> enable-4.2.0-r1.ebuild:
   minor corrections/tidyup
