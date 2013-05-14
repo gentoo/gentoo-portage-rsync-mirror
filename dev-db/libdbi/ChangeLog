@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/libdbi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.49 2012/10/07 15:42:06 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.50 2013/05/14 02:23:38 jmbsvicetto Exp $
+
+  14 May 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libdbi-0.8.4.ebuild, +files/libdbi-0.8.4-fix-ac-macro.patch:
+  Apply a patch to replace AM_CONFIG_HEADER with AC_CONFIG_HEADERS - fixes bug
+  466940.
+
+  starting
 
   07 Oct 2012; Raúl Porcel <armin76@gentoo.org> libdbi-0.8.4.ebuild:
   alpha/ia64/s390/sh/sparc/x86 stable wrt #425306

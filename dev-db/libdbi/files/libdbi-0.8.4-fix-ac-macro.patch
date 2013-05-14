@@ -1,0 +1,12 @@
+diff -ur libdbi-0.8.4-old/configure.in libdbi-0.8.4/configure.in
+--- libdbi-0.8.4-old/configure.in	2013-05-14 01:45:25.595869576 +0000
++++ libdbi-0.8.4/configure.in	2013-05-14 01:47:09.775467777 +0000
+@@ -3,7 +3,7 @@
+ AM_MAINTAINER_MODE
+ 
+ AM_INIT_AUTOMAKE(libdbi, 0.8.4)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AC_CONFIG_MACRO_DIR([m4])
+ 
+ dnl Library versioning

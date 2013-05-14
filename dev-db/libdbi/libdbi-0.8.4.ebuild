@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.4.ebuild,v 1.12 2012/10/07 15:42:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.4.ebuild,v 1.13 2013/05/14 02:23:38 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-fix-ac-macro.patch"
 	epatch "${FILESDIR}"/libdbi-0.8.1-pkg-config.patch
 	cp -f "${FILESDIR}"/dbi.pc.in "${S}"/dbi.pc.in
 	epatch "${FILESDIR}"/libdbi-0.8.4-doc-build-fix.patch
