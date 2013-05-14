@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.8.0.ebuild,v 1.1 2013/03/28 17:43:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.8.2.ebuild,v 1.1 2013/05/14 18:23:12 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.16"
+VALA_MIN_API_VERSION="0.18"
 
 inherit eutils gnome2 multilib vala virtualx
 
 DESCRIPTION="A cheesy program to take pictures and videos from your webcam"
-HOMEPAGE="http://www.gnome.org/projects/cheese/"
+HOMEPAGE="http://projects.gnome.org/cheese/"
 
 LICENSE="GPL-2+"
 SLOT="0/7" # subslot = libcheese soname version
@@ -38,7 +38,8 @@ COMMON_DEPEND="
 	media-libs/gst-plugins-base:1.0[introspection?,ogg,pango,theora,vorbis,X]
 
 	>=virtual/udev-171:=[gudev]
-	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
+"
 RDEPEND="${COMMON_DEPEND}
 	media-libs/gst-plugins-bad:1.0
 	media-libs/gst-plugins-good:1.0
@@ -47,7 +48,8 @@ RDEPEND="${COMMON_DEPEND}
 	media-plugins/gst-plugins-v4l2:1.0
 	media-plugins/gst-plugins-vpx:1.0
 
-	sendto? ( >=gnome-extra/nautilus-sendto-2.91 )"
+	sendto? ( >=gnome-extra/nautilus-sendto-2.91 )
+"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.3
 	dev-libs/libxml2:2
@@ -56,7 +58,8 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/itstool
 	virtual/pkgconfig
 	x11-proto/xf86vidmodeproto
-	test? ( dev-libs/glib:2[utils] )"
+	test? ( dev-libs/glib:2[utils] )
+"
 
 src_configure() {
 	gnome2_src_configure \

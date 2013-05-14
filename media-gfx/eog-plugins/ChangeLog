@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/eog-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.4 2013/03/28 17:36:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.5 2013/05/14 18:28:07 pacho Exp $
+
+*eog-plugins-3.8.1 (14 May 2013)
+
+  14 May 2013; Pacho Ramos <pacho@gentoo.org> +eog-plugins-3.8.1.ebuild,
+  -eog-plugins-3.4.1.ebuild:
+  Version bump, drop old
 
 *eog-plugins-3.8.0 (28 Mar 2013)
 

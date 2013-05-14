@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.236 2013/05/13 21:32:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.237 2013/05/14 18:21:30 maekke Exp $
+
+  14 May 2013; Markus Meier <maekke@gentoo.org> claws-mail-3.9.1.ebuild:
+  add ~arm, bug #468984
 
   13 May 2013; Christian Faulhammer <fauli@gentoo.org> claws-mail-3.9.1.ebuild:
   Extend REQUIRED_USE to have USE=pgp activated on USE=smime, see bug 469652 by

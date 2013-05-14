@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.23 2013/04/26 20:48:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.24 2013/05/14 18:05:55 maekke Exp $
+
+  14 May 2013; Markus Meier <maekke@gentoo.org> libdbusmenu-0.6.2.ebuild:
+  add ~arm, bug #468984
 
   26 Apr 2013; Pacho Ramos <pacho@gentoo.org> libdbusmenu-0.6.2.ebuild:
   Migrate to vala.eclass, bug #467390

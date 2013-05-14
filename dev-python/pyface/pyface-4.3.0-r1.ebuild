@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.3.0-r1.ebuild,v 1.2 2013/04/18 16:18:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.3.0-r1.ebuild,v 1.3 2013/05/14 18:14:42 idella4 Exp $
 
 EAPI=5
 
@@ -19,12 +19,13 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
 RDEPEND=">=dev-python/traits-4.1[${PYTHON_USEDEP}]
-		|| ( dev-python/wxpython dev-python/PyQt4 dev-python/pyside )"
+		|| ( dev-python/wxpython[${PYTHON_USEDEP}] dev-python/PyQt4 \
+			dev-python/pyside[${PYTHON_USEDEP}] )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		${RDEPEND}
-		dev-python/traitsui
+		dev-python/traitsui[${PYTHON_USEDEP}]
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"
