@@ -10,5 +10,5 @@ RDEPEND=gtk? ( x11-libs/gtk+:2 ) postgres? ( dev-db/postgresql-base ) qt4? ( dev
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.mico.org/mico-2.3.13.tar.gz http://dev.gentoo.org/~haubi/distfiles/mico-2.3.13-gentoo-patches-0.2.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b40a0b6baa997983383c44f3707ee163

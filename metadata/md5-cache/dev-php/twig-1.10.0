@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=dev-lang/php >=dev-php/pear-1.9.0
 SLOT=0
 SRC_URI=http://pear.twig-project.org/get/Twig-1.10.0.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-lib-r1	683c04445ce44b20b5df954b5050e387	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-lib-r1	683c04445ce44b20b5df954b5050e387	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=7d81e52fea61aefc11bb82057b48db44

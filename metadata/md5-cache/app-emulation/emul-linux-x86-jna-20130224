@@ -10,5 +10,5 @@ RDEPEND=~app-emulation/emul-linux-x86-baselibs-20130224
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-jna-20130224.tar.xz
-_eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=57680a66b9b42f0c129effa1b53e93b9

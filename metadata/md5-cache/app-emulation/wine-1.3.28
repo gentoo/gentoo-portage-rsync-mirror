@@ -11,5 +11,5 @@ REQUIRED_USE=elibc_glibc? ( threads )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/wine/Source/wine-1.3.28.tar.bz2 gecko? ( mirror://sourceforge/wine/Wine%20Gecko/1.3/wine_gecko-1.3-x86.msi win64? ( mirror://sourceforge/wine/Wine%20Gecko/1.3/wine_gecko-1.3-x86_64.msi ) )
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=83801f7c2dcd4831584c015e55780d43

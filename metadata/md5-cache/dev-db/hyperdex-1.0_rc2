@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-cpp/glog dev-libs/cityhash dev-libs/libpo6 dev-libs/libe dev-libs/busybee dev-libs/popt dev-libs/replicant || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://hyperdex.org/src/hyperdex-1.0.rc2.tar.gz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=89a35ab54d804ebd23c60fa45d375199

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/wxGTK:2.8[X]
 SLOT=0
 SRC_URI=http://games.technoplaza.net/chtdecoder/wx/history/wxchtdecoder-1.5a.tar.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
 _md5_=a8df06021519f89e6cb40d708777e0e4

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=X? ( ~x11-drivers/xf86-video-virtualbox-4.2.10 x11-apps/xrandr x11-apps/xrefresh x11-libs/libXmu x11-libs/libX11 x11-libs/libXt x11-libs/libXext x11-libs/libXau x11-libs/libXdmcp x11-libs/libSM x11-libs/libICE ) sys-apps/dbus !!x11-drivers/xf86-input-virtualbox kernel_linux? ( virtual/modutils )
 SLOT=0
 SRC_URI=http://download.virtualbox.org/virtualbox/4.2.10/VirtualBox-4.2.10.tar.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	linux-mod	c9d4931960ba253061ad823a8508bff5	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	linux-mod	c9d4931960ba253061ad823a8508bff5	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=30207545f6c9358787d75c8d33786c37

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-3.8.0.1.ebuild,v 1.1 2013/03/28 17:06:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-3.8.2.ebuild,v 1.1 2013/05/14 21:00:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -8,10 +8,10 @@ GCONF_DEBUG="yes"
 inherit gnome2
 
 DESCRIPTION="Libraries for the gnome desktop that are not part of the UI"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://git.gnome.org/browse/gnome-desktop"
 
 LICENSE="GPL-2+ FDL-1.1+ LGPL-2+"
-SLOT="3/4" # subslot = libgnome-desktop-3 soname version
+SLOT="3/7" # subslot = libgnome-desktop-3 soname version
 IUSE="+introspection"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x86-solaris"
 

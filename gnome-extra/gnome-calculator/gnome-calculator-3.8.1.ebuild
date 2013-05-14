@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/gnome-calculator-3.8.1.ebuild,v 1.1 2013/04/14 18:37:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/gnome-calculator-3.8.1.ebuild,v 1.2 2013/05/14 20:53:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,12 +22,12 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	!<gnome-extra/gnome-utils-2.3
+	!gnome-extra/gcalctool
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
 	virtual/pkgconfig
-	!gnome-extra/gcalctool
 "
 
 src_configure() {

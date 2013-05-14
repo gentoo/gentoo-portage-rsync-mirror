@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-db/unixODBC-2.3.0 mssql? ( >=dev-db/freetds-0.64[odbc] ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://pyodbc.googlecode.com/files/pyodbc-2.1.11.zip
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=4ee2ec43f44efc78b2564ed86d27c1ae

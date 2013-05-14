@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.0.ebuild,v 1.3 2013/04/01 10:27:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.2.ebuild,v 1.1 2013/05/14 21:29:28 pacho Exp $
 
 EAPI="5"
 inherit gnome2
@@ -36,6 +36,7 @@ RDEPEND="
 "
 # goa-daemon can launch gnome-control-center
 PDEPEND="gnome? ( >=gnome-base/gnome-control-center-3.2[gnome-online-accounts(+)] )"
+
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-util/gtk-doc-am-1.3

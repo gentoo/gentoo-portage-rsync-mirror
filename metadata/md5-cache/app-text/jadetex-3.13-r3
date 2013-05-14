@@ -8,5 +8,5 @@ RDEPEND=>=app-text/openjade-1.3.1 dev-texlive/texlive-fontsrecommended dev-texli
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/jadetex/jadetex-3.13.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	latex-package	e7bfe03b27224512702eac009812cc50	multilib	892e597faee02a5b94eb02ab512e7622	texlive-common	dcab7201316e43f118d20a1d6dab09a9	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	latex-package	e7bfe03b27224512702eac009812cc50	multilib	892e597faee02a5b94eb02ab512e7622	texlive-common	dcab7201316e43f118d20a1d6dab09a9	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=a44a6624f0f191742f0af99ca6edd68e

@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-haskell/syb[profile?] >=dev-lang/ghc-6.10.1
 SLOT=0
 SRC_URI=mirror://hackage/packages/archive/language-c/0.3.2.1/language-c-0.3.2.1.tar.gz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	0fe5ac58a8b877fae07bb258b762852e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	0fe5ac58a8b877fae07bb258b762852e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=6a57c22d1ff30f506226ab60a80a2d42

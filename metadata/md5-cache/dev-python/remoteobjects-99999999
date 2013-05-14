@@ -7,5 +7,5 @@ IUSE=test
 LICENSE=BSD
 RDEPEND=dev-python/simplejson dev-python/httplib2 =dev-lang/python-2*
 SLOT=0
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=d59886d5cd8a2810483a52531fa77ccc

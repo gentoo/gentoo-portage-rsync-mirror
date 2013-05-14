@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=2.6.32_p16
 SRC_URI=mirror://kernel/linux/kernel/v2.6/linux-2.6.32.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.32.N/deblob-2.6.32 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.32.N/deblob-check -> deblob-check-2.6.32 ) http://pf.natalenko.name/sources/2.6.32/patch-2.6.32-pf16.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	kernel-2	353d0aef1046938e432ba587875e2027	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	kernel-2	353d0aef1046938e432ba587875e2027	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=453534c39d4a7770f2ce817aa8c313cb

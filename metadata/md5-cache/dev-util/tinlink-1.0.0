@@ -5,5 +5,5 @@ KEYWORDS=~amd64 ~x86 ~ppc
 LICENSE=public-domain
 SLOT=0
 SRC_URI=http://sed.free.fr/tinlink/tinlink-1.0.0.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=db18cc78c3b4683f34caab6a7d7d7338

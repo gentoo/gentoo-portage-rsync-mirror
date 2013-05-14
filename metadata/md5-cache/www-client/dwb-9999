@@ -7,5 +7,5 @@ IUSE=examples gtk3
 LICENSE=GPL-3
 RDEPEND=>=net-libs/libsoup-2.32:2.4 dev-libs/json-c net-libs/gnutls !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 )
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=dcb2073876610ab1378ecdf589ec6a0a

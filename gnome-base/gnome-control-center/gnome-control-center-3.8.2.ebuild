@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.0-r1.ebuild,v 1.3 2013/05/09 20:08:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.2.ebuild,v 1.1 2013/05/14 20:56:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -9,12 +9,15 @@ GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen
 inherit autotools eutils gnome2
 
 DESCRIPTION="GNOME Desktop Configuration Tool"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://git.gnome.org/browse/gnome-control-center/"
 
 LICENSE="GPL-2+"
 SLOT="2"
-IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom kerberos +socialweb systemd v4l"
+IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom kerberos modemmanager +socialweb systemd v4l"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+
+# False positives caused by nested configure scripts
+QA_CONFIGURE_OPTIONS=".*"
 
 # gnome-session-2.91.6-r1 is needed so that 10-user-dirs-update is run at login
 # g-s-d[policykit] needed for bug #403527
@@ -41,7 +44,7 @@ COMMON_DEPEND="
 	>=x11-libs/libnotify-0.7.3
 
 	>=gnome-extra/nm-applet-0.9.7.995
-	>=net-misc/networkmanager-0.9.8[modemmanager]
+	>=net-misc/networkmanager-0.9.8[modemmanager?]
 
 	x11-apps/xmodmap
 	x11-libs/libX11
@@ -50,10 +53,13 @@ COMMON_DEPEND="
 
 	bluetooth? ( >=net-wireless/gnome-bluetooth-3.5.5:= )
 	colord? ( >=x11-misc/colord-0.1.29 )
-	cups? ( >=net-print/cups-1.4[dbus] )
-	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.5.90 )
+	cups? (
+		>=net-print/cups-1.4[dbus]
+		>=net-fs/samba-3.6.14-r1[smbclient] )
+	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.8.1 )
 	i18n? ( >=app-i18n/ibus-1.4.99 )
 	kerberos? ( virtual/krb5 )
+	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	socialweb? ( net-libs/libsocialweb )
 	systemd? ( >=sys-apps/systemd-31 )
 	v4l? (
@@ -84,6 +90,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 # PDEPEND to avoid circular dependency
 PDEPEND=">=gnome-base/gnome-session-2.91.6-r1"
+
 DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto
 	x11-proto/xf86miscproto
@@ -103,6 +110,10 @@ DEPEND="${COMMON_DEPEND}
 #	gnome-base/gnome-common
 
 src_prepare() {
+	# Gentoo handles completions in a different directory, bug #465094
+	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
+		shell/Makefile.am || die "sed completiondir failed"
+
 	# Make some panels optional; requires eautoreconf
 	# https://bugzilla.gnome.org/697478
 	epatch "${FILESDIR}/${PN}-3.8.0-optional-r1.patch"
@@ -113,6 +124,9 @@ src_prepare() {
 	# Fix some absolute paths to be appropriate for Gentoo
 	epatch "${FILESDIR}/${PN}-3.8.0-paths-makefiles.patch"
 	epatch "${FILESDIR}/${PN}-3.8.0-paths.patch"
+
+	# Make modemmanager optional, bug 463852, upstream bug #700145
+	epatch "${FILESDIR}/${PN}-3.8.1.5-optional-modemmanager.patch"
 
 	eautoreconf
 	gnome2_src_prepare
@@ -125,22 +139,21 @@ src_prepare() {
 }
 
 src_configure() {
-	G2CONF="${G2CONF}
-		--disable-update-mimedb
-		--disable-static
-		--enable-documentation
-		$(use_enable bluetooth)
-		$(use_enable colord color)
-		$(use_enable cups)
-		$(use_enable gnome-online-accounts goa)
-		$(use_enable i18n ibus)
-		$(use_with socialweb libsocialweb)
-		$(use_enable systemd)
-		$(use_with v4l cheese)
-		$(use_enable input_devices_wacom wacom)"
 	# FIXME: add $(use_with kerberos) support?
-	if ! use kerberos; then
-		G2CONF+=" KRB5_CONFIG=$(type -P true)"
-	fi
-	gnome2_src_configure
+	! use kerberos && G2CONF+=" KRB5_CONFIG=$(type -P true)"
+
+	gnome2_src_configure \
+		--disable-update-mimedb \
+		--disable-static \
+		--enable-documentation \
+		$(use_enable bluetooth) \
+		$(use_enable colord color) \
+		$(use_enable cups) \
+		$(use_enable gnome-online-accounts goa) \
+		$(use_enable i18n ibus) \
+		$(use_enable modemmanager) \
+		$(use_with socialweb libsocialweb) \
+		$(use_enable systemd) \
+		$(use_with v4l cheese) \
+		$(use_enable input_devices_wacom wacom)
 }

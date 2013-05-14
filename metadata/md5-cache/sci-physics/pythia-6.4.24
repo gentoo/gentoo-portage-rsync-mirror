@@ -9,5 +9,5 @@ LICENSE=public-domain
 RDEPEND=virtual/fortran
 SLOT=6
 SRC_URI=mirror://gentoo/pythia-6.4.24.tar.bz2 ftp://root.cern.ch/root/pythia6.tar.gz doc? ( http://home.thep.lu.se/~torbjorn/pythia/lutp0613man2.pdf ) examples? ( mirror://gentoo/pythia-6.4.18-examples.tar.bz2 )
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	384ae111f3649d456ed1754e3e1c4f6e	fortran-2	ea80967500d9deda5468aed13b0bfca8	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	384ae111f3649d456ed1754e3e1c4f6e	fortran-2	ea80967500d9deda5468aed13b0bfca8	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=52a53cea1f68a423a6948ad2d0d093c6

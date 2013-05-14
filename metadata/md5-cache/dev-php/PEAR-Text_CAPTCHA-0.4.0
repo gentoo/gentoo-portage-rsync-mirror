@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-php/PEAR-Text_Password dev-lang/php[truetype] || ( dev-lang/php[gd] dev-lang/php[gd-external] ) !minimal? ( dev-php/PEAR-Numbers_Words dev-php/PEAR-Text_Figlet dev-php/PEAR-Image_Text ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Text_CAPTCHA-0.4.0.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=b7d54bd346fccc885b869a5511ec6fbb

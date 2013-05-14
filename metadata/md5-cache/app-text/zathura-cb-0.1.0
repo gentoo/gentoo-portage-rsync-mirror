@@ -8,5 +8,5 @@ LICENSE=ZLIB
 RDEPEND=>=app-text/zathura-0.2.0 >=dev-libs/girara-0.1.3:2 >=dev-libs/glib-2 x11-libs/cairo app-arch/p7zip app-arch/tar app-arch/unrar app-arch/unzip
 SLOT=0
 SRC_URI=http://pwmt.org/projects/zathura/plugins/download/zathura-cb-0.1.0.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=44d863b51b36f87d73fd432b52d8303f

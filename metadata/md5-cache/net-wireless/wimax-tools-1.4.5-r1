@@ -8,5 +8,5 @@ KEYWORDS=~alpha amd64 ~ia64 ppc ppc64 ~sparc x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://linuxwimax.org/Download?action=AttachFile&do=get&target=wimax-tools-1.4.5.tar.gz -> wimax-tools-1.4.5.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=e100392b9f213d9ef77cb3672d2c267d

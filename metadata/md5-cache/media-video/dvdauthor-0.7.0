@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/fribidi-0.19.2 dev-libs/libxml2 >=media-libs/freetype-2 media-libs/libdvdread media-libs/libpng graphicsmagick? ( media-gfx/graphicsmagick ) !graphicsmagick? ( >=media-gfx/imagemagick-5.5.7.14 )
 SLOT=0
 SRC_URI=mirror://sourceforge/dvdauthor/dvdauthor-0.7.0.tar.gz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8f6edaa10b7c211f275ae91b625f1c16

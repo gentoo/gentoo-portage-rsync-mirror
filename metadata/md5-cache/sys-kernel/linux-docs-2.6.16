@@ -7,5 +7,5 @@ KEYWORDS=~alpha amd64 arm ~hppa ia64 m68k ppc ppc64 s390 sh sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://kernel/pub/linux/kernel/v2.6/linux-2.6.16.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=70d1e6c31f7fefb0a578aae9ea24beb3

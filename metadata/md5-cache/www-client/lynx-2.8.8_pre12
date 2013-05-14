@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( dev-libs/libgcrypt >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) idn? ( net-dns/libidn )
 SLOT=0
 SRC_URI=http://lynx.isc.org/current/lynx2.8.8dev.12.tar.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=81d4da73803fc4a3373b9a76c046166b

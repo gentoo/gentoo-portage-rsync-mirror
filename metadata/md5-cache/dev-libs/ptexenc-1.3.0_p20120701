@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=iconv? ( virtual/libiconv ) dev-libs/kpathsea
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-20120701-source.tar.xz
-_eclasses_=libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=5b0ea5732f271d922a2a3134d0986411

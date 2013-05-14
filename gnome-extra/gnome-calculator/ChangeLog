@@ -1,6 +1,16 @@
 # ChangeLog for gnome-extra/gnome-calculator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/ChangeLog,v 1.3 2013/04/14 18:37:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/ChangeLog,v 1.5 2013/05/14 20:53:20 pacho Exp $
+
+  14 May 2013; Pacho Ramos <pacho@gentoo.org> gnome-calculator-3.8.1.ebuild,
+  gnome-calculator-3.8.2.ebuild:
+  Fix blockers
+
+*gnome-calculator-3.8.2 (14 May 2013)
+
+  14 May 2013; Pacho Ramos <pacho@gentoo.org> +gnome-calculator-3.8.2.ebuild,
+  -gnome-calculator-3.8.0.ebuild:
+  Version bump, drop old
 
 *gnome-calculator-3.8.1 (14 Apr 2013)
 

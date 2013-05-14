@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=X? ( dev-python/pygtk:2 ) ncurses? ( sys-libs/ncurses ) bluetooth? ( net-wireless/bluez ) usb? ( virtual/libusb:1 ) dbus? ( sys-apps/dbus dev-libs/dbus-glib ) ntp? ( || ( net-misc/ntp net-misc/chrony ) ) qt4? ( dev-qt/qtgui:4 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
 REQUIRED_USE=X? ( python ) gpsd_protocols_nmea2000? ( gpsd_protocols_aivdm )
 SLOT=0
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	384ae111f3649d456ed1754e3e1c4f6e	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	384ae111f3649d456ed1754e3e1c4f6e	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ab2023cb7739f5983e90baa6b726494a

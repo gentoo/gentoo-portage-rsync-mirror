@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=sys-libs/zlib >=sci-astronomy/wcstools-3.7.6 sci-visualization/gnuplot
 SLOT=0
 SRC_URI=http://cfa-www.harvard.edu/~john/funtools/funtools-1.4.0.tar.gz mirror://gentoo/funtools-1.4.0-ds9-5.4.patch.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e6f2a0a89955e1a33c0853f7d1c4790f

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=net-libs/libnet-1.1.1
 SLOT=0
 SRC_URI=mirror://sourceforge/ntwox/netwox-5.39.0-src.tgz doc? ( mirror://sourceforge/ntwox/netwox-5.39.0-doc_html.tgz )
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=d367726ab9f6c1784453ce0f55b5309f

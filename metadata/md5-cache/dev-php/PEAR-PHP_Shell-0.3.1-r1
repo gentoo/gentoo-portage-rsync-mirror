@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=|| ( <dev-lang/php-5.3[pcre,spl,tokenizer] >=dev-lang/php-5.3[tokenizer] ) auto-completion? ( dev-lang/php[readline] ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://jan.kneschke.de/assets/2007/2/17/PHP_Shell-0.3.1.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=037b852efd425a2e98304f54db2b335d

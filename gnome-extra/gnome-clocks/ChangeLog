@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-clocks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-clocks/ChangeLog,v 1.4 2013/05/09 16:42:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-clocks/ChangeLog,v 1.5 2013/05/14 20:47:58 pacho Exp $
+
+*gnome-clocks-3.8.2 (14 May 2013)
+
+  14 May 2013; Pacho Ramos <pacho@gentoo.org> +gnome-clocks-3.8.2.ebuild:
+  Version bump
 
   09 May 2013; Pacho Ramos <pacho@gentoo.org> -gnome-clocks-3.8.0.ebuild,
   gnome-clocks-3.8.1.ebuild:

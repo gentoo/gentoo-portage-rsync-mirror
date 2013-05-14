@@ -9,5 +9,5 @@ LICENSE=dom4j
 RDEPEND=dev-java/jaxme:0 dev-java/relaxng-datatype:0 dev-java/xpp2:0 dev-java/xpp3:0 dev-java/xsdlib:0 java-virtuals/stax-api:0 >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=1
 SRC_URI=mirror://sourceforge/dom4j/dom4j-1.6.1.tar.gz mirror://gentoo/dom4j-1.6.1-java5.patch.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	java-ant-2	65ba8d80c13cf56bad5ccec21a6b3c37	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	java-ant-2	65ba8d80c13cf56bad5ccec21a6b3c37	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=8b302a94b2be4fa57a9b6577d3df3262

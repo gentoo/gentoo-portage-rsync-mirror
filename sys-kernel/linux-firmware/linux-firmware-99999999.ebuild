@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.25 2013/05/11 01:14:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.26 2013/05/14 21:06:31 blueness Exp $
 
 EAPI=5
 inherit savedconfig
@@ -12,7 +12,7 @@ if [[ ${PV} == 99999999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="Linux firmware files"

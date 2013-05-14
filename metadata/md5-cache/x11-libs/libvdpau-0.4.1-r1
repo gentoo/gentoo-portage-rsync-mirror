@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libX11 x11-libs/libXext !=x11-drivers/nvidia-drivers-180* !=x11-drivers/nvidia-drivers-185* !=x11-drivers/nvidia-drivers-190.18 !=x11-drivers/nvidia-drivers-190.25 !=x11-drivers/nvidia-drivers-190.32 !=x11-drivers/nvidia-drivers-190.36 !=x11-drivers/nvidia-drivers-190.40
 SLOT=0
 SRC_URI=http://people.freedesktop.org/~aplattner/vdpau/libvdpau-0.4.1.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=84afc4e2ece3e2de41e76868ad08ced2

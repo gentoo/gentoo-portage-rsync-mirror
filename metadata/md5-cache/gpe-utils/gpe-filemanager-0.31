@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=gpe-base/gpe-icons gpe-base/libgpewidget gnome-base/gnome-vfs dev-libs/dbus-glib
 SLOT=0
 SRC_URI=http://gpe.linuxtogo.org/download/source/gpe-filemanager-0.31.tar.bz2
-_eclasses_=gpe	dc397204e130de43bfcf156546e8d9d4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=gpe	dc397204e130de43bfcf156546e8d9d4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=9a48a318337cd99f2861515c1b5311a3
