@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.0.ebuild,v 1.1 2013/05/10 08:33:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.1.ebuild,v 1.1 2013/05/14 07:52:34 pva Exp $
 
 EAPI="4"
 inherit fixheadtails
@@ -20,12 +20,6 @@ DEPEND="
 "
 
 src_prepare() {
-	# Disable broken test for now
-	sed '/fe80--218-8bff-fe17-a226s4.ipv6-literal.net/d' \
-		-i	ipv6calc/test_ipv6calc.sh || die
-	sed -e '/^2001-db8-0-0-0-0-0-1.ipv6-literal.net/d' \
-		-e '/^2001-db8--1.ipv6-literal.net/d' \
-		-i ipv6calc/test_scenarios.sh || die
 	ht_fix_file configure
 }
 
