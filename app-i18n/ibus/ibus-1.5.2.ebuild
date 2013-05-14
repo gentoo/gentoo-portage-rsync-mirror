@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.2.ebuild,v 1.1 2013/05/04 06:48:01 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.2.ebuild,v 1.2 2013/05/14 06:05:49 naota Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -40,6 +40,7 @@ COMMON_DEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )
 	nls? ( virtual/libintl )"
 RDEPEND="${COMMON_DEPEND}
+	x11-apps/setxkbmap
 	python? (
 		dev-python/pyxdg
 		deprecated? (

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.126 2013/05/14 05:59:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.127 2013/05/14 06:05:49 naota Exp $
+
+  14 May 2013; Naohiro Aota <naota@gentoo.org> ibus-1.4.1.ebuild,
+  ibus-1.4.2.ebuild, ibus-1.5.2.ebuild:
+  Add missing x11-misc/setxkbmap dependency. #469634
 
   14 May 2013; Naohiro Aota <naota@gentoo.org> -ibus-1.5.1-r1.ebuild,
   -ibus-1.5.1-r2.ebuild, -ibus-1.5.1.ebuild:

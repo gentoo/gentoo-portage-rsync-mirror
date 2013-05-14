@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tnef
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.63 2012/06/08 12:11:45 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.64 2013/05/14 06:17:32 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> -tnef-1.4.8.ebuild:
+  Remove old.
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tnef-1.4.9.ebuild:
   x86 stable wrt bug #419293

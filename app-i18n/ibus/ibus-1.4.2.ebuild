@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.6 2013/05/03 23:33:03 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.7 2013/05/14 06:05:49 naota Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
@@ -45,6 +45,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
+	x11-apps/setxkbmap
 	python? (
 		dev-python/pygtk
 		dev-python/pyxdg
