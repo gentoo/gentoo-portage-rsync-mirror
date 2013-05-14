@@ -1,6 +1,12 @@
 # ChangeLog for games-util/xboxdrv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.29 2013/04/30 22:12:02 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.30 2013/05/14 19:11:14 swegener Exp $
+
+*xboxdrv-0.8.5-r1 (14 May 2013)
+
+  14 May 2013; Sven Wegener <swegener@gentoo.org> +xboxdrv-0.8.5-r1.ebuild,
+  +files/xboxdrv.confd, +files/xboxdrv.initd:
+  Revision bump, add init script to run a system-wide xboxdrv daemon.
 
 *xboxdrv-0.8.5 (30 Apr 2013)
 

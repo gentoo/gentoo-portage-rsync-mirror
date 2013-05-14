@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pychef
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychef/ChangeLog,v 1.1 2013/05/14 19:28:15 prometheanfire Exp $
+
+*pychef-0.2.1 (14 May 2013)
+
+  14 May 2013; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +pychef-0.2.1.ebuild:
+  initial commit of PyChef (dev-python/pychef)

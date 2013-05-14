@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/ets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.17 2013/05/12 14:25:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.18 2013/05/14 19:22:59 idella4 Exp $
+
+*ets-4.3.0-r1 (14 May 2013)
+
+  14 May 2013; Ian Delaney <idella4@gentoo.org> +ets-4.3.0-r1.ebuild,
+  -ets-4.2.0-r1.ebuild, -ets-4.2.0.ebuild, -ets-4.3.0.ebuild:
+  revbump; migrate -> distutils-r1, corrections to all deps in dep list, drop
+  old versions and invalid 4.3.0.ebuild
 
   12 May 2013; Ian Delaney <idella4@gentoo.org> -ets-4.0.0-r1.ebuild,
   -ets-4.1.0.ebuild, ets-4.2.0-r1.ebuild, ets-4.2.0.ebuild, ets-4.3.0.ebuild:
