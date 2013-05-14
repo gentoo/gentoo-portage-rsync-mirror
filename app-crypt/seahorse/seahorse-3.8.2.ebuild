@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.8.0.ebuild,v 1.1 2013/03/28 16:29:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.8.2.ebuild,v 1.1 2013/05/14 20:09:54 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -8,7 +8,7 @@ GCONF_DEBUG="yes"
 inherit gnome2
 
 DESCRIPTION="A GNOME application for managing encryption keys"
-HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
+HOMEPAGE="http://projects.gnome.org/seahorse/index.html"
 
 LICENSE="GPL-2+ FDL-1.1+"
 SLOT="0"
@@ -52,16 +52,14 @@ src_prepare() {
 }
 
 src_configure() {
-	G2CONF="${G2CONF}
-		--enable-pgp
-		--enable-ssh
-		--enable-pkcs11
-		--disable-static
-		--enable-hkp
-		$(use_enable avahi sharing)
-		$(use_enable debug)
-		$(use_enable ldap)
-		ITSTOOL=$(type -P true)"
-
-	gnome2_src_configure
+	gnome2_src_configure \
+		--enable-pgp \
+		--enable-ssh \
+		--enable-pkcs11 \
+		--disable-static \
+		--enable-hkp \
+		$(use_enable avahi sharing) \
+		$(use_enable debug) \
+		$(use_enable ldap) \
+		ITSTOOL=$(type -P true)
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.8.1.ebuild,v 1.2 2013/04/21 11:50:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.8.1.ebuild,v 1.3 2013/05/14 20:09:54 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -57,7 +57,7 @@ src_configure() {
 		--enable-ssh \
 		--enable-pkcs11 \
 		--disable-static \
-		--enable-hkp \
+		--enable-hkp \ 
 		$(use_enable avahi sharing) \
 		$(use_enable debug) \
 		$(use_enable ldap) \
