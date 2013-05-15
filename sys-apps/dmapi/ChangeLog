@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.77 2013/05/14 05:56:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.78 2013/05/15 04:01:15 vapier Exp $
+
+  15 May 2013; Mike Frysinger <vapier@gentoo.org> dmapi-2.2.12.ebuild:
+  Add arm back in #469906, as well as s390/sh #444688.
 
   14 May 2013; Tim Harder <radhermit@gentoo.org> dmapi-2.2.12.ebuild:
   Inherit multilib eclass for get_libdir usage.
