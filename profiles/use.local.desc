@@ -1322,7 +1322,6 @@ dev-lang/gdl:gshhs - Add support for projection adn continent maps with sci-geos
 dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4
 dev-lang/gdl:proj - Add support for sci-libs/proj (geographic projections)
 dev-lang/gdl:udunits - Add support for manipulating units of physical quantities
-dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly large performance gains
 dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
 dev-lang/ghc:ghcbootstrap - Bootstrap from an existing GHC installation.
 dev-lang/ghc:ghcmakebinary - Build with less runtime depends (bundle libffi for building bootstrap binaries).
@@ -1374,7 +1373,6 @@ dev-lang/php:mysqlnd - Use native driver for mysql, mysqli, PDO_Mysql
 dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et.al
 dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
-dev-lang/php:pic - Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)
 dev-lang/php:sqlite2 - Add sqlite2 support. Will be removed
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support

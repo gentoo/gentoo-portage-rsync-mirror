@@ -17,7 +17,6 @@
 		<flag name='libmysqlclient'>Use libmyslclient driver for mysql, mysqli, PDO_Mysql (not recommended)</flag>
 		<flag name='intl'>Enables the intl extension for extended internalization support</flag>
 		<flag name='opcache'>Enables built-in opcode cache, replacing pecl-apc et.al</flag>
-		<flag name='pic'>Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)</flag>
 		<flag name='pdo'>Enable the bundled PDO extensions</flag>
 		<flag name='phar'>Enables the phar extension to provide phar archive support</flag>
 		<flag name='sqlite2'>Add sqlite2 support. Will be removed</flag>

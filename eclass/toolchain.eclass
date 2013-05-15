@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.589 2013/05/15 00:56:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.590 2013/05/15 05:42:09 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1100,7 +1100,11 @@ gcc_do_configure() {
 		confgcc+=" --without-ppl"
 	fi
 
-	tc_version_is_at_least "4.6" && confgcc+=" $(use_enable lto)"
+	if tc_version_is_at_least "4.6" ; then
+		confgcc+=" $(use_enable lto)"
+	elif tc_version_is_at_least "4.5" ; then
+		confgcc+=" --disable-lto"
+	fi
 
 	case $(tc-is-softfloat) in
 	yes)    confgcc+=" --with-float=soft" ;;

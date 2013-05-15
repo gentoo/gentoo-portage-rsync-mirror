@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.823 2013/05/15 00:56:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.824 2013/05/15 05:42:09 dirtyepic Exp $
+
+  15 May 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Explicitly disable lto in 4.5 to stop configure from helpfully re-enabling it
+  when libelf is present.
 
   15 May 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Rename test USE flag to regression-test.

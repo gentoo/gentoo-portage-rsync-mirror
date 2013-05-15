@@ -4,7 +4,4 @@
   <maintainer>
     <email>maintainer-needed@gentoo.org</email>
   </maintainer>
-<use>
-  <flag name='force-reg'>Enable a possibly unstable GCC flag for possibly large performance gains</flag>
-</use>
 </pkgmetadata>
