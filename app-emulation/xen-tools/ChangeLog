@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.146 2013/05/15 08:40:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.147 2013/05/15 17:47:47 idella4 Exp $
+
+*xen-tools-4.2.2 (15 May 2013)
+*xen-tools-4.2.1-r3 (15 May 2013)
+
+  15 May 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4-CVE-2013-0215-XSA-38.patch,
+  +files/xen-4-CVE-2013-1919-XSA-46.patch,
+  +files/xen-4-CVE-2013-1922-XSA-48.patch,
+  +files/xen-4-CVE-2013-1952-XSA-49.patch,
+  +files/xen-4-CVE-2013-1952-XSA_49.patch, +files/xen-4-ulong.patch,
+  +xen-tools-4.2.1-r3.ebuild, +xen-tools-4.2.2.ebuild,
+  xen-tools-4.2.1-r1.ebuild:
+  4.2.1-r1; re-invoked ipxe-nopie.patch, revbump 4.2.1-r3; updated security
+  patches, bump 4.2.2; updated security patches, dropped ocaml use flag made
+  redundant by build
 
   15 May 2013; Ian Delaney <idella4@gentoo.org> files/xenstored.initd:
   Fix to xenstored.initd wrt Bug #459082

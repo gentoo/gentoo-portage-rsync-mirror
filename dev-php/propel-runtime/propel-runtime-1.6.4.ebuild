@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/propel-runtime-1.6.4.ebuild,v 1.2 2012/07/03 14:50:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/propel-runtime-1.6.4.ebuild,v 1.3 2013/05/15 17:55:17 olemarkus Exp $
 
 EAPI="4"
 inherit php-pear-lib-r1
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-lang/php-5.3[pdo,xml,xsl]
+DEPEND="dev-lang/php[pdo,xml,xslt]
 	>=dev-php/pear-1.9.0-r1"
 RDEPEND="${DEPEND}
 	>=dev-php/PEAR-Log-1.8.7-r1
