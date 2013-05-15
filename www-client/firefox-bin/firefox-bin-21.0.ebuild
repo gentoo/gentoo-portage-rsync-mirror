@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-21.0.ebuild,v 1.2 2013/05/15 04:04:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-21.0.ebuild,v 1.3 2013/05/15 05:14:45 jdhore Exp $
 
 EAPI="5"
 
@@ -74,7 +74,7 @@ src_install() {
 
 	local size sizes icon_path icon name
 	sizes="16 32 48"
-	icon_path="${D}${MOZILLA_FIVE_HOME}/chrome/icons/default"
+	icon_path="${S}/browser/chrome/icons/default"
 	icon="${PN}"
 	name="Mozilla Firefox"
 
