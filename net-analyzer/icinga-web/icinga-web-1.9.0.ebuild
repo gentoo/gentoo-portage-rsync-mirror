@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.9.0.ebuild,v 1.1 2013/05/09 22:14:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.9.0.ebuild,v 1.2 2013/05/15 17:06:48 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="apache2 mysql pnp postgres"
 DEPEND="dev-php/phing
-		dev-lang/php[apache2?,cli,json,mysql?,pdo,postgres?,sockets,xsl,xml]
+		dev-lang/php[apache2?,cli,json,mysql?,pdo,postgres?,sockets,xslt,xml]
 		pnp? ( net-analyzer/pnp4nagios )"
 RDEPEND="${DEPEND}"
 
