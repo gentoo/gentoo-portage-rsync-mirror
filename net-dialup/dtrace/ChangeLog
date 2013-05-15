@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/dtrace
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/ChangeLog,v 1.4 2010/05/07 12:17:02 sbriesen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/ChangeLog,v 1.5 2013/05/15 18:30:30 ulm Exp $
+
+*dtrace-2.01-r2 (15 May 2013)
+
+  15 May 2013; Ulrich Müller <ulm@gentoo.org> +dtrace-2.01-r2.ebuild:
+  Fix LICENSE, proprietary license according to AVM. Redistribution is not
+  allowed, therefore adding mirror and bindist restrictions and fetching
+  directly from upstream FTP server. Bug 446156.
 
   07 May 2010; Stefan Briesenick <sbriesen@gentoo.org>
   dtrace-2.01-r1.ebuild:

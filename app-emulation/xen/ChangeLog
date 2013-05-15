@@ -1,6 +1,24 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.114 2013/03/08 10:33:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.115 2013/05/15 18:03:57 idella4 Exp $
+
+*xen-4.2.2 (15 May 2013)
+*xen-4.2.1-r3 (15 May 2013)
+
+  15 May 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4-CVE-2013-0153-XSA-36.patch,
+  +files/xen-4-CVE-2013-1917-XSA-44.patch,
+  +files/xen-4-CVE-2013-1918-XSA-45_1.patch,
+  +files/xen-4-CVE-2013-1918-XSA-45_2.patch,
+  +files/xen-4-CVE-2013-1918-XSA-45_3.patch,
+  +files/xen-4-CVE-2013-1918-XSA-45_4.patch,
+  +files/xen-4-CVE-2013-1918-XSA-45_5.patch,
+  +files/xen-4-CVE-2013-1918-XSA-45_6.patch,
+  +files/xen-4-CVE-2013-1918-XSA-45_7.patch,
+  +files/xen-4-CVE-2013-1920-XSA-47.patch, +xen-4.2.1-r3.ebuild,
+  +xen-4.2.2.ebuild, xen-4.2.1-r1.ebuild, xen-4.2.1-r2.ebuild:
+  revbump 4.2.1-r3; updated security patches, bump 4.2.2; updated security
+  patches
 
   08 Mar 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.0-r2.ebuild,
   xen-4.2.1-r1.ebuild, xen-4.2.1-r2.ebuild:
