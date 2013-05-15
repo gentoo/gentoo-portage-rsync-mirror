@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.195 2013/04/17 17:53:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.196 2013/05/15 20:59:41 ssuominen Exp $
+
+*automake-1.13.2 (15 May 2013)
+
+  15 May 2013; Samuli Suominen <ssuominen@gentoo.org> +automake-1.13.2.ebuild:
+  Version bump. This will turn uses of AM_CONFIG_HEADER and AM_PROG_CC_STDC
+  from error back to warning wrt #451744#c5
 
   17 Apr 2013; Alexis Ballier <aballier@gentoo.org> automake-1.12.6.ebuild,
   automake-1.13.1.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.148 2013/05/15 18:41:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.149 2013/05/15 20:33:05 zx2c4 Exp $
+
+*xen-tools-4.2.2-r1 (15 May 2013)
+
+  15 May 2013; Jason A. Donenfeld <zx2c4@gentoo.org> +xen-tools-4.2.2-r1.ebuild,
+  -xen-tools-4.2.2.ebuild:
+  xl requires lzo now; otherwise it won't run.
 
   15 May 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.2.ebuild:
   epatch_user helper added wrt Bug #464052
