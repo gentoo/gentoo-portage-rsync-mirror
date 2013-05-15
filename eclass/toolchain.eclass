@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.587 2013/05/14 18:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.589 2013/05/15 00:56:49 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -97,7 +97,7 @@ STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VE
 
 
 #---->> SLOT+IUSE logic <<----
-IUSE="multislot nls nptl test vanilla"
+IUSE="multislot nls nptl regression-test vanilla"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	IUSE+=" altivec cxx fortran"
@@ -114,7 +114,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		tc_version_is_at_least "4.2" && IUSE+=" openmp"
 		tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
 		tc_version_is_at_least "4.6" && IUSE+=" graphite"
-		[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
+		tc_version_is_at_least "4.6" && IUSE+=" lto"
 		tc_version_is_at_least "4.7" && IUSE+=" go"
 	fi
 fi
@@ -144,7 +144,6 @@ if tc_version_is_at_least 4 ; then
 	if tc_version_is_at_least 4.5 ; then
 		RDEPEND+=" >=dev-libs/mpc-0.8.1"
 	fi
-	in_iuse lto && RDEPEND+=" lto? ( || ( >=dev-libs/elfutils-0.143 dev-libs/libelf ) )"
 fi
 if in_iuse graphite ; then
 	if tc_version_is_at_least 4.8 ; then
@@ -165,7 +164,7 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	>=sys-devel/flex-2.5.4
-	test? (
+	regression-test? (
 		>=dev-util/dejagnu-1.4.4
 		>=sys-devel/autogen-5.5.4
 	)"
@@ -610,6 +609,11 @@ toolchain_pkg_postinst() {
 		# Since these aren't critical files and portage sucks with
 		# handling of binpkgs, don't require these to be found
 		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/bin/ 2>/dev/null
+	fi
+
+	if use regression-test ; then
+		elog "Testsuite results have been installed into /usr/share/doc/${PF}/testsuite"
+		echo
 	fi
 }
 
@@ -1096,14 +1100,7 @@ gcc_do_configure() {
 		confgcc+=" --without-ppl"
 	fi
 
-	# LTO support was added in 4.5, which depends upon elfutils.  This allows
-	# users to enable that option, and pull in the additional library.  In 4.6,
-	# the dependency is no longer required.
-	if tc_version_is_at_least "4.6" ; then
-		confgcc+=" --enable-lto"
-	elif tc_version_is_at_least "4.5" ; then
-		confgcc+=" $(use_enable lto)"
-	fi
+	tc_version_is_at_least "4.6" && confgcc+=" $(use_enable lto)"
 
 	case $(tc-is-softfloat) in
 	yes)    confgcc+=" --with-float=soft" ;;
@@ -1480,8 +1477,10 @@ toolchain_src_compile() {
 }
 
 toolchain_src_test() {
-	cd "${WORKDIR}"/build
-	emake -k check || ewarn "check failed and that sucks :("
+	if use regression-test ; then
+		cd "${WORKDIR}"/build
+		emake -k check
+	fi
 }
 
 toolchain_src_install() {
@@ -1593,7 +1592,7 @@ toolchain_src_install() {
 	find "${D}" -depth -type d -delete 2>/dev/null
 
 	# install testsuite results
-	if use test; then
+	if use regression-test; then
 		docinto testsuite
 		find "${WORKDIR}"/build -type f -name "*.sum" -print0 | xargs -0 dodoc
 		find "${WORKDIR}"/build -type f -path "*/testsuite/*.log" -print0 \
