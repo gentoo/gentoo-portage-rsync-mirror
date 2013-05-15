@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.6 2013/05/04 07:42:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12.ebuild,v 1.7 2013/05/15 13:49:58 jlec Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RDEPEND="
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
-	dev-python/rdflib
+	dev-python/rdflib[${PYTHON_USEDEP}]
 	media-libs/raptor:2
 	>=dev-libs/glib-2.26.0:2
 	>=dev-db/sqlite-3.7.11:3
@@ -49,6 +49,9 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}"/${P}-download_monitor.patch )
 
 src_prepare() {
+	sed \
+		-e 's:python::g' \
+		-i Makefile.am || die
 	vala_src_prepare
 	autotools-utils_src_prepare
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.11 2013/04/24 19:35:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.12 2013/05/15 15:03:57 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime
@@ -73,6 +73,7 @@ src_prepare() {
 		configure.in || die #467020
 
 	# This image file has bogus distance in IDAT information wrt #466190#c12
+	# Fixed in upstream, remove this in next version bump like 2.7.1 or 2.8
 	rm -f graphics/font/century_school-medium-roman-serif-vari/045e.png
 
 	# Upstream configure produced by broken autoconf-2.13. This also fixes

@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1125 2013/05/15 02:17:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1128 2013/05/15 15:28:46 tomwij Exp $
+
+  15 May 2013; Tom Wijsman <TomWij@gentoo.org> -gentoo-sources-3.7.10-r1.ebuild,
+  gentoo-sources-3.7.10.ebuild:
+  Users are adviced to upgrade to the latest kernel. Dropped amd64, x86 and hppa
+  keywords on affected 3.7.10 kernels as 3.8.13 has stabilized for them; dropped
+  testing keywords as well, since 3.7.10-r1 contains no more keywords it is
+  dropped from the tree. 3.7.10 still has some less common arches awaiting
+  3.8.13 stabilization. See bug #469854 for more details.
+
+  15 May 2013; Jeroen Roovers <jer@gentoo.org> gentoo-sources-3.8.13.ebuild:
+  Stable for HPPA (bug #469508).
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.8.13.ebuild:
+  Stable for amd64, wrt bug #469508
 
   15 May 2013; Jeff Horelick <jdhore@gentoo.org> gentoo-sources-3.8.13.ebuild:
   x86 stable wrt bug 469508 (and security bug 469854)

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.0.ebuild,v 1.1 2013/03/28 17:10:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.2.1.ebuild,v 1.1 2013/05/15 12:18:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -8,7 +8,7 @@ GCONF_DEBUG="yes"
 inherit gnome2
 
 DESCRIPTION="Gnome session manager"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://git.gnome.org/browse/gnome-session"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
@@ -73,6 +73,10 @@ DEPEND="${COMMON_DEPEND}
 src_prepare() {
 	# Silence errors due to weird checks for libX11
 	sed -e 's/\(PANGO_PACKAGES="\)pangox/\1/' -i configure.ac configure || die
+
+	# Allow people to configure startup apps, bug #464968, upstream bug #663767
+	sed -i -e '/NoDisplay/d' data/session-properties.desktop.in.in || die
+
 	gnome2_src_prepare
 }
 

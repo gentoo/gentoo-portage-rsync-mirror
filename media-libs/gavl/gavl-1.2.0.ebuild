@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.2.0.ebuild,v 1.6 2012/06/14 14:11:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.2.0.ebuild,v 1.7 2013/05/15 11:28:52 ssuominen Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -15,12 +15,15 @@ KEYWORDS="amd64 hppa ppc ~ppc64 x86"
 IUSE="doc"
 
 RDEPEND=""
-DEPEND="doc? ( app-doc/doxygen )"
+DEPEND="doc? ( app-doc/doxygen )
+	virtual/pkgconfig"
+# pkg-config is only here to satisfy autotools-utils.eclass wrt #432796
 
 DOCS=( AUTHORS README TODO )
 
 src_prepare() {
 	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
 		-e 's:-mfpmath=387::g' \
 		-e 's:-O3 -funroll-all-loops -fomit-frame-pointer -ffast-math::g' \
 		-e '/LDFLAGS=/d' \

@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/gavl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.22 2012/09/25 10:42:28 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.24 2013/05/15 11:28:52 ssuominen Exp $
+
+  15 May 2013; Samuli Suominen <ssuominen@gentoo.org> gavl-1.2.0.ebuild:
+  Pull in virtual/pkgconfig (at least for now) because of how
+  autotools-utils.eclass works wrt #432796. Backport change
+  AC_CONFIG_HEADERS update wrt #467736
+
+  15 May 2013; Samuli Suominen <ssuominen@gentoo.org> gavl-1.4.0.ebuild:
+  Use AC_CONFIG_HEADERS instead of AM_CONFIG_HEADER for automake-1.13
+  compability wrt #467736
 
   25 Sep 2012; Tim Harder <radhermit@gentoo.org> -gavl-1.1.0.ebuild,
   -gavl-1.1.0-r1.ebuild:

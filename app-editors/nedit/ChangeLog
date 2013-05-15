@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/nedit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.67 2012/10/24 18:58:01 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.68 2013/05/15 13:10:33 xmw Exp $
+
+*nedit-5.5_p20110116-r1 (15 May 2013)
+
+  15 May 2013; Michael Weber <xmw@gentoo.org> +files/nedit.svg,
+  +nedit-5.5_p20110116-r1.ebuild:
+  Add desktop file and iocon (thanks johnny99, bug 296942). Respect AR (bug
+  468172)
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> nedit-5.5-r1.ebuild,
   nedit-5.5_p20110116.ebuild:

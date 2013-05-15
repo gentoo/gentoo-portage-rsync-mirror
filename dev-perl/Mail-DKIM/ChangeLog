@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.62 2013/02/10 09:46:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.64 2013/05/15 14:16:40 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Mail-DKIM-0.400.0.ebuild:
+  Stable for x86, wrt bug #463054
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Mail-DKIM-0.400.0.ebuild:
+  Stable for amd64, wrt bug #463054
 
 *Mail-DKIM-0.400.0 (10 Feb 2013)
 

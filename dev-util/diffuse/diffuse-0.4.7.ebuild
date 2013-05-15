@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.4.ebuild,v 1.1 2010/11/03 16:10:32 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.7.ebuild,v 1.1 2013/05/15 11:15:23 grozin Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"

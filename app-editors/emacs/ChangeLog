@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.570 2013/04/06 09:23:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.573 2013/05/15 14:58:30 jer Exp $
+
+  15 May 2013; Jeroen Roovers <jer@gentoo.org> emacs-24.3-r1.ebuild:
+  Stable for HPPA (bug #469874).
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
+  Stable for x86, wrt bug #469874
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
+  Stable for amd64, wrt bug #469874
 
 *emacs-23.4-r6 (06 Apr 2013)
 

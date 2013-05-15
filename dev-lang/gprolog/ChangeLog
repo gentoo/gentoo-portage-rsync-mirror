@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.69 2013/05/12 17:05:07 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.70 2013/05/15 15:08:34 keri Exp $
+
+*gprolog-1.4.4 (15 May 2013)
+
+  15 May 2013; <keri@gentoo.org> +gprolog-1.4.4.ebuild,
+  +files/gprolog-1.4.4-ldflags.patch, +files/gprolog-1.4.4-links.patch,
+  +files/gprolog-1.4.4-nodocs.patch, +files/gprolog-1.4.4-txt-file.patch:
+  Version bump
 
 *gprolog-1.4.3 (12 May 2013)
 

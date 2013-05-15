@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.35 2013/02/10 13:19:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.37 2013/05/15 14:17:26 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Pango-1.224.0.ebuild:
+  Stable for x86, wrt bug #463056
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Pango-1.224.0.ebuild:
+  Stable for amd64, wrt bug #463056
 
 *Pango-1.224.0 (10 Feb 2013)
 

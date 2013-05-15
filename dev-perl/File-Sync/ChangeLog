@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/File-Sync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Sync/ChangeLog,v 1.20 2013/01/21 17:37:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Sync/ChangeLog,v 1.22 2013/05/15 14:15:15 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> File-Sync-0.110.0.ebuild:
+  Stable for x86, wrt bug #461120
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> File-Sync-0.110.0.ebuild:
+  Stable for amd64, wrt bug #461120
 
 *File-Sync-0.110.0 (21 Jan 2013)
 

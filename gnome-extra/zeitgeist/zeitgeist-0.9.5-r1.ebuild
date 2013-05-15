@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5-r1.ebuild,v 1.2 2013/04/24 06:47:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5-r1.ebuild,v 1.3 2013/05/15 13:49:58 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
-	dev-python/rdflib
+	dev-python/rdflib[${PYTHON_USEDEP}]
 	media-libs/raptor:2
 	dev-libs/glib:2
 	dev-db/sqlite:3

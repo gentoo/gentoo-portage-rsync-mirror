@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/CPAN-Mini
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.53 2013/02/10 10:02:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.55 2013/05/15 14:13:48 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> CPAN-Mini-1.111.11.ebuild:
+  Stable for x86, wrt bug #463042
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> CPAN-Mini-1.111.11.ebuild:
+  Stable for amd64, wrt bug #463042
 
 *CPAN-Mini-1.111.11 (10 Feb 2013)
 

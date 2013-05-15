@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Locale-PO
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.66 2013/02/10 09:51:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.68 2013/05/15 14:15:52 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Locale-PO-0.230.0.ebuild:
+  Stable for x86, wrt bug #463052
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Locale-PO-0.230.0.ebuild:
+  Stable for amd64, wrt bug #463052
 
 *Locale-PO-0.230.0 (10 Feb 2013)
 

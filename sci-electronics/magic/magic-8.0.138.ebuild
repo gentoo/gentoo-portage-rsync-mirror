@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.230.ebuild,v 1.3 2013/05/15 09:18:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-8.0.138.ebuild,v 1.1 2013/05/15 12:15:49 xmw Exp $
 
 EAPI=5
 
@@ -14,24 +14,29 @@ SRC_URI="http://www.opencircuitdesign.com/magic/archive/${P}.tgz \
 LICENSE="HPND GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="debug opengl"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/readline
 	dev-lang/tcl
 	dev-lang/tk
-	dev-tcltk/blt"
+	dev-tcltk/blt
+	opengl? ( virtual/glu
+		virtual/opengl )"
 DEPEND="${RDEPEND}
 	app-shells/tcsh"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-ldflags.patch"
-	epatch "${FILESDIR}/${PN}-7.5.202-install.patch" #422687
-	epatch "${FILESDIR}/${PN}-7.5.202-include.patch"
-	epatch "${FILESDIR}"/${PN}-7.5.231-blt-test.patch
-	cd scripts
+	einfo remove bundled readline-4.3
+	rm -r readline || die
+
+	epatch \
+		"${FILESDIR}/${PN}-7.5.231-verbose-build.patch"
+
+	cd scripts || die
 	eautoreconf
-	cd ..
+	cd .. || die
+
 	sed -i -e "s: -pg : :" tcltk/Makefile || die
 }
 
@@ -39,7 +44,13 @@ src_configure() {
 	# Short-circuit top-level configure script to retain CFLAGS
 	# fix tcl/tk detection #447868
 	cd scripts
-	CPP="cpp" econf --with-tcllibs="/usr/$(get_libdir)" --with-tklibs="/usr/$(get_libdir)"
+	CPP="cpp" econf \
+		--with-tcl=yes \
+		--with-tcllibs="/usr/$(get_libdir)" \
+		--with-tklibs="/usr/$(get_libdir)" \
+		--enable-modular \
+		$(use_enable debug memdebug) \
+		$(use_with opengl)
 }
 
 src_compile() {

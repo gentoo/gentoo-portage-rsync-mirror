@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-21.0.ebuild,v 1.3 2013/05/15 05:14:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-21.0.ebuild,v 1.4 2013/05/15 13:17:38 jdhore Exp $
 
 EAPI="5"
 
@@ -87,7 +87,7 @@ src_install() {
 	insinto "/usr/share/icons/hicolor/128x128/apps"
 	newins "${icon_path}/../../../icons/mozicon128.png" "${icon}.png" || die
 	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
-	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
+	newicon "${S}"/browser/chrome/icons/default/default48.png ${PN}-icon.png
 	domenu "${FILESDIR}"/${PN}.desktop
 	sed -i -e "s:@NAME@:${name}:" -e "s:@ICON@:${icon}:" \
 		"${ED}/usr/share/applications/${PN}.desktop" || die

@@ -1,8 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.4.0.ebuild,v 1.1 2012/09/25 10:41:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.4.0.ebuild,v 1.2 2013/05/15 11:24:40 ssuominen Exp $
 
-EAPI=4
+EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
+
 inherit autotools-utils
 
 DESCRIPTION="library for handling uncompressed audio and video data"
@@ -20,13 +23,17 @@ DEPEND="doc? ( app-doc/doxygen )
 DOCS=( AUTHORS README TODO )
 
 src_prepare() {
+	# AC_CONFIG_HEADERS, bug #467736
 	sed -i \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
 		-e 's:-mfpmath=387::g' \
 		-e 's:-O3 -funroll-all-loops -fomit-frame-pointer -ffast-math::g' \
 		-e '/LDFLAGS=/d' \
 		configure.ac || die
 
-	AT_M4DIR="m4" eautoreconf
+	export AT_M4DIR="m4"
+
+	autotools-utils_src_prepare
 }
 
 src_configure() {

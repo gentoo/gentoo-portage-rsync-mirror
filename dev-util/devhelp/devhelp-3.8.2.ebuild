@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.8.0.ebuild,v 1.1 2013/03/28 17:00:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.8.2.ebuild,v 1.1 2013/05/15 12:14:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,21 +17,25 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 IUSE="gedit"
 
 # FIXME: automagic python dependency
-COMMON_DEPEND=">=dev-libs/glib-2.32:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.32:2
 	>=x11-libs/gtk+-3.5.6:3
-	>=net-libs/webkit-gtk-1.10.0:3"
+	>=net-libs/webkit-gtk-1.10.0:3
+"
 RDEPEND="${COMMON_DEPEND}
 	gedit? (
 		${PYTHON_DEPS}
 		app-editors/gedit[introspection,python,${PYTHON_USEDEP}]
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 		x11-libs/gtk+[introspection] )
-	gnome-base/gsettings-desktop-schemas"
+	gnome-base/gsettings-desktop-schemas
+"
 DEPEND="${COMMON_DEPEND}
 	${PYTHON_DEPS}
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 pkg_setup() {
 	python-single-r1_pkg_setup

@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/emacs-updater
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.67 2013/04/03 16:33:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.69 2013/05/15 13:48:44 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-updater-1.13.ebuild:
+  Stable for x86, wrt bug #469878
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-updater-1.13.ebuild:
+  Stable for amd64, wrt bug #469878
 
   03 Apr 2013; Fabian Groffen <grobian@gentoo.org> emacs-updater-1.13.ebuild:
   Marked ~x64-macos, bug #419199

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.51 2013/05/15 10:23:51 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.52 2013/05/15 12:02:08 djc Exp $
+
+*subvertpy-0.9.1 (15 May 2013)
+
+  15 May 2013; Dirkjan Ochtman <djc@gentoo.org> +subvertpy-0.9.1.ebuild:
+  Version bump to 0.9.1, convert to distutils-r1.
 
   15 May 2013; Dirkjan Ochtman <djc@gentoo.org> -subvertpy-0.8.0.ebuild,
   -subvertpy-0.8.9.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/colibri
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/colibri/ChangeLog,v 1.5 2012/07/24 21:19:19 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/colibri/ChangeLog,v 1.6 2013/05/15 16:58:06 johu Exp $
+
+*colibri-0.3.0 (15 May 2013)
+
+  15 May 2013; Johannes Huber <johu@gentoo.org> +colibri-0.3.0.ebuild:
+  Version bump wrt bug #469934.
 
   24 Jul 2012; Markos Chandras <hwoarang@gentoo.org> colibri-0.2.2.ebuild:
   Stable on amd64 wrt bug #426712

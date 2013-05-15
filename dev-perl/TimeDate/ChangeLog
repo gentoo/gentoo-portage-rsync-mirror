@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/TimeDate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.47 2013/02/19 15:41:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.49 2013/05/15 14:13:55 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> TimeDate-2.300.0.ebuild:
+  Stable for x86, wrt bug #463064
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> TimeDate-2.300.0.ebuild:
+  Stable for amd64, wrt bug #463064
 
 *TimeDate-2.300.0 (19 Feb 2013)
 

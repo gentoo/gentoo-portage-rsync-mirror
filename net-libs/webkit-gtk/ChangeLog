@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.203 2013/05/01 09:31:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.204 2013/05/15 11:53:32 pacho Exp $
+
+*webkit-gtk-2.0.2 (15 May 2013)
+
+  15 May 2013; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-2.0.2.ebuild:
+  Version bump
 
   01 May 2013; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.0.0.ebuild,
   webkit-gtk-2.0.1.ebuild:

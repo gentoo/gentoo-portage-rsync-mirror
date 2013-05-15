@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-Amazon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.44 2013/01/27 11:17:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.46 2013/05/15 14:15:44 ago Exp $
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Net-Amazon-0.620.0.ebuild:
+  Stable for x86, wrt bug #461128
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> Net-Amazon-0.620.0.ebuild:
+  Stable for amd64, wrt bug #461128
 
 *Net-Amazon-0.620.0 (27 Jan 2013)
 
