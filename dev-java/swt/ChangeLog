@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.145 2013/05/10 15:44:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.146 2013/05/15 09:02:02 tomwij Exp $
+
+*swt-4.2-r2 (15 May 2013)
+
+  15 May 2013; Tom Wijsman <TomWij@gentoo.org> +swt-4.2-r2.ebuild:
+  Revision bump. Define missing g_thread_supported() to be 0, reported by
+  Thev00d00, as per http://git.eclipse.org/c/platform/eclipse.platform.swt.git/c
+  ommit/?id=b76decdda2aff36d926293d1567c3b04f7c91d1c
 
 *swt-4.2-r1 (10 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.230.ebuild,v 1.3 2013/05/15 09:18:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.231.ebuild,v 1.1 2013/05/15 09:18:02 xmw Exp $
 
 EAPI=5
 
@@ -25,9 +25,6 @@ DEPEND="${RDEPEND}
 	app-shells/tcsh"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-ldflags.patch"
-	epatch "${FILESDIR}/${PN}-7.5.202-install.patch" #422687
-	epatch "${FILESDIR}/${PN}-7.5.202-include.patch"
 	epatch "${FILESDIR}"/${PN}-7.5.231-blt-test.patch
 	cd scripts
 	eautoreconf
