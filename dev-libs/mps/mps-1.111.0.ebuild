@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mps/mps-1.111.0.ebuild,v 1.1 2013/05/15 04:13:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mps/mps-1.111.0.ebuild,v 1.2 2013/05/15 06:58:46 patrick Exp $
 
 EAPI=4
 
@@ -25,4 +25,8 @@ S=${WORKDIR}/${MY_P}/
 src_prepare() {
 	# need to fix CFLAGS, it's still being silly
 	sed -i -e 's/-Werror//' code/g{c,p}.gmk || die "Failed to fix CFLAGS"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
 }

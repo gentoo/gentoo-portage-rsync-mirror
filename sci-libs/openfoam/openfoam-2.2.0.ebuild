@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.2.0.ebuild,v 1.1 2013/03/11 05:34:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.2.0.ebuild,v 1.2 2013/05/15 06:36:22 patrick Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://downloads.sourceforge.net/project/foam/foam/${PV}/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="2.2"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples"
+IUSE="doc examples opendx"
 
 DEPEND="!=sci-libs/openfoam-bin-${MY_PV}*
 	!=sci-libs/openfoam-kernel-${MY_PV}*
@@ -28,8 +28,8 @@ DEPEND="!=sci-libs/openfoam-bin-${MY_PV}*
 	sci-libs/parmetis
 	sci-libs/parmgridgen
 	sci-libs/scotch
-	sci-visualization/opendx
-	virtual/mpi"
+	virtual/mpi
+	opendx? ( sci-visualization/opendx )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.14.0.ebuild,v 1.1 2013/03/28 17:40:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.14.4.ebuild,v 1.1 2013/05/15 07:01:15 pacho Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -39,7 +39,8 @@ RDEPEND="
 	>=x11-libs/libXcomposite-0.4
 
 	gtk? ( >=x11-libs/gtk+-3.3.18:3 )
-	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
+"
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.15
 	virtual/pkgconfig
@@ -55,33 +56,6 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
-	DOCS="README NEWS ChangeLog*"
-
-	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
-	# (GLX error blabla)
-	# XXX: Profiling, coverage disabled for now
-	# XXX: What about cex100/egl/osx/wayland/win32 backends?
-	# XXX: evdev/tslib input seem to be experimental?
-	G2CONF="${G2CONF} ${myconf}
-		--enable-xinput
-		--enable-x11-backend=yes
-		--disable-profile
-		--disable-maintainer-flags
-		--disable-gcov
-		--disable-cex100-backend
-		--disable-egl-backend
-		--disable-quartz-backend
-		--disable-wayland-backend
-		--disable-win32-backend
-		--disable-tslib-input
-		--disable-evdev-input
-		$(usex debug --enable-debug=yes --enable-debug=minimum)
-		$(use_enable gtk gdk-backend)
-		$(use_enable introspection)
-		$(use_enable doc docs)
-		$(use_enable test conformance)
-		$(use_enable test gdk-pixbuf)"
-
 	# We only need conformance tests, the rest are useless for us
 	sed -e 's/^\(SUBDIRS =\).*/\1/g' \
 		-i tests/Makefile.am || die "am tests sed failed"
@@ -89,6 +63,35 @@ src_prepare() {
 		-i tests/Makefile.in || die "in tests sed failed"
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	DOCS="README NEWS ChangeLog*"
+
+	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
+	# (GLX error blabla)
+	# XXX: Profiling, coverage disabled for now
+	# XXX: What about cex100/egl/osx/wayland/win32 backends?
+	# XXX: evdev/tslib input seem to be experimental?
+	gnome2_src_configure \
+		--enable-xinput \
+		--enable-x11-backend=yes \
+		--disable-profile \
+		--disable-maintainer-flags \
+		--disable-gcov \
+		--disable-cex100-backend \
+		--disable-egl-backend \
+		--disable-quartz-backend \
+		--disable-wayland-backend \
+		--disable-win32-backend \
+		--disable-tslib-input \
+		--disable-evdev-input \
+		$(usex debug --enable-debug=yes --enable-debug=minimum) \
+		$(use_enable gtk gdk-backend) \
+		$(use_enable introspection) \
+		$(use_enable doc docs) \
+		$(use_enable test conformance) \
+		$(use_enable test gdk-pixbuf)
 }
 
 src_compile() {

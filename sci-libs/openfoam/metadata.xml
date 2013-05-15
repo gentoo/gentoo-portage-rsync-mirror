@@ -10,4 +10,7 @@
   <email>oli.borm@web.de</email>
   <name>Oliver Borm</name>
  </maintainer>
+	<use>
+		<flag name="opendx"> Install opendx visualisation tool</flag>
+	</use>
 </pkgmetadata>
