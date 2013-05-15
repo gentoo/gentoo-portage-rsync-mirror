@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.57 2013/05/11 11:47:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.58 2013/05/15 20:00:28 dilfridge Exp $
+
+*cups-filters-1.0.34-r1 (15 May 2013)
+
+  15 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-1.0.34-r1.ebuild, +cups-filters-9999.ebuild,
+  -cups-filters-9999-r1.ebuild:
+  Make init scripts only depend on avahi if it is really used, bug 469930. In
+  addition, please repeat after me: We do not do revbumps in live ebuilds...
 
 *cups-filters-1.0.34 (11 May 2013)
 

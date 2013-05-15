@@ -7,5 +7,5 @@ LICENSE=vim
 RDEPEND=|| ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
 SRC_URI=mirror://gentoo/dhcpd-syntax-20030825.tar.bz2 http://dev.gentoo.org/~radhermit/vim/dhcpd-syntax-20030825.tar.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	3e2b8e3b7a061cd56a91f1583248b89f
+_eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	3e2b8e3b7a061cd56a91f1583248b89f
 _md5_=a185eaa5afef476ba1c4070030bef32d

@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-python/pexpect wxwidgets? ( dev-python/wxpython ) readline? ( sys-libs/readline ) emacs? ( app-emacs/python-mode virtual/emacs ) smp? ( net-zope/zope-interface dev-python/foolscap dev-python/pyopenssl ) gnuplot? ( dev-python/gnuplot-py ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://ipython.scipy.org/dist/0.10/ipython-0.10.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=4c3cf039dbf5c78f238bf826c778a572

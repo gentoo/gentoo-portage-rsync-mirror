@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib virtual/jpeg media-libs/libpng net-misc/curl ~dev-libs/d0_blind_id-0.5 !dedicated? ( media-libs/libogg media-libs/libtheora media-libs/libvorbis media-libs/libmodplug x11-libs/libX11 x11-libs/libXau x11-libs/libXpm x11-libs/libXext x11-libs/libXdmcp x11-libs/libXxf86dga x11-libs/libXxf86vm virtual/opengl media-libs/freetype:2 alsa? ( media-libs/alsa-lib ) sdl? ( media-libs/libsdl[X,audio,joystick,opengl,video,alsa?] ) )
 SLOT=0
 SRC_URI=http://dl.xonotic.org/xonotic-0.6.0.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	384ae111f3649d456ed1754e3e1c4f6e	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	b8fdb86895c268cca7ae1626264a30f4	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6594b333fd47b982c7105be1616fa1bf

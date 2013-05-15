@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=ssl? ( dev-libs/openssl ) X? ( x11-libs/libX11 x11-libs/libXaw x11-libs/libXmu x11-libs/libXt ) ncurses? ( sys-libs/ncurses sys-libs/readline ) tcl? ( dev-lang/tcl ) X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
 SLOT=0
 SRC_URI=mirror://sourceforge/x3270/suite3270-3.3.12ga12-src.tgz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	font	496e78852e1e48010965fdd33a505f9c	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	font	496e78852e1e48010965fdd33a505f9c	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=dfda5b705620df082ff450ab9a014fc0

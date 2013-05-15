@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/opengl x11-libs/libSM media-libs/libsdl[joystick,opengl,video,X] media-libs/sdl-image[png] media-libs/sdl-mixer[vorbis] >=sys-devel/libtool-2.2.6b
 SLOT=0
 SRC_URI=mirror://sourceforge/pinball/pinball-0.3.1.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	games	0fb7637597e0869f6c8be79b11d0135a	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	b8fdb86895c268cca7ae1626264a30f4	games	0fb7637597e0869f6c8be79b11d0135a	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7bd782ae1ea13edb2f41f8c9ecc5f104

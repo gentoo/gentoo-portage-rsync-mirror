@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1-with-linking-exception
 RDEPEND=>=dev-ml/type-conv-3.0.5:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/109.08.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.08.00/individual/fieldslib-109.08.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/fieldslib-109.08.00.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	b8fdb86895c268cca7ae1626264a30f4	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d56039bb5329d62f92868ec58b6f8440

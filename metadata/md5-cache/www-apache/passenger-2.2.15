@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/ruby-1.8.5 >=dev-ruby/rubygems-0.9.0 >=dev-ruby/rake-0.8.1 >=dev-ruby/fastthread-1.0.1 >=dev-ruby/rack-1.0.0 =www-servers/apache-2.2* =dev-lang/ruby-1.8*
 SLOT=0
 SRC_URI=mirror://rubyforge/passenger/passenger-2.2.15.tar.gz
-_eclasses_=apache-module	1f60370f9dceba046ec036cd6bbb0c8b	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	384ae111f3649d456ed1754e3e1c4f6e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	ruby	d0d4dafe867eb79ce8953e27d88fc00f	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=apache-module	1f60370f9dceba046ec036cd6bbb0c8b	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	b8fdb86895c268cca7ae1626264a30f4	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	ruby	d0d4dafe867eb79ce8953e27d88fc00f	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f0c5c82e6b524b38dff62c558c498a57

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.417 2013/04/25 18:38:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.418 2013/05/15 19:01:36 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1458,11 +1458,12 @@ prune_libtool_files() {
 		local archivefile=${f/%.la/.a}
 
 		[[ ${f} != ${archivefile} ]] || die 'regex sanity check failed'
-
 		local reason pkgconfig_scanned
+		local snotlink=$(sed -n -e 's:^shouldnotlink=::p' "${f}")
 
-		# Remove static libs we're not supposed to link against.
-		if grep -q '^shouldnotlink=yes$' "${f}"; then
+		if [[ ${snotlink} == yes ]]; then
+
+			# Remove static libs we're not supposed to link against.
 			if [[ -f ${archivefile} ]]; then
 				einfo "Removing unnecessary ${archivefile#${D%/}} (static plugin)"
 				queue+=( "${archivefile}" )
@@ -1474,62 +1475,70 @@ prune_libtool_files() {
 				reason='module'
 			fi
 
-		# Remove .la files when:
-		# - user explicitly wants us to remove all .la files,
-		# - respective static archive doesn't exist,
-		# - they are covered by a .pc file already,
-		# - they don't provide any new information (no libs & no flags).
+		elif [[ ${snotlink} == no ]]; then
 
-		elif [[ ${removing_all} ]]; then
-			reason='requested'
-		elif [[ ! -f ${archivefile} ]]; then
-			reason='no static archive'
-		elif [[ ! $(sed -nre \
-				"s/^(dependency_libs|inherited_linker_flags)='(.*)'$/\2/p" \
-				"${f}") ]]; then
-			reason='no libs & flags'
-		else
-			if [[ ! ${pkgconfig_scanned} ]]; then
-				# Create a list of all .pc-covered libs.
-				local pc_libs=()
-				if [[ ! ${removing_all} ]]; then
-					local pc
-					local tf=${T}/prune-lt-files.pc
-					local pkgconf=$(tc-getPKG_CONFIG)
+			# A valid .la file must have a valid 'shouldnotlink='.
+			# That assumption helps us avoid removing random files
+			# which match '*.la', see bug #468380.
 
-					while IFS= read -r -d '' pc; do # for all .pc files
-						local arg libs
+			# Remove .la files when:
+			# - user explicitly wants us to remove all .la files,
+			# - respective static archive doesn't exist,
+			# - they are covered by a .pc file already,
+			# - they don't provide any new information (no libs & no flags).
 
-						# Use pkg-config if available (and works),
-						# fallback to sed.
-						if ${pkgconf} --exists "${pc}" &>/dev/null; then
-							sed -e '/^Requires:/d' "${pc}" > "${tf}"
-							libs=$(${pkgconf} --libs "${tf}")
-						else
-							libs=$(sed -ne 's/^Libs://p' "${pc}")
-						fi
+			if [[ ${removing_all} ]]; then
+				reason='requested'
+			elif [[ ! -f ${archivefile} ]]; then
+				reason='no static archive'
+			elif [[ ! $(sed -nre \
+					"s/^(dependency_libs|inherited_linker_flags)='(.*)'$/\2/p" \
+					"${f}") ]]; then
+				reason='no libs & flags'
+			else
+				if [[ ! ${pkgconfig_scanned} ]]; then
+					# Create a list of all .pc-covered libs.
+					local pc_libs=()
+					if [[ ! ${removing_all} ]]; then
+						local pc
+						local tf=${T}/prune-lt-files.pc
+						local pkgconf=$(tc-getPKG_CONFIG)
 
-						for arg in ${libs}; do
-							if [[ ${arg} == -l* ]]; then
-								if [[ ${arg} == '*$*' ]]; then
-									eqawarn "${FUNCNAME}: variable substitution likely failed in ${pc}"
-									eqawarn "(arg: ${arg})"
-									eqawarn "Most likely, you need to add virtual/pkgconfig to DEPEND."
-								fi
+						while IFS= read -r -d '' pc; do # for all .pc files
+							local arg libs
 
-								pc_libs+=( lib${arg#-l}.la )
+							# Use pkg-config if available (and works),
+							# fallback to sed.
+							if ${pkgconf} --exists "${pc}" &>/dev/null; then
+								sed -e '/^Requires:/d' "${pc}" > "${tf}"
+								libs=$(${pkgconf} --libs "${tf}")
+							else
+								libs=$(sed -ne 's/^Libs://p' "${pc}")
 							fi
-						done
-					done < <(find "${D}" -type f -name '*.pc' -print0)
 
-					rm -f "${tf}"
-				fi
+							for arg in ${libs}; do
+								if [[ ${arg} == -l* ]]; then
+									if [[ ${arg} == '*$*' ]]; then
+										eqawarn "${FUNCNAME}: variable substitution likely failed in ${pc}"
+										eqawarn "(arg: ${arg})"
+										eqawarn "Most likely, you need to add virtual/pkgconfig to DEPEND."
+									fi
 
-				pkgconfig_scanned=1
-			fi
+									pc_libs+=( lib${arg#-l}.la )
+								fi
+							done
+						done < <(find "${D}" -type f -name '*.pc' -print0)
 
-			has "${f##*/}" "${pc_libs[@]}" && reason='covered by .pc'
-		fi
+						rm -f "${tf}"
+					fi
+
+					pkgconfig_scanned=1
+				fi # pkgconfig_scanned
+
+				has "${f##*/}" "${pc_libs[@]}" && reason='covered by .pc'
+			fi # removal due to .pc
+
+		fi # shouldnotlink==no
 
 		if [[ ${reason} ]]; then
 			einfo "Removing unnecessary ${f#${D%/}} (${reason})"

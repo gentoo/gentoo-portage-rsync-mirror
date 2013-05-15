@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 virtual/jpeg media-libs/tiff media-libs/libpng media-gfx/exiv2 media-libs/lcms:2 media-libs/lensfun sci-libs/fftw:3.0 media-libs/liblqr media-gfx/graphicsmagick[q16,-lcms] media-gfx/greycstoration[lapack] virtual/lapack media-libs/cimg gimp? ( media-gfx/gimp )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/photivo-0_pre20121212.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=192b6e6f67fe5200675900c0b1229dd7

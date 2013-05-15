@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/udev virtual/libusb:0 !<sys-apps/kmod-12-r1 dev-lang/tcl
 SLOT=0
 SRC_URI=http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-1.2.5.tar.bz2 http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-data-20121109.tar.bz2
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=f3bcccef249d7ec3258ccd3b9c61f6ba

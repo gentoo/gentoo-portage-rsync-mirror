@@ -9,5 +9,5 @@ LICENSE=GPL-2 MIT
 RDEPEND=dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/pango sys-libs/zlib judy? ( dev-libs/judy ) tcl? ( dev-lang/tcl dev-lang/tk ) lzma? ( app-arch/xz-utils )
 SLOT=0
 SRC_URI=mirror://sourceforge/gtkwave/gtkwave-3.3.46.tar.gz
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3b7ab5c84b4fc91f25e0a861a8c4f04d

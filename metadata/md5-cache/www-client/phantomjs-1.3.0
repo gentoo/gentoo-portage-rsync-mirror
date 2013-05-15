@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-qt/qtwebkit:4 python? ( dev-python/PyQt4 ) python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=http://phantomjs.googlecode.com/files/phantomjs-1.3.0-source.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=9fdc3cccd976b6bb98939bada6639b21

@@ -6,5 +6,5 @@ HOMEPAGE=http://www.gentoo.org/proj/en/hardened/selinux/
 LICENSE=GPL-2
 RDEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999
 SLOT=0
-_eclasses_=eutils	384ae111f3649d456ed1754e3e1c4f6e	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	selinux-policy-2	8e5b959b72fbb85e6205bbde0c5414fa	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	selinux-policy-2	8e5b959b72fbb85e6205bbde0c5414fa	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7df21360f2415b7a84a001d67d3cf349

@@ -10,5 +10,5 @@ RDEPEND=cairo? ( x11-libs/cairo x11-libs/pango ) emacs? ( virtual/emacs ) gd? ( 
 RESTRICT=wxwidgets? ( test )
 SLOT=0
 SRC_URI=mirror://sourceforge/gnuplot/gnuplot-4.4.4.tar.gz
-_eclasses_=elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	384ae111f3649d456ed1754e3e1c4f6e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
+_eclasses_=elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
 _md5_=ce993bd3ae1dbab6dde7041e21bb0166
