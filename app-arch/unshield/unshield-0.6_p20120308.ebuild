@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/unshield-0.6_p20120308.ebuild,v 1.5 2012/05/21 09:39:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/unshield-0.6_p20120308.ebuild,v 1.6 2013/05/15 22:40:01 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-bootstrap.patch
 	./bootstrap
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467548
 	AT_M4DIR=m4 eautoreconf
 }
 

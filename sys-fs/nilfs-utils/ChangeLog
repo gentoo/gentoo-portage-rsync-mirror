@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/nilfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.21 2013/02/03 12:44:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.22 2013/05/15 22:34:36 naota Exp $
+
+*nilfs-utils-2.1.5 (15 May 2013)
+
+  15 May 2013; Naohiro Aota <naota@gentoo.org> +nilfs-utils-2.1.5.ebuild,
+  -nilfs-utils-2.0.18.ebuild, -nilfs-utils-2.0.21.ebuild,
+  -nilfs-utils-2.0.23.ebuild:
+  version bump wrt #469804
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900
