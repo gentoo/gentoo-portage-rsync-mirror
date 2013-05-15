@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.117 2013/04/11 14:22:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.118 2013/05/15 00:09:35 jdhore Exp $
+
+*thunderbird-bin-17.0.6 (15 May 2013)
+
+  15 May 2013; Jeff Horelick <jdhore@gentoo.org> +thunderbird-bin-17.0.6.ebuild:
+  Version bump
 
   11 Apr 2013; Rick Farina <zerochaos@gentoo.org> thunderbird-bin-17.0.5.ebuild:
   fix for 432236, add versioned dep on libpng-1.5*

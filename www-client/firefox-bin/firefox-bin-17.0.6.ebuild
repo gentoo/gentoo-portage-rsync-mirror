@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-20.0-r2.ebuild,v 1.1 2013/04/09 16:16:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-17.0.6.ebuild,v 1.1 2013/05/15 00:04:01 jdhore Exp $
 
 EAPI="4"
+MOZ_ESR="1"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 MOZ_LANGS=(af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
@@ -15,6 +16,12 @@ te th tr uk vi zh-CN zh-TW zu)
 MOZ_PV="${PV/_beta/b}" # Handle beta for SRC_URI
 MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
 MOZ_PN="${PN/-bin}"
+
+if [[ ${MOZ_ESR} == 1 ]]; then
+	# ESR releases have slightly version numbers
+	MOZ_PV="${MOZ_PV}esr"
+fi
+
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 
 # Upstream ftp release URI that's used by mozlinguas.eclass
@@ -38,6 +45,8 @@ IUSE="startup-notification"
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/dbus-glib
+	gnome-base/gconf
+	gnome-base/orbit
 	virtual/freedesktop-icon-theme
 	x11-libs/libXrender
 	x11-libs/libXt
@@ -45,7 +54,6 @@ RDEPEND="dev-libs/dbus-glib
 
 	>=x11-libs/gtk+-2.2:2
 	>=media-libs/alsa-lib-1.0.16
-
 	!net-libs/libproxy[spidermonkey]
 "
 
@@ -61,25 +69,9 @@ src_unpack() {
 src_install() {
 	declare MOZILLA_FIVE_HOME=/opt/${MOZ_PN}
 
-	local size sizes icon_path icon name
-	sizes="16 32 48"
-	icon_path="${S}/chrome/icons/default"
-	icon="${PN}"
-	name="Mozilla Firefox"
-
-	# Install icons and .desktop for menu entry
-	for size in ${sizes}; do
-		insinto "/usr/share/icons/hicolor/${size}x${size}/apps"
-		newins "${icon_path}/default${size}.png" "${icon}.png" || die
-	done
-	# The 128x128 icon has a different name
-	insinto "/usr/share/icons/hicolor/128x128/apps"
-	newins "${icon_path}/../../../icons/mozicon128.png" "${icon}.png" || die
-	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
+	# Install icon and .desktop for menu entry
 	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
 	domenu "${FILESDIR}"/${PN}.desktop
-	sed -i -e "s:@NAME@:${name}:" -e "s:@ICON@:${icon}:" \
-		"${ED}/usr/share/applications/${PN}.desktop" || die
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification; then
