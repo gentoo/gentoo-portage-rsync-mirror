@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/Macaulay2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.27 2011/12/14 08:44:52 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.28 2013/05/15 07:30:43 tomka Exp $
+
+*Macaulay2-1.6 (15 May 2013)
+
+  15 May 2013; Thomas Kahle <tomka@gentoo.org> +Macaulay2-1.6.ebuild,
+  +files/1.6-lapack.patch, +files/1.6-paths-of-external-programs.patch,
+  +files/1.6-prune-NumAlgGeo-examples.patch:
+  bump to 1.6
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> Macaulay2-1.4-r1.ebuild:
   x86 stable wrt bug #394157
@@ -36,4 +43,3 @@
   +files/1.4-paths-of-external-programs.patch, +files/70Macaulay2-gentoo.el,
   +Macaulay2-1.4.ebuild, +metadata.xml:
   Macaulay2 is back! Was removed in bug #248365, readd fixes bug #246095.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.36.0.ebuild,v 1.3 2013/04/07 17:25:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.36.2.ebuild,v 1.1 2013/05/15 07:07:24 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 # eautoreconf needs >=sys-devel/autoconf-2.65:2.5
 
 src_prepare() {
-	# FIXME: failing tests, gnome #695062
+	# Failing tests, upstream #695062 (will be fixed in 2.38)
 	sed -e '/tls.connection.simultaneous-async-rehandshake/,+1 d' \
 		-e '/tls.connection.simultaneous-sync-rehandshake/,+1 d' \
 		-i tls/tests/connection.c || die
