@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.6.4.ebuild,v 1.1 2013/04/23 06:32:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.6.4.ebuild,v 1.2 2013/05/15 02:43:13 dirtyepic Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
@@ -51,8 +51,10 @@ src_unpack() {
 pkg_setup() {
 	toolchain_pkg_setup
 
-	ewarn
-	ewarn "LTO support is still experimental and unstable."
-	ewarn "Any bugs resulting from the use of LTO will not be fixed."
-	ewarn
+	if use lto ; then
+		ewarn
+		ewarn "LTO support is still experimental and unstable."
+		ewarn "Any bugs resulting from the use of LTO will not be fixed."
+		ewarn
+	fi
 }
