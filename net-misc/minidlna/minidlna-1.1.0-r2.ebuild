@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.0-r2.ebuild,v 1.1 2013/05/15 07:38:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.0-r2.ebuild,v 1.2 2013/05/15 08:33:18 xmw Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~arm ~x86"
 IUSE="netgear readynas"
 
 RDEPEND="dev-db/sqlite
