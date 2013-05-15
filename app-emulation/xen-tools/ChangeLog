@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.147 2013/05/15 17:47:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.148 2013/05/15 18:41:48 idella4 Exp $
+
+  15 May 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.2.ebuild:
+  epatch_user helper added wrt Bug #464052
 
 *xen-tools-4.2.2 (15 May 2013)
 *xen-tools-4.2.1-r3 (15 May 2013)
