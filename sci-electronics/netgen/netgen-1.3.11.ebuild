@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/netgen/netgen-1.4.40.ebuild,v 1.2 2013/04/26 11:00:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/netgen/netgen-1.3.11.ebuild,v 1.1 2013/05/15 08:19:23 xmw Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="LVS tool (layout versus schematic comparison)"
 HOMEPAGE="http://www.opencircuitdesign.com/netgen/index.html"
@@ -22,10 +22,7 @@ DEPEND="X? (
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
-	epatch "${FILESDIR}"/${P}-includes.patch
-	epatch "${FILESDIR}"/${P}-netcmp.patch
-	epatch "${FILESDIR}"/${P}-tcl-bin-name.patch
+	epatch "${FILESDIR}"/${PN}-1.3.10-tcl-bin-name.patch
 
 	if $(use X) ; then
 		cp -r "${S}" "${WORKDIR}"/with-x || die
@@ -52,6 +49,7 @@ src_compile() {
 }
 
 src_install() {
+	dodir /usr/$(get_libdir)/${PN}
 	emake DESTDIR="${D}" DOCDIR=/usr/share/doc/${PF} install
 
 	if $(use X) ; then

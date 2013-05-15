@@ -1,6 +1,11 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.258 2013/03/28 16:11:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.259 2013/05/15 08:02:39 pacho Exp $
+
+*evince-3.8.2 (15 May 2013)
+
+  15 May 2013; Pacho Ramos <pacho@gentoo.org> +evince-3.8.2.ebuild:
+  Version bump
 
 *evince-3.8.0 (28 Mar 2013)
 
