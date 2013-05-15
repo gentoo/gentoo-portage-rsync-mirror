@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.15 2012/05/04 08:58:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.16 2013/05/15 02:22:04 patrick Exp $
 
 inherit autotools eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	if has_version ">=x11-libs/libX11-1.4.0"; then
 		sed -i -e "s/_XUTIL_H_/_X11&/" lib/Util.hh || die #348556
 	fi
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 

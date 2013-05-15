@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1124 2013/05/14 17:34:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1125 2013/05/15 02:17:57 jdhore Exp $
+
+  15 May 2013; Jeff Horelick <jdhore@gentoo.org> gentoo-sources-3.8.13.ebuild:
+  x86 stable wrt bug 469508 (and security bug 469854)
 
   14 May 2013; Tom Wijsman <TomWij@gentoo.org> ChangeLog:
   Linux patch 3.2.45. Removal of affected versions 3.0.74, 3.2.41, 3.2.42,
