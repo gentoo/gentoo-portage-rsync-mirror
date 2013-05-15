@@ -6,8 +6,5 @@
     <email>mattsch@gmail.com</email>
 	<name>Matthew Schultz</name>
   </maintainer>
-<use>
-  <flag name="openssl">Enable <pkg>dev-libs/openssl</pkg> support</flag>
-</use>
 </pkgmetadata>
 

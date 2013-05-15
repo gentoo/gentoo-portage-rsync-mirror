@@ -7,8 +7,6 @@
 		introspection</flag>
 	<flag name="packagekit">Use packagekit to search for programs to open
 		unknown file types</flag>
-	<flag name="sendto">Enable the nemo-sendto extension to send files to
-		various locations/devices</flag>
 	<flag name="tracker">Add support for <pkg>app-misc/tracker</pkg> search</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.138 2013/04/29 18:35:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.139 2013/05/15 04:11:48 patrick Exp $
+
+  15 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
   29 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/hostapd-1.0-libnl_path_fix.patch,

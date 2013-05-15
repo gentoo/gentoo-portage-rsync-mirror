@@ -6,7 +6,6 @@
 		<name>Brian Harring</name>
 	</maintainer>
 	<use>
-		<flag name="man">Build and install man pages.</flag>
 		<flag name="doc">Build and install API docs.</flag>
 	</use>
 </pkgmetadata>

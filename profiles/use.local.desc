@@ -2393,7 +2393,6 @@ gnome-extra/nautilus-sendto:mail - Enables support for mailto using gnome-extra/
 gnome-extra/nautilus-sendto:pidgin - Enables support for net-im/pidgin
 gnome-extra/nemo:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-extra/nemo:packagekit - Use packagekit to search for programs to open unknown file types
-gnome-extra/nemo:sendto - Enable the nemo-sendto extension to send files to various locations/devices
 gnome-extra/nemo:tracker - Add support for app-misc/tracker search
 gnome-extra/nm-applet:gconf - Build tool for migrating gconf settings from nm-applet-0.8.x
 gnome-extra/nm-applet:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
@@ -4821,7 +4820,6 @@ net-misc/ofono:provision - Enable GPRS provisioning support
 net-misc/ofono:qmimodem - Enable Qualcomm QMI modem support
 net-misc/ofono:tools - Enable testing tools
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
-net-misc/openconnect:openssl - Enable dev-libs/openssl support
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
 net-misc/openssh:hpn - Enable high performance ssh
@@ -4877,7 +4875,6 @@ net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remot
 net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support. This system allows users to collaborate on websites using a web based interface. See the ebuild for an FAQ page. Enables neon as well to handle webdav support.
 net-misc/sks:optimize - Enables bytecode optimization
 net-misc/slimrat:X - Install also GUI client
-net-misc/sparkleshare:nautilus - Build the gnome-base/nautilus extension
 net-misc/spice-gtk:dbus - Support for desktop integration such as automounting and other APIs exposed by your DE via D-Bus
 net-misc/spice-gtk:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 net-misc/spice-gtk:introspection - Use dev-libs/gobject-introspection for introspection
@@ -5139,7 +5136,6 @@ net-wireless/gnuradio:uhd - install UHD source and sink blocks
 net-wireless/gnuradio:utils - install scripts to enable viewing and analysis of files produced by flow graphs
 net-wireless/gnuradio:wavelet - enable wavelet signal processing blocks
 net-wireless/hostapd:crda - Add CRDA support
-net-wireless/hostapd:debug - Enables debugging
 net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
@@ -5638,7 +5634,6 @@ sys-apps/pcsc-lite:udev - Use sys-fs/udev rules to handle devices' permissions a
 sys-apps/pcsc-lite:usb - Use dev-libs/libusb detection to hotplug new smartcard readers. This flag only makes sense on non-Linux systems, as on Linux, sys-fs/udev is used instead.
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
 sys-apps/pkgcore:doc - Build and install API docs.
-sys-apps/pkgcore:man - Build and install man pages.
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/policycoreutils:sesandbox - Enable support for SELinux sandbox application
 sys-apps/portage:epydoc - Build html API documentation with epydoc.

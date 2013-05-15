@@ -12,7 +12,6 @@
 	</longdescription>
 	<use>
 		<flag name='crda'>Add CRDA support</flag>
-		<flag name='debug'>Enables debugging</flag>
 		<flag name='logwatch'>Install support files for 
 			<pkg>sys-app/logwatch</pkg></flag>
 		<flag name='madwifi'>Add support for madwifi (Atheros chipset)</flag>
