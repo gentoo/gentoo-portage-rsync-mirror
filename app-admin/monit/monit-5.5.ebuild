@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.5.ebuild,v 1.1 2012/10/05 06:06:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.5.ebuild,v 1.2 2013/05/15 07:57:51 patrick Exp $
 
 EAPI="2"
 
@@ -34,10 +34,10 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc CHANGES.txt README*
+	dodoc README*
 	dohtml -r doc/*
 
-	insinto /etc; insopts -m700; doins monitrc || die "doins monitrc failed"
+	insinto /etc; insopts -m600; doins monitrc || die "doins monitrc failed"
 	newinitd "${FILESDIR}"/monit.initd-5.0-r1 monit || die "newinitd failed"
 }
 

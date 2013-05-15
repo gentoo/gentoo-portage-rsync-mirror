@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.0.ebuild,v 1.2 2013/03/29 22:39:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.2.ebuild,v 1.1 2013/05/15 07:55:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit eutils gnome2 readme.gentoo
 
 DESCRIPTION="JavaScript extensions for GNOME Shell"
 HOMEPAGE="http://live.gnome.org/GnomeShell/Extensions"
@@ -19,7 +19,8 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.26:2
 	>=gnome-base/gnome-desktop-2.91.6:3[introspection]
 	>=gnome-base/libgtop-2.28.3[introspection]
-	>=app-admin/eselect-gnome-shell-extensions-20111211"
+	>=app-admin/eselect-gnome-shell-extensions-20111211
+"
 RDEPEND="${COMMON_DEPEND}
 	>=dev-libs/gjs-1.29
 	dev-libs/gobject-introspection
@@ -40,6 +41,16 @@ DEPEND="${COMMON_DEPEND}
 "
 # eautoreconf needs gnome-base/gnome-common
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="Installed extensions installed are initially disabled by default.
+To change the system default and enable some extensions, you can use
+# eselect gnome-shell-extensions
+
+Alternatively, to enable/disable extensions on a per-user basis,
+you can use the https://extensions.gnome.org/ web interface, the
+gnome-extra/gnome-tweak-tool GUI, or modify the org.gnome.shell
+enabled-extensions gsettings key from the command line or a script."
+
 src_configure() {
 	gnome2_src_configure --enable-extensions=all
 }
@@ -54,6 +65,8 @@ src_install() {
 	else
 		rm -r "${ED}usr/share/gnome-shell/extensions/${example}" || die
 	fi
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
@@ -62,12 +75,6 @@ pkg_postinst() {
 	ebegin "Updating list of installed extensions"
 	eselect gnome-shell-extensions update
 	eend $?
-	elog
-	elog "Installed extensions installed are initially disabled by default."
-	elog "To change the system default and enable some extensions, you can use"
-	elog "# eselect gnome-shell-extensions"
-	elog "Alternatively, to enable/disable extensions on a per-user basis,"
-	elog "you can use the https://extensions.gnome.org/ web interface, the"
-	elog "gnome-extra/gnome-tweak-tool GUI, or modify the org.gnome.shell"
-	elog "enabled-extensions gsettings key from the command line or a script."
+
+	readme.gentoo_print_elog
 }

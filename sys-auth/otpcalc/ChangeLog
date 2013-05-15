@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/otpcalc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.27 2013/01/23 20:29:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.28 2013/05/15 07:54:53 ulm Exp $
+
+  15 May 2013; Ulrich Müller <ulm@gentoo.org> otpcalc-0.97-r6.ebuild:
+  Install otpcalc.1 man page redirection.
 
   23 Jan 2013; Ulrich Müller <ulm@gentoo.org> -otpcalc-0.97-r5.ebuild:
   Remove old.

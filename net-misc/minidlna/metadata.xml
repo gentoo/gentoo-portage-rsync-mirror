@@ -9,5 +9,9 @@
 	<bugs-to>http://sourceforge.net/tracker/?group_id=243163</bugs-to>
 	<remote-id type="sourceforge">minidlna</remote-id>
 </upstream>
+<use>
+	<flag name="netgear">Enable netgear branding</flag>
+	<flag name="readynas">Enable readynas branding</flag>
+</use>
 </pkgmetadata>
 

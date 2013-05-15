@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.0-r1.ebuild,v 1.1 2013/05/11 22:19:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.0-r2.ebuild,v 1.1 2013/05/15 07:38:04 xmw Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="netgear readynas"
 
 RDEPEND="dev-db/sqlite
 	media-libs/flac
@@ -42,6 +42,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e "/log_dir/s:/var/log:/var/log/${PN}:" \
+		-e "/db_dir/s:/var/cache/:/var/lib/:" \
 		-i ${PN}.conf || die
 
 	epatch_user
@@ -50,11 +51,11 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-silent-rules \
-		--with-db-path=/var/cache/${PN} \
+		--with-db-path=/var/lib/${PN} \
 		--with-log-path=/var/log/${PN} \
 		--enable-tivo \
-		--enable-netgear \
-		--enable-readynas
+		$(use_enable netgear) \
+		$(use_enable readynas)
 }
 
 src_install() {

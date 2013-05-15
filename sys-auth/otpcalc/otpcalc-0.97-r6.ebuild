@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r6.ebuild,v 1.8 2013/01/22 17:32:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r6.ebuild,v 1.9 2013/05/15 07:54:53 ulm Exp $
 
 EAPI=5
 
@@ -48,6 +48,7 @@ src_install() {
 	dobin otpCalc
 	dosym otpCalc /usr/bin/otpcalc
 	newman otpCalc.man otpCalc.1
+	newman - otpcalc.1 <<<".so man1/otpCalc.1"
 	domenu "${FILESDIR}/${PN}.desktop"
 	dodoc BUGS ChangeLog TODO
 }
