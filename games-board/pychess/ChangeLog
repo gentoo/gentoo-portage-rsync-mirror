@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pychess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.23 2013/01/16 15:09:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.24 2013/05/14 23:21:56 vincent Exp $
+
+  14 May 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  pychess-0.10.1-r1.ebuild:
+  amd64 x86 : stable, bug #469288
 
   16 Jan 2013; Julian Ospald <hasufell@gentoo.org> pychess-0.10.1-r1.ebuild:
   fix deps wrt #452142
@@ -90,4 +94,3 @@
   21 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +pychess-0.8.ebuild:
   initial commit - ebuild submitted by Tim Harder via bug #161494
-
