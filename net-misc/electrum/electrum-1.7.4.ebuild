@@ -1,18 +1,17 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.0.ebuild,v 1.1 2012/09/16 20:45:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.7.4.ebuild,v 1.1 2013/05/15 09:51:33 blueness Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.6"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.*"
+EAPI="5"
 
-inherit eutils distutils gnome2-utils
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils distutils-r1 gnome2-utils
 
 MY_P=Electrum-${PV}
 DESCRIPTION="User friendly Bitcoin client"
-HOMEPAGE="http://electrum-desktop.com/"
-SRC_URI="http://electrum-desktop.com/files/${MY_P}.tar.gz"
+HOMEPAGE="http://electrum.org/"
+SRC_URI="http://download.electrum.org/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -20,14 +19,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk qt4"
 REQUIRED_USE="|| ( gtk qt4 )"
 
-LANGS="en cs de fr nl ru sl vi zh"
+LANGS="br cs de eo es fr it lv nl ru sl vi zh"
 
 for X in ${LANGS}; do
 	IUSE+=" linguas_${X}"
 done
 unset X
 
-RDEPEND="dev-python/ecdsa
+RDEPEND="
+	dev-python/setuptools
+	dev-python/ecdsa
 	dev-python/slowaes
 	gtk? ( dev-python/pygtk:2 )
 	qt4? ( dev-python/PyQt4 )"
@@ -41,8 +42,8 @@ src_prepare() {
 	sed -i '/electrum\.png/ d' setup.py || die
 	sed -i "s:^Icon=.*:Icon=${PN}:" "${PN}.desktop" || die
 
-	# Fix language code
-	mv locale/cn locale/zh || die  # Chinese
+	# Fix .desktop to pass validation
+	sed -i 's:bitcoin$:bitcoin;:' electrum.desktop || die
 
 	# Remove unrequested localization files:
 	local lang
@@ -56,19 +57,20 @@ src_prepare() {
 
 	# Remove unrequested GUI implementations:
 	if use !gtk; then
-		rm lib/gui.py || die
+		rm gui/gui_gtk.py || die
 	fi
 	if use !qt4; then
-		rm lib/gui_qt.py lib/gui_lite.py || die
-		sed -i 's/default="lite"/default="gtk"/' electrum || die
+		rm gui/gui_{classic,lite}.py || die
+		sed -i "/config.get('gui','classic')/s/classic/gtk/" electrum \
+			|| die
 	fi
 
-	distutils_src_prepare
+	distutils-r1_src_prepare
 }
 
 src_install() {
-	doicon -s 64 ${PN}.png
-	distutils_src_install
+	doicon -s 64 icons/${PN}.png
+	distutils-r1_src_install
 }
 
 pkg_preinst() {
@@ -77,10 +79,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-	distutils_pkg_postinst
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-	distutils_pkg_postrm
 }
