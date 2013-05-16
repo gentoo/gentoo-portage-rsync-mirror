@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-2.0_pre20130429.ebuild,v 1.1 2013/05/16 18:14:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-2.0_pre20130429.ebuild,v 1.2 2013/05/16 21:08:32 radhermit Exp $
 
 EAPI=5
 
@@ -24,8 +24,10 @@ src_prepare() {
 }
 
 pkg_postinst() {
-	elog
-	elog "You will need to install mail-filter/dspam or app-text/crm114"
-	elog "if you want to use the related backends in dovecot-antispam."
-	elog
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		elog
+		elog "You will need to install mail-filter/dspam or app-text/crm114"
+		elog "if you want to use the related backends in dovecot-antispam."
+		elog
+	fi
 }

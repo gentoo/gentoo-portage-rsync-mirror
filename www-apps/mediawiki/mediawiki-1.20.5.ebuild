@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.20.5.ebuild,v 1.4 2013/05/03 13:32:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.20.5.ebuild,v 1.5 2013/05/16 21:15:08 radhermit Exp $
 
 EAPI=5
 inherit webapp versionator
@@ -60,17 +60,10 @@ src_install() {
 	webapp_src_install
 }
 
-pkg_preinst() {
-	prev_install="false"
-	if has_version ${CATEGORY}/${PN} ; then
-		prev_install="true"
-	fi
-}
-
 pkg_postinst() {
 	webapp_pkg_postinst
 
-	if ${prev_install} ; then
+	if [[ -n ${REPLACING_VERSIONS} ]]; then
 		einfo
 		elog "=== Consult the release notes ==="
 		elog "Before doing anything, stop and consult the release notes"
