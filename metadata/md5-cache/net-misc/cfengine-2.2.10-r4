@@ -4,11 +4,11 @@ DESCRIPTION=An automated suite of programs for configuring and maintaining Unix-
 EAPI=2
 HOMEPAGE=http://www.cfengine.org/
 IUSE=vim-syntax
-KEYWORDS=amd64 arm ppc ~ppc64 ~s390 sparc x86
+KEYWORDS=amd64 arm ppc ppc64 ~s390 sparc x86
 LICENSE=GPL-2
 PDEPEND=vim-syntax? ( app-vim/cfengine-syntax )
 RDEPEND=>=sys-libs/db-4 >=dev-libs/openssl-0.9.7 app-portage/portage-utils
 SLOT=0
 SRC_URI=http://cfengine.com/source_code/download?file=cfengine-2.2.10.tar.gz -> cfengine-2.2.10.tar.gz
 _eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7c6f6df1bd8cfbf8cb0c10807f2897fc
+_md5_=a800d4727ed6c4386a15d1400b402468

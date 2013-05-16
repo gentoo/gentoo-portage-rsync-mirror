@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.97 2013/05/16 14:30:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.98 2013/05/16 15:42:24 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-syntax-1.21.ebuild:
+  Stable for ppc64, wrt bug #469882
 
   16 May 2013; Jeroen Roovers <jer@gentoo.org> gentoo-syntax-1.21.ebuild:
   Stable for HPPA (bug #469882).
