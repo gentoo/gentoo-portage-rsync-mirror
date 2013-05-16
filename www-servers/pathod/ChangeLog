@@ -1,0 +1,10 @@
+# ChangeLog for www-servers/pathod
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pathod/ChangeLog,v 1.1 2013/05/16 08:15:47 radhermit Exp $
+
+*pathod-0.9 (16 May 2013)
+
+  16 May 2013; Tim Harder <radhermit@gentoo.org> +pathod-0.9.ebuild,
+  +metadata.xml:
+  Initial import.
+
