@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.105 2013/04/24 08:27:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.106 2013/05/16 17:14:45 maekke Exp $
+
+  16 May 2013; Markus Meier <maekke@gentoo.org> ruby-gettext-2.3.8.ebuild:
+  add ~arm, bug #465948
 
   24 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ruby-gettext-2.3.8.ebuild:
   Add ~ppc, wrt bug #465948

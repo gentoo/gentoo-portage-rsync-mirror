@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.37 2013/04/29 05:38:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.38 2013/05/16 17:17:55 maekke Exp $
+
+  16 May 2013; Markus Meier <maekke@gentoo.org> requests-1.2.0.ebuild:
+  add ~arm, bug #447650
 
   29 Apr 2013; Ian Delaney <idella4@gentoo.org> requests-1.2.0.ebuild:
   pypy support added
