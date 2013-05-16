@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.92 2013/05/15 14:15:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.93 2013/05/16 13:16:28 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> MIME-Types-1.380.0.ebuild:
+  Stable for ppc, wrt bug #461124
 
   15 May 2013; Agostino Sarubbo <ago@gentoo.org> MIME-Types-1.380.0.ebuild:
   Stable for x86, wrt bug #461124

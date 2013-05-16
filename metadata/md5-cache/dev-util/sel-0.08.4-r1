@@ -3,10 +3,10 @@ DEPEND=>=sys-libs/ncurses-5.1
 DESCRIPTION=A filemanager for shell scripts
 EAPI=4
 HOMEPAGE=http://www.rninet.de/darkstar/sel.html
-KEYWORDS=~amd64 ~ppc ~s390 ~sparc ~x86
+KEYWORDS=~amd64 ppc ~s390 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.1
 SLOT=0
 SRC_URI=http://www.rninet.de/darkstar/files/sel-0.08.4.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=db6dab0b306e1aa466914b724f8e250e
+_md5_=78990c2b8b74be11e6ecdc0460a505a6

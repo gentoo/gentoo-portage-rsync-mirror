@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.5.ebuild,v 1.4 2013/05/15 13:48:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.5.ebuild,v 1.5 2013/05/16 13:20:46 ago Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://mmonit.com/monit/dist/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux"
 IUSE="pam ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )"

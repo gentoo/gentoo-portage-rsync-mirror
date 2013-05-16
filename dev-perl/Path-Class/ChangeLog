@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.47 2013/05/15 14:17:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.48 2013/05/16 13:23:00 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> Path-Class-0.310.0.ebuild:
+  Stable for ppc, wrt bug #463058
 
   15 May 2013; Agostino Sarubbo <ago@gentoo.org> Path-Class-0.310.0.ebuild:
   Stable for x86, wrt bug #463058

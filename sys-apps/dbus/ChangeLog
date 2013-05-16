@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.372 2013/05/15 15:02:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.373 2013/05/16 13:13:44 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.10.ebuild:
+  Stable for ppc, wrt bug #453086
 
   15 May 2013; Jeroen Roovers <jer@gentoo.org> dbus-1.6.10.ebuild:
   Stable for HPPA (bug #453086).

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.35.ebuild,v 1.2 2013/05/16 12:51:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.35.ebuild,v 1.3 2013/05/16 13:03:23 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://sarrazip.com/dev/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 
 IUSE="gnome gtk"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/LWP-Protocol-https
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/ChangeLog,v 1.22 2013/05/15 14:14:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/ChangeLog,v 1.23 2013/05/16 13:15:10 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  LWP-Protocol-https-6.30.0.ebuild:
+  Stable for ppc, wrt bug #463050
 
   15 May 2013; Agostino Sarubbo <ago@gentoo.org>
   LWP-Protocol-https-6.30.0.ebuild:

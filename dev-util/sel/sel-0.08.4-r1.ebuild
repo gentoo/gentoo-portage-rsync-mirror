@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.4-r1.ebuild,v 1.1 2013/03/03 16:57:25 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.4-r1.ebuild,v 1.2 2013/05/16 13:18:19 ago Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rninet.de/darkstar/sel.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~s390 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.1"

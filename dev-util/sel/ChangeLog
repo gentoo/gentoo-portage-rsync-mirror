@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.16 2013/03/03 16:57:25 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.17 2013/05/16 13:18:19 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> sel-0.08.4-r1.ebuild:
+  Stable for ppc, wrt bug #464440
 
 *sel-0.08.4-r1 (03 Mar 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-3.1.3.ebuild,v 1.4 2013/05/14 11:43:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-3.1.3.ebuild,v 1.5 2013/05/16 13:06:01 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_3} pypy{1_9,2_0} )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( MIT AFL-2.1 )"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 arm ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 python_compile() {
 	if [[ ${EPYTHON} == python2* ]]; then
