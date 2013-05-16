@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r1.ebuild,v 1.1 2013/05/15 20:33:05 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r1.ebuild,v 1.2 2013/05/16 05:26:22 idella4 Exp $
 
 EAPI=5
 
@@ -194,7 +194,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-jserver.patch
 
 	# add missing header
-	epatch "${FILESDIR}"/xen-4-ulong.patch
+	epatch "${FILESDIR}"/xen-4-ulong.patch \
+		"${FILESDIR}"/${PN}-4.2-xen_disk_leak.patch
 
 	#Sec patch, currently valid
 	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
