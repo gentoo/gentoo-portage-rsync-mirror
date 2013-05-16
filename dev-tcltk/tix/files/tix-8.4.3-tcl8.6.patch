@@ -11,8 +11,8 @@ index 7dee30f..26ec054 100644
  
 -	order = strtol(sortInterp->result, &end, 0);
 -	if ((end == sortInterp->result) || (*end != 0)) {
-+	order = strtol(Tcl_GetResult(sortInterp), &end, 0);
-+	if ((end == Tcl_GetResult(sortInterp)) || (*end != 0)) {
++	order = strtol(Tcl_GetStringResult(sortInterp), &end, 0);
++	if ((end == Tcl_GetStringResult(sortInterp)) || (*end != 0)) {
  	    Tcl_ResetResult(sortInterp);
  	    Tcl_AppendResult(sortInterp,
  		    "comparison command returned non-numeric result",

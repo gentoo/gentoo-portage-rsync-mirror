@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.41 2013/01/21 17:18:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.42 2013/05/16 09:42:31 jlec Exp $
+
+*tix-8.4.3-r1 (16 May 2013)
+
+  16 May 2013; Justin Lecher <jlec@gentoo.org> +tix-8.4.3-r1.ebuild,
+  +files/tix-8.4.3-tcl8.5.patch, files/tix-8.4.3-tcl8.6.patch:
+  Straighten Fix for >tcl-8.5
 
   21 Jan 2013; Justin Lecher <jlec@gentoo.org> tix-8.4.3.ebuild,
   +files/tix-8.4.3-tcl8.6.patch:

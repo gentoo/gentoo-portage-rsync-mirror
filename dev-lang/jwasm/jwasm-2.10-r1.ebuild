@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jwasm/jwasm-2.10.ebuild,v 1.1 2013/05/16 06:40:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jwasm/jwasm-2.10-r1.ebuild,v 1.1 2013/05/16 09:31:44 slyfox Exp $
 
 EAPI=5
 
@@ -26,8 +26,10 @@ S="${WORKDIR}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc-4.8-fwdecl.patch
+	epatch "${FILESDIR}"/${P}-types-test.patch
+	epatch "${FILESDIR}"/${P}-uint_32-on-amd64.patch
 	# don't strip binary
-	sed -i GccUnix.mak -e 's/ -s //g' || die
+	sed -i GccUnix.mak -e 's/ -s / /g' || die
 }
 
 src_compile() {
