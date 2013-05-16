@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.4 2013/03/29 15:21:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.5 2013/05/16 06:28:04 tomwij Exp $
+
+  16 May 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-plugins-2.6.2-r2.ebuild,
+  avidemux-plugins-2.6.3.ebuild:
+  If avidemux-plugins will be build with qt4, avidemux needs to have that USE
+  flag set as well.
 
 *avidemux-plugins-2.6.3 (29 Mar 2013)
 

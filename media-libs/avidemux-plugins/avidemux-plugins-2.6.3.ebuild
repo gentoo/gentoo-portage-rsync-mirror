@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.3.ebuild,v 1.1 2013/03/29 15:12:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.3.ebuild,v 1.2 2013/05/16 06:28:04 tomwij Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ MY_PN="${PN/-plugins/}"
 MY_P="${MY_PN}_${PV}"
 
 DESCRIPTION="Plugins for avidemux; a video editor designed for simple cutting, filtering and encoding tasks."
-HOMEPAGE="http://fixounet.free.fr/${MY_PN}"
+HOMEPAGE="http://fixounet.free.fr/avidemux"
 SRC_URI="mirror://sourceforge/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 # Multiple licenses because of all the bundled stuff.
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="aften a52 alsa amr debug dts faac faad fontconfig fribidi jack lame libsamplerate mmx opengl oss qt4 vorbis truetype twolame xvid x264 vpx"
 
 DEPEND="
-	=media-video/avidemux-${PV}[opengl?]
+	=media-video/avidemux-${PV}[opengl?,qt4?]
 	>=dev-lang/spidermonkey-1.5-r2
 	dev-libs/libxml2
 	media-libs/libpng
