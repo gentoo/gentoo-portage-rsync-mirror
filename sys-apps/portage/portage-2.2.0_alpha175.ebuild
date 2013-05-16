@@ -1,21 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.76 2013/05/16 00:34:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha175.ebuild,v 1.1 2013/05/16 00:34:25 zmedico Exp $
 
+# Require EAPI 2 since we now require at least python-2.6 (for python 3
+# syntax support) which also requires EAPI 2.
 EAPI=3
 PYTHON_COMPAT=(
 	pypy1_9 pypy2_0
 	python3_1 python3_2 python3_3 python3_4
 	python2_6 python2_7
 )
-inherit git-2 eutils multilib
+inherit eutils multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_ru pypy2_0 python2 python3 selinux xattr"
+IUSE="build doc epydoc +ipc linguas_pl linguas_ru pypy2_0 python2 python3 selinux xattr"
 
 for _pyimpl in ${PYTHON_COMPAT[@]} ; do
 	IUSE+=" python_targets_${_pyimpl}"
@@ -92,8 +94,23 @@ prefix_src_archives() {
 	done
 }
 
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git"
-S="${WORKDIR}"/${PN}
+PV_PL="2.1.2"
+PATCHVER_PL=""
+TARBALL_PV=2.2.0_alpha175
+SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
+	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
+	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
+		$(prefix_src_archives ${PN}-man-pl-${PV_PL}.tar.bz2) )"
+
+PATCHVER=
+[[ $TARBALL_PV = $PV ]] || PATCHVER=$PV
+if [ -n "${PATCHVER}" ]; then
+	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
+	$(prefix_src_archives ${PN}-${PATCHVER}.patch.bz2)"
+fi
+
+S="${WORKDIR}"/${PN}-${TARBALL_PV}
+S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
 compatible_python_is_selected() {
 	[[ $("${EPREFIX}/usr/bin/python" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
@@ -205,22 +222,19 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch_user
-
-	einfo "Producing ChangeLog from Git history..."
-	pushd "${S}/.git" >/dev/null || die
-	git log ebcf8975b37a8aae9735eb491a9b4cb63549bd5d^.. \
-		> "${S}"/ChangeLog || die
-	popd >/dev/null || die
-
-	local _version=$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')
-	_version=${_version:1}
-	einfo "Setting portage.VERSION to ${_version} ..."
-	sed -e "s/^VERSION=.*/VERSION='${_version}'/" -i pym/portage/__init__.py || \
+	if [ -n "${PATCHVER}" ] ; then
+		if [[ -L $S/bin/ebuild-helpers/portageq ]] ; then
+			rm "$S/bin/ebuild-helpers/portageq" \
+				|| die "failed to remove portageq helper symlink"
+		fi
+		epatch "${WORKDIR}/${PN}-${PATCHVER}.patch"
+	fi
+	einfo "Setting portage.VERSION to ${PVR} ..."
+	sed -e "s/^VERSION=.*/VERSION=\"${PVR}\"/" -i pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
-	sed -e "1s/VERSION/${_version}/" -i doc/fragment/version || \
+	sed -e "1s/VERSION/${PVR}/" -i doc/fragment/version || \
 		die "Failed to patch VERSION in doc/fragment/version"
-	sed -e "1s/VERSION/${_version}/" -i $(find man -type f) || \
+	sed -e "1s/VERSION/${PVR}/" -i $(find man -type f) || \
 		die "Failed to patch VERSION in man page headers"
 
 	if ! use ipc ; then
@@ -312,7 +326,10 @@ src_compile() {
 }
 
 src_test() {
-	./runtests.sh || die "tests failed"
+	# make files executable, in case they were created by patch
+	find bin -type f | xargs chmod +x
+	call_with_python_impl \
+	emake test || die
 }
 
 src_install() {
@@ -324,6 +341,11 @@ src_install() {
 
 	# Use dodoc for compression, since the Makefile doesn't do that.
 	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES} || die
+
+	if use linguas_pl; then
+		doman -i18n=pl "${S_PL}"/man/pl/*.[0-9] || die
+		doman -i18n=pl_PL.UTF-8 "${S_PL}"/man/pl_PL.UTF-8/*.[0-9] || die
+	fi
 
 	# Allow external portage API consumers to import portage python modules
 	# (this used to be done with PYTHONPATH setting in /etc/env.d).
@@ -371,7 +393,7 @@ src_install() {
 pkg_preinst() {
 	if [[ $ROOT == / ]] ; then
 		# Run some minimal tests as a sanity check.
-		local test_runner=$(find "${ED}" -name runTests)
+		local test_runner=$(find "$ED" -name runTests)
 		if [[ -n $test_runner && -x $test_runner ]] ; then
 			einfo "Running preinst sanity tests..."
 			"$test_runner" || die "preinst sanity tests failed"
@@ -399,8 +421,8 @@ pkg_preinst() {
 	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
 	# assume that the NEEDED.ELF.2 files have already been generated.
 	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! ( [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
-		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ) \
+		! { [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
+		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ; } \
 		&& NEEDED_REBUILD_UPGRADE=true || NEEDED_REBUILD_UPGRADE=false
 }
 
