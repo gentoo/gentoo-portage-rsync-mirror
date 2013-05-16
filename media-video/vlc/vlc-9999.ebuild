@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.187 2013/05/06 14:22:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.188 2013/05/16 19:21:23 ulm Exp $
 
 EAPI="5"
 
@@ -55,7 +55,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+postproc projectm pulseaudio +qt4 rtsp run-as-root samba schroedinger
 	sdl sdl-image shine shout sid skins speex sse svg +swscale
 	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
-	win32codecs wma-fixed +X x264 +xcb xml xv zvbi"
+	wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2[minizip]
@@ -135,7 +135,6 @@ RDEPEND="
 		vaapi? ( x11-libs/libva )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
-		win32codecs? ( media-libs/win32codecs )
 		X? ( x11-libs/libX11 )
 		x264? ( >=media-libs/x264-0.0.20090923 )
 		xcb? ( >=x11-libs/libxcb-1.6 >=x11-libs/xcb-util-0.3.4 )
@@ -195,8 +194,8 @@ src_configure() {
 	if use truetype || use projectm; then
 		local dejavu="/usr/share/fonts/dejavu/"
 		myconf="--with-default-font=${dejavu}/DejaVuSans.ttf \
-			    --with-default-font-family=Sans \
-			    --with-default-monospace-font=${dejavu}/DejaVuSansMono.ttf
+				--with-default-font-family=Sans \
+				--with-default-monospace-font=${dejavu}/DejaVuSansMono.ttf
 				--with-default-monospace-font-family=Monospace"
 	fi
 

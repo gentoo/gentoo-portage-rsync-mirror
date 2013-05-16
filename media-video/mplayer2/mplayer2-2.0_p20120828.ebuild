@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.15 2013/01/30 19:02:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.16 2013/05/16 19:14:38 ulm Exp $
 
 EAPI=4
 
@@ -32,12 +32,12 @@ if [[ ${PV} == *9999* ]]; then
 else
 	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux"
 fi
-IUSE="+a52 aalib +alsa aqua bidi bindist bl bluray bs2b cddb +cdio
+IUSE="+a52 aalib +alsa aqua bidi bl bluray bs2b cddb +cdio
 	cpudetection debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad
 	fbcon ftp gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa
 	+libass libcaca lirc mad md5sum mng +mp3 nas +network nut +opengl oss png pnm
 	portaudio postproc pulseaudio pvr +quicktime quvi radio +rar +real +rtc samba
-	sdl +speex tga +theora +truetype +unicode v4l vdpau +vorbis win32codecs +X
+	sdl +speex tga +theora +truetype +unicode v4l vdpau +vorbis +X
 	xanim xinerama +xscreensaver +xv xvid"
 IUSE+=" symlink"
 
@@ -51,9 +51,7 @@ for x in ${VIDEO_CARDS}; do
 	IUSE+=" video_cards_${x}"
 done
 
-# bindist does not cope with win32codecs, which are nonfree
 REQUIRED_USE="
-	bindist? ( !win32codecs )
 	cddb? ( cdio network )
 	dvdnav? ( dvd )
 	dxr3? ( X )
@@ -73,11 +71,6 @@ REQUIRED_USE="
 RDEPEND+="
 	sys-libs/ncurses
 	sys-libs/zlib
-	!bindist? (
-		x86? (
-			win32codecs? ( media-libs/win32codecs )
-		)
-	)
 	X? (
 		x11-libs/libXext
 		x11-libs/libXxf86vm
@@ -353,9 +346,7 @@ src_configure() {
 	# Binary codecs #
 	#################
 	# bug 213836
-	if ! use x86 || ! use win32codecs; then
-		use quicktime || myconf+=" --disable-qtx"
-	fi
+	use quicktime || myconf+=" --disable-qtx"
 
 	######################
 	# RealPlayer support #
@@ -374,7 +365,7 @@ src_configure() {
 		use x86 && myconf+=" --codecsdir=/opt/RealPlayer/codecs"
 		use amd64 && myconf+=" --codecsdir=/usr/$(get_libdir)/codecs"
 	fi
-	myconf+=" $(use_enable win32codecs win32dll)"
+	myconf+=" --disable-win32dll"
 
 	################
 	# Video Output #

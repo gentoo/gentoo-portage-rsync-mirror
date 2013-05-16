@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.2.0.ebuild,v 1.3 2012/05/05 08:58:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.2.0.ebuild,v 1.4 2013/05/16 19:24:51 ulm Exp $
 
 EAPI=1
 
@@ -11,13 +11,12 @@ SRC_URI="mirror://sourceforge.jp/vmaid/33098/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa ao mime win32codecs"
+IUSE="alsa ao mime"
 
 RDEPEND="x11-libs/gtk+:2
 	ao? ( media-libs/libao )
 	!ao? ( alsa? ( >=media-libs/alsa-lib-0.9 ) )
-	mime? ( x11-misc/shared-mime-info )
-	win32codecs? ( media-libs/win32codecs )"
+	mime? ( x11-misc/shared-mime-info )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
@@ -34,7 +33,7 @@ src_compile() {
 
 	econf \
 		$(use_enable mime) \
-		$(use_with win32codecs w32) \
+		--without-w32 \
 		${myconf} || die
 	emake || die
 }

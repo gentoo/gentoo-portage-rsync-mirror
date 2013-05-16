@@ -1,8 +1,2 @@
 ..
-# Don't enable it. It will introduce
-# phony profiles like:
-#   /usr/portage/profiles/arch/base
-#   /usr/portage/profiles/features/multilib
-#   /usr/portage/profiles/features/multilib/lib32
-# ../../../../arch/amd64/no-multilib
 ../../../../features/64bit-native

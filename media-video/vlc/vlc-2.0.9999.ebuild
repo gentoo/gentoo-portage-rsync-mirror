@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.22 2013/05/06 14:22:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.23 2013/05/16 19:21:23 ulm Exp $
 
 EAPI="5"
 
@@ -51,7 +51,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger
 	sdl sdl-image shine shout sid skins speex sqlite sse svg +swscale switcher
 	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
-	win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
+	wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2[minizip]
@@ -134,7 +134,6 @@ RDEPEND="
 		vaapi? ( x11-libs/libva )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
-		win32codecs? ( media-libs/win32codecs )
 		X? ( x11-libs/libX11 )
 		x264? ( >=media-libs/x264-0.0.20090923 )
 		xcb? ( >=x11-libs/libxcb-1.6 >=x11-libs/xcb-util-0.3.4 )
@@ -307,7 +306,6 @@ src_configure() {
 		$(use_enable vlm) \
 		$(use_enable vorbis) \
 		$(use_enable waveout) \
-		$(use_enable win32codecs loader) \
 		$(use_enable wingdi) \
 		$(use_enable wma-fixed) \
 		$(use_with X x) \
@@ -317,6 +315,7 @@ src_configure() {
 		$(use_enable xosd) \
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
+		--disable-loader \
 		--disable-optimizations \
 		--without-tuning \
 		--enable-fast-install

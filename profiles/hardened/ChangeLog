@@ -1,0 +1,9 @@
+# ChangeLog for Gentoo/AMD64 profile directory
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.1 2013/05/16 19:29:27 zorry Exp $
+
+  16 May 2013; Magnus Granberg <zorry@gentoo.org> linux/amd64/no-multilib/make.defaults,
+  linux/amd64/no-multilib/package.mask, linux/amd64/no-multilib/package.use.force,
+  linux/amd64/no-multilib/package.use.mask, linux/amd64/no-multilib/parent,
+  linux/amd64/no-multilib/use.mask, ChangeLog:
+  bug 470092 and 469254 qa on parent and missing arch/amd64/no-multilib(mirroring)
