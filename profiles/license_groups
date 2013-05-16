@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.217 2013/05/12 11:23:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.218 2013/05/16 06:36:27 slyfox Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -18,7 +18,7 @@ GPL-COMPATIBLE AGPL-3 Apache-2.0 Artistic-2 Boost-1.0 BSD BSD-2 CC0-1.0 CeCILL-2
 FSF-APPROVED @GPL-COMPATIBLE AFL-2.1 AFL-3.0 Apache-1.1 APSL-2 BitTorrent BSD-4 CDDL CNRI CPL-1.0 EPL-1.0 EUPL-1.1 IBM LPPL-1.2 MPL-1.0 MPL-1.1 Ms-PL NPL-1.1 openssl OSL-1.1 OSL-2.0 OSL-2.1 PHP-3.01 QPL QPL-1.0
 
 # http://www.opensource.org/licenses
-OSI-APPROVED AFL-3.0 AGPL-3 Apache-1.1 Apache-2.0 APL-1.0 APSL-2 Artistic Artistic-2 Boost-1.0 BSD BSD-2 CDDL CNRI CPAL-1.0 CPL-1.0 ECL-2.0 EPL-1.0 EUPL-1.1 GPL-1+ GPL-2 GPL-2+ GPL-3 GPL-3+ HPND IBM IPAfont ISC LGPL-2+ LGPL-2.1 LGPL-2.1+ LGPL-3 LGPL-3+ LPPL-1.3c MIT MPL-1.0 MPL-1.1 MPL-2.0 Ms-PL nethack NOSA OFL-1.1 PHP-3 PHP-3.01 POSTGRESQL PSF-2 QPL Sleepycat W3C wxWinLL-3 wxWinLL-3.1 ZLIB ZPL
+OSI-APPROVED AFL-3.0 AGPL-3 Apache-1.1 Apache-2.0 APL-1.0 APSL-2 Artistic Artistic-2 Boost-1.0 BSD BSD-2 CDDL CNRI CPAL-1.0 CPL-1.0 ECL-2.0 EPL-1.0 EUPL-1.1 GPL-1+ GPL-2 GPL-2+ GPL-3 GPL-3+ HPND IBM IPAfont ISC LGPL-2+ LGPL-2.1 LGPL-2.1+ LGPL-3 LGPL-3+ LPPL-1.3c MIT MPL-1.0 MPL-1.1 MPL-2.0 Ms-PL nethack NOSA OFL-1.1 PHP-3 PHP-3.01 POSTGRESQL PSF-2 QPL Sleepycat W3C Watcom-1.0 wxWinLL-3 wxWinLL-3.1 ZLIB ZPL
 
 # Misc licenses that are probably free software, i.e. follow the
 # Free Software Definition at http://www.gnu.org/philosophy/free-sw.html
