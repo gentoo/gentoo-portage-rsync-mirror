@@ -1,6 +1,11 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.4 2013/05/07 18:40:04 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.5 2013/05/16 05:52:11 tomwij Exp $
+
+  16 May 2013; Tom Wijsman <TomWij@gentoo.org>
+  handbrake-0.9.9_pre5441-r1.ebuild, handbrake-9999.ebuild:
+  Changed slot of libmp4v2 dependency from 1 to 0 since 0 installs the required
+  include files whereas 1 doesn't.
 
 *handbrake-0.9.9_pre5441-r1 (07 May 2013)
 

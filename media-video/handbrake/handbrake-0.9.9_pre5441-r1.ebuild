@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441-r1.ebuild,v 1.1 2013/05/07 18:40:04 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441-r1.ebuild,v 1.2 2013/05/16 05:52:11 tomwij Exp $
 
 EAPI="5"
 
@@ -35,7 +35,7 @@ RDEPEND="
 	media-libs/libdvdnav
 	media-libs/libdvdread
 	media-libs/libmpeg2
-	media-libs/libmp4v2:1
+	media-libs/libmp4v2:0
 	media-libs/libmkv
 	media-libs/libsamplerate
 	media-libs/libtheora
