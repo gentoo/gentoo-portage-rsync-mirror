@@ -3689,6 +3689,7 @@ media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mpv:quvi - Enable support for streaming sites using media-libs/libquvi
 media-video/mpv:radio - Enable V4L2 radio interface and support
 media-video/mpv:shm - Enable support for shm
+media-video/mpv:vf-dlopen - Install additional video filters for using with -vf dlopen
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/pgcedit:video - Add support for video preview

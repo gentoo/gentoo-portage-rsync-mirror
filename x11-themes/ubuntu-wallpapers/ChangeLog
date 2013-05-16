@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/ubuntu-wallpapers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.7 2013/02/07 23:08:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.8 2013/05/16 20:39:06 pacho Exp $
+
+*ubuntu-wallpapers-13.04.0 (16 May 2013)
+
+  16 May 2013; Pacho Ramos <pacho@gentoo.org> +ubuntu-wallpapers-13.04.0.ebuild,
+  -ubuntu-wallpapers-0.34.1.ebuild:
+  Version bump, drop old
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> ubuntu-wallpapers-0.34.1.ebuild,
   ubuntu-wallpapers-0.35.2.ebuild:

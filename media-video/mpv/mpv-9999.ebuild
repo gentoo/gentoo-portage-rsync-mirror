@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.4 2013/04/28 08:07:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.5 2013/05/16 20:46:19 radhermit Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b cddb +cdio debug +dts dvb +dvd +enca encode fbcon ftp
 +iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mng +mp3
 +network -openal +opengl oss portaudio +postproc pulseaudio pvr quvi radio samba +shm
-v4l vcd vdpau wayland +X xinerama +xscreensaver +xv"
+v4l vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
 	cddb? ( cdio network )
@@ -283,7 +283,6 @@ src_configure() {
 	############################
 	if use aqua; then
 		myconf+="
-			--enable-macosx-finder
 			--enable-macosx-bundle
 		"
 	fi
@@ -299,4 +298,22 @@ src_configure() {
 		${myconf} || die
 
 	MAKEOPTS+=" V=1"
+}
+
+src_compile() {
+	base_src_compile
+
+	if use vf-dlopen; then
+		tc-export CC
+		emake -C TOOLS/vf_dlopen
+	fi
+}
+
+src_install() {
+	base_src_install
+
+	if use vf-dlopen; then
+		exeinto /usr/$(get_libdir)/${PN}
+		doexe TOOLS/vf_dlopen/*.so
+	fi
 }

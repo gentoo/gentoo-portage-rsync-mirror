@@ -1,8 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.3.ebuild,v 1.1 2013/05/14 19:35:03 hasufell Exp $
-
-# TODO: update libpng to slot 1.5 when stable
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.3.ebuild,v 1.2 2013/05/16 20:52:28 hasufell Exp $
 
 EAPI=5
 
@@ -19,7 +17,7 @@ IUSE="bundled-libs"
 RESTRICT="fetch bindist splitdebug"
 
 RDEPEND="
-	=media-libs/libpng-1.5*
+	media-libs/libpng:1.5
 	sys-devel/gcc[cxx]
 	virtual/opengl
 	!bundled-libs? (
