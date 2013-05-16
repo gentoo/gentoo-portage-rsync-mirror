@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14760 2013/05/16 04:52:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14761 2013/05/16 16:01:43 maksbotan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Maxim Koltsov <maksbotan@gentoo.org> (16 May 2013)
+# Needs masked ffmpeg-9
+=media-video/mplayer2-2.0_p20130428
 
 # Patrick Lauer <patrick@gentoo.org> (16 May 2013)
 # Dependencies broken, new version brokererer. #469264
