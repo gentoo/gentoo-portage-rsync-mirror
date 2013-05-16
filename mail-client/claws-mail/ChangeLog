@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.237 2013/05/14 18:21:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.238 2013/05/16 03:51:53 fauli Exp $
+
+*claws-mail-3.9.1-r1 (16 May 2013)
+
+  16 May 2013; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.9.1-r1.ebuild, +files/claws-mail-3.9.1_fix-nntp-segfault.patch:
+  fix segfault with NNTP as reported by Alexander Tsoy on bug 469838
 
   14 May 2013; Markus Meier <maekke@gentoo.org> claws-mail-3.9.1.ebuild:
   add ~arm, bug #468984

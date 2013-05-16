@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.4.0.ebuild,v 1.5 2012/10/17 03:38:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.4.4.ebuild,v 1.1 2013/05/16 03:50:48 fauli Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gramps/Stable/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnome reports spell webkit"
 
 RDEPEND="dev-python/bsddb3
@@ -45,12 +45,11 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	epatch "${FILESDIR}/${P}-use_bsddb3.patch"
+	epatch "${FILESDIR}/${PN}-3.4.0-use_bsddb3.patch"
 
 	# This is for bug 215944, so .pyo/.pyc files don't get into the
 	# file system
-	mv "${S}"/py-compile "${S}"/py-compile.orig
-	ln -s $(type -P true) "${S}"/py-compile
+	python_clean_py-compile_files
 
 	# Fix install path, bug 423315 for example
 	einfo "Fix installation path"
