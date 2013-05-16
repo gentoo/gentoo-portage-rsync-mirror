@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.7.ebuild,v 1.1 2013/02/22 17:27:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.7.ebuild,v 1.2 2013/05/16 16:45:05 tomwij Exp $
 
 EAPI=5
 
@@ -18,5 +18,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="!app-misc/colordiff
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	sys-apps/less"
 RDEPEND="${DEPEND}"
