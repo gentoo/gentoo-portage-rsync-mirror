@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2013.1.1.ebuild,v 1.1 2013/05/10 02:35:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2013.1.1-r1.ebuild,v 1.1 2013/05/16 01:07:51 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -36,7 +36,7 @@ RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/alembic-0.4.1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
-		=dev-python/amqplib-0.6.1
+		=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.2.4[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.9.17[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
