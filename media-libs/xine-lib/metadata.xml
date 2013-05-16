@@ -40,11 +40,6 @@
 			the file's data. mmap() access should be faster, but might misbehave if the
 			device where the file resides in is removed during playback.
 		</flag>
-		<flag name="real">
-			Enable support for loading and using RealPlayer binary codecs on x86 and
-			amd64 Linux. Enabling this USE flag might make the package
-			non-redistributable in binary form.
-		</flag>
 		<flag name="truetype">
 			Use <pkg>media-libs/freetype</pkg> for font rendering and
 			<pkg>media-libs/fontconfig</pkg> for font discovery. Enabling this USE flag
@@ -52,11 +47,6 @@
 			easily select which font to use. The support for TrueType fonts in xine-lib
 			is still experimental, and might not be as good looking as the bitmap fonts
 			used with this USE flag disabled.
-		</flag>
-		<flag name="win32codecs">
-			Enable support for loading and using Windows 32-bit binary codecs on x86
-			Linux and FreeBSD. Enabling this USE flag might make the package
-			non-redistributable in binary form.
 		</flag>
 		<flag name="vdr">
 			Build the VDR plugin

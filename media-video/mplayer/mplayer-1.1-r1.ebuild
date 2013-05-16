@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.21 2013/03/21 07:08:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.22 2013/05/16 18:56:08 ulm Exp $
 
 EAPI=4
 
@@ -18,8 +18,7 @@ ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
 tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
-+vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
-zoran"
++vorbis +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
 
 VIDEO_CARDS="s3virge mga tdfx"
 for x in ${VIDEO_CARDS}; do
@@ -62,11 +61,6 @@ RDEPEND+="
 	app-arch/bzip2
 	sys-libs/zlib
 	>=virtual/ffmpeg-0.10.3
-	!bindist? (
-		x86? (
-			win32codecs? ( media-libs/win32codecs )
-		)
-	)
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -175,7 +169,7 @@ fi
 # libvorbis require external tremor to work
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
-REQUIRED_USE="bindist? ( !faac !win32codecs )
+REQUIRED_USE="bindist? ( !faac )
 	dvdnav? ( dvd )
 	libass? ( truetype )
 	truetype? ( iconv )
@@ -441,9 +435,7 @@ src_configure() {
 	# Binary codecs #
 	#################
 	# bug 213836
-	if ! use x86 || ! use win32codecs; then
-		use quicktime || myconf+=" --disable-qtx"
-	fi
+	use quicktime || myconf+=" --disable-qtx"
 
 	######################
 	# RealPlayer support #
@@ -456,7 +448,7 @@ src_configure() {
 
 	# internal
 	use real || myconf+=" --disable-real"
-	myconf+=" $(use_enable win32codecs win32dll)"
+	myconf+=" --disable-win32dll"
 
 	################
 	# Video Output #
