@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-0.5-r1.ebuild,v 1.1 2013/01/12 06:07:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-0.5-r1.ebuild,v 1.2 2013/05/16 11:07:58 radhermit Exp $
 
-EAPI="5"
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1 vcs-snapshot virtualx
 
@@ -16,21 +16,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND=">=dev-python/pycairo-1.10.0-r3[xcb]
-	dev-python/pygtk:2
-	>=x11-libs/xpyb-1.3.1"
-DEPEND="doc? ( dev-python/sphinx )
+RDEPEND=">=dev-python/pycairo-1.10.0-r3[xcb,${PYTHON_USEDEP}]
+	dev-python/pygtk:2[${PYTHON_USEDEP}]
+	>=x11-libs/xpyb-1.3.1[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/python-xlib
+		dev-python/python-xlib[${PYTHON_USEDEP}]
 		x11-base/xorg-server[kdrive]
 	)"
 
 # tests fail due to xauth errors from python-xlib
 RESTRICT="test"
-
-DOCS="TODO.rst"
 
 python_compile_all() {
 	use doc && emake -C docs html
@@ -41,6 +40,9 @@ python_test() {
 }
 
 python_install_all() {
+	local DOCS=( CHANGELOG README.rst TODO.rst )
+	distutils-r1_python_install_all
+
 	use doc && dohtml -r docs/_build/html/*
 
 	insinto /usr/share/xsessions
