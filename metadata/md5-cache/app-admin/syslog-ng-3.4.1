@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=pcre? ( dev-libs/libpcre ) spoof-source? ( net-libs/libnet:1.1 ) ssl? ( dev-libs/openssl:= ) smtp? ( net-libs/libesmtp ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 json? ( >=dev-libs/json-c-0.9 ) caps? ( sys-libs/libcap ) dbi? ( >=dev-db/libdbi-0.8.3 ) virtual/pkgconfig sys-devel/flex || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DEPEND=pcre? ( dev-libs/libpcre ) spoof-source? ( net-libs/libnet:1.1 ) ssl? ( dev-libs/openssl:= ) smtp? ( net-libs/libesmtp ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 json? ( >=dev-libs/json-c-0.9 ) caps? ( sys-libs/libcap ) geoip? ( dev-libs/geoip ) dbi? ( >=dev-db/libdbi-0.8.3 ) virtual/pkgconfig sys-devel/flex || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
 DESCRIPTION=syslog replacement with advanced filtering features
 EAPI=5
 HOMEPAGE=http://www.balabit.com/network-security/syslog-ng
-IUSE=caps dbi hardened ipv6 json mongodb +pcre selinux smtp spoof-source ssl tcpd
+IUSE=caps dbi geoip hardened ipv6 json mongodb +pcre selinux smtp spoof-source ssl tcpd
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd
 LICENSE=GPL-2+ LGPL-2.1+
-RDEPEND=pcre? ( dev-libs/libpcre ) spoof-source? ( net-libs/libnet:1.1 ) ssl? ( dev-libs/openssl:= ) smtp? ( net-libs/libesmtp ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 json? ( >=dev-libs/json-c-0.9 ) caps? ( sys-libs/libcap ) dbi? ( >=dev-db/libdbi-0.8.3 )
+RDEPEND=pcre? ( dev-libs/libpcre ) spoof-source? ( net-libs/libnet:1.1 ) ssl? ( dev-libs/openssl:= ) smtp? ( net-libs/libesmtp ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) >=dev-libs/eventlog-0.2.12 >=dev-libs/glib-2.10.1:2 json? ( >=dev-libs/json-c-0.9 ) caps? ( sys-libs/libcap ) geoip? ( dev-libs/geoip ) dbi? ( >=dev-db/libdbi-0.8.3 )
 SLOT=0
 SRC_URI=http://www.balabit.com/downloads/files/syslog-ng/sources/3.4.1/source/syslog-ng_3.4.1.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	b8fdb86895c268cca7ae1626264a30f4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	systemd	3421a5715404244e4827acd1cf8ce654	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=96734ede75f3f76b0bdaaf6032623a53
+_md5_=6531bff91286bf4ae6321aad46a4fd57

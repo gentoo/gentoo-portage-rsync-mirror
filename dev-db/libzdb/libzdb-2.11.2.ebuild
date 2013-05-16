@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/libzdb-2.10.3.ebuild,v 1.4 2013/04/02 15:03:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/libzdb-2.11.2.ebuild,v 1.1 2013/05/16 15:12:49 lordvan Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs autotools-utils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A thread safe high level multi-database connection pool library"
 HOMEPAGE="http://www.tildeslash.com/libzdb/"
@@ -16,6 +16,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE="debug doc mysql postgres +sqlite ssl static-libs"
 REQUIRED_USE=" || ( postgres mysql sqlite )"
 
+RESTRICT=test
+
 RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	sqlite? ( >=dev-db/sqlite-3.7:3[unlock-notify(+)] )
@@ -26,10 +28,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i -e "s|&& ./pool||g" test/Makefile.in || die
-	if ( use sqlite); then
-		epatch "$FILESDIR/sqlite_configure.patch"
-	fi
-	eautoreconf
 }
 
 src_configure() {
@@ -43,7 +41,7 @@ src_configure() {
 	fi
 
 	if use sqlite; then
-		myconf+=" --with-sqlite=${EPREFIX}/usr/ --enable-sqliteunlock"
+		myconf="${myconf} --with-sqlite=${EPREFIX}/usr/ --enable-sqliteunlock"
 	else
 		myconf="${myconf} --without-sqlite"
 	fi

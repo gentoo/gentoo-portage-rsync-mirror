@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.6 2013/05/10 21:52:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.7 2013/05/16 15:02:50 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd
@@ -13,7 +13,7 @@ SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/${MY_PV}/sourc
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="caps dbi hardened ipv6 json mongodb +pcre selinux smtp spoof-source ssl tcpd"
+IUSE="caps dbi geoip hardened ipv6 json mongodb +pcre selinux smtp spoof-source ssl tcpd"
 
 RDEPEND="
 	pcre? ( dev-libs/libpcre )
@@ -25,6 +25,7 @@ RDEPEND="
 	>=dev-libs/glib-2.10.1:2
 	json? ( >=dev-libs/json-c-0.9 )
 	caps? ( sys-libs/libcap )
+	geoip? ( dev-libs/geoip )
 	dbi? ( >=dev-db/libdbi-0.8.3 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -50,6 +51,7 @@ src_configure() {
 		--with-module-dir=/usr/$(get_libdir)/syslog-ng \
 		$(systemd_with_unitdir) \
 		$(use_enable caps linux-caps) \
+		$(use_enable geoip) \
 		$(use_enable ipv6) \
 		$(use_enable json) \
 		$(use_enable mongodb) \
