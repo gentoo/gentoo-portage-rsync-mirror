@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1266 2013/05/16 00:34:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1267 2013/05/16 13:59:27 zmedico Exp $
+
+  16 May 2013; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Eliminate subshell in boolean expression.
 
 *portage-2.2.0_alpha175 (16 May 2013)
 
