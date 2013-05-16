@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-lib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.23 2010/09/24 12:03:43 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.24 2013/05/16 12:54:44 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> guile-lib-0.1.9.ebuild:
+  Stable for amd64, wrt bug #457338
 
   24 Sep 2010; Justin Lecher <jlec@gentoo.org> guile-lib-0.1.9.ebuild:
   Keyworded for ~-linux
@@ -84,4 +87,3 @@
   06 Jun 2007; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +guile-lib-0.1.3.ebuild:
   (#169018) Add guile-lib, an accumulation place for pure-scheme Guile modules.
-

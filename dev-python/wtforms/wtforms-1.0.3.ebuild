@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-1.0.3.ebuild,v 1.1 2013/01/28 09:49:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-1.0.3.ebuild,v 1.2 2013/05/16 12:55:52 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 S="${WORKDIR}/${MY_P}"

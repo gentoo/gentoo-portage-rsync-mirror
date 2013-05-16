@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/dvbtune
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbtune/ChangeLog,v 1.9 2013/02/02 00:35:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbtune/ChangeLog,v 1.10 2013/05/16 12:52:15 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> dvbtune-0.5-r1.ebuild:
+  Stable for amd64, wrt bug #461198
 
 *dvbtune-0.5-r1 (02 Feb 2013)
 
@@ -34,4 +37,3 @@
   06 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/dvbtune-0.5-gentoo.diff, +metadata.xml, +dvbtune-0.5.ebuild:
   Initial import of ebuild, thanks to Ben De luca <bedel@allmail.net>, Bug #48741
-

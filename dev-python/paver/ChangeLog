@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.27 2013/04/22 06:45:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.28 2013/05/16 12:55:15 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> paver-1.1.1-r1.ebuild:
+  Stable for amd64, wrt bug #461156
 
   22 Apr 2013; Ian Delaney <idella4@gentoo.org> paver-1.2.0.ebuild:
   add missing dep, fixes Bug

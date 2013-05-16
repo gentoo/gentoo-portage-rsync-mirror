@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tdom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.18 2013/02/26 07:15:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.19 2013/05/16 12:53:40 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> tdom-0.8.3-r3.ebuild:
+  Stable for amd64, wrt bug #464436
 
 *tdom-0.8.3-r3 (26 Feb 2013)
 
@@ -77,4 +80,3 @@
 
   27 Mar 2005; MATSUU Takuto <matsuu@gentoo.org> +tdom-0.8.0.ebuild:
   Initial ebuild. Submitted by Travis Cross, bug #31812.
-

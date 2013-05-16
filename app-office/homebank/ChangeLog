@@ -1,6 +1,9 @@
 # ChangeLog for app-office/homebank
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.28 2013/01/27 00:27:13 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.29 2013/05/16 12:52:07 ago Exp $
+
+  16 May 2013; Agostino Sarubbo <ago@gentoo.org> homebank-4.5.ebuild:
+  Stable for amd64, wrt bug #461068
 
 *homebank-4.5 (27 Jan 2013)
 
@@ -118,4 +121,3 @@
   01 Apr 2008; Denis Dupeyron <calchan@gentoo.org> +metadata.xml,
   +homebank-3.7.ebuild:
   Initial commit, thanks to everybody on bug #139634.
-

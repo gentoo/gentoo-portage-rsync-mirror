@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/paver-1.1.1-r1.ebuild,v 1.3 2013/02/11 03:02:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/paver-1.1.1-r1.ebuild,v 1.4 2013/05/16 12:55:15 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~x86"
 IUSE="doc test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

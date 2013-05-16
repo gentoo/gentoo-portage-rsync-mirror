@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.27.ebuild,v 1.1 2013/02/13 09:30:08 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.27.ebuild,v 1.2 2013/05/16 12:53:56 ago Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Native APR library for Tomcat"
 SLOT="0"
 SRC_URI="mirror://apache/tomcat/tomcat-connectors/native/${PV}/source/${P}-src.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 LICENSE="Apache-2.0"
 IUSE=""
 
