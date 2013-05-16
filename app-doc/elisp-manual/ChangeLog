@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.55 2013/05/16 13:23:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.56 2013/05/16 14:05:30 ulm Exp $
+
+  16 May 2013; Ulrich Müller <ulm@gentoo.org> -elisp-manual-24.2.ebuild,
+  -files/elisp-manual-24.2-direntry.patch:
+  Remove old.
 
   16 May 2013; Agostino Sarubbo <ago@gentoo.org> elisp-manual-24.3.ebuild:
   Stable for ppc, wrt bug #469876

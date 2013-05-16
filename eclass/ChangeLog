@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.825 2013/05/15 19:01:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.826 2013/05/16 14:25:13 jer Exp $
+
+  16 May 2013; Jeroen Roovers <jer@gentoo.org> nvidia-driver.eclass:
+  Check for lspci before use.
 
   15 May 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   prune_libtool_files: do not remove .la files which are not libtool files.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.21 2013/04/10 15:10:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.22 2013/05/16 14:25:13 jer Exp $
 
 # @ECLASS: nvidia-driver.eclass
 # @MAINTAINER:
@@ -49,7 +49,10 @@ mask_304x=">=x11-drivers/nvidia-drivers-305.0.0"
 # @DESCRIPTION:
 # Retrieve the PCI device ID for each Nvidia video card you have
 nvidia-driver-get-card() {
-	local NVIDIA_CARD="$(/usr/sbin/lspci -d 10de: -n | awk -F'[: ]' '/ 0300: /{print $6}')"
+	local NVIDIA_CARD=$(
+		[ -x /usr/sbin/lspci ] && /usr/sbin/lspci -d 10de: -n \
+			| awk -F'[: ]' '/ 0300: /{print $6}'
+	)
 
 	if [ -n "$NVIDIA_CARD" ]; then
 		echo "$NVIDIA_CARD"
