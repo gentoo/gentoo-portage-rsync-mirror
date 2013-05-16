@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.141 2013/03/19 20:39:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.142 2013/05/15 23:02:22 ssuominen Exp $
+
+*polkit-0.111 (15 May 2013)
+
+  15 May 2013; Samuli Suominen <ssuominen@gentoo.org> +polkit-0.111.ebuild:
+  Version bump by "okias" from Freenode
 
   19 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -polkit-0.107-r1.ebuild,
   -files/polkit-0.107-fallback.patch:
