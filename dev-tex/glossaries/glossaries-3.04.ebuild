@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-3.04.ebuild,v 1.13 2013/02/24 17:45:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-3.04.ebuild,v 1.14 2013/05/17 16:26:32 aballier Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="doc examples"
 
 RDEPEND="dev-lang/perl
 	dev-texlive/texlive-latexrecommended
-	>=dev-texlive/texlive-latexextra-2008"
+	>=dev-texlive/texlive-latexextra-2012"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

@@ -1,6 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.16 2013/05/16 19:29:27 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.17 2013/05/17 16:26:30 zorry Exp $
+
+# These are broken as reported by Halcy0n, Aug, 23, 2011
+net-misc/teamviewer
+dev-lang/rebol-bin
+games-action/trine2
+games-action/swordandsworcery
+games-action/beathazardultra
+games-action/solar2
+games-arcade/dynamitejack
+games-kids/crayon-physics
+games-rpg/dungeon-defenders
+games-rpg/bastion
 
 # Mirror profile/amd64/no-multilib/package.mask
 app-accessibility/mbrola
