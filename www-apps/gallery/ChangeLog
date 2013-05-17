@@ -1,6 +1,22 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.197 2013/05/16 15:39:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.202 2013/05/17 10:16:01 ago Exp $
+
+  17 May 2013; Agostino Sarubbo <ago@gentoo.org> -gallery-2.3.1.ebuild,
+  -gallery-3.0.5.ebuild, -gallery-3.0.6.ebuild:
+  Remove old
+
+  17 May 2013; Agostino Sarubbo <ago@gentoo.org> gallery-2.3.2.ebuild:
+  Stable for ppc64, wrt bug #411727
+
+  17 May 2013; Agostino Sarubbo <ago@gentoo.org> gallery-2.3.2.ebuild:
+  Stable for ppc, wrt bug #411727
+
+  17 May 2013; Agostino Sarubbo <ago@gentoo.org> gallery-2.3.2.ebuild:
+  Stable for x86, wrt bug #411727
+
+  17 May 2013; Agostino Sarubbo <ago@gentoo.org> gallery-2.3.2.ebuild:
+  Stable for amd64, wrt bug #411727
 
   16 May 2013; Jeroen Roovers <jer@gentoo.org> gallery-2.3.2.ebuild:
   Stable for HPPA (bug #411727).

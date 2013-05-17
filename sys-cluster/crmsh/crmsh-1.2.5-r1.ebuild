@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.5.ebuild,v 1.1 2013/02/14 13:38:53 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.5-r1.ebuild,v 1.1 2013/05/17 10:13:44 ultrabug Exp $
 
 EAPI=4
 
 inherit autotools-utils
 
-MY_TREE="51379136d692"
+MY_TREE="ef3f08547688"
 
 DESCRIPTION="Pacemaker command line interface for management and configuration"
 HOMEPAGE="https://savannah.nongnu.org/projects/crmsh/"

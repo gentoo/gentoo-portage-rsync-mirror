@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.2.ebuild,v 1.2 2013/05/16 15:39:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.2.ebuild,v 1.6 2013/05/17 10:07:26 ago Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://galleryproject.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 hppa ppc ppc64 x86"
 IUSE="ffmpeg +gd imagemagick +mysql netpbm postgres raw sqlite unzip zip"
 
 RDEPEND="raw? ( media-gfx/dcraw )

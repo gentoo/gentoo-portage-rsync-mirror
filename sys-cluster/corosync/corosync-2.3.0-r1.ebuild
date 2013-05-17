@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.3.0.ebuild,v 1.1 2013/01/18 10:22:53 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.3.0-r1.ebuild,v 1.1 2013/05/17 10:08:06 ultrabug Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="!sys-cluster/heartbeat
 		sys-infiniband/librdmacm
 	)
 	dev-libs/nss
-	sys-cluster/libqb"
+	>=sys-cluster/libqb-0.14.4"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( sys-apps/groff )"
