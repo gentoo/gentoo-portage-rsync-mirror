@@ -1,6 +1,16 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.55 2013/05/17 10:50:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.56 2013/05/17 11:01:24 aballier Exp $
+
+*chktex-1.7.2 (17 May 2013)
+
+  17 May 2013; Alexis Ballier <aballier@gentoo.org> +chktex-1.7.2.ebuild:
+  version bump
+
+  17 May 2013; Alexis Ballier <aballier@gentoo.org> -chktex-1.6.4.ebuild,
+  -chktex-1.6.6.ebuild, -chktex-1.7.0.ebuild,
+  -files/chktex-1.7.0-asneeded.patch:
+  remove old
 
   17 May 2013; Alexis Ballier <aballier@gentoo.org> -chktex-1.6.4.ebuild,
   -chktex-1.6.6.ebuild, -chktex-1.7.0.ebuild,
