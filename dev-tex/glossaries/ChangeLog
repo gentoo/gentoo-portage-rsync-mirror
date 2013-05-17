@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.66 2013/05/17 16:26:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.67 2013/05/17 16:31:38 aballier Exp $
+
+  17 May 2013; Alexis Ballier <aballier@gentoo.org> -glossaries-3.01.ebuild,
+  -glossaries-3.02.ebuild, -glossaries-3.03.ebuild:
+  remove old
 
   17 May 2013; Alexis Ballier <aballier@gentoo.org> glossaries-3.04.ebuild:
   bump texlive-latexextra dep to 2012, bug #458220 by Aaron Mavrinac (ezod)
