@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r3.ebuild,v 1.2 2013/05/16 05:26:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r3.ebuild,v 1.3 2013/05/17 15:15:57 idella4 Exp $
 
 EAPI=5
 
@@ -67,8 +67,8 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? (  x11-proto/xproto
-	)"
+	hvm? (  x11-proto/xproto )
+	qemu? ( >=sys-apps/texinfo-5 )"
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
@@ -165,8 +165,9 @@ src_prepare() {
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" -i Makefile || die
 	fi
 
-	# Fix texi2html build error with new texi2html
-	epatch "${FILESDIR}"/${PN}-4-docfix.patch
+	# Fix texi2html build error with new texi2html, qemu.doc.html
+	epatch "${FILESDIR}"/${PN}-4-docfix.patch \
+		"${FILESDIR}"/${PN}-4-qemu-xen-doc.patch
 
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"

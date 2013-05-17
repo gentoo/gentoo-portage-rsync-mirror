@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.26 2013/05/16 16:29:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.27 2013/05/17 15:26:47 jer Exp $
+
+  17 May 2013; Jeroen Roovers <jer@gentoo.org> guile-lib-0.1.9.ebuild:
+  Stable for HPPA (bug #457338).
 
   16 May 2013; Agostino Sarubbo <ago@gentoo.org> guile-lib-0.1.9.ebuild:
   Stable for ppc64, wrt bug #457338
