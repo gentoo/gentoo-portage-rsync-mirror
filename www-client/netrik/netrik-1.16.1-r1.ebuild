@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.4 2013/04/13 10:38:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.16.1-r1.ebuild,v 1.5 2013/05/17 07:20:20 pinkbyte Exp $
 
 EAPI=5
 
@@ -21,6 +21,10 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	sed -i -e "/^doc_DATA/s/COPYING LICENSE //" \
 		Makefile.am || die 'sed on Makefile.am failed'
+
+	# bug #467812
+	sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
+		configure.ac || die 'sed on configure.ac failed'
 
 	# bug #459660
 	epatch "${FILESDIR}/${P}-ncurses-tinfo.patch"
