@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/clockywock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.19 2013/04/04 19:47:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.20 2013/05/17 12:38:37 pinkbyte Exp $
+
+  17 May 2013; Sergey Popov <pinkbyte@gentoo.org> -clockywock-0.2.3f.ebuild,
+  -files/clockywock-0.2.3f-makefile.patch:
+  Drop old version
 
   04 Apr 2013; Agostino Sarubbo <ago@gentoo.org> clockywock-0.3.1a.ebuild:
   Stable for x86, wrt bug #464412
