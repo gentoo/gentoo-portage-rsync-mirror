@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.3.ebuild,v 1.3 2013/05/14 21:05:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.3.ebuild,v 1.4 2013/05/17 22:20:35 ago Exp $
 
 # do not use autotools related stuff in stable ebuilds
 # unless you like random breakage: 469796, 469798, 424041
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~hasufell/distfiles/${P}-no-autoreconf
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="+alsa pulseaudio"
 
 RDEPEND="media-libs/libsdl[X,alsa?,audio,pulseaudio?,video]
