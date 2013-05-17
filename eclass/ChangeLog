@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.828 2013/05/17 00:52:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.829 2013/05/17 04:01:54 jdhore Exp $
+
+  17 May 2013; Jeff Horelick <jdhore@gentoo.org> nsplugins.eclass:
+  Support new plugins directory on Firefox >= 21.0 (bug #469932)
 
   17 May 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
   Remove unused src_unpack function.
