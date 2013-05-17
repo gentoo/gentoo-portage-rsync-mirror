@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.214 2013/05/08 08:37:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.216 2013/05/17 00:52:46 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -10,9 +10,7 @@
 # 	Ciaran McCreesh <ciaranm@gentoo.org>
 #	Mike Kelly <pioto@gentoo.org>
 
-# This eclass handles vim, gvim and vim-core.  Support for -cvs ebuilds is
-# included in the eclass, since it's rather easy to do, but there are no
-# official vim*-cvs ebuilds in the tree.
+# This eclass handles vim, gvim and vim-core.
 
 # gvim's GUI preference order is as follows:
 # aqua                          CARBON (not tested)
@@ -37,10 +35,7 @@ case "${EAPI:-0}" in
 		;;
 esac
 
-# Support -cvs ebuilds, even though they're not in the official tree.
-MY_PN=${PN%-cvs}
-
-if [[ ${MY_PN} != "vim-core" ]] ; then
+if [[ ${PN} != "vim-core" ]] ; then
 	if [[ ${HAS_PYTHON_R1} ]]; then
 		PYTHON_REQ_USE=threads
 		inherit python-single-r1
@@ -52,15 +47,18 @@ if [[ ${MY_PN} != "vim-core" ]] ; then
 		inherit python
 	fi
 fi
+
 inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion-r1 prefix
+
+if [[ ${PV} == 9999* ]] ; then
+	inherit mercurial
+	EHG_REPO_URI="https://vim.googlecode.com/hg/"
+	EHG_PROJECT="vim"
+fi
 
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
-
-if [[ ${PN##*-} == "cvs" ]] ; then
-	inherit cvs
-fi
 
 IUSE="nls acl"
 
@@ -79,7 +77,7 @@ RDEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( virtual/libintl )"
 
-if [[ ${MY_PN} == "vim-core" ]] ; then
+if [[ ${PN} == "vim-core" ]] ; then
 	IUSE="${IUSE} livecd"
 	PDEPEND="!livecd? ( app-vim/gentoo-syntax )"
 else
@@ -116,7 +114,7 @@ else
 	# RDEPEND="${RDEPEND}
 	# 	mzscheme? ( dev-scheme/mzscheme )"
 
-	if [[ ${MY_PN} == vim ]] ; then
+	if [[ ${PN} == vim ]] ; then
 		IUSE="${IUSE} X minimal vim-pager"
 		DEPEND="${DEPEND}
 			X? ( x11-libs/libXt x11-libs/libX11
@@ -127,7 +125,7 @@ else
 			!minimal? ( ~app-editors/vim-core-${PV}
 				dev-util/ctags )
 			!<app-editors/nvi-1.81.5-r4"
-	elif [[ ${MY_PN} == gvim ]] ; then
+	elif [[ ${PN} == gvim ]] ; then
 		IUSE="${IUSE} aqua gnome gtk motif neXt netbeans"
 		DEPEND="${DEPEND}
 			dev-util/ctags
@@ -160,6 +158,8 @@ else
 			)"
 	fi
 fi
+
+S=${WORKDIR}/vim${VIM_VERSION/.}
 
 apply_vim_patches() {
 	local p
@@ -248,7 +248,7 @@ vim_pkg_setup() {
 	mkdir -p "${T}/home"
 	export HOME="${T}/home"
 
-	if [[ ${MY_PN} != "vim-core" ]] && use python; then
+	if [[ ${PN} != "vim-core" ]] && use python; then
 		if [[ ${HAS_PYTHON_R1} ]]; then
 			python-single-r1_pkg_setup
 		else
@@ -263,13 +263,7 @@ vim_pkg_setup() {
 
 vim_src_prepare() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
-	if [[ ${PN##*-} == cvs ]] ; then
-		ECVS_SERVER="vim.cvs.sourceforge.net:/cvsroot/vim"
-		ECVS_PASS=""
-		ECVS_MODULE="vim7"
-		ECVS_TOP_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/cvs-src/${ECVS_MODULE}"
-		cvs_src_unpack
-	else
+	if [[ ${PV} != 9999* ]] ; then
 		# Apply any patches available from vim.org for this version
 		if [[ $VIM_ORG_PATCHES == *.patch.bz2 ]]; then
 			einfo "Applying monolithic patch ${VIM_ORG_PATCHES}"
@@ -296,7 +290,7 @@ vim_src_prepare() {
 	if [[ -d "${WORKDIR}"/gentoo/patches-all/ ]]; then
 		EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
 			epatch "${WORKDIR}"/gentoo/patches-all/
-	elif [[ ${MY_PN} == "vim-core" ]] && [[ -d "${WORKDIR}"/gentoo/patches-core/ ]]; then
+	elif [[ ${PN} == "vim-core" ]] && [[ -d "${WORKDIR}"/gentoo/patches-core/ ]]; then
 		# Patches for vim-core only (runtime/*)
 		EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
 			epatch "${WORKDIR}"/gentoo/patches-core/
@@ -343,7 +337,7 @@ vim_src_prepare() {
 	find "${S}" -name '*.c' | while read c ; do echo >> "$c" ; done
 
 	# conditionally make the manpager.sh script
-	if [[ ${MY_PN} == vim ]] && use vim-pager ; then
+	if [[ ${PN} == vim ]] && use vim-pager ; then
 		cat <<END > "${S}"/runtime/macros/manpager.sh
 #!/bin/sh
 sed -e 's/\x1B\[[[:digit:]]\+m//g' | col -b | \\
@@ -371,11 +365,6 @@ END
 		sed -i "s:\\\$(PERLLIB)/ExtUtils/xsubpp:${EPREFIX}/usr/bin/xsubpp:"	\
 			"${S}"/src/Makefile || die 'sed for ExtUtils-ParseXS failed'
 	fi
-}
-
-vim_src_unpack() {
-	unpack ${A}
-	vim_src_prepare
 }
 
 vim_src_configure() {
@@ -410,8 +399,8 @@ vim_src_configure() {
 		[[ -e ${file} ]] && addwrite $file
 	done
 
-	if [[ ${MY_PN} == "vim-core" ]] ||
-			( [[ ${MY_PN} == vim ]] && use minimal ); then
+	if [[ ${PN} == "vim-core" ]] ||
+			( [[ ${PN} == vim ]] && use minimal ); then
 		myconf="--with-features=tiny \
 			--enable-gui=no \
 			--without-x \
@@ -450,7 +439,7 @@ vim_src_configure() {
 		#   VIMINIT='let OS=system("uname -s")' vim
 		# mzscheme support is currently broken. bug #91970
 		#myconf="${myconf} `use_enable mzscheme mzschemeinterp`"
-		if [[ ${MY_PN} == gvim ]] ; then
+		if [[ ${PN} == gvim ]] ; then
 			myconf="${myconf} `use_enable netbeans`"
 		fi
 
@@ -461,12 +450,12 @@ vim_src_configure() {
 				die "couldn't disable cscope"
 		fi
 
-		if [[ ${MY_PN} == vim ]] ; then
+		if [[ ${PN} == vim ]] ; then
 			# don't test USE=X here ... see bug #19115
 			# but need to provide a way to link against X ... see bug #20093
 			myconf="${myconf} --enable-gui=no --disable-darwin `use_with X x`"
 
-		elif [[ ${MY_PN} == gvim ]] ; then
+		elif [[ ${PN} == gvim ]] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
 
 			echo ; echo
@@ -495,11 +484,11 @@ vim_src_configure() {
 			echo ; echo
 
 		else
-			die "vim.eclass doesn't understand MY_PN=${MY_PN}"
+			die "vim.eclass doesn't understand PN=${PN}"
 		fi
 	fi
 
-	if [[ ${MY_PN} == vim ]] && use minimal ; then
+	if [[ ${PN} == vim ]] && use minimal ; then
 		myconf="${myconf} --disable-nls --disable-multibyte --disable-acl"
 	else
 		myconf="${myconf} `use_enable nls` `use_enable acl`"
@@ -513,7 +502,7 @@ vim_src_configure() {
 	# Keep Gentoo Prefix env contained within the EPREFIX
 	use prefix && myconf="${myconf} --without-local-dir"
 
-	if [[ ${MY_PN} == "*vim" ]] ; then
+	if [[ ${PN} == "*vim" ]] ; then
 		if [[ ${CHOST} == *-interix* ]]; then
 			# avoid finding of this function, to avoid having to patch either
 			# configure or the source, which would be much more hackish.
@@ -530,7 +519,7 @@ vim_src_compile() {
 	# The following allows emake to be used
 	emake -j1 -C src auto/osdef.h objects || die "make failed"
 
-	if [[ ${MY_PN} == "vim-core" ]] ; then
+	if [[ ${PN} == "vim-core" ]] ; then
 		emake tools || die "emake tools failed"
 		rm -f src/vim
 	else
@@ -550,7 +539,7 @@ vim_src_install() {
 	has "${EAPI:-0}" 0 1 2 && use !prefix && ED="${D}"
 	local vimfiles=/usr/share/vim/vim${VIM_VERSION/.}
 
-	if [[ ${MY_PN} == "vim-core" ]] ; then
+	if [[ ${PN} == "vim-core" ]] ; then
 		dodir /usr/{bin,share/{man/man1,vim}}
 		cd src || die "cd src failed"
 		make \
@@ -603,7 +592,7 @@ vim_src_install() {
 		# exist.
 		rm "${ED}${vimfiles}"/tools/{vimspell.sh,tcltags} 2>/dev/null
 
-	elif [[ ${MY_PN} == gvim ]] ; then
+	elif [[ ${PN} == gvim ]] ; then
 		dobin src/gvim
 		dosym gvim /usr/bin/gvimdiff
 		dosym gvim /usr/bin/evim
@@ -643,10 +632,10 @@ vim_src_install() {
 	fi
 
 	# bash completion script, bug #79018.
-	if [[ ${MY_PN} == "vim-core" ]] ; then
+	if [[ ${PN} == "vim-core" ]] ; then
 		newbashcomp "${FILESDIR}"/xxd-completion xxd
 	else
-		newbashcomp "${FILESDIR}"/${MY_PN}-completion ${MY_PN}
+		newbashcomp "${FILESDIR}"/${PN}-completion ${PN}
 	fi
 	# We shouldn't be installing the ex or view man page symlinks, as they
 	# are managed by eselect-vi
@@ -694,11 +683,11 @@ vim_pkg_postinst() {
 	update_vim_helptags
 
 	# Update fdo mime stuff, bug #78394
-	if [[ ${MY_PN} == gvim ]] ; then
+	if [[ ${PN} == gvim ]] ; then
 		fdo-mime_mime_database_update
 	fi
 
-	if [[ ${MY_PN} == vim ]] ; then
+	if [[ ${PN} == vim ]] ; then
 		if use X; then
 			echo
 			elog "The 'X' USE flag enables vim <-> X communication, like"
@@ -717,8 +706,9 @@ vim_pkg_postinst() {
 	echo
 	ewarn "Note that the English word lists are no longer installed by"
 	ewarn "default."
+	echo
 
-	if [[ ${MY_PN} != "vim-core" ]] ; then
+	if [[ ${PN} != "vim-core" ]] ; then
 		echo
 		elog "To see what's new in this release, use :help version${VIM_VERSION/.*/}.txt"
 	fi
@@ -732,18 +722,8 @@ vim_pkg_postinst() {
 		ewarn "happen again since the ebuild no longer sets VIMRUNTIME."
 	fi
 
-	# Scream loudly if the user is using a -cvs ebuild
-	if [[ -z "${PN/*-cvs/}" ]] ; then
-		ewarn
-		ewarn "You are using a -cvs ebuild. Be warned that this is not"
-		ewarn "officially supported and may not work."
-		ebeep 5
-	fi
-
-	echo
-
 	# Make convenience symlinks
-	if [[ ${MY_PN} != "vim-core" ]] ; then
+	if [[ ${PN} != "vim-core" ]] ; then
 		# But only for vim/gvim, bug #252724
 		update_vim_symlinks
 	fi
@@ -754,20 +734,20 @@ vim_pkg_postrm() {
 	update_vim_helptags
 
 	# Make convenience symlinks
-	if [[ ${MY_PN} != "vim-core" ]] ; then
+	if [[ ${PN} != "vim-core" ]] ; then
 		# But only for vim/gvim, bug #252724
 		update_vim_symlinks
 	fi
 
 	# Update fdo mime stuff, bug #78394
-	if [[ ${MY_PN} == gvim ]] ; then
+	if [[ ${PN} == gvim ]] ; then
 		fdo-mime_mime_database_update
 	fi
 }
 
 vim_src_test() {
 
-	if [[ ${MY_PN} == "vim-core" ]] ; then
+	if [[ ${PN} == "vim-core" ]] ; then
 		einfo "No testing needs to be done for vim-core"
 		return
 	fi
@@ -785,7 +765,7 @@ vim_src_test() {
 	# Don't let vim talk to X
 	unset DISPLAY
 
-	if [[ ${MY_PN} == gvim ]] ; then
+	if [[ ${PN} == gvim ]] ; then
 		# Make gvim not try to connect to X. See :help gui-x11-start
 		# in vim for how this evil trickery works.
 		ln -s "${S}"/src/gvim "${S}"/src/testvim
