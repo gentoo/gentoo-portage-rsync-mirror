@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.185 2013/03/21 15:12:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.186 2013/05/17 14:46:41 jer Exp $
+
+  17 May 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove media-libs/libcanberra[gtk] mask (bug #468984).
 
   21 Mar 2013; Jeroen Roovers <jer@gentoo.org> use.mask:
   Unmask USE=acl,attr (bug #212517).
