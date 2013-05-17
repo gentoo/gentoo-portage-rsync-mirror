@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.5-r1.ebuild,v 1.2 2013/04/24 14:27:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.6.ebuild,v 1.1 2013/05/17 13:41:03 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
@@ -26,7 +26,8 @@ RDEPEND="
 	>=sys-libs/ncurses-5.1
 	socks5? (
 		>=net-proxy/dante-1.1.12
-		virtual/pam )
+		virtual/pam
+	)
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.2.3 )
 		openssl? ( >=dev-libs/openssl-0.9.6 )
