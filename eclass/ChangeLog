@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.830 2013/05/17 11:27:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.831 2013/05/17 11:31:47 scarabeus Exp $
+
+  17 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> -php-ext-pecl-r1.eclass,
+  -php-ext-source-r1.eclass, -tla.eclass:
+  Remove eclasses marked as dead for quite some time.
 
   17 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> office-ext.eclass:
   Mark eclass as dead to be removed in 30 days.
