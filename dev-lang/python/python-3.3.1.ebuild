@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.1.ebuild,v 1.3 2013/05/09 17:48:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.1.ebuild,v 1.4 2013/05/18 13:13:35 zorry Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -214,8 +214,12 @@ src_compile() {
 	cd "${WORKDIR}"/${CHOST}
 	emake CPPFLAGS="" CFLAGS="" LDFLAGS="" || die "emake failed"
 
-	# Work around bug 329499. See also bug 413751.
-	pax-mark m python
+	# Work around bug 329499. See also bug 413751 and 457194.
+	if has_version dev-libs/libffi[pax_kernel]; then
+		pax-mark E python
+	else
+		pax-mark m python
+	fi
 }
 
 src_test() {

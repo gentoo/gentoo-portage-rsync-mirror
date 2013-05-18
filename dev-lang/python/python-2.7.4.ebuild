@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.8 2013/05/09 21:22:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.9 2013/05/18 13:13:35 zorry Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -252,8 +252,12 @@ src_compile() {
 	cd "${WORKDIR}"/${CHOST}
 	default
 
-	# Work around bug 329499. See also bug 413751.
-	pax-mark m python
+	# Work around bug 329499. See also bug 413751 and 457194.
+	if has_version dev-libs/libffi[pax_kernel]; then
+		pax-mark E python
+	else
+		pax-mark m python
+	fi
 }
 
 src_test() {
