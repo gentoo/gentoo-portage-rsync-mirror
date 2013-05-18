@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.278 2013/05/17 20:13:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.279 2013/05/18 17:21:28 zmedico Exp $
+
+  18 May 2013; Zac Medico <zmedico@gentoo.org> calibre-0.9.27.ebuild,
+  calibre-0.9.30.ebuild, calibre-0.9.31.ebuild:
+  Update LICENSE and remove non-free prs500 fonts for bug #470212.
 
 *calibre-0.9.31 (17 May 2013)
 

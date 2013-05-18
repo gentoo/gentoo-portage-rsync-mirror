@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.31.ebuild,v 1.1 2013/05/17 20:13:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.31.ebuild,v 1.2 2013/05/18 17:21:28 zmedico Exp $
 
 EAPI=5
 
@@ -10,7 +10,26 @@ DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
 SRC_URI="http://sourceforge.net/projects/calibre/files/${PV}/${P}.tar.xz"
 
-LICENSE="GPL-2"
+LICENSE="
+	GPL-3+
+	GPL-3
+	GPL-2+
+	GPL-2
+	GPL-1+
+	LGPL-3+
+	LGPL-2.1+
+	LGPL-2.1
+	BSD
+	MIT
+	Old-MIT
+	Apache-2.0
+	public-domain
+	|| ( Artistic GPL-1+ )
+	CC-BY-3.0
+	OFL-1.1
+	PSF-2
+	unRAR
+"
 
 KEYWORDS="~amd64 ~x86"
 
@@ -88,6 +107,9 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-no_updates_dialog.patch" \
 		"${FILESDIR}/${PN}-disable_plugins.patch"
+
+	# Remove non-free fonts (bug #470212).
+	rm -r resources/fonts/prs500 || die
 }
 
 src_install() {
