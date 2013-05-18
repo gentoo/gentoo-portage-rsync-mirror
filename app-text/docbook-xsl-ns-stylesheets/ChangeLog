@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xsl-ns-stylesheets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.45 2013/05/17 22:52:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.46 2013/05/18 20:36:53 ago Exp $
+
+  18 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  docbook-xsl-ns-stylesheets-1.78.0.ebuild:
+  Stable for alpha, wrt bug #461078
 
   17 May 2013; Agostino Sarubbo <ago@gentoo.org>
   docbook-xsl-ns-stylesheets-1.78.0.ebuild:

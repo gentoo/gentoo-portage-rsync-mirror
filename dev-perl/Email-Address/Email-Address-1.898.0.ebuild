@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/Email-Address-1.898.0.ebuild,v 1.6 2013/05/17 22:53:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/Email-Address-1.898.0.ebuild,v 1.7 2013/05/18 20:37:45 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="RFC 2822 Address Parsing and Creation"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="test"
 
 RDEPEND=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.120-r4.ebuild,v 1.7 2013/05/18 05:32:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.120-r4.ebuild,v 1.8 2013/05/18 20:50:49 ago Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ SRC_URI+=" taamey? ( $(printf "http://culmus.sourceforge.net/taamim/%s.zip " ${T
 
 LICENSE="|| ( GPL-2 LICENSE-BITSTREAM ) ancient? ( MIT ) fancy? ( GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ancient fancy fontforge taamey"
 
 FONT_CONF=( "${T}/65-culmus.conf" )

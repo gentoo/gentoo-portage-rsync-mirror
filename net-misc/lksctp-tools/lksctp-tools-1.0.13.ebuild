@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.13.ebuild,v 1.5 2013/05/16 15:49:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.13.ebuild,v 1.6 2013/05/18 20:46:10 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lksctp/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2+ LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ppc ppc64 ~sparc ~x86"
 IUSE="kernel_linux static-libs"
 
 # This is only supposed to work with Linux to begin with.

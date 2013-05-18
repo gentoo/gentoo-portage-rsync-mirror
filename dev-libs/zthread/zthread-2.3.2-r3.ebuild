@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r3.ebuild,v 1.4 2013/05/16 13:03:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r3.ebuild,v 1.5 2013/05/18 20:44:37 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/zthread/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ~mips ppc ~sparc ~x86"
 IUSE="debug doc kernel_linux static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"
