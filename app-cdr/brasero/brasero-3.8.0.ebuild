@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-3.8.0.ebuild,v 1.1 2013/03/28 16:14:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-3.8.0.ebuild,v 1.2 2013/05/18 14:45:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="CD/DVD burning application for the GNOME desktop"
 HOMEPAGE="http://projects.gnome.org/brasero/"
@@ -34,7 +34,8 @@ COMMON_DEPEND="
 		>=dev-libs/libisofs-0.6.4:= )
 	nautilus? ( >=gnome-base/nautilus-2.91.90 )
 	playlist? ( >=dev-libs/totem-pl-parser-2.29.1:= )
-	tracker? ( >=app-misc/tracker-0.12:= )"
+	tracker? ( >=app-misc/tracker-0.12:= )
+"
 RDEPEND="${COMMON_DEPEND}
 	media-libs/gst-plugins-good:1.0
 	media-plugins/gst-plugins-meta:1.0
@@ -47,33 +48,43 @@ RDEPEND="${COMMON_DEPEND}
 	mp3? (
 		media-libs/gst-plugins-ugly:1.0
 		media-plugins/gst-plugins-mad:1.0 )
-	packagekit? ( app-admin/packagekit-base )"
+	packagekit? ( app-admin/packagekit-base )
+"
 DEPEND="${COMMON_DEPEND}
+	app-text/yelp-tools
 	dev-util/intltool
 	>=dev-util/gtk-doc-am-1.12
 	gnome-base/gnome-common:3
 	sys-devel/gettext
 	virtual/pkgconfig
-	test? ( app-text/docbook-xml-dtd:4.3 )"
+	test? ( app-text/docbook-xml-dtd:4.3 )
+"
 # eautoreconf deps
 #	app-text/yelp-tools
 #	gnome-base/gnome-common
+
 PDEPEND="gnome-base/gvfs"
+
+src_prepare() {
+	# Simplify tracker version searching and support 0.16 API (from 'master')
+	epatch "${FILESDIR}/${P}-tracker-detection.patch"
+
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-	G2CONF="${G2CONF}
-		--disable-caches
-		$(use_enable !libburn cdrtools)
-		$(use_enable !libburn cdrkit)
-		$(use_enable !libburn cdrdao)
-		$(use_enable !libburn growisofs)
-		$(use_enable introspection)
-		$(use_enable libburn libburnia)
-		$(use_enable nautilus)
-		$(use_enable playlist)
-		$(use_enable tracker search)
-		ITSTOOL=$(type -P true)"
-
-	gnome2_src_configure
+	gnome2_src_configure \
+		--disable-caches \
+		$(use_enable !libburn cdrtools) \
+		$(use_enable !libburn cdrkit) \
+		$(use_enable !libburn cdrdao) \
+		$(use_enable !libburn growisofs) \
+		$(use_enable introspection) \
+		$(use_enable libburn libburnia) \
+		$(use_enable nautilus) \
+		$(use_enable playlist) \
+		$(use_enable tracker search) \
+		ITSTOOL=$(type -P true)
 }

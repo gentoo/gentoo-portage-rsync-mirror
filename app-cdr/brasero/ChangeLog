@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.152 2013/03/28 16:14:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.153 2013/05/18 14:45:20 pacho Exp $
+
+  18 May 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/brasero-3.8.0-tracker-detection.patch, brasero-3.8.0.ebuild:
+  Apply upstream patch for tracker detection (#464244 by Andreas Mielke).
 
 *brasero-3.8.0 (28 Mar 2013)
 

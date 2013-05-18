@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.1.201305171950_p1.ebuild,v 1.2 2013/05/18 14:15:33 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.1.201305171950_p1.ebuild,v 1.5 2013/05/18 14:51:00 zx2c4 Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ S=${WORKDIR}/${MY_P/_}
 
 src_prepare() {
 	epatch "${FILESDIR}"/build-warnings.patch
+	epatch_user
 	eautoreconf
 }
 
