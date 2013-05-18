@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.831 2013/05/17 11:31:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.832 2013/05/18 16:22:27 pacho Exp $
+
+  18 May 2013; Pacho Ramos <pacho@gentoo.org> readme.gentoo.eclass:
+  Add a note informing people a file is being installed for future reference,
+  http://www.mail-archive.com/gentoo-dev@lists.gentoo.org/msg58207.html
 
   17 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> -php-ext-pecl-r1.eclass,
   -php-ext-source-r1.eclass, -tla.eclass:

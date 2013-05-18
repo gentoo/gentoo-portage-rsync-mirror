@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.7.0.ebuild,v 1.2 2012/11/15 23:37:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.7.0.ebuild,v 1.3 2013/05/18 16:29:37 hasufell Exp $
 
 EAPI=4
 VIRTUALX_REQUIRED="manual"
 inherit eutils flag-o-matic cmake-utils virtualx wxwidgets gnome2-utils games
 
 DESCRIPTION="Cross-platform 3D realtime strategy game"
-HOMEPAGE="http://www.megaglest.org/"
+HOMEPAGE="http://megaglest.org/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.xz"
 
 LICENSE="GPL-3 BitstreamVera"
