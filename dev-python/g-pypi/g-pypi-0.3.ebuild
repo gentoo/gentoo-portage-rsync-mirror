@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.4 2013/01/06 19:58:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.5 2013/05/18 15:56:50 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -45,6 +45,11 @@ RDEPEND="
 "
 
 PYTHON_MODNAME="gpypi"
+
+src_prepare() {
+	distutils_src_prepare
+	sed -e "s:'argparse',::" -i setup.py || die
+}
 
 src_compile() {
 	distutils_src_compile

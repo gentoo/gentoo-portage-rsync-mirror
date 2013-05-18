@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.0.ebuild,v 1.1 2013/03/28 17:56:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.0.ebuild,v 1.2 2013/05/18 15:56:47 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -10,7 +10,7 @@ VALA_USE_DEPEND="vapigen"
 inherit eutils gnome.org linux-info systemd user toolchain-funcs vala virtualx udev
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
-HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
+HOMEPAGE="http://projects.gnome.org/NetworkManager/"
 
 LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
@@ -29,7 +29,8 @@ REQUIRED_USE="
 # gobject-introspection-0.10.3 is needed due to gnome bug 642300
 # wpa_supplicant-0.7.3-r3 is needed due to bug 359271
 # TODO: Qt support?
-COMMON_DEPEND=">=sys-apps/dbus-1.2
+COMMON_DEPEND="
+	>=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.94
 	>=dev-libs/glib-2.30
 	>=dev-libs/libnl-3.2.7:3=
@@ -108,6 +109,10 @@ src_prepare() {
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
 		-i */tests/*.py || die
+
+	# Fix completiondir, avoid eautoreconf, bug #465100
+	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
+		cli/completion/Makefile.in || die "sed completiondir failed"
 
 	epatch_user
 

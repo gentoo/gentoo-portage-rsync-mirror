@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.169 2013/03/28 17:56:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.170 2013/05/18 15:56:47 pacho Exp $
+
+  18 May 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.0.ebuild:
+  Add some fixes to the ebuild and fix bash-completion locations (#465100 by
+  poncho)
 
 *networkmanager-0.9.8.0 (28 Mar 2013)
 
