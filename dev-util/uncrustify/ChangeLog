@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/uncrustify
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.18 2012/05/08 08:17:05 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.19 2013/05/18 17:48:58 grobian Exp $
+
+*uncrustify-0.60 (18 May 2013)
+
+  18 May 2013; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.60.ebuild,
+  -uncrustify-0.57.ebuild:
+  Version bump, bug #469580
 
   08 May 2012; Fabian Groffen <grobian@gentoo.org> uncrustify-0.59.ebuild:
   Marked ~x64-solaris
@@ -78,4 +84,3 @@
   01 Oct 2009; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.52.ebuild,
   +metadata.xml:
   Initial version, ebuild by Nick Fortino and Mario Fetka, bug #208199
-

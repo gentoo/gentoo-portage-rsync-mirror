@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.151 2013/05/17 15:15:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.152 2013/05/18 17:32:07 idella4 Exp $
+
+  18 May 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4-CVE-2013-2072-XSA-56.patch, xen-tools-4.2.1-r3.ebuild,
+  xen-tools-4.2.2-r1.ebuild:
+  Add XSA-56 / CVE-2072 sec. patch
 
   17 May 2013; Ian Delaney <idella4@gentoo.org>
   +files/xen-tools-4-qemu-xen-doc.patch, xen-tools-4.2.1-r3.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r1.ebuild,v 1.3 2013/05/17 15:15:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r1.ebuild,v 1.4 2013/05/18 17:32:07 idella4 Exp $
 
 EAPI=5
 
@@ -202,7 +202,8 @@ src_prepare() {
 	#Security patches, currently valid
 	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
 		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
-		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA-49.patch
+		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA-49.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch
 
 	epatch_user
 }
