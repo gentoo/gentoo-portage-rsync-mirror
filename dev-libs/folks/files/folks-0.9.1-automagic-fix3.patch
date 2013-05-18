@@ -1,0 +1,24 @@
+From a24ec72eecd68cda328cd93f8896e3c1d9952452 Mon Sep 17 00:00:00 2001
+From: Travis Reitter <travis.reitter@collabora.co.uk>
+Date: Fri, 26 Apr 2013 00:45:42 +0000
+Subject: Correctly check for existence of Zeitgeist.
+
+---
+diff --git a/configure.ac b/configure.ac
+index 117ff4a..de10a95 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -207,8 +207,9 @@ AS_IF([test x$enable_telepathy_backend = xyes], [
+ case "x$enable_zeitgeist" in
+   xyes)
+     AS_IF([test x$enable_telepathy_backend = xyes],
+-          [PKG_CHECK_MODULES([ZEITGEIST], [zeitgeist-1.0 >= $ZEITGEIST_REQUIRED])]
+-          [AC_MSG_ERROR([Zeitgeist support requires Zeitgeist development package])])
++          [PKG_CHECK_MODULES([ZEITGEIST], [zeitgeist-1.0 >= $ZEITGEIST_REQUIRED], 
++           ,
++           [AC_MSG_ERROR([Zeitgeist support requires Zeitgeist development package])])])
+     have_zeitgeist=yes
+     ;;
+   xauto)
+--
+cgit v0.9.1

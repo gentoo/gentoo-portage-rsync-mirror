@@ -1,0 +1,21 @@
+From 204c5394a7120b4ad6f4e90efb4d1b03daa08cf4 Mon Sep 17 00:00:00 2001
+From: Travis Reitter <travis.reitter@collabora.co.uk>
+Date: Wed, 24 Apr 2013 18:22:15 +0000
+Subject: Correct the terminology in Zeitgeist check failure
+
+---
+diff --git a/configure.ac b/configure.ac
+index 2798c25..117ff4a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -208,7 +208,7 @@ case "x$enable_zeitgeist" in
+   xyes)
+     AS_IF([test x$enable_telepathy_backend = xyes],
+           [PKG_CHECK_MODULES([ZEITGEIST], [zeitgeist-1.0 >= $ZEITGEIST_REQUIRED])]
+-          [AC_MSG_ERROR([Zeitgeist backend requires telepathy])])
++          [AC_MSG_ERROR([Zeitgeist support requires Zeitgeist development package])])
+     have_zeitgeist=yes
+     ;;
+   xauto)
+--
+cgit v0.9.1

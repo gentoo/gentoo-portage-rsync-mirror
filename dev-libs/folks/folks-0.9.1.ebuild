@@ -1,22 +1,22 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.1.ebuild,v 1.1 2013/03/28 23:07:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.1.ebuild,v 1.2 2013/05/18 19:16:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome2 vala virtualx
+inherit autotools eutils gnome2 vala virtualx
 
-DESCRIPTION="libfolks is a library that aggregates people from multiple sources"
-HOMEPAGE="http://telepathy.freedesktop.org/wiki/Folks"
+DESCRIPTION="Library for aggregating people from multiple sources"
+HOMEPAGE="https://live.gnome.org/Folks"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/25" # subslot = libfolks soname version
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 # TODO: --enable-profiling
-IUSE="eds socialweb +telepathy test tracker utils vala"
+IUSE="eds socialweb +telepathy test tracker utils vala zeitgeist"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
@@ -28,10 +28,9 @@ COMMON_DEPEND="
 
 	eds? ( >=gnome-extra/evolution-data-server-3.7.90:= )
 	socialweb? ( >=net-libs/libsocialweb-0.25.20 )
-	telepathy? (
-		>=dev-libs/libzeitgeist-0.3.14:=
-		>=net-libs/telepathy-glib-0.19 )
+	telepathy? ( >=net-libs/telepathy-glib-0.19 )
 	tracker? ( >=app-misc/tracker-0.16:= )
+	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14:= )
 "
 # telepathy-mission-control needed at runtime; it is used by the telepathy
 # backend via telepathy-glib's AccountManager binding.
@@ -57,29 +56,30 @@ DEPEND="${COMMON_DEPEND}
 REQUIRED_USE="utils? ( vala )"
 
 src_prepare() {
-	local vala_version=$(vala_best_api_version)
-	# Rebuilding docs needs valadoc, which has no release
-	G2CONF="${G2CONF}
-		$(use_enable eds eds-backend)
-		$(use_enable socialweb libsocialweb-backend)
-		$(use_enable telepathy telepathy-backend)
-		$(use_enable tracker tracker-backend)
-		$(use_enable utils inspect-tool)
-		$(use_enable vala)
-		$(use_enable test tests)
-		--enable-import-tool
-		--disable-docs
-		--disable-fatal-warnings
-		VALAC=$(type -p valac-${vala_version})
-		VAPIGEN=$(type -p vapigen-${vala_version})"
+	# Fix automagic dependency on zeitgeist, bug #466378
+	epatch "${FILESDIR}"/${P}-automagic-fix{1,2,3}.patch
 
-	# We don't need vala_src_prepare
+	eautoreconf
 	gnome2_src_prepare
+	use vala && vala_src_prepare
+}
+
+src_configure() {
+	# Rebuilding docs needs valadoc, which has no release
+	gnome2_src_configure \
+		$(use_enable eds eds-backend) \
+		$(use_enable socialweb libsocialweb-backend) \
+		$(use_enable telepathy telepathy-backend) \
+		$(use_enable tracker tracker-backend) \
+		$(use_enable utils inspect-tool) \
+		$(use_enable vala) \
+		$(use_enable test tests) \
+		$(use_enable zeitgeist) \
+		--enable-import-tool \
+		--disable-docs \
+		--disable-fatal-warnings
 }
 
 src_test() {
-	# FIXME: eds tests often fails for no good reason
-	#sed -e 's/check: .*/check: /' \
-	#	-i tests/eds/Makefile || die "sed failed"
 	dbus-launch Xemake check
 }
