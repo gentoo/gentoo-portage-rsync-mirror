@@ -1,0 +1,9 @@
+# ChangeLog for sci-electronics/qucs
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.26 2013/05/18 16:38:02 mgorny Exp $
+
+*qucs-0.0.17.130503 (18 May 2013)
+
+  18 May 2013; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +qucs-0.0.17.130503.ebuild:
+  Introduce a snapshot of Quite Universal Circuit Simulator, Qt4 version.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.1_p1.ebuild,v 1.5 2013/05/18 14:50:40 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.1_p1.ebuild,v 1.6 2013/05/18 16:36:15 zx2c4 Exp $
 
 EAPI=5
 
@@ -9,6 +9,7 @@ inherit multilib user flag-o-matic eutils pam toolchain-funcs autotools versiona
 DESCRIPTION="Lightweight but featured SMTP daemon from OpenBSD"
 HOMEPAGE="http://www.opensmtpd.org/"
 MY_DP="${P}"
+
 if [ $(get_last_version_component_index) -eq 4 ]; then
 	MY_DP="${PN}-$(get_version_component_range 4-)"
 	MY_P="${PN}-${PV/.$(get_version_component_range 4)}"
@@ -44,6 +45,7 @@ S=${WORKDIR}/${MY_P/_}
 
 src_prepare() {
 	epatch "${FILESDIR}"/build-warnings.patch
+	epatch_user
 	eautoreconf
 }
 
