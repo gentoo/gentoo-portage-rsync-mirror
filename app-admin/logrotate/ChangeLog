@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.140 2013/05/10 19:52:17 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.141 2013/05/18 09:41:04 nimiux Exp $
+
+  18 May 2013; Chema Alonso <nimiux@gentoo.org> files/logrotate.conf:
+  Load all common settings before including specific files. Bug 469908 by Hank
+  Leininger
 
   10 May 2013; Chema Alonso <nimiux@gentoo.org>
   -files/logrotate-3.7.7-datehack.patch,
