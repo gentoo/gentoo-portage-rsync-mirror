@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.6.ebuild,v 1.6 2012/12/15 19:34:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.6.ebuild,v 1.7 2013/05/18 21:41:37 swegener Exp $
 
 EAPI="2"
 
@@ -9,15 +9,15 @@ PYTHON_DEPEND="2"
 inherit linux-info python
 
 DESCRIPTION="A linux trace/probe tool"
-HOMEPAGE="http://sourceware.org/systemtap/"
+HOMEPAGE="http://www.sourceware.org/systemtap/"
 if [[ ${PV} = *_pre* ]] # is this a snaphot?
 then
 	# see configure.ac to get the version of the snapshot
-	SRC_URI="http://sources.redhat.com/${PN}/ftp/snapshots/${PN}-${PV/*_pre/}.tar.bz2
+	SRC_URI="http://www.sourceware.org/${PN}/ftp/snapshots/${PN}-${PV/*_pre/}.tar.bz2
 		mirror://gentoo/${PN}-${PV/*_pre/}.tar.bz2" # upstream only keeps four snapshot distfiles around
 	S="${WORKDIR}"/src
 else
-	SRC_URI="http://sources.redhat.com/${PN}/ftp/releases/${P}.tar.gz"
+	SRC_URI="http://www.sourceware.org/${PN}/ftp/releases/${P}.tar.gz"
 	# use default S for releases
 fi
 

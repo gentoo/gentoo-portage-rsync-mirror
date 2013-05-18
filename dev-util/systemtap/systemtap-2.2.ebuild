@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.0.ebuild,v 1.7 2013/05/18 21:41:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.2.ebuild,v 1.1 2013/05/18 21:46:03 swegener Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gettext.patch
+	epatch "${FILESDIR}"/${PN}-2.0-gettext.patch
 	python_convert_shebangs 2 dtrace.in
 
 	sed -i \
@@ -49,8 +49,6 @@ src_prepare() {
 		staprun/Makefile.am \
 		stapdyn/Makefile.am \
 		buildrun.cxx \
-		runtime/bench2/bench.rb \
-		runtime/bench2/Makefile \
 		testsuite/systemtap.unprivileged/unprivileged_probes.exp \
 		testsuite/systemtap.unprivileged/unprivileged_myproc.exp \
 		testsuite/systemtap.base/stmt_rel_user.exp \
