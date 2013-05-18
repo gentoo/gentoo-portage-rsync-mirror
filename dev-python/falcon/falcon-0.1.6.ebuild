@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.4.ebuild,v 1.1 2013/05/11 20:49:15 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.6.ebuild,v 1.1 2013/05/18 19:55:42 rafaelmartins Exp $
 
 EAPI=5
 
