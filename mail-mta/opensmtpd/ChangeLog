@@ -1,6 +1,16 @@
 # ChangeLog for mail-mta/opensmtpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.7 2013/04/22 12:04:30 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.9 2013/05/18 14:15:33 zx2c4 Exp $
+
+  18 May 2013; Jason A. Donenfeld <zx2c4@gentoo.org>
+  opensmtpd-5.3.1.201305171950_p1.ebuild, opensmtpd-5.3.1_p1.ebuild:
+  Basic QA on source folder.
+
+*opensmtpd-5.3.1.201305171950_p1 (18 May 2013)
+
+  18 May 2013; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +opensmtpd-5.3.1.201305171950_p1.ebuild, opensmtpd-5.3.1_p1.ebuild:
+  Latest snapshot that fixes SSL DoS.
 
 *opensmtpd-5.3.1_p1 (22 Apr 2013)
 
