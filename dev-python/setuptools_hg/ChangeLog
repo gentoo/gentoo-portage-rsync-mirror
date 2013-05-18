@@ -1,9 +1,13 @@
 # ChangeLog for dev-python/setuptools_hg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools_hg/ChangeLog,v 1.1 2012/05/08 12:34:06 iksaif Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools_hg/ChangeLog,v 1.2 2013/05/18 12:57:47 idella4 Exp $
+
+*setuptools_hg-0.4-r1 (18 May 2013)
+
+  18 May 2013; Ian Delaney <idella4@gentoo.org> +setuptools_hg-0.4-r1.ebuild:
+  revbump; migrate -> distutils-r1
 
 *setuptools_hg-0.4 (08 May 2012)
 
   08 May 2012;  <iksaif@gentoo.org> +metadata.xml, +setuptools_hg-0.4.ebuild:
   New ebuild for setuptools_hg.
-
