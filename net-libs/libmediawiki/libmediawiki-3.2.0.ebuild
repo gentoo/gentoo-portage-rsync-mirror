@@ -1,10 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-3.2.0_beta2.ebuild,v 1.1 2013/05/11 13:36:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/libmediawiki-3.2.0.ebuild,v 1.1 2013/05/18 19:00:55 dilfridge Exp $
 
-EAPI=5
-
-DIGIKAMPN=digikam
+EAPI=4
 
 KDE_LINGUAS=""
 KDE_MINIMAL="4.10"
@@ -15,18 +13,21 @@ inherit kde4-base
 
 MY_PV=${PV/_/-}
 MY_P="digikam-${MY_PV}"
-SRC_URI="mirror://kde/unstable/digikam/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/digikam/${MY_P}.tar.bz2"
 
-DESCRIPTION="Qt/C++ wrapper around LibFace to perform face recognition and detection"
+DESCRIPTION="KDE C++ interface for MediaWiki based web service as wikipedia.org"
 HOMEPAGE="http://www.digikam.org/"
 
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 SLOT=4
 
-DEPEND="media-libs/opencv"
+DEPEND=""
 RDEPEND=${DEPEND}
+
+#Tests from bug 420205 now hang
+RESTRICT=test
 
 S=${WORKDIR}/${MY_P}/extra/${PN}
 
