@@ -8,5 +8,5 @@ RDEPEND=!app-arch/upx-ucl
 RESTRICT=strip
 SLOT=0
 SRC_URI=x86? ( http://upx.sourceforge.net/download/upx-3.08-i386_linux.tar.bz2 ) amd64? ( http://upx.sourceforge.net/download/upx-3.08-amd64_linux.tar.bz2 ) ppc? ( http://upx.sourceforge.net/download/upx-3.08-powerpc_linux.tar.bz2 ) arm? ( http://upx.sourceforge.net/download/upx-3.08-armeb_linux.tar.bz2 ) mips? ( http://upx.sourceforge.net/download/upx-3.08-mipsel_linux.tar.bz2 )
-_eclasses_=pax-utils	d727728a240d5f59bf9370a64259fd61
+_eclasses_=pax-utils	2424f959506320f5196de8f79fa05297
 _md5_=c10a391812a472b07db38bc4ab973ec8

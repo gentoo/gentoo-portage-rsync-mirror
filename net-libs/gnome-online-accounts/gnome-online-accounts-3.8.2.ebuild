@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.2.ebuild,v 1.1 2013/05/14 21:29:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.2.ebuild,v 1.2 2013/05/18 13:49:51 pacho Exp $
 
 EAPI="5"
 inherit gnome2
@@ -20,6 +20,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="
 	>=dev-libs/glib-2.35:2
 	app-crypt/libsecret
+	>=dev-libs/json-c-0.10-r1
 	dev-libs/json-glib
 	dev-libs/libxml2:2
 	>=net-libs/libsoup-2.42:2.4

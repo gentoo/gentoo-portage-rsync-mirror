@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.3 2013/04/19 13:38:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.4 2013/05/18 13:48:37 lxnay Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ PYTHON_DEPEND="python? 2"
 [[ ${PV} == *9999 ]] && SCM="git-2"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
 
-inherit toolchain-funcs eutils elisp-common perl-module bash-completion-r1 python ${SCM}
+inherit toolchain-funcs eutils elisp-common perl-module bash-completion-r1 python systemd ${SCM}
 
 MY_PV="${PV/_rc/.rc}"
 MY_P="${PN}-${MY_PV}"
@@ -480,6 +480,8 @@ src_install() {
 	if use !prefix ; then
 		newinitd "${FILESDIR}"/git-daemon.initd git-daemon
 		newconfd "${FILESDIR}"/git-daemon.confd git-daemon
+		systemd_newunit "${FILESDIR}/git-daemon_at.service" "git-daemon@.service"
+		systemd_dounit "${FILESDIR}/git-daemon.socket"
 	fi
 
 	fixlocalpod

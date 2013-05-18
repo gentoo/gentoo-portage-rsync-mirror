@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.20 2013/04/09 23:43:53 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.21 2013/05/18 13:43:20 zorry Exp $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:
@@ -41,7 +41,7 @@ PAX_MARKINGS=${PAX_MARKINGS:="PT"}
 # Flags are passed directly to the utilities unchanged
 #
 #	p: disable PAGEEXEC		P: enable PAGEEXEC
-#	e: disable EMUTRMAP		E: enable EMUTRMAP
+#	e: disable EMUTRAMP		E: enable EMUTRAMP
 #	m: disable MPROTECT		M: enable MPROTECT
 #	r: disable RANDMMAP		R: enable RANDMMAP
 #	s: disable SEGMEXEC		S: enable SEGMEXEC
