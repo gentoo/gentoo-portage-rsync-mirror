@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.31 2013/05/15 07:48:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.32 2013/05/19 12:44:36 zorry Exp $
+
+  19 May 2013; Magnus Granberg <zorry@gentoo.org> gnome-shell-3.6.3.1.ebuild,
+  gnome-shell-3.8.2.ebuild:
+  Add new pax mark see #457194 and #457146
 
 *gnome-shell-3.8.2 (15 May 2013)
 
