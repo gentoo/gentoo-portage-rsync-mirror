@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/ruby-mode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.41 2009/11/24 21:18:53 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.42 2013/05/19 07:43:50 graaff Exp $
+
+*ruby-mode-1.9.3_p429 (19 May 2013)
+
+  19 May 2013; Hans de Graaff <graaff@gentoo.org> +ruby-mode-1.9.3_p429.ebuild,
+  +files/ruby-mode-1.9.3_p429-last-command-char.patch:
+  Version bump to latest ruby version in tree. Add additional upstream fix for
+  obsolete last-command-char use.
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   ruby-mode-1.8.6.ebuild, ruby-mode-1.9.1_pre1.ebuild,
