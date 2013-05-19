@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.6.3.1.ebuild,v 1.2 2013/05/19 12:44:36 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.6.3.1.ebuild,v 1.3 2013/05/19 20:42:05 zorry Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -151,7 +151,7 @@ src_install() {
 	# Required for gnome-shell on hardened/PaX #457146 and #457194
 	# PaX EMUTRAMP need to be on
 	if has_version '>=dev-libs/libffi-3.0.13[pax_kernel]'; then
-		pax-make E "${ED}usr/bin/gnome-shell"
+		pax-mark E "${ED}usr/bin/gnome-shell"
 	fi
 }
 
