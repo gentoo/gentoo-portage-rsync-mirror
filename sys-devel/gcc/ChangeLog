@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.949 2013/05/15 02:43:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.950 2013/05/19 14:12:15 blueness Exp $
+
+  19 May 2013; Anthony G. Basile <blueness@gentoo.org> gcc-4.8.0.ebuild:
+  PIE/SSP work on mips for both glibc and uclibc
 
   15 May 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.4.3-r3.ebuild,
   gcc-4.4.4-r2.ebuild, gcc-4.4.5.ebuild, gcc-4.4.6-r1.ebuild, gcc-4.4.7.ebuild,

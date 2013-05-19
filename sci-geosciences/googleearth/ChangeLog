@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.49 2013/04/21 19:21:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.50 2013/05/19 14:14:09 hasufell Exp $
+
+*googleearth-7.1.1.1580 (19 May 2013)
+
+  19 May 2013; Julian Ospald <hasufell@gentoo.org>
+  +googleearth-7.1.1.1580.ebuild,
+  +files/googleearth-7.1.1.1580-desktopfile.patch:
+  version bump wrt #466910 thanks to Magnus Kessler for the patchelf hint
 
   21 Apr 2013; Michał Górny <mgorny@gentoo.org>
   googleearth-5.1.3535.3218-r1.ebuild, googleearth-5.2.1.1588.ebuild,
