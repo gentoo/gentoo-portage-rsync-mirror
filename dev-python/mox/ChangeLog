@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/ChangeLog,v 1.4 2013/03/11 00:34:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/ChangeLog,v 1.5 2013/05/19 10:15:44 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> mox-0.5.3-r1.ebuild:
+  Stable for amd64, wrt bug #470454
 
 *mox-0.5.3-r1 (11 Mar 2013)
 
@@ -17,4 +20,3 @@
 
   20 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> +mox-0.5.3.ebuild:
   Initial commit wrt #295344 by Marco Simeone.
-

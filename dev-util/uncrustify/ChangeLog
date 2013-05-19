@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.19 2013/05/18 17:48:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.20 2013/05/19 10:14:10 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> uncrustify-0.59.ebuild:
+  Stable for amd64, wrt bug #470276
 
 *uncrustify-0.60 (18 May 2013)
 
