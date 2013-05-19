@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.27.ebuild,v 1.5 2013/05/18 17:21:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.27.ebuild,v 1.6 2013/05/18 23:07:28 zmedico Exp $
 
 EAPI=5
 
@@ -9,6 +9,9 @@ inherit eutils fdo-mime bash-completion-r1 multilib toolchain-funcs
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
 SRC_URI="http://sourceforge.net/projects/calibre/files/${PV}/${P}.tar.xz"
+
+# Restrict mirror due non-free prs500 fonts (bug #470212).
+RESTRICT="mirror"
 
 LICENSE="
 	GPL-3+
