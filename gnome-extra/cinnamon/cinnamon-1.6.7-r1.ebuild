@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.6.7-r1.ebuild,v 1.1 2013/01/07 05:13:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.6.7-r1.ebuild,v 1.2 2013/05/19 13:40:14 zorry Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -191,8 +191,9 @@ src_install() {
 		-i "${ED}usr/bin/cinnamon-"{launcher,menu-editor,settings} \
 		-i "${ED}usr/$(get_libdir)/cinnamon-settings/cinnamon-settings.py" || die
 
-	# Required for gnome-shell on hardened/PaX, bug #398941
-	pax-mark mr "${ED}usr/bin/cinnamon"
+	# Required for gnome-shell on hardened/PaX, bug #398941 and #457194
+	# PaX EMUTRAMP need to be on
+	pax-mark mrE "${ED}usr/bin/cinnamon"
 }
 
 pkg_postinst() {
