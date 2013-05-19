@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="3.6.4.3"
-BINVERSION="3.6.4.3"
+VERSION="3.6.6.2"
+BINVERSION="3.6.6.2"
 OPTS="-v"
 USEFILE="/etc/portage/package.use/libreo"
 MYPKGDIR="$( portageq pkgdir )"

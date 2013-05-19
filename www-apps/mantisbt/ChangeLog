@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.121 2013/05/11 18:59:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.123 2013/05/19 15:07:59 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> mantisbt-1.2.15.ebuild:
+  Stable for x86, wrt bug #443106
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> mantisbt-1.2.15.ebuild:
+  Stable for amd64, wrt bug #443106
 
 *mantisbt-1.2.15 (11 May 2013)
 
