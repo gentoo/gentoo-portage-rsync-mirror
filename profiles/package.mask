@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14762 2013/05/18 21:41:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14763 2013/05/19 09:30:38 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (19 May 2013)
+# Unclear license. Bug #452418
+# Removal in 30 days
+x11-themes/pekwm-themes-hewphoria
 
 # Maxim Koltsov <maksbotan@gentoo.org> (16 May 2013)
 # Needs masked ffmpeg-9
