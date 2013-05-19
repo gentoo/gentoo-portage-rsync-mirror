@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.1.1.ebuild,v 1.1 2013/03/17 19:36:34 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.1.3.ebuild,v 1.1 2013/05/19 12:03:41 thev00d00 Exp $
 
 EAPI=5
 

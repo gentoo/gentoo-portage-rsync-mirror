@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlrd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.12 2013/03/10 07:33:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.13 2013/05/19 12:26:30 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> xlrd-0.9.0.ebuild:
+  Stable for amd64, wrt bug #470626
 
   10 Mar 2013; Ian Delaney <idella4@gentoo.org> -xlrd-0.7.1.ebuild,
   -xlrd-0.7.3.ebuild:
