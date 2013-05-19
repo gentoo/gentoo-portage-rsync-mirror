@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/tox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.9 2013/03/10 14:15:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.10 2013/05/19 10:32:53 djc Exp $
+
+  19 May 2013; Dirkjan Ochtman <djc@gentoo.org> -tox-1.3.ebuild,
+  -tox-1.4.2.ebuild, -tox-1.4.ebuild, tox-1.4.3.ebuild:
+  Remove old versions.
 
 *tox-1.4.3 (10 Mar 2013)
 
