@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1267 2013/05/16 13:59:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1269 2013/05/19 00:14:30 zmedico Exp $
+
+*portage-2.2.0_alpha176 (19 May 2013)
+
+  19 May 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha176.ebuild,
+  -portage-2.2.0_alpha174.ebuild:
+  2.2.0_alpha176 version bump. This includes all of the fixes in 2.1.12.1. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.12.1 (19 May 2013)
+
+  19 May 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.12.1.ebuild,
+  -portage-2.1.11.63.ebuild:
+  2.1.12.1 version bump. This fixes bug #469332 (clarify RESTRICT=test build log
+  message), bug #470002 (support PORTAGE_SSH_OPTS), bug #470152 (document ssh
+  protocol usage for SYNC variable), bug #470154 (update docs to refer to
+  metadata/md5-cache), bug #470224 (trigger QA notice for gcc -Wsizeof-pointer-
+  memaccess warnings), bug #470238 (fix emerge --fetch interaction with
+  --digest), and bug #470258 (fix tigetstr for pypy-2.0_beta2). Bug #468524
+  tracks all bugs fixed since portage-2.1.11.62.
 
   16 May 2013; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Eliminate subshell in boolean expression.

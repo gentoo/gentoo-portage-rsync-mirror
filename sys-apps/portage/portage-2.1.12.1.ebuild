@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.63.ebuild,v 1.2 2013/05/06 21:42:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.12.1.ebuild,v 1.1 2013/05/19 00:12:51 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -400,5 +400,29 @@ pkg_preinst() {
 		ewarn "FEATURES=config-protect-if-modified is now enabled by default."
 		ewarn "This causes the CONFIG_PROTECT behavior to be skipped for"
 		ewarn "files that have not been modified since they were installed."
+	fi
+
+	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
+	# assume that the NEEDED.ELF.2 files have already been generated.
+	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
+		! { [ -e "${ROOT}"var/lib/portage/preserved_libs_registry ] && \
+		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ; } \
+		&& NEEDED_REBUILD_UPGRADE=true || NEEDED_REBUILD_UPGRADE=false
+}
+
+pkg_postinst() {
+	if ${NEEDED_REBUILD_UPGRADE} ; then
+		einfo "rebuilding NEEDED.ELF.2 files"
+		local cpv filename line newline
+		for cpv in "${ROOT}/var/db/pkg"/*/*; do
+			[[ -f "${cpv}/NEEDED" && ! -f "${cpv}/NEEDED.ELF.2" ]] || continue
+			while read -r line; do
+				filename=${line% *}
+				newline=$(scanelf -BF "%a;%F;%S;%r;%n" "${ROOT%/}${filename}")
+				newline=${newline//  -  }
+				[[ ${#ROOT} -gt 1 ]] && newline=${newline/${ROOT%/}}
+				echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
+			done < "${cpv}/NEEDED"
+		done
 	fi
 }

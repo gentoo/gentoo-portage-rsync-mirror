@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha174.ebuild,v 1.2 2013/05/06 21:42:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha176.ebuild,v 1.1 2013/05/19 00:14:30 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -96,7 +96,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=2.2.0_alpha170
+TARBALL_PV=2.2.0_alpha175
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -300,9 +300,6 @@ src_prepare() {
 			|| die "failed to append to make.globals"
 	fi
 
-	echo -e '\nFEATURES="${FEATURES} preserve-libs"' >> cnf/make.globals \
-		|| die "failed to append to make.globals"
-
 	cd "${S}/cnf" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
 		patch make.conf "make.conf.${ARCH}".diff || \
@@ -424,8 +421,8 @@ pkg_preinst() {
 	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
 	# assume that the NEEDED.ELF.2 files have already been generated.
 	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! ( [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
-		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ) \
+		! { [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
+		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ; } \
 		&& NEEDED_REBUILD_UPGRADE=true || NEEDED_REBUILD_UPGRADE=false
 }
 
@@ -438,22 +435,18 @@ pkg_postinst() {
 		sed -i -e '/^@/d' world
 	fi
 
-	if $NEEDED_REBUILD_UPGRADE ; then
+	if ${NEEDED_REBUILD_UPGRADE} ; then
 		einfo "rebuilding NEEDED.ELF.2 files"
+		local cpv filename line newline
 		for cpv in "${EROOT}/var/db/pkg"/*/*; do
-			if [ -f "${cpv}/NEEDED" ]; then
-				rm -f "${cpv}/NEEDED.ELF.2"
-				while read line; do
-					filename=${line% *}
-					needed=${line#* }
-					needed=${needed//+/++}
-					needed=${needed//#/##}
-					needed=${needed//%/%%}
-					newline=$(scanelf -BF "%a;%F;%S;%r;${needed}" $filename)
-					newline=${newline//  -  }
-					echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
-				done < "${cpv}/NEEDED"
-			fi
+			[[ -f "${cpv}/NEEDED" && ! -f "${cpv}/NEEDED.ELF.2" ]] || continue
+			while read -r line; do
+				filename=${line% *}
+				newline=$(scanelf -BF "%a;%F;%S;%r;%n" "${ROOT%/}${filename}")
+				newline=${newline//  -  }
+				[[ ${#ROOT} -gt 1 ]] && newline=${newline/${ROOT%/}}
+				echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
+			done < "${cpv}/NEEDED"
 		done
 	fi
 }
