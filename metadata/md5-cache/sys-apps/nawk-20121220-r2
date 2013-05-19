@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst postrm prepare
-DEPEND=app-admin/eselect-awk virtual/yacc
+DEPEND=app-admin/eselect-awk !sys-freebsd/freebsd-ubin virtual/yacc
 DESCRIPTION=Brian Kernighan's pattern scanning and processing language
 EAPI=4
 HOMEPAGE=http://cm.bell-labs.com/cm/cs/awkbook/index.html
-KEYWORDS=~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-macos
+KEYWORDS=~amd64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-macos
 LICENSE=MIT
-RDEPEND=app-admin/eselect-awk
+RDEPEND=app-admin/eselect-awk !sys-freebsd/freebsd-ubin
 SLOT=0
 SRC_URI=mirror://gentoo.org/nawk-20121220.tar.gz
 _eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6fac4fa76ccf36b93e4d7b4f70f433e6
+_md5_=6ad630826268cad009265ca65d21566b
