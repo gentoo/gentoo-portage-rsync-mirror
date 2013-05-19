@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.312 2013/05/16 13:15:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.313 2013/05/19 16:23:00 angelos Exp $
+
+  19 May 2013; Christoph Mende <angelos@gentoo.org> files/mpd.init:
+  Fix typo in init script (bug #470010)
 
   16 May 2013; Agostino Sarubbo <ago@gentoo.org> mpd-0.17.4-r2.ebuild:
   Stable for ppc, wrt bug #469472
