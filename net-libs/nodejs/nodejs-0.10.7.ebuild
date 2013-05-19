@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.5.ebuild,v 1.2 2013/04/27 15:17:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.7.ebuild,v 1.1 2013/05/19 05:52:51 patrick Exp $
 
 EAPI=5
 

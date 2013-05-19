@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.5 2013/05/07 16:50:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.6 2013/05/19 05:36:27 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
@@ -62,7 +62,7 @@ uclibc_endian() {
 }
 
 pkg_setup() {
-	if [ ${CTARGET} == ${CHOST} ] ; then
+	if [ ${CTARGET} = ${CHOST} ] ; then
 		case ${CHOST} in
 		*-uclinux*|*-uclibc*) ;;
 		*) die "Use sys-devel/crossdev to build a uclibc toolchain" ;;
@@ -70,47 +70,14 @@ pkg_setup() {
 	fi
 }
 
-# XXX: We should kill these off.
-CPU_ALPHA=""
-CPU_AMD64=""
-CPU_ARM="GENERIC_ARM ARM{610,710,7TDMI,720T,920T,922T,926T,10T,1136JF_S,1176JZ{_,F_}S,_{SA110,SA1100,XSCALE,IWMMXT},_CORTEX_{M3,M1}}"
-CPU_IA64=""
-CPU_M68K=""
-CPU_MIPS="MIPS_ISA_{1,2,3,4,MIPS{32{,R2},64}} MIPS_{N64,O32,N32}_ABI"
-CPU_PPC=""
-CPU_SH="SH{2,2A,3,4,5}"
-CPU_SPARC="SPARC_V{7,8,9,9B}"
-CPU_X86="GENERIC_386 {3,4,5,6}86 586MMX PENTIUM{II,III,4} K{6,7} ELAN CRUSOE WINCHIP{C6,2} CYRIXIII NEHEMIAH"
-IUSE_UCLIBC_CPU="${CPU_ARM} ${CPU_MIPS} ${CPU_PPC} ${CPU_SH} ${CPU_SPARC} ${CPU_X86}"
-
 check_cpu_opts() {
-	local cpu_var="CPU_$(echo $(tc-arch) | tr [a-z] [A-Z])"
-	[[ -z ${!cpu_var} ]] && return 0
-
-	if [[ -z ${UCLIBC_CPU} ]] ; then
-		ewarn "You really should consider setting UCLIBC_CPU"
-		ewarn "Otherwise, the build will be generic (read: slow)."
-		ewarn "Available CPU options:"
-		UCLIBC_CPU=$(eval echo ${!cpu_var})
-		echo ${UCLIBC_CPU}
-		case ${CTARGET} in
-			mips[1234]*) export UCLIBC_CPU="MIPS_ISA_${CTARGET:4:1}";;
-			sh[2345]*)   export UCLIBC_CPU="SH${CTARGET:2:1}";;
-			i[456]86*)   export UCLIBC_CPU="${CTARGET:1:1}86";;
-			*)           export UCLIBC_CPU=${UCLIBC_CPU%% *};;
-		esac
-	else
-		local cpu found=0
-		for cpu in $(eval echo ${!cpu_var}) ; do
-			[[ ${UCLIBC_CPU} == "${cpu}" ]] && found=1 && break
-		done
-		if [[ ${found} -eq 0 ]] ; then
-			ewarn "UCLIBC_CPU choice '${UCLIBC_CPU}' not supported"
-			ewarn "Valid choices:"
-			eval echo ${!cpu_var}
-			die "pick a supported cpu type"
-		fi
-	fi
+	case ${CTARGET} in
+	# Need to handle $ABI here w/mips.
+	mips[1234]*) export UCLIBC_CPU="MIPS_ISA_${CTARGET:4:1}";;
+	sh[2345]*)   export UCLIBC_CPU="SH${CTARGET:2:1}";;
+	i[3456]86*)  export UCLIBC_CPU="${CTARGET:1:1}86";;
+	# XXX: Should figure out how to handle sparc.
+	esac
 }
 
 kconfig_q_opt() {
@@ -277,24 +244,20 @@ src_unpack() {
 
 	########## CPU SELECTION ##########
 
-	local target config_target
-	case $(tc-arch) in
-		alpha) target="alpha";   config_target="no cpu-specific options";;
-		amd64) target="x86_64";  config_target="no cpu-specific options";;
-		arm)   target="arm";     config_target="GENERIC_ARM";;
-		avr)   target="avr32";   config_target="no cpu-specific options";;
-		bfin)  target="bfin";    config_target="no cpu-specific options";;
-		ia64)  target="ia64";    config_target="no cpu-specific options";;
-		m68k)  target="m68k";    config_target="no cpu-specific options";;
-		mips)  target="mips";    config_target="MIPS_ISA_1";;
-		ppc)   target="powerpc"; config_target="no cpu-specific options";;
-		sh)    target="sh";      config_target="SH4";;
-		sparc) target="sparc";   config_target="no cpu-specific options";;
-		x86)   target="i386";    config_target="GENERIC_386";;
-		*)     die "$(tc-arch) lists no defaults :/";;
+	local target=$(tc-arch) config_target
+	case ${target} in
+	amd64) target="x86_64";;
+	arm)   target="arm";     config_target="GENERIC_ARM";;
+	avr)   target="avr32";;
+	mips)  target="mips";    config_target="MIPS_ISA_1";;
+	ppc)   target="powerpc";;
+	sh)    target="sh";      config_target="SH4";;
+	x86)   target="i386";    config_target="486";;
 	esac
-	sed -i -e "s:default CONFIG_${config_target}:default CONFIG_${UCLIBC_CPU:-${config_target}}:" \
-		extra/Configs/Config.${target}
+	if [[ -n ${config_target} ]] ; then
+		sed -i -e "s:default CONFIG_${config_target}:default CONFIG_${UCLIBC_CPU:-${config_target}}:" \
+			extra/Configs/Config.${target} || die
+	fi
 	sed -i -e "s:^HOSTCC.*=.*:HOSTCC=$(tc-getBUILD_CC):" Rules.mak
 
 	src_config

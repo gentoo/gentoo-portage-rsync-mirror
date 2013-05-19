@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MDB2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.41 2011/12/03 18:17:42 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.42 2013/05/19 05:45:45 olemarkus Exp $
+
+  19 May 2013; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-MDB2-2.5.0_alpha2.ebuild, PEAR-MDB2-2.5.0_beta3.ebuild:
+  Dropped stable for ppc64 to fix bad dependency
 
   03 Dec 2011; Raúl Porcel <armin76@gentoo.org> PEAR-MDB2-2.5.0_beta3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #388763
@@ -174,4 +178,3 @@
   25 Feb 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-MDB2-2.0.0.ebuild:
   Initial ebuild.
-

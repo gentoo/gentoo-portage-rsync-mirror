@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.128 2013/03/27 09:19:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.130 2013/05/19 05:54:43 radhermit Exp $
+
+  19 May 2013; Tim Harder <radhermit@gentoo.org> -feh-2.5.ebuild,
+  -feh-2.6.3.ebuild, -feh-2.7.ebuild, -feh-2.8.ebuild:
+  Remove old.
+
+*feh-2.9.2 (19 May 2013)
+
+  19 May 2013; Tim Harder <radhermit@gentoo.org> +feh-2.9.2.ebuild:
+  Version bump.
 
   27 Mar 2013; Agostino Sarubbo <ago@gentoo.org> feh-2.9.1-r1.ebuild:
   Stable for ppc64, wrt bug #463090
