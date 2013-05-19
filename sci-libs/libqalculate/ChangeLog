@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libqalculate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.51 2012/08/04 21:40:15 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.52 2013/05/19 06:56:18 jlec Exp $
+
+  19 May 2013; Justin Lecher <jlec@gentoo.org> libqalculate-0.9.7-r1.ebuild,
+  metadata.xml:
+  Some resorting in the ebuild
 
   04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
   libqalculate-0.9.7-r1.ebuild:

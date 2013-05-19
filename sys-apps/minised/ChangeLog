@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/minised
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/minised/ChangeLog,v 1.5 2009/11/30 11:54:07 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/minised/ChangeLog,v 1.6 2013/05/19 06:53:59 radhermit Exp $
+
+*minised-1.14 (19 May 2013)
+
+  19 May 2013; Tim Harder <radhermit@gentoo.org> +minised-1.14.ebuild:
+  Version bump (bug #466882).
 
 *minised-1.13 (30 Nov 2009)
 

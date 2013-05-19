@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7-r1.ebuild,v 1.2 2012/08/04 21:40:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7-r1.ebuild,v 1.3 2013/05/19 06:56:18 jlec Exp $
 
-EAPI=4
+EAPI=5
+
 inherit eutils
 
 DESCRIPTION="A modern multi-purpose calculator library"
@@ -14,15 +15,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="gnuplot readline static-libs"
 
-COMMON_DEPEND=">=sci-libs/cln-1.2
-	dev-libs/libxml2:2
+COMMON_DEPEND="
 	dev-libs/glib:2
+	dev-libs/libxml2:2
+	>=sci-libs/cln-1.2
 	sys-libs/zlib
 	readline? ( sys-libs/readline )"
 DEPEND="${COMMON_DEPEND}
-	virtual/pkgconfig
 	dev-util/intltool
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	net-misc/wget
 	gnuplot? ( >=sci-visualization/gnuplot-3.7 )"
@@ -51,7 +53,7 @@ src_install() {
 	# docs/reference/Makefile.am -> referencedir=
 	emake \
 		DESTDIR="${D}" \
-		referencedir="${EPREFIX}"/usr/share/doc/${PF}/html/reference \
+		referencedir="${EPREFIX}/usr/share/doc/${PF}/html/reference" \
 		install
 
 	dodoc AUTHORS ChangeLog NEWS README* TODO
