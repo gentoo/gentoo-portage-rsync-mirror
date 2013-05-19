@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.32.1.ebuild,v 1.1 2013/04/02 22:46:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.34.ebuild,v 1.1 2013/05/19 17:01:19 hasufell Exp $
 
 EAPI=5
 
@@ -13,13 +13,14 @@ SRC_URI="https://github.com/graysky2/profile-sync-daemon/archive/v${PV}.tar.gz -
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cron"
+IUSE=""
 
 RDEPEND="
 	app-shells/bash
 	net-misc/rsync"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-initd.patch
 	mv Makefile.gentoo Makefile || die
 }
 

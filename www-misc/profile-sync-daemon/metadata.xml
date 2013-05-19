@@ -5,8 +5,5 @@
 		<email>hasufell@gentoo.org</email>
 		<name>Julian Ospald</name>
 	</maintainer>
-	<use>
-		<flag name='cron'>Install hourly cronjob to resync profiles.</flag>
-	</use>
 </pkgmetadata>
 

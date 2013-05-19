@@ -1,0 +1,27 @@
+From 9715d323e2451b64c941d8b81acbf43187eaadc6 Mon Sep 17 00:00:00 2001
+From: hasufell <julian.ospald@googlemail.com>
+Date: Sun, 19 May 2013 18:55:40 +0200
+Subject: [PATCH] GENTOO INIT: remove obsolete check
+
+---
+ init/psd.gentoo | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/init/psd.gentoo b/init/psd.gentoo
+index ab990fb..6060762 100644
+--- a/init/psd.gentoo
++++ b/init/psd.gentoo
+@@ -29,10 +29,6 @@ start() {
+ 		return 1
+ 	fi
+ 
+-	if [ ! -f "$PIDFILE" ]; then
+-		/usr/bin/profile-sync-daemon check || return 1
+-	fi
+-
+ 	start-stop-daemon \
+ 		--start \
+ 		--pidfile "${PIDFILE}" \
+-- 
+1.8.1.6
+
