@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mimeparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.12 2013/05/07 14:27:52 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.13 2013/05/19 21:29:15 aballier Exp $
+
+  19 May 2013; Alexis Ballier <aballier@gentoo.org> mimeparse-0.1.4-r1.ebuild:
+  keyword ~amd64-fbsd, bug #468268
 
   07 May 2013; Naohiro Aota <naota@gentoo.org> mimeparse-0.1.4-r1.ebuild:
   Add ~x86-fbsd #468268
