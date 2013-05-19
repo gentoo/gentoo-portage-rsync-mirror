@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.0.ebuild,v 1.1 2013/05/17 04:39:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.0.ebuild,v 1.2 2013/05/19 18:33:14 jdhore Exp $
 
 inherit bash-completion-r1 eutils user
 
@@ -19,7 +19,7 @@ COMMON_DEPEND="
 	>=sys-devel/gcc-4.4
 	dev-libs/libpcre
 	sys-apps/file
-	pbins? ( >=app-arch/libarchive-3.0.4 )
+	pbins? ( >=app-arch/libarchive-3.1.2 )
 	python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 )
 	ruby-bindings? ( >=dev-lang/ruby-1.8 )
 	xml? ( >=dev-libs/libxml2-2.6 )

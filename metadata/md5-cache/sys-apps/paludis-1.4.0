@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst setup test
-DEPEND=>=app-admin/eselect-1.2.13 >=app-shells/bash-3.2 >=sys-devel/gcc-4.4 dev-libs/libpcre sys-apps/file pbins? ( >=app-arch/libarchive-3.0.4 ) python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 ) ruby-bindings? ( >=dev-lang/ruby-1.8 ) xml? ( >=dev-libs/libxml2-2.6 ) search-index? ( >=dev-db/sqlite-3 ) !prebuilt-documentation? ( >=app-text/asciidoc-8.6.3 app-text/xmlto ) doc? ( || ( >=app-doc/doxygen-1.5.3 <=app-doc/doxygen-1.5.1 ) media-gfx/imagemagick python-bindings? ( dev-python/epydoc dev-python/pygments ) ruby-bindings? ( dev-ruby/syntax ) ) virtual/pkgconfig test? ( >=dev-cpp/gtest-1.6.0-r1 )
+DEPEND=>=app-admin/eselect-1.2.13 >=app-shells/bash-3.2 >=sys-devel/gcc-4.4 dev-libs/libpcre sys-apps/file pbins? ( >=app-arch/libarchive-3.1.2 ) python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 ) ruby-bindings? ( >=dev-lang/ruby-1.8 ) xml? ( >=dev-libs/libxml2-2.6 ) search-index? ( >=dev-db/sqlite-3 ) !prebuilt-documentation? ( >=app-text/asciidoc-8.6.3 app-text/xmlto ) doc? ( || ( >=app-doc/doxygen-1.5.3 <=app-doc/doxygen-1.5.1 ) media-gfx/imagemagick python-bindings? ( dev-python/epydoc dev-python/pygments ) ruby-bindings? ( dev-ruby/syntax ) ) virtual/pkgconfig test? ( >=dev-cpp/gtest-1.6.0-r1 )
 DESCRIPTION=paludis, the other package mangler
 HOMEPAGE=http://paludis.exherbo.org/
 IUSE=doc pbins portage pink prebuilt-documentation python-bindings ruby-bindings search-index test vim-syntax visibility xml zsh-completion
 KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86
 LICENSE=GPL-2 vim-syntax? ( vim )
 PDEPEND=vim-syntax? ( >=app-editors/vim-core-7 ) app-admin/eselect-package-manager
-RDEPEND=>=app-admin/eselect-1.2.13 >=app-shells/bash-3.2 >=sys-devel/gcc-4.4 dev-libs/libpcre sys-apps/file pbins? ( >=app-arch/libarchive-3.0.4 ) python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 ) ruby-bindings? ( >=dev-lang/ruby-1.8 ) xml? ( >=dev-libs/libxml2-2.6 ) search-index? ( >=dev-db/sqlite-3 ) sys-apps/sandbox
+RDEPEND=>=app-admin/eselect-1.2.13 >=app-shells/bash-3.2 >=sys-devel/gcc-4.4 dev-libs/libpcre sys-apps/file pbins? ( >=app-arch/libarchive-3.1.2 ) python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 ) ruby-bindings? ( >=dev-lang/ruby-1.8 ) xml? ( >=dev-libs/libxml2-2.6 ) search-index? ( >=dev-db/sqlite-3 ) sys-apps/sandbox
 SLOT=0
 SRC_URI=http://paludis.exherbo.org/download/paludis-1.4.0.tar.bz2
 _eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=326de22d63448ef4dbcae189e314006c
+_md5_=469b872a6d05e57a841c4eb34def1736

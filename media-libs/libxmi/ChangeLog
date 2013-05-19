@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxmi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.7 2013/05/10 16:57:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.8 2013/05/19 18:35:14 aballier Exp $
+
+  19 May 2013; Alexis Ballier <aballier@gentoo.org> libxmi-1.3.ebuild:
+  keyword ~amd64-fbsd, bug #468582
 
   10 May 2013; Markus Meier <maekke@gentoo.org> libxmi-1.3.ebuild:
   add ~arm, bug #468582
