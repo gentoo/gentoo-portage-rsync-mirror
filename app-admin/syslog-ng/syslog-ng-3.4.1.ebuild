@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.7 2013/05/16 15:02:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.8 2013/05/19 05:28:11 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd
@@ -25,7 +25,7 @@ RDEPEND="
 	>=dev-libs/glib-2.10.1:2
 	json? ( >=dev-libs/json-c-0.9 )
 	caps? ( sys-libs/libcap )
-	geoip? ( dev-libs/geoip )
+	geoip? ( >=dev-libs/geoip-1.5.0 )
 	dbi? ( >=dev-db/libdbi-0.8.3 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

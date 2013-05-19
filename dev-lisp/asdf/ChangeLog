@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/asdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.8 2013/04/25 03:04:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.9 2013/05/19 05:13:01 grozin Exp $
+
+*asdf-3.0.1 (19 May 2013)
+
+  19 May 2013; Andrey Grozin <grozin@gentoo.org> +asdf-3.0.1.ebuild:
+  Version bump
 
   25 Apr 2013; Andrey Grozin <grozin@gentoo.org> asdf-2.33-r4.ebuild:
   DEPEND on <texinfo-5.0 (bug #467146)
