@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/opensmtpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.14 2013/05/18 17:59:49 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.15 2013/05/19 14:34:21 zx2c4 Exp $
+
+*opensmtpd-5.3.2_p1-r1 (19 May 2013)
+
+  19 May 2013; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +opensmtpd-5.3.2_p1-r1.ebuild, -opensmtpd-5.3.2_p1.ebuild,
+  files/build-warnings.patch:
+  Now compiles without strict aliasing rules.
 
   18 May 2013; Jason A. Donenfeld <zx2c4@gentoo.org> opensmtpd-5.3.2_p1.ebuild:
   Change to correct directory.

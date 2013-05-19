@@ -11,29 +11,3 @@ index 2d4e151..ac1ab37 100644
  //#include "buffer.h"
  
  /* wrapper for signal interface */
-diff --git a/openbsd-compat/imsg-buffer.c b/openbsd-compat/imsg-buffer.c
-index 7223ad7..7c4d686 100644
---- a/openbsd-compat/imsg-buffer.c
-+++ b/openbsd-compat/imsg-buffer.c
-@@ -256,7 +256,7 @@ msgbuf_write(struct msgbuf *msgbuf)
- 		cmsg->cmsg_len = CMSG_LEN(sizeof(int));
- 		cmsg->cmsg_level = SOL_SOCKET;
- 		cmsg->cmsg_type = SCM_RIGHTS;
--		*(int *)CMSG_DATA(cmsg) = buf->fd;
-+		memcpy(CMSG_DATA(cmsg), &buf->fd, sizeof(int));
- 	}
- 
- again:
-diff --git a/smtpd/mproc.c b/smtpd/mproc.c
-index 7d9e593..d152784 100644
---- a/smtpd/mproc.c
-+++ b/smtpd/mproc.c
-@@ -230,7 +230,7 @@ msgbuf_write2(struct msgbuf *msgbuf)
- 		cmsg->cmsg_len = CMSG_LEN(sizeof(int));
- 		cmsg->cmsg_level = SOL_SOCKET;
- 		cmsg->cmsg_type = SCM_RIGHTS;
--		*(int *)CMSG_DATA(cmsg) = buf->fd;
-+		memcpy(CMSG_DATA(cmsg), &buf->fd, sizeof(int));
- 	}
- 
- again:
