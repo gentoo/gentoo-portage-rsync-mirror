@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.62 2013/03/02 18:00:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.63 2013/05/19 09:55:33 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> lablgl-1.04-r1.ebuild:
+  Stable for amd64, wrt bug #470404
 
 *lablgl-1.04-r1 (02 Mar 2013)
 

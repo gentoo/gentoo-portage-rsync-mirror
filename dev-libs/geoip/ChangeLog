@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.173 2013/04/03 18:07:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.174 2013/05/19 09:56:42 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.5.0.ebuild:
+  Stable for amd64, wrt bug #470386
 
   03 Apr 2013; Jeroen Roovers <jer@gentoo.org> geoip-1.4.8-r3.ebuild,
   geoip-1.5.0.ebuild:

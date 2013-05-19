@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/nvidia-texture-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/ChangeLog,v 1.11 2013/03/31 15:54:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/ChangeLog,v 1.12 2013/05/19 09:58:17 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  nvidia-texture-tools-2.0.8-r2.ebuild:
+  Stable for amd64, wrt bug #470498
 
   31 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Punt myself from metadata.xml.
@@ -66,4 +70,3 @@
   +files/nvidia-texture-tools-2.0.8-valgrind.patch,
   +files/nvidia-texture-tools-cmake.patch:
   Initial commit. Using ebuild created by Julian Ospald.
-

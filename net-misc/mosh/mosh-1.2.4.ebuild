@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.4.ebuild,v 1.1 2013/03/27 15:23:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.4.ebuild,v 1.2 2013/05/19 09:56:26 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://mosh.mit.edu/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~x86 ~arm-linux ~x86-linux"
+KEYWORDS="amd64 ~mips ~ppc ~x86 ~arm-linux ~x86-linux"
 IUSE="bash-completion +client examples +mosh-hardening +server ufw +utempter"
 REQUIRED_USE="|| ( client server )
 	examples? ( client )"

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.111 2013/04/17 18:15:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.112 2013/05/19 09:58:26 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> pngcrush-1.7.57.ebuild:
+  Stable for amd64, wrt bug #470500
 
 *pngcrush-1.7.57 (17 Apr 2013)
 

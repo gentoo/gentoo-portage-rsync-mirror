@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.43 2013/03/15 10:19:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.44 2013/05/19 09:57:35 ago Exp $
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> hevea-2.03.ebuild:
+  Stable for amd64, wrt bug #470480
 
   15 Mar 2013; Alexis Ballier <aballier@gentoo.org> -hevea-2.00.ebuild:
   remove old
