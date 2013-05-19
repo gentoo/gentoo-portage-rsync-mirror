@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.6-r1.ebuild,v 1.4 2013/05/10 16:58:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.6-r1.ebuild,v 1.5 2013/05/19 19:09:21 aballier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/plotutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="+png static-libs X"
 
 DEPEND="

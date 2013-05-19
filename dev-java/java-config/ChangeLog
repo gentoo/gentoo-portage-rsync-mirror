@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.281 2013/05/04 03:20:00 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.282 2013/05/19 19:19:08 aballier Exp $
+
+  19 May 2013; Alexis Ballier <aballier@gentoo.org> java-config-2.2.0.ebuild:
+  keyword ~amd64-fbsd, bug #465136
 
   04 May 2013; Naohiro Aota <naota@gentoo.org> java-config-2.2.0.ebuild:
   Add ~x86-fbsd #465136

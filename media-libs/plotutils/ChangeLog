@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.68 2013/05/10 16:58:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.69 2013/05/19 19:09:21 aballier Exp $
+
+  19 May 2013; Alexis Ballier <aballier@gentoo.org> plotutils-2.6-r1.ebuild:
+  keyword ~amd64-fbsd, bug #465136
 
   10 May 2013; Markus Meier <maekke@gentoo.org> plotutils-2.6-r1.ebuild:
   add ~arm, bug #468582
