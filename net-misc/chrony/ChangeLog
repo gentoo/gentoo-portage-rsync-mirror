@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.97 2013/05/20 08:20:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.98 2013/05/20 10:52:17 nimiux Exp $
+
+  20 May 2013; Chema Alonso <nimiux@gentoo.org> chrony-1.27-r1.ebuild:
+  Stable for amd64 wrt bug #470560
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> chrony-1.27-r1.ebuild:
   Stable for x86, wrt bug #470560
