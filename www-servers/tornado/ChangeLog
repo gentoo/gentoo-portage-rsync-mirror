@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.34 2013/05/09 17:13:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.35 2013/05/20 15:51:14 mgorny Exp $
+
+  20 May 2013; Michał Górny <mgorny@gentoo.org> tornado-2.4-r1.ebuild,
+  tornado-2.4.1.ebuild:
+  Add missing || to PYTHON_USEDEP. Bug #469258.
 
 *tornado-2.4.1 (09 May 2013)
 

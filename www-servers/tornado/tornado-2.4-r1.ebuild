@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-2.4-r1.ebuild,v 1.3 2013/03/30 13:10:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-2.4-r1.ebuild,v 1.4 2013/05/20 15:51:14 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="curl? ( dev-python/pycurl[$(python_gen_usedep 'python2*')] )
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
-REQUIRED_USE="curl? ( $(python_gen_useflags python2*) )"
+REQUIRED_USE="curl? ( || ( $(python_gen_useflags python2*) ) )"
 
 src_test() {
 	# The test server tries to bind at an unused port but suffers

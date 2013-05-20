@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-promol/pymol-plugins-promol-3.0.2-r1.ebuild,v 1.1 2013/01/30 09:00:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-promol/pymol-plugins-promol-3.0.2-r1.ebuild,v 1.2 2013/05/20 15:55:42 jlec Exp $
 
 EAPI=5
 
@@ -14,8 +14,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 IUSE=""
+
+RESTRCIT="mirror"
 
 RDEPEND="
 	virtual/pmw[${PYTHON_USEDEP}]
