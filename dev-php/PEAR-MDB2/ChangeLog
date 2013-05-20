@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MDB2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.42 2013/05/19 05:45:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.43 2013/05/20 06:35:44 olemarkus Exp $
+
+  20 May 2013; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-MDB2-2.5.0_alpha2.ebuild, PEAR-MDB2-2.5.0_beta3.ebuild:
+  revert removal of ppc64 stable keyword
 
   19 May 2013; Ole Markus With <olemarkus@gentoo.org>
   PEAR-MDB2-2.5.0_alpha2.ebuild, PEAR-MDB2-2.5.0_beta3.ebuild:
