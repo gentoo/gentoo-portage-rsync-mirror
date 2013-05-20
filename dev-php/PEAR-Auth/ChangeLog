@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Auth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.53 2012/06/09 14:36:35 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.54 2013/05/20 06:24:07 olemarkus Exp $
+
+  20 May 2013; Ole Markus With <olemarkus@gentoo.org> PEAR-Auth-1.6.4.ebuild:
+  Fix bad dependency for ppc64
 
   09 Jun 2012; Matti Bickel <mabi@gentoo.org> -PEAR-Auth-1.5.4.ebuild:
   remove old
@@ -206,4 +209,3 @@
 
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> :
   Initial ebuild for the Auth PEAR package, closes bug 73508.
-
