@@ -1,6 +1,19 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.23 2013/02/19 20:20:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.24 2013/05/20 14:15:45 idella4 Exp $
+
+*xen-pvgrub-4.2.1-r2 (20 May 2013)
+*xen-pvgrub-4.2.2 (20 May 2013)
+
+  20 May 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4-CVE-2013-0215-XSA-38.patch,
+  +files/xen-4-CVE-2013-1919-XSA-46.patch,
+  +files/xen-4-CVE-2013-1922-XSA-48.patch,
+  +files/xen-4-CVE-2013-1952-XSA-49.patch,
+  +files/xen-4-CVE-2013-1952-XSA_49.patch, +xen-pvgrub-4.2.1-r2.ebuild,
+  +xen-pvgrub-4.2.2.ebuild, xen-pvgrub-4.2.0-r1.ebuild,
+  xen-pvgrub-4.2.1-r1.ebuild:
+  rebump with sec. pathces, ditto bump
 
   19 Feb 2013; Ian Delaney <idella4@gentoo.org> -files/xen-4.2.1-CC.patch,
   files/xen-4.2.1-externals.patch, xen-pvgrub-4.2.1-r1.ebuild:

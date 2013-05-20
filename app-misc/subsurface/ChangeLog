@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/subsurface
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.2 2013/04/03 21:16:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.3 2013/05/20 14:24:57 tomwij Exp $
+
+*subsurface-3.1 (20 May 2013)
+
+  20 May 2013; Tom Wijsman <TomWij@gentoo.org> +subsurface-3.1.ebuild,
+  metadata.xml:
+  Version bump to 3.1. More LINGUAS, osm-gps-map is now a hard dependency as per
+  upstream, small compilation fixes. Updated ebuild contributed by Martin Gysel
+  (bearsh).
 
 *subsurface-3.0.2-r1 (03 Apr 2013)
 

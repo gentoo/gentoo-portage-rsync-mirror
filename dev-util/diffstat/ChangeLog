@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.146 2013/05/20 12:46:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.147 2013/05/20 14:28:56 jer Exp $
+
+  20 May 2013; Jeroen Roovers <jer@gentoo.org> diffstat-1.57.ebuild:
+  Stable for HPPA (bug #470486).
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> diffstat-1.57.ebuild:
   Stable for ppc, wrt bug #470486
