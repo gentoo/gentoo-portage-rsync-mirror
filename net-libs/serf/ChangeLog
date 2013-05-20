@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.96 2013/05/14 09:42:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.97 2013/05/20 18:00:36 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> serf-1.2.0.ebuild:
+  Stable for s390, wrt bug #468220
 
   14 May 2013; Agostino Sarubbo <ago@gentoo.org> serf-1.2.0.ebuild:
   Stable for x86, wrt bug #468220

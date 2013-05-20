@@ -1,0 +1,33 @@
+diff -Nur common/lib/modules/fglrx/build_mod/firegl_public.c common-r1/lib/modules/fglrx/build_mod/firegl_public.c
+--- common/lib/modules/fglrx/build_mod/firegl_public.c	2013-04-17 00:29:55.000000000 +0300
++++ common-r1/lib/modules/fglrx/build_mod/firegl_public.c	2013-05-11 00:37:44.653966585 +0300
+@@ -34,6 +34,11 @@
+ #include <linux/autoconf.h>
+ #endif
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,9,0)
++#include <linux/uidgid.h>
++#endif
++
++
+ #if !defined(CONFIG_X86) 
+ #if !defined(CONFIG_X86_PC) 
+ #if !defined(CONFIG_X86_XEN) 
+@@ -1543,9 +1548,17 @@
+ KCL_TYPE_Uid ATI_API_CALL KCL_GetEffectiveUid(void)
+ {
+ #ifdef current_euid
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(3,9,0)
++    return __kuid_val(current_euid());
++# else
+     return current_euid();
++# endif
+ #else
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(3,9,0)
++    return __kuid_val(current->euid);
++# else
+     return current->euid;
++# endif
+ #endif
+ }
+ 
