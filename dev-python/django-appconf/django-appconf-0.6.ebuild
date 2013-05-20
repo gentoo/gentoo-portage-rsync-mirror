@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/django-appconf-0.6.ebuild,v 1.1 2013/05/18 13:48:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/django-appconf-0.6.ebuild,v 1.2 2013/05/20 17:17:00 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -29,13 +29,15 @@ python_compile_all() {
 
 python_test() {
 	export DJANGO_SETTINGS_MODULE="django.conf"
+	export SECRET_KEY="green"
 	pushd "${BUILD_DIR}"/lib > /dev/null
 	if ! "${PYTHON}" -c \
-		"from django.conf import global_settings;global_settings.SECRET_KEY='green'" -m appconf.tests.tests
+		"from django.conf import global_settings;global_settings.SECRET_KEY='$SECRET_KEY'" \
+		-m appconf.tests.tests
 	then
-		die "test ${test} failed under ${EPYTHON}"
+		die "test failed under ${EPYTHON}"
 	else
-		einfo "test ${test} passed under ${EPYTHON}"
+		einfo "tests passed under ${EPYTHON}"
 	fi
 }
 
