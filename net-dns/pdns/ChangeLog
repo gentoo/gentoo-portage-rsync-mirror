@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/pdns
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.86 2012/11/25 16:12:21 swegener Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.87 2013/05/20 19:05:48 dev-zero Exp $
+
+*pdns-3.2 (20 May 2013)
+
+  20 May 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/pdns-3.2-fix-autoconf.patch,
+  +files/pdns-3.2-fix-conditional-polarssl.patch,
+  +files/pdns-3.2-fix-curl-link.patch, +files/pdns-3.2-lib_lua.patch,
+  +pdns-3.2.ebuild, metadata.xml:
+  Version bump (bug #456412), add support for using botan or crypto++ as well as
+  lua-, odbc-, remote-, mydns and tinydns-backends. Fixed a lot of build issues
+  in the build-system and depend on in-tree version of PolarSSL instead of the
+  bundled one.
 
   25 Nov 2012; Sven Wegener <swegener@gentoo.org> pdns-3.0.1.ebuild,
   pdns-3.1.ebuild:
