@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1129 2013/05/16 22:00:18 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1130 2013/05/20 18:02:16 tomwij Exp $
+
+*gentoo-sources-3.0.79 (20 May 2013)
+*gentoo-sources-3.4.46 (20 May 2013)
+*gentoo-sources-3.9.3 (20 May 2013)
+
+  20 May 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.0.79.ebuild,
+  +gentoo-sources-3.4.46.ebuild, +gentoo-sources-3.9.3.ebuild:
+  Linux patches 3.0.79, 3.4.46 and 3.9.3. Added XATTR_USER_PREFIX patch, adds
+  support for namespace user.pax.* on tmpfs; fixes bug #470644.
 
   16 May 2013; Vicente Olivert Riera <vincent@gentoo.org>
   gentoo-sources-3.8.13.ebuild:

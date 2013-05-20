@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.104 2013/05/18 20:49:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.105 2013/05/20 18:02:07 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> pyrex-0.9.9-r1.ebuild:
+  Stable for s390, wrt bug #463080
 
   18 May 2013; Agostino Sarubbo <ago@gentoo.org> pyrex-0.9.9-r1.ebuild:
   Stable for alpha, wrt bug #463080

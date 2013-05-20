@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.172 2013/04/27 15:05:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.173 2013/05/20 18:16:15 hd_brummy Exp $
+
+*vdr-2.0.2 (20 May 2013)
+
+  20 May 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r7.ebuild,
+  vdr-1.6.0_p2-r11.ebuild, -vdr-2.0.1.ebuild, vdr-2.0.1-r1.ebuild,
+  +vdr-2.0.2.ebuild:
+  bump; fixed wrt bug 469808, respect AR; fixed wrt bug 469814, respect CXX
 
 *vdr-2.0.1-r1 (27 Apr 2013)
 

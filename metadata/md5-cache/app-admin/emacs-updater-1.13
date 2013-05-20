@@ -3,9 +3,9 @@ DEPEND=app-arch/xz-utils
 DESCRIPTION=Rebuild Emacs packages
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/lisp/emacs/
-KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2+
 RDEPEND=>=app-portage/portage-utils-0.3 virtual/emacs
 SLOT=0
 SRC_URI=mirror://gentoo/emacs-updater-1.13.tar.xz
-_md5_=2d94317376fb643794c37cfe93aa7a01
+_md5_=b918cef3a8982130abc0bc543598ee3b

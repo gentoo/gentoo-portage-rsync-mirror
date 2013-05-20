@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.241 2013/05/08 13:43:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.242 2013/05/20 18:03:43 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> icu-51.1.ebuild:
+  Stable for s390, wrt bug #467452
 
   08 May 2013; Agostino Sarubbo <ago@gentoo.org> icu-51.1.ebuild:
   Stable for sh, wrt bug #467452

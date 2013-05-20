@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.1.ebuild,v 1.1 2013/04/13 17:53:45 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.2.ebuild,v 1.1 2013/05/20 18:16:15 hd_brummy Exp $
 
 EAPI="5"
 
@@ -17,13 +17,13 @@ EXT_PATCH_FLAGS_RENAMED=""
 # names ext-patch uses internally, here only used for maintainer checks
 EXT_PATCH_FLAGS_RENAMED_EXT_NAME=""
 
-IUSE="debug html vanilla dxr3 ${EXT_PATCH_FLAGS} ${EXT_PATCH_FLAGS_RENAMED}"
+IUSE="bidi debug dxr3 html vanilla ${EXT_PATCH_FLAGS} ${EXT_PATCH_FLAGS_RENAMED}"
 
 MY_PV="${PV%_p*}"
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 
-EXT_P="extpng-${PN}-2.0.0-gentoo-edition-v1"
+EXT_P="extpng-${P}-gentoo-edition-v1"
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
 HOMEPAGE="http://www.tvdr.de/"
@@ -50,7 +50,8 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	dev-lang/perl
 	>=media-tv/gentoo-vdr-scripts-0.2.0
-	media-fonts/corefonts"
+	media-fonts/corefonts
+	bidi? ( dev-libs/fribidi )"
 
 # pull in vdr-setup to get the xml files, else menu will not work
 PDEPEND="setup? ( >=media-plugins/vdr-setup-0.3.1-r3 )"
@@ -72,7 +73,7 @@ pkg_setup() {
 
 	PLUGIN_LIBDIR="/usr/$(get_libdir)/vdr/plugins"
 
-	tc-export CC CXX
+	tc-export CC CXX AR
 }
 
 add_cap() {
@@ -163,6 +164,9 @@ src_prepare() {
 		PCDIR			= /usr/$(get_libdir)/pkgconfig
 	EOT
 	eend 0
+
+	# support languages, written from right to left
+	BUILD_PARAMS+=" BIDI=$(usex bidi 1 0)"
 
 	epatch "${FILESDIR}/${PN}-2.0.0_gentoo.patch"
 

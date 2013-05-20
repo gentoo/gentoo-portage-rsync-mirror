@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.120 2013/05/19 17:07:42 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.121 2013/05/20 18:22:56 aidecoe Exp $
+
+*dracut-027-r3 (20 May 2013)
+
+  20 May 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-027-r2.ebuild,
+  +dracut-027-r3.ebuild:
+  Bashcomp fixes wrt bug #469892.
+
+  Thanks to Alexander Tsoy <alexander@tsoy.me> for patch:
+  https://bugs.gentoo.org/attachment.cgi?id=348338
+
+  Which bashcomp related part has been applied slightly modified.
 
 *dracut-027-r2 (19 May 2013)
 
