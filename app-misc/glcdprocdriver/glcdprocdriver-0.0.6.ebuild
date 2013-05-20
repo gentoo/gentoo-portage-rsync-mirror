@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.6.ebuild,v 1.3 2013/05/19 14:56:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.6.ebuild,v 1.4 2013/05/20 08:37:41 ago Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Glue library for the glcdlib LCDproc driver based on GraphLCD"
 HOMEPAGE="http://www.muresan.de/graphlcd/lcdproc/"
 SRC_URI="http://www.muresan.de/graphlcd/lcdproc/${P}.tar.bz2"
 
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 

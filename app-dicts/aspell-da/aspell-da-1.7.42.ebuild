@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/aspell-da-1.7.42.ebuild,v 1.8 2013/05/18 20:49:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/aspell-da-1.7.42.ebuild,v 1.9 2013/05/20 08:33:08 ago Exp $
 
 ASPELL_LANG="Danish"
 
@@ -9,7 +9,7 @@ inherit aspell-dict
 LICENSE="GPL-2"
 HOMEPAGE="http://da.speling.org"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos"
 IUSE=""
 
 SRC_URI="http://da.speling.org/filer/new_${P}.tar.bz2"

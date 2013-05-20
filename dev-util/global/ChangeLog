@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.108 2013/03/17 15:48:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.109 2013/05/20 08:55:02 nimiux Exp $
+
+  20 May 2013; Chema Alonso <nimiux@gentoo.org> global-6.2.8.ebuild:
+  Stable for amd64 wrt bug #470490
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

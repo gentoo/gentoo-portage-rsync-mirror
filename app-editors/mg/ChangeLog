@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.49 2013/05/19 09:56:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.50 2013/05/20 08:35:44 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> mg-20110905-r1.ebuild:
+  Stable for x86, wrt bug #470318
 
   19 May 2013; Agostino Sarubbo <ago@gentoo.org> mg-20110905-r1.ebuild:
   Stable for amd64, wrt bug #470318

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jedi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jedi/ChangeLog,v 1.3 2013/05/15 17:29:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jedi/ChangeLog,v 1.4 2013/05/20 08:31:23 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> jedi-0.5_beta5.ebuild:
+  Stable for x86, wrt bug #469736
 
 *jedi-0.6.0 (15 May 2013)
 

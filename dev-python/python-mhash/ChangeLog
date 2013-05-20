@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mhash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.15 2013/02/15 20:17:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.16 2013/05/20 08:32:05 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> python-mhash-1.4-r1.ebuild:
+  Stable for x86, wrt bug #463084
 
 *python-mhash-1.4-r1 (15 Feb 2013)
 

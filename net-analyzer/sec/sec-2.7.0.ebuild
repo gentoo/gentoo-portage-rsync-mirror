@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/sec-2.7.0.ebuild,v 1.2 2013/05/16 12:52:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/sec-2.7.0.ebuild,v 1.3 2013/05/20 08:41:32 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/simple-evcorr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.0"

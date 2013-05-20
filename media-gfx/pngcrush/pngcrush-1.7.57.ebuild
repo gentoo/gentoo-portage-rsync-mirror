@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.57.ebuild,v 1.2 2013/05/19 09:58:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.57.ebuild,v 1.3 2013/05/20 08:47:12 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="system-libs? ( mirror://sourceforge/pmt/${P}-nolib.tar.xz )
 
 LICENSE="pngcrush"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+system-libs"
 
 RDEPEND="

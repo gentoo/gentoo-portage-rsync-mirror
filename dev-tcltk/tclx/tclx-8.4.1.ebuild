@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.4.1.ebuild,v 1.3 2013/05/16 13:23:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.4.1.ebuild,v 1.4 2013/05/20 08:32:21 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/tclx/${PN}${PV}.tar.bz2"
 LICENSE="BSD"
 IUSE="tk threads"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 DEPEND="
 	dev-lang/tcl

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ttfquery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.15 2013/05/19 10:14:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttfquery/ChangeLog,v 1.16 2013/05/20 08:43:13 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> ttfquery-1.0.5-r1.ebuild:
+  Stable for x86, wrt bug #470470
 
   19 May 2013; Agostino Sarubbo <ago@gentoo.org> ttfquery-1.0.5-r1.ebuild:
   Stable for amd64, wrt bug #470470

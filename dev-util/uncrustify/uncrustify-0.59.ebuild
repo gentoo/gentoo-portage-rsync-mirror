@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/uncrustify-0.59.ebuild,v 1.4 2013/05/19 10:14:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/uncrustify-0.59.ebuild,v 1.5 2013/05/20 08:33:31 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 x86 ~amd64-linux ~ppc-macos ~x64-macos ~x64-solaris ~x86-solaris"
 IUSE="test"
 
 DEPEND="test? ( =dev-lang/python-2* )"
