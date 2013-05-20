@@ -1,8 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/a2jmidid-6.ebuild,v 1.2 2012/05/05 08:02:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/a2jmidid-6.ebuild,v 1.3 2013/05/20 16:17:35 aballier Exp $
 
-inherit toolchain-funcs
+EAPI="4"
+PYTHON_DEPEND="2"
+NO_WAF_LIBDIR=1
+
+inherit python toolchain-funcs waf-utils
 
 DESCRIPTION="Daemon for exposing legacy ALSA sequencer applications in JACK MIDI system."
 HOMEPAGE="http://home.gna.org/a2jmidid/"
@@ -17,16 +21,16 @@ RDEPEND="media-libs/alsa-lib
 	media-sound/jack-audio-connection-kit
 	sys-apps/dbus"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	dev-lang/python"
+	virtual/pkgconfig"
 
-src_compile() {
-	tc-export CC AR CPP LD RANLIB
-	./waf configure --prefix=/usr || die "failed to configure"
-	./waf || die "failed to build"
+DOCS=(AUTHORS README NEWS internals.txt)
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_install() {
-	./waf --destdir="${D}" install || die "install failed"
-	dodoc AUTHORS README NEWS internals.txt
+	waf-utils_src_install
+	python_convert_shebangs -r 2 "${ED}"
 }

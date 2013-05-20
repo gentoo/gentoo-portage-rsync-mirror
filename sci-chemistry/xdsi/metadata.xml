@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<maintainer>
-		<email>jlec@gentoo.org</email>
-	</maintainer>
-	<longdescription>
+  <herd>sci</herd>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+  </maintainer>
+  <longdescription>
 XDSi offers you the possibility to process all your datasets in a given directory with minimum effort.
 * You just have to provide it with a resultdirectory and the directory where your frames are stored.
 * All datasets consisting of more than 100 frames within the given directory and all its subdirectories will be processed.

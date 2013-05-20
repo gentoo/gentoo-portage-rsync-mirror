@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/xdsi-0.92-r1.ebuild,v 1.1 2012/01/31 08:30:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/xdsi-0.92-r1.ebuild,v 1.2 2013/05/20 16:22:42 jlec Exp $
 
 EAPI=4
 
 inherit eutils
 
 DESCRIPTION="A crude interface for running the XDS"
-HOMEPAGE="http://strucbio.biologie.uni-konstanz.de/xdswiki/index.php/Xdsi/"
+HOMEPAGE="http://strucbio.biologie.uni-konstanz.de/xdswiki/index.php/Xdsi"
 SRC_URI="ftp://turn5.biologie.uni-konstanz.de/pub/${PN}_${PV}.tar.gz"
 
 LICENSE="as-is"
