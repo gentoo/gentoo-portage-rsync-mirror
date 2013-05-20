@@ -1,6 +1,17 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.69 2013/03/05 23:01:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.71 2013/05/20 11:14:29 eva Exp $
+
+  20 May 2013; Gilles Dartiguelongue <eva@gentoo.org> planner-0.14.6.ebuild,
+  planner-0.14.6_p20130520.ebuild:
+  Fix typos from previous commit.
+
+*planner-0.14.6_p20130520 (20 May 2013)
+
+  20 May 2013; Gilles Dartiguelongue <eva@gentoo.org> planner-0.14.6.ebuild,
+  +planner-0.14.6_p20130520.ebuild:
+  Add a snapshot compatible with evolution-3.6, bug #448902. Fix compatibility
+  with automake-1.13, bug #467596.
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -files/planner-0.14.3-eds-plugin.patch, -planner-0.14.5.ebuild,

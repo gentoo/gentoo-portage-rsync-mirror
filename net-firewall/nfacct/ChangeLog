@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/nfacct
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nfacct/ChangeLog,v 1.7 2013/03/23 09:46:54 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nfacct/ChangeLog,v 1.8 2013/05/20 11:21:49 pinkbyte Exp $
+
+  20 May 2013; Sergey Popov <pinkbyte@gentoo.org> nfacct-1.0.1.ebuild:
+  Stable on amd64 and x86, wrt bug #470542
 
   23 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> nfacct-1.0.0.ebuild,
   nfacct-1.0.1.ebuild:
