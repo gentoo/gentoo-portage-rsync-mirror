@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.104 2013/04/11 09:24:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.105 2013/05/20 20:12:32 dilfridge Exp $
+
+*libreoffice-bin-3.6.6.2 (20 May 2013)
+
+  20 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-3.6.6.2.ebuild:
+  Version bump
 
   11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   libreoffice-bin-3.6.4.3.ebuild:

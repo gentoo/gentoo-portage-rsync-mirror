@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.451 2013/03/30 13:13:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.452 2013/05/20 20:31:13 chainsaw Exp $
+
+*asterisk-11.4.0 (20 May 2013)
+
+  20 May 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.4.0.ebuild:
+  In a refreshing change of heart, upstream now care about parallel build
+  failures. Drop our relevant two downstream patches. Fixes a
+  res_timing_pthread deadlock, an FD leak in the web server and more SRTP
+  decryption/white noise issues.
 
   30 Mar 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.20.1.ebuild,
   -asterisk-11.2.1.ebuild:
