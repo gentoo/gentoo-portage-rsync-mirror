@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.6.ebuild,v 1.2 2013/04/24 08:26:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.7.ebuild,v 1.1 2013/05/20 10:22:46 tommy Exp $
 
 EAPI=2
 
 #virtualx is required for tests, which are currently broken
 #inherit virtualx
-inherit enlightenment eutils
+inherit autotools enlightenment eutils
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
@@ -22,10 +22,10 @@ RDEPEND=">=dev-libs/eina-1.7.6
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )
 	evas? (
-		>=media-libs/evas-1.7.6[directfb?,fbcon?,opengl?,X?,xcb?]
+		>=media-libs/evas-1.7.7[directfb?,fbcon?,opengl?,X?,xcb?]
 		opengl? ( virtual/opengl )
 		wayland? (
-			>=media-libs/evas-1.7.6[directfb?,fbcon?,gles?,opengl?,wayland?,X?,xcb?]
+			>=media-libs/evas-1.7.7[directfb?,fbcon?,gles?,opengl?,wayland?,X?,xcb?]
 		)
 	)
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
@@ -52,10 +52,10 @@ DEPEND="${RDEPEND}"
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
 
-#src_prepare() {
-#	sed -i "s:1.7.5:1.7.4:g" configure.ac
-#	eautoreconf
-#}
+src_prepare() {
+	sed -i "s:1.7.7:1.7.6:g" configure.ac
+	eautoreconf
+}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""

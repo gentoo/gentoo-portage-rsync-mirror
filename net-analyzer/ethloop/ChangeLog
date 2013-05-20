@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethloop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.9 2012/11/17 20:55:16 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.10 2013/05/20 10:15:53 ulm Exp $
+
+  20 May 2013; Ulrich Müller <ulm@gentoo.org> ethloop-10-r3.ebuild:
+  Fix LICENSE and add mirror restriction, bug 446052.
 
   17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ethloop-10-r3.ebuild:
   Add ~amd64, wrt bug #443696

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.4.ebuild,v 1.1 2012/12/21 20:07:52 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.7.ebuild,v 1.1 2013/05/20 10:25:26 tommy Exp $
 
-EAPI=1
+EAPI=2
 
-inherit enlightenment
+inherit autotools enlightenment
 
 DESCRIPTION="graphical layout and animation library"
 HOMEPAGE="http://www.enlightenment.org/pages/edje.html"
@@ -15,14 +15,19 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug +cache static-libs vim-syntax"
 
 DEPEND="dev-lang/lua
-	>=dev-libs/eet-1.7.0
-	>=dev-libs/eina-1.7.0
-	>=dev-libs/embryo-1.7.0
-	>=media-libs/evas-1.7.0
-	>=dev-libs/ecore-1.7.0"
+	>=dev-libs/eet-1.7.6
+	>=dev-libs/eina-1.7.6
+	>=dev-libs/embryo-1.7.4
+	>=media-libs/evas-1.7.7
+	>=dev-libs/ecore-1.7.7"
 RDEPEND=${DEPEND}
 
-src_compile() {
+src_prepare() {
+	sed -i "s:1.7.7:1.7.4:g" configure.ac
+	eautoreconf
+}
+
+src_configure() {
 	MY_ECONF+="
 		$(use_enable cache edje-program-cache)
 		$(use_enable cache edje-calc-cache)
@@ -30,7 +35,7 @@ src_compile() {
 		$(use_enable doc)
 		$(use_with vim-syntax vim /usr/share/vim)
 	"
-	enlightenment_src_compile
+	enlightenment_src_configure
 }
 
 src_install() {
