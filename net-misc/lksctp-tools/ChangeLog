@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.41 2013/05/18 20:46:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.42 2013/05/20 08:24:41 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> lksctp-tools-1.0.13.ebuild:
+  Stable for x86, wrt bug #464468
 
   18 May 2013; Agostino Sarubbo <ago@gentoo.org> lksctp-tools-1.0.13.ebuild:
   Stable for alpha, wrt bug #464468

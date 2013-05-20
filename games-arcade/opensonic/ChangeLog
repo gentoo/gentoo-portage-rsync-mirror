@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/opensonic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/ChangeLog,v 1.7 2013/05/14 09:05:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/ChangeLog,v 1.8 2013/05/20 08:30:18 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> opensonic-0.1.4-r1.ebuild:
+  Stable for x86, wrt bug #469726
 
   14 May 2013; Sergey Popov <pinkbyte@gentoo.org> opensonic-0.1.4-r1.ebuild:
   Stable on amd64, wrt bug #469726
@@ -30,4 +33,3 @@
   16 May 2012; Julian Ospald <hasufell@gentoo.org> +opensonic-0.1.4.ebuild,
   +files/opensonic-0.1.4-cmake.patch, +metadata.xml:
   initial commit wrt #413907
-

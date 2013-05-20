@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.1.0.ebuild,v 1.5 2013/05/18 20:42:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.1.0.ebuild,v 1.6 2013/05/20 08:21:25 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tangentsoft.net/mysql++/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0/3"
-KEYWORDS="alpha amd64 hppa ~mips ppc ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ~mips ppc ~sparc x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=">=virtual/mysql-4.0"

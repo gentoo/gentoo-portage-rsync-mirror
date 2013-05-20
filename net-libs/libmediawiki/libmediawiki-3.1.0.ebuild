@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/libmediawiki-3.1.0.ebuild,v 1.2 2013/05/19 09:55:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/libmediawiki-3.1.0.ebuild,v 1.3 2013/05/20 08:20:18 ago Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ DESCRIPTION="KDE C++ interface for MediaWiki based web service as wikipedia.org"
 HOMEPAGE="http://www.digikam.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 SLOT=4
 

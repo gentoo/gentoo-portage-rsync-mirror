@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.146 2013/05/19 09:57:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.147 2013/05/20 08:22:57 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> kipi-plugins-3.1.0.ebuild:
+  Stable for x86, wrt bug #470588
 
   19 May 2013; Agostino Sarubbo <ago@gentoo.org> kipi-plugins-3.1.0.ebuild:
   Stable for amd64, wrt bug #470588

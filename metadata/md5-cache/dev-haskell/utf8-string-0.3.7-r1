@@ -4,10 +4,10 @@ DESCRIPTION=Support for reading and writing UTF8 Strings
 EAPI=5
 HOMEPAGE=http://github.com/glguy/utf8-string/
 IUSE=doc hscolour profile
-KEYWORDS=alpha amd64 ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos
+KEYWORDS=alpha amd64 ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos
 LICENSE=BSD
 RDEPEND=>=dev-lang/ghc-6.10.4:=
 SLOT=0/0.3.7
 SRC_URI=mirror://hackage/packages/archive/utf8-string/0.3.7/utf8-string-0.3.7.tar.gz
 _eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	0fe5ac58a8b877fae07bb258b762852e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=5887c613d77524c6d2a9021080866edc
+_md5_=1dc95c7a7f84e4faa1ef590488ef269f

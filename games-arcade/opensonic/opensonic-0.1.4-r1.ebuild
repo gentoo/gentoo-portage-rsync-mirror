@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/opensonic-0.1.4-r1.ebuild,v 1.6 2013/05/14 09:05:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/opensonic-0.1.4-r1.ebuild,v 1.7 2013/05/20 08:30:18 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="fetch" # unsure about legality of graphics
 

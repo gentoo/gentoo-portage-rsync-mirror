@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.29 2013/05/19 09:37:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.30 2013/05/20 08:24:06 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> pigz-2.3.ebuild:
+  Stable for x86, wrt bug #470604
 
   19 May 2013; Markos Chandras <hwoarang@gentoo.org> pigz-2.3.ebuild:
   Stable on amd64 wrt bug #470604

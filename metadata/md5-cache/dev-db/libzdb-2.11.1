@@ -4,7 +4,7 @@ DESCRIPTION=A thread safe high level multi-database connection pool library
 EAPI=4
 HOMEPAGE=http://www.tildeslash.com/libzdb/
 IUSE=debug doc mysql postgres +sqlite ssl static-libs
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) sqlite? ( >=dev-db/sqlite-3.7:3[unlock-notify(+)] ) ssl? ( dev-libs/openssl )
 REQUIRED_USE=|| ( postgres mysql sqlite )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.tildeslash.com/libzdb/dist/libzdb-2.11.1.tar.gz
 _eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=e8d78cfa499f0b742bedcdde2cef6b3b
+_md5_=c77bb544efb9dad89f393bf4a383b568

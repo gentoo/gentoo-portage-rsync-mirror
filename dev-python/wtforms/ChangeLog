@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wtforms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.29 2013/05/16 12:55:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.30 2013/05/20 08:28:08 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> wtforms-1.0.3.ebuild:
+  Stable for x86, wrt bug #461168
 
   16 May 2013; Agostino Sarubbo <ago@gentoo.org> wtforms-1.0.3.ebuild:
   Stable for amd64, wrt bug #461168

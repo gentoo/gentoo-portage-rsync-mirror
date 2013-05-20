@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7-r2.ebuild,v 1.3 2013/05/16 13:14:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7-r2.ebuild,v 1.4 2013/05/20 08:25:37 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://0pointer.de/lennart/projects/pam_dotfile/${MY_P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND="virtual/pam"
