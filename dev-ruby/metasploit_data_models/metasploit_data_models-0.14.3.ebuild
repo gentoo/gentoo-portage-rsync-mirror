@@ -1,13 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.14.3.ebuild,v 1.1 2013/05/20 02:55:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.14.3.ebuild,v 1.2 2013/05/20 21:18:55 zerochaos Exp $
 
 EAPI=5
 
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
+
+# Tests depend on unpackaged factory_girl
 RUBY_FAKEGEM_RECIPE_TEST=""
+
+RUBY_FAKEGEM_EXTRAINSTALL="app db script spec"
 
 inherit ruby-fakegem
 
@@ -20,19 +24,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-#pry isn't available for 1.9
-#ruby_add_bdepend "test? ( dev-ruby/rails dev-ruby/pry )"
-
 ruby_add_rdepend ">=dev-ruby/activerecord-3.2.10[postgres]"
-
-each_ruby_install() {
-	ruby_fakegem_install_gemspec
-
-	local _gemlibdirs="${RUBY_FAKEGEM_EXTRAINSTALL}"
-	for directory in app bin db lib script spec; do
-		[[ -d ${directory} ]] && _gemlibdirs="${_gemlibdirs} ${directory}"
-	done
-
-	[[ -n ${_gemlibdirs} ]] && \
-		ruby_fakegem_doins -r ${_gemlibdirs}
-}
