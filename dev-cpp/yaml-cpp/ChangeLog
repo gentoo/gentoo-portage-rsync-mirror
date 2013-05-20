@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/yaml-cpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/ChangeLog,v 1.6 2012/03/28 09:15:01 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/ChangeLog,v 1.7 2013/05/20 02:09:05 neurogeek Exp $
+
+*yaml-cpp-0.5.1 (20 May 2013)
+
+  20 May 2013; <neurogeek@gentoo.org> +yaml-cpp-0.5.1.ebuild:
+  Version bump. Closes bug #466136. Thanks to Necoro and Jer.
 
   28 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> yaml-cpp-0.3.0.ebuild:
   Stable 0.3.0 on amd64 and x86.
