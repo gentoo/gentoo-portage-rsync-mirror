@@ -1,4 +1,10 @@
 
+*elfix-0.8.2 (20 May 2013)
+
+  20 May 2013; Anthony G. Basile <blueness@gentoo.org> +elfix-0.8.2.ebuild,
+  -elfix-0.7.0.ebuild:
+  Version bump: avoid ELF_C_RDWR_MMAP for uclibc systems
+
   28 Feb 2013; Anthony G. Basile <blueness@gentoo.org> elfix-0.8.1.ebuild:
   Depend on any revision of PV, for bug #459632
 
