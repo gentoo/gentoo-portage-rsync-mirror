@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7852 2013/05/19 09:30:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7853 2013/05/20 09:27:52 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 May 2013; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Masking the rest of the ezc packages for removal
 
   19 May 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking x11-themes/pekwm-themes-hewphoria due to licensing issues. Bug

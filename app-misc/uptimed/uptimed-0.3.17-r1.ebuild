@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17-r1.ebuild,v 1.10 2013/04/29 09:24:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17-r1.ebuild,v 1.11 2013/05/20 09:23:15 lxnay Exp $
 
 EAPI=5
 
-inherit autotools eutils user
+inherit autotools eutils user systemd
 
 DESCRIPTION="System uptime record daemon that keeps track of your highest uptimes"
 HOMEPAGE="http://podgorny.cz/uptimed"
@@ -39,6 +39,7 @@ src_install() {
 	fowners uptimed:uptimed /var/spool/uptimed
 	dodoc ChangeLog README TODO AUTHORS CREDITS INSTALL.cgi sample-cgi/*
 	newinitd "${FILESDIR}"/uptimed.init uptimed
+	systemd_dounit "${FILESDIR}/${PN}.service"
 }
 
 pkg_postinst() {

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.33-r2.ebuild,v 1.1 2012/12/06 09:00:53 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.33-r2.ebuild,v 1.2 2013/05/20 09:05:50 lxnay Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 *-jython"
 
-inherit versionator bash-completion-r1 eutils linux-info distutils
+inherit versionator bash-completion-r1 eutils linux-info distutils systemd
 
 MY_PV_12=$(get_version_component_range 1-2)
 DESCRIPTION="A program used to manage a netfilter firewall"
@@ -133,6 +133,7 @@ src_prepare() {
 src_install() {
 	newconfd "${FILESDIR}"/ufw.confd ufw
 	newinitd "${FILESDIR}"/ufw-2.initd ufw
+	systemd_dounit "${FILESDIR}/ufw.service"
 
 	exeinto /usr/share/${PN}
 	doexe tests/check-requirements

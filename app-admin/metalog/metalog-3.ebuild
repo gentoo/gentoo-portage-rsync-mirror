@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3.ebuild,v 1.2 2012/08/20 02:52:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3.ebuild,v 1.3 2013/05/20 09:10:45 lxnay Exp $
 
 EAPI="3"
 
-inherit eutils
+inherit eutils systemd
 
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
 HOMEPAGE="http://metalog.sourceforge.net/"
@@ -37,6 +37,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/metalog.initd metalog
 	newconfd "${FILESDIR}"/metalog.confd metalog
+	systemd_dounit "${FILESDIR}/${PN}.service"
 }
 
 pkg_preinst() {
