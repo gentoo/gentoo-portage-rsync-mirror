@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.41 2013/05/20 08:21:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.42 2013/05/20 12:42:06 ago Exp $
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> mosh-1.2.4.ebuild:
+  Stable for ppc, wrt bug #470562
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> mosh-1.2.4.ebuild:
   Stable for x86, wrt bug #470562

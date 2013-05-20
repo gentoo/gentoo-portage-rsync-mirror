@@ -4,10 +4,10 @@ DESCRIPTION=HeVeA is a quite complete and fast LaTeX to HTML translator
 EAPI=5
 HOMEPAGE=http://hevea.inria.fr/
 IUSE=+ocamlopt
-KEYWORDS=amd64 ~ppc ~ppc64 ~sparc x86
+KEYWORDS=amd64 ppc ~ppc64 ~sparc x86
 LICENSE=QPL
 RDEPEND=>=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0
 SRC_URI=http://hevea.inria.fr/distri/hevea-2.03.tar.gz
 _eclasses_=eutils	b8fdb86895c268cca7ae1626264a30f4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=842ccd8399d3fa67b3379ee25afca0e5
+_md5_=19fb7031cb6b89bd7dd9f98469054fa0
