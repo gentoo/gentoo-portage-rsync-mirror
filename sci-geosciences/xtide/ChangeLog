@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/xtide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/xtide/ChangeLog,v 1.3 2013/02/17 00:18:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/xtide/ChangeLog,v 1.4 2013/05/20 13:41:03 hasufell Exp $
+
+  20 May 2013; Julian Ospald <hasufell@gentoo.org> xtide-2.13.ebuild:
+  fix dependencies wrt #470748
 
   17 Feb 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   set correct maintainer
