@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.28 2013/05/20 00:41:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.29 2013/05/20 01:24:54 prometheanfire Exp $
+
+  20 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  pyalsaaudio-0.7-r1.ebuild:
+  fixing the bad commit to update pyalsaaudio to eapi5
 
 *pyalsaaudio-0.7-r1 (20 May 2013)
 

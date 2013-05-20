@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.7-r1.ebuild,v 1.1 2013/05/20 00:41:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.7-r1.ebuild,v 1.2 2013/05/20 01:24:54 prometheanfire Exp $
 
 EAPI=5
 
@@ -24,8 +24,8 @@ RESTRICT="test"
 
 DOCS=( CHANGES README )
 
-src_compile() {
-	distutils_src_compile-r1
+python_compile() {
+	distutils-r1_python_compile
 
 	if use doc; then
 		cd doc
@@ -40,8 +40,8 @@ src_test() {
 	python_execute_function testing
 }
 
-src_install() {
-	distutils_src_install-r1
+python_install() {
+	distutils-r1_python_install
 
 	if use doc; then
 		dohtml -r doc/html/

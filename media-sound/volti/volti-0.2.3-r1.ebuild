@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volti/volti-0.2.3-r1.ebuild,v 1.1 2013/05/07 08:12:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volti/volti-0.2.3-r1.ebuild,v 1.2 2013/05/20 01:19:40 prometheanfire Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="libnotify X"
 
 RDEPEND=">=dev-python/pygtk-2.16
-	>=dev-python/pyalsaaudio-0.6
+	>=dev-python/pyalsaaudio-0.7-r1
 	dev-python/dbus-python
 	X? ( >=dev-python/python-xlib-0.15_rc1 )
 	libnotify? ( x11-libs/libnotify )"
