@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagvis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.12 2012/12/22 18:24:04 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.13 2013/05/20 03:58:05 patrick Exp $
+
+  20 May 2013; Patrick Lauer <patrick@gentoo.org> nagvis-1.6.6.ebuild:
+  Fix sqlite3 -> sqlite useflag migration #469538
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> nagvis-1.6.6.ebuild:
   Add ~ppc, wrt bug #429088

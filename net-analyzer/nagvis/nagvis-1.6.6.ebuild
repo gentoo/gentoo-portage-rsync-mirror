@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.6.6.ebuild,v 1.2 2012/12/22 18:24:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.6.6.ebuild,v 1.3 2013/05/20 03:58:05 patrick Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="|| ( net-analyzer/nagios net-analyzer/icinga )
 	automap? ( >=media-gfx/graphviz-2.14 )
 	apache2? ( dev-lang/php[apache2] )
 	net-analyzer/mk-livestatus
-	dev-lang/php[gd,nls,json,session,pdo,sqlite3,sockets,mysql,unicode,xml]"
+	dev-lang/php[gd,nls,json,session,pdo,sqlite,sockets,mysql,unicode,xml]"
 
 need_php_httpd
 want_apache2
