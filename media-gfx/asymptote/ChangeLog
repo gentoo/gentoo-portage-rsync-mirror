@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.103 2013/05/16 05:00:39 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.104 2013/05/21 03:10:19 grozin Exp $
+
+*asymptote-2.23 (21 May 2013)
+
+  21 May 2013; Andrey Grozin <grozin@gentoo.org> -asymptote-2.22.ebuild,
+  +asymptote-2.23.ebuild, -files/asymptote-2.22-configure-ac.patch,
+  -files/asymptote-2.22-info.patch, -files/asymptote-2.22-xdg-utils.patch,
+  +files/asymptote-2.23-configure-ac.patch, +files/asymptote-2.23-info.patch,
+  +files/asymptote-2.23-xdg-utils.patch:
+  Version bump fixing #470150
 
 *asymptote-2.22 (16 May 2013)
 

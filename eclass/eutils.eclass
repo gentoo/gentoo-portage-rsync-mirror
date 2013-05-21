@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.418 2013/05/15 19:01:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.419 2013/05/21 02:57:22 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -476,9 +476,14 @@ epatch() {
 		# Similar reason, but with relative paths.
 		local rel_paths=$(egrep -n '^[-+]{3} [^	]*[.][.]/' "${PATCH_TARGET}")
 		if [[ -n ${rel_paths} ]] ; then
-			eqawarn "QA Notice: Your patch uses relative paths '../'."
-			eqawarn " In the future this will cause a failure."
-			eqawarn "${rel_paths}"
+			echo
+			eerror "Rejected Patch: ${patchname} !"
+			eerror " ( ${PATCH_TARGET} )"
+			eerror
+			eerror "Your patch uses relative paths '../':"
+			eerror "${rel_paths}"
+			echo
+			die "you need to fix the relative paths in patch"
 		fi
 
 		# Dynamically detect the correct -p# ... i'm lazy, so shoot me :/
