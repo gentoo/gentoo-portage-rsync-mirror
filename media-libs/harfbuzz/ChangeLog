@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.32 2013/04/24 12:46:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.33 2013/05/21 10:31:14 scarabeus Exp $
+
+*harfbuzz-0.9.17 (21 May 2013)
+
+  21 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> +harfbuzz-0.9.17.ebuild,
+  -harfbuzz-0.9.16.ebuild:
+  Version bump to 0.9.17 remove older testing as it had quite iusses with lo.
+  This could be stable candidate.
 
 *harfbuzz-0.9.16 (24 Apr 2013)
 
