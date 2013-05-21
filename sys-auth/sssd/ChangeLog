@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.41 2013/05/12 02:07:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.42 2013/05/21 20:04:05 hwoarang Exp $
+
+*sssd-1.9.5 (21 May 2013)
+
+  21 May 2013; Markos Chandras <hwoarang@gentoo.org> +sssd-1.9.5.ebuild:
+  Version bump. Bug #470728
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Drop obsolete use flags from metadata.xml
