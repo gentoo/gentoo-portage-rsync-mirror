@@ -1,11 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.8.5.ebuild,v 1.2 2012/09/03 16:00:40 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.1.0.ebuild,v 1.1 2013/05/21 07:31:10 ultrabug Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="2"
 
-inherit eutils python systemd
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit eutils python-r1 systemd
 
 DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang."
 HOMEPAGE="http://www.rabbitmq.com/"
@@ -29,15 +31,6 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	enewgroup rabbitmq
 	enewuser rabbitmq -1 -1 /var/lib/rabbitmq rabbitmq
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	# do not refetch plugins from their vcs
-	for f in $(find plugins-src/*-wrapper ${plugin} -type d -maxdepth 1); do
-		touch ${f}/.done
-	done
 }
 
 src_compile() {
@@ -47,7 +40,7 @@ src_compile() {
 
 src_install() {
 	# erlang module
-	local targetdir="/usr/$(get_libdir)/rabbitmq"
+	local targetdir="/usr/$(get_libdir)/erlang/lib/rabbitmq_server-${PV}"
 
 	einfo "Setting correct RABBITMQ_HOME in scripts"
 	sed -e "s:^RABBITMQ_HOME=.*:RABBITMQ_HOME=\"${targetdir}\":g" \
@@ -92,5 +85,11 @@ pkg_preinst() {
 		elog "  usermod -d /var/lib/rabbitmq rabbitmq"
 		elog "  chown rabbitmq:rabbitmq -R /var/lib/rabbitmq"
 		elog
+	elif has_version "<net-misc/rabbitmq-server-2.1.1"; then
+		elog "IMPORTANT UPGRADE NOTICE:"
+		elog
+		elog "Please read release notes before upgrading:"
+		elog
+		elog "http://www.rabbitmq.com/release-notes/README-3.0.0.txt"
 	fi
 }

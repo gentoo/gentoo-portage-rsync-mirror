@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.3.ebuild,v 1.1 2012/11/26 08:06:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.3.ebuild,v 1.2 2013/05/21 07:10:10 patrick Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Fast Library for Number Theory"
 HOMEPAGE="http://www.flintlib.org/"
@@ -21,6 +21,11 @@ DEPEND="dev-libs/mpfr
 	sci-libs/mpir
 	"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	# Correct lib paths to be multilib-proper #470732
+	sed -i -e 's~/lib~/'$(get_libdir)'~' Makefile.in || die
+}
 
 src_configure() {
 	# handwritten script, needs extra stabbing

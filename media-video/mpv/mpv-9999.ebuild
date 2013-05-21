@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.5 2013/05/16 20:46:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.6 2013/05/21 07:29:42 radhermit Exp $
 
 EAPI=5
 
@@ -106,7 +106,7 @@ DEPEND="${RDEPEND}
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
 "
-DOCS=( AUTHORS Copyright README.rst etc/example.conf etc/input.conf )
+DOCS=( AUTHORS Copyright README.md etc/example.conf etc/input.conf )
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
