@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.174 2013/05/09 20:31:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.175 2013/05/21 08:08:43 scarabeus Exp $
 
 EAPI=5
 
@@ -202,7 +202,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.8.0:=
+	>=dev-util/mdds-0.8.1:=
 	virtual/pkgconfig
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
@@ -351,7 +351,7 @@ src_prepare() {
 
 	if use branding; then
 		# hack...
-		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
+		mv -v "${WORKDIR}/branding-intro.1ng" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
 }
 
@@ -414,7 +414,6 @@ src_configure() {
 	# system headers/libs/...: enforce using system packages
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-graphite: disabling causes build breakages
-	# --enable-harfbuzz: disabling uses ICU LE which is unmaintained and broken
 	# --enable-*-link: link to the library rather than just dlopen on runtime
 	# --enable-release-build: build the libreoffice as release
 	# --disable-fetch-external: prevent dowloading during compile phase
@@ -435,7 +434,6 @@ src_configure() {
 		--with-system-dicts \
 		--enable-cairo-canvas \
 		--enable-graphite \
-		--enable-harfbuzz \
 		--enable-largefile \
 		--enable-mergelibs \
 		--enable-python=system \
@@ -466,7 +464,6 @@ src_configure() {
 		--with-lang="" \
 		--with-parallelism=${jbs} \
 		--with-system-ucpp \
-		--with-unix-wrapper=libreoffice \
 		--with-vendor="Gentoo Foundation" \
 		--with-x \
 		--without-afms \

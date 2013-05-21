@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.8.0.ebuild,v 1.1 2013/05/09 20:29:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.8.1.ebuild,v 1.1 2013/05/21 08:06:46 scarabeus Exp $
 
 EAPI=5
 

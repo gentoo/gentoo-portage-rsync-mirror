@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.0.1.ebuild,v 1.1 2013/05/19 05:13:01 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.0.1.ebuild,v 1.2 2013/05/21 08:14:25 grozin Exp $
 
 EAPI=5
 inherit eutils
@@ -20,7 +20,7 @@ DEPEND="!dev-lisp/cl-${PN}
 		!dev-lisp/asdf-binary-locations
 		!dev-lisp/gentoo-init
 		!<dev-lisp/asdf-2.33-r3
-		doc? ( <sys-apps/texinfo-5.0 virtual/texi2dvi )"
+		doc? ( virtual/texi2dvi )"
 RDEPEND=""
 PDEPEND="~dev-lisp/uiop-${PV}"
 

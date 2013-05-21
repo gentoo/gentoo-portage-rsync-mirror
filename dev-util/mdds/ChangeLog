@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.27 2013/05/09 20:29:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.28 2013/05/21 08:06:46 scarabeus Exp $
+
+*mdds-0.8.1 (21 May 2013)
+
+  21 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> +mdds-0.8.1.ebuild,
+  -mdds-0.8.0.ebuild:
+  Version bump to 0.8.1 drop older used only by live version.
 
 *mdds-0.8.0 (09 May 2013)
 
