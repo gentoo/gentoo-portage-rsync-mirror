@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/elementtree-1.2.6-r3.ebuild,v 1.6 2013/05/20 17:53:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/elementtree-1.2.6-r3.ebuild,v 1.7 2013/05/21 16:14:27 jer Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://effbot.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="ElementTree"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ~ppc64 s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~ppc64 s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

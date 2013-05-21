@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/txt2man-1.5.6.ebuild,v 1.5 2012/02/01 22:27:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/txt2man-1.5.6.ebuild,v 1.6 2013/05/21 16:18:08 jer Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://mvertes.free.fr/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE=""
 
 RDEPEND="app-shells/bash

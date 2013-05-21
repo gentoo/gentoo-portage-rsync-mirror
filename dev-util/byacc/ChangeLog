@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.66 2013/05/20 17:45:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.67 2013/05/21 16:16:12 jer Exp $
+
+  21 May 2013; Jeroen Roovers <jer@gentoo.org> byacc-20130304.ebuild:
+  Stable for HPPA (bug #470482).
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> byacc-20130304.ebuild:
   Stable for s390, wrt bug #470482

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.84 2013/03/02 22:41:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.85 2013/05/21 16:10:27 hwoarang Exp $
+
+  21 May 2013; Markos Chandras <hwoarang@gentoo.org> minitube-1.9.ebuild,
+  minitube-2.0.ebuild:
+  Add missing dep to media-plugins/gst-plugins-theora for HD videos
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> minitube-1.9.ebuild,
   minitube-2.0.ebuild:

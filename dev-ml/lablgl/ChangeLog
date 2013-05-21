@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.65 2013/05/20 12:39:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.66 2013/05/21 16:04:27 jer Exp $
+
+  21 May 2013; Jeroen Roovers <jer@gentoo.org> lablgl-1.04-r1.ebuild:
+  Stable for HPPA (bug #470404).
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> lablgl-1.04-r1.ebuild:
   Stable for ppc, wrt bug #470404

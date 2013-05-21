@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.0.ebuild,v 1.3 2013/03/02 22:41:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.0.ebuild,v 1.4 2013/05/21 16:10:27 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -26,6 +26,7 @@ DEPEND=">=dev-qt/qtgui-4.6:4[accessibility,gtkstyle]
 		media-plugins/gst-plugins-ffmpeg:0.10
 		media-plugins/gst-plugins-faac:0.10
 		media-plugins/gst-plugins-faad:0.10
+		media-plugins/gst-plugins-theora
 	)
 "
 RDEPEND="${DEPEND}"
