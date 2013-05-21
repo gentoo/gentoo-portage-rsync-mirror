@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/transset
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/transset/ChangeLog,v 1.4 2012/06/25 07:46:30 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/transset/ChangeLog,v 1.5 2013/05/20 23:41:52 chithanh Exp $
+
+*transset-1.0.1 (20 May 2013)
+
+  20 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +transset-1.0.1.ebuild:
+  Version bump.
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> transset-1.0.0.ebuild:
   marked x86 per bug 423357
@@ -16,4 +22,3 @@
 
   06 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +transset-1.0.0.ebuild:
   Initial commit.
-

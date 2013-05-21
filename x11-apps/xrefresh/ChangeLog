@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xrefresh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.45 2012/05/15 14:19:50 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.46 2013/05/20 23:43:05 chithanh Exp $
+
+*xrefresh-1.0.5 (20 May 2013)
+
+  20 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xrefresh-1.0.5.ebuild:
+  Version bump.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xrefresh-1.0.4.ebuild:
   keyword ~amd64-fbsd
@@ -167,4 +173,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xrefresh-0.99.0.ebuild:
   Initial commit for modular X.
-

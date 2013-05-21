@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/bitmap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.57 2012/08/26 16:15:02 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.58 2013/05/20 23:44:16 chithanh Exp $
+
+*bitmap-1.0.7 (20 May 2013)
+
+  20 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +bitmap-1.0.7.ebuild, -bitmap-1.0.5.ebuild:
+  Version bump.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> bitmap-1.0.6.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -206,4 +212,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +bitmap-0.99.0.ebuild:
   Initial commit for modular X.
-
