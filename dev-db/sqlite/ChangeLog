@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.476 2013/05/20 17:58:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.477 2013/05/21 22:49:34 floppym Exp $
+
+*sqlite-3.7.17 (21 May 2013)
+
+  21 May 2013; Mike Gilbert <floppym@gentoo.org> +sqlite-3.7.17.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
   Stable for s390, wrt bug #468218

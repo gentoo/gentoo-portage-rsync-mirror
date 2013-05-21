@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.161 2013/04/26 20:28:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.162 2013/05/21 22:40:12 pacho Exp $
+
+*anjuta-3.8.3 (21 May 2013)
+
+  21 May 2013; Pacho Ramos <pacho@gentoo.org> +anjuta-3.8.3.ebuild:
+  Version bump, drop old
 
   26 Apr 2013; Pacho Ramos <pacho@gentoo.org> -anjuta-3.4.3.ebuild:
   Drop old
