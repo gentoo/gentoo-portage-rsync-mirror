@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14766 2013/05/20 20:02:19 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14768 2013/05/21 05:49:52 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (21 May 2013)
+# broken dependencies -> uninstallable #470712
+app-portage/g-ctan
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (20 May 2013)
 # dead on upstream, failed on compile >=media-video/vdr-1.7.27
@@ -983,10 +987,6 @@ net-misc/netcf
 # Fails to self-verify/sign in FIPS mode, pending upstream response before
 # usage for GSoC project.
 app-crypt/hmaccalc
-
-# Luca Barbato <lu_zero@gentoo.org> (21 May 2010)
-# development release
-=dev-db/mongodb-1.5*
 
 # Justin Lecher <jlec@gentoo.org> (16 May 2010)
 # Upstreams testing version
