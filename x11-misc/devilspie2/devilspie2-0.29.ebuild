@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/devilspie2-0.26.ebuild,v 1.1 2012/11/27 23:51:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/devilspie2-0.29.ebuild,v 1.1 2013/05/21 14:01:41 hasufell Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic toolchain-funcs
+# check locales on version bump!
+PLOCALES="sv fr pt_BR nl ru fi"
+inherit flag-o-matic toolchain-funcs l10n
 
 DESCRIPTION="Devilspie like window matching utility, using LUA for scripting"
 HOMEPAGE="http://devilspie2.gusnan.se"
@@ -26,17 +28,15 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{anti-debian,cflags}.patch
-
 	use debug && append-cflags -D_DEBUG
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) PREFIX="/usr"
+	emake CC=$(tc-getCC) PREFIX="/usr" LANGUAGES="$(l10n_get_locales)"
 }
 
 src_install() {
-	emake PREFIX="/usr" DESTDIR="${D}" install
+	emake PREFIX="/usr" DESTDIR="${D}" LANGUAGES="$(l10n_get_locales)" install
 
 	dodoc AUTHORS ChangeLog README README.translators TODO VERSION
 	doman devilspie2.1

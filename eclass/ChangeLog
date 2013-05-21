@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.833 2013/05/21 01:31:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.834 2013/05/21 14:05:31 mgorny Exp $
+
+  21 May 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  Replace the .la sanity check by one used in libtool itself. Fixes removing
+  qmake-generated .la files, bug #470206.
 
   21 May 2013; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass,
   python-r1.eclass, python-single-r1.eclass:

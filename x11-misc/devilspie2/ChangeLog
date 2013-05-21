@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/devilspie2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.3 2013/02/21 16:54:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.4 2013/05/21 14:01:41 hasufell Exp $
+
+*devilspie2-0.29 (21 May 2013)
+
+  21 May 2013; Julian Ospald <hasufell@gentoo.org> -devilspie2-0.26.ebuild,
+  -files/devilspie2-0.26-anti-debian.patch,
+  -files/devilspie2-0.26-cflags.patch, -devilspie2-0.27.ebuild,
+  +devilspie2-0.29.ebuild:
+  version bump, remove old
 
 *devilspie2-0.28 (21 Feb 2013)
 
