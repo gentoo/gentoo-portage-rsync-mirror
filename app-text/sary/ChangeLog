@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sary
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.42 2013/04/26 09:08:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.43 2013/05/21 19:16:19 jer Exp $
+
+  21 May 2013; Jeroen Roovers <jer@gentoo.org> sary-1.2.0-r1.ebuild:
+  Whitespace. Remove die().
 
   26 Apr 2013; Patrick Lauer <patrick@gentoo.org> sary-1.2.0-r1.ebuild:
   More better fix that actually works now
