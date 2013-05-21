@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libusb-compat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.22 2013/04/27 09:30:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.23 2013/05/21 11:54:04 ssuominen Exp $
+
+*libusb-compat-0.1.5 (21 May 2013)
+
+  21 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +libusb-compat-0.1.5.ebuild:
+  Version bump.
 
   27 Apr 2013; Fabian Groffen <grobian@gentoo.org> libusb-compat-0.1.4.ebuild:
   Marked ~{ppc,x64}-macos, ~amd64-linux
