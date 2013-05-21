@@ -1,0 +1,9 @@
+# ChangeLog for net-dns/pdns-ldap-backend
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-ldap-backend/ChangeLog,v 1.1 2013/05/21 06:20:57 dev-zero Exp $
+
+*pdns-ldap-backend-0.2 (21 May 2013)
+
+  21 May 2013; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +pdns-ldap-backend-0.2.ebuild:
+  Initial commit, ebuild written by me.
