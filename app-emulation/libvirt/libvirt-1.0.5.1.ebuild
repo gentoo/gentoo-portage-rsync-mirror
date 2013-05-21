@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.5.1.ebuild,v 1.1 2013/05/21 21:25:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.5.1.ebuild,v 1.2 2013/05/21 21:58:20 cardoe Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ PYTHON_DEPEND="python? 2:2.5"
 #RESTRICT_PYTHON_ABIS="3.*"
 #SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils python user autotools linux-info
+inherit eutils python user autotools linux-info systemd
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-2
@@ -36,7 +36,8 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm +lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu rbd sasl \
-	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc"
+	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc \
+	systemd"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	lxc? ( caps libvirtd )
 	openvz? ( libvirtd )
@@ -302,6 +303,9 @@ src_configure() {
 	# locking support
 	myconf="${myconf} --without-sanlock"
 
+	# systemd unit files
+	use systemd && myconf="${myconf} --with-init-script=systemd"
+
 	# this is a nasty trick to work around the problem in bug
 	# #275073. The reason why we don't solve this properly is that
 	# it'll require us to rebuild autotools (and we don't really want
@@ -342,6 +346,7 @@ src_install() {
 		HTML_DIR=/usr/share/doc/${PF}/html \
 		DOCS_DIR=/usr/share/doc/${PF}/python \
 		EXAMPLE_DIR=/usr/share/doc/${PF}/python/examples \
+		SYSTEMD_UNIT_DIR="$(systemd_get_unitdir)" \
 		|| die "emake install failed"
 
 	find "${D}" -name '*.la' -delete || die

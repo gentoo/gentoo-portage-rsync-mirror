@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.18.5.1.ebuild,v 1.1 2013/05/03 16:47:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.18.5.5.ebuild,v 1.1 2013/05/21 21:34:25 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )

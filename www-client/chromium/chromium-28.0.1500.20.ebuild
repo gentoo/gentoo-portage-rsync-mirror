@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.5.ebuild,v 1.2 2013/05/10 00:22:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.20.ebuild,v 1.1 2013/05/21 21:40:13 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -132,12 +132,6 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r5.patch"
-
-	# Fix build with system libraries. To be upstreamed.
-	epatch "${FILESDIR}/${PN}-system-icu-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-libvpx-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-v8-r1.patch"
-	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
 
 	epatch_user
 
