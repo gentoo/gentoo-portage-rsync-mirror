@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.427 2013/05/20 17:43:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.428 2013/05/21 08:55:07 mschiff Exp $
+
+*dovecot-2.2.2-r1 (21 May 2013)
+*dovecot-2.1.16-r1 (21 May 2013)
+
+  21 May 2013; Marc Schiffbauer <mschiff@gentoo.org> +dovecot-2.1.16-r1.ebuild,
+  +dovecot-2.2.2-r1.ebuild, metadata.xml:
+  Bump 2.1.16 and 2.2.2 to add solr support via USE flag. Fixes #448984
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> dovecot-2.1.16.ebuild:
   Stable for s390, wrt bug #470196

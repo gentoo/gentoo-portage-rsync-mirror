@@ -4606,6 +4606,7 @@ net-mail/dovecot:mdbox - Add mdbox storage support
 net-mail/dovecot:pop3c - Add pop3 client storage support
 net-mail/dovecot:sdbox - Add sdbox storage support
 net-mail/dovecot:sieve - Add sieve support
+net-mail/dovecot:solr - Add solr full text search (FTS) support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/fdm:courierauth - Add support for Courier authentication library
 net-mail/fetchmail:hesiod - Enable support for hesiod
