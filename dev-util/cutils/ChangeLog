@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.32 2012/08/06 00:46:37 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.33 2013/05/21 12:33:12 kensington Exp $
+
+  21 May 2013; Michael Palimaka <kensington@gentoo.org> -cutils-1.6-r2.ebuild,
+  -files/cutils-1.6-r1-gentoo.diff:
+  Remove old.
 
   06 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
   +files/cutils-1.6-case-insensitive.patch, cutils-1.6-r4.ebuild:

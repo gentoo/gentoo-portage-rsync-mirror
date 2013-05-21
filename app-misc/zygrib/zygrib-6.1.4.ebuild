@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.1.4.ebuild,v 1.1 2013/05/21 12:12:54 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.1.4.ebuild,v 1.2 2013/05/21 12:42:58 mschiff Exp $
 
 EAPI=5
 
@@ -12,10 +12,10 @@ DESCRIPTION="GRIB File Viewer - Weather data visualization"
 HOMEPAGE="http://www.zygrib.org/"
 SRC_URI="http://www.zygrib.org/getfile.php?file=${MY_PN}-${PV}.tgz -> ${P}.tgz
 	maps?   (
-		http://zygrib.org/getfile.php?file=zyGrib_maps2.tgz         -> zygrib-maps2.tgz
-		http://www.zygrib.org/getfile.php?file=cities_1k-3k.txt.gz  -> zygrib-cities_1k-3k.txt.gz
+		http://zygrib.org/getfile.php?file=zyGrib_maps2.4.tgz -> zygrib-maps2.4.tgz
+		http://www.zygrib.org/getfile.php?file=cities_1k-3k.txt.gz -> zygrib-cities_1k-3k.txt.gz
 		http://www.zygrib.org/getfile.php?file=cities_300-1k.txt.gz -> zygrib-cities_300-1k.txt.gz
-		http://www.zygrib.org/getfile.php?file=cities_0-300.txt.gz  -> zygrib-cities_0-300.txt.gz
+		http://www.zygrib.org/getfile.php?file=cities_0-300.txt.gz -> zygrib-cities_0-300.txt.gz
 	 )"
 
 LICENSE="GPL-3"
@@ -63,8 +63,8 @@ src_install() {
 	domenu "${FILESDIR}/zygrib.desktop"
 
 	if use maps; then
-		insinto "/opt/${MY_PN}/data"
-		doins -r "${WORKDIR}/maps"
+		insinto "/opt/${MY_PN}"
+		doins -r "${WORKDIR}/data"
 		insinto "/opt/${MY_PN}/data/gis"
 		gzip "${WORKDIR}"/*.txt
 		doins "${WORKDIR}"/*.txt.gz

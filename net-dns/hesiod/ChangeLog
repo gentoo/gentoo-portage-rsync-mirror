@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/hesiod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.45 2012/08/08 20:24:42 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.46 2013/05/21 12:46:30 kensington Exp $
+
+  21 May 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/hesiod-3.0.2-redhat.patch, -hesiod-3.0.2-r2.ebuild:
+  Remove old.
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> hesiod-3.1.0.ebuild:
   Marking hesiod-3.1.0 ppc for bug 419715
