@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/zygrib
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.1 2013/05/21 12:12:54 mschiff Exp $
+
+*zygrib-6.1.4 (21 May 2013)
+
+  21 May 2013; Marc Schiffbauer <mschiff@gentoo.org> +zygrib-6.1.4.ebuild,
+  +files/zygrib, +files/zygrib.desktop, +files/zygrib.png, +metadata.xml:
+  Initial commit of zygrib
+

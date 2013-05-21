@@ -829,6 +829,7 @@ app-misc/vifm:vim-plugin - Install the vifm vim plugin
 app-misc/worker:avfs - Enable support for sys-fs/avfs
 app-misc/worker:magic - Add magic file support from sys-apps/file to automatically detect file types
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
+app-misc/zygrib:maps - Installs additional GSHHS maps for high resolution coastline data and cities
 app-mobilephone/gammu:irda - Enables infrared support
 app-mobilephone/gnokii:ical - Enable support for dev-libs/libical
 app-mobilephone/gnokii:irda - Enable infrared support
