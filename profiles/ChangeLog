@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7857 2013/05/21 05:49:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7858 2013/05/21 18:35:42 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 May 2013; Johannes Huber <johu@gentoo.org> package.mask:
+  Drop mask for net-im/net-im/ktp-contact-applet, net-im/ktp-presence-applet.
+  Packages removed from tree.
 
   21 May 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
   Removing useless mongodb mask
