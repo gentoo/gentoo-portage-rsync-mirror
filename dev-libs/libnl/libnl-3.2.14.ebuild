@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.14.ebuild,v 1.16 2013/01/01 19:06:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.14.ebuild,v 1.17 2013/05/21 16:40:25 jer Exp $
 
 EAPI=4
 inherit eutils libtool multilib
 
-DESCRIPTION="A library for applications dealing with netlink socket"
+DESCRIPTION="A collection of libraries providing APIs to netlink protocol based Linux kernel interfaces"
 HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
 SRC_URI="
 	http://www.infradead.org/~tgr/libnl/files/${P}.tar.gz

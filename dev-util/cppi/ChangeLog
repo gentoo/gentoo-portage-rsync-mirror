@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/ChangeLog,v 1.14 2013/05/20 10:24:12 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/ChangeLog,v 1.15 2013/05/21 16:37:52 jer Exp $
+
+  21 May 2013; Jeroen Roovers <jer@gentoo.org> -cppi-1.17.ebuild:
+  Old.
 
   20 May 2013; Chema Alonso <nimiux@gentoo.org> cppi-1.18.ebuild:
   Stable for amd64 wrt bug #470484

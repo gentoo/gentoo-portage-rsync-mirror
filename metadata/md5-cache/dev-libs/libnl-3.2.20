@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=sys-devel/flex sys-devel/bison
-DESCRIPTION=A library for applications dealing with netlink socket
+DESCRIPTION=A collection of libraries providing APIs to netlink protocol based Linux kernel interfaces
 EAPI=4
 HOMEPAGE=http://www.infradead.org/~tgr/libnl/
 IUSE=doc static-libs utils
@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1 doc? ( GPL-2 ) utils? ( GPL-2 )
 SLOT=3
 SRC_URI=http://www.infradead.org/~tgr/libnl/files/libnl-3.2.20.tar.gz doc? ( http://www.infradead.org/~tgr/libnl/files/libnl-doc-3.2.20.tar.gz )
 _eclasses_=eutils	0c8c56033961c5899d1e699e979550f7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=f3bbf8b7190e0545cb6dbcb481732874
+_md5_=afdd229143b6e2c6aaf973aabb0c4b4a
