@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.107 2013/05/20 17:45:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.108 2013/05/21 15:09:14 jer Exp $
+
+  21 May 2013; Jeroen Roovers <jer@gentoo.org> sharutils-4.13.5.ebuild:
+  Stable for HPPA (bug #470298).
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> sharutils-4.13.5.ebuild:
   Stable for s390, wrt bug #470298

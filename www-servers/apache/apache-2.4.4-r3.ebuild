@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.4-r3.ebuild,v 1.3 2013/05/20 08:58:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.4-r3.ebuild,v 1.4 2013/05/21 15:19:08 lxnay Exp $
 
 EAPI="2"
 
@@ -146,10 +146,6 @@ src_prepare() {
 	fi
 	apache-2_src_prepare
 	sed -i -e 's/! test -f/test -f/' "${GENTOO_PATCHDIR}"/init/apache2.initd || die "Failed to fix init script"
-
-	# mod_systemd support, merged upstream already:
-	# http://svn.apache.org/viewvc?view=revision&revision=1393976
-	epatch "${FILESDIR}/httpd-2.4.3-mod_systemd.patch"
 }
 
 src_install() {
@@ -176,7 +172,10 @@ src_install() {
 		dodir /var/run/apache_ssl_mutex || die "Failed to mkdir ssl_mutex"
 	fi
 
-	systemd_newunit "${FILESDIR}/apache2.4.service" "apache2.service"
+	# Note: wait for mod_systemd to be included in the next release,
+	# then apache2.4.service can be used and systemd support controlled
+	# through --enable-systemd
+	systemd_newunit "${FILESDIR}/apache2.2.service" "apache2.service"
 	systemd_dotmpfilesd "${FILESDIR}/apache.conf"
 	insinto /etc/apache2/modules.d
 	doins "${FILESDIR}/00_systemd.conf"

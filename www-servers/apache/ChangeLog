@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.230 2013/05/20 08:58:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.231 2013/05/21 15:19:08 lxnay Exp $
+
+  21 May 2013; Fabio Erculiani <lxnay@gentoo.org> apache-2.4.4-r3.ebuild:
+  drop mod_systemd patch for now, since it requires more work in
+  apache-2.eclass, it will be available anyway in the next release, fix bug
+  #470774
 
 *apache-2.2.24-r1 (20 May 2013)
 
