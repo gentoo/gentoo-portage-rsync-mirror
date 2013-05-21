@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.54 2013/05/10 22:03:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.55 2013/05/21 01:31:02 floppym Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -150,6 +150,24 @@ fi
 # python_targets_python2_6(-)?,python_targets_python2_7(-)?
 # @CODE
 
+# @ECLASS-VARIABLE: PYTHON_REQUIRED_USE
+# @DESCRIPTION:
+# This is an eclass-generated required-use expression which ensures at
+# least one Python implementation has been enabled.
+#
+# This expression should be utilized in an ebuild by including it in
+# REQUIRED_USE, optionally behind a use flag.
+#
+# Example use:
+# @CODE
+# REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+# @CODE
+#
+# Example value:
+# @CODE
+# || ( python_targets_python2_6 python_targets_python2_7 )
+# @CODE
+
 _python_set_globals() {
 	local impls=()
 
@@ -181,7 +199,7 @@ _python_set_globals() {
 	optflags+=,${flags_st[@]/%/(-)}
 
 	IUSE=${flags[*]}
-	#REQUIRED_USE="|| ( ${flags[*]} )"
+	PYTHON_REQUIRED_USE="|| ( ${flags[*]} )"
 	PYTHON_USEDEP=${optflags// /,}
 
 	# 1) well, python-exec would suffice as an RDEP
