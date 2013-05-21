@@ -1,0 +1,11 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -61,7 +61,7 @@
+ 
+ # AC_CONFIG_HEADERS([config.h])
+ AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ AH_TOP([
+ /* This file is part of GMetaDOM

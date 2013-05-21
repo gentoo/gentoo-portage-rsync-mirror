@@ -1,4 +1,10 @@
 
+*elfix-0.8.3 (21 May 2013)
+
+  21 May 2013; Anthony G. Basile <blueness@gentoo.org> +elfix-0.8.3.ebuild,
+  -elfix-0.8.2.ebuild:
+  Version bump: rename pax-mark to avoid name collision
+
 *elfix-0.8.2 (20 May 2013)
 
   20 May 2013; Anthony G. Basile <blueness@gentoo.org> +elfix-0.8.2.ebuild,

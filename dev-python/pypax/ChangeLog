@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.62 2013/05/20 22:07:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.63 2013/05/21 15:32:38 blueness Exp $
+
+*pypax-0.8.3 (21 May 2013)
+
+  21 May 2013; Anthony G. Basile <blueness@gentoo.org> +pypax-0.8.3.ebuild,
+  -pypax-0.8.2.ebuild:
+  Version bump: rename pax-mark to avoid name collision
 
   20 May 2013; Anthony G. Basile <blueness@gentoo.org> -pypax-0.7.0.ebuild,
   -pypax-0.8.1.ebuild:
