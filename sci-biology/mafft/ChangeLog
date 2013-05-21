@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/mafft
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.11 2013/04/29 10:19:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.12 2013/05/21 18:04:05 jlec Exp $
+
+*mafft-7.040 (21 May 2013)
+
+  21 May 2013; Justin Lecher <jlec@gentoo.org> mafft-7.037.ebuild,
+  +mafft-7.040.ebuild:
+  Version BUmp, drop unnecessary die
 
   29 Apr 2013; Justin Lecher <jlec@gentoo.org> mafft-7.037.ebuild:
   Fix USE=threads make flag magic
