@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.1_p2.ebuild,v 1.1 2013/05/21 17:22:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.1_p2.ebuild,v 1.2 2013/05/21 17:33:58 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -40,4 +40,9 @@ src_configure() {
 		$(use_enable static-libs static) \
 		--disable-debug \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+}
+
+src_install() {
+	default
+	prune_libtool_files
 }

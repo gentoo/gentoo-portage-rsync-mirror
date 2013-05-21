@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.7.1-r1.ebuild,v 1.3 2013/02/19 05:05:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.7.1-r1.ebuild,v 1.4 2013/05/21 17:35:57 vapier Exp $
 
 EAPI=4
 
-inherit flag-o-matic unpacker
+inherit flag-o-matic
 
 DESCRIPTION="Utility to apply diffs to files"
 HOMEPAGE="http://www.gnu.org/software/patch/patch.html"
@@ -22,6 +22,8 @@ DEPEND="${RDEPEND}
 src_configure() {
 	use static && append-ldflags -static
 
+	# Do not let $ED mess up the search for `ed` 470210.
+	ac_cv_path_ED=$(type -P ed) \
 	econf \
 		$(use_enable xattr) \
 		--program-prefix="$(use userland_BSD && echo g)"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.62 2013/02/19 05:05:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.63 2013/05/21 17:35:57 vapier Exp $
+
+  21 May 2013; Mike Frysinger <vapier@gentoo.org> patch-2.7.1-r1.ebuild:
+  Do not let $ED from the EAPI mess up the search for `ed` #470210 by Roman
+  Žilka.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> patch-2.7.1-r1.ebuild:
   Add ~arm-linux keyword.

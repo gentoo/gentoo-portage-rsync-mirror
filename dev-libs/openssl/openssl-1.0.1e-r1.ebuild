@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1e-r1.ebuild,v 1.1 2013/04/27 11:06:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1e-r1.ebuild,v 1.2 2013/05/21 17:53:18 vapier Exp $
 
 EAPI="4"
 
@@ -77,7 +77,7 @@ src_prepare() {
 	sed -i '/^SET_X/s:=.*:=set -x:' Makefile.shared
 
 	# allow openssl to be cross-compiled
-	cp "${FILESDIR}"/gentoo.config-1.0.0 gentoo.config || die
+	cp "${FILESDIR}"/gentoo.config-1.0.1 gentoo.config || die
 	chmod a+rx gentoo.config
 
 	append-flags -fno-strict-aliasing
