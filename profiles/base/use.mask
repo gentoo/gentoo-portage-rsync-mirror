@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.168 2013/05/04 13:38:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.169 2013/05/21 21:24:14 chutzpah Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -308,11 +308,6 @@ ipmi
 # Diego Elio Pettenò <flameeyes@gentoo.org> (27 Aug 2012)
 # netlink is a Linux-specific interface
 netlink
-
-# Mike Gilbert <floppym@gentoo.org> (08 Oct 2012)
-# Python 3.3 is masked for testing.
-python_targets_python3_3
-python_single_target_python3_3
 
 # Luca barbato <lu_zero@gentoo.org> (14 Oct 2012)
 # Pending keywording on arches

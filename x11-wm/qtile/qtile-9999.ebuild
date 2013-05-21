@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-9999.ebuild,v 1.4 2013/05/16 11:00:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-9999.ebuild,v 1.5 2013/05/21 21:10:48 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
+DISTUTILS_SINGLE_IMPL=1
 
 inherit git-2 distutils-r1 virtualx
 
@@ -18,9 +19,9 @@ SLOT="0"
 KEYWORDS=""
 IUSE="doc test"
 
-RDEPEND=">=dev-python/pycairo-1.10.0-r3[xcb,${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/pycairo-1.10.0-r4[xcb,${PYTHON_USEDEP}]
 	dev-python/pygtk:2[${PYTHON_USEDEP}]
-	>=x11-libs/xpyb-1.3.1[${PYTHON_USEDEP}]"
+	>=x11-libs/xpyb-1.3.1-r1[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (

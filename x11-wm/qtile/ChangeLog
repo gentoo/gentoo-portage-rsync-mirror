@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/qtile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/ChangeLog,v 1.6 2013/05/16 11:07:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/ChangeLog,v 1.7 2013/05/21 21:10:48 radhermit Exp $
+
+  21 May 2013; Tim Harder <radhermit@gentoo.org> qtile-0.5-r1.ebuild,
+  qtile-0.6.ebuild, qtile-9999.ebuild:
+  Fix python deps and only support a single implementation until xpyb allows
+  multiple.
 
   16 May 2013; Tim Harder <radhermit@gentoo.org> qtile-0.5-r1.ebuild:
   Update python use flag deps.
