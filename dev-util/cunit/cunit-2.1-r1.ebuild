@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.1-r1.ebuild,v 1.11 2013/05/02 03:52:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.1-r1.ebuild,v 1.12 2013/05/21 17:24:43 jer Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -13,7 +13,6 @@ DESCRIPTION="CUnit - C Unit Test Framework"
 SRC_URI="mirror://sourceforge/cunit/${MY_P}-src.tar.gz"
 HOMEPAGE="http://cunit.sourceforge.net"
 
-DEPEND=""
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos"

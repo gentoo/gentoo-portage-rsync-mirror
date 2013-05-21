@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/pdbmat-3.89.ebuild,v 1.3 2012/10/18 17:40:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/pdbmat-3.89.ebuild,v 1.4 2013/05/21 17:19:44 jlec Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ecole.modelisation.free.fr/modes.html"
 SRC_URI="http://ecole.modelisation.free.fr/enm2011.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="CeCILL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
