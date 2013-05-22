@@ -3039,6 +3039,7 @@ media-libs/phonon:vlc - Install VLC Phonon backend
 media-libs/phonon:zeitgeist - Add support for Zeitgeist event tracking system
 media-libs/phonon-gstreamer:network - Enable network streaming support via libsoup
 media-libs/portmidi:test-programs - Install various example programs
+media-libs/quvi:json - Enable support for JSON output
 media-libs/raptor:json - Enable support for JSON parsing
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-image:webp - support loading WEBP images
