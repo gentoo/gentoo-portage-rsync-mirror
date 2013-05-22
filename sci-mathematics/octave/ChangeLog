@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.137 2013/02/25 04:34:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.138 2013/05/22 04:27:11 bicatali Exp $
+
+  22 May 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/octave-3.6.4-texinfo.patch, octave-3.6.4.ebuild:
+  Fixed texinfo build thanks Denis Duchier (bug #465536)
 
 *octave-3.6.4 (25 Feb 2013)
 

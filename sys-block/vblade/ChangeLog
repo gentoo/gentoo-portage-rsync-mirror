@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/vblade
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.33 2012/03/08 08:52:59 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.34 2013/05/22 04:22:50 radhermit Exp $
+
+*vblade-21 (22 May 2013)
+
+  22 May 2013; Tim Harder <radhermit@gentoo.org> +vblade-21.ebuild:
+  Version bump.
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> vblade-20.ebuild:
   x86 stable wrt bug #400497

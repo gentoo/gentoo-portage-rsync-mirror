@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4.ebuild,v 1.1 2013/02/25 04:34:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4.ebuild,v 1.2 2013/05/22 04:27:11 bicatali Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 HOMEPAGE="http://www.octave.org/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
-SLOT="0"
+SLOT="0/${PV}"
 IUSE="curl doc fftw +glpk gnuplot hdf5 +imagemagick opengl postscript
 	+qhull +qrupdate readline +sparse static-libs X zlib"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
@@ -66,6 +66,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,texi}.patch
 	"${FILESDIR}"/${PN}-3.6.3-legendtext.patch
+	"${FILESDIR}"/${PN}-3.6.4-texinfo.patch
 )
 
 src_prepare() {
