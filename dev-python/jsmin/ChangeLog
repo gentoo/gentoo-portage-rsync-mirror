@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/jsmin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsmin/ChangeLog,v 1.1 2013/05/22 16:00:38 idella4 Exp $
+
+*jsmin-2.0.3 (22 May 2013)
+
+  22 May 2013; Ian Delaney <idella4@gentoo.org> +jsmin-2.0.3.ebuild,
+  +metadata.xml:
+  New ebuild, rdep to django-pipeline, ebuild written by me

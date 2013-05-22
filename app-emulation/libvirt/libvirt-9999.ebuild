@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.47 2013/05/12 01:51:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.48 2013/05/22 15:56:22 cardoe Exp $
 
 EAPI=5
 
@@ -115,11 +115,14 @@ LXC_CONFIG_CHECK="
 	~CGROUPS
 	~CGROUP_FREEZER
 	~CGROUP_DEVICE
-	~CPUSETS
 	~CGROUP_CPUACCT
-	~RESOURCE_COUNTERS
 	~CGROUP_SCHED
+	~CGROUP_PERF
 	~BLK_CGROUP
+	~NET_CLS_CGROUP
+	~NETPRIO_CGROUP
+	~CPUSETS
+	~RESOURCE_COUNTERS
 	~NAMESPACES
 	~UTS_NS
 	~IPC_NS
