@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.22 2013/02/21 23:32:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.23 2013/05/22 02:03:44 floppym Exp $
+
+  22 May 2013; Mike Gilbert <floppym@gentoo.org> ply-3.4-r1.ebuild,
+  ply-3.4.ebuild:
+  Depend on setuptools, thanks to Arfrever.
 
 *ply-3.4-r1 (21 Feb 2013)
 
