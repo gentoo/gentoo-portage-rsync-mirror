@@ -1,11 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.2.1.ebuild,v 1.2 2013/05/22 02:44:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.2.1.ebuild,v 1.3 2013/05/22 06:23:13 patrick Exp $
 
 EAPI=5
 
-# 3_3 has to wait for h5py
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit distutils-r1
 

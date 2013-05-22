@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astropy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.9 2013/05/22 02:44:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.10 2013/05/22 06:23:13 patrick Exp $
+
+  22 May 2013; Patrick Lauer <patrick@gentoo.org> astropy-0.2.1.ebuild:
+  (Re-)Adding python-3.3 to python_targets
 
   22 May 2013; Patrick Lauer <patrick@gentoo.org> astropy-0.2.1.ebuild:
   Removing python3.3 from python_targets until h5py catches up
