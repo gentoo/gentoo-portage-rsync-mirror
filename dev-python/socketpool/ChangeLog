@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/socketpool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.7 2013/04/25 18:20:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.8 2013/05/22 06:41:03 patrick Exp $
+
+  22 May 2013; Patrick Lauer <patrick@gentoo.org> socketpool-0.5.2-r1.ebuild:
+  Adding python-3.3 to python_targets
 
   25 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> socketpool-0.5.2.ebuild,
   socketpool-0.5.2-r1.ebuild:
