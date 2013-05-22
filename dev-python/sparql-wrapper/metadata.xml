@@ -2,11 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>python</herd>
-  <maintainer>
-    <email>aidecoe@gentoo.org</email>
-    <name>Amadeusz Żołnowski</name>
-  </maintainer>
   <upstream>
-    <remote-id type="pypi">Pyro</remote-id>
+    <remote-id type="pypi">SPARQLWrapper</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.8.ebuild,v 1.2 2013/02/21 18:43:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.0.ebuild,v 1.2 2013/05/22 10:10:43 radhermit Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.gnutls.org/gcrypt/gnutls/v$(get_version_component_range 1-2)/
 # soon to be relicensed as LGPL-2.1 unless heartbeat extension enabled.
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE_LINGUAS=" en cs de fi fr it ms nl pl sv uk vi zh_CN"
 IUSE="+cxx dane doc examples guile nls pkcs11 static-libs test zlib ${IUSE_LINGUAS// / linguas_}"
 # heartbeat support is not disabled until re-licensing happens fullyf
@@ -39,9 +39,7 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog NEWS README THANKS doc/TODO )
 
 src_prepare() {
-	local dir file
-
-	# tests/suite directory is not distributed.
+	# tests/suite directory is not distributed
 	sed -i \
 		-e ':AC_CONFIG_FILES(\[tests/suite/Makefile\]):d' \
 		-e '/^AM_INIT_AUTOMAKE/s/-Werror//' \
@@ -58,6 +56,7 @@ src_prepare() {
 	sed -i -e "/^enable_local_libopts/s/yes/no/" configure.ac || die
 
 	# force regeneration of autogen-ed files
+	local file
 	for file in $(grep -l AutoGen-ed src/*.c) ; do
 		rm src/$(basename ${file} .c).{c,h} || die
 	done
