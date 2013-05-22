@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.0-r1.ebuild,v 1.1 2013/05/20 15:26:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.0-r1.ebuild,v 1.2 2013/05/22 18:22:22 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -9,7 +9,7 @@ MY_P="${P/geoip/GeoIP}"
 GEOLITE_URI="http://geolite.maxmind.com/download/geoip/database/"
 
 DESCRIPTION="easily lookup countries by IP addresses, even when Reverse DNS entries don't exist"
-HOMEPAGE="http://www.maxmind.com/app/ip-location"
+HOMEPAGE="http://dev.maxmind.com/geoip/legacy/downloadable"
 SRC_URI="
 	http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz
 	${GEOLITE_URI}asnum/GeoIPASNum.dat.gz
