@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-4.1.3-r1.ebuild,v 1.7 2013/05/22 15:29:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-4.1.3-r1.ebuild,v 1.8 2013/05/22 18:52:53 idella4 Exp $
 
 EAPI=5
 
@@ -19,13 +19,14 @@ LICENSE="MIT"
 SLOT="4"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 # new html5 awaits keywording of html5lib in Bug 471002
-IUSE="doc +lxml test"
+IUSE="doc test"
 # pending Bug 471002; html5? ( dev-python/html5lib[$(python_gen_usedep 'python{2_6,2_7}' pypy2_0)] )
 
-RDEPEND="lxml? ( dev-python/lxml[${PYTHON_USEDEP}] )"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	test? ( dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/lxml[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 

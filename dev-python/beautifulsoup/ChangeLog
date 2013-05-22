@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.88 2013/05/18 07:01:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.89 2013/05/22 18:52:53 idella4 Exp $
+
+  23 May 2013; Ian Delaney <idella4@gentoo.org> 
+  beautifulsoup-4.1.3-r1.ebuild,beautifulsoup-4.2.0.ebuild,
+  +bfs-4.2.0-no-lxml.patch:
+  Add lxml to IUSE being an optional rdep, switch lxml to RDEP, add use lxml
+  to metadata, optional rdep html5lib blocked by Bug #471002, re-add pypy2 
+  support to 4.2.0, patch to fix tests for 4.2.0
 
 *beautifulsoup-4.2.0 (18 May 2013)
 

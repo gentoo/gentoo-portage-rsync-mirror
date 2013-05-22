@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.0.ebuild,v 1.2 2013/05/22 10:10:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.0.ebuild,v 1.3 2013/05/22 18:32:22 radhermit Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="+cxx dane doc examples guile nls pkcs11 static-libs test zlib ${IUSE_LINGU
 # NOTICE: sys-devel/autogen is required at runtime as we
 # use system libopts
 RDEPEND=">=dev-libs/libtasn1-2.14
-	>=dev-libs/nettle-2.5[gmp]
+	>=dev-libs/nettle-2.7[gmp]
 	sys-devel/autogen
 	dane? ( net-dns/unbound )
 	guile? ( >=dev-scheme/guile-1.8[networking] )

@@ -13,7 +13,4 @@
 	<upstream>
 		<remote-id type="pypi">beautifulsoup4</remote-id>
 	</upstream>
-	<use>
-		<flag name='lxml'>An optional serialiser</flag>
-	</use>
 </pkgmetadata>
