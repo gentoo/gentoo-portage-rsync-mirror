@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-memcached
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.24 2013/05/22 07:24:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.25 2013/05/22 14:26:54 idella4 Exp $
+
+*python-memcached-1.48-r1 (22 May 2013)
+
+  22 May 2013; Ian Delaney <idella4@gentoo.org>
+  +python-memcached-1.48-r1.ebuild:
+  revbump, migrate -> distutils-r1, closes Bug #469856 by kensington
 
 *python-memcached-1.50 (22 May 2013)
 
