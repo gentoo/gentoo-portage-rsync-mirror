@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.93 2013/05/22 21:59:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.94 2013/05/22 22:05:14 floppym Exp $
+
+  22 May 2013; Mike Gilbert <floppym@gentoo.org>
+  beautifulsoup-3.1.0.1-r2.ebuild:
+  Add note about test failures with python3.3.
 
   22 May 2013; Mike Gilbert <floppym@gentoo.org> beautifulsoup-3.2.1-r1.ebuild:
   Keyword ~amd64-fbsd to resolve dependency in dev-python/lxml.
