@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/openmm-5.0.1.ebuild,v 1.1 2013/03/10 02:31:59 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/openmm-5.0.1.ebuild,v 1.2 2013/05/22 00:56:34 ottxor Exp $
 
 EAPI="5"
 
@@ -23,7 +23,9 @@ RDEPEND="
 	opencl? ( virtual/opencl )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	wrappers? ( dev-cpp/gccxml virtual/jre )"
+	wrappers? (
+		dev-cpp/gccxml virtual/jre
+		app-doc/doxygen )" # wrappers need doxygen #470706
 
 S="${WORKDIR}/${MY_P}"
 
