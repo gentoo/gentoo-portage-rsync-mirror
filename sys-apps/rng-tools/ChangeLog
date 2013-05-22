@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.46 2013/05/15 22:51:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.47 2013/05/22 05:16:17 vapier Exp $
+
+  22 May 2013; Mike Frysinger <vapier@gentoo.org> files/rngd-initd-3,
+  files/rngd-initd-4, files/rngd-initd-4.1:
+  Change the after clause from "random" (which does not seem to have ever
+  existed) to "urandom" (which has been around since very old baselayout-1 days)
+  #470014 by Roman Žilka.
 
 *rng-tools-4-r6 (15 May 2013)
 

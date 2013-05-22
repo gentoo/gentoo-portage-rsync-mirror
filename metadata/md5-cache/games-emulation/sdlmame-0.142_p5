@@ -9,5 +9,5 @@ LICENSE=XMAME
 RDEPEND=>=media-libs/libsdl-1.2.10[audio,joystick,opengl?,video] media-libs/sdl-ttf dev-libs/expat debug? ( x11-libs/gtk+:2 gnome-base/gconf x11-libs/libXinerama )
 SLOT=0
 SRC_URI=mirror://gentoo/mame0142s.zip mirror://gentoo/sdlmame0142u1_diff.zip mirror://gentoo/sdlmame0142u2_diff.zip mirror://gentoo/sdlmame0142u3_diff.zip mirror://gentoo/sdlmame0142u4_diff.zip mirror://gentoo/sdlmame0142u5_diff.zip http://www.netswarm.net/misc/sdlmame-ui.bdf.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	0c8c56033961c5899d1e699e979550f7	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7b23b2ae95bbdfb486df1772c90497e8

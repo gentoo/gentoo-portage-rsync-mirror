@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=app-admin/eselect-mpg123 >=sys-devel/libtool-2.2.6b alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) nas? ( media-libs/nas ) portaudio? ( media-libs/portaudio ) pulseaudio? ( media-sound/pulseaudio ) sdl? ( media-libs/libsdl )
 SLOT=0
 SRC_URI=http://www.mpg123.org/download/mpg123-1.14.4.tar.bz2
-_eclasses_=eutils	0c8c56033961c5899d1e699e979550f7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ac710862c5b373a61dc09bebf8eb788f

@@ -1,11 +1,11 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd-initd-3,v 1.1 2010/11/08 12:18:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd-initd-3,v 1.2 2013/05/22 05:16:17 vapier Exp $
 
 depend() {
 	need localmount
-	after random
+	after urandom
 }
 
 BINARY=/usr/sbin/rngd

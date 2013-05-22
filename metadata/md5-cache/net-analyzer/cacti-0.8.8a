@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=net-analyzer/rrdtool dev-php/adodb virtual/mysql virtual/cron dev-lang/php[cli,mysql,xml,session,sockets] || ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) snmp? ( >=net-analyzer/net-snmp-5.1.2 ) >=app-admin/webapp-config-1.50.15
 SLOT=0.8.8a
 SRC_URI=http://www.cacti.net/downloads/cacti-0.8.8a.tar.gz http://www.cacti.net/downloads/patches/0.8.8a/snmpv3_priv_proto_none.patch
-_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	0c8c56033961c5899d1e699e979550f7	multilib	892e597faee02a5b94eb02ab512e7622	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=e5e3a7ed3d3b3b0f86479c7b45160020

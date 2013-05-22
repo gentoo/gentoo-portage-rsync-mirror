@@ -1,24 +1,23 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 
-opts="${opts} checkconfig"
+extra_commands="checkconfig"
 
 depend() {
 	need net
 }
 
 # bug #218043
-
-	if [ ! -f /etc/init.d/sysfs ]; then
-		conf="$(add_suffix /etc/conf.d/vblade)"
-		[[ -e "${conf}" ]] && source "${conf}"
-		vblade_name="${myservice#*.}"
-	else
-		conf="/etc/conf.d/vblade"
-		[[ -e "${conf}" ]] && source "${conf}"
-		vblade_name="${RC_SVCNAME#*.}"
-	fi
+if [ ! -f /etc/init.d/sysfs ]; then
+	conf="$(add_suffix /etc/conf.d/vblade)"
+	[[ -e "${conf}" ]] && source "${conf}"
+	vblade_name="${myservice#*.}"
+else
+	conf="/etc/conf.d/vblade"
+	[[ -e "${conf}" ]] && source "${conf}"
+	vblade_name="${RC_SVCNAME#*.}"
+fi
 
 vblade_conf_variable="config_${vblade_name}"
 vblade_conf="${!vblade_conf_variable}"
@@ -36,7 +35,6 @@ getconfig() {
 	src="${tmp}"
 	export shelf slot netif src
 }
-
 
 checkconfig() {
 	if [ -z "${vblade_conf}" ]; then

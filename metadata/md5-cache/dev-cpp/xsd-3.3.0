@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/xerces-c-3 >=dev-libs/boost-1.40.0 >=dev-cpp/libcult-1.4.6-r1 >=dev-cpp/libxsd-frontend-1.17.0 >=dev-cpp/libbackend-elements-1.7.2 ace? ( dev-libs/ace ) zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=http://www.codesynthesis.com/download/xsd/3.3/xsd-3.3.0.tar.bz2
-_eclasses_=eutils	0c8c56033961c5899d1e699e979550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=60676ffa69bee8c866271fc268353207

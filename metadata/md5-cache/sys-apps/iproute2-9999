@@ -7,5 +7,5 @@ IUSE=atm berkdb +iptables ipv6 minimal
 LICENSE=GPL-2
 RDEPEND=!net-misc/arpd iptables? ( >=net-firewall/iptables-1.4.5 ) !minimal? ( berkdb? ( sys-libs/db ) ) atm? ( net-dialup/linux-atm )
 SLOT=0
-_eclasses_=eutils	0c8c56033961c5899d1e699e979550f7	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=edaf234b560df078f583c0df4b29dbe3

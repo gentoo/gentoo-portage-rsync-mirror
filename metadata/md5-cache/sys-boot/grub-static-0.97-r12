@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=!<sys-boot/grub-2
 SLOT=0
 SRC_URI=mirror://gentoo/grub-static-0.97-r12.tar.bz2
-_eclasses_=eutils	0c8c56033961c5899d1e699e979550f7	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=bacee8fb6983a33893dbe8227b022602

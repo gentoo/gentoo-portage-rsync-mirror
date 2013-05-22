@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses >=net-nds/openldap-2.2 dev-libs/popt >=dev-libs/glib-2 sys-libs/readline ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://www.lichteblau.com/download/ldapvi-1.7.tar.gz
-_eclasses_=eutils	0c8c56033961c5899d1e699e979550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=1998c0e15fcf8b854bbdc0573641e11c

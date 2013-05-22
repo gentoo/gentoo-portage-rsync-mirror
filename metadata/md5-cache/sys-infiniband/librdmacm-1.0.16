@@ -8,5 +8,5 @@ LICENSE=|| ( GPL-2 BSD-2 )
 RDEPEND=sys-infiniband/libibverbs:3.5 !sys-infiniband/openib-userspace !sys-infiniband/librdmacm:0 !sys-infiniband/librdmacm:1.5.1 !sys-infiniband/librdmacm:1.5.2 !sys-infiniband/librdmacm:1.5.3 !sys-infiniband/librdmacm:1.5.3.1 !sys-infiniband/librdmacm:1.5.3.2 !sys-infiniband/librdmacm:1.5.4 !sys-infiniband/librdmacm:1.5.4.1
 SLOT=3.5
 SRC_URI=http://www.openfabrics.org/downloads/OFED/ofed-3.5/OFED-3.5-rc2.tgz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	0c8c56033961c5899d1e699e979550f7	multilib	892e597faee02a5b94eb02ab512e7622	openib	38324658c5ecf8b9deb99fdfbed644f8	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	openib	38324658c5ecf8b9deb99fdfbed644f8	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=c61affeef832437d7399f9db70875763
