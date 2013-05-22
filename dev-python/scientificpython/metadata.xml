@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<herd>python</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <herd>python</herd>
+  <longdescription lang="en">
   ScientificPython is a collection of Python modules that are useful for
   scientific computing. In this collection you will find modules that
   cover basic geometry (vectors, tensors, transformations, vector and

@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/easy-rsa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/ChangeLog,v 1.6 2013/05/21 15:26:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/ChangeLog,v 1.7 2013/05/22 10:46:05 djc Exp $
+
+*easy-rsa-2.2.0-r1 (22 May 2013)
+
+  22 May 2013; Dirkjan Ochtman <djc@gentoo.org> +easy-rsa-2.2.0-r1.ebuild,
+  +files/no-licenses.patch:
+  Don't install license files as docs (bug 470888).
 
   21 May 2013; Dirkjan Ochtman <djc@gentoo.org> easy-rsa-2.2.0.ebuild:
   Clean up eclasses (fixes bug 470888).

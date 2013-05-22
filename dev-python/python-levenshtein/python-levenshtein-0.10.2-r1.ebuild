@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/python-levenshtein-0.10.2-r1.ebuild,v 1.3 2013/05/20 08:42:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/python-levenshtein-0.10.2-r1.ebuild,v 1.4 2013/05/22 10:36:04 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="amd64 ia64 x86"
 IUSE="doc"
 
 DEPEND=""

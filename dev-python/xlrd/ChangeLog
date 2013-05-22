@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlrd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.14 2013/05/20 08:24:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.15 2013/05/22 10:32:32 djc Exp $
+
+  22 May 2013; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  xlrd is now maintained by the python team.
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> xlrd-0.9.0.ebuild:
   Stable for x86, wrt bug #470626

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.33 2013/05/21 16:09:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.34 2013/05/22 10:34:47 ago Exp $
+
+  22 May 2013; Agostino Sarubbo <ago@gentoo.org> eselect-xvmc-0.4.ebuild:
+  Stable for ia64, wrt bug #470290
 
   21 May 2013; Jeroen Roovers <jer@gentoo.org> eselect-xvmc-0.4.ebuild:
   Stable for HPPA (bug #470290).
