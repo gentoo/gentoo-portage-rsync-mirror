@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pychess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.24 2013/05/14 23:21:56 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.25 2013/05/22 02:34:20 patrick Exp $
+
+  22 May 2013; Patrick Lauer <patrick@gentoo.org> -pychess-0.10.1.ebuild:
+  Remove old version with broken dependencies
 
   14 May 2013; Vicente Olivert Riera <vincent@gentoo.org>
   pychess-0.10.1-r1.ebuild:
