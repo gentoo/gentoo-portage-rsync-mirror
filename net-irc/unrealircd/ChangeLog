@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.105 2013/05/22 01:37:43 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.106 2013/05/22 09:06:00 polynomial-c Exp $
+
+  22 May 2013; Lars Wendler <polynomial-c@gentoo.org>
+  unrealircd-3.2.10.1.ebuild:
+  Non-maintainer commit: Fixed path to sources (${S})
 
 *unrealircd-3.2.10.1 (22 May 2013)
 

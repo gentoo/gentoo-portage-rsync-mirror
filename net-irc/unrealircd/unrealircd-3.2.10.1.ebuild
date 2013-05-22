@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10.1.ebuild,v 1.1 2013/05/22 01:37:43 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10.1.ebuild,v 1.2 2013/05/22 09:06:00 polynomial-c Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	virtual/pkgconfig"
 
-S=${WORKDIR}/Unreal$(get_version_component_range 1-3)
+S=${WORKDIR}/Unreal${PV}
 
 pkg_setup() {
 	enewuser unrealircd

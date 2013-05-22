@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libquvi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.22 2013/02/24 18:49:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.23 2013/05/22 09:11:43 radhermit Exp $
+
+*libquvi-0.9.1 (22 May 2013)
+
+  22 May 2013; Tim Harder <radhermit@gentoo.org> +libquvi-0.9.1.ebuild,
+  +files/libquvi-0.9.1-headers-reinstall.patch:
+  Version bump, update to EAPI 5, and add subslot.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libquvi-0.4.1.ebuild:
   Stable for sparc, wrt bug #458986

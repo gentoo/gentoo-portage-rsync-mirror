@@ -1,6 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.54 2013/04/22 09:31:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.55 2013/05/22 09:25:56 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (27 May 2013)
+# Mask useflags for stable things depending on systemd
+# as systemd is still ~ppc64
+media-sound/pulseaudio systemd
+sys-auth/polkit systemd
+sys-fs/udisks systemd
+sys-power/upower systemd
+x11-misc/colord systemd
 
 # Michael Palimaka <kensington@gentoo.org> (02 Apr 2013)
 # Requires dev-lang/mono which currently has some issues
