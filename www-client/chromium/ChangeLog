@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.883 2013/05/21 21:40:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.884 2013/05/22 17:26:59 phajdan.jr Exp $
+
+  22 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-27.0.1453.93.ebuild:
+  Prepare for security stabilization (bug #470920): only require
+  speech-dispatcher-0.7; also note bug #470934 and bug #463550 .
 
 *chromium-28.0.1500.20 (21 May 2013)
 

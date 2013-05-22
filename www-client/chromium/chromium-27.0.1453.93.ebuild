@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1453.93.ebuild,v 1.1 2013/05/21 01:18:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1453.93.ebuild,v 1.2 2013/05/22 17:26:59 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,7 +25,7 @@ IUSE="bindist cups gnome gnome-keyring gps kerberos pulseaudio selinux +system-f
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
 
-RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
+RDEPEND="=app-accessibility/speech-dispatcher-0.7*:=
 	app-arch/bzip2:=
 	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
@@ -134,9 +134,6 @@ src_prepare() {
 
 	# Fix build without pnacl, to be upstreamed.
 	epatch "${FILESDIR}/${PN}-pnacl-r0.patch"
-
-	# Fix build with speech-dispatcher-0.8, bug #463550 .
-	epatch "${FILESDIR}/${PN}-speech-dispatcher-0.8-r0.patch"
 
 	# Fix build with system v8.
 	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
