@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/numbat/numbat-0.999.ebuild,v 1.2 2013/05/21 10:58:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/numbat/numbat-0.999-r1.ebuild,v 1.1 2013/05/22 14:40:28 jlec Exp $
 
 EAPI=5
 
@@ -28,15 +28,22 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	sci-chemistry/molmol
-	sci-chemistry/pymol"
+	sci-chemistry/pymol
+	sci-visualization/gnuplot"
 
 S="${WORKDIR}"/${MY_P}
+
+PATCHES=(
+#	"${FILESDIR}"/${P}-glade.patch
+	"${FILESDIR}"/${P}-gnuplot.patch )
 
 src_prepare() {
 	sed \
 		-e '/COPYING/d' \
 		-e "s:doc/numbat:share/doc/${PF}:g" \
 		-i Makefile.am src/common.h || die
+	rm missing
+	emake distclean
 	autotools-utils_src_prepare
 }
 
