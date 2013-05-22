@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.269 2013/05/21 21:58:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.270 2013/05/21 23:56:31 cardoe Exp $
+
+  21 May 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.0.ebuild,
+  libvirt-1.0.2-r2.ebuild, libvirt-1.0.3-r1.ebuild, libvirt-1.0.3-r2.ebuild,
+  libvirt-1.0.4.ebuild, libvirt-1.0.5.1.ebuild, libvirt-1.0.5.ebuild:
+  CONFIG_USER_NS from the kernel is not yet used so don't check for it.
 
   21 May 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.5.1.ebuild:
   Add support for systemd unit files. bug #459372

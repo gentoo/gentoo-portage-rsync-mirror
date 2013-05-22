@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.2-r2.ebuild,v 1.4 2013/03/07 22:38:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.2-r2.ebuild,v 1.5 2013/05/21 23:56:31 cardoe Exp $
 
 EAPI=5
 
@@ -160,7 +160,6 @@ pkg_setup() {
 	fi
 
 	# Handle specific kernel versions for different features
-	kernel_is lt 3 5 && LXC_CONFIG_CHECK+=" ~USER_NS"
 	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR" || \
 						LXC_CONFIG_CHECK+=" ~MEMCG"
 
