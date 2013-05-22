@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-explorer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/ChangeLog,v 1.24 2013/05/20 08:22:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/ChangeLog,v 1.25 2013/05/22 21:20:29 fauli Exp $
+
+  22 May 2013; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-explorer-1.2.1.ebuild, -bzr-explorer-1.2.2.ebuild:
+  clean up
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> bzr-explorer-1.3.0.ebuild:
   Stable for x86, wrt bug #464442
