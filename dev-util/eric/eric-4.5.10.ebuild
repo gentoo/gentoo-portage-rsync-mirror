@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.10.ebuild,v 1.1 2013/04/07 23:49:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.10.ebuild,v 1.2 2013/05/22 08:10:00 kensington Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -51,7 +51,7 @@ S=${WORKDIR}/${MY_P}
 PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/.*")
 
 src_prepare() {
-	epatch "${FILESDIR}/eric-4.4-no-interactive.patch"
+	epatch "${FILESDIR}/eric-4.5-no-interactive.patch"
 	use kde || epatch "${FILESDIR}/eric-4.4-no-pykde.patch"
 
 	# Delete internal copies of dev-python/chardet, dev-python/coverage,
