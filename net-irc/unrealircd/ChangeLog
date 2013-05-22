@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.104 2013/05/11 16:04:57 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.105 2013/05/22 01:37:43 binki Exp $
+
+*unrealircd-3.2.10.1 (22 May 2013)
+
+  22 May 2013; Nathan Phillip Brink <binki@gentoo.org>
+  +unrealircd-3.2.10.1.ebuild:
+  Bump to unrealircd-3.2.10.1.
 
   11 May 2013; Nathan Phillip Brink <binki@gentoo.org>
   unrealircd-3.2.10-r1.ebuild, unrealircd-3.2.9.ebuild:
