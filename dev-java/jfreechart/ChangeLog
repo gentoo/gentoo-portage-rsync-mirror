@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jfreechart
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.52 2010/01/16 10:47:56 betelgeuse Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.53 2013/05/22 13:10:16 tomwij Exp $
+
+*jfreechart-1.0.14 (22 May 2013)
+
+  22 May 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/jfreechart-1.0.14-build.xml.patch,
+  +files/jfreechart-1.0.14-fix-TimeSeriesCollectionTests.patch,
+  +jfreechart-1.0.14.ebuild, metadata.xml:
+  Version bump to 1.0.14, contributed by Andreas Sturmlechner (genstorm). Fixes
+  bug #460952.
 
   16 Jan 2010; Petteri Räty <betelgeuse@gentoo.org>
   -jfreechart-1.0.9-r1.ebuild, -jfreechart-1.0.10.ebuild:
@@ -227,4 +236,3 @@
   30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +jfreechart-0.9.19.ebuild:
   initial import, 48316
-
