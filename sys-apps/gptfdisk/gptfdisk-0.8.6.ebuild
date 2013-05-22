@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.10 2013/05/12 20:22:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.6.ebuild,v 1.11 2013/05/22 21:35:43 floppym Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ src_prepare() {
 	tc-export CXX PKG_CONFIG
 
 	if use icu; then
-		append-cxxflags $(${PKG_CONFIG} --cflags icu-io icu-uc)
+		append-cxxflags $(${PKG_CONFIG} --variable=CXXFLAGS icu-io icu-uc)
 	else
 		sed \
 			-e 's:-licuio::g' \

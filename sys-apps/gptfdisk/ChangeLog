@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.35 2013/05/12 20:22:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.36 2013/05/22 21:35:43 floppym Exp $
+
+  22 May 2013; Mike Gilbert <floppym@gentoo.org> gptfdisk-0.8.6.ebuild:
+  Use correct ICU flags. Patch by Arfrever.
 
   12 May 2013; Mike Frysinger <vapier@gentoo.org> gptfdisk-0.8.6.ebuild:
   Add USE=ncurses support.

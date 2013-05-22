@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r1.ebuild,v 1.18 2013/05/22 20:41:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r1.ebuild,v 1.19 2013/05/22 21:49:29 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="3"
@@ -19,8 +19,7 @@ SRC_URI="http://www.crummy.com/software/${MY_PN}/download/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="python-3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-fbsd ~x86-freebsd \
-	~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND=""
