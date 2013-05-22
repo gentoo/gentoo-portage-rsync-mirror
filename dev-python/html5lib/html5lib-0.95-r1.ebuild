@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.95-r1.ebuild,v 1.3 2013/04/24 08:27:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.95-r1.ebuild,v 1.4 2013/05/22 16:19:08 jer Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~x86-fbsd"
 IUSE="test"
 
 # unittest2 used by our python_test()

@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/evil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/ChangeLog,v 1.1 2013/03/07 16:19:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/ChangeLog,v 1.2 2013/05/22 16:29:06 ulm Exp $
+
+*evil-1.0.2 (22 May 2013)
+
+  22 May 2013; Ulrich Müller <ulm@gentoo.org> +evil-1.0.2.ebuild:
+  Version bump, bug 470886.
 
 *evil-1.0.1 (07 Mar 2013)
 

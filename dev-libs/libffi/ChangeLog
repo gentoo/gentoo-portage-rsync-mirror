@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.168 2013/05/18 12:07:20 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.169 2013/05/22 16:08:29 zorry Exp $
+
+  22 May 2013; Magnus Granberg <zorry@gentoo.org>
+  files/libffi-3.0.13-emutramp_pax_proc.patch:
+  Update the emutramp_pax_proc patch with ChangeLog
 
   18 May 2013; Magnus Granberg <zorry@gentoo.org> libffi-3.0.13.ebuild:
   Did for get to run repoman commit for dev-lib/libffi

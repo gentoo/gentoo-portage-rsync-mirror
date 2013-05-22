@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.14 2013/04/24 08:27:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.15 2013/05/22 16:19:08 jer Exp $
+
+  22 May 2013; Jeroen Roovers <jer@gentoo.org> html5lib-0.95-r1.ebuild:
+  Marked ~hppa (bug #471002).
 
   24 Apr 2013; Agostino Sarubbo <ago@gentoo.org> html5lib-0.95-r1.ebuild:
   Add ~ppc, wrt bug #461346

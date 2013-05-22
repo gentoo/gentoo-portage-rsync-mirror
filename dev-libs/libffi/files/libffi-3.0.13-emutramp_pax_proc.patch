@@ -1,3 +1,8 @@
+2013-05-22  Magnus Granberg  <zorry@gentoo.org>
+
+	#457194
+	* src/closuer.c (emutramp_enabled_check): Check with /proc.
+
 --- a/src/closures.c	2013-03-17 23:27:11.000000000 +0100
 +++ b/src/closures.c	2013-04-29 23:26:02.279022022 +0200
 @@ -181,10 +181,26 @@ static int emutramp_enabled = -1;
