@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.448 2013/04/16 14:01:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.449 2013/05/23 18:12:55 axs Exp $
+
+*eix-0.28.5 (23 May 2013)
+
+  23 May 2013; Ian Stakenvicius <axs@gentoo.org> +eix-0.28.5.ebuild:
+  version bump, adds support for /etc/portage/make.conf and /etc/eixrc being
+  directories
 
 *eix-0.28.4 (16 Apr 2013)
 
