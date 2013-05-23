@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6-r100.ebuild,v 1.2 2013/05/23 00:41:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6-r100.ebuild,v 1.3 2013/05/23 01:17:33 floppym Exp $
 
 EAPI=5
 
@@ -38,10 +38,6 @@ wrap_opts() {
 	fi
 
 	"${@}"
-}
-
-python_prepare() {
-	epatch "${FILESDIR}"/${P}-python3.3.patch
 }
 
 python_compile() {

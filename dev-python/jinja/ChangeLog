@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.67 2013/05/23 00:41:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.69 2013/05/23 01:28:07 floppym Exp $
+
+  23 May 2013; Mike Gilbert <floppym@gentoo.org>
+  files/jinja-2.6-python3.3.patch, jinja-2.6-r2.ebuild:
+  Cleanup python3.3 patch based on feedback from Arfrever.
+
+  23 May 2013; Mike Gilbert <floppym@gentoo.org> jinja-2.6-r100.ebuild:
+  Don't apply python3.3 patch.
 
   23 May 2013; Mike Gilbert <floppym@gentoo.org> jinja-2.6-r100.ebuild:
   Don't install the vim syntax files in the compat ebuild.

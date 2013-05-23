@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6-r2.ebuild,v 1.1 2013/04/28 16:14:34 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6-r2.ebuild,v 1.2 2013/05/23 01:28:07 floppym Exp $
 
 EAPI=5
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 # XXX: handle Babel better?
 
 S=${WORKDIR}/${MY_P}
+PATCHES=( "${FILESDIR}"/${P}-python3.3.patch )
 
 wrap_opts() {
 	local mydistutilsargs=()
@@ -37,10 +38,6 @@ wrap_opts() {
 	fi
 
 	"${@}"
-}
-
-python_prepare() {
-	epatch "${FILESDIR}"/${P}-python3.3.patch
 }
 
 python_compile() {
