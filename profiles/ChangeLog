@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7860 2013/05/22 17:54:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7861 2013/05/23 20:29:05 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2013; Tiziano Müller <dev-zero@gentoo.org> base/make.defaults,
+  desc/nginx_modules_http.desc:
+  Fix description for nginx_modules_http_degradation and add description for
+  nginx_modules_http_dav_ext.
 
   22 May 2013; Hans de Graaff <graaff@gentoo.org> updates/2Q-2013:
   Slotmove versions of dev-ruby/mocha into their new slots.

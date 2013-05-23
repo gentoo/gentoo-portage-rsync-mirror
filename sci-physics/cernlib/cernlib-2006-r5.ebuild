@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r5.ebuild,v 1.1 2013/01/16 22:04:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r5.ebuild,v 1.2 2013/05/23 20:09:32 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils fortran-2 multilib toolchain-funcs
 
@@ -72,6 +72,12 @@ src_prepare() {
 		-e "s|\(FortranCmd[[:space:]]*\)gfortran|\1$(tc-getFC)|g" \
 		src/config/linux.cf	\
 		|| die "sed linux.cf failed"
+	sed -i \
+		-e "s|\(ArCmdBase[[:space:]]*\)ar|\1$(tc-getAR)|g" \
+		-e "s|\(RanlibCmd[[:space:]]*\)ranlib|\1$(tc-getRANLIB)|g" \
+		src/config/Imake.tmpl	\
+		|| die "sed Imake.tmpl failed"
+
 	sed -i \
 		-e 's/\$(FCLINK)/\$(FCLINK) $(LDFLAGS)/' \
 		-e 's/\$(CCLINK)/\$(CCLINK) $(LDFLAGS)/' \

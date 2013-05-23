@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.835 2013/05/22 05:10:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.836 2013/05/23 20:19:28 mgorny Exp $
+
+  23 May 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Use portable locking code from Fabian Groffen. Bug #466554.
 
   22 May 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   Fix the libtool check, bug #470938.
