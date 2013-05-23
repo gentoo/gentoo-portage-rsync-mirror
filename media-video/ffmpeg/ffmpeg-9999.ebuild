@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.126 2013/04/04 07:34:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.127 2013/05/23 00:23:22 aballier Exp $
 
 EAPI="4"
 
@@ -169,7 +169,7 @@ src_configure() {
 	ffuse="${ffuse}	cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal"
 
 	# Indevs
-	use v4l || myconf="${myconf} --disable-indev=v4l2"
+	use v4l || myconf="${myconf} --disable-indev=v4l2 --disable-outdev=v4l2"
 	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
