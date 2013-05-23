@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.ebuild,v 1.1 2013/05/20 14:51:15 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.ebuild,v 1.3 2013/05/23 01:44:48 floppym Exp $
 
 EAPI=5
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 # XXX: handle Babel better?
 
 S=${WORKDIR}/${MY_P}
+PATCHES=( "${FILESDIR}/jinja-2.7-docs.patch" )
 
 wrap_opts() {
 	local mydistutilsargs=()
@@ -44,16 +45,7 @@ python_compile() {
 }
 
 python_compile_all() {
-	if use doc; then
-		cd docs || die
-
-		#if [[ ${EPYTHON} == python3* ]]; then
-			# https://github.com/mitsuhiko/jinja2/issues/115
-		#	2to3 -n -w --no-diffs jinjaext.py || die
-		#fi
-
-		emake html
-	fi
+	emake -C docs html
 }
 
 python_test() {
