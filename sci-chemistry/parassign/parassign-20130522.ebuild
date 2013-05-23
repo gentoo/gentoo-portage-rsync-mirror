@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/parassign/parassign-20130522.ebuild,v 1.1 2013/05/22 11:12:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/parassign/parassign-20130522.ebuild,v 1.2 2013/05/23 22:52:50 zmedico Exp $
 
 EAPI=5
 
@@ -11,6 +11,7 @@ inherit distutils-r1 python-r1
 DESCRIPTION="Assign protein nuclei solely on the basis of pseudocontact shifts (PCS)"
 HOMEPAGE="http://protchem.lic.leidenuniv.nl/software/parassign/registration"
 SRC_URI="PARAssign_Linux_x64_86.tgz"
+RESTRICT="fetch"
 
 SLOT="0"
 LICENSE="Apache-2.0"

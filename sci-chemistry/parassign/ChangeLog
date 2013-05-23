@@ -1,10 +1,12 @@
 # ChangeLog for sci-chemistry/parassign
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/parassign/ChangeLog,v 1.1 2013/05/22 11:12:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/parassign/ChangeLog,v 1.2 2013/05/23 22:52:50 zmedico Exp $
+
+  23 May 2013; Zac Medico <zmedico@gentoo.org> parassign-20130522.ebuild:
+  Set RESTRICT=fetch, since SRC_URI is unfetchable.
 
 *parassign-20130522 (22 May 2013)
 
   22 May 2013; Justin Lecher <jlec@gentoo.org> +parassign-20130522.ebuild,
   +metadata.xml:
   New addition
-
