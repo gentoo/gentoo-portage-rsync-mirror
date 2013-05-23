@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r3.ebuild,v 1.1 2013/05/20 19:47:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r3.ebuild,v 1.2 2013/05/23 03:31:13 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -35,7 +35,7 @@ src_prepare() {
 		-e 's|^	@|	|g' \
 		-e '/^	echo/d' \
 		Makefile || die
-	use xft && epatch "${FILESDIR}"/${PN}-4.5-xft.patch
+	use xft && epatch "${FILESDIR}"/${PN}-4.5-xft-2.patch
 
 	epatch_user
 }

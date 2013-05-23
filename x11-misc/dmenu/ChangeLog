@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.100 2013/05/20 19:47:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.101 2013/05/23 03:31:13 jer Exp $
+
+  23 May 2013; Jeroen Roovers <jer@gentoo.org> dmenu-4.5-r3.ebuild,
+  +files/dmenu-4.5-xft-2.patch:
+  Fix font encodings with USE=xft by Eduardo Suarez-Santana (bug #470812).
 
 *dmenu-4.5-r3 (20 May 2013)
 
