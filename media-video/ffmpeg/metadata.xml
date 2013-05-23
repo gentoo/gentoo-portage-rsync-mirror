@@ -33,6 +33,7 @@
 	<flag name="openssl">Enables <pkg>dev-libs/openssl</pkg> support. Adds support for encrypted network protocols (TLS/HTTPS).</flag>
 	<flag name="opus">Adds (decoding) support for the Opus codec via <pkg>media-libs/opus</pkg>.</flag>
     <flag name="pic">Force shared libraries to be built as PIC (this is slower)</flag>
+	<flag name="quvi">Adds support for playing media from Internet services using the quvi project.</flag>
     <flag name="rtmp">Enable Real Time Messaging Protocol using librtmp</flag>
     <flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>
     <flag name="ssse3">Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
