@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14771 2013/05/23 21:00:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14772 2013/05/23 21:40:36 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (23 May 2013)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-29
+>=dev-lang/v8-3.19
 
 # Tim Harder <radhermit@gentoo.org> (22 May 2013)
 # masked for testing
@@ -235,12 +241,6 @@ mail-client/postler
 # experimental features and accept a more unstable release.
 www-client/google-chrome:unstable
 www-plugins/chrome-binary-plugins:unstable
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (04 Apr 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-28
->=dev-lang/v8-3.18
 
 # Ryan Hill <dirtyepic@gentoo.org> (03 Apr 2013)
 # masked for porting (bug #461954)
