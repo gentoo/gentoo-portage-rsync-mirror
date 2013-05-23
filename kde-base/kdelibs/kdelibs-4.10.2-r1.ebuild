@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.2-r1.ebuild,v 1.6 2013/05/12 14:55:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.2-r1.ebuild,v 1.7 2013/05/23 20:52:28 johu Exp $
 
 EAPI=5
 
@@ -289,9 +289,6 @@ pkg_postinst() {
 		einfo "	hosts: files mdns dns"
 		echo
 	fi
-
-	elog "Your homedir is set to \${HOME}/.kde4"
-	echo
 
 	kde4-base_pkg_postinst
 }

@@ -6249,6 +6249,7 @@ www-servers/nginx:http - Enable HTTP core support
 www-servers/nginx:http-cache - Enable HTTP cache support
 www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
 www-servers/nginx:pcre-jit - Enable JIT for pcre
+www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
 www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated web pages
 www-servers/pound:dynscaler - Enable dynamic rescaling of back-end priorities

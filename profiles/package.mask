@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14770 2013/05/22 09:30:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14771 2013/05/23 21:00:55 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -481,10 +481,6 @@ app-text/cuneiform
 # Does not build against modern xorg-server, dead upstream
 # Removal in 30 days
 x11-drivers/xf86-input-citron
-
-# Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
-# Depends on masked dev-lang/python:3.3
-=media-gfx/blender-2.66
 
 # Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
 # Unsupported and full of bundled libs. Only left

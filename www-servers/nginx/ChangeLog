@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.360 2013/05/14 21:47:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.361 2013/05/23 20:32:59 dev-zero Exp $
+
+*nginx-1.4.1-r5 (23 May 2013)
+
+  23 May 2013; Tiziano Müller <dev-zero@gentoo.org> +nginx-1.4.1-r5.ebuild,
+  metadata.xml:
+  Set permissions for /var/lib/nginx/tmp to 0750 instead of 0700 to avoid a
+  problem with SELinux. Add 3rd-party modules rtmp (bug #427194), dav-ext (bug
+  #442610). Bump fancyindex (bug #470824, usptream moved to Github).
 
   14 May 2013; Tiziano Müller <dev-zero@gentoo.org> nginx-1.4.1-r4.ebuild:
   Fix pcre dependency for naxsi by using a REQUIRED_USE.
