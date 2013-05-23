@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.8-r3.ebuild,v 1.1 2013/05/22 08:57:13 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.8-r3.ebuild,v 1.2 2013/05/23 19:39:59 fuzzyray Exp $
 
 EAPI=5
 
@@ -32,14 +32,14 @@ src_compile() {
 	xorg-2_src_compile
 
 	python_foreach_impl autotools-utils_src_compile -C xcbgen \
-		top_builddir="${WORKDIR}/${P}-${ARCH}"
+		top_builddir="${WORKDIR}/${P}-${DEFAULT_ABI}"
 }
 
 src_install() {
 	xorg-2_src_install
 
 	python_foreach_impl autotools-utils_src_install -C xcbgen \
-		top_builddir="${WORKDIR}/${P}-${ARCH}"
+		top_builddir="${WORKDIR}/${P}-${DEFAULT_ABI}"
 }
 
 pkg_postinst() {
