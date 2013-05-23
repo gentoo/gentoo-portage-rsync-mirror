@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.120 2013/01/16 23:01:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.121 2013/05/23 19:31:12 vapier Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -122,7 +122,7 @@ gnome2_src_configure() {
 	# Remember to drop 'doc' USE flag from your package if it was only used to
 	# rebuild docs.
 	# Preserve old behavior for older EAPI.
-	if grep -q "enable-gtk-doc" ${ECONF_SOURCE:-.}/configure ; then
+	if grep -q "enable-gtk-doc" "${ECONF_SOURCE:-.}"/configure ; then
 		if has ${EAPI:-0} 0 1 2 3 4 && in_iuse doc ; then
 			G2CONF="$(use_enable doc gtk-doc) ${G2CONF}"
 		else
@@ -132,29 +132,29 @@ gnome2_src_configure() {
 
 	# Pass --disable-maintainer-mode when needed
 	if grep -q "^[[:space:]]*AM_MAINTAINER_MODE(\[enable\])" \
-		${ECONF_SOURCE:-.}/configure.*; then
+		"${ECONF_SOURCE:-.}"/configure.*; then
 		G2CONF="--disable-maintainer-mode ${G2CONF}"
 	fi
 
 	# Pass --disable-scrollkeeper when possible
-	if grep -q "disable-scrollkeeper" ${ECONF_SOURCE:-.}/configure; then
+	if grep -q "disable-scrollkeeper" "${ECONF_SOURCE:-.}"/configure; then
 		G2CONF="--disable-scrollkeeper ${G2CONF}"
 	fi
 
 	# Pass --disable-silent-rules when possible (not needed for eapi5), bug #429308
 	if has ${EAPI:-0} 0 1 2 3 4; then
-		if grep -q "disable-silent-rules" ${ECONF_SOURCE:-.}/configure; then
+		if grep -q "disable-silent-rules" "${ECONF_SOURCE:-.}"/configure; then
 			G2CONF="--disable-silent-rules ${G2CONF}"
 		fi
 	fi
 
 	# Pass --disable-schemas-install when possible
-	if grep -q "disable-schemas-install" ${ECONF_SOURCE:-.}/configure; then
+	if grep -q "disable-schemas-install" "${ECONF_SOURCE:-.}"/configure; then
 		G2CONF="--disable-schemas-install ${G2CONF}"
 	fi
 
 	# Pass --disable-schemas-compile when possible
-	if grep -q "disable-schemas-compile" ${ECONF_SOURCE:-.}/configure; then
+	if grep -q "disable-schemas-compile" "${ECONF_SOURCE:-.}"/configure; then
 		G2CONF="--disable-schemas-compile ${G2CONF}"
 	fi
 

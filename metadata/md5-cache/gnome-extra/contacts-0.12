@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=gnome-extra/evolution-data-server-1.8 >=x11-libs/gtk+-2.6:2 dbus? ( dev-libs/dbus-glib sys-apps/dbus ) gnome? ( >=gnome-base/gconf-2 >=gnome-base/gnome-vfs-2 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/contacts/0.12/contacts-0.12.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	96ca31031ada9967bcf96a4fd8977ae4	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	815ad9020b51f1b431eddd1400f1877a	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=be51ef075a8aa52645af8791f2a667d4

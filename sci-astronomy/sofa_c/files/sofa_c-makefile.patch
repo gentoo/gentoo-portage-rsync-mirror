@@ -1,5 +1,5 @@
---- makefile.orig	2013-04-23 08:51:44.357363792 -0700
-+++ makefile	2013-04-23 08:52:06.663480924 -0700
+--- makefile.orig	2013-05-22 20:51:58.398491342 +0000
++++ makefile	2013-05-22 21:05:52.055466710 +0000
 @@ -49,7 +49,7 @@
  
  # Specify the installation home directory.
@@ -36,7 +36,16 @@
  # Name the SOFA/C testbed in its source and target locations.
  
  SOFA_TEST_NAME = t_sofa_c.c
-@@ -285,29 +292,31 @@
+@@ -88,7 +95,7 @@
+ # Name the SOFA/C includes in their source and target locations.
+ 
+ SOFA_INC_NAMES = sofa.h sofam.h
+-SOFA_INC = $(SOFA_INC_DIR)sofa.h $(SOFA_INC_DIR)sofam.h
++SOFA_INC = $(SOFA_INC_NAMES:%=$(SOFA_INC_DIR)%)
+ 
+ # The list of SOFA/C library object files.
+ SOFA_OBS = iauA2af.o \
+@@ -285,29 +292,32 @@
  #-----------------------------------------------------------------------
  
  # Build (but do not install) the library.
@@ -66,8 +75,10 @@
 +	$(CCOMPC) $(CFLAGX) $(SOFA_TEST_NAME) $(SOFA_SHLIB_NAME).0.0 \
          -lm -o $(SOFA_TEST)
 -	./$(SOFA_TEST)
-+	LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):$(SOFA_LIB_DIR) ./$(SOFA_TEST)
- 	rm -f $(SOFA_TEST)
+-	rm -f $(SOFA_TEST)
++	ln -s $(SOFA_SHLIB_NAME).0.0 $(SOFA_SHLIB_NAME).0
++	LD_LIBRARY_PATH="$(LD_LIBRARY_PATH):." ./$(SOFA_TEST)
++	rm -f $(SOFA_TEST) $(SOFA_SHLIB_NAME).0
  
  # Test the installed library.
 -installcheck test: $(SOFA_TEST_NAME) $(SOFA_INC) $(SOFA_LIB)
@@ -75,7 +86,7 @@
  	$(CCOMPC) $(CFLAGX) $(SOFA_TEST_NAME) -I$(SOFA_INC_DIR) \
          -L$(SOFA_LIB_DIR) -lsofa_c -lm -o $(SOFA_TEST)
  	./$(SOFA_TEST)
-@@ -315,11 +324,11 @@
+@@ -315,11 +325,11 @@
  
  # Local clean up.
  clean realclean:
@@ -89,7 +100,7 @@
  
  # Create the installation directories if not already present.
  $(INSTALL_DIRS):
-@@ -329,6 +338,10 @@
+@@ -329,6 +339,10 @@
  $(SOFA_LIB_NAME): $(SOFA_OBS)
  	ar ru $(SOFA_LIB_NAME) $?
  
