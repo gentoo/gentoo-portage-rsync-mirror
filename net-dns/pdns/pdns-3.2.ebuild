@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.2.ebuild,v 1.1 2013/05/20 19:05:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.2.ebuild,v 1.2 2013/05/23 12:14:11 dev-zero Exp $
 
 EAPI=5
 
@@ -19,29 +19,41 @@ KEYWORDS=""
 # oracle: dito (need Oracle Client Libraries)
 # xdb: (almost) dead, surely not supported
 
-# TODO: sort out static deps
-
 IUSE="botan cryptopp debug doc ldap lua mydns mysql odbc opendbx postgres remote
 remote-http sqlite static tinydns"
 
 REQUIRED_USE="mydns? ( mysql )"
 
-RDEPEND="net-libs/polarssl
-	botan? ( =dev-libs/botan-1.10* )
-	cryptopp? ( dev-libs/crypto++ )
-	lua? ( dev-lang/lua )
-	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base:= )
-	ldap? ( >=net-nds/openldap-2.0.27-r4 )
-	sqlite? ( dev-db/sqlite:3 )
-	odbc? ( dev-db/unixODBC )
-	opendbx? ( dev-db/opendbx )
-	remote-http? ( net-misc/curl )
-	tinydns? ( dev-db/cdb )
-	!static? ( >=dev-libs/boost-1.34:= )"
+RDEPEND="!static? (
+		net-libs/polarssl
+		>=dev-libs/boost-1.34:=
+		botan? ( =dev-libs/botan-1.10* )
+		cryptopp? ( dev-libs/crypto++ )
+		lua? ( dev-lang/lua )
+		mysql? ( virtual/mysql )
+		postgres? ( dev-db/postgresql-base:= )
+		ldap? ( >=net-nds/openldap-2.0.27-r4 )
+		sqlite? ( dev-db/sqlite:3 )
+		odbc? ( dev-db/unixODBC )
+		opendbx? ( dev-db/opendbx )
+		remote-http? ( net-misc/curl )
+		tinydns? ( dev-db/cdb ) )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	static? ( >=dev-libs/boost-1.34[static-libs] )
+	static? (
+		net-libs/polarssl[static-libs(+)]
+		>=dev-libs/boost-1.34[static-libs(+)]
+		botan? ( =dev-libs/botan-1.10*[static-libs(+)] )
+		cryptopp? ( dev-libs/crypto++[static-libs(+)] )
+		lua? ( dev-lang/lua[static-libs(+)] )
+		mysql? ( virtual/mysql[static-libs(+)] )
+		postgres? ( dev-db/postgresql-base[static-libs(+)] )
+		ldap? ( >=net-nds/openldap-2.0.27-r4[static-libs(+)] )
+		sqlite? ( dev-db/sqlite:3[static-libs(+)] )
+		odbc? ( dev-db/unixODBC[static-libs(+)] )
+		opendbx? ( dev-db/opendbx[static-libs(+)] )
+		remote-http? ( net-misc/curl[static-libs(+)] )
+		tinydns? ( dev-db/cdb ) )
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
@@ -151,4 +163,22 @@ pkg_postinst() {
 		ewarn "The official LDAP backend module is only compile-tested by upstream."
 		ewarn "Try net-dns/pdns-ldap-backend if you have problems with it."
 	fi
+
+	local fix_perms=0
+
+	for rv in ${REPLACING_VERSIONS} ; do
+		version_compare ${rv} 3.2
+		[[ $? -eq 1 ]] && fix_perms=1
+	done
+
+	if [[ $fix_perms -eq 1 ]] ; then
+		ewarn "To fix a security bug (bug #458018) had the following"
+		ewarn "files/directories the world-readable bit removed (if set):"
+		ewarn "  ${EPREFIX}/etc/pdns"
+		ewarn "  ${EPREFIX}/etc/pdns/pdns.conf"
+		ewarn "Check if this is correct for your setup"
+		ewarn "This is a one-time change and will not happen on subsequent updates."
+		chmod o-rwx "${EPREFIX}"/etc/pdns/{,pdns.conf}
+	fi
+
 }
