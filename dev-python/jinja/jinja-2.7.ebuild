@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.ebuild,v 1.3 2013/05/23 01:44:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.7.ebuild,v 1.4 2013/05/23 13:26:43 floppym Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ python_compile() {
 }
 
 python_compile_all() {
-	emake -C docs html
+	use doc && emake -C docs html
 }
 
 python_test() {
