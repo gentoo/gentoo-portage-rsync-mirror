@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libiscsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/ChangeLog,v 1.4 2013/03/23 14:42:31 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/ChangeLog,v 1.5 2013/05/23 17:24:28 ago Exp $
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org> libiscsi-1.9.0.ebuild:
+  Stable for amd64, wrt bug #468920
 
   23 Mar 2013; Richard Yao <ryao@gentoo.org> libiscsi-1.9.0.ebuild,
   libiscsi-9999.ebuild:

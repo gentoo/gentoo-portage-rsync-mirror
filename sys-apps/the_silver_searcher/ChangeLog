@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/the_silver_searcher
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.25 2013/05/04 05:18:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.26 2013/05/23 17:16:00 ago Exp $
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  the_silver_searcher-0.14.ebuild:
+  Stable for amd64, wrt bug #470572
 
   04 May 2013; Jeff Horelick <jdhore@gentoo.org>
   the_silver_searcher-0.14.ebuild:

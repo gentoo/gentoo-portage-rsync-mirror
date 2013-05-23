@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-openstack-auth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-openstack-auth/ChangeLog,v 1.1 2013/04/12 01:37:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-openstack-auth/ChangeLog,v 1.2 2013/05/23 17:28:46 idella4 Exp $
+
+*django-openstack-auth-1.0.10 (23 May 2013)
+
+  23 May 2013; Ian Delaney <idella4@gentoo.org>
+  +django-openstack-auth-1.0.10.ebuild:
+  bump
 
 *django-openstack-auth-1.0.7 (12 Apr 2013)
 

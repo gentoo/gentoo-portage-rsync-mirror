@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/libiscsi-1.9.0.ebuild,v 1.3 2013/03/23 14:42:31 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/libiscsi-1.9.0.ebuild,v 1.4 2013/05/23 17:24:28 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/sahlberg/libiscsi/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 
 DESCRIPTION="iscsi client library and utilities"

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.209 2013/05/08 09:03:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.210 2013/05/23 17:24:13 ago Exp $
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org> qemu-1.4.0-r1.ebuild:
+  Stable for amd64, wrt bug #468920
 
   08 May 2013; Agostino Sarubbo <ago@gentoo.org> qemu-1.4.0-r1.ebuild:
   Reverted on x86 because it is masked

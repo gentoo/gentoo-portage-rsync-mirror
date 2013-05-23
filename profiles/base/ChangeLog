@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.540 2013/05/21 21:24:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.541 2013/05/23 17:25:33 ago Exp $
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Temporart mask for >=xen-tools/xen-tools-4.2.1-r3[qemu] because of texinfo-5
 
   21 May 2013; Patrick McLean <chutz@gentoo.org> use.mask:
   Unmask python_targets_python3_3 and python_single_target_python3_3.
