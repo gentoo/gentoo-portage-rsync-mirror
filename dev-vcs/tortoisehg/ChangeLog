@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.39 2013/05/07 00:45:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.40 2013/05/23 13:48:59 floppym Exp $
+
+  23 May 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.8.ebuild,
+  tortoisehg-9999.ebuild:
+  Add PYTHON_USEDEP to qscintilla-python dep, thanks to Nikoli.
 
 *tortoisehg-2.8 (07 May 2013)
 
