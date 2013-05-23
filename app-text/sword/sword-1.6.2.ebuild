@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.9 2013/02/14 21:59:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.10 2013/05/23 14:20:33 creffett Exp $
 
 EAPI=5
 inherit eutils flag-o-matic
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS="AUTHORS CODINGSTYLE ChangeLog README"
+
+RESTRICT="test"	#Restricting for now, see bug 313207
 
 src_prepare() {
 	sed -i \

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.98.ebuild,v 1.3 2013/01/18 03:39:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.98.ebuild,v 1.4 2013/05/23 14:14:42 axs Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev
@@ -20,7 +20,7 @@ DEPEND_COMMON="!!sys-fs/device-mapper
 	readline? ( sys-libs/readline )
 	clvm? ( =sys-cluster/libdlm-3*
 			cman? ( =sys-cluster/cman-3* ) )
-	udev? ( virtual/udev )"
+	udev? ( virtual/udev[static-libs?] )"
 
 # /run is now required for locking during early boot. /var cannot be assumed to
 # be available.

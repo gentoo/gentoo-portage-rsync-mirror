@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.300 2013/04/09 11:00:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.301 2013/05/23 14:14:42 axs Exp $
+
+  23 May 2013; Ian Stakenvicius <axs@gentoo.org> lvm2-2.02.95-r4.ebuild,
+  lvm2-2.02.97-r1.ebuild, lvm2-2.02.97.ebuild, lvm2-2.02.98.ebuild:
+  require static-libs from virtual/udev so that rdeps of lvm[static-libs] will
+  build, bug 466282
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Revert adding proxy-maintainers to metadata.xml since it's only upstream

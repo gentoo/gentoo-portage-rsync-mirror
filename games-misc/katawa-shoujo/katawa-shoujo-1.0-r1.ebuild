@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.0-r1.ebuild,v 1.1 2013/02/28 21:38:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.0-r1.ebuild,v 1.2 2013/05/23 14:24:43 pinkbyte Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils gnome2-utils games
 
 DESCRIPTION="Bishoujo-style visual novel set in the fictional Yamaku High School for disabled children"
 HOMEPAGE="http://katawa-shoujo.com/"
-SRC_URI="http://naodesu.org/files/katawa-shoujo/${P}.tar.bz2
+SRC_URI="http://dl.katawa-shoujo.com/gold/%5b4ls%5d_katawa_shoujo_%5blinux-x86%5d%5bEA1DFB30%5d.tar.bz2 -> ${P}.tar.bz2
 	http://dev.gentoo.org/~hasufell/distfiles/katawa-shoujo-48.png
 	http://dev.gentoo.org/~hasufell/distfiles/katawa-shoujo-256.png"
 
