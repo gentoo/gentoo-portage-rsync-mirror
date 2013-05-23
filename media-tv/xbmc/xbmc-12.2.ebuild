@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.144 2013/05/23 21:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.2.ebuild,v 1.1 2013/05/23 21:23:51 vapier Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ case ${PV} in
 9999)
 	EGIT_REPO_URI="git://github.com/xbmc/xbmc.git"
 	inherit git-2
-	SRC_URI="!java? ( mirror://gentoo/${P}-20130413-generated-addons.tar.xz )"
+	SRC_URI="!java? ( mirror://gentoo/${P}-20121224-generated-addons.tar.xz )"
 	;;
 *_alpha*|*_beta*|*_rc*)
 	MY_PV="Frodo_${PV#*_}"
@@ -36,7 +36,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql neon nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl sse sse2 sftp udev upnp +usb vaapi vdpau webserver +X +xrandr"
+IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug gles goom java joystick midi mysql neon nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl sse sse2 sftp udev upnp +usb vaapi vdpau webserver +X +xrandr"
 REQUIRED_USE="
 	pvr? ( mysql )
 	rsxs? ( X )
@@ -59,8 +59,6 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-libs/tinyxml[stl]
 	dev-libs/yajl
 	dev-python/simplejson[${PYTHON_USEDEP}]
-	media-fonts/corefonts
-	media-fonts/roboto
 	media-libs/alsa-lib
 	media-libs/flac
 	media-libs/fontconfig
@@ -91,8 +89,8 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/tiff
 	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
-	|| ( media-libs/libpostproc media-video/ffmpeg )
-	>=virtual/ffmpeg-9[encode]
+	|| ( media-libs/libpostproc <media-video/libav-0.8.2-r1 media-video/ffmpeg )
+	>=virtual/ffmpeg-0.6[encode]
 	rtmp? ( media-video/rtmpdump )
 	avahi? ( net-dns/avahi )
 	nfs? ( net-fs/libnfs )
@@ -148,7 +146,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
 	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
-	epatch "${FILESDIR}"/${PN}-13.0-system-projectm.patch
+	epatch "${FILESDIR}"/${PN}-12.0-system-projectm.patch
 	# The mythtv patch touches configure.ac, so force a regen
 	rm -f configure
 
@@ -216,7 +214,6 @@ src_configure() {
 		$(use_enable cec libcec) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \
-		$(use_enable fishbmc) \
 		$(use_enable gles) \
 		$(use_enable goom) \
 		--disable-hal \
@@ -250,34 +247,6 @@ src_install() {
 
 	domenu tools/Linux/xbmc.desktop
 	newicon tools/Linux/xbmc-48x48.png xbmc.png
-
-	# Remove optional addons (platform specific and disabled by USE flag).
-	local disabled_addons=(
-		repository.pvr-{android,ios,osx{32,64},win32}.xbmc.org
-		visualization.dxspectrum
-	)
-	use fishbmc  || disabled_addons+=( visualization.fishbmc )
-	use projectm || disabled_addons+=( visualization.{milkdrop,projectm} )
-	use rsxs     || disabled_addons+=( screensaver.rsxs.{euphoria,plasma,solarwinds} )
-	rm -rf "${disabled_addons[@]/#/${ED}/usr/share/xbmc/addons/}"
-
-	# Punt simplejson bundle, we use the system one anyway.
-	rm -rf "${ED}"/usr/share/xbmc/addons/script.module.simplejson/lib
-	# Remove fonconfig settings that are used only on MacOSX.
-	# Can't be patched upstream because they just find all files and install
-	# them into same structure like they have in git.
-	rm -rf "${ED}"/usr/share/xbmc/system/players/dvdplayer/etc
-
-	# Replace bundled fonts with system ones
-	# teletext.ttf: unknown
-	# bold-caps.ttf: unknown
-	# roboto: roboto-bold, roboto-regular
-	# arial.ttf: font mashed from droid/roboto, not removed wrt bug#460514
-	rm -rf "${ED}"/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-*
-	dosym /usr/share/fonts/roboto/Roboto-Regular.ttf \
-		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Regular.ttf
-	dosym /usr/share/fonts/roboto/Roboto-Bold.ttf \
-		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Bold.ttf
 
 	python_domodule tools/EventClients/lib/python/xbmcclient.py
 	python_newscript "tools/EventClients/Clients/XBMC Send/xbmc-send.py" xbmc-send
