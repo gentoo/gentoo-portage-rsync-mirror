@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.223 2013/05/23 15:23:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.225 2013/05/23 17:40:21 ago Exp $
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.45.ebuild:
+  Stable for x86, wrt bug #463430
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.45.ebuild:
+  Stable for amd64, wrt bug #463430
 
   23 May 2013; Jeroen Roovers <jer@gentoo.org> libdrm-2.4.45.ebuild:
   Stable for HPPA (bug #463430).

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.5 2013/05/23 14:48:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.6 2013/05/23 17:57:14 tomwij Exp $
 
 EAPI="5"
 
@@ -65,6 +65,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	dev-lang/yasm
+	dev-util/intltool
 	sys-devel/automake"
 
 pkg_setup() {

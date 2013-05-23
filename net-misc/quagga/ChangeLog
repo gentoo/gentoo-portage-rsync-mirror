@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.147 2013/04/23 09:25:18 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.149 2013/05/23 17:55:52 ago Exp $
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.22.1.ebuild:
+  Stable for x86, wrt bug #464218
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.22.1.ebuild:
+  Stable for amd64, wrt bug #464218
 
 *quagga-0.99.22.1 (23 Apr 2013)
 

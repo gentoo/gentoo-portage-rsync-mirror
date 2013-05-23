@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.468 2013/05/23 17:25:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.469 2013/05/23 17:34:07 ago Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -8,7 +8,7 @@
 
 # Agostino Sarubbo <ago@gentoo.org> (23 May 2013)
 # Temporary mask because it needs texinfo-5
->=xen-tools/xen-tools-4.2.1-r3 qemu
+>=app-emulation/xen-tools-4.2.1-r3 qemu
 
 # Kacper Kowalik <xarthisius@gentoo.org> (19 May 2013)
 # Fails to build, haven't had time to debug
