@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.6 2013/05/18 16:22:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.7 2013/05/24 18:05:27 pacho Exp $
 
 # @ECLASS: readme.gentoo
 # @MAINTAINER:
@@ -98,8 +98,8 @@ readme.gentoo_print_elog() {
 	elif ! [[ -n "${REPLACING_VERSIONS}" ]] || [[ -n "${FORCE_PRINT_ELOG}" ]]; then
 		echo -e "${README_GENTOO_DOC_VALUE}" | while read -r ELINE; do elog "${ELINE}"; done
 		elog ""
-		elog "(Note: Above message will only be printed the first time package"
-		elog "is installed. Please look at /usr/share/doc/${PF}/README.gentoo*"
+		elog "(Note: Above message is only printed the first time package is"
+		elog "installed. Please look at /usr/share/doc/${PF}/README.gentoo*"
 		elog "for future reference)"
 	fi
 }
