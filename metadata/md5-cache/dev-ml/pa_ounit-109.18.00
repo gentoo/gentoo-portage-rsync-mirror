@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-ml/ounit-1.1.1:= >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
+DESCRIPTION=Syntax extension that helps writing in-line test in ocaml
+EAPI=5
+HOMEPAGE=http://bitbucket.org/yminsky/ocaml-core/wiki/Home
+IUSE=+ocamlopt debug
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=>=dev-ml/ounit-1.1.1:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
+SLOT=0/109.18.00
+SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.18.00/individual/pa_ounit-109.18.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/pa_ounit-109.18.00.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f31a0ec0d081047cbf9c0bbb4822d831	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=25177b0d0f86a040d1c926cf8f35cd16

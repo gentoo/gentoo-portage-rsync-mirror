@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.03.ebuild,v 1.4 2012/06/08 11:50:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.03.ebuild,v 1.5 2013/05/24 15:28:09 aballier Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 RESTRICT="installsources"
@@ -12,8 +12,8 @@ DESCRIPTION="A line editor to be used with interactive commands."
 SRC_URI="http://pauillac.inria.fr/~ddr/ledit/distrib/src/${P}.tgz"
 HOMEPAGE="http://pauillac.inria.fr/~ddr/ledit/"
 
-DEPEND=">=dev-lang/ocaml-3.09[ocamlopt?]
-	dev-ml/camlp5"
+DEPEND=">=dev-lang/ocaml-3.09:=[ocamlopt?]
+	dev-ml/camlp5:="
 RDEPEND="${DEPEND}"
 
 SLOT="0"
@@ -21,9 +21,9 @@ LICENSE="BSD"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 src_compile() {
-	emake -j1 all || die "make failed"
+	emake -j1 all
 	if use ocamlopt; then
-		emake -j1 ledit.opt || die "make failed"
+		emake -j1 ledit.opt
 	else
 		# If using bytecode we dont want to strip the binary as it would remove the
 		# bytecode and only leave ocamlrun...
@@ -33,9 +33,9 @@ src_compile() {
 
 src_install() {
 	if use ocamlopt; then
-		newbin ledit.opt ledit || die
+		newbin ledit.opt ledit
 	else
-		newbin ledit.out ledit || die
+		newbin ledit.out ledit
 	fi
 	doman ledit.1
 	dodoc CHANGES README
