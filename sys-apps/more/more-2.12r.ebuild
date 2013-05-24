@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.4 2011/07/08 10:59:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.6 2013/05/24 20:33:56 aballier Exp $
+
+EAPI=2
 
 inherit eutils flag-o-matic
 
@@ -11,21 +13,19 @@ S=${WORKDIR}/util-linux-${PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~x86-fbsd"
 IUSE="static nls selinux"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2
+RDEPEND="!static? ( >=sys-libs/ncurses-5.2-r2 )
 	selinux? ( sys-libs/libselinux )
 	!sys-apps/util-linux"
 DEPEND="${RDEPEND}
+	static? ( >=sys-libs/ncurses-5.2-r2[static-libs] )
 	nls? ( sys-devel/gettext )"
 
 yesno() { use $1 && echo yes || echo no; }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-freebsd.patch
 
 	# Enable random features
@@ -42,11 +42,14 @@ src_unpack() {
 		${mconfigs} || die "MCONFIG sed"
 }
 
-src_compile() {
+src_configure() {
 	use static && append-ldflags -static
 	export CC="$(tc-getCC)"
 
 	econf || die "configure failed"
+}
+
+src_compile() {
 	emake -C lib xstrncpy.o || die "emake xstrncpy.o failed"
 	emake -C text-utils more || die "emake more failed"
 }
