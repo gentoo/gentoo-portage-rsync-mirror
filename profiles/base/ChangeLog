@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.541 2013/05/23 17:25:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.542 2013/05/24 06:43:13 patrick Exp $
+
+  24 May 2013; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Remove bad xen/qemu mask
 
   23 May 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
   Temporart mask for >=xen-tools/xen-tools-4.2.1-r3[qemu] because of texinfo-5
