@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.7 2011/09/20 22:49:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.8 2013/05/24 02:38:08 patrick Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ KEYWORDS=""
 IUSE=""
 
 CDEPEND="dev-java/bcprov:0
-	net-p2p/freenet[freemail]"
+	net-p2p/freenet"
 DEPEND="${CDEPEND}
 	>=virtual/jdk-1.5"
 RDEPEND="${CDEPEND}

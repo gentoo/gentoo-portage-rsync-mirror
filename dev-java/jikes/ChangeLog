@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jikes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.52 2011/01/23 14:33:14 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.53 2013/05/24 02:57:01 patrick Exp $
+
+  24 May 2013; Patrick Lauer <patrick@gentoo.org> jikes-1.22-r13.ebuild:
+  Dropping arm stable keyword until java-config-2 catches up #469266
 
   23 Jan 2011; Raúl Porcel <armin76@gentoo.org> jikes-1.22-r1.ebuild,
   jikes-1.22-r13.ebuild:

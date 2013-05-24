@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.11 2012/05/31 23:41:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.12 2013/05/24 02:45:24 patrick Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-2 autotools
 	SRC_URI=""
 	KEYWORDS=""
-	VIRTINSTDEP=">=app-emulation/virtinst-9999"
+	VIRTINSTDEP=""
 else
 	SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
 		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
