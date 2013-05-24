@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.26 2013/04/23 03:16:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.27 2013/05/24 17:16:47 hwoarang Exp $
 
 EAPI="4"
 
@@ -33,6 +33,8 @@ RDEPEND="${DEPEND}"
 REQUIRED_USE="blaster? ( || ( ftdi ftd2xx ) ) ftdi? ( !ftd2xx )"
 
 src_prepare() {
+	epatch_user
+
 	if [[ ${PV} == "9999" ]] ; then
 		sed -i -e "/@include version.texi/d" doc/${PN}.texi || die
 		AT_NO_RECURSIVE=yes eautoreconf

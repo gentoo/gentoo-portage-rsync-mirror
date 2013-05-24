@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnfc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/ChangeLog,v 1.10 2013/03/26 23:58:46 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/ChangeLog,v 1.11 2013/05/24 17:10:36 vapier Exp $
+
+*libnfc-1.5.1-r1 (24 May 2013)
+
+  24 May 2013; Mike Frysinger <vapier@gentoo.org> +libnfc-1.5.1-r1.ebuild,
+  metadata.xml:
+  Add USE flags to control all the optional deps.
 
   26 Mar 2013; Mike Auty <ikelos@gentoo.org> libnfc-1.5.1.ebuild,
   +files/libnfc-1.5.1-glibc-2.17.patch:
@@ -52,4 +58,3 @@
   16 Aug 2009; Mike Auty <ikelos@gentoo.org> +libnfc-1.2.1.ebuild,
   +metadata.xml:
   Initial commit of a library for manipulating PN53x NFC chips.
-
