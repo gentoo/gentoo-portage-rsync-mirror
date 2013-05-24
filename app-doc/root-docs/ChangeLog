@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.30 2013/05/13 03:03:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.31 2013/05/23 23:50:00 bicatali Exp $
+
+*root-docs-5.34.07 (23 May 2013)
+
+  23 May 2013; Sébastien Fabbro <bicatali@gentoo.org> +root-docs-5.34.07.ebuild:
+  Version bump
 
   13 May 2013; Patrick Lauer <patrick@gentoo.org> -root-docs-5.34.03.ebuild:
   Remove version with unsatisfiable deps
