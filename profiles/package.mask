@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14772 2013/05/23 21:40:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14773 2013/05/24 13:58:37 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -532,8 +532,12 @@ media-gfx/yafaray
 # Alexis Ballier <aballier@gentoo.org> (15 Feb 2013)
 # Starting from this version, some decoders and encoders (like AAC or APE)
 # switched to outputing or needing planar audio, this breaks some applications
-# at runtime and the tree needs to be checked. For instance, <xbmc-12,
-# <vlc-2.0.6 break.
+# at runtime and the tree needs to be checked.
+# For instance, <xbmc-12 would fail to decode AAC files, <xbmc-13 segfaults when
+# trying to transcode to AC3 (https://github.com/xbmc/xbmc/pull/2117 for
+# AAC playback, https://github.com/xbmc/xbmc/pull/2657 for AC3 transcoding).
+# <vlc-2.0.6 breaks at playback too encoding is still broken in 2.0.6 
+# ( https://bugs.gentoo.org/show_bug.cgi?id=468890 )
 >=media-video/ffmpeg-1.1
 
 # Eray Aslan <eras@gentoo.org> (13 Feb 2013)
