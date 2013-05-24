@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libosmocore
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/ChangeLog,v 1.6 2012/08/11 05:34:26 chithanh Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/ChangeLog,v 1.7 2013/05/24 07:57:52 xmw Exp $
+
+*libosmocore-0.6.0 (24 May 2013)
+
+  24 May 2013; Michael Weber <xmw@gentoo.org>
+  +files/libosmocore-0.5.3-automake-1.13.patch,
+  +files/libosmocore-0.6.0-automake-1.13.patch, +libosmocore-0.6.0.ebuild,
+  libosmocore-0.5.3.ebuild, libosmocore-9999.ebuild:
+  Version bump, automake-1.13 patches.
 
   11 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/libosmocore-0.5.2-gcc-4.6.patch:
