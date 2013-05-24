@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.10 2013/04/26 06:07:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.11 2013/05/24 16:31:01 axs Exp $
 
 EAPI=4
 
@@ -278,9 +278,6 @@ pkg_setup() {
 	elog  "Setting default lirc-device to ${LIRC_DRIVER_DEVICE}"
 
 	filter-flags -Wl,-O1
-
-	# force non-parallel make, Bug 196134 (confirmed valid for 0.9.0-r2)
-	MAKEOPTS="${MAKEOPTS} -j1"
 }
 
 src_prepare() {
@@ -300,6 +297,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-kernel-3.3.0-fixes.patch
 	# Apply fix for missing err() in usb.h for kernel 3.5+ (bug 444736)
 	epatch "${FILESDIR}"/${P}-kernel-3.5-err-fix.patch
+	# Apply fix for missing __devinit __devexit defines in kernel 3.8+ (bug 461532)
+	epatch "${FILESDIR}"/${P}-kernel-3.8-fixes.patch
 
 	# Do not build drivers from the top-level Makefile
 	sed -i -e 's:\(SUBDIRS =\) drivers\(.*\):\1\2:' Makefile.am
@@ -345,7 +344,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	# force non-parallel make, Bug 196134 (confirmed valid for 0.9.0-r2)
+	emake -j1
 
 	MODULE_NAMES="lirc(misc:${S}/drivers)"
 	BUILD_TARGETS="all"
