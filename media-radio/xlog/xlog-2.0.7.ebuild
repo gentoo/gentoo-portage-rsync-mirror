@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.7.ebuild,v 1.2 2013/05/23 17:23:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.7.ebuild,v 1.3 2013/05/24 07:12:30 tomjbe Exp $
 
 EAPI=4
 
@@ -26,6 +26,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-cabrillo.patch" \
+		"${FILESDIR}/${P}-desktop.patch"
+
 	# Let portage handle updating mime/desktop databases,
 	epatch "${FILESDIR}/${PN}-1.9-desktop-update.patch"
 	eautoreconf

@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.28 2013/05/23 17:23:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.29 2013/05/24 07:12:30 tomjbe Exp $
+
+  24 May 2013; Thomas Beierlein <tomjbe@gentoo.org> xlog-2.0.7.ebuild,
+  +files/xlog-2.0.7-cabrillo.patch, +files/xlog-2.0.7-desktop.patch:
+  Fix QA warnings in .desktop file. Fix cabrillo import function.
 
   23 May 2013; Agostino Sarubbo <ago@gentoo.org> xlog-2.0.7.ebuild:
   Stable for amd64, wrt bug #470518

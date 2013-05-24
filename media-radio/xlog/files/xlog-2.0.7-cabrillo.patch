@@ -1,0 +1,11 @@
+--- src/logfile/cabrillo3.c.old	2013-05-23 15:27:32.000000000 +0200
++++ src/logfile/cabrillo3.c	2013-05-23 15:27:40.000000000 +0200
+@@ -341,7 +341,7 @@
+ 							g_strdup_printf ("%d", khz/1000);
+ 					else
+ 						q[cabrillo_fields[i]] =
+-							g_strdup_printf ("%d.%d", khz/1000, khz%1000);
++							g_strdup_printf ("%d.%03d", khz/1000, khz%1000);
+ 				}
+ 				else
+ 				{
