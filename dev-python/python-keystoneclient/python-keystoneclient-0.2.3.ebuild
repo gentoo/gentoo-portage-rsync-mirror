@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.2.2-r1.ebuild,v 1.1 2013/03/26 06:09:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.2.3.ebuild,v 1.1 2013/05/24 14:26:58 prometheanfire Exp $
 
 EAPI=5
 #restricted due to packages missing and bad depends in the test ==webob-1.0.8
@@ -41,6 +41,8 @@ RDEPEND="dev-python/iso8601[${PYTHON_USEDEP}]
 		<=dev-python/requests-1.0
 		dev-python/simplejson[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]"
+
+PATCHES=( "${FILESDIR}/0.2.3-CVE-2013-2013.patch" )
 
 python_test() {
 	${PYTHON} setup.py nosetests || die

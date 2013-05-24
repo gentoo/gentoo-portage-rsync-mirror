@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.128 2013/05/23 00:41:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.129 2013/05/24 14:25:53 aballier Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-FFTOOLS="aviocat cws2fws ffescape ffeval fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
+FFTOOLS="aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
 
 for i in ${FFTOOLS}; do
 	IUSE="${IUSE} +fftools_$i"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.144 2013/05/23 21:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.145 2013/05/24 14:05:55 aballier Exp $
 
 EAPI=5
 
@@ -91,8 +91,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/tiff
 	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
-	|| ( media-libs/libpostproc media-video/ffmpeg )
-	>=virtual/ffmpeg-9[encode]
+	|| ( >=media-video/ffmpeg-1.0[encode] ( media-libs/libpostproc >=media-video/libav-9[encode] ) )
 	rtmp? ( media-video/rtmpdump )
 	avahi? ( net-dns/avahi )
 	nfs? ( net-fs/libnfs )

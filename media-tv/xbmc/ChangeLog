@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.183 2013/05/23 21:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.184 2013/05/24 14:05:55 aballier Exp $
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org> xbmc-9999.ebuild:
+  Fix ffmpeg deps: upstream recommends ffmpeg so this one shall come first in
+  the || dep. xbmc doesnt even compile against libav, meaning the dep is in
+  theory wrong but left there in case someone eventually gets upstream to fix
+  it. Do not depend on virtual/ffmpeg which is not finegrained enough here (and
+  also rather useless because of the libpostproc dep) since ffmpeg releases
+  more often than libav these days and virtual/ffmpeg-9 depends on a masked
+  ffmpeg version while xbmc only requires ffmpeg-1 which is unmasked.
 
 *xbmc-12.2 (23 May 2013)
 
