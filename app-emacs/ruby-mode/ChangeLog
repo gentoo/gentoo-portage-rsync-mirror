@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.49 2013/05/22 10:47:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.50 2013/05/24 19:54:56 ago Exp $
+
+  24 May 2013; Agostino Sarubbo <ago@gentoo.org> ruby-mode-1.9.3_p429.ebuild:
+  Stable for ppc64, wrt bug #470628
 
   22 May 2013; Agostino Sarubbo <ago@gentoo.org> ruby-mode-1.9.3_p429.ebuild:
   Stable for ia64, wrt bug #470628

@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-3.0.7.ebuild,v 1.1 2013/05/24 18:10:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-3.0.7.ebuild,v 1.2 2013/05/24 19:58:52 pacho Exp $
 
 EAPI="5"
+AUTOTOOLS_PRUNE_LIBTOOL_FILES="all"
+
 inherit linux-info mono-env flag-o-matic pax-utils autotools-utils
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"

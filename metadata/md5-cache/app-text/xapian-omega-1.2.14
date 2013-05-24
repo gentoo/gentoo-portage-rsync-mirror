@@ -3,9 +3,9 @@ DEPEND=>=dev-libs/xapian-1.2.14 dev-lang/perl dev-libs/libpcre sys-libs/zlib
 DESCRIPTION=An application built on Xapian, consisting of indexers and a CGI search frontend
 EAPI=5
 HOMEPAGE=http://www.xapian.org/
-KEYWORDS=amd64 arm ~mips ppc ~ppc64 x86
+KEYWORDS=amd64 arm ~mips ppc ppc64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/xapian-1.2.14 dev-lang/perl dev-libs/libpcre sys-libs/zlib
 SLOT=0
 SRC_URI=http://www.oligarchy.co.uk/xapian/1.2.14/xapian-omega-1.2.14.tar.gz
-_md5_=5342d431c02f5c34893b220fabd110ba
+_md5_=1af8d153426aaaa6f078574fd1807dfb

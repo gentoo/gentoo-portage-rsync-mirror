@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.74 2013/05/04 15:36:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.75 2013/05/24 19:35:09 alonbl Exp $
+
+*openresolv-3.5.4-r3 (24 May 2013)
+
+  24 May 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/openresolv-3.5.4-config-conflict.patch, +openresolv-3.5.4-r3.ebuild:
+  Fix conflict with dhcpcd, bug#440614, thanks to Renato Alves
 
 *openresolv-3.5.4-r2 (04 May 2013)
 

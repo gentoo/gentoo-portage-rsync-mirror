@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4-r1.ebuild,v 1.2 2013/05/23 17:23:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4-r1.ebuild,v 1.3 2013/05/24 19:42:51 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~x86"
 
 DEPEND="sys-libs/glibc
 	sys-libs/ncurses"

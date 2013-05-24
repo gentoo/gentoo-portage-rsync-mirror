@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.47 2013/05/22 10:35:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.48 2013/05/24 19:45:02 ago Exp $
+
+  24 May 2013; Agostino Sarubbo <ago@gentoo.org> elementtree-1.2.6-r3.ebuild:
+  Stable for ppc64, wrt bug #470448
 
   22 May 2013; Agostino Sarubbo <ago@gentoo.org> elementtree-1.2.6-r3.ebuild:
   Stable for ia64, wrt bug #470448

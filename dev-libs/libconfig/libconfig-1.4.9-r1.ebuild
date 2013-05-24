@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.9-r1.ebuild,v 1.5 2013/05/20 12:46:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.4.9-r1.ebuild,v 1.6 2013/05/24 19:56:54 ago Exp $
 
 EAPI=5
 inherit eutils autotools-multilib
@@ -11,7 +11,7 @@ SRC_URI="http://www.hyperrealm.com/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc ~ppc64 ~sparc x86 ~x86-linux"
+KEYWORDS="amd64 ~mips ppc ppc64 ~sparc x86 ~x86-linux"
 IUSE="+cxx examples static-libs"
 
 DEPEND="
