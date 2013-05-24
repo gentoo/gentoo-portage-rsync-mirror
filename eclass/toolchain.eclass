@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.592 2013/05/21 20:47:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.593 2013/05/24 21:07:21 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -976,6 +976,9 @@ gcc-compiler-configure() {
 		then
 			confgcc+=( --with-arch=${arm_arch} )
 		fi
+
+		# Make default mode thumb for microcontroller classes #418209
+		[[ ${arm_arch} == *-m ]] && confgcc+=( --with-mode=thumb )
 
 		# Enable hardvfp
 		if [[ $(tc-is-softfloat) == "no" ]] && \

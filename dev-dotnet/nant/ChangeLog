@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/nant
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.46 2012/12/07 04:53:53 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.47 2013/05/24 21:14:15 pacho Exp $
+
+*nant-0.93_pre20130131 (24 May 2013)
+
+  24 May 2013; Pacho Ramos <pacho@gentoo.org> +nant-0.93_pre20130131.ebuild,
+  -nant-0.90.ebuild, -nant-0.91.ebuild:
+  Version bump for compatibility with mono-3 using the same snapshot as
+  openSuSE, remove old
 
   07 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nant-0.92.ebuild:
   x86 stable wrt bug #435202
