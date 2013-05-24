@@ -1,6 +1,19 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.37 2013/05/24 19:31:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.40 2013/05/24 22:22:37 hwoarang Exp $
+
+  24 May 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  openocd-0.6.1.ebuild, openocd-9999.ebuild:
+  remove redundant second argument for use_enable
+
+  24 May 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  openocd-0.6.1.ebuild:
+  typo
+
+  24 May 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  openocd-0.6.1.ebuild, openocd-9999.ebuild:
+  updated 9999 ebuild. Partially fixes #403841. EAPI5, enable most of the
+  adapters by default
 
   24 May 2013; Markos Chandras <hwoarang@gentoo.org> openocd-9999.ebuild:
   Switch to new git repo
