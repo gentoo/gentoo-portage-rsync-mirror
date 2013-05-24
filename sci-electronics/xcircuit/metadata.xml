@@ -12,4 +12,13 @@
   circuit drawing; it maintains flexiblity in style without compromising the
   power of schematic capture.
   </longdescription>
+<upstream>
+    <maintainer status="active">
+    <email>tim@opencircuitdesign.com</email>
+	<name>Timothy Edwards</name>
+    </maintainer>
+    <changelog>http://www.opencircuitdesign.com/xcircuit/changes.html</changelog>
+    <doc lang="en">http://www.opencircuitdesign.com/xcircuit/reference.html</doc>
+	<bugs-to>tim@opencircuitdesign.com</bugs-to>
+</upstream>
 </pkgmetadata>

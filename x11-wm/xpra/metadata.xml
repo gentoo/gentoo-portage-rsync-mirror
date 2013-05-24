@@ -5,6 +5,15 @@
 	<email>xmw@gentoo.org</email>
 	<name>Michael Weber</name>
 </maintainer>
+<upstream>
+    <maintainer status="active">
+    <email>tim@opencircuitdesign.com</email>
+	<name>Timothy Edwards</name>
+    </maintainer>
+    <changelog>http://www.opencircuitdesign.com/netgen/history.html</changelog>
+    <doc lang="en">http://www.opencircuitdesign.com/netgen/reference.html</doc>
+	<bugs-to>tim@opencircuitdesign.com</bugs-to>
+</upstream>
 <use>
 	<flag name='server'>Build server-side code</flag>
 	<flag name='clipboard'>Enable clipboard support</flag>
