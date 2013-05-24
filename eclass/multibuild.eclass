@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.10 2013/05/23 20:19:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.11 2013/05/24 17:42:05 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -252,7 +252,7 @@ multibuild_merge_root() {
 	local dest=${2}
 
 	local lockfile=${T}/.multibuild_merge_lock
-	local lockfile_l=${lockfile}.${$}
+	local lockfile_l=${lockfile}.${BASHPID}
 	local ret
 
 	# Lock the install tree for merge. The touch+ln method ensures race

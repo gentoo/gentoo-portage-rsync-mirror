@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-9999.ebuild,v 1.1 2013/01/11 09:59:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-9999.ebuild,v 1.2 2013/05/24 17:44:09 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
@@ -40,8 +40,8 @@ DOCS=(
 
 python_prepare_all() {
 	local PATCHES=(
-		"${FILESDIR}/${PN}-0.6_rc7-noexe.patch"
 		"${FILESDIR}/distribute-0.6.16-fix_deprecation_warnings.patch"
+		"${FILESDIR}/setuptools-0.6.40-no-exes.patch"
 	)
 
 	# Disable tests requiring network connection.
