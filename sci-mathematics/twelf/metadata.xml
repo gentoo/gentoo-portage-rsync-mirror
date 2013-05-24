@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>gienah@gentoo.org></email>
+  <email>gienah@gentoo.org</email>
+  <name>Mark Wright</name>
 </maintainer>
 <longdescription lang='en'>
 Twelf is an implementation of the logical framework LF. It is used for

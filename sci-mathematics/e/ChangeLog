@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/e
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/ChangeLog,v 1.3 2012/12/05 10:21:11 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/ChangeLog,v 1.4 2013/05/24 05:47:17 gienah Exp $
+
+  24 May 2013; Mark Wright <gienah@gentoo.org> metadata.xml:
+  fix bug 466776 - typo in email address
 
   05 Dec 2012; Mark Wright <gienah@gentoo.org> e-1.5.ebuild, e-1.6.ebuild:
   EAPI=5 with subslot depends to automatically rebuild e when isabelle is

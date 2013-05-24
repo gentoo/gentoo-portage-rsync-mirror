@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>gienah@gentoo.org></email>
+  <email>gienah@gentoo.org</email>
+  <name>Mark Wright</name>
 </maintainer>
 <longdescription lang='en'>
 The Teyjus system is an efficient implementation of the higher-order

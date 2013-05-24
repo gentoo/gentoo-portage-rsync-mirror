@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/sha1-polyml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/sha1-polyml/ChangeLog,v 1.1 2012/12/08 08:05:32 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/sha1-polyml/ChangeLog,v 1.2 2013/05/24 05:50:44 gienah Exp $
+
+  24 May 2013; Mark Wright <gienah@gentoo.org> metadata.xml:
+  fix bug 466776 - typo in email address
 
 *sha1-polyml-5.5.0 (08 Dec 2012)
 

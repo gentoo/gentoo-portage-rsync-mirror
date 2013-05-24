@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/cdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cdm/ChangeLog,v 1.3 2013/04/20 01:30:24 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cdm/ChangeLog,v 1.4 2013/05/24 05:52:49 gienah Exp $
+
+  24 May 2013; Mark Wright <gienah@gentoo.org> metadata.xml:
+  fix bug 466776 - typo in email address
 
 *cdm-0.6.1_pre20130419 (20 Apr 2013)
 
