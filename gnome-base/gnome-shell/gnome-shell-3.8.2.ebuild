@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.2.ebuild,v 1.3 2013/05/19 20:42:05 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.2.ebuild,v 1.4 2013/05/24 20:05:27 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 COMMON_DEPEND="
 	>=app-accessibility/at-spi2-atk-2.5.3
 	>=dev-libs/atk-2[introspection]
-	>=app-crypt/gcr-3.3.90[introspection]
+	>=app-crypt/gcr-3.8[introspection]
 	>=dev-libs/glib-2.35:2
 	>=dev-libs/gjs-1.35.8
 	>=dev-libs/gobject-introspection-0.10.1

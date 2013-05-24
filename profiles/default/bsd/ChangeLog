@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.143 2013/05/20 17:29:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.144 2013/05/24 20:20:45 aballier Exp $
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
+  mask xattr useflag on GNU tar, bug #432410 by Yuta SATOH
 
   20 May 2013; Alexis Ballier <aballier@gentoo.org> +fbsd/amd64/9.0/deprecated:
   deprecate 9.0 profile for amd64, bug #464742

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/soxr-0.1.1.ebuild,v 1.4 2013/05/15 19:33:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/soxr-0.1.1.ebuild,v 1.5 2013/05/24 20:09:29 aballier Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/soxr/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86 ~amd64-fbsd"
 IUSE="examples"
 
 DEPEND=""

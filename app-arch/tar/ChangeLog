@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.187 2013/05/04 16:33:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.188 2013/05/24 20:22:02 aballier Exp $
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org> tar-1.26-r1.ebuild:
+  keyword ~amd64-fbsd thanks to Yuta SATOH, bug #432410
 
   04 May 2013; Mike Frysinger <vapier@gentoo.org> tar-1.26-r1.ebuild:
   Mark alpha/ia64/m68k/ppc64/s390/sh/sparc stable #431848.

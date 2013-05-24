@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.118 2013/05/11 22:02:22 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.119 2013/05/24 20:27:05 aballier Exp $
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org>
+  gentoolkit-dev-0.2.8.3.ebuild:
+  keyword ~amd64-fbsd thanks to Yuta SATOH, bug #432410
 
 *gentoolkit-dev-0.2.8.3 (11 May 2013)
 
