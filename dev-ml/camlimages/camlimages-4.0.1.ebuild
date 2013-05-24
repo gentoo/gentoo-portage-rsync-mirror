@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-4.0.1.ebuild,v 1.4 2012/08/22 23:54:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-4.0.1.ebuild,v 1.5 2013/05/24 15:46:20 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils vcs-snapshot findlib multilib
 
@@ -11,11 +11,11 @@ HOMEPAGE="http://gallium.inria.fr/camlimages/"
 SRC_URI="http://bitbucket.org/camlspotter/camlimages/get/v4.0.1.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ppc x86"
 IUSE="doc gif gtk jpeg png postscript tiff truetype X xpm zlib"
 
-RDEPEND=">=dev-lang/ocaml-3.10.2[X?,ocamlopt]
+RDEPEND=">=dev-lang/ocaml-3.10.2:=[X?,ocamlopt]
 	gif? ( media-libs/giflib )
 	gtk? ( dev-ml/lablgtk )
 	jpeg? ( virtual/jpeg )

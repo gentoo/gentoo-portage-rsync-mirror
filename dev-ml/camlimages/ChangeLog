@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.35 2013/02/18 15:11:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.36 2013/05/24 15:46:20 aballier Exp $
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org> camlimages-4.0.1.ebuild:
+  eapi5, define subslot and add slot dep on ocaml
 
   18 Feb 2013; Alexis Ballier <aballier@gentoo.org> -camlimages-3.0.2.ebuild,
   -files/camlimages-3.0.2-annot.patch, -files/camlimages-3.0.2-libpng15.patch,
