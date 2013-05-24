@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.2-r2.ebuild,v 1.9 2012/12/17 20:02:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.2.1.ebuild,v 1.1 2013/05/24 14:42:07 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2)
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} pypy{1_8,1_9} )
 
 inherit bash-completion-r1 distutils-r1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~mips x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=sys-apps/portage-2.1.8.3"

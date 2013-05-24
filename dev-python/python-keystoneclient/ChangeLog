@@ -1,6 +1,21 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.7 2013/05/24 14:26:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.9 2013/05/24 14:54:20 prometheanfire Exp $
+
+*python-keystoneclient-0.2.3-r2 (24 May 2013)
+
+  24 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/0.2.3-CVE-2013-2030.patch, +python-keystoneclient-0.2.3-r2.ebuild,
+  -python-keystoneclient-0.2.3-r1.ebuild:
+  keystoneclient fix for CVE-2013-2030
+
+*python-keystoneclient-0.2.3-r1 (24 May 2013)
+
+  24 May 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/0.2.3-upstream-1181157.patch, +python-keystoneclient-0.2.3-r1.ebuild,
+  -python-keystoneclient-0.2.3.ebuild:
+  keystoneclient fix for upstream bug
+  https://bugs.launchpad.net/opensuse/+bug/1181157
 
 *python-keystoneclient-0.2.3 (24 May 2013)
 

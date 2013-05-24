@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/type-conv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/ChangeLog,v 1.28 2013/04/11 10:37:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/ChangeLog,v 1.29 2013/05/24 14:44:38 aballier Exp $
+
+*type-conv-109.20.00 (24 May 2013)
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org>
+  +type-conv-109.20.00.ebuild:
+  version bump
 
 *type-conv-109.15.00 (11 Apr 2013)
 
