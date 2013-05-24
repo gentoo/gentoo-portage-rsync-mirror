@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.1 2013/05/24 06:21:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.2 2013/05/24 08:17:24 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_2,3_3} pypy{1_9,2_0} )
 
 inherit check-reqs distutils-r1
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	kerberos? ( dev-python/pykerberos )"
+DISTUTILS_IN_SOURCE_BUILD=1
 
 reqcheck() {
 	if use test; then
@@ -100,7 +101,16 @@ python_test() {
 	done
 
 	local failed
-	nosetests || failed=1
+	#https://jira.mongodb.org/browse/PYTHON-521
+	if [[ "${EPYTHON}" == python3* ]]; then
+		pushd build/lib > /dev/null
+		mv ../../test . || die
+		2to3 --no-diffs -w test
+		nosetests ./test || failed=1
+		mv test ../../ || die
+	else
+		nosetests || failed=1
+	fi
 
 	mongod --dbpath "${dbpath}" --shutdown
 
