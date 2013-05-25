@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/zsync-0.6.2.ebuild,v 1.2 2011/02/09 22:02:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/zsync-0.6.2.ebuild,v 1.3 2013/05/25 09:43:07 pinkbyte Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -16,7 +16,7 @@ SRC_URI="http://zsync.moria.org.uk/download/${P}.tar.bz2
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 ZLIB_S="${WORKDIR}/${ZLIB_P}"
