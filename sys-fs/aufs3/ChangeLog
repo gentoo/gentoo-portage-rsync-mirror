@@ -1,6 +1,52 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.60 2013/05/25 12:25:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.61 2013/05/25 12:36:43 jlec Exp $
+
+  25 May 2013; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20121210.ebuild,
+  -aufs3-3_p20130107.ebuild, -aufs3-3_p20130114.ebuild,
+  -aufs3-3_p20130207.ebuild, -aufs3-3_p20130306.ebuild,
+  -aufs3-3_p20130318.ebuild, -aufs3-3_p20130325.ebuild,
+  -aufs3-3_p20130401.ebuild, -aufs3-3_p20130422.ebuild,
+  -aufs3-3_p20130429.ebuild, aufs3-3_p20130506.ebuild,
+  aufs3-3_p20130519.ebuild, -files/aufs3-base-0.patch,
+  -files/aufs3-standalone-0.patch, -files/3_p20121210/aufs3-base-0.patch,
+  -files/aufs3-base-1.patch, -files/aufs3-standalone-1.patch,
+  -files/3_p20121210/aufs3-base-1.patch, -files/aufs3-base-2.patch,
+  -files/aufs3-standalone-2.patch, -files/pax-2.patch,
+  -files/3_p20121210/aufs3-base-2.patch, -files/aufs3-base-3.patch,
+  -files/aufs3-standalone-3.patch, -files/3_p20121210/aufs3-base-3.patch,
+  -files/aufs3-base-4.patch, -files/aufs3-standalone-4.patch,
+  -files/3_p20121210/aufs3-base-4.patch, -files/aufs3-base-5.patch,
+  -files/aufs3-standalone-5.patch, -files/3_p20121210/aufs3-base-5.patch,
+  -files/aufs3-standalone-6.patch, -files/aufs-util-31.patch,
+  -files/aufs3-base-x-rcN.patch, -files/aufs3-standalone-x-rcN.patch,
+  -files/aufs3-base-6.patch, -files/3_p20121210/aufs3-base-6.patch,
+  -files/3_p20121210/aufs3-base-x-rcN.patch,
+  -files/aufs3-fix-export-__devcgroup_inode_permission.patch,
+  -files/3_p20121210/aufs3-standalone-0.patch,
+  -files/3_p20121210/aufs3-standalone-1.patch,
+  -files/3_p20121210/aufs3-standalone-2.patch,
+  -files/3_p20121210/aufs3-standalone-3.patch,
+  -files/3_p20121210/aufs3-standalone-4.patch,
+  -files/3_p20121210/aufs3-standalone-5.patch,
+  -files/3_p20121210/aufs3-standalone-6.patch,
+  -files/3_p20121210/aufs3-standalone-x-rcN.patch,
+  -files/3_p20130107/aufs3-base-0.patch, -files/3_p20130107/aufs3-base-1.patch,
+  -files/3_p20130107/aufs3-base-2.patch, -files/3_p20130107/aufs3-base-3.patch,
+  -files/3_p20130107/aufs3-base-4.patch, -files/3_p20130107/aufs3-base-5.patch,
+  -files/3_p20130107/aufs3-base-6.patch, -files/3_p20130107/aufs3-base-7.patch,
+  -files/3_p20130107/aufs3-base-x-rcN.patch,
+  -files/3_p20130107/aufs3-standalone-0.patch,
+  -files/3_p20130107/aufs3-standalone-1.patch,
+  -files/3_p20130107/aufs3-standalone-2.patch,
+  -files/3_p20130107/aufs3-standalone-3.patch,
+  -files/3_p20130107/aufs3-standalone-4.patch,
+  -files/3_p20130107/aufs3-standalone-5.patch,
+  -files/3_p20130107/aufs3-standalone-6.patch,
+  -files/3_p20130107/aufs3-standalone-7.patch,
+  -files/3_p20130107/aufs3-standalone-x-rcN.patch, -files/parallel.patch,
+  -files/pax.patch:
+  Drop old, reintroduce the CONFIG_EXPERIMENTAL check conditionally
 
   25 May 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20130519.ebuild:
   Drop CONFIG_EXPERIMENTAL check which isn't present anymore for linux-3.9

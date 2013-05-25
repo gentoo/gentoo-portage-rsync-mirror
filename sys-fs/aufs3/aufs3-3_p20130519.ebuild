@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20130519.ebuild,v 1.2 2013/05/25 12:25:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20130519.ebuild,v 1.3 2013/05/25 12:36:43 jlec Exp $
 
 EAPI=5
 
@@ -34,6 +34,7 @@ S="${WORKDIR}"/${PN}-standalone
 MODULE_NAMES="aufs(misc:${S})"
 
 pkg_setup() {
+	kernel_is 3 9 || CONFIG_CHECK+=" ~EXPERIMENTAL"
 	CONFIG_CHECK+=" !AUFS_FS"
 	use inotify && CONFIG_CHECK+=" ~FSNOTIFY"
 	use nfs && CONFIG_CHECK+=" EXPORTFS"
