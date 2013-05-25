@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.59 2013/05/20 18:23:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.60 2013/05/25 12:25:04 jlec Exp $
+
+  25 May 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20130519.ebuild:
+  Drop CONFIG_EXPERIMENTAL check which isn't present anymore for linux-3.9
 
 *aufs3-3_p20130519 (20 May 2013)
 
