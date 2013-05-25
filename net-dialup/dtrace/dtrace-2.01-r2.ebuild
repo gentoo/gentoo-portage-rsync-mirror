@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/dtrace-2.01-r2.ebuild,v 1.1 2013/05/15 18:30:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/dtrace-2.01-r2.ebuild,v 1.2 2013/05/25 00:06:19 sbriesen Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.avm.de/develper/d3trace/linux/dtrace.static -> ${P}.static
 
 LICENSE="AVM-dtrace"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="mirror bindist"
 
 RDEPEND="net-dialup/capi4k-utils"

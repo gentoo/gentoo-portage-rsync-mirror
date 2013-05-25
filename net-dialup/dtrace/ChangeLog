@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/dtrace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/ChangeLog,v 1.5 2013/05/15 18:30:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/ChangeLog,v 1.7 2013/05/25 00:10:04 sbriesen Exp $
+
+  25 May 2013; Stefan Briesenick <sbriesen@gentoo.org> -dtrace-2.01.ebuild,
+  -dtrace-2.01-r1.ebuild:
+  old revsions removed.
+
+  25 May 2013; Stefan Briesenick <sbriesen@gentoo.org> dtrace-2.01-r2.ebuild:
+  stabilized. solves bug #469986.
 
 *dtrace-2.01-r2 (15 May 2013)
 

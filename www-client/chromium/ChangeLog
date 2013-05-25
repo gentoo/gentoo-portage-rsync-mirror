@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.887 2013/05/24 18:27:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.888 2013/05/25 00:13:09 phajdan.jr Exp $
+
+*chromium-29.0.1516.3 (25 May 2013)
+
+  25 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-ffmpeg-r6.patch, +chromium-29.0.1516.3.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Switch from make-based to ninja-based build. Fix bug
+  #469144 by Alphat-PC.
 
   24 May 2013; Agostino Sarubbo <ago@gentoo.org> -chromium-26.0.1410.43.ebuild,
   -chromium-26.0.1410.63.ebuild, -chromium-27.0.1453.81.ebuild:
