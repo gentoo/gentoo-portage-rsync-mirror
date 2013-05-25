@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.184 2013/05/25 08:01:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.185 2013/05/25 14:29:13 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.5.0.ebuild:
+  Stable for alpha, wrt bug #470386
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.5.0.ebuild:
   Stable for sparc, wrt bug #470386

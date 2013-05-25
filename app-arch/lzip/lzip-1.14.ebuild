@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/lzip-1.14.ebuild,v 1.7 2013/05/25 07:56:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/lzip-1.14.ebuild,v 1.8 2013/05/25 14:24:15 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.gnu.org/releases-noredirect/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 
 src_configure() {
 	# not autotools-based
