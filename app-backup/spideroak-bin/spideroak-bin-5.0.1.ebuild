@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.0.1.ebuild,v 1.1 2013/05/06 22:03:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.0.1.ebuild,v 1.2 2013/05/25 13:19:13 blueness Exp $
 
 EAPI="4"
 
@@ -42,7 +42,7 @@ S=${WORKDIR}
 QA_PREBUILT="*"
 
 src_prepare() {
-	use headless && epatch "${FILESDIR}"/headless.patch
+	use headless && epatch "${FILESDIR}"/${P}-headless.patch
 
 	# Set RPATH for preserve-libs handling (bug #400979).
 	cd "${S}/opt/SpiderOak/lib" || die

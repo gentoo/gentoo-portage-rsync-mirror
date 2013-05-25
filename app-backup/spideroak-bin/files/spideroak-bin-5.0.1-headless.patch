@@ -1,0 +1,9 @@
+diff -Naur work.orig/usr/bin/SpiderOak work/usr/bin/SpiderOak
+--- work.orig/usr/bin/SpiderOak	2013-04-25 22:27:32.000000000 -0400
++++ work/usr/bin/SpiderOak	2013-05-25 09:12:58.000000000 -0400
+@@ -5,4 +5,4 @@
+ QT_PLUGIN_PATH="/opt/SpiderOak/lib/plugins/" ; export QT_PLUGIN_PATH
+ SpiderOak_EXEC_SCRIPT=$(cd `dirname $0` ; pwd)/SpiderOak
+ export SpiderOak_EXEC_SCRIPT
+-exec "/opt/SpiderOak/lib/SpiderOak" "$@"
++exec "/opt/SpiderOak/lib/SpiderOak" --headless "$@"

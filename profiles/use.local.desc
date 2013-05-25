@@ -1224,6 +1224,8 @@ dev-haskell/json:pretty - Add support for using pretty printing combinators
 dev-haskell/monad-control:instancest - If enabled this package will export MonadBaseControl instances for the lazy and strict ST monad. If disabled these instances are only exported when base >= 4.4. If enabled it is required that the transformer-base package exports MonadBase instances for ST. It will do this by default.
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
 dev-haskell/texmath:cgi - Build texmath-cgi executable.
+dev-haskell/text:developer - operate in developer mode
+dev-haskell/text:integer-simple - Use the simple integer library instead of GMP
 dev-haskell/unix-compat:old-time - build against old-time package
 dev-haskell/x11:screensaver - whether to build XScreenSaver.
 dev-haskell/zip-archive:executable - Build the Zip executable.
