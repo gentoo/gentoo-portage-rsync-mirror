@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/vzstats
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vzstats/ChangeLog,v 1.1 2013/05/25 18:14:22 maksbotan Exp $
+
+*vzstats-0.3.2 (25 May 2013)
+
+  25 May 2013; Maxim Koltsov <maksbotan@gentoo.org> +metadata.xml,
+  +vzstats-0.3.2.ebuild:
+  Add app-misc/vzstats, needed by sys-cluster/vzctl. Thanks to slepnoga.
