@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/linux-gpib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.13 2013/01/30 18:21:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.14 2013/05/25 00:49:19 dilfridge Exp $
+
+*linux-gpib-3.2.17-r1 (25 May 2013)
+*linux-gpib-3.2.16-r4 (25 May 2013)
+
+  25 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -linux-gpib-3.2.16-r3.ebuild, +linux-gpib-3.2.16-r4.ebuild,
+  +files/linux-gpib-3.2.16-reallydie.patch, +linux-gpib-3.2.17-r1.ebuild,
+  +files/linux-gpib-3.2.17-kernel37.patch:
+  Stable revbump to detect silent build failures in kernel modules; add patch
+  in 3.2.17-r1 for building against kernel 3.7 and later
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> linux-gpib-3.2.16-r3.ebuild:
   Stable for x86, wrt bug #454222

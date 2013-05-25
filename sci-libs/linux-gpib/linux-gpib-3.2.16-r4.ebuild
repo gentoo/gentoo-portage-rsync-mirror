@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r3.ebuild,v 1.8 2013/01/30 18:21:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r4.ebuild,v 1.1 2013/05/25 00:49:19 dilfridge Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -34,6 +34,7 @@ DEPEND="${COMMONDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.2.15-build.patch
 	"${FILESDIR}"/${PN}-3.2.16-perl.patch
+	"${FILESDIR}"/${PN}-3.2.16-reallydie.patch
 )
 
 pkg_setup () {

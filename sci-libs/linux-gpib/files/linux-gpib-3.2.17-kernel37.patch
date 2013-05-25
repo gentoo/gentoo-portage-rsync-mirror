@@ -1,0 +1,280 @@
+Index: ChangeLog
+===================================================================
+--- ChangeLog	(revision 1599)
++++ ChangeLog	(revision 1600)
+@@ -1,3 +1,211 @@
++
++2013-04-19 03:08  fmhess
++
++	* [r1599] drivers/gpib/tnt4882/tnt4882.h: Fixed compile error.
++
++2013-03-04 03:01  fmhess
++
++	* [r1598] doc/linux-gpib.sgml, drivers/gpib/tnt4882/tnt4882.h,
++	  drivers/gpib/tnt4882/tnt4882_init.c: Added pci device id for
++	  CEC-488, which is a rebranded NI board.
++
++2012-12-20 08:13  dpenkler
++
++	* [r1596] ChangeLog: Updated Changelog with svn log entries
++
++2012-12-19 15:52  dpenkler
++
++	* [r1593] ChangeLog, configure.ac: bumped version
++
++2012-09-03 23:51  fmhess
++
++	* [r1592] drivers/gpib/cb7210/cb7210_cs.c,
++	  drivers/gpib/ines/ines_cs.c, drivers/gpib/tnt4882/tnt4882_cs.c:
++	  Removed more includes of kernel's obsolete asm/system.h
++
++2012-09-03 23:42  fmhess
++
++	* [r1591] drivers/gpib/sys/ibsys.h: Removed an include that breaks
++	  compilation on 3.5.3 kernel.
++	  Checked that it still compiles against a 2.6.32 kernel.
++
++2012-09-03 23:41  fmhess
++
++	* [r1590] drivers/gpib/ni_usb/ni_usb_gpib.h: Removed a garbage
++	  character at the end of an include line.
++
++2012-04-25 04:29  fmhess
++
++	* [r1589] drivers/gpib/agilent_82357a/agilent_82357a.c: Fix check
++	  of return value from mutex_trylock.
++
++2012-01-28 18:26  fmhess
++
++	* [r1588] language/python/Gpib.py: Patch from Thomas Baldwin:
++	  
++	  This changes the object-oriented version of the python binding
++	  (Gpib.py) to use a new-style class rather than an old-style
++	  class. This is a useful enhancement for subclassing Gpib in user
++	  code - e.g., modifying the read() method to strip termination
++	  characters using python's super() builtin.
++	  
++	  New-style classes were introduced in python 2.2 - so they're not
++	  so new anymore.
++
++2012-01-28 18:03  fmhess
++
++	* [r1587] drivers/gpib/ni_usb/ni_usb_gpib.c: Tweaked printk.
++
++2012-01-28 17:45  fmhess
++
++	* [r1586] drivers/gpib/ni_usb/ni_usb_gpib.c: Applied patch from
++	  Jakub Schmidtke, fixes driver rejection of
++	  some kusb boards due to reading unexpected bytes (whose meaning
++	  I never figured out).
++
++2011-12-21 03:10  fmhess
++
++	* [r1585] drivers/gpib/cec/init.c, drivers/gpib/ines/ines_init.c:
++	  Added a couple missing includes.
++
++2011-09-29 22:44  fmhess
++
++	* [r1584] doc/linux-gpib.sgml: Added KUSB-488A to supported
++	  hardware list.
++
++2011-09-29 22:40  fmhess
++
++	* [r1583] AUTHORS: Added patch sender to AUTHORS file.
++
++2011-09-29 22:39  fmhess
++
++	* [r1582] drivers/gpib/ni_usb/ni_usb_gpib.c,
++	  drivers/gpib/ni_usb/ni_usb_gpib.h: Patch to add support for
++	  KUSB-488A from Albert Comerma <albert.comerma@gmail.com>
++
++2011-08-21 15:40  fmhess
++
++	* [r1581] language/python/gpibinter.c: Patch from Dmitri
++	  Iouchtchenko:
++	  
++	  If the global interpreter lock (GIL) is held during a
++	  long-running
++	  I/O operation, all threads of the Python program hang for the
++	  duration of the operation. This patch releases the GIL around the
++	  ib* calls in the Python interface.
++
++2011-07-28 18:45  fmhess
++
++	* [r1580] drivers/gpib/tnt4882/tnt4882_cs.c: ni pcimcia board
++	  doesn't have io memory.
++
++2011-07-18 20:19  fmhess
++
++	* [r1579] drivers/gpib/cb7210/cb7210_cs.c,
++	  drivers/gpib/include/pcmcia, drivers/gpib/ines/ines_cs.c,
++	  drivers/gpib/tnt4882/tnt4882_cs.c: Fixed pcmcia compile errors
++	  against 2.6.39 kernel. Dropped support for
++	  pcmcia with kernels older than 2.6.36.
++
++2011-06-30 15:57  fmhess
++
++	* [r1578] drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c: Patch from
++	  Marcello carla':
++	  
++	  Here is a short patch to correct a bug in
++	  handling timeout in the lpvo_usb_gpib
++	  driver (signaled to me by Dr. U. Straube).
++
++2011-06-28 13:51  fmhess
++
++	* [r1577] drivers/gpib/sys/ibwait.c, drivers/gpib/sys/osfuncs.c:
++	  Get rid of extra mutex unlock in ibwait.
++
++2011-06-07 21:33  fmhess
++
++	* [r1576] drivers/gpib/include/linux/semaphore.h: Added
++	  compatibility header to deal with move of semaphore.h kernel
++	  header from asm/ to linux/.
++
++2011-05-11 01:20  fmhess
++
++	* [r1575] drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c: Applied patch
++	  from Marcello Carla:
++	  
++	  add timeout handling and minor adjustments.
++
++2011-05-11 01:18  fmhess
++
++	* [r1574] doc/linux-gpib.sgml: Added lpvo_usb_gpib to
++	  documentation, from Marcello Carla.
++
++2011-04-29 17:57  fmhess
++
++	* [r1573] drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c: Patch from
++	  Marcello Carla'
++
++2011-04-29 17:56  fmhess
++
++	* [r1572] drivers/gpib/lpvo_usb_gpib/Makefile: Added missing
++	  Makefile for lpvo_usb_gpib.
++
++2011-04-29 14:52  fmhess
++
++	* [r1571] drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c: Adapted some
++	  code from Linux 2.6.38 tty_set_termios() function for
++	  use in lpvo_usb_gpib.c.
++
++2011-04-29 14:23  fmhess
++
++	* [r1570] drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c: Fix check for
++	  of write() return value.
++
++2011-04-29 14:18  fmhess
++
++	* [r1569] AUTHORS, drivers/gpib/Makefile,
++	  drivers/gpib/lpvo_usb_gpib,
++	  drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c: Added lpvo_usb_gpib
++	  driver from Marcello Carla.
++
++2011-04-08 21:57  fmhess
++
++	* [r1567] README: Updated copyright.
++
++2011-04-08 21:42  fmhess
++
++	* [r1566] ChangeLog: Updated ChangeLog with "svn2cl -i"
++
++2011-04-08 21:02  fmhess
++
++	* [r1565] ChangeLog: Updated ChangeLog with "svn2cl -i".
++
++2011-04-08 21:01  fmhess
++
++	* [r1564] configure.ac: Bumped version.
++
++2011-04-08 20:34  fmhess
++
++	* [r1563] drivers/gpib/include/gpib_types.h,
++	  drivers/gpib/sys/autopoll.c, drivers/gpib/sys/device.c,
++	  drivers/gpib/sys/ibinit.c, drivers/gpib/sys/ibutil.c,
++	  drivers/gpib/sys/ibwait.c, drivers/gpib/sys/osfuncs.c,
++	  drivers/gpib/sys/osinit.c, drivers/gpib/sys/osutil.c: Cope with
++	  loss of "big kernel lock" in 2.6.39 kernel.
++
++2011-04-07 14:53  fmhess
++
++	* [r1562] drivers/gpib/agilent_82357a/agilent_82357a.c,
++	  drivers/gpib/agilent_82357a/agilent_82357a.h,
++	  drivers/gpib/ni_usb/ni_usb_gpib.c,
++	  drivers/gpib/ni_usb/ni_usb_gpib.h: Convert mutex usage in drivers
++	  from old linux/semaphore.h based stuff
++	  to linux/mutex.h.
++
++2010-08-25 18:00  fmhess
++
++	* [r1560] ChangeLog: More updates of ChangeLog for 3.2.15 with
++	  "svn2cl -i"
++
+ 2012-12-19 21:02  dpenkler
+ 
+ 	* [r1593] configure.ac: Bumped version to 3.2.17
+Index: drivers/gpib/pc2/pc2_init.c
+===================================================================
+--- drivers/gpib/pc2/pc2_init.c	(revision 1599)
++++ drivers/gpib/pc2/pc2_init.c	(revision 1600)
+@@ -22,7 +22,7 @@
+ #include <linux/sched.h>
+ #include <linux/module.h>
+ #include <linux/slab.h>
+-#include <asm/dma.h>
++#include <asm-generic/dma.h>
+ #include <linux/pci.h>
+ #include <linux/string.h>
+ #include <linux/init.h>
+Index: drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c
+===================================================================
+--- drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c	(revision 1599)
++++ drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.c	(revision 1600)
+@@ -416,6 +416,8 @@
+ 	tty = (struct tty_struct *)f->private_data;
+ 
+ 	mutex_lock(&tty->termios_mutex);
++
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3,7,0)
+ 	old_termios = * tty->termios;
+ 	tty->termios->c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP
+ 				| INLCR | IGNCR | ICRNL | IXON);
+@@ -431,7 +433,24 @@
+ 		(*tty->ops->set_termios)(tty, &old_termios);
+ 	else
+ 		tty_termios_copy_hw(tty->termios, &old_termios);
++#else
++	old_termios = tty->termios;
++	tty->termios.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP
++				| INLCR | IGNCR | ICRNL | IXON);
++	tty->termios.c_oflag &= ~OPOST;
++	tty->termios.c_lflag &= ~(ECHO | ECHONL | ICANON | ISIG | IEXTEN);
++	tty->termios.c_cflag &= ~(CSIZE | PARENB);
++	tty->termios.c_cflag |= CS8;
+ 
++	tty->termios.c_cc[VTIME] = 0;
++	tty->termios.c_cc[VMIN] = 1;
++
++	if (tty->ops->set_termios)
++		(*tty->ops->set_termios)(tty, &old_termios);
++	else
++		tty_termios_copy_hw(&tty->termios, &old_termios);
++#endif
++
+ 	ld = tty_ldisc_ref(tty);
+ 	if (ld != NULL) {
+ 		if (ld->ops->set_termios)
+Index: drivers/gpib/tnt4882/tnt4882_init.c
+===================================================================
+--- drivers/gpib/tnt4882/tnt4882_init.c	(revision 1599)
++++ drivers/gpib/tnt4882/tnt4882_init.c	(revision 1600)
+@@ -731,7 +731,7 @@
+ };
+ MODULE_DEVICE_TABLE(pci, tnt4882_pci_table);
+ 
+-static const struct pnp_device_id tnt4882_pnp_table[] __devinitdata =
++static const struct pnp_device_id tnt4882_pnp_table[] =
+ {
+ 	{.id = "NICC601"},
+ 	{.id = ""}
