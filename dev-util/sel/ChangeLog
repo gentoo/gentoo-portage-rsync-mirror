@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.19 2013/05/20 17:55:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.20 2013/05/25 07:43:57 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> sel-0.08.4-r1.ebuild:
+  Stable for sparc, wrt bug #464440
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> sel-0.08.4-r1.ebuild:
   Stable for s390, wrt bug #464440

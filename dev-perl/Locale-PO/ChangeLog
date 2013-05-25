@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-PO
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.75 2013/05/20 17:56:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.76 2013/05/25 07:51:38 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> Locale-PO-0.230.0.ebuild:
+  Stable for sparc, wrt bug #463052
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> Locale-PO-0.230.0.ebuild:
   Stable for s390, wrt bug #463052

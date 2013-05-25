@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20130124.ebuild,v 1.8 2013/05/18 20:50:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20130124.ebuild,v 1.9 2013/05/25 07:45:49 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="vim plugin: a collection of color schemes from vim.org"
 HOMEPAGE="http://www.vim.org/"
 
 LICENSE="vim GPL-2 GPL-2+ GPL-3 GPL-3+ MIT BSD WTFPL-2 public-domain"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\

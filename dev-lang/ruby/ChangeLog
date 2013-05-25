@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.590 2013/05/20 17:42:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.591 2013/05/25 07:59:03 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> ruby-1.9.3_p429.ebuild:
+  Stable for sparc, wrt bug #469984
 
   20 May 2013; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p429.ebuild:
   Remove non-functional dosym calls, bug 442462.

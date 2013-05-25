@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zthread
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.38 2013/05/20 08:29:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.39 2013/05/25 07:50:58 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> zthread-2.3.2-r3.ebuild:
+  Stable for sparc, wrt bug #463040
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> zthread-2.3.2-r3.ebuild:
   Stable for x86, wrt bug #463040

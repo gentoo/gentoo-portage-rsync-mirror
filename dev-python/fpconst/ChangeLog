@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fpconst
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.45 2013/05/20 17:59:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.46 2013/05/25 07:53:59 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> fpconst-0.7.3-r1.ebuild:
+  Stable for sparc, wrt bug #463074
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> fpconst-0.7.3-r1.ebuild:
   Stable for s390, wrt bug #463074

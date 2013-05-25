@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/ansi-wl-pprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ChangeLog,v 1.30 2013/05/20 08:28:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ChangeLog,v 1.31 2013/05/25 07:50:06 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> ansi-wl-pprint-0.6.6.ebuild:
+  Stable for sparc, wrt bug #463026
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> ansi-wl-pprint-0.6.6.ebuild:
   Stable for x86, wrt bug #463026

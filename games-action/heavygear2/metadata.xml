@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>games</herd>
-<longdescription>
-Heavy Gear II is a first-person 3-D combat shooter based on the Dream Pod 9 role playing system where you pit squads of your best mechanized warriors against the enemy to save Terra Nova, but sheer firepower won't be enough. You must use your guile and wits to get behind enemy lines and use your resources to their fullest, before it's too late.  The game was ported to Linux by the now defunct Loki Entertainment and is commercial software.  Heavy Gear II was the first Linux game to be ported from Direct3D, have joystick support via SDL, and use OpenAL for 3D sound.  You can still pick up a copy from Tuxgames (http://www.tuxgames.com), but supplies are limited, as the publisher is no longer in business.
-</longdescription>
-</pkgmetadata>

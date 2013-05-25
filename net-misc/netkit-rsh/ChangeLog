@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.78 2013/05/20 17:43:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.79 2013/05/25 07:56:41 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> netkit-rsh-0.17-r10.ebuild:
+  Stable for sparc, wrt bug #463126
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> netkit-rsh-0.17-r10.ebuild:
   Stable for s390, wrt bug #463126

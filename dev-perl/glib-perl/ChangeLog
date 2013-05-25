@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.160 2013/05/18 20:46:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.161 2013/05/25 07:42:11 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> glib-perl-1.280.0.ebuild:
+  Stable for sparc, wrt bug #461146
 
   18 May 2013; Agostino Sarubbo <ago@gentoo.org> glib-perl-1.280.0.ebuild:
   Stable for alpha, wrt bug #461146

@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.29 2013/05/20 08:27:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.30 2013/05/25 07:46:02 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> guile-lib-0.1.9.ebuild:
+  Stable for sparc, wrt bug #457338
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> guile-lib-0.1.9.ebuild:
   Stable for x86, wrt bug #457338

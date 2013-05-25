@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.14 2013/05/25 07:29:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.16 2013/05/25 07:47:28 pinkbyte Exp $
+
+  25 May 2013; Sergey Popov <pinkbyte@gentoo.org> ansible-9999.ebuild:
+  Utilize readme.gentoo eclass, add missing die in src_test
+
+  25 May 2013; Sergey Popov <pinkbyte@gentoo.org> -ansible-0.9-r1.ebuild,
+  -files/ansible-0.9-distribution-fix.patch, metadata.xml:
+  Change maintainer, drop old version and deprecated USE flags descriptions
 
   25 May 2013; Sergey Popov <pinkbyte@gentoo.org> ansible-9999.ebuild:
   Remove manual installation of ansible modules, wrt bug #470890. Thanks to Jan

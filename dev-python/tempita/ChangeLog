@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.30 2013/05/20 17:54:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.31 2013/05/25 07:43:17 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> tempita-0.5.1-r1.ebuild:
+  Stable for sparc, wrt bug #464430
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> tempita-0.5.1-r1.ebuild:
   Stable for s390, wrt bug #464430

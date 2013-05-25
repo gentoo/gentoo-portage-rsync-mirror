@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.87 2013/05/20 18:03:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.88 2013/05/25 07:53:34 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> culmus-0.120-r4.ebuild:
+  Stable for sparc, wrt bug #461178
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> culmus-0.120-r4.ebuild:
   Stable for s390, wrt bug #461178

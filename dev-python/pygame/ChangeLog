@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.98 2013/05/18 20:47:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.99 2013/05/25 07:54:12 ago Exp $
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  pygame-1.9.2_pre20120101-r2.ebuild:
+  Stable for sparc, wrt bug #469732
 
   18 May 2013; Agostino Sarubbo <ago@gentoo.org>
   pygame-1.9.2_pre20120101-r2.ebuild:
