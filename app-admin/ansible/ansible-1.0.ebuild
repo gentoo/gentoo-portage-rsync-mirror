@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.0.ebuild,v 1.1 2013/03/30 15:56:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.0.ebuild,v 1.3 2013/05/25 11:11:52 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Radically simple deployment, model-driven configuration management,
 HOMEPAGE="http://ansible.cc/"
 SRC_URI="https://github.com/ansible/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="examples test"
