@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.67 2013/05/13 07:00:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.68 2013/05/25 06:30:11 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -130,6 +130,7 @@ mni - Manipuri locale
 mr - Marathi locale
 mr_IN - Marathi locale for India
 ms - Malay locale
+ms_MY - Malay locale for Malaysia
 mt - Maltese locale
 my - Burmese locale
 nan - Min Nan locale

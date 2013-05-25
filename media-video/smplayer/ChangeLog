@@ -1,6 +1,12 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.133 2013/05/03 16:56:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.134 2013/05/25 06:30:53 yngwin Exp $
+
+*smplayer-0.8.5 (25 May 2013)
+
+  25 May 2013; Ben de Groot <yngwin@gentoo.org> +smplayer-0.8.5.ebuild,
+  -smplayer-0.8.4.ebuild:
+  Version bump, bug #469368. Remove older version with broken icons.
 
 *smplayer-0.8.4-r1 (03 May 2013)
 

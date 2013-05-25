@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.4.ebuild,v 1.1 2013/03/24 09:25:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.5.ebuild,v 1.1 2013/05/25 06:30:53 yngwin Exp $
 
 EAPI=4
 PLOCALES="ar_SY bg ca cs da de el_GR en_US es et eu fi fr gl he_IL hr hu it ja
-ka ko ku lt mk nl pl pt pt_BR ro_RO ru_RU sk sl_SI sr sv th tr uk_UA vi_VN
+ka ko ku lt mk ms_MY nl pl pt pt_BR ro_RO ru_RU sk sl_SI sr sv th tr uk_UA vi_VN
 zh_CN zh_TW"
 PLOCALE_BACKUP="en_US"
 
@@ -24,7 +24,7 @@ fi
 
 DESCRIPTION="Great Qt4 GUI front-end for mplayer"
 HOMEPAGE="http://smplayer.sourceforge.net/"
-LICENSE="GPL-2"
+LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="debug"
@@ -77,8 +77,8 @@ src_compile() {
 }
 
 src_install() {
-	# remove unneeded copies of GPL
-	rm -f Copying.txt docs/{cs,en,hu,it,ja,pt,ru,zh_CN}/gpl.html || die
+	# remove unneeded copies of licenses
+	rm -f Copying* docs/{cs,en,hu,it,ja,pt,ru,zh_CN}/gpl.html || die
 	rm -rf docs/{de,es,nl,ro} || die
 
 	emake DESTDIR="${D}" install
