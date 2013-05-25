@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14778 2013/05/25 12:44:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14779 2013/05/25 20:37:19 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -998,10 +998,6 @@ app-crypt/hmaccalc
 # Robert Piasek <dagger@gentoo.org> (23 Feb 2010)
 # Masking libmapi as it depends on masked samba4
 >=net-libs/libmapi-0.9
-
-# Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
-# Masked for testing/feedback.
-media-sound/teamspeak-server-bin
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (02 Dec 2009)
 # cvs ebuild vdr-xineliboutput-9999 masked for lifetime

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/packages.build,v 1.9 2013/02/01 22:42:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/packages.build,v 1.10 2013/05/25 20:32:33 aballier Exp $
 
 # This file describes the packages needed to build a stage 1 based on this
 # profile.  Packages in this file are built in order.
@@ -27,7 +27,6 @@ sys-apps/gawk
 sys-apps/grep
 sys-apps/less
 sys-apps/sed
-sys-apps/texinfo
 sys-devel/binutils
 sys-devel/bison
 sys-devel/flex

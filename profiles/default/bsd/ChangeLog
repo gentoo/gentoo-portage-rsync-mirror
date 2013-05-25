@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.144 2013/05/24 20:20:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.145 2013/05/25 20:32:33 aballier Exp $
+
+  25 May 2013; Alexis Ballier <aballier@gentoo.org>
+  fbsd/amd64/9.1/clang/packages.build, fbsd/packages.build:
+  remove texinfo from packages.build: it is not needed anymore for building
+  stages and causes problems when trying to put it in a stage1. bug #471192
 
   24 May 2013; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
   mask xattr useflag on GNU tar, bug #432410 by Yuta SATOH
