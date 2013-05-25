@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.8 2013/03/30 15:56:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.9 2013/05/25 07:29:35 pinkbyte Exp $
 
 EAPI="5"
 
@@ -44,9 +44,6 @@ src_test() {
 
 src_install() {
 	distutils-r1_src_install
-
-	insinto /usr/share/ansible
-	doins library/*
 
 	doman docs/man/man1/*.1
 	if use examples; then
