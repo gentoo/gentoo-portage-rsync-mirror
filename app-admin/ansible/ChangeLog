@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.16 2013/05/25 07:47:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.17 2013/05/25 08:03:41 pinkbyte Exp $
+
+*ansible-1.1 (25 May 2013)
+
+  25 May 2013; Sergey Popov <pinkbyte@gentoo.org> +ansible-1.1.ebuild:
+  Version bump
 
   25 May 2013; Sergey Popov <pinkbyte@gentoo.org> ansible-9999.ebuild:
   Utilize readme.gentoo eclass, add missing die in src_test

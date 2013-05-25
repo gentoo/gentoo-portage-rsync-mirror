@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7867 2013/05/24 18:22:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7868 2013/05/25 08:05:52 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 May 2013; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Remove freetype:1 mask, as relevant ebuilds have been tree-cleaned
 
   24 May 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
   Drop the hardmask as mono-3 is not yet considered as 'stable' by upstream

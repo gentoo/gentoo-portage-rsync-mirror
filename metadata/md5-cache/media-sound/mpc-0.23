@@ -4,10 +4,10 @@ DESCRIPTION=A commandline client for Music Player Daemon (media-sound/mpd)
 EAPI=4
 HOMEPAGE=http://www.musicpd.org
 IUSE=iconv
-KEYWORDS=amd64 arm hppa ppc ppc64 ~sparc x86
+KEYWORDS=amd64 arm hppa ppc ppc64 sparc x86
 LICENSE=GPL-2
 RDEPEND=>=media-libs/libmpdclient-2.2 iconv? ( virtual/libiconv )
 SLOT=0
 SRC_URI=http://www.musicpd.org/download/mpc/0/mpc-0.23.tar.bz2
 _eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6
-_md5_=9eea5e1c805827019422ed0bf3170117
+_md5_=1bec6fed2272ffe8b939f79df8761378

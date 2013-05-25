@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/vim-latex-1.8.23.20130116.ebuild,v 1.7 2013/05/18 20:49:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/vim-latex-1.8.23.20130116.ebuild,v 1.8 2013/05/25 08:05:55 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -15,7 +15,7 @@ HOMEPAGE="http://vim-latex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="vim"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="html python"
 
 RDEPEND="|| ( app-editors/vim[python?] app-editors/gvim[python?] )
