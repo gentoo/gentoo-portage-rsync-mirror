@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/adzapper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.66 2013/05/25 14:25:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.67 2013/05/26 07:22:14 ago Exp $
+
+  26 May 2013; Agostino Sarubbo <ago@gentoo.org> adzapper-20110915-r2.ebuild:
+  Stable for ppc, wrt bug #470568
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> adzapper-20110915-r2.ebuild:
   Stable for alpha, wrt bug #470568

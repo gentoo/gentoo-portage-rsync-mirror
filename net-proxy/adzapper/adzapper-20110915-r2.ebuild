@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/adzapper-20110915-r2.ebuild,v 1.4 2013/05/25 14:25:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/adzapper-20110915-r2.ebuild,v 1.5 2013/05/26 07:22:14 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://adzapper.sourceforge.net/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ppc sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl"
