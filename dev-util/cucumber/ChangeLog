@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.58 2013/01/15 05:23:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.59 2013/05/26 07:34:41 graaff Exp $
+
+*cucumber-1.3.2 (26 May 2013)
+
+  26 May 2013; Hans de Graaff <graaff@gentoo.org> +cucumber-1.3.2.ebuild:
+  Version bump. Dropped hppa,ia64,sparc keywords for new dependencies, bug
+  471306.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> cucumber-1.2.1.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps

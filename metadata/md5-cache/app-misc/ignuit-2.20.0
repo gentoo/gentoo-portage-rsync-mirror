@@ -4,9 +4,9 @@ DESCRIPTION=Memorization aid based on the Leitner flashcard system
 EAPI=5
 HOMEPAGE=http://homepages.ihug.co.nz/~trmusson/programs.html#ignuit
 IUSE=examples
-KEYWORDS=amd64 ~ppc ~ppc64 x86
+KEYWORDS=amd64 ppc ~ppc64 x86
 LICENSE=GPL-3
 RDEPEND=app-text/dvipng >=app-text/gnome-doc-utils-0.3.2 dev-libs/glib:2 dev-libs/libxml2:2 dev-libs/libxslt >=gnome-base/libgnomeui-2.22.1 gnome-base/gconf:2 gnome-base/libglade:2.0 >=media-libs/gstreamer-0.10.20:0.10 x11-libs/gtk+:2 x11-libs/pango virtual/latex-base
 SLOT=0
 SRC_URI=http://homepages.ihug.co.nz/~trmusson/stuff/ignuit-2.20.0.tar.gz
-_md5_=8566b1ae03c1122d68671a393706efbc
+_md5_=e11491eb7f2b6f054764790c344b731f

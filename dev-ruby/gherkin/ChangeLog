@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.49 2013/01/31 07:35:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.50 2013/05/26 07:32:11 graaff Exp $
+
+*gherkin-2.12.0 (26 May 2013)
+
+  26 May 2013; Hans de Graaff <graaff@gentoo.org> +gherkin-2.12.0.ebuild:
+  Version bump. Dropped ia64,sparc keywords for new dependencies, bug 471306.
 
 *gherkin-2.11.6 (31 Jan 2013)
 
