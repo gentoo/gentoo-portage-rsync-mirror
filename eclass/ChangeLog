@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.839 2013/05/24 18:08:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.840 2013/05/26 14:08:21 pacho Exp $
+
+  26 May 2013; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Pass --enable-compile-warnings=minimum as we don't want -Werror* flags, bug
+  #471336
 
   24 May 2013; Pacho Ramos <pacho@gentoo.org> +mono-env.eclass:
   Add mono-env.eclass to start a migration to simpler dotnet related eclasses,

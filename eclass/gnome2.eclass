@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.121 2013/05/23 19:31:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.122 2013/05/26 14:08:21 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -156,6 +156,11 @@ gnome2_src_configure() {
 	# Pass --disable-schemas-compile when possible
 	if grep -q "disable-schemas-compile" "${ECONF_SOURCE:-.}"/configure; then
 		G2CONF="--disable-schemas-compile ${G2CONF}"
+	fi
+
+	# Pass --enable-compile-warnings=minimum as we don't want -Werror* flags, bug #471336
+	if grep -q "enable-compile-warnings" "${ECONF_SOURCE:-.}"/configure; then
+		G2CONF="--enable-compile-warnings=minimum ${G2CONF}"
 	fi
 
 	# Avoid sandbox violations caused by gnome-vfs (bug #128289 and #345659)
