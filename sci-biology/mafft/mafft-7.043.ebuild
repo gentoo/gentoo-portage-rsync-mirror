@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-7.043.ebuild,v 1.1 2013/05/26 08:42:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-7.043.ebuild,v 1.2 2013/05/26 11:12:15 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ S="${WORKDIR}"/${P}${EXTENSIONS}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.037-respect.patch
-	use threads && append-flags -Denablemultithread
+	use threads && append-cppflags -Denablemultithread
 	sed "s:GENTOOLIBDIR:$(get_libdir):g" -i core/Makefile || die
 	sed -i -e "s/(PREFIX)\/man/(PREFIX)\/share\/man/" "${S}"/core/Makefile || die "sed failed"
 }

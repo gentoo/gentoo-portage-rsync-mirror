@@ -1,0 +1,57 @@
+From f581f2a456e6dbec76742b8e862feecee58e36b0 Mon Sep 17 00:00:00 2001
+From: Juan A. Suarez Romero <jasuarez@igalia.com>
+Date: Tue, 21 May 2013 14:01:10 +0000
+Subject: test-ui: Check if there is a reply from OAuth
+
+https://bugzilla.gnome.org/show_bug.cgi?id=700478
+---
+diff --git a/tools/grilo-test-ui/flickr-oauth.c b/tools/grilo-test-ui/flickr-oauth.c
+index 90679d2..8e847c5 100644
+--- a/tools/grilo-test-ui/flickr-oauth.c
++++ b/tools/grilo-test-ui/flickr-oauth.c
+@@ -74,6 +74,7 @@ flickroauth_get_request_token (const gchar *consumer_key,
+   gchar *params[7];
+   gchar *params_string; /* one string later created from params[] */
+   gchar *http_reply;
++  gchar *request_token = NULL;
+ 
+   timestamp = get_timestamp ();
+   nonce = oauth_gen_nonce ();
+@@ -107,7 +108,12 @@ flickroauth_get_request_token (const gchar *consumer_key,
+   http_reply = oauth_http_get2 (url, NULL, NULL);
+   g_free (url);
+ 
+-  return parse_request_token (http_reply, secret);
++  if (http_reply) {
++    request_token = parse_request_token (http_reply, secret);
++    g_free (http_reply);
++  }
++
++  return request_token;
+ }
+ 
+ gchar *
+@@ -125,6 +131,7 @@ flickroauth_get_access_token (const gchar *consumer_key,
+   gchar *params[8];
+   gchar *params_string; /* one string later created from params[] */
+   gchar *http_reply;
++  gchar *access_token = NULL;
+ 
+   timestamp = get_timestamp ();
+   nonce = oauth_gen_nonce ();
+@@ -159,7 +166,12 @@ flickroauth_get_access_token (const gchar *consumer_key,
+   http_reply = oauth_http_get2 (url, NULL, NULL);
+   g_free (url);
+ 
+-  return parse_access_token (http_reply, secret);
++  if (http_reply) {
++    access_token = parse_access_token (http_reply, secret);
++    g_free (http_reply);
++  }
++
++  return access_token;
+ }
+ 
+ gchar *
+--
+cgit v0.9.1

@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.25 2013/05/12 07:31:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.26 2013/05/26 11:20:45 pacho Exp $
+
+*grilo-0.2.6 (26 May 2013)
+
+  26 May 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/grilo-0.2.6-testui-crash.patch, +grilo-0.2.6.ebuild,
+  -grilo-0.2.3.ebuild:
+  Version bump, remove old
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Add doctype to metadata.xml
