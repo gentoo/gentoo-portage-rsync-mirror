@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.55 2013/04/28 16:09:28 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.56 2013/05/26 10:50:37 tomjbe Exp $
+
+  26 May 2013; Thomas Beierlein <tomjbe@gentoo.org> oregano-0.82.ebuild:
+  Drop GTK_DISABLE_DEPRECATED (bug 467868)
 
   28 Apr 2013; Thomas Beierlein <tomjbe@gentoo.org> oregano-0.82.ebuild,
   +files/oregano-0.82-automake.patch:
