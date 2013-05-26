@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.37.ebuild,v 1.1 2013/04/29 07:26:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.41-r1.ebuild,v 1.1 2013/05/26 09:53:14 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -36,4 +36,6 @@ src_install() {
 	# Create symlinks for backends
 	dosym ${PN} /usr/bin/${PN}-screen
 	dosym ${PN} /usr/bin/${PN}-tmux
+
+	docompress -x /usr/share/doc/${PN}
 }

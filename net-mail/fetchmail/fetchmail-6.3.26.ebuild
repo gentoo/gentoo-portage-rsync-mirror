@@ -1,14 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.23.ebuild,v 1.1 2012/12/16 20:55:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.26.ebuild,v 1.1 2013/05/26 09:42:58 radhermit Exp $
 
-EAPI=4
+EAPI=5
+PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_REQ_USE="tk"
 
-PYTHON_DEPEND="tk? 2"
-PYTHON_USE_WITH_OPT="tk"
-PYTHON_USE_WITH="tk"
-
-inherit python user
+inherit python-single-r1 user toolchain-funcs
 
 DESCRIPTION="the legendary remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://fetchmail.berlios.de"
@@ -24,7 +22,8 @@ RDEPEND="hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 )
 	nls? ( virtual/libintl )
 	!elibc_glibc? ( sys-libs/e2fsprogs-libs )
-	socks? ( net-proxy/dante )"
+	socks? ( net-proxy/dante )
+	tk? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	nls? ( sys-devel/gettext )"
@@ -34,10 +33,8 @@ DOCS="FAQ FEATURES NEWS NOTES README README.NTLM README.SSL* TODO"
 pkg_setup() {
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /var/lib/${PN} ${PN}
-	if use tk; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -46,11 +43,6 @@ src_prepare() {
 }
 
 src_configure() {
-	if use tk ; then
-		export PYTHON=$(PYTHON -a)
-	else
-		export PYTHON=:
-	fi
 	econf \
 		--enable-RPA \
 		--enable-NTLM \
@@ -62,6 +54,10 @@ src_configure() {
 		$(use_with kerberos kerberos5) \
 		$(use_with hesiod) \
 		$(use_with socks)
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
 
 src_install() {
@@ -82,15 +78,13 @@ src_install() {
 	for f in contrib/* ; do
 		[ -f "${f}" ] && dodoc "${f}"
 	done
+
+	use tk && python_optimize
 }
 
 pkg_postinst() {
-	use tk && python_mod_optimize fetchmailconf.py
-
-	elog "Please see /etc/conf.d/fetchmail if you want to adjust"
-	elog "the polling delay used by the fetchmail init script."
-}
-
-pkg_postrm() {
-	use tk && python_mod_cleanup fetchmailconf.py
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		elog "Please see /etc/conf.d/fetchmail if you want to adjust"
+		elog "the polling delay used by the fetchmail init script."
+	fi
 }

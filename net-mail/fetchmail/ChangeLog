@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.248 2013/03/01 12:43:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.250 2013/05/26 09:46:11 radhermit Exp $
+
+  26 May 2013; Tim Harder <radhermit@gentoo.org> -fetchmail-6.3.22.ebuild,
+  -fetchmail-6.3.23.ebuild:
+  Remove old.
+
+*fetchmail-6.3.26 (26 May 2013)
+
+  26 May 2013; Tim Harder <radhermit@gentoo.org> +fetchmail-6.3.26.ebuild:
+  Version bump, migrate to python-single-r1, respect AR (bug #457512).
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> fetchmail-6.3.24.ebuild:
   Stable for sh, wrt bug #457428
