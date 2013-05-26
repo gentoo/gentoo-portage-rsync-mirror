@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.91 2013/05/10 04:53:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.92 2013/05/26 00:12:04 mr_bones_ Exp $
+
+  26 May 2013; Michael Sterrett <mr_bones_@gentoo.org> vice-2.4.ebuild:
+  disable-dependency-tracking is passed by default with eapi5
 
   10 May 2013; Michael Sterrett <mr_bones_@gentoo.org>
   +files/vice-2.4-autotools.patch, files/vice-2.3-libav.patch,

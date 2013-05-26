@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.8 2013/05/10 04:53:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.9 2013/05/26 00:12:04 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs games
@@ -85,7 +85,6 @@ src_configure() {
 	FCCACHE=/bin/true \
 	PKG_CONFIG=$(tc-getPKG_CONFIG) \
 	egamesconf \
-		--disable-dependency-tracking \
 		--enable-fullscreen \
 		--enable-parsid \
 		--with-resid \
