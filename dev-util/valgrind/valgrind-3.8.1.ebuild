@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.8.1.ebuild,v 1.7 2013/05/07 17:48:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.8.1.ebuild,v 1.8 2013/05/26 12:17:05 blueness Exp $
 
 EAPI="4"
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -46,6 +46,9 @@ src_prepare() {
 
 src_configure() {
 	local myconf
+
+	# Respect ar, bug #468114
+	tc-export AR
 
 	# -fomit-frame-pointer	"Assembler messages: Error: junk `8' after expression"
 	#                       while compiling insn_sse.c in none/tests/x86
