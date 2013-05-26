@@ -1,7 +1,7 @@
 #
 # rc-addon-script for plugin cdplayer
 #
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdplayer/files/rc-addon.sh,v 1.1 2013/05/26 16:00:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdplayer/files/rc-addon.sh,v 1.2 2013/05/26 20:23:22 hd_brummy Exp $
 
 . /etc/conf.d/vdr.cdplayer
 
@@ -19,7 +19,7 @@ plugin_pre_vdr_start() {
 
 	# default values
 	add_plugin_param "-c cdplayer"
-	add_plugin_param "-s cd.pmg"
+	add_plugin_param "-s cd.mpg"
 
 	add_plugin_param "-d ${CDPLAYER_DEVICE:-/dev/cdrom}"
 
