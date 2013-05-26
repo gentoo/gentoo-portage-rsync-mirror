@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.2 2013/05/24 08:17:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.3 2013/05/26 08:19:47 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_2,3_3} pypy{1_9,2_0} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
 
 inherit check-reqs distutils-r1
 
@@ -52,7 +52,7 @@ python_compile_all() {
 src_test() {
 	# Yes, we need TCP/IP for that...
 	local DB_IP=127.0.0.1
-	local DB_PORT=27017
+	local DB_PORT=27000
 
 	export DB_IP DB_PORT
 
@@ -77,7 +77,7 @@ python_test() {
 
 		LC_ALL=C \
 		mongod --dbpath "${dbpath}" --smallfiles --nojournal \
-			--bind_ip ${DB_IP} --port ${DB_PORT} \
+			--port ${DB_PORT} \
 			--unixSocketPrefix "${TMPDIR}" \
 			--logpath "${logpath}" --fork \
 		&& sleep 2
@@ -102,15 +102,11 @@ python_test() {
 
 	local failed
 	#https://jira.mongodb.org/browse/PYTHON-521
+	pushd "${BUILD_DIR}"/../ > /dev/null
 	if [[ "${EPYTHON}" == python3* ]]; then
-		pushd build/lib > /dev/null
-		mv ../../test . || die
 		2to3 --no-diffs -w test
-		nosetests ./test || failed=1
-		mv test ../../ || die
-	else
-		nosetests || failed=1
 	fi
+		esetup.py test || failed=1
 
 	mongod --dbpath "${dbpath}" --shutdown
 
