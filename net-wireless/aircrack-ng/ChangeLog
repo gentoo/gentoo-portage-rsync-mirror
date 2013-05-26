@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.74 2013/04/24 22:53:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.75 2013/05/26 02:42:39 zerochaos Exp $
+
+  26 May 2013; Rick Farina <zerochaos@gentoo.org> aircrack-ng-9999.ebuild:
+  fixing for new svn location, and unhijacking the misguided
+  subversion_src_prepare
 
   24 Apr 2013; Rick Farina <zerochaos@gentoo.org> aircrack-ng-9999.ebuild:
   don't install aircrack-ng's tool to update oui file, we already handle that
