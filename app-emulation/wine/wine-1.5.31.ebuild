@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.30.ebuild,v 1.3 2013/05/26 04:27:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.31.ebuild,v 1.1 2013/05/26 04:27:24 tetromino Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-GV="1.9"
+GV="2.21"
 MV="0.0.8"
 PULSE_PATCHES="winepulse-patches-1.5.30"
 WINE_GENTOO="wine-gentoo-2012.11.24"
@@ -171,7 +171,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
 		"${FILESDIR}"/${PN}-1.5.17-osmesa-check.patch #429386
 		"${FILESDIR}"/${PN}-1.5.23-winebuild-CCAS.patch #455308
-		"${FILESDIR}"/${PN}-1.5.30-libwine.patch #http://bugs.winehq.org/show_bug.cgi?id=33560
 		"${FILESDIR}"/${PN}-1.5.31-gnutls-3.2.0.patch #http://bugs.winehq.org/show_bug.cgi?id=33649
 	)
 	[[ ${PV} == "9999" ]] || PATCHES+=(

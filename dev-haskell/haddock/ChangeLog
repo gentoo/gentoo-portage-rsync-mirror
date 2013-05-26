@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.106 2013/04/25 18:48:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.107 2013/05/26 04:07:08 gienah Exp $
+
+*haddock-2.13.2 (26 May 2013)
+
+  26 May 2013; Mark Wright <gienah@gentoo.org> +haddock-2.13.2.ebuild:
+  Bump haddock to 2.13.2
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> haddock-2.10.0-r2.ebuild:
   Stable for sparc, wrt bug #457780

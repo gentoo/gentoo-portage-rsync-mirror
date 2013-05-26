@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.463 2013/05/16 13:30:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.464 2013/05/26 04:27:24 tetromino Exp $
+
+*wine-1.5.31 (26 May 2013)
+
+  26 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.5.30.ebuild,
+  +wine-1.5.31.ebuild, wine-9999.ebuild, +files/wine-1.5.31-gnutls-3.2.0.patch:
+  Version bump, see http://www.winehq.org/announce/1.5.31 for the announcement.
+  Fix build failure with gnutls-3.2.0 (bug #471077, thanks to Ben Kohler).
 
   16 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.5.25.ebuild,
   wine-1.5.26.ebuild, wine-1.5.27.ebuild, wine-1.5.28.ebuild,
