@@ -1,6 +1,5 @@
 iconv
 nls
-nptl
 nis
 
 emul-linux-x86

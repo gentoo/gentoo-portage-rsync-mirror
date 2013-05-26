@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.6 2013/04/21 02:21:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.7 2013/05/26 16:14:48 vapier Exp $
 
 inherit flag-o-matic eutils libtool unpacker toolchain-funcs
 
@@ -75,10 +75,13 @@ src_compile() {
 
 	if use pgo ; then
 		emake -j1 -C tune tuneup || die
-		rm gmp-mparam.h || die
-		./tune/tuneup | tee gmp-mparam.h
-		emake clean || die
-		emake || die
+		ebegin "Trying to generate tuned data"
+		./tune/tuneup | tee gmp.mparam.h.new
+		if eend $(( 0 + ${PIPESTATUS[*]/#/+} )) ; then
+			mv gmp-mparam.h.new gmp-mparam.h
+			emake clean || die
+			emake || die
+		fi
 	fi
 }
 
