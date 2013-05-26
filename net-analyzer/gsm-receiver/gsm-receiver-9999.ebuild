@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gsm-receiver/gsm-receiver-9999.ebuild,v 1.1 2012/08/12 18:44:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gsm-receiver/gsm-receiver-9999.ebuild,v 1.2 2013/05/26 22:55:57 chithanh Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -45,5 +45,5 @@ src_install() {
 
 	dobin src/python/*.py
 	insinto /usr/share/doc/${PF}/examples
-	doins src/python/{cfile,*.sh}
+	doins src/python/*.sh
 }
