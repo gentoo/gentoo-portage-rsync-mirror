@@ -1,6 +1,10 @@
 # ChangeLog for media-video/coherence
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.15 2011/03/05 17:08:17 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.16 2013/05/26 06:38:02 patrick Exp $
+
+  26 May 2013; Patrick Lauer <patrick@gentoo.org> coherence-0.6.6.1.ebuild,
+  coherence-0.6.6.2.ebuild:
+  Removing stable sparc keyword that has unsatisfied dependencies #469550
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> coherence-0.6.6.1.ebuild,
   coherence-0.6.6.2.ebuild:
@@ -61,4 +65,3 @@
   Initial ebuild. Many thanks to all the contributors on bug 246166. This
   ebuild is still in rough shape, needs to have the deps worked out and
   minor fixes. Funtionality works
-

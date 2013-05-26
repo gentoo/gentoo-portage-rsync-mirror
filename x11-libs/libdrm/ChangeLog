@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.230 2013/05/25 20:27:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.231 2013/05/26 06:42:46 ago Exp $
+
+  26 May 2013; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.45.ebuild:
+  Stable for s390, wrt bug #463430
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.45.ebuild:
   Stable for ia64, wrt bug #463430

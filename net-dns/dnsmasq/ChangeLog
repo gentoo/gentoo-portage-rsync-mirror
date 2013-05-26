@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.242 2013/05/11 11:12:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.243 2013/05/26 06:43:23 ago Exp $
+
+  26 May 2013; Agostino Sarubbo <ago@gentoo.org> dnsmasq-2.66.ebuild:
+  Stable for s390, wrt bug #453170
 
   11 May 2013; Agostino Sarubbo <ago@gentoo.org> dnsmasq-2.66.ebuild:
   Stable for sparc, wrt bug #453170
