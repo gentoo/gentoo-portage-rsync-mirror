@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/virtualgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.13 2013/05/09 22:07:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.14 2013/05/26 18:46:27 pacho Exp $
+
+*virtualgl-2.3.2-r2 (26 May 2013)
+
+  26 May 2013; Pacho Ramos <pacho@gentoo.org> +files/vgl.initd-r2,
+  +virtualgl-2.3.2-r2.ebuild, -virtualgl-2.3.2.ebuild:
+  Fix running with gdm-3 (#469928, thanks a lot to Vadim A. Misbakh-Soloviov
+  (mva) for his help), drop old.
 
 *virtualgl-2.3.2-r1 (09 May 2013)
 

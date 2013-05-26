@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.23 2013/05/26 08:19:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.24 2013/05/26 18:42:26 idella4 Exp $
+
+  26 May 2013; Ian Delaney <idella4@gentoo.org> pymongo-2.5.1.ebuild,
+  pymongo-2.5.ebuild:
+  return --bind_ip to starting mongod, disable 1 test conditionally confirmed
+  from upstream, rm pkg_postinst recommend from jbergstroem wrt Bug #463310
 
   26 May 2013; Ian Delaney <idella4@gentoo.org> pymongo-2.5.1.ebuild,
   pymongo-2.5.ebuild:

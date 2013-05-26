@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.3 2013/05/26 08:19:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.4 2013/05/26 18:42:26 idella4 Exp $
 
 EAPI=5
 
@@ -77,7 +77,7 @@ python_test() {
 
 		LC_ALL=C \
 		mongod --dbpath "${dbpath}" --smallfiles --nojournal \
-			--port ${DB_PORT} \
+			--bind_ip ${DB_IP} --port ${DB_PORT} \
 			--unixSocketPrefix "${TMPDIR}" \
 			--logpath "${logpath}" --fork \
 		&& sleep 2
@@ -101,12 +101,16 @@ python_test() {
 	done
 
 	local failed
-	#https://jira.mongodb.org/browse/PYTHON-521
+	#https://jira.mongodb.org/browse/PYTHON-521, py2.[6-7] has intermittent failure with gevent
 	pushd "${BUILD_DIR}"/../ > /dev/null
 	if [[ "${EPYTHON}" == python3* ]]; then
 		2to3 --no-diffs -w test
-	fi
 		esetup.py test || failed=1
+	elif [[ "${EPYTHON}" == 'python2.7' || "${EPYTHON}" == 'python2.6' ]]; then
+		sed -e 's:test_socket_reclamation:_&:' \
+			-i test/test_pooling_base.py || die
+	fi
+	esetup.py test || failed=1
 
 	mongod --dbpath "${dbpath}" --shutdown
 
@@ -127,9 +131,4 @@ python_install_all() {
 	use doc && local HTML_DOCS=( html/. )
 
 	distutils-r1_python_install_all
-}
-
-pkg_postinst() {
-	ewarn "Important changes on this release, make sure to read the changelog:"
-	ewarn "http://api.mongodb.org/python/${PV}/changelog.html"
 }
