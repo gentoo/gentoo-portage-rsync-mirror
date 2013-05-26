@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/geoip-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.31 2013/05/20 12:42:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.32 2013/05/26 19:07:58 idella4 Exp $
+
+*geoip-python-1.2.8-r1 (26 May 2013)
+
+  26 May 2013; Ian Delaney <idella4@gentoo.org> +geoip-python-1.2.8-r1.ebuild:
+  revbump; migrate -> distutils-r1
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> geoip-python-1.2.8.ebuild:
   Stable for ppc, wrt bug #470450
