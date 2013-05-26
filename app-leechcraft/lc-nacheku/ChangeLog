@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-nacheku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-nacheku/ChangeLog,v 1.2 2013/05/02 15:33:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-nacheku/ChangeLog,v 1.3 2013/05/26 19:53:38 maksbotan Exp $
+
+*lc-nacheku-0.5.96 (26 May 2013)
+
+  26 May 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-nacheku-0.5.96.ebuild:
+  Bump LeechCraft suite to 0.5.96, thanks to 0xd34df00d
 
 *lc-nacheku-0.5.95 (02 May 2013)
 
@@ -12,4 +17,3 @@
   02 May 2013; Sergey Popov <pinkbyte@gentoo.org> +lc-nacheku-9999.ebuild,
   +metadata.xml:
   Initial commit, thanks to 0xd34df00d
-

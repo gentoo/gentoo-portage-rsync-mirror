@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-azoth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.5 2013/05/08 12:18:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.6 2013/05/26 19:35:15 maksbotan Exp $
+
+*lc-azoth-0.5.96 (26 May 2013)
+
+  26 May 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-azoth-0.5.96.ebuild:
+  Bump LeechCraft suite to 0.5.96, thanks to 0xd34df00d
 
   08 May 2013; Maxim Koltsov <maksbotan@gentoo.org> lc-azoth-9999.ebuild:
   Add lc-xtazy dependency to 9999
