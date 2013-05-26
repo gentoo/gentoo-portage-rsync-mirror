@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/adolc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.3 2013/03/03 19:10:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.4 2013/05/26 15:55:01 bicatali Exp $
+
+*adolc-2.4.1 (26 May 2013)
+
+  26 May 2013; Sébastien Fabbro <bicatali@gentoo.org> +adolc-2.4.1.ebuild,
+  -adolc-2.3.0-r1.ebuild, -files/adolc-2.3.0-libdir.patch,
+  -files/adolc-2.3.0-no-colpack.patch:
+  Version bump
 
 *adolc-2.4.0 (03 Mar 2013)
 

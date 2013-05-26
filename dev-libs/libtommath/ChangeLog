@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtommath
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.60 2013/05/25 14:29:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.61 2013/05/26 15:57:30 ago Exp $
+
+  26 May 2013; Agostino Sarubbo <ago@gentoo.org> libtommath-0.42.0-r1.ebuild:
+  Stable for x86, wrt bug #470264
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> libtommath-0.42.0-r1.ebuild:
   Stable for alpha, wrt bug #470264
