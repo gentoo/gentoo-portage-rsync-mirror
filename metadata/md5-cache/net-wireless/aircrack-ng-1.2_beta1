@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=dev-libs/openssl netlink? ( dev-libs/libnl:3 ) sqlite? ( >=dev-db/sqlite-3.4 )
+DESCRIPTION=WLAN tools for breaking 802.11 WEP/WPA keys
+EAPI=5
+HOMEPAGE=http://www.aircrack-ng.org
+IUSE=+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD netlink +sqlite +unstable
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=dev-libs/openssl netlink? ( dev-libs/libnl:3 ) sqlite? ( >=dev-db/sqlite-3.4 ) kernel_linux? ( net-wireless/iw net-wireless/wireless-tools sys-apps/ethtool sys-apps/usbutils sys-apps/pciutils ) sys-apps/hwids airdrop-ng? ( net-wireless/lorcon[python] )
+SLOT=0
+SRC_URI=http://download.aircrack-ng.org/aircrack-ng-1.2-beta1.tar.gz
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=64500dd3b0a6dfc97cdb9d9810443244

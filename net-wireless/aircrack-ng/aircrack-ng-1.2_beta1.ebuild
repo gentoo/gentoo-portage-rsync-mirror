@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.5 2013/05/26 05:11:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta1.ebuild,v 1.1 2013/05/26 05:11:10 zerochaos Exp $
 
 EAPI="5"
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/lorcon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/ChangeLog,v 1.2 2013/04/19 13:34:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/ChangeLog,v 1.3 2013/05/26 05:10:58 zerochaos Exp $
+
+*lorcon-0.0_p20130212 (26 May 2013)
+
+  26 May 2013; Rick Farina <zerochaos@gentoo.org> +lorcon-0.0_p20130212.ebuild:
+  adding snapshot
 
   19 Apr 2013; Rick Farina <zerochaos@gentoo.org> lorcon-9999.ebuild:
   cleanup DEPEND so it's correct
