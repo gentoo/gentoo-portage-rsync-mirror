@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.182 2013/03/10 16:23:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.183 2013/05/26 16:55:34 mabi Exp $
+
+  26 May 2013; Matti Bickel <mabi@gentoo.org> lua-5.2.1.ebuild:
+  fix incorrect sed usage (bug #463416)
 
   10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> lua-5.1.5.ebuild:
   Stable for s390, wrt bug #457882

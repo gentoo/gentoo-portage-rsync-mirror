@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.1.ebuild,v 1.2 2013/02/20 23:27:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.1.ebuild,v 1.3 2013/05/26 16:55:34 mabi Exp $
 
 EAPI=4
 
@@ -29,8 +29,8 @@ src_prepare() {
 		EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="upstream.patch" epatch
 
 	sed -i \
-		-e 's:\(LUA_ROOT\s*\).*:\1"'${EPREFIX}'/usr/":' \
-		-e "s:\(LUA_CDIR\s*LUA_ROOT \"\)lib:\1$(get_libdir):" \
+		-e 's:\(define LUA_ROOT\s*\).*:\1"'${EPREFIX}'/usr/":' \
+		-e "s:\(define LUA_CDIR\s*LUA_ROOT \"\)lib:\1$(get_libdir):" \
 		src/luaconf.h \
 	|| die "failed patching luaconf.h"
 
