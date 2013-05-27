@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.7.ebuild,v 1.2 2013/05/11 10:16:56 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.7.ebuild,v 1.3 2013/05/27 19:46:39 grobian Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ src_prepare() {
 src_configure() {
 	# --disable-openssl bug #427526
 	econf \
-		--libdir=/usr/$(get_libdir) \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		$(use_enable gmp public-key) \
 		$(use_enable static-libs static) \
 		--disable-openssl \
