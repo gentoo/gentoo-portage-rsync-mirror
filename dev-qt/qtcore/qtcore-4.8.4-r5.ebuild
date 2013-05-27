@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.4-r5.ebuild,v 1.2 2013/04/08 15:04:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.4-r5.ebuild,v 1.3 2013/05/27 09:49:57 pesa Exp $
 
 EAPI=5
 
@@ -36,6 +36,7 @@ PATCHES=(
 	"${FILESDIR}/blacklist-mis-issued-Turktrust-certs.patch"
 	"${FILESDIR}/CVE-2013-0254.patch"
 	"${FILESDIR}/fix-call-to-QMetaObject-metaCall-from-updateProperty.patch"
+	"${FILESDIR}/rename-qAbs-function-for-timeval.patch"
 	"${WORKDIR}/${P}-update-defaultNumberingSystem.patch"
 )
 

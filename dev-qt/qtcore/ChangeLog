@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.14 2013/04/20 07:47:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.15 2013/05/27 09:49:57 pesa Exp $
+
+  27 May 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/rename-qAbs-function-for-timeval.patch, qtcore-4.8.4-r5.ebuild:
+  Fix build with USE=c++0x and gcc-4.8.0 (bug 465590)
 
   20 Apr 2013; Davide Pesavento <pesa@gentoo.org>
   -files/moc-workaround-for-boost-1.48.patch, -qtcore-4.8.4-r2.ebuild:

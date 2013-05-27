@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.96 2013/05/04 05:26:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.97 2013/05/27 09:56:36 radhermit Exp $
+
+*autogen-5.17.4 (27 May 2013)
+
+  27 May 2013; Tim Harder <radhermit@gentoo.org> +autogen-5.17.4.ebuild:
+  Version bump and add static-libs use flag.
 
   04 May 2013; Mike Frysinger <vapier@gentoo.org> autogen-5.17.3.ebuild,
   files/autogen-5.17.3-libintl.patch:
