@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdnet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.59 2012/10/10 18:17:08 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.60 2013/05/27 11:50:10 jer Exp $
+
+  27 May 2013; Jeroen Roovers <jer@gentoo.org> libdnet-1.11-r2.ebuild,
+  libdnet-1.12.ebuild:
+  Fix building with automake-1.13 (bug #471372 by Jason Mours). Migrate to
+  python-r1.eclass.
 
   10 Oct 2012; Jeroen Roovers <jer@gentoo.org> -libdnet-1.11-r1.ebuild,
   libdnet-1.12.ebuild:
@@ -207,4 +212,3 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-

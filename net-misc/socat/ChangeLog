@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/socat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.107 2012/12/02 06:33:14 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.109 2013/05/27 11:55:07 jer Exp $
+
+  27 May 2013; Jeroen Roovers <jer@gentoo.org>
+  -files/socat-1.7.2.0-cross-compile.patch, -socat-2.0.0_beta5.ebuild:
+  Old.
+
+*socat-1.7.2.2 (27 May 2013)
+*socat-2.0.0_beta6 (27 May 2013)
+
+  27 May 2013; Jeroen Roovers <jer@gentoo.org> +socat-1.7.2.2.ebuild,
+  +socat-2.0.0_beta6.ebuild:
+  Version bump (bug #471354).
 
   02 Dec 2012; Tim Harder <radhermit@gentoo.org> socat-1.7.2.1.ebuild:
   Inherit autotools eclass (bug #445526).

@@ -1,15 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.3 2012/10/10 18:17:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.4 2013/05/27 11:50:10 jer Exp $
 
-EAPI=4
+EAPI=5
 
 AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
 PYTHON_DEPEND="python? 2"
+PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
-inherit autotools-utils eutils python
+inherit autotools-utils eutils python-r1
 
 DESCRIPTION="simplified, portable interface to several low-level networking routines"
 HOMEPAGE="http://code.google.com/p/libdnet/"
@@ -37,7 +38,10 @@ src_prepare() {
 	# Useless copy
 	rm -r trunk/ || die
 
-	sed -i -e 's/libcheck.a/libcheck.so/g' configure.in || die "sed failed"
+	sed -i \
+		-e 's/libcheck.a/libcheck.so/g' \
+		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
+		configure.in || die
 	use ipv6 && epatch "${WORKDIR}/${P}.ipv6-1.patch"
 	autotools-utils_src_prepare
 }

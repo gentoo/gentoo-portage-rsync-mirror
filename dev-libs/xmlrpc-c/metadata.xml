@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>andreis.vinogradovs@gmail.com</email>
-		<name>Andreis Vinogradovs</name>
+		<email>zlog.gentoo@gmail.com</email>
+		<name>Mikle Kolyada</name>
+		<description>Maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>pinkbyte@gentoo.org</email>
+		<name>Sergey Popov</name>
+		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 	<use>
 		<flag name='abyss'>Build the Abyss mini web-server.</flag>
