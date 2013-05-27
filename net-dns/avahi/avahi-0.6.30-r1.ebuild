@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r1.ebuild,v 1.12 2013/03/03 02:03:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r1.ebuild,v 1.13 2013/05/26 23:53:04 blueness Exp $
 
 EAPI="3"
 
@@ -204,11 +204,5 @@ pkg_postinst() {
 		echo
 		elog "To use avahi-autoipd to configure your interfaces with IPv4LL (RFC3927)"
 		elog "addresses, just set config_<interface>=( autoipd ) in /etc/conf.d/net!"
-	fi
-
-	if use dbus; then
-		echo
-		elog "If this is your first install of avahi please reload your dbus config"
-		elog "with /etc/init.d/dbus reload before starting avahi-daemon!"
 	fi
 }
