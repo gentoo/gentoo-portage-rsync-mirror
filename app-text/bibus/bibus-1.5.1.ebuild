@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.10 2013/01/17 16:01:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.11 2013/05/27 06:33:30 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ IUSE="mysql"
 # Cannot depend on virtual/ooo
 # bibus fails to start with app-office/openoffice-bin (bug #288232).
 RDEPEND="
-	|| ( app-office/libreoffice app-office/openoffice )
+	app-office/libreoffice
 	=dev-python/wxpython-2.8*
 	dev-db/sqliteodbc
 	dev-db/unixODBC
