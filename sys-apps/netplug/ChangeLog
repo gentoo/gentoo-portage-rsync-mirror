@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/netplug
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.25 2012/03/17 22:49:47 mattst88 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.26 2013/05/27 19:12:48 jer Exp $
+
+  27 May 2013; Jeroen Roovers <jer@gentoo.org>
+  files/netplug-1.2.9-warn_unused_result_write_call.patch:
+  Fix patch (bug #471466 by Daniel Gulotta).
 
   17 Mar 2012; Matt Turner <mattst88@gentoo.org> netplug-1.2.9.2-r1.ebuild:
   Added ~mips, bug 374731.
@@ -120,4 +124,3 @@
   +files/netplug-1.2.9-gcc4.patch, +files/netplug, +metadata.xml,
   +netplug-1.2.9.ebuild:
   Initial import
-
