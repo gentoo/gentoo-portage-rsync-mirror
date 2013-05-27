@@ -20,7 +20,6 @@
 			USE=truetype-debugger)</flag>
 		<flag name="infinality">Enable infinality options for improved LCD
 			filtering</flag>
-		<flag name="kpathsea">Enable TeX support (ttf2pk and ttf2pfb)</flag>
 		<flag name="utils">Install utilities and examples from ft2demos</flag>
 	</use>
 </pkgmetadata>
