@@ -20,7 +20,7 @@
  SRCS	+= ../common/aiccu_linux.c
  OBJS	+= ../common/aiccu_linux.o
  LIBS	+= -lpthread -lresolv
-+ifeq (1,HAVE_SYSTEMD)
++ifeq (1,$(HAVE_SYSTEMD))
 +LIBS	+= -lsystemd-daemon
 +CFLAGS += -DHAVE_SYSTEMD
 +endif
