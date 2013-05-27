@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.354 2013/04/15 21:57:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.355 2013/05/27 21:35:20 zx2c4 Exp $
+
+  27 May 2013; Jason A. Donenfeld <zx2c4@gentoo.org> metadata.xml,
+  sudo-1.8.5_p2.ebuild, sudo-1.8.6_p7.ebuild, sudo-1.8.6_p8.ebuild:
+  Per discussion with flameeyes and zmedico, introduce sendmail USE flag to make
+  packages.provided less compelling.
 
 *sudo-1.8.6_p8 (15 Apr 2013)
 

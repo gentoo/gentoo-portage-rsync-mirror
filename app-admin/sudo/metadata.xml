@@ -9,6 +9,9 @@
     arguments.
   </longdescription>
   <use>
+	<flag name='sendmail'>
+	  Allow sudo to send emails with sendmail.
+	</flag>
     <flag name='offensive'>
       Let sudo print insults when the user types the wrong password.
     </flag>
