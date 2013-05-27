@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.312 2013/03/10 10:12:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.313 2013/05/27 09:09:58 thev00d00 Exp $
+
+*transcode-1.1.7-r2 (27 May 2013)
+
+  27 May 2013; Ian Whyman <thev00d00@gentoo.org>
+  +files/transcode-1.1.7-libav-9.patch, +transcode-1.1.7-r2.ebuild:
+  Add patch to make it build with newer libav/ffmpeg, thanks to Ji?� Moravec for
+  the patch #443214
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> -transcode-1.1.7.ebuild:
   remove old
