@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.1.ebuild,v 1.1 2012/11/15 01:14:11 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.2.ebuild,v 1.1 2013/05/27 20:42:15 zx2c4 Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ RDEPEND="
 	sys-libs/zlib
 	dev-libs/openssl
 	virtual/httpd-cgi
-	highlight? ( app-text/highlight )
+	highlight? ( || ( dev-python/pygments app-text/highlight ) )
 "
 # ebuilds without WEBAPP_MANUAL_SLOT="yes" are broken
 DEPEND="${RDEPEND}

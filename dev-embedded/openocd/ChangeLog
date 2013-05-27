@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.41 2013/05/25 09:14:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.42 2013/05/27 20:31:30 hwoarang Exp $
+
+  27 May 2013; Markos Chandras <hwoarang@gentoo.org> openocd-0.7.0.ebuild:
+  Sync ebuild with 9999. Fixes bug 471382
 
 *openocd-0.7.0 (25 May 2013)
 

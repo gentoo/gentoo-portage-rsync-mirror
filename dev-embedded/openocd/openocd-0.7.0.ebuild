@@ -1,14 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.7.0.ebuild,v 1.1 2013/05/25 09:14:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.7.0.ebuild,v 1.2 2013/05/27 20:31:30 hwoarang Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils multilib flag-o-matic toolchain-funcs
+
+# One ebuild to rule them all
 if [[ ${PV} == "9999" ]] ; then
 	inherit autotools git-2
 	KEYWORDS=""
-	EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
+	EGIT_REPO_URI="git://git.code.sf.net/p/${PN}/code"
 else
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.bz2"
@@ -19,7 +21,7 @@ HOMEPAGE="http://openocd.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger usb versaloon"
+IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger stlink usb versaloon verbose-io"
 RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
@@ -33,6 +35,8 @@ RDEPEND="${DEPEND}"
 REQUIRED_USE="blaster? ( || ( ftdi ftd2xx ) ) ftdi? ( !ftd2xx )"
 
 src_prepare() {
+	epatch_user
+
 	if [[ ${PV} == "9999" ]] ; then
 		sed -i -e "/@include version.texi/d" doc/${PN}.texi || die
 		AT_NO_RECURSIVE=yes eautoreconf
@@ -66,6 +70,11 @@ src_configure() {
 		--enable-at91rm9200
 		--enable-gw16012
 		--enable-oocd_trace
+		--enable-ulink
+		--enable-arm-jtag-ew
+		--enable-ti-icdi
+		--enable-osbdm
+		--enable-opendous
 	)
 
 	if use usb; then
@@ -75,6 +84,8 @@ src_configure() {
 			--enable-rlink
 			--enable-vsllink
 			--enable-arm-jtag-ew
+			$(use_enable verbose-io verbose-usb-io)
+			$(use_enable verbose-io verbose_usb_comms)
 		)
 	fi
 
@@ -91,9 +102,13 @@ src_configure() {
 		$(use_enable ftd2xx ft2232_ftd2xx) \
 		$(use_enable minidriver minidriver-dummy) \
 		$(use_enable parport) \
+		$(use_enable parport parport_ppdev) \
+		$(use_enable parport parport_giveio) \
 		$(use_enable presto presto_ftd2xx) \
 		$(use_enable segger jlink) \
+		$(use_enable stlink) \
 		$(use_enable versaloon vsllink) \
+		$(use_enable verbose-io verbose-jtag-io) \
 		"${myconf[@]}"
 }
 
