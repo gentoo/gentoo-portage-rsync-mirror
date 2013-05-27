@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.3 2013/04/26 19:03:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.4 2013/05/27 17:22:17 scarabeus Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
-	>=dev-util/mdds-0.7.1
+	>=dev-util/mdds-0.8.1:=
 "
 
 src_prepare() {
@@ -35,7 +35,8 @@ src_prepare() {
 		configure.ac || die
 
 	epatch \
-		"${FILESDIR}"/${P}-linking.patch
+		"${FILESDIR}"/${P}-linking.patch \
+		"${FILESDIR}"/${P}-mdds.patch
 	eautoreconf
 }
 
