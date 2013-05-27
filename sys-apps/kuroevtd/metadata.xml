@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>ppc</herd>
-<longdescription>A set of scripts to monitor and respond to button presses on a Kurobox.</longdescription>
-</pkgmetadata>

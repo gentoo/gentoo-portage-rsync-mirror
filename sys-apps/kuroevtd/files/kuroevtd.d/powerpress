@@ -1,8 +1,0 @@
-#!/bin/sh
-
-STATE_DIR="/var/lib/kuroevtd"
-debug=true
-
-${debug} && echo "[kuroevtd] powerpress: shutdown now!"
-rm -f ${STATE_DIR}/*
-shutdown -h now
