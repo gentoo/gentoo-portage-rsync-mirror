@@ -1,6 +1,23 @@
 # ChangeLog for app-crypt/rainbowcrack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/ChangeLog,v 1.22 2012/09/24 00:41:55 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/ChangeLog,v 1.24 2013/05/27 10:38:43 ssuominen Exp $
+
+  27 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -rainbowcrack-1.2-r1.ebuild, -rainbowcrack-1.2-r2.ebuild,
+  -files/rainbowcrack-1.2+gcc-4.3.patch,
+  -files/rainbowcrack-1.2-asneeded.patch,
+  -files/rainbowcrack-1.2-makefile.patch,
+  -files/rainbowcrack-1.2-makefile-asneeded.patch,
+  -files/rainbowcrack-1.2-openssl-1.patch, -files/rainbowcrack-1.2-share.patch,
+  -files/rainbowcrack-1.2-types.patch:
+  old
+
+  27 May 2013; Samuli Suominen <ssuominen@gentoo.org> rainbowcrack-1.5.ebuild:
+  amd64/x86 stable (as a prereq for removing unfetchable 1.2-r* from tree)
+
+  27 May 2013; Samuli Suominen <ssuominen@gentoo.org> rainbowcrack-1.5.ebuild:
+  Fix LICENSE from "as-is" to "all-rights-reserved" and RESTRICT "bindist" wrt
+  #444426#c4 by Ulrich Müller
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> rainbowcrack-1.2-r1.ebuild,
   rainbowcrack-1.2-r2.ebuild, rainbowcrack-1.5.ebuild:
