@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.2_p1-r1.ebuild,v 1.2 2013/05/24 23:40:52 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.2_p1-r1.ebuild,v 1.3 2013/05/27 16:04:08 zx2c4 Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.opensmtpd.org/archives/${MY_DP/_}.tar.gz"
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="pam sqlite"
+IUSE="pam sqlite +mta"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
@@ -67,6 +67,12 @@ src_install() {
 	default
 	newinitd "${FILESDIR}"/smtpd.initd smtpd
 	use pam && newpamd "${FILESDIR}"/smtpd.pam smtpd
+	if use mta ; then
+		dodir /usr/sbin
+		dosym /usr/sbin/smtpctl /usr/sbin/sendmail
+		dosym /usr/sbin/smtpctl /usr/bin/sendmail
+		dosym /usr/sbin/smtpctl /usr/$(get_libdir)/sendmail
+	fi
 }
 
 pkg_preinst() {

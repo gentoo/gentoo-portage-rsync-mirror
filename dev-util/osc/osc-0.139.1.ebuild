@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.139.1.ebuild,v 1.3 2013/05/04 21:28:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.139.1.ebuild,v 1.4 2013/05/27 16:23:57 miska Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ DEPEND="
 	app-arch/rpm[python]
 	dev-python/m2crypto
 "
-RDEPEND="${DEPEND}
+PDEPEND="${DEPEND}
 	app-admin/sudo
 	dev-util/obs-service-meta
 "
