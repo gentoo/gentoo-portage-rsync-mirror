@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/logsurfer+-1.8-r1.ebuild,v 1.3 2012/04/05 05:24:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/logsurfer+-1.8-r1.ebuild,v 1.4 2013/05/27 12:27:07 ulm Exp $
 
 EAPI="4"
 inherit toolchain-funcs user
@@ -11,10 +11,11 @@ HOMEPAGE="http://www.crypt.gen.nz/logsurfer/"
 SRC_URI="http://kerryt.orcon.net.nz/${MY_P}.tar.gz
 	http://www.crypt.gen.nz/logsurfer/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="freedist GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+RESTRICT="bindist" #444330
 
 S="${WORKDIR}/${MY_P}"
 

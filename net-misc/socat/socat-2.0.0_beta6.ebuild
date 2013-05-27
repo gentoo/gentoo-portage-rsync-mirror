@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta6.ebuild,v 1.1 2013/05/27 11:48:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta6.ebuild,v 1.2 2013/05/27 12:07:09 jer Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic autotools toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -26,7 +26,6 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.7.2.1-long-long.patch #436164
-	eautoreconf
 	touch doc/${PN}.1 || die
 }
 
