@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.137 2013/03/14 16:14:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.138 2013/05/27 11:18:10 qnikst Exp $
+
+*xmlrpc-c-1.32.05-r1 (27 May 2013)
+
+  27 May 2013;  <qnikst@gentoo.org> +xmlrpc-c-1.32.05-r1.ebuild:
+  allow tools to be used in xmlrpc-c-1.32.05 (bug #460730)
 
   14 Mar 2013; Jeroen Roovers <jer@gentoo.org> xmlrpc-c-1.32.05.ebuild:
   Stable for HPPA (bug #457298).

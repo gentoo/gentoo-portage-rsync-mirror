@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.8_p20130318.ebuild,v 1.2 2013/03/16 16:53:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.8_p20130318.ebuild,v 1.3 2013/05/27 11:20:55 jlec Exp $
 
 EAPI=5
 
@@ -23,9 +23,6 @@ RDEPEND="
 	!<sys-fs/aufs3-3_p20130318"
 DEPEND="${RDEPEND}
 	~sys-fs/aufs-headers-${PV}"
-
-CONFIG_CHECK="~AUFS_FS"
-ERROR_AUFS_FS="In order to mount aufs you need to enable CONFIG_AUFS_FS in your kernel"
 
 src_prepare() {
 	sed \
