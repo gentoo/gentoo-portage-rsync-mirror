@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.160 2013/04/23 00:03:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.161 2013/05/27 15:56:17 zx2c4 Exp $
+
+*msmtp-1.4.31-r1 (27 May 2013)
+
+  27 May 2013; Jason A. Donenfeld <zx2c4@gentoo.org> +msmtp-1.4.31-r1.ebuild:
+  ssmtp puts it in bin too, and so we'll follow suit.
 
   23 Apr 2013; Tim Harder <radhermit@gentoo.org> -msmtp-1.4.30.ebuild:
   Remove old.

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.82 2013/04/10 03:12:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.83 2013/05/27 15:38:49 ssuominen Exp $
+
+*kmod-13-r1 (27 May 2013)
+
+  27 May 2013; Samuli Suominen <ssuominen@gentoo.org> +kmod-13-r1.ebuild,
+  +files/kmod-13-errno_syscall.patch:
+  Avoid calling syscall() with -1 patch from upstream for
+  http://bugs.funtoo.org/browse/FL-534 as requested by lxnay
 
   10 Apr 2013; William Hubbs <williamh@gentoo.org> kmod-13.ebuild,
   kmod-9999.ebuild:

@@ -1,9 +1,11 @@
 # ChangeLog for kde-misc/kbiff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbiff/ChangeLog,v 1.1 2012/05/01 18:05:38 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbiff/ChangeLog,v 1.2 2013/05/27 15:35:14 kensington Exp $
+
+  27 May 2013; Michael Palimaka <kensington@gentoo.org> kbiff-4.0.ebuild:
+  Migrate to EAPI 5. Use mirror:// in SRC_URI.
 
 *kbiff-4.0 (01 May 2012)
 
   01 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kbiff-4.0.ebuild:
   New applet, bug 399211. Thanks to Chris Reffet for the ebuild.
-
