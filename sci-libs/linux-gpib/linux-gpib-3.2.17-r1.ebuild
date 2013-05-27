@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.17-r1.ebuild,v 1.1 2013/05/25 00:49:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.17-r1.ebuild,v 1.2 2013/05/27 22:53:18 dilfridge Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/linux-gpib/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="pcmcia static debug guile perl php python tcl doc firmware"
 
 COMMONDEPEND="

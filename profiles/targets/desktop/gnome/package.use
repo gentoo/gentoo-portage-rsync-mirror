@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.17 2013/04/13 08:40:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.18 2013/05/27 22:59:14 tetromino Exp $
 
 # Required for cheese in gnome3
 >=media-libs/gst-plugins-base-1.0 theora
@@ -16,8 +16,8 @@ net-misc/spice-gtk -gstreamer
 # Required by app-accessibility/orca-3
 app-accessibility/speech-dispatcher python
 
-# gtk3 input method plugins required for gnome3
-app-i18n/ibus gtk3
+# gtk3 input method plugins required for gnome3; gnome-shell wants ibus[dconf]
+app-i18n/ibus dconf gtk3
 app-i18n/uim gtk3
 
 # incompatible with >=evolution-data-server-3.6, bug #449138

@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.145 2013/05/12 22:24:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.146 2013/05/27 22:52:30 dilfridge Exp $
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (27 May 2013)
+# Firmware loader not keyworded yet
+sci-libs/linux-gpib firmware
 
 # Christian Ruppert <idl0r@gentoo.org> (13 May 2013)
 # Mask nic3com re bug 454024
