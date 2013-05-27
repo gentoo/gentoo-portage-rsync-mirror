@@ -1,6 +1,6 @@
 #!/bin/bash
 # Common Configuration file for all qmail daemons
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/conf-common,v 1.1 2006/02/12 18:42:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/conf-common,v 1.2 2013/05/27 00:45:52 robbat2 Exp $
 
 # Qmail User IDS to run daemons as
 QMAILDUID=$(id -u qmaild)
@@ -17,7 +17,7 @@ TCPSERVER_PORT=${SERVICE}
 
 # you do not need to specify -x, -c, -u or -g in this variable as those are
 # added later
-TCPSERVER_OPTS="-p -v"
+TCPSERVER_OPTS="-p -v -R"
 
 #  This tells tcpserver where to file the rules cdb file
 [[ -d /etc/tcprules.d/ ]] && \
@@ -25,9 +25,10 @@ TCPSERVER_OPTS="-p -v"
 [[ ! -f "${TCPSERVER_RULESCDB}" ]] && \
 	TCPSERVER_RULESCDB=/etc/tcp.${SERVICE}.cdb
 
-# we limit data and stack segments to 8mbytes, you may need to raise this if
-# you are using a filter in QMAILQUEUE
-SOFTLIMIT_OPTS="-m 16000000"
+# we limit data and stack segments to 32mbytes, you may need to raise this if
+# you are using a filter in QMAILQUEUE. 
+# Per bug #403893 amd64 needs a higher limit.
+SOFTLIMIT_OPTS="-m 32000000"
 
 # We don't have anything to set QMAILQUEUE to at the moment, so we leave it
 # alone. Generally it is best to add this in your appropriate (usually SMTP)

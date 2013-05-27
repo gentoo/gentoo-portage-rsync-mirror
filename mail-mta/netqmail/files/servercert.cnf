@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/servercert.cnf,v 1.1 2006/02/12 18:42:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/servercert.cnf,v 1.2 2013/05/27 00:45:52 robbat2 Exp $
 # This is the openssl config file to generate keys for qmail
 
 [ req ]
@@ -6,7 +6,7 @@
 # this should be a power of 2!
 default_bits = 1024
 # leave the rest of these alone!
-encrypt_key = yes
+encrypt_key = no
 distinguished_name = req_dn
 x509_extensions = cert_type
 prompt = no

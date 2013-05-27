@@ -1,5 +1,5 @@
 # Configuration file for qmail-smtpd
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/conf-smtpd,v 1.1 2006/02/12 18:42:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/conf-smtpd,v 1.2 2013/05/27 00:45:52 robbat2 Exp $
 
 # Stuff to run before tcpserver
 #QMAIL_TCPSERVER_PRE=""
@@ -7,9 +7,6 @@
 #QMAIL_SMTP_PRE=""
 # Stuff to after qmail-smtpd
 #QMAIL_SMTP_POST=""
-
-# this turns off the IDENT grab attempt on connecting
-TCPSERVER_OPTS="${TCPSERVER_OPTS} -R"
 
 # fixcrio inserts missing CRs at the ends of lines. See:
 # http://cr.yp.to/ucspi-tcp/fixcrio.html
