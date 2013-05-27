@@ -1,0 +1,25 @@
+From d61924fd247c2cf0280391e076c439c9427732aa Mon Sep 17 00:00:00 2001
+From: Jaroslav Kysela <perex@perex.cz>
+Date: Mon, 27 May 2013 16:40:26 +0200
+Subject: [PATCH] amixer: Fix the hctl elem search bug
+
+Signed-off-by: Jaroslav Kysela <perex@perex.cz>
+---
+ amixer/amixer.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/amixer/amixer.c b/amixer/amixer.c
+index 2f1521b..92b0f83 100644
+--- a/amixer/amixer.c
++++ b/amixer/amixer.c
+@@ -1105,6 +1105,7 @@ static int cset(int argc, char *argv[], int roflag, int keep_handle)
+ 		}
+ 		return err;
+ 	}
++	snd_ctl_elem_info_get_id(info, id);     /* FIXME: Remove it when hctl find works ok !!! */
+ 	if (!roflag) {
+ 		snd_ctl_elem_value_set_id(control, id);
+ 		if ((err = snd_ctl_elem_read(handle, control)) < 0) {
+-- 
+1.7.11.7
+

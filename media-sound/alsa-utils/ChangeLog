@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.350 2013/05/27 13:59:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.351 2013/05/27 14:55:22 ssuominen Exp $
+
+*alsa-utils-1.0.27.1-r1 (27 May 2013)
+
+  27 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +alsa-utils-1.0.27.1-r1.ebuild,
+  +files/alsa-utils-1.0.27.1-hctl_elem_search.patch:
+  Include upstreamized patch for "hctl element search" wrt #468690 by William
+  Throwe and Jaroslav Kysela
 
 *alsa-utils-1.0.27.1 (27 May 2013)
 
