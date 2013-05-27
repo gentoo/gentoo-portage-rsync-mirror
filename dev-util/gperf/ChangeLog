@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gperf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.56 2013/02/23 01:46:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.57 2013/05/26 23:27:42 vapier Exp $
+
+  26 May 2013; Mike Frysinger <vapier@gentoo.org> gperf-3.0.4.ebuild:
+  Update to EAPI=4.  Respect $AR and $CPPFLAGS #444078 by Denis M..
 
   23 Feb 2013; Zac Medico <zmedico@gentoo.org> gperf-3.0.4.ebuild:
   Add ~arm-linux keyword.
