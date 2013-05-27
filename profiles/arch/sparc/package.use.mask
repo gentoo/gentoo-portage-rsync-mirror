@@ -1,6 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.135 2013/03/31 14:28:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.136 2013/05/27 03:01:51 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (27 May 2013)
+# stable keywords missing on tagpy/coherence
+media-video/totem upnp-av
+media-sound/rhythmbox upnp-av
 
 # Julian Ospald <hasufell@gentoo.org> (31 Mar 2013)
 # depends on mono
