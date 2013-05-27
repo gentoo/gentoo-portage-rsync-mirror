@@ -1,5 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.71 2013/03/21 15:12:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.72 2013/05/27 15:18:55 chithanh Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 Mar 2013)
@@ -207,6 +207,7 @@ video_cards_i128
 video_cards_i740
 video_cards_i915
 video_cards_i965
+video_cards_ilo
 video_cards_intel
 video_cards_mach64
 video_cards_mga

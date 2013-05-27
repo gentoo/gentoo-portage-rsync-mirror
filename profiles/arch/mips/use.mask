@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.63 2013/03/11 16:45:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.64 2013/05/27 15:18:56 chithanh Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -139,6 +139,7 @@ video_cards_r300
 video_cards_r600
 video_cards_i915
 video_cards_i965
+video_cards_ilo
 # vmware wasn't added with mesa-8.0, but it should still be masked
 video_cards_vmware
 

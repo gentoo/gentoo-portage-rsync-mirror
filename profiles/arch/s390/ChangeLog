@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.68 2013/04/10 19:48:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.69 2013/05/27 15:18:56 chithanh Exp $
+
+  27 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Mask video_cards_ilo.
 
   10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
   Mask x11-libs/gtk+[colord] because requires too much unstable depends

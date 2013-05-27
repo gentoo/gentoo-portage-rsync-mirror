@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.83 2013/03/12 21:47:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.84 2013/05/27 15:18:55 chithanh Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -151,6 +151,7 @@ video_cards_vesa
 # Mask more VIDEO_CARDs added with mesa-8.0
 video_cards_i915
 video_cards_i965
+video_cards_ilo
 # vmware wasn't added with mesa-8.0, but it should still be masked
 video_cards_vmware
 
