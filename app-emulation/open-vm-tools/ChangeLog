@@ -1,10 +1,10 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.68 2013/01/20 12:09:54 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.69 2013/05/27 02:04:21 floppym Exp $
 
 *open-vm-tools-2012.12.26.958366 (20 Jan 2013)
 
-  20 Jan 2013; Vadim Kuznetsov vadimk@gentoo.org
+  20 Jan 2013; Vadim Kuznetsov <vadimk@gentoo.org>
   +open-vm-tools-2012.12.26.958366.ebuild,
   -open-vm-tools-2012.05.21.724730.ebuild:
   version bump
@@ -12,23 +12,23 @@
 *open-vm-tools-9.2.2.893683 (09 Dec 2012)
 *open-vm-tools-2012.10.14.874563 (09 Dec 2012)
 
-  09 Dec 2012; Vadim Kuznetsov vadimk@gentoo.org
+  09 Dec 2012; Vadim Kuznetsov <vadimk@gentoo.org>
   +open-vm-tools-2012.10.14.874563.ebuild, +open-vm-tools-9.2.2.893683.ebuild,
   -open-vm-tools-2012.03.13.651368.ebuild:
   version bump
 
-  02 Jun 2012; Vadim Kuznetsov vadimk@gentoo.org
+  02 Jun 2012; Vadim Kuznetsov <vadimk@gentoo.org>
   open-vm-tools-2012.05.21.724730.ebuild:
   inherit multilib for get_libdir and user for enewgroup dev-util/pkgconfig ->
   virtual/pkgconfig
 
 *open-vm-tools-2012.05.21.724730 (02 Jun 2012)
 
-  02 Jun 2012; Vadim Kuznetsov vadimk@gentoo.org
+  02 Jun 2012; Vadim Kuznetsov <vadimk@gentoo.org>
   +open-vm-tools-2012.05.21.724730.ebuild:
   version bump
 
-  02 Jun 2012; Vadim Kuznetsov vadimk@gentoo.org
+  02 Jun 2012; Vadim Kuznetsov <vadimk@gentoo.org>
   -open-vm-tools-2011.11.20.535097.ebuild:
   clean up
 
@@ -259,17 +259,17 @@
   Bug 291236. Bug 283654. Thanks to Brandon Holbrook et al. 
   Bug 294968. Thanks to Vladimir Kulev.
 
-  10 Nov 2009; Vadim Kuznetsov vadimk@gentoo.org
+  10 Nov 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   open-vm-tools-0.0.20091015.201664.ebuild:
   Bug 292176.
 
-  07 Nov 2009; Vadim Kuznetsov vadimk@gentoo.org
+  07 Nov 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   open-vm-tools-0.0.20091015.201664.ebuild, +files/checkvm-pie-safety.patch:
   Bug 200376. Thanks to Gordon Malm and Anthony Basile.
 
 *open-vm-tools-0.0.20091015.201664 (29 Oct 2009)
 
-  29 Oct 2009; Vadim Kuznetsov vadimk@gentoo.org
+  29 Oct 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   +files/default-scripts1.patch, -open-vm-tools-0.0.20090522.167859.ebuild,
   -open-vm-tools-0.0.20090618.172495.ebuild,
   +open-vm-tools-0.0.20091015.201664.ebuild, -files/wiper-warning-fix.patch:
@@ -284,7 +284,7 @@
   -open-vm-tools-0.0.20090318.154848.ebuild:
   version bump. clean old ebuilds
 
-  23 Aug 2009; Vadim Kuznetsov vadimk@gentoo.org
+  23 Aug 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   -open-vm-tools-0.0.20080515.93241.ebuild,
   -open-vm-tools-0.0.20080808.109361-r1.ebuild,
   -open-vm-tools-0.0.20081223.137496.ebuild:
@@ -292,20 +292,20 @@
 
 *open-vm-tools-0.0.20090722.179896 (24 Jul 2009)
 
-  24 Jul 2009; Vadim Kuznetsov vadimk@gentoo.org
+  24 Jul 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   +open-vm-tools-0.0.20090722.179896.ebuild:
   Version bump.
 
 *open-vm-tools-0.0.20090618.172495-r2 (10 Jul 2009)
 
-  10 Jul 2009; Vadim Kuznetsov vadimk@gentoo.org
+  10 Jul 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   -open-vm-tools-0.0.20090618.172495-r1.ebuild,
   +open-vm-tools-0.0.20090618.172495-r2.ebuild:
   re-fixing wmtoolsd plugin path
 
 *open-vm-tools-0.0.20090618.172495-r1 (09 Jul 2009)
 
-  09 Jul 2009; Vadim Kuznetsov vadimk@gentoo.org
+  09 Jul 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   +open-vm-tools-0.0.20090618.172495-r1.ebuild, metadata.xml:
   Fixes bugs 273211, 270433, 260878. Hardcoded procpc, Werror, general
   ebuild clean up and missing dependencies. USE flags are added: doc, fuse.
@@ -313,28 +313,28 @@
 
 *open-vm-tools-0.0.20090618.172495 (30 Jun 2009)
 
-  30 Jun 2009; Vadim Kuznetsov vadimk@gentoo.org
+  30 Jun 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   open-vm-tools-0.0.20090522.167859.ebuild,
   +open-vm-tools-0.0.20090618.172495.ebuild:
   Version bump. Bug 273887 - missing dev-libs/glib dependency.
 
-  08 Jun 2009; Vadim Kuznetsov vadimk@gentoo.org
+  08 Jun 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   open-vm-tools-0.0.20090522.167859.ebuild:
   with-x is correct.
 
-  08 Jun 2009; Vadim Kuznetsov vadimk@gentoo.org
+  08 Jun 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   +files/wiper-warning-fix.patch:
   Missing patch.
 
 *open-vm-tools-0.0.20090522.167859 (07 Jun 2009)
 
-  07 Jun 2009; Vadim Kuznetsov vadimk@gentoo.org
+  07 Jun 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   +open-vm-tools-0.0.20090522.167859.ebuild, +files/open-vm-tools.initd:
   Version bump.
 
 *open-vm-tools-0.0.20090318.154848 (04 Jun 2009)
 
-  04 Jun 2009; Vadim Kuznetsov vadimk@gentoo.org
+  04 Jun 2009; Vadim Kuznetsov <vadimk@gentoo.org>
   +open-vm-tools-0.0.20090318.154848.ebuild:
   Version bump. ebuild from overlay.
 
