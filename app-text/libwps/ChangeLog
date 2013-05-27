@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libwps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.41 2013/05/07 17:51:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.42 2013/05/27 07:48:49 scarabeus Exp $
+
+*libwps-0.2.9 (27 May 2013)
+
+  27 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libwps-0.2.9.ebuild,
+  -libwps-0.2.7.ebuild:
+  Version bump to latest.
 
   07 May 2013; Agostino Sarubbo <ago@gentoo.org> libwps-0.2.8.ebuild:
   Stable for ppc64, wrt bug #467450

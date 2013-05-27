@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.4 2013/05/26 18:42:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.1.ebuild,v 1.5 2013/05/27 07:49:42 idella4 Exp $
 
 EAPI=5
 
@@ -105,12 +105,11 @@ python_test() {
 	pushd "${BUILD_DIR}"/../ > /dev/null
 	if [[ "${EPYTHON}" == python3* ]]; then
 		2to3 --no-diffs -w test
-		esetup.py test || failed=1
 	elif [[ "${EPYTHON}" == 'python2.7' || "${EPYTHON}" == 'python2.6' ]]; then
 		sed -e 's:test_socket_reclamation:_&:' \
 			-i test/test_pooling_base.py || die
 	fi
-	esetup.py test || failed=1
+	DB_PORT2=$(( DB_PORT + 1 )) DB_PORT3=$(( DB_PORT + 2 )) esetup.py test || failed=1
 
 	mongod --dbpath "${dbpath}" --shutdown
 
