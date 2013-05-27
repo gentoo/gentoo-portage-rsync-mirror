@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/unhide/unhide-20110113.ebuild,v 1.1 2011/12/01 01:56:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/unhide/unhide-20130526.ebuild,v 1.1 2013/05/27 21:17:23 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit toolchain-funcs
 
@@ -19,14 +19,17 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	$(tc-getCC) --static ${CFLAGS} ${LDFLAGS} -o ${PN}-tcp ${PN}-tcp.c
-	$(tc-getCC) --static -pthread ${CFLAGS} ${LDFLAGS} -o ${PN}-linux26 ${PN}-linux26.c
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} --static -pthread \
+		unhide-linux*.c unhide-output.c -o unhide
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} --static \
+		unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
 }
 
 src_install() {
+	dobin ${PN}
 	dobin ${PN}-tcp
-	newbin ${PN}-linux26 ${PN}
 	dodoc changelog README.txt TODO
+	dodoc changelog README.txt LEEME.txt LISEZ-MOI.TXT NEWS TODO
 	doman man/unhide.8 man/unhide-tcp.8
 	has "fr" ${LINGUAS} && newman man/fr/unhide.8 unhide.fr.8
 	has "es" ${LINGUAS} && newman man/es/unhide.8 unhide.es.8
