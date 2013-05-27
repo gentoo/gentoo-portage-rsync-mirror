@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.1.ebuild,v 1.1 2013/05/27 20:15:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.1.ebuild,v 1.2 2013/05/27 22:30:12 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -31,7 +31,8 @@ S="${WORKDIR}/${MY_P}"
 
 WEBAPP_MANUAL_SLOT="yes"
 
-PATCHES=( "${FILESDIR}"/${P}-objects.patch )
+PATCHES=( "${FILESDIR}"/${PN}-1.5-objects.patch \
+		"${FILESDIR}"/${PN}-1.5-py3tests.patch )
 
 python_compile_all() {
 	if use doc; then

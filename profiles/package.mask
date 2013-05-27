@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14786 2013/05/27 20:19:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14787 2013/05/27 22:28:19 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org (27 May 2013)
+# Masked until reverse dependencies are tested bug 401009.
+=dev-python/imaging-2.0.0
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (26 May 2013)
 # dead on upstream, homepage dead 
