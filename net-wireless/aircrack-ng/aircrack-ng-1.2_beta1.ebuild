@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta1.ebuild,v 1.1 2013/05/26 05:11:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta1.ebuild,v 1.2 2013/05/27 01:58:19 zerochaos Exp $
 
 EAPI="5"
 
@@ -15,8 +15,10 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	MY_PV="$(replace_version_separator 2 '-')"
+	MY_P=${P/\_/-}
 	SRC_URI="http://download.aircrack-ng.org/${PN}-${MY_PV}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	ESVN_WC_REVISION=0
 fi
 
 LICENSE="GPL-2"
@@ -37,7 +39,7 @@ RDEPEND="${DEPEND}
 	sys-apps/hwids
 	airdrop-ng? ( net-wireless/lorcon[python] )"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	emake \
