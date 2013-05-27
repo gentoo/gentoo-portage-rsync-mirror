@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/cflow-1.3.ebuild,v 1.2 2009/10/12 16:47:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/cflow-1.4.ebuild,v 1.1 2013/05/27 06:07:23 dev-zero Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit elisp-common eutils
 
@@ -15,40 +15,39 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug emacs nls"
 
-DEPEND="nls? ( sys-devel/gettext )
-	emacs? ( virtual/emacs )"
-RDEPEND="${DEPEND}"
+RDEPEND="emacs? ( virtual/emacs )
+	nls? ( virtual/libintl virtual/libiconv )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 SITEFILE="50${PN}-gentoo.el"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.2-info-direntry.patch"
+	epatch "${FILESDIR}/${P}-info-direntry.patch"
 }
 
 src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable debug) \
-		EMACS=no \
-		|| die "econf failed"
+		EMACS=no
 }
 
 src_compile() {
-	emake || die "emake failed"
+	default
 
 	if use emacs; then
-		elisp-compile elisp/cflow-mode.el || die
+		elisp-compile elisp/cflow-mode.el
 	fi
 }
 
 src_install() {
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+	default
 	doinfo doc/cflow.info
-	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use emacs; then
-		elisp-install ${PN} elisp/cflow-mode.{el,elc} || die
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+		elisp-install ${PN} elisp/cflow-mode.{el,elc}
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }
 
