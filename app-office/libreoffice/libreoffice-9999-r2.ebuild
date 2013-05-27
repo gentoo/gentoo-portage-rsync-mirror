@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.175 2013/05/21 08:08:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.176 2013/05/27 13:21:27 scarabeus Exp $
 
 EAPI=5
 
@@ -351,7 +351,7 @@ src_prepare() {
 
 	if use branding; then
 		# hack...
-		mv -v "${WORKDIR}/branding-intro.1ng" "${S}/icon-themes/galaxy/brand/intro.png" || die
+		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
 }
 

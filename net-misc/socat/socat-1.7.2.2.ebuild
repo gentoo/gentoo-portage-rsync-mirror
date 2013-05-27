@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.2.ebuild,v 1.1 2013/05/27 11:48:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.2.ebuild,v 1.2 2013/05/27 13:01:42 jer Exp $
 
 EAPI="4"
 
@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.7.2.1-long-long.patch #436164
+	sed -i test.sh -e "s|/sbin/ifconfig|$(type -P ifconfig)|g" || die
 	eautoreconf
 }
 
