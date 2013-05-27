@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.218 2013/05/02 01:11:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.219 2013/05/27 14:12:53 ssuominen Exp $
+
+  27 May 2013; Samuli Suominen <ssuominen@gentoo.org>
+  alsa-tools-1.0.27-r1.ebuild:
+  Pull in required >=dev-python/pygtk-2 for the `hwmixvolume` command wrt
+  #471424 by "josef.95"
 
   02 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -alsa-tools-1.0.27.ebuild:
