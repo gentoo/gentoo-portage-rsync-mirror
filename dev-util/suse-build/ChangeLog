@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.14 2013/04/29 13:22:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.15 2013/05/27 16:38:29 miska Exp $
+
+*suse-build-2013.05.17 (27 May 2013)
+
+  27 May 2013; Michal Hrusecky <miska@gentoo.org>
+  +suse-build-2013.05.17.ebuild, suse-build-9999.ebuild:
+  Updated to the latest version (2013.05.17)
+  Added missing dependency on cpio
 
   29 Apr 2013; Agostino Sarubbo <ago@gentoo.org> suse-build-2013.02.27.ebuild:
   Move KEYWORDS on another line to avoid ekeyword failure

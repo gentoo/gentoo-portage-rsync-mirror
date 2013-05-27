@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-0.9.2.ebuild,v 1.10 2013/05/26 15:57:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-0.9.2.ebuild,v 1.11 2013/05/27 16:40:22 bicatali Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	inherit eutils
 	SRC_URI="http://tortois.es/~nenolod/distfiles/${P}.tar.bz2"
-	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ppc-macos ~x64-macos ~x86-macos ~sparc64-solaris"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc64-solaris"
 fi
 
 DESCRIPTION="pkg-config compatible replacement with no dependencies other than ANSI C89"
