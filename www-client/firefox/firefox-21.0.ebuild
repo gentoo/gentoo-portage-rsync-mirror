@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-20.0.1.ebuild,v 1.2 2013/04/16 05:45:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-21.0.ebuild,v 1.1 2013/05/28 03:37:14 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -25,12 +25,12 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${PN}-20.0-patches-0.2"
+PATCH="${PN}-21.0-patches-0.1"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 
-inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools virtualx nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools virtualx mozlinguas
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -38,7 +38,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist gstreamer +jit +minimal pgo selinux system-jpeg system-sqlite"
+IUSE="bindist gstreamer +jit +minimal pgo pulseaudio selinux system-cairo system-jpeg system-sqlite"
 
 # More URIs appended below...
 SRC_URI="${SRC_URI}
@@ -51,12 +51,13 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.14.3
-	>=dev-libs/nspr-4.9.5
+	>=dev-libs/nspr-4.9.6
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.5.13[apng]
 	virtual/libffi
 	gstreamer? ( media-plugins/gst-plugins-meta:0.10[ffmpeg] )
+	system-cairo? ( >=x11-libs/cairo-1.10[X] )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( || (
 		>=dev-db/sqlite-3.7.16:3[secure-delete,debug=]
@@ -140,10 +141,17 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Discard system cairo patch if support is not requested
+	if ! use system-cairo ; then
+		export EPATCH_EXCLUDE="6009_fix_system_cairo_support.patch"
+	fi
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
+
+	# Undefined reference fix
+	epatch "${FILESDIR}"/bug-846986.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
@@ -155,8 +163,10 @@ src_prepare() {
 	fi
 
 	# Ensure that are plugins dir is enabled as default
-	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/$(get_libdir)/nsbrowser/plugins:" \
-		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path!"
+	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/lib/nsbrowser/plugins:" \
+		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path for 32bit!"
+	sed -i -e "s:/usr/lib64/mozilla/plugins:/usr/lib64/nsbrowser/plugins:" \
+		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path for 32bit!"
 
 	# Fix sandbox violations during make clean, bug 372817
 	sed -e "s:\(/no-such-file\):${T}\1:g" \
@@ -212,12 +222,14 @@ src_configure() {
 	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable gstreamer
+	mozconfig_use_enable pulseaudio
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_with system-jpeg
 	# Feature is know to cause problems on hardened
 	mozconfig_use_enable jit methodjit
 	mozconfig_use_enable jit tracejit
 	mozconfig_use_enable jit ion
+	mozconfig_use_enable system-cairo
 
 	# Allow for a proper pgo build
 	if use pgo; then
@@ -261,11 +273,11 @@ src_compile() {
 		shopt -u nullglob
 
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
-		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
+		MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL}" \
 		Xemake -f client.mk profiledbuild || die "Xemake failed"
 	else
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
-		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
+		MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL}" \
 		emake -f client.mk || die "emake failed"
 	fi
 
@@ -273,6 +285,7 @@ src_compile() {
 
 src_install() {
 	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
+	DICTPATH="\"${EPREFIX}/usr/share/myspell\""
 
 	# MOZ_BUILD_ROOT, and hence OBJ_DIR change depending on arch, compiler, pgo, etc.
 	local obj_dir="$(echo */config.log)"
@@ -284,15 +297,19 @@ src_install() {
 
 	# Add our default prefs for firefox
 	cp "${FILESDIR}"/gentoo-default-prefs.js-1 \
-		"${S}/${obj_dir}/dist/bin/defaults/pref/all-gentoo.js" || die
+		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
+
+	# Set default path to search for dictionaries.
+	echo "pref(\"spellchecker.dictionary_path\", ${DICTPATH});" \
+		>> "${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
 
 	if ! use libnotify; then
 		echo "pref(\"browser.download.manager.showAlertOnComplete\", false);" \
-			>> "${S}/${obj_dir}/dist/bin/defaults/pref/all-gentoo.js"
+			>> "${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
 	fi
 
-	echo "pref("extensions.autoDisableScopes", 3);" >> \
-		"${S}/${obj_dir}/dist/bin/defaults/pref/all-gentoo.js" || die
+	echo "pref(\"extensions.autoDisableScopes\", 3);" >> \
+		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install || die "emake install failed"
@@ -336,9 +353,6 @@ src_install() {
 
 	# Required in order to use plugins and even run firefox on hardened.
 	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
-
-	# Plugins dir
-	share_plugins_dir
 
 	if use minimal; then
 		rm -rf "${ED}"/usr/include "${ED}${MOZILLA_FIVE_HOME}"/{idl,include,lib,sdk} || \

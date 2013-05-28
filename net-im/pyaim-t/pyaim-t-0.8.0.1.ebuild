@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8.0.1.ebuild,v 1.3 2011/10/08 16:34:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8.0.1.ebuild,v 1.4 2013/05/28 03:39:05 floppym Exp $
 
 EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils python
 
@@ -24,6 +25,11 @@ RDEPEND="${DEPEND}
 	>=dev-python/twisted-web-0.5.0
 	webinterface? ( >=dev-python/nevow-0.4.1 )
 	>=dev-python/imaging-1.1"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python26-warnings.patch"

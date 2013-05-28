@@ -1,13 +1,13 @@
-DEFINED_PHASES=install postinst postrm prepare
-DEPEND=net-im/jabber-base
+DEFINED_PHASES=install postinst postrm prepare setup
+DEPEND=net-im/jabber-base =dev-lang/python-2*
 DESCRIPTION=Python based jabber transport for AIM
 EAPI=3
 HOMEPAGE=http://code.google.com/p/pyaimt/
 IUSE=webinterface
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=net-im/jabber-base >=dev-python/twisted-2.2.0 >=dev-python/twisted-words-0.1.0 >=dev-python/twisted-web-0.5.0 webinterface? ( >=dev-python/nevow-0.4.1 ) >=dev-python/imaging-1.1
+RDEPEND=net-im/jabber-base >=dev-python/twisted-2.2.0 >=dev-python/twisted-words-0.1.0 >=dev-python/twisted-web-0.5.0 webinterface? ( >=dev-python/nevow-0.4.1 ) >=dev-python/imaging-1.1 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://pyaimt.googlecode.com/files/pyaimt-0.8.0.1.tar.gz
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=5a68a01a6a3eaa1ee526d62c5e176f72
+_md5_=a2549ab906d99ac6e080f6dd226f01ec
