@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.59-r1.ebuild,v 1.1 2013/05/28 08:32:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.59-r1.ebuild,v 1.2 2013/05/28 21:49:32 xmw Exp $
 
 EAPI=5
 
@@ -55,5 +55,6 @@ src_install() {
 		pushd htmlreport
 		distutils-r1_src_install
 		popd
+		find "${D}" -name "*.egg-info" -delete
 	fi
 }
