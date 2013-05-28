@@ -5328,7 +5328,7 @@ sci-geosciences/gmt:octave - Enable octave support
 sci-geosciences/googleearth:bundled-libs - Use bundled libraries.
 sci-geosciences/googleearth:mdns-bundled - Use bundled nss-mdns library instead of depending on sys-auth/nss-mdns. Enable this if you want to avoid the deptree.
 sci-geosciences/googleearth:qt-bundled - Use bundled Qt4 libraries instead of system ones. Recommended only for troubleshooting.
-sci-geosciences/googleearth:system-mdns - Use nss-mdns library from portagen instead of the bundled one.
+sci-geosciences/googleearth:system-mdns - Use nss-mdns library from portage instead of the bundled one.
 sci-geosciences/googleearth:system-qt - Use Qt4 libraries from portage instead of the bundled ones.
 sci-geosciences/gpsd:dbus - export gpsd data over dbus connections
 sci-geosciences/gpsd:latency_timing - support latency timing information

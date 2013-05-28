@@ -1,0 +1,41 @@
+Fix NULL pointer dereference in webadmin.
+
+https://github.com/znc/znc/commit/2bd410ee5570cea127233f1133ea22f25174eb28
+--- modules/webadmin.cpp
++++ modules/webadmin.cpp
+@@ -404,7 +426,7 @@
+ 			CIRCNetwork* pNetwork = SafeGetNetworkFromParam(WebSock);
+ 
+ 			// Admin||Self Check
+-			if (!spSession->IsAdmin() && (!spSession->GetUser() || spSession->GetUser() != pNetwork->GetUser())) {
++			if (!spSession->IsAdmin() && (!spSession->GetUser() || !pNetwork || spSession->GetUser() != pNetwork->GetUser())) {
+ 				return false;
+ 			}
+ 
+@@ -433,7 +455,7 @@
+ 			CIRCNetwork* pNetwork = SafeGetNetworkFromParam(WebSock);
+ 
+ 			// Admin||Self Check
+-			if (!spSession->IsAdmin() && (!spSession->GetUser() || spSession->GetUser() != pNetwork->GetUser())) {
++			if (!spSession->IsAdmin() && (!spSession->GetUser() || !pNetwork || spSession->GetUser() != pNetwork->GetUser())) {
+ 				return false;
+ 			}
+ 
+@@ -457,7 +479,7 @@
+ 			CIRCNetwork* pNetwork = SafeGetNetworkFromParam(WebSock);
+ 
+ 			// Admin||Self Check
+-			if (!spSession->IsAdmin() && (!spSession->GetUser() || spSession->GetUser() != pNetwork->GetUser())) {
++			if (!spSession->IsAdmin() && (!spSession->GetUser() || !pNetwork || spSession->GetUser() != pNetwork->GetUser())) {
+ 				return false;
+ 			}
+ 
+@@ -471,7 +493,7 @@
+ 			CIRCNetwork* pNetwork = SafeGetNetworkFromParam(WebSock);
+ 
+ 			// Admin||Self Check
+-			if (!spSession->IsAdmin() && (!spSession->GetUser() || spSession->GetUser() != pNetwork->GetUser())) {
++			if (!spSession->IsAdmin() && (!spSession->GetUser() || !pNetwork || spSession->GetUser() != pNetwork->GetUser())) {
+ 				return false;
+ 			}
+ 
