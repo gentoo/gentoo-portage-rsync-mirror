@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.6 2013/03/03 00:57:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.7 2013/05/27 23:18:21 reavertm Exp $
 
 EAPI=5
 
@@ -46,7 +46,7 @@ src_configure() {
 		$(use_enable debug)
 		$(use_enable debug symbols)
 		$(use_enable doc html)
-		)
+	)
 	autotools-utils_src_configure
 }
 

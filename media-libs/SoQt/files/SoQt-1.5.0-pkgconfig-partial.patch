@@ -1,6 +1,6 @@
-diff -ru ../SoQt-1.5.0/SoQt.pc.in ./SoQt.pc.in
---- ../SoQt-1.5.0/SoQt.pc.in	2010-03-02 23:57:41.000000000 +0100
-+++ ./SoQt.pc.in	2010-06-29 08:36:14.288413544 +0200
+diff -ruN SoQt-1.5.0/SoQt.pc.in my/SoQt.pc.in
+--- SoQt-1.5.0/SoQt.pc.in	2010-03-02 23:57:41.000000000 +0100
++++ my/SoQt.pc.in	2013-05-28 01:14:13.083619183 +0200
 @@ -10,7 +10,8 @@
  Version: @SOQT_VERSION@
  Requires: Coin

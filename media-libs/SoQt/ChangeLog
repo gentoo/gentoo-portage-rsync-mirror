@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.35 2013/03/03 00:57:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.36 2013/05/27 23:18:21 reavertm Exp $
+
+  27 May 2013; Maciej Mrozowski <reavertm@gentoo.org> SoQt-1.5.0-r1.ebuild,
+  files/SoQt-1.5.0-pkgconfig-partial.patch:
+  Do not use relative paths in patch, bug 471208.
 
   03 Mar 2013; Markos Chandras <hwoarang@gentoo.org> SoQt-1.5.0-r1.ebuild:
   Move Qt dependencies to the new category

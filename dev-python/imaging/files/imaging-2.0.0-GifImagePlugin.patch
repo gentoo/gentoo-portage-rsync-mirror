@@ -1,0 +1,24 @@
+commit cb4f0f2b3c57a76551c7dfdae6a67f4b58da4681
+Author: Alex Clark <aclark@aclark.net>
+Date:   Wed Feb 6 09:25:03 2013 -0500
+
+    Revert "Fix saving images with added transparency"
+    
+    This reverts commit cc439099c1e8c81a929ea446caa6791d7d9b6bd6.
+
+diff --git a/PIL/GifImagePlugin.py b/PIL/GifImagePlugin.py
+index 2036893..443d4db 100644
+--- a/PIL/GifImagePlugin.py
++++ b/PIL/GifImagePlugin.py
+@@ -364,11 +364,6 @@ def getheader(im, palette=None, info=None):
+         for i in range(maxcolor):
+             s.append(o8(i) * 3)
+ 
+-    if im.info.has_key('transparency'):
+-        transparentIndex = im.info['transparency']
+-        s.append('!' + o8(0xf9) + o8(4) + o8(1) + o8(0) + o8(0) +
+-                 o8(transparentIndex) + o8(0))
+-
+     return s
+ 
+ def getdata(im, offset = (0, 0), **params):
