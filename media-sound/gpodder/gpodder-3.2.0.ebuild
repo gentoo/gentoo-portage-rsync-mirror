@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-3.2.0.ebuild,v 1.1 2012/07/31 13:51:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-3.2.0.ebuild,v 1.2 2013/05/28 06:33:08 ssuominen Exp $
 
 EAPI=4
 
@@ -23,7 +23,6 @@ IUSE="+dbus bluetooth gstreamer ipod mtp test webkit"
 #TODO: add QML UI deps (USE=qt4) and make pygtk optional, see README
 RDEPEND="dev-python/eyeD3
 	dev-python/feedparser
-	dev-python/imaging
 	>=dev-python/mygpoclient-1.4
 	>=dev-python/pygtk-2.12:2
 	dbus? ( dev-python/dbus-python )

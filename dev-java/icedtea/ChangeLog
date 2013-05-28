@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.95 2013/05/23 05:45:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.96 2013/05/28 06:36:45 sera Exp $
+
+*icedtea-7.2.3.9 (28 May 2013)
+
+  28 May 2013; Ralph Sennhauser <sera@gentoo.org> +icedtea-7.2.3.9.ebuild:
+  Security bump #466822
+  Drop ant deps, the eclass ensures package requirements. 466558
+  Rename tarballs #439140
+  This version doesn't build with icedtea 6
 
 *icedtea-6.1.12.5 (22 May 2013)
 
