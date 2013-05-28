@@ -1,13 +1,14 @@
-DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-python/dbus-python dev-python/gst-python:0.10 >=dev-python/pygtk-2.8:2 dev-python/pyinotify || ( dev-python/python-xlib dev-python/egg-python ) dev-python/pywebkitgtk dev-python/pyxdg media-libs/libgpod[python] media-libs/mutagen media-plugins/gst-plugins-meta:0.10 x11-libs/libnotify cdda? ( dev-python/python-musicbrainz ) gnome? ( dev-python/gnome-vfs-python ) app-text/docbook2X dev-util/intltool virtual/pkgconfig sys-devel/gettext !media-radio/ax25-apps || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DEFINED_PHASES=compile install prepare setup test
+DEPEND=python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/dbus-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/gst-python:0.10[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=dev-python/pygtk-2.8:2[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/pyinotify[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] || ( dev-python/python-xlib[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/egg-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) dev-python/pywebkitgtk dev-python/pyxdg[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] media-libs/libgpod[python] media-libs/mutagen[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] media-plugins/gst-plugins-meta:0.10 x11-libs/libnotify cdda? ( dev-python/python-musicbrainz[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) app-text/docbook2X dev-util/intltool sys-devel/gettext virtual/pkgconfig !media-radio/ax25-apps
 DESCRIPTION=A music management and playback for GTK+ based desktops
-EAPI=3
+EAPI=5
 HOMEPAGE=http://www.listen-project.org/
-IUSE=cdda gnome
+IUSE=cdda python_targets_python2_7 python_single_target_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-python/dbus-python dev-python/gst-python:0.10 >=dev-python/pygtk-2.8:2 dev-python/pyinotify || ( dev-python/python-xlib dev-python/egg-python ) dev-python/pywebkitgtk dev-python/pyxdg media-libs/libgpod[python] media-libs/mutagen media-plugins/gst-plugins-meta:0.10 x11-libs/libnotify cdda? ( dev-python/python-musicbrainz ) gnome? ( dev-python/gnome-vfs-python ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+RDEPEND=python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/dbus-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/gst-python:0.10[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=dev-python/pygtk-2.8:2[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/pyinotify[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] || ( dev-python/python-xlib[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/egg-python[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) dev-python/pywebkitgtk dev-python/pyxdg[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] media-libs/libgpod[python] media-libs/mutagen[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] media-plugins/gst-plugins-meta:0.10 x11-libs/libnotify cdda? ( dev-python/python-musicbrainz[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] )
+REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=http://download.listen-project.org/0.6/listen-0.6.5.tar.gz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=1a328f036c20bcc6d790cfbf007647fc
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	9fc80a4f06f33ede447b5647fddca301	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b06c0f88ae85dc2cb555392b5617900d
