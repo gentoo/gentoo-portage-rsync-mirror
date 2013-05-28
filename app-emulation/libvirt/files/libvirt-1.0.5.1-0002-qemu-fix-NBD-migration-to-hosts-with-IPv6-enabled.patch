@@ -1,0 +1,42 @@
+From 3accd7eb25f3646e15511af4cb0d09c3bf2ce143 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?J=C3=A1n=20Tomko?= <jtomko@redhat.com>
+Date: Thu, 23 May 2013 15:51:05 +0200
+Subject: [PATCH 2/2] qemu: fix NBD migration to hosts with IPv6 enabled
+
+Since f03dcc5 we use [::] as the listening address both on qemu
+command line in -incoming and in nbd-server-start QMP command.
+However the latter requires just :: without the braces.
+(cherry picked from commit 2326006410a921bba38c0ce67a367cd1ea88cc33)
+---
+ src/qemu/qemu_migration.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/src/qemu/qemu_migration.c b/src/qemu/qemu_migration.c
+index 6ad1c30..adc967a 100644
+--- a/src/qemu/qemu_migration.c
++++ b/src/qemu/qemu_migration.c
+@@ -1114,6 +1114,12 @@ qemuMigrationStartNBDServer(virQEMUDriverPtr driver,
+     unsigned short port = 0;
+     char *diskAlias = NULL;
+     size_t i;
++    const char *host;
++
++    if (STREQ(listenAddr, "[::]"))
++        host = "::";
++    else
++        host = listenAddr;
+ 
+     for (i = 0; i < vm->def->ndisks; i++) {
+         virDomainDiskDefPtr disk = vm->def->disks[i];
+@@ -1135,7 +1141,7 @@ qemuMigrationStartNBDServer(virQEMUDriverPtr driver,
+ 
+         if (!port &&
+             ((virPortAllocatorAcquire(driver->remotePorts, &port) < 0) ||
+-             (qemuMonitorNBDServerStart(priv->mon, listenAddr, port) < 0))) {
++             (qemuMonitorNBDServerStart(priv->mon, host, port) < 0))) {
+             qemuDomainObjExitMonitor(driver, vm);
+             goto cleanup;
+         }
+-- 
+1.8.1.5
+

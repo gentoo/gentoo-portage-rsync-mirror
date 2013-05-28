@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.273 2013/05/28 15:25:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.274 2013/05/28 17:07:00 cardoe Exp $
+
+*libvirt-1.0.5.1-r1 (28 May 2013)
+
+  28 May 2013; Doug Goldstein <cardoe@gentoo.org> +files/libvirt-1.0.5.1-0001-cg
+  roup-be-robust-against-cgroup-movement-races.patch, +files/libvirt-1.0.5.1-000
+  2-qemu-fix-NBD-migration-to-hosts-with-IPv6-enabled.patch,
+  +libvirt-1.0.5.1-r1.ebuild:
+  Bump to fix cgroup movement race and nbd based migrations on IPv6 enabled
+  hosts.
 
   28 May 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.5.1.ebuild:
   Change USE flag default to qemu since that's what most people are using
