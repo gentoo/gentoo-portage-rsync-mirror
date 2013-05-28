@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.12.2.ebuild,v 1.4 2013/04/09 20:26:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.12.5.ebuild,v 1.1 2013/05/28 20:17:47 caster Exp $
 
 EAPI="4"
 
@@ -13,8 +13,10 @@ PLUGIN_VERSION="${PVR}"
 DESCRIPTION="A Gentoo-made binary build of the IcedTea JDK"
 HOMEPAGE="http://icedtea.classpath.org"
 SRC_URI="
-	amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2 )
-	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2 )
+	amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2
+			${dist}/${PN}-libpng15-${TARBALL_VERSION}-amd64.tar.bz2 )
+	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2
+			${dist}/${PN}-libpng15-${TARBALL_VERSION}-x86.tar.bz2 )
 	doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.bz2 )
 	examples? (
 		amd64? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-amd64.tar.bz2 )
@@ -28,7 +30,7 @@ SRC_URI="
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="6"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 IUSE="+X +alsa cjk +cups doc examples nsplugin source"
 REQUIRED_USE="nsplugin? ( X )"
@@ -52,7 +54,7 @@ X_COMMON_DEP="
 
 COMMON_DEP="
 	>=media-libs/giflib-4.1.6-r1
-	=media-libs/libpng-1.5*
+	>=media-libs/libpng-1.5
 	>=sys-devel/gcc-4.3
 	>=sys-libs/glibc-2.11.2
 	>=sys-libs/zlib-1.2.3-r1
@@ -80,6 +82,21 @@ RDEPEND="${COMMON_DEP}
 	)
 	alsa? ( ${ALSA_COMMON_DEP} )
 	cups? ( ${CUPS_COMMON_DEP} )"
+
+src_unpack() {
+	unpack ${A}
+
+	if has_version '=media-libs/libpng-1.5*:0'; then
+		elog "Installing libpng-1.5 ABI version"
+		elog "You will have to remerge icedtea6-bin after upgrading to libpng-1.6"
+		elog "Note that revdep-rebuild will not do it automatically due to the mask file."
+		local arch=${ARCH}
+		use x86 && arch=i386
+		mv -v ${PN}-libpng15-${PV}/jre/lib/${arch}/*.so ${P}/jre/lib/${arch} || die
+	else
+		einfo "Installing libpng-1.6 ABI version"
+	fi
+}
 
 src_install() {
 	local dest="/opt/${P}"
