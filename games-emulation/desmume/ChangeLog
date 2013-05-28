@@ -1,6 +1,15 @@
 # ChangeLog for games-emulation/desmume
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.19 2012/06/23 21:58:43 hanno Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.20 2013/05/28 10:34:08 hanno Exp $
+
+*desmume-0.9.9 (28 May 2013)
+
+  28 May 2013; Hanno Boeck <hanno@gentoo.org> -desmume-0.9.4.ebuild,
+  -desmume-0.9.5.ebuild, -desmume-0.9.7.ebuild, +desmume-0.9.9.ebuild,
+  -files/desmume-0.9.4-gcc44.patch, -files/desmume-0.9.5-sse2-fix.diff,
+  -files/desmume-add-missing-potfiles.diff,
+  -files/desmume-fix-gcc-warning.diff:
+  Version bump, port to EAPI 5, remove some old versions.
 
 *desmume-0.9.8 (23 Jun 2012)
 
