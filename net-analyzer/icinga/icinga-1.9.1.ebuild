@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.9.0.ebuild,v 1.1 2013/05/09 21:21:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.9.1.ebuild,v 1.1 2013/05/28 08:32:50 prometheanfire Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
-IUSE="+apache2 eventhandler +idoutils lighttpd +mysql perl +plugins postgres ssl +vim-syntax +web"
+IUSE="+apache2 contrib eventhandler +idoutils lighttpd +mysql perl +plugins postgres ssl +vim-syntax +web"
 DEPEND="idoutils? ( dev-db/libdbi-drivers[mysql?,postgres?] )
 	perl? ( dev-lang/perl )
 	virtual/mailx
@@ -49,7 +49,7 @@ src_configure() {
 	$(use_with perl perlcache)
 	$(use_enable idoutils)
 	$(use_enable ssl)
-	--disable-statuswrl
+	--disable-statusurl
 	--with-cgiurl=/icinga/cgi-bin
 	--with-log-dir=/var/log/icinga
 	--libdir=/usr/$(get_libdir)
@@ -102,6 +102,10 @@ src_compile() {
 		emake DESTDIR="${D}" cgis || die
 	fi
 
+	if use contrib ; then
+		emake DESTDIR="${D}" -C contrib || die
+	fi
+
 	if use idoutils ; then
 		emake DESTDIR="${D}" idoutils || die
 	fi
@@ -118,6 +122,10 @@ src_install() {
 
 	if use idoutils ; then
 		 emake DESTDIR="${D}" install-idoutils || die
+	fi
+
+	if use contrib ; then
+		emake DESTDIR="${D}" -C contrib install || die
 	fi
 
 	if use eventhandler ; then

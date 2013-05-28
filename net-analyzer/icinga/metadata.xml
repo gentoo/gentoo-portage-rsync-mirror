@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<longdescription lang="en">A rebuild of nagios from the ground up</longdescription>
 	<use>
+		<flag name="contrib">additional scripts</flag>
 		<flag name="idoutils">Adds DB support</flag>
 		<flag name="lighttpd">Adds Lighttpd support</flag>
 		<flag name="plugins">Adds support for nagios plugins</flag>
