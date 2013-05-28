@@ -1355,6 +1355,7 @@ dev-lang/logtalk:xsbpl - Support XSB back-end compiler
 dev-lang/logtalk:xslt - Support for generating html documentation using xslt
 dev-lang/logtalk:yappl - Support YAP back-end compiler
 dev-lang/lua:deprecated - make deprecated data structures/routines available
+dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code.
 dev-lang/mercury:erlang - Support Mercury Erlang grade
 dev-lang/mlton:binary - install a binary version (need to do this once to bootstrap, until smlnj is supported)
 dev-lang/mono:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
