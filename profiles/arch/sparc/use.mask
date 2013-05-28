@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.110 2013/05/27 15:18:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.111 2013/05/28 13:36:28 chithanh Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -251,6 +251,8 @@ video_cards_i965
 video_cards_ilo
 # vmware wasn't added with mesa-8.0, but it should still be masked
 video_cards_vmware
+# llvm is not keyworded
+video_cards_radeonsi
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask the Sun-specific drivers

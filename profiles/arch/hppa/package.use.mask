@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.123 2013/05/17 14:46:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.124 2013/05/28 13:53:41 chithanh Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
+# depends on sys-devel/llvm[video_cards_radeon]
+media-libs/mesa r600-llvm-compiler
 
 # Julian Ospald <hasufell@gentoo.org> (31 Mar 2013)
 # depends on mono

@@ -47,6 +47,8 @@ video_cards_savage
 video_cards_tdfx
 video_cards_trident
 video_cards_voodoo
+# llvm is not keyworded
+video_cards_radeonsi
 
 #until netbeans is keyworded
 netbeans
