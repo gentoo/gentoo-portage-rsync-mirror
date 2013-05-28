@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.10 2013/05/27 16:23:57 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.11 2013/05/28 08:02:22 miska Exp $
 
 EAPI=5
 
@@ -36,11 +36,14 @@ DEPEND="
 	dev-python/pyxml[${PYTHON_USEDEP}]
 	app-arch/rpm[python,${PYTHON_USEDEP}]
 	dev-python/m2crypto[${PYTHON_USEDEP}]
+	${PYTHON_DEPS}
 "
 PDEPEND="${DEPEND}
 	app-admin/sudo
 	dev-util/obs-service-meta
 "
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-out-of-tree-build.patch
