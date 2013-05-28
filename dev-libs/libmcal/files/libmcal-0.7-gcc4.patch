@@ -1,6 +1,5 @@
-diff -urN ../libmcal-/icap/icap.c ./icap/icap.c
---- ../libmcal/icap/icap.c	2003-01-28 18:31:33.000000000 +0100
-+++ ./icap/icap.c	2005-08-12 15:04:36.000000000 +0200
+--- a/icap/icap.c	2003-01-28 18:31:33.000000000 +0100
++++ b/icap/icap.c	2005-08-12 15:04:36.000000000 +0200
 @@ -159,7 +159,7 @@
  	if (!reopen) {
  		if ((stream = calloc(1, sizeof(*stream))) == NULL)
@@ -10,9 +9,8 @@ diff -urN ../libmcal-/icap/icap.c ./icap/icap.c
  			goto fail;
  
  		/* Copy host. */
-diff -urN ../libmcal/mstore/mstore.c ./mstore/mstore.c
---- ../libmcal/mstore/mstore.c	2005-08-12 15:30:52.000000000 +0200
-+++ ./mstore/mstore.c	2005-08-12 15:31:38.000000000 +0200
+--- a/mstore/mstore.c	2005-08-12 15:30:52.000000000 +0200
++++ b/mstore/mstore.c	2005-08-12 15:31:38.000000000 +0200
 @@ -308,7 +308,7 @@
  	if (!reopen) {
  		if ((stream = calloc(1, sizeof(*stream))) == NULL)
