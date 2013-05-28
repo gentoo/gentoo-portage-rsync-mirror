@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.1.ebuild,v 1.2 2013/03/09 15:18:52 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.1.ebuild,v 1.3 2013/05/28 03:28:04 ottxor Exp $
 
 EAPI=5
 
@@ -181,7 +181,7 @@ src_configure() {
 		local p
 		[[ ${x} = "double" ]] && p="-DGMX_DOUBLE=ON" || p="-DGMX_DOUBLE=OFF"
 		local cuda=( "-DGMX_GPU=OFF" )
-		[[ ${x} = "single" ]] && use cuda && \
+		[[ ${x} = "float" ]] && use cuda && \
 			cuda=( -DGMX_GPU=ON -DCUDA_HOST_COMPILER_OPTIONS="${NVCCFLAGS}" )
 		mycmakeargs=( ${mycmakeargs_pre[@]} ${p} -DGMX_MPI=OFF
 			$(cmake-utils_use threads GMX_THREAD_MPI) "${cuda[@]}" -DGMX_OPENMM=OFF

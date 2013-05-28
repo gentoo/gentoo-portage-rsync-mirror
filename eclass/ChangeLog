@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.840 2013/05/26 14:08:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.841 2013/05/28 03:29:50 anarchy Exp $
+
+  28 May 2013; <anarchy@gentoo.org> mozextension.eclass, nsplugins.eclass:
+  Ensure plugins/extensions are in correct place for >=firefox{-bin}-21.0
 
   26 May 2013; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
   Pass --enable-compile-warnings=minimum as we don't want -Werror* flags, bug
