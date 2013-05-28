@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.8.0.ebuild,v 1.2 2013/03/30 15:01:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.8.2.ebuild,v 1.1 2013/05/28 18:55:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,13 +16,14 @@ SLOT="0"
 IUSE="v4l"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-VALA_DEPEND="$(vala_depend)
+VALA_DEPEND="
+	$(vala_depend)
 	dev-libs/folks[vala]
 	gnome-base/gnome-desktop[introspection]
 	gnome-extra/evolution-data-server[vala]
 	net-libs/telepathy-glib[vala]
-	x11-libs/libnotify[introspection]"
-
+	x11-libs/libnotify[introspection]
+"
 # Configure is wrong; it needs cheese-3.5.91, not 3.3.91
 RDEPEND="
 	>=dev-libs/folks-0.7.3:=[eds,telepathy]
@@ -40,21 +41,17 @@ RDEPEND="
 	v4l? ( >=media-video/cheese-3.5.91:= )
 "
 DEPEND="${RDEPEND}
+	${VALA_DEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	!v4l? ( ${VALA_DEPEND} )"
-# When !v4l, we regenerate the .c sources
+"
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		$(use_with v4l cheese)"
-	# FIXME: Fails to compile with USE=-v4l
-
-	# Regenerate the pre-generated C sources
-	if ! use v4l; then
-		touch src/*.vala
-	fi
 	gnome2_src_prepare
 	vala_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure $(use_with v4l cheese)
 }

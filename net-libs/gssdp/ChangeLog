@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.56 2013/03/30 23:25:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.57 2013/05/28 19:00:25 pacho Exp $
+
+*gssdp-0.14.3 (28 May 2013)
+
+  28 May 2013; Pacho Ramos <pacho@gentoo.org> +gssdp-0.14.3.ebuild:
+  Version bump
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> gssdp-0.14.2.ebuild:
   Add subslot.
