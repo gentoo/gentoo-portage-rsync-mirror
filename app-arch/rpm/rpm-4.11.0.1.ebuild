@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.11.0.1.ebuild,v 1.1 2013/03/26 18:17:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.11.0.1.ebuild,v 1.2 2013/05/28 07:50:51 scarabeus Exp $
 
 EAPI=5
 
@@ -38,6 +38,10 @@ RDEPEND="!app-arch/rpm5
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
+
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+"
 
 src_prepare() {
 	epatch \
