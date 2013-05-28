@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.52 2013/04/30 12:31:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.53 2013/05/28 13:12:55 jer Exp $
+
+  28 May 2013; Jeroen Roovers <jer@gentoo.org> bundler-1.3.5.ebuild:
+  Marked ~hppa (bug #471306).
 
   30 Apr 2013; Agostino Sarubbo <ago@gentoo.org> bundler-1.2.5.ebuild:
   Stable for x86, wrt bug #467832

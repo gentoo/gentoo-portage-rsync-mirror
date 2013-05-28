@@ -1,0 +1,113 @@
+diff --git a/module/zfs/spa.c b/module/zfs/spa.c
+index 82ee445..eaf05b9 100644
+--- a/module/zfs/spa.c
++++ b/module/zfs/spa.c
+@@ -64,6 +64,7 @@
+ #include <sys/zfs_ioctl.h>
+ #include <sys/dsl_scan.h>
+ #include <sys/zfeature.h>
++#include <sys/zvol.h>
+ 
+ #ifdef	_KERNEL
+ #include <sys/bootprops.h>
+@@ -2856,6 +2857,7 @@ spa_open_common(const char *pool, spa_t **spapp, void *tag, nvlist_t *nvpolicy,
+ 	spa_load_state_t state = SPA_LOAD_OPEN;
+ 	int error;
+ 	int locked = B_FALSE;
++	int firstopen = B_FALSE;
+ 
+ 	*spapp = NULL;
+ 
+@@ -2879,6 +2881,8 @@ spa_open_common(const char *pool, spa_t **spapp, void *tag, nvlist_t *nvpolicy,
+ 	if (spa->spa_state == POOL_STATE_UNINITIALIZED) {
+ 		zpool_rewind_policy_t policy;
+ 
++		firstopen = B_TRUE;
++
+ 		zpool_get_rewind_policy(nvpolicy ? nvpolicy : spa->spa_config,
+ 		    &policy);
+ 		if (policy.zrp_request & ZPOOL_DO_REWIND)
+@@ -2953,6 +2957,11 @@ spa_open_common(const char *pool, spa_t **spapp, void *tag, nvlist_t *nvpolicy,
+ 		mutex_exit(&spa_namespace_lock);
+ 	}
+ 
++#ifdef _KERNEL
++	if (firstopen)
++		zvol_create_minors(spa->spa_name);
++#endif
++
+ 	*spapp = spa;
+ 
+ 	return (0);
+diff --git a/module/zfs/zvol.c b/module/zfs/zvol.c
+index b41eeb2..f9387a7 100644
+--- a/module/zfs/zvol.c
++++ b/module/zfs/zvol.c
+@@ -1217,6 +1217,8 @@ zvol_alloc(dev_t dev, const char *name)
+ 	if (zv == NULL)
+ 		goto out;
+ 
++	spin_lock_init(&zv->zv_lock);
++
+ 	zv->zv_queue = blk_init_queue(zvol_request, &zv->zv_lock);
+ 	if (zv->zv_queue == NULL)
+ 		goto out_kmem;
+@@ -1250,7 +1252,6 @@ zvol_alloc(dev_t dev, const char *name)
+ 	    sizeof (rl_t), offsetof(rl_t, r_node));
+ 	zv->zv_znode.z_is_zvol = TRUE;
+ 
+-	spin_lock_init(&zv->zv_lock);
+ 	list_link_init(&zv->zv_next);
+ 
+ 	zv->zv_disk->major = zvol_major;
+@@ -1563,36 +1564,40 @@ zvol_init(void)
+ {
+ 	int error;
+ 
++	list_create(&zvol_state_list, sizeof (zvol_state_t),
++	            offsetof(zvol_state_t, zv_next));
++	mutex_init(&zvol_state_lock, NULL, MUTEX_DEFAULT, NULL);
++
+ 	zvol_taskq = taskq_create(ZVOL_DRIVER, zvol_threads, maxclsyspri,
+ 		                  zvol_threads, INT_MAX, TASKQ_PREPOPULATE);
+ 	if (zvol_taskq == NULL) {
+ 		printk(KERN_INFO "ZFS: taskq_create() failed\n");
+-		return (-ENOMEM);
++		error = -ENOMEM;
++		goto out1;
+ 	}
+ 
+ 	error = register_blkdev(zvol_major, ZVOL_DRIVER);
+ 	if (error) {
+ 		printk(KERN_INFO "ZFS: register_blkdev() failed %d\n", error);
+-		taskq_destroy(zvol_taskq);
+-		return (error);
++		goto out2;
+ 	}
+ 
+ 	blk_register_region(MKDEV(zvol_major, 0), 1UL << MINORBITS,
+ 	                    THIS_MODULE, zvol_probe, NULL, NULL);
+ 
+-	mutex_init(&zvol_state_lock, NULL, MUTEX_DEFAULT, NULL);
+-	list_create(&zvol_state_list, sizeof (zvol_state_t),
+-	            offsetof(zvol_state_t, zv_next));
+-
+-	(void) zvol_create_minors(NULL);
+-
+ 	return (0);
++
++out2:
++	taskq_destroy(zvol_taskq);
++out1:
++	mutex_destroy(&zvol_state_lock);
++	list_destroy(&zvol_state_list);
++	return (error);
+ }
+ 
+ void
+ zvol_fini(void)
+ {
+-	zvol_remove_minors(NULL);
+ 	blk_unregister_region(MKDEV(zvol_major, 0), 1UL << MINORBITS);
+ 	unregister_blkdev(zvol_major, ZVOL_DRIVER);
+ 	taskq_destroy(zvol_taskq);

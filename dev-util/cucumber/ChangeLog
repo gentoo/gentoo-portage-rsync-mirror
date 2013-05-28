@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.59 2013/05/26 07:34:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.60 2013/05/28 13:13:25 jer Exp $
+
+  28 May 2013; Jeroen Roovers <jer@gentoo.org> cucumber-1.3.2.ebuild:
+  Marked ~hppa (bug #471306).
 
 *cucumber-1.3.2 (26 May 2013)
 
