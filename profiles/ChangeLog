@@ -1,14 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7883 2013/05/28 14:48:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7884 2013/05/28 15:18:43 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   28 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/uclibc/x86/use.mask:
+  Unmask video_cards_geode on hardened/linux/uclibc/x86, bug #458354
+
+  28 May 2013; Anthony G. Basile <blueness@gentoo.org>
   hardened/linux/uclibc/make.defaults, hardened/linux/uclibc/use.mask:
-  Unmask jit and orc, but turn them off by default on hardened/linux/uclibc
+  Unmask jit and orc, but turn them off by default on hardened/linux/uclibc,
+  bug #469776
 
   28 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   desc/video_cards.desc:
