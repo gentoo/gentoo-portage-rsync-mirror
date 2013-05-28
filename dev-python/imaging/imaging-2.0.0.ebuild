@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-2.0.0.ebuild,v 1.1 2013/05/27 23:27:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-2.0.0.ebuild,v 1.2 2013/05/28 22:29:32 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -51,9 +51,7 @@ python_prepare_all() {
 	local patches=(
 		"${FILESDIR}/imaging-1.1.7-no-xv.patch"
 		"${FILESDIR}/imaging-2.0.0-delete_hardcoded_paths.patch"
-		"${FILESDIR}/imaging-2.0.0-gif_transparency.patch"
 		"${FILESDIR}/imaging-2.0.0-libm_linking.patch"
-		"${FILESDIR}/imaging-2.0.0-GifImagePlugin.patch"
 	)
 	epatch "${patches[@]}"
 
