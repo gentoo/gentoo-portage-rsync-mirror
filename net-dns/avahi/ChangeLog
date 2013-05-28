@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.241 2013/05/26 23:53:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.242 2013/05/28 02:12:23 blueness Exp $
+
+*avahi-0.6.31-r2 (28 May 2013)
+
+  28 May 2013; Anthony G. Basile <blueness@gentoo.org> +avahi-0.6.31-r2.ebuild,
+  +files/avahi-0.6.31-fix-install-avahi-discover.patch:
+  Fixes bugs #359575, #399369, #466210  Bug #359575 - only install avahi-
+  discover when gtk is enabled  Bug #399369 - building python bindings do not
+  depend on gtk  Bug #466210 - remove "/home/lennart/tmp/avahi" from man pages
 
   26 May 2013; Anthony G. Basile <blueness@gentoo.org> avahi-0.6.30-r1.ebuild,
   avahi-0.6.30-r3.ebuild, avahi-0.6.31-r1.ebuild, avahi-0.6.31.ebuild:
