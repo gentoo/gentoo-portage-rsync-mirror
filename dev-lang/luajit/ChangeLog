@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/luajit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.12 2013/05/28 00:59:37 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.13 2013/05/28 01:14:05 rafaelmartins Exp $
+
+  28 May 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  luajit-2.0.0_beta7.ebuild:
+  Enable verbose build. Thanks to hasufell (#449516)
 
 *luajit-2.0.1_p1 (28 May 2013)
 

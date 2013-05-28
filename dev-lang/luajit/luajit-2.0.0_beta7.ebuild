@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.0_beta7.ebuild,v 1.1 2011/05/07 11:06:00 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.0_beta7.ebuild,v 1.2 2013/05/28 01:14:05 rafaelmartins Exp $
 
 EAPI="2"
 
@@ -34,8 +34,12 @@ src_prepare(){
 		|| die "failed to remove forced strip"
 }
 
+src_compile() {
+	emake Q=
+}
+
 src_install(){
-	einstall DESTDIR="${D}"
+	emake DESTDIR="${D}" install
 	pax-mark m "${D}usr/bin/luajit-${PV}"
 	dosym "luajit-${PV}" "/usr/bin/luajit-${SLOT}"
 }
