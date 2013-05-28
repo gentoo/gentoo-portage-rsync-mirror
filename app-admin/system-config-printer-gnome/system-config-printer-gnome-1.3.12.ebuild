@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.12.ebuild,v 1.11 2013/05/27 23:08:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.12.ebuild,v 1.12 2013/05/28 19:13:30 reavertm Exp $
 
 EAPI="3"
 
@@ -49,7 +49,7 @@ done
 S="${WORKDIR}/${MY_P}"
 
 # Bug 471472
-MAKEOPTS=-j1
+MAKEOPTS+=" -j1"
 
 pkg_setup() {
 	python_set_active_version 2
