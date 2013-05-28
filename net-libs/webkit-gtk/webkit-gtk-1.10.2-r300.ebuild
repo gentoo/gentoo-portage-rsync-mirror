@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.7 2013/05/01 03:40:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.8 2013/05/28 05:23:26 tetromino Exp $
 
 EAPI="5"
 
@@ -158,6 +158,13 @@ src_prepare() {
 	# fix for freebsd for WIFEXITED definition
 	# https://bugs.gentoo.org/show_bug.cgi?id=449220#c17
 	epatch "${FILESDIR}/${PN}-1.10.2-wifexited.patch"
+
+	# patch for gcc 4.8, to disable COMPILE_ASSERT warnings; fixed in 2.0.x
+	# https://bugs.webkit.org/show_bug.cgi?id=113147
+	epatch "${FILESDIR}/${P}-gcc-4.8.patch"
+
+	# patch for -lrt underlinking issue, bug #458164; fixed in 2.0.x
+	epatch "${FILESDIR}/${P}-librt.patch"
 
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/libhackrf-9999.ebuild,v 1.1 2013/05/25 15:28:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/libhackrf-9999.ebuild,v 1.2 2013/05/28 05:08:42 zerochaos Exp $
 
 EAPI=5
 
@@ -20,5 +20,5 @@ IUSE=""
 DEPEND="virtual/libusb:1"
 RDEPEND="${DEPEND}"
 
-EGIT_SOURCEDIR=${WORKDIR}/${P}
+EGIT_SOURCEDIR="${WORKDIR}/${P}"
 S="${WORKDIR}/${P}/host/libhackrf"
