@@ -1,6 +1,13 @@
 # ChangeLog for app-office/mdbtools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.58 2012/05/03 20:00:39 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.59 2013/05/28 12:14:47 pinkbyte Exp $
+
+*mdbtools-0.7 (28 May 2013)
+
+  28 May 2013; Sergey Popov <pinkbyte@gentoo.org> +mdbtools-0.7.ebuild,
+  metadata.xml:
+  Version bump, wrt bug #433004. Package will be maintained by Chris Kerr
+  <gingekerr AT yahoo.co.uk> through proxy maintainers
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> mdbtools-0.6_pre2-r2.ebuild,
   mdbtools-0.6_pre2-r3.ebuild:

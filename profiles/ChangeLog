@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7880 2013/05/28 01:05:38 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7881 2013/05/28 12:18:26 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 May 2013; Anthony G. Basile <blueness@gentoo.org> base/make.defaults,
+  desc/monkeyd_plugins.desc:
+  Add MONKEYD_PLUGINS USE_EXPAND; ack by Chainsaw
 
   28 May 2013; Rafael G. Martins <rafaelmartins@gentoo.org> package.mask:
   Update luajit mask

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r2.ebuild,v 1.1 2013/03/15 17:42:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r2.ebuild,v 1.2 2013/05/28 12:05:40 pinkbyte Exp $
 
 EAPI=5
 inherit autotools eutils multilib
@@ -20,6 +20,9 @@ DOCS=( ARP AUTHORS CONTRIB ChangeLog README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnet1_2.patch
+	rm missing || die "removing of 'missing' script failed"
+	epatch_user
+
 	eautoreconf
 }
 
