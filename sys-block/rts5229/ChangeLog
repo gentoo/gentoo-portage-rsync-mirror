@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/rts5229
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/ChangeLog,v 1.1 2013/02/28 17:39:19 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/ChangeLog,v 1.2 2013/05/28 19:50:51 vikraman Exp $
+
+*rts5229-1.07-r1 (28 May 2013)
+
+  28 May 2013; Vikraman <vikraman@gentoo.org> +rts5229-1.07-r1.ebuild,
+  +files/rts5229-linux-3.8.patch:
+  Patch to fix build on linux 3.8
 
 *rts5229-1.07 (28 Feb 2013)
 
