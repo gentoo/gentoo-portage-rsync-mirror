@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r1.ebuild,v 1.12 2012/12/01 02:02:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r1.ebuild,v 1.13 2013/05/28 22:47:40 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -28,6 +28,7 @@ DEPEND="virtual/jpeg
 	scanner? ( media-gfx/sane-backends )
 	X? ( x11-misc/xdg-utils )"
 RDEPEND="${DEPEND}"
+RDEPEND+=" !dev-python/pillow"
 
 S="${WORKDIR}/${MY_P}"
 

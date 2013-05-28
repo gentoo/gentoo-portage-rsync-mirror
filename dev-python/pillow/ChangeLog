@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.1 2013/04/21 20:17:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.2 2013/05/28 22:44:34 floppym Exp $
+
+  28 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/imaging-1.1.7-no-xv.patch,
+  +files/pillow-2.0.0-delete_hardcoded_paths.patch,
+  +files/pillow-2.0.0-libm_linking.patch, pillow-2.0.0.ebuild:
+  Enable python3, add keywords from dev-python/imaging, apply a few patches.
 
 *pillow-2.0.0 (21 Apr 2013)
 
