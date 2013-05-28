@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.2 2013/03/21 15:48:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.3 2013/05/28 15:32:55 hasufell Exp $
 
 EAPI="4"
 
@@ -66,7 +66,7 @@ src_prepare() {
 		-e "/LibRawLite/d" \
 		-e "/LibMNG/d" \
 		Makefile.srcs fipMakefile.srcs || die
-	epatch "${FILESDIR}"/${PN}-3.15.4-unbundling.patch
+	epatch "${FILESDIR}"/${PN}-3.15.4-{unbundling,raw}.patch
 }
 
 foreach_make() {

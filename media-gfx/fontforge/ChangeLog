@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/fontforge
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.149 2012/09/05 07:52:11 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.150 2013/05/28 15:46:22 blueness Exp $
+
+  28 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/fontforge-20110222-remove-useless-extern.patch,
+  fontforge-20110222-r1.ebuild:
+  Remove useless extern, fixes compile on uclibc, bug #469954
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> fontforge-20100501.ebuild,
   fontforge-20110222-r1.ebuild, fontforge-20110222.ebuild:
