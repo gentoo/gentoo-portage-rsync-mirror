@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.ebuild,v 1.1 2013/04/10 16:41:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.ebuild,v 1.2 2013/05/27 23:40:23 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -26,7 +26,8 @@ RDEPEND="${DEPEND}
 	>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
 	dev-python/httplib2[${PYTHON_USEDEP}]
 	dev-python/iso8601[${PYTHON_USEDEP}]
-	dev-python/jsonschema[${PYTHON_USEDEP}]
+	>=dev-python/jsonschema-0.7[${PYTHON_USEDEP}]
+	<dev-python/jsonschema-1[${PYTHON_USEDEP}]
 	dev-python/kombu[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
