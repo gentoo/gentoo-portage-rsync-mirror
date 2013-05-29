@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-3_p2013030200.ebuild,v 1.2 2013/05/11 07:55:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-3_p2013030200.ebuild,v 1.3 2013/05/29 06:32:20 xmw Exp $
 
 EAPI="4"
 
@@ -41,6 +41,8 @@ src_prepare() {
 		-e "s:^\(VARDIR=\).*$:\1${ROOT}var/cache/${PN}:" \
 		-e "s:^\(X11_PREFIX=\).*:\1\$(PREFIX)/usr:" \
 		-i system-autodetect.mk || die
+	sed -e 's/gcc/$(CC)/g' \
+		-i ioncore/Makefile || die
 	export STRIPPROG=true
 
 	use nls || export DEFINES=" -DCF_NO_LOCALE -DCF_NO_GETTEXT"
@@ -54,6 +56,11 @@ src_prepare() {
 	fi
 
 	tc-export CC
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" AR="$(tc-getAR)" \
+		RANLIB="$(tc-getRANLIB)"
 }
 
 src_install() {

@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/netgen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/netgen/ChangeLog,v 1.6 2013/05/24 05:57:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/netgen/ChangeLog,v 1.7 2013/05/29 06:51:32 xmw Exp $
+
+*netgen-1.4.48 (29 May 2013)
+
+  29 May 2013; Michael Weber <xmw@gentoo.org> +netgen-1.4.48.ebuild,
+  -netgen-1.4.42.ebuild, -netgen-1.4.44.ebuild:
+  Version bump, drop old.
 
 *netgen-1.4.44 (24 May 2013)
 
