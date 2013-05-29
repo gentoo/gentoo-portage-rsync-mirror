@@ -1,0 +1,179 @@
+--- zsh-5.0.2/Doc/zsh.texi
++++ zsh-5.0.2/Doc/zsh.texi
+@@ -1,4 +1,3 @@
+-
+ \input texinfo.tex
+ @c %**start of header
+ @iftex
+@@ -389,6 +388,7 @@
+ 
+ @end table
+ 
++@noindent
+ The up-to-date source code is available via anonymous CVS and Git from
+ Sourceforge.  See @t{http://sourceforge.net/projects/zsh/} for details.
+ A summary of instructions for the CVS and Git archives can be found at
+@@ -430,8 +430,8 @@
+ @item @t{<zsh-announce-unsubscribe@@zsh.org>}
+ @item @t{<zsh-users-unsubscribe@@zsh.org>}
+ @item @t{<zsh-workers-unsubscribe@@zsh.org>}
+-@item
+ @end table
++@sp 1
+ 
+ @noindent
+ YOU ONLY NEED TO JOIN ONE OF THE MAILING LISTS AS THEY ARE NESTED.
+@@ -1080,8 +1080,8 @@
+ @item @t{/etc/zshrc}
+ @item @t{/etc/zlogin}
+ @item @t{/etc/zlogout}    (installation-specific - @t{/etc} is the default)
+-@item
+ @end table
++@sp 1
+ @c (avoiding a yodl bug)
+ 
+ @noindent
+@@ -1651,8 +1651,8 @@
+ @item Errors in variable substitution syntax
+ @item Failure to convert characters in @t{$'}...@t{'} expressions
+ similar options
+-@item
+ @end table
++@sp 1
+ 
+ @noindent
+ If the @t{POSIX_BUILTINS} option is set, more errors associated with
+@@ -14685,8 +14685,8 @@
+ used for contexts in the parameter @t{zle_highlight},
+ @ref{Character Highlighting};
+ for example, @t{standout} or @t{fg=red,bold}.
+-@item
+ @end table
++@sp 1
+ 
+ @noindent
+ For example, 
+@@ -22643,8 +22643,7 @@
+ described above.
+ 
+ @findex _pick_variant
+-@item @t{_pick_variant} [ @t{-b} @var{builtin-label} ] [ @t{-c}
+-@var{command} ] [ @t{-r} @var{name} ]
++@item @t{_pick_variant} [ @t{-b} @var{builtin-label} ] [ @t{-c} @var{command} ] [ @t{-r} @var{name} ]
+ @itemx    @var{label}@t{=}@var{pattern} ... @var{label} [ @var{args} ... ]
+ This function is used to resolve situations where a single command name
+ requires more than one type of handling, either because it
+@@ -23260,8 +23259,8 @@
+ @item @t{compctl} @t{-M} @var{match-specs} ...
+ @item @t{compctl} @t{-L} [ @t{-CDTM} ] [ @var{command} ... ]
+ @item @t{compctl} @t{+} @var{command} ...
+-@item
+ @end table
++@sp 1
+ 
+ @noindent
+ Control the editor's completion behavior according to the supplied set
+@@ -23405,8 +23404,8 @@
+ @item [ @t{-y} @var{func-or-var} ] [ @t{-l} @var{cmd} ] [ @t{-h} @var{cmd} ] [ @t{-U} ]
+ @item [ @t{-t} @var{continue} ] [ @t{-J} @var{name} ] [ @t{-V} @var{name} ]
+ @item [ @t{-M} @var{match-spec} ]
+-@item
+ @end table
++@sp 1
+ 
+ @noindent
+ The remaining @var{options} specify the type of command arguments
+@@ -23838,8 +23837,8 @@
+ @noindent
+ @table @asis
+ @item @t{compctl} [ @t{-CDT} ] @var{options} @t{+} @var{options} [ @t{+} ... ] [ @t{+} ] @var{command} ...
+-@item
+ @end table
++@sp 1
+ 
+ @noindent
+ The form with `@t{+}' specifies alternative options. Completion is
+@@ -23866,8 +23865,8 @@
+ @item          [ @var{command} ... ]
+ @item @t{compctl} [ @t{-CDT} ] @var{options} [ @t{-x} @var{pattern} @var{options} @t{-} ... @t{-}@t{-} ]
+ @item          [ @t{+} @var{options} [ @t{-x} ... @t{-}@t{-} ] ... [@t{+}] ] [ @var{command} ... ]
+-@item
+ @end table
++@sp 1
+ 
+ @noindent
+ The form with `@t{-x}' specifies extended completion for the
+@@ -24980,7 +24979,7 @@
+ The subcommand @t{position} writes various positions associated with
+ @var{targetwin} into the array named @var{array}.
+ These are, in order:
+-@table @asis
++@itemize @bullet
+ @item 
+ The y and x coordinates of the cursor relative to the top left
+ of @var{targetwin}
+@@ -24989,7 +24988,7 @@
+ screen
+ @item 
+ The size of @var{targetwin} in y and x dimensions.
+-@end table
++@end itemize
+ 
+ @noindent
+ Outputting characters and strings are achieved by @t{char} and @t{string}
+@@ -28870,30 +28869,37 @@
+ it returns status 0 and sets elements of the associative
+ array @t{reply} as follows:
+ @table @asis
+-@item timeNL()The time as a string of digits in the same units as
++@item time
++The time as a string of digits in the same units as
+ @t{$EPOCHSECONDS}
+-@item schedtimeNL()The regularly scheduled time.  This may differ from
++@item schedtime
++The regularly scheduled time.  This may differ from
+ the actual event time @t{time} if this is a recurring event and the next
+ occurrence has been rescheduled.  Then @t{time} gives the actual time
+ and @t{schedtime} the time of the regular recurrence before modification.
+ @item text1
+ The text from the line not including the date and time of the
+ event, but including any @t{WARN} or @t{RPT} keywords and values.
+-@item warntimeNL()Any warning time given by the @t{WARN} keyword as a string
++@item warntime
++Any warning time given by the @t{WARN} keyword as a string
+ of digits containing the time at which to warn in the same units as
+ @t{$EPOCHSECONDS}.  (Note this is an absolute time, not the relative time
+ passed down.)  Not set no @t{WARN} keyword and value were
+ matched.
+-@item warnstrNL()The raw string matched after the @t{WARN} keyword, else unset.
+-@item rpttimeNL()Any recurrence time given by the @t{RPT} keyword as a string
++@item warnstr
++The raw string matched after the @t{WARN} keyword, else unset.
++@item rpttime
++Any recurrence time given by the @t{RPT} keyword as a string
+ of digits containing the time of the recurrence in the same units
+ as @t{$EPOCHSECONDS}.  (Note this is an absolute time.)  Not set if
+ no @t{RPT} keyword and value were matched.
+-@item schedrpttimeNL()The next regularly scheduled occurrence of a recurring
++@item schedrpttime
++The next regularly scheduled occurrence of a recurring
+ event before modification.  This may differ from @t{rpttime}, which is the
+ actual time of the event that may have been rescheduled from the regular
+ time.
+-@item rptstrNL()The raw string matched after the @t{RPT} keyword, else unset.
++@item rptstr
++The raw string matched after the @t{RPT} keyword, else unset.
+ @item text2
+ The text from the line after removal of the date and any
+ keywords and values.
+@@ -35504,8 +35510,8 @@
+ @noindent
+ @example
+ zstyle+ ':foo:bar' style1 value1 \ 
+-      + ':baz'     style2 value2 \ 
+-      + ':frob'    style3 value3
++       +':baz'     style2 value2 \ 
++       +':frob'    style3 value3
+ @end example
+ 
+ @noindent

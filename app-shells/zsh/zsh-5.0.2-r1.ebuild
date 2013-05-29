@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-5.0.2-r1.ebuild,v 1.1 2013/03/12 21:47:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-5.0.2-r1.ebuild,v 1.2 2013/05/29 10:26:09 radhermit Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-init.d-gentoo-r1.diff
 	epatch "${FILESDIR}"/${PN}-fix-parameter-modifier-crash.patch
+	epatch "${FILESDIR}"/${PN}-5.0.2-texinfo-5.1.patch
 
 	cp "${FILESDIR}"/zprofile-1 "${T}"/zprofile || die
 	eprefixify "${T}"/zprofile || die
@@ -164,17 +165,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	# should link to http://www.gentoo.org/doc/en/zsh.xml
-	elog
-	elog "If you want to enable Portage completions and Gentoo prompt,"
-	elog "emerge app-shells/zsh-completion and add"
-	elog "	autoload -U compinit promptinit"
-	elog "	compinit"
-	elog "	promptinit; prompt gentoo"
-	elog "to your ~/.zshrc"
-	elog
-	elog "Also, if you want to enable cache for the completions, add"
-	elog "	zstyle ':completion::complete:*' use-cache 1"
-	elog "to your ~/.zshrc"
-	elog
+	if [[ -z ${REPLACING_VERSIONS} ]] ; then
+		# should link to http://www.gentoo.org/doc/en/zsh.xml
+		elog
+		elog "If you want to enable Portage completions and Gentoo prompt,"
+		elog "emerge app-shells/zsh-completion and add"
+		elog "	autoload -U compinit promptinit"
+		elog "	compinit"
+		elog "	promptinit; prompt gentoo"
+		elog "to your ~/.zshrc"
+		elog
+		elog "Also, if you want to enable cache for the completions, add"
+		elog "	zstyle ':completion::complete:*' use-cache 1"
+		elog "to your ~/.zshrc"
+		elog
+	fi
 }

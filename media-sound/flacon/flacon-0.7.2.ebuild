@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/flacon-0.7.2.ebuild,v 1.1 2012/08/23 15:16:36 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/flacon-0.7.2.ebuild,v 1.2 2013/05/29 10:11:23 nimiux Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="https://flacon.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="flac mac mp3 mp4 ogg replaygain tta wavpack"
 
 RDEPEND="

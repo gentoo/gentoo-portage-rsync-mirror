@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.212 2013/03/15 13:29:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.213 2013/05/29 10:26:09 radhermit Exp $
+
+  29 May 2013; Tim Harder <radhermit@gentoo.org> zsh-5.0.2-r1.ebuild,
+  +files/zsh-5.0.2-texinfo-5.1.patch:
+  Fix build with texinfo-5.1 (bug #464122) and only show elog info on new
+  installs.
 
   15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> zsh-5.0.2.ebuild:
   Stable for sh, wrt bug #436348
