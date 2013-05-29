@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.4.ebuild,v 1.1 2013/05/26 08:54:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.4.ebuild,v 1.2 2013/05/29 11:19:38 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
-PYTHON_REQ_USE="sqlite xml"
+PYTHON_REQ_USE="sqlite,xml"
 
 AUTOTOOLS_AUTORECONF=true
 
@@ -23,10 +23,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gnome kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
 
 REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
 	libnotify? ( dbus )
 	avahi? ( dbus )"
 
 COMMON_DEPEND="
+	${PYTHON_DEPS}
 	dev-python/pygtk:2[${PYTHON_USEDEP}]
 	x11-libs/gtk+:2"
 DEPEND="${COMMON_DEPEND}

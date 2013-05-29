@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qtfm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.13 2013/03/02 23:52:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.14 2013/05/29 11:07:45 nimiux Exp $
+
+  29 May 2013; Chema Alonso <nimiux@gentoo.org> qtfm-5.5.ebuild:
+  Stable for amd64 wrt bug #471678
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qtfm-5.4.ebuild,
   qtfm-5.5.ebuild:

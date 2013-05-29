@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.183 2013/05/26 08:54:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.184 2013/05/29 11:19:38 jlec Exp $
+
+  29 May 2013; Justin Lecher <jlec@gentoo.org> gajim-0.15.3-r1.ebuild,
+  gajim-0.15.4.ebuild:
+  Add missing python to DEPs and REQUIERED_USE
 
 *gajim-0.15.4 (26 May 2013)
 
