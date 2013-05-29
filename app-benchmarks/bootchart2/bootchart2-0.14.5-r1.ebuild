@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.5-r1.ebuild,v 1.1 2013/01/30 11:25:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.5-r1.ebuild,v 1.2 2013/05/29 15:22:33 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,9 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="svg test X"
 
-REQUIRED_USE="test? ( X )"
+REQUIRED_USE="
+	X? ( ${PYTHON_REQUIRED_USE} )
+	test? ( X )"
 
 RDEPEND="
 	!app-benchmarks/bootchart
@@ -60,7 +62,7 @@ src_install() {
 
 		python_optimize "${ED}"/$(python_get_sitedir)
 		cp pybootchartgui.py "${T}"/pybootchartgui || die
-		python_doscript "${T}"/pybootchartgui
+		python_newscript pybootchartgui.py pybootchartgui
 	}
 	use X && python_foreach_impl installation
 

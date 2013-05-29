@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.269 2013/05/12 21:25:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.270 2013/05/29 15:15:05 vapier Exp $
+
+  29 May 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.61-test.patch, netpbm-10.61.00.ebuild:
+  Disable jbig tests when USE=-jbig and fix all-in-place test failure due to
+  fiascotopnm #450530#6 by Andreas Sturmlechner.
 
   12 May 2013; Mike Frysinger <vapier@gentoo.org> netpbm-10.61.00.ebuild:
   Install local set of libs before testing #467198 by Patrick Lauer.
