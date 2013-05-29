@@ -7,7 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="kernel-builtin">Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree</flag>
-		<flag name="rootfs">Install zfs-shutdown script to support exporting a pool containing rootfs</flag>
+		<flag name="rootfs">Enable dependencies required for booting off a pool containing a rootfs</flag>
 		<flag name="test-suite">Install regression test suite</flag>
 	</use>
 </pkgmetadata>
