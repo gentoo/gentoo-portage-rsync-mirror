@@ -1,6 +1,9 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.17 2013/05/28 12:37:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.18 2013/05/29 11:32:35 nimiux Exp $
+
+  29 May 2013; Chema Alonso <nimiux@gentoo.org> quiterss-0.12.5.ebuild:
+  Stable for amd64 wrt bug #471680
 
   28 May 2013; Sergey Popov <pinkbyte@gentoo.org> quiterss-9999.ebuild:
   Update locales list, thanks to Nikoli <nikoli AT lavabit.com>

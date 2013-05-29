@@ -1,10 +1,16 @@
 # ChangeLog for dev-java/javax-inject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javax-inject/ChangeLog,v 1.1 2013/03/26 04:17:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javax-inject/ChangeLog,v 1.2 2013/05/29 11:34:30 tomwij Exp $
+
+*javax-inject-1-r1 (29 May 2013)
+
+  29 May 2013; Tom Wijsman <TomWij@gentoo.org> +files/javax-inject-1-build.xml,
+  +javax-inject-1-r1.ebuild:
+  Revision bump to use generated build.xml instead of bailing out due to QA
+  violation.
 
 *javax-inject-1 (26 Mar 2013)
 
   26 Mar 2013; Tim Harder <radhermit@gentoo.org> +javax-inject-1.ebuild,
   +metadata.xml:
   Initial import.
-
