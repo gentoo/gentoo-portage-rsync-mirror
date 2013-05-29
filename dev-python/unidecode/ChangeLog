@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.5 2013/04/08 13:41:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.6 2013/05/29 05:55:13 idella4 Exp $
+
+  29 May 2013; Ian Delaney <idella4@gentoo.org> unidecode-0.04.9-r1.ebuild:
+  add py3.3 support
 
 *unidecode-0.04.9-r1 (08 Apr 2013)
 
