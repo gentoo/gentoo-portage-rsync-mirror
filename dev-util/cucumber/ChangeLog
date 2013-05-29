@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.60 2013/05/28 13:13:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.61 2013/05/29 19:22:42 graaff Exp $
+
+  29 May 2013; Hans de Graaff <graaff@gentoo.org> cucumber-1.3.2.ebuild:
+  Fix rspec dependency: bug 471416.
 
   28 May 2013; Jeroen Roovers <jer@gentoo.org> cucumber-1.3.2.ebuild:
   Marked ~hppa (bug #471306).

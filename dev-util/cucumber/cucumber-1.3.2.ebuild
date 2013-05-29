@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.2.ebuild,v 1.2 2013/05/28 13:13:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.2.ebuild,v 1.3 2013/05/29 19:22:42 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19"
@@ -24,7 +24,7 @@ IUSE="examples test"
 
 ruby_add_bdepend "
 	test? (
-		>=dev-ruby/rspec-2.10.0
+		>=dev-ruby/rspec-2.13.0
 		>=dev-ruby/nokogiri-1.5.2
 		>=dev-ruby/spork-0.9.0
 		>=dev-ruby/syntax-1.0.0

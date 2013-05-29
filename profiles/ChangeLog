@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7888 2013/05/29 18:31:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7889 2013/05/29 19:16:02 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2013; Hans de Graaff <graaff@gentoo.org> base/make.defaults:
+  Change default order of RUBY_TARGETS so that ruby19 will be the default on
+  new installs, bug 425138.
 
   29 May 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask =net-analyzer/tcpreplay-3.5*.

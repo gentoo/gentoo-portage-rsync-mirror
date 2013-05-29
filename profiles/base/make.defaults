@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.97 2013/05/28 20:27:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.98 2013/05/29 19:16:02 graaff Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -107,7 +107,7 @@ USE="${USE} modules"
 
 # Alex Legler <a3li@gentoo.org> (30 Nov 2009)
 # Default Ruby build targets
-RUBY_TARGETS="ruby18 ruby19"
+RUBY_TARGETS="ruby19 ruby18"
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Dec 2009)
 # Enable USE cxx by default so base-system and toolchain pkgs can start using USE cxx
