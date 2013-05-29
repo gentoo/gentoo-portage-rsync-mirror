@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.1.ebuild,v 1.1 2013/04/30 16:41:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.1.ebuild,v 1.2 2013/05/29 15:40:56 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,10 @@ PLUGINS_IUSE="bzr emacs firefox geany mono telepathy thunderbird tomboy vim xcha
 PLUGINS="bzr emacs firefox geany monodevelop telepathy thunderbird tomboy vim xchat"
 IUSE="${PLUGINS_IUSE} static-libs"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="
+	${PYTHON_DEPS}
 	dev-libs/libzeitgeist
 	x11-libs/gtk+:2
 	emacs? ( virtual/emacs )

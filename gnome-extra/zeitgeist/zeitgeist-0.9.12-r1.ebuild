@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12-r1.ebuild,v 1.6 2013/05/16 14:09:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12-r1.ebuild,v 1.7 2013/05/29 15:39:03 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
+
 AUTOTOOLS_AUTORECONF=true
 VALA_MIN_API_VERSION=0.18
 
@@ -22,9 +23,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+datahub +dbus downloads-monitor extensions +fts icu introspection nls plugins sql-debug telepathy"
 
-REQUIRED_USE="downloads-monitor? ( datahub )"
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
+	downloads-monitor? ( datahub )"
 
 RDEPEND="
+	${PYTHON_DEPS}
 	!gnome-extra/zeitgeist-datahub
 	dev-libs/json-glib
 	dev-python/dbus-python[${PYTHON_USEDEP}]

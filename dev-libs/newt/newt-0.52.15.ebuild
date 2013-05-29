@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.1 2013/05/04 00:40:07 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.2 2013/05/29 15:32:40 jlec Exp $
 
 EAPI="5"
+
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils multilib python-r1 autotools
@@ -16,13 +17,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gpm tcl nls"
 
-RDEPEND="=sys-libs/slang-2*
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="
 	>=dev-libs/popt-1.6
+	=sys-libs/slang-2*
 	elibc_uclibc? ( sys-libs/ncurses )
 	gpm? ( sys-libs/gpm )
 	tcl? ( >=dev-lang/tcl-8.5 )
 	"
-
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}"
 
