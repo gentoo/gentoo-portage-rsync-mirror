@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.11 2012/03/07 19:33:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.12 2013/05/29 06:17:40 jlec Exp $
 
 EAPI=3
 
@@ -27,7 +27,7 @@ IUSE="+openmp test"
 
 SCIDEPS="
 	>=sci-libs/ccp4-libs-6.1
-	>=sci-libs/clipper-20090520
+	sci-libs/clipper
 	>=sci-libs/coot-data-2
 	>=sci-libs/gsl-1.3
 	>=sci-libs/mmdb-1.23

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/pelican-3.2.1.ebuild,v 1.1 2013/05/22 09:00:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/pelican-3.2.1.ebuild,v 1.2 2013/05/29 06:10:10 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit distutils-r1
 
@@ -21,21 +21,18 @@ DEPEND="dev-python/feedgenerator[${PYTHON_USEDEP}]
 	dev-python/docutils[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
-	dev-python/unidecode
+	dev-python/unidecode[${PYTHON_USEDEP}]
 	dev-python/blinker[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
 	markdown? ( dev-python/markdown[${PYTHON_USEDEP}] )
 	virtual/python-argparse[${PYTHON_USEDEP}]"
 RDEPEND=""
 
-DOCS="README.rst"
+DOCS=( README.rst )
 
-python_install() {
-	distutils-r1_python_install
-	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins -r samples/* || die "failed to install examples"
-	fi
+python_install_all() {
+	use examples && local EXAMPLES=( samples/. )
+	distutils-r1_python_install_all
 }
 
 # no tests: tests/content not in tarball for 2.8.1
