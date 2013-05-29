@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cbugzilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbugzilla/ChangeLog,v 1.2 2013/05/28 08:19:58 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbugzilla/ChangeLog,v 1.3 2013/05/29 13:32:53 yac Exp $
+
+  29 May 2013; Jan Matejka <yac@gentoo.org> cbugzilla-0.1.1.ebuild:
+  fix missing dependency
 
 *cbugzilla-0.1.1 (28 May 2013)
 

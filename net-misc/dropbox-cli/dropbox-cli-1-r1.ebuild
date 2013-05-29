@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/dropbox-cli-1-r1.ebuild,v 1.6 2013/02/14 20:20:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/dropbox-cli-1-r1.ebuild,v 1.7 2013/05/29 13:34:14 hasufell Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="net-misc/dropbox
 	${PYTHON_DEPS}"

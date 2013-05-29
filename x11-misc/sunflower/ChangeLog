@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/sunflower
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/ChangeLog,v 1.6 2013/04/14 19:22:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/ChangeLog,v 1.7 2013/05/29 13:38:21 hasufell Exp $
+
+  29 May 2013; Julian Ospald <hasufell@gentoo.org> sunflower-0.1_alpha53.ebuild,
+  sunflower-0.1_alpha54.ebuild, sunflower-0.1_alpha55.ebuild:
+  update REQUIRED_USE to include PYTHON_REQUIRED_USE
 
 *sunflower-0.1_alpha55 (14 Apr 2013)
 

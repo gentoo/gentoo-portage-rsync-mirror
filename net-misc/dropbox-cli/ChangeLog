@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox-cli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.9 2013/02/14 20:20:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.10 2013/05/29 13:34:14 hasufell Exp $
+
+  29 May 2013; Julian Ospald <hasufell@gentoo.org> dropbox-cli-1-r1.ebuild:
+  update REQUIRED_USE to include PYTHON_REQUIRED_USE
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dropbox-cli-1-r1.ebuild:
   Stable for x86, wrt bug #457442
