@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/relax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.4 2013/05/14 14:36:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.5 2013/05/29 16:27:19 jlec Exp $
+
+  29 May 2013; Justin Lecher <jlec@gentoo.org> relax-2.2.1.ebuild,
+  relax-2.2.5.ebuild:
+  Fix usage of new python r1 eclasses (missing PYTHON_REQUIRED_USE,
+  PYTHON_DEPS)
 
   14 May 2013; Justin Lecher <jlec@gentoo.org> relax-2.2.5.ebuild:
   Add missing dep on dev-python/wxpython

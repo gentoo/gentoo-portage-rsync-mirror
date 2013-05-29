@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.3 2013/03/02 23:17:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.4 2013/05/29 16:17:06 jlec Exp $
 
 EAPI=5
 
@@ -17,9 +17,16 @@ LICENSE="LGPL-2 GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cuda mpi +python sql +threads +webkit"
 
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
 RDEPEND="
 	dev-cpp/eigen:3
 	dev-libs/boost
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	dev-qt/qttest:4
+	dev-qt/qtwebkit:4
 	media-libs/glew
 	sci-libs/fftw:3.0[threads?]
 	sci-libs/gsl
@@ -27,11 +34,6 @@ RDEPEND="
 	sci-mathematics/lpsolve
 	virtual/opengl
 	x11-libs/libX11
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
-	dev-qt/qtopengl:4
-	dev-qt/qttest:4
-	dev-qt/qtwebkit:4
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	mpi? ( virtual/mpi )
 	python? ( ${PYTHON_DEPS} )

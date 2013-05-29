@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-2.2.1.ebuild,v 1.1 2013/02/04 07:57:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-2.2.1.ebuild,v 1.2 2013/05/29 16:27:19 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} )
+PYTHON_COMPAT=( python2_7 )
 
 WX_GTK_VER="2.8"
 
@@ -19,11 +19,14 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="
+	${PYTHON_DEPS}
 	dev-python/numpy[${PYTHON_USEDEP}]
 	>=sci-libs/bmrblib-1.0.1_pre198[${PYTHON_USEDEP}]
 	>=sci-libs/minfx-1.0.4_pre98[${PYTHON_USEDEP}]
-	sci-libs/scipy
+	sci-libs/scipy[${PYTHON_USEDEP}]
 	x11-libs/wxGTK:2.8[X]"
 DEPEND="${RDEPEND}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.29 2013/03/02 23:21:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.30 2013/05/29 16:31:23 jlec Exp $
+
+  29 May 2013; Justin Lecher <jlec@gentoo.org> qgis-1.8.0.ebuild, metadata.xml:
+  Fix usage of new python r1 eclasses (missing PYTHON_REQUIRED_USE,
+  PYTHON_DEPS)
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qgis-1.7.0.ebuild,
   qgis-1.8.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r12.ebuild,v 1.1 2013/05/03 16:19:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r12.ebuild,v 1.2 2013/05/29 16:31:03 jlec Exp $
 
 EAPI=5
 
@@ -36,7 +36,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="
+	${PYTHON_DEPS}
 	!<sci-chemistry/ccp4-6.1.3
 	!<sci-chemistry/ccp4-apps-${PV}-r10
 	app-shells/tcsh

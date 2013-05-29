@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r5.ebuild,v 1.1 2013/05/14 12:15:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r5.ebuild,v 1.2 2013/05/29 16:14:45 jlec Exp $
 
 EAPI=5
 
@@ -21,13 +21,16 @@ LICENSE="cns"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="
+	${PYTHON_DEPS}
 	dev-tcltk/tix
 	dev-lang/tk
-	dev-python/numpy
-	dev-python/matplotlib[tk]
+	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/matplotlib[${PYTHON_USEDEP},tk]
 	>=sci-chemistry/cns-1.2.1-r7[aria,openmp]
-	>=sci-chemistry/ccpn-2.2
+	>=sci-chemistry/ccpn-2.2[${PYTHON_USEDEP}]
 	sci-chemistry/clashlist
 	sci-chemistry/procheck
 	sci-libs/clashscore-db"

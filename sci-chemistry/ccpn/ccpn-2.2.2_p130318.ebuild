@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p130318.ebuild,v 1.1 2013/03/18 12:36:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p130318.ebuild,v 1.2 2013/05/29 16:18:27 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
-PYTHON_REQ_USE="ssl tk"
+PYTHON_REQ_USE="ssl,tk"
 
 inherit eutils multilib portability python-single-r1 toolchain-funcs versionator
 
@@ -25,11 +25,14 @@ LICENSE="|| ( CCPN LGPL-2.1 )"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+opengl"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="
+	${PYTHON_DEPS}
 	dev-lang/tk[threads]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-tcltk/tix
-	=sci-libs/ccpn-data-"${MY_MAJOR}"*
+	=sci-libs/ccpn-data-"${MY_MAJOR}"*[${PYTHON_USEDEP}]
 	sci-biology/psipred
 	x11-libs/libXext
 	x11-libs/libX11

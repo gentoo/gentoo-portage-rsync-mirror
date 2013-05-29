@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pdb-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.12 2013/05/10 19:57:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.13 2013/05/29 16:20:49 jlec Exp $
+
+  29 May 2013; Justin Lecher <jlec@gentoo.org> pdb-tools-0.2.1.ebuild,
+  pdb-tools-0.2.1-r1.ebuild:
+  Fix usage of new python r1 eclasses (missing PYTHON_REQUIRED_USE)
 
 *pdb-tools-0.2.1-r1 (10 May 2013)
 

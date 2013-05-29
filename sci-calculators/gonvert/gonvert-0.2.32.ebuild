@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/gonvert-0.2.32.ebuild,v 1.1 2013/03/12 13:09:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/gonvert-0.2.32.ebuild,v 1.2 2013/05/29 16:11:41 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/pygtk:2[${PYTHON_USEDEP}]"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+DEPEND="
+	${PYTHON_DEPS}
+	dev-python/pygtk:2[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/0.2.23-paths.patch )

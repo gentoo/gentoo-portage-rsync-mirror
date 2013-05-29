@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/osm-gps-map-0.7.3.ebuild,v 1.5 2013/05/20 13:59:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/osm-gps-map-0.7.3.ebuild,v 1.6 2013/05/29 16:29:05 jlec Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+introspection python"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	>=dev-libs/glib-2.16.0:2

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-2.1.1.ebuild,v 1.1 2013/02/13 13:13:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-2.1.1.ebuild,v 1.2 2013/05/29 16:09:44 jlec Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ SLOT="0"
 LICENSE="vienna-rna"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc openmp python static-libs"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 DEPEND="
 	dev-lang/perl

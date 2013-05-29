@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/acpype/acpype-389.ebuild,v 1.1 2013/05/17 10:53:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/acpype/acpype-389.ebuild,v 1.2 2013/05/29 16:14:37 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
-DEPEND="sci-chemistry/ambertools"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+DEPEND="
+	${PYTHON_DEPS}
+	sci-chemistry/ambertools"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

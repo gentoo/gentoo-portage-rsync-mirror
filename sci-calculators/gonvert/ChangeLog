@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/gonvert
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.13 2013/03/12 13:09:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.14 2013/05/29 16:11:41 jlec Exp $
+
+  29 May 2013; Justin Lecher <jlec@gentoo.org> gonvert-0.2.32.ebuild:
+  Fix usage of new python r1 eclasses (missing PYTHON_REQUIRED_USE)
 
 *gonvert-0.2.32 (12 Mar 2013)
 
