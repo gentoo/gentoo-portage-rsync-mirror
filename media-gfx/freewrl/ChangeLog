@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/freewrl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.50 2012/11/04 01:21:28 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.51 2013/05/29 20:40:01 axs Exp $
+
+*freewrl-9999 (29 May 2013)
+
+  29 May 2013; Ian Stakenvicius <axs@gentoo.org> +freewrl-9999.ebuild:
+  added live ebuild. NOTE, upstream does NOT keep HEAD in a buildable state,
+  ymmv
 
 *freewrl-1.22.13-r2 (04 Nov 2012)
 
@@ -219,4 +225,3 @@
   27 Jun 2004; Hanno Boeck <hanno@gentoo.org>
   +files/FreeWRL-1.06+gentoo_pd.diff, +freewrl-1.06.ebuild:
   User submitted ebuild from Denis Pitzalis in bug #22358.
-
