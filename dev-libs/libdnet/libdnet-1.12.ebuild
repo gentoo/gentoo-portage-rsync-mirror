@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.5 2013/05/29 16:04:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.6 2013/05/29 17:33:09 jer Exp $
 
 EAPI=5
 
@@ -27,13 +27,6 @@ RESTRICT="test"
 
 DOCS=( README THANKS TODO )
 
-pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
 src_prepare() {
 	# Useless copy
 	rm -r trunk/ || die
@@ -42,6 +35,7 @@ src_prepare() {
 		-e 's/libcheck.a/libcheck.so/g' \
 		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
 		configure.in || die
+	sed -i -e 's|-L@libdir@ ||g' dnet-config.in || die
 	use ipv6 && epatch "${WORKDIR}/${P}.ipv6-1.patch"
 	autotools-utils_src_prepare
 }

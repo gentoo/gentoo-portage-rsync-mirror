@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.ebuild,v 1.1 2013/05/20 10:44:39 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.ebuild,v 1.2 2013/05/29 17:46:16 rich0 Exp $
 
 EAPI="3"
 
@@ -58,10 +58,10 @@ src_install(){
 	cp -pPR tools/* "${ED}${ANDROID_SDK_DIR}/tools" || die "failed to install tools"
 
 	# Maybe this is needed for the tools directory too.
-	dodir "${ANDROID_SDK_DIR}"/{add-ons,docs,extras,platforms,platform-tools,samples,sources,system-images,temp} || die "failed to dodir"
+	dodir "${ANDROID_SDK_DIR}"/{add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp} || die "failed to dodir"
 
-	fowners root:android "${ANDROID_SDK_DIR}"/{add-ons,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools} || die
-	fperms 0775 "${ANDROID_SDK_DIR}"/{add-ons,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools} || die
+	fowners root:android "${ANDROID_SDK_DIR}"/{add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools} || die
+	fperms 0775 "${ANDROID_SDK_DIR}"/{add-ons,build-tools,docs,extras,platforms,platform-tools,samples,sources,system-images,temp,tools} || die
 
 	echo "PATH=\"${EPREFIX}${ANDROID_SDK_DIR}/tools:${EPREFIX}${ANDROID_SDK_DIR}/platform-tools\"" > "${T}/80${PN}" || die
 
