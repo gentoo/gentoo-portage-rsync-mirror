@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-0.5.96.ebuild,v 1.1 2013/05/26 20:08:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-0.5.96.ebuild,v 1.2 2013/05/29 10:52:33 pinkbyte Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ RDEPEND="
 		~app-leechcraft/lc-gacts-${PV}
 		~app-leechcraft/lc-glance-${PV}
 		~app-leechcraft/lc-historyholder-${PV}
-		~app-leechcraft/lc-kinotify-${PV}
+		~virtual/leechcraft-notifier-${PV}
 		~app-leechcraft/lc-knowhow-${PV}
 		~app-leechcraft/lc-lackman-${PV}
 		~app-leechcraft/lc-launchy-${PV}
