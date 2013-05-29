@@ -1,14 +1,15 @@
---- Makefile.orig	2013-01-22 16:53:11.574351933 -0500
-+++ Makefile	2013-01-22 16:57:38.801999641 -0500
-@@ -90,7 +90,6 @@
+--- Makefile.orig	2013-05-28 17:58:03.379228527 -0400
++++ Makefile	2013-05-28 17:58:24.768491369 -0400
+@@ -88,8 +88,6 @@
+       endif
      endif
    endif
- else
+-else
 -  CFLAGS += -O
  endif
  
  ifdef DEBUG
-@@ -109,6 +108,7 @@
+@@ -108,6 +106,7 @@
    endif
  else
    CFLAGS += -DNDEBUG
@@ -16,7 +17,7 @@
  endif
  
  ifneq ($(PROFILE),)
-@@ -121,6 +121,7 @@
+@@ -120,6 +119,7 @@
  
  ifneq  ($(MULTI_THREAD),)
    CFLAGS += -DMULTI_THREAD=$(MULTI_THREAD)
@@ -24,7 +25,7 @@
    ifneq  ($(MULTI_THREAD),1)
      ifeq ($(OSTYPE),mingw)
  #use lpthreadGC2d for debug alternatively
-@@ -135,10 +136,12 @@
+@@ -134,10 +134,12 @@
    REV = $(shell svnversion)
    ifneq ($(REV),)
      CFLAGS  += -DREVISION="$(REV)"
@@ -37,7 +38,7 @@
  CCFLAGS  += -Wstrict-prototypes
  
  
-@@ -450,6 +453,7 @@
+@@ -456,6 +458,7 @@
  ifeq ($(BACKEND),sdl)
    SOURCES += simsys_s.cc
    CFLAGS  += -DUSE_16BIT_DIB
@@ -45,7 +46,7 @@
    ifeq ($(OSTYPE),mac)
      # Core Audio (Quicktime) base sound system routines
      SOURCES += sound/core-audio_sound.mm
-@@ -482,6 +486,7 @@
+@@ -488,6 +491,7 @@
      endif
    endif
    CFLAGS += $(SDL_CFLAGS)
@@ -53,7 +54,7 @@
    LIBS   += $(SDL_LDFLAGS)
  endif
  
-@@ -491,6 +496,7 @@
+@@ -497,6 +501,7 @@
    SOURCES += sound/sdl_mixer_sound.cc
    SOURCES += music/sdl_midi.cc
    CFLAGS  += -DUSE_16BIT_DIB
@@ -61,7 +62,7 @@
    ifeq ($(SDL_CONFIG),)
      SDL_CFLAGS  := -I$(MINGDIR)/include/SDL -Dmain=SDL_main
      SDL_LDFLAGS := -lmingw32 -lSDLmain -lSDL
-@@ -505,12 +511,14 @@
+@@ -511,6 +516,7 @@
      endif
    endif
    CFLAGS += $(SDL_CFLAGS)
@@ -69,22 +70,15 @@
    LIBS   += $(SDL_LDFLAGS) -lSDL_mixer
  endif
  
- ifeq ($(BACKEND),opengl)
-   SOURCES += simsys_opengl.cc
-   CFLAGS  += -DUSE_16BIT_DIB
-+  CXXFLAGS  += -DUSE_16BIT_DIB
-   ifeq ($(OSTYPE),mac)
-     # Core Audio (Quicktime) base sound system routines
-     SOURCES += sound/core-audio_sound.mm
-@@ -538,6 +546,7 @@
+@@ -544,6 +550,7 @@
      endif
    endif
    CFLAGS += $(SDL_CFLAGS)
 +  CXXFLAGS += $(SDL_CFLAGS)
-   LIBS   += $(SDL_LDFLAGS)
+   LIBS   += $(SDL_LDFLAGS) -lglew32
    ifeq ($(OSTYPE),mingw)
      LIBS += -lopengl32
-@@ -553,6 +562,7 @@
+@@ -559,6 +566,7 @@
  endif
  
  CFLAGS += -DCOLOUR_DEPTH=$(COLOUR_DEPTH)
@@ -92,7 +86,7 @@
  
  ifneq ($(findstring $(OSTYPE), cygwin mingw),)
    SOURCES += simres.rc
-@@ -560,7 +570,6 @@
+@@ -566,7 +574,6 @@
  endif
  
  CCFLAGS  += $(CFLAGS)

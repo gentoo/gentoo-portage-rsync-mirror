@@ -1,18 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.112.2.ebuild,v 1.1 2013/03/21 01:44:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.112.3.ebuild,v 1.1 2013/05/28 23:20:04 mr_bones_ Exp $
 
 EAPI=5
 inherit flag-o-matic eutils games
 
 MY_PV=${PV/0./}
 MY_PV=${MY_PV//./-}
-MY_FOOD_PV=${MY_PV/%-2/-1}
 DESCRIPTION="A free Transport Tycoon clone"
 HOMEPAGE="http://www.simutrans.com/"
 SRC_URI="mirror://sourceforge/simutrans/simutrans-src-${MY_PV}.zip
-	mirror://sourceforge/simutrans/simupak64-${MY_PV}.zip
-	mirror://sourceforge/simutrans/simupak64-addon-food-${MY_FOOD_PV}.zip"
+	mirror://sourceforge/simutrans/simulinux-${MY_PV}.zip
+	mirror://sourceforge/simutrans/simupak64-${MY_PV}.zip"
 
 LICENSE="Artistic"
 SLOT="0"
@@ -47,10 +46,13 @@ VERBOSE=1" > config.default || die
 	epatch \
 		"${FILESDIR}"/${P}-Makefile.patch \
 		"${FILESDIR}"/${P}-overflow.patch
+	rm -f simutrans/{simutrans,*.txt}
+	mv simutrans/get_pak.sh "${T}" || die
 }
 
 src_install() {
 	newgamesbin build/default/sim ${PN}
+	dogamesbin "${T}"/get_pak.sh
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r simutrans/*
 	dodoc documentation/*
