@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-tastypie
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/ChangeLog,v 1.3 2012/11/13 11:35:36 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/ChangeLog,v 1.4 2013/05/29 07:56:40 idella4 Exp $
+
+*django-tastypie-0.9.15 (29 May 2013)
+
+  29 May 2013; Ian Delaney <idella4@gentoo.org> +django-tastypie-0.9.15.ebuild,
+  -django-tastypie-0.9.11-r1.ebuild:
+  bump, fix deps, remove old
 
   14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Updating maintainer, metadata.xml
