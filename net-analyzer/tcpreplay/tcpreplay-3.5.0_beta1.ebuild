@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.5.0_beta1.ebuild,v 1.1 2013/05/29 18:31:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.5.0_beta1.ebuild,v 1.2 2013/05/29 18:37:10 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -41,8 +41,8 @@ src_prepare() {
 		-e '/tcpliveplay_LDADD/s|$| $(LDNETLIB)|g' \
 		src/Makefile.am || die
 	sed -i -e 's|replay_speed325|replay_sleep325|g' test/Makefile.am || die
-	
-	# Work around stuff suddenly implemented in bundled libopts
+
+	# Work around defines unexpectedly implemented in bundled libopts
 	echo "#define tSCC static char const" >> src/tcprewrite_opts.h || die
 	echo "#define tSCC static char const" >> src/tcpprep_opts.h || die
 
