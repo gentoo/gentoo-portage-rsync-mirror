@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.8.2.ebuild,v 1.1 2013/05/28 18:55:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.8.2.ebuild,v 1.2 2013/05/29 21:26:10 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -48,6 +48,11 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	# Regenerate the pre-generated C sources, bug #471628
+	if ! use v4l; then
+		touch src/*.vala
+	fi
+
 	gnome2_src_prepare
 	vala_src_prepare
 }
