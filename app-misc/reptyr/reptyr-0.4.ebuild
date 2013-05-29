@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.4.ebuild,v 1.3 2012/12/04 11:30:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.4.ebuild,v 1.4 2013/05/29 02:01:47 radhermit Exp $
 
 EAPI=4
 
@@ -15,8 +15,13 @@ SLOT="0"
 KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
+src_prepare() {
+	# respect CFLAGS
+	sed -i '/^override/d' Makefile || die
+}
+
 src_compile() {
-	append-cflags -D_GNU_SOURCE
+	append-cppflags -D_GNU_SOURCE
 	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}"
 }
 

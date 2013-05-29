@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14789 2013/05/28 18:17:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14790 2013/05/29 02:12:06 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,8 +33,9 @@
 #--- END OF EXAMPLES ---
 
 # Justin Lecher <jlec@gentoo.org> (28 May 2013)
-# Mask for new version schema
+# Mask for new version schema, coot is a dependency
 >=sci-libs/clipper-2.2
+sci-chemistry/coot
 
 # Mike Gilbert <floppym@gentoo.org (27 May 2013)
 # Masked until reverse dependencies are tested bug 401009.

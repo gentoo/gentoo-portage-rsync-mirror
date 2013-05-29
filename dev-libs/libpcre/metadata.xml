@@ -12,6 +12,10 @@
       Build 16 bit PCRE library.
     </flag>
 
+    <flag name='pcre32'>
+      Build 32 bit PCRE library.
+    </flag>
+
     <flag name='readline'>
       Add support for command line editing to pcretest, through
       <pkg>sys-libs/readline</pkg>.

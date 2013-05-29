@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7885 2013/05/28 18:17:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7886 2013/05/29 02:12:06 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2013; Patrick Lauer <patrick@gentoo.org>
+  arch/amd64/no-multilib/package.mask, package.mask:
+  Add coot to clipper mask as it is a dependency
 
   28 May 2013; Justin Lecher <jlec@gentoo.org> package.mask:
   Mask >=sci-libs/clipper-2.2 for new for new version schema
