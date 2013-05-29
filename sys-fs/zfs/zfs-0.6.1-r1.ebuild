@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.1-r1.ebuild,v 1.1 2013/05/29 00:39:51 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.1-r1.ebuild,v 1.2 2013/05/29 01:12:58 ryao Exp $
 
 EAPI="4"
 
@@ -26,10 +26,11 @@ HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="BSD-2 CDDL MIT"
 SLOT="0"
-IUSE="bash-completion custom-cflags kernel-builtin +rootfs test-suite static-libs"
+IUSE="bash-completion custom-cflags kernel-builtin +rootfs selinux test-suite static-libs"
 RESTRICT="test"
 
 COMMON_DEPEND="
+	selinux? ( sys-libs/libselinux )
 	sys-apps/util-linux[static-libs?]
 	sys-libs/zlib[static-libs(+)?]
 	virtual/awk
@@ -88,6 +89,7 @@ src_configure() {
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
 		--with-udevdir="$(udev_get_udevdir)"
+		$(use_with selinux)
 	)
 	autotools-utils_src_configure
 }

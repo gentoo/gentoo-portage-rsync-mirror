@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.1-r2.ebuild,v 1.1 2013/05/28 13:07:09 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.1-r2.ebuild,v 1.2 2013/05/29 01:30:42 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -68,8 +68,6 @@ src_prepare() {
 
 		# Block tasks properly
 		epatch "${FILESDIR}/${PN}-0.6.1-fix-delay.patch"
-
-		spl-0.6.1-fix-delay.patch
 
 		if kernel_is ge 3 8
 		then
