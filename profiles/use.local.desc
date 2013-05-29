@@ -895,6 +895,7 @@ app-office/lyx:xetex - Add support for XeTeX typesetting
 app-office/rabbit:markdown - Markdown support (dev-ruby/kramdown)
 app-office/rabbit:tgif - tgif support (media-gfx/tgif)
 app-office/scribus:aspell - Enable support for spell checking with app-text/aspell
+app-office/scribus:graphicsmagick - Add support for media-gfx/graphicsmagick
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:linguas_cs_CZ - Language support for cs_CZ
 app-office/scribus:linguas_da_DK - Language support for da_DK
@@ -907,6 +908,7 @@ app-office/scribus:linguas_sa - Language support for sa
 app-office/scribus:linguas_sk_SK - Language support for sk_SK
 app-office/scribus:linguas_th_TH - Language support for th_TH
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
+app-office/scribus:osg - 3D redering via dev-games/openscenegraph
 app-office/scribus:templates - Document tamplates
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
 app-office/texstudio:video - Use phonon for video embedding

@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/leechcraft-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.5 2013/05/26 20:08:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.6 2013/05/29 09:58:52 pinkbyte Exp $
+
+  29 May 2013; Sergey Popov <pinkbyte@gentoo.org> leechcraft-meta-9999.ebuild:
+  Replace lc-kinotify dependency with virtual one
 
 *leechcraft-meta-0.5.96 (26 May 2013)
 
