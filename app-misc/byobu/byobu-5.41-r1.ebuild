@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.41-r1.ebuild,v 1.1 2013/05/26 09:53:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.41-r1.ebuild,v 1.2 2013/05/29 08:11:50 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -15,8 +15,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="screen"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="
+RDEPEND="${PYTHON_DEPS}
 	dev-libs/newt
 	screen? ( app-misc/screen )
 	!screen? ( app-misc/tmux )"

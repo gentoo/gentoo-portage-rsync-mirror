@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/flac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.156 2013/05/07 11:58:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.157 2013/05/29 08:30:22 radhermit Exp $
+
+*flac-1.3.0 (29 May 2013)
+
+  29 May 2013; Tim Harder <radhermit@gentoo.org> +flac-1.3.0.ebuild,
+  +files/flac-1.3.0-asneeded.patch, +files/flac-1.3.0-dontbuild-examples.patch,
+  +files/flac-1.3.0-dontbuild-tests.patch:
+  Version bump (bug #471598).
 
   07 May 2013; Michał Górny <mgorny@gentoo.org> flac-1.2.1-r5.ebuild:
   Restore doc-install in build system, applying a fix for out-of-source install
