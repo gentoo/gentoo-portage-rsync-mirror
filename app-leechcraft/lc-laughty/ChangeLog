@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-laughty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-laughty/ChangeLog,v 1.1 2013/05/24 15:21:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-laughty/ChangeLog,v 1.2 2013/05/29 08:49:09 pinkbyte Exp $
+
+  29 May 2013; Sergey Popov <pinkbyte@gentoo.org> lc-laughty-9999.ebuild:
+  Add run-time dependency on virtual/leechcraft-notifier, thanks to 0xd34df00d
 
 *lc-laughty-9999 (24 May 2013)
 

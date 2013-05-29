@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.68 2013/05/25 06:30:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.69 2013/05/29 08:43:28 xmw Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -175,6 +175,7 @@ sh - Serbo-Croatian locale
 sh_YU - Serbo-Croatian locale
 son - Songhai locale
 si - Sinhala locale
+si_LK - Sinhala locale
 sk - Slovak locale
 sk_SK - Slovak locale
 sl - Slovenian locale
