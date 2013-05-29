@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/cropgui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/ChangeLog,v 1.4 2013/05/28 20:00:46 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/ChangeLog,v 1.5 2013/05/29 13:16:15 pinkbyte Exp $
+
+*cropgui-0.1.1-r2 (29 May 2013)
+
+  29 May 2013; Sergey Popov <pinkbyte@gentoo.org> +cropgui-0.1.1-r2.ebuild:
+  Revision bump: EAPI 5, migrate to python-r1 eclass, add epatch_user
 
 *cropgui-0.1.1-r1 (28 May 2013)
 

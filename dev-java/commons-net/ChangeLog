@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-net
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.49 2011/12/31 12:28:49 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.50 2013/05/29 13:28:31 tomwij Exp $
+
+*commons-net-3.2 (29 May 2013)
+
+  29 May 2013; Tom Wijsman <TomWij@gentoo.org> +commons-net-3.2.ebuild,
+  +files/commons-net-3.2-build.xml:
+  Version bump to 3.2.
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-net-1.4.1-r1.ebuild:
   Drop ia64 support #345433
@@ -189,4 +195,3 @@
 
   22 Mar 2003; Dylan Carlson <absinthe@gentoo.org> commons-net-1.0.0.ebuild:
   Initial import.
-

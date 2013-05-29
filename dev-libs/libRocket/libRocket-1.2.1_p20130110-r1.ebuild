@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-1.2.1_p20130110-r1.ebuild,v 1.1 2013/05/05 13:22:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-1.2.1_p20130110-r1.ebuild,v 1.2 2013/05/29 13:24:54 hasufell Exp $
 
 EAPI=5
 
@@ -15,6 +15,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="python samples"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	media-libs/freetype[${MULTILIB_USEDEP}]

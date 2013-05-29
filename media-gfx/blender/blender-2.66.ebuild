@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.66.ebuild,v 1.1 2013/03/09 23:27:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.66.ebuild,v 1.2 2013/05/29 13:29:28 hasufell Exp $
 
 # TODO:
 #   bundled-deps: eigen:3 is too old
@@ -31,7 +31,7 @@ SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
 IUSE="+boost +bullet collada colorio cycles +dds debug doc +elbeem ffmpeg fftw +game-engine jack jpeg2k ndof nls openal openmp +openexr player redcode sdl sndfile sse tiff"
-REQUIRED_USE="player? ( game-engine ) redcode? ( jpeg2k ) cycles? ( boost ) nls? ( boost )"
+REQUIRED_USE="${PYTHON_REQUIRED_USE} player? ( game-engine ) redcode? ( jpeg2k ) cycles? ( boost ) nls? ( boost )"
 
 RDEPEND="
 	${PYTHON_DEPS}

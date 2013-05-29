@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/flacon-0.8.0.ebuild,v 1.1 2013/05/29 08:33:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/flacon-0.8.0.ebuild,v 1.2 2013/05/29 13:12:57 xmw Exp $
 
 EAPI="5"
 
@@ -34,7 +34,8 @@ RDEPEND="${PYTHON_DEPS}
 	replaygain? (
 		mp3? ( media-sound/mp3gain )
 		ogg? ( media-sound/vorbisgain )
-	)"
+	)
+"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -44,15 +45,17 @@ src_prepare() {
 
 	l10n_find_plocales_changes "translations" "${PN}_" '.qm'
 	l10n_for_each_disabled_locale_do my_rm_loc
-	touch translations/dummy.{ts,qm}
+
+	if [ -z "$(l10n_get_locales)" ]; then
+		sed -e '/install .*translations/d' -i Makefile || die
+	fi
 
 	python_fix_shebang .
 
 	sed -e '/cd $(INST_DIR) && python -mcompileall ./d' -i Makefile || die
 
 	# do not use /tmp/ for tests
-	sed -e "s,/tmp/,${T}/," \
-		-i Makefile tests/flacon_tests.py || die
+	sed -e "s,/tmp/,${T}/," -i Makefile tests/flacon_tests.py || die
 }
 
 src_compile() { :; }
@@ -64,7 +67,5 @@ src_test() {
 src_install() {
 	default
 
-	rm "${D}"/usr/share/${PN}/translations/dummy.qm
-
-	python_optimize "${D}"
+	python_optimize "${ED}"/usr/share/${PN}
 }

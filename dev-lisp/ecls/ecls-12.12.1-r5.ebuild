@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-12.12.1-r4.ebuild,v 1.1 2013/04/20 14:33:37 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-12.12.1-r5.ebuild,v 1.1 2013/05/29 13:24:25 grozin Exp $
 
 EAPI=5
 inherit eutils multilib
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 RESTRICT="mirror"
 
 LICENSE="BSD LGPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug emacs gengc precisegc sse +threads +unicode X"
 
@@ -39,7 +39,8 @@ pkg_setup () {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-headers-gentoo.patch
-	cp /usr/share/common-lisp/source/asdf/build/asdf.lisp contrib/asdf/ || die
+	epatch "${FILESDIR}"/${PV}-asdf.patch
+	cp "${EPREFIX}"/usr/share/common-lisp/source/asdf/build/asdf.lisp contrib/asdf/ || die
 }
 
 src_configure() {
