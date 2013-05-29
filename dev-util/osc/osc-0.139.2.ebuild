@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.139.2.ebuild,v 1.2 2013/05/28 08:02:22 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.139.2.ebuild,v 1.3 2013/05/29 14:33:49 miska Exp $
 
 EAPI=5
 
@@ -15,6 +15,7 @@ else
 	EXTRA_ECLASS="obs-download"
 fi
 
+DISTUTILS_SINGLE_IMPL=1
 inherit distutils-r1 ${EXTRA_ECLASS}
 unset EXTRA_ECLASS
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-xslt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-xslt/ChangeLog,v 1.3 2013/05/29 12:19:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-xslt/ChangeLog,v 1.4 2013/05/29 14:51:42 idella4 Exp $
+
+  29 May 2013; Ian Delaney <idella4@gentoo.org> django-xslt-0.4.5-r1.ebuild:
+  Fix descritption
 
 *django-xslt-0.4.5-r1 (29 May 2013)
 
