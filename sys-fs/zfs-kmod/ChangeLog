@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.30 2013/05/28 13:08:52 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.32 2013/05/29 02:00:47 ryao Exp $
+
+  29 May 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.1-r1.ebuild:
+  Add blocker against CONFIG_UIDGID_STRICT_TYPE_CHECKS
+
+  29 May 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.1-r1.ebuild:
+  Do not permit builds with CONFIG_USER_NS
 
 *zfs-kmod-0.6.1-r1 (28 May 2013)
 

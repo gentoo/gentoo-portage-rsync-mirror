@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.12 2013/02/12 11:49:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.13 2013/05/29 01:58:02 radhermit Exp $
+
+*greenlet-0.4.0-r2 (29 May 2013)
+
+  29 May 2013; Tim Harder <radhermit@gentoo.org> +greenlet-0.4.0-r2.ebuild,
+  +files/greenlet-0.4.0-gcc48.patch:
+  Revision bump, add upstream fixes for gcc-4.8 issues.
 
   12 Feb 2013; Michał Górny <mgorny@gentoo.org> greenlet-0.4.0-r1.ebuild:
   Add a note that greenlet is built-in in PyPy.

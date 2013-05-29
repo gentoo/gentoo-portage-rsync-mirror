@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.57 2013/05/29 01:30:42 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.59 2013/05/29 02:00:17 ryao Exp $
+
+  29 May 2013; Richard Yao <ryao@gentoo.org> spl-0.6.1-r2.ebuild,
+  spl-0.6.1.ebuild:
+  Add blocker against CONFIG_UIDGID_STRICT_TYPE_CHECKS
+
+  29 May 2013; Richard Yao <ryao@gentoo.org> spl-0.6.1-r2.ebuild,
+  spl-0.6.1.ebuild:
+  Do not permit builds with CONFIG_USER_NS
 
   29 May 2013; Richard Yao <ryao@gentoo.org> spl-0.6.1-r2.ebuild,
   spl-0.6.1.ebuild:
