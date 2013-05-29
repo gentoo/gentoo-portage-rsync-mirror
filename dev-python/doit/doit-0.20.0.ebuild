@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/doit-0.20.0.ebuild,v 1.1 2013/02/02 09:17:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/doit-0.20.0.ebuild,v 1.2 2013/05/29 19:50:14 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 inherit eutils distutils-r1
 
 DESCRIPTION="Automation tool"
@@ -13,10 +13,35 @@ SRC_URI="mirror://pypi/${PN::1}/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="test"
 
 DEPEND=""
-RDEPEND="dev-python/pyinotify"
+RDEPEND="dev-python/pyinotify[${PYTHON_USEDEP}]"
+
+python_prepare_all() {
+	use test && DISTUTILS_IN_SOURCE_BUILD=1
+	sed -e 's:from .conf:from conf:' -i tests/test_dependency.py || die
+	distutils-r1_python_prepare_all
+}
+
+python_test() {
+	local test
+	# https://bitbucket.org/schettino72/doit/issue/48/test-suite-has-me-perplexed-doit-0200
+	# "${PYTHON}" runtests.py  # How it's supposed to work
+	# How it works
+	if [[ "${EPYTHON}" == python3* ]]; then
+		einfo "tests don't work for py3"
+	else
+		for test in tests/test_*.py
+		do
+			if ! "${PYTHON}" $test; then
+				die "Test $test failed under ${EPYTHON}"
+			else
+				einfo "Test ${test#tests/} passed under ${EPYTHON}"
+			fi
+		done
+	fi
+}
 
 src_install() {
 	distutils-r1_src_install
