@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.07.ebuild,v 1.1 2013/05/23 23:52:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.07.ebuild,v 1.2 2013/05/29 16:39:18 jlec Exp $
 
 EAPI=5
 
@@ -40,6 +40,8 @@ LICENSE="LGPL-2.1"
 IUSE="+X afs avahi -c++0x doc emacs examples fits fftw graphviz htmldoc
 	kerberos ldap +math mpi mysql odbc +opengl openmp oracle postgres prefix
 	pythia6 pythia8 python qt4 +reflex ruby ssl xinetd xml xrootd"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 CDEPEND="
 	app-arch/xz-utils

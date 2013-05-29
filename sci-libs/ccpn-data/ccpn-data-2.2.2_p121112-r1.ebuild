@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.2_p121112-r1.ebuild,v 1.2 2013/03/22 09:06:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.2_p121112-r1.ebuild,v 1.3 2013/05/29 16:34:20 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,11 @@ LICENSE="|| ( CCPN LGPL-2.1 )"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="!<sci-chemistry/ccpn-${PVR}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="
+	${PYTHON_DEPS}
+	!<sci-chemistry/ccpn-${PVR}"
 DEPEND=""
 
 RESTRICT="binchecks strip"
