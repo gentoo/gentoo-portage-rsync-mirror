@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.1.ebuild,v 1.3 2013/04/04 01:31:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.3.ebuild,v 1.1 2013/05/29 21:41:17 pacho Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION="0.14"
@@ -25,12 +25,12 @@ RDEPEND="
 		>=sys-apps/util-linux-2.16
 		<sys-libs/e2fsprogs-libs-1.41.8 )
 	introspection? (
-			>=dev-libs/gobject-introspection-0.6.4 )
+			>=dev-libs/gobject-introspection-0.6.4
+			$(vala_depend) )
 	connman? (
 		>=dev-libs/glib-2.28:2
 		>=net-misc/connman-0.80 )
 	networkmanager? ( >=dev-libs/glib-2.26:2 )
-	$(vala_depend)
 	!net-libs/gupnp-vala
 "
 DEPEND="${RDEPEND}
@@ -38,6 +38,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+src_prepare() {
+	use introspection && vala_src_prepare
+}
 
 src_configure() {
 	local backend=unix
@@ -53,7 +56,6 @@ src_configure() {
 }
 
 src_install() {
-	DOCS="AUTHORS ChangeLog NEWS README"
 	default
 	prune_libtool_files
 }
