@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.5_beta3.ebuild,v 1.2 2012/04/12 04:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.5.0_beta1.ebuild,v 1.1 2013/05/29 18:31:21 jer Exp $
 
-EAPI=4
-inherit eutils
+EAPI=5
+inherit autotools eutils flag-o-matic
 
 MY_P="${P/_/}"
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.synfin.net/"
-SRC_URI="http://synfin.net/${MY_P}.tar.gz"
+SRC_URI="http://synfin.net/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="debug pcapnav +tcpdump"
 
 DEPEND="
-	>=sys-devel/autogen-5.9.8
+	>=sys-devel/autogen-5.16.2[libopts]
 	dev-libs/libdnet
 	>=net-libs/libpcap-0.9
 	tcpdump? ( net-analyzer/tcpdump )
@@ -27,20 +27,38 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.4.4-cross-compile.patch
-	echo "We don't use bundled libopts" > libopts/options.h
-	./autogen.sh
+	sed -i \
+		-e '/CFLAGS=/s|-ggdb -std=gnu99|-std=gnu99|g' \
+		-e 's|-O3||g' \
+		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
+		configure.ac || die
+	sed -i \
+		-e 's|#include <dnet.h>|#include <dnet/eth.h>|g' \
+		src/common/sendpacket.c || die
+	sed -i \
+		-e 's|@\([A-Z_]*\)@|$(\1)|g' \
+		-e '/tcpliveplay_CFLAGS/s|$| $(LDNETINC)|g' \
+		-e '/tcpliveplay_LDADD/s|$| $(LDNETLIB)|g' \
+		src/Makefile.am || die
+	sed -i -e 's|replay_speed325|replay_sleep325|g' test/Makefile.am || die
+	
+	# Work around stuff suddenly implemented in bundled libopts
+	echo "#define tSCC static char const" >> src/tcprewrite_opts.h || die
+	echo "#define tSCC static char const" >> src/tcpprep_opts.h || die
+
+	eautoreconf
 }
 
 src_configure() {
 	# By default it uses static linking. Avoid that, bug 252940
 	econf \
-		--enable-shared \
-		--enable-dynamic-link \
-		--disable-local-libopts \
-		$(use_with tcpdump tcpdump /usr/sbin/tcpdump) \
+		$(use_enable debug) \
 		$(use_with pcapnav pcapnav-config /usr/bin/pcapnav-config) \
-		$(use_enable debug)
+		$(use_with tcpdump tcpdump /usr/sbin/tcpdump) \
+		--disable-local-libopts \
+		--enable-dynamic-link \
+		--enable-shared \
+		--with-libdnet
 }
 
 src_test() {

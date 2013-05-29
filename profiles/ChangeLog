@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7887 2013/05/29 08:43:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7888 2013/05/29 18:31:11 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask =net-analyzer/tcpreplay-3.5*.
 
   29 May 2013; Michael Weber <xmw@gentoo.org> desc/linguas.desc:
   Add linguas_si_LK as Sinhala locale
