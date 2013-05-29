@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.52 2013/05/28 12:55:02 blueness Exp $
+# Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.53 2013/05/28 23:52:23 blueness Exp $
+
+  ; Anthony G. Basile <blueness@gentoo.org> metadata.xml, monkeyd-1.2.0.ebuild:
+  Incorporate suggestions from gentoo-dev ML, thanks mgorny
 
 *monkeyd-1.2.0 (28 May 2013)
 

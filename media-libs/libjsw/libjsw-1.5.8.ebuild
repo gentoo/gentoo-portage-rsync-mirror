@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.8.ebuild,v 1.6 2010/07/15 09:04:12 fauli Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.8.ebuild,v 1.7 2013/05/28 23:37:39 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils multilib
 
 DESCRIPTION="provide a uniform API and user configuration for joysticks and game controllers"
@@ -19,25 +19,27 @@ DEPEND=""
 src_prepare() {
 	cp include/jsw.h libjsw/
 	epatch "${FILESDIR}"/${P}-build.patch
-	bunzip2 libjsw/man/* jscalibrator/jscalibrator.1.bz2 || die "bunzip failed"
+	bunzip2 libjsw/man/* || die
 }
 
 src_compile() {
+	LDFLAGS+=" -Wl,-soname,libjsw.so.1"
 	cd libjsw
-	emake || die "main build failed"
+	emake || die
 	ln -s libjsw.so.${PV} libjsw.so
 }
 
 src_install() {
 	insinto /usr/include
-	doins include/jsw.h || die "doins jsw.h failed"
+	doins include/jsw.h || die
 
 	dodoc README
 	docinto jswdemos
 	dodoc jswdemos/*
 
 	cd "${S}"/libjsw
-	dolib.so libjsw.so.${PV} || die "dolib.so"
+	dolib.so libjsw.so.${PV} || die
 	dosym libjsw.so.${PV} /usr/$(get_libdir)/libjsw.so
+	dosym libjsw.so.${PV} /usr/$(get_libdir)/libjsw.so.1
 	doman man/*
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999- Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.0.ebuild,v 1.1 2013/05/28 12:55:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.0.ebuild,v 1.2 2013/05/28 23:52:23 blueness Exp $
 
 EAPI="5"
 
@@ -15,13 +15,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
-PLUGINS="monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi
-monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril monkeyd_plugins_polarssl"
-IUSE="-debug php shared-lib uclibc ${PLUGINS}"
+PLUGINS="monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril monkeyd_plugins_polarssl"
+IUSE="-debug php minimal ssl uclibc ${PLUGINS}"
 
 # uclibc is often compiled without backtrace info so we should
 # force this off.  If someone complains, consider relaxing it.
-REQUIRED_USE="uclibc? ( !debug )"
+REQUIRED_USE="
+	uclibc? ( !debug )
+	ssl? ( monkeyd_plugins_polarssl )
+"
 
 RDEPEND="php? ( dev-lang/php )"
 
@@ -50,7 +52,7 @@ src_prepare() {
 	sed -i -e '/$STRIP /d' -e 's/install -s -m 644/install -m 755/' configure || die "No configure file"
 
 	# We don't need the includes, sym link to libmonkey.so, or monkey.cp when not installing the .so
-	use shared-lib || {
+	use minimal && {
 		sed -i '/install -d \\$(INCDIR)/d' configure || die "No configure file"
 		sed -i '/install -m 644 src\/include\/\*.h \\$(INCDIR)/d' configure || die "No configure file"
 		sed -i '/ln -sf/d' configure || die "No configure file"
@@ -80,7 +82,7 @@ src_configure() {
 		myconf+=" --no-backtrace"
 	fi
 
-	use shared-lib && myconf+=" --enable-shared"
+	use minimal || myconf+=" --enable-shared"
 
 	local enable_plugins=""
 	local disable_plugins=""

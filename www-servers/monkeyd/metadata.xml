@@ -7,6 +7,6 @@
 	</maintainer>
 	<use>
 		<flag name="debug">Enable lots of debugging info</flag>
-		<flag name="shared-lib">Install shared lib</flag>
+		<flag name="minimal">Do not install shared lib and include files</flag>
 	</use>
 </pkgmetadata>
