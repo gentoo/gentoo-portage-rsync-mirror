@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.2.ebuild,v 1.4 2013/01/20 18:47:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.2.ebuild,v 1.5 2013/05/30 12:14:42 kensington Exp $
 
 EAPI=4
 KDE_LINGUAS="ca cs da de el es et fi fr ga gl he hr hu it ja lt nb nds nl pl pt
@@ -23,7 +23,7 @@ RDEPEND="
 	|| ( >=media-libs/mlt-0.8.6-r1[ffmpeg,sdl,xml,melt,qt4,kdenlive]
 		 <=media-libs/mlt-0.8.6[ffmpeg,sdl,xml,melt,qt4,kde] )
 	virtual/ffmpeg[encode,sdl,X]
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 "
 DEPEND="${RDEPEND}"
 

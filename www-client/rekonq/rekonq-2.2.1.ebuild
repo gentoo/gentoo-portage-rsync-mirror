@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.2.1.ebuild,v 1.3 2013/04/30 09:44:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.2.1.ebuild,v 1.4 2013/05/30 12:06:02 kensington Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="amd64 x86"
 IUSE="debug opera semantic-desktop"
 
 DEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	opera? (
 		app-crypt/qca:2
 		dev-libs/qoauth
