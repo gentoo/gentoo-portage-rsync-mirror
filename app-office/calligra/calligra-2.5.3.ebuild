@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.3.ebuild,v 1.3 2013/03/02 19:34:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.3.ebuild,v 1.4 2013/05/30 11:56:02 kensington Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -101,7 +101,7 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/openjpeg )
 	kdcraw? ( $(add_kdebase_dep libkdcraw) )
-	kdepim? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop') )
+	kdepim? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop(+)') )
 	lcms? ( media-libs/lcms:2 )
 	marble? ( $(add_kdebase_dep marble) )
 	mysql? ( virtual/mysql )
@@ -117,7 +117,7 @@ RDEPEND="
 		dev-db/postgresql-base
 		dev-libs/libpqxx
 	)
-	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs semantic-desktop) )
+	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs 'semantic-desktop(+)') )
 	spacenav? ( dev-libs/libspnav  )
 	ssl? ( dev-libs/openssl )
 	sybase? ( dev-db/freetds )

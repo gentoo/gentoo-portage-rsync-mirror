@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libkgapi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.15 2013/05/22 20:02:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.16 2013/05/30 11:47:13 kensington Exp $
+
+  30 May 2013; Michael Palimaka <kensington@gentoo.org> libkgapi-0.4.4.ebuild,
+  libkgapi-2.0.0.ebuild:
+  Add USE dependency default in preparation for the removal of the semantic-
+  desktop USE flag.
 
 *libkgapi-2.0.0 (22 May 2013)
 

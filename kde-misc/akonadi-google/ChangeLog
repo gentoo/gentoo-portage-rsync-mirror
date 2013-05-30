@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/akonadi-google
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.13 2012/06/19 20:17:18 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.14 2013/05/30 11:43:53 kensington Exp $
+
+  30 May 2013; Michael Palimaka <kensington@gentoo.org>
+  akonadi-google-0.3.1.ebuild, akonadi-google-20120619.ebuild:
+  Add USE dependency default in preparation for the removal of the semantic-
+  desktop USE flag.
 
 *akonadi-google-20120619 (19 Jun 2012)
 
@@ -70,4 +75,3 @@
   06 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +akonadi-google-0.2_p20111130.ebuild, +metadata.xml:
   New ebuild, imported from kde overlay after some testing.
-

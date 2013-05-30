@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-git-resource/akonadi-git-resource-0_p20130522.ebuild,v 1.1 2013/05/22 18:17:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-git-resource/akonadi-git-resource-0_p20130522.ebuild,v 1.2 2013/05/30 11:39:16 kensington Exp $
 
 EAPI=5
 
@@ -17,6 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="
-	$(add_kdebase_dep kdepimlibs semantic-desktop)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
 	=dev-libs/libgit2-0.17*
 "
