@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.428 2013/05/22 18:32:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.429 2013/05/30 19:56:09 radhermit Exp $
+
+*gnutls-2.12.23-r1 (30 May 2013)
+
+  30 May 2013; Tim Harder <radhermit@gentoo.org> +gnutls-2.12.23-r1.ebuild,
+  gnutls-3.1.10.ebuild, gnutls-3.1.11.ebuild, gnutls-3.2.0.ebuild,
+  +files/gnutls-2.12.23-CVE-2013-2116.patch:
+  Revision bump to fix CVE-2013-2116 (bug #471788), drop redundant
+  --disable-silent-rules econf option for EAPI 5 ebuilds, and run tests
+  serially since they often fail in parallel.
 
   22 May 2013; Tim Harder <radhermit@gentoo.org> gnutls-3.2.0.ebuild:
   Update nettle dep (bug #471022).

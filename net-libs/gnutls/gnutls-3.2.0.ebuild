@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.0.ebuild,v 1.3 2013/05/22 18:32:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.0.ebuild,v 1.4 2013/05/30 19:56:09 radhermit Exp $
 
 EAPI=5
 
@@ -76,7 +76,6 @@ src_configure() {
 	# TPM needs to be tested before being enabled
 	econf \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
-		--disable-silent-rules \
 		--disable-valgrind-tests \
 		--enable-heartbeat-support \
 		$(use_enable cxx) \
@@ -89,6 +88,11 @@ src_configure() {
 		$(use_with pkcs11 p11-kit) \
 		$(use_with zlib) \
 		--without-tpm
+}
+
+src_test() {
+	# parallel testing often fails
+	emake -j1 check
 }
 
 src_install() {
