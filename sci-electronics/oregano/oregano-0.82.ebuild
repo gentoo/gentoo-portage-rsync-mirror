@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.82.ebuild,v 1.4 2013/05/26 10:50:37 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.82.ebuild,v 1.5 2013/05/30 14:37:48 tomjbe Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ CDEPEND="dev-libs/libxml2:2
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
+	|| ( gnome-base/dconf gnome-base/gconf )
 	sci-electronics/electronics-menu"
 
 src_prepare() {
