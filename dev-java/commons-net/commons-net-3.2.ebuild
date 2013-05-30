@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-3.2.ebuild,v 1.1 2013/05/29 13:28:31 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-3.2.ebuild,v 1.2 2013/05/30 07:57:56 radhermit Exp $
 
 EAPI="5"
 
@@ -35,7 +35,7 @@ java_prepare() {
 src_install() {
 	java-osgi_newjar target/${P}.jar ${P} ${P} "Export-Package: ${P}"
 
-	use doc && java-pkg_dojavadoc dist/docs/api
-	use examples && java-pkg_doexamples src/java/examples
-	use source && java-pkg_dosrc src/java/org
+	use doc && java-pkg_dojavadoc target/site/apidocs
+	use examples && java-pkg_doexamples src/main/java/examples
+	use source && java-pkg_dosrc src/main/java/org
 }

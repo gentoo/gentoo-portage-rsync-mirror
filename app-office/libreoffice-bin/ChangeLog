@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.107 2013/05/25 11:20:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.108 2013/05/30 07:54:33 scarabeus Exp $
+
+  30 May 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-bin-3.6.4.3.ebuild:
+  Drop old libreoffice keep only one 3.6 version.
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-bin-3.6.6.2.ebuild:
   Stable for x86, wrt bug #470988
