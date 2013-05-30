@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.543 2013/05/28 20:27:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.544 2013/05/30 11:20:44 mgorny Exp $
+
+  30 May 2013; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Drop stale ALSA_PCM_PLUGINS from USE_EXPAND. Bug #471792.
 
   28 May 2013; Mike Gilbert <floppym@gentoo.org> make.defaults:
   Sort USE_EXPAND.

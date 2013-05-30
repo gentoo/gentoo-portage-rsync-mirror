@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.387 2013/05/16 19:31:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.388 2013/05/30 11:20:45 mgorny Exp $
+
+  30 May 2013; Michał Górny <mgorny@gentoo.org> darwin/make.defaults:
+  Drop stale ALSA_PCM_PLUGINS from USE_EXPAND. Bug #471792.
 
   16 May 2013; Ulrich Müller <ulm@gentoo.org>
   darwin/macos/10.5/ppc/package.use.mask, darwin/package.use.mask:

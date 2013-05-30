@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7890 2013/05/30 01:19:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7891 2013/05/30 11:21:54 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 May 2013; Michał Górny <mgorny@gentoo.org> -desc/alsa_pcm_plugins.desc:
+  Drop stale ALSA_PCM_PLUGINS from USE_EXPAND. Bug #471792.
 
   30 May 2013; Tim Harder <radhermit@gentoo.org> updates/2Q-2013:
   Move dev-util/jedi to dev-python/jedi.

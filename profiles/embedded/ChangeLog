@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.34 2011/04/30 17:18:18 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.35 2013/05/30 11:20:45 mgorny Exp $
+
+  30 May 2013; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Drop stale ALSA_PCM_PLUGINS from USE_EXPAND. Bug #471792.
 
   30 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -virtuals:
   Remove old-style virtual/linux-sources, bug 118442.
