@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.451 2013/04/16 05:59:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.452 2013/05/30 09:06:07 polynomial-c Exp $
+
+*seamonkey-2.18_beta4 (30 May 2013)
+
+  30 May 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +seamonkey-2.18_beta4.ebuild:
+  Version bump to latest beta as upstream skipped release of 2.18 version.
 
   16 Apr 2013; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.17.ebuild,
   seamonkey-2.17.1.ebuild:
