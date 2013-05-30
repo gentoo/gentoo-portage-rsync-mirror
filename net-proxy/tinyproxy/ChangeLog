@@ -1,14 +1,18 @@
+# ChangeLog for net-proxy/tinyproxy
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.43 2013/05/30 16:47:50 tomwij Exp $
 
-*tinyproxy-1.8.3-r1 (29 May 2013)
+  30 May 2013; Tom Wijsman <TomWij@gentoo.org> ChangeLog,
+  +tinyproxy-1.8.3-r2.ebuild, +files/tinyproxy-1.8.3-r2.initd,
+  +files/tinyproxy-1.8.3-r2-DoS-Prevention.patch:
+  Use /run instead of /var/run, fixes bug #444167. Apply DoS Prevention
+  patches, temporary fixes for bug #432046. Fix ChangeLog issues; there was an
+  empty log message above header by flameeyes and an empty message by jer.
 
   29 May 2013; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/tinyproxy-1.8.3.initd, +tinyproxy-1.8.3-r1.ebuild:
   Cleanup ebuild, use REQUIRED_USE, always install docs, improve init script so
   that now it actually works.
-
-# ChangeLog for net-proxy/tinyproxy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.41 2013/05/29 17:48:35 flameeyes Exp $
 
   24 Apr 2013; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.3.ebuild:
   Disable silent make rules. Fix building with automake-1.13.
@@ -26,7 +30,7 @@
   27 Aug 2011; Jeroen Roovers <jer@gentoo.org> -tinyproxy-1.6.3-r1.ebuild,
   -tinyproxy-1.6.4.ebuild, -tinyproxy-1.6.5.ebuild, -tinyproxy-1.8.2.ebuild,
   -files/tinyproxy-no-via.patch:
-  ^
+  Removed old.
 
   27 Aug 2011; Raúl Porcel <armin76@gentoo.org> tinyproxy-1.8.3.ebuild:
   alpha/ia64/sparc stable wrt #363425

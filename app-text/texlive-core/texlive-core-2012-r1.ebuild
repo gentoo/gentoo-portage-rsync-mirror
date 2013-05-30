@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012-r1.ebuild,v 1.16 2013/04/25 21:25:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012-r1.ebuild,v 1.17 2013/05/30 16:32:17 aballier Exp $
 
 EAPI=5
 
@@ -145,7 +145,7 @@ src_configure() {
 	# that don't have the same alphabetical order than ascii. Bug #242430
 	# So we set LC_ALL to C in order to avoid problems.
 	export LC_ALL=C
-	tc-export CC CXX AR
+	tc-export CC CXX AR RANLIB
 	ECONF_SOURCE="${B}" \
 		econf -C \
 		--bindir=/usr/bin \
