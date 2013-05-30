@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javax-inject/javax-inject-1-r1.ebuild,v 1.1 2013/05/29 11:34:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javax-inject/javax-inject-1-r1.ebuild,v 1.2 2013/05/30 08:59:38 tomwij Exp $
 
 EAPI="5"
 
@@ -38,9 +38,17 @@ java_prepare() {
 	sed -i 's/\(<mkdir dir="${maven.build.outputDir}"\/>\)/\1<javac srcdir="." destdir="${maven.build.outputDir}" \/>/g' build.xml || die
 }
 
+src_compile() {
+	java-pkg-2_src_compile
+
+	if use doc ; then
+		javadoc -d javadoc $(find javax -name "*.java") || die "Javadoc failed"
+	fi
+}
+
 src_install() {
 	java-pkg_newjar target/javax.inject-${PV}.jar
-	
-	use doc && java-pkg_dojavadoc target/api
+
+	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc javax
 }

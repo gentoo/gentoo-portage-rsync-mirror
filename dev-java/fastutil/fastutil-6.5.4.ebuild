@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-6.5.4.ebuild,v 1.1 2013/05/29 11:10:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-6.5.4.ebuild,v 1.2 2013/05/30 08:51:46 tomwij Exp $
 
 EAPI="5"
 
@@ -35,5 +35,5 @@ src_install() {
 	dodoc CHANGES README
 
 	use doc && java-pkg_dojavadoc docs
-	use source && java-pkg_dosrc java/it
+	use source && java-pkg_dosrc src/it
 }
