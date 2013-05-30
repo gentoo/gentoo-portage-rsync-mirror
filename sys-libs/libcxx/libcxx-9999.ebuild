@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.5 2013/01/31 17:56:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.6 2013/05/30 21:48:05 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 ESVN_REPO_URI="http://llvm.org/svn/llvm-project/libcxx/trunk"
 
