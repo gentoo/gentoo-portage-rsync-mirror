@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.3.ebuild,v 1.2 2013/05/29 17:37:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.3.ebuild,v 1.3 2013/05/30 13:23:04 kensington Exp $
 
 EAPI=5
 KDE_HANDBOOK="optional"
 KMNAME="kate"
-PYTHON_COMPAT=( python{2_7,3_1,3_2} )
+PYTHON_COMPAT=( python{2_7,3_1,3_2,3_3} )
 
 inherit python-single-r1 kde4-meta
 
