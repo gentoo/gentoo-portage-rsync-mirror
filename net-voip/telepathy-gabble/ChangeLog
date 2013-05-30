@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.115 2013/05/10 22:07:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.116 2013/05/30 19:08:15 pacho Exp $
+
+*telepathy-gabble-0.16.6 (30 May 2013)
+
+  30 May 2013; Pacho Ramos <pacho@gentoo.org> +telepathy-gabble-0.16.6.ebuild:
+  Version bump, drop shebangs conversion because functions starting by _ are
+  meant to be internal and python-any-r1.eclass users shouldn't need it (and
+  looks to not be needed in this case), if needs to be readded and _ function is
+  used, please add a comment explaining the issue.
 
   10 May 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -telepathy-gabble-0.16.1.ebuild, telepathy-gabble-0.16.4.ebuild:

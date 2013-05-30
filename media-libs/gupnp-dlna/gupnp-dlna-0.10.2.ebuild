@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.10.0.ebuild,v 1.2 2013/03/30 22:44:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.10.2.ebuild,v 1.1 2013/05/30 19:26:09 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ VALA_USE_DEPEND="vapigen"
 
 inherit gnome2 vala
 
-DESCRIPTION="Library that provides DLNA-related functionality for MediaServers"
+DESCRIPTION="Library providing DLNA-related functionality for MediaServers"
 HOMEPAGE="http://gupnp.org/"
 
 LICENSE="LGPL-2"
@@ -46,19 +46,13 @@ src_prepare() {
 	mv html/${PN}{,-${SLOT}}.devhelp2
 
 	cd "${S}"
-	if use introspection ; then
-		vala_src_prepare --ignore-use
-	fi
+
+	use introspection && vala_src_prepare
 	gnome2_src_prepare
 }
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	gnome2_src_configure \
 		--disable-static \
 		$(use_enable introspection)
-}
-
-src_install() {
-	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_install
 }
