@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.6.0.ebuild,v 1.1 2013/03/11 06:59:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.6.0-r1.ebuild,v 1.1 2013/05/30 17:19:53 ultrabug Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -25,7 +25,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-RDEPEND="dev-python/paramiko"
+RDEPEND=">=dev-python/paramiko-1.10.0"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )

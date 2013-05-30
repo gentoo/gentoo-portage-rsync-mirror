@@ -1,0 +1,21 @@
+--- gui2/textbuf.c.ORIG	2013-03-03 17:34:35.000000000 +0100
++++ gui2/textbuf.c	2013-04-17 17:07:40.008278528 +0200
+@@ -37,6 +37,7 @@
+ #endif
+ 
+ #ifdef USE_GTKSOURCEVIEW_3
++# include <gtksourceview/gtksourcebuffer.h>
+ # define GTK_IS_SOURCE_VIEW GTK_SOURCE_IS_VIEW
+ #endif
+ 
+--- gui2/textutil.c.ORIG	2013-02-27 16:45:24.000000000 +0100
++++ gui2/textutil.c		2013-05-28 12:45:17.346889113 +0200
+@@ -30,6 +30,8 @@
+ #include "system.h"
+ #include "winstack.h"
+ 
++#include <gtksourceview/gtksourcebuffer.h>
++
+ #if USE_GTKSOURCEVIEW_2
+ # include <gtksourceview/gtksourceiter.h>
+ #endif
