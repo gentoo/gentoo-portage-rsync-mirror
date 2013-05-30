@@ -1,42 +1,36 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.5 2013/05/30 00:53:30 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1.ebuild,v 1.2 2013/05/30 00:53:30 jsbronder Exp $
 
-EAPI=4
-
-inherit autotools-utils eutils flag-o-matic linux-info
+EAPI=2
+inherit flag-o-matic eutils linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.adaptivecomputing.com/products/open-source/torque"
-SRC_URI="http://www.adaptivecomputing.com/resources/downloads/${PN}/${P}.tar.gz"
-
+# TODO:  hopefully moving to github tags soon
+# http://www.supercluster.org/pipermail/torquedev/2013-May/004519.html
+SRC_URI="http://www.adaptivecomputing.com/index.php?wpfb_dl=1058 -> ${P}.tar.gz"
 LICENSE="torque-2.5"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cpusets +crypt doc drmaa kernel_linux munge server static-libs +syslog threads tk xml"
+IUSE="cpusets +crypt doc drmaa kernel_linux munge nvidia server +syslog tk"
 
-# ed is used by makedepend-sh
 DEPEND_COMMON="sys-libs/ncurses
 	sys-libs/readline
+	cpusets? ( sys-apps/hwloc )
 	munge? ( sys-auth/munge )
+	nvidia? ( >=x11-drivers/nvidia-drivers-275 )
 	tk? ( dev-lang/tk )
 	syslog? ( virtual/logger )
 	!games-util/qstat"
 
 DEPEND="${DEPEND_COMMON}
-	sys-apps/ed
 	!sys-cluster/slurm"
 
 RDEPEND="${DEPEND_COMMON}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )"
-
-DOCS=( Release_Notes )
-
-PATCHES=( "${FILESDIR}"/tcl8.6.patch )
-
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"
@@ -60,10 +54,6 @@ pkg_setup() {
 			einfo
 		else
 			linux-info_pkg_setup
-			einfo
-			elog "    Torque support for cpusets is still in development, you may"
-			elog "wish to disable it for production use."
-			einfo
 			if ! linux_config_exists || ! linux_chkconfig_present CPUSETS; then
 				einfo
 				elog "    Torque support for cpusets will require that you recompile"
@@ -75,82 +65,43 @@ pkg_setup() {
 	fi
 }
 
-#src_prepare() {
-#	append-cflags -DUSE_INTERP_RESULT
-#	autotools-utils_src_prepare
-#}
-
-src_configure() {
-	local myeconfargs=( --with-rcp=mom_rcp )
-
-	use crypt && myeconfargs=( --with-rcp=scp )
-
-	myeconfargs+=(
-		$(use_enable tk gui)
-		$(use_enable tk tcl-qstat)
-		$(use_enable syslog)
-		$(use_enable server)
-		$(use_enable drmaa)
-		$(use_enable threads high-availability)
-		$(use_enable xml server-xml)
-		$(use_enable munge munge-auth)
-		--with-server-home=${PBS_SERVER_HOME}
-		--with-environ=/etc/pbs_environment
-		--with-default-server=${PBS_SERVER_NAME}
-		--disable-gcc-warnings
-		--with-tcp-retry-limit=2
-		${USE_CPUSETS}
-		)
-	autotools-utils_src_configure
+src_prepare() {
+	# We install to a valid location, no need to muck with ld.so.conf
+	# --without-loadlibfile is supposed to do this for us...
+	sed -i '/mk_default_ld_lib_file || return 1/d' buildutils/pbs_mkdirs.in || die
 }
 
-# WARNING
-# OpenPBS is extremely stubborn about directory permissions. Sometimes it will
-# just fall over with the error message, but in some spots it will just ignore
-# you and fail strangely. Likewise it also barfs on our .keep files!
-pbs_createspool() {
-	local root="$1"
-	local s="$(dirname "${PBS_SERVER_HOME}")"
-	local h="${PBS_SERVER_HOME}"
-	local sp="${h}/server_priv"
-	einfo "Building spool directory under ${D}${h}"
-	local a d m
-	local dir_spec="
-			0755:${h}/aux 0700:${h}/checkpoint
-			0755:${h}/mom_logs 0751:${h}/mom_priv 0751:${h}/mom_priv/jobs
-			1777:${h}/spool 1777:${h}/undelivered"
+src_configure() {
+	local myconf="--with-rcp=mom_rcp"
 
-	if use server; then
-		dir_spec="${dir_spec} 0755:${h}/sched_logs
-			0755:${h}/sched_priv/accounting 0755:${h}/server_logs
-			0750:${h}/server_priv 0755:${h}/server_priv/accounting
-			0750:${h}/server_priv/acl_groups 0750:${h}/server_priv/acl_hosts
-			0750:${h}/server_priv/acl_svr 0750:${h}/server_priv/acl_users
-			0750:${h}/server_priv/jobs 0750:${h}/server_priv/queues"
-	fi
+	use crypt && myconf="--with-rcp=scp"
 
-	for a in ${dir_spec}; do
-		d="${a/*:}"
-		m="${a/:*}"
-		if [[ ! -d "${root}${d}" ]]; then
-			install -d -m${m} "${root}${d}" || die
-		else
-			chmod ${m} "${root}${d}" || die
-		fi
-		# (#149226) If we're running in src_*, then keepdir
-		if [[ "${root}" = "${D}" ]]; then
-			keepdir ${d}
-		fi
-	done
+	econf \
+		$(use_enable tk gui) \
+		$(use_enable syslog) \
+		$(use_enable server) \
+		$(use_enable drmaa) \
+		$(use_enable munge munge-auth) \
+		$(use_enable nvidia nvidia-gpus) \
+		--with-server-home=${PBS_SERVER_HOME} \
+		--with-environ=/etc/pbs_environment \
+		--with-default-server=${PBS_SERVER_NAME} \
+		--disable-gcc-warnings \
+		--with-tcp-retry-limit=2 \
+		--without-loadlibfile \
+		${USE_CPUSETS} \
+		${myconf}
 }
 
 src_install() {
-	# Make directories first
-	pbs_createspool "${D}"
+	local dir
 
-	autotools-utils_src_install
+	emake DESTDIR="${D}" install || die "make install failed"
 
-	use doc && dodoc doc/admin_guide.ps doc/*.pdf
+	dodoc CHANGELOG README.* Release_Notes || die "dodoc failed"
+	if use doc; then
+		dodoc doc/admin_guide.ps doc/*.pdf || die "dodoc failed"
+	fi
 
 	# The build script isn't alternative install location friendly,
 	# So we have to fix some hard-coded paths in tclIndex for xpbs* to work
@@ -159,18 +110,28 @@ src_install() {
 		mv "${file}.new" "${file}" || die
 	done
 
+	for dir in $(find "${D}/${PBS_SERVER_HOME}" -type d); do
+		keepdir "${dir#${D}}"
+	done
+
 	if use server; then
-		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server
-		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched
+		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server || die
+		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched || die
 	fi
-	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom
-	newconfd "${FILESDIR}"/torque-conf.d-munge torque
-	newenvd "${FILESDIR}"/torque-env.d 25torque
+	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom || die
+	newconfd "${FILESDIR}"/torque-conf.d-munge torque || die
+	newinitd "${FILESDIR}"/trqauthd-init.d trqauthd || die
+	newenvd "${FILESDIR}"/torque-env.d 25torque || die
 }
 
 pkg_preinst() {
 	if [[ -f "${ROOT}etc/pbs_environment" ]]; then
 		cp "${ROOT}etc/pbs_environment" "${D}"/etc/pbs_environment || die
+	fi
+
+	if [[ -f "${ROOT}${PBS_SERVER_HOME}/server_priv/nodes" ]]; then
+		cp "${ROOT}${PBS_SERVER_HOME}/server_priv/nodes" \
+			"${D}"/${PBS_SERVER_HOME}/server_priv/nodes || die
 	fi
 
 	echo "${PBS_SERVER_NAME}" > "${D}${PBS_SERVER_HOME}/server_name" || die
@@ -186,12 +147,17 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	pbs_createspool "${ROOT}"
 	elog "    If this is the first time torque has been installed, then you are not"
 	elog "ready to start the server.  Please refer to the documentation located at:"
 	elog "http://www.clusterresources.com/wiki/doku.php?id=torque:torque_wiki"
-	echo
+
 	elog "    For a basic setup, you may use emerge --config ${PN}"
+
+	elog "Important 4.0+ updates"
+	elog "  - The on-wire protocol version has been changed."
+	elog "    Versions of Torque before 4.0.0 are no longer able to communicate."
+	elog "  - pbs_iff has been replaced by trqauthd, you will now need to add"
+	elog "    trqauthd to your default runlevel."
 }
 
 # root will be setup as the primary operator/manager, the local machine

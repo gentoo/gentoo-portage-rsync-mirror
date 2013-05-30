@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16.ebuild,v 1.10 2012/04/25 16:43:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16.ebuild,v 1.11 2013/05/30 00:53:30 jsbronder Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info autotools
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
-HOMEPAGE="http://www.adaptivecomputing.com/products/torque.php"
+HOMEPAGE="http://www.adaptivecomputing.com/products/open-source/torque"
 SRC_URI="http://www.adaptivecomputing.com/resources/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="openpbs"

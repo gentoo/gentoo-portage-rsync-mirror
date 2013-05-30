@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.150 2013/03/08 05:02:15 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.152 2013/05/30 00:53:30 jsbronder Exp $
+
+  30 May 2013; Justin Bronder <jsbronder@gentoo.org> torque-2.3.13.ebuild,
+  torque-2.4.16.ebuild, torque-2.5.9-r1.ebuild, torque-2.5.12.ebuild,
+  torque-3.0.6-r1.ebuild, torque-4.1.5.1.ebuild:
+  Fix homepage re #452676
+
+*torque-4.1.5.1 (30 May 2013)
+
+  30 May 2013; Justin Bronder <jsbronder@gentoo.org> +torque-4.1.5.1.ebuild,
+  +files/trqauthd-init.d:
+  Bump re #414623. Added trqauthd daemon init script which needs to be run
+  before any of the various pbs_* services
 
   08 Mar 2013; Justin Bronder <jsbronder@gentoo.org> +files/tcl8.6.patch,
   torque-2.5.9-r1.ebuild, -files/torque-2.5.9-tcl8.6.patch,
