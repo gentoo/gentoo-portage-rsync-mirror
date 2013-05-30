@@ -1,20 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.1_pre897.ebuild,v 1.8 2013/05/30 13:48:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.6_beta.ebuild,v 1.1 2013/05/30 13:48:39 chithanh Exp $
 
 EAPI=5
 
-inherit eutils multilib linux-info linux-mod toolchain-funcs versionator
+inherit eutils multilib linux-info linux-mod toolchain-funcs versionator pax-utils
 
-DESCRIPTION="Ati precompiled drivers for legacy Radeon R600 (HD2000 Series) and newer chipsets"
+DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets"
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
 #RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
-SLOT="legacy"
-if [[ legacy != ${SLOT} ]]; then
-	DRIVERS_URI="http://www2.ati.com/drivers/linux/amd-driver-installer-catalyst-${PV}-linux-x86.x86_64.zip"
+SLOT="1"
+if [[ "${MY_V[2]}" =~  beta.* ]]; then
+	BETADIR="beta/"
 else
-	DRIVERS_URI="http://www2.ati.com/drivers/legacy/amd-driver-installer-catalyst-$(get_version_component_range 1-2)-legacy-linux-x86.x86_64.zip"
+	BETADIR="linux/"
+fi
+if [[ legacy != ${SLOT} ]]; then
+	DRIVERS_URI="http://www2.ati.com/drivers/${BETADIR}amd-driver-installer-catalyst-13-6-beta-x86.x86_64.zip"
+else
+	DRIVERS_URI="http://www2.ati.com/drivers/legacy/amd-driver-installer-catalyst-$(get_version_component_range 1-2)-$(get_version_component_range 3)-legacy-linux-x86.x86_64.zip"
 fi
 XVBA_SDK_URI="http://developer.amd.com/wordpress/media/2012/10/xvba-sdk-0.74-404001.tar.gz"
 SRC_URI="${DRIVERS_URI} ${XVBA_SDK_URI}"
@@ -22,12 +27,12 @@ FOLDER_PREFIX="common/"
 IUSE="debug +modules multilib qt4 static-libs disable-watermark pax_kernel"
 
 LICENSE="AMD GPL-2 QPL-1.0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 RESTRICT="bindist test"
 
 RDEPEND="
-	<=x11-base/xorg-server-1.12.49[-minimal]
+	<=x11-base/xorg-server-1.13.49[-minimal]
 	>=app-admin/eselect-opengl-1.0.7
 	app-admin/eselect-opencl
 	sys-power/acpid
@@ -153,14 +158,17 @@ QA_DT_HASH="
 	usr/lib\(32\|64\)\?/OpenCL/vendors/amd/libOpenCL.so.1
 "
 
-CONFIG_CHECK="~MTRR ~!DRM ACPI PCI_MSI !LOCKDEP"
-use amd64 && CONFIG_CHECK="${CONFIG_CHECK} COMPAT"
+CONFIG_CHECK="~MTRR ~!DRM ACPI PCI_MSI !LOCKDEP !PAX_KERNEXEC_PLUGIN_METHOD_OR"
 ERROR_MTRR="CONFIG_MTRR required for direct rendering."
-ERROR_DRM="CONFIG_DRM must be disabled or compiled as a module for direct
-	rendering."
+ERROR_DRM="CONFIG_DRM must be disabled or compiled as a module and not loaded for direct
+	rendering to work."
 ERROR_LOCKDEP="CONFIG_LOCKDEP (lock tracking) exports the symbol lock_acquire
 	as GPL-only. This prevents ${P} from compiling with an error like this:
 	FATAL: modpost: GPL-incompatible module fglrx.ko uses GPL-only symbol 'lock_acquire'"
+ERROR_PAX_KERNEXEC_PLUGIN_METHOD_OR="This config option will cause
+	kernel to reject loading the fglrx module with
+	\"ERROR: could not insert 'fglrx': Exec format error.\"
+	You may want to try CONFIG_PAX_KERNEXEC_PLUGIN_METHOD_BTS instead."
 
 _check_kernel_config() {
 	if ! linux_chkconfig_present AGP && \
@@ -172,6 +180,10 @@ _check_kernel_config() {
 	kernel_is ge 2 6 37 && kernel_is le 2 6 38 && if ! linux_chkconfig_present BKL ; then
 		die "CONFIG_BKL must be enabled for kernels 2.6.37-2.6.38."
 	fi
+
+	if use amd64 && ! linux_chkconfig_present COMPAT; then
+		die "CONFIG_COMPAT must be enabled for amd64 kernels."
+	fi
 }
 
 pkg_pretend() {
@@ -180,6 +192,19 @@ pkg_pretend() {
 		linux-info_pkg_setup
 		require_configured_kernel
 		_check_kernel_config
+
+		if [[ "${KV_EXTRA}" != -hardened ]] && use pax_kernel; then
+			eerror "USE pax_kernel enabled for a non-hardened kernel."
+			eerror "If you know this kernel supports pax_kernel, open a bug at"
+			eerror "https://bugs.gentoo.org"
+			die "USE pax_kernel enabled for a non-hardened kernel"
+		fi
+	fi
+
+	if ! has XT ${PAX_MARKINGS} && use pax_kernel; then
+		ewarn "You have disabled xattr pax markings for portage."
+		ewarn "This will likely cause programs using ati-drivers provided"
+		ewarn "libraries to be killed kernel."
 	fi
 }
 
@@ -284,27 +309,16 @@ src_prepare() {
 	# first hunk applied upstream second (x32 related) was not
 	epatch "${FILESDIR}"/ati-drivers-x32_something_something.patch
 
-	#fixes bug #420751
-	epatch "${FILESDIR}"/ati-drivers-do_mmap.patch
-
-	# compile fix for linux-3.7
-	# https://bugs.gentoo.org/show_bug.cgi?id=438516
-	epatch "${FILESDIR}/ati-drivers-vm-reserverd.patch"
-
 	# compile fix for AGP-less kernel, bug #435322
 	epatch "${FILESDIR}"/ati-drivers-12.9-KCL_AGP_FindCapsRegisters-stub.patch
-
-	# Use ACPI_DEVICE_HANDLE wrapper to make driver build on linux-3.8
-	# see https://bugs.gentoo.org/show_bug.cgi?id=448216
-	epatch "${FILESDIR}/ati-drivers-kernel-3.8-acpihandle.patch"
-
-	# Compile fix, https://bugs.gentoo.org/show_bug.cgi?id=454870
-	use pax_kernel && epatch "${FILESDIR}/const-notifier-block.patch"
 
 	# Compile fix for kernel typesafe uid types #469160
 	epatch "${FILESDIR}/linux-3.9-kuid.diff"
 
 	epatch "${FILESDIR}/linux-3.10-proc.diff"
+
+	# Compile fix, https://bugs.gentoo.org/show_bug.cgi?id=454870
+	use pax_kernel && epatch "${FILESDIR}/const-notifier-block.patch"
 
 	cd "${MODULE_DIR}"
 
@@ -566,6 +580,10 @@ src_install-libs() {
 
 	#install xvba sdk headers
 	doheader xvba_sdk/include/amdxvba.h
+
+	if use pax_kernel; then
+		pax-mark m "${D}"/usr/lib*/opengl/ati/lib/libGL.so.1.2 || die "pax-mark failed"
+	fi
 }
 
 pkg_postinst() {
@@ -594,6 +612,12 @@ pkg_postinst() {
 		ewarn "this crash, downgrade to xf86-video-intel-2.20.2 or earlier or"
 		ewarn "try disabling sna for xf86-video-intel."
 		ewarn "For details, see https://bugs.gentoo.org/show_bug.cgi?id=430000"
+	fi
+
+	if use pax_kernel; then
+		ewarn "Please run \"revdep-pax -s libGL.so.1 -me\" after installation and"
+		ewarn "after you have run \"eselect opengl set ati\". Executacle"
+		ewarn "revdep-pax is part of package sys-apps/elfix."
 	fi
 }
 

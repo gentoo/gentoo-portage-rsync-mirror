@@ -1,0 +1,13 @@
+# ChangeLog for mail-client/geary
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.2 2013/05/30 13:45:08 hasufell Exp $
+
+  30 May 2013; Julian Ospald <hasufell@gentoo.org> geary-0.3.1.ebuild:
+  fix homepage
+
+*geary-0.3.1 (30 May 2013)
+
+  30 May 2013; Julian Ospald <hasufell@gentoo.org> +geary-0.3.1.ebuild,
+  +files/geary-0.3.1-ayatana.patch, +files/geary-0.3.1-cflags.patch,
+  +metadata.xml:
+  initial import wrt #436976

@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.154 2013/05/23 17:47:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.155 2013/05/30 13:55:02 jer Exp $
 
   23 May 2013; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.2.1-r3.ebuild:
   Stable for x86, wrt bug #464724
@@ -16,7 +16,7 @@
   17 May 2013; Ian Delaney <idella4@gentoo.org>
   +files/xen-tools-4-qemu-xen-doc.patch, xen-tools-4.2.1-r3.ebuild,
   xen-tools-4.2.2-r1.ebuild:
-  patch to fix build issue with qemu.doc.html, fixes Bug #70048 by Tomas Mozes
+  patch to fix build issue with qemu.doc.html, fixes Bug #470048 by Tomas Mozes
   who sourced the patch, re-add ocaml in IUSE for now
 
   16 May 2013; Ian Delaney <idella4@gentoo.org>
