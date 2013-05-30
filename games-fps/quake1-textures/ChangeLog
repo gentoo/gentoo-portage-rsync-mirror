@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake1-textures
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.10 2012/01/23 22:33:19 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.11 2013/05/30 15:29:26 ulm Exp $
+
+  30 May 2013; Ulrich Müller <ulm@gentoo.org> quake1-textures-20050820.ebuild:
+  Fix LICENSE, bug 470980.
 
   23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   quake1-textures-20050820.ebuild:

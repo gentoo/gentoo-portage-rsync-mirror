@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.5.1.ebuild,v 1.1 2013/03/19 08:53:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.5.1.ebuild,v 1.2 2013/05/30 15:24:54 xarthisius Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An improved dynamic tiling window manager"
 HOMEPAGE="http://i3wm.org/"
@@ -43,6 +43,8 @@ src_prepare() {
 		#!/bin/sh
 		exec /usr/bin/i3
 	EOF
+
+	epatch_user #471716
 }
 
 src_compile() {

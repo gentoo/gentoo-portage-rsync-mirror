@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20050820.ebuild,v 1.8 2012/01/23 22:33:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20050820.ebuild,v 1.9 2013/05/30 15:29:26 ulm Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://facelift.quakedev.com/"
 SRC_URI="http://facelift.quakedev.com/download/${MY_SKINS}
 	http://facelift.quakedev.com/download/${MY_TEXTURES}"
 
-LICENSE="as-is"
+LICENSE="quake1-textures"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""

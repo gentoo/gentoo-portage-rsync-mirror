@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14791 2013/05/29 18:31:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14792 2013/05/30 15:24:20 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -163,18 +163,6 @@ media-video/handbrake
 # Jeroen Roovers <jer@gentoo.org> (02 May 2013)
 # Has long surpassed its use, removal in thirty days
 www-plugins/diamondx
-
-# Ulrich Müller <ulm@gentoo.org> (01 May 2013)
-# HOMEPAGE and SRC_URI dead, tarball not redistributable.
-# Last upstream release in 2004.
-# Masked for removal in 30 days, bug #464938.
-www-apache/mod_loopback
-
-# Ulrich Müller <ulm@gentoo.org> (01 May 2013)
-# HOMEPAGE and SRC_URI dead, tarball not redistributable.
-# Last upstream release in 2004.
-# Masked for removal in 30 days, bug #464934.
-www-apache/mod_watch
 
 # Kacper Kowalik <xarthisius@gentoo.org> (01 May 2013)
 # Removal due to licensing issue wrt #452420

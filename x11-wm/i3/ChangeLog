@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.30 2013/03/19 08:53:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.31 2013/05/30 15:24:54 xarthisius Exp $
+
+  30 May 2013; Kacper Kowalik <xarthisius@gentoo.org> i3-4.5.1.ebuild:
+  Add epatch_user() wrt #471716 by René 'Necoro' Neumann <gentoo@necoro.eu>
 
 *i3-4.5.1 (19 Mar 2013)
 
