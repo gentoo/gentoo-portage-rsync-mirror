@@ -1,0 +1,39 @@
+From 1cb23fc096e16514acac8ff6befe12beaffb188b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@flameeyes.eu>
+Date: Thu, 30 May 2013 10:27:36 -0700
+Subject: [PATCH] Don't use assert_true so that tests work on Ruby 1.8 as well.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Diego Elio Pettenò <flameeyes@flameeyes.eu>
+---
+ test/image_test.rb | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/test/image_test.rb b/test/image_test.rb
+index e6fd1b7..0a62d87 100644
+--- a/test/image_test.rb
++++ b/test/image_test.rb
+@@ -125,7 +125,7 @@ class ImageTest < Test::Unit::TestCase
+     assert_equal 150, image[:width]
+     assert_equal 55, image[:height]
+     assert_equal [150, 55], image[:dimensions]
+-    assert_true String == image[:colorspace].class
++    assert String == image[:colorspace].class
+     assert_match(/^gif$/i, image[:format])
+     image.destroy!
+   end
+@@ -281,7 +281,7 @@ class ImageTest < Test::Unit::TestCase
+       result = image.composite(Image.open(TIFF_IMAGE_PATH)) do |c|
+         c.gravity "center"
+       end
+-      assert_true File.exists?(result.path)
++      assert File.exists?(result.path)
+     else
+       puts "Need at least version #{MiniMagick.minimum_image_magick_version} of ImageMagick"
+     end
+-- 
+1.8.2.1
+
