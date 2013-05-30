@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/splice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/splice/ChangeLog,v 1.1 2013/02/12 10:19:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/splice/ChangeLog,v 1.2 2013/05/30 07:18:50 radhermit Exp $
+
+  30 May 2013; Tim Harder <radhermit@gentoo.org> splice-1.0.1.ebuild:
+  Add PYTHON_REQUIRED_USE for python-single-r1.
 
 *splice-1.0.1 (12 Feb 2013)
 

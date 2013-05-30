@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.216 2013/05/17 00:52:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.217 2013/05/30 07:15:55 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -88,6 +88,7 @@ else
 			python? ( ${PYTHON_DEPS} )"
 		RDEPEND="${RDEPEND}
 			python? ( ${PYTHON_DEPS} )"
+		REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 	fi
 
 	DEPEND="${DEPEND}

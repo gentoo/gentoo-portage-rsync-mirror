@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.151 2013/05/13 07:35:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.153 2013/05/30 07:09:34 radhermit Exp $
+
+  30 May 2013; Tim Harder <radhermit@gentoo.org> -lilypond-2.17.16.ebuild,
+  -lilypond-2.17.17.ebuild, -lilypond-2.17.18.ebuild:
+  Remove old.
+
+*lilypond-2.17.19 (30 May 2013)
+
+  30 May 2013; Tim Harder <radhermit@gentoo.org> lilypond-2.16.2.ebuild,
+  +lilypond-2.17.19.ebuild, lilypond-9999.ebuild:
+  Version bump, update live ebuild, and add PYTHON_REQUIRED_USE for
+  python-single-r1.
 
 *lilypond-2.17.18 (13 May 2013)
 
