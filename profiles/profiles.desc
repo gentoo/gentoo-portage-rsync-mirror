@@ -145,6 +145,7 @@ amd64		hardened/linux/amd64					stable
 amd64		hardened/linux/amd64/selinux				stable
 amd64		hardened/linux/amd64/no-multilib			stable
 amd64		hardened/linux/amd64/no-multilib/selinux		stable
+amd64		hardened/linux/amd64/x32				dev
 amd64		hardened/linux/uclibc/amd64				dev
 arm		hardened/linux/arm/armv7a				dev
 arm		hardened/linux/uclibc/arm/armv7a			dev
