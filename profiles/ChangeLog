@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7893 2013/05/30 15:24:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7894 2013/05/30 15:34:35 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 May 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add quake1-textures license to MISC-FREE-DOCS group, bug 470980.
 
   30 May 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
   Remove mask for www-apache/mod_loopback and www-apache/mod_watch. Packages

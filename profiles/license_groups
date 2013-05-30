@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.218 2013/05/16 06:36:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.219 2013/05/30 15:34:35 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -48,7 +48,7 @@ FSF-APPROVED-OTHER Arphic CC-BY-2.0 CC-BY-SA-2.0 DSL FDL-1.1 FDL-1.1+ FDL-1.2 FD
 # Misc licenses for free documents and other works (including fonts)
 # that follow the definition at http://freedomdefined.org/ but are NOT
 # listed in @FSF-APPROVED-OTHER
-MISC-FREE-DOCS BitstreamVera CC-PD CC-BY-2.5 CC-BY-3.0 CC-BY-SA-2.5 CC-BY-SA-3.0 CC-SA-1.0 LDP-1 LDP-1a man-pages man-pages-posix MaxMind2 mplus-fonts myspell-en_CA-KevinAtkinson Texinfo-manual UbuntuFontLicense-1.0 Unicode_Fonts_for_Ancient_Scripts vlgothic wxWinFDL-3
+MISC-FREE-DOCS BitstreamVera CC-PD CC-BY-2.5 CC-BY-3.0 CC-BY-SA-2.5 CC-BY-SA-3.0 CC-SA-1.0 LDP-1 LDP-1a man-pages man-pages-posix MaxMind2 mplus-fonts myspell-en_CA-KevinAtkinson quake1-textures Texinfo-manual UbuntuFontLicense-1.0 Unicode_Fonts_for_Ancient_Scripts vlgothic wxWinFDL-3
 
 # Metaset for all free documents
 FREE-DOCUMENTS @FSF-APPROVED-OTHER @MISC-FREE-DOCS
