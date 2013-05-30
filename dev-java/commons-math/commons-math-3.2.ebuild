@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-3.2.ebuild,v 1.1 2013/05/29 12:44:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-3.2.ebuild,v 1.2 2013/05/30 08:17:02 tomwij Exp $
 
 EAPI="5"
 
@@ -49,6 +49,6 @@ java_prepare() {
 src_install() {
 	java-osgi_newjar target/${MY_P}.jar ${MY_PN} ${MY_PN} "Export-Package: ${MY_PN}"
 
-	use doc && java-pkg_dojavadoc target/apidocs
+	use doc && java-pkg_dojavadoc target/site/apidocs
 	use source && java-pkg_dosrc src/main/java/org
 }

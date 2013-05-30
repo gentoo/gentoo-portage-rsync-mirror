@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/ranger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.25 2013/03/02 06:42:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.26 2013/05/30 08:24:27 radhermit Exp $
+
+*ranger-1.6.1 (30 May 2013)
+
+  30 May 2013; Tim Harder <radhermit@gentoo.org> +ranger-1.6.1.ebuild,
+  ranger-9999.ebuild, +files/ranger-1.6.1-w3mimgdisplay.patch:
+  Version bump, use standard doc path, and fix w3mimgdisplay path (bug #461716
+  by Khayyam).
 
   02 Mar 2013; Tim Harder <radhermit@gentoo.org> -ranger-1.5.4.ebuild,
   -ranger-1.5.5.ebuild:
