@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.4 2013/01/31 17:48:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.5 2013/05/30 22:41:12 aballier Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ else
 fi
 IUSE="static-libs"
 
-RDEPEND=">=sys-libs/libunwind-1.0.1-r1"
+RDEPEND=">=sys-libs/libunwind-1.0.1-r1[static-libs?]"
 DEPEND="${RDEPEND}
 	${DEPEND}"
 
