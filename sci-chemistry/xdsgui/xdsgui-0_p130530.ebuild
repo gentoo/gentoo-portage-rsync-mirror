@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsgui/xdsgui-0_p130530.ebuild,v 1.1 2013/05/30 09:14:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsgui/xdsgui-0_p130530.ebuild,v 1.2 2013/05/30 09:46:27 jlec Exp $
 
 EAPI=5
 
@@ -20,8 +20,13 @@ RDEPEND="
 	dev-qt/qtgui:4
 	dev-util/xxdiff
 	sci-chemistry/xds-bin
+	sci-chemistry/xdsstat-bin
 	sci-visualization/xds-viewer"
 DEPEND=""
+
+S="${WORKDIR}"
+
+QA_PREBUILT="opt/bin/*"
 
 src_unpack() {
 	if use amd64; then
@@ -33,5 +38,5 @@ src_unpack() {
 
 src_install() {
 	exeinto /opt/bin
-	dobin ${PN}
+	doexe ${PN}
 }

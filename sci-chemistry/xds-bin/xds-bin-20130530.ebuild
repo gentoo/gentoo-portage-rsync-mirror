@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20120926.ebuild,v 1.1 2013/03/24 10:51:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20130530.ebuild,v 1.1 2013/05/30 09:42:03 jlec Exp $
 
 EAPI=5
 
 inherit eutils
 
-DESCRIPTION="X-ray Detector Software for processing single-crystal monochromatic diffraction data."
+DESCRIPTION="X-ray Detector Software for processing single-crystal monochromatic diffraction data"
 HOMEPAGE="http://xds.mpimf-heidelberg.mpg.de/"
 SRC_URI="
 	x86? ( ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS-IA32_Linux_x86.tar.gz -> XDS-IA32_Linux_x86-${PV}.tar.gz )
@@ -49,5 +49,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "This package will expire on June 30, 2013"
+	elog "This package will expire on December 31, 2013"
 }
