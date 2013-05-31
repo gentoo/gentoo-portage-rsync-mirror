@@ -1,6 +1,12 @@
 # ChangeLog for app-office/teapot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/ChangeLog,v 1.4 2011/12/15 22:45:18 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/ChangeLog,v 1.5 2013/05/31 13:49:47 xmw Exp $
+
+*teapot-2.3.0 (31 May 2013)
+
+  31 May 2013; Michael Weber <xmw@gentoo.org> +files/teapot-2.3.0-doc-dir.patch,
+  +files/teapot-2.3.0-helpfile.patch, +teapot-2.3.0.ebuild:
+  Version bump (bug 451738)
 
   15 Dec 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #353461
@@ -16,4 +22,3 @@
   03 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +teapot-2.2.0.ebuild,
   +files/teapot-2.2.0-doc-dir.patch, +files/teapot-2.2.0-helpfile.patch:
   Initial commit wrt #353579 by Kevin McCarthy.
-
