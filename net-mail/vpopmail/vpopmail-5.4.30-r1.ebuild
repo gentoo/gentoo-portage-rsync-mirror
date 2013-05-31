@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r1.ebuild,v 1.10 2011/11/03 00:30:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r1.ebuild,v 1.11 2013/05/31 00:46:46 robbat2 Exp $
 
 EAPI="2"
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r2.ebuild,v 1.6 2013/05/31 00:46:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33-r1.ebuild,v 1.2 2013/05/31 00:46:46 robbat2 Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit autotools eutils fixheadtails qmail user
 
@@ -13,11 +13,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="clearpasswd ipalias maildrop mysql spamassassin"
+IUSE="clearpasswd ipalias maildrop mysql postgres spamassassin"
+REQUIRED_USE="mysql? ( !postgres )"
 
 DEPEND="virtual/qmail
 	maildrop? ( mail-filter/maildrop )
 	mysql? ( virtual/mysql )
+	postgres? ( dev-db/postgresql-server )
 	spamassassin? ( mail-filter/spamassassin )"
 RDEPEND="${DEPEND}"
 
@@ -47,6 +49,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.4.9-access.violation.patch
 	epatch "${FILESDIR}"/${PN}-lazy.patch
 	epatch "${FILESDIR}"/${PN}-double-free.patch
+	epatch "${FILESDIR}"/${PN}-vpgsql.patch
+
+	echo 'install-recursive: install-exec-am' \
+		>>"${S}"/Makefile.am
 
 	# fix maildir paths
 	sed -i -e 's|Maildir|.maildir|g' \
@@ -58,6 +64,16 @@ src_prepare() {
 	sed -i -e '/printf.*vpopmail/s:vpopmail (:(:' \
 		vdelivermail.c vpopbull.c vqmaillocal.c || die
 
+	# automake/autoconf
+	mv -f "${S}"/configure.{in,ac} || die
+	sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,g' \
+	        configure.ac || die
+
+	# _FORTIFY_SOURCE
+	sed -i \
+		-e 's/\(snprintf(\s*\(LI->[a-zA-Z_]\+\),\s*\)[a-zA-Z_]\+,/\1 sizeof(\2),/' \
+		vlistlib.c || die
+
 	eautoreconf
 	ht_fix_file cdb/Makefile
 }
@@ -65,16 +81,24 @@ src_prepare() {
 src_configure() {
 	vpopmail_set_homedir
 
+	local authopts
 	if use mysql; then
-		authopts=" \
-			--enable-auth-module=mysql \
-			--enable-libdir=/usr/lib/mysql \
-			--enable-sql-logging \
-			--enable-valias \
-			--disable-mysql-replication \
-			--enable-mysql-limits"
+		mysqlinc=$(mysql_config --include)
+		authopts="--enable-incdir=${mysqlinc#-I}"
+		authopts+=" --enable-auth-module=mysql"
+		authopts+="	--enable-libdir=/usr/$(get_libdir)/mysql"
+		authopts+="	--enable-sql-logging"
+		authopts+=" --enable-valias"
+		authopts+="	--disable-mysql-replication"
+		authopts+="	--enable-mysql-limits"
+	elif use postgres; then
+		pglibdir=$(pg_config --libdir)
+		authopts+=" --enable-auth-module=pgsql"
+		authopts+=" --enable-libdir=${pglibdir}"
+		authopts+=" --enable-sql-logging"
+		authopts+=" --enable-valias"
 	else
-		authopts="--enable-auth-module=cdb"
+		authopts+=" --enable-auth-module=cdb"
 	fi
 
 	econf ${authopts} \
@@ -103,15 +127,10 @@ src_configure() {
 		$(use_enable spamassassin)
 }
 
-src_compile() {
-	emake || die "make failed"
-}
-
 src_install() {
 	vpopmail_set_homedir
 
-	# bug #277764
-	emake -j1 DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 	keepdir "${VPOP_HOME}"/domains
 
 	# install helper script for maildir conversion
@@ -151,7 +170,7 @@ src_install() {
 	doenvd "${FILESDIR}"/99vpopmail
 
 	einfo "Locking down vpopmail permissions"
-	fowners root:0 -R "${VPOP_HOME}"/{bin,etc,include}
+	fowners -R root:0 "${VPOP_HOME}"/{bin,etc,include}
 	fowners root:vpopmail "${VPOP_HOME}"/bin/vchkpw
 	fperms 4711 "${VPOP_HOME}"/bin/vchkpw
 }

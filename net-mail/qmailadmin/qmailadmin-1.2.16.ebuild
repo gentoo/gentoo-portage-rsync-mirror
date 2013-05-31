@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.15-r1.ebuild,v 1.2 2013/05/31 00:47:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.16.ebuild,v 1.1 2013/05/31 00:47:07 robbat2 Exp $
 
 inherit qmail eutils webapp autotools
 
@@ -31,8 +31,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.2.9-maildir.patch
-	epatch "${FILESDIR}"/${PN}-1.2.12-quota-overflow.patch
-	epatch "${FILESDIR}"/${PN}-1.2.15-quota-security.patch
 	eautoreconf
 }
 
@@ -82,10 +80,20 @@ src_install() {
 		TRANSLATORS NEWS FAQ README contrib/*
 
 	webapp_src_install
+
+	# CGI needs to be able to read /etc/vpopmail.conf
+	# Which is 0640 root:vpopmail, as it contains passwords
+	cgi=/usr/share/webapps/${PN}/${PV}/hostroot/cgi-bin/qmailadmin
+	fowners root:vpopmail $cgi
+	fperms g+s $cgi
 }
 
 pkg_postinst() {
 	einfo "If you would like support for ezmlm mailing lists inside qmailadmin,"
 	einfo "please emerge some variant of ezmlm-idx."
 	webapp_pkg_postinst
+	einfo "For complete webapp-config support:"
+	einfo "1. Add this for the Apache cgi-bin dir: Options +ExecCGI -MultiViews +FollowSymLinks"
+	einfo "2. Run: webapp-config -I -h localhost -d qmailadmin $PN $PV"
+	einfo "3. Symlink: ln -s {/usr/share/webapps/${PN}/${PV}/hostroot,/var/www/localhost}/cgi-bin/${PN}"
 }
