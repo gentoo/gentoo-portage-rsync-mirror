@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.4.11.1-r1.ebuild,v 1.6 2013/02/23 17:08:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.4.11.1-r1.ebuild,v 1.7 2013/05/31 14:51:00 kensington Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	$(add_kdebase_dep kdepimlibs 'semantic-desktop' 4.6)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)' 4.6)
 "
 RDEPEND="${DEPEND}"
 

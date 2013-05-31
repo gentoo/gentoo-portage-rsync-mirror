@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.11.1-r1.ebuild,v 1.5 2012/12/08 12:04:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.11.1-r1.ebuild,v 1.6 2013/05/31 14:54:30 kensington Exp $
 
 EAPI=4
 
@@ -14,8 +14,8 @@ KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop' 4.6)
-	$(add_kdebase_dep kdepimlibs 'semantic-desktop' 4.6)
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)' 4.6)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)' 4.6)
 	$(add_kdebase_dep libkdepim '' 4.4.11.1-r1)
 	$(add_kdebase_dep libkleo)
 	$(add_kdebase_dep libkpgp)

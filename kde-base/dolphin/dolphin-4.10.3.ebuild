@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.10.3.ebuild,v 1.1 2013/05/06 20:18:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.10.3.ebuild,v 1.2 2013/05/31 14:58:09 kensington Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ IUSE="debug semantic-desktop thumbnail"
 
 DEPEND="
 	$(add_kdebase_dep kactivities)
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep libkonq)
 	semantic-desktop? (
 		>=dev-libs/shared-desktop-ontologies-0.10.0

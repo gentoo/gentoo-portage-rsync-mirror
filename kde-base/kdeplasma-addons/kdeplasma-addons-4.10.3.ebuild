@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.3.ebuild,v 1.1 2013/05/06 20:17:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.3.ebuild,v 1.2 2013/05/31 14:56:31 kensington Exp $
 
 EAPI=5
 
@@ -19,9 +19,9 @@ RESTRICT=test
 COMMON_DEPEND="
 	app-crypt/qca:2
 	app-crypt/qca-ossl:2
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep krunner)
-	$(add_kdebase_dep plasma-workspace 'semantic-desktop?')
+	$(add_kdebase_dep plasma-workspace 'semantic-desktop(+)?')
 	x11-misc/shared-mime-info
 	attica? ( dev-libs/libattica )
 	desktopglobe? ( $(add_kdebase_dep marble) )
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 	qwt? ( x11-libs/qwt:5 )
 	scim? ( app-i18n/scim )
 	semantic-desktop? (
-		$(add_kdebase_dep kdepimlibs 'semantic-desktop')
+		$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
 		$(add_kdebase_dep plasma-workspace 'rss')
 	)
 "

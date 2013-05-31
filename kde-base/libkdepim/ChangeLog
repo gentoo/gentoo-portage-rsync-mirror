@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.197 2013/02/23 17:08:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.198 2013/05/31 14:51:00 kensington Exp $
+
+  31 May 2013; Michael Palimaka <kensington@gentoo.org>
+  libkdepim-4.4.11.1-r1.ebuild, libkdepim-4.4.11.1.ebuild:
+  Add USE dependency default in preparation for the removal of the semantic-
+  desktop USE flag.
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libkdepim-4.4.11.1-r1.ebuild:
   Add ~ppc64, wrt bug #455960
