@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scikits_timeseries
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_timeseries/ChangeLog,v 1.3 2013/03/17 15:56:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_timeseries/ChangeLog,v 1.4 2013/05/31 14:19:08 jlec Exp $
+
+  31 May 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop dead maintainer email timcera@earthlink.net
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

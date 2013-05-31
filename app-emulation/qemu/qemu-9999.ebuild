@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.50 2013/05/30 15:56:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.51 2013/05/31 14:20:45 slyfox Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-2
 	SRC_URI=""
 	KEYWORDS=""
+	BACKPORTS="" # live does not need backporting
 else
 	SRC_URI="http://wiki.qemu-project.org/download/${P}.tar.bz2
 	${BACKPORTS:+
@@ -286,7 +287,7 @@ qemu_src_configure() {
 		conf_opts+=" $(use_enable kernel_linux kvm)"
 		conf_opts+=" $(use_enable kernel_linux nptl)"
 		conf_opts+=" $(use_enable ncurses curses)"
-		conf_opts+=" $(use_enable opengl)"
+		conf_opts+=" $(use_enable opengl glx)"
 		conf_opts+=" $(use_enable png vnc-png)"
 		conf_opts+=" $(use_enable rbd)"
 		conf_opts+=" $(use_enable sasl vnc-sasl)"

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libecwj2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.10 2012/08/03 19:42:46 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.11 2013/05/31 14:05:23 jer Exp $
+
+  31 May 2013; Jeroen Roovers <jer@gentoo.org> files/libecwj2-3.3-nolcms.patch:
+  Fix relative paths in patch (bug #471852 by Milos Popovic).
 
   03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> libecwj2-3.3-r1.ebuild:
   Added static-libs, keyword amd64-linux x86-linux
