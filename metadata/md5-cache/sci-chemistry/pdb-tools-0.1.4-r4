@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=sci-chemistry/dssp virtual/fortran
 SLOT=0
 SRC_URI=http://pdb-tools.googlecode.com/files/pdb-tools_0.1.4.tar.gz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	fortran-2	ea80967500d9deda5468aed13b0bfca8	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	9fc80a4f06f33ede447b5647fddca301	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	fortran-2	ea80967500d9deda5468aed13b0bfca8	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	178dc714fb13931948c7f7ccc0a4748b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=516776009eca5912e8d9c2b012eb5a43
