@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/efax-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.40 2012/05/05 04:53:50 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.41 2013/05/31 15:45:07 xmw Exp $
+
+*efax-gtk-3.2.11 (31 May 2013)
+
+  31 May 2013; Michael Weber <xmw@gentoo.org> +efax-gtk-3.2.11.ebuild:
+  Version bump (bug 467932)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> efax-gtk-3.2.9.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
