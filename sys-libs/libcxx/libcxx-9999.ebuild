@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.8 2013/05/30 23:36:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.9 2013/05/31 01:16:29 aballier Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/libcxx/trunk"
 
 [ "${PV%9999}" != "${PV}" ] && SCM="subversion" || SCM=""
 
-inherit cmake-utils ${SCM} base flag-o-matic
+inherit cmake-utils ${SCM} base flag-o-matic toolchain-funcs
 
 DESCRIPTION="New implementation of the C++ standard library, targeting C++11"
 HOMEPAGE="http://libcxx.llvm.org/"
@@ -25,31 +25,44 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="static-libs"
+IUSE="+libcxxrt static-libs"
 
-RDEPEND=">=sys-libs/libcxxrt-0.0_p20130530[static-libs?]"
+RDEPEND="libcxxrt? ( >=sys-libs/libcxxrt-0.0_p20130530[static-libs?] )
+	!libcxxrt? ( sys-devel/gcc[cxx] )"
 DEPEND="${RDEPEND}
 	sys-devel/clang
 	app-arch/xz-utils"
 
-PATCHES=( "${FILESDIR}/multilib.patch"
-		  "${FILESDIR}/cxxrt.patch" )
+PATCHES=( "${FILESDIR}/multilib.patch" )
 DOCS=( "CREDITS.TXT" )
 
 src_prepare() {
+	use libcxxrt && PATCHES+=( "${FILESDIR}/cxxrt.patch" )
 	base_src_prepare
 }
 
 src_configure() {
+	local mycmakeargs_base=( )
+	if use libcxxrt ; then
+		mycmakeargs_base=(
+			-DLIBCXX_CXX_ABI=libcxxrt
+			-DLIBCXX_LIBCXXRT_INCLUDE_PATHS="/usr/include/libcxxrt/"
+		 )
+	else
+		# Very hackish, see $HOMEPAGE
+		# If someone has a clever idea, please share it!
+		local includes="$(echo | "$(tc-getCXX)" -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | tr '\n' ';' | tr -d ' ')"
+		mycmakeargs_base=(
+			 -DLIBCXX_CXX_ABI=libsupc++
+			 -DLIBCXX_LIBSUPCXX_INCLUDE_PATHS="${includes}"
+		)
+	fi
+
 	# Needs to be built with clang. gcc-4.6.3 fails at least.
 	# TODO: cross-compile ?
 	export CC=clang
 	export CXX=clang++
 
-	local mycmakeargs_base=(
-		 -DLIBCXX_CXX_ABI=libcxxrt
-		 -DLIBCXX_LIBCXXRT_INCLUDE_PATHS="/usr/include/libcxxrt/"
-	)
 	if use static-libs ; then
 		local mycmakeargs=( "${mycmakeargs_base[@]}" "-DLIBCXX_ENABLE_SHARED=OFF" )
 		BUILD_DIR="${S}_static"	cmake-utils_src_configure
