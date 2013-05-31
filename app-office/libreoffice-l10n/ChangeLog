@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.76 2013/05/30 07:56:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.77 2013/05/31 02:10:15 patrick Exp $
+
+  31 May 2013; Patrick Lauer <patrick@gentoo.org>
+  libreoffice-l10n-3.6.6.2.ebuild:
+  Stable x86 keyword to make libreoffice-bin-3.6 happy
 
   30 May 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   -libreoffice-l10n-3.6.4.3.ebuild:
