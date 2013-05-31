@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.139 2013/05/27 11:51:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.140 2013/05/31 16:43:29 jer Exp $
+
+  31 May 2013; Jeroen Roovers <jer@gentoo.org> xmlrpc-c-1.32.05-r1.ebuild:
+  Stable for HPPA (bug #471912).
 
   27 May 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Assign new maintainers
