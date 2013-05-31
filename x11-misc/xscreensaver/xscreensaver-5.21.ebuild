@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.15.ebuild,v 1.14 2012/07/23 15:29:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.21.ebuild,v 1.1 2013/05/31 13:25:45 xmw Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib pam
@@ -11,8 +11,8 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
-IUSE="jpeg new-login opengl pam +perl selinux suid xinerama"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
+IUSE="gdm jpeg new-login opengl pam +perl selinux suid xinerama"
 
 COMMON_DEPEND="dev-libs/libxml2
 	>=gnome-base/libglade-2
@@ -29,7 +29,10 @@ COMMON_DEPEND="dev-libs/libxml2
 	x11-libs/libXxf86misc
 	x11-libs/libXxf86vm
 	jpeg? ( virtual/jpeg )
-	new-login? ( || ( x11-misc/lightdm gnome-base/gdm kde-base/kdm ) )
+	new-login? (
+		gdm? ( gnome-base/gdm )
+		!gdm? ( || ( x11-misc/lightdm kde-base/kdm ) )
+		)
 	opengl? ( virtual/opengl )
 	pam? ( virtual/pam )
 	selinux? ( sec-policy/selinux-xscreensaver )
@@ -53,20 +56,23 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 src_prepare() {
-	if use new-login && has_version x11-misc/lightdm; then #392967
+	if use new-login && ! use gdm; then #392967
 		sed -i \
 			-e "/default_l.*1/s:gdmflexiserver -ls:${EPREFIX}/usr/libexec/lightdm/&:" \
 			configure{,.in} || die
 	fi
 
 	epatch \
-		"${FILESDIR}"/${PN}-5.15-gentoo.patch \
-		"${FILESDIR}"/${PN}-5.05-interix.patch
+		"${FILESDIR}"/${PN}-5.21-gentoo.patch \
+		"${FILESDIR}"/${PN}-5.05-interix.patch \
+		"${FILESDIR}"/${PN}-5.20-blurb-hndl-test-passwd.patch \
+		"${FILESDIR}"/${PN}-5.20-conf264.patch \
+		"${FILESDIR}"/${PN}-5.20-test-passwd-segv-tty.patch \
+		"${FILESDIR}"/${PN}-5.20-tests-miscfix.patch
 
 	eautoconf
+	eautoheader
 }
 
 src_configure() {

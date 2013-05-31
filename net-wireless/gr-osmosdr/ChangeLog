@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gr-osmosdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.6 2013/05/30 22:13:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.7 2013/05/31 13:23:11 zerochaos Exp $
+
+  31 May 2013; Rick Farina <zerochaos@gentoo.org> gr-osmosdr-0.0.1.ebuild,
+  gr-osmosdr-9999.ebuild:
+  updating homepage and description
 
 *gr-osmosdr-0.0.1 (30 May 2013)
 

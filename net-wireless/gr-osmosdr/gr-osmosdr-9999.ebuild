@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.5 2013/05/30 22:13:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.6 2013/05/31 13:23:11 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
 
 inherit cmake-utils python
 
-DESCRIPTION="GNU Radio source block for OsmoSDR and rtlsdr"
-HOMEPAGE="http://sdr.osmocom.org/"
+DESCRIPTION="GNU Radio source block for OsmoSDR and rtlsdr and hackrf"
+HOMEPAGE="http://sdr.osmocom.org/trac/wiki/GrOsmoSDR"
 
 if [[ ${PV} == 9999* ]]; then
 	inherit git-2
