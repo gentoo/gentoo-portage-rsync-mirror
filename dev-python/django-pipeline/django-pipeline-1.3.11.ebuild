@@ -1,15 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.9.ebuild,v 1.5 2013/05/31 16:21:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.11.ebuild,v 1.1 2013/05/31 16:21:20 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+# There's doubt in py3.2's readiness
+PYTHON_COMPAT=( python{2_6,2_7,3_3} )
 
 inherit distutils-r1
 
 DESCRIPTION="An asset packaging library for Django"
-HOMEPAGE="http://pypi.python.org/pypi/django-pipeline/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+HOMEPAGE="http://pypi.python.org/pypi/django-pipeline/ https://github.com/cyberdelia/django-pipeline"
+SRC_URI="https://github.com/cyberdelia/django-pipeline/archive/1.3.11.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -21,8 +22,11 @@ RDEPEND=">=dev-python/django-1.4.1[${PYTHON_USEDEP}]
 	dev-python/jsmin[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
-# Test phase unworkable due to missing source content
-RESTRICT="test"
+
+python_prepare() {
+	use test && DISTUTILS_IN_SOURCE_BUILD=1
+	distutils_python_prepare
+}
 
 python_compile_all() {
 	use doc && emake -C docs html
@@ -39,20 +43,16 @@ python_compile() {
 
 python_test() {
 	export DJANGO_SETTINGS_MODULE="django.conf"
-	export SECRET_KEY='green'
-	local test
-	pushd "${BUILD_DIR}"/lib/tests/tests/ > /dev/null || die
-	for test in test_*.py
-	do
-		if ! "${PYTHON}" -c \
-			"from django.conf import global_settings;global_settings.SECRET_KEY='$SECRET_KEY'" ${test}
-		then
-			die "test ${test} failed under ${EPYTHON}"
-		else
-			einfo "test ${test} passed under ${EPYTHON}"
-		fi
-	done
-	cd ../../
+	pushd "${BUILD_DIR}"/lib/tests/ &> /dev/null
+	ln -sf ../../../tests/assets . || die
+	ln -sf ../../../tests/assets2 . || die
+	cd ../../../ || die
+	if ! django-admin.py-${EPYTHON} test --setting=tests.settings tests
+	then
+		die "Tests failed under ${EPYTHON}"
+	else
+		einfo "Tests passed under ${EPYTHON}"
+	fi
 	rm -rf tests/ || die
 	rm -rf "${S}"/tests/ || einfo "tests folder already removed"
 }

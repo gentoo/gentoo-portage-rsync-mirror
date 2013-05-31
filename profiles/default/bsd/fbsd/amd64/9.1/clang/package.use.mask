@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/package.use.mask,v 1.1 2013/05/30 21:26:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/package.use.mask,v 1.2 2013/05/31 16:01:48 aballier Exp $
+
+# libunwind is rather core for our C++ stack. Better not have it link to liblzma
+# for smaller debug info.
+sys-libs/libunwind lzma
 
 # Needs to be fixed: cxx useflag enables plugins and gold. 
 # gold fails to build with clang:
