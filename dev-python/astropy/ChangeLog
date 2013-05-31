@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/astropy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.10 2013/05/22 06:23:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.11 2013/05/31 12:29:00 jlec Exp $
+
+*astropy-0.2.3 (31 May 2013)
+
+  31 May 2013; Justin Lecher <jlec@gentoo.org> +astropy-0.2.3.ebuild,
+  metadata.xml:
+  Version BUmp
 
   22 May 2013; Patrick Lauer <patrick@gentoo.org> astropy-0.2.1.ebuild:
   (Re-)Adding python-3.3 to python_targets

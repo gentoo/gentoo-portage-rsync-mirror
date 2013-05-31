@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/lib_users
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.26 2012/10/24 15:57:16 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.27 2013/05/31 12:01:45 klausman Exp $
+
+*lib_users-0.6 (31 May 2013)
+
+  31 May 2013; Tobias Klausmann <klausman@gentoo.org> +lib_users-0.6.ebuild:
+  Add v0.6 which fixes OpenVZ-style map files (bug 471612)
 
   24 Oct 2012; Jeroen Roovers <jer@gentoo.org> -lib_users-0.3.ebuild:
   Old.
