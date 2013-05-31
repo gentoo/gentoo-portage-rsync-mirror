@@ -1,0 +1,20 @@
+--- share/hedgewars/Data/Locale/hedgewars_de.ts
++++ share/hedgewars/Data/Locale/hedgewars_de.ts
+@@ -939,7 +939,7 @@
+     </message>
+     <message>
+         <source>Play a game across a network</source>
+-        <translation>Spiele über ein Netwerk</translation>
++        <translation>Spiele über ein Netzwerk</translation>
+     </message>
+     <message>
+         <source>Read about who is behind the Hedgewars Project</source>
+@@ -2154,7 +2154,7 @@
+     </message>
+     <message>
+         <source>Netgame - Error</source>
+-        <translation>Netwerkspiel - Fehler</translation>
++        <translation>Netzwerkspiel - Fehler</translation>
+     </message>
+     <message>
+         <source>Please select a server from the list</source>

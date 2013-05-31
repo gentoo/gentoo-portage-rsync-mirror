@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.1.1.1580.ebuild,v 1.1 2013/05/19 14:14:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.1.1.1580.ebuild,v 1.2 2013/05/31 19:29:39 hasufell Exp $
 
 EAPI=5
 
@@ -31,7 +31,6 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype
 	net-misc/curl
-	sys-auth/nss-mdns
 	sys-devel/gcc[cxx]
 	sys-libs/zlib
 	virtual/glu

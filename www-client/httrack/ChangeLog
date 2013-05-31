@@ -1,6 +1,11 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.51 2013/05/21 21:44:22 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.52 2013/05/31 19:18:28 sping Exp $
+
+*httrack-3.47.15 (31 May 2013)
+
+  31 May 2013; Sebastian Pipping <sping@gentoo.org> +httrack-3.47.15.ebuild:
+  Bump to 3.47.15
 
 *httrack-3.47.13 (21 May 2013)
 
