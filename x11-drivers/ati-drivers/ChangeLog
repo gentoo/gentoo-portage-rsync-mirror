@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.330 2013/05/30 13:48:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.331 2013/05/31 21:51:06 chithanh Exp $
+
+  31 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ati-drivers-13.6_beta.ebuild:
+  Update dependency on xorg-server, bug #471878.
 
 *ati-drivers-13.6_beta (30 May 2013)
 
