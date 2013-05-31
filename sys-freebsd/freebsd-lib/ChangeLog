@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.173 2013/05/24 21:25:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.174 2013/05/31 18:56:50 aballier Exp $
+
+*freebsd-lib-9.1-r3 (31 May 2013)
+
+  31 May 2013; Alexis Ballier <aballier@gentoo.org> +freebsd-lib-9.1-r3.ebuild:
+  Always build crt{begin,end} files: gcc will use its own and clang the ones
+  from freebsd-lib which should fix static linking with clang.
 
 *freebsd-lib-9.1-r2 (24 May 2013)
 

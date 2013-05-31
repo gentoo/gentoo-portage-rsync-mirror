@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.50 2013/03/02 21:22:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.51 2013/05/31 18:50:32 hasufell Exp $
+
+*hedgewars-0.9.19 (31 May 2013)
+
+  31 May 2013; Julian Ospald <hasufell@gentoo.org> +hedgewars-0.9.19.ebuild:
+  version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> hedgewars-0.9.18-r1.ebuild:
   Move Qt dependencies to the new category
