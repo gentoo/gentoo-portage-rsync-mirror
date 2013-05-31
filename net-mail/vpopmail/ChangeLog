@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.108 2012/02/09 03:50:00 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.109 2013/05/30 23:21:24 robbat2 Exp $
+
+  30 May 2013; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.4.33.ebuild:
+  Fix build with new automake/aclocal. Also bug #343341: _FORTIFY_SOURCE.
 
   09 Feb 2012; Jeroen Roovers <jer@gentoo.org> vpopmail-5.4.33.ebuild:
   Stable for HPPA (bug #378371).

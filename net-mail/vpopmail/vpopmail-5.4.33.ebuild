@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33.ebuild,v 1.7 2012/02/09 03:50:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33.ebuild,v 1.8 2013/05/30 23:21:24 robbat2 Exp $
 
 EAPI=4
 
@@ -57,6 +57,16 @@ src_prepare() {
 	# remove vpopmail advertisement
 	sed -i -e '/printf.*vpopmail/s:vpopmail (:(:' \
 		vdelivermail.c vpopbull.c vqmaillocal.c || die
+
+	# automake/autoconf
+	mv -f "${S}"/configure.{in,ac} || die
+	sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,g' \
+	        configure.ac || die
+
+	# _FORTIFY_SOURCE
+	sed -i \
+		-e 's/\(snprintf(\s*\(LI->[a-zA-Z_]\+\),\s*\)[a-zA-Z_]\+,/\1 sizeof(\2),/' \
+		vlistlib.c || die
 
 	eautoreconf
 	ht_fix_file cdb/Makefile
