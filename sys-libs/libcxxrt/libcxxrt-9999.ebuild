@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.5 2013/05/30 22:41:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.6 2013/05/30 23:33:32 aballier Exp $
 
 EAPI=4
 
@@ -36,8 +36,6 @@ src_prepare() {
 	base_src_prepare
 	cp "${FILESDIR}/Makefile" src/ || die
 	cp "${FILESDIR}/Makefile.test" test/Makefile || die
-	rm -f src/unwind* || die
-	cp -f "${FILESDIR}/unwind.h" src/ || die
 }
 
 src_compile() {
@@ -63,7 +61,7 @@ src_install() {
 	use static-libs && dolib.a src/${PN}.a
 
 	insinto /usr/include/libcxxrt/
-	doins src/cxxabi.h
+	doins src/cxxabi.h src/unwind*.h
 
 	dodoc AUTHORS COPYRIGHT README
 }

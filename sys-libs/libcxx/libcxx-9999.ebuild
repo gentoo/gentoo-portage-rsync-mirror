@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.7 2013/05/30 23:21:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.8 2013/05/30 23:36:35 aballier Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ else
 fi
 IUSE="static-libs"
 
-RDEPEND="sys-libs/libcxxrt[static-libs?]"
+RDEPEND=">=sys-libs/libcxxrt-0.0_p20130530[static-libs?]"
 DEPEND="${RDEPEND}
 	sys-devel/clang
 	app-arch/xz-utils"
@@ -41,12 +41,20 @@ src_prepare() {
 }
 
 src_configure() {
-	append-cppflags "-I/usr/include/libcxxrt -DLIBCXXRT"
 	# Needs to be built with clang. gcc-4.6.3 fails at least.
 	# TODO: cross-compile ?
 	export CC=clang
 	export CXX=clang++
-	use static-libs && BUILD_DIR="${S}_static" mycmakeargs="-DLIBCXX_ENABLE_SHARED=OFF" cmake-utils_src_configure
+
+	local mycmakeargs_base=(
+		 -DLIBCXX_CXX_ABI=libcxxrt
+		 -DLIBCXX_LIBCXXRT_INCLUDE_PATHS="/usr/include/libcxxrt/"
+	)
+	if use static-libs ; then
+		local mycmakeargs=( "${mycmakeargs_base[@]}" "-DLIBCXX_ENABLE_SHARED=OFF" )
+		BUILD_DIR="${S}_static"	cmake-utils_src_configure
+	fi
+	local mycmakeargs=( "${mycmakeargs_base[@]}" )
 	BUILD_DIR="${S}_shared" cmake-utils_src_configure
 }
 

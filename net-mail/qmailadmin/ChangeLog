@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/qmailadmin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.29 2012/06/18 23:25:29 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.30 2013/05/30 23:59:11 robbat2 Exp $
+
+*qmailadmin-1.2.15-r1 (30 May 2013)
+
+  30 May 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/qmailadmin-1.2.15-quota-security.patch, +qmailadmin-1.2.15-r1.ebuild:
+  Add fix for security issue from bug #269129, and fix compile with
+  vpopmail-5.4.33.
 
   18 Jun 2012; Jeroen Roovers <jer@gentoo.org> qmailadmin-1.2.10.ebuild:
   Marked ~hppa (bug #269123).
@@ -129,4 +136,3 @@
   25 Dec 2003; Robin H. Johnson <robbat2@gentoo.org>
   qmailadmin-1.2.0_rc1.ebuild:
   initial ebuild, based off bug #5642 with major modifications
-
