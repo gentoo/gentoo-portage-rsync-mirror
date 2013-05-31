@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/parrot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.65 2013/04/19 02:50:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.66 2013/05/31 04:43:41 patrick Exp $
+
+*parrot-5.4.0 (31 May 2013)
+
+  31 May 2013; Patrick Lauer <patrick@gentoo.org> +parrot-5.4.0.ebuild:
+  Bump
 
 *parrot-5.3.0 (19 Apr 2013)
 
