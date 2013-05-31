@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.251 2013/05/30 07:32:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.252 2013/05/31 10:19:38 radhermit Exp $
+
+*fetchmail-6.3.26-r1 (31 May 2013)
+
+  31 May 2013; Tim Harder <radhermit@gentoo.org> +fetchmail-6.3.26-r1.ebuild,
+  +files/fetchmail-6.3.26-python-optional.patch,
+  +files/fetchmail-6.3.26-tests.patch:
+  Revbump to fix tests and make python features truly optional (fixes bug
+  #471882).
 
   30 May 2013; Tim Harder <radhermit@gentoo.org> fetchmail-6.3.26.ebuild:
   Add PYTHON_REQUIRED_USE for python-single-r1.
