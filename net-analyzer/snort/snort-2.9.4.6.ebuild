@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.2.1.ebuild,v 1.4 2012/06/15 06:11:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.4.6.ebuild,v 1.1 2013/05/31 03:09:06 patrick Exp $
 
-EAPI="2"
+EAPI="5"
 inherit autotools multilib user
 
 DESCRIPTION="The de facto standard for intrusion detection/prevention"
 HOMEPAGE="http://www.snort.org/"
-SRC_URI="http://www.snort.org/dl/snort-current/${P}.tar.gz"
+SRC_URI="http://snort.org/downloads/2320 -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static +dynamicplugin +zlib +gre +mpls +targetbased +decoder-preprocessor-rules
 +ppm +perfprofiling linux-smp-stats inline-init-failopen +threads debug +active-response
 +normalizer reload-error-restart +react +flexresp3 +paf large-pcap-64bit
@@ -28,13 +28,9 @@ DEPEND=">=net-libs/libpcap-1.0.0
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-snort )"
 
-pkg_setup() {
+REQUIRED_USE="zlib? ( dynamicplugin )"
 
-	if use zlib && ! use dynamicplugin; then
-		eerror "You have enabled the 'zlib' USE flag but not the 'dynamicplugin' USE flag."
-		eerror "'zlib' requires 'dynamicplugin' be enabled."
-		die
-	fi
+pkg_setup() {
 
 	# pre_inst() is a better place to put this
 	# but we need it here for the 'fowners' statements in src_install()
@@ -46,7 +42,7 @@ pkg_setup() {
 src_prepare() {
 
 	#Multilib fix for the sf_engine
-	einfo "Applying multilib fix."
+	ebegin "Applying multilib fix"
 	sed -i -e 's|${exec_prefix}/lib|${exec_prefix}/'$(get_libdir)'|g' \
 		"${WORKDIR}/${P}/src/dynamic-plugins/sf_engine/Makefile.am" \
 		|| die "sed for sf_engine failed"
@@ -57,6 +53,7 @@ src_prepare() {
 			"${WORKDIR}/${P}/src/dynamic-preprocessors/$i/Makefile.am" \
 			|| die "sed for $i failed."
 	done
+	eend
 
 	AT_M4DIR=m4 eautoreconf
 }
@@ -107,14 +104,13 @@ src_configure() {
 
 src_install() {
 
-	emake DESTDIR="${D}" install || die "emake failed"
+	emake DESTDIR="${D}" install
 
 	dodir /var/log/snort \
 		/var/run/snort \
 		/etc/snort/rules \
 		/etc/snort/so_rules \
-		/usr/$(get_libdir)/snort_dynamicrules \
-			|| die "Failed to create core directories"
+		/usr/$(get_libdir)/snort_dynamicrules
 
 	# config.log and build.log are needed by Sourcefire
 	# to trouble shoot build problems and bug reports so we are
@@ -122,7 +118,6 @@ src_install() {
 	dodoc RELEASE.NOTES ChangeLog \
 		doc/* \
 		tools/u2boat/README.u2boat \
-		schemas/* || die "Failed to install snort docs"
 
 	insinto /etc/snort
 	doins etc/attribute_table.dtd \
@@ -130,18 +125,16 @@ src_install() {
 		etc/gen-msg.map \
 		etc/reference.config \
 		etc/threshold.conf \
-		etc/unicode.map || die "Failed to install docs in etc"
+		etc/unicode.map
 
 	# We use snort.conf.distrib because the config file is complicated
 	# and the one shipped with snort can change drastically between versions.
 	# Users should migrate setting by hand and not with etc-update.
-	newins etc/snort.conf snort.conf.distrib \
-		|| die "Failed to add snort.conf.distrib"
+	newins etc/snort.conf snort.conf.distrib
 
 	# config.log and build.log are needed by Sourcefire
 	# to troubleshoot build problems and bug reports so we are
-	# perserving them incase the user needs upstream support.
-	# 'die' was intentionally not added here.
+	# preserving them incase the user needs upstream support.
 	if [ -f "${WORKDIR}/${PF}/config.log" ]; then
 		dodoc "${WORKDIR}/${PF}/config.log"
 	fi
@@ -152,15 +145,15 @@ src_install() {
 	insinto /etc/snort/preproc_rules
 	doins preproc_rules/decoder.rules \
 		preproc_rules/preprocessor.rules \
-		preproc_rules/sensitive-data.rules || die "Failed to install preproc rule files"
+		preproc_rules/sensitive-data.rules
 
 	fowners -R snort:snort \
 		/var/log/snort \
 		/var/run/snort \
-		/etc/snort || die
+		/etc/snort
 
-	newinitd "${FILESDIR}/snort.rc11" snort || die "Failed to install snort init script"
-	newconfd "${FILESDIR}/snort.confd.2" snort || die "Failed to install snort confd file"
+	newinitd "${FILESDIR}/snort.rc12" snort
+	newconfd "${FILESDIR}/snort.confd.2" snort
 
 	# Sourcefire uses Makefiles to install docs causing Bug #297190.
 	# This removes the unwanted doc directory and rogue Makefiles.
