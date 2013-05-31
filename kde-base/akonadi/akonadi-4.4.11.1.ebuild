@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.4.11.1.ebuild,v 1.8 2013/02/23 15:53:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.4.11.1.ebuild,v 1.9 2013/05/31 15:19:41 kensington Exp $
 
 EAPI=4
 
@@ -13,8 +13,8 @@ IUSE="debug"
 
 DEPEND="
 	>=app-office/akonadi-server-1.3.1
-	$(add_kdebase_dep kdelibs 'semantic-desktop' 4.6)
-	$(add_kdebase_dep kdepimlibs 'semantic-desktop' 4.6)
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)' 4.6)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)' 4.6)
 	$(add_kdebase_dep libkdepim)
 "
 RDEPEND="${DEPEND}

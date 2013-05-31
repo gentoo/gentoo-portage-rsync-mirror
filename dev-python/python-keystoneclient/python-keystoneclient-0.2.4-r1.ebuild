@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.2.4.ebuild,v 1.1 2013/05/29 15:40:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.2.4-r1.ebuild,v 1.1 2013/05/31 15:08:21 prometheanfire Exp $
 
 EAPI=5
 #restricted due to packages missing and bad depends in the test ==webob-1.0.8
@@ -30,16 +30,21 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-python/nose-exclude[${PYTHON_USEDEP}]
 			dev-python/nosehtmloutput[${PYTHON_USEDEP}]
 			dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
-			=dev-python/pep8-1.3.3
+			=dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 			>=dev-python/testtools-0.9.22[${PYTHON_USEDEP}]
 			dev-python/unittest2[${PYTHON_USEDEP}]
-			=dev-python/webob-1.0.8 )"
-RDEPEND="dev-python/iso8601[${PYTHON_USEDEP}]
-		dev-python/prettytable
-		>=dev-python/requests-0.8.8
-		<=dev-python/requests-1.0
+			>=dev-python/webob-1.0.8[${PYTHON_USEDEP}] )"
+RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
+		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
+		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.5[${PYTHON_USEDEP}]
+		<dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		>=dev-python/prettytable-0.6[${PYTHON_USEDEP}]
+		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
+		>=dev-python/requests-0.8.8[${PYTHON_USEDEP}]
 		dev-python/simplejson[${PYTHON_USEDEP}]
+		dev-python/six[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]"
 
 PATCHES=(

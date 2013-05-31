@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.10.3.ebuild,v 1.1 2013/05/06 20:18:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.10.3.ebuild,v 1.2 2013/05/31 15:04:39 kensington Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ IUSE="akonadi debug kate okular"
 
 DEPEND="
 	$(add_kdebase_dep qtruby)
-	$(add_kdebase_dep smokekde 'kate?,okular?,semantic-desktop')
+	$(add_kdebase_dep smokekde 'kate?,okular?,semantic-desktop(+)')
 	$(add_kdebase_dep smokeqt)
 "
 RDEPEND="${DEPEND}

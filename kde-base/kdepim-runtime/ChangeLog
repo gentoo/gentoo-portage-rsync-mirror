@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.132 2013/05/13 09:38:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.133 2013/05/31 15:18:22 kensington Exp $
+
+  31 May 2013; Michael Palimaka <kensington@gentoo.org>
+  kdepim-runtime-4.10.2.ebuild, kdepim-runtime-4.10.3.ebuild,
+  kdepim-runtime-4.4.11.1-r1.ebuild:
+  Add USE dependency default in preparation for the removal of the semantic-
+  desktop USE flag.
 
   13 May 2013; Michael Palimaka <kensington@gentoo.org>
   kdepim-runtime-4.10.3.ebuild:

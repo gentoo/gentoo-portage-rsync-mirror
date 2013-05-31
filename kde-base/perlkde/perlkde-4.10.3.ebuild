@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/perlkde-4.10.3.ebuild,v 1.1 2013/05/06 20:18:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/perlkde-4.10.3.ebuild,v 1.2 2013/05/31 15:21:29 kensington Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ IUSE="akonadi attica debug kate okular semantic-desktop test"
 RDEPEND="
 	>=dev-lang/perl-5.10.1
 	$(add_kdebase_dep perlqt)
-	$(add_kdebase_dep smokekde 'attica?,kate?,okular?,semantic-desktop?')
+	$(add_kdebase_dep smokekde 'attica?,kate?,okular?,semantic-desktop(+)?')
 	semantic-desktop? ( >=dev-libs/soprano-2.9.0 )
 "
 DEPEND="${RDEPEND}

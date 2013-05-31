@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.10.3.ebuild,v 1.1 2013/05/06 20:18:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.10.3.ebuild,v 1.2 2013/05/31 15:25:00 kensington Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ IUSE="debug kipi semantic-desktop"
 RESTRICT="test"
 
 DEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep libkonq)
 	$(add_kdebase_dep kactivities)
 	>=media-gfx/exiv2-0.19

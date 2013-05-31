@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/zim
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.21 2012/12/13 16:49:49 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.22 2013/05/31 15:22:57 xmw Exp $
+
+*zim-0.60 (31 May 2013)
+
+  31 May 2013; Michael Weber <xmw@gentoo.org>
+  +files/zim-0.60-remove-ubuntu-theme.patch, +zim-0.60.ebuild:
+  Version bump (bug 459612, thanks Alastair Murray and poncho)
 
 *zim-0.57 (13 Dec 2012)
 
@@ -118,4 +124,3 @@
   10 Sep 2006; Steev Klimaszewski <steev@gentoo.org> +Changelog,
   +metadata.xml, +zim-0.16.ebuild:
   Initial import.  Finally closes bug #112957
-

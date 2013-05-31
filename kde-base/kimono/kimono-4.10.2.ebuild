@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.10.2.ebuild,v 1.4 2013/05/01 11:51:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.10.2.ebuild,v 1.5 2013/05/31 15:13:28 kensington Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ DEPEND="
 	dev-lang/mono
 	$(add_kdebase_dep qyoto 'webkit')
 	$(add_kdebase_dep smokeqt)
-	$(add_kdebase_dep smokekde 'semantic-desktop?')
+	$(add_kdebase_dep smokekde 'semantic-desktop(+)?')
 	plasma? ( $(add_kdebase_dep smokeqt 'webkit') )
 "
 RDEPEND="${DEPEND}"

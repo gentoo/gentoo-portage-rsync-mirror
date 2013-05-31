@@ -1,9 +1,8 @@
 Patch from Andreas Jochens
 http://lists.debian.org/debian-qa-packages/2006/08/msg00519.html
 
-diff -urN ../tmp-orig/xawtv-3.95/console/fbtools.c ./console/fbtools.c
---- ../tmp-orig/xawtv-3.95/console/fbtools.c	2003-02-14 14:14:04.000000000 +0000
-+++ ./console/fbtools.c	2006-08-23 10:57:40.000000000 +0000
+--- a/console/fbtools.c	2003-02-14 14:14:04.000000000 +0000
++++ b/console/fbtools.c	2006-08-23 10:57:40.000000000 +0000
 @@ -21,8 +21,6 @@
  #include <linux/vt.h>
  #include <linux/fb.h>
@@ -22,9 +21,8 @@ diff -urN ../tmp-orig/xawtv-3.95/console/fbtools.c ./console/fbtools.c
      fb_mem = mmap(NULL,fb_fix.smem_len+fb_mem_offset,
  		  PROT_READ|PROT_WRITE,MAP_SHARED,fb,0);
      if (-1L == (long)fb_mem) {
-diff -urN ../tmp-orig/xawtv-3.95/console/matrox.c ./console/matrox.c
---- ../tmp-orig/xawtv-3.95/console/matrox.c	2005-02-03 10:40:41.000000000 +0000
-+++ ./console/matrox.c	2006-08-23 11:09:51.000000000 +0000
+--- a/console/matrox.c	2005-02-03 10:40:41.000000000 +0000
++++ b/console/matrox.c	2006-08-23 11:09:51.000000000 +0000
 @@ -9,7 +9,6 @@
  #include <sys/ioctl.h>
  #include <sys/mman.h>

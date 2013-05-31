@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.11.1.ebuild,v 1.8 2012/12/08 12:04:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.11.1.ebuild,v 1.9 2013/05/31 15:26:51 kensington Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
 
 DEPEND="
-	$(add_kdebase_dep kdepimlibs 'semantic-desktop' 4.6)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)' 4.6)
 	$(add_kdebase_dep libkdepim)
 	sys-libs/zlib
 "

@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pbr
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.1 2013/05/31 15:05:48 prometheanfire Exp $
+
+*pbr-0.5.11 (31 May 2013)
+
+  31 May 2013; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +pbr-0.5.11.ebuild:
+  new dep required by openstack packages

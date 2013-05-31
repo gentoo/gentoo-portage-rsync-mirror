@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.2.ebuild,v 1.7 2013/05/29 15:01:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.2.ebuild,v 1.8 2013/05/31 15:15:11 kensington Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -20,9 +20,9 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/sip-4.14:=[${PYTHON_USEDEP}]
 
-	$(add_kdebase_dep kdelibs 'opengl,semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'opengl,semantic-desktop(+)?')
 	semantic-desktop? (
-		$(add_kdebase_dep kdepimlibs 'semantic-desktop')
+		$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
 		>=dev-libs/soprano-2.9.0
 	)
 	aqua? ( >=dev-python/PyQt4-4.9.5[${PYTHON_USEDEP},dbus,declarative,script(+),sql,svg,webkit,aqua] )

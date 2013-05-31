@@ -11,6 +11,8 @@
 	<use>
 		<flag name='ploop'>Add support for ploop devices via <pkg>sys-cluster/ploop</pkg></flag>
 		<flag name='cgroup'>Add support to Linux kernel cgroup subsytem</flag>
+		<flag name='vz-kernel'>Support OpenVZ patched kernel (<pkg>sys-kernel/openvz-sources</pkg>)</flag>
+		<flag name='vanilla-kernel'>Support unpatched upstream Linux kernel</flag>
 	</use>
 	<upstream>
 		<maintainer status="active">

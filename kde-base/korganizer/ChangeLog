@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.272 2013/05/08 21:40:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.273 2013/05/31 15:26:51 kensington Exp $
+
+  31 May 2013; Michael Palimaka <kensington@gentoo.org>
+  korganizer-4.10.2.ebuild, korganizer-4.10.3.ebuild,
+  korganizer-4.4.11.1.ebuild:
+  Add USE dependency default in preparation for the removal of the semantic-
+  desktop USE flag.
 
   08 May 2013; Johannes Huber <johu@gentoo.org> korganizer-4.10.3.ebuild:
   Restore accidentally dropped keywords.

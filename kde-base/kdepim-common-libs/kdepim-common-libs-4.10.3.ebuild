@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.10.3.ebuild,v 1.1 2013/05/06 20:18:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.10.3.ebuild,v 1.2 2013/05/31 15:03:09 kensington Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DEPEND="
 	app-crypt/gpgme
 	>=app-office/akonadi-server-1.9.0
 	>=dev-libs/shared-desktop-ontologies-0.10.0
-	$(add_kdebase_dep kdepimlibs 'semantic-desktop')
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
 "
 RDEPEND="${DEPEND}
 	app-crypt/gnupg

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.10.3.ebuild,v 1.1 2013/05/06 20:18:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.10.3.ebuild,v 1.2 2013/05/31 15:23:07 kensington Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="attica debug kate okular semantic-desktop"
 
 DEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep smokeqt)
 	attica? ( dev-libs/libattica )
 	kate? ( $(add_kdebase_dep kate) )
