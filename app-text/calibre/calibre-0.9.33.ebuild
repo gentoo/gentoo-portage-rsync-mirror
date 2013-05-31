@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.31.ebuild,v 1.3 2013/05/18 23:07:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.33.ebuild,v 1.1 2013/05/31 09:42:15 zmedico Exp $
 
 EAPI=5
 
@@ -152,6 +152,7 @@ src_install() {
 	local libdir=$(get_libdir)
 	[[ -n $libdir ]] || die "get_libdir returned an empty string"
 
+	mkdir -p src/calibre/plugins
 	dodir "/usr/$(get_libdir)/python2.7/site-packages" # for init_calibre.py
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 	"${EPREFIX}"/usr/bin/python2.7 setup.py install \
