@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.5.ebuild,v 1.4 2012/06/13 07:35:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.6.ebuild,v 1.1 2013/05/31 12:48:28 xmw Exp $
 
 EAPI=4
 
-inherit eutils linux-info
+inherit autotools eutils linux-info user
 
 DESCRIPTION="Miredo is an open-source Teredo IPv6 tunneling software."
 HOMEPAGE="http://www.remlab.net/miredo/"
@@ -12,7 +12,7 @@ SRC_URI="http://www.remlab.net/files/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+caps"
 
 RDEPEND="sys-apps/iproute2
@@ -26,30 +26,33 @@ CONFIG_CHECK="~IPV6" #318777
 #tries to connect to external networks (#339180)
 RESTRICT="test"
 
+DOCS=( AUTHORS ChangeLog NEWS README TODO THANKS )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.2.5-configure-libcap.diff
+	epatch "${FILESDIR}"/${PN}-1.2.5-ip-path.patch
+	eautoreconf
+}
+
 src_configure() {
-	econf --disable-static \
+	econf \
+		--disable-static \
 		--enable-miredo-user \
-		--prefix=/usr \
-		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--docdir="/usr/share/doc/${P}"
-	use caps || \
-		echo "#undef HAVE_SYS_CAPABILITY_H" >> config.h
+		$(use_with caps libcap)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+	default
+	prune_libtool_files
 
-	newinitd "${FILESDIR}"/miredo-server.rc miredo-server
-	newconfd "${FILESDIR}"/miredo-server.conf miredo-server
-	newinitd "${FILESDIR}"/miredo.rc miredo
-	newconfd "${FILESDIR}"/miredo.conf miredo
+	newinitd "${FILESDIR}"/miredo.rc.2 miredo
+	newconfd "${FILESDIR}"/miredo.conf.2 miredo
+	newinitd "${FILESDIR}"/miredo.rc.2 miredo-server
+	newconfd "${FILESDIR}"/miredo.conf.2 miredo-server
 
 	insinto /etc/miredo
 	doins misc/miredo-server.conf
-
-	dodoc README NEWS ChangeLog AUTHORS THANKS TODO
 }
 
 pkg_preinst() {

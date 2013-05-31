@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/miredo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.17 2013/04/05 21:48:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.18 2013/05/31 12:48:28 xmw Exp $
+
+*miredo-1.2.6 (31 May 2013)
+
+  31 May 2013; Michael Weber <xmw@gentoo.org> +miredo-1.2.6.ebuild,
+  -files/miredo-server.conf, -files/miredo-server.rc, -files/miredo.conf,
+  -files/miredo.rc, -miredo-1.2.5.ebuild, miredo-1.2.5-r2.ebuild:
+  Version bump, drop old.
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> miredo-1.2.5-r2.ebuild:
   Stable for x86, wrt bug #463124
