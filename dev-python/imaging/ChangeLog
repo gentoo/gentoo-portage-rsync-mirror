@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.89 2013/05/28 22:47:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.90 2013/05/31 02:32:15 patrick Exp $
+
+  31 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Drop unused useflag description
 
   28 May 2013; Mike Gilbert <floppym@gentoo.org>
   -files/imaging-2.0.0-delete_hardcoded_paths.patch,

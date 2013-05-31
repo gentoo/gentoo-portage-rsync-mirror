@@ -1731,7 +1731,6 @@ dev-python/django-tastypie:yaml - An optional serialiser dev-python/yaml
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/falcon:cython - Build cython-based python modules
 dev-python/icalendar:doc - Generate examples and other extra documentation
-dev-python/imaging:webp - Enable support for webp image format.
 dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
 dev-python/ipython:mongodb - Enable support for MongoDB via dev-python/pymongo
 dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado

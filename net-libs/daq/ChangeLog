@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.23 2013/03/17 17:14:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.24 2013/05/31 02:48:40 patrick Exp $
+
+*daq-2.0.0 (31 May 2013)
+
+  31 May 2013; Patrick Lauer <patrick@gentoo.org> +daq-2.0.0.ebuild:
+  Bump
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

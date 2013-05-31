@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.147 2013/05/28 13:53:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.148 2013/05/31 02:32:09 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (31 May 2013)
+# no stable jdk+java-config
+net-misc/tightvnc java
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
 # depends on sys-devel/llvm[video_cards_radeon]
