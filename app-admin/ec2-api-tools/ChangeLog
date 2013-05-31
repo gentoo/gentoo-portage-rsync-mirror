@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/ec2-api-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.18 2013/04/26 21:06:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.19 2013/05/31 22:09:47 tomwij Exp $
+
+*ec2-api-tools-1.6.7.2-r2 (31 May 2013)
+
+  31 May 2013; Tom Wijsman <TomWij@gentoo.org> +ec2-api-tools-1.6.7.2-r2.ebuild:
+  Unbundled half of the libraries, the other hal half is missing, committed as
+  unkeyworded since this is a work in progress and breaks a lot of things;
+  reported by robbat2 on IRC, tracked in bug #471942.
 
 *ec2-api-tools-1.6.7.2 (26 Apr 2013)
 
