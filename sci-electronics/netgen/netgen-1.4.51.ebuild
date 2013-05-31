@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/netgen/netgen-1.4.48.ebuild,v 1.1 2013/05/29 06:51:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/netgen/netgen-1.4.51.ebuild,v 1.1 2013/05/31 08:13:28 xmw Exp $
 
 EAPI=4
 

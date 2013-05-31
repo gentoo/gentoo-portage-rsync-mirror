@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare unpack
+DEPEND=dev-libs/geoip dev-libs/libnl:3 dev-libs/userspace-rcu net-libs/libnetfilter_conntrack sys-libs/ncurses:5 mausezahn? ( dev-libs/libcli net-libs/libnet:1.1 ) sys-devel/flex sys-devel/bison curvetun? ( =net-libs/nacl-0_p20110221* ) dev-vcs/git
+DESCRIPTION=high performance network sniffer for packet inspection
+EAPI=5
+HOMEPAGE=http://netsniff-ng.org/
+IUSE=curvetun mausezahn
+LICENSE=GPL-2
+RDEPEND=dev-libs/geoip dev-libs/libnl:3 dev-libs/userspace-rcu net-libs/libnetfilter_conntrack sys-libs/ncurses:5 mausezahn? ( dev-libs/libcli net-libs/libnet:1.1 )
+SLOT=0
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=72974d3b02f547b2f91642d1a0946a3b
