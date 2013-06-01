@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>desktop-misc</herd>
-	<maintainer>
-		<email>lack@gentoo.org</email>
-		<name>Jim Ramsay</name>
-	</maintainer>
 	<use>
 		<!-- =www-plugins/adobe-flash-10.0* has both 32- and 64-bit versions -->
 		<flag name='64bit'>For amd64-multilib, installs the native 64-bit

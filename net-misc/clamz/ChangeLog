@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clamz
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/ChangeLog,v 1.5 2012/05/05 03:20:44 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/ChangeLog,v 1.6 2013/06/01 11:18:54 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> clamz-0.4.ebuild,
   clamz-0.5.ebuild:
@@ -23,4 +26,3 @@
   +metadata.xml:
   New package: clamz is a command-line downloader for the Amazon.com MP3
   music store (Bug #267873)
-

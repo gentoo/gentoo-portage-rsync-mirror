@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.75 2013/05/24 19:35:09 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.76 2013/06/01 11:18:19 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -openresolv-3.3.4-r1.ebuild,
+  -openresolv-3.4.1-r1.ebuild, -openresolv-3.4.6.ebuild,
+  -openresolv-3.5.2.ebuild, -openresolv-3.5.3.ebuild,
+  -openresolv-3.5.4-r1.ebuild, -openresolv-3.5.4-r2.ebuild, metadata.xml:
+  Cleanup due bug #144305
 
 *openresolv-3.5.4-r3 (24 May 2013)
 

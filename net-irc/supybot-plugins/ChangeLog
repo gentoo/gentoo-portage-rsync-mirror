@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/supybot-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.6 2010/11/04 12:48:54 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.7 2013/06/01 11:18:09 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
 
   04 Nov 2010; Markus Meier <maekke@gentoo.org>
   supybot-plugins-20060723-r2.ebuild:
@@ -34,4 +37,3 @@
   +supybot-plugins-20060723.ebuild:
   Adding new ebuild. This is the officially released set of extra plugins for
   Supybot.
-

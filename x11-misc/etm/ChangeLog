@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/etm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.5 2012/04/01 04:48:11 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.6 2013/06/01 11:23:42 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -etm-648.ebuild, -etm-655.ebuild,
+  metadata.xml:
+  Cleanup due bug #144305
 
   01 Apr 2012; Mike Gilbert <floppym@gentoo.org> etm-696.ebuild:
   python-dateutil no longer needs a slot dep.
@@ -23,4 +27,3 @@
   10 Aug 2010; Jim Ramsay <lack@gentoo.org> +etm-648.ebuild, +metadata.xml:
   New package: Event and Task Manager, an intuitive time management
   application
-

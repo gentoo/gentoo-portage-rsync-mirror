@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pymazon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/ChangeLog,v 1.7 2011/12/09 14:38:36 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/ChangeLog,v 1.8 2013/06/01 11:19:11 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
 
 *pymazon-0.9.1 (09 Dec 2011)
 
@@ -32,4 +35,3 @@
   +files/amz.xml, +metadata.xml:
   Introducing Pymazon-0.9, a graphical open-source replacement for the
   Amazon.com media downloader (Bug #321599)
-

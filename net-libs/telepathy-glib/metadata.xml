@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<herd>voip</herd>
-	<maintainer>
-		<email>peper@gentoo.org</email>
-		<name>Piotr Jaroszyński</name>
-	</maintainer>
 	<use>
 		<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
 	</use>
