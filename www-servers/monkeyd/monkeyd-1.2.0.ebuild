@@ -1,6 +1,6 @@
 # Copyright 1999- Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.0.ebuild,v 1.2 2013/05/28 23:52:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.0.ebuild,v 1.3 2013/06/01 16:30:20 blueness Exp $
 
 EAPI="5"
 
@@ -15,15 +15,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
-PLUGINS="monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril monkeyd_plugins_polarssl"
-IUSE="-debug php minimal ssl uclibc ${PLUGINS}"
+# ssl is broken, so we turn it off until fixed
+#PLUGINS="monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril monkeyd_plugins_polarssl"
+#IUSE="-debug php minimal ssl uclibc ${PLUGINS}"
+PLUGINS="monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril"
+IUSE="-debug php minimal uclibc ${PLUGINS}"
 
 # uclibc is often compiled without backtrace info so we should
 # force this off.  If someone complains, consider relaxing it.
-REQUIRED_USE="
-	uclibc? ( !debug )
-	ssl? ( monkeyd_plugins_polarssl )
-"
+# ssl is borken, so we remove "ssl? ( monkeyd_plugins_polarssl )"
+REQUIRED_USE="uclibc? ( !debug )"
 
 RDEPEND="php? ( dev-lang/php )"
 
