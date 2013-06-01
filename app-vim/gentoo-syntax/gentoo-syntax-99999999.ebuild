@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-99999999.ebuild,v 1.5 2013/05/14 05:15:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-99999999.ebuild,v 1.6 2013/06/01 09:32:03 radhermit Exp $
 
 EAPI=5
 
@@ -10,10 +10,7 @@ EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/gentoo-syntax.git"
 
 DESCRIPTION="vim plugin: Gentoo and portage related syntax highlighting, filetype, and indent settings"
 HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/gentoo-syntax.git"
-unset SRC_URI
-
 LICENSE="vim"
-KEYWORDS=""
 IUSE="ignore-glep31"
 
 VIM_PLUGIN_HELPFILES="gentoo-syntax"
@@ -33,7 +30,7 @@ src_prepare() {
 pkg_postinst() {
 	vim-plugin_pkg_postinst
 
-	if ! has_version app-vim/gentoo-syntax ; then
+	if [[ -z ${REPLACING_VERSIONS} ]] ; then
 		if use ignore-glep31 1>/dev/null ; then
 			ewarn "You have chosen to disable the rules which ensure GLEP 31"
 			ewarn "compliance. When editing ebuilds, please make sure you get"
