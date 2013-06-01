@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXres
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.71 2012/08/26 18:41:38 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.72 2013/06/01 03:20:27 chithanh Exp $
+
+*libXres-1.0.7 (01 Jun 2013)
+
+  01 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXres-1.0.7.ebuild:
+  Version bump for security bug #471098.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXres-1.0.6.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -266,4 +272,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXres-0.99.0.ebuild:
   Initial commit for modular X.
-

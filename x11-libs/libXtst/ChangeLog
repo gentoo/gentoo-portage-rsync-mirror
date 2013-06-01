@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.81 2013/02/26 16:11:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.82 2013/06/01 03:22:55 chithanh Exp $
+
+*libXtst-1.2.2 (01 Jun 2013)
+
+  01 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXtst-1.2.2.ebuild:
+  Version bump for security bug #471098.
 
 *libXtst-1.2.1-r1 (26 Feb 2013)
 

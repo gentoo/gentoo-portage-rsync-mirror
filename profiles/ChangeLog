@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7897 2013/05/31 15:33:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7898 2013/06/01 03:05:23 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/uclibc/amd64/use.mask:
+  Unmask xorg's synaptics, wacom, qxl on hardened/linux/uclibc/amd64
 
   31 May 2013; Sergei Trofimovich <slyfox@gentoo.org>
   desc/qemu_softmmu_targets.desc, desc/qemu_user_targets.desc:
