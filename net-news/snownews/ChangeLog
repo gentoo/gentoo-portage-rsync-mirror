@@ -1,6 +1,10 @@
 # ChangeLog for net-news/snownews
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.38 2013/01/11 02:06:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.39 2013/06/01 12:24:26 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -snownews-1.5.10.ebuild,
+  metadata.xml:
+  Cleanup due bug #151880
 
   11 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   snownews-1.5.12-r1.ebuild:

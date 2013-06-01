@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>cedk@gentoo.org</email>
-</maintainer>
 <longdescription>An enterprise grade authenticating firewall based on netfilter</longdescription>
 <use>
 	<flag name='nfconntrack'>Use netfilter_conntrack</flag>

@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>cedk@gentoo.org</email>
-</maintainer>
 <longdescription>API to packets that have been queued by the kernel packet filter</longdescription>
 </pkgmetadata>

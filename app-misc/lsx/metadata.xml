@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>cedk@gentoo.org</email>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>Prints all executable file names of given absolute paths to standard output</longdescription>
 </pkgmetadata>

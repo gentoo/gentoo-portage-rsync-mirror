@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>cedk@gentoo.org</email>
-		<name>Cédric Krier</name>
-	</maintainer>
 	<longdescription lang="en">
 		A collection of tools for internationalizing Python applications
 		Babel is composed of two major parts:

@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>cedk@gentoo.org</email>
-</maintainer>
 <longdescription>the low-level library for netfilter related kernel/userspace communication</longdescription>
 </pkgmetadata>

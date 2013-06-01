@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/hachoir-regex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.6 2010/03/26 20:03:01 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.7 2013/06/01 12:12:16 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #151880
 
 *hachoir-regex-1.0.5 (26 Mar 2010)
 
@@ -30,4 +33,3 @@
   14 Jul 2007; Cédric Krier <cedk@gentoo.org> +metadata.xml,
   +hachoir-regex-1.0.2.ebuild:
   New ebuild for bug #144532 thanks to TGL, Damien Thébault
-

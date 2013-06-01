@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/olsrd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.32 2012/11/15 16:50:37 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.33 2013/06/01 12:22:39 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -olsrd-0.6.2-r1.ebuild,
+  metadata.xml:
+  Cleanup due bug #151880
 
 *olsrd-0.6.4 (15 Nov 2012)
 
@@ -154,4 +158,3 @@
   New Ebuild for bug #76646 thanks to Daniel Webert, Maximilian Bauer, Stefan
   Schweizer, Andre Kloth, Petteri Räty, phaidros, Dirk-Lüder Kreie,
   Christian Ludwig
-

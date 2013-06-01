@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pywebdav
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.17 2012/05/05 11:02:52 cedk Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.18 2013/06/01 12:13:51 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -pywebdav-0.9.4.1.ebuild,
+  metadata.xml:
+  Cleanup due bug #151880
 
 *pywebdav-0.9.8 (05 May 2012)
 
@@ -76,4 +80,3 @@
   14 Feb 2008; Cédric Krier <cedk@gentoo.org> +metadata.xml,
   +pywebdav-0.6.ebuild:
   New ebuild
-

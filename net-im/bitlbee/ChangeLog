@@ -1,6 +1,9 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.163 2013/01/08 14:25:21 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.164 2013/06/01 12:19:43 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #151880
 
   08 Jan 2013; Cédric Krier <cedk@gentoo.org> bitlbee-3.0.5-r1.ebuild,
   bitlbee-3.0.6.ebuild, bitlbee-3.2.ebuild, files/bitlbee.initd:
@@ -709,4 +712,3 @@
   08 Apr 2003; Jason Wever <weeve@gentoo.org> bitlbee-0.72.ebuild,
   files/bitlbee-0.72-xinetd.patch:
   Initial addition.
-

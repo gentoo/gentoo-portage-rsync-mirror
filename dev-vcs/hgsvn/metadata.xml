@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>cedk@gentoo.org</email>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>A set of scripts to work locally on Subversion checkouts using Mercurial</longdescription>
 	<upstream>

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14793 2013/05/31 10:26:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14794 2013/06/01 12:03:05 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -163,10 +163,6 @@ media-video/handbrake
 # Dependency on nonexisting =gnome-extra/evolution-data-server-3.4*
 =gnome-extra/evolution-groupwise-3.4.2
 =gnome-extra/evolution-exchange-3.4.4
-
-# Jeroen Roovers <jer@gentoo.org> (02 May 2013)
-# Has long surpassed its use, removal in thirty days
-www-plugins/diamondx
 
 # Kacper Kowalik <xarthisius@gentoo.org> (01 May 2013)
 # Removal due to licensing issue wrt #452420

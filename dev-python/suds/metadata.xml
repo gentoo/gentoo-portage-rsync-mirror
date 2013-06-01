@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>cedk@gentoo.org</email>
-		<name>Cédric Krier</name>
-	</maintainer>
 	<longdescription lang="en">A lightweight SOAP python client for consuming Web Services.</longdescription>
 	<upstream>
 		<remote-id type="pypi">suds</remote-id>

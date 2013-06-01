@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXrandr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.101 2013/02/26 15:57:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.102 2013/06/01 12:08:50 chithanh Exp $
+
+*libXrandr-1.4.1 (01 Jun 2013)
+
+  01 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXrandr-1.4.1.ebuild:
+  Version bump for security bug #471098.
 
 *libXrandr-1.4.0-r1 (26 Feb 2013)
 

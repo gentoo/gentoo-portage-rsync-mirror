@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>cedk@gentoo.org</email>
-	</maintainer>
 	<longdescription>Python bindings for Graphviz</longdescription>
 	<upstream>
 		<remote-id type="google-code">pydot</remote-id>

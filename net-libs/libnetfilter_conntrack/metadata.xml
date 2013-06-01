@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>cedk@gentoo.org</email>
-</maintainer>
 <longdescription>programming interface (API) to the in-kernel connection tracking state table</longdescription>
 </pkgmetadata>

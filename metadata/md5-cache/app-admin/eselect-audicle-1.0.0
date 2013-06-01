@@ -1,9 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=Manages the /usr/bin/audicle symlink
-HOMEPAGE=http://www.gentoo.org/
-KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2
-RDEPEND=>=app-admin/eselect-1.0.6
-SLOT=0
-SRC_URI=mirror://gentoo/audicle.eselect-1.0.0.bz2
-_md5_=507cd9705f4321729c70b4656620df0d

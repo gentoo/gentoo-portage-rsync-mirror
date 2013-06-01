@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>cedk@gentoo.org</email>
-		<name>Cédric Krier</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">A WebDAV server implementation in python. It's aim is to provide a
 		simple interface to webdav services to any application which needs it.

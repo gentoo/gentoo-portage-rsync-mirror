@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>cedk@gentoo.org</email>
-		<name>Cédric Krier</name>
-	</maintainer>
 	<longdescription lang="en">
 		Switzerland is an open source software tool for testing the integrity of
 		data communications over networks, ISPs and firewalls. It will spot IP

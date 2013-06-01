@@ -1,9 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=Manages the /usr/bin/sndpeek symlink
-HOMEPAGE=http://www.gentoo.org/
-KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2
-RDEPEND=>=app-admin/eselect-1.0.6
-SLOT=0
-SRC_URI=mirror://gentoo/sndpeek.eselect-1.0.0.bz2
-_md5_=4c5fd942a78e103943962f36279f7a59

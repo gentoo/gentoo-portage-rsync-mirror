@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.65 2013/04/25 13:21:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.66 2013/06/01 12:21:00 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #151880
 
 *libnetfilter_conntrack-1.0.3 (25 Apr 2013)
 

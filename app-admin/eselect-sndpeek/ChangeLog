@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-sndpeek
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sndpeek/ChangeLog,v 1.3 2010/03/22 01:18:11 jmbsvicetto Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sndpeek/ChangeLog,v 1.4 2013/06/01 12:06:28 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -eselect-sndpeek-1.0.0.ebuild,
+  metadata.xml:
+  Cleanup due bug #151880
 
   22 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
@@ -17,4 +21,3 @@
   08 Aug 2009; Cédric Krier <cedk@gentoo.org>
   +eselect-sndpeek-1.0.0.ebuild, +metadata.xml:
   New ebuild
-

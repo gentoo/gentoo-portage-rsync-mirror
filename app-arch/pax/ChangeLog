@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.24 2012/08/17 17:17:41 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.25 2013/06/01 12:23:35 jer Exp $
+
+  01 Jun 2013; Jeroen Roovers <jer@gentoo.org> pax-3.4.12.16.ebuild:
+  Fix building with automake 1.13 (bug 471966 by Jason Mours).
 
   17 Aug 2012; Michael Palimaka <kensington@gentoo.org> -pax-3.3.4.ebuild:
   Remove old.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycountry
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.9 2012/11/07 02:25:07 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.10 2013/06/01 12:13:34 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -pycountry-0.14.1.ebuild,
+  -pycountry-0.14.5.ebuild, metadata.xml:
+  Cleanup due bug #151880
 
 *pycountry-0.14.7 (07 Nov 2012)
 
@@ -45,4 +49,3 @@
   16 Aug 2008; Cédric Krier <cedk@gentoo.org> +metadata.xml,
   +pycountry-0.10.ebuild:
   New Ebuild
-
