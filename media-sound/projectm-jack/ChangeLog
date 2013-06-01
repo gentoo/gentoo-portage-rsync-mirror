@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/projectm-jack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/ChangeLog,v 1.12 2013/01/25 13:55:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/ChangeLog,v 1.13 2013/06/01 14:37:53 creffett Exp $
+
+  01 Jun 2013; Chris Reffett <creffett@gentoo.org> projectm-jack-2.0.1.ebuild:
+  EAPI bump wrt bug 460572
 
   25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> projectm-jack-2.1.0.ebuild:
   Stable for amd64, wrt bug #453402
