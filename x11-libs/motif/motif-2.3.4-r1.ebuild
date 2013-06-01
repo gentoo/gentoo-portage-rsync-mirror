@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.18 2013/05/13 20:02:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.19 2013/06/01 18:25:55 ulm Exp $
 
 EAPI=5
 
@@ -9,7 +9,8 @@ inherit autotools eutils flag-o-matic multilib multilib-minimal
 DESCRIPTION="The Motif user interface component toolkit"
 HOMEPAGE="http://sourceforge.net/projects/motif/
 	http://motif.ics.com/"
-SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-src.tgz"
+SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-src.tgz
+	mirror://gentoo/${P}-patches-1.tar.xz"
 
 LICENSE="LGPL-2.1+ MIT"
 SLOT="0"
@@ -39,13 +40,7 @@ DEPEND="${RDEPEND}
 	x11-misc/xbitmaps"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-solaris.patch"
-	epatch "${FILESDIR}/${PN}-2.3.2-sanitise-paths.patch"
-	epatch "${FILESDIR}/${P}-parallel-make.patch"
-	epatch "${FILESDIR}/${P}-install-dirs.patch"
-	epatch "${FILESDIR}/${P}-fc-config.patch"
-	epatch "${FILESDIR}/${P}-automake-1.13.patch"
-	epatch "${FILESDIR}/${P}-solaris-11.patch"
+	EPATCH_SUFFIX=patch epatch
 	epatch_user
 
 	# disable compilation of demo binaries
