@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/liblo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/ChangeLog,v 1.24 2012/07/04 20:37:56 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/ChangeLog,v 1.25 2013/06/01 08:15:44 radhermit Exp $
+
+*liblo-0.27 (01 Jun 2013)
+
+  01 Jun 2013; Tim Harder <radhermit@gentoo.org> +liblo-0.27.ebuild:
+  Version bump and add threads use flag.
 
   04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -liblo-0.24.ebuild:
   old
