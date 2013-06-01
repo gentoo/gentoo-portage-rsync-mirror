@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-444.ebuild,v 1.17 2009/10/01 16:07:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-444.ebuild,v 1.18 2013/06/01 14:16:15 creffett Exp $
+EAPI=5
 
 inherit cmake-utils
 

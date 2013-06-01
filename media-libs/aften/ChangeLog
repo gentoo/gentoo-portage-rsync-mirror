@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aften
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.6 2012/09/07 22:33:06 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/ChangeLog,v 1.7 2013/06/01 14:11:51 creffett Exp $
+
+  01 Jun 2013; Chris Reffett <creffett@gentoo.org> aften-0.0.8.ebuild:
+  EAPI bump wrt bug 460572
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -23,4 +26,3 @@
   23 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   +files/aften-0.0.8-multilib.patch, +metadata.xml, +aften-0.0.8.ebuild:
   initial import, thanks to Ben de Groot <ben@berkano.net>, bug #199858
-

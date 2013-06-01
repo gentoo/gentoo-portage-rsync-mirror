@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.4 2008/06/22 15:13:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.5 2013/06/01 14:11:51 creffett Exp $
+EAPI=5
 
 inherit eutils cmake-utils
 
@@ -14,12 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="cxx"
 DEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-multilib.patch"
-	epatch "${FILESDIR}/${P}-ppc.patch"
-}
+PATCHES=( "${FILESDIR}/${P}-multilib.patch" "${FILESDIR}/${P}-ppc.patch" )
 
 src_compile() {
 	local mycmakeargs="-DSHARED=1"

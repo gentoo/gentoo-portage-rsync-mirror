@@ -1,6 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.10 2010/06/22 20:01:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.11 2013/06/01 14:20:21 creffett Exp $
+EAPI=5
 
 inherit cmake-utils
 

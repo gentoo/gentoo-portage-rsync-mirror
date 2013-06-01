@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/package.use.force,v 1.2 2013/05/31 15:59:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/package.use.force,v 1.3 2013/06/01 14:17:54 aballier Exp $
 
 # Force building libc++ over libcxxrt.
 sys-libs/libcxx libcxxrt
 
 # Force static libs on the C++ stack so that static linking has a chance to
 # work.
-sys-libs/libunwind static-libs
 sys-libs/libcxxrt static-libs
 sys-libs/libcxx static-libs

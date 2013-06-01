@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-444.ebuild,v 1.14 2009/10/01 16:08:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-444.ebuild,v 1.15 2013/06/01 14:14:37 creffett Exp $
+EAPI=5
 
 inherit cmake-utils
 

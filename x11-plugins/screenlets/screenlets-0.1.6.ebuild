@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/screenlets-0.1.6.ebuild,v 1.1 2013/06/01 13:45:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/screenlets-0.1.6.ebuild,v 1.3 2013/06/01 14:10:47 jer Exp $
 
 EAPI=5
 
@@ -18,14 +18,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+svg"
 
-RDEPEND="dev-python/dbus-python
-	svg? ( dev-python/librsvg-python )
-	dev-python/libwnck-python
+RDEPEND="
+	dev-python/beautifulsoup:python-2
+	dev-python/dbus-python
+	dev-python/gconf-python
 	dev-python/gnome-keyring-python
+	dev-python/libwnck-python
 	dev-python/pyxdg
+	svg? ( dev-python/librsvg-python )
 	x11-libs/libnotify
 	x11-misc/xdg-utils
-	dev-python/beautifulsoup:python-2"
+"
 
 src_prepare() {
 	# this is tricky because screenlets translations do not always have -manager
@@ -36,14 +39,14 @@ src_prepare() {
 		lingua=${pofile/$PN*\/}
 		lingua=${lingua/.po}
 
-		if ! has ${lingua/.po} ${LINGUAS}; then
+		if ! has ${lingua} ${LINGUAS}; then
 			rm -f ${PN}/${lingua}.po
 			rm -f ${PN}-manager/${lingua}.po
 		fi
 	done
 
 	distutils-r1_src_prepare
-	python_fix_shebang src
+	python_fix_shebang src/
 	sed -i $(find src/ -type f) -e 's|exec python|&2|g;s|python -u|python2 -u|g' || die
 	sed -i desktop-menu/screenlets-{daemon,manager}.desktop -e 's|> .*||g' || die
 }

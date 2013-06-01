@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.44 2013/05/21 16:12:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.45 2013/06/01 14:09:07 tomwij Exp $
+
+*bcprov-1.49 (01 Jun 2013)
+
+  01 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +bcprov-1.49.ebuild:
+  Version bump to 1.49, reported by maksbotan; fixed running of tests but
+  restrict them because they are broken, see bug #471998. Dropped ~amd64-fbsd
+  keyword since dev-java/junit:4 has no ~amd64-fbsd keyword, see bug #472010.
 
 *bcprov-1.48 (21 May 2013)
 
