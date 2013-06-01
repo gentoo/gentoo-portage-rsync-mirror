@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.847 2013/06/01 13:18:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.848 2013/06/01 18:51:57 robbat2 Exp $
+
+  01 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> php-ext-source-r2.eclass:
+  Fix REQUIRED_USE with PHP_EXT_OPTIONAL_USE set. Fixes REQUIRED_USE
+  unsatisfied constraints triggered by "USE=-php PHP_TARGETS= emerge
+  media-libs/ming".
 
   01 Jun 2013; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass:
   Quote DISTDIR.
