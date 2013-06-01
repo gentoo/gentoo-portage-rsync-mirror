@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-registration
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.4 2013/05/27 14:27:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.5 2013/06/01 13:20:52 idella4 Exp $
+
+*django-registration-0.8-r2 (01 Jun 2013)
+
+  01 Jun 2013; Ian Delaney <idella4@gentoo.org>
+  +django-registration-0.8-r2.ebuild, django-registration-0.8-r1.ebuild:
+  revbump, test phase replaced, py3 dropped
 
 *django-registration-0.8-r1 (27 May 2013)
 

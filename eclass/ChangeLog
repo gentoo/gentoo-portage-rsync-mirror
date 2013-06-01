@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.846 2013/06/01 09:28:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.847 2013/06/01 13:18:45 graaff Exp $
+
+  01 Jun 2013; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass:
+  Quote DISTDIR.
 
   01 Jun 2013; Tim Harder <radhermit@gentoo.org> vim-plugin.eclass:
   Remove unnecessary blank IUSE.
@@ -592,6 +595,10 @@
   Drop versionator eclass as it's not needed for a long time, also fixes bug
   #458728 that was caused by quoting IUSE. Thanks a lot to mgorny for doing the
   work.
+
+  24 Feb 2013; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass:
+  Also set the RUBY_FAKEGEM_DOCDIR default for the rake recipe. This fixes a
+  regression manifested by bug 458506.
 
   22 Feb 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
   Fix passing arguments to phases.
