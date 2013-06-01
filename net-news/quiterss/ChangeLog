@@ -1,6 +1,9 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.21 2013/06/01 20:55:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.22 2013/06/01 21:16:16 pinkbyte Exp $
+
+  01 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> quiterss-0.12.5.ebuild:
+  Stable on x86, wrt bug #471680
 
   01 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> quiterss-0.13.0.ebuild:
   Add ~arm keyword
