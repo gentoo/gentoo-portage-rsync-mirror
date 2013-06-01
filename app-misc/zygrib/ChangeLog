@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/zygrib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.2 2013/05/21 12:42:58 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.3 2013/06/01 08:59:57 mschiff Exp $
+
+  01 Jun 2013; Marc Schiffbauer <mschiff@gentoo.org> -files/zygrib.png,
+  zygrib-6.1.4.ebuild:
+  Remove icon from files/ dir and mirror it manually instead. Fixes #471886
 
   21 May 2013; Marc Schiffbauer <mschiff@gentoo.org> zygrib-6.1.4.ebuild:
   Updated coastline maps to 2.4

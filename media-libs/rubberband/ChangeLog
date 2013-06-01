@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/rubberband
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.19 2012/05/05 08:02:38 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.20 2013/06/01 08:47:33 radhermit Exp $
+
+*rubberband-1.8.1 (01 Jun 2013)
+
+  01 Jun 2013; Tim Harder <radhermit@gentoo.org> +rubberband-1.8.1.ebuild:
+  Version bump.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> rubberband-1.7.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

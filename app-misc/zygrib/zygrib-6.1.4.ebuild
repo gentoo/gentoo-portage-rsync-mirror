@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.1.4.ebuild,v 1.2 2013/05/21 12:42:58 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.1.4.ebuild,v 1.3 2013/06/01 08:59:57 mschiff Exp $
 
 EAPI=5
 
@@ -11,6 +11,7 @@ MY_PN="zyGrib"
 DESCRIPTION="GRIB File Viewer - Weather data visualization"
 HOMEPAGE="http://www.zygrib.org/"
 SRC_URI="http://www.zygrib.org/getfile.php?file=${MY_PN}-${PV}.tgz -> ${P}.tgz
+	http://dev.gentoo.org/~mschiff/distfiles/${PN}-icon.png
 	maps?   (
 		http://zygrib.org/getfile.php?file=zyGrib_maps2.4.tgz -> zygrib-maps2.4.tgz
 		http://www.zygrib.org/getfile.php?file=cities_1k-3k.txt.gz -> zygrib-cities_1k-3k.txt.gz
@@ -40,25 +41,10 @@ src_prepare() {
 	sed -i 's,INSTALLDIR=$(HOME)/zyGrib,INSTALLDIR=$(DESTDIR)/opt/zyGrib,' Makefile
 }
 
-#Maps
-#cd /opt/zyGrib/data/
-#sudo wget http://zygrib.org/getfile.php?file=zyGrib_maps2.tgz
-#sudo tar -xvvzf getfile.php?file=zyGrib_maps2.tgz
-#sudo chown -R root:root maps/*
-#sudo rm -rf getfile.php?file=zyGrib_maps2.tgz
-##Cities
-#cd ./gis
-#sudo wget http://www.zygrib.org/getfile.php?file=cities_1k-3k.txt.gz
-#sudo wget http://www.zygrib.org/getfile.php?file=cities_300-1k.txt.gz
-#sudo wget http://www.zygrib.org/getfile.php?file=cities_0-300.txt.gz
-#sudo mv getfile.php?file=cities_1k-3k.txt.gz cities_1k-3k.txt.gz
-#sudo mv getfile.php?file=cities_300-1k.txt.gz cities_300-1k.txt.gz
-#sudo mv getfile.php?file=cities_0-300.txt.gz cities_0-300.txt.gz
-
 src_install() {
 	default
 	rm zyGrib
-	doicon -s 32 "${FILESDIR}/zygrib.png"
+	doicon -s 32 "${DISTDIR}/zygrib-icon.png"
 	make_wrapper "${PN}" "./bin/${MY_PN}" "/opt/${MY_PN}"
 	domenu "${FILESDIR}/zygrib.desktop"
 
