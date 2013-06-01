@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-0.10.31.ebuild,v 1.12 2013/02/10 22:38:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-0.10.31.ebuild,v 1.13 2013/06/01 10:59:28 ssuominen Exp $
 
 EAPI="5"
 
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}
 GST_PLUGINS_BUILD="gst_v4l2"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.10.31-linux-headers-3.6.patch" #437012
+	epatch "${FILESDIR}"/${PN}-0.10.31-linux-headers-3.6.patch #437012
+	epatch "${FILESDIR}"/${PN}-0.10.31-linux-headers-3.9.patch #468618
 }
 
 src_configure() {
