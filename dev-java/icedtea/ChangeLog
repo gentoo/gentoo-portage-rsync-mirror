@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.96 2013/05/28 06:36:45 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.97 2013/06/01 11:49:41 sera Exp $
+
+  01 Jun 2013; Ralph Sennhauser <sera@gentoo.org> icedtea-7.2.3.9.ebuild:
+  Add ant-core dep, we aren't using the java-ant-2.eclass, reported by genstorm
 
 *icedtea-7.2.3.9 (28 May 2013)
 

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>lack@gentoo.org</email>
-		<name>Jim Ramsay</name>
-	</maintainer>
 	<herd>desktop-wm</herd>
 	<longdescription><![CDATA[
 		Fluxbox is yet another windowmanager for X. Originally based upon the

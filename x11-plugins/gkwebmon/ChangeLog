@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkwebmon
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/ChangeLog,v 1.11 2009/05/27 20:25:06 lack Exp $
+# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/ChangeLog,v 1.12 2013/06/01 11:39:07 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
 
   27 May 2009; Jim Ramsay <lack@gentoo.org> -gkwebmon-0.1b.ebuild:
   Version cleanup

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/i8krellm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/ChangeLog,v 1.12 2010/08/11 13:37:36 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/ChangeLog,v 1.13 2013/06/01 11:39:36 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
 
 *i8krellm-2.5-r1 (11 Aug 2010)
 

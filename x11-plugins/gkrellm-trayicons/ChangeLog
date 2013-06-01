@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-trayicons
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-trayicons/ChangeLog,v 1.18 2009/02/22 23:44:03 lack Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-trayicons/ChangeLog,v 1.19 2013/06/01 11:34:17 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
 
   22 Feb 2009; Jim Ramsay <lack@gentoo.org> ChangeLog:
   Updated SRC_URI and HOMEPAGE (Bug 259535)
@@ -70,4 +73,3 @@
   20 Apr 2004; Martin Holzer <mholzer@gentoo.org>
   gkrellm-trayicons-1.02.ebuild, metadata.xml:
   Initial ebuild. Submitted by Dale K Dicks <dale_d@telusplanet.net> in 43717
-

@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1019 2013/04/27 15:30:52 pacho Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1020 2013/06/01 11:42:21 pacho Exp $
 
 -->
 <herds>
@@ -681,10 +681,6 @@
   <name>vim</name>
   <email>vim@gentoo.org</email>
   <description>vim-core, vim, gvim and app-vim plugins</description>
-  <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
-  </maintainer>
   <maintainer>
     <email>radhermit@gentoo.org</email>
     <name>Tim Harder</name>
@@ -1451,10 +1447,6 @@
   <email>desktop-wm@gentoo.org</email>
   <description>Various window managers for X11.</description>
   <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
-  </maintainer>
-  <maintainer>
     <email>xarthisius@gentoo.org</email>
     <name>Kacper Kowalik</name>
   </maintainer>
@@ -1616,11 +1608,6 @@
   <name>desktop-dock</name>
   <email>desktop-dock@gentoo.org</email>
   <description>WindowMaker/Blackbox Dockapps</description>
-  <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
-    <role>gkrellm maintainer</role>
-  </maintainer>
   <maintainer>
     <email>voyageur@gentoo.org</email>
     <name>Bernard Cafarelli</name>
@@ -2117,10 +2104,6 @@
   <name>rox</name>
   <email>rox@gentoo.org</email>
   <description>ROX Desktop and applications</description>
-  <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
-  </maintainer>
 </herd>
 <herd>
     <name>tex</name>

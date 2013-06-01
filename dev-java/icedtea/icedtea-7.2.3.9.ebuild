@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.9.ebuild,v 1.1 2013/05/28 06:36:45 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.9.ebuild,v 1.2 2013/06/01 11:49:41 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -125,7 +125,7 @@ RDEPEND="${COMMON_DEP}
 	alsa? ( ${ALSA_COMMON_DEP} )
 	cups? ( ${CUPS_COMMON_DEP} )"
 
-# Only ant-core-1.8.1 has fixed ant -diagnostics when xerces+xalan are not present.
+# Require >=ant-core-1.8.2 so no additional ant tasks are needed. #466558
 # ca-certificates, perl and openssl are used for the cacerts keystore generation
 # xext headers have two variants depending on version - bug #288855
 # autoconf - as long as we use eautoreconf, version restrictions for bug #294918
@@ -141,6 +141,7 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	app-arch/unzip
 	app-arch/zip
 	app-misc/ca-certificates
+	>=dev-java/ant-core-1.8.2
 	dev-lang/perl
 	>=dev-libs/libxslt-1.1.26
 	dev-libs/openssl

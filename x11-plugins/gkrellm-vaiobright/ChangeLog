@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-vaiobright
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/ChangeLog,v 1.8 2007/06/12 21:17:47 lack Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/ChangeLog,v 1.9 2013/06/01 11:34:37 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
 
   12 Jun 2007; Jim Ramsay <lack@gentoo.org> -gkrellm-vaiobright-2.5.ebuild:
   Old version cleanup
@@ -33,4 +36,3 @@
   16 Mar 2003; Alastair Tse <liquidx@gentoo.org>
   gkrellm-vaiobright-2.5.ebuild:
   initial commit.
-
