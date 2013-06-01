@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.291 2013/04/27 21:44:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.292 2013/06/01 02:21:39 radhermit Exp $
+
+*iptables-1.4.19.1 (01 Jun 2013)
+
+  01 Jun 2013; Tim Harder <radhermit@gentoo.org> +iptables-1.4.19.1.ebuild:
+  Version bump.
 
 *iptables-1.4.18 (27 Apr 2013)
 
