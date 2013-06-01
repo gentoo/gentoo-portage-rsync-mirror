@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-registration
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.5 2013/06/01 13:20:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.6 2013/06/01 17:27:54 floppym Exp $
+
+  01 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  -django-registration-0.8-r2.ebuild, django-registration-0.8-r1.ebuild:
+  Drop -r2 to get master.zip off gentoo mirrors. Remove broken python_test
+  function from -r1.
 
 *django-registration-0.8-r2 (01 Jun 2013)
 
