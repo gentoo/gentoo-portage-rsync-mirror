@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.8.0.ebuild,v 1.2 2013/03/31 19:26:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.8.2.ebuild,v 1.1 2013/06/01 07:35:25 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -28,12 +28,13 @@ RDEPEND="
 	>=gnome-base/gsettings-desktop-schemas-0.0.1
 	>=net-dns/avahi-0.6.22[dbus]
 	>=net-libs/webkit-gtk-1.11.92:3[jit?]
-	>=net-libs/libsoup-2.41.3:2.4
+	>=net-libs/libsoup-2.42.1:2.4
 	>=x11-libs/gtk+-3.7.10:3
 	>=x11-libs/libnotify-0.5.1:=
 	gnome-base/gnome-desktop:3=
 
 	dev-db/sqlite:3
+	x11-libs/libwnck:3
 	x11-libs/libX11
 
 	x11-themes/gnome-icon-theme
@@ -50,15 +51,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 "
-
-src_prepare() {
-	# Fix testsuite
-	epatch "${FILESDIR}/${PN}-3.7.5-test-gwarning.patch"
-	sed -e '/\/do_migration_invalid/,+1 d' \
-		-i tests/ephy-migration-test.c || die
-
-	gnome2_src_prepare
-}
 
 src_configure() {
 	gnome2_src_configure \
@@ -79,7 +71,6 @@ src_test() {
 	# FIXME: this should be handled at eclass level
 	"${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/data" || die
 
-	#use jit && pax-mark m $(list-paxables tests/test*) #415801
 	GSETTINGS_SCHEMA_DIR="${S}/data" Xemake check
 }
 

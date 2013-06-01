@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.295 2013/04/17 17:45:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.296 2013/06/01 07:35:25 pacho Exp $
+
+*epiphany-3.8.2 (01 Jun 2013)
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> +epiphany-3.8.2.ebuild,
+  -epiphany-3.8.0.ebuild:
+  Version bump, remove old
 
 *epiphany-3.8.1 (17 Apr 2013)
 
