@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.7.2-r2.ebuild,v 1.1 2013/05/31 22:09:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.7.2-r3.ebuild,v 1.1 2013/06/01 06:26:27 tomwij Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ S=${WORKDIR}/${PN}-${PV}
 
 LICENSE="Amazon"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
 CDEPEND="dev-java/bcprov:0
@@ -49,6 +49,7 @@ java_prepare() {
 
 	for FILE in bin/* ; do
 		sed -i 's:${EC2_HOME}:/usr:g' ${FILE} || die "Failed to set the EC2_HOME value in the wrappers."
+		sed -i '/PREFIX__EC2_HOME/d' ${FILE} || die "Failed to remove remaining redundant PREFIX__EC2_HOME lines from wrappers."
 	done
 }
 
@@ -56,24 +57,25 @@ src_install() {
 	exeinto /usr/bin
 	doexe bin/*
 
-	insinto /usr/share/${PN}/lib
+	local libs="/usr/share/${PN}/lib"
+	insinto ${libs}
 	doins lib/*.jar
-	dosym $(java-pkg_getjar bcprov{,.jar}) bcprov-jdk15-145.jar
-	dosym $(java-pkg_getjar commons-cli{-1,.jar}) commons-cli-1.1.jar
-	dosym $(java-pkg_getjar commons-codec{,.jar}) commons-codec-1.4.jar
-	dosym $(java-pkg_getjar commons-discovery{,.jar}) commons-discovery.jar
-	dosym $(java-pkg_getjar commons-httpclient{-3,.jar}) commons-httpclient-3.1.jar
-	dosym $(java-pkg_getjar commons-logging{,-adapters.jar}) commons-logging-adapters-1.1.1.jar
-	dosym $(java-pkg_getjar commons-logging{,-api.jar}) commons-logging-api-1.1.1.jar
-	dosym $(java-pkg_getjar jaxb{-2,-api.jar}) jaxb-api.jar
-	dosym $(java-pkg_getjar jaxb{-2,-impl.jar}) jaxb-impl.jar
-	dosym $(java-pkg_getjar jax-ws{-2,.jar}) jaxws-api.jar
-	dosym $(java-pkg_getjar jdom{-1.0,.jar}) jdom.jar
-	dosym $(java-pkg_getjar log4j{,.jar}) log4j-1.2.14.jar
-	dosym $(java-pkg_getjar jsr173{,.jar}) stax2-api-3.0.1.jar
-	dosym $(java-pkg_getjar wsdl4j{,.jar}) wsdl4j.jar
-	dosym $(java-pkg_getjar xalan{,.jar}) xalan.jar
-	dosym $(java-pkg_getjar xerces{-2,Impl.jar}) xercesImpl.jar
+	dosym $(java-pkg_getjar bcprov{,.jar}) ${libs}/bcprov-jdk15-145.jar
+	dosym $(java-pkg_getjar commons-cli{-1,.jar}) ${libs}/commons-cli-1.1.jar
+	dosym $(java-pkg_getjar commons-codec{,.jar}) ${libs}/commons-codec-1.4.jar
+	dosym $(java-pkg_getjar commons-discovery{,.jar}) ${libs}/commons-discovery.jar
+	dosym $(java-pkg_getjar commons-httpclient{-3,.jar}) ${libs}/commons-httpclient-3.1.jar
+	dosym $(java-pkg_getjar commons-logging{,-adapters.jar}) ${libs}/commons-logging-adapters-1.1.1.jar
+	dosym $(java-pkg_getjar commons-logging{,-api.jar}) ${libs}/commons-logging-api-1.1.1.jar
+	dosym $(java-pkg_getjar jaxb{-2,-api.jar}) ${libs}/jaxb-api.jar
+	dosym $(java-pkg_getjar jaxb{-2,-impl.jar}) ${libs}/jaxb-impl.jar
+	dosym $(java-pkg_getjar jax-ws{-2,.jar}) ${libs}/jaxws-api.jar
+	dosym $(java-pkg_getjar jdom{-1.0,.jar}) ${libs}/jdom.jar
+	dosym $(java-pkg_getjar log4j{,.jar}) ${libs}/log4j-1.2.14.jar
+	dosym $(java-pkg_getjar jsr173{,.jar}) ${libs}/stax2-api-3.0.1.jar
+	dosym $(java-pkg_getjar wsdl4j{,.jar}) ${libs}/wsdl4j.jar
+	dosym $(java-pkg_getjar xalan{,.jar}) ${libs}/xalan.jar
+	dosym $(java-pkg_getjar xerces{-2,Impl.jar}) ${libs}/xercesImpl.jar
 
 	dodoc THIRDPARTYLICENSE.TXT
 }

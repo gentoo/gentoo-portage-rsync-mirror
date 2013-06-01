@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/ec2-api-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.19 2013/05/31 22:09:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.20 2013/06/01 06:26:27 tomwij Exp $
+
+*ec2-api-tools-1.6.7.2-r3 (01 Jun 2013)
+
+  01 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +ec2-api-tools-1.6.7.2-r3.ebuild,
+  -ec2-api-tools-1.6.7.2-r2.ebuild:
+  Revision bump, keyworded again and removed broken revision. Library symlinks
+  were accidentally installed to /, also corrected a remaining EC2_HOME related
+  error...
 
 *ec2-api-tools-1.6.7.2-r2 (31 May 2013)
 
