@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=|| ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
 SRC_URI=https://github.com/vim-scripts/ZenCoding.vim/tarball/0.58 -> zencoding-vim-0.58.tar.gz
-_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	3e2b8e3b7a061cd56a91f1583248b89f
+_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	dae72739069fe281c623a6ddd5b7b43d
 _md5_=94634f6717034e6299d293456dc2177f

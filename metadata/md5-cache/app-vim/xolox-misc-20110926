@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=|| ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/distfiles/xolox-misc-20110926.tar.bz2
-_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	3e2b8e3b7a061cd56a91f1583248b89f
+_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	dae72739069fe281c623a6ddd5b7b43d
 _md5_=521f61b11a8558879fdfd85937a3d178
