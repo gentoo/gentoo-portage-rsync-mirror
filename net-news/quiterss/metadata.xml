@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maintainers</herd>
 	<herd>qt</herd>
-	<maintainer restrict='&gt;=net-news/quiterss-9999'>
+	<maintainer>
 		<email>nikoli@lavabit.com</email>
 		<name>Nikoli</name>
 	</maintainer>

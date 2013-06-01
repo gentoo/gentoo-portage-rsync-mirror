@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.5 2013/05/30 00:53:30 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.6 2013/06/01 19:49:33 jsbronder Exp $
 
 EAPI=4
 
@@ -75,10 +75,11 @@ pkg_setup() {
 	fi
 }
 
-#src_prepare() {
-#	append-cflags -DUSE_INTERP_RESULT
-#	autotools-utils_src_prepare
-#}
+src_prepare() {
+	# Unused and causes breakage when switching from glibc to tirpc.
+	# https://github.com/adaptivecomputing/torque/pull/148
+	sed -i '/rpc\/rpc\.h/d' src/lib/Libnet/net_client.c || die
+}
 
 src_configure() {
 	local myeconfargs=( --with-rcp=mom_rcp )

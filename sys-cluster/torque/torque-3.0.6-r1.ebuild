@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.6-r1.ebuild,v 1.5 2013/05/30 00:53:30 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.6-r1.ebuild,v 1.6 2013/06/01 19:49:33 jsbronder Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit autotools-utils flag-o-matic linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.adaptivecomputing.com/products/open-source/torque"
-SRC_URI="http://www.adaptivecomputing.com/resources/downloads/${PN}/${P}.tar.gz"
+SRC_URI="http://www.adaptivecomputing.com/index.php?wpfb_dl=190 -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="torque-2.5"
@@ -79,6 +79,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Unused and causes breakage when switching from glibc to tirpc.
+	# https://github.com/adaptivecomputing/torque/pull/148
+	sed -i '/rpc\/rpc\.h/d' src/lib/Libnet/net_client.c || die
+
 	# as-needed fix, libutils.a needs librt.
 	sed -i 's,^\(LDADD = .*\)$(MOMLIBS) $(PBS_LIBS),\1$(PBS_LIBS) $(MOMLIBS),' \
 		src/resmom/Makefile.am || die

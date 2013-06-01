@@ -1,19 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-9999.ebuild,v 1.3 2013/06/01 19:36:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.13.0.ebuild,v 1.1 2013/06/01 19:36:15 pinkbyte Exp $
 
 EAPI=5
 
 PLOCALES="cs de el_GR en es fa fr hu it ja ko lt nl pl pt_BR ru sr sv th tr uk zh_CN zh_TW"
-EHG_REPO_URI="https://code.google.com/p/quite-rss"
-inherit l10n qt4-r2 mercurial
+inherit l10n qt4-r2
+
+MY_P="QuiteRSS-${PV}.2610-src"
 
 DESCRIPTION="A Qt4-based RSS/Atom feed reader"
 HOMEPAGE="http://code.google.com/p/quite-rss/"
+SRC_URI="http://quite-rss.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="dev-db/sqlite:3
@@ -22,6 +24,8 @@ DEPEND="dev-db/sqlite:3
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${MY_P}"
 
 DOCS=( AUTHORS HISTORY_EN HISTORY_RU README )
 

@@ -1,6 +1,18 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.18 2013/05/29 11:32:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.20 2013/06/01 19:39:33 pinkbyte Exp $
+
+  01 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -quiterss-0.11.0.ebuild,
+  -files/quiterss-0.11.0-unbundle-sqlite.patch, metadata.xml:
+  Remove restriction from maintainer tag, add proxy maintainers herd, drop old
+  version
+
+*quiterss-0.13.0 (01 Jun 2013)
+
+  01 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> +quiterss-0.13.0.ebuild,
+  quiterss-9999.ebuild:
+  Version bump, sync live ebuild, wrt bug #471938. Thanks to Nikoli <nikoli AT
+  lavabit.com>
 
   29 May 2013; Chema Alonso <nimiux@gentoo.org> quiterss-0.12.5.ebuild:
   Stable for amd64 wrt bug #471680

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1.ebuild,v 1.2 2013/05/30 00:53:30 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1.ebuild,v 1.3 2013/06/01 19:49:33 jsbronder Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info
@@ -66,6 +66,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Unused and causes breakage when switching from glibc to tirpc.
+	# https://github.com/adaptivecomputing/torque/pull/148
+	sed -i '/rpc\/rpc\.h/d' src/lib/Libnet/net_client.c || die
+
 	# We install to a valid location, no need to muck with ld.so.conf
 	# --without-loadlibfile is supposed to do this for us...
 	sed -i '/mk_default_ld_lib_file || return 1/d' buildutils/pbs_mkdirs.in || die
