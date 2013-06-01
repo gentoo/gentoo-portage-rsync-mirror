@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmscon/kmscon-7.ebuild,v 1.2 2013/06/01 05:24:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmscon/kmscon-9999.ebuild,v 1.1 2013/06/01 05:24:03 chithanh Exp $
 
 EAPI=5
 
@@ -144,7 +144,7 @@ src_configure() {
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable udev hotplug) \
-		$(use_enable dbus eloop-dbus) \
+		$(use_enable dbus eloop) \
 		$(use_enable debug) \
 		$(use_enable optimizations) \
 		$(use_enable multiseat multi-seat) \

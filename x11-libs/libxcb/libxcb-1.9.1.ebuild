@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.1.ebuild,v 1.1 2013/06/01 03:18:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.1.ebuild,v 1.2 2013/06/01 05:02:20 chithanh Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xcb/libxcb"
 	SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="selinux"
+IUSE="selinux xkb"
 
 RDEPEND="dev-libs/libpthread-stubs[${MULTILIB_USEDEP}]
 	x11-libs/libXau[${MULTILIB_USEDEP}]
@@ -37,6 +37,7 @@ src_configure() {
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable doc build-docs)
 		$(use_enable selinux)
+		$(use_enable xkb)
 		--enable-xinput
 	)
 	xorg-2_src_configure
