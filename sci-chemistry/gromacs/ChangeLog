@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.125 2013/05/28 03:28:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.126 2013/06/01 21:36:28 ottxor Exp $
+
+*gromacs-4.6.2 (01 Jun 2013)
+
+  01 Jun 2013; Christoph Junghans <ottxor@gentoo.org> +gromacs-4.6.2.ebuild,
+  -files/gromacs-4.6.1-openmm.patch, -gromacs-4.6.1.ebuild:
+  version bump
 
   28 May 2013; Christoph Junghans <ottxor@gentoo.org> gromacs-4.6.1.ebuild:
   fixed a typo, which prevented cuda build

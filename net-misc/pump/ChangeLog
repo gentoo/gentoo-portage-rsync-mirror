@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.61 2013/02/22 18:12:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.62 2013/06/01 21:42:55 pinkbyte Exp $
+
+  01 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> pump-0.8.24-r4.ebuild:
+  Add workaround to epatch call to make sure that patches are applied in right
+  order, wrt bug #471666. Thanks to Pavel Riha for discovering this issue and
+  Jeroen Roovers for suggested patch
 
   22 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> -pump-0.8.24-r3.ebuild:
   Drop old revision

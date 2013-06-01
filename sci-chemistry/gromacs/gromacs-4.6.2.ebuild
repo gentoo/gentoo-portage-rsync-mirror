@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.1.ebuild,v 1.3 2013/05/28 03:28:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.2.ebuild,v 1.1 2013/06/01 21:36:28 ottxor Exp $
 
 EAPI=5
 
-TEST_PV="4.6.1"
-MANUAL_PV="4.6.1"
+TEST_PV="4.6.2"
+MANUAL_PV="4.6.2"
 
 CMAKE_MAKEFILE_GENERATOR="ninja"
 
@@ -20,6 +20,7 @@ if [[ $PV = *9999* ]]; then
 	inherit git-2
 	LIVE_DEPEND="doc? (
 		dev-texlive/texlive-latex
+		dev-texlive/texlive-latexextra
 		media-gfx/imagemagick
 		sys-apps/coreutils
 	)"
@@ -27,7 +28,6 @@ else
 	SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz
 		doc? ( ftp://ftp.gromacs.org/pub/manual/manual-${MANUAL_PV}.pdf -> ${PN}-manual-${MANUAL_PV}.pdf )
 		test? ( http://${PN}.googlecode.com/files/regressiontests-${TEST_PV}.tar.gz )"
-	PATCHES=( "${FILESDIR}/${P}-openmm.patch" )
 	LIVE_DEPEND=""
 fi
 
@@ -182,7 +182,7 @@ src_configure() {
 		[[ ${x} = "double" ]] && p="-DGMX_DOUBLE=ON" || p="-DGMX_DOUBLE=OFF"
 		local cuda=( "-DGMX_GPU=OFF" )
 		[[ ${x} = "float" ]] && use cuda && \
-			cuda=( -DGMX_GPU=ON -DCUDA_HOST_COMPILER_OPTIONS="${NVCCFLAGS}" )
+			cuda=( -DGMX_GPU=ON )
 		mycmakeargs=( ${mycmakeargs_pre[@]} ${p} -DGMX_MPI=OFF
 			$(cmake-utils_use threads GMX_THREAD_MPI) "${cuda[@]}" -DGMX_OPENMM=OFF
 			"$(use test && echo -DREGRESSIONTEST_PATH="${WORKDIR}/${P}_${x}/tests")"
@@ -243,7 +243,10 @@ src_install() {
 			mycmakeargs=( -DGMXBIN="${ED}"/usr/bin -DGMXSRC="${WORKDIR}/${P}" )
 			BUILD_DIR="${WORKDIR}"/manual_build \
 				CMAKE_USE_DIR="${WORKDIR}/manual" cmake-utils_src_configure
+			[[ ${CHOST} = *-darwin* ]] && \
+				export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH}${DYLD_LIBRARY_PATH:+:}${ED}/usr/$(get_libdir)"
 			BUILD_DIR="${WORKDIR}"/manual_build cmake-utils_src_make
+			[[ ${CHOST} = *-darwin* ]] && DYLD_LIBRARY_PATH="${ED}/usr/$(get_libdir)"
 			newdoc "${WORKDIR}"/manual_build/gromacs.pdf "${PN}-manual-${PV}.pdf"
 		fi
 		use mpi || continue
