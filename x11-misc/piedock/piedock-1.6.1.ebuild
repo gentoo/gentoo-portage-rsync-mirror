@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.6.1.ebuild,v 1.4 2013/03/02 23:50:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.6.1.ebuild,v 1.5 2013/06/01 15:29:46 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -39,6 +39,7 @@ DOCS=( res/${PN}rc.sample AUTHORS ChangeLog NEWS )
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-signals.patch
 	epatch "${FILESDIR}"/${P}-gcc47.patch
+	epatch "${FILESDIR}"/${P}-mem.patch
 }
 
 src_configure() {

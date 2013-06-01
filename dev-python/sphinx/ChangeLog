@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.135 2013/05/23 00:31:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.136 2013/06/01 15:15:14 xarthisius Exp $
+
+*sphinx-1.2_pre20130530 (01 Jun 2013)
+
+  01 Jun 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  +sphinx-1.2_pre20130530.ebuild:
+  Add snapshot of upstream repository masked by keywords
 
 *sphinx-1.1.3-r7 (23 May 2013)
 
