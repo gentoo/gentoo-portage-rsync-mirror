@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>desktop-misc</herd>
 <maintainer>
-  <email>cedk@gentoo.org</email>
-</maintainer>
-<maintainer>
   <email>jer@gentoo.org</email>
 </maintainer>
 <longdescription>simple X screen locker</longdescription>

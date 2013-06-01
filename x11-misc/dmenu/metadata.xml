@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>desktop-misc</herd>
   <maintainer>
-	<email>cedk@gentoo.org</email>
-	<name>Cédric Krier</name>
-  </maintainer>
-  <maintainer>
     <email>jer@gentoo.org</email>
   </maintainer>
   <use>

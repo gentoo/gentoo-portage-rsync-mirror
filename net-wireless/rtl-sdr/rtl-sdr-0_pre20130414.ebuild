@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-9999.ebuild,v 1.3 2013/06/01 12:56:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-0_pre20130414.ebuild,v 1.1 2013/06/01 12:56:33 chithanh Exp $
 
 EAPI=5
 inherit autotools
@@ -31,7 +31,7 @@ src_unpack() {
 	if [[ ${PV} == 9999* ]]; then
 		git-2_src_unpack
 	else
-		default
+		unpack ${A}
 		mv ${PN}-*/ ${P} || die
 	fi
 }

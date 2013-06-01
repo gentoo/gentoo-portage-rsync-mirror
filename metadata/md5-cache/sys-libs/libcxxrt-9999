@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=sys-libs/libunwind-1.0.1-r1[static-libs?] dev-vcs/git
+DEPEND=libunwind? ( >=sys-libs/libunwind-1.0.1-r1[static-libs?] ) dev-vcs/git
 DESCRIPTION=C++ Runtime from PathScale, FreeBSD and NetBSD.
-EAPI=4
+EAPI=5
 HOMEPAGE=https://github.com/pathscale/libcxxrt http://www.pathscale.com/node/265
-IUSE=static-libs
+IUSE=libunwind static-libs
 LICENSE=BSD-2
-RDEPEND=>=sys-libs/libunwind-1.0.1-r1[static-libs?]
+RDEPEND=libunwind? ( >=sys-libs/libunwind-1.0.1-r1[static-libs?] )
 SLOT=0
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=21efe9a1d015a5d28c388d448796a631
+_md5_=c52b0ddd81fa5171d9580f1216a7512c

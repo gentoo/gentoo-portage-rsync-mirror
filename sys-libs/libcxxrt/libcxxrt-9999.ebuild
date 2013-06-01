@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.6 2013/05/30 23:33:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.7 2013/06/01 12:58:41 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://github.com/pathscale/libcxxrt.git"
 
@@ -26,9 +26,9 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="static-libs"
+IUSE="libunwind static-libs"
 
-RDEPEND=">=sys-libs/libunwind-1.0.1-r1[static-libs?]"
+RDEPEND="libunwind? ( >=sys-libs/libunwind-1.0.1-r1[static-libs?] )"
 DEPEND="${RDEPEND}
 	${DEPEND}"
 
@@ -40,12 +40,11 @@ src_prepare() {
 
 src_compile() {
 	# Notes: we build -nodefaultlibs to avoid linking to gcc libs.
-	# libcxxrt needs: dladdr (dlopen_lib), libunwind (or libgcc_s but we build
-	# over libunwind) and the libc.
+	# libcxxrt needs: dladdr (dlopen_lib), libunwind or libgcc_s and the libc.
 	tc-export CC CXX AR
 	append-ldflags "-Wl,-z,defs" # make sure we are not underlinked
 	cd "${S}/src"
-	LIBS="$(dlopen_lib) -lunwind -lc" emake shared
+	LIBS="$(dlopen_lib) -l$(usex libunwind unwind gcc_s) -lc" emake shared
 	use static-libs && emake static
 }
 

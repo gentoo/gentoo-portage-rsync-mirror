@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-wm</herd>
-<maintainer>
-  <email>cedk@gentoo.org</email>
-</maintainer>
 <longdescription>dwm is a dynamic window manager for X. It manages windows in tiling and floating modes. Either mode can be applied dynamically, optimizing the environment for the application in use and the task performed.</longdescription>
 </pkgmetadata>

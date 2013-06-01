@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/pythoncad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/ChangeLog,v 1.6 2011/03/02 21:23:21 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/ChangeLog,v 1.7 2013/06/01 12:51:58 pacho Exp $
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #151880
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> pythoncad-1.37.ebuild:
   Correct Slots for gtk 3 introduction to tree
@@ -27,4 +30,3 @@
   +pythoncad-1.36.ebuild:
   New ebuild thanks to Mr. Bones., Rob Cakebread, Lukasz Strzygowski, r0g1,
   David Grant, Alastair Tse
-
