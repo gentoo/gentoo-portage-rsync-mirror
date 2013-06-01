@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/vim-r-0.9.9.1.ebuild,v 1.1 2013/01/13 09:06:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/vim-r-0.9.9.3.ebuild,v 1.1 2013/06/01 22:11:05 radhermit Exp $
 
-EAPI="5"
-VIM_PLUGIN_VIM_VERSION="7.3"
+EAPI=5
 
 inherit vim-plugin
 
@@ -11,7 +10,6 @@ DESCRIPTION="vim plugin: integrate vim with R"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2628"
 LICENSE="public-domain"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 RDEPEND="dev-lang/R
 	|| ( app-vim/conque app-vim/screen )"

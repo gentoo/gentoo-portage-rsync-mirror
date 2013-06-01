@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=|| ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
+DESCRIPTION=vim plugin: CVS/SVN/SVK/git/bzr/hg integration plugin
+EAPI=5
+HOMEPAGE=http://www.vim.org/scripts/script.php?script_id=90
+KEYWORDS=~amd64 ~hppa ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
+LICENSE=MIT
+RDEPEND=!app-vim/cvscommand || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
+SLOT=0
+SRC_URI=mirror://gentoo/vcscommand-1.99.47.tar.bz2 http://dev.gentoo.org/~radhermit/vim/vcscommand-1.99.47.tar.bz2
+_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	dae72739069fe281c623a6ddd5b7b43d
+_md5_=65d97c82990273ee1a3ac7076be0cce4
