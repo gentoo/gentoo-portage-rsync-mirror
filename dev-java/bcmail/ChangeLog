@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/bcmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.34 2012/05/12 03:42:10 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.35 2013/06/01 15:38:25 tomwij Exp $
+
+*bcmail-1.49 (01 Jun 2013)
+
+  01 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +bcmail-1.49.ebuild:
+  Version bump to 1.49, reported by maksbotan; tests are restricted since tests
+  for dependencies are restricted, see bug #471998. Dropped ~amd64-fbsd keyword
+  since dev-java/bcprov and dev-java/bcpkix have no ~amd64-fbsd keyword, see bug
+  #472010.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> bcmail-1.45.ebuild:
   keyword ~amd64-fbsd
@@ -121,4 +129,3 @@
   25 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
   Initial ebuild, should be pretty identical to bcprov ebuild. Ideal to keep
   both in sync. Still to do, junit/test stuff, optional dep/compile test run
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.49-r1.ebuild,v 1.1 2013/06/01 14:51:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.49-r2.ebuild,v 1.1 2013/06/01 15:33:22 tomwij Exp $
 
 EAPI="5"
 
@@ -43,12 +43,22 @@ src_unpack() {
 java_prepare() {
 	mkdir "${S}"/classes || die
 
-	java-pkg_jar-from --build-only junit-4
+	if use test ; then
+		java-pkg_jar-from --build-only junit-4
+	fi
 }
 
 src_compile() {
 	find . -name "*.java" > "${T}"/src.list
-	ejavac -cp junit.jar -encoding ISO-8859-1 -d "${S}"/classes "@${T}"/src.list
+
+	local cp
+	if use test ; then
+		cp="-cp junit.jar"
+	else
+		sed -i '/\/test\//d' "${T}"/src.list || die "Failed to remove test classes"
+	fi
+	
+	ejavac $cp -encoding ISO-8859-1 -d "${S}"/classes "@${T}"/src.list
 
 	cd "${S}"/classes || die
 

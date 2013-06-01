@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/bcpkix-1.49.ebuild,v 1.1 2013/06/01 15:09:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/bcpkix-1.49-r1.ebuild,v 1.1 2013/06/01 15:33:25 tomwij Exp $
 
 EAPI="5"
 
@@ -23,11 +23,11 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
 RESTRICT="test"
 
 COMMON_DEPEND="
-	=dev-java/bcprov-${PV}-r1:0
-	test? ( dev-java/junit:0 )"
+	~dev-java/bcprov-${PV}-r2:0[test?]"
 
 DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
+	test? ( dev-java/junit:0 )
 	${COMMON_DEPEND}"
 
 RDEPEND=">=virtual/jre-1.5
@@ -44,16 +44,28 @@ src_unpack() {
 java_prepare() {
 	mkdir "${S}"/classes
 
-	java-pkg_jar-from --build-only junit
+	if use test ; then
+		java-pkg_jar-from --build-only junit
+	fi
+
 	java-pkg_jar-from bcprov
 }
 
 src_compile() {
 	find org -name "*.java" > "${T}"/src.list
-	ejavac -d "${S}"/classes -classpath $(java-pkg_getjars bcprov,junit) "@${T}"/src.list
 
-	cd "${S}"/classes
-	jar -cf "${S}"/${PN}.jar * || die "failed to create jar"
+	local cp="bcprov.jar"
+	if use test ; then
+		cp="${cp}:junit.jar"
+	else
+		sed -i '/\/test\//d' "${T}"/src.list || die "Failed to remove test classes"
+	fi
+
+	ejavac -d "${S}"/classes -cp ${cp} "@${T}"/src.list
+
+	cd "${S}"/classes || die
+
+	jar -cf "${S}"/${PN}.jar * || die "Failed to create jar."
 }
 
 src_test() {

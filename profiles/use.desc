@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.501 2013/03/21 14:22:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.502 2013/06/01 15:48:26 kensington Exp $
 
 # Keep them sorted
 
@@ -283,6 +283,7 @@ python - Adds optional support/bindings for the Python language
 qdbm - Adds support for the qdbm (Quick Database Manager) library
 qmail-spp - Adds support for qmail SMTP plugins
 qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
+qt5 - Adds support for the Qt 5 application and UI framework
 quicktime - Adds support for OpenQuickTime
 radius - Adds support for RADIUS authentication
 raw - Add support for raw image formats

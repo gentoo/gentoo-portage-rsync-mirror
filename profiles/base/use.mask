@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.169 2013/05/21 21:24:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.170 2013/06/01 15:52:32 kensington Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -345,3 +345,8 @@ clozurecl
 # Mask systemd flag globally, unmasked on arches on which systemd
 # is keyworded.
 systemd
+
+# Michael Palimaka <kensington@gentoo.org> (1 May 2013)
+# Mask until Qt 5 is in portage. (The flag is here already
+# to permit the neccessary package preparation.)
+qt5

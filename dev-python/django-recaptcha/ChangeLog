@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/django-recaptcha
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/ChangeLog,v 1.5 2013/03/06 19:13:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/ChangeLog,v 1.6 2013/06/01 15:49:15 idella4 Exp $
+
+*django-recaptcha-0.0.6-r2 (01 Jun 2013)
+
+  01 Jun 2013; Ian Delaney <idella4@gentoo.org>
+  +django-recaptcha-0.0.6-r2.ebuild, +files/test_settings.py,
+  -django-recaptcha-0.0.4.ebuild, -django-recaptcha-0.0.5.ebuild,
+  -django-recaptcha-0.0.6-r1.ebuild, -django-recaptcha-0.0.6.ebuild,
+  files/django-recaptcha-fields.patch, files/django-recaptcha-settings.patch:
+  revbump, drop pypy to match django, edit recaptcha-fields patch to import
+  added missing source file, add nose for test phase, drop old
 
 *django-recaptcha-0.0.6-r1 (06 Mar 2013)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bcpkix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.1 2013/06/01 15:09:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.2 2013/06/01 15:33:25 tomwij Exp $
+
+*bcpkix-1.49-r1 (01 Jun 2013)
+
+  01 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +bcpkix-1.49-r1.ebuild,
+  -bcpkix-1.49.ebuild:
+  Fixed junit dependency to be in DEPEND and tests to only be present when the
+  user or reverse dependencies force it by USE flag, removed old revisions.
 
 *bcpkix-1.49 (01 Jun 2013)
 

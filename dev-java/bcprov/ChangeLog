@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.46 2013/06/01 14:51:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.47 2013/06/01 15:33:22 tomwij Exp $
+
+*bcprov-1.49-r2 (01 Jun 2013)
+
+  01 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +bcprov-1.49-r2.ebuild,
+  -bcprov-1.49-r1.ebuild, -bcprov-1.49.ebuild:
+  Fixed junit dependency to be in DEPEND and tests to only be present when the
+  user or reverse dependencies force it by USE flag, removed old revisions.
 
 *bcprov-1.49-r1 (01 Jun 2013)
 

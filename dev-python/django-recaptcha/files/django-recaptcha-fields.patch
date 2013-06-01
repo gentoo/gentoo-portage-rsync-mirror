@@ -12,7 +12,7 @@ diff -ur django-recaptcha-0.0.6.orig/captcha/fields.py django-recaptcha-0.0.6/ca
  from captcha import client
  from captcha.widgets import ReCaptcha
 -
-+from captcha import settings
++from captcha import test_settings as settings
  
  class ReCaptchaField(forms.CharField):
      default_error_messages = {
