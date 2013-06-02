@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/stan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.7 2012/11/20 20:07:05 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.8 2013/06/02 10:55:28 pacho Exp $
+
+  02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #328951
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> stan-0.4.1.ebuild:
   Stable for x86, wrt bug #441892
@@ -27,4 +30,3 @@
   23 Oct 2006; Steve Dibb <beandog@gentoo.org>
   +files/stan-0.4.1-errno.patch, +metadata.xml, +stan-0.4.1.ebuild:
   Moving from media-video to app-crypt, see bug 138006
-

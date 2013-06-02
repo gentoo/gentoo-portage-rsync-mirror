@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-wpactrl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.13 2012/02/20 15:09:39 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.14 2013/06/02 10:57:45 pacho Exp $
+
+  02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #328951
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   python-wpactrl-20081102.ebuild:
@@ -51,4 +54,3 @@
   25 Apr 2009; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
   +python-wpactrl-20081102.ebuild:
   Initial ebuild of dev-python/python-wpactrl, written by myself.
-

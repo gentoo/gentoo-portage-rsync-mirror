@@ -7,9 +7,4 @@
 	<name>Michael Orlitzky</name>
 	<description>Maintainer. Assign bugs to him</description>
 </maintainer>
-<maintainer>
-	<email>c1pher@gentoo.org</email>
-	<name>Dane Smith</name>
-	<description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
 </pkgmetadata>

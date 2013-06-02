@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bcrypt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/ChangeLog,v 1.12 2011/03/29 19:51:18 c1pher Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/ChangeLog,v 1.13 2013/06/02 10:53:59 pacho Exp $
+
+  02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #328951
 
   29 Mar 2011; Dane Smith <c1pher@gentoo.org> bcrypt-1.1.ebuild,
   metadata.xml:
@@ -44,4 +47,3 @@
   
   If you're not quite ready for this level of paranoia yet, use the '-r'
   switch.  Please see the bcrypt(1) man page for more details.
-

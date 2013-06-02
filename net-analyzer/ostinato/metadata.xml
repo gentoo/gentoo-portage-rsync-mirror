@@ -2,11 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>c1pher@gentoo.org</email>
-		<name>Dane Smith</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
-	<longdescription lang="en">
-	</longdescription>
 	<upstream>
 		<remote-id type="google-code">ostinato</remote-id>
 	</upstream>

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/chntpw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.20 2012/03/09 08:35:48 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.21 2013/06/02 10:54:42 pacho Exp $
+
+  02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #328951
 
   09 Mar 2012; Tim Harder <radhermit@gentoo.org> chntpw-110511.ebuild:
   Update to EAPI 4, only build static binaries when the static use flag is set,
@@ -87,4 +90,3 @@
   19 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +chntpw-0.99.3.20040818.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

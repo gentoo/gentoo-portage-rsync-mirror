@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>crypto</herd>
-	<maintainer>
-	<email>c1pher@gentoo.org</email>
-	<name>Dane Smith</name>
-	</maintainer>
 	<longdescription>
 		This package embeds secure hashes (SHA1) and digital signatures (GNU 
 		Privacy Guard) into files for verification and authentication. 

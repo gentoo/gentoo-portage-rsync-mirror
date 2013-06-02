@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>c1pher@gentoo.org</email>
-		<name>Dane Smith</name>
-	</maintainer>
-	<maintainer>
 		<email>michael@orlitzky.com</email>
 		<name>Michael Orlitzky</name>
 		<description>Proxy Maintainer. CC on bugs.</description>

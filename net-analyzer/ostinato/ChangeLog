@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ostinato
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.15 2013/03/02 22:46:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.16 2013/06/02 10:58:41 pacho Exp $
+
+  02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #328951
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ostinato-0.5.1.ebuild,
   ostinato-0.5.ebuild:
