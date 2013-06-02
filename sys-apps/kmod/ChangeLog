@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.83 2013/05/27 15:38:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.84 2013/06/02 13:28:21 jer Exp $
+
+  02 Jun 2013; Jeroen Roovers <jer@gentoo.org> kmod-13-r1.ebuild:
+  Stable for HPPA (bug #470580).
 
 *kmod-13-r1 (27 May 2013)
 

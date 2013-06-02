@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.54 2013/06/01 16:30:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.55 2013/06/02 13:03:56 blueness Exp $
+
+  02 Jun 2013; Anthony G. Basile <blueness@gentoo.org> monkeyd-1.2.0.ebuild:
+  Almost everyone will need liana, so turn it on by default
 
   ; Anthony G. Basile <blueness@gentoo.org> monkeyd-1.2.0.ebuild:
   ssl is broken on monkeyd-1.2.0, so we'll turn it off for now
