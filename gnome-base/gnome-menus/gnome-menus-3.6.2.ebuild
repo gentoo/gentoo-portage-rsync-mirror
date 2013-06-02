@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.6.2.ebuild,v 1.1 2013/01/22 08:38:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.6.2.ebuild,v 1.2 2013/06/02 00:12:13 abcd Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-fr
 
 # +python for gmenu-simple-editor
 IUSE="debug +introspection +python test"
-REQUIRED_USE="python? ( introspection )"
+REQUIRED_USE="
+	python? (
+		${PYTHON_REQUIRED_USE}
+		introspection
+	)
+"
 
 COMMON_DEPEND=">=dev-libs/glib-2.29.15:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )

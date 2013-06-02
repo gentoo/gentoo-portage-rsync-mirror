@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.6-r1.ebuild,v 1.1 2013/04/07 11:46:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.6-r1.ebuild,v 1.2 2013/06/02 00:09:34 abcd Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -20,6 +20,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd
 IUSE="debug gtk +introspection ldap orbit policykit"
 
 RDEPEND="
+	${PYTHON_DEPS}
 	>=dev-libs/glib-2.31:2
 	>=dev-libs/dbus-glib-0.74:=
 	>=sys-apps/dbus-1:=
@@ -31,12 +32,13 @@ RDEPEND="
 	policykit? ( sys-auth/polkit:= )
 "
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	dev-libs/libxslt
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
 "
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 pkg_setup() {
 	kill_gconf

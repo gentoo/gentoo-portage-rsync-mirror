@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.6.3.1.ebuild,v 1.3 2013/05/19 20:42:05 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.6.3.1.ebuild,v 1.4 2013/06/02 00:03:11 abcd Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -112,6 +112,8 @@ DEPEND="${COMMON_DEPEND}
 	!!=dev-lang/spidermonkey-1.8.2*"
 # libmozjs.so is picked up from /usr/lib while compiling, so block at build-time
 # https://bugs.gentoo.org/show_bug.cgi?id=360413
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
 	# Fix automagic gnome-bluetooth dep, bug #398145
