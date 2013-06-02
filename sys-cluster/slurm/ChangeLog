@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/slurm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.23 2013/04/12 10:33:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.24 2013/06/02 19:46:40 alexxy Exp $
+
+*slurm-2.5.6 (02 Jun 2013)
+
+  02 Jun 2013; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.5.6.ebuild:
+  Version bump per bug #467920
 
   12 Apr 2013; Alexey Shvetsov <alexxy@gentoo.org>
   +files/slurm-2.5.4-nogtk.patch, -files/slurm-2.3.4-glibc2.16.patch,

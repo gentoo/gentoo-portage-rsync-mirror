@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.546 2013/06/01 15:52:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.547 2013/06/02 19:40:59 robbat2 Exp $
+
+  02 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
+  Block new PBXT usage per news item.
 
   01 Jun 2013; Michael Palimaka <kensington@gentoo.org> use.mask:
   Mask qt5 globally.
