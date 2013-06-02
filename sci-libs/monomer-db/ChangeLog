@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/monomer-db
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.19 2011/11/21 15:24:59 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.20 2013/06/02 14:05:19 jlec Exp $
+
+  02 Jun 2013; Justin Lecher <jlec@gentoo.org> -monomer-db-5.28.ebuild,
+  -monomer-db-5.30.ebuild, -monomer-db-5.31.ebuild, -monomer-db-5.32.ebuild,
+  metadata.xml:
+  Drop obsolete versions
 
   21 Nov 2011; Justin Lecher <jlec@gentoo.org> monomer-db-5.32.ebuild:
   keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
