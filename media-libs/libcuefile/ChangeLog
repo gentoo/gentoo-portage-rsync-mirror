@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.37 2013/06/01 14:14:37 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.38 2013/06/01 23:50:48 radhermit Exp $
+
+  01 Jun 2013; Tim Harder <radhermit@gentoo.org> -libcuefile-444.ebuild,
+  -libcuefile-465.ebuild, -files/libcuefile-444-multilib_and_shared.patch:
+  Remove old.
 
   01 Jun 2013; Chris Reffett <creffett@gentoo.org> libcuefile-444.ebuild:
   EAPI bump wrt bug 460572

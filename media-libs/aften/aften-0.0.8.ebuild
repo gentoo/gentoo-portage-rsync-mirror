@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.5 2013/06/01 14:11:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.7 2013/06/01 23:42:47 radhermit Exp $
+
 EAPI=5
 
-inherit eutils cmake-utils
+inherit cmake-utils
 
 DESCRIPTION="An A/52 (AC-3) audio encoder"
 HOMEPAGE="http://aften.sourceforge.net/"
@@ -13,19 +14,21 @@ LICENSE="LGPL-2.1 BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="cxx"
-DEPEND=""
 
-PATCHES=( "${FILESDIR}/${P}-multilib.patch" "${FILESDIR}/${P}-ppc.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-multilib.patch"
+	"${FILESDIR}/${P}-ppc.patch"
+)
 
-src_compile() {
+src_configure() {
 	local mycmakeargs="-DSHARED=1"
-	use cxx && mycmakeargs="${mycmakeargs} -DBINDINGS_CXX=1"
-	cmake-utils_src_compile
+	use cxx && mycmakeargs+=" -DBINDINGS_CXX=1"
+	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
 	dodoc README Changelog
 	# File collision with media-sound/wavbreaker, upstream informed
-	mv "${D}/usr/bin/wavinfo" "${D}/usr/bin/wavinfo-aften"
+	mv "${D}/usr/bin/wavinfo" "${D}/usr/bin/wavinfo-aften" || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.106 2013/04/24 07:06:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.107 2013/06/01 23:47:24 abcd Exp $
+
+  01 Jun 2013; Jonathan Callen <abcd@gentoo.org> gtk-vnc-0.5.2.ebuild:
+  Fix build with USE=-python and empty PYTHON_TARGETS; force non-empty
+  PYTHON_TARGETS for USE=python
 
   24 Apr 2013; Justin Lecher <jlec@gentoo.org> gtk-vnc-0.5.2.ebuild,
   metadata.xml:
