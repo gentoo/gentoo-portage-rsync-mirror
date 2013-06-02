@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/liblo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/ChangeLog,v 1.25 2013/06/01 08:15:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/ChangeLog,v 1.26 2013/06/01 23:12:45 radhermit Exp $
+
+  01 Jun 2013; Tim Harder <radhermit@gentoo.org> liblo-0.27.ebuild,
+  +files/liblo-0.27-no-threads.patch:
+  Skip more examples when threads are disabled and don't build examples by
+  default (fixes bug #472036).
 
 *liblo-0.27 (01 Jun 2013)
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.6.4.ebuild,v 1.1 2012/11/15 16:50:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.6.4-r1.ebuild,v 1.1 2013/06/01 23:03:33 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils multilib toolchain-funcs versionator
 
-MY_PV=$(replace_version_separator 3 '-r')
+MY_PV="$(replace_version_separator 3 '-r')"
 DESCRIPTION="An implementation of the Optimized Link State Routing protocol"
 HOMEPAGE="http://www.olsr.org/"
 SRC_URI="http://www.olsr.org/releases/$(get_version_component_range 1-2)/${PN}-${MY_PV}.tar.bz2"
@@ -21,7 +21,7 @@ DEPEND="
 		x11-libs/gtk+:2
 	)
 "
-RDEPEND=$DEPEND
+RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_prepare() {
@@ -32,11 +32,13 @@ src_prepare() {
 	# fix parallel make
 	# respect AR
 	# verbose build
+	# fix default prefix, bug #453440
 	sed -i \
 		-e '/@echo "\[/d' \
 		-e 's|$(MAKECMD)|$(MAKE)|g' \
 		-e 's|@$(CC)|$(CC)|g' \
 		-e 's|@ar |$(AR) |g' \
+		-e '/^prefix/s:/usr/local:/usr:' \
 		$( find . -name 'Makefile*' ) || die
 
 	# respect LDFLAGS
@@ -65,7 +67,7 @@ src_install() {
 			LIBDIR="${D}/usr/$(get_libdir)/${PN}" DESTDIR="${D}" install
 	fi
 
-	doinitd "${FILESDIR}/olsrd"
+	doinitd "${FILESDIR}/${PN}"
 
 	dodoc CHANGELOG \
 		valgrind-howto.txt files/olsrd.conf.default.rfc \
