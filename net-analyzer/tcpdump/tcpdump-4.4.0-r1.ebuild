@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.2 2013/06/02 14:50:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.3 2013/06/02 16:16:07 jer Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTO_DEPEND="no" # Only cross-compiling
-inherit eutils flag-o-matic user toolchain-funcs
+inherit autotools eutils flag-o-matic toolchain-funcs user
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -38,26 +38,35 @@ pkg_setup() {
 		ewarn "CAUTION !!! CAUTION !!! CAUTION"
 		ewarn
 		ewarn "You're about to compile tcpdump with samba printing support"
-		ewarn "Upstream tags it as 'possibly-buggy SMB printer'"
+		ewarn "Upstream tags it with:"
+		ewarn "WARNING: The SMB printer may have exploitable buffer overflows!!!"
 		ewarn "So think twice whether this is fine with you"
 		ewarn
 		ewarn "CAUTION !!! CAUTION !!! CAUTION"
 		ewarn
 	fi
-	enewgroup tcpdump
-	enewuser tcpdump -1 -1 -1 tcpdump
+	if use chroot || use suid; then
+		enewgroup tcpdump
+		enewuser tcpdump -1 -1 -1 tcpdump
+	fi
 }
 
+src_prepare() {
+	sed -i aclocal.m4 -e 's|\"-O2\"|\"\"|g' || die
+	eautoconf
+}
 src_configure() {
-	# tcpdump needs some optymalization. see bug #108391
-	( ! is-flag -O? || is-flag -O0 ) && append-flags -O2
+	# tcpdump needs some optimization. see bug #108391
+	# but do not replace -Os
+	filter-flags -O[0-9]
+	is-flagq -O? || append-flags -O2
+
+	filter-flags -finline-functions
+
 	if use chroot; then
 		append-cppflags -DHAVE_CAP_NG_H
 		export LIBS=$( $(tc-getPKG_CONFIG) --libs libcap-ng )
 	fi
-
-	replace-flags -O[3-9] -O2
-	filter-flags -finline-functions
 
 	econf \
 		$(use_enable ipv6) \
@@ -82,6 +91,13 @@ src_install() {
 	if use suid; then
 		fowners root:tcpdump /usr/sbin/tcpdump
 		fperms 4110 /usr/sbin/tcpdump
+	fi
+}
+
+pkg_preinst() {
+	if use chroot || use suid; then
+		enewgroup tcpdump
+		enewuser tcpdump -1 -1 -1 tcpdump
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.168 2013/06/02 14:50:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.169 2013/06/02 16:16:07 jer Exp $
+
+  02 Jun 2013; Jeroen Roovers <jer@gentoo.org> tcpdump-4.4.0-r1.ebuild:
+  Run user.eclass functions conditionally, and in pkg_preinst too. Fix CFLAGS
+  -O2 injection better. Copy the configure warning about SMB support.
 
   02 Jun 2013; Jeroen Roovers <jer@gentoo.org> tcpdump-4.4.0-r1.ebuild:
   Do not keep /var/lib/tcpdump.
