@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
-	<longdescription lang="en">
-	</longdescription>
-	<use>
-		<flag name='pic'>Force shared libraries to be built as PIC (this is slower)</flag>
-	</use>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
+  </maintainer>
+  <use>
+    <flag name="pic">Force shared libraries to be built as PIC (this is slower)</flag>
+  </use>
 </pkgmetadata>

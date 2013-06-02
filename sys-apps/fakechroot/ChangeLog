@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakechroot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.20 2012/09/11 11:00:19 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.21 2013/06/02 11:01:31 pacho Exp $
+
+  02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #328951
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
@@ -88,4 +91,3 @@
   10 Jun 2008; Michał Januszewski <spock@gentoo.org>
   +files/fakechroot-2.6.patch, +metadata.xml, +fakechroot-2.6.ebuild:
   Initial commit.
-
