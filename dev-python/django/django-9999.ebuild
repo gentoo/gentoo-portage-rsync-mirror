@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.21 2013/06/01 19:35:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.22 2013/06/02 04:22:26 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 PYTHON_REQ_USE='sqlite?'
+WEBAPP_NO_AUTO_INSTALL="yes"
 
 #if LIVE
 inherit git-2
@@ -79,14 +80,8 @@ python_install_all() {
 }
 
 pkg_postinst() {
-	elog "A copy of the admin media is available to"
-	elog "webapp-config for installation in a webroot,"
-	elog "as well as the traditional location in python's"
-	elog "site-packages dir for easy development"
-	elog
-	ewarn "If you build Django ${PV} without USE=\"vhosts\""
-
-	# XXX: call webapp_pkg_postinst? the old ebuild didn't do that...
-	ewarn "webapp-config will automatically install the"
-	ewarn "admin media into the localhost webroot."
+	elog "A copy of the admin media is available to webapp-config for installation in a"
+	elog "webroot, as well as the traditional location in python's site-packages dir"
+	elog "for easy development."
+	webapp_pkg_postinst
 }
