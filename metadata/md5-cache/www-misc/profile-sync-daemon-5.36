@@ -1,4 +1,4 @@
-DEFINED_PHASES=postinst prepare unpack
+DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Symlinks and syncs browser profile dirs to RAM
 EAPI=5
 HOMEPAGE=https://wiki.archlinux.org/index.php/Profile-sync-daemon
@@ -6,6 +6,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 GPL-3
 RDEPEND=app-shells/bash net-misc/rsync
 SLOT=0
-SRC_URI=https://github.com/graysky2/profile-sync-daemon/archive/v5.34.tar.gz -> profile-sync-daemon-5.34.tar.gz
+SRC_URI=https://github.com/graysky2/profile-sync-daemon/archive/v5.36.tar.gz -> profile-sync-daemon-5.36.tar.gz
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
-_md5_=2f0231219d9eaeb019e7c4bf1782a164
+_md5_=08038d82930de3659c08bba220905710

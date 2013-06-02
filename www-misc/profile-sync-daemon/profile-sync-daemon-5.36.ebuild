@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.34.ebuild,v 1.1 2013/05/19 17:01:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.36.ebuild,v 1.1 2013/06/02 21:06:06 hasufell Exp $
 
 EAPI=5
 
@@ -19,9 +19,9 @@ RDEPEND="
 	app-shells/bash
 	net-misc/rsync"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-initd.patch
-	mv Makefile.gentoo Makefile || die
+src_install() {
+	emake DESTDIR="${ED}" install-openrc-all install-systemd
+	fperms -x /etc/cron.hourly/psd-update
 }
 
 pkg_postinst() {
