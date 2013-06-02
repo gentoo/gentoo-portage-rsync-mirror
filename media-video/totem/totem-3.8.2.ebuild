@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.8.2.ebuild,v 1.1 2013/05/14 19:44:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.8.2.ebuild,v 1.2 2013/06/02 20:44:56 abcd Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 # see bug #359379
 REQUIRED_USE="
 	flash? ( nsplugin )
-	python? ( introspection )
+	python? ( introspection ${PYTHON_REQUIRED_USE} )
 	zeitgeist? ( introspection )
 "
 
@@ -89,6 +89,10 @@ DEPEND="${RDEPEND}
 	test? ( python? ( dev-python/pylint ) )
 "
 # docbook-xml-dtd is needed for user doc
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	gnome2_src_prepare

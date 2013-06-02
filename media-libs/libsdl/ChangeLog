@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.201 2013/05/10 06:20:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.202 2013/06/02 20:33:18 chainsaw Exp $
+
+*libsdl-1.2.15-r4 (02 Jun 2013)
+
+  02 Jun 2013; Tony Vroon <chainsaw@gentoo.org> +libsdl-1.2.15-r4.ebuild,
+  +files/libsdl-1.2.15-const-xdata32.patch:
+  Patch by Azamat H. Hackimov to address build failures against recent libX11,
+  closes bug #471300.
 
 *libsdl-1.2.15-r3 (10 May 2013)
 
