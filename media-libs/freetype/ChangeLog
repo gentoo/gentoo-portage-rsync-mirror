@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.372 2013/05/27 02:49:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.373 2013/06/02 07:41:04 yngwin Exp $
+
+*freetype-2.4.12 (02 Jun 2013)
+
+  02 Jun 2013; Ben de Groot <yngwin@gentoo.org>
+  +files/freetype-2.4.12-set-adobe-cff-hinting-as-default.patch,
+  +freetype-2.4.12.ebuild, metadata.xml:
+  Version bump, with thanks to Mario Kicherer for his contributions in bug
+  #469904
 
   27 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag from metadata
