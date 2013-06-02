@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14799 2013/06/02 14:06:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14800 2013/06/02 19:29:17 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sebastian Pipping <sping@gentoo.org> (2 Jun 2013)
+# Effect working, freeze on opening preferences dialog
+>=media-libs/freeverb3-3.0.0
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (31 May 2013)
 # Waiting for final release
