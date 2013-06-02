@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.51 2013/05/25 07:41:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.52 2013/06/02 08:37:27 ago Exp $
+
+  02 Jun 2013; Agostino Sarubbo <ago@gentoo.org> lbzip2-2.2-r1.ebuild:
+  Stable for sh, wrt bug #457218
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> lbzip2-2.2-r1.ebuild:
   Stable for sparc, wrt bug #457218

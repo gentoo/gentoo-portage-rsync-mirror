@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/tempita-0.5.1-r1.ebuild,v 1.11 2013/05/25 07:43:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/tempita-0.5.1-r1.ebuild,v 1.12 2013/06/02 08:39:43 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
