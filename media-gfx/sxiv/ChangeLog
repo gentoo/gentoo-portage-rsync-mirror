@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sxiv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/ChangeLog,v 1.12 2013/04/08 07:57:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/ChangeLog,v 1.13 2013/06/02 17:24:01 nimiux Exp $
+
+  02 Jun 2013; Chema Alonso <nimiux@gentoo.org> sxiv-1.1-r1.ebuild:
+  Stable for amd64 wrt bug #471880
 
 *sxiv-1.1-r1 (08 Apr 2013)
 
