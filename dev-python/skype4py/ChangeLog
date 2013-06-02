@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/skype4py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.14 2013/02/04 08:31:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.15 2013/06/02 22:30:08 radhermit Exp $
+
+*skype4py-1.0.35 (02 Jun 2013)
+
+  02 Jun 2013; Tim Harder <radhermit@gentoo.org> +skype4py-1.0.35.ebuild:
+  Version bump.
 
 *skype4py-1.0.34 (04 Feb 2013)
 
