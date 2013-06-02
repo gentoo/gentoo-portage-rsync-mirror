@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/bastion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/ChangeLog,v 1.4 2013/05/13 03:49:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/ChangeLog,v 1.5 2013/06/02 18:51:30 hasufell Exp $
+
+  02 Jun 2013; Julian Ospald <hasufell@gentoo.org> bastion-20120620-r1.ebuild:
+  splitdebug is not invalid
 
   13 May 2013; Patrick Lauer <patrick@gentoo.org> bastion-20120620-r1.ebuild:
   Remove invalid splitdebug restrict

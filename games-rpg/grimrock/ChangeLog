@@ -1,6 +1,15 @@
 # ChangeLog for games-rpg/grimrock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/ChangeLog,v 1.5 2013/05/13 03:56:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/ChangeLog,v 1.7 2013/06/02 18:53:02 hasufell Exp $
+
+*grimrock-20130515 (02 Jun 2013)
+
+  02 Jun 2013; Julian Ospald <hasufell@gentoo.org> -grimrock-20121222.ebuild,
+  +grimrock-20130515.ebuild:
+  version bump, remove old
+
+  02 Jun 2013; Julian Ospald <hasufell@gentoo.org> grimrock-20121222.ebuild:
+  splitdebug is not invalid
 
   13 May 2013; Patrick Lauer <patrick@gentoo.org> grimrock-20121222.ebuild:
   Remove invalid splitdebug restrict

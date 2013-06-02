@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/nightsky/nightsky-20111222.ebuild,v 1.3 2013/05/13 03:44:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/nightsky/nightsky-20111222.ebuild,v 1.4 2013/06/02 18:50:34 hasufell Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="bundled-libs"
-RESTRICT="bindist fetch"
+RESTRICT="bindist fetch splitdebug"
 
 MYGAMEDIR=${GAMES_PREFIX_OPT}/${PN}
 QA_PREBUILT="${MYGAMEDIR#/}/NightSky*
