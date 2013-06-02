@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00-r1.ebuild,v 1.3 2013/03/03 18:42:51 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00-r1.ebuild,v 1.4 2013/06/02 16:34:53 tomjbe Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -53,6 +53,7 @@ python_prepare_all() {
 		"${FILESDIR}"/${P}-libdir.patch
 		"${FILESDIR}"/${P}-verbose.patch
 		"${FILESDIR}"/${P}-script.patch
+		"${FILESDIR}"/${P}-PIL.patch
 	)
 
 	distutils-r1_python_prepare_all
