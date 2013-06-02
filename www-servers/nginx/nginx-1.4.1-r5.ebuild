@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.1-r5.ebuild,v 1.1 2013/05/23 20:32:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.1-r5.ebuild,v 1.2 2013/06/02 22:48:30 naota Exp $
 
 EAPI="5"
 
@@ -435,7 +435,7 @@ src_install() {
 	# this solves a problem with SELinux where nginx doesn't see the directories
 	# as root and tries to create them as nginx
 	fperms 0750 "${NGINX_HOME_TMP}"
-	fowners ${PN}:root "${NGINX_HOME_TMP}"
+	fowners ${PN}:0 "${NGINX_HOME_TMP}"
 
 	fperms 0700 /var/log/nginx "${NGINX_HOME_TMP}"/{client,proxy,fastcgi,scgi,uwsgi}
 	fowners ${PN}:${PN} /var/log/nginx "${NGINX_HOME_TMP}"/{client,proxy,fastcgi,scgi,uwsgi}
