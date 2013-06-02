@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.344 2013/05/28 07:00:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.345 2013/06/02 01:18:35 mr_bones_ Exp $
+
+*syslog-ng-3.4.1-r1 (02 Jun 2013)
+
+  02 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org> +files/README.hardened,
+  +syslog-ng-3.4.1-r1.ebuild, -syslog-ng-3.4.1.ebuild,
+  files/3.4/syslog-ng.conf.gentoo, files/3.4/syslog-ng.conf.gentoo.fbsd:
+  rev bump to force out default config changes (bug #471836) restrict tests
+  again (bug #471988) remove hardened and selinux use flags (bug #375853)
 
   28 May 2013; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.4.1.ebuild:
   create default statedir for people willing to settle for systemd (bug #470994)

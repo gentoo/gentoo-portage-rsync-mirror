@@ -1,5 +1,5 @@
 @version: 3.4
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/3.4/syslog-ng.conf.gentoo,v 1.1 2013/04/28 04:50:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/3.4/syslog-ng.conf.gentoo,v 1.2 2013/06/02 01:18:35 mr_bones_ Exp $
 #
 # Syslog-ng default configuration file for Gentoo Linux
 
@@ -22,12 +22,7 @@ options {
 	mark_freq(3600); 
 };
 
-source src {
-    # https://bugs.gentoo.org/show_bug.cgi?id=449260
-    unix-dgram("/dev/log");
-    internal();
-    file("/proc/kmsg");
-};
+source src { system(); internal(); };
 
 destination messages { file("/var/log/messages"); };
 

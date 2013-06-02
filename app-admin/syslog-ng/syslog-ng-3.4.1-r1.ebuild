@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1.ebuild,v 1.9 2013/05/28 07:00:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.1-r1.ebuild,v 1.1 2013/06/02 01:18:35 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd
@@ -13,7 +13,8 @@ SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/${MY_PV}/sourc
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="caps dbi geoip hardened ipv6 json mongodb +pcre selinux smtp spoof-source ssl tcpd"
+IUSE="caps dbi geoip ipv6 json mongodb +pcre smtp spoof-source ssl tcpd"
+RESTRICT="test"
 
 RDEPEND="
 	pcre? ( dev-libs/libpcre )
@@ -66,24 +67,21 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	dodoc AUTHORS ChangeLog NEWS contrib/syslog-ng.conf* contrib/syslog2ng
+	dodoc AUTHORS ChangeLog NEWS contrib/syslog-ng.conf* contrib/syslog2ng \
+		"${FILESDIR}/${PV%.*}/syslog-ng.conf.gentoo.hardened" \
+		"${FILESDIR}/syslog-ng.logrotate.hardened" \
+		"${FILESDIR}/README.hardened"
 
 	# Install default configuration
 	insinto /etc/syslog-ng
-	if use hardened || use selinux ; then
-		newins "${FILESDIR}/${PV%.*}/syslog-ng.conf.gentoo.hardened" syslog-ng.conf
-	elif use userland_BSD ; then
+	if use userland_BSD ; then
 		newins "${FILESDIR}/${PV%.*}/syslog-ng.conf.gentoo.fbsd" syslog-ng.conf
 	else
 		newins "${FILESDIR}/${PV%.*}/syslog-ng.conf.gentoo" syslog-ng.conf
 	fi
 
 	insinto /etc/logrotate.d
-	if use hardened || use selinux ; then
-		newins "${FILESDIR}/syslog-ng.logrotate.hardened" syslog-ng
-	else
-		newins "${FILESDIR}/syslog-ng.logrotate" syslog-ng
-	fi
+	newins "${FILESDIR}/syslog-ng.logrotate" syslog-ng
 
 	newinitd "${FILESDIR}/${PV%.*}/syslog-ng.rc6" syslog-ng
 	newconfd "${FILESDIR}/${PV%.*}/syslog-ng.confd" syslog-ng
@@ -101,16 +99,6 @@ pkg_postinst() {
 		elog "It is highly recommended that app-admin/logrotate be emerged to"
 		elog "manage the log files.  ${PN} installs a file in /etc/logrotate.d"
 		elog "for logrotate to use."
-		echo
-	fi
-	if has_version sys-apps/systemd ; then
-		echo
-		elog "If you intend to use syslog-ng together with the systemd journal,"
-		elog "please be sure to configure it to listen accordingly, e.g. replace"
-		elog "unix-dgram(\"/dev/log\");"
-		elog "with"
-		elog "unix-dgram(\"/run/systemd/journal/syslog\");"
-		elog "in /etc/syslog-ng/syslog-ng.conf"
 		echo
 	fi
 }
