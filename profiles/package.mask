@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14797 2013/06/02 09:52:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14798 2013/06/02 12:29:58 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -392,6 +392,7 @@ net-irc/xchatosd
 >=media-libs/grilo-0.2.6
 >=media-plugins/grilo-plugins-0.2.8
 >=gnome-base/gnome-common-3.7.4
+>=media-gfx/colorhug-client-0.2.0
 
 # Sebastien Fabbro <bicatali@gentoo.org> (26 Mar 2013)
 # Now included in sci-mathematics/mathgl

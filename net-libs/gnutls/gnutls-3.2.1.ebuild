@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.1.ebuild,v 1.1 2013/06/01 19:59:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.1.ebuild,v 1.2 2013/06/02 12:30:18 alonbl Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ IUSE="+cxx dane doc examples guile nls pkcs11 static-libs test zlib ${IUSE_LINGU
 # use system libopts
 RDEPEND=">=dev-libs/libtasn1-2.14
 	>=dev-libs/nettle-2.7[gmp]
+	dev-libs/gmp
 	sys-devel/autogen
 	dane? ( net-dns/unbound )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
@@ -39,6 +40,8 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog NEWS README THANKS doc/TODO )
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-build-gmp.patch"
+
 	# tests/suite directory is not distributed
 	sed -i \
 		-e ':AC_CONFIG_FILES(\[tests/suite/Makefile\]):d' \

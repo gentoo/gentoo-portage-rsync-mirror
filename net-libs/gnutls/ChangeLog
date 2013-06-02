@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.432 2013/06/01 19:59:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.433 2013/06/02 12:30:18 alonbl Exp $
+
+  02 Jun 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnutls-3.2.1-build-gmp.patch, gnutls-3.2.1.ebuild:
+  link explicitly against gmp, bug#472056
 
 *gnutls-3.2.1 (01 Jun 2013)
 
