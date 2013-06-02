@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.16.0.ebuild,v 1.8 2013/03/10 10:39:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.16.0.ebuild,v 1.9 2013/06/02 15:35:03 ulm Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ IUSE="debug examples glade gnome gnomecanvas sourceview +ocamlopt opengl spell s
 DESCRIPTION="Objective CAML interface for Gtk+2"
 HOMEPAGE="http://lablgtk.forge.ocamlcore.org/"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/979/${P}.tar.gz"
-LICENSE="LGPL-2.1-with-linking-exception examples? ( as-is )"
+LICENSE="LGPL-2.1-with-linking-exception examples? ( lablgtk-examples )"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=dev-lang/ocaml-3.10:=[ocamlopt?]
