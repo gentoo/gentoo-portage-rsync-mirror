@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.3 2013/06/02 16:16:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.4 2013/06/03 01:46:58 jer Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ src_configure() {
 	# tcpdump needs some optimization. see bug #108391
 	# but do not replace -Os
 	filter-flags -O[0-9]
-	is-flagq -O? || append-flags -O2
+	has -O? ${CFLAGS} || append-cflags -O2
 
 	filter-flags -finline-functions
 
