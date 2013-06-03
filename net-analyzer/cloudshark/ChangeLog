@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cloudshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cloudshark/ChangeLog,v 1.2 2013/06/03 12:51:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cloudshark/ChangeLog,v 1.4 2013/06/03 13:54:17 zerochaos Exp $
+
+  03 Jun 2013; Rick Farina <zerochaos@gentoo.org> cloudshark-1.0.2.174.ebuild:
+  adjusting some line lengths down for readability
+
+  03 Jun 2013; Rick Farina <zerochaos@gentoo.org> cloudshark-1.0.2.174.ebuild:
+  clean description properly
 
   03 Jun 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove netmon.
