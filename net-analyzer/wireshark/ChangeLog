@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.499 2013/05/31 13:59:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.500 2013/06/03 15:01:18 jer Exp $
+
+  03 Jun 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove zerochaos.
 
   31 May 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0_rc2.ebuild,
   wireshark-1.6.15.ebuild, wireshark-1.8.7.ebuild:

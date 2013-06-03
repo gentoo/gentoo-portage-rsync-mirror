@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-	<email>zerochaos@gentoo.org</email>
-	<name>Rick Farina</name>
-	<description>Excessive wireshark user and enthusiast</description>
-</maintainer>
 <longdescription>
 	Wireshark is the world's foremost network protocol analyzer, and is the de
 	facto (and often de jure) standard across many industries and educational
