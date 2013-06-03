@@ -1,6 +1,9 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.55 2013/06/03 19:51:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.56 2013/06/03 22:46:26 sping Exp $
+
+  03 Jun 2013; Sebastian Pipping <sping@gentoo.org> httrack-3.47.17.ebuild:
+  Make tests work through WANT_AUTOMAKE=1.12 (bug #472232)
 
   03 Jun 2013; Sebastian Pipping <sping@gentoo.org> -httrack-3.42.3.ebuild,
   -httrack-3.44.5.ebuild, -httrack-3.45.2.ebuild, -httrack-3.45.3.ebuild,

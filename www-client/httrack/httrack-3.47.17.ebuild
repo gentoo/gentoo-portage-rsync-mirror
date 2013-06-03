@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.17.ebuild,v 1.2 2013/06/03 19:48:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.17.ebuild,v 1.3 2013/06/03 22:46:26 sping Exp $
 
 EAPI="4"
 
 AT_M4DIR='m4'
+WANT_AUTOMAKE=1.12  # or "make check" breaks
 inherit autotools eutils
 
 DESCRIPTION="HTTrack Website Copier, Open Source Offline Browser"
@@ -21,8 +22,6 @@ RDEPEND=">=sys-libs/zlib-1.2.5.1-r1
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS README greetings.txt history.txt )
-
-RESTRICT="test"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.44.1+zlib-1.2.5.1.patch
