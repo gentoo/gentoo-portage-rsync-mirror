@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.7.1.ebuild,v 1.2 2013/03/31 04:18:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.7.3.ebuild,v 1.1 2013/06/03 20:24:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils python-single-r1 gnome2 multilib
+inherit eutils python-single-r1 gnome2
 
 DESCRIPTION="A graphical diff and merge tool"
 HOMEPAGE="http://meldmerge.org/"
@@ -16,7 +16,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+highlight gnome"
 
-# FIXME: switch pygtksourceview and gconf-python to python-r1
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+# FIXME: switch gconf-python to python-r1
 RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/pygtk-2.14:2[${PYTHON_USEDEP}]
@@ -47,10 +49,6 @@ src_prepare() {
 	sed -e '/scrollkeeper-update/s/\t/&#/' \
 		-i help/*/Makefile || die "sed 4 failed"
 
-	# don't run update-*-database, leave that to eclass
-	sed -e '/update-.*-database/d' \
-		-i Makefile || die "sed 5 failed"
-
 	strip-linguas -i "${S}/po"
 	local mylinguas=""
 	for x in ${LINGUAS}; do
@@ -62,10 +60,6 @@ src_prepare() {
 			-i po/Makefile || die "sed 6 failed"
 	fi
 
-	# Fix .desktop entry
-	sed -e 's/\(MimeType.*\)/\1;/' \
-		-i data/meld.desktop.in || die
-
 	gnome2_src_prepare
 }
 
@@ -74,7 +68,6 @@ src_configure() {
 }
 
 src_install() {
-	DOCS="NEWS"
 	gnome2_src_install
 	python_fix_shebang "${ED}"/usr/bin
 	doman meld.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.1.ebuild,v 1.2 2013/06/02 12:30:18 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.1-r1.ebuild,v 1.1 2013/06/03 20:17:17 alonbl Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog NEWS README THANKS doc/TODO )
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-build-gmp.patch"
+	epatch "${FILESDIR}/${P}-build-gmp-"*.patch
 
 	# tests/suite directory is not distributed
 	sed -i \

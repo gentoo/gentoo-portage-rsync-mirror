@@ -1,0 +1,36 @@
+From f3ef68f4f79434fadc3f28c649744e57f3eef99b Mon Sep 17 00:00:00 2001
+From: Nikos Mavrogiannopoulos <nmav@gnutls.org>
+Date: Mon, 3 Jun 2013 21:21:44 +0200
+Subject: [PATCH] Add nettle dependencies to libcrypto.la
+
+---
+ lib/Makefile.am        |    1 -
+ lib/nettle/Makefile.am |    1 +
+ 2 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/lib/Makefile.am b/lib/Makefile.am
+index 3beb7c7..006f695 100644
+--- a/lib/Makefile.am
++++ b/lib/Makefile.am
+@@ -140,7 +140,6 @@ thirdparty_libadd += $(LIBTASN1_LIBS)
+ endif
+ 
+ if ENABLE_NETTLE
+-thirdparty_libadd += $(NETTLE_LIBS) $(HOGWEED_LIBS) $(GMP_LIBS)
+ libgnutls_la_LIBADD += nettle/libcrypto.la
+ endif
+ 
+diff --git a/lib/nettle/Makefile.am b/lib/nettle/Makefile.am
+index 3dcb928..7b3f4c0 100644
+--- a/lib/nettle/Makefile.am
++++ b/lib/nettle/Makefile.am
+@@ -37,5 +37,6 @@ endif
+ 
+ noinst_LTLIBRARIES = libcrypto.la
+ 
++libcrypto_la_LIBADD = $(NETTLE_LIBS) $(HOGWEED_LIBS) $(GMP_LIBS)
+ libcrypto_la_SOURCES = pk.c mpi.c mac.c cipher.c rnd.c init.c egd.c egd.h \
+ 	gnettle.h 
+-- 
+1.7.1
+

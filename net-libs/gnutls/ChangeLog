@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.434 2013/06/02 20:43:15 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.435 2013/06/03 20:17:17 alonbl Exp $
+
+*gnutls-3.2.1-r1 (03 Jun 2013)
+
+  03 Jun 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnutls-3.2.1-build-gmp-1.patch, +files/gnutls-3.2.1-build-gmp-2.patch,
+  +files/gnutls-3.2.1-build-gmp-3.patch, +gnutls-3.2.1-r1.ebuild,
+  -files/gnutls-3.2.1-build-gmp.patch, -gnutls-3.2.1.ebuild:
+  backport patches from upstream related to bug#472056, should solve bug#472196
 
   02 Jun 2013; Richard Freeman <rich0@gentoo.org> gnutls-2.12.23-r1.ebuild:
   amd64 stable - 471788
