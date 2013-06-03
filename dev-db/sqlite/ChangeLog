@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.477 2013/05/21 22:49:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.479 2013/06/03 21:00:58 floppym Exp $
+
+  03 Jun 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Remove unused use flag descriptions.
+
+  03 Jun 2013; Mike Gilbert <floppym@gentoo.org> -sqlite-3.7.14.1.ebuild,
+  -sqlite-3.7.15.2.ebuild, -sqlite-3.7.16.1.ebuild, -sqlite-3.7.16.ebuild:
+  Remove old per Arfrever.
 
 *sqlite-3.7.17 (21 May 2013)
 
