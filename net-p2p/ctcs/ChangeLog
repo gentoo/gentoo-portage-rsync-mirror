@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ctcs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.10 2011/01/15 03:39:42 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.11 2013/06/03 21:27:45 ulm Exp $
+
+  03 Jun 2013; Ulrich Müller <ulm@gentoo.org> ctcs-1.4.1.ebuild:
+  Fix LICENSE, bug 446616.
 
   15 Jan 2011; Mike Frysinger <vapier@gentoo.org> ctcs-1.4.1.ebuild:
   Mark ppc stable #344757.

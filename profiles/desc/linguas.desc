@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.71 2013/06/01 13:38:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.72 2013/06/03 21:20:15 jer Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -69,7 +69,7 @@ fa_IR - Persian locale for Iran
 fi - Finnish locale
 fi_FI - Finnish locale
 fil - Filipino locale
-fo -  Faroese locale
+fo - Faroese locale
 fr - French locale
 fr_CA - French locale for Canada
 fr_FR - French locale for France

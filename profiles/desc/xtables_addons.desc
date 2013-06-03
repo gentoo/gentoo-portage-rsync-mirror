@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/xtables_addons.desc,v 1.4 2011/06/16 13:48:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/xtables_addons.desc,v 1.5 2013/06/03 21:20:15 jer Exp $
 
 # This file contains descriptions of XTABLES_ADDONS USE-EXPANDED variables.
 # Keep it sorted.
@@ -11,7 +11,7 @@ checksum - CHECKSUM target computes and fills in the checksum in a packet that l
 condition - matches if a specific condition variable is (un)set
 delude - DELUDE target will reply to a SYN packet with SYN-ACK, and to all other packets with an RST
 dhcpmac - DHCPMAC target/match in conjunction with ebtables can be used to completely change all MAC addresses from and to a VMware-based virtual machine
-dnetmap - DNETMAP target  allows dynamic two-way 1:1 mapping of IPv4 subnets
+dnetmap - DNETMAP target allows dynamic two-way 1:1 mapping of IPv4 subnets
 echo - ECHO target sends back all packets it received
 fuzzy - matches a rate limit based on a fuzzy logic controller (FLC)
 geoip - match a packet by its source or destination country

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7908 2013/06/03 19:13:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7909 2013/06/03 21:20:15 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jun 2013; Jeroen Roovers <jer@gentoo.org> desc/linguas.desc,
+  desc/xtables_addons.desc:
+  Fix whitespace.
 
   03 Jun 2013; Jeroen Roovers <jer@gentoo.org> desc/foo2zjs_devices.desc:
   Fix whitespace.
