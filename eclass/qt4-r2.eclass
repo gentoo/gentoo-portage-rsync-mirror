@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.27 2013/06/03 06:35:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.28 2013/06/03 08:41:19 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -158,13 +158,16 @@ qt4-r2_src_install() {
 # than one project file are found, then ${PN}.pro is processed, provided
 # that it exists. Otherwise eqmake4 fails.
 #
-# All other arguments are appended unmodified to qmake command line. For
-# recursive build systems, i.e. those based on the subdirs template, you
-# should run eqmake4 on the top-level project file only, unless you have
-# strong reasons to do things differently. During the building, qmake
-# will be automatically re-invoked with the right arguments on every
-# directory specified inside the top-level project file.
+# All other arguments are appended unmodified to qmake command line.
+#
+# For recursive build systems, i.e. those based on the subdirs template,
+# you should run eqmake4 on the top-level project file only, unless you
+# have a valid reason to do otherwise. During the building, qmake will
+# be automatically re-invoked with the right arguments on every directory
+# specified inside the top-level project file.
 eqmake4() {
+	debug-print-function ${FUNCNAME} "$@"
+
 	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
 
 	ebegin "Running qmake"
@@ -179,7 +182,7 @@ eqmake4() {
 		if [[ -z ${project_file} ]]; then
 			echo
 			eerror "No project files found in '${PWD}'!"
-			eerror "This shouldn't happen - please send a bug report to http://bugs.gentoo.org/"
+			eerror "This shouldn't happen - please send a bug report to https://bugs.gentoo.org/"
 			echo
 			die "eqmake4 failed"
 		fi
@@ -276,7 +279,7 @@ eqmake4() {
 	if ! eend $? ; then
 		echo
 		eerror "Running qmake has failed! (see above for details)"
-		eerror "This shouldn't happen - please send a bug report to http://bugs.gentoo.org/"
+		eerror "This shouldn't happen - please send a bug report to https://bugs.gentoo.org/"
 		echo
 		die "eqmake4 failed"
 	fi
