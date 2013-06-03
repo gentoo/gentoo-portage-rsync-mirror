@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.56 2013/03/27 05:34:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.57 2013/06/03 07:28:30 radhermit Exp $
+
+  03 Jun 2013; Tim Harder <radhermit@gentoo.org> unbound-1.4.20.ebuild:
+  Add PYTHON_REQUIRED_USE for python-single-r1.
 
   27 Mar 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove proxy-maintainers from metadata.

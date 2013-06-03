@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/django-tastypie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/ChangeLog,v 1.5 2013/05/30 21:16:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/ChangeLog,v 1.6 2013/06/03 07:17:51 idella4 Exp $
+
+  3 June 2013; Ian Delaney <idella4@gentoo.org> +runtests.patch,
+  django-tastypie-0.9.15.ebuild:
+  Added needed deps, tarball from pypi substituted with 'proper' one 
+  from home site, patch for running testsuite to die on fail (shifts
+  code from ebuild back to run script), tests unrestricted and 
+  test phase reduced accordingly
 
   30 May 2013; Mike Gilbert <floppym@gentoo.org> django-tastypie-0.9.15.ebuild:
   Replace python_test with something that actually runs tests. Restrict them
