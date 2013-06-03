@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.848 2013/06/01 18:51:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.849 2013/06/03 06:20:53 pesa Exp $
+
+  03 Jun 2013; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
+  Add support for EQMAKE4_EXCLUDE.
 
   01 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> php-ext-source-r2.eclass:
   Fix REQUIRED_USE with PHP_EXT_OPTIONAL_USE set. Fixes REQUIRED_USE

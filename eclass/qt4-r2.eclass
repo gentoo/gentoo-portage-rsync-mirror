@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.25 2013/03/05 19:06:19 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.26 2013/06/03 06:20:53 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -127,8 +127,7 @@ qt4-r2_src_compile() {
 # @FUNCTION: qt4-r2_src_install
 # @DESCRIPTION:
 # Default src_install function for qt4-based packages. Installs compiled code,
-# documentation (via DOCS and HTML_DOCS variables).
-
+# and documentation (via DOCS and HTML_DOCS variables).
 qt4-r2_src_install() {
 	debug-print-function $FUNCNAME "$@"
 
@@ -142,6 +141,14 @@ qt4-r2_src_install() {
 		dohtml -r ${HTML_DOCS} || die "dohtml failed"
 	fi
 }
+
+# @VARIABLE: EQMAKE4_EXCLUDE
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# List of files to be excluded from eqmake4 processing.
+# Paths are relative to the current working directory (usually ${S}).
+#
+# Example: EQMAKE4_EXCLUDE="ignore/me.pro foo/*"
 
 # @FUNCTION: eqmake4
 # @USAGE: [project_file] [parameters to qmake]
@@ -187,6 +194,7 @@ eqmake4() {
 		config_add="debug"
 		config_remove="release"
 	fi
+
 	local awkscript='BEGIN {
 				printf "### eqmake4 was here ###\n" > file;
 				printf "CONFIG -= debug_and_release %s\n", remove >> file;
@@ -209,16 +217,25 @@ eqmake4() {
 			END {
 				print fixed;
 			}'
-	local file=
+
+	[[ -n ${EQMAKE4_EXCLUDE} ]] && eshopts_push -o noglob
+
+	local file
 	while read file; do
+		local excl
+		for excl in ${EQMAKE4_EXCLUDE}; do
+			[[ ${file} == ${excl} ]] && continue 2
+		done
 		grep -q '^### eqmake4 was here ###$' "${file}" && continue
+
 		local retval=$({
-				rm -f "${file}" || echo FAIL
-				awk -v file="${file}" \
-					-v add=${config_add} \
-					-v remove=${config_remove} \
-					-- "${awkscript}" || echo FAIL
-				} < "${file}")
+			rm -f "${file}" || echo FAIL
+			awk -v file="${file}" \
+				-v add=${config_add} \
+				-v remove=${config_remove} \
+				-- "${awkscript}" || echo FAIL
+			} < "${file}")
+
 		if [[ ${retval} == 1 ]]; then
 			einfo " - fixed CONFIG in ${file}"
 		elif [[ ${retval} != 0 ]]; then
@@ -226,6 +243,8 @@ eqmake4() {
 			die "eqmake4 failed to process ${file}"
 		fi
 	done < <(find . -type f -name '*.pr[io]' -printf '%P\n' 2>/dev/null)
+
+	[[ -n ${EQMAKE4_EXCLUDE} ]] && eshopts_pop
 
 	"${EPREFIX}"/usr/bin/qmake \
 		-makefile \
@@ -261,8 +280,6 @@ eqmake4() {
 		echo
 		die "eqmake4 failed"
 	fi
-
-	return 0
 }
 
 # Internal function, used by eqmake4 and qt4-r2_src_configure.

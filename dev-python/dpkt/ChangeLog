@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dpkt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dpkt/ChangeLog,v 1.4 2010/07/01 01:35:31 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dpkt/ChangeLog,v 1.5 2013/06/03 06:02:41 patrick Exp $
+
+*dpkt-1.8 (03 Jun 2013)
+
+  03 Jun 2013; Patrick Lauer <patrick@gentoo.org> +dpkt-1.8.ebuild:
+  Bump
 
 *dpkt-1.7 (01 Jul 2010)
 
@@ -18,4 +23,3 @@
   06 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +dpkt-1.6.ebuild,
   +metadata.xml:
   New ebuild for bug #165530 (thanks to Santiago M. Mola Velasco).
-

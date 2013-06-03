@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.2.4.ebuild,v 1.3 2013/05/24 17:20:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.2.4.ebuild,v 1.4 2013/06/03 06:11:05 patrick Exp $
 
 EAPI=5
 
@@ -22,7 +22,8 @@ RDEPEND=">=dev-python/lxml-2.1[${PYTHON_USEDEP}]
 	>=dev-python/webob-1.2_rc1[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	test? ( dev-python/nose[${PYTHON_USEDEP}] 
+		dev-python/beautifulsoup[${PYTHON_USEDEP}] )"
 
 DOCS=( CHANGES.rst README.rst )
 
