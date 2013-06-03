@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.26 2013/06/03 06:20:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.27 2013/06/03 06:35:30 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -145,7 +145,7 @@ qt4-r2_src_install() {
 # @VARIABLE: EQMAKE4_EXCLUDE
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# List of files to be excluded from eqmake4 processing.
+# List of files to be excluded from eqmake4 CONFIG processing.
 # Paths are relative to the current working directory (usually ${S}).
 #
 # Example: EQMAKE4_EXCLUDE="ignore/me.pro foo/*"
