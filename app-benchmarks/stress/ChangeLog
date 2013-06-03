@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.47 2011/12/18 20:14:08 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.48 2013/06/03 19:23:21 radhermit Exp $
+
+  03 Jun 2013; Tim Harder <radhermit@gentoo.org> stress-1.0.4.ebuild:
+  Update to EAPI 4 and remove old, unnecessary workarounds.
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> stress-1.0.4.ebuild:
   x86 stable wrt bug #393701

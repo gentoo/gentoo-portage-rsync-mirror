@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jruby
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.87 2012/08/20 02:32:48 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.88 2013/06/03 19:25:43 graaff Exp $
+
+*jruby-1.6.8 (03 Jun 2013)
+
+  03 Jun 2013; Hans de Graaff <graaff@gentoo.org> +jruby-1.6.8.ebuild,
+  +files/jruby-1.6.8-bash-launcher.patch:
+  Version bump.
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> jruby-1.6.7.2.ebuild:
   added prefix keywords

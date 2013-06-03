@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.4 2013/06/03 01:46:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.5 2013/06/03 19:20:55 jer Exp $
 
 EAPI=5
 
@@ -15,17 +15,17 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="+chroot smi ssl ipv6 -samba suid test"
+IUSE="+drop-root smi ssl ipv6 -samba suid test"
 
 RDEPEND="
-	chroot? ( sys-libs/libcap-ng )
+	drop-root? ( sys-libs/libcap-ng )
 	net-libs/libpcap
 	smi? ( net-libs/libsmi )
 	ssl? ( >=dev-libs/openssl-0.9.6m )
 "
 DEPEND="
 	${RDEPEND}
-	chroot? ( virtual/pkgconfig )
+	drop-root? ( virtual/pkgconfig )
 	test? (
 		|| ( app-arch/sharutils sys-freebsd/freebsd-ubin )
 		dev-lang/perl
@@ -45,7 +45,7 @@ pkg_setup() {
 		ewarn "CAUTION !!! CAUTION !!! CAUTION"
 		ewarn
 	fi
-	if use chroot || use suid; then
+	if use drop-root || use suid; then
 		enewgroup tcpdump
 		enewuser tcpdump -1 -1 -1 tcpdump
 	fi
@@ -63,7 +63,7 @@ src_configure() {
 
 	filter-flags -finline-functions
 
-	if use chroot; then
+	if use drop-root; then
 		append-cppflags -DHAVE_CAP_NG_H
 		export LIBS=$( $(tc-getPKG_CONFIG) --libs libcap-ng )
 	fi
@@ -71,15 +71,20 @@ src_configure() {
 	econf \
 		$(use_enable ipv6) \
 		$(use_enable samba smb) \
-		$(use_with chroot chroot '') \
+		$(use_with drop-root chroot '') \
 		$(use_with smi) \
 		$(use_with ssl crypto "${EPREFIX}/usr") \
 		--with-user=tcpdump
 }
 
 src_test() {
-	sed '/^\(espudp1\|eapon1\)/d;' -i tests/TESTLIST
-	emake check
+	if has !userpriv ${FEATURES} && use drop-root; then
+		sed -i '/^\(espudp1\|eapon1\)/d;' -i tests/TESTLIST
+		emake check
+	else
+		ewarn "If you want to run the test suite, make sure you either"
+		ewarn "set FEATURES=userpriv or set USE=-drop-root"
+	fi
 }
 
 src_install() {
