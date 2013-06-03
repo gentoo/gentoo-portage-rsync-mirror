@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.241 2013/06/02 18:00:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.242 2013/06/03 12:03:36 jer Exp $
+
+  03 Jun 2013; Jeroen Roovers <jer@gentoo.org> doxygen-1.8.3.1.ebuild:
+  Stable for HPPA (bug #471692).
 
   02 Jun 2013; Chema Alonso <nimiux@gentoo.org> doxygen-1.8.3.1.ebuild:
   Stable for amd64 wrt bug #471692

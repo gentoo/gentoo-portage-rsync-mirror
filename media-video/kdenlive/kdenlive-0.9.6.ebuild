@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.6.ebuild,v 1.2 2013/05/30 12:14:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.6.ebuild,v 1.3 2013/06/03 12:07:20 kensington Exp $
 
 EAPI=5
 KDE_LINGUAS="bs ca ca@valencia cs da de el es et fi fr ga gl he hr hu it ja lt
@@ -25,3 +25,11 @@ RDEPEND="dev-libs/qjson
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS ChangeLog README TODO )
+
+src_prepare() {
+	# Only 'en' handbook is built by default
+	mv doc/en_US doc/en || die
+	sed -e "s/en_US/en/" -i doc/CMakeLists.txt || die
+
+	kde4-base_src_prepare
+}
