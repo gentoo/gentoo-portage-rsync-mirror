@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.19-r1.ebuild,v 1.1 2013/05/31 19:20:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.19-r1.ebuild,v 1.2 2013/06/03 16:37:38 mr_bones_ Exp $
 
 # TODO: when physfs-2.1.0 hits the tree, set
 # -DSYSTEM_PHYSFS=ON
@@ -10,7 +10,7 @@ CMAKE_BUILD_TYPE=Release
 inherit cmake-utils eutils games
 
 MY_P=${PN}-src-${PV}
-DESCRIPTION="Free Worms-like turn based strategy game"
+DESCRIPTION="A turn-based strategy, artillery, action and comedy game"
 HOMEPAGE="http://hedgewars.org/"
 SRC_URI="http://download.gna.org/hedgewars/${MY_P}.tar.bz2"
 

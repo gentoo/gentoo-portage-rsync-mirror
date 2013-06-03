@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/guppy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.18 2013/05/02 03:57:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.19 2013/06/03 16:55:35 bicatali Exp $
+
+  03 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> guppy-0.1.10.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *guppy-0.1.10 (02 May 2013)
 

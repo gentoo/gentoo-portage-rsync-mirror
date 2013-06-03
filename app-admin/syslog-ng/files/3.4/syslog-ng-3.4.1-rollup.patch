@@ -1,6 +1,5 @@
-diff -ru syslog-ng-3.4.1/contrib/systemd/syslog-ng.service syslog-ng-3.4-master/contrib/systemd/syslog-ng.service
---- syslog-ng-3.4.1/contrib/systemd/syslog-ng.service	2013-01-06 15:38:58.000000000 -0500
-+++ syslog-ng-3.4-master/contrib/systemd/syslog-ng.service	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/contrib/systemd/syslog-ng.service
++++ syslog-ng-3.4-master/contrib/systemd/syslog-ng.service
 @@ -7,6 +7,7 @@
  ExecStart=/usr/sbin/syslog-ng -F
  ExecReload=/bin/kill -HUP $MAINPID
@@ -9,9 +8,8 @@ diff -ru syslog-ng-3.4.1/contrib/systemd/syslog-ng.service syslog-ng-3.4-master/
  
  [Install]
  WantedBy=multi-user.target
-diff -ru syslog-ng-3.4.1/lib/cfg-tree.c syslog-ng-3.4-master/lib/cfg-tree.c
---- syslog-ng-3.4.1/lib/cfg-tree.c	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/cfg-tree.c	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/cfg-tree.c
++++ syslog-ng-3.4-master/lib/cfg-tree.c
 @@ -588,6 +588,22 @@
    return FALSE;
  }
@@ -70,9 +68,8 @@ diff -ru syslog-ng-3.4.1/lib/cfg-tree.c syslog-ng-3.4-master/lib/cfg-tree.c
      }
  
  
-diff -ru syslog-ng-3.4.1/lib/control.c syslog-ng-3.4-master/lib/control.c
---- syslog-ng-3.4.1/lib/control.c	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/control.c	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/control.c
++++ syslog-ng-3.4-master/lib/control.c
 @@ -1,5 +1,5 @@
  /*
 - * Copyright (c) 2002-2012 BalaBit IT Ltd, Budapest, Hungary
@@ -91,9 +88,8 @@ diff -ru syslog-ng-3.4.1/lib/control.c syslog-ng-3.4-master/lib/control.c
        goto destroy_connection;
      }
    else
-diff -ru syslog-ng-3.4.1/lib/filter.c syslog-ng-3.4-master/lib/filter.c
---- syslog-ng-3.4.1/lib/filter.c	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/filter.c	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/filter.c
++++ syslog-ng-3.4-master/lib/filter.c
 @@ -46,6 +46,12 @@
    self->ref_cnt = 1;
  }
@@ -173,9 +169,8 @@ diff -ru syslog-ng-3.4.1/lib/filter.c syslog-ng-3.4-master/lib/filter.c
    msg_debug("Filter rule evaluation result",
              evt_tag_str("result", res ? "match" : "not-match"),
              evt_tag_str("rule", self->name),
-diff -ru syslog-ng-3.4.1/lib/filter.h syslog-ng-3.4-master/lib/filter.h
---- syslog-ng-3.4.1/lib/filter.h	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/filter.h	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/filter.h
++++ syslog-ng-3.4-master/lib/filter.h
 @@ -48,6 +48,8 @@
  
  gboolean filter_expr_eval(FilterExprNode *self, LogMessage *msg);
@@ -185,9 +180,8 @@ diff -ru syslog-ng-3.4.1/lib/filter.h syslog-ng-3.4-master/lib/filter.h
  void filter_expr_unref(FilterExprNode *self);
  
  typedef struct _FilterRE
-diff -ru syslog-ng-3.4.1/lib/logmpx.c syslog-ng-3.4-master/lib/logmpx.c
---- syslog-ng-3.4.1/lib/logmpx.c	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/logmpx.c	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/logmpx.c
++++ syslog-ng-3.4-master/lib/logmpx.c
 @@ -39,9 +39,15 @@
    
    for (i = 0; i < self->next_hops->len; i++)
@@ -206,9 +200,8 @@ diff -ru syslog-ng-3.4.1/lib/logmpx.c syslog-ng-3.4-master/lib/logmpx.c
          {
            self->fallback_exists = TRUE;
          }
-diff -ru syslog-ng-3.4.1/lib/logmsg.h syslog-ng-3.4-master/lib/logmsg.h
---- syslog-ng-3.4.1/lib/logmsg.h	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/logmsg.h	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/logmsg.h
++++ syslog-ng-3.4-master/lib/logmsg.h
 @@ -1,6 +1,6 @@
  /*
 - * Copyright (c) 2002-2012 BalaBit IT Ltd, Budapest, Hungary
@@ -231,9 +224,8 @@ diff -ru syslog-ng-3.4.1/lib/logmsg.h syslog-ng-3.4-master/lib/logmsg.h
  const gchar *log_msg_get_macro_value(LogMessage *self, gint id, gssize *value_len);
  
  static inline const gchar *
-diff -ru syslog-ng-3.4.1/lib/logpipe.h syslog-ng-3.4-master/lib/logpipe.h
---- syslog-ng-3.4.1/lib/logpipe.h	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/logpipe.h	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/logpipe.h
++++ syslog-ng-3.4-master/lib/logpipe.h
 @@ -47,6 +47,7 @@
  /* log statement flags that are copied to the head of a branch */
  #define PIF_BRANCH_FINAL      0x0004
@@ -242,9 +234,8 @@ diff -ru syslog-ng-3.4.1/lib/logpipe.h syslog-ng-3.4-master/lib/logpipe.h
  
  /* branch starting with this pipe wants hard flow control */
  #define PIF_HARD_FLOW_CONTROL 0x0010
-diff -ru syslog-ng-3.4.1/lib/logrewrite.c syslog-ng-3.4-master/lib/logrewrite.c
---- syslog-ng-3.4.1/lib/logrewrite.c	2013-01-31 01:58:05.000000000 -0500
-+++ syslog-ng-3.4-master/lib/logrewrite.c	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/lib/logrewrite.c
++++ syslog-ng-3.4-master/lib/logrewrite.c
 @@ -45,7 +45,7 @@
    gssize length;
    const gchar *value;
@@ -254,9 +245,8 @@ diff -ru syslog-ng-3.4.1/lib/logrewrite.c syslog-ng-3.4-master/lib/logrewrite.c
      {
        msg_debug("Rewrite condition unmatched, skipping rewrite",
                  evt_tag_str("value", log_msg_get_value_name(self->value_handle, NULL)),
-diff -ru syslog-ng-3.4.1/lib/persist-state.c syslog-ng-3.4-master/lib/persist-state.c
---- syslog-ng-3.4.1/lib/persist-state.c	2013-01-06 15:40:30.000000000 -0500
-+++ syslog-ng-3.4-master/lib/persist-state.c	2013-04-28 00:43:29.703864600 -0400
+--- syslog-ng-3.4.1/lib/persist-state.c
++++ syslog-ng-3.4-master/lib/persist-state.c
 @@ -26,6 +26,7 @@
  #include "serialize.h"
  #include "messages.h"
@@ -273,9 +263,8 @@ diff -ru syslog-ng-3.4.1/lib/persist-state.c syslog-ng-3.4-master/lib/persist-st
    self->current_key_block = offsetof(PersistFileHeader, initial_key_store);
    self->current_key_ofs = 0;
    self->current_key_size = sizeof((((PersistFileHeader *) NULL))->initial_key_store);
-diff -ru syslog-ng-3.4.1/modules/dbparser/patterndb.c syslog-ng-3.4-master/modules/dbparser/patterndb.c
---- syslog-ng-3.4.1/modules/dbparser/patterndb.c	2013-01-17 06:43:50.000000000 -0500
-+++ syslog-ng-3.4-master/modules/dbparser/patterndb.c	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/modules/dbparser/patterndb.c
++++ syslog-ng-3.4-master/modules/dbparser/patterndb.c
 @@ -1302,7 +1302,7 @@
            log_msg_set_value(msg, match->handle, match->match, match->len);
            g_free(match->match);
@@ -285,9 +274,8 @@ diff -ru syslog-ng-3.4.1/modules/dbparser/patterndb.c syslog-ng-3.4-master/modul
          {
            log_msg_set_value_indirect(msg, match->handle, ref_handle, match->type, match->ofs, match->len);
          }
-diff -ru syslog-ng-3.4.1/tests/loggen/loggen.c syslog-ng-3.4-master/tests/loggen/loggen.c
---- syslog-ng-3.4.1/tests/loggen/loggen.c	2013-01-06 15:38:59.000000000 -0500
-+++ syslog-ng-3.4-master/tests/loggen/loggen.c	2013-04-16 10:11:23.000000000 -0400
+--- syslog-ng-3.4.1/tests/loggen/loggen.c
++++ syslog-ng-3.4-master/tests/loggen/loggen.c
 @@ -847,6 +847,12 @@
      {
        static struct sockaddr_un saun;

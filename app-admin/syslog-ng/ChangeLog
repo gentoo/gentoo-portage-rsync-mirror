@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.345 2013/06/02 01:18:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.346 2013/06/03 16:38:29 mr_bones_ Exp $
+
+*syslog-ng-3.4.2 (03 Jun 2013)
+
+  03 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/3.4/syslog-ng-3.4.2-autotools.patch,
+  +files/3.4/syslog-ng-3.4.2-compile.patch, +syslog-ng-3.4.2.ebuild,
+  files/3.4/syslog-ng-3.4.1-autotools.patch,
+  files/3.4/syslog-ng-3.4.1-rollup.patch:
+  version bump
 
 *syslog-ng-3.4.1-r1 (02 Jun 2013)
 

@@ -3,10 +3,10 @@ DEPEND==dev-lang/python-2*
 DESCRIPTION=Guppy-PE -- A Python Programming Environment
 EAPI=3
 HOMEPAGE=http://guppy-pe.sourceforge.net/ http://pypi.python.org/pypi/guppy
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
 RDEPEND==dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/g/guppy/guppy-0.1.10.tar.gz
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=0f150d99a9dfbe21f5242b26f382f9db
+_md5_=76780e91f59b5de04f6fc6713a4f4682
