@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-2012.10.3-r2.ebuild,v 1.1 2013/04/27 23:03:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-2012.10.3-r2.ebuild,v 1.2 2013/06/03 04:11:45 zerochaos Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	wireshark? ( virtual/pkgconfig )"
 
-get_PV() { local pv=$(best_version "$1"); pv=${pv#"$1-"}; echo "${pv%-r[0-9]*}"; }
+get_PV() { local pv=$(best_version $1); pv=${pv#$1-}; pv=${pv%-r*}; pv=${pv//_}; echo ${pv}; }
 
 CMAKE_USE_DIR="${S}"/wireshark/plugins/btbb
 
