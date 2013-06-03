@@ -1,30 +1,34 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.45.3.ebuild,v 1.2 2012/08/19 18:39:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.17.ebuild,v 1.2 2013/06/03 19:48:26 sping Exp $
 
 EAPI="4"
-inherit eutils
+
+AT_M4DIR='m4'
+inherit autotools eutils
 
 DESCRIPTION="HTTrack Website Copier, Open Source Offline Browser"
 HOMEPAGE="http://www.httrack.com/"
 SRC_URI="http://download.httrack.com/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
-RDEPEND=">=sys-libs/zlib-1.2.5.1-r1"
+RDEPEND=">=sys-libs/zlib-1.2.5.1-r1
+	dev-libs/openssl"
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS README greetings.txt history.txt )
 
+RESTRICT="test"
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.44.1+zlib-1.2.5.1.patch
-
-	sed -i \
-		"/^HelpHtml.*dir/s:${PN}:${PF}:" \
-		"${S}"/html/Makefile.in || die
+	epatch "${FILESDIR}"/${PN}-3.45.4-htmldir.patch
+	epatch "${FILESDIR}"/${PN}-3.47.7-cflags.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -35,5 +39,5 @@ src_configure() {
 
 src_install() {
 	default
-	rm -rf "${ED}"/usr/share/doc/"${PN}" || die
+	find "${ED}" -type f -name '*.la' -delete || die
 }
