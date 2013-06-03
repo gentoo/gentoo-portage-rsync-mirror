@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.331 2013/05/31 21:51:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.332 2013/06/03 16:08:10 chithanh Exp $
+
+  03 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ati-drivers-13.4.ebuild, ati-drivers-13.6_beta.ebuild:
+  Import hardened kernel build fix from the x11 overlay by Emil Karlson, bug
+  #471976.
 
   31 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ati-drivers-13.6_beta.ebuild:
