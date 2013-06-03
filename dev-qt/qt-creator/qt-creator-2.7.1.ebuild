@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.7.0.ebuild,v 1.4 2013/06/03 08:01:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.7.1.ebuild,v 1.1 2013/06/03 08:01:44 pesa Exp $
 
 EAPI=5
 
@@ -82,6 +82,7 @@ src_prepare() {
 }
 
 src_configure() {
+	EQMAKE4_EXCLUDE="share/qtcreator/templates/*" \
 	eqmake4 qtcreator.pro \
 		IDE_LIBRARY_BASENAME="$(get_libdir)" \
 		IDE_PACKAGE_MODE=1 \
@@ -99,7 +100,7 @@ src_test() {
 src_install() {
 	emake INSTALL_ROOT="${ED}usr" install
 
-	dodoc dist/{changes-2.*,known-issues}
+	dodoc dist/{changes-*,known-issues}
 
 	# install documentation
 	if use doc; then
