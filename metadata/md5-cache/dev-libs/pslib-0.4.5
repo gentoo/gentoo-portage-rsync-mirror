@@ -1,5 +1,5 @@
-DEFINED_PHASES=configure install
-DEPEND=png? ( >=media-libs/libpng-1.2.43-r2:0 ) jpeg? ( virtual/jpeg ) tiff? ( media-libs/tiff ) dev-lang/perl >=dev-libs/glib-2 dev-util/intltool dev-perl/XML-Parser
+DEFINED_PHASES=configure install prepare
+DEPEND=png? ( >=media-libs/libpng-1.2.43-r2:0 ) jpeg? ( virtual/jpeg ) tiff? ( media-libs/tiff ) dev-lang/perl >=dev-libs/glib-2 dev-util/intltool dev-perl/XML-Parser || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=pslib is a C-library to create PostScript files on the fly.
 EAPI=4
 HOMEPAGE=http://pslib.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=png? ( >=media-libs/libpng-1.2.43-r2:0 ) jpeg? ( virtual/jpeg ) tiff? ( media-libs/tiff )
 SLOT=0
 SRC_URI=mirror://sourceforge/pslib/pslib-0.4.5.tar.gz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=01548138260fe009a43806b2d3484ca1
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	f31a0ec0d081047cbf9c0bbb4822d831	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f6cc31cbeaaefaa56bcad82388bbd603

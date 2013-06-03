@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.22 2013/04/10 08:56:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.23 2013/06/03 05:30:54 patrick Exp $
+
+*phoronix-test-suite-4.6.0 (03 Jun 2013)
+
+  03 Jun 2013; Patrick Lauer <patrick@gentoo.org>
+  +phoronix-test-suite-4.6.0.ebuild:
+  Bump
 
 *phoronix-test-suite-4.4.1 (10 Apr 2013)
 
