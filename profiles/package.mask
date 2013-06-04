@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14800 2013/06/02 19:29:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14801 2013/06/04 19:58:49 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -153,11 +153,6 @@ media-sound/line6usb
 # Fails to build with Emacs 24.3.
 # Masked for removal in 30 days, bug #466444.
 dev-lisp/emacs-cl
-
-# Ulrich Müller <ulm@gentoo.org> (06 May 2013)
-# No license. Distfile not available upstream and not redistributable.
-# Masked for removal in 30 days, bug #452372.
-media-fonts/adi-dsp-fonts
 
 # Tom Wijsman <TomWij@gentoo.org> (05 May 2013)
 # Masking media-video/handbrake until =media-video/ffmpeg-1.2 is unmasked.

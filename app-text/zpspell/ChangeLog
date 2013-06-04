@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zpspell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.6 2013/04/27 15:23:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.7 2013/06/04 19:44:18 nimiux Exp $
+
+  04 Jun 2013; Chema Alonso <nimiux@gentoo.org> zpspell-0.4.3.ebuild:
+  Stable for amd64 wrt bug #472006
 
   27 Apr 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #215231

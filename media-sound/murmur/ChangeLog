@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.38 2013/03/02 21:58:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.39 2013/06/04 19:56:58 tgurr Exp $
+
+*murmur-1.2.4 (04 Jun 2013)
+
+  04 Jun 2013; Timo Gurr <tgurr@gentoo.org> -murmur-1.2.4_beta1-r1.ebuild,
+  +murmur-1.2.4.ebuild, +files/murmur-1.2.4-ice-3.5.0-compat.patch,
+  +files/murmur.initd-r1:
+  Version bump, remove old. Fixes bug #452740,#460524,#472128.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> murmur-1.2.3-r4.ebuild,
   murmur-1.2.4_beta1-r1.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.4_beta1-r1.ebuild,v 1.2 2013/03/02 21:58:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.4.ebuild,v 1.1 2013/06/04 19:56:58 tgurr Exp $
 
-EAPI="4"
+EAPI="5"
 
 QT_MINIMAL="4.6"
 
@@ -36,6 +36,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.2.4-ice-3.5.0-compat.patch
+)
+
 pkg_setup() {
 	enewgroup murmur
 	enewuser murmur -1 -1 /var/lib/murmur murmur
@@ -44,8 +48,10 @@ pkg_setup() {
 src_prepare() {
 	qt4-r2_src_prepare
 
-	sed -i -e 's:mumble-server:murmur:g' \
-		"${S}"/scripts/murmur.{conf,ini.system} || die
+	sed \
+		-e 's:mumble-server:murmur:g' \
+		-e 's:/var/run:/run:g' \
+		-i "${S}"/scripts/murmur.{conf,ini.system} || die
 }
 
 src_configure() {
@@ -93,12 +99,12 @@ src_install() {
 	insinto /usr/share/murmur/
 	doins src/murmur/Murmur.ice
 
-	newinitd "${FILESDIR}"/murmur.initd murmur
+	newinitd "${FILESDIR}"/murmur.initd-r1 murmur
 	newconfd "${FILESDIR}"/murmur.confd murmur
 
-	keepdir /var/lib/murmur /var/run/murmur /var/log/murmur
-	fowners -R murmur /var/lib/murmur /var/run/murmur /var/log/murmur
-	fperms 750 /var/lib/murmur /var/run/murmur /var/log/murmur
+	keepdir /var/lib/murmur /var/log/murmur
+	fowners -R murmur /var/lib/murmur /var/log/murmur
+	fperms 750 /var/lib/murmur /var/log/murmur
 
 	doman man/murmurd.1
 }
