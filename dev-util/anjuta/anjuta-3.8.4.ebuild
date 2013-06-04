@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.1.ebuild,v 1.1 2013/04/16 19:15:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.1 2013/06/04 14:49:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -11,10 +11,10 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 VALA_MIN_API_VERSION="0.20"
 VALA_MAX_API_VERSION="${VALA_MIN_API_VERSION}"
 
-inherit autotools eutils gnome2 flag-o-matic multilib readme.gentoo python-single-r1 vala
+inherit gnome2 flag-o-matic readme.gentoo python-single-r1 vala
 
 DESCRIPTION="A versatile IDE for GNOME"
-HOMEPAGE="http://www.anjuta.org"
+HOMEPAGE="http://projects.gnome.org/anjuta/"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -66,12 +66,12 @@ DEPEND="${COMMON_DEPEND}
 	test? (
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/docbook-xml-dtd:4.5 )
-
-	app-text/yelp-tools
-	dev-libs/gobject-introspection-common
-	gnome-base/gnome-common
 "
-# eautoreconf requires: gnome-common, gobject-introspection-common, yelp-tools
+#	app-text/yelp-tools
+#	dev-libs/gobject-introspection-common
+#	gnome-base/gnome-common
+#"
+# Above are required by eautoreconf 
 
 pkg_setup() {
 	python-single-r1_pkg_setup
@@ -98,10 +98,6 @@ will need to:
 	sed -e 's:$PYTHON-config:$PYTHON$PYTHON_VERSION-config:g' \
 		-i plugins/am-project/tests/anjuta.lst || die "sed failed"
 
-	# Let it build with vala-0.20, upstream bug #698158
-	epatch "${FILESDIR}/${PN}-3.8.1-vala-0.20.patch"
-
-	eautoreconf
 	use vala && vala_src_prepare
 	gnome2_src_prepare
 }
