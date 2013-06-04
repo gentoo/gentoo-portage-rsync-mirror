@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rpm-spec-mode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rpm-spec-mode/ChangeLog,v 1.3 2012/02/28 23:24:34 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rpm-spec-mode/ChangeLog,v 1.4 2013/06/04 21:12:02 bicatali Exp $
+
+  04 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> rpm-spec-mode-0.12.ebuild:
+  Keyword amd64-linux and x86-linux
 
   28 Feb 2012; Ulrich Müller <ulm@gentoo.org> files/50rpm-spec-mode-gentoo.el,
   rpm-spec-mode-0.12.ebuild, metadata.xml:
@@ -15,4 +18,3 @@
   19 Feb 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   +files/50rpm-spec-mode-gentoo.el, +rpm-spec-mode-0.12.ebuild, +metadata.xml:
   Add rpm-spec-mode to simplify editing of RPM spec files
-
