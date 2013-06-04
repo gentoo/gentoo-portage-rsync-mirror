@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/stan-0.4.1.ebuild,v 1.6 2012/11/20 20:07:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/stan-0.4.1.ebuild,v 1.7 2013/06/04 05:38:07 alonbl Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -17,6 +17,7 @@ IUSE=""
 src_prepare() {
 	epatch "${FILESDIR}/${P}-errno.patch"
 	sed -i -e "s/-O3/${CFLAGS}/" configure.in || die "sed failed"
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 	eautoreconf
 }
 
