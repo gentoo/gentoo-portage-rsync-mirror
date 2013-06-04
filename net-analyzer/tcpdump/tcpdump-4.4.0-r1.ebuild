@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.5 2013/06/03 19:20:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.6 2013/06/04 08:09:27 zmedico Exp $
 
 EAPI=5
 
@@ -100,7 +100,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if use chroot || use suid; then
+	if use drop-root || use suid; then
 		enewgroup tcpdump
 		enewuser tcpdump -1 -1 -1 tcpdump
 	fi
