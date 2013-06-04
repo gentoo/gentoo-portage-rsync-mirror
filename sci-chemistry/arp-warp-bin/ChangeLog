@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/arp-warp-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.24 2013/06/01 16:07:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.25 2013/06/04 12:49:48 jlec Exp $
+
+  04 Jun 2013; Justin Lecher <jlec@gentoo.org> arp-warp-bin-7.1-r2.ebuild:
+  Fix for correct usage of new python eclasses
 
 *arp-warp-bin-7.3 (01 Jun 2013)
 

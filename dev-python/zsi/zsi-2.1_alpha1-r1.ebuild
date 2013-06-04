@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1-r1.ebuild,v 1.2 2013/04/23 15:11:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1-r1.ebuild,v 1.3 2013/06/04 12:46:52 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples twisted"
 
-DEPEND="
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+DEPEND="${PYTHON_DEPS}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	twisted? (
 		dev-python/twisted

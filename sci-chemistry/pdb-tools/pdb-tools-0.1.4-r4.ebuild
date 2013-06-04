@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r4.ebuild,v 1.2 2013/04/16 08:57:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r4.ebuild,v 1.3 2013/06/04 12:45:21 jlec Exp $
 
 EAPI=5
 
@@ -17,8 +17,11 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="sci-chemistry/dssp"
-DEPEND=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
+	sci-chemistry/dssp"
+DEPEND="${PYTHON_DEPS}"
 
 S="${WORKDIR}"/${PN}_${PV}
 

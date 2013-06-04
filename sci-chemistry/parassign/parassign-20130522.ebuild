@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/parassign/parassign-20130522.ebuild,v 1.2 2013/05/23 22:52:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/parassign/parassign-20130522.ebuild,v 1.3 2013/06/04 12:49:41 jlec Exp $
 
 EAPI=5
 
@@ -18,14 +18,16 @@ LICENSE="Apache-2.0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
-	dev-python/cython
-	dev-python/matplotlib
-	dev-python/numpy
-	dev-python/scientificpython
-	sci-biology/biopython
-	sci-libs/scipy"
+	dev-python/cython[${PYTHON_USEDEP}]
+	dev-python/matplotlib[${PYTHON_USEDEP}]
+	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/scientificpython[${PYTHON_USEDEP}]
+	sci-biology/biopython[${PYTHON_USEDEP}]
+	sci-libs/scipy[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}"/PARAssign_Linux_x64_86/
 

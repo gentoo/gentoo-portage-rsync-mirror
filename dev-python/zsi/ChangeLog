@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/zsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.23 2013/04/23 15:11:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.24 2013/06/04 12:46:52 jlec Exp $
+
+  04 Jun 2013; Justin Lecher <jlec@gentoo.org> zsi-2.1_alpha1-r1.ebuild:
+  Fix for correct usage of new python eclasses
 
   23 Apr 2013; Justin Lecher <jlec@gentoo.org> zsi-2.1_alpha1-r1.ebuild:
   Drop unnecessary declaration of DOCS

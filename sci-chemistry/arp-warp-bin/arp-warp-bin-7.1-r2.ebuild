@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1-r2.ebuild,v 1.1 2013/06/01 15:47:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1-r2.ebuild,v 1.2 2013/06/04 12:49:48 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,9 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
 	app-shells/tcsh
 	sci-chemistry/refmac
 	virtual/awk

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.5.99.902.ebuild,v 1.1 2013/05/25 20:31:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.6.0.ebuild,v 1.1 2013/06/04 12:50:51 chithanh Exp $
 
 EAPI=5
 
