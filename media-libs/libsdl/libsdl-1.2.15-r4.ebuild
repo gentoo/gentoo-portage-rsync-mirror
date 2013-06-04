@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r4.ebuild,v 1.1 2013/06/02 20:33:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r4.ebuild,v 1.2 2013/06/04 02:37:47 mr_bones_ Exp $
 
 EAPI=5
-inherit autotools base flag-o-matic multilib toolchain-funcs eutils
+inherit autotools flag-o-matic multilib toolchain-funcs eutils
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -52,25 +52,22 @@ DEPEND="${RDEPEND}
 	x86? ( || ( >=dev-lang/yasm-0.6.0 >=dev-lang/nasm-0.98.39-r3 ) )"
 
 S=${WORKDIR}/SDL-${PV}
-PATCHES=(
-		"${FILESDIR}"/${P}-sdl-config.patch
-		"${FILESDIR}"/${P}-resizing.patch
-		"${FILESDIR}"/${P}-joystick.patch
-		"${FILESDIR}"/${P}-gamma.patch
-		"${FILESDIR}"/${P}-const-xdata32.patch
-)
 
 pkg_setup() {
 	if use custom-cflags ; then
 		ewarn "Since you've chosen to use possibly unsafe CFLAGS,"
 		ewarn "don't bother filing libsdl-related bugs until trying to remerge"
 		ewarn "libsdl without the custom-cflags use flag in USE."
-		epause 10
 	fi
 }
 
 src_prepare() {
-	base_src_prepare
+	epatch \
+		"${FILESDIR}"/${P}-sdl-config.patch \
+		"${FILESDIR}"/${P}-resizing.patch \
+		"${FILESDIR}"/${P}-joystick.patch \
+		"${FILESDIR}"/${P}-gamma.patch \
+		"${FILESDIR}"/${P}-const-xdata32.patch
 	AT_M4DIR="/usr/share/aclocal acinclude" eautoreconf
 }
 

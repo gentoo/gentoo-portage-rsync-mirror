@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.202 2013/06/02 20:33:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.203 2013/06/04 02:37:47 mr_bones_ Exp $
+
+  04 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.15-r4.ebuild:
+  no base eclass, thanks
 
 *libsdl-1.2.15-r4 (02 Jun 2013)
 
