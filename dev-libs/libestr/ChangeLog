@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.21 2013/04/13 07:43:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.22 2013/06/04 16:37:56 nimiux Exp $
+
+  04 Jun 2013; Chema Alonso <nimiux@gentoo.org> libestr-0.1.5.ebuild:
+  Stable for amd64 wrt bug #470396
 
 *libestr-0.1.5 (13 Apr 2013)
 

@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/invokebinder
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/invokebinder/ChangeLog,v 1.1 2013/06/04 16:32:06 tomwij Exp $
+
+*invokebinder-1.2 (04 Jun 2013)
+
+  04 Jun 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/invokebinder-1.2-build.xml, +invokebinder-1.2.ebuild, +metadata.xml:
+  New ebuild for invokebinder, a friendly DSL for binding method handles; new
+  dependency of jruby. Fixes bug #472222.

@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/siscone
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/siscone/ChangeLog,v 1.1 2012/07/24 16:55:05 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/siscone/ChangeLog,v 1.2 2013/06/04 16:36:09 bicatali Exp $
+
+*siscone-2.0.6 (04 Jun 2013)
+
+  04 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> +siscone-2.0.6.ebuild,
+  metadata.xml:
+  Version bump
 
 *siscone-2.0.5 (24 Jul 2012)
 
