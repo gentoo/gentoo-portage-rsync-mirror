@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.07.ebuild,v 1.1 2013/05/23 23:50:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.07.ebuild,v 1.2 2013/06/04 15:41:13 bicatali Exp $
 
 EAPI=5
 
@@ -34,13 +34,6 @@ DEPEND="
 	${_GIT_DEP}"
 RDEPEND=""
 
-pkg_setup() {
-	# sandboxed user can't access video hardware, so xorg-x11 implementation
-	# should be used
-	GL_IMPLEM=$(eselect opengl show)
-	eselect opengl set xorg-x11
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-${PATCH_PV}-makehtml.patch
 }
@@ -64,6 +57,10 @@ src_configure() {
 }
 
 src_compile() {
+	# video drivers may want to access hardware devices
+	cards=$(echo -n /dev/dri/card* /dev/ati/card* /dev/nvidiactl* | sed 's/ /:/g')
+	[[ -n "${cards}" ]] && addpredict "${cards}"
+
 	ROOTSYS="${S}" Xemake html
 	# if root.exe crashes, return code will be 0 due to gdb attach,
 	# so we need to check if last html file was generated;
@@ -76,8 +73,4 @@ src_install() {
 	# too large data to copy
 	mv htmldoc/* "${ED}usr/share/doc/${PF}/"
 	docompress -x "${EPREFIX}/usr/share/doc/${PF}/"
-}
-
-pkg_postinst() {
-	eselect opengl set ${GL_IMPLEM}
 }

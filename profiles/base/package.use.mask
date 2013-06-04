@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.472 2013/06/02 19:40:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.473 2013/06/04 15:52:37 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -9,11 +9,12 @@
 # Robin H. Johnson <robbat2@gentoo.org> (02 Jun 2013)
 # PBXT is no longer supported by upstream, and fails testcases.
 >=dev-db/mysql-5.5 pbxt
->=dev-db/mysql-cluster-5.5 pbxt # overlay
 >=dev-db/mariadb-5.5 pbxt
->=dev-db/mariadb-galera-5.5 pbxt # overlay
->=dev-db/percona-server-5.5 pbxt # overlay
->=dev-db/google-mysql-5.5 pbxt # overlay
+# overlay -- no inline comments wrt bug #472292, ssuominen (04 Jun 2013)
+>=dev-db/mysql-cluster-5.5 pbxt
+>=dev-db/mariadb-galera-5.5 pbxt
+>=dev-db/percona-server-5.5 pbxt
+>=dev-db/google-mysql-5.5 pbxt
 
 # XFCE <xfce@gentoo.org> (01 Jun 2013)
 # Masked temporarily while waiting for >=net-libs/webkit-gtk-2 unmasking from

@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/xrootd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.13 2013/03/23 15:22:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.14 2013/06/04 15:51:34 bicatali Exp $
+
+*xrootd-3.3.2 (04 Jun 2013)
+
+  04 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> +xrootd-3.3.2.ebuild,
+  -xrootd-3.2.7.ebuild, files/cmsd.initd, files/frm_purged.initd,
+  files/frm_xfrd.initd:
+  Version bump. Keyword amd64-linux and x86-linux. Fixed non-bashism in init
+  scripts
 
 *xrootd-3.3.1 (23 Mar 2013)
 

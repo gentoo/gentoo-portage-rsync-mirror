@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.117 2013/05/29 16:39:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.118 2013/06/04 15:44:06 bicatali Exp $
+
+  28 May 2013; Andrew Savchenko <bircoph@gmail.com> +root-5.34.07.ebuild:
+  Fix build with USE="postgres": Gentoo doesn't provide
+  /usr/include/postgresql symlink anymore.
 
   29 May 2013; Justin Lecher <jlec@gentoo.org> root-5.34.07.ebuild,
   metadata.xml:

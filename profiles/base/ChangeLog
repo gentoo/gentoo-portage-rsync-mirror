@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.547 2013/06/02 19:40:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.548 2013/06/04 15:52:37 ssuominen Exp $
+
+  04 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Punt inline commenting wrt #472292 since "man 5 portage" says it's illegal
+  by Andreas Wiese
 
   02 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   Block new PBXT usage per news item.

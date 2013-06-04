@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.07.ebuild,v 1.2 2013/05/29 16:39:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.07.ebuild,v 1.3 2013/06/04 15:44:06 bicatali Exp $
 
 EAPI=5
 
@@ -41,7 +41,12 @@ IUSE="+X afs avahi -c++0x doc emacs examples fits fftw graphviz htmldoc
 	kerberos ldap +math mpi mysql odbc +opengl openmp oracle postgres prefix
 	pythia6 pythia8 python qt4 +reflex ruby ssl xinetd xml xrootd"
 
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+REQUIRED_USE="
+	!X? ( !opengl !qt4 )
+	htmldoc? ( doc )
+	mpi? ( math !openmp )
+	openmp? ( math !mpi )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 CDEPEND="
 	app-arch/xz-utils
@@ -106,12 +111,6 @@ RDEPEND="${CDEPEND}
 	xinetd? ( sys-apps/xinetd )"
 
 PDEPEND="htmldoc? ( ~app-doc/root-docs-${PV} )"
-
-REQUIRED_USE="
-	!X? ( !opengl !qt4 )
-	htmldoc? ( doc )
-	mpi? ( math !openmp )
-	openmp? ( math !mpi )"
 
 S="${WORKDIR}/${PN}"
 
@@ -208,6 +207,8 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconfflags=""
+	use postgres && myconfflags+=" --with-pgsql-incdir=$(pg_config --includedir)"
 	# the configure script is not the standard autotools
 	./configure \
 		--prefix="${EPREFIX}"/usr \
@@ -272,6 +273,7 @@ src_configure() {
 		$(use_enable ssl) \
 		$(use_enable xml) \
 		$(use_enable xrootd) \
+		${myconfflags} \
 		${EXTRA_ECONF} \
 		|| die "configure failed"
 }
