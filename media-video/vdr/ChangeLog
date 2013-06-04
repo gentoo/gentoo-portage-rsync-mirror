@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.173 2013/05/20 18:16:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.174 2013/06/04 20:22:18 hd_brummy Exp $
+
+*vdr-2.0.2-r1 (04 Jun 2013)
+
+  04 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-2.0.2-r1.ebuild:
+  new extpatchng, supports media-plugins/vdr-permashift-0.5.4,
+  media-plugins/vdr-pinplugin-0.1.14
 
 *vdr-2.0.2 (20 May 2013)
 

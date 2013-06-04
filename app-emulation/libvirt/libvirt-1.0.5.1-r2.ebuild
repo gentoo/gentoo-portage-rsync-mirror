@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.5.1-r1.ebuild,v 1.1 2013/05/28 17:07:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.5.1-r2.ebuild,v 1.1 2013/06/04 20:02:24 cardoe Exp $
 
 EAPI=5
 
-#BACKPORTS=9bf6bec4
+BACKPORTS=dc200aa8
 AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
@@ -197,9 +197,6 @@ src_prepare() {
 			git hash-object bootstrap.conf
 		) >.git-module-status
 	fi
-
-	epatch "${FILESDIR}"/${P}-0001*.patch
-	epatch "${FILESDIR}"/${P}-0002*.patch
 
 	epatch_user
 

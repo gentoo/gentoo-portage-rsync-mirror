@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.39 2013/06/04 19:56:58 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.40 2013/06/04 20:19:48 tgurr Exp $
+
+  04 Jun 2013; Timo Gurr <tgurr@gentoo.org> ChangeLog:
+  Attempt to correctly sign the Manifest.
 
 *murmur-1.2.4 (04 Jun 2013)
 
