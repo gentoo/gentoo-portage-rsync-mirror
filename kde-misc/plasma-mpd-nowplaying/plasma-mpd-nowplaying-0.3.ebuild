@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-mpd-nowplaying/plasma-mpd-nowplaying-0.3.ebuild,v 1.1 2013/04/25 18:29:25 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-mpd-nowplaying/plasma-mpd-nowplaying-0.3.ebuild,v 1.2 2013/06/04 13:11:18 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://kde-look.org/CONTENT/content-files/132350-${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 DEPEND="media-libs/libmpdclient"

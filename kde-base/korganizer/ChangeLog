@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.273 2013/05/31 15:26:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.274 2013/06/04 13:06:28 ago Exp $
+
+  04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> korganizer-4.10.3.ebuild:
+  Stable for amd64, wrt to bug #471392
 
   31 May 2013; Michael Palimaka <kensington@gentoo.org>
   korganizer-4.10.2.ebuild, korganizer-4.10.3.ebuild,

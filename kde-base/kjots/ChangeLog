@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.251 2013/05/31 14:52:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.252 2013/06/04 13:05:44 ago Exp $
+
+  04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kjots-4.10.3.ebuild:
+  Stable for amd64, wrt to bug #471392
 
   31 May 2013; Michael Palimaka <kensington@gentoo.org> kjots-4.10.2.ebuild,
   kjots-4.10.3.ebuild:

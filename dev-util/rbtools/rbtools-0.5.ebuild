@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/rbtools-0.5.ebuild,v 1.1 2013/04/29 18:18:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/rbtools-0.5.ebuild,v 1.2 2013/06/04 13:11:13 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -16,7 +16,7 @@ SRC_URI="http://downloads.reviewboard.org/releases/${MY_PN}/$(get_version_compon
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DOCS=( AUTHORS NEWS README )

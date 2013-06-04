@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calligra-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.32 2013/04/27 12:06:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.33 2013/06/04 13:11:08 ago Exp $
+
+  04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> calligra-l10n-2.6.3.ebuild:
+  Stable for amd64, wrt bug #471392
 
   27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> calligra-l10n-2.6.3.ebuild:
   Use eapi5 as there is no reason not to.

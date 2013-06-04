@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qyoto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.69 2013/05/06 20:18:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.70 2013/06/04 13:05:43 ago Exp $
+
+  04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> qyoto-4.10.3.ebuild:
+  Stable for amd64, wrt to bug #471392
 
 *qyoto-4.10.3 (06 May 2013)
 
