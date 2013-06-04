@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.242 2013/06/03 12:03:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.243 2013/06/04 12:21:06 scarabeus Exp $
+
+*doxygen-1.8.4-r1 (04 Jun 2013)
+
+  04 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +doxygen-1.8.4-r1.ebuild,
+  +files/doxygen-1.8.4-libreoffice.patch:
+  Revbump 1.8.4 due to broken libo doc generating. Patch already applied
+  upstream and will be in next version.
 
   03 Jun 2013; Jeroen Roovers <jer@gentoo.org> doxygen-1.8.3.1.ebuild:
   Stable for HPPA (bug #471692).

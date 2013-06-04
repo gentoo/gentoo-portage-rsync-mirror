@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/rtsp-conntrack/rtsp-conntrack-3.7.ebuild,v 1.1 2013/06/04 09:53:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/rtsp-conntrack/rtsp-conntrack-3.7.ebuild,v 1.2 2013/06/04 12:25:30 pinkbyte Exp $
 
 EAPI=5
 inherit eutils linux-mod versionator
@@ -19,6 +19,7 @@ BUILD_TARGETS="all"
 MODULE_NAMES="
 	nf_conntrack_rtsp(net/netfilter::)
 	nf_nat_rtsp(net/ipv4/netfilter::)"
+MODULESD_NF_CONNTRACK_RTSP_DOCS="README.rst"
 
 CONFIG_CHECK="NF_CONNTRACK"
 WARNING_NF_CONNTRACK="You must enable NF_CONNTRACK in your kernel, otherwise ${PN} would not work"

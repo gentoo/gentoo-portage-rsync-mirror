@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/rtsp-conntrack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/rtsp-conntrack/ChangeLog,v 1.1 2013/06/04 09:53:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/rtsp-conntrack/ChangeLog,v 1.2 2013/06/04 12:25:30 pinkbyte Exp $
+
+  04 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> rtsp-conntrack-3.7.ebuild:
+  Add installation of documentation, provided with package, wrt bug #376155.
+  Thanks to Bertrand Jacquin for pointing on this issue
 
 *rtsp-conntrack-3.7 (04 Jun 2013)
 

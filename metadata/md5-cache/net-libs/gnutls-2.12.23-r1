@@ -4,10 +4,10 @@ DESCRIPTION=A TLS 1.2 and SSL 3.0 implementation for the GNU project
 EAPI=5
 HOMEPAGE=http://www.gnutls.org/
 IUSE=bindist +cxx doc examples guile lzo +nettle nls pkcs11 static-libs test zlib
-KEYWORDS=alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
 LICENSE=GPL-3 LGPL-2.1
 RDEPEND=>=dev-libs/libtasn1-0.3.4 <dev-libs/libtasn1-3 guile? ( >=dev-scheme/guile-1.8[networking] ) nettle? ( >=dev-libs/nettle-2.1[gmp] ) !nettle? ( >=dev-libs/libgcrypt-1.4.0 ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.11 ) zlib? ( >=sys-libs/zlib-1.2.3.1 ) !bindist? ( lzo? ( >=dev-libs/lzo-2 ) )
 SLOT=0
 SRC_URI=ftp://ftp.gnutls.org/gcrypt/gnutls/v2.12/gnutls-2.12.23.tar.bz2
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	f31a0ec0d081047cbf9c0bbb4822d831	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=0ac286237044d8f65d415153b7980caa
+_md5_=9d01b6b1d2d772757768648499df2f0d
