@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1.ebuild,v 1.1 2013/06/03 22:26:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1.ebuild,v 1.2 2013/06/04 01:54:26 jer Exp $
 
 EAPI=5
 inherit prefix
@@ -26,7 +26,10 @@ src_prepare() {
 	find completions -name 'Makefile*' -exec rm -f {} +
 
 	# Part of >=sys-apps/util-linux-2.23 wrt #468544
-	rm -f completions/rtcwake
+	local file
+	for file in cal dmesg eject hexdump hwclock ionice look renice rtcwake; do
+		rm -f completions/${file}
+	done
 
 	# app-editors/vim-core:
 	rm -f completions/xxd

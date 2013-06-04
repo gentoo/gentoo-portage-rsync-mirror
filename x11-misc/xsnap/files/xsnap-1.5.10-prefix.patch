@@ -19,8 +19,8 @@ Subject: Fix installation of xsnap on gentoo-prefix.
  LOCAL_LIBRARIES = -lz $(XPMLIB) $(XFTLIB) $(PNGLIB) $(JPEGLIB) $(XLIB)
  
 -	DEFINES = -DENABLE_NLS -DXPM -DPNG -DJPG -DPACKAGE=\"xsnap\" -DLOCALEDIR=\"/usr/share/locale\"
-+LOCALEDIR = $(SHAREDIR)/locale
-+	DEFINES = -DENABLE_NLS -DXPM -DPNG -DJPG -DPACKAGE=\"xsnap\" -DLOCALEDIR=\"$(LOCALEEDIR)\"
++LOCALEDIR = /usr/share/locale
++	DEFINES = -DENABLE_NLS -DXPM -DPNG -DJPG -DPACKAGE=\"xsnap\" -DLOCALEDIR=\"$(LOCALEDIR)\"
  
 -#        DEFINES = -DXPM -DPNG -DJPG -DPACKAGE=\"xsnap\" -DLOCALEDIR=\"/usr/share/locale\"
 +#        DEFINES = -DXPM -DPNG -DJPG -DPACKAGE=\"xsnap\" -DLOCALEDIR=\"$(LOCALEDIR)\"
