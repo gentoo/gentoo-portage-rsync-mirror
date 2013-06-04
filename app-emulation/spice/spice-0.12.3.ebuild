@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.3.ebuild,v 1.7 2013/01/01 14:06:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.3.ebuild,v 1.1 2013/06/04 22:13:36 cardoe Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit eutils python
+inherit eutils python-any-r1
 
 DESCRIPTION="SPICE server and client."
 HOMEPAGE="http://spice-space.org/"
@@ -14,8 +14,8 @@ SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+client +gui sasl smartcard static-libs" # static
+KEYWORDS="~amd64 ~x86"
+IUSE="client gui sasl smartcard static-libs" # static
 
 RDEPEND=">=x11-libs/pixman-0.17.7
 	media-libs/alsa-lib
@@ -55,8 +55,8 @@ DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	python-any-r1_pkg_setup
+	python_export_best
 }
 
 # maintainer notes:
@@ -69,8 +69,6 @@ src_prepare() {
 }
 
 src_configure() {
-	python_convert_shebangs 2 spice-common/spice_codegen.py
-
 	econf \
 		$(use_enable static-libs static) \
 		--disable-tunnel \
@@ -85,4 +83,12 @@ src_configure() {
 src_install() {
 	default
 	use static-libs || rm "${D}"/usr/lib*/*.la
+}
+
+pkg_postinst() {
+	if use client -o use gui; then
+		ewarn "USE=client and USE=gui will be removed in the next version."
+		ewarn "Upstream has stated that 'spicy' is deprecated and that you"
+		ewarn "should use 'remote-viewer' from app-emulation/virt-viewer."
+	fi
 }

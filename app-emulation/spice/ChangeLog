@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.44 2013/02/25 11:39:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.46 2013/06/04 22:16:59 cardoe Exp $
+
+  04 Jun 2013; Doug Goldstein <cardoe@gentoo.org>
+  -files/0.10.1-disable-werror.patch, -files/0.10.1-gold.patch,
+  -files/54c660470a5aea19f799c5574cc0d4a707696712.patch, -spice-0.11.3.ebuild,
+  -spice-0.12.0.ebuild:
+  Remove older versions.
+
+*spice-0.12.3 (04 Jun 2013)
+
+  04 Jun 2013; Doug Goldstein <cardoe@gentoo.org> +spice-0.12.3.ebuild:
+  Version bump. Disable USE=client and USE=gui by default and add a note that it
+  will be removed in future versions.
 
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> spice-0.12.2.ebuild:
   Stable for x86, wrt bug #459100

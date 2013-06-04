@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.4_beta1.ebuild,v 1.2 2013/03/02 21:58:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.4.ebuild,v 1.1 2013/06/04 22:06:26 tgurr Exp $
 
-EAPI="4"
+EAPI="5"
 
 QT_MINIMAL="4.6"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat soft
 HOMEPAGE="http://mumble.sourceforge.net/"
 SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio speech zeroconf"
@@ -75,6 +75,11 @@ src_configure() {
 			no-server \
 			no-update" \
 		DEFINES+="PLUGIN_PATH=/usr/$(get_libdir)/mumble"
+}
+
+src_compile() {
+	# parallel make workaround, bug #445960
+	emake -j1
 }
 
 src_install() {
