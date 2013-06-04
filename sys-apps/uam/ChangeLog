@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/uam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.29 2012/12/15 13:04:14 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.30 2013/06/04 06:59:54 mgorny Exp $
+
+  04 Jun 2013; Michał Górny <mgorny@gentoo.org> uam-9999.ebuild:
+  Use udev_reload rather than custom reloading snippet.
 
 *uam-9999 (15 Dec 2012)
 

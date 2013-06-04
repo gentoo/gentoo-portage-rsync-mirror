@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-9999.ebuild,v 1.1 2012/12/15 13:04:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-9999.ebuild,v 1.2 2013/06/04 06:59:54 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 #if LIVE
 AUTOTOOLS_AUTORECONF=yes
@@ -11,7 +11,7 @@ EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 inherit git-2
 #endif
 
-inherit autotools-utils user
+inherit autotools-utils udev user
 
 DESCRIPTION="Simple udev-based automounter for removable USB media"
 HOMEPAGE="https://bitbucket.org/mgorny/uam/"
@@ -53,9 +53,5 @@ pkg_postinst() {
 	elog "If you'd like to receive libnotify-based notifications, you need"
 	elog "to install the [x11-misc/sw-notify-send] tool."
 
-	if [[ -e "${EROOT}"/dev/.udev ]]; then
-		ebegin "Calling udev to reload its rules"
-		udevadm control --reload-rules
-		eend $?
-	fi
+	udev_reload
 }
