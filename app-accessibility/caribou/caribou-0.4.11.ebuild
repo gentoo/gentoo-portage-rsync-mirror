@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.8.ebuild,v 1.1 2013/03/28 16:21:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.11.ebuild,v 1.1 2013/06/04 15:08:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 COMMON_DEPEND="
+	app-accessibility/at-spi2-core
 	>=dev-python/pygobject-2.90.3:3[${PYTHON_USEDEP}]
 	>=x11-libs/gtk+-3:3[introspection]
 	x11-libs/gtk+:2
@@ -43,7 +46,8 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35.5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	# delete custom PYTHONPATH, useless on Gentoo and potential bug source
@@ -69,8 +73,6 @@ src_configure() {
 			--enable-gtk3-module \
 			--enable-gtk2-module \
 			VALAC=$(type -P true)
-		#	PYTHON=${EPREFIX}/usr/bin/python2
-	# PYTHON is substituted into several installed shell scripts
 	# vala is not needed for tarball builds, but configure checks for it...
 }
 
@@ -84,11 +86,5 @@ src_test() {
 
 src_install() {
 	python_foreach_impl run_in_build_dir gnome2_src_install
-	dodoc AUTHORS ChangeLog NEWS README
-}
-
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
+	dodoc AUTHORS NEWS README # ChangeLog simply points to git log
 }
