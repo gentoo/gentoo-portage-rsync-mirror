@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.4 2013/01/17 18:53:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.5 2013/06/04 19:10:24 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -48,6 +48,26 @@ src_prepare() {
 	use herwig || epatch "${FILESDIR}"/${P}-noherwig.patch
 	# since we depend on cfortran, do not use the one from cernlib
 	rm src/include/cfortran/cfortran.h || die
+	# respect users flags
+	sed -i \
+		-e 's/-O3/-O2/g' \
+		-e "s/-O2/${CFLAGS}/g" \
+		-e "s|\(CcCmd[[:space:]]*\)gcc|\1$(tc-getCC)|g" \
+		-e "s|\(CplusplusCmd[[:space:]]*\)g++|\1$(tc-getCXX)|g" \
+		-e "s|\(FortranCmd[[:space:]]*\)gfortran|\1$(tc-getFC)|g" \
+		src/config/linux.cf	\
+		|| die "sed linux.cf failed"
+	sed -i \
+		-e "s|\(ArCmdBase[[:space:]]*\)ar|\1$(tc-getAR)|g" \
+		-e "s|\(RanlibCmd[[:space:]]*\)ranlib|\1$(tc-getRANLIB)|g" \
+		src/config/Imake.tmpl	\
+		|| die "sed Imake.tmpl failed"
+
+	sed -i \
+		-e 's/\$(FCLINK)/\$(FCLINK) $(LDFLAGS)/' \
+		-e 's/\$(CCLINK)/\$(CCLINK) $(LDFLAGS)/' \
+		src/config/{biglib,fortran,Imake}.rules \
+		|| die "sed for ldflags propagation failed"
 }
 
 src_compile() {

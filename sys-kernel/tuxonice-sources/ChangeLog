@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.158 2013/05/25 11:11:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.159 2013/06/04 19:21:48 pacho Exp $
+
+*tuxonice-sources-3.0.80 (04 Jun 2013)
+*tuxonice-sources-3.4.47 (04 Jun 2013)
+*tuxonice-sources-3.9.4 (04 Jun 2013)
+
+  04 Jun 2013; Pacho Ramos <pacho@gentoo.org> +tuxonice-sources-3.0.80.ebuild,
+  +tuxonice-sources-3.4.47.ebuild, +tuxonice-sources-3.9.4.ebuild,
+  -tuxonice-sources-3.0.35.ebuild, -tuxonice-sources-3.0.77.ebuild,
+  -tuxonice-sources-3.4.44.ebuild, -tuxonice-sources-3.6.11-r1.ebuild,
+  -tuxonice-sources-3.6.11.ebuild, -tuxonice-sources-3.8.12.ebuild,
+  -tuxonice-sources-3.9.1-r1.ebuild, -tuxonice-sources-3.9.2.ebuild:
+  Version bump, drop old
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> tuxonice-sources-3.8.13.ebuild:
   Stable for x86, wrt bug #469866
