@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.11.ebuild,v 1.1 2013/05/31 16:21:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.11.ebuild,v 1.2 2013/06/04 16:28:45 floppym Exp $
 
 EAPI=5
 # There's doubt in py3.2's readiness
@@ -47,12 +47,8 @@ python_test() {
 	ln -sf ../../../tests/assets . || die
 	ln -sf ../../../tests/assets2 . || die
 	cd ../../../ || die
-	if ! django-admin.py-${EPYTHON} test --setting=tests.settings tests
-	then
-		die "Tests failed under ${EPYTHON}"
-	else
-		einfo "Tests passed under ${EPYTHON}"
-	fi
+	django-admin.py-${EPYTHON} test --settings=tests.settings tests \
+		|| die "Tests failed under ${EPYTHON}"
 	rm -rf tests/ || die
 	rm -rf "${S}"/tests/ || einfo "tests folder already removed"
 }

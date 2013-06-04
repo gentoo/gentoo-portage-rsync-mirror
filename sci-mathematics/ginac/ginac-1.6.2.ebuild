@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.6.2.ebuild,v 1.2 2012/05/04 07:46:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.6.2.ebuild,v 1.3 2013/06/04 16:13:15 bicatali Exp $
 
-EAPI=4
-inherit eutils
+EAPI=5
+
+inherit autotools-utils
 
 DESCRIPTION="C++ library and tools for symbolic calculations"
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/${P}.tar.bz2"
@@ -11,7 +12,7 @@ HOMEPAGE="http://www.ginac.de/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
 RDEPEND=">=sci-libs/cln-1.2.2"
@@ -23,33 +24,30 @@ DEPEND="${RDEPEND}
 		   dev-texlive/texlive-fontsrecommended
 		 )"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.5.1-pkgconfig.patch
-}
+PATCHES=( "${FILESDIR}"/${PN}-1.5.1-pkgconfig.patch )
 
 src_configure() {
-	econf \
-		--disable-rpath \
-		$(use_enable static-libs static)
+	local myeconfargs=( --disable-rpath )
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	emake
+	autotools-utils_src_compile
 	if use doc; then
 		export VARTEXFONTS="${T}"/fonts
-		cd "${S}/doc/reference"
-		#pdf generation for reference failed (1.5.1), bug #264774
-		#emake html pdf || die "emake doc reference failed"
+		cd "${BUILD_DIR}/doc/reference"
+		#pdf generation for reference failed (1.6.2), bug #264774
+		#emake html pdf
 		emake html
-		cd "${S}/doc/tutorial"
+		cd "${BUILD_DIR}/doc/tutorial"
 		emake ginac.pdf ginac.html
 	fi
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
 	if use doc; then
-		cd doc
+		cd ${BUILD_DIR}/doc
 		insinto /usr/share/doc/${PF}
 		newins tutorial/ginac.pdf tutorial.pdf
 		insinto /usr/share/doc/${PF}/html/reference
@@ -57,6 +55,6 @@ src_install() {
 		insinto /usr/share/doc/${PF}/html
 		newins tutorial/ginac.html tutorial.html
 		insinto /usr/share/doc/${PF}/examples
-		doins examples/*.cpp examples/ginac-examples.txt
+		doins "${S}"/doc/examples/*.cpp examples/ginac-examples.*
 	fi
 }
