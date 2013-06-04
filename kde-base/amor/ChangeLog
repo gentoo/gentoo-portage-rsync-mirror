@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.255 2013/06/04 13:05:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.256 2013/06/04 18:22:00 johu Exp $
+
+*amor-4.10.4 (04 Jun 2013)
+
+  04 Jun 2013; Johannes Huber <johu@gentoo.org> +amor-4.10.4.ebuild:
+  Version bump KDE SC 4.10.4
 
   04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> amor-4.10.3.ebuild:
   Stable for amd64, wrt to bug #471392
