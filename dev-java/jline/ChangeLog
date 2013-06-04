@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jline
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.26 2011/06/23 17:10:18 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.27 2013/06/04 17:48:29 tomwij Exp $
+
+*jline-2.11 (04 Jun 2013)
+
+  04 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +jline-2.11.ebuild:
+  Version bump to 2.11.
 
   23 Jun 2011; Brent Baude <ranger@gentoo.org> jline-1.0.ebuild:
   Marking jline-1.0 ppc for bug 368989
@@ -103,4 +108,3 @@
   05 Jan 2007; Joshua Nichols <nichoj@gentoo.org> +files/build-0.9.9.xml,
   +metadata.xml, +jline-0.9.9.ebuild:
   Initial commit. Added as a dependency of dev-java/jruby.
-

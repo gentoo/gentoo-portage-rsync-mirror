@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/hawtjni-runtime
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hawtjni-runtime/ChangeLog,v 1.1 2013/06/04 17:37:54 tomwij Exp $
+
+*hawtjni-runtime-1.8 (04 Jun 2013)
+
+  04 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +hawtjni-runtime-1.8.ebuild,
+  +metadata.xml:
+  New ebuild for hawtjni-runtime; dependency of jansi-native, jline, jruby.

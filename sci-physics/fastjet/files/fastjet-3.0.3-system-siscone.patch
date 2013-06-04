@@ -1,7 +1,16 @@
 diff -Nur fastjet-3.0.3.orig/configure.ac fastjet-3.0.3/configure.ac
 --- fastjet-3.0.3.orig/configure.ac	2012-06-25 15:15:32.000000000 +0100
 +++ fastjet-3.0.3/configure.ac	2012-07-24 18:39:11.000000000 +0100
-@@ -252,6 +252,11 @@
+@@ -14,7 +14,7 @@
+ dnl  - the first macro needs to place the files in the correct 
+ dnl    dir in order to have the correct -I options for the remote build
+ dnl  - see Makefile.am for distcleaning AX_PREFIX_CONFIG_H leftovers
+-AM_CONFIG_HEADER(include/fastjet/config_raw.h:config.h.in)
++AC_CONFIG_HEADERS(include/fastjet/config_raw.h:config.h.in)
+ AX_PREFIX_CONFIG_H(include/fastjet/config_auto.h,FASTJET,include/fastjet/config_raw.h)
+ 
+ dnl check autoconf version
+@@ -252,6 +252,12 @@
  fi
  
  dnl SISCone
@@ -10,6 +19,7 @@ diff -Nur fastjet-3.0.3.orig/configure.ac fastjet-3.0.3/configure.ac
 +	[bundle_siscone=$withval],
 +	[bundle_siscone=no])
 +AM_CONDITIONAL(BUNDLE_SISCONE, test x$bundle_siscone != xno)
++
  ACX_CHECK_PLUGIN(SISCone, siscone, SISCONE, yes,
  	         [CONFIG_LIBS_PLUGINS=${CONFIG_LIBS_PLUGINS}" -lsiscone_spherical -lsiscone"
                    CONFIG_LIBS_PLUGINS_STATIC=${CONFIG_LIBS_PLUGINS_STATIC}" \${installationdir}/lib/libsiscone.a \${installationdir}/lib/libsiscone_spherical.a"])

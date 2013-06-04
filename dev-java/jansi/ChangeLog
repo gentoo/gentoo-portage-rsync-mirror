@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jansi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jansi/ChangeLog,v 1.4 2011/08/13 07:07:41 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jansi/ChangeLog,v 1.5 2013/06/04 17:48:28 tomwij Exp $
+
+*jansi-1.11 (04 Jun 2013)
+
+  04 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +files/jansi-1.11-build.xml,
+  +jansi-1.11.ebuild:
+  Version bumped to 1.11; dropped keywords amd64-linux ppc ppc-macos x86-linux
+  x86-macos as java-native doesn't have these, see bug #472322.
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> jansi-1.1.ebuild:
   ppc stable wrt #348255
@@ -16,4 +23,3 @@
   24 May 2010; Jean-Noël Rivasseau <elvanor@gentoo.org> +jansi-1.1.ebuild,
   +metadata.xml:
   Initial import.
-
