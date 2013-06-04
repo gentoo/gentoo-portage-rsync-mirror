@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.169 2013/04/27 22:40:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.170 2013/06/04 21:55:51 radhermit Exp $
+
+*libgcrypt-1.5.2-r1 (04 Jun 2013)
+
+  04 Jun 2013; Tim Harder <radhermit@gentoo.org> -libgcrypt-1.5.2.ebuild,
+  +libgcrypt-1.5.2-r1.ebuild:
+  Revbump and remove old. Drop caps use flag and disable capabilities due to
+  various applications requiring privileges after libgcrypt drops them (bug
+  #468616) and use the autotools-utils eclass.
 
 *libgcrypt-1.5.2 (27 Apr 2013)
 

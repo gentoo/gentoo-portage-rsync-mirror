@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.407 2013/05/03 14:51:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.408 2013/06/04 21:37:19 ssuominen Exp $
+
+*libpng-1.5.16 (04 Jun 2013)
+
+  04 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> +libpng-1.5.16.ebuild:
+  Version bump.
 
   03 May 2013; Samuli Suominen <ssuominen@gentoo.org> libpng-1.6.2.ebuild:
   Use prune_libtool_files --all instead of custom find now that it's capable of

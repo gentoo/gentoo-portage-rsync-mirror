@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.150 2013/06/04 18:58:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.151 2013/06/04 22:00:52 radhermit Exp $
+
+  04 Jun 2013; Tim Harder <radhermit@gentoo.org> cryptsetup-1.6.1.ebuild:
+  Drop -caps use dep from libgcrypt to fix dep tree (and libgcrypt now has
+  capabilities disabled by default).
 
 *cryptsetup-1.6.1 (04 Jun 2013)
 
