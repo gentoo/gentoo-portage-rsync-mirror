@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.5.ebuild,v 1.1 2013/05/30 01:38:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.5.ebuild,v 1.2 2013/06/03 23:50:38 chithanh Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -90,6 +90,8 @@ src_prepare() {
 	python_convert_shebangs -q -r 2 "${S}"
 	# Useless UI element would require qt3support, bug #365019
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
+	# do not build gr-filter test when gr-filter is disabled, bug #472172
+	sed -i 's/ENABLE_TESTING/ENABLE_TESTING AND ENABLE_GR_FILTER/' gr-blocks/lib/CMakeLists.txt || die
 	base_src_prepare
 }
 
