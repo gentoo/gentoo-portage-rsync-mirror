@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.62 2013/04/30 15:38:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.63 2013/06/04 10:15:22 chainsaw Exp $
+
+*connman-1.15 (04 Jun 2013)
+*connman-1.14 (04 Jun 2013)
+
+  04 Jun 2013; Tony Vroon <chainsaw@gentoo.org> +connman-1.14.ebuild,
+  +connman-1.15.ebuild:
+  Version bumps. Primarily bugfixes, particularly around hidden SSID (WiFi)
+  scanning and the command line client.
 
 *connman-1.13 (30 Apr 2013)
 
