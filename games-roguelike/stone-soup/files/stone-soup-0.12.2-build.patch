@@ -6,16 +6,16 @@ Subject: build system
 
 --- source/Makefile
 +++ source/Makefile
-@@ -119,7 +119,7 @@
+@@ -101,7 +101,7 @@
+ #
  
- endif # USE_ICC
  
 -CFOTHERS := -pipe $(EXTERNAL_FLAGS)
 +CFOTHERS := $(EXTERNAL_FLAGS)
  CFWARN := -Wall -Wformat-security
  CFWARN_L := -Wundef
  
-@@ -730,7 +718,6 @@
+@@ -733,7 +733,6 @@
  DEFINES += -DFULLDEBUG
  endif
  ifdef DEBUG
@@ -23,7 +23,7 @@ Subject: build system
  DEFINES += -DDEBUG
  endif
  ifndef NOWIZARD
-@@ -1485,7 +1472,7 @@
+@@ -1488,7 +1487,7 @@
          # prove that tiles were generated properly
  	grep tile_info rltiles/*.cc| head
  else

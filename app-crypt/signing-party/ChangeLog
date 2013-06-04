@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/signing-party
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.37 2012/10/14 19:31:39 c1pher Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.38 2013/06/04 20:33:10 rich0 Exp $
+
+  04 Jun 2013; Richard Freeman <rich0@gentoo.org> signing-party-1.1.4.ebuild:
+  amd64 stable - 469364
 
 *signing-party-1.1.4 (14 Oct 2012)
 

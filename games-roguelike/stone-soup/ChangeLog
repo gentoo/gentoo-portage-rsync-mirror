@@ -1,6 +1,15 @@
 # ChangeLog for games-roguelike/stone-soup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.14 2013/05/14 09:41:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.15 2013/06/04 20:45:30 hasufell Exp $
+
+*stone-soup-0.12.2 (04 Jun 2013)
+
+  04 Jun 2013; Julian Ospald <hasufell@gentoo.org> -stone-soup-0.11.0.ebuild,
+  -files/stone-soup-0.11.0-build.patch, -stone-soup-0.11.1-r1.ebuild,
+  -files/stone-soup-0.11.1-build.patch, -stone-soup-0.12.1.ebuild,
+  -files/stone-soup-0.12.1-build.patch, +stone-soup-0.12.2.ebuild,
+  +files/stone-soup-0.12.2-build.patch:
+  version bump, remove old
 
   14 May 2013; Agostino Sarubbo <ago@gentoo.org> stone-soup-0.11.2.ebuild:
   Stable for x86, wrt bug #469742

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.9 2013/05/26 00:12:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.10 2013/06/04 20:41:32 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs games
@@ -69,6 +69,7 @@ src_prepare() {
 		$(grep -rl --exclude="*texi" /usr/local/lib doc) \
 		|| die
 	sed -i \
+		-e '/VICE_ARG_LIST_CHECK/d' \
 		-e "/VICEDIR=/s:=.*:=\"${GAMES_DATADIR}/${PN}\";:" \
 		configure.in || die
 	sed -i \
