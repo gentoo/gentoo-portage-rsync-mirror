@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/paw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.26 2013/01/17 19:15:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.27 2013/06/04 18:53:18 bicatali Exp $
+
+  04 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> paw-2.14.04-r4.ebuild:
+  Switch to EAPI5 and respect RANLIB (bug #468188)
 
 *paw-2.14.04-r4 (17 Jan 2013)
 

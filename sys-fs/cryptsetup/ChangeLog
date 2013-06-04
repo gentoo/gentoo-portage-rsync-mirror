@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.149 2013/04/09 10:06:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.150 2013/06/04 18:58:59 radhermit Exp $
+
+*cryptsetup-1.6.1 (04 Jun 2013)
+
+  04 Jun 2013; Tim Harder <radhermit@gentoo.org> +cryptsetup-1.6.1.ebuild,
+  metadata.xml:
+  Version bump (bug #464610 by Manuel Rüger), convert to python-single-r1, add
+  support for choosing a crypto backend (gcrypt, kernel, nettle, or openssl),
+  remove old postinst warning, and only show postinst logs on new installs.
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   cryptsetup-1.0.6-r2.ebuild:

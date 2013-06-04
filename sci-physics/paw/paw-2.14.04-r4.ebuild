@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r4.ebuild,v 1.1 2013/01/17 19:15:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r4.ebuild,v 1.2 2013/06/04 18:53:18 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs fortran-2
 
@@ -52,6 +52,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	# since we depend on cfortran, do not use the one from cernlib
 	rm src/include/cfortran/cfortran.h || die
+	sed -i \
+		-e "s|\(ArCmdBase[[:space:]]*\)ar|\1$(tc-getAR)|g" \
+		-e "s|\(RanlibCmd[[:space:]]*\)ranlib|\1$(tc-getRANLIB)|g" \
+		src/config/Imake.tmpl	\
+		|| die "sed Imake.tmpl failed"
 }
 
 src_compile() {
