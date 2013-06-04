@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.61 2013/06/04 12:05:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.62 2013/06/04 13:38:42 ssuominen Exp $
+
+  04 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> vigra-1.9.0.ebuild:
+  Use ${PYTHON_REQUIRED_USE} in REQUIRED_USE for USE python.
 
 *vigra-1.9.0 (04 Jun 2013)
 

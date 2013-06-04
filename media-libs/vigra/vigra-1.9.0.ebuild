@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.9.0.ebuild,v 1.1 2013/06/04 12:05:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.9.0.ebuild,v 1.2 2013/06/04 13:38:42 ssuominen Exp $
 
 EAPI=5
 
@@ -13,9 +13,9 @@ inherit cmake-utils eutils multilib python-single-r1
 
 MY_P=${P}-src
 
-DESCRIPTION="C++ computer vision library with emphasize on customizable algorithms and data structures"
+DESCRIPTION="a C++ computer vision library with emphasis on customizability of algorithms and data structures"
 HOMEPAGE="http://hci.iwr.uni-heidelberg.de/vigra/"
-SRC_URI="http://hci.iwr.uni-heidelberg.de/vigra/${MY_P}.tar.gz"
+SRC_URI="http://hci.iwr.uni-heidelberg.de/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 		python? ( >=dev-python/nose-1.1.2-r1[${PYTHON_USEDEP}] )
 	)"
 REQUIRED_USE="doc? ( hdf5 fftw )
-	python? ( hdf5 )
+	python? ( hdf5 ${PYTHON_REQUIRED_USE} )
 	test? ( hdf5 python fftw )"
 
 DOCS=( README.txt )

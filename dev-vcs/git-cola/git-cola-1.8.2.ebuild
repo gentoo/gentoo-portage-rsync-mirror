@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-1.8.2.ebuild,v 1.3 2013/04/29 09:10:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-1.8.2.ebuild,v 1.4 2013/06/04 13:56:36 jlec Exp $
 
 EAPI=5
 
@@ -70,9 +70,7 @@ python_install_all() {
 		prefix="${EPREFIX}/usr" \
 		install
 
-	if use doc ; then
-		HTML_DOCS=( share/doc/${PN}/_build/html/. )
-	else
+	if ! use doc ; then
 		HTML_DOCS=( "${FILESDIR}"/index.html )
 	fi
 
