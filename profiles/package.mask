@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14802 2013/06/04 20:14:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14803 2013/06/05 15:44:09 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,12 +31,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> ( 2013/06/04)
-# media-video/vdr-2.0.2-r1 temp pmasked
-# waiting for media-plugins/vdr-permashift-0.5.4
-# waiting for media-plugins/vdr-pinplugin-0.1.14
-=media-video/vdr-2.0.2-r1
 
 # Sebastian Pipping <sping@gentoo.org> (2 Jun 2013)
 # Effect working, freeze on opening preferences dialog

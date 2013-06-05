@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.30.0.ebuild,v 1.2 2013/04/25 03:09:10 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.30.0-r1.ebuild,v 1.1 2013/06/05 15:53:53 grozin Exp $
 
 EAPI=5
 
@@ -75,7 +75,7 @@ RDEPEND="${RDEPEND}
 	${DEF_DEP}"
 
 DEPEND="${RDEPEND}
-	<sys-apps/texinfo-5.0"
+	sys-apps/texinfo"
 
 TEXMF="${EPREFIX}"/usr/share/texmf-site
 
@@ -94,7 +94,7 @@ pkg_setup() {
 
 src_prepare() {
 	local n PATCHES v
-	PATCHES=( imaxima-0 rmaxima-0 wish-0 xdg-utils-0 )
+	PATCHES=( imaxima-0 rmaxima-0 wish-0 xdg-utils-0 texinfo51 )
 
 	n=${#PATCHES[*]}
 	for ((n--; n >= 0; n--)); do
@@ -164,20 +164,20 @@ src_install() {
 	fi
 
 	# if we use ecls, build an ecls library for maxima
-	# does not work with the current asdf
-	#if use ecls; then
-	#	cd src
-	#	mkdir ./lisp-cache
-	#	ecl \
-	#		-eval '(require `asdf)' \
-	#		-eval '(setf asdf::*user-cache* (truename "./lisp-cache"))' \
-	#		-eval '(load "maxima-build.lisp")' \
-	#		-eval '(asdf:make-build :maxima :type :fasl :move-here ".")' \
-	#		-eval '(quit)'
-	#	ECLLIB=`ecl -eval "(princ (SI:GET-LIBRARY-PATHNAME))" -eval "(quit)"`
-	#	insinto "${ECLLIB#${EPREFIX}}"
-	#	newins maxima.fasb maxima.fas
-	#fi
+	if use ecls; then
+		cd src
+		ecl \
+			-eval '(require `asdf)' \
+			-eval '(push "./" asdf:*central-registry*)' \
+			-eval "(asdf:initialize-output-translations \
+				'(:output-translations :disable-cache :inherit-configuration))" \
+			-eval '(load "maxima-build.lisp")' \
+			-eval '(asdf:make-build :maxima :type :fasl)' \
+			-eval '(quit)'
+		ECLLIB=`ecl -eval "(princ (SI:GET-LIBRARY-PATHNAME))" -eval "(quit)"`
+		insinto "${ECLLIB#${EPREFIX}}"
+		newins maxima.fasb maxima.fas
+	fi
 }
 
 pkg_preinst() {
