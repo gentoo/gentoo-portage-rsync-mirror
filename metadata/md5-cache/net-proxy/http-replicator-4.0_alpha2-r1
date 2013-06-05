@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst test
+DESCRIPTION=Proxy cache for Gentoo packages
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/http-replicator
+IUSE=python_targets_python2_7
+KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~sparc ~x86
+LICENSE=GPL-2
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/http-replicator/http-replicator_4.0alpha2.tgz
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multibuild	4f797e941786b6313d84053ae3e0ec96	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	094dc7421f9aea7525b85b899f67e62a	python-utils-r1	178dc714fb13931948c7f7ccc0a4748b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=362d37afdf1febcd73d7e2a2937b210f
