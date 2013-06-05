@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.111 2013/05/31 00:46:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.113 2013/06/05 15:27:41 ago Exp $
+
+  05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> vpopmail-5.4.33.ebuild:
+  Stable for x86, wrt bug #269129
+
+  05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> vpopmail-5.4.33.ebuild:
+  Stable for amd64, wrt bug #269129
 
   31 May 2013; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.4.16.ebuild,
   vpopmail-5.4.30-r1.ebuild, vpopmail-5.4.30-r2.ebuild,
