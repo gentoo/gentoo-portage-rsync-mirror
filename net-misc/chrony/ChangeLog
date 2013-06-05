@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.101 2013/05/25 07:42:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.102 2013/06/05 14:26:12 jer Exp $
+
+  05 Jun 2013; Jeroen Roovers <jer@gentoo.org> -chrony-1.26.ebuild,
+  -chrony-1.27.ebuild:
+  Old.
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> chrony-1.27-r1.ebuild:
   Stable for sparc, wrt bug #470560
