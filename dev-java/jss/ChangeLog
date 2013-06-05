@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jss
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.26 2012/05/03 07:42:50 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.27 2013/06/05 09:30:15 tomwij Exp $
+
+*jss-4.3-r1 (05 Jun 2013)
+
+  05 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +files/jss-4.3-cflags.patch,
+  +files/jss-4.3-secitem.patch, +jss-4.3-r1.ebuild:
+  Revision bump to 4.3-r1. EAPI 5. Fix Java environment, see bug #472198. Fix
+  use of CFLAGS, see bug #428188. Possibly bug #463582 is fixed as a side
+  effect.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> jss-4.2.5.ebuild,
   jss-4.3.ebuild:
