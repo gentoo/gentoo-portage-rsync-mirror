@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/kig-4.10.4.ebuild,v 1.1 2013/06/04 18:21:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/kig-4.10.4.ebuild,v 1.2 2013/06/05 20:20:02 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}-4.10.0-boostpython.patch" )
+PATCHES=( "${FILESDIR}/${PN}-4.10.4-boostpython.patch" )
 
 src_configure() {
 	mycmakeargs=(

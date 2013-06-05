@@ -65,3 +65,14 @@ index 7dc5b47..cd90db8 100644
 +    krb5_error_code ret, module_ret = 0;
      krb5_responder_fn responder = opte->opt_private->responder;
      static const int paorder[] = { PA_INFO, PA_REAL };
+
+--- a/src/tests/asn.1/trval.c	2013-04-12 12:51:36.000000000 -0500
++++ b/src/tests/asn.1/trval.c	2013-05-24 04:31:14.077036380 -0500
+@@ -404,7 +404,7 @@
+ {
+     int n;
+     int r = 0;
+-    int rlen2;
++    int rlen2 = 0;
+     int rlent;
+     int save_appl;
