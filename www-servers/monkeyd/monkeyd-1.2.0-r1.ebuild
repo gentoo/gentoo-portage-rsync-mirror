@@ -1,10 +1,10 @@
 # Copyright 1999- Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.0.ebuild,v 1.4 2013/06/02 13:03:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.0-r1.ebuild,v 1.1 2013/06/05 20:53:14 blueness Exp $
 
 EAPI="5"
 
-inherit toolchain-funcs depend.php multilib
+inherit toolchain-funcs depend.php multilib eutils
 
 MY_P="${PN/d}-${PV}"
 DESCRIPTION="A small, fast, and scalable web server"
@@ -42,6 +42,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fixes security issue, bug #472400, CVE-2013-3843
+	epatch "${FILESDIR}"/${PN}-fix-DoS-headers-parser.patch
+
 	# Don't install the banana script, we use ${FILESDIR}/monkeyd.initd instead
 	sed -i '/Creating bin\/banana/d' configure || die "No configure file"
 	sed -i '/create_banana_script bindir/d' configure || die "No configure file"
