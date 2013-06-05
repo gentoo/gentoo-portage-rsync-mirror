@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.82 2011/08/29 21:47:22 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.83 2013/06/05 02:47:39 zerochaos Exp $
+
+  05 Jun 2013; Rick Farina <zerochaos@gentoo.org> cheetah-2.4.4.ebuild:
+  adding ~arm keyword
 
   29 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> cheetah-2.4.4.ebuild:
   Fixed license
@@ -367,4 +370,3 @@
   http://www.cheetahtemplate.org/  for more info.
   
   Ebuild submitted by Jason Jeremias <jason@penguinsolutions.com>.
-

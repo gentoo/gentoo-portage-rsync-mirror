@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.5.ebuild,v 1.2 2013/06/03 23:50:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.5.ebuild,v 1.3 2013/06/05 02:52:56 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://gnuradio.org/releases/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
 IUSE="alsa doc examples fcd filter grc jack oss performance-counters portaudio qt4 sdl uhd utils wavelet wxwidgets"
