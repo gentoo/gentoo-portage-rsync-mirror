@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.67 2013/04/24 07:28:14 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.68 2013/06/05 09:59:46 ultrabug Exp $
+
+*mongodb-2.4.4 (05 Jun 2013)
+
+  05 Jun 2013; Ultrabug <ultrabug@gentoo.org> -mongodb-2.4.2.ebuild,
+  -mongodb-2.4.3.ebuild, +mongodb-2.4.4.ebuild,
+  +files/mongodb-2.4.4-fix-sharedclient.patch,
+  -files/mongodb-2.4-fix-sharedclient.patch:
+  Version bump, drop old, fix #471784
 
 *mongodb-2.4.3 (24 Apr 2013)
 

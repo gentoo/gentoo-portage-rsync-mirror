@@ -67,7 +67,7 @@ index b88a54f..a15bbb3 100644
  
  if env['MONGO_BUILD_SASL_CLIENT']:
      clientSource = clientSourceAll
-+    env.Append(LIBS="gsasl")
++    env.Append(LIBS="sasl2")
  else:
      clientSource = clientSourceBasic
  

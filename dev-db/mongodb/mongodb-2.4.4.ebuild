@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.2.ebuild,v 1.2 2013/04/19 09:51:02 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.4.ebuild,v 1.1 2013/06/05 09:59:46 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -12,7 +12,7 @@ MY_P=${PN}-src-r${PV/_rc/-rc}
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="http://www.mongodb.org"
 SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
-	mms-agent? ( http://dev.gentoo.org/~ultrabug/20130319-10gen-mms-agent.zip )"
+	mms-agent? ( http://dev.gentoo.org/~ultrabug/20130605-10gen-mms-agent.zip )"
 
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
@@ -31,7 +31,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-libs/readline
 	sys-libs/ncurses
-	kerberos? ( net-libs/libgsasl )"
+	kerberos? ( dev-libs/cyrus-sasl[kerberos] )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -67,13 +67,10 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-scons.patch"
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-boost.patch"
-	epatch "${FILESDIR}/mongodb-2.4-fix-sharedclient.patch"
+	epatch "${FILESDIR}/mongodb-2.4.4-fix-sharedclient.patch"
 
 	# bug #462606
 	sed -i -e "s@\prefix + \"/lib\"@prefix + \"/$(get_libdir)\"@g" src/SConscript.client || die
-	if use !prefix && [[ "$(get_libdir)" == "lib" ]]; then
-		sed -i -e 's/^env.Install(prefix/env.InstallAs(prefix/g' src/SConscript.client || die
-	fi
 }
 
 src_compile() {
@@ -129,7 +126,7 @@ src_test() {
 }
 
 pkg_postinst() {
-	if [[ ${REPLACING_VERSIONS} < 1.8 ]]; then
+	if [[ ${REPLACING_VERSIONS} < 2.4 ]]; then
 		ewarn "You just upgraded from a previous version of mongodb !"
 		ewarn "Make sure you run 'mongod --upgrade' before using this version."
 	fi
