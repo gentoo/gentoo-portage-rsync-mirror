@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.15.3.ebuild,v 1.1 2013/04/01 12:41:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.15.5.ebuild,v 1.1 2013/06/05 12:27:29 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
 DISTUTILS_IN_SOURCE_BUILD=1
-inherit eutils python-r1 versionator gnome2-utils games distutils-r1
+inherit eutils toolchain-funcs python-r1 versionator gnome2-utils games distutils-r1
 
 DESCRIPTION="Visual novel engine written in python"
 HOMEPAGE="http://www.renpy.org"
@@ -37,7 +37,7 @@ S=${WORKDIR}/${P}-source
 
 pkg_setup() {
 	games_pkg_setup
-	export CFLAGS="${CFLAGS} $(pkg-config --cflags fribidi)"
+	export CFLAGS="${CFLAGS} $($(tc-getPKG_CONFIG) --cflags fribidi)"
 }
 
 python_prepare_all() {
