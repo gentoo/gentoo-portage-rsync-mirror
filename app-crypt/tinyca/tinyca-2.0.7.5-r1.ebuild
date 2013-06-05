@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.5-r1.ebuild,v 1.2 2013/06/04 19:56:25 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.5-r1.ebuild,v 1.3 2013/06/05 07:33:49 alonbl Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make -C po
+	emake -C po || die
 }
 
 locale_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/tinyca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.20 2013/06/04 19:56:25 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.21 2013/06/05 07:33:49 alonbl Exp $
+
+  05 Jun 2013; Alon Bar-Lev <alonbl@gentoo.org> tinyca-2.0.7.5-r1.ebuild:
+  make->emake per bug#470300, thanks to nimiux
 
   04 Jun 2013; Chema Alonso <nimiux@gentoo.org> tinyca-2.0.7.5-r1.ebuild:
   Stable for amd64 wrt bug #470300
