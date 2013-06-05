@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/supervisor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.9 2012/12/07 19:10:36 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.10 2013/06/05 10:28:58 dev-zero Exp $
+
+*supervisor-3.0_beta2 (05 Jun 2013)
+
+  05 Jun 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +supervisor-3.0_beta2.ebuild:
+  Version bump, use distutils-r1
 
   07 Dec 2012; Ulrich Müller <ulm@gentoo.org> supervisor-3.0_alpha10.ebuild,
   supervisor-3.0_alpha12.ebuild, supervisor-3.0_beta1.ebuild:
