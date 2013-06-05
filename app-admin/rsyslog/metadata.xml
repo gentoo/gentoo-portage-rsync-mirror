@@ -11,4 +11,7 @@
     <flag name="relp">Add support for the Reliable Event Logging Protocol using <pkg>dev-libs/librelp</pkg></flag>
     <flag name="zeromq">Add support for the ZeroMQ input and output plugins using <pkg>net-libs/zeromq</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:rsyslog:rsyslog</remote-id>
+  </upstream>
 </pkgmetadata>

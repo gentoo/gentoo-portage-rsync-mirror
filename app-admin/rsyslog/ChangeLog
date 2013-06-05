@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.91 2013/04/28 10:20:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.92 2013/06/05 00:05:02 vapier Exp $
+
+  05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   28 Apr 2013; Markos Chandras <hwoarang@gentoo.org>
   files/rsyslog-7.2.5-json-c-pkgconfig.patch:

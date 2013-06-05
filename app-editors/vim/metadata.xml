@@ -7,4 +7,7 @@
   <flag name='X'>Link console vim against X11 libraries to enable title and
 	  clipboard features in xterm</flag>
 </use>
+<upstream>
+  <remote-id type="cpe">cpe:/a:vim:vim</remote-id>
+</upstream>
 </pkgmetadata>

@@ -31,4 +31,7 @@
       gzip-compressed files, through <pkg>app-arch/gzip</pkg>.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:pcre:pcre</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.137 2013/05/13 13:19:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.138 2013/06/05 00:16:24 vapier Exp $
+
+  05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   13 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -dbus-glib-0.100-r1.ebuild, -dbus-glib-0.100-r2.ebuild,

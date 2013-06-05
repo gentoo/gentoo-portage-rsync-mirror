@@ -10,4 +10,7 @@
   <flag name='plugins'>Add support for loading builtins at runtime via
     'enable'</flag>
 </use>
+<upstream>
+  <remote-id type="cpe">cpe:/a:gnu:bash</remote-id>
+</upstream>
 </pkgmetadata>

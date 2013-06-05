@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.8.ebuild,v 1.2 2013/06/05 00:28:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.9.ebuild,v 1.1 2013/06/05 00:28:21 naota Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="static-libs test"
 
 RDEPEND="app-i18n/opencc
 	dev-cpp/glog
-	<dev-cpp/yaml-cpp-0.5.0
+	>=dev-cpp/yaml-cpp-0.5.0
 	dev-db/kyotocabinet
 	>=dev-libs/boost-1.46.0[threads(+)]
 	sys-libs/zlib
@@ -29,6 +29,7 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-test.patch
+	epatch "${FILESDIR}"/${PN}-dictionary.patch
 }
 
 src_configure() {

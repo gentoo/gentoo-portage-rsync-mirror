@@ -16,4 +16,7 @@
       Let sudo print insults when the user types the wrong password.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:todd_miller:sudo</remote-id>
+  </upstream>
 </pkgmetadata>

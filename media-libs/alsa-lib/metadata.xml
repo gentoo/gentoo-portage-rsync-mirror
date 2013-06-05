@@ -8,4 +8,7 @@
   <use>
     <flag name="alisp">Enable support for ALISP (ALSA LISP) interpreter for advanced features.</flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/o:alsa:alsa-lib</remote-id>
+  </upstream>
 </pkgmetadata>

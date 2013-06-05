@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.559 2013/05/14 22:15:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.560 2013/06/05 00:16:40 vapier Exp $
+
+  05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
 *glib-2.36.2 (14 May 2013)
 

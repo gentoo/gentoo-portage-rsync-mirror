@@ -5,4 +5,7 @@
 		<email>jer@gentoo.org</email>
 		<name>Jeroen Roovers</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:niels_provos:libevent</remote-id>
+	</upstream>
 </pkgmetadata>
