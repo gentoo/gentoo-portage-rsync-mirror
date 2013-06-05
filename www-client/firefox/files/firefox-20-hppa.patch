@@ -1,0 +1,22 @@
+--- a/js/src/gc/RootMarking.cpp
++++ b/js/src/gc/RootMarking.cpp
+@@ -314,7 +314,7 @@
+ 
+     uintptr_t *stackMin, *stackEnd;
+ #if JS_STACK_GROWTH_DIRECTION > 0
+-    stackMin = rt->nativeStackBase;
++    stackMin = reinterpret_cast<uintptr_t *>(rt->nativeStackBase);
+     stackEnd = cgcd->nativeStackTop;
+ #else
+     stackMin = cgcd->nativeStackTop + 1;
+--- a/xpcom/reflect/xptcall/src/md/unix/xptcstubs_pa32.cpp
++++ b/xpcom/reflect/xptcall/src/md/unix/xptcstubs_pa32.cpp
+@@ -124,7 +124,7 @@
+   return result;
+ }
+ 
+-extern "C" int SharedStub(int);
++extern "C" nsresult SharedStub(int);
+ 
+ #define STUB_ENTRY(n)       \
+ nsresult nsXPTCStubBase::Stub##n()  \

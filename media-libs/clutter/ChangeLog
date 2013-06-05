@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.71 2013/05/15 07:01:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.72 2013/06/05 14:58:46 jlec Exp $
+
+*clutter-1.12.2-r1 (05 Jun 2013)
+
+  05 Jun 2013; Justin Lecher <jlec@gentoo.org> +clutter-1.12.2-r1.ebuild,
+  +files/clutter-1.12.2-array-bounds.patch, metadata.xml:
+  Backport patch to fix segfault due to unrespected array bounds, #469196
 
 *clutter-1.14.4 (15 May 2013)
 

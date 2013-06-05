@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.243 2013/05/28 13:35:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.244 2013/06/05 14:59:33 jer Exp $
+
+  05 Jun 2013; Jeroen Roovers <jer@gentoo.org> firefox-17.0.5.ebuild,
+  firefox-17.0.6.ebuild, firefox-21.0.ebuild, +files/firefox-20-hppa.patch,
+  +files/firefox-21-hppa.patch:
+  Marked ~hppa (bug #414297).
 
   28 May 2013; <anarchy@gentoo.org> +files/bug-846986.patch:
   Add missing patch, bug #471568

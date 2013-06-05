@@ -1,0 +1,11 @@
+--- a/js/src/jsapi.cpp	2013-05-11 21:19:34.000000000 +0200
++++ b/js/src/jsapi.cpp	2013-05-28 17:39:15.347027000 +0200
+@@ -892,7 +892,7 @@
+     PodZero(&atomState);
+ 
+ #if JS_STACK_GROWTH_DIRECTION > 0
+-    nativeStackLimit = UINTPTR_MAX;
++    mainThread.nativeStackLimit = UINTPTR_MAX;
+ #endif
+ }
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-21.0.ebuild,v 1.1 2013/05/28 03:37:14 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-21.0.ebuild,v 1.2 2013/06/05 14:59:33 jer Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -35,7 +35,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist gstreamer +jit +minimal pgo pulseaudio selinux system-cairo system-jpeg system-sqlite"
@@ -152,6 +152,10 @@ src_prepare() {
 
 	# Undefined reference fix
 	epatch "${FILESDIR}"/bug-846986.patch
+
+	# HPPA patches (bug #414297)
+	epatch "${FILESDIR}"/${PN}-20-hppa.patch
+	epatch "${FILESDIR}"/${PN}-21-hppa.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
