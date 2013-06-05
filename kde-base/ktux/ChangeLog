@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.247 2013/06/04 18:21:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.248 2013/06/05 10:33:24 ago Exp $
+
+  05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ktux-4.10.3.ebuild:
+  Stable for x86, wrt to bug #471392
 
 *ktux-4.10.4 (04 Jun 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.263 2013/06/04 18:22:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.264 2013/06/05 10:33:07 ago Exp $
+
+  05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kdesu-4.10.3.ebuild:
+  Stable for x86, wrt to bug #471392
 
 *kdesu-4.10.4 (04 Jun 2013)
 
