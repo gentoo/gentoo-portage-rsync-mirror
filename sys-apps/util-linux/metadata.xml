@@ -16,4 +16,7 @@
 	</flag>
 	<flag name='tty-helpers'>install the mesg/wall/write tools for talking to local users</flag>
 </use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:andries_brouwer:util-linux</remote-id>
+	</upstream>
 </pkgmetadata>

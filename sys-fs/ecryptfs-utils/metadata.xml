@@ -10,4 +10,7 @@
 		<flag name='pkcs11'>Enable PKCS#11 (Smartcards) key module</flag>
 		<flag name='tpm'>Enable support for Trusted Platform Module (TPM) using <pkg>app-crypt/trousers</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:ecryptfs:ecryptfs_utils</remote-id>
+	</upstream>
 </pkgmetadata>

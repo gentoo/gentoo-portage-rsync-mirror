@@ -15,4 +15,7 @@
     <flag name='legacy-drivers'>Include the buggy gradients patch (for legacy drivers, such as nvidia-drivers older than 304.30)</flag>
     <flag name='openvg'>Use OpenVG for backend acceleration</flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:cairographics:cairo</remote-id>
+  </upstream>
 </pkgmetadata>

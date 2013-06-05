@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.301 2013/05/23 14:14:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.302 2013/06/05 00:36:52 vapier Exp $
+
+  05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   23 May 2013; Ian Stakenvicius <axs@gentoo.org> lvm2-2.02.95-r4.ebuild,
   lvm2-2.02.97-r1.ebuild, lvm2-2.02.97.ebuild, lvm2-2.02.98.ebuild:

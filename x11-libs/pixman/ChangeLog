@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.161 2013/05/09 13:12:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.162 2013/06/05 00:43:48 vapier Exp $
+
+  05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   09 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -pixman-0.29.4.ebuild:

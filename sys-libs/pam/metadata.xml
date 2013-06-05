@@ -26,4 +26,7 @@
       files.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:kernel:linux-pam</remote-id>
+  </upstream>
 </pkgmetadata>

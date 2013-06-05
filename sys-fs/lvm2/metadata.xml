@@ -20,4 +20,7 @@
 		<flag name='lvm1'>Allow users to build lvm2 with lvm1 support</flag>
 		<flag name='thin'>Support for thin volumes</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:heinz_mauelshagen:lvm2</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -14,4 +14,9 @@
       <pkg>dev-libs/libunique</pkg>.
     </flag>
   </use>
+  <use>
+  	<flag name='mecab'>
+	  Enable <pkg>app-text/mecab</pkg> support
+	</flag>
+  </use>
 </pkgmetadata>

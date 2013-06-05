@@ -330,6 +330,7 @@ app-crypt/shishi:null - Enable dummy NULL encryption/checksum type.
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-crypt/truecrypt:asm - Enable assembly for optimization
 app-dicts/aspell-be:classic - Support classic spelling by default
+app-dicts/gwaei:mecab - Enable app-text/mecab support
 app-dicts/gwaei:unique - Enable single instance support using dev-libs/libunique.
 app-dicts/myspell-pt:preao - Use the pre ortographic agreement version of the dictionary
 app-doc/csound-manual:html - Install HTML documentation

@@ -6,4 +6,7 @@
 	<flag name="loongson2f">Enable Loongson2f MMI optimizations.</flag>
 	<flag name="mmxext">Enable MMX2 support.</flag>
 </use>
+<upstream>
+	<remote-id type="cpe">cpe:/a:pixman:pixman</remote-id>
+</upstream>
 </pkgmetadata>

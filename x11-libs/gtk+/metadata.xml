@@ -16,4 +16,7 @@
     <flag name="packagekit">Enable support for the distro-neutral package
 	  manager GUI <pkg>app-admin/packagekit</pkg> in application chooser</flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:gtk:gtk%2B</remote-id>
+  </upstream>
 </pkgmetadata>
