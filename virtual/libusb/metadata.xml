@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>base-system</herd>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>peter@stuge.se</email>
+		<name>Peter Stuge</name>
+	</maintainer>
 </pkgmetadata>

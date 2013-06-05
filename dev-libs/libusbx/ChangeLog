@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusbx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.11 2013/04/19 06:25:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.12 2013/06/05 02:09:56 ssuominen Exp $
+
+  05 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Peter Stuge from libusb upstream is sharing ebuild maintenance by his own
+  request.
 
   19 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -libusbx-1.0.14.ebuild:
   old

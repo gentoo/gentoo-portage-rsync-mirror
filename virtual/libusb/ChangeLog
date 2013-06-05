@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.30 2013/05/12 15:38:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.31 2013/06/05 02:08:30 ssuominen Exp $
+
+  05 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Peter Stuge from libusb upstream is sharing ebuild maintenance by his own
+  request.
 
   12 May 2013; Andreas K. Huettel <dilfridge@gentoo.org> libusb-1.ebuild:
   Add ~amd64-fbsd, acked by aballier, bug 469502

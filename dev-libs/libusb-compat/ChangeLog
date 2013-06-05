@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb-compat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.23 2013/05/21 11:54:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.24 2013/06/05 02:09:06 ssuominen Exp $
+
+  05 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Peter Stuge from libusb upstream is sharing ebuild maintenance by his own
+  request.
 
 *libusb-compat-0.1.5 (21 May 2013)
 

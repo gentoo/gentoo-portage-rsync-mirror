@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.146 2012/11/18 10:44:31 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.147 2013/06/05 02:08:01 ssuominen Exp $
+
+  05 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Peter Stuge from libusb upstream is sharing ebuild maintenance by his own
+  request.
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.
