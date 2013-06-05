@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.711 2013/05/15 05:33:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.712 2013/06/05 13:18:46 olemarkus Exp $
+
+*php-5.5.0_rc2 (05 Jun 2013)
+
+  05 Jun 2013; Ole Markus With <olemarkus@gentoo.org> +php-5.5.0_rc2.ebuild:
+  Version bump
 
   15 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Fix metadata.xml

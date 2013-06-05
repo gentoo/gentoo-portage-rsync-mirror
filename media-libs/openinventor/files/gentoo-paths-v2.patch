@@ -1,6 +1,5 @@
-diff -ur ../1/inventor/apps/demos/SceneViewer/SoSceneViewer.c++ ./inventor/apps/demos/SceneViewer/SoSceneViewer.c++
---- ../1/inventor/apps/demos/SceneViewer/SoSceneViewer.c++	2003-06-11 03:20:09.000000000 +0200
-+++ ./inventor/apps/demos/SceneViewer/SoSceneViewer.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/demos/SceneViewer/SoSceneViewer.c++	2003-06-11 03:20:09.000000000 +0200
++++ b/inventor/apps/demos/SceneViewer/SoSceneViewer.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -4734,10 +4734,10 @@
  //
  ////////////////////////////////////////////////////////////////////////
@@ -23,9 +22,8 @@ diff -ur ../1/inventor/apps/demos/SceneViewer/SoSceneViewer.c++ ./inventor/apps/
      system(command);
  }
  
-diff -ur ../1/inventor/apps/demos/gview/DisplayGraph.c++ ./inventor/apps/demos/gview/DisplayGraph.c++
---- ../1/inventor/apps/demos/gview/DisplayGraph.c++	2002-06-01 04:22:20.000000000 +0200
-+++ ./inventor/apps/demos/gview/DisplayGraph.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/demos/gview/DisplayGraph.c++	2002-06-01 04:22:20.000000000 +0200
++++ b/inventor/apps/demos/gview/DisplayGraph.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -67,7 +67,7 @@
  SbDict	*DisplayGraph::iconDict;
  
@@ -35,9 +33,8 @@ diff -ur ../1/inventor/apps/demos/gview/DisplayGraph.c++ ./inventor/apps/demos/g
  #define ICON_ENV_VAR	"IV_GRAPH_DIR"
  
  ////////////////////////////////////////////////////////////////////////
-diff -ur ../1/inventor/apps/demos/noodle/Interface.c++ ./inventor/apps/demos/noodle/Interface.c++
---- ../1/inventor/apps/demos/noodle/Interface.c++	2002-06-01 04:22:20.000000000 +0200
-+++ ./inventor/apps/demos/noodle/Interface.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/demos/noodle/Interface.c++	2002-06-01 04:22:20.000000000 +0200
++++ b/inventor/apps/demos/noodle/Interface.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -399,9 +399,9 @@
  void
  Interface::showAboutDialog()
@@ -59,9 +56,8 @@ diff -ur ../1/inventor/apps/demos/noodle/Interface.c++ ./inventor/apps/demos/noo
      system(command);
  }
  
-diff -ur ../1/inventor/apps/demos/qmorf/qmorf.c++ ./inventor/apps/demos/qmorf/qmorf.c++
---- ../1/inventor/apps/demos/qmorf/qmorf.c++	2002-06-01 04:22:20.000000000 +0200
-+++ ./inventor/apps/demos/qmorf/qmorf.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/demos/qmorf/qmorf.c++	2002-06-01 04:22:20.000000000 +0200
++++ b/inventor/apps/demos/qmorf/qmorf.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -414,7 +414,7 @@
  		"they must contain QuadMeshes (qmorf can\n");
  	fprintf(stderr, "only morph QuadMesh nodes).\n");
@@ -93,9 +89,8 @@ diff -ur ../1/inventor/apps/demos/qmorf/qmorf.c++ ./inventor/apps/demos/qmorf/qm
      system(command);
  }	
  
-diff -ur ../1/inventor/apps/demos/revo/revo.c++ ./inventor/apps/demos/revo/revo.c++
---- ../1/inventor/apps/demos/revo/revo.c++	2002-06-01 04:22:21.000000000 +0200
-+++ ./inventor/apps/demos/revo/revo.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/demos/revo/revo.c++	2002-06-01 04:22:21.000000000 +0200
++++ b/inventor/apps/demos/revo/revo.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -78,10 +78,10 @@
  void
  showAboutDialog(Widget, XtPointer, XtPointer)
@@ -118,9 +113,8 @@ diff -ur ../1/inventor/apps/demos/revo/revo.c++ ./inventor/apps/demos/revo/revo.
      system(command);
  }	
  
-diff -ur ../1/inventor/apps/demos/textomatic/textomatic.c++ ./inventor/apps/demos/textomatic/textomatic.c++
---- ../1/inventor/apps/demos/textomatic/textomatic.c++	2003-07-12 00:40:53.000000000 +0200
-+++ ./inventor/apps/demos/textomatic/textomatic.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/demos/textomatic/textomatic.c++	2003-07-12 00:40:53.000000000 +0200
++++ b/inventor/apps/demos/textomatic/textomatic.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -160,10 +160,10 @@
  void
  showAboutDialog(Widget, XtPointer, XtPointer)
@@ -143,9 +137,8 @@ diff -ur ../1/inventor/apps/demos/textomatic/textomatic.c++ ./inventor/apps/demo
      system(command);
  }	
  
-diff -ur ../1/inventor/apps/samples/widgets/MyMtlPal.c++ ./inventor/apps/samples/widgets/MyMtlPal.c++
---- ../1/inventor/apps/samples/widgets/MyMtlPal.c++	2002-06-01 04:22:21.000000000 +0200
-+++ ./inventor/apps/samples/widgets/MyMtlPal.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/samples/widgets/MyMtlPal.c++	2002-06-01 04:22:21.000000000 +0200
++++ b/inventor/apps/samples/widgets/MyMtlPal.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -193,7 +193,7 @@
  };
  
@@ -155,9 +148,8 @@ diff -ur ../1/inventor/apps/samples/widgets/MyMtlPal.c++ ./inventor/apps/samples
  
  
  static char *geometryBuffer = "\
-diff -ur ../1/inventor/apps/samples/widgets/MyTextureEd.c++ ./inventor/apps/samples/widgets/MyTextureEd.c++
---- ../1/inventor/apps/samples/widgets/MyTextureEd.c++	2002-06-01 04:22:21.000000000 +0200
-+++ ./inventor/apps/samples/widgets/MyTextureEd.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/samples/widgets/MyTextureEd.c++	2002-06-01 04:22:21.000000000 +0200
++++ b/inventor/apps/samples/widgets/MyTextureEd.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -228,7 +228,7 @@
  
  
@@ -167,9 +159,8 @@ diff -ur ../1/inventor/apps/samples/widgets/MyTextureEd.c++ ./inventor/apps/samp
  static char *editorTitle = "Texture Editor";
  static char *noFileNameStr = "<empty>";
  
-diff -ur ../1/inventor/apps/tools/ivview/ivview.c++ ./inventor/apps/tools/ivview/ivview.c++
---- ../1/inventor/apps/tools/ivview/ivview.c++	2002-06-01 04:22:21.000000000 +0200
-+++ ./inventor/apps/tools/ivview/ivview.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/apps/tools/ivview/ivview.c++	2002-06-01 04:22:21.000000000 +0200
++++ b/inventor/apps/tools/ivview/ivview.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -715,9 +715,9 @@
  static void
  showAboutDialog()
@@ -191,9 +182,8 @@ diff -ur ../1/inventor/apps/tools/ivview/ivview.c++ ./inventor/apps/tools/ivview
      system(command);
  }
  
-diff -ur ../1/inventor/libFL/ang/fl.c ./inventor/libFL/ang/fl.c
---- ../1/inventor/libFL/ang/fl.c	2003-07-12 00:40:53.000000000 +0200
-+++ ./inventor/libFL/ang/fl.c	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/libFL/ang/fl.c	2003-07-12 00:40:53.000000000 +0200
++++ b/inventor/libFL/ang/fl.c	2005-11-15 13:33:06.000000000 +0100
 @@ -95,7 +95,7 @@
    NULL
  };
@@ -203,9 +193,8 @@ diff -ur ../1/inventor/libFL/ang/fl.c ./inventor/libFL/ang/fl.c
  int fl_debug = FALSE;
  
  /*
-diff -ur ../1/inventor/libSoXt/src/SoXtComponent.c++ ./inventor/libSoXt/src/SoXtComponent.c++
---- ../1/inventor/libSoXt/src/SoXtComponent.c++	2002-06-01 04:16:10.000000000 +0200
-+++ ./inventor/libSoXt/src/SoXtComponent.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/libSoXt/src/SoXtComponent.c++	2002-06-01 04:16:10.000000000 +0200
++++ b/inventor/libSoXt/src/SoXtComponent.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -622,7 +622,7 @@
      }
      
@@ -215,9 +204,8 @@ diff -ur ../1/inventor/libSoXt/src/SoXtComponent.c++ ./inventor/libSoXt/src/SoXt
      strcat(cardPath, cardName);
      if ( access(cardPath, R_OK) == 0 ) {
  	strcat(pgrCmd, cardPath);
-diff -ur ../1/inventor/libSoXt/src/mtlEdit/SoXtMtlEdit.c++ ./inventor/libSoXt/src/mtlEdit/SoXtMtlEdit.c++
---- ../1/inventor/libSoXt/src/mtlEdit/SoXtMtlEdit.c++	2002-06-01 04:16:10.000000000 +0200
-+++ ./inventor/libSoXt/src/mtlEdit/SoXtMtlEdit.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/libSoXt/src/mtlEdit/SoXtMtlEdit.c++	2002-06-01 04:16:10.000000000 +0200
++++ b/inventor/libSoXt/src/mtlEdit/SoXtMtlEdit.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -156,7 +156,7 @@
  	"Material Emissive Color"
  };
@@ -227,9 +215,8 @@ diff -ur ../1/inventor/libSoXt/src/mtlEdit/SoXtMtlEdit.c++ ./inventor/libSoXt/sr
  
  static char *slider_labels[] = { (char *)NULL, (char *)NULL, (char *)NULL,
  				 (char *)NULL, (char *)NULL, (char *)NULL
-diff -ur ../1/inventor/libSoXt/src/mtlEdit/SoXtMtlList.c++ ./inventor/libSoXt/src/mtlEdit/SoXtMtlList.c++
---- ../1/inventor/libSoXt/src/mtlEdit/SoXtMtlList.c++	2002-06-01 04:16:10.000000000 +0200
-+++ ./inventor/libSoXt/src/mtlEdit/SoXtMtlList.c++	2005-11-15 13:33:06.000000000 +0100
+--- a/inventor/libSoXt/src/mtlEdit/SoXtMtlList.c++	2002-06-01 04:16:10.000000000 +0200
++++ b/inventor/libSoXt/src/mtlEdit/SoXtMtlList.c++	2005-11-15 13:33:06.000000000 +0100
 @@ -264,7 +264,7 @@
      setClassName("SoXtMaterialList");
      if (dir != NULL)
@@ -239,9 +226,8 @@ diff -ur ../1/inventor/libSoXt/src/mtlEdit/SoXtMtlList.c++ ./inventor/libSoXt/sr
  
      callbackList = new SoCallbackList;
      curPalette = -1;
-diff -ur ../1/inventor/make/ivcommondefs ./inventor/make/ivcommondefs
---- ../1/inventor/make/ivcommondefs	2003-07-12 00:40:54.000000000 +0200
-+++ ./inventor/make/ivcommondefs	2005-11-15 13:35:19.000000000 +0100
+--- a/inventor/make/ivcommondefs	2003-07-12 00:40:54.000000000 +0200
++++ b/inventor/make/ivcommondefs	2005-11-15 13:35:19.000000000 +0100
 @@ -192,11 +192,11 @@
  IVDLIBDIR = $(IVLIBDIR)/InventorDebug
  IVHDRTOP = $(IVROOT)/$(IVPREFIX)/include/Inventor
