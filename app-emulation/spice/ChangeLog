@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.46 2013/06/04 22:16:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.47 2013/06/05 17:13:28 cardoe Exp $
+
+  05 Jun 2013; Doug Goldstein <cardoe@gentoo.org> spice-0.12.3.ebuild:
+  Improvements from Alphat-PC <alphatpc@gmail.com> as well as some other tweaks
+  to make this package installer smoother. bug #472358
 
   04 Jun 2013; Doug Goldstein <cardoe@gentoo.org>
   -files/0.10.1-disable-werror.patch, -files/0.10.1-gold.patch,

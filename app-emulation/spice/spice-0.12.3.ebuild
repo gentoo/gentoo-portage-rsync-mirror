@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.3.ebuild,v 1.1 2013/06/04 22:13:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.3.ebuild,v 1.2 2013/06/05 17:13:28 cardoe Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
 
 inherit eutils python-any-r1
 
@@ -18,8 +18,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="client gui sasl smartcard static-libs" # static
 
 RDEPEND=">=x11-libs/pixman-0.17.7
+	>=dev-libs/glib-2.22:2
 	media-libs/alsa-lib
-	media-libs/celt:0.5.1
+	>=media-libs/celt-0.5.1.1:0.5.1
 	dev-libs/openssl
 	virtual/jpeg
 	sys-libs/zlib
@@ -30,7 +31,7 @@ RDEPEND=">=x11-libs/pixman-0.17.7
 		>=x11-libs/libXrandr-1.2
 		x11-libs/libX11
 		x11-libs/libXext
-		x11-libs/libXinerama
+		>=x11-libs/libXinerama-1.0
 		x11-libs/libXfixes
 		x11-libs/libXrender
 	)"
@@ -52,11 +53,15 @@ RDEPEND=">=x11-libs/pixman-0.17.7
 #	)"
 DEPEND="virtual/pkgconfig
 	virtual/pyparsing
+	${PYTHON_DEP}
 	${RDEPEND}"
 
+python_check_deps() {
+	has_version "virtual/pyparsing[${PYTHON_USEDEP}]"
+}
+
 pkg_setup() {
-	python-any-r1_pkg_setup
-	python_export_best
+	[[ ${MERGE_TYPE} != binary ]] && python-any-r1_pkg_setup
 }
 
 # maintainer notes:
@@ -82,12 +87,12 @@ src_configure() {
 
 src_install() {
 	default
-	use static-libs || rm "${D}"/usr/lib*/*.la
+	use static-libs || prune_libtool_files
 }
 
 pkg_postinst() {
-	if use client -o use gui; then
-		ewarn "USE=client and USE=gui will be removed in the next version."
+	if use gui; then
+		ewarn "USE=gui will be removed in the next version."
 		ewarn "Upstream has stated that 'spicy' is deprecated and that you"
 		ewarn "should use 'remote-viewer' from app-emulation/virt-viewer."
 	fi
