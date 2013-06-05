@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.2_p1-r1.ebuild,v 1.3 2013/05/27 16:04:08 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.3_p1.ebuild,v 1.1 2013/06/05 16:59:27 zx2c4 Exp $
 
 EAPI=5
 
@@ -60,7 +60,7 @@ src_configure() {
 		--sysconfdir=/etc/opensmtpd \
 		$(use_with sqlite experimental-sqlite) \
 		$(use_with pam)
-		#--with-lookup-user=smtpl  will be available in the release after 5.3p1
+		#--with-lookup-user=smtpl  will be available in the release after some point
 }
 
 src_install() {
@@ -83,7 +83,7 @@ pkg_preinst() {
 	enewgroup smtpq 252
 	enewuser smtpq 252 -1 /var/empty smtpq
 
-	# For release after 5.3p1:
+	# For release after some point:
 	#enewgroup smtpl 253
 	#enewuser smtpl 253 -1 /var/empty smtpl
 }
