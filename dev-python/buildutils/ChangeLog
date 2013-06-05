@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/buildutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/ChangeLog,v 1.8 2010/04/04 16:41:05 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/ChangeLog,v 1.9 2013/06/05 11:18:11 idella4 Exp $
+
+*buildutils-0.3-r1 (05 Jun 2013)
+
+  05 Jun 2013; Ian Delaney <idella4@gentoo.org> +buildutils-0.3-r1.ebuild,
+  -buildutils-0.3.ebuild:
+  revbump, migrate -> distutils-r1, remove old, add test phase
 
   04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   buildutils-0.3.ebuild:
@@ -37,4 +43,3 @@
   07 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
   +buildutils-0.1.2.ebuild:
   New ebuild for bug #155366, thanks to Brad Walker.
-

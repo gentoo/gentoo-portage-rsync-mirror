@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.14 2013/06/05 11:29:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.18.ebuild,v 1.1 2013/06/05 11:29:56 scarabeus Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/harfbuzz"
 [[ ${PV} == 9999 ]] && inherit git-2 autotools
 
-inherit eutils libtool
+inherit eutils libtool autotools
 
 DESCRIPTION="An OpenType text shaping engine"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
@@ -43,8 +43,12 @@ src_prepare() {
 			-e '/libharfbuzz_la_LINK = /s/\<LINK\>/CXXLINK/' \
 			src/Makefile.in || die
 	fi
+
 	[[ ${PV} == 9999 ]] && eautoreconf
 	elibtoolize  # for building a shared library on x64-solaris
+
+	epatch "${FILESDIR}/${P}-ldadd.patch"
+	eautoreconf
 }
 
 src_configure() {

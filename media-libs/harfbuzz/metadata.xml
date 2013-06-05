@@ -3,4 +3,8 @@
 <pkgmetadata>
 	<herd>openoffice</herd>
 	<herd>gnome</herd>
+	<use>
+		<flag name="glib">Compile with GLib Unicode support</flag>
+		<flag name="graphite">Use graphite to render complex non-Roman writing systems</flag>
+	</use>
 </pkgmetadata>
