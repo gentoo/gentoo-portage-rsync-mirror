@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libiscsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/ChangeLog,v 1.6 2013/06/04 12:33:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/ChangeLog,v 1.7 2013/06/05 19:50:10 cardoe Exp $
+
+*libiscsi-1.9.0-r1 (05 Jun 2013)
+
+  05 Jun 2013; Doug Goldstein <cardoe@gentoo.org> +files/libiscsi-1.9.0-0001-All
+  ow-users-to-disable-Werror-at-configure-time.patch, +libiscsi-1.9.0-r1.ebuild:
+  Fix building with -Werror by default, bug #469026. Fix not respecting LDFLAGS
+  QA warning, bug #469028
 
   04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libiscsi-1.9.0.ebuild:
   Stable for x86, wrt bug #466092
