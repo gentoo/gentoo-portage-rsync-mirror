@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.95 2013/05/29 15:45:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.96 2013/06/05 06:24:04 jlec Exp $
+
+*netatalk-3.0.4 (05 Jun 2013)
+
+  05 Jun 2013; Justin Lecher <jlec@gentoo.org> +netatalk-3.0.4.ebuild:
+  Version BUmp, #472316
 
   29 May 2013; Justin Lecher <jlec@gentoo.org> netatalk-3.0.3.ebuild:
   Fix usage of new python r1 eclasses (missing PYTHON_REQUIRED_USE)
