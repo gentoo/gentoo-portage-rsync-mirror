@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/kid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.15 2009/10/10 17:24:44 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.16 2013/06/05 05:57:23 idella4 Exp $
+
+*kid-0.9.6-r1 (05 Jun 2013)
+
+  05 Jun 2013; Ian Delaney <idella4@gentoo.org> +kid-0.9.6-r1.ebuild,
+  -kid-0.9.6.ebuild:
+  revbump, migrate -> distutils-r1, remove old
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> kid-0.9.6.ebuild:
   Merge from Prefix
@@ -76,4 +82,3 @@
   10 Nov 2005; Rob Cakebread <pythonhead@gentoo.org>
   +files/kid-0.7.1-ezsetup-gentoo.patch, +metadata.xml, +kid-0.7.1.ebuild:
   Initial commit.
-
