@@ -1,0 +1,35 @@
+From 0ed3b482a422ff684c8921b7de9f44ea7b20345c Mon Sep 17 00:00:00 2001
+From: Kevin Cozens <kcozens@svn.gnome.org>
+Date: Sun, 30 Dec 2012 15:43:50 +0000
+Subject: Fixed MIME_TYPES. Postscript and PDF are compiled conditionally. Fixes #690882.
+
+(cherry picked from commit d17622dce6228bebd646ed1eb3063fc952905cfd)
+---
+(limited to 'configure.ac')
+
+diff --git a/configure.ac b/configure.ac
+index 9db3696..8523aeb 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1024,7 +1024,7 @@ AC_SUBST(GIMP_COMMAND)
+ 
+ # The list of MIME types that are supported by plug-ins that are compiled
+ # unconditionally:
+-MIME_TYPES="application/postscript;application/pdf;image/bmp;image/g3fax;image/gif;image/x-fits;image/x-pcx;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-psd;image/x-sgi;image/x-tga;image/x-xbitmap;image/x-xwindowdump;image/x-xcf;image/x-compressed-xcf;image/x-gimp-gbr;image/x-gimp-pat;image/x-gimp-gih"
++MIME_TYPES="image/bmp;image/g3fax;image/gif;image/x-fits;image/x-pcx;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-psd;image/x-sgi;image/x-tga;image/x-xbitmap;image/x-xwindowdump;image/x-xcf;image/x-compressed-xcf;image/x-gimp-gbr;image/x-gimp-pat;image/x-gimp-gih"
+ 
+ 
+ ###################
+@@ -1201,6 +1201,10 @@ if test "x$with_gs" != xno; then
+   fi
+ fi
+ 
++if test "x$have_gs" = xyes; then
++  MIME_TYPES="$MIME_TYPES;application/postscript"
++fi
++
+ AC_SUBST(FILE_PS)
+ AM_CONDITIONAL(HAVE_GS, test "x$have_gs" = xyes)
+ AC_SUBST(GS_LIBS)
+--
+cgit v0.9.2

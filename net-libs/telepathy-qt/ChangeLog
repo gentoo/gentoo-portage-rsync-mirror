@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/telepathy-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.20 2013/03/02 22:58:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.21 2013/06/05 21:35:40 johu Exp $
+
+*telepathy-qt-0.9.3-r1 (05 Jun 2013)
+
+  05 Jun 2013; Johannes Huber <johu@gentoo.org>
+  +files/telepathy-qt-0.9.3-avatar-duplication.patch,
+  +telepathy-qt-0.9.3-r1.ebuild:
+  Revision bump. EAPI 5, migrate to non obsolete python eclass, adds upstream
+  patch which fixes avatars stored several times when they exist spotted by
+  Lamarque V. Souza <lamarque@gmail.com> wrt bug #472180.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> telepathy-qt-0.8.0.ebuild,
   telepathy-qt-0.9.2.ebuild, telepathy-qt-0.9.3.ebuild:

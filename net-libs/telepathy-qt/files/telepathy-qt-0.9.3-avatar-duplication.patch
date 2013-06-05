@@ -1,0 +1,65 @@
+From 8da9f7069929893bcee64dab22101134752fe618 Mon Sep 17 00:00:00 2001
+From: George Kiagiadakis <george.kiagiadakis@collabora.com>
+Date: Thu, 07 Feb 2013 12:37:49 +0000
+Subject: Fix storing avatars, so that they are not stored millions of times each
+
+The original problem lies in the fact that QFile::rename() does not overwrite
+existing files. Therefore it fails and the temporary file stays on the
+filesystem together with the already existing avatar file. Checking if the file
+exists before renaming solves this partially, but the problem is that this
+operation is not atomic. There can be many processes using tp-qt, fetching
+avatars at the same time from the server, and in this case we can still have
+a problem there. The final solution is to ignore a new avatar that has the same
+token as an avatar that is already on the filesystem. According to the spec,
+different avatars have different tokens, so if an avatar changes, the token
+changes as well.
+
+https://bugs.freedesktop.org/show_bug.cgi?id=47647
+
+Reviewed-by: David Edmundson <kde@davidedmundson.co.uk>
+---
+diff --git a/TelepathyQt/contact-manager.cpp b/TelepathyQt/contact-manager.cpp
+index a67e736..dfa28bc 100644
+--- a/TelepathyQt/contact-manager.cpp
++++ b/TelepathyQt/contact-manager.cpp
+@@ -1341,17 +1341,27 @@ void ContactManager::onAvatarRetrieved(uint handle, const QString &token,
+         debug() << "Filename:" << avatarFileName;
+         debug() << "MimeType:" << mimeType;
+ 
+-        QTemporaryFile mimeTypeFile(mimeTypeFileName);
+-        mimeTypeFile.open();
+-        mimeTypeFile.write(mimeType.toLatin1());
+-        mimeTypeFile.setAutoRemove(false);
+-        mimeTypeFile.rename(mimeTypeFileName);
+-
+-        QTemporaryFile avatarFile(avatarFileName);
+-        avatarFile.open();
+-        avatarFile.write(data);
+-        avatarFile.setAutoRemove(false);
+-        avatarFile.rename(avatarFileName);
++        if (!QFile::exists(mimeTypeFileName)) {
++            QTemporaryFile mimeTypeFile(mimeTypeFileName);
++            if (mimeTypeFile.open()) {
++                mimeTypeFile.write(mimeType.toLatin1());
++                mimeTypeFile.setAutoRemove(false);
++                if (!mimeTypeFile.rename(mimeTypeFileName)) {
++                    mimeTypeFile.remove();
++                }
++            }
++        }
++
++        if (!QFile::exists(avatarFileName)) {
++            QTemporaryFile avatarFile(avatarFileName);
++            if (avatarFile.open()) {
++                avatarFile.write(data);
++                avatarFile.setAutoRemove(false);
++                if (!avatarFile.rename(avatarFileName)) {
++                    avatarFile.remove();
++                }
++            }
++        }
+     }
+ 
+     ContactPtr contact = lookupContactByHandle(handle);
+--
+cgit v0.9.0.2-2-gbebe
