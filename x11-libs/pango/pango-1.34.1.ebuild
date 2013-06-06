@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.34.1.ebuild,v 1.2 2013/05/15 19:47:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.34.1.ebuild,v 1.3 2013/06/06 14:24:31 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -20,7 +20,7 @@ IUSE="X +introspection"
 # Bump cairo dep to be safer:
 # https://bugzilla.gnome.org/show_bug.cgi?id=700247#c4
 RDEPEND="
-	>=media-libs/harfbuzz-0.9.9:=
+	>=media-libs/harfbuzz-0.9.9:=[glib(+),truetype(+)]
 	>=dev-libs/glib-2.33.12:2
 	>=media-libs/fontconfig-2.10.91:1.0=
 	media-libs/freetype:2=

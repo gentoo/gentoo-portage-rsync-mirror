@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.374 2013/05/15 19:47:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.375 2013/06/06 14:24:31 tetromino Exp $
+
+  06 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> pango-1.32.5.ebuild,
+  pango-1.34.0.ebuild, pango-1.34.1.ebuild:
+  Depend on harfbuzz[glib,truetype] (bug #472478, thanks to Conrad Kostecki).
 
   15 May 2013; Matt Turner <mattst88@gentoo.org> pango-1.32.5.ebuild,
   pango-1.34.0.ebuild, pango-1.34.1.ebuild:
