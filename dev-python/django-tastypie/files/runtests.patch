@@ -28,7 +28,7 @@ diff -ur django-tastypie-0.9.15.oirg/tests/run_all_tests.sh django-tastypie-0.9.
 +		continue
 +	else
 +		echo "Test ${type} failed"
-+		exit -1
++		exit 1
 +	fi
      elif [ $type == 'gis' ]; then
 -        createdb -T template_postgis tastypie.db
@@ -39,7 +39,7 @@ diff -ur django-tastypie-0.9.15.oirg/tests/run_all_tests.sh django-tastypie-0.9.
 -    echo; echo
 +    if ! django-admin.py test $type --settings=settings_$type; then
 +                echo "Test ${type} failed"     
-+                exit -1
++                exit 1
 +    else
 +        echo; echo
 +    fi

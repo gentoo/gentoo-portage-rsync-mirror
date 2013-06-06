@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.6.ebuild,v 1.8 2013/04/02 20:55:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.6.ebuild,v 1.9 2013/06/06 09:49:26 pinkbyte Exp $
 
 EAPI="4"
 
@@ -35,5 +35,6 @@ src_configure() {
 		--enable-bip=${bip} \
 		$(use_enable usb) \
 		--disable-system-config \
-		$(use_enable debug)
+		$(use_enable debug) \
+		--disable-silent-rules
 }

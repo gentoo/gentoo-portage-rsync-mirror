@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/django-tastypie-0.9.15.ebuild,v 1.3 2013/06/03 07:08:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/django-tastypie-0.9.15.ebuild,v 1.4 2013/06/06 09:32:46 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -42,11 +42,7 @@ DEPEND="${RDEPEND}
 		dev-python/mock[${PYTHON_USEDEP}]
 	)"
 
-python_prepare_all() {
-	# skip run tests script
-	use test && epatch "${FILESDIR}"/runtests.patch
-	distutils-r1_python_prepare_all
-}
+PATCHES=( "${FILESDIR}"/runtests.patch )
 
 python_compile_all() {
 	use doc && emake -C docs html
@@ -57,7 +53,7 @@ src_test() {
 }
 
 python_test() {
-	PYTHONPATH=.:tests ./tests/run_all_tests.sh
+	PYTHONPATH=.:tests ./tests/run_all_tests.sh || die
 }
 
 python_install_all() {

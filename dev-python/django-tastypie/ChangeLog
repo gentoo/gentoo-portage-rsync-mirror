@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-tastypie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/ChangeLog,v 1.6 2013/06/03 07:17:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/ChangeLog,v 1.7 2013/06/06 09:32:46 idella4 Exp $
+
+  06 Jun 2013; Ian Delaney <idella4@gentoo.org> django-tastypie-0.9.15.ebuild,
+  files/runtests.patch:
+  tidyup
 
   3 June 2013; Ian Delaney <idella4@gentoo.org> +runtests.patch,
   django-tastypie-0.9.15.ebuild:
