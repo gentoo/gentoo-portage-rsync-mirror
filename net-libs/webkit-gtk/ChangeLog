@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.205 2013/05/28 05:23:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.207 2013/06/06 05:12:24 tetromino Exp $
+
+  06 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  files/webkit-gtk-2.0.2-harfbuzz-0.9.18.patch:
+  Avoid CRLF line endings in patch.
+
+  06 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-2.0.1.ebuild, webkit-gtk-2.0.2.ebuild,
+  +files/webkit-gtk-2.0.2-harfbuzz-0.9.18.patch:
+  Fix linking failure with harfbuzz-0.9.18, and add a subslot dependency to
+  allow for automatic rebuilding when 0.9.18-rX is subslotted.
 
   28 May 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   webkit-gtk-1.10.2-r300.ebuild, +files/webkit-gtk-1.10.2-gcc-4.8.patch,

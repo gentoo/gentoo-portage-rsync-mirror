@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.2.ebuild,v 1.1 2013/05/15 11:53:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.2.ebuild,v 1.2 2013/06/06 05:09:38 tetromino Exp $
 
 EAPI="5"
 inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils toolchain-funcs versionator virtualx
@@ -25,7 +25,7 @@ RDEPEND="
 	app-crypt/libsecret
 	dev-libs/libxml2:2
 	dev-libs/libxslt
-	media-libs/harfbuzz
+	media-libs/harfbuzz:=
 	media-libs/libwebp
 	virtual/jpeg:=
 	>=media-libs/libpng-1.4:0=
@@ -149,6 +149,9 @@ src_prepare() {
 	fi
 	# garbage collection test fails intermittently if icedtea-web is installed, bug #????
 	epatch "${FILESDIR}/${PN}-1.7.90-test_garbage_collection.patch"
+
+	# Fix linking with harfbuzz-0.9.18; in 2.1.x
+	epatch "${FILESDIR}/${PN}-2.0.2-harfbuzz-0.9.18.patch"
 
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC

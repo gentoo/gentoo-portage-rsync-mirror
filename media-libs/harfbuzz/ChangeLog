@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.34 2013/06/05 11:29:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.35 2013/06/06 05:23:28 tetromino Exp $
+
+*harfbuzz-0.9.18-r1 (06 Jun 2013)
+
+  06 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -harfbuzz-0.9.18.ebuild, +harfbuzz-0.9.18-r1.ebuild, harfbuzz-9999.ebuild:
+  Add a subslot due to ABI change (some symbols moved to libharfbuzz-icu), bug
+  #472416.
 
 *harfbuzz-0.9.18 (05 Jun 2013)
 
