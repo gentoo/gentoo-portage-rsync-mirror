@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.388 2013/05/30 11:20:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.389 2013/06/06 01:53:17 ottxor Exp $
+
+  06 Jun 2013; Christoph Junghans <ottxor@gentoo.org>
+  linux/amd64/make.defaults:
+  removed misleading DEFAULT_ABI (bug #471079#c12)
 
   30 May 2013; Michał Górny <mgorny@gentoo.org> darwin/make.defaults:
   Drop stale ALSA_PCM_PLUGINS from USE_EXPAND. Bug #471792.
