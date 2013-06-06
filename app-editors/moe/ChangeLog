@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/moe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.1 2013/05/03 17:10:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.2 2013/06/06 06:36:32 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd
 
 *moe-1.5 (03 May 2013)
 

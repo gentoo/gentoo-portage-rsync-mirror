@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/scope
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scope/ChangeLog,v 1.10 2013/03/03 00:06:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scope/ChangeLog,v 1.11 2013/06/06 06:37:41 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd
 
   03 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> -scope-0.04.ebuild,
   scope-0.04-r1.ebuild:
