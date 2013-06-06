@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.356 2013/06/04 02:59:40 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.357 2013/06/06 07:41:39 ryao Exp $
+
+  06 Jun 2013; Richard Yao <ryao@gentoo.org> metadata.xml:
+  Change USE=crypt description to indicate that it is obsolete. Also, fix typo
+  in cryptsetup description.
 
 *genkernel-3.4.46.1 (04 Jun 2013)
 
