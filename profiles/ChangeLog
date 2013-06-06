@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7912 2013/06/05 15:44:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7913 2013/06/06 05:34:49 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  targets/desktop/gnome/package.use:
+  Enable USE=icu for harfbuzz for gnome profile, it's needed for webkit-gtk-2.
 
   05 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   unmask media-video/vdr-2.0.2-r1
