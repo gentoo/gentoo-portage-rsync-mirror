@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.3 2013/04/22 11:13:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.4 2013/06/06 22:07:45 creffett Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
+	|| ( media-video/mplayer2 media-video/mplayer )
 "
 
 DOCS=( ChangeLog README TODO )
