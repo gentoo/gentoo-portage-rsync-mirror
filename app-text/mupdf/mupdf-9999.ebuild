@@ -1,14 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.27 2013/06/06 13:39:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.28 2013/06/06 22:58:47 xmw Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils flag-o-matic git-2 multilib toolchain-funcs
+inherit eutils git-2 multilib toolchain-funcs
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
 EGIT_REPO_URI="git://git.ghostscript.com/mupdf.git"
+#EGIT_HAS_SUBMODULES=1
 
 LICENSE="AGPL-3"
 SLOT="0"
@@ -25,8 +26,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-9999-buildsystem.patch \
+	rm -rf thirdparty || die
+
+	epatch "${FILESDIR}"/${PN}-9999-buildsystem.patch \
 		"${FILESDIR}"/${PN}-9999-openjpeg2.patch
 
 	if ! use vanilla ; then
