@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/curlftpfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.25 2013/06/06 19:33:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.26 2013/06/06 20:37:14 slyfox Exp $
+
+*curlftpfs-0.9.2-r2 (06 Jun 2013)
+
+  06 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +curlftpfs-0.9.2-r2.ebuild, +files/curlftpfs-0.9.2-memleak-nocache.patch,
+  +files/curlftpfs-0.9.2-memleak.patch, metadata.xml:
+  Added myself as a maintainer. Plugged known memory leaks fixed in debian and
+  fedora.
 
   06 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org> curlftpfs-0.9.2-r1.ebuild:
   Fixed build failure against automake-1.13.1 (obsoleted AM_CONFIG_HEADER, bug

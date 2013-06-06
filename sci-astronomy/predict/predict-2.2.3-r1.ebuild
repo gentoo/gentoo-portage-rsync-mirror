@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.2 2012/08/07 04:00:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.3 2013/06/06 20:52:49 mr_bones_ Exp $
 
 EAPI=4
 
@@ -31,19 +31,20 @@ src_prepare() {
 		debian/patches/140*.diff || die
 	sed -i -e 's:\(a\|b\)/:predict-2.2.3/:g' \
 		debian/patches/180*.diff || die
-	local p
-	for p in $(cat debian/patches/series); do
-		epatch -p1 debian/patches/${p}
-	done
+	EPATCH_SOURCE=debian/patches epatch -p1 $(cat debian/patches/series)
 	# fix some further array out of bounds errors
 	sed -i -e "s/satname\[ 26/satname\[ 25/g" \
 		clients/gsat-1.1.0/src/db.c || die
 	sed -i -e "s/satname\[ 26/satname\[ 25/g" \
 		clients/gsat-1.1.0/src/comms.c || die
+	sed -i -e "s/output\[20\];/output[21];/" \
+		utils/moontracker/moontracker.c || die
 	# fix underlinking
 	sed -i -e '/AC_OUTPUT/i \
 AC_CHECK_LIB(m,cos) \
-AC_CHECK_LIB(dl,dlclose)' clients/gsat-1.1.0/configure.in || die
+AC_CHECK_LIB(dl,dlclose)' \
+		-e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' \
+		clients/gsat-1.1.0/configure.in || die
 	sed -i \
 		-e 's/gcc/$(CC) $(CFLAGS) $(LDFLAGS)/g' \
 		-e 's/-o/-lm -o/g' \
