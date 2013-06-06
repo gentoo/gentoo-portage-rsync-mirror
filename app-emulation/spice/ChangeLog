@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.47 2013/06/05 17:13:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.48 2013/06/06 02:34:05 cardoe Exp $
+
+  06 Jun 2013; Doug Goldstein <cardoe@gentoo.org> spice-0.12.3.ebuild:
+  Fix typo
 
   05 Jun 2013; Doug Goldstein <cardoe@gentoo.org> spice-0.12.3.ebuild:
   Improvements from Alphat-PC <alphatpc@gmail.com> as well as some other tweaks

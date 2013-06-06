@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=virtual/pkgconfig virtual/pyparsing >=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=media-libs/celt-0.5.1.1:0.5.1 dev-libs/openssl virtual/jpeg sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) smartcard? ( >=app-emulation/libcacard-0.1.2 ) client? ( gui? ( =dev-games/cegui-0.6*[opengl] ) >=x11-libs/libXrandr-1.2 x11-libs/libX11 x11-libs/libXext >=x11-libs/libXinerama-1.0 x11-libs/libXfixes x11-libs/libXrender )
+DEPEND=virtual/pkgconfig virtual/pyparsing || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-lang/python:2.5 dev-python/pypy:2.0 dev-python/pypy:1.9 ) >=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=media-libs/celt-0.5.1.1:0.5.1 dev-libs/openssl virtual/jpeg sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) smartcard? ( >=app-emulation/libcacard-0.1.2 ) client? ( gui? ( =dev-games/cegui-0.6*[opengl] ) >=x11-libs/libXrandr-1.2 x11-libs/libX11 x11-libs/libXext >=x11-libs/libXinerama-1.0 x11-libs/libXfixes x11-libs/libXrender )
 DESCRIPTION=SPICE server and client.
 EAPI=5
 HOMEPAGE=http://spice-space.org/
@@ -10,4 +10,4 @@ RDEPEND=>=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=me
 SLOT=0
 SRC_URI=http://spice-space.org/download/releases/spice-0.12.3.tar.bz2
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	7ed4a8181d62a098eaa6c8eeacf190c9	python-utils-r1	178dc714fb13931948c7f7ccc0a4748b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=3b01932f701d828baa12806f88ad1d29
+_md5_=f8952abaf9d76e4f9d7d519ebfa81698

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND=dev-python/mozinfo dev-python/setuptools =dev-lang/python-2*
+DESCRIPTION=Mozilla-authored process handling
+EAPI=4
+HOMEPAGE=http://github.com/mozautomation/mozmill http://pypi.python.org/pypi/mozprocess
+KEYWORDS=~amd64 ~x86
+LICENSE=MPL-2.0
+RDEPEND=dev-python/mozinfo =dev-lang/python-2*
+SLOT=0
+SRC_URI=mirror://pypi/m/mozprocess/mozprocess-0.11.tar.gz
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=fc852ed1774a4f62191e44e641657fe8
