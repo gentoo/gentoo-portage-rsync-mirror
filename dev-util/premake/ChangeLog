@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/premake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.15 2013/05/26 07:25:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.16 2013/06/06 01:10:03 titanofold Exp $
+
+  06 Jun 2013; Aaron W. Swenson <titanofold@gentoo.org> -premake-3.5.ebuild,
+  -premake-4.3.ebuild:
+  Clean out non-slotted ebuilds.
 
   26 May 2013; Agostino Sarubbo <ago@gentoo.org> premake-4.3-r1.ebuild:
   Stable for ppc, wrt bug #468862
