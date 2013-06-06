@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel-next
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.4 2013/05/26 09:28:58 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.5 2013/06/06 16:57:47 lxnay Exp $
+
+*genkernel-next-14 (06 Jun 2013)
+
+  06 Jun 2013; Fabio Erculiani <lxnay@gentoo.org> +genkernel-next-14.ebuild:
+  version bump
 
 *genkernel-next-10 (26 May 2013)
 

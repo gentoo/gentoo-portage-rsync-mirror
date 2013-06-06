@@ -1,11 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.6-r1.ebuild,v 1.2 2012/09/07 12:01:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.9.ebuild,v 1.3 2013/06/06 17:00:14 jer Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
+EAPI=5
+PYTHON_COMPAT=( python2_{5,6,7} )
+DISTUTILS_SINGLE_IMPL=yes
 
-inherit distutils eutils vcs-snapshot
+inherit distutils-r1 eutils vcs-snapshot
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://www.fail2ban.org/"
@@ -23,29 +24,30 @@ RDEPEND="net-misc/whois
 	net-firewall/iptables
 	selinux? ( sec-policy/selinux-fail2ban )"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+src_prepare() {
+	sed -i -e 's|/var\(/run/fail2ban\)|\1|g' $( find . -type f ) || die
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-sshd-breakin.patch \
-		"${FILESDIR}"/${P}-gentoo-init.patch
-	distutils_src_prepare
+src_test() {
+	./fail2ban-testcases-all
 }
+
+DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 
-	newconfd files/gentoo-confd fail2ban || die
-	newinitd files/gentoo-initd fail2ban || die
-	dodoc ChangeLog README TODO || die "dodoc failed"
-	doman man/*.1 || die "doman failed"
+	rm -rf "${D}"/usr/share/doc/fail2ban
+
+	# not FILESDIR
+	newconfd files/gentoo-confd fail2ban
+	newinitd files/gentoo-initd fail2ban
+	doman man/*.1
 
 	# Use INSTALL_MASK  if you do not want to touch /etc/logrotate.d.
 	# See http://thread.gmane.org/gmane.linux.gentoo.devel/35675
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${PN}-logrotate ${PN} || die
+	newins files/${PN}-logrotate ${PN}
 }
 
 pkg_preinst() {

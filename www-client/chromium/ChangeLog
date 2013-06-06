@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.893 2013/06/05 09:22:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.894 2013/06/06 16:45:18 phajdan.jr Exp $
+
+  06 Jun 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-harfbuzz-r0.patch, chromium-28.0.1500.20.ebuild,
+  chromium-29.0.1521.3.ebuild, chromium-9999-r1.ebuild:
+  Fix build with system harfbuzz-0.9.18, bug #472416 by Ivan Atienza.
 
   05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> chromium-27.0.1453.110.ebuild:
   Stable for x86, wrt bug #472350
