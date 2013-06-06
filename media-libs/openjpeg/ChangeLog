@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.69 2013/04/06 06:45:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.70 2013/06/06 12:10:10 xmw Exp $
+
+*openjpeg-1.5.1 (06 Jun 2013)
+
+  06 Jun 2013; Michael Weber <xmw@gentoo.org> +files/openjpeg-1.5.1-build.patch,
+  +openjpeg-1.5.1.ebuild:
+  Version bump (bug 440086), non-maint commit
 
   06 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> openjpeg-1.5.0.ebuild:
   Use subslotting for lcms, libpng, tiff and zlib dependencies.

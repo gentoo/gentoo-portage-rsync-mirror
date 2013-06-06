@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7915 2013/06/06 09:52:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7916 2013/06/06 12:15:39 xmw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jun 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Masked for testing due non-maint commit (bug 440086)
 
   06 Jun 2013; Ian Delaney <idella4@gentoo.org> package.mask:
   Mask dev-python/elixir for removal 
