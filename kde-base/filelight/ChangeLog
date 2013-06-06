@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.93 2013/06/05 10:33:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.94 2013/06/06 15:38:07 ago Exp $
+
+  06 Jun 2013; Agostino Sarubbo <ago@gentoo.org> filelight-4.10.3.ebuild:
+  Stable for ppc, wrt to bug #471392
 
   05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> filelight-4.10.3.ebuild:
   Stable for x86, wrt to bug #471392

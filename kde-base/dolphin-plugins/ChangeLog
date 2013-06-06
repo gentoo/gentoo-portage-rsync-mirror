@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.97 2013/06/05 10:33:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.98 2013/06/06 15:37:49 ago Exp $
+
+  06 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dolphin-plugins-4.10.3.ebuild:
+  Stable for ppc, wrt to bug #471392
 
   05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dolphin-plugins-4.10.3.ebuild:
   Stable for x86, wrt to bug #471392
