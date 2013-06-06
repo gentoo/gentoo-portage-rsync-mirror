@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.3.1.ebuild,v 1.3 2013/06/05 02:46:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.3.1.ebuild,v 1.4 2013/06/06 03:04:44 floppym Exp $
 
 EAPI=5
-# python3.3 because of dev-python/pygments
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
 
 inherit distutils-r1
