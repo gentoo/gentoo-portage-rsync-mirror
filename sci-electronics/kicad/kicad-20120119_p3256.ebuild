@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20120119_p3256.ebuild,v 1.5 2012/07/13 19:19:13 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20120119_p3256.ebuild,v 1.6 2013/06/06 18:58:49 calchan Exp $
 
 # rafaelmartins: Please try to keep the live ebuild synchronized with
 # the latest snapshot ebuild. e.g.:
@@ -21,9 +21,6 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS=""
-if [[ "${PV}" != "99999999" ]]; then
-	KEYWORDS="amd64 ~ppc ~ppc64 x86"
-fi
 
 IUSE="dev-doc debug doc examples minimal python"
 

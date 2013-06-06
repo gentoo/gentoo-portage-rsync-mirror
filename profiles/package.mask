@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14809 2013/06/06 18:09:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14810 2013/06/06 19:00:34 calchan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1018,7 +1018,6 @@ app-portage/layman-dbtools
 sci-astronomy/casa-data
 # rdep on the one above
 sci-astronomy/casacore
-sci-electronics/kicad
 dev-ruby/rcsparse
 # rdep on the one above
 dev-vcs/fromcvs
