@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r3.ebuild,v 1.2 2013/05/08 20:29:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r3.ebuild,v 1.4 2013/06/06 14:46:00 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic toolchain-funcs versionator
@@ -11,7 +11,7 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~sparc ~x86"
 IUSE="pam doc +ssl +dbus debug boost"
 
 #Tests fail if openssl is not compiled with -DPURIFY. Gentoo's isn't. FAIL!
@@ -65,7 +65,7 @@ src_configure() {
 	append-flags -fno-strict-aliasing
 	append-flags -fno-tree-dce -fno-optimize-sibling-calls #421375
 
-	tc-export CXX
+	tc-export AR CXX
 
 	use boost && export ac_cv_header_tr1_functional=no
 

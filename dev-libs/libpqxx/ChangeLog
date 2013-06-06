@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.90 2013/05/03 10:37:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.91 2013/06/06 14:59:48 jer Exp $
+
+  06 Jun 2013; Jeroen Roovers <jer@gentoo.org> libpqxx-4.0.1.ebuild:
+  Stable for HPPA (bug #472450).
 
   03 May 2013; Aaron W. Swenson <titanofold@gentoo.org> libpqxx-4.0.1.ebuild:
   Inherit python-any-r1 to pull in a Python 2 interpreter. Use sed to fix
