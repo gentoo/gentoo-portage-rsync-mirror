@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.66 2013/06/06 13:39:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.67 2013/06/06 21:10:57 xmw Exp $
+
+  06 Jun 2013; Michael Weber <xmw@gentoo.org> files/mupdf-9999-openjpeg2.patch:
+  Fix openjpeg-2 pkg-config file
 
   06 Jun 2013; Michael Weber <xmw@gentoo.org> +files/mupdf-9999-openjpeg2.patch,
   mupdf-9999.ebuild:

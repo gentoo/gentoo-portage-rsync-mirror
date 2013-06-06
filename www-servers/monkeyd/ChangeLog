@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.57 2013/06/05 20:53:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.58 2013/06/06 21:06:02 blueness Exp $
+
+*monkeyd-1.2.1 (06 Jun 2013)
+
+  06 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +monkeyd-1.2.1.ebuild,
+  -files/monkeyd-fix-DoS-headers-parser.patch, -monkeyd-1.2.0-r1.ebuild:
+  Upstream bump to fix potencial DoS bug in headers parser, bug #472400,
+  CVE-2013-3843
 
 *monkeyd-1.2.0-r1 (05 Jun 2013)
 

@@ -11,3 +11,12 @@
  SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
+--- mupdf-9999/debian/mupdf.pc
++++ mupdf-9999/debian/mupdf.pc
+@@ -8,5 +8,5 @@
+ Requires.private: freetype2
+ Version: 0.5.0
+ Libs: -L${libdir} -lmupdf
+-Libs.private: -lopenjpeg -ljbig2dec -ljpeg -lz -lm
++Libs.private: -lopenjp2 -ljbig2dec -ljpeg -lz -lm
+ Cflags: -I${includedir}
