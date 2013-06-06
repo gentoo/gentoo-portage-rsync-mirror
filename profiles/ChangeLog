@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7917 2013/06/06 13:20:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7918 2013/06/06 18:09:06 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jun 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove mask for dev-lisp/emacs-cl, package removed from tree.
 
   06 Jun 2013; Justin Lecher <jlec@gentoo.org> package.mask:
   Drop unnecessary coot mask
@@ -13,7 +16,7 @@
   Masked for testing due non-maint commit (bug 440086)
 
   06 Jun 2013; Ian Delaney <idella4@gentoo.org> package.mask:
-  Mask dev-python/elixir for removal 
+  Mask dev-python/elixir for removal
 
   06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Mask dev-util/lafilefixer, wrt bug #289899

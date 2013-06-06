@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/curlftpfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.23 2013/02/12 19:32:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.24 2013/06/06 18:20:33 slyfox Exp $
+
+  06 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org> curlftpfs-0.9.2-r1.ebuild:
+  Added missing 'virtual/pkgconfig' depend (bug #355855 by dE and  cyberbat).
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> curlftpfs-0.9.2-r1.ebuild:
   Stable for arm, wrt bug #258460
