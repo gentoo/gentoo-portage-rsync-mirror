@@ -1,0 +1,16 @@
+--- openjpeg-9999/CMakeLists.txt
++++ openjpeg-9999/CMakeLists.txt
+@@ -297,13 +297,6 @@
+   DESTINATION ${OPENJPEG_INSTALL_PACKAGE_DIR}
+ )
+ 
+-#-----------------------------------------------------------------------------
+-# install CHANGES and LICENSE
+-if(EXISTS ${OPENJPEG_SOURCE_DIR}/CHANGES)
+-  install(FILES CHANGES DESTINATION ${OPENJPEG_INSTALL_DOC_DIR})
+-endif()
+-install(FILES LICENSE DESTINATION ${OPENJPEG_INSTALL_DOC_DIR})
+-
+ include (cmake/OpenJPEGCPack.cmake)
+ 
+ #-----------------------------------------------------------------------------

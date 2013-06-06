@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.109 2013/06/06 17:48:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.110 2013/06/06 21:58:04 floppym Exp $
+
+  06 Jun 2013; Mike Gilbert <floppym@gentoo.org> ipython-0.13.2.ebuild:
+  Add missing colon to PYTHONPATH.
 
   06 Jun 2013; Ian Delaney <idella4@gentoo.org> ipython-0.13.2.ebuild:
   Fix to testsuite wrt and fixes Bug #472152

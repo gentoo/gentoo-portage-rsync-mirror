@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.3 2013/06/06 17:48:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.4 2013/06/06 21:58:04 floppym Exp $
 
 EAPI=5
 
@@ -169,7 +169,7 @@ python_test() {
 		# Initialize ~/.ipython directory.
 		"${PYTHON}" ipython </dev/null >/dev/null || fail=1
 		# Run tests (-v for more verbosity).
-		PYTHONPATH=${PYTHONPATH}. "${PYTHON}" iptest -v || fail=1
+		PYTHONPATH=${PYTHONPATH}:. "${PYTHON}" iptest -v || fail=1
 	}
 
 	VIRTUALX_COMMAND=run_tests virtualmake
