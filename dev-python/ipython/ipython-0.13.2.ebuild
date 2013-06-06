@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.2 2013/05/07 17:30:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.3 2013/06/06 17:48:36 idella4 Exp $
 
 EAPI=5
 
@@ -48,6 +48,7 @@ REQUIRED_USE="mongodb? ( ${PY2_REQUSE} )
 	notebook? ( ${PY2_REQUSE} )
 	octave? ( ${PY2_REQUSE} )
 	wxwidgets? ( ${PY2_REQUSE} )"
+DISTUTILS_IN_SOURCE_BUILD=1
 
 python_prepare_all() {
 	epatch "${FILESDIR}"/${PN}-0.12-globalpath.patch
@@ -88,6 +89,8 @@ python_prepare_all() {
 			setupbase.py || die
 	fi
 
+	# testsuite runs fine with in source
+
 	distutils-r1_python_prepare_all
 }
 
@@ -106,14 +109,14 @@ python_test() {
 	# https://github.com/ipython/ipython/issues/2083
 	unset PYTHONWARNINGS
 
-	distutils_install_for_testing
-
 	# ipython skips mongodb tests only if it's not running.
 	# since we want the widest test range, and don't want it to fiddle
 	# with user-running mongodb, we always run it if it's available.
 
 	local DB_IP=127.0.0.1
 	local DB_PORT=-1 # disable
+
+	pushd "${BUILD_DIR}"/../IPython/scripts/ > /dev/null
 
 	if has_version dev-db/mongodb; then
 		# please keep in sync with dev-python/pymongo
@@ -156,16 +159,17 @@ python_test() {
 	# No support for DB_IP and DB_PORT.
 	# https://github.com/ipython/ipython/pull/2910
 	sed -i -e "s:Connection(:&host='${DB_IP}', port=${DB_PORT}:" \
-		"${TEST_DIR}"/lib/*/IPython/parallel/tests/test_mongodb.py \
+		"${BUILD_DIR}"/lib/IPython/parallel/tests/test_mongodb.py \
 		|| die "Unable to sed mongod port into tests"
 
-	local fail
 
+
+	local fail
 	run_tests() {
 		# Initialize ~/.ipython directory.
-		"${TEST_DIR}"/scripts/ipython </dev/null >/dev/null || fail=1
+		"${PYTHON}" ipython </dev/null >/dev/null || fail=1
 		# Run tests (-v for more verbosity).
-		"${TEST_DIR}"/scripts/iptest -v || fail=1
+		PYTHONPATH=${PYTHONPATH}. "${PYTHON}" iptest -v || fail=1
 	}
 
 	VIRTUALX_COMMAND=run_tests virtualmake

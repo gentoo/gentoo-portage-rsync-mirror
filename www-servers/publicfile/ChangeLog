@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/publicfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.26 2013/01/01 22:27:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.27 2013/06/06 17:47:27 robbat2 Exp $
+
+*publicfile-0.52-r4 (06 Jun 2013)
+
+  06 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> +publicfile-0.52-r4.ebuild:
+  Bug #471398: nofiles group should be GID 200.
 
   01 Jan 2013; Julian Ospald <hasufell@gentoo.org> publicfile-0.52-r3.ebuild,
   +files/publicfile-0.52-build.patch:
