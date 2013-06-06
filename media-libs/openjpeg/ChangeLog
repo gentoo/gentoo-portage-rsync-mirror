@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.70 2013/06/06 12:10:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.71 2013/06/06 13:15:54 xmw Exp $
+
+*openjpeg-2.0.0 (06 Jun 2013)
+
+  06 Jun 2013; Michael Weber <xmw@gentoo.org> +files/openjpeg-2.0.0-build.patch,
+  +files/openjpeg-2.0.0-pkgconfig.patch, +openjpeg-2.0.0.ebuild:
+  Version bump, set SLOT to 2, backport pkg-config patch as pointed out by Rafał
+  Mużyło (bug 440086), non-maint commit.
 
 *openjpeg-1.5.1 (06 Jun 2013)
 
