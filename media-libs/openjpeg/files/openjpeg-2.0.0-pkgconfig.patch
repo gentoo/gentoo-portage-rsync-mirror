@@ -21,7 +21,7 @@ Pkgconfig support http://code.google.com/p/openjpeg/source/detail?r=2250
    # For all builds, make sure openjpeg is std99 compliant:
 --- /dev/null
 +++ openjpeg-2.0.0/src/lib/openjp2/libopenjp2.pc.cmake.in
-@@ -0,0 +0,13 @@
+@@ -0,0 +1,13 @@
 +prefix=@CMAKE_INSTALL_PREFIX@
 +bindir=${prefix}/@OPENJPEG_INSTALL_BIN_DIR@
 +mandir=${prefix}/@OPENJPEG_INSTALL_MAN_DIR@

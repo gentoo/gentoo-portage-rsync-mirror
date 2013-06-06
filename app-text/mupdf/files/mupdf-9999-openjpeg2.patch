@@ -1,0 +1,13 @@
+--- mupdf-9999/Makerules
++++ mupdf-9999/Makerules
+@@ -52,8 +52,8 @@
+ 
+ SYS_FREETYPE_CFLAGS = $(shell pkg-config --cflags freetype2)
+ SYS_FREETYPE_LIBS = $(shell pkg-config --libs freetype2)
+-SYS_OPENJPEG_CFLAGS = $(shell pkg-config --cflags libopenjpeg1)
+-SYS_OPENJPEG_LIBS = $(shell pkg-config --libs libopenjpeg1)
++SYS_OPENJPEG_CFLAGS = $(shell pkg-config --cflags libopenjp2)
++SYS_OPENJPEG_LIBS = $(shell pkg-config --libs libopenjp2)
+ SYS_JBIG2DEC_LIBS = -ljbig2dec
+ SYS_JPEG_LIBS = -ljpeg
+ SYS_ZLIB_LIBS = -lz

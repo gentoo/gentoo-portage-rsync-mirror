@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-2.0.0.ebuild,v 1.1 2013/06/06 13:15:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/openjpeg-2.0.0.ebuild,v 1.2 2013/06/06 13:54:04 xmw Exp $
 
 EAPI=5
 inherit cmake-utils multilib
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS CHANGES NEWS README THANKS )
 
-PATCHES=( "${FILESDIR}"/${P}-build.patch 
+PATCHES=( "${FILESDIR}"/${P}-build.patch
 	"${FILESDIR}"/${P}-pkgconfig.patch )
 
 RESTRICT="test" #409263
