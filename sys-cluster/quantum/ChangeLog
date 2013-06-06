@@ -1,6 +1,16 @@
 # ChangeLog for sys-cluster/quantum
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/ChangeLog,v 1.9 2013/05/16 01:07:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/ChangeLog,v 1.11 2013/06/06 19:30:14 prometheanfire Exp $
+
+  06 Jun 2013; Matthew Thode <prometheanfire@gentoo.org>
+  quantum-2013.1.2.ebuild:
+  relax amqplib and kombu version requirements for sys-cluster/quantum-2013.1.2
+
+*quantum-2013.1.2 (06 Jun 2013)
+
+  06 Jun 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +quantum-2013.1.2.ebuild, -quantum-2013.1.1-r1.ebuild:
+  quantum version bump to 2013.1.2
 
 *quantum-2013.1.1-r1 (16 May 2013)
 
