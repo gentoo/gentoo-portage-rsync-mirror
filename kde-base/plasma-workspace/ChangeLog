@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.219 2013/06/05 10:32:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.220 2013/06/06 00:52:49 creffett Exp $
+
+*plasma-workspace-4.10.4-r1 (06 Jun 2013)
+
+  06 Jun 2013; Chris Reffett <creffett@gentoo.org>
+  +files/plasma-workspace-4.10.4-keep-batterymonitor-in-sync-with-systray.patch,
+  +plasma-workspace-4.10.4-r1.ebuild, -plasma-workspace-4.10.4.ebuild:
+  Revision bump, apply patch to fix battery monitor widget wrt bug 472382,
+  credit to Andreas Sturmlechner <andreas.sturmlechner@gmail.com>
 
   05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> plasma-workspace-4.10.3.ebuild:
   Stable for x86, wrt to bug #471392

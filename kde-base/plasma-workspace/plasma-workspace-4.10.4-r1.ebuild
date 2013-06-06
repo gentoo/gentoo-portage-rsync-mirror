@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.10.4.ebuild,v 1.1 2013/06/04 18:22:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.10.4-r1.ebuild,v 1.1 2013/06/06 00:52:49 creffett Exp $
 
 EAPI=5
 
@@ -85,7 +85,10 @@ KMEXTRACTONLY="
 
 KMLOADLIBS="libkworkspace libplasmaclock libplasmagenericshell libtaskmanager"
 
-PATCHES=( "${FILESDIR}/${PN}-4.10.1-noplasmalock.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-4.10.1-noplasmalock.patch"
+	"${FILESDIR}/${PN}-4.10.4-keep-batterymonitor-in-sync-with-systray.patch"
+	)
 
 pkg_setup() {
 	if use python ; then
