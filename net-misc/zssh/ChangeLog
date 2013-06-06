@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.19 2013/03/31 10:32:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.21 2013/06/06 07:25:35 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -zssh-1.5c.ebuild:
+  Dop old revision
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> zssh-1.5c-r1.ebuild:
   Stable for sparc, wrt bug #462902

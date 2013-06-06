@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apply-default-acl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apply-default-acl/ChangeLog,v 1.5 2013/02/28 11:24:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apply-default-acl/ChangeLog,v 1.6 2013/06/06 07:27:18 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd
 
   28 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
   -apply-default-acl-0.0.3.ebuild:

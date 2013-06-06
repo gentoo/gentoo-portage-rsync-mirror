@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.36 2013/01/13 11:29:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.38 2013/06/06 07:22:53 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -bwwhois-5.5.2.ebuild:
+  Drop old revision
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bwwhois-5.5.2-r1.ebuild:
   Stable for x86, wrt bug #451036

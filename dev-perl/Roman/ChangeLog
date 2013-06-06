@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Roman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Roman/ChangeLog,v 1.4 2013/04/03 08:39:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Roman/ChangeLog,v 1.5 2013/06/06 07:02:45 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd
 
   03 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Add CPAN info, add perl herd

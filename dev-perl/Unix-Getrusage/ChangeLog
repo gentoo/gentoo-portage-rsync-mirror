@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unix-Getrusage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Getrusage/ChangeLog,v 1.3 2013/04/27 18:42:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Getrusage/ChangeLog,v 1.4 2013/06/06 07:06:25 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd, add perl herd
 
   27 Apr 2013; Agostino Sarubbo <ago@gentoo.org> Unix-Getrusage-0.030.0.ebuild:
   Stable for x86, wrt bug #467448

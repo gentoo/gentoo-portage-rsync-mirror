@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbgrab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.24 2013/04/23 08:39:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.25 2013/06/06 07:17:51 pinkbyte Exp $
+
+  06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
+  herd, add myself as co-maintainer
 
   23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> fbgrab-1.0-r2.ebuild:
   Stable for ppc, wrt bug #466784
