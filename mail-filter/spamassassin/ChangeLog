@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamassassin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.216 2012/09/20 12:23:12 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.217 2013/06/06 19:35:51 zlogene Exp $
+
+  06 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> spamassassin-3.3.2-r1.ebuild:
+  added GPL-2 to LICENSE wrt bug #425964
 
   20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

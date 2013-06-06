@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.79 2013/05/11 19:37:07 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.80 2013/06/06 19:45:20 nimiux Exp $
+
+*inspircd-2.0.13 (06 Jun 2013)
+
+  06 Jun 2013; Chema Alonso <nimiux@gentoo.org> +inspircd-2.0.13.ebuild,
+  +files/inspircd-2.0.13-fix-path-builds.patch, +files/inspircd-2.0.13-init:
+  Revision bump
 
   11 May 2013; Chema Alonso <nimiux@gentoo.org> -inspircd-2.0.10.ebuild,
   -inspircd-2.0.10-r1.ebuild, -files/inspircd-2.0.10-fix-path-builds.patch,

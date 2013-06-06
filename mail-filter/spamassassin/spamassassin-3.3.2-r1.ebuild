@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r1.ebuild,v 1.10 2012/08/21 04:30:17 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r1.ebuild,v 1.11 2013/06/06 19:35:51 zlogene Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="SpamAssassin is an extensible email filter which is used to identif
 HOMEPAGE="http://spamassassin.apache.org/"
 SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
-LICENSE="Apache-2.0"
+LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 # need keyword request for Mail-SPF ppc ppc64

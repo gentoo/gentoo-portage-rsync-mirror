@@ -1,13 +1,13 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.64 2013/06/06 19:24:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.65 2013/06/06 19:40:31 calchan Exp $
 
 *kicad-20130518 (06 Jun 2013)
 
   06 Jun 2013; Denis Dupeyron <calchan@gentoo.org> +kicad-20130518.ebuild,
   +files/kicad-desktop-file.patch, +files/kicad-missing-doc.patch,
   +files/kicad-native-boost.patch, +files/kicad-scripts.patch:
-  Version bump. Major rewrite to make QA all warm and fuzzi.
+  Version bump. Major rewrite to make QA all warm and fuzzy.
 
   06 Jun 2013; Denis Dupeyron <calchan@gentoo.org> kicad-20120119_p3256.ebuild:
   De-keyword kicad-20120119_p3256 to prepare to take kicad out of p.mask.
