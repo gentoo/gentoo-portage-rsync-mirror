@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.3-r1.ebuild,v 1.2 2013/04/22 07:22:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.3-r1.ebuild,v 1.3 2013/06/06 11:30:19 idella4 Exp $
 
 EAPI=5
 
@@ -26,6 +26,8 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=( "${FILESDIR}"/${P}-tests.patch )
 
 python_compile_all() {
 	if use doc; then
