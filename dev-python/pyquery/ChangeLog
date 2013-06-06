@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.32 2013/06/03 06:11:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.33 2013/06/06 03:33:50 floppym Exp $
+
+  06 Jun 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  pyquery-1.2.4.ebuild:
+  Fixup dependencies per Arfrever's suggestions.
 
   03 Jun 2013; Patrick Lauer <patrick@gentoo.org> pyquery-1.2.4.ebuild:
   Add test dep on beautifulsoup

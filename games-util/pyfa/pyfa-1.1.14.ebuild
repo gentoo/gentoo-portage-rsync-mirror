@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.12.ebuild,v 1.3 2013/03/31 17:55:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.14.ebuild,v 1.1 2013/06/06 03:47:23 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -9,7 +9,7 @@ PYTHON_REQ_USE="sqlite,threads"
 inherit eutils gnome2-utils python-r1
 
 if [[ ${PV/_rc*/} == ${PV} ]] ; then
-	MY_PV=${PV}-retribution-1.0.2-src
+	MY_PV=${PV}-odyssey-1.0-src
 	FOLDER=pyfa/stable/${PV}
 else
 	MY_PV=${PV/_rc/-stable-RC}-src
