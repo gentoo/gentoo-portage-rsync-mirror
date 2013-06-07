@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/flake8-2.0.ebuild,v 1.1 2013/05/31 07:29:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/flake8-2.0.ebuild,v 1.2 2013/06/07 10:01:33 idella4 Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ RDEPEND=">=dev-python/pyflakes-0.6.1[${PYTHON_USEDEP}]
 	>=dev-python/pep8-1.4.3[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
+PDEPEND="dev-python/mccabe[${PYTHON_USEDEP}]"
 
 python_test() {
 	esetup.py test || die "tests failed"
