@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.720.0.ebuild,v 1.1 2012/12/28 19:46:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.720.0.ebuild,v 1.2 2013/06/07 12:24:49 zlogene Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=NLNETLABS
 MODULE_VERSION=0.72
-inherit perl-module
+inherit toolchain-funcs perl-module
 
 DESCRIPTION="Perl Net::DNS - Perl DNS Resolver Module"
 
@@ -39,4 +39,10 @@ src_prepare() {
 	# --IPv6-tests requires that you have external IPv6 connectivity
 	# as it connects to 2001:7b8:206:1:0:1234:be21:e31e
 	myconf="${myconf} --no-online-tests --no-IPv6-tests"
+}
+
+src_compile() {
+	emake FULL_AR="$(tc-getAR)" OTHERLDFLAGS="${LDFLAGS}"
+
+	perl-module_src_compile
 }

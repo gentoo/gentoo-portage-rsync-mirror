@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_rc2.ebuild,v 1.1 2013/06/05 13:18:46 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_rc3.ebuild,v 1.1 2013/06/07 12:03:48 olemarkus Exp $
 
 EAPI=5
 
@@ -618,7 +618,8 @@ src_install() {
 				keepdir "/usr/$(get_libdir)/apache2/modules"
 			else
 				# needed each time, php_install_ini would reset it
-				into "${PHP_DESTDIR#${EPREFIX}}"
+				local dest="${PHP_DESTDIR#${EPREFIX}}"
+				into "${dest}"
 				case "$sapi" in
 					cli)
 						source="sapi/cli/php"
@@ -641,6 +642,8 @@ src_install() {
 					dolib.so "${source}" || die "Unable to install ${sapi} sapi"
 				else
 					dobin "${source}" || die "Unable to install ${sapi} sapi"
+					local name="$(basename ${source})"
+					dosym "${dest}/bin/${name}" "/usr/bin/${name}${SLOT}"
 				fi
 			fi
 

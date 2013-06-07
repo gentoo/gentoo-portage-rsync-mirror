@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.660.0.ebuild,v 1.3 2011/12/20 09:00:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.660.0.ebuild,v 1.4 2013/06/07 12:24:49 zlogene Exp $
 
 EAPI=4
 
 MODULE_AUTHOR=OLAF
 MODULE_VERSION=0.66
-inherit perl-module
+inherit toolchain-funcs perl-module
 
 DESCRIPTION="Perl Net::DNS - Perl DNS Resolver Module"
 
@@ -38,4 +38,10 @@ src_prepare() {
 		myconf="--no-IPv6-tests"
 	fi
 	myconf="${myconf} --no-online-tests"
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)" OTHERLDFLAGS="${LDFLAGS}"
+
+	perl-module_src_compile
 }

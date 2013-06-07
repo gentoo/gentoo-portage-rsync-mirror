@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.14.ebuild,v 1.2 2013/04/28 16:24:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.16.ebuild,v 1.1 2013/06/07 12:03:48 olemarkus Exp $
 
 EAPI=5
 
@@ -82,7 +82,7 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	readline recode selinux +session sharedmem
 	+simplexml snmp soap sockets spell sqlite ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
-	+xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
+	+xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib"
 
 DEPEND="
 	>=app-admin/eselect-php-0.7.0[apache2?,fpm?]
@@ -154,7 +154,7 @@ DEPEND="
 		virtual/jpeg
 		media-libs/libpng:0= sys-libs/zlib
 	)
-	xsl? ( dev-libs/libxslt >=dev-libs/libxml2-2.6.8 )
+	xslt? ( dev-libs/libxslt >=dev-libs/libxml2-2.6.8 )
 	zip? ( sys-libs/zlib )
 	zlib? ( sys-libs/zlib )
 	virtual/mta
@@ -174,7 +174,7 @@ REQUIRED_USE="
 	wddx? ( xml )
 	xmlrpc? ( || ( xml iconv ) )
 	xmlreader? ( xml )
-	xsl? ( xml )
+	xslt? ( xml )
 	ldap-sasl? ( ldap )
 	mhash? ( hash )
 	phar? ( hash )
@@ -401,7 +401,7 @@ src_configure() {
 	$(use_enable xmlreader xmlreader )
 	$(use_enable xmlwriter xmlwriter )
 	$(use_with xmlrpc xmlrpc)
-	$(use_with xsl xsl "${EPREFIX}"/usr)
+	$(use_with xslt xsl "${EPREFIX}"/usr)
 	$(use_enable zip zip )
 	$(use_with zlib zlib "${EPREFIX}"/usr)
 	$(use_enable debug debug )"
@@ -638,7 +638,8 @@ src_install() {
 				keepdir "/usr/$(get_libdir)/apache2/modules"
 			else
 				# needed each time, php_install_ini would reset it
-				into "${PHP_DESTDIR#${EPREFIX}}"
+				local dest="${PHP_DESTDIR#${EPREFIX}}"
+				into "${dest}"
 				case "$sapi" in
 					cli)
 						source="sapi/cli/php"
@@ -661,6 +662,8 @@ src_install() {
 					dolib.so "${source}" || die "Unable to install ${sapi} sapi"
 				else
 					dobin "${source}" || die "Unable to install ${sapi} sapi"
+					local name="$(basename ${source})"
+					dosym "${dest}/bin/${name}" "/usr/bin/${name}${SLOT}"
 				fi
 			fi
 
@@ -767,8 +770,8 @@ pkg_postinst() {
 		fi
 	done
 
-	elog "Make sure that PHP_TARGETS in ${EPREFIX}/etc/portage/make.conf includes php${SLOT/./-}"
-	elog "in order to compile extensions for the ${SLOT} ABI"
+	elog "Make sure that PHP_TARGETS in ${EPREFIX}/etc/make.conf includes php${SLOT/./-} in order"
+	elog "to compile extensions for the ${SLOT} ABI"
 	elog
 	if ! use readline && use cli ; then
 		ewarn "Note that in order to use php interactivly, you need to enable"
@@ -777,7 +780,7 @@ pkg_postinst() {
 	elog
 	elog "This ebuild installed a version of php.ini based on php.ini-${PHP_INI_VERSION} version."
 	elog "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
-	elog "'production' or 'development' in ${EPREFIX}/etc/portage/make.conf"
+	elog "'production' or 'development' in ${EPREFIX}/etc/make.conf"
 	elog "Both versions of php.ini can be found in ${EPREFIX}/usr/share/doc/${PF}"
 
 	elog
