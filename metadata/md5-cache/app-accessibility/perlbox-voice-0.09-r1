@@ -1,9 +1,9 @@
 DEFINED_PHASES=install
 DESCRIPTION=A voice enabled application to bring your desktop under your command.
-HOMEPAGE=http://perlbox.org/
+HOMEPAGE=http://perlbox.sourceforge.net/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/perl dev-perl/perl-tk app-accessibility/sphinx2 app-accessibility/festival app-arch/tar app-accessibility/mbrola
 SLOT=0
 SRC_URI=mirror://sourceforge/perlbox/perlbox-voice-0.09.noarch.tgz
-_md5_=bbe989b1e3f20ec8efb40e3c655e90f5
+_md5_=1fb76b8e6df7bebf064a01284e6ff353

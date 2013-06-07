@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r2.ebuild,v 1.1 2011/11/06 06:39:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r2.ebuild,v 1.2 2013/06/07 14:23:46 jer Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -50,12 +50,18 @@ sed_Imakefile() {
 	for variable in "${vars2subs[@]}" ; do
 		varname=${variable%%=*}
 		varval=${variable##*=}
-		sed -i "s:^\(XCOMM\)*[[:space:]]*${varname}[[:space:]]*=.*$:${varname} = ${varval}:" "$@"
+		sed -i \
+			-e "s:^\(XCOMM\)*[[:space:]]*${varname}[[:space:]]*=.*$:${varname} = ${varval}:" \
+			"$@" || die
 	done
-	sed -i "s:^\(XCOMM\)*[[:space:]]*\(#define I18N\).*$:\2:" "$@"
+	sed -i \
+		-e "s:^\(XCOMM\)*[[:space:]]*\(#define I18N\).*$:\2:" \
+		"$@" || die
 	if has_version '>=x11-libs/libXaw3d-1.5e'; then
 		einfo "x11-libs/libXaw3d 1.5e and abover installed"
-		sed -i "s:^\(XCOMM\)*[[:space:]]*\(#define XAW3D1_5E\).*$:\2:" "$@"
+		sed -i \
+			-e "s:^\(XCOMM\)*[[:space:]]*\(#define XAW3D1_5E\).*$:\2:" \
+			"$@" || die
 	fi
 }
 

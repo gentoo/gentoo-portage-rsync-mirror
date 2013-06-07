@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.51 2013/05/29 13:33:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.52 2013/06/07 14:18:24 hasufell Exp $
+
+*hexchat-2.9.5-r1 (07 Jun 2013)
+
+  07 Jun 2013; Julian Ospald <hasufell@gentoo.org> +hexchat-2.9.5-r1.ebuild,
+  +files/hexchat-2.9.5-fix_leftclick_opens_menu.patch:
+  fix bug #472578
 
   29 May 2013; Julian Ospald <hasufell@gentoo.org> hexchat-2.9.4-r2.ebuild,
   hexchat-2.9.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r3.ebuild,v 1.4 2013/06/06 21:50:51 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r3.ebuild,v 1.5 2013/06/07 14:23:46 jer Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ RDEPEND="x11-libs/libXaw
 		x11-libs/libXaw3d
 		nls? ( x11-libs/libXaw3d[unicode] )
 		x11-libs/libXi
+		x11-libs/libXt
 		virtual/jpeg
 		media-libs/libpng
 		media-fonts/font-misc-misc
@@ -52,23 +53,30 @@ sed_Imakefile() {
 	for variable in "${vars2subs[@]}" ; do
 		varname=${variable%%=*}
 		varval=${variable##*=}
-		sed -i "s:^\(XCOMM\)*[[:space:]]*${varname}[[:space:]]*=.*$:${varname} = ${varval}:" "$@"
+		sed -i \
+			-e "s:^\(XCOMM\)*[[:space:]]*${varname}[[:space:]]*=.*$:${varname} = ${varval}:" \
+			"$@" || die
 	done
 	if use nls; then
-		sed -i "s:^\(XCOMM\)*[[:space:]]*\(#define I18N\).*$:\2:" "$@"
+		sed -i \
+			-e "s:^\(XCOMM\)*[[:space:]]*\(#define I18N\).*$:\2:" \
+			"$@" || die
 		# Fix #405475 and #426780 by Markus Peloquin #405475 comment 17
-		sed -i 's:^I18N_DEFS[[:space:]]*=.*:& -DXAW_INTERNATIONALIZATION:' "$@"
+		sed -i \
+			-e 's:^I18N_DEFS[[:space:]]*=.*:& -DXAW_INTERNATIONALIZATION:' \
+			"$@" || die
 	fi
 	if has_version '>=x11-libs/libXaw3d-1.5e'; then
-		einfo "x11-libs/libXaw3d 1.5e and abover installed"
-		sed -i "s:^\(XCOMM\)*[[:space:]]*\(#define XAW3D1_5E\).*$:\2:" "$@"
+		sed -i \
+			-e "s:^\(XCOMM\)*[[:space:]]*\(#define XAW3D1_5E\).*$:\2:" \
+			"$@" || die
 	fi
 }
 
 src_prepare() {
 	# Permissions are really crazy here
-	chmod -R go+rX .
-	find . -type f -exec chmod a-x '{}' \;
+	chmod -R go+rX . || die
+	find . -type f -exec chmod a-x '{}' \; || die
 	epatch "${FILESDIR}/${P}-figparserstack.patch" #297379
 	epatch "${FILESDIR}/${P}-spelling.patch"
 	epatch "${FILESDIR}/${P}-papersize_b1.patch"

@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09-r1.ebuild,v 1.5 2009/04/01 18:42:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09-r1.ebuild,v 1.6 2013/06/07 14:13:13 zlogene Exp $
 
 IUSE=""
 
 DESCRIPTION="A voice enabled application to bring your desktop under your command."
 
-HOMEPAGE="http://perlbox.org/"
+HOMEPAGE="http://perlbox.sourceforge.net/"
 SRC_URI="mirror://sourceforge/perlbox/${P}.noarch.tgz"
 
 LICENSE="GPL-2"

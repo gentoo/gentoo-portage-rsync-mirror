@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=x11-libs/libXaw x11-libs/libXp x11-libs/libXaw3d nls? ( x11-libs/libXaw3d[unicode] ) x11-libs/libXi virtual/jpeg media-libs/libpng media-fonts/font-misc-misc media-fonts/urw-fonts >=media-gfx/transfig-3.2.5-r1 media-libs/netpbm x11-misc/imake x11-proto/xproto x11-proto/inputproto
+DEPEND=x11-libs/libXaw x11-libs/libXp x11-libs/libXaw3d nls? ( x11-libs/libXaw3d[unicode] ) x11-libs/libXi x11-libs/libXt virtual/jpeg media-libs/libpng media-fonts/font-misc-misc media-fonts/urw-fonts >=media-gfx/transfig-3.2.5-r1 media-libs/netpbm x11-misc/imake x11-proto/xproto x11-proto/inputproto
 DESCRIPTION=A menu-driven tool to draw and manipulate objects interactively in an X window.
 EAPI=5
 HOMEPAGE=http://www.xfig.org
 IUSE=nls
 KEYWORDS=~alpha amd64 ~arm hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris
 LICENSE=BSD
-RDEPEND=x11-libs/libXaw x11-libs/libXp x11-libs/libXaw3d nls? ( x11-libs/libXaw3d[unicode] ) x11-libs/libXi virtual/jpeg media-libs/libpng media-fonts/font-misc-misc media-fonts/urw-fonts >=media-gfx/transfig-3.2.5-r1 media-libs/netpbm
+RDEPEND=x11-libs/libXaw x11-libs/libXp x11-libs/libXaw3d nls? ( x11-libs/libXaw3d[unicode] ) x11-libs/libXi x11-libs/libXt virtual/jpeg media-libs/libpng media-fonts/font-misc-misc media-fonts/urw-fonts >=media-gfx/transfig-3.2.5-r1 media-libs/netpbm
 SLOT=0
 SRC_URI=mirror://sourceforge/mcj/xfig.3.2.5b.full.tar.gz
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=ff454e946657794e65de9e76d620ef0b
+_md5_=a02e3b068f4944a5745a0fb0adad540f
