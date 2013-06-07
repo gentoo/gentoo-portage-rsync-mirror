@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999- Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.27 2013/04/11 02:37:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.28 2013/06/07 02:16:45 blueness Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev hwdb kmod introspection legacy-libudev keymap +modutils +openrc +rule-generator selinux static-libs"
+IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs"
 
 RESTRICT="test"
 
@@ -81,27 +81,6 @@ pkg_pretend()
 		ewarn "We are working on a better solution for the next beta release."
 		ewarn
 	fi
-
-	if has_version "<sys-fs/udev-180" && ! use legacy-libudev; then
-		ewarn
-		ewarn "This version of eudev does not contain the libudev.so.0 library by "
-		ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
-		ewarn
-		ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and"
-		ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
-		ewarn "is required to resolve these issues."
-		ewarn
-		ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
-		ewarn "you wish to continue to use your system while migrating to libudev.so.1"
-		ewarn
-	elif use legacy-libudev ; then
-		ewarn
-		ewarn "You are installing eudev with USE=legacy-libudev , this should only be used"
-		ewarn "to support binary-only applications or legacy applications while in the"
-		ewarn "process of doing a full systems upgrade, that require libudev.so.0 -- it is"
-		ewarn "HIGHLY RECOMMENDED to leave this flag disabled unless absolutely necessary."
-		ewarn
-	fi
 }
 
 pkg_setup()
@@ -129,9 +108,6 @@ pkg_setup()
 		eerror "You must upgrade your kernel or downgrade udev."
 		eerror
 	fi
-
-	# for USE=legacy-libudev
-	QA_SONAME_NO_SYMLINK="$(get_libdir)/libudev.so.0"
 }
 
 src_prepare()
@@ -183,7 +159,6 @@ src_configure()
 		$(use_enable selinux)
 		$(use_enable static-libs static)
 		$(use_enable rule-generator)
-		$(use_enable legacy-libudev legacylib)
 	)
 	econf "${econf_args[@]}"
 }

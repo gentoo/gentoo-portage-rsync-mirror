@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.4.ebuild,v 1.1 2013/06/04 22:06:26 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.4.ebuild,v 1.2 2013/06/07 02:14:47 tgurr Exp $
 
 EAPI="5"
 
@@ -44,6 +44,10 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.2.4-speech-dispatcher.patch
+)
 
 S="${WORKDIR}/${MY_P}"
 
