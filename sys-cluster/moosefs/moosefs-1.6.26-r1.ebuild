@@ -1,22 +1,26 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/moosefs-1.6.25.ebuild,v 1.1 2012/07/02 13:51:07 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/moosefs-1.6.26-r1.ebuild,v 1.1 2013/06/07 10:38:45 ultrabug Exp $
 
-EAPI=4
+EAPI="5"
 
-inherit eutils
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils python-single-r1
 
 MY_P="mfs-${PV}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A filesystem for highly reliable petabyte storage"
 HOMEPAGE="http://www.moosefs.org/"
-SRC_URI="http://www.moosefs.org/tl_files/mfscode/${MY_P}.tar.gz"
+SRC_URI="http://pro.hit.gemius.pl/hitredir/id=p4CVHPOzkVa0JJIK.m0Ee6dyHZEgoQb1KaiPmVK29EX.M7/url=moosefs.org/tl_files/mfscode/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cgi +fuse static-libs"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	cgi? ( dev-lang/python )
@@ -26,6 +30,7 @@ DEPEND="${RDEPEND}"
 pkg_setup() {
 	enewgroup mfs
 	enewuser mfs -1 -1 -1 mfs
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -49,10 +54,11 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	newinitd "${FILESDIR}/mfs.initd" mfs
+	newinitd "${FILESDIR}/mfs.initd-r1" mfs
 	newconfd "${FILESDIR}/mfs.confd" mfs
 	if use cgi; then
-		newinitd "${FILESDIR}/mfscgiserver.initd" mfscgiserver
+		python_fix_shebang "${D}"/usr/sbin/mfscgiserv
+		newinitd "${FILESDIR}/mfscgiserver.initd-r1" mfscgiserver
 		newconfd "${FILESDIR}/mfscgiserver.confd" mfscgiserver
 	fi
 
