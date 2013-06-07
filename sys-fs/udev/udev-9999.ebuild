@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.228 2013/05/17 13:50:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.229 2013/06/07 18:00:05 ssuominen Exp $
 
 EAPI=5
 
@@ -180,6 +180,11 @@ src_prepare() {
 		check_default_rules
 		elibtoolize
 	fi
+
+	# Restore possibility of running --enable-static wrt #472608
+	sed -i \
+		-e '/--enable-static is not supported by systemd/s:as_fn_error:echo:' \
+		configure || die
 
 	if ! use elibc_glibc; then #443030
 		echo '#define secure_getenv(x) NULL' >> config.h.in
