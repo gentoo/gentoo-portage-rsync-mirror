@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.4.ebuild,v 1.1 2013/03/24 13:53:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.6.ebuild,v 1.1 2013/06/07 12:53:24 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -35,10 +35,10 @@ RDEPEND="${PYTHON_DEPS}
 	virtual/libiconv
 	dev-python/subunit
 	sys-libs/libcap
-	>=sys-libs/ldb-1.1.15
+	>=sys-libs/ldb-1.1.15-r1
 	>=sys-libs/tdb-1.2.11[python]
 	>=sys-libs/talloc-2.0.8[python]
-	>=sys-libs/tevent-0.9.17
+	>=sys-libs/tevent-0.9.18
 	sys-libs/zlib
 	>=app-crypt/heimdal-1.5[-ssl]
 	addns? ( net-dns/bind-tools[gssapi] )
@@ -59,6 +59,11 @@ S="${WORKDIR}/${MY_P}"
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.0.5-fix_linking_to_heimdal.patch"
+	"${FILESDIR}/${P}-add-missing-new-line-to-fix-python-shebang.patch"
+)
 
 pkg_setup() {
 	python_export_best
@@ -116,20 +121,17 @@ src_configure() {
 src_install() {
 	waf-utils_src_install
 
-	python_replicate_script \
-		"${D}/usr/sbin/samba_upgradeprovision" \
-		"${D}/usr/sbin/samba_dnsupdate" \
-		"${D}/usr/sbin/samba_spnupdate" \
-		"${D}/usr/sbin/samba_upgradedns" \
-		"${D}/usr/sbin/samba_kcc" \
-		"${D}/usr/bin/samba-tool"
+	# Seems like the build script gets the shebangs correct by itself
+	# (4.0.6)
+	#python_replicate_script \
+	#	"${D}/usr/sbin/samba_dnsupdate" \
+	#	"${D}/usr/sbin/samba_spnupdate" \
+	#	"${D}/usr/sbin/samba_upgradedns" \
+	#	"${D}/usr/sbin/samba_kcc" \
+	#	"${D}/usr/bin/samba-tool"
 
 	# Make all .so files executable
 	find "${D}" -type f -name "*.so" -exec chmod +x {} +
-
-	# Move all LDB modules to their correct path
-	mkdir -p "${D}"/usr/$(get_libdir)/ldb/modules/ldb
-	mv "${D}"/usr/$(get_libdir)/ldb/*.so "${D}"/usr/$(get_libdir)/ldb/modules/ldb
 
 	# Install init script and conf.d file
 	newinitd "${CONFDIR}/samba4.initd-r1" samba

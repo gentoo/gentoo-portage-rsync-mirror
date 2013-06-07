@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.49 2013/04/28 12:06:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.50 2013/06/07 12:52:15 polynomial-c Exp $
+
+*ldb-1.1.15-r1 (07 Jun 2013)
+
+  07 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> -ldb-1.1.13.ebuild,
+  -ldb-1.1.14.ebuild, +ldb-1.1.15-r1.ebuild:
+  Non-maintainer commit: Attempt to fix bug #465956. Removed old versions.
 
   28 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ldb-1.1.15.ebuild:
   Stable for x86, wrt bug #466284

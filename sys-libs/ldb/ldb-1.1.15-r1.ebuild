@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.14.ebuild,v 1.3 2013/01/02 09:40:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.15-r1.ebuild,v 1.1 2013/06/07 12:52:15 polynomial-c Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -42,7 +42,7 @@ src_configure() {
 	waf-utils_src_configure \
 		--disable-rpath \
 		--disable-rpath-install --bundled-libraries=NONE \
-		--with-modulesdir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules \
+		--with-modulesdir="${EPREFIX}"/usr/$(get_libdir)/samba \
 		--builtin-libraries=NONE
 }
 
