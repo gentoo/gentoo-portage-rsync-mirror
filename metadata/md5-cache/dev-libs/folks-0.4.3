@@ -1,13 +1,13 @@
-DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
-DEPEND=>=dev-libs/glib-2.24:2 >=net-libs/telepathy-glib-0.13.1[vala] dev-libs/dbus-glib <dev-libs/libgee-0.7:0 dev-libs/libxml2 sys-libs/ncurses sys-libs/readline >=dev-util/intltool-0.35.0 virtual/pkgconfig >=dev-lang/vala-0.11.6:0.12[vapigen] >=dev-libs/gobject-introspection-0.9.12 sys-devel/gettext >=sys-apps/sed-4
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=dev-libs/glib-2.24:2 >=net-libs/telepathy-glib-0.13.1[vala] dev-libs/dbus-glib <dev-libs/libgee-0.7:0 dev-libs/libxml2 sys-libs/ncurses:= sys-libs/readline:= || ( dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] dev-lang/vala:0.16[vapigen] ) >=dev-util/intltool-0.35.0 virtual/pkgconfig >=dev-libs/gobject-introspection-0.9.12 sys-devel/gettext >=sys-apps/sed-4
 DESCRIPTION=libfolks is a library that aggregates people from multiple sources
-EAPI=3
+EAPI=5
 HOMEPAGE=http://telepathy.freedesktop.org/wiki/Folks
 IUSE=debug
 KEYWORDS=alpha amd64 ia64 ppc sparc x86 ~x86-linux
 LICENSE=LGPL-2
-RDEPEND=>=dev-libs/glib-2.24:2 >=net-libs/telepathy-glib-0.13.1[vala] dev-libs/dbus-glib <dev-libs/libgee-0.7:0 dev-libs/libxml2 sys-libs/ncurses sys-libs/readline
+RDEPEND=>=dev-libs/glib-2.24:2 >=net-libs/telepathy-glib-0.13.1[vala] dev-libs/dbus-glib <dev-libs/libgee-0.7:0 dev-libs/libxml2 sys-libs/ncurses:= sys-libs/readline:=
 SLOT=0
 SRC_URI=mirror://gnome/sources/folks/0.4/folks-0.4.3.tar.bz2
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	7976d3f4d0c0816c67033d3dcd4d9472	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=a181509b5a26c717b35c67f70365c071
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	7976d3f4d0c0816c67033d3dcd4d9472	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vala	aa890daf29e67d32e9bff8e12ef653ca	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=24a9b4122c4a31baaea6f0d99011b0a3
