@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/xmonad-log-applet
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmonad-log-applet/ChangeLog,v 1.1 2013/06/07 20:00:08 qnikst Exp $
+
+*xmonad-log-applet-2.0.0-r200 (07 Jun 2013)
+*xmonad-log-applet-2.0.0-r300 (07 Jun 2013)
+
+  07 Jun 2013; Alexander Vershilov <qnikst@gentoo.org> +files/xmonad.hs,
+  +metadata.xml, +xmonad-log-applet-2.0.0-r200.ebuild,
+  +xmonad-log-applet-2.0.0-r300.ebuild:
+  add xmonad-log-applet
