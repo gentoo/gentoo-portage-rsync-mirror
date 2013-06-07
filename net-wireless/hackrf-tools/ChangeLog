@@ -1,0 +1,9 @@
+# ChangeLog for net-wireless/hackrf-tools
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/ChangeLog,v 1.1 2013/06/07 14:40:46 zerochaos Exp $
+
+*hackrf-tools-9999 (07 Jun 2013)
+
+  07 Jun 2013; Rick Farina <zerochaos@gentoo.org> +hackrf-tools-9999.ebuild,
+  +metadata.xml:
+  initial commit of hackrf-tools

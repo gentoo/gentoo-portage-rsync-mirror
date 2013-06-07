@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.98 2013/06/06 17:20:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.99 2013/06/07 14:43:47 jer Exp $
+
+  07 Jun 2013; Jeroen Roovers <jer@gentoo.org> fail2ban-0.8.9.ebuild:
+  Inform users of dev-python/pyinotify and app-admin/gamin as alternative file
+  modification detection backend (bug #320199).
 
   06 Jun 2013; Jeroen Roovers <jer@gentoo.org> fail2ban-0.8.9.ebuild:
   distutils{,-r1}_pkg_postinst does not exist.

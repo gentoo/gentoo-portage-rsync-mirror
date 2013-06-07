@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.9.ebuild,v 1.4 2013/06/06 17:20:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.9.ebuild,v 1.5 2013/06/07 14:43:47 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -67,5 +67,11 @@ pkg_postinst() {
 		elog
 		elog "You are upgrading from version 0.6.x, please see:"
 		elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
+	fi
+	if ! has_version ${CATEGORY}/${PN} && \
+		! has_version dev-python/pyinotify && ! has_version app-admin/gamin; then
+		elog "For most jail.conf configurations, it is recommended you install either"
+		elog "dev-python/pyinotify or app-admin/gamin (in order of preference)"
+		elog "to control how log file modifications are detected"
 	fi
 }
