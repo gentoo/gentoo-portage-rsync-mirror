@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.68 2013/05/05 20:22:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.69 2013/06/07 20:59:13 floppym Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -135,22 +135,6 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Specify location of autotools' configure script. By default it uses ${S}.
-
-# @ECLASS-VARIABLE: myeconfargs
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Optional econf arguments as Bash array. Should be defined before calling src_configure.
-# @CODE
-# src_configure() {
-# 	local myeconfargs=(
-# 		--disable-readline
-# 		--with-confdir="/etc/nasty foo confdir/"
-# 		$(use_enable debug cnddebug)
-# 		$(use_enable threads multithreading)
-# 	)
-# 	autotools-utils_src_configure
-# }
-# @CODE
 
 # @ECLASS-VARIABLE: DOCS
 # @DEFAULT_UNSET
@@ -427,6 +411,22 @@ autotools-utils_src_prepare() {
 #
 # IUSE="static-libs" passes --enable-shared and either --disable-static/--enable-static
 # to econf respectively.
+
+# @VARIABLE: myeconfargs
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Optional econf arguments as Bash array. Should be defined before calling src_configure.
+# @CODE
+# src_configure() {
+# 	local myeconfargs=(
+# 		--disable-readline
+# 		--with-confdir="/etc/nasty foo confdir/"
+# 		$(use_enable debug cnddebug)
+# 		$(use_enable threads multithreading)
+# 	)
+# 	autotools-utils_src_configure
+# }
+# @CODE
 autotools-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
