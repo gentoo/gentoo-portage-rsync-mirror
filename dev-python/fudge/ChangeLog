@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/fudge
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/ChangeLog,v 1.5 2012/05/16 15:42:54 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/ChangeLog,v 1.7 2013/06/07 15:30:53 idella4 Exp $
+
+*fudge-0.9.6 (07 Jun 2013)
+
+  07 Jun 2013; Ian Delaney <idella4@gentoo.org> +fudge-0.9.6.ebuild:
+  re-add fudge-0.9.6, req'd dep of fabric
+
+*fudge-1.0.3-r1 (07 Jun 2013)
+
+  07 Jun 2013; Ian Delaney <idella4@gentoo.org> +fudge-1.0.3-r1.ebuild,
+  -fudge-0.9.6.ebuild, -fudge-1.0.3.ebuild:
+  revbump; migrate -> distutils-r1, remove old
 
 *fudge-0.9.6 (16 May 2012)
 
@@ -30,4 +41,3 @@
   19 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +fudge-1.0.0.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-

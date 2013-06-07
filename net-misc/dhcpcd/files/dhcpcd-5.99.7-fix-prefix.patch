@@ -1,0 +1,33 @@
+From 791c63ac688169ed7d0b4145dfefb2ce0c9cc7d4 Mon Sep 17 00:00:00 2001
+From: Roy Marples <roy@marples.name>
+Date: Thu, 6 Jun 2013 01:31:00 +0100
+Subject: [PATCH] Prefer --prefix over $PREFIX
+
+---
+ configure | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/configure b/configure
+index 896a8fe..1fe383c 100755
+--- a/configure
++++ b/configure
+@@ -36,7 +36,7 @@ for x do
+ 	--enable-ipv4) INET=yes;;
+ 	--disable-ipv6) INET6=no;;
+ 	--enable-ipv6) INET6=yes;;
+-	--prefix) prefix=$var;;
++	--prefix) PREFIX=$var;;
+ 	--sysconfdir) SYSCONFDIR=$var;;
+ 	--bindir|--sbindir) SBINDIR=$var;;
+ 	--libexecdir) LIBEXECDIR=$var;;
+@@ -135,7 +135,6 @@ done
+ : ${SED:=sed}
+ 
+ : ${FORK:=yes}
+-: ${PREFIX:=$prefix}
+ : ${SYSCONFDIR:=$PREFIX/etc}
+ : ${SBINDIR:=$PREFIX/sbin}
+ : ${LIBDIR:=$PREFIX/lib}
+-- 
+1.8.1.5
+
