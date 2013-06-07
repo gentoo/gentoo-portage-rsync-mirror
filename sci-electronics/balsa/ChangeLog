@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/balsa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.16 2012/04/25 17:22:35 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.17 2013/06/07 16:20:48 mr_bones_ Exp $
+
+  07 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org> -balsa-3.5.ebuild:
+  clean old version
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> balsa-3.5.ebuild,
   balsa-4.0.ebuild, metadata.xml:
