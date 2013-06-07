@@ -1,6 +1,10 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.40 2013/03/26 18:16:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.41 2013/06/06 23:08:04 xmw Exp $
+
+  06 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/llpp-9999-mupdf-trailer.patch, llpp-9999.ebuild:
+  Update live ebuild to openjpeg:2 and fix for latest mupdf
 
   26 Mar 2013; Agostino Sarubbo <ago@gentoo.org> llpp-13_p20121123.ebuild:
   Stable for ppc, wrt bug #463196

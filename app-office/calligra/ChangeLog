@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.88 2013/06/05 19:38:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.89 2013/06/06 23:06:11 johu Exp $
+
+*calligra-2.6.4 (06 Jun 2013)
+
+  06 Jun 2013; Johannes Huber <johu@gentoo.org> +calligra-2.6.4.ebuild:
+  Version bump.
 
   05 Jun 2013; Johannes Huber <johu@gentoo.org> -calligra-2.5.3.ebuild,
   -files/calligra-2.4.2-marble.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.17 2013/03/25 10:07:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.18 2013/06/06 23:08:04 xmw Exp $
 
 EAPI=4
 
@@ -19,17 +19,18 @@ IUSE=""
 
 RDEPEND="media-libs/freetype
 	media-libs/jbig2dec
-	media-libs/openjpeg
+	media-libs/openjpeg:2
 	virtual/jpeg
 	x11-libs/libX11
 	x11-misc/xsel"
 DEPEND="${RDEPEND}
-	>=app-text/mupdf-1.2
+	=app-text/mupdf-9999
 	dev-lang/ocaml[ocamlopt]
 	dev-ml/lablgl[glut]"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-11-WM_CLASS.patch
+	epatch "${FILESDIR}"/${PN}-11-WM_CLASS.patch \
+		"${FILESDIR}"/${P}-mupdf-trailer.patch
 }
 
 src_compile() {
@@ -37,7 +38,7 @@ src_compile() {
 	printf 'let version ="%s";;\n' $(git describe --tags --dirty) >> help.ml || die
 
 	local myccopt="$(freetype-config --cflags) -O -include ft2build.h -D_GNU_SOURCE"
-	local mycclib="-lfitz -lz -ljpeg -lopenjpeg -ljbig2dec -lfreetype -lX11 -lpthread"
+	local mycclib="-lfitz -lz -ljpeg -lopenjp2 -ljbig2dec -lfreetype -lX11 -lpthread"
 	ocamlopt.opt -c -o link.o -ccopt "${myccopt}" link.c || die
 	ocamlopt.opt -c -o help.cmx help.ml || die
 	ocamlopt.opt -c -o utils.cmx utils.ml || die
