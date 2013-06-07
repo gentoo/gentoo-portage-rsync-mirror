@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/curlftpfs-0.9.2-r2.ebuild,v 1.1 2013/06/06 20:37:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/curlftpfs-0.9.2-r2.ebuild,v 1.2 2013/06/07 05:22:06 slyfox Exp $
 
 EAPI=5
 
@@ -30,6 +30,9 @@ src_prepare() {
 
 	# automake-1.13.1 obsoletes AM_* bit #469818
 	sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac || die
+
+	epatch_user
+
 	eautoreconf
 }
 
