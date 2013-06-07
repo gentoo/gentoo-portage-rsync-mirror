@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.5.ebuild,v 1.1 2013/05/18 08:07:20 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.5.ebuild,v 1.2 2013/06/07 17:11:35 billie Exp $
 
 EAPI=5
 
@@ -73,6 +73,8 @@ RDEPEND="${COMMON_DEPEND}
 			)
 		)
 	)"
+
+REQUIRED_USE="!minimal? ( ${PYTHON_REQUIRED_USE} )"
 
 CONFIG_CHECK="~PARPORT ~PPDEV"
 ERROR_PARPORT="Please make sure kernel parallel port support is enabled (PARPORT and PPDEV)."
