@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.0.ebuild,v 1.8 2012/07/04 19:34:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.0.ebuild,v 1.9 2013/06/07 00:11:06 xmw Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="X vanilla"
 
 RDEPEND="media-libs/freetype:2
 	media-libs/jbig2dec
-	>=media-libs/openjpeg-1.5
+	>=media-libs/openjpeg-1.5:0
 	virtual/jpeg
 	X? ( x11-libs/libX11
 		x11-libs/libXext )"
