@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14810 2013/06/06 19:00:34 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14811 2013/06/07 06:59:23 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,6 @@
 
 # Michael Weber <xmw@gentoo.org> (6 Jun 2013)
 # Masked for testing due non-maint commit (bug 440086)
-=media-libs/openjpeg-1.5.1
 =media-libs/openjpeg-2.0.0
 
 # Ian Delaney <idella4@gentoo.org> (06 Jun 2013)
