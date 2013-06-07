@@ -990,6 +990,7 @@ app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for intro
 app-text/libwpd:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
 app-text/mathtex:png - Generate png images by default instead of gif
+app-text/mupdf:shared-libs - Build shared libraries
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
 app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support
@@ -5564,6 +5565,7 @@ sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.
 sci-physics/root:pythia8 - Build the interface for sci-physics/pythia version 8.x
 sci-physics/root:reflex - Build the reflection database for the C++ interpreter
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
+sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
 sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
 sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JPEG, and PNG image output.
 sci-visualization/gnuplot:thin-splines - Enable thin plate splines

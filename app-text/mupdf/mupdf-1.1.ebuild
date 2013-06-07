@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.1.ebuild,v 1.7 2013/06/07 00:11:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.1.ebuild,v 1.8 2013/06/07 22:52:15 xmw Exp $
 
 EAPI=4
 
@@ -27,7 +27,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_rc/-rc}-source
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1_rc1-buildsystem.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.1_rc1-buildsystem.patch \
+		"${FILESDIR}"/${P}-desktop-integration.patch
 
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-1.1_rc1-zoom-2.patch

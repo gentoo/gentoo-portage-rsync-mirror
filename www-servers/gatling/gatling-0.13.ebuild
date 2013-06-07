@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.13.ebuild,v 1.1 2012/11/05 07:01:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.13.ebuild,v 1.2 2013/06/07 22:52:28 sping Exp $
 
 EAPI="4"
 
@@ -35,7 +35,7 @@ src_compile() {
 	use ssl && targets+=' tlsgatling'
 
 	emake DIET="${DIET}" CC="$(tc-getCC)" \
-			CFLAGS="${CFLAGS} -I/usr/include/libowfat" \
+			CFLAGS="${CFLAGS} -I${ROOT}usr/include/libowfat" \
 			LDFLAGS="${LDFLAGS}" prefix=/usr ${targets} \
 			|| die "emake ${targets} failed"
 }

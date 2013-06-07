@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7920 2013/06/07 06:59:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7922 2013/06/07 22:57:47 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Removal of sci-visualization/udav
+
+  07 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Removed masking of >=sci-visualization/fityk-1.1
 
   07 Jun 2013; Michael Weber <xmw@gentoo.org> package.mask:
   Drop mask to enable testing forward to security stabilization bug 472536

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mathgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.36 2013/03/26 16:02:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.37 2013/06/07 22:53:05 bicatali Exp $
+
+  07 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -mathgl-1.11.2.ebuild:
+  Removed old
 
 *mathgl-1.11.2 (26 Mar 2013)
 
