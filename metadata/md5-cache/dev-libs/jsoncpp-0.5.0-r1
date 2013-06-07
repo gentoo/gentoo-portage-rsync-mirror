@@ -8,5 +8,5 @@ KEYWORDS=amd64 ~arm x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=mirror://sourceforge/jsoncpp/jsoncpp-src-0.5.0.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	7ed4a8181d62a098eaa6c8eeacf190c9	python-utils-r1	178dc714fb13931948c7f7ccc0a4748b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	7ed4a8181d62a098eaa6c8eeacf190c9	python-utils-r1	9aa9cecaaf78644be7c0b8b8dc814dce	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=1f76fa41a9e34f6b051dae409f96fdf8

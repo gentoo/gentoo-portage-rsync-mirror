@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/libusb:1= zlib? ( sys-libs/zlib:= ) sys-apps/hwids python? ( python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] )
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/usb/usbutils/usbutils-006.tar.xz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	178dc714fb13931948c7f7ccc0a4748b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	9aa9cecaaf78644be7c0b8b8dc814dce	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ef7069572a2e044514fc3808d366ae37

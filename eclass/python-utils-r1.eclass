@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.26 2013/05/31 17:50:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.27 2013/06/07 01:11:31 floppym Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -79,10 +79,18 @@ _python_impl_supported() {
 }
 
 # @ECLASS-VARIABLE: PYTHON
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The absolute path to the current Python interpreter.
 #
-# Set and exported only in commands run by python_foreach_impl().
+# This variable is set automatically in the following contexts:
+#
+# python-r1: Set in functions called by python_foreach_impl() or after
+# calling python_export_best().
+#
+# python-single-r1: Set after calling python-single-r1_pkg_setup().
+#
+# distutils-r1: Set within any of the python sub-phase functions.
 #
 # Example value:
 # @CODE
@@ -90,12 +98,18 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: EPYTHON
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The executable name of the current Python interpreter.
 #
-# This variable is used consistently with python.eclass.
+# This variable is set automatically in the following contexts:
 #
-# Set and exported only in commands run by python_foreach_impl().
+# python-r1: Set in functions called by python_foreach_impl() or after
+# calling python_export_best().
+#
+# python-single-r1: Set after calling python-single-r1_pkg_setup().
+#
+# distutils-r1: Set within any of the python sub-phase functions.
 #
 # Example value:
 # @CODE
@@ -103,6 +117,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_SITEDIR
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The path to Python site-packages directory.
 #
@@ -114,6 +129,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_INCLUDEDIR
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The path to Python include directory.
 #
@@ -125,6 +141,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_LIBPATH
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The path to Python library.
 #
@@ -137,6 +154,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_CFLAGS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Proper C compiler flags for building against Python. Obtained from
 # pkg-config or python-config.
@@ -151,6 +169,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_LIBS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Proper C compiler flags for linking against Python. Obtained from
 # pkg-config or python-config.
@@ -165,6 +184,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_PKG_DEP
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The complete dependency on a particular Python package as a string.
 #
@@ -456,8 +476,8 @@ python_get_LIBS() {
 }
 
 # @FUNCTION: _python_rewrite_shebang
-# @INTERNAL
 # @USAGE: [<EPYTHON>] <path>...
+# @INTERNAL
 # @DESCRIPTION:
 # Replaces 'python' executable in the shebang with the executable name
 # of the specified interpreter. If no EPYTHON value (implementation) is
@@ -526,8 +546,8 @@ _python_rewrite_shebang() {
 }
 
 # @FUNCTION: _python_ln_rel
-# @INTERNAL
 # @USAGE: <from> <to>
+# @INTERNAL
 # @DESCRIPTION:
 # Create a relative symlink.
 _python_ln_rel() {
