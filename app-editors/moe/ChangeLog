@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/moe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.4 2013/06/06 18:39:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/moe/ChangeLog,v 1.5 2013/06/07 13:05:32 zlogene Exp $
+
+  07 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> moe-1.5.ebuild:
+  x86 stable wrt bug #472486
 
   06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> moe-1.5.ebuild:
   Stable on arm, wrt bug #472486
