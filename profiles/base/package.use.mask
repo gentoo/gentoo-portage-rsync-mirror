@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.473 2013/06/04 15:52:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.474 2013/06/07 16:54:13 jer Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Jeroen Roovers <jer@gentoo.org> (07 Jun 2013)
+# USE=java fails (bug #472604)
+=net-dns/libidn-1.27 java
 
 # Robin H. Johnson <robbat2@gentoo.org> (02 Jun 2013)
 # PBXT is no longer supported by upstream, and fails testcases.
