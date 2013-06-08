@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.12 2013/05/30 16:00:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.13 2013/06/08 08:41:47 pinkbyte Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -33,5 +33,6 @@ www-client/chromium system-ffmpeg
 # No stable sci-chemistry/avogadro yet but we want kde-4.10 to go stable
 >=kde-base/kalzium-4.10.0 editor
 
+# Sergey Popov <pinkbyte@gentoo.org> (08 Jun 2013)
+# Mask unstable dependencies in leechcraft metapackage
 app-leechcraft/leechcraft-meta unstable
-net-misc/leechcraft-full unstable
