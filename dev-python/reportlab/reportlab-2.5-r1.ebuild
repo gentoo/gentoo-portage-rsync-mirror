@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.5-r1.ebuild,v 1.4 2013/05/08 02:37:16 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.5-r1.ebuild,v 1.5 2013/06/08 14:34:44 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-fbsd ~x86-linux"
 IUSE="doc examples test"
 
-DEPEND="dev-python/imaging
+DEPEND="virtual/python-imaging
 	media-fonts/ttf-bitstream-vera
 	media-libs/libart_lgpl
 	sys-libs/zlib"

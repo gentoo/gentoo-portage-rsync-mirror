@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.92 2013/06/05 00:05:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.93 2013/06/08 14:35:42 jer Exp $
+
+  08 Jun 2013; Jeroen Roovers <jer@gentoo.org> rsyslog-7.2.7.ebuild:
+  Stable for HPPA (bug #472564).
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.
