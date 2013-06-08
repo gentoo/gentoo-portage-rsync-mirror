@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20130119.ebuild,v 1.1 2013/03/23 08:57:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20130119.ebuild,v 1.2 2013/06/08 17:04:13 ottxor Exp $
 
 EAPI="3"
 
@@ -66,7 +66,7 @@ src_compile() {
 }
 
 src_install() {
-	cp -pPR * "${D}"/ || die
+	cp -pPR . "${D}"/ || die
 
 	mv "${ED}"/usr/share/doc/{ca-certificates,${PF}} || die
 	prepalldocs
