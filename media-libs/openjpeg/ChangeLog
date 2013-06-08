@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.74 2013/06/06 22:19:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.75 2013/06/08 00:20:19 xmw Exp $
+
+  08 Jun 2013; Michael Weber <xmw@gentoo.org> files/openjpeg-1.5.1-build.patch,
+  openjpeg-1.5.1.ebuild:
+  Add USE=static-libs
 
   06 Jun 2013; Michael Weber <xmw@gentoo.org> +files/openjpeg-9999-mupdf.patch,
   openjpeg-9999.ebuild:

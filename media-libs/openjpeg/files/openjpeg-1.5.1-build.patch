@@ -14,19 +14,6 @@ Some bits have been loaned from http://pkgs.fedoraproject.org/gitweb/?p=openjpeg
 -INSTALL(FILES LICENSE DESTINATION ${OPENJPEG_INSTALL_DOC_DIR})
 -
  INCLUDE (CMake/OpenJPEGCPack.cmake)
---- openjpeg-1.5.1/libopenjpeg/CMakeLists.txt
-+++ openjpeg-1.5.1/libopenjpeg/CMakeLists.txt
-@@ -57,6 +57,10 @@
- INSTALL(FILES openjpeg.h
-   DESTINATION ${OPENJPEG_INSTALL_INCLUDE_DIR} COMPONENT Headers
- )
-+INSTALL( CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink
-+  \"${OPENJPEG_INSTALL_SUBDIR}/openjpeg.h\"
-+  \"\$ENV{DESTDIR}${OPENJPEG_INSTALL_INCLUDE_DIR}/openjpeg.h\")"
-+)
- 
- # install man page of the library
- INSTALL(
 --- openjpeg-1.5.1/libopenjpeg1.pc.cmake
 +++ openjpeg-1.5.1/libopenjpeg1.pc.cmake
 @@ -2,7 +2,7 @@
