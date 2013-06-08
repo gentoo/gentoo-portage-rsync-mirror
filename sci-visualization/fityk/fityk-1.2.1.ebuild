@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-1.2.1.ebuild,v 1.1 2013/06/07 22:48:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-1.2.1.ebuild,v 1.2 2013/06/08 02:45:31 patrick Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ CDEPEND="
 	wxwidgets? ( >=x11-libs/wxGTK-2.9.2 )"
 DEPEND="${CDEPEND}
 	dev-libs/boost
-	dev-util/swig"
+	dev-lang/swig"
 RDEPEND="${CDEPEND}
 	gnuplot? ( sci-visualization/gnuplot )"
 
@@ -60,7 +60,7 @@ src_compile() {
 	python_copy_sources
 	if use python; then
 		python_compilation() {
-			pushd ${BUILD_DIR}/fityk
+			pushd "${BUILD_DIR}"/fityk
 			einfo "in ${PWD}"
 			emake swig/_fityk.la
 			popd
@@ -73,7 +73,7 @@ src_install() {
 	autotools-utils_src_install
 	if use python; then
 		python_installation() {
-			pushd ${BUILD_DIR}/fityk
+			pushd "${BUILD_DIR}"/fityk
 			emake DESTDIR="${D}" install-pyexecLTLIBRARIES
 			popd
 		}
