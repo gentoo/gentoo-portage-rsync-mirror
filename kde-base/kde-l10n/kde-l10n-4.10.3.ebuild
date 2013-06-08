@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.10.3.ebuild,v 1.5 2013/06/08 10:08:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.10.3.ebuild,v 1.6 2013/06/08 22:44:04 dilfridge Exp $
 
 EAPI=5
 
@@ -84,4 +84,8 @@ src_test() {
 
 src_install() {
 	[[ -n ${A} ]] && kde4-base_src_install
+
+	# workaround for bug 472412
+	rm -f "${ED}/usr/share/locale/sr@ijekavian/LC_MESSAGES/bluedevil.mo"
+	rm -f "${ED}/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/bluedevil.mo"
 }
