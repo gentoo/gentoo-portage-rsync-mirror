@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3-r1.ebuild,v 1.1 2013/06/08 16:03:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3-r1.ebuild,v 1.2 2013/06/08 16:35:07 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
@@ -31,16 +31,8 @@ python_test() {
 	fi
 }
 
-python_install() {
-	distutils-r1_python_install
-	python_export PYTHON_SITEDIR
-	dosym "${PYTHON_SITEDIR}/em.py" /usr/bin/em.py-${EPYTHON}
-}
-
 python_install_all() {
 	distutils-r1_python_install_all
-	dosym python-exec /usr/bin/em.py
-
 	if use doc; then
 		dodir /usr/share/doc/"${PF}"/examples
 		insinto /usr/share/doc/"${PF}"/examples

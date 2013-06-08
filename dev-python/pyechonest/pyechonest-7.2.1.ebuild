@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyechonest/pyechonest-7.2.1.ebuild,v 1.2 2013/06/08 16:30:22 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyechonest/pyechonest-7.2.1.ebuild,v 1.3 2013/06/08 16:41:45 sochotnicky Exp $
 
 EAPI=5
 
@@ -28,5 +28,10 @@ python_compile_all() {
 
 python_install_all() {
 	use doc && dohtml -r doc/build/html/
-	use examples && dodoc -r examples/
+
+	if use examples; then
+		docompress -x usr/share/doc/${P}/examples/
+		insinto usr/share/doc/${P}/examples
+		doins -r examples/*
+	fi
 }
