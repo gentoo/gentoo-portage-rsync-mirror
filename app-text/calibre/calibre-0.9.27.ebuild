@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.27.ebuild,v 1.7 2013/06/05 10:59:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.27.ebuild,v 1.8 2013/06/08 15:34:44 floppym Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ COMMON_DEPEND="
 	>=dev-python/cssselect-0.7.1
 	>=dev-python/cssutils-0.9.9
 	>=dev-python/dbus-python-0.82.2
-	virtual/python-imaging
+	dev-python/imaging
 	>=dev-python/lxml-2.2.1
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1

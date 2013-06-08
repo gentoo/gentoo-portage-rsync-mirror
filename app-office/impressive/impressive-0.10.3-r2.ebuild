@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.10.3-r2.ebuild,v 1.1 2013/06/08 15:00:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.10.3-r2.ebuild,v 1.2 2013/06/08 15:39:32 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="app-text/pdftk
+RDEPEND="${PYTHON_DEPS}
+	app-text/pdftk
 	virtual/python-imaging[${PYTHON_USEDEP}]
 	dev-python/pygame[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]
@@ -27,6 +28,7 @@ RDEPEND="app-text/pdftk
 	x11-apps/xrandr
 	|| ( app-text/xpdf app-text/ghostscript-gpl )
 	|| ( media-fonts/dejavu media-fonts/ttf-bitstream-vera media-fonts/corefonts )"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
