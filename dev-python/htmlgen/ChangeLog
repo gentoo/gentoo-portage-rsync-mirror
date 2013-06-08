@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/htmlgen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.13 2010/11/08 17:08:41 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.15 2013/06/08 18:11:37 floppym Exp $
+
+  08 Jun 2013; Mike Gilbert <floppym@gentoo.org> htmlgen-2.2.2-r1.ebuild:
+  Add PYTHON_DEPS.
+
+*htmlgen-2.2.2-r1 (08 Jun 2013)
+
+  08 Jun 2013; Mike Gilbert <floppym@gentoo.org> +files/htmlgen-pillow.patch,
+  +htmlgen-2.2.2-r1.ebuild:
+  Convert to python-r1. Fix PIL imports, bug 471506.
 
   08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   htmlgen-2.2.2.ebuild:
@@ -43,4 +52,3 @@
 
   08 Mar 2003; Alastair Tse <liquidx@gentoo.org> htmlgen-2.2.2.ebuild:
   initial ebuild. solves #10653.
-
