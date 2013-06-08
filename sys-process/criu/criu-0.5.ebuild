@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-0.5.ebuild,v 1.1 2013/05/03 07:51:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-0.5.ebuild,v 1.2 2013/06/08 21:09:10 radhermit Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.openvz.org/criu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 RDEPEND="dev-libs/protobuf-c"
 DEPEND="${RDEPEND}
