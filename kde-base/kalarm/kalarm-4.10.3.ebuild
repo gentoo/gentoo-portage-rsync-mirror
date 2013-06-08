@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-4.10.3.ebuild,v 1.6 2013/06/06 15:38:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-4.10.3.ebuild,v 1.7 2013/06/08 10:09:14 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="Personal alarm message, command and email scheduler for KDE"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="

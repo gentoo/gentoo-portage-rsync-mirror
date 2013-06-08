@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.10.3.ebuild,v 1.5 2013/06/06 15:37:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.10.3.ebuild,v 1.6 2013/06/08 10:08:22 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KMNAME="kde-baseapps"
 inherit kde4-meta
 
 DESCRIPTION="A KDE filemanager focusing on usability"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug semantic-desktop thumbnail"
 
 DEPEND="
