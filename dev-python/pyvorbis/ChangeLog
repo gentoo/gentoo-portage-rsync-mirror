@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyvorbis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.46 2012/02/25 13:34:28 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.47 2013/06/08 19:51:06 floppym Exp $
+
+*pyvorbis-1.4-r4 (08 Jun 2013)
+
+  08 Jun 2013; Mike Gilbert <floppym@gentoo.org> +pyvorbis-1.4-r4.ebuild:
+  Convert to distutils-r1.
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyvorbis-1.4-r3.ebuild:
   Restricting pypy and jython

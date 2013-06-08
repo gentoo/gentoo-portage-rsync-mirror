@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pyogg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/ChangeLog,v 1.28 2012/02/24 00:57:27 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/ChangeLog,v 1.30 2013/06/08 19:49:13 floppym Exp $
+
+  08 Jun 2013; Mike Gilbert <floppym@gentoo.org> pyogg-1.3-r2.ebuild:
+  Call config_unix.py.
+
+*pyogg-1.3-r2 (08 Jun 2013)
+
+  08 Jun 2013; Mike Gilbert <floppym@gentoo.org> +pyogg-1.3-r2.ebuild:
+  Convert to distutils-r1.
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyogg-1.3-r1.ebuild:
   Restricting python stuff properly
