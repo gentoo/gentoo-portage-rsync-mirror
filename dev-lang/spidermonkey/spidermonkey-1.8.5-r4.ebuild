@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r4.ebuild,v 1.17 2013/04/13 20:48:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r4.ebuild,v 1.18 2013/06/08 21:35:23 anarchy Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -53,6 +53,8 @@ src_prepare() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=441934
 	epatch "${FILESDIR}"/${PN}-1.8.5-ia64-fix.patch
 	epatch "${FILESDIR}"/${PN}-1.8.5-ia64-static-strings.patch
+	# https://bugs.gentoo.org/show_bug.cgi?id=431560
+	epatch "${FILESDIR}"/${PN}-1.8.5-isfinite.patch
 
 	epatch_user
 
