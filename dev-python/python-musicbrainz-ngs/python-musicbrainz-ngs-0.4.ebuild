@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/python-musicbrainz-ngs-0.4.ebuild,v 1.1 2013/06/08 13:31:07 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/python-musicbrainz-ngs-0.4.ebuild,v 1.2 2013/06/08 13:39:36 sochotnicky Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/alastair/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 LICENSE="BSD-2 ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples doc test"
+IUSE="doc examples test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}

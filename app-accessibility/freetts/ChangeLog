@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/freetts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.36 2012/03/06 21:33:37 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.37 2013/06/08 13:31:55 tomwij Exp $
+
+*freetts-1.2.2 (08 Jun 2013)
+
+  08 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +freetts-1.2.2.ebuild,
+  metadata.xml:
+  Version bump to 1.2.2. EAPI 5, fixed compilation and added more Java package
+  USE flags.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> freetts-1.2.1-r2.ebuild:
   Marking freetts-1.2.1-r2 ppc64 for bug 396743
@@ -134,4 +141,3 @@ app-accessibility/mbrola-3.01h-r6.
   20 Mar 2004; Chris Aniszczyk <zx@gentoo.org> freetts-1.2_beta.ebuild,
   metadata.xml, files/jsapi-gentoo.diff:
   Initial Import :)
-

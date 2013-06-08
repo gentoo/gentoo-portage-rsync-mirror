@@ -4,7 +4,7 @@ DESCRIPTION=Clearlooks-Phenix is a GTK+ 3 port of Clearlooks, the default theme 
 EAPI=5
 HOMEPAGE=http://www.jpfleury.net/en/software/clearlooks-phenix.php
 LICENSE=GPL-3
-RDEPEND=!x11-themes/clearlooks-phenix:3.2 !x11-themes/clearlooks-phenix:3.4 >=x11-libs/gtk+-3.6:3 x11-themes/gtk-engines
+RDEPEND=!x11-themes/clearlooks-phenix:3.4 !x11-themes/clearlooks-phenix:3.6 >=x11-libs/gtk+-3.6:3 x11-themes/gtk-engines
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7
-_md5_=533fbe479a2b4ce1aab5ac833458a2ad
+_md5_=8f117e59052fb8026d9018b7d99aec6d

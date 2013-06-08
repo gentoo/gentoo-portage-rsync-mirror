@@ -5,7 +5,7 @@ EAPI=5
 HOMEPAGE=http://www.jpfleury.net/en/software/clearlooks-phenix.php
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
-RDEPEND=!x11-themes/clearlooks-phenix:3.2 !x11-themes/clearlooks-phenix:0 =x11-libs/gtk+-3.4*:3 x11-themes/gtk-engines
+RDEPEND=!x11-themes/clearlooks-phenix:3.6 !x11-themes/clearlooks-phenix:0 =x11-libs/gtk+-3.4*:3 x11-themes/gtk-engines
 SLOT=3.4
 SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/clearlooks-phenix-v2.zip
-_md5_=4e05282b38981f17e8157c45b2226ae0
+_md5_=dcc5fb6f174c1267424a0eef461667cb
