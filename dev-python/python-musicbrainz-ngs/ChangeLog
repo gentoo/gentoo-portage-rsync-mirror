@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/python-musicbrainz-ngs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.4 2013/04/06 22:35:02 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.5 2013/06/08 13:31:07 sochotnicky Exp $
+
+*python-musicbrainz-ngs-0.4 (08 Jun 2013)
+
+  08 Jun 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +python-musicbrainz-ngs-0.4.ebuild,
+  +files/python-musicbrainz-ngs-0.4-fix-package_data-placement.patch:
+  Version bump, add examples and doc USE flags, convert to EAPI5
 
 *python-musicbrainz-ngs-0.3 (06 Apr 2013)
 

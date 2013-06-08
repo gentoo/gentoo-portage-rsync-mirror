@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.5 2013/06/08 11:31:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.6 2013/06/08 13:07:55 xmw Exp $
 
 EAPI=5
 
@@ -39,7 +39,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.1_p20121127-buildsystem.patch \
 		"${FILESDIR}"/${PN}-1.1_p20121127-desktop-integration.patch \
-		"${FILESDIR}"/${PN}-1.2-mubusy_rename_fix.patch
+		"${FILESDIR}"/${PN}-1.2-mubusy_rename_fix.patch \
+		"${FILESDIR}"/${PN}-1.2-pkg-config.patch
 
 	use vanilla || epatch \
 		"${FILESDIR}"/${PN}-1.1_rc1-zoom-2.patch
