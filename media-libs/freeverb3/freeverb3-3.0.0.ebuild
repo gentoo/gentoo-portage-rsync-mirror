@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-3.0.0.ebuild,v 1.2 2013/06/02 20:50:06 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-3.0.0.ebuild,v 1.3 2013/06/08 12:13:06 sping Exp $
 
 EAPI=2
-inherit multilib versionator
+inherit eutils multilib versionator
 
 DESCRIPTION="High Quality Reverb and Impulse Response Convolution library including XMMS/Audacious Effect plugins"
 HOMEPAGE="http://freeverb3.sourceforge.net/"
@@ -21,7 +21,7 @@ _GTK_DEPEND=">=dev-libs/glib-2.4.7:2
 	x11-libs/cairo"
 
 RDEPEND=">=sci-libs/fftw-3.0.1
-	audacious? ( >media-sound/audacious-3.1 !>=media-sound/audacious-3.3
+	audacious? ( >media-sound/audacious-3.1
 		${_GTK_DEPEND}
 		media-libs/libsndfile )
 	jack? ( media-sound/jack-audio-connection-kit
@@ -30,6 +30,10 @@ RDEPEND=">=sci-libs/fftw-3.0.1
 DEPEND=${RDEPEND}
 
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3.0.0-audacious-3.3.x.patch
+}
 
 src_configure() {
 	econf \
