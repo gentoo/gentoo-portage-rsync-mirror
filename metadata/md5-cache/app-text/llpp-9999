@@ -1,10 +1,12 @@
 DEFINED_PHASES=compile install prepare unpack
-DEPEND=media-libs/freetype media-libs/jbig2dec media-libs/openjpeg:2 virtual/jpeg x11-libs/libX11 x11-misc/xsel =app-text/mupdf-9999 dev-lang/ocaml[ocamlopt] dev-ml/lablgl[glut] dev-vcs/git
+DEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-9999:= media-libs/openjpeg:0 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 ) static? ( >=app-text/mupdf-9999:=[static-libs] media-libs/openjpeg:0[static-libs] media-libs/freetype:2[static-libs] media-libs/jbig2dec[static-libs] sys-libs/zlib[static-libs] virtual/jpeg:0[static-libs] x11-libs/libX11[static-libs] ) dev-lang/ocaml[ocamlopt?] dev-ml/lablgl[glut,ocamlopt?] dev-vcs/git
 DESCRIPTION=a graphical PDF viewer which aims to superficially resemble less(1)
-EAPI=4
+EAPI=5
 HOMEPAGE=http://repo.or.cz/w/llpp.git
+IUSE=+ocamlopt static
 LICENSE=GPL-3
-RDEPEND=media-libs/freetype media-libs/jbig2dec media-libs/openjpeg:2 virtual/jpeg x11-libs/libX11 x11-misc/xsel
+RDEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-9999:= media-libs/openjpeg:0 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 )
+RESTRICT=!ocamlopt? ( strip )
 SLOT=0
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=1f7e06d5aaabbf630a1a6f3d65be9358
+_md5_=f7f42b75a853f8fa3939e6a0433b7354
