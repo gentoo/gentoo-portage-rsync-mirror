@@ -4,7 +4,7 @@
 +AC_PREREQ([2.59])
 +AC_INIT(wcstools, 3.8.x , [http://tdc-www.harvard.edu/wcstools/])
 +AM_INIT_AUTOMAKE([foreign])
-+AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS([config.h])
 +
 +AC_PROG_CC
 +AC_PROG_LIBTOOL

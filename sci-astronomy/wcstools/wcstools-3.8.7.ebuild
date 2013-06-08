@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.8.7.ebuild,v 1.1 2012/11/14 18:57:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.8.7.ebuild,v 1.2 2013/06/07 23:45:03 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils multilib
 

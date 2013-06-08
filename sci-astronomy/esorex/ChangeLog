@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/esorex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/ChangeLog,v 1.7 2012/08/05 17:28:46 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/ChangeLog,v 1.8 2013/06/07 23:38:01 bicatali Exp $
+
+*esorex-3.10 (07 Jun 2013)
+
+  07 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> +esorex-3.10.ebuild:
+  Version bump
 
   05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> esorex-3.9.6-r1.ebuild:
   keyword amd64-linux, x86-linux
