@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/soya
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.33 2013/02/14 22:12:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.34 2013/06/08 20:14:54 floppym Exp $
+
+*soya-0.14-r1 (08 Jun 2013)
+
+  08 Jun 2013; Mike Gilbert <floppym@gentoo.org> +files/soya-pillow.patch,
+  +soya-0.14-r1.ebuild:
+  Convert to distutils-r1. Fix PIL imports, bug 471510.
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> soya-0.14.ebuild:
   Stable for ppc, wrt bug #457190
