@@ -1,3 +1,5 @@
+http://bugs.ghostscript.com/show_bug.cgi?id=693518
+
 --- mupdf-9999/Makerules
 +++ mupdf-9999/Makerules
 @@ -52,8 +52,8 @@
