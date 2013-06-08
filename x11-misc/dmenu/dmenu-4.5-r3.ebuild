@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r3.ebuild,v 1.2 2013/05/23 03:31:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r3.ebuild,v 1.3 2013/06/08 12:57:24 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -50,7 +50,7 @@ src_compile() {
 			)" ''
 		) \
 		XINERAMALIBS=$(
-			usex xinerama $( $(tc-getPKG_CONFIG) --libs xinerama 2>/dev/null) ''
+			usex xinerama "$( $(tc-getPKG_CONFIG) --libs xinerama 2>/dev/null)" ''
 		)
 }
 

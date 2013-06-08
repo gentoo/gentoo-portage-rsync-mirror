@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14815 2013/06/08 07:08:29 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14816 2013/06/08 12:38:58 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -53,10 +53,6 @@ dev-python/elixir
 # Abandoned package, most of functions incorporated in portage
 # Masked for removal in 30 days, bug #289899
 dev-util/lafilefixer
-
-# Sebastian Pipping <sping@gentoo.org> (2 Jun 2013)
-# Effect working, freeze on opening preferences dialog
->=media-libs/freeverb3-3.0.0
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (31 May 2013)
 # Waiting for final release
