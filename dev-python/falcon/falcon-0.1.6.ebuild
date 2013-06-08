@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.6.ebuild,v 1.1 2013/05/18 19:55:42 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.6.ebuild,v 1.2 2013/06/08 15:10:17 idella4 Exp $
 
 EAPI=5
 
-# Python 2.6 is supported, but depends on ordereddict, that isn't packaged for
-# Gentoo, and I don't think it is worth to maintain it. If someone needs it,
-# please let me know. PyPy also works, but needs testing.
-PYTHON_COMPAT=( python{2_7,3_3} )
+# Python 2.6 is supported, but depends on ordereddict, which has been in
+# improvise for months and is a minimal package. If needed
+# please let me know. PyPy also works
+PYTHON_COMPAT=( python{2_7,3_3} pypy2_0 )
 
 inherit distutils-r1
 
@@ -22,12 +22,12 @@ IUSE="+cython test"
 
 RDEPEND="dev-python/six[${PYTHON_USEDEP}]
 	cython? (
-		dev-python/cython[${PYTHON_USEDEP}] )"
+		dev-python/cython[$(python_gen_usedep python{2_7,3_3})] )"
 
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-		dev-python/cython[${PYTHON_USEDEP}]
+		dev-python/cython[$(python_gen_usedep python{2_7,3_3})]
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/testtools[${PYTHON_USEDEP}] )"
 
