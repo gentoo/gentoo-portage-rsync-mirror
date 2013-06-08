@@ -990,7 +990,6 @@ app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for intro
 app-text/libwpd:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
 app-text/mathtex:png - Generate png images by default instead of gif
-app-text/mupdf:shared-libs - Build shared libraries
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
 app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support

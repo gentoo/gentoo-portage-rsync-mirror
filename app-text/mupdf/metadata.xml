@@ -5,8 +5,5 @@
 <email>xmw@gentoo.org</email>
 <name>Michael Weber</name>
 </maintainer>
-<use>
-	<flag name="shared-libs">Build shared libraries</flag>
-</use>
 </pkgmetadata>
 
