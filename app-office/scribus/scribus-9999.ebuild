@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.5 2013/05/29 09:32:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.6 2013/06/09 11:12:53 jlec Exp $
 
 EAPI=5
 
@@ -68,6 +68,10 @@ src_prepare() {
 	EOF
 
 	rm scribus/{ioapi,unzip}.[ch] || die
+	sed \
+		-e "/^\s*unzip\.[ch]/d" \
+		-e "/^\s*ioapi\.[ch]/d" \
+		-i scribus/CMakeLists.txt || die
 
 	sed \
 		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \

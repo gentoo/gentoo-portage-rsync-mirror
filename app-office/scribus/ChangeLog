@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.176 2013/05/29 09:32:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.177 2013/06/09 11:12:53 jlec Exp $
+
+  09 Jun 2013; Justin Lecher <jlec@gentoo.org> scribus-9999.ebuild:
+  Fix for changes in live repo, #472642
 
   29 May 2013; Justin Lecher <jlec@gentoo.org> scribus-1.4.2-r3.ebuild,
   scribus-1.4.9999.ebuild, scribus-9999.ebuild, metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.15 2013/05/29 23:22:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.16 2013/06/09 11:14:18 johu Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ DEPEND="
 	>=dev-qt/qtsvg-${QT_MINIMAL}:4
 	>=dev-qt/qtwebkit-${QT_MINIMAL}:4
 	>=media-libs/liblastfm-1.0.1
-	>=media-libs/libechonest-2.0.3
+	>=media-libs/libechonest-2.1.0
 	>=media-libs/phonon-4.5.0
 	>=media-libs/taglib-1.6.0
 	x11-libs/libX11
