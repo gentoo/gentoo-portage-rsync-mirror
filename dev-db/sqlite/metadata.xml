@@ -10,4 +10,7 @@
   <flag name='extensions'>Enable support for dynamic loading of extensions</flag>
   <flag name='secure-delete'>Overwrite deleted information with zeros in addition to marking the space as available for reuse. This causes a performance penalty.</flag>
 </use>
+<upstream>
+  <remote-id type="cpe">cpe:/a:sqlite:sqlite</remote-id>
+</upstream>
 </pkgmetadata>

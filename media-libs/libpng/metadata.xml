@@ -5,4 +5,7 @@
 <use>
 	<flag name="apng">support unofficial APNG (Animated PNG) spec</flag>
 </use>
+<upstream>
+	<remote-id type="cpe">cpe:/a:libpng:libpng</remote-id>
+</upstream>
 </pkgmetadata>

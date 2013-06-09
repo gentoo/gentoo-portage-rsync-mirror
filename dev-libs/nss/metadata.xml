@@ -5,4 +5,7 @@
 <use>
   <flag name='utils'>Install utilities included with the library</flag>
 </use>
+<upstream>
+  <remote-id type="cpe">cpe:/a:mozilla:nss</remote-id>
+</upstream>
 </pkgmetadata>

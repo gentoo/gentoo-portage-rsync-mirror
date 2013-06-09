@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.479 2013/05/21 17:53:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.480 2013/06/09 22:58:02 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   21 May 2013; Mike Frysinger <vapier@gentoo.org> +files/gentoo.config-1.0.1,
   openssl-1.0.1a.ebuild, openssl-1.0.1b.ebuild, openssl-1.0.1c.ebuild,

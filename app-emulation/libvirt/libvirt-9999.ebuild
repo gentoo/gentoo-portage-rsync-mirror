@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.48 2013/05/22 15:56:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.49 2013/06/09 22:42:04 cardoe Exp $
 
 EAPI=5
 
@@ -208,7 +208,7 @@ src_prepare() {
 	local iscsi_init=
 	local rbd_init=
 	local firewalld_init=
-	cp "${FILESDIR}/libvirtd.init-r11" "${S}/libvirtd.init"
+	cp "${FILESDIR}/libvirtd.init-r12" "${S}/libvirtd.init"
 	use avahi && avahi_init='avahi-daemon'
 	use iscsi && iscsi_init='iscsid'
 	use rbd && rbd_init='ceph'

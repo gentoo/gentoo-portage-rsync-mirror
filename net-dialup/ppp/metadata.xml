@@ -24,4 +24,7 @@
     support</flag>
     <flag name="radius">Enables RADIUS support</flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:samba:ppp</remote-id>
+  </upstream>
 </pkgmetadata>

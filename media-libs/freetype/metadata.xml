@@ -23,4 +23,7 @@
 			filtering</flag>
 		<flag name="utils">Install utilities and examples from ft2demos</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:freetype:freetype</remote-id>
+	</upstream>
 </pkgmetadata>

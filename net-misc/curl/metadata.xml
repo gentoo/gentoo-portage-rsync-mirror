@@ -18,4 +18,8 @@
 		<flag name="ssl">Enable crypto engine support (via openssl if USE='-gnutls -nss')</flag>
 		<flag name="rtmp">Enable Enables RTMPDump Streaming Media support</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:curl:curl</remote-id>
+		<remote-id type="cpe">cpe:/a:curl:libcurl</remote-id>
+	</upstream>
 </pkgmetadata>

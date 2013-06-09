@@ -17,4 +17,7 @@
   Note that some extensions (e.g. imq and l7filter) are not included into
   official kernel sources so you have to patch the sources before installation.
 </longdescription>
+<upstream>
+ <remote-id type="cpe">cpe:/a:netfilter_core_team:iptables</remote-id>
+</upstream>
 </pkgmetadata>
