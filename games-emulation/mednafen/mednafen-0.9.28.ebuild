@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.9.28.ebuild,v 1.5 2013/04/27 14:16:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.9.28.ebuild,v 1.6 2013/06/09 12:08:19 nimiux Exp $
 
 EAPI=5
 inherit autotools eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mednafen/${P}-wip.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="alsa altivec cjk debugger jack nls"
 
 RDEPEND="virtual/opengl

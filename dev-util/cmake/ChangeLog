@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.247 2013/05/21 18:19:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.249 2013/06/09 12:06:33 johu Exp $
+
+*cmake-2.8.11.1 (09 Jun 2013)
+
+  09 Jun 2013; Johannes Huber <johu@gentoo.org> +cmake-2.8.11.1.ebuild,
+  +files/cmake-2.8.11-FindBLAS.patch,
+  +files/cmake-2.8.11-FindBoost-python.patch,
+  +files/cmake-2.8.11-FindImageMagick.patch,
+  +files/cmake-2.8.11-more-no_host_paths.patch:
+  Version bump by several people in kde overlay. Fixes bug #436540.
 
   21 May 2013; Johannes Huber <johu@gentoo.org> -cmake-2.8.10.2-r1.ebuild,
   -cmake-2.8.9.ebuild, -files/cmake-2.6.3-darwin-bundle.patch,
