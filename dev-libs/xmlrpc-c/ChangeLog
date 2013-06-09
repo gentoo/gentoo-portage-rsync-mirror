@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.142 2013/06/06 06:39:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.143 2013/06/09 16:00:45 ago Exp $
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> xmlrpc-c-1.32.05-r1.ebuild:
+  Stable for sh, wrt bug #471912
 
   06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers
