@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tklib/tklib-0.6.ebuild,v 1.1 2013/06/06 08:04:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tklib/tklib-0.6-r1.ebuild,v 1.1 2013/06/09 10:26:39 jlec Exp $
 
 EAPI=5
 
@@ -32,4 +32,5 @@ src_install() {
 	dosym ${PN}${PV} /usr/$(get_libdir)/${PN}
 
 	mv "${ED}"/usr/share/man/mann/datefield{,-${PN}}.n || die
+	mv "${ED}"/usr/bin/dia{,-${PN}} || die
 }
