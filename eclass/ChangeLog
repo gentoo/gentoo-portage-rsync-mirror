@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.852 2013/06/09 02:08:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.854 2013/06/09 20:41:50 radhermit Exp $
+
+  09 Jun 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Replace backticks with $(...).
+
+  09 Jun 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Remove old runtime and netrw snapshot unpacking support.
 
   09 Jun 2013; Luca Barbato <lu_zero@gentoo.org> font.eclass:
   Do not require fontconfig at runtime, it isn't necessary for many purposes,
