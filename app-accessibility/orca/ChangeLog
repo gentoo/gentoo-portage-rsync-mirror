@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.119 2013/05/14 22:34:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.120 2013/06/08 23:03:14 zmedico Exp $
+
+  08 Jun 2013; Zac Medico <zmedico@gentoo.org> orca-3.6.3-r1.ebuild,
+  orca-3.8.1.ebuild:
+  REQUIRED_USE="${PYTHON_REQUIRED_USE}", as intended by python-r1.eclass.
 
 *orca-3.8.1 (14 May 2013)
 

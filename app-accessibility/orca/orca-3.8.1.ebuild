@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.8.1.ebuild,v 1.1 2013/05/14 22:34:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.8.1.ebuild,v 1.2 2013/06/08 23:03:14 zmedico Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,6 +17,7 @@ LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # liblouis is not in portage yet
 # it is used to provide contracted braille support
