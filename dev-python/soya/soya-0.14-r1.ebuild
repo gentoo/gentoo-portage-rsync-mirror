@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14-r1.ebuild,v 1.1 2013/06/08 20:14:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14-r1.ebuild,v 1.2 2013/06/09 17:33:29 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -24,7 +24,7 @@ IUSE="doc examples"
 
 DEPEND="=dev-games/ode-0.11.1
 	dev-python/editobj
-	>=dev-python/imaging-1.1.5[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]
 	>=dev-python/pyopenal-0.1.6[${PYTHON_USEDEP}]
 	media-fonts/freefonts
 	>=media-libs/cal3d-0.10

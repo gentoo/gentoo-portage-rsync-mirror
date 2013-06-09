@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.1.ebuild,v 1.4 2012/08/09 07:30:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.1.ebuild,v 1.5 2013/06/09 17:38:33 floppym Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ RDEPEND="
 	texmacs? ( app-office/texmacs )
 	ipython? ( dev-python/ipython )
 	opengl? ( dev-python/pyopengl )
-	imaging? ( dev-python/imaging )
+	imaging? ( virtual/python-imaging )
 	pyglet? ( dev-python/pyglet )
 	>=dev-python/pexpect-2.0
 	~dev-python/mpmath-0.17"

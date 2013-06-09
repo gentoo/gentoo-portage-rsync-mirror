@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.22 2013/05/10 05:33:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.23 2013/06/09 17:38:33 floppym Exp $
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> sympy-0.7.1.ebuild,
+  sympy-0.7.2-r1.ebuild, sympy-0.7.2.ebuild:
+  Depend on virtual/python-imaging.
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> sympy-0.7.2-r1.ebuild:
   Fix inherit

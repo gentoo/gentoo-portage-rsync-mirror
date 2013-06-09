@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0-r1.ebuild,v 1.6 2013/03/30 13:07:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0-r1.ebuild,v 1.7 2013/06/09 17:58:01 floppym Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ DEPEND="${CDEPEND}
 	umfpack? ( dev-lang/swig )"
 
 RDEPEND="${CDEPEND}
-	dev-python/imaging[$(python_gen_usedep 'python2*')]"
+	virtual/python-imaging[${PYTHON_USEDEP}]"
 
 DOCS=( HACKING.rst.txt README.txt THANKS.txt LATEST.txt TOCHANGE.txt )
 

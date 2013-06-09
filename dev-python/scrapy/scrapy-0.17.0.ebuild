@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.17.0.ebuild,v 1.1 2013/05/16 15:06:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.17.0.ebuild,v 1.2 2013/06/09 17:32:10 floppym Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	)"
 RDEPEND="dev-libs/libxml2[python,${PYTHON_USEDEP}]
 	boto? ( dev-python/boto[${PYTHON_USEDEP}] )
-	dev-python/imaging[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	ibl? ( dev-python/numpy[${PYTHON_USEDEP}] )
 	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
