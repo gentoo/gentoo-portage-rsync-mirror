@@ -4,7 +4,7 @@ DESCRIPTION=Linux dynamic and persistent device naming support (aka userspace de
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/systemd
 IUSE=acl doc +firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs
-KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 sh ~sparc ~x86
 LICENSE=LGPL-2.1 MIT GPL-2
 PDEPEND=>=virtual/udev-197-r1 hwdb? ( >=sys-apps/hwids-20130326.1[udev] ) openrc? ( >=sys-fs/udev-init-scripts-25 )
 RDEPEND=>=sys-apps/util-linux-2.20 acl? ( sys-apps/acl ) gudev? ( >=dev-libs/glib-2 ) introspection? ( >=dev-libs/gobject-introspection-1.31.1 ) kmod? ( >=sys-apps/kmod-13 ) selinux? ( >=sys-libs/libselinux-2.1.9 ) !<sys-libs/glibc-2.11 !sys-apps/systemd openrc? ( !<sys-apps/openrc-0.9.9 ) !sys-apps/coldplug !<sys-fs/lvm2-2.02.97-r1 !sys-fs/device-mapper !<sys-fs/udev-init-scripts-22 !<sys-kernel/dracut-017-r1 !<sys-kernel/genkernel-3.4.25 !<sec-policy/selinux-base-2.20120725-r10
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/systemd/systemd-204.tar.xz http://dev.gentoo.org/~ssuominen/udev-204-patches-2.tar.xz http://dev.gentoo.org/~williamh/dist/udev-204-patches-2.tar.xz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	f31a0ec0d081047cbf9c0bbb4822d831	libtool	b1c8688e60f9580bcb9bb46e08737eb1	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=e56bf22ed1fad0fc0f5b105eae294654
+_md5_=f2f56a724f392abd37aa2de98a395fd4

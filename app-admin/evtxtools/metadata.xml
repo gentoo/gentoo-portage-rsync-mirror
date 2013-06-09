@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
-	<maintainer>
-		<email>zlog.gentoo@gmail.com</email>
+	 <maintainer>
+		<email>zlogene@gentoo.org</email>
 		<name>Mikle Kolyada</name>
-	</maintainer>
-	<maintainer>
-		<email>maksbotan@gentoo.org</email>
-		<name>Maxim Koltsov</name>
-	</maintainer>
+	</maintainer> 
 </pkgmetadata>

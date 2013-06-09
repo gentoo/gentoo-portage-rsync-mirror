@@ -1,6 +1,18 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.415 2013/05/22 10:47:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.419 2013/06/09 16:09:31 ago Exp $
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> vim-core-7.3.762.ebuild:
+  Stable for sparc, wrt bug #469010
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> vim-core-7.3.762.ebuild:
+  Stable for sh, wrt bug #469010
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> vim-core-7.3.762.ebuild:
+  Stable for s390, wrt bug #469010
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> vim-core-7.3.762.ebuild:
+  Stable for alpha, wrt bug #469010
 
   22 May 2013; Agostino Sarubbo <ago@gentoo.org> vim-core-7.3.762.ebuild:
   Stable for ia64, wrt bug #469010
