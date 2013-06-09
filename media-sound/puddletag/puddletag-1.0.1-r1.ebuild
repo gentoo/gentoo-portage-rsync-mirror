@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.1-r1.ebuild,v 1.5 2013/04/15 19:23:06 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.1-r1.ebuild,v 1.6 2013/06/09 18:39:35 floppym Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-python/PyQt4-4.9.6-r2[${PYTHON_USEDEP},svg]
 	>=dev-python/configobj-4.7.2-r1[${PYTHON_USEDEP}]
 	acoustid? ( >=media-libs/chromaprint-0.6 )
 	musicbrainz? ( >=dev-python/python-musicbrainz-0.7.4-r1[${PYTHON_USEDEP}] )
-	cover? ( >=dev-python/imaging-1.1.7-r2[${PYTHON_USEDEP}] )
+	cover? ( virtual/python-imaging[${PYTHON_USEDEP}] )
 	quodlibet? ( >=media-sound/quodlibet-2.5[${PYTHON_USEDEP}] )
 	>=dev-python/sip-4.14.2-r1:0[${PYTHON_USEDEP}]
 	>=dev-python/lxml-3.0.1[${PYTHON_USEDEP}]"

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.63 2013/05/12 07:56:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.64 2013/06/09 18:42:42 floppym Exp $
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> griffith-0.13.ebuild,
+  griffith-9999.ebuild:
+  Depend on virtual/python-imaging.
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove obsolete useflag from metadata.xml

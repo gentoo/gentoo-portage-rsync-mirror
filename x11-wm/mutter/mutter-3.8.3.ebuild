@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.1.ebuild,v 1.2 2013/04/26 19:36:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.3.ebuild,v 1.1 2013/06/09 18:58:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	x11-libs/gdk-pixbuf:2[introspection?]
 	>=x11-libs/gtk+-3.3.7:3[X,introspection?]
 	>=dev-libs/glib-2.36.0:2
-	>=media-libs/clutter-1.13.5:1.0[introspection?]
+	>=media-libs/clutter-1.14.3:1.0[introspection?]
 	>=media-libs/cogl-1.13.3:1.0=[introspection?]
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/startup-notification-0.7
@@ -54,7 +54,8 @@ DEPEND="${COMMON_DEPEND}
 	test? ( app-text/docbook-xml-dtd:4.5 )
 "
 RDEPEND="${COMMON_DEPEND}
-	!x11-misc/expocity"
+	!x11-misc/expocity
+"
 
 src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README *.txt doc/*.txt"
@@ -73,7 +74,6 @@ src_configure() {
 		--enable-startup-notification \
 		--enable-xsync \
 		--enable-verbose-mode \
-		--enable-compile-warnings=maximum \
 		--with-libcanberra \
 		$(use_enable introspection)
 }

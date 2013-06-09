@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pkpgcounter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.15 2012/05/13 17:52:02 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.16 2013/06/09 18:56:00 floppym Exp $
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> pkpgcounter-3.50-r1.ebuild:
+  Depend on virtual/python-imaging.
 
 *pkpgcounter-3.50-r1 (13 May 2012)
 
@@ -77,4 +80,3 @@
   08 Nov 2005; Christian Andreetta <satya@gentoo.org> +metadata.xml,
   +pkpgcounter-1.72.ebuild:
   new ebuild submission: net-print/pykota dependency (bug #110679)
-

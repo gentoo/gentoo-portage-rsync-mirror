@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.1.ebuild,v 1.2 2013/05/12 18:45:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.3.ebuild,v 1.1 2013/06/09 18:31:25 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3,3} )
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit db-use eutils flag-o-matic gnome2 python-any-r1 vala versionator virtualx
+inherit db-use flag-o-matic gnome2 python-any-r1 vala virtualx
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://projects.gnome.org/evolution/arch.shtml"
@@ -16,7 +16,7 @@ HOMEPAGE="http://projects.gnome.org/evolution/arch.shtml"
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
 SLOT="0/40" # subslot = libcamel-1.2 soname version
-IUSE="api-doc-extras +google +gnome-online-accounts +gtk +introspection ipv6 ldap kerberos vala +weather"
+IUSE="api-doc-extras +gnome-online-accounts +gtk +introspection ipv6 ldap kerberos vala +weather"
 REQUIRED_USE="vala? ( introspection )"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
@@ -38,9 +38,7 @@ RDEPEND="
 	virtual/libiconv
 
 	gtk? ( >=x11-libs/gtk+-3.2:3 )
-	gnome-online-accounts? (
-		>=net-libs/gnome-online-accounts-3.7.90
-		)
+	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.90 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	kerberos? ( virtual/krb5:= )
 	ldap? ( >=net-nds/openldap-2:= )
@@ -58,9 +56,6 @@ DEPEND="${RDEPEND}
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2
 
-# FIXME
-#RESTRICT="test"
-
 pkg_setup() {
 	python-any-r1_pkg_setup
 }
@@ -73,7 +68,7 @@ src_prepare() {
 	# so include the right dir in CPPFLAGS
 	append-cppflags "-I$(db_includedir)"
 
-	# FIXME: Fix compilation flags crazyness
+	# Fix compilation flags crazyness
 	# Touch configure.ac if doing eautoreconf
 	sed 's/^\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
 		-i configure || die "sed failed"
@@ -91,7 +86,7 @@ src_configure() {
 		$(use_enable vala vala-bindings) \
 		$(use_enable weather) \
 		$(use_enable gtk) \
-		$(use_enable google) \
+		--enable-google \
 		--enable-nntp \
 		--enable-largefile \
 		--enable-smime \
@@ -119,7 +114,6 @@ src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	unset ORBIT_SOCKETDIR
 	unset SESSION_MANAGER
-	export XDG_DATA_HOME="${T}"
 	unset DISPLAY
 	Xemake check
 }

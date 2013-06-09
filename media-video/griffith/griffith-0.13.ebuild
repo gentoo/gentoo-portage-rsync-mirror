@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.4 2013/01/17 16:36:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.5 2013/06/09 18:42:42 floppym Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="doc"
 
-RDEPEND="dev-python/imaging
+RDEPEND="virtual/python-imaging
 	gnome-base/libglade
 	dev-python/pyxml
 	>=dev-python/pygtk-2.6.1:2

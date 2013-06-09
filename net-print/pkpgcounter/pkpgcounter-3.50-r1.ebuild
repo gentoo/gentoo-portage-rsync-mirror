@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-3.50-r1.ebuild,v 1.1 2012/05/13 17:52:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-3.50-r1.ebuild,v 1.2 2013/06/09 18:56:00 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/imaging"
+DEPEND="virtual/python-imaging"
 RDEPEND="${DEPEND}"
 
 DOCS="BUGS CREDITS NEWS README PKG-INFO"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-1.0_alpha784.ebuild,v 1.3 2012/02/26 09:33:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-1.0_alpha784.ebuild,v 1.4 2013/06/09 18:32:31 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/imaging-1.1.2-r1
+DEPEND="virtual/python-imaging
 	dev-python/pyxml
 	dev-python/reportlab
 	dev-lang/tk
