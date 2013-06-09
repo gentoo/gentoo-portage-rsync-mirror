@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/websockify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/websockify/ChangeLog,v 1.2 2013/04/26 05:42:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/websockify/ChangeLog,v 1.3 2013/06/09 00:54:39 prometheanfire Exp $
+
+*websockify-0.3.0 (09 Jun 2013)
+
+  09 Jun 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +websockify-0.3.0.ebuild:
+  packaging the correct version for sys-cluster/nova-2013.1.x
 
   26 Apr 2013; Patrick Lauer <patrick@gentoo.org> websockify-0.4.1.ebuild:
   Use tarballs instead of pulling from git
