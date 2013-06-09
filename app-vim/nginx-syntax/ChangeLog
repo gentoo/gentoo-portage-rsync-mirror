@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/nginx-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nginx-syntax/ChangeLog,v 1.12 2013/05/10 15:08:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nginx-syntax/ChangeLog,v 1.13 2013/06/09 18:25:43 ulm Exp $
+
+  09 Jun 2013; Ulrich Müller <ulm@gentoo.org> nginx-syntax-0.3.2.ebuild:
+  Fix LICENSE, vim license according to author, bug 472768.
 
   10 May 2013; Markus Meier <maekke@gentoo.org> nginx-syntax-0.3.2.ebuild:
   add ~arm, bug #456752

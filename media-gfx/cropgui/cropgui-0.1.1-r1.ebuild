@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/cropgui-0.1.1-r1.ebuild,v 1.1 2013/05/28 20:00:46 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/cropgui-0.1.1-r1.ebuild,v 1.2 2013/06/09 18:13:14 floppym Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	dev-python/imaging
+	virtual/python-imaging
 	dev-python/pygobject:2
 	dev-python/pygtk:2
 "
