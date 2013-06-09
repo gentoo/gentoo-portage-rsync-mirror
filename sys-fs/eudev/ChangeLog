@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.39 2013/06/07 02:16:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.40 2013/06/09 11:00:15 blueness Exp $
+
+  09 Jun 2013; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
+  Cleanup up logic wrt kernels eudev will run under
 
   ; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
   Drop legacy-libudev

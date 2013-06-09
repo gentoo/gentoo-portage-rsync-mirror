@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.29 2013/06/07 03:14:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.30 2013/06/09 11:00:54 pacho Exp $
+
+*folks-0.9.2 (09 Jun 2013)
+
+  09 Jun 2013; Pacho Ramos <pacho@gentoo.org> +folks-0.9.2.ebuild:
+  Version bump
 
   07 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> folks-0.4.3.ebuild,
   -folks-0.6.9.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.273 2013/06/07 17:11:35 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.274 2013/06/09 10:48:56 billie Exp $
+
+  09 Jun 2013; Daniel Pielmeier <billie@gentoo.org> hplip-3.13.5.ebuild:
+  Switch to virtual/python-imaging as hplip supports both pillow and imaging.
+  This fixes bug #472556. Thanks to Ivan Iraci for the report.
 
   07 Jun 2013; Daniel Pielmeier <billie@gentoo.org> hplip-3.13.5.ebuild:
   Add REQUIRED_USE needed by PYTHON_REQUIRED_USE and python-single-r1 eclass.
