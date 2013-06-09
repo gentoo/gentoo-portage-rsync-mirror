@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.194 2013/05/11 22:21:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.195 2013/06/09 22:07:00 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> acroread-9.5.4.ebuild:
+  Use `unpack` rather than `tar xf`.
 
   11 May 2013; Andreas K. Huettel <dilfridge@gentoo.org> acroread-9.5.4.ebuild:
   Mute warning about textrel, bug 465160

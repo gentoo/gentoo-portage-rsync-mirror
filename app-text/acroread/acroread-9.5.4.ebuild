@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.4.ebuild,v 1.3 2013/05/11 22:21:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.4.ebuild,v 1.4 2013/06/09 22:07:00 vapier Exp $
 
 EAPI=5
 
@@ -86,10 +86,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-	tar xf ILINXR.TAR || die "Failed to unpack ILINXR.TAR."
-	tar xf COMMON.TAR || die "Failed to unpack COMMON.TAR."
+	unpack ./ILINXR.TAR ./COMMON.TAR
 }
 
 src_prepare() {
