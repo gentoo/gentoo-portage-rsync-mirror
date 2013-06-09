@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r3.ebuild,v 1.2 2013/05/29 09:32:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r3.ebuild,v 1.3 2013/06/09 16:54:40 floppym Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	dev-python/imaging[tk,${PYTHON_USEDEP}]
+	virtual/python-imaging[tk,${PYTHON_USEDEP}]
 	dev-libs/boost
 	dev-libs/hyphen
 	dev-libs/libxml2
