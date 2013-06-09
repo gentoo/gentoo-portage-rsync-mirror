@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-9999.ebuild,v 1.2 2013/06/09 02:04:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-9999.ebuild,v 1.3 2013/06/09 02:42:19 zmedico Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,6 @@ EGIT_REPO_URI="https://github.com/openstack/horizon.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-		>=dev-python/python-heatclient-0.2.2[${PYTHON_USEDEP}]
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
