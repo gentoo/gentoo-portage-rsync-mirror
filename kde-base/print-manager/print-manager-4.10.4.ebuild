@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/print-manager-4.10.4.ebuild,v 1.1 2013/06/04 18:22:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/print-manager-4.10.4.ebuild,v 1.2 2013/06/09 09:12:37 dilfridge Exp $
 
 EAPI=5
 
@@ -14,6 +14,7 @@ DEPEND="
 	>=net-print/cups-1.5.0[dbus]
 "
 RDEPEND="${DEPEND}
+	app-admin/system-config-printer-gnome
 	!kde-misc/print-manager
 "
 

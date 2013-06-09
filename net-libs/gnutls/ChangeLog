@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.436 2013/06/04 12:27:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.437 2013/06/09 09:13:18 maekke Exp $
+
+  09 Jun 2013; Markus Meier <maekke@gentoo.org> gnutls-2.12.23-r1.ebuild:
+  arm stable, bug #471788
 
   04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gnutls-2.12.23-r1.ebuild:
   Stable for x86, wrt bug #471788

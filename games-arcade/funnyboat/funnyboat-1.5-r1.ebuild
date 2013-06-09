@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.5-r1.ebuild,v 1.1 2013/06/09 07:52:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/funnyboat-1.5-r1.ebuild,v 1.2 2013/06/09 09:15:05 hasufell Exp $
 
 EAPI=5
 
@@ -15,6 +15,7 @@ LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
