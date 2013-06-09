@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.143 2013/06/08 08:48:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.144 2013/06/09 11:43:32 ulm Exp $
+
+  09 Jun 2013; Ulrich Müller <ulm@gentoo.org> package.use.mask:
+  Remove mask for media-libs/realcodecs. Package has been removed.
 
   08 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
   Move mask for app-leechcraft/leechcraft-meta[unstable] to base profile

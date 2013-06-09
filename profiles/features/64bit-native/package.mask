@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.93 2013/06/03 16:26:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.94 2013/06/09 11:43:33 ulm Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -151,8 +151,6 @@ games-strategy/x2
 games-strategy/x2-demo
 media-fonts/acroread-asianfonts
 media-gfx/picasa
-media-libs/realcodecs
-media-libs/win32codecs
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/ventrilo-server-bin

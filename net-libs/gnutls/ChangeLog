@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.437 2013/06/09 09:13:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.440 2013/06/09 11:36:59 ago Exp $
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gnutls-2.12.23-r1.ebuild:
+  Stable for sparc, wrt bug #471788
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gnutls-2.12.23-r1.ebuild:
+  Stable for ppc, wrt bug #471788
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gnutls-2.12.23-r1.ebuild:
+  Stable for ia64, wrt bug #471788
 
   09 Jun 2013; Markus Meier <maekke@gentoo.org> gnutls-2.12.23-r1.ebuild:
   arm stable, bug #471788

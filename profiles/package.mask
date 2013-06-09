@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14816 2013/06/08 12:38:58 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14817 2013/06/09 11:43:31 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -127,12 +127,6 @@ x11-themes/pekwm-themes-hewphoria
 # Merged into kde-base/plasma-workspace by upstream
 # since KDE SC 4.10.
 kde-misc/ktouchpadenabler
-
-# Ulrich Müller <ulm@gentoo.org> (13 May 2013)
-# Unclear licensing situation. Distfile not redistributable
-# and not available at copyright owner's site.
-# Masked for removal in 30 days, bug #468406
-media-libs/win32codecs
 
 # Ian Delaney <idella4@gentoo.org> (14 May 2013)
 # package, no longer valid, otherwise replaced in new packages
@@ -1069,15 +1063,6 @@ dev-embedded/avr-libc
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # The development branch, to be unmasked when out of beta by upstream.
 =net-misc/socat-2.0.0*
-
-# Steve Dibb <beandog@gentoo.org> (05 Nov 2008)
-# Mask realplayer codecs for security bug 245662
-# Ulrich Müller <ulm@gentoo.org> (13 May 2013)
-# Unclear licensing situation. Distfile not redistributable
-# and not available at copyright owner's site. Fetch failure.
-# Masked for removal in 30 days, bugs #468406 and #468370.
-media-libs/amd64codecs
-media-libs/realcodecs
 
 # Markus Ullmann <jokey@gentoo.org> (07 Jul 2008)
 # mask for security bug #190667 (CVE-2007-{4584,5839})
