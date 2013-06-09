@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.13 2013/06/08 21:00:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.14 2013/06/09 07:11:06 ulm Exp $
 
 EAPI=5
 
@@ -41,10 +41,10 @@ RDEPEND="sys-libs/ncurses
 	acl? ( virtual/acl )
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( sys-apps/dbus )
+	gfile? ( >=dev-libs/glib-2.28.6 )
 	gnutls? ( net-libs/gnutls )
 	gpm? ( sys-libs/gpm )
 	hesiod? ( net-dns/hesiod )
-	!inotify? ( gfile? ( >=dev-libs/glib-2.28.6 ) )
 	kerberos? ( virtual/krb5 )
 	libxml2? ( >=dev-libs/libxml2-2.2.0 )
 	selinux? ( sys-libs/libselinux )
@@ -86,8 +86,8 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	alsa? ( virtual/pkgconfig )
 	dbus? ( virtual/pkgconfig )
+	gfile? ( virtual/pkgconfig )
 	gnutls? ( virtual/pkgconfig )
-	!inotify? ( gfile? ( virtual/pkgconfig ) )
 	libxml2? ( virtual/pkgconfig )
 	X? ( virtual/pkgconfig )
 	gzip-el? ( app-arch/gzip )
@@ -151,14 +151,6 @@ src_configure() {
 		myconf+=" --with-sound"
 	else
 		myconf+=" $(use_with sound)"
-	fi
-
-	if use inotify; then
-		myconf+=" --with-file-notification=inotify"
-		use gfile && ewarn \
-			"USE flag \"gfile\" has no effect if \"inotify\" is set."
-	else
-		myconf+=" --with-file-notification=$(usex gfile gfile)"
 	fi
 
 	if use X; then
@@ -229,6 +221,7 @@ src_configure() {
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
 		--without-compress-info \
+		--with-file-notification=$(usev gfile || usev inotify || echo no) \
 		$(use_enable acl) \
 		$(use_with dbus) \
 		$(use_with gnutls) \
