@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.13 2013/06/08 08:41:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.14 2013/06/09 17:12:05 floppym Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Mike Gilbert <floppym@gentoo.org> (09 Jun 2013)
+# Requires dev-python/pillow to be stable.
+virtual/python-imaging python_targets_python3_2 python_targets_python3_3
 
 # Agostino Sarubbo <ago@gentoo.org> (24 May 2013)
 # Justin Lecher <jlec@gentoo.org> (30 May 2313)

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.2.ebuild,v 1.1 2012/11/16 15:16:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.2.ebuild,v 1.2 2013/06/09 17:14:46 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc mysql postgres sqlite test"
 
-RDEPEND="dev-python/imaging
+RDEPEND="virtual/python-imaging
 	sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )
 	postgres? ( dev-python/psycopg:2 )
 	mysql? ( >=dev-python/mysql-python-1.2.3 )"

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm preinst prepare prerm setup test
-DEPEND=dev-python/imaging sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) postgres? ( dev-python/psycopg:2 ) mysql? ( >=dev-python/mysql-python-1.2.3 ) doc? ( >=dev-python/sphinx-1.0.7 ) test? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) =dev-lang/python-2* >=app-admin/webapp-config-1.50.15
+DEPEND=virtual/python-imaging sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) postgres? ( dev-python/psycopg:2 ) mysql? ( >=dev-python/mysql-python-1.2.3 ) doc? ( >=dev-python/sphinx-1.0.7 ) test? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) =dev-lang/python-2* >=app-admin/webapp-config-1.50.15
 DESCRIPTION=High-level Python web framework
 EAPI=4
 HOMEPAGE=http://www.djangoproject.com/ http://pypi.python.org/pypi/Django
 IUSE=doc mysql postgres sqlite test vhosts
 KEYWORDS=~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=BSD
-RDEPEND=dev-python/imaging sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) postgres? ( dev-python/psycopg:2 ) mysql? ( >=dev-python/mysql-python-1.2.3 ) =dev-lang/python-2* >=app-admin/webapp-config-1.50.15
+RDEPEND=virtual/python-imaging sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) postgres? ( dev-python/psycopg:2 ) mysql? ( >=dev-python/mysql-python-1.2.3 ) =dev-lang/python-2* >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=https://www.djangoproject.com/m/releases/1.4/Django-1.4.2.tar.gz
 _eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=1b2c64b0a159208e361a8e28bb9d878c
+_md5_=bf5020bd2b1047a799b8fef2cc1fee0a

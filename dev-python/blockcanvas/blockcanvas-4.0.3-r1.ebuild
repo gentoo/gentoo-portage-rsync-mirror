@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/blockcanvas-4.0.3-r1.ebuild,v 1.1 2013/05/14 17:04:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/blockcanvas-4.0.3-r1.ebuild,v 1.2 2013/06/09 17:01:23 floppym Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-python/apptools-4[${PYTHON_USEDEP}]
 	dev-python/configobj[${PYTHON_USEDEP}]
 	dev-python/docutils[${PYTHON_USEDEP}]
 	dev-python/greenlet[${PYTHON_USEDEP}]
-	dev-python/imaging[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )

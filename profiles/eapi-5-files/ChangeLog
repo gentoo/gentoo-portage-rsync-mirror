@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo eapi-5-files profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.13 2013/05/30 16:00:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.14 2013/06/09 17:12:05 floppym Exp $
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> package.use.stable.mask:
+  Stable mask python 3.2 and 3.3 for virtual/python-imaging.
 
   30 May 2013; Justin Lecher <jlec@gentoo.org> package.use.stable.mask:
   Additionally mask USE=hvm for app-emulation/xen-tools as it depends on masked

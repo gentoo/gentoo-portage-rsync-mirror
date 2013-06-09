@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.27 2013/05/08 05:04:25 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.28 2013/06/09 17:29:44 floppym Exp $
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> -rst2pdf-0.16-r1.ebuild,
+  -rst2pdf-0.16.ebuild, -rst2pdf-0.91.ebuild, rst2pdf-0.92.ebuild,
+  rst2pdf-0.93-r1.ebuild, rst2pdf-0.93.ebuild:
+  Depend on virtual/python-imaging. Remove old.
 
   08 May 2013; Jan Matejka <yac@gentoo.org> rst2pdf-0.93-r1.ebuild:
   dev-python/rst2pdf svg support fixes bug #403407

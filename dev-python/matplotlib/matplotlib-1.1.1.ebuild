@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.8 2013/01/30 19:00:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.9 2013/06/09 17:21:43 floppym Exp $
 
 EAPI="3"
 
@@ -46,7 +46,7 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	doc? (
 		app-text/dvipng
-		dev-python/imaging
+		virtual/python-imaging
 		dev-python/ipython
 		dev-python/xlwt
 		dev-python/sphinx
