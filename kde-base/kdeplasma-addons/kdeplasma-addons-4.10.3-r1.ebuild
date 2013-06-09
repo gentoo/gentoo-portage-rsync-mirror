@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.3-r1.ebuild,v 1.1 2013/06/04 16:48:31 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.3-r1.ebuild,v 1.5 2013/06/09 08:23:54 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit kde4-base
 
 DESCRIPTION="Extra Plasma applets and engines"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="attica debug desktopglobe exif fcitx ibus json oauth qalculate qwt scim
 semantic-desktop"
 
