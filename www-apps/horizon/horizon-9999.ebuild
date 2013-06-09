@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-9999.ebuild,v 1.1 2013/04/12 02:00:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-9999.ebuild,v 1.2 2013/06/09 02:04:54 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,17 +15,25 @@ EGIT_REPO_URI="https://github.com/openstack/horizon.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
+		>=dev-python/python-heatclient-0.2.2[${PYTHON_USEDEP}]
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
-		<dev-python/django-1.5[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
+		<dev-python/d2to1-0.3[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.5[${PYTHON_USEDEP}]
+		<dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		>=dev-python/django-1.5[${PYTHON_USEDEP}]
+		<dev-python/django-1.6[${PYTHON_USEDEP}]
 		dev-python/django-compressor
-		>=dev-python/django-openstack-auth-1.0.7[${PYTHON_USEDEP}]
+		>=dev-python/django-openstack-auth-1.0.8[${PYTHON_USEDEP}]
+		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
 		dev-python/netaddr
 		>=dev-python/python-cinderclient-1.0.2[${PYTHON_USEDEP}]
 		<dev-python/python-cinderclient-2.0.0[${PYTHON_USEDEP}]
 		<dev-python/python-glanceclient-2[${PYTHON_USEDEP}]
-		dev-python/python-keystoneclient[${PYTHON_USEDEP}]
+		>=dev-python/python-heatclient-0.2.2[${PYTHON_USEDEP}]
+		>=dev-python/python-keystoneclient-0.2[${PYTHON_USEDEP}]
+		<dev-python/python-keystoneclient-0.3[${PYTHON_USEDEP}]
 		>=dev-python/python-novaclient-2.12.0[${PYTHON_USEDEP}]
 		<dev-python/python-novaclient-3[${PYTHON_USEDEP}]
 		>=dev-python/python-quantumclient-2.2.0[${PYTHON_USEDEP}]
@@ -33,4 +41,4 @@ RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
 		>=dev-python/python-swiftclient-1.1[${PYTHON_USEDEP}]
 		<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]
-		dev-python/lockfile"
+		dev-python/lockfile[${PYTHON_USEDEP}]"

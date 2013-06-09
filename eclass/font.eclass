@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.55 2013/04/05 13:25:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.56 2013/06/09 02:08:23 lu_zero Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
@@ -56,7 +56,7 @@ DEPEND="X? (
 		media-fonts/encodings
 	)
 	>=media-libs/fontconfig-2.4.0"
-RDEPEND="${DEPEND}"
+RDEPEND=""
 
 # @FUNCTION: font_xfont_config
 # @DESCRIPTION:
@@ -211,7 +211,7 @@ font_pkg_postinst() {
 		echo
 	fi
 
-	if [[ ${ROOT} == / ]]; then
+	if has_version media-libs/fontconfig && [[ ${ROOT} == / ]]; then
 		ebegin "Updating global fontcache"
 		fc-cache -fs
 		eend $?
@@ -228,7 +228,7 @@ font_pkg_postrm() {
 	find "${EROOT}"usr/share/fonts/ -type f '!' -perm 0644 -print0 \
 		| xargs -0 chmod -v 0644 2>/dev/null
 
-	if [[ ${ROOT} == / ]]; then
+	if has_version media-libs/fontconfig && [[ ${ROOT} == / ]]; then
 		ebegin "Updating global fontcache"
 		fc-cache -fs
 		eend $?
