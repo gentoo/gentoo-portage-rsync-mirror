@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.27.ebuild,v 1.8 2013/06/08 15:34:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.27.ebuild,v 1.9 2013/06/09 03:25:26 zmedico Exp $
 
 EAPI=5
 
@@ -151,6 +151,12 @@ src_install() {
 	export OVERRIDE_CFLAGS="$CFLAGS" OVERRIDE_LDFLAGS="$LDFLAGS"
 	local libdir=$(get_libdir)
 	[[ -n $libdir ]] || die "get_libdir returned an empty string"
+
+	# Bug #472690 - Avoid sandbox violation for /dev/dri/card0.
+	local x
+	for x in /dev/dri/card[0-9] ; do
+		[[ -e ${x} ]] && addpredict ${x}
+	done
 
 	dodir "/usr/$(get_libdir)/python2.7/site-packages" # for init_calibre.py
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
