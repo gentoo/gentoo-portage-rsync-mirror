@@ -1,11 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.3.ebuild,v 1.1 2013/05/24 06:05:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.5-r1.ebuild,v 1.1 2013/06/09 21:17:51 xmw Exp $
 
 EAPI=5
 
-#dev-python/pygobject and dev-python/pygtk do not support python3
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 inherit distutils-r1 eutils
 
 DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy"
@@ -17,9 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+clipboard pulseaudio +rencode server vpx webp x264"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 # x264/old-libav.path situation see bug 459218
-COMMON_DEPEND="dev-python/pygobject:2
-	dev-python/pygtk:2
+COMMON_DEPEND=""${PYTHON_DEPS}"
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/pygtk:2[${PYTHON_USEDEP}]
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -34,9 +36,9 @@ COMMON_DEPEND="dev-python/pygobject:2
 		virtual/ffmpeg )"
 
 RDEPEND="${COMMON_DEPEND}
-	dev-python/dbus-python
-	dev-python/imaging
-	dev-python/ipython
+	dev-python/dbus-python[${PYTHON_USEDEP}]
+	dev-python/ipython[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]
 	virtual/ssh
 	x11-apps/setxkbmap
 	x11-apps/xmodmap
@@ -46,11 +48,13 @@ RDEPEND="${COMMON_DEPEND}
 	)"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
-	>=dev-python/cython-0.16"
+	>=dev-python/cython-0.16[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
-	epatch "${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch
-	epatch "${FILESDIR}"/${PN}-0.8.0-prefix.patch
+	epatch \
+		"${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch \
+		"${FILESDIR}"/${PN}-0.8.0-prefix.patch \
+		"${FILESDIR}"/${PN}-0.9.5-PIL.patch
 
 	#assuming ffmpeg and libav mutual exclusive installs
 	if has_version "media-video/libav" ; then

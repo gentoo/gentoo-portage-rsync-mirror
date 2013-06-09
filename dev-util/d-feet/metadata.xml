@@ -3,5 +3,7 @@
 <pkgmetadata>
 <maintainer>
   <email>cardoe@gentoo.org</email>
+  <name>Doug Goldstein</name>
+  <description>Feel free to bump or do any updates as needed</description>
 </maintainer>
 </pkgmetadata>

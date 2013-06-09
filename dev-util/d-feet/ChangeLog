@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/d-feet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.17 2013/01/25 23:39:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.18 2013/06/09 21:16:28 cardoe Exp $
+
+  09 Jun 2013; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  Update maintainer info
 
 *d-feet-0.3.3 (25 Jan 2013)
 

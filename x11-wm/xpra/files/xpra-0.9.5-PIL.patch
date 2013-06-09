@@ -1,0 +1,103 @@
+--- xpra-0.9.5/xpra/server.py
++++ xpra-0.9.5/xpra/server.py
+@@ -610,11 +610,11 @@
+         width = maxx-minx
+         height = maxy-miny
+         log("screenshot: %sx%s, min x=%s y=%s", width, height, minx, miny)
+-        import Image
+-        image = Image.new("RGBA", (width, height))
++        import PIL.Image
++        image = PIL.Image.new("RGBA", (width, height))
+         for wid, x, y, w, h, pixmap in reversed(all_regions):
+             _, _, wid, _, _, w, h, _, raw_data, rowstride, _, _ = get_rgb_rawdata(0, 0, wid, pixmap, 0, 0, w, h, "rgb24", -1, None, logger=log.debug)
+-            window_image = Image.fromstring("RGB", (w, h), raw_data, "raw", "RGB", rowstride)
++            window_image = PIL.Image.fromstring("RGB", (w, h), raw_data, "raw", "RGB", rowstride)
+             tx = x-minx
+             ty = y-miny
+             image.paste(window_image, (tx, ty))
+--- xpra-0.9.5/xpra/window_source.py
++++ xpra-0.9.5/xpra/window_source.py
+@@ -1024,8 +1024,8 @@
+ 
+     def PIL_encode(self, w, h, coding, data, rowstride, options):
+         assert coding in ENCODINGS
+-        import Image
+-        im = Image.fromstring("RGB", (w, h), data, "raw", "RGB", rowstride)
++        import PIL.Image
++        im = PIL.Image.fromstring("RGB", (w, h), data, "raw", "RGB", rowstride)
+         buf = StringIO()
+         client_options = {}
+         if coding=="jpeg":
+--- xpra-0.9.5/xpra/window_backing.py
++++ xpra-0.9.5/xpra/window_backing.py
+@@ -32,7 +32,7 @@
+ #have/use PIL?
+ has_PIL = False
+ try:
+-    import Image
++    import PIL.Image
+     has_PIL = True
+ except:
+     pass
+@@ -91,7 +91,7 @@
+ 
+     def jpegimage(self, img_data, width, height):
+         buf = IOClass(img_data)
+-        return Image.open(buf)
++        return PIL.Image.open(buf)
+ 
+     def rgb24image(self, img_data, width, height, rowstride):
+         assert has_PIL
+@@ -99,7 +99,7 @@
+             assert len(img_data) == rowstride * height
+         else:
+             assert len(img_data) == width * 3 * height
+-        return Image.fromstring("RGB", (width, height), img_data, 'raw', 'RGB', rowstride, 1)
++        return PIL.Image.fromstring("RGB", (width, height), img_data, 'raw', 'RGB', rowstride, 1)
+ 
+     def process_delta(self, raw_data, width, height, rowstride, options):
+         """
+@@ -395,7 +395,7 @@
+         if use_PIL:
+             #try PIL first since it doesn't need the UI thread until the actual do_paint_rgb24 call
+             buf = IOClass(img_data)
+-            img = Image.open(buf)
++            img = PIL.Image.open(buf)
+             if img.mode=="RGB":
+                 raw_data = img.tostring("raw", "RGB")
+                 #PIL flattens the data to a continuous straightforward RGB format:
+--- xpra-0.9.5/xpra/scripts/config.py
++++ xpra-0.9.5/xpra/scripts/config.py
+@@ -18,8 +18,8 @@
+ from wimpiggy.gobject_compat import import_gobject, is_gtk3
+ gobject = import_gobject()
+ try:
+-    import Image
+-    assert Image
++    import PIL.Image
++    assert PIL.Image
+     _has_PIL = True
+ except:
+     _has_PIL = False
+--- xpra-0.9.5/xpra/server_source.py
++++ xpra-0.9.5/xpra/server_source.py
+@@ -696,8 +696,8 @@
+     def make_window_icon(self, pixel_data, pixel_format, stride, w, h):
+         log("found new window icon: %sx%s, sending as png=%s", w, h, self.png_window_icons)
+         if self.png_window_icons:
+-            import Image
+-            img = Image.frombuffer("RGBA", (w,h), pixel_data, "raw", "BGRA", 0, 1)
++            import PIL.Image
++            img = PIL.Image.frombuffer("RGBA", (w,h), pixel_data, "raw", "BGRA", 0, 1)
+             MAX_SIZE = 64
+             if w>MAX_SIZE or h>MAX_SIZE:
+                 #scale icon down
+@@ -708,7 +708,7 @@
+                     w = int(w*MAX_SIZE/h)
+                     h = MAX_SIZE
+                 log("scaling window icon down to %sx%s", w, h)
+-                img = img.resize((w,h), Image.ANTIALIAS)
++                img = img.resize((w,h), PIL.Image.ANTIALIAS)
+             output = StringIO()
+             img.save(output, 'PNG')
+             raw_data = output.getvalue()
