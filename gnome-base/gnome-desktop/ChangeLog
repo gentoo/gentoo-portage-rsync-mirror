@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.312 2013/05/14 21:00:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.313 2013/06/09 19:34:31 pacho Exp $
+
+*gnome-desktop-3.8.3 (09 Jun 2013)
+
+  09 Jun 2013; Pacho Ramos <pacho@gentoo.org> +gnome-desktop-3.8.3.ebuild,
+  -gnome-desktop-3.8.1.ebuild:
+  Version bump, drop old
 
 *gnome-desktop-3.8.2 (14 May 2013)
 

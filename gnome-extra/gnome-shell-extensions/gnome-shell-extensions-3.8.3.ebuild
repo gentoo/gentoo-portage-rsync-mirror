@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.1.ebuild,v 1.1 2013/04/20 10:01:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.3.ebuild,v 1.1 2013/06/09 19:31:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit eutils gnome2 readme.gentoo
 
 DESCRIPTION="JavaScript extensions for GNOME Shell"
 HOMEPAGE="http://live.gnome.org/GnomeShell/Extensions"
@@ -41,6 +41,16 @@ DEPEND="${COMMON_DEPEND}
 "
 # eautoreconf needs gnome-base/gnome-common
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="Installed extensions installed are initially disabled by default.
+To change the system default and enable some extensions, you can use
+# eselect gnome-shell-extensions
+
+Alternatively, to enable/disable extensions on a per-user basis,
+you can use the https://extensions.gnome.org/ web interface, the
+gnome-extra/gnome-tweak-tool GUI, or modify the org.gnome.shell
+enabled-extensions gsettings key from the command line or a script."
+
 src_configure() {
 	gnome2_src_configure --enable-extensions=all
 }
@@ -55,6 +65,8 @@ src_install() {
 	else
 		rm -r "${ED}usr/share/gnome-shell/extensions/${example}" || die
 	fi
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
@@ -63,12 +75,6 @@ pkg_postinst() {
 	ebegin "Updating list of installed extensions"
 	eselect gnome-shell-extensions update
 	eend $?
-	elog
-	elog "Installed extensions installed are initially disabled by default."
-	elog "To change the system default and enable some extensions, you can use"
-	elog "# eselect gnome-shell-extensions"
-	elog "Alternatively, to enable/disable extensions on a per-user basis,"
-	elog "you can use the https://extensions.gnome.org/ web interface, the"
-	elog "gnome-extra/gnome-tweak-tool GUI, or modify the org.gnome.shell"
-	elog "enabled-extensions gsettings key from the command line or a script."
+
+	readme.gentoo_print_elog
 }
