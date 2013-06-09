@@ -55,7 +55,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3999">CVE-2007-3999</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200709-01.xml">GLSA-200709-01</uri>
+    <uri link="/security/en/glsa/glsa-200709-01.xml">GLSA-200709-01</uri>
   </references>
   <metadata tag="requester" timestamp="Sun, 09 Sep 2007 19:27:24 +0000">
     jaervosz

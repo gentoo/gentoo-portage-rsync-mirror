@@ -60,7 +60,7 @@
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0650">CVE-2007-0650</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3387">CVE-2007-3387</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200708-05.xml">GLSA-200708-05</uri>
+    <uri link="/security/en/glsa/glsa-200708-05.xml">GLSA-200708-05</uri>
   </references>
   <metadata tag="requester" timestamp="Sat, 08 Sep 2007 15:34:16 +0000">
     jaervosz

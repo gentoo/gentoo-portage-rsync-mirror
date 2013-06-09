@@ -53,7 +53,7 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=dev-scheme/chicken-3.1.0&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-30.xml">GLSA 200711-30</uri>
+    <uri link="/security/en/glsa/glsa-200711-30.xml">GLSA 200711-30</uri>
   </references>
   <metadata tag="requester" timestamp="Mon, 12 May 2008 11:47:42 +0000">
     p-y

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.1.ebuild,v 1.1 2013/06/08 20:17:15 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.1.ebuild,v 1.2 2013/06/09 19:07:48 je_fro Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://fedorahosted.org/liberation-fonts"
 SRC_URI="!fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${PN}-ttf-${PV}.tar.gz )
 fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.gz )"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
 SLOT="0"
 LICENSE="OFL-1.1"
 IUSE="fontforge X"
@@ -20,7 +20,9 @@ FONT_SUFFIX="ttf"
 
 FONT_CONF=( "${FILESDIR}/${PV}/60-liberation.conf" )
 
-DEPEND="fontforge? ( media-gfx/fontforge )"
+DEPEND="
+	fontforge? ( media-gfx/fontforge )
+	dev-python/fonttools"
 RDEPEND=""
 
 pkg_setup() {

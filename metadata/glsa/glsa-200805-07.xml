@@ -65,15 +65,15 @@
     </p>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-02.xml">GLSA 200705-02</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-06.xml">GLSA 200705-06</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-22.xml">GLSA 200705-22</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-24.xml">GLSA 200705-24</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200710-06.xml">GLSA 200710-06</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200710-16.xml">GLSA 200710-16</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200710-30.xml">GLSA 200710-30</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-08.xml">GLSA 200711-08</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200801-09.xml">GLSA 200801-09</uri>
+    <uri link="/security/en/glsa/glsa-200705-02.xml">GLSA 200705-02</uri>
+    <uri link="/security/en/glsa/glsa-200705-06.xml">GLSA 200705-06</uri>
+    <uri link="/security/en/glsa/glsa-200705-22.xml">GLSA 200705-22</uri>
+    <uri link="/security/en/glsa/glsa-200705-24.xml">GLSA 200705-24</uri>
+    <uri link="/security/en/glsa/glsa-200710-06.xml">GLSA 200710-06</uri>
+    <uri link="/security/en/glsa/glsa-200710-16.xml">GLSA 200710-16</uri>
+    <uri link="/security/en/glsa/glsa-200710-30.xml">GLSA 200710-30</uri>
+    <uri link="/security/en/glsa/glsa-200711-08.xml">GLSA 200711-08</uri>
+    <uri link="/security/en/glsa/glsa-200801-09.xml">GLSA 200801-09</uri>
     <uri link="https://bugs.gentoo.org/177580">Gentoo bug 177580: Port LTSP 5 to Gentoo</uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 01 Apr 2008 19:23:11 +0000">

@@ -56,8 +56,8 @@
     # emerge ">=dev-util/tla-1.2-r2"</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200405-01.xml">GLSA 200405-01</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200405-13.xml">GLSA 200405-13</uri>
+    <uri link="/security/en/glsa/glsa-200405-01.xml">GLSA 200405-01</uri>
+    <uri link="/security/en/glsa/glsa-200405-13.xml">GLSA 200405-13</uri>
   </references>
   <metadata tag="submitter">
     jaervosz

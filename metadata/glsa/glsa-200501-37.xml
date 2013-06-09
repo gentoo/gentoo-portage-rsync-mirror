@@ -57,7 +57,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0005">CAN-2005-0005</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200501-26.xml">GLSA 200501-26</uri>
+    <uri link="/security/en/glsa/glsa-200501-26.xml">GLSA 200501-26</uri>
   </references>
   <metadata tag="submitter" timestamp="Wed, 26 Jan 2005 12:20:54 +0000">
     koon

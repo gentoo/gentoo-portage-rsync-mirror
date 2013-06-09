@@ -128,7 +128,7 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0850">CVE-2010-0850</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0886">CVE-2010-0886</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0887">CVE-2010-0887</uri>
-    <uri link="http://www.gentoo.org/doc/en/java.xml#doc_chap4">Gentoo Linux Java documentation</uri>
+    <uri link="/doc/en/java.xml#doc_chap4">Gentoo Linux Java documentation</uri>
     <uri link="http://www.oracle.com/technology/deploy/security/critical-patch-updates/javacpumar2010.html">Oracle Java SE and Java for Business Critical Patch Update Advisory - March 2010</uri>
   </references>
   <metadata tag="requester" timestamp="Fri, 02 Apr 2010 09:43:04 +0000">

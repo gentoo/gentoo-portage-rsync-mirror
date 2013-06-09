@@ -96,7 +96,7 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5746">CVE-2007-5746</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5747">CVE-2007-5747</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0320">CVE-2008-0320</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200803-20.xml">GLSA 200803-20</uri>
+    <uri link="/security/en/glsa/glsa-200803-20.xml">GLSA 200803-20</uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 29 Apr 2008 12:59:56 +0000">
     keytoaster

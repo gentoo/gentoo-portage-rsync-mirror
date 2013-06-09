@@ -107,7 +107,7 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4017">CVE-2009-4017</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4142">CVE-2009-4142</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4143">CVE-2009-4143</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200911-03.xml">GLSA 200911-03</uri>
+    <uri link="/security/en/glsa/glsa-200911-03.xml">GLSA 200911-03</uri>
   </references>
   <metadata tag="submitter" timestamp="Fri, 06 Nov 2009 10:26:06 +0000">
     keytoaster

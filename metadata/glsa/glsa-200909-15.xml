@@ -58,7 +58,7 @@
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2929">CVE-2005-2929</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4690">CVE-2008-4690</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200511-09.xml">GLSA 200511-09</uri>
+    <uri link="/security/en/glsa/glsa-200511-09.xml">GLSA 200511-09</uri>
   </references>
   <metadata tag="requester" timestamp="Fri, 07 Aug 2009 11:47:31 +0000">
     rbu

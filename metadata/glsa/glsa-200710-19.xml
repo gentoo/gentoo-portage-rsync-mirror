@@ -60,8 +60,8 @@
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1536">CVE-2007-1536</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2799">CVE-2007-2799</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200703-26.xml">GLSA 200703-26</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-25.xml">GLSA 200705-25</uri>
+    <uri link="/security/en/glsa/glsa-200703-26.xml">GLSA 200703-26</uri>
+    <uri link="/security/en/glsa/glsa-200705-25.xml">GLSA 200705-25</uri>
   </references>
   <metadata tag="requester" timestamp="Sat, 29 Sep 2007 13:59:12 +0000">
     p-y

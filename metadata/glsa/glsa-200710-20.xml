@@ -66,7 +66,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3387">CVE-2007-3387</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200709-12.xml">GLSA 200709-12</uri>
+    <uri link="/security/en/glsa/glsa-200709-12.xml">GLSA 200709-12</uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 02 Oct 2007 21:24:54 +0000">
     falco

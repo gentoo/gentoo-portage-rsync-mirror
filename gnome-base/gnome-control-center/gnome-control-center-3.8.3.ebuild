@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.1.5.ebuild,v 1.1 2013/05/12 09:02:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.3.ebuild,v 1.1 2013/06/09 19:12:30 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -8,13 +8,12 @@ GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen
 
 inherit autotools eutils gnome2
 
-DESCRIPTION="GNOME Desktop Configuration Tool"
+DESCRIPTION="GNOME's main interface to configure various aspects of the desktop"
 HOMEPAGE="https://git.gnome.org/browse/gnome-control-center/"
 
 LICENSE="GPL-2+"
 SLOT="2"
-IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom
-kerberos modemmanager +socialweb systemd v4l"
+IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom kerberos modemmanager +socialweb systemd v4l"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 # False positives caused by nested configure scripts
@@ -22,13 +21,16 @@ QA_CONFIGURE_OPTIONS=".*"
 
 # gnome-session-2.91.6-r1 is needed so that 10-user-dirs-update is run at login
 # g-s-d[policykit] needed for bug #403527
+#
+# gnome-shell/gnome-control-center/mutter/gnome-settings-daemon better to be in sync for 3.8.3
+# https://mail.gnome.org/archives/gnome-announce-list/2013-June/msg00005.html
 COMMON_DEPEND="
 	>=dev-libs/glib-2.35.1:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
 	>=x11-libs/gtk+-3.7.7:3
 	>=gnome-base/gsettings-desktop-schemas-3.7.2.2
 	>=gnome-base/gnome-desktop-3.7.5:3=
-	>=gnome-base/gnome-settings-daemon-3.7.3[colord?,policykit]
+	>=gnome-base/gnome-settings-daemon-3.8.3[colord?,policykit]
 	>=gnome-base/libgnomekbd-2.91.91
 
 	app-text/iso-codes

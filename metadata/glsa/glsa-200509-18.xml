@@ -52,8 +52,8 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=x11-libs/qt-3.3.4-r8&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200507-05.xml">GLSA 200507-05</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200507-19.xml">GLSA 200507-19</uri>
+    <uri link="/security/en/glsa/glsa-200507-05.xml">GLSA 200507-05</uri>
+    <uri link="/security/en/glsa/glsa-200507-19.xml">GLSA 200507-19</uri>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1849">CAN-2005-1849</uri>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2096">CAN-2005-2096</uri>
   </references>

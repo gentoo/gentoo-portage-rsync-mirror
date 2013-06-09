@@ -78,7 +78,7 @@
   </resolution>
   <references>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-3193">CVE-2005-3193</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200512-08.xml">GLSA 200512-08</uri>
+    <uri link="/security/en/glsa/glsa-200512-08.xml">GLSA 200512-08</uri>
     <uri link="http://scary.beasts.org/security/CESA-2005-003.txt">CESA-2005-003</uri>
   </references>
   <metadata tag="requester" timestamp="Thu, 16 Feb 2006 20:57:52 +0000">

@@ -66,7 +66,7 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=net-misc/nx-3.1.0-r1&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200801-09.xml">GLSA 200801-09</uri>
+    <uri link="/security/en/glsa/glsa-200801-09.xml">GLSA 200801-09</uri>
   </references>
   <metadata tag="requester" timestamp="Fri, 21 Mar 2008 02:19:05 +0000">
     rbu

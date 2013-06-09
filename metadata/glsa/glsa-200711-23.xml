@@ -93,11 +93,11 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4496">CVE-2007-4496</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4497">CVE-2007-4497</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5617">CVE-2007-5617</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200606-02.xml">GLSA-200606-02</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200702-06.xml">GLSA-200702-06</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200704-11.xml">GLSA-200704-11</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-15.xml">GLSA-200705-15</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200707-11.xml">GLSA-200707-11</uri>
+    <uri link="/security/en/glsa/glsa-200606-02.xml">GLSA-200606-02</uri>
+    <uri link="/security/en/glsa/glsa-200702-06.xml">GLSA-200702-06</uri>
+    <uri link="/security/en/glsa/glsa-200704-11.xml">GLSA-200704-11</uri>
+    <uri link="/security/en/glsa/glsa-200705-15.xml">GLSA-200705-15</uri>
+    <uri link="/security/en/glsa/glsa-200707-11.xml">GLSA-200707-11</uri>
     <uri link="http://lists.vmware.com/pipermail/security-announce/2007/000001.html">VMSA-2007-0006</uri>
   </references>
   <metadata tag="requester" timestamp="Wed, 07 Nov 2007 01:24:32 +0000">

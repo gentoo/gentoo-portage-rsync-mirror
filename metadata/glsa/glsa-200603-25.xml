@@ -70,7 +70,7 @@
   <references>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-4077">CVE-2005-4077</uri>
     <uri link="http://www.hardened-php.net/advisory_242005.109.html">Hardened-PHP Advisory 24/2005</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200512-09.xml">GLSA 200512-09</uri>
+    <uri link="/security/en/glsa/glsa-200512-09.xml">GLSA 200512-09</uri>
   </references>
   <metadata tag="requester" timestamp="Fri, 17 Mar 2006 09:53:36 +0000">
     DerCorny

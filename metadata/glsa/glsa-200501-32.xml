@@ -66,7 +66,7 @@
     # emerge --ask --oneshot --verbose app-office/koffice</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200501-28.xml">GLSA 200501-18</uri>
+    <uri link="/security/en/glsa/glsa-200501-28.xml">GLSA 200501-18</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0064">CAN-2005-0064</uri>
     <uri link="http://www.kde.org/info/security/advisory-20050119-1.txt">KDE Security Advisory: kpdf Buffer Overflow Vulnerability</uri>
     <uri link="http://www.kde.org/info/security/advisory-20050120-1.txt">KDE Security Advisory: KOffice PDF Import Filter Vulnerability</uri>

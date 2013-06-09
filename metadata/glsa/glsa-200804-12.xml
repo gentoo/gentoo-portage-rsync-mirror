@@ -55,7 +55,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0887">CVE-2008-0887</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-14.xml">GLSA 200705-14</uri>
+    <uri link="/security/en/glsa/glsa-200705-14.xml">GLSA 200705-14</uri>
   </references>
   <metadata tag="submitter" timestamp="Wed, 09 Apr 2008 17:28:36 +0000">
     falco

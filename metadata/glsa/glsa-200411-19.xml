@@ -49,7 +49,7 @@
     # emerge --ask --oneshot --verbose ">=net-misc/pavuk-0.9.31"</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200407-19.xml">GLSA-200407-19</uri>
+    <uri link="/security/en/glsa/glsa-200407-19.xml">GLSA-200407-19</uri>
     <uri link="http://secunia.com/advisories/13120/">SA13120</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0456">CAN-2004-0456</uri>
   </references>

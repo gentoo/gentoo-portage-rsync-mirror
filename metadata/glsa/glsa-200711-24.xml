@@ -68,7 +68,7 @@
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5339">CVE-2007-5339</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5340">CVE-2007-5340</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-14.xml">GLSA 200711-14</uri>
+    <uri link="/security/en/glsa/glsa-200711-14.xml">GLSA 200711-14</uri>
   </references>
   <metadata tag="requester" timestamp="Sun, 18 Nov 2007 13:53:08 +0000">
     p-y

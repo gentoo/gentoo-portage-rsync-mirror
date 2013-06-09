@@ -1,0 +1,13 @@
+--- purify_v03-source/purify/Makefile
++++ purify_v03-source/purify/Makefile
+@@ -2,8 +2,8 @@
+ include phoenix/Makefile
+ 
+ path := /usr/local/bin
+-flags := -I. -O3 -fomit-frame-pointer
+-link := -s
++flags := -I. $(CXXFLAGS)
++link := $(LDFLAGS)
+ objects := obj/phoenix.o obj/purify.o
+ 
+ ifeq ($(platform),x)

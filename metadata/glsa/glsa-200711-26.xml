@@ -65,8 +65,8 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5935">CVE-2007-5935</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5936">CVE-2007-5936</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5937">CVE-2007-5937</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200710-12.xml">GLSA 200710-12</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-22.xml">GLSA 200711-22</uri>
+    <uri link="/security/en/glsa/glsa-200710-12.xml">GLSA 200710-12</uri>
+    <uri link="/security/en/glsa/glsa-200711-22.xml">GLSA 200711-22</uri>
   </references>
   <metadata tag="submitter" timestamp="Tue, 13 Nov 2007 01:13:42 +0000">
     rbu

@@ -59,7 +59,7 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6239">CVE-2007-6239</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1612">CVE-2008-1612</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0478">CVE-2009-0478</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200801-05.xml">GLSA-200801-05</uri>
+    <uri link="/security/en/glsa/glsa-200801-05.xml">GLSA-200801-05</uri>
   </references>
   <metadata tag="requester" timestamp="Mon, 09 Mar 2009 14:14:34 +0000">
     rbu

@@ -56,7 +56,7 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=app-emulation/emul-linux-x86-qtlibs-10.0&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200611-02.xml">GLSA 200611-02</uri>
+    <uri link="/security/en/glsa/glsa-200611-02.xml">GLSA 200611-02</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4811">CVE-2006-4811</uri>
   </references>
   <metadata tag="requester" timestamp="Sat, 17 Feb 2007 23:37:01 +0000">

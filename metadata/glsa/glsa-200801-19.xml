@@ -60,7 +60,7 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=x11-libs/goffice-0.6.1&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-30.xml">GLSA-200711-30</uri>
+    <uri link="/security/en/glsa/glsa-200711-30.xml">GLSA-200711-30</uri>
   </references>
   <metadata tag="requester" timestamp="Thu, 10 Jan 2008 19:49:11 +0000">
     p-y

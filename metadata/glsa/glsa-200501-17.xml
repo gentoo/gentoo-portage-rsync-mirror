@@ -67,7 +67,7 @@
     # emerge --ask --oneshot --verbose app-office/koffice</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200412-24.xml">GLSA 200412-24</uri>
+    <uri link="/security/en/glsa/glsa-200412-24.xml">GLSA 200412-24</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1125">CAN-2004-1125</uri>
     <uri link="http://kde.org/info/security/advisory-20041223-1.txt">KDE Security Advisory: kpdf Buffer Overflow Vulnerability</uri>
     <uri link="http://koffice.kde.org/security/2004_xpdf_integer_overflow_2.php">KOffice XPDF Integer Overflow 2</uri>

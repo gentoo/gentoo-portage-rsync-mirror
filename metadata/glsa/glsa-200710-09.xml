@@ -68,7 +68,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1861">CVE-2006-1861</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200607-02.xml">GLSA 200607-02</uri>
+    <uri link="/security/en/glsa/glsa-200607-02.xml">GLSA 200607-02</uri>
   </references>
   <metadata tag="requester" timestamp="Thu, 20 Sep 2007 13:00:55 +0000">
     p-y

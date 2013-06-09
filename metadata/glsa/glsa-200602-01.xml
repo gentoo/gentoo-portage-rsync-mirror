@@ -60,7 +60,7 @@
   </resolution>
   <references>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-4048">CVE-2005-4048</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200601-06.xml">GLSA 200601-06</uri>
+    <uri link="/security/en/glsa/glsa-200601-06.xml">GLSA 200601-06</uri>
   </references>
   <metadata tag="requester" timestamp="Sun, 29 Jan 2006 21:54:38 +0000">
     DerCorny

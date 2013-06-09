@@ -56,8 +56,8 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=app-emulation/emul-linux-x86-qtlibs-20071114-r2&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200708-16.xml">GLSA 200708-16</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200710-28.xml">GLSA 200710-28</uri>
+    <uri link="/security/en/glsa/glsa-200708-16.xml">GLSA 200708-16</uri>
+    <uri link="/security/en/glsa/glsa-200710-28.xml">GLSA 200710-28</uri>
   </references>
   <metadata tag="requester" timestamp="Sun, 02 Dec 2007 12:28:12 +0000">
     rbu

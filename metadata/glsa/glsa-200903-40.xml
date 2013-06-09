@@ -56,7 +56,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1372">CVE-2008-1372</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200804-02.xml">GLSA 200804-02</uri>
+    <uri link="/security/en/glsa/glsa-200804-02.xml">GLSA 200804-02</uri>
   </references>
   <metadata tag="requester" timestamp="Sun, 21 Dec 2008 20:13:59 +0000">
     keytoaster

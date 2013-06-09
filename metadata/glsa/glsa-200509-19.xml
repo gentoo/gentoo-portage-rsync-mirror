@@ -85,8 +85,8 @@
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2491">CAN-2005-2491</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2498">CAN-2005-2498</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200508-13.xml">GLSA 200508-13</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200508-17.xml">GLSA 200508-17</uri>
+    <uri link="/security/en/glsa/glsa-200508-13.xml">GLSA 200508-13</uri>
+    <uri link="/security/en/glsa/glsa-200508-17.xml">GLSA 200508-17</uri>
   </references>
   <metadata tag="submitter" timestamp="Mon, 26 Sep 2005 15:50:10 +0000">
     koon

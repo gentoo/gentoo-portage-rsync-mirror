@@ -57,7 +57,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0064">CAN-2005-0064</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200501-28.xml">GLSA 200501-28</uri>
+    <uri link="/security/en/glsa/glsa-200501-28.xml">GLSA 200501-28</uri>
     <uri link="http://gnunet.org/libextractor/">libextractor security announcement</uri>
   </references>
   <metadata tag="requester" timestamp="Tue,  1 Mar 2005 11:13:31 +0000">

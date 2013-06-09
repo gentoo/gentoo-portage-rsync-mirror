@@ -81,7 +81,7 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1768">CVE-2008-1768</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1769">CVE-2008-1769</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1881">CVE-2008-1881</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200803-13.xml">GLSA 200803-13</uri>
+    <uri link="/security/en/glsa/glsa-200803-13.xml">GLSA 200803-13</uri>
   </references>
   <metadata tag="requester" timestamp="Mon, 24 Mar 2008 19:42:45 +0000">
     rbu

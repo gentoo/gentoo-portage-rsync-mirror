@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.0.ebuild,v 1.1 2013/03/28 17:13:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.3.ebuild,v 1.1 2013/06/09 19:10:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT="yes"
 inherit autotools eutils gnome2 virtualx
 
 DESCRIPTION="Gnome Settings Daemon"
-HOMEPAGE="http://www.gnome.org"
+HOMEPAGE="https://git.gnome.org/browse/gnome-settings-daemon"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -96,8 +96,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# README is empty
-	DOCS="AUTHORS NEWS ChangeLog MAINTAINERS"
 	gnome2_src_configure \
 		--disable-static \
 		--enable-man \

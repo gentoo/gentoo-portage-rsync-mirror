@@ -219,8 +219,8 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1194">CVE-2008-1194</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1195">CVE-2008-1195</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1196">CVE-2008-1196</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200705-23.xml">GLSA 200705-23</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200706-08.xml">GLSA 200706-08</uri>
+    <uri link="/security/en/glsa/glsa-200705-23.xml">GLSA 200705-23</uri>
+    <uri link="/security/en/glsa/glsa-200706-08.xml">GLSA 200706-08</uri>
   </references>
   <metadata tag="requester" timestamp="Sun, 15 Jul 2007 07:23:49 +0000">
     jaervosz

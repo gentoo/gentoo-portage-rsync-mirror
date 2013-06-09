@@ -52,7 +52,7 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=media-gfx/pngcrush-1.6.2&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200507-19.xml">GLSA 200507-19</uri>
+    <uri link="/security/en/glsa/glsa-200507-19.xml">GLSA 200507-19</uri>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1849">CVE-2005-1849</uri>
   </references>
   <metadata tag="requester" timestamp="Wed, 22 Feb 2006 18:06:23 +0000">

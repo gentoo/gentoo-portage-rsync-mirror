@@ -64,8 +64,8 @@
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0687">CAN-2004-0687</uri>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0688">CAN-2004-0688</uri>
     <uri link="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0914">CAN-2004-0914</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200409-34.xml">GLSA 200409-34</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200411-28.xml">GLSA 200411-28</uri>
+    <uri link="/security/en/glsa/glsa-200409-34.xml">GLSA 200409-34</uri>
+    <uri link="/security/en/glsa/glsa-200411-28.xml">GLSA 200411-28</uri>
   </references>
   <metadata tag="requester" timestamp="Wed,  2 Feb 2005 18:02:43 +0000">
     koon

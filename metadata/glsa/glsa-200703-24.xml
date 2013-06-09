@@ -55,7 +55,7 @@
   </resolution>
   <references>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5864">CVE-2006-5864</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200611-20.xml">GLSA 200611-20</uri>
+    <uri link="/security/en/glsa/glsa-200611-20.xml">GLSA 200611-20</uri>
   </references>
   <metadata tag="requester" timestamp="Wed, 14 Mar 2007 07:32:05 +0000">
     jaervosz

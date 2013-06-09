@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/curator-3.0_p20110120.ebuild,v 1.6 2012/10/06 16:56:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/curator-3.0_p20110120.ebuild,v 1.7 2013/06/09 19:02:17 floppym Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	dev-python/imaging
+	virtual/python-imaging
 	|| ( >=media-gfx/imagemagick-5.4.9 media-gfx/graphicsmagick[imagemagick] )"
 
 S="${WORKDIR}/curator-3.0_pf078f1686a78"

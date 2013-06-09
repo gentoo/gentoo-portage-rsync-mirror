@@ -55,7 +55,7 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=dev-lang/R-2.2.1-r1&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-30.xml">GLSA 200711-30</uri>
+    <uri link="/security/en/glsa/glsa-200711-30.xml">GLSA 200711-30</uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 20 Nov 2007 22:35:44 +0000">
     rbu

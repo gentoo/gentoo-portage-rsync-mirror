@@ -56,12 +56,12 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=app-text/ptex-3.1.10_p20071203&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200708-05.xml">GLSA 200708-05</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200709-12.xml">GLSA 200709-12</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200709-17.xml">GLSA 200709-17</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200710-12.xml">GLSA 200710-12</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-22.xml">GLSA 200711-22</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200711-26.xml">GLSA 200711-26</uri>
+    <uri link="/security/en/glsa/glsa-200708-05.xml">GLSA 200708-05</uri>
+    <uri link="/security/en/glsa/glsa-200709-12.xml">GLSA 200709-12</uri>
+    <uri link="/security/en/glsa/glsa-200709-17.xml">GLSA 200709-17</uri>
+    <uri link="/security/en/glsa/glsa-200710-12.xml">GLSA 200710-12</uri>
+    <uri link="/security/en/glsa/glsa-200711-22.xml">GLSA 200711-22</uri>
+    <uri link="/security/en/glsa/glsa-200711-26.xml">GLSA 200711-26</uri>
   </references>
   <metadata tag="requester" timestamp="Wed, 07 May 2008 22:31:38 +0000">
     p-y

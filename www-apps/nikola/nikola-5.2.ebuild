@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/nikola-5.2.ebuild,v 1.1 2013/02/14 07:43:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/nikola-5.2.ebuild,v 1.2 2013/06/09 19:03:24 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} ) # 3_2 should be possible now, but untested
@@ -26,7 +26,7 @@ DEPEND="dev-python/docutils" # needs rst2man to build manpage
 RDEPEND="${DEPEND}
 	=dev-python/configparser-3.2.0*
 	>=dev-python/doit-0.20.0
-	dev-python/imaging
+	virtual/python-imaging
 	dev-python/lxml
 	>=dev-python/mako-0.6
 	>=dev-python/mock-1.0.0

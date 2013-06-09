@@ -70,7 +70,7 @@
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1374">CVE-2009-1374</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1375">CVE-2009-1375</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1376">CVE-2009-1376</uri>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200901-13.xml">GLSA 200901-13</uri>
+    <uri link="/security/en/glsa/glsa-200901-13.xml">GLSA 200901-13</uri>
   </references>
   <metadata tag="submitter" timestamp="Mon, 25 May 2009 17:46:41 +0000">
     a3li

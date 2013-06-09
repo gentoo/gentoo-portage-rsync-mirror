@@ -54,7 +54,7 @@
     # emerge --ask --oneshot --verbose &quot;&gt;=app-office/abiword-2.2.11&quot;</code>
   </resolution>
   <references>
-    <uri link="http://www.gentoo.org/security/en/glsa/glsa-200509-20.xml">GLSA-200509-20</uri>
+    <uri link="/security/en/glsa/glsa-200509-20.xml">GLSA-200509-20</uri>
     <uri link="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2972">CAN-2005-2972</uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 18 Oct 2005 07:36:44 +0000">

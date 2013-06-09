@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/nikola
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.9 2013/02/14 07:43:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.10 2013/06/09 19:03:24 floppym Exp $
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> nikola-5.1.ebuild,
+  nikola-5.2.ebuild:
+  Depend on virtual/python-imaging.
 
 *nikola-5.2 (14 Feb 2013)
 

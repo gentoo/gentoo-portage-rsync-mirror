@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.5.ebuild,v 1.1 2013/06/07 06:43:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.5.ebuild,v 1.2 2013/06/09 19:20:49 floppym Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/ipython[${PYTHON_USEDEP}]
-	virtual/python-imaging[${PYTHON_USEDEP}]
+	dev-python/imaging[${PYTHON_USEDEP}]
 	virtual/ssh
 	x11-apps/setxkbmap
 	x11-apps/xmodmap
