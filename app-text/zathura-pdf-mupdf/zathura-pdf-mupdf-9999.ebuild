@@ -1,23 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-0.2.3.ebuild,v 1.2 2013/06/08 23:51:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.1 2013/06/08 23:51:03 xmw Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs
+inherit eutils git-2 toolchain-funcs
 
 DESCRIPTION="PDF plug-in for zathura"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
-SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
+EGIT_REPO_URI="git://git.pwmt.org/${PN}.git"
+EGIT_BRANCH="mupdf-git"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="cairo"
 
 RDEPEND="!app-text/zathura-pdf-poppler
-	>=app-text/mupdf-1.2:=
-	<app-text/mupdf-9999
+	>=app-text/mupdf-9999:=
 	>=app-text/zathura-0.2.0
 	media-libs/jbig2dec
 	media-libs/openjpeg:0

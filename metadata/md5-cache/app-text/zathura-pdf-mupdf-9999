@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install setup unpack
+DEPEND=!app-text/zathura-pdf-poppler >=app-text/mupdf-9999:= >=app-text/zathura-0.2.0 media-libs/jbig2dec media-libs/openjpeg:0 virtual/jpeg cairo? ( x11-libs/cairo ) virtual/pkgconfig dev-vcs/git
+DESCRIPTION=PDF plug-in for zathura
+EAPI=5
+HOMEPAGE=http://pwmt.org/projects/zathura/
+IUSE=cairo
+LICENSE=ZLIB
+RDEPEND=!app-text/zathura-pdf-poppler >=app-text/mupdf-9999:= >=app-text/zathura-0.2.0 media-libs/jbig2dec media-libs/openjpeg:0 virtual/jpeg cairo? ( x11-libs/cairo )
+SLOT=0
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=a59c587767251902d87b8f1f1da92ab2
