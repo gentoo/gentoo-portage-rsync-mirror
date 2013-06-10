@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/module-rebuild
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.17 2013/02/27 17:05:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.18 2013/06/10 19:49:24 hwoarang Exp $
+
+  10 Jun 2013; Markos Chandras <hwoarang@gentoo.org> module-rebuild-0.7.ebuild:
+  Add ~mips
 
   27 Feb 2013; Matthew Thode <prometheanfire@gentoo.org>
   module-rebuild-0.7.ebuild:
@@ -83,4 +86,3 @@
   03 May 2005; John Mylchreest <johnm@gentoo.org> +files/module-rebuild-0.1,
   +metadata.xml, +module-rebuild-0.1.ebuild:
   Initial Import. fixes bug #34921, thanks go to Paul Varner for inspiration
-

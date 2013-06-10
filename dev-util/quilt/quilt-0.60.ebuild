@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.60.ebuild,v 1.1 2012/03/20 19:37:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.60.ebuild,v 1.2 2013/06/10 19:37:35 hwoarang Exp $
 
 inherit bash-completion-r1 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/quilt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="emacs graphviz"
 
 RDEPEND="sys-apps/ed

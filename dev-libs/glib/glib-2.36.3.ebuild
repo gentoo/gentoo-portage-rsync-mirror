@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.1 2013/06/10 09:32:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.2 2013/06/10 19:39:53 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -233,12 +233,14 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	# For now disabled as looks to not break for a long time
+	#
 	# Inform users about possible breakage when updating glib and not dbus-glib, bug #297483
 	# TODO: add a subslotted virtual to trigger this automatically
-	if has_version dev-libs/dbus-glib; then
-		ewarn "If you experience a breakage after updating dev-libs/glib try"
-		ewarn "rebuilding dev-libs/dbus-glib"
-	fi
+#	if has_version dev-libs/dbus-glib; then
+#		ewarn "If you experience a breakage after updating dev-libs/glib try"
+#		ewarn "rebuilding dev-libs/dbus-glib"
+#	fi
 
 	if has_version '<x11-libs/gtk+-3.0.12:3'; then
 		# To have a clear upgrade path for gtk+-3.0.x users, have to resort to
