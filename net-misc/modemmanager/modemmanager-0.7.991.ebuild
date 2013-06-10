@@ -1,15 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.7.991.ebuild,v 1.1 2013/06/10 09:21:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.7.991.ebuild,v 1.2 2013/06/10 18:45:57 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="ModemManager"
 
-inherit autotools eutils gnome.org user multilib readme.gentoo toolchain-funcs udev virtualx
+inherit eutils gnome.org user multilib readme.gentoo toolchain-funcs udev virtualx
 
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="http://cgit.freedesktop.org/ModemManager/ModemManager/"
-SRC_URI="http://cgit.freedesktop.org/ModemManager/ModemManager/snapshot/${GNOME_ORG_MODULE}-${PV}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0/1" # subslot = dbus interface version, i.e. N in org.freedesktop.ModemManager${N}
@@ -50,7 +49,6 @@ src_prepare() {
 		-i test/*.py || die
 
 	epatch_user
-	eautoreconf
 }
 
 src_configure() {

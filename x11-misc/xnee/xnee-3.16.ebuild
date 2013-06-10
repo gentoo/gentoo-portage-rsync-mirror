@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.14.ebuild,v 1.1 2012/10/10 15:20:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.16.ebuild,v 1.1 2013/06/10 18:57:59 jer Exp $
 
 EAPI=4
 
@@ -33,8 +33,11 @@ DEPEND="${RDEPEND}
 	x11-proto/inputproto
 	virtual/pkgconfig
 	sys-devel/gettext
-	gnome? ( || ( media-gfx/imagemagick[jpeg,png]
-		media-gfx/graphicsmagick[imagemagick,jpeg,png] ) )"
+	gnome? ( || (
+			media-gfx/imagemagick[jpeg,png]
+			media-gfx/graphicsmagick[imagemagick,jpeg,png]
+	) )
+"
 
 # This needs RECORD extension from X.org server which isn't necessarily
 # enabled. Xlib: extension "RECORD" missing on display ":0.0".

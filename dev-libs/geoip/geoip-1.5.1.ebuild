@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.0-r1.ebuild,v 1.2 2013/05/22 18:22:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.1.ebuild,v 1.1 2013/06/10 18:53:51 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -38,7 +38,7 @@ RDEPEND="
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-pkgconfig.patch
+	epatch "${FILESDIR}"/${PN}-1.5.0-pkgconfig.patch
 	sed -e "s:usr local share GeoIP:usr share GeoIP:" \
 		-e "s:usr local etc:etc:" \
 		-i apps/geoipupdate-pureperl.pl || die

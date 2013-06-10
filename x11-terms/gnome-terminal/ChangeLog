@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.272 2013/05/18 19:42:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.273 2013/06/10 18:55:30 pacho Exp $
+
+*gnome-terminal-3.8.3 (10 Jun 2013)
+
+  10 Jun 2013; Pacho Ramos <pacho@gentoo.org> +gnome-terminal-3.8.3.ebuild:
+  Version bump, drop old
 
   18 May 2013; Pacho Ramos <pacho@gentoo.org> -gnome-terminal-3.8.1.ebuild,
   gnome-terminal-3.8.2.ebuild:
