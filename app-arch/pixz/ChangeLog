@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pixz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/ChangeLog,v 1.6 2013/02/18 01:00:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/ChangeLog,v 1.7 2013/06/10 17:23:29 zerochaos Exp $
+
+  10 Jun 2013; Rick Farina <zerochaos@gentoo.org> -pixz-1.0.ebuild,
+  pixz-1.0.2.ebuild, pixz-9999.ebuild:
+  removing old ebuild, fixing subslot deps
 
   18 Feb 2013; Mike Frysinger <vapier@gentoo.org> +files/pixz-1.0.2-lm.patch,
   pixz-1.0.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.9.6_p02.ebuild,v 1.1 2013/06/10 16:34:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.9.6_p02.ebuild,v 1.2 2013/06/10 17:22:59 bicatali Exp $
 
 EAPI=5
 
@@ -35,12 +35,24 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 
-src_install() {
+src_unpack() {
+	# unpack in destination only to avoid copy
+	return
+}
+
+prout() {
 	for d in ${GEANT4_DATA}; do
 		local p=${d/.}
 		doins -r *${p/G4}
 	done
+}
+
+src_install() {
 	sed -n "s,export \(G4.\+DATA=\"\).*\(/share/Geant.\+/data/.\+\) > /dev/null ; pwd\`,\1${EROOT%/}/usr\2,p" \
 		"${EROOT}/usr/bin/geant4.sh" > 99geant-data
 	doenvd 99geant-data
+	local g4dir=/usr/$(sed -n 's|.*/\(share/Geant4.*/data\).*|\1|p' "${EROOT}/usr/bin/geant4.sh" | tail -n 1)
+	dodir ${g4dir}
+	cd "${ED}${g4dir}"
+	unpack ${A}
 }

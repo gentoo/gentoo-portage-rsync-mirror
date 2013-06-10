@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/pixz-9999.ebuild,v 1.5 2013/01/11 01:55:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/pixz-9999.ebuild,v 1.6 2013/06/10 17:23:29 zerochaos Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE="static"
 
-LIB_DEPEND=">=app-arch/libarchive-2.8[static-libs(+)]
+LIB_DEPEND=">=app-arch/libarchive-2.8:=[static-libs(+)]
 	>=app-arch/xz-utils-5[static-libs(+)]"
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}

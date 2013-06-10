@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fonttools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.28 2012/08/02 22:24:52 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.29 2013/06/10 17:30:41 idella4 Exp $
+
+*fonttools-2.3-r1 (10 Jun 2013)
+
+  10 Jun 2013; Ian Delaney <idella4@gentoo.org> +fonttools-2.3-r1.ebuild:
+  revbump, migrate -> distutils-r1, rm old
 
   02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> fonttools-2.3.ebuild:
   Bumped to EAPI 4 and added xml(+) to PYTHON_USE_WITH
@@ -110,4 +115,3 @@
   +fonttools-2.0_beta1.ebuild:
   Initial import. Thanks to Mike C. Fletcher <mcfletch@rogers.com>
   and MATSUU Takuto <matsuu@gentoo.org>. This closes bug #54865
-
