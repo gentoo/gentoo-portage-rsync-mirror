@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/multimode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/ChangeLog,v 1.4 2013/06/05 02:54:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/ChangeLog,v 1.5 2013/06/10 18:14:33 zerochaos Exp $
+
+  10 Jun 2013; Rick Farina <zerochaos@gentoo.org> multimode-1.00.ebuild,
+  multimode-9999.ebuild:
+  adding subslot dep on gnuradio
 
   05 Jun 2013; Rick Farina <zerochaos@gentoo.org> multimode-1.00.ebuild,
   multimode-9999.ebuild:

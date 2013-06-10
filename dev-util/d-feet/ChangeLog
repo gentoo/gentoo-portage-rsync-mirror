@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/d-feet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.19 2013/06/09 21:41:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.20 2013/06/10 18:30:11 pacho Exp $
+
+  10 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add gnome as backup herd as agreed with maintainer (#438974)
 
 *d-feet-0.3.5 (09 Jun 2013)
 
