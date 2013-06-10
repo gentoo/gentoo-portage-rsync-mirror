@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst test
+DEPEND=|| ( sys-devel/gcc:4.5[lto] >=sys-devel/gcc-4.6 ) ~sys-devel/llvm-3.3_rc3
+DESCRIPTION=GCC plugin that uses LLVM for optimization and code generation
+EAPI=5
+HOMEPAGE=http://dragonegg.llvm.org/
+IUSE=test
+KEYWORDS=~amd64 ~x86 ~amd64-linux
+LICENSE=GPL-2
+RDEPEND=|| ( sys-devel/gcc:4.5[lto] >=sys-devel/gcc-4.6 ) ~sys-devel/llvm-3.3_rc3
+SLOT=0
+SRC_URI=http://llvm.org/pre-releases/3.3/rc3/dragonegg-source-3.3rc3.tar.gz test? ( http://llvm.org/pre-releases/3.3/rc3/llvm-source-3.3rc3.tar.gz )
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=f7d57a47d6c9030d5f1fb439a050805c

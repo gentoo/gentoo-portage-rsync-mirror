@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7926 2013/06/09 11:43:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7927 2013/06/10 21:46:39 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Mask release candidates for sys-devel/llvm-3.3 and friends
 
   09 Jun 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
   Remove mask for media-libs/amd64codecs, media-libs/realcodecs, and

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.42 2013/06/10 21:56:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3_rc3.ebuild,v 1.1 2013/06/10 21:56:12 voyageur Exp $
 
 EAPI=5
 
@@ -8,25 +8,25 @@ EAPI=5
 # being exceeded. probably GC does not close them fast enough.
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit subversion eutils flag-o-matic multilib python-any-r1 toolchain-funcs pax-utils
+inherit eutils flag-o-matic multilib python-any-r1 toolchain-funcs pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI=""
-ESVN_REPO_URI="http://llvm.org/svn/llvm-project/llvm/trunk"
+SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.3_}/${PN}-source-${PV/_}.tar.gz"
+#	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="debug doc gold +libffi multitarget ocaml test udis86 vim-syntax video_cards_radeon"
 
 DEPEND="dev-lang/perl
-	dev-python/sphinx
 	>=sys-devel/make-3.79
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
+	doc? ( dev-python/sphinx )
 	gold? ( >=sys-devel/binutils-2.22[cxx] )
 	libffi? ( virtual/pkgconfig
 		virtual/libffi )
@@ -36,6 +36,8 @@ DEPEND="dev-lang/perl
 RDEPEND="dev-lang/perl
 	libffi? ( virtual/libffi )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
+
+S=${WORKDIR}/${PN}.src
 
 pkg_setup() {
 	# Required for test and build
@@ -135,7 +137,8 @@ src_configure() {
 	fi
 
 	if use video_cards_radeon; then
-		CONF_FLAGS="${CONF_FLAGS} --enable-experimental-targets=R600"
+		CONF_FLAGS="${CONF_FLAGS}
+		--enable-experimental-targets=R600"
 	fi
 
 	if use libffi; then
@@ -151,8 +154,10 @@ src_configure() {
 src_compile() {
 	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
 
-	emake -C docs -f Makefile.sphinx man
-	use doc && emake -C docs -f Makefile.sphinx html
+	if use doc; then
+		emake -C docs -f Makefile.sphinx man
+		emake -C docs -f Makefile.sphinx html
+	fi
 
 	pax-mark m Release/bin/lli
 	if use test; then
@@ -165,8 +170,12 @@ src_compile() {
 src_install() {
 	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install
 
-	doman docs/_build/man/*.1
-	use doc && dohtml -r docs/_build/html/
+	if use doc; then
+		doman docs/_build/man/*.1
+		dohtml -r docs/_build/html/
+	#else
+	#	doman "${WORKDIR}"/${P}-manpages/*.1
+	fi
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax

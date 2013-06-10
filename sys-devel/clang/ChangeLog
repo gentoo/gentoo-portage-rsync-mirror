@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.86 2013/05/24 21:27:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.87 2013/06/10 21:57:45 voyageur Exp $
+
+*clang-3.3_rc3 (10 Jun 2013)
+
+  10 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> +clang-3.3_rc3.ebuild:
+  3.3_rc bump
 
   24 May 2013; Alexis Ballier <aballier@gentoo.org> clang-3.2.ebuild:
   rekeyword ~amd64-fbsd: c++ include search for gcc ones is broken but works

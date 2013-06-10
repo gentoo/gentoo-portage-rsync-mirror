@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/dragonegg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.13 2013/04/03 21:40:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.14 2013/06/10 21:56:58 voyageur Exp $
+
+*dragonegg-3.3_rc3 (10 Jun 2013)
+
+  10 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  +dragonegg-3.3_rc3.ebuild, dragonegg-9999.ebuild:
+  3.3_rc bump, fix live ebuild test call
 
   03 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org> dragonegg-9999.ebuild:
   Fix test check in src_unpack, spotted in bug #464350

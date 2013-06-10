@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2.ebuild,v 1.6 2013/02/27 06:02:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2.ebuild,v 1.7 2013/06/10 21:56:12 voyageur Exp $
 
 EAPI=5
 
@@ -151,9 +151,9 @@ src_compile() {
 	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
 
 	if use doc; then
-		emake -C docs -f Makefile.sphinx man html
+		emake -C docs -f Makefile.sphinx man
+		emake -C docs -f Makefile.sphinx html
 	fi
-	#	emake -C docs -f Makefile.sphinx html
 
 	pax-mark m Release/bin/lli
 	if use test; then
