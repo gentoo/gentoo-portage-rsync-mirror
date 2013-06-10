@@ -4785,6 +4785,7 @@ net-misc/dropbear:shadow - Enable shadow password support
 net-misc/dropbox:librsync-bundled - Use bundled librsync library
 net-misc/freerdp:channels - Build virtual channel plugins
 net-misc/freerdp:client - Build client binaries
+net-misc/freerdp:server - Build server binaries
 net-misc/gsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-misc/gsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
 net-misc/gwget:epiphany - Build epiphany extensions

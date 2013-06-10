@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.50 2013/06/09 20:38:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.51 2013/06/10 00:42:56 floppym Exp $
+
+  10 Jun 2013; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0_p20121004.ebuild:
+  Fixate freerdp dep.
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
   Ditto for live ebuild.

@@ -8,5 +8,6 @@
 	<use>
 		<flag name="channels">Build virtual channel plugins</flag>
 		<flag name="client">Build client binaries</flag>
+		<flag name="server">Build server binaries</flag>
 	</use>
 </pkgmetadata>
