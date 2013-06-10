@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.146 2013/05/20 18:01:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.147 2013/06/10 20:31:10 jer Exp $
+
+  10 Jun 2013; Jeroen Roovers <jer@gentoo.org> pytz-2013b.ebuild:
+  Stable for HPPA (bug #472860).
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> pytz-2012j.ebuild:
   Stable for s390, wrt bug #461164
