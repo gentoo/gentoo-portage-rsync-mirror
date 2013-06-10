@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.0.1-r1.ebuild,v 1.1 2013/06/10 16:23:33 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.0.1-r1.ebuild,v 1.2 2013/06/10 21:07:48 rich0 Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ DEPEND="app-arch/tar
 		app-arch/gzip"
 RDEPEND=">=virtual/jdk-1.5
 	>=dev-java/ant-core-1.6.5
-	|| ( dev-java/swt:3.7=[cairo] dev-java/swt:3.6=[cairo] )
+	|| ( dev-java/swt:3.7[cairo] dev-java/swt:3.6[cairo] )
 	amd64? ( app-emulation/emul-linux-x86-gtklibs:= )
 	x86? ( x11-libs/gtk+:2= )"
 
