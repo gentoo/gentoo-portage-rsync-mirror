@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/bfm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.10 2007/11/19 16:56:29 wltjr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.11 2013/06/10 07:13:53 tomwij Exp $
+
+*bfm-1.2-r2 (10 Jun 2013)
+
+  10 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +bfm-1.2-r2.ebuild,
+  +files/1.2-r2-build.xml, +files/1.2-r2-package.patch:
+  Revision bump. Properly moved source files into package, fixes doc generation
+  for bug #443166.
 
   19 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> bfm-1.2-r1.ebuild:
   amd64 stable, bug #196840. Removed dep on blackdown-java3d since it's masked
@@ -40,4 +47,3 @@
   +files/1.2-build.xml, +bfm-1.2.ebuild:
   Initial import, ebuild for this funny file manager based on the contribution
   by Henrik Johansson <henrik_johansson@home.se>. Fixes #82904
-
