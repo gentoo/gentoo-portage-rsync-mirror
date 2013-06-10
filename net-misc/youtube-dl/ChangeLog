@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.173 2013/06/08 12:28:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.174 2013/06/10 20:50:41 jer Exp $
+
+  10 Jun 2013; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2013.04.18.ebuild,
+  -youtube-dl-2013.04.21.ebuild, -youtube-dl-2013.04.22.ebuild,
+  -youtube-dl-2013.04.28.ebuild, -youtube-dl-2013.04.31.ebuild,
+  -youtube-dl-2013.05.01.ebuild, -youtube-dl-2013.05.10.ebuild,
+  -youtube-dl-2013.05.14.ebuild:
+  Old.
 
   08 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> youtube-dl-2013.05.23.ebuild:
   Stable on amd64 and x86, wrt bug #472030

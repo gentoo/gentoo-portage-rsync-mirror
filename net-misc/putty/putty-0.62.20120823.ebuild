@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.20120823.ebuild,v 1.1 2012/08/23 14:43:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.20120823.ebuild,v 1.2 2013/06/10 20:57:27 jer Exp $
 
 EAPI="4"
 
@@ -37,7 +37,7 @@ src_prepare() {
 	cd "${S}"/unix || die "cd unix failed"
 	sed \
 		-i configure.ac \
-		-e '/^AM_PATH_GTK(/d' \
+		-e '/AM_PATH_GTK(/d' \
 		-e 's|-Wall -Werror||g' || die "sed failed"
 	eautoreconf
 }

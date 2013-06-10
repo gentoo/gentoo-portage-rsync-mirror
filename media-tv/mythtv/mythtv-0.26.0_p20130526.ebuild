@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.26.0_p20130526.ebuild,v 1.1 2013/06/09 19:48:58 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.26.0_p20130526.ebuild,v 1.2 2013/06/10 21:00:43 rich0 Exp $
 
-EAPI=4
+EAPI=5
 
 PYTHON_DEPEND="python? 2:2.6"
 BACKPORTS="7150d64b6cf4d16ca0a0fd31d872ad2ba8dd0589"
@@ -32,51 +32,51 @@ REQUIRED_USE="
 	theora? ( vorbis )"
 
 COMMON="
-	>=media-libs/freetype-2.0
-	sys-libs/zlib
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXinerama
-	x11-libs/libXv
-	x11-libs/libXrandr
-	x11-libs/libXxf86vm
-	>=dev-qt/qtcore-4.7.2:4
-	>=dev-qt/qtdbus-4.7.2:4
-	>=dev-qt/qtgui-4.7.2:4
-	>=dev-qt/qtscript-4.7.2:4
-	>=dev-qt/qtsql-4.7.2:4[mysql]
-	>=dev-qt/qtopengl-4.7.2:4[egl?]
-	>=dev-qt/qtwebkit-4.7.2:4
-	x11-misc/wmctrl
-	virtual/mysql
-	virtual/opengl
-	alsa? ( >=media-libs/alsa-lib-1.0.24 )
+	>=media-libs/freetype-2.0:=
+	sys-libs/zlib:=
+	x11-libs/libX11:=
+	x11-libs/libXext:=
+	x11-libs/libXinerama:=
+	x11-libs/libXv:=
+	x11-libs/libXrandr:=
+	x11-libs/libXxf86vm:=
+	>=dev-qt/qtcore-4.7.2:4=
+	>=dev-qt/qtdbus-4.7.2:4=
+	>=dev-qt/qtgui-4.7.2:4=
+	>=dev-qt/qtscript-4.7.2:4=
+	>=dev-qt/qtsql-4.7.2:4=[mysql]
+	>=dev-qt/qtopengl-4.7.2:4=[egl?]
+	>=dev-qt/qtwebkit-4.7.2:4=
+	x11-misc/wmctrl:=
+	virtual/mysql:=
+	virtual/opengl:=
+	alsa? ( >=media-libs/alsa-lib-1.0.24:= )
 	bluray? (
-		dev-libs/libcdio
-		media-libs/libbluray
+		dev-libs/libcdio:=
+		media-libs/libbluray:=
 	)
-	cec? ( dev-libs/libcec )
+	cec? ( dev-libs/libcec:= )
 	dvb? (
-		media-libs/libdvb
-		virtual/linuxtv-dvb-headers
+		media-libs/libdvb:=
+		virtual/linuxtv-dvb-headers:=
 	)
-	dvd? ( dev-libs/libcdio )
-	egl? ( media-libs/mesa[egl] )
-	fftw? ( sci-libs/fftw:3.0 )
+	dvd? ( dev-libs/libcdio:= )
+	egl? ( media-libs/mesa:=[egl] )
+	fftw? ( sci-libs/fftw:3.0= )
 	hls? (
-		media-libs/faac
-		media-libs/libvpx
-		>=media-libs/x264-0.0.20111220
+		media-libs/faac:=
+		media-libs/libvpx:=
+		>=media-libs/x264-0.0.20111220:=
 		>=media-sound/lame-3.93.1
 	)
 	ieee1394? (
-		>=sys-libs/libraw1394-1.2.0
-		>=sys-libs/libavc1394-0.5.3
-		>=media-libs/libiec61883-1.0.0
+		>=sys-libs/libraw1394-1.2.0:=
+		>=sys-libs/libavc1394-0.5.3:=
+		>=media-libs/libiec61883-1.0.0:=
 	)
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
-	libass? ( >=media-libs/libass-0.9.11 )
+	libass? ( >=media-libs/libass-0.9.11:= )
 	lirc? ( app-misc/lirc )
 	perl? (
 		dev-perl/DBD-mysql
@@ -93,15 +93,15 @@ COMMON="
 		dev-python/urlgrabber
 	)
 	raop? (
-		dev-libs/openssl
+		dev-libs/openssl:=
 		net-dns/avahi[mdnsresponder-compat]
 	)
-	theora? ( media-libs/libtheora )
-	vaapi? ( x11-libs/libva )
-	vdpau? ( x11-libs/libvdpau )
-	vorbis? ( >=media-libs/libvorbis-1.0 )
-	xml? ( >=dev-libs/libxml2-2.6.0 )
-	xvid? ( >=media-libs/xvid-1.1.0 )
+	theora? ( media-libs/libtheora:= )
+	vaapi? ( x11-libs/libva:= )
+	vdpau? ( x11-libs/libvdpau:= )
+	vorbis? ( >=media-libs/libvorbis-1.0:= )
+	xml? ( >=dev-libs/libxml2-2.6.0:= )
+	xvid? ( >=media-libs/xvid-1.1.0:= )
 	!media-tv/mythtv-bindings
 	!x11-themes/mythtv-themes
 	"
@@ -116,7 +116,7 @@ RDEPEND="${COMMON}
 		x11-wm/evilwm
 		x11-apps/xset
 	)
-	dvd? ( media-libs/libdvdcss )
+	dvd? ( media-libs/libdvdcss:= )
 	xmltv? ( >=media-tv/xmltv-0.5.43 )
 	"
 
