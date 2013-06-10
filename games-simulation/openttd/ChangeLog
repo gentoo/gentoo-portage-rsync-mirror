@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.138 2013/04/01 19:28:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.139 2013/06/10 06:29:23 mr_bones_ Exp $
+
+*openttd-1.3.1 (10 Jun 2013)
+
+  10 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/openttd-1.3.1-cflags.patch, +openttd-1.3.1.ebuild:
+  version bump (bug #472726)
 
 *openttd-1.3.0 (01 Apr 2013)
 
