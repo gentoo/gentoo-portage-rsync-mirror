@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.1.ebuild,v 1.1 2013/04/23 19:02:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.1 2013/06/10 09:32:09 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -47,6 +47,8 @@ PDEPEND="x11-misc/shared-mime-info
 # shared-mime-info needed for gio/xdgmime, bug #409481
 # Earlier versions of gvfs do not work with glib
 
+DOCS="AUTHORS ChangeLog* NEWS* README"
+
 pkg_setup() {
 	if use kernel_linux ; then
 		CONFIG_CHECK="~INOTIFY_USER"
@@ -60,7 +62,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix gmodule issues on fbsd; bug #184301
+	# Fix gmodule issues on fbsd; bug #184301, upstream bug #107626
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
 
 	if use test; then
@@ -132,7 +134,7 @@ src_prepare() {
 	eautoreconf
 
 	# FIXME: Really needed when running eautoreconf before? bug#????
-	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
+	#[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 
 	epunt_cxx
 }
@@ -155,7 +157,6 @@ src_configure() {
 	# Building with --disable-debug highly unrecommended.  It will build glib in
 	# an unusable form as it disables some commonly used API.  Please do not
 	# convert this to the use_enable form, as it results in a broken build.
-	# -- compnerd (3/27/06)
 	use debug && myconf="--enable-debug"
 
 	# Always use internal libpcre, bug #254659
@@ -174,7 +175,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	default
 
 	if use utils ; then
 		python_replicate_script "${ED}"/usr/bin/gtester-report
@@ -188,8 +189,6 @@ src_install() {
 
 	# Don't install gdb python macros, bug 291328
 	rm -rf "${ED}/usr/share/gdb/" "${ED}/usr/share/glib-2.0/gdb/"
-
-	dodoc AUTHORS ChangeLog* NEWS* README
 
 	# Completely useless with or without USE static-libs, people need to use
 	# pkg-config
