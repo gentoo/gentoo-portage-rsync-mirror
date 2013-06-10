@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/guake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.28 2012/10/17 03:46:04 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.29 2013/06/10 12:50:58 ssuominen Exp $
+
+  10 Jun 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/guake-0.4.2-glib2.32.patch, -files/guake-0.4.2-int-ssl-port.patch,
+  -files/guake-0.4.2-prefs-spinbox.patch, -files/guake-0.4.2-vte-titles.patch,
+  -files/guake-0.4.2-window-title.patch, -guake-0.4.2-r2.ebuild,
+  -guake-0.4.3.ebuild:
+  old
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> guake-0.4.4.ebuild:
   x86 stable wrt bug #435608

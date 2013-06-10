@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.6-r1.ebuild,v 1.1 2013/06/10 04:03:50 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.6-r1.ebuild,v 1.2 2013/06/10 12:41:19 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -254,7 +254,9 @@ src_compile() {
 }
 
 src_install() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
+	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
+	DICTPATH="\"${EPREFIX}/usr/share/myspell\""
+
 	declare emid
 	local obj_dir="tbird"
 	cd "${S}/${obj_dir}"
