@@ -1,10 +1,10 @@
 # ChangeLog for app-text/jmupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jmupdf/ChangeLog,v 1.1 2013/06/10 08:45:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jmupdf/ChangeLog,v 1.2 2013/06/10 09:12:55 tomwij Exp $
 
 *jmupdf-0.4.1 (10 Jun 2013)
 
   10 Jun 2013; Michael Weber <xmw@gentoo.org>
   +files/jmupdf-0.4.1-build-xml.patch, +files/jmupdf-0.4.1-umlaut.patch,
   +jmupdf-0.4.1.ebuild, +metadata.xml:
-  Initial import as requested by TimWij (bug 472674)
+  Initial import as requested by TomWij (bug 472674)

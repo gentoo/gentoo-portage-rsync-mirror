@@ -985,7 +985,7 @@ app-text/ghostscript-gpl:bindist - Disable dejavu support for binary distributio
 app-text/gtkspell:vala - Enable bindings for dev-lang/vala
 app-text/gtranslator:http - Enable support for open translation plugin using net-libs/libsoup
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
-app-text/jmupdf:system-mupdf - Link againse system version of app-text/mupdf
+app-text/jmupdf:system-mupdf - Link against system version of app-text/mupdf
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection

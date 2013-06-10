@@ -1,20 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.7.995.ebuild,v 1.1 2013/01/28 07:05:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2.ebuild,v 1.1 2013/06/10 09:25:33 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome.org linux-info systemd user toolchain-funcs vala virtualx udev
+inherit eutils gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
-HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
+HOMEPAGE="http://projects.gnome.org/NetworkManager/"
 
 LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
-IUSE="avahi bluetooth connection-sharing +consolekit dhclient +dhcpcd doc gnutls
+IUSE="avahi bluetooth connection-sharing +consolekit dhclient +dhcpcd gnutls
 +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala
 +wext" # wimax
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
@@ -29,7 +29,8 @@ REQUIRED_USE="
 # gobject-introspection-0.10.3 is needed due to gnome bug 642300
 # wpa_supplicant-0.7.3-r3 is needed due to bug 359271
 # TODO: Qt support?
-COMMON_DEPEND=">=sys-apps/dbus-1.2
+COMMON_DEPEND="
+	>=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.94
 	>=dev-libs/glib-2.30
 	>=dev-libs/libnl-3.2.7:3=
@@ -45,25 +46,25 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	gnutls? (
 		dev-libs/libgcrypt:=
 		net-libs/gnutls:= )
-	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
+	modemmanager? ( >=net-misc/modemmanager-0.7.991 )
 	nss? ( >=dev-libs/nss-3.11:= )
 	dhclient? ( =net-misc/dhcp-4*[client] )
 	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
 	ppp? ( >=net-dialup/ppp-2.4.5[ipv6] )
 	resolvconf? ( net-dns/openresolv )
-	systemd? ( >=sys-apps/systemd-183 )
+	systemd? ( >=sys-apps/systemd-200 )
 	!systemd? ( sys-power/upower )
 "
 RDEPEND="${COMMON_DEPEND}
 	consolekit? ( sys-auth/consolekit )
 "
 DEPEND="${COMMON_DEPEND}
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	>=sys-kernel/linux-headers-2.6.29
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.8 )
 	vala? ( $(vala_depend) )
 	test? (
 		dev-lang/python:2.7
@@ -102,12 +103,19 @@ pkg_setup() {
 }
 
 src_prepare() {
+	DOC_CONTENTS="To modify system network connections without needing to enter the
+		root password, add your user account to the 'plugdev' group."
+
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
 	epatch "${FILESDIR}/${PN}-0.9.7.995-pre-sleep.patch"
 
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
 		-i */tests/*.py || die
+
+	# Fix completiondir, avoid eautoreconf, bug #465100
+	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
+		cli/completion/Makefile.in || die "sed completiondir failed"
 
 	epatch_user
 
@@ -134,13 +142,11 @@ src_configure() {
 		--with-crypto=$(usex nss nss gnutls) \
 		--with-session-tracking=$(usex consolekit consolekit $(usex systemd systemd no)) \
 		--with-suspend-resume=$(usex systemd systemd upower) \
-		$(use_enable doc) \
 		$(use_enable introspection) \
 		$(use_enable ppp) \
 		--disable-wimax \
 		$(use_with dhclient) \
 		$(use_with dhcpcd) \
-		$(use_with doc docs) \
 		$(use_with modemmanager modem-manager-1) \
 		$(use_with resolvconf) \
 		$(use_enable test tests) \
@@ -156,6 +162,8 @@ src_test() {
 
 src_install() {
 	default
+
+	readme.gentoo_create_doc
 
 	# Gentoo init script
 	newinitd "${FILESDIR}/init.d.NetworkManager" NetworkManager
@@ -196,8 +204,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To modify system network connections without needing to enter the"
-	elog "root password, add your user account to the 'plugdev' group."
+	readme.gentoo_print_elog
 
 	if [[ -e "${EROOT}etc/NetworkManager/nm-system-settings.conf" ]]; then
 		ewarn "The ${PN} system configuration file has moved to a new location."
