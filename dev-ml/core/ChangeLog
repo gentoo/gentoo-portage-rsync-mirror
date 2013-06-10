@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.19 2013/05/24 16:50:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.20 2013/06/10 14:35:42 aballier Exp $
+
+*core-109.27.00 (10 Jun 2013)
+
+  10 Jun 2013; Alexis Ballier <aballier@gentoo.org> +core-109.27.00.ebuild:
+  version bump
 
 *core-109.23.00 (24 May 2013)
 

@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/textutils
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/textutils/ChangeLog,v 1.1 2013/06/10 14:34:18 aballier Exp $
+
+*textutils-109.24.00 (10 Jun 2013)
+
+  10 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +textutils-109.24.00.ebuild, +metadata.xml:
+  initial import, ebuild by me
+
