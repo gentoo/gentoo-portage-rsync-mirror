@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jmupdf/jmupdf-0.4.1.ebuild,v 1.2 2013/06/10 09:12:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jmupdf/jmupdf-0.4.1.ebuild,v 1.3 2013/06/10 11:35:21 xmw Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ REQUIRED_USE="!system-mupdf"
 RDEPEND="system-mupdf? ( >=app-text/mupdf-1.2 )
 	virtual/jdk:1.7"
 DEPEND="${RDEPEND}
-	app-arch/p7zip"
+	app-arch/p7zip
+	media-libs/libbmp"
 
 S=${WORKDIR}/${PN}/${PN}
 
