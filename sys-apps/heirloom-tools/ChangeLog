@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/heirloom-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/heirloom-tools/ChangeLog,v 1.5 2013/06/10 00:06:51 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/heirloom-tools/ChangeLog,v 1.6 2013/06/10 05:20:53 ryao Exp $
+
+  10 Jun 2013; Richard Yao <ryao@gentoo.org> heirloom-tools-070715.ebuild:
+  Revert switch to  from : A few binaries contain hard coded absolute paths that
+  will break under prefix in a hard to debug way. It is better to not attempt
+  prefix support than it is to attempt to support prefix incorrectly.
 
   10 Jun 2013; Richard Yao <ryao@gentoo.org> heirloom-tools-070715.ebuild:
   Use ${ED} instead of ${D}

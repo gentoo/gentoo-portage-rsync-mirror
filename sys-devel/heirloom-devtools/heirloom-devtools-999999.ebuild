@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/heirloom-devtools-999999.ebuild,v 1.2 2013/06/10 00:14:03 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/heirloom-devtools-999999.ebuild,v 1.3 2013/06/10 05:12:17 ryao Exp $
 
 EAPI=4
 
@@ -30,19 +30,26 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 
 	sed -i \
-		-e 's:\(SHELL =\) \(.*\):\1 /bin/jsh:' \
-		-e 's:\(POSIX_SHELL =\) \(.*\):\1 /bin/sh:' \
-		-e "s:\(PREFIX=\)/\(.*\):\1${ED}\2:" \
-		-e "s:\(SUSBIN=\)/\(.*\):\1${ED}\2:" \
-		-e "s:\(LDFLAGS=\):\1${LDFLAGS}:" \
-		-e 's:\(STRIP=\)\(.*\):\1true:' \
-		-e "s:\(CXX = \)\(.*\):\1$(tc-getCXX):" \
+		-e 's:^\(SHELL =\) \(.*\):\1 /bin/jsh:' \
+		-e 's:^\(POSIX_SHELL =\) \(.*\):\1 /bin/sh:' \
+		-e "s:^\(PREFIX=\)\(.*\):\1${EPREFIX}\2:" \
+		-e "s:^\(SUSBIN=\)\(.*\):\1${EPREFIX}\2:" \
+		-e "s:^\(LDFLAGS=\):\1${LDFLAGS}:" \
+		-e "s:^\(CFLAGS=\)\(.*\):\1${CFLAGS}:" \
+		-e 's:^\(STRIP=\)\(.*\):\1true:' \
+		-e "s:^\(CXX = \)\(.*\):\1$(tc-getCXX):" \
 		./mk.config
+
+	echo "CC=$(tc-getCC)" >> "./mk.config"
 
 }
 
 src_compile() {
 	emake -j1
+}
+
+src_install() {
+	emake ROOT="${D}" install
 }
 
 pkg_postinst() {
