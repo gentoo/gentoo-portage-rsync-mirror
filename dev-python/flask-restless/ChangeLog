@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flask-restless
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/ChangeLog,v 1.4 2013/06/10 09:33:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/ChangeLog,v 1.5 2013/06/10 16:52:27 idella4 Exp $
+
+  10 Jun 2013; Ian Delaney <idella4@gentoo.org> files/docbuild.patch,
+  flask-restless-0.11.0-r1.ebuild:
+  Updated to accommodate adding dep flask-themes for doc build
 
 *flask-restless-0.11.0-r1 (10 Jun 2013)
 

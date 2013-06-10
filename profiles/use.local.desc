@@ -5565,6 +5565,7 @@ sci-physics/root:clarens - Build the Clarens and PEAC plug-ins, to use in a GRID
 sci-physics/root:fits - Support for images and data from FITS files with sci-libs/cfitsio
 sci-physics/root:htmldoc - Generate html documentation
 sci-physics/root:math - Build all math related libraries plugins, needs sci-libs/gsl
+sci-physics/root:metric - Default to A4 paper size and metric measurement
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
 sci-physics/root:pythia8 - Build the interface for sci-physics/pythia version 8.x
 sci-physics/root:reflex - Build the reflection database for the C++ interpreter

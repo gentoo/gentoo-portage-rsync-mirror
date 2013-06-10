@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.6_p01.ebuild,v 1.2 2013/03/02 23:26:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.6_p02-r1.ebuild,v 1.1 2013/06/10 16:51:50 bicatali Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ RDEPEND="
 	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}"
+PDEPEND="data? ( ~sci-physics/geant-data-${PV} )"
 
 S="${WORKDIR}/${MYP}"
 
@@ -42,8 +43,8 @@ src_configure() {
 	local mycmakeargs=(
 		-DGEANT4_USE_SYSTEM_CLHEP=ON
 		-DCMAKE_INSTALL_LIBDIR="${EROOT}usr/$(get_libdir)"
+		-DGEANT4_INSTALL_DATA=OFF
 		$(use openinventor && echo "-DINVENTOR_SOXT_LIBRARY=${EROOT}usr/$(get_libdir)/libInventorXt.so")
-		$(cmake-utils_use data GEANT4_INSTALL_DATA)
 		$(cmake-utils_use dawn GEANT4_USE_NETWORKDAWN)
 		$(cmake-utils_use gdml GEANT4_USE_GDML)
 		$(cmake-utils_use geant3 GEANT4_USE_G3TOG4)
@@ -62,8 +63,7 @@ src_configure() {
 src_install() {
 	# adjust clhep linking flags for system clhep
 	# binmake.gmk is only useful for legacy build systems
-	sed -i "s,-lG4clhep,-lCLHEP," config/binmake.gmk || die "sed failed"
-
+	sed -i -e 's/-lG4clhep/-lCLHEP/' config/binmake.gmk || die
 	cmake-utils_src_install
 	insinto /usr/share/doc/${PF}
 	local mypv="${PV1}.${PV2}.${PV3}"
@@ -71,14 +71,9 @@ src_install() {
 	[[ -e ReleaseNotes/Patch${mypv}-1.txt ]] && \
 		dodoc ReleaseNotes/Patch${mypv}-*.txt
 	use examples && doins -r examples
-	if use data ; then
-		sed -n "s,export \(G4.\+DATA=\"\).*\(/share/Geant.\+/data/.\+\) > /dev/null ; pwd\`,\1${EPREFIX}/usr\2,p" \
-			"${CMAKE_BUILD_DIR}/InstallTreeFiles/geant4.sh" > 99geant
-		doenvd 99geant
-	fi
 }
 
 pkg_postinst() {
 	elog "The following scripts are provided for backward compatibility:"
-	elog "$(ls -1 ${EROOT}usr/share/Geant4-${PV2}.${PV3}.*/geant4make/*sh)"
+	elog "$(ls -1 ${EROOT%/}/usr/share/Geant4-${PV2}.${PV3}.*/geant4make/*sh)"
 }

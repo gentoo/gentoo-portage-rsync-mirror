@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.05.ebuild,v 1.2 2013/03/02 23:27:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.08.ebuild,v 1.1 2013/06/10 16:44:06 bicatali Exp $
 
-EAPI=4
-
-PYTHON_DEPEND="python? 2"
+EAPI=5
 
 if [[ ${PV} == "9999" ]] ; then
-	_SVN=subversion
-	ESVN_REPO_URI="http://root.cern.ch/svn/root/trunk"
+	_GIT=git-2
+	EGIT_REPO_URI="http://root.cern.ch/git/root.git"
 	SRC_URI=""
 	KEYWORDS=""
 else
@@ -16,7 +14,8 @@ else
 	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 fi
 
-inherit elisp-common eutils fdo-mime fortran-2 multilib python toolchain-funcs user ${_SVN} versionator
+PYTHON_COMPAT=( python2_{5,6,7} )
+inherit elisp-common eutils fdo-mime fortran-2 multilib python-single-r1 toolchain-funcs user ${_GIT} versionator
 
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4.03
@@ -27,10 +26,12 @@ PATCH_PV3=5.34.05
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
 SRC_URI="${SRC_URI}
-	doc? ( ftp://root.cern.ch/${PN}/doc/ROOTUsersGuide.pdf -> ROOTUsersGuide-${PV}.pdf
+	doc? (
 		math? (
 			ftp://root.cern.ch/${PN}/doc/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf
 			http://tmva.sourceforge.net/docu/TMVAUsersGuide.pdf -> TMVAUsersGuide-v${TMVA_DOC_PV}.pdf )
+		metric? ( ftp://root.cern.ch/${PN}/doc/ROOTUsersGuideA4.pdf -> ROOTUsersGuideA4-${PV}.pdf )
+	   !metric? ( ftp://root.cern.ch/${PN}/doc/ROOTUsersGuideLetter.pdf -> ROOTUsersGuideLetter-${PV}.pdf )
 		htmldoc? (
 			http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png
 			http://root.cern.ch/drupal/sites/all/themes/newsflash/images/blue/root-banner.png
@@ -39,8 +40,15 @@ SRC_URI="${SRC_URI}
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="+X afs avahi -c++0x doc emacs examples fits fftw graphviz htmldoc
-	kerberos ldap +math mpi mysql odbc +opengl openmp oracle postgres prefix
-	pythia6 pythia8 python qt4 +reflex ruby ssl xinetd xml xrootd"
+	kerberos ldap +math +metric mpi mysql odbc +opengl openmp oracle postgres
+	prefix pythia6 pythia8 python qt4 +reflex ruby ssl xinetd xml xrootd"
+
+REQUIRED_USE="
+	!X? ( !opengl !qt4 )
+	htmldoc? ( doc )
+	mpi? ( math !openmp )
+	openmp? ( math !mpi )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 CDEPEND="
 	app-arch/xz-utils
@@ -89,6 +97,7 @@ CDEPEND="
 	postgres? ( dev-db/postgresql-base )
 	pythia6? ( sci-physics/pythia:6 )
 	pythia8? ( sci-physics/pythia:8 )
+	python? ( ${PYTHON_DEPS} )
 	ruby? (
 			dev-lang/ruby
 			dev-ruby/rubygems )
@@ -105,18 +114,11 @@ RDEPEND="${CDEPEND}
 
 PDEPEND="htmldoc? ( ~app-doc/root-docs-${PV} )"
 
-REQUIRED_USE="
-	!X? ( !opengl !qt4 )
-	htmldoc? ( doc )
-	mpi? ( math !openmp )
-	openmp? ( math !mpi )"
-
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}-v5-34-00-patches"
 
 pkg_setup() {
 	fortran-2_pkg_setup
-	python_set_active_version 2
-	python_pkg_setup
+	use python && python-single-r1_pkg_setup
 	echo
 	elog "There are extra options on packages not yet in Gentoo:"
 	elog "AliEn, castor, Chirp, dCache, gfal, gLite, Globus,"
@@ -207,6 +209,8 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconfflags=""
+	use postgres && myconfflags+=" --with-pgsql-incdir=$(pg_config --includedir)"
 	# the configure script is not the standard autotools
 	./configure \
 		--prefix="${EPREFIX}"/usr \
@@ -271,6 +275,7 @@ src_configure() {
 		$(use_enable ssl) \
 		$(use_enable xml) \
 		$(use_enable xrootd) \
+		${myconfflags} \
 		${EXTRA_ECONF} \
 		|| die "configure failed"
 }
@@ -321,10 +326,9 @@ daemon_install() {
 
 desktop_install() {
 	cd "${S}"
-	sed -e 's,@prefix@,/usr,' \
-		build/package/debian/root-system-bin.desktop.in > root.desktop
-	domenu root.desktop
-	doicon "${S}"/build/package/debian/root-system-bin.png
+	echo "Icon=root-system-bin" >> etc/root.desktop
+	domenu etc/root.desktop
+	doicon build/package/debian/root-system-bin.png
 
 	insinto /usr/share/icons/hicolor/48x48/mimetypes
 	doins build/package/debian/application-x-root.png
@@ -338,7 +342,10 @@ src_install() {
 
 	echo "LDPATH=${EPREFIX}/usr/$(get_libdir)/root" > 99root
 	use pythia8 && echo "PYTHIA8=${EPREFIX}/usr" >> 99root
-	use python && echo "PYTHONPATH=${EPREFIX}/usr/$(get_libdir)/root" >> 99root
+	if use python; then
+		echo "PYTHONPATH=${EPREFIX}/usr/$(get_libdir)/root" >> 99root
+		python_optimize /usr/$(get_libdir)/root
+	fi
 	use ruby && echo "RUBYLIB=${EPREFIX}/usr/$(get_libdir)/root" >> 99root
 	doenvd 99root
 
@@ -370,10 +377,8 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
-	use python && python_mod_optimize /usr/$(get_libdir)/root
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
-	use python && python_mod_cleanup /usr/$(get_libdir)/root
 }
