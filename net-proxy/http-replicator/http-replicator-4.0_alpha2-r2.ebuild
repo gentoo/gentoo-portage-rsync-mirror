@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-4.0_alpha2-r1.ebuild,v 1.1 2013/06/05 13:32:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-4.0_alpha2-r2.ebuild,v 1.1 2013/06/10 10:29:22 tomwij Exp $
 
 EAPI="5"
 
@@ -31,19 +31,19 @@ src_test() {
 src_install(){
 	python_export python2_7 EPYTHON PYTHON PYTHON_SITEDIR
 
-	exeinto /usr/bin
-	doexe http-replicator
+	python_scriptinto /usr/bin
+	python_doscript http-replicator
 
+	exeinto /usr/bin
 	newexe "${FILESDIR}"/${PN}-3.0-callrepcacheman-0.1 repcacheman
-	newexe "${FILESDIR}"/${PN}-3.0-repcacheman-0.44-r2 repcacheman.py
 
 	python_domodule *.py
 
-	newinitd "${FILESDIR}"/${PN}-3.0.init http-replicator
-	newconfd "${FILESDIR}"/${PN}-3.0.conf http-replicator
+	cp "${FILESDIR}"/${PN}-3.0-repcacheman-0.44-r2 repcacheman.py || die
+	python_doscript repcacheman.py
 
-	# Not 2.6, see bug #33907; not 3.0, see bug #411083.
-	# python_convert_shebangs -r 2.7 "${ED}"
+	newinitd "${FILESDIR}"/${PN}-4.0_alpha2-r2.init http-replicator
+	newconfd "${FILESDIR}"/${PN}-4.0_alpha2-r2.conf http-replicator
 
 	dodoc README.user README.devel RELNOTES
 }
@@ -51,14 +51,18 @@ src_install(){
 pkg_postinst() {
 	einfo
 	einfo "Before starting ${PN}, please follow the next few steps:"
-	einfo "- modify /etc/conf.d/${PN} if required"
-	einfo "- run \`repcacheman\` to set up the cache"
-	einfo "- add http_proxy=\"http://serveraddress:8080\" to make.conf on"
-	einfo "  the server as well as on the client machines"
-	einfo "- make sure GENTOO_MIRRORS in /etc/portage/make.conf"
-	einfo "  starts with several good http mirrors"
+	einfo
+	einfo "- Modify /etc/conf.d/${PN} if required."
+	einfo "- Run \`repcacheman\` to set up the cache."
+	einfo "- Add HTTP_PROXY=\"http://serveraddress:8080\" to make.conf on"
+	einfo "  the server as well as on the client machines."
+	einfo "- Make sure GENTOO_MIRRORS in /etc/portage/make.conf"
+	einfo "  starts with several good HTTP mirrors."
 	einfo
 	einfo "For more information please refer to the following forum thread:"
+	einfo
 	einfo "  http://forums.gentoo.org/viewtopic-t-173226.html"
+	einfo
+	einfo "Starting with 4.x releases, the conf.d parameters have changed."
 	einfo
 }

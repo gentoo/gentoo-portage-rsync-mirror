@@ -1,0 +1,41 @@
+From d6f5bd36387d278e60ffc746f79d2b1851fc441a Mon Sep 17 00:00:00 2001
+From: Sebastian Pipping <sebastian@pipping.org>
+Date: Mon, 08 Apr 2013 19:48:23 +0000
+Subject: applet: improve icon size handling
+
+Always return an icon of exactly the requested size, and let that size
+be less than 16. Fixes the display in various non-GNOME panels.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=698901
+---
+diff --git a/src/applet.c b/src/applet.c
+index 6c39509..a213173 100644
+--- a/src/applet.c
++++ b/src/applet.c
+@@ -3321,7 +3321,7 @@ nma_icon_check_and_load (const char *name, GdkPixbuf **icon, NMApplet *applet)
+ 	/* Try to load the icon; if the load fails, log the problem, and set
+ 	 * the icon to the fallback icon if requested.
+ 	 */
+-	*icon = gtk_icon_theme_load_icon (applet->icon_theme, name, applet->icon_size, 0, &error);
++	*icon = gtk_icon_theme_load_icon (applet->icon_theme, name, applet->icon_size, GTK_ICON_LOOKUP_FORCE_SIZE, &error);
+ 	if (!*icon) {
+ 		g_warning ("Icon %s missing: (%d) %s",
+ 		           name,
+@@ -3425,13 +3425,13 @@ status_icon_size_changed_cb (GtkStatusIcon *icon,
+                              NMApplet *applet)
+ {
+ 	if (getenv ("NMA_SIZE_DEBUG")) {
+-		g_message ("%s(): status icon size now %d", __func__, size);
++		g_message ("%s(): status icon size %d requested", __func__, size);
+ 	}
+ 
+ 	/* icon_size may be 0 if for example the panel hasn't given us any space
+ 	 * yet.  We'll get resized later, but for now just load the 16x16 icons.
+ 	 */
+-	applet->icon_size = MAX (16, size);
++	applet->icon_size = size ? size : 16;
+ 
+ 	nma_icons_reload (applet);
+ 
+--
+cgit v0.9.2
