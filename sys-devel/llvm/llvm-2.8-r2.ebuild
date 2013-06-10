@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r2.ebuild,v 1.9 2013/01/03 23:29:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r2.ebuild,v 1.10 2013/06/10 22:26:20 voyageur Exp $
 
 EAPI="4"
 inherit eutils multilib toolchain-funcs
@@ -84,6 +84,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8-darwin8.patch
 	# Upstream backport, r117774
 	epatch "${FILESDIR}"/${P}-alignof.patch
+
+	# Additional unistd.h include for GCC 4.7
+	epatch "${FILESDIR}"/${PN}-2.9-gcc4.7.patch
+
+	# User patches
+	epatch_user
 }
 
 src_configure() {

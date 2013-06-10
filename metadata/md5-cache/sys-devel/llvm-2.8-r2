@@ -10,4 +10,4 @@ RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://llvm.org/releases/2.8/llvm-2.8.tgz -> llvm-2.8-r1.tgz
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6f42454383fa22bae7742e6bdab8904e
+_md5_=95de326f0679b997e99481f62c2132f2
