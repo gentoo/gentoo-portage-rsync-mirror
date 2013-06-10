@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-4.0_alpha2-r2.ebuild,v 1.1 2013/06/10 10:29:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-4.0_alpha2-r3.ebuild,v 1.1 2013/06/10 14:01:46 tomwij Exp $
 
 EAPI="5"
 
@@ -24,6 +24,10 @@ S="${WORKDIR}/${MY_P}"
 # Tests downloads files as well as breaks, should be turned into local tests.
 RESTRICT="test"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-4.0_alpha2-r3-pid.patch
+}
+
 src_test() {
 	./unit-test && die
 }
@@ -42,7 +46,7 @@ src_install(){
 	cp "${FILESDIR}"/${PN}-3.0-repcacheman-0.44-r2 repcacheman.py || die
 	python_doscript repcacheman.py
 
-	newinitd "${FILESDIR}"/${PN}-4.0_alpha2-r2.init http-replicator
+	newinitd "${FILESDIR}"/${PN}-4.0_alpha2-r3.init http-replicator
 	newconfd "${FILESDIR}"/${PN}-4.0_alpha2-r2.conf http-replicator
 
 	dodoc README.user README.devel RELNOTES

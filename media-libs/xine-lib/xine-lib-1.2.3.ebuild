@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.22 2013/06/10 14:08:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.3.ebuild,v 1.1 2013/06/10 14:08:36 ssuominen Exp $
 
 EAPI=5
 
@@ -113,6 +113,8 @@ REQUIRED_USE="vidix? ( || ( X fbcon ) )
 	xinerama? ( X )"
 
 src_prepare() {
+	cp "${FILESDIR}"/accel_vaapi.h src/xine-engine/
+
 	sed -i -e '/define VDR_ABS_FIFO_DIR/s|".*"|"/var/vdr/xine"|' src/vdr/input_vdr.c || die
 
 	if [[ ${PV} == *9999* ]]; then
