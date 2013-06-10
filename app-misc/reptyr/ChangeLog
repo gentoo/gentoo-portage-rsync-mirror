@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/reptyr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/ChangeLog,v 1.9 2013/05/29 02:01:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/ChangeLog,v 1.10 2013/06/10 03:42:54 radhermit Exp $
+
+*reptyr-0.5 (10 Jun 2013)
+
+  10 Jun 2013; Tim Harder <radhermit@gentoo.org> +reptyr-0.5.ebuild:
+  Version bump.
 
   29 May 2013; Tim Harder <radhermit@gentoo.org> reptyr-0.4.ebuild:
   Respect CFLAGS (bug #471634 by jer).

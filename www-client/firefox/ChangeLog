@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.244 2013/06/05 14:59:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.245 2013/06/10 03:58:34 anarchy Exp $
+
+*firefox-17.0.6-r1 (10 Jun 2013)
+
+  10 Jun 2013; Jory A. Pratt <anarchy@gentoo.org> +firefox-17.0.6-r1.ebuild,
+  firefox-21.0.ebuild:
+  Add an http fallback, update hunspell patch
 
   05 Jun 2013; Jeroen Roovers <jer@gentoo.org> firefox-17.0.5.ebuild,
   firefox-17.0.6.ebuild, firefox-21.0.ebuild, +files/firefox-20-hppa.patch,
