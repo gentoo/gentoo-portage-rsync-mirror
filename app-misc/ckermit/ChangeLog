@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ckermit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.35 2012/05/10 15:09:37 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.36 2013/06/10 17:42:53 vapier Exp $
+
+  10 Jun 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/ckermit-8.0.211-build-wart.patch, ckermit-8.0.211-r4.ebuild:
+  Update to EAPI=4.  Fix cross-compiling (build+run helper wart binary).  Add
+  arm love for ChromiumOS.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -ckermit-8.0.211-r2.ebuild,
   -ckermit-8.0.211-r3.ebuild:
