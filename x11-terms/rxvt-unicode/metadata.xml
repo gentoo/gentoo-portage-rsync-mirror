@@ -27,4 +27,7 @@
 <flag name='unicode3'>Use 21 instead of 16 bits to represent unicode characters</flag>
 <flag name='wcwidth'>Enable wide char width support</flag>
 </use>
+<upstream>
+<remote-id type="cpe">cpe:/a:rxvt-unicode:rxvt-unicode</remote-id>
+</upstream>
 </pkgmetadata>

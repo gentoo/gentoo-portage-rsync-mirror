@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.183 2013/03/09 21:07:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.184 2013/06/09 23:14:32 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   09 Mar 2013; Tom Wijsman <TomWij@gentoo.org>
   vserver-sources-2.3.0.36.32.ebuild, vserver-sources-2.3.2.8.ebuild,

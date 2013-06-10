@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.920 2013/06/09 16:03:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.921 2013/06/09 23:04:34 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> udev-204.ebuild:
   Stable for sh, wrt bug #470580

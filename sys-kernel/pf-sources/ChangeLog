@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.96 2013/05/23 05:32:02 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.97 2013/06/09 23:14:26 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
 *pf-sources-3.9.3 (23 May 2013)
 

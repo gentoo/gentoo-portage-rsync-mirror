@@ -5,5 +5,7 @@
 	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
 </maintainer>
+<upstream>
+	<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+</upstream>
 </pkgmetadata>
-

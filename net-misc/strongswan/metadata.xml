@@ -49,4 +49,7 @@
       <pkg>dev-libs/openssl</pkg> has to be compiled with USE="-bindist".
     </flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:strongswan:strongswan</remote-id>
+  </upstream>
 </pkgmetadata>

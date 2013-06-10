@@ -24,4 +24,7 @@
 		<flag name='wimax'>Add support for Wimax EAP-PEER authentication algorithm</flag>
 		<flag name='smartcard'>Add support for smartcards</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:wpa_supplicant:wpa_supplicant</remote-id>
+	</upstream>
 </pkgmetadata>

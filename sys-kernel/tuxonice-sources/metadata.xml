@@ -5,4 +5,7 @@
 	<maintainer>
 		<email>pacho@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+	</upstream>
 </pkgmetadata>

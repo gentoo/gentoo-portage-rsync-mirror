@@ -10,4 +10,7 @@
 	<flag name='xorg'>Build the Xorg X server (HIGHLY RECOMMENDED)</flag>
 	<flag name='xvfb'>Build the Xvfb server</flag>
 </use>
+<upstream>
+	<remote-id type="cpe">cpe:/a:x.org:xorg-server</remote-id>
+</upstream>
 </pkgmetadata>

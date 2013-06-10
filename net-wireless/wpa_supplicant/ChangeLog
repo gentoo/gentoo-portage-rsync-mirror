@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.199 2013/05/19 07:41:08 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.200 2013/06/09 23:02:42 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
 *wpa_supplicant-2.0-r2 (19 May 2013)
 

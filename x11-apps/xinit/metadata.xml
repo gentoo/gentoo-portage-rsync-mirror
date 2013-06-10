@@ -8,4 +8,7 @@
 			enable if you use a modern desktop environment.
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:x.org:xinit</remote-id>
+	</upstream>
 </pkgmetadata>

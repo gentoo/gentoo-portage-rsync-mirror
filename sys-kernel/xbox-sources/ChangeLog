@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.47 2013/03/09 21:07:31 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.48 2013/06/09 23:14:29 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
   09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> xbox-sources-2.6.16.26.ebuild:
   EAPI 5. Kernel sources and (gen)patches now use xz instead of bz2. Bug

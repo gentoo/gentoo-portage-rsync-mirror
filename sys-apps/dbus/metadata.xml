@@ -8,4 +8,7 @@
 	<use>
 		<flag name='systemd'>Build with <pkg>sys-apps/systemd</pkg> at_console support</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:freedesktop:dbus</remote-id>
+	</upstream>
 </pkgmetadata>

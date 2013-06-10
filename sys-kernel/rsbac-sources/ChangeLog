@@ -1,4 +1,7 @@
 
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
   09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> rsbac-sources-3.1.5.ebuild,
   rsbac-sources-3.2.19.ebuild, rsbac-sources-3.3.8.ebuild,
   rsbac-sources-3.4.1.ebuild:

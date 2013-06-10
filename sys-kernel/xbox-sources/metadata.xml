@@ -4,4 +4,7 @@
 <herd>kernel</herd>
 <herd>xbox</herd>
 <longdescription>Full sources for the Xbox Linux kernel</longdescription>
+<upstream>
+ <remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+</upstream>
 </pkgmetadata>

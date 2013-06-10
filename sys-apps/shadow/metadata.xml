@@ -6,4 +6,7 @@
 <use>
  <flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
 </use>
+<upstream>
+ <remote-id type="cpe">cpe:/a:debian:shadow</remote-id>
+</upstream>
 </pkgmetadata>

@@ -27,4 +27,7 @@ file ownership, access right.
 		<flag name='ntfsprogs'>Include internal version of ntfsprogs. This will
 		block sys-fs/ntfsprogs.</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:ntfs-3g:ntfs-3g</remote-id>
+	</upstream>
 </pkgmetadata>

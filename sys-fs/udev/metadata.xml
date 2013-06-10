@@ -12,4 +12,7 @@
   <flag name='kmod'>Enable kernel module loading/unloading support using <pkg>sys-apps/kmod</pkg></flag>
   <flag name='openrc'>Install the OpenRC init scripts</flag>
 </use>
+<upstream>
+  <remote-id type="cpe">cpe:/a:kernel:udev</remote-id>
+</upstream>
 </pkgmetadata>

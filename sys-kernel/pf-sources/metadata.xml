@@ -14,5 +14,7 @@
 		<flag name='experimental'>Apply patches that are considered experimental. For more information,
 			check out the ChangeLog or the ebuild that interests you.</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+	</upstream>
 </pkgmetadata>
-

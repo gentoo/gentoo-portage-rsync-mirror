@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-
 <pkgmetadata>
   <herd>kernel</herd>
   <maintainer>
@@ -11,6 +10,7 @@
   <longdescription>
     -git sources sources, for people who like to have the absolute latest kernel available
   </longdescription>
-  <use>
-  </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -13,4 +13,7 @@
 		<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
 		<flag name='kvm'>Enable boot on kvm</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+	</upstream>
 </pkgmetadata>
