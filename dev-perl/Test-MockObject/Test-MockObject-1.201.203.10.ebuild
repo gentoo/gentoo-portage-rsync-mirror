@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockObject/Test-MockObject-1.201.203.10.ebuild,v 1.6 2013/03/22 17:24:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockObject/Test-MockObject-1.201.203.10.ebuild,v 1.7 2013/06/11 19:07:09 maekke Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Perl extension for emulating troublesome interfaces"
 
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~ppc-aix"
+KEYWORDS="amd64 ~arm ppc x86 ~ppc-aix"
 IUSE="test"
 
 RDEPEND="

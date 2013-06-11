@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.11 2013/05/22 03:36:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.12 2013/06/11 19:09:53 bicatali Exp $
+
+  11 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> leveldb-1.10.0.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *leveldb-1.10.0 (22 May 2013)
 

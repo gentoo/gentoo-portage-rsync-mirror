@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libxkbcommon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.2 2013/04/21 19:25:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.3 2013/06/11 19:11:12 xarthisius Exp $
+
+*libxkbcommon-0.3.1 (11 Jun 2013)
+
+  11 Jun 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  +libxkbcommon-0.3.1.ebuild:
+  Version bump wrt #470076 by Nikoli <nikoli@lavabit.com>
 
   21 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libxkbcommon-0.2.0.ebuild:
