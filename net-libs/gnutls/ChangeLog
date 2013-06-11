@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.442 2013/06/09 12:14:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.443 2013/06/11 11:05:24 ago Exp $
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gnutls-2.12.23-r1.ebuild:
+  Stable for sh, wrt bug #471788
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gnutls-2.12.23-r1.ebuild:
   Stable for s390, wrt bug #471788

@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.321 2013/05/15 12:18:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.322 2013/06/11 11:18:54 pacho Exp $
+
+*gnome-session-3.8.2.1-r1 (11 Jun 2013)
+
+  11 Jun 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-session-3.8.2.1-filter-nodisplay.patch,
+  +gnome-session-3.8.2.1-r1.ebuild, -gnome-session-3.8.1.ebuild:
+  Don't show desktop files with NoDisplay=true (from 'master'); drop old.
 
 *gnome-session-3.8.2.1 (15 May 2013)
 

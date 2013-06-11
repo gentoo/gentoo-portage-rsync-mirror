@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.1.ebuild,v 1.1 2013/04/27 14:32:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.2.1-r1.ebuild,v 1.1 2013/06/11 11:18:54 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Gnome session manager"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://git.gnome.org/browse/gnome-session"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
@@ -71,6 +71,9 @@ DEPEND="${COMMON_DEPEND}
 # gnome-base/gdm does not provide gnome.desktop anymore
 
 src_prepare() {
+	# Don't show desktop files with NoDisplay=true (from 'master')
+	epatch "${FILESDIR}/${PN}-3.8.2.1-filter-nodisplay.patch"
+
 	# Silence errors due to weird checks for libX11
 	sed -e 's/\(PANGO_PACKAGES="\)pangox/\1/' -i configure.ac configure || die
 
