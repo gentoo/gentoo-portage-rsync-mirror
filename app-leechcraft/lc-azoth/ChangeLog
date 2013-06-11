@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-azoth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.6 2013/05/26 19:35:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.7 2013/06/11 17:14:26 maksbotan Exp $
+
+*lc-azoth-0.5.97 (11 Jun 2013)
+
+  11 Jun 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-azoth-0.5.97.ebuild:
+  Bump LeechCraft suite to 0.5.97, thanks to 0xd34df00d.
 
 *lc-azoth-0.5.96 (26 May 2013)
 
