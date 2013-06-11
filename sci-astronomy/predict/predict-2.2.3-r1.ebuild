@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.3 2013/06/06 20:52:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.4 2013/06/11 17:38:00 bicatali Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 RDEPEND="sys-libs/ncurses
 	gtk? ( x11-libs/gtk+:2 )
 	xforms? ( x11-libs/xforms )
-	xplanet? ( x11-misc/xplanet )"
+	xplanet? ( x11-misc/xplanet[truetype] )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -59,15 +59,15 @@ AC_CHECK_LIB(dl,dlclose)' \
 		clients/gsat-1.1.0/src/globals.h || die
 
 	if use gtk; then
-		cd "${S}"/clients/gsat-*
-		rm config.sub missing
+		cd "${S}"/clients/gsat-* || die
+		rm config.sub missing || die
 		eautoreconf
 	fi
 }
 
 src_configure() {
 	if use gtk; then
-		cd "${S}"/clients/gsat-*
+		cd "${S}"/clients/gsat-* || die
 		econf $(use_enable nls)
 	fi
 }
@@ -89,7 +89,7 @@ src_compile() {
 	local c
 	for c in fodtrack geosat moontracker; do
 		einfo "Compiling ${c}"
-		cd "${S}"/utils/${c}*
+		cd "${S}"/utils/${c}* || die
 		${COMPILER} ${c}.c -lm -o ${c} || die "failed ${c}"
 	done
 	einfo "Compiling kep_reload"
@@ -99,21 +99,21 @@ src_compile() {
 
 	if use xplanet; then
 		einfo "Compiling earthtrack"
-		cd "${S}"/clients/earthtrack
+		cd "${S}"/clients/earthtrack || die
 		${COMPILER} earthtrack.c \
 			-lm -o earthtrack || die "failed earthtrack"
 	fi
 
 	if use xforms; then
 		einfo "Compiling map"
-		cd "${S}"/clients/map
+		cd "${S}"/clients/map || die
 		${COMPILER} map.c map_cb.c map_main.c -lforms -lX11 -lm \
 			-o map || die "Failed compiling map"
 	fi
 
 	if use gtk; then
 		einfo "Compiling gsat"
-		cd "${S}"/clients/gsat-*
+		cd "${S}"/clients/gsat-* || die
 		emake
 		emake -C plugins
 	fi
@@ -128,44 +128,44 @@ src_install() {
 	doins default/predict.*
 	use doc && dodoc docs/pdf/predict.pdf
 
-	cd "${S}"/vocalizer
+	cd "${S}"/vocalizer || die
 	dobin vocalizer
 	dosym  ../../../bin/vocalizer ${PRED_DIR}/vocalizer/vocalizer
 	insinto ${PRED_DIR}/vocalizer
 	doins *.wav
 
-	cd "${S}"/clients/kep_reload
+	cd "${S}"/clients/kep_reload || die
 	dobin kep_reload
 	newdoc README README.kep_reload
 	doman "${S}"/debian/kep_reload.1
 
-	cd "${S}"/utils/fodtrack-0.1
+	cd "${S}"/utils/fodtrack-0.1 || die
 	insinto /etc
 	doins fodtrack.conf
 	doman fodtrack.conf.5 fodtrack.8
 	dobin fodtrack
 	newdoc README README.fodtrack
 
-	cd "${S}"/utils/geosat
+	cd "${S}"/utils/geosat || die
 	dobin geosat
 	newdoc README README.geosa
 	newman "${S}"/debian/geosat.man geosat.1
 
-	cd "${S}"/utils/moontracker
+	cd "${S}"/utils/moontracker || die
 	dobin moontracker
 	newdoc README README.moontracker
 	doman "${S}"/debian/moontracker.1
 
 	if use xplanet; then
-		cd "${S}"/clients/earthtrack
-		ln -s earthtrack earthtrack2
+		cd "${S}"/clients/earthtrack || die
+		ln -s earthtrack earthtrack2 || die
 		dobin earthtrack earthtrack2
 		newdoc README README.earthtrack
 		doman "${S}"/debian/earthtrack.1
 	fi
 
 	if use xforms; then
-		cd "${S}"/clients/map
+		cd "${S}"/clients/map || die
 		newbin map predict-map
 		newdoc CHANGES CHANGES.map
 		newdoc README README.map
@@ -173,7 +173,7 @@ src_install() {
 	fi
 
 	if use gtk; then
-		cd "${S}"/clients/gsat-*
+		cd "${S}"/clients/gsat-* || die
 		exeinto /usr/$(get_libdir)/gsat/plugins
 		doexe plugins/radio_{FT736,FT847,ICR10,print,test} plugins/rotor_{print,pictrack}
 		dobin src/gsat
