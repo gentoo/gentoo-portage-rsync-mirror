@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.50.ebuild,v 1.2 2013/03/23 14:25:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.50.ebuild,v 1.3 2013/06/11 15:27:33 kensington Exp $
 
 EAPI=5
 inherit kde4-base
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="
 	dev-cpp/ctemplate
-	$(add_kdebase_dep kdepimlibs)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
 	>=dev-qt/qtsql-${QT_MINIMAL}:4[mysql,sqlite]
 "
 RDEPEND="${DEPEND}"
