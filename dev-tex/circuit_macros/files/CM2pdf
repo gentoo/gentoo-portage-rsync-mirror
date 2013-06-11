@@ -1,0 +1,25 @@
+#! /bin/bash
+
+if [[ "$#" != 1 ]]
+then
+	echo "Usage:"
+	echo "CM2pdf path/to/file.m4"
+	exit
+fi
+
+if [[ "${1##*.}" != "m4" ]]
+then
+	echo "Input file must have .m4 suffix"
+	exit
+fi
+
+tempdir=$(mktemp -d)
+cp -f "${1}" "${tempdir}/source.m4"
+pushd "${tempdir}" > /dev/null
+
+m4 -I /usr/share/circuit_macros pgf.m4 source.m4 | dpic -g > source.tex
+pdflatex "\documentclass{standalone}\usepackage{tikz,boxdims}\begin{document}\input source.tex\end{document}"
+
+popd > /dev/null
+cp "${tempdir}/standalone.pdf" "${1%.m4}.pdf"
+rm -rf "${tempdir}"
