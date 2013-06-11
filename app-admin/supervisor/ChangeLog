@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/supervisor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.10 2013/06/05 10:28:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.11 2013/06/11 07:48:47 dev-zero Exp $
+
+*supervisor-3.0_beta2-r1 (11 Jun 2013)
+
+  11 Jun 2013; Tiziano Müller <dev-zero@gentoo.org> +files/init.d-r1,
+  +supervisor-3.0_beta2-r1.ebuild, -supervisor-3.0_beta2.ebuild:
+  Fix problem with missing non-py files, disable tests for now, simplify
+  init.d-script.
 
 *supervisor-3.0_beta2 (05 Jun 2013)
 

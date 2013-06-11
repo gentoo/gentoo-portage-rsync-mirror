@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_beta2.ebuild,v 1.1 2013/06/05 10:28:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_beta2-r1.ebuild,v 1.1 2013/06/11 07:48:47 dev-zero Exp $
 
 EAPI="5"
 
@@ -26,16 +26,29 @@ RDEPEND=">=dev-python/meld3-0.6.10-r1[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	test? ( dev-python/mock[${PYTHON_USEDEP}] )"
 
+# package uses namespaces which makes tests use installed packages
+RESTRICT="test"
+
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DOCS=( CHANGES.txt TODO.txt )
 
-python_test() {
-	"${PYTHON}" setup.py test || die "tests failed for ${PYTHON}"
+python_prepare_all() {
+	# write missing MANIFEST.in file, otherwise required files get lost due to
+	# egg_info being passed to setup.py
+	cat > MANIFEST.in << EOF
+include supervisor/*.txt
+recursive-include supervisor/skel *.conf
+recursive-include supervisor/ui *.html *.css *.gif *.png
+recursive-include supervisor/tests *.conf *.txt
+EOF
 }
 
-src_install() {
-	distutils-r1_src_install
-	newinitd "${FILESDIR}/init.d" supervisord
+python_test() {
+	esetup.py test
+}
+
+python_install_all() {
+	newinitd "${FILESDIR}/init.d-r1" supervisord
 	newconfd "${FILESDIR}/conf.d" supervisord
 }
