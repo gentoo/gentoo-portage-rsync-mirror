@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/google-perftools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.26 2013/05/11 12:02:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.27 2013/06/11 20:51:57 bicatali Exp $
+
+  11 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  google-perftools-2.0-r2.ebuild:
+  Keyword amd64-linux and x86-linux
 
   11 May 2013; Markus Meier <maekke@gentoo.org> google-perftools-2.0-r2.ebuild:
   arm stable, bug #443518
