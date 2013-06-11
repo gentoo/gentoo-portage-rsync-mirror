@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-7.0.35.ebuild,v 1.1 2013/01/17 10:26:53 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-7.0.41.ebuild,v 1.1 2013/06/11 11:33:23 fordfrog Exp $
 
-EAPI="2"
+EAPI="5"
 JAVA_PKG_IUSE="source"
 
 inherit eutils java-pkg-2 java-ant-2

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.37.ebuild,v 1.1 2013/02/19 07:28:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.41.ebuild,v 1.1 2013/06/11 11:35:01 fordfrog Exp $
 
 EAPI=4
 

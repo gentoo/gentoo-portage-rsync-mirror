@@ -1,6 +1,20 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.316 2013/03/28 12:57:59 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.318 2013/06/11 11:38:17 fordfrog Exp $
+
+  11 Jun 2013; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-7.0.33.ebuild,
+  -tomcat-7.0.34.ebuild, -tomcat-7.0.35.ebuild, -tomcat-7.0.37.ebuild,
+  -files/tomcat-7.0.33-build.xml.patch, -files/tomcat-7.0.34-build.xml.patch,
+  -files/tomcat-7.0.35-build.xml.patch, -files/tomcat-7.0.37-build.xml.patch:
+  removed obsolete ebuilds
+
+*tomcat-7.0.41 (11 Jun 2013)
+*tomcat-6.0.37 (11 Jun 2013)
+
+  11 Jun 2013; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-6.0.37.ebuild,
+  +tomcat-7.0.41.ebuild, +files/tomcat-6.0.37-build.xml.patch,
+  +files/tomcat-7.0.41-build.xml.patch:
+  version bump
 
 *tomcat-7.0.39 (28 Mar 2013)
 
