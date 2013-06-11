@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.399 2013/06/09 16:09:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.400 2013/06/11 09:34:11 radhermit Exp $
+
+*gvim-7.3.1163 (11 Jun 2013)
+
+  11 Jun 2013; Tim Harder <radhermit@gentoo.org> +gvim-7.3.1163.ebuild:
+  Version bump.
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gvim-7.3.762.ebuild:
   Stable for sparc, wrt bug #469010
