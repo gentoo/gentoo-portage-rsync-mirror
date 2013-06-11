@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.7 2013/03/02 22:54:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.8 2013/06/11 18:08:48 maksbotan Exp $
 
-EAPI="4"
+EAPI="5"
 LANGS="de pl ru uk"
 
 inherit cmake-utils subversion
@@ -12,9 +12,9 @@ HOMEPAGE="http://code.google.com/p/vacuum-im"
 ESVN_REPO_URI="http://vacuum-im.googlecode.com/svn/trunk"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="0/28" # subslot = libvacuumutils soname version
 KEYWORDS=""
-PLUGINS=" adiummessagestyle annotations autostatus avatars birthdayreminder bitsofbinary bookmarks captchaforms chatstates clientinfo commands compress console dataforms datastreamsmanager emoticons filemessagearchive filestreamsmanager filetransfer gateways inbandstreams iqauth jabbersearch messagearchiver messagecarbons multiuserchat pepmanager privacylists privatestorage registration remotecontrol rosteritemexchange rostersearch servermessagearchive servicediscovery sessionnegotiation shortcutmanager socksstreams urlprocessor vcard xmppuriqueries"
+PLUGINS=" adiummessagestyle annotations autostatus avatars birthdayreminder bitsofbinary bookmarks captchaforms chatstates clientinfo commands compress console dataforms datastreamsmanager emoticons filemessagearchive filestreamsmanager filetransfer gateways inbandstreams iqauth jabbersearch messagearchiver messagecarbons multiuserchat pepmanager privacylists privatestorage recentcontacts registration remotecontrol rosteritemexchange rostersearch servermessagearchive servicediscovery sessionnegotiation shortcutmanager socksstreams urlprocessor vcard xmppuriqueries"
 SPELLCHECKER_BACKENDS="aspell +enchant hunspell"
 IUSE="${PLUGINS// / +} ${SPELLCHECKER_BACKENDS} +spell vcs-revision"
 for x in ${LANGS}; do
@@ -34,6 +34,7 @@ REQUIRED_USE="
 	filetransfer? ( filestreamsmanager datastreamsmanager )
 	messagecarbons? ( servicediscovery )
 	pepmanager? ( servicediscovery )
+	recentcontacts? ( privatestorage )
 	registration? ( dataforms )
 	remotecontrol? ( commands dataforms )
 	servermessagearchive? ( messagearchiver )
@@ -42,10 +43,10 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-qt/qtcore-4.5:4[ssl]
-	>=dev-qt/qtgui-4.5:4
-	>=dev-libs/openssl-0.9.8k
-	adiummessagestyle? ( >=dev-qt/qtwebkit-4.5:4 )
+	>=dev-qt/qtcore-4.8:4[ssl]
+	>=dev-qt/qtgui-4.8:4
+	>=dev-libs/openssl-1.0.0
+	adiummessagestyle? ( >=dev-qt/qtwebkit-4.8:4 )
 	spell? (
 		aspell? ( app-text/aspell )
 		enchant? ( app-text/enchant )
@@ -63,6 +64,8 @@ DOCS="AUTHORS CHANGELOG README TRANSLATORS"
 src_prepare() {
 	# Force usage of system libraries
 	rm -rf src/thirdparty/{idn,hunspell,minizip,zlib}
+
+	cmake-utils_src_prepare
 }
 
 src_configure() {
@@ -78,6 +81,7 @@ src_configure() {
 		-DLANGS="${langs}"
 		-DINSTALL_DOCS=OFF
 		-DFORCE_BUNDLED_MINIZIP=OFF
+		-DPLUGIN_statistics=OFF
 	)
 
 	for x in ${PLUGINS}; do

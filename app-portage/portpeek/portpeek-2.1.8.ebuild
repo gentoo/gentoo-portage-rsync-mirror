@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.1.6.ebuild,v 1.1 2013/01/18 14:08:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.1.8.ebuild,v 1.1 2013/06/11 18:25:13 mpagano Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.7"
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=app-portage/gentoolkit-0.3.0.7
-	>=sys-apps/portage-2.1.11.31"
+	>=sys-apps/portage-2.1.11.52"
 
 src_install() {
 	dobin ${PN} || die "dobin failed"

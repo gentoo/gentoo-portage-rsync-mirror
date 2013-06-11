@@ -4345,6 +4345,7 @@ net-im/vacuum:multiuserchat - Enable Jabber multi-user conferences
 net-im/vacuum:pepmanager - Allows other plugins to recieve and publish PEP events
 net-im/vacuum:privacylists - Enable blocking the undesirable contacts
 net-im/vacuum:privatestorage - Allow other modules to store arbitrary data on the server
+net-im/vacuum:recentcontacts - Displays a recently used contacts
 net-im/vacuum:registration - Enable creating accounts in Jabber services
 net-im/vacuum:remotecontrol - Allows to remotely control the client
 net-im/vacuum:rosteritemexchange - Allows to exchange contact list items

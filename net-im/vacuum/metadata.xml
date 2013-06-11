@@ -40,6 +40,7 @@
     <flag name="pepmanager">Allows other plugins to recieve and publish PEP events</flag>
     <flag name="privacylists">Enable blocking the undesirable contacts</flag>
     <flag name="privatestorage">Allow other modules to store arbitrary data on the server</flag>
+	<flag name="recentcontacts">Displays a recently used contacts</flag>
     <flag name="registration">Enable creating accounts in Jabber services</flag>
     <flag name="remotecontrol">Allows to remotely control the client</flag>
     <flag name="rosteritemexchange">Allows to exchange contact list items</flag>
