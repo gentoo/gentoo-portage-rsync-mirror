@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.502 2013/06/01 15:48:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.503 2013/06/11 06:59:04 ulm Exp $
 
 # Keep them sorted
 
@@ -372,7 +372,6 @@ wavpack - Add support for wavpack audio compression tools
 wddx - Adds support for Web Distributed Data eXchange
 webkit - Add support for the WebKit HTML rendering/layout engine
 wifi - Enable wireless network functions
-win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 wmf - Adds support for the Windows Metafile vector image format
 wxwidgets - Adds support for wxWidgets/wxGTK GUI toolkit
 x264 - Enable h264 encoding using x264

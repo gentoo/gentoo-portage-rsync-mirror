@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.170 2013/06/01 15:52:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.171 2013/06/11 06:59:05 ulm Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -66,7 +66,6 @@ avx
 avx128fma
 avx256
 svga
-win32codecs
 real
 nvram
 
