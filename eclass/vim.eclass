@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.219 2013/06/09 20:41:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.220 2013/06/11 09:25:45 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -692,15 +692,6 @@ vim_pkg_postinst() {
 	if [[ ${PN} != "vim-core" ]] ; then
 		echo
 		elog "To see what's new in this release, use :help version${VIM_VERSION/.*/}.txt"
-	fi
-
-	# Warn about VIMRUNTIME
-	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/./}" ] ; then
-		echo
-		ewarn "WARNING: You have VIMRUNTIME set in your environment from an old"
-		ewarn "installation.  You will need to either unset VIMRUNTIME in each"
-		ewarn "terminal, or log out completely and back in.  This problem won't"
-		ewarn "happen again since the ebuild no longer sets VIMRUNTIME."
 	fi
 
 	# Make convenience symlinks
