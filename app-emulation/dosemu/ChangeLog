@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/dosemu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.53 2010/06/24 08:59:31 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.54 2013/06/11 19:40:45 slyfox Exp $
+
+  11 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/dosemu-1.4.1_pre20091009-flex.patch, dosemu-1.4.1_pre20091009.ebuild:
+  Fix build failure against modern flex (like 2.5.37). Bug #437074 by Chris
+  Smith and others.
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org>
   dosemu-1.4.1_pre20091009.ebuild:

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20091009.ebuild,v 1.3 2010/06/24 08:59:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20091009.ebuild,v 1.4 2013/06/11 19:40:45 slyfox Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 P_FD="dosemu-freedos-1.0-bin"
 DESCRIPTION="DOS Emulator"
@@ -34,6 +34,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}"
 
 src_compile() {
+	epatch "${FILESDIR}"/${P}-flex.patch #437074
+
 	# Has problems with -O3 on some systems
 	replace-flags -O[3-9] -O2
 

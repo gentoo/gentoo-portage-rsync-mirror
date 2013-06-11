@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7929 2013/06/11 15:47:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7930 2013/06/11 19:43:36 xarthisius Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jun 2013; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
+  Drop mask on =x11-libs/i3lock-2.5
 
   11 Jun 2013; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Mask =x11-misc/i3lock-2.5 until x11-libs/libxkbcommon is bumped
