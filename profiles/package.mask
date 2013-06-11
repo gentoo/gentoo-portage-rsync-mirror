@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14821 2013/06/11 19:43:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14822 2013/06/11 20:22:25 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -92,7 +92,7 @@ sys-fs/aufs2
 # Markos Chandras <hwoarang@gentoo.org> (25 May 2013)
 # Mask 0.7.0 release for testing
 # Mask -9999 ebuild per Gentoo policy
-=dev-embedded/openocd-0.7.0
+~dev-embedded/openocd-0.7.0
 =dev-embedded/openocd-9999
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (23 May 2013)

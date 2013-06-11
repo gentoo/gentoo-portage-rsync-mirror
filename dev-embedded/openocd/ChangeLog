@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.42 2013/05/27 20:31:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.43 2013/06/11 20:24:50 hwoarang Exp $
+
+*openocd-0.7.0-r1 (11 Jun 2013)
+
+  11 Jun 2013; Markos Chandras <hwoarang@gentoo.org> +openocd-0.7.0-r1.ebuild,
+  -openocd-0.7.0.ebuild, openocd-0.6.1.ebuild, openocd-9999.ebuild:
+  Enable the new ftdi interface when using the ftdi useflag. Bug #472622 thanks
+  to Stuart Longland
 
   27 May 2013; Markos Chandras <hwoarang@gentoo.org> openocd-0.7.0.ebuild:
   Sync ebuild with 9999. Fixes bug 471382

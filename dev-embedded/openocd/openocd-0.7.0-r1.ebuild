@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.7.0.ebuild,v 1.2 2013/05/27 20:31:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.7.0-r1.ebuild,v 1.1 2013/06/11 20:24:50 hwoarang Exp $
 
 EAPI="5"
 
@@ -99,6 +99,7 @@ src_configure() {
 	econf \
 		$(use_enable dummy) \
 		$(use_enable ftdi ft2232_libftdi) \
+		$(use_enable ftdi) \
 		$(use_enable ftd2xx ft2232_ftd2xx) \
 		$(use_enable minidriver minidriver-dummy) \
 		$(use_enable parport) \
