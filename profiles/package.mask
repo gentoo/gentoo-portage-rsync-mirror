@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14818 2013/06/10 21:46:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14819 2013/06/11 12:51:18 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (11 Jun 2013)
+# needs dev action
+=dev-util/d-feet-0.3.5
 
 # Bernard Cafarelli <voyageur@gentoo.org> (10 Jun 2013)
 # LLVM Release candidates
