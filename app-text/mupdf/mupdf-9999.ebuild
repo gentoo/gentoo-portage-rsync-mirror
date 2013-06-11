@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.32 2013/06/10 13:25:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.33 2013/06/11 08:57:43 xmw Exp $
 
 EAPI=5
 
@@ -38,7 +38,8 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${P}-buildsystem.patch \
-		"${FILESDIR}"/${P}-openjpeg2.patch
+		"${FILESDIR}"/${P}-openjpeg2.patch \
+		"${FILESDIR}"/${P}-pkg-config.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \

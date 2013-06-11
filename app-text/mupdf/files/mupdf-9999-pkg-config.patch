@@ -1,15 +1,18 @@
 no pkgconfig data for jbig2dec and jpeg
 http://bugs.ghostscript.com/show_bug.cgi?id=694301
 
---- mupdf-1.2-source/debian/mupdf.pc
-+++ mupdf-1.2-source/debian/mupdf.pc
+openjpeg-2
+http://bugs.ghostscript.com/show_bug.cgi?id=693518
+
+--- mupdf-9999/debian/mupdf.pc
++++ mupdf-9999/debian/mupdf.pc
 @@ -4,9 +4,8 @@
  includedir=${prefix}/include
  
  Name: mupdf
  Description: Library for rendering PDF documents
 -Requires.private: freetype2
-+Requires: freetype2 libopenjpeg1
++Requires: freetype2 libopenjp2 libcrypto
  Version: 0.5.0
 -Libs: -L${libdir} -lmupdf
 +Libs: -L${libdir} -lfitz -ljpeg -ljbig2dec

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.4 2013/06/08 14:23:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.5 2013/06/11 09:00:27 xmw Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ src_compile() {
 	if use static ; then
 		local cclib="-Wl,-Bstatic $($(tc-getPKG_CONFIG) --libs --static mupdf x11 | sed 's: -l\(m\|pthread\) : :g') -Wl,-Bdynamic -lm -lpthread"
 	else
-		local cclib="$($(tc-getPKG_CONFIG) --libs mupdf x11 freetype2 libopenjpeg1) -ljbig2dec -ljpeg"
+		local cclib="$($(tc-getPKG_CONFIG) --libs mupdf x11)"
 	fi
 
 	verbose() { echo "$@" >&2 ; "$@" || die ; }

@@ -13,14 +13,3 @@ http://bugs.ghostscript.com/show_bug.cgi?id=693518
  SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
---- mupdf-9999/debian/mupdf.pc
-+++ mupdf-9999/debian/mupdf.pc
-@@ -7,6 +7,6 @@
- Description: Library for rendering PDF documents
- Requires.private: freetype2
- Version: 0.5.0
--Libs: -L${libdir} -lmupdf
-+Libs: -L${libdir} -lfitz
--Libs.private: -lopenjpeg -ljbig2dec -ljpeg -lz -lm
-+Libs.private: -lopenjp2 -ljbig2dec -ljpeg -lz -lm
- Cflags: -I${includedir}
