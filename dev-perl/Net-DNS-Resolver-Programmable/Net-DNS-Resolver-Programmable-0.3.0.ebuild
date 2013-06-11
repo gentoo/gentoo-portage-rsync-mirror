@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/Net-DNS-Resolver-Programmable-0.3.0.ebuild,v 1.4 2013/03/03 08:51:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/Net-DNS-Resolver-Programmable-0.3.0.ebuild,v 1.5 2013/06/11 18:47:54 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="programmable DNS resolver class for offline emulation of DNS"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-perl/Net-DNS

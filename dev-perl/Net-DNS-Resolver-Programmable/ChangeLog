@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS-Resolver-Programmable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.20 2013/03/03 08:51:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.21 2013/06/11 18:47:54 maekke Exp $
+
+  11 Jun 2013; Markus Meier <maekke@gentoo.org>
+  Net-DNS-Resolver-Programmable-0.3.0.ebuild:
+  arm stable, bug #269129
 
   03 Mar 2013; Mike Frysinger <vapier@gentoo.org>
   Net-DNS-Resolver-Programmable-0.3.0.ebuild:

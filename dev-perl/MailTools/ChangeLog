@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.108 2013/04/02 13:21:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.109 2013/06/11 18:43:11 maekke Exp $
+
+  11 Jun 2013; Markus Meier <maekke@gentoo.org> MailTools-2.120.0.ebuild:
+  arm stable, bug #269129
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> MailTools-2.120.0.ebuild:
   Stable for s390, wrt bug #457312

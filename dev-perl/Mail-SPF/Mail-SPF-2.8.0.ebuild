@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/Mail-SPF-2.8.0.ebuild,v 1.8 2013/03/03 08:52:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/Mail-SPF-2.8.0.ebuild,v 1.9 2013/06/11 18:49:05 maekke Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Sender Permitted From - Object Oriented"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-perl/Error
