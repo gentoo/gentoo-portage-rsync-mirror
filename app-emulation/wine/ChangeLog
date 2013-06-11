@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.464 2013/05/26 04:27:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.465 2013/06/11 04:12:24 tetromino Exp $
+
+*wine-1.6_rc1 (11 Jun 2013)
+
+  11 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +wine-1.6_rc1.ebuild, wine-9999.ebuild, +files/wine-1.6_rc1-pkg-config.patch:
+  Version bump, see http://www.winehq.org/announce/1.6-rc1 for the
+  announcement. Fix pkg-config detection with some combinations of USE flags
+  (bug #470172, thanks to Mike Callahan, Peter et al.)
 
 *wine-1.5.31 (26 May 2013)
 
