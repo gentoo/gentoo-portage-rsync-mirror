@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.79 2013/05/24 02:45:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.80 2013/06/11 03:21:02 cardoe Exp $
+
+  11 Jun 2013; Doug Goldstein <cardoe@gentoo.org> -virt-manager-9999.ebuild:
+  The code base has almost completely started over and the build system is
+  entirely new. master is changing pretty rapidly and a live ebuild just won't
+  work at this time. bug #472394
 
   24 May 2013; Patrick Lauer <patrick@gentoo.org> virt-manager-9999.ebuild:
   Removing unneeded/unsatisfiable virtinst dependency

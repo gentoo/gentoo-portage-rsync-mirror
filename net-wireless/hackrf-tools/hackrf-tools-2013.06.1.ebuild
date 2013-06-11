@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/hackrf-tools-9999.ebuild,v 1.2 2013/06/11 03:06:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/hackrf-tools-2013.06.1.ebuild,v 1.1 2013/06/11 03:06:20 zerochaos Exp $
 
 EAPI=5
 
