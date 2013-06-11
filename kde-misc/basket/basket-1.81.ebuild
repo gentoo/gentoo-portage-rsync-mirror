@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/basket-1.81.ebuild,v 1.6 2013/05/27 15:28:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/basket-1.81.ebuild,v 1.8 2013/06/11 15:52:16 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://basket.kde.org/"
 SRC_URI="http://${PN}.kde.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug crypt"
 

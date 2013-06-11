@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.35.ebuild,v 1.4 2013/03/01 15:01:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-3.35.ebuild,v 1.5 2013/06/11 15:32:15 jer Exp $
 
 EAPI=5
 
 DESCRIPTION="Layer Four Traceroute: an advanced traceroute implementation"
-HOMEPAGE="http://oppleman.com/lft/"
+HOMEPAGE="http://pwhois.org/lft/"
 SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.gz"
 
 LICENSE="VOSTROM"

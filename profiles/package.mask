@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14819 2013/06/11 12:51:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14820 2013/06/11 15:47:09 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kacper Kowalik <xarthisius@gentoo.org> (11 Jun 2013)
+# Needs >=x11-libs/libxkbcommon-0.3.1 otherwise suffers 
+# from http://bugs.i3wm.org/query/ticket/953 preventing 
+# user from unlocking the session
+=x11-misc/i3lock-2.5
 
 # Doug Goldstein <cardoe@gentoo.org> (11 Jun 2013)
 # needs dev action

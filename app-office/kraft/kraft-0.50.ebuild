@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.50.ebuild,v 1.3 2013/06/11 15:27:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.50.ebuild,v 1.5 2013/06/11 15:52:12 ago Exp $
 
 EAPI=5
 inherit kde4-base
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/kraft/${P}.tar.bz2"
 
 SLOT="4"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="

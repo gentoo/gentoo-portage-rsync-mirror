@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kvkbd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvkbd/ChangeLog,v 1.7 2011/10/29 00:25:05 abcd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvkbd/ChangeLog,v 1.9 2013/06/11 15:52:33 ago Exp $
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kvkbd-0.6.ebuild:
+  Stable for x86, wrt bug #472986
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kvkbd-0.6.ebuild:
+  Stable for amd64, wrt bug #472986
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kvkbd-0.6.ebuild:
   Bump to EAPI=4
@@ -29,4 +35,3 @@
   +metadata.xml, +kvkbd-0.5.ebuild:
   Initial commit. Ebuild by me, based on contributions by Jiri Tyr in bug
   174054.
-

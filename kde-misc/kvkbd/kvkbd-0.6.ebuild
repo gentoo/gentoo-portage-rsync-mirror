@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvkbd/kvkbd-0.6.ebuild,v 1.4 2011/10/29 00:25:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvkbd/kvkbd-0.6.ebuild,v 1.6 2013/06/11 15:52:33 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/${KDEAPPS_ID}-${P}.tar.bz
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 PATCHES=(

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.27 2013/01/18 16:25:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.29 2013/06/11 15:53:00 ago Exp $
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kwave-0.8.9.ebuild:
+  Stable for x86, wrt bug #472986
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kwave-0.8.9.ebuild:
+  Stable for amd64, wrt bug #472986
 
 *kwave-0.8.9 (18 Jan 2013)
 

@@ -1,13 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-9999.ebuild,v 1.3 2012/12/27 19:04:18 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-9999.ebuild,v 1.4 2013/06/11 15:46:55 jer Exp $
 
-inherit mercurial toolchain-funcs
+EAPI=5
+inherit git-2 toolchain-funcs
 
 DESCRIPTION="Simple X selection printer"
 HOMEPAGE="http://tools.suckless.org/sselp"
 SRC_URI=""
-EHG_REPO_URI=http://code.suckless.org/hg/${PN}
+EGIT_REPO_URI="git://git.suckless.org/sselp"
 
 LICENSE="MIT"
 SLOT="0"
@@ -17,10 +18,7 @@ IUSE=""
 DEPEND="x11-libs/libX11"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	mercurial_src_unpack
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s|^CFLAGS = -std=c99 -pedantic -Wall -Os|CFLAGS += -std=c99 -pedantic -Wall|" \
 		-e "s|^LDFLAGS = -s|LDFLAGS +=|" \
@@ -29,6 +27,6 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed"
+	emake DESTDIR="${D}" PREFIX="/usr" install
 	dodoc README
 }

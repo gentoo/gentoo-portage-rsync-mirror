@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/wacomtablet-1.3.7.2.ebuild,v 1.1 2013/02/14 16:25:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/wacomtablet-1.3.7.2.ebuild,v 1.3 2013/06/11 15:52:42 ago Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/114856-${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="sys-devel/gettext"

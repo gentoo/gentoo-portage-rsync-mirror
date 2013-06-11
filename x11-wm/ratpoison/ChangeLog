@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.90 2013/05/25 07:49:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.91 2013/06/11 15:55:54 jer Exp $
+
+  11 Jun 2013; Jeroen Roovers <jer@gentoo.org>
+  -files/ratpoison-1.4.4-glibc210.patch, -files/ratpoison-1.4.5-asneeded.patch,
+  -files/ratpoisonrc, -ratpoison-1.4.5.ebuild:
+  Old.
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> ratpoison-1.4.6.ebuild:
   Stable for sparc, wrt bug #469680

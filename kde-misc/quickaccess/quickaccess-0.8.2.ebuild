@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.2.ebuild,v 1.1 2012/01/22 22:16:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.2.ebuild,v 1.3 2013/06/11 15:52:38 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://kde-look.org/content/show.php?content=134442"
 SRC_URI="http://kde-look.org/CONTENT/content-files/134442-${MY_P}.zip"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug"
 

@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/dekorator
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/dekorator/ChangeLog,v 1.4 2011/10/28 20:40:04 abcd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/dekorator/ChangeLog,v 1.6 2013/06/11 15:53:28 ago Exp $
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dekorator-0.5.1.ebuild:
+  Stable for x86, wrt bug #472986
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dekorator-0.5.1.ebuild:
+  Stable for amd64, wrt bug #472986
 
   28 Oct 2011; Jonathan Callen <abcd@gentoo.org> dekorator-0.5.1.ebuild:
   Bump EAPI to 4
@@ -18,4 +24,3 @@
   06 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   +dekorator-0.4.0.4.ebuild:
   Initial commit.
-

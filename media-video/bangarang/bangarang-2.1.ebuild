@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1.ebuild,v 1.6 2013/05/30 12:10:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1.ebuild,v 1.8 2013/06/11 15:53:05 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://gitorious.org/bangarang/bangarang.git"
 [[ ${PV} == 9999 ]] || SRC_URI="http://bangarangissuetracking.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug"
 

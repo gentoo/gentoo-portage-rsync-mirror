@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/kdocker-4.8.ebuild,v 1.2 2013/03/02 23:49:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/kdocker-4.8.ebuild,v 1.4 2013/06/11 15:53:24 ago Exp $
 
 EAPI=4
 LANGS="it"
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV:0:3}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="

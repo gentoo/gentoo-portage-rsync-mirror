@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.41 2013/03/01 15:45:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.42 2013/06/11 15:32:15 jer Exp $
+
+  11 Jun 2013; Jeroen Roovers <jer@gentoo.org> lft-3.35.ebuild:
+  Update HOMEPAGE.
 
   01 Mar 2013; Jeroen Roovers <jer@gentoo.org> -lft-3.33.ebuild:
   Old.

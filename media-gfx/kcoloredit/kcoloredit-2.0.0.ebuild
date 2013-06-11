@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kcoloredit/kcoloredit-2.0.0.ebuild,v 1.5 2011/10/29 00:03:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kcoloredit/kcoloredit-2.0.0.ebuild,v 1.7 2013/06/11 15:52:47 ago Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://kde/stable/${KDE_VERSION}/src/extragear/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 S=${WORKDIR}/${MY_P}

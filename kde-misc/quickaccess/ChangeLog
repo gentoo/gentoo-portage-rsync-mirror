@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/quickaccess
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.8 2012/12/20 17:10:11 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.10 2013/06/11 15:52:38 ago Exp $
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> quickaccess-0.8.2.ebuild:
+  Stable for x86, wrt bug #472986
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> quickaccess-0.8.2.ebuild:
+  Stable for amd64, wrt bug #472986
 
   20 Dec 2012; Michael Palimaka <kensington@gentoo.org>
   -files/quickaccess-0.8.1-gcc46.patch, -quickaccess-0.8.1b.ebuild:

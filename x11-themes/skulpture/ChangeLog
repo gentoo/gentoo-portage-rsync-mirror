@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/skulpture
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/skulpture/ChangeLog,v 1.4 2011/10/28 20:35:04 abcd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/skulpture/ChangeLog,v 1.6 2013/06/11 15:53:33 ago Exp $
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> skulpture-0.2.4.ebuild:
+  Stable for x86, wrt bug #472986
+
+  11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> skulpture-0.2.4.ebuild:
+  Stable for amd64, wrt bug #472986
 
   28 Oct 2011; Jonathan Callen <abcd@gentoo.org> skulpture-0.2.4.ebuild:
   Bump EAPI to 4
@@ -19,4 +25,3 @@
   12 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   +skulpture-0.2.3.ebuild, +metadata.xml:
   Initial commit. Moved from kde-testing. Per bug #273850.
-
