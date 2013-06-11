@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.8.2.1.ebuild,v 1.1 2013/05/14 21:06:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.8.3-r1.ebuild,v 1.1 2013/06/11 10:49:17 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit eutils gnome2
 
-DESCRIPTION="GNOME document manager"
+DESCRIPTION="A document manager application for GNOME"
 HOMEPAGE="https://live.gnome.org/Design/Apps/Documents"
 
 LICENSE="GPL-2+"
@@ -40,7 +40,14 @@ RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
 "
 DEPEND="${COMMON_DEPEND}
+	dev-libs/libxslt
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	# Add prev/back navigation with Left and Right keys (from 'master')
+	epatch "${FILESDIR}/${PN}-3.8.3-navigation-keys.patch"
+	gnome2_src_prepare
+}

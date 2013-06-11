@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.2.ebuild,v 1.5 2013/06/02 00:03:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r1.ebuild,v 1.1 2013/06/11 10:57:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,10 +20,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # libXfixes-5.0 needed for pointer barriers
 # TODO: gstreamer support is currently automagical:
 # gstreamer? ( >=media-libs/gstreamer-0.11.92 )
+#
+# gnome-shell/gnome-control-center/mutter/gnome-settings-daemon better to be in sync for 3.8.3
+# https://mail.gnome.org/archives/gnome-announce-list/2013-June/msg00005.html
 COMMON_DEPEND="
 	>=app-accessibility/at-spi2-atk-2.5.3
 	>=dev-libs/atk-2[introspection]
-	>=app-crypt/gcr-3.8[introspection]
+	>=app-crypt/gcr-3.7.5[introspection]
 	>=dev-libs/glib-2.35:2
 	>=dev-libs/gjs-1.35.8
 	>=dev-libs/gobject-introspection-0.10.1
@@ -42,7 +45,7 @@ COMMON_DEPEND="
 	>=net-libs/telepathy-glib-0.19[introspection]
 	>=sys-auth/polkit-0.100[introspection]
 	>=x11-libs/libXfixes-5.0
-	>=x11-wm/mutter-3.8.2[introspection]
+	>=x11-wm/mutter-3.8.3[introspection]
 	>=x11-libs/startup-notification-0.11
 
 	${PYTHON_DEPS}
@@ -86,8 +89,8 @@ RDEPEND="${COMMON_DEPEND}
 	sys-power/upower[introspection]
 
 	>=gnome-base/gnome-session-2.91.91
-	>=gnome-base/gnome-settings-daemon-2.91
-	>=gnome-base/gnome-control-center-2.91.92-r1[bluetooth(+)?]
+	>=gnome-base/gnome-settings-daemon-3.8.3
+	>=gnome-base/gnome-control-center-3.8.3[bluetooth(+)?]
 
 	x11-misc/xdg-utils
 
@@ -119,10 +122,13 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.7.90-bluetooth-flag.patch"
 
 	# Make networkmanager optional, bug #398593
-	epatch "${FILESDIR}/${PN}-3.8.0-networkmanager-flag-r1.patch"
+	epatch "${FILESDIR}/${PN}-3.8.3-networkmanager-flag.patch"
 
 	# Revert suspend break, upstream bug #693162 (from Debian)
 	epatch "${FILESDIR}/${PN}-3.8.0-suspend.patch"
+
+	# Re-lock the screen if we're restarted from a previously crashed shell (from 'master')
+	epatch "${FILESDIR}/${PN}-3.8.3-relock-screen.patch"
 
 	eautoreconf
 	gnome2_src_prepare
@@ -132,7 +138,6 @@ src_configure() {
 	# Do not error out on warnings
 	gnome2_src_configure \
 		--enable-man \
-		--enable-compile-warnings=maximum \
 		--disable-jhbuild-wrapper-script \
 		$(use_with bluetooth) \
 		$(use_enable networkmanager) \
