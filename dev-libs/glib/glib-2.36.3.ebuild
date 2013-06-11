@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.2 2013/06/10 19:39:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.3 2013/06/11 13:30:29 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
 # Avoid runtime dependency on python when USE=test
 
-inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs virtualx linux-info
+inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs versionator virtualx linux-info
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -40,8 +40,12 @@ DEPEND="${RDEPEND}
 		${PYTHON_DEPS}
 		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}]
 		>=sys-apps/dbus-1.2.14 )
+	!<dev-libs/gobject-introspection-1.$(get_version_component_range 2)
 	!<dev-util/gtk-doc-1.15-r2
 "
+# gobject-introspection blocker to ensure people don't mix
+# different g-i and glib major versions
+
 PDEPEND="x11-misc/shared-mime-info
 	!<gnome-base/gvfs-1.6.4-r990"
 # shared-mime-info needed for gio/xdgmime, bug #409481
@@ -220,27 +224,28 @@ src_test() {
 	Xemake check
 }
 
-pkg_preinst() {
+#pkg_preinst() {
 	# Only give the introspection message if:
 	# * The user has gobject-introspection
 	# * Has glib already installed
 	# * Previous version was different from new version
 	# TODO: add a subslotted virtual to trigger this automatically
-	if has_version "dev-libs/gobject-introspection" && ! has_version "=${CATEGORY}/${PF}"; then
-		ewarn "You must rebuild gobject-introspection so that the installed"
-		ewarn "typelibs and girs are regenerated for the new APIs in glib"
-	fi
-}
+	# * Replaced with the use of blockers to ensure people don't mix
+	#   different gobject-introspection and glib major versions
+#	if has_version "dev-libs/gobject-introspection" && ! has_version "=${CATEGORY}/${PF}"; then
+#		ewarn "You must rebuild gobject-introspection so that the installed"
+#		ewarn "typelibs and girs are regenerated for the new APIs in glib"
+#	fi
+#}
 
 pkg_postinst() {
-	# For now disabled as looks to not break for a long time
-	#
 	# Inform users about possible breakage when updating glib and not dbus-glib, bug #297483
 	# TODO: add a subslotted virtual to trigger this automatically
-#	if has_version dev-libs/dbus-glib; then
-#		ewarn "If you experience a breakage after updating dev-libs/glib try"
-#		ewarn "rebuilding dev-libs/dbus-glib"
-#	fi
+	# * Disabled for now as looks to not break for a long time
+	#if has_version dev-libs/dbus-glib; then
+	#	ewarn "If you experience a breakage after updating dev-libs/glib try"
+	#	ewarn "rebuilding dev-libs/dbus-glib"
+	#fi
 
 	if has_version '<x11-libs/gtk+-3.0.12:3'; then
 		# To have a clear upgrade path for gtk+-3.0.x users, have to resort to

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.562 2013/06/10 19:39:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.563 2013/06/11 13:30:29 pacho Exp $
+
+  11 Jun 2013; Pacho Ramos <pacho@gentoo.org> glib-2.36.3.ebuild:
+  Add gobject-introspection blocker to ensure people don't mix different g-i and
+  glib major versions as discussed with Nirbheek.
 
   10 Jun 2013; Pacho Ramos <pacho@gentoo.org> glib-2.36.3.ebuild:
   Stop showing warnings about dbus-glib rebuilding as looks to not be needed for

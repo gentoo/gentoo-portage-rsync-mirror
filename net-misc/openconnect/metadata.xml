@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>mattsch@gmail.com</email>
+		<name>Matthew Schultz</name>
+		<description>Proxied maintainer. Assign bugs to him.</description>
+	</maintainer>
 	<maintainer>
 		<email>hasufell@gentoo.org</email>
 		<name>Julian Ospald</name>
 		<description>Proxy maintainer. CC him on bugs.</description>
 	</maintainer>
-	<maintainer>
-		<email>mattsch@gmail.com</email>
-		<name>Matthew Schultz</name>
-		<description>Proxied maintainer. Assign bugs to him</description>
-	</maintainer>
+	<herd>proxy-maintainers</herd>
 </pkgmetadata>
 

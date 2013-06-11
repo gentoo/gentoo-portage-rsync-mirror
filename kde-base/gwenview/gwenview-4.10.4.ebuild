@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.10.4.ebuild,v 1.1 2013/06/04 18:21:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.10.4.ebuild,v 1.2 2013/06/11 13:05:26 kensington Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="KDE image viewer"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug kipi semantic-desktop"
 
 # tests hang, last checked for 4.2.96
@@ -18,8 +18,11 @@ DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep libkonq)
 	$(add_kdebase_dep kactivities)
+	media-libs/lcms:2
+	media-libs/libpng:0=
 	>=media-gfx/exiv2-0.19
 	virtual/jpeg
+	x11-libs/libX11
 	kipi? ( $(add_kdebase_dep libkipi) )
 "
 RDEPEND="${DEPEND}"
