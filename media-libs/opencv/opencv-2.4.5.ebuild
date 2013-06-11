@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.5.ebuild,v 1.1 2013/05/02 16:49:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.5.ebuild,v 1.2 2013/06/11 21:10:19 dilfridge Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.6"
@@ -185,6 +185,9 @@ src_configure() {
 	mycmakeargs+=(
 		"-DCUDA_NPP_LIBRARY_ROOT_DIR=/opt/cuda"
 	)
+
+	# workaround for bug 413429
+	tc-export CC CXX
 
 	cmake-utils_src_configure
 }
