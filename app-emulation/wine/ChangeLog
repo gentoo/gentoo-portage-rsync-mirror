@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.465 2013/06/11 04:12:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.466 2013/06/12 03:41:43 tetromino Exp $
+
+  12 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.5.25.ebuild,
+  wine-1.5.26.ebuild, wine-1.5.27.ebuild, wine-1.5.28.ebuild,
+  wine-1.5.29.ebuild, wine-1.5.30.ebuild, wine-1.5.31.ebuild,
+  wine-1.6_rc1.ebuild, wine-9999.ebuild:
+  Avoid crossdev's i686-pc-linux-gnu-pkg-config when building wine32 on amd64
+  (bug #472038, thanks to Dmitry Derevyanko). Update live ebuild's patches.
 
 *wine-1.6_rc1 (11 Jun 2013)
 

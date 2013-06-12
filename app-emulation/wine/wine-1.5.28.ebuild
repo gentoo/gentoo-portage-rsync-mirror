@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.28.ebuild,v 1.2 2013/05/16 13:30:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.28.ebuild,v 1.3 2013/06/12 03:41:43 tetromino Exp $
 
 EAPI="5"
 
@@ -242,6 +242,9 @@ src_configure() {
 	)
 
 	[[ ${PV} == "9999" ]] || myeconfargs+=( $(use_with pulseaudio pulse) )
+
+	# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038
+	use amd64 && use abi_x86_32 && tc-export PKG_CONFIG
 
 	multilib_parallel_foreach_abi do_configure
 }

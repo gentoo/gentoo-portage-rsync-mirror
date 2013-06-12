@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.143 2013/06/11 04:12:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.144 2013/06/12 03:41:43 tetromino Exp $
 
 EAPI="5"
 
@@ -171,8 +171,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
 		"${FILESDIR}"/${PN}-1.5.17-osmesa-check.patch #429386
 		"${FILESDIR}"/${PN}-1.5.23-winebuild-CCAS.patch #455308
-		"${FILESDIR}"/${PN}-1.5.31-gnutls-3.2.0.patch #http://bugs.winehq.org/show_bug.cgi?id=33649
-		"${FILESDIR}"/${PN}-1.6_rc1-pkg-config.patch #http://bugs.winehq.org/show_bug.cgi?id=33780
 	)
 	[[ ${PV} == "9999" ]] || PATCHES+=(
 		"../${PULSE_PATCHES}"/*.patch #421365
@@ -251,6 +249,9 @@ src_configure() {
 	)
 
 	[[ ${PV} == "9999" ]] || myeconfargs+=( $(use_with pulseaudio pulse) )
+
+	# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038
+	use amd64 && use abi_x86_32 && tc-export PKG_CONFIG
 
 	multilib_parallel_foreach_abi do_configure
 }
