@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.33 2013/06/11 08:57:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.34 2013/06/12 14:30:19 xmw Exp $
 
 EAPI=5
 
@@ -78,7 +78,7 @@ src_prepare() {
 
 	my_soname=libfitz.so.1.2
 	sed -e "\$a\$(FITZ_LIB):" \
-		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname} -o \$@ \$^" \
+		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname} -Wl,--no-undefined -o \$@ \$^ \$(LIBS)" \
 		-e "/^FITZ_LIB :=/s:=.*:= build/debug/${my_soname}:" \
 		-i Makefile || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.75 2013/06/11 08:57:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.76 2013/06/12 14:30:19 xmw Exp $
+
+  12 Jun 2013; Michael Weber <xmw@gentoo.org> mupdf-1.2.ebuild,
+  mupdf-9999.ebuild:
+  Fix library linking
 
   11 Jun 2013; Michael Weber <xmw@gentoo.org>
   +files/mupdf-9999-pkg-config.patch, files/mupdf-1.2-pkg-config.patch,

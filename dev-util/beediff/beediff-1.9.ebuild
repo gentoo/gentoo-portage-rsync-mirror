@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/beediff/beediff-1.9.ebuild,v 1.2 2013/03/02 20:20:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/beediff/beediff-1.9.ebuild,v 1.3 2013/06/12 14:15:08 kensington Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2
 
 DESCRIPTION="A graphical user interface for comparing and merging files"
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-qt/qtgui:4"
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
@@ -25,8 +27,8 @@ src_prepare() {
 }
 
 src_install() {
-	dobin ${PN} || die
+	dobin ${PN}
 	doicon img/${PN}.png
-	make_desktop_entry ${PN} "Beesoft Differ"
+	make_desktop_entry ${PN} "Beesoft Differ" ${PN} "Qt;Development;"
 	dodoc ChangeLog.txt
 }
