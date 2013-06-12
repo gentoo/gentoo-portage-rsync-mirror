@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.151 2013/05/06 08:45:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.152 2013/06/12 22:19:03 robbat2 Exp $
+
+*autofs-9999 (12 Jun 2013)
+*autofs-5.0.7-r2 (12 Jun 2013)
+
+  12 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> +autofs-5.0.7-r2.ebuild,
+  +autofs-9999.ebuild, +files/autofs-5.0.7-sasl-def.patch, metadata.xml:
+  Update, now with proxy maintenance.
 
   06 May 2013; Justin Lecher <jlec@gentoo.org> autofs-5.0.7-r1.ebuild,
   +files/autofs-5.0.7-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patc

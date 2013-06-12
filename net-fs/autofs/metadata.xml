@@ -6,10 +6,23 @@
   <maintainer>
     <email>DuPol@gmx.de</email>
     <name>Dustin Polke</name>
+    <description>maintainer, assign bugs</description>
+  </maintainer>
+  <maintainer>
+    <email>dennis.yxun@gmail.com</email>
+    <name>Dennis (dlan) Lan</name>
+    <description>maintainer, assign bugs</description>
+  </maintainer>
+  <maintainer>
+    <email>robbat2@gentoo.org</email>
+    <name>Robin Johnson</name>
+    <description>proxy maintainer, CC on bugs</description>
   </maintainer>
   <use>
+    <flag name="dmalloc">Enable debugging with the dmalloc library</flag>
     <flag name="hesiod">Install hesiod module</flag>
     <flag name="ldap">Install LDAP module</flag>
+    <flag name="libtirpc">Use libtirpc lib support</flag>
     <flag name="mount-locking">
 		Enable locking to prevent corruption of /etc/mtab in the presence of
 		concurrent auto-mounting. If enabled, recursive auto-mounting (eg. using
