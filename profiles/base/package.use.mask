@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.475 2013/06/08 08:45:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.476 2013/06/12 17:25:26 kensington Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -239,11 +239,6 @@ media-sound/pulseaudio webrtc-aec xen
 # Requires libxkbcommon from the x11 overlay
 <dev-cpp/gtkmm-3.7 wayland
 <x11-libs/gtk+-3.7 egl wayland
-
-# Johannes Huber <johu@gentoo.org> (23 Mar 2012)
-# Broken dep upnp, see bug #389833.
-# Experimental udisks2 patch, see bug #424157
-kde-base/kdelibs upnp udisks2
 
 # Tim Harder <radhermit@gentoo.org> (22 Mar 2012)
 # Masked since skype isn't stable
