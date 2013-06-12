@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.6.ebuild,v 1.1 2013/03/19 17:04:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.6.ebuild,v 1.2 2013/06/11 23:08:37 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
 
 DESCRIPTION="Battle for Wesnoth - A fantasy turn-based strategy game"
@@ -39,14 +39,12 @@ src_prepare() {
 			-e "s:GAMES_STATEDIR:${GAMES_STATEDIR}:" \
 			-e "s/GAMES_USER_DED/${GAMES_USER_DED}/" \
 			-e "s/GAMES_GROUP/${GAMES_GROUP}/" "${FILESDIR}"/wesnothd.rc \
-			> "${T}"/wesnothd \
-			|| die "sed failed"
+			> "${T}"/wesnothd || die
 	fi
 	if ! use doc ; then
 		sed -i \
 			-e '/manual/d' \
-			doc/CMakeLists.txt \
-			|| die "sed failed"
+			doc/CMakeLists.txt || die
 	fi
 	# how do I hate boost? Let me count the ways...
 	local boost_ver=$(best_version ">=dev-libs/boost-1.36")
@@ -62,6 +60,10 @@ src_prepare() {
 		-L/usr/$(get_libdir)/boost-${boost_ver}
 	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
 	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
+
+	# bug #472994
+	mv icons/wesnoth-icon-Mac.png icons/wesnoth-icon.png || die
+	mv icons/map-editor-icon-Mac.png icons/wesnoth_editor-icon.png || die
 }
 
 src_configure() {
@@ -111,7 +113,7 @@ src_install() {
 	DOCS="README changelog players_changelog" cmake-utils_src_install
 	if use dedicated || use server; then
 		keepdir "${GAMES_STATEDIR}/run/wesnothd"
-		doinitd "${T}"/wesnothd || die "doinitd failed"
+		doinitd "${T}"/wesnothd || die
 	fi
 	prepgamesdirs
 }

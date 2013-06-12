@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.222 2013/03/19 17:04:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.223 2013/06/11 23:08:37 mr_bones_ Exp $
+
+  11 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.10.6.ebuild:
+  use bigger icons (bug #472994)
 
 *wesnoth-1.10.6 (19 Mar 2013)
 
