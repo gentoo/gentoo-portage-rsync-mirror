@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1.ebuild,v 1.3 2013/06/01 19:49:33 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1.ebuild,v 1.4 2013/06/12 06:53:19 jlec Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info
@@ -73,6 +73,8 @@ src_prepare() {
 	# We install to a valid location, no need to muck with ld.so.conf
 	# --without-loadlibfile is supposed to do this for us...
 	sed -i '/mk_default_ld_lib_file || return 1/d' buildutils/pbs_mkdirs.in || die
+
+	epatch "${FILESDIR}"/${P}-tcl8.6.patch
 }
 
 src_configure() {
