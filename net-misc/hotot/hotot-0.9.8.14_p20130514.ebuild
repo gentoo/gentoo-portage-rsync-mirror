@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-9999.ebuild,v 1.8 2013/06/12 20:16:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.14_p20130514.ebuild,v 1.1 2013/06/12 20:16:30 xmw Exp $
 
 EAPI=5
 
 PYTHON_DEPEND="gtk? 2"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit cmake-utils git-2 python-single-r1
+inherit cmake-utils python-single-r1 vcs-snapshot
 
 DESCRIPTION="lightweight & open source microblogging client"
 HOMEPAGE="http://hotot.org"
-EGIT_REPO_URI="git://github.com/lyricat/Hotot.git"
+SRC_URI="https://github.com/lyricat/Hotot/tarball/ed2ff013 -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="chrome gtk kde qt4"
 
 REQUIRED_USE="|| ( chrome gtk qt4 )"
@@ -54,8 +54,9 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
+	use gtk && dosym hotot-gtk2 /usr/bin/hotot
 
-	find "${D}" -name "*.pyc" -delete
+	find "${D}" -name "*.pyc" -print -delete
 }
 
 pkg_postinst() {

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/hotot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.30 2013/03/02 23:00:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.31 2013/06/12 20:16:30 xmw Exp $
+
+*hotot-0.9.8.14 (12 Jun 2013)
+*hotot-0.9.8.14_p20130514 (12 Jun 2013)
+
+  12 Jun 2013; Michael Weber <xmw@gentoo.org> +hotot-0.9.8.14.ebuild,
+  +hotot-0.9.8.14_p20130514.ebuild, hotot-9999.ebuild:
+  Version bumps to address twitter API 1.0 deprectation, migtrate to python-r1
+  eclasses
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> hotot-0.9.8.11.ebuild,
   hotot-9999.ebuild:
