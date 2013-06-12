@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.75 2013/03/08 17:18:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.76 2013/06/12 15:29:05 jer Exp $
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org> hydra-7.4.2.ebuild:
+  Remove unused sed script.
 
 *hydra-7.4.2 (08 Mar 2013)
 
