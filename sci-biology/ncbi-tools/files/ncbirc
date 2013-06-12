@@ -1,2 +1,2 @@
 [NCBI]
-Data=/usr/share/ncbi/data
+Data=@GENTOO_PORTAGE_EPREFIX@/usr/share/ncbi/data

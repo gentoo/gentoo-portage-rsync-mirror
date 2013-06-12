@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14823 2013/06/12 10:13:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14824 2013/06/12 11:38:24 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (12 Jun 2013)
+# Beta and rc packages are pre-release and not considered production
+# ready. Use at your own risk. Please report any bugs you encounter at
+# bugs.gentoo.org.
+>dev-db/postgresql-docs-9.3_beta1
+>dev-db/postgresql-base-9.3_beta1
+>dev-db/postgresql-server-9.3_beta1
 
 # Doug Goldstein <cardoe@gentoo.org> (11 Jun 2013)
 # needs dev action
@@ -431,14 +439,6 @@ media-tv/tvtime
 # but should not be fed untrusted input (eg from strangers).
 # Masked to ensure users are aware before they install.
 app-text/cuneiform
-
-# Aaron W. Swenson <titanofold@gentoo.org> (16 Mar 2013)
-# The PostgreSQL 8.3 series has reached End of Life and is no longer
-# supported here or upstream. Please migrate to a more recent series
-# as this series will be removed 2013-04-04.
-<dev-db/postgresql-docs-8.4.0
-<dev-db/postgresql-base-8.4.0
-<dev-db/postgresql-server-8.4.0
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
 # Waiting for new emul-linux-x86-{media,sound}libs without

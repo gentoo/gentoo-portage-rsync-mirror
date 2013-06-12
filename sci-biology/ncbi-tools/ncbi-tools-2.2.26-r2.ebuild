@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r2.ebuild,v 1.5 2013/03/03 16:07:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r2.ebuild,v 1.6 2013/06/12 11:31:50 jlec Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic prefix toolchain-funcs
 
 DESCRIPTION="Development toolkit and applications for computational biology, including NCBI BLAST"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
@@ -148,6 +148,7 @@ src_install() {
 	# Default config file to set the path for shared data.
 	insinto /etc/ncbi
 	newins "${FILESDIR}"/ncbirc .ncbirc
+	eprefixify "${ED}"/etc/ncbi/.ncbirc
 
 	# Env file to set the location of the config file and BLAST databases.
 	newenvd "${FILESDIR}"/21ncbi-r1 21ncbi

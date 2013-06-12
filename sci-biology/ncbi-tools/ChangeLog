@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.95 2013/03/11 16:16:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.96 2013/06/12 11:31:50 jlec Exp $
+
+  12 Jun 2013; Justin Lecher <jlec@gentoo.org> ncbi-tools-2.2.26-r2.ebuild,
+  files/ncbirc:
+  Fix for prefix
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
