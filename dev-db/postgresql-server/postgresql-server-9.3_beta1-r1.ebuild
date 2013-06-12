@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.3_beta1.ebuild,v 1.1 2013/06/12 01:27:17 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.3_beta1-r1.ebuild,v 1.1 2013/06/12 12:33:43 patrick Exp $
 
 EAPI="5"
 
@@ -135,6 +135,12 @@ src_install() {
 	for bd in . contrib $(use xml && echo contrib/xml2) ; do
 		PATH="${EROOT%/}/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake install -C $bd DESTDIR="${D}" || die "emake install in $bd failed"
+	done
+
+	# Avoid file collision with -base.
+	local l
+	for l in lib lib32 lib64 ; do
+		rm "${ED}/usr/${l}/postgresql-${SLOT}/${l}/libpgcommon.a"
 	done
 
 	dodir /etc/eselect/postgresql/slots/${SLOT}
