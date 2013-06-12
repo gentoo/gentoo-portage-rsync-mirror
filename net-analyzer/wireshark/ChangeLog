@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.514 2013/06/10 03:38:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.515 2013/06/11 23:39:29 jer Exp $
+
+*wireshark-1.10.0-r1 (11 Jun 2013)
+
+  11 Jun 2013; Jeroen Roovers <jer@gentoo.org> +wireshark-1.10.0-r1.ebuild,
+  metadata.xml:
+  Remove broken python support. Remove ewarn messages in favour of local USE
+  flag descriptions. Add Qt4 support by Andrei Slavoiu (bug #472992).
 
   10 Jun 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.16.ebuild,
   wireshark-1.8.8.ebuild, wireshark-1.10.0.ebuild:

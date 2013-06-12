@@ -28,9 +28,11 @@
 <flag name='adns'>Use the GNU <pkg>net-dns/c-ares</pkg> library to resolve DNS names</flag>
 <flag name='crypt'>Use <pkg>dev-libs/libgcrypt</pkg> to decrypt traffic</flag>
 <flag name='doc-pdf'>Build documentation in pdf format (US and a4 paper sizes)</flag>
+<flag name='gtk'>Build the wireshark executable with a GTK+ UI.</flag>
 <flag name='libadns'>Use <pkg>net-lib/adns</pkg> (DEPRECATED) instead of <pkg>net-dns/c-ares</pkg> to resolve DNS names</flag>
 <flag name='netlink'>Use <pkg>dev-libs/libnl</pkg></flag>
 <flag name='pcap'>Use <pkg>net-libs/libpcap</pkg> for network packet capturing (build dumpcap, rawshark)</flag>
+<flag name='qt4'>Build the wireshark executable with a Qt UI.</flag>
 <flag name='smi'>Use <pkg>net-libs/libsmi</pkg> to resolve numeric OIDs into human readable format</flag>
 </use>
 </pkgmetadata>
