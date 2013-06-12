@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.1.ebuild,v 1.5 2013/06/06 05:35:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.3.ebuild,v 1.1 2013/06/12 15:00:58 pacho Exp $
 
 EAPI="5"
 inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils toolchain-funcs versionator virtualx
@@ -170,6 +170,9 @@ src_configure() {
 	# https://bugs.webkit.org/show_bug.cgi?id=42070 , #301634
 	use ppc64 && append-flags "-mminimal-toc"
 
+	# Try to use less memory, bug #469942
+	append-ldflags "-Wl,--no-keep-memory"
+
 	local myconf
 	# TODO: Check Web Audio support
 	# TODO: There's 3 acceleration backends: opengl, egl and gles2
@@ -177,7 +180,7 @@ src_configure() {
 	#
 	# * dependency-tracking is required so parallel builds won't fail
 	# * libsecret dep was made optional for compatibility with Windows, not sure
-	# if we really want to make credential storage optional
+	#   if we really want to make credential storage optional
 	myconf="
 		$(use_enable coverage)
 		$(use_enable debug)
@@ -207,11 +210,11 @@ src_configure() {
 	econf ${myconf}
 }
 
-src_compile() {
+#src_compile() {
 	# Avoid parallel make failure with -j9, bug #????
-	emake DerivedSources/WebCore/JSNode.h
-	default
-}
+#	emake DerivedSources/WebCore/JSNode.h
+#	default
+#}
 
 src_test() {
 	# Tests expect an out-of-source build in WebKitBuild

@@ -1,16 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/nomacs-0.4.0.ebuild,v 1.2 2013/03/02 21:37:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/nomacs-1.0.2.ebuild,v 1.1 2013/06/12 14:39:56 kensington Exp $
 
-EAPI=4
-
-#LANGS="als de en ru zh" TODO: translation handling
+EAPI=5
 
 inherit cmake-utils
 
 DESCRIPTION="Qt4-based image viewer"
 HOMEPAGE="http://www.nomacs.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-source.zip"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,11 +24,8 @@ RDEPEND="
 		>=media-libs/opencv-2.4.0[qt4]
 	)"
 DEPEND="${RDEPEND}
-	app-arch/unzip
 	virtual/pkgconfig
 "
-
-S=${WORKDIR}
 
 src_configure() {
 	local mycmakeargs=(

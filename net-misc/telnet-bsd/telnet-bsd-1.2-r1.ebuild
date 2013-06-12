@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.2-r1.ebuild,v 1.23 2013/02/28 17:09:38 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.2-r1.ebuild,v 1.24 2013/06/12 14:41:29 jer Exp $
 
 EAPI=5
 inherit eutils autotools toolchain-funcs
@@ -27,7 +27,7 @@ src_prepare() {
 
 src_configure() {
 	# FreeBSD doesn't seem to support PIE neither does hppa
-	if use kernel_FreeBSD || use hppa; then
+	if use kernel_FreeBSD; then
 		export libc_cv_fpie="no"
 	fi
 

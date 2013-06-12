@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.21 2013/06/05 09:20:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.22 2013/06/12 14:55:02 polynomial-c Exp $
+
+  12 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> Ice-3.5.0.ebuild:
+  Fixed installation with "doc" USE flag being enabled. Thanks to Martin von
+  Gagern for reporting this in bug #473106.
 
 *Ice-3.5.0 (05 Jun 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.50 2013/02/28 17:09:38 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.51 2013/06/12 14:41:29 jer Exp $
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org> telnet-bsd-1.2-r1.ebuild:
+  Enable -fpie for HPPA.
 
   28 Feb 2013; Marc Schiffbauer <mschiff@gentoo.org> telnet-bsd-1.2-r1.ebuild:
   Better fix for #459560

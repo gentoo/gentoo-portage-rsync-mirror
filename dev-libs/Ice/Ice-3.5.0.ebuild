@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.0.ebuild,v 1.1 2013/06/05 09:20:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.0.ebuild,v 1.2 2013/06/12 14:55:02 polynomial-c Exp $
 
 EAPI="4"
 
@@ -176,7 +176,7 @@ src_install() {
 
 	if use doc ; then
 		dohtml -r cpp/doc/reference/*
-		dodoc "${WORKDIR}/${P}.pdf"
+		dodoc "${DISTDIR}/${P}.pdf"
 	fi
 
 	if use python ; then
