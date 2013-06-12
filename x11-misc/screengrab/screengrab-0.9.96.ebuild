@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.9.96.ebuild,v 1.1 2013/05/04 08:51:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.9.96.ebuild,v 1.3 2013/06/12 18:07:39 pinkbyte Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11
@@ -27,4 +27,6 @@ src_prepare() {
 	sed -i -e "/SG_DOCDIR/s:screengrab:${PF}:" \
 		-e "/CMAKE_CXX_FLAGS/s:\"): ${CXXFLAGS}&:" \
 		CMakeLists.txt || die
+
+	cmake-utils_src_prepare
 }

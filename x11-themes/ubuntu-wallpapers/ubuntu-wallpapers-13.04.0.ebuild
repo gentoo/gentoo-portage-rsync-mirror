@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ubuntu-wallpapers-13.04.0.ebuild,v 1.1 2013/05/16 20:39:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ubuntu-wallpapers-13.04.0.ebuild,v 1.3 2013/06/12 18:18:14 pinkbyte Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${PN}_${PV}daily13.03.20"
 SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/${MY_P}.orig.tar.gz"
 
 LICENSE="CC-BY-SA-3.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE=""
 
 RDEPEND=""

@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/ubuntu-wallpapers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.8 2013/05/16 20:39:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.10 2013/06/12 18:18:14 pinkbyte Exp $
+
+  12 Jun 2013; Sergey Popov <pinkbyte@gentoo.org>
+  ubuntu-wallpapers-13.04.0.ebuild:
+  Add ~arm keyword
+
+  12 Jun 2013; Sergey Popov <pinkbyte@gentoo.org>
+  ubuntu-wallpapers-13.04.0.ebuild:
+  Stable on amd64 and x86, wrt bug #472830
 
 *ubuntu-wallpapers-13.04.0 (16 May 2013)
 

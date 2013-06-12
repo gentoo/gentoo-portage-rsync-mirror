@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/screengrab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.27 2013/05/04 08:51:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.29 2013/06/12 18:07:39 pinkbyte Exp $
+
+  12 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> screengrab-0.9.96.ebuild:
+  Stable on amd64 and x86, wrt bug #473098
+
+  12 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> screengrab-0.9.96.ebuild:
+  Add missing call to cmake-utils_src_prepare
 
 *screengrab-0.9.96 (04 May 2013)
 
