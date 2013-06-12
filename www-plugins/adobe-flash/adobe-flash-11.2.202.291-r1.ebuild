@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.291-r1.ebuild,v 1.1 2013/06/12 17:50:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.291-r1.ebuild,v 1.2 2013/06/12 22:44:44 jer Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.adobe.com/products/flashplayer.html"
 AF_URI="http://fpdownload.macromedia.com/get/flashplayer/pdc"
 AF_DB_URI="http://fpdownload.macromedia.com/pub/flashplayer/updaters"
 PV_M=$(get_major_version)
-AF_32_URI="${AF_URI}/${PV}/install_flash_player_${PV}_linux.i386.tar.gz -> ${P}.i386.tar.gz"
+AF_32_URI="${AF_URI}/${PV}/install_flash_player_${PV_}_linux.i386.tar.gz -> ${P}.i386.tar.gz"
 AF_64_URI="${AF_URI}/${PV}/install_flash_player_${PV}_linux.x86_64.tar.gz -> ${P}.x86_64.tar.gz"
 AF_32_DB_URI="${AF_DB_URI}/${PV_M}/flashplayer_${PV_M}_plugin_debug.i386.tar.gz -> ${P}-debug.i386.tar.gz"
 
