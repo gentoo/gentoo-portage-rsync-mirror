@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/pyephem
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.19 2012/11/19 07:38:41 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.20 2013/06/12 16:29:33 bicatali Exp $
+
+  12 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> pyephem-3.7.5.1.ebuild:
+  Switch to EAPI5
 
   19 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> pyephem-3.7.5.1.ebuild:
   Drop inherit of eutils.eclass, introduce new dependencies for tests, simplify

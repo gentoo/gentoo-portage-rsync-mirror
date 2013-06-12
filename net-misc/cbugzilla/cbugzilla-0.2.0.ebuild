@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbugzilla/cbugzilla-0.1.1.ebuild,v 1.2 2013/05/29 13:32:53 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbugzilla/cbugzilla-0.2.0.ebuild,v 1.1 2013/06/12 16:13:43 yac Exp $
 
 EAPI=5
 
-inherit autotools
-
 DESCRIPTION="CLI and C api to get data from Bugzilla"
 HOMEPAGE="https://github.com/yaccz/cbugzilla"
-SRC_URI="https://github.com/yaccz/${PN}/archive/v/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~yac/distfiles/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,8 +18,8 @@ DEPEND="net-misc/curl
 	app-text/htmltidy"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${PN}-v-${PV}
+DOCS=( "README.rst" "ChangeLog.rst" )
 
-src_prepare() {
-	eautoreconf
+src_configure() {
+	econf --disable-werror
 }
