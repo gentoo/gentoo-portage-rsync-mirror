@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14825 2013/06/12 18:22:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14826 2013/06/12 20:31:27 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Weber <xmw@gentoo.org> (12 Jun 2013)
+# Twitter API 1.0 was turned off, rendering this versions useless.
+# See bug 473136 for details
+<net-misc/hotot-0.9.8.14_p20130514
 
 # Aaron W. Swenson <titanofold@gentoo.org> (12 Jun 2013)
 # Beta and rc packages are pre-release and not considered production
