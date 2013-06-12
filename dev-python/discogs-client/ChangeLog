@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/discogs-client
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/discogs-client/ChangeLog,v 1.1 2013/06/10 18:02:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/discogs-client/ChangeLog,v 1.2 2013/06/12 07:34:10 idella4 Exp $
+
+  12 Jun 2013; Ian Delaney <idella4@gentoo.org> +files/README.patch,
+  discogs-client-1.1.1.ebuild:
+  correct typo, add patch to fix tests, touch up to test phase, closes Bug
+  #472408
 
 *discogs-client-1.1.1 (10 Jun 2013)
 
