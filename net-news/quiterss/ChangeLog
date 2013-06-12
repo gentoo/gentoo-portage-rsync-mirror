@@ -1,6 +1,9 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.22 2013/06/01 21:16:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.23 2013/06/12 12:17:14 pinkbyte Exp $
+
+  12 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> quiterss-9999.ebuild:
+  Add Arabic locale, thanks to Nikoli <nikoli AT lavabit.com>
 
   01 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> quiterss-0.12.5.ebuild:
   Stable on x86, wrt bug #471680
