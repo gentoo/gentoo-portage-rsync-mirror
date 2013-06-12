@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/jffnms
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.14 2012/07/01 22:04:43 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.15 2013/06/12 15:59:25 jer Exp $
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org>
+  -files/jffnms-0.8.3-misc-security-fixes.patch:
+  Old.
 
   01 Jul 2012; Matti Bickel <mabi@gentoo.org> -jffnms-0.8.3-r2.ebuild:
   remove old version. approved by Zero_Chaos
@@ -73,4 +77,3 @@
   13 Mar 2006; Otavio Piske <angusyoung@gentoo.org> +files/mysql_db,
   +files/postgresql_db, +files/postgresql_db_table, +jffnms-0.8.2.ebuild:
   Jffnms ebuild. Initial release. Closes bug 92501
-

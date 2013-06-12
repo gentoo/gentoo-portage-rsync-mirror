@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.515 2013/06/11 23:39:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.516 2013/06/12 15:56:23 jer Exp $
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0-r1.ebuild:
+  Install icons and desktop file with USE=qt4 by Andrei Slavoiu (bug #473114).
 
 *wireshark-1.10.0-r1 (11 Jun 2013)
 

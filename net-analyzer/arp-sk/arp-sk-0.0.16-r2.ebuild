@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r2.ebuild,v 1.3 2013/05/29 09:19:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r2.ebuild,v 1.4 2013/06/12 15:43:08 jer Exp $
 
 EAPI=5
 inherit autotools eutils multilib
@@ -31,5 +31,4 @@ src_install() {
 
 	# We don't need libcompat as it has a potential to clash with other packages.
 	rm -fr "${D}"/usr/$(get_libdir)
-
 }
