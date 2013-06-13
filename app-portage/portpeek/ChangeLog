@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.165 2013/06/11 18:25:13 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.166 2013/06/13 00:22:10 mpagano Exp $
+
+  13 Jun 2013; Michael Pagano <mpagano@gentoo.org> portpeek-2.1.8.ebuild:
+  Update 2.1.8 with eclass bump and new python variable and inherit
 
 *portpeek-2.1.8 (11 Jun 2013)
 
