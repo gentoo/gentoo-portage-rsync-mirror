@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/docky
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/ChangeLog,v 1.15 2013/05/11 17:23:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/ChangeLog,v 1.16 2013/06/13 17:35:55 nimiux Exp $
+
+  13 Jun 2013; Chema Alonso <nimiux@gentoo.org> docky-2.2.0.ebuild:
+  Stable for amd64 wrt bug #472816
 
 *docky-2.2.0 (11 May 2013)
 
