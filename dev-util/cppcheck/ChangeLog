@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.40 2013/05/28 21:49:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.41 2013/06/13 13:14:53 xmw Exp $
+
+*cppcheck-1.60.1 (13 Jun 2013)
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> +cppcheck-1.60.1.ebuild,
+  -cppcheck-1.59.ebuild:
+  Version bump as requested by Christian Strahl (bug 473182)
 
   28 May 2013; Michael Weber <xmw@gentoo.org> cppcheck-1.59-r1.ebuild:
   remove useless egg-info files (bug 471474 by Nikoli)
