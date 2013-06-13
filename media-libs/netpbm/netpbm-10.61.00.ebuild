@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.4 2013/05/29 15:15:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.5 2013/06/13 20:05:30 bicatali Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~amd64-linux ~x86 ~x86-fbsd ~x86-linux"
 IUSE="doc jbig jpeg jpeg2k png rle svga tiff X xml zlib"
 
 RDEPEND="jbig? ( media-libs/jbigkit )
@@ -159,18 +159,18 @@ src_test() {
 src_install() {
 	# Subdir make targets like to use `mkdir` all over the place
 	# without any actual dependencies, thus the -j1.
-	emake -j1 package pkgdir="${D}"/usr
+	emake -j1 package pkgdir="${ED}"/usr
 
-	[[ $(get_libdir) != "lib" ]] && mv "${D}"/usr/lib "${D}"/usr/$(get_libdir)
+	[[ $(get_libdir) != "lib" ]] && mv "${ED}"/usr/lib "${ED}"/usr/$(get_libdir)
 
 	# Remove cruft that we don't need, and move around stuff we want
-	rm "${D}"/usr/bin/{doc.url,manweb} || die
-	rm -r "${D}"/usr/man/web || die
-	rm -r "${D}"/usr/link || die
-	rm "${D}"/usr/{README,VERSION,config_template,pkginfo} || die
+	rm "${ED}"/usr/bin/{doc.url,manweb} || die
+	rm -r "${ED}"/usr/man/web || die
+	rm -r "${ED}"/usr/link || die
+	rm "${ED}"/usr/{README,VERSION,config_template,pkginfo} || die
 	dodir /usr/share
-	mv "${D}"/usr/man "${D}"/usr/share/ || die
-	mv "${D}"/usr/misc "${D}"/usr/share/netpbm || die
+	mv "${ED}"/usr/man "${ED}"/usr/share/ || die
+	mv "${ED}"/usr/misc "${ED}"/usr/share/netpbm || die
 
 	doman userguide/*.[0-9]
 	use doc && dohtml -r userguide
