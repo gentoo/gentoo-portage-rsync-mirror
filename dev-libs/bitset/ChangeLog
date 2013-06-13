@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/bitset
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/ChangeLog,v 1.6 2013/04/15 08:51:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/ChangeLog,v 1.7 2013/06/13 00:50:14 titanofold Exp $
+
+*bitset-2.8.4 (13 Jun 2013)
+
+  13 Jun 2013; Aaron W. Swenson <titanofold@gentoo.org> +bitset-2.8.4.ebuild:
+  Version bump. Fixes bug 472806.
 
   15 Apr 2013; Agostino Sarubbo <ago@gentoo.org> bitset-2.8.3.ebuild:
   Stable for x86, wrt bug #465674

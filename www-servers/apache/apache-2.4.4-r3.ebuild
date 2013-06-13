@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.4-r3.ebuild,v 1.4 2013/05/21 15:19:08 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.4-r3.ebuild,v 1.5 2013/06/13 01:01:13 floppym Exp $
 
 EAPI="2"
 
@@ -177,8 +177,8 @@ src_install() {
 	# through --enable-systemd
 	systemd_newunit "${FILESDIR}/apache2.2.service" "apache2.service"
 	systemd_dotmpfilesd "${FILESDIR}/apache.conf"
-	insinto /etc/apache2/modules.d
-	doins "${FILESDIR}/00_systemd.conf"
+	#insinto /etc/apache2/modules.d
+	#doins "${FILESDIR}/00_systemd.conf"
 }
 
 pkg_postinst()
