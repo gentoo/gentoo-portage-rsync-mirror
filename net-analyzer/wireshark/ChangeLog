@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.517 2013/06/12 16:07:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.518 2013/06/13 14:00:05 jer Exp $
+
+  13 Jun 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0-r1.ebuild:
+  Fix building with USE="gtk -qt4" by Lars Wendler (bug #473188 by Nikita
+  Kozlov).
 
   12 Jun 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.0-r1.ebuild:
   Have USE=qt4 depend on xdg-utils too.

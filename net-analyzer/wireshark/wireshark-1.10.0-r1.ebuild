@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0-r1.ebuild,v 1.3 2013/06/12 16:07:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0-r1.ebuild,v 1.4 2013/06/13 14:00:05 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps flag-o-matic user
@@ -120,6 +120,13 @@ src_configure() {
 		esac
 	fi
 
+	# Enable wireshark binary with any supported GUI toolkit (bug #473188)
+	if use gtk || use qt4 ; then
+		myconf+=( "--enable-wireshark" )
+	else
+		myconf+=( "--disable-wireshark" )
+	fi
+
 	# Hack around inability to disable doxygen/fop doc generation
 	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
 	use doc-pdf || export ac_cv_prog_HAVE_FOP=false
@@ -128,10 +135,8 @@ src_configure() {
 	econf \
 		$(use pcap && use_enable !caps setuid-install) \
 		$(use pcap && use_enable caps setcap-install) \
-		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
-		$(use_enable qt4 wireshark) \
 		$(use_with caps libcap) \
 		$(use_with crypt gcrypt) \
 		$(use_with geoip) \
