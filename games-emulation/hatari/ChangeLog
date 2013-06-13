@@ -1,6 +1,18 @@
 # ChangeLog for games-emulation/hatari
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.39 2012/08/08 19:46:35 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.41 2013/06/13 10:45:58 hasufell Exp $
+
+*hatari-1.6.2 (13 Jun 2013)
+
+  13 Jun 2013; Julian Ospald <hasufell@gentoo.org> +hatari-1.6.2.ebuild,
+  +files/hatari-1.6.2-gentoo.patch, +files/hatari-1.6.2-gentoo-docdir.patch:
+  version bump wrt #424321
+
+*hatari-1.6.1-r1 (13 Jun 2013)
+
+  13 Jun 2013; Julian Ospald <hasufell@gentoo.org> +hatari-1.6.1-r1.ebuild,
+  +files/hatari-1.6.1-gentoo-docdir.patch:
+  use python-single-r1, add dev-python/pygtk dep, fix hatariui and docdir path
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> hatari-1.6.1.ebuild:
   Marking hatari-1.6.1 ppc for bug 411773
