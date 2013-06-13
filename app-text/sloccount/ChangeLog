@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sloccount
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.25 2013/06/09 18:20:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.26 2013/06/13 16:51:12 nimiux Exp $
+
+  13 Jun 2013; Chema Alonso <nimiux@gentoo.org> sloccount-2.26-r2.ebuild:
+  Stable for amd64 wrt bug #472770
 
   09 Jun 2013; Jeroen Roovers <jer@gentoo.org> sloccount-2.26-r2.ebuild:
   Fix test failure when sloccount is not yet installed (bug #362045).
