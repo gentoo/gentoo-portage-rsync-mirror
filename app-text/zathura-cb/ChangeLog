@@ -1,6 +1,15 @@
 # ChangeLog for app-text/zathura-cb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.4 2013/01/11 16:39:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.6 2013/06/13 21:52:51 xmw Exp $
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> zathura-cb-0.1.1.ebuild:
+  Add eutils eclass
+
+*zathura-cb-0.1.1 (13 Jun 2013)
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> +zathura-cb-0.1.1.ebuild,
+  metadata.xml:
+  Version bump, adding myself as maint.
 
   11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> zathura-cb-0.1.0.ebuild:
   Keyword ~arm wrt #368757 (tested with cortex-a8, hardfloat)
@@ -15,4 +24,3 @@
 
   15 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +zathura-cb-0.1.0.ebuild:
   Initial commit.
-

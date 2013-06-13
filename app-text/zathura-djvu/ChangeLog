@@ -1,6 +1,12 @@
 # ChangeLog for app-text/zathura-djvu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.17 2013/01/27 21:55:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.18 2013/06/13 22:00:58 xmw Exp $
+
+*zathura-djvu-0.2.3 (13 Jun 2013)
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> +zathura-djvu-0.2.3.ebuild,
+  metadata.xml:
+  Version bump, adding myself as maint.
 
 *zathura-djvu-0.2.2 (27 Jan 2013)
 
