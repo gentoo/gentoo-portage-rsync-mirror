@@ -1,0 +1,10 @@
+--- a/setup.py
++++ b/setup.py
+@@ -158,7 +158,6 @@
+     test_suite = 'setuptools.tests',
+     src_root = src_root,
+     packages = find_packages(),
+-    package_data = {'setuptools':['*.exe', 'site-patch.py'], 'setuptools.command':['*.xml']},
+ 
+     py_modules = ['pkg_resources', 'easy_install', 'site'],
+ 
