@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.111 2013/06/10 22:26:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.112 2013/06/13 22:17:00 voyageur Exp $
+
+  13 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.3_rc3.ebuild,
+  llvm-9999.ebuild:
+  Fix PaX markings on lli with USE=debug, thanks Alexander Tsoy
+  <alexander@tsoy.me> in bug #464592
+
+  11 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
+  r600 backend was moved from non-experimental, set it in standard targets
 
   10 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.8-r2.ebuild,
   llvm-2.9-r2.ebuild:

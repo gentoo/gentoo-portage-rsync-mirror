@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.2.ebuild,v 1.3 2013/06/13 22:24:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.3.ebuild,v 1.1 2013/06/13 22:24:38 xmw Exp $
 
 EAPI=5
+
 inherit eutils fdo-mime multilib toolchain-funcs virtualx
 
 DESCRIPTION="A highly customizable and functional document viewer"
@@ -14,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="+doc sqlite test"
 
-RDEPEND=">=dev-libs/girara-0.1.5:2
+RDEPEND=">=dev-libs/girara-0.1.6:2
 	dev-libs/glib:2
 	x11-libs/cairo
 	sqlite? ( dev-db/sqlite:3 )"
@@ -35,7 +36,7 @@ pkg_setup() {
 		SFLAGS=""
 		VERBOSE=1
 		DESTDIR="${D}"
-		)
+	)
 }
 
 src_compile() {

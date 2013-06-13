@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.42 2013/06/10 21:56:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.43 2013/06/13 22:17:00 voyageur Exp $
 
 EAPI=5
 
@@ -115,6 +115,9 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
 	else
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host,cpp"
+		if use video_cards_radeon; then
+			CONF_FLAGS="${CONF_FLAGS},r600"
+		fi
 	fi
 
 	if use amd64; then
@@ -134,10 +137,6 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
 	fi
 
-	if use video_cards_radeon; then
-		CONF_FLAGS="${CONF_FLAGS} --enable-experimental-targets=R600"
-	fi
-
 	if use libffi; then
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
@@ -154,7 +153,11 @@ src_compile() {
 	emake -C docs -f Makefile.sphinx man
 	use doc && emake -C docs -f Makefile.sphinx html
 
-	pax-mark m Release/bin/lli
+	if use debug; then
+		pax-mark m Debug+Asserts+Checks/bin/lli
+	else
+		pax-mark m Release/bin/lli
+	fi
 	if use test; then
 		pax-mark m unittests/ExecutionEngine/JIT/Release/JITTests
 		pax-mark m unittests/ExecutionEngine/MCJIT/Release/MCJITTests
