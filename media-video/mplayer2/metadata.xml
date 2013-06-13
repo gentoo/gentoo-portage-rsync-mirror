@@ -45,7 +45,6 @@
 	<flag name="quvi">Enable support for streaming sites using <pkg>media-libs/libquvi</pkg></flag>
 	<flag name="radio">Enable V4L2 radio interface and support</flag>
 	<flag name="rar">Enable Unique RAR File Library</flag>
-	<flag name="real">Adds real audo/video support</flag>
 	<flag name="rtc">Enables usage of the linux real time clock. The alternative is software emulation of rtc</flag>
 	<flag name="shm">Enable support for shm</flag>
 	<flag name="ssse3">Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>

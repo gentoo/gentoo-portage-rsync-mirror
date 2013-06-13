@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.68 2013/06/09 04:25:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.69 2013/06/13 17:21:28 nimiux Exp $
+
+  13 Jun 2013; Chema Alonso <nimiux@gentoo.org> nzbget-10.2.ebuild:
+  Stable for amd64 wrt bug #472708
 
 *nzbget-11.0_pre705 (09 Jun 2013)
 

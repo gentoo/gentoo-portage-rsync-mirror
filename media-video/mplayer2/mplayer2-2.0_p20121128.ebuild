@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20121128.ebuild,v 1.4 2013/05/16 19:14:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20121128.ebuild,v 1.5 2013/06/13 17:05:25 ulm Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ IUSE="+a52 +alsa aqua bluray bs2b cddb +cdio cpudetection debug
 directfb doc +dts +dv dvb +dvd +dvdnav +enca +faad fbcon ftp gif +iconv
 ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mad
 md5sum mng +mp3 +network nut +opengl oss png pnm portaudio +postproc
-pulseaudio pvr +quicktime quvi radio +rar +real +rtc samba sdl +speex tga
+pulseaudio pvr +quicktime quvi radio +rar +rtc samba sdl +speex tga
 +theora +unicode v4l vcd vdpau +vorbis +X xanim xinerama
 +xscreensaver +xv xvid yuv4mpeg
 "
@@ -314,25 +314,7 @@ src_configure() {
 	#################
 	# bug 213836
 	use quicktime || myconf+=" --disable-qtx"
-
-	######################
-	# RealPlayer support #
-	######################
-	# Realplayer support shows up in four places:
-	# - libavcodec (internal)
-	# - win32codecs
-	# - realcodecs (win32codecs libs)
-	# - realcodecs (realplayer libs)
-
-	# internal
-	use real || myconf+=" --disable-real"
-
-	# Real binary codec support only available on x86, amd64
-	if use real; then
-		use x86 && myconf+=" --codecsdir=/opt/RealPlayer/codecs"
-		use amd64 && myconf+=" --codecsdir=/usr/$(get_libdir)/codecs"
-	fi
-	myconf+=" --disable-win32dll"
+	myconf+=" --disable-win32dll --disable-real"
 
 	################
 	# Video Output #
@@ -431,10 +413,6 @@ src_install() {
 	dodoc DOCS/tech/{*.txt,mpsub.sub,playtree}
 	docinto TOOLS/
 	dodoc -r TOOLS
-	if use real; then
-		docinto tech/realcodecs/
-		dodoc DOCS/tech/realcodecs/*
-	fi
 
 	if use doc; then
 		docinto html/
