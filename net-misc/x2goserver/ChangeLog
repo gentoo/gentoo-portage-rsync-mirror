@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.24 2013/06/12 09:40:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.25 2013/06/13 08:12:45 voyageur Exp $
+
+*x2goserver-4.0.1.0 (13 Jun 2013)
+
+  13 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goserver-4.0.1.0.ebuild:
+  Version bump, mostly sessions handling and termination enhancements
 
   12 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org>
   -x2goserver-3.1.1.4-r1.ebuild, -x2goserver-3.1.1.9.ebuild,
