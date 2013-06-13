@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3_rc3.ebuild,v 1.1 2013/06/10 21:57:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3_rc3.ebuild,v 1.2 2013/06/13 21:23:28 voyageur Exp $
 
 EAPI=5
 
@@ -52,10 +52,11 @@ src_prepare() {
 	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#${EPREFIX}/usr/share/${PN}#" \
 		-i tools/clang/tools/scan-build/scan-build \
 		|| die "scan-build sed failed"
-	# Set correct path for gold plugin
+	# Set correct path for gold plugin and coverage lib
 	sed -e "/LLVMgold.so/s#lib/#$(get_libdir)/llvm/#" \
+		-e "s#lib\(/libprofile_rt.a\)#$(get_libdir)/llvm\1#" \
 		-i  tools/clang/lib/Driver/Tools.cpp \
-		|| die "gold plugin path sed failed"
+		|| die "Tools.cpp paths sed failed"
 
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
