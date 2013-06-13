@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/sgt-puzzles
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.15 2013/01/24 05:13:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.16 2013/06/13 04:12:11 mr_bones_ Exp $
+
+*sgt-puzzles-9861 (13 Jun 2013)
+
+  13 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/sgt-puzzles-9861-gentoo.patch, +sgt-puzzles-9861.ebuild:
+  version bump
 
   24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/sgt-puzzles-9023-gentoo.patch, -sgt-puzzles-9023.ebuild:
