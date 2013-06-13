@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.6.ebuild,v 1.4 2013/04/21 10:23:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.6.ebuild,v 1.5 2013/06/13 12:35:58 xmw Exp $
 
 EAPI="4"
 
@@ -78,7 +78,7 @@ RDEPEND="
 	iec61883? ( media-libs/libiec61883 sys-libs/libraw1394 sys-libs/libavc1394 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
+	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0 )
 	libass? ( media-libs/libass )
 	libcaca? ( media-libs/libcaca )
 	libv4l? ( media-libs/libv4l )

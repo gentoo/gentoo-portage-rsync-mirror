@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.16.ebuild,v 1.3 2012/11/29 18:05:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.16.ebuild,v 1.4 2013/06/13 12:45:59 xmw Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="doc examples fortran jasper jpeg2k netcdf openmp png python static-libs"
 DEPEND="
 	jpeg2k? (
 		jasper? ( media-libs/jasper )
-		!jasper? ( media-libs/openjpeg )
+		!jasper? ( media-libs/openjpeg:0 )
 	)
 	netcdf? ( sci-libs/netcdf )
 	png? ( media-libs/libpng )

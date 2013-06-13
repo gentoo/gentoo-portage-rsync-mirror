@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.103 2012/11/01 18:22:35 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.104 2013/06/13 12:42:25 xmw Exp $
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> gpac-0.4.5-r4.ebuild,
+  gpac-0.4.5-r5.ebuild, gpac-0.5.0.ebuild:
+  Depend on SLOT=0 of media-libs/openjpeg (bug 440086)
 
   01 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> gpac-0.5.0.ebuild:
   Fix CVS header. Closes bug #440814.

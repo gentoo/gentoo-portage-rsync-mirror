@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/perlbox-voice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.8 2013/06/07 14:13:13 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.9 2013/06/13 12:31:03 zlogene Exp $
+
+*perlbox-voice-0.09-r2 (13 Jun 2013)
+
+  13 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> +perlbox-voice-0.09-r2.ebuild:
+  bump to EAPI 5 (include fix for bug #305561)
 
   07 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> perlbox-voice-0.09-r1.ebuild:
   fix HOMEPAGE wrt bug #437002

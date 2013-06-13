@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/frozen-flask
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/frozen-flask/ChangeLog,v 1.5 2013/03/20 08:05:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/frozen-flask/ChangeLog,v 1.6 2013/06/13 12:34:21 idella4 Exp $
+
+*frozen-flask-0.9-r1 (13 Jun 2013)
+
+  13 Jun 2013; Ian Delaney <idella4@gentoo.org> +frozen-flask-0.9-r1.ebuild:
+  revbump; migrate -> disutils-r1, add doc build
 
 *frozen-flask-0.10 (20 Mar 2013)
 
