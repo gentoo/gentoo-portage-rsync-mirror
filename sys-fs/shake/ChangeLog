@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/shake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/ChangeLog,v 1.12 2013/03/22 17:20:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/ChangeLog,v 1.13 2013/06/13 01:37:59 creffett Exp $
+
+  13 Jun 2013; Chris Reffett <creffett@gentoo.org> -shake-0.31.ebuild:
+  Maintainer timeout, remove old wrt bug 460572.
 
   22 Mar 2013; Agostino Sarubbo <ago@gentoo.org> shake-0.999.ebuild:
   Stable for ppc, wrt bug #462256
