@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.83 2013/03/08 06:39:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.85 2013/06/13 11:38:35 graaff Exp $
+
+*haml-3.1.8-r1 (13 Jun 2013)
+
+  13 Jun 2013; Hans de Graaff <graaff@gentoo.org> files/haml-3.1.6-sass.patch,
+  +haml-3.1.8-r1.ebuild:
+  Revision bump to install a gem specification with the same version
+  requirement as the ebuild.
+
+  13 Jun 2013; Hans de Graaff <graaff@gentoo.org> -files/haml-3.1.4-sass.patch:
+  Cleanup.
 
 *haml-3.1.8 (08 Mar 2013)
 

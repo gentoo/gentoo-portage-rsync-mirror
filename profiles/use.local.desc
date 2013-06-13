@@ -4375,6 +4375,7 @@ net-irc/epic5:archive - Use app-arch/libarchive to use zip and tar archives from
 net-irc/epic5:valgrind - Compile against dev-util/valgrind headers to improve memory-leak checking when running epic5 under valgrind.
 net-irc/ezbounce:boost - Compile against dev-libs/boost libraries
 net-irc/hexchat:fastscroll - Make scrolling of large text buffers faster by circumventing some of pango's overhead
+net-irc/hexchat:libcanberra - Enable sound event support using media-libs/libcanberra
 net-irc/hexchat:libproxy - Enable proxy support.
 net-irc/hexchat:ntlm - Enable NTLM authentication
 net-irc/hexchat:plugin-checksum - Build Checksum plugin (needs plugins)
