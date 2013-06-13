@@ -10,5 +10,5 @@ RDEPEND=>=app-text/podofo-0.8.2:= >=app-text/poppler-0.12.3-r3:=[qt4,xpdf-header
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://sourceforge.net/projects/calibre/files/0.9.34/calibre-0.9.34.tar.xz
-_eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion-r1	5deec68e4713fd23ce30d4d9ed712908	eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=9b2e994699969cbd9c5eefbceba2fd26

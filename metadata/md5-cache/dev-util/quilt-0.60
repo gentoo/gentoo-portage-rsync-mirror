@@ -8,5 +8,5 @@ PDEPEND=emacs? ( app-emacs/quilt-el )
 RDEPEND=sys-apps/ed dev-util/diffstat graphviz? ( media-gfx/graphviz ) >=sys-apps/coreutils-8.5
 SLOT=0
 SRC_URI=http://savannah.nongnu.org/download/quilt/quilt-0.60.tar.gz
-_eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion-r1	5deec68e4713fd23ce30d4d9ed712908	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=bd172b0553d757a5a701237b2cfc66cb

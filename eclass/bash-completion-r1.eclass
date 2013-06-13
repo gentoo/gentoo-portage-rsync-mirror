@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.3 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.4 2013/06/13 16:23:56 mgorny Exp $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:
@@ -23,6 +23,25 @@ case ${EAPI:-0} in
 	*) die "EAPI ${EAPI} unsupported (yet)."
 esac
 
+# @FUNCTION: _bash-completion-r1_get_bashcompdir
+# @INTERNAL
+# @DESCRIPTION:
+# Get unprefixed bash-completion directory.
+_bash-completion-r1_get_bashcompdir() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	echo /usr/share/bash-completion
+}
+
+# @FUNCTION: get_bashcompdir
+# @DESCRIPTION:
+# Get the bash-completion directory.
+get_bashcompdir() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	echo "${EPREFIX}$(_bash-completion-r1_get_bashcompdir)"
+}
+
 # @FUNCTION: dobashcomp
 # @USAGE: file [...]
 # @DESCRIPTION:
@@ -32,7 +51,7 @@ dobashcomp() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	(
-		insinto /usr/share/bash-completion
+		insinto "$(_bash-completion-r1_get_bashcompdir)"
 		doins "${@}"
 	)
 }
@@ -46,7 +65,7 @@ newbashcomp() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	(
-		insinto /usr/share/bash-completion
+		insinto "$(_bash-completion-r1_get_bashcompdir)"
 		newins "${@}"
 	)
 }
