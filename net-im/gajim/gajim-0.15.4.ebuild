@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.4.ebuild,v 1.2 2013/05/29 11:19:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.4.ebuild,v 1.3 2013/06/13 05:51:09 jlec Exp $
 
 EAPI=5
 
@@ -20,12 +20,13 @@ SRC_URI="
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi crypt dbus gnome kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
+IUSE="avahi crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	libnotify? ( dbus )
-	avahi? ( dbus )"
+	avahi? ( dbus )
+	gnome? ( gnome-keyring )"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -50,8 +51,10 @@ RDEPEND="${COMMON_DEPEND}
 		)
 	gnome? (
 		dev-python/libgnome-python
-		dev-python/gnome-keyring-python
 		dev-python/egg-python
+		)
+	gnome-keyring? (
+		dev-python/gnome-keyring-python
 		)
 	idle? ( x11-libs/libXScrnSaver )
 	jingle? ( net-libs/farstream:0.1[python] )
