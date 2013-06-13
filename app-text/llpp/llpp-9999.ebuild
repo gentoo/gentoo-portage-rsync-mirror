@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.21 2013/06/13 08:56:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.22 2013/06/13 12:20:01 xmw Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS=""
 IUSE="+ocamlopt static"
 
 LIB_DEPEND=">=app-text/mupdf-9999:=[static-libs]
-	media-libs/openjpeg:0[static-libs]
+	media-libs/openjpeg:2[static-libs]
 	media-libs/freetype:2[static-libs]
 	media-libs/jbig2dec[static-libs]
 	sys-libs/zlib[static-libs]

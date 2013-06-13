@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1.ebuild,v 1.5 2013/05/10 07:36:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1.ebuild,v 1.6 2013/06/13 12:13:10 xmw Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2
 		 media-libs/fontconfig
 		 media-libs/freetype
 		 media-libs/libpng
-		 media-libs/openjpeg
+		 media-libs/openjpeg:0
 		 app-arch/bzip2
 		 dev-libs/expat
 		 dev-libs/libxml2

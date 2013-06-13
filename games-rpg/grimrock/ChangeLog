@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/grimrock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/ChangeLog,v 1.7 2013/06/02 18:53:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/ChangeLog,v 1.8 2013/06/13 12:24:24 xmw Exp $
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> grimrock-20130515.ebuild:
+  Depend on SLOT=0 of media-libs/openjpeg (bug 440086)
 
 *grimrock-20130515 (02 Jun 2013)
 

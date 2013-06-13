@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.1 2013/06/08 23:51:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.2 2013/06/13 12:16:29 xmw Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="!app-text/zathura-pdf-poppler
 	>=app-text/mupdf-9999:=
 	>=app-text/zathura-0.2.0
 	media-libs/jbig2dec
-	media-libs/openjpeg:0
+	media-libs/openjpeg:2
 	virtual/jpeg
 	cairo? ( x11-libs/cairo )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.06.ebuild,v 1.3 2013/05/02 02:03:32 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.06.ebuild,v 1.4 2013/06/13 12:19:14 xmw Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	dbus? ( sys-apps/dbus )
 	gtk? ( || ( x11-libs/gtk+:3 x11-libs/gtk+:2 ) )
 	idn? ( net-dns/libidn )
-	jpeg2k? ( >=media-libs/openjpeg-1.5.0 )
+	jpeg2k? ( >=media-libs/openjpeg-1.5.0:0 )
 	X? ( x11-libs/libXt x11-libs/libXext )"
 
 DEPEND="${COMMON_DEPEND}

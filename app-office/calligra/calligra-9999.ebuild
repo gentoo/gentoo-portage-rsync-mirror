@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.37 2013/05/30 11:56:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.38 2013/06/13 12:08:18 xmw Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -99,7 +99,7 @@ RDEPEND="
 	gsf? ( gnome-extra/libgsf )
 	gsl? ( sci-libs/gsl )
 	jpeg? ( virtual/jpeg )
-	jpeg2k? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg:0 )
 	kdcraw? ( $(add_kdebase_dep libkdcraw) )
 	kdepim? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop(+)') )
 	lcms? ( media-libs/lcms:2 )

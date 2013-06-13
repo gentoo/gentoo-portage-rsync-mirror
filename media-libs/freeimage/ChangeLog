@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeimage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.27 2013/05/28 15:32:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.28 2013/06/13 12:29:48 xmw Exp $
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> freeimage-3.15.3-r2.ebuild,
+  freeimage-3.15.3.ebuild, freeimage-3.15.4.ebuild:
+  Depend on SLOT=0 of media-libs/openjpeg (bug 440086)
 
   28 May 2013; Julian Ospald <hasufell@gentoo.org> freeimage-3.15.4.ebuild,
   +files/freeimage-3.15.4-raw.patch:

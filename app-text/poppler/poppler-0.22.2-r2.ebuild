@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.2-r2.ebuild,v 1.12 2013/04/02 13:21:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.2-r2.ebuild,v 1.13 2013/06/13 12:23:24 xmw Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ COMMON_DEPEND="
 	)
 	curl? ( net-misc/curl )
 	jpeg? ( virtual/jpeg )
-	jpeg2k? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg:0 )
 	lcms? ( media-libs/lcms:2 )
 	png? ( >=media-libs/libpng-1.4:0 )
 	qt4? (

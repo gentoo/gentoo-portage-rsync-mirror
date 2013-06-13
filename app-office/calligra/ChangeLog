@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.89 2013/06/06 23:06:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.90 2013/06/13 12:08:18 xmw Exp $
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> calligra-2.6.3.ebuild,
+  calligra-2.6.4.ebuild, calligra-9999.ebuild:
+  Depend on SLOT=0 of media-libs/openjpeg (bug 440086)
 
 *calligra-2.6.4 (06 Jun 2013)
 

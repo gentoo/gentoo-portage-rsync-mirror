@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.3 2013/05/28 15:32:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.4 2013/06/13 12:29:48 xmw Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ IUSE="jpeg jpeg2k mng openexr png raw static-libs tiff"
 # uses code from it to handle 16bit<->float conversions.
 RDEPEND="sys-libs/zlib
 	jpeg? ( virtual/jpeg )
-	jpeg2k? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg:0 )
 	mng? ( media-libs/libmng )
 	openexr? ( media-libs/openexr )
 	png? ( media-libs/libpng )

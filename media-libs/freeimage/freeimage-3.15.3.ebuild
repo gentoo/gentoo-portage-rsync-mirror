@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.3.ebuild,v 1.5 2012/07/24 11:50:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.3.ebuild,v 1.6 2013/06/13 12:29:47 xmw Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ RDEPEND="sys-libs/zlib
 	media-libs/libpng
 	media-libs/libmng
 	virtual/jpeg
-	media-libs/openjpeg
+	media-libs/openjpeg:0
 	media-libs/tiff
 	media-libs/libraw
 	media-libs/openexr"
