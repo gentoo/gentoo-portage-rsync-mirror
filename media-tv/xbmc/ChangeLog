@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.184 2013/05/24 14:05:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.185 2013/06/13 22:47:47 aballier Exp $
+
+*xbmc-12.2-r1 (13 Jun 2013)
+
+  13 Jun 2013; Alexis Ballier <aballier@gentoo.org> +xbmc-12.2-r1.ebuild:
+  Backport some FFmpeg related fixes from master.
+  Fixes bugs #466718, #463588 and should improve libav compatibility.
 
   24 May 2013; Alexis Ballier <aballier@gentoo.org> xbmc-9999.ebuild:
   Fix ffmpeg deps: upstream recommends ffmpeg so this one shall come first in

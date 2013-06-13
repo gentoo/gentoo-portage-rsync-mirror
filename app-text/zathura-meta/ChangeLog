@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.6 2013/01/27 22:00:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.7 2013/06/13 22:36:21 xmw Exp $
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Adding myself as maint.
 
   27 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> zathura-meta-0.ebuild:
   Use EAPI=5 to match app-text/zathura.
@@ -21,4 +24,3 @@
 
   17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +zathura-meta-0.ebuild:
   Initial commit.
-
