@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/sabnzbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.10 2013/03/08 02:46:45 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.11 2013/06/12 23:29:13 jsbronder Exp $
+
+*sabnzbd-0.7.12 (12 Jun 2013)
+
+  12 Jun 2013; Justin Bronder <jsbronder@gentoo.org> +sabnzbd-0.7.12.ebuild:
+  version bump
 
   08 Mar 2013; Justin Bronder <jsbronder@gentoo.org> files/sabnzbd.initd:
   Fix init.d stop(), re #459992
