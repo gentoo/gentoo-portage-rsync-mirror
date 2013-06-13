@@ -3665,7 +3665,6 @@ media-video/mplayer:pnm - Add PNM video output option, to create PPM/PGM/PGMYUV 
 media-video/mplayer:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mplayer:radio - Enable V4L2 radio interface and support
 media-video/mplayer:rar - Enable Unique RAR File Library
-media-video/mplayer:real - Adds Real audio/video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
 media-video/mplayer:rtmp - Enables RTMPDump Streaming Media support
 media-video/mplayer:shm - Enable support for shm

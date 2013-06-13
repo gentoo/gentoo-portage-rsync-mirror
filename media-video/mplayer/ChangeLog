@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.887 2013/06/13 12:44:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.888 2013/06/13 18:12:40 ulm Exp $
+
+  13 Jun 2013; Ulrich Müller <ulm@gentoo.org> mplayer-1.1-r1.ebuild,
+  mplayer-1.1.1.ebuild, metadata.xml:
+  Remove real USE flag, bug 473206.
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> mplayer-1.1-r1.ebuild,
   mplayer-1.1.1.ebuild, mplayer-9999.ebuild:

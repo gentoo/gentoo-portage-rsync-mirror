@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.551 2013/06/12 17:25:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.552 2013/06/13 18:24:24 ulm Exp $
+
+  13 Jun 2013; Ulrich Müller <ulm@gentoo.org> package.use.mask, use.mask:
+  Remove mask for real USE flag because the flag is gone, bug 473206.
 
   12 Jun 2013; Michael Palimaka <kensington@gentoo.org> package.use.mask:
   Remove obsolete kde-base/kdelibs USE mask.

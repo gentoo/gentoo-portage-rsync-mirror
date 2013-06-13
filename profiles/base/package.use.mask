@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.476 2013/06/12 17:25:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.477 2013/06/13 18:24:24 ulm Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -485,10 +485,6 @@ dev-java/ibm-jre-bin alsa
 # CPU opts: This needs amd64, x86 and ppc on some of them
 # dvdnav: hard masked dependency
 media-video/mplayer cpudetection custom-cpuopts bindist
-
-# Steve Dibb <beandog@gentoo.org> (26 Feb 2009)
-# Unmask internal real player codec support on newer mplayer
->=media-video/mplayer-1.0_rc2_p20090226 -real
 
 # Alexis Ballier <aballier@gentoo.org> <16 Feb 2011>
 # Win32 specific useflags for vlc. Can be used for cross-compiling.

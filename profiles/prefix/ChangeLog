@@ -1,6 +1,14 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.389 2013/06/06 01:53:17 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.390 2013/06/13 18:24:24 ulm Exp $
+
+  13 Jun 2013; Ulrich Müller <ulm@gentoo.org> darwin/macos/10.4/x86/use.mask,
+  darwin/macos/10.5/ppc/package.use.mask, darwin/macos/10.5/x64/use.mask,
+  darwin/macos/10.5/x86/use.mask, darwin/macos/10.6/x64/use.mask,
+  darwin/macos/10.6/x86/use.mask, darwin/macos/10.7/x64/use.mask,
+  darwin/macos/10.7/x86/use.mask, darwin/macos/10.8/x64/use.mask,
+  darwin/macos/10.8/x86/use.mask, darwin/package.use.mask:
+  Remove mask for real USE flag because the flag is gone, bug 473206.
 
   06 Jun 2013; Christoph Junghans <ottxor@gentoo.org>
   linux/amd64/make.defaults:
