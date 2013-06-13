@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/state_machine
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/state_machine/ChangeLog,v 1.1 2013/06/13 05:28:46 graaff Exp $
+
+*state_machine-1.2.0 (13 Jun 2013)
+
+  13 Jun 2013; Hans de Graaff <graaff@gentoo.org> +state_machine-1.2.0.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/adhearsion.
+
