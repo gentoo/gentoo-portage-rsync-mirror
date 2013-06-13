@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.26 2013/04/22 21:15:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.27 2013/06/13 07:02:17 tupone Exp $
+
+  13 Jun 2013; Alfredo Tupone <tupone@gentoo.org> geneweb-6.07.ebuild:
+  Using gentoo mirror instead of developer's area for SRC_URI
 
   22 Apr 2013; Zac Medico <zmedico@gentoo.org> geneweb-6.07.ebuild:
   Fix SRC_URI.
