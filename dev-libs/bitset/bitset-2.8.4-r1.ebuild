@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/bitset-2.8.4.ebuild,v 1.1 2013/06/13 00:50:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/bitset-2.8.4-r1.ebuild,v 1.1 2013/06/13 08:46:28 pinkbyte Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="jemalloc static-libs tcmalloc"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="tcmalloc? ( dev-util/google-perftools )
+RDEPEND="tcmalloc? ( dev-util/google-perftools:= )
 	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
 DEPEND="${RDEPEND}"
 
@@ -25,9 +25,12 @@ REQUIRED_USE="?? ( jemalloc tcmalloc )"
 DOCS=( README.md )
 
 src_configure() {
+	local tcmalloc_lib_name='tcmalloc'
+	has_version dev-util/google-perftools[minimal] && tcmalloc_lib_name='tcmalloc_minimal'
 	local myeconfargs=(
 		$(use_with jemalloc) \
-		$(use_with tcmalloc)
+		$(use_with tcmalloc) \
+		$(use_with tcmalloc tcmalloc-lib "${tcmalloc_lib_name}")
 	)
 	autotools-utils_src_configure
 }

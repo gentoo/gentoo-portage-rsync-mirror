@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.5 2013/06/11 09:00:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.6 2013/06/13 08:56:10 xmw Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs vcs-snapshot
+inherit eutils multilib toolchain-funcs vcs-snapshot
 
 DESCRIPTION="a graphical PDF viewer which aims to superficially resemble less(1)"
 HOMEPAGE="http://repo.or.cz/w/llpp.git"
@@ -26,7 +26,12 @@ LIB_DEPEND=">=app-text/mupdf-1.2:=[static-libs]
 RDEPEND="x11-misc/xsel
 	!static? ( ${LIB_DEPEND//\[static-libs]} )"
 DEPEND="${RDEPEND}
-	static? ( ${LIB_DEPEND} )
+	static? ( ${LIB_DEPEND}
+		app-arch/bzip2[static-libs]
+		media-libs/libXcm[static-libs]
+		x11-libs/libXau[static-libs]
+		x11-libs/libXdmcp[static-libs]
+		x11-libs/libXmu[static-libs] )
 	dev-lang/ocaml[ocamlopt?]
 	dev-ml/lablgl[glut,ocamlopt?]"
 
@@ -42,7 +47,20 @@ src_compile() {
 	local cma=$(usex ocamlopt cmxa cma)
 	local ccopt="$(freetype-config --cflags ) -O -include ft2build.h -D_GNU_SOURCE"
 	if use static ; then
-		local cclib="-Wl,-Bstatic $($(tc-getPKG_CONFIG) --libs --static mupdf x11 | sed 's: -l\(m\|pthread\) : :g') -Wl,-Bdynamic -lm -lpthread"
+		local cclib=""
+		local slib=""
+		local spath=( ${EROOT}usr/$(get_libdir) $($(tc-getPKG_CONFIG) --libs-only-L --static mupdf x11 | sed 's:-L::g') )
+		for slib in $($(tc-getPKG_CONFIG) --libs-only-l --static mupdf x11) -ljpeg -ljbig2dec ; do
+			case ${slib} in
+				-lm|-ldl|-lpthread)
+					einfo "${slib}: shared"
+					cclib+="${slib} " ;;
+				*)
+					local ccnew=$(find ${spath} -name "lib${slib/-l}.a")
+					einfo "${slib}: use ${ccnew}"
+					cclib+="${ccnew} " ;;
+			esac
+		done
 	else
 		local cclib="$($(tc-getPKG_CONFIG) --libs mupdf x11)"
 	fi

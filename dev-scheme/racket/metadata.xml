@@ -20,9 +20,6 @@ Whether you're just starting out, want to know more about programming language a
     <flag name='futures'> 
       Enable racket/future library for fine-grained hardware parallelism
     </flag>
-    <flag name='jit'>
-      Enable just-in-time compiler
-    </flag>  
     <flag name='places'> 
       Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
     </flag>

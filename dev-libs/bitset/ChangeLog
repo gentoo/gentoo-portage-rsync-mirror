@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/bitset
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/ChangeLog,v 1.7 2013/06/13 00:50:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bitset/ChangeLog,v 1.9 2013/06/13 08:46:28 pinkbyte Exp $
+
+*bitset-2.8.4-r1 (13 Jun 2013)
+
+  13 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -bitset-2.8.4.ebuild,
+  +bitset-2.8.4-r1.ebuild:
+  Use sub-slot for dev-util/google-perftools dependency, revbump for last
+  changes
+
+  13 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> bitset-2.8.3.ebuild,
+  bitset-2.8.4.ebuild:
+  Properly handle 'minimal' USE-flag for dev-util/google-perftools dependency
 
 *bitset-2.8.4 (13 Jun 2013)
 
