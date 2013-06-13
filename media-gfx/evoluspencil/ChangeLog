@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/evoluspencil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/evoluspencil/ChangeLog,v 1.2 2013/02/03 02:51:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/evoluspencil/ChangeLog,v 1.3 2013/06/13 11:13:23 kensington Exp $
+
+*evoluspencil-2.0.4 (13 Jun 2013)
+
+  13 Jun 2013; Michael Palimaka <kensington@gentoo.org>
+  +evoluspencil-2.0.4.ebuild, +files/evoluspencil-2.0.4-exportpng.patch,
+  +files/launcher:
+  Version bump. Add patch to fix exporting to PNG (bug #468888). Add custom
+  launcher to support firefox-bin (bug #468142).
 
   03 Feb 2013; Jeff Horelick <jdhore@gentoo.org> evoluspencil-2.0.3.ebuild:
   Marked ~x86 wrt bug #454494
