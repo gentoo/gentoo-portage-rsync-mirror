@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130428.ebuild,v 1.3 2013/06/13 17:05:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130428.ebuild,v 1.4 2013/06/13 19:32:28 ulm Exp $
 
 EAPI=5
 
@@ -22,14 +22,12 @@ LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+a52 +alsa aqua bluray bs2b cddb +cdio cpudetection debug
-directfb doc +dts +dv dvb +dvd +dvdnav +enca +faad fbcon ftp gif +iconv
-ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mad
-md5sum mng +mp3 +network nut +opengl oss png pnm portaudio +postproc
-pulseaudio pvr +quicktime quvi radio +rar +rtc samba sdl +speex tga
-+theora +unicode v4l vcd vdpau +vorbis +X xanim xinerama
-+xscreensaver +xv xvid yuv4mpeg
-"
+IUSE="+a52 +alsa aqua bluray bs2b cddb +cdio cpudetection debug directfb doc
++dts +dv dvb +dvd +dvdnav +enca +faad fbcon ftp gif +iconv ipv6 jack joystick
+jpeg kernel_linux ladspa lcms +libass libcaca lirc mad md5sum mng +mp3 +network
+nut +opengl oss png pnm portaudio +postproc pulseaudio pvr quvi radio +rar +rtc
+samba sdl +speex tga +theora +unicode v4l vcd vdpau +vorbis +X xanim xinerama
++xscreensaver +xv xvid yuv4mpeg"
 IUSE+=" symlink"
 
 CPU_FEATURES="3dnow 3dnowext altivec +mmx mmxext +shm sse sse2 ssse3"
@@ -309,9 +307,7 @@ src_configure() {
 	#################
 	# Binary codecs #
 	#################
-	# bug 213836
-	use quicktime || myconf+=" --disable-qtx"
-	myconf+=" --disable-win32dll --disable-real"
+	myconf+=" --disable-qtx --disable-real --disable-win32dll"
 
 	################
 	# Video Output #

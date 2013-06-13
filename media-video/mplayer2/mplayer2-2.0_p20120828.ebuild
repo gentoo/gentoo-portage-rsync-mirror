@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.17 2013/06/13 17:05:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.18 2013/06/13 19:32:28 ulm Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ IUSE="+a52 aalib +alsa aqua bidi bl bluray bs2b cddb +cdio
 	cpudetection debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad
 	fbcon ftp gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa
 	+libass libcaca lirc mad md5sum mng +mp3 nas +network nut +opengl oss png pnm
-	portaudio postproc pulseaudio pvr +quicktime quvi radio +rar +rtc samba
+	portaudio postproc pulseaudio pvr quvi radio +rar +rtc samba
 	sdl +speex tga +theora +truetype +unicode v4l vdpau +vorbis +X
 	xanim xinerama +xscreensaver +xv xvid"
 IUSE+=" symlink"
@@ -345,9 +345,7 @@ src_configure() {
 	#################
 	# Binary codecs #
 	#################
-	# bug 213836
-	use quicktime || myconf+=" --disable-qtx"
-	myconf+=" --disable-win32dll --disable-real"
+	myconf+=" --disable-qtx --disable-real --disable-win32dll"
 
 	################
 	# Video Output #

@@ -1,12 +1,14 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.97 2013/06/13 17:05:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.98 2013/06/13 19:32:28 ulm Exp $
 
-  13 Jun 2013; Ulrich Müller <ulm@gentoo.org> mplayer2-2.0_p20120309.ebuild,
-  mplayer2-2.0_p20120828.ebuild, mplayer2-2.0_p20121108.ebuild,
-  mplayer2-2.0_p20121128.ebuild, mplayer2-2.0_p20130126.ebuild,
-  mplayer2-2.0_p20130428.ebuild, mplayer2-9999.ebuild, metadata.xml:
-  Remove real USE flag, as discussed with nikoli, bug 473206.
+  13 Jun 2013; Ulrich Müller <ulm@gentoo.org> -mplayer2-2.0_p20120309.ebuild,
+  mplayer2-2.0_p20120828.ebuild, -mplayer2-2.0_p20121108.ebuild,
+  -mplayer2-2.0_p20121128.ebuild, mplayer2-2.0_p20130126.ebuild,
+  mplayer2-2.0_p20130428.ebuild, mplayer2-9999.ebuild,
+  -files/mplayer2-2.0_p20121128-cdio-api-fixes.patch, metadata.xml:
+  Remove real USE flag, as discussed with Nikoli, bug 473206.
+  Disable all binary codecs, remove old; proxy commit for Nikoli.
 
   16 May 2013; Ulrich Müller <ulm@gentoo.org> mplayer2-2.0_p20120309.ebuild,
   mplayer2-2.0_p20120828.ebuild, mplayer2-2.0_p20121108.ebuild,
