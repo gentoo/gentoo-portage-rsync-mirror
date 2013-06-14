@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.130 2013/06/13 12:35:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.131 2013/06/14 17:15:39 aballier Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ IUSE="
 	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k libass
 	libcaca libsoxr libv4l modplug mp3 network openal openssl opus oss pic
 	pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora threads
-	truetype twolame v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
+	truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -151,7 +151,7 @@ src_configure() {
 	if use encode
 	then
 		ffuse="${ffuse} aac:libvo-aacenc amr:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
-		for i in aacplus faac theora twolame x264 xvid; do
+		for i in aacplus faac theora twolame wavpack x264 xvid; do
 			ffuse="${ffuse} ${i}:lib${i}"
 		done
 

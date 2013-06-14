@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/stevedore-0.8-r1.ebuild,v 1.1 2013/04/19 07:39:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/stevedore-0.8-r1.ebuild,v 1.2 2013/06/14 17:21:43 idella4 Exp $
 
 EAPI=5
 
@@ -18,18 +18,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="${DEPEND}"
+DEPEND="<dev-python/setuptools-0.7[${PYTHON_USEDEP}]
+	test? ( dev-python/nose[${PYTHON_USEDEP}] )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+RDEPEND=""
 
 python_compile_all() {
 	use doc && emake -C docs html
 }
 
 python_test() {
-	nosetests || die
+	nosetests || die "Tests failed under ${EPYTHON}"
 }
 
 python_install_all() {
+	use doc && local HTML_DOCS=( docs/build/html/. )
 	distutils-r1_python_install_all
-	use doc && dohtml -r docs/build/html/
 }

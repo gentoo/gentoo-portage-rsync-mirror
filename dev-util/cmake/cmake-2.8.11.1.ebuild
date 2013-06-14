@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.11.1.ebuild,v 1.3 2013/06/11 20:21:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.11.1.ebuild,v 1.4 2013/06/14 17:17:22 kensington Exp $
 
 EAPI=5
 
@@ -94,9 +94,11 @@ cmake_src_bootstrap() {
 }
 
 cmake_src_test() {
-	# fix OutDir test
-	# this is altered thanks to our eclass
-	sed -i -e 's:#IGNORE ::g' "${S}"/Tests/OutDir/CMakeLists.txt || die
+	# fix OutDir and SelectLibraryConfigurations tests
+	# these are altered thanks to our eclass
+	sed -i -e 's:#IGNORE ::g' \
+		"${S}"/Tests/{OutDir,CMakeOnly/SelectLibraryConfigurations}/CMakeLists.txt \
+		|| die
 
 	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 
