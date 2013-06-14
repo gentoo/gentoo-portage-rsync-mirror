@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install prepare unpack
+DEFINED_PHASES=compile install postinst prepare unpack
 DEPEND=app-text/asciidoc virtual/pkgconfig sys-apps/systemd dev-vcs/git
 DESCRIPTION=Profile based network connection tool from Arch Linux
 EAPI=5
@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=>=app-shells/bash-4.0 >=net-dns/openresolv-3.5.4-r1 sys-apps/iproute2 sys-apps/systemd !<net-misc/dhcpcd-5.6.7
 SLOT=0
 _eclasses_=bash-completion-r1	5deec68e4713fd23ce30d4d9ed712908	git-2	e92e09651292b1bef5656592364550f7
-_md5_=d4f5d2bc46154e95956e311d9eb87fae
+_md5_=a02fe5f1db061ebedbf882351671a3d9

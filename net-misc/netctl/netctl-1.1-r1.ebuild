@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.1-r1.ebuild,v 1.4 2013/06/08 17:24:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.1-r1.ebuild,v 1.5 2013/06/14 00:00:09 floppym Exp $
 
 EAPI=5
 
@@ -48,4 +48,31 @@ src_install() {
 	newbashcomp contrib/bash-completion netctl
 	insinto /usr/share/zsh/site-functions
 	newins contrib/zsh-completion _netctl
+}
+
+optfeature() {
+	local desc=$1
+	shift
+	while (( $# )); do
+		if has_version "$1"; then
+			elog "  [I] $1 for ${desc}"
+		else
+			elog "  [ ] $1 for ${desc}"
+		fi
+		shift
+	done
+}
+
+pkg_postinst() {
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		elog "To get additional features, a number of option runtime dependencies may be"
+		elog "installed."
+		optfeature "DHCP support" net-misc/dhcpcd ">=net-misc/dhcp-5.6.7[client]"
+		optfeature "WPA support" net-wireless/wpa_supplicant
+		optfeature "interactive assistant" dev-util/dialog
+		optfeature "automatic connection" sys-apps/ifplugd
+		optfeature "bonding support" net-misc/ifenslave
+		optfeature "bridge support" net-misc/bridge-utils
+		optfeature "dialup support" net-dialup/ppp
+	fi
 }

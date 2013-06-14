@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install prepare
+DEFINED_PHASES=compile install postinst prepare
 DEPEND=virtual/pkgconfig sys-apps/systemd
 DESCRIPTION=Profile based network connection tool from Arch Linux
 EAPI=5
@@ -9,4 +9,4 @@ RDEPEND=>=app-shells/bash-4.0 >=net-dns/openresolv-3.5.4-r1 sys-apps/iproute2 sy
 SLOT=0
 SRC_URI=ftp://ftp.archlinux.org/other/packages/netctl/netctl-1.1.tar.xz
 _eclasses_=bash-completion-r1	5deec68e4713fd23ce30d4d9ed712908
-_md5_=f1c4c093b1f21b9af7e529ba0ca87b30
+_md5_=8edebc28285ae43a6b8dadc77d6b7b73
