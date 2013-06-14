@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.107 2013/04/22 10:17:08 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.108 2013/06/14 02:31:10 patrick Exp $
+
+  14 Jun 2013; Patrick Lauer <patrick@gentoo.org> clisp-2.49-r7.ebuild:
+  Removing alpha and ia64 keywords until dependency dev-lisp/asdf catches up
 
   22 Apr 2013; Panagiotis Christopoulos <pchrist@gentoo.org>
   files/clisp-2.48-bits_ipctypes_to_sys_ipc.patch:
@@ -642,4 +645,3 @@ User visible changes
   and can be changed at run time.
 
   Ebuild submitted by Cliff Crawford <cjc26@cornell.edu>.
-
