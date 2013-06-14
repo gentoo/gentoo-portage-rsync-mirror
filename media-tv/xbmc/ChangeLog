@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.185 2013/06/13 22:47:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.186 2013/06/14 16:36:35 aballier Exp $
+
+  14 Jun 2013; Alexis Ballier <aballier@gentoo.org> xbmc-9999.ebuild:
+  vdpau requires a recent ffmpeg version so depend on virtual/ffmpeg-9 in that
+  case
 
 *xbmc-12.2-r1 (13 Jun 2013)
 
