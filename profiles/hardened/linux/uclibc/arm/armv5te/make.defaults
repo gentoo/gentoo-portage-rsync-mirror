@@ -1,9 +1,0 @@
-# Copyright 1999-2012 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/arm/armv5te/make.defaults,v 1.2 2012/10/07 11:42:38 blueness Exp $
-
-CHOST="armv5tel-softfloat-linux-uclibc"
-CFLAGS="-O2 -pipe -march=armv5te"
-CXXFLAGS="${CFLAGS}"
-FFLAGS="${CFLAGS}"
-FCFLAGS="${CFLAGS}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-2.20.0.ebuild,v 1.4 2013/05/26 07:31:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-2.20.0.ebuild,v 1.5 2013/06/14 12:38:02 pinkbyte Exp $
 
 EAPI="5"
 
@@ -15,6 +15,7 @@ IUSE="examples"
 
 RDEPEND="app-text/dvipng
 	>=app-text/gnome-doc-utils-0.3.2
+	app-text/scrollkeeper
 	dev-libs/glib:2
 	dev-libs/libxml2:2
 	dev-libs/libxslt
