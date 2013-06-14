@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.9.0.ebuild,v 1.1 2013/04/29 20:20:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.4.49.ebuild,v 1.1 2013/06/14 06:55:44 jlec Exp $
 
 EAPI=5
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="31"
 K_DEBLOB_AVAILABLE="1"
 inherit kernel-2 eutils
 detect_version
 detect_arch
 
-AUFS_VERSION=3.x_p20130429
+AUFS_VERSION=3.4_p20130520
 AUFS_TARBALL="aufs-sources-${AUFS_VERSION}.tar.xz"
 # git archive -v --remote=git://git.code.sf.net/p/aufs/aufs3-standalone aufs3.9 > aufs-sources-${AUFS_VERSION}.tar
 AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
@@ -45,7 +45,7 @@ src_prepare() {
 		sed '/config AUFS_PROC_MAP/,/^$/d' -i "${WORKDIR}"/fs/aufs/Kconfig || die
 	fi
 	cp -i "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
-	cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
+	cp -i "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
 	cp -ri "${WORKDIR}"/{Documentation,fs} . || die
 }
 

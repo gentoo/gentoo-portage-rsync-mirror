@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/apertium
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/apertium/ChangeLog,v 1.6 2012/05/04 07:50:52 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/apertium/ChangeLog,v 1.7 2013/06/14 06:52:28 jlec Exp $
+
+  14 Jun 2013; Justin Lecher <jlec@gentoo.org> apertium-3.2.0.ebuild,
+  +files/apertium-3.2.0-libpcre.patch, metadata.xml:
+  Fix detection of libpcre, #440632
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> apertium-3.2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
