@@ -1,0 +1,15 @@
+patch for py2.5 failing over not being able to write to the system installed py2.5. 'build' sees it pass
+https://bitbucket.org/pypa/setuptools/issue/19/2-tests-fail-in-current-072
+diff -ur 
+setuptools-0.7.2.orig/setuptools/tests/test_easy_install.py setuptools-0.7.2/setuptools/tests/test_easy_install.py
+--- setuptools/tests/test_easy_install.py	2013-06-09 23:59:08.000000000 +0800
++++ setuptools/tests/test_easy_install.py	2013-06-13 22:48:54.036377152 +0800
+@@ -273,7 +273,7 @@
+         sys.stderr = StringIO.StringIO()
+         try:
+             reset_setup_stop_context(
+-                lambda: run_setup(test_setup_py, ['install'])
++                lambda: run_setup(test_setup_py, ['build'])
+             )
+         except SandboxViolation:
+             self.fail('Installation caused SandboxViolation')
