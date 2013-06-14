@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.359 2013/06/09 14:07:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.361 2013/06/14 15:08:54 robbat2 Exp $
+
+*genkernel-3.4.45.1 (14 Jun 2013)
+
+  14 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> +genkernel-3.4.45.1.ebuild:
+  Per bug #473202, backport some of the fixes for a quick stable: USB3 #458606,
+  #452888; RTC: #444932; Docs: #432956; switch_root: #422471; pax-utils-0.6
+  support for newer lddtree.
 
 *genkernel-3.4.47 (09 Jun 2013)
 
