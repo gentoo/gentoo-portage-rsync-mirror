@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.27 2013/05/10 05:43:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.28 2013/06/14 04:26:31 radhermit Exp $
+
+*libpipeline-1.2.4 (14 Jun 2013)
+
+  14 Jun 2013; Tim Harder <radhermit@gentoo.org> +libpipeline-1.2.4.ebuild:
+  Version bump.
 
 *libpipeline-1.2.3 (10 May 2013)
 
