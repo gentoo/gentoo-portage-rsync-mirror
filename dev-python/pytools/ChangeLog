@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.12 2013/06/03 07:51:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.13 2013/06/14 06:18:16 jlec Exp $
+
+*pytools-2013.5 (14 Jun 2013)
+
+  14 Jun 2013; Justin Lecher <jlec@gentoo.org> +pytools-2013.5.ebuild:
+  Version Bump, #472810
 
 *pytools-2013.2 (03 Jun 2013)
 
