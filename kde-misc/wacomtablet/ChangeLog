@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/wacomtablet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/ChangeLog,v 1.13 2013/06/11 20:19:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/ChangeLog,v 1.14 2013/06/14 21:19:06 creffett Exp $
+
+*wacomtablet-2.0 (14 Jun 2013)
+
+  14 Jun 2013; Chris Reffett <creffett@gentoo.org> +wacomtablet-2.0.ebuild:
+  Move latest from kde overlay wrt bug 473296.
 
   11 Jun 2013; Johannes Huber <johu@gentoo.org> -wacomtablet-1.3.6.ebuild:
   Remove old.

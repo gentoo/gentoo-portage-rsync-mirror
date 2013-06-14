@@ -10,5 +10,5 @@ RDEPEND=dev-python/dbus-python gtk? ( dev-python/pywebkitgtk ) qt4? ( dev-qt/qtw
 REQUIRED_USE=|| ( chrome gtk qt4 )
 SLOT=0
 SRC_URI=https://github.com/shellex/Hotot/tarball/f32d0fb4 -> hotot-0.9.8.11.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	7b98a49dffbb542252fe0051649e85b0	eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	66012c9c0ee3c91534d0eb257ff9b95c	eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=fa7d3f4eda37dde980b6120e8a406b66
