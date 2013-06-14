@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.7.6-r1.ebuild,v 1.1 2013/03/04 21:56:56 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.8.0-r2.ebuild,v 1.1 2013/06/14 22:11:19 prometheanfire Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils linux-info
 
@@ -17,32 +17,37 @@ KEYWORDS="~amd64 ~x86"
 IUSE="proxy account container object test +memcache"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( dev-python/nose
-				dev-python/coverage
+		test? ( dev-python/nose[${PYTHON_USEDEP}]
+				dev-python/coverage[${PYTHON_USEDEP}]
 				dev-python/nosexcover
-				dev-python/pep8
-				dev-python/mock
-				>=dev-python/sphinx-1.1.2 )"
+				dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
+				dev-python/nosehtmloutput[${PYTHON_USEDEP}]
+				=dev-python/pep8-1.3.3
+				>=dev-python/mock-0.8.0[${PYTHON_USEDEP}]
+				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}] )"
 
-RDEPEND="dev-python/eventlet
-		dev-python/greenlet
+RDEPEND="dev-python/eventlet[${PYTHON_USEDEP}]
+		dev-python/greenlet[${PYTHON_USEDEP}]
 		dev-python/netifaces
-		dev-python/pastedeploy
+		dev-python/pastedeploy[${PYTHON_USEDEP}]
 		dev-python/simplejson[${PYTHON_USEDEP}]
-		dev-python/pyxattr
-		dev-python/configobj
-		dev-python/webob
-		>=dev-python/webob-1.0.8
-		<dev-python/webob-1.3
-		>=dev-python/python-swiftclient-1.2.0
+		dev-python/pyxattr[${PYTHON_USEDEP}]
+		dev-python/configobj[${PYTHON_USEDEP}]
+		>=dev-python/webob-1.0.8[${PYTHON_USEDEP}]
+		<dev-python/webob-1.3[${PYTHON_USEDEP}]
+		dev-python/python-swiftclient[${PYTHON_USEDEP}]
 		memcache? ( net-misc/memcached )
-		net-misc/rsync"
+		net-misc/rsync[xattr]"
 
 REQUIRED_USE="|| ( proxy account container object )"
 
 CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 ~TMPFS_XATTR ~UBIFS_FS_XATTR ~EXT2_FS_XATTR ~REISERFS_FS_XATTR ~EXT4_FS_XATTR
 ~ZFS"
+
+PATCHES=(
+	"${FILESDIR}/CVE-2013-2161.patch"
+)
 
 src_test () {
 	sh .unittests || die
@@ -51,6 +56,12 @@ src_test () {
 pkg_setup() {
 	enewuser swift
 	enewgroup swift
+}
+
+src_prepare() {
+	sed -i 's/xattr/pyxattr/g' "${S}/swift.egg-info/requires.txt"
+	sed -i 's/xattr/pyxattr/g' "${S}/tools/pip-requires"
+	distutils-r1_python_prepare_all
 }
 
 python_install() {
