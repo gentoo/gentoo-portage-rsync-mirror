@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfuse/squashfuse-0.1_p20130530.ebuild,v 1.1 2013/06/14 08:23:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfuse/squashfuse-0.1_p20130530.ebuild,v 1.2 2013/06/14 09:20:10 zmedico Exp $
 
 EAPI=5
 inherit autotools
@@ -17,10 +17,10 @@ IUSE="lzma lzo +zlib"
 REQUIRED_USE="|| ( lzma zlib lzo )"
 
 COMMON_DEPEND="
-	>=sys-fs/fuse-2.8.6
-	lzma? ( >=app-arch/xz-utils-5.0.4 )
-	zlib? ( >=sys-libs/zlib-1.2.5-r2 )
-	lzo? ( >=dev-libs/lzo-2.06 )
+	>=sys-fs/fuse-2.8.6:=
+	lzma? ( >=app-arch/xz-utils-5.0.4:= )
+	zlib? ( >=sys-libs/zlib-1.2.5-r2:= )
+	lzo? ( >=dev-libs/lzo-2.06:= )
 "
 DEPEND="app-arch/unzip
 	${COMMON_DEPEND}"
