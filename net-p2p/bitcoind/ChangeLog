@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.65 2013/06/01 15:03:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.66 2013/06/14 18:49:59 blueness Exp $
+
+*bitcoind-0.8.2 (14 Jun 2013)
+
+  14 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +bitcoind-0.8.2.ebuild,
+  +files/0.8.2-sys_leveldb.patch:
+  Version bumps
 
   01 Jun 2013; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.8.1.ebuild:
   Force snappy off for leveldb since it may have security issues

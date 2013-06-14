@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.1.ebuild,v 1.4 2013/05/11 22:03:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.3.ebuild,v 1.1 2013/06/14 18:46:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,15 +8,15 @@ GNOME2_LA_PUNT="yes"
 
 inherit autotools bash-completion-r1 eutils gnome2
 
-DESCRIPTION="GNOME Virtual Filesystem Layer"
-HOMEPAGE="http://www.gnome.org"
+DESCRIPTION="Virtual filesystem implementation for gio"
+HOMEPAGE="https://git.gnome.org/browse/gvfs"
 
 LICENSE="LGPL-2+"
 SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
-IUSE="afp archive avahi bluetooth bluray cdda doc fuse gdu gnome-keyring gnome-online-accounts gphoto2 gtk +http mtp ios samba systemd +udev udisks"
+IUSE="afp archive avahi bluetooth bluray cdda fuse gdu gnome-keyring gnome-online-accounts gphoto2 gtk +http mtp ios samba systemd test +udev udisks"
 REQUIRED_USE="systemd? ( udisks )"
 
 # Can use libgphoto-2.5.0 as well. Automagic detection.
@@ -61,10 +61,17 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-util/gdbus-codegen
 	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1 )
+	test? (
+		>=dev-python/twisted-12.3.0
+		net-analyzer/netcat )
 	!udev? ( >=dev-libs/libgcrypt-1.2.2 )
 "
 # libgcrypt.m4, provided by libgcrypt, needed for eautoreconf, bug #399043
+# test dependencies needed per https://bugzilla.gnome.org/700162
+
+# Tests with multiple failures, this is being handled upstream at:
+# https://bugzilla.gnome.org/700162
+RESTRICT="test"
 
 REQUIRED_USE="cdda? ( udev )"
 

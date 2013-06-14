@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r1.ebuild,v 1.1 2013/06/11 10:57:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r1.ebuild,v 1.2 2013/06/14 18:57:27 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -129,6 +129,8 @@ src_prepare() {
 
 	# Re-lock the screen if we're restarted from a previously crashed shell (from 'master')
 	epatch "${FILESDIR}/${PN}-3.8.3-relock-screen.patch"
+
+	epatch_user
 
 	eautoreconf
 	gnome2_src_prepare

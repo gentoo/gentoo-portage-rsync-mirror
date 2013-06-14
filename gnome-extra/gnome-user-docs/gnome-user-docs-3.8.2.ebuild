@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-3.8.0.ebuild,v 1.1 2013/03/28 17:23:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-3.8.2.ebuild,v 1.1 2013/06/14 18:40:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome2
 
 DESCRIPTION="GNOME end user documentation"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://git.gnome.org/browse/gnome-user-docs"
 
 LICENSE="CC-BY-3.0"
 SLOT="0"
@@ -21,7 +21,8 @@ IUSE="test"
 RDEPEND=""
 DEPEND="test? (
 		>=app-text/gnome-doc-utils-0.20.5
-		dev-libs/libxml2 )"
+		dev-libs/libxml2 )
+"
 # eautoreconf requires:
 #	app-text/yelp-tools
 # rebuilding translations requires:

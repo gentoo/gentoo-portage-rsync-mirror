@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.39 2013/04/14 18:17:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.40 2013/06/14 18:37:53 blueness Exp $
+
+*bfgminer-3.0.3 (14 Jun 2013)
+*bfgminer-3.1.0 (14 Jun 2013)
+*bfgminer-2.10.9 (14 Jun 2013)
+
+  14 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +bfgminer-2.10.9.ebuild,
+  +bfgminer-3.0.3.ebuild, +bfgminer-3.1.0.ebuild:
+  Version bumps
 
   14 Apr 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix Manifest signing
