@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.62 2013/02/24 17:49:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.63 2013/06/14 05:16:16 idella4 Exp $
+
+  14 Jun 2013; Ian Delaney <idella4@gentoo.org> decorator-3.4.0-r1.ebuild:
+  Add, re-add py2.5 support
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> decorator-3.3.2.ebuild:
   Stable for sh, wrt bug #449426
