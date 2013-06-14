@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.33.ebuild,v 1.4 2013/06/09 03:25:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.35.ebuild,v 1.1 2013/06/14 07:53:44 zmedico Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ COMMON_DEPEND="
 	>=dev-python/cssselect-0.7.1
 	>=dev-python/cssutils-0.9.9
 	>=dev-python/dbus-python-0.82.2
-	dev-python/imaging
+	virtual/python-imaging
 	>=dev-python/lxml-2.2.1
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1
@@ -81,6 +81,10 @@ src_prepare() {
 	#sed -e "s#\\(^numeric_version =\\).*#\\1 (${PV//./, })#" \
 	#	-i src/calibre/constants.py || \
 	#	die "sed failed to patch constants.py"
+
+	# Fix deprecated pillow import (bug #471500).
+	sed -e 's:        import ImageFile:        from PIL import ImageFile:' \
+		-i src/calibre/ebooks/textile/functions.py || die
 
 	# Avoid sandbox violation in /usr/share/gnome/apps when linux.py
 	# calls xdg-* (bug #258938).
@@ -158,7 +162,6 @@ src_install() {
 		[[ -e ${x} ]] && addpredict ${x}
 	done
 
-	mkdir -p src/calibre/plugins
 	dodir "/usr/$(get_libdir)/python2.7/site-packages" # for init_calibre.py
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 	"${EPREFIX}"/usr/bin/python2.7 setup.py install \
