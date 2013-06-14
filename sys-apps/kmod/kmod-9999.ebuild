@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.54 2013/04/10 03:12:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.55 2013/06/14 21:59:30 williamh Exp $
 
 EAPI=5
 
@@ -64,6 +64,7 @@ src_configure()
 	econf \
 		--bindir=/bin \
 		--with-rootlibdir=/$(get_libdir) \
+		--enable-shared \
 		$(use_enable static-libs static) \
 		$(use_enable tools) \
 		$(use_enable debug) \
