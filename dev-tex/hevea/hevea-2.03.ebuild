@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-2.03.ebuild,v 1.5 2013/05/25 08:04:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-2.03.ebuild,v 1.6 2013/06/14 20:12:18 aballier Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 
 DEPEND=">=dev-lang/ocaml-3.12:=[ocamlopt?]"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-texlive/texlive-latexextra"
 
 src_compile() {
 	rm -f config.sh
