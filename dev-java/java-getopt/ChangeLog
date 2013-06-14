@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-getopt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.24 2013/02/05 06:32:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.25 2013/06/14 19:26:04 aballier Exp $
+
+  14 Jun 2013; Alexis Ballier <aballier@gentoo.org> java-getopt-1.0.13.ebuild:
+  keyword ~amd64-fbsd, bug #472010
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> java-getopt-1.0.13.ebuild:
   adding ~arm

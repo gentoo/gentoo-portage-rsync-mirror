@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.63 2013/06/01 15:04:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.64 2013/06/14 19:10:36 blueness Exp $
+
+*bitcoin-qt-0.8.2 (14 Jun 2013)
+
+  14 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +bitcoin-qt-0.8.2.ebuild,
+  +files/0.8.2-sys_leveldb.patch:
+  Version bump
 
   01 Jun 2013; Anthony G. Basile <blueness@gentoo.org> bitcoin-qt-0.8.1.ebuild:
   Force snappy off for leveldb since it may have security issues
