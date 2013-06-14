@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.888 2013/06/13 18:12:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.889 2013/06/14 00:06:19 aballier Exp $
+
+*mplayer-1.1.1-r1 (14 Jun 2013)
+
+  14 Jun 2013; Alexis Ballier <aballier@gentoo.org> +mplayer-1.1.1-r1.ebuild,
+  files/mplayer-1.1-libav-9.patch, +files/mplayer-1.1.1-avcodecidsubrip.patch,
+  +files/mplayer-1.1.1-codecidsubrip.patch:
+  Fix subtitles in mkv with recent ffmpeg, bug #463588. Also fix a wrong hunk
+  in the libav-9 patch.
 
   13 Jun 2013; Ulrich Müller <ulm@gentoo.org> mplayer-1.1-r1.ebuild,
   mplayer-1.1.1.ebuild, metadata.xml:

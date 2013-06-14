@@ -430,7 +430,7 @@ diff -urN MPlayer-1.1.orig//libmpdemux/demux_lavf.c MPlayer-1.1/libmpdemux/demux
                  type = 'p';
 -#if LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(54, 14, 100)
 -            else if(codec->codec_id == CODEC_ID_EIA_608)
-+#if 0 && LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(54, 14, 100)
++#if LIBAVUTIL_VERSION_MICRO >= 100 && LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(54, 14, 100)
 +            else if(codec->codec_id == AV_CODEC_ID_EIA_608)
                  type = 'c';
  #endif
