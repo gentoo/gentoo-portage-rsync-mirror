@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.33 2013/03/11 19:26:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.34 2013/06/14 08:13:25 maksbotan Exp $
 
 EAPI="4"
 
-LANGS="be bg cs de el en es fr hu it pl ru sk sr@latin uk"
+LANGS="be bg cs de el en es fr hu it pl pt_BR ru sk sr@latin uk"
 
 [[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
 inherit cmake-utils ${VCS_ECLASS}
@@ -14,7 +14,7 @@ HOMEPAGE="http://eiskaltdc.googlecode.com/"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-IUSE="cli daemon dbus +dht +emoticons examples -gnome -gtk idn -javascript json libcanberra libnotify lua +minimal pcre +qt4 sound spell sqlite upnp xmlrpc"
+IUSE="cli daemon dbus +dht +emoticons examples -gtk idn -javascript json libcanberra libnotify lua +minimal pcre +qt4 sound spell sqlite upnp -xmlrpc"
 for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"
 done
@@ -23,10 +23,9 @@ REQUIRED_USE="
 	cli? ( ^^ ( json xmlrpc ) )
 	emoticons? ( || ( gtk qt4 ) )
 	dbus? ( qt4 )
-	gnome? ( gtk )
 	javascript? ( qt4 )
 	json? ( !xmlrpc )
-	libcanberra? ( !gnome gtk )
+	libcanberra? ( gtk )
 	libnotify? ( gtk )
 	spell? ( qt4 )
 	sound? ( || ( gtk qt4 ) )
@@ -58,8 +57,8 @@ RDEPEND="
 		perl-core/Getopt-Long
 		dev-perl/Data-Dump
 		dev-perl/Term-ShellUI
-		json? ( dev-perl/JSON-RPC dev-perl/Data-Dump )
-		xmlrpc? (  dev-perl/RPC-XML )
+		json? ( dev-perl/JSON-RPC )
+		xmlrpc? ( dev-perl/RPC-XML )
 	)
 	daemon? ( xmlrpc? ( >=dev-libs/xmlrpc-c-1.19.0[abyss,cxx] ) )
 	gtk? (
@@ -67,7 +66,6 @@ RDEPEND="
 		x11-libs/gtk+:3
 		>=dev-libs/glib-2.24:2
 		x11-themes/hicolor-icon-theme
-		gnome? ( gnome-base/libgnome )
 		libcanberra? ( media-libs/libcanberra )
 		libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	)
@@ -106,6 +104,7 @@ src_configure() {
 		-Dlinguas="${langs}"
 		-DLOCAL_MINIUPNP=OFF
 		-DUSE_GTK=OFF
+		-DUSE_LIBGNOME2=OFF
 		"$(use cli && cmake-utils_use json USE_CLI_JSONRPC)"
 		"$(use cli && cmake-utils_use xmlrpc USE_CLI_XMLRPC)"
 		"$(cmake-utils_use daemon NO_UI_DAEMON)"
@@ -115,7 +114,6 @@ src_configure() {
 		"$(cmake-utils_use dht WITH_DHT)"
 		"$(cmake-utils_use emoticons WITH_EMOTICONS)"
 		"$(cmake-utils_use examples WITH_EXAMPLES)"
-		"$(cmake-utils_use gnome USE_LIBGNOME2)"
 		"$(cmake-utils_use gtk USE_GTK3)"
 		"$(cmake-utils_use idn USE_IDNA)"
 		"$(cmake-utils_use javascript USE_JS)"

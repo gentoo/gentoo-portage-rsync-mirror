@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.67 2013/02/21 10:28:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.68 2013/06/14 08:17:33 klausman Exp $
+
+  14 Jun 2013; Tobias Klausmann <klausman@gentoo.org> jfsutils-1.1.15.ebuild:
+  Make jfsutils-1.1.15 stable on alpha (bug 473238)
 
   21 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/jfsutils-1.1.15-linux-headers.patch, jfsutils-1.1.15.ebuild:
