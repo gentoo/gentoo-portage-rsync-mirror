@@ -1,0 +1,12 @@
+diff -urNp gnutls-2.12.23/gl/tests/test-fcntl-h.c gnutls-2.12.23.new/gl/tests/test-fcntl-h.c
+--- gnutls-2.12.23/gl/tests/test-fcntl-h.c	2012-11-11 05:16:55.000000000 +0200
++++ gnutls-2.12.23.new/gl/tests/test-fcntl-h.c	2013-06-16 01:31:28.315827891 +0300
+@@ -111,7 +111,7 @@ main (void)
+ #if O_RSYNC && O_RSYNC != O_DSYNC
+     case O_RSYNC:
+ #endif
+-#if O_SYNC && O_SYNC != O_RSYNC
++#if O_SYNC && O_SYNC != O_RSYNC && O_SYNC != O_DSYNC
+     case O_SYNC:
+ #endif
+ #if O_TTY_INIT

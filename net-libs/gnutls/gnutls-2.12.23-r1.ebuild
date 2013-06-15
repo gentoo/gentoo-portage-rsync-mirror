@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r1.ebuild,v 1.12 2013/06/11 11:05:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r1.ebuild,v 1.13 2013/06/15 22:37:41 alonbl Exp $
 
 EAPI=5
 
@@ -58,6 +58,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.12.20-libadd.patch
 	epatch "${FILESDIR}"/${PN}-2.12.20-guile-parallelmake.patch
 	epatch "${FILESDIR}"/${PN}-2.12.23-CVE-2013-2116.patch
+	epatch "${FILESDIR}"/${PN}-2.12.23-hppa.patch
 
 	# support user patches
 	epatch_user
