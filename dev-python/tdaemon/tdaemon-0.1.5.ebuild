@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tdaemon/tdaemon-0.1.4.ebuild,v 1.1 2013/06/13 08:14:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tdaemon/tdaemon-0.1.5.ebuild,v 1.1 2013/06/15 00:09:49 tampakrap Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
