@@ -3221,7 +3221,6 @@ media-sound/audacity:sbsms - Enables sbsms library support for pitch and tempo c
 media-sound/audacity:soundtouch - Enables soundtouch library support for pitch and tempo changing
 media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
 media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
-media-sound/banshee:boo - Use external Boo instead of the bundled one
 media-sound/banshee:bpm - Build beats per minute detection extension
 media-sound/banshee:cdda - Build with audio CD support
 media-sound/banshee:daap - Build with Daap support

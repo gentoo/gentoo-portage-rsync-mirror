@@ -4,7 +4,6 @@
 <herd>dotnet</herd>
 <herd>gstreamer</herd>
 <use>
-	<flag name="boo">Use external Boo instead of the bundled one</flag>
 	<flag name="bpm">Build beats per minute detection extension</flag>
 	<flag name="cdda">Build with audio CD support</flag>
 	<flag name="daap">Build with Daap support</flag>

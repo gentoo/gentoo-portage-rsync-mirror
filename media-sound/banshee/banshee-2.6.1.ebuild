@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.1.ebuild,v 1.1 2013/04/17 17:09:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.1.ebuild,v 1.2 2013/06/15 20:17:59 pacho Exp $
 
 EAPI=5
 inherit eutils autotools mono gnome2-utils fdo-mime versionator gnome.org
@@ -11,7 +11,7 @@ HOMEPAGE="http://banshee.fm/"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +cdda +bpm boo daap doc +encode ipod karma mtp test udev +web youtube"
+IUSE="+aac +cdda +bpm daap doc +encode ipod karma mtp test udev +web youtube"
 
 RDEPEND="
 	>=dev-lang/mono-2.4.3
@@ -42,7 +42,6 @@ RDEPEND="
 	>=dev-db/sqlite-3.4:3
 	karma? ( >=media-libs/libkarma-0.1.0-r1 )
 	aac? ( media-plugins/gst-plugins-faad:0.10 )
-	boo? ( >=dev-lang/boo-0.8.1 )
 	bpm? ( media-plugins/gst-plugins-soundtouch:0.10 )
 	daap? (	>=dev-dotnet/mono-zeroconf-0.8.0-r1 )
 	doc? (
@@ -102,6 +101,7 @@ src_configure() {
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--enable-gapless-playback
+		--disable-boo
 		--disable-gst-sharp
 		--disable-torrent
 		--disable-shave
@@ -112,7 +112,6 @@ src_configure() {
 	econf \
 		$(use_enable doc docs) \
 		$(use_enable doc user-help) \
-		$(use_enable boo) \
 		$(use_enable mtp) \
 		$(use_enable daap) \
 		$(use_enable ipod appledevice) \

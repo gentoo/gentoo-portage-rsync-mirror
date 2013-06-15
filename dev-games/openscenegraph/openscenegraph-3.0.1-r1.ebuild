@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1-r1.ebuild,v 1.3 2013/03/02 19:52:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1-r1.ebuild,v 1.4 2013/06/15 20:09:37 pacho Exp $
 
 EAPI=3
 
@@ -50,12 +50,7 @@ RDEPEND="
 		media-libs/ilmbase
 		media-libs/openexr
 	)
-	openinventor? (
-		|| (
-			media-libs/coin
-			media-libs/openinventor
-		)
-	)
+	openinventor? ( media-libs/coin )
 	pdf? ( app-text/poppler[cairo] )
 	png? ( media-libs/libpng:0 )
 	svg? (
