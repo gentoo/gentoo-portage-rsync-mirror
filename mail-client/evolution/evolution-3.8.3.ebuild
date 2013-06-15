@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.1.ebuild,v 1.1 2013/04/14 19:01:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.3.ebuild,v 1.1 2013/06/15 06:53:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils flag-o-matic readme.gentoo gnome2
+inherit libtool eutils flag-o-matic readme.gentoo gnome2
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="https://live.gnome.org/Evolution http://projects.gnome.org/evolution/"
@@ -67,12 +67,14 @@ COMMON_DEPEND="
 	ssl? (
 		>=dev-libs/nspr-4.6.1:=
 		>=dev-libs/nss-3.11:= )
-	weather? ( >=dev-libs/libgweather-3.5.0:2= )"
+	weather? ( >=dev-libs/libgweather-3.5.0:2= )
+"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40.0
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 # eautoreconf needs:
 #	app-text/yelp-tools
 #	>=gnome-base/gnome-common-2.12
@@ -80,7 +82,8 @@ RDEPEND="${COMMON_DEPEND}
 	bogofilter? ( mail-filter/bogofilter )
 	highlight? ( app-text/highlight )
 	spamassassin? ( mail-filter/spamassassin )
-	!<gnome-extra/evolution-exchange-2.32"
+	!<gnome-extra/evolution-exchange-2.32
+"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="To change the default browser if you are not using GNOME, edit
@@ -97,6 +100,8 @@ file from /usr/share/applications if you use a different browser)."
 src_prepare() {
 	ELTCONF="--reverse-deps"
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
+
+	elibtoolize # See https://bugzilla.gnome.org/701904
 
 	gnome2_src_prepare
 
