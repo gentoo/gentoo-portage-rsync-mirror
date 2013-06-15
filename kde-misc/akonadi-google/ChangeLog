@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/akonadi-google
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.14 2013/05/30 11:43:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.16 2013/06/15 13:14:38 dilfridge Exp $
+
+  15 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -akonadi-google-0.3.1.ebuild:
+  Remove old
+
+  15 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  akonadi-google-20120619.ebuild:
+  We do not need the oldpim useflag since the interface is part of kdepimlibs
 
   30 May 2013; Michael Palimaka <kensington@gentoo.org>
   akonadi-google-0.3.1.ebuild, akonadi-google-20120619.ebuild:
