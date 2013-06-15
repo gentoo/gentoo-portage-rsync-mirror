@@ -14,7 +14,6 @@ http://bugs.ghostscript.com/show_bug.cgi?id=693518
 -Requires.private: freetype2
 +Requires: freetype2 libopenjp2 libcrypto
  Version: 0.5.0
--Libs: -L${libdir} -lmupdf
-+Libs: -L${libdir} -lfitz -ljpeg -ljbig2dec
+ Libs: -L${libdir} -lmupdf
 -Libs.private: -lopenjpeg -ljbig2dec -ljpeg -lz -lm
  Cflags: -I${includedir}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.34 2013/06/12 14:30:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.35 2013/06/15 01:18:55 xmw Exp $
 
 EAPI=5
 
@@ -76,17 +76,17 @@ src_prepare() {
 			-i "${S}"-static/Makerules || die
 	fi
 
-	my_soname=libfitz.so.1.2
-	sed -e "\$a\$(FITZ_LIB):" \
+	my_soname=libmupdf.so.1.2
+	sed -e "\$a\$(MUPDF_LIB):" \
 		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname} -Wl,--no-undefined -o \$@ \$^ \$(LIBS)" \
-		-e "/^FITZ_LIB :=/s:=.*:= build/debug/${my_soname}:" \
+		-e "/^MUPDF_LIB :=/s:=.*:= build/debug/${my_soname}:" \
 		-i Makefile || die
 }
 
 src_compile() {
 	emake XCFLAGS="-fpic"
 	use static-libs && \
-		emake -C "${S}"-static build/debug/libfitz.a
+		emake -C "${S}"-static build/debug/libmupdf.a
 	use static && \
 		emake -C "${S}"-static XLIBS="-static"
 }
@@ -100,10 +100,10 @@ src_install() {
 	fi
 
 	emake install
-	dosym ${my_soname} /usr/$(get_libdir)/libfitz.so
+	dosym ${my_soname} /usr/$(get_libdir)/libmupdf.so
 
 	use static-libs && \
-		dolib.a "${S}"-static/build/debug/libfitz.a
+		dolib.a "${S}"-static/build/debug/libmupdf.a
 	if use static ; then
 		dobin "${S}"-static/build/debug/mu{tool,draw}
 		use X && dobin "${S}"-static/build/debug/mupdf
