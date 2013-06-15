@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/pambase
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.112 2012/06/19 07:55:53 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.113 2013/06/15 21:08:49 johu Exp $
+
+*pambase-20120417-r2 (15 Jun 2013)
+
+  15 Jun 2013; Johannes Huber <johu@gentoo.org>
+  +files/pambase-20120417-lastlog-silent.patch, +pambase-20120417-r2.ebuild:
+  Revision bump adds patch to make lastlog messages silent by Dennis Schridde
+  <devurandom@gmx.net> wrt bug #468798. Acked by Diego Elio Pettenò
+  <flameeyes@gentoo.org> on irc.
 
 *pambase-20120417-r1 (19 Jun 2012)
 
@@ -490,4 +498,3 @@
   +pambase-20080219.ebuild:
   Initial import, pambase package provides the basic configuration files for
   PAM (either Linux-PAM or OpenPAM).
-
