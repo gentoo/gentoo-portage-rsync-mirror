@@ -1,6 +1,11 @@
 # ChangeLog for app-text/unrtf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.41 2011/12/20 04:16:22 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.42 2013/06/15 11:59:13 grobian Exp $
+
+*unrtf-0.21.2-r1 (15 Jun 2013)
+
+  15 Jun 2013; Fabian Groffen <grobian@gentoo.org> +unrtf-0.21.2-r1.ebuild:
+  Fix for Prefix, bug #470064
 
 *unrtf-0.21.2 (20 Dec 2011)
 
@@ -142,4 +147,3 @@
   11 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> unrtf-0.18.1.ebuild:
   initial commit. ebuild and gcc3.3 patch written by robbat2@gentoo.org. patch
   passed upstream.
-

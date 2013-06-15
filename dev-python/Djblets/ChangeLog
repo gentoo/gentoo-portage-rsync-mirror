@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/Djblets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.17 2013/06/09 16:59:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.19 2013/06/15 11:48:24 idella4 Exp $
+
+*Djblets-0.7.15 (15 Jun 2013)
+
+  15 Jun 2013; Ian Delaney <idella4@gentoo.org> +Djblets-0.7.15.ebuild,
+  +files/exclude-tests.patch, Djblets-0.6.22.ebuild, Djblets-0.7.14.ebuild:
+  revbump, migrate -> distutils-r1, bump, patch to exclude tests from install,
+  add all req'd deps, closes Bug No.s 470990 473088"
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> Djblets-0.6.22.ebuild,
   Djblets-0.7.14.ebuild:
