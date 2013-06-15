@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14828 2013/06/14 06:24:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14829 2013/06/15 09:33:26 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (15 Jun 2013)
+# masked for testing
+=sys-fs/s3ql-2*
 
 # Michael Weber <xmw@gentoo.org> (12 Jun 2013)
 # Twitter API 1.0 was turned off, rendering this versions useless.
