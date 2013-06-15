@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.6 2013/05/21 07:29:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.7 2013/06/15 08:17:57 scarabeus Exp $
 
 EAPI=5
 
@@ -87,7 +87,7 @@ RDEPEND+="
 	wayland? (
 		>=dev-libs/wayland-1.0.0
 		media-libs/mesa[egl,wayland]
-		>=x11-libs/libxkbcommon-0.2.0
+		>=x11-libs/libxkbcommon-0.3.0
 	)
 	>=virtual/ffmpeg-9[encode?]
 "
