@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.7.0.ebuild,v 1.1 2013/06/14 15:16:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.7.0.ebuild,v 1.2 2013/06/15 19:50:42 hasufell Exp $
 
 EAPI=5
 inherit eutils check-reqs games
@@ -77,13 +77,16 @@ src_prepare() {
 
 src_compile() {
 	local t="$(use debug && echo debug || echo release)"
+	local i
 
-	emake \
-		-C source/darkplaces \
-		DP_LINK_TO_LIBJPEG=1 \
-		DP_FS_BASEDIR="${GAMES_DATADIR}/${PN}" \
-		sv-${t} \
-		$(use !dedicated && echo "cl-${t} $(use sdl && echo sdl-${t})")
+	# use a for-loop wrt bug 473352
+	for i in sv-${t} $(use !dedicated && echo "cl-${t} $(use sdl && echo sdl-${t})") ; do
+		emake \
+			-C source/darkplaces \
+			DP_LINK_TO_LIBJPEG=1 \
+			DP_FS_BASEDIR="${GAMES_DATADIR}/${PN}" \
+			${i}
+	done
 }
 
 src_install() {

@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.72 2013/06/03 21:20:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.73 2013/06/15 19:53:19 blueness Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
 # Keep it sorted.
 
 af - Afrikaans locale
+af_ZA - Afrikaans locale for South Africa
 ak - Akan locale
 am - Amharic locale
 ar - Arabic locale
@@ -121,6 +122,7 @@ lo - Lao locale
 lt - Lithuanian locale
 lt_LT - Lithuanian locale
 lv - Latvian locale
+lv_LV - Latvian locale for Latvia
 mai - Maithili locale
 me - Montenegrin (Crnogorski) locale
 mk - Macedonian locale
@@ -205,6 +207,7 @@ te - Telugu locale
 te_IN - Telugu locale for India
 tg - Tajik locale
 th - Thai locale
+th_TH - Thai locale Thailand
 ti - Tigrinya locale
 ti_ER - Tigrinya locale for Eritrea
 tk - Turkmen locale
