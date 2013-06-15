@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/iroffer-dinoex-3.29.ebuild,v 1.2 2013/06/15 19:37:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/iroffer-dinoex-3.29.ebuild,v 1.3 2013/06/15 21:51:46 zlogene Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://iroffer.dinoex.net/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+admin +blowfish +chroot curl debug geoip gnutls +http kqueue +memsave ruby ssl +telnet upnp"
 
 REQUIRED_USE="

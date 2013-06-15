@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.3.ebuild,v 1.1 2013/06/15 06:53:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.3.ebuild,v 1.2 2013/06/15 21:34:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit libtool eutils flag-o-matic readme.gentoo gnome2
+inherit autotools eutils flag-o-matic readme.gentoo gnome2
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="https://live.gnome.org/Evolution http://projects.gnome.org/evolution/"
@@ -101,7 +101,7 @@ src_prepare() {
 	ELTCONF="--reverse-deps"
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 
-	elibtoolize # See https://bugzilla.gnome.org/701904
+	eautoreconf # See https://bugzilla.gnome.org/701904
 
 	gnome2_src_prepare
 
