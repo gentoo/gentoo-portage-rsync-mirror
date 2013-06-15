@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.467 2013/06/15 03:51:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.468 2013/06/15 12:35:57 tetromino Exp $
+
+  15 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.6_rc2.ebuild,
+  wine-9999.ebuild, metadata.xml:
+  Rename mime-handler USE flag to run-exes in order to be more clear about its
+  effects.
 
 *wine-1.6_rc2 (15 Jun 2013)
 
