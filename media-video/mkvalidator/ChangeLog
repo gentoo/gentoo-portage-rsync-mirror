@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mkvalidator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvalidator/ChangeLog,v 1.7 2012/09/25 10:54:11 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvalidator/ChangeLog,v 1.8 2013/06/15 10:40:32 radhermit Exp $
+
+*mkvalidator-0.4.2 (15 Jun 2013)
+
+  15 Jun 2013; Tim Harder <radhermit@gentoo.org> +mkvalidator-0.4.2.ebuild:
+  Version bump.
 
   25 Sep 2012; Tim Harder <radhermit@gentoo.org> mkvalidator-0.4.1.ebuild:
   Die on sed failure too.
