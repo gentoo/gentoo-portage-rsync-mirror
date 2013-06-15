@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.131 2013/06/14 17:15:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.132 2013/06/15 15:49:12 aballier Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
-	aac aacplus alsa amr bindist bluray +bzip2 cdio celt
+	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k libass
 	libcaca libsoxr libv4l modplug mp3 network openal openssl opus oss pic
@@ -61,7 +61,7 @@ RDEPEND="
 	encode? (
 		aac? ( media-libs/vo-aacenc )
 		aacplus? ( media-libs/libaacplus )
-		amr? ( media-libs/vo-amrwbenc )
+		amrenc? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
 		fdk? ( media-libs/fdk-aac )
 		mp3? ( >=media-sound/lame-3.98.3 )
@@ -150,13 +150,13 @@ src_configure() {
 	# Encoders
 	if use encode
 	then
-		ffuse="${ffuse} aac:libvo-aacenc amr:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
+		ffuse="${ffuse} aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
 		for i in aacplus faac theora twolame wavpack x264 xvid; do
 			ffuse="${ffuse} ${i}:lib${i}"
 		done
 
 		# Licensing.
-		if use aac || use amr ; then
+		if use aac || use amrenc ; then
 			myconf="${myconf} --enable-version3"
 		fi
 		if use aacplus || use faac || use fdk ; then

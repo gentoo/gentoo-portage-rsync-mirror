@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.107 2013/06/14 18:28:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.108 2013/06/15 15:54:48 jer Exp $
+
+  15 Jun 2013; Jeroen Roovers <jer@gentoo.org> -fail2ban-0.8.8.ebuild,
+  -files/fail2ban-logrotate:
+  Old.
 
   14 Jun 2013; Agostino Sarubbo <ago@gentoo.org> fail2ban-0.8.10.ebuild:
   Stable for ppc64, wrt bug #473118

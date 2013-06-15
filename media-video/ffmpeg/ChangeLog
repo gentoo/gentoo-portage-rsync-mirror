@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.654 2013/06/14 17:15:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.655 2013/06/15 15:49:12 aballier Exp $
+
+  15 Jun 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add amrenc useflag to have a more finegrained control, bug #473284
 
   14 Jun 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   add wavpack useflag
