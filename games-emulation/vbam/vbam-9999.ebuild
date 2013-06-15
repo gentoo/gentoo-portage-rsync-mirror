@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.4 2013/01/25 22:48:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.5 2013/06/15 09:26:01 radhermit Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -36,6 +36,7 @@ RDEPEND=">=media-libs/libpng-1.4
 		x11-libs/wxGTK:2.8[X,opengl]
 	)"
 DEPEND="${RDEPEND}
+	wxwidgets? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
 	x86? ( || ( dev-lang/nasm dev-lang/yasm ) )
 	nls? ( sys-devel/gettext )
 	virtual/pkgconfig"
