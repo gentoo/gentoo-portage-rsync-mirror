@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=dev-libs/glib:2 dev-libs/libxdg-basedir sys-apps/dbus x11-libs/libXScrnSaver x11-libs/libXft x11-libs/libXinerama x11-libs/cairo[X,glib] x11-libs/pango[X] dev-lang/perl virtual/pkgconfig
+DESCRIPTION=customizable and lightweight notification-daemon
+EAPI=5
+HOMEPAGE=http://www.knopwob.org/dunst/
+IUSE=dunstify
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=dev-libs/glib:2 dev-libs/libxdg-basedir sys-apps/dbus x11-libs/libXScrnSaver x11-libs/libXft x11-libs/libXinerama x11-libs/cairo[X,glib] x11-libs/pango[X]
+SLOT=0
+SRC_URI=http://www.knopwob.org/public/dunst-release/dunst-1.0.0.tar.bz2
+_md5_=b4fbdeb7f2833b56d9e146c8bc830880
