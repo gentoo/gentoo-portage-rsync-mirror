@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.187 2013/06/14 03:34:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.189 2013/06/15 00:44:05 floppym Exp $
+
+*setuptools-0.7.2-r1 (15 Jun 2013)
+
+  15 Jun 2013; Mike Gilbert <floppym@gentoo.org> +setuptools-0.7.2-r1.ebuild,
+  -setuptools-0.7.2.ebuild:
+  Apply no-exes patch.
+
+*setuptools-0.6.45-r1 (15 Jun 2013)
+
+  15 Jun 2013; Mike Gilbert <floppym@gentoo.org> +setuptools-0.6.45-r1.ebuild,
+  -setuptools-0.6.45.ebuild, files/setuptools-0.6.45-no-exes.patch:
+  Fix no-exes patch.
 
 *setuptools-0.7.2 (14 Jun 2013)
 
