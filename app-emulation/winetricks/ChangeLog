@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.21 2013/05/26 04:29:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.22 2013/06/15 03:58:20 tetromino Exp $
+
+*winetricks-960 (15 Jun 2013)
+
+  15 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-952.ebuild, +winetricks-960.ebuild, winetricks-99999999.ebuild:
+  Version bump with Adobe Flash updates and wine-1.6 compatibility. Remove old.
 
 *winetricks-954 (26 May 2013)
 

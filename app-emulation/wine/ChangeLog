@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.466 2013/06/12 03:41:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.467 2013/06/15 03:51:49 tetromino Exp $
+
+*wine-1.6_rc2 (15 Jun 2013)
+
+  15 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +wine-1.6_rc2.ebuild, wine-9999.ebuild, metadata.xml:
+  Version bump, see http://www.winehq.org/announce/1.6-rc2 for the announcement.
+  CCAS patch shouldn't be needed any more.
+  Make USE flag defaults more sensible (most users want alsa, not oss).
+  Add a mime-handler USE flag (enabled by default) to register wine as the
+  handler for .EXE and .MSI file MIME types, like in most other distros. Users
+  with special security requirements can disable the flag to restore the old
+  Gentoo behavior.
 
   12 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.5.25.ebuild,
   wine-1.5.26.ebuild, wine-1.5.27.ebuild, wine-1.5.28.ebuild,
