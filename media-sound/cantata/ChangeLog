@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cantata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.17 2013/06/02 06:12:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.18 2013/06/14 23:23:18 johu Exp $
+
+  14 Jun 2013; Johannes Huber <johu@gentoo.org>
+  +files/cantata-1.0.3-audiocd-automagic.patch,
+  +files/cantata-1.0.3-system-qjson.patch, cantata-1.0.3.ebuild, metadata.xml:
+  Fix several dep issues by Nikoli <nikoli@lavabit.com> wrt bug #472140.
 
 *cantata-1.0.3 (02 Jun 2013)
 
