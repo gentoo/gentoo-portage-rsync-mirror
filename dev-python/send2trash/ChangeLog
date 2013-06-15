@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/send2trash
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/send2trash/ChangeLog,v 1.1 2013/06/15 04:19:08 idella4 Exp $
+
+*send2trash-1.2.0 (15 Jun 2013)
+
+  15 Jun 2013; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +send2trash-1.2.0.ebuild:
+  New ebuild written by me, new dep to app-misc/anki, closes Bug #473110 by
+  tomka
