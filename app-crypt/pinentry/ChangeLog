@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.145 2013/06/02 00:00:45 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.146 2013/06/15 22:27:15 alonbl Exp $
+
+  15 Jun 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/pinentry-0.8.2-texi.patch, pinentry-0.8.2.ebuild:
+  fix texi issue with recent compiler, bug#472700, thanks to Bryan Baldwin
 
   02 Jun 2013; Alon Bar-Lev <alonbl@gentoo.org> -pinentry-0.8.1.ebuild:
   cleanup old ebuild

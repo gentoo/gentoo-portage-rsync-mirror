@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.16 2013/05/05 11:13:14 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.17 2013/06/15 22:27:15 alonbl Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ src_prepare() {
 		done
 	fi
 	epatch "${FILESDIR}/${P}-ncurses.patch"
+	epatch "${FILESDIR}/${P}-texi.patch"
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	eautoreconf
 }
