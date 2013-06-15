@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.378 2013/04/19 11:41:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.379 2013/06/15 11:22:55 blueness Exp $
+
+*tor-0.2.4.13_alpha (15 Jun 2013)
+
+  15 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.4.13_alpha.ebuild, -tor-0.2.4.11_alpha.ebuild, metadata.xml:
+  Version bump alpha and drop older
 
 *tor-0.2.4.12_alpha (19 Apr 2013)
 

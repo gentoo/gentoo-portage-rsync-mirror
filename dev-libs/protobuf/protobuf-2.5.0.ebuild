@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0.ebuild,v 1.1 2013/03/05 05:21:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0.ebuild,v 1.2 2013/06/15 11:26:56 grobian Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="source"
@@ -14,7 +14,7 @@ SRC_URI="http://protobuf.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0/8" # subslot = soname major version
-KEYWORDS="~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~arm-linux ~x64-macos ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos x86-macos"
 IUSE="emacs examples java python static-libs vim-syntax"
 
 DEPEND="java? ( >=virtual/jdk-1.5 )
@@ -23,8 +23,11 @@ RDEPEND="java? ( >=virtual/jre-1.5 )
 	emacs? ( virtual/emacs )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch
-	eautoreconf
+	if [[ ${CHOST} != *-darwin* ]] ; then
+		# breaks Darwin, bug #472514
+		epatch "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch
+		eautoreconf
+	fi
 
 	if use python; then
 		cd python && distutils-r1_src_prepare
