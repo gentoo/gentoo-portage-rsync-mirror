@@ -9,4 +9,4 @@ RDEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-9999:= media-libs/openjpeg:2 m
 RESTRICT=!ocamlopt? ( strip )
 SLOT=0
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=bab6e575142a5b15fc03d2aa6805234b
+_md5_=f7fc0252968e6a3ca4e5360cf89cbebe

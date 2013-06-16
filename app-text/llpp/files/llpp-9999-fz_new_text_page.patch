@@ -1,0 +1,20 @@
+--- llpp-9999/link.c
++++ llpp-9999/link.c
+@@ -1463,7 +1463,7 @@
+     found:
+ 
+         sheet = fz_new_text_sheet (state.ctx);
+-        text = fz_new_text_page (state.ctx, &fz_infinite_rect);
++        text = fz_new_text_page (state.ctx);
+         tdev = fz_new_text_device (state.ctx, sheet, text);
+ 
+         switch (state.type) {
+@@ -2522,7 +2522,7 @@
+         fz_matrix ctm;
+         fz_device *tdev;
+ 
+-        page->text = fz_new_text_page (state.ctx, &fz_infinite_rect);
++        page->text = fz_new_text_page (state.ctx);
+         page->sheet = fz_new_text_sheet (state.ctx);
+         tdev = fz_new_text_device (state.ctx, page->sheet, page->text);
+         ctm = pagectm (page);

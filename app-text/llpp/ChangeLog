@@ -1,6 +1,13 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.45 2013/06/13 12:20:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.47 2013/06/16 22:26:39 xmw Exp $
+
+  16 Jun 2013; Michael Weber <xmw@gentoo.org> llpp-15.ebuild, llpp-9999.ebuild:
+  Add -lpthread for shared builds
+
+  16 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/llpp-9999-fz_new_text_page.patch, llpp-9999.ebuild:
+  Update live build
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
   Depend on SLOT=0 of media-libs/openjpeg (bug 440086)

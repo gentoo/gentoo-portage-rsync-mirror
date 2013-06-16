@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.22 2013/06/13 12:20:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.24 2013/06/16 22:26:39 xmw Exp $
 
 EAPI=5
 
@@ -38,7 +38,8 @@ RESTRICT="!ocamlopt? ( strip )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-11-WM_CLASS.patch \
-		"${FILESDIR}"/${P}-mupdf_trailer.patch
+		"${FILESDIR}"/${P}-mupdf_trailer.patch \
+		"${FILESDIR}"/${P}-fz_new_text_page.patch
 }
 
 src_compile() {
@@ -62,7 +63,7 @@ src_compile() {
 			esac
 		done
 	else
-		local cclib="$($(tc-getPKG_CONFIG) --libs mupdf x11)"
+		local cclib="$($(tc-getPKG_CONFIG) --libs mupdf x11) -lpthread"
 	fi
 
 	verbose() { echo "$@" >&2 ; "$@" || die ; }

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.37 2013/03/19 16:43:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.39 2013/06/16 22:22:04 radhermit Exp $
+
+  16 Jun 2013; Tim Harder <radhermit@gentoo.org> -werkzeug-0.8.3-r1.ebuild:
+  Remove old.
+
+*werkzeug-0.9.1 (16 Jun 2013)
+
+  16 Jun 2013; Tim Harder <radhermit@gentoo.org> +werkzeug-0.9.1.ebuild:
+  Version bump.
 
 *werkzeug-0.8.3-r1 (19 Mar 2013)
 
