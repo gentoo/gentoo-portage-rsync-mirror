@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.4 2013/06/14 17:21:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.5 2013/06/16 14:42:11 idella4 Exp $
+
+  16 Jun 2013; Ian Delaney <idella4@gentoo.org> stevedore-0.9.1.ebuild:
+  correct setuotools in deps wrt Bug #473278
 
 *stevedore-0.9.1 (14 Jun 2013)
 

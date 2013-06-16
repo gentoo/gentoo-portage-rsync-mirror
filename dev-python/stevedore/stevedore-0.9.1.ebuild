@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/stevedore-0.9.1.ebuild,v 1.1 2013/06/14 17:21:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/stevedore-0.9.1.ebuild,v 1.2 2013/06/16 14:42:11 idella4 Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-DEPEND="<dev-python/setuptools-0.7[${PYTHON_USEDEP}]
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 		dev-python/coverage[${PYTHON_USEDEP}]
