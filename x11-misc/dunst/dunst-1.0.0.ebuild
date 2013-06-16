@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.0.0.ebuild,v 1.2 2013/06/15 16:49:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.0.0.ebuild,v 1.3 2013/06/16 16:11:18 wired Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ CDEPEND="
 	x11-libs/libXinerama
 	x11-libs/cairo[X,glib]
 	x11-libs/pango[X]
+	dunstify? ( x11-libs/libnotify )
 "
 
 DEPEND="${CDEPEND}

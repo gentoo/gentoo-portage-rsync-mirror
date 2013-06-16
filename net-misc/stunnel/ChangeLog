@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.135 2013/06/16 14:42:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.136 2013/06/16 16:04:11 blueness Exp $
+
+*stunnel-4.56 (16 Jun 2013)
+
+  16 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/stunnel-4.56-listen-queue.patch,
+  +files/stunnel-4.56-xforwarded-for.patch, +stunnel-4.56.ebuild,
+  files/stunnel.initd-start-stop-daemon:
+  Version bump, security bug #460278
 
   16 Jun 2013; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Add myself as maintainer

@@ -1,5 +1,9 @@
 
 
+  16 Jun 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-pan-2.20130424-r1.ebuild:
+  Stabilize 20130424 policies
+
 *selinux-pan-2.20130424-r1 (06 May 2013)
 
   06 May 2013; Sven Vermeulen <swift@gentoo.org>

@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/mirrorselect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.117 2012/12/16 06:31:59 dolsen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.118 2013/06/16 16:14:09 dolsen Exp $
+
+*mirrorselect-2.2.0.1 (16 Jun 2013)
+
+  16 Jun 2013; Brian Dolbec <dolsen@gentoo.org> +mirrorselect-2.2.0.1.ebuild:
+  Bump to 2.2.0.1 with the manpage corrections, bug 459884.
 
   16 Dec 2012; Brian Dolbec <dolsen@gentoo.org>
   files/2.2.0-Ignore-inaccessible-fsmirrors.patch:
