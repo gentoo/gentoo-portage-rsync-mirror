@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.76 2012/08/27 17:58:15 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.77 2013/06/16 19:48:54 xmw Exp $
+
+  16 Jun 2013; Michael Weber <xmw@gentoo.org> xpad-4.1.ebuild:
+  add ~arm keyword (bug 473412)
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org> xpad-4.0.ebuild,
   xpad-4.1.ebuild:
