@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vmware</herd>
-	<maintainer>
-		<email>vadimk@gentoo.org</email>
-	</maintainer>
 	<longdescription>
 		VMWare Workstation is a virtual machine which can be used to install 
 		other operating systems in a virtual environment to run on top of Gentoo.

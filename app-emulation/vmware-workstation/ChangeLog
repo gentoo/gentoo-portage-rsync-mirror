@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.242 2013/03/10 12:17:23 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.243 2013/06/16 12:33:58 vadimk Exp $
+
+  16 Jun 2013; Vadim Kuznetsov vadimk@gentoo.org metadata.xml:
+  dropped myself as a maintainer. maintainer needed
 
 *vmware-workstation-9.0.2.1031769 (10 Mar 2013)
 
