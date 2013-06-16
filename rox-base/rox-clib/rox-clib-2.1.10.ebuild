@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.10 2012/05/03 04:40:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.11 2013/06/16 08:19:58 pacho Exp $
 
 EAPI=1
-inherit multilib
+inherit eutils multilib
 
 MY_PN="ROX-CLib"
 DESCRIPTION="A library for ROX applications written in C."
@@ -15,12 +15,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND="x11-libs/gtk+:2
-	dev-libs/libxml2:2"
-
+RDEPEND="
+	x11-libs/gtk+:2
+	dev-libs/libxml2:2
+"
 DEPEND="$RDEPEND
 	virtual/pkgconfig
-	rox-base/zeroinstall-injector"
+	rox-base/zeroinstall-injector
+"
 
 S=${WORKDIR}/ROX-CLib
 APPNAME=${MY_PN}
@@ -49,7 +51,6 @@ src_install() {
 
 	# remove silly .cvs files
 	find . -name '.cvs*' | xargs rm -f >/dev/null 2>&1
-	dodoc ${baselibdir}/${APPNAME}
 	dodir ${baselibdir}/${APPNAME}
 	cp -r . "${D}${baselibdir}/${APPNAME}"
 	(
@@ -69,4 +70,5 @@ src_install() {
 	cachedname=$(0distutils -c tmp.native_feed) || die "0distutils URI escape failed"
 	dosym "${baselibdir}/ROX-CLib/.DirIcon" "${ICON_CACHE_DIR}/${cachedname}"
 
+	prune_libtool_files
 }
