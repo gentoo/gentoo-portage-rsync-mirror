@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.57 2013/03/19 22:22:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.58 2013/06/16 06:25:28 blueness Exp $
+
+*varnish-3.0.4 (16 Jun 2013)
+
+  16 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/varnish-3.0.4-automagic.patch, +varnish-3.0.4.ebuild:
+  Version bump
 
   19 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
   files/varnish-3.0.3-automagic.patch:
