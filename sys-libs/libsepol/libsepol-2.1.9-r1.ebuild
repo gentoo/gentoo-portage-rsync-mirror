@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.1.9-r1.ebuild,v 1.1 2013/04/25 18:50:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.1.9-r1.ebuild,v 1.2 2013/06/16 18:11:28 swift Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20130423/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

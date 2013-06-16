@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.13-r2.ebuild,v 1.1 2013/04/25 19:58:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.13-r2.ebuild,v 1.2 2013/06/16 18:12:24 swift Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -20,7 +20,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20130423/${P}.tar.gz
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="python ruby static-libs"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
