@@ -31,10 +31,6 @@ musepack
 # I've been told xfs is broken on ARM
 xfs
 
-# Mart Raudsepp <leio@gentoo.org>
-# net-misc/networkmanager not keyworded
-networkmanager
-
 # Raúl Porcel <armin76@gentoo.org>
 # Fails to build/work
 openexr
