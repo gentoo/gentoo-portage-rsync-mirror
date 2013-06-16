@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pywebdav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.18 2013/06/01 12:13:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.19 2013/06/16 10:18:48 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  python will maintain this: http://www.gossamer-
+  threads.com/lists/gentoo/dev/273296#273296
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> -pywebdav-0.9.4.1.ebuild,
   metadata.xml:

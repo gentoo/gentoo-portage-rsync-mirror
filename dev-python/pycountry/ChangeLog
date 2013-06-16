@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycountry
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.11 2013/06/12 16:38:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.12 2013/06/16 10:17:59 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  python will maintain this: http://www.gossamer-
+  threads.com/lists/gentoo/dev/273296#273296
 
 *pycountry-0.14.7-r1 (12 Jun 2013)
 

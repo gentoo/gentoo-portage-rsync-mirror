@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>elvanor@gentoo.org</email>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>An Open Source ERP &amp; CRM. This is the Web component, it is a bridge allowing Web clients to connect
 to the server.</longdescription>

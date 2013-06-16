@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mono-env.eclass,v 1.1 2013/05/24 18:08:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mono-env.eclass,v 1.2 2013/06/16 10:07:01 pacho Exp $
 
 # @ECLASS: mono-env.eclass
 # @MAINTAINER:
@@ -8,6 +8,8 @@
 # @BLURB: Set environment variables commonly used by dotnet packages.
 # @DESCRIPTION:
 # Set environment variables commonly used by dotnet packages.
+
+SRC_URI="http://download.mono-project.com/sources/${PN}/${P}.tar.bz2"
 
 EXPORT_FUNCTIONS pkg_setup
 

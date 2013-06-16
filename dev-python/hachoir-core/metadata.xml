@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
+	<herd>python</herd>
 	<longdescription lang="en">A tool written for hackers to cut file or any binary stream. A file is
 		splitted in a tree of fields where the smallest field can be just a bit.
 		There are various field types: integer, string, bits, padding, sub file,
