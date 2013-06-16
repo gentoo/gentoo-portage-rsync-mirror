@@ -9,4 +9,4 @@ RDEPEND=>=app-shells/bash-4 || ( app-text/recode ( dev-lang/perl dev-perl/HTML-P
 SLOT=0
 SRC_URI=http://plowshare.googlecode.com/files/plowshare4-snapshot-git20130520.2b2d736.tar.gz
 _eclasses_=bash-completion-r1	5deec68e4713fd23ce30d4d9ed712908
-_md5_=128b3ea1848a1b38cb49aa0d6c4e8718
+_md5_=941e757a53601a939bccdba757e02632

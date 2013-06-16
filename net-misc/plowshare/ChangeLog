@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/plowshare
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.22 2013/06/13 16:22:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.23 2013/06/15 23:49:56 voyageur Exp $
+
+  15 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  plowshare-20130520.ebuild:
+  Fix typo with USE=-javascript, spotted by Francisco Vazquez
+  <fjvazquezaraujo@gmail.com> in bug #473268
 
 *plowshare-20130520 (13 Jun 2013)
 
