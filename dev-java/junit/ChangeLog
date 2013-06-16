@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.76 2013/06/14 19:51:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.77 2013/06/15 23:20:39 tomwij Exp $
+
+*junit-4.11 (15 Jun 2013)
+
+  15 Jun 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/junit-4.11-do-not-unpack-hamcrest-sources.patch, +junit-4.11.ebuild:
+  Version bump to 4.11, needed for newer version of reverse dependency ant-
+  junit.
 
   14 Jun 2013; Alexis Ballier <aballier@gentoo.org> junit-4.10.ebuild:
   keyword ~amd64-fbsd
