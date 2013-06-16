@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/tarsync-0.2.1-r1.ebuild,v 1.1 2010/08/11 08:30:41 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/tarsync-0.2.1-r1.ebuild,v 1.2 2013/06/16 09:52:30 pacho Exp $
 
 EAPI=2
 DESCRIPTION="Delta compression suite for using/generating binary patches"
-HOMEPAGE="http://gentooexperimental.org/~ferringb/tarsync/"
+HOMEPAGE="http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/app-arch/tarsync/tarsync-0.2.1-r1.ebuild?view=markup"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"

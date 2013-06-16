@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.155 2013/05/07 10:46:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.156 2013/06/16 09:42:44 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #122207
 
   07 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -libarchive-3.0.4-r1.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openerp-server
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.5 2012/06/02 06:50:50 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.6 2013/06/16 09:57:01 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> -openerp-server-5.0.15.ebuild,
+  -openerp-server-5.0.6.ebuild, metadata.xml:
+  Cleanup due #200380
 
   02 Jun 2012; Zac Medico <zmedico@gentoo.org> openerp-server-5.0.15.ebuild,
   openerp-server-5.0.16.ebuild, openerp-server-5.0.6.ebuild:
@@ -28,4 +32,3 @@
   13 Dec 2010; <elvanor@gentoo.org> +openerp-server-5.0.6.ebuild,
   +files/openerp-server, +files/openerp-server-confd, +metadata.xml:
   Initial import, bug #267886.
-

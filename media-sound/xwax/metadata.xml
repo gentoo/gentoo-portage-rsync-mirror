@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<maintainer>
-		<email>nixphoeni@gentoo.org</email>
-		<name>Joe Sapp</name>
-	</maintainer>
 	<use>
 		<flag name='alsa'>Adds support for ALSA audio input/output.</flag>
 		<flag name='jack'>Adds support for audio input/output via the JACK Audio Connection Kit.</flag>

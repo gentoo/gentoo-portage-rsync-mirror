@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.166 2013/05/15 04:05:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.167 2013/06/16 09:50:36 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> -pkgcore-0.8.4.ebuild,
+  -pkgcore-0.8.5-r1.ebuild, -pkgcore-0.8.ebuild, metadata.xml:
+  Cleanup due #122207
 
   15 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unused description from metadata.xml

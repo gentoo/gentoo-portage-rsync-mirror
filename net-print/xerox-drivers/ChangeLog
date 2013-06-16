@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xerox-drivers
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xerox-drivers/ChangeLog,v 1.3 2010/07/01 21:15:08 tgurr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/xerox-drivers/ChangeLog,v 1.4 2013/06/16 09:58:36 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #200380
 
   01 Jul 2010; Timo Gurr <tgurr@gentoo.org>
   xerox-drivers-0_p20080123.ebuild:
@@ -25,4 +28,3 @@
   26 Apr 2009; Matthew Schultz (mschultz) <mattsch@gmail.com> ChangeLog:
   +xerox-drivers-0.1.ebuild, +metadata.xml:
   New ebuild for bug 219718.
-
