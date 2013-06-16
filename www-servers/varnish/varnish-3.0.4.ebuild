@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.4.ebuild,v 1.1 2013/06/16 06:25:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.4.ebuild,v 1.2 2013/06/16 13:10:09 blueness Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~mips ~x86"
 IUSE="doc jemalloc jit static-libs +tools"
 
 CDEPEND="
-	dev-libs/libedit
+	|| ( dev-libs/libedit sys-libs/readline )
 	dev-libs/libpcre[jit?]
 	jemalloc? ( dev-libs/jemalloc )
 	tools? ( sys-libs/ncurses )"
@@ -28,7 +28,6 @@ RDEPEND="
 
 DEPEND="
 	${CDEPEND}
-	dev-python/docutils
 	virtual/pkgconfig"
 
 RESTRICT="test" #315725

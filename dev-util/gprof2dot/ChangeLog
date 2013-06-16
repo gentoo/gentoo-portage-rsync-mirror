@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gprof2dot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.5 2013/05/19 21:01:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.6 2013/06/16 13:29:36 sping Exp $
+
+  16 Jun 2013; Sebastian Pipping <sping@gentoo.org>
+  gprof2dot-0_p20130517.ebuild, +files/gprof2dot-0_p20130517-py3-xrange.patch:
+  Handle lack of xrange(..) in Python 3, thanks for the patch to Reinis Danne
+  (bug #473418)
 
 *gprof2dot-0_p20130517 (19 May 2013)
 

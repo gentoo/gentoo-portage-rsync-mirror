@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.58 2013/06/16 06:25:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.60 2013/06/16 13:11:36 blueness Exp $
+
+  16 Jun 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix failed gpg signature
+
+  16 Jun 2013; Anthony G. Basile <blueness@gentoo.org> varnish-3.0.4.ebuild:
+  Dep on either libedit or readline, drop useless dep on docutils
 
 *varnish-3.0.4 (16 Jun 2013)
 

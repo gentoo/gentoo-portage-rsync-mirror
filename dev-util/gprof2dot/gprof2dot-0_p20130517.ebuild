@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/gprof2dot-0_p20130517.ebuild,v 1.1 2013/05/19 21:01:49 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/gprof2dot-0_p20130517.ebuild,v 1.2 2013/06/16 13:29:36 sping Exp $
 
 EAPI="5"
 
@@ -20,6 +20,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-py3-xrange.patch
+}
 
 _make_call_script() {
 	cat <<-EOF >"${D}/$1"
