@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.118 2013/06/16 16:14:09 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.119 2013/06/16 16:50:41 dolsen Exp $
+
+  16 Jun 2013; Brian Dolbec <dolsen@gentoo.org> mirrorselect-2.2.0.1.ebuild,
+  mirrorselect-9999.ebuild:
+  Migrate to distutils-r1, fix bad header on 2.2.0.1.
 
 *mirrorselect-2.2.0.1 (16 Jun 2013)
 

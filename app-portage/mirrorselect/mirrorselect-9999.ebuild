@@ -1,19 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.3 2012/12/16 06:12:56 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.4 2013/06/16 16:50:41 dolsen Exp $
 
-EAPI="3"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] 3.1"
-PYTHON_USE_WITH="xml"
-PYTHON_NONVERSIONED_EXECUTABLES=(".*")
+EAPI="5"
 
-EGIT_MASTER="master"
-#EGIT_BRANCH="master"
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_REQ_USE="xml"
 
-inherit distutils python git-2 prefix
+inherit eutils distutils-r1 git-2 prefix
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mirrorselect.git"
+EGIT_MASTER="master"
 
 DESCRIPTION="Tool to help select distfiles mirrors for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -25,33 +22,16 @@ IUSE=""
 
 KEYWORDS=""
 
-# Note: dev-lang/python dependencies are so emerge will print a blocker if any
-# installed slot of python is not built with +xml.  This is used since
-# PYTHON_USE_WITH just dies in the middle of the emerge. See bug 399331.
 RDEPEND="
-	>=dev-lang/python-2.6[xml]
-	!>=dev-lang/python-2.6[-xml]
 	dev-util/dialog
 	net-analyzer/netselect
 	"
-#	virtual/python-argparse"
 
-src_prepare() {
+python_prepare_all()  {
+	python_export_best
 	eprefixify setup.py mirrorselect/main.py
-}
-
-distutils_src_compile_pre_hook() {
-	echo Now setting version... VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
-	VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
-}
-
-src_compile() {
-	distutils_src_compile
-}
-
-src_install() {
-	python_convert_shebangs -r "" build-*/scripts-*
-	distutils_src_install
+	echo Now setting version... VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
+	VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version || die "setup.py set_version failed"
 }
 
 pkg_postinst() {
