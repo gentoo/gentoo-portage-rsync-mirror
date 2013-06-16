@@ -4,9 +4,6 @@
 	<herd>vmware</herd>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-	    <email>vadimk@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 	    <email>gentoo@mattwhitlock.name</email>
 		<name>Matt Whitlock</name>
 		<description>proxied co-maintainer</description>

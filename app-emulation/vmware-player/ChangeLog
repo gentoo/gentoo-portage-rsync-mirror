@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.112 2013/03/17 15:22:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.113 2013/06/16 12:28:07 vadimk Exp $
+
+  16 Jun 2013; Vadim Kuznetsov vadimk@gentoo.org metadata.xml:
+  dropped myself as a maintainer. maintainer needed
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

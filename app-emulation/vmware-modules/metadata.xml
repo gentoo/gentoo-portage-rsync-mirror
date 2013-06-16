@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vmware</herd>
-	<maintainer>
-		<email>vadimk@gentoo.org</email>
-	</maintainer>
 	<longdescription>
 		VMware kernel modules.
 	</longdescription>
