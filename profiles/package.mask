@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14832 2013/06/16 08:20:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14833 2013/06/16 11:40:08 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -434,7 +434,6 @@ net-irc/xchatosd
 >=net-libs/libsoup-2.42
 >=net-libs/libzapojit-0.0.3
 >=net-libs/webkit-gtk-2
->=net-misc/networkmanager-0.9.8
 >=net-misc/vinagre-3.8
 >=net-misc/vino-3.8
 >=net-wireless/gnome-bluetooth-3.8
@@ -459,12 +458,6 @@ net-irc/xchatosd
 >=media-gfx/gthumb-3.2
 >=app-editors/latexila-2.8
 >=gnome-extra/gnome-calculator-3.8
->=net-misc/networkmanager-openconnect-0.9.8
->=net-misc/networkmanager-openswan-0.9.8
->=net-misc/networkmanager-openvpn-0.9.8
->=net-misc/networkmanager-pptp-0.9.8
->=net-misc/networkmanager-sstp-0.9.8
->=net-misc/networkmanager-vpnc-0.9.8
 >=gnome-base/gnome-core-libs-3.8.0
 >=gnome-base/gnome-core-apps-3.8.0
 >=gnome-base/gnome-extra-apps-3.8.0
@@ -619,11 +612,6 @@ media-gfx/yafaray
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
 =dev-libs/openssl-1.0.1d
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jan 2013)
-# Beta versions masked for testing
-=net-misc/modemmanager-0.7*
-=net-misc/networkmanager-0.9.7*
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (25 Jan 2013)
 # Masked for testing
