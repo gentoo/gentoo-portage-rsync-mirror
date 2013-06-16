@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.145 2013/06/12 20:25:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.146 2013/06/16 08:51:07 vincent Exp $
+
+  16 Jun 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  xmlrpc-c-1.32.05-r1.ebuild:
+  ppc ppc64 stable : bug #471912
 
   12 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> xmlrpc-c-1.32.05-r1.ebuild:
   x86 stable wrt bug #471912
