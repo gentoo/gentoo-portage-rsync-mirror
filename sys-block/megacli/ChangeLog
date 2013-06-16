@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.15 2013/03/03 16:43:48 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.16 2013/06/16 09:20:44 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> -megacli-8.02.16.ebuild,
+  metadata.xml:
+  Cleanup due #66351
 
   03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
   removed myself from metadata.xml

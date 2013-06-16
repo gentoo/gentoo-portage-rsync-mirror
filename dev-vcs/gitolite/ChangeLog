@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitolite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.32 2013/04/13 07:41:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.33 2013/06/16 09:25:15 pacho Exp $
+
+  16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #66351
 
 *gitolite-3.5.1 (13 Apr 2013)
 
@@ -151,4 +154,3 @@
   07 Nov 2010; Lance Albertson <ramereth@gentoo.org> +gitolite-1.5.7.ebuild,
   +metadata.xml:
   Initial ebuild
-

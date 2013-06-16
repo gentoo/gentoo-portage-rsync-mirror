@@ -4,10 +4,6 @@
 	<herd>web-apps</herd>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
-	<maintainer>
 		<email>nikoli@lavabit.com</email>
 		<name>Nikoli</name>
 	</maintainer>
