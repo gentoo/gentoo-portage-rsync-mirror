@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libc/ChangeLog,v 1.5 2012/04/27 23:16:17 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libc/ChangeLog,v 1.6 2013/06/16 00:07:47 blueness Exp $
+
+  16 Jun 2013; Anthony G. Basile <blueness@gentoo.org> libc-0.ebuild:
+  Add new libc: sys-libs/musl
 
   27 Apr 2012; Alexis Ballier <aballier@gentoo.org> libc-0.ebuild:
   keyword ~amd64-fbsd
@@ -12,4 +15,3 @@
 
   20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +libc-0.ebuild, +metadata.xml:
   Initial import, bug 359001.
-

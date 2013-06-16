@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/elibc.desc,v 1.5 2011/12/18 09:04:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/elibc.desc,v 1.6 2013/06/16 00:04:10 blueness Exp $
 
 # This file contains descriptions of ELIBC USE_EXPAND flags.
 
@@ -14,6 +14,7 @@ glibc - ELIBC setting for systems that use the GNU C library
 HPUX - ELIBC setting for systems that use the HP-UX C library
 Interix - ELIBC setting for systems that use the Interix C library
 mintlib - ELIBC setting for systems that use the FreeMiNT C library
+musl - ELIBC setting for systems that use the musl C library
 NetBSD - ELIBC setting for systems that use the NetBSD C library
 OpenBSD - ELIBC setting for systems that use the OpenBSD C library
 SunOS - ELIBC setting for systems that use the Sun Solaris C library
