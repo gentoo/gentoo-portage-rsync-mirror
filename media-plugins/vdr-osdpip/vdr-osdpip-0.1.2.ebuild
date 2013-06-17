@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.1.2.ebuild,v 1.2 2013/04/04 09:28:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.1.2.ebuild,v 1.3 2013/06/17 19:04:32 scarabeus Exp $
 
 EAPI="4"
 
@@ -29,4 +29,5 @@ src_prepare() {
 	append-cxxflags -D__STDC_CONSTANT_MACROS
 
 	epatch "${FILESDIR}/${PN}-0.1.1-ffmpeg-1.patch"
+	epatch "${FILESDIR}/${PN}-libav-9.patch"
 }

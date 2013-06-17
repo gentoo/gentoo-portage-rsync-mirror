@@ -1,8 +1,7 @@
-Index: pcd-0.9/mpeg.c
-===================================================================
---- pcd-0.9.orig/mpeg.c
-+++ pcd-0.9/mpeg.c
-@@ -44,7 +44,6 @@ cMpegFrame::cMpegFrame(bool Pal)
+diff -urN pcd-0.9.old/mpeg.c pcd-0.9/mpeg.c
+--- pcd-0.9.old/mpeg.c	2013-06-17 21:11:54.125454721 +0200
++++ pcd-0.9/mpeg.c	2013-06-17 21:12:15.325453967 +0200
+@@ -44,7 +44,6 @@
    bufferSize = 0;
    mpegSize = 0;
  
@@ -10,3 +9,33 @@ Index: pcd-0.9/mpeg.c
    avcodec_register_all();
  
    if (!(avCodec = avcodec_find_encoder(CODEC_ID_MPEG2VIDEO))) {
+@@ -52,7 +51,7 @@
+      return;
+   }
+ 
+-  avContext = avcodec_alloc_context();
++  avContext = avcodec_alloc_context3(NULL);
+   avFrame = avcodec_alloc_frame();
+ 
+   avContext->bit_rate = 400000;
+@@ -63,7 +62,7 @@
+   avContext->flags |= CODEC_FLAG_QSCALE;
+   avContext->pix_fmt = PIX_FMT_YUV420P;
+ 
+-  if (avcodec_open(avContext, avCodec) < 0) {
++  if (avcodec_open2(avContext, avCodec, NULL) < 0) {
+      dsyslog("PCD: Can't open codec");
+      return;
+   }
+diff -urN pcd-0.9.old/mpeg.h pcd-0.9/mpeg.h
+--- pcd-0.9.old/mpeg.h	2013-06-17 21:11:54.125454721 +0200
++++ pcd-0.9/mpeg.h	2013-06-17 21:13:15.595451823 +0200
+@@ -25,7 +25,7 @@
+ 
+ #include <vdr/tools.h>
+ extern "C" {
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ };
+ 
+ #define TMP_WIDTH   768

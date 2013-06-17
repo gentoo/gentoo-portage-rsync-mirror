@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.3 2013/05/04 20:06:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.4 2013/06/17 19:13:17 pacho Exp $
 
 # @ECLASS: multilib-minimal.eclass
 # @MAINTAINER:
@@ -23,9 +23,9 @@
 # If you need generic install rules, use multilib_src_install_all function.
 
 
-# EAPI=5 is required for meaningful MULTILIB_USEDEP.
+# EAPI=4 is required for meaningful MULTILIB_USEDEP.
 case ${EAPI:-0} in
-	5) ;;
+	4|5) ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 

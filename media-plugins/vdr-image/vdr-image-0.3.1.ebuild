@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.1.ebuild,v 1.7 2013/05/14 09:37:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.1.ebuild,v 1.8 2013/06/17 19:29:23 scarabeus Exp $
 
 EAPI="5"
 
@@ -47,7 +47,7 @@ src_prepare() {
 	fi
 
 	# UINT64_C is needed by ffmpeg headers
-	append-flags -D__STDC_CONSTANT_MACROS
+	append-cppflags -D__STDC_CONSTANT_MACROS
 }
 
 src_install() {

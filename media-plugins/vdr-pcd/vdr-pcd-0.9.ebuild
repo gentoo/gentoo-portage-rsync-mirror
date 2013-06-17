@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.7 2013/01/26 14:44:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.8 2013/06/17 19:20:32 scarabeus Exp $
 
-EAPI="3"
+EAPI=3
 
 inherit vdr-plugin flag-o-matic eutils
 
@@ -22,9 +22,8 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	vdr-plugin_src_prepare
 
-	sed -e "s:ffmpeg/avcodec.h:libavcodec/avcodec.h:" -i mpeg.h
 	epatch "${FILESDIR}/${P}-ffmpeg-1.patch"
 
 	# UINT64_C is needed by ffmpeg headers
-	append-flags -D__STDC_CONSTANT_MACROS
+	append-cppflags -D__STDC_CONSTANT_MACROS
 }

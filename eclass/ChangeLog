@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.858 2013/06/17 07:57:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.859 2013/06/17 19:13:17 pacho Exp $
+
+  17 Jun 2013; Pacho Ramos <pacho@gentoo.org> multilib-minimal.eclass:
+  Allow eapi4 (#473610)
 
   17 Jun 2013; Tim Harder <radhermit@gentoo.org> vim-plugin.eclass:
   Update default VIM_PLUGIN_VIM_VERSION to 7.3.

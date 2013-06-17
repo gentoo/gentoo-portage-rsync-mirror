@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-osdpip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.21 2013/05/14 09:37:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.22 2013/06/17 19:04:32 scarabeus Exp $
+
+  17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/vdr-osdpip-libav-9.patch, vdr-osdpip-0.1.2.ebuild:
+  Apply libav patch to build with libav9. Fixes bug#443196.
 
   14 May 2013; Agostino Sarubbo <ago@gentoo.org> vdr-osdpip-0.1.1-r1.ebuild:
   Stable for x86, wrt bug #464542
