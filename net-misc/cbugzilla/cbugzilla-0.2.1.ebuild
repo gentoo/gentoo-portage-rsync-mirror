@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbugzilla/cbugzilla-0.2.0.ebuild,v 1.1 2013/06/12 16:13:43 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbugzilla/cbugzilla-0.2.1.ebuild,v 1.1 2013/06/17 12:23:23 yac Exp $
 
 EAPI=5
 
