@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libwapcaplet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/ChangeLog,v 1.8 2013/02/27 08:48:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/ChangeLog,v 1.9 2013/06/17 16:56:28 xmw Exp $
+
+*libwapcaplet-0.2.0 (17 Jun 2013)
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org> +libwapcaplet-0.2.0.ebuild:
+  Version bump (bug 470720), multilib build, preparations for netsurf eclass.
 
   27 Feb 2013; Michael Weber <xmw@gentoo.org> libwapcaplet-0.1.1.ebuild:
   netsurf eclass preparation
