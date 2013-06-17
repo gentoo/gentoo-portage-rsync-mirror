@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.88 2013/06/13 21:23:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.89 2013/06/17 14:04:31 voyageur Exp $
+
+  17 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> clang-3.3_rc3.ebuild,
+  clang-9999.ebuild:
+  Use clang resource dir configuration option, fixes #417595
 
   13 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> clang-3.3_rc3.ebuild,
   clang-9999.ebuild:

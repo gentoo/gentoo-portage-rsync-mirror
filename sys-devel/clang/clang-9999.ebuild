@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.36 2013/06/13 21:23:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.37 2013/06/17 14:04:31 voyageur Exp $
 
 EAPI=5
 
@@ -37,12 +37,15 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
 	# multilib-strict
-	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
+	sed -e "/PROJ_headers\|HeaderDir/s#lib/clang#$(get_libdir)/clang#" \
 		-i tools/clang/lib/Headers/Makefile \
-		|| die "clang Makefile failed"
-	sed -e "/PROJ_resources/s#lib/clang#$(get_libdir)/clang#" \
+		|| die "clang Makefile sed failed"
+	sed -e "/PROJ_resources\|ResourceDir/s#lib/clang#$(get_libdir)/clang#" \
 		-i tools/clang/runtime/compiler-rt/Makefile \
-		|| die "compiler-rt Makefile failed"
+		|| die "compiler-rt Makefile sed failed"
+	sed -e "s#/lib/#/lib{{(32|64)?}}/#" \
+		-i tools/clang/test/Preprocessor/iwithprefix.c \
+		|| die "clang test sed failed"
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
@@ -77,11 +80,13 @@ src_prepare() {
 }
 
 src_configure() {
+	# Update resource dir version after first RC
 	local CONF_FLAGS="--enable-shared
 		--with-optimize-option=
 		$(use_enable !debug optimized)
 		$(use_enable debug assertions)
-		$(use_enable debug expensive-checks)"
+		$(use_enable debug expensive-checks)
+		--with-clang-resource-dir=../$(get_libdir)/clang/3.4"
 
 	# Setup the search path to include the Prefix includes
 	if use prefix ; then
