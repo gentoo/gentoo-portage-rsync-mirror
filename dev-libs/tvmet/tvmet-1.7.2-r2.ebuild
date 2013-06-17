@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvmet/tvmet-1.7.2-r2.ebuild,v 1.1 2013/02/17 15:38:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvmet/tvmet-1.7.2-r2.ebuild,v 1.2 2013/06/17 05:01:44 bicatali Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://tvmet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc test"
 
 DEPEND="doc? ( app-doc/doxygen )
@@ -43,7 +43,7 @@ src_compile() {
 	default
 	if use doc ; then
 		cd doc
-		/usr/bin/doxygen Doxyfile || die "doxygen failed"
+		doxygen Doxyfile || die "doxygen failed"
 	fi
 }
 
