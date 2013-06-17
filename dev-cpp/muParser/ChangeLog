@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/muParser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.27 2012/08/14 16:59:44 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.28 2013/06/17 16:16:00 bicatali Exp $
+
+*muParser-2.2.3 (17 Jun 2013)
+
+  17 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> +muParser-2.2.3.ebuild,
+  -files/muParser-1.28-destdir.patch, -files/muParser-1.28-gcc43.patch,
+  -files/muParser-1.30-build.patch, metadata.xml:
+  Version bump and cleanup
 
   14 Aug 2012; Justin Lecher <jlec@gentoo.org> -muParser-1.34.ebuild,
   -muParser-2.1.0.ebuild, metadata.xml:
