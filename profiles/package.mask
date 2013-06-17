@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14834 2013/06/17 06:23:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14835 2013/06/17 07:37:16 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -700,7 +700,7 @@ dev-vcs/gitosis-gentoo
 # Diego Elio Pettenò <flameeyes@gentoo.org> (14 Nov 2012)
 # Masked for testing as some packages fail.
 # See bug #443230 for tracking the progress
-=media-video/libav-9.6*
+=media-video/libav-9.7*
 ~virtual/ffmpeg-9
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (04 Nov 2012)

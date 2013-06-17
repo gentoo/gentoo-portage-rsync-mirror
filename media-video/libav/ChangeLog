@@ -1,6 +1,12 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.161 2013/06/13 12:40:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.162 2013/06/17 07:35:49 scarabeus Exp $
+
+*libav-9.7 (17 Jun 2013)
+
+  17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libav-9.7.ebuild,
+  -libav-0.8.5.ebuild, -libav-0.8.6.ebuild, -libav-9.6.ebuild:
+  Version bump to 9.7 and remove overshadowed versions.
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> libav-0.8.5.ebuild,
   libav-0.8.6.ebuild, libav-0.8.7.ebuild, libav-0.8.9999.ebuild,

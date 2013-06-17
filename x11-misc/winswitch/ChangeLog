@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/winswitch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.5 2013/01/05 13:35:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.7 2013/06/17 07:41:04 xmw Exp $
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org> files/winswitch-0.12.18-PIL.patch:
+  Add upstream ticket
+
+*winswitch-0.12.18-r1 (17 Jun 2013)
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/winswitch-0.12.18-PIL.patch, +winswitch-0.12.18-r1.ebuild,
+  -winswitch-0.12.17.ebuild, metadata.xml:
+  distutils-r1 migration, PIL fixes (bug 471564)
 
 *winswitch-0.12.18 (05 Jan 2013)
 
@@ -29,4 +39,3 @@
   22 May 2012; Michael Weber <xmw@gentoo.org> +winswitch-0.12.13.ebuild,
   +metadata.xml:
   Initial import (bug 353662)
-

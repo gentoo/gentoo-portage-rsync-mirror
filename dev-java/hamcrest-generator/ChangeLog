@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/hamcrest-generator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-generator/ChangeLog,v 1.2 2013/06/15 19:57:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-generator/ChangeLog,v 1.3 2013/06/17 07:43:12 tomwij Exp $
+
+*hamcrest-generator-1.3-r1 (17 Jun 2013)
+
+  17 Jun 2013; Tom Wijsman <TomWij@gentoo.org>
+  +hamcrest-generator-1.3-r1.ebuild, -hamcrest-generator-1.3.ebuild:
+  Revision bump; depend on new qdox revision to break dependency cycle.
 
 *hamcrest-generator-1.3 (15 Jun 2013)
 *hamcrest-generator-1.2 (15 Jun 2013)

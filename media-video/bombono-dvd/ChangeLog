@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bombono-dvd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.34 2012/12/09 19:13:23 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.35 2013/06/17 07:43:33 scarabeus Exp $
+
+  17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/bombono-dvd-1.2.1-libav9.patch, bombono-dvd-1.2.1-r1.ebuild:
+  Build with latest libav/ffmpeg. Resolves bug#457852.
 
 *bombono-dvd-1.2.1-r1 (09 Dec 2012)
 
@@ -180,4 +184,3 @@
   +bombono-dvd-0.5.2.ebuild, +files/bombono-dvd-0.5.2-twolame.patch,
   +metadata.xml:
   New application, see bug 291478. Thanks to Ilya Muravjov.
-

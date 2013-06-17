@@ -1,14 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-1.3.ebuild,v 1.1 2011/03/24 16:13:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/webhelpers-1.3-r1.ebuild,v 1.1 2013/06/17 07:57:20 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-DISTUTILS_SRC_TEST="nosetests"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+#DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="WebHelpers"
 MY_P="${MY_PN}-${PV}"
@@ -22,38 +20,34 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc"
 
-RDEPEND=">=dev-python/markupsafe-0.9.2
-	dev-python/routes"
+RDEPEND=">=dev-python/markupsafe-0.9.2[${PYTHON_USEDEP}]
+	dev-python/webob[${PYTHON_USEDEP}]
+	dev-python/routes[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
-	doc? ( dev-python/sphinx )"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
-	distutils_src_prepare
-
+python_prepare_all() {
 	# https://bitbucket.org/bbangert/webhelpers/issue/67
 	sed \
 		-e '/import datetime/a import os' \
 		-e 's:"/tmp/feed":os.environ.get("TMPDIR", "/tmp") + "/feed":' \
 		-i tests/test_feedgenerator.py || die "sed failed"
+
+	epatch "${FILESDIR}"/mime9ad434b.patch
 }
 
-src_compile() {
-	distutils_src_compile
-
-	if use doc; then
-		einfo "Generation of documentation"
-		pushd docs > /dev/null
-		emake html || die "Generation of documentation failed"
-		popd > /dev/null
-	fi
+python_compile_all() {
+	use doc && emake html -C docs
 }
 
-src_install() {
-	distutils_src_install
+python_test() {
+	nosetests || die "Tests failed under ${EPYTHON}"
+}
 
+python_install_all() {
 	if use doc; then
 		pushd docs/_build/html > /dev/null
 		docinto html
@@ -61,4 +55,5 @@ src_install() {
 		doins -r [a-z]* _static || die "Installation of documentation failed"
 		popd > /dev/null
 	fi
+	distutils-r1_python_install_all
 }

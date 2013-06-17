@@ -1,12 +1,12 @@
 DEFINED_PHASES=install postinst postrm prepare unpack
-DEPEND=|| ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
+DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 DESCRIPTION=vim plugin: easy note taking in vim
 EAPI=4
 HOMEPAGE=http://peterodding.com/code/vim/notes/
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=>=app-vim/xolox-misc-20111124 || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] ) || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
+RDEPEND=>=app-vim/xolox-misc-20111124 || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] ) || ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=https://github.com/xolox/vim-notes/tarball/0.16.17 -> notes-0.16.17.tar.gz
-_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	dae72739069fe281c623a6ddd5b7b43d
+_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
 _md5_=6434c95634f0f21a9131e6612bf4cf68

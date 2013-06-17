@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-generator/hamcrest-generator-1.3.ebuild,v 1.1 2013/06/15 19:54:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-generator/hamcrest-generator-1.3-r1.ebuild,v 1.1 2013/06/17 07:43:12 tomwij Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ LICENSE="BSD-2"
 SLOT="${PV}"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-CDEPEND="dev-java/qdox:1.12"
+CDEPEND=">=dev-java/qdox-1.12-r1:1.12"
 
 DEPEND=">=virtual/jdk-1.5
 	userland_GNU? ( sys-apps/findutils )

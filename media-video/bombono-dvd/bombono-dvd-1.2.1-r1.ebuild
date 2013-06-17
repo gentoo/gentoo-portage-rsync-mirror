@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1-r1.ebuild,v 1.1 2012/12/09 19:13:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1-r1.ebuild,v 1.2 2013/06/17 07:43:33 scarabeus Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="0.96.1"
@@ -47,6 +47,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.2.0-cdrtools.patch"
 	"${FILESDIR}/${PN}-1.2.1-glib.patch"
 	"${FILESDIR}/${PN}-boost-1.51.0-fix.patch"
+	"${FILESDIR}/${PN}-1.2.1-libav9.patch"
 )
 
 src_configure() {

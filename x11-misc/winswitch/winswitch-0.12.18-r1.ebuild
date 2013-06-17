@@ -1,14 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.17.ebuild,v 1.2 2013/01/05 13:35:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18-r1.ebuild,v 1.1 2013/06/17 07:32:40 xmw Exp $
 
-EAPI=4
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="2"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit python distutils
+inherit distutils-r1
 
 DESCRIPTION="client server tool to start and control virtual desktops"
 HOMEPAGE="http://winswitch.org"
@@ -19,24 +17,26 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/gst-python
-	dev-python/imaging
-	dev-python/netifaces
-	dev-python/notify-python
-	dev-python/pycrypto
-	dev-python/pygobject:3
-	dev-python/pygtk
+RDEPEND="dev-python/gst-python[${PYTHON_USEDEP}]
+	dev-python/netifaces[${PYTHON_USEDEP}]
+	dev-python/notify-python[${PYTHON_USEDEP}]
+	dev-python/pycrypto[${PYTHON_USEDEP}]
+	dev-python/pygobject:3[${PYTHON_USEDEP}]
+	dev-python/pygtk[${PYTHON_USEDEP}]
 	dev-python/twisted
 	dev-python/twisted-conch
 	media-gfx/xloadimage
+	virtual/python-imaging[${PYTHON_USEDEP}]
 	x11-misc/devilspie"
 DEPEND=""
 
-src_prepare() {
-	einfo "Remove bundled Vash"
-	rm -r skel/share/Vash || die
+PATCHES=( "${FILESDIR}"/${P}-PIL.patch )
 
-	python_convert_shebangs -r 2 skel
+python_prepare_all() {
+	einfo "Remove bundled Vash"
+	rm -rf skel/share/Vash || die
+
+	distutils-r1_python_prepare_all
 }
 
 pkg_postinst() {
