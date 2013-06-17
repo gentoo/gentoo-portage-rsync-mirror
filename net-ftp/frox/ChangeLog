@@ -1,6 +1,22 @@
 # ChangeLog for net-ftp/frox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.20 2012/07/29 17:18:36 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.23 2013/06/17 14:41:03 pinkbyte Exp $
+
+  17 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> frox-0.7.18-r4.ebuild,
+  frox-0.7.18-r5.ebuild:
+  QA: add missing user eclass to 'inherit' call, escape some variables, remove
+  redundant 'die' in epatch
+
+  17 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -frox-0.7.18-r2.ebuild:
+  Drop old
+
+*frox-0.7.18-r5 (17 Jun 2013)
+
+  17 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> +frox-0.7.18-r5.ebuild,
+  +files/frox-0.7.18-config.patch, +files/frox.initd:
+  Revision bump: EAPI 5, epatch_user, remove unneeded MY_P, clean up in
+  src_install, set proper category for frox.conf manpages. Updated initscript,
+  fix for bug #450204
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> frox-0.7.18-r2.ebuild,
   frox-0.7.18-r4.ebuild:

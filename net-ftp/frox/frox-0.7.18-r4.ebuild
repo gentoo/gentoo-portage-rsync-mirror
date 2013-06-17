@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r4.ebuild,v 1.4 2012/07/29 17:18:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r4.ebuild,v 1.5 2013/06/17 14:41:03 pinkbyte Exp $
 
 EAPI=4
-inherit eutils autotools
+inherit eutils autotools user
 
 IUSE="clamav ssl transparent"
 
@@ -49,7 +49,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install
+	emake DESTDIR="${D}" install
 
 	keepdir /var/run/frox
 	keepdir /var/spool/frox
@@ -70,15 +70,15 @@ src_install() {
 	mv doc/frox.conf.man doc/frox.conf.man.8
 	doman doc/frox.man.8 doc/frox.conf.man.8
 
-	newinitd ${FILESDIR}/frox.rc frox
+	newinitd "${FILESDIR}"/frox.rc frox
 
 	cd src
-	epatch ${FILESDIR}/config-${PV}.patch || die "config patch failed"
+	epatch "${FILESDIR}/config-${PV}.patch"
 
-	cp frox.conf ${D}/etc/frox.conf.example
+	cp frox.conf "${D}/etc/frox.conf.example"
 	if use clamav ; then
 		sed -i \
 		  -e "s:^# VirusScanner.*:# VirusScanner '\"/usr/bin/clamscan\" \"%s\"':" \
-			${D}/etc/frox.conf.example || die
+			"${D}/etc/frox.conf.example" || die
 	fi
 }
