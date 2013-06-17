@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/gentoo-bashcomp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.54 2012/10/24 04:34:01 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.55 2013/06/17 04:57:54 dirtyepic Exp $
+
+  17 Jun 2013; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
 *gentoo-bashcomp-20121024 (24 Oct 2012)
 

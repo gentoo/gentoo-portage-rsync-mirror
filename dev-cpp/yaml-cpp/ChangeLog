@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/yaml-cpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/ChangeLog,v 1.7 2013/05/20 02:09:05 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/ChangeLog,v 1.8 2013/06/17 04:57:02 bicatali Exp $
+
+  17 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> yaml-cpp-0.5.1.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *yaml-cpp-0.5.1 (20 May 2013)
 
@@ -31,4 +34,3 @@
   16 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> +yaml-cpp-0.2.7.ebuild,
   +metadata.xml:
   Initial commit of this library. Closes the bug #293492.
-

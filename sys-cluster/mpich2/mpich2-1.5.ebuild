@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.5.ebuild,v 1.7 2013/02/28 14:33:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.5.ebuild,v 1.8 2013/06/17 04:53:03 bicatali Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/${MY
 
 SLOT="0"
 LICENSE="mpich2"
-KEYWORDS="amd64 hppa ppc ppc64 x86"
+KEYWORDS="amd64 hppa ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="+cxx doc fortran mpi-threads romio threads"
 
 COMMON_DEPEND="
