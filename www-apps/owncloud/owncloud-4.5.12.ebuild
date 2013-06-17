@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.5.12.ebuild,v 1.1 2013/06/06 21:29:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.5.12.ebuild,v 1.2 2013/06/17 18:28:08 voyageur Exp $
 
 EAPI=5
 
@@ -16,10 +16,10 @@ IUSE="+curl mysql postgres +sqlite"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 DEPEND=""
-RDEPEND="|| ( >=dev-lang/php-5.4.9[curl?,gd,hash,json,mysql?,pdo,postgres?,simplexml,sqlite?,xmlwriter,zip]
-	sqlite? ( <dev-lang/php-5.4.9[curl?,gd,hash,json,mysql?,pdo,postgres?,simplexml,sqlite3,xmlwriter,zip] )
+RDEPEND="|| ( >=dev-lang/php-5.4.9[curl?,filter,gd,hash,json,mysql?,pdo,postgres?,simplexml,sqlite?,xmlwriter,zip]
+	sqlite? ( <dev-lang/php-5.4.9[curl?,filter,gd,hash,json,mysql?,pdo,postgres?,simplexml,sqlite3,xmlwriter,zip] )
 	!sqlite? (
-	<dev-lang/php-5.4.9[curl?,gd,hash,json,mysql?,pdo,postgres?,simplexml,xmlwriter,zip] ) )"
+	<dev-lang/php-5.4.9[curl?,filter,gd,hash,json,mysql?,pdo,postgres?,simplexml,xmlwriter,zip] ) )"
 need_httpd_cgi
 need_php_httpd
 

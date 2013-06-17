@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.17 2013/05/31 15:57:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.18 2013/06/17 18:18:34 aballier Exp $
+
+*libcxx-0.0_p20130531-r1 (17 Jun 2013)
+
+  17 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +libcxx-0.0_p20130531-r1.ebuild, libcxx-9999.ebuild:
+  Generate a libc++.a ldscript for clang++ -stdlib=libc++ -static to work out
+  of the box.
 
 *libcxx-0.0_p20130531 (31 May 2013)
 

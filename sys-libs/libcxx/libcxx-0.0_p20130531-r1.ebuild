@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.10 2013/06/17 18:18:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20130531-r1.ebuild,v 1.1 2013/06/17 18:18:34 aballier Exp $
 
 EAPI=5
 

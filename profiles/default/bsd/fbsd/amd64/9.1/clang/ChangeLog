@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/ChangeLog,v 1.5 2013/06/01 14:17:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/ChangeLog,v 1.6 2013/06/17 18:16:39 aballier Exp $
+
+  17 Jun 2013; Alexis Ballier <aballier@gentoo.org> +package.unmask:
+  Unmask llvm/clang 3.3_rc since llvm 3.2 does not build with clang++
+  -stdlib=libc++
 
   01 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.use.force,
   package.use.mask:
