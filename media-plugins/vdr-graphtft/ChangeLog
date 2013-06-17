@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-graphtft
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.35 2013/03/31 12:25:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.36 2013/06/17 20:08:39 scarabeus Exp $
+
+  17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> vdr-graphtft-0.3.7.ebuild:
+  Include mem.h so we build against libav9. Fixes bug#443228.
 
 *vdr-graphtft-0.3.7 (31 Mar 2013)
 
@@ -203,4 +206,3 @@
   +vdr-graphtft-0.1.16_alpha.ebuild:
   initial ebuild, find older versions on overlay vdr-testing; Thanks to
   T.Kost, T.Dressler, S.Grebe for testing on graphtft-fe part
-
