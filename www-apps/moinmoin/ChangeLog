@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.93 2013/04/21 21:08:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.94 2013/06/17 02:41:49 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> moinmoin-1.9.7-r1.ebuild,
+  moinmoin-1.9.7.ebuild:
+  Fix python targets as flask was downrated
 
 *moinmoin-1.9.7-r1 (21 Apr 2013)
 

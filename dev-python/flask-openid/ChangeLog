@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-openid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-openid/ChangeLog,v 1.6 2013/06/09 17:15:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-openid/ChangeLog,v 1.7 2013/06/17 02:31:31 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> flask-openid-1.1.1-r1.ebuild:
+  Fix python targets as flask was downrated
 
 *flask-openid-1.1.1-r1 (09 Jun 2013)
 

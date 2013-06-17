@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.78 2013/05/25 07:45:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.79 2013/06/17 02:59:33 radhermit Exp $
+
+  17 Jun 2013; Tim Harder <radhermit@gentoo.org> -colorschemes-20111107.ebuild:
+  Remove old.
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> colorschemes-20130124.ebuild:
   Stable for sparc, wrt bug #469780

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-wtf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-wtf/ChangeLog,v 1.1 2013/03/28 04:41:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-wtf/ChangeLog,v 1.2 2013/06/17 02:38:37 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> flask-wtf-0.8.3.ebuild:
+  Fix python targets as flask was downrated
 
 *flask-wtf-0.8.3 (28 Mar 2013)
 

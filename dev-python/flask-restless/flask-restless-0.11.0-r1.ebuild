@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.11.0-r1.ebuild,v 1.2 2013/06/10 16:52:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.11.0-r1.ebuild,v 1.3 2013/06/17 02:33:15 patrick Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1
 

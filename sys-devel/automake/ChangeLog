@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.196 2013/05/15 20:59:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.197 2013/06/17 02:58:57 vapier Exp $
+
+*automake-1.13.3 (17 Jun 2013)
+*automake-1.13.4 (17 Jun 2013)
+
+  17 Jun 2013; Mike Frysinger <vapier@gentoo.org> +automake-1.13.3.ebuild,
+  +automake-1.13.4.ebuild:
+  Version bump.
 
 *automake-1.13.2 (15 May 2013)
 

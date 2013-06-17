@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flask-sqlalchemy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-sqlalchemy/ChangeLog,v 1.9 2013/05/27 13:25:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-sqlalchemy/ChangeLog,v 1.10 2013/06/17 02:34:41 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org>
+  flask-sqlalchemy-0.16-r1.ebuild:
+  Fix python targets as flask was downrated
 
 *flask-sqlalchemy-0.16-r1 (27 May 2013)
 
