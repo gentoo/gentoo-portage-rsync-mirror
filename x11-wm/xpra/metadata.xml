@@ -6,13 +6,7 @@
 	<name>Michael Weber</name>
 </maintainer>
 <upstream>
-    <maintainer status="active">
-    <email>tim@opencircuitdesign.com</email>
-	<name>Timothy Edwards</name>
-    </maintainer>
-    <changelog>http://www.opencircuitdesign.com/netgen/history.html</changelog>
-    <doc lang="en">http://www.opencircuitdesign.com/netgen/reference.html</doc>
-	<bugs-to>tim@opencircuitdesign.com</bugs-to>
+	<bugs-to>https://www.xpra.org/trac/report</bugs-to>
 </upstream>
 <use>
 	<flag name='server'>Build server-side code</flag>

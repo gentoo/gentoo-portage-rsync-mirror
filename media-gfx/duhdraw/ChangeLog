@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/duhdraw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.16 2012/03/18 18:36:43 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.18 2013/06/17 07:23:43 radhermit Exp $
+
+  17 Jun 2013; Tim Harder <radhermit@gentoo.org> -duhdraw-2.8.12.ebuild,
+  -files/duhdraw-2.8.12-macos.patch, -files/duhdraw-2.8.12-prestrip.patch:
+  Remove old.
+
+*duhdraw-2.8.13-r1 (17 Jun 2013)
+
+  17 Jun 2013; Tim Harder <radhermit@gentoo.org> +duhdraw-2.8.13-r1.ebuild:
+  Revbump, update to EAPI 5 and respect LDFLAGS (bug #335177, patch by Michael
+  Mair-Keimberger).
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118003.
