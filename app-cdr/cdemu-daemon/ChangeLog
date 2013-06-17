@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdemu-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/ChangeLog,v 1.1 2013/01/28 00:22:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/ChangeLog,v 1.2 2013/06/17 04:18:40 tetromino Exp $
+
+*cdemu-daemon-2.1.0 (17 Jun 2013)
+
+  17 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cdemu-daemon-2.1.0.ebuild,
+  +files/cdemu-daemon-2.1.0-DISABLE_DEPRECATED.patch:
+  Version bump, adds support for non-blocking I/O and device addition/removal
+  (bug #472784, thanks to Henrik Stokseth and Rafał Mużyło).
 
 *cdemu-daemon-2.0.0 (28 Jan 2013)
 *cdemu-daemon-1.5.0 (28 Jan 2013)

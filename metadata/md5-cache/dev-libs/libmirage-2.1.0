@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
+DEPEND=>=app-arch/bzip2-1:= >=app-arch/xz-utils-5:= >=dev-libs/glib-2.24:2 >=media-libs/libsamplerate-0.1:= >=media-libs/libsndfile-1.0:= sys-libs/zlib:= introspection? ( >=dev-libs/gobject-introspection-1.30 ) dev-util/desktop-file-utils virtual/pkgconfig doc? ( dev-util/gtk-doc ) sys-devel/make >=dev-util/cmake-2.8.5 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=CD and DVD image access library
+EAPI=5
+HOMEPAGE=http://cdemu.org
+IUSE=doc +introspection
+KEYWORDS=~amd64 ~hppa ~x86
+LICENSE=GPL-2+
+RDEPEND=>=app-arch/bzip2-1:= >=app-arch/xz-utils-5:= >=dev-libs/glib-2.24:2 >=media-libs/libsamplerate-0.1:= >=media-libs/libsndfile-1.0:= sys-libs/zlib:= introspection? ( >=dev-libs/gobject-introspection-1.30 )
+SLOT=0/8
+SRC_URI=mirror://sourceforge/cdemu/libmirage-2.1.0.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	66012c9c0ee3c91534d0eb257ff9b95c	eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=0255507122ba6f363f56ac75c7eec107

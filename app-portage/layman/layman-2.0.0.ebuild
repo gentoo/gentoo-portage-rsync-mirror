@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0.ebuild,v 1.11 2013/01/22 15:48:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0.ebuild,v 1.13 2013/06/17 04:27:34 dolsen Exp $
 
-EAPI="4"
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="2:2.6"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
-PYTHON_USE_WITH="xml(+)"
+EAPI="5"
 
-inherit eutils distutils prefix
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="xml"
+
+inherit eutils distutils-r1 prefix
 
 DESCRIPTION="Tool to manage Gentoo overlays"
 HOMEPAGE="http://layman.sourceforge.net/"
@@ -19,10 +18,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bazaar cvs darcs +git mercurial subversion test"
 
-COMMON_DEPS="dev-lang/python"
-DEPEND="${COMMON_DEPS}
-	test? ( dev-vcs/subversion )"
-RDEPEND="${COMMON_DEPS}
+DEPEND="test? ( dev-vcs/subversion )"
+
+RDEPEND="
 	bazaar? ( dev-vcs/bzr )
 	cvs? ( dev-vcs/cvs )
 	darcs? ( dev-vcs/darcs )
@@ -33,28 +31,28 @@ RDEPEND="${COMMON_DEPS}
 			>=dev-vcs/subversion-1.5.4[webdav-neon]
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)
-	)"
+	)
+	virtual/python-argparse[${PYTHON_USEDEP}]
+	"
 
-src_prepare() {
+python_prepare_all()  {
+	python_export_best
 	eprefixify etc/layman.cfg layman/config.py
 	epatch "${FILESDIR}"/layman-2.0.0.doctest.patch
 }
 
-src_test() {
-	testing() {
-		for suite in layman/tests/{dtest,external}.py ; do
-			PYTHONPATH="." "$(PYTHON)" ${suite} \
-					|| die "test suite '${suite}' failed"
-		done
-	}
-	python_execute_function testing
+python_test() {
+	for suite in layman/tests/{dtest,external}.py ; do
+		PYTHONPATH="." "${PYTHON}" ${suite} \
+				|| die "test suite '${suite}' failed"
+	done
 }
 
-src_install() {
-	distutils_src_install
+python_install_all() {
+	distutils-r1_python_install_all
 
 	insinto /etc/layman
-	doins etc/layman.cfg || die
+	doins etc/layman.cfg
 
 	doman doc/layman.8
 	dohtml doc/layman.8.html
@@ -64,8 +62,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
-
 	# now run layman's update utility
 	einfo "Running layman-updater..."
 	"${EROOT}"/usr/bin/layman-updater

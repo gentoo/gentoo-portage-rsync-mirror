@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.177 2013/01/22 15:48:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.179 2013/06/17 04:27:34 dolsen Exp $
+
+  17 Jun 2013; Brian Dolbec <dolsen@gentoo.org> layman-2.0.0.ebuild,
+  layman-9999.ebuild:
+  Add virtual/argparse dep, Bug 469612.
+
+  17 Jun 2013; Brian Dolbec <dolsen@gentoo.org> -layman-2.0.0_rc5.ebuild,
+  layman-2.0.0.ebuild, layman-9999.ebuild:
+  Migrate to distutils-r1, remove old.
 
   22 Jan 2013; Jeroen Roovers <jer@gentoo.org> layman-2.0.0.ebuild:
   Stable for HPPA (bug #451200).

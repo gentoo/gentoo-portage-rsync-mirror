@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/multiprocessing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/multiprocessing/ChangeLog,v 1.1 2013/06/08 14:28:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/multiprocessing/ChangeLog,v 1.2 2013/06/17 04:27:56 floppym Exp $
+
+  17 Jun 2013; Mike Gilbert <floppym@gentoo.org> multiprocessing-2.6.2.1.ebuild:
+  Fix PYTHON_COMPAT, DESCRIPTION, and HOMEPAGE, thanks Arfrever.
 
 *multiprocessing-2.6.2.1 (08 Jun 2013)
 

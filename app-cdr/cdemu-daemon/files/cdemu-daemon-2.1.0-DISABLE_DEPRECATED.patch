@@ -1,0 +1,35 @@
+From 0d9ce2618014c41b5aefce8355af95b0d1119d85 Mon Sep 17 00:00:00 2001
+From: Henrik Stokseth <hstokset@users.sourceforge.net>
+Date: Mon, 10 Jun 2013 03:42:49 +0200
+Subject: [PATCH] All: Stop defining G_DISABLE_DEPRECATED.
+
+Defining G_DISABLE_DEPRECATED is a bad idea. For one it means deprecated
+functions etc. is effectively removed by the preprocessor. This breaks
+compilation on certain setups (read: Launchpad compiler farm), since
+the functions are not declared and therefore you get warnings about
+the calls being implicit. And on setups that compiles the code, the
+resulting code might result in undefined behaviour, in particular on
+64-bit platforms.
+
+Note that on supported compilers such as GCC, you will still get warnings
+about calling deprecated functions without this define in place.
+---
+ cdemu-daemon/CMakeLists.txt   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cdemu-daemon/CMakeLists.txt b/cdemu-daemon/CMakeLists.txt
+index 1320266..11e6b33 100644
+--- a/cdemu-daemon/CMakeLists.txt
++++ b/cdemu-daemon/CMakeLists.txt
+@@ -49,7 +49,7 @@ configure_file (
+ 
+ # Global definitions
+ add_definitions (-std=gnu99) #NOTE: Compilation bugs out on using signals and -std=c99
+-add_definitions (-DHAVE_CONFIG_H -DG_DISABLE_DEPRECATED)
++add_definitions (-DHAVE_CONFIG_H)
+ 
+ if (CMAKE_COMPILER_IS_GNUCC)
+     add_definitions (-Wall -Wextra -Wshadow -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align)
+-- 
+1.8.2.1
+
