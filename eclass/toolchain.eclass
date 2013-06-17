@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.593 2013/05/24 21:07:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.594 2013/06/17 02:23:45 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1147,6 +1147,7 @@ gcc_do_configure() {
 		*-freebsd*)		 needed_libc=freebsd-lib;;
 		*-gnu*)			 needed_libc=glibc;;
 		*-klibc)		 needed_libc=klibc;;
+		*-musl*)		 needed_libc=musl;;
 		*-uclibc*)
 			if ! echo '#include <features.h>' | \
 			   $(tc-getCPP ${CTARGET}) -E -dD - 2>/dev/null | \

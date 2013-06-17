@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-babel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.5 2013/06/09 06:24:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.6 2013/06/17 02:25:14 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> flask-babel-0.8-r1.ebuild:
+  Fix python targets as flask was downrated
 
 *flask-babel-0.8-r1 (09 Jun 2013)
 
