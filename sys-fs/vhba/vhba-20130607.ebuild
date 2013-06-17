@@ -1,27 +1,28 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20110915.ebuild,v 1.10 2012/12/03 02:23:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20130607.ebuild,v 1.1 2013/06/17 00:43:42 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils linux-mod user udev
+inherit linux-mod user udev
 
 MY_P=vhba-module-${PV}
 DESCRIPTION="Virtual (SCSI) Host Bus Adapter kernel module for the CDEmu suite"
 HOMEPAGE="http://cdemu.org"
-SRC_URI="mirror://sourceforge/cdemu/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/cdemu/${MY_P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 RDEPEND="virtual/udev"
-DEPEND=""
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 MODULE_NAMES="vhba(block:${S})"
-BUILD_TARGETS=all
+BUILD_TARGETS=modules
 
 pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_SR ~CHR_DEV_SG"
@@ -33,11 +34,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Build failure with >=3.4-rc1 and CONFIG_ENABLE_WARN_DEPRECATED, #411459
-	epatch "${FILESDIR}/${P}-3.4-kmap_atomic.patch"
 	# Avoid "make jobserver unavailable" warning and -Werror problems
-	sed -e 's:\t$(KMAKE):\t+$(KMAKE):g' \
-		-e '/EXTRA_CFLAGS/s/-Werror$/-Wall/' \
+	sed -e '/ccflags/s/-Werror$/-Wall/' \
 		-i Makefile || die "sed failed"
 }
 
