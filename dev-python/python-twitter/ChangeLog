@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/python-twitter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.11 2013/05/10 05:05:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.13 2013/06/17 09:07:32 djc Exp $
+
+  17 Jun 2013; Dirkjan Ochtman <djc@gentoo.org> -python-twitter-0.8.1.ebuild,
+  -python-twitter-0.8.2.ebuild:
+  Remove old files.
+
+*python-twitter-1.0 (17 Jun 2013)
+
+  17 Jun 2013; Dirkjan Ochtman <djc@gentoo.org> +python-twitter-1.0.ebuild,
+  python-twitter-0.8.5.ebuild:
+  Version bump python-twitter to 1.0, port to distutils-r1.
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> python-twitter-0.8.1.ebuild,
   python-twitter-0.8.2.ebuild, python-twitter-0.8.5.ebuild:

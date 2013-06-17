@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7948 2013/06/17 07:37:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7949 2013/06/17 09:22:22 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Mask sys-fs/archfs for removal
 
   17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   bump libav version in mask.

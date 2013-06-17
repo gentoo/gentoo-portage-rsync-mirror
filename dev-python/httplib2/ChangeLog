@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/httplib2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.39 2012/12/30 20:25:48 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.40 2013/06/17 09:20:59 djc Exp $
+
+*httplib2-0.8 (17 Jun 2013)
+
+  17 Jun 2013; Dirkjan Ochtman <djc@gentoo.org> +httplib2-0.8.ebuild:
+  Version bump httplib2 to 0.8.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> httplib2-0.7.6.ebuild:
   Stable for alpha, wrt bug #447910

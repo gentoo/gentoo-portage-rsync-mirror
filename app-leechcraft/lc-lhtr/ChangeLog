@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-lhtr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lhtr/ChangeLog,v 1.4 2013/06/11 17:29:58 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lhtr/ChangeLog,v 1.5 2013/06/17 09:02:53 maksbotan Exp $
+
+  17 Jun 2013; Maxim Koltsov <maksbotan@gentoo.org> lc-lhtr-9999.ebuild:
+  Add app-text/htmltidy dependency, thanks to 0xd34df00d.
 
 *lc-lhtr-0.5.97 (11 Jun 2013)
 

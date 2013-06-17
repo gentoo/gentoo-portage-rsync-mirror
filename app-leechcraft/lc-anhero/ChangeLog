@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-anhero
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-anhero/ChangeLog,v 1.4 2013/06/11 17:12:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-anhero/ChangeLog,v 1.5 2013/06/17 09:07:41 maksbotan Exp $
+
+  17 Jun 2013; Maxim Koltsov <maksbotan@gentoo.org> lc-anhero-9999.ebuild:
+  Drop kdelibs dependency, add gdb RDEPEND. Thanks to 0xd34df00d.
 
 *lc-anhero-0.5.97 (11 Jun 2013)
 

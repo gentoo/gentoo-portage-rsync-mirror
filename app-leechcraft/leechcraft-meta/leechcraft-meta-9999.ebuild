@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.5 2013/05/29 10:52:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.6 2013/06/17 09:10:42 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://leechcraft.org/"
 SLOT="0"
 KEYWORDS=""
 LICENSE="GPL-3"
-IUSE="kde"
+IUSE=""
 
 RDEPEND="
 		~app-leechcraft/lc-popishu-${PV}
@@ -23,7 +23,7 @@ RDEPEND="
 		~app-leechcraft/lc-networkmonitor-${PV}
 		~app-leechcraft/lc-azoth-${PV}
 		~app-leechcraft/lc-advancednotifications-${PV}
-		kde? ( ~app-leechcraft/lc-anhero-${PV} )
+		~app-leechcraft/lc-anhero-${PV}
 		~app-leechcraft/lc-auscrie-${PV}
 		~app-leechcraft/lc-core-${PV}
 		~app-leechcraft/lc-cstp-${PV}

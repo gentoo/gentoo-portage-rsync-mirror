@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/leechcraft-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.8 2013/06/11 17:50:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.9 2013/06/17 09:10:42 maksbotan Exp $
+
+  17 Jun 2013; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-meta-9999.ebuild:
+  Drop kde USE flag, thanks to 0xd34df00d.
 
 *leechcraft-meta-0.5.97 (11 Jun 2013)
 
