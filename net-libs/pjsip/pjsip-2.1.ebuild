@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-2.1.ebuild,v 1.1 2013/05/04 20:53:40 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-2.1.ebuild,v 1.2 2013/06/17 06:46:20 pinkbyte Exp $
 
 EAPI="2"
 
@@ -12,14 +12,15 @@ SRC_URI="http://www.pjsip.org/release/${PV}/pjproject-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cli doc examples ext-sound g711 g722 g7221 gsm ilbc l16
-oss python speex"
+IUSE="alsa cli doc examples ext-sound ffmpeg g711 g722 g7221 gsm
+ilbc l16 oss python speex"
 #small-filter large-filter speex-aec ssl
 
 DEPEND="alsa? ( media-libs/alsa-lib )
 	gsm? ( media-sound/gsm )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
-	speex? ( media-libs/speex )"
+	speex? ( media-libs/speex )
+	ffmpeg? ( virtual/ffmpeg )"
 
 RDEPEND="${DEPEND}"
 
@@ -34,6 +35,7 @@ src_configure() {
 		$(use_enable alsa sound) \
 		$(use_enable oss) \
 		$(use_enable ext-sound) \
+		$(use ffmpeg || echo '--disable-ffmpeg') \
 		$(use_enable g711 g711-codec) \
 		$(use_enable l16 l16-codec) \
 		$(use_enable g722 g722-codec) \
