@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.51 2013/06/12 14:41:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.52 2013/06/17 00:05:16 mschiff Exp $
+
+  17 Jun 2013; Marc Schiffbauer <mschiff@gentoo.org> telnet-bsd-1.2-r1.ebuild:
+  Add eaclocal to src_prepare. Should fix bug #473096. Thanks to Mark
+  Zhitomirski.
 
   12 Jun 2013; Jeroen Roovers <jer@gentoo.org> telnet-bsd-1.2-r1.ebuild:
   Enable -fpie for HPPA.

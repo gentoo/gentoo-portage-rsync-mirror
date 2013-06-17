@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.2-r1.ebuild,v 1.24 2013/06/12 14:41:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.2-r1.ebuild,v 1.25 2013/06/17 00:05:16 mschiff Exp $
 
 EAPI=5
 inherit eutils autotools toolchain-funcs
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fbsd.patch
+	eaclocal
 	eautoreconf
 }
 
