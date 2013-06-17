@@ -1,0 +1,141 @@
+--- hubbub-0.1.2/test/csdetect.c
++++ hubbub-0.1.2/test/csdetect.c
+@@ -108,7 +108,7 @@
+ 	static int testnum;
+ 
+ 	assert(hubbub_charset_extract(data, len,
+-			&mibenum, &source) == HUBBUB_OK);
++			&mibenum, &source) == (parserutils_error)HUBBUB_OK);
+ 
+ 	assert(mibenum != 0);
+ 
+--- hubbub-0.1.2/test/parser.c
++++ hubbub-0.1.2/test/parser.c
+@@ -24,7 +24,7 @@
+ 	hubbub_parser *parser;
+ 	hubbub_parser_optparams params;
+ 	FILE *fp;
+-	size_t len, origlen;
++	size_t len;
+ 	uint8_t *buf = alloca(CHUNK_SIZE);
+ 	const char *charset;
+ 	hubbub_charset_source cssource;
+@@ -46,7 +46,7 @@
+ 	}
+ 
+ 	fseek(fp, 0, SEEK_END);
+-	origlen = len = ftell(fp);
++	len = ftell(fp);
+ 	fseek(fp, 0, SEEK_SET);
+ 
+ 	while (len > 0) {
+--- hubbub-0.1.2/test/tokeniser.c
++++ hubbub-0.1.2/test/tokeniser.c
+@@ -26,7 +26,7 @@
+ 	hubbub_tokeniser *tok;
+ 	hubbub_tokeniser_optparams params;
+ 	FILE *fp;
+-	size_t len, origlen;
++	size_t len;
+ #define CHUNK_SIZE (4096)
+ 	uint8_t buf[CHUNK_SIZE];
+ 
+@@ -44,7 +44,7 @@
+ 	params.token_handler.handler = token_handler;
+ 	params.token_handler.pw = NULL;
+ 	assert(hubbub_tokeniser_setopt(tok, HUBBUB_TOKENISER_TOKEN_HANDLER,
+-			&params) == HUBBUB_OK);
++			&params) == (hubbub_error)HUBBUB_OK);
+ 
+ 	fp = fopen(argv[1], "rb");
+ 	if (fp == NULL) {
+@@ -53,7 +53,7 @@
+ 	}
+ 
+ 	fseek(fp, 0, SEEK_END);
+-	origlen = len = ftell(fp);
++	len = ftell(fp);
+ 	fseek(fp, 0, SEEK_SET);
+ 
+ 	while (len > 0) {
+@@ -63,7 +63,7 @@
+                         break;
+                 
+ 		assert(parserutils_inputstream_append(stream,
+-				buf, bytes_read) == HUBBUB_OK);
++				buf, bytes_read) == (parserutils_error)HUBBUB_OK);
+
+ 
+ 		len -= bytes_read;
+ 
+--- hubbub-0.1.2/test/tokeniser2.c
++++ hubbub-0.1.2/test/tokeniser2.c
+@@ -151,7 +149,7 @@
+ 					ctx->last_start_tag);
+ 
+ 			assert(parserutils_inputstream_append(stream,
+-				buf, len - 1) == HUBBUB_OK);
++				buf, len - 1) == (parserutils_error)HUBBUB_OK);
+ 
+ 			assert(hubbub_tokeniser_run(tok) == HUBBUB_OK);
+ 		}
+@@ -196,10 +194,10 @@
+ 				&params) == HUBBUB_OK);
+ 
+ 		assert(parserutils_inputstream_append(stream,
+-				ctx->input, ctx->input_len) == HUBBUB_OK);
++				ctx->input, ctx->input_len) == (parserutils_error)HUBBUB_OK);
+ 
+ 		assert(parserutils_inputstream_append(stream, NULL, 0) ==
+-				HUBBUB_OK);
++				(parserutils_error)HUBBUB_OK);
+ 
+ 		printf("Input: '%.*s' (%d)\n", (int) ctx->input_len,
+ 				(const char *) ctx->input, 
+--- hubbub-0.1.2/test/tokeniser3.c
++++ hubbub-0.1.2/test/tokeniser3.c
+@@ -148,7 +146,7 @@
+ 					ctx->last_start_tag);
+ 
+ 			assert(parserutils_inputstream_append(stream,
+-				buf, len - 1) == HUBBUB_OK);
++				buf, len - 1) == (parserutils_error)HUBBUB_OK);
+ 
+ 			assert(hubbub_tokeniser_run(tok) == HUBBUB_OK);
+ 		}
+@@ -197,13 +197,13 @@
+ 		for (j = 0; j < ctx->input_len; j++) {
+ 			assert(parserutils_inputstream_append(stream,
+ 					ctx->input + j, 1) ==
+-							HUBBUB_OK);
++						(parserutils_error)HUBBUB_OK);
+ 
+ 			assert(hubbub_tokeniser_run(tok) == HUBBUB_OK);
+ 		}
+ 
+ 		assert(parserutils_inputstream_append(stream, NULL, 0) ==
+-				HUBBUB_OK);
++				(parserutils_error)HUBBUB_OK);
+ 
+ 		assert(hubbub_tokeniser_run(tok) == HUBBUB_OK);
+ 
+--- hubbub-0.1.2/test/tree.c
++++ hubbub-0.1.2/test/tree.c
+@@ -88,7 +88,7 @@
+ 	hubbub_parser *parser;
+ 	hubbub_parser_optparams params;
+ 	FILE *fp;
+-	size_t len, origlen;
++	size_t len;
+ 	uint8_t *buf = alloca(CHUNK_SIZE);
+ 	const char *charset;
+ 	hubbub_charset_source cssource;
+@@ -123,7 +123,7 @@
+ 	}
+ 
+ 	fseek(fp, 0, SEEK_END);
+-	origlen = len = ftell(fp);
++	len = ftell(fp);
+ 	fseek(fp, 0, SEEK_SET);
+ 
+ 	while (len > 0) {

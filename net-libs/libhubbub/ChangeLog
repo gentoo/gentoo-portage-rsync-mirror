@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/libhubbub
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/ChangeLog,v 1.1 2013/06/17 17:23:28 xmw Exp $
+
+*libhubbub-0.2.0 (17 Jun 2013)
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/libhubbub-0.2.0-error.patch, +libhubbub-0.2.0.ebuild, +metadata.xml:
+  Version bump (bug 470720), multilib build, preparations for netsurf eclass.

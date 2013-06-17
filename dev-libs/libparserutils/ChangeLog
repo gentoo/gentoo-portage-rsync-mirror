@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libparserutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/ChangeLog,v 1.8 2013/02/27 09:41:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/ChangeLog,v 1.9 2013/06/17 17:01:40 xmw Exp $
+
+*libparserutils-0.1.2 (17 Jun 2013)
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org> +libparserutils-0.1.2.ebuild:
+  Version bump (bug 470720), multilib build, preparations for netsurf eclass.
 
   27 Feb 2013; Michael Weber <xmw@gentoo.org> libparserutils-0.1.1.ebuild:
   Fix unused variables.
