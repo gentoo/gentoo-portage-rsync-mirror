@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/rancid-2.3.8.ebuild,v 1.3 2013/03/03 12:06:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/rancid-2.3.8.ebuild,v 1.5 2013/06/17 10:22:08 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils readme.gentoo user
 
@@ -13,11 +13,13 @@ LICENSE="BSD-4"
 
 SLOT="0"
 RESTRICT="mirror"
-KEYWORDS="~amd64"
-IUSE="cvs subversion"
+KEYWORDS="~amd64 ~x86"
+IUSE="+cvs subversion"
 REQUIRED_USE="^^ ( cvs subversion )"
 
-DEPEND="dev-lang/perl
+# app-arch/par is blocker, due to bug #455838
+DEPEND="!app-arch/par
+	dev-lang/perl
 	dev-lang/tcl
 	dev-tcltk/expect
 	sys-apps/diffutils
