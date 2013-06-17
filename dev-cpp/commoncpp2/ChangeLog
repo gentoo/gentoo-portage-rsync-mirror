@@ -1,6 +1,25 @@
 # ChangeLog for dev-cpp/commoncpp2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.55 2010/10/23 22:24:23 halcy0n Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.57 2013/06/17 13:27:14 dev-zero Exp $
+
+*commoncpp2-1.8.1-r1 (17 Jun 2013)
+
+  17 Jun 2013; Tiziano Müller <dev-zero@gentoo.org> +commoncpp2-1.8.1-r1.ebuild,
+  +files/1.8.1-fix-no-ssl-build.patch, -commoncpp2-1.8.1.ebuild:
+  Fix openssl/gnutls selection and build without ssl.
+
+*commoncpp2-1.8.1 (17 Jun 2013)
+
+  17 Jun 2013; Tiziano Müller <dev-zero@gentoo.org> +commoncpp2-1.8.1.ebuild,
+  +files/1.8.1-autoconf-update.patch,
+  +files/1.8.1-configure_detect_netfilter.patch,
+  +files/1.8.1-fix-buffer-overflow.patch, -commoncpp2-1.6.1.ebuild,
+  -commoncpp2-1.6.2.ebuild, -commoncpp2-1.6.3.ebuild,
+  -files/1.6.1-autoconf.patch, -files/1.6.2-autoconf.patch,
+  -files/1.6.3-autoconf.patch, -files/commoncpp2-1.6.3-glibc-2.10.patch:
+  Version bump (bug #454704), also patch commoncpp2 to fix bugs #421383 (buffer
+  overflow) and #467628 (automake-1.13 build failures). Update ebuild to EAPI 5
+  and add USE=static-libs (bug #439302). Drop old versions and their patches.
 
   23 Oct 2010; Mark Loeser <halcy0n@gentoo.org> commoncpp2-1.8.0.ebuild:
   Mark stable on ppc64; bug #321931
