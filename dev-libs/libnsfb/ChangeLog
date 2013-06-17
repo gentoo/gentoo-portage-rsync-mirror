@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libnsfb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.5 2013/02/28 07:39:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.6 2013/06/17 19:44:35 xmw Exp $
+
+*libnsfb-0.1.0 (17 Jun 2013)
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/libnsfb-0.1.0-autodetect.patch, +libnsfb-0.1.0.ebuild,
+  -libnsfb-9999.ebuild:
+  Version bump (bug 470720), multilib build, preparations for netsurf eclass.
 
   28 Feb 2013; Michael Weber <xmw@gentoo.org> libnsfb-0.0.2.ebuild,
   libnsfb-9999.ebuild:

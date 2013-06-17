@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-0.36.0.ebuild,v 1.1 2013/06/17 02:39:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-0.36.0.ebuild,v 1.2 2013/06/17 19:48:55 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ if [[ ${PV} == 9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
 LICENSE="GPL-3"

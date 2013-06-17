@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.25 2013/06/17 17:31:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.26 2013/06/17 20:00:37 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -135,8 +135,8 @@ freebsd_multilib_multibuild_wrapper() {
 	# This assumes MULTILIB_VARIANTS contains only valid ABIs.
 	local ABI=${MULTIBUILD_VARIANT}
 
-	# First, save the variables: CFLAGS, CXXFLAGS, LDFLAGS and mymakeopts.
-	for i in CFLAGS CXXFLAGS LDFLAGS mymakeopts ; do
+	# First, save the variables: CFLAGS, CXXFLAGS, LDFLAGS, LDADD and mymakeopts.
+	for i in CFLAGS CXXFLAGS LDFLAGS LDADD mymakeopts ; do
 		export ${i}_SAVE="${!i}"
 	done
 
@@ -159,7 +159,7 @@ freebsd_multilib_multibuild_wrapper() {
 	CTARGET="${CHOST}" "$@"
 	
 	# Restore the variables now.
-	for i in CFLAGS CXXFLAGS LDFLAGS mymakeopts ; do
+	for i in CFLAGS CXXFLAGS LDFLAGS LDADD mymakeopts ; do
 		ii="${i}_SAVE"
 		export ${i}="${!ii}"
 	done
