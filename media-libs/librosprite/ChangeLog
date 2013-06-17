@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/librosprite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/librosprite/ChangeLog,v 1.4 2013/02/28 08:09:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/librosprite/ChangeLog,v 1.5 2013/06/17 17:35:09 xmw Exp $
+
+*librosprite-0.1.0 (17 Jun 2013)
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org> +librosprite-0.1.0.ebuild,
+  -librosprite-9999.ebuild:
+  Version bump (bug 470720), multilib build, preparations for netsurf eclass.
 
   28 Feb 2013; Michael Weber <xmw@gentoo.org> librosprite-0.0.2.ebuild,
   librosprite-9999.ebuild:
