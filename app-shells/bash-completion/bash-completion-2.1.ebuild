@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1.ebuild,v 1.2 2013/06/04 01:54:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1.ebuild,v 1.3 2013/06/17 13:37:55 jer Exp $
 
 EAPI=5
 inherit prefix
@@ -33,6 +33,9 @@ src_prepare() {
 
 	# app-editors/vim-core:
 	rm -f completions/xxd
+
+	# net-misc/networkmanager:
+	rm -f completions/nmcli
 }
 
 src_configure() { :; } # no-op

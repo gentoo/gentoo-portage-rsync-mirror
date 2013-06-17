@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.57 2013/06/17 13:27:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.58 2013/06/17 13:31:14 dev-zero Exp $
+
+  17 Jun 2013; Tiziano Müller <dev-zero@gentoo.org>
+  -files/1.8.1-fix-no-ssl-build.patch, commoncpp2-1.8.1-r1.ebuild:
+  Remove faulty patch without rev-bump since just committed.
 
 *commoncpp2-1.8.1-r1 (17 Jun 2013)
 

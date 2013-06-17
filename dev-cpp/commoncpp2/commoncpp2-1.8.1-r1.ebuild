@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.1-r1.ebuild,v 1.1 2013/06/17 13:27:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.1-r1.ebuild,v 1.2 2013/06/17 13:31:14 dev-zero Exp $
 
 EAPI="5"
 
@@ -27,8 +27,7 @@ src_prepare() {
 		"${FILESDIR}/1.8.1-configure_detect_netfilter.patch" \
 		"${FILESDIR}/1.8.0-glibc212.patch" \
 		"${FILESDIR}/1.8.1-autoconf-update.patch" \
-		"${FILESDIR}/1.8.1-fix-buffer-overflow.patch" \
-		"${FILESDIR}/1.8.1-fix-no-ssl-build.patch"
+		"${FILESDIR}/1.8.1-fix-buffer-overflow.patch"
 	eautoreconf
 }
 
