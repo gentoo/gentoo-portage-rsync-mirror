@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/crystal-0.2.4.ebuild,v 1.4 2012/03/06 20:37:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/crystal-0.2.4.ebuild,v 1.5 2013/06/16 23:40:08 tristan Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="The crystal MUD client"
 HOMEPAGE="http://www.evilmagic.org/crystal/"
@@ -14,19 +14,20 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	sys-libs/ncurses
 	dev-libs/openssl
 	virtual/libiconv"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-build.patch
 	# avoid colliding with xscreensaver (bug #281191)
-	sed -i \
-		-e '/^man_MANS/s/crystal/crystal-mud/' \
-		Makefile.in \
-		|| die "sed failed"
 	mv crystal.6 crystal-mud.6
+	eautoreconf
 }
 
 src_configure() {

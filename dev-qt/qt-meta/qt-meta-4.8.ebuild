@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/qt-meta-4.8.ebuild,v 1.2 2013/04/08 15:07:15 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/qt-meta-4.8.ebuild,v 1.3 2013/06/16 23:59:57 pesa Exp $
 
-EAPI=2
+EAPI=5
 
-DESCRIPTION="Cross-platform application development framework"
-HOMEPAGE="http://qt-project.org/ http://qt.nokia.com/"
+DESCRIPTION="Cross-platform application development framework (meta package)"
+HOMEPAGE="http://qt-project.org/ http://qt.digia.com/"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 SLOT="4"
@@ -14,17 +14,17 @@ IUSE="dbus kde opengl openvg qt3support"
 
 DEPEND=""
 RDEPEND="
-	>=dev-qt/qthelp-${PV}:4
+	qt3support? ( >=dev-qt/qt3support-${PV}:4 )
 	>=dev-qt/qtcore-${PV}:4
 	dbus? ( >=dev-qt/qtdbus-${PV}:4 )
 	>=dev-qt/qtdeclarative-${PV}:4
 	>=dev-qt/qtgui-${PV}:4
+	>=dev-qt/qthelp-${PV}:4
 	>=dev-qt/qtmultimedia-${PV}:4
 	opengl? ( >=dev-qt/qtopengl-${PV}:4 )
 	openvg? ( >=dev-qt/qtopenvg-${PV}:4 )
 	kde? ( media-libs/phonon )
 	!kde? ( || ( >=dev-qt/qtphonon-${PV}:4 media-libs/phonon ) )
-	qt3support? ( >=dev-qt/qt3support-${PV}:4 )
 	>=dev-qt/qtscript-${PV}:4
 	>=dev-qt/qtsql-${PV}:4
 	>=dev-qt/qtsvg-${PV}:4
@@ -32,11 +32,3 @@ RDEPEND="
 	>=dev-qt/qtwebkit-${PV}:4
 	>=dev-qt/qtxmlpatterns-${PV}:4
 "
-
-pkg_postinst() {
-	echo
-	einfo "Please note that this meta package is only provided for convenience."
-	einfo "No packages should depend directly on this meta package, but on the"
-	einfo "specific split Qt packages needed."
-	echo
-}

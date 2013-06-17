@@ -1,10 +1,10 @@
-DEFINED_PHASES=postinst
-DESCRIPTION=Cross-platform application development framework
-EAPI=2
-HOMEPAGE=http://qt-project.org/ http://qt.nokia.com/
+DEFINED_PHASES=-
+DESCRIPTION=Cross-platform application development framework (meta package)
+EAPI=5
+HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
 IUSE=dbus kde opengl openvg qt3support
 KEYWORDS=amd64 ~arm ~ia64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=|| ( LGPL-2.1 GPL-3 )
-RDEPEND=>=dev-qt/qthelp-4.8:4 >=dev-qt/qtcore-4.8:4 dbus? ( >=dev-qt/qtdbus-4.8:4 ) >=dev-qt/qtdeclarative-4.8:4 >=dev-qt/qtgui-4.8:4 >=dev-qt/qtmultimedia-4.8:4 opengl? ( >=dev-qt/qtopengl-4.8:4 ) openvg? ( >=dev-qt/qtopenvg-4.8:4 ) kde? ( media-libs/phonon ) !kde? ( || ( >=dev-qt/qtphonon-4.8:4 media-libs/phonon ) ) qt3support? ( >=dev-qt/qt3support-4.8:4 ) >=dev-qt/qtscript-4.8:4 >=dev-qt/qtsql-4.8:4 >=dev-qt/qtsvg-4.8:4 >=dev-qt/qttest-4.8:4 >=dev-qt/qtwebkit-4.8:4 >=dev-qt/qtxmlpatterns-4.8:4
+RDEPEND=qt3support? ( >=dev-qt/qt3support-4.8:4 ) >=dev-qt/qtcore-4.8:4 dbus? ( >=dev-qt/qtdbus-4.8:4 ) >=dev-qt/qtdeclarative-4.8:4 >=dev-qt/qtgui-4.8:4 >=dev-qt/qthelp-4.8:4 >=dev-qt/qtmultimedia-4.8:4 opengl? ( >=dev-qt/qtopengl-4.8:4 ) openvg? ( >=dev-qt/qtopenvg-4.8:4 ) kde? ( media-libs/phonon ) !kde? ( || ( >=dev-qt/qtphonon-4.8:4 media-libs/phonon ) ) >=dev-qt/qtscript-4.8:4 >=dev-qt/qtsql-4.8:4 >=dev-qt/qtsvg-4.8:4 >=dev-qt/qttest-4.8:4 >=dev-qt/qtwebkit-4.8:4 >=dev-qt/qtxmlpatterns-4.8:4
 SLOT=4
-_md5_=13de618684eadbfd5bcf7c72bc82f529
+_md5_=b803ecd9f02a75b0c93be0ca68d29ae5

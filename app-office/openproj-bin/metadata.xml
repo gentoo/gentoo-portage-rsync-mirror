@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>creffett@gentoo.org</email>
+  <name>Chris Reffett</name>
 </maintainer>
 </pkgmetadata>
