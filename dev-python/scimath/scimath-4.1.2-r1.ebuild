@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/scimath-4.1.2-r1.ebuild,v 1.1 2013/04/16 06:39:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/scimath-4.1.2-r1.ebuild,v 1.2 2013/06/17 11:44:56 idella4 Exp $
 
 EAPI=5
 
@@ -35,13 +35,12 @@ python_compile_all() {
 }
 
 python_test() {
-	# ONE test assumes PYTHONPATH in its own dir!!!  !  !! !
+	# ONE test assumes PYTHONPATH in its own dir!!!
 	PYTHONPATH=build/lib/:build/lib/scimath/interpolate/
 	VIRTUALX_COMMAND="nosetests" virtualmake
 }
 
 python_install_all() {
+	use doc && HTML_DOCS=( docs/build/html/. )
 	distutils-r1_python_install_all
-
-	use doc && dohtml -r docs/build/html/*
 }
