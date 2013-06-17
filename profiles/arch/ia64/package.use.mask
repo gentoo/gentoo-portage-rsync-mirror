@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.123 2013/05/28 13:53:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.124 2013/06/17 06:01:22 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (17 June 2013)
+# Fix per-arch mask of phonon[zeitgeist] #460140
+media-libs/phonon zeitgeist
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
 # depends on sys-devel/llvm[video_cards_radeon]

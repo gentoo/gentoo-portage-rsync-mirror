@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.247 2013/06/16 21:27:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.248 2013/06/17 06:00:35 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Fix per-arch mask of phonon[zeitgeist] #460140
 
   16 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
   Unmask networkmanager USE flag - it has been keyworded since February 2013.

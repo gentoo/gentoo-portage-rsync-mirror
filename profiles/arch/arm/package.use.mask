@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.149 2013/06/07 16:05:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.150 2013/06/17 06:00:35 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (17 June 2013)
+# Fix per-arch mask of phonon[zeitgeist] #460140
+media-libs/phonon zeitgeist
 
 # Patrick Lauer <patrick@gentoo.org> (31 May 2013)
 # no stable jdk+java-config

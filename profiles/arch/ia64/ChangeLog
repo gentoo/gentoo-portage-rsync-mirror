@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.191 2013/05/28 13:53:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.192 2013/06/17 06:01:22 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Fix per-arch mask of phonon[zeitgeist] #460140
 
   28 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:

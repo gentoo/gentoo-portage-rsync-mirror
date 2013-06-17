@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.238 2013/05/28 13:53:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.239 2013/06/17 06:00:51 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Fix per-arch mask of phonon[zeitgeist] #460140
 
   28 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ppc64/64ul/package.use.mask:
