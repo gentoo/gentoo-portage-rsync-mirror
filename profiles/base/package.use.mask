@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.477 2013/06/13 18:24:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.478 2013/06/17 06:01:53 patrick Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -149,10 +149,6 @@ dev-ml/eliom ocamlduce
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (28 Sep 2012)
 # Causes problems with e.g. NVidia drivers, bug #413637.
 www-client/chromium tcmalloc
-
-# Johannes Huber <johu@gentoo.org> (14 Sep 2012)
-# Masked for stabilization as the use flag pulls a dep tree of hell.
-media-libs/phonon zeitgeist
 
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.

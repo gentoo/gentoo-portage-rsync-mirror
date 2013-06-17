@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7946 2013/06/16 11:40:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7947 2013/06/17 06:23:55 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Remove unneeded evolution-{exchange,groupwise} mask
 
   16 Jun 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
   Unmask networkmanager related stuff as demanded by johu on IRC

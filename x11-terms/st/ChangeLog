@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/st
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.15 2013/04/27 17:19:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.16 2013/06/17 06:08:43 xmw Exp $
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org> st-0.4.1.ebuild, st-0.4.ebuild,
+  st-9999.ebuild:
+  Update LICENSE to MIT-with-advertising (bug 472664, thanks Jack Chen)
 
 *st-0.4.1 (27 Apr 2013)
 

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14833 2013/06/16 11:40:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14834 2013/06/17 06:23:55 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -250,11 +250,6 @@ media-sound/line6usb
 # Tom Wijsman <TomWij@gentoo.org> (05 May 2013)
 # Masking media-video/handbrake until =media-video/ffmpeg-1.2 is unmasked.
 media-video/handbrake
-
-# Patrick Lauer <patrick@gentoo.org> (04 May 2013)
-# Dependency on nonexisting =gnome-extra/evolution-data-server-3.4*
-=gnome-extra/evolution-groupwise-3.4.2
-=gnome-extra/evolution-exchange-3.4.4
 
 # Kacper Kowalik <xarthisius@gentoo.org> (01 May 2013)
 # Removal due to licensing issue wrt #452420

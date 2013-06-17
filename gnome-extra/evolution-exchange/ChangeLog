@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.152 2012/12/24 04:47:56 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.153 2013/06/17 06:15:14 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org>
+  -evolution-exchange-3.4.4.ebuild:
+  Remove 3.4.4 as evolution-data-server-3.4 was removed
 
   24 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   evolution-exchange-2.32.3.ebuild, evolution-exchange-3.4.4.ebuild:
