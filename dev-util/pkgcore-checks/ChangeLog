@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgcore-checks
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.50 2011/10/27 08:23:03 ferringb Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.51 2013/06/17 18:47:27 radhermit Exp $
+
+  17 Jun 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add myself as a maintainer.
 
 *pkgcore-checks-0.4.15 (27 Oct 2011)
 

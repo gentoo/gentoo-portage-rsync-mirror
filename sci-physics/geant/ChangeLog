@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.74 2013/06/10 16:51:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.75 2013/06/17 19:01:22 bicatali Exp $
+
+  17 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -geant-4.9.6_p02.ebuild,
+  geant-4.9.6_p02-r1.ebuild, metadata.xml:
+  Switch optional OpenInventor to Coin3D SoXt implementation, fixing bug #473306
+  and bug #473396
 
 *geant-4.9.6_p02-r1 (10 Jun 2013)
 

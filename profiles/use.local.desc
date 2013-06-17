@@ -5562,7 +5562,7 @@ sci-physics/geant:dawn - Add support for media-gfx/dawn (3D postscript rendering
 sci-physics/geant:gdml - Enable geometry markup language for xml
 sci-physics/geant:geant3 - Add compatibility for geant321 to geant4
 sci-physics/geant:granular - Produce many small libraries instead of global ones
-sci-physics/geant:openinventor - Add support for media-libs/openinventor SGI toolkit
+sci-physics/geant:inventor - Add support for Open Inventor SGI toolkit via Coin3D
 sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units

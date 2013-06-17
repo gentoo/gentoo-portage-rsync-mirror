@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.58 2013/06/16 18:33:02 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.59 2013/06/17 18:45:15 radhermit Exp $
+
+  17 Jun 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add myself as a maintainer.
 
   16 Jun 2013; Brian Dolbec <dolsen@gentoo.org> metadata.xml:
   Add myself as maintainer
