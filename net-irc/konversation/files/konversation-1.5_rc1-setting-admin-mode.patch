@@ -1,0 +1,26 @@
+commit 5b79cf8cad9781f37f52f77a71353ea4caf64698
+Author: Cathy J. Fitzpatrick <cathy@cathyjf.com>
+Date:   Mon Feb 18 16:46:53 2013 -0700
+
+    Fix for setting mode +a or -a
+    
+    Previously, setting or removing mode +a on a nick in a channel called
+    ChannelNick::setOwner(), so setting +a on a nick made the nick appear
+    as an owner of the channel, rather than as an admin. This commit
+    fixes the problem by correctly calling ChannelNick::setAdmin() instead.
+    
+    CCBUG:153580
+
+diff --git a/src/irc/channel.cpp b/src/irc/channel.cpp
+index 3ceddb0..6911473 100644
+--- a/src/irc/channel.cpp
++++ b/src/irc/channel.cpp
+@@ -1495,7 +1495,7 @@ void Channel::updateMode(const QString& sourceNick, char mode, bool plus, const
+             }
+             if (parameterChannelNick)
+             {
+-                parameterChannelNick->setOwner(plus);
++                parameterChannelNick->setAdmin(plus);
+                 emitUpdateInfo();
+             }
+             break;

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.5_rc1.ebuild,v 1.1 2013/06/01 20:00:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.5_rc1-r1.ebuild,v 1.1 2013/06/17 21:51:43 johu Exp $
 
 EAPI=5
 
@@ -31,6 +31,8 @@ RDEPEND="${DEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=( "${FILESDIR}/${P}-setting-admin-mode.patch" )
 
 src_configure() {
 	mycmakeargs+=(
