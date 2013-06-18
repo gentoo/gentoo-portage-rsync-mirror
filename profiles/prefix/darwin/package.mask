@@ -1,7 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.37 2013/04/23 20:06:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.38 2013/06/18 07:05:56 grobian Exp $
 
+
+# Fabian Groffen <grobian@gentoo.org> (18 Jun 2013)
+# gnulib/unlinkat issue, mask for now, #469206
+=sys-apps/findutils-4.5.11
 
 # Fabian Groffen <grobian@gentoo.org> (19 Feb 2012)
 # Using FSF GCC on Mac OS X is not supported by Gentoo Prefix.  While

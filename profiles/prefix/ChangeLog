@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.390 2013/06/13 18:24:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.391 2013/06/18 07:05:56 grobian Exp $
+
+  18 Jun 2013; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Mask sys-apps/findutils-4.5.11 on Darwin for bug #469206
 
   13 Jun 2013; Ulrich Müller <ulm@gentoo.org> darwin/macos/10.4/x86/use.mask,
   darwin/macos/10.5/ppc/package.use.mask, darwin/macos/10.5/x64/use.mask,
