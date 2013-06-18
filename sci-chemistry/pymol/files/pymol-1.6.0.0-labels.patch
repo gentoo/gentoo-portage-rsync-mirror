@@ -1,0 +1,372 @@
+Index: pymol/ChangeLog
+===================================================================
+--- pymol/ChangeLog	(revision 4030)
++++ pymol/ChangeLog	(revision 4031)
+@@ -2,6 +2,16 @@
+ CHANGE LOG
+ =========================================================================
+ 
++2013-06-13 Blaine Bell <blaine.bell@schrodinger.com>
++
++	* fixed labels when use_shaders is 0 and show_frame_rate is on
++
++2013-06-12 Thomas Holder <thomas.holder@schrodinger.com>
++
++	* update APBS Tools plugin
++
++	* fix spectrumany when minimum/maximum are provided
++
+ 2013-06-11 Blaine Bell <blaine.bell@schrodinger.com>
+ 
+ 	* Open Source PyMOL v1.6.0.0
+Index: pymol/layer1/Character.c
+===================================================================
+--- pymol/layer1/Character.c	(revision 4030)
++++ pymol/layer1/Character.c	(revision 4031)
+@@ -276,16 +276,16 @@
+ 	    rec->extent[2], rec->extent[1],
+ 	    rec->extent[2], rec->extent[3]
+ 	  };	
+-	  glEnableClientState(GL_VERTEX_ARRAY);
+-	  glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+-#ifdef OPENGL_ES_1
+-	  glClientActiveTexture(GL_TEXTURE1);
+-#endif
+-	  glVertexPointer(3, GL_FLOAT, 0, vertexVals);    
+-	  glTexCoordPointer(2, GL_FLOAT, 0, texVals);
+-	  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+-	  glDisableClientState(GL_VERTEX_ARRAY);
+-	  glDisableClientState(GL_TEXTURE_COORD_ARRAY);
++	  glBegin(GL_QUADS);
++	  glTexCoord2f(rec->extent[0], rec->extent[1]);
++	  glVertex3f(v0[0], v0[1], v0[2]);
++	  glTexCoord2f(rec->extent[0], rec->extent[3]);
++	  glVertex3f(v0[0], v1[1], v0[2]);
++	  glTexCoord2f(rec->extent[2], rec->extent[3]);
++	  glVertex3f(v1[0], v1[1], v0[2]);
++	  glTexCoord2f(rec->extent[2], rec->extent[1]);
++	  glVertex3f(v1[0], v0[1], v0[2]);
++	  glEnd();
+ 	}
+       }
+     }
+Index: pymol/modules/pymol/__init__.py
+===================================================================
+--- pymol/modules/pymol/__init__.py	(revision 4030)
++++ pymol/modules/pymol/__init__.py	(revision 4031)
+@@ -252,9 +252,11 @@
+         # auto-detect bundled FREEMOL (if present)
+         
+         if not os.environ.has_key("FREEMOL"):
+-            test_path = os.path.join(os.environ['PYMOL_PATH'],"freemol")
+-            if os.path.isdir(test_path):
+-                os.environ['FREEMOL'] = test_path
++            for test_path in ['freemol', 'ext']:
++                test_path = os.path.join(os.environ['PYMOL_PATH'], test_path)
++                if os.path.isdir(test_path):
++                    os.environ['FREEMOL'] = test_path
++                    break
+                 
+         # include FREEMOL's libpy in sys.path (if present)
+         
+@@ -339,9 +341,6 @@
+             elif vendor.startswith('Parallels'):
+                 if renderer[0:8]=='Parallel':
+                     pass
+-                    # this was critical for older Parallels
+-                    # but actually slows down current versions
+-                    # cmd.set('texture_fonts',1) 
+ 
+             elif vendor.startswith('ATI'):
+                 if renderer[0:17]=='FireGL2 / FireGL3':  # obsolete ?
+Index: pymol/modules/pymol/preset.py
+===================================================================
+--- pymol/modules/pymol/preset.py	(revision 4030)
++++ pymol/modules/pymol/preset.py	(revision 4031)
+@@ -21,7 +21,7 @@
+ 
+ tmp_sele = "_p_tmp"
+ 
+-prot_and_dna_sele = "(resn ALA+CYS+CYX+ASP+GLU+PHE+GLY+HIS+HID+HIE+HIP+HISE+HISD+HISP+ILE+LYS+LEU+MET+MSE+ASN+PRO+GLN+ARG+SER+THR+VAL+TRP+TYR+A+C+T+G+U)"
++prot_and_dna_sele = "(resn ALA+CYS+CYX+ASP+GLU+PHE+GLY+HIS+HID+HIE+HIP+HISE+HISD+HISP+ILE+LYS+LEU+MET+MSE+ASN+PRO+GLN+ARG+SER+THR+VAL+TRP+TYR+A+C+T+G+U+DA+DC+DT+DG+DU+DI)"
+ wat_sele = "(resn WAT,H2O,HOH,TIP)"
+ ion_sele = "(resn CA,HG,K,NA,ZN,MG,CL)"
+ solv_sele = "("+wat_sele+"|"+ion_sele+")"
+Index: pymol/modules/pymol/cmd.py
+===================================================================
+--- pymol/modules/pymol/cmd.py	(revision 4030)
++++ pymol/modules/pymol/cmd.py	(revision 4031)
+@@ -310,8 +310,7 @@
+         selection_sc = lambda sc=Shortcut,gn=get_names:sc(gn('public')+['all'])
+         object_sc = lambda sc=Shortcut,gn=get_names:sc(gn('objects'))
+         map_sc = lambda sc=Shortcut,gnot=get_names_of_type:sc(gnot('object:map'))
+-        contour_sc =  lambda sc=Shortcut,gnot=get_names_of_type:sc(
+-            gnot('object:mesh')+gnot('object:surface'))
++        contour_sc =  lambda sc=Shortcut,gnot=get_names_of_type:sc(gnot('object:mesh')+gnot('object:surface'))
+         group_sc = lambda sc=Shortcut,gnot=get_names_of_type:sc(gnot('object:group'))
+         
+         # Table for argument autocompletion
+Index: pymol/modules/pymol/viewing.py
+===================================================================
+--- pymol/modules/pymol/viewing.py	(revision 4030)
++++ pymol/modules/pymol/viewing.py	(revision 4031)
+@@ -1393,9 +1393,9 @@
+                 if action=='clear':
+                     for key in pymol._scene_dict.keys():
+                         # free selections
+-                        list = pymol._scene_dict[key]
+-                        if len(list)>3:
+-                            colorection = list[3]
++                        scene_list = pymol._scene_dict[key]
++                        if len(scene_list)>3:
++                            colorection = scene_list[3]
+                             if colorection!=None:
+                                 _self.del_colorection(colorection,key) 
+                         name = "_scene_"+key+"_*"
+@@ -1427,6 +1427,8 @@
+                         print "Error: scene '%s' not found."%key
+                     elif new_key==None:
+                         print "Error: must provide the 'new_key' argument"
++                    elif new_key == key:
++                        print "scene: '%s' not changed" % key
+                     else:
+                         new_scene_order = []
+                         for a in pymol._scene_order:
+@@ -1443,9 +1445,9 @@
+                             if name in valid_names:
+                                 new_name = "_scene_"+new_key+"_"+rep_name
+                                 _self.set_name(name,new_name)
+-                        list = pymol._scene_dict[new_key]
+-                        if len(list)>3:
+-                            _self.set_colorection_name(list[3],key,new_key)
++                        scene_list = pymol._scene_dict[new_key]
++                        if len(scene_list)>3:
++                            _self.set_colorection_name(scene_list[3],key,new_key)
+                         print" scene: '%s' renamed to '%s'."%(key,new_key)
+                         pymol._scene_dict_sc.rebuild( pymol._scene_dict.keys())
+                         _self.set("session_changed",1,quiet=1)
+@@ -1464,29 +1466,29 @@
+                     _self.set("scenes_changed",1,quiet=1);
+                     key = pymol._scene_dict_sc.auto_err(key,'scene')
+                     _self.set('scene_current_name', key, quiet=1)               
+-                    list = pymol._scene_dict[key]
+-                    ll = len(list)
++                    scene_list = pymol._scene_dict[key]
++                    ll = len(scene_list)
+                     if (ll>1) and (active):
+-                        if list[1]!=None:
++                        if scene_list[1]!=None:
+                             _self.disable()
+                             _self.deselect()
+-                            _self.set_vis(list[1])
++                            _self.set_vis(scene_list[1])
+                     if (ll>2) and (frame):
+-                        if list[2]!=None:
++                        if scene_list[2]!=None:
+                             if not _self.get_movie_playing(): # don't set frame when movie is already playing
+-                                if _self.get_frame()!=list[2]: # only set the frame when it isn't already correct
+-                                    _self.frame(list[2],scene=1) # let frame know that it is being set by a scene
++                                if _self.get_frame()!=scene_list[2]: # only set the frame when it isn't already correct
++                                    _self.frame(scene_list[2],scene=1) # let frame know that it is being set by a scene
+                             else:
+                                 _self.set_frame(1,10) # seek scene
+                     if (ll>3) and (color):
+-                        if list[3]!=None:
+-                            _self.set_colorection(list[3],key)
++                        if scene_list[3]!=None:
++                            _self.set_colorection(scene_list[3],key)
+                     if (ll>4) and (rep):
+-                        if list[4]==None:
++                        if scene_list[4]==None:
+                             rep = 0
+                     if (ll>5) and (message==None):
+-                        if list[5]!=None:
+-                            message=list[5]
++                        if scene_list[5]!=None:
++                            message=scene_list[5]
+                     if rep!=0:
+                         _self.hide("(all)")
+                         valid_names = _self.get_names("all")
+@@ -1521,8 +1523,8 @@
+                     if replace_flag and not mess_flag:
+                         _self.wizard()
+                     if (ll>0) and (view):
+-                        if list[0]!=None:
+-                            _self.set_view(list[0],animate,quiet,hand)
++                        if scene_list[0]!=None:
++                            _self.set_view(scene_list[0],animate,quiet,hand)
+                     if not quiet and _feedback(fb_module.scene,fb_mask.actions,_self): # redundant
+                         print " scene: \"%s\" recalled."%key
+                 elif (action=='store') or (action=='update'):
+@@ -1535,11 +1537,11 @@
+                     if not pymol._scene_dict.has_key(key):
+                         pymol._scene_dict_sc.append(key)
+                     else: # get rid of existing one (if exists)
+-                        list = pymol._scene_dict[key]
+-                        if (action=='update') and (message==None) and len(list)>5:
++                        scene_list = pymol._scene_dict[key]
++                        if (action=='update') and (message==None) and len(scene_list)>5:
+                             message = pymol._scene_dict[key][5]
+-                        if len(list)>3:
+-                            colorection = list[3]
++                        if len(scene_list)>3:
++                            colorection = scene_list[3]
+                             if colorection!=None:
+                                 _self.del_colorection(colorection,key) # important -- free RAM
+                         name = "_scene_"+key+"_*"
+@@ -1575,9 +1577,9 @@
+                         key = setting.get("scene_current_name",_self=_self)
+                     key = pymol._scene_dict_sc.auto_err(key,'scene')
+                     if pymol._scene_dict.has_key(key):
+-                        list = pymol._scene_dict[key]
+-                        if len(list)>3:
+-                            colorection = list[3]
++                        scene_list = pymol._scene_dict[key]
++                        if len(scene_list)>3:
++                            colorection = scene_list[3]
+                             if colorection!=None:
+                                 _self.del_colorection(colorection,key) # important -- free RAM
+                         lst = _scene_validate_list(_self)
+@@ -2573,7 +2575,7 @@
+             v = e_it.next()
+             if v is None:
+                 return False
+-            v = (float(v) - minimum) / val_range * (n_colors - 1)
++            v = min(1.0, max(0.0, (float(v) - minimum) / val_range)) * (n_colors - 1)
+             i = min(int(v), n_colors - 2)
+             p = v - i
+             rgb = [int(255 * (col_tuples[i+1][j] * p + col_tuples[i][j] * (1.0 - p)))
+Index: pymol/modules/pymol/checking.py
+===================================================================
+--- pymol/modules/pymol/checking.py	(revision 4030)
++++ pymol/modules/pymol/checking.py	(revision 4031)
+@@ -1,6 +1,9 @@
+ 
+ import types
+-import cmd
++try:
++    import cmd
++except:
++    cmd = None
+ 
+ def _raising(code=-1,_self=cmd):
+     # WARNING: internal routine, subject to change
+Index: pymol/modules/pymol/shortcut.py
+===================================================================
+--- pymol/modules/pymol/shortcut.py	(revision 4030)
++++ pymol/modules/pymol/shortcut.py	(revision 4031)
+@@ -15,7 +15,10 @@
+ if __name__=='pymol.shortcut' or __name__=='shortcut':
+     
+     import copy
+-    from pymol.checking import is_string, is_list
++    try:
++        from pymol.checking import is_string, is_list
++    except:
++        from checking import is_string, is_list
+     
+     def mkabbr(a, m=1):
+         b = a.split('_')
+Index: pymol/modules/pymol/editing.py
+===================================================================
+--- pymol/modules/pymol/editing.py	(revision 4030)
++++ pymol/modules/pymol/editing.py	(revision 4031)
+@@ -400,13 +400,15 @@
+         if _self._raising(r,_self): raise pymol.CmdException            
+         return r
+ 
+-    def push_undo(selection, state=0, _self=cmd):
++    def push_undo(selection, just_coordinates=1, finish_undo=0, add_objects=0, delete_objects=0, state=0, _self=cmd):
+         '''
+ DESCRIPTION
+ 
+     "push_undo" stores the current conformations of objects in the
+     selection onto their individual undo rings.
+ 
++    Notice: This command is only partly implemented in open-source PyMOL.
++
+ USAGE
+ 
+     push_undo (all)
+Index: pymol/modules/pmg_tk/skins/normal/__init__.py
+===================================================================
+--- pymol/modules/pmg_tk/skins/normal/__init__.py	(revision 4030)
++++ pymol/modules/pmg_tk/skins/normal/__init__.py	(revision 4031)
+@@ -106,19 +106,6 @@
+         self.app.destroycomponent('commandframe')
+         
+     def createMessageBar(self):
+-        # Create the message bar area for help and status messages.
+-#        frame = self.app.createcomponent('bottomtray', (), None,
+-#                                     Frame,(self.app._hull,), relief=SUNKEN)
+-#        self.__messageBar = self.app.createcomponent('messagebar',
+-#                                                  (), None,
+-#                                                 Pmw.MessageBar, 
+-#                                                 (frame,),
+-#                                                 #entry_width = 40,
+-#                                                 entry_relief=SUNKEN,
+-#                                                 entry_bd=1,
+-#                                                 labelpos=None)
+-#        self.__messageBar.pack(side=LEFT, expand=NO, fill=X)
+-
+         self.messageBar = Pmw.MessageBar(self.commandFrame, entry_width = 25,
+              entry_relief='sunken', entry_borderwidth=1) #, labelpos = 'w')
+ 
+@@ -139,7 +126,6 @@
+         self.balloon.configure(statuscommand = self.messageBar.helpmessage)
+ 
+     def destroyMessageBar(self):
+-
+         self.messageBar.destroy()
+         
+     def get_current_session_file(self):
+@@ -465,27 +451,6 @@
+         self.entry.bind('<Home>',lambda e,s=self: s.cmd.do("cmd._special(106,0,0)"))
+         self.entry.bind('<End>',lambda e,s=self: s.cmd.do("cmd._special(107,0,0)"))
+ 
+-# obviated by changes made to the X11 OpenGL Window      
+-#        if sys.platform=='darwin':
+-#            if self.app.pymol.invocation.options.external_gui==3: # PyMOLX11Hybrid focus kludge
+-#                self.root.bind_all('<Leave>',lambda e,s=self: s.focus_out(e)) 
+-#                self.root.bind_all('<Enter>',lambda e,s=self: s.focus_in(e))
+-
+-#    def focus_in(self,event): # PyMOLX11Hybrid focus kludge
+-#        if self.refocus_entry:
+-#            self.cmd.do("_ cmd.window('defocus')") # deactivate MacPyMOL OpenGL window
+-#            self.refocus_entry = 0
+-#            self.entry.focus_set()
+-
+-#    def focus_out(self,event): # PyMOLX11Hybrid focus kludge
+-#        # necessary so that the OpenGL portion of
+-#        # PyMOLX11Hybrid can exhibit click-through behavior        
+-#        if id(event.widget) == id(self.root):
+-#            if ((event.y>event.widget.winfo_height())):
+-#                self.root.focus_set() # (return cursor to entry window)
+-#                self.cmd.do("_ cmd.window('focus')") # activate MacPyMOL OpenGL window
+-#                self.refocus_entry = 1
+-
+     def update_feedback(self):
+         if self.focus_entry:
+             self.focus_entry=0
+@@ -981,18 +946,16 @@
+             self.cmd.save(sfile,quiet=0)
+ 
+     def file_save_mpeg(self):
+-        ok = 1
+         try:
+             from freemol import mpeg_encode
+             if not mpeg_encode.validate():
+-                ok = 0
+                 print "produce-error: Unable to validate freemol.mpeg_encode"
++                raise
+         except:
+-            ok = 0
+-            pass
+-        if not ok:
+             tkMessageBox.showerror("Error",
+                 "MPEG encoder missing.\nThe FreeMOL add-ons may not be installed.")
++            return
++
+         else:
+             sfile = asksaveasfilename(defaultextension = _def_ext(".mpg"),
+                                       initialdir = self.initialdir,

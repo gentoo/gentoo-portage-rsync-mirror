@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.101 2013/06/12 08:10:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.102 2013/06/18 12:20:13 jlec Exp $
+
+*pymol-1.6.0.0-r1 (18 Jun 2013)
+
+  18 Jun 2013; Justin Lecher <jlec@gentoo.org> +pymol-1.6.0.0-r1.ebuild,
+  +files/pymol-1.6.0.0-bg_rgb.patch, +files/pymol-1.6.0.0-labels.patch:
+  Add backports of upstream bugfixes
 
 *pymol-1.6.0.0 (12 Jun 2013)
 
