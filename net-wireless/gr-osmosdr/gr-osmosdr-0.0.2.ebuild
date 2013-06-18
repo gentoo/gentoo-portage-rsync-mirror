@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.0.2.ebuild,v 1.2 2013/06/17 19:57:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.0.2.ebuild,v 1.3 2013/06/18 07:36:40 chithanh Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -22,7 +22,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0/${PV}"
-IUSE="fcd hackrf iqbalance osmosdr python rtlsdr uhd"
+IUSE="fcd hackrf iqbalance python rtlsdr uhd"
 #IUSE="fcd hackrf iqbalance osmosdr python rtlsdr uhd"
 
 #	osmosdr? ( net-libs/libosmosdr:= )
@@ -56,4 +56,11 @@ src_configure() {
 #		$(cmake-utils_use_enable osmosdr)
 
 	cmake-utils_src_configure
+}
+
+pkg_postinst() {
+	if use !rtlsdr && has 0.0.1 ${REPLACING_VERSIONS}; then
+		ewarn "RTL-SDR support is no longer enabled by default."
+		ewarn "Set USE=\"rtlsdr\" if you need it."
+	fi
 }
