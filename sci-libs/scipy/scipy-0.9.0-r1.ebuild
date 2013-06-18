@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.13 2013/03/07 14:37:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.14 2013/06/17 23:29:09 bicatali Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="doc umfpack"
+IUSE="doc sparse"
 KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND="
@@ -32,11 +32,11 @@ CDEPEND="
 	sci-libs/superlu
 	virtual/cblas
 	virtual/lapack
-	umfpack? ( sci-libs/umfpack )"
+	sparse? ( sci-libs/umfpack )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	doc? ( app-arch/unzip )
-	umfpack? ( dev-lang/swig )"
+	sparse? ( dev-lang/swig )"
 RDEPEND="${CDEPEND}
 	dev-python/imaging"
 
@@ -49,7 +49,7 @@ pkg_setup() {
 	fortran-2_pkg_setup
 	# scipy automatically detects libraries by default
 	export {FFTW,FFTW3,UMFPACK}=None
-	use umfpack && unset UMFPACK
+	use sparse && unset UMFPACK
 	# the missing symbols are in -lpythonX.Y, but since the version can
 	# differ, we just introduce the same scaryness as on Linux/ELF
 	[[ ${CHOST} == *-darwin* ]] \

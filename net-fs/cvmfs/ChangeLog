@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/cvmfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.1 2012/10/30 14:44:26 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.2 2013/06/17 23:03:46 bicatali Exp $
+
+*cvmfs-2.1.10 (17 Jun 2013)
+
+  17 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> +cvmfs-2.1.10.ebuild,
+  +files/FindCARes.cmake, +files/Findleveldb.cmake,
+  +files/cvmfs-2.1.10-no-config.patch, +files/cvmfs-2.1.10-openrc.patch:
+  Version bump, could need more testing
 
 *cvmfs-2.0.19 (30 Oct 2012)
 

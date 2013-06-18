@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.93 2013/06/09 17:58:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.94 2013/06/17 23:29:09 bicatali Exp $
+
+  17 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/scipy-0.11.0-test_basic.patch, -scipy-0.11.0-r1.ebuild, metadata.xml,
+  scipy-0.9.0-r1.ebuild:
+  Change umfpack flag to sparse for consistency
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> scipy-0.11.0-r1.ebuild,
   scipy-0.12.0.ebuild:
