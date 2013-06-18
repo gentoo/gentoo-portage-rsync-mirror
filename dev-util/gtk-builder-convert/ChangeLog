@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gtk-builder-convert
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/ChangeLog,v 1.33 2013/05/13 18:57:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/ChangeLog,v 1.34 2013/06/18 19:51:49 pacho Exp $
+
+*gtk-builder-convert-2.24.19 (18 Jun 2013)
+
+  18 Jun 2013; Pacho Ramos <pacho@gentoo.org>
+  +gtk-builder-convert-2.24.19.ebuild:
+  Version bump
 
 *gtk-builder-convert-2.24.18 (13 May 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.665 2013/06/05 00:43:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.666 2013/06/18 19:55:00 pacho Exp $
+
+*gtk+-2.24.19 (18 Jun 2013)
+
+  18 Jun 2013; Pacho Ramos <pacho@gentoo.org> +gtk+-2.24.19.ebuild,
+  -gtk+-3.8.1.ebuild:
+  Version bump, drop old.
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.
