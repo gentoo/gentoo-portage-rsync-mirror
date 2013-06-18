@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gsview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.39 2012/02/16 18:24:09 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.40 2013/06/18 04:16:28 mr_bones_ Exp $
+
+  18 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/gsview-4.8-gsesp.patch, -gsview-4.8.ebuild:
+  old
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gsview-4.9.ebuild:
   x86 stable wrt bug #401599
@@ -142,4 +146,3 @@
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gsview-4.5.ebuild:
   initial ebuild, bug #33142, submitted by Craig Bradney <cbradney@zip.com.au>
-

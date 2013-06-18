@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.10.ebuild,v 1.1 2013/03/18 19:49:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.10.ebuild,v 1.2 2013/06/18 04:06:12 ottxor Exp $
 
 EAPI=4
 inherit eutils multilib autotools toolchain-funcs
@@ -73,7 +73,7 @@ src_configure() {
 		--disable-compiler-warnings \
 		--disable-linker-optimisations \
 		--disable-start-stop-daemon \
-		--localstatedir=/var \
+		--localstatedir="${EPREFIX}"/var \
 		--without-selinux
 }
 

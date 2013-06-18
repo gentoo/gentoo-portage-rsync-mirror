@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.74 2013/06/06 13:47:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.75 2013/06/18 04:17:26 ottxor Exp $
+
+  18 Jun 2013; Christoph Junghans <ottxor@gentoo.org>
+  debhelper-9.20130605.ebuild:
+  added prefix support (bug #382849)
 
 *debhelper-9.20130605 (06 Jun 2013)
 

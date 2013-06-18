@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/scim-prime-1.0.1-r1.ebuild,v 1.5 2012/10/04 10:27:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/scim-prime-1.0.1-r1.ebuild,v 1.6 2013/06/18 04:07:38 mr_bones_ Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND=">=app-i18n/scim-1.0
 	media-libs/freetype
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+
+	x11-libs/gtk+:2
 	x11-libs/pango"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

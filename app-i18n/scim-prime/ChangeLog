@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-prime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.29 2012/10/04 10:27:34 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.30 2013/06/18 04:07:38 mr_bones_ Exp $
+
+  18 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org> -scim-prime-1.0.0.ebuild,
+  -scim-prime-1.0.1.ebuild, scim-prime-1.0.1-r1.ebuild:
+  clean old; add slot dep for gtk+
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> scim-prime-1.0.1-r1.ebuild:
   Stable for amd64, wrt bug #436776
@@ -139,4 +143,3 @@
   30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +scim-prime-0.1.0.ebuild:
   Initial import.
-
