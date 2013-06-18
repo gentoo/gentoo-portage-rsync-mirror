@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.89 2013/06/17 14:04:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.90 2013/06/18 21:52:29 aballier Exp $
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org> clang-3.3_rc3.ebuild,
+  files/clang-3.1-gentoo-freebsd-fix-lib-path.patch:
+  Drop a FreeBSD specific patch that causes problem with multilib on FreeBSD.
 
   17 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> clang-3.3_rc3.ebuild,
   clang-9999.ebuild:

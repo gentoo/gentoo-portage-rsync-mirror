@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3_rc3.ebuild,v 1.3 2013/06/17 14:04:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3_rc3.ebuild,v 1.4 2013/06/18 21:52:29 aballier Exp $
 
 EAPI=5
 
@@ -81,7 +81,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1-gentoo-runtime-gcc-detection-v3.patch
 
 	# Fix search paths on FreeBSD, bug #409269
-	epatch "${FILESDIR}"/${PN}-3.1-gentoo-freebsd-fix-lib-path.patch
+	# This patch causes problem for multilib on fbsd, see comments in the patch
+	# (aballier@g.o)
+	# epatch "${FILESDIR}"/${PN}-3.1-gentoo-freebsd-fix-lib-path.patch
 
 	# Fix regression caused by removal of USE=system-cxx-headers, bug #417541
 	# Needs to be updated for 3.2

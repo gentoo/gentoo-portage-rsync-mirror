@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1290 2013/06/16 01:47:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1292 2013/06/18 21:45:25 zmedico Exp $
+
+*portage-2.2.0_alpha181 (18 Jun 2013)
+
+  18 Jun 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha181.ebuild:
+  2.2.0_alpha181 version bump. This includes all of the fixes in 2.1.12.6. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.12.6 (18 Jun 2013)
+
+  18 Jun 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.12.6.ebuild:
+  2.1.12.6 version bump. This fixes bug #395633 (add cross-prefix support) and
+  bug #473710 (regression in 2.1.12.5 and 2.2.0_alpha179 which caused emerge
+  with ROOT to throw an AttributeError during dependency calculation. Bug
+  #472632 tracks all bugs fixed since portage-2.1.12.2.
 
 *portage-2.2.0_alpha180 (16 Jun 2013)
 

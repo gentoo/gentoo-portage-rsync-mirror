@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/uuagc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.21 2012/09/12 15:24:31 qnikst Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.22 2013/06/18 21:33:02 slyfox Exp $
+
+  18 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  -files/uuagc-0.9.1-split-base.patch, -uuagc-0.9.1.ebuild, -uuagc-0.9.5.ebuild:
+  Drop old.
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> uuagc-0.9.24.ebuild:
   move dev-haskell/uuagc/uuagc-0.9.24.ebuild ebuild to mirror://hackage
