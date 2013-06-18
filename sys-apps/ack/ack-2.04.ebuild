@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-2.04.ebuild,v 1.1 2013/06/18 01:04:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-2.04.ebuild,v 1.2 2013/06/18 20:14:36 jer Exp $
 
 EAPI=5
 MODULE_AUTHOR=PETDANCE
@@ -11,7 +11,7 @@ HOMEPAGE="http://betterthangrep.com/ ${HOMEPAGE}"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="test"
 
 RDEPEND=">=dev-perl/File-Next-1.100.0"
