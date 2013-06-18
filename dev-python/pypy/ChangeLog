@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.43 2013/06/18 06:22:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.44 2013/06/18 10:41:29 idella4 Exp $
+
+  18 Jun 2013; Ian Delaney <idella4@gentoo.org> pypy-2.0.2.ebuild,
+  pypy-2.0_beta2.ebuild:
+  Correction to symlink
 
   18 Jun 2013; Ian Delaney <idella4@gentoo.org> pypy-2.0.2.ebuild,
   pypy-2.0_beta2.ebuild:
