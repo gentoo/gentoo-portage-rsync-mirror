@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/sibsim4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/sibsim4/ChangeLog,v 1.7 2013/02/18 07:32:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/sibsim4/ChangeLog,v 1.8 2013/06/18 06:33:18 jlec Exp $
+
+  18 Jun 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop maintainer
 
   18 Feb 2013; Justin Lecher <jlec@gentoo.org> -sibsim4-0.17.ebuild:
   Drop Old
