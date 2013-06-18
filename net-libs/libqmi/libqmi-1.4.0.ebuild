@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.5 2013/06/18 21:27:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.4.0.ebuild,v 1.1 2013/06/18 21:29:04 vapier Exp $
 
 EAPI="4"
 
