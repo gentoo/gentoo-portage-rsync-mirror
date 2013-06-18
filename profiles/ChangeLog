@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7949 2013/06/17 09:22:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7950 2013/06/18 02:51:58 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jun 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Masking libsvgtiny version with unsatisfiable multilib deps
 
   17 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Mask sys-fs/archfs for removal
