@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.4 2013/06/11 17:38:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.5 2013/06/18 17:50:17 nimiux Exp $
 
 EAPI=4
 
@@ -26,6 +26,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/"${P}"-earthtrack.patch
 	epatch -p1 "${WORKDIR}"/${DEB_P}-${DEB_PR}.diff
 	sed -i -e 's:predict\(.*\)/:predict-2.2.3\1/:g' \
 		debian/patches/140*.diff || die

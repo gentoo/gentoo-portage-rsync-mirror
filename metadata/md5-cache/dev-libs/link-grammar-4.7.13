@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install preinst prepare setup
+DEPEND=aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell ) java? ( >=virtual/jdk-1.5 dev-java/ant-core ) java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=A Syntactic English parser
+EAPI=5
+HOMEPAGE=http://www.abisource.com/projects/link-grammar/ http://www.link.cs.cmu.edu/link/
+IUSE=aspell +hunspell java static-libs threads elibc_FreeBSD java
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=BSD
+RDEPEND=aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell ) java? ( >=virtual/jdk-1.5 dev-java/ant-core ) java? ( >=dev-java/java-config-2.1.9-r1 )
+SLOT=0
+SRC_URI=http://www.abisource.com/downloads/link-grammar/4.7.13/link-grammar-4.7.13.tar.gz
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=a72bf21a97a50a2f868d1b9b5a3f513c

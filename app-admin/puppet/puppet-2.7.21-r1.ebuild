@@ -1,25 +1,28 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.1.1.ebuild,v 1.1 2013/03/13 17:38:32 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.21-r1.ebuild,v 1.1 2013/06/18 17:32:57 prometheanfire Exp $
 
 EAPI="4"
-
 USE_RUBY="ruby18 ruby19"
 
-inherit elisp-common xemacs-elisp-common eutils user ruby-ng versionator
+RUBY_FAKEGEM_TASK_DOC=""
+RUBY_FAKEGEM_TASK_TEST="test"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG* README*"
+
+inherit elisp-common xemacs-elisp-common eutils ruby-fakegem user
 
 DESCRIPTION="A system automation and configuration management software"
 HOMEPAGE="http://puppetlabs.com/"
-SRC_URI="http://www.puppetlabs.com/downloads/puppet/${P}.tar.gz"
+SRC_URI="http://www.puppetlabs.com/downloads/puppet/${P}.tar.gz
+		https://dev.gentoo.org/~prometheanfire/dist/patches/CVEs/puppet-2.7.21-CVE-2013-3567.patch"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="augeas diff doc emacs ldap minimal rrdtool selinux shadow sqlite3 vim-syntax xemacs"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 ruby_add_rdepend "
-	dev-ruby/hiera
-	>=dev-ruby/facter-1.6.2
+	>=dev-ruby/facter-1.5.6
 	augeas? ( dev-ruby/ruby-augeas )
 	diff? ( dev-ruby/diff-lcs )
 	doc? ( dev-ruby/rdoc )
@@ -27,22 +30,34 @@ ruby_add_rdepend "
 	shadow? ( dev-ruby/ruby-shadow )
 	sqlite3? ( dev-ruby/sqlite3 )
 	virtual/ruby-ssl"
+#	couchdb? ( dev-ruby/couchrest )
+#	mongrel? ( www-servers/mongrel )
+#	rack? ( >=dev-ruby/rack-1 )
+#	rails? (
+#		dev-ruby/rails
+#		>=dev-ruby/activerecord-2.1
+#	)
+#	stomp? ( dev-ruby/stomp )
 
 DEPEND="${DEPEND}
 	ruby_targets_ruby19? ( dev-lang/ruby:1.9[yaml] )
 	emacs? ( virtual/emacs )
-	xemacs? ( app-editors/xemacs )"
+	xemacs? ( app-editors/xemacs )
+	selinux? ( sec-policy/selinux-puppet )"
 RDEPEND="${RDEPEND}
 	ruby_targets_ruby19? ( dev-lang/ruby:1.9[yaml] )
+	emacs? ( virtual/emacs )
+	xemacs? ( app-editors/xemacs )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
 	selinux? (
 		sys-libs/libselinux[ruby]
 		sec-policy/selinux-puppet
 	)
-	vim-syntax? ( >=app-vim/puppet-syntax-3.0.1 )
 	>=app-portage/eix-0.18.0"
 
 SITEFILE="50${PN}-mode-gentoo.el"
+
+RUBY_PATCHES=( "${DISTDIR}/puppet-2.7.21-CVE-2013-3567.patch" )
 
 pkg_setup() {
 	enewgroup puppet
@@ -50,6 +65,8 @@ pkg_setup() {
 }
 
 all_ruby_compile() {
+	all_fakegem_compile
+
 	if use emacs ; then
 		elisp-compile ext/emacs/puppet-mode.el
 	fi
@@ -63,27 +80,35 @@ all_ruby_compile() {
 	fi
 }
 
-each_ruby_install() {
-	${RUBY} install.rb --destdir="${D}" install || die
+each_fakegem_install() {
+	${RUBY} install.rb --destdir="${D}" install
 }
 
 all_ruby_install() {
+	all_fakegem_install
+
 	newinitd "${FILESDIR}"/puppet.init-r1 puppet
+	doconfd conf/gentoo/conf.d/puppet
 
 	# Initial configuration files
 	insinto /etc/puppet
+	# Bug #338439
+	#doins conf/gentoo/puppet/*
+	doins conf/redhat/puppet.conf
 
 	# Location of log and data files
-	keepdir /var/log/puppet
-	fowners -R puppet:puppet /var/log/puppet
+	keepdir /var/{run,log}/puppet
+	fowners -R puppet:puppet /var/{run,log}/puppet
 
 	if use minimal ; then
+		rm "${ED}/usr/bin/puppetmasterd"
 		rm "${ED}/etc/puppet/auth.conf"
 	else
 		newinitd "${FILESDIR}"/puppetmaster.init puppetmaster
 		newconfd "${FILESDIR}"/puppetmaster.confd puppetmaster
 
 		insinto /etc/puppet
+		doins conf/redhat/fileserver.conf
 
 		keepdir /etc/puppet/manifests
 		keepdir /etc/puppet/modules
@@ -91,7 +116,7 @@ all_ruby_install() {
 		keepdir /var/lib/puppet/ssl
 		keepdir /var/lib/puppet/facts
 		keepdir /var/lib/puppet/files
-		fowners -R puppet:puppet /var/lib/puppet
+		fowners -R puppet:puppet /var/{run,log,lib}/puppet
 	fi
 
 	if use emacs ; then
@@ -108,10 +133,16 @@ all_ruby_install() {
 		insinto /etc/openldap/schema; doins ext/ldap/puppet.schema
 	fi
 
+	if use vim-syntax ; then
+		insinto /usr/share/vim/vimfiles/ftdetect; doins ext/vim/ftdetect/puppet.vim
+		insinto /usr/share/vim/vimfiles/syntax; doins ext/vim/syntax/puppet.vim
+	fi
+
 	# ext and examples files
 	for f in $(find ext examples -type f) ; do
 		docinto "$(dirname ${f})"; dodoc "${f}"
 	done
+	docinto conf; dodoc conf/namespaceauth.conf
 }
 
 pkg_postinst() {
@@ -138,13 +169,6 @@ pkg_postinst() {
 		elog "	/etc/puppet/puppetca.conf"
 		elog "	/etc/puppet/puppetd.conf"
 		elog "	/etc/puppet/puppetmasterd.conf"
-		elog
-	fi
-
-	if [ "$(get_major_version $REPLACING_VERSIONS)" = "2" ]; then
-		elog
-		elog "If you're upgrading from 2.x then we strongly suggest you to read:"
-		elog "http://docs.puppetlabs.com/guides/upgrading.html"
 		elog
 	fi
 
