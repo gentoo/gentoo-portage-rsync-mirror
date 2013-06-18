@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.118 2013/06/09 11:43:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.119 2013/06/18 20:39:12 blueness Exp $
 
 # This file requires >=portage-2.1.1
+
+# Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
+# Works on x86
+net-libs/cyassl -aes-ni
 
 # Justin Lecher <jlec@gentoo.org> (21 Feb 2013)
 # cuda only works on x86 and amd64

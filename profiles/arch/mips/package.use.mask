@@ -1,14 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.53 2013/05/28 13:53:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.54 2013/06/18 20:39:12 blueness Exp $
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
 # depends on sys-devel/llvm[video_cards_radeon]
 media-libs/mesa r600-llvm-compiler
-
-# Anthony G. Basile <blueness@gentoo.org> (16 Jul 2012)
-# Only work on amd64/x86
-net-libs/cyassl aes-ni
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded

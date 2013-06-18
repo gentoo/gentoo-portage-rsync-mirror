@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.150 2013/06/17 06:00:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.151 2013/06/18 20:39:11 blueness Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (17 June 2013)
 # Fix per-arch mask of phonon[zeitgeist] #460140
@@ -173,10 +173,6 @@ net-analyzer/wireshark doc-pdf
 # Markus Meier <maekke@gentoo.org> (25 Jul 2012)
 # no stable media-video/vlc yet, bug #401313
 media-libs/phonon vlc
-
-# Anthony G. Basile <blueness@gentoo.org> (17 Jul 2012)
-# Only work on amd64/x86
-net-libs/cyassl aes-ni
 
 # Chí-Thanh Christopher Nguyen <chithanh@gentoo.org> (02 Jun 2012)
 # Mask udis86 flag for llvm, which is of limited use outside x86/amd64.

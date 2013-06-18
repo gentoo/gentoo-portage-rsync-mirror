@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.165 2013/06/18 06:20:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.166 2013/06/18 20:39:11 blueness Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
+# Works on amd64
+net-libs/cyassl -aes-ni
 
 # Michael Weber <xmw@gentoo.org> (18 Jun 2013)
 # unsatisfied multilib dep on curl[abi_x86_32]

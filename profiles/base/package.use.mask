@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.478 2013/06/17 06:01:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.479 2013/06/18 20:39:12 blueness Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
+# Only work on amd64/x86 
+net-libs/cyassl aes-ni
 
 # Sergey Popov <pinkbyte@gentoo.org> (08 Jun 2013)
 # mask because requires unstable depends not ready for the stabilization

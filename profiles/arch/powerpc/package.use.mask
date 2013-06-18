@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.167 2013/06/17 06:00:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.168 2013/06/18 20:39:12 blueness Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (17 June 2013)
 # Fix per-arch mask of phonon[zeitgeist] #460140
@@ -54,10 +54,6 @@ x11-themes/gtk-engines-qtcurve mozilla
 # Anthony G. Basile <blueness@gentoo.org> (21 Aug 2012)
 # Does not work on ppc/ppc64
 net-misc/tor tor-hardening
-
-# Anthony G. Basile <blueness@gentoo.org> (16 Jul 2012)
-# Only work on amd64/x86
-net-libs/cyassl aes-ni cyassl-hardening
 
 # Johannes Huber <johu@gentoo.org> (9 Jul 2012)
 # dev-qt/qtopenvg not keyworded correctly.
