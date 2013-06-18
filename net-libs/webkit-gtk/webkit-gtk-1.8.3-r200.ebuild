@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r200.ebuild,v 1.11 2013/05/01 03:40:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r200.ebuild,v 1.12 2013/06/18 06:10:56 tetromino Exp $
 
 EAPI="4"
 
-# Don't define PYTHON_DEPEND: python only needed at build time
-inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils python virtualx
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils python-any-r1 virtualx
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -49,8 +50,8 @@ RDEPEND="
 "
 # paxctl needed for bug #407085
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	dev-lang/perl
-	=dev-lang/python-2*
 	sys-devel/bison
 	>=sys-devel/flex-2.5.33
 	sys-devel/gettext
@@ -58,7 +59,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	introspection? ( jit? ( sys-apps/paxctl ) )
-	test? ( x11-themes/hicolor-icon-theme
+	test? (
+		dev-lang/python:2.7
+		dev-python/pygobject:3[python_targets_python2_7]
+		x11-themes/hicolor-icon-theme
 		jit? ( sys-apps/paxctl ) )
 "
 # Need real bison, not yacc
@@ -93,9 +97,8 @@ pkg_setup() {
 		einfo "(-ggdb vs -g1) and enabled features."
 		check-reqs_pkg_setup
 	fi
-	# Needed for CodeGeneratorInspector.py
-	python_set_active_version 2
-	python_pkg_setup
+
+	[[ ${MERGE_TYPE} = "binary" ]] || python-any-r1_pkg_setup
 }
 
 src_prepare() {

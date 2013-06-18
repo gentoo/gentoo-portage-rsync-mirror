@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0.2.ebuild,v 1.1 2013/05/26 01:48:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0.2.ebuild,v 1.2 2013/06/18 06:22:37 idella4 Exp $
 
 EAPI=5
 
@@ -84,6 +84,8 @@ src_compile() {
 	set -- "${PYTHON}" rpython/bin/rpython --batch "${args[@]}"
 	echo -e "\033[1m${@}\033[0m"
 	"${@}" || die "compile error"
+
+	use doc && emake -C ${PN}/doc/ html
 }
 
 src_test() {
@@ -96,6 +98,7 @@ src_install() {
 	fperms a+x ${INSDESTTREE}/pypy-c
 	use jit && pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
+	dosym ../$(get_libdir)/pypy${SLOT}/ /usr/include/pypy${SLOT}
 	dodoc README.rst
 
 	if ! use sqlite; then
@@ -127,6 +130,9 @@ src_install() {
 
 	# compile the installed modules
 	python_optimize "${ED%/}${INSDESTTREE}"
+
+	# Install docs
+	use doc && dohtml -r ${PN}/doc/_build/html/
 
 	echo "EPYTHON='${EPYTHON}'" > epython.py
 	python_domodule epython.py

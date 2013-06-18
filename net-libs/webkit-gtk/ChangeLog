@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.209 2013/06/12 15:00:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.210 2013/06/18 06:10:56 tetromino Exp $
+
+  18 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-1.8.3-r201.ebuild,
+  webkit-gtk-1.8.3-r300.ebuild, webkit-gtk-1.10.2-r300.ebuild,
+  webkit-gtk-2.0.2.ebuild, webkit-gtk-2.0.3.ebuild:
+  Add missing pygobject:3 dependency when USE=test (bug #473622, thanks to
+  Nikoli). Fix test failure when python-3.x is the system python interpreter.
 
 *webkit-gtk-2.0.3 (12 Jun 2013)
 

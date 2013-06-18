@@ -1,9 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.2.ebuild,v 1.3 2013/06/06 05:35:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.2.ebuild,v 1.4 2013/06/18 06:10:56 tetromino Exp $
 
 EAPI="5"
-inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils toolchain-funcs versionator virtualx
+
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils python-any-r1 toolchain-funcs versionator virtualx
 
 MY_P="webkitgtk-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -52,8 +55,8 @@ RDEPEND="
 "
 # paxctl needed for bug #407085
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	dev-lang/perl
-	=dev-lang/python-2*
 	|| ( virtual/rubygems[ruby_targets_ruby19]
 	     virtual/rubygems[ruby_targets_ruby18] )
 	>=app-accessibility/at-spi2-core-2.5.3
@@ -68,6 +71,8 @@ DEPEND="${RDEPEND}
 
 	introspection? ( jit? ( sys-apps/paxctl ) )
 	test? (
+		dev-lang/python:2.7
+		dev-python/pygobject:3[python_targets_python2_7]
 		x11-themes/hicolor-icon-theme
 		jit? ( sys-apps/paxctl ) )
 "
@@ -107,6 +112,8 @@ pkg_setup() {
 		einfo "(-ggdb vs -g1) and enabled features."
 		check-reqs_pkg_setup
 	fi
+
+	[[ ${MERGE_TYPE} = "binary" ]] || python-any-r1_pkg_setup
 }
 
 src_prepare() {
@@ -197,7 +204,6 @@ src_configure() {
 		--enable-credential_storage
 		--enable-dependency-tracking
 		--disable-gtk-doc
-		PYTHON=$(type -P python2)
 		"$(usex aqua "--with-font-backend=pango --with-target=quartz" "")
 		# Aqua support in gtk3 is untested
 

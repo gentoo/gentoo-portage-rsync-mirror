@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.59 2013/02/06 20:22:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.60 2013/06/18 06:24:25 jlec Exp $
+
+*iotop-0.6 (18 Jun 2013)
+
+  18 Jun 2013; Justin Lecher <jlec@gentoo.org> +iotop-0.6.ebuild,
+  +files/iotop-0.6-setup.py3.patch:
+  Version Bump, #473528
 
 *iotop-0.5-r1 (06 Feb 2013)
 
