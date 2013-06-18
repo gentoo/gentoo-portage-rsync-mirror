@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.86 2013/01/27 22:39:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.87 2013/06/18 18:19:57 aballier Exp $
+
+*freebsd-ubin-9.1-r1 (18 Jun 2013)
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-ubin-9.1-r1.ebuild:
+  Build and install ldd32 with USE=multilib so that we can ldd 32bits
+  executables.
 
   27 Jan 2013; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-9.1.ebuild,
   +files/freebsd-ubin-9.1-ar-libarchive3.patch:
