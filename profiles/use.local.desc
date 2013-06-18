@@ -374,6 +374,7 @@ app-editors/emacs-vcs:wide-int - Prefer wide Emacs integers (typically 62-bit). 
 app-editors/fe:sendmail - Send mail after editor abend
 app-editors/gedit:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
+app-editors/gedit-plugins:git - Shows document changes related to git's HEAD
 app-editors/gedit-plugins:synctex - Synchronize between LaTeX and PDF with gedit and evince
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
 app-editors/gvim:netbeans - Include netbeans externaleditor integration support

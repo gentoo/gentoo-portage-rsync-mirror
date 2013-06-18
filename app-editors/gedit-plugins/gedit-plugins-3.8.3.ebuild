@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.1.ebuild,v 1.1 2013/04/28 14:41:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.3.ebuild,v 1.1 2013/06/18 18:55:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,9 +17,13 @@ LICENSE="GPL-2+"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
-IUSE_plugins="charmap terminal"
+IUSE_plugins="charmap git terminal"
 IUSE="+python ${IUSE_plugins}"
-REQUIRED_USE="charmap? ( python ) terminal? ( python )"
+REQUIRED_USE="
+	charmap? ( python )
+	git? ( python )
+	terminal? ( python )
+"
 
 RDEPEND="
 	>=app-editors/gedit-3.7.1[python?]
@@ -40,6 +44,7 @@ RDEPEND="
 		x11-libs/gdk-pixbuf:2[introspection]
 	)
 	charmap? ( >=gnome-extra/gucharmap-3:2.90[introspection] )
+	git? ( >=dev-libs/libgit2-glib-0.0.2 )
 	terminal? ( x11-libs/vte:2.90[introspection] )
 "
 DEPEND="${RDEPEND}

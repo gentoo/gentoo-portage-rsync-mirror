@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libgit2-glib
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.1 2013/06/18 18:51:25 pacho Exp $
+
+*libgit2-glib-0.0.2 (18 Jun 2013)
+
+  18 Jun 2013; Pacho Ramos <pacho@gentoo.org> +libgit2-glib-0.0.2.ebuild,
+  +metadata.xml:
+  Import libgit2-glib as required by latest gedit-plugins
