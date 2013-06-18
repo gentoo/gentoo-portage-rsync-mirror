@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.61 2013/03/28 13:04:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.62 2013/06/18 13:36:36 chithanh Exp $
+
+*xf86-video-nouveau-1.0.8 (18 Jun 2013)
+
+  18 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-nouveau-1.0.8.ebuild:
+  Version bump.
 
 *xf86-video-nouveau-1.0.7 (28 Mar 2013)
 
