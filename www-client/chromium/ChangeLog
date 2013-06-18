@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.897 2013/06/13 02:50:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.898 2013/06/17 23:55:33 floppym Exp $
+
+  17 Jun 2013; Mike Gilbert <floppym@gentoo.org> chromium-28.0.1500.45.ebuild:
+  Allow speech-dispatcher-0.7* to be used for chromium-28.
 
 *chromium-28.0.1500.45 (13 Jun 2013)
 

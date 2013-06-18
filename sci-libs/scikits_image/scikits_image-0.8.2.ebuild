@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.8.2.ebuild,v 1.1 2013/03/19 20:31:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.8.2.ebuild,v 1.2 2013/06/17 23:40:03 bicatali Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit distutils-r1
 
@@ -21,9 +21,9 @@ IUSE="doc freeimage gtk qt4 test"
 
 RDEPEND="
 	sci-libs/scikits[${PYTHON_USEDEP}]
-	sci-libs/scipy[umfpack,${PYTHON_USEDEP}]
+	sci-libs/scipy[sparse,${PYTHON_USEDEP}]
 	freeimage? ( media-libs/freeimage )
-	gtk? ( dev-python/pygtk[${PYTHON_USEDEP}] )
+	gtk? ( dev-python/pygtk[$(python_gen_usedep 'python2*')] )
 	qt4? ( dev-python/PyQt4[${PYTHON_USEDEP}] )"
 DEPEND="
 	>=dev-python/cython-0.15[${PYTHON_USEDEP}]

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.45.ebuild,v 1.1 2013/06/13 02:50:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.45.ebuild,v 1.3 2013/06/17 23:56:37 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,7 +25,7 @@ IUSE="bindist cups gnome gnome-keyring gps kerberos pulseaudio selinux +system-f
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
 
-RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
+RDEPEND="app-accessibility/speech-dispatcher:=
 	app-arch/bzip2:=
 	app-arch/snappy:=
 	system-sqlite? ( dev-db/sqlite:3 )
@@ -287,8 +287,13 @@ src_configure() {
 	myconf+="
 		-Dlinux_link_gsettings=1
 		-Dlinux_link_libpci=1
-		-Dlinux_link_libspeechd=1
-		-Dlibspeechd_h_prefix=speech-dispatcher/"
+		-Dlinux_link_libspeechd=1"
+
+	if has_version '>=app-accessibility/speech-dispatcher-0.8'; then
+		myconf+=" -Dlibspeechd_h_prefix=speech-dispatcher/"
+	else
+		myconf+=" -Dlibspeechd_h_prefix="
+	fi
 
 	# TODO: use the file at run time instead of effectively compiling it in.
 	myconf+="
