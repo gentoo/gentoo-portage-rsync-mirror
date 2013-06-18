@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>flameeyes@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		Proprietary plugin for several EPSON scanner models with the epkowa SANE backend (provided by media-gfx/iscan).
