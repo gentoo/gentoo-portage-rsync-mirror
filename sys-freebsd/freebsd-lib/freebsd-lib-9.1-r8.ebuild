@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.1 2013/06/18 19:15:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.3 2013/06/18 22:26:23 aballier Exp $
 
 EAPI=5
 
@@ -191,12 +191,6 @@ src_prepare() {
 		sed -i.bak -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
 	fi
 
-	# Let arch-specific includes to be found
-	local machine
-	machine=$(tc-arch-kernel ${CTARGET})
-	ln -s "${WORKDIR}/sys/${machine}/include" "${WORKDIR}/include/machine" || \
-		die "Couldn't make ${machine}/include symlink."
-
 	cd "${S}"
 	use bootstrap && dummy_mk libstand
 	# Try to fix sed calls for GNU sed. Do it only with GNU userland and force
@@ -257,9 +251,12 @@ bootstrap_libgcc() {
 	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/gnu/lib/libgcc"
 }
 
-# What to build for a non-native build: cross-compiler, non-native abi in
-# multilib. We also need the csu but this has to be handled separately.
-NON_NATIVE_SUBDIRS="lib/libc lib/msun gnu/lib/libssp/libssp_nonshared lib/libthr lib/libutil"
+# What to build for a cross-compiler.
+# We also need the csu but this has to be handled separately.
+CROSS_SUBDIRS="lib/libc lib/msun gnu/lib/libssp/libssp_nonshared lib/libthr lib/libutil"
+
+# What to build for non-default ABIs.
+NON_NATIVE_SUBDIRS="${CROSS_SUBDIRS} gnu/lib/csu lib/libcompiler_rt gnu/lib/libgcc lib/libmd lib/libcrypt"
 
 # Subdirs for a native build:
 NATIVE_SUBDIRS="lib gnu/lib/libssp/libssp_nonshared gnu/lib/libregex gnu/lib/csu gnu/lib/libgcc"
@@ -273,7 +270,7 @@ is_native_abi() {
 
 # Do we need to bootstrap the csu and libssp_nonshared?
 need_bootstrap() {
-	is_crosscompile || use build || ! is_native_abi || has_version "<${CATEGORY}/${P}"
+	is_crosscompile || use build || { ! is_native_abi && ! has_version '>=sys-freebsd/freebsd-lib-9.1-r8[multilib]' ; } || has_version "<${CATEGORY}/${P}"
 }
 
 # Get the subdirs we are building.
@@ -284,27 +281,16 @@ get_subdirs() {
 		ret="${NATIVE_SUBDIRS}"
 	elif is_crosscompile ; then
 		# With a cross-compiler we only build the very core parts.
-		ret="${NON_NATIVE_SUBDIRS}"
+		ret="${CROSS_SUBDIRS}"
 		if [ "${EBUILD_PHASE}" = "install" ]; then
 			# Add the csu dir first when installing. We treat it separately for
 			# compiling.
 			ret="$(get_csudir $(tc-arch-kernel ${CTARGET})) ${ret}"
 		fi
-	elif use build ; then
+	else
 		# For the non-native ABIs we only build the csu parts and very core
 		# libraries for now.
-		ret="gnu/lib/libssp/libssp_nonshared gnu/lib/csu"
-		if [ "${EBUILD_PHASE}" = "install" ]; then
-			ret="$(get_csudir $(tc-arch-kernel ${CHOST})) ${ret}"
-		fi
-	else
-		# Finally, with a non-native ABI without USE=build, we build the most
-		# important libraries.
-		ret="${NON_NATIVE_SUBDIRS} gnu/lib/csu lib/libcompiler_rt gnu/lib/libgcc lib/libmd lib/libcrypt"
-
-		if [ "${EBUILD_PHASE}" = "install" ]; then
-			ret="$(get_csudir $(tc-arch-kernel ${CHOST})) ${ret}"
-		fi
+		ret="${NON_NATIVE_SUBDIRS} $(get_csudir $(tc-arch-kernel ${CHOST}))"
 	fi
 	echo "${ret}"
 }
@@ -333,7 +319,11 @@ do_bootstrap() {
 do_compile() {
 	# Bootstrap if needed, otherwise assume the system headers are in
 	# /usr/include.
-	need_bootstrap && do_bootstrap
+	if need_bootstrap ; then
+		do_bootstrap
+	else
+		CFLAGS="${CFLAGS} -isystem /usr/include"
+	fi
 
 	export RAW_LDFLAGS=$(raw-ldflags)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3_rc3.ebuild,v 1.4 2013/06/18 21:52:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3.ebuild,v 1.1 2013/06/18 22:20:08 voyageur Exp $
 
 EAPI=5
 
@@ -11,9 +11,9 @@ inherit eutils multilib python-r1
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
 # Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.3_}/llvm-source-${PV/_}.tar.gz
-	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.3_}/compiler-rt-source-${PV/_}.tar.gz
-	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.3_}/cfe-source-${PV/_}.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.src.tar.gz
+	http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.gz
+	http://llvm.org/releases/${PV}/cfe-${PV}.src.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -25,14 +25,14 @@ DEPEND="static-analyzer? ( dev-lang/perl )
 RDEPEND="~sys-devel/llvm-${PV}[debug=,multitarget=]
 	${PYTHON_DEPS}"
 
-S=${WORKDIR}/llvm.src
+S=${WORKDIR}/llvm-${PV}.src
 
 src_prepare() {
 	rm -f "${S}"/tools/clang "${S}"/projects/compiler-rt \
 		|| die "symlinks removal failed"
-	mv "${WORKDIR}"/cfe.src "${S}"/tools/clang \
+	mv "${WORKDIR}"/cfe-${PV}.src "${S}"/tools/clang \
 		|| die "clang source directory move failed"
-	mv "${WORKDIR}"/compiler-rt.src "${S}"/projects/compiler-rt \
+	mv "${WORKDIR}"/compiler-rt-${PV}.src "${S}"/projects/compiler-rt \
 		|| die "compiler-rt source directory move failed"
 
 	# Same as llvm doc patches

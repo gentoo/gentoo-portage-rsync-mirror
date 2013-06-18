@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3_rc3.ebuild,v 1.2 2013/06/13 22:17:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3.ebuild,v 1.1 2013/06/18 22:14:08 voyageur Exp $
 
 EAPI=5
 
@@ -12,8 +12,8 @@ inherit eutils flag-o-matic multilib python-any-r1 toolchain-funcs pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.3_}/${PN}-source-${PV/_}.tar.gz"
-#	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
+	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -37,7 +37,7 @@ RDEPEND="dev-lang/perl
 	libffi? ( virtual/libffi )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
-S=${WORKDIR}/${PN}.src
+S=${WORKDIR}/${P}.src
 
 pkg_setup() {
 	# Required for test and build
@@ -177,8 +177,8 @@ src_install() {
 	if use doc; then
 		doman docs/_build/man/*.1
 		dohtml -r docs/_build/html/
-	#else
-	#	doman "${WORKDIR}"/${P}-manpages/*.1
+	else
+		doman "${WORKDIR}"/${P}-manpages/*.1
 	fi
 
 	if use vim-syntax; then
