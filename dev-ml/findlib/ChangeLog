@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/findlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.106 2013/06/11 22:20:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.107 2013/06/18 16:50:43 vapier Exp $
+
+  18 Jun 2013; Mike Frysinger <vapier@gentoo.org> findlib-1.4.ebuild:
+  Add arm love for brltty.
 
 *findlib-1.4 (11 Jun 2013)
 
