@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.53 2013/01/27 22:18:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.54 2013/06/18 17:06:33 aballier Exp $
+
+*freebsd-libexec-9.1-r1 (18 Jun 2013)
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-libexec-9.1-r1.ebuild:
+  Build and install ld-elf32.so.1 with USE=multilib so that we can run 32bits
+  programs.
 
   27 Jan 2013; Alexis Ballier <aballier@gentoo.org>
   -freebsd-libexec-9.1_rc1.ebuild, -freebsd-libexec-9.1_rc2.ebuild,

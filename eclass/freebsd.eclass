@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.27 2013/06/18 16:57:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.28 2013/06/18 17:30:56 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -104,9 +104,6 @@ freebsd_src_compile() {
 	use profile || mymakeopts="${mymakeopts} NO_PROFILE= "
 
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= NO_FSCHG="
-
-	# Many things breaks when using ricer flags here
-	[[ -z "${NOFLAGSTRIP}" ]] && strip-flags
 
 	# Make sure to use FreeBSD definitions while crosscompiling
 	[[ -z "${BMAKE}" ]] && BMAKE="$(freebsd_get_bmake)"

@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.176 2013/06/17 17:34:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.177 2013/06/18 17:03:05 aballier Exp $
+
+*freebsd-lib-9.1-r6 (18 Jun 2013)
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org> +freebsd-lib-9.1-r6.ebuild:
+  Wrap abi specific headers when doing a multilib build.
 
 *freebsd-lib-9.1-r5 (17 Jun 2013)
 
