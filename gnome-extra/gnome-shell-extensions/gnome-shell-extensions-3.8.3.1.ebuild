@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.2.ebuild,v 1.1 2013/05/15 07:55:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.8.3.1.ebuild,v 1.1 2013/06/18 19:13:49 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"

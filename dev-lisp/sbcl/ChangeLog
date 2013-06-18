@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.190 2013/05/10 09:05:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.191 2013/06/18 19:03:29 grozin Exp $
+
+*sbcl-1.1.8 (18 Jun 2013)
+
+  18 Jun 2013; Andrey Grozin <grozin@gentoo.org> +sbcl-1.1.8.ebuild:
+  Version bump
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unused flag from metadata

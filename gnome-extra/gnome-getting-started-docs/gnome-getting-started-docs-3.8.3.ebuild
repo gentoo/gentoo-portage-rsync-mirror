@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-getting-started-docs/gnome-getting-started-docs-3.8.1.ebuild,v 1.1 2013/04/24 20:17:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-getting-started-docs/gnome-getting-started-docs-3.8.3.ebuild,v 1.1 2013/06/18 19:07:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,8 @@ RDEPEND="gnome-extra/gnome-user-docs"
 DEPEND="app-text/yelp-tools
 	dev-util/itstool
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"

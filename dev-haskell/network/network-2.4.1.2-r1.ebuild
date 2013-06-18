@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.4.1.2-r1.ebuild,v 1.1 2013/06/16 20:28:09 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.4.1.2-r1.ebuild,v 1.2 2013/06/18 19:28:22 slyfox Exp $
 
 EAPI=5
 
@@ -29,6 +29,5 @@ DEPEND="${RDEPEND}
 		)"
 
 src_configure() {
-	cabal_conf="${cabal_conf} --with-gcc='$(tc-getCC)'"
-	haskell-cabal_src_configure	
+	haskell-cabal_src_configure --configure-option="CC=$(tc-getCC)"
 }
