@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/msieve
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/ChangeLog,v 1.12 2013/03/07 09:52:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/ChangeLog,v 1.13 2013/06/18 03:30:34 patrick Exp $
+
+  18 Jun 2013; Patrick Lauer <patrick@gentoo.org> msieve-1.51.ebuild:
+  Small linking fix #473580, works unconditionally
 
 *msieve-1.51 (07 Mar 2013)
 
