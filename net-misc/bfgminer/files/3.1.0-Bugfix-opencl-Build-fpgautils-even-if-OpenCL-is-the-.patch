@@ -1,0 +1,26 @@
+From fa2f27dbc7b1bffc77526a752824a7dc7cfa6a77 Mon Sep 17 00:00:00 2001
+From: Luke Dashjr <luke-jr+git@utopios.org>
+Date: Sat, 15 Jun 2013 19:20:47 +0000
+Subject: [PATCH] Bugfix: opencl: Build fpgautils even if OpenCL is the only
+ driver, now that it uses it for kernel-finding
+
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 97aa8c7..c69d01d 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -525,7 +525,7 @@ AC_SUBST(libblkmaker_LIBS)
+ 
+ AM_CONDITIONAL([NEED_LIBBLKMAKER], [test x$with_system_libblkmaker != xyes])
+ AM_CONDITIONAL([NEED_DYNCLOCK], [test x$icarus$modminer$x6500$ztex != xnonono])
+-AM_CONDITIONAL([NEED_FPGAUTILS], [test x$avalon$icarus$bitforce$modminer$x6500$ztex != xnononononono])
++AM_CONDITIONAL([NEED_FPGAUTILS], [test x$avalon$icarus$bitforce$modminer$opencl$x6500$ztex != xnonononononono])
+ AM_CONDITIONAL([HAS_SCRYPT], [test x$scrypt = xyes])
+ AM_CONDITIONAL([HAVE_CURSES], [test x$curses = xyes])
+ AM_CONDITIONAL([HAVE_SENSORS], [test x$with_sensors = xyes])
+-- 
+1.8.1.5
+

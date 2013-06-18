@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.1.0.ebuild,v 1.1 2013/06/14 18:37:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.1.0-r1.ebuild,v 1.1 2013/06/18 11:36:58 blueness Exp $
 
 EAPI="4"
 
@@ -60,6 +60,12 @@ DEPEND="${DEPEND}
 		)
 	)
 "
+
+src_prepare() {
+	epatch "${FILESDIR}/3.1.0-Bugfix-opencl-Build-fpgautils-even-if-OpenCL-is-the-.patch"
+	epatch "${FILESDIR}/3.1.0-Bugfix-opencl-Add-missing-include-for-fpgautils.h-ne.patch"
+	NOSUBMODULES=1 ./autogen.sh
+}
 
 src_configure() {
 	local CFLAGS="${CFLAGS}"
