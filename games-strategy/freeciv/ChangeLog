@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.146 2013/03/31 17:49:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.147 2013/06/18 05:43:24 mr_bones_ Exp $
+
+  18 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org> -freeciv-2.3.3.ebuild:
+  old
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> freeciv-2.3.4.ebuild:
   Stable for amd64, wrt bug #463568
