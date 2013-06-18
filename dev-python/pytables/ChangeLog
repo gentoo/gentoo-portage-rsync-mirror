@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pytables
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.44 2013/05/04 10:31:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.45 2013/06/18 00:20:27 bicatali Exp $
+
+*pytables-3.0.0 (18 Jun 2013)
+
+  18 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> +pytables-3.0.0.ebuild,
+  metadata.xml:
+  Version bump
 
 *pytables-2.4.0-r1 (04 May 2013)
 
