@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libseccomp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/ChangeLog,v 1.7 2013/01/22 17:26:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/ChangeLog,v 1.8 2013/06/18 03:58:27 vapier Exp $
+
+*libseccomp-2.1.0 (18 Jun 2013)
+
+  18 Jun 2013; Mike Frysinger <vapier@gentoo.org> +libseccomp-2.1.0.ebuild:
+  Version bump #473626 by Paul Moore.  Set V=1 when building #451820 by Agostino
+  Sarubbo.
 
   22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libseccomp-1.0.1.ebuild:
   Stable for x86, wrt bug #451496
