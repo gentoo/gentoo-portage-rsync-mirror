@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.108 2013/06/03 07:45:21 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.109 2013/06/18 09:36:05 keri Exp $
+
+  18 Jun 2013; <keri@gentoo.org> mercury-extras-13.05.ebuild:
+  Compiling mercury submodules using mgnuc is not threadsafe. Closes #472458
 
 *mercury-extras-13.05 (03 Jun 2013)
 

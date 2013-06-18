@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-13.05.ebuild,v 1.1 2013/06/03 07:45:21 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-13.05.ebuild,v 1.2 2013/06/18 09:36:05 keri Exp $
 
 EAPI=2
 
@@ -104,8 +104,8 @@ src_compile() {
 	mmake \
 		-j1 depend || die "mmake depend failed"
 
-	mmake \
-		MMAKEFLAGS="${MAKEOPTS}" \
+	# Compiling Mercury submodules is not thread-safe
+	mmake -j1 \
 		EXTRA_MLFLAGS=--no-strip \
 		EXTRA_LDFLAGS="${LDFLAGS}" \
 		EXTRA_LD_LIBFLAGS="${LDFLAGS}" \
@@ -113,8 +113,8 @@ src_compile() {
 }
 
 src_install() {
-	mmake \
-		MMAKEFLAGS="${MAKEOPTS}" \
+	# Compiling Mercury submodules is not thread-safe
+	mmake -j1 \
 		EXTRA_LD_LIBFLAGS="${LDFLAGS}" \
 		INSTALL_PREFIX="${D}"/usr \
 		install || die "mmake install failed"
