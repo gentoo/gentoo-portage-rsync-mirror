@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/ack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.28 2013/01/21 20:08:50 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.31 2013/06/18 01:05:44 radhermit Exp $
+
+  18 Jun 2013; Tim Harder <radhermit@gentoo.org> ack-1.96.ebuild:
+  Drop unused bash-completion use flag.
+
+  18 Jun 2013; Tim Harder <radhermit@gentoo.org> -ack-1.94-r1.ebuild:
+  Remove old.
+
+*ack-2.04 (18 Jun 2013)
+
+  18 Jun 2013; Tim Harder <radhermit@gentoo.org> +ack-2.04.ebuild,
+  +files/ack-2.04-gentoo.patch, metadata.xml:
+  Version bump (bug #466512, Gentoo specific patch by Chris Mayo) and add
+  myself as a maintainer.
 
   21 Jan 2013; Steev Klimaszewski <steev@gentoo.org> ack-1.96.ebuild:
   Add ~arm keyword
