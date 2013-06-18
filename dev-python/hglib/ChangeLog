@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/hglib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hglib/ChangeLog,v 1.5 2013/01/23 16:20:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hglib/ChangeLog,v 1.6 2013/06/18 14:02:06 idella4 Exp $
+
+*hglib-0.9 (18 Jun 2013)
+
+  18 Jun 2013; Ian Delaney <idella4@gentoo.org> +hglib-0.9.ebuild,
+  -hglib-0.1.ebuild, -hglib-0.2.ebuild, hglib-0.3.ebuild:
+  update to 0.3, bump
 
   23 Jan 2013; Ian Delaney <idella4@gentoo.org> +files/hglib-0.3-tests.patch,
   hglib-0.3.ebuild:
