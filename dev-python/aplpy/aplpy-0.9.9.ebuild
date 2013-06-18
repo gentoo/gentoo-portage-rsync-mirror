@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.9.ebuild,v 1.1 2013/04/25 17:51:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/aplpy-0.9.9.ebuild,v 1.2 2013/06/18 16:13:56 bicatali Exp $
 
 EAPI=5
 
@@ -23,7 +23,9 @@ IUSE=""
 RDEPEND="
 	>=dev-python/astropy-0.2[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/matplotlib[${PYTHON_USEDEP}]"
+	dev-python/matplotlib[${PYTHON_USEDEP}]
+	dev-python/pyavm[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYP}"

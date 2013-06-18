@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20130531-r1.ebuild,v 1.1 2013/06/17 18:18:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20130531-r1.ebuild,v 1.2 2013/06/18 16:08:08 aballier Exp $
 
 EAPI=5
 
@@ -62,6 +62,7 @@ src_configure() {
 	# TODO: cross-compile ?
 	export CC=clang
 	export CXX=clang++
+	has_version 'sys-libs/libcxx' && export CXX="clang++ -stdlib=libc++"
 
 	if use static-libs ; then
 		local mycmakeargs=( "${mycmakeargs_base[@]}" "-DLIBCXX_ENABLE_SHARED=OFF" )

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14838 2013/06/18 06:05:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14839 2013/06/18 16:15:55 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -72,6 +72,8 @@ gnome-extra/contacts
 # Pacho Ramos <pacho@gentoo.org> (15 Jun 2013)
 # Not compatible with current kernels as it doesn't
 # support v4l2 (#452956). Removal in a month.
+# Alternatives: net-voip/ekiga net-voip/homer net-voip/linphone
+# net-voip/sflphone net-voip/yate
 net-im/qutecom
 
 # Pacho Ramos <pacho@gentoo.org> (15 Jun 2013)
