@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.859 2013/06/17 19:13:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.860 2013/06/18 04:31:44 ottxor Exp $
+
+  18 Jun 2013; Christoph Junghans <ottxor@gentoo.org> cvs.eclass:
+  fixed use of proxy variables
 
   17 Jun 2013; Pacho Ramos <pacho@gentoo.org> multilib-minimal.eclass:
   Allow eapi4 (#473610)

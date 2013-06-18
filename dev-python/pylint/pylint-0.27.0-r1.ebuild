@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.27.0-r1.ebuild,v 1.4 2013/05/10 05:27:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.27.0-r1.ebuild,v 1.5 2013/06/18 04:31:19 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{5,6,7} python{3_1,3_2} )
@@ -17,8 +17,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-lin
 IUSE="examples"
 
 # Versions specified in __pkginfo__.py.
-RDEPEND=">=dev-python/logilab-common-0.53.0
-	>=dev-python/astng-0.21.1"
+RDEPEND=">=dev-python/logilab-common-0.53.0[$(python_gen_usedep python{2_6,2_7,3_2})]
+	>=dev-python/astng-0.21.1[$(python_gen_usedep python{2_6,2_7,3_2})]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 

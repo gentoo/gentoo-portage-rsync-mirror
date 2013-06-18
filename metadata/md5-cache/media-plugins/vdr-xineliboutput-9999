@@ -7,5 +7,5 @@ IUSE=caps dbus fbcon jpeg libextractor nls +vdr vdpau +X +xine xinerama vdr
 LICENSE=GPL-2
 RDEPEND=vdr? ( >=media-video/vdr-1.6.0 libextractor? ( >=media-libs/libextractor-0.5.20 ) caps? ( sys-libs/libcap ) ) xine? ( || ( <media-libs/xine-lib-1.2 ( >=media-libs/xine-lib-1.2 virtual/ffmpeg ) ) fbcon? ( jpeg? ( virtual/jpeg ) ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) dbus? ( dev-libs/dbus-glib dev-libs/glib:2 ) vdpau? ( x11-libs/libvdpau >=media-libs/xine-lib-1.2 ) jpeg? ( virtual/jpeg ) ) ) vdr? ( >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2 )
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cvs	39a3c20f6f84050321495248c23e26c4	eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin	b34d39bcf21b36fb278c28e40c967f15
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cvs	4ca7805a3cc9ebcb2b091e6bafc9fae0	eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin	b34d39bcf21b36fb278c28e40c967f15
 _md5_=1407d52b85a2c39a8e2ff9c552f5e392

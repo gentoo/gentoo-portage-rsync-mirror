@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.98 2013/05/10 05:27:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.99 2013/06/18 04:31:19 idella4 Exp $
+
+  18 Jun 2013; Ian Delaney <idella4@gentoo.org> pylint-0.27.0-r1.ebuild:
+  upgrade deps re python
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> pylint-0.27.0-r1.ebuild:
   Fix inherit

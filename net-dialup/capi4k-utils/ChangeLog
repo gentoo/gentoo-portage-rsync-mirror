@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.72 2013/01/21 22:32:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.73 2013/06/18 05:00:43 pinkbyte Exp $
+
+  18 Jun 2013; Sergey Popov <pinkbyte@gentoo.org>
+  capi4k-utils-20050718-r5.ebuild:
+  Respect AR and CC, wrt bug #468662. Thanks to Agostino Sarubbo for
+  discovering this issue
 
   21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   capi4k-utils-20050718-r3.ebuild:
