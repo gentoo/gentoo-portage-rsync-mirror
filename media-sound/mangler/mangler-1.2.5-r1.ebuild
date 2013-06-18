@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.2.1.ebuild,v 1.2 2012/05/05 08:33:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.2.5-r1.ebuild,v 1.1 2013/06/18 12:54:47 prometheanfire Exp $
 
-EAPI=2
+EAPI=5
+
+inherit toolchain-funcs
 
 DESCRIPTION="Open source VOIP client capable of connecting to Ventrilo 3.x servers"
 HOMEPAGE="http://www.mangler.org/"
@@ -11,7 +13,7 @@ SRC_URI="http://www.mangler.org/downloads/${P}.tar.bz2"
 LICENSE="GPL-3 LGPL-2.1 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+alsa celt espeak g15 +gsm oss pulseaudio static-libs +speex +xosd"
+IUSE="+alsa opus espeak g15 +gsm oss pulseaudio static-libs +speex +xosd"
 
 RDEPEND="dev-cpp/gtkmm:2.4
 	gnome-base/librsvg
@@ -21,7 +23,7 @@ RDEPEND="dev-cpp/gtkmm:2.4
 	x11-libs/libX11
 	x11-libs/libXi
 	alsa? ( media-libs/alsa-lib )
-	celt? ( >=media-libs/celt-0.7.1 )
+	opus? ( media-libs/opus )
 	espeak? ( app-accessibility/espeak )
 	g15? ( app-misc/g15daemon )
 	gsm? ( media-sound/gsm )
@@ -32,12 +34,13 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_configure() {
+	tc-export CC
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
 		$(use_enable gsm) \
 		$(use_enable speex) \
-		$(use_enable celt) \
+		$(use_enable opus) \
 		$(use_enable xosd) \
 		$(use_enable g15) \
 		$(use_enable espeak) \
@@ -47,7 +50,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog
 
 	find "${D}" -name '*.la' -exec rm -f '{}' +
