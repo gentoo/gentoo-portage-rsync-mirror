@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.61 2013/04/11 09:10:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.62 2013/06/19 02:47:13 aballier Exp $
+
+  19 Jun 2013; Alexis Ballier <aballier@gentoo.org> -cinelerra-20111223.ebuild:
+  remove old
 
   11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   cinelerra-20120707.ebuild, +files/cinelerra-std_and_str_h.patch:

@@ -2,17 +2,20 @@ Index: lmms-0.4.14/plugins/zynaddsubfx/CMakeLists.txt
 ===================================================================
 --- lmms-0.4.14.orig/plugins/zynaddsubfx/CMakeLists.txt
 +++ lmms-0.4.14/plugins/zynaddsubfx/CMakeLists.txt
-@@ -45,7 +45,8 @@ IF(LMMS_BUILD_WIN32)
+@@ -45,7 +45,11 @@ IF(LMMS_BUILD_WIN32)
  	ADD_DEFINITIONS(-DPTW32_STATIC_LIB)
  ENDIF(LMMS_BUILD_WIN32)
  
 -INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/fltk/ ${CMAKE_CURRENT_SOURCE_DIR} ${FFTW3F_INCLUDE_DIRS} ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_BINARY_DIR} )
++set(FLTK_SKIP_OPENGL true)
++set(FLTK_SKIP_FORMS true)
++set(FLTK_SKIP_IMAGES true)
 +FIND_PACKAGE(FLTK)
 +INCLUDE_DIRECTORIES(${FLTK_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR} ${FFTW3F_INCLUDE_DIRS} ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_BINARY_DIR} )
  
  set(ZASF_CORE_LIBS
      zynaddsubfx_input
-@@ -98,7 +99,7 @@ SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL
+@@ -98,7 +102,7 @@ SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL
  SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
  ADD_EXECUTABLE(RemoteZynAddSubFx RemoteZynAddSubFx.cpp ${ZYN_SRC_GUI} ${WINRC})
  INSTALL(TARGETS RemoteZynAddSubFx RUNTIME DESTINATION ${PLUGIN_DIR})
@@ -21,7 +24,7 @@ Index: lmms-0.4.14/plugins/zynaddsubfx/CMakeLists.txt
  ADD_DEPENDENCIES(RemoteZynAddSubFx ZynAddSubFxCore)
  
  # link system libraries when on win32
-@@ -106,25 +107,7 @@ IF(LMMS_BUILD_WIN32)
+@@ -106,25 +110,7 @@ IF(LMMS_BUILD_WIN32)
  	TARGET_LINK_LIBRARIES(RemoteZynAddSubFx ${QT_LIBRARIES} -lole32 -luuid -lcomctl32 -lgdi32 -lws2_32)
  ENDIF(LMMS_BUILD_WIN32)
  

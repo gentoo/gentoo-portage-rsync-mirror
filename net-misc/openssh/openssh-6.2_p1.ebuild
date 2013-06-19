@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p1.ebuild,v 1.2 2013/03/30 04:29:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p1.ebuild,v 1.3 2013/06/19 02:57:15 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -144,6 +144,8 @@ src_prepare() {
 		-e 's:-D_FORTIFY_SOURCE=2::'
 	)
 	sed -i "${sed_args[@]}" configure{,.ac} || die
+
+	epatch_user #473004
 
 	# Now we can build a sane merged version.h
 	(

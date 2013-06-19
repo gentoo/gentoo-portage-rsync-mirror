@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1-r1.ebuild,v 1.5 2013/02/21 05:30:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1-r1.ebuild,v 1.6 2013/06/19 02:57:15 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -141,6 +141,8 @@ src_prepare() {
 
 	# Disable PATH reset, trust what portage gives us. bug 254615
 	sed -i -e 's:^PATH=/:#PATH=/:' configure || die
+
+	epatch_user #473004
 
 	# Now we can build a sane merged version.h
 	(
