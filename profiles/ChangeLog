@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7955 2013/06/18 22:19:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7957 2013/06/18 23:12:47 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  -releases/freebsd-8.0/ChangeLog, -releases/freebsd-8.0/package.mask,
+  -releases/freebsd-8.0/package.use.mask, -releases/freebsd-8.0/packages,
+  -releases/freebsd-8.0/parent:
+  remove freebsd-8.0 profiles
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  -releases/freebsd-7.2/ChangeLog, -releases/freebsd-7.2/make.defaults,
+  -releases/freebsd-7.2/package.mask, -releases/freebsd-7.2/package.use.mask,
+  -releases/freebsd-7.2/packages, -releases/freebsd-7.2/parent:
+  remove freebsd-7.2 profiles
 
   18 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Remove mask on llvm release candidates

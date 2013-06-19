@@ -1,9 +1,0 @@
-# Copyright 1999-2011 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-7.2/make.defaults,v 1.2 2011/02/13 16:53:40 arfrever Exp $
-
-# Note: CHOST must be *-gentoo-freebsd7.2, so that Gentoo can be recognized in
-# ./configure files.
-# Note: ARCH must be *-fbsd
-
-USE="ppds"

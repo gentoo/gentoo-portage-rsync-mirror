@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.479 2013/06/18 20:39:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.480 2013/06/18 23:01:48 xmw Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Michael Weber <xmw@gentoo.org>  (19 Jun 2013)
+# Not fit for production
+=www-client/netsurf-3.0 fbcon pdf-writer gstreamer
 
 # Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
 # Only work on amd64/x86 
@@ -178,7 +182,7 @@ dev-lang/idb eclipse
 
 # Michael Weber<xmw@gentoo.org>  (18 Jun 2012)
 # Not fit for production
-www-client/netsurf pdf-writer javascript gstreamer
+=www-client/netsurf-2.9 pdf-writer javascript gstreamer
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
 # Stop glibc/uclibc from using iconv in blender

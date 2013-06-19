@@ -1,6 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.146 2013/05/25 22:04:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.148 2013/06/18 23:11:35 aballier Exp $
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org> -fbsd/amd64/8.0/deprecated,
+  -fbsd/amd64/8.0/make.defaults, -fbsd/amd64/8.0/parent,
+  -fbsd/sparc/8.0/deprecated, -fbsd/sparc/8.0/make.defaults,
+  -fbsd/sparc/8.0/parent, -fbsd/x86/8.0/deprecated,
+  -fbsd/x86/8.0/make.defaults, -fbsd/x86/8.0/parent:
+  remove 8.0 profiles
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org> -fbsd/amd64/7.2/deprecated,
+  -fbsd/amd64/7.2/make.defaults, -fbsd/amd64/7.2/parent,
+  -fbsd/sparc/7.2/deprecated, -fbsd/sparc/7.2/make.defaults,
+  -fbsd/sparc/7.2/parent, -fbsd/x86/7.2/deprecated,
+  -fbsd/x86/7.2/make.defaults, -fbsd/x86/7.2/parent:
+  Remove 7.2 profiles
 
   25 May 2013; Alexis Ballier <aballier@gentoo.org>
   fbsd/amd64/9.1/clang/packages, fbsd/amd64/9.1/clang/packages.build,

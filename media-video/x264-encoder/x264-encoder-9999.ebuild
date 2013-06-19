@@ -1,76 +1,72 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-9999.ebuild,v 1.4 2012/05/05 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-9999.ebuild,v 1.5 2013/06/18 23:02:45 chutzpah Exp $
 
-EAPI=4
+EAPI=5
 
-if [ "${PV#9999}" != "${PV}" ] ; then
-	V_ECLASS="git-2"
-else
-	V_ECLASS="versionator"
-fi
+inherit flag-o-matic multilib toolchain-funcs
 
-inherit multilib toolchain-funcs ${V_ECLASS}
-
-if [ "${PV#9999}" = "${PV}" ] ; then
-	MY_P="x264-snapshot-$(get_version_component_range 3)-2245-stable"
-fi
 DESCRIPTION="A free commandline encoder for X264/AVC streams"
 HOMEPAGE="http://www.videolan.org/developers/x264.html"
-if [ "${PV#9999}" != "${PV}" ] ; then
+if [[ ${PV} == 9999 ]]; then
+	inherit git-2
+	EGIT_BRANCH=stable
 	EGIT_REPO_URI="git://git.videolan.org/x264.git"
 	SRC_URI=""
 else
+	inherit versionator
+	MY_P="x264-snapshot-$(get_version_component_range 3)-2245"
 	SRC_URI="http://download.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+	S="${WORKDIR}/${MY_P}"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-if [ "${PV#9999}" != "${PV}" ] ; then
-	KEYWORDS=""
-else
-	KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-fi
-IUSE="debug ffmpeg ffmpegsource mp4 +threads"
+IUSE="10bit avs custom-cflags debug ffmpeg ffmpegsource +interlaced mp4 +threads"
 
 REQUIRED_USE="ffmpegsource? ( ffmpeg )"
 
-RDEPEND="
-	ffmpeg? ( virtual/ffmpeg )
+RDEPEND="ffmpeg? ( virtual/ffmpeg )
+	~media-libs/x264-${PV}[10bit=,debug=,interlaced=,threads=]
 	ffmpegsource? ( media-libs/ffmpegsource )
-	mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
-	~media-libs/x264-${PV}
-"
-ASM_DEP=">=dev-lang/yasm-0.6.2"
+	mp4? ( >=media-video/gpac-0.4.1_pre20060122 )"
+
+ASM_DEP=">=dev-lang/yasm-1.2.0"
 DEPEND="${RDEPEND}
 	amd64? ( ${ASM_DEP} )
-	x86? ( || ( ${ASM_DEP} dev-lang/nasm )
-		!<dev-lang/yasm-0.6.2 )
+	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
-	virtual/pkgconfig
-"
-if [ "${PV#9999}" = "${PV}" ] ; then
-	S=${WORKDIR}/${MY_P}
-fi
+	virtual/pkgconfig"
 
 src_configure() {
 	tc-export CC
 
-	local myconf=""
-	use debug && myconf+=" --enable-debug"
-	use ffmpeg || myconf+=" --disable-lavf --disable-swscale"
-	use ffmpegsource || myconf+=" --disable-ffms"
-	use mp4 || myconf+=" --disable-gpac"
-	use threads || myconf+=" --disable-thread"
+	# let upstream pick the optimization level by default
+	use custom-cflags || filter-flags -O?
 
 	./configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
-		--disable-avs \
-		--extra-asflags="${ASFLAGS}" \
-		--extra-cflags="${CFLAGS}" \
-		--extra-ldflags="${LDFLAGS}" \
-		--host="${CHOST}" \
 		--system-libx264 \
-		${myconf} || die
+		--host="${CHOST}" \
+		$(usex 10bit "--bit-depth=10" "") \
+		$(usex avs "" "--disable-avs") \
+		$(usex debug "--enable-debug" "") \
+		$(usex ffmpeg "" "--disable-lavf --disable-swscale") \
+		$(usex ffmpegsource "" "--disable-ffms") \
+		$(usex interlaced "" "--disable-interlaced") \
+		$(usex mp4 "" "--disable-gpac") \
+		$(usex threads "" "--disable-thread") || die
+
+	# this is a nasty workaround for bug #376925 for x264 that also applies
+	# here, needed because as upstream doesn't like us fiddling with their CFLAGS
+	if use custom-cflags; then
+		local cflags
+		cflags="$(grep "^CFLAGS=" config.mak | sed 's/CFLAGS=//')"
+		cflags="${cflags//$(get-flag O)/}"
+		cflags="${cflags//-O? /$(get-flag O) }"
+		cflags="${cflags//-g /}"
+		sed -i "s:^CFLAGS=.*:CFLAGS=${cflags//:/\\:}:" config.mak
+	fi
 }

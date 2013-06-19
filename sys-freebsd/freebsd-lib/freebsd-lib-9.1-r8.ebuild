@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.3 2013/06/18 22:26:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.4 2013/06/18 23:18:11 aballier Exp $
 
 EAPI=5
 
@@ -37,8 +37,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		!sys-freebsd/freebsd-headers"
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2
-		=sys-freebsd/freebsd-sources-${RV}*
-		!bootstrap? ( app-arch/bzip2 )"
+		=sys-freebsd/freebsd-sources-${RV}*"
 else
 	SRC_URI="${SRC_URI}
 			mirror://gentoo/${SYS}.tar.bz2"
@@ -56,7 +55,7 @@ if [ "${CTARGET}" = "${CHOST}" -a "${CATEGORY#*cross-}" != "${CATEGORY}" ]; then
 fi
 
 IUSE="atm bluetooth ssl hesiod ipv6 kerberos usb netware
-	build bootstrap crosscompile_opts_headers-only zfs
+	build crosscompile_opts_headers-only zfs
 	userland_GNU userland_BSD multilib"
 
 pkg_setup() {
@@ -106,6 +105,8 @@ PATCHES=(
 # - archiving libraries (have their own ebuild)
 # - sendmail libraries (they are installed by sendmail)
 # - SNMP library and dependency (have their own ebuilds)
+# - libstand: static library, 32bits on amd64 used for boot0, we build it from
+# boot0 instead.
 #
 # The rest are libraries we already have somewhere else because
 # they are contribution.
@@ -119,7 +120,8 @@ REMOVE_SUBDIRS="ncurses \
 	libbegemot libbsnmp \
 	libpam libpcap bind libwrap libmagic \
 	libcom_err libtelnet
-	libelf libedit"
+	libelf libedit
+	libstand"
 
 # For doing multilib over multibuild.eclass
 MULTIBUILD_VARIANTS=( $(get_all_abis) )
@@ -191,10 +193,9 @@ src_prepare() {
 		sed -i.bak -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
 	fi
 
-	cd "${S}"
-	use bootstrap && dummy_mk libstand
 	# Try to fix sed calls for GNU sed. Do it only with GNU userland and force
 	# BSD's sed on BSD.
+	cd "${S}"
 	if use userland_GNU; then
 		find . -name Makefile -exec sed -ibak 's/sed -i /sed -i/' {} \;
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.1.ebuild,v 1.1 2013/01/27 21:23:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.1.ebuild,v 1.2 2013/06/18 23:14:29 aballier Exp $
 
 EAPI=2
 
@@ -44,6 +44,14 @@ src_prepare() {
 src_compile() {
 	strip-flags
 	append-flags "-fno-strict-aliasing"
+
+	cd "${WORKDIR}/lib/libstand" || die
+	freebsd_src_compile
+
+	cd "${S}"
+	CFLAGS="${CFLAGS} -I${WORKDIR}/lib/libstand"
+	LDFLAGS="${LDFLAGS} -L${WORKDIR}/lib/libstand"
+	export LIBSTAND="${WORKDIR}/lib/libstand/libstand.a"
 	NOFLAGSTRIP="yes" freebsd_src_compile
 }
 
