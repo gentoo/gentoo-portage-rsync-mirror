@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ball
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.8 2013/05/29 16:17:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.9 2013/06/19 03:56:19 bicatali Exp $
+
+  19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Changed herd to sci-chemistry
 
   29 May 2013; Justin Lecher <jlec@gentoo.org> ball-1.4.1-r1.ebuild:
   Fix usage of new python r1 eclasses (missing PYTHON_REQUIRED_USE,

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/chemical-mime-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/ChangeLog,v 1.6 2012/05/04 07:02:34 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/ChangeLog,v 1.7 2013/06/19 03:58:07 bicatali Exp $
+
+  19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Changed herd to sci-chemistry
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   chemical-mime-data-0.1.94.ebuild, chemical-mime-data-0.1.94-r1.ebuild:
@@ -28,4 +31,3 @@
   11 Dec 2007; Jeff Gardner <je_fro@gentoo.org> +metadata.xml,
   +chemical-mime-data-0.1.94.ebuild:
   Initial import
-
