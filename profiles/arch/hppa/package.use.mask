@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.124 2013/05/28 13:53:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.125 2013/06/19 18:00:25 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -38,10 +38,6 @@ app-portage/eix clang
 # Jeroen Roovers <jer@gentoo.org> (8 Jul 2012)
 # media-libs/devil has not been fully tested on HPPA
 media-gfx/graphviz devil
-
-# Jeroen Roovers <jer@gentoo.org> (4 Jul 2012)
-# media-gfx/mscgen does not work on HPPA (bug #419987).
-dev-libs/libnl doc
 
 # Jeroen Roovers <jer@gentoo.org> (3 Jul 2012)
 # Mask USE=connman for net-libs/gupnp (bug #424225)
