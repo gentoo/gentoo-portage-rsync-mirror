@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libclc
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/ChangeLog,v 1.1 2013/06/19 15:22:29 chithanh Exp $
+
+*libclc-0.0.1_pre20130524 (19 Jun 2013)
+
+  19 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libclc-0.0.1_pre20130524.ebuild, +metadata.xml:
+  Initial commit, import of alexxy's ebuild from thhe x11 overlay.
