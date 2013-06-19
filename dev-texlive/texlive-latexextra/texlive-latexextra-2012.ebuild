@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/texlive-latexextra-2012.ebuild,v 1.21 2013/04/25 21:29:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/texlive-latexextra-2012.ebuild,v 1.22 2013/06/19 02:17:05 aballier Exp $
 
 EAPI="4"
 
@@ -28,6 +28,7 @@ DEPEND=">=dev-texlive/texlive-latexrecommended-2012
 !=dev-texlive/texlive-latex3-2007*
 !=dev-texlive/texlive-humanities-2007*
 !<dev-texlive/texlive-mathextra-2010
+!<dev-texlive/texlive-plainextra-2010
 dev-perl/Spreadsheet-ParseExcel
 "
 RDEPEND="${DEPEND} "
