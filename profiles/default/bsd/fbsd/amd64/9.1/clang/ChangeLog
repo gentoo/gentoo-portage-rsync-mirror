@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/ChangeLog,v 1.7 2013/06/19 00:04:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/ChangeLog,v 1.8 2013/06/19 13:00:27 aballier Exp $
+
+  19 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.use.force,
+  package.use.mask:
+  force curl[ssl,curl_ssl_openssl] and mask the others: curl is in @system for
+  this profile so better have it with sane defaults.
 
   19 Jun 2013; Alexis Ballier <aballier@gentoo.org> -package.unmask:
   no need to unmask clang 3.3 now that it is unmasked globally

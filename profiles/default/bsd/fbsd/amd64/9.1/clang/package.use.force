@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/package.use.force,v 1.3 2013/06/01 14:17:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/package.use.force,v 1.4 2013/06/19 13:00:27 aballier Exp $
 
 # Force building libc++ over libcxxrt.
 sys-libs/libcxx libcxxrt
@@ -9,3 +9,7 @@ sys-libs/libcxx libcxxrt
 # work.
 sys-libs/libcxxrt static-libs
 sys-libs/libcxx static-libs
+
+# Force openssl on curl since cmakes needs it and is in @system because of
+# libcxx on this profile. Mask the other ssl providers.
+net-misc/curl ssl curl_ssl_openssl
