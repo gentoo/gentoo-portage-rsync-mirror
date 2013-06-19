@@ -1,0 +1,22 @@
+fix for mc/mcedit segfault when mc's tempdir doesn't belong to the correct user
+
+https://bugs.gentoo.org/show_bug.cgi?id=473244
+https://www.midnight-commander.org/ticket/3021
+--- src/main.c
++++ src/main.c
+@@ -154,7 +154,4 @@
+ 
+     mc_global.share_data_dir = g_strdup (DATADIR);
+-
+-    /* Set up temporary directory */
+-    mc_tmpdir ();
+ }
+ 
+@@ -299,4 +296,7 @@
+     vfs_setup_work_dir ();
+ 
++    /* Set up temporary directory after VFS initialization */
++    mc_tmpdir ();
++
+     /* do this after vfs initialization due to mc_setctl() call in mc_setup_by_args() */
+     if (!mc_setup_by_args (argc, argv, &error))

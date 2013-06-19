@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.26 2013/06/05 14:55:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.27 2013/06/19 13:38:03 jer Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs base flag-o-matic
@@ -11,10 +11,10 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 elif [[ ${PV} == *pre* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 else
 	SRC_URI="http://webm.googlecode.com/files/${PN}-v${PV}.tar.bz2"
-	KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 	S="${WORKDIR}/${PN}-v${PV}"
 fi
 

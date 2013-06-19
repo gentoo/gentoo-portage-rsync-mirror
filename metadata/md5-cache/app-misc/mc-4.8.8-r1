@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=>=dev-libs/glib-2.8:2 gpm? ( sys-libs/gpm ) kernel_linux? ( sys-fs/e2fsprogs ) samba? ( net-fs/samba ) sftp? ( net-libs/libssh2 ) slang? ( >=sys-libs/slang-2 ) !slang? ( sys-libs/ncurses ) spell? ( app-text/aspell ) X? ( x11-libs/libX11 x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp x11-libs/libSM ) app-arch/xz-utils virtual/pkgconfig nls? ( sys-devel/gettext ) test? ( dev-libs/check )
+DESCRIPTION=GNU Midnight Commander is a text based file manager
+EAPI=4
+HOMEPAGE=http://www.midnight-commander.org
+IUSE=+edit gpm mclib nls samba sftp +slang spell test X +xdg
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris
+LICENSE=GPL-3
+RDEPEND=>=dev-libs/glib-2.8:2 gpm? ( sys-libs/gpm ) kernel_linux? ( sys-fs/e2fsprogs ) samba? ( net-fs/samba ) sftp? ( net-libs/libssh2 ) slang? ( >=sys-libs/slang-2 ) !slang? ( sys-libs/ncurses ) spell? ( app-text/aspell ) X? ( x11-libs/libX11 x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp x11-libs/libSM )
+REQUIRED_USE=spell? ( edit )
+SLOT=0
+SRC_URI=http://www.midnight-commander.org/downloads/mc-4.8.8.tar.xz
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=58090641617da2258bde122ead81ab3b

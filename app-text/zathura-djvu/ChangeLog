@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-djvu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.18 2013/06/13 22:00:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.19 2013/06/19 13:58:29 xmw Exp $
+
+  19 Jun 2013; Michael Weber <xmw@gentoo.org> zathura-djvu-0.2.3.ebuild:
+  Make cairo non-optional again.
 
 *zathura-djvu-0.2.3 (13 Jun 2013)
 

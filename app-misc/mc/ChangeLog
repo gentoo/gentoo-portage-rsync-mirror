@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.280 2013/04/03 18:37:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.281 2013/06/19 13:35:32 wired Exp $
+
+*mc-4.8.8-r1 (19 Jun 2013)
+
+  19 Jun 2013; Alex Alexander <wired@gentoo.org> +mc-4.8.8-r1.ebuild,
+  +files/mc-4.8.8-segfault-unowned-temp-dir.patch:
+  patch for bug #473244
 
 *mc-4.8.8 (03 Apr 2013)
 
