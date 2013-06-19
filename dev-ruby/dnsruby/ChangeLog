@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/dnsruby
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.6 2012/08/05 09:58:46 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.7 2013/06/18 23:43:36 mschiff Exp $
+
+*dnsruby-1.54 (18 Jun 2013)
+
+  18 Jun 2013; Marc Schiffbauer <mschiff@gentoo.org> +dnsruby-1.54.ebuild:
+  Bump version. Fixes #422971
 
   05 Aug 2012; Hans de Graaff <graaff@gentoo.org> dnsruby-1.53.ebuild:
   Avoid test broken with IPv6 resolvers. Add ruby19 and ree18.
@@ -25,4 +30,3 @@
   +metadata.xml:
   Initial commit per bug #303803. Required for opendnssec. Thanks to Tom
   Hendrikx for the ebuild.
-

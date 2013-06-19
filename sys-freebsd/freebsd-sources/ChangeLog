@@ -1,6 +1,24 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.83 2013/05/07 14:18:08 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.84 2013/06/18 23:32:01 aballier Exp $
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-sources-7.2-r3.ebuild, -freebsd-sources-8.0.ebuild,
+  -files/freebsd-sources-7.0-gentoo.patch,
+  -files/freebsd-sources-7.0-werror.patch,
+  -files/freebsd-sources-7.1-asm.patch,
+  -files/freebsd-sources-7.1-subnet-route-pr40133.patch,
+  -files/freebsd-sources-7.2-devfs7.patch,
+  -files/freebsd-sources-7.2-ipv6.patch, -files/freebsd-sources-7.2-null.patch,
+  -files/freebsd-sources-7.2-pipe.patch,
+  -files/freebsd-sources-7.2-sparc64.patch,
+  -files/freebsd-sources-7.2-zfs712.patch,
+  -files/freebsd-sources-8.0-arpresolve_panic.patch,
+  -files/freebsd-sources-8.0-mf626.patch,
+  -files/freebsd-sources-8.0-sparc64.patch,
+  -files/freebsd-sources-8.0-werror.patch,
+  -files/freebsd-sources-8.0-zfs.patch:
+  remove old
 
 *freebsd-sources-9.1-r1 (07 May 2013)
 

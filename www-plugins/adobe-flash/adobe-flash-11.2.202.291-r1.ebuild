@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.291-r1.ebuild,v 1.4 2013/06/13 13:09:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.291-r1.ebuild,v 1.5 2013/06/18 23:44:18 jer Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -31,7 +31,8 @@ SRC_URI="
 		!multilib? ( ${AF_64_URI} )
 	)
 "
-IUSE="-32bit +64bit debug kde multilib selinux +sse2check vdpau"
+IUSE="-32bit +64bit debug kde multilib selinux sse2 vdpau"
+REQUIRED_USE="sse2"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
@@ -79,30 +80,6 @@ QA_PREBUILT="opt/*"
 any_cpu_missing_flag() {
 	local value=$1
 	grep '^flags' /proc/cpuinfo | grep -qv "$value"
-}
-
-pkg_pretend() {
-	if any_cpu_missing_flag 'sse2'; then
-		eerror "This version of adobe-flash requires a CPU that supports the"
-		eerror "SSE2 instruction set, and at least one of your CPUs does not"
-		eerror "support this feature."
-		eerror ""
-		if use sse2check; then
-			eerror "You should mask this version and use adobe-flash-10.3.* instead."
-			eerror "To do so, add the following line to your package.mask file:"
-			eerror " =${CATEGORY}/${P}"
-			eerror ""
-			eerror "Or if you are trying to build a binary package for another host"
-			eerror "that does support SSE2 instructions, you may override this"
-			eerror "check by setting USE=\"-sse2check\""
-			eerror ""
-			die "${P} requires CPU with SSE2"
-		else
-			eerror "Continuing anyway due to USE=\"-sse2check\", but be aware that flash"
-			eerror "will not function unless all of the CPUs on the system where it"
-			eerror "is installed support the SSE2 instruction set."
-		fi
-	fi
 }
 
 pkg_setup() {

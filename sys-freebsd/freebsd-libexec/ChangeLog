@@ -1,6 +1,14 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.54 2013/06/18 17:06:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.55 2013/06/18 23:40:20 aballier Exp $
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-libexec-7.2-r2.ebuild, -freebsd-libexec-8.0.ebuild,
+  -files/freebsd-libexec-7.0-libfallback.patch,
+  -files/freebsd-libexec-7.2-rtld7.patch,
+  -files/freebsd-libexec-7.2-rtldnoload.patch,
+  -files/freebsd-libexec-nossp.patch, -files/freebsd-libexec-setXid.patch:
+  remove old
 
 *freebsd-libexec-9.1-r1 (18 Jun 2013)
 

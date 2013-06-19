@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.182 2013/06/18 23:18:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.183 2013/06/18 23:45:22 aballier Exp $
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-7.2-r1.ebuild,
+  -freebsd-lib-8.0.ebuild, -files/freebsd-lib-7.0-CVE-2008-1391.patch,
+  -files/freebsd-lib-7.2-rtldnoload.patch:
+  remove old
 
   18 Jun 2013; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.1-r8.ebuild:
   Do not built libstand anymore and remove the now useless bootstrap useflag
