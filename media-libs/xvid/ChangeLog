@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/xvid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.134 2012/09/11 06:57:39 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.136 2013/06/19 15:55:14 aballier Exp $
+
+  19 Jun 2013; Alexis Ballier <aballier@gentoo.org> -xvid-1.2.2-r2.ebuild,
+  -xvid-1.3.1.ebuild, -files/xvid-1.2.2-noexecstack.patch:
+  remove old
+
+*xvid-1.3.2-r1 (19 Jun 2013)
+
+  19 Jun 2013; Alexis Ballier <aballier@gentoo.org> +xvid-1.3.2-r1.ebuild:
+  add multilib support and make build verbose
 
   11 Sep 2012; Mike Frysinger <vapier@gentoo.org> xvid-1.3.2.ebuild:
   Disable assembly code for x32 ABI for now #421841 by Xavier Miller.

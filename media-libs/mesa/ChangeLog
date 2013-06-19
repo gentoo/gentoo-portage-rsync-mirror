@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.487 2013/06/09 16:00:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.488 2013/06/19 15:32:40 chithanh Exp $
+
+*mesa-9.2_pre20130619 (19 Jun 2013)
+
+  19 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-9.2_pre20130619.ebuild, metadata.xml:
+  New snapshot. Add opencl support, bug #439018.
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> mesa-9.1.2-r1.ebuild:
   Stable for sh, wrt bug #463430
