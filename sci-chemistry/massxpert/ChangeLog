@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/massxpert
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/ChangeLog,v 1.12 2013/03/02 23:18:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/ChangeLog,v 1.13 2013/06/19 04:10:42 bicatali Exp $
+
+  19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Changed herd to sci-chemistry
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> massxpert-1.7.6.ebuild,
   massxpert-2.0.5.ebuild:

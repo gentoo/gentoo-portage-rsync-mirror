@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/libax25 X? ( x11-libs/libX11 media-libs/mesa )
+DESCRIPTION=Basic AX.25 (Amateur Radio) administrative tools and daemons
+EAPI=5
+HOMEPAGE=http://www.linux-ax25.org/
+IUSE=X
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libax25 X? ( x11-libs/libX11 media-libs/mesa )
+SLOT=0
+SRC_URI=http://www.linux-ax25.org/pub/ax25-tools/ax25-tools-0.0.10-rc4.tar.gz
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c454d1b4e490f40313b965fda7e7b53b
