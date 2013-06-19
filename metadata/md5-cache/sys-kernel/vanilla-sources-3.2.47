@@ -9,7 +9,7 @@ LICENSE=GPL-2 !deblob? ( freedist )
 PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
-SLOT=3.9.5
-SRC_URI=mirror://kernel/linux/kernel/v3.x/patch-3.9.5.xz mirror://kernel/linux/kernel/v3.x/linux-3.9.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.9.N/deblob-3.9 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.9.N/deblob-check -> deblob-check-3.9 )
+SLOT=3.2.47
+SRC_URI=mirror://kernel/linux/kernel/v3.x/patch-3.2.47.xz mirror://kernel/linux/kernel/v3.x/linux-3.2.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-3.2 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-check -> deblob-check-3.2 )
 _eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	kernel-2	353d0aef1046938e432ba587875e2027	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=d8d87f016c13f67c0baed26c49c1b2c7
+_md5_=0d3383d8ec8ece99697c86b22304a6e3
