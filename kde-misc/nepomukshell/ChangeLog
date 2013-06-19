@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/nepomukshell
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nepomukshell/ChangeLog,v 1.1 2013/06/19 01:20:01 creffett Exp $
+
+*nepomukshell-0.8.0 (19 Jun 2013)
+
+  19 Jun 2013; Chris Reffett <creffett@gentoo.org> +metadata.xml,
+  +nepomukshell-0.8.0.ebuild:
+  Add to tree from KDE overlay
