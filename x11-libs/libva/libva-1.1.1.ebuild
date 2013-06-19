@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.1.1.ebuild,v 1.1 2013/03/26 16:31:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.1.1.ebuild,v 1.2 2013/06/19 19:34:54 aballier Exp $
 
 EAPI=4
 
@@ -29,7 +29,8 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="egl opengl wayland X"
+IUSE="+drm egl opengl wayland X"
+REQUIRED_USE="|| ( drm wayland X )"
 
 VIDEO_CARDS="dummy nvidia intel fglrx"
 for x in ${VIDEO_CARDS}; do
@@ -67,7 +68,8 @@ src_configure() {
 		$(use_enable opengl glx) \
 		$(use_enable X x11) \
 		$(use_enable wayland) \
-		$(use_enable egl)
+		$(use_enable egl) \
+		$(use_enable drm)
 }
 
 src_install() {

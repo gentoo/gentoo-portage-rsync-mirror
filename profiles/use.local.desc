@@ -6406,7 +6406,9 @@ x11-libs/libqxt:berkdb - Build the QxtBerkeley module
 x11-libs/libqxt:sql - Build the QxtSql module
 x11-libs/libqxt:web - Build the QxtWeb module
 x11-libs/libqxt:zeroconf - Build the QxtZeroconf module
+x11-libs/libva:drm - Enables VA/DRM API support.
 x11-libs/libva:egl - Enables EGL support.
+x11-libs/libva-intel-driver:drm - Enables VA/DRM API support.
 x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-line tools
 x11-libs/libxcb:xkb - Enable the XCB keyboard extension
 x11-libs/libxklavier:introspection - Use dev-libs/gobject-introspection for introspection

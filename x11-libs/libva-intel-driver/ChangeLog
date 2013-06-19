@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.21 2013/03/26 16:41:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.22 2013/06/19 19:44:17 aballier Exp $
+
+  19 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  libva-intel-driver-1.0.20.ebuild, libva-intel-driver-9999.ebuild,
+  metadata.xml:
+  add drm useflag, patch by grey dot in bug #466402
 
 *libva-intel-driver-1.0.20 (26 Mar 2013)
 
