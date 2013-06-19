@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/zathura-pdf-poppler-0.2.3.ebuild,v 1.2 2013/06/19 07:13:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/zathura-pdf-poppler-0.2.3.ebuild,v 1.3 2013/06/19 12:21:14 xmw Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
+	#cairo is non-optional #473378
 	myzathuraconf=(
 		WITH_CAIRO=1
 		CC="$(tc-getCC)"
