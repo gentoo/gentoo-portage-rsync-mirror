@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vifm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.29 2013/06/15 16:16:36 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.30 2013/06/19 13:25:50 wired Exp $
+
+  19 Jun 2013; Alex Alexander <wired@gentoo.org> vifm-0.7.5.ebuild:
+  fixed test run, bug #460240
 
 *vifm-0.7.5 (15 Jun 2013)
 

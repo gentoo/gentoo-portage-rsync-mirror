@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.5.ebuild,v 1.1 2013/06/15 16:16:36 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.5.ebuild,v 1.2 2013/06/19 13:25:50 wired Exp $
 
 EAPI=5
 inherit base vim-doc
@@ -54,6 +54,10 @@ src_install() {
 			doins "${S}"/data/vim/"${t}"/"${PN}".vim
 		done
 	fi
+}
+
+src_test() {
+	emake check
 }
 
 pkg_postinst() {
