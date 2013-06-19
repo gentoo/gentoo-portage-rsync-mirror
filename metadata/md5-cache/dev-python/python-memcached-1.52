@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare test
+DEPEND=dev-python/setuptools test? ( net-misc/memcached ) =dev-lang/python-2*
+DESCRIPTION=Pure python memcached client
+EAPI=3
+HOMEPAGE=http://www.tummy.com/Community/software/python-memcached/ http://pypi.python.org/pypi/python-memcached
+IUSE=test
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos
+LICENSE=OSL-2.0
+RDEPEND==dev-lang/python-2*
+SLOT=0
+SRC_URI=ftp://ftp.tummy.com/pub/python-memcached/old-releases/python-memcached-1.52.tar.gz
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=f407f7cc0d12fe4660a3cc9aa9bbaa54

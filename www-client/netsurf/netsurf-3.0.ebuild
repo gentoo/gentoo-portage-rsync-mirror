@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.0.ebuild,v 1.1 2013/06/19 06:56:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.0.ebuild,v 1.3 2013/06/19 07:26:45 xmw Exp $
 
 EAPI=5
 
-inherit base toolchain-funcs multilib-minimal
+inherit eutils base toolchain-funcs multilib-minimal
 
 DESCRIPTION="a free, open source web browser"
 HOMEPAGE="http://www.netsurf-browser.org/"
@@ -64,6 +64,7 @@ NETSURF_COMPONENT_TYPE=binary
 ### future context of netsurf.eclass
 
 NETSURF_BUILDSYSTEM="${NETSURF_BUILDSYSTEM:-buildsystem-1.0}"
+NETSURF_COMPONENT_TYPE="${NETSURF_COMPONENT_TYPE:-lib-static lib-shared}"
 SRC_URI=${SRC_URI:-http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz}
 SRC_URI+="
 	http://download.netsurf-browser.org/libs/releases/${NETSURF_BUILDSYSTEM}.tar.gz -> netsurf-${NETSURF_BUILDSYSTEM}.tar.gz"
@@ -229,28 +230,22 @@ src_install() {
 	if use fbcon ; then
 		netsurf_makeconf=( "${netsurf_makeconf[@]/TARGET=*/TARGET=framebuffer}" )
 		netsurf_src_install
-		einfo "install framebuffer binary as netsurf-fb"
+		elog "framebuffer binary has been installed as netsurf-fb"
 		mv -v "${ED}"usr/bin/netsurf{,-fb} || die
+		make_desktop_entry "${EROOT}"usr/bin/netsurf-gtk NetSurf-gtk netsurf "Network;WebBrowser"
+	
+		elog "In order to setup the framebuffer console, netsurf needs an /etc/fb.modes"
+		elog "You can use an example from /usr/share/doc/${PF}/fb.modes.* (bug 427092)."
+		elog "Please make /etc/input/mice readable to the account using netsurf-fb."
+		elog "Either use chmod a+r /etc/input/mice (security!!!) or use an group."
 	fi
 	if use gtk ; then
 		netsurf_makeconf=( "${netsurf_makeconf[@]/TARGET=*/TARGET=gtk}" )
 		netsurf_src_install
+		elog "netsurf gtk version has been installed as netsurf-gtk"
+		mv -v "${ED}"/usr/bin/netsurf{,-gtk} || die
+		make_desktop_entry "${EROOT}"usr/bin/netsurf-fb NetSurf-framebuffer netsurf "Network;WebBrowser"
 	fi
-	#	mv "${D}"/usr/bin/netsurf{,-gtk} || die
-	#	make_desktop_entry /usr/bin/netsurf-gtk NetSurf-gtk netsurf "Network;WebBrowser"
-	#if use fbcon ; then
-	#	emake DESTDIR="${D}" PREFIX="/usr" TARGET=framebuffer install
-	#	mv "${D}"/usr/bin/netsurf{,-fb} || die
-	#	make_desktop_entry /usr/bin/netsurf-fb NetSurf-framebuffer netsurf "Network;WebBrowser"
-	#
-	#	einfo
-	#	elog "In order to setup the framebuffer console, netsurf needs an /etc/fb.modes"
-	#	elog "You can use an example from /usr/share/doc/${PF}/fb.modes.* (bug 427092)."
-	#	einfo
-	#	elog "Please make /etc/input/mice readable to the account using netsurf-fb."
-	#	elog "Either use chmod a+r /etc/input/mice (security!!!) or use an group."
-	#	einfo
-	#fi
 	insinto /usr/share/pixmaps
 	doins gtk/res/netsurf.xpm
 
