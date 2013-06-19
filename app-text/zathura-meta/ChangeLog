@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.7 2013/06/13 22:36:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.8 2013/06/19 14:22:29 wired Exp $
+
+  19 Jun 2013; Alex Alexander <wired@gentoo.org> metadata.xml:
+  removed myself from maintainer list
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> metadata.xml:
   Adding myself as maint.

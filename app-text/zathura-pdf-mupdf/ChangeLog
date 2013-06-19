@@ -1,6 +1,13 @@
 # ChangeLog for app-text/zathura-pdf-mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.4 2013/06/13 22:16:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.6 2013/06/19 14:24:00 wired Exp $
+
+  19 Jun 2013; Alex Alexander <wired@gentoo.org> metadata.xml:
+  removed myself from maintainer list
+
+  19 Jun 2013; Michael Weber <xmw@gentoo.org> zathura-pdf-mupdf-0.2.3.ebuild,
+  zathura-pdf-mupdf-9999.ebuild:
+  Make cairo non-optional again
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> metadata.xml,
   zathura-pdf-mupdf-0.2.3.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for app-text/zathura-ps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.12 2013/06/13 21:54:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.14 2013/06/19 14:24:50 wired Exp $
+
+  19 Jun 2013; Alex Alexander <wired@gentoo.org> metadata.xml:
+  removed myself from maintainer list
+
+  19 Jun 2013; Michael Weber <xmw@gentoo.org> zathura-ps-0.2.2.ebuild:
+  Make cairo non-optional again.
 
 *zathura-ps-0.2.2 (13 Jun 2013)
 
