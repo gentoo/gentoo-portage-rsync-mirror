@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.25 2013/03/25 20:44:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.26 2013/06/19 06:18:53 slyfox Exp $
+
+  19 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  -files/missingh-1.1.1.0-ghc-7.6.patch, -missingh-1.1.1.0.ebuild:
+  Drop old.
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> missingh-1.2.0.0.ebuild:
   Stable for x86, wrt bug #456502

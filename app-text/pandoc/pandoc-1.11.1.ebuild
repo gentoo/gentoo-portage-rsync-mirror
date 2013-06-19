@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.11.1.ebuild,v 1.1 2013/04/02 13:05:31 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.11.1.ebuild,v 1.2 2013/06/19 06:07:54 qnikst Exp $
 
 EAPI=5
 
@@ -77,6 +77,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-man-tests.patch
+	epatch "${FILESDIR}"/${P}-test.patch
 
 	ghc-supports-threaded-runtime ||
 		cabal_chdeps \

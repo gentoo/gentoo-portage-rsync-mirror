@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/regex-compat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/ChangeLog,v 1.36 2012/12/28 05:08:52 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/ChangeLog,v 1.37 2013/06/19 06:21:44 slyfox Exp $
+
+  19 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  -regex-compat-0.71.0.1.ebuild, -regex-compat-0.71.ebuild,
+  -regex-compat-0.91.ebuild, -regex-compat-0.92.ebuild:
+  Drop old.
 
   28 Dec 2012; Mark Wright <gienah@gentoo.org> regex-compat-0.95.1.ebuild:
   Add [profile?] to deps.
