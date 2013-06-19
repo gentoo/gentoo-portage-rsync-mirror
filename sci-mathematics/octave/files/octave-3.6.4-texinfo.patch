@@ -1,6 +1,6 @@
-diff -ur octave-3.6.4-orig/doc/interpreter/audio.texi octave-3.6.4/doc/interpreter/audio.texi
---- octave-3.6.4-orig/doc/interpreter/audio.texi	2013-02-21 21:37:50.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/audio.texi	2013-05-01 23:23:21.338665377 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/audio.texi octave-3.6.4/doc/interpreter/audio.texi
+--- octave-3.6.4.orig/doc/interpreter/audio.texi	2013-02-21 12:37:50.000000000 -0800
++++ octave-3.6.4/doc/interpreter/audio.texi	2013-06-19 08:52:43.259790240 -0700
 @@ -146,18 +146,18 @@
  Load the RIFF/WAVE sound file @var{filename}, and return the samples
  in vector @var{y}.  If the file contains multichannel data, then
@@ -28,9 +28,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/audio.texi octave-3.6.4/doc/interpret
  Return the number of samples (@var{n}) and channels (@var{ch})
  instead of the audio data.
  @seealso{@ref{doc-wavwrite,,wavwrite}}
-diff -ur octave-3.6.4-orig/doc/interpreter/io.texi octave-3.6.4/doc/interpreter/io.texi
---- octave-3.6.4-orig/doc/interpreter/io.texi	2013-02-21 21:37:51.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/io.texi	2013-05-01 22:59:08.537582265 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/io.texi octave-3.6.4/doc/interpreter/io.texi
+--- octave-3.6.4.orig/doc/interpreter/io.texi	2013-02-21 12:37:51.000000000 -0800
++++ octave-3.6.4/doc/interpreter/io.texi	2013-06-19 08:52:43.259790240 -0700
 @@ -1391,22 +1391,22 @@
  for the file.  Valid values for @var{arch} are:
  
@@ -60,9 +60,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/io.texi octave-3.6.4/doc/interpreter/
  Cray floating format.
  @end table
  
-diff -ur octave-3.6.4-orig/doc/interpreter/octave.texi octave-3.6.4/doc/interpreter/octave.texi
---- octave-3.6.4-orig/doc/interpreter/octave.texi	2013-02-21 21:19:23.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/octave.texi	2013-05-01 22:58:26.561420772 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/octave.texi octave-3.6.4/doc/interpreter/octave.texi
+--- octave-3.6.4.orig/doc/interpreter/octave.texi	2013-02-21 12:19:23.000000000 -0800
++++ octave-3.6.4/doc/interpreter/octave.texi	2013-06-19 08:52:43.259790240 -0700
 @@ -129,7 +129,9 @@
  @sp 2
  @multitable @columnfractions 0.4 0.025 0.65
@@ -74,9 +74,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/octave.texi octave-3.6.4/doc/interpre
  @tab
  @c this is a spacer column
  @tab
-diff -ur octave-3.6.4-orig/doc/interpreter/plot.texi octave-3.6.4/doc/interpreter/plot.texi
---- octave-3.6.4-orig/doc/interpreter/plot.texi	2013-02-21 21:37:52.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/plot.texi	2013-05-01 23:07:36.586442176 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/plot.texi octave-3.6.4/doc/interpreter/plot.texi
+--- octave-3.6.4.orig/doc/interpreter/plot.texi	2013-02-21 12:37:52.000000000 -0800
++++ octave-3.6.4/doc/interpreter/plot.texi	2013-06-19 08:52:43.260790204 -0700
 @@ -2707,21 +2707,20 @@
  Set the data aspect ratio of the current axes.  The aspect ratio is
  a normalized 3-element vector representing the span of the x, y, and
@@ -200,9 +200,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/plot.texi octave-3.6.4/doc/interprete
  Return a structure, @var{appdata}, whose fields correspond to the appdata
  properties.
  @end deftypefn
-diff -ur octave-3.6.4-orig/doc/interpreter/poly.texi octave-3.6.4/doc/interpreter/poly.texi
---- octave-3.6.4-orig/doc/interpreter/poly.texi	2013-02-21 21:37:52.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/poly.texi	2013-05-01 23:28:59.515000917 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/poly.texi octave-3.6.4/doc/interpreter/poly.texi
+--- octave-3.6.4.orig/doc/interpreter/poly.texi	2013-02-21 12:37:52.000000000 -0800
++++ octave-3.6.4/doc/interpreter/poly.texi	2013-06-19 08:52:43.260790204 -0700
 @@ -82,8 +82,8 @@
  (@var{x}-@var{mu}(1))/@var{mu}(2).
  If @var{x} is a vector or matrix, the polynomial is evaluated for each of
@@ -214,9 +214,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/poly.texi octave-3.6.4/doc/interprete
  @deftypefnx {Function File} {[@var{y}, @var{dy}] =} polyval (@var{p}, @var{x}, @var{s}, @var{mu})
  In addition to evaluating the polynomial, the second output
  represents the prediction interval, @var{y} +/- @var{dy}, which
-diff -ur octave-3.6.4-orig/doc/interpreter/set.texi octave-3.6.4/doc/interpreter/set.texi
---- octave-3.6.4-orig/doc/interpreter/set.texi	2013-02-21 21:37:52.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/set.texi	2013-05-01 23:30:00.161810855 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/set.texi octave-3.6.4/doc/interpreter/set.texi
+--- octave-3.6.4.orig/doc/interpreter/set.texi	2013-02-21 12:37:52.000000000 -0800
++++ octave-3.6.4/doc/interpreter/set.texi	2013-06-19 08:52:43.260790204 -0700
 @@ -150,8 +150,9 @@
         3   4
  @end group
@@ -228,9 +228,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/set.texi octave-3.6.4/doc/interpreter
  
  Return index vectors @var{ia} and @var{ib} such that @code{a(ia)} and
  @code{b(ib)} are disjoint sets whose union is @var{c}.
-diff -ur octave-3.6.4-orig/doc/interpreter/signal.texi octave-3.6.4/doc/interpreter/signal.texi
---- octave-3.6.4-orig/doc/interpreter/signal.texi	2013-02-21 21:37:52.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/signal.texi	2013-05-01 23:31:41.111833440 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/signal.texi octave-3.6.4/doc/interpreter/signal.texi
+--- octave-3.6.4.orig/doc/interpreter/signal.texi	2013-02-21 12:37:52.000000000 -0800
++++ octave-3.6.4/doc/interpreter/signal.texi	2013-06-19 08:52:43.261790169 -0700
 @@ -454,17 +454,17 @@
  
  For fastest computation, @var{n} should factor into a small number of
@@ -255,9 +255,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/signal.texi octave-3.6.4/doc/interpre
  Plot the pass band, stop band and phase response of @var{h} rather
  than returning them.
  @end deftypefn
-diff -ur octave-3.6.4-orig/doc/interpreter/strings.texi octave-3.6.4/doc/interpreter/strings.texi
---- octave-3.6.4-orig/doc/interpreter/strings.texi	2013-02-21 21:37:52.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/strings.texi	2013-05-01 22:27:29.646311770 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/strings.texi octave-3.6.4/doc/interpreter/strings.texi
+--- octave-3.6.4.orig/doc/interpreter/strings.texi	2013-02-21 12:37:52.000000000 -0800
++++ octave-3.6.4/doc/interpreter/strings.texi	2013-06-19 08:52:43.261790169 -0700
 @@ -1136,7 +1136,7 @@
  @item %s
  The word is parsed as a string.
@@ -267,9 +267,9 @@ diff -ur octave-3.6.4-orig/doc/interpreter/strings.texi octave-3.6.4/doc/interpr
  @itemx %n
  The word is parsed as a number and converted to double.
  
-diff -ur octave-3.6.4-orig/doc/interpreter/system.texi octave-3.6.4/doc/interpreter/system.texi
---- octave-3.6.4-orig/doc/interpreter/system.texi	2013-02-21 21:37:52.000000000 +0100
-+++ octave-3.6.4/doc/interpreter/system.texi	2013-05-01 23:45:09.981978551 +0200
+diff -Nur octave-3.6.4.orig/doc/interpreter/system.texi octave-3.6.4/doc/interpreter/system.texi
+--- octave-3.6.4.orig/doc/interpreter/system.texi	2013-02-21 12:37:52.000000000 -0800
++++ octave-3.6.4/doc/interpreter/system.texi	2013-06-19 08:52:43.261790169 -0700
 @@ -839,7 +839,7 @@
  @deftypefnx {Function File} {} datetick (@var{axis}, @var{form})
  @deftypefnx {Function File} {} datetick (@dots{}, "keeplimits")
@@ -358,3 +358,21 @@ diff -ur octave-3.6.4-orig/doc/interpreter/system.texi octave-3.6.4/doc/interpre
  Check out a license for @var{feature}, returning 1 on success and 0
  on failure.
  
+diff -Nur octave-3.6.4.orig/doc/liboctave/liboctave.texi octave-3.6.4/doc/liboctave/liboctave.texi
+--- octave-3.6.4.orig/doc/liboctave/liboctave.texi	2013-02-21 12:19:23.000000000 -0800
++++ octave-3.6.4/doc/liboctave/liboctave.texi	2013-06-19 08:54:27.914379692 -0700
+@@ -80,10 +80,10 @@
+ @end ifnottex
+ 
+ @titlepage
+-@title{Octave C++ Classes}
+-@subtitle{Edition 1.0 for Octave version @value{VERSION}}
+-@subtitle{September 1993}
+-@author{John W. Eaton}
++@title@{Octave C++ Classes@}
++@subtitle@{Edition 1.0 for Octave version @value{VERSION}@}
++@subtitle@{September 1993@}
++@author@{John W. Eaton@}
+ @page
+ @vskip 0pt plus 1filll
+ Copyright @copyright{} 1996, 1997 John W. Eaton.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4.ebuild,v 1.2 2013/05/22 04:27:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4.ebuild,v 1.3 2013/06/19 16:17:15 bicatali Exp $
 
 EAPI=5
 
@@ -91,6 +91,7 @@ src_configure() {
 		--localstatedir="${EPREFIX}/var/state/octave"
 		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)"
+		$(use_enable prefix rpath)
 		$(use_enable doc docs)
 		$(use_enable readline)
 		$(use_with curl)
@@ -126,6 +127,6 @@ src_install() {
 	autotools-utils_src_install
 	use doc && dodoc $(find doc -name \*.pdf)
 	[[ -e test/fntests.log ]] && dodoc test/fntests.log
-	echo "LDPATH=${EPREFIX}/usr/$(get_libdir)/${P}" > 99octave
+	echo "LDPATH=${EROOT%/}/usr/$(get_libdir)/${P}" > 99octave
 	doenvd 99octave
 }
