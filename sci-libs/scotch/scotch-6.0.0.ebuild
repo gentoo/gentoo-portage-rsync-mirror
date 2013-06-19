@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.2 2013/06/13 23:48:26 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.3 2013/06/19 17:21:01 bicatali Exp $
 
 EAPI=5
 
@@ -80,9 +80,9 @@ src_compile() {
 		export LINK=mpicc
 		static_to_shared lib/libptscotcherr.a
 		static_to_shared lib/libptscotcherrexit.a
-		static_to_shared lib/libptscotch.a -Llib -lptscotcherr -lz -lm -lrt
-		static_to_shared lib/libptesmumps.a -Llib -lptscotch
-		static_to_shared lib/libptscotchparmetis.a -Llib -lptscotch
+		static_to_shared lib/libptscotch.a -Llib -lscotch -lptscotcherr -lz -lm -lrt
+		static_to_shared lib/libptesmumps.a -Llib -lscotch -lptscotch
+		static_to_shared lib/libptscotchparmetis.a -Llib -lscotch -lptscotch
 	fi
 	if use static-libs; then
 		emake -C src clean

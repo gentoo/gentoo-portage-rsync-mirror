@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lame
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.163 2013/03/03 15:08:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.164 2013/06/19 17:18:52 aballier Exp $
+
+*lame-3.99.5-r1 (19 Jun 2013)
+
+  19 Jun 2013; Alexis Ballier <aballier@gentoo.org> +lame-3.99.5-r1.ebuild:
+  build libmp3lame for multilib (skip the frontend as it is useless to build a
+  32bits version)
 
   03 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> lame-3.99.5.ebuild,
   -files/lame-3.99.5-pkgconfig-to-get-correct-libs.patch,

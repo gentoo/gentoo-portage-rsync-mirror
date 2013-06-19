@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libmath++
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.13 2008/04/20 21:51:02 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.14 2013/06/19 17:03:28 pinkbyte Exp $
+
+*libmath++-0.0.4-r1 (19 Jun 2013)
+
+  19 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> +libmath++-0.0.4-r1.ebuild:
+  Revision bump: EAPI 5, utilize autotools-utils eclass, add compatibility with
+  automake 1.13, wrt bug #471950
 
   20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> libmath++-0.0.4.ebuild:
   Run eautoreconf in src_unpack phase, bug #207479.
