@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14840 2013/06/18 22:19:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14841 2013/06/19 05:12:52 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sebastien Fabbro <bicatali@gentoo.org> (18 Jun 2013)
+# Masked for some API incompatibility with previous versions
+# until depedencies are fixed.
+>=sci-mathematics/glpk-4.49
 
 # Sergey Popov <pinkbyte@gentoo.org> (17 Jun 2013)
 # Abandonded by upstream, successor - sys-fs/rdiff-backup-fs

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7957 2013/06/18 23:12:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7958 2013/06/19 05:12:52 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masked >=sci-mathematics/glpk-4.49
 
   18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
   -releases/freebsd-8.0/ChangeLog, -releases/freebsd-8.0/package.mask,
