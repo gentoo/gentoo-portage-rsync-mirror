@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/yate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.18 2013/06/18 15:55:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.19 2013/06/19 06:38:58 pinkbyte Exp $
+
+  19 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> yate-4.3.0.1.ebuild:
+  Fix desktop file, wrt bug #463442. Thanks to Andreis Vinogradovs for
+  discovering this issue
 
 *yate-4.3.0.1 (18 Jun 2013)
 

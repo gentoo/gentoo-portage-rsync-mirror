@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-4.3.0.1.ebuild,v 1.1 2013/06/18 15:55:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-4.3.0.1.ebuild,v 1.2 2013/06/19 06:38:58 pinkbyte Exp $
 
 EAPI=5
 
@@ -42,9 +42,13 @@ S=${WORKDIR}/${PN}
 # fix bug 199222 for this version
 
 src_prepare() {
-	# add Icon in yate-qt4 desktop file
-	sed -i -e '/^Exec=yate-qt4$/a Icon=null_team-32.png' \
-		clients/yate-qt4.desktop || die "sed failed"
+	# fix desktop file, bug #463442
+	sed -i \
+		-e '/^Encoding/d' \
+		-e '/Icon/s/.png//' \
+		-e '/Categories/s/Application;//' \
+		-e '/Categories/s/$/;/' \
+		clients/yate-qt4.desktop || die "sed on clients/yate-qt4.desktop failed"
 
 	epatch "${FILESDIR}"/${PN}-4.3.0-ilbc-alsa-oss.patch
 
