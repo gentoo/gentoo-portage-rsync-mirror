@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1-r1.ebuild,v 1.1 2013/03/02 17:30:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1-r1.ebuild,v 1.2 2013/06/19 03:19:56 aballier Exp $
 
 EAPI="5"
 
@@ -96,7 +96,7 @@ src_install() {
 
 	# Symlink the headers to the right place
 	dodir /usr/include
-	dosym /usr/$(get_libdir)/ocaml/caml /usr/include/
+	dosym /usr/$(get_libdir)/ocaml/caml /usr/include/caml
 
 	dodoc Changes INSTALL README Upgrading
 
