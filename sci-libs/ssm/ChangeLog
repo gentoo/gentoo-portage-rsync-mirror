@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ssm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.8 2012/05/21 19:14:47 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.9 2013/06/19 04:41:36 bicatali Exp $
+
+  19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  sci herd only
 
   21 May 2012; Brent Baude <ranger@gentoo.org> ssm-1.1.ebuild:
   Marking ssm-1.1 ppc for bug 413815
@@ -28,4 +31,3 @@
   16 Jul 2011; Justin Lecher <jlec@gentoo.org> +ssm-1.1.ebuild,
   +files/ssm-1.1-mmdb.patch, +files/ssm-1.1-pc.patch, +metadata.xml:
   Import from sci-overlay
-

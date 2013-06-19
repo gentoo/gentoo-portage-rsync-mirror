@@ -1,0 +1,167 @@
+Include unlinkat in the gnulib include list.
+
+This patch is based on
+findutils git 6b240251d5e8e1da4c6057b1c2eac1aca3012d70
+gnulib git    fd9f1acededd74f8cd095e657528aa8fad183536
+
+A distdir was built from clean sources once without and once with the
+gnulib unlinkat module added in. The resulting diff was then manually
+polished to keep its fingerprint low. In particular, the move of files
+from the tests dir to the gl/lib dir was omitted, so the build process
+has to move or copy these files. All modifications inside the tests
+dir were omitted as irrelevant. Modifications to Makefile.am and m4
+files were omitted in an attempt to avoid calls to autoconf or
+automake. Changes to the configure script were adjusted to simply
+modify the existing checks for the test dependencies, which results in
+a different order of checks than what an autmatically generated file
+would have.
+
+2013-05-30 Martin von Gagern
+
+References:
+https://bugs.gentoo.org/show_bug.cgi?id=469206
+https://savannah.gnu.org/bugs/index.php?38963
+
+Index: import-gnulib.config
+===================================================================
+--- a/import-gnulib.config	
++++ b/import-gnulib.config	
+@@ -139,6 +139,7 @@
+ sys_wait
+ timespec
+ uname
++unlinkat
+ verify
+ version-etc
+ version-etc-fsf
+Index: configure
+===================================================================
+--- a/configure	
++++ b/configure	
+@@ -42356,7 +42356,7 @@
+ 
+ 
+ 
+-  gltests_LIBOBJS="$gltests_LIBOBJS rmdir.$ac_objext"
++  gl_LIBOBJS="$gl_LIBOBJS rmdir.$ac_objext"
+ 
+   fi
+ 
+@@ -42364,13 +42364,7 @@
+ 
+ 
+ 
+-    if test "$GNULIB_RMDIR" != 1; then
+-        if test "$GNULIB_RMDIR" = 0; then
+-      GNULIB_RMDIR=$gl_module_indicator_condition
+-    else
+-      GNULIB_RMDIR="($GNULIB_RMDIR || $gl_module_indicator_condition)"
+-    fi
+-  fi
++          GNULIB_RMDIR=1
+ 
+ 
+ 
+@@ -43683,7 +43677,7 @@
+ 
+ 
+ 
+-  gltests_LIBOBJS="$gltests_LIBOBJS unlink.$ac_objext"
++  gl_LIBOBJS="$gl_LIBOBJS unlink.$ac_objext"
+ 
+   fi
+ 
+@@ -43691,13 +43685,7 @@
+ 
+ 
+ 
+-    if test "$GNULIB_UNLINK" != 1; then
+-        if test "$GNULIB_UNLINK" = 0; then
+-      GNULIB_UNLINK=$gl_module_indicator_condition
+-    else
+-      GNULIB_UNLINK="($GNULIB_UNLINK || $gl_module_indicator_condition)"
+-    fi
+-  fi
++          GNULIB_UNLINK=1
+ 
+ 
+ 
+@@ -43746,7 +43734,7 @@
+ 
+ 
+ 
+-  gltests_LIBOBJS="$gltests_LIBOBJS unlinkat.$ac_objext"
++  gl_LIBOBJS="$gl_LIBOBJS unlinkat.$ac_objext"
+ 
+   fi
+ 
+@@ -43754,13 +43742,7 @@
+ 
+ 
+ 
+-    if test "$GNULIB_UNLINKAT" != 1; then
+-        if test "$GNULIB_UNLINKAT" = 0; then
+-      GNULIB_UNLINKAT=$gl_module_indicator_condition
+-    else
+-      GNULIB_UNLINKAT="($GNULIB_UNLINKAT || $gl_module_indicator_condition)"
+-    fi
+-  fi
++          GNULIB_UNLINKAT=1
+ 
+ 
+ 
+Index: gl/lib/Makefile.in
+===================================================================
+--- a/gl/lib/Makefile.in	
++++ b/gl/lib/Makefile.in	
+@@ -1570,6 +1570,7 @@
+ 	readdir.c readlink.c at-func.c readlinkat.c realloc.c \
+ 	realloc.c regcomp.c regex.c regex.h regex_internal.c \
+ 	regex_internal.h regexec.c dirent-private.h rewinddir.c \
++	rmdir.c \
+ 	root-uid.h rpmatch.c same.h same-inode.h save-cwd.h savedir.h \
+ 	at-func.c selinux-at.c selinux-at.h getfilecon.c setenv.c \
+ 	$(top_srcdir)/build-aux/snippet/_Noreturn.h \
+@@ -1590,7 +1591,7 @@
+ 	$(top_srcdir)/build-aux/config.rpath time.in.h time_r.c \
+ 	timespec.h trunc.c uname.c unistd.in.h unistd--.h \
+ 	unistd-safer.h unitypes.in.h localcharset.h uniwidth.in.h \
+-	uniwidth/cjk.h unsetenv.c \
++	uniwidth/cjk.h unlink.c at-func.c unlinkat.c unsetenv.c \
+ 	$(top_srcdir)/build-aux/update-copyright \
+ 	$(top_srcdir)/build-aux/useless-if-before-free asnprintf.c \
+ 	float+.h printf-args.c printf-args.h printf-parse.c \
+@@ -1697,12 +1698,14 @@
+ 	mountlist.c msvc-inval.c msvc-nothrow.c nl_langinfo.c open.c \
+ 	openat.c opendir.c perror.c readdir.c readlink.c at-func.c \
+ 	readlinkat.c realloc.c realloc.c regcomp.c regex.c \
+-	regex_internal.c regexec.c rewinddir.c rpmatch.c at-func.c \
++	regex_internal.c regexec.c rewinddir.c \
++	rmdir.c rpmatch.c at-func.c \
+ 	selinux-at.c getfilecon.c setenv.c snprintf.c stat.c stpcpy.c \
+ 	strcasecmp.c strncasecmp.c strcasestr.c strdup.c strerror.c \
+ 	strerror-override.c strerror_r.c strndup.c strnlen.c strstr.c \
+ 	strtol.c strtol.c strtoul.c strtol.c strtoul.c strtoull.c \
+-	strtoimax.c strtoumax.c time_r.c trunc.c uname.c unsetenv.c \
++	strtoimax.c strtoumax.c time_r.c trunc.c uname.c \
++	unlink.c at-func.c unlinkat.c unsetenv.c \
+ 	asnprintf.c printf-args.c printf-parse.c vasnprintf.c \
+ 	wcrtomb.c wcwidth.c
+ charset_alias = $(DESTDIR)$(libdir)/charset.alias
+@@ -1938,6 +1941,7 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/regex_internal.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/regexec.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rewinddir.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rmdir.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rpmatch.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/same.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/save-cwd.Po@am__quote@
+@@ -1972,6 +1976,8 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timespec.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/trunc.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uname.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unlink.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unlinkat.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unsetenv.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vasnprintf.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/version-etc-fsf.Po@am__quote@

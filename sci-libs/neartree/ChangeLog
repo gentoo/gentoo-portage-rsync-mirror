@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/neartree
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.26 2012/12/04 11:50:58 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.27 2013/06/19 04:40:34 bicatali Exp $
+
+  19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  sci herd only
 
   04 Dec 2012; Justin Lecher <jlec@gentoo.org> -neartree-2.3.2.ebuild,
   -neartree-3.1.1.ebuild:
