@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.146 2013/06/01 09:32:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.147 2013/06/19 08:09:05 radhermit Exp $
+
+*gentoo-syntax-20130619 (19 Jun 2013)
+
+  19 Jun 2013; Tim Harder <radhermit@gentoo.org>
+  +gentoo-syntax-20130619.ebuild:
+  Version bump.
 
   01 Jun 2013; Tim Harder <radhermit@gentoo.org> gentoo-syntax-99999999.ebuild:
   Remove unnecessary SRC_URI and KEYWORDS and fix conditional log output.

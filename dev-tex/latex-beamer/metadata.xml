@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tex</herd>
-<use>
-  <flag name='lyx'>Install with <pkg>app-office/lyx</pkg> layouts</flag>
-</use>
 </pkgmetadata>
