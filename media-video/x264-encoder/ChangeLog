@@ -1,6 +1,11 @@
 # ChangeLog for media-video/x264-encoder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.70 2013/06/18 23:02:45 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.71 2013/06/19 18:11:57 chutzpah Exp $
+
+  19 Jun 2013; Patrick McLean <chutz@gentoo.org>
+  x264-encoder-0.0.20130506.ebuild, x264-encoder-9999.ebuild:
+  Remove the debug USE flag as all it does is add -g to the CFLAGS (bug
+  #473814).
 
 *x264-encoder-0.0.20130506 (18 Jun 2013)
 
@@ -365,4 +370,3 @@
   +x264-encoder-0.0.20080406.ebuild:
   Initial commit, pkgmove from x264-svn-encoder. Version bump 0.0.20080406
   using upstream's nightly git snapshot tarball.
-

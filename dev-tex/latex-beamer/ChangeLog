@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.141 2013/06/19 08:17:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.142 2013/06/19 18:10:17 radhermit Exp $
+
+  19 Jun 2013; Tim Harder <radhermit@gentoo.org> Manifest:
+  Fix bad tarball issue (bug #473810).
 
   19 Jun 2013; Tim Harder <radhermit@gentoo.org> -latex-beamer-3.20.ebuild,
   -latex-beamer-3.24.ebuild, -latex-beamer-3.25.ebuild, metadata.xml:

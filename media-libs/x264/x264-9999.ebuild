@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.7 2013/06/18 23:01:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.8 2013/06/19 18:11:14 chutzpah Exp $
 
 EAPI=5
 
@@ -27,11 +27,11 @@ else
 fi
 
 LICENSE="GPL-2"
-IUSE="10bit custom-cflags debug +interlaced pic static-libs +threads"
+IUSE="10bit custom-cflags +interlaced pic static-libs +threads"
 
 ASM_DEP=">=dev-lang/yasm-1.2.0"
-DEPEND="
-	amd64? ( ${ASM_DEP} )
+DEPEND="amd64? ( ${ASM_DEP} )
+	amd64-fbsd? ( ${ASM_DEP} )
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )"
 
@@ -66,7 +66,6 @@ src_configure() {
 		--enable-shared \
 		--host="${CHOST}" \
 		$(usex 10bit "--bit-depth=10" "") \
-		$(usex debug "--enable-debug" "") \
 		$(usex interlaced "" "--disable-interlaced") \
 		$(usex static-libs "" "--enable-static") \
 		$(usex threads "" "--disable-thread") \

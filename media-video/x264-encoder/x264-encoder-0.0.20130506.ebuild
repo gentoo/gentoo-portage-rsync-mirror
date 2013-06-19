@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20130506.ebuild,v 1.1 2013/06/18 23:02:45 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20130506.ebuild,v 1.2 2013/06/19 18:11:57 chutzpah Exp $
 
 EAPI=5
 
@@ -23,12 +23,12 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="10bit avs custom-cflags debug ffmpeg ffmpegsource +interlaced mp4 +threads"
+IUSE="10bit avs custom-cflags ffmpeg ffmpegsource +interlaced mp4 +threads"
 
 REQUIRED_USE="ffmpegsource? ( ffmpeg )"
 
 RDEPEND="ffmpeg? ( virtual/ffmpeg )
-	~media-libs/x264-${PV}[10bit=,debug=,interlaced=,threads=]
+	~media-libs/x264-${PV}[10bit=,interlaced=,threads=]
 	ffmpegsource? ( media-libs/ffmpegsource )
 	mp4? ( >=media-video/gpac-0.4.1_pre20060122 )"
 
@@ -52,7 +52,6 @@ src_configure() {
 		--host="${CHOST}" \
 		$(usex 10bit "--bit-depth=10" "") \
 		$(usex avs "" "--disable-avs") \
-		$(usex debug "--enable-debug" "") \
 		$(usex ffmpeg "" "--disable-lavf --disable-swscale") \
 		$(usex ffmpegsource "" "--disable-ffms") \
 		$(usex interlaced "" "--disable-interlaced") \
