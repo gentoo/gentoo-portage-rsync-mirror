@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.26 2013/05/14 21:06:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.27 2013/06/19 16:43:22 chithanh Exp $
 
 EAPI=5
 inherit savedconfig
@@ -24,6 +24,7 @@ IUSE="savedconfig"
 
 DEPEND=""
 RDEPEND="!savedconfig? (
+		!sys-firmware/alsa-firmware[alsa_cards_ca0132]
 		!sys-firmware/alsa-firmware[alsa_cards_korg1212]
 		!sys-firmware/alsa-firmware[alsa_cards_maestro3]
 		!sys-firmware/alsa-firmware[alsa_cards_sb16]

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.68 2013/06/18 22:34:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.69 2013/06/19 16:43:22 chithanh Exp $
+
+  19 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  linux-firmware-20130421.ebuild, linux-firmware-20130530.ebuild,
+  linux-firmware-99999999.ebuild:
+  Add blockers against alsa-firmware[alsa_cards_ca0132], bug #473784.
 
   18 Jun 2013; Jeroen Roovers <jer@gentoo.org> linux-firmware-20130421.ebuild:
   Stable for HPPA (bug #473732).
