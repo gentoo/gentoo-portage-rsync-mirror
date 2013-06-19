@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/yate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.19 2013/06/19 06:38:58 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.20 2013/06/19 07:47:23 chithanh Exp $
+
+  19 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  yate-4.3.0.1.ebuild:
+  Add comment about parallel compile issue, bug #312407. Remove some unnecessary
+  die calls.
 
   19 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> yate-4.3.0.1.ebuild:
   Fix desktop file, wrt bug #463442. Thanks to Andreis Vinogradovs for

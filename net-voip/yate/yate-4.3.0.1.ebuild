@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-4.3.0.1.ebuild,v 1.2 2013/06/19 06:38:58 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-4.3.0.1.ebuild,v 1.3 2013/06/19 07:47:23 chithanh Exp $
 
 EAPI=5
 
@@ -86,8 +86,9 @@ src_configure() {
 }
 
 src_compile() {
+	# fails parallel build, bug #312407
 	if use debug; then
-		emake -j1 ddebug || die "emake ddebug failed"
+		emake -j1 ddebug
 	else
 		emake -j1
 	fi
@@ -101,17 +102,17 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install-noapi || die "emake install-noapi failed"
+	emake DESTDIR="${D}" install-noapi
 
-	dodoc ChangeLog README || die "dodoc failed"
+	dodoc ChangeLog README
 
 	insinto /etc/logrotate.d
-	newins packing/${PN}.logrotate ${PN} || die "newins failed"
+	newins packing/${PN}.logrotate ${PN}
 
-	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die "newinitd failed"
-	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die "newconfd failed"
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 
 	if use doc; then
-		emake DESTDIR="${D}" install-api || die "emake install-api failed"
+		emake DESTDIR="${D}" install-api
 	fi
 }
