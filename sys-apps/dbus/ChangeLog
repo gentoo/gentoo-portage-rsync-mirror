@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.380 2013/06/18 13:02:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.381 2013/06/19 19:26:07 klausman Exp $
+
+  19 Jun 2013; Tobias Klausmann <klausman@gentoo.org> dbus-1.6.12.ebuild:
+  Stable on alpha, bug #473190
 
 *dbus-1.6.12 (18 Jun 2013)
 
