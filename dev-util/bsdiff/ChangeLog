@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.41 2013/06/17 21:56:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.42 2013/06/19 09:30:22 pinkbyte Exp $
+
+  19 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> bsdiff-4.3-r3.ebuild:
+  Add ~arm keyword
 
   17 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> bsdiff-4.3-r3.ebuild:
   x86 stable wrt bug #473558
