@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=acl? ( virtual/acl ) xattr? ( sys-apps/attr ) zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=http://files.libburnia-project.org/releases/libisofs-1.3.0.tar.gz
-_md5_=d3396b7107eabee6b93b3273f656eca2
+_md5_=7827060b65c8512969481c9af370c05a

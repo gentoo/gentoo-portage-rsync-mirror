@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-1.3.0.ebuild,v 1.5 2013/06/20 17:00:38 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-1.3.0.ebuild,v 1.6 2013/06/20 17:27:44 billie Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ src_configure() {
 src_install() {
 	default
 
-	dodoc Roadmap doc/{*.txt,Tutorial,Wiki}
+	dodoc Roadmap doc/{*.txt,Tutorial}
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }

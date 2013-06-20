@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.3.0.ebuild,v 1.4 2013/06/18 19:33:34 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.3.0.ebuild,v 1.5 2013/06/20 17:05:47 billie Exp $
 
 EAPI=5
 
@@ -51,9 +51,10 @@ src_install() {
 
 	dodoc CONTRIBUTORS doc/{comments,*.wiki,startup_file.txt}
 
-	cd "${S}"/xorriso
+	docinto frontend
+	dodoc frontend/README-tcltk
 	docinto xorriso
-	dodoc changelog.txt README_gnu_xorriso
+	dodoc xorriso/{changelog.txt,README_gnu_xorriso}
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }

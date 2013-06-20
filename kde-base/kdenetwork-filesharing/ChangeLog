@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-filesharing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.253 2013/06/08 17:33:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.254 2013/06/20 17:26:14 johu Exp $
+
+  20 Jun 2013; Johannes Huber <johu@gentoo.org>
+  kdenetwork-filesharing-4.10.3.ebuild, kdenetwork-filesharing-4.10.4.ebuild:
+  Update DESCRIPTION by Matt Turner <mattst88@gentoo.org> wrt bug #473900.
 
   08 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
   -kdenetwork-filesharing-4.10.2.ebuild:
