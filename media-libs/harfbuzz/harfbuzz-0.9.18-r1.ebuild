@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.18-r1.ebuild,v 1.1 2013/06/06 05:23:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.18-r1.ebuild,v 1.2 2013/06/20 11:57:30 scarabeus Exp $
 
 EAPI=5
 
@@ -45,7 +45,6 @@ src_prepare() {
 	fi
 
 	[[ ${PV} == 9999 ]] && eautoreconf
-	elibtoolize  # for building a shared library on x64-solaris
 
 	epatch "${FILESDIR}/${P}-ldadd.patch"
 	eautoreconf
