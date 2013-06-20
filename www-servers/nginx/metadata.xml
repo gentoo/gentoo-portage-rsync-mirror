@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>hollow@gentoo.org</email>
-		<name>Benedikt Böhm</name>
-	</maintainer>
-	<maintainer>
 		<email>dev-zero@gentoo.org</email>
 		<name>Tiziano Müller</name>
 	</maintainer>

@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1294 2013/06/20 00:48:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1296 2013/06/20 07:56:24 zmedico Exp $
+
+*portage-2.2.0_alpha183 (20 Jun 2013)
+
+  20 Jun 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha183.ebuild,
+  -portage-2.2.0_alpha182.ebuild:
+  2.2.0_alpha183 version bump. This includes all of the fixes in 2.1.12.8. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.12.8 (20 Jun 2013)
+
+  20 Jun 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.12.8.ebuild,
+  -portage-2.1.12.7.ebuild:
+  2.1.12.8 version bump. This fixes bug #473892 (regression in 2.1.12.7 and
+  2.2.0_alpha182 which causes tests to fail with python3 when sys-
+  apps/file[python] is installed). Bug #472632 tracks all bugs fixed since
+  portage-2.1.12.2.
 
 *portage-2.2.0_alpha182 (20 Jun 2013)
 

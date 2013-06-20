@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>emacs</herd>
-<herd>proxy-maintainers</herd>
 <longdescription>
   WHAT IS uEmacs/PK?
 
