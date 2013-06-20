@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chef-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server/ChangeLog,v 1.13 2013/03/01 19:26:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server/ChangeLog,v 1.14 2013/06/20 06:55:35 hollow Exp $
+
+  20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself from maintainers
 
 *chef-server-10.24.0 (01 Mar 2013)
 

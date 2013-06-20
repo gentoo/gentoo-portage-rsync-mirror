@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chef-solr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/ChangeLog,v 1.17 2013/03/01 19:19:45 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/ChangeLog,v 1.18 2013/06/20 06:56:49 hollow Exp $
+
+  20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself from maintainers
 
 *chef-solr-10.24.0 (01 Mar 2013)
 
