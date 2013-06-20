@@ -1,6 +1,13 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.78 2013/06/20 09:11:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.79 2013/06/20 22:46:53 xmw Exp $
+
+  20 Jun 2013; Michael Weber <xmw@gentoo.org> +files/mupdf-9999-CFLAGS.patch,
+  +files/mupdf-9999-forward_back.patch, +files/mupdf-9999-zoom-2.patch,
+  -files/mupdf-9999-buildsystem.patch, -files/mupdf-9999-install-headers.patch,
+  files/mupdf-9999-pkg-config.patch, mupdf-9999.ebuild:
+  Update to new file structure and second shared lib. Add XF86XK_Forward and
+  XF86XK_Back keys for Linux.
 
   20 Jun 2013; Michael Weber <xmw@gentoo.org>
   +files/mupdf-9999-install-headers.patch, mupdf-9999.ebuild:

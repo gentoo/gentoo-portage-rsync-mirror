@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.36 2013/06/20 09:11:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.37 2013/06/20 22:46:53 xmw Exp $
 
 EAPI=5
 
@@ -36,22 +36,25 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	rm -rf thirdparty || die
 
+	[ -f source/fitz/draw-scale-simple.c ] && \
+		rm -f source/fitz/draw-scale.c
+
 	epatch \
-		"${FILESDIR}"/${P}-buildsystem.patch \
+		"${FILESDIR}"/${P}-CFLAGS.patch \
 		"${FILESDIR}"/${P}-openjpeg2.patch \
-		"${FILESDIR}"/${P}-pkg-config.patch \
-		"${FILESDIR}"/${P}-install-headers.patch
+		"${FILESDIR}"/${P}-pkg-config.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
-		-i debian/mupdf.pc || die
+		-i platform/debian/mupdf.pc || die
 
 	use vanilla || epatch \
-		"${FILESDIR}"/${PN}-1.1_rc1-zoom-2.patch
+		"${FILESDIR}"/${P}-zoom-2.patch \
+		"${FILESDIR}"/${P}-forward_back.patch
 
 	#http://bugs.ghostscript.com/show_bug.cgi?id=693467
 	sed -e '/^Actions=/s:=.*:=View;:' \
-		-i debian/${PN}.desktop || die
+		-i platform/debian/${PN}.desktop || die
 
 	sed -e "\$aOS = Linux" \
 		-e "\$aCC = $(tc-getCC)" \
@@ -78,43 +81,44 @@ src_prepare() {
 	fi
 
 	my_soname=libmupdf.so.1.2
-	sed -e "\$a\$(MUPDF_LIB):" \
-		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname} -Wl,--no-undefined -o \$@ \$^ \$(LIBS)" \
-		-e "/^MUPDF_LIB :=/s:=.*:= build/debug/${my_soname}:" \
+	my_soname_js_none=libmupdf-js-none.so.1.2
+	sed -e "\$a\$(MUPDF_LIB): \$(MUPDF_JS_NONE_LIB)" \
+		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname} -Wl,--no-undefined -o \$@ \$^ \$(MUPDF_JS_NONE_LIB) \$(LIBS)" \
+		-e "/^MUPDF_LIB :=/s:=.*:= \$(OUT)/${my_soname}:" \
+		-e "\$a\$(MUPDF_JS_NONE_LIB):" \
+		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname_js_none} -Wl,--no-undefined -o \$@ \$^ \$(LIBS)" \
+		-e "/^MUPDF_JS_NONE_LIB :=/s:=.*:= \$(OUT)/${my_soname_js_none}:" \
 		-i Makefile || die
 }
 
 src_compile() {
 	emake XCFLAGS="-fpic"
 	use static-libs && \
-		emake -C "${S}"-static build/debug/libmupdf.a
+		emake -C "${S}"-static build/debug/libmupdf{,-js-none}.a
 	use static && \
 		emake -C "${S}"-static XLIBS="-static"
 }
 
 src_install() {
 	if use X ; then
-		domenu debian/mupdf.desktop
-		doicon debian/mupdf.xpm
+		domenu platform/debian/mupdf.desktop
+		doicon platform/debian/mupdf.xpm
 	else
-		rm apps/man/mupdf.1
+		rm docs/man/mupdf.1
 	fi
 
 	emake install
 	dosym ${my_soname} /usr/$(get_libdir)/libmupdf.so
 
 	use static-libs && \
-		dolib.a "${S}"-static/build/debug/libmupdf.a
+		dolib.a "${S}"-static/build/debug/libmupdf{,-js-none}.a
 	if use static ; then
 		dobin "${S}"-static/build/debug/mu{tool,draw}
 		use X && dobin "${S}"-static/build/debug/mupdf
 	fi
 
-	#insinto /usr/include
-	#doins pdf/mupdf-internal.h fitz/fitz-internal.h xps/muxps-internal.h
-
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins debian/mupdf.pc
+	doins platform/debian/mupdf.pc
 
-	dodoc README doc/{example.c,overview.txt}
+	dodoc README docs/*.{txt,c}
 }

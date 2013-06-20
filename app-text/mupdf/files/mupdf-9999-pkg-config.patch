@@ -4,9 +4,9 @@ http://bugs.ghostscript.com/show_bug.cgi?id=694301
 openjpeg-2
 http://bugs.ghostscript.com/show_bug.cgi?id=693518
 
---- mupdf-9999/debian/mupdf.pc
-+++ mupdf-9999/debian/mupdf.pc
-@@ -4,9 +4,8 @@
+--- mupdf-9999/platform/debian/mupdf.pc
++++ mupdf-9999/platform/debian/mupdf.pc
+@@ -4,9 +4,9 @@
  includedir=${prefix}/include
  
  Name: mupdf
@@ -16,4 +16,5 @@ http://bugs.ghostscript.com/show_bug.cgi?id=693518
  Version: 0.5.0
  Libs: -L${libdir} -lmupdf
 -Libs.private: -lopenjpeg -ljbig2dec -ljpeg -lz -lm
++Libs.private: -lmupdf-js-none
  Cflags: -I${includedir}
