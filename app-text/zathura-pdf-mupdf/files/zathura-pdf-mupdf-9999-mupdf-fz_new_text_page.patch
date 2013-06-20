@@ -1,0 +1,11 @@
+--- zathura-pdf-mupdf-9999/pdf.c
++++ zathura-pdf-mupdf-9999/pdf.c
+@@ -225,7 +225,7 @@
+   zathura_page_set_height(page, mupdf_page->bbox.y1 - mupdf_page->bbox.y0);
+ 
+   /* setup text */
+-  mupdf_page->text           = fz_new_text_page(mupdf_page->ctx, &mupdf_page->bbox);
++  mupdf_page->text           = fz_new_text_page(mupdf_page->ctx);
+   if (mupdf_page->text == NULL) {
+     goto error_free;
+   }

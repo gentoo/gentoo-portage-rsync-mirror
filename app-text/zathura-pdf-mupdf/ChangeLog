@@ -1,6 +1,13 @@
 # ChangeLog for app-text/zathura-pdf-mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.7 2013/06/20 10:54:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.8 2013/06/20 11:25:55 xmw Exp $
+
+  20 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/zathura-pdf-mupdf-9999-mupdf-fz_new_text_page.patch,
+  +files/zathura-pdf-mupdf-9999-mupdf-pkgconfig.patch,
+  +files/zathura-pdf-mupdf-9999-mupdf-split-headers.patch,
+  zathura-pdf-mupdf-9999.ebuild:
+  Adapt for mupdf split header files, use mupdf pkg-config file.
 
 *zathura-pdf-mupdf-0.2.4 (20 Jun 2013)
 

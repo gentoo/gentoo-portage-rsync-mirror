@@ -1,0 +1,16 @@
+--- zathura-pdf-mupdf-9999/config.mk
++++ zathura-pdf-mupdf-9999/config.mk
+@@ -29,8 +29,11 @@
+ PLUGINDIR = ${LIBDIR}/zathura
+ endif
+ 
+-INCS = ${GTK_INC} ${ZATHURA_INC} ${GIRARA_INC}
+-LIBS = ${GIRARA_LIB} ${GTK_LIB} -lfitz -ljbig2dec -lopenjpeg -ljpeg
++MUPDF_INC ?= $(shell pkg-config --cflags mupdf)
++MUPDF_LIB ?= $(shell pkg-config --libs mupdf)
++
++INCS = ${GTK_INC} ${ZATHURA_INC} ${GIRARA_INC} ${MUPDF_INC}
++LIBS = ${GIRARA_LIB} ${GTK_LIB} ${MUPDF_LIB}
+ 
+ # flags
+ CFLAGS += -std=c99 -fPIC -pedantic -Wall -Wno-format-zero-length $(INCS)

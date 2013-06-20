@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.3 2013/06/19 14:22:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.4 2013/06/20 11:25:55 xmw Exp $
 
 EAPI=5
 
@@ -35,6 +35,13 @@ pkg_setup() {
 		VERBOSE=1
 		DESTDIR="${D}"
 	)
+}
+
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-mupdf-fz_new_text_page.patch \
+		"${FILESDIR}"/${P}-mupdf-pkgconfig.patch \
+		"${FILESDIR}"/${P}-mupdf-split-headers.patch
 }
 
 src_compile() {
