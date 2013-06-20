@@ -1,11 +1,11 @@
 DEFINED_PHASES=-
 DEPEND=dev-libs/libgcrypt net-im/pidgin[gtk] >=net-libs/libotr-4.0.0 x11-libs/gtk+:2 dev-util/intltool virtual/pkgconfig
 DESCRIPTION=(OTR) Messaging allows you to have private conversations over instant messaging
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.cypherpunks.ca/otr/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/libgcrypt net-im/pidgin[gtk] >=net-libs/libotr-4.0.0 x11-libs/gtk+:2
 SLOT=0
 SRC_URI=http://www.cypherpunks.ca/otr/pidgin-otr-4.0.0.tar.gz
-_md5_=3ccf26c727ea57efb14c1b952be7933b
+_md5_=d507c183278c42af13d80303da246fc2

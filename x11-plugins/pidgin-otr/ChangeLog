@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/pidgin-otr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.28 2012/10/18 16:16:42 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.29 2013/06/20 14:25:13 polynomial-c Exp $
+
+  20 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> -pidgin-otr-3.2.0.ebuild,
+  pidgin-otr-3.2.1.ebuild, pidgin-otr-4.0.0.ebuild:
+  Fixed dependency on libotr (bug #439550 by Gary E. Miller). Removed old
+  (vulnerable?) version. Converted remaining ebuilds to EAPI-5.
 
 *pidgin-otr-4.0.0 (18 Oct 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.7-r2.ebuild,v 1.1 2013/06/20 13:58:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.7-r2.ebuild,v 1.2 2013/06/20 14:07:40 polynomial-c Exp $
 
 EAPI=5
 
@@ -79,7 +79,8 @@ DEPEND="$RDEPEND
 
 DOCS="AUTHORS HACKING NEWS README ChangeLog"
 
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )
+		dbus? ( ${PYTHON_REQUIRED_USE} )"
 
 # Enable Default protocols
 DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"

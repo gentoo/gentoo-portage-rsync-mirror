@@ -1,0 +1,74 @@
+--- a/tools/CMakeLists.txt
++++ b/tools/CMakeLists.txt
+@@ -13,24 +13,6 @@
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+-set(cpp_dir cryptopp562)
+-
+-file(GLOB cpp_src ${cpp_dir}/*.cpp)
+-
+-if (WIN32)
+-	file(GLOB cpp_hdr ${cpp_dir}/*.h)
+-	list(APPEND cpp_src ${cpp_hdr})
+-endif()
+-
+-file(GLOB cpp_ignore
+-	${cpp_dir}/simple.cpp
+-	${cpp_dir}/strciphr.cpp
+-	${cpp_dir}/polynomi.cpp
+-	${cpp_dir}/eprecomp.cpp
+-	${cpp_dir}/eccrypto.cpp
+-	${cpp_dir}/algebra.cpp)
+-list(REMOVE_ITEM cpp_src ${cpp_ignore})
+-
+ # if 64-bit windows, compile asm file.
+ if (CMAKE_CL_64)
+ 	list(APPEND cpp_src ${cpp_dir}/x64dll.asm ${cpp_dir}/x64masm.asm)
+@@ -60,5 +42,3 @@
+ 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+ 	endif()
+ endif()
+-
+-add_library(cryptopp STATIC ${cpp_src})
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -128,6 +128,10 @@
+ 
+ 	endif()
+ 
++	set(CMAKE_REQUIRED_LIBRARIES crypto++)
++	set(CMAKE_REQUIRED_LIBRARIES)
++	set(CMAKE_INCLUDE_DIRECTORIES)
++
+ 	check_type_size(char SIZEOF_CHAR)
+ 	check_type_size(int SIZEOF_INT)
+ 	check_type_size(long SIZEOF_LONG)
+--- a/src/lib/synergy/CCryptoMode.h
++++ b/src/lib/synergy/CCryptoMode.h
+@@ -17,9 +17,9 @@
+ 
+ #pragma once
+ 
+-#include <cryptopp562/gcm.h>
+-#include <cryptopp562/modes.h>
+-#include <cryptopp562/aes.h>
++#include <crypto++/gcm.h>
++#include <crypto++/modes.h>
++#include <crypto++/aes.h>
+ #include "ECryptoMode.h"
+ #include "CString.h"
+ 
+--- a/src/lib/synergy/CCryptoStream.h
++++ b/src/lib/synergy/CCryptoStream.h
+@@ -20,8 +20,8 @@
+ #include "BasicTypes.h"
+ #include "CStreamFilter.h"
+ #include "CCryptoMode.h"
+-#include <cryptopp562/osrng.h>
+-#include <cryptopp562/sha.h>
++#include <crypto++/osrng.h>
++#include <crypto++/sha.h>
+ 
+ class CCryptoOptions;
+ 
