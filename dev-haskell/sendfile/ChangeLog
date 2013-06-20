@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/sendfile
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/sendfile/ChangeLog,v 1.1 2013/06/20 05:06:06 qnikst Exp $
+
+*sendfile-0.7.9 (20 Jun 2013)
+
+  20 Jun 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +sendfile-0.7.9.ebuild:
+  add sendfile-0.7.9 due to #473858
