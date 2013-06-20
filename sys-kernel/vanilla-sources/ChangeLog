@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1186 2013/06/20 19:31:12 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1189 2013/06/20 19:40:17 gregkh Exp $
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -vanilla-sources-3.8.13.ebuild:
+  remove 3.8.13 kernel, it's obsolete, end-of-lifed, and shouldn't be used
+  anymore.
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -vanilla-sources-3.7.10.ebuild:
+  remove 3.7.10 kernel as 3.7-stable is end-of-life from upstream, and obsolete,
+  and probably full of bugs.
+
+*vanilla-sources-3.9.7 (20 Jun 2013)
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +vanilla-sources-3.9.7.ebuild, -vanilla-sources-3.9.6.ebuild:
+  update to 3.9.7 upstream kernel
 
 *vanilla-sources-3.0.83 (20 Jun 2013)
 

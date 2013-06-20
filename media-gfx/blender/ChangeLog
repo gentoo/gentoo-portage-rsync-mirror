@@ -1,6 +1,20 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.248 2013/05/29 13:29:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.250 2013/06/20 19:59:26 hasufell Exp $
+
+*blender-2.67b (20 Jun 2013)
+
+  20 Jun 2013; Julian Ospald <hasufell@gentoo.org> +blender-2.67b.ebuild,
+  +files/blender-2.67b-doxyfile.patch,
+  +files/blender-2.67b-fix-install-rules.patch,
+  +files/blender-2.67b-remove-binreloc.patch,
+  +files/blender-2.67b-unbundle-colamd.patch,
+  +files/blender-2.67b-unbundle-eigen3.patch,
+  +files/blender-2.67b-unbundle-glog.patch:
+  version bump wrt #469020
+
+  20 Jun 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  add myself to metadata.xml confirmed by lu_zero
 
   29 May 2013; Julian Ospald <hasufell@gentoo.org> blender-2.66.ebuild:
   update REQUIRED_USE to include PYTHON_REQUIRED_USE

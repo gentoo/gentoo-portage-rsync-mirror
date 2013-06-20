@@ -1,0 +1,36 @@
+commit 657d19a1107d6765fc7c7152d6becbd7fb422b6b
+Author: hasufell <hasufell@gentoo.org>
+Date:   Thu Jun 20 20:36:41 2013 +0200
+
+    remove binreloc references
+
+diff --git a/extern/CMakeLists.txt b/extern/CMakeLists.txt
+index b21cdc3..1c8dfa1 100644
+--- a/extern/CMakeLists.txt
++++ b/extern/CMakeLists.txt
+@@ -40,10 +40,6 @@ endif()
+ #	add_subdirectory(eltopo)
+ #endif()
+ 
+-if(WITH_BINRELOC)
+-	add_subdirectory(binreloc)
+-endif()
+-
+ if(NOT WITH_SYSTEM_GLEW)
+ 	add_subdirectory(glew)
+ endif()
+diff --git a/source/blenderplayer/CMakeLists.txt b/source/blenderplayer/CMakeLists.txt
+index c0b4e2d..261cbd2 100644
+--- a/source/blenderplayer/CMakeLists.txt
++++ b/source/blenderplayer/CMakeLists.txt
+@@ -81,10 +81,6 @@ list(APPEND BLENDER_LINK_LIBS
+ 	blenkernel_blc
+ )
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+-	list(APPEND BLENDER_LINK_LIBS extern_binreloc)
+-endif()
+-
+ # if(UNIX)
+ 	# Sort libraries
+ 	set(BLENDER_SORTED_LIBS
