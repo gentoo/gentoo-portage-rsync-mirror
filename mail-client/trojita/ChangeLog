@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.25 2013/05/07 08:14:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.26 2013/06/20 13:13:20 ago Exp $
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> trojita-9999.ebuild:
+  Port the 9999 ebuil to cmake, wrt to bug #473930
 
 *trojita-0.3.93 (07 May 2013)
 
