@@ -1223,6 +1223,8 @@ dev-haskell/glut:usenativewindowslibraries - When compiling under Windows, use t
 dev-haskell/gtk:gio - Add glib's GIO bindings.
 dev-haskell/highlighting-kate:executable - Build the Highlight executable.
 dev-haskell/highlighting-kate:pcre-light - Use the pcre-light library instead of regex-pcre-builtin.
+dev-haskell/hstringtemplate:quasi-quotation - Build module providing a quasi-quoter
+dev-haskell/hstringtemplate:syb-with-class - Generic instances for TOSElem
 dev-haskell/json:generic - Add support for generic encoder (dev-haskell/syb)
 dev-haskell/json:parsec - Add support for parsing with Parsec
 dev-haskell/json:pretty - Add support for using pretty printing combinators
@@ -1233,6 +1235,7 @@ dev-haskell/texmath:cgi - Build texmath-cgi executable.
 dev-haskell/text:developer - operate in developer mode
 dev-haskell/text:integer-simple - Use the simple integer library instead of GMP
 dev-haskell/unix-compat:old-time - build against old-time package
+dev-haskell/void:safe - dissable effective but unsafe coersions
 dev-haskell/x11:screensaver - whether to build XScreenSaver.
 dev-haskell/zip-archive:executable - Build the Zip executable.
 dev-java/ant:antlr - Enable ANTLR Ant tasks

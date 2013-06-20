@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/syb-with-class
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb-with-class/ChangeLog,v 1.1 2013/06/20 06:12:40 qnikst Exp $
+
+*syb-with-class-0.6.1.4-r1 (20 Jun 2013)
+
+  20 Jun 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +syb-with-class-0.6.1.4-r1.ebuild:
+  add 0.6.1.4 due to #473858
