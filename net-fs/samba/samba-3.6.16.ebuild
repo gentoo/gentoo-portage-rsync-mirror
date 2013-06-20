@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.16.ebuild,v 1.1 2013/06/20 11:44:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.16.ebuild,v 1.2 2013/06/20 18:23:54 polynomial-c Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc example
 DEPEND="dev-libs/popt
 	>=sys-libs/talloc-2.0.5
 	>=sys-libs/tdb-1.2.9
+	>=sys-libs/tevent-0.9.18
 	virtual/libiconv
 	ads? ( virtual/krb5 sys-fs/e2fsprogs
 		client? ( sys-apps/keyutils
