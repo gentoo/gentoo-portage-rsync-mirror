@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-9999.ebuild,v 1.9 2013/06/20 08:09:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-9999.ebuild,v 1.10 2013/06/20 20:10:20 xmw Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="ncurses directconnect client"
 HOMEPAGE="http://dev.yorhel.nl/ncdc"
 EGIT_REPO_URI="git://g.blicky.net/ncdc.git"
 
-LICENSE="MIT-with-advertising"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
