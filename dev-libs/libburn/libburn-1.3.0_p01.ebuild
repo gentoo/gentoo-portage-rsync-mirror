@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.3.0_p01.ebuild,v 1.4 2013/06/18 19:33:08 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.3.0_p01.ebuild,v 1.5 2013/06/20 16:58:12 billie Exp $
 
 EAPI=5
 
@@ -38,11 +38,10 @@ src_install() {
 
 	dodoc CONTRIBUTORS doc/{comments,*.txt}
 
-	cd "${S}"/cdrskin
 	docinto cdrskin
-	dodoc *.txt README
+	dodoc cdrskin/{*.txt,README}
 	docinto cdrskin/html
-	dohtml cdrskin_eng.html
+	dohtml cdrskin/cdrskin_eng.html
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }

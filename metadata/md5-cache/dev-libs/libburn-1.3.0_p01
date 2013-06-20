@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=cdio? ( >=dev-libs/libcdio-0.83 )
 SLOT=0
 SRC_URI=http://files.libburnia-project.org/releases/libburn-1.3.0.pl01.tar.gz
-_md5_=ed3e14f79aa400ed33884c42429b7820
+_md5_=5b42f8c21669dd4ffacafc96e4063868
