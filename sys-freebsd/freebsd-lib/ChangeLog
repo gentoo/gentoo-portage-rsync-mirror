@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.183 2013/06/18 23:45:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.184 2013/06/20 22:06:06 aballier Exp $
+
+  20 Jun 2013; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.1-r8.ebuild:
+  go back to -isystem from -I for include proper, bug #473934 by Yuta SATOH. I
+  will get this right on a first shoot some day.
 
   18 Jun 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-7.2-r1.ebuild,
   -freebsd-lib-8.0.ebuild, -files/freebsd-lib-7.0-CVE-2008-1391.patch,

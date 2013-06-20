@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.4 2013/06/18 23:18:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.5 2013/06/20 22:06:06 aballier Exp $
 
 EAPI=5
 
@@ -306,7 +306,7 @@ do_bootstrap() {
 		einfo "Pre-installing includes in include_proper_${ABI}"
 		mkdir "${WORKDIR}/include_proper_${ABI}" || die
 		CTARGET="${CHOST}" install_includes "/include_proper_${ABI}"
-		CFLAGS="${CFLAGS} -I ${WORKDIR}/include_proper_${ABI}"
+		CFLAGS="${CFLAGS} -isystem ${WORKDIR}/include_proper_${ABI}"
 	fi
 	bootstrap_csu
 	bootstrap_libssp_nonshared
