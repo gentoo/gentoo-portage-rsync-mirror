@@ -1,6 +1,30 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.382 2013/06/20 02:43:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.390 2013/06/20 09:07:54 ago Exp $
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for sparc, wrt bug #473190
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for sh, wrt bug #473190
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for s390, wrt bug #473190
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for ppc, wrt bug #473190
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for ia64, wrt bug #473190
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for arm, wrt bug #473190
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for x86, wrt bug #473190
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbus-1.6.12.ebuild:
+  Stable for amd64, wrt bug #473190
 
   20 Jun 2013; Jeroen Roovers <jer@gentoo.org> dbus-1.6.12.ebuild:
   Stable for HPPA (bug #473190).

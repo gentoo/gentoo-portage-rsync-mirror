@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.35 2013/06/15 01:18:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.36 2013/06/20 09:11:08 xmw Exp $
 
 EAPI=5
 
@@ -39,7 +39,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-buildsystem.patch \
 		"${FILESDIR}"/${P}-openjpeg2.patch \
-		"${FILESDIR}"/${P}-pkg-config.patch
+		"${FILESDIR}"/${P}-pkg-config.patch \
+		"${FILESDIR}"/${P}-install-headers.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
@@ -109,8 +110,8 @@ src_install() {
 		use X && dobin "${S}"-static/build/debug/mupdf
 	fi
 
-	insinto /usr/include
-	doins pdf/mupdf-internal.h fitz/fitz-internal.h xps/muxps-internal.h
+	#insinto /usr/include
+	#doins pdf/mupdf-internal.h fitz/fitz-internal.h xps/muxps-internal.h
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins debian/mupdf.pc
