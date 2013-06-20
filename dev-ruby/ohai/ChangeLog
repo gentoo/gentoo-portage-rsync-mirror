@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ohai
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.15 2012/08/14 13:16:04 hollow Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.16 2013/06/20 07:10:51 hollow Exp $
+
+  20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself from maintainers
 
   14 Aug 2012; Benedikt Böhm <hollow@gentoo.org> ohai-0.6.12.ebuild,
   ohai-6.14.0-r1.ebuild, metadata.xml:

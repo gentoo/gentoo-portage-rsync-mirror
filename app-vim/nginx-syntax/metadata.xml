@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vim</herd>
-	<maintainer>
-		<email>hollow@gentoo.org</email>
-		<name>Benedikt Böhm</name>
-	</maintainer>
 </pkgmetadata>

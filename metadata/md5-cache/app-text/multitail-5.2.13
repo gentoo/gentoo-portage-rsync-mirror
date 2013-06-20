@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-libs/ncurses virtual/pkgconfig
+DESCRIPTION=Tail with multiple windows
+EAPI=5
+HOMEPAGE=http://www.vanheusden.com/multitail/
+IUSE=debug doc examples
+KEYWORDS=~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses
+SLOT=0
+SRC_URI=http://www.vanheusden.com/multitail/multitail-5.2.13.tgz
+_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=489d4e08aa9564393004453c511e032f
