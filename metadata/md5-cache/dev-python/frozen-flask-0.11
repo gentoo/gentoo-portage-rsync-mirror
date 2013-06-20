@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare test
+DEPEND=>=dev-python/flask-0.7 dev-python/setuptools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) test? ( dev-python/nose )
+DESCRIPTION=Freezes a Flask application into a set of static files.
+EAPI=3
+HOMEPAGE=https://github.com/SimonSapin/Frozen-Flask http://pypi.python.org/pypi/Frozen-Flask
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-python/flask-0.7 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+SLOT=0
+SRC_URI=mirror://pypi/F/Frozen-Flask/Frozen-Flask-0.11.tar.gz
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=ef03e18383f11eff3d58f321404280de

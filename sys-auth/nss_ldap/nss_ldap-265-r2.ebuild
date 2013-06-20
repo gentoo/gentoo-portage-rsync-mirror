@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r2.ebuild,v 1.1 2013/06/18 05:31:29 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r2.ebuild,v 1.2 2013/06/20 03:34:13 heroxbd Exp $
 
 EAPI=5
 inherit fixheadtails eutils multilib autotools prefix
@@ -99,7 +99,8 @@ src_configure() {
 src_install() {
 	dodir /$(get_libdir)
 
-	emake -j1 DESTDIR="${D}" install INST_UID=${PORTAGE_USER} INST_GID=${PORTAGE_GROUP}
+	emake -j1 DESTDIR="${D}" install \
+		INST_UID=${PORTAGE_USER:-root} INST_GID=${PORTAGE_GROUP:-root}
 
 	insinto /etc
 	doins ldap.conf
