@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/feed
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/feed/ChangeLog,v 1.1 2013/06/20 04:57:00 qnikst Exp $
+
+*feed-0.3.8-r1 (20 Jun 2013)
+
+  20 Jun 2013; Alexander Vershilov <qnikst@gentoo.org> +feed-0.3.8-r1.ebuild,
+  +metadata.xml:
+  add feed-0.3.8 due #473858
