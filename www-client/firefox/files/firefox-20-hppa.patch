@@ -1,3 +1,14 @@
+Fix recent changes in the case of a stack that grows up (on PARISC):
+
+js/src/gc/RootMarking.cpp: In function 'void MarkConservativeStackRoots(JSTracer*, bool)':
+js/src/gc/RootMarking.cpp:317:20: error: invalid conversion from 'uintptr_t {aka unsigned int}' to 'uintptr_t* {aka unsigned int*}' [-fpermissive]
+
+This case didn't see the changes that the alternative got
+https://bugs.gentoo.org/show_bug.cgi?id=414297
+
+    Jeroen Roovers <jer@gentoo.org>
+--
+
 --- a/js/src/gc/RootMarking.cpp
 +++ b/js/src/gc/RootMarking.cpp
 @@ -314,7 +314,7 @@
