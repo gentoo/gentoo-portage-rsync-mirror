@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygpgme
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.5 2012/08/09 08:13:49 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.6 2013/06/20 05:52:06 jlec Exp $
+
+*pygpgme-0.3-r1 (20 Jun 2013)
+
+  20 Jun 2013; Justin Lecher <jlec@gentoo.org> +pygpgme-0.3-r1.ebuild,
+  metadata.xml:
+  Bump to distutils-r1 eclass
 
   09 Aug 2012; Patrick Lauer <patrick@gentoo.org> pygpgme-0.3.ebuild:
   Restrict pythonic things

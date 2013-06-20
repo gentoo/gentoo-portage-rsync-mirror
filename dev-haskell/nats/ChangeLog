@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/nats
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/nats/ChangeLog,v 1.1 2013/06/20 06:00:18 qnikst Exp $
+
+*nats-0.1 (20 Jun 2013)
+
+  20 Jun 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +nats-0.1.ebuild:
+  add 0.1 version due to #473858
