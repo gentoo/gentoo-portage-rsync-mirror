@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Net-Patricia
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.31 2012/10/09 17:27:51 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.34 2013/06/19 23:26:11 zlogene Exp $
+
+  19 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> -Net-Patricia-1.190.0.ebuild:
+  drop old
+
+  19 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> Net-Patricia-1.200.0.ebuild:
+  amd64/x86 stable wrt bug #449600
+
+  19 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> Net-Patricia-1.200.0.ebuild:
+  respect AR  wrt bug #473876
 
 *Net-Patricia-1.200.0 (09 Oct 2012)
 

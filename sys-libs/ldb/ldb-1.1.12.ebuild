@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.12.ebuild,v 1.7 2012/11/29 15:38:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.12.ebuild,v 1.8 2013/06/19 23:06:29 klausman Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://www.samba.org/ftp/pub/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-libs/popt

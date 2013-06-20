@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.50 2013/06/07 12:52:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.51 2013/06/19 23:06:29 klausman Exp $
+
+  19 Jun 2013; Tobias Klausmann <klausman@gentoo.org> ldb-1.1.12.ebuild:
+  Keyworded on alpha, bug #424649
 
 *ldb-1.1.15-r1 (07 Jun 2013)
 
