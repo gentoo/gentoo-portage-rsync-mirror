@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.7 2013/06/19 08:02:31 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.8 2013/06/20 15:46:40 jer Exp $
 
 EAPI=5
 
@@ -9,8 +9,9 @@ AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
 PYTHON_DEPEND="python? 2"
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+DISTUTILS_SINGLE_IMPL=true
 
-inherit autotools-utils eutils python-r1
+inherit autotools distutils-r1 eutils
 
 DESCRIPTION="simplified, portable interface to several low-level networking routines"
 HOMEPAGE="http://code.google.com/p/libdnet/"
@@ -37,11 +38,29 @@ src_prepare() {
 		configure.in || die
 	sed -i -e 's|-L@libdir@ ||g' dnet-config.in || die
 	use ipv6 && epatch "${WORKDIR}/${P}.ipv6-1.patch"
-	autotools-utils_src_prepare
+	eautoreconf
+	use python && distutils-r1_src_prepare
 }
 
 src_configure() {
 	econf \
 		$(use_with python) \
 		$(use_enable static-libs static)
+}
+
+src_compile() {
+	default
+	if use python; then
+		cd python
+		distutils-r1_src_compile
+	fi
+}
+
+src_install() {
+	default
+	if use python; then
+		cd python
+		distutils-r1_src_compile
+	fi
+	prune_libtool_files
 }
