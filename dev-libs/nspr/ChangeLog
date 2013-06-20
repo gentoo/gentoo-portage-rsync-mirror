@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.232 2013/06/19 13:12:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.233 2013/06/20 02:15:18 patrick Exp $
+
+  20 Jun 2013; Patrick Lauer <patrick@gentoo.org> nspr-4.9.5.ebuild:
+  QA: Add s390 stable keyword as all other stable versions were pruned
 
   19 Jun 2013; Lars Wendler <polynomial-c@gentoo.org>
   +files/nspr-4.7.0-prtime.patch:
