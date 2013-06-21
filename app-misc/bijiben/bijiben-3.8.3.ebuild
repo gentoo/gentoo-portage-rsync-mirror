@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/bijiben-3.8.1.ebuild,v 1.2 2013/05/10 07:33:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/bijiben-3.8.3.ebuild,v 1.1 2013/06/21 08:22:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ RDEPEND="
 	>=app-misc/tracker-0.16
 	>=dev-libs/glib-2.28:2
 	dev-libs/libxml2
-	gnome-extra/zeitgeist
+	dev-libs/libzeitgeist
 	media-libs/clutter-gtk:1.0
 	net-libs/webkit-gtk:3
 	>=x11-libs/gtk+-3.7.7:3
