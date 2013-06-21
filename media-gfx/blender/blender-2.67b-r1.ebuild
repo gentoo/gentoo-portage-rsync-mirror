@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.66.ebuild,v 1.2 2013/05/29 13:29:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.67b-r1.ebuild,v 1.1 2013/06/21 15:13:56 hasufell Exp $
 
 # TODO:
-#   bundled-deps: eigen:3 is too old
-#                 bullet is modified
+#   bundled-deps: bullet is modified
 #   multiple python abi?
 
 EAPI=5
@@ -30,11 +29,17 @@ fi
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
-IUSE="+boost +bullet collada colorio cycles +dds debug doc +elbeem ffmpeg fftw +game-engine jack jpeg2k ndof nls openal openmp +openexr player redcode sdl sndfile sse tiff"
-REQUIRED_USE="${PYTHON_REQUIRED_USE} player? ( game-engine ) redcode? ( jpeg2k ) cycles? ( boost ) nls? ( boost )"
+IUSE="+boost +bullet collada colorio cycles +dds debug doc +elbeem ffmpeg fftw +game-engine jack jpeg2k ndof nls openal openmp +openexr player redcode sdl sndfile sse sse2 tiff"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
+	player? ( game-engine )
+	redcode? ( jpeg2k )
+	cycles? ( boost openexr tiff )
+	nls? ( boost )
+	game-engine? ( boost )"
 
 RDEPEND="
 	${PYTHON_DEPS}
+	dev-cpp/gflags
 	dev-cpp/glog[gflags]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	>=media-libs/freetype-2.0
@@ -61,7 +66,10 @@ RDEPEND="
 	)
 	fftw? ( sci-libs/fftw:3.0 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	ndof? ( app-misc/spacenavd )
+	ndof? (
+		app-misc/spacenavd
+		dev-libs/libspnav
+	)
 	nls? ( virtual/libiconv )
 	openal? ( >=media-libs/openal-1.6.372 )
 	openexr? ( media-libs/openexr )
@@ -69,6 +77,7 @@ RDEPEND="
 	sndfile? ( media-libs/libsndfile )
 	tiff? ( media-libs/tiff:0 )"
 DEPEND="${RDEPEND}
+	>=dev-cpp/eigen-3.1.3:3
 	doc? (
 		app-doc/doxygen[-nodot(-),dot(+)]
 		dev-python/sphinx
@@ -92,10 +101,17 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.66-{unbundle,cmake,doxyfile}.patch
+	epatch "${FILESDIR}"/${P}-doxyfile.patch \
+		"${FILESDIR}"/${P}-unbundle-colamd.patch \
+		"${FILESDIR}"/${P}-remove-binreloc.patch \
+		"${FILESDIR}"/${P}-unbundle-glog.patch \
+		"${FILESDIR}"/${P}-unbundle-eigen3.patch \
+		"${FILESDIR}"/${P}-fix-install-rules.patch \
+		"${FILESDIR}"/${P}-sse2.patch
 
 	# remove some bundled deps
 	rm -r \
+		extern/Eigen3 \
 		extern/libopenjpeg \
 		extern/glew \
 		extern/colamd \
@@ -110,12 +126,26 @@ src_prepare() {
 
 	# we don't want static glew, but it's scattered across
 	# thousand files
+	# !!!CHECK THIS SED ON EVERY VERSION BUMP!!!
 	sed -i \
-		-e '/add_definitions(-DGLEW_STATIC)/d' \
+		-e '/-DGLEW_STATIC/d' \
 		$(find . -type f -name "CMakeLists.txt") || die
 
 	ewarn "$(echo "Remaining bundled dependencies:";
 			( find extern -mindepth 1 -maxdepth 1 -type d; find extern/libmv/third_party -mindepth 1 -maxdepth 1 -type d; ) | sed 's|^|- |')"
+
+	# linguas cleanup
+	local i
+	if ! use nls; then
+		rm -r "${S}"/release/datafiles/locale || die
+	else
+		if [[ -n "${LINGUAS+x}" ]] ; then
+			for i in "${S}"/release/datafiles/locale/* ; do
+				mylang=${i##*/}
+				has ${mylang} ${LINGUAS} || { rm -r ${i} || die ; }
+			done
+		fi
+	fi
 }
 
 src_configure() {
@@ -136,7 +166,7 @@ src_configure() {
 		$(cmake-utils_use_with elbeem MOD_FLUID)
 		$(cmake-utils_use_with ffmpeg CODEC_FFMPEG)
 		$(cmake-utils_use_with fftw FFTW3)
-		$(cmake-utils_use_with fftw MOD_OCEANISM)
+		$(cmake-utils_use_with fftw MOD_OCEANSIM)
 		$(cmake-utils_use_with game-engine GAMEENGINE)
 		$(cmake-utils_use_with nls INTERNATIONAL)
 		$(cmake-utils_use_with jack JACK)
@@ -149,6 +179,7 @@ src_configure() {
 		$(cmake-utils_use_with sdl SDL)
 		$(cmake-utils_use_with sndfile CODEC_SNDFILE)
 		$(cmake-utils_use_with sse RAYOPTIMIZATION)
+		$(cmake-utils_use_with sse2 SSE2)
 		$(cmake-utils_use_with bullet BULLET)
 		$(cmake-utils_use_with tiff IMAGE_TIFF)
 		$(cmake-utils_use_with colorio OPENCOLORIO)
@@ -168,12 +199,6 @@ src_configure() {
 
 src_compile() {
 	cmake-utils_src_compile
-
-	cat - > "${T}"/${PN}.env <<EOF
-BLENDER_SYSTEM_SCRIPTS="/usr/share/blender/${PV}/scripts"
-BLENDER_SYSTEM_DATAFILES="/usr/share/blender/${PV}/datafiles"
-BLENDER_SYSTEM_PLUGINS="/usr/$(get_libdir)/plugins"
-EOF
 
 	if use doc; then
 		einfo "Generating Blender C/C++ API docs ..."
@@ -198,8 +223,6 @@ src_install() {
 	# Pax mark blender for hardened support.
 	pax-mark m "${CMAKE_BUILD_DIR}"/bin/blender
 
-	newenvd "${T}"/${PN}.env 60${PN}
-
 	if use doc; then
 		docinto "API/python"
 		dohtml -r "${CMAKE_USE_DIR}"/doc/python_api/BPY_API/*
@@ -208,28 +231,15 @@ src_install() {
 		dohtml -r "${CMAKE_USE_DIR}"/doc/doxygen/html/*
 	fi
 
-	# linguas cleanup
-	if ! use nls; then
-		rm -r "${CMAKE_USE_DIR}"/release/datafiles/locale || die
-	else
-		if [[ -n "${LINGUAS+x}" ]] ; then
-			for i in "${CMAKE_USE_DIR}"/release/datafiles/locale/* ; do
-				mylang=${i##*/}
-				has ${mylang} ${LINGUAS} || { rm -r ${i} || die ; }
-			done
-		fi
-	fi
-
 	# fucked up cmake will relink binary for no reason
-	# on normal "install" rule
 	emake -C "${CMAKE_BUILD_DIR}" DESTDIR="${D}" install/fast
 
 	# fix doc installdir
-	dohtml "${D}"/usr/share/doc/blender/readme.html
-	rm -r "${D}"/usr/share/doc/blender || die
+	dohtml "${CMAKE_USE_DIR}"/release/text/readme.html
+	rm -rf "${ED%/}"/usr/share/doc/blender
 
-	python_fix_shebang "${D}"/usr/bin/blender-thumbnailer.py
-	python_optimize "${D}"/usr/share/blender/${PV}/scripts
+	python_fix_shebang "${ED%/}"/usr/bin/blender-thumbnailer.py
+	python_optimize "${ED%/}"/usr/share/blender/${PV}/scripts
 }
 
 pkg_preinst() {
@@ -246,9 +256,6 @@ pkg_postinst() {
 	elog "home directory. This can be done by starting blender, then"
 	elog "dragging the main menu down do display all paths."
 	elog
-	ewarn "If you're updating from blender before 2.66, please make"
-	ewarn "sure to log out and then back in before launching it, so"
-	ewarn "that the new environment variables are picked up."
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
 }

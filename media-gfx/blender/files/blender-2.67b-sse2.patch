@@ -1,0 +1,35 @@
+commit 824e0f9182059d2d2694167606da7abd536e22c8
+Author: hasufell <hasufell@gentoo.org>
+Date:   Fri Jun 21 16:17:40 2013 +0200
+
+    add option to explicitly control sse2 optimization
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 44ce1c3..f6fc3b8 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -86,6 +86,7 @@ cmake_policy(SET CMP0014 NEW)
+ #-----------------------------------------------------------------------------
+ # Load some macros.
+ include(build_files/cmake/macros.cmake)
++include(CMakeDependentOption)
+ 
+ 
+ #-----------------------------------------------------------------------------
+@@ -255,6 +256,7 @@ option(WITH_FREESTYLE     "Enable Freestyle (advanced edges rendering)" ON)
+ # Misc
+ option(WITH_INPUT_NDOF "Enable NDOF input devices (SpaceNavigator and friends)" ON)
+ option(WITH_RAYOPTIMIZATION	"Enable use of SIMD (SSE) optimizations for the raytracer" ON)
++cmake_dependent_option(WITH_SSE2 "SSE2 optimizations" ON WITH_RAYOPTIMIZATION OFF)
+ if(UNIX AND NOT APPLE)
+ 	option(WITH_INSTALL_PORTABLE "Install redistributeable runtime, otherwise install into CMAKE_INSTALL_PREFIX" ON)
+ 	option(WITH_STATIC_LIBS "Try to link with static libraries, as much as possible, to make blender more portable across distributions" OFF)
+@@ -1804,7 +1806,7 @@ if(WITH_RAYOPTIMIZATION)
+ 		set(PLATFORM_CFLAGS " ${COMPILER_SSE_FLAG} ${PLATFORM_CFLAGS}")
+ 		add_definitions(-D__SSE__ -D__MMX__)
+ 	endif()
+-	if(SUPPORT_SSE2_BUILD)
++	if(WITH_SSE2 AND SUPPORT_SSE2_BUILD)
+ 		set(PLATFORM_CFLAGS " ${COMPILER_SSE2_FLAG} ${PLATFORM_CFLAGS}")
+ 		add_definitions(-D__SSE2__)
+ 		if(NOT SUPPORT_SSE_BUILD) # dont double up
