@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8.ebuild,v 1.6 2012/07/14 12:36:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8.ebuild,v 1.7 2013/06/21 13:19:42 blueness Exp $
 
 EAPI=4
 
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Measures I/O performance and/or generates I/O load"
 HOMEPAGE="http://spew.berlios.de/"
@@ -20,12 +20,17 @@ DEPEND="static? ( sys-libs/ncurses[-gpm] dev-libs/popt[static-libs] )
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/fix-automake-1.13.patch
 	epatch "${FILESDIR}"/remove-symlinks-makefile.patch
 	eautoreconf
 }
 
 src_configure() {
 	econf $(use_enable static static-link)
+}
+
+src_compile() {
+	emake AR=$(tc-getAR)
 }
 
 src_install() {
