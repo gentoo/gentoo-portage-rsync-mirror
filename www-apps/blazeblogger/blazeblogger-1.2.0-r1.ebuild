@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blazeblogger/blazeblogger-1.2.0-r1.ebuild,v 1.1 2012/06/22 06:19:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blazeblogger/blazeblogger-1.2.0-r1.ebuild,v 1.2 2013/06/21 19:33:51 xmw Exp $
 
 EAPI=4
 
 inherit eutils
 
-DESCRIPTION="a simple-to-use but capable CMS for the command line, producing static content"
+DESCRIPTION="simple-to-use, capable content management system for the cmdline producing static content"
 HOMEPAGE="http://blaze.blackened.cz/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz
 	doc? ( http://${PN}.googlecode.com/files/${PN}-doc-${PV}.tar.gz ) "
@@ -31,5 +31,5 @@ src_install() {
 	emake prefix="${D}/usr" config="${D}/etc" \
 		compdir="${D}/usr/share/bash-completion" install
 
-	use doc && dohtml -r ${WORKDIR}/${PN}-doc-${PV}/*
+	use doc && dohtml -r "${WORKDIR}"/${PN}-doc-${PV}/*
 }

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/blazeblogger
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blazeblogger/ChangeLog,v 1.4 2012/06/22 06:19:51 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blazeblogger/ChangeLog,v 1.5 2013/06/21 19:33:51 xmw Exp $
+
+  21 Jun 2013; Michael Weber <xmw@gentoo.org> blazeblogger-1.2.0-r1.ebuild,
+  blazeblogger-1.2.0.ebuild:
+  expand CMS acronym to content management system in DESCRIPTION
 
 *blazeblogger-1.2.0-r1 (22 Jun 2012)
 
@@ -22,4 +26,3 @@
   +metadata.xml:
   Initial import, fixes bug 340853, thanks to Manu Wächter for the inital
   ebuild.
-
