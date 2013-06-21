@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pydns
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.14 2012/06/24 12:22:55 sbriesen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.15 2013/06/21 15:50:30 idella4 Exp $
+
+*pydns-3.0.2-r1 (21 Jun 2013)
+*pydns-2.3.6-r1 (21 Jun 2013)
+
+  21 Jun 2013; Ian Delaney <idella4@gentoo.org> +pydns-2.3.6-r1.ebuild,
+  +pydns-3.0.2-r1.ebuild:
+  bumps; closes Bugs #473164, 473166
 
 *pydns-3.0.2 (24 Jun 2012)
 *pydns-2.3.6 (24 Jun 2012)
@@ -64,4 +71,3 @@
   06 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +pydns-2.3.0.ebuild:
   initial commit.
-
