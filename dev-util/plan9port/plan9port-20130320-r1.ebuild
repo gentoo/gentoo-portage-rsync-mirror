@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20130308.ebuild,v 1.1 2013/03/09 15:14:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20130320-r1.ebuild,v 1.1 2013/06/21 14:35:52 blueness Exp $
 
 EAPI="4"
 
@@ -13,9 +13,9 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tgz"
 LICENSE="9base BSD-4 MIT LGPL-2.1 BigelowHolmes"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="X"
 
-DEPEND="x11-apps/xauth"
+DEPEND="X? ( x11-apps/xauth )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
@@ -24,12 +24,18 @@ PLAN9=/usr/lib/plan9
 
 src_prepare()
 {
-	epatch "${FILESDIR}/${PN}-"{9660srv-errno,noexecstack,cflags}".patch"
+	epatch "${FILESDIR}/${PN}-"{9660srv-errno,noexecstack,cflags,builderr}".patch"
 
 	# Fix paths, done in place of ./INSTALL -c
 	einfo "Fixing hard-coded /usr/local/plan9 paths"
 	grep  --null -l -r '/usr/local/plan9' |
 	xargs --null sed -i "s!/usr/local/plan9!${PLAN9}!g"
+}
+
+src_configure() {
+	if ! use X; then
+		echo "WSYSTYPE=nowsys" >> LOCAL.config
+	fi
 }
 
 src_compile() {

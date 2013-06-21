@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/plan9port
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.15 2013/03/22 12:06:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.16 2013/06/21 14:35:52 blueness Exp $
+
+*plan9port-20130320-r1 (21 Jun 2013)
+
+  21 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/plan9port-builderr.patch, +plan9port-20130320-r1.ebuild,
+  -plan9port-20130119.ebuild, -plan9port-20130131.ebuild,
+  -plan9port-20130209-r1.ebuild, -plan9port-20130308.ebuild:
+  Optionally depend on X, fix build system, bug #463616
 
 *plan9port-20130320 (22 Mar 2013)
 
