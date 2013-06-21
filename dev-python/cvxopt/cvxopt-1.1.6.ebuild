@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.6.ebuild,v 1.1 2013/06/19 05:41:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.6.ebuild,v 1.2 2013/06/21 20:08:52 bicatali Exp $
 
 EAPI=5
 
@@ -63,7 +63,7 @@ python_prepare_all(){
 }
 
 python_compile_all() {
-	use doc && emake -C doc -B html
+	use doc && export VARTEXFONTS="${T}/fonts" && emake -C doc -B html
 }
 
 python_test() {

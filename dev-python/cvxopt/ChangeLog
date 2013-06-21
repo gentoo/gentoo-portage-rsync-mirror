@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cvxopt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.14 2013/06/19 05:41:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.15 2013/06/21 20:08:52 bicatali Exp $
+
+  21 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> cvxopt-1.1.6.ebuild:
+  Add temporary directory for tex generated fonts (bug #473896)
 
 *cvxopt-1.1.6 (19 Jun 2013)
 

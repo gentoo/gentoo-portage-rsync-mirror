@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.43.ebuild,v 1.1 2013/02/27 21:57:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.50.ebuild,v 1.1 2013/06/21 20:04:13 bicatali Exp $
 
 EAPI=5
 
