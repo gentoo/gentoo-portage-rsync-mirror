@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.7-r2.ebuild,v 1.2 2013/06/20 14:07:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.7-r2.ebuild,v 1.3 2013/06/21 06:20:17 polynomial-c Exp $
 
 EAPI=5
 
@@ -10,7 +10,8 @@ inherit autotools flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 p
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://pidgin.im/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
+	http://dev.gentoo.org/~polynomial-c/${PN}-eds-3.6.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -139,7 +140,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.10.0-gold.patch" \
 		"${FILESDIR}/${P}-fix-cap.patch" \
 		"${FILESDIR}/${P}-link_sasl_in_irc_plugin.patch" \
-		"${FILESDIR}/${PN}-eds-3.6.patch.bz2"
+		"${WORKDIR}/${PN}-eds-3.6.patch"
 
 	epatch_user
 

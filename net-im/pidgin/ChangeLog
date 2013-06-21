@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.309 2013/06/20 14:07:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.310 2013/06/21 06:20:17 polynomial-c Exp $
+
+  21 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.7-r2.ebuild,
+  -files/pidgin-eds-3.6.patch.bz2:
+  Moved compressed patch from portage tree to my dev space.
 
   20 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.7-r2.ebuild:
   Small fix to REQUIRED_USE.
