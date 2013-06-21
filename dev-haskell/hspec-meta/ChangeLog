@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/hspec-meta
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec-meta/ChangeLog,v 1.1 2013/06/20 23:12:27 qnikst Exp $
+
+*hspec-meta-1.5.4 (20 Jun 2013)
+
+  20 Jun 2013; Alexander Vershilov <qnikst@gentoo.org> +hspec-meta-1.5.4.ebuild,
+  +metadata.xml:
+  add hspec-meta due to #473858

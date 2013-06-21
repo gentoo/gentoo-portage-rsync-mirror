@@ -493,6 +493,7 @@ app-emulation/q4wine:gnome - Use the gksu sudo GUI for managing the devices
 app-emulation/q4wine:icoutils - Enable icoutils support
 app-emulation/q4wine:kde - Use the kdesu sudo GUI for managing the devices
 app-emulation/q4wine:wineappdb - Enable Win AppDB browser subsystem
+app-emulation/qemu:accessibility - Adds support for braille displays using brltty
 app-emulation/qemu:aio - Enables support for Linux's Async IO
 app-emulation/qemu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu:brltty - Adds support for braille displays using brltty

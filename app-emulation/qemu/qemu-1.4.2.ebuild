@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.2.ebuild,v 1.2 2013/05/30 15:06:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.2.ebuild,v 1.3 2013/06/20 23:17:13 vapier Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.qemu.org http://www.linux-kvm.org"
 
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty +caps +curl debug fdt iscsi +jpeg \
+IUSE="accessibility +aio alsa bluetooth +caps +curl debug fdt iscsi +jpeg \
 kernel_linux kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard spice static static-softmmu \
 static-user systemtap tci test +threads tls usbredir +uuid vde +vhost-net \
@@ -99,7 +99,7 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	)
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
-	brltty? ( app-accessibility/brltty )
+	accessibility? ( app-accessibility/brltty )
 	iscsi? ( net-libs/libiscsi )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -277,7 +277,7 @@ qemu_src_configure() {
 		conf_opts+=" $(use_enable bluetooth bluez)"
 		conf_opts+=" $(use_enable sdl)"
 		conf_opts+=" $(use_enable aio linux-aio)"
-		conf_opts+=" $(use_enable brltty brlapi)"
+		conf_opts+=" $(use_enable accessibility brlapi)"
 		conf_opts+=" $(use_enable caps cap-ng)"
 		conf_opts+=" $(use_enable curl)"
 		conf_opts+=" $(use_enable fdt)"

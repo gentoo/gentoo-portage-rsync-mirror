@@ -1,6 +1,36 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1139 2013/06/15 18:21:38 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1140 2013/06/20 23:23:56 tomwij Exp $
+
+*gentoo-sources-3.9.7 (20 Jun 2013)
+*gentoo-sources-3.2.47 (20 Jun 2013)
+*gentoo-sources-3.0.83 (20 Jun 2013)
+*gentoo-sources-3.4.50 (20 Jun 2013)
+
+  20 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.0.83.ebuild,
+  +gentoo-sources-3.2.47.ebuild, +gentoo-sources-3.4.50.ebuild,
+  +gentoo-sources-3.9.7.ebuild, -gentoo-sources-3.0.76.ebuild,
+  -gentoo-sources-3.0.77.ebuild, -gentoo-sources-3.0.78.ebuild,
+  -gentoo-sources-3.0.79.ebuild, -gentoo-sources-3.2.45.ebuild,
+  -gentoo-sources-3.4.43.ebuild, -gentoo-sources-3.4.44.ebuild,
+  -gentoo-sources-3.4.45.ebuild, -gentoo-sources-3.4.46.ebuild,
+  -gentoo-sources-3.8.11.ebuild, -gentoo-sources-3.8.12.ebuild,
+  -gentoo-sources-3.9.1-r1.ebuild, -gentoo-sources-3.9.1.ebuild,
+  -gentoo-sources-3.9.2.ebuild, -gentoo-sources-3.9.3.ebuild:
+  Dropped unstable testing versions older than a month. Linux patches 3.0.83,
+  3.2.47, 3.4.50 and 3.9.7. Since 3.9.7, the dmesg restrict patch is in the
+  kernel and therefore has been removed from genpatches; furthermore, with that
+  version we have added a stable queue patch that deals with the I/O errors
+  commonly seen in Portage output as per bug #459674. Also, three patches were
+  added to introduce BFQ support which remains completely optional as it is off
+  by default and therefore not compiled into the kernel unless you toggle it on
+  in the menuconfig. There exists a chance that we add a very small amount of
+  such popular optional patches to spare large groups of users and other
+  maintainers from having to add, track and maintain them theirselves. Since 3.9
+  is not near EOL yet the BFQ patches were added to give them a try, this was
+  requested in #gentoo-kernel, feedback on this idea is welcome; on a side note,
+  the author of BFQ is planning to upstream them so we might see them go into
+  the main kernel in the nearby future.
 
   15 Jun 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.7.10.ebuild:
   Dropped more keywords on 3.7.10.
