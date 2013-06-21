@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.860 2013/06/18 04:31:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.861 2013/06/21 10:31:18 mgorny Exp $
+
+  21 Jun 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Enable EAPI 4 per bug #474000.
 
   18 Jun 2013; Christoph Junghans <ottxor@gentoo.org> cvs.eclass:
   fixed use of proxy variables

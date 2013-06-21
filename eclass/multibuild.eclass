@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.11 2013/05/24 17:42:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.12 2013/06/21 10:31:18 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -14,10 +14,10 @@
 # implementations).
 
 case "${EAPI:-0}" in
-	0|1|2|3|4)
+	0|1|2|3)
 		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
-	5)
+	4|5)
 		;;
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
