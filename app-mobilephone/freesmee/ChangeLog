@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/freesmee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.15 2013/06/21 12:41:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.16 2013/06/21 18:46:00 ago Exp $
+
+*freesmee-0.83 (21 Jun 2013)
+
+  21 Jun 2013; Agostino Sarubbo <ago@gentoo.org> +freesmee-0.83.ebuild,
+  -files/freesmee.desktop, -freesmee-0.81.ebuild:
+  Version bump to 0.83. It fixes bug #457966
 
 *freesmee-9999 (21 Jun 2013)
 
