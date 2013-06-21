@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.104 2013/06/16 12:17:25 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.105 2013/06/21 20:44:01 dilfridge Exp $
+
+  21 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  vmware-modules-238.6.ebuild, vmware-modules-264.5.ebuild,
+  vmware-modules-271.2.ebuild:
+  Add support for epatch_user, bug 459182
 
   16 Jun 2013; Vadim Kuznetsov vadimk@gentoo.org metadata.xml:
   dropped myself as a maintainer. maintainer needed

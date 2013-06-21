@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-271.2.ebuild,v 1.1 2013/03/10 12:15:48 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-271.2.ebuild,v 1.2 2013/06/21 20:44:01 dilfridge Exp $
 
 EAPI="4"
 
@@ -65,6 +65,9 @@ src_prepare() {
 	use pax_kernel && epatch "${FILESDIR}/hardened.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-apic.patch"
 	kernel_is ge 3 7 0 && epatch "${FILESDIR}/${PV_MAJOR}-putname.patch"
+
+	# Allow user patches so they can support RC kernels and whatever else
+	epatch_user
 }
 
 src_install() {
