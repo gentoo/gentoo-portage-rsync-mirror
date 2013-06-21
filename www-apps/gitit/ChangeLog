@@ -1,0 +1,9 @@
+# ChangeLog for www-apps/gitit
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitit/ChangeLog,v 1.1 2013/06/20 23:40:42 qnikst Exp $
+
+*gitit-0.10.3.1 (20 Jun 2013)
+
+  20 Jun 2013; Alexander Vershilov <qnikst@gentoo.org> +gitit-0.10.3.1.ebuild,
+  +metadata.xml:
+  add new version due to #473858
