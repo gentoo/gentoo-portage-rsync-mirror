@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.3.0.ebuild,v 1.6 2013/04/26 19:03:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.3.0.ebuild,v 1.7 2013/06/21 17:51:57 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://gitorious.org/orcus/orcus.git"
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="static-libs"
 
 RDEPEND="
-	>=dev-libs/boost-1.51.0
+	dev-libs/boost:=
 	dev-libs/libzip
 "
 DEPEND="${RDEPEND}

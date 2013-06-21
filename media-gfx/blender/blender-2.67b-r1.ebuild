@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.67b-r1.ebuild,v 1.1 2013/06/21 15:13:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.67b-r1.ebuild,v 1.2 2013/06/21 17:52:30 hasufell Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
@@ -101,13 +101,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-doxyfile.patch \
-		"${FILESDIR}"/${P}-unbundle-colamd.patch \
-		"${FILESDIR}"/${P}-remove-binreloc.patch \
-		"${FILESDIR}"/${P}-unbundle-glog.patch \
-		"${FILESDIR}"/${P}-unbundle-eigen3.patch \
-		"${FILESDIR}"/${P}-fix-install-rules.patch \
-		"${FILESDIR}"/${P}-sse2.patch
+	epatch "${FILESDIR}"/01-${P}-doxyfile.patch \
+		"${FILESDIR}"/02-${P}-unbundle-colamd.patch \
+		"${FILESDIR}"/03-${P}-remove-binreloc.patch \
+		"${FILESDIR}"/04-${P}-unbundle-glog.patch \
+		"${FILESDIR}"/05-${P}-unbundle-eigen3.patch \
+		"${FILESDIR}"/06-${P}-fix-install-rules.patch \
+		"${FILESDIR}"/07-${P}-sse2.patch
 
 	# remove some bundled deps
 	rm -r \

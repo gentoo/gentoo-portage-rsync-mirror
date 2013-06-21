@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.17 2013/05/27 17:22:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.18 2013/06/21 17:51:57 scarabeus Exp $
+
+  21 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.3.0.ebuild:
+  Subslot on boost and lower the dep so we can stabilize.
 
   27 May 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/liborcus-0.5.1-mdds.patch, liborcus-0.5.1.ebuild:
