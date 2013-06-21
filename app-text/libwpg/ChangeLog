@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.27 2013/05/07 17:51:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.28 2013/06/21 12:25:40 scarabeus Exp $
+
+  21 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> -libwpg-0.2.1.ebuild:
+  Drop older.
 
   07 May 2013; Agostino Sarubbo <ago@gentoo.org> libwpg-0.2.2.ebuild:
   Stable for ppc64, wrt bug #467450

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/obs-service-tar_scm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-tar_scm/ChangeLog,v 1.3 2013/03/18 13:41:17 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-tar_scm/ChangeLog,v 1.4 2013/06/21 12:20:06 scarabeus Exp $
+
+  21 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -obs-service-tar_scm-20121101.ebuild, obs-service-tar_scm-0.2.3.ebuild:
+  Stable on x86 and amd64. Drop older.
 
 *obs-service-tar_scm-0.2.3 (18 Mar 2013)
 
