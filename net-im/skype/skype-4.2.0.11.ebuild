@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.2.0.11.ebuild,v 1.1 2013/05/23 08:36:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.2.0.11.ebuild,v 1.2 2013/06/21 22:17:41 pacho Exp $
 
 EAPI=5
 inherit eutils gnome2-utils pax-utils
@@ -66,7 +66,7 @@ src_install() {
 	dodoc README
 
 	local res
-	for res in 16 32 48; do
+	for res in 16 32 48 64 96 128 256; do
 		newicon -s ${res} icons/SkypeBlue_${res}x${res}.png ${PN}.png
 	done
 
