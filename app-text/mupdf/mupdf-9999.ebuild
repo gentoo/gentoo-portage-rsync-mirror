@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.37 2013/06/20 22:46:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.38 2013/06/21 19:13:25 xmw Exp $
 
 EAPI=5
 
@@ -35,9 +35,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	rm -rf thirdparty || die
-
-	[ -f source/fitz/draw-scale-simple.c ] && \
-		rm -f source/fitz/draw-scale.c
 
 	epatch \
 		"${FILESDIR}"/${P}-CFLAGS.patch \

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.79 2013/06/20 22:46:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.80 2013/06/21 19:13:25 xmw Exp $
+
+  21 Jun 2013; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  source/fitz/draw-scale.c is gone
 
   20 Jun 2013; Michael Weber <xmw@gentoo.org> +files/mupdf-9999-CFLAGS.patch,
   +files/mupdf-9999-forward_back.patch, +files/mupdf-9999-zoom-2.patch,

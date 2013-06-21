@@ -12,6 +12,7 @@
 		<flag name="mjpeg">Add mjpeg suppport</flag>
 		<flag name="panorama">Pull in dependencies needed by panorama plugin</flag>
 		<flag name="redeyes">Add redeyes removal suppport</flag>
+		<flag name="videoslideshow">Build videoslideshow plugin</flag>
 		<flag name="vkontakte">Build plugin for vkontakte.ru</flag>
 		<flag name="linguas_ha">Hausa translation</flag>
 		<flag name="linguas_mi">Maori translation</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.2.0.ebuild,v 1.1 2013/05/18 18:47:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.2.0.ebuild,v 1.2 2013/06/21 19:22:25 dilfridge Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner upnp vkontakte"
+IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner upnp videoslideshow vkontakte"
 
 DEPEND="
 	$(add_kdebase_dep libkipi)
@@ -58,7 +58,11 @@ DEPEND="
 			  $(add_kdebase_dep libksane)
 			  media-gfx/sane-backends
 			)
-	upnp? ( media-libs/herqq )
+	upnp?		( media-libs/herqq )
+	videoslideshow?	(
+			  media-libs/qt-gstreamer
+			  || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+			)
 	vkontakte?	( net-libs/libkvkontakte )
 "
 RDEPEND="${DEPEND}
@@ -118,6 +122,7 @@ src_configure() {
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with scanner KSane)
 		$(cmake-utils_use_with upnp Hupnp)
+		$(cmake-utils_use_with videoslideshow QtGStreamer)
 		$(cmake-utils_use_enable expoblending)
 		$(cmake-utils_use_enable panorama)
 	)
