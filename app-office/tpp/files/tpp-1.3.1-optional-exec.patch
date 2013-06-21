@@ -1,0 +1,55 @@
+--- tpp-1.3.1.orig/tpp.rb	2013-06-12 22:13:55.000000000 +0200
++++ tpp-1.3.1/tpp.rb	2013-06-12 22:15:08.000000000 +0200
+@@ -725,9 +725,13 @@
+   end
+ 
+   def do_exec(cmdline)
+-    rc = Kernel.system(cmdline)
+-    if not rc then
+-      # @todo: add error message
++    if $execok then
++      rc = Kernel.system(cmdline)
++      if not rc then
++        # @todo: add error message
++      end
++    else
++      @screen.addstr("--exec disabled by default for security reasons. Use option -x to enable it.")
+     end
+   end
+ 
+@@ -1683,6 +1687,7 @@
+   $stderr.puts "\t -t <type>\tset filetype <type> as output format"
+   $stderr.puts "\t -o <file>\twrite output to file <file>"
+   $stderr.puts "\t -s <seconds>\twait <seconds> seconds between slides (with -t autoplay)"
++  $stderr.puts "\t -x\t\tallow parsing of --exec in input files"
+   $stderr.puts "\t --version\tprint the version"
+   $stderr.puts "\t --help\t\tprint this help"
+   $stderr.puts "\n\t currently available types: ncurses (default), autoplay, latex, txt"
+@@ -1699,6 +1704,7 @@
+ output = nil
+ type = "ncurses"
+ time = 1
++$execok = nil
+ 
+ skip_next = false
+ 
+@@ -1720,6 +1726,8 @@
+     elsif ARGV[i] == "-s" then
+       time = ARGV[i+1].to_i
+       skip_next = true
++    elsif ARGV[i] == "-x" then
++      $execok = 1
+     elsif input == nil then
+       input = ARGV[i]
+     end
+--- tpp-1.3.1.orig/doc/tpp.1	2013-06-12 22:13:55.000000000 +0200
++++ tpp-1.3.1/doc/tpp.1	2013-06-12 22:13:55.000000000 +0200
+@@ -20,6 +20,8 @@
+ .TP
+ -l output.tex input.tpp converts tpp slides into tex 
+ .TP
++-x allow usage of "--exec"
++.TP
+ -v/--version display version number
+ 
+ .SH KEYS

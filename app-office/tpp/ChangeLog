@@ -1,6 +1,14 @@
 # ChangeLog for app-office/tpp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/ChangeLog,v 1.20 2011/06/25 06:43:45 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/ChangeLog,v 1.21 2013/06/21 14:25:06 prometheanfire Exp $
+
+*tpp-1.3.1-r2 (21 Jun 2013)
+
+  21 Jun 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/tpp-1.3.1-optional-exec.patch, +tpp-1.3.1-r2.ebuild,
+  tpp-1.3.1-r1.ebuild:
+  fix for bug 474018 Possibility of arbitrary code execution when processing
+  untrusted TPP template
 
   25 Jun 2011; Hans de Graaff <graaff@gentoo.org> -tpp-1.3.1.ebuild:
   Remove old version.
@@ -76,4 +84,3 @@
   +files/tpp-1.1.1-Makefile.patch, +tpp-1.1.1.ebuild:
   Initial import. Requested by Adrian Fruehwirth <fruehwia@spengergasse.at> in
   bug #73938
-
