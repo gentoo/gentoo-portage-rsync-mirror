@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/golly-2.4-r1.ebuild,v 1.2 2013/06/21 16:04:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/golly-2.5.ebuild,v 1.1 2013/06/21 16:04:03 xmw Exp $
 
 EAPI=5
 WX_GTK_VER=2.8
-
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit eutils python-single-r1 toolchain-funcs wxwidgets
+inherit eutils python-single-r1 gnome2-utils wxwidgets
 
 DESCRIPTION="simulator for Conway's Game of Life and other cellular automata"
 HOMEPAGE="http://golly.sourceforge.net/"
@@ -24,21 +23,27 @@ DEPEND="dev-lang/perl
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}-src
-
-src_prepare() {
-	sed -e 's:-O2::' -i configure Makefile.{am,in} || die
-}
+ECONF_SOURCE=gui-wx/configure
 
 src_configure() {
 	econf --with-perl-shlib="libperl.so"
 }
 
-src_compile() {
-	emake AR=$(tc-getAR)
-}
-
 src_install() {
 	emake docdir= DESTDIR="${D}" install
-	newicon appicon.xpm ${PN}.xpm
-	dodoc README TODO
+	dodoc docs/ReadMe.html
+	newicon --size 32 gui-wx/icons/appicon.xpm ${PN}.xpm
+	make_desktop_entry ${PN} "Golly" ${PN} "Science"
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

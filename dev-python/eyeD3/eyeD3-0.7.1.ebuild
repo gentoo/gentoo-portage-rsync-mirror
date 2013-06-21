@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.1.ebuild,v 1.6 2013/03/27 12:05:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.1.ebuild,v 1.7 2013/06/21 16:14:25 idella4 Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="!<${CATEGORY}/${PN}-0.6.18-r1:0"
 DEPEND="${RDEPEND}
-	dev-python/paver"
+	dev-python/paver[${PYTHON_USEDEP}]"
 
 PATCHES=( "${FILESDIR}/${PN}-build-task.patch" )
 
