@@ -1,0 +1,68 @@
+$(datadir)/icons/ is reserved for freedesktop.org specification compatible themes with index.theme file,
+use $(datadir)/pixmaps/ instead
+
+http://bugs.gentoo.org/389397
+
+--- pixmaps/Makefile.am
++++ pixmaps/Makefile.am
+@@ -1,6 +1,3 @@
+-icondir = $(datadir)/icons
+-icon_DATA = rawstudio.png
+-
+ rawstudiodir = $(datadir)/pixmaps/rawstudio
+ rawstudio_DATA = 	overlay_deleted.png \
+ 		overlay_priority1.png \
+@@ -18,7 +15,8 @@ rawstudio_DATA = 	overlay_deleted.png \
+ 		cursor-rotate.png \
+ 		tool-color-picker.png \
+ 		tool-crop.png \
+-		tool-rotate.png
++		tool-rotate.png \
++		rawstudio.png
+ 
+ 
+-EXTRA_DIST = $(icon_DATA) $(rawstudio_DATA) artwork.license
++EXTRA_DIST = $(rawstudio_DATA) artwork.license
+--- src/gtk-interface.c
++++ src/gtk-interface.c
+@@ -1393,7 +1393,7 @@ gui_init(int argc, char **argv, RS_BLOB *rs)
+ 	GtkWidget *valuefield[3];
+ 
+ 	
+-	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "icons" G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
++	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "pixmaps" G_DIR_SEPARATOR_S PACKAGE G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
+ 	rs->window = gui_window_make(rs);
+ 	gtk_widget_show(rs->window);
+ 
+--- src/rs-store.c
++++ src/rs-store.c
+@@ -1174,7 +1174,7 @@ rs_store_load_file(RSStore *store, gchar *fullname)
+ 
+ 	/* Global default icon */
+ 	if (!icon_default)
+-		icon_default = gdk_pixbuf_new_from_file(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "icons" G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
++		icon_default = gdk_pixbuf_new_from_file(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "pixmaps" G_DIR_SEPARATOR_S PACKAGE G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
+ 
+ 	/* Add file to store */
+ 	gdk_threads_enter();
+--- librawstudio/rs-utils.c
++++ librawstudio/rs-utils.c
+@@ -603,7 +603,7 @@ void
+ check_install(void)
+ {
+ #define TEST_FILE_ACCESS(path) do { if (g_access(path, R_OK)!=0) g_debug("Cannot access %s\n", path);} while (0)
+-	TEST_FILE_ACCESS(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "icons" G_DIR_SEPARATOR_S PACKAGE ".png");
++	TEST_FILE_ACCESS(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "pixmaps" G_DIR_SEPARATOR_S PACKAGE G_DIR_SEPARATOR_S PACKAGE ".png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "pixmaps" G_DIR_SEPARATOR_S PACKAGE G_DIR_SEPARATOR_S "overlay_priority1.png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "pixmaps" G_DIR_SEPARATOR_S PACKAGE G_DIR_SEPARATOR_S "overlay_priority2.png");
+ 	TEST_FILE_ACCESS(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "pixmaps" G_DIR_SEPARATOR_S PACKAGE G_DIR_SEPARATOR_S "overlay_priority3.png");
+--- rawstudio.desktop
++++ rawstudio.desktop
+@@ -25,6 +25,5 @@
+ Comment[sv]=Läs, bearbeta och konvertera råbilder från digitalkameror
+ Exec=rawstudio %F
+ StartupNotify=true
+-Icon=rawstudio
++Icon=/usr/share/pixmaps/rawstudio/rawstudio.png
+ MimeType=image/x-dcraw;
+-

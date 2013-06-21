@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/rawstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.28 2013/02/07 22:29:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.29 2013/06/21 03:40:40 ssuominen Exp $
+
+*rawstudio-2.0-r1 (19 Jun 2013)
+
+  19 Jun 2013; Samuli Suominen <ssuominen@gentoo.org> +rawstudio-2.0-r1.ebuild,
+  +files/rawstudio-2.0-icon.patch:
+  Patch for fixing the path to the singular rawstudio.png wrt #389397 by
+  Merlijn Wajer and "mjbjr"
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> rawstudio-1.2.ebuild,
   rawstudio-2.0.ebuild:
