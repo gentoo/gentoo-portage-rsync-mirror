@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/libdbx-1.0.3.ebuild,v 1.6 2013/03/23 17:08:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/libdbx-1.0.3.ebuild,v 1.7 2013/06/21 13:55:04 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tools and library for reading Outlook Express mailboxes (.dbx format)"
 HOMEPAGE="http://sourceforge.net/projects/ol2mbox"
@@ -26,10 +26,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/bad_c.patch"
-	sed -i -e 's/-g/$(CFLAGS) $(LDFLAGS)/' Makefile
+	sed -i -e 's/-g/$(CFLAGS) $(LDFLAGS)/;s|gcc|$(CC)|g' Makefile
 }
 
 src_compile() {
+	tc-export CC
 	emake || die
 }
 
