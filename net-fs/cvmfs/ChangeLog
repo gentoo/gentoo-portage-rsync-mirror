@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/cvmfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.2 2013/06/17 23:03:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.3 2013/06/21 17:03:28 bicatali Exp $
+
+  21 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -cvmfs-2.0.19.ebuild,
+  -files/cvmfs-2.0.19-autotools.patch, -files/cvmfs-2.0.19-no-redhat-init.patch,
+  -files/cvmfs-2.0.19-openrc.patch, -files/cvmfs-2.0.19-spinlock.patch,
+  -files/cvmfs.initd, -files/cvmfsd.confd, -files/cvmfsd.initd:
+  Removed old, buggy init files
 
 *cvmfs-2.1.10 (17 Jun 2013)
 
