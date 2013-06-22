@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.127 2013/06/17 06:00:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.128 2013/06/22 15:59:49 williamh Exp $
+
+# William Hubbs <williamh@gentoo.org> (22 June 2013)
+# dev-python/cython is not keyworded for alpha
+>=app-accessibility/brltty-4.5 python
 
 # Patrick Lauer <patrick@gentoo.org> (17 June 2013)
 # Fix per-arch mask of phonon[zeitgeist] #460140

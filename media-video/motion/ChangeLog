@@ -1,6 +1,10 @@
 # ChangeLog for media-video/motion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.43 2013/06/17 18:41:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.44 2013/06/22 15:51:47 scarabeus Exp $
+
+  22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> motion-3.2.12-r2.ebuild:
+  Apply libav9 patch wrt last commit, i added it to cvs but not to the ebuild.
+  Grmbl.
 
   17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +files/ffmpeg-1.patch,
   +files/ffmpeg-2.patch, +files/ffmpeg-3.patch, +files/ffmpeg-4.patch,

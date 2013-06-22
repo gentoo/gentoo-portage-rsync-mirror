@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.12-r2.ebuild,v 1.5 2013/06/17 18:41:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.12-r2.ebuild,v 1.6 2013/06/22 15:51:47 scarabeus Exp $
 
 EAPI=4
 inherit eutils user
@@ -35,6 +35,7 @@ src_prepare() {
 		"${FILESDIR}"/ffmpeg-3.patch \
 		"${FILESDIR}"/ffmpeg-4.patch \
 		"${FILESDIR}"/ffmpeg-5.patch \
+		"${FILESDIR}"/libav-9.patch \
 		"${FILESDIR}"/${P}-workaround-v4l1_deprecation.patch
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.128 2013/06/21 20:19:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.129 2013/06/22 15:56:17 williamh Exp $
+
+  22 Jun 2013; William Hubbs <williamh@gentoo.org> brltty-4.5.ebuild,
+  files/brltty.rc:
+  uncomment keywords, migrate to eapi 5, update init script and fix python
+  dependency (brltty 4.5 uses cython instead of pyrex).
 
 *brltty-4.5 (21 Jun 2013)
 

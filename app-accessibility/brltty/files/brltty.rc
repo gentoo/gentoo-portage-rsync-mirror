@@ -1,23 +1,13 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/files/brltty.rc,v 1.4 2009/11/01 18:41:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/files/brltty.rc,v 1.5 2013/06/22 15:56:17 williamh Exp $
+
+command=/bin/brltty
+pidfile=/var/run/brltty.pid
+command_args="-P $pidfile -q"
 
 depend() {
-	if [ -z $svcdir ]; then
 		before *
-	fi
 	after clock
-}
-
-start() {
-	ebegin "Starting brltty"
-	start-stop-daemon --start --exec /bin/brltty -- -P /var/run/brltty.pid -q
-	eend $?
-}
-
-stop() {
-	ebegin "Stopping brltty"
-	start-stop-daemon --stop --pidfile /var/run/brltty.pid
-	eend $?
 }
