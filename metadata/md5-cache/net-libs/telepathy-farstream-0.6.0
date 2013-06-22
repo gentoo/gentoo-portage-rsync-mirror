@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.32:2 >=sys-apps/dbus-0.60 >=dev-libs/dbus-glib-0.60 media-libs/gstreamer:1.0[introspection?] >=net-libs/telepathy-glib-0.19[introspection?] net-libs/farstream:0.2[introspection?] introspection? ( >=dev-libs/gobject-introspection-1.30 )
 SLOT=0/3
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-farstream/telepathy-farstream-0.6.0.tar.gz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=93e235ddcbdb97da364c14f2693f9a9c

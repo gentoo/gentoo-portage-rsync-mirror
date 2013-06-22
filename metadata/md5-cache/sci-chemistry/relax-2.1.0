@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/numpy sci-libs/bmrblib sci-libs/minfx sci-libs/scipy x11-libs/wxGTK:2.8[X] =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://download.gna.org/relax/relax-2.1.0.src.tar.bz2
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
 _md5_=35c21f0de2f0ad7e170791a8162246f6

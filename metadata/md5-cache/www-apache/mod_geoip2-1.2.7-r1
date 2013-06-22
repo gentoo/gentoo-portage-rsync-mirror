@@ -7,5 +7,5 @@ LICENSE=Apache-1.1
 RDEPEND=>=dev-libs/geoip-1.4.8 =www-servers/apache-2*
 SLOT=0
 SRC_URI=http://geolite.maxmind.com/download/geoip/api/mod_geoip2/mod_geoip2_1.2.7.tar.gz
-_eclasses_=apache-module	1f60370f9dceba046ec036cd6bbb0c8b	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d6215056370ece699359f9ed2db98e2c

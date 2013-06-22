@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/libgringotts-1.2 >=x11-libs/gtk+-2.12:2 dev-libs/popt
 SLOT=0
 SRC_URI=mirror://berlios/gringotts/gringotts-1.2.10.tar.gz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c5d4fa757ba4bfc1230e8bb5161ef456

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/openssl app-arch/bzip2 net-misc/wget sys-apps/openrc
 SLOT=0
 SRC_URI=mirror://sourceforge/ufdbguard/ufdbGuard-1.29.tar.gz doc? ( mirror://sourceforge/ufdbguard/ReferenceManual_v1_29.pdf -> ufdbguard-1.29-manual.pdf )
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c5b554ca67444dc53319b67d7db6a464

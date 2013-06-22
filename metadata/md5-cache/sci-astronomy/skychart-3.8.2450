@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2
 SLOT=0
 SRC_URI=mirror://sourceforge/skychart/1-%20cdc-skychart/version_3.8/skychart-3.8-2450-src.tar.bz2 mirror://sourceforge/skychart/4-source_data/data_jpleph.tgz mirror://sourceforge/skychart/4-source_data/catalog_gcvs.tgz mirror://sourceforge/skychart/4-source_data/catalog_idx.tgz mirror://sourceforge/skychart/4-source_data/catalog_tycho2.tgz mirror://sourceforge/skychart/4-source_data/catalog_wds.tgz mirror://sourceforge/skychart/4-source_data/catalog_gcm.tgz mirror://sourceforge/skychart/4-source_data/catalog_gpn.tgz mirror://sourceforge/skychart/4-source_data/catalog_lbn.tgz mirror://sourceforge/skychart/4-source_data/catalog_ngc.tgz mirror://sourceforge/skychart/4-source_data/catalog_ocl.tgz mirror://sourceforge/skychart/4-source_data/catalog_pgc.tgz mirror://sourceforge/skychart/4-source_data/pictures_sac.tgz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=16c6e84d57f78977990639ea3a2d6d0e

@@ -9,5 +9,5 @@ LICENSE=GPL-2+ LGPL-2+
 RDEPEND=>=dev-libs/glib-2.24:2 >=media-libs/gstreamer-0.10.36:0.10[introspection?] dev-libs/libxml2:2 sys-libs/zlib app-text/iso-codes introspection? ( >=dev-libs/gobject-introspection-0.9.12 ) orc? ( >=dev-lang/orc-0.4.11 ) !<media-libs/gst-plugins-bad-0.10.10:0.10 >=dev-libs/glib-2.6:2 media-libs/gstreamer:0.10 >=dev-libs/glib-2.6:2 media-libs/gstreamer:0.10
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-0.10.36.tar.xz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	gst-plugins-base	ff4b09b7caed6e0ea884fbd72c79ced0	gst-plugins10	1874f0a455ad918b4f43e52e53972479	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	gst-plugins-base	ff4b09b7caed6e0ea884fbd72c79ced0	gst-plugins10	1874f0a455ad918b4f43e52e53972479	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=b64960b1c0ffb6c30774b869ac7081e0

@@ -7,5 +7,5 @@ IUSE=debug
 LICENSE=GPL-2
 RDEPEND=>=gnome-base/libglade-2.4:2.0 >=x11-libs/gtk+-2.6:2 app-arch/bzip2 dev-libs/openssl
 SLOT=0
-_eclasses_=bzr	876798528c0cd872742b74bf784738cf	eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bzr	876798528c0cd872742b74bf784738cf	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=169fdfa8371495294d10e2bb0d988677

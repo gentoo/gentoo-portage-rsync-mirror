@@ -7,5 +7,5 @@ LICENSE=GPL-2 GPL-3
 RDEPEND=app-shells/bash net-misc/rsync
 SLOT=0
 SRC_URI=https://github.com/graysky2/profile-sync-daemon/archive/v5.36.tar.gz -> profile-sync-daemon-5.36.tar.gz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=08038d82930de3659c08bba220905710

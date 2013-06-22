@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.34-r1.ebuild,v 1.2 2013/06/09 03:25:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.36.ebuild,v 1.1 2013/06/21 23:33:57 zmedico Exp $
 
 EAPI=5
 
@@ -109,8 +109,7 @@ src_prepare() {
 	# disable_plugins: walking sec-hole, wait for upstream to use GHNS interface
 	epatch \
 		"${FILESDIR}/${PN}-no_updates_dialog.patch" \
-		"${FILESDIR}/${PN}-disable_plugins.patch" \
-		"${FILESDIR}/${PN}-pillow.patch"
+		"${FILESDIR}/${PN}-disable_plugins.patch"
 
 	# Remove non-free fonts (bug #470212).
 	rm -r resources/fonts/prs500 || die

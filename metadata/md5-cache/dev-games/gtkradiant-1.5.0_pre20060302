@@ -8,5 +8,5 @@ LICENSE=qeradiant
 RDEPEND==media-libs/libpng-1.2* sys-libs/zlib app-crypt/mhash =dev-libs/glib-2* x11-libs/gtk+:2 dev-libs/atk x11-libs/pango x11-libs/gtkglext dev-libs/libxml2 sys-libs/glibc virtual/opengl
 SLOT=0
 SRC_URI=http://zerowing.idsoftware.com/files/radiant/nightly/1.5/gtkradiant-1.5.0-2006-03-02.i386.rpm
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f31a0ec0d081047cbf9c0bbb4822d831	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3abaee1096482b791a1e3f919cb3db4b

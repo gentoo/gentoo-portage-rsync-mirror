@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl ssl? ( dev-libs/openssl ) geoip? ( dev-libs/geoip ) gnutls? ( net-libs/gnutls dev-libs/libgcrypt ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-server ) pcre? ( dev-libs/libpcre ) sqlite? ( >=dev-db/sqlite-3.0 ) tre? ( dev-libs/tre )
 SLOT=0
 SRC_URI=http://www.github.com/inspircd/inspircd/archive/v2.0.12.tar.gz -> inspircd-2.0.12.tar.gz
-_eclasses_=eutils	f31a0ec0d081047cbf9c0bbb4822d831	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=835df8ee3d7f9a2431f9df3e939688fb

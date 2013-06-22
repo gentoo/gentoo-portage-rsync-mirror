@@ -9,5 +9,5 @@ LICENSE=GPL-2 CC-BY-SA-2.5
 RDEPEND=opengl? ( virtual/jpeg media-libs/libsdl[joystick,opengl?] vorbis? ( media-libs/libogg media-libs/libvorbis ) openal? ( media-libs/openal ) x11-libs/libXau x11-libs/libXdmcp ) !opengl? ( !dedicated? ( virtual/jpeg media-libs/libsdl[joystick,opengl?] vorbis? ( media-libs/libogg media-libs/libvorbis ) openal? ( media-libs/openal ) x11-libs/libXau x11-libs/libXdmcp ) )
 SLOT=0
 SRC_URI=http://dl.trem-servers.com/tremulous-gentoopatches-1.1.0-r5.zip http://dl.trem-servers.com/vms-1.1.t971.pk3 http://0day.icculus.org/mirrors/tremulous/tremulous-1.1.0.zip ftp://ftp.wireplay.co.uk/pub/quake3arena/mods/tremulous/tremulous-1.1.0.zip mirror://sourceforge/tremulous/tremulous-1.1.0.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f31a0ec0d081047cbf9c0bbb4822d831	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=2190e3a3dadb02a1ba8fde91a3900558
