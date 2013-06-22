@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4-r1.ebuild,v 1.4 2013/01/24 13:42:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4-r1.ebuild,v 1.5 2013/06/22 16:54:58 scarabeus Exp $
 
 EAPI=4
 inherit eutils multilib flag-o-matic
@@ -31,6 +31,7 @@ RDEPEND="dev-cpp/gtkmm:2.4
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
 	dev-libs/libxdg-basedir
+	dev-util/intltool
 	>=sys-devel/automake-1.11"
 
 DOCS=( AUTHORS ChangeLog README TODO )
@@ -38,7 +39,8 @@ DOCS=( AUTHORS ChangeLog README TODO )
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch \
 		"${FILESDIR}"/${P}-ffmpeg.patch \
-		"${FILESDIR}"/${P}-ffmpeg-1.patch
+		"${FILESDIR}"/${P}-ffmpeg-1.patch \
+		"${FILESDIR}"/${P}-libav9.patch
 	# Remove Vesion and Encoding from the desktop file
 	sed -i -e "/Version/d" -e "/Encoding/d" \
 		data/${PN}.desktop.in || die "sed failed"
