@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/hwdecode-demos-0.9.5.ebuild,v 1.4 2013/01/17 21:30:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/hwdecode-demos-0.9.5.ebuild,v 1.5 2013/06/22 17:50:48 scarabeus Exp $
 
 EAPI=2
 
@@ -25,7 +25,8 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}/ffmpeg.patch"
 	"${FILESDIR}/ffmpeg-1.patch"
-	)
+	"${FILESDIR}/libav9.patch"
+)
 
 src_configure() {
 	econf \

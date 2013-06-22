@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.17.ebuild,v 1.3 2013/06/22 17:56:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.25.ebuild,v 1.1 2013/06/22 17:56:36 tomwij Exp $
 
 EAPI="5"
 
@@ -11,11 +11,11 @@ JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 # This is a list of archs supported by this update.
 # Currently arm comes and goes.
-AT_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+AT_AVAILABLE=( amd64 arm x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
 # Sometimes some or all of the demos are missing, this is to not have to rewrite half
 # the ebuild when it happens.
-DEMOS_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
-FX_VERSION="2_2_7"
+DEMOS_AVAILABLE=( amd64 arm x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+FX_VERSION="2_2_25"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -56,7 +56,7 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.7"
-KEYWORDS="-arm x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X alsa derby doc examples +fontconfig jce nsplugin pax_kernel source"
 
 RESTRICT="fetch strip"
@@ -130,10 +130,18 @@ src_compile() {
 
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
-	if use x86; then
-		bin/java -client -Xshare:dump || die
-	fi
-	bin/java -server -Xshare:dump || die
+	case ${ARCH} in
+		arm|ia64)
+			bin/java -client -Xshare:dump || die
+			;;
+		x86)
+			bin/java -client -Xshare:dump || die
+			bin/java -server -Xshare:dump || die
+			;;
+		*)
+			bin/java -server -Xshare:dump || die
+			;;
+	esac
 
 	# Create files used as storage for system preferences.
 	mkdir jre/.systemPrefs || die

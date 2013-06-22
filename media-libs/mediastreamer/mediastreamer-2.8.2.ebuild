@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.8.2.ebuild,v 1.4 2013/01/17 21:56:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.8.2.ebuild,v 1.5 2013/06/22 17:34:00 scarabeus Exp $
 
 EAPI="4"
 
@@ -69,7 +69,8 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-v4l-automagic.patch" \
 		"${FILESDIR}/${P}-autopoint.patch" \
-		"${FILESDIR}/${P}-ffmpeg-1.0.patch"
+		"${FILESDIR}/${P}-ffmpeg-1.0.patch" \
+		"${FILESDIR}/${P}-libav9.patch"
 
 	# linux/videodev.h dropped in 2.6.38
 	sed -i -e 's:linux/videodev.h ::' configure.ac || die

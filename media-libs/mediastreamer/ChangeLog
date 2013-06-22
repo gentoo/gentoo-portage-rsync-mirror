@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.63 2013/04/02 20:56:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.64 2013/06/22 17:34:00 scarabeus Exp $
+
+  22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/mediastreamer-2.8.2-libav9.patch, mediastreamer-2.8.2.ebuild:
+  Append simple patch for new api usage. Fixes build with libav9. Wrt
+  bug#457860.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> mediastreamer-2.7.3-r3.ebuild:
   Stable for ppc64, wrt bug #462890
