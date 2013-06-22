@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.104 2013/06/13 12:42:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.105 2013/06/22 16:28:36 scarabeus Exp $
+
+  22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/gpac-0.5.0-libav9.patch, gpac-0.5.0.ebuild:
+  Fix build with libav9 wrt bug#443424. Even tho the upstream patched it
+  slightly differently they just fixed more deprec. warnings so it does not
+  matter if we use this one or svn revisions.
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> gpac-0.4.5-r4.ebuild,
   gpac-0.4.5-r5.ebuild, gpac-0.5.0.ebuild:

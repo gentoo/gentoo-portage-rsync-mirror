@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.4 2013/04/11 09:10:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.5 2013/06/22 16:21:31 scarabeus Exp $
 
 EAPI=5
 inherit autotools eutils multilib flag-o-matic
@@ -56,13 +56,14 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-ffmpeg.patch \
 		"${FILESDIR}"/${PN}-underlinking.patch \
 		"${FILESDIR}"/${PN}-ffmpeg-0.11.patch \
-		"${FILESDIR}"/${PN}-std_and_str_h.patch
+		"${FILESDIR}"/${PN}-std_and_str_h.patch \
+		"${FILESDIR}"/${PN}-libav9.patch
 
 	eautoreconf
 }
 
 src_configure() {
-	append-flags -D__STDC_CONSTANT_MACROS #321945
+	append-cppflags -D__STDC_CONSTANT_MACROS #321945
 	append-ldflags -Wl,-z,noexecstack #212959
 
 	econf \

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/hcluster
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hcluster/ChangeLog,v 1.4 2012/02/23 09:08:34 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hcluster/ChangeLog,v 1.5 2013/06/22 16:12:19 idella4 Exp $
+
+*hcluster-0.2.0-r1 (22 Jun 2013)
+
+  22 Jun 2013; Ian Delaney <idella4@gentoo.org> +hcluster-0.2.0-r1.ebuild,
+  -hcluster-0.2.0.ebuild:
+  revbump; migrate to distutils-r1, remove old, correct deps
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> hcluster-0.2.0.ebuild:
   Restricting python
@@ -20,4 +26,3 @@
   05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +hcluster-0.1.9.ebuild:
   Initial import
-

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.62 2013/06/19 02:47:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.63 2013/06/22 16:21:31 scarabeus Exp $
+
+  22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/cinelerra-libav9.patch, cinelerra-20120707.ebuild:
+  Fix libav9 build wrt bug#443216.
 
   19 Jun 2013; Alexis Ballier <aballier@gentoo.org> -cinelerra-20111223.ebuild:
   remove old

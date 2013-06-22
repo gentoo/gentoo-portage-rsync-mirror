@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.3 2013/06/13 12:42:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.4 2013/06/22 16:28:36 scarabeus Exp $
 
 EAPI=4
 
@@ -59,7 +59,8 @@ src_prepare() {
 	epatch	"${FILESDIR}"/110_all_implicitdecls.patch \
 		"${FILESDIR}"/160_all_externalamr.patch \
 		"${FILESDIR}"/210_all_system_libogg.patch \
-		"${FILESDIR}"/${P}-build-fixes.patch
+		"${FILESDIR}"/${P}-build-fixes.patch \
+		"${FILESDIR}"/${P}-libav9.patch
 
 	# remove last of internal ogg
 	sed -i \
