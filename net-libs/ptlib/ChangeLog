@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.47 2013/04/16 13:27:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.48 2013/06/22 19:11:35 scarabeus Exp $
+
+*ptlib-2.12.4 (22 Jun 2013)
+
+  22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/ptlib-2.12.4-respect_cxxflags.patch, +ptlib-2.12.4.ebuild:
+  Version bump to latest ptlib, prep for opal bump needed for libav9.
 
   16 Apr 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ptlib-2.10.10.ebuild:

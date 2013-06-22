@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.93 2013/04/05 18:12:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.94 2013/06/22 19:28:34 scarabeus Exp $
+
+*opal-3.12.4 (22 Jun 2013)
+
+  22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/opal-3.12.4-avoid_cflags_mixup.patch,
+  +files/opal-3.12.4-java-ruby-swig-fix.patch, +opal-3.12.4.ebuild:
+  Version bump to 3.12.4 to build with libav9. Fixes bug#443206.
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> opal-3.10.10.ebuild:
   Stable for ppc64, wrt bug #461842

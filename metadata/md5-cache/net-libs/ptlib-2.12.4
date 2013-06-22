@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=audio? ( alsa? ( media-libs/alsa-lib ) ) ldap? ( net-nds/openldap ) lua? ( dev-lang/lua ) odbc? ( dev-db/unixODBC ) pulseaudio? ( media-sound/pulseaudio ) sasl? ( dev-libs/cyrus-sasl:2 ) sdl? ( media-libs/libsdl ) ssl? ( dev-libs/openssl ) video? ( v4l? ( media-libs/libv4l ) ) xml? ( dev-libs/expat ) !!dev-libs/pwlib virtual/pkgconfig sys-devel/bison sys-devel/flex video? ( v4l? ( sys-kernel/linux-headers ) )
+DESCRIPTION=Network focused portable C++ class library providing high level functions
+EAPI=5
+HOMEPAGE=http://www.opalvoip.org/
+IUSE=alsa +asn +audio debug doc +dtmf examples ffmpeg ftp +http ipv6 jabber ldap lua mail odbc oss pch pulseaudio remote sasl sdl serial shmvideo snmp soap socks ssl static-libs +stun telnet tts v4l +video vxml wav xml xmlrpc
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=MPL-1.0
+RDEPEND=audio? ( alsa? ( media-libs/alsa-lib ) ) ldap? ( net-nds/openldap ) lua? ( dev-lang/lua ) odbc? ( dev-db/unixODBC ) pulseaudio? ( media-sound/pulseaudio ) sasl? ( dev-libs/cyrus-sasl:2 ) sdl? ( media-libs/libsdl ) ssl? ( dev-libs/openssl ) video? ( v4l? ( media-libs/libv4l ) ) xml? ( dev-libs/expat ) !!dev-libs/pwlib ffmpeg? ( virtual/ffmpeg )
+REQUIRED_USE=sdl? ( video ) jabber? ( xml ) vxml? ( http tts xml ) xmlrpc? ( http xml ) soap? ( http xml )
+SLOT=0/2.12.4
+SRC_URI=mirror://sourceforge/opalvoip/ptlib-2.12.4.tar.bz2 doc? ( mirror://sourceforge/opalvoip/ptlib-2.12.4-htmldoc.tar.bz2 )
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=406a7b1b65c4960ccc0999f6358db9ac
