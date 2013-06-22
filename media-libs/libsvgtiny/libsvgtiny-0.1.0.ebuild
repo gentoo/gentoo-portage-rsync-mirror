@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/libsvgtiny-0.1.0.ebuild,v 1.1 2013/06/17 19:01:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/libsvgtiny-0.1.0.ebuild,v 1.2 2013/06/22 09:51:09 hasufell Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm"
 IUSE=""
 
-RDEPEND=">=net-libs/libdom-0.0.1[static-libs?,${MULTILIB_USEDEP}]
+RDEPEND=">=net-libs/libdom-0.0.1[xml,static-libs?,${MULTILIB_USEDEP}]
 	>=dev-libs/libwapcaplet-0.2.0[static-libs?,${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-util/gperf"
