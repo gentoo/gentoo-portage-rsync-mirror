@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.8.2.ebuild,v 1.5 2013/06/22 17:34:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.8.2.ebuild,v 1.6 2013/06/22 19:35:14 scarabeus Exp $
 
 EAPI="4"
 
@@ -42,6 +42,7 @@ RDEPEND=">=net-libs/ortp-0.17[ipv6?]
 		X? ( x11-libs/libX11
 			x11-libs/libXv ) )"
 DEPEND="${RDEPEND}
+	dev-util/intltool
 	virtual/pkgconfig
 	x11-proto/videoproto
 	doc? ( app-doc/doxygen )"
