@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.3.4.ebuild,v 1.1 2013/06/21 04:35:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.3.4.ebuild,v 1.2 2013/06/22 13:56:11 jer Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ RDEPEND="
 
 src_compile() {
 	# If somebody wants to cross-compile, we will probably need to do 2 builds.
-	tc-export CXX
+	tc-export AR CXX
 
 	"${PYTHON}" bootstrap.py --verbose || die
 
