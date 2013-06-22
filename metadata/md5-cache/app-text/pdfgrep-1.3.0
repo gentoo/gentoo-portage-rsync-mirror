@@ -4,9 +4,9 @@ DESCRIPTION=A tool similar to grep which searches text in PDFs
 EAPI=5
 HOMEPAGE=http://pdfgrep.sourceforge.net/
 IUSE=unac
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=app-text/poppler:=[cxx] unac? ( app-text/unac )
 SLOT=0
 SRC_URI=mirror://sourceforge/pdfgrep/pdfgrep-1.3.0.tar.gz
-_md5_=866148063cc4a543d2e8f0f8a0988cca
+_md5_=210c5586631910ca393c6cbab2ce4e5c

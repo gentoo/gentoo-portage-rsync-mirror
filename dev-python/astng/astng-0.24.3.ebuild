@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.3.ebuild,v 1.1 2013/06/19 10:30:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.3.ebuild,v 1.2 2013/06/22 10:04:24 idella4 Exp $
 
 EAPI=5
 
@@ -25,12 +25,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/logilab-${P}"
 
-# a wit; pypy reports astng modules differently, could NOT source an astng bug issue tracker
+# a wit; pypy reports astng modules differently
 PATCHES=( "${FILESDIR}"/pypy-test.patch )
 
 python_test() {
 	distutils_install_for_testing
-
+	#https://bitbucket.org/logilab/astroid/issue/1/test-suite-fails-in-0243-under-py32-pypy
 	# Make sure that the tests use correct modules.
 	cd "${TEST_DIR}"/lib || die
 	unset PYTHONPATH
