@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.1 2013/06/22 12:26:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.2 2013/06/22 12:38:02 scarabeus Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="lotus_notes853_linux_RI_en.tar
 	http://dev.gentooexperimental.org/~scarabeus/lotus-notes-gtk-patch-20130622.tar.xz
 "
 
-LICENSE=""
+LICENSE="lotus-notes"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

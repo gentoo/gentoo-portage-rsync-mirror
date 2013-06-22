@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.126 2013/06/09 11:43:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.127 2013/06/22 12:32:38 scarabeus Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -39,6 +39,7 @@ app-emulation/emul-linux-x86-java
 app-emulation/winetricks
 app-emulation/wine-doors
 app-text/acroread
+app-office/lotus-notes
 dev-embedded/libftd2xx
 dev-embedded/openocd
 >=dev-java/sun-j2me-bin-2.5.2.01
