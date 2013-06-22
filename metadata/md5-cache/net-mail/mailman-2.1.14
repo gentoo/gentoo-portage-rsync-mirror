@@ -1,11 +1,12 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
-DEPEND=>=dev-lang/python-2.3 virtual/mta virtual/cron virtual/httpd-cgi
+DEPEND=>=dev-lang/python-2.3 virtual/mta virtual/cron virtual/httpd-cgi selinux? ( sec-policy/selinux-mailman )
 DESCRIPTION=A python-based mailing list server with an extensive web interface
 HOMEPAGE=http://www.list.org/
+IUSE=selinux
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=>=dev-lang/python-2.3 virtual/mta virtual/cron virtual/httpd-cgi
+RDEPEND=>=dev-lang/python-2.3 virtual/mta virtual/cron virtual/httpd-cgi selinux? ( sec-policy/selinux-mailman )
 SLOT=0
 SRC_URI=mirror://sourceforge/mailman/mailman-2.1.14.tgz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=72fddf332c8c60f1910b0ef87bba4e85
+_md5_=ba9b14ffc47e11aed1cac624aa77b4d6

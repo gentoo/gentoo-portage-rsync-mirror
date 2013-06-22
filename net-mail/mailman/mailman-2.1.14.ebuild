@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.14.ebuild,v 1.8 2012/08/26 16:01:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.14.ebuild,v 1.9 2013/06/22 17:18:50 swift Exp $
 
 inherit eutils python multilib
 
@@ -11,12 +11,13 @@ HOMEPAGE="http://www.list.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
-IUSE=""
+IUSE="selinux"
 
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
 	virtual/cron
-	virtual/httpd-cgi"
+	virtual/httpd-cgi
+	selinux? ( sec-policy/selinux-mailman )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
