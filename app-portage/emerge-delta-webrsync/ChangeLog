@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.40 2013/01/30 18:07:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.41 2013/06/22 07:16:57 zmedico Exp $
+
+*emerge-delta-webrsync-3.7.0 (22 Jun 2013)
+
+  22 Jun 2013; Zac Medico <zmedico@gentoo.org>
+  +emerge-delta-webrsync-3.7.0.ebuild:
+  3.7.0 version bump. This fixes bug #286373 (check gpg sig when downloading a
+  full snapshot).
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   emerge-delta-webrsync-3.6.2.ebuild:
