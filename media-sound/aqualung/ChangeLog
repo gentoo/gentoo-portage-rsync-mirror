@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aqualung
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.29 2013/05/02 16:35:04 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.30 2013/06/22 18:34:17 scarabeus Exp $
+
+  22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/aqualung-0.9_beta11-libav9.patch, aqualung-0.9_beta11-r2.ebuild:
+  Add libav9 patch to use new api instead of old one. Fixes bug#443242.
 
   02 May 2013; Daniel Pielmeier <billie@gentoo.org>
   aqualung-0.9_beta11-r2.ebuild,
@@ -142,4 +146,3 @@
   +files/new-ffmpeg-headers.patch, +metadata.xml,
   +aqualung-0.9_beta9_p1.ebuild:
   Initial import. Ebuild adapted from Maarten Maathuis in bug 88532.
-

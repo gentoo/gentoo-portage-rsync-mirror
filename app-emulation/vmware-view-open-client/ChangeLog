@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-view-open-client
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.12 2012/10/02 12:17:49 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.13 2013/06/22 18:46:17 dilfridge Exp $
+
+  22 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  vmware-view-open-client-4.5.0.297975-r1.ebuild:
+  EAPI bump and use icu subslot dependency
 
   02 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/vmware-view-open-client-4.5.0.297975-unbundle-intltool.patch,

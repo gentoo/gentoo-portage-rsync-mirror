@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.5.0.297975-r1.ebuild,v 1.4 2012/10/02 12:17:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.5.0.297975-r1.ebuild,v 1.5 2013/06/22 18:46:17 dilfridge Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils autotools versionator
 
@@ -20,7 +20,7 @@ IUSE=""
 
 COMMON_DEPEND="
 	>=dev-libs/boost-1.34.1
-	>=dev-libs/icu-3.8.0
+	>=dev-libs/icu-3.8.0:=
 	>=dev-libs/libxml2-2.6.0
 	>=dev-libs/openssl-0.9.8
 	>=net-misc/curl-7.16.0[ssl]

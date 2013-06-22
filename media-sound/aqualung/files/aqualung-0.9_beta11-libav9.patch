@@ -1,0 +1,33 @@
+diff -urN aqualung-0.9beta11.old/configure.ac aqualung-0.9beta11/configure.ac
+--- aqualung-0.9beta11.old/configure.ac	2013-06-22 20:22:58.928689843 +0200
++++ aqualung-0.9beta11/configure.ac	2013-06-22 20:31:52.203670871 +0200
+@@ -661,7 +661,7 @@
+ 	fi
+ 
+ 	AC_CHECK_LIB(avformat, avformat_open_input, [avf_lib=yes], [avf_lib=no], [-lavcodec -lavutil -lz])
+-	AC_CHECK_LIB(avcodec, avcodec_open, [avc_lib=yes], [avc_lib=no], [-lavformat -lavutil -lz])
++	AC_CHECK_LIB(avcodec, avcodec_open2, [avc_lib=yes], [avc_lib=no], [-lavformat -lavutil -lz])
+ 
+ 	if test "$avc_hdr" = "yes" -a "$avf_hdr" = "yes" -a "$avc_lib" = "yes" -a "$avf_lib" = "yes" ; then
+ 	        lavc_LIBS="-lavformat -lavcodec -lavutil -lz"
+diff -urN aqualung-0.9beta11.old/src/decoder/dec_lavc.c aqualung-0.9beta11/src/decoder/dec_lavc.c
+--- aqualung-0.9beta11.old/src/decoder/dec_lavc.c	2013-06-22 20:22:58.933689843 +0200
++++ aqualung-0.9beta11/src/decoder/dec_lavc.c	2013-06-22 20:28:17.916678495 +0200
+@@ -114,7 +114,7 @@
+ 	if (avformat_open_input(&pd->avFormatCtx, filename, NULL, NULL) != 0)
+ 		return DECODER_OPEN_BADLIB;
+ 
+-	if (av_find_stream_info(pd->avFormatCtx) < 0)
++	if (avformat_find_stream_info(pd->avFormatCtx, NULL) < 0)
+ 		return DECODER_OPEN_BADLIB;
+ 
+ 	/* debug */
+@@ -140,7 +140,7 @@
+ 	if (pd->avCodec == NULL)
+ 		return DECODER_OPEN_BADLIB;
+ 
+-	if (avcodec_open(pd->avCodecCtx, pd->avCodec) < 0)
++	if (avcodec_open2(pd->avCodecCtx, pd->avCodec, NULL) < 0)
+ 		return DECODER_OPEN_BADLIB;
+ 
+ 	if ((pd->avCodecCtx->channels != 1) && (pd->avCodecCtx->channels != 2)) {

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-8.8.2.590212.ebuild,v 1.3 2012/05/31 23:06:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-8.8.2.590212.ebuild,v 1.4 2013/06/22 18:49:40 dilfridge Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils multilib pam user versionator
 
@@ -35,7 +35,7 @@ RDEPEND="app-emulation/open-vm-tools-kmod
 		x11-libs/libXtst
 	)
 	fuse? ( sys-fs/fuse )
-	icu? ( dev-libs/icu )
+	icu? ( dev-libs/icu:= )
 	unity? (
 		dev-libs/uriparser
 		media-libs/libpng:1.2
