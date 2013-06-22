@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.243 2013/06/16 12:33:58 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.244 2013/06/22 22:44:06 dilfridge Exp $
+
+  22 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  vmware-workstation-7.1.6.744570.ebuild,
+  vmware-workstation-8.0.4.744019-r1.ebuild,
+  vmware-workstation-8.0.5.893925.ebuild,
+  vmware-workstation-9.0.2.1031769.ebuild:
+  Add init script license, bug 425902
 
   16 Jun 2013; Vadim Kuznetsov vadimk@gentoo.org metadata.xml:
   dropped myself as a maintainer. maintainer needed

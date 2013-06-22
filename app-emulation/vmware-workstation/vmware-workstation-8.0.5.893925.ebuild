@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.5.893925.ebuild,v 1.1 2013/01/07 20:52:58 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.5.893925.ebuild,v 1.2 2013/06/22 22:44:06 dilfridge Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="
 	x86? ( ${BASE_URI}${MY_P}.i386.bundle.tar )
 	amd64? ( ${BASE_URI}${MY_P}.x86_64.bundle.tar )
 	"
-LICENSE="vmware"
+LICENSE="vmware GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="cups doc ovftool server vix vmware-tools"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-4.0.5.893925.ebuild,v 1.2 2013/01/08 21:44:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-4.0.5.893925.ebuild,v 1.3 2013/06/22 22:37:55 dilfridge Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ SRC_URI="
 	amd64? ( ${BASE_URI}${MY_P}.x86_64.bundle.tar )
 	"
 
-LICENSE="vmware"
+LICENSE="vmware GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="cups doc +vmware-tools"
