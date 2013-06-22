@@ -1,19 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-9999.ebuild,v 1.8 2013/06/22 12:20:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-0.0.0_p20130103.ebuild,v 1.1 2013/06/22 12:20:11 xmw Exp $
 
 EAPI=5
 
-inherit eutils savedconfig git-2 toolchain-funcs
+inherit eutils savedconfig toolchain-funcs vcs-snapshot
 
 DESCRIPTION="highly customizable and functional web browser with minimalistic and space saving interface"
 HOMEPAGE="http://pwmt.org/projects/jumanji"
-EGIT_REPO_URI="git://pwmt.org/jumanji.git"
-EGIT_BRANCH=develop
+SRC_URI="https://git.pwmt.org/?p=jumanji.git;a=snapshot;h=963b309e9f91c6214f36c729514d5a08e7293310;sf=tgz -> ${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="develop"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+deprecated"
 
 RDEPEND="dev-db/sqlite:3

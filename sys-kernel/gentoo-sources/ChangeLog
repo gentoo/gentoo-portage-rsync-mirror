@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1140 2013/06/20 23:23:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1141 2013/06/22 12:07:55 tomwij Exp $
+
+*gentoo-sources-3.7.10-r1 (22 Jun 2013)
+
+  22 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.7.10-r1.ebuild,
+  -gentoo-sources-3.7.10.ebuild, metadata.xml:
+  Revision bump. Applied security patch to 3.7.10 such that the root exploit is
+  no longer present on the remaining arches, which have not responded to
+  stabilization in a long time, directly to stable as the patches involved are
+  stable; as per the decision in bug #338739 comment 44.
 
 *gentoo-sources-3.9.7 (20 Jun 2013)
 *gentoo-sources-3.2.47 (20 Jun 2013)
