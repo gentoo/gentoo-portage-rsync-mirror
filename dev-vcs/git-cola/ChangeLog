@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.11 2013/06/04 13:57:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.12 2013/06/22 11:07:01 jlec Exp $
+
+*git-cola-1.8.3 (22 Jun 2013)
+
+  22 Jun 2013; Justin Lecher <jlec@gentoo.org> +git-cola-1.8.3.ebuild:
+  Version Bump, #474114
 
   04 Jun 2013; Justin Lecher <jlec@gentoo.org> -git-cola-1.4.3.4.ebuild,
   -git-cola-1.4.3.5.ebuild, -git-cola-1.7.7.ebuild, -git-cola-1.7.7-r1.ebuild,
