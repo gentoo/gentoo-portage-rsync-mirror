@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2_pre20130619.ebuild,v 1.1 2013/06/19 15:32:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2_pre20130619.ebuild,v 1.2 2013/06/22 20:35:19 mattst88 Exp $
 
 EAPI=5
 
@@ -49,14 +49,13 @@ done
 
 IUSE="${IUSE_VIDEO_CARDS}
 	bindist +classic debug +egl +gallium gbm gles1 gles2 +llvm +nptl opencl
-	openvg osmesa pax_kernel pic r600-llvm-compiler selinux +shared-glapi vdpau
+	openvg osmesa pax_kernel pic r600-llvm-compiler selinux vdpau
 	wayland xvmc xa xorg kernel_FreeBSD"
 
 REQUIRED_USE="
 	llvm?   ( gallium )
 	openvg? ( egl gallium )
 	opencl? ( gallium r600-llvm-compiler )
-	gbm?    ( shared-glapi )
 	gles1?  ( egl )
 	gles2?  ( egl )
 	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeon ) )
@@ -276,6 +275,7 @@ src_configure() {
 	econf \
 		--enable-dri \
 		--enable-glx \
+		--enable-shared-glapi \
 		$(use_enable !bindist texture-float) \
 		$(use_enable debug) \
 		$(use_enable egl) \
@@ -285,7 +285,6 @@ src_configure() {
 		$(use_enable nptl glx-tls) \
 		$(use_enable osmesa) \
 		$(use_enable !pic asm) \
-		$(use_enable shared-glapi) \
 		$(use_enable xa) \
 		$(use_enable xorg) \
 		--with-dri-drivers=${DRI_DRIVERS} \

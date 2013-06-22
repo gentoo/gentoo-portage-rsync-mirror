@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.488 2013/06/19 15:32:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.489 2013/06/22 20:35:19 mattst88 Exp $
+
+  22 Jun 2013; Matt Turner <mattst88@gentoo.org> mesa-9.2_pre20130619.ebuild:
+  Remove shared-glapi USE flag, bugs 458550 & 473526.
 
 *mesa-9.2_pre20130619 (19 Jun 2013)
 
