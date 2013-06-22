@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/socket-sentry
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/socket-sentry/ChangeLog,v 1.1 2013/06/22 21:30:54 creffett Exp $
+
+*socket-sentry-0.9.3 (22 Jun 2013)
+
+  22 Jun 2013; Chris Reffett <creffett@gentoo.org>
+  +files/socket-sentry-0.9.3-automagictests.patch, +metadata.xml,
+  +socket-sentry-0.9.3.ebuild:
+  Add from kde overlay, clean up, add patch to handle test automagicness
