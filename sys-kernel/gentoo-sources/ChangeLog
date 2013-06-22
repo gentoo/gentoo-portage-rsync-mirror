@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1141 2013/06/22 12:07:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1142 2013/06/22 22:20:49 tomwij Exp $
+
+  22 Jun 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.9.7.ebuild:
+  Use the genpatches where the patch depth is forced for the BFQ patches that
+  failed; no rev bump needed, allowed per ebuild policy. See bug #474008,
+  comment 10 and 11.
 
 *gentoo-sources-3.7.10-r1 (22 Jun 2013)
 

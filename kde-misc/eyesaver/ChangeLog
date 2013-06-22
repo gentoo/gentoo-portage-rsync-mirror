@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/eyesaver
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/eyesaver/ChangeLog,v 1.1 2013/06/22 21:56:01 creffett Exp $
+
+*eyesaver-0.4 (22 Jun 2013)
+
+  22 Jun 2013; Chris Reffett <creffett@gentoo.org> +eyesaver-0.4.ebuild,
+  +files/eyesaver-0.2a-fix.patch, +metadata.xml:
+  Move to tree from kde overlay

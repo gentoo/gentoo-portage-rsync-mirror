@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.11.1.ebuild,v 1.2 2013/06/19 06:07:54 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.11.1.ebuild,v 1.3 2013/06/22 22:28:37 slyfox Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-haskell/base64-bytestring-0.1:=[profile?]
 		>=dev-haskell/data-default-0.4:=[profile?]
 		<dev-haskell/data-default-0.6:=[profile?]
 		=dev-haskell/extensible-exceptions-0.1*:=[profile?]
-		>=dev-haskell/highlighting-kate-0.5.3.7:=[profile?]
+		>=dev-haskell/highlighting-kate-0.5.3.9:=[profile?]
 		<dev-haskell/highlighting-kate-0.6:=[profile?]
 		>=dev-haskell/http-4000.0.5:=[profile?]
 		<dev-haskell/http-4000.3:=[profile?]
@@ -48,7 +48,7 @@ RDEPEND=">=dev-haskell/base64-bytestring-0.1:=[profile?]
 		>=dev-haskell/tagsoup-0.12.5:=[profile?]
 		<dev-haskell/tagsoup-0.13:=[profile?]
 		=dev-haskell/temporary-1.1*:=[profile?]
-		>=dev-haskell/texmath-0.6.1.3:=[profile?]
+		>=dev-haskell/texmath-0.6.1.5:=[profile?]
 		<dev-haskell/texmath-0.7:=[profile?]
 		=dev-haskell/text-0.11*:=[profile?]
 		>=dev-haskell/xml-1.3.12:=[profile?]

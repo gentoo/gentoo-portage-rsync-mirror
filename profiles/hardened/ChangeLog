@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.5 2013/06/09 11:43:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.6 2013/06/22 21:32:09 blueness Exp $
+
+  22 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +linux/musl/amd64/make.defaults, +linux/musl/amd64/package.mask,
+  +linux/musl/amd64/parent, +linux/musl/amd64/use.force,
+  +linux/musl/amd64/use.mask, +linux/musl/make.defaults,
+  +linux/musl/package.mask, +linux/musl/packages, +linux/musl/packages.build,
+  +linux/musl/parent, +linux/musl/use.force, +linux/musl/use.mask:
+  Add very experimental hardened/linux/musl, only amd64 for now
 
   09 Jun 2013; Ulrich Müller <ulm@gentoo.org>
   linux/amd64/no-multilib/package.mask:
