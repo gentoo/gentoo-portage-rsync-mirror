@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.9.ebuild,v 1.7 2013/02/08 21:39:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.9.ebuild,v 1.8 2013/06/22 18:18:02 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils
 
@@ -30,7 +30,8 @@ src_prepare() {
 		-e "s:-o vdr2jpeg:\$(LDFLAGS) -o vdr2jpeg:" \
 		Makefile || die
 	epatch "${FILESDIR}/${P}-ffmpeg.patch" \
-		"${FILESDIR}/${P}-ffmpeg1.patch"
+		"${FILESDIR}/${P}-ffmpeg1.patch" \
+		"${FILESDIR}/${P}-libav9.patch"
 }
 
 src_install() {
