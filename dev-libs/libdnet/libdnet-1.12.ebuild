@@ -1,15 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.8 2013/06/20 15:46:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.9 2013/06/22 13:27:18 jer Exp $
 
 EAPI=5
 
 AT_M4DIR="config"
-AUTOTOOLS_AUTORECONF=1
-AUTOTOOLS_IN_SOURCE_BUILD=1
 PYTHON_DEPEND="python? 2"
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
-DISTUTILS_SINGLE_IMPL=true
 
 inherit autotools distutils-r1 eutils
 
@@ -24,6 +21,7 @@ KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6 python static-libs test"
 
 #DEPEND="test? ( dev-libs/check )"
+DEPEND="${PYTHON_DEPS}"
 RESTRICT="test"
 
 DOCS=( README THANKS TODO )
@@ -38,8 +36,12 @@ src_prepare() {
 		configure.in || die
 	sed -i -e 's|-L@libdir@ ||g' dnet-config.in || die
 	use ipv6 && epatch "${WORKDIR}/${P}.ipv6-1.patch"
+	sed -i -e '/^SUBDIRS/s|python||g' Makefile.am || die
 	eautoreconf
-	use python && distutils-r1_src_prepare
+	if use python; then
+		cd python
+		distutils-r1_src_prepare
+	fi
 }
 
 src_configure() {
@@ -60,7 +62,8 @@ src_install() {
 	default
 	if use python; then
 		cd python
-		distutils-r1_src_compile
+		unset DOCS
+		distutils-r1_src_install
 	fi
 	prune_libtool_files
 }

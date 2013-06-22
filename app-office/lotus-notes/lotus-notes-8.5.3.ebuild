@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.2 2013/06/22 12:38:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.4 2013/06/22 13:30:34 scarabeus Exp $
 
 EAPI=5
 
@@ -14,12 +14,9 @@ SRC_URI="lotus_notes853_linux_RI_en.tar
 
 LICENSE="lotus-notes"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-# Technically we also need the 32bit gnome2, but meh.
-# For 32bit deps not everything is stated, needs re-checking
-# if someone is interested.
 RDEPEND="
 	amd64? (
 		app-emulation/emul-linux-x86-gtklibs
@@ -30,6 +27,9 @@ RDEPEND="
 		dev-libs/dbus-glib
 		dev-libs/libcroco
 		gnome-base/gconf
+		gnome-base/libgnome
+		gnome-base/libgnomeprint
+		gnome-base/libgnomeprintui
 		gnome-base/gvfs
 		gnome-base/librsvg
 		gnome-base/orbit
@@ -37,10 +37,26 @@ RDEPEND="
 		gnome-extra/libgsf
 		net-dns/avahi
 		x11-libs/gdk-pixbuf
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libX11
+		x11-libs/libXScrnSaver
+		x11-libs/libXcursor
+		x11-libs/libXext
+		x11-libs/libXft
+		x11-libs/libXi
+		x11-libs/libXp
+		x11-libs/libXrender
+		x11-libs/libXt
+		x11-libs/libXtst
+		x11-libs/libxkbfile
+		x11-libs/pango
 		x11-themes/gtk-engines-murrine
 	)
 	dev-java/swt
+	dev-libs/dbus-glib
 	dev-libs/icu
+	sys-apps/dbus[X]
 "
 DEPEND="${RDEPEND}"
 
@@ -67,6 +83,10 @@ src_prepare() {
 	sed -i \
 		-e 's:`dirname "$0"`:/opt/ibm/lotus/notes/:' \
 		lotus-notes-gtk-patch/notes-wrapper || die
+	# force initial configuration to avoid overwritting configs in /opt/
+	sed -i \
+		-e '/.initial./d' \
+		opt/ibm/lotus/notes/framework/rcp/rcplauncher.properties || die
 }
 
 src_compile() {

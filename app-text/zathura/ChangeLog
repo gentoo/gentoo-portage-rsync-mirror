@@ -1,6 +1,12 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.51 2013/06/19 14:21:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.52 2013/06/22 13:05:38 xmw Exp $
+
+*zathura-9999 (22 Jun 2013)
+
+  22 Jun 2013; Michael Weber <xmw@gentoo.org> +zathura-9999.ebuild,
+  metadata.xml:
+  Add USE=+deprecated for gtk2 dependency, add live ebuild for gtk3 development.
 
   19 Jun 2013; Alex Alexander <wired@gentoo.org> metadata.xml:
   removed myself from maintainer list
