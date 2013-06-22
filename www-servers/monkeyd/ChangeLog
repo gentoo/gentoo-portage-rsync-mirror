@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.58 2013/06/06 21:06:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.59 2013/06/22 10:48:11 blueness Exp $
+
+*monkeyd-1.2.2 (22 Jun 2013)
+
+  22 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +monkeyd-1.2.2.ebuild:
+  Version bump, bug #472644
 
 *monkeyd-1.2.1 (06 Jun 2013)
 

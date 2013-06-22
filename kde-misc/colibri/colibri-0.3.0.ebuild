@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/colibri/colibri-0.3.0.ebuild,v 1.1 2013/05/15 16:58:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/colibri/colibri-0.3.0.ebuild,v 1.2 2013/06/22 10:41:16 pinkbyte Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/stable/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 DEPEND="

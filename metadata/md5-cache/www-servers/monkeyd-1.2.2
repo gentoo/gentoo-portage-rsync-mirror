@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup
+DESCRIPTION=A small, fast, and scalable web server
+EAPI=5
+HOMEPAGE=http://www.monkey-project.com/
+IUSE=-debug php minimal uclibc monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi +monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril
+KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=php? ( dev-lang/php )
+REQUIRED_USE=uclibc? ( !debug )
+SLOT=0
+SRC_URI=http://monkey-project.com/releases/1.2/monkey-1.2.2.tar.gz
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=2a0f3a391a94ec58b309e8fdccc20ed0
