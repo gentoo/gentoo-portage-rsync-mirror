@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/hcs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hcs-utils/ChangeLog,v 1.6 2013/03/17 17:57:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hcs-utils/ChangeLog,v 1.7 2013/06/23 04:51:55 idella4 Exp $
+
+*hcs-utils-1.4_rc5 (23 Jun 2013)
+
+  23 Jun 2013; Ian Delaney <idella4@gentoo.org> +hcs-utils-1.4_rc5.ebuild:
+  bump, been 6 months
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
