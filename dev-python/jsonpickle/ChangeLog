@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.11 2013/04/29 08:34:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.13 2013/06/23 11:27:30 pinkbyte Exp $
+
+  23 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> jsonpickle-0.4.0-r1.ebuild:
+  Add ~arm keyword
+
+  23 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> jsonpickle-0.4.0-r1.ebuild:
+  Stable on amd64 and x86, wrt bug #474118
 
 *jsonpickle-0.4.0-r1 (29 Apr 2013)
 
