@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare setup
+DEPEND=app-emulation/open-vm-tools-kmod dev-libs/glib:2 dev-libs/libdnet sys-apps/ethtool sys-process/procps virtual/pam X? ( dev-cpp/gtkmm:2.4 x11-base/xorg-server x11-drivers/xf86-input-vmmouse x11-drivers/xf86-video-vmware x11-libs/gtk+:2 x11-libs/libnotify x11-libs/libX11 x11-libs/libXtst ) fuse? ( sys-fs/fuse ) icu? ( dev-libs/icu:= ) xinerama? ( x11-libs/libXinerama ) doc? ( app-doc/doxygen ) virtual/pkgconfig virtual/linux-sources sys-apps/findutils
+DESCRIPTION=Opensourced tools for VMware guests
+EAPI=5
+HOMEPAGE=http://open-vm-tools.sourceforge.net/
+IUSE=X doc fuse icu +pic xinerama
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2
+RDEPEND=app-emulation/open-vm-tools-kmod dev-libs/glib:2 dev-libs/libdnet sys-apps/ethtool sys-process/procps virtual/pam X? ( dev-cpp/gtkmm:2.4 x11-base/xorg-server x11-drivers/xf86-input-vmmouse x11-drivers/xf86-video-vmware x11-libs/gtk+:2 x11-libs/libnotify x11-libs/libX11 x11-libs/libXtst ) fuse? ( sys-fs/fuse ) icu? ( dev-libs/icu:= ) xinerama? ( x11-libs/libXinerama )
+SLOT=0
+SRC_URI=mirror://sourceforge/open-vm-tools/open-vm-tools-2013.04.16-1098359.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=b96dcc14c7fcad908eb60c1be28531a4
