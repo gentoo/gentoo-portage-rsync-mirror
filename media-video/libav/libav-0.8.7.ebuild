@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.7.ebuild,v 1.12 2013/06/13 12:40:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.7.ebuild,v 1.13 2013/06/23 09:01:01 scarabeus Exp $
 
 EAPI=5
 
@@ -112,6 +112,7 @@ src_prepare() {
 	if [[ ${PV%_p*} != ${PV} ]]; then
 		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
 	fi
+	epatch "${FILESDIR}/${PN}-0.8.5-support-libcdio-paranoia.patch"
 }
 
 src_configure() {
