@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/hgtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hgtools/ChangeLog,v 1.6 2013/05/06 15:31:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hgtools/ChangeLog,v 1.7 2013/06/23 12:11:50 idella4 Exp $
+
+*hgtools-3.0.2 (23 Jun 2013)
+
+  23 Jun 2013; Ian Delaney <idella4@gentoo.org> +hgtools-3.0.2.ebuild,
+  files/hgtools-doctest-2.0.2.patch:
+  bump, py2.5 support dropped (upstream)
 
 *hgtools-2.0.2-r1 (06 May 2013)
 

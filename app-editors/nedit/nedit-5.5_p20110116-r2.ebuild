@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20110116.ebuild,v 1.4 2012/10/24 18:58:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20110116-r2.ebuild,v 1.1 2013/06/23 12:26:22 pinkbyte Exp $
 
-EAPI=2
+EAPI=5
 
-inherit toolchain-funcs eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Multi-purpose text editor for the X Window System"
 HOMEPAGE="http://nedit.org/"
@@ -13,11 +13,12 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE=""
 
 RDEPEND=">=x11-libs/motif-2.3:0
 	x11-libs/libXp
-	x11-libs/libXpm"
+	x11-libs/libXpm
+	x11-libs/libXt
+	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	|| ( dev-util/yacc sys-devel/bison )
 	dev-lang/perl"
@@ -34,9 +35,6 @@ src_prepare() {
 		-i Makefile source/preferences.c source/help_data.h source/nedit.c Xlt/Makefile || die
 	sed \
 		-e "s:nc:neditc:g" -i doc/nc.pod || die
-}
-
-src_configure() {
 	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:" -e "s:check_tif_rule::" \
 		makefiles/Makefile.linux || die
 	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:"                  \
@@ -44,28 +42,35 @@ src_configure() {
 		   -e "s:-lX11:-lX11 -lXmu -liconv:"                   \
 		   -e "s:check_tif_rule::"                             \
 		makefiles/Makefile.macosx || die
+
+	epatch_user
 }
 
+src_configure() { :; }
+
 src_compile() {
-	case ${CHOST} in
+	case "${CHOST}" in
 		*-darwin*)
-			emake CC="$(tc-getCC)" macosx || die
+			emake CC="$(tc-getCC)" AR="$(tc-getAR)" macosx
 			;;
 		*-linux*)
-			emake CC="$(tc-getCC)" linux || die
+			emake CC="$(tc-getCC)" AR="$(tc-getAR)" linux
 			;;
 	esac
-	emake VERSION="NEdit ${PV}" -j1 -C doc all || die
+	emake VERSION="NEdit ${PV}" -j1 -C doc all
 }
 
 src_install() {
-	dobin source/nedit || die
-	newbin source/nc neditc || die
-	newman doc/nedit.man nedit.1 || die
-	newman doc/nc.man neditc.1 || die
+	dobin source/nedit
+	newbin source/nc neditc
 
-	dodoc README ReleaseNotes ChangeLog || die
-	cd doc
-	dodoc nedit.doc NEdit.ad faq.txt || die
-	dohtml nedit.html || die
+	make_desktop_entry "${PN}"
+	doicon "${FILESDIR}/${PN}.svg"
+
+	newman doc/nedit.man nedit.1
+	newman doc/nc.man neditc.1
+
+	dodoc README ReleaseNotes ChangeLog
+	dodoc doc/nedit.doc doc/NEdit.ad doc/faq.txt
+	dohtml doc/nedit.html
 }
