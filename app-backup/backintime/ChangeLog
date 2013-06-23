@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/backintime
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.15 2011/11/10 23:53:47 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.16 2013/06/23 21:13:25 xmw Exp $
+
+*backintime-1.0.24 (23 Jun 2013)
+
+  23 Jun 2013; Michael Weber <xmw@gentoo.org> +backintime-1.0.24.ebuild,
+  +files/backintime-1.0.24-dont-install-license.patch:
+  Version bump (bug 472552), respect LINGUAS (bug 438270).
 
 *backintime-1.0.8-r1 (10 Nov 2011)
 
@@ -85,4 +91,3 @@
   +metadata.xml:
   initial commit - based in part on a work by Matija Suklje (hook) and
   Maurice Gilden (bug #267633)
-
