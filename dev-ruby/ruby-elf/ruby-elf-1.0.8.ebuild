@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ruby-elf-1.0.8.ebuild,v 1.1 2013/02/20 16:13:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ruby-elf-1.0.8.ebuild,v 1.2 2013/06/23 11:47:42 graaff Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ all_ruby_compile() {
 }
 
 each_ruby_test() {
-	ruby-ng_testrb-2 test/test_*.rb
+	ruby-ng_testrb-2 -Ilib test/test_*.rb
 }
 
 all_ruby_install() {
