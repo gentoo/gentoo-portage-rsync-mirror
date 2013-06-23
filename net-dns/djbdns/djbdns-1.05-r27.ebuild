@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r24.ebuild,v 1.7 2013/01/05 23:03:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r27.ebuild,v 1.1 2013/06/23 18:53:24 pinkbyte Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs user
@@ -26,15 +26,6 @@ RDEPEND="${DEPEND}
 "
 
 src_prepare() {
-	echo
-	elog 'Several patches have been dropped from this djbdns ebuild revision.'
-	elog 'Please use the DJBDNS_PATCH_DIR variable to specify a directory'
-	elog 'of custom patches.'
-	elog
-	elog 'Some of them can be found at http://tinydns.org/ or'
-	elog 'http://homepage.ntlworld.com/jonathan.deboynepollard/Softwares/djbdns/'
-	elog
-
 	epatch \
 		"${FILESDIR}/headtail.patch" \
 		"${FILESDIR}/dnsroots.patch" \
@@ -67,16 +58,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PV}-errno.patch"
 
-	if [[ -n "${DJBDNS_PATCH_DIR}" && -d "${DJBDNS_PATCH_DIR}" ]]
-	then
-		echo
-		ewarn "You enabled custom patches from ${DJBDNS_PATCH_DIR}."
-		ewarn "Be warned that you won't get any support when using "
-		ewarn "this feature. You're on your own from now!"
-		echo
-		ebeep
-		cd "${S}" && epatch "${DJBDNS_PATCH_DIR}/"*
-	fi
+	epatch_user
 }
 
 src_compile() {
@@ -84,7 +66,6 @@ src_compile() {
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "/usr" > conf-home
-	#emake -j1 || die "emake failed"
 	emake || die "emake failed"
 
 	# If djbdns is compiled with IPv6 support, it breaks dnstrace.
@@ -96,7 +77,6 @@ src_compile() {
 		echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 		echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 		echo "/usr" > conf-home
-		#emake -j1 dnstrace || die "emake failed"
 		emake dnstrace || die "emake failed"
 	fi
 }
@@ -122,7 +102,10 @@ src_install() {
 }
 
 pkg_preinst() {
-	# The nofiles group is provided by baselayout
+	# The nofiles group is no longer provided by baselayout.
+	# Share it with qmail if possible.
+	enewgroup nofiles 200
+
 	enewuser dnscache -1 -1 -1 nofiles
 	enewuser dnslog -1 -1 -1 nofiles
 	enewuser tinydns -1 -1 -1 nofiles

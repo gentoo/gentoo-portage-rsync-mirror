@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/zbar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/ChangeLog,v 1.10 2013/04/19 20:11:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/ChangeLog,v 1.11 2013/06/23 18:57:40 xmw Exp $
+
+  23 Jun 2013; Michael Weber <xmw@gentoo.org> -zbar-0.10-r1.ebuild,
+  -zbar-0.10-r2.ebuild, zbar-0.10-r3.ebuild:
+  Drop old.
 
 *zbar-0.10-r3 (19 Apr 2013)
 
