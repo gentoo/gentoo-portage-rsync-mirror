@@ -1,4 +1,4 @@
-DEFINED_PHASES=-
+DEFINED_PHASES=compile
 DEPEND=app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 net-libs/gnutls sys-libs/ncurses:5[unicode] sys-libs/zlib dev-lang/perl dev-util/makeheaders virtual/pkgconfig
 DESCRIPTION=ncurses directconnect client
 EAPI=5
@@ -8,4 +8,5 @@ LICENSE=MIT
 RDEPEND=app-arch/bzip2 dev-db/sqlite:3 dev-libs/glib:2 net-libs/gnutls sys-libs/ncurses:5[unicode] sys-libs/zlib
 SLOT=0
 SRC_URI=http://dev.yorhel.nl/download/ncdc-1.17.tar.gz
-_md5_=8563f297026802d99d3fe28146a17874
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=7c98ccdf5bf0d4de0779239e02820479

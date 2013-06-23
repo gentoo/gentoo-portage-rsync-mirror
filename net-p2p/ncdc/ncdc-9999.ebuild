@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-9999.ebuild,v 1.10 2013/06/20 20:10:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-9999.ebuild,v 1.11 2013/06/23 21:32:33 xmw Exp $
 
 EAPI=5
 
-inherit autotools base git-2
+inherit autotools git-2 toolchain-funcs
 
 DESCRIPTION="ncurses directconnect client"
 HOMEPAGE="http://dev.yorhel.nl/ncdc"
@@ -32,4 +32,8 @@ src_prepare() {
 
 src_configure() {
 	econf --enable-git-version
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
