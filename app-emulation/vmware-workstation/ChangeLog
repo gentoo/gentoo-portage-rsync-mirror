@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.244 2013/06/22 22:44:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.245 2013/06/23 10:01:10 dilfridge Exp $
+
+  23 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -vmware-workstation-8.0.4.744019-r1.ebuild:
+  Drop old
 
   22 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   vmware-workstation-7.1.6.744570.ebuild,
