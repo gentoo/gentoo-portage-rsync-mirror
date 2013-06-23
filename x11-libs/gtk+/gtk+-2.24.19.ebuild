@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.19.ebuild,v 1.2 2013/06/20 13:49:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.19.ebuild,v 1.3 2013/06/23 09:05:06 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome2-utils gnome.org virtualx autotools readme.gentoo
@@ -61,7 +61,7 @@ DEPEND="${COMMON_DEPEND}
 # introspection.m4 is in the tarball, so gobject-introspection-common is not needed
 
 # gtk+-2.24.8 breaks Alt key handling in <=x11-libs/vte-0.28.2:0
-# Add blocker against old gtk-builder-convert to be sure with maintain both
+# Add blocker against old gtk-builder-convert to be sure we maintain both
 # in sync.
 RDEPEND="${COMMON_DEPEND}
 	!<dev-util/gtk-builder-convert-${PV}

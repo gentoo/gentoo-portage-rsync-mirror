@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.9999.ebuild,v 1.6 2013/06/13 12:40:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.9999.ebuild,v 1.7 2013/06/23 09:09:45 scarabeus Exp $
 
 EAPI=5
 
@@ -227,17 +227,6 @@ src_configure() {
 
 	# Option to force building pic
 	use pic && myconf+=" --enable-pic"
-
-	# Try to get cpu type based on CFLAGS.
-	# Bug #172723
-	# We need to do this so that features of that CPU will be better used
-	# If they contain an unknown CPU it will not hurt since configure
-	# will just ignore it.
-	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
-		[[ "${i}" == "native" ]] && i="host" # bug #273421
-		myconf+=" --cpu=${i}"
-		break
-	done
 
 	# cross compile support
 	if tc-is-cross-compiler ; then
