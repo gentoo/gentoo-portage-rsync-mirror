@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.240 2013/04/26 19:44:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.241 2013/06/23 02:16:26 vapier Exp $
+
+  23 Jun 2013; Mike Frysinger <vapier@gentoo.org> gdb-7.6.ebuild:
+  Apply fix from upstream for cpuid on x86 on hardened systems #467806.
 
 *gdb-7.6 (26 Apr 2013)
 
