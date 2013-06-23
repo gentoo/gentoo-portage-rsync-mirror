@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/imdbpy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.19 2012/11/03 16:32:23 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.20 2013/06/23 17:43:11 idella4 Exp $
+
+*imdbpy-4.9-r1 (23 Jun 2013)
+
+  23 Jun 2013; Ian Delaney <idella4@gentoo.org> +imdbpy-4.9-r1.ebuild:
+  revbump; migrate -> distutils-r1
 
 *imdbpy-4.9 (04 Nov 2012)
 
