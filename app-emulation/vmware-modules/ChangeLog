@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.105 2013/06/21 20:44:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.106 2013/06/23 13:13:19 dilfridge Exp $
+
+  23 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/264-3.8.0.patch, -vmware-modules-264.4.ebuild,
+  vmware-modules-264.5.ebuild:
+  Remove old; add patch to build 264 with kernel 3.8, bug 458228
 
   21 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   vmware-modules-238.6.ebuild, vmware-modules-264.5.ebuild,

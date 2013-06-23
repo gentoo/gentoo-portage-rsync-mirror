@@ -11,6 +11,7 @@
   </maintainer>
   <use>
     <flag name='cb'>Install plug-in for ComicBook support</flag>
+    <flag name="deprecated">Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3</flag>
   </use>
   <upstream>
     <maintainer status="active">

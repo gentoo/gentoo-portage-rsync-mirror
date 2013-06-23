@@ -1,0 +1,33 @@
+[patch] Vmware 9 on Linux Kernel 3.8rc4 and later
+source: http://communities.vmware.com/thread/432897 and bug 458228
+
+diff -rupN a/work/vmci-only/linux/driver.c b/work/vmci-only/linux/driver.c
+--- a/work/vmci-only/linux/driver.c	2012-10-31 23:28:45.000000000 -0400
++++ b/work/vmci-only/linux/driver.c	2013-03-18 15:23:52.488752357 -0400
+@@ -124,7 +124,7 @@ static struct pci_driver vmci_driver = {
+    .name     = "vmci",
+    .id_table = vmci_ids,
+    .probe = vmci_probe_device,
+-   .remove = __devexit_p(vmci_remove_device),
++   .remove = vmci_remove_device,
+ };
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 19)
+@@ -1741,7 +1741,7 @@ vmci_enable_msix(struct pci_dev *pdev) /
+  *-----------------------------------------------------------------------------
+  */
+ 
+-static int __devinit
++static int 
+ vmci_probe_device(struct pci_dev *pdev,           // IN: vmci PCI device
+                   const struct pci_device_id *id) // IN: matching device ID
+ {
+@@ -1969,7 +1969,7 @@ vmci_probe_device(struct pci_dev *pdev,
+  *-----------------------------------------------------------------------------
+  */
+ 
+-static void __devexit
++static void 
+ vmci_remove_device(struct pci_dev* pdev)
+ {
+    struct vmci_device *dev = pci_get_drvdata(pdev);
