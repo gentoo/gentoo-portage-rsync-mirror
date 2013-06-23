@@ -1,6 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.4.ebuild,v 1.1 2008/07/07 14:42:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/dxr3config-0.3.4.ebuild,v 1.2 2013/06/23 18:19:36 hd_brummy Exp $
+
+EAPI="5"
+
+RESTRICT="mirror bindist"
 
 inherit eutils
 
@@ -11,7 +15,7 @@ DESCRIPTION="a small tool, which helps you to find the appropriate module parame
 HOMEPAGE="http://free.pages.at/wicky4vdr"
 SRC_URI="http://free.pages.at/wicky4vdr/download/${MY_P}.tgz"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -21,10 +25,7 @@ RDEPEND="dev-util/dialog
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-modprobed.diff"
 	sed -i -e 's:DIST="debian":DIST="gentoo":' usr/sbin/${PN}
 }

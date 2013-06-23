@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer-sh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/ChangeLog,v 1.7 2007/11/27 11:48:52 zzam Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/ChangeLog,v 1.9 2013/06/23 18:09:30 hd_brummy Exp $
+
+  23 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  mplayer-sh-0.8.6-r2.ebuild, mplayer-sh-0.8.7.ebuild:
+  minor syntax fixes for EAPI=5
+
+  23 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  mplayer-sh-0.8.6-r2.ebuild, mplayer-sh-0.8.7.ebuild:
+  fixed unclear license as-is, see wrt bug 446222
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   mplayer-sh-0.8.6-r2.ebuild, mplayer-sh-0.8.7.ebuild:

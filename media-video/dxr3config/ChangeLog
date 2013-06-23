@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dxr3config
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.8 2012/01/02 09:26:44 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3config/ChangeLog,v 1.9 2013/06/23 18:19:36 hd_brummy Exp $
+
+  23 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org> dxr3config-0.3.4.ebuild:
+  eapi=5; fixed unclear license, see wrt bug 446218
 
   02 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -dxr3config-0.3.2.ebuild:
   old

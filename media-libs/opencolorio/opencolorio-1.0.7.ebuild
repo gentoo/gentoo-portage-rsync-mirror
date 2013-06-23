@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.7.ebuild,v 1.1 2013/01/16 05:47:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.7.ebuild,v 1.2 2013/06/23 18:12:41 pinkbyte Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="opengl? (
 		media-libs/freeglut
 		virtual/opengl
 		)
-	dev-cpp/yaml-cpp
+	=dev-cpp/yaml-cpp-0.3*
 	dev-libs/tinyxml
 	"
 DEPEND="${RDEPEND}

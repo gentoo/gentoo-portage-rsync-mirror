@@ -1,8 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.7.ebuild,v 1.4 2007/11/27 11:48:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.7.ebuild,v 1.6 2013/06/23 18:09:30 hd_brummy Exp $
+
+EAPI="5"
 
 inherit eutils
+
+RESTRICT="mirror bindist"
 
 DESCRIPTION="Video Disk Recorder Mplayer API Script"
 HOMEPAGE="http://batleth.sapienti-sat.org/projects/VDR/"
@@ -10,18 +14,14 @@ SRC_URI="http://batleth.sapienti-sat.org/projects/VDR/versions/mplayer.sh-${PV}.
 
 KEYWORDS="x86 ~amd64"
 SLOT="0"
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 IUSE=""
 
 RDEPEND=">=media-video/mplayer-0.1.20070321"
 
 S=${WORKDIR}
 
-src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-parameter-aid.diff"
 
 	sed -i "s:^declare CFGFIL.*$:declare CFGFIL=\"\/etc\/vdr\/plugins\/mplayer\/mplayer.sh.conf\":"  mplayer.sh
