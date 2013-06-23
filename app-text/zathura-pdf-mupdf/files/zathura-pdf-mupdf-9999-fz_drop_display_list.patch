@@ -1,0 +1,20 @@
+--- zathura-pdf-mupdf-9999/pdf.c
++++ zathura-pdf-mupdf-9999/pdf.c
+@@ -506,7 +506,7 @@
+   }
+ 
+   fz_drop_pixmap(mupdf_page->ctx, pixmap);
+-  fz_free_display_list(mupdf_page->ctx, display_list);
++  fz_drop_display_list(mupdf_page->ctx, display_list);
+ 
+   return image_buffer;
+ }
+@@ -580,7 +580,7 @@
+   }
+ 
+   fz_drop_pixmap(mupdf_page->ctx, pixmap);
+-  fz_free_display_list(mupdf_page->ctx, display_list);
++  fz_drop_display_list(mupdf_page->ctx, display_list);
+ 
+   return ZATHURA_ERROR_OK;;
+ }

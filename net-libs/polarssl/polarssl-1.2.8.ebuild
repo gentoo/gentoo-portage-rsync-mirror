@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.2.8.ebuild,v 1.1 2013/06/23 12:21:44 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.2.8.ebuild,v 1.2 2013/06/23 12:43:59 tommy Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_compile() {
-	tc-export CC
+	tc-export CC AR
 	emake -C library libpolarssl.so || die "emake failed"
 
 	if use examples ; then

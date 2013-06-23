@@ -1056,7 +1056,12 @@ app-text/xiphos:webkit - Use net-libs/webkit-gtk instead of gnome-extra/gtkhtml
 app-text/yagf:cuneiform - Enable support for the app-text/cuneiform OCR engine.
 app-text/yagf:tesseract - Enable support for the app-text/tesseract OCR engine.
 app-text/zathura:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
+app-text/zathura-cb:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
+app-text/zathura-djvu:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-text/zathura-meta:cb - Install plug-in for ComicBook support
+app-text/zathura-pdf-mupdf:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
+app-text/zathura-pdf-poppler:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
+app-text/zathura-ps:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-vim/vim-latex:html - Install HTML documentation
 app-vim/vim-latex:python - Enable python support which can help speed up some functionality
@@ -4882,6 +4887,7 @@ net-misc/ofono:provision - Enable GPRS provisioning support
 net-misc/ofono:qmimodem - Enable Qualcomm QMI modem support
 net-misc/ofono:tools - Enable testing tools
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
+net-misc/openconnect:libproxy - Enable proxy support.
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
 net-misc/openssh:hpn - Enable high performance ssh

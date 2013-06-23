@@ -12,5 +12,8 @@
 		<description>Proxy maintainer. CC him on bugs.</description>
 	</maintainer>
 	<herd>proxy-maintainers</herd>
+	<use>
+		<flag name='libproxy'>Enable proxy support.</flag>
+	</use>
 </pkgmetadata>
 
