@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/Capture-Tiny-0.210.0.ebuild,v 1.4 2013/06/22 14:57:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/Capture-Tiny-0.210.0.ebuild,v 1.5 2013/06/23 13:42:23 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Capture STDOUT and STDERR from Perl, XS or external programs"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="test"
 
 DEPEND="

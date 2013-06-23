@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/YAML
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/ChangeLog,v 1.4 2012/09/17 21:39:51 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/ChangeLog,v 1.5 2013/06/23 13:52:42 jer Exp $
+
+  23 Jun 2013; Jeroen Roovers <jer@gentoo.org> YAML-1.0.6.ebuild:
+  Stable for HPPA too.
 
   17 Sep 2012; Johannes Huber <johu@gentoo.org> YAML-1.0.6.ebuild:
   Stable for x86, wrt bug #429026

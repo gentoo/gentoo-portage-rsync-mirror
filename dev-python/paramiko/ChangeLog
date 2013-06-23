@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.88 2013/05/04 03:35:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.89 2013/06/23 13:39:55 jer Exp $
+
+  23 Jun 2013; Jeroen Roovers <jer@gentoo.org> paramiko-1.10.1.ebuild:
+  Stable for HPPA (bug #474190).
 
 *paramiko-1.10.1 (04 May 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.139 2013/06/19 16:17:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.140 2013/06/23 13:36:34 jer Exp $
+
+  23 Jun 2013; Jeroen Roovers <jer@gentoo.org> octave-3.6.4.ebuild:
+  Stable for HPPA (bug #473850).
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org>
   -files/octave-3.6.3-rcond.patch, -octave-3.6.3.ebuild,

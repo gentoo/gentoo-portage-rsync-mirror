@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/PHP_CodeCoverage-1.1.2.ebuild,v 1.3 2012/08/21 12:42:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/PHP_CodeCoverage-1.1.2.ebuild,v 1.4 2013/06/23 13:49:56 jer Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://pear.phpunit.de/get/PHP_CodeCoverage-1.1.2.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 
 DEPEND=">=dev-php/pear-1.9.4

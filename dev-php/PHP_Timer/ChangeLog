@@ -1,6 +1,9 @@
-# ChangeLog for dev-php/php-timer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_Timer/ChangeLog,v 1.2 2012/06/22 19:42:13 mabi Exp $
+# ChangeLog for dev-php/PHP_Timer
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_Timer/ChangeLog,v 1.3 2013/06/23 13:50:24 jer Exp $
+
+  23 Jun 2013; Jeroen Roovers <jer@gentoo.org> PHP_Timer-1.0.2.ebuild:
+  Stable for HPPA too.
 
   22 Jun 2012; Matti Bickel <mabi@gentoo.org> -PHP_Timer-1.0.0.ebuild:
   remove old
