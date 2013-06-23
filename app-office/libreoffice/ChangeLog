@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.478 2013/06/23 09:39:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.479 2013/06/23 15:42:24 scarabeus Exp $
+
+*libreoffice-4.1.0.1 (23 Jun 2013)
+
+  23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-4.1.0.1.ebuild:
+  Bump to 4.1 rc1 for testing.
 
   23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.4.2.ebuild,
   libreoffice-4.0.9999.ebuild, libreoffice-4.1.9999.ebuild,

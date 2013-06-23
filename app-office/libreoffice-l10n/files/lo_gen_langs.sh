@@ -7,7 +7,7 @@
 # Find l10n packs for libreoffice and format it for use in ebuilds.
 #
 
-VERSION=${1:-4.0.1}
+VERSION=${1:-4.1.0}
 BASE_SRC_URI="http://download.documentfoundation.org/libreoffice/testing/${VERSION}/rpm/x86"
 
 # needs lxml

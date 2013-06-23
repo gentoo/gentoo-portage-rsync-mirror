@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.10.ebuild,v 1.2 2013/06/18 04:06:12 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.10.ebuild,v 1.3 2013/06/23 15:40:57 jer Exp $
 
 EAPI=4
 inherit eutils multilib autotools toolchain-funcs
@@ -72,9 +72,14 @@ src_configure() {
 		--disable-compiler-optimisations \
 		--disable-compiler-warnings \
 		--disable-linker-optimisations \
+		--disable-silent-rules \
 		--disable-start-stop-daemon \
 		--localstatedir="${EPREFIX}"/var \
 		--without-selinux
+}
+
+src_compile() {
+	emake AR=$(tc-getAR)
 }
 
 src_install() {
