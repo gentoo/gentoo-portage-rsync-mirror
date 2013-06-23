@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7964 2013/06/22 19:57:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7965 2013/06/23 07:40:50 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jun 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask packages currently included in emul-linux-x86-baselibs that are
+  incorporating native multilib support (as requested by mgorny via IRC for a
+  bit more testing)
 
   22 Jun 2013; Luca Barbato <lu_zero@gentoo.org> package.mask:
   Unleash libav-9 to the tree

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14848 2013/06/22 19:57:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14849 2013/06/23 07:40:50 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (23 Jun 2013)
+# Mask for packages currently included in emul-linux-x86-baselibs
+# that are incorporating native multilib support.
+>=app-arch/bzip2-1.0.6-r4
+>=sys-libs/zlib-1.2.8-r1
 
 # Justin Bronder <jsbronder@gentoo.org> (21 Jun 2013)
 # Only ever used to build older version of media-gfx/openmesh

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=minizip? ( || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool )
+DESCRIPTION=Standard (de)compression library
+EAPI=4
+HOMEPAGE=http://www.zlib.net/
+IUSE=minizip static-libs abi_x86_32 abi_x86_64 abi_x86_x32
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+LICENSE=ZLIB
+RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224 ) !<dev-libs/libxml2-2.7.7
+SLOT=0
+SRC_URI=http://zlib.net/zlib-1.2.8.tar.gz http://www.gzip.org/zlib/zlib-1.2.8.tar.gz http://www.zlib.net/current/beta/zlib-1.2.8.tar.gz
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	2f24bbf5311ec79274331abba1a6fbd6	multilib-minimal	70d90bda3149c94f02fa594ff1657ec0	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=16ac0132e33634a1d1a391c01202a43d
