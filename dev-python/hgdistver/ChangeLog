@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/hgdistver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hgdistver/ChangeLog,v 1.2 2013/05/09 12:20:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hgdistver/ChangeLog,v 1.3 2013/06/23 05:14:59 idella4 Exp $
+
+*hgdistver-0.16-r1 (23 Jun 2013)
+
+  23 Jun 2013; Ian Delaney <idella4@gentoo.org> +hgdistver-0.16-r1.ebuild:
+  revbump; migrate -> distutils-r1, added link to upstream bug re the test suite
 
   09 May 2013; Markus Meier <maekke@gentoo.org> hgdistver-0.16.ebuild:
   add ~arm, bug #462506
@@ -10,4 +15,3 @@
   10 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> +hgdistver-0.16.ebuild,
   +metadata.xml:
   Initial version of hgdistver (for cffi, bug 437768).
-

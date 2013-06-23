@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.124 2013/06/22 02:37:03 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.125 2013/06/23 05:26:18 mattm Exp $
+
+*zabbix-2.0.6-r5 (23 Jun 2013)
+
+  23 Jun 2013; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.6-r5.ebuild,
+  -zabbix-2.0.6-r1.ebuild, -zabbix-2.0.6-r2.ebuild, -zabbix-2.0.6-r3.ebuild,
+  -zabbix-2.0.6-r4.ebuild, -zabbix-2.0.6.ebuild:
+  Fix for bug #450742 - Newer versions of curl are incompatible with zabbix
+  2.0.x until upstream makes fixes (been waiting 3+ months for fix).
 
 *zabbix-2.0.6-r4 (22 Jun 2013)
 
