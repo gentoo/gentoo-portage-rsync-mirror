@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.14 2013/05/19 05:55:59 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.15 2013/06/23 14:03:46 jer Exp $
+
+  23 Jun 2013; Jeroen Roovers <jer@gentoo.org> phpunit-3.5.13.ebuild,
+  phpunit-3.6.0.ebuild, phpunit-3.6.10.ebuild, phpunit-3.6.11.ebuild,
+  phpunit-3.7.19.ebuild, phpunit-3.7.20.ebuild:
+  Marked ~hppa too.
 
 *phpunit-3.7.20 (19 May 2013)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20130514.ebuild,v 1.1 2013/05/13 19:40:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20130514.ebuild,v 1.2 2013/06/23 14:06:13 hasufell Exp $
 
 EAPI=5
 
-inherit eutils mono gnome2-utils vcs-snapshot games
+inherit eutils mono-env gnome2-utils vcs-snapshot games
 
 DESCRIPTION="A free RTS engine supporting games like Command & Conquer and Red Alert"
 HOMEPAGE="http://open-ra.org/"
@@ -24,6 +24,11 @@ DEPEND="dev-dotnet/libgdiplus
 	virtual/opengl
 	cg? ( >=media-gfx/nvidia-cg-toolkit-2.1.0017 )"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	mono-env_pkg_setup
+	games_pkg_setup
+}
 
 src_unpack() {
 	vcs-snapshot_src_unpack
