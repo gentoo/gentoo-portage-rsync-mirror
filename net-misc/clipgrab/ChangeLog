@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/clipgrab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.15 2013/04/21 07:26:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.16 2013/06/23 16:15:27 xmw Exp $
+
+*clipgrab-3.2.1.0 (23 Jun 2013)
+
+  23 Jun 2013; Michael Weber <xmw@gentoo.org> +clipgrab-3.2.1.0.ebuild,
+  +files/clipgrab-3.2.1.0-obey.patch, -clipgrab-3.2.0.10.ebuild,
+  -clipgrab-3.2.0.9.ebuild, -files/3.2.0.6-obey.patch, clipgrab-3.2.0.11.ebuild:
+  Version bump, revert to media-libs/ffmpeg (bug 474368 by Nikoli), drop old.
 
 *clipgrab-3.2.0.11 (21 Apr 2013)
 

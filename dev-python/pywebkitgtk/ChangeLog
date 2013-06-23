@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pywebkitgtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.31 2013/06/23 15:26:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.33 2013/06/23 16:18:39 floppym Exp $
+
+  23 Jun 2013; Mike Gilbert <floppym@gentoo.org> pywebkitgtk-1.1.8-r1.ebuild:
+  Don't die in testing function; we should let virtualmake clean up after
+  itself.
+
+  23 Jun 2013; Mike Gilbert <floppym@gentoo.org> pywebkitgtk-1.1.8-r1.ebuild:
+  Use virtualx for the test suite.
 
   23 Jun 2013; Mike Gilbert <floppym@gentoo.org> pywebkitgtk-1.1.8-r1.ebuild:
   Use autotools-utils for out-of-source building, bug 474360.

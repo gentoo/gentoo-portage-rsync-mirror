@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-3.2.0.9.ebuild,v 1.2 2013/03/02 22:59:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-3.2.1.0.ebuild,v 1.1 2013/06/23 16:15:27 xmw Exp $
 
-EAPI=4
+EAPI=5
 
 inherit qt4-r2 eutils
 
@@ -16,11 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-qt/qtwebkit:4"
+# does not work with libav #474368
 RDEPEND="${DEPEND}
-	virtual/ffmpeg"
+	media-video/ffmpeg"
 
 PATCHES=(
-	"${FILESDIR}/3.2.0.6-obey.patch"
+	"${FILESDIR}/${PN}-3.2.1.0-obey.patch"
 )
 
 src_install() {
