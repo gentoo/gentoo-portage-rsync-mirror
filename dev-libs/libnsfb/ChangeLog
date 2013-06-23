@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnsfb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.6 2013/06/17 19:44:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.7 2013/06/23 16:45:19 xmw Exp $
+
+  23 Jun 2013; Michael Weber <xmw@gentoo.org> libnsfb-0.1.0.ebuild:
+  Migrate to netsurf.eclass
 
 *libnsfb-0.1.0 (17 Jun 2013)
 

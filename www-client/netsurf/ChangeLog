@@ -1,6 +1,10 @@
 # ChangeLog for www-client/netsurf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/ChangeLog,v 1.9 2013/06/19 07:26:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/ChangeLog,v 1.10 2013/06/23 16:53:54 xmw Exp $
+
+  23 Jun 2013; Michael Weber <xmw@gentoo.org> +files/netsurf-3.0-CFLAGS.patch,
+  netsurf-3.0.ebuild:
+  Migrate to netsurf.eclass
 
 *netsurf-3.0 (19 Jun 2013)
 

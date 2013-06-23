@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nsgenbind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nsgenbind/ChangeLog,v 1.1 2013/06/18 09:42:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nsgenbind/ChangeLog,v 1.2 2013/06/23 16:46:30 xmw Exp $
+
+  23 Jun 2013; Michael Weber <xmw@gentoo.org> nsgenbind-0.0.1.ebuild:
+  Migrate to netsurf.eclass
 
 *nsgenbind-0.0.1 (18 Jun 2013)
 

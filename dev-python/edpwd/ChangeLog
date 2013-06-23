@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/edpwd
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/edpwd/ChangeLog,v 1.1 2013/06/23 16:46:38 tampakrap Exp $
+
+*edpwd-0.0.4 (23 Jun 2013)
+
+  23 Jun 2013; Theo Chatzimichos <tampakrap@gentoo.org> +edpwd-0.0.4.ebuild,
+  +metadata.xml:
+  Initial commit
