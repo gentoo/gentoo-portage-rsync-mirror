@@ -1,6 +1,102 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.121 2013/05/20 18:22:56 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.123 2013/06/23 09:51:50 aidecoe Exp $
+
+  23 Jun 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-014-r3.ebuild,
+  -dracut-018-r3.ebuild, -dracut-019-r6.ebuild, -dracut-022-r6.ebuild,
+  -dracut-023-r4.ebuild, -dracut-024-r4.ebuild, -dracut-025.ebuild,
+  -dracut-026.ebuild, -dracut-026-r1.ebuild, -dracut-027.ebuild,
+  -dracut-027-r1.ebuild, -dracut-027-r2.ebuild,
+  -files/025-0000-fix-version-print.patch,
+  -files/019-0001-90multipath-added-kpartx.rules-multipa.patch,
+  -files/024-0001-Fallback-to-external-blkid-and-path_id.patch,
+  -files/023-0001-dracut-functions.sh-find_binary-path-s.patch,
+  -files/025-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/022-0001-qemu-module-setup.sh-provide-alternati.patch,
+  -files/023-0002-90crypt-call-systemd-commands-only-if-.patch,
+  -files/019-0002-Avoid-annonying-warnings-when-pkg-conf.patch,
+  -files/022-0002-Makefile-use-implicit-rules-for-instal.patch,
+  -files/024-0002-dracut-functions.sh-fixed-inst_rules-s.patch,
+  -files/025-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/019-0003-99shutdown-remove-no-wall-argument-for.patch,
+  -files/023-0003-Fallback-to-external-blkid-and-path_id.patch,
+  -files/024-0003-dracut-functions.sh-support-for-altern.patch,
+  -files/022-0003-kernel-modules-module-setup.sh-just-op.patch,
+  -files/025-0003-rootfs-block-mount-root.sh-fixup-for-8.patch,
+  -files/022-0004-90multipath-added-kpartx.rules-multipa.patch,
+  -files/019-0004-dracut.sh-do-not-copy-var-run-and-var-.patch,
+  -files/025-0004-dracut.sh-reverting-return-value-chang.patch,
+  -files/024-0004-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/025-0005-Mount-proc-before-including-dracut-lib.patch,
+  -files/019-0005-dracut.sh-create-relative-symlinks-for.patch,
+  -files/022-0005-gentoo.conf-set-udevdir.patch,
+  -files/022-0006-Config-file-for-systemd-on-Gentoo.patch,
+  -files/022-0007-Remove-obsolete-gentoo-conf-file.patch,
+  -files/022-0008-95rootfs-block-fix-left-fsck-rel.-chec.patch,
+  -files/022-0009-98usrmount-use-rw-and-ro-options-inste.patch,
+  -files/022-0010-98usrmount-print-mount-options.patch,
+  -files/022-0011-dracut-lib-new-functions-listlist-and-.patch,
+  -files/022-0012-apply-ro-and-rw-options-from-cmdline-t.patch,
+  -files/022-0013-ro_mnt-option-at-build-time-to-force-r.patch,
+  -files/dracut-014-multipath-udev-rules.patch,
+  -files/022-0014-parse-root-opts-first-check-for-ro-lat.patch,
+  -files/dracut-014-usrmount-fsck-fix.patch,
+  -files/022-0015-gentoo.conf-enable-ro_mnt.patch,
+  -files/022-0016-dracut.sh-test-if-we-can-lazy-resolve-.patch,
+  -files/022-0017-99shutdown-remove-no-wall-argument-for.patch,
+  -files/022-0018-dracut.sh-do-not-copy-var-run-and-var-.patch,
+  -files/dracut-018-lsinitrd-support-symlinks.patch,
+  -files/dracut-018-multipath-udev-rules.patch,
+  -files/022-0019-dracut.sh-create-relative-symlinks-for.patch:
+  Remove old versions (prior to 026) and old revisions of 026 and 027.
+
+*dracut-029 (23 Jun 2013)
+
+  23 Jun 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-029.ebuild,
+  +files/029-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/029-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/029-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (from Dracut NEWS file)
+
+  dracut-029
+  ==========
+  - wait for IPv6 autoconfiguration
+  - i18n: make the default font configurable
+  - proper handle "rd.break" in systemd mode before switch-root
+  - systemd: make unit files symlinks
+  - build without dash requirement
+  - add dracut-shutdown.service.8 manpage
+  - handle MACs for "ip="
+    "ip=77-77-6f-6f-64-73:dhcp"
+  - don't explode when mixing BOOTIF and ip=
+  - 90lvm/module-setup.sh: redirect error message of lvs to /dev/null
+
+  dracut-028
+  ==========
+  - full integration of crypto devs in systemd logic
+  - support for bridge over team and vlan tagged team
+  - support multiple bonding interfaces
+  - new kernel command line param "rd.action_on_fail"
+    to control the emergency action
+  - support for bridge over a vlan tagged interface
+  - support for "iso-scan/filename" kernel parameter
+  - lsinitrd got some love and does not use "file" anymore
+  - fixed issue with noexec mounted tmp dirs
+  - FIPS mode fixed
+  - dracut_install got some love
+  - fixed some /usr mounting problems
+  - ifcfg dracut module got some love and fixes
+  - default installed font is now latarcyrheb-sun16
+  - new parameters rd.live.dir and rd.live.squashimg
+  - lvm: add tools for thin provisioning
+  - also install non-hwcap libs
+  - setup correct system time and time zone in initrd
+  - s390: fixed cms setup
+  - add systemd-udevd persistent network interface naming
 
 *dracut-027-r3 (20 May 2013)
 

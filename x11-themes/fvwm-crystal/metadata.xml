@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>proxy-maintainers</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>dominique.michel@vtxnet.ch</email>
+  <name>Dominique Michel</name>
 </maintainer>
 <longdescription>
 FVWM-Crystal is a set of configuration files for FVWM window manager,

@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/fvwm-crystal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.72 2012/07/29 17:48:29 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.73 2013/06/23 10:00:55 hwoarang Exp $
+
+*fvwm-crystal-3.2.3 (23 Jun 2013)
+
+  23 Jun 2013; Markos Chandras <hwoarang@gentoo.org> +fvwm-crystal-3.2.3.ebuild,
+  metadata.xml:
+  Version bump. Bug #468680. Ebuild by Dominique Michel
+  <dominique.michel@vtxnet.ch> who will maintain it from now on
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> fvwm-crystal-3.0.6-r2.ebuild:
   Drop sparc keywords
@@ -336,5 +343,3 @@
   13 Mar 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-crystal-1.0.1.ebuild:
   initial import, based on ebuild provided by lucass <lucass AT gentoo.pl>
   in #37043.
-
-

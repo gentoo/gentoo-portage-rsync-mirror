@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.9999.ebuild,v 1.3 2013/06/20 11:40:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.9999.ebuild,v 1.4 2013/06/23 09:39:34 scarabeus Exp $
 
 EAPI=5
 
@@ -236,6 +236,7 @@ REQUIRED_USE="
 	bluetooth? ( dbus )
 	gnome? ( gtk )
 	eds? ( gnome )
+	telepathy? ( gtk )
 	libreoffice_extensions_nlpsolver? ( java )
 	libreoffice_extensions_scripting-beanshell? ( java )
 	libreoffice_extensions_scripting-javascript? ( java )

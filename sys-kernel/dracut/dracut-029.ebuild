@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-027.ebuild,v 1.3 2013/04/09 10:09:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-029.ebuild,v 1.1 2013/06/23 09:43:16 aidecoe Exp $
 
 EAPI=4
 
-inherit bash-completion-r1 eutils linux-info
+inherit eutils linux-info systemd
 
 add_req_use_for() {
 	local dep="$1"; shift
@@ -155,18 +155,13 @@ rm_module() {
 #
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-0000-fix-version-print.patch"
 	epatch "${FILESDIR}/${PV}-0001-dracut-functions.sh-support-for-altern.patch"
 	epatch "${FILESDIR}/${PV}-0002-gentoo.conf-let-udevdir-be-handled-by-.patch"
+	epatch "${FILESDIR}/${PV}-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch"
 
 	if use dracut_modules_systemd; then
-		local systemdutildir="$($(tc-getPKG_CONFIG) systemd \
-			--variable=systemdutildir)"
-		local systemdsystemunitdir="$($(tc-getPKG_CONFIG) systemd \
-			--variable=systemdsystemunitdir)"
-		[[ ${systemdutildir} ]] || die "Couldn't detect systemdutildir"
-		[[ ${systemdsystemunitdir} ]] \
-			|| die "Couldn't detect systemdsystemunitdir"
+		local systemdutildir="$(systemd_get_utildir)"
+		local systemdsystemunitdir="$(systemd_get_unitdir)"
 		einfo "Setting systemdutildir to ${systemdutildir} and ..."
 		sed -e "4asystemdutildir=\"${systemdutildir}\"" \
 			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
@@ -177,7 +172,21 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --libdir="${MY_LIBDIR}"
+	local myconf="--libdir='${MY_LIBDIR}'"
+	local bashcompletiondir=/usr/share/bash-completion
+
+	if $(tc-getPKG_CONFIG) bash-completion --exists; then
+		bashcompletiondir="$($(tc-getPKG_CONFIG) bash-completion \
+			--variable=completionsdir)"
+	fi
+
+	myconf+=" --bashcompletiondir=${bashcompletiondir}"
+
+	if use dracut_modules_systemd; then
+		myconf+=" --systemdsystemunitdir='$(systemd_get_unitdir)'"
+	fi
+
+	econf ${myconf}
 }
 
 src_compile() {
@@ -192,8 +201,6 @@ src_compile() {
 
 src_install() {
 	default
-
-	newbashcomp "${PN}-bash-completion.sh" "${PN}"
 
 	local dracutlibdir="${MY_LIBDIR#/}/dracut"
 

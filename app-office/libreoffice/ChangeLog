@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.477 2013/06/20 11:40:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.478 2013/06/23 09:39:34 scarabeus Exp $
+
+  23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.4.2.ebuild,
+  libreoffice-4.0.9999.ebuild, libreoffice-4.1.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Fix +telepathy -gtk build. Don't have the time to fix configure upstream. Wrt
+  bug#461514.
 
 *libreoffice-4.0.4.2 (20 Jun 2013)
 
