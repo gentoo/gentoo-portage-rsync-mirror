@@ -1,0 +1,50 @@
+--- xpra-0.9.5/xpra/scripts/config.py
++++ xpra-0.9.5/xpra/scripts/config.py
+@@ -117,9 +117,10 @@
+         if e.args[0]==errno.EACCES:
+             return "VirtualBox is present (VBoxMiniRdrDN)"
+     return None
+-OPENGL_DEFAULT = False
+-#if OpenGL_safety_check() is not None:
+-#    OPENGL_DEFAULT = False
++if OpenGL_safety_check() is not None:
++    OPENGL_DEFAULT = False
++else:
++    OPENGL_DEFAULT = None
+ 
+ 
+ 
+@@ -452,6 +453,13 @@
+     else:
+         warn("Warning: cannot parse value '%s' for '%s' as a boolean" % (v, k))
+ 
++def print_bool(k, v):
++    if type(v)==type(None):
++	return 'auto'
++    if type(v)==bool:
++	return v and 'yes' or 'no'
++    warn("Warning: cannot print value '%s' for '%s' as a boolean" % (v, k))
++
+ def parse_number(numtype, k, v, auto=-1):
+     if type(v)==str:
+         v = v.lower()
+--- xpra-0.9.5/xpra/scripts/main.py
++++ xpra-0.9.5/xpra/scripts/main.py
+@@ -24,7 +24,7 @@
+                            get_default_socket_dir,
+                            init as platform_init)
+ from xpra.bytestreams import TwoFileConnection, SocketConnection
+-from xpra.scripts.config import ENCODINGS, ENCRYPTION_CIPHERS, make_defaults_struct, show_codec_help, parse_bool
++from xpra.scripts.config import ENCODINGS, ENCRYPTION_CIPHERS, make_defaults_struct, show_codec_help, parse_bool, print_bool
+ from wimpiggy.gobject_compat import import_gobject
+ 
+ SIGNAMES = {signal.SIGINT:"SIGINT", signal.SIGTERM:"SIGTERM"}
+@@ -253,7 +253,7 @@
+                 "These options control client features that affect the appearance or the keyboard.")
+     parser.add_option_group(group)
+     group.add_option("--opengl", action="store",
+-                      dest="opengl", default=defaults.opengl,
++                      dest="opengl", default=print_bool('opengl', defaults.opengl),
+                       help="Use OpenGL accelerated rendering, options: yes,no,auto. Default: %default.")
+     group.add_option("--no-windows", action="store_false",
+                       dest="windows", default=defaults.windows,

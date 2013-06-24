@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.70 2013/06/17 08:03:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.71 2013/06/24 15:41:19 xmw Exp $
+
+*xpra-0.9.5-r2 (24 Jun 2013)
+
+  24 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/xpra-0.9.5-opengl-auto.patch, +xpra-0.9.5-r2.ebuild:
+  Revbump to add IUSE=opengl (bug 470274, thanks Oliver Freyermuth). Make opengl
+  default to auto and improve --help output. Replace configuration patches with
+  setup.py --with/--without syntax. IUSE=sound adopted from upstream, but
+  untested.
 
   17 Jun 2013; Michael Weber <xmw@gentoo.org> -xpra-0.9.4-r1.ebuild,
   -xpra-0.9.4.ebuild, -xpra-0.9.5.ebuild:
