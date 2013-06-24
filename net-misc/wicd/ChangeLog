@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.139 2013/06/02 11:00:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.140 2013/06/24 22:02:53 tomka Exp $
+
+*wicd-1.7.2.4-r3 (24 Jun 2013)
+
+  24 Jun 2013; Thomas Kahle <tomka@gentoo.org>
+  +files/wicd-1.7.2.4-fix-desktop-categories.patch, +wicd-1.7.2.4-r3.ebuild:
+  bump to eapi5 and distutils-r1 (bugs 469910, 473772)
 
   02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #328951

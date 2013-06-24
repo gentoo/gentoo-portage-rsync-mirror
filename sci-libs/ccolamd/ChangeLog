@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccolamd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.31 2012/11/12 01:50:17 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.32 2013/06/24 22:23:35 bicatali Exp $
+
+  24 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -ccolamd-2.7.1.ebuild,
+  -ccolamd-2.7.4.ebuild, ccolamd-2.8.0.ebuild:
+  Switch to EAPI5 and new tar ball
 
 *ccolamd-2.8.0 (12 Nov 2012)
 
