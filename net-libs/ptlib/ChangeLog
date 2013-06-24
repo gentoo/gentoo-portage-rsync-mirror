@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.48 2013/06/22 19:11:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.49 2013/06/24 09:57:14 scarabeus Exp $
+
+  24 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/ptlib-2.12.4-sdl-linking.patch, ptlib-2.12.4.ebuild:
+  Fix building when linking to sdl, the libs were not propagated properly. Wrt
+  bug#474362.
 
 *ptlib-2.12.4 (22 Jun 2013)
 

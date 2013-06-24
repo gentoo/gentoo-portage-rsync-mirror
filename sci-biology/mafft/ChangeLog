@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/mafft
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.17 2013/06/12 13:42:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.18 2013/06/24 09:53:38 jlec Exp $
+
+*mafft-7.047 (24 Jun 2013)
+
+  24 Jun 2013; Justin Lecher <jlec@gentoo.org> +mafft-7.047.ebuild:
+  Version Bump
 
 *mafft-7.046 (12 Jun 2013)
 

@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.480 2013/06/18 23:01:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.481 2013/06/24 09:50:13 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Chí-Thanh Christopher Nguyễn (24 Jun 2013)
+# Breaks linking against libsdl, bug #474362
+=net-libs/ptlib-2.12* sdl
 
 # Michael Weber <xmw@gentoo.org>  (19 Jun 2013)
 # Not fit for production

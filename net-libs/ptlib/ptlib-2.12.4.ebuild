@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.12.4.ebuild,v 1.1 2013/06/22 19:11:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.12.4.ebuild,v 1.2 2013/06/24 09:57:14 scarabeus Exp $
 
 EAPI=5
 
@@ -55,6 +55,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.10.9-svn_revision_override.patch"
 	epatch "${FILESDIR}/${PN}-2.10.9-pkgconfig_ldflags.patch"
 	epatch "${FILESDIR}/${PN}-2.12.4-respect_cxxflags.patch"
+	epatch "${FILESDIR}/${PN}-2.12.4-sdl-linking.patch"
 
 	if ! use telnet; then
 		epatch "${FILESDIR}/${PN}-2.10.9-disable-telnet-symbols.patch"
@@ -79,9 +80,9 @@ src_configure() {
 
 	# plugins are disabled only if ! audio and ! video
 	if ! use audio && ! use video; then
-		myconf="${myconf} --disable-plugins"
+		myconf+=" --disable-plugins"
 	else
-		myconf="${myconf} --enable-plugins"
+		myconf+=" --enable-plugins"
 	fi
 
 	# minsize: presets of features (overwritten by use flags)
