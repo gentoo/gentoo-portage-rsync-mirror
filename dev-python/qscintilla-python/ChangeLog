@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.96 2013/03/10 17:44:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.97 2013/06/24 09:06:48 pesa Exp $
+
+  24 Jun 2013; Davide Pesavento <pesa@gentoo.org> -qscintilla-python-2.7.ebuild,
+  qscintilla-python-2.7.1.ebuild:
+  Add PYTHON_REQUIRED_USE. Remove old.
 
 *qscintilla-python-2.7.1 (10 Mar 2013)
 
