@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.114 2013/06/22 22:57:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.115 2013/06/24 14:43:00 voyageur Exp $
+
+  24 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.3.ebuild,
+  +files/llvm-3.3-R600_debug.patch:
+  Fix compilation with USE=debug and VIDEO_CARDS=radeon, thanks klondike in bug
+  #474096
 
   22 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.3.ebuild,
   llvm-9999.ebuild:
