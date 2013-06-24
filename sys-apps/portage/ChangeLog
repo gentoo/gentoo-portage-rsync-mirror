@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1298 2013/06/22 06:52:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1300 2013/06/24 21:50:02 zmedico Exp $
+
+*portage-2.2.0_alpha185 (24 Jun 2013)
+
+  24 Jun 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha185.ebuild,
+  -portage-2.2.0_alpha183.ebuild:
+  2.2.0_alpha185 version bump. This includes all of the fixes in 2.1.12.10. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.12.10 (24 Jun 2013)
+
+  24 Jun 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.12.10.ebuild,
+  -portage-2.1.12.8.ebuild:
+  2.1.12.10 version bump. This fixes bug #474578 (regression in 2.1.12.9 and
+  2.2.0_alpha184 which caused unwanted repoman to warnings about 'Location
+  undefined for repository'). Bug #472632 tracks all bugs fixed since
+  portage-2.1.12.2.
 
 *portage-2.2.0_alpha184 (22 Jun 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/4ti2-1.3.2-r1.ebuild,v 1.6 2012/06/22 12:39:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/4ti2-1.3.2-r1.ebuild,v 1.7 2013/06/24 21:56:57 tomka Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86 ~x86-macos"
 IUSE="static-libs"
 
 DEPEND="
-	sci-mathematics/glpk[gmp]
+	sci-mathematics/glpk:0[gmp]
 	dev-libs/gmp[cxx]"
 RDEPEND="${DEPEND}"
 

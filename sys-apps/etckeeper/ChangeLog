@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.18 2013/06/17 20:49:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.19 2013/06/24 21:36:47 hasufell Exp $
+
+  24 Jun 2013; Julian Ospald <hasufell@gentoo.org> etckeeper-0.63-r1.ebuild,
+  etckeeper-1.4.ebuild:
+  add PYTHON_REQUIRED_USE
 
 *etckeeper-1.4 (17 Jun 2013)
 

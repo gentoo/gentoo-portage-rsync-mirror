@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/4ti2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/ChangeLog,v 1.9 2012/06/22 12:39:26 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/ChangeLog,v 1.10 2013/06/24 21:56:57 tomka Exp $
+
+  24 Jun 2013; Thomas Kahle <tomka@gentoo.org> 4ti2-1.3.2-r1.ebuild,
+  4ti2-1.3.2.ebuild:
+  Depend on glpk slot 0 (bug 473380)
 
   22 Jun 2012; Justin Lecher <jlec@gentoo.org> 4ti2-1.3.2-r1.ebuild,
   +files/4ti2-1.3.2-gcc47.patch:
