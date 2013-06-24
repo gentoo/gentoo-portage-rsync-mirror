@@ -1,7 +1,7 @@
---- opencascade-6.5.4/Makefile.am
-+++ opencascade-6.5.4/Makefile.am
+--- opencascade-6.6.0/Makefile.am
++++ opencascade-6.6.0/Makefile.am
 @@ -82,27 +82,27 @@
- 	cd $(top_builddir)/adm/make && $(MAKE) $(AM_MAKEFLAGS) Draw
+ 	cd $(top_builddir)/adm/lin/amk && $(MAKE) $(AM_MAKEFLAGS) Draw
  
  install-exec-local:
 -	$(INSTALL) -d $(prefix)/$(platform)
@@ -33,14 +33,13 @@
  		done; \
  	fi
 -	if [ -e $(prefix)/inc/config.h ]; then \
--		unlink $(prefix)/inc/config.h; \
+-		rm -f $(prefix)/inc/config.h; \
 +	if [ -e $(DESTDIR)$(prefix)/inc/config.h ]; then \
-+		unlink $(DESTDIR)$(prefix)/inc/config.h; \
++		rm -f $(DESTDIR)$(prefix)/inc/config.h; \
  	fi
 -	cd $(prefix)/inc && ln -s ../config.h config.h
--	cd $(top_srcdir) && cp *.sh $(prefix)
+-	cd $(top_srcdir) && cp *amk.sh $(prefix)
 +	cd $(DESTDIR)$(prefix)/inc && ln -s ../config.h config.h
-+	cd $(top_srcdir) && cp *.sh $(DESTDIR)$(prefix)
++	cd $(top_srcdir) && cp *amk.sh $(DESTDIR)$(prefix)
  
  .PHONY: FoundationClasses ModelingData ModelingAlgorithms Visualization ApplicationFramework DataExchange Draw
-\ Brak znaku nowej linii na końcu pliku

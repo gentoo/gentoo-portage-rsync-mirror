@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/opencascade
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/ChangeLog,v 1.13 2013/04/27 21:53:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/ChangeLog,v 1.14 2013/06/24 19:16:11 xmw Exp $
+
+*opencascade-6.6.0 (24 Jun 2013)
+
+  24 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/opencascade-6.6.0-fixed-DESTDIR.patch, +opencascade-6.6.0.ebuild,
+  files/opencascade-6.5.4-fixed-DESTDIR.patch,
+  files/opencascade-6.5.4-fixed-tbb-VERSION.patch:
+  Version bump (bug 438466)
 
   27 Apr 2013; Michael Weber <xmw@gentoo.org> -opencascade-6.5.4.ebuild,
   opencascade-6.5.5.ebuild:
