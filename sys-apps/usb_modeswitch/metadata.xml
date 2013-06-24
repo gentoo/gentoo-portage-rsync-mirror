@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>freedesktop</herd>
+  <use>
+    <flag name='jimtcl'>Use <pkg>dev-lang/jimtcl</pkg> instead of <pkg>dev-lang/tcl</pkg> for smaller memory footprint</flag>
+  </use>
   <maintainer>
     <email>rafaelmartins@gentoo.org</email>
     <name>Rafael G. Martins</name>
