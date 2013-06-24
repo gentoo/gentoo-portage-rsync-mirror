@@ -1,28 +1,30 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.24.ebuild,v 1.4 2013/03/11 14:56:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.14.ebuild,v 1.1 2013/06/24 10:57:30 polynomial-c Exp $
 
-EAPI=2
+EAPI=5
 
-inherit eutils linux-mod multilib python versionator toolchain-funcs
+PYTHON_COMPAT=( python2_7 )
+inherit eutils linux-mod multilib python-single-r1 versionator toolchain-funcs
 
-MY_P=VirtualBox-${PV}
+MY_PV="${PV/beta/BETA}"
+MY_PV="${PV/rc/RC}"
+MY_P=VirtualBox-${MY_PV}
 DESCRIPTION="VirtualBox video driver"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
+SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="dri"
 
-RDEPEND="<x11-base/xorg-server-1.13.99[-minimal]
+RDEPEND="<x11-base/xorg-server-1.14.99[-minimal]
 	x11-libs/libXcomposite"
 DEPEND="${RDEPEND}
-	>=dev-util/kbuild-0.1.999
-	=dev-lang/python-2*
+	>=dev-util/kbuild-0.1.9998_pre20120806
+	${PYTHON_DEPS}
 	>=dev-lang/yasm-0.6.2
-	sys-devel/dev86
 	sys-power/iasl
 	x11-proto/fontsproto
 	x11-proto/randrproto
@@ -38,6 +40,8 @@ DEPEND="${RDEPEND}
 	dri? (  x11-proto/xf86driproto
 		>=x11-libs/libdrm-2.4.5 )"
 
+REQUIRED_USE=( "${PYTHON_REQUIRED_USE}" )
+
 BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxvideo(misc:${WORKDIR}/vboxvideo_drm:${WORKDIR}/vboxvideo_drm)"
@@ -50,8 +54,7 @@ pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 
-	python_set_active_version 2
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -106,8 +109,7 @@ src_compile() {
 		/src/VBox/Additions/x11/vboxvideo ; do
 			cd "${S}"${each}
 			MAKE="kmk" emake TOOL_YASM_AS=yasm \
-			KBUILD_PATH="${S}/kBuild" \
-				|| die "kmk failed"
+			KBUILD_PATH="${S}/kBuild"
 	done
 
 	if use dri; then
@@ -126,8 +128,11 @@ src_install() {
 	cd "${S}/out/linux.${ARCH}/release/bin/additions"
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+#	# xorg-server-1.14.x
+	if has_version ">=x11-base/xorg-server-1.13.99" ; then
+		newins vboxvideo_drv_114.so vboxvideo_drv.so
 	# xorg-server-1.13.x
-	if has_version ">=x11-base/xorg-server-1.13" ; then
+	elif has_version ">=x11-base/xorg-server-1.12.99" ; then
 		newins vboxvideo_drv_113.so vboxvideo_drv.so
 	# xorg-server-1.12.x
 	elif has_version ">=x11-base/xorg-server-1.12" ; then
@@ -145,7 +150,7 @@ src_install() {
 
 	# Guest OpenGL driver
 	insinto /usr/$(get_libdir)
-	doins -r VBoxOGL* || die
+	doins -r VBoxOGL*
 
 	if use dri ; then
 		dosym /usr/$(get_libdir)/VBoxOGL.so /usr/$(get_libdir)/dri/vboxvideo_dri.so
