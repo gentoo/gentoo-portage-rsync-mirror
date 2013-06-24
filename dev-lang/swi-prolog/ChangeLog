@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.386 2013/06/19 11:57:45 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.387 2013/06/24 05:26:41 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> swi-prolog-6.2.6.ebuild:
+  Stable for ppc, wrt bug #473922
 
 *swi-prolog-6.3.17 (19 Jun 2013)
 

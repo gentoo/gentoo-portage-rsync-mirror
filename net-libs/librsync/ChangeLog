@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/librsync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/ChangeLog,v 1.38 2013/05/03 14:07:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/ChangeLog,v 1.39 2013/06/24 05:18:47 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> librsync-0.9.7-r3.ebuild:
+  Stable for ppc, wrt bug #474270
 
 *librsync-0.9.7-r3 (03 May 2013)
 

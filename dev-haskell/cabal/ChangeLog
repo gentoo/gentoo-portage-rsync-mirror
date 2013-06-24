@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.84 2013/04/17 08:14:01 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.85 2013/06/24 05:12:03 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cabal-1.16.0.3.ebuild:
+  Stable for ppc, wrt bug #472668
 
   17 Apr 2013;  <qnikst@gentoo.org> cabal-1.14.0.ebuild:
   set upper depend on cabal-1.14.0 due #457714

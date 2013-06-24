@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.32 2013/05/06 11:55:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.33 2013/06/24 05:18:18 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.27.ebuild:
+  Stable for ppc, wrt bug #474266
 
 *libmicrohttpd-0.9.27 (06 May 2013)
 

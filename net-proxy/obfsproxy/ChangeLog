@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/obfsproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/ChangeLog,v 1.14 2013/06/18 00:14:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/ChangeLog,v 1.15 2013/06/24 05:25:41 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> obfsproxy-0.1.4-r1.ebuild:
+  Stable for ppc, wrt bug #473648
 
   18 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
   obfsproxy-0.1.4-r1.ebuild:

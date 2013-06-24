@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/remind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.9 2013/05/11 16:47:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.10 2013/06/24 05:11:48 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> remind-03.01.13.ebuild:
+  Stable for ppc, wrt bug #474146
 
 *remind-03.01.13 (11 May 2013)
 
@@ -266,4 +269,3 @@
   26 Dec 2003; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
   remind-03.00.22.ebuild:
   Initial import.
-

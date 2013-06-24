@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.244 2013/06/09 16:00:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.245 2013/06/24 05:27:24 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> doxygen-1.8.3.1.ebuild:
+  Stable for ppc, wrt bug #471692
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> doxygen-1.8.3.1.ebuild:
   Stable for sh, wrt bug #471692

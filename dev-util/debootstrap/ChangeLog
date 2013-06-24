@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.221 2013/06/04 21:52:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.222 2013/06/24 05:23:04 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> debootstrap-1.0.52.ebuild:
+  Stable for ppc, wrt bug #473840
 
   04 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> debootstrap-1.0.52.ebuild:
   Keyword amd64-linux and x86-linux

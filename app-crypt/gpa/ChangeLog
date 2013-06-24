@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.88 2013/05/02 04:26:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.89 2013/06/24 05:18:04 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gpa-0.9.4.ebuild:
+  Stable for ppc, wrt bug #474136
 
 *gpa-0.9.4 (02 May 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.37 2013/06/20 11:57:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.38 2013/06/24 05:22:21 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.12.ebuild:
+  Stable for ppc, wrt bug #470762
 
   20 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> harfbuzz-0.9.18-r1.ebuild:
   Remove double elibtoolize wrt bug#473006.

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.136 2013/05/10 16:12:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.137 2013/06/24 05:20:33 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kismet-2013.03.1-r1.ebuild:
+  Stable for ppc, wrt bug #474292
 
   10 May 2013; Rick Farina <zerochaos@gentoo.org> -kismet-2013.03.1.ebuild,
   kismet-2013.03.1-r1.ebuild, kismet-9999.ebuild:

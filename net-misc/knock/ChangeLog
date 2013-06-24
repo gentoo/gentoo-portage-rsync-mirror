@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.48 2013/04/21 07:17:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.49 2013/06/24 05:19:16 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> knock-0.6.ebuild:
+  Stable for ppc, wrt bug #474278
 
 *knock-0.6 (21 Apr 2013)
 

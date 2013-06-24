@@ -3,10 +3,10 @@ DEPEND=>=dev-util/diffball-0.7
 DESCRIPTION=Delta compression suite for using/generating binary patches
 EAPI=5
 HOMEPAGE=http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/app-arch/tarsync/tarsync-0.2.1-r1.ebuild?view=markup
-KEYWORDS=~amd64 ~hppa ~ppc ~x86
+KEYWORDS=~amd64 ~hppa ppc ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-util/diffball-0.7
 SLOT=0
 SRC_URI=mirror://gentoo/tarsync-0.2.1.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=3d023b03f3bbf9d4016d4736a6bc8193
+_md5_=eb4f12c949fafebb818bbd70e2d39599

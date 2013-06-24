@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.22 2013/02/20 14:03:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.23 2013/06/24 05:19:48 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> stone-2.3e-r1.ebuild:
+  Stable for ppc, wrt bug #474284
 
   20 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> stone-2.3e-r1.ebuild,
   +files/stone.man:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.118 2013/06/20 17:05:47 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.119 2013/06/24 05:10:30 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libisoburn-1.3.0.ebuild:
+  Stable for ppc, wrt bug #472596
 
   20 Jun 2013; Daniel Pielmeier <billie@gentoo.org> libisoburn-1.3.0.ebuild:
   Add additional docs. Avoid using cd for doc installation.
