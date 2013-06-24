@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-9.ebuild,v 1.2 2013/04/14 23:16:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-9.ebuild,v 1.3 2013/06/24 01:58:41 aballier Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="X +encode gsm jpeg2k mp3 opus sdl speex theora threads truetype vaapi vdpa
 RDEPEND="
 	|| (
 		>=media-video/libav-9[X?,encode?,gsm?,jpeg2k?,mp3?,opus?,sdl?,speex?,theora?,threads?,truetype?,vaapi?,vdpau?,x264?]
-		>=media-video/ffmpeg-1.1[X?,encode?,gsm?,jpeg2k?,mp3?,opus?,sdl?,speex?,theora?,threads?,truetype?,vaapi?,vdpau?,x264?]
+		>=media-video/ffmpeg-1.0[X?,encode?,gsm?,jpeg2k?,mp3?,opus?,sdl?,speex?,theora?,threads?,truetype?,vaapi?,vdpau?,x264?]
 	)
 "
 DEPEND=""

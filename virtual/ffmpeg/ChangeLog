@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.49 2013/04/14 23:16:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.50 2013/06/24 01:58:41 aballier Exp $
+
+  24 Jun 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9.ebuild:
+  take ffmpeg dep down to 1.0 as it is unmasked
 
   14 Apr 2013; Luca Barbato <lu_zero@gentoo.org> ffmpeg-9.ebuild, metadata.xml:
   Expose opus support
