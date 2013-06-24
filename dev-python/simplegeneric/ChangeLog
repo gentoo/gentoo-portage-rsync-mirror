@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplegeneric
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.9 2013/02/05 00:25:29 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.10 2013/06/24 07:46:50 idella4 Exp $
+
+  24 Jun 2013; Ian Delaney <idella4@gentoo.org> simplegeneric-0.8.1-r1.ebuild:
+  update ebuild deps
 
   05 Feb 2013; Benda Xu <heroxbd@gentoo.org> simplegeneric-0.8.1-r1.ebuild:
   keyword ~arm
