@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.29 2013/06/24 05:15:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.30 2013/06/24 21:02:13 scarabeus Exp $
+
+*mdds-0.9.0 (24 Jun 2013)
+
+  24 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +mdds-0.9.0.ebuild:
+  Version bump to 0.9.0.
 
   24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> mdds-0.8.1.ebuild:
   Stable for ppc, wrt bug #474216

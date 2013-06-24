@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.30 2013/04/29 21:16:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.31 2013/06/24 21:21:44 vapier Exp $
+
+  24 Jun 2013; Mike Frysinger <vapier@gentoo.org> libmnl-1.0.3-r1.ebuild:
+  Simplify how we install libmnl into / by letting gen_usr_ldscript do all the
+  work.  This also avoids installing an empty /lib/pkgconfig dir.
 
   29 Apr 2013; Jeroen Roovers <jer@gentoo.org> libmnl-1.0.3-r1.ebuild:
   Fix building with USE=-static-libs.

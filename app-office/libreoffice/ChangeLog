@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.480 2013/06/23 20:02:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.481 2013/06/24 21:03:44 scarabeus Exp $
+
+  24 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Depend on mdds-0.9.0.
 
   23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.1.0.1.ebuild,
   libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild:
