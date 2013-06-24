@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/wxhexeditor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.5 2013/03/16 20:36:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.6 2013/06/24 14:22:13 jlec Exp $
+
+*wxhexeditor-0.22 (24 Jun 2013)
+
+  24 Jun 2013; Justin Lecher <jlec@gentoo.org> +wxhexeditor-0.22.ebuild,
+  +files/wxhexeditor-0.22-makefile.patch, metadata.xml:
+  Version Bump
 
 *wxhexeditor-0.21 (16 Mar 2013)
 
