@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Djblets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.19 2013/06/15 11:48:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.20 2013/06/24 15:21:20 idella4 Exp $
+
+  24 Jun 2013; Ian Delaney <idella4@gentoo.org> Djblets-0.7.15.ebuild:
+  correction to dep
 
 *Djblets-0.7.15 (15 Jun 2013)
 

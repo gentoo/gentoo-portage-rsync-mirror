@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.7.15.ebuild,v 1.1 2013/06/15 11:43:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.7.15.ebuild,v 1.2 2013/06/24 15:21:20 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-python/django-1.4.5[${PYTHON_USEDEP}]
-	>dev-python/django-1.5[${PYTHON_USEDEP}]
+	<dev-python/django-1.5[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]
 	>=dev-python/django-pipeline-1.2.24[${PYTHON_USEDEP}]
 	>=dev-python/feedparser-5.1.2[${PYTHON_USEDEP}]
