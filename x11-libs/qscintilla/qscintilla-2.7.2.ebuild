@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.ebuild,v 1.3 2013/03/02 23:45:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.2.ebuild,v 1.1 2013/06/24 10:09:55 pesa Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ PDEPEND="python? ( ~dev-python/qscintilla-python-${PV} )"
 S=${WORKDIR}/${MY_P}
 
 PATCHES=(
-	"${FILESDIR}/${PN}-2.6.2-designer.patch"
+	"${FILESDIR}/${PN}-2.7.1-designer.patch"
 )
 
 src_unpack() {
@@ -53,7 +53,7 @@ src_configure() {
 	eqmake4 qscintilla.pro
 	popd > /dev/null
 
-	pushd designer-Qt4 > /dev/null
+	pushd designer-Qt4Qt5 > /dev/null
 	einfo "Configuration of designer plugin"
 	eqmake4 designer.pro
 	popd > /dev/null
@@ -65,7 +65,7 @@ src_compile() {
 	emake
 	popd > /dev/null
 
-	pushd designer-Qt4 > /dev/null
+	pushd designer-Qt4Qt5 > /dev/null
 	einfo "Building of designer plugin"
 	emake
 	popd > /dev/null
@@ -77,7 +77,7 @@ src_install() {
 	emake INSTALL_ROOT="${D}" install
 	popd > /dev/null
 
-	pushd designer-Qt4 > /dev/null
+	pushd designer-Qt4Qt5 > /dev/null
 	einfo "Installation of designer plugin"
 	emake INSTALL_ROOT="${D}" install
 	popd > /dev/null
