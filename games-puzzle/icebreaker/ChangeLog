@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/icebreaker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.17 2013/02/17 22:04:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.18 2013/06/24 20:45:12 tupone Exp $
+
+  24 Jun 2013; Tupone Alfredo <tupone@gentoo.org> icebreaker-1.9.6.ebuild,
+  +files/icebreaker-1.9.6-ovfl.patch:
+  Fix overflow. Bug #458458 by Diego
 
 *icebreaker-1.9.6 (17 Feb 2013)
 
