@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5_p20130525.ebuild,v 1.1 2013/06/13 11:46:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5_p20130525.ebuild,v 1.2 2013/06/24 19:48:37 hasufell Exp $
 
 EAPI=5
 
@@ -52,16 +52,20 @@ pkg_setup() {
 }
 
 src_prepare() {
+	mkdir m4 || die
+
 	epatch \
 		"${FILESDIR}"/${PN}-2.9.1-input-box.patch \
 		"${FILESDIR}"/${PN}-2.9.5-cflags.patch \
 		"${FILESDIR}"/${PN}-2.9.5-gettextize.patch
+	epatch -p1 \
+		"${FILESDIR}"/${PN}-2.9.5-autoconf-missing-macros.patch
 
 	cp $(type -p gettextize) "${T}"/ || die
 	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize" || die
 	einfo "Running gettextize -f --no-changelog..."
 	"${T}"/gettextize -f --no-changelog > /dev/null || die "gettexize failed"
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {

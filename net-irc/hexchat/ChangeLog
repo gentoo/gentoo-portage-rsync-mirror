@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.55 2013/06/24 10:52:20 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.56 2013/06/24 19:48:37 hasufell Exp $
+
+  24 Jun 2013; Julian Ospald <hasufell@gentoo.org> hexchat-2.9.5.ebuild,
+  hexchat-2.9.5-r1.ebuild, hexchat-2.9.5_p20130525.ebuild,
+  +files/hexchat-2.9.5-autoconf-missing-macros.patch:
+  fix autoconf when gtk+:2 is not installed wrt #474582
 
   24 Jun 2013; Tobias Klausmann <klausman@gentoo.org> hexchat-2.9.5-r1.ebuild:
   Stable on alpha, bug #474434
