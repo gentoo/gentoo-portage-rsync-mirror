@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/inotifyx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/inotifyx/ChangeLog,v 1.5 2012/02/22 02:17:53 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/inotifyx/ChangeLog,v 1.6 2013/06/24 04:51:39 idella4 Exp $
+
+*inotifyx-0.2.0-r1 (24 Jun 2013)
+
+  24 Jun 2013; Ian Delaney <idella4@gentoo.org> +inotifyx-0.2.0-r1.ebuild:
+  revbump; migrate -> distutils-r1
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> inotifyx-0.1.1.ebuild,
   inotifyx-0.2.0.ebuild:
@@ -22,4 +27,3 @@
   20 Dec 2009; Sebastian Pipping <sping@gentoo.org> +inotifyx-0.1.1.ebuild,
   +metadata.xml:
   Initial ebuild, review by Arfrever (bug 296821)
-
