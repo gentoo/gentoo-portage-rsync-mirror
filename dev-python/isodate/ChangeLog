@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/isodate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.12 2013/05/12 16:43:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.14 2013/06/24 16:12:12 idella4 Exp $
+
+  24 Jun 2013; Ian Delaney <idella4@gentoo.org> -isodate-0.4.8.ebuild,
+  isodate-0.4.9-r1.ebuild:
+  add test phase, pypy support, drop jython, drop old
 
 *isodate-0.4.9-r1 (12 May 2013)
 
