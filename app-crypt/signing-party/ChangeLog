@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.38 2013/06/04 20:33:10 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.39 2013/06/24 16:50:07 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> signing-party-1.1.4.ebuild:
+  Stable for ppc, wrt bug #469364
 
   04 Jun 2013; Richard Freeman <rich0@gentoo.org> signing-party-1.1.4.ebuild:
   amd64 stable - 469364
@@ -170,4 +173,3 @@
   27 May 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +signing-party-0.4.6.ebuild:
   Initial import, closes bug #121427
-

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.191 2013/01/20 08:15:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.192 2013/06/24 16:48:42 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> fvwm-2.6.5.ebuild:
+  Stable for ppc, wrt bug #471900
 
   20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Update committers

@@ -11,8 +11,4 @@
     <flag name="aspell">Enable spellchecking using <pkg>app-text/aspell</pkg></flag>
     <flag name="hunspell">Enable spellchecking using <pkg>app-text/hunspell</pkg></flag>
   </use>
-  <upstream>
-    <remote-id type="sourceforge">tea-editor</remote-id>
-    <bugs-to>http://sourceforge.net/p/tea-editor/bugs/</bugs-to>
-  </upstream>
 </pkgmetadata>

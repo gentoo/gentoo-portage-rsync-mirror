@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.69 2013/06/23 12:26:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.70 2013/06/24 16:49:52 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> nedit-5.5_p20110116-r2.ebuild:
+  Stable for ppc, wrt bug #474482
 
 *nedit-5.5_p20110116-r2 (23 Jun 2013)
 

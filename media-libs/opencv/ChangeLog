@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.95 2013/06/20 19:34:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.96 2013/06/24 16:49:00 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> opencv-2.4.5.ebuild:
+  Stable for ppc, wrt bug #473960
 
   20 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/opencv-2.3.0-numpy.patch, -files/opencv-2.3.1a-True-False.patch,

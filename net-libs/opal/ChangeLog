@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.94 2013/06/22 19:28:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.95 2013/06/24 16:43:40 scarabeus Exp $
+
+  24 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> opal-3.12.4.ebuild:
+  Fix samples readme install wrt#474614.
 
 *opal-3.12.4 (22 Jun 2013)
 

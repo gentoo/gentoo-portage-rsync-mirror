@@ -1,7 +1,7 @@
 make x509 apply after openssh-5.9_p1-sshd-gssapi-multihomed.patch
 
---- openssh-6.2p1+x509-7.4.1.diff
-+++ openssh-6.2p1+x509-7.4.1.diff
+--- openssh-6.2p2+x509-7.5.diff
++++ openssh-6.2p2+x509-7.5.diff
 @@ -14571,10 +14571,9 @@
   .It Cm ChallengeResponseAuthentication
   Specifies whether challenge-response authentication is allowed (e.g. via

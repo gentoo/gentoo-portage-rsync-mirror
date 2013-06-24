@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.473 2013/06/23 08:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.474 2013/06/24 16:48:35 vapier Exp $
+
+*openssh-6.2_p2 (24 Jun 2013)
+
+  24 Jun 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-6.2_p2-x509-glue.patch,
+  +files/openssh-6.2_p2-x509-hpn-glue.patch, +openssh-6.2_p2.ebuild,
+  -files/openssh-6.2_p1-x509-glue.patch,
+  -files/openssh-6.2_p1-x509-hpn-glue.patch, -openssh-6.2_p1.ebuild:
+  Version bump #470222 by Jason A. Donenfeld.
 
   23 Jun 2013; Mike Frysinger <vapier@gentoo.org> openssh-6.2_p1.ebuild:
   Move into ~arch w/hpn disabled as it randomly hangs.

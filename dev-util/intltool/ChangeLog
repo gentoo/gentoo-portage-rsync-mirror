@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.166 2013/05/26 07:26:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.167 2013/06/24 16:51:05 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> intltool-0.50.2-r1.ebuild:
+  Stable for ppc, wrt bug #473998
 
 *intltool-0.50.2-r1 (26 May 2013)
 

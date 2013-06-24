@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/genshi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.28 2013/05/13 08:35:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.29 2013/06/24 16:59:34 ago Exp $
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> genshi-0.7.ebuild:
+  Stable for ppc, wrt bug #473552
 
 *genshi-0.7 (13 May 2013)
 
@@ -126,4 +129,3 @@
   03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> genshi-0.3.6.ebuild,
   +metadata.xml:
   New ebuild for bug #159441 (thanks to Brad Walker)
-

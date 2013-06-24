@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p1.ebuild,v 1.4 2013/06/23 08:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p2.ebuild,v 1.1 2013/06/24 16:48:35 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -11,7 +11,7 @@ PARCH=${P/_}
 
 #HPN_PATCH="${PARCH/6.2/6.1}-hpn13v14.diff.bz2"
 #LDAP_PATCH="${PARCH/-/-lpk-}-0.3.14.patch.gz"
-X509_VER="7.4.1" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
+X509_VER="7.5" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.org/"
@@ -65,7 +65,7 @@ S=${WORKDIR}/${PARCH}
 pkg_setup() {
 	# this sucks, but i'd rather have people unable to `emerge -u openssh`
 	# than not be able to log in to their server any more
-	maybe_fail() { [[ -z ${!2} ]] && echo ${1} ; }
+	maybe_fail() { [[ -z ${!2} ]] && echo "$1" ; }
 	local fail="
 		$(use X509 && maybe_fail X509 X509_PATCH)
 		$(use ldap && maybe_fail ldap LDAP_PATCH)
@@ -101,10 +101,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	if use X509 ; then
 		pushd .. >/dev/null
-		epatch "${FILESDIR}"/${PN}-6.2_p1-x509-glue.patch
+		epatch "${FILESDIR}"/${PN}-6.2_p2-x509-glue.patch
 		popd >/dev/null
 		epatch "${WORKDIR}"/${X509_PATCH%.*}
-		epatch "${FILESDIR}"/${PN}-6.2_p1-x509-hpn-glue.patch
+		epatch "${FILESDIR}"/${PN}-6.2_p2-x509-hpn-glue.patch
 		save_version X509
 	fi
 	if ! use X509 ; then
