@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.70 2013/06/24 05:16:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.71 2013/06/24 13:21:08 zerochaos Exp $
+
+  24 Jun 2013; Rick Farina <zerochaos@gentoo.org>
+  linux-firmware-20120719.ebuild, linux-firmware-20120816.ebuild,
+  linux-firmware-20120909.ebuild, linux-firmware-20120924.ebuild,
+  linux-firmware-20121030.ebuild, linux-firmware-20121225.ebuild,
+  linux-firmware-20130113.ebuild, linux-firmware-20130421.ebuild,
+  linux-firmware-20130530.ebuild, linux-firmware-99999999.ebuild:
+  adjust blockers as noted in bug #474130
 
   24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> linux-firmware-20130421.ebuild:
   Stable for ppc, wrt bug #473732

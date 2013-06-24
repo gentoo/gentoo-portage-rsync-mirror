@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20130530.ebuild,v 1.2 2013/06/19 16:43:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20130530.ebuild,v 1.3 2013/06/24 13:21:08 zerochaos Exp $
 
 EAPI=5
 inherit savedconfig
@@ -39,7 +39,7 @@ RDEPEND="!savedconfig? (
 		!net-wireless/ar9271-firmware
 		!net-wireless/i2400m-fw
 		!net-wireless/libertas-firmware
-		!net-wireless/rt61-firmware
+		!sys-firmware/rt61-firmware
 		!net-wireless/rt73-firmware
 		!net-wireless/rt2860-firmware
 		!net-wireless/rt2870-firmware
