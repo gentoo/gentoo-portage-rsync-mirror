@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ldl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.6 2012/11/12 02:04:29 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.7 2013/06/24 22:56:41 bicatali Exp $
+
+  24 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -ldl-2.0.3-r1.ebuild,
+  ldl-2.1.0.ebuild:
+  Switch to EAPI5 and new tar ball
 
 *ldl-2.1.0 (12 Nov 2012)
 

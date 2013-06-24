@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.125 2013/06/23 05:26:18 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.126 2013/06/24 22:59:25 mattm Exp $
+
+  24 Jun 2013; Matthew Marlowe <mattm@gentoo.org> zabbix-2.0.6-r5.ebuild:
+  Removing package mask for 2.0.6-r5, it has successfully completed initial
+  testing.
 
 *zabbix-2.0.6-r5 (23 Jun 2013)
 

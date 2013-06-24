@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cxsparse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.24 2012/11/12 02:02:11 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.25 2013/06/24 22:52:45 bicatali Exp $
+
+*cxsparse-3.1.2 (24 Jun 2013)
+
+  24 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> +cxsparse-3.1.2.ebuild,
+  -cxsparse-2.2.3.ebuild, -cxsparse-2.2.5.ebuild:
+  Version bump, switch to EAPI5 and new tar ball
 
   12 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> cxsparse-3.1.1.ebuild:
   reintroduced dropped ~x86-fbsd
