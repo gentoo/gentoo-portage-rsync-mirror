@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libXcm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.12 2013/06/13 08:53:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.13 2013/06/24 17:18:39 xmw Exp $
+
+  24 Jun 2013; Michael Weber <xmw@gentoo.org> -libXcm-0.5.1.ebuild,
+  -libXcm-0.5.2.ebuild, libXcm-0.5.2-r1.ebuild:
+  fix docygen dependency (bug 461778, thanks Matthew Dawson), drop old.
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> libXcm-0.5.2-r1.ebuild:
   Add ~ppc keyword as dep of llpp
