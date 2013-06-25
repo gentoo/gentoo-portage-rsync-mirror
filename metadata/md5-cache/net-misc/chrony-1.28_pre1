@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=caps? ( sys-libs/libcap ) readline? ( >=sys-libs/readline-4.1-r4 ) virtual/pkgconfig
+DESCRIPTION=NTP client and server programs
+EAPI=5
+HOMEPAGE=http://chrony.tuxfamily.org/
+IUSE=caps ipv6 +readline +rtc
+KEYWORDS=~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://download.tuxfamily.org/chrony/chrony-1.28-pre1.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	systemd	3421a5715404244e4827acd1cf8ce654	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f21b349ce0da8fadf3d57c602d8a5e95
