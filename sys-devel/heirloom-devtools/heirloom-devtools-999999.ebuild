@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/heirloom-devtools-999999.ebuild,v 1.3 2013/06/10 05:12:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/heirloom-devtools-999999.ebuild,v 1.4 2013/06/25 12:33:01 ryao Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ src_prepare() {
 		-e "s:^\(CFLAGS=\)\(.*\):\1${CFLAGS}:" \
 		-e 's:^\(STRIP=\)\(.*\):\1true:' \
 		-e "s:^\(CXX = \)\(.*\):\1$(tc-getCXX):" \
+		-e "s:^\(INSTALL=\)\(.*\):\1$(which install):" \
 		./mk.config
 
 	echo "CC=$(tc-getCC)" >> "./mk.config"

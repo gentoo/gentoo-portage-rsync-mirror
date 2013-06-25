@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/heirloom-devtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/ChangeLog,v 1.3 2013/06/10 05:12:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/ChangeLog,v 1.4 2013/06/25 12:33:01 ryao Exp $
+
+  25 Jun 2013; Richard Yao <ryao@gentoo.org>
+  +files/heirloom-devtools-070527-solaris.patch,
+  heirloom-devtools-070527-r1.ebuild, heirloom-devtools-999999.ebuild:
+  ~x64-solaris support
 
 *heirloom-devtools-070527-r1 (10 Jun 2013)
 

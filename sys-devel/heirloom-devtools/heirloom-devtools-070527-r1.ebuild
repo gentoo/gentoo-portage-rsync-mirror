@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/heirloom-devtools-070527-r1.ebuild,v 1.1 2013/06/10 05:12:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/heirloom-devtools/heirloom-devtools-070527-r1.ebuild,v 1.2 2013/06/25 12:33:01 ryao Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.sourceforge.net/project/heirloom/${PN}/${PV}/${P}.tar.
 
 LICENSE="BSD BSD-4 CDDL"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x64-solaris"
 IUSE=""
 
 DEPEND="app-shells/heirloom-sh"
@@ -29,11 +29,15 @@ src_prepare() {
 		-e "s:^\(CFLAGS=\)\(.*\):\1${CFLAGS}:" \
 		-e 's:^\(STRIP=\)\(.*\):\1true:' \
 		-e "s:^\(CXX = \)\(.*\):\1$(tc-getCXX):" \
+		-e "s:^\(INSTALL=\)\(.*\):\1$(which install):" \
 		./mk.config
 
 	echo "CC=$(tc-getCC)" >> "./mk.config"
 
+	epatch "${FILESDIR}/${P}-solaris.patch"
 	epatch "${FILESDIR}/${P}-64-bit.patch"
+
+	epatch_user
 
 }
 

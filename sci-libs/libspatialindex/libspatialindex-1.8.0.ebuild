@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libspatialindex/libspatialindex-1.8.0.ebuild,v 1.2 2013/06/25 12:10:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libspatialindex/libspatialindex-1.8.0.ebuild,v 1.3 2013/06/25 12:57:40 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://libspatialindex.github.com/"
 SRC_URI="http://download.osgeo.org/libspatialindex/${MY_P}.tar.bz2"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="debug static-libs"
 
