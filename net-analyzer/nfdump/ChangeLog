@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.32 2013/03/07 10:36:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.33 2013/06/25 11:38:24 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> nfdump-1.6.9.ebuild:
+  Stable for x86, wrt bug #470536
 
 *nfdump-1.6.9 (07 Mar 2013)
 
@@ -141,4 +144,3 @@
   27 Mar 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +nfdump-1.5.ebuild:
   Initial import wrt bug #123710
-

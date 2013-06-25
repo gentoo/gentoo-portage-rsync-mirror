@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catfish
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.8 2013/06/04 21:29:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.9 2013/06/25 11:42:19 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> catfish-0.6.3.ebuild:
+  Stable for x86, wrt bug #472248
 
 *catfish-0.6.4 (04 Jun 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/automatictexplugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.41 2013/05/03 04:13:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.42 2013/06/25 11:38:06 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> automatictexplugin-12.3.ebuild:
+  Stable for x86, wrt bug #474158
 
 *automatictexplugin-12.3 (03 May 2013)
 
@@ -202,4 +205,3 @@
   29 Apr 2011; Tim Harder <radhermit@gentoo.org>
   +automatictexplugin-9.3.5.ebuild, +metadata.xml:
   Initial import.
-

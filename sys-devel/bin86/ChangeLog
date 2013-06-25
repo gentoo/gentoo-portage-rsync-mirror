@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bin86
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.24 2013/05/24 20:36:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.25 2013/06/25 11:42:33 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> bin86-0.16.19.ebuild:
+  Stable for x86, wrt bug #474304
 
   24 May 2013; Alexis Ballier <aballier@gentoo.org> bin86-0.16.19.ebuild:
   keyword ~amd64-fbsd, bug #428228
