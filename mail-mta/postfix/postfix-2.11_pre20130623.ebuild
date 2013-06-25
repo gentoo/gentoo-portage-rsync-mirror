@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20130613.ebuild,v 1.1 2013/06/19 05:48:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20130623.ebuild,v 1.1 2013/06/25 05:59:51 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert toolchain-funcs user versionator
@@ -8,8 +8,8 @@ inherit eutils flag-o-matic multilib pam ssl-cert toolchain-funcs user versionat
 MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
-VDA_PV="2.9.5"
-VDA_P="${PN}-vda-v11-${VDA_PV}"
+VDA_PV="2.10.0"
+VDA_P="${PN}-vda-v13-${VDA_PV}"
 RC_VER="2.7"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
@@ -277,22 +277,6 @@ pkg_preinst() {
 			# delete inet_protocols setting. there is already one in /etc/postfix
 			sed -i -e /inet_protocols/d "${D}"/etc/postfix/main.cf || die
 		fi
-	fi
-	}
-
-	# Postfix 2.10.
-	# Safety net for incompatible changes due to the introduction
-	# of the smtpd_relay_restrictions feature to separate the
-	# mail relay policy from the spam blocking policy.
-	[[ -d ${ROOT}/etc/postfix ]] && has_version '<=mail-mta/postfix-2.9.99' && {
-	if [[ -z "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -n smtpd_relay_restrictions)" ]];
-	then
-		local myconf="smtpd_relay_restrictions=permit_mynetworks,permit_sasl_authenticated,defer_unauth_destination"
-		ewarn "\nCOMPATIBILITY: adding smtpd_relay_restrictions to main.cf"
-		ewarn "to prevent inbound mail from unexpectedly bouncing."
-		ewarn "Specify an empty smtpd_relay_restrictions value to keep using"
-		ewarn "smtpd_recipient_restrictions as before.\n"
-		"${D}"/usr/sbin/postconf -c "${D}"/etc/postfix -e ${myconf} || die
 	fi
 	}
 }

@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.199 2013/06/09 23:14:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.200 2013/06/25 05:43:58 qnikst Exp $
+
+*openvz-sources-2.6.32.78.26 (25 Jun 2013)
+
+  25 Jun 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +openvz-sources-2.6.32.78.26.ebuild:
+  bump up to 2.6.32.78.26
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

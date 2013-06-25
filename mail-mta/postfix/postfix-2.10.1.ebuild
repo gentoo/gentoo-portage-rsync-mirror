@@ -1,16 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.4.ebuild,v 1.13 2013/02/28 17:53:43 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10.1.ebuild,v 1.1 2013/06/25 05:59:51 eras Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
 
-MY_PV="${PV/_rc/-RC}"
+MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_PV="2.9.1"
-VDA_P="${PN}-vda-v11-${VDA_PV}"
+VDA_PV="2.10.0"
+VDA_P="${PN}-vda-v13-${VDA_PV}"
 RC_VER="2.7"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
@@ -20,7 +19,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
@@ -69,10 +68,6 @@ pkg_setup() {
 src_prepare() {
 	if use vda; then
 		epatch "${DISTDIR}"/${VDA_P}.patch
-	fi
-
-	if ! use berkdb; then
-		epatch "${FILESDIR}/${PN}_no-berkdb.patch"
 	fi
 
 	sed -i -e "/^#define ALIAS_DB_MAP/s|:/etc/aliases|:/etc/mail/aliases|" \
@@ -263,12 +258,13 @@ src_install () {
 }
 
 pkg_preinst() {
+	# Postfix 2.9.
 	# default for inet_protocols changed from ipv4 to all in postfix-2.9.
 	# check inet_protocols setting in main.cf and modify if necessary to prevent
 	# performance loss with useless DNS lookups and useless connection attempts.
 	[[ -d ${ROOT}/etc/postfix ]] && {
 	if [[ "$(${D}/usr/sbin/postconf -dh inet_protocols)" != "ipv4" ]]; then
-		if [[ ! -n "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -nh inet_protocols)" ]];
+		if [[ ! -n "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -n inet_protocols)" ]];
 		then
 			ewarn "\nCOMPATIBILITY: adding inet_protocols=ipv4 to main.cf."
 			ewarn "That will keep the same behaviour as previous postfix versions."
@@ -305,8 +301,8 @@ pkg_postinst() {
 		elog "http://www.postfix.org/MULTI_INSTANCE_README.html"
 		if ! use berkdb; then
 			ewarn "\nPostfix is installed without BerkeleyDB support."
-			ewarn "Please turn on berkdb USE flag for hash or btree table"
-			ewarn "lookup support.\n"
+			ewarn "Please turn on berkdb USE flag if you need hash or"
+			ewarn "btree table lookups.\n"
 		fi
 		ewarn "Postfix daemons now live under /usr/libexec/postfix"
 		ewarn "Please adjust your main.cf accordingly by running"

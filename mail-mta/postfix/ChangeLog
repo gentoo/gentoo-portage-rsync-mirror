@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.445 2013/06/19 05:48:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.446 2013/06/25 05:59:51 eras Exp $
+
+*postfix-2.11_pre20130623 (25 Jun 2013)
+*postfix-2.10.1 (25 Jun 2013)
+
+  25 Jun 2013; Eray Aslan <eras@gentoo.org> +postfix-2.10.1.ebuild,
+  +postfix-2.11_pre20130623.ebuild, -files/postfix.rc6.2.5,
+  -files/postfix_no-berkdb.patch, -postfix-2.11_pre20130613.ebuild,
+  -postfix-2.9.4.ebuild, -postfix-2.9.5.ebuild, -postfix-2.9.6.ebuild:
+  Version bump and remove old
 
 *postfix-2.11_pre20130613 (19 Jun 2013)
 
