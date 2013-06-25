@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5-r1.ebuild,v 1.1 2013/06/19 17:18:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5-r1.ebuild,v 1.2 2013/06/25 22:59:05 aballier Exp $
 
 EAPI=5
 
@@ -41,18 +41,12 @@ src_prepare() {
 	AT_M4DIR=. eautoreconf
 }
 
-is_best_abi() {
-	local all_abis=( $(multilib_get_enabled_abis) )
-	local best_abi="${all_abis[$(( ${#all_abis[@]} - 1 ))]}"
-	[ "${ABI}" = "${best_abi}" ]
-}
-
 multilib_src_configure() {
 	local myconf
 	use mmx && myconf+="--enable-nasm" #361879
 
-	# Only build the frontend for the best ABI.
-	if is_best_abi ; then
+	# Only build the frontend for the default ABI.
+	if [ "${ABI}" = "${DEFAULT_ABI}" ] ; then
 		myconf+=" $(use_enable mp3rtp)"
 		use sndfile && myconf+=" --with-fileio=sndfile"
 	else

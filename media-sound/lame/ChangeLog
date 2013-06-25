@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lame
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.164 2013/06/19 17:18:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.165 2013/06/25 22:59:05 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> lame-3.99.5-r1.ebuild:
+  use ABI vs DEFAULT_ABI to determine the default ABI as suggested by mgorny in
+  bug #473852
 
 *lame-3.99.5-r1 (19 Jun 2013)
 
