@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.36 2013/06/25 17:06:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.37 2013/06/25 17:38:42 aballier Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs flag-o-matic multilib-minimal
+inherit multilib toolchain-funcs multilib-minimal
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -42,8 +42,6 @@ REQUIRED_USE="
 	"
 
 multilib_src_configure() {
-	replace-flags -ggdb3 -g #402825
-
 	unset CODECS #357487
 
 	# let the build system decide which AS to use (it honours $AS but
