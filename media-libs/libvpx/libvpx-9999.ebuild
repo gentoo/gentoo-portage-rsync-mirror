@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.41 2013/06/25 18:58:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.42 2013/06/25 19:38:34 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
@@ -102,7 +102,8 @@ multilib_src_compile() {
 }
 
 multilib_src_test() {
-	emake verbose=yes GEN_EXAMPLES=  LIBVPX_TEST_DATA_PATH="${WORKDIR}/${PN}-testdata" test
+	LD_LIBRARY_PATH="${BUILD_DIR}:${LD_LIBRARY_PATH}" \
+		emake verbose=yes GEN_EXAMPLES=  LIBVPX_TEST_DATA_PATH="${WORKDIR}/${PN}-testdata" test
 }
 
 multilib_src_install() {
