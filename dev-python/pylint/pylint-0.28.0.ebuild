@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.1 2013/06/21 15:39:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.2 2013/06/25 03:11:25 floppym Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_{6,7} python{3_1,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2} )
 #PYTHON_REQ_USE="tk"
 inherit distutils-r1
 
@@ -17,8 +17,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-lin
 IUSE="examples"
 
 # Versions specified in __pkginfo__.py.
-RDEPEND=">=dev-python/logilab-common-0.19.0[$(python_gen_usedep python{2_6,2_7,3_2})]
-	>=dev-python/astng-0.16.1[$(python_gen_usedep python{2_6,2_7,3_2})]"
+RDEPEND=">=dev-python/logilab-common-0.19.0[${PYTHON_USEDEP}]
+	>=dev-python/astng-0.16.1[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
@@ -31,8 +31,8 @@ python_test() {
 	# Test suite broken with Python 3
 	local msg="Test suite broken with ${EPYTHON}"
 	if [[ "${EPYTHON}" == python3* ]]; then
-                einfo "${msg}"
-        else
+		einfo "${msg}"
+	else
 		# https://bitbucket.org/logilab/pylint/issue/11/apparent-regression-in-testsuite-pylint
 		# This 'issue' became' declared fixed by accident for version 0.27.0 despite being made citing 0.28.0
 		pytest || die "Tests failed under ${EPYTHON}"
