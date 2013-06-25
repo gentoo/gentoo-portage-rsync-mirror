@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.0.2.ebuild,v 1.3 2013/06/18 07:36:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.0.2.ebuild,v 1.4 2013/06/25 13:32:01 chithanh Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -26,7 +26,7 @@ IUSE="fcd hackrf iqbalance python rtlsdr uhd"
 #IUSE="fcd hackrf iqbalance osmosdr python rtlsdr uhd"
 
 #	osmosdr? ( net-libs/libosmosdr:= )
-RDEPEND="<net-wireless/gnuradio-3.7:0=[fcd?]
+RDEPEND="<net-wireless/gnuradio-3.7_rc:0=[fcd?]
 	hackrf? ( net-libs/libhackrf:= )
 	iqbalance? ( net-wireless/gr-iqbal:= )
 	rtlsdr? ( net-wireless/rtl-sdr:= )
