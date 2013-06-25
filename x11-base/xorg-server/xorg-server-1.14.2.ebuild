@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.1.901.ebuild,v 1.1 2013/06/02 01:25:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.2.ebuild,v 1.1 2013/06/25 18:10:00 chithanh Exp $
 
 EAPI=5
 

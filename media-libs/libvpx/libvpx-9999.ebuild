@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.37 2013/06/25 17:38:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.38 2013/06/25 18:27:50 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.webmproject.org"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="altivec doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs +threads"
+IUSE="altivec doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs test +threads"
 
 RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224 )"
 DEPEND="abi_x86_32? ( dev-lang/yasm )
@@ -90,6 +90,7 @@ multilib_src_configure() {
 		$(use_enable sse4_1) \
 		$(use_enable ssse3) \
 		$(use_enable static-libs static) \
+		$(use_enable test unit-tests) \
 		$(use_enable threads multithread) \
 		${myconf} \
 		|| die

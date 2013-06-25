@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.86 2013/06/25 17:38:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.87 2013/06/25 18:27:50 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  dont build tests if they will not be ran
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
   it builds fine now with -ggdb3, drop the replace-flags
