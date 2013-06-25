@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-1.0.7.ebuild,v 1.1 2013/05/17 18:17:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-1.0.7.ebuild,v 1.3 2013/06/25 16:57:30 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug"
 
 RDEPEND=">=net-fs/samba-3.4.2[cups]"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.8.1.ebuild,v 1.2 2013/06/24 05:15:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.8.1.ebuild,v 1.4 2013/06/25 16:56:40 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://multidimalgorithm.googlecode.com/files/${P/-/_}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-libs/boost"

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.81 2013/06/25 16:30:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.83 2013/06/25 16:53:33 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  ssse3 requires sse2, bug #405813
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  set AS to yasm based on CHOST which seems to be the sanest to do, bug #345161
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org> -libvpx-0.9.6.ebuild,
   -libvpx-0.9.7.ebuild, -libvpx-0.9.7-r1.ebuild, -libvpx-1.0.0.ebuild,

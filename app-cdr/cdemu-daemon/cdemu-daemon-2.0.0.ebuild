@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/cdemu-daemon-2.0.0.ebuild,v 1.1 2013/01/28 00:22:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/cdemu-daemon-2.0.0.ebuild,v 1.3 2013/06/25 16:56:09 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0/4" # subslot = CDEMU_DAEMON_INTERFACE_VERSION in CMakeLists.txt
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE="pulseaudio"
 
 RDEPEND=">=dev-libs/glib-2.26:2

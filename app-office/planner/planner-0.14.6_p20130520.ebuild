@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.2 2013/05/20 11:14:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.3 2013/06/25 16:42:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,6 +17,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="eds examples python"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	>=dev-libs/glib-2.6:2
@@ -46,18 +47,20 @@ S="${WORKDIR}/${PN}-0.14.6"
 
 src_configure() {
 	# FIXME: disable eds backend for now, it fails, upstream bug #654005
+	# We need to set compile-warnings to a different value as it doesn't use
+	# standard macro: https://bugzilla.gnome.org/703067
 	gnome2_src_configure \
 		$(use_enable python) \
 		$(use_enable python python-plugin) \
 		$(use_enable eds) \
 		--disable-eds-backend \
 		--with-database=no \
-		--disable-update-mimedb
+		--disable-update-mimedb \
+		--enable-compile-warnings=yes
 		#$(use_enable eds eds-backend)
 }
 
 src_install() {
-	DOCS="AUTHORS COPYING ChangeLog NEWS README"
 	gnome2_src_install \
 		sqldocdir="\$(datadir)/doc/${PF}" \
 		sampledir="\$(datadir)/doc/${PF}/examples"

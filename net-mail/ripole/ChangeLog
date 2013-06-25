@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripole
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.19 2012/12/17 18:27:19 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.20 2013/06/25 16:58:03 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ripole-0.2.2.ebuild:
+  Stable for amd64, wrt bug #472732
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ripole-0.2.2.ebuild:
   Add ~ppc64, wrt bug #442188

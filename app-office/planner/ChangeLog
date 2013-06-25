@@ -1,6 +1,10 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.71 2013/05/20 11:14:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.72 2013/06/25 16:42:58 pacho Exp $
+
+  25 Jun 2013; Pacho Ramos <pacho@gentoo.org> planner-0.14.6_p20130520.ebuild:
+  We need to set compile-warnings to a different value as it doesn't use
+  standard macro (#474610 by Juergen Rose).
 
   20 May 2013; Gilles Dartiguelongue <eva@gentoo.org> planner-0.14.6.ebuild,
   planner-0.14.6_p20130520.ebuild:

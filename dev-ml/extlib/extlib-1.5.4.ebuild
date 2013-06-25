@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.4.ebuild,v 1.2 2013/06/24 05:13:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.4.ebuild,v 1.4 2013/06/25 16:58:11 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1"
 DEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt?]"
 RDEPEND="${DEPEND}"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc +ocamlopt"
 
 src_compile() {

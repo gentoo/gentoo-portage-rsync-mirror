@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ripole-0.2.2.ebuild,v 1.5 2012/12/17 18:27:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ripole-0.2.2.ebuild,v 1.6 2013/06/25 16:58:03 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pldaniels.com/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
 IUSE=""
 
 src_prepare() {
