@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.73 2013/06/15 19:53:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.74 2013/06/25 09:45:28 pinkbyte Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -206,6 +206,7 @@ ta_LK - Tamil locale for Sri Lanka
 te - Telugu locale
 te_IN - Telugu locale for India
 tg - Tajik locale
+tg_TJ - Tajik locale Tajikistan
 th - Thai locale
 th_TH - Thai locale Thailand
 ti - Tigrinya locale

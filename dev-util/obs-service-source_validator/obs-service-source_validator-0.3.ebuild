@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.3.ebuild,v 1.1 2013/06/25 09:29:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.3.ebuild,v 1.2 2013/06/25 09:33:13 scarabeus Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit obs-service
 # only one sanely packed service
 SRC_URI="${OBS_URI}/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-perl/TimeDate"

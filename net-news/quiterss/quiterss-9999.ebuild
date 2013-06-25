@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-9999.ebuild,v 1.4 2013/06/12 12:17:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-9999.ebuild,v 1.6 2013/06/25 09:48:20 pinkbyte Exp $
 
 EAPI=5
 
-PLOCALES="ar cs de el_GR en es fa fr hu it ja ko lt nl pl pt_BR ru sr sv th tr uk zh_CN zh_TW"
+PLOCALES="ar cs de el_GR es fa fr hu it ja ko lt nl pl pt_BR ru sk sr sv tg_TJ th tr uk zh_CN zh_TW"
 EHG_REPO_URI="https://code.google.com/p/quite-rss"
 inherit l10n qt4-r2 mercurial
 
@@ -29,6 +29,9 @@ src_prepare() {
 	my_rm_loc() {
 		sed -i -e "s:lang/${PN}_${1}.ts::" lang/lang.pri || die 'sed on lang.pri failed'
 	}
+	# dedicated english locale file is not installed at all
+	rm "lang/${PN}_en.ts" || die "remove of lang/${PN}_en.ts failed"
+
 	l10n_find_plocales_changes "lang" "${PN}_" '.ts'
 	l10n_for_each_disabled_locale_do my_rm_loc
 
