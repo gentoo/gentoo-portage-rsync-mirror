@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.42 2013/06/25 19:38:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.43 2013/06/25 20:11:47 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
@@ -59,7 +59,12 @@ multilib_src_configure() {
 	esac
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
+	# https://bugs.gentoo.org/show_bug.cgi?id=465988
+	# copied from php-pear-r1.eclass
 	addpredict /usr/share/snmp/mibs/.index
+	addpredict /var/lib/net-snmp/
+	addpredict /var/lib/net-snmp/mib_indexes
+	addpredict /session_mm_cli0.sem
 
 	# Build with correct toolchain.
 	tc-export CC CXX AR NM
@@ -108,4 +113,5 @@ multilib_src_test() {
 
 multilib_src_install() {
 	emake verbose=yes GEN_EXAMPLES= DESTDIR="${D}" install
+	[ "${ABI}" = "${DEFAULT_ABI}" ] && use doc && dohtml docs/html/*
 }

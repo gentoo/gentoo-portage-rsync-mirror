@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.91 2013/06/25 19:38:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.92 2013/06/25 20:11:47 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  copy some more addpredict from php-pear-r1.eclass; hopefully this should fix
+  all the sandbox violations. bug #465988. Also actually install the docs we
+  built.
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
   test the libvpx.so we just built, not the system one

@@ -3,10 +3,10 @@ DEPEND=>=x11-libs/motif-2.3:0 x11-libs/libXp x11-libs/libXpm x11-libs/libXt x11-
 DESCRIPTION=Multi-purpose text editor for the X Window System
 EAPI=5
 HOMEPAGE=http://nedit.org/
-KEYWORDS=~alpha ~amd64 ~mips ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
+KEYWORDS=~alpha amd64 ~mips ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-2
 RDEPEND=>=x11-libs/motif-2.3:0 x11-libs/libXp x11-libs/libXpm x11-libs/libXt x11-libs/libX11
 SLOT=0
 SRC_URI=mirror://gentoo/nedit-5.5_p20110116.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=54927c3252ac94ed42bcdd707f3a29ae
+_md5_=51aea43cb8680a2c56bad2cebf2b8571
