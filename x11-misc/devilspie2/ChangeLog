@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/devilspie2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.4 2013/05/21 14:01:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.5 2013/06/25 12:14:57 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> devilspie2-0.29.ebuild:
+  Stable for x86, wrt bug #474392
 
 *devilspie2-0.29 (21 May 2013)
 
@@ -26,4 +29,3 @@
   +files/devilspie2-0.26-anti-debian.patch,
   +files/devilspie2-0.26-cflags.patch, +metadata.xml:
   initial import wrt #445006
-

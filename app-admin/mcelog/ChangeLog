@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.31 2013/03/17 15:29:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.32 2013/06/25 12:10:23 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  mcelog-1.0_pre3_p20120918-r1.ebuild:
+  Stable for x86, wrt bug #474424
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

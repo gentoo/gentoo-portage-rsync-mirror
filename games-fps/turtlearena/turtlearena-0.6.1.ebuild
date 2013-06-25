@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/turtlearena/turtlearena-0.6.1.ebuild,v 1.2 2013/04/28 22:29:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/turtlearena/turtlearena-0.6.1.ebuild,v 1.3 2013/06/25 12:06:14 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://turtlearena.googlecode.com/files/${MY_P}-0-src.tar.bz2
 
 LICENSE="GPL-2+ CC-BY-SA-3.0 mplus-fonts lcc"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+curl debug dedicated mumble openal server theora voice vorbis"
 
 RDEPEND="

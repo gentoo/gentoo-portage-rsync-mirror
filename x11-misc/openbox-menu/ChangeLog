@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/openbox-menu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openbox-menu/ChangeLog,v 1.4 2012/12/03 17:59:02 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openbox-menu/ChangeLog,v 1.5 2013/06/25 12:11:27 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> openbox-menu-0.3.6.8.ebuild:
+  Stable for x86, wrt bug #474442
 
 *openbox-menu-0.3.6.8 (03 Dec 2012)
 
@@ -21,4 +24,3 @@
   +openbox-menu-0.3.6.7.ebuild, +files/openbox-menu-0.3.6.7-build.patch,
   +metadata.xml:
   initial commit wrt #427794
-

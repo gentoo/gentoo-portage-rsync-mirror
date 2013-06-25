@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/badvpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.12 2013/03/17 17:36:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.13 2013/06/25 12:09:03 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> badvpn-1.999.127.ebuild:
+  Stable for x86, wrt bug #474404
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
