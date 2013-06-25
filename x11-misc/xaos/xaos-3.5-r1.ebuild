@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.9 2012/05/05 04:53:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.10 2013/06/25 17:27:41 aballier Exp $
 
 EAPI=4
 
@@ -29,9 +29,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	doc? (
-		virtual/latex-base
-		dev-texlive/texlive-texinfo )
+	doc? ( virtual/texi2dvi )
 	X? (
 		x11-proto/xf86vidmodeproto
 		x11-proto/xextproto

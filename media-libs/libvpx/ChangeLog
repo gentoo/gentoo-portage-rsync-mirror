@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.83 2013/06/25 16:53:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.85 2013/06/25 17:06:50 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  drop debug useflag that only adds -g and doesnt build. bug #378557
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  do not build examples that will not be installed, bug #336426
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
   ssse3 requires sse2, bug #405813

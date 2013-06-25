@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.1.ebuild,v 1.1 2013/04/28 14:37:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.3.ebuild,v 1.1 2013/06/25 17:16:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,10 @@ HOMEPAGE="http://live.gnome.org/Gedit"
 
 LICENSE="GPL-2+ CC-BY-SA-3.0"
 SLOT="0"
+
 IUSE="+introspection +python spell zeitgeist"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 
 # X libs are not needed for OSX (aqua)

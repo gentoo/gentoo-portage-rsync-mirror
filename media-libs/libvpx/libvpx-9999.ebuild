@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.34 2013/06/25 16:53:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.36 2013/06/25 17:06:50 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs flag-o-matic multilib-minimal
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.webmproject.org"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="altivec debug doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs +threads"
+IUSE="altivec doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs +threads"
 
 RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224 )"
 DEPEND="abi_x86_32? ( dev-lang/yasm )
@@ -57,6 +57,9 @@ multilib_src_configure() {
 	# build verbose by default
 	MAKEOPTS="${MAKEOPTS} verbose=yes"
 
+	# do not build examples that will not be installed
+	MAKEOPTS="${MAKEOPTS} GEN_EXAMPLES="
+
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
 
@@ -81,8 +84,6 @@ multilib_src_configure() {
 		--enable-shared \
 		--extra-cflags="${CFLAGS}" \
 		$(use_enable altivec) \
-		$(use_enable debug debug-libs) \
-		$(use_enable debug) \
 		$(use_enable mmx) \
 		$(use_enable postproc) \
 		$(use_enable sse) \

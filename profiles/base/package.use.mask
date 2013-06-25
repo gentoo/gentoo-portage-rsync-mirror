@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.483 2013/06/25 15:53:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.484 2013/06/25 17:13:07 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -63,7 +63,7 @@ app-text/yagf cuneiform
 =media-libs/oyranos-0.9.4* fltk
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Mar 2013)
-# Depends on llvm-3.3 which is not in ~arch yet
+# Depends on special llvm-3.2 branch from tstellar
 =media-libs/mesa-9.1* r600-llvm-compiler video_cards_radeonsi
 
 # Christoph Junghans <ottxor@gentoo.org> (10 Mar 2013)

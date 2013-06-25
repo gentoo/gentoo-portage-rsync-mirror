@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.16 2013/06/25 14:16:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.17 2013/06/25 17:28:53 cardoe Exp $
 
 EAPI=5
 
 #BACKPORTS=
 
 PYTHON_COMPAT=( python{2_6,2_7} )
-#PYTHON_REQ_USE=""
+DISTUTILS_SINGLE_IMPL=1
 
 inherit eutils gnome2 distutils-r1
 
@@ -62,4 +62,12 @@ distutils-r1_python_compile() {
 	esetup.py configure \
 		--qemu-user=qemu \
 		--default-graphics=${defgraphics}
+}
+
+python_install_all() {
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-clone"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-convert"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-image"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-install"
+	python_fix_shebang "${ED}/usr/share/virt-manager/virt-manager"
 }

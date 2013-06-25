@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xaos
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.43 2012/12/03 09:50:41 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.44 2013/06/25 17:27:41 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> xaos-3.5-r1.ebuild,
+  xaos-3.5-r2.ebuild:
+  depend on virtual/texi2dvi with USE=doc as thats what we need here and
+  texlive-texinfo is going away with texlive 2013
 
 *xaos-3.5-r2 (03 Dec 2012)
 

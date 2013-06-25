@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/texi2dvi/texi2dvi-0.ebuild,v 1.6 2012/05/09 13:53:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/texi2dvi/texi2dvi-0.ebuild,v 1.7 2013/06/25 17:22:04 aballier Exp $
 
 DESCRIPTION="Virtual for texi2dvi (and texi2pdf)"
 HOMEPAGE=""
@@ -14,5 +14,5 @@ IUSE=""
 DEPEND=""
 RDEPEND="sys-apps/texinfo
 	virtual/latex-base
-	dev-texlive/texlive-texinfo
+	|| ( >=dev-texlive/texlive-plainextra-2013 dev-texlive/texlive-texinfo )
 	"
