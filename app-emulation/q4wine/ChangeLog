@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.40 2013/05/10 18:40:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.41 2013/06/25 11:18:41 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> q4wine-1.0-r3.ebuild:
+  Stable for x86, wrt bug #473100
 
 *q4wine-1.0-r3 (10 May 2013)
 

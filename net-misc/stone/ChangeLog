@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/stone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.23 2013/06/24 05:19:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.26 2013/06/25 11:18:02 pinkbyte Exp $
+
+  25 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -stone-2.3e.ebuild:
+  Drop old
+
+  25 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> stone-2.3e-r1.ebuild:
+  Stable on amd64 and x86, wrt bug #474284
+
+  25 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> stone-2.3e-r1.ebuild:
+  Get rid of base eclass
 
   24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> stone-2.3e-r1.ebuild:
   Stable for ppc, wrt bug #474284

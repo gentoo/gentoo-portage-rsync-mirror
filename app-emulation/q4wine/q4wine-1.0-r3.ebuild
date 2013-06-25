@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.0-r3.ebuild,v 1.1 2013/05/10 18:40:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.0-r3.ebuild,v 1.2 2013/06/25 11:18:41 ago Exp $
 
 EAPI="4"
 LANGS="cs de en es fa he it ru uk pl pt af"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${PN}%20${PV}/${PF}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug +icoutils +wineappdb -dbus gnome kde"
 
 for x in ${LANGS}; do
