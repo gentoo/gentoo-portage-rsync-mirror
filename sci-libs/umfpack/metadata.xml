@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci</herd>
-  <longdescription lang="en">
+<herd>sci</herd>
+<longdescription lang="en">
   UMFPACK is a set of routines for solving unsymmetric sparse linear
   systems, Ax=b, using the Unsymmetric MultiFrontal method.
   Includes a C-callable interface, and a Fortran-callable interface.
   MATLAB routines are not included in the Gentoo package.
 </longdescription>
-  <use>
-    <flag name="cholmod">Use <pkg>sci-libs/cholmod</pkg> for matrix
+<use>
+  <flag name="cholmod">Use <pkg>sci-libs/cholmod</pkg> for matrix
   ordering</flag>
-    <flag name="metis">Use METIS via (<pkg>sci-libs/cholmod</pkg>)
+  <flag name="metis">Use METIS via (<pkg>sci-libs/cholmod</pkg>)
   for matrix partitioning</flag>
-  </use>
+</use>
 </pkgmetadata>

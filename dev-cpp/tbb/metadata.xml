@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci</herd>
-  <longdescription lang="en">
+<herd>sci</herd>
+<longdescription lang="en">
   The Intel Threading Building Blocks is a library that helps you
   leverage multi-core processor performance without having to be a
   threading expert. It represents a higher-level, task-based

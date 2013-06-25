@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/spqr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/ChangeLog,v 1.11 2012/11/23 15:20:09 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/ChangeLog,v 1.12 2013/06/25 00:16:07 bicatali Exp $
+
+  25 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> spqr-1.3.1.ebuild:
+  Switch to EAPI5 and new tar ball
 
   23 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> spqr-1.3.1.ebuild:
   SImplified dependencies
