@@ -1,0 +1,10 @@
+--- init/Kconfig.000	2013-06-10 11:18:35.000000000 +0200
++++ init/Kconfig	2013-06-10 11:19:26.000000000 +0200
+@@ -342,6 +342,7 @@
+ config VIRT_CPU_ACCOUNTING_GEN
+ 	bool "Full dynticks CPU time accounting"
+ 	depends on HAVE_CONTEXT_TRACKING && 64BIT
++	depends on !SCHED_BFS
+ 	select VIRT_CPU_ACCOUNTING
+ 	select CONTEXT_TRACKING
+ 	help

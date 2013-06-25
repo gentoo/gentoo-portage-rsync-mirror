@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/jonpy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/ChangeLog,v 1.19 2012/12/01 02:05:11 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/ChangeLog,v 1.20 2013/06/25 08:44:17 idella4 Exp $
+
+*jonpy-0.10-r1 (25 Jun 2013)
+
+  25 Jun 2013; Ian Delaney <idella4@gentoo.org> +jonpy-0.10-r1.ebuild,
+  -jonpy-0.10.ebuild:
+  revbump; migrate -> distutils-r1, remove old
 
   01 Dec 2012; Tim Harder <radhermit@gentoo.org> jonpy-0.10.ebuild:
   Fix LICENSE (bug #445418 by ulm).
@@ -71,4 +77,3 @@
   19 Dec 2004; Ian Leitch <port001@gentoo.org> +metadata.xml,
   +jonpy-0.06.ebuild:
   Initial commit
-
