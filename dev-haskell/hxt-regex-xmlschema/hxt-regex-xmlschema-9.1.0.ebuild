@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-regex-xmlschema/hxt-regex-xmlschema-9.1.0.ebuild,v 1.2 2013/06/25 14:53:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-regex-xmlschema/hxt-regex-xmlschema-9.1.0.ebuild,v 1.3 2013/06/25 15:02:43 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="=dev-haskell/hxt-charproperties-9*:=[profile?]

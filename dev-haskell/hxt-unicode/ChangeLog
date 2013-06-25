@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hxt-unicode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-unicode/ChangeLog,v 1.4 2013/06/25 14:53:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-unicode/ChangeLog,v 1.5 2013/06/25 15:02:51 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> hxt-unicode-9.0.2.ebuild:
+  Stable for x86, wrt bug #464338
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> hxt-unicode-9.0.2.ebuild:
   Stable for amd64, wrt bug #464338

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.30 2013/01/15 22:43:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.31 2013/06/25 15:07:00 aballier Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs flag-o-matic
+inherit multilib toolchain-funcs flag-o-matic multilib-minimal
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -25,10 +25,11 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="altivec debug doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs +threads"
 
-RDEPEND=""
+RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224 )"
 DEPEND="amd64? ( dev-lang/yasm )
 	x86? ( dev-lang/yasm )
 	x86-fbsd? ( dev-lang/yasm )
+	amd64-fbsd? ( dev-lang/yasm )
 	doc? (
 		app-doc/doxygen
 		dev-lang/php
@@ -39,7 +40,7 @@ REQUIRED_USE="
 	sse2? ( mmx )
 	"
 
-src_configure() {
+multilib_src_configure() {
 	replace-flags -ggdb3 -g #402825
 
 	unset CODECS #357487
@@ -59,11 +60,19 @@ src_configure() {
 	addpredict /usr/share/snmp/mibs/.index
 
 	# Build with correct toolchain.
-	tc-export CC AR NM
+	tc-export CC CXX AR NM
 	# Link with gcc by default, the build system should override this if needed.
 	export LD="${CC}"
 
-	./configure \
+	local myconf
+	if [ "${ABI}" = "${DEFAULT_ABI}" ] ; then
+		myconf+=" $(use_enable doc install-docs) $(use_enable doc docs)"
+	else
+		# not needed for multilib and will be overwritten anyway.
+		myconf+=" --disable-examples --disable-install-docs --disable-docs"
+	fi
+
+	"${S}/configure" \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--enable-pic \
@@ -73,7 +82,6 @@ src_configure() {
 		$(use_enable altivec) \
 		$(use_enable debug debug-libs) \
 		$(use_enable debug) \
-		$(use_enable doc install-docs) \
 		$(use_enable mmx) \
 		$(use_enable postproc) \
 		$(use_enable sse) \
@@ -81,12 +89,8 @@ src_configure() {
 		$(use_enable sse3) \
 		$(use_enable sse4_1) \
 		$(use_enable ssse3) \
-		$(use_enable static-libs static ) \
+		$(use_enable static-libs static) \
 		$(use_enable threads multithread) \
+		${myconf} \
 		|| die
-}
-
-src_install() {
-	# Override base.eclass's src_install.
-	default
 }
