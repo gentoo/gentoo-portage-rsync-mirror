@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.4-r2.ebuild,v 1.1 2013/05/17 14:57:48 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.4-r3.ebuild,v 1.1 2013/06/25 19:04:50 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -63,4 +63,11 @@ python_install() {
 	doins "etc/nova/rootwrap.d/compute.filters"
 	doins "etc/nova/rootwrap.d/network.filters"
 	doins "etc/nova/rootwrap.d/volume.filters"
+
+	#copy migration conf file (not coppied on install via setup.py script)
+	insinto /usr/$(get_libdir)/python2.7/site-packages/nova/db/sqlalchemy/migrate_repo/
+	doins "nova/db/sqlalchemy/migrate_repo/migrate.cfg"
+
+	#copy the CA cert dir (not coppied on install via setup.py script)
+	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "isntalling CA files failed"
 }

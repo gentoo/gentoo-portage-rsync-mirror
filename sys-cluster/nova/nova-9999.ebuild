@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.2 2013/06/09 01:18:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.3 2013/06/25 19:04:50 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -78,4 +78,9 @@ python_install() {
 	doins "etc/nova/rootwrap.d/network.filters"
 	doins "etc/nova/rootwrap.d/baremetal-compute-ipmi.filters"
 	doins "etc/nova/rootwrap.d/baremetal-deploy-helper.filters"
+	#copy migration conf file (not coppied on install via setup.py script)
+	insinto /usr/$(get_libdir)/python2.7/site-packages/nova/db/sqlalchemy/migrate_repo/
+	doins "nova/db/sqlalchemy/migrate_repo/migrate.cfg"
+	#copy the CA cert dir (not coppied on install via setup.py script)
+	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "isntalling CA files failed"
 }

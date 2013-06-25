@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-1.2.1_p20130110.ebuild,v 1.3 2013/05/29 13:24:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-1.2.1_p20130110.ebuild,v 1.4 2013/06/25 19:03:57 hasufell Exp $
 
 EAPI=5
 
@@ -20,7 +20,12 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RDEPEND="media-libs/freetype
 	python? (
 		${PYTHON_DEPS}
-		dev-libs/boost[python,${PYTHON_USEDEP}]
+		dev-libs/boost[python]
+	)
+	samples? (
+		virtual/opengl
+		x11-libs/libXext
+		x11-libs/libX11
 	)"
 DEPEND="${RDEPEND}"
 
