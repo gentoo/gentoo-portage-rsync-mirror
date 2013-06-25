@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.0.ebuild,v 1.1 2013/06/24 11:09:35 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.0-r1.ebuild,v 1.1 2013/06/24 23:48:21 titanofold Exp $
 
 EAPI=5
 
@@ -99,9 +99,6 @@ src_prepare() {
 		&& epatch "${FILESDIR}"/${PN}-1.5.0-install_name.patch \
 		|| epatch "${FILESDIR}"/${PN}-1.5.0-soname.patch
 
-	# Update for zlib header changes (see bug #383569)
-	epatch "${FILESDIR}"/${PN}-1.8.1-zlib_header_fix.patch
-
 	# Fix spatialite/sqlite include issue
 	sed -i \
 		-e 's:spatialite/sqlite3.h:sqlite3.h:g' \
@@ -181,7 +178,6 @@ src_configure() {
 		--with-libz="${EPREFIX}/usr/" \
 		--with-ogr \
 		--with-grib \
-		--with-vfk \
 		--with-libtiff \
 		--with-geotiff \
 		$(use_enable debug) \
@@ -290,6 +286,12 @@ src_install() {
 		insinto /usr/share/${PN}/samples
 		doins swig/python/samples/*
 	fi
+
+	pushd man/man1 > /dev/null
+	for i in * ; do
+		newman ${i} ${i}
+	done
+	popd > /dev/null
 }
 
 pkg_postinst() {

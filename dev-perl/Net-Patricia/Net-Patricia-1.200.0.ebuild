@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/Net-Patricia-1.200.0.ebuild,v 1.3 2013/06/19 23:24:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/Net-Patricia-1.200.0.ebuild,v 1.4 2013/06/24 23:46:15 zlogene Exp $
 
 EAPI=4
 
@@ -24,8 +24,6 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	emake AR="$(tc-getAR)" OTHERLDFLAGS="${LDFLAGS}"
-
-	perl-module_src_compile
 }
 
 #SRC_TEST="do"

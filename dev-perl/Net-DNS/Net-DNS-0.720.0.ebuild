@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.720.0.ebuild,v 1.2 2013/06/07 12:24:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.720.0.ebuild,v 1.3 2013/06/24 23:49:32 zlogene Exp $
 
 EAPI=5
 
@@ -43,6 +43,4 @@ src_prepare() {
 
 src_compile() {
 	emake FULL_AR="$(tc-getAR)" OTHERLDFLAGS="${LDFLAGS}"
-
-	perl-module_src_compile
 }
