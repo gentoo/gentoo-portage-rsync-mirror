@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.7.0.ebuild,v 1.4 2013/06/03 08:01:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.7.0.ebuild,v 1.5 2013/06/25 14:54:07 ago Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ else
 fi
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~x86"
 
 QTC_PLUGINS=(android autotools:autotoolsprojectmanager bazaar
 	clearcase cmake:cmakeprojectmanager cvs fakevim git

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.86 2013/06/14 21:59:30 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.87 2013/06/25 14:53:35 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kmod-13-r1.ebuild:
+  Stable for amd64, wrt bug #470580
 
   14 Jun 2013; William Hubbs <williamh@gentoo.org> kmod-9999.ebuild:
   always build  shared libraries

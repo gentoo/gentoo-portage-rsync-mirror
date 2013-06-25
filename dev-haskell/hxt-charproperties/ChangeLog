@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hxt-charproperties
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-charproperties/ChangeLog,v 1.3 2012/09/12 16:01:17 qnikst Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-charproperties/ChangeLog,v 1.4 2013/06/25 14:53:08 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  hxt-charproperties-9.1.1.ebuild:
+  Stable for amd64, wrt bug #464338
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
   hxt-charproperties-9.1.0.ebuild, hxt-charproperties-9.1.1.ebuild:
