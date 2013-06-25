@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/a2jmidid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.8 2013/05/20 16:33:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.10 2013/06/25 18:43:29 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> a2jmidid-8.ebuild:
+  Stable for amd64, wrt bug #474258
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> a2jmidid-8.ebuild:
+  Stable for x86, wrt bug #474258
 
 *a2jmidid-8 (20 May 2013)
 

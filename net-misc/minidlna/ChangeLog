@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.35 2013/05/15 08:33:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.37 2013/06/25 18:43:50 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> minidlna-1.1.0-r2.ebuild:
+  Stable for amd64, wrt bug #474282
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> minidlna-1.1.0-r2.ebuild:
+  Stable for x86, wrt bug #474282
 
   15 May 2013; Michael Weber <xmw@gentoo.org> minidlna-1.1.0-r2.ebuild:
   Reestablish keywords

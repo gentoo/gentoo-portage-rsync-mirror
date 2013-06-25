@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.65 2013/06/22 19:35:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.67 2013/06/25 18:44:00 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> mediastreamer-2.8.2.ebuild:
+  Stable for amd64, wrt bug #464536
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> mediastreamer-2.8.2.ebuild:
+  Stable for x86, wrt bug #464536
 
   22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> mediastreamer-2.8.2.ebuild:
   Depend on intltool wrt bug#474340.

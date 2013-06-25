@@ -10,24 +10,24 @@ EOF
 }
 
 prompt_gentoo_setup () {
-  prompt_gentoo_prompt=${1:-'blue'}
-  prompt_gentoo_user=${2:-'green'}
-  prompt_gentoo_root=${3:-'red'}
+  local prompt_gentoo_prompt=${1:-'blue'}
+  local prompt_gentoo_user=${2:-'green'}
+  local prompt_gentoo_root=${3:-'red'}
 
   if [ "$USER" = 'root' ]
   then
-    base_prompt="%B%F{$prompt_gentoo_root}%m%k "
+    local base_prompt="%B%F{$prompt_gentoo_root}%m%k "
   else
-    base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
+    local base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
   fi
-  post_prompt="%b%f%k"
+  local post_prompt="%b%f%k"
 
   #setopt noxtrace localoptions
 
-  path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
-  PS1="$base_prompt$path_prompt %# $post_prompt"
-  PS2="$base_prompt$path_prompt %_> $post_prompt"
-  PS3="$base_prompt$path_prompt ?# $post_prompt"
+  local path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
+  typeset -g PS1="$base_prompt$path_prompt %# $post_prompt"
+  typeset -g PS2="$base_prompt$path_prompt %_> $post_prompt"
+  typeset -g PS3="$base_prompt$path_prompt ?# $post_prompt"
 }
 
 prompt_gentoo_setup "$@"

@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/cenon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.16 2013/04/23 22:56:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.18 2013/06/25 18:43:14 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cenon-4.0.2.ebuild:
+  Stable for amd64, wrt bug #474222
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cenon-4.0.2.ebuild:
+  Stable for x86, wrt bug #474222
 
 *cenon-4.0.2 (23 Apr 2013)
 
@@ -79,4 +85,3 @@
   26 Mar 2006; Fabian Groffen <grobian@gentoo.org> +metadata.xml,
   +cenon-3.80.ebuild:
   Initial commit.  Ebuild based on original from Armando Di Cianno (bug #54791)
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/creduce
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/creduce/ChangeLog,v 1.1 2012/07/29 23:43:00 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/creduce/ChangeLog,v 1.2 2013/06/25 18:58:54 dirtyepic Exp $
+
+  25 Jun 2013; Ryan Hill <dirtyepic@gentoo.org> creduce-2.0.1.ebuild:
+  Block newer clang/llvm versions (bug #450380).
 
 *creduce-2.0.1 (29 Jul 2012)
 

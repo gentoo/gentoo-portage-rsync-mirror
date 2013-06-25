@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.87 2013/06/25 18:27:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.90 2013/06/25 18:58:00 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  add a comment on how to generate the testdata tarball
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  provide a testdata tarball so that it doesnt try to redownload them in
+  src_test
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  do not mess with MAKEOPTS, pass it to emake directly
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
   dont build tests if they will not be ran

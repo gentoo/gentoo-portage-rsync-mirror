@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/a2jmidid-8.ebuild,v 1.1 2013/05/20 16:33:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/a2jmidid-8.ebuild,v 1.3 2013/06/25 18:43:29 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://download.gna.org/a2jmidid/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dbus"
 
 RDEPEND="media-libs/alsa-lib

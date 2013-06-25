@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-libs/dbuskit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/dbuskit/ChangeLog,v 1.8 2013/04/24 17:50:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/dbuskit/ChangeLog,v 1.10 2013/06/25 18:43:22 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbuskit-0.1.1.ebuild:
+  Stable for amd64, wrt bug #474224
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dbuskit-0.1.1.ebuild:
+  Stable for x86, wrt bug #474224
 
 *dbuskit-0.1.1 (24 Apr 2013)
 
@@ -31,4 +37,3 @@
   02 May 2011; Bernard Cafarelli <voyageur@gentoo.org> +dbuskit-0.1.ebuild,
   +metadata.xml:
   Initial commit
-

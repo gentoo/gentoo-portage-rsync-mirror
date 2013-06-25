@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/mediastreamer-silk-0.0.1.ebuild,v 1.5 2013/01/22 14:07:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/mediastreamer-silk-0.0.1.ebuild,v 1.7 2013/06/25 18:44:04 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://nongnu/linphone/plugins/sources/${MY_PN}-${PV}.tar.gz
 
 LICENSE="GPL-2+ Clear-BSD SILK-patent-license"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="bindist"
 
 RDEPEND=">=media-libs/mediastreamer-2.8.2"

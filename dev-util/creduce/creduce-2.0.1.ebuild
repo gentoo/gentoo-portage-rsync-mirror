@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/creduce/creduce-2.0.1.ebuild,v 1.1 2012/07/29 23:43:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/creduce/creduce-2.0.1.ebuild,v 1.2 2013/06/25 18:58:54 dirtyepic Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ IUSE=""
 
 DEPEND="
 	>=dev-lang/perl-5.10.0
-	sys-devel/clang
-	sys-devel/llvm"
+	<sys-devel/clang-3.2
+	<sys-devel/llvm-3.2"
 
 RDEPEND="${DEPEND}
 	app-text/delta
