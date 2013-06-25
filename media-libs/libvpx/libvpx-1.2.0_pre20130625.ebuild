@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.2.0_pre20130625.ebuild,v 1.1 2013/06/25 20:48:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.2.0_pre20130625.ebuild,v 1.2 2013/06/25 21:01:30 aballier Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs multilib-minimal
+inherit multilib toolchain-funcs multilib-minimal eutils
 
 LIBVPX_TESTDATA_VER=1.2.0
 
@@ -46,6 +46,10 @@ REQUIRED_USE="
 	sse2? ( mmx )
 	ssse3? ( sse2 )
 	"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-armv7.patch"
+}
 
 multilib_src_configure() {
 	unset CODECS #357487

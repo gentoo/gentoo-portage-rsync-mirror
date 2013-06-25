@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/metapost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/ChangeLog,v 1.4 2013/01/14 10:48:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/ChangeLog,v 1.5 2013/06/25 21:20:39 aballier Exp $
+
+*metapost-1.803 (25 Jun 2013)
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> +metapost-1.803.ebuild:
+  version bump
 
 *metapost-1.780 (14 Jan 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.93 2013/06/25 20:48:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.94 2013/06/25 21:01:30 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  libvpx-1.2.0_pre20130625.ebuild, +files/libvpx-1.2.0_pre20130625-armv7.patch:
+  Backport upstream fix for armv7 hardfloat support. Bug #447046.
 
 *libvpx-1.2.0_pre20130625 (25 Jun 2013)
 
