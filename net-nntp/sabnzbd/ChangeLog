@@ -1,6 +1,14 @@
 # ChangeLog for net-nntp/sabnzbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.14 2013/06/24 23:20:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.15 2013/06/25 03:48:26 jsbronder Exp $
+
+*sabnzbd-0.7.13-r2 (25 Jun 2013)
+
+  25 Jun 2013; Justin Bronder <jsbronder@gentoo.org> +sabnzbd-0.7.13-r2.ebuild,
+  -sabnzbd-0.7.13-r1.ebuild, -sabnzbd-0.7.13.ebuild, files/sabnzbd.confd,
+  files/sabnzbd.ini, files/sabnzbd.initd:
+  Update init.d scripts to use vars from the config file.  Disable growl by
+  default.
 
 *sabnzbd-0.7.13-r1 (24 Jun 2013)
 

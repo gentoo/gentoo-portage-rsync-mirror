@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.13-r1.ebuild,v 1.1 2013/06/24 23:20:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.13-r2.ebuild,v 1.1 2013/06/25 03:48:26 jsbronder Exp $
 
 EAPI="4"
 

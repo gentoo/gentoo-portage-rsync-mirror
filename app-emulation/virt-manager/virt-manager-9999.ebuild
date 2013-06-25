@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.14 2013/06/24 13:28:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.15 2013/06/25 03:51:18 cardoe Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 #PYTHON_REQ_USE=""
 
-inherit eutils distutils-r1 fdo-mime gnome2-utils
+inherit eutils gnome2 distutils-r1
 
 DESCRIPTION="A graphical tool for administering virtual machines"
 HOMEPAGE="http://virt-manager.org"
@@ -32,8 +32,10 @@ RDEPEND="!app-emulation/virtinst
 	x11-libs/gtk+:3[introspection]
 	>=app-emulation/libvirt-0.7.0[python]
 	>=app-emulation/libvirt-glib-0.0.9
+	${PYTHON_DEPS}
 	dev-libs/libxml2[python,${PYTHON_USEDEP}]
 	dev-python/ipaddr[${PYTHON_USEDEP}]
+	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/urlgrabber[${PYTHON_USEDEP}]
 	x11-libs/vte:2.90[glade,introspection]
 	gnome-keyring? ( dev-python/gnome-keyring-python )
@@ -60,16 +62,4 @@ distutils-r1_python_compile() {
 	esetup.py configure \
 		--qemu-user=qemu \
 		--default-graphics=${defgraphics}
-}
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-	gnome2_schemas_update
-	fdo-mime_desktop_database_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-	gnome2_schemas_update
-	fdo-mime_desktop_database_update
 }
