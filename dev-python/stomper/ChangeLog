@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/stomper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.18 2013/06/19 08:23:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.19 2013/06/25 07:42:11 patrick Exp $
+
+*stomper-0.2.7 (25 Jun 2013)
+
+  25 Jun 2013; Patrick Lauer <patrick@gentoo.org> +stomper-0.2.7.ebuild:
+  Bump
 
 *stomper-0.2.6 (19 Jun 2013)
 
