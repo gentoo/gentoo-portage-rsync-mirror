@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/sphinxtogithub
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxtogithub/ChangeLog,v 1.1 2013/06/25 10:55:53 idella4 Exp $
+
+*sphinxtogithub-1.0.0 (25 Jun 2013)
+
+  25 Jun 2013; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +sphinxtogithub-1.0.0.ebuild:
+  New package, dep to jsonpickle, ebuild prepared by me
