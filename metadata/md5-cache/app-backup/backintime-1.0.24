@@ -10,4 +10,4 @@ RDEPEND=net-misc/rsync[xattr,acl] kde? ( >=kde-base/kdelibs-4 kde-base/pykde4 kd
 SLOT=0
 SRC_URI=http://backintime.le-web.org/wp-content/uploads/2009/03/backintime-1.0.24.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	9aa9cecaaf78644be7c0b8b8dc814dce	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=634e88b5c20ddd9729805807badc8ecf
+_md5_=f86929515d2a401a3b71add4386d2209

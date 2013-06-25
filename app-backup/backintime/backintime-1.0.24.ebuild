@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24.ebuild,v 1.1 2013/06/23 21:13:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24.ebuild,v 1.2 2013/06/25 20:54:48 xmw Exp $
 
 EAPI=5
 
@@ -63,22 +63,19 @@ src_prepare() {
 		local variant
 		for variant in ${backintime_variants} ; do
 			einfo "$variant: run \"$@\""
-			cd "${S}"/${variant}
+			pushd "${S}"/${variant} || die
 			"${@}" || die
+			popd
 		done
 	}
 
-	backintime_linguas() {
-		cd po
+	if [ -n ${LINGUAS+x} ] ; then
+		cd common/po || die
 		for po in *.po ; do
 			if ! has ${po/.po} ${LINGUAS} ; then
 				rm ${po} || die
 			fi
 		done
-	}
-
-	if [ -n ${LINGUAS+x} ] ; then
-		backintime_run backintime_linguas
 	fi
 }
 

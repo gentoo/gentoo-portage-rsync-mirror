@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.47 2013/06/15 21:38:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.48 2013/06/25 20:43:20 ulm Exp $
+
+*lua-mode-20130419 (25 Jun 2013)
+
+  25 Jun 2013; Ulrich Müller <ulm@gentoo.org> lua-mode-20100617-r1.ebuild,
+  +lua-mode-20130419.ebuild:
+  Version bump, bug 473406.
 
   15 Jun 2013; Ulrich Müller <ulm@gentoo.org> -files/70lua-mode-gentoo.el:
   Remove stale file.
