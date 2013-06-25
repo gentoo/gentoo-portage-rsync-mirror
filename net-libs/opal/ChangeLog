@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.95 2013/06/24 16:43:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.96 2013/06/25 16:11:52 chithanh Exp $
+
+  25 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  opal-3.10.10.ebuild, opal-3.10.9.ebuild, opal-3.6.8-r2.ebuild:
+  Add blockers for libav-9, bug #443206.
 
   24 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> opal-3.12.4.ebuild:
   Fix samples readme install wrt#474614.
