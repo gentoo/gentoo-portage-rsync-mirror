@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ignuit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.24 2013/06/14 12:38:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.25 2013/06/25 10:23:29 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ignuit-2.20.0.ebuild:
+  Stable for ppc64, wrt bug #470336
 
   14 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> ignuit-0.0.16.ebuild,
   ignuit-2.20.0.ebuild:

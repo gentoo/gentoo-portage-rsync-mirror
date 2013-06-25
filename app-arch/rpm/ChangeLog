@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.181 2013/06/25 09:37:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.182 2013/06/25 10:21:31 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> rpm-4.11.0.1.ebuild:
+  Stable for ppc64, wrt bug #471456
 
   25 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> rpm-4.11.0.1.ebuild:
   Stable on x86 and amd64 wrt bug#471456.

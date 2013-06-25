@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.101 2013/05/26 15:38:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.102 2013/06/25 10:24:50 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> boehm-gc-7.2d-r1.ebuild:
+  Stable for ppc64, wrt bug #471244
 
   26 May 2013; Jeroen Roovers <jer@gentoo.org> boehm-gc-7.2d-r1.ebuild:
   Stable for HPPA (bug #471244).
