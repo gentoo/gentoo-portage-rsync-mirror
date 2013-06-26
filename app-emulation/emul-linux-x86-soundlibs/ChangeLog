@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.92 2013/06/26 18:18:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.93 2013/06/26 20:33:46 aballier Exp $
+
+*emul-linux-x86-soundlibs-20130224-r2 (26 Jun 2013)
+
+  26 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +emul-linux-x86-soundlibs-20130224-r2.ebuild,
+  +files/remove-native-20130224-r2:
+  new revision making use of webrtc-audio-processing, alsa-lib, flac and
+  audiofile multilib ebuilds.
 
 *emul-linux-x86-soundlibs-20130224-r1 (26 Jun 2013)
 

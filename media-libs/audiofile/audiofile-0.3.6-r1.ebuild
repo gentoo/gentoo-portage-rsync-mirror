@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.6-r1.ebuild,v 1.1 2013/05/02 12:50:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.6-r1.ebuild,v 1.2 2013/06/26 20:31:26 aballier Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="flac static-libs test"
 
 RDEPEND="flac? ( >=media-libs/flac-1.2.1[${MULTILIB_USEDEP}] )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r1
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-cpp/gtest[${MULTILIB_USEDEP}] )"
