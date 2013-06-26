@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.63 2012/07/26 16:40:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.64 2013/06/26 19:22:27 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -282,6 +282,8 @@ texlive-module_src_compile() {
 	for i in texmf/fmtutil/format*.cnf; do
 		if [ -f "${i}" ]; then
 			einfo "Building format ${i}"
+			[ -d texmf-var ] || mkdir texmf-var
+			[ -d texmf-var/web2c ] || mkdir texmf-var/web2c
 			VARTEXFONTS="${T}/fonts" TEXMFHOME="${S}/texmf:${S}/texmf-dist:${S}/texmf-var"\
 				env -u TEXINPUTS fmtutil --cnffile "${i}" --fmtdir "${S}/texmf-var/web2c" --all\
 				|| die "failed to build format ${i}"

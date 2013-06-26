@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7983 2013/06/26 18:13:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7984 2013/06/26 19:04:10 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask new libva/intel-driver
 
   26 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask libmodplug, libogg, libvorbis and gsm multilib ebuilds.

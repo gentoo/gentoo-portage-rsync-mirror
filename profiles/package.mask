@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14865 2013/06/26 18:13:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14866 2013/06/26 19:04:11 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (26 Jun 2013)
+# These break build of the other drivers (x11-libs/libva-vdpau-driver and
+# x11-libs/xvba-video)
+>=x11-libs/libva-1.2.0
+>=x11-libs/libva-intel-driver-1.2.0
 
 # Julian Ospald <hasufell@gentoo.org> (26 Jun 2013)
 # Depends on masked dev-lang/lua-5.2
