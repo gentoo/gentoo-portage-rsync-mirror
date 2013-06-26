@@ -1,6 +1,10 @@
 # ChangeLog for media-video/x264-encoder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.71 2013/06/19 18:11:57 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.72 2013/06/26 04:40:11 chutzpah Exp $
+
+  26 Jun 2013; Patrick McLean <chutzpah@gentoo.org>
+  x264-encoder-0.0.20130506.ebuild, x264-encoder-9999.ebuild:
+  Switch 9999 to master rather than stable branch (bug #474430).
 
   19 Jun 2013; Patrick McLean <chutz@gentoo.org>
   x264-encoder-0.0.20130506.ebuild, x264-encoder-9999.ebuild:

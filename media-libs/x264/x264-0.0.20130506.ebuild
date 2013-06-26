@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130506.ebuild,v 1.2 2013/06/19 18:11:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130506.ebuild,v 1.3 2013/06/26 04:38:09 chutzpah Exp $
 
 EAPI=5
 
@@ -10,7 +10,6 @@ DESCRIPTION="A free library for encoding X264/AVC streams"
 HOMEPAGE="http://www.videolan.org/developers/x264.html"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-2
-	EGIT_BRANCH=stable
 	EGIT_REPO_URI="git://git.videolan.org/x264.git"
 	SLOT="0"
 else
@@ -21,7 +20,6 @@ else
 
 	SONAME="132"
 	SLOT="0/${SONAME}"
-	QA_TEXTRELS="usr/lib64/libx264.so.${SONAME}"
 
 	S="${WORKDIR}/${MY_P}"
 fi
