@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.70 2013/06/26 08:53:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.71 2013/06/26 11:56:53 ago Exp $
+
+  26 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  libnetfilter_conntrack-1.0.3.ebuild:
+  Stable for arm, wrt bug #474268
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
   libnetfilter_conntrack-1.0.3.ebuild:

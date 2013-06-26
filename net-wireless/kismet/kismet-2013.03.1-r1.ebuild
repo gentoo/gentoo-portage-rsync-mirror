@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2013.03.1-r1.ebuild,v 1.5 2013/06/25 12:53:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2013.03.1-r1.ebuild,v 1.6 2013/06/26 11:58:42 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
-	KEYWORDS="amd64 ~arm ppc x86"
+	KEYWORDS="amd64 arm ppc x86"
 fi
 
 DESCRIPTION="IEEE 802.11 wireless LAN sniffer"

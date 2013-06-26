@@ -4,10 +4,10 @@ DESCRIPTION=A tor-compliant pluggable transports proxy to obfuscate tor traffic
 EAPI=4
 HOMEPAGE=https://www.torproject.org/projects/obfsproxy.html
 IUSE=daemon
-KEYWORDS=amd64 ~arm ~mips ppc ppc64 x86
+KEYWORDS=amd64 arm ~mips ppc ppc64 x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/openssl >=dev-libs/libevent-2 sys-libs/zlib
 SLOT=0
 SRC_URI=https://archive.torproject.org/tor-package-archive/obfsproxy/obfsproxy-0.1.4.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=93e33731e5235cb6b0f3e7444c95e766
+_md5_=11d4fffc9e662af12e906a2bffbb3a7f

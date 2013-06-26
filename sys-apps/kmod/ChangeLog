@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.90 2013/06/26 08:54:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.91 2013/06/26 11:57:57 ago Exp $
+
+  26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kmod-13-r1.ebuild:
+  Stable for arm, wrt bug #470580
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kmod-13-r1.ebuild:
   Stable for ia64, wrt bug #470580

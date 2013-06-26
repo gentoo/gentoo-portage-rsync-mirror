@@ -1,11 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.13 2013/05/01 20:31:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.14 2013/06/26 11:58:10 jer Exp $
 
-EAPI="2"
-
-inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability \
-	unpacker user versionator
+EAPI=5
+inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability unpacker user versionator
 
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${PV}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${PV}"
@@ -320,51 +318,45 @@ src_install() {
 			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-169.07 > \
 			"${WORKDIR}"/nvidia
 		insinto /etc/modprobe.d
-		newins "${WORKDIR}"/nvidia nvidia.conf || die
+		newins "${WORKDIR}"/nvidia nvidia.conf
 	elif use x86-fbsd; then
 		insinto /boot/modules
-		doins "${WORKDIR}/${NV_PACKAGE}/src/nvidia.kld" || die
+		doins "${WORKDIR}/${NV_PACKAGE}/src/nvidia.kld"
 
 		exeinto /boot/modules
-		doexe "${WORKDIR}/${NV_PACKAGE}/src/nvidia.ko" || die
+		doexe "${WORKDIR}/${NV_PACKAGE}/src/nvidia.ko"
 	fi
 
 	# NVIDIA kernel <-> userspace driver config lib
-	dolib.so ${NV_LIB}/libnvidia-cfg.so.${NV_SOVER} || \
-		die "failed to install libnvidia-cfg"
+	dolib.so ${NV_LIB}/libnvidia-cfg.so.${NV_SOVER}
 
 	# Xorg DDX driver
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
-	doins ${NV_X11_DRV}/nvidia_drv.so || die "failed to install nvidia_drv.so"
+	doins ${NV_X11_DRV}/nvidia_drv.so
 
 	# Xorg GLX driver
 	insinto /usr/$(get_libdir)/opengl/nvidia/extensions
-	doins ${NV_X11_EXT}/libglx.so.${NV_SOVER} || \
-		die "failed to install libglx.so"
+	doins ${NV_X11_EXT}/libglx.so.${NV_SOVER}
 	dosym /usr/$(get_libdir)/opengl/nvidia/extensions/libglx.so.${NV_SOVER} \
-		/usr/$(get_libdir)/opengl/nvidia/extensions/libglx.so || \
-		die "failed to create libglx.so symlink"
+		/usr/$(get_libdir)/opengl/nvidia/extensions/libglx.so
 
 	# XvMC driver
-	dolib.a ${NV_X11}/libXvMCNVIDIA.a || \
-		die "failed to install libXvMCNVIDIA.so"
-	dolib.so ${NV_X11}/libXvMCNVIDIA.so.${NV_SOVER} || \
-		die "failed to install libXvMCNVIDIA.so"
-	dosym libXvMCNVIDIA.so.${NV_SOVER} /usr/$(get_libdir)/libXvMCNVIDIA.so || \
-		die "failed to create libXvMCNVIDIA.so symlink"
+	dolib.a ${NV_X11}/libXvMCNVIDIA.a
+	dolib.so ${NV_X11}/libXvMCNVIDIA.so.${NV_SOVER}
+	dosym libXvMCNVIDIA.so.${NV_SOVER} /usr/$(get_libdir)/libXvMCNVIDIA.so
 
 	# CUDA headers (driver to come)
 	if [[ -d ${S}/usr/include/cuda ]]; then
 		dodir /usr/include/cuda
 		insinto /usr/include/cuda
-		doins usr/include/cuda/*.h || die "failed to install cuda headers"
+		doins usr/include/cuda/*.h
 	fi
 
 	# OpenCL headers (driver to come)
 	if [[ -d ${S}/usr/include/CL ]]; then
 		dodir /usr/include/CL
 		insinto /usr/include/CL
-		doins usr/include/CL/*.h || die "failed to install OpenCL headers"
+		doins usr/include/CL/*.h
 	fi
 
 	# Documentation
@@ -382,10 +374,10 @@ src_install() {
 	fi
 
 	# Helper Apps
-	dobin ${NV_EXEC}/nvidia-xconfig || die
-	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
+	dobin ${NV_EXEC}/nvidia-xconfig
+	dobin ${NV_EXEC}/nvidia-bug-report.sh
 	if use gtk; then
-		dobin usr/bin/nvidia-settings || die
+		dobin usr/bin/nvidia-settings
 	fi
 #	if use kernel_linux; then
 #		dobin ${NV_EXEC}/nvidia-smi || die
@@ -415,8 +407,8 @@ donvidia() {
 
 	libname=$(basename $2)
 
-	doexe $2.$3 || die "failed to install $2"
-	dosym ${libname}.$3 $1/${libname} || die "failed to symlink $2"
+	doexe $2.$3
+	dosym ${libname}.$3 $1/${libname}
 	[[ $3 != "1" ]] && dosym ${libname}.$3 $1/${libname}.1
 }
 

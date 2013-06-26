@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.4-r1.ebuild,v 1.6 2013/06/25 12:49:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.4-r1.ebuild,v 1.7 2013/06/26 11:56:18 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="https://archive.torproject.org/tor-package-archive/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ppc ppc64 x86"
+KEYWORDS="amd64 arm ~mips ppc ppc64 x86"
 IUSE="daemon"
 
 DEPEND="dev-libs/openssl
