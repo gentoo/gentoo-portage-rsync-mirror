@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.33.ebuild,v 1.1 2013/06/02 09:18:02 matsl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.33.ebuild,v 1.2 2013/06/26 22:52:02 matsl Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -63,6 +63,10 @@ src_unpack() {
 
 src_prepare() {
 	use neXt && cp "${WORKDIR}"/NeXT.XEmacs/xemacs-icons/* "${S}"/etc/toolbar/
+
+	# Fix for no-mule build.
+	find "${S}"/lisp -name '*.elc' -exec rm {} \; || die
+	epatch "${FILESDIR}"/${P}-no-mule-build.patch
 }
 
 src_configure() {
@@ -170,10 +174,10 @@ src_configure() {
 
 src_install() {
 	emake prefix="${D}"/usr \
-		mandir="${D}"/usr/share/man/man1 \
-		infodir="${D}"/usr/share/info \
-		libdir="${D}"/usr/$(get_libdir) \
-		datadir="${D}"/usr/share \
+               mandir="${D}"/usr/share/man/man1 \
+               infodir="${D}"/usr/share/info \
+               libdir="${D}"/usr/$(get_libdir) \
+               datadir="${D}"/usr/share \
 		install gzip-el || die
 
 	# Rename some applications installed in bin so that it is clear
