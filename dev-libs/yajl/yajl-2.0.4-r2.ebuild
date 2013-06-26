@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-2.0.4-r2.ebuild,v 1.1 2013/06/23 22:19:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-2.0.4-r2.ebuild,v 1.2 2013/06/26 10:28:11 xmw Exp $
 
 EAPI=5
 
@@ -17,11 +17,21 @@ IUSE="static-libs"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-fix_static_linking.patch
-	if ! use static-libs ; then
-		epatch "${FILESDIR}"/${P}-remove_static_lib.patch
-	fi
+
+	multilib_copy_sources
 }
 
 src_test() {
-	multilib_foreach_abi run_in_build_dir emake test
+	run_test() {
+		cd "${BUILD_DIR}"/test
+		./run_tests.sh ./yajl_test || die
+	}
+	multilib_parallel_foreach_abi run_test
+}
+
+src_install() {
+	cmake-multilib_src_install
+
+	use static-libs || \
+		find "${D}" -name libyajl_s.a -delete
 }
