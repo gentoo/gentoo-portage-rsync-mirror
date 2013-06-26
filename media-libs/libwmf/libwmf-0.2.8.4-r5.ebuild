@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.7 2013/06/26 03:03:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.8 2013/06/26 07:17:28 jlec Exp $
 
 EAPI=5
 
@@ -59,6 +59,8 @@ PATCHES=(
 	"${FILESDIR}"/${P}-use-system-fonts.patch
 	"${FILESDIR}"/${P}-gdk-pixbuf.patch
 	)
+
+AUTOTOOLS_PRUNE_LIBTOOL_FILES='modules'
 
 src_prepare() {
 	if ! use doc ; then
