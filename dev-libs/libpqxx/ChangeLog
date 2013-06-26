@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.95 2013/06/25 12:59:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.96 2013/06/26 02:53:39 ago Exp $
+
+  26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libpqxx-4.0.1.ebuild:
+  Stable for alpha, wrt bug #472450
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libpqxx-4.0.1.ebuild:
   Stable for amd64, wrt bug #472450

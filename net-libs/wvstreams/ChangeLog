@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.156 2013/06/24 05:19:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.157 2013/06/26 02:57:19 ago Exp $
+
+  26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> wvstreams-4.6.1-r3.ebuild:
+  Stable for alpha, wrt bug #470556
 
   24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> wvstreams-4.6.1-r3.ebuild:
   Stable for ppc, wrt bug #470556
