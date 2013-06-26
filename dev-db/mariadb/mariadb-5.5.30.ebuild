@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.30.ebuild,v 1.1 2013/03/14 01:02:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.30.ebuild,v 1.2 2013/06/26 19:42:59 jmbsvicetto Exp $
 
 EAPI="4"
 MY_EXTRAS_VER="20130120-0100Z"
@@ -24,12 +24,6 @@ RDEPEND="${RDEPEND}"
 # Please do not add a naive src_unpack to this ebuild
 # If you want to add a single patch, copy the ebuild to an overlay
 # and create your own mysql-extras tarball, looking at 000_index.txt
-src_prepare() {
-	sed -i \
-		-e '/^noinst_PROGRAMS/s/basic-t//g' \
-		"${S}"/unittest/mytap/t/Makefile.am
-	mysql-v2_src_prepare
-}
 
 # Official test instructions:
 # USE='berkdb -cluster embedded extraengine perl ssl community' \

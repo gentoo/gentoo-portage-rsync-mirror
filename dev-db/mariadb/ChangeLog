@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.29 2013/06/02 19:48:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.30 2013/06/26 19:42:59 jmbsvicetto Exp $
+
+  26 Jun 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mariadb-5.5.28a.ebuild, mariadb-5.5.29.ebuild, mariadb-5.5.30.ebuild,
+  mariadb-5.5.31.ebuild:
+  [dev-db/mariadb-5.5] Drop src_prepare - fixes bug 462078.
 
 *mariadb-5.5.31 (02 Jun 2013)
 

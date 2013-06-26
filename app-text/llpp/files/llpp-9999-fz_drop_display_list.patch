@@ -1,0 +1,13 @@
+Required by http://git.ghostscript.com/?p=mupdf.git;a=commit;f=fitz/dev_list.c;h=f85653219a85a9f91cb14471485611ca5f6b25ba
+
+--- llpp-9999/link.c
++++ llpp-9999/link.c
+@@ -571,7 +571,7 @@
+         free (page->slinks);
+     }
+     page->freepage (page->u.ptr);
+-    fz_free_display_list (state.ctx, page->dlist);
++    fz_drop_display_list (state.ctx, page->dlist);
+     free (page);
+ }
+ 
