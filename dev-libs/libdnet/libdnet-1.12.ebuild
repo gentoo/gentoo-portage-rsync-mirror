@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.10 2013/06/26 03:06:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.11 2013/06/26 08:59:41 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://libdnet.googlecode.com/files/${P}.tgz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6 python static-libs test"
 
 #DEPEND="test? ( dev-libs/check )"

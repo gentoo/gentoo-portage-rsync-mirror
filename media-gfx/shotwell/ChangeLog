@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.55 2013/05/08 06:37:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.56 2013/06/26 08:46:22 jlec Exp $
+
+  26 Jun 2013; Justin Lecher <jlec@gentoo.org> shotwell-0.14.1.ebuild,
+  +files/shotwell-0.14.1-libraw.patch:
+  Backport compatibility fix for libraw-0.15, #474708
 
   08 May 2013; Justin Lecher <jlec@gentoo.org> shotwell-0.13.1-r2.ebuild,
   shotwell-0.14.0-r1.ebuild, shotwell-0.14.1.ebuild:

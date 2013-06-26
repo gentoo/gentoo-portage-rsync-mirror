@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.1.ebuild,v 1.2 2013/05/08 06:37:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.1.ebuild,v 1.3 2013/06/26 08:46:22 jlec Exp $
 
 EAPI=5
 
@@ -74,7 +74,8 @@ src_prepare() {
 		-e 's|CFLAGS :|CFLAGS +|g' \
 		-i plugins/Makefile.plugin.mk || die
 	epatch \
-		"${FILESDIR}"/${PN}-0.13.1-ldflags.patch
+		"${FILESDIR}"/${PN}-0.13.1-ldflags.patch \
+		"${FILESDIR}"/${P}-libraw.patch
 }
 
 src_configure() {
