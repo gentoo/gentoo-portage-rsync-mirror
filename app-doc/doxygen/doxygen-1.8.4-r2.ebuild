@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.4.ebuild,v 1.1 2013/05/19 15:47:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.4-r2.ebuild,v 1.1 2013/06/26 10:58:45 xarthisius Exp $
 
 EAPI=4
 
@@ -107,6 +107,10 @@ src_prepare() {
 	# prefix search tools patch, plus OSX fixes
 	epatch "${FILESDIR}"/${PN}-1.8.1-prefix-misc-alt.patch
 	epatch "${FILESDIR}"/${PN}-1.8.3.1-empty-line-sigsegv.patch #454348
+
+	# patches applied upstream
+	epatch "${FILESDIR}"/${P}-libreoffice.patch \
+		"${FILESDIR}"/${P}-infinite_loop.patch #474716
 
 	# fix final DESTDIR issue
 	sed -i.orig -e "s:\$(INSTALL):\$(DESTDIR)/\$(INSTALL):g" \

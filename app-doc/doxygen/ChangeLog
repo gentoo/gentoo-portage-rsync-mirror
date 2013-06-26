@@ -1,6 +1,14 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.248 2013/06/26 08:49:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.249 2013/06/26 10:58:45 xarthisius Exp $
+
+*doxygen-1.8.4-r2 (26 Jun 2013)
+
+  26 Jun 2013; Kacper Kowalik <xarthisius@gentoo.org> +doxygen-1.8.4-r2.ebuild,
+  +files/doxygen-1.8.4-infinite_loop.patch, -doxygen-1.8.4-r1.ebuild,
+  -doxygen-1.8.4.ebuild:
+  Apply upstream patch for fixing infinite loop wrt #474716 by Marien Zwart
+  <marienz@gentoo.org>. Drop old
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> doxygen-1.8.3.1.ebuild:
   Stable for ia64, wrt bug #471692
