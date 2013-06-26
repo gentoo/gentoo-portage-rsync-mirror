@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.13-r1.ebuild,v 1.1 2013/05/08 10:53:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.13-r1.ebuild,v 1.2 2013/06/26 17:58:57 aballier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs versionator
@@ -13,7 +13,7 @@ LICENSE="gsm"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
-RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
+RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}-"$(replace_version_separator 2 '-pl' )"

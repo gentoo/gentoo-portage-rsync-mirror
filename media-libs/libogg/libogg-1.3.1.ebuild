@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.1.ebuild,v 1.1 2013/06/01 06:46:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.1.ebuild,v 1.2 2013/06/26 17:48:05 aballier Exp $
 
 EAPI=5
 inherit autotools-multilib
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="static-libs"
 
 RDEPEND="
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20121202 )"
+	abi_x86_32? ( !app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 DOCS=( AUTHORS CHANGES )
