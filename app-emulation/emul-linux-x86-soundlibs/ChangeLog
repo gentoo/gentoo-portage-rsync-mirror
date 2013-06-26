@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.91 2013/03/16 15:23:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.92 2013/06/26 18:18:39 aballier Exp $
+
+*emul-linux-x86-soundlibs-20130224-r1 (26 Jun 2013)
+
+  26 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +emul-linux-x86-soundlibs-20130224-r1.ebuild, +files/remove-native:
+  Use multilib migrated libmodplug, libogg, libvorbis and gsm when abi_x86_32
+  is set. Others have been migrated but I will need to review them more
+  carefuly.
 
   16 Mar 2013; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-soundlibs-20130224.ebuild:
