@@ -38,7 +38,7 @@ checkconfig() {
 	modprobe tp_smapi 2>/dev/null
     fi
 	
-    if [ ! -d /sys/devices/platform/hdaps ]; then
+    if [ ! -d /sys/devices/platform/hdaps ] ; then
 	ebegin "Loading hdaps module"
         modprobe hdaps
 	eend $? || return 1

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20090401-r2.ebuild,v 1.4 2013/06/25 12:49:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20090401-r2.ebuild,v 1.5 2013/06/26 14:05:53 ottxor Exp $
 
 EAPI=4
 inherit linux-info readme.gentoo
@@ -15,8 +15,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 pkg_setup() {
-	# We require the hdaps module which can either come from kernel sources or
-	# from the tp_smapi package.
+	# We require the hdaps module which can either come from kernel sources
+	# or from the tp_smapi package.
 	if ! has_version app-laptop/tp_smapi[hdaps]; then
 		CONFIG_CHECK="~SENSORS_HDAPS"
 		ERROR_SENSORS_HDAPS="${P} requires app-laptop/tp_smapi (with hdaps USE enabled) or support for CONFIG_SENSORS_HDAPS enabled"
