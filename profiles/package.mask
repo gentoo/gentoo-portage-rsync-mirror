@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14861 2013/06/26 13:29:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14862 2013/06/26 15:16:38 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -197,13 +197,6 @@ dev-util/lafilefixer
 # Mike Gilbert <floppym@gentoo.org (27 May 2013)
 # Masked until reverse dependencies are tested bug 401009.
 =dev-python/imaging-2.0.0
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (26 May 2013)
-# dead on upstream, homepage dead
-# failed on compile >=media-video/vdr-1.7.27
-# see wrt bug 414245 414177, use as alternative media-plugins/vdr-cdplayer
-# Removal in ~ 30 days
-media-plugins/vdr-vdrcd
 
 # Justin Lecher <jlec@gentoo.org> (25 May 2013)
 # Upstream dropped support long ago

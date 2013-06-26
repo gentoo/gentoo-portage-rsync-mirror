@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skychart/skychart-3.8.2450.ebuild,v 1.1 2013/04/21 18:00:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skychart/skychart-3.8.2450.ebuild,v 1.2 2013/06/26 15:16:57 hasufell Exp $
 
 EAPI=5
 
@@ -42,8 +42,8 @@ QA_FLAGS_IGNORED="usr/bin/cdcicon
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-lang/lazarus
-	dev-lang/fpc"
+	>=dev-lang/lazarus-1.0.4
+	>=dev-lang/fpc-2.6.0"
 
 S=${WORKDIR}/${PN}-${MY_PV}-src
 

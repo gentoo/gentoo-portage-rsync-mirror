@@ -3,8 +3,8 @@
 <pkgmetadata>
   <herd>sci</herd>
   <maintainer>
-  <email>tomka@gentoo.org</email>
-  <name>Thomas Kahle</name>
+    <email>tomka@gentoo.org</email>
+    <name>Thomas Kahle</name>
   </maintainer>
   <longdescription> 
 MPIR is an open source multiprecision integer (bignum) library forked
@@ -17,6 +17,6 @@ professional and amateur mathematicians, computer scientists and
 hobbyists.
 </longdescription>
   <use>
-    <flag name='cpudetection'>Enables runtime cpudetection (useful for bindist, compatability on other CPUs)</flag>
+    <flag name="cpudetection">Enables runtime cpudetection (useful for bindist, compatability on other CPUs)</flag>
   </use>
 </pkgmetadata>
