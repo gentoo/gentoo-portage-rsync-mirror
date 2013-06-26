@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.62 2013/03/15 19:31:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.63 2013/06/26 13:14:28 hasufell Exp $
+
+*sdlmame-0.149 (26 Jun 2013)
+
+  26 Jun 2013; Julian Ospald <hasufell@gentoo.org> +sdlmame-0.149.ebuild,
+  +files/sdlmame-0.149-QA.patch, +files/sdlmame-0.149-debugger-linking.patch,
+  +files/sdlmame-0.149-no-opengl.patch, +files/sdlmame-0.149-system-lua.patch:
+  version bump wrt #474638
 
 *sdlmame-0.148_p1-r1 (15 Mar 2013)
 
