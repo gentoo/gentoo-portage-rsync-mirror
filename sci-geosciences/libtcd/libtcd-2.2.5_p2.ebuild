@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/libtcd/libtcd-2.2.5_p2.ebuild,v 1.1 2013/02/10 20:45:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/libtcd/libtcd-2.2.5_p2.ebuild,v 1.2 2013/06/26 16:56:46 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.flaterco.com/xtide/${MY_P}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc static-libs"
 
 DEPEND=">=sci-geosciences/harmonics-dwf-free-20120302"

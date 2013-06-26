@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uthash/uthash-1.9.7.ebuild,v 1.5 2012/12/29 14:40:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uthash/uthash-1.9.7.ebuild,v 1.6 2013/06/26 16:42:31 blueness Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/uthash/${P}.tar.bz2"
 
 LICENSE="BSD-1"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="test"
 
 DEPEND="test? ( dev-lang/perl )"

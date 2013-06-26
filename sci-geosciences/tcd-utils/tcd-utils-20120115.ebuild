@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tcd-utils/tcd-utils-20120115.ebuild,v 1.1 2013/02/10 21:13:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tcd-utils/tcd-utils-20120115.ebuild,v 1.2 2013/06/26 16:58:43 nimiux Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.flaterco.com/xtide/${P}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=">=sci-geosciences/libtcd-2.2.4"
