@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.3 2013/05/07 11:58:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.4 2013/06/26 20:21:47 aballier Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="3dnow altivec +cxx debug ogg sse static-libs"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.1.3[${MULTILIB_USEDEP}] )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r1
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	abi_x86_32? ( dev-lang/nasm )
 	!elibc_uclibc? ( sys-devel/gettext )

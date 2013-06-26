@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1.ebuild,v 1.1 2013/05/27 13:42:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1.ebuild,v 1.2 2013/06/26 20:09:37 aballier Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="doc debug alisp python"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r1
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.35 2013/01/31 08:15:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.36 2013/06/26 20:14:11 hasufell Exp $
+
+*lazarus-1.0.10 (26 Jun 2013)
+
+  26 Jun 2013; Julian Ospald <hasufell@gentoo.org> +lazarus-1.0.10.ebuild:
+  version bump
 
 *lazarus-1.0.4 (31 Jan 2013)
 

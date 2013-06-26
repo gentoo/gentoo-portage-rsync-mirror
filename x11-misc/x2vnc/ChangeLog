@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2vnc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.39 2010/05/23 18:49:07 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.40 2013/06/26 20:08:50 phosphan Exp $
+
+  26 Jun 2013; Patrick Kursawe <phosphan@gentoo.org> metadata.xml:
+  Dropping maintainership, see bug #473480
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> x2vnc-1.7.2-r1.ebuild:
   stable amd64, bug 308713
