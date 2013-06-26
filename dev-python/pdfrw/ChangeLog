@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pdfrw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pdfrw/ChangeLog,v 1.1 2013/01/22 16:34:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pdfrw/ChangeLog,v 1.2 2013/06/26 15:53:29 yac Exp $
+
+  26 Jun 2013; Jan Matejka <yac@gentoo.org> pdfrw-0.1.ebuild:
+  stable amd64,x86 bug #474884
 
 *pdfrw-0.1 (22 Jan 2013)
 
