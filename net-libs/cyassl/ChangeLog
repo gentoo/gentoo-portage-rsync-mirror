@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/cyassl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.37 2013/03/07 07:26:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.38 2013/06/26 14:55:09 blueness Exp $
+
+*cyassl-2.7.0 (26 Jun 2013)
+
+  26 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +cyassl-2.7.0.ebuild,
+  metadata.xml:
+  Version bump
 
   07 Mar 2013; Mike Frysinger <vapier@gentoo.org> cyassl-2.5.0.ebuild:
   Add s390 lovin.

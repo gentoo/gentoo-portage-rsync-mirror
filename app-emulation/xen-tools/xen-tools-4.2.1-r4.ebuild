@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r3.ebuild,v 1.10 2013/03/05 18:05:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r4.ebuild,v 1.1 2013/06/26 14:41:37 idella4 Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~amd64 ~x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 	$IPXE_TARBALL_URL
 	$XEN_SEABIOS_URL"
@@ -32,14 +32,14 @@ DOCS=( README docs/README.xen-bugtool )
 
 LICENSE="GPL-2"
 SLOT="0"
-# TODO soon; ocaml up for a potential name change
-IUSE="api custom-cflags debug doc flask hvm ocaml qemu pygrub screen static-libs xend"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs xend"
 
 REQUIRED_USE="hvm? ( qemu )"
 
 CDEPEND="dev-libs/yajl
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pypam[${PYTHON_USEDEP}]
+	dev-python/pyxml[${PYTHON_USEDEP}]
 	sys-libs/zlib
 	sys-power/iasl
 	ocaml? ( dev-ml/findlib )
@@ -67,8 +67,8 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? (  x11-proto/xproto
-	)"
+	hvm? (  x11-proto/xproto )
+	qemu? ( >=sys-apps/texinfo-5 )"
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
@@ -118,8 +118,8 @@ pkg_setup() {
 		fi
 	fi
 
-	use api   && export "LIBXENAPI_BINDINGS=y"
-	use flask && export "FLASK_ENABLE=y"
+	use api     && export "LIBXENAPI_BINDINGS=y"
+	use flask   && export "FLASK_ENABLE=y"
 }
 
 src_prepare() {
@@ -165,14 +165,15 @@ src_prepare() {
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" -i Makefile || die
 	fi
 
-	# Fix texi2html build error with new texi2html
-	epatch "${FILESDIR}"/${PN}-4-docfix.patch
+	# Fix texi2html build error with new texi2html, qemu.doc.html
+	epatch "${FILESDIR}"/${PN}-4-docfix.patch \
+		"${FILESDIR}"/${PN}-4-qemu-xen-doc.patch
 
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
 
 	# Prevent the downloading of ipxe, seabios
-	epatch "${FILESDIR}"/${P/-tools/}-anti-download.patch
+	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-anti-download.patch
 	cp "${DISTDIR}"/ipxe.tar.gz tools/firmware/etherboot/ || die
 	mv ../seabios-dir-remote tools/firmware/ || die
 	pushd tools/firmware/ > /dev/null
@@ -188,14 +189,38 @@ src_prepare() {
 	fi
 
 	# Prevent double stripping of files at install
-	epatch "${FILESDIR}"/${P/-tools/}-nostrip.patch
+	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-nostrip.patch
 
 	# fix jobserver in Makefile
-	epatch "${FILESDIR}"/${P/-tools/}-jserver.patch
+	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-jserver.patch
 
-	#Sec patches
-	epatch "${FILESDIR}"/xen-4-CVE-2012-4544-XSA-25.patch \
-		 "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch
+	# add missing typedef
+	epatch "${FILESDIR}"/xen-4-ulong.patch \
+		"${FILESDIR}"/${PN}-4.2-xen_disk_leak.patch
+
+	#Sec patches currently valid
+	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-0215-XSA-38.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1919-XSA-46.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA_49.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-8-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-11-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-15-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch \
+		"${FILESDIR}"/xen-4.2-CVE-XSA-57.patch
 }
 
 src_compile() {
@@ -225,14 +250,14 @@ src_install() {
 	local PYTHONDONTWRITEBYTECODE
 	export PYTHONDONTWRITEBYTECODE
 
-	emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" \
-		install-tools
+	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" \
+		XEN_PYTHON_NATIVE_INSTALL=y install-tools
 
 	# Fix the remaining Python shebangs.
-	python_fix_shebang "${D}"
+	python_fix_shebang "${ED}"
 
 	# Remove RedHat-specific stuff
-	rm -rf "${D}"tmp || die
+	rm -rf "${ED}"tmp || die
 
 	# uncomment lines in xl.conf
 	sed -e 's:^#autoballoon=1:autoballoon=1:' \
@@ -241,15 +266,15 @@ src_install() {
 		-i tools/examples/xl.conf  || die
 
 	if use doc; then
-		emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-docs
+		emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" install-docs
 
-		dohtml -r docs/html/
+		dohtml -r docs/
 		docinto pdf
 		dodoc ${DOCS[@]}
-		[ -d "${D}"/usr/share/doc/xen ] && mv "${ED}"/usr/share/doc/xen/* "${ED}"/usr/share/doc/${PF}/html
+		[ -d "${ED}"/usr/share/doc/xen ] && mv "${ED}"/usr/share/doc/xen/* "${ED}"/usr/share/doc/${PF}/html
 	fi
 
-	rm -rf "${D}"/usr/share/doc/xen/
+	rm -rf "${ED}"/usr/share/doc/xen/
 	doman docs/man?/*
 
 	if use xend; then
@@ -263,23 +288,19 @@ src_install() {
 	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled
 
 	if use screen; then
-		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains || die
-		cp "${FILESDIR}"/xen-consoles.logrotate "${D}"/etc/xen/ || die
+		cat "${FILESDIR}"/xendomains-screen.confd >> "${ED}"/etc/conf.d/xendomains || die
+		cp "${FILESDIR}"/xen-consoles.logrotate "${ED}"/etc/xen/ || die
 		keepdir /var/log/xen-consoles
 	fi
 
-	# Set dirs for qemu files,; Bug #458818
 	if use qemu; then
-		if use x86; then
-			dodir /usr/lib/xen/bin
-		elif use amd64; then
-			mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/$(get_libdir)/xen/bin/ || die
-		fi
+		mkdir -p "${D}"usr/lib64/xen/bin || die
+		mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/lib64/xen/bin/ || die
 	fi
 
 	# For -static-libs wrt Bug 384355
 	if ! use static-libs; then
-		rm -f "${D}"usr/$(get_libdir)/*.a "${ED}"usr/$(get_libdir)/ocaml/*/*.a
+		rm -f "${ED}"usr/$(get_libdir)/*.a "${ED}"usr/$(get_libdir)/ocaml/*/*.a
 	fi
 
 	# xend expects these to exist
@@ -290,11 +311,11 @@ src_install() {
 
 	# Temp QA workaround
 	dodir "$(udev_get_udevdir)"
-	mv "${D}"/etc/udev/* "${ED}/$(udev_get_udevdir)"
-	rm -rf "${D}"/etc/udev
+	mv "${ED}"/etc/udev/* "${ED}/$(udev_get_udevdir)"
+	rm -rf "${ED}"/etc/udev
 
 	# Remove files failing QA AFTER emake installs them, avoiding seeking absent files
-	find "${D}" \( -name openbios-sparc32 -o -name openbios-sparc64 \
+	find "${ED}" \( -name openbios-sparc32 -o -name openbios-sparc64 \
 		-o -name openbios-ppc -o -name palcode-clipper \) -delete || die
 }
 

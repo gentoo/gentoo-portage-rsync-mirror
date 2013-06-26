@@ -1,0 +1,382 @@
+From 77c0829fa751f052f7b8ec08287aef6e7ba97bc5 Mon Sep 17 00:00:00 2001
+From: Ian Jackson <ian.jackson@eu.citrix.com>
+Date: Fri, 14 Jun 2013 16:43:19 +0100
+Subject: [PATCH 19/23] libxc: check failure of xc_dom_*_to_ptr, xc_map_foreign_range
+
+The return values from xc_dom_*_to_ptr and xc_map_foreign_range are
+sometimes dereferenced, or subjected to pointer arithmetic, without
+checking whether the relevant function failed and returned NULL.
+
+Add an appropriate error check at every call site.
+
+Changes in the 4.2 backport of this series:
+* Fix tools/libxc/xc_dom_x86.c:setup_pgtables_x86_32.
+* Fix tools/libxc/xc_dom_ia64.c:start_info_ia64.
+* Fix tools/libxc/ia64/xc_ia64_dom_fwloader.c:xc_dom_load_fw_kernel.
+
+This is part of the fix to a security issue, XSA-55.
+
+Signed-off-by: Ian Jackson <ian.jackson@eu.citrix.com>
+---
+ tools/libxc/ia64/xc_ia64_dom_fwloader.c |    2 +
+ tools/libxc/xc_dom_binloader.c          |    6 +++
+ tools/libxc/xc_dom_core.c               |    6 +++
+ tools/libxc/xc_dom_elfloader.c          |   13 +++++++
+ tools/libxc/xc_dom_ia64.c               |    6 +++
+ tools/libxc/xc_dom_x86.c                |   55 +++++++++++++++++++++++++++++++
+ tools/libxc/xc_domain_restore.c         |   27 +++++++++++++++
+ tools/libxc/xc_offline_page.c           |    5 +++
+ 8 files changed, 120 insertions(+), 0 deletions(-)
+
+diff --git a/tools/libxc/ia64/xc_ia64_dom_fwloader.c b/tools/libxc/ia64/xc_ia64_dom_fwloader.c
+index cdf3333..dbd3349 100644
+--- a/tools/libxc/ia64/xc_ia64_dom_fwloader.c
++++ b/tools/libxc/ia64/xc_ia64_dom_fwloader.c
+@@ -60,6 +60,8 @@ static int xc_dom_load_fw_kernel(struct xc_dom_image *dom)
+     unsigned long i;
+ 
+     dest = xc_dom_vaddr_to_ptr(dom, dom->kernel_seg.vstart);
++    if ( dest == NULL )
++        return -1;
+     memcpy(dest, dom->kernel_blob, FW_SIZE);
+ 
+     /* Synchronize cache.  */
+diff --git a/tools/libxc/xc_dom_binloader.c b/tools/libxc/xc_dom_binloader.c
+index 8596a28..553b366 100644
+--- a/tools/libxc/xc_dom_binloader.c
++++ b/tools/libxc/xc_dom_binloader.c
+@@ -277,6 +277,12 @@ static int xc_dom_load_bin_kernel(struct xc_dom_image *dom)
+     DOMPRINTF("  bss_size:  0x%" PRIx32 "", bss_size);
+ 
+     dest = xc_dom_vaddr_to_ptr(dom, dom->kernel_seg.vstart, &dest_size);
++    if ( dest == NULL )
++    {
++        DOMPRINTF("%s: xc_dom_vaddr_to_ptr(dom, dom->kernel_seg.vstart)"
++                  " => NULL", __FUNCTION__);
++        return -EINVAL;
++    }
+ 
+     if ( dest_size < text_size ||
+          dest_size - text_size < bss_size )
+diff --git a/tools/libxc/xc_dom_core.c b/tools/libxc/xc_dom_core.c
+index 8913e41..a54ddae 100644
+--- a/tools/libxc/xc_dom_core.c
++++ b/tools/libxc/xc_dom_core.c
+@@ -868,6 +868,12 @@ int xc_dom_build_image(struct xc_dom_image *dom)
+                                   ramdisklen) != 0 )
+             goto err;
+         ramdiskmap = xc_dom_seg_to_ptr(dom, &dom->ramdisk_seg);
++        if ( ramdiskmap == NULL )
++        {
++            DOMPRINTF("%s: xc_dom_seg_to_ptr(dom, &dom->ramdisk_seg) => NULL",
++                      __FUNCTION__);
++            goto err;
++        }
+         if ( unziplen )
+         {
+             if ( xc_dom_do_gunzip(dom->xch,
+diff --git a/tools/libxc/xc_dom_elfloader.c b/tools/libxc/xc_dom_elfloader.c
+index 9fc4b94..61b5798 100644
+--- a/tools/libxc/xc_dom_elfloader.c
++++ b/tools/libxc/xc_dom_elfloader.c
+@@ -139,6 +139,12 @@ static elf_errorstatus xc_dom_load_elf_symtab(struct xc_dom_image *dom,
+             return 0;
+         size = dom->kernel_seg.vend - dom->bsd_symtab_start;
+         hdr_ptr = xc_dom_vaddr_to_ptr(dom, dom->bsd_symtab_start, &allow_size);
++        if ( hdr_ptr == NULL )
++        {
++            DOMPRINTF("%s/load: xc_dom_vaddr_to_ptr(dom,dom->bsd_symtab_start"
++                      " => NULL", __FUNCTION__);
++            return -1;
++        }
+         elf->caller_xdest_base = hdr_ptr;
+         elf->caller_xdest_size = allow_size;
+         hdr = ELF_REALPTR2PTRVAL(hdr_ptr);
+@@ -384,7 +390,14 @@ static elf_errorstatus xc_dom_load_elf_kernel(struct xc_dom_image *dom)
+     xen_pfn_t pages;
+ 
+     elf->dest_base = xc_dom_seg_to_ptr_pages(dom, &dom->kernel_seg, &pages);
++    if ( elf->dest_base == NULL )
++    {
++        DOMPRINTF("%s: xc_dom_vaddr_to_ptr(dom,dom->kernel_seg)"
++                  " => NULL", __FUNCTION__);
++        return -1;
++    }
+     elf->dest_size = pages * XC_DOM_PAGE_SIZE(dom);
++
+     rc = elf_load_binary(elf);
+     if ( rc < 0 )
+     {
+diff --git a/tools/libxc/xc_dom_ia64.c b/tools/libxc/xc_dom_ia64.c
+index dcd1523..7c0eff1 100644
+--- a/tools/libxc/xc_dom_ia64.c
++++ b/tools/libxc/xc_dom_ia64.c
+@@ -60,6 +60,12 @@ int start_info_ia64(struct xc_dom_image *dom)
+ 
+     DOMPRINTF_CALLED(dom->xch);
+ 
++    if ( start_info == NULL )
++    {
++        DOMPRINTF("%s: xc_dom_pfn_to_ptr failed on start_info", __FUNCTION__);
++        return -1; /* our caller throws away our return value :-/ */
++    }
++
+     memset(start_info, 0, sizeof(*start_info));
+     sprintf(start_info->magic, dom->guest_type);
+     start_info->flags = dom->flags;
+diff --git a/tools/libxc/xc_dom_x86.c b/tools/libxc/xc_dom_x86.c
+index 0cf1687..75d6b83 100644
+--- a/tools/libxc/xc_dom_x86.c
++++ b/tools/libxc/xc_dom_x86.c
+@@ -144,6 +144,9 @@ static int setup_pgtables_x86_32(struct xc_dom_image *dom)
+     xen_vaddr_t addr;
+     xen_pfn_t pgpfn;
+ 
++    if ( l2tab == NULL )
++        goto pfn_error;
++
+     for ( addr = dom->parms.virt_base; addr < dom->virt_pgtab_end;
+           addr += PAGE_SIZE_X86 )
+     {
+@@ -151,6 +154,8 @@ static int setup_pgtables_x86_32(struct xc_dom_image *dom)
+         {
+             /* get L1 tab, make L2 entry */
+             l1tab = xc_dom_pfn_to_ptr(dom, l1pfn, 1);
++            if ( l1tab == NULL )
++                goto pfn_error;
+             l2off = l2_table_offset_i386(addr);
+             l2tab[l2off] =
+                 pfn_to_paddr(xc_dom_p2m_guest(dom, l1pfn)) | L2_PROT;
+@@ -169,6 +174,11 @@ static int setup_pgtables_x86_32(struct xc_dom_image *dom)
+             l1tab = NULL;
+     }
+     return 0;
++
++pfn_error:
++    xc_dom_panic(dom->xch, XC_INTERNAL_ERROR,
++                 "%s: xc_dom_pfn_to_ptr failed", __FUNCTION__);
++    return -EINVAL;
+ }
+ 
+ /*
+@@ -219,6 +229,12 @@ static xen_pfn_t move_l3_below_4G(struct xc_dom_image *dom,
+         goto out;
+ 
+     l3tab = xc_dom_pfn_to_ptr(dom, l3pfn, 1);
++    if ( l3tab == NULL )
++    {
++        DOMPRINTF("%s: xc_dom_pfn_to_ptr(dom, l3pfn, 1) => NULL",
++                  __FUNCTION__);
++        return l3mfn; /* our one call site will call xc_dom_panic and fail */
++    }
+     memset(l3tab, 0, XC_DOM_PAGE_SIZE(dom));
+ 
+     DOMPRINTF("%s: successfully relocated L3 below 4G. "
+@@ -262,6 +278,8 @@ static int setup_pgtables_x86_32_pae(struct xc_dom_image *dom)
+     }
+ 
+     l3tab = xc_dom_pfn_to_ptr(dom, l3pfn, 1);
++    if ( l3tab == NULL )
++        goto pfn_error;
+ 
+     for ( addr = dom->parms.virt_base; addr < dom->virt_pgtab_end;
+           addr += PAGE_SIZE_X86 )
+@@ -270,6 +288,8 @@ static int setup_pgtables_x86_32_pae(struct xc_dom_image *dom)
+         {
+             /* get L2 tab, make L3 entry */
+             l2tab = xc_dom_pfn_to_ptr(dom, l2pfn, 1);
++            if ( l2tab == NULL )
++                goto pfn_error;
+             l3off = l3_table_offset_pae(addr);
+             l3tab[l3off] =
+                 pfn_to_paddr(xc_dom_p2m_guest(dom, l2pfn)) | L3_PROT;
+@@ -280,6 +300,8 @@ static int setup_pgtables_x86_32_pae(struct xc_dom_image *dom)
+         {
+             /* get L1 tab, make L2 entry */
+             l1tab = xc_dom_pfn_to_ptr(dom, l1pfn, 1);
++            if ( l1tab == NULL )
++                goto pfn_error;
+             l2off = l2_table_offset_pae(addr);
+             l2tab[l2off] =
+                 pfn_to_paddr(xc_dom_p2m_guest(dom, l1pfn)) | L2_PROT;
+@@ -306,6 +328,11 @@ static int setup_pgtables_x86_32_pae(struct xc_dom_image *dom)
+         l3tab[3] = pfn_to_paddr(xc_dom_p2m_guest(dom, l2pfn)) | L3_PROT;
+     }
+     return 0;
++
++pfn_error:
++    xc_dom_panic(dom->xch, XC_INTERNAL_ERROR,
++                 "%s: xc_dom_pfn_to_ptr failed", __FUNCTION__);
++    return -EINVAL;
+ }
+ 
+ #undef L1_PROT
+@@ -344,6 +371,9 @@ static int setup_pgtables_x86_64(struct xc_dom_image *dom)
+     uint64_t addr;
+     xen_pfn_t pgpfn;
+ 
++    if ( l4tab == NULL )
++        goto pfn_error;
++
+     for ( addr = dom->parms.virt_base; addr < dom->virt_pgtab_end;
+           addr += PAGE_SIZE_X86 )
+     {
+@@ -351,6 +381,8 @@ static int setup_pgtables_x86_64(struct xc_dom_image *dom)
+         {
+             /* get L3 tab, make L4 entry */
+             l3tab = xc_dom_pfn_to_ptr(dom, l3pfn, 1);
++            if ( l3tab == NULL )
++                goto pfn_error;
+             l4off = l4_table_offset_x86_64(addr);
+             l4tab[l4off] =
+                 pfn_to_paddr(xc_dom_p2m_guest(dom, l3pfn)) | L4_PROT;
+@@ -361,6 +393,8 @@ static int setup_pgtables_x86_64(struct xc_dom_image *dom)
+         {
+             /* get L2 tab, make L3 entry */
+             l2tab = xc_dom_pfn_to_ptr(dom, l2pfn, 1);
++            if ( l2tab == NULL )
++                goto pfn_error;
+             l3off = l3_table_offset_x86_64(addr);
+             l3tab[l3off] =
+                 pfn_to_paddr(xc_dom_p2m_guest(dom, l2pfn)) | L3_PROT;
+@@ -373,6 +407,8 @@ static int setup_pgtables_x86_64(struct xc_dom_image *dom)
+         {
+             /* get L1 tab, make L2 entry */
+             l1tab = xc_dom_pfn_to_ptr(dom, l1pfn, 1);
++            if ( l1tab == NULL )
++                goto pfn_error;
+             l2off = l2_table_offset_x86_64(addr);
+             l2tab[l2off] =
+                 pfn_to_paddr(xc_dom_p2m_guest(dom, l1pfn)) | L2_PROT;
+@@ -393,6 +429,11 @@ static int setup_pgtables_x86_64(struct xc_dom_image *dom)
+             l1tab = NULL;
+     }
+     return 0;
++
++pfn_error:
++    xc_dom_panic(dom->xch, XC_INTERNAL_ERROR,
++                 "%s: xc_dom_pfn_to_ptr failed", __FUNCTION__);
++    return -EINVAL;
+ }
+ 
+ #undef L1_PROT
+@@ -410,6 +451,8 @@ static int alloc_magic_pages(struct xc_dom_image *dom)
+     if ( xc_dom_alloc_segment(dom, &dom->p2m_seg, "phys2mach", 0, p2m_size) )
+         return -1;
+     dom->p2m_guest = xc_dom_seg_to_ptr(dom, &dom->p2m_seg);
++    if ( dom->p2m_guest == NULL )
++        return -1;
+ 
+     /* allocate special pages */
+     dom->start_info_pfn = xc_dom_alloc_page(dom, "start info");
+@@ -434,6 +477,12 @@ static int start_info_x86_32(struct xc_dom_image *dom)
+ 
+     DOMPRINTF_CALLED(dom->xch);
+ 
++    if ( start_info == NULL )
++    {
++        DOMPRINTF("%s: xc_dom_pfn_to_ptr failed on start_info", __FUNCTION__);
++        return -1; /* our caller throws away our return value :-/ */
++    }
++
+     memset(start_info, 0, sizeof(*start_info));
+     strncpy(start_info->magic, dom->guest_type, sizeof(start_info->magic));
+     start_info->magic[sizeof(start_info->magic) - 1] = '\0';
+@@ -474,6 +523,12 @@ static int start_info_x86_64(struct xc_dom_image *dom)
+ 
+     DOMPRINTF_CALLED(dom->xch);
+ 
++    if ( start_info == NULL )
++    {
++        DOMPRINTF("%s: xc_dom_pfn_to_ptr failed on start_info", __FUNCTION__);
++        return -1; /* our caller throws away our return value :-/ */
++    }
++
+     memset(start_info, 0, sizeof(*start_info));
+     strncpy(start_info->magic, dom->guest_type, sizeof(start_info->magic));
+     start_info->magic[sizeof(start_info->magic) - 1] = '\0';
+diff --git a/tools/libxc/xc_domain_restore.c b/tools/libxc/xc_domain_restore.c
+index b4c0b10..3994f8f 100644
+--- a/tools/libxc/xc_domain_restore.c
++++ b/tools/libxc/xc_domain_restore.c
+@@ -1556,6 +1556,12 @@ int xc_domain_restore(xc_interface *xch, int io_fd, uint32_t dom,
+                     mfn = ctx->p2m[pfn];
+                     buf = xc_map_foreign_range(xch, dom, PAGE_SIZE,
+                                                PROT_READ | PROT_WRITE, mfn);
++                    if ( buf == NULL )
++                    {
++                        ERROR("xc_map_foreign_range for generation id"
++                              " buffer failed");
++                        goto out;
++                    }
+ 
+                     generationid = *(unsigned long long *)(buf + offset);
+                     *(unsigned long long *)(buf + offset) = generationid + 1;
+@@ -1713,6 +1719,11 @@ int xc_domain_restore(xc_interface *xch, int io_fd, uint32_t dom,
+                 l3tab = (uint64_t *)
+                     xc_map_foreign_range(xch, dom, PAGE_SIZE,
+                                          PROT_READ, ctx->p2m[i]);
++                if ( l3tab == NULL )
++                {
++                    PERROR("xc_map_foreign_range failed (for l3tab)");
++                    goto out;
++                }
+ 
+                 for ( j = 0; j < 4; j++ )
+                     l3ptes[j] = l3tab[j];
+@@ -1739,6 +1750,11 @@ int xc_domain_restore(xc_interface *xch, int io_fd, uint32_t dom,
+                 l3tab = (uint64_t *)
+                     xc_map_foreign_range(xch, dom, PAGE_SIZE,
+                                          PROT_READ | PROT_WRITE, ctx->p2m[i]);
++                if ( l3tab == NULL )
++                {
++                    PERROR("xc_map_foreign_range failed (for l3tab, 2nd)");
++                    goto out;
++                }
+ 
+                 for ( j = 0; j < 4; j++ )
+                     l3tab[j] = l3ptes[j];
+@@ -1909,6 +1925,12 @@ int xc_domain_restore(xc_interface *xch, int io_fd, uint32_t dom,
+             SET_FIELD(ctxt, user_regs.edx, mfn);
+             start_info = xc_map_foreign_range(
+                 xch, dom, PAGE_SIZE, PROT_READ | PROT_WRITE, mfn);
++            if ( start_info == NULL )
++            {
++                PERROR("xc_map_foreign_range failed (for start_info)");
++                goto out;
++            }
++
+             SET_FIELD(start_info, nr_pages, dinfo->p2m_size);
+             SET_FIELD(start_info, shared_info, shared_info_frame<<PAGE_SHIFT);
+             SET_FIELD(start_info, flags, 0);
+@@ -2056,6 +2078,11 @@ int xc_domain_restore(xc_interface *xch, int io_fd, uint32_t dom,
+     /* Restore contents of shared-info page. No checking needed. */
+     new_shared_info = xc_map_foreign_range(
+         xch, dom, PAGE_SIZE, PROT_WRITE, shared_info_frame);
++    if ( new_shared_info == NULL )
++    {
++        PERROR("xc_map_foreign_range failed (for new_shared_info)");
++        goto out;
++    }
+ 
+     /* restore saved vcpu_info and arch specific info */
+     MEMCPY_FIELD(new_shared_info, old_shared_info, vcpu_info);
+diff --git a/tools/libxc/xc_offline_page.c b/tools/libxc/xc_offline_page.c
+index 089a361..36b9812 100644
+--- a/tools/libxc/xc_offline_page.c
++++ b/tools/libxc/xc_offline_page.c
+@@ -714,6 +714,11 @@ int xc_exchange_page(xc_interface *xch, int domid, xen_pfn_t mfn)
+ 
+         new_p = xc_map_foreign_range(xch, domid, PAGE_SIZE,
+                                      PROT_READ|PROT_WRITE, new_mfn);
++        if ( new_p == NULL )
++        {
++            ERROR("failed to map new_p for copy, guest may be broken?");
++            goto failed;
++        }
+         memcpy(new_p, backup, PAGE_SIZE);
+         munmap(new_p, PAGE_SIZE);
+         mops.arg1.mfn = new_mfn;
+-- 
+1.7.2.5
+

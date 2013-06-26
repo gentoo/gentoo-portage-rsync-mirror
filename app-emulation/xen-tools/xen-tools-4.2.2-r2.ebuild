@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r1.ebuild,v 1.9 2013/05/15 17:47:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r2.ebuild,v 1.1 2013/06/26 14:41:37 idella4 Exp $
 
 EAPI=5
 
@@ -36,13 +36,14 @@ IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs
 
 REQUIRED_USE="hvm? ( qemu )"
 
-CDEPEND="dev-libs/yajl
+CDEPEND="dev-libs/lzo:2
+	dev-libs/yajl
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pypam[${PYTHON_USEDEP}]
 	dev-python/pyxml[${PYTHON_USEDEP}]
 	sys-libs/zlib
 	sys-power/iasl
-	ocaml? ( dev-ml/findlib )
+	dev-ml/findlib
 	hvm? ( media-libs/libsdl )
 	${PYTHON_DEPS}
 	api? ( dev-libs/libxml2
@@ -67,12 +68,12 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? (  x11-proto/xproto
-	)"
+	hvm? (  x11-proto/xproto )
+	qemu? ( >=sys-apps/texinfo-5 )"
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
-	ocaml? ( >=dev-lang/ocaml-3.12.0 )
+	ocaml? ( >=dev-lang/ocaml-4 )
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -165,8 +166,9 @@ src_prepare() {
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" -i Makefile || die
 	fi
 
-	# Fix texi2html build error with new texi2html
-	epatch "${FILESDIR}"/${PN}-4-docfix.patch
+	# Fix texi2html build error with new texi2html, qemu.doc.html
+	epatch "${FILESDIR}"/${PN}-4-docfix.patch \
+		"${FILESDIR}"/${PN}-4-qemu-xen-doc.patch
 
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
@@ -193,8 +195,33 @@ src_prepare() {
 	# fix jobserver in Makefile
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-jserver.patch
 
-	#Sec patch, currently valid
-	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch
+	# add missing header
+	epatch "${FILESDIR}"/xen-4-ulong.patch \
+		"${FILESDIR}"/${PN}-4.2-xen_disk_leak.patch
+
+	#Security patches, currently valid
+	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA-49.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-8-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-11-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-15-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch \
+		"${FILESDIR}"/xen-4.2-CVE-XSA-57.patch
+
+	epatch_user
 }
 
 src_compile() {

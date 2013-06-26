@@ -6,30 +6,52 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
-		<flag name="aes-gcm">Enable AES Galois/Counter mode</flag>
-		<flag name="aes-ccm">Eanble AES Counter with CBC-MAC mode </flag>
-		<flag name="aes-ni">Enable Intel AES instruction support</flag>
-		<flag name="camellia">Enable Camellia-CBC cipher support </flag>
-		<!-- add this when ecc is fixed
-		<flag name="ecc">Enable Elliptic Curve support</flag>
-		-->
-		<flag name="hc128">Enable HC-128 support</flag>
-		<flag name="md2">Enable MD2 support</flag>
-		<flag name="psk">Enable Pre-Shared Key support</flag>
-		<flag name="ripemd">Enable RIPEMD-160 support</flag>
-		<flag name="sha512">Enable SHA-160 support</flag>
 		<flag name="small">Choose small cache size (excludes big or huge)</flag>
 		<flag name="big">Choose big cache size (excludes small or huge)</flag>
 		<flag name="huge">Choose big cache size (excludes small or big)</flag>
-		<flag name="dtls">Enable datagram TLS</flag>
-		<flag name="httpd">Enable features for yaSSL web server</flag>
+		<flag name="aes">Enable AES cipher support</flag>
+		<flag name="aes-gcm">Enable AES Galois/Counter mode</flag>
+		<flag name="aes-ccm">Eanble AES Counter with CBC-MAC mode</flag>
+		<flag name="aes-ni">Enable Intel AES instruction support</flag>
+		<flag name="arc4">Enable ARC4 cipher support</flag>
+		<flag name="asn">Enable ASN cipher support</flag>
+		<flag name="blake2">Enable CyaSSL BLAKE2 support</flag>
+		<flag name="camellia">Enable Camellia-CBC cipher support</flag>
+		<flag name="coding">Enable Coding base 16/64</flag>
+		<flag name="dh">Enable DH cipher support</flag>
+		<flag name="dsa">Enable DSA cipher support</flag>
+		<flag name="des3">Enable triple DES support</flag>
+		<flag name="ecc">Enable Elliptic Curve support</flag>
+		<flag name="hc128">Enable HC-128 support</flag>
+		<flag name="md2">Enable MD2 support</flag>
+		<flag name="md4">Enable MD4 support</flag>
+		<flag name="md5">Enable MD5 support</flag>
+		<flag name="nullcipher">Enable nullcipher support</flag>
+		<flag name="psk">Enable Pre-Shared Key support</flag>
+		<flag name="leanpsk">Enable lean PSK support (requires psk)</flag>
+		<flag name="rabbit">Enable RABBIT cipher support</flag>
+		<flag name="ripemd">Enable RIPEMD-160 support</flag>
+		<flag name="rsa">Enable RSA cihper support</flag>
+		<flag name="sha">Enable SHA cipher support</flag>
+		<flag name="sha512">Enable SHA-160 support</flag>
 		<flag name="ocsp">Enable Online Certificate Status Protocol</flag>
 		<flag name="crl">Enable Certificate Revocation List</flag>
 		<flag name="crl-monitor">Enable Certificate Revocation List Directory Monitoring</flag>
+		<flag name="savesession">Support session saving</flag>
+		<flag name="savecert">Support certificate saving</flag>
 		<flag name="sessioncerts">Store session certificates</flag>
-		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
-		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
 		<flag name="testcert">Enable certificate testing</flag>
+		<flag name="errorstrings">Enable error strings table</flag>
+		<flag name="memory">Enable memory callbacks</flag>
+		<flag name="dtls">Enable datagram TLS (must be disabled for tests)</flag>
+		<flag name="extra">Enable extra OpenSSL API</flag>
+		<flag name="fortress">Enable fortress SSL build (requires extra and SHA512)</flag>
+		<flag name="httpd">Enable features for yaSSL web server</flag>
+		<flag name="mcapi">Enable Microchip API</flag>
+		<flag name="pwdbased">Enable PWDBASED (requires extra)</flag>
+		<flag name="sni">Enable server name indication</flag>
+		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
+		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
 		<flag name="cyassl-hardening">Add hardening flags to CFLAGS/LDFLAGS</flag>
 	</use>
 </pkgmetadata>

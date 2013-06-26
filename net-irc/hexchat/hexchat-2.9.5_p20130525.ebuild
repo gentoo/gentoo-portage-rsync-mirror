@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5_p20130525.ebuild,v 1.2 2013/06/24 19:48:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5_p20130525.ebuild,v 1.3 2013/06/26 14:41:29 pinkbyte Exp $
 
 EAPI=5
 
@@ -60,6 +60,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-2.9.5-gettextize.patch
 	epatch -p1 \
 		"${FILESDIR}"/${PN}-2.9.5-autoconf-missing-macros.patch
+
+	epatch_user
 
 	cp $(type -p gettextize) "${T}"/ || die
 	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize" || die

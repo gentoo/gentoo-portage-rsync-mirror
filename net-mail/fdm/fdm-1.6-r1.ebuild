@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.6-r1.ebuild,v 1.3 2010/11/03 10:05:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.6-r1.ebuild,v 1.4 2013/06/26 14:37:35 xmw Exp $
 
 EAPI=2
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="fetch, filter and deliver mail"
 HOMEPAGE="http://fdm.sourceforge.net"
@@ -27,7 +27,8 @@ pkg_setup() {
 
 src_prepare() {
 	rm Makefile || die
-	epatch "${FILESDIR}"/${PF}-GNUmakefile.patch
+	epatch "${FILESDIR}"/${PF}-GNUmakefile.patch \
+		"${FILESDIR}"/${PF}-underlinking.patch
 }
 
 src_compile() {

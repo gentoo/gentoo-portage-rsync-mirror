@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.120 2013/06/26 06:35:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.121 2013/06/26 15:00:58 idella4 Exp $
+
+  26 Jun 2013; Ian Delaney <idella4@gentoo.org>
+  -files/xen-4-CVE-2012-4535-XSA-20.patch,
+  -files/xen-4-CVE-2012-4537-XSA-22.patch,
+  -files/xen-4-CVE-2012-4538-XSA-23.patch,
+  -files/xen-4-CVE-2012-4539-XSA-24.patch,
+  -files/xen-4-CVE-2012-5510-XSA-26.patch,
+  -files/xen-4-CVE-2012-5513-XSA-29.patch,
+  -files/xen-4-CVE-2012-5514-XSA-30.patch,
+  -files/xen-4-CVE-2012-5515-XSA-31.patch,
+  -files/xen-4-CVE-2012-5525-XSA-32.patch,
+  -files/xen-4-CVE-2013-0151-XSA-27_34_35.patch,
+  -files/xen-4-CVE-2013-1920-XSA-47.patch, -files/xen-4.1.1-iommu_sec_fix.patch:
+  drop disused patches
 
 *xen-4.2.1-r4 (26 Jun 2013)
 *xen-4.2.2-r1 (26 Jun 2013)
