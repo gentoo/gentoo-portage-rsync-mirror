@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/openmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/ChangeLog,v 1.10 2013/05/22 02:09:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/ChangeLog,v 1.11 2013/06/25 23:51:19 ottxor Exp $
+
+*openmm-5.1-r1 (25 Jun 2013)
+*openmm-5.0.1-r1 (25 Jun 2013)
+
+  25 Jun 2013; Christoph Junghans <ottxor@gentoo.org> +openmm-5.0.1-r1.ebuild,
+  +openmm-5.1-r1.ebuild, -openmm-5.0.1.ebuild, -openmm-5.1.ebuild, metadata.xml:
+  clean up + fix depend (bug #474720)
 
 *openmm-5.1 (22 May 2013)
 

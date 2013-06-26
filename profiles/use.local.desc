@@ -5471,7 +5471,7 @@ sci-libs/opencascade:tbb - tEnable multithreading with the Intel Threads Buildin
 sci-libs/openfoam:opendx - Install opendx visualisation tool
 sci-libs/openmm:cuda - enable cuda back-end
 sci-libs/openmm:opencl - enable opencl back-end
-sci-libs/openmm:wrappers - build wrappers for C and Fortran
+sci-libs/openmm:wrappers - build wrappers for Python, C and Fortran
 sci-libs/plplot:ada - Add bindings for the ADA programming language
 sci-libs/plplot:dynamic - Build with dynamic drivers
 sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
