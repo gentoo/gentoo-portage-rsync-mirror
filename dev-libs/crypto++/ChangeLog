@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.82 2013/06/25 13:01:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.83 2013/06/26 03:04:41 ago Exp $
+
+  26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2.ebuild:
+  Stable for alpha, wrt bug #465148
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2.ebuild:
   Stable for amd64, wrt bug #465148
