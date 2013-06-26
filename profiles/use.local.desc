@@ -5545,7 +5545,6 @@ sci-mathematics/freemat:vtk - Add 3D capabilities via sci-libs/vtk
 sci-mathematics/fricas:clisp - Add support for GNU CLISP (dev-lisp/clisp)
 sci-mathematics/fricas:clozurecl - Add support for Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/fricas:cmucl - Add support for CMU Common Lisp (dev-lisp/cmucl)
-sci-mathematics/fricas:ecl - Add support for Embeddable Common Lisp (dev-lisp/ecls)
 sci-mathematics/fricas:ecls - Add support for Embeddable Common Lisp (dev-lisp/ecls)
 sci-mathematics/fricas:gcl - Add support for GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/fricas:sbcl - Add support for Steel Bank Common Lisp (dev-lisp/sbcl)

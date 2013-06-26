@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.1.ebuild,v 1.1 2013/03/31 14:53:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.3.ebuild,v 1.1 2013/06/26 17:18:42 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="+introspection perl python"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
 # Missing gnome-extra/libgnomedb required version in tree
 # but its upstream is dead and will be dropped soon.
 
@@ -29,7 +31,7 @@ RDEPEND="
 	sys-libs/zlib
 	>=dev-libs/glib-2.28:2
 	>=gnome-extra/libgsf-1.14.24:=
-	>=x11-libs/goffice-0.10.1:0.10
+	>=x11-libs/goffice-0.10.3:0.10
 	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.24.0:=
 
@@ -52,7 +54,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	gnome2_src_configure \
-		--enable-ssindex \
 		--disable-static \
 		--without-gda \
 		--with-zlib \

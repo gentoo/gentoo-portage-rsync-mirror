@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5-r1.ebuild,v 1.2 2013/06/25 22:59:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5-r1.ebuild,v 1.3 2013/06/26 17:16:21 aballier Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="debug mmx mp3rtp sndfile static-libs"
 # libmp3lame for multilib and these deps apply to the lame frontend executable.
 RDEPEND=">=sys-libs/ncurses-5.7-r7
 	sndfile? ( >=media-libs/libsndfile-1.0.2 )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224 )"
+	abi_x86_32? ( !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	mmx? ( dev-lang/nasm )"

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm test
+DEPEND=X? ( x11-libs/libXpm x11-libs/libICE ) emacs? ( virtual/emacs ) gmp? ( dev-libs/gmp ) clozurecl? ( dev-lisp/clozurecl:= ) !clozurecl? ( clisp? ( dev-lisp/clisp:= ) !clisp? ( ecls? ( dev-lisp/ecls:= ) !ecls? ( gcl? ( dev-lisp/gcl:= ) !gcl? ( cmucl? ( dev-lisp/cmucl:= ) !cmucl? ( dev-lisp/sbcl:= ) ) ) ) )
+DESCRIPTION=FriCAS is a fork of Axiom computer algebra system
+EAPI=5
+HOMEPAGE=http://fricas.sourceforge.net/
+IUSE=sbcl cmucl gcl ecls clisp clozurecl X emacs gmp
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=X? ( x11-libs/libXpm x11-libs/libICE ) emacs? ( virtual/emacs ) gmp? ( dev-libs/gmp ) clozurecl? ( dev-lisp/clozurecl:= ) !clozurecl? ( clisp? ( dev-lisp/clisp:= ) !clisp? ( ecls? ( dev-lisp/ecls:= ) !ecls? ( gcl? ( dev-lisp/gcl:= ) !gcl? ( cmucl? ( dev-lisp/cmucl:= ) !cmucl? ( dev-lisp/sbcl:= ) ) ) ) )
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://sourceforge/fricas/fricas-1.2.1-full.tar.bz2
+_eclasses_=elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=42954acb8fb407739dfa464a3bd0b1ba

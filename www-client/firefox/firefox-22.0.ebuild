@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0.6-r1.ebuild,v 1.2 2013/06/10 12:42:40 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-22.0.ebuild,v 1.1 2013/06/26 17:30:44 axs Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
-MOZ_ESR="1"
+MOZ_ESR=""
 
 # This list can be updated with scripts/get_langs.sh from the mozilla overlay
 MOZ_LANGS=(af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de
@@ -25,21 +25,21 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${PN}-17.0-patches-0.6"
+PATCH="${PN}-22.0-patches-0.2"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases/"
 
-inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools virtualx nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools virtualx mozlinguas
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~alpha ~amd64 ~arm -hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist gstreamer +jit +minimal pgo selinux system-sqlite"
+IUSE="bindist gstreamer +jit +minimal pgo pulseaudio selinux system-cairo system-jpeg system-sqlite"
 
 # More URIs appended below...
 SRC_URI="${SRC_URI}
@@ -51,22 +51,23 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.14.1
-	>=dev-libs/nspr-4.9.4
+	>=dev-libs/nss-3.15
+	>=dev-libs/nspr-4.10
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
-	>=media-libs/libpng-1.5.11[apng]
+	>=media-libs/libpng-1.5.13[apng]
 	virtual/libffi
 	gstreamer? ( media-plugins/gst-plugins-meta:0.10[ffmpeg] )
+	system-cairo? ( >=x11-libs/cairo-1.10[X] )
+	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( || (
 		>=dev-db/sqlite-3.7.16:3[secure-delete,debug=]
-		=dev-db/sqlite-3.7.15*[fts3,secure-delete,threadsafe,unlock-notify,debug=]
-		=dev-db/sqlite-3.7.14*[fts3,secure-delete,threadsafe,unlock-notify,debug=]
-		=dev-db/sqlite-3.7.13*[fts3,secure-delete,threadsafe,unlock-notify,debug=]
+		~dev-db/sqlite-3.7.15.2[fts3,secure-delete,threadsafe,unlock-notify,debug=]
 	) )
 	>=media-libs/libvpx-1.0.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"
+
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	pgo? (
@@ -143,6 +144,11 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Discard system cairo patch if support is not requested
+	if ! use system-cairo ; then
+		export EPATCH_EXCLUDE="6009_fix_system_cairo_support.patch"
+	fi
+
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
@@ -157,14 +163,11 @@ src_prepare() {
 			"${S}"/build/unix/run-mozilla.sh || die "sed failed!"
 	fi
 
-	# Disable gnomevfs extension
-	sed -i -e "s:gnomevfs::" "${S}/"browser/confvars.sh \
-		-e "s:gnomevfs::" "${S}/"xulrunner/confvars.sh \
-		|| die "Failed to remove gnomevfs extension"
-
 	# Ensure that are plugins dir is enabled as default
-	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/$(get_libdir)/nsbrowser/plugins:" \
-		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path!"
+	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/lib/nsbrowser/plugins:" \
+		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path for 32bit!"
+	sed -i -e "s:/usr/lib64/mozilla/plugins:/usr/lib64/nsbrowser/plugins:" \
+		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path for 32bit!"
 
 	# Fix sandbox violations during make clean, bug 372817
 	sed -e "s:\(/no-such-file\):${T}\1:g" \
@@ -172,13 +175,6 @@ src_prepare() {
 		-i "${S}"/js/src/config/rules.mk \
 		-i "${S}"/nsprpub/configure{.in,} \
 		|| die
-
-	#Fix compilation with curl-7.21.7 bug 376027
-	sed -e '/#include <curl\/types.h>/d'  \
-		-i "${S}"/toolkit/crashreporter/google-breakpad/src/common/linux/http_upload.cc \
-		-i "${S}"/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc \
-		-i "${S}"/config/system-headers \
-		-i "${S}"/js/src/config/system-headers || die "Sed failed"
 
 	# Don't exit with error when some libs are missing which we have in
 	# system.
@@ -211,6 +207,8 @@ src_configure() {
 	# We must force enable jemalloc 3 threw .mozconfig
 	echo "export MOZ_JEMALLOC=1" >> ${S}/.mozconfig
 
+	mozconfig_annotate '' --enable-jemalloc
+	mozconfig_annotate '' --enable-replace-malloc
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
@@ -225,10 +223,14 @@ src_configure() {
 	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable gstreamer
+	mozconfig_use_enable pulseaudio
 	mozconfig_use_enable system-sqlite
-	# Both methodjit and tracejit conflict with PaX
+	mozconfig_use_with system-jpeg
+	# Feature is know to cause problems on hardened
 	mozconfig_use_enable jit methodjit
 	mozconfig_use_enable jit tracejit
+	mozconfig_use_enable jit ion
+	mozconfig_use_enable system-cairo
 
 	# Allow for a proper pgo build
 	if use pgo; then
@@ -257,10 +259,7 @@ src_compile() {
 		# Firefox tries to use dri stuff when it's run, see bug 380283
 		shopt -s nullglob
 		cards=$(echo -n /dev/dri/card* | sed 's/ /:/g')
-		if test -n "${cards}"; then
-			# FOSS drivers are fine
-			addpredict "${cards}"
-		else
+		if test -z "${cards}"; then
 			cards=$(echo -n /dev/ati/card* /dev/nvidiactl* | sed 's/ /:/g')
 			if test -n "${cards}"; then
 				# Binary drivers seem to cause access violations anyway, so
@@ -270,13 +269,14 @@ src_compile() {
 			fi
 		fi
 		shopt -u nullglob
+		addpredict "${cards}"
 
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
-		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
+		MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL}" \
 		Xemake -f client.mk profiledbuild || die "Xemake failed"
 	else
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
-		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
+		MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL}" \
 		emake -f client.mk || die "emake failed"
 	fi
 
@@ -291,19 +291,24 @@ src_install() {
 	obj_dir="${obj_dir%/*}"
 	cd "${S}/${obj_dir}"
 
-	# Without methodjit and tracejit there's no conflict with PaX
-	if use jit; then
-		# Pax mark xpcshell for hardened support, only used for startupcache creation.
-		pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
-	fi
+	# Pax mark xpcshell for hardened support, only used for startupcache creation.
+	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
 
 	# Add our default prefs for firefox
 	cp "${FILESDIR}"/gentoo-default-prefs.js-1 \
-		"${S}/${obj_dir}/dist/bin/defaults/preferences/all-gentoo.js" || die
+		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
 
 	# Set default path to search for dictionaries.
 	echo "pref(\"spellchecker.dictionary_path\", ${DICTPATH});" \
-		>> "${S}/${obj_dir}/dist/bin/defaults/preferences/all-gentoo.js" || die
+		>> "${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
+
+	if ! use libnotify; then
+		echo "pref(\"browser.download.manager.showAlertOnComplete\", false);" \
+			>> "${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
+	fi
+
+	echo "pref(\"extensions.autoDisableScopes\", 3);" >> \
+		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" || die
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install || die "emake install failed"
@@ -345,18 +350,8 @@ src_install() {
 		echo "StartupNotify=true" >> "${ED}/usr/share/applications/${PN}.desktop"
 	fi
 
-	# Without methodjit and tracejit there's no conflict with PaX
-	if use jit; then
-		# Required in order to use plugins and even run firefox on hardened.
-		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin}
-	fi
-
-	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
-	# continue to work as expected.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
-
-	# Plugins dir
-	share_plugins_dir
+	# Required in order to use plugins and even run firefox on hardened.
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
 
 	if use minimal; then
 		rm -rf "${ED}"/usr/include "${ED}${MOZILLA_FIVE_HOME}"/{idl,include,lib,sdk} || \

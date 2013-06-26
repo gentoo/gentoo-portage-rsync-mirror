@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.41 2013/06/18 11:36:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.42 2013/06/26 17:09:41 blueness Exp $
+
+*bfgminer-3.1.1 (26 Jun 2013)
+*bfgminer-3.0.4 (26 Jun 2013)
+*bfgminer-2.10.10 (26 Jun 2013)
+
+  26 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +bfgminer-2.10.10.ebuild,
+  +bfgminer-3.0.4.ebuild, +bfgminer-3.1.1.ebuild, bfgminer-3.0.0.ebuild,
+  bfgminer-3.0.3.ebuild, bfgminer-3.1.0-r1.ebuild:
+  Version bump, restore arm ppc ppc64 keywords
 
 *bfgminer-3.1.0-r1 (18 Jun 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.6-r1.ebuild,v 1.2 2013/06/10 12:41:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.7.ebuild,v 1.1 2013/06/26 17:12:27 axs Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -254,7 +254,7 @@ src_compile() {
 }
 
 src_install() {
-	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
+	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	DICTPATH="\"${EPREFIX}/usr/share/myspell\""
 
 	declare emid
@@ -337,7 +337,7 @@ src_install() {
 	share_plugins_dir
 
 	if use minimal; then
-		rm -rf "${ED}"/usr/include "${ED}${MOZILLA_FIVE_HOME}"/{idl,include,lib,sdk} || \
+		rm -rf "${ED}"/usr/include "${ED}"${MOZILLA_FIVE_HOME}/{idl,include,lib,sdk} || \
 			die "Failed to remove sdk and headers"
 	fi
 }

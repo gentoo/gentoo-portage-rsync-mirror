@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.43 2013/06/25 20:11:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.44 2013/06/26 17:14:35 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
@@ -31,7 +31,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="altivec doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs test +threads"
 
-RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224 )"
+RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="abi_x86_32? ( dev-lang/yasm )
 	abi_x86_64? ( dev-lang/yasm )
 	x86-fbsd? ( dev-lang/yasm )

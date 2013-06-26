@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.3.2-r1.ebuild,v 1.1 2013/06/19 15:51:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.3.2-r1.ebuild,v 1.2 2013/06/26 17:18:16 aballier Exp $
 
 EAPI=5
 inherit flag-o-matic multilib multilib-minimal
@@ -23,7 +23,7 @@ YASM=">=dev-lang/yasm-1"
 DEPEND="amd64? ( || ( ${YASM} ${NASM} ) )
 	x86? ( || ( ${YASM} ${NASM} ) )
 	x86-fbsd? ( || ( ${YASM} ${NASM} ) )"
-RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224 )"
+RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 
 S=${WORKDIR}/${MY_PN}/build/generic
 
