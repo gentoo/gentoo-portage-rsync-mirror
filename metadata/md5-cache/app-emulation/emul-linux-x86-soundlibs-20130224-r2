@@ -11,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-soundlibs-20130224.tar.xz
 _eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=57d127b3d0c3a529ba673997b6297e1b
+_md5_=79b6e9f380a3632235c02c4426e5293e

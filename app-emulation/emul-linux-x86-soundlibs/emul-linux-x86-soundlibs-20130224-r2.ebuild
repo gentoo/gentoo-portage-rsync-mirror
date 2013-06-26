@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r2.ebuild,v 1.1 2013/06/26 20:33:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r2.ebuild,v 1.2 2013/06/26 21:49:01 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -36,5 +36,5 @@ src_prepare() {
 	fi
 
 	# Remove migrated stuff.
-	use abi_x86_32 && rm -f $(cat "${FILESDIR}/remove-native-${PVR}")
+	use abi_x86_32 && rm -f $(cat "${FILESDIR}/remove-native")
 }
