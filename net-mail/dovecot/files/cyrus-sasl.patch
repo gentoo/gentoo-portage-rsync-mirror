@@ -1,0 +1,745 @@
+# Gentoo Bug #474862
+# HG changeset patch
+# User Timo Sirainen <tss@iki.fi>
+# Date 1372246654 -10800
+# Node ID 2dd27b0e7e49785f4a2257a2b0933bc028ea9975
+# Parent  d6b18c237be50b8327f068e918d297906e06ba6d
+lib-sasl: Use dsasl_ prefix so we don't conflict with Cyrus SASL library.
+
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/imap-login/imap-proxy.c
+--- a/src/imap-login/imap-proxy.c	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/imap-login/imap-proxy.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -9,7 +9,7 @@
+ #include "str.h"
+ #include "str-sanitize.h"
+ #include "safe-memset.h"
+-#include "sasl-client.h"
++#include "dsasl-client.h"
+ #include "client.h"
+ #include "client-authenticate.h"
+ #include "imap-resp-code.h"
+@@ -58,7 +58,7 @@
+ 
+ static int proxy_write_login(struct imap_client *client, string_t *str)
+ {
+-	struct sasl_client_settings sasl_set;
++	struct dsasl_client_settings sasl_set;
+ 	const unsigned char *output;
+ 	unsigned int len;
+ 	const char *mech_name, *error;
+@@ -85,14 +85,14 @@
+ 	sasl_set.authzid = client->common.proxy_user;
+ 	sasl_set.password = client->common.proxy_password;
+ 	client->common.proxy_sasl_client =
+-		sasl_client_new(client->common.proxy_mech, &sasl_set);
+-	mech_name = sasl_client_mech_get_name(client->common.proxy_mech);
++		dsasl_client_new(client->common.proxy_mech, &sasl_set);
++	mech_name = dsasl_client_mech_get_name(client->common.proxy_mech);
+ 
+ 	str_append(str, "L AUTHENTICATE ");
+ 	str_append(str, mech_name);
+ 	if (client->proxy_sasl_ir) {
+-		if (sasl_client_output(client->common.proxy_sasl_client,
+-				       &output, &len, &error) < 0) {
++		if (dsasl_client_output(client->common.proxy_sasl_client,
++					&output, &len, &error) < 0) {
+ 			client_log_err(&client->common, t_strdup_printf(
+ 				"proxy: SASL mechanism %s init failed: %s",
+ 				mech_name, error));
+@@ -226,11 +226,11 @@
+ 			client_proxy_failed(client, TRUE);
+ 			return -1;
+ 		}
+-		ret = sasl_client_input(client->proxy_sasl_client,
+-					str_data(str), str_len(str), &error);
++		ret = dsasl_client_input(client->proxy_sasl_client,
++					 str_data(str), str_len(str), &error);
+ 		if (ret == 0) {
+-			ret = sasl_client_output(client->proxy_sasl_client,
+-						 &data, &data_len, &error);
++			ret = dsasl_client_output(client->proxy_sasl_client,
++						  &data, &data_len, &error);
+ 		}
+ 		if (ret < 0) {
+ 			client_log_err(client, t_strdup_printf(
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/Makefile.am
+--- a/src/lib-sasl/Makefile.am	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/lib-sasl/Makefile.am	Wed Jun 26 14:37:34 2013 +0300
+@@ -6,11 +6,11 @@
+ libsasl_la_SOURCES = \
+ 	mech-login.c \
+ 	mech-plain.c \
+-	sasl-client.c 
++	dsasl-client.c 
+ 
+ headers = \
+-	sasl-client.h \
+-	sasl-client-private.h
++	dsasl-client.h \
++	dsasl-client-private.h
+ 
+ pkginc_libdir=$(pkgincludedir)
+ pkginc_lib_HEADERS = $(headers)
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/dsasl-client-private.h
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/src/lib-sasl/dsasl-client-private.h	Wed Jun 26 14:37:34 2013 +0300
+@@ -0,0 +1,33 @@
++#ifndef DSASL_CLIENT_PRIVATE_H
++#define DSASL_CLIENT_PRIVATE_H
++
++#include "dsasl-client.h"
++
++struct dsasl_client {
++	pool_t pool;
++	struct dsasl_client_settings set;
++	char *password;
++	const struct dsasl_client_mech *mech;
++};
++
++struct dsasl_client_mech {
++	const char *name;
++	size_t struct_size;
++
++	int (*input)(struct dsasl_client *client,
++		     const unsigned char *input,
++		     unsigned int input_len,
++		     const char **error_r);
++	int (*output)(struct dsasl_client *client,
++		      const unsigned char **output_r,
++		      unsigned int *output_len_r,
++		      const char **error_r);
++	void (*free)(struct dsasl_client *client);
++};
++
++extern const struct dsasl_client_mech dsasl_client_mech_login;
++
++void dsasl_client_mech_register(const struct dsasl_client_mech *mech);
++void dsasl_client_mech_unregister(const struct dsasl_client_mech *mech);
++
++#endif
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/dsasl-client.c
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/src/lib-sasl/dsasl-client.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -0,0 +1,104 @@
++/* Copyright (c) 2013 Dovecot authors, see the included COPYING file */
++
++#include "lib.h"
++#include "array.h"
++#include "safe-memset.h"
++#include "dsasl-client-private.h"
++
++static ARRAY(const struct dsasl_client_mech *) dsasl_mechanisms = ARRAY_INIT;
++
++static const struct dsasl_client_mech *
++dsasl_client_mech_find_idx(const char *name, unsigned int *idx_r)
++{
++	const struct dsasl_client_mech *const *mechp;
++
++	array_foreach(&dsasl_mechanisms, mechp) {
++		if (strcasecmp((*mechp)->name, name) == 0) {
++			*idx_r = array_foreach_idx(&dsasl_mechanisms, mechp);
++			return *mechp;
++		}
++	}
++	return NULL;
++}
++
++const struct dsasl_client_mech *dsasl_client_mech_find(const char *name)
++{
++	unsigned int idx;
++
++	return dsasl_client_mech_find_idx(name, &idx);
++}
++
++const char *dsasl_client_mech_get_name(const struct dsasl_client_mech *mech)
++{
++	return mech->name;
++}
++
++void dsasl_client_mech_register(const struct dsasl_client_mech *mech)
++{
++	array_append(&dsasl_mechanisms, &mech, 1);
++}
++
++void dsasl_client_mech_unregister(const struct dsasl_client_mech *mech)
++{
++	unsigned int idx;
++
++	if (dsasl_client_mech_find_idx(mech->name, &idx) == NULL)
++		i_panic("SASL mechanism not registered: %s", mech->name);
++	array_delete(&dsasl_mechanisms, idx, 1);
++}
++
++struct dsasl_client *dsasl_client_new(const struct dsasl_client_mech *mech,
++				      const struct dsasl_client_settings *set)
++{
++	struct dsasl_client *client;
++	pool_t pool = pool_alloconly_create("sasl client", 512);
++
++	client = p_malloc(pool, mech->struct_size);
++	client->pool = pool;
++	client->mech = mech;
++	client->set.authid = p_strdup(pool, set->authid);
++	client->set.authzid = p_strdup(pool, set->authzid);
++	client->password = p_strdup(pool, set->password);
++	client->set.password = client->password;
++	return client;
++}
++
++void dsasl_client_free(struct dsasl_client **_client)
++{
++	struct dsasl_client *client = *_client;
++
++	*_client = NULL;
++
++	if (client->mech->free != NULL)
++		client->mech->free(client);
++	safe_memset(client->password, 0, strlen(client->password));
++	pool_unref(&client->pool);
++}
++
++int dsasl_client_input(struct dsasl_client *client,
++		       const unsigned char *input,
++		       unsigned int input_len,
++		       const char **error_r)
++{
++	return client->mech->input(client, input, input_len, error_r);
++}
++
++int dsasl_client_output(struct dsasl_client *client,
++			const unsigned char **output_r,
++			unsigned int *output_len_r,
++			const char **error_r)
++{
++	return client->mech->output(client, output_r, output_len_r, error_r);
++}
++
++void dsasl_clients_init(void)
++{
++	i_array_init(&dsasl_mechanisms, 8);
++	dsasl_client_mech_register(&dsasl_client_mech_plain);
++	dsasl_client_mech_register(&dsasl_client_mech_login);
++}
++
++void dsasl_clients_deinit(void)
++{
++	array_free(&dsasl_mechanisms);
++}
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/dsasl-client.h
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/src/lib-sasl/dsasl-client.h	Wed Jun 26 14:37:34 2013 +0300
+@@ -0,0 +1,39 @@
++#ifndef DSASL_CLIENT_H
++#define DSASL_CLIENT_H
++
++struct dsasl_client_settings {
++	/* authentication ID - must be set with most mechanisms */
++	const char *authid;
++	/* authorization ID (who to log in as, if authentication ID is a
++	   master user) */
++	const char *authzid;
++	/* password - must be set with most mechanisms */
++	const char *password;
++};
++
++/* PLAIN mechanism always exists and can be accessed directly via this. */
++extern const struct dsasl_client_mech dsasl_client_mech_plain;
++
++const struct dsasl_client_mech *dsasl_client_mech_find(const char *name);
++const char *dsasl_client_mech_get_name(const struct dsasl_client_mech *mech);
++
++struct dsasl_client *dsasl_client_new(const struct dsasl_client_mech *mech,
++				      const struct dsasl_client_settings *set);
++void dsasl_client_free(struct dsasl_client **client);
++
++/* Call for server input. */
++int dsasl_client_input(struct dsasl_client *client,
++		       const unsigned char *input,
++		       unsigned int input_len,
++		       const char **error_r);
++/* Call for getting server output. Also used to get the initial SASL response
++   if supported by the protocol. */
++int dsasl_client_output(struct dsasl_client *client,
++			const unsigned char **output_r,
++			unsigned int *output_len_r,
++			const char **error_r);
++
++void dsasl_clients_init(void);
++void dsasl_clients_deinit(void);
++
++#endif
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/mech-login.c
+--- a/src/lib-sasl/mech-login.c	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/lib-sasl/mech-login.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -2,7 +2,7 @@
+ 
+ #include "lib.h"
+ #include "str.h"
+-#include "sasl-client-private.h"
++#include "dsasl-client-private.h"
+ 
+ enum login_state {
+ 	STATE_INIT = 0,
+@@ -10,18 +10,19 @@
+ 	STATE_PASS
+ };
+ 
+-struct login_sasl_client {
+-	struct sasl_client client;
++struct login_dsasl_client {
++	struct dsasl_client client;
+ 	enum login_state state;
+ };
+ 
+ static int
+-mech_login_input(struct sasl_client *_client,
++mech_login_input(struct dsasl_client *_client,
+ 		 const unsigned char *input ATTR_UNUSED,
+ 		 unsigned int input_len ATTR_UNUSED,
+ 		 const char **error_r)
+ {
+-	struct login_sasl_client *client = (struct login_sasl_client *)_client;
++	struct login_dsasl_client *client =
++		(struct login_dsasl_client *)_client;
+ 
+ 	if (client->state == STATE_PASS) {
+ 		*error_r = "Server didn't finish authentication";
+@@ -32,11 +33,12 @@
+ }
+ 
+ static int
+-mech_login_output(struct sasl_client *_client,
++mech_login_output(struct dsasl_client *_client,
+ 		  const unsigned char **output_r, unsigned int *output_len_r,
+ 		  const char **error_r)
+ {
+-	struct login_sasl_client *client = (struct login_sasl_client *)_client;
++	struct login_dsasl_client *client =
++		(struct login_dsasl_client *)_client;
+ 
+ 	if (_client->set.authid == NULL) {
+ 		*error_r = "authid not set";
+@@ -64,9 +66,9 @@
+ 	i_unreached();
+ }
+ 
+-const struct sasl_client_mech sasl_client_mech_login = {
++const struct dsasl_client_mech dsasl_client_mech_login = {
+ 	.name = "LOGIN",
+-	.struct_size = sizeof(struct login_sasl_client),
++	.struct_size = sizeof(struct login_dsasl_client),
+ 
+ 	.input = mech_login_input,
+ 	.output = mech_login_output
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/mech-plain.c
+--- a/src/lib-sasl/mech-plain.c	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/lib-sasl/mech-plain.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -2,19 +2,20 @@
+ 
+ #include "lib.h"
+ #include "str.h"
+-#include "sasl-client-private.h"
++#include "dsasl-client-private.h"
+ 
+-struct plain_sasl_client {
+-	struct sasl_client client;
++struct plain_dsasl_client {
++	struct dsasl_client client;
+ 	bool output_sent;
+ };
+ 
+ static int
+-mech_plain_input(struct sasl_client *_client,
++mech_plain_input(struct dsasl_client *_client,
+ 		 const unsigned char *input ATTR_UNUSED, unsigned int input_len,
+ 		 const char **error_r)
+ {
+-	struct plain_sasl_client *client = (struct plain_sasl_client *)_client;
++	struct plain_dsasl_client *client =
++		(struct plain_dsasl_client *)_client;
+ 
+ 	if (!client->output_sent) {
+ 		if (input_len > 0) {
+@@ -29,11 +30,12 @@
+ }
+ 
+ static int
+-mech_plain_output(struct sasl_client *_client,
++mech_plain_output(struct dsasl_client *_client,
+ 		  const unsigned char **output_r, unsigned int *output_len_r,
+ 		  const char **error_r)
+ {
+-	struct plain_sasl_client *client = (struct plain_sasl_client *)_client;
++	struct plain_dsasl_client *client =
++		(struct plain_dsasl_client *)_client;
+ 	string_t *str;
+ 
+ 	if (_client->set.authid == NULL) {
+@@ -59,9 +61,9 @@
+ 	return 0;
+ }
+ 
+-const struct sasl_client_mech sasl_client_mech_plain = {
++const struct dsasl_client_mech dsasl_client_mech_plain = {
+ 	.name = "PLAIN",
+-	.struct_size = sizeof(struct plain_sasl_client),
++	.struct_size = sizeof(struct plain_dsasl_client),
+ 
+ 	.input = mech_plain_input,
+ 	.output = mech_plain_output
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/sasl-client-private.h
+--- a/src/lib-sasl/sasl-client-private.h	Tue Jun 25 16:03:04 2013 +0300
++++ /dev/null	Thu Jan 01 00:00:00 1970 +0000
+@@ -1,33 +0,0 @@
+-#ifndef SASL_CLIENT_PRIVATE_H
+-#define SASL_CLIENT_PRIVATE_H
+-
+-#include "sasl-client.h"
+-
+-struct sasl_client {
+-	pool_t pool;
+-	struct sasl_client_settings set;
+-	char *password;
+-	const struct sasl_client_mech *mech;
+-};
+-
+-struct sasl_client_mech {
+-	const char *name;
+-	size_t struct_size;
+-
+-	int (*input)(struct sasl_client *client,
+-		     const unsigned char *input,
+-		     unsigned int input_len,
+-		     const char **error_r);
+-	int (*output)(struct sasl_client *client,
+-		      const unsigned char **output_r,
+-		      unsigned int *output_len_r,
+-		      const char **error_r);
+-	void (*free)(struct sasl_client *client);
+-};
+-
+-extern const struct sasl_client_mech sasl_client_mech_login;
+-
+-void sasl_client_mech_register(const struct sasl_client_mech *mech);
+-void sasl_client_mech_unregister(const struct sasl_client_mech *mech);
+-
+-#endif
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/sasl-client.c
+--- a/src/lib-sasl/sasl-client.c	Tue Jun 25 16:03:04 2013 +0300
++++ /dev/null	Thu Jan 01 00:00:00 1970 +0000
+@@ -1,104 +0,0 @@
+-/* Copyright (c) 2013 Dovecot authors, see the included COPYING file */
+-
+-#include "lib.h"
+-#include "array.h"
+-#include "safe-memset.h"
+-#include "sasl-client-private.h"
+-
+-static ARRAY(const struct sasl_client_mech *) sasl_mechanisms = ARRAY_INIT;
+-
+-static const struct sasl_client_mech *
+-sasl_client_mech_find_idx(const char *name, unsigned int *idx_r)
+-{
+-	const struct sasl_client_mech *const *mechp;
+-
+-	array_foreach(&sasl_mechanisms, mechp) {
+-		if (strcasecmp((*mechp)->name, name) == 0) {
+-			*idx_r = array_foreach_idx(&sasl_mechanisms, mechp);
+-			return *mechp;
+-		}
+-	}
+-	return NULL;
+-}
+-
+-const struct sasl_client_mech *sasl_client_mech_find(const char *name)
+-{
+-	unsigned int idx;
+-
+-	return sasl_client_mech_find_idx(name, &idx);
+-}
+-
+-const char *sasl_client_mech_get_name(const struct sasl_client_mech *mech)
+-{
+-	return mech->name;
+-}
+-
+-void sasl_client_mech_register(const struct sasl_client_mech *mech)
+-{
+-	array_append(&sasl_mechanisms, &mech, 1);
+-}
+-
+-void sasl_client_mech_unregister(const struct sasl_client_mech *mech)
+-{
+-	unsigned int idx;
+-
+-	if (sasl_client_mech_find_idx(mech->name, &idx) == NULL)
+-		i_panic("SASL mechanism not registered: %s", mech->name);
+-	array_delete(&sasl_mechanisms, idx, 1);
+-}
+-
+-struct sasl_client *sasl_client_new(const struct sasl_client_mech *mech,
+-				    const struct sasl_client_settings *set)
+-{
+-	struct sasl_client *client;
+-	pool_t pool = pool_alloconly_create("sasl client", 512);
+-
+-	client = p_malloc(pool, mech->struct_size);
+-	client->pool = pool;
+-	client->mech = mech;
+-	client->set.authid = p_strdup(pool, set->authid);
+-	client->set.authzid = p_strdup(pool, set->authzid);
+-	client->password = p_strdup(pool, set->password);
+-	client->set.password = client->password;
+-	return client;
+-}
+-
+-void sasl_client_free(struct sasl_client **_client)
+-{
+-	struct sasl_client *client = *_client;
+-
+-	*_client = NULL;
+-
+-	if (client->mech->free != NULL)
+-		client->mech->free(client);
+-	safe_memset(client->password, 0, strlen(client->password));
+-	pool_unref(&client->pool);
+-}
+-
+-int sasl_client_input(struct sasl_client *client,
+-		      const unsigned char *input,
+-		      unsigned int input_len,
+-		      const char **error_r)
+-{
+-	return client->mech->input(client, input, input_len, error_r);
+-}
+-
+-int sasl_client_output(struct sasl_client *client,
+-		       const unsigned char **output_r,
+-		       unsigned int *output_len_r,
+-		       const char **error_r)
+-{
+-	return client->mech->output(client, output_r, output_len_r, error_r);
+-}
+-
+-void sasl_clients_init(void)
+-{
+-	i_array_init(&sasl_mechanisms, 8);
+-	sasl_client_mech_register(&sasl_client_mech_plain);
+-	sasl_client_mech_register(&sasl_client_mech_login);
+-}
+-
+-void sasl_clients_deinit(void)
+-{
+-	array_free(&sasl_mechanisms);
+-}
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/lib-sasl/sasl-client.h
+--- a/src/lib-sasl/sasl-client.h	Tue Jun 25 16:03:04 2013 +0300
++++ /dev/null	Thu Jan 01 00:00:00 1970 +0000
+@@ -1,39 +0,0 @@
+-#ifndef SASL_CLIENT_H
+-#define SASL_CLIENT_H
+-
+-struct sasl_client_settings {
+-	/* authentication ID - must be set with most mechanisms */
+-	const char *authid;
+-	/* authorization ID (who to log in as, if authentication ID is a
+-	   master user) */
+-	const char *authzid;
+-	/* password - must be set with most mechanisms */
+-	const char *password;
+-};
+-
+-/* PLAIN mechanism always exists and can be accessed directly via this. */
+-extern const struct sasl_client_mech sasl_client_mech_plain;
+-
+-const struct sasl_client_mech *sasl_client_mech_find(const char *name);
+-const char *sasl_client_mech_get_name(const struct sasl_client_mech *mech);
+-
+-struct sasl_client *sasl_client_new(const struct sasl_client_mech *mech,
+-				    const struct sasl_client_settings *set);
+-void sasl_client_free(struct sasl_client **client);
+-
+-/* Call for server input. */
+-int sasl_client_input(struct sasl_client *client,
+-		      const unsigned char *input,
+-		      unsigned int input_len,
+-		      const char **error_r);
+-/* Call for getting server output. Also used to get the initial SASL response
+-   if supported by the protocol. */
+-int sasl_client_output(struct sasl_client *client,
+-		       const unsigned char **output_r,
+-		       unsigned int *output_len_r,
+-		       const char **error_r);
+-
+-void sasl_clients_init(void);
+-void sasl_clients_deinit(void);
+-
+-#endif
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/login-common/client-common-auth.c
+--- a/src/login-common/client-common-auth.c	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/login-common/client-common-auth.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -9,7 +9,7 @@
+ #include "time-util.h"
+ #include "login-proxy.h"
+ #include "auth-client.h"
+-#include "sasl-client.h"
++#include "dsasl-client.h"
+ #include "master-service-ssl-settings.h"
+ #include "client-common.h"
+ 
+@@ -202,7 +202,7 @@
+ 	}
+ 
+ 	if (client->proxy_sasl_client != NULL)
+-		sasl_client_free(&client->proxy_sasl_client);
++		dsasl_client_free(&client->proxy_sasl_client);
+ 	login_proxy_free(&client->login_proxy);
+ 	proxy_free_password(client);
+ 	i_free_and_null(client->proxy_user);
+@@ -275,7 +275,7 @@
+ 		       const struct client_auth_reply *reply)
+ {
+ 	struct login_proxy_settings proxy_set;
+-	const struct sasl_client_mech *sasl_mech = NULL;
++	const struct dsasl_client_mech *sasl_mech = NULL;
+ 
+ 	i_assert(reply->destuser != NULL);
+ 	i_assert(!client->destroyed);
+@@ -296,7 +296,7 @@
+ 	}
+ 
+ 	if (reply->proxy_mech != NULL) {
+-		sasl_mech = sasl_client_mech_find(reply->proxy_mech);
++		sasl_mech = dsasl_client_mech_find(reply->proxy_mech);
+ 		if (sasl_mech == NULL) {
+ 			client_log_err(client, t_strdup_printf(
+ 				"proxy: Unsupported SASL mechanism %s",
+@@ -306,7 +306,7 @@
+ 		}
+ 	} else if (reply->master_user != NULL) {
+ 		/* have to use PLAIN authentication with master user logins */
+-		sasl_mech = &sasl_client_mech_plain;
++		sasl_mech = &dsasl_client_mech_plain;
+ 	}
+ 
+ 	i_assert(client->refcount > 1);
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/login-common/client-common.c
+--- a/src/login-common/client-common.c	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/login-common/client-common.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -18,7 +18,7 @@
+ #include "master-service-ssl-settings.h"
+ #include "master-auth.h"
+ #include "auth-client.h"
+-#include "sasl-client.h"
++#include "dsasl-client.h"
+ #include "login-proxy.h"
+ #include "ssl-proxy.h"
+ #include "client-common.h"
+@@ -211,7 +211,7 @@
+ 	}
+ 
+ 	if (client->proxy_sasl_client != NULL)
+-		sasl_client_free(&client->proxy_sasl_client);
++		dsasl_client_free(&client->proxy_sasl_client);
+ 	if (client->login_proxy != NULL)
+ 		login_proxy_free(&client->login_proxy);
+ 	if (client->v.destroy != NULL)
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/login-common/client-common.h
+--- a/src/login-common/client-common.h	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/login-common/client-common.h	Wed Jun 26 14:37:34 2013 +0300
+@@ -122,8 +122,8 @@
+ 
+ 	struct login_proxy *login_proxy;
+ 	char *proxy_user, *proxy_master_user, *proxy_password;
+-	const struct sasl_client_mech *proxy_mech;
+-	struct sasl_client *proxy_sasl_client;
++	const struct dsasl_client_mech *proxy_mech;
++	struct dsasl_client *proxy_sasl_client;
+ 	unsigned int proxy_state;
+ 	unsigned int proxy_ttl;
+ 
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/login-common/main.c
+--- a/src/login-common/main.c	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/login-common/main.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -13,7 +13,7 @@
+ #include "access-lookup.h"
+ #include "anvil-client.h"
+ #include "auth-client.h"
+-#include "sasl-client.h"
++#include "dsasl-client.h"
+ #include "master-service-ssl-settings.h"
+ #include "ssl-proxy.h"
+ #include "login-proxy.h"
+@@ -282,7 +282,7 @@
+ 	/* Initialize SSL proxy so it can read certificate and private
+ 	   key file. */
+ 	ssl_proxy_init();
+-	sasl_clients_init();
++	dsasl_clients_init();
+ 
+ 	/* set the number of fds we want to use. it may get increased or
+ 	   decreased. leave a couple of extra fds for auth sockets and such.
+@@ -358,7 +358,7 @@
+ 		anvil_client_deinit(&anvil);
+ 	if (auth_client_to != NULL)
+ 		timeout_remove(&auth_client_to);
+-	sasl_clients_deinit();
++	dsasl_clients_deinit();
+ 	login_settings_deinit();
+ }
+ 
+diff -r d6b18c237be5 -r 2dd27b0e7e49 src/pop3-login/pop3-proxy.c
+--- a/src/pop3-login/pop3-proxy.c	Tue Jun 25 16:03:04 2013 +0300
++++ b/src/pop3-login/pop3-proxy.c	Wed Jun 26 14:37:34 2013 +0300
+@@ -8,7 +8,7 @@
+ #include "safe-memset.h"
+ #include "str.h"
+ #include "str-sanitize.h"
+-#include "sasl-client.h"
++#include "dsasl-client.h"
+ #include "client.h"
+ #include "pop3-proxy.h"
+ 
+@@ -23,7 +23,7 @@
+ 
+ static int proxy_send_login(struct pop3_client *client, struct ostream *output)
+ {
+-	struct sasl_client_settings sasl_set;
++	struct dsasl_client_settings sasl_set;
+ 	const unsigned char *sasl_output;
+ 	unsigned int len;
+ 	const char *mech_name, *error;
+@@ -60,12 +60,12 @@
+ 	sasl_set.authzid = client->common.proxy_user;
+ 	sasl_set.password = client->common.proxy_password;
+ 	client->common.proxy_sasl_client =
+-		sasl_client_new(client->common.proxy_mech, &sasl_set);
+-	mech_name = sasl_client_mech_get_name(client->common.proxy_mech);
++		dsasl_client_new(client->common.proxy_mech, &sasl_set);
++	mech_name = dsasl_client_mech_get_name(client->common.proxy_mech);
+ 
+ 	str_printfa(str, "AUTH %s ", mech_name);
+-	if (sasl_client_output(client->common.proxy_sasl_client,
+-			       &sasl_output, &len, &error) < 0) {
++	if (dsasl_client_output(client->common.proxy_sasl_client,
++				&sasl_output, &len, &error) < 0) {
+ 		client_log_err(&client->common, t_strdup_printf(
+ 			"proxy: SASL mechanism %s init failed: %s",
+ 			mech_name, error));
+@@ -99,11 +99,11 @@
+ 		client_log_err(client, "proxy: Server sent invalid base64 data in AUTH response");
+ 		return -1;
+ 	}
+-	ret = sasl_client_input(client->proxy_sasl_client,
+-				str_data(str), str_len(str), &error);
++	ret = dsasl_client_input(client->proxy_sasl_client,
++				 str_data(str), str_len(str), &error);
+ 	if (ret == 0) {
+-		ret = sasl_client_output(client->proxy_sasl_client,
+-					 &data, &data_len, &error);
++		ret = dsasl_client_output(client->proxy_sasl_client,
++					  &data, &data_len, &error);
+ 	}
+ 	if (ret < 0) {
+ 		client_log_err(client, t_strdup_printf(
+

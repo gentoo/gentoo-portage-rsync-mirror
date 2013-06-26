@@ -1,0 +1,409 @@
+From 52d8cc2dd3bb3e0f6d51e00280da934e8d91653a Mon Sep 17 00:00:00 2001
+From: Ian Jackson <ian.jackson@eu.citrix.com>
+Date: Fri, 14 Jun 2013 16:43:18 +0100
+Subject: [PATCH 16/23] libelf: check loops for running away
+
+Ensure that libelf does not have any loops which can run away
+indefinitely even if the input is bogus.  (Grepped for \bfor, \bwhile
+and \bgoto in libelf and xc_dom_*loader*.c.)
+
+Changes needed:
+ * elf_note_next uses the note's unchecked alleged length, which might
+   wrap round.  If it does, return ELF_MAX_PTRVAL (0xfff..fff) instead,
+   which will be beyond the end of the section and so terminate the
+   caller's loop.  Also check that the returned psuedopointer is sane.
+ * In various loops over section and program headers, check that the
+   calculated header pointer is still within the image, and quit the
+   loop if it isn't.
+ * Some fixed limits to avoid potentially O(image_size^2) loops:
+    - maximum length of strings: 4K (longer ones ignored totally)
+    - maximum total number of ELF notes: 65536 (any more are ignored)
+ * Check that the total program contents (text, data) we copy or
+   initialise doesn't exceed twice the output image area size.
+ * Remove an entirely useless loop from elf_xen_parse (!)
+ * Replace a nested search loop in in xc_dom_load_elf_symtab in
+   xc_dom_elfloader.c by a precomputation of a bitmap of referenced
+   symtabs.
+
+We have not changed loops which might, in principle, iterate over the
+whole image - even if they might do so one byte at a time with a
+nontrivial access check function in the middle.
+
+This is part of the fix to a security issue, XSA-55.
+
+Signed-off-by: Ian Jackson <ian.jackson@eu.citrix.com>
+---
+ tools/libxc/xc_dom_elfloader.c     |   33 ++++++++++++++++++-------
+ xen/common/libelf/libelf-dominfo.c |   43 ++++++++++++++++++++------------
+ xen/common/libelf/libelf-loader.c  |   47 ++++++++++++++++++++++++++++++++++-
+ xen/common/libelf/libelf-tools.c   |   28 ++++++++++++++++++++-
+ xen/include/xen/libelf.h           |   13 ++++++++++
+ 5 files changed, 135 insertions(+), 29 deletions(-)
+
+diff --git a/tools/libxc/xc_dom_elfloader.c b/tools/libxc/xc_dom_elfloader.c
+index 62a0d3b..c5014d2 100644
+--- a/tools/libxc/xc_dom_elfloader.c
++++ b/tools/libxc/xc_dom_elfloader.c
+@@ -28,6 +28,7 @@
+ 
+ #include "xg_private.h"
+ #include "xc_dom.h"
++#include "xc_bitops.h"
+ 
+ #define XEN_VER "xen-3.0"
+ 
+@@ -120,6 +121,7 @@ static elf_errorstatus xc_dom_load_elf_symtab(struct xc_dom_image *dom,
+     ELF_PTRVAL_CHAR hdr;
+     size_t size;
+     unsigned h, count, type, i, tables = 0;
++    unsigned long *strtab_referenced = NULL;
+ 
+     if ( elf_swap(elf) )
+     {
+@@ -220,22 +222,35 @@ static elf_errorstatus xc_dom_load_elf_symtab(struct xc_dom_image *dom,
+               symtab, maxaddr);
+ 
+     count = elf_shdr_count(&syms);
++    /* elf_shdr_count guarantees that count is reasonable */
++
++    strtab_referenced = xc_dom_malloc(dom, bitmap_size(count));
++    if ( strtab_referenced == NULL )
++        return -1;
++    bitmap_clear(strtab_referenced, count);
++    /* Note the symtabs @h linked to by any strtab @i. */
++    for ( i = 0; i < count; i++ )
++    {
++        shdr2 = elf_shdr_by_index(&syms, i);
++        if ( elf_uval(&syms, shdr2, sh_type) == SHT_SYMTAB )
++        {
++            h = elf_uval(&syms, shdr2, sh_link);
++            if (h < count)
++                set_bit(h, strtab_referenced);
++        }
++    }
++
+     for ( h = 0; h < count; h++ )
+     {
+         shdr = ELF_OBSOLETE_VOIDP_CAST elf_shdr_by_index(&syms, h);
++        if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(shdr), 1) )
++            /* input has an insane section header count field */
++            break;
+         type = elf_uval(&syms, shdr, sh_type);
+         if ( type == SHT_STRTAB )
+         {
+-            /* Look for a strtab @i linked to symtab @h. */
+-            for ( i = 0; i < count; i++ )
+-            {
+-                shdr2 = elf_shdr_by_index(&syms, i);
+-                if ( (elf_uval(&syms, shdr2, sh_type) == SHT_SYMTAB) &&
+-                     (elf_uval(&syms, shdr2, sh_link) == h) )
+-                    break;
+-            }
+             /* Skip symtab @h if we found no corresponding strtab @i. */
+-            if ( i == count )
++            if ( !test_bit(h, strtab_referenced) )
+             {
+                 if ( elf_64bit(&syms) )
+                     elf_store_field(elf, shdr, e64.sh_offset, 0);
+diff --git a/xen/common/libelf/libelf-dominfo.c b/xen/common/libelf/libelf-dominfo.c
+index cdd0d31..25a10d7 100644
+--- a/xen/common/libelf/libelf-dominfo.c
++++ b/xen/common/libelf/libelf-dominfo.c
+@@ -221,7 +221,8 @@ elf_errorstatus elf_xen_parse_note(struct elf_binary *elf,
+ static unsigned elf_xen_parse_notes(struct elf_binary *elf,
+                                struct elf_dom_parms *parms,
+                                ELF_PTRVAL_CONST_VOID start,
+-                               ELF_PTRVAL_CONST_VOID end)
++                               ELF_PTRVAL_CONST_VOID end,
++                               unsigned *total_note_count)
+ {
+     unsigned xen_elfnotes = 0;
+     ELF_HANDLE_DECL(elf_note) note;
+@@ -233,6 +234,12 @@ static unsigned elf_xen_parse_notes(struct elf_binary *elf,
+           ELF_HANDLE_PTRVAL(note) < parms->elf_note_end;
+           note = elf_note_next(elf, note) )
+     {
++        if ( *total_note_count >= ELF_MAX_TOTAL_NOTE_COUNT )
++        {
++            elf_mark_broken(elf, "too many ELF notes");
++            break;
++        }
++        (*total_note_count)++;
+         note_name = elf_note_name(elf, note);
+         if ( note_name == NULL )
+             continue;
+@@ -473,6 +480,7 @@ elf_errorstatus elf_xen_parse(struct elf_binary *elf,
+     ELF_HANDLE_DECL(elf_phdr) phdr;
+     unsigned xen_elfnotes = 0;
+     unsigned i, count, more_notes;
++    unsigned total_note_count = 0;
+ 
+     elf_memset_unchecked(parms, 0, sizeof(*parms));
+     parms->virt_base = UNSET_ADDR;
+@@ -487,6 +495,9 @@ elf_errorstatus elf_xen_parse(struct elf_binary *elf,
+     for ( i = 0; i < count; i++ )
+     {
+         phdr = elf_phdr_by_index(elf, i);
++        if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(phdr), 1) )
++            /* input has an insane program header count field */
++            break;
+         if ( elf_uval(elf, phdr, p_type) != PT_NOTE )
+             continue;
+ 
+@@ -499,7 +510,8 @@ elf_errorstatus elf_xen_parse(struct elf_binary *elf,
+ 
+         more_notes = elf_xen_parse_notes(elf, parms,
+                                  elf_segment_start(elf, phdr),
+-                                 elf_segment_end(elf, phdr));
++                                 elf_segment_end(elf, phdr),
++                                 &total_note_count);
+         if ( more_notes == ELF_NOTE_INVALID )
+             return -1;
+ 
+@@ -516,13 +528,17 @@ elf_errorstatus elf_xen_parse(struct elf_binary *elf,
+         for ( i = 0; i < count; i++ )
+         {
+             shdr = elf_shdr_by_index(elf, i);
++            if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(shdr), 1) )
++                /* input has an insane section header count field */
++                break;
+ 
+             if ( elf_uval(elf, shdr, sh_type) != SHT_NOTE )
+                 continue;
+ 
+             more_notes = elf_xen_parse_notes(elf, parms,
+                                      elf_section_start(elf, shdr),
+-                                     elf_section_end(elf, shdr));
++                                     elf_section_end(elf, shdr),
++                                     &total_note_count);
+ 
+             if ( more_notes == ELF_NOTE_INVALID )
+                 return -1;
+@@ -540,20 +556,15 @@ elf_errorstatus elf_xen_parse(struct elf_binary *elf,
+      */
+     if ( xen_elfnotes == 0 )
+     {
+-        count = elf_shdr_count(elf);
+-        for ( i = 0; i < count; i++ )
++        shdr = elf_shdr_by_name(elf, "__xen_guest");
++        if ( ELF_HANDLE_VALID(shdr) )
+         {
+-            shdr = elf_shdr_by_name(elf, "__xen_guest");
+-            if ( ELF_HANDLE_VALID(shdr) )
+-            {
+-                parms->guest_info = elf_section_start(elf, shdr);
+-                parms->elf_note_start = ELF_INVALID_PTRVAL;
+-                parms->elf_note_end   = ELF_INVALID_PTRVAL;
+-                elf_msg(elf, "%s: __xen_guest: \"%s\"\n", __FUNCTION__,
+-                        elf_strfmt(elf, parms->guest_info));
+-                elf_xen_parse_guest_info(elf, parms);
+-                break;
+-            }
++            parms->guest_info = elf_section_start(elf, shdr);
++            parms->elf_note_start = ELF_INVALID_PTRVAL;
++            parms->elf_note_end   = ELF_INVALID_PTRVAL;
++            elf_msg(elf, "%s: __xen_guest: \"%s\"\n", __FUNCTION__,
++                    elf_strfmt(elf, parms->guest_info));
++            elf_xen_parse_guest_info(elf, parms);
+         }
+     }
+ 
+diff --git a/xen/common/libelf/libelf-loader.c b/xen/common/libelf/libelf-loader.c
+index c3a9e51..06799af 100644
+--- a/xen/common/libelf/libelf-loader.c
++++ b/xen/common/libelf/libelf-loader.c
+@@ -75,6 +75,9 @@ elf_errorstatus elf_init(struct elf_binary *elf, const char *image_input, size_t
+     for ( i = 0; i < count; i++ )
+     {
+         shdr = elf_shdr_by_index(elf, i);
++        if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(shdr), 1) )
++            /* input has an insane section header count field */
++            break;
+         if ( elf_uval(elf, shdr, sh_type) != SHT_SYMTAB )
+             continue;
+         elf->sym_tab = shdr;
+@@ -170,6 +173,9 @@ void elf_parse_bsdsyms(struct elf_binary *elf, uint64_t pstart)
+     for ( i = 0; i < elf_shdr_count(elf); i++ )
+     {
+         shdr = elf_shdr_by_index(elf, i);
++        if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(shdr), 1) )
++            /* input has an insane section header count field */
++            break;
+         type = elf_uval(elf, shdr, sh_type);
+         if ( (type == SHT_STRTAB) || (type == SHT_SYMTAB) )
+             sz = elf_round_up(elf, sz + elf_uval(elf, shdr, sh_size));
+@@ -224,6 +230,9 @@ do {                                            \
+ 
+     for ( i = 0; i < elf_shdr_count(elf); i++ )
+     {
++        elf_ptrval old_shdr_p;
++        elf_ptrval new_shdr_p;
++
+         type = elf_uval(elf, shdr, sh_type);
+         if ( (type == SHT_STRTAB) || (type == SHT_SYMTAB) )
+         {
+@@ -235,8 +244,16 @@ do {                                            \
+              elf_hdr_elm(elf, shdr, sh_offset, maxva - symtab_addr);
+              maxva = ELF_OBSOLETE_VOIDP_CAST elf_round_up(elf, (unsigned long)maxva + sz);
+         }
+-        shdr = ELF_MAKE_HANDLE(elf_shdr, ELF_HANDLE_PTRVAL(shdr) +
+-                            (unsigned long)elf_uval(elf, elf->ehdr, e_shentsize));
++        old_shdr_p = ELF_HANDLE_PTRVAL(shdr);
++        new_shdr_p = old_shdr_p + elf_uval(elf, elf->ehdr, e_shentsize);
++        if ( new_shdr_p <= old_shdr_p ) /* wrapped or stuck */
++        {
++            elf_mark_broken(elf, "bad section header length");
++            break;
++        }
++        if ( !elf_access_ok(elf, new_shdr_p, 1) ) /* outside image */
++            break;
++        shdr = ELF_MAKE_HANDLE(elf_shdr, new_shdr_p);
+     }
+ 
+     /* Write down the actual sym size. */
+@@ -256,6 +273,9 @@ void elf_parse_binary(struct elf_binary *elf)
+     for ( i = 0; i < count; i++ )
+     {
+         phdr = elf_phdr_by_index(elf, i);
++        if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(phdr), 1) )
++            /* input has an insane program header count field */
++            break;
+         if ( !elf_phdr_is_loadable(elf, phdr) )
+             continue;
+         paddr = elf_uval(elf, phdr, p_paddr);
+@@ -278,11 +298,20 @@ elf_errorstatus elf_load_binary(struct elf_binary *elf)
+     ELF_HANDLE_DECL(elf_phdr) phdr;
+     uint64_t i, count, paddr, offset, filesz, memsz;
+     ELF_PTRVAL_VOID dest;
++    /*
++     * Let bizarre ELFs write the output image up to twice; this
++     * calculation is just to ensure our copying loop is no worse than
++     * O(domain_size).
++     */
++    uint64_t remain_allow_copy = (uint64_t)elf->dest_size * 2;
+ 
+     count = elf_uval(elf, elf->ehdr, e_phnum);
+     for ( i = 0; i < count; i++ )
+     {
+         phdr = elf_phdr_by_index(elf, i);
++        if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(phdr), 1) )
++            /* input has an insane program header count field */
++            break;
+         if ( !elf_phdr_is_loadable(elf, phdr) )
+             continue;
+         paddr = elf_uval(elf, phdr, p_paddr);
+@@ -290,6 +319,20 @@ elf_errorstatus elf_load_binary(struct elf_binary *elf)
+         filesz = elf_uval(elf, phdr, p_filesz);
+         memsz = elf_uval(elf, phdr, p_memsz);
+         dest = elf_get_ptr(elf, paddr);
++
++        /*
++         * We need to check that the input image doesn't have us copy
++         * the whole image zillions of times, as that could lead to
++         * O(n^2) time behaviour and possible DoS by a malicous ELF.
++         */
++        if ( remain_allow_copy < memsz )
++        {
++            elf_mark_broken(elf, "program segments total to more"
++                            " than the input image size");
++            break;
++        }
++        remain_allow_copy -= memsz;
++
+         elf_msg(elf, "%s: phdr %" PRIu64 " at 0x%"ELF_PRPTRVAL" -> 0x%"ELF_PRPTRVAL"\n",
+                 __func__, i, dest, (ELF_PTRVAL_VOID)(dest + filesz));
+         if ( elf_load_image(elf, dest, ELF_IMAGE_BASE(elf) + offset, filesz, memsz) != 0 )
+diff --git a/xen/common/libelf/libelf-tools.c b/xen/common/libelf/libelf-tools.c
+index 46d4ab1..4a83133 100644
+--- a/xen/common/libelf/libelf-tools.c
++++ b/xen/common/libelf/libelf-tools.c
+@@ -131,7 +131,16 @@ uint64_t elf_round_up(struct elf_binary *elf, uint64_t addr)
+ 
+ unsigned elf_shdr_count(struct elf_binary *elf)
+ {
+-    return elf_uval(elf, elf->ehdr, e_shnum);
++    unsigned count = elf_uval(elf, elf->ehdr, e_shnum);
++    uint64_t max = elf->size / sizeof(Elf32_Shdr);
++    if (max > ~(unsigned)0)
++        max = ~(unsigned)0; /* Xen doesn't have limits.h :-/ */
++    if (count > max)
++    {
++        elf_mark_broken(elf, "far too many section headers");
++        count = max;
++    }
++    return count;
+ }
+ 
+ unsigned elf_phdr_count(struct elf_binary *elf)
+@@ -149,6 +158,9 @@ ELF_HANDLE_DECL(elf_shdr) elf_shdr_by_name(struct elf_binary *elf, const char *n
+     for ( i = 0; i < count; i++ )
+     {
+         shdr = elf_shdr_by_index(elf, i);
++        if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(shdr), 1) )
++            /* input has an insane section header count field */
++            break;
+         sname = elf_section_name(elf, shdr);
+         if ( sname && !strcmp(sname, name) )
+             return shdr;
+@@ -204,6 +216,11 @@ const char *elf_strval(struct elf_binary *elf, elf_ptrval start)
+         if ( !elf_access_unsigned(elf, start, length, 1) )
+             /* ok */
+             return ELF_UNSAFE_PTR(start);
++        if ( length >= ELF_MAX_STRING_LENGTH )
++        {
++            elf_mark_broken(elf, "excessively long string");
++            return NULL;
++        }
+     }
+ }
+ 
+@@ -327,7 +344,14 @@ ELF_HANDLE_DECL(elf_note) elf_note_next(struct elf_binary *elf, ELF_HANDLE_DECL(
+     unsigned namesz = (elf_uval(elf, note, namesz) + 3) & ~3;
+     unsigned descsz = (elf_uval(elf, note, descsz) + 3) & ~3;
+ 
+-    return ELF_MAKE_HANDLE(elf_note, ELF_HANDLE_PTRVAL(note) + elf_size(elf, note) + namesz + descsz);
++    elf_ptrval ptrval = ELF_HANDLE_PTRVAL(note)
++        + elf_size(elf, note) + namesz + descsz;
++
++    if ( ( ptrval <= ELF_HANDLE_PTRVAL(note) || /* wrapped or stuck */
++           !elf_access_ok(elf, ELF_HANDLE_PTRVAL(note), 1) ) )
++        ptrval = ELF_MAX_PTRVAL; /* terminate caller's loop */
++
++    return ELF_MAKE_HANDLE(elf_note, ptrval);
+ }
+ 
+ /* ------------------------------------------------------------------------ */
+diff --git a/xen/include/xen/libelf.h b/xen/include/xen/libelf.h
+index 87e126a..f95fe88 100644
+--- a/xen/include/xen/libelf.h
++++ b/xen/include/xen/libelf.h
+@@ -51,6 +51,9 @@ typedef void elf_log_callback(struct elf_binary*, void *caller_data,
+ 
+ #endif
+ 
++#define ELF_MAX_STRING_LENGTH 4096
++#define ELF_MAX_TOTAL_NOTE_COUNT 65536
++
+ /* ------------------------------------------------------------------------ */
+ 
+ /* Macros for accessing the input image and output area. */
+@@ -353,6 +356,16 @@ ELF_PTRVAL_CONST_VOID elf_note_desc(struct elf_binary *elf, ELF_HANDLE_DECL(elf_
+ uint64_t elf_note_numeric(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note);
+ uint64_t elf_note_numeric_array(struct elf_binary *, ELF_HANDLE_DECL(elf_note),
+                                 unsigned int unitsz, unsigned int idx);
++
++/*
++ * If you use elf_note_next in a loop, you must put a nontrivial upper
++ * bound on the returned value as part of your loop condition.  In
++ * some cases elf_note_next will substitute ELF_PTRVAL_MAX as return
++ * value to indicate that the iteration isn't going well (for example,
++ * the putative "next" value would be earlier in memory).  In this
++ * case the caller's loop must terminate.  Checking against the
++ * end of the notes segment with a strict inequality is sufficient.
++ */
+ ELF_HANDLE_DECL(elf_note) elf_note_next(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note);
+ 
+ /* (Only) checks that the image has the right magic number. */
+-- 
+1.7.2.5
+

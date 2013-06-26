@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35-r1.ebuild,v 1.1 2013/03/09 19:42:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35-r1.ebuild,v 1.2 2013/06/26 16:13:04 xarthisius Exp $
 
 EAPI=4
 
@@ -91,6 +91,7 @@ src_compile() {
 	use examples || return
 	local myopts verbose="verbose=1"
 	use debug && myopts+=" dbg=1"
+	export FAKEROOTKEY=1 # Workaround sandbox issue in #462602
 	emake \
 		cuda-install="${EPREFIX}/opt/cuda" \
 		CUDA_PATH="${EPREFIX}/opt/cuda/" \

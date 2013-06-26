@@ -1,0 +1,156 @@
+From 8c738fa5c1f3cfcd935b6191b3526f7ac8b2a5bd Mon Sep 17 00:00:00 2001
+From: Ian Jackson <ian.jackson@eu.citrix.com>
+Date: Fri, 14 Jun 2013 16:43:16 +0100
+Subject: [PATCH 03/23] libxc: Fix range checking in xc_dom_pfn_to_ptr etc.
+
+* Ensure that xc_dom_pfn_to_ptr (when called with count==0) does not
+  return a previously-allocated block which is entirely before the
+  requested pfn (!)
+
+* Provide a version of xc_dom_pfn_to_ptr, xc_dom_pfn_to_ptr_retcount,
+  which provides the length of the mapped region via an out parameter.
+
+* Change xc_dom_vaddr_to_ptr to always provide the length of the
+  mapped region and change the call site in xc_dom_binloader.c to
+  check it.  The call site in xc_dom_load_elf_symtab will be corrected
+  in a forthcoming patch, and for now ignores the returned length.
+
+This is part of the fix to a security issue, XSA-55.
+
+Signed-off-by: Ian Jackson <ian.jackson@eu.citrix.com>
+---
+ tools/libxc/xc_dom.h           |   16 +++++++++++++---
+ tools/libxc/xc_dom_binloader.c |   11 ++++++++++-
+ tools/libxc/xc_dom_core.c      |   13 +++++++++++++
+ tools/libxc/xc_dom_elfloader.c |    3 ++-
+ 4 files changed, 38 insertions(+), 5 deletions(-)
+
+diff --git a/tools/libxc/xc_dom.h b/tools/libxc/xc_dom.h
+index 9af2195..9f8037e 100644
+--- a/tools/libxc/xc_dom.h
++++ b/tools/libxc/xc_dom.h
+@@ -275,6 +275,8 @@ int xc_dom_alloc_segment(struct xc_dom_image *dom,
+ 
+ void *xc_dom_pfn_to_ptr(struct xc_dom_image *dom, xen_pfn_t first,
+                         xen_pfn_t count);
++void *xc_dom_pfn_to_ptr_retcount(struct xc_dom_image *dom, xen_pfn_t first,
++                                 xen_pfn_t count, xen_pfn_t *count_out);
+ void xc_dom_unmap_one(struct xc_dom_image *dom, xen_pfn_t pfn);
+ void xc_dom_unmap_all(struct xc_dom_image *dom);
+ 
+@@ -302,13 +304,21 @@ static inline void *xc_dom_seg_to_ptr(struct xc_dom_image *dom,
+ }
+ 
+ static inline void *xc_dom_vaddr_to_ptr(struct xc_dom_image *dom,
+-                                        xen_vaddr_t vaddr)
++                                        xen_vaddr_t vaddr,
++                                        size_t *safe_region_out)
+ {
+     unsigned int page_size = XC_DOM_PAGE_SIZE(dom);
+     xen_pfn_t page = (vaddr - dom->parms.virt_base) / page_size;
+     unsigned int offset = (vaddr - dom->parms.virt_base) % page_size;
+-    void *ptr = xc_dom_pfn_to_ptr(dom, page, 0);
+-    return (ptr ? (ptr + offset) : NULL);
++    xen_pfn_t safe_region_count;
++    void *ptr;
++
++    *safe_region_out = 0;
++    ptr = xc_dom_pfn_to_ptr_retcount(dom, page, 0, &safe_region_count);
++    if ( ptr == NULL )
++        return ptr;
++    *safe_region_out = (safe_region_count << XC_DOM_PAGE_SHIFT(dom)) - offset;
++    return ptr;
+ }
+ 
+ static inline int xc_dom_feature_translated(struct xc_dom_image *dom)
+diff --git a/tools/libxc/xc_dom_binloader.c b/tools/libxc/xc_dom_binloader.c
+index 769e97d..bde93f7 100644
+--- a/tools/libxc/xc_dom_binloader.c
++++ b/tools/libxc/xc_dom_binloader.c
+@@ -249,6 +249,7 @@ static int xc_dom_load_bin_kernel(struct xc_dom_image *dom)
+     char *image = dom->kernel_blob;
+     char *dest;
+     size_t image_size = dom->kernel_size;
++    size_t dest_size;
+     uint32_t start_addr;
+     uint32_t load_end_addr;
+     uint32_t bss_end_addr;
+@@ -272,7 +273,15 @@ static int xc_dom_load_bin_kernel(struct xc_dom_image *dom)
+     DOMPRINTF("  text_size: 0x%" PRIx32 "", text_size);
+     DOMPRINTF("  bss_size:  0x%" PRIx32 "", bss_size);
+ 
+-    dest = xc_dom_vaddr_to_ptr(dom, dom->kernel_seg.vstart);
++    dest = xc_dom_vaddr_to_ptr(dom, dom->kernel_seg.vstart, &dest_size);
++
++    if ( dest_size < text_size ||
++         dest_size - text_size < bss_size )
++    {
++        DOMPRINTF("%s: mapped region is too small for image", __FUNCTION__);
++        return -EINVAL;
++    }
++
+     memcpy(dest, image + skip, text_size);
+     memset(dest + text_size, 0, bss_size);
+ 
+diff --git a/tools/libxc/xc_dom_core.c b/tools/libxc/xc_dom_core.c
+index 2a01d7c..8913e41 100644
+--- a/tools/libxc/xc_dom_core.c
++++ b/tools/libxc/xc_dom_core.c
+@@ -351,10 +351,19 @@ int xc_dom_try_gunzip(struct xc_dom_image *dom, void **blob, size_t * size)
+ void *xc_dom_pfn_to_ptr(struct xc_dom_image *dom, xen_pfn_t pfn,
+                         xen_pfn_t count)
+ {
++    xen_pfn_t count_out_dummy;
++    return xc_dom_pfn_to_ptr_retcount(dom, pfn, count, &count_out_dummy);
++}
++
++void *xc_dom_pfn_to_ptr_retcount(struct xc_dom_image *dom, xen_pfn_t pfn,
++                                 xen_pfn_t count, xen_pfn_t *count_out)
++{
+     struct xc_dom_phys *phys;
+     unsigned int page_shift = XC_DOM_PAGE_SHIFT(dom);
+     char *mode = "unset";
+ 
++    *count_out = 0;
++
+     if ( pfn > dom->total_pages ||    /* multiple checks to avoid overflows */
+          count > dom->total_pages ||
+          pfn > dom->total_pages - count )
+@@ -384,6 +393,7 @@ void *xc_dom_pfn_to_ptr(struct xc_dom_image *dom, xen_pfn_t pfn,
+                           phys->count);
+                 return NULL;
+             }
++            *count_out = count;
+         }
+         else
+         {
+@@ -391,6 +401,9 @@ void *xc_dom_pfn_to_ptr(struct xc_dom_image *dom, xen_pfn_t pfn,
+                just hand out a pointer to it */
+             if ( pfn < phys->first )
+                 continue;
++            if ( pfn >= phys->first + phys->count )
++                continue;
++            *count_out = phys->count - (pfn - phys->first);
+         }
+         return phys->ptr + ((pfn - phys->first) << page_shift);
+     }
+diff --git a/tools/libxc/xc_dom_elfloader.c b/tools/libxc/xc_dom_elfloader.c
+index 2e69559..031b5b6 100644
+--- a/tools/libxc/xc_dom_elfloader.c
++++ b/tools/libxc/xc_dom_elfloader.c
+@@ -130,10 +130,11 @@ static int xc_dom_load_elf_symtab(struct xc_dom_image *dom,
+ 
+     if ( load )
+     {
++        size_t allow_size; /* will be used in a forthcoming XSA-55 patch */
+         if ( !dom->bsd_symtab_start )
+             return 0;
+         size = dom->kernel_seg.vend - dom->bsd_symtab_start;
+-        hdr  = xc_dom_vaddr_to_ptr(dom, dom->bsd_symtab_start);
++        hdr  = xc_dom_vaddr_to_ptr(dom, dom->bsd_symtab_start, &allow_size);
+         *(int *)hdr = size - sizeof(int);
+     }
+     else
+-- 
+1.7.2.5
+

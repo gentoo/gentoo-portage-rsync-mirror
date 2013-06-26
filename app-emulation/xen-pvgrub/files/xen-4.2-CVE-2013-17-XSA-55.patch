@@ -1,0 +1,406 @@
+From 3baaa4ffcd3e7dd6227f9bdf817f90e5b75aeda2 Mon Sep 17 00:00:00 2001
+From: Ian Jackson <ian.jackson@eu.citrix.com>
+Date: Fri, 14 Jun 2013 16:43:19 +0100
+Subject: [PATCH 17/23] libelf: abolish obsolete macros
+
+Abolish ELF_PTRVAL_[CONST_]{CHAR,VOID}; change uses to elf_ptrval.
+Abolish ELF_HANDLE_DECL_NONCONST; change uses to ELF_HANDLE_DECL.
+Abolish ELF_OBSOLETE_VOIDP_CAST; simply remove all uses.
+
+No functional change.  (Verified by diffing assembler output.)
+
+Signed-off-by: Ian Jackson <ian.jackson@eu.citrix.com>
+Acked-by: Ian Campbell <ian.campbell@citrix.com>
+
+v2: New patch.
+---
+ tools/libxc/xc_dom_elfloader.c     |    8 +++---
+ tools/xcutils/readnotes.c          |    2 +-
+ xen/common/libelf/libelf-dominfo.c |    6 ++--
+ xen/common/libelf/libelf-loader.c  |   24 +++++++++---------
+ xen/common/libelf/libelf-tools.c   |   24 +++++++++---------
+ xen/include/xen/libelf.h           |   48 +++++++++---------------------------
+ 6 files changed, 44 insertions(+), 68 deletions(-)
+
+diff --git a/tools/libxc/xc_dom_elfloader.c b/tools/libxc/xc_dom_elfloader.c
+index c5014d2..9fc4b94 100644
+--- a/tools/libxc/xc_dom_elfloader.c
++++ b/tools/libxc/xc_dom_elfloader.c
+@@ -116,9 +116,9 @@ static elf_errorstatus xc_dom_load_elf_symtab(struct xc_dom_image *dom,
+                                   struct elf_binary *elf, bool load)
+ {
+     struct elf_binary syms;
+-    ELF_HANDLE_DECL_NONCONST(elf_shdr) shdr; ELF_HANDLE_DECL(elf_shdr) shdr2;
++    ELF_HANDLE_DECL(elf_shdr) shdr; ELF_HANDLE_DECL(elf_shdr) shdr2;
+     xen_vaddr_t symtab, maxaddr;
+-    ELF_PTRVAL_CHAR hdr;
++    elf_ptrval hdr;
+     size_t size;
+     unsigned h, count, type, i, tables = 0;
+     unsigned long *strtab_referenced = NULL;
+@@ -242,7 +242,7 @@ static elf_errorstatus xc_dom_load_elf_symtab(struct xc_dom_image *dom,
+ 
+     for ( h = 0; h < count; h++ )
+     {
+-        shdr = ELF_OBSOLETE_VOIDP_CAST elf_shdr_by_index(&syms, h);
++        shdr = elf_shdr_by_index(&syms, h);
+         if ( !elf_access_ok(elf, ELF_HANDLE_PTRVAL(shdr), 1) )
+             /* input has an insane section header count field */
+             break;
+@@ -278,7 +278,7 @@ static elf_errorstatus xc_dom_load_elf_symtab(struct xc_dom_image *dom,
+             if ( load )
+             {
+                 shdr2 = elf_shdr_by_index(elf, h);
+-                elf_memcpy_safe(elf, ELF_OBSOLETE_VOIDP_CAST elf_section_start(&syms, shdr),
++                elf_memcpy_safe(elf, elf_section_start(&syms, shdr),
+                        elf_section_start(elf, shdr2),
+                        size);
+             }
+diff --git a/tools/xcutils/readnotes.c b/tools/xcutils/readnotes.c
+index 2ca7732..5fa445e 100644
+--- a/tools/xcutils/readnotes.c
++++ b/tools/xcutils/readnotes.c
+@@ -80,7 +80,7 @@ static void print_l1_mfn_valid_note(const char *prefix, struct elf_binary *elf,
+ 				    ELF_HANDLE_DECL(elf_note) note)
+ {
+ 	unsigned descsz = elf_uval(elf, note, descsz);
+-	ELF_PTRVAL_CONST_VOID desc = elf_note_desc(elf, note);
++	elf_ptrval desc = elf_note_desc(elf, note);
+ 
+ 	/* XXX should be able to cope with a list of values. */
+ 	switch ( descsz / 2 )
+diff --git a/xen/common/libelf/libelf-dominfo.c b/xen/common/libelf/libelf-dominfo.c
+index 25a10d7..412ea70 100644
+--- a/xen/common/libelf/libelf-dominfo.c
++++ b/xen/common/libelf/libelf-dominfo.c
+@@ -220,8 +220,8 @@ elf_errorstatus elf_xen_parse_note(struct elf_binary *elf,
+ 
+ static unsigned elf_xen_parse_notes(struct elf_binary *elf,
+                                struct elf_dom_parms *parms,
+-                               ELF_PTRVAL_CONST_VOID start,
+-                               ELF_PTRVAL_CONST_VOID end,
++                               elf_ptrval start,
++                               elf_ptrval end,
+                                unsigned *total_note_count)
+ {
+     unsigned xen_elfnotes = 0;
+@@ -258,7 +258,7 @@ static unsigned elf_xen_parse_notes(struct elf_binary *elf,
+ elf_errorstatus elf_xen_parse_guest_info(struct elf_binary *elf,
+                              struct elf_dom_parms *parms)
+ {
+-    ELF_PTRVAL_CONST_CHAR h;
++    elf_ptrval h;
+     unsigned char name[32], value[128];
+     unsigned len;
+ 
+diff --git a/xen/common/libelf/libelf-loader.c b/xen/common/libelf/libelf-loader.c
+index 06799af..e2e75af 100644
+--- a/xen/common/libelf/libelf-loader.c
++++ b/xen/common/libelf/libelf-loader.c
+@@ -118,7 +118,7 @@ void elf_set_log(struct elf_binary *elf, elf_log_callback *log_callback,
+ }
+ 
+ static elf_errorstatus elf_load_image(struct elf_binary *elf,
+-                          ELF_PTRVAL_VOID dst, ELF_PTRVAL_CONST_VOID src,
++                          elf_ptrval dst, elf_ptrval src,
+                           uint64_t filesz, uint64_t memsz)
+ {
+     elf_memcpy_safe(elf, dst, src, filesz);
+@@ -132,7 +132,7 @@ void elf_set_verbose(struct elf_binary *elf)
+     elf->verbose = 1;
+ }
+ 
+-static elf_errorstatus elf_load_image(struct elf_binary *elf, ELF_PTRVAL_VOID dst, ELF_PTRVAL_CONST_VOID src, uint64_t filesz, uint64_t memsz)
++static elf_errorstatus elf_load_image(struct elf_binary *elf, elf_ptrval dst, elf_ptrval src, uint64_t filesz, uint64_t memsz)
+ {
+     elf_errorstatus rc;
+     if ( filesz > ULONG_MAX || memsz > ULONG_MAX )
+@@ -187,12 +187,12 @@ void elf_parse_bsdsyms(struct elf_binary *elf, uint64_t pstart)
+ 
+ static void elf_load_bsdsyms(struct elf_binary *elf)
+ {
+-    ELF_HANDLE_DECL_NONCONST(elf_ehdr) sym_ehdr;
++    ELF_HANDLE_DECL(elf_ehdr) sym_ehdr;
+     unsigned long sz;
+-    ELF_PTRVAL_VOID maxva;
+-    ELF_PTRVAL_VOID symbase;
+-    ELF_PTRVAL_VOID symtab_addr;
+-    ELF_HANDLE_DECL_NONCONST(elf_shdr) shdr;
++    elf_ptrval maxva;
++    elf_ptrval symbase;
++    elf_ptrval symtab_addr;
++    ELF_HANDLE_DECL(elf_shdr) shdr;
+     unsigned i, type;
+ 
+     if ( !elf->bsd_symtab_pstart )
+@@ -226,7 +226,7 @@ do {                                            \
+     elf_memcpy_safe(elf, ELF_HANDLE_PTRVAL(shdr),
+                     ELF_IMAGE_BASE(elf) + elf_uval(elf, elf->ehdr, e_shoff),
+                     sz);
+-    maxva = ELF_OBSOLETE_VOIDP_CAST elf_round_up(elf, (unsigned long)maxva + sz);
++    maxva = elf_round_up(elf, (unsigned long)maxva + sz);
+ 
+     for ( i = 0; i < elf_shdr_count(elf); i++ )
+     {
+@@ -242,7 +242,7 @@ do {                                            \
+              elf_memcpy_safe(elf, maxva, elf_section_start(elf, shdr), sz);
+              /* Mangled to be based on ELF header location. */
+              elf_hdr_elm(elf, shdr, sh_offset, maxva - symtab_addr);
+-             maxva = ELF_OBSOLETE_VOIDP_CAST elf_round_up(elf, (unsigned long)maxva + sz);
++             maxva = elf_round_up(elf, (unsigned long)maxva + sz);
+         }
+         old_shdr_p = ELF_HANDLE_PTRVAL(shdr);
+         new_shdr_p = old_shdr_p + elf_uval(elf, elf->ehdr, e_shentsize);
+@@ -297,7 +297,7 @@ elf_errorstatus elf_load_binary(struct elf_binary *elf)
+ {
+     ELF_HANDLE_DECL(elf_phdr) phdr;
+     uint64_t i, count, paddr, offset, filesz, memsz;
+-    ELF_PTRVAL_VOID dest;
++    elf_ptrval dest;
+     /*
+      * Let bizarre ELFs write the output image up to twice; this
+      * calculation is just to ensure our copying loop is no worse than
+@@ -334,7 +334,7 @@ elf_errorstatus elf_load_binary(struct elf_binary *elf)
+         remain_allow_copy -= memsz;
+ 
+         elf_msg(elf, "%s: phdr %" PRIu64 " at 0x%"ELF_PRPTRVAL" -> 0x%"ELF_PRPTRVAL"\n",
+-                __func__, i, dest, (ELF_PTRVAL_VOID)(dest + filesz));
++                __func__, i, dest, (elf_ptrval)(dest + filesz));
+         if ( elf_load_image(elf, dest, ELF_IMAGE_BASE(elf) + offset, filesz, memsz) != 0 )
+             return -1;
+     }
+@@ -343,7 +343,7 @@ elf_errorstatus elf_load_binary(struct elf_binary *elf)
+     return 0;
+ }
+ 
+-ELF_PTRVAL_VOID elf_get_ptr(struct elf_binary *elf, unsigned long addr)
++elf_ptrval elf_get_ptr(struct elf_binary *elf, unsigned long addr)
+ {
+     return ELF_REALPTR2PTRVAL(elf->dest_base) + addr - elf->pstart;
+ }
+diff --git a/xen/common/libelf/libelf-tools.c b/xen/common/libelf/libelf-tools.c
+index 4a83133..e202249 100644
+--- a/xen/common/libelf/libelf-tools.c
++++ b/xen/common/libelf/libelf-tools.c
+@@ -171,7 +171,7 @@ ELF_HANDLE_DECL(elf_shdr) elf_shdr_by_name(struct elf_binary *elf, const char *n
+ ELF_HANDLE_DECL(elf_shdr) elf_shdr_by_index(struct elf_binary *elf, unsigned index)
+ {
+     uint64_t count = elf_shdr_count(elf);
+-    ELF_PTRVAL_CONST_VOID ptr;
++    elf_ptrval ptr;
+ 
+     if ( index >= count )
+         return ELF_INVALID_HANDLE(elf_shdr);
+@@ -185,7 +185,7 @@ ELF_HANDLE_DECL(elf_shdr) elf_shdr_by_index(struct elf_binary *elf, unsigned ind
+ ELF_HANDLE_DECL(elf_phdr) elf_phdr_by_index(struct elf_binary *elf, unsigned index)
+ {
+     uint64_t count = elf_uval(elf, elf->ehdr, e_phnum);
+-    ELF_PTRVAL_CONST_VOID ptr;
++    elf_ptrval ptr;
+ 
+     if ( index >= count )
+         return ELF_INVALID_HANDLE(elf_phdr);
+@@ -233,24 +233,24 @@ const char *elf_strfmt(struct elf_binary *elf, elf_ptrval start)
+     return str;
+ }
+ 
+-ELF_PTRVAL_CONST_VOID elf_section_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr)
++elf_ptrval elf_section_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr)
+ {
+     return ELF_IMAGE_BASE(elf) + elf_uval(elf, shdr, sh_offset);
+ }
+ 
+-ELF_PTRVAL_CONST_VOID elf_section_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr)
++elf_ptrval elf_section_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr)
+ {
+     return ELF_IMAGE_BASE(elf)
+         + elf_uval(elf, shdr, sh_offset) + elf_uval(elf, shdr, sh_size);
+ }
+ 
+-ELF_PTRVAL_CONST_VOID elf_segment_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr)
++elf_ptrval elf_segment_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr)
+ {
+     return ELF_IMAGE_BASE(elf)
+         + elf_uval(elf, phdr, p_offset);
+ }
+ 
+-ELF_PTRVAL_CONST_VOID elf_segment_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr)
++elf_ptrval elf_segment_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr)
+ {
+     return ELF_IMAGE_BASE(elf)
+         + elf_uval(elf, phdr, p_offset) + elf_uval(elf, phdr, p_filesz);
+@@ -258,8 +258,8 @@ ELF_PTRVAL_CONST_VOID elf_segment_end(struct elf_binary *elf, ELF_HANDLE_DECL(el
+ 
+ ELF_HANDLE_DECL(elf_sym) elf_sym_by_name(struct elf_binary *elf, const char *symbol)
+ {
+-    ELF_PTRVAL_CONST_VOID ptr = elf_section_start(elf, elf->sym_tab);
+-    ELF_PTRVAL_CONST_VOID end = elf_section_end(elf, elf->sym_tab);
++    elf_ptrval ptr = elf_section_start(elf, elf->sym_tab);
++    elf_ptrval end = elf_section_end(elf, elf->sym_tab);
+     ELF_HANDLE_DECL(elf_sym) sym;
+     uint64_t info, name;
+     const char *sym_name;
+@@ -283,7 +283,7 @@ ELF_HANDLE_DECL(elf_sym) elf_sym_by_name(struct elf_binary *elf, const char *sym
+ 
+ ELF_HANDLE_DECL(elf_sym) elf_sym_by_index(struct elf_binary *elf, unsigned index)
+ {
+-    ELF_PTRVAL_CONST_VOID ptr = elf_section_start(elf, elf->sym_tab);
++    elf_ptrval ptr = elf_section_start(elf, elf->sym_tab);
+     ELF_HANDLE_DECL(elf_sym) sym;
+ 
+     sym = ELF_MAKE_HANDLE(elf_sym, ptr + index * elf_size(elf, sym));
+@@ -295,7 +295,7 @@ const char *elf_note_name(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note
+     return elf_strval(elf, ELF_HANDLE_PTRVAL(note) + elf_size(elf, note));
+ }
+ 
+-ELF_PTRVAL_CONST_VOID elf_note_desc(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note)
++elf_ptrval elf_note_desc(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note)
+ {
+     unsigned namesz = (elf_uval(elf, note, namesz) + 3) & ~3;
+ 
+@@ -304,7 +304,7 @@ ELF_PTRVAL_CONST_VOID elf_note_desc(struct elf_binary *elf, ELF_HANDLE_DECL(elf_
+ 
+ uint64_t elf_note_numeric(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note)
+ {
+-    ELF_PTRVAL_CONST_VOID desc = elf_note_desc(elf, note);
++    elf_ptrval desc = elf_note_desc(elf, note);
+     unsigned descsz = elf_uval(elf, note, descsz);
+ 
+     switch (descsz)
+@@ -322,7 +322,7 @@ uint64_t elf_note_numeric(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note
+ uint64_t elf_note_numeric_array(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note,
+                                 unsigned int unitsz, unsigned int idx)
+ {
+-    ELF_PTRVAL_CONST_VOID desc = elf_note_desc(elf, note);
++    elf_ptrval desc = elf_note_desc(elf, note);
+     unsigned descsz = elf_uval(elf, note, descsz);
+ 
+     if ( descsz % unitsz || idx >= descsz / unitsz )
+diff --git a/xen/include/xen/libelf.h b/xen/include/xen/libelf.h
+index f95fe88..174f8da 100644
+--- a/xen/include/xen/libelf.h
++++ b/xen/include/xen/libelf.h
+@@ -61,13 +61,8 @@ typedef void elf_log_callback(struct elf_binary*, void *caller_data,
+ /*
+  * We abstract away the pointerness of these pointers, replacing
+  * various void*, char* and struct* with the following:
+- *   PTRVAL      A pointer to a byte; one can do pointer arithmetic
++ *   elf_ptrval  A pointer to a byte; one can do pointer arithmetic
+  *               on this.
+- *               This replaces variables which were char*,void*
+- *               and their const versions, so we provide four
+- *               different obsolete declaration macros:
+- *                   ELF_PTRVAL_{,CONST}{VOID,CHAR}
+- *               New code can simply use the elf_ptrval typedef.
+  *   HANDLE      A pointer to a struct.  There is one of these types
+  *               for each pointer type - that is, for each "structname".
+  *               In the arguments to the various HANDLE macros, structname
+@@ -76,8 +71,6 @@ typedef void elf_log_callback(struct elf_binary*, void *caller_data,
+  *               pointers.  In the current code attempts to do so will
+  *               compile, but in the next patch this will become a
+  *               compile error.
+- *               We also provide a second declaration macro for
+- *               pointers which were to const; this is obsolete.
+  */
+ 
+ typedef uintptr_t elf_ptrval;
+@@ -85,15 +78,9 @@ typedef uintptr_t elf_ptrval;
+ #define ELF_REALPTR2PTRVAL(realpointer) ((elf_ptrval)(realpointer))
+   /* Converts an actual C pointer into a PTRVAL */
+ 
+-#define ELF_HANDLE_DECL_NONCONST(structname) structname##_handle /*obsolete*/
+ #define ELF_HANDLE_DECL(structname)          structname##_handle
+   /* Provides a type declaration for a HANDLE. */
+ 
+-#define ELF_PTRVAL_VOID              elf_ptrval /*obsolete*/
+-#define ELF_PTRVAL_CHAR              elf_ptrval /*obsolete*/
+-#define ELF_PTRVAL_CONST_VOID        elf_ptrval /*obsolete*/
+-#define ELF_PTRVAL_CONST_CHAR        elf_ptrval /*obsolete*/
+-
+ #ifdef __XEN__
+ # define ELF_PRPTRVAL "lu"
+   /*
+@@ -124,17 +111,6 @@ typedef uintptr_t elf_ptrval;
+ #define ELF_HANDLE_PTRVAL(handleval)      ((handleval).ptrval)
+   /* Converts a HANDLE to a PTRVAL. */
+ 
+-#define ELF_OBSOLETE_VOIDP_CAST /*empty*/
+-  /*
+-   * In some places the old code used to need to
+-   *  - cast away const (the existing code uses const a fair
+-   *    bit but actually sometimes wants to write to its input)
+-   *    from a PTRVAL.
+-   *  - convert an integer representing a pointer to a PTRVAL
+-   * Nowadays all of these re uintptr_ts so there is no const problem
+-   * and no need for any casting.
+-   */
+-
+ #define ELF_UNSAFE_PTR(ptrval) ((void*)(elf_ptrval)(ptrval))
+   /*
+    * Turns a PTRVAL into an actual C pointer.  Before this is done
+@@ -212,7 +188,7 @@ struct elf_binary {
+     char data;
+ 
+     ELF_HANDLE_DECL(elf_ehdr) ehdr;
+-    ELF_PTRVAL_CONST_CHAR sec_strtab;
++    elf_ptrval sec_strtab;
+     ELF_HANDLE_DECL(elf_shdr) sym_tab;
+     uint64_t sym_strtab;
+ 
+@@ -290,7 +266,7 @@ struct elf_binary {
+    * str should be a HANDLE.
+    */
+ 
+-uint64_t elf_access_unsigned(struct elf_binary *elf, ELF_PTRVAL_CONST_VOID ptr,
++uint64_t elf_access_unsigned(struct elf_binary *elf, elf_ptrval ptr,
+                              uint64_t offset, size_t size);
+   /* Reads a field at arbitrary offset and alignemnt */
+ 
+@@ -342,17 +318,17 @@ ELF_HANDLE_DECL(elf_shdr) elf_shdr_by_index(struct elf_binary *elf, unsigned ind
+ ELF_HANDLE_DECL(elf_phdr) elf_phdr_by_index(struct elf_binary *elf, unsigned index);
+ 
+ const char *elf_section_name(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr); /* might return NULL if inputs are invalid */
+-ELF_PTRVAL_CONST_VOID elf_section_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr);
+-ELF_PTRVAL_CONST_VOID elf_section_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr);
++elf_ptrval elf_section_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr);
++elf_ptrval elf_section_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_shdr) shdr);
+ 
+-ELF_PTRVAL_CONST_VOID elf_segment_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr);
+-ELF_PTRVAL_CONST_VOID elf_segment_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr);
++elf_ptrval elf_segment_start(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr);
++elf_ptrval elf_segment_end(struct elf_binary *elf, ELF_HANDLE_DECL(elf_phdr) phdr);
+ 
+ ELF_HANDLE_DECL(elf_sym) elf_sym_by_name(struct elf_binary *elf, const char *symbol);
+ ELF_HANDLE_DECL(elf_sym) elf_sym_by_index(struct elf_binary *elf, unsigned index);
+ 
+ const char *elf_note_name(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note); /* may return NULL */
+-ELF_PTRVAL_CONST_VOID elf_note_desc(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note);
++elf_ptrval elf_note_desc(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note);
+ uint64_t elf_note_numeric(struct elf_binary *elf, ELF_HANDLE_DECL(elf_note) note);
+ uint64_t elf_note_numeric_array(struct elf_binary *, ELF_HANDLE_DECL(elf_note),
+                                 unsigned int unitsz, unsigned int idx);
+@@ -391,7 +367,7 @@ void elf_set_log(struct elf_binary *elf, elf_log_callback*,
+ void elf_parse_binary(struct elf_binary *elf);
+ elf_errorstatus elf_load_binary(struct elf_binary *elf);
+ 
+-ELF_PTRVAL_VOID elf_get_ptr(struct elf_binary *elf, unsigned long addr);
++elf_ptrval elf_get_ptr(struct elf_binary *elf, unsigned long addr);
+ uint64_t elf_lookup_addr(struct elf_binary *elf, const char *symbol);
+ 
+ void elf_parse_bsdsyms(struct elf_binary *elf, uint64_t pstart); /* private */
+@@ -426,9 +402,9 @@ struct xen_elfnote {
+ 
+ struct elf_dom_parms {
+     /* raw */
+-    ELF_PTRVAL_CONST_CHAR guest_info;
+-    ELF_PTRVAL_CONST_VOID elf_note_start;
+-    ELF_PTRVAL_CONST_VOID elf_note_end;
++    elf_ptrval guest_info;
++    elf_ptrval elf_note_start;
++    elf_ptrval elf_note_end;
+     struct xen_elfnote elf_notes[XEN_ELFNOTE_MAX + 1];
+ 
+     /* parsed */
+-- 
+1.7.2.5
+

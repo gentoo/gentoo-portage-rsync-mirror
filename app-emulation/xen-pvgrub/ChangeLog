@@ -1,6 +1,33 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.27 2013/05/23 17:47:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.28 2013/06/26 16:16:38 idella4 Exp $
+
+*xen-pvgrub-4.2.1-r3 (26 Jun 2013)
+*xen-pvgrub-4.2.2-r1 (26 Jun 2013)
+
+  26 Jun 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4.2-CVE-2013-1-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-11-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-12to13-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-14-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-15-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-16-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-17-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-18to19-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-2-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-20to23-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-3-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-4-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-5to7-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-6-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-7-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-8-XSA-55.patch,
+  +files/xen-4.2-CVE-2013-9to10-XSA-55.patch, +xen-pvgrub-4.2.1-r3.ebuild,
+  +xen-pvgrub-4.2.2-r1.ebuild, -files/xen-4-CVE-2012-4544-XSA-25.patch,
+  -files/xen-4.2.0-externals.patch, -xen-pvgrub-4.2.0-r1.ebuild,
+  -xen-pvgrub-4.2.1-r1.ebuild, -xen-pvgrub-4.2.1.ebuild,
+  xen-pvgrub-4.2.1-r2.ebuild, xen-pvgrub-4.2.2.ebuild:
+  revbumps; add sec patches XSA-55, remove disused patches
 
   23 May 2013; Agostino Sarubbo <ago@gentoo.org> xen-pvgrub-4.2.1-r2.ebuild:
   Stable for x86, wrt bug #464724
