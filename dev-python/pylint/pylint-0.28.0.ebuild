@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.2 2013/06/25 03:11:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.3 2013/06/26 01:38:28 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2} )
-#PYTHON_REQ_USE="tk"
+
 inherit distutils-r1
 
 DESCRIPTION="Python code static checker"
@@ -17,13 +17,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-lin
 IUSE="examples"
 
 # Versions specified in __pkginfo__.py.
-RDEPEND=">=dev-python/logilab-common-0.19.0[${PYTHON_USEDEP}]
-	>=dev-python/astng-0.16.1[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/logilab-common-0.53.0[${PYTHON_USEDEP}]
+	>=dev-python/astng-0.24.3[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
-DOCS=( doc/FAQ.txt doc/features.txt doc/manual.txt doc/quickstart.txt )
 DISTUTILS_IN_SOURCE_BUILD=1
+DOCS=( doc/FAQ.txt doc/features.txt doc/manual.txt doc/quickstart.txt )
 
 PATCHES=( "${FILESDIR}"/${PN}-0.26.0-gtktest.patch )
 
