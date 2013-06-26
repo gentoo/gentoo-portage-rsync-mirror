@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.901 2013/06/21 04:12:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.902 2013/06/26 04:06:10 phajdan.jr Exp $
+
+*chromium-29.0.1547.0 (26 Jun 2013)
+
+  26 Jun 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-29.0.1521.3.ebuild, +chromium-29.0.1547.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Remove old.
 
   21 Jun 2013; Mike Gilbert <floppym@gentoo.org>
   -files/chromium-jsoncpp-path-r0.patch, -files/chromium-ppapi-r0.patch,

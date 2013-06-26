@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-29.0.1521.3.ebuild,v 1.3 2013/06/06 16:45:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-29.0.1547.0.ebuild,v 1.1 2013/06/26 04:06:10 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -37,7 +37,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
 	)
-	>=dev-lang/v8-3.17.6:=
+	>=dev-lang/v8-3.19.17:=
 	=dev-lang/v8-3.19*
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
@@ -86,6 +86,7 @@ DEPEND="${RDEPEND}
 		dev-lang/yasm
 	)
 	dev-lang/perl
+	dev-perl/JSON
 	dev-python/jinja
 	dev-python/ply
 	dev-python/simplejson
@@ -138,15 +139,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r7.patch"
 
-	# Fix build with harfbuzz-0.9.18, bug #472416 .
-	epatch "${FILESDIR}/${PN}-system-harfbuzz-r0.patch"
-
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/angle/*' \
+		\! -path 'third_party/angle_dx11/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
 		\! -path 'third_party/cros_system_api/*' \
@@ -165,6 +163,7 @@ src_prepare() {
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
+		\! -path 'third_party/lzma_sdk/*' \
 		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
 		\! -path 'third_party/mongoose/*' \
@@ -182,6 +181,7 @@ src_prepare() {
 		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/trace-viewer/*' \
 		\! -path 'third_party/undoview/*' \
+		\! -path 'third_party/usrsctp/*' \
 		\! -path 'third_party/v8-i18n/*' \
 		\! -path 'third_party/webdriver/*' \
 		\! -path 'third_party/webrtc/*' \

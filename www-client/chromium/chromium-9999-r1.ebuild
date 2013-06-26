@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.198 2013/06/20 03:58:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.199 2013/06/26 04:06:10 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -200,7 +200,7 @@ src_prepare() {
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/angle/*' \
+		\! -path 'third_party/angle_dx11/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
 		\! -path 'third_party/cros_system_api/*' \

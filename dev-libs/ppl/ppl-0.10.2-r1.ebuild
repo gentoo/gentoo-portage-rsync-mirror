@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.2-r1.ebuild,v 1.14 2013/01/08 18:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.2-r1.ebuild,v 1.15 2013/06/26 04:30:57 dirtyepic Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbs
 IUSE="doc lpsol pch test watchdog"
 
 RDEPEND=">=dev-libs/gmp-4.1.3[cxx]
-	lpsol? ( sci-mathematics/glpk )"
+	lpsol? ( <=sci-mathematics/glpk-4.48 )"
 DEPEND="${RDEPEND}
 		sys-devel/m4"
 
