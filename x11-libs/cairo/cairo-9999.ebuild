@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.30 2013/04/09 22:05:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.31 2013/06/26 13:57:03 lu_zero Exp $
 
 EAPI=5
 
@@ -71,9 +71,6 @@ REQUIRED_USE="
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
-	use legacy-drivers && epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
-	epatch "${FILESDIR}"/${PN}-1.10.2-qt-surface.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
 	epatch_user
 
@@ -106,8 +103,6 @@ src_configure() {
 
 	use elibc_FreeBSD && myopts+=" --disable-symbol-lookup"
 
-	# --disable-xcb-lib:
-	#	do not override good xlib backed by hardforcing rendering over xcb
 	# --disable-valgrind:
 	#   valgrind code is busted as per upstream
 	econf \
@@ -134,7 +129,6 @@ src_configure() {
 		--enable-pdf \
 		--enable-png \
 		--enable-ps \
-		--disable-xlib-xcb \
 		--disable-valgrind \
 		${myopts}
 }

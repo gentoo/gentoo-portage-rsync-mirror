@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.336 2013/06/05 00:43:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.337 2013/06/26 13:57:03 lu_zero Exp $
+
+  26 Jun 2013; Luca Barbato <lu_zero@gentoo.org> cairo-9999.ebuild:
+  Update live ebuild
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

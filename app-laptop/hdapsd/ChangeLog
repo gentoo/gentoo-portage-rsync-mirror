@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/hdapsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.24 2013/06/25 12:49:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.25 2013/06/26 14:01:02 ottxor Exp $
+
+  26 Jun 2013;  <junghans@gentoo.org> -files/hdapsd.conf, -files/hdapsd.init,
+  -hdapsd-20090401.ebuild, files/hdapsd.init.3:
+  remove old, fix posix compatibility (bug #474142#c4)
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> hdapsd-20090401-r2.ebuild:
   Stable for amd64, wrt bug #474142

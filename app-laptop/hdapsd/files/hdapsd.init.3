@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
 
 depend() {
@@ -7,12 +7,12 @@ depend() {
 }
 
 checkconfig() {
-    if [[ -n ${DISK} ]]; then
+    if [ -n "${DISK}" ]; then
 	ewarn "Please migrate DISK to DISKLIST in /etc/conf.d/hdapsd."
 	DISKLIST=${DISK}
     fi
 
-    if [[ -z ${THRESHOLD} ]] ; then
+    if [ -z "${THRESHOLD}" ] ; then
 	eerror "You should setup THRESHOLD in /etc/conf.d/hdapsd."
 	return 1
     fi
@@ -25,7 +25,7 @@ checkconfig() {
             return 1
         fi
 
-        if [[ ! -e /sys/block/${DISK}/queue/protect ]] && [[ ! -e /sys/block/${DISK}/device/unload_heads ]] ; then
+        if [ ! -e /sys/block/${DISK}/queue/protect ] && [ ! -e /sys/block/${DISK}/device/unload_heads ] ; then
             eerror "No protect entry for ${DISK}!"
             eerror "Make sure your kernel is patched with the blk_freeze patch"
             return 1
@@ -34,11 +34,11 @@ checkconfig() {
 
     # Load the tp_smapi module first
     # This is not a requirement, but it helps hdapsd adaptive mode
-    if [[ ! -e /sys/devices/platform/smapi ]] ; then
+    if [ ! -e /sys/devices/platform/smapi ] ; then
 	modprobe tp_smapi 2>/dev/null
     fi
 	
-    if [[ ! -d /sys/devices/platform/hdaps ]]; then
+    if [ ! -d /sys/devices/platform/hdaps ]; then
 	ebegin "Loading hdaps module"
         modprobe hdaps
 	eend $? || return 1

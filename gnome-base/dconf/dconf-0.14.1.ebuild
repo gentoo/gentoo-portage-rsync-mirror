@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.14.1.ebuild,v 1.2 2013/02/25 09:10:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.14.1.ebuild,v 1.3 2013/06/26 13:42:44 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ RDEPEND="
 	sys-apps/dbus
 	X? (
 		>=dev-libs/libxml2-2.7.7:2
-		x11-libs/gtk+:3 )
+		>=x11-libs/gtk+-3.4:3 )
 "
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
