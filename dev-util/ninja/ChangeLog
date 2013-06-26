@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ninja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.16 2013/06/25 15:03:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.17 2013/06/26 00:06:34 ottxor Exp $
+
+  26 Jun 2013; Christoph Junghans <ottxor@gentoo.org> -ninja-1.1.0.ebuild,
+  metadata.xml:
+  remove myself as maintainer, remove old
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ninja-1.3.3.ebuild:
   Stable for x86, wrt bug #472186
