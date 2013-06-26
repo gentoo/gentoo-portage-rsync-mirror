@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.119 2013/05/23 17:47:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.120 2013/06/26 06:35:38 idella4 Exp $
+
+*xen-4.2.1-r4 (26 Jun 2013)
+*xen-4.2.2-r1 (26 Jun 2013)
+
+  26 Jun 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4.2-2013-2076-XSA-52to54.patch, +xen-4.2.1-r4.ebuild,
+  +xen-4.2.2-r1.ebuild, -xen-4.2.0-r1.ebuild, -xen-4.2.0-r2.ebuild,
+  -xen-4.2.1-r1.ebuild, -xen-4.2.1-r2.ebuild:
+  revbump; add security patches XSA-52to54, remove old
 
   23 May 2013; Agostino Sarubbo <ago@gentoo.org> xen-4.2.1-r3.ebuild:
   Stable for x86, wrt bug #464724
