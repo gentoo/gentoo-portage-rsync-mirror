@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.16 2013/06/26 19:31:49 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.17 2013/06/27 17:23:33 jmbsvicetto Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -406,6 +406,11 @@ mysql-cmake_src_install() {
 			[[ ( -f $script ) && ( ${script%.sh} == ${script} ) ]] && dodoc "${script}"
 		done
 	fi
+
+	cat <<-EOF > "${T}"/80mysql-libdir
+	LDPATH="${EPREFIX}/usr/$(get_libdir)/mysql"
+	EOF
+	doenvd "${T}"/80mysql-libdir
 
 	#Remove mytop if perl is not selected
 	[[ ${PN} == "mariadb" ]] && ! use perl \

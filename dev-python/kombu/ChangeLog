@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.24 2013/04/28 01:04:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.25 2013/06/27 17:31:09 idella4 Exp $
+
+  27 Jun 2013; Ian Delaney <idella4@gentoo.org> +files/kombu-2.5.10-tests.patch,
+  kombu-2.5.10.ebuild:
+  update dep, update test phase, patch partially fixing testsuite
 
   28 Apr 2013; Ian Delaney <idella4@gentoo.org> kombu-2.5.10.ebuild:
   Add py3.3, drop py3.1 & pypy support, drop dep simplejson, tidied up dep list,

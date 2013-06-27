@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.5.10.ebuild,v 1.2 2013/04/28 01:04:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.5.10.ebuild,v 1.3 2013/06/27 17:31:09 idella4 Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="amqplib doc examples test"
 
 RDEPEND=">=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		>=dev-python/py-amqp-1.0.6[${PYTHON_USEDEP}]
+		>=dev-python/py-amqp-1.0.12[${PYTHON_USEDEP}]
 		amqplib? ( >=dev-python/amqplib-1.0.2[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose-cover3[${PYTHON_USEDEP}]
@@ -33,8 +33,9 @@ DEPEND="${RDEPEND}
 		dev-python/beanstalkc[$(python_gen_usedep python2_7)]
 		dev-python/couchdb-python[$(python_gen_usedep python2_7)] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
-
 DISTUTILS_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}"/${P}-tests.patch )
 
 python_compile_all() {
 	if use doc; then
@@ -42,30 +43,20 @@ python_compile_all() {
 	fi
 }
 
-# wip; https://github.com/celery/kombu/issues/227; at this point upstr. maintainer established these tests 
-# 'can and do' pass, acks their failing 'on Travis' and offers neither a solution nor any plan to make 1.
+# https://github.com/celery/kombu/issues/227
 python_test() {
+	export DJANGO_SETTINGS_MODULE="django.conf"
 	if [[ "${EPYTHON}" == python3* ]]; then
-		nosetests --py3where=build/lib -e test_basic_consume_registers_ack_status \
-			-e test_close_resolves_connection_cycle -e test_init \
-			-e test_message_to_python -e test_prepare_message \
-			-e test_produce_consume -e test_produce_consume_noack kombu/tests \
-			|| die "Tests failed under ${EPYTHON}"
+		nosetests --py3where=build/lib \
+		-e test_produce_consume -e test_produce_consume_noack kombu/tests \
+		|| die "Tests failed under ${EPYTHON}"
 	else
-		nosetests -e test_basic_consume_registers_ack_status -e test_close_resolves_connection_cycle \
-			-e test_init -e test_message_to_python -e test_prepare_message \
-			|| die "Tests failed under ${EPYTHON}"		
+		nosetests || die "Tests failed under ${EPYTHON}"
 	fi
 }
-
+  
 python_install_all() {
+	use examples && local EXAMPLES=( examples/. )
+	use doc && local HTML_DOCS=( docs/.build/html/. )
 	distutils-r1_python_install_all
-
-	if use examples; then
-		docompress -x usr/share/doc/${P}/examples/
-		insinto usr/share/doc/${PF}/
-		doins -r examples/
-	fi
-
-	use doc && dohtml -r docs/.build/html/
 }
