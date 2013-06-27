@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libosinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.26 2013/03/31 19:09:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.27 2013/06/27 18:39:26 pacho Exp $
+
+*libosinfo-0.2.7 (27 Jun 2013)
+
+  27 Jun 2013; Pacho Ramos <pacho@gentoo.org> +libosinfo-0.2.7.ebuild,
+  -libosinfo-0.2.4.ebuild:
+  Version bump (#474930 by Travis Hansen), drop old.
 
   31 Mar 2013; Pacho Ramos <pacho@gentoo.org> libosinfo-0.2.4.ebuild,
   libosinfo-0.2.6.ebuild:

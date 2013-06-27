@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/alsaequal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/ChangeLog,v 1.5 2010/09/25 12:30:17 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/ChangeLog,v 1.6 2013/06/27 18:41:11 aballier Exp $
+
+*alsaequal-0.6-r1 (27 Jun 2013)
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> +alsaequal-0.6-r1.ebuild:
+  go multilib and make build verbose
 
   25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> alsaequal-0.6.ebuild:
   amd64/x86 stable

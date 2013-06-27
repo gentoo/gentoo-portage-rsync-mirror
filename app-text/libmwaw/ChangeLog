@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libmwaw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.4 2013/06/23 15:43:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.5 2013/06/27 18:59:33 scarabeus Exp $
+
+*libmwaw-0.1.10 (27 Jun 2013)
+
+  27 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libmwaw-0.1.10.ebuild,
+  -libmwaw-0.1.8.ebuild:
+  Version bump to latest.
 
   23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libmwaw-0.1.8.ebuild:
   Works on arm so keyword for libreoffice.

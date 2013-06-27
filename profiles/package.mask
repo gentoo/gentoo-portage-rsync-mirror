@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14871 2013/06/27 13:21:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14872 2013/06/27 18:42:53 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -563,7 +563,6 @@ app-text/cuneiform
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
 # Waiting for new emul-linux-x86-{media,sound}libs without
 # the duplicate files.
->=media-libs/libmikmod-3.2.0-r1
 >=media-libs/libsamplerate-0.1.8-r1
 >=media-libs/libsndfile-1.0.25-r1
 >=media-libs/libv4l-0.9.5-r1

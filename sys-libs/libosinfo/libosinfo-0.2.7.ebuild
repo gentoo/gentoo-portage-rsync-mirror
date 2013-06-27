@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.4.ebuild,v 1.2 2013/03/31 19:09:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.7.ebuild,v 1.1 2013/06/27 18:39:26 pacho Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils toolchain-funcs vala udev
+inherit udev vala
 
 DESCRIPTION="GObject library for managing information about real and virtual OSes"
 HOMEPAGE="http://fedorahosted.org/libosinfo/"
@@ -19,16 +19,21 @@ IUSE="+introspection +vala test"
 
 REQUIRED_USE="vala? ( introspection )"
 
-RDEPEND=">=dev-libs/glib-2:2
+RDEPEND="
+	>=dev-libs/glib-2:2
 	>=dev-libs/libxslt-1.0.0:=
 	dev-libs/libxml2:=
 	|| ( >=net-libs/libsoup-2.42:2.4 net-libs/libsoup-gnome:2.4 )
-	introspection? ( >=dev-libs/gobject-introspection-0.9.0:= )"
+	sys-apps/hwids
+	introspection? ( >=dev-libs/gobject-introspection-0.9.0:= )
+"
 DEPEND="${RDEPEND}
+	dev-libs/gobject-introspection-common
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
 	test? ( dev-libs/check )
-	vala? ( $(vala_depend) )"
+	vala? ( $(vala_depend) )
+"
 
 src_configure() {
 	# --enable-udev is only for rules.d file install
@@ -39,8 +44,10 @@ src_configure() {
 		$(use_enable vala) \
 		--enable-udev \
 		--disable-coverage \
-		--with-udev-rulesdir="$(udev_get_udevdir)"/rules.d \
-		--with-html-dir=/usr/share/doc/${PF}/html
+		--with-html-dir=/usr/share/doc/${PF}/html \
+		--with-udev-rulesdir="$(get_udevdir)"/rules.d \
+		--with-usb-ids-path=/usr/share/misc/usb.ids \
+		--with-pci-ids-path=/usr/share/misc/pci.ids
 }
 
 src_install() {

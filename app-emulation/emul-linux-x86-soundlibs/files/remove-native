@@ -157,3 +157,10 @@ usr/lib32/ladspa/vynil_1905.so
 usr/lib32/ladspa/wave_terrain_1412.so
 usr/lib32/ladspa/xfade_1915.so
 usr/lib32/ladspa/zm1_1428.so
+usr/lib32/libmikmod.so
+usr/lib32/libmikmod.so.2
+usr/lib32/libmikmod.so.3
+usr/lib32/libmikmod.so.3.0.0
+usr/lib32/pkgconfig/libmikmod.pc
+usr/lib32/alsa-lib/libasound_module_ctl_equal.so
+usr/lib32/alsa-lib/libasound_module_pcm_equal.so

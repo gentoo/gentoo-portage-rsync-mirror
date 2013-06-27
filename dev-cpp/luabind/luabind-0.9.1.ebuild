@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/luabind/luabind-0.9.1.ebuild,v 1.3 2013/05/04 10:38:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/luabind/luabind-0.9.1.ebuild,v 1.4 2013/06/27 18:50:48 hasufell Exp $
 
 # NOTE: cross compiling is probably broken
 
@@ -24,11 +24,18 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-boost.patch
+
+	# backwardscomapt with old boost-build-1.49.0
+	if [[ -e $(which bjam-1_49 2>/dev/null) ]] ; then
+		my_bjam_bin=bjam-1_49
+	else
+		my_bjam_bin=bjam
+	fi
 }
 
 src_compile() {
 	# linkflags get appended, so they actually do nothing
-	bjam release \
+	${my_bjam_bin} release \
 		-d+2 \
 		--prefix="${D}/usr/" \
 		--libdir="${D}/usr/$(get_libdir)" \
@@ -38,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	bjam release \
+	${my_bjam_bin} release \
 		-d+2 \
 		--prefix="${D}/usr/" \
 		--libdir="${D}/usr/$(get_libdir)" \
