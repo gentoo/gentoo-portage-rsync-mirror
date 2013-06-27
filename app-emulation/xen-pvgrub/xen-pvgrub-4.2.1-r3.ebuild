@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1-r3.ebuild,v 1.1 2013/06/26 16:16:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1-r3.ebuild,v 1.2 2013/06/27 05:32:10 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -10,13 +10,16 @@ inherit flag-o-matic eutils multilib python toolchain-funcs
 XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
 LIBPCI_URL=ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci
 GRUB_URL=mirror://gnu-alpha/grub
+XSAPATCHES="http://dev.gentoo.org/~idella4/"
 SRC_URI="
 		http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 		$GRUB_URL/grub-0.97.tar.gz
 		$XEN_EXTFILES_URL/zlib-1.2.3.tar.gz
 		$LIBPCI_URL/pciutils-2.2.9.tar.bz2
 		$XEN_EXTFILES_URL/lwip-1.3.0.tar.gz
-		$XEN_EXTFILES_URL/newlib/newlib-1.16.0.tar.gz"
+		$XEN_EXTFILES_URL/newlib/newlib-1.16.0.tar.gz
+		$XSAPATCHES/patches/XSA-55patches.tar.gz
+		"
 
 S="${WORKDIR}/xen-${PV}"
 
@@ -85,28 +88,29 @@ src_prepare() {
 
 	#Sec patch
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4-CVE-2012-6075-XSA-41.patch \
-                "${FILESDIR}"/xen-4-CVE-2013-0215-XSA-38.patch \
-                "${FILESDIR}"/xen-4-CVE-2013-1919-XSA-46.patch \
-                "${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
-                "${FILESDIR}"/xen-4-CVE-2013-1952-XSA_49.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-8-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-11-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-15-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
-                "${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch
+		"${FILESDIR}"/xen-4-CVE-2013-0215-XSA-38.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1919-XSA-46.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA_49.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
+		"${WORKDIR}"/files/xen-4.2-CVE-2013-8-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
+		"${WORKDIR}"/files/xen-4.2-CVE-2013-11-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
+		"${WORKDIR}"/files/xen-4.2-CVE-2013-15-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch
 
-	#Substitute for internal downloading. pciutils copied only due to the only .bz2
+	# Substitute for internal downloading. pciutils copied only due to the only .bz2
 	cp $DISTDIR/pciutils-2.2.9.tar.bz2 ./stubdom/ || die "pciutils not copied to stubdom"
+
 	retar-externals || die "re-tar procedure failed"
 }
 
