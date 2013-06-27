@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/hackrf-tools-9999.ebuild,v 1.4 2013/06/27 04:41:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/hackrf-tools-2013.06.1-r1.ebuild,v 1.1 2013/06/27 04:46:10 zerochaos Exp $
 
 EAPI=5
 
@@ -35,5 +35,5 @@ src_install() {
 		insinto /lib/firmware
 		newins "${WORKDIR}/hackrf-${PV}/firmware-bin/hackrf_usb_rom_to_ram.bin" hackrf_usb_rom_to_ram-${PV}.bin
 	fi
-	udev_dorules 52-hackrf.rules
+	udev_dorules "${FILESDIR}"/52-hackrf.rules
 }
