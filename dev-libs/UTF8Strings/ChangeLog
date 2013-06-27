@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/UTF8Strings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.13 2013/05/21 16:37:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.14 2013/06/27 13:48:47 pinkbyte Exp $
+
+  27 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> UTF8Strings-1.14.0.ebuild:
+  Add Prefix keywords
 
 *UTF8Strings-1.14.0 (21 May 2013)
 

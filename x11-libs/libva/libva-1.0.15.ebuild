@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.15.ebuild,v 1.6 2012/12/02 22:16:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.15.ebuild,v 1.7 2013/06/27 13:59:58 aballier Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="opengl"
+IUSE="opengl vdpau"
 
 VIDEO_CARDS="dummy nvidia intel fglrx"
 for x in ${VIDEO_CARDS}; do
@@ -46,6 +46,7 @@ RDEPEND=">=x11-libs/libdrm-2.4
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 PDEPEND="video_cards_nvidia? ( x11-libs/libva-vdpau-driver )
+	vdpau? ( x11-libs/libva-vdpau-driver )
 	video_cards_fglrx? ( x11-libs/xvba-video )
 	video_cards_intel? ( x11-libs/libva-intel-driver )
 	"
