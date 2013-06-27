@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gcj-jdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.12 2013/03/17 15:25:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.13 2013/06/27 10:52:04 tomwij Exp $
+
+*gcj-jdk-4.7.3 (27 Jun 2013)
+
+  27 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +gcj-jdk-4.7.3.ebuild:
+  Version bump to 4.7.3; fixes bug #473074, reported by Ivan Iraci.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

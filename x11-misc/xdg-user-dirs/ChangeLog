@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.29 2013/04/26 10:12:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.30 2013/06/27 10:39:28 ssuominen Exp $
+
+*xdg-user-dirs-0.15 (27 Jun 2013)
+
+  27 Jun 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +xdg-user-dirs-0.15.ebuild:
+  Version bump. Remove pointless USE="nls" and -strndup-nls.patch because
+  the package's purpose is exactly that -- localization:
+  http://bugs.freedesktop.org/show_bug.cgi?id=38279#c1
 
   26 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   xdg-user-dirs-0.14.ebuild:
