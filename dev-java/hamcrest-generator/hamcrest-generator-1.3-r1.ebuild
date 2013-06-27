@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-generator/hamcrest-generator-1.3-r1.ebuild,v 1.1 2013/06/17 07:43:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-generator/hamcrest-generator-1.3-r1.ebuild,v 1.2 2013/06/27 22:04:29 aballier Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tgz"
 
 LICENSE="BSD-2"
 SLOT="${PV}"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd"
 
 CDEPEND=">=dev-java/qdox-1.12-r1:1.12"
 

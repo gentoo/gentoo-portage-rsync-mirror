@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/fbgrab-1.0-r2.ebuild,v 1.5 2013/04/23 08:39:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/fbgrab-1.0-r2.ebuild,v 1.6 2013/06/27 22:15:29 zlogene Exp $
 
 EAPI=5
 
@@ -21,14 +21,9 @@ RDEPEND="media-libs/libpng
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -i \
-		-e "s/gcc/\$(CC)/" \
-		-e "s/-g//" \
-		-e "s/splint/#splint/" \
-		-e "s/-Wall/-Wall ${CPPFLAGS} ${CFLAGS} ${LDFLAGS}/" \
-		Makefile || die "sed failed"
+	epatch "${FILESDIR}/${P}-zlib_h.patch" \
+	       "${FILESDIR}/${P}-Makefile.patch"
 
-		epatch "${FILESDIR}/${P}-zlib_h.patch"
 		epatch_user
 }
 

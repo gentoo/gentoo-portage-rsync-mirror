@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.35 2013/06/17 07:46:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.36 2013/06/27 22:01:55 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> qdox-1.12-r1.ebuild:
+  keyword ~amd64-fbsd
 
 *qdox-1.12-r1 (17 Jun 2013)
 

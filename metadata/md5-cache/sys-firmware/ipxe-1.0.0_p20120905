@@ -8,4 +8,4 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://git.ipxe.org/ipxe.git/snapshot/e6427b7ee117ea4af0812bb13b57999bccd8e058.tar.bz2
-_md5_=f5f2fe547eff766d12fce9a6ada73c1b
+_md5_=7e0402b1b3483e3f7509371afc2e9103

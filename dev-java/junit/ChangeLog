@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.78 2013/06/15 23:35:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.79 2013/06/27 22:09:59 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> junit-4.11.ebuild:
+  keyword ~amd64-fbsd, bug #473430
 
 *junit-4.11 (15 Jun 2013)
 
