@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.68 2013/06/26 17:44:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.69 2013/06/27 16:23:32 aballier Exp $
+
+*emul-linux-x86-medialibs-20130224-r2 (27 Jun 2013)
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-medialibs-20130224-r1.ebuild,
+  +emul-linux-x86-medialibs-20130224-r2.ebuild, files/remove-native:
+  new revision removing faac, faad2 and libtheora with abi_x86_32
 
   26 Jun 2013; Alexis Ballier <aballier@gentoo.org> files/remove-native:
   remove all of libvpx actually, not only the files that collide

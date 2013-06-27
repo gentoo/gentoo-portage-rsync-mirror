@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/py-amqp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.7 2013/04/26 16:27:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.8 2013/06/27 16:16:08 idella4 Exp $
+
+*py-amqp-1.0.12 (27 Jun 2013)
+
+  27 Jun 2013; Ian Delaney <idella4@gentoo.org> +py-amqp-1.0.12.ebuild,
+  -py-amqp-1.0.6-r1.ebuild, -py-amqp-1.0.6.ebuild, -py-amqp-1.0.8.ebuild:
+  bump; generally fix broken phases, add py3.3 support and there it is to stay,
+  remove old
 
   26 Apr 2013; Ian Delaney <idella4@gentoo.org> py-amqp-1.0.9.ebuild:
   Added py3.3 support

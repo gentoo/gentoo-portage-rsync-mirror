@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20130224-r1.ebuild,v 1.1 2013/06/26 17:24:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20130224-r2.ebuild,v 1.1 2013/06/27 16:23:32 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -20,6 +20,9 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-libs/libvpx-1.2.0_pre[abi_x86_32(-)]
 		>=media-libs/xvid-1.3.2-r1[abi_x86_32(-)]
 		>=media-sound/lame-3.99.5-r1[abi_x86_32(-)]
+		>=media-libs/faac-1.28-r4[abi_x86_32(-)]
+		>=media-libs/faad2-2.7-r3[abi_x86_32(-)]
+		>=media-libs/libtheora-1.1.1-r1[abi_x86_32(-)]
 	)
 	"
 PDEPEND="~app-emulation/emul-linux-x86-soundlibs-${PV}"
