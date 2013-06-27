@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r4.ebuild,v 1.2 2013/06/27 05:46:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r4.ebuild,v 1.3 2013/06/27 13:21:11 idella4 Exp $
 
 EAPI=5
 
@@ -69,8 +69,7 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? (  x11-proto/xproto )
-	qemu? ( >=sys-apps/texinfo-5 )"
+	hvm? (  x11-proto/xproto )"
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils

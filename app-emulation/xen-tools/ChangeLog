@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.157 2013/06/27 05:46:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.158 2013/06/27 13:21:11 idella4 Exp $
+
+  27 Jun 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.1-r3.ebuild,
+  xen-tools-4.2.1-r4.ebuild, xen-tools-4.2.2-r1.ebuild,
+  xen-tools-4.2.2-r2.ebuild:
+  drop dep texinfo-5, fixes faulty install, Bug #472976 by Andreas Kinzler
 
   27 Jun 2013; Ian Delaney <idella4@gentoo.org>
   -files/xen-4.2-CVE-2013-11-XSA-55.patch,

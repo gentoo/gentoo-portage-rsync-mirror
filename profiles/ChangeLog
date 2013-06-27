@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7985 2013/06/26 20:31:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7989 2013/06/27 13:21:35 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask dev-texlive/*-2013
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask latest bibtexu for tl 2013
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  move luatex mask to the texlive 2013 mask
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  start to mask texlive 2013 packages
 
   26 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask multilib version of audiofile, alsa-lib, flac and

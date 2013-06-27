@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24.ebuild,v 1.2 2013/06/25 20:54:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24-r1.ebuild,v 1.1 2013/06/27 13:15:42 xmw Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="kde gnome"
 
-DEPEND="
+RDEPEND="dev-python/keyring
+	dev-python/notify-python
 	net-misc/rsync[xattr,acl]
 	kde? (
 		>=kde-base/kdelibs-4
@@ -33,10 +34,9 @@ DEPEND="
 		dev-python/libgnome-python
 		dev-python/pygobject:2
 		dev-python/pygtk
-		)
-	dev-python/notify-python"
+		)"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}
 

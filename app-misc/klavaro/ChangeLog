@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/klavaro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.16 2012/12/15 16:10:12 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.17 2013/06/27 13:21:04 xmw Exp $
+
+*klavaro-1.9.7 (27 Jun 2013)
+
+  27 Jun 2013; Michael Weber <xmw@gentoo.org> +klavaro-1.9.7.ebuild:
+  Version bump.
 
 *klavaro-1.9.6 (15 Dec 2012)
 

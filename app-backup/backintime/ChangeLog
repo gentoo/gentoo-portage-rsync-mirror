@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/backintime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.17 2013/06/25 20:54:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.18 2013/06/27 13:15:42 xmw Exp $
+
+*backintime-1.0.24-r1 (27 Jun 2013)
+
+  27 Jun 2013; Michael Weber <xmw@gentoo.org> +backintime-1.0.24-r1.ebuild,
+  -backintime-1.0.24.ebuild:
+  Depends on dev-python/keyring (thanks Patrick Nicolas, bug 474896)
 
   25 Jun 2013; Michael Weber <xmw@gentoo.org> backintime-1.0.24.ebuild:
   Fix LINGUAS handling (bug 474732, thanks Frank Ridderbusch)
