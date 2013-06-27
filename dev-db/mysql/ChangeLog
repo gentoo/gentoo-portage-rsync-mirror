@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.651 2013/06/06 17:06:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.652 2013/06/27 01:59:07 robbat2 Exp $
+
+*mysql-5.1.70 (27 Jun 2013)
+
+  27 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.70.ebuild:
+  Bug# 473780: Upstream has changed the 5.1.70 and 5.5.32 tarballs due to having
+  the wrong license text in manpages. Also bump to 5.1.70.
 
 *mysql-5.5.32 (06 Jun 2013)
 
