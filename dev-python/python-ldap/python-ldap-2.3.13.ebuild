@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.13.ebuild,v 1.14 2012/11/14 08:17:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.13.ebuild,v 1.15 2013/06/27 14:29:10 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,10 +34,10 @@ PYTHON_MODNAME="dsml.py ldapurl.py ldif.py ldap"
 src_prepare() {
 	local rpath=
 	# sloppy logic, maybe better check if compiler links with GNU-ld
-	[[ ${CHOST} != *-darwin* ]] && rpath="-Wl,-rpath=${EPREFIX}/usr/$(get_libdir)/sasl2"
+	[[ ${CHOST} != *-darwin* ]] && rpath="-Wl,-rpath=\"${EPREFIX}\"/usr/$(get_libdir)/sasl2"
 	# Note: we can't add /usr/lib and /usr/lib/sasl2 to library_dirs due to a bug in py2.4
 	sed -e "s:^library_dirs =.*:library_dirs =:" \
-		-e "s:^include_dirs =.*:include_dirs = ${EPREFIX}/usr/include ${EPREFIX}/usr/include/sasl:" \
+		-e "s:^include_dirs =.*:include_dirs = \"${EPREFIX}\"/usr/include \"${EPREFIX}\"/usr/include/sasl:" \
 		-e "s:\(extra_compile_args =\).*:\1\nextra_link_args = ${rpath}:" \
 		-i setup.cfg || die "error fixing setup.cfg"
 

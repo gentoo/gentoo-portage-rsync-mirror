@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.12.ebuild,v 1.2 2013/06/27 14:29:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-9999.ebuild,v 1.1 2013/06/27 14:29:10 xmw Exp $
 
 EAPI=5
 
 # pypy: bug #458558 (wrong linker options due to not respecting CC)
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} )
 
-inherit distutils-r1 multilib
+inherit distutils-r1 git-2 multilib
 
 DESCRIPTION="Various LDAP-related Python modules"
 HOMEPAGE="http://www.python-ldap.org http://pypi.python.org/pypi/python-ldap"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/xmw/python-ldap.git"
 
 LICENSE="PSF-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-solaris"
+KEYWORDS=""
 IUSE="doc examples sasl ssl"
 
 # If you need support for openldap-2.3.x, please use python-ldap-2.3.9.

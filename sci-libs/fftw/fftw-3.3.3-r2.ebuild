@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r2.ebuild,v 1.2 2013/05/01 13:33:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r2.ebuild,v 1.3 2013/06/27 14:30:29 aballier Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ REQUIRED_USE="amd64? ( abi_x86_32? ( !mpi !quad ) )"
 
 RDEPEND="
 	mpi? ( virtual/mpi )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r2
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	test? ( dev-lang/perl )"
 
