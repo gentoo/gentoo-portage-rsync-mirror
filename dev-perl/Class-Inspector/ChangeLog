@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.86 2013/01/13 13:47:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.87 2013/06/27 09:59:43 pinkbyte Exp $
+
+  27 Jun 2013; Sergey Popov <pinkbyte@gentoo.org>
+  Class-Inspector-1.280.0.ebuild:
+  Stable on amd64 and x86, wrt bug #449574
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org> Class-Inspector-1.280.0.ebuild:
   add ~arm, bug #449762
