@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/trove
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.18 2012/06/22 15:37:02 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.20 2013/06/27 21:21:49 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> trove-2.1.0.ebuild:
+  keyword ~amd64-fbsd
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> trove-3.0.2.ebuild:
+  keyword ~amd64-fbsd
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> trove-3.0.2.ebuild:
   Marking trove-3.0.2 ppc64 for bug 418729

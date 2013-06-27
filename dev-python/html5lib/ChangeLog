@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.17 2013/06/18 07:04:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.18 2013/06/27 21:16:37 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> html5lib-1.0_beta1.ebuild:
+  keyword ~amd64-fbsd, bug #473666
 
 *html5lib-1.0_beta1 (18 Jun 2013)
 

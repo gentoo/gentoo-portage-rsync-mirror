@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1142 2013/06/22 22:20:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1143 2013/06/27 21:25:44 tomwij Exp $
+
+*gentoo-sources-3.4.51 (27 Jun 2013)
+*gentoo-sources-3.0.84 (27 Jun 2013)
+*gentoo-sources-3.9.8 (27 Jun 2013)
+
+  27 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.0.84.ebuild,
+  +gentoo-sources-3.4.51.ebuild, +gentoo-sources-3.9.8.ebuild:
+  Linux patches 3.0.84, 3.4.51 and 3.9.8.
 
   22 Jun 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.9.7.ebuild:
   Use the genpatches where the patch depth is forced for the BFQ patches that
