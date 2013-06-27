@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ignuit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.25 2013/06/25 10:23:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.26 2013/06/27 12:40:34 kensington Exp $
+
+  27 Jun 2013; Michael Palimaka <kensington@gentoo.org> -ignuit-0.0.16.ebuild:
+  Remove old.
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ignuit-2.20.0.ebuild:
   Stable for ppc64, wrt bug #470336
