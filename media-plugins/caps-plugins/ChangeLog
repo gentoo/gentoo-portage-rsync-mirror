@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.34 2013/03/25 20:41:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.36 2013/06/27 15:00:46 aballier Exp $
+
+*caps-plugins-0.4.5-r2 (27 Jun 2013)
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +caps-plugins-0.4.5-r2.ebuild:
+  go multilib
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> -caps-plugins-0.4.4.ebuild,
+  -caps-plugins-0.4.5.ebuild:
+  remove old
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> caps-plugins-0.4.5-r1.ebuild:
   Stable for x86, wrt bug #457382
