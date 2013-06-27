@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.1.0-r2.ebuild,v 1.9 2010/01/20 02:45:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.1.0-r2.ebuild,v 1.10 2013/06/27 22:01:04 aballier Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 inherit eutils java-pkg-2 java-ant-2
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.codehaus.org/${P}-src.zip"
 HOMEPAGE="http://jmock.codehaus.org"
 LICENSE="BSD"
 SLOT="1.0"
-KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 COMMON_DEPEND="

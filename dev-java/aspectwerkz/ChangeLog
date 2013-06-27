@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectwerkz
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.31 2010/02/21 00:33:17 caster Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.32 2013/06/27 21:55:47 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> aspectwerkz-2.0.ebuild:
+  keyword ~amd64-fbsd
 
   21 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   aspectwerkz-2.0_rc2-r3.ebuild, aspectwerkz-2.0.ebuild:

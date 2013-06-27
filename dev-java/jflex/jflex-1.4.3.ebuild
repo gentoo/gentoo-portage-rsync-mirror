@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.4.3.ebuild,v 1.4 2012/12/10 17:31:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.4.3.ebuild,v 1.5 2013/06/27 21:39:41 aballier Exp $
 
 # Currently, this package uses an included JFlex.jar file to bootstrap.
 # Upstream was contacted and this bootstrap is really needed. The only way to avoid it would be to use a supplied pre-compiled .scanner file.
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.jflex.de/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~amd64-fbsd"
 RDEPEND=">=virtual/jre-1.4
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	>=dev-java/ant-core-1.7.0

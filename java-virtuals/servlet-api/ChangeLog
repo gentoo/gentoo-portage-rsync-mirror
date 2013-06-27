@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.48 2013/02/05 07:28:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.49 2013/06/27 21:39:19 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> servlet-api-2.5-r1.ebuild,
+  servlet-api-3.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> servlet-api-2.4.ebuild:
   adding ~arm

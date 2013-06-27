@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.156 2013/06/11 11:40:59 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.157 2013/06/27 21:37:33 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  tomcat-servlet-api-6.0.37.ebuild, tomcat-servlet-api-7.0.41.ebuild:
+  keyword ~amd64-fbsd
 
   11 Jun 2013; Miroslav Šulc <fordfrog@gentoo.org>
   -tomcat-servlet-api-7.0.33.ebuild, -tomcat-servlet-api-7.0.34.ebuild,

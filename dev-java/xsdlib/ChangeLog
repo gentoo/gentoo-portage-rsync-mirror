@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xsdlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.41 2013/02/05 06:14:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.42 2013/06/27 21:41:54 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> xsdlib-20090415.ebuild:
+  keyword ~amd64-fbsd
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> xsdlib-20090415.ebuild:
   adding ~arm
