@@ -5619,6 +5619,10 @@ sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
+sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS
+sci-physics/lammps:package-dipole - point dipole particles
+sci-physics/lammps:package-meam - modified EAM potential
+sci-physics/lammps:package-rigid - rigid bodies
 sci-physics/lhapdf:octave - Add bindings for sci-mathematics/octave
 sci-physics/meep:mpb - Enable build against sci-physics/mpb
 sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
@@ -5854,6 +5858,9 @@ sys-boot/plymouth:pango - Adds support for printing text on splash screen and te
 sys-cluster/ceph:fuse - Build fuse client
 sys-cluster/ceph:libatomic - Use libatomic instead of builtin atomic operations
 sys-cluster/ceph:radosgw - Add radosgw support
+sys-cluster/charm:charmdebug - Enable the charm debugger
+sys-cluster/charm:charmproduction - Optimize performance of Charm++ runtime
+sys-cluster/charm:charmtracing - Enable tracing support in Charm++
 sys-cluster/charm:cmkopt - Enable CMK optimisation
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/cluster-glue:large-cluster - Extend messages length limits for resource heavy clusters
