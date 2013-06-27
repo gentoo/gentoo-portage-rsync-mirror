@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.2.7.ebuild,v 1.2 2013/06/08 14:35:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.2.7.ebuild,v 1.4 2013/06/27 18:09:14 ago Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
-KEYWORDS="~amd64 ~arm hppa ~x86"
+KEYWORDS="amd64 ~arm hppa x86"
 SLOT="0"
 IUSE="dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs zeromq zlib"
 

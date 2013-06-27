@@ -1,11 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-9999.ebuild,v 1.1 2013/06/27 14:29:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-9999.ebuild,v 1.2 2013/06/27 18:01:50 xmw Exp $
 
 EAPI=5
 
 # pypy: bug #458558 (wrong linker options due to not respecting CC)
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} )
+DISTUTILS_IN_SOURCE_BUILD=1
+DISTUTILS_NO_PARALLEL_BUILD=1
 
 inherit distutils-r1 git-2 multilib
 
@@ -27,6 +29,9 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
+#bug 458566
+RESTRICT=test
+
 python_prepare_all() {
 	sed -e "s:^library_dirs =.*:library_dirs = /usr/$(get_libdir) /usr/$(get_libdir)/sasl2:" \
 		-e "s:^include_dirs =.*:include_dirs = \"${EPREFIX}\"/usr/include \"${EPREFIX}\"/usr/include/sasl:" \
@@ -46,6 +51,14 @@ python_prepare_all() {
 		-i setup.cfg || die "error setting up libs in setup.cfg"
 
 	distutils-r1_python_prepare_all
+}
+
+python_prepare() {
+	# Syntax "except ImportError as a" works on python2.6 and newer
+	if [ "${MULTIBUILD_VARIANT}" == "python2_5" ] ; then
+		sed -e '/except/s: as :,:' \
+			-i $(find . -name "*.py") || die
+	fi
 }
 
 python_compile_all() {

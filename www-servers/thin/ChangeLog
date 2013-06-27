@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.21 2013/04/26 05:58:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.22 2013/06/27 18:29:01 graaff Exp $
+
+*thin-1.5.1-r1 (27 Jun 2013)
+
+  27 Jun 2013; Hans de Graaff <graaff@gentoo.org> +thin-1.5.1-r1.ebuild:
+  Add a proper gemspec with dependencies, fixing bug 474924.
 
 *thin-1.5.1 (26 Apr 2013)
 

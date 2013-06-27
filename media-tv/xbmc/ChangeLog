@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.187 2013/06/17 07:42:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.189 2013/06/27 18:08:05 ago Exp $
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> xbmc-12.2-r1.ebuild:
+  Stable for x86, wrt bug #464552
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> xbmc-12.2-r1.ebuild:
+  Stable for amd64, wrt bug #464552
 
   17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> xbmc-12.2-r1.ebuild:
   Reduce the postproc || dep to be bit faster.

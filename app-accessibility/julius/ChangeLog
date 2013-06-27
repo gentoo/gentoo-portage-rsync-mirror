@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/julius
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/julius/ChangeLog,v 1.2 2013/04/12 14:37:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/julius/ChangeLog,v 1.4 2013/06/27 18:20:42 ago Exp $
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> julius-4.2.2.ebuild:
+  Stable for x86, wrt bug #474436
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> julius-4.2.2.ebuild:
+  Stable for amd64, wrt bug #474436
 
   12 Apr 2013; Julian Ospald <hasufell@gentoo.org>
   files/julius-4.2.2-install.patch:
@@ -11,4 +17,3 @@
   31 Mar 2013; Julian Ospald <hasufell@gentoo.org> +julius-4.2.2.ebuild,
   +files/julius-4.2.2-install.patch, +files/julius-4.2.2-ldflags.patch:
   initial import wrt #245475
-

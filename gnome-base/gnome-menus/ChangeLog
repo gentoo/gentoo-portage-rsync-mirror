@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.194 2013/06/02 00:12:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.195 2013/06/27 18:18:29 pacho Exp $
+
+*gnome-menus-3.8.0-r1 (27 Jun 2013)
+
+  27 Jun 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-menus-3.8.0-gnome-calculator.patch, +gnome-menus-3.8.0-r1.ebuild,
+  -gnome-menus-2.30.5.ebuild, -gnome-menus-3.8.0.ebuild:
+  Adapt to gcalctool.desktop provided by gnome-calculator (#474960 by Paolo
+  Stivanin), drop old.
 
   02 Jun 2013; Jonathan Callen <abcd@gentoo.org> gnome-menus-3.6.2.ebuild:
   Force non-empty PYTHON_TARGETS for USE=python

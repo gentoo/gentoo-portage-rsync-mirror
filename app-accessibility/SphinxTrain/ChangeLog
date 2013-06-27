@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/SphinxTrain
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.19 2013/03/31 16:40:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.21 2013/06/27 18:20:50 ago Exp $
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> SphinxTrain-1.0.8.ebuild:
+  Stable for x86, wrt bug #474436
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> SphinxTrain-1.0.8.ebuild:
+  Stable for amd64, wrt bug #474436
 
 *SphinxTrain-1.0.8 (31 Mar 2013)
 

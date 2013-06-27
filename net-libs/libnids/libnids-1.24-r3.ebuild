@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24-r3.ebuild,v 1.1 2013/03/15 17:41:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24-r3.ebuild,v 1.3 2013/06/27 18:08:55 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="+glib +libnet static-libs"
 
 DEPEND="net-libs/libpcap

@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/sphinxbase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.6 2013/02/23 13:52:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.8 2013/06/27 18:20:54 ago Exp $
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> sphinxbase-0.8.ebuild:
+  Stable for x86, wrt bug #474436
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> sphinxbase-0.8.ebuild:
+  Stable for amd64, wrt bug #474436
 
   23 Feb 2013; Justin Lecher <jlec@gentoo.org> sphinxbase-0.8.ebuild:
   Fix python testing
@@ -27,4 +33,3 @@
   17 Nov 2011; Jesus Rivero <neurogeek@gentoo.org> +sphinxbase-0.7.ebuild,
   +metadata.xml:
   Initial commit
-

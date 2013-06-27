@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pocketsphinx/pocketsphinx-0.8.ebuild,v 1.1 2013/03/31 16:35:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pocketsphinx/pocketsphinx-0.8.ebuild,v 1.3 2013/06/27 18:20:46 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/cmusphinx/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="python static-libs"
 
 RDEPEND="app-accessibility/sphinxbase

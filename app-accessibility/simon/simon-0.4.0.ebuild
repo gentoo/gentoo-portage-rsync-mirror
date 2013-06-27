@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.0.ebuild,v 1.3 2013/03/31 23:07:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.0.ebuild,v 1.5 2013/06/27 18:20:38 ago Exp $
 
 # KEEP KDE ECLASSES OUT OF HERE
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kde/stable/simon/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="kdepim libsamplerate nls opencv sphinx"
 
 RDEPEND="
