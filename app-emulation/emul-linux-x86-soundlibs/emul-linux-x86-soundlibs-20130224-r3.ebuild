@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r2.ebuild,v 1.2 2013/06/26 21:49:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r3.ebuild,v 1.1 2013/06/27 15:02:59 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -12,7 +12,7 @@ IUSE="abi_x86_32 alsa"
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-medialibs-${PV}
 	!>=media-libs/libmikmod-3.2.0-r1[abi_x86_32]
-	!>=sci-libs/fftw-3.3.3-r1[abi_x86_32]
+	!abi_x86_32? ( !>=sci-libs/fftw-3.3.3-r1[abi_x86_32] )
 	abi_x86_32? (
 		>=media-libs/libogg-1.3.1[abi_x86_32(-)]
 		>=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)]
@@ -22,6 +22,10 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-libs/alsa-lib-1.0.27.1[abi_x86_32(-)]
 		>=media-libs/flac-1.2.1-r5[abi_x86_32(-)]
 		>=media-libs/audiofile-0.3.6-r1[abi_x86_32(-)]
+		>=sci-libs/fftw-3.3.3-r1[abi_x86_32(-)]
+		>=media-libs/ladspa-sdk-1.13-r2[abi_x86_32(-)]
+		>=media-plugins/caps-plugins-0.4.5-r2[abi_x86_32(-)]
+		>=media-plugins/swh-plugins-0.4.15-r3[abi_x86_32(-)]
 	)"
 
 src_prepare() {

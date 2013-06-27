@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.41 2013/04/25 21:25:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.42 2013/06/27 15:08:32 aballier Exp $
+
+*kpathsea-6.1.1_p20130530 (27 Jun 2013)
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +kpathsea-6.1.1_p20130530.ebuild, +files/texmf-update:
+  Version bump. Block old texlive-core since the config files it installs will
+  break it completely at runtime. Use this opportunity to move texmf-update
+  here since it makes more sense.
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   kpathsea-6.1.0_p20120701.ebuild:

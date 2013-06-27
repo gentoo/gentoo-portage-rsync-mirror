@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r2.ebuild,v 1.3 2013/06/27 13:21:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r2.ebuild,v 1.4 2013/06/27 15:15:54 idella4 Exp $
 
 EAPI=5
 
@@ -198,6 +198,9 @@ src_prepare() {
 	# add missing header
 	epatch "${FILESDIR}"/xen-4-ulong.patch \
 		"${FILESDIR}"/${PN}-4.2-xen_disk_leak.patch
+
+	# Set dom0-min-mem to kb; Bug #472982
+	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
 
 	#Security patches, currently valid
 	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \

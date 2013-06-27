@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.49 2013/06/27 13:53:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.50 2013/06/27 15:01:31 aballier Exp $
+
+*swh-plugins-0.4.15-r3 (27 Jun 2013)
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +swh-plugins-0.4.15-r3.ebuild:
+  go multilib, move ladspa-sdk as build dep only.
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> -swh-plugins-0.4.15.ebuild,
   -swh-plugins-0.4.15-r1.ebuild:
