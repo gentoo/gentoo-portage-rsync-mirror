@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-pam-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.40 2013/06/18 23:37:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.41 2013/06/27 20:54:01 aballier Exp $
+
+*freebsd-pam-modules-9.1-r1 (27 Jun 2013)
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-pam-modules-9.1-r1.ebuild:
+  do not build pam_krb5 as it has its own ebuild, bug #473368 by
+  henning.f@swipnet.se
 
   18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
   -freebsd-pam-modules-7.2.ebuild, -freebsd-pam-modules-8.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/krb5
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.1 2011/03/13 03:38:23 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.2 2013/06/27 20:42:55 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> krb5-0.ebuild:
+  keyword ~amd64-fbsd
 
 *krb5-0 (13 Mar 2011)
 

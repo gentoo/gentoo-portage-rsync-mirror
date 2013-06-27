@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.1.ebuild,v 1.2 2013/01/27 22:28:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.1.ebuild,v 1.3 2013/06/27 20:43:21 aballier Exp $
 
 EAPI=2
 
@@ -32,7 +32,8 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?,netware?]
 	dev-util/dialog
 	dev-libs/libelf
 	>=dev-libs/libedit-20120311.3.0-r1
-	net-libs/libpcap"
+	net-libs/libpcap
+	kerberos? ( app-crypt/heimdal )"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
 	=sys-freebsd/freebsd-ubin-${RV}*
@@ -42,7 +43,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/usr.sbin"
 
-IUSE="acpi atm audit bluetooth floppy ipv6 minimal netware nis pam ssl usb build"
+IUSE="acpi atm audit bluetooth floppy ipv6 kerberos minimal netware nis pam ssl usb build"
 
 pkg_setup() {
 	# Release crunch is something like minimal. It seems to remove everything
@@ -60,6 +61,7 @@ pkg_setup() {
 	use ssl || mymakeopts="${mymakeopts} WITHOUT_OPENSSL= "
 	use usb || mymakeopts="${mymakeopts} WITHOUT_USB= "
 	use floppy || mymakeopts="${mymakeopts} WITHOUT_FLOPPY= "
+	use kerberos || mymakeopts="${mymakeopts} WITHOUT_GSSAPI= "
 
 	mymakeopts="${mymakeopts} WITHOUT_BIND_NAMED= WITHOUT_BIND_DNSSEC= WITHOUT_PF= WITHOUT_LPR= WITHOUT_SENDMAIL= WITHOUT_AUTHPF= WITHOUT_MAILWRAPPER= "
 

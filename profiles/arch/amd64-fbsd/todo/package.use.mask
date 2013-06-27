@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.304 2013/06/18 19:34:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.307 2013/06/27 20:55:22 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -13,6 +13,9 @@
 #            mask
 # Keep it simple, we do not really care about the date or who masked it, we want
 # to be easily able to determine what we need to keyword.
+
+# net-fs/openafs
+app-crypt/heimdal afs
 
 # app-accessibility/flite (fails at install)
 media-video/ffmpeg flite
@@ -36,9 +39,6 @@ net-misc/curl curl_ssl_cyassl
 # sys-process/numactl
 sys-apps/hwloc numa
 
-# sys-auth/pam_krb5
-sys-auth/pambase pam_krb5
-
 # dev-lang/mono
 net-dns/libidn mono
 media-libs/libcaca mono
@@ -59,9 +59,6 @@ media-gfx/ufraw fits
 
 # >=media-gfx/gimp-2
 media-gfx/ufraw gimp
-
-# app-crypt/heimdal
-net-nds/openldap smbkrb5passwd
 
 # app-office/lyx
 dev-tex/latex-beamer lyx
