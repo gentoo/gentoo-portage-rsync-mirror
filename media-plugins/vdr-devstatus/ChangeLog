@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-devstatus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-devstatus/ChangeLog,v 1.5 2012/07/05 19:52:56 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-devstatus/ChangeLog,v 1.6 2013/06/27 17:50:03 hd_brummy Exp $
+
+  27 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-devstatus-0.4.1.ebuild:
+  eapi=5; better description; removed untranslated .po files
 
   05 Jul 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-devstatus-0.4.1.ebuild:
