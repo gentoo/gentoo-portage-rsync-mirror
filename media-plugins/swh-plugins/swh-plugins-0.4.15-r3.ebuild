@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r3.ebuild,v 1.1 2013/06/27 15:01:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r3.ebuild,v 1.2 2013/06/27 20:25:47 aballier Exp $
 
 EAPI=5
 
@@ -45,6 +45,9 @@ src_prepare() {
 
 	# it doesn't get updated otherwise
 	rm -f missing
+
+	# old shipped version breaks multilib build #475022
+	rm -f config.h
 
 	# Fix build with automake 1.13
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die

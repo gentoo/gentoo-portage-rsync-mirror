@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.69 2013/06/27 16:23:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.70 2013/06/27 20:30:15 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  emul-linux-x86-medialibs-20130224-r2.ebuild:
+  Make MPEG-4 license conditional on whether we whip faac or not. Bug #475028
+  by Ulrich Müller.
 
 *emul-linux-x86-medialibs-20130224-r2 (27 Jun 2013)
 
