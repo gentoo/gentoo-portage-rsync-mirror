@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.474 2013/06/24 16:48:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.475 2013/06/27 08:54:02 radhermit Exp $
+
+*openssh-6.2_p2-r1 (27 Jun 2013)
+
+  27 Jun 2013; Tim Harder <radhermit@gentoo.org> +openssh-6.2_p2-r1.ebuild:
+  Revision bump, add ldap and hpn support.
 
 *openssh-6.2_p2 (24 Jun 2013)
 
