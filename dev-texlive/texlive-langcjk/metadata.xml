@@ -7,7 +7,8 @@
 		<name>Alexis Ballier</name>
 	</maintainer>
 <longdescription lang="en">
-CJK (Chinese, Japanese, Korean) macros, fonts, documentation,
-also Thai since there is some overlap in the fonts.
+CJK (Chinese, Japanese, Korean) macros, fonts, documentation.
+Also Thai in the c90 encoding, since there is some overlap in
+those fonts.  Standard Thai support is in collection-langother.
 </longdescription>
 </pkgmetadata>

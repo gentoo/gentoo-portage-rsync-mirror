@@ -9,7 +9,7 @@
 <longdescription lang="en">
 Programs for conversion between font formats, testing fonts,
 virtual fonts, .gf and .pk manipulation, mft, fontinst, etc.
-Manipulating OpenType, TrueType, PostScript Type 1, and
-PostScript and other images.
+Manipulating OpenType, TrueType, Type 1,and for manipulation of
+PostScript and other image formats.
 </longdescription>
 </pkgmetadata>

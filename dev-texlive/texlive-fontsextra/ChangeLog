@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-fontsextra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.73 2013/04/25 21:27:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsextra/ChangeLog,v 1.74 2013/06/28 16:10:03 aballier Exp $
+
+*texlive-fontsextra-2013 (28 Jun 2013)
+
+  28 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  +texlive-fontsextra-2013.ebuild:
+  Bump to TeX Live 2013.
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-fontsextra-2012.ebuild:
   Stable for sh, wrt bug #449298

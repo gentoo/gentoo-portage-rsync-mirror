@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-basic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.79 2013/04/25 21:26:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.80 2013/06/28 16:06:55 aballier Exp $
+
+*texlive-basic-2013 (28 Jun 2013)
+
+  28 Jun 2013; Alexis Ballier <aballier@gentoo.org> +texlive-basic-2013.ebuild,
+  +files/texmfcnflua2013.patch:
+  Bump to TeX Live 2013.
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> texlive-basic-2012.ebuild:
   Stable for sh, wrt bug #449298

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare unpack
+DEPEND=>=dev-texlive/texlive-basic-2013 >=app-text/texlive-core-2013 app-arch/xz-utils
+DESCRIPTION=TeXLive African scripts
+EAPI=5
+HOMEPAGE=http://www.tug.org/texlive/
+IUSE=source doc
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-1 GPL-2
+RDEPEND=>=dev-texlive/texlive-basic-2013 >=app-text/texlive-core-2013
+SLOT=0
+SRC_URI=mirror://gentoo/texlive-module-ethiop-2013.tar.xz mirror://gentoo/texlive-module-ethiop-t1-2013.tar.xz mirror://gentoo/texlive-module-fc-2013.tar.xz mirror://gentoo/texlive-module-hyphen-ethiopic-2013.tar.xz mirror://gentoo/texlive-module-collection-langafrican-2013.tar.xz doc? ( mirror://gentoo/texlive-module-ethiop.doc-2013.tar.xz mirror://gentoo/texlive-module-ethiop-t1.doc-2013.tar.xz mirror://gentoo/texlive-module-fc.doc-2013.tar.xz ) source? ( mirror://gentoo/texlive-module-ethiop.source-2013.tar.xz )
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	texlive-module	76cb784d7ee0baff5ce9f16ef16daa57	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=088b6917132ec6b4a3eb6dd560cef7ee
