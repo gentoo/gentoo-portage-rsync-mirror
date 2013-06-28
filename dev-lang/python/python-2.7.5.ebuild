@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5.ebuild,v 1.1 2013/05/25 22:32:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5.ebuild,v 1.2 2013/06/28 00:02:04 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -97,6 +97,8 @@ src_prepare() {
 
 	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_SUFFIX="patch" \
 		epatch "${WORKDIR}/${PV}-${PATCHSET_REVISION}"
+
+	epatch "${FILESDIR}/${P}-library-path.patch" #474882
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \

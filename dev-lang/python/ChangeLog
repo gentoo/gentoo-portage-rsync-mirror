@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.659 2013/05/25 22:32:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.660 2013/06/28 00:02:04 floppym Exp $
+
+  28 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/python-2.7.5-library-path.patch, python-2.7.5.ebuild:
+  Fix library paths when not cross-compiling. Should resolve bug 474882. Thanks
+  to Arfrever for finding the upstream commit.
 
 *python-2.7.5 (25 May 2013)
 *python-3.2.5 (25 May 2013)
