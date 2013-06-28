@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/openmm-5.1-r1.ebuild,v 1.1 2013/06/25 23:51:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/openmm-5.0.1-r2.ebuild,v 1.1 2013/06/27 23:06:50 ottxor Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit cmake-utils cuda python-any-r1
+inherit cmake-utils cuda multilib python-any-r1
 
 MY_P="${PN^^[om]}${PV}-Source"
 DESCRIPTION="provides tools for modern molecular modeling simulation"
@@ -33,6 +33,11 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	use cuda && cuda_src_prepare
+
+	#475002
+	find . -name CMakeLists.txt -exec sed -i -e
+		"/INSTALL/s@\(DESTINATION\|RUNTIME\)\(.*\)lib@\1\2$(get_libdir)@" {} \; || die
+
 	default
 }
 

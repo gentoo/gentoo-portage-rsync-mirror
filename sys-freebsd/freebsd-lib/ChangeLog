@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.186 2013/06/27 20:38:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.188 2013/06/27 23:07:13 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.1-r9.ebuild:
+  cosmetics
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.1-r9.ebuild:
+  bootstrap the libc when building a cross-compiler so that libm can be linked
+  to it and fixes a build failure from a fresh build
 
 *freebsd-lib-9.1-r9 (27 Jun 2013)
 
