@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tntnet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.20 2012/06/04 16:38:22 idl0r Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.21 2013/06/28 19:22:59 zzam Exp $
+
+  28 Jun 2013; Matthias Schwarzott <zzam@gentoo.org> tntnet-1.6.3.ebuild,
+  tntnet-2.0-r1.ebuild, tntnet-2.1.ebuild:
+  Fix value of HOMEPAGE
 
 *tntnet-2.1 (04 Jun 2012)
 
