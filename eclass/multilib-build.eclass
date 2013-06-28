@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.13 2013/05/31 17:50:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.14 2013/06/28 02:37:52 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -304,7 +304,7 @@ _EOF_
 		esac
 
 		# Note: match a space afterwards to avoid collision potential.
-		sed -e "/${abi_flag} /s&error.*&include <${CHOST}/${f}>&" \
+		sed -e "/${abi_flag} /s&error.*&include <${CHOST}${f}>&" \
 			-i "${ED}/tmp/multilib-include${f}" || die
 	done
 }

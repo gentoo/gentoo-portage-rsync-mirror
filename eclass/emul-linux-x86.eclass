@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.18 2013/02/24 23:30:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.19 2013/06/28 02:37:48 vapier Exp $
 
 #
 # Original Author: Mike Doty <kingtaco@gentoo.org>
@@ -66,9 +66,12 @@ emul-linux-x86_src_install() {
 		pushd "${D}"/usr/${x86_libdir} >/dev/null
 
 		# Fix linker script paths.
-		sed -i \
-			-e "s:/lib32/:/${x86_libdir}/:" \
-			$(grep -ls '^GROUP.*/lib32/' *.so) || die
+		local ldscripts
+		if ldscripts=( $(grep -ls '^GROUP.*/lib32/' *.so) ) ; then
+			sed -i \
+				-e "s:/lib32/:/${x86_libdir}/:" \
+				"${ldscripts[@]}" || die
+		fi
 
 		# Rewrite symlinks (if need be).
 		local sym tgt
