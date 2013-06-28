@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14872 2013/06/27 18:42:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14873 2013/06/28 22:09:46 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -563,6 +563,15 @@ app-text/cuneiform
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
 # Waiting for new emul-linux-x86-{media,sound}libs without
 # the duplicate files.
+# Other reasons to keep them masked:
+# - libsamplerate depends on libsndfile
+# - libsndfile depends on emul-linux for sqlite which doesn't scale
+# - libv4l depends on emul-linux for jpeg
+# - portaudio is not commited yet: bug #468706
+# - twolame depends on libsndfile
+# - wavpack multilib ebuild is in theory broken as it requires a multilib
+#           libiconv and is lacking the usedep on it since it has not been
+#           converted
 >=media-libs/libsamplerate-0.1.8-r1
 >=media-libs/libsndfile-1.0.25-r1
 >=media-libs/libv4l-0.9.5-r1

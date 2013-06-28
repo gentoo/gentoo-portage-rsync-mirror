@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rtl-sdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/ChangeLog,v 1.7 2013/06/27 04:25:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/ChangeLog,v 1.8 2013/06/28 22:13:36 zerochaos Exp $
+
+  28 Jun 2013; Rick Farina <zerochaos@gentoo.org> -rtl-sdr-0.5.0-r1.ebuild,
+  -rtl-sdr-0_pre20130414.ebuild, rtl-sdr-0.5.0.ebuild, rtl-sdr-9999.ebuild:
+  remove old ebuild, remove udev rule in favor of improved elog messages
 
 *rtl-sdr-0.5.0-r1 (27 Jun 2013)
 

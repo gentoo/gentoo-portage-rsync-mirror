@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-0.5.0.ebuild,v 1.2 2013/06/05 15:38:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-0.5.0.ebuild,v 1.3 2013/06/28 22:13:36 zerochaos Exp $
 
 EAPI=5
 inherit autotools
@@ -43,7 +43,9 @@ src_prepare() {
 pkg_postinst() {
 	local rulesfiles=( "${EPREFIX}"/etc/udev/rules.d/*${PN}.rules )
 	if [[ ! -f ${rulesfiles} ]]; then
-		elog "In order to allow users outside the usb group to capture samples, install"
-		elog "${PN}.rules from the documentation directory to ${EPREFIX}/etc/udev/rules.d/"
+		elog "By default, only users in the usb group can capture."
+		elog "Just run 'gpasswd -a <USER> usb', then have <USER> re-login."
+		elog "Or the device can be WORLD readable and writable by installing ${PN}.rules"
+		elog "from the documentation directory to ${EPREFIX}/etc/udev/rules.d/"
 	fi
 }

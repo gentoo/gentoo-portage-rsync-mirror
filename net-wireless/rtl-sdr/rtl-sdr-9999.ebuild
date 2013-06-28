@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-9999.ebuild,v 1.5 2013/06/27 04:25:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-9999.ebuild,v 1.6 2013/06/28 22:13:36 zerochaos Exp $
 
 EAPI=5
 
-inherit autotools udev
+inherit autotools
 
 DESCRIPTION="turns your Realtek RTL2832 based DVB dongle into a SDR receiver"
 HOMEPAGE="http://sdr.osmocom.org/trac/wiki/rtl-sdr"
@@ -41,8 +41,12 @@ src_prepare() {
 	eautoreconf
 }
 
-src_install() {
-	udev_dorules rtl-sdr.rules
-	default
-	rm "${ED}"/usr/share/doc/${PF}/rtl-sdr.rules
+pkg_postinst() {
+	local rulesfiles=( "${EPREFIX}"/etc/udev/rules.d/*${PN}.rules )
+	if [[ ! -f ${rulesfiles} ]]; then
+		elog "By default, only users in the usb group can capture."
+		elog "Just run 'gpasswd -a <USER> usb', then have <USER> re-login."
+		elog "Or the device can be WORLD readable and writable by installing ${PN}.rules"
+		elog "from the documentation directory to ${EPREFIX}/etc/udev/rules.d/"
+	fi
 }
