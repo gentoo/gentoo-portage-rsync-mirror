@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.129 2013/04/23 15:07:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.130 2013/06/28 20:53:03 ago Exp $
+
+  28 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ettercap-0.7.6.ebuild:
+  Stable for amd64, wrt bug #475078
 
   23 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ettercap-9999.ebuild:
   Temporary fix for this commit: https://github.com/Ettercap/ettercap/commit/f79

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.45 2013/06/15 11:26:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.46 2013/06/28 20:58:51 ago Exp $
+
+  28 Jun 2013; Agostino Sarubbo <ago@gentoo.org> protobuf-2.4.1.ebuild:
+  Stable for amd64, wrt bug #474922
 
   15 Jun 2013; Fabian Groffen <grobian@gentoo.org> protobuf-2.5.0.ebuild:
   Fix compilation on Darwin, bug #472514

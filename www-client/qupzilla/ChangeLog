@@ -1,6 +1,9 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.28 2013/05/25 07:19:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.29 2013/06/28 20:52:55 ago Exp $
+
+  28 Jun 2013; Agostino Sarubbo <ago@gentoo.org> qupzilla-1.4.3.ebuild:
+  Stable for amd64, wrt bug #475094
 
 *qupzilla-1.4.3 (25 May 2013)
 
