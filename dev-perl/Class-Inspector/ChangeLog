@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.88 2013/06/27 11:35:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.89 2013/06/28 15:38:22 jer Exp $
+
+  28 Jun 2013; Jeroen Roovers <jer@gentoo.org> Class-Inspector-1.280.0.ebuild:
+  Stable for HPPA (bug #449574).
 
   27 Jun 2013; Sergey Popov <pinkbyte@gentoo.org>
   Class-Inspector-1.280.0.ebuild:

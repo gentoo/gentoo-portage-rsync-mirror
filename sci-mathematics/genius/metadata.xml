@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<maintainer>
-		<email>grozin@gentoo.org</email>
-		<name>Andrey Grozin</name>
-	</maintainer>
-	<longdescription>Genius is a calculator program which can work
+  <herd>sci</herd>
+  <maintainer>
+    <email>grozin@gentoo.org</email>
+    <name>Andrey Grozin</name>
+  </maintainer>
+  <longdescription>Genius is a calculator program which can work
 	  with arbitrary precision integers, multiple precision floats,
 	  rational numbers, complex numbers, linear algebra, number theory,
 	  numerical calculus, statistics, numerical equation solving,
