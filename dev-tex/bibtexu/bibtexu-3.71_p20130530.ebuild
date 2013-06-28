@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20130530.ebuild,v 1.1 2013/06/27 13:15:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20130530.ebuild,v 1.2 2013/06/28 13:53:25 aballier Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE=""
+IUSE="doc source"
 
 RDEPEND=">=dev-libs/kpathsea-6.1.0_p20120701
 		>=dev-libs/icu-4.4
@@ -20,6 +20,20 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/texlive-${PV#*_p}-source/texk/bibtex-x
+
+TL_VERSION=2013
+EXTRA_TL_MODULES="bibtex8 bibtexu"
+EXTRA_TL_DOC_MODULES="bibtex8.doc bibtexu.doc"
+
+for i in ${EXTRA_TL_MODULES} ; do
+	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${TL_VERSION}.tar.xz"
+done
+
+SRC_URI="${SRC_URI} doc? ( "
+for i in ${EXTRA_TL_DOC_MODULES} ; do
+	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${TL_VERSION}.tar.xz"
+done
+SRC_URI="${SRC_URI} ) "
 
 src_configure() {
 	econf \
@@ -34,4 +48,10 @@ src_install() {
 		btdocdir="${EPREFIX}/usr/share/doc/${PF}" \
 		install
 	dodoc 00readme.txt ChangeLog csfile.txt HISTORY
+
+	dodir /usr/share # just in case
+	cp -pR "${WORKDIR}"/texmf-dist "${ED}/usr/share/" || die "failed to install texmf trees"
+	if use source ; then
+		cp -pR "${WORKDIR}"/tlpkg "${ED}/usr/share/" || die "failed to install tlpkg files"
+	fi
 }

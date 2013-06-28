@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r2.ebuild,v 1.6 2013/06/28 13:46:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r3.ebuild,v 1.1 2013/06/28 13:46:44 idella4 Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ else
 	S="${WORKDIR}/xen-${PV}"
 fi
 
-inherit flag-o-matic eutils multilib python-single-r1 toolchain-funcs udev ${live_eclass}
+inherit bash-completion-r1 eutils flag-o-matic multilib python-single-r1 toolchain-funcs udev ${live_eclass}
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://xen.org/"
@@ -224,6 +224,10 @@ src_prepare() {
 		"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch \
 		"${FILESDIR}"/xen-4.2-CVE-XSA-57.patch
 
+	# Bug 472438
+	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
+		-i Config.mk || die
+
 	epatch_user
 }
 
@@ -269,16 +273,19 @@ src_install() {
 		-e 's:^#vifscript="vif-bridge":vifscript="vif-bridge":' \
 		-i tools/examples/xl.conf  || die
 
+	# Reset bash completion dir; Bug 472438
+	mv "${D}"bash-completion "${D}"usr/share/ || die
+
 	if use doc; then
-		emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" install-docs
+		emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-docs
 
 		dohtml -r docs/
 		docinto pdf
 		dodoc ${DOCS[@]}
-		[ -d "${ED}"/usr/share/doc/xen ] && mv "${ED}"/usr/share/doc/xen/* "${ED}"/usr/share/doc/${PF}/html
+		[ -d "${D}"/usr/share/doc/xen ] && mv "${D}"/usr/share/doc/xen/* "${D}"/usr/share/doc/${PF}/html
 	fi
 
-	rm -rf "${ED}"/usr/share/doc/xen/
+	rm -rf "${D}"/usr/share/doc/xen/
 	doman docs/man?/*
 
 	if use xend; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.35.ebuild,v 1.1 2013/06/14 07:53:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.37.ebuild,v 1.1 2013/06/28 13:54:26 zmedico Exp $
 
 EAPI=5
 
@@ -81,10 +81,6 @@ src_prepare() {
 	#sed -e "s#\\(^numeric_version =\\).*#\\1 (${PV//./, })#" \
 	#	-i src/calibre/constants.py || \
 	#	die "sed failed to patch constants.py"
-
-	# Fix deprecated pillow import (bug #471500).
-	sed -e 's:        import ImageFile:        from PIL import ImageFile:' \
-		-i src/calibre/ebooks/textile/functions.py || die
 
 	# Avoid sandbox violation in /usr/share/gnome/apps when linux.py
 	# calls xdg-* (bug #258938).

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r2.ebuild,v 1.6 2013/06/28 13:46:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r5.ebuild,v 1.1 2013/06/28 13:46:44 idella4 Exp $
 
 EAPI=5
 
@@ -10,6 +10,7 @@ PYTHON_REQ_USE='xml,threads'
 IPXE_TARBALL_URL="http://dev.gentoo.org/~idella4/tarballs/ipxe.tar.gz"
 XEN_SEABIOS_URL="http://dev.gentoo.org/~idella4/tarballs/seabios-0-20121121.tar.bz2"
 XSAPATCHES="http://dev.gentoo.org/~idella4/"
+
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
 	REPO="xen-unstable.hg"
@@ -25,7 +26,7 @@ else
 	S="${WORKDIR}/xen-${PV}"
 fi
 
-inherit flag-o-matic eutils multilib python-single-r1 toolchain-funcs udev ${live_eclass}
+inherit bash-completion-r1 eutils flag-o-matic multilib python-single-r1 toolchain-funcs udev ${live_eclass}
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://xen.org/"
@@ -37,14 +38,13 @@ IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs
 
 REQUIRED_USE="hvm? ( qemu )"
 
-CDEPEND="dev-libs/lzo:2
-	dev-libs/yajl
+CDEPEND="dev-libs/yajl
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pypam[${PYTHON_USEDEP}]
 	dev-python/pyxml[${PYTHON_USEDEP}]
 	sys-libs/zlib
 	sys-power/iasl
-	dev-ml/findlib
+	ocaml? ( dev-ml/findlib )
 	hvm? ( media-libs/libsdl )
 	${PYTHON_DEPS}
 	api? ( dev-libs/libxml2
@@ -73,7 +73,7 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
-	ocaml? ( >=dev-lang/ocaml-4 )
+	ocaml? ( >=dev-lang/ocaml-3.12.0 )
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -195,36 +195,42 @@ src_prepare() {
 	# fix jobserver in Makefile
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-jserver.patch
 
-	# add missing header
+	# add missing typedef
 	epatch "${FILESDIR}"/xen-4-ulong.patch \
 		"${FILESDIR}"/${PN}-4.2-xen_disk_leak.patch
 
 	# Set dom0-min-mem to kb; Bug #472982
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
 
-	#Security patches, currently valid
+	#Sec patches currently valid
 	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-0215-XSA-38.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1919-XSA-46.patch \
 		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
-		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA-49.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
-		"${WORKDIR}"/files/xen-4.2-CVE-2013-8-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
-		"${WORKDIR}"/files/xen-4.2-CVE-2013-11-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
-		"${WORKDIR}"/files/xen-4.2-CVE-2013-15-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA_49.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
+                "${WORKDIR}"/files/xen-4.2-CVE-2013-8-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
+                "${WORKDIR}"/files/xen-4.2-CVE-2013-11-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
+                "${WORKDIR}"/files/xen-4.2-CVE-2013-15-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
+                "${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch \
 		"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch \
 		"${FILESDIR}"/xen-4.2-CVE-XSA-57.patch
 
-	epatch_user
+		epatch_user
+
+	# Bug 472438
+	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
+		-i Config.mk || die
 }
 
 src_compile() {
@@ -269,16 +275,19 @@ src_install() {
 		-e 's:^#vifscript="vif-bridge":vifscript="vif-bridge":' \
 		-i tools/examples/xl.conf  || die
 
+	# Reset bash completion dir; Bug 472438
+	mv "${D}"bash-completion "${D}"usr/share/ || die
+
 	if use doc; then
 		emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" install-docs
 
 		dohtml -r docs/
 		docinto pdf
 		dodoc ${DOCS[@]}
-		[ -d "${ED}"/usr/share/doc/xen ] && mv "${ED}"/usr/share/doc/xen/* "${ED}"/usr/share/doc/${PF}/html
+		[ -d "${D}"/usr/share/doc/xen ] && mv "${D}"/usr/share/doc/xen/* "${D}"/usr/share/doc/${PF}/html
 	fi
 
-	rm -rf "${ED}"/usr/share/doc/xen/
+	rm -rf "${D}"/usr/share/doc/xen/
 	doman docs/man?/*
 
 	if use xend; then
@@ -297,7 +306,7 @@ src_install() {
 		keepdir /var/log/xen-consoles
 	fi
 
-	if [[ "${ARCH}" == 'amd64' ]] && use qemu; then
+	if use qemu; then
 		mkdir -p "${D}"usr/$(get_libdir)/xen/bin || die
 		mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/$(get_libdir)/xen/bin/ || die
 	fi
