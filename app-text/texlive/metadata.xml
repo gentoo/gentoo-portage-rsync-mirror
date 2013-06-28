@@ -37,7 +37,7 @@
   <flag name='tex4ht'>Add support for <pkg>dev-tex/tex4ht</pkg>
     (for converting (La)TeX to (X)HTML, XML and OO.org)</flag>
   <flag name='texi2html'>Add support for <pkg>app-text/texi2html</pkg>
-	  ((for converting texi files to HTML).</flag>
+	  which converts texi files to HTML.</flag>
   <flag name='xetex'>Add support for XeTeX macros
     (<pkg>dev-texlive/texlive-xetex</pkg>)</flag>
   <flag name='xindy'>Add support for <pkg>app-text/xindy</pkg>, a flexible

@@ -1,6 +1,14 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.130 2013/05/19 16:14:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.132 2013/06/28 17:15:56 aballier Exp $
+
+  28 Jun 2013; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  fix texi2html description by Jonas Stein in bug #474468
+
+*texlive-2013 (28 Jun 2013)
+
+  28 Jun 2013; Alexis Ballier <aballier@gentoo.org> +texlive-2013.ebuild:
+  bump to TeX Live 2013
 
   19 May 2013; Alexis Ballier <aballier@gentoo.org> -texlive-2011.ebuild,
   -texlive-2011-r1.ebuild:
