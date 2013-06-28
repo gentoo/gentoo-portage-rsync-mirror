@@ -1,0 +1,12 @@
+DEFINED_PHASES=prepare
+DEPEND=app-arch/bzip2 app-arch/xz-utils dev-libs/libexplain sys-libs/zlib
+DESCRIPTION=A tar post-processor
+EAPI=5
+HOMEPAGE=http://tardy.sourceforge.net/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3
+RDEPEND=app-arch/bzip2 app-arch/xz-utils dev-libs/libexplain sys-libs/zlib
+SLOT=0
+SRC_URI=mirror://sourceforge/tardy/tardy-1.28.D001.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=ab274f617eadb84cbf7a75d4f4253ebc
