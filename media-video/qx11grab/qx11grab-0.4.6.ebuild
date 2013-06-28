@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.6.ebuild,v 1.4 2013/03/09 17:36:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.6.ebuild,v 1.5 2013/06/28 13:30:38 kensington Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}
 PDEPEND="virtual/freedesktop-icon-theme"
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	# install docs into standard Gentoo location
 	sed -i -e "/DESTINATION share/ s:\${CMAKE_PROJECT_NAME}:doc/${PF}:" \

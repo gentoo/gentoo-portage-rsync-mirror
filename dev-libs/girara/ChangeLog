@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/girara
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.23 2013/06/13 22:32:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.24 2013/06/28 13:21:36 wired Exp $
+
+  28 Jun 2013; Alex Alexander <wired@gentoo.org> metadata.xml:
+  off the maintainer list
 
 *girara-0.1.6-r300 (13 Jun 2013)
 *girara-0.1.6-r200 (13 Jun 2013)
