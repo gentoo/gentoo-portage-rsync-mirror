@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.113 2013/06/15 21:08:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.114 2013/06/28 12:04:39 aballier Exp $
+
+  28 Jun 2013; Alexis Ballier <aballier@gentoo.org> pambase-20101024-r2.ebuild,
+  pambase-20120417.ebuild, pambase-20120417-r1.ebuild,
+  pambase-20120417-r2.ebuild:
+  allow openpam for krb5
 
 *pambase-20120417-r2 (15 Jun 2013)
 
