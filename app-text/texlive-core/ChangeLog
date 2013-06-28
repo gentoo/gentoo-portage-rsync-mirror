@@ -1,6 +1,11 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.201 2013/05/30 16:32:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.202 2013/06/28 14:39:21 aballier Exp $
+
+*texlive-core-2013 (28 Jun 2013)
+
+  28 Jun 2013; Alexis Ballier <aballier@gentoo.org> +texlive-core-2013.ebuild:
+  Bump to TeX Live 2013
 
   30 May 2013; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2012-r1.ebuild:
