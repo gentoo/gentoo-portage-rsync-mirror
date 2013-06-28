@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/multimon-ng/multimon-ng-9999.ebuild,v 1.2 2013/06/28 20:40:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/multimon-ng/multimon-ng-9999.ebuild,v 1.3 2013/06/28 22:33:26 zerochaos Exp $
 
 EAPI=5
 
@@ -21,12 +21,18 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="pulseaudio"
 
-DEPEND="media-sound/pulseaudio
+DEPEND="pulseaudio? ( media-sound/pulseaudio )
 	x11-libs/libX11"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	if use !pulseaudio; then
+		sed -i -e 's/-lpulse-simple//' -e 's/PULSE/DUMMY/' ${PN}.pro || die
+	fi
+	qt4-r2_src_prepare
+}
 src_install() {
 	dobin ${PN}
 }
