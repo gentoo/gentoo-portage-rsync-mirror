@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.290 2013/06/06 04:41:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.291 2013/06/28 21:11:27 bicatali Exp $
+
+  28 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> boost-1.53.0.ebuild:
+  Convert a few variables to prefix, keyword amd64-linux and x86-linux
 
   06 Jun 2013; Mike Gilbert <floppym@gentoo.org> boost-1.53.0.ebuild:
   Add REQUIRED_USE for python_targets flags.

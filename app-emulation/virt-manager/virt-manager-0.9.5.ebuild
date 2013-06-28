@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.5.ebuild,v 1.1 2013/05/13 14:44:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.5.ebuild,v 1.2 2013/06/28 21:01:09 ago Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ else
 	SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
 	${BACKPORTS:+mirror://gentoo/${P}-bp-${BACKPORTS}.tar.bz2
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	VIRTINSTDEP=">=app-emulation/virtinst-0.600.4"
 fi
 
