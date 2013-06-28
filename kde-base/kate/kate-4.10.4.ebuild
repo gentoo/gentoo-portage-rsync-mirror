@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.4.ebuild,v 1.1 2013/06/04 18:22:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.4.ebuild,v 1.2 2013/06/28 10:47:37 kensington Exp $
 
 EAPI=5
 KDE_HANDBOOK="optional"
@@ -11,7 +11,7 @@ inherit python-single-r1 kde4-meta
 
 DESCRIPTION="Kate is an MDI texteditor."
 KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug +plasma python"
+IUSE="debug python"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -37,7 +37,6 @@ pkg_setup() {
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_build python pate)
-		$(cmake-utils_use_with plasma)
 	)
 
 	kde4-meta_src_configure
