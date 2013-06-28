@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.6.ebuild,v 1.1 2013/05/15 07:30:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.6.ebuild,v 1.2 2013/06/28 07:10:05 tomka Exp $
 
 EAPI=5
 
@@ -31,8 +31,10 @@ DEPEND="
 	sys-process/time
 	virtual/pkgconfig
 	app-arch/unzip
-	app-text/dos2unix"
+	app-text/dos2unix
+	dev-lang/python:2.7"
 # Unzip and dos2unix just for normaliz
+# python2.7 necessary for gtest building
 
 RDEPEND="
 	sys-libs/gdbm
@@ -61,13 +63,6 @@ RDEPEND="
 SITEFILE=70Macaulay2-gentoo.el
 
 S="${WORKDIR}/M2-${GITHUBTAG}/M2"
-
-# RESTRICT="mirror"
-
-# src_unpack (){
-# 	unpack "Normaliz2.10.zip"
-# 	default
-# }
 
 pkg_setup () {
 		tc-export CC CPP CXX

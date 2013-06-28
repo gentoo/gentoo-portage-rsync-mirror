@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.28 2013/05/15 07:30:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.29 2013/06/28 07:10:05 tomka Exp $
+
+  28 Jun 2013; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.6.ebuild:
+  Add correct python:2.7 dep
 
 *Macaulay2-1.6 (15 May 2013)
 
