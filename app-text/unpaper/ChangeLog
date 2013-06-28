@@ -1,6 +1,13 @@
 # ChangeLog for app-text/unpaper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.10 2012/06/22 21:30:51 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.11 2013/06/28 16:32:47 flameeyes Exp $
+
+*unpaper-5 (28 Jun 2013)
+
+  28 Jun 2013; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-5.ebuild,
+  -unpaper-0.4.ebuild, unpaper-9999.ebuild:
+  Version bump; update GIT to fetch from https (proxy-friendly); use EAPI=5 to
+  shorten ebuild; remove very old version.
 
 *unpaper-0.4.2 (22 Jun 2012)
 
@@ -48,4 +55,3 @@
   05 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-0.3.ebuild,
   +metadata.xml:
   Initial import of unpaper; ebuild from my overlay; closes bug #172958.
-
