@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libogg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.94 2013/06/27 23:03:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.95 2013/06/28 12:54:54 aballier Exp $
+
+  28 Jun 2013; Alexis Ballier <aballier@gentoo.org> libogg-1.3.1.ebuild:
+  restore keywords now that autotools-multilib is fixed
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> libogg-1.3.1.ebuild:
   Drop all keywords but ~amd64 to avoid breaking the deptree with emul-linux

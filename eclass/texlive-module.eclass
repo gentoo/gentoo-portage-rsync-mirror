@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.64 2013/06/26 19:22:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.65 2013/06/28 12:43:54 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -44,6 +44,11 @@
 # A space separated list of files that are in fact scripts installed in the
 # texmf tree and that we want to be available directly. They will be installed in
 # /usr/bin.
+
+# @ECLASS-VARIABLE: TEXLIVE_MODULE_BINLINKS
+# @DESCRIPTION:
+# A space separated list of links to add for BINSCRIPTS.
+# The systax is: foo:bar to create a symlink bar -> foo.
 
 # @ECLASS-VARIABLE: TL_PV
 # @DESCRIPTION:
@@ -343,6 +348,12 @@ texlive-module_src_install() {
 	fi
 
 	[ -n "${TEXLIVE_MODULE_BINSCRIPTS}" ] && dobin_texmf_scripts ${TEXLIVE_MODULE_BINSCRIPTS}
+	if [ -n "${TEXLIVE_MODULE_BINLINKS}" ] ; then
+		for i in ${TEXLIVE_MODULE_BINLINKS} ; do
+			[ -f "${ED}/usr/bin/${i%:*}" ] || die "Trying to install an invalid	BINLINK. This should not happen. Please file a bug."
+			dosym ${i%:*} /usr/bin/${i#*:} 
+		done
+	fi
 
 	texlive-common_handle_config_files
 }

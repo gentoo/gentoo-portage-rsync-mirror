@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.4 2013/06/17 19:13:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-minimal.eclass,v 1.5 2013/06/28 12:42:48 mgorny Exp $
 
 # @ECLASS: multilib-minimal.eclass
 # @MAINTAINER:
@@ -92,8 +92,11 @@ multilib-minimal_src_install() {
 				emake DESTDIR="${D}" install
 			fi
 		fi
-		multilib_prepare_wrappers
-		multilib_check_headers
+		# Do multilib magic only when >1 ABI is used.
+		if [[ ${#MULTIBUILD_VARIANTS[@]} -gt 1 ]]; then
+			multilib_prepare_wrappers
+			multilib_check_headers
+		fi
 		popd >/dev/null || die
 	}
 	multilib_foreach_abi multilib-minimal_abi_src_install
