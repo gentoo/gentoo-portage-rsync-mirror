@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-ja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.54 2013/06/26 11:58:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.55 2013/06/29 16:26:33 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> man-pages-ja-20130215.ebuild:
+  Stable for sparc, wrt bug #470326
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> man-pages-ja-20130215.ebuild:
   Stable for arm, wrt bug #470326

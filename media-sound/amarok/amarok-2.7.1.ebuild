@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.7.1.ebuild,v 1.2 2013/05/30 12:27:15 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.7.1.ebuild,v 1.3 2013/06/29 16:13:33 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ if [[ ${PV} != *9999* ]]; then
 	else
 		SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 	fi
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ~ppc ~x86"
 else
 	KEYWORDS=""
 fi

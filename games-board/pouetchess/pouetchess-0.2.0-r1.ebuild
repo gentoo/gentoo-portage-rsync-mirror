@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.12 2011/04/28 07:43:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.13 2013/06/29 16:09:55 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug"
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl:0
 	media-libs/sdl-image[jpeg,png]
 	virtual/glu
 	virtual/opengl"
@@ -33,7 +33,7 @@ src_prepare() {
 	sed -i \
 		-e "s:sdlver.split('.') >= \['1','2','8'\]:sdlver.split('.') >= [1,2,8]:" \
 		pouetChess.py \
-		|| die "sed failed"
+		|| die
 }
 
 src_configure() {
@@ -44,7 +44,7 @@ src_configure() {
 		prefix="${GAMES_PREFIX}" \
 		datadir="${GAMES_DATADIR}"/${PN} \
 		$(use debug && echo debug=1) \
-		|| die "scons configure failed"
+		|| die
 }
 
 src_compile() {
@@ -52,10 +52,10 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin bin/${MY_PN} || die "dogamesbin failed"
+	dogamesbin bin/${MY_PN} || die
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r data/* || die "doins failed"
+	doins -r data/* || die
 
 	dodoc ChangeLog README
 

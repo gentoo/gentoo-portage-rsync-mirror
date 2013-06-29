@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.90 2013/06/26 08:57:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.91 2013/06/29 16:30:13 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cabal-1.16.0.3.ebuild:
+  Stable for sparc, wrt bug #472668
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cabal-1.16.0.3.ebuild:
   Stable for ia64, wrt bug #472668

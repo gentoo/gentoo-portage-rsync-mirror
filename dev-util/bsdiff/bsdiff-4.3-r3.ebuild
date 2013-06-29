@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.3-r3.ebuild,v 1.8 2013/06/26 08:48:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.3-r3.ebuild,v 1.9 2013/06/29 16:19:22 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.daemonology.net/bsdiff/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD-2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 
 DEPEND="app-arch/bzip2"
 RDEPEND="${DEPEND}"

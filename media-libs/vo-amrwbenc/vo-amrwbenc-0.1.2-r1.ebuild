@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/vo-amrwbenc-0.1.2-r1.ebuild,v 1.8 2013/06/26 12:18:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/vo-amrwbenc-0.1.2-r1.ebuild,v 1.9 2013/06/29 16:21:44 ago Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 
 [[ ${PV} == *9999 ]] || \
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
 IUSE="examples static-libs"
 
 src_configure() {

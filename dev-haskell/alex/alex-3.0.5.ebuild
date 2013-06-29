@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-3.0.5.ebuild,v 1.8 2013/06/26 08:48:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-3.0.5.ebuild,v 1.9 2013/06/29 16:19:58 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.933 2013/06/08 22:17:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.934 2013/06/29 16:09:38 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kdelibs-4.10.4.ebuild:
+  Stable for amd64, wrt to bug #473942
 
   08 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   +files/kdelibs-4.10.2-security-url-dont-show-password.patch:

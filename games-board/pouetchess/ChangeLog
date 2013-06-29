@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pouetchess
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.15 2011/03/23 07:42:14 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.16 2013/06/29 16:09:55 mr_bones_ Exp $
+
+  29 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  pouetchess-0.2.0-r1.ebuild:
+  add slot to libsdl dep
 
   23 Mar 2011; Alfredo Tupone <tupone@gentoo.org>
   pouetchess-0.2.0-r1.ebuild, files/pouetchess-0.2.0-segfaults.patch:
@@ -68,4 +72,3 @@
   Ebuild modified by Adrian Fruehwirth <adrian.fruehwirth@gmx.at>, Bernard
   Cafareli <voyageur@operamail.com>, Gorch(?) <gorch@12move.de>, and myself.
   Closing bug #121937.
-

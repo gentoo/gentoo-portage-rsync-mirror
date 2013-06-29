@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.93 2013/06/26 11:54:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.94 2013/06/29 16:30:00 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libwmf-0.2.8.4-r5.ebuild:
+  Stable for sparc, wrt bug #474248
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libwmf-0.2.8.4-r5.ebuild:
   Stable for arm, wrt bug #474248

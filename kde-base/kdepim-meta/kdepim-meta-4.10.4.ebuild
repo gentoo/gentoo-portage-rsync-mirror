@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.10.4.ebuild,v 1.1 2013/06/04 18:21:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.10.4.ebuild,v 1.2 2013/06/29 16:09:07 ago Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
 
 DESCRIPTION="kdepim - merge this to pull in all kdepim-derived packages"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="nls"
 
 RDEPEND="

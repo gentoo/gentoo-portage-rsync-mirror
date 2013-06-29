@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.7.1.ebuild,v 1.2 2013/05/30 11:50:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.7.1.ebuild,v 1.3 2013/06/29 16:13:39 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.skrooge.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 DEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.72 2013/06/26 02:59:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.73 2013/06/29 16:25:09 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> nedit-5.5_p20110116-r2.ebuild:
+  Stable for sparc, wrt bug #474482
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> nedit-5.5_p20110116-r2.ebuild:
   Stable for alpha, wrt bug #474482

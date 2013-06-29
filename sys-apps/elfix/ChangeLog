@@ -1,4 +1,7 @@
 
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> elfix-0.8.3.ebuild:
+  Stable for sparc, wrt bug #474200
+
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> elfix-0.8.3.ebuild:
   Stable for arm, wrt bug #474200
 

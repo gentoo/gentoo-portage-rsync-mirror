@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-cursors
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-cursors/ChangeLog,v 1.157 2013/06/08 17:33:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-cursors/ChangeLog,v 1.158 2013/06/29 16:09:19 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kdebase-cursors-4.10.4.ebuild:
+  Stable for amd64, wrt to bug #473942
 
   08 Jun 2013; Agostino Sarubbo <ago@gentoo.org> -kdebase-cursors-4.10.2.ebuild:
   Remove old

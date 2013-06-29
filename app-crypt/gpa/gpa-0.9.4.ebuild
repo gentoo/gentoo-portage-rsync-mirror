@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.4.ebuild,v 1.6 2013/06/26 03:04:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.4.ebuild,v 1.7 2013/06/29 16:30:25 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE_LINGUAS=" ar cs de es fr ja nl pl pt_BR ru sv tr zh_TW"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 

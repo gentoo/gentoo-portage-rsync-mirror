@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.164 2013/06/08 17:33:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.165 2013/06/29 16:08:43 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> bovo-4.10.4.ebuild:
+  Stable for amd64, wrt to bug #473942
 
   08 Jun 2013; Agostino Sarubbo <ago@gentoo.org> -bovo-4.10.2.ebuild:
   Remove old
