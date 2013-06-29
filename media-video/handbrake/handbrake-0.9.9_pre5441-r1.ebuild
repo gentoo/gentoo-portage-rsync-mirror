@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441-r1.ebuild,v 1.2 2013/05/16 05:52:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441-r1.ebuild,v 1.3 2013/06/29 20:35:06 tomwij Exp $
 
 EAPI="5"
 
@@ -42,8 +42,7 @@ RDEPEND="
 	media-libs/libvorbis
 	media-libs/x264
 	media-sound/lame
-	ffmpeg? ( =virtual/ffmpeg-9 )
-	sys-libs/glibc:2.2
+	ffmpeg? ( =virtual/ffmpeg-9 !<media-video/ffmpeg-1.2.1 )
 	sys-libs/zlib
 	gstreamer? (
 		media-libs/gstreamer:1.0
@@ -66,6 +65,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	dev-lang/yasm
+	dev-util/intltool
 	sys-devel/automake"
 
 pkg_setup() {

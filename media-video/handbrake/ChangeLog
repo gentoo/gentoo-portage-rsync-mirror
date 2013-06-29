@@ -1,6 +1,12 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.7 2013/05/23 17:57:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.8 2013/06/29 20:35:06 tomwij Exp $
+
+  29 Jun 2013; Tom Wijsman <TomWij@gentoo.org> handbrake-0.9.9.ebuild,
+  handbrake-0.9.9_pre5441-r1.ebuild, handbrake-9999.ebuild:
+  Block <media-video/ffmpeg-1.2.1, which Handbrake 0.9.9 does not build against,
+  due to a dependency version change in =virtual/ffmpeg-9. Reported by Heiss,
+  fixes bug #475262.
 
   23 May 2013; Tom Wijsman <TomWij@gentoo.org> handbrake-0.9.9.ebuild,
   handbrake-9999.ebuild:
