@@ -1,0 +1,9 @@
+# ChangeLog for net-print/cndrvcups-common-lb
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-common-lb/ChangeLog,v 1.1 2013/06/29 11:29:50 pacho Exp $
+
+*cndrvcups-common-lb-2.70 (29 Jun 2013)
+
+  29 Jun 2013; Pacho Ramos <pacho@gentoo.org> +cndrvcups-common-lb-2.70.ebuild,
+  +metadata.xml:
+  Introduce this driver as requested by M.A.R. Osorio via mail
