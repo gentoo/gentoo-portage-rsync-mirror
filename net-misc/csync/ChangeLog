@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/csync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.16 2013/04/29 15:53:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.17 2013/06/28 23:02:48 dastergon Exp $
+
+*csync-0.80.0 (28 Jun 2013)
+
+  28 Jun 2013; Pavlos Ratis <dastergon@gentoo.org> +csync-0.80.0.ebuild:
+  Version bump, bug 475112
 
 *csync-0.70.7 (29 Apr 2013)
 
