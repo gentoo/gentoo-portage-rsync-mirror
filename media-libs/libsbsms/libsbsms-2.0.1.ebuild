@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/libsbsms-2.0.1.ebuild,v 1.5 2013/06/25 15:03:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/libsbsms-2.0.1.ebuild,v 1.6 2013/06/29 18:29:11 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sbsms/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~mips ppc ~ppc64 x86"
 IUSE="sse static-libs"
 
 src_prepare() {

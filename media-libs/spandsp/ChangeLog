@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.26 2013/05/06 04:20:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.27 2013/06/29 18:26:37 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> spandsp-0.0.6_pre12-r1.ebuild:
+  Stable for ppc, wrt bug #464536
 
   06 May 2013; Matt Turner <mattst88@gentoo.org> spandsp-0.0.6_pre21.ebuild:
   Readd MMX, SSE2, and SSE3 USE flags. Thanks to Andrew Savchenko for the bug

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.92 2013/06/29 16:26:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.93 2013/06/29 18:28:44 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kmod-13-r1.ebuild:
+  Stable for ppc, wrt bug #470580
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kmod-13-r1.ebuild:
   Stable for sparc, wrt bug #470580
