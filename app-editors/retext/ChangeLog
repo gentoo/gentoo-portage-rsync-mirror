@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/retext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.1 2013/06/29 12:33:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.2 2013/06/29 13:02:38 tomwij Exp $
+
+*retext-9999 (29 Jun 2013)
+*retext-4.0.1-r1 (29 Jun 2013)
+
+  29 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +retext-4.0.1-r1.ebuild,
+  +retext-9999.ebuild:
+  Revision bump. Made symlink from /usr/bin/retext to /usr/bin/retext.py. Made
+  sure locales are respected by removing disabled locales. Removed unnecessary
+  inherit. Added live 9999 ebuild for testing purposes.
 
 *retext-4.0.1 (29 Jun 2013)
 
