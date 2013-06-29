@@ -1,0 +1,15 @@
+--- a/build.xml
++++ b/build.xml
+@@ -218,12 +218,6 @@
+         </fileset>
+       </batchtest>
+     </junit>
+-    <junitreport todir="${doc}/junit">
+-      <fileset dir="${doc}/junit">
+-        <include name="TEST-*.xml"/>
+-      </fileset>
+-      <report format="noframes" todir="${doc}/junit"/>
+-    </junitreport>
+   </target>
+ 
+   <!-- ******************************************************************** -->
