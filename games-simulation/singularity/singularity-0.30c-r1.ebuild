@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30c-r1.ebuild,v 1.1 2013/06/29 11:31:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30c-r1.ebuild,v 1.2 2013/06/29 17:00:40 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -21,6 +21,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	dev-python/pygame[${PYTHON_USEDEP}]
+	dev-python/numpy[${PYTHON_USEDEP}]
 	media-libs/sdl-mixer[vorbis]"
 DEPEND="${DEPEND}
 	app-arch/unzip"

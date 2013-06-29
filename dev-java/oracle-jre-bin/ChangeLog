@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.37 2013/06/26 07:56:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.38 2013/06/29 16:39:30 tomwij Exp $
+
+  29 Jun 2013; Tom Wijsman <TomWij@gentoo.org> -oracle-jre-bin-1.7.0.17.ebuild,
+  -oracle-jre-bin-1.7.0.21.ebuild, oracle-jre-bin-1.7.0.25.ebuild:
+  Drop old insecure versions; stabilized 1.7.0.25 after building, testing and
+  running some Java software. Permitted by ago.
 
   26 Jun 2013; Andreas Schuerch <nativemad@gentoo.org>
   oracle-jre-bin-1.7.0.25.ebuild:

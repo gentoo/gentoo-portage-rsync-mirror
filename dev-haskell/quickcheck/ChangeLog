@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.66 2013/06/26 08:59:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.67 2013/06/29 16:32:43 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> quickcheck-2.6.ebuild:
+  Stable for sparc, wrt bug #473336
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> quickcheck-2.6.ebuild:
   Stable for ia64, wrt bug #473336

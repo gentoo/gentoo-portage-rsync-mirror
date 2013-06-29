@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.25.ebuild,v 1.2 2013/06/26 07:56:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.25.ebuild,v 1.3 2013/06/29 16:39:30 tomwij Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ SRC_URI="
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.7"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="X alsa fontconfig jce nsplugin pax_kernel"
 
 RESTRICT="fetch strip"

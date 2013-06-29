@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.18 2012/05/04 04:30:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.19 2013/06/29 16:39:05 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_P=${P/_}
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="gnome"
 
 RDEPEND="x11-libs/gtk+:2
-	media-libs/libsdl[audio]
+	media-libs/libsdl:0[audio]
 	media-libs/sdl-mixer[vorbis]
 	gnome? ( gnome-base/libgnomeui )"
 DEPEND="${RDEPEND}
@@ -39,7 +39,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	doicon pixmaps/${PN}.png
 	make_desktop_entry ${PN} Gtkboard
 	dodoc AUTHORS ChangeLog TODO

@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/kshutdown
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.40 2013/05/12 13:36:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.41 2013/06/29 16:44:26 johu Exp $
+
+*kshutdown-3.0_beta8 (29 Jun 2013)
+
+  29 Jun 2013; Johannes Huber <johu@gentoo.org> +kshutdown-3.0_beta8.ebuild,
+  -files/kshutdown-3.0_beta7-no-consolekit.patch, -kshutdown-2.0.ebuild,
+  -kshutdown-3.0_beta7.ebuild:
+  Version bump by Manuel Rüger <gentoo@rueg.eu>. Restore ~ppc in newest no new
+  deps compared to old. Remove old.
 
 *kshutdown-3.0_beta7 (12 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.22.ebuild,v 1.7 2013/06/26 08:58:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.22.ebuild,v 1.8 2013/06/29 16:32:17 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://wgetpaste.zlin.dk/${P}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="zsh-completion +lodgeit-default"
 
 DEPEND=""

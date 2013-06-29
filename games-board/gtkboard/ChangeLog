@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gtkboard
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.13 2012/05/04 04:30:10 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.14 2013/06/29 16:39:05 mr_bones_ Exp $
+
+  29 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  gtkboard-0.11_pre0.ebuild:
+  EAPI=5; add slot to libsdl dep
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkboard-0.11_pre0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -45,4 +49,3 @@
   30 Jul 2003; Michael Sterrett <msterret@gentoo.org> gtkboard-0.10.4.ebuild:
   initial commit; ebuild submitted by Rob Cakebread (bug 24901) and then
   modified.
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.136 2013/06/26 08:58:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.137 2013/06/29 16:32:17 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> wgetpaste-2.22.ebuild:
+  Stable for sparc, wrt bug #471408
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> wgetpaste-2.22.ebuild:
   Stable for ia64, wrt bug #471408
