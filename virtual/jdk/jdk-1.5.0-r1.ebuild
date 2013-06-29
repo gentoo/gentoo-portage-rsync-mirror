@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.5.0.ebuild,v 1.22 2013/03/10 11:01:08 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.5.0-r1.ebuild,v 1.1 2013/06/29 10:58:51 tomwij Exp $
 
 DESCRIPTION="Virtual for Java Development Kit (JDK)"
 HOMEPAGE=""
@@ -18,14 +18,6 @@ IUSE=""
 # note that this "voodoo" is pretty annoying for Prefix, and that we didn't
 # invent it in the first place!
 RDEPEND="|| (
-		amd64? ( =dev-java/sun-jdk-1.5.0* )
-		x86? ( =dev-java/sun-jdk-1.5.0* )
-		amd64-linux? ( =dev-java/sun-jdk-1.5.0* )
-		x86-linux? ( =dev-java/sun-jdk-1.5.0* )
-		x64-solaris? ( =dev-java/sun-jdk-1.5.0* )
-		x86-solaris? ( =dev-java/sun-jdk-1.5.0* )
-		sparc-solaris? ( =dev-java/sun-jdk-1.5.0* )
-		sparc64-solaris? ( =dev-java/sun-jdk-1.5.0* )
 		=dev-java/ibm-jdk-bin-1.5.0*
 		=dev-java/jrockit-jdk-bin-1.5.0*
 		=dev-java/apple-jdk-bin-1.5.0*

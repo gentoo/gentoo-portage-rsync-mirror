@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/jre-1.5.0-r1.ebuild,v 1.7 2013/03/10 10:56:07 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/jre-1.5.0-r2.ebuild,v 1.1 2013/06/29 10:58:57 tomwij Exp $
 
 EAPI=4
 
@@ -15,6 +15,5 @@ IUSE=""
 
 RDEPEND="|| (
 		virtual/jdk:1.5
-		dev-java/sun-jre-bin:1.5
 		dev-java/jamvm:0
 	)"

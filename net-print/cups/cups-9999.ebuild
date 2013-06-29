@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.34 2013/05/14 18:44:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.35 2013/06/29 10:59:16 dilfridge Exp $
 
 EAPI=5
 
@@ -287,12 +287,6 @@ pkg_postinst() {
 		elog "You will have to find printers using zeroconf/avahi instead, enter"
 		elog "the location manually, or run cups-browsed from net-print/cups-filters"
 		elog "which re-adds that functionality as a separate daemon."
-		echo
-	elif [[ "${REPLACING_VERSIONS}" ]] && [[ "${REPLACING_VERSIONS}" < "1.6.2" ]]; then
-		echo
-		elog "Starting with net-print/cups-filters-1.0.30, that package provides"
-		elog "a daemon cups-browsed which implements printer discovery via the"
-		elog "CUPS-1.5 protocol."
 		echo
 	fi
 

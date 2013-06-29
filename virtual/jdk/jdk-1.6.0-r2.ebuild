@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0-r1.ebuild,v 1.9 2013/03/10 11:01:08 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0-r2.ebuild,v 1.1 2013/06/29 10:58:51 tomwij Exp $
 
 EAPI="4"
 
@@ -27,8 +27,7 @@ PPC_OPTS="|| (
 # Prefix defaults - prefer sun-jdk over icedtea
 PREFIX_OPTS="|| (
 	=dev-java/icedtea-bin-6*
-	=dev-java/icedtea-bin-1*
-	=dev-java/sun-jdk-1.6.0* )"
+	=dev-java/icedtea-bin-1* )"
 
 # icedtea-bin-1* is old versioning scheme of icedtea-bin-6*
 RDEPEND="|| (
@@ -38,7 +37,6 @@ RDEPEND="|| (
 	=dev-java/icedtea-bin-6*
 	=dev-java/icedtea-bin-1*
 	=dev-java/icedtea-6*
-	=dev-java/sun-jdk-1.6.0*
 	=dev-java/ibm-jdk-bin-1.6.0*
 	=dev-java/hp-jdk-bin-1.6.0*
 	=dev-java/diablo-jdk-1.6.0*
