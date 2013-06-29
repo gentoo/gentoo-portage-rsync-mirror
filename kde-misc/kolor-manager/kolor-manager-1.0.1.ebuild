@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/kolor-manager-1.0.1.ebuild,v 1.1 2013/04/15 23:26:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/kolor-manager-1.0.1.ebuild,v 1.2 2013/06/29 12:14:41 johu Exp $
 
 EAPI=5
 
-inherit eutils kde4-base
+inherit kde4-base
 
 DESCRIPTION="KControl module for Oyranos CMS cross desktop settings."
 HOMEPAGE="http://www.oyranos.org/wiki/index.php?title=Kolor-manager"
@@ -16,14 +16,8 @@ SLOT="4"
 IUSE="debug"
 
 DEPEND="
-	>=media-libs/oyranos-0.9.0
+	>=media-libs/oyranos-0.9.3
 	media-libs/libXcm
 	x11-libs/libXrandr
 "
 RDEPEND="${DEPEND}"
-
-src_prepare(){
-	if has_version "<media-libs/oyranos-0.9.3" ; then
-		cp "${FILESDIR}"/FindOyranos.cmake cmake/modules/ || die
-	fi
-}

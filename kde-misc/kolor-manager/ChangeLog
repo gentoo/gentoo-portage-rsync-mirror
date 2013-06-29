@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kolor-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/ChangeLog,v 1.5 2013/04/15 23:26:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/ChangeLog,v 1.6 2013/06/29 12:14:41 johu Exp $
+
+  29 Jun 2013; Johannes Huber <johu@gentoo.org> kolor-manager-1.0.1.ebuild:
+  Simplify ebuild by raising dep dev-libs/oyranos.
 
 *kolor-manager-1.0.1 (15 Apr 2013)
 

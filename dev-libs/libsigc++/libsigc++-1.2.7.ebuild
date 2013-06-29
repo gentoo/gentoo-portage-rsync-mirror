@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.9 2011/08/26 01:59:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.10 2013/06/29 12:18:33 tomjbe Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -29,6 +29,9 @@ src_prepare() {
 	# fixes bug #219041
 	sed -e 's:ACLOCAL_AMFLAGS = -I $(srcdir)/scripts:ACLOCAL_AMFLAGS = -I scripts:' \
 		-i Makefile.{in,am}
+
+	# fixes bug #469698
+	sed -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' -i configure.in || die
 
 	# Fix duplicated file installation, bug #346949
 	epatch "${FILESDIR}/${P}-fix-install.patch"

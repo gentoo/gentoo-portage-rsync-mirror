@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/markups
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/ChangeLog,v 1.1 2013/06/29 12:23:47 tomwij Exp $
+
+*markups-0.2.4 (29 Jun 2013)
+
+  29 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +markups-0.2.4.ebuild,
+  +metadata.xml:
+  New ebuild for dev-python/markups, a wrapper around various text markups;
+  dependency of app-editors/retext. Fixes bug #475200, original ebuild by mrueg.
