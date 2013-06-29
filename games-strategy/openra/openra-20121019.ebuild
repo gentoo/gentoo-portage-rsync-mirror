@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20121019.ebuild,v 1.1 2012/10/21 00:09:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20121019.ebuild,v 1.2 2013/06/29 19:02:29 hasufell Exp $
 
 EAPI=4
 
@@ -34,6 +34,10 @@ src_prepare() {
 	sed \
 		-e "/Version/s/{DEV_VERSION}/release-${PV}/" \
 		-i mods/{ra,cnc,d2k}/mod.yaml || die
+}
+
+src_compile() {
+	emake all
 }
 
 src_install() {
