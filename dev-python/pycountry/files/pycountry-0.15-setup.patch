@@ -1,0 +1,13 @@
+https://bitbucket.org/techtonik/pycountry/issue/9/can-pytest-extras-be-removed-015
+diff -ur pycountry-0.15.orig/setup.py pycountry-0.15/setup.py
+--- setup.py	2013-06-22 15:04:54.000000000 +0800
++++ setup.py	2013-06-29 23:27:39.566578125 +0800
+@@ -24,7 +24,4 @@
+     include_package_data=True,
+     package_dir={'': 'src'},
+     install_requires=[
+-        'pytest',
+-        'pytest-capturelog',
+-        'pytest-codecheckers',
+-        'pytest-cov'])
++        'pytest'])

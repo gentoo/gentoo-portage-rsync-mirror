@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pycountry
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.13 2013/06/18 08:00:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.14 2013/06/29 15:59:39 idella4 Exp $
+
+*pycountry-0.15 (29 Jun 2013)
+
+  29 Jun 2013; Ian Delaney <idella4@gentoo.org> +pycountry-0.15 (29 Jun 2013),
+  +files/pycountry-0.15-setup.patch:
+  bump; support for py2.5 dropped by discretion, py[3.1-2] and pypy according 
+  to changes in this version bump ex tox.ini, patch setup.patch to exclude 
+  'optional' plugin type adjuncts to pytest which substitutes nosetests to 
+  run tests, test phase upgraded, fixes Bug #474680  
 
 *pycountry-0.14.8 (18 Jun 2013)
 

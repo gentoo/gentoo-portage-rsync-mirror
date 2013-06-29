@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-9999.ebuild,v 1.1 2013/06/29 13:02:38 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-9999.ebuild,v 1.2 2013/06/29 15:43:37 tomwij Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 python3_2 )
 PLOCALES="ca cs cy da de es et eu fr it ja pl pt pt_BR ru sk uk zh_CN zh_TW"
 
-inherit eutils distutils-r1 l10n
+inherit distutils-r1 l10n
 
 MY_PN="ReText"
 MY_P="${MY_PN}-${PV/_/~}"
@@ -29,12 +29,12 @@ SLOT="0"
 
 IUSE="+spell"
 
-RDEPEND="
-	dev-python/docutils
-	dev-python/markdown
-	dev-python/markups
-	dev-python/PyQt4[webkit]
-	spell? ( dev-python/pyenchant )
+RDEPEND+="
+	dev-python/docutils[${PYTHON_USEDEP}]
+	dev-python/markdown[${PYTHON_USEDEP}]
+	dev-python/markups[${PYTHON_USEDEP}]
+	dev-python/PyQt4[webkit,${PYTHON_USEDEP}]
+	spell? ( dev-python/pyenchant[${PYTHON_USEDEP}] )
 "
 
 S="${WORKDIR}"/${MY_P}
