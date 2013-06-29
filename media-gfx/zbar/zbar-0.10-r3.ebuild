@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r3.ebuild,v 1.2 2013/06/23 18:57:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r3.ebuild,v 1.4 2013/06/29 09:37:13 ago Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.6"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/zbar/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gtk imagemagick jpeg python qt4 static-libs +threads v4l X xv"
 
 RDEPEND="gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 )
