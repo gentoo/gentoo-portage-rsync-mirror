@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.53 2013/06/27 13:59:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.54 2013/06/29 03:43:38 aballier Exp $
+
+*libva-1.2.1 (29 Jun 2013)
+
+  29 Jun 2013; Alexis Ballier <aballier@gentoo.org> +libva-1.2.1.ebuild,
+  libva-9999.ebuild:
+  version bump and mpeg2enc has been renamed upstream so we dont need to rename
+  it anymore
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> libva-1.0.15.ebuild,
   libva-1.0.16.ebuild, libva-1.1.0.ebuild, libva-1.1.1.ebuild,
