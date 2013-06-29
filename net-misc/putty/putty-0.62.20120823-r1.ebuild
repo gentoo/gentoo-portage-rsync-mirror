@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.20120823-r1.ebuild,v 1.1 2013/06/28 14:22:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.20120823-r1.ebuild,v 1.2 2013/06/29 15:01:21 jer Exp $
 
 EAPI="4"
 
@@ -9,7 +9,9 @@ inherit autotools eutils gnome2-utils toolchain-funcs versionator
 MY_PV="$(get_version_component_range 1-2)-2012-08-23"
 DESCRIPTION="UNIX port of the famous Telnet and SSH client"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~sgtatham/putty/"
-SRC_URI="http://tartarus.org/~simon/${PN}-snapshots/${PN}-${MY_PV}.tar.gz"
+SRC_URI="
+	http://tartarus.org/~simon/${PN}-snapshots/${PN}-${MY_PV}.tar.gz
+	http://dev.gentoo.org/~jer/${PN}-icons.tar.bz2"
 LICENSE="MIT"
 
 SLOT="0"
@@ -50,11 +52,6 @@ src_configure() {
 src_compile() {
 	cd "${S}"/unix || die
 	emake $(usex ipv6 '' COMPAT=-DNO_IPV6)
-
-	cd "${S}"/icons || die
-	for i in 16 22 24 32 48 64 128 256; do
-		./mkicon.py  putty_icon ${i} putty-${i}.png || die
-	done
 }
 
 src_install() {
@@ -66,13 +63,12 @@ src_install() {
 	cd "${S}"/unix || die
 	default
 
-	# install desktop file provided by Gustav Schaffter in #49577
-	cd "${S}"/icons || die
 	for i in 16 22 24 32 48 64 128 256; do
-		newicon -s ${i} putty-${i}.png putty.png
+		newicon -s ${i} "${WORKDIR}"/${PN}-icons/${PN}-${i}.png ${PN}.png
 	done
 
-	make_desktop_entry putty PuTTY putty Network
+	# install desktop file provided by Gustav Schaffter in #49577
+	make_desktop_entry ${PN} PuTTY ${PN} Network
 }
 
 pkg_preinst() {

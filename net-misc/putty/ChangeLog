@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.72 2013/06/28 14:22:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.73 2013/06/29 15:01:21 jer Exp $
+
+  29 Jun 2013; Jeroen Roovers <jer@gentoo.org> putty-0.62.20120823-r1.ebuild:
+  Package new icons separately (bug #473022).
 
 *putty-0.62.20120823-r1 (28 Jun 2013)
 
@@ -279,4 +282,3 @@
 
   03 Jun 2003; Tavis Ormandy <taviso@gentoo.org> putty-20030603.ebuild:
   Initial import, gtk+ port of windows ssh client.
-
