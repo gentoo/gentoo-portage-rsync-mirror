@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Amazon-S3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.20 2012/06/24 12:59:39 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.21 2013/06/29 18:36:32 zlogene Exp $
+
+  29 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> Net-Amazon-S3-0.560.0.ebuild:
+  Remove dev-perl/Class-MOP dependency
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

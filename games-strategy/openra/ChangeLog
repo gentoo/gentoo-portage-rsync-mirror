@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/openra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.16 2013/06/25 12:55:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.17 2013/06/29 18:41:44 hasufell Exp $
+
+  29 Jun 2013; Julian Ospald <hasufell@gentoo.org> openra-20130514.ebuild:
+  don't build stuff in src_install
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> openra-20130514.ebuild:
   Stable for amd64, wrt bug #474390

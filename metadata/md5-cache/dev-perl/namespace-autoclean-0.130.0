@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-perl/namespace-clean-0.200 || ( >=dev-perl/Moose-1.990 >=dev-perl/Class-MOP-0.80 ) >=dev-perl/B-Hooks-EndOfScope-0.07 >=virtual/perl-ExtUtils-MakeMaker-6.31 test? ( >=dev-perl/Moose-0.56 dev-perl/Sub-Name ) dev-lang/perl[-build]
+DEPEND=>=dev-perl/namespace-clean-0.200 >=dev-perl/Moose-1.990 >=dev-perl/B-Hooks-EndOfScope-0.07 >=virtual/perl-ExtUtils-MakeMaker-6.31 test? ( >=dev-perl/Moose-0.56 dev-perl/Sub-Name ) dev-lang/perl[-build]
 DESCRIPTION=Keep imports out of your namespace
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/namespace-autoclean/
 IUSE=test
 KEYWORDS=amd64 ~arm ppc x86 ~x64-macos
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=>=dev-perl/namespace-clean-0.200 || ( >=dev-perl/Moose-1.990 >=dev-perl/Class-MOP-0.80 ) >=dev-perl/B-Hooks-EndOfScope-0.07 dev-lang/perl[-build]
+RDEPEND=>=dev-perl/namespace-clean-0.200 >=dev-perl/Moose-1.990 >=dev-perl/B-Hooks-EndOfScope-0.07 dev-lang/perl[-build]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/B/BO/BOBTFISH/namespace-autoclean-0.13.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	ba21eba2562fc2643deeea95fd28665d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=ee01bec9c63dcae0e140e78029e14b37
+_md5_=088e9ca992271f57386a634b2c201ebe

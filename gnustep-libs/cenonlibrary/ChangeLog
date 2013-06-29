@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/cenonlibrary
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.15 2013/06/25 18:43:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cenonlibrary/ChangeLog,v 1.16 2013/06/29 18:31:50 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cenonlibrary-4.0.0.ebuild:
+  Stable for ppc, wrt bug #474222
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cenonlibrary-4.0.0.ebuild:
   Stable for amd64, wrt bug #474222

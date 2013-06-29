@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7991 2013/06/28 22:09:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7992 2013/06/29 18:50:16 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jun 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Remove unused licenses.
 
   28 Jun 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   Add some comments as of why the remaining multilib media libs are still
