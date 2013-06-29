@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.120 2013/06/26 11:59:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.121 2013/06/29 08:19:23 graaff Exp $
+
+*minitest-5.0.6 (29 Jun 2013)
+
+  29 Jun 2013; Hans de Graaff <graaff@gentoo.org> +minitest-5.0.6.ebuild:
+  Version bump. Add back jruby support.
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> minitest-4.7.4.ebuild:
   Stable for arm, wrt bug #472904

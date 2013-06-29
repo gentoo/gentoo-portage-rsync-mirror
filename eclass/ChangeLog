@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.866 2013/06/28 12:42:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.867 2013/06/29 08:17:06 mgorny Exp $
+
+  29 Jun 2013; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Respect arguments when checking for test targets. This becomes helpful if one
+  of the arguments is -C.
 
   28 Jun 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
   multilib-minimal.eclass:
