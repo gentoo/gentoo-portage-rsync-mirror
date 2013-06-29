@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-weather
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-weather/ChangeLog,v 1.2 2013/05/13 20:53:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-weather/ChangeLog,v 1.3 2013/06/29 21:01:55 pacho Exp $
+
+*gnome-weather-3.8.2-r1 (29 Jun 2013)
+
+  29 Jun 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-weather-3.8.2-temp-unit.patch, +gnome-weather-3.8.2-r1.ebuild,
+  -gnome-weather-3.8.1.ebuild:
+  Add a submenu to the app menu to choose the temperature unit (from 'master'),
+  drop old.
 
 *gnome-weather-3.8.2 (13 May 2013)
 
