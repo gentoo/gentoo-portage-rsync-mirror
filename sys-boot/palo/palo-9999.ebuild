@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.1 2013/06/29 13:30:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.2 2013/06/29 13:39:26 jer Exp $
 
 EAPI=5
 
@@ -36,7 +36,6 @@ src_install() {
 	dosbin palo/palo
 
 	doman palo.8
-	dohtml README.html
 	dodoc README palo.conf
 
 	insinto /etc
