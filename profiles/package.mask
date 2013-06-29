@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14873 2013/06/28 22:09:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14874 2013/06/29 19:42:48 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -684,12 +684,6 @@ media-gfx/yafaray
 # Jeroen Roovers <jer@gentoo.org> (09 Jan 2013)
 # Testing branch, unstable upstream
 >net-nntp/tin-2.1
-
-# Torsten Veller <tove@gentoo.org> (08 Jan 2013)
-# Mask dev-perl/Class-MOP. It was merge with dev-perl/Moose-2.
-# Now as the last arch stabilized Moose-2, dev-perl/Class-MOP will be removed.
-# bug #350612
-dev-perl/Class-MOP
 
 # Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
 # Requires >=net-fs/samba-4 (bug #450226)

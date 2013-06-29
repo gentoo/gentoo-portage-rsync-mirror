@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ninja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.19 2013/06/26 12:01:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.20 2013/06/29 19:41:28 ago Exp $
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ninja-1.3.3.ebuild:
+  Stable for ppc64, wrt bug #472186
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ninja-1.3.3.ebuild:
   Stable for arm, wrt bug #472186
