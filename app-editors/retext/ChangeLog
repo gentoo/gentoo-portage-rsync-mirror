@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/retext
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.1 2013/06/29 12:33:55 tomwij Exp $
+
+*retext-4.0.1 (29 Jun 2013)
+
+  29 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +metadata.xml,
+  +retext-4.0.1.ebuild:
+  New ebuild for app-editors/retext, a Qt-based text editor for Markdown and
+  reStructuredText. Fixes bug #445614, original ebuild by Manuel Rüger (mrueg),
+  adjusted by Johann Schmitz and some small changes by me.
