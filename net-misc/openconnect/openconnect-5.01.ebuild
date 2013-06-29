@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-5.01.ebuild,v 1.1 2013/06/23 12:43:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-5.01.ebuild,v 1.2 2013/06/29 02:37:48 tetromino Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.infradead.org/pub/${PN}/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="doc -gnutls libproxy nls static-libs"
+IUSE="doc +gnutls libproxy nls static-libs"
 ILINGUAS="ar as ast bg bg_BG bn bn_IN bs ca ca@valencia cs da de el en_GB en_US eo es es_CR
 	es_MX et eu fa fi fr gd gl gu he hi hi_IN hu id it ja km kn ko ku lo lt lv ml mr
 	ms nb nl nn no or pa pl pt pt_BR pt_PT ro ru sk sl sq sr sr@latin sv ta te
@@ -30,7 +30,16 @@ done
 
 DEPEND="dev-libs/libxml2
 	sys-libs/zlib
-	!gnutls? ( dev-libs/openssl[static-libs?] )
+	!gnutls? (
+		|| (
+			>=dev-libs/openssl-1.0.1f:0[static-libs?]
+			(
+				>=dev-libs/openssl-1.0.1:0[static-libs?]
+				<dev-libs/openssl-1.0.1d:0[static-libs?]
+			)
+			<dev-libs/openssl-1.0.0k:0[static-libs?]
+		)
+	)
 	gnutls? (
 		|| (
 			( >=net-libs/gnutls-3[static-libs?] dev-libs/nettle )

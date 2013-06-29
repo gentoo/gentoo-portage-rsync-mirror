@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.21 2013/06/23 12:43:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.22 2013/06/29 02:37:48 tetromino Exp $
+
+  29 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  openconnect-5.01.ebuild:
+  Do not depend on incompatible openssl versions, and enable gnutls USE flag by
+  default (bug #474504, acked by hasufell).
 
 *openconnect-5.01 (23 Jun 2013)
 
