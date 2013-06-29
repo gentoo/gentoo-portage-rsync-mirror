@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.943 2013/06/27 12:19:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.944 2013/06/29 03:22:33 heroxbd Exp $
+
+  29 Jun 2013; Benda Xu <heroxbd@gentoo.org> files/eblits/common.eblit,
+  files/eblits/pkg_preinst.eblit, files/eblits/pkg_setup.eblit,
+  files/eblits/src_install.eblit, files/eblits/src_unpack.eblit:
+  Apply trivial Prefix adjustment first: For vanilla portage, EPREFIX is null,
+  ED and EROOT are D and ROOT. The rest of Prefix support is still under review
+  by vapier. (bug 473728)
 
   27 Jun 2013; Jeroen Roovers <jer@gentoo.org> glibc-2.17.ebuild:
   Stable for HPPA too.

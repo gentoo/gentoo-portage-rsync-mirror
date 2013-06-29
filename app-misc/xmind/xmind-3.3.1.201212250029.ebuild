@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.3.1.201212250029.ebuild,v 1.2 2013/04/03 18:14:01 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.3.1.201212250029.ebuild,v 1.3 2013/06/29 03:01:22 creffett Exp $
 
 EAPI=5
 
@@ -27,6 +27,12 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 QA_PRESTRIPPED="/usr/$(get_libdir)/xmind/XMind/libcairo-swt.so"
+QA_FLAGS_IGNORED="
+	/usr/$(get_libdir)/xmind/Commons/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120522-1813/eclipse_1502.so
+	/usr/$(get_libdir)/xmind/Commons/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.200.v20120522-1813/eclipse_1502.so
+	/usr/$(get_libdir)/xmind/XMind/libcairo-swt.so
+	/usr/$(get_libdir)/xmind/XMind/XMind
+"
 
 src_configure() {
 	if use amd64; then

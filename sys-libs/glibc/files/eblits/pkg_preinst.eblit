@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_preinst.eblit,v 1.10 2013/04/10 17:36:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_preinst.eblit,v 1.11 2013/06/29 03:22:32 heroxbd Exp $
 
 # Simple test to make sure our new glibc isnt completely broken.
 # Make sure we don't test with statically built binaries since
@@ -15,12 +15,12 @@ glibc_sanity_check() {
 	# lead to unsafe code execution if the generated prefix is
 	# within a world-writable directory.
 	# (e.g. /var/tmp/portage:${HOSTNAME})
-	pushd "${D}"/$(get_libdir) >/dev/null
+	pushd "${ED}"/$(get_libdir) >/dev/null
 
 	local x striptest
 	for x in date env ls true uname ; do
 		x=$(type -p ${x})
-		[[ -z ${x} ]] && continue
+		[[ -z ${x} || ${x} != ${EPREFIX}/* ]] && continue
 		striptest=$(LC_ALL="C" file -L ${x} 2>/dev/null) || continue
 		[[ ${striptest} == *"statically linked"* ]] && continue
 		./ld-*.so --library-path . ${x} > /dev/null \
@@ -35,11 +35,11 @@ eblit-glibc-pkg_preinst() {
 	just_headers && return
 
 	# prepare /etc/ld.so.conf.d/ for files
-	mkdir -p "${ROOT}"/etc/ld.so.conf.d
+	mkdir -p "${EROOT}"/etc/ld.so.conf.d
 
 	# Default /etc/hosts.conf:multi to on for systems with small dbs.
-	if [[ $(wc -l < "${ROOT}"/etc/hosts) -lt 1000 ]] ; then
-		sed -i '/^multi off/s:off:on:' "${D}"/etc/host.conf
+	if [[ $(wc -l < "${EROOT}"/etc/hosts) -lt 1000 ]] ; then
+		sed -i '/^multi off/s:off:on:' "${ED}"/etc/host.conf
 		elog "Defaulting /etc/host.conf:multi to on"
 	fi
 
