@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.9.3.ebuild,v 1.3 2012/11/17 20:31:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.9.3.ebuild,v 1.4 2013/06/29 17:19:02 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[X,video,audio]
+DEPEND="media-libs/libsdl:0[X,video,audio]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
 
@@ -30,7 +30,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
 	newicon biloba_icon.png ${PN}.png
 	make_desktop_entry biloba Biloba

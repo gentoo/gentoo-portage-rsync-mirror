@@ -1,10 +1,10 @@
 # ChangeLog for games-simulation/singularity
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.23 2013/06/29 17:00:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.24 2013/06/29 17:01:23 slyfox Exp $
 
   29 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
   singularity-0.30c-r1.ebuild, singularity-0.30c.ebuild:
-  Added missing 'dev-python/numpy' RDEPEND (niticed by hasufell).
+  Added missing 'dev-python/numpy' RDEPEND (noticed by hasufell).
 
 *singularity-0.30c-r1 (29 Jun 2013)
 

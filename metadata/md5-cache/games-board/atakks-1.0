@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=media-libs/libsdl
+DEPEND=media-libs/libsdl:0
 DESCRIPTION=A clone of Ataxx
 EAPI=2
 HOMEPAGE=http://team.gcu-squad.org/~fab
 KEYWORDS=~amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=media-libs/libsdl
+RDEPEND=media-libs/libsdl:0
 SLOT=0
 SRC_URI=mirror://gentoo/atakks-1.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7a4cd2bb40f078dc835273724ad2c6e2
+_md5_=1d92cce0a4630bd3c8bb9d8db8c6b1da

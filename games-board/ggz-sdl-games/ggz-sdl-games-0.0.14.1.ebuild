@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.14.1.ebuild,v 1.6 2011/06/06 19:22:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.14.1.ebuild,v 1.7 2013/06/29 17:14:37 mr_bones_ Exp $
 
 EAPI=2
 inherit games-ggz
@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND="~dev-games/libggz-${PV}
 	~dev-games/ggz-client-libs-${PV}
-	media-libs/libsdl[video,X]
+	media-libs/libsdl:0[video,X]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
