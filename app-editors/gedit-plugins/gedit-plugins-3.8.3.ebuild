@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.3.ebuild,v 1.1 2013/06/18 18:55:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.3.ebuild,v 1.2 2013/06/30 21:33:08 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,6 +23,7 @@ REQUIRED_USE="
 	charmap? ( python )
 	git? ( python )
 	terminal? ( python )
+	python? ( ${REQUIRED_PYTHON_USE} )
 "
 
 RDEPEND="

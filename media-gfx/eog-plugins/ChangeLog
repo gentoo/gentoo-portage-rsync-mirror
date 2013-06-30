@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.5 2013/05/14 18:28:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.6 2013/06/30 21:41:26 eva Exp $
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org> eog-plugins-3.8.1.ebuild:
+  Add missing handling of REQUIRED_USE for python.
 
 *eog-plugins-3.8.1 (14 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/django-appconf-0.6.ebuild,v 1.4 2013/06/25 16:59:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/django-appconf-0.6.ebuild,v 1.5 2013/06/30 21:54:24 tampakrap Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -30,6 +30,7 @@ python_compile_all() {
 }
 
 python_test() {
+	cd appconf/tests || die
 	set -- django-admin.py test appconf --settings=appconf.test_settings
 	echo "$@"
 	"$@" || die "Testing failed with ${EPYTHON}"

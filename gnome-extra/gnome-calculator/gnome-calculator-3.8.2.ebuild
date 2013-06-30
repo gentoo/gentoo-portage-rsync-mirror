@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/gnome-calculator-3.8.2.ebuild,v 1.2 2013/05/14 20:53:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-calculator/gnome-calculator-3.8.2.ebuild,v 1.3 2013/06/30 21:34:06 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -31,5 +31,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_configure() {
-	gnome2_src_configure ITSTOOL=$(type -P true)
+	gnome2_src_configure \
+		ITSTOOL=$(type -P true) \
+		VALAC=$(type -P true)
 }

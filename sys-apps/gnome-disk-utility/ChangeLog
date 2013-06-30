@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.80 2013/05/29 21:34:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.81 2013/06/30 21:37:19 eva Exp $
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-disk-utility-3.8.2.ebuild:
+  Add missing subslot operator.
 
 *gnome-disk-utility-3.8.2 (29 May 2013)
 

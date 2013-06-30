@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.361 2013/06/02 20:44:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.362 2013/06/30 21:36:24 eva Exp $
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org> totem-3.8.2.ebuild:
+  Apply team policy for configure and update gtk+ dependency per libgd
+  requirements.
 
   02 Jun 2013; Jonathan Callen <abcd@gentoo.org> totem-3.6.3-r1.ebuild,
   totem-3.8.0.ebuild, totem-3.8.2.ebuild:
