@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/shorewall6-lite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.52 2013/06/04 11:24:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.55 2013/06/30 20:27:57 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> shorewall6-lite-4.5.15.ebuild:
+  Stable for x86, wrt bug #470544
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> shorewall6-lite-4.5.15.ebuild:
+  Stable for sparc, wrt bug #470544
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> shorewall6-lite-4.5.15.ebuild:
+  Stable for alpha, wrt bug #470544
 
   04 Jun 2013; Tony Vroon <chainsaw@gentoo.org> shorewall6-lite-4.5.15.ebuild:
   Marked stable on AMD64 based on a report by Elijah "Armageddon" El Lazkani in

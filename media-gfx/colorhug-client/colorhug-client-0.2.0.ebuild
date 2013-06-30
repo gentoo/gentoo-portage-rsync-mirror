@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.0.ebuild,v 1.1 2013/06/02 12:30:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.0.ebuild,v 1.2 2013/06/30 20:20:10 eva Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -28,5 +28,16 @@ RDEPEND="
 	>=x11-libs/colord-gtk-0.1.24
 "
 DEPEND="${RDEPEND}
+	app-text/docbook-sgml-dtd:4.1
+	app-text/docbook-sgml-utils
 	app-text/yelp-tools
+	>=dev-util/intltool-0.35
+	>=sys-devel/gettext-0.17
+	virtual/pkgconfig
 "
+# docbook stuff needed for man pages
+
+src_configure() {
+	# introspection checked but not needed by anything
+	gnome2_src_configure --disable-introspection
+}

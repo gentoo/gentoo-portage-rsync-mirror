@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/replicatorg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/replicatorg/ChangeLog,v 1.3 2013/01/02 04:47:51 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/replicatorg/ChangeLog,v 1.4 2013/06/30 20:16:27 tomwij Exp $
+
+*replicatorg-37-r2 (30 Jun 2013)
+*replicatorg-40-r1 (30 Jun 2013)
+
+  30 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +replicatorg-37-r2.ebuild,
+  +replicatorg-40-r1.ebuild, -replicatorg-37-r1.ebuild, -replicatorg-40.ebuild:
+  Remove sun-jdk and sun-jre-bin from reverse dependencies. For security bug
+  #473830 reported by Agostino Sarubbo.
 
 *replicatorg-40 (02 Jan 2013)
 

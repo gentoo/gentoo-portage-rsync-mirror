@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.62 2013/05/10 11:16:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.63 2013/06/30 20:19:31 eva Exp $
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org> colord-0.1.31.ebuild:
+  Add missing sane support, fix gtk-doc support per team policy, fix glib
+  dependency.
 
   10 May 2013; Gilles Dartiguelongue <eva@gentoo.org> -colord-0.1.26.ebuild,
   -colord-0.1.26-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/replicatorg/replicatorg-37-r1.ebuild,v 1.1 2012/08/03 22:14:14 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/replicatorg/replicatorg-37-r2.ebuild,v 1.1 2013/06/30 20:16:27 tomwij Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-COMMON_DEPEND="dev-java/sun-jre-bin"
+COMMON_DEPEND="dev-java/oracle-jre-bin"
 RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}"
 

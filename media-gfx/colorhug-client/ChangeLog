@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/colorhug-client
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/ChangeLog,v 1.10 2013/06/02 12:30:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/ChangeLog,v 1.11 2013/06/30 20:20:10 eva Exp $
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  colorhug-client-0.2.0.ebuild:
+  Fix man page and introspection handling.
 
 *colorhug-client-0.2.0 (02 Jun 2013)
 
