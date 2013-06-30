@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-mlist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mlist/ChangeLog,v 1.11 2011/12/21 08:42:52 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mlist/ChangeLog,v 1.12 2013/06/30 17:50:57 hd_brummy Exp $
+
+*vdr-mlist-1.0.2 (30 Jun 2013)
+
+  30 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-mlist-0.0.3.ebuild,
+  -vdr-mlist-0.0.5.ebuild, +vdr-mlist-1.0.2.ebuild:
+  bump; clean up
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vdr-mlist-1.0.1.ebuild:
   x86 stable wrt bug #393923
