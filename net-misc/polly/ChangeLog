@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/polly
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/polly/ChangeLog,v 1.1 2013/06/29 23:52:56 xmw Exp $
+
+*polly-0.93.9 (29 Jun 2013)
+*polly-0.93.10 (29 Jun 2013)
+
+  29 Jun 2013; Michael Weber <xmw@gentoo.org>
+  +files/polly-0.93.10-desktop.patch, +metadata.xml, +polly-0.93.10.ebuild,
+  +polly-0.93.9.ebuild:
+  Initial import adopted from last-hope overlay.
