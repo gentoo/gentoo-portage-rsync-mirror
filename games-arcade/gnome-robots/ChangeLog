@@ -1,0 +1,9 @@
+# ChangeLog for games-arcade/gnome-robots
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/ChangeLog,v 1.1 2013/06/30 11:39:40 pacho Exp $
+
+*gnome-robots-3.8.1 (30 Jun 2013)
+
+  30 Jun 2013; Pacho Ramos <pacho@gentoo.org> +gnome-robots-3.8.1.ebuild,
+  +metadata.xml:
+  Add game splitted from gnome-games by upstream
