@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.61 2013/02/17 19:48:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.62 2013/06/30 19:26:28 vapier Exp $
+
+*xz-utils-5.0.5 (30 Jun 2013)
+
+  30 Jun 2013; Mike Frysinger <vapier@gentoo.org> +xz-utils-5.0.5.ebuild:
+  Version bump.
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> xz-utils-5.0.4-r1.ebuild:
   Add ~arm-linux keyword.
