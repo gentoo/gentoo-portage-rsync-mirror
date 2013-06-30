@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.660 2013/06/28 00:02:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.661 2013/06/30 03:36:01 floppym Exp $
+
+  30 Jun 2013; Mike Gilbert <floppym@gentoo.org> -python-2.5.4-r4.ebuild,
+  -python-2.6.8.ebuild, python-2.5.4-r5.ebuild, python-2.6.8-r1.ebuild:
+  Place upper bound on dev-lang/tk dep, bug 454342. Also stabilize on m68k since
+  nobody is responding on bug 458318.
 
   28 Jun 2013; Mike Gilbert <floppym@gentoo.org>
   +files/python-2.7.5-library-path.patch, python-2.7.5.ebuild:
