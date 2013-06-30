@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## $Id: generate_tarball.sh,v 1.2 2011/05/22 09:22:59 scarabeus Exp $
+## $Id: generate_tarball.sh,v 1.3 2013/06/30 14:52:47 jlec Exp $
 ## Modified by scarabeus 2008-10-23
 ###############################################################################
 # functions
@@ -31,7 +31,7 @@ fi
 ###############################################################################
 # variable definition
 ###############################################################################
-SVN_URI="http://boinc.berkeley.edu/svn/tags/boinc_core_release_${VERSION//./_}"
+GIT_URI="git://boinc.berkeley.edu/boinc-v2.git"
 PACKAGE="boinc-${VERSION}"
 BUNDLE_PREFIX="boinc-dist"
 LOG=linux.log
@@ -44,11 +44,15 @@ cd "${BUNDLE_PREFIX}"
 touch "${LOG}"
 echo "" > "${LOG}"	# LOG CLEANUP
 ###############################################################################
-# get data from svn
+# get data from GIT
 ###############################################################################
-echo "<Downloading files from SVN repository>"
+echo "<Downloading files from GIT repository>"
 echo "<******************************>"
-svn export ${SVN_URI} ${PACKAGE} >> "${LOG}"
+# No direct archive possible
+git clone ${GIT_URI} ${PACKAGE} >> "${LOG}"
+pushd "${PACKAGE}" > /dev/null
+git checkout -b gentoo client_release/${VERSION%.*}/${VERSION} || exit 0
+popd > /dev/null
 ###############################################################################
 # cleanup files we fetched
 ###############################################################################
@@ -76,14 +80,18 @@ rm -rf curl/
 #rm -rf locale/*/*.mo # translations should be generated on user machines
 # Actualy they dont generate them
 rm -rf zlib/
+rm -rf zip/
 rm -rf openssl/
+
+git commit -a -m "Cleaned"
 
 popd > /dev/null
 
 ###############################################################################
 # create tbz
 ###############################################################################
-tar cJf "${PACKAGE}".tar.xz ${PACKAGE} >> "${LOG}"
+git archive --prefix=${PACKAGE}/ --remote=${PACKAGE} gentoo -o ${PACKAGE}.tar
+xz -ve9 "${PACKAGE}".tar | tee -a "${LOG}"
 find ./ -maxdepth 1 -type f -name \*.tar.xz -print | while read FILE ; do
 	echo "FILE: ${FILE}"
 	echo "      SIZE: $(`which du` -h ${FILE} |`which awk` -F' ' '{print $1}')"

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.4.ebuild,v 1.5 2013/05/11 11:18:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.4.ebuild,v 1.6 2013/06/30 15:00:22 gurligebis Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils linux-info user
 
 DESCRIPTION="IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE"
@@ -12,7 +12,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA DES"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ~ppc64 x86"
-IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql +non-root +openssl sqlite pam"
+IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root +openssl sqlite pam"
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -133,11 +133,12 @@ src_configure() {
 		$(use_enable sqlite) \
 		$(use_enable dhcp) \
 		$(use_enable farp) \
+		$(use_enable networkmanager nm) \
 		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install
 
 	doinitd "${FILESDIR}"/ipsec
 

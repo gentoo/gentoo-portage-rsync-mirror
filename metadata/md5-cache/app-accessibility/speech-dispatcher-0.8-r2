@@ -1,13 +1,14 @@
 DEFINED_PHASES=compile configure install postinst
-DEPEND=>=dev-libs/dotconf-1.3 >=dev-libs/glib-2.28:2 >=media-libs/libsndfile-1.0.2 alsa? ( media-libs/alsa-lib ) ao? ( media-libs/libao ) espeak? ( app-accessibility/espeak ) flite? ( app-accessibility/flite ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio ) >=dev-util/intltool-0.40.0 virtual/pkgconfig
+DEPEND=python_targets_python3_2? ( dev-lang/python:3.2 ) python_targets_python3_3? ( dev-lang/python:3.3 ) dev-python/python-exec[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=dev-libs/dotconf-1.3 >=dev-libs/glib-2.28:2 >=media-libs/libsndfile-1.0.2 alsa? ( media-libs/alsa-lib ) ao? ( media-libs/libao ) espeak? ( app-accessibility/espeak ) flite? ( app-accessibility/flite ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio ) >=dev-util/intltool-0.40.0 virtual/pkgconfig
 DESCRIPTION=Speech synthesis interface
 EAPI=5
 HOMEPAGE=http://www.freebsoft.org/speechd
 IUSE=alsa ao +espeak flite nas pulseaudio python static-libs python_targets_python3_2 python_targets_python3_3
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/dotconf-1.3 >=dev-libs/glib-2.28:2 >=media-libs/libsndfile-1.0.2 alsa? ( media-libs/alsa-lib ) ao? ( media-libs/libao ) espeak? ( app-accessibility/espeak ) flite? ( app-accessibility/flite ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio )
+RDEPEND=python_targets_python3_2? ( dev-lang/python:3.2 ) python_targets_python3_3? ( dev-lang/python:3.3 ) dev-python/python-exec[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=dev-libs/dotconf-1.3 >=dev-libs/glib-2.28:2 >=media-libs/libsndfile-1.0.2 alsa? ( media-libs/alsa-lib ) ao? ( media-libs/libao ) espeak? ( app-accessibility/espeak ) flite? ( app-accessibility/flite ) nas? ( media-libs/nas ) pulseaudio? ( media-sound/pulseaudio )
+REQUIRED_USE=|| ( python_targets_python3_2 python_targets_python3_3 )
 SLOT=0
 SRC_URI=http://www.freebsoft.org/pub/projects/speechd/speech-dispatcher-0.8.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	094dc7421f9aea7525b85b899f67e62a	python-utils-r1	9aa9cecaaf78644be7c0b8b8dc814dce	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=e240109951625c26d75fe315611ba3fd
+_md5_=5f5bcdd3d369061cc2f7d8d4df25492b

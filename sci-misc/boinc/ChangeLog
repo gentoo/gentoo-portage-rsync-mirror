@@ -1,6 +1,16 @@
 # ChangeLog for sci-misc/boinc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.110 2012/08/17 09:45:54 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.111 2013/06/30 14:52:47 jlec Exp $
+
+*boinc-7.2.0 (30 Jun 2013)
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> -boinc-7.0.29.ebuild,
+  +boinc-7.2.0.ebuild, -files/7.0.2-fix_subdirs.patch,
+  +files/boinc-7.2.0-fix_subdirs.patch, files/boinc.init,
+  files/generate_tarball.sh, metadata.xml:
+  Version bump and drop old, fixes: security issue, #467908; link problems,
+  #464772; correlation with abrupt time changes through ntp, #413041; menu
+  items with newer x11-libs/wxGTK, #379979 & #376237
 
   17 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> -boinc-6.12.42.ebuild,
   -files/6.12.26-fix_subdirs.patch:
