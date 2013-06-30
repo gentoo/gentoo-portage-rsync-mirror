@@ -1,0 +1,9 @@
+# ChangeLog for games-puzzle/five-or-more
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/five-or-more/ChangeLog,v 1.1 2013/06/30 10:56:08 pacho Exp $
+
+*five-or-more-3.8.2 (30 Jun 2013)
+
+  30 Jun 2013; Pacho Ramos <pacho@gentoo.org> +five-or-more-3.8.2.ebuild,
+  +metadata.xml:
+  Add game splitted from gnome-games by upstream

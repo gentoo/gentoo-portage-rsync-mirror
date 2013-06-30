@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/whdd/whdd-2.0.ebuild,v 1.1 2013/06/29 16:53:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/whdd/whdd-2.0.ebuild,v 1.2 2013/06/30 10:34:53 maksbotan Exp $
 
 EAPI=4
 
@@ -24,4 +24,5 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	default
 	mv krieger-od-${PN}-* ${P}
+	echo ${PV} > "${S}"/VERSION || die
 }
