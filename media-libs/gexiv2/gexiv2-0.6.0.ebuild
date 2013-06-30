@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.6.0.ebuild,v 1.1 2013/03/19 12:06:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.6.0.ebuild,v 1.2 2013/06/30 14:21:27 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="introspection static-libs"
 
-RDEPEND="
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
 	dev-libs/glib:2
 	>=media-gfx/exiv2-0.21"
 DEPEND="${RDEPEND}

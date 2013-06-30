@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gexiv2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/ChangeLog,v 1.16 2013/03/19 12:06:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/ChangeLog,v 1.17 2013/06/30 14:21:27 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> gexiv2-0.6.0.ebuild:
+  Fix usage of python-r1.eclass
 
 *gexiv2-0.6.0 (19 Mar 2013)
 
