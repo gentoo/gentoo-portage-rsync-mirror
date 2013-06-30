@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/gnome-font-viewer-3.8.0.ebuild,v 1.1 2013/03/28 17:37:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/gnome-font-viewer-3.8.0.ebuild,v 1.2 2013/06/30 20:47:08 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	media-libs/fontconfig:1.0
 	media-libs/freetype:2
 	x11-libs/cairo
-	>=x11-libs/gtk+-3.0.3:3
+	>=x11-libs/gtk+-3.7.10:3
 	x11-libs/pango
 "
 RDEPEND="${COMMON_DEPEND}

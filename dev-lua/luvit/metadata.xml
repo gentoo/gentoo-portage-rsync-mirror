@@ -6,6 +6,7 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<use>
+		<flag name='bundled-libs'>Use bundled versions of some libraries.</flag>
 		<flag name='system-libs'>Use system version of <pkg>dev-libs/yajl</pkg>.</flag>
 	</use>
 </pkgmetadata>

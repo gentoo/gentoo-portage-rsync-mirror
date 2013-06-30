@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/office-runner/office-runner-1.0.1.ebuild,v 1.1 2013/03/28 17:28:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/office-runner/office-runner-1.0.1.ebuild,v 1.2 2013/06/30 20:52:50 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,13 +15,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/glib:2
+COMMON_DEPEND="
+	dev-libs/glib:2
 	>=gnome-base/gnome-settings-daemon-3.0
-	x11-libs/gtk+:3"
-DEPEND="${RDEPEND}
+	x11-libs/gtk+:3
+"
+# requires systemd's org.freedesktop.login1 dbus service
+RDEPEND="${COMMON_DEPEND}
+	>=sys-apps/systemd-190
+"
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.0
 	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+"
 
 pkg_postinst() {
 	gnome2_pkg_postinst

@@ -1,24 +1,24 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-0.6_p20121221.ebuild,v 1.1 2013/01/01 16:36:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-0.6.1-r1.ebuild,v 1.1 2013/06/30 20:44:13 hasufell Exp $
 
 EAPI=5
 
-inherit toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib
 
 # TODO: FHS https://github.com/luvit/luvit/issues/379
 
 DESCRIPTION="Takes node.js' architecture and dependencies and fits it in the Lua language"
 HOMEPAGE="http://luvit.io/"
-SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
+SRC_URI="http://luvit.io/dist/latest/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="examples +system-libs"
+IUSE="bundled-libs examples"
 # luvit Apache-2.0
 # luajit MIT
 # yajl BSD
-LICENSE="Apache-2.0 MIT !system-libs? ( BSD )"
+LICENSE="Apache-2.0 bundled-libs? ( BSD MIT )"
 
 # fails in portage environment
 # succeeds if run manually
@@ -27,24 +27,33 @@ RESTRICT="test"
 RDEPEND="
 	dev-libs/openssl:0
 	sys-libs/zlib
-	system-libs? (
+	!bundled-libs? (
+		dev-lang/luajit:2[lua52compat]
 		>=dev-libs/yajl-2.0.2
+		net-libs/http-parser
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	if use system-libs ; then
-		MY_YAJL_VERSION=$(pkg-config --modversion yajl)
+	rm -r deps/{openssl,zlib} || die
+	epatch "${FILESDIR}"/${P}-unbundle-http-parser.patch
+	if use bundled-libs ; then
+		sed -i \
+			-e "s/-Werror//" \
+			-e "s/-O3//" \
+			deps/http-parser/Makefile || die "fixing flags failed!"
+	else
+		rm -r deps/{luajit,yajl,http-parser} || die
+		# TODO: no version detection for http-parser yet
+		MY_YAJL_VERSION=$($(tc-getPKG_CONFIG) --modversion yajl)
+		MY_LUAJIT_VERSION=$($(tc-getPKG_CONFIG) --modversion luajit)
 		sed -i \
 			-e "s:^YAJL_VERSION=.*:YAJL_VERSION=${MY_YAJL_VERSION}:" \
+			-e "s:^LUAJIT_VERSION=.*:LUAJIT_VERSION=${MY_LUAJIT_VERSION}:" \
 			Makefile || die "setting yajl version failed"
 	fi
 
-	sed -i \
-		-e "s/-Werror//" \
-		-e "s/-O3//" \
-		deps/http-parser/Makefile || die "fixing flags failed!"
 }
 
 src_configure() {
@@ -60,11 +69,12 @@ src_compile() {
 		WERROR=0
 		USE_SYSTEM_SSL=1
 		# bundled luajit is compiled with special flags
-		USE_SYSTEM_LUAJIT=0
+		USE_SYSTEM_LUAJIT=$(usex bundled-libs "0" "1")
+		USE_SYSTEM_YAJL=$(usex bundled-libs "0" "1")
+		USE_SYSTEM_HTTPPARSER=$(usex bundled-libs "0" "1")
 		USE_SYSTEM_ZLIB=1
-		USE_SYSTEM_YAJL=$(usex system-libs "1" "0")
 		PREFIX=/usr
-		LIBDIR="${D}"/usr/$(get_libdir)/${PN}
+		LIBDIR="${D%/}"/usr/$(get_libdir)/${PN}
 		DESTDIR="${D}"
 	)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-9999.ebuild,v 1.2 2013/03/05 21:09:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-9999.ebuild,v 1.3 2013/06/30 20:56:18 hasufell Exp $
 
 EAPI=5
 
@@ -14,11 +14,11 @@ EGIT_REPO_URI="git://github.com/luvit/luvit.git"
 
 KEYWORDS=""
 SLOT="0"
-IUSE="examples +system-libs"
+IUSE="bundled-libs examples"
 # luvit Apache-2.0
 # luajit MIT
 # yajl BSD
-LICENSE="Apache-2.0 MIT !system-libs? ( BSD )"
+LICENSE="Apache-2.0 !bundled-libs? ( BSD MIT )"
 
 # fails in portage environment
 # succeeds if run manually
@@ -27,7 +27,8 @@ RESTRICT="test"
 RDEPEND="
 	dev-libs/openssl:0
 	sys-libs/zlib
-	system-libs? (
+	!bundled-libs? (
+		dev-lang/luajit:2[lua52compat]
 		>=dev-libs/yajl-2.0.4
 	)"
 DEPEND="${RDEPEND}
@@ -36,11 +37,17 @@ DEPEND="${RDEPEND}
 EGIT_HAS_SUBMODULES=1
 
 src_prepare() {
-	if use system-libs ; then
-		MY_YAJL_VERSION=$(pkg-config --modversion yajl)
-	else
+	rm -r deps/{openssl,zlib} || die
+
+	if use bundled-libs ; then
 		MY_YAJL_VERSION=$(git --git-dir deps/yajl/.git describe --tags)
+		MY_LUAJIT_VERSION=$(git --git-dir deps/luajit/.git describe --tags)
+	else
+		rm -r deps/{luajit,yajl} || die
+		MY_YAJL_VERSION=$($(tc-getPKG_CONFIG) --modversion yajl)
+		MY_LUAJIT_VERSION=$($(tc-getPKG_CONFIG) --modversion luajit)
 	fi
+
 	MY_HTTP_VERSION=$(git --git-dir deps/http-parser/.git describe --tags)
 	MY_UV_VERSION=$(git --git-dir deps/uv/.git describe --all --long | cut -f 3 -d -)
 
@@ -69,10 +76,10 @@ src_compile() {
 		DEBUG=0
 		WERROR=0
 		USE_SYSTEM_SSL=1
-		# bundled luajit is compiled with special flags
-		USE_SYSTEM_LUAJIT=0
 		USE_SYSTEM_ZLIB=1
-		USE_SYSTEM_YAJL=$(usex system-libs "1" "0")
+		# bundled luajit is compiled with special flags
+		USE_SYSTEM_LUAJIT=$(usex bundled-libs "0" "1")
+		USE_SYSTEM_YAJL=$(usex bundled-libs "0" "1")
 		PREFIX=/usr
 		LIBDIR="${D}"/usr/$(get_libdir)/${PN}
 		DESTDIR="${D}"

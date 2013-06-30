@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/sushi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/ChangeLog,v 1.15 2013/04/19 17:54:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/ChangeLog,v 1.16 2013/06/30 20:32:50 eva Exp $
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org> sushi-3.8.1.ebuild:
+  Unoconv is not checked in configure anymore.
 
 *sushi-3.8.1 (19 Apr 2013)
 
