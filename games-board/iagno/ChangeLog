@@ -1,0 +1,9 @@
+# ChangeLog for games-board/iagno
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.1 2013/06/30 12:16:13 pacho Exp $
+
+*iagno-3.8.1 (30 Jun 2013)
+
+  30 Jun 2013; Pacho Ramos <pacho@gentoo.org> +iagno-3.8.1.ebuild,
+  +metadata.xml:
+  Add game splitted from gnome-games by upstream

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14882 2013/06/30 11:38:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14886 2013/06/30 12:27:07 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -543,6 +543,10 @@ games-board/gnome-chess
 games-puzzle/gnome-klotski
 games-board/gnome-mines
 games-arcade/gnome-robots
+games-puzzle/gnome-tetravex
+games-board/iagno
+games-puzzle/quadrapassel
+games-puzzle/swell-foop
 
 # Jeroen Roovers <jer@gentoo.org> (25 Mar 2013)
 # Unlocking fails (bug #463180)
