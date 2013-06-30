@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.8-r1.ebuild,v 1.2 2013/02/23 20:36:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.8-r1.ebuild,v 1.3 2013/06/30 15:34:54 jlec Exp $
 
 EAPI=5
 
@@ -23,6 +23,8 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="examples graphviz highlight test vim-syntax"
+
+REQUIRED_USE="highlight? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND=">=app-text/docbook-xsl-stylesheets-1.75
 		dev-libs/libxslt

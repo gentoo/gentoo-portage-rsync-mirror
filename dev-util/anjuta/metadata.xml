@@ -5,8 +5,8 @@
   <use>
     <flag name="devhelp">Enable devhelp integration</flag>
     <flag name="glade">Build glade plugin for anjuta</flag>
-	<flag name="packagekit">Use packagekit to search for missing tools</flag>
-    <flag name='vala'>Enable support for the Vala programming
+    <flag name="packagekit">Use packagekit to search for missing tools</flag>
+    <flag name="vala">Enable support for the Vala programming
     	language</flag>
   </use>
 </pkgmetadata>

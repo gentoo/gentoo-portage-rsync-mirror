@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>graphics</herd>
-	<longdescription>
+  <herd>graphics</herd>
+  <longdescription>
 graphviz  is a set of graph drawing tools for Unix or MS-Windows 
 (win32), including a web service interface (webdot). Source code and 
 binary executables for common platforms are available. Graph drawing 
@@ -28,18 +28,18 @@ documents
     * you would like to discover patterns and communities of interest in 
 a database of telephone calls or e-mail messages
 </longdescription>
-	<use>
-		<flag name="devil">Enables DevIL output plugin -Tdevil</flag>
-		<flag name="gtk">Enables gtk+ output plugin -Tgtk (needs cairo)</flag>
-		<flag name="gts">Enables support for gts</flag>
-		<flag name="lasi">
+  <use>
+    <flag name="devil">Enables DevIL output plugin -Tdevil</flag>
+    <flag name="gtk">Enables gtk+ output plugin -Tgtk (needs cairo)</flag>
+    <flag name="gts">Enables support for gts</flag>
+    <flag name="lasi">
 		Enables PostScript output via <pkg>media-libs/lasi</pkg>, for 
 		plugin -Tlasi (needs cairo)
 	</flag>
-		<flag name="qt4">Builds gvedit front-end</flag>
-		<flag name="X">
+    <flag name="qt4">Builds gvedit front-end</flag>
+    <flag name="X">
 		Builds lefty front-end, builds plugin -Txlib, and enables support
 		for x11 in various other modules (needs cairo)
 	</flag>
-	</use>
+  </use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.163 2013/06/04 14:49:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.164 2013/06/30 15:38:41 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> anjuta-3.6.2-r1.ebuild,
+  anjuta-3.8.3.ebuild, anjuta-3.8.4.ebuild, metadata.xml:
+  Fix usage of python-r1.eclass
 
 *anjuta-3.8.4 (04 Jun 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygpgme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.6 2013/06/20 05:52:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.8 2013/06/30 15:57:56 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> pygpgme-0.3-r1.ebuild:
+  Reverted last change as it was unnecessary
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> pygpgme-0.3-r1.ebuild:
+  Fix usage of python-r1.eclass
 
 *pygpgme-0.3-r1 (20 Jun 2013)
 

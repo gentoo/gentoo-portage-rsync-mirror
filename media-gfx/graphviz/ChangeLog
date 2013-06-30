@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.272 2013/03/10 18:06:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.273 2013/06/30 15:35:56 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> graphviz-2.28.0.ebuild,
+  metadata.xml:
+  Fix usage of python-r1.eclass
 
   10 Mar 2013; Michał Górny <mgorny@gentoo.org> graphviz-2.28.0.ebuild:
   Convert to python-single-r1. Bug #457686.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.18 2013/03/10 18:06:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.19 2013/06/30 15:35:56 jlec Exp $
 
 EAPI=5
 
@@ -68,7 +68,9 @@ DEPEND="${RDEPEND}
 	)
 	ruby?	( dev-lang/swig )
 	tcl?	( dev-lang/swig )"
-REQUIRED_USE="!cairo? ( !X !gtk !postscript !lasi )"
+REQUIRED_USE="
+	!cairo? ( !X !gtk !postscript !lasi )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 # Dependency description / Maintainer-Info:
 

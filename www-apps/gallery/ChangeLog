@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.203 2013/06/03 02:17:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.205 2013/06/30 15:48:24 blueness Exp $
+
+  30 Jun 2013; Anthony G. Basile <blueness@gentoo.org> -gallery-3.0.7.ebuild,
+  -gallery-3.0.8.ebuild:
+  Remove older unstable versions
+
+*gallery-3.0.9 (30 Jun 2013)
+
+  30 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +gallery-3.0.9.ebuild:
+  Version bump, addresses security issues
 
 *gallery-3.0.8 (03 Jun 2013)
 

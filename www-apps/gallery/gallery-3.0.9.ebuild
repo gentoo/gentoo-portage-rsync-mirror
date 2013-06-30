@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-3.0.7.ebuild,v 1.2 2013/05/16 14:11:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-3.0.9.ebuild,v 1.1 2013/06/30 15:39:39 blueness Exp $
 
 EAPI="5"
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-voaacenc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voaacenc/ChangeLog,v 1.6 2013/04/01 13:14:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voaacenc/ChangeLog,v 1.7 2013/06/30 16:00:46 eva Exp $
+
+*gst-plugins-voaacenc-1.0.7 (30 Jun 2013)
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-voaacenc-1.0.7.ebuild:
+  Version bump.
 
 *gst-plugins-voaacenc-1.0.6 (01 Apr 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.3.ebuild,v 1.1 2013/05/21 22:40:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.3.ebuild,v 1.2 2013/06/30 15:38:41 jlec Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -20,6 +20,8 @@ LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug devhelp glade +introspection packagekit subversion test vala"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # FIXME: make python dependency non-automagic
 COMMON_DEPEND="
