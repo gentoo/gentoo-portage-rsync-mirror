@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.8.ebuild,v 1.3 2013/06/30 12:43:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.8.ebuild,v 1.4 2013/06/30 19:33:51 tomjbe Exp $
 
 EAPI=4
 
-inherit autotools eutils fdo-mime
+inherit autotools eutils fdo-mime toolchain-funcs
 MY_P=${P/_}
 
 DESCRIPTION="An amateur radio logging program"
@@ -37,6 +37,10 @@ src_configure() {
 	# mime-update causes file collisions if enabled
 	econf --disable-mime-update --disable-desktop-update \
 		--docdir=/usr/share/doc/${PF}
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
 
 src_install() {

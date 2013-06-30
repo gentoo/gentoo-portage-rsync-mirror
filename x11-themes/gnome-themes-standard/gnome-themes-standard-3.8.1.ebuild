@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.8.1.ebuild,v 1.1 2013/04/18 19:43:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.8.1.ebuild,v 1.2 2013/06/30 19:46:23 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -60,6 +60,5 @@ src_install() {
 	gnome2_src_install
 
 	# Make it the default cursor theme
-	cd "${ED}/usr/share/cursors/xorg-x11" || die
-	ln -sfn Adwaita default || die
+	dosym Adwaita /usr/share/cursors/xorg-x11/default
 }

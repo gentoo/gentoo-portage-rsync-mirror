@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.2.ebuild,v 1.10 2011/12/31 16:46:14 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/xmlgraphics-commons-1.2-r1.ebuild,v 1.1 2013/06/30 19:58:47 tomwij Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 
@@ -21,7 +21,6 @@ CDEPEND=">=dev-java/commons-io-1"
 DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
 		jpeg? (
 			|| (
-				>=dev-java/sun-jdk-1.4
 				>=dev-java/blackdown-jdk-1.4
 				=dev-java/icedtea-bin-1*
 				>=dev-java/ibm-jdk-bin-1.4
