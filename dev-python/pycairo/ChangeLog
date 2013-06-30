@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.142 2013/04/10 19:50:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.143 2013/06/30 13:50:50 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> pycairo-1.10.0-r4.ebuild,
+  metadata.xml:
+  Fix usage of python-r1.eclass
 
   10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pycairo-1.10.0-r4.ebuild:
   Stable for s390, wrt bug #458992

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.18.ebuild,v 1.1 2013/05/28 19:17:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.18-r1.ebuild,v 1.1 2013/06/30 13:48:23 xarthisius Exp $
 
 EAPI=5
 
@@ -27,12 +27,16 @@ RDEPEND="
 	"
 
 src_prepare() {
-	rm -rf pylibs/{logilab,*pep8.py,pyflakes,pylint,rope,ropemode} .gitignore
+	# debundling fun
+	rm -rf pylibs/pylama/{pep8.py,pyflakes} pylibs/{autopep8.py,rope,ropemode}
+	sed -e 's/from .pep8/from pep8/g' \
+		-e 's/from .pyflakes/from pyflakes/g' \
+		-i pylibs/pylama/utils.py || die
+	# there's still pylint left, I failed to debundle it :/
+
 	mv pylint.ini "${T}" || die
 	sed -e "s|expand(\"<sfile>:p:h:h\")|\"${EPREFIX}/usr/share/${PN}\"|" \
 		-i autoload/pymode.vim || die # use custom path
-	sed -e "s/pylibs.autopep8/autopep8/g" -i pylibs/pymode/auto.py || die
-	sed -e "s/pylibs.ropemode/ropemode/g" -i pylibs/ropevim.py || die
 }
 
 src_install() {

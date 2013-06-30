@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.2 2013/05/29 15:32:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.3 2013/06/30 13:48:01 jlec Exp $
 
 EAPI="5"
 
@@ -19,15 +19,14 @@ IUSE="gpm tcl nls"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="
+RDEPEND="${PYTHON_DEPS}
 	>=dev-libs/popt-1.6
 	=sys-libs/slang-2*
 	elibc_uclibc? ( sys-libs/ncurses )
 	gpm? ( sys-libs/gpm )
 	tcl? ( >=dev-lang/tcl-8.5 )
 	"
-DEPEND="${RDEPEND}
-	${PYTHON_DEPS}"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	# bug 73850

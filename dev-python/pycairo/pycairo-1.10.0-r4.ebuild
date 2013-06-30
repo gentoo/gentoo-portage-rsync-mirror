@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.16 2013/04/10 19:50:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.17 2013/06/30 13:50:50 jlec Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} python3_{1,2,3} )
@@ -22,8 +22,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc examples +svg test xcb"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 # Note: xpyb is used as the C header, not Python modules
-RDEPEND="
+RDEPEND="${PYTHON_DEPS}
 	>=x11-libs/cairo-1.10.0[svg?,xcb?]
 	xcb? ( x11-libs/xpyb )
 "
