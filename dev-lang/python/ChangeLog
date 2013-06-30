@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.661 2013/06/30 03:36:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.662 2013/06/30 16:08:08 floppym Exp $
+
+*python-2.6.8-r2 (30 Jun 2013)
+*python-2.5.4-r6 (30 Jun 2013)
+
+  30 Jun 2013; Mike Gilbert <floppym@gentoo.org> +files/python-2.5-tcl86.patch,
+  +python-2.5.4-r6.ebuild, +python-2.6.8-r2.ebuild:
+  Apply patch to allow old python versions to use tk-8.6, bug 454342. Also fix
+  the python shebang in idle2.5 and pydoc2.5, bugs 275241 and 383009.
 
   30 Jun 2013; Mike Gilbert <floppym@gentoo.org> -python-2.5.4-r4.ebuild,
   -python-2.6.8.ebuild, python-2.5.4-r5.ebuild, python-2.6.8-r1.ebuild:
