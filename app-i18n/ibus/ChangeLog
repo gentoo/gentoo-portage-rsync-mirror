@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.127 2013/05/14 06:05:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.128 2013/06/30 15:27:34 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> ibus-1.5.2.ebuild, metadata.xml:
+  Fix usage of python-r1.eclass
 
   14 May 2013; Naohiro Aota <naota@gentoo.org> ibus-1.4.1.ebuild,
   ibus-1.4.2.ebuild, ibus-1.5.2.ebuild:

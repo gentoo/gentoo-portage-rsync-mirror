@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.5 2013/05/11 18:45:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.6 2013/06/30 15:09:42 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,6 +19,8 @@ HOMEPAGE="http://yasm.tortall.net/"
 LICENSE="BSD-2 BSD || ( Artistic GPL-2 LGPL-2 )"
 SLOT="0"
 IUSE="nls python"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="nls? ( virtual/libintl )"
 DEPEND="nls? ( sys-devel/gettext )

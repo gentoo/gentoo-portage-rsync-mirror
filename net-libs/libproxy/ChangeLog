@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.100 2013/04/30 03:46:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.101 2013/06/30 15:25:43 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> libproxy-0.4.11-r1.ebuild,
+  metadata.xml:
+  Fix usage of python-r1.eclass
 
 *libproxy-0.4.11-r1 (30 Apr 2013)
 

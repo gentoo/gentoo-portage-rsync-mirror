@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.181 2013/06/24 21:03:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.182 2013/06/30 15:25:25 jlec Exp $
 
 EAPI=5
 
@@ -233,6 +233,7 @@ PATCHES=(
 )
 
 REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
 	bluetooth? ( dbus )
 	gnome? ( gtk )
 	eds? ( gnome )

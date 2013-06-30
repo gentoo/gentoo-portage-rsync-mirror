@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.14 2013/04/13 20:55:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.15 2013/06/30 15:07:43 jlec Exp $
 
 EAPI=5
 
@@ -17,6 +17,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="crypt debug python static-libs"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND=">=dev-libs/libxml2-2.8.0:2
 	crypt?  ( >=dev-libs/libgcrypt-1.1.42:= )

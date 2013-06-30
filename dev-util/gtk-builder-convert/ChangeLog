@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gtk-builder-convert
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/ChangeLog,v 1.34 2013/06/18 19:51:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/ChangeLog,v 1.35 2013/06/30 15:14:58 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org>
+  gtk-builder-convert-2.24.16.ebuild, gtk-builder-convert-2.24.17.ebuild,
+  gtk-builder-convert-2.24.18.ebuild, gtk-builder-convert-2.24.19.ebuild,
+  metadata.xml:
+  Fix usage of python-r1.eclass
 
 *gtk-builder-convert-2.24.19 (18 Jun 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.113 2013/06/01 05:02:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.114 2013/06/30 15:16:12 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> libxcb-1.9-r1.ebuild,
+  libxcb-1.9.1.ebuild, metadata.xml:
+  Fix usage of python-r1.eclass
 
   01 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libxcb-1.9.1.ebuild, metadata.xml:

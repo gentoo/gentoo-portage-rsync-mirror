@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.97 2013/05/09 12:19:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.98 2013/06/30 15:22:51 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> antlr-2.7.7-r1.ebuild,
+  antlr-2.7.7-r3.ebuild, antlr-2.7.7-r4.ebuild, antlr-2.7.7-r5.ebuild,
+  metadata.xml:
+  Fix usage of python-r1.eclass
 
   09 May 2013; Tom Wijsman <TomWij@gentoo.org> antlr-2.7.7-r2.ebuild,
   antlr-2.7.7.ebuild:

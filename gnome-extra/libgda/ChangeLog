@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.217 2013/06/06 16:38:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.218 2013/06/30 15:24:19 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> libgda-5.0.4.ebuild,
+  libgda-5.1.1-r1.ebuild, metadata.xml:
+  Fix usage of python-r1.eclass
 
 *libgda-5.0.4 (06 Jun 2013)
 

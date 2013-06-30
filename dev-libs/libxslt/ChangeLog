@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.271 2013/04/13 20:55:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.272 2013/06/30 15:07:43 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> libxslt-1.1.28-r1.ebuild,
+  metadata.xml:
+  Fix usage of python-r1.eclass
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libxslt-1.1.28-r1.ebuild:
   Stable for s390, wrt bug #458984

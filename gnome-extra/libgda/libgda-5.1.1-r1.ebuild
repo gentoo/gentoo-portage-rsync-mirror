@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.1.1-r1.ebuild,v 1.1 2012/12/17 08:01:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.1.1-r1.ebuild,v 1.2 2013/06/30 15:24:19 jlec Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -17,7 +17,9 @@ HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2+ LGPL-2+"
 
 IUSE="berkdb bindist canvas firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres reports sourceview ssl" # vala
-REQUIRED_USE="canvas? ( gtk )
+REQUIRED_USE="
+	reports? ( ${PYTHON_REQUIRED_USE} )
+	canvas? ( gtk )
 	firebird? ( !bindist )
 	graphviz? ( gtk )
 	sourceview? ( gtk )"

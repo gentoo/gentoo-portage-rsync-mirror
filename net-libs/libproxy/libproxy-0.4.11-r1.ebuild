@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.11-r1.ebuild,v 1.1 2013/04/30 03:46:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.11-r1.ebuild,v 1.2 2013/06/30 15:25:43 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -15,6 +15,8 @@ LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="gnome kde mono networkmanager perl python spidermonkey test webkit"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 # NOTE: mozjs/spidermonkey might still cause problems like #373397 ?
 # NOTE: webkit-gtk:3, not :2, needed for libjavascriptcoregtk support

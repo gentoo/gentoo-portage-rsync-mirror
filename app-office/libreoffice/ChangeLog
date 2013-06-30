@@ -1,6 +1,18 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.482 2013/06/26 07:50:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.485 2013/06/30 15:25:25 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> libreoffice-3.6.6.2.ebuild,
+  libreoffice-3.6.9999.ebuild, libreoffice-4.0.4.2.ebuild,
+  libreoffice-4.0.9999.ebuild, libreoffice-4.1.0.1.ebuild,
+  libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild, metadata.xml:
+  Fix usage of python-r1.eclass
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.0.4.2.ebuild:
+  Stable for x86, wrt bug #474066
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.0.4.2.ebuild:
+  Stable for amd64, wrt bug #474066
 
   26 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.1.0.1.ebuild,
   libreoffice-4.1.9999.ebuild:
