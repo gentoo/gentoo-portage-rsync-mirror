@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bbe/bbe-0.2.2.ebuild,v 1.5 2013/06/08 09:46:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bbe/bbe-0.2.2.ebuild,v 1.6 2013/06/30 17:19:25 billie Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ IUSE=""
 
 src_prepare() {
 	sed -i -e '/^htmldir/d' doc/Makefile.am || die
+	eaclocal
 	eautoreconf
 }
 
