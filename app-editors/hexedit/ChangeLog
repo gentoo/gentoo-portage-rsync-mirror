@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.56 2013/06/29 18:27:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.57 2013/06/30 18:02:35 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> hexedit-1.2.13.ebuild:
+  Stable for s390, wrt bug #474138
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> hexedit-1.2.13.ebuild:
   Stable for ppc, wrt bug #474138

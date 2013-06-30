@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.86 2013/06/29 19:25:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.87 2013/06/30 18:06:33 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> openresolv-3.5.4-r3.ebuild:
+  Stable for s390, wrt bug #366535
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> openresolv-3.5.4-r3.ebuild:
   Stable for ppc64, wrt bug #366535

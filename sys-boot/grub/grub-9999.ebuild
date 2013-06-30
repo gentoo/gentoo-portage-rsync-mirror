@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.93 2013/05/01 13:48:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.94 2013/06/30 18:25:01 floppym Exp $
 
 EAPI=5
 AUTOTOOLS_AUTO_DEPEND=yes
@@ -207,6 +207,9 @@ src_configure() {
 }
 
 src_compile() {
+	# Sandbox bug 404013.
+	use libzfs && addpredict /etc/dfs:/dev/zfs
+
 	multibuild_foreach_variant autotools-utils_src_compile
 
 	use doc && multibuild_for_best_variant \

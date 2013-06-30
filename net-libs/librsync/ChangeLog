@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/librsync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/ChangeLog,v 1.46 2013/06/29 16:23:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/ChangeLog,v 1.47 2013/06/30 18:04:02 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> librsync-0.9.7-r3.ebuild:
+  Stable for s390, wrt bug #474270
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> librsync-0.9.7-r3.ebuild:
   Stable for sparc, wrt bug #474270

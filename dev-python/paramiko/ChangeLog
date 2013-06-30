@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.97 2013/06/29 16:28:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.98 2013/06/30 18:07:12 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> paramiko-1.10.1.ebuild:
+  Stable for s390, wrt bug #474190
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> paramiko-1.10.1.ebuild:
   Stable for sparc, wrt bug #474190

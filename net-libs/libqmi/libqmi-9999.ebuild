@@ -1,16 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.5 2013/06/18 21:27:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.6 2013/06/30 18:27:08 vapier Exp $
 
 EAPI="4"
 
-inherit multilib autotools
+inherit multilib
 if [[ ${PV} == "9999" ]] ; then
-	inherit git-2
+	inherit git-2 autotools
 	EGIT_REPO_URI="git://anongit.freedesktop.org/libqmi"
 else
 	KEYWORDS="~amd64 ~arm ~x86"
-	SRC_URI="http://cgit.freedesktop.org/libqmi/snapshot/${P}.tar.gz"
+	SRC_URI="http://www.freedesktop.org/software/libqmi/${P}.tar.xz"
 fi
 
 DESCRIPTION="QMI modem protocol helper library"
@@ -21,10 +21,10 @@ SLOT="0"
 IUSE="doc static-libs test"
 
 RDEPEND=">=dev-libs/glib-2.32"
-# We have to always depend on gtk-doc since eautoreconf uses it #469214
 DEPEND="${RDEPEND}
-	dev-util/gtk-doc
+	doc? ( dev-util/gtk-doc )
 	virtual/pkgconfig"
+[[ ${PV} == "9999" ]] && DEPEND+=" dev-util/gtk-doc" #469214
 
 src_prepare() {
 	[[ -e configure ]] || eautoreconf

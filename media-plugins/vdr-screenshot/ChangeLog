@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-screenshot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-screenshot/ChangeLog,v 1.13 2012/05/06 19:09:20 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-screenshot/ChangeLog,v 1.14 2013/06/30 18:01:53 hd_brummy Exp $
+
+*vdr-screenshot-0.0.15 (30 Jun 2013)
+
+  30 Jun 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-screenshot-0.0.11.ebuild, +vdr-screenshot-0.0.15.ebuild:
+  bump; clean up
 
   06 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-screenshot-0.0.13.ebuild:

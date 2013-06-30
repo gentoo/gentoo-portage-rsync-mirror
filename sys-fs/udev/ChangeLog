@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.929 2013/06/29 19:24:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.930 2013/06/30 18:05:43 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> udev-204.ebuild:
+  Stable for s390, wrt bug #470580
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> udev-204.ebuild:
   Stable for ppc64, wrt bug #470580

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.11 2013/01/24 20:48:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.4-r1.ebuild,v 1.1 2013/06/30 18:04:07 gurligebis Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils linux-info user
 
 DESCRIPTION="IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE"
@@ -11,8 +11,8 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 RSA DES"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~ppc64 x86"
-IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql +non-root +openssl sqlite pam"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root +openssl sqlite pam"
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -82,6 +82,10 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	epatch_user
+}
+
 src_configure() {
 	local myconf=""
 
@@ -123,17 +127,19 @@ src_configure() {
 		$(use_enable eap eap-aka-3gpp2) \
 		$(use_enable eap eap-mschapv2) \
 		$(use_enable eap eap-radius) \
+		$(use_enable eap eap-tls) \
 		$(use_enable openssl) \
 		$(use_enable gcrypt) \
 		$(use_enable mysql) \
 		$(use_enable sqlite) \
 		$(use_enable dhcp) \
 		$(use_enable farp) \
+		$(use_enable networkmanager nm) \
 		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install
 
 	doinitd "${FILESDIR}"/ipsec
 
@@ -245,10 +251,9 @@ pkg_postinst() {
 		elog "user \"ipsec\" the appropriate rights."
 		elog "For example (the default case):"
 		elog "/etc/sudoers:"
-		elog "  Defaults:ipsec always_set_home,!env_reset"
-		elog "  ipsec ALL=(ALL) NOPASSWD: /usr/sbin/ipsec"
+		elog "  ipsec ALL=(ALL) NOPASSWD: SETENV: /usr/sbin/ipsec"
 		elog "Under the specific connection block in /etc/ipsec.conf:"
-		elog "  leftupdown=\"sudo ipsec _updown\""
+		elog "  leftupdown=\"sudo -E ipsec _updown iptables\""
 		elog
 	fi
 	elog

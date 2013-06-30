@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.53 2013/06/09 15:59:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.54 2013/06/30 18:07:54 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ruby-mode-1.9.3_p429.ebuild:
+  Stable for s390, wrt bug #470628
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ruby-mode-1.9.3_p429.ebuild:
   Stable for sh, wrt bug #470628

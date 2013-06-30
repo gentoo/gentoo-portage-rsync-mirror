@@ -3,10 +3,10 @@ DEPEND=>=dev-lang/perl-5.8.1 dev-perl/XML-Parser
 DESCRIPTION=Internationalization Tool Collection
 EAPI=5
 HOMEPAGE=https://launchpad.net/intltool/
-KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8.1 dev-perl/XML-Parser sys-devel/gettext
 SLOT=0
 SRC_URI=https://launchpad.net/intltool/trunk/0.50.2/+download/intltool-0.50.2.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d39bc7105c860d21b197396f4432c517
+_md5_=99d7ee3a17b0cc3f8a77d5a96265f76d
