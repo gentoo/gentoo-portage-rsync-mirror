@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/ipxe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.10 2013/06/28 20:58:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.11 2013/06/30 02:29:33 cardoe Exp $
+
+  30 Jun 2013; Doug Goldstein <cardoe@gentoo.org> ipxe-1.0.0_p20130624.ebuild:
+  Updates from Jeroen Roovers <jer@gentoo.org> and Michael Weber
+  <xmw@gentoo.org> to handle users using the gold linker instead of the default
+  bfd linker more gracefully.
 
   28 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ipxe-1.0.0_p20130225.ebuild:
   Stable for amd64, wrt bug #475110

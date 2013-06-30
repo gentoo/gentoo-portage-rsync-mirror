@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6_rc1.ebuild,v 1.2 2013/06/12 03:41:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6_rc4.ebuild,v 1.1 2013/06/30 02:27:50 tetromino Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ AUTOTOOLS_AUTORECONF=1
 PLOCALES="ar bg ca cs da de el en en_US eo es fa fi fr he hi hr hu it ja ko lt ml nb_NO nl or pa pl pt_BR pt_PT rm ro ru sk sl sr_RS@cyrillic sr_RS@latin sv te th tr uk wa zh_CN zh_TW"
 PLOCALE_BACKUP="en"
 
-inherit autotools-multilib eutils flag-o-matic gnome2-utils l10n multilib pax-utils toolchain-funcs virtualx
+inherit autotools-multilib eutils fdo-mime flag-o-matic gnome2-utils l10n multilib pax-utils toolchain-funcs virtualx
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
@@ -25,7 +25,7 @@ fi
 GV="2.21"
 MV="0.0.8"
 PULSE_PATCHES="winepulse-patches-1.6-rc1"
-WINE_GENTOO="wine-gentoo-2012.11.24"
+WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
@@ -39,7 +39,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+abi_x86_32 +abi_x86_64 alsa capi cups custom-cflags elibc_glibc fontconfig +gecko gphoto2 gsm gstreamer jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa +oss +perl png +prelink samba scanner selinux ssl test +threads +truetype udisks v4l +X xcomposite xinerama xml"
+IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa oss +perl +png +prelink +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
 [[ ${PV} == "9999" ]] || IUSE="${IUSE} pulseaudio"
 REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	test? ( abi_x86_32 )
@@ -170,9 +170,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.5.26-winegcc.patch #260726
 		"${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
 		"${FILESDIR}"/${PN}-1.5.17-osmesa-check.patch #429386
-		"${FILESDIR}"/${PN}-1.5.23-winebuild-CCAS.patch #455308
-		"${FILESDIR}"/${PN}-1.5.31-gnutls-3.2.0.patch #http://bugs.winehq.org/show_bug.cgi?id=33649
-		"${FILESDIR}"/${PN}-1.6_rc1-pkg-config.patch #http://bugs.winehq.org/show_bug.cgi?id=33780
 	)
 	[[ ${PV} == "9999" ]] || PATCHES+=(
 		"../${PULSE_PATCHES}"/*.patch #421365
@@ -185,16 +182,18 @@ src_prepare() {
 		tools/make_requests || die #432348
 	fi
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die
-	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
+	if ! use run-exes; then
+		sed -i '/^MimeType/d' tools/wine.desktop || die #117785
+	fi
+
+	# hi-res default icon, #472990, http://bugs.winehq.org/show_bug.cgi?id=24652
+	cp "${WORKDIR}"/${WINE_GENTOO}/icons/oic_winlogo.ico dlls/user32/resources/ || die
 
 	l10n_get_locales > po/LINGUAS # otherwise wine doesn't respect LINGUAS
 }
 
 do_configure() {
-	local myeconfargs=(
-		"${myeconfargs[@]}"
-		CCAS="$(tc-getAS)"
-	)
+	local myeconfargs=( "${myeconfargs[@]}" )
 
 	if use amd64; then
 		if [[ ${ABI} == amd64 ]]; then
@@ -315,8 +314,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
 }

@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.22 2013/06/15 03:58:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.23 2013/06/30 02:29:59 tetromino Exp $
+
+*winetricks-20130629 (30 Jun 2013)
+
+  30 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-954.ebuild, +winetricks-20130629.ebuild,
+  winetricks-99999999.ebuild:
+  Version bump with updates for Adobe Flash, .NET, psdk2003, etc. Switch to
+  upstream packaged tarballs instead of svn checkouts. Drop old.
 
 *winetricks-960 (15 Jun 2013)
 

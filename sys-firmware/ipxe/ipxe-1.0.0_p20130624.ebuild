@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.4 2013/06/27 22:18:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.5 2013/06/30 02:29:33 cardoe Exp $
 
 EAPI=5
+
+inherit toolchain-funcs
 
 GIT_REV="936134ed460618e18cc05d677a442d43d5e739a1"
 GIT_SHORT="936134e"
@@ -27,6 +29,13 @@ RDEPEND=""
 
 S="${WORKDIR}/ipxe-${GIT_SHORT}/src"
 
+pkg_setup() {
+	local myld=$(tc-getLD)
+
+	${myld} -v | grep -q "GNU gold" && \
+	ewarn "gold linker unable to handle 16-bit code using ld.bfd. bug #438058"
+}
+
 src_prepare() {
 	cat <<-EOF > "${S}"/config/local/general.h
 #undef BANNER_TIMEOUT
@@ -42,27 +51,40 @@ EOF
 }
 
 src_compile() {
+	ipxemake() {
+		# Q='' makes the build verbose since that's what everyone loves now
+		emake Q='' \
+			CC=$(tc-getCC) \
+			LD="$(tc-getLD).bfd" \
+			AR=$(tc-getAR) \
+			OBJCOPY=$(tc-getOBJCOPY) \
+			RANLIB=$(tc-getRANLIB) \
+			OBJDUMP=$(tc-getPROG OBJDUMP objdump) \
+			HOST_CC=$(tc-getBUILD_CC) \
+			${*}
+	}
+
 	export NO_WERROR=1
 	if use qemu; then
-		emake bin/808610de.rom # pxe-e1000.rom (old)
-		emake bin/8086100e.rom # pxe-e1000.rom
-		emake bin/80861209.rom # pxe-eepro100.rom
-		emake bin/10500940.rom # pxe-ne2k_pci.rom
-		emake bin/10222000.rom # pxe-pcnet.rom
-		emake bin/10ec8139.rom # pxe-rtl8139.rom
-		emake bin/1af41000.rom # pxe-virtio.rom
+		ipxemake bin/808610de.rom # pxe-e1000.rom (old)
+		ipxemake bin/8086100e.rom # pxe-e1000.rom
+		ipxemake bin/80861209.rom # pxe-eepro100.rom
+		ipxemake bin/10500940.rom # pxe-ne2k_pci.rom
+		ipxemake bin/10222000.rom # pxe-pcnet.rom
+		ipxemake bin/10ec8139.rom # pxe-rtl8139.rom
+		ipxemake bin/1af41000.rom # pxe-virtio.rom
 		fi
 
 	if use vmware; then
-		emake bin/8086100f.mrom # e1000
-		emake bin/808610d3.mrom # e1000e
-		emake bin/10222000.mrom # vlance
-		emake bin/15ad07b0.rom # vmxnet3
+		ipxemake bin/8086100f.mrom # e1000
+		ipxemake bin/808610d3.mrom # e1000e
+		ipxemake bin/10222000.mrom # vlance
+		ipxemake bin/15ad07b0.rom # vmxnet3
 	fi
 
-	use iso && emake bin/ipxe.iso
-	use undi && emake bin/undionly.kpxe
-	use usb && emake bin/ipxe.usb
+	use iso && ipxemake bin/ipxe.iso
+	use undi && ipxemake bin/undionly.kpxe
+	use usb && ipxemake bin/ipxe.usb
 }
 
 src_install() {
