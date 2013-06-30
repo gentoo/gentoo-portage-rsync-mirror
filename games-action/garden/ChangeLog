@@ -1,6 +1,12 @@
 # ChangeLog for games-action/garden
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.8 2011/06/22 16:24:25 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.9 2013/06/30 07:05:30 slyfox Exp $
+
+*garden-1.0.8-r1 (30 Jun 2013)
+
+  30 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/garden-1.0.8-drop-AS_INIT.patch, +garden-1.0.8-r1.ebuild:
+  Fixed endless cofigure loop when /bin/sh=dash (bug #475248).
 
   22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> garden-1.0.8.ebuild,
   +files/garden-1.0.8-underlink.patch:
@@ -31,4 +37,3 @@
   12 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +garden-1.0.6.ebuild:
   initial commit - ebuild submitted by David Valentim Dias via bug #265726
-
