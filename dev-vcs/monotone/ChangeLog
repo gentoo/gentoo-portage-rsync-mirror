@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.25 2013/02/16 12:39:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.26 2013/06/30 00:18:23 chithanh Exp $
+
+  30 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/monotone-1.0-boost-1.53.patch, monotone-1.0-r3.ebuild:
+  Fix building against boost-1.53, bug #454160.
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -monotone-1.0-r2.ebuild,
   metadata.xml:
