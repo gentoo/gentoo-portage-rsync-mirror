@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-0.0.6.ebuild,v 1.3 2013/06/30 15:10:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-0.0.6.ebuild,v 1.4 2013/06/30 21:12:25 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="amd64 ~arm ~ppc x86"
+KEYWORDS="amd64 ~arm ppc x86"
 
 IUSE="doc static-libs"
 

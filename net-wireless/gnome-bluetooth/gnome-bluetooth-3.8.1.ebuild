@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.8.1.ebuild,v 1.1 2013/06/03 20:15:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.8.1.ebuild,v 1.2 2013/06/30 21:18:05 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 COMMON_DEPEND="
 	>=dev-libs/glib-2.29.90:2
 	>=x11-libs/gtk+-2.91.3:3[introspection?]
-	>=x11-libs/libnotify-0.7:=
 	virtual/udev
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 "

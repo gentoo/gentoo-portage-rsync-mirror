@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.3.0.ebuild,v 1.9 2013/06/30 15:11:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.3.0.ebuild,v 1.10 2013/06/30 21:12:35 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://gitorious.org/orcus/pages/Home"
 LICENSE="MIT"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="amd64 ~arm ~ppc x86"
+KEYWORDS="amd64 ~arm ppc x86"
 IUSE="static-libs"
 
 RDEPEND="

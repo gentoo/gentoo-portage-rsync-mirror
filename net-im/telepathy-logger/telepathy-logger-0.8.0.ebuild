@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.0.ebuild,v 1.1 2013/03/28 17:46:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.0.ebuild,v 1.2 2013/06/30 21:08:12 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -29,20 +29,19 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	dev-util/gtk-doc-am
+	>=dev-util/gtk-doc-am-1.10
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
 "
 
 src_configure() {
-	G2CONF="${G2CONF}
-		$(use_enable introspection)
-		--enable-debug
-		--enable-public-extensions
-		--disable-coding-style-checks
-		--disable-Werror
-		--disable-static"
-	gnome2_src_configure
+	gnome2_src_configure \
+		$(use_enable introspection) \
+		--enable-debug \
+		--enable-public-extensions \
+		--disable-coding-style-checks \
+		--disable-Werror \
+		--disable-static
 }
 
 src_test() {
