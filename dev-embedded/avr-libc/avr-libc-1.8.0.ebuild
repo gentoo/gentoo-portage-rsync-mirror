@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.8.0.ebuild,v 1.4 2012/05/03 02:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.8.0.ebuild,v 1.5 2013/06/30 06:03:44 vapier Exp $
 
 EAPI="4"
 
 CHOST="avr"
 CTARGET="avr"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="C library for Atmel AVR microcontrollers"
 HOMEPAGE="http://www.nongnu.org/avr-libc/"
@@ -44,6 +44,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch_user #455828
+
 	# work around broken gcc versions PR45261
 	local mcu
 	for mcu in $(sed -r -n '/CHECK_AVR_DEVICE/{s:.*[(](.*)[)]:\1:;p}' configure.ac) ; do

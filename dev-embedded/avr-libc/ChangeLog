@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avr-libc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.53 2012/05/03 02:22:39 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.54 2013/06/30 06:03:44 vapier Exp $
+
+  30 Jun 2013; Mike Frysinger <vapier@gentoo.org> avr-libc-1.8.0.ebuild:
+  Call epatch_user #455828 by Alexander Krause.
 
   03 May 2012; Mike Frysinger <vapier@gentoo.org> avr-libc-1.8.0.ebuild:
   Make sure the docdir is unique across cross-compilers #414075 by Soeren
@@ -227,4 +230,3 @@
   metadata.xml:
   initial import, ebuild created by Scott L. Price from Dragonfly Technologies
   (dflytech.com), according to bug 8799
-
