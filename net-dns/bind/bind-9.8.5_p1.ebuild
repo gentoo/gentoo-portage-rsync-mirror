@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.4_p2.ebuild,v 1.2 2013/04/08 05:41:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.5_p1.ebuild,v 1.1 2013/06/30 13:31:19 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -129,8 +129,8 @@ src_prepare() {
 #		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
 #			-e 's:RELEASEVER=:RELEASEVER=1:' \
 #			${GEOIP_PATCH_A} || die
-		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' \
-			${GEOIP_PATCH_A} || die
+#		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' \
+#			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
@@ -148,7 +148,8 @@ src_prepare() {
 	sed -i '/^SUBDIRS/s:tests::' bin/Makefile.in lib/Makefile.in || die
 
 	# bug #220361
-	rm {aclocal,libtool}.m4
+	rm aclocal.m4
+	rm -rf libtool.m4/
 	eautoreconf
 }
 
@@ -184,6 +185,7 @@ src_configure() {
 		$(use_with ldap dlz-ldap) \
 		$(use_with odbc dlz-odbc) \
 		$(use_with ssl openssl "${EPREFIX}"/usr) \
+		$(use_with ssl ecdsa) \
 		$(use_with idn) \
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
