@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.110 2013/06/06 21:58:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.111 2013/06/30 04:43:41 vapier Exp $
+
+  30 Jun 2013; Mike Frysinger <vapier@gentoo.org> ipython-0.13.2.ebuild:
+  Add ~arm to latest version too.
 
   06 Jun 2013; Mike Gilbert <floppym@gentoo.org> ipython-0.13.2.ebuild:
   Add missing colon to PYTHONPATH.
