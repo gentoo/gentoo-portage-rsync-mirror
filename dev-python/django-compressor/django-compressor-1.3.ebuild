@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/django-compressor-1.3.ebuild,v 1.2 2013/05/31 03:04:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/django-compressor-1.3.ebuild,v 1.3 2013/06/30 22:04:47 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -40,9 +40,11 @@ python_compile_all() {
 }
 
 python_test() {
+	pushd "${BUILD_DIR}/lib" > /dev/null || die
 	set -- django-admin.py test compressor --settings=compressor.test_settings
 	echo "$@"
 	"$@" || die "Tests failed with ${EPYTHON}"
+	popd > /dev/null || die
 }
 
 python_install_all() {
