@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.1.ebuild,v 1.3 2013/06/26 08:46:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.1.ebuild,v 1.4 2013/06/30 07:46:29 jlec Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ RDEPEND="
 	media-libs/lcms:2
 	>=media-libs/libexif-0.6.16
 	>=media-libs/libgphoto2-2.4.2:=
-	>=media-libs/libraw-0.14.0
+	>=media-libs/libraw-0.14.0:=
 	>=net-libs/libsoup-2.26.0:2.4
 	net-libs/rest:0.7
 	net-libs/webkit-gtk:3
