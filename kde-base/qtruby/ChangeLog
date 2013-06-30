@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.161 2013/06/29 16:09:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.162 2013/06/30 10:09:30 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> qtruby-4.10.4.ebuild:
+  Stable for x86, wrt to bug #473942
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> qtruby-4.10.4.ebuild:
   Stable for amd64, wrt to bug #473942

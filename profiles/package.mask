@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14874 2013/06/29 19:42:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14876 2013/06/30 10:24:37 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (30 Jun 2013)
+# temp masked for testing, wrt bug 474888
+=media-plugins/vdr-music-0.9.9
 
 # Alexis Ballier <aballier@gentoo.org> (27 Jun 2013)
 # TeX Live 2013 mask.

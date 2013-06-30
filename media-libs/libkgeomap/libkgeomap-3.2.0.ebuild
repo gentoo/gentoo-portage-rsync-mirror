@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-3.2.0.ebuild,v 1.2 2013/06/29 16:14:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-3.2.0.ebuild,v 1.3 2013/06/30 10:14:29 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DESCRIPTION="Wrapper library for world map components as marble, openstreetmap a
 HOMEPAGE="http://www.digikam.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 SLOT=4
 
