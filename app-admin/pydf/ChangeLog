@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/pydf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.42 2012/10/16 21:59:28 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.43 2013/06/30 16:48:38 jlec Exp $
+
+*pydf-10-r1 (30 Jun 2013)
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> +pydf-10-r1.ebuild,
+  metadata.xml:
+  Bump to new python eclass
 
   16 Oct 2012; Markus Meier <maekke@gentoo.org> pydf-10.ebuild:
   add ~arm, bug #433655

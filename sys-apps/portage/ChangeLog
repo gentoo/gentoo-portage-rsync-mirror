@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1302 2013/06/29 04:49:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1303 2013/06/30 16:56:34 jlec Exp $
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> portage-2.1.6.7_p1.ebuild,
+  portage-2.1.11.62.ebuild, portage-2.1.12.2.ebuild, portage-2.1.12.10.ebuild,
+  portage-2.1.12.11.ebuild, portage-2.2.0_alpha177.ebuild,
+  portage-2.2.0_alpha185.ebuild, portage-2.2.0_alpha186.ebuild,
+  portage-9999.ebuild, metadata.xml:
+  Fix usage of python-r1.eclass
 
 *portage-2.2.0_alpha186 (29 Jun 2013)
 

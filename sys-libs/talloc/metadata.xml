@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>samba</herd>
-	<maintainer>
-		<email>patrick@gentoo.org</email>
-		<name>Patrick Lauer</name>
-	</maintainer>
-<use>
-	<flag name="compat">Enable extra compatibility stuff</flag>
-	<flag name="swig">Install interface definitions for <pkg>dev-lang/swig</pkg></flag>
-</use>
+  <herd>samba</herd>
+  <maintainer>
+    <email>patrick@gentoo.org</email>
+    <name>Patrick Lauer</name>
+  </maintainer>
+  <use>
+    <flag name="compat">Enable extra compatibility stuff</flag>
+    <flag name="swig">Install interface definitions for <pkg>dev-lang/swig</pkg></flag>
+  </use>
 </pkgmetadata>

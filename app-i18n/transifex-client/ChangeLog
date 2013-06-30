@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/transifex-client
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.25 2013/06/21 12:11:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.26 2013/06/30 16:58:36 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> transifex-client-0.9.2.ebuild:
+  Stable for amd64, wrt bug #471094
 
 *transifex-client-0.9.2 (21 Jun 2013)
 
