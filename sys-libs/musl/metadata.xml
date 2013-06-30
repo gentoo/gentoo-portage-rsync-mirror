@@ -3,10 +3,10 @@
 <pkgmetadata>
 	<herd>toolchain</herd>
 	<maintainer>
-		<email>lu_zero@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
+	</maintainer>
+	<maintainer>
+		<email>lu_zero@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>

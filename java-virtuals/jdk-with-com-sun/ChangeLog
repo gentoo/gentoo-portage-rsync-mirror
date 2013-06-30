@@ -1,6 +1,13 @@
 # ChangeLog for java-virtuals/jdk-with-com-sun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.19 2012/10/04 17:36:29 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.20 2013/06/30 09:09:12 tomwij Exp $
+
+*jdk-with-com-sun-20111111-r1 (30 Jun 2013)
+
+  30 Jun 2013; Tom Wijsman <TomWij@gentoo.org>
+  +jdk-with-com-sun-20111111-r1.ebuild, -jdk-with-com-sun-20111111.ebuild:
+  Remove sun-jdk and sun-jre-bin from the virtuals, acked by Caster. For
+  security bug #473830 reported by Agostino Sarubbo.
 
   04 Oct 2012; Ralph Sennhauser <sera@gentoo.org>
   jdk-with-com-sun-20111111.ebuild:
@@ -97,4 +104,3 @@
   +jdk-with-com-sun-20080505.ebuild:
   Rename sun-jdk virtual to jdk-with-com-sun to avoid having to specify
   category with sun-jdk.
-
