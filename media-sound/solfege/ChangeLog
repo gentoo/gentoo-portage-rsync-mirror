@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.93 2013/05/29 07:05:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.95 2013/06/30 12:43:02 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> solfege-3.22.0.ebuild:
+  Stable for x86, wrt bug #475298
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> solfege-3.22.0.ebuild:
+  Stable for amd64, wrt bug #475298
 
 *solfege-3.22.0 (29 May 2013)
 
@@ -416,4 +422,3 @@
   solfege-2.0.4.ebuild:
   solfege is a package to help you practice ear training (scales, dictation,
   rythm, etc). Ebuild submitted by TGL <degrenier@easyconnect.fr> ib bug #25085.
-

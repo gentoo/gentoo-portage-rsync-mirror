@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-0.5.1.ebuild,v 1.3 2013/05/03 21:09:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/valyriatear-0.5.1.ebuild,v 1.5 2013/06/30 12:43:53 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/valyriatear/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 GPL-2+ GPL-3 CC-BY-SA-3.0 CC-BY-3.0 CC0-1.0 OFL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug editor nls"
 
 RDEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.3.1.201212250029.ebuild,v 1.3 2013/06/29 03:01:22 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.3.1.201212250029.ebuild,v 1.5 2013/06/30 12:44:12 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://dl2.xmind.net/xmind-downloads/${MY_P}.zip
 	http://dev.gentoo.org/~creffett/distfiles/xmind-icons.tar.xz"
 LICENSE="EPL-1.0 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="
