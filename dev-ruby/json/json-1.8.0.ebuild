@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.6.7.ebuild,v 1.8 2012/11/06 16:48:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.8.0.ebuild,v 1.1 2013/06/30 08:38:54 graaff Exp $
 
-EAPI=2
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+EAPI=5
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGES TODO README.rdoc README-json-jruby.markdown"
@@ -17,7 +17,7 @@ DESCRIPTION="A JSON implementation as a Ruby extension."
 HOMEPAGE="http://json.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE=""
 
@@ -37,6 +37,9 @@ all_ruby_prepare() {
 		-e 's|sdoc|rdoc|' \
 		-e 's|`git ls-files`|""|' \
 		Rakefile || die "rakefile fix failed"
+
+	# Remove hardcoded and broken -O setting.
+	sed -i -e '/^unless/,/^end/ d' -e '/^  (if|unless)/,/^  end/ d' ext/json/ext/*/extconf.rb || die
 }
 
 each_ruby_compile() {
