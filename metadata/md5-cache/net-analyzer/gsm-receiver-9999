@@ -1,10 +1,10 @@
 DEFINED_PHASES=configure install prepare setup unpack
-DEPEND=net-libs/libosmocore net-wireless/gnuradio virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git =dev-lang/python-2*
+DEPEND=net-libs/libosmocore net-wireless/gnuradio:= virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git =dev-lang/python-2*
 DESCRIPTION=GSM receiver block from the airprobe suite
-EAPI=4
+EAPI=5
 HOMEPAGE=https://svn.berlin.ccc.de/projects/airprobe/
 LICENSE=GPL-3
-RDEPEND=net-libs/libosmocore net-wireless/gnuradio =dev-lang/python-2*
+RDEPEND=net-libs/libosmocore net-wireless/gnuradio:= =dev-lang/python-2*
 SLOT=0
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	git-2	e92e09651292b1bef5656592364550f7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=9109e0690c29b53445eeaf06b71d2290
+_md5_=f60a74392b8e0c7f2fee71045d2ae047
