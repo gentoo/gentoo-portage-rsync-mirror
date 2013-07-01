@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.4 2013/05/15 08:40:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.5 2013/07/01 05:42:01 idella4 Exp $
 
 depend() {
 	before xendomains xend sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp 
@@ -14,6 +14,11 @@ start() {
 		--pidfile /var/run/xenstored.pid \
 		-- --pid-file=/var/run/xenstored.pid \
 		$XENSTORED_OPTS
+	until xenstore-exists /
+	do
+		echo -n .
+		sleep .5
+	done
 	sleep 15
 	einfo "Setting domain0 name record"
 	/usr/bin/xenstore-write "/local/domain/0/name" "Domain-0"
