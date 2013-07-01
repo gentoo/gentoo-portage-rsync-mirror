@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kaa-imlib2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.17 2012/02/23 07:24:05 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.18 2013/07/01 15:26:58 idella4 Exp $
+
+*kaa-imlib2-0.2.3-r2 (01 Jul 2013)
+
+  01 Jul 2013; Ian Delaney <idella4@gentoo.org> +kaa-imlib2-0.2.3-r2.ebuild:
+  revbump; migrate -> distutils-r1
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> kaa-imlib2-0.2.3-r1.ebuild:
   Restricting pypy and jython

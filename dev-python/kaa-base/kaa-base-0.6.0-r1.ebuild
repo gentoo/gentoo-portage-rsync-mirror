@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0-r1.ebuild,v 1.1 2013/07/01 08:45:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0-r1.ebuild,v 1.2 2013/07/01 15:04:16 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -24,6 +24,8 @@ RDEPEND="${DEPEND}
 	dev-python/pynotifier[${PYTHON_USEDEP}]
 	lirc? ( dev-python/pylirc[${PYTHON_USEDEP}] )
 	tls? ( dev-python/tlslite[${PYTHON_USEDEP}] )"
+
+DISTUTILS_IN_SOURCE_BUILD=1
 
 python_prepare_all() {
 	sed -i -e 's:from pysqlite2 import dbapi2:import sqlite3:' \
