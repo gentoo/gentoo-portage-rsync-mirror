@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.265 2013/06/30 10:09:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.266 2013/07/01 09:08:15 ago Exp $
+
+  01 Jul 2013; Agostino Sarubbo <ago@gentoo.org> kgpg-4.10.4.ebuild:
+  Stable for ppc, wrt to bug #473942
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kgpg-4.10.4.ebuild:
   Stable for x86, wrt to bug #473942

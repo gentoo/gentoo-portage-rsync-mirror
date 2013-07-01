@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7998 2013/06/30 23:55:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7999 2013/07/01 09:16:53 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jul 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Mask new net-libs/qmf releases.
 
   30 Jun 2013; Anthony G. Basile <blueness@gentoo.org> package.mask:
   Mask net-misc/cgminer for removal, bug #442254

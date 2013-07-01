@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-4.10.4.ebuild,v 1.3 2013/06/30 10:09:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/kapptemplate-4.10.4.ebuild,v 1.4 2013/07/01 09:08:44 ago Exp $
 
 EAPI=5
 
@@ -14,5 +14,5 @@ fi
 inherit ${eclass}
 
 DESCRIPTION="KAppTemplate - A shell script to create the necessary framework to develop KDE applications."
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"

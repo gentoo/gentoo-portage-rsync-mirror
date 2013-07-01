@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfourinline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.165 2013/06/30 10:08:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.166 2013/07/01 09:08:05 ago Exp $
+
+  01 Jul 2013; Agostino Sarubbo <ago@gentoo.org> kfourinline-4.10.4.ebuild:
+  Stable for ppc, wrt to bug #473942
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kfourinline-4.10.4.ebuild:
   Stable for x86, wrt to bug #473942
