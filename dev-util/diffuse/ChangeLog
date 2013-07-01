@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/diffuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.17 2013/05/15 11:15:23 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.18 2013/07/01 11:17:47 grozin Exp $
+
+*diffuse-0.4.7-r1 (01 Jul 2013)
+
+  01 Jul 2013; Andrey Grozin <grozin@gentoo.org> -diffuse-0.4.7.ebuild,
+  +diffuse-0.4.7-r1.ebuild:
+  Fixed #406433 and #475196, many thanks to Julian Ospald <hasufell@gentoo.org>
 
 *diffuse-0.4.7 (15 May 2013)
 
