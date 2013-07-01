@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.2-r1.ebuild,v 1.1 2013/06/14 21:57:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.2-r1.ebuild,v 1.2 2013/07/01 14:37:57 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -15,7 +15,7 @@ HOMEPAGE="https://launchpad.net/keystone"
 SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="folsom"
+SLOT="grizzly"
 KEYWORDS="~amd64 ~x86"
 IUSE="+sqlite mysql postgres ldap"
 #IUSE="+sqlite mysql postgres ldap test"
