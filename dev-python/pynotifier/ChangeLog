@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pynotifier
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.19 2011/10/24 05:37:32 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.20 2013/07/01 08:15:28 idella4 Exp $
+
+*pynotifier-0.7.0-r2 (01 Jul 2013)
+
+  01 Jul 2013; Ian Delaney <idella4@gentoo.org> +pynotifier-0.7.0-r2.ebuild:
+  revbump; migrate -> distutils-r1
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   pynotifier-0.7.0-r1.ebuild:
@@ -78,4 +83,3 @@
   +pynotifier-0.5.8.ebuild:
   Initial version, thanks to Dirk Meyer and Frittella Laurento
   (bug #156497)
-
