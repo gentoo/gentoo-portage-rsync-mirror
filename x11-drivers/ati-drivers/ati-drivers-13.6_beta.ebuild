@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.6_beta.ebuild,v 1.4 2013/06/18 14:00:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.6_beta.ebuild,v 1.5 2013/07/01 18:15:49 zerochaos Exp $
 
 EAPI=5
 
@@ -187,20 +187,6 @@ _check_kernel_config() {
 }
 
 pkg_pretend() {
-	# workaround until bug 365543 is solved
-	if use modules; then
-		linux-info_pkg_setup
-		require_configured_kernel
-		_check_kernel_config
-
-		if ! [[ "${KV_EXTRA}" =~ -hardened.* ]] && use pax_kernel; then
-			eerror "USE pax_kernel enabled for a non-hardened kernel."
-			eerror "If you know this kernel supports pax_kernel, open a bug at"
-			eerror "https://bugs.gentoo.org"
-			die "USE pax_kernel enabled for a non-hardened kernel"
-		fi
-	fi
-
 	if ! has XT ${PAX_MARKINGS} && use pax_kernel; then
 		ewarn "You have disabled xattr pax markings for portage."
 		ewarn "This will likely cause programs using ati-drivers provided"
