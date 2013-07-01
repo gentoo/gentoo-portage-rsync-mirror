@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.6.ebuild,v 1.4 2013/06/30 12:42:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.6.ebuild,v 1.6 2013/07/01 07:30:28 radhermit Exp $
 
 EAPI="5"
 
@@ -34,16 +34,16 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
-	sed -i \
-		-e "s:-ggdb:${CXXFLAGS}:" \
-		-e "s:^CXX=.*:CXX=$(tc-getCXX):" \
-		Makefile
-
+	sed -i 's:-ggdb::' Makefile || die
 	epatch "${FILESDIR}"/${P}-json-c.patch
 }
 
 src_configure() {
 	./config.sh || die
+}
+
+src_compile() {
+	emake CXX="$(tc-getCXX)" AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)"
 }
 
 src_test() {
