@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1146 2013/07/01 01:23:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1147 2013/07/01 07:42:00 tomwij Exp $
+
+  01 Jul 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.10.0.ebuild:
+  Bring missing BFQ patches from 3.9 to 3.10 branch.
 
 *gentoo-sources-3.10.0 (01 Jul 2013)
 
