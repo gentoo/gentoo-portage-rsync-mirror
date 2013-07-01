@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r2.ebuild,v 1.2 2013/03/10 08:58:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r2.ebuild,v 1.3 2013/07/01 06:23:26 patrick Exp $
 
 EAPI=5
 
@@ -26,17 +26,6 @@ RDEPEND="${DEPEND}
 	!sci-mathematics/cado-nfs" # file collisions, fixable
 
 S=${WORKDIR}/${PN}-master
-
-pkg_setup() {
-	einfo "There are several internal tuning options"
-	einfo "Please export ARCH being on of the following"
-	einfo "	prescott"
-	einfo "	pentium2"
-	einfo "	pentium4"
-	einfo "if your cpu is of that type"
-
-	[[ -z ${ARCH} ]] && export ARCH=generic
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
