@@ -11,7 +11,5 @@
 <use>
   <flag name="cholmod">Use <pkg>sci-libs/cholmod</pkg> for matrix
   ordering</flag>
-  <flag name="metis">Use METIS via (<pkg>sci-libs/cholmod</pkg>)
-  for matrix partitioning</flag>
 </use>
 </pkgmetadata>
