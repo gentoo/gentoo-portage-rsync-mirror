@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.930 2013/06/30 18:05:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.932 2013/07/01 17:39:45 ssuominen Exp $
+
+  01 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Improve the postinst message about networking wrt #474864 by "Coacher". Pass
+  --disable-tmpfiles to follow upstream git. Separate building of the udev
+  helpers to avoid more parallel make problems that aren't fixed by upgrading
+  sys-devel/make to 3.82-r4. Remove --bindir=/bin and follow upstream Makefile.am
+  by using "rootbin" instead of "bin" targets. Move away --enable-introspection
+  from it's own 'if' and 'else'.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> udev-204.ebuild:
   Stable for s390, wrt bug #470580

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.229 2013/06/07 18:00:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.232 2013/07/01 17:39:45 ssuominen Exp $
 
 EAPI=5
 
@@ -147,6 +147,14 @@ src_prepare() {
 	SUBSYSTEM=="mem", KERNEL=="null|zero|full|random|urandom", MODE="0666"
 	EOF
 
+	# Create link to systemd-udevd.8 here to avoid parallel build problem and
+	# while at it, create convinience link to `man 8 udevd` even if upstream
+	# doesn't do that anymore
+	local man
+	for man in udevd systemd-udevd; do
+		echo '.so systemd-udevd.service.8' > "${T}"/${man}.8
+	done
+
 	# Remove requirements for gettext and intltool wrt bug #443028
 	if ! has_version dev-util/intltool && ! [[ ${PV} = 9999* ]]; then
 		sed -i \
@@ -190,10 +198,6 @@ src_prepare() {
 		echo '#define secure_getenv(x) NULL' >> config.h.in
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
-
-	# link udevd(8) and systemd-udevd(8) manpages to systemd-udevd.service(8) manpage
-	echo '.so systemd-udevd.service.8' > "${T}"/udevd.8
-	echo '.so systemd-udevd.service.8' > "${T}"/systemd-udevd.8
 }
 
 src_configure() {
@@ -201,13 +205,11 @@ src_configure() {
 	use keymap || export ac_cv_prog_ac_ct_GPERF=true #452760
 
 	local econf_args
-
 	econf_args=(
 		ac_cv_search_cap_init=
 		ac_cv_header_sys_capability_h=yes
 		DBUS_CFLAGS=' '
 		DBUS_LIBS=' '
-		--bindir=/bin
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
 		--with-html-dir=/usr/share/doc/${PF}/html
@@ -232,6 +234,8 @@ src_configure() {
 		--disable-timedated
 		--disable-xz
 		--disable-polkit
+		--disable-tmpfiles
+		--enable-introspection=$(usex introspection)
 		$(use_enable acl)
 		$(use_enable doc gtk-doc)
 		$(use_enable gudev)
@@ -240,26 +244,30 @@ src_configure() {
 		$(use_enable selinux)
 		$(use_enable static-libs static)
 	)
-	if use introspection; then
-		econf_args+=(
-			--enable-introspection=$(usex introspection)
-		)
-	fi
-	if use firmware-loader; then
-		econf_args+=(
-			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
-		)
-	fi
+	use firmware-loader && econf_args+=( --with-firmware-path="/lib/firmware/updates:/lib/firmware" )
+
 	econf "${econf_args[@]}"
 }
 
 src_compile() {
 	echo 'BUILT_SOURCES: $(BUILT_SOURCES)' > "${T}"/Makefile.extra
 	emake -f Makefile -f "${T}"/Makefile.extra BUILT_SOURCES
-	local targets=(
-		libudev.la
+
+	# Most of the parallel build problems were solved by >=sys-devel/make-3.82-r4,
+	# but not everything -- separate building of the binaries as a workaround,
+	# which will force internal libraries required for the helpers to be built
+	# early enough, like eg. libsystemd-shared.la
+	local lib_targets=( libudev.la )
+	use gudev && lib_targets+=( libgudev-1.0.la )
+	emake "${lib_targets[@]}"
+
+	local exec_targets=(
 		systemd-udevd
 		udevadm
+		)
+	emake "${exec_targets[@]}"
+
+	local helper_targets=(
 		ata_id
 		cdrom_id
 		collect
@@ -267,14 +275,17 @@ src_compile() {
 		v4l_id
 		accelerometer
 		mtd_probe
+		)
+	use keymap && helper_targets+=( keymap )
+	emake "${helper_targets[@]}"
+
+	local man_targets=(
 		man/udev.7
 		man/udevadm.8
 		man/systemd-udevd.service.8
 	)
-	use keymap && targets+=( keymap )
-	use gudev && targets+=( libgudev-1.0.la )
+	emake "${man_targets[@]}"
 
-	emake "${targets[@]}"
 	if use doc; then
 		emake -C docs/libudev
 		use gudev && emake -C docs/gudev
@@ -289,7 +300,7 @@ src_install() {
 		install-libLTLIBRARIES
 		install-includeHEADERS
 		install-libgudev_includeHEADERS
-		install-binPROGRAMS
+		install-rootbinPROGRAMS
 		install-rootlibexecPROGRAMS
 		install-udevlibexecPROGRAMS
 		install-dist_udevconfDATA
@@ -317,7 +328,7 @@ src_install() {
 	# add final values of variables:
 	targets+=(
 		rootlibexec_PROGRAMS=systemd-udevd
-		bin_PROGRAMS=udevadm
+		rootbin_PROGRAMS=udevadm
 		lib_LTLIBRARIES="${lib_LTLIBRARIES}"
 		MANPAGES="man/udev.7 man/udevadm.8 \
 				man/systemd-udevd.service.8"
@@ -342,8 +353,7 @@ src_install() {
 	# see src_prepare() for content of these files
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
-	doman "${T}"/udevd.8
-	doman "${T}"/systemd-udevd.8
+	doman "${T}"/{systemd-,}udevd.8
 
 	# install udevadm compatibility symlink
 	dosym {../bin,sbin}/udevadm
@@ -433,21 +443,25 @@ pkg_postinst() {
 		fi
 	done
 
+	elog
+	elog "Starting from version >= 200 the new predictable network interface names are"
+	elog "used by default, see:"
+	elog "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
+	elog "http://cgit.freedesktop.org/systemd/systemd/tree/src/udev/udev-builtin-net_id.c"
+	elog
+	elog "Example command to get the information for the new interface name before booting"
+	elog "(replace <ifname> with, for example, eth0):"
+	elog "# udevadm test-builtin net_id /sys/class/net/<ifname> 2> /dev/null"
+	elog
+	elog "You can use either kernel parameter \"net.ifnames=0\", create empty"
+	elog "file /etc/udev/rules.d/80-net-name-slot.rules, or symlink it to /dev/null"
+	elog "to disable the feature."
+
 	if has_version sys-apps/biosdevname; then
 		ewarn
-		ewarn "You have sys-apps/biosdevname installed which has been deprecated"
-		ewarn "in favor of the predictable network interface names."
+		ewarn "You can replace the functionality of sys-apps/biosdevname which has been"
+		ewaen "detected to be installed with the new predictable network interface names."
 	fi
-
-	ewarn
-	ewarn "The new predictable network interface names are used by default, see:"
-	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
-	ewarn
-	ewarn "Example command to get the information for the new interface name before booting"
-	ewarn "(replace <ifname> with, for example, eth0):"
-	ewarn "# udevadm test-builtin net_id /sys/class/net/<ifname> 2> /dev/null"
-	ewarn
-	ewarn "You can use kernel commandline net.ifnames=0 to disable this feature."
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
@@ -458,9 +472,9 @@ pkg_postinst() {
 
 	elog
 	elog "For more information on udev on Gentoo, upgrading, writing udev rules, and"
-	elog "         fixing known issues visit:"
-	elog "         http://wiki.gentoo.org/wiki/Udev/upgrade"
-	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
+	elog "fixing known issues visit:"
+	elog "http://wiki.gentoo.org/wiki/Udev/upgrade"
+	elog "http://www.gentoo.org/doc/en/udev-guide.xml"
 
 	# Update hwdb database in case the format is changed by udev version.
 	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
