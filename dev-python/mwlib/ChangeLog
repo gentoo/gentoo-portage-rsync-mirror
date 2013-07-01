@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.24 2013/05/22 06:41:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.25 2013/07/01 10:03:00 dev-zero Exp $
+
+*mwlib-0.15.8-r1 (01 Jul 2013)
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.15.8-fix-tests.patch, +mwlib-0.15.8-r1.ebuild:
+  Migrate to distutils-r1
 
 *mwlib-0.15.8 (22 May 2013)
 

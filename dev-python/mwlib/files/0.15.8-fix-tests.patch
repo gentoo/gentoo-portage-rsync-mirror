@@ -1,0 +1,14 @@
+diff --git a/sandbox/test_nserve.py b/sandbox/test_nserve.py
+index 5ea5908..9f769a1 100755
+--- a/sandbox/test_nserve.py
++++ b/sandbox/test_nserve.py
+@@ -1,7 +1,8 @@
+ #! /usr/bin/env py.test
+ # -*- coding: utf-8 -*-
+ 
+-import pytest, gevent, nserve, urllib, urllib2, bottle
++import pytest, gevent, urllib, urllib2, bottle
++from mwlib import nserve
+ import wsgi_intercept.urllib2_intercept
+ 
+ try:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mwlib-ext
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-ext/ChangeLog,v 1.4 2012/02/22 08:21:39 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-ext/ChangeLog,v 1.5 2013/07/01 10:04:04 dev-zero Exp $
+
+*mwlib-ext-0.12.4-r1 (01 Jul 2013)
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.12.4-unbundle-reportlab.patch, +mwlib-ext-0.12.4-r1.ebuild:
+  Migrate to distutils-r1, unbundle reportlab.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> mwlib-ext-0.12.3.ebuild,
   mwlib-ext-0.12.4.ebuild:
@@ -22,4 +28,3 @@
   18 Apr 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
   +mwlib-ext-0.9.3.ebuild:
   Initial import. Ebuild by Richard Ash, fixes #266166
-
