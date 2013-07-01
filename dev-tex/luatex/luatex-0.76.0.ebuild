@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.76.0.ebuild,v 1.1 2013/06/25 21:15:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.76.0.ebuild,v 1.2 2013/07/01 13:22:33 aballier Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ IUSE="doc"
 
 RDEPEND="dev-libs/zziplib
 	>=media-libs/libpng-1.4:0=
-	x11-libs/cairo
-	x11-libs/pixman
+	>=x11-libs/cairo-1.12
+	>x11-libs/pixman-0.18
 	app-text/poppler:=[xpdf-headers(+)]
 	sys-libs/zlib
 	>=dev-libs/kpathsea-6.1.0_p20120701"
