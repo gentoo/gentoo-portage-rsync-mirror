@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.30.0-r1.ebuild,v 1.1 2013/06/05 15:53:53 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.30.0-r2.ebuild,v 1.1 2013/07/01 11:49:43 grozin Exp $
 
 EAPI=5
 
@@ -75,7 +75,7 @@ RDEPEND="${RDEPEND}
 	${DEF_DEP}"
 
 DEPEND="${RDEPEND}
-	sys-apps/texinfo"
+	<sys-apps/texinfo-5.0"
 
 TEXMF="${EPREFIX}"/usr/share/texmf-site
 
@@ -94,7 +94,7 @@ pkg_setup() {
 
 src_prepare() {
 	local n PATCHES v
-	PATCHES=( imaxima-0 rmaxima-0 wish-0 xdg-utils-0 texinfo51 )
+	PATCHES=( imaxima-0 rmaxima-0 wish-0 xdg-utils-0 )
 
 	n=${#PATCHES[*]}
 	for ((n--; n >= 0; n--)); do

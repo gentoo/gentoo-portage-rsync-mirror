@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.105 2013/06/05 15:53:53 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.106 2013/07/01 11:49:43 grozin Exp $
+
+*maxima-5.30.0-r2 (01 Jul 2013)
+
+  01 Jul 2013; Andrey Grozin <grozin@gentoo.org> -maxima-5.30.0-r1.ebuild,
+  +maxima-5.30.0-r2.ebuild, -files/texinfo51.patch:
+  Fixed #473102 - depend on <texinfo-5.0 again
 
 *maxima-5.30.0-r1 (05 Jun 2013)
 

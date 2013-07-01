@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-rl/mwlib-rl-0.14.3.ebuild,v 1.1 2013/07/01 11:30:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-rl/mwlib-rl-0.14.3.ebuild,v 1.2 2013/07/01 11:42:39 dev-zero Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-python/mwlib-0.15.8-r1[${PYTHON_USEDEP}]
 	>=dev-python/mwlib-ext-0.12.4-r1[${PYTHON_USEDEP}]
 	>=dev-python/pygments-1.4[${PYTHON_USEDEP}]
 	dev-python/simplejson[${PYTHON_USEDEP}]
-	|| ( dev-python/pillow[${PYTHON_USEDEP}] dev-python/imaging[${PYTHON_USEDEP}] )
+	dev-python/pillow[${PYTHON_USEDEP}]
 	media-fonts/freefont
 	|| ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick )
 	pdftk? ( app-text/pdftk )"

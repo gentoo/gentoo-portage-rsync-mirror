@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mwlib-rl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-rl/ChangeLog,v 1.1 2013/07/01 11:30:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-rl/ChangeLog,v 1.2 2013/07/01 11:42:39 dev-zero Exp $
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> mwlib-rl-0.14.3.ebuild:
+  Only tested with pillow, remove imaging.
 
 *mwlib-rl-0.14.3 (01 Jul 2013)
 
