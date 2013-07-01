@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.2.ebuild,v 1.3 2013/07/01 20:02:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.2.ebuild,v 1.4 2013/07/01 21:06:31 eva Exp $
 
 EAPI="5"
 inherit gnome2
@@ -26,12 +26,11 @@ RDEPEND="
 	net-libs/rest:0.7
 	net-libs/webkit-gtk:3
 	>=x11-libs/gtk+-3.5.1:3
-	>=x11-libs/libnotify-0.7:=
 	x11-libs/pango
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	kerberos? (
-		app-crypt/gcr
+		app-crypt/gcr:0=
 		app-crypt/mit-krb5 )
 "
 # goa-daemon can launch gnome-control-center
@@ -53,9 +52,8 @@ src_configure() {
 		--enable-documentation \
 		--enable-exchange \
 		--enable-facebook \
-		--with-facebook-client-id \
+		--enable-flickr \
 		--enable-imap-smtp \
 		--enable-owncloud \
-		--with-windows-live-client-id \
 		$(use_enable kerberos)
 }
