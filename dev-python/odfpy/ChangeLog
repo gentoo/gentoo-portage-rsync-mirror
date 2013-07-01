@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/odfpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/odfpy/ChangeLog,v 1.9 2013/03/11 06:23:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/odfpy/ChangeLog,v 1.10 2013/07/01 09:32:51 dev-zero Exp $
+
+*odfpy-0.9.6-r1 (01 Jul 2013)
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> +odfpy-0.9.6-r1.ebuild:
+  Migrate to distutils-r1
 
 *odfpy-0.9.6 (11 Mar 2013)
 

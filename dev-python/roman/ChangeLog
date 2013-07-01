@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/roman
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/roman/ChangeLog,v 1.2 2012/11/13 10:27:09 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/roman/ChangeLog,v 1.4 2013/07/01 09:59:03 dev-zero Exp $
+
+*roman-2.0.0 (01 Jul 2013)
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> +roman-2.0.0.ebuild,
+  -roman-1.4.0-r1.ebuild:
+  Version bump which introduces tests and pypy/py-3.3 compatibility.
+
+*roman-1.4.0-r1 (01 Jul 2013)
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> +roman-1.4.0-r1.ebuild:
+  Migrate to distutils-r1
 
   14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Updating maintainer, metadata.xml

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/qserve
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qserve/ChangeLog,v 1.3 2012/11/13 10:28:46 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qserve/ChangeLog,v 1.4 2013/07/01 09:34:24 dev-zero Exp $
+
+*qserve-0.2.8-r1 (01 Jul 2013)
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> +qserve-0.2.8-r1.ebuild:
+  Migrate to distutils-r1
 
   14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Updating maintainer, metadata.xml
