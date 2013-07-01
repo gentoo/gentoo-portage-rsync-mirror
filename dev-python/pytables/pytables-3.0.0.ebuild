@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-3.0.0.ebuild,v 1.1 2013/06/18 00:20:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-3.0.0.ebuild,v 1.2 2013/07/01 15:32:06 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 MY_PN=tables
 MY_P=${MY_PN}-${PV}
@@ -20,14 +20,16 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD"
 IUSE="doc contrib examples"
 
-RDEPEND="
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
 	sci-libs/hdf5:=
-	>=dev-python/numpy-1.6.0
-	dev-python/numexpr
+	>=dev-python/numpy-1.6.0[${PYTHON_USEDEP}]
+	dev-python/numexpr[${PYTHON_USEDEP}]
 	dev-libs/lzo:2
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
-	dev-python/cython"
+	dev-python/cython[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/${MY_P}
 
@@ -40,7 +42,7 @@ python_prepare_all() {
 }
 
 python_test() {
-	cd ${BUILD_DIR}/lib* || die
+	cd "${BUILD_DIR}"/lib* || die
 	${EPYTHON} tables/tests/test_all.py || die
 }
 
