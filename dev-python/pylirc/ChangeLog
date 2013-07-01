@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylirc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.16 2010/07/23 22:34:03 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.17 2013/07/01 08:38:36 idella4 Exp $
+
+*pylirc-0.0.5-r1 (01 Jul 2013)
+
+  01 Jul 2013; Ian Delaney <idella4@gentoo.org> +pylirc-0.0.5-r1.ebuild:
+  revbump; migrate -> distutils-r1
 
   23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pylirc-0.0.5.ebuild:
@@ -53,4 +58,3 @@
 
   10 Sep 2003; Max Kalika <max@gentoo.org> pylirc-0.0.4.ebuild:
   Initial version.
-
