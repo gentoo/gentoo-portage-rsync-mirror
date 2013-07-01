@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/exempi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.27 2012/02/22 20:20:17 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.28 2013/07/01 17:06:50 ssuominen Exp $
+
+*exempi-2.2.1 (01 Jul 2013)
+
+  01 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +exempi-2.2.1.ebuild:
+  Version bump.
 
 *exempi-2.2.0 (22 Feb 2012)
 
@@ -98,4 +103,3 @@
   11 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> +metadata.xml,
   +exempi-2.0.2.ebuild:
   initial ebuild from tetromino@gmail.com, bug #185689.
-
