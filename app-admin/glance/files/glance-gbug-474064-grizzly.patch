@@ -1,0 +1,70 @@
+From 28d0350070c6120a83287f0846c59f50814bc37a Mon Sep 17 00:00:00 2001
+From: "Mark J. Washenberger" <mark.washenberger@markwash.net>
+Date: Wed, 26 Jun 2013 15:41:25 -0700
+Subject: [PATCH] Don't rely on prog.Name for paste app
+
+Relying on the name of the program breaks packagers who need to move
+glance executables around to other locations on the file system.
+
+Fixes bug 1194987
+
+Change-Id: I7721c5181b17b1f34adc279c055dfff5d17b57e5
+---
+ bin/glance-api.py       | 2 +-
+ bin/glance-registry.py  | 3 ++-
+ glance/common/config.py | 5 +----
+ 3 files changed, 4 insertions(+), 6 deletions(-)
+
+diff --git a/bin/glance-api b/bin/glance-api
+index a82261e..5244b84 100755
+--- a/bin/glance-api
++++ b/bin/glance-api
+@@ -61,7 +61,7 @@ if __name__ == '__main__':
+         glance.store.verify_default_store()
+ 
+         server = wsgi.Server()
+-        server.start(config.load_paste_app(), default_port=9292)
++        server.start(config.load_paste_app('glance-api'), default_port=9292)
+         server.wait()
+     except exception.WorkerCreationFailure as e:
+         fail(2, e)
+diff --git a/bin/glance-registry b/bin/glance-registry
+index 678bcd1..39bc3ee 100755
+--- a/bin/glance-registry
++++ b/bin/glance-registry
+@@ -51,7 +51,8 @@ if __name__ == '__main__':
+         log.setup('glance')
+ 
+         server = wsgi.Server()
+-        server.start(config.load_paste_app(), default_port=9191)
++        server.start(config.load_paste_app('glance-registry'),
++                     default_port=9191)
+         server.wait()
+     except RuntimeError as e:
+         sys.exit("ERROR: %s" % e)
+diff --git a/glance/common/config.py b/glance/common/config.py
+index 45cea5d..cd4feba 100644
+--- a/glance/common/config.py
++++ b/glance/common/config.py
+@@ -183,7 +183,7 @@ def _get_deployment_config_file():
+     return os.path.abspath(path)
+ 
+ 
+-def load_paste_app(app_name=None):
++def load_paste_app(app_name):
+     """
+     Builds and returns a WSGI app from a paste config file.
+ 
+@@ -195,9 +195,6 @@ def load_paste_app(app_name=None):
+     :raises RuntimeError when config file cannot be located or application
+             cannot be loaded from config file
+     """
+-    if app_name is None:
+-        app_name = CONF.prog
+-
+     # append the deployment flavor to the application name,
+     # in order to identify the appropriate paste pipeline
+     app_name += _get_deployment_flavor()
+-- 
+1.8.1.5
+
