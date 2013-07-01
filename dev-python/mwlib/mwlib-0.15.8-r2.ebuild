@@ -1,0 +1,121 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.8-r2.ebuild,v 1.1 2013/07/01 13:56:29 dev-zero Exp $
+
+EAPI=5
+
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit distutils-r1 user eutils
+
+DESCRIPTION="Tools for parsing Mediawiki content to other formats"
+HOMEPAGE="http://code.pediapress.com/wiki/wiki http://pypi.python.org/pypi/mwlib"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc server"
+
+RDEPEND="dev-python/lxml[${PYTHON_USEDEP}]
+	=dev-python/odfpy-0.9*[${PYTHON_USEDEP}]
+	dev-python/pyPdf[${PYTHON_USEDEP}]
+	virtual/pyparsing[${PYTHON_USEDEP}]
+	dev-python/timelib[${PYTHON_USEDEP}]
+	virtual/latex-base
+	>=dev-python/simplejson-2.5[${PYTHON_USEDEP}]
+	dev-python/gevent[${PYTHON_USEDEP}]
+	>=dev-python/bottle-0.11.6[${PYTHON_USEDEP}]
+	dev-python/apipkg[${PYTHON_USEDEP}]
+	dev-python/qserve[${PYTHON_USEDEP}]
+	dev-python/roman[${PYTHON_USEDEP}]
+	dev-python/py[${PYTHON_USEDEP}]
+	dev-python/sqlite3dbm[${PYTHON_USEDEP}]
+	dev-python/pillow[${PYTHON_USEDEP}]
+	server? ( app-admin/sudo )"
+DEPEND="${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	app-arch/unzip
+	doc? ( dev-python/sphinx )"
+
+# TODO: requires ploticus to generate timelines
+
+PATCHES=( "${FILESDIR}/${PV}-fix-tests.patch" "${FILESDIR}/${PV}-nslave-add-address-parameter.patch" )
+
+DOCS=(changelog.rst)
+
+pkg_setup() {
+	if use server ;  then
+		enewgroup mwlib
+		enewuser mwlib -1 -1 -1 mwlib
+	fi
+}
+
+python_prepare_all() {
+	# mwlib.apipkg is actually used.
+	sed -e 's/, "apipkg"//' -i setup.py || die
+
+	# Execute odflint script.
+	sed \
+		-e "/def _get_odflint_module():/,/odflint =	_get_odflint_module()/d" \
+		-e "s/odflint.lint(path)/os.system('odflint %s' % path)/" \
+		-i tests/test_odfwriter.py || die
+
+	# Disable test which requires installed mw-zip script.
+	rm -f tests/test_{nuwiki,redirect,zipwiki}.py
+	# Disable render test that fails for no apparent reason
+	rm -f tests/test_render.py
+
+	distutils-r1_python_prepare_all
+}
+
+python_compile() {
+	if [[ ${EPYTHON} == python2* ]] ; then
+		local CFLAGS="${CFLAGS} -fno-strict-aliasing"
+		export CFLAGS
+	fi
+
+	distutils-r1_python_compile
+}
+
+python_compile_all() {
+	use doc && emake -C docs html
+}
+
+python_test() {
+	py.test || die
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
+
+	if use server ; then
+		keepdir /var/log/mwlib
+		keepdir /var/cache/mwlib
+
+		fowners mwlib:mwlib /var/log/mwlib /var/cache/mwlib
+		fperms 0750 /var/log/mwlib /var/cache/mwlib
+
+		insinto /etc/logrotate.d
+		for d in mw-qserve nserve nslave postman ; do
+			newins "${FILESDIR}/${d}.logrotate" "${d}"
+			newinitd "${FILESDIR}/${d}.initd" "${d}"
+			newconfd "${FILESDIR}/${d}.confd" "${d}"
+		done
+
+		insinto /etc/cron.d
+		newins "${FILESDIR}/mwlib-purge-cache.cron" "mwlib-purge-cache"
+	else
+		rm "${D}"/usr/bin/{mw-qserve,nserve,nslave,postman}* || die "removing binaries failed"
+	fi
+}
+
+pkg_postinst() {
+	elog "Please enable required image formats for dev-python/pillow"
+	if use server ; then
+		elog "A cronjob to cleanup the cache files got installed to"
+		elog "  /etc/cron.d/mwlib-purge-cache"
+		elog "Default parameters are to clean every 24h, adjust it to your needs."
+	fi
+}

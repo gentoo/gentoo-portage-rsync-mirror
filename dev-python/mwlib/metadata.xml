@@ -5,4 +5,7 @@
 	<upstream>
 		<remote-id type="pypi">mwlib</remote-id>
 	</upstream>
+	<use>
+		<flag name='server'>Install the daemons required when using mwlib for generating PDFs on a MediaWiki instance.</flag>
+	</use>
 </pkgmetadata>

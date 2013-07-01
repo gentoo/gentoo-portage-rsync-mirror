@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.25 2013/07/01 10:03:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.26 2013/07/01 13:56:29 dev-zero Exp $
+
+*mwlib-0.15.8-r2 (01 Jul 2013)
+
+  01 Jul 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.15.8-nslave-add-address-parameter.patch, +files/mw-qserve.confd,
+  +files/mw-qserve.initd, +files/mw-qserve.logrotate,
+  +files/mwlib-purge-cache.cron, +files/nserve.confd, +files/nserve.initd,
+  +files/nserve.logrotate, +files/nslave.confd, +files/nslave.initd,
+  +files/nslave.logrotate, +files/postman.confd, +files/postman.initd,
+  +files/postman.logrotate, +mwlib-0.15.8-r2.ebuild, metadata.xml:
+  Add init.d scripts to manage servers, thanks to Pat Kläy and Christian
+  Affolter. Add patch which adds an address parameter to nslave.
 
 *mwlib-0.15.8-r1 (01 Jul 2013)
 

@@ -1,0 +1,13 @@
+diff -ru dhcpdump-1.8/dhcpdump.c dhcpdump-1.8-modified/dhcpdump.c
+--- dhcpdump-1.8/dhcpdump.c	2008-06-24 05:26:52.000000000 +0200
++++ dhcpdump-1.8-modified/dhcpdump.c	2013-07-01 15:31:04.260609883 +0200
+@@ -130,7 +130,7 @@
+ 	offset += ETHER_HDR_LEN;
+ 
+ 	// Check for IPv4 packets
+-	if (eh->ether_type != 8) { 
++	if (eh->ether_type != htons(0x0800)) { 
+ 		printf("Ignored non IPv4 packet: %d\n", eh->ether_type);
+ 		return;
+ 	}
+
