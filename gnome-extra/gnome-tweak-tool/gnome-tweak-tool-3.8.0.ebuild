@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.8.0.ebuild,v 1.1 2013/04/18 19:47:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.8.0.ebuild,v 1.2 2013/07/01 18:33:52 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,6 +15,7 @@ HOMEPAGE="http://live.gnome.org/GnomeTweakTool"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 COMMON_DEPEND="
