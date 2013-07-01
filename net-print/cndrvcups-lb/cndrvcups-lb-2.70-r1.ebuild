@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-common-lb/cndrvcups-common-lb-2.70.ebuild,v 1.1 2013/06/29 11:29:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/cndrvcups-lb-2.70-r1.ebuild,v 1.1 2013/07/01 19:10:18 pacho Exp $
 
 EAPI=5
-inherit autotools versionator
+inherit eutils autotools versionator
 
 MY_PV="$(delete_all_version_separators)"
 SOURCES_NAME="Linux_UFRII_PrinterDriver_V${MY_PV}_uk_EN"
 
-DESCRIPTION="Common files for Canon drivers"
+DESCRIPTION="Canon UFR II / LIPSLX Printer Driver for Linux"
 HOMEPAGE="http://support-au.canon.com.au/contents/AU/EN/0100270808.html"
 SRC_URI="http://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAwMjcwODA5&cmp=ABS&lang=EN -> ${SOURCES_NAME}.tar.gz"
 
-LICENSE="Canon-UFR-II GPL-2 MIT"
+LICENSE="Canon-UFR-II"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -24,20 +24,22 @@ RDEPEND="
 	dev-libs/libxml2
 	gnome-base/libglade
 	net-print/cups
+	~net-print/cndrvcups-common-lb-${PV}
 	x11-libs/gtk+:2
 "
 DEPEND="${DEPEND}"
 
-S="${WORKDIR}/${SOURCES_NAME}/Sources/${P/-lb/}"
+S="${WORKDIR}/${SOURCES_NAME}/Sources/${P}"
+MAKEOPTS+=" -j1"
 
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}/${SOURCES_NAME}/Sources/"
-	unpack ./${P/-lb/}-1.tar.gz
+	unpack ./${P}-1.tar.gz
 }
 
 change_dir() {
-	for i in cngplp buftool backend; do
+	for i in ppd pstoufr2cpca cngplp cngplp/files cpca ; do
 		cd "${i}"
 		"${@}"
 		cd "${S}"
@@ -45,6 +47,10 @@ change_dir() {
 }
 
 src_prepare() {
+	sed -i -e \
+		"s:filterdir = \$(libdir)/cups/filter:filterdir = `cups-config --serverbin`/filter:" \
+		pstoufr2cpca/filter/Makefile.am || die
+
 	export "LIBS=-lgmodule-2.0"
 	change_dir eautoreconf
 }
@@ -53,10 +59,7 @@ src_configure() {
 	change_dir econf
 }
 
-src_compile() {
-	change_dir emake
-}
-
 src_install() {
-	MAKEOPTS+=" -j1" default
+	default
+	prune_libtool_files
 }

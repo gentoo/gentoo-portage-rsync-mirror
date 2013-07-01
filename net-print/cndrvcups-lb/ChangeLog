@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cndrvcups-lb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/ChangeLog,v 1.1 2013/06/29 11:28:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/ChangeLog,v 1.2 2013/07/01 19:10:19 pacho Exp $
+
+*cndrvcups-lb-2.70-r1 (01 Jul 2013)
+
+  01 Jul 2013; Pacho Ramos <pacho@gentoo.org> +cndrvcups-lb-2.70-r1.ebuild,
+  -cndrvcups-lb-2.70.ebuild:
+  Install in proper path
 
 *cndrvcups-lb-2.70 (29 Jun 2013)
 
