@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.5.ebuild,v 1.1 2013/07/02 16:47:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.5.ebuild,v 1.2 2013/07/02 20:35:14 johu Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -15,7 +15,6 @@ IUSE="debug doc examples semantic-desktop test"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE} test? ( semantic-desktop )"
 
-# blocker added due to compatibility issues and error during compile time
 RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/PyQt4-4.9.5[${PYTHON_USEDEP},dbus,declarative,script(+),sql,svg,webkit,X]

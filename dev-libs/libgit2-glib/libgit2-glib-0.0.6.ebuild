@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.2.ebuild,v 1.1 2013/06/18 18:51:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.6.ebuild,v 1.1 2013/07/02 20:34:19 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE="python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
-	>=dev-libs/libgit2-0.18.0
+	>=dev-libs/libgit2-0.19.0
 	>=dev-libs/glib-2.28.0:2
 	>=dev-libs/gobject-introspection-0.10.1
 	python? (

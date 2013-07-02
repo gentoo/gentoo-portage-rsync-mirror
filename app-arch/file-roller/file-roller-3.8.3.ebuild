@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.8.1.ebuild,v 1.1 2013/04/17 19:46:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.8.3.ebuild,v 1.1 2013/07/02 20:46:32 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2
+inherit eutils gnome2 readme.gentoo
 
 DESCRIPTION="Archive manager for GNOME"
 HOMEPAGE="http://fileroller.sourceforge.net/"
@@ -42,6 +42,25 @@ DEPEND="${RDEPEND}
 # eautoreconf needs:
 #	gnome-base/gnome-common
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="
+${PN} is a frontend for several archiving utilities. If you want a
+particular achive format support, see ${HOMEPAGE}
+and install the relevant package. For example:
+7-zip   - app-arch/p7zip
+ace     - app-arch/unace
+arj     - app-arch/arj
+cpio    - app-arch/cpio
+deb     - app-arch/dpkg
+iso     - app-cdr/cdrtools
+jar,zip - app-arch/zip and app-arch/unzip
+lha     - app-arch/lha
+lzop    - app-arch/lzop
+rar     - app-arch/unrar or app-arch/unar
+rpm     - app-arch/rpm
+unstuff - app-arch/stuffit
+zoo     - app-arch/zoo"
+
 src_prepare() {
 	# Use absolute path to GNU tar since star doesn't have the same
 	# options. On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
@@ -68,25 +87,12 @@ src_configure() {
 		ITSTOOL=$(type -P true)
 }
 
+src_install() {
+	gnome2_src_install
+	readme.gentoo_create_doc
+}
+
 pkg_postinst() {
 	gnome2_pkg_postinst
-
-	elog "${PN} is a frontend for several archiving utilities. If you want a"
-	elog "particular achive format support, see ${HOMEPAGE}"
-	elog "and install the relevant package."
-	elog
-	elog "for example:"
-	elog "  7-zip   - app-arch/p7zip"
-	elog "  ace     - app-arch/unace"
-	elog "  arj     - app-arch/arj"
-	elog "  cpio    - app-arch/cpio"
-	elog "  deb     - app-arch/dpkg"
-	elog "  iso     - app-cdr/cdrtools"
-	elog "  jar,zip - app-arch/zip and app-arch/unzip"
-	elog "  lha     - app-arch/lha"
-	elog "  lzop    - app-arch/lzop"
-	elog "  rar     - app-arch/unrar or app-arch/unar"
-	elog "  rpm     - app-arch/rpm"
-	elog "  unstuff - app-arch/stuffit"
-	elog "  zoo     - app-arch/zoo"
+	readme.gentoo_print_elog
 }
