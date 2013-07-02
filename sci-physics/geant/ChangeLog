@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.75 2013/06/17 19:01:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.76 2013/07/02 17:18:56 bicatali Exp $
+
+  02 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> geant-4.9.6_p02-r1.ebuild:
+  Added doc flag pulling app-doc/geant-docs package
 
   17 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -geant-4.9.6_p02.ebuild,
   geant-4.9.6_p02-r1.ebuild, metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.6_p02-r1.ebuild,v 1.2 2013/06/17 19:01:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.6_p02-r1.ebuild,v 1.3 2013/07/02 17:18:56 bicatali Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://geant4.cern.ch/support/source/${MYP}.tar.gz"
 LICENSE="geant4"
 SLOT="4"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+data dawn examples gdml geant3 inventor motif opengl
+IUSE="+data dawn doc examples gdml geant3 inventor motif opengl
 	raytracerx qt4 static-libs vrml zlib"
 
 RDEPEND="
@@ -33,7 +33,9 @@ RDEPEND="
 	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}"
-PDEPEND="data? ( ~sci-physics/geant-data-${PV} )"
+PDEPEND="
+	data? ( ~sci-physics/geant-data-${PV} )
+	doc? ( ~app-doc/geant-docs-${PV1}.${PV2}.${PV3} )"
 
 S="${WORKDIR}/${MYP}"
 
