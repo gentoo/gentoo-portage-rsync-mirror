@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.6 2013/02/07 22:18:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.7 2013/07/02 00:40:03 hasufell Exp $
 
 EAPI=2
 inherit gnome2-utils games
@@ -39,6 +39,10 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_with openal) \
 		$(use_with mixer sdlmixer)
+}
+
+src_compile() {
+	emake V=1
 }
 
 src_install() {
