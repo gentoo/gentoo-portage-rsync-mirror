@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.10-r1.ebuild,v 1.4 2013/06/27 14:29:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.10-r1.ebuild,v 1.5 2013/07/02 14:51:21 floppym Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 python_prepare_all() {
 	sed -e "s:^library_dirs =.*:library_dirs = /usr/$(get_libdir) /usr/$(get_libdir)/sasl2:" \
-		-e "s:^include_dirs =.*:include_dirs = \"${EPREFIX}\"/usr/include \"${EPREFIX}\"/usr/include/sasl:" \
+		-e "s:^include_dirs =.*:include_dirs = ${EPREFIX}/usr/include ${EPREFIX}/usr/include/sasl:" \
 		-i setup.cfg || die "error fixing setup.cfg"
 
 	local mylibs="ldap"

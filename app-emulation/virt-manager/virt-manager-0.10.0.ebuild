@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.5 2013/06/28 03:09:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.6 2013/07/02 14:50:30 cardoe Exp $
 
 EAPI=5
 
@@ -67,4 +67,11 @@ python_install_all() {
 	python_fix_shebang "${ED}/usr/share/virt-manager/virt-image"
 	python_fix_shebang "${ED}/usr/share/virt-manager/virt-install"
 	python_fix_shebang "${ED}/usr/share/virt-manager/virt-manager"
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+
+	cd "${ED}"
+	export GNOME2_ECLASS_ICONS=$(find 'usr/share/virt-manager/icons' -maxdepth 1 -mindepth 1 -type d 2> /dev/null)
 }

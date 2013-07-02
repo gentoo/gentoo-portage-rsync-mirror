@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.97 2013/07/01 23:30:26 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.98 2013/07/02 14:36:20 kensington Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -619,7 +619,7 @@ enable_cmake-utils_src_test() {
 
 # @FUNCTION: cmake-utils_src_prepare
 # @DESCRIPTION:
-# Wrapper function around base_src_prepare, just to expand the eclass API.
+# Apply ebuild and user patches.
 cmake-utils_src_prepare() {
 	_execute_optionaly "src_prepare" "$@"
 }

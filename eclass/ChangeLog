@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.868 2013/06/30 10:52:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.869 2013/07/02 14:36:20 kensington Exp $
+
+  02 Jul 2013; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Correct src_prepare description.
 
   30 Jun 2013; Pacho Ramos <pacho@gentoo.org> +gnome-games.eclass:
   Add eclass to be used by all now splitted gnome-games

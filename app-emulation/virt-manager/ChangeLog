@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.86 2013/06/28 21:01:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.87 2013/07/02 14:50:30 cardoe Exp $
+
+  02 Jul 2013; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.10.0.ebuild:
+  Potential fix for the icon issue in bug #474810
 
   28 Jun 2013; Agostino Sarubbo <ago@gentoo.org> virt-manager-0.9.5.ebuild:
   Stable for amd64, wrt bug #475052
