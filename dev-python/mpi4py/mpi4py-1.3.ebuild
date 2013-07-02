@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.3.ebuild,v 1.4 2012/08/02 17:20:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.3.ebuild,v 1.5 2013/07/01 23:09:47 hasufell Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,6 +23,11 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# not needed on install
 	rm -r docs/source || die
+}
+
+src_compile() {
+	export FAKEROOTKEY=1
+	distutils_src_compile
 }
 
 src_test() {

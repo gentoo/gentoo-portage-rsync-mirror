@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0-r2.ebuild,v 1.1 2013/02/27 15:57:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0-r3.ebuild,v 1.1 2013/07/01 23:28:25 jsbronder Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ src_prepare() {
 		-e "/^LAlib\>/s,= .*,= ${localblas}," \
 		-e '/^LINKER\>/s,= .*,= mpicc,' \
 		-e '/^CC\>/s,= .*,= mpicc,' \
+		-e '/^CCFLAGS\>/s|= .*|= $(HPL_DEFS) ${CFLAGS}|' \
 		-e "/^LINKFLAGS\>/s|= .*|= ${LDFLAGS}|" \
 		Make.gentoo_hpl_fblas_x86 || die
 }

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libXtst x11-libs/libX11 x11-libs/libXext x11-libs/libXinerama qt4? ( dev-qt/qtgui:4 ) qt4? ( !x11-misc/qsynergy )
 SLOT=0
 SRC_URI=http://synergy.googlecode.com/files/synergy-1.4.5-Source.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	66012c9c0ee3c91534d0eb257ff9b95c	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	332d95d7f034fe0469fdb588d5ab283d	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6cc9bd8c5d914930d19b44896ced3f46

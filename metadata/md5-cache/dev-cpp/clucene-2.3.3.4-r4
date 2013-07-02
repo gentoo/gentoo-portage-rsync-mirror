@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install prepare test unpack
+DEFINED_PHASES=compile configure install prepare test
 DEPEND=doc? ( >=app-doc/doxygen-1.4.2 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=High-performance, full-featured text search engine based off of lucene in C++
 EAPI=4
@@ -10,5 +10,5 @@ RDEPEND=!<app-misc/strigi-0.7.5-r3
 RESTRICT=test
 SLOT=1
 SRC_URI=mirror://sourceforge/clucene/clucene-core-2.3.3.4.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	66012c9c0ee3c91534d0eb257ff9b95c	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=cmake-utils	332d95d7f034fe0469fdb588d5ab283d	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=a200ff9efa6493e76d84b4439c81511b
