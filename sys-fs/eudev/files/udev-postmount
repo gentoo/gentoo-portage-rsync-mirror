@@ -21,7 +21,7 @@ store_persistent_rules()
 	dir_writeable /etc/udev/rules.d || return 0
 
 	local file dest
-	for file in "${RUNDIR}"/tmp-rules--*; do
+	for file in /run/udev/tmp-rules--*; do
 		dest=${file##*tmp-rules--}
 		[ "$dest" = '*' ] && break
 		type=${dest##70-persistent-}
