@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.5 2013/05/29 16:19:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.6 2013/07/02 14:08:53 jlec Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-bindings_only.patch" )
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 	sed \
 		-e "s:\"\.\.\":\"${EPREFIX}/usr\":g" \
 		-i test/testbabel.py || die

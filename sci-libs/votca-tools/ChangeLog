@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/votca-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.22 2013/04/14 18:08:09 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.23 2013/07/02 14:15:12 ottxor Exp $
+
+  02 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  votca-tools-1.2.3-r3.ebuild:
+  remove usage of base.eclass (bug #475522)
 
 *votca-tools-1.2.3-r3 (14 Apr 2013)
 

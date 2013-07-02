@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3-r3.ebuild,v 1.1 2013/04/14 18:08:09 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3-r3.ebuild,v 1.2 2013/07/02 14:15:12 ottxor Exp $
 
 EAPI="5"
 
@@ -43,7 +43,7 @@ src_prepare() {
 	use gsl || ewarn "Disabling gsl will lead to reduced functionality"
 	use fftw || ewarn "Disabling fftw will lead to reduced functionality"
 
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	#remove bundled libs
 	if use system-boost; then
