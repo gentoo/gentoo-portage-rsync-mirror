@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kaa-display
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.10 2012/06/04 19:41:36 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.11 2013/07/02 01:51:50 idella4 Exp $
+
+*kaa-display-0.1.0-r1 (02 Jul 2013)
+
+  02 Jul 2013; Ian Delaney <idella4@gentoo.org> +kaa-display-0.1.0-r1.ebuild:
+  revbump; migrate -> distutils-r1
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> kaa-display-0.1.0.ebuild:
   ppc stable (bug 358455)
@@ -36,4 +41,3 @@
   02 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +kaa-display-0.1.0.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-
