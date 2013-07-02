@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-11.0_pre684.ebuild,v 1.1 2013/05/18 07:18:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-11.0.ebuild,v 1.1 2013/07/02 17:58:00 radhermit Exp $
 
 EAPI=5
 
@@ -46,6 +46,7 @@ src_prepare() {
 	sed -i "/^dist_doc_DATA/d" Makefile.am || die
 
 	epatch "${FILESDIR}"/${PN}-9.0_pre477-buffer-overflows.patch
+	epatch "${FILESDIR}"/${P}-header.patch
 
 	eautoreconf
 }

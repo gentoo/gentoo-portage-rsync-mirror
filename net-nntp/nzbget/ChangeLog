@@ -1,6 +1,17 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.70 2013/06/18 08:10:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.72 2013/07/02 18:00:58 radhermit Exp $
+
+  02 Jul 2013; Tim Harder <radhermit@gentoo.org> -nzbget-0.8.0.ebuild,
+  -nzbget-10.1.ebuild, -nzbget-11.0_pre684.ebuild, -nzbget-11.0_pre705.ebuild,
+  -nzbget-11.0_pre711.ebuild, -files/nzbget-0.7.0-openssl-1.patch:
+  Remove old.
+
+*nzbget-11.0 (02 Jul 2013)
+
+  02 Jul 2013; Tim Harder <radhermit@gentoo.org> +nzbget-11.0.ebuild,
+  +files/nzbget-11.0-header.patch:
+  Version bump.
 
 *nzbget-11.0_pre711 (18 Jun 2013)
 
