@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qxkb/qxkb-0.4.5.ebuild,v 1.2 2013/03/02 23:52:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qxkb/qxkb-0.4.5.ebuild,v 1.3 2013/07/02 13:32:21 kensington Exp $
 
 EAPI=5
 
@@ -28,5 +28,5 @@ src_prepare() {
 	sed -i -e 's:../language:${CMAKE_SOURCE_DIR}/language:' \
 		CMakeLists.txt || die
 
-	base_src_prepare
+	cmake-utils_src_prepare
 }

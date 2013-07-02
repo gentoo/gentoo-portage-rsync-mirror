@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/kst
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.9 2013/03/02 23:28:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.10 2013/07/02 13:36:16 kensington Exp $
+
+  02 Jul 2013; Michael Palimaka <kensington@gentoo.org> kst-2.0.5.ebuild,
+  kst-2.0.6.ebuild:
+  Use src_prepare from cmake-utils instead of base.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kst-2.0.5.ebuild,
   kst-2.0.6.ebuild:

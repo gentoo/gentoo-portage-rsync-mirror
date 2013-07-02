@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.6 2013/06/09 16:54:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.7 2013/07/02 13:55:01 jlec Exp $
 
 EAPI=5
 
@@ -71,7 +71,7 @@ src_prepare() {
 		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \
 		-i resources/templates/CMakeLists.txt || die
 
-	base_src_prepare
+	cmake-utils_src_prepare
 	subversion_src_prepare
 }
 

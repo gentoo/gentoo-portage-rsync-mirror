@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qastools/qastools-0.17.2.ebuild,v 1.2 2013/03/02 21:59:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qastools/qastools-0.17.2.ebuild,v 1.3 2013/07/02 13:45:22 kensington Exp $
 
-EAPI=4
+EAPI=5
 
-inherit base cmake-utils
+inherit cmake-utils
 
 MY_P=${PN}_${PV}
 
@@ -31,10 +31,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-DOCS="CHANGELOG README TODO"
+DOCS=( CHANGELOG README TODO )
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	local lang
 	for lang in ${LANGS} ; do

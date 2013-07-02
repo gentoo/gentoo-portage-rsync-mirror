@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.6.ebuild,v 1.2 2013/03/02 23:28:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.6.ebuild,v 1.3 2013/07/02 13:36:16 kensington Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ DOCS=( AUTHORS ChangeLog )
 PATCHES=( "${FILESDIR}/${PN}-2.0.4-cfitsio-includes.patch" )
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	# fix desktop file
 	sed -i -e 's/^Categories=/&Education;/' \
