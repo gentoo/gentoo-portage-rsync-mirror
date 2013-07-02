@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.4.ebuild,v 1.2 2013/04/05 18:11:44 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.4-r1.ebuild,v 1.1 2013/07/02 02:04:18 jsbronder Exp $
 
 EAPI=5
 
@@ -96,6 +96,7 @@ src_prepare() {
 		echo 'oob_tcp_listen_mode = listen_thread' \
 			>> opal/etc/openmpi-mca-params.conf
 	fi
+	epatch "${FILESDIR}"/hooks-disable-malloc-override-inside-of-Gentoo-sandb.patch
 }
 
 src_configure() {
@@ -155,8 +156,5 @@ src_install () {
 
 src_test() {
 	# Doesn't work with the default src_test as the dry run (-n) fails.
-
-	# Do not override malloc during build.  Works around #462602
-	export FAKEROOTKEY=1
 	emake -j1 check || die "emake check failed"
 }

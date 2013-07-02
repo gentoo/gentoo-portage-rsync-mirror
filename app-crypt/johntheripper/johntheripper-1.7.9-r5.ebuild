@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r5.ebuild,v 1.4 2013/06/18 22:42:02 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r5.ebuild,v 1.5 2013/07/02 02:11:48 jsbronder Exp $
 
 EAPI="4"
 
@@ -170,9 +170,6 @@ src_compile() {
 	CPP="$(tc-getCXX)" CC="$(tc-getCC)" AS="$(tc-getCC)" LD="$(tc-getCC)"
 	if use mpi; then
 		CPP=mpicxx CC=mpicc AS=mpicc LD=mpicc
-
-		# Workaround sandbox issue in #462602
-		export FAKEROOTKEY=1
 	fi
 
 	#this stuff was all stolen from the Makefile, if build breaks, check this first
