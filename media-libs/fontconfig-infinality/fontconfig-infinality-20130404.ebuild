@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig-infinality/fontconfig-infinality-20130404.ebuild,v 1.1 2013/04/05 08:58:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig-infinality/fontconfig-infinality-20130404.ebuild,v 1.2 2013/07/02 08:18:15 ago Exp $
 
 EAPI=5
 inherit readme.gentoo
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~yngwin/distfiles/${P}.tar.xz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+nyx"
 
 DEPEND=""
