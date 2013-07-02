@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.263 2013/07/02 09:29:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.264 2013/07/02 16:48:07 johu Exp $
+
+*kdetoys-meta-4.10.5 (02 Jul 2013)
+
+  02 Jul 2013; Johannes Huber <johu@gentoo.org> +kdetoys-meta-4.10.5.ebuild:
+  Version bump KDE SC 4.10.5
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> -kdetoys-meta-4.10.3.ebuild:
   Remove old

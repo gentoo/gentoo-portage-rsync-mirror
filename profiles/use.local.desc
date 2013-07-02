@@ -2564,6 +2564,7 @@ kde-base/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:indi - Enable support for Astronomical control library using libindi
 kde-base/kwin:gles - Enable support for GLES.
+kde-base/libkdcraw:jasper - Use media-libs/jasper to support RedOne digital movie cameras (R3D format)
 kde-base/libplasmaclock:holidays - Include support for holidays in plasma calendar
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/marble:shapefile - Enable support for ESRI shapefiles
