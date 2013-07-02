@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.53 2013/06/30 18:02:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.54 2013/07/02 07:42:24 ago Exp $
+
+  02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> netselect-0.3-r3.ebuild:
+  Stable for sh, wrt bug #470534
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> netselect-0.3-r3.ebuild:
   Stable for s390, wrt bug #470534

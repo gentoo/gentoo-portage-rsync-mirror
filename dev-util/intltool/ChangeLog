@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.176 2013/06/30 18:07:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.177 2013/07/02 07:44:15 ago Exp $
+
+  02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> intltool-0.50.2-r1.ebuild:
+  Stable for sh, wrt bug #473998
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> intltool-0.50.2-r1.ebuild:
   Stable for s390, wrt bug #473998
