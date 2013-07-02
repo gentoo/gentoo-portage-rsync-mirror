@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.210 2013/07/02 16:47:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.212 2013/07/02 18:25:08 johu Exp $
+
+  02 Jul 2013; Johannes Huber <johu@gentoo.org>
+  files/systemsettings-4.10.1-noplasmalock.patch, systemsettings-4.10.4.ebuild,
+  systemsettings-4.10.5.ebuild:
+  Add missing RDEPEND on kde-base/nepomuk to have an kcm to configure the
+  semantic-desktop feature wrt bug #475464.
 
 *systemsettings-4.10.5 (02 Jul 2013)
 
