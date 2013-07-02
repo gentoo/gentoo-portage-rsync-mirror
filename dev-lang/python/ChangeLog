@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.663 2013/07/02 08:17:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.664 2013/07/02 08:58:53 ago Exp $
+
+  02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> python-2.7.5.ebuild:
+  Stable for x86, wrt bug #475424
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> python-2.7.5.ebuild:
   Stable for amd64, wrt bug #475424
