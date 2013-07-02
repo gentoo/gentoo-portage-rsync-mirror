@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.106 2013/06/23 07:42:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.107 2013/07/02 16:21:17 vapier Exp $
+
+  02 Jul 2013; Mike Frysinger <vapier@gentoo.org> bzip2-1.0.6-r4.ebuild,
+  files/bzip2-1.0.4-man-links.patch:
+  Move `ln` update to the patch rather than sed-ing it after the fact #475334 by
+  Yuta SATOH.
 
 *bzip2-1.0.6-r4 (23 Jun 2013)
 

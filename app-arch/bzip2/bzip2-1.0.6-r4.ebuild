@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r4.ebuild,v 1.1 2013/06/23 07:42:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r4.ebuild,v 1.2 2013/07/02 16:21:17 vapier Exp $
 
 # XXX: atm, libbz2.a is always PIC :(, so it is always built quickly
 #      (since we're building shared libs) ...
@@ -34,9 +34,8 @@ src_prepare() {
 	# - pass custom variables to control libdir
 	sed -i \
 		-e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' \
-		-e 's:ln -s -f $(PREFIX)/bin/:ln -f -s :' \
+		-e 's:ln -s -f $(PREFIX)/bin/:ln -s -f :' \
 		-e 's:$(PREFIX)/lib:$(PREFIX)/$(LIBDIR):g' \
-		-e 's:ln -s bzip2.1:& -f:g' \
 		Makefile || die
 
 	multilib_copy_sources

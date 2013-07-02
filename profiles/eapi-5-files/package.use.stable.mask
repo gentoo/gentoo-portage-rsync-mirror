@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.14 2013/06/09 17:12:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.15 2013/07/02 16:14:46 ago Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -13,7 +13,7 @@ virtual/python-imaging python_targets_python3_2 python_targets_python3_3
 # Justin Lecher <jlec@gentoo.org> (30 May 2313)
 # Temporary mask because it needs texinfo-5
 # hvm needs qemu #471122
->=app-emulation/xen-tools-4.2.1-r3 qemu hvm
+>=app-emulation/xen-tools-4.2.1-r3 qemu hvm ocaml
 
 # Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
 # CMake's PHP module can't find our install location, so
