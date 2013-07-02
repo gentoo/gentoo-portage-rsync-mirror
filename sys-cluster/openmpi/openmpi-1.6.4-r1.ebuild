@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.4-r1.ebuild,v 1.1 2013/07/02 02:04:18 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.4-r1.ebuild,v 1.2 2013/07/02 22:53:00 jsbronder Exp $
 
 EAPI=5
 
@@ -96,6 +96,9 @@ src_prepare() {
 		echo 'oob_tcp_listen_mode = listen_thread' \
 			>> opal/etc/openmpi-mca-params.conf
 	fi
+
+	# https://svn.open-mpi.org/trac/ompi/ticket/3649
+	# https://svn.open-mpi.org/trac/ompi/ticket/3648
 	epatch "${FILESDIR}"/hooks-disable-malloc-override-inside-of-Gentoo-sandb.patch
 }
 
