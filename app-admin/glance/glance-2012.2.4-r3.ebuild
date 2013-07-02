@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2012.2.4-r2.ebuild,v 1.1 2013/06/30 23:46:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2012.2.4-r3.ebuild,v 1.1 2013/07/02 15:33:35 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -61,11 +61,14 @@ python_install() {
 	done
 
 	diropts -m 0750
-	dodir /var/run/glance /var/log/nova /var/lock/nova
+	dodir /var/run/glance /var/log/glance /var/lib/glance/images /var/lib/glance/scrubber
 	#removed because it conflicts with glanceclient, which we install in rdepend
 	rm ${D}"/usr/bin/glance" ${D}"/usr/bin/glance-python2.7"
 
 	keepdir /etc/glance
+	keepdir /var/log/glance
+	keepdir /var/lib/glance/images
+	keepdir /var/lib/glance/scrubber
 	insinto /etc/glance
 
 	doins "etc/glance-api-paste.ini"

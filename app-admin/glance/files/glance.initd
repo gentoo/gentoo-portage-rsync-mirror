@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.1 2013/01/20 06:39:20 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.2 2013/07/02 15:33:34 prometheanfire Exp $
 
 depend() {
 	need net
@@ -30,7 +30,7 @@ start() {
 	ebegin "Starting ${SVCNAME}"
 	
 	start-stop-daemon --start --quiet --pidfile "${PID_PATH}/${SVCENAME}.pid" \
-					  --exec /usr/bin/glance-control -- ${SERVERNAME} start
+					  --exec /usr/bin/glance-control ${SERVERNAME} start /etc/glance/glance-${SERVERNAME}.conf
 	
 	eend $? "Failed to start ${SVCNAME}"
 }
@@ -42,7 +42,7 @@ stop() {
 	ebegin "Stopping ${SVCNAME}"
 	
 	start-stop-daemon --stop --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
-					  --exec /usr/bin/glance-control -- ${SERVERNAME} stop
+					  --exec /usr/bin/glance-control ${SERVERNAME} stop /etc/glance/glance-${SERVERNAME}.conf
 	eend $? "Failed to stop ${SVCNAME}"
 }
 
