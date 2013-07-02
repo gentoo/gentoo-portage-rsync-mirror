@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20130531-r1.ebuild,v 1.3 2013/07/01 13:06:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20130531-r1.ebuild,v 1.4 2013/07/02 21:56:24 aballier Exp $
 
 EAPI=5
 
@@ -60,8 +60,8 @@ src_configure() {
 
 	# Needs to be built with clang. gcc-4.6.3 fails at least.
 	# TODO: cross-compile ?
-	export CC="clang -nostdlib"
-	export CXX="clang++ -nostdlib"
+	export CC="clang"
+	export CXX="clang++"
 
 	if use static-libs ; then
 		local mycmakeargs=( "${mycmakeargs_base[@]}" "-DLIBCXX_ENABLE_SHARED=OFF" )

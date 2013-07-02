@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.20 2013/07/01 13:06:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.21 2013/07/02 21:56:24 aballier Exp $
+
+  02 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  libcxx-0.0_p20130531-r1.ebuild, libcxx-9999.ebuild:
+  revert previous change as it installs a broken libc++, bug #475500 by Yuta
+  SATOH
 
   01 Jul 2013; Alexis Ballier <aballier@gentoo.org>
   libcxx-0.0_p20130531-r1.ebuild, libcxx-9999.ebuild:

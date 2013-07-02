@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/easy-slow-down-manager/easy-slow-down-manager-0.3.ebuild,v 1.2 2011/07/13 18:06:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/easy-slow-down-manager/easy-slow-down-manager-0.3.ebuild,v 1.3 2013/07/02 21:59:39 vincent Exp $
 
 EAPI=4
 inherit eutils linux-mod
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S=${WORKDIR}

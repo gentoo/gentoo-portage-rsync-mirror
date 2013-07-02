@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/samsung-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/ChangeLog,v 1.5 2012/03/23 20:02:40 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/ChangeLog,v 1.6 2013/07/02 22:00:21 vincent Exp $
+
+  02 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  samsung-tools-2.0.ebuild, samsung-tools-2.1.ebuild:
+  amd64 x86 stable
 
   23 Mar 2012; Christoph Mende <angelos@gentoo.org> -samsung-tools-1.4.ebuild,
   -samsung-tools-1.5.ebuild:
@@ -28,4 +32,3 @@
   22 Jun 2011; Christoph Mende <angelos@gentoo.org> +samsung-tools-1.4.ebuild,
   +metadata.xml:
   Initial import
-

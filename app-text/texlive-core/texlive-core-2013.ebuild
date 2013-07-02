@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.1 2013/06/28 14:39:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.2 2013/07/02 21:56:27 aballier Exp $
 
 EAPI=5
 
@@ -93,8 +93,8 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	sys-libs/zlib
 	>=media-libs/libpng-1.2.43-r2:0=
 	>=app-text/poppler-0.12.3-r3:=
-	x11-libs/cairo
-	x11-libs/pixman
+	>=x11-libs/cairo-1.12
+	>=x11-libs/pixman-0.18
 	xetex? (
 		>=media-libs/harfbuzz-0.9.10
 		>=dev-libs/icu-50

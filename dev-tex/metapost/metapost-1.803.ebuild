@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.803.ebuild,v 1.1 2013/06/25 21:20:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.803.ebuild,v 1.2 2013/07/02 21:51:19 aballier Exp $
 
 EAPI=5
 
@@ -15,8 +15,8 @@ IUSE=""
 
 RDEPEND=">=dev-libs/kpathsea-6.1.0_p20120701
 	>=app-admin/eselect-mpost-0.3
-	x11-libs/cairo
-	x11-libs/pixman
+	>=x11-libs/cairo-1.12
+	>x11-libs/pixman-0.18
 	media-libs/libpng:0="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
