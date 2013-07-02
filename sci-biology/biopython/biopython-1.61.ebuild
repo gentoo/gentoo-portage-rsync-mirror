@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.61.ebuild,v 1.2 2013/06/06 08:38:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.61.ebuild,v 1.3 2013/07/02 12:47:34 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="mysql postgres"
 
-RDEPEND="
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
 	dev-python/matplotlib[${PYTHON_USEDEP}]
 	dev-python/networkx[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
@@ -29,13 +31,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/flex"
 
-#PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
-
-#DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 DOCS=( CONTRIB DEPRECATED NEWS README )
-#PYTHON_MODNAME="Bio BioSQL"
-
-#PATCHES=( "${FILESDIR}"/${PN}-1.51-flex.patch )
 
 python_test() {
 	cd Tests
