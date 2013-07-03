@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ninja-ide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.15 2013/05/16 14:53:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.16 2013/07/03 13:41:54 hasufell Exp $
+
+  03 Jul 2013; Julian Ospald <hasufell@gentoo.org> ninja-ide-2.2.ebuild,
+  +files/ninja-ide-2.2-version.patch:
+  fix version wrt #471708
 
   16 May 2013; Julian Ospald <hasufell@gentoo.org> ninja-ide-2.1.1-r5.ebuild:
   amd64 stable wrt #467132

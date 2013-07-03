@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.2.ebuild,v 1.1 2013/04/24 22:02:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.2.ebuild,v 1.2 2013/07/03 13:41:54 hasufell Exp $
 
 # XXX: tests
 
@@ -26,7 +26,11 @@ RDEPEND="
 	virtual/python-json[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${P}-syntax.patch "${FILESDIR}"/${P}-python2_6.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-syntax.patch
+	"${FILESDIR}"/${P}-python2_6.patch
+	"${FILESDIR}"/${P}-version.patch
+)
 
 python_install_all() {
 	distutils-r1_python_install_all
