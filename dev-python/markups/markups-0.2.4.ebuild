@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/markups-0.2.4.ebuild,v 1.2 2013/07/03 15:49:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/markups-0.2.4.ebuild,v 1.3 2013/07/03 17:12:05 tomwij Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
+
+DISTUTILS_NO_PARALLEL_BUILD="true"
 
 inherit distutils-r1
 
@@ -20,3 +22,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}"/${MY_P}
+
+DEPEND="dev-python/markdown"
+
+python_test() {
+	pushd tests > /dev/null
+		for test in test_*.py ; do
+			local testName="$(echo ${test} | sed 's/test_\(.*\).py/\1/g')"
+			einfo "Running test '${testName}' with '${EPYTHON}'."
+			${EPYTHON} ${test} || die "Test '${testName}' with '${EPYTHON}' failed."
+		done
+	popd tests > /dev/null
+}

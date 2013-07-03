@@ -1,6 +1,12 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.25 2013/06/25 09:48:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.26 2013/07/03 17:23:54 maksbotan Exp $
+
+*quiterss-0.13.1 (03 Jul 2013)
+
+  03 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org> +quiterss-0.13.1.ebuild,
+  quiterss-9999.ebuild:
+  Bump to 0.13.1, update locales in 9999. Thanks to Nikoli.
 
   25 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> quiterss-9999.ebuild:
   Add tg_TJ locale

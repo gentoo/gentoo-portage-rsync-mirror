@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/markups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/ChangeLog,v 1.2 2013/07/03 15:49:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/ChangeLog,v 1.3 2013/07/03 17:12:05 tomwij Exp $
+
+  03 Jul 2013; Tom Wijsman <TomWij@gentoo.org> markups-0.2.4.ebuild:
+  Added missing dev-python/markdown dependency. Added tests, set them to not
+  build in parallel to keep output clean; there is no need for that speedup for
+  this small package.
 
   03 Jul 2013; Tom Wijsman <TomWij@gentoo.org> markups-0.2.4.ebuild:
   Added and tested Python 3.3 compatibility, fixes bug #475478 reported by
