@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.6.1.ebuild,v 1.3 2013/02/21 03:17:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.6.1.ebuild,v 1.4 2013/07/03 03:37:06 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,8 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x86-macos"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="dev-python/setuptools"
+RDEPEND="${DEPEND}"
 
 # permission denied test needs FEATURES="userpriv" to work *sigh*
 # rest is just confused and needs a good sedding to work

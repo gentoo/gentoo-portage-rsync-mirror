@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.31 2013/07/02 18:45:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.32 2013/07/03 03:37:06 floppym Exp $
+
+  03 Jul 2013; Mike Gilbert <floppym@gentoo.org> pyflakes-0.6.1.ebuild,
+  pyflakes-0.7.2.ebuild, pyflakes-0.7.3.ebuild:
+  [R]DEPEND on setuptools, thanks Arfrever.
 
 *pyflakes-0.7.3 (02 Jul 2013)
 
