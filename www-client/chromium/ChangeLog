@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.905 2013/06/29 13:42:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.906 2013/07/03 03:14:16 floppym Exp $
+
+  03 Jul 2013; Mike Gilbert <floppym@gentoo.org> chromium-27.0.1453.110.ebuild:
+  Place upper-bound on nss dependency, bug 474982.
 
 *chromium-28.0.1500.63 (29 Jun 2013)
 
