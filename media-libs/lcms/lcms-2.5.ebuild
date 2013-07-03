@@ -1,11 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.4-r1.ebuild,v 1.1 2013/06/07 23:44:16 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.5.ebuild,v 1.1 2013/07/03 10:10:35 radhermit Exp $
 
 EAPI=5
-
 AUTOTOOLS_PRUNE_LIBTOOL_FILES="modules"
-
 inherit autotools-utils
 
 DESCRIPTION="A lightweight, speed optimized color management engine"
@@ -23,10 +21,6 @@ RDEPEND="jpeg? ( virtual/jpeg )
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/lcms2-${PV}
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-2.4-threading-plugin.patch
-)
 
 src_configure() {
 	local myeconfargs=(

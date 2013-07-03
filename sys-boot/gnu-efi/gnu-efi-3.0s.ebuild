@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0s.ebuild,v 1.1 2012/11/25 04:27:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0s.ebuild,v 1.3 2013/07/03 10:06:22 ago Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gnu-efi/${MY_P}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE=""
 
 DEPEND="sys-apps/pciutils"
