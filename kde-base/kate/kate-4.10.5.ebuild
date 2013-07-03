@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.5.ebuild,v 1.1 2013/07/02 16:47:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate/kate-4.10.5.ebuild,v 1.2 2013/07/03 08:51:56 kensington Exp $
 
 EAPI=5
 KDE_HANDBOOK="optional"
@@ -19,7 +19,7 @@ DEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	python? (
-		${PYTHON_DEPEND}
+		${PYTHON_DEPS}
 		$(add_kdebase_dep pykde4 "${PYTHON_USEDEP}" 4.9.2-r1)
 	)
 "

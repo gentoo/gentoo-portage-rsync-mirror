@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.10.4.ebuild,v 1.5 2013/07/02 08:06:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.10.4.ebuild,v 1.6 2013/07/03 08:54:38 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ DEPEND="
 	x11-libs/libX11
 	x11-libs/libXrender
 	python? (
-		${PYTHON_DEPEND}
+		${PYTHON_DEPS}
 		$(add_kdebase_dep pykde4 "${PYTHON_USEDEP}")
 	)
 "
