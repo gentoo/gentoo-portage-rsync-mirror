@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.189 2013/06/28 12:08:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.190 2013/07/03 22:21:54 aballier Exp $
+
+*freebsd-lib-9.1-r10 (03 Jul 2013)
+
+  03 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-lib-9.1-r10.ebuild:
+  Build librt for multilib and the cross compiler too. Part of bug #475294.
 
   28 Jun 2013; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.1-r9.ebuild:
   fix cross compilation
