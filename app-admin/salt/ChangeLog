@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.16 2013/06/04 17:33:41 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.17 2013/07/02 23:34:25 chutzpah Exp $
+
+  02 Jul 2013; Patrick McLean <chutz@gentoo.org> -salt-0.14.1.ebuild,
+  -salt-0.15.1.ebuild, -files/salt-0.13.1-disable-failing-tests.patch:
+  Remove old versions, removing 0.14.1 from the tree due to bug #475438.
 
 *salt-0.15.3 (04 Jun 2013)
 
