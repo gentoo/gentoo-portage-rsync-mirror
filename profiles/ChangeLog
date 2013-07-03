@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8000 2013/07/03 15:22:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8001 2013/07/03 19:09:02 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jul 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Clean gtkmm mask as broken version was removed
 
   03 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

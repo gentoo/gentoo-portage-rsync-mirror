@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.98 2013/07/02 16:47:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.99 2013/07/03 19:18:40 johu Exp $
+
+  03 Jul 2013; Johannes Huber <johu@gentoo.org>
+  kdepim-common-libs-4.10.4.ebuild, kdepim-common-libs-4.10.5.ebuild:
+  Add missing dep on dev-libs/grantlee by Diego Elio Pettenò
+  <flameeyes@gentoo.org> wrt bug #475648.
 
 *kdepim-common-libs-4.10.5 (02 Jul 2013)
 

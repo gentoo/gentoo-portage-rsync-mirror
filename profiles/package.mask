@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14891 2013/07/03 15:22:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14892 2013/07/03 19:09:02 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -362,10 +362,6 @@ x11-misc/pcmanfm-qt
 # needs a network interface named eth* or wlan* (bug #455896)
 # collides with predictable network interface names of udev
 <=media-sound/google-musicmanager-1.0.60.7918_beta
-
-# Pacho Ramos <pacho@gentoo.org> (11 Apr 2013)
-# Breaks reverse deps, bug #464994
-=dev-cpp/gtkmm-2.24.3
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Apr 2013)
 # Broken. Should be bumped to 0.13.0 but needs a dedicated
