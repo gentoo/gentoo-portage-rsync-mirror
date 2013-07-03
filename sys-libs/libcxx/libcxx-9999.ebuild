@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.15 2013/07/03 21:17:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.16 2013/07/03 21:52:45 aballier Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/libcxx/trunk"
 
 [ "${PV%9999}" != "${PV}" ] && SCM="subversion" || SCM=""
 
-inherit ${SCM} flag-o-matic toolchain-funcs multilib
+inherit ${SCM} flag-o-matic toolchain-funcs multilib multilib-minimal
 
 DESCRIPTION="New implementation of the C++ standard library, targeting C++11"
 HOMEPAGE="http://libcxx.llvm.org/"
@@ -27,17 +27,20 @@ else
 fi
 IUSE="elibc_glibc +libcxxrt static-libs test"
 
-RDEPEND="libcxxrt? ( >=sys-libs/libcxxrt-0.0_p20130530[static-libs?] )
+RDEPEND="libcxxrt? ( >=sys-libs/libcxxrt-0.0_p20130530[static-libs?,${MULTILIB_USEDEP}] )
 	!libcxxrt? ( sys-devel/gcc[cxx] )"
 DEPEND="${RDEPEND}
 	test? ( sys-devel/clang )
 	app-arch/xz-utils"
 
+DOCS=( CREDITS.TXT )
+
 src_prepare() {
 	cp -f "${FILESDIR}/Makefile" lib/ || die
+	multilib_copy_sources
 }
 
-src_compile() {
+src_configure() {
 	export LIBS="-lpthread -lrt -lc -lgcc_s"
 	if use libcxxrt ; then
 		append-cppflags -DLIBCXXRT "-I${EPREFIX}/usr/include/libcxxrt/"
@@ -53,19 +56,22 @@ src_compile() {
 	tc-export AR CC CXX
 
 	append-ldflags "-Wl,-z,defs" # make sure we are not underlinked
+}
 
-	cd "${S}/lib" || die
+multilib_src_compile() {
+	cd "${BUILD_DIR}/lib" || die
 	emake shared
 	use static-libs && emake static
 }
 
 # Tests fail for now, if anybody is able to fix them, help is very welcome.
-src_test() {
-	cd "${S}/test"
-	LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" \
-		CC="clang++" \
-		HEADER_INCLUDE="-I${S}/include" \
-		SOURCE_LIB="-L${S}/lib" \
+multilib_src_test() {
+	cd "${BUILD_DIR}/test"
+	LD_LIBRARY_PATH="${BUILD_DIR}/lib:${LD_LIBRARY_PATH}" \
+	LD_32_LIBRARY_PATH="${BUILD_DIR}/lib:${LD_32_LIBRARY_PATH}" \
+		CC="clang++ $(get_abi_CFLAGS) ${CXXFLAGS}" \
+		HEADER_INCLUDE="-I${BUILD_DIR}/include" \
+		SOURCE_LIB="-L${BUILD_DIR}/lib" \
 		LIBS="-lm" \
 		./testit || die
 }
@@ -99,19 +105,18 @@ END_LDSCRIPT
 	# TODO: Generate a libc++.a ldscript when building against libsupc++
 }
 
-src_install() {
-	cd "${S}/lib"
+multilib_src_install() {
+	cd "${BUILD_DIR}/lib"
 	if use static-libs ; then
 		dolib.a libc++.a
 		gen_static_ldscript
 	fi
 	dolib.so libc++.so*
+}
 
-	cd "${S}"
+multilib_src_install_all() {
 	insinto /usr/include/c++/v1
 	doins -r include/*
-
-	dodoc CREDITS.TXT
 }
 
 pkg_postinst() {
