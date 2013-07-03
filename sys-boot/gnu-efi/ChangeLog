@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/gnu-efi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.21 2013/07/03 10:06:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.22 2013/07/03 14:14:03 chithanh Exp $
+
+*gnu-efi-3.0u (03 Jul 2013)
+
+  03 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +gnu-efi-3.0u.ebuild:
+  Version bump, bug #475532.
 
   03 Jul 2013; Agostino Sarubbo <ago@gentoo.org> gnu-efi-3.0s.ebuild:
   Stable for x86, wrt bug #450908
