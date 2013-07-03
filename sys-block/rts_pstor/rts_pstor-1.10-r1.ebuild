@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts_pstor/rts_pstor-1.10-r1.ebuild,v 1.1 2013/05/28 19:48:25 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts_pstor/rts_pstor-1.10-r1.ebuild,v 1.2 2013/07/03 00:36:45 vikraman Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ BUILD_TARGETS="default"
 
 src_prepare() {
 	sed -i -e 's/\/lib\/modules\/\$(shell uname -r)\/build\//\$(KERNELDIR)/g' Makefile || die "Sed failed!"
-	epatch "${FILESDIR}/${PN}-linux-3.8.patch"
+	[ ${KV_MAJOR} -ge 3 ] && [ ${KV_MINOR} -ge 8 ] && epatch "${FILESDIR}/${PN}-linux-3.8.patch"
 }
 
 pkg_setup() {

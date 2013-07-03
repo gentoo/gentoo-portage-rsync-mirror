@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/rts5229-1.07-r1.ebuild,v 1.2 2013/07/03 00:34:51 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/rts5229-1.07-r2.ebuild,v 1.1 2013/07/03 00:34:52 vikraman Exp $
 
 EAPI=4
 
@@ -26,6 +26,7 @@ BUILD_TARGETS="default"
 src_prepare() {
 	sed -i -e 's/\/lib\/modules\/\$(shell uname -r)\/build\//\$(KERNELDIR)/g' Makefile || die "Sed failed!"
 	[ ${KV_MAJOR} -ge 3 ] && [ ${KV_MINOR} -ge 8 ] && epatch "${FILESDIR}/${PN}-linux-3.8.patch"
+	[ ${KV_MAJOR} -ge 3 ] && [ ${KV_MINOR} -ge 10 ] && epatch "${FILESDIR}/${PN}-linux-3.10.patch"
 }
 
 pkg_setup() {
