@@ -1,6 +1,9 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.26 2013/07/03 17:23:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.27 2013/07/03 19:36:48 maksbotan Exp $
+
+  03 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org> quiterss-9999.ebuild:
+  Correctly fix locales in 9999
 
 *quiterss-0.13.1 (03 Jul 2013)
 
