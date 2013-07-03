@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1148 2013/07/01 11:46:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1150 2013/07/03 20:44:40 tomwij Exp $
+
+  03 Jul 2013; Tom Wijsman <TomWij@gentoo.org> -gentoo-sources-3.0.80.ebuild,
+  -gentoo-sources-3.0.81.ebuild, -gentoo-sources-3.2.46.ebuild,
+  -gentoo-sources-3.2.47.ebuild, -gentoo-sources-3.4.47.ebuild,
+  -gentoo-sources-3.4.48.ebuild, -gentoo-sources-3.9.4.ebuild,
+  -gentoo-sources-3.9.5.ebuild:
+  Removed older versions to encourage people to upgrade to more stable / secure
+  versions; for the 3.9 branch, we are close to stabilization as it goes EOL in
+  the near future.
+
+*gentoo-sources-3.9.9 (03 Jul 2013)
+*gentoo-sources-3.4.52 (03 Jul 2013)
+*gentoo-sources-3.0.85 (03 Jul 2013)
+
+  03 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.0.85.ebuild,
+  +gentoo-sources-3.4.52.ebuild, +gentoo-sources-3.9.9.ebuild:
+  Linux patches 3.0.85, 3.4.52 and 3.9.9. Applied af_key info leak security fix
+  for bug #475604 and ipv6 sk_dst check fix against corruption and crashes for
+  bug #475606 to branches 3.0, 3.2, 3.4 and 3.9.
 
   01 Jul 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.10.0.ebuild:
   Remove BFQ cgroups which compilation broke with 3.10, we need to await its

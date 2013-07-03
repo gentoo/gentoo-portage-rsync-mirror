@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>hasufell@gentoo.org</email>
-		<name>Julian Ospald</name>
+		<email>mrueg@gentoo.org</email>
+		<name>Manuel Rüger</name>
 		<description>Maintainer. Assign bugs to him</description>
 	</maintainer>
 	<maintainer>
-		<email>gentoo@rueg.eu</email>
-		<name>Manuel Rüger</name>
-		<description>Proxy maintainer. CC him on bugs</description>
+	<email>hasufell@gentoo.org</email>
+		<name>Julian Ospald</name>
+		<description>Maintainer. CC him on bugs</description>
 	</maintainer>
 	<use>
 		<flag name='bazaar'>Support <pkg>dev-vcs/bzr</pkg> based repository</flag>

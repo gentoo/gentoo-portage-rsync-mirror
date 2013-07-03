@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/adie-1.7.32.ebuild,v 1.1 2012/03/02 22:54:19 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/adie-1.7.39.ebuild,v 1.1 2013/07/03 20:43:09 mabi Exp $
 
 EAPI="4"
 
