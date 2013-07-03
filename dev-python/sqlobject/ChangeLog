@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sqlobject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.52 2013/06/03 05:58:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.53 2013/07/03 07:33:03 idella4 Exp $
+
+*sqlobject-1.4.1-r1 (03 Jul 2013)
+
+  03 Jul 2013; Ian Delaney <idella4@gentoo.org> +sqlobject-1.4.1-r1.ebuild:
+  revbump; migrate -> distutils-r1, only the less used kinterbasdb not yet
+  migrated due to its status 'less used'
 
 *sqlobject-1.4.1 (03 Jun 2013)
 

@@ -1,0 +1,46 @@
+From f71ea50702cd9d17d1a8a913ee87a5d9ae2d5bc9 Mon Sep 17 00:00:00 2001
+From: Sergei Trofimovich <slyfox@gentoo.org>
+Date: Wed, 3 Jul 2013 10:21:36 +0300
+Subject: [PATCH] configure.ac: warn about unknown '--with-' / '--enable-'
+ options
+
+As we use 'AC_CONFIG_SUBDIRS' macro for samba sources
+option checking is disabled for us.
+
+Before the patch:
+
+    $ ./configure --with-i-have-misspelled-editor-for-edit
+    ...
+    # no warnings
+
+The patch enables warnings back only for top-level ./configure:
+
+    $ ./configure --with-i-have-misspelled-editor-for-edit
+    ...
+    configure: WARNING: unrecognized options: --with-i-have-misspelled-editor-for-edit
+
+Signed-off-by: Sergei Trofimovich <slyfox@gentoo.org>
+---
+ configure.ac | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/configure.ac b/configure.ac
+index c12c2e7..5581a14 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -652,3 +652,12 @@ Configuration:
+   Support for charset:        ${charset_msg}
+   Search type:                ${SEARCH_TYPE}
+ ])
++
++dnl option checking is disable by default due to AC_CONFIG_SUBDIRS
++dnl we enable it back for top-level ./configure
++if test -n "$ac_unrecognized_opts"; then
++  case $enable_option_checking in
++    fatal) AC_MSG_ERROR([unrecognized options: $ac_unrecognized_opts]) ;;
++    *)     AC_MSG_WARN( [unrecognized options: $ac_unrecognized_opts]) ;;
++  esac
++fi
+-- 
+1.8.2.1
+

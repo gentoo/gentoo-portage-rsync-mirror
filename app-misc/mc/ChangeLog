@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.281 2013/06/19 13:35:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.282 2013/07/03 07:35:35 slyfox Exp $
+
+  03 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.9-unknown-opts.patch, mc-9999.ebuild:
+  Added check for unknown ./configure options. Followed upstream in '--with-
+  edit' to '--with-internal-edit' renaming.
 
 *mc-4.8.8-r1 (19 Jun 2013)
 
