@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.2 2013/07/02 21:56:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.3 2013/07/03 15:30:07 aballier Exp $
 
 EAPI=5
 
@@ -103,7 +103,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 		media-gfx/graphite2
 		media-libs/freetype:2
 	)
-	>=dev-libs/kpathsea-6.1.0_p20120701
+	>=dev-libs/kpathsea-6.1.1_p20130530
 	cjk? ( >=dev-libs/ptexenc-1.3.1_p20130530 )"
 
 DEPEND="${COMMON_DEPEND}
