@@ -5,7 +5,7 @@ NSLAVE_ADDRESS="localhost"
 NSLAVE_PORT=8898
 
 # The url to serve the rendered files to the wiki
-NSLAVE_URL="http://${NSLAVE_ADDRESS}:${NSLAVE_PORT}"
+NSLAVE_URL="http://${NSLAVE_ADDRESS}:${NSLAVE_PORT}/cache"
 
 # The directory to save the rendered PDFs to
 NSLAVE_CACHEDIR="/var/cache/mwlib/"

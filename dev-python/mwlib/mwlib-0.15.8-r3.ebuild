@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.8-r2.ebuild,v 1.1 2013/07/01 13:56:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.8-r3.ebuild,v 1.1 2013/07/03 12:06:14 dev-zero Exp $
 
 EAPI=5
 
@@ -98,14 +98,22 @@ python_install_all() {
 		fperms 0750 /var/log/mwlib /var/cache/mwlib
 
 		insinto /etc/logrotate.d
-		for d in mw-qserve nserve nslave postman ; do
+		for d in mw-qserve nserve ; do
 			newins "${FILESDIR}/${d}.logrotate" "${d}"
 			newinitd "${FILESDIR}/${d}.initd" "${d}"
 			newconfd "${FILESDIR}/${d}.confd" "${d}"
 		done
 
+		newins "${FILESDIR}/nslave.logrotate" "nslave"
+		newinitd "${FILESDIR}/nslave.initd-r1" "nslave"
+		newconfd "${FILESDIR}/nslave.confd-r1" "nslave"
+
+		newins "${FILESDIR}/postman.logrotate" "postman"
+		newinitd "${FILESDIR}/postman.initd-r1" "postman"
+		newconfd "${FILESDIR}/postman.confd" "postman"
+
 		insinto /etc/cron.d
-		newins "${FILESDIR}/mwlib-purge-cache.cron" "mwlib-purge-cache"
+		newins "${FILESDIR}/mwlib-purge-cache.cron-r1" "mwlib-purge-cache"
 	else
 		rm "${D}"/usr/bin/{mw-qserve,nserve,nslave,postman}* || die "removing binaries failed"
 	fi

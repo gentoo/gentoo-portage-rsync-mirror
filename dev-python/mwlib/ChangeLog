@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.26 2013/07/01 13:56:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.27 2013/07/03 12:06:14 dev-zero Exp $
+
+*mwlib-0.15.8-r3 (03 Jul 2013)
+
+  03 Jul 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/mwlib-purge-cache.cron-r1, +files/nslave.confd-r1,
+  +files/nslave.initd-r1, +files/postman.initd-r1, +mwlib-0.15.8-r3.ebuild,
+  -files/mwlib-purge-cache.cron, -files/nslave.confd, -files/nslave.initd,
+  -files/postman.initd, -mwlib-0.15.8-r2.ebuild:
+  Fix typos in init.d/conf.d and cronjob files.
 
 *mwlib-0.15.8-r2 (01 Jul 2013)
 
