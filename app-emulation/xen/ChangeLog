@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.125 2013/07/02 16:15:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.126 2013/07/03 15:47:57 idella4 Exp $
+
+  03 Jul 2013; Ian Delaney <idella4@gentoo.org> -xen-4.2.1-r3.ebuild,
+  -xen-4.2.2.ebuild:
+  remove old unsecure ebuilds wrt Bug 472214
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> xen-4.2.2-r1.ebuild:
   Stable for x86, wrt bug #472214

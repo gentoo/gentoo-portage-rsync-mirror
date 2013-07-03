@@ -1,6 +1,12 @@
 # ChangeLog for app-leechcraft/lc-bittorrent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-bittorrent/ChangeLog,v 1.4 2013/06/11 17:15:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-bittorrent/ChangeLog,v 1.5 2013/07/03 15:55:34 maksbotan Exp $
+
+*lc-bittorrent-0.5.98 (03 Jul 2013)
+
+  03 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-bittorrent-0.5.98.ebuild:
+  Bump LeechCraft to 0.5.98, thanks to 0xd34df00d.
 
 *lc-bittorrent-0.5.97 (11 Jun 2013)
 
