@@ -1,0 +1,9 @@
+# ChangeLog for app-leechcraft/lcpackgen
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lcpackgen/ChangeLog,v 1.1 2013/07/03 16:52:54 maksbotan Exp $
+
+*lcpackgen-1.2 (03 Jul 2013)
+
+  03 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org> +lcpackgen-1.2.ebuild,
+  +metadata.xml:
+  Add app-leechcraft/lcpackgen-1.2, thanks to 0xd34df00d.
