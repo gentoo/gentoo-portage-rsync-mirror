@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.330.ebuild,v 1.1 2013/03/15 23:07:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.350.ebuild,v 1.1 2013/07/03 16:28:04 bicatali Exp $
 
 EAPI=5
 inherit autotools-utils
@@ -10,7 +10,7 @@ HOMEPAGE="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"
 SRC_URI="http://dev.gentoo.org/~bicatali/distfiles/${P}.tar.gz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="doc examples fortran static-libs +tools threads"
 

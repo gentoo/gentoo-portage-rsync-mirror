@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.110 2013/06/14 18:54:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.111 2013/07/03 16:30:33 ottxor Exp $
+
+  03 Jul 2013; Christoph Junghans <ottxor@gentoo.org> gdata-2.0.18.ebuild:
+  Added ~amd64-linux (tested by me)
 
 *gdata-2.0.18 (14 Jun 2013)
 

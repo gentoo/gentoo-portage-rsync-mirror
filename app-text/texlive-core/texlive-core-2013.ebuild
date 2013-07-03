@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.3 2013/07/03 15:30:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.4 2013/07/03 16:02:42 aballier Exp $
 
 EAPI=5
 
@@ -136,7 +136,7 @@ RELOC_TARGET=texmf-dist
 src_prepare() {
 	cd "${WORKDIR}"
 	# From texlive-module.eclass.
-	grep RELOC tlpkg/tlpobj/* | awk '{print $2}' | sed 's#^RELOC/##' > "${T}/reloclist"
+	grep -H RELOC tlpkg/tlpobj/* | awk '{print $2}' | sed 's#^RELOC/##' > "${T}/reloclist"
 	{ for i in $(<"${T}/reloclist"); do  dirname $i; done; } | uniq > "${T}/dirlist"
 	for i in $(<"${T}/dirlist"); do
 		[ -d "${RELOC_TARGET}/${i}" ] || mkdir -p "${RELOC_TARGET}/${i}"

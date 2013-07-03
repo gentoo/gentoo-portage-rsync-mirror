@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.62 2013/03/20 21:07:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.63 2013/07/03 16:28:04 bicatali Exp $
+
+*cfitsio-3.350 (03 Jul 2013)
+
+  03 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +cfitsio-3.350.ebuild,
+  -cfitsio-3.310.ebuild, -cfitsio-3.330.ebuild:
+  Version bump
 
 *cfitsio-3.340 (20 Mar 2013)
 
