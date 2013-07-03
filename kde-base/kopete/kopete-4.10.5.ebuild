@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.5.ebuild,v 1.1 2013/07/02 16:48:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.5.ebuild,v 1.2 2013/07/03 07:30:12 kensington Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ else
 fi
 
 KDE_HANDBOOK="optional"
-inherit kde4-${KDE_ECLASS} multilib
+inherit kde4-${KDE_ECLASS}
 
 DESCRIPTION="KDE multi-protocol IM client"
 KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
@@ -113,13 +113,6 @@ RDEPEND="${COMMONDEPEND}
 DEPEND="${COMMONDEPEND}
 	!aqua? ( x11-proto/scrnsaverproto )
 "
-
-src_prepare() {
-	sed -e "s:lib/mozilla:$(get_libdir)/mozilla:" \
-		-i protocols/skype/skypebuttons/CMakeLists.txt || die "sed failed"
-
-	kde4-${KDE_ECLASS}_src_prepare
-}
 
 src_configure() {
 	local x x2

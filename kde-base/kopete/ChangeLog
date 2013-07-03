@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.382 2013/07/02 16:48:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.383 2013/07/03 07:30:12 kensington Exp $
+
+  03 Jul 2013; Michael Palimaka <kensington@gentoo.org> kopete-4.10.5.ebuild:
+  Remove failing sed that is no longer necessary, wrt bug #475572.
 
 *kopete-4.10.5 (02 Jul 2013)
 
