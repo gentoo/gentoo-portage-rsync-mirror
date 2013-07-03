@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.21 2013/07/02 21:56:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.22 2013/07/03 18:38:26 aballier Exp $
+
+  03 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild:
+  inherit base before subversion to get a correct src_unpack, bug #475598 by
+  Michael Weber
 
   02 Jul 2013; Alexis Ballier <aballier@gentoo.org>
   libcxx-0.0_p20130531-r1.ebuild, libcxx-9999.ebuild:

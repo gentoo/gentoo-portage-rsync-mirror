@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.13 2013/07/02 21:56:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.14 2013/07/03 18:38:26 aballier Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/libcxx/trunk"
 
 [ "${PV%9999}" != "${PV}" ] && SCM="subversion" || SCM=""
 
-inherit cmake-utils ${SCM} base flag-o-matic toolchain-funcs multilib
+inherit cmake-utils base ${SCM} flag-o-matic toolchain-funcs multilib
 
 DESCRIPTION="New implementation of the C++ standard library, targeting C++11"
 HOMEPAGE="http://libcxx.llvm.org/"

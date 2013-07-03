@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/evil-1.0.1.ebuild,v 1.1 2013/03/07 16:19:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/evil-1.0.5.ebuild,v 1.1 2013/07/03 18:41:38 ulm Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="GPL-3+ FDL-1.3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="app-emacs/undo-tree"
+DEPEND=">=app-emacs/undo-tree-0.5.2"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
