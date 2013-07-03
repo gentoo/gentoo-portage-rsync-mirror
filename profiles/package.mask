@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14892 2013/07/03 19:09:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14893 2013/07/03 22:55:32 ottxor Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -357,11 +357,6 @@ x11-misc/pcmanfm-qt
 # Michael Weber <xmw@gentoo.org> (18 Apr 2013)
 # Masked due test failures
 =app-arch/advancecomp-1.17
-
-# Christoph Junghans <ottxor@gentoo.org> (15 Apr 2013)
-# needs a network interface named eth* or wlan* (bug #455896)
-# collides with predictable network interface names of udev
-<=media-sound/google-musicmanager-1.0.60.7918_beta
 
 # Samuli Suominen <ssuominen@gentoo.org> (09 Apr 2013)
 # Broken. Should be bumped to 0.13.0 but needs a dedicated

@@ -1,4 +1,4 @@
-DEFINED_PHASES=install nofetch setup unpack
+DEFINED_PHASES=install nofetch unpack
 DEPEND=app-arch/xz-utils app-admin/chrpath
 DESCRIPTION=Google Music Manager is a application for adding music to your Google Music library.
 EAPI=5
@@ -7,8 +7,8 @@ IUSE=log
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=Google-TOS Apache-2.0 MIT LGPL-2.1 gSOAP BSD FDL-1.2 MPL-1.1 openssl ZLIB libtiff
 RDEPEND=dev-libs/expat dev-libs/glib:2 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 media-libs/flac media-libs/fontconfig media-libs/freetype:2 media-libs/libogg media-libs/libvorbis net-dns/libidn sys-libs/glibc x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXrandr x11-libs/libXrender log? ( dev-libs/log4cxx )
-RESTRICT=fetch strip
+RESTRICT=strip mirror
 SLOT=0
-SRC_URI=x86? ( http://dl.google.com/linux/musicmanager/deb/pool/main/g/google-musicmanager-beta/google-musicmanager-beta_1.0.60.7918-r0_i386.deb ) amd64? ( http://dl.google.com/linux/musicmanager/deb/pool/main/g/google-musicmanager-beta/google-musicmanager-beta_1.0.60.7918-r0_amd64.deb )
+SRC_URI=x86? ( http://dl.google.com/linux/musicmanager/deb/pool/main/g/google-musicmanager-beta/google-musicmanager-beta_1.0.71.8015-r0_i386.deb ) amd64? ( http://dl.google.com/linux/musicmanager/deb/pool/main/g/google-musicmanager-beta/google-musicmanager-beta_1.0.71.8015-r0_amd64.deb )
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=526acaded1d2b3fab1cae0a6c77cba89
+_md5_=c5985e8622b84b38a6b03d845f1f2102
