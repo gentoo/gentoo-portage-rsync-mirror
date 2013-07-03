@@ -1,13 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/httpie-0.3.1.ebuild,v 1.1 2012/12/28 22:26:21 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/httpie-0.3.1.ebuild,v 1.2 2013/07/03 01:14:31 vikraman Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.6 3:3.1"
-SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="A CLI, cURL-like tool for humans"
 HOMEPAGE="http://httpie.org/ http://pypi.python.org/pypi/httpie"
