@@ -1,4 +1,5 @@
 reported upstream as https://www.xpra.org/trac/ticket/367#ticket
+upstream adapted the print_bool part in https://www.xpra.org/trac/changeset/3761/xpra
 
 --- xpra-0.9.5/xpra/scripts/config.py
 +++ xpra-0.9.5/xpra/scripts/config.py
