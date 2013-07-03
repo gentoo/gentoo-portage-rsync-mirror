@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-1.6.0.ebuild,v 1.1 2013/07/02 10:01:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-1.6.0.ebuild,v 1.2 2013/07/03 06:26:21 jlec Exp $
 
 EAPI="5"
 
@@ -42,6 +42,8 @@ pkg_setup () {
 	DOC_CONTENTS="Add any users who wish to have access to the dropbox nautilus
 		plugin to the group 'dropbox'. You need to setup a drobox account
 		before using this plugin. Visit ${HOMEPAGE} for more information."
+
+	python_export_best
 }
 
 src_prepare() {
