@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.64 2013/04/07 17:33:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.65 2013/07/03 09:22:39 kensington Exp $
 
 inherit versionator
 
@@ -17,9 +17,16 @@ ___ECLASS_ONCE_KDE4_FUNCTIONS="recur -_+^+_- spank"
 
 # @ECLASS-VARIABLE: EAPI
 # @DESCRIPTION:
-# Currently kde4 eclasses support EAPI 3 and 4.
+# Currently kde4 eclasses support EAPI 4 and 5.
 case ${EAPI:-0} in
-	3|4|5) : ;;
+	3)
+		eqawarn "${CATEGORY}/${PF}: EAPI 3 support is now deprecated."
+		eqawarn "If you are the package maintainer, please"
+		eqawarn "update this package to a newer EAPI."
+		eqawarn "Support for EAPI 3 for kde-*.eclass will be dropped"
+		eqawarn "at the beginning August."
+	;;
+	4|5) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
