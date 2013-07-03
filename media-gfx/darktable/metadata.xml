@@ -12,6 +12,7 @@
 		<flag name="pax_kernel">Triggers paxmarking of main darktable binary</flag>
 		<flag name="rawspeed">Enable the rawspeed backend</flag>
 		<flag name="slideshow">Build the opengl slideshow viewer</flag>
+		<flag name="squish">Enable thumbnail compression via libsquish</flag>
 		<flag name="web-services">Add support for uploading photos to facebook and picasa</flag>
 	</use>
 	<upstream>
