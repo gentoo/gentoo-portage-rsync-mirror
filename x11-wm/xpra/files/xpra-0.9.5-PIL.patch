@@ -1,3 +1,7 @@
+https://bugs.gentoo.org/show_bug.cgi?id=471566
+submitted to https://www.xpra.org/trac/ticket/354#ticket
+accepted as https://www.xpra.org/trac/changeset/3600/xpra
+
 --- xpra-0.9.5/xpra/server.py
 +++ xpra-0.9.5/xpra/server.py
 @@ -610,11 +610,11 @@

@@ -1,3 +1,5 @@
+reported upstream as https://www.xpra.org/trac/ticket/367#ticket
+
 --- xpra-0.9.5/xpra/scripts/config.py
 +++ xpra-0.9.5/xpra/scripts/config.py
 @@ -117,9 +117,10 @@
