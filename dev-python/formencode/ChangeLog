@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/formencode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.28 2013/01/11 07:23:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.29 2013/07/03 05:44:13 idella4 Exp $
+
+*formencode-1.2.6-r1 (03 Jul 2013)
+
+  03 Jul 2013; Ian Delaney <idella4@gentoo.org> +formencode-1.2.6-r1.ebuild:
+  revbump; migrate -> distutils-r1, deps of testsuite added but disabled, tests
+  set to restrict, depnds on Bug #473154
 
 *formencode-1.2.6 (11 Jan 2013)
 
