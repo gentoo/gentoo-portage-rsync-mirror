@@ -1,10 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.484 2013/06/25 17:13:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.485 2013/07/03 21:21:55 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Alexis Ballier <aballier@gentoo.org> (03 Jul 2013)
+# The idea behind using libunwind there is to avoid needing to link to libgcc_s
+# and have a C++ stack without gcc with libcxx.
+# However, in any case, clang links its binaries to libgcc_s, hence at the
+# moment there is not much point in enabling this.
+sys-libs/libcxxrt libunwind
 
 # Michael Weber <xmw@gentoo.org>  (19 Jun 2013)
 # Not fit for production

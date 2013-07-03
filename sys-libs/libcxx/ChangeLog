@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.22 2013/07/03 18:38:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.23 2013/07/03 21:17:16 aballier Exp $
+
+  03 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild,
+  +files/Makefile:
+  Use a simple Makefile instead of cmake for building it and drop our patches.
+  It no longer needs to be built with clang.
 
   03 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild:
   inherit base before subversion to get a correct src_unpack, bug #475598 by

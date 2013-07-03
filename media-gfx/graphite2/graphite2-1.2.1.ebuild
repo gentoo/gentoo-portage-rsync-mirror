@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.9 2013/06/30 13:28:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.10 2013/07/03 21:20:45 grobian Exp $
 
 EAPI=5
 
@@ -65,6 +65,9 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		"-DVM_MACHINE_TYPE=direct"
+		# http://sourceforge.net/p/silgraphite/bugs/49/
+		$([[ ${CHOST} == powerpc*-apple* ]] && \
+			echo "-DGRAPHITE2_NSEGCACHE:BOOL=ON")
 	)
 
 	cmake-utils_src_configure
