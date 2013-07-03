@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shout
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.18 2012/12/27 17:20:26 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.19 2013/07/03 18:16:48 graaff Exp $
+
+  03 Jul 2013; Hans de Graaff <graaff@gentoo.org> -ruby-shout-2.1-r2.ebuild:
+  Cleanup.
 
 *ruby-shout-2.2.1 (27 Dec 2012)
 

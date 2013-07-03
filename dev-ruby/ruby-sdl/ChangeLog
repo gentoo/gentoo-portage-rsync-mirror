@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-sdl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.34 2012/09/16 10:10:44 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.35 2013/07/03 18:27:22 graaff Exp $
+
+*ruby-sdl-2.1.2 (03 Jul 2013)
+
+  03 Jul 2013; Hans de Graaff <graaff@gentoo.org> +ruby-sdl-2.1.2.ebuild:
+  Version bump. EAPI=5. Add ruby19.
 
   16 Sep 2012; Hans de Graaff <graaff@gentoo.org> -ruby-sdl-2.0.1b.ebuild:
   Cleanup.
