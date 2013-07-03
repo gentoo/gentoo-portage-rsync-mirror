@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.4.ebuild,v 1.1 2013/01/31 17:56:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.5-r1.ebuild,v 1.2 2013/07/03 20:28:47 hwoarang Exp $
 
 EAPI=4
 
@@ -28,14 +28,13 @@ COMMON_DEP="
 	>=sys-libs/talloc-2.0.7
 	>=sys-libs/tdb-1.2.9
 	>=sys-libs/tevent-0.9.16
-	>=sys-libs/ldb-1.1.13
+	>=sys-libs/ldb-1.1.15-r1
 	>=net-nds/openldap-2.4.30
 	>=dev-libs/libpcre-8.30
 	>=app-crypt/mit-krb5-1.10.3
 	>=sys-apps/keyutils-1.5
 	>=net-dns/c-ares-1.7.4
 	>=dev-libs/nss-3.12.9
-	>=net-fs/samba-4
 	selinux? (
 		>=sys-libs/libselinux-2.1.9
 		>=sys-libs/libsemanage-2.1
@@ -49,8 +48,9 @@ COMMON_DEP="
 	netlink? ( dev-libs/libnl:3 )
 	"
 
-RDEPEND="${COMMON_DEP}"
-
+RDEPEND="${COMMON_DEP}
+	|| ( <=sys-libs/glibc-2.16.9999 >=sys-libs/glibc-2.17[nscd] )
+	"
 DEPEND="${COMMON_DEP}
 	test? ( dev-libs/check )
 	manpages? (
@@ -61,7 +61,10 @@ DEPEND="${COMMON_DEP}
 
 CONFIG_CHECK="~KEYS"
 
-PATCHES=( "${FILESDIR}"/0*.patch )
+PATCHES=(
+		"${FILESDIR}"/0001*.patch
+		"${FILESDIR}"/0002*.patch
+)
 
 pkg_setup(){
 	if use python; then
@@ -82,7 +85,7 @@ src_configure(){
 		--enable-nsslibdir="${EPREFIX}"/$(get_libdir)
 		--with-plugin-path="${EPREFIX}"/usr/$(get_libdir)/sssd
 		--enable-pammoddir="${EPREFIX}"/$(getpam_mod_dir)
-		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules/ldb
+		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/samba/ldb
 		--without-nscd
 		--with-unicode-lib="glib2"
 		--disable-rpath
@@ -116,10 +119,8 @@ src_install(){
 	insopts -m644
 	newins "${S}"/src/examples/logrotate sssd
 
-	if use python; then
-		python_clean_installation_image
-		python_convert_shebangs -r 2 "${ED}$(python_get_sitedir)"/*.py
-	fi
+	use python && python_clean_installation_image
+
 	newconfd "${FILESDIR}"/sssd.conf sssd
 }
 
@@ -132,9 +133,11 @@ pkg_postinst(){
 	elog "and (optionally) configuration in /etc/pam.d in order to use SSSD"
 	elog "features. Please see howto in	http://fedorahosted.org/sssd/wiki/HOWTO_Configure_1_0_2"
 
-	use python && python_mod_optimize SSSDConfig.py ipachangeconf.py
+	use python && \
+		python_mod_optimize SSSDConfig/{ipachangeconf,sssd_upgrade_config}.py
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup SSSDConfig.py ipachangeconf.py
+	use python && \
+		python_mod_cleanup SSSDConfig/{ipachangeconf,sssd_upgrade_config}.py
 }

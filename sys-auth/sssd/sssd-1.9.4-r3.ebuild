@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.5.ebuild,v 1.1 2013/05/21 20:04:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.4-r3.ebuild,v 1.1 2013/07/03 20:26:57 hwoarang Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ COMMON_DEP="
 	>=sys-libs/talloc-2.0.7
 	>=sys-libs/tdb-1.2.9
 	>=sys-libs/tevent-0.9.16
-	>=sys-libs/ldb-1.1.13
+	>=sys-libs/ldb-1.1.15-r1
 	>=net-nds/openldap-2.4.30
 	>=dev-libs/libpcre-8.30
 	>=app-crypt/mit-krb5-1.10.3
@@ -61,10 +61,7 @@ DEPEND="${COMMON_DEP}
 
 CONFIG_CHECK="~KEYS"
 
-PATCHES=(
-		"${FILESDIR}"/0001*.patch
-		"${FILESDIR}"/0002*.patch
-)
+PATCHES=( "${FILESDIR}"/0*.patch )
 
 pkg_setup(){
 	if use python; then
@@ -85,7 +82,7 @@ src_configure(){
 		--enable-nsslibdir="${EPREFIX}"/$(get_libdir)
 		--with-plugin-path="${EPREFIX}"/usr/$(get_libdir)/sssd
 		--enable-pammoddir="${EPREFIX}"/$(getpam_mod_dir)
-		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules/ldb
+		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/samba/ldb
 		--without-nscd
 		--with-unicode-lib="glib2"
 		--disable-rpath
@@ -119,8 +116,10 @@ src_install(){
 	insopts -m644
 	newins "${S}"/src/examples/logrotate sssd
 
-	use python && python_clean_installation_image
-
+	if use python; then
+		python_clean_installation_image
+		python_convert_shebangs -r 2 "${ED}$(python_get_sitedir)"/*.py
+	fi
 	newconfd "${FILESDIR}"/sssd.conf sssd
 }
 
@@ -133,11 +132,9 @@ pkg_postinst(){
 	elog "and (optionally) configuration in /etc/pam.d in order to use SSSD"
 	elog "features. Please see howto in	http://fedorahosted.org/sssd/wiki/HOWTO_Configure_1_0_2"
 
-	use python && \
-		python_mod_optimize SSSDConfig/{ipachangeconf,sssd_upgrade_config}.py
+	use python && python_mod_optimize SSSDConfig.py ipachangeconf.py
 }
 
 pkg_postrm() {
-	use python && \
-		python_mod_cleanup SSSDConfig/{ipachangeconf,sssd_upgrade_config}.py
+	use python && python_mod_cleanup SSSDConfig.py ipachangeconf.py
 }

@@ -1,6 +1,20 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.42 2013/05/21 20:04:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.44 2013/07/03 20:28:47 hwoarang Exp $
+
+  03 Jul 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  sssd-1.9.5-r1.ebuild:
+  Allow ldb versions higher than 1.1.15-r1
+
+*sssd-1.9.5-r1 (03 Jul 2013)
+*sssd-1.9.4-r3 (03 Jul 2013)
+
+  03 Jul 2013; Markos Chandras <hwoarang@gentoo.org> +sssd-1.9.4-r3.ebuild,
+  +sssd-1.9.5-r1.ebuild, -sssd-1.9.4-r1.ebuild, -sssd-1.9.4-r2.ebuild,
+  -sssd-1.9.4.ebuild, -sssd-1.9.5.ebuild, metadata.xml, sssd-1.8.6-r1.ebuild,
+  sssd-1.8.6.ebuild:
+  Revbump to fix sys-libs/ldb dependencies and runtime problems against sys-
+  libs/ldb-1.1.15-r1. Remove old versions
 
 *sssd-1.9.5 (21 May 2013)
 

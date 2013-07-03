@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.24 2013/06/20 13:02:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.25 2013/07/03 20:30:34 hwoarang Exp $
+
+  03 Jul 2013; Markos Chandras <hwoarang@gentoo.org> files/ttrssd.initd-r1:
+  Add --retry option to init script. Patch by Takashi Kobayashi
+  <dbkanahaku@gmail.com>. Bug #475610
 
 *tt-rss-1.8 (20 Jun 2013)
 
