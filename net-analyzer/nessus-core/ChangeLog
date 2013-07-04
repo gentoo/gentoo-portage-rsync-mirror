@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-core
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.118 2012/05/04 06:08:10 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.119 2013/07/04 21:32:09 ottxor Exp $
+
+  04 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  nessus-core-2.2.9-r1.ebuild:
+  added prefix keywords
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> nessus-core-2.2.9-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
