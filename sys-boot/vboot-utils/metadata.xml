@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<bugs-to>http://crosbug.com</bugs-to>
+		<changelog>http://git.chromium.org/gitweb/?p=chromiumos/platform/vboot_reference.git;a=shortlog</changelog>
+		<doc>http://git.chromium.org/gitweb/?p=chromiumos/platform/vboot_reference.git;a=blob_plain;f=README</doc>
+	</upstream>
+	<maintainer>
+		<email>zmedico@gentoo.org</email>
+		<name>Zac Medico</name>
+	</maintainer>
+</pkgmetadata>
