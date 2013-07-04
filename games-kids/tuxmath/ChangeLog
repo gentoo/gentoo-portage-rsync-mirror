@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/tuxmath
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.16 2013/01/20 21:52:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.17 2013/07/04 06:01:49 mr_bones_ Exp $
+
+  04 Jul 2013; Michael Sterrett <mr_bones_@gentoo.org> tuxmath-1.7.2.ebuild,
+  tuxmath-2.0.1.ebuild:
+  add slot to libsdl dep
 
 *tuxmath-2.0.1 (20 Jan 2013)
 

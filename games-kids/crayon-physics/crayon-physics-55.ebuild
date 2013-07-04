@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/crayon-physics/crayon-physics-55.ebuild,v 1.4 2013/06/02 18:50:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/crayon-physics/crayon-physics-55.ebuild,v 1.5 2013/07/04 06:01:50 mr_bones_ Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="
 		x11-libs/libX11
 		!bundled-libs? (
 			media-libs/libmikmod
-			media-libs/libsdl[X,audio,video,opengl,joystick]
+			media-libs/libsdl:0[X,audio,video,opengl,joystick]
 			media-libs/libvorbis
 			media-libs/sdl-image[png,jpeg,tiff]
 			media-libs/sdl-mixer[vorbis,wav]

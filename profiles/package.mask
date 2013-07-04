@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14894 2013/07/03 23:49:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14895 2013/07/04 06:04:58 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -500,7 +500,6 @@ net-irc/xchatosd
 >=media-video/cheese-3.8
 >=media-video/totem-3.8
 >=net-im/empathy-3.8
->=net-im/telepathy-logger-0.8
 >=net-libs/glib-networking-2.36
 >=net-libs/gnome-online-accounts-3.8
 >=net-libs/libsoup-2.42
