@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/netcdf4-python
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netcdf4-python/ChangeLog,v 1.1 2013/07/04 15:57:45 jlec Exp $
+
+*netcdf4-python-1.0.4 (04 Jul 2013)
+
+  04 Jul 2013; Justin Lecher <jlec@gentoo.org> +netcdf4-python-1.0.4.ebuild,
+  +metadata.xml:
+  New addition written by me
+

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse-exfat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.15 2013/02/21 04:08:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.16 2013/07/04 15:32:05 ssuominen Exp $
+
+  04 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> fuse-exfat-1.0.1.ebuild:
+  amd64/x86 stable
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> fuse-exfat-1.0.1.ebuild:
   Add ~arm-linux keyword.

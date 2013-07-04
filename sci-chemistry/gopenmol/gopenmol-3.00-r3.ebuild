@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r2.ebuild,v 1.6 2013/07/04 15:51:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r3.ebuild,v 1.1 2013/07/04 15:51:59 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils multilib python
+inherit eutils multilib python-single-r1
 
 DESCRIPTION="Tool for the visualization and analysis of molecular structures"
 HOMEPAGE="http://www.csc.fi/gopenmol/"
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
 	dev-lang/tk
 	dev-tcltk/bwidget
 	media-libs/freeglut
@@ -32,23 +34,20 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror"
-
 S="${WORKDIR}/gOpenMol-${PV}/src"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_prepare() {
+	cd ..
 	epatch \
 		"${FILESDIR}"/${PV}-include-config-for-plugins.patch \
-		"${FILESDIR}"/${PV}-multilib.patch
+		"${FILESDIR}"/${PV}-multilib.patch \
+		"${FILESDIR}"/${PV}-tcl8.6.patch \
+		"${FILESDIR}"/${PV}-impl-dec.patch
 
 	sed \
 		-e "s:GENTOOLIBDIR:$(get_libdir):g" \
-		-i config.mk.ac plugins/config.mk.ac || die
-	sed "/GOM_TEMP/s:^.*$:GOM_TEMP=\"${EPREFIX}/tmp/:g" -i ../environment.txt || die
+		-i src/{config.mk.ac,plugins/config.mk.ac} || die
+	sed "/GOM_TEMP/s:^.*$:GOM_TEMP=\"${EPREFIX}/tmp/:g" -i environment.txt || die
 }
 
 src_compile() {
