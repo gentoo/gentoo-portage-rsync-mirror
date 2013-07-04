@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.97 2013/07/04 17:09:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.98 2013/07/04 18:52:39 williamh Exp $
+
+  04 Jul 2013; William Hubbs <williamh@gentoo.org> -kmod-13.ebuild:
+  remove old version
 
 *kmod-14 (04 Jul 2013)
 
