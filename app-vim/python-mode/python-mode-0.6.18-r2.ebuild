@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.18-r1.ebuild,v 1.1 2013/06/30 13:48:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.18-r2.ebuild,v 1.1 2013/07/04 07:53:00 xarthisius Exp $
 
 EAPI=5
 
@@ -28,7 +28,8 @@ RDEPEND="
 
 src_prepare() {
 	# debundling fun
-	rm -rf pylibs/pylama/{pep8.py,pyflakes} pylibs/{autopep8.py,rope,ropemode}
+	rm -rf pylibs/pylama/{pep8.py,pyflakes} pylibs/{autopep8.py}
+	#rm -rf pylibs/{rope,ropemode}  #475686
 	sed -e 's/from .pep8/from pep8/g' \
 		-e 's/from .pyflakes/from pyflakes/g' \
 		-i pylibs/pylama/utils.py || die

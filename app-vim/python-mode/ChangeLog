@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/python-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/ChangeLog,v 1.7 2013/06/30 13:48:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/ChangeLog,v 1.8 2013/07/04 07:53:00 xarthisius Exp $
+
+*python-mode-0.6.18-r2 (04 Jul 2013)
+
+  04 Jul 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  +python-mode-0.6.18-r2.ebuild, -python-mode-0.6.18-r1.ebuild:
+  Use bundled rope wrt #475686 by neumond <knifeslaughter@gmail.com>
 
 *python-mode-0.6.18-r1 (30 Jun 2013)
 

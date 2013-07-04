@@ -9,4 +9,4 @@ RDEPEND=dev-python/astng dev-python/autopep8 dev-python/pyflakes dev-python/pyli
 SLOT=0
 SRC_URI=https://github.com/klen/python-mode/archive/0.6.18.tar.gz -> python-mode-0.6.18.tar.gz
 _eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
-_md5_=293128b3a2f07960e54a2b39e0b6e208
+_md5_=bf091008012086ea15ec3f0f358bc4b2
