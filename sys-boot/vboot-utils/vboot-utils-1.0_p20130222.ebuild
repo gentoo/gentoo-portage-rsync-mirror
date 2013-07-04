@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/vboot-utils/vboot-utils-1.0_p20130222.ebuild,v 1.1 2013/07/04 06:59:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/vboot-utils/vboot-utils-1.0_p20130222.ebuild,v 1.2 2013/07/04 19:23:29 zmedico Exp $
 
 EAPI=5
 inherit eutils rpm toolchain-funcs
@@ -16,9 +16,10 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-libs/libyaml
-	dev-libs/openssl
-	sys-apps/util-linux"
+RDEPEND="app-arch/xz-utils:=
+	dev-libs/libyaml:=
+	dev-libs/openssl:0=
+	sys-apps/util-linux:="
 
 DEPEND="app-crypt/trousers
 	${RDEPEND}"
