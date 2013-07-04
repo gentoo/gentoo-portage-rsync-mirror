@@ -1,6 +1,9 @@
 # ChangeLog for games-action/openclonk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.9 2013/06/25 23:50:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.10 2013/07/04 12:23:12 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> openclonk-5.3.3.ebuild:
+  Stable for x86, wrt bug #474374
 
   25 Jun 2013; Julian Ospald <hasufell@gentoo.org> openclonk-5.3.3.ebuild:
   respect AR wrt #474786
@@ -34,4 +37,3 @@
   08 May 2012; Julian Ospald <hasufell@gentoo.org> +openclonk-5.2.2.ebuild,
   +files/openclonk-wrapper-script.sh, +metadata.xml:
   initial import wrt #348149
-

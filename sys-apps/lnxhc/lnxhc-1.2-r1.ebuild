@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lnxhc/lnxhc-1.2-r1.ebuild,v 1.2 2013/06/28 20:58:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lnxhc/lnxhc-1.2-r1.ebuild,v 1.3 2013/07/04 12:24:08 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="EPL-1.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8"

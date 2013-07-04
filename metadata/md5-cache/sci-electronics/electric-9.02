@@ -3,10 +3,10 @@ DEPEND=app-arch/unzip >=dev-java/java-config-2.1.9-r1
 DESCRIPTION=Complete Electronic Design Automation (EDA) system that can handle many forms of circuit design
 HOMEPAGE=http://www.gnu.org/software/electric/electric.html
 IUSE=elibc_FreeBSD
-KEYWORDS=amd64 ppc ~x86
+KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
 RDEPEND=>=virtual/jre-1.6 sci-electronics/electronics-menu >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=mirror://gnu/electric/electricBinary-9.02.jar
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=e14b0d0a160c43f6c51907583ab668c3
+_md5_=073f9b375ac3c882015562c9796a35f1

@@ -1,6 +1,9 @@
 # ChangeLog for sys-firmware/ipxe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.11 2013/06/30 02:29:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.12 2013/07/04 12:25:59 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ipxe-1.0.0_p20130225.ebuild:
+  Stable for x86, wrt bug #475110
 
   30 Jun 2013; Doug Goldstein <cardoe@gentoo.org> ipxe-1.0.0_p20130624.ebuild:
   Updates from Jeroen Roovers <jer@gentoo.org> and Michael Weber

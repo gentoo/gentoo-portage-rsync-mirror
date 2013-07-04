@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flacon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/ChangeLog,v 1.11 2013/05/29 13:15:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/ChangeLog,v 1.12 2013/07/04 12:17:52 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> flacon-0.7.2.ebuild:
+  Stable for x86, wrt bug #471668
 
   29 May 2013; Michael Weber <xmw@gentoo.org> flacon-0.8.0.ebuild, metadata.xml:
   Ebuild by Nikoli, bug 471554. Remove local description of USE linguas_si_LK.

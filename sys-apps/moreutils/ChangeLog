@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.56 2013/06/11 21:48:03 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.57 2013/07/04 12:24:16 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> moreutils-0.48.ebuild:
+  Stable for x86, wrt bug #472736
 
   11 Jun 2013; Chema Alonso <nimiux@gentoo.org> moreutils-0.48.ebuild:
   Stable for amd64 wrt bug #472736

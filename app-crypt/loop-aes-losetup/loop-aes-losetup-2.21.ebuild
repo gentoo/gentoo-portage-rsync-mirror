@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/loop-aes-losetup/loop-aes-losetup-2.21.ebuild,v 1.3 2013/06/26 11:53:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/loop-aes-losetup/loop-aes-losetup-2.21.ebuild,v 1.4 2013/07/04 12:16:52 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.xz
 	http://loop-aes.sourceforge.net/updates/util-linux-${LOOPAES_PV}.diff.bz2"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-linux"
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
