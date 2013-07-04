@@ -1,15 +1,6 @@
-diff -Nru ntop-4.0.1.orig/configure.in ntop-4.0.1/configure.in
---- ntop-4.0.1.orig/configure.in	2010-08-07 00:44:41.000000000 +0200
-+++ ntop-4.0.1/configure.in	2010-09-24 01:42:46.000000000 +0200
-@@ -57,6 +57,7 @@
- dnl>
- umask 002
- AM_CONFIG_HEADER(config.h)
-+AM_MAINTAINER_MODE
- 
- HAS_ERROR=
- HAS_WARNING=
-@@ -497,11 +498,6 @@
+--- ntop-5.0.1/configure.in
++++ ntop-5.0.1/configure.in
+@@ -469,11 +469,6 @@
      LOCALEDIR="/usr/lib/locale"
  fi
  
@@ -21,11 +12,10 @@ diff -Nru ntop-4.0.1.orig/configure.in ntop-4.0.1/configure.in
  PWD=`pwd`
  
  echo
-@@ -1809,39 +1805,17 @@
- 
+@@ -1739,18 +1734,6 @@
  if test ".${ac_cv_lib_GeoIP_GeoIP_record_by_ipnum}" = ".yes"; then
  LIBS="$LIBS -lGeoIP"
--
+ 
 -if test -f "GeoLiteCity.dat"; then
 -   echo "GeoLiteCity.dat already present"
 -else
@@ -38,27 +28,15 @@ diff -Nru ntop-4.0.1.orig/configure.in ntop-4.0.1/configure.in
 -   gunzip GeoLiteCity.dat.gz
 -fi
 -
--dnl> --------
--
--if test -f "GeoIPASNum.dat"; then
--   echo "GeoIPASNum.dat already present"
--else
--   if test -f "3rd_party/GeoIPASNum.dat.gz"; then
--     cp 3rd_party/GeoIPASNum.dat.gz .
--   else
--     wget http://www.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
--   fi
--
--   gunzip GeoIPASNum.dat.gz
--fi
- else
- AC_MSG_RESULT(Please install GeoIP (http://www.maxmind.com/))
+ dnl> --------
+ 
+ if test -f "GeoIPASNum.dat"; then
+@@ -1769,8 +1752,11 @@
  exit 1
  fi
  
 -cp "3rd_party/oui.txt.gz" .
 -cp "3rd_party/specialMAC.txt.gz" .
-+gunzip 3rd_party/GeoIPASNum.dat.gz &&
 +gunzip 3rd_party/GeoLiteCity.dat.gz &&
 +mv "3rd_party/etter.finger.os.gz" . &&
 +mv "3rd_party/oui.txt.gz" . &&
@@ -67,27 +45,26 @@ diff -Nru ntop-4.0.1.orig/configure.in ntop-4.0.1/configure.in
  
  if test -d ./configureextra; then
  
-@@ -2002,7 +1976,6 @@
+@@ -1931,7 +1917,6 @@
  AC_SUBST(SO_VERSION_PATCH)
  AC_SUBST(RRD_LIB)
  AC_SUBST(RRD_INC)
 -AC_SUBST(GEO_DIR)
  AC_SUBST(GETOPT_H)
  AC_SUBST(GETOPT_C)
- 
-diff -Nru ntop-4.0.1.orig/globals-core.c ntop-4.0.1/globals-core.c
---- ntop-4.0.1.orig/globals-core.c	2010-04-25 14:52:28.000000000 +0200
-+++ ntop-4.0.1/globals-core.c	2010-09-24 01:42:46.000000000 +0200
-@@ -372,7 +372,7 @@
+ AC_SUBST(NDPI_LIB)
+--- ntop-5.0.1/globals-core.c
++++ ntop-5.0.1/globals-core.c
+@@ -369,7 +369,7 @@
    _mtuSize[DLT_ATM_RFC1483] = 9180                             /* LLC/SNAP encapsulated atm */;
    _headerSize[DLT_ATM_RFC1483] = 0;
  
 -  /* _mtuSize[DLT_RAW] = ?                                        raw IP */
-+  _mtuSize[DLT_RAW] = 1500                                     /*   raw IP */;
++  _mtuSize[DLT_RAW] = 1500;                                     /*   raw IP */
    _headerSize[DLT_RAW] = 0;
  
    /* Others defined in bpf.h at tcpdump.org as of the resync - it would be NICE
-@@ -491,19 +491,18 @@
+@@ -470,19 +470,18 @@
    struct stat statbuf;
  
    /* Initialize GeoIP databases */
@@ -98,7 +75,7 @@ diff -Nru ntop-4.0.1.orig/globals-core.c ntop-4.0.1/globals-core.c
      safe_snprintf(__FILE__, __LINE__, path, sizeof(path),
  		  "%s%c%s",
 -		  myGlobals.configFileDirs[i], 
-+		  myGlobals.dbPath, 
++		  myGlobals.dbPath,
  		  CONST_PATH_SEP, GEO_IP_FILE);
      revertSlashIfWIN32(path, 0);
  
@@ -109,10 +86,11 @@ diff -Nru ntop-4.0.1.orig/globals-core.c ntop-4.0.1/globals-core.c
        }
      }
    }
-@@ -513,19 +512,18 @@
+@@ -491,20 +490,18 @@
+     traceEvent(CONST_TRACE_ERROR, "GeoIP: unable to load file %s", GEO_IP_FILE);
    
    /* *************************** */
- 
+-
 -  for(i=0; myGlobals.configFileDirs[i] != NULL; i++) {
 +  {
      char path[256];
@@ -120,7 +98,7 @@ diff -Nru ntop-4.0.1.orig/globals-core.c ntop-4.0.1/globals-core.c
      safe_snprintf(__FILE__, __LINE__, path, sizeof(path),
  		  "%s%c%s",
 -		  myGlobals.configFileDirs[i], 
-+		  myGlobals.dbPath, 
++		  myGlobals.dbPath,
  		  CONST_PATH_SEP, GEO_IP_ASN_FILE);
      revertSlashIfWIN32(path, 0);
  
@@ -131,18 +109,17 @@ diff -Nru ntop-4.0.1.orig/globals-core.c ntop-4.0.1/globals-core.c
        }
      }
    }
-diff -Nru ntop-4.0.1.orig/Makefile.am ntop-4.0.1/Makefile.am
---- ntop-4.0.1.orig/Makefile.am	2010-04-25 14:52:28.000000000 +0200
-+++ ntop-4.0.1/Makefile.am	2010-09-24 01:43:07.000000000 +0200
-@@ -43,7 +43,6 @@
+--- ntop-5.0.1/Makefile.am
++++ ntop-5.0.1/Makefile.am
+@@ -36,7 +36,6 @@
  
  #AM_CFLAGS =
- #AM_LDFLAGS= 
+ #AM_LDFLAGS=
 -ACLOCAL_AMFLAGS=-I m4
  
  DISTCLEANFILES = trivialcompilemessage *.db #* *~ *.log
  CLEANFILES     = $(DISTCLEANFILES) stamp-h1
-@@ -74,9 +73,7 @@
+@@ -67,9 +66,7 @@
  NTOPDATA = ntop-cert.pem \
             $(ETTER_PASSIVE) \
             oui.txt.gz \
@@ -153,7 +130,25 @@ diff -Nru ntop-4.0.1.orig/Makefile.am ntop-4.0.1/Makefile.am
  
  NTOPHTML = html html/*.js html/*.html  html/*.gif html/*.jpg html/*.ico html/*.png \
             html/*.css html/*.dtd \
-@@ -370,30 +367,7 @@
+@@ -133,7 +130,7 @@
+ 
+ libntop_la_DEPENDENCIES =  config.h
+ libntop_la_LIBADD       = $(BASE_LIBS)
+-libntop_la_LDFLAGS      = $(AM_LDFLAGS) -release $(VERSION) -export-dynamic @DYN_FLAGS@
++libntop_la_LDFLAGS      = $(AM_LDFLAGS) -release $(VERSION) -export-dynamic -shared @DYN_FLAGS@
+ 
+ # Archive for http representation, or the 'viewer'
+ libntopreport_la_SOURCES = emitter.c       globals-report.c  graph.c \
+@@ -145,7 +142,7 @@
+ 
+ libntopreport_la_DEPENDENCIES = libntop.la
+ libntopreport_la_LIBADD       = libntop.la $(BASE_LIBS)
+-libntopreport_la_LDFLAGS      = $(AM_LDFLAGS) -release $(VERSION) -export-dynamic @DYN_FLAGS@
++libntopreport_la_LDFLAGS      = $(AM_LDFLAGS) -release $(VERSION) -export-dynamic -shared @DYN_FLAGS@
+ 
+ man_MANS = ntop.8
+ 
+@@ -367,30 +364,7 @@
  
  # download the vendor information table
  dnvt:
@@ -185,7 +180,7 @@ diff -Nru ntop-4.0.1.orig/Makefile.am ntop-4.0.1/Makefile.am
  
  # download the Novell SAP Protocol information table
  #dnsapt:
-@@ -401,45 +375,7 @@
+@@ -398,45 +372,7 @@
  
  # download the passive ethernet fingerprint database
  dnetter:
@@ -232,10 +227,9 @@ diff -Nru ntop-4.0.1.orig/Makefile.am ntop-4.0.1/Makefile.am
  
  # ntop census
  census-fail:
-diff -Nru ntop-4.0.1.orig/report.c ntop-4.0.1/report.c
---- ntop-4.0.1.orig/report.c	2010-08-07 00:22:05.000000000 +0200
-+++ ntop-4.0.1/report.c	2010-09-24 01:42:46.000000000 +0200
-@@ -2353,7 +2353,7 @@
+--- ntop-5.0.1/report.c
++++ ntop-5.0.1/report.c
+@@ -2299,7 +2299,7 @@
    if(fetchPrefsValue("dot.path", buf, sizeof(buf)) != -1) {
      snprintf(dotPath, sizeof(dotPath), "%s", buf);
    } else {
