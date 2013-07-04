@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.95 2013/06/30 18:05:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.97 2013/07/04 17:09:55 ssuominen Exp $
+
+*kmod-14 (04 Jul 2013)
+
+  04 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +kmod-14.ebuild,
+  kmod-9999.ebuild:
+  Revert upstream commit that discontinued support for --enable-static in order
+  to get libkmod.a back for USE="static-libs" in sys-fs/udev (libudev.a) wrt
+  #472608. Version bump.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kmod-13-r1.ebuild:
   Stable for s390, wrt bug #470580
