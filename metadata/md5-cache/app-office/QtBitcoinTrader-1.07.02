@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst prepare unpack
+DEPEND=dev-qt/qtgui:4 dev-qt/qtmultimedia:4
+DESCRIPTION=Mt.Gox and BTC-e Bitcoin Trading Client
+EAPI=5
+HOMEPAGE=https://github.com/JulyIGHOR/QtBitcoinTrader
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtgui:4 dev-qt/qtmultimedia:4
+SLOT=0
+SRC_URI=https://github.com/JulyIGHOR/QtBitcoinTrader/archive/v1.07.02.tar.gz -> QtBitcoinTrader-1.07.02.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_md5_=bebca95652b63f4ababf98833b13be49

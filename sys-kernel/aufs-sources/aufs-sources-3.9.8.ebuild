@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.9.8.ebuild,v 1.1 2013/06/28 06:53:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.9.8.ebuild,v 1.2 2013/07/04 07:22:12 jlec Exp $
 
 EAPI=5
 
@@ -44,9 +44,9 @@ src_prepare() {
 	if ! use proc; then
 		sed '/config AUFS_PROC_MAP/,/^$/d' -i "${WORKDIR}"/fs/aufs/Kconfig || die
 	fi
-	cp -i "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
-	cp -i "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
-	cp -ri "${WORKDIR}"/{Documentation,fs} . || die
+	cp -f "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
+	cp -f "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
+	cp -rf "${WORKDIR}"/{Documentation,fs} . || die
 }
 
 pkg_postinst() {
