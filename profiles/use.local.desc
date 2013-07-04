@@ -4808,15 +4808,13 @@ net-misc/cfengine:qdbm - Use dev-db/qdbm as database backend
 net-misc/cfengine:tests - Install test files
 net-misc/cfengine:tokyocabinet - Use dev-db/tokyocabinet as database backend
 net-misc/cgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
+net-misc/cgminer:avalon - Enable support for Avalon ASICs
+net-misc/cgminer:bflsc - Enable support for BFL ASICs
 net-misc/cgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE FPGAs
-net-misc/cgminer:cpumining - Enable support for mining with CPUs
 net-misc/cgminer:icarus - Enable support for mining with Icarus FPGAs
-net-misc/cgminer:modminer - Enable support for ModMiner FPGAs
+net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/cgminer:opencl - Enable support for mining with OpenCL-capable devices (GPUs)
-net-misc/cgminer:padlock - Enable support for mining with VIA Padlock CPUs
 net-misc/cgminer:scrypt - Enable support for scrypt mining algorithm
-net-misc/cgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
-net-misc/cgminer:sse4 - Enable support for CPU SSE4 mining algorithm
 net-misc/cgminer:ztex - Enable support for mining with Ztex FPGAs
 net-misc/chrony:rtc - Include support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.

@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/cgminer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.32 2013/04/19 11:03:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.33 2013/07/03 23:45:01 blueness Exp $
+
+*cgminer-3.3.0 (03 Jul 2013)
+
+  03 Jul 2013; Anthony G. Basile <blueness@gentoo.org> +cgminer-3.3.0.ebuild,
+  -cgminer-2.3.4.ebuild, -cgminer-2.3.5.ebuild, -cgminer-2.3.6.ebuild,
+  -cgminer-2.4.0.ebuild, -cgminer-2.4.1.ebuild, -cgminer-2.4.2-r1.ebuild,
+  -cgminer-2.4.3-r1.ebuild, -cgminer-2.4.4.ebuild, -cgminer-2.5.0.ebuild,
+  -cgminer-2.6.3.ebuild, -cgminer-2.6.4.ebuild, -cgminer-2.7.1.ebuild,
+  -cgminer-2.7.4.ebuild, metadata.xml:
+  Version bump and remove ancient versions, bug #442254
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
