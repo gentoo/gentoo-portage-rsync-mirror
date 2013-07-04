@@ -4,10 +4,10 @@ DESCRIPTION=QuickCheck2 support for the test-framework package.
 EAPI=5
 HOMEPAGE=http://batterseapower.github.com/test-framework/
 IUSE=doc hscolour profile
-KEYWORDS=~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd
+KEYWORDS=~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=BSD
 RDEPEND=>=dev-haskell/extensible-exceptions-0.1.1:=[profile?] <dev-haskell/extensible-exceptions-0.2.0:=[profile?] >=dev-haskell/quickcheck-2.4:2=[profile?] <dev-haskell/quickcheck-2.7:2=[profile?] >=dev-haskell/random-1:=[profile?] >=dev-haskell/test-framework-0.7.1:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/0.3.0.1
 SRC_URI=mirror://hackage/packages/archive/test-framework-quickcheck2/0.3.0.1/test-framework-quickcheck2-0.3.0.1.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	0fe5ac58a8b877fae07bb258b762852e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=2103155eb9de5f9c7124df417a0fb700
+_md5_=2469f815cdc0837c683ff176f0527e66

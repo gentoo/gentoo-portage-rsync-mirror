@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.390 2013/07/01 08:37:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.391 2013/07/04 13:01:49 keri Exp $
+
+*swi-prolog-6.3.18 (04 Jul 2013)
+
+  04 Jul 2013; <keri@gentoo.org> +swi-prolog-6.3.18.ebuild:
+  Bump -6.3 development version
 
   01 Jul 2013; Fabian Groffen <grobian@gentoo.org> swi-prolog-6.3.17.ebuild:
   Marked ~ppc-macos, bug #475236

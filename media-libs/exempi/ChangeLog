@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.30 2013/07/02 08:59:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.31 2013/07/04 13:05:32 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> exempi-2.2.0.ebuild:
+  Stable for ppc, wrt bug #475440
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> exempi-2.2.0.ebuild:
   Stable for x86, wrt bug #475440

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.8 2013/07/02 08:59:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.9 2013/07/04 13:06:30 ago Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="http://grass.osgeo.org/${MY_PM}/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="6"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="X cairo cxx ffmpeg fftw gmath jpeg motif mysql nls odbc opengl png postgres python readline sqlite tiff truetype wxwidgets"
 
 TCL_DEPS="
