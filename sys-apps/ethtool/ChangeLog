@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.97 2013/06/02 08:42:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.98 2013/07/04 00:18:13 radhermit Exp $
+
+*ethtool-3.10 (04 Jul 2013)
+
+  04 Jul 2013; Tim Harder <radhermit@gentoo.org> +ethtool-3.10.ebuild:
+  Version bump.
 
   02 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ethtool-3.8.ebuild:
   Stable for sh, wrt bug #464476
