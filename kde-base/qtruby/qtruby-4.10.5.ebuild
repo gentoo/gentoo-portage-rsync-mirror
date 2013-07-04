@@ -1,17 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-4.10.5.ebuild,v 1.1 2013/07/02 16:47:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-4.10.5.ebuild,v 1.2 2013/07/04 18:00:40 johu Exp $
 
 EAPI=5
 
 OPENGL_REQUIRED="always"
 DECLARATIVE_REQUIRED="optional"
 KDE_REQUIRED="never"
-USE_RUBY="ruby18"
-# No ruby19 for three reasons:
-# 1) it does not build (yet) - will likely be solved soon
-# 2) cmake bails when configuring twice or more - solved with CMAKE_IN_SOURCE_BUILD=1
-# 3) the ebuild can only be installed for one ruby variant, otherwise the compiled
+USE_RUBY="ruby19"
+# Only one ruby version is supported:
+# 1) cmake bails when configuring twice or more - solved with CMAKE_IN_SOURCE_BUILD=1
+# 2) the ebuild can only be installed for one ruby variant, otherwise the compiled
 #    files with identical path+name will overwrite each other - difficult :(
 
 inherit kde4-base ruby-ng
