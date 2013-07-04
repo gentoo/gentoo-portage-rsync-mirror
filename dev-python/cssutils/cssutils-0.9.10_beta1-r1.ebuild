@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.10_beta1-r1.ebuild,v 1.1 2013/07/04 12:50:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.10_beta1-r1.ebuild,v 1.2 2013/07/04 14:48:26 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_2,3_3} pypy2_0 )
@@ -50,11 +50,11 @@ python_install() {
 	distutils-r1_python_install
 	# Don't install py3 stuff on py2. Breaks py25
 	if [[ "${EPYTHON}" != python3.* ]]; then
-		rm -f "${ED}$(python_get_sitedir)/cssutils/_codec3.py" || die
+		rm -f "${D}$(python_get_sitedir)/cssutils/_codec3.py" || die
 	fi
 
 	# Don't install tests
-	rm -fr "${ED}$(python_get_sitedir)/tests" || die
+	rm -r "${D}$(python_get_sitedir)/tests" || die
 }
 
 python_install_all() {

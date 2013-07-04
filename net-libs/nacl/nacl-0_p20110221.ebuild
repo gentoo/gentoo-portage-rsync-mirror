@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nacl/nacl-0_p20110221.ebuild,v 1.1 2013/05/31 07:59:22 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nacl/nacl-0_p20110221.ebuild,v 1.2 2013/07/04 14:35:49 xmw Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://hyperelliptic.org/nacl/${P/0_p}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 DEPEND=""

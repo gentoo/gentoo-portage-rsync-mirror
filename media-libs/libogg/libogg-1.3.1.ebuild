@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.1.ebuild,v 1.4 2013/06/28 12:54:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.1.ebuild,v 1.5 2013/07/04 14:41:30 grobian Exp $
 
 EAPI=5
 inherit autotools-multilib
@@ -26,7 +26,7 @@ MULTILIB_WRAPPED_HEADERS=(
 
 src_configure() {
 	local myeconfargs=(
-		--htmldir=/usr/share/doc/${PF}/html
+		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 	autotools-multilib_src_configure
 }

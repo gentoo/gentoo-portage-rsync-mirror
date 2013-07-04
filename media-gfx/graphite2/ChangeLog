@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.58 2013/07/03 21:20:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.59 2013/07/04 14:37:29 grobian Exp $
+
+  04 Jul 2013; Fabian Groffen <grobian@gentoo.org> graphite2-1.2.1.ebuild:
+  Marked ~ppc-macos, tested by DIZ
 
   03 Jul 2013; Fabian Groffen <grobian@gentoo.org> graphite2-1.2.1.ebuild:
   Fix compilation on PowerPC/Darwin, bug #450512
