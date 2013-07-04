@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.92 2011/09/12 06:18:16 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.93 2013/07/04 21:29:33 ottxor Exp $
+
+  04 Jul 2013; Christoph Junghans <ottxor@gentoo.org> libnasl-2.2.9-r1.ebuild:
+  added ~amd64-linux (tested by me)
 
   12 Sep 2011; Tim Harder <radhermit@gentoo.org> -libnasl-2.2.9.ebuild:
   Remove old.

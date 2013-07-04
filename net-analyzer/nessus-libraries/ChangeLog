@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-libraries
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.95 2011/09/12 06:52:20 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.96 2013/07/04 21:30:42 ottxor Exp $
+
+  04 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  nessus-libraries-2.2.9-r1.ebuild:
+  added ~amd64-linux (tested by me)
 
   12 Sep 2011; Tim Harder <radhermit@gentoo.org>
   -nessus-libraries-2.2.9.ebuild, -files/nessus-libraries-2.2.9-asneeded.patch,

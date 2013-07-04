@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.38 2013/06/09 16:01:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.40 2013/07/04 21:16:22 ottxor Exp $
+
+  04 Jul 2013; Christoph Junghans <ottxor@gentoo.org> -eselect-xvmc-0.1.ebuild,
+  -eselect-xvmc-0.2.ebuild, -files/eselect-xvmc-0.1.eselect,
+  -files/eselect-xvmc-0.2.eselect:
+  remove old
+
+  04 Jul 2013; Christoph Junghans <ottxor@gentoo.org> eselect-xvmc-0.4.ebuild:
+  added prefix keywords (bug #434518)
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> eselect-xvmc-0.4.ebuild:
   Stable for sh, wrt bug #470290

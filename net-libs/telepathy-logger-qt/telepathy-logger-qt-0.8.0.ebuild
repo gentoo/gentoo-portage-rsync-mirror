@@ -1,17 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.5.3.ebuild,v 1.2 2013/04/12 17:48:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.8.0.ebuild,v 1.1 2013/07/04 21:24:03 johu Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
-
+KDE_REQUIRED="never"
 inherit kde4-base python-any-r1
 
 DESCRIPTION="Qt4 bindings for the Telepathy logger"
 HOMEPAGE="https://projects.kde.org/projects/extragear/network/telepathy/telepathy-logger-qt"
 if [[ ${PV} != *9999* ]]; then
-	SRC_URI="mirror://kde/unstable/kde-telepathy/${PV}/src/${P}.tar.bz2"
+	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 else
 	KEYWORDS=""
@@ -23,14 +23,20 @@ IUSE="debug"
 
 RDEPEND="
 	media-libs/qt-gstreamer
-	>=net-im/telepathy-logger-0.2.12-r1
+	>=net-im/telepathy-logger-0.8.0
+	net-libs/telepathy-glib
 	>=net-libs/telepathy-qt-0.9.1
 "
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	sys-devel/bison
 	sys-devel/flex
-	${PYTHON_DEPS}
 "
+
+pkg_setup() {
+	python-any-r1_pkg_setup
+	kde4-base_pkg_setup
+}
 
 src_configure() {
 	local mycmakeargs=(
