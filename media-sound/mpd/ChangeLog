@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.316 2013/07/02 14:24:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.317 2013/07/04 13:44:20 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> mpd-0.17.4-r2.ebuild:
+  Stable for ppc64, wrt bug #469472
 
   02 Jul 2013; Jeroen Roovers <jer@gentoo.org> files/mpd.init:
   Whitespace.

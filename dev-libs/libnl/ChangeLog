@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.168 2013/06/30 18:04:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.169 2013/07/04 13:32:14 jer Exp $
+
+  04 Jul 2013; Jeroen Roovers <jer@gentoo.org> -libnl-1.1-r3.ebuild,
+  -libnl-3.2.14.ebuild, -files/libnl-1.1-glibc-2.8-ULONG_MAX.patch,
+  -files/libnl-1.1-inline.patch, -files/libnl-1.1-minor-leaks.patch:
+  Old.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libnl-3.2.21.ebuild:
   Stable for s390, wrt bug #471046
