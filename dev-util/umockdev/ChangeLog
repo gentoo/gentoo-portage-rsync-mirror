@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/umockdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.3 2013/03/16 00:26:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.4 2013/07/04 00:34:13 radhermit Exp $
+
+*umockdev-0.2.11 (04 Jul 2013)
+
+  04 Jul 2013; Tim Harder <radhermit@gentoo.org> +umockdev-0.2.11.ebuild:
+  Version bump.
 
   16 Mar 2013; Tim Harder <radhermit@gentoo.org> umockdev-0.2.1.ebuild:
   Require newer glib version for g_hash_table_add and g_hash_table_contains
