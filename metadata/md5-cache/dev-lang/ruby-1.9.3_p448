@@ -4,11 +4,11 @@ DESCRIPTION=An object-oriented scripting language
 EAPI=4
 HOMEPAGE=http://www.ruby-lang.org/
 IUSE=berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl tk xemacs ncurses +readline +yaml
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd
+KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=|| ( Ruby-BSD BSD-2 )
 PDEPEND=>=dev-ruby/rubygems-1.8.10-r1[ruby_targets_ruby19] rdoc? ( >=dev-ruby/rdoc-3.9.4[ruby_targets_ruby19] ) xemacs? ( app-xemacs/ruby-modes )
 RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( sys-libs/gdbm ) ssl? ( dev-libs/openssl ) socks5? ( >=net-proxy/dante-1.1.13 ) tk? ( dev-lang/tk[threads] ) ncurses? ( sys-libs/ncurses ) readline? ( sys-libs/readline ) yaml? ( dev-libs/libyaml ) virtual/libffi sys-libs/zlib >=app-admin/eselect-ruby-20100402 !<dev-ruby/rdoc-3.9.4 !<dev-ruby/rubygems-1.8.10-r1
 SLOT=1.9
 SRC_URI=mirror://ruby/1.9/ruby-1.9.3-p448.tar.bz2 http://dev.gentoo.org/~flameeyes/ruby-team/ruby-patches-1.9.3_p448.tar.bz2
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=07ea10162ff6995981a7918b7ee83f70
+_md5_=2c3a09f9367386adfabf798563e47b87
