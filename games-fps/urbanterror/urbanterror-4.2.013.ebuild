@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.013.ebuild,v 1.1 2013/07/04 13:54:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.013.ebuild,v 1.2 2013/07/04 21:01:10 hasufell Exp $
 
 EAPI=5
 
@@ -40,8 +40,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/ioq3-for-UrbanTerror-4-release-${PREV_PV}
 S_DATA=${WORKDIR}/UrbanTerror42
 
-CHECKREQS_DISK_BUILD="2700M"
-CHECKREQS_DISK_USR="1300M"
+CHECKREQS_DISK_BUILD="3300M"
+CHECKREQS_DISK_USR="1550M"
 
 pkg_pretend() {
 	check-reqs_pkg_pretend
