@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netcdf4-python/netcdf4-python-1.0.4.ebuild,v 1.1 2013/07/04 15:57:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netcdf4-python/netcdf4-python-1.0.4.ebuild,v 1.2 2013/07/04 16:06:06 jlec Exp $
 
 EAPI=5
 
@@ -18,9 +18,17 @@ SRC_URI="https://netcdf4-python.googlecode.com/files/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="test"
 
-RDEPEND="sci-libs/netcdf"
-DEPEND="${RDEPEND}"
+RDEPEND="
+	sci-libs/hdf5
+	sci-libs/netcdf[hdf]"
+DEPEND="${RDEPEND}
+	test? ( virtual/python-unittest2 )"
 
 S="${WORKDIR}"/${MY_P}
+
+python_test() {
+	cd test || die
+	${PYTHON} run_all.py || die
+}
