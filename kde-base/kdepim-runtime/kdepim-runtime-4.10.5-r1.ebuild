@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.10.5.ebuild,v 1.1 2013/07/02 16:47:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.10.5-r1.ebuild,v 1.1 2013/07/04 08:20:28 mschiff Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ RDEPEND="${DEPEND}
 add_blocker kdepim-common-libs 4.7.50
 
 src_configure() {
+	epatch "${FILESDIR}/${PN}-4.10.5-fix-autoconfig.patch"
 	local mycmakeargs=(
 		$(cmake-utils_use_find_package google LibKGAPI)
 		$(cmake-utils_use_find_package kolab Libkolab)

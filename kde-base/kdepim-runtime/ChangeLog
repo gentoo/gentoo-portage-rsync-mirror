@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.145 2013/07/02 16:47:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.146 2013/07/04 08:20:28 mschiff Exp $
+
+*kdepim-runtime-4.10.5-r1 (04 Jul 2013)
+
+  04 Jul 2013; Marc Schiffbauer <mschiff@gentoo.org>
+  +files/kdepim-runtime-4.10.5-fix-autoconfig.patch,
+  +kdepim-runtime-4.10.5-r1.ebuild, -kdepim-runtime-4.10.5.ebuild:
+  Fix accountwizard autoconfig feature. Backport patch from 4.11 (KDE bug
+  #321927)
 
 *kdepim-runtime-4.10.5 (02 Jul 2013)
 
