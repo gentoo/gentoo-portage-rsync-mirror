@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.2-r1.ebuild,v 1.1 2013/05/21 08:55:07 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.4-r2.ebuild,v 1.1 2013/07/04 10:17:33 eras Exp $
 
 EAPI=5
-inherit eutils versionator ssl-cert systemd user multilib
+inherit autotools eutils multilib ssl-cert systemd user versionator
 
 MY_P="${P/_/.}"
 major_minor="$(get_version_component_range 1-2)"
-sieve_version="0.4.0"
+sieve_version="0.4.1"
 SRC_URI="http://dovecot.org/releases/${major_minor}/${MY_P}.tar.gz
 	sieve? (
 	http://www.rename-it.nl/dovecot/${major_minor}/${PN}-${major_minor}-pigeonhole-${sieve_version}.tar.gz
@@ -62,6 +62,12 @@ pkg_setup() {
 	if use suid; then
 		enewgroup mail
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/cyrus-sasl.patch"
+	sed -i -e '1iACLOCAL_AMFLAGS = -I .' Makefile.am || die
+	eautoreconf
 }
 
 src_configure() {

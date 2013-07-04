@@ -1,19 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.2.ebuild,v 1.1 2013/05/20 05:48:36 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.17.ebuild,v 1.1 2013/07/04 10:11:48 eras Exp $
 
 EAPI=5
 inherit eutils versionator ssl-cert systemd user multilib
 
 MY_P="${P/_/.}"
 major_minor="$(get_version_component_range 1-2)"
-sieve_version="0.4.0"
-SRC_URI="http://dovecot.org/releases/${major_minor}/${MY_P}.tar.gz
+sieve_version="0.3.4"
+SRC_URI="http://www.dovecot.org/releases/${major_minor}/${MY_P}.tar.gz
 	sieve? (
-	http://www.rename-it.nl/dovecot/${major_minor}/${PN}-${major_minor}-pigeonhole-${sieve_version}.tar.gz
+	http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-pigeonhole-${sieve_version}.tar.gz
 	)
 	managesieve? (
-	http://www.rename-it.nl/dovecot/${major_minor}/${PN}-${major_minor}-pigeonhole-${sieve_version}.tar.gz
+	http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-pigeonhole-${sieve_version}.tar.gz
 	) "
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
 HOMEPAGE="http://www.dovecot.org/"
@@ -24,7 +24,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 
 IUSE_DOVECOT_AUTH="kerberos ldap mysql pam postgres sqlite vpopmail"
 IUSE_DOVECOT_STORAGE="cydir imapc +maildir mbox mdbox pop3c sdbox"
-IUSE_DOVECOT_OTHER="bzip2 caps doc ipv6 lucene managesieve selinux sieve +ssl static-libs suid tcpd zlib"
+IUSE_DOVECOT_OTHER="bzip2 caps doc ipv6 lucene managesieve selinux sieve solr +ssl
+static-libs suid tcpd zlib"
 
 IUSE="${IUSE_DOVECOT_AUTH} ${IUSE_DOVECOT_STORAGE} ${IUSE_DOVECOT_OTHER}"
 
@@ -36,6 +37,7 @@ DEPEND="caps? ( sys-libs/libcap )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base !dev-db/postgresql-base[ldap,threads] )
 	selinux? ( sec-policy/selinux-dovecot )
+	solr? ( net-misc/curl dev-libs/expat )
 	sqlite? ( dev-db/sqlite )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
@@ -43,7 +45,7 @@ DEPEND="caps? ( sys-libs/libcap )
 	virtual/libiconv"
 
 RDEPEND="${DEPEND}
-	net-mail/mailbase"
+	>=net-mail/mailbase-0.00-r8"
 
 S=${WORKDIR}/${MY_P}
 
@@ -93,6 +95,7 @@ src_configure() {
 		$( use_with pam ) \
 		$( use_with postgres pgsql ) \
 		$( use_with sqlite ) \
+		$( use_with solr ) \
 		$( use_with ssl ) \
 		$( use_with tcpd libwrap ) \
 		$( use_with vpopmail ) \
@@ -249,7 +252,7 @@ src_install () {
 		docinto example-config/conf.d
 		dodoc doc/example-config/conf.d/*.conf
 		insinto /etc/dovecot/conf.d
-		doins doc/example-config/conf.d/90-sieve{,-extprograms}.conf
+		doins doc/example-config/conf.d/90-sieve.conf
 		use managesieve && doins doc/example-config/conf.d/20-managesieve.conf
 		docinto sieve/rfc
 		dodoc doc/rfc/*.txt
