@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/dust
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/ChangeLog,v 1.9 2012/08/05 10:57:25 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/ChangeLog,v 1.11 2013/07/04 09:13:32 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> dust-0.1.7.ebuild:
+  Stable for x86, wrt bug #475580
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> dust-0.1.7.ebuild:
+  Stable for amd64, wrt bug #475580
 
   05 Aug 2012; Hans de Graaff <graaff@gentoo.org> -dust-0.1.6-r2.ebuild:
   Cleanup.
@@ -37,4 +43,3 @@
   25 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +dust-0.1.6.ebuild:
   Initial import of dev-ruby/dust (test dependency for sparklines).
-

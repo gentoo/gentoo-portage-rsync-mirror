@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/linux-gpib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.16 2013/07/02 18:45:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.18 2013/07/04 09:13:58 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> linux-gpib-3.2.17-r1.ebuild:
+  Stable for x86, wrt bug #475542
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> linux-gpib-3.2.17-r1.ebuild:
+  Stable for amd64, wrt bug #475542
 
   02 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -linux-gpib-3.2.17.ebuild:

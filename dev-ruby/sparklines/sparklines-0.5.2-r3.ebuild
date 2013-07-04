@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/sparklines-0.5.2-r3.ebuild,v 1.1 2012/07/29 09:59:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/sparklines-0.5.2-r3.ebuild,v 1.3 2013/07/04 09:13:38 ago Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
@@ -16,7 +16,7 @@ HOMEPAGE="http://sparklines.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-macos"
+KEYWORDS="amd64 x86 ~x86-macos"
 IUSE=""
 
 RDEPEND="dev-ruby/rmagick"
