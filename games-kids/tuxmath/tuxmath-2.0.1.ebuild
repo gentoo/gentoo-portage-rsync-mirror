@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-2.0.1.ebuild,v 1.2 2013/07/04 06:01:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-2.0.1.ebuild,v 1.3 2013/07/04 16:50:42 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -36,8 +36,10 @@ S=${WORKDIR}/${MY_PN}-${PV}
 src_prepare() {
 	sed -i \
 		-e '/\bdoc\b/d' \
-		Makefile.in \
-		|| die "sed failed"
+		Makefile.in || die
+	sed -i \
+		-e '/strncat/s/)/ - 1)/' \
+		src/server.c || die
 }
 
 src_configure() {

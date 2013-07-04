@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.70 2013/07/04 07:52:27 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.71 2013/07/04 16:41:00 ultrabug Exp $
+
+  04 Jul 2013; Ultrabug <ultrabug@gentoo.org> -mongodb-2.4.4.ebuild:
+  drop CVE affected ebuilds wrt #475750
 
 *mongodb-2.4.5 (04 Jul 2013)
 

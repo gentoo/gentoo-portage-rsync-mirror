@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.6 2013/03/02 22:54:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.7 2013/07/04 16:49:30 kensington Exp $
 
 EAPI=4
 
@@ -78,7 +78,7 @@ RDEPEND="${CDEPEND}
 DOCS=( AUTHORS ChangeLog )
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	# fix automagic dep on libXScrnSaver
 	if ! use xscreensaver; then

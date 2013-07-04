@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r4.ebuild,v 1.7 2012/12/01 19:09:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r5.ebuild,v 1.1 2013/07/04 16:36:45 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 MY_PN="${PN}"-core
 MY_P="${MY_PN}"-"${PV}"
 
-inherit cmake-utils multilib
+inherit base cmake-utils multilib
 
 DESCRIPTION="High-performance, full-featured text search engine based off of lucene in C++"
 HOMEPAGE="http://clucene.sourceforge.net/"
