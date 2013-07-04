@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qtfm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.15 2013/07/04 12:18:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.16 2013/07/04 15:08:14 kensington Exp $
+
+  04 Jul 2013; Michael Palimaka <kensington@gentoo.org> -qtfm-5.4.ebuild:
+  Remove old.
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> qtfm-5.5.ebuild:
   Stable for x86, wrt bug #471678

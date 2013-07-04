@@ -17,6 +17,11 @@ dir_writeable()
 # when / was still read-only
 store_persistent_rules()
 {
+	# create /etc/udev/rules.d if it does not exist and /etc/udev is writable
+	[ -d /etc/udev/rules.d ] || \
+		dir_writeable /etc/udev && \
+		mkdir -p /etc/udev/rules.d
+
 	# only continue if rules-directory is writable
 	dir_writeable /etc/udev/rules.d || return 0
 
