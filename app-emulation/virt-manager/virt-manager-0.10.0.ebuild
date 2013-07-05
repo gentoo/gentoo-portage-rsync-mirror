@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.6 2013/07/02 14:50:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.7 2013/07/05 19:01:27 cardoe Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ IUSE="gnome-keyring policykit sasl"
 
 RDEPEND="!app-emulation/virtinst
 	x11-libs/gtk+:3[introspection]
-	>=app-emulation/libvirt-0.7.0[python]
+	>=app-emulation/libvirt-0.7.0[python,${PYTHON_USEDEP}]
 	>=app-emulation/libvirt-glib-0.0.9
 	${PYTHON_DEPS}
 	dev-libs/libxml2[python,${PYTHON_USEDEP}]
@@ -38,10 +38,10 @@ RDEPEND="!app-emulation/virtinst
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/urlgrabber[${PYTHON_USEDEP}]
 	>=net-libs/gtk-vnc-0.3.8[gtk3,introspection,python,${PYTHON_USEDEP}]
-	net-misc/spice-gtk[gtk3,introspection,python,sasl?]
+	net-misc/spice-gtk[gtk3,introspection,python,sasl?,${PYTHON_USEDEP}]
 	x11-libs/vte:2.90[introspection]
 	gnome-keyring? ( dev-python/gnome-keyring-python )
-	policykit? ( sys-auth/polkit )"
+	policykit? ( sys-auth/polkit[introspection] )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/intltool"
