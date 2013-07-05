@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.7 2013/06/15 08:17:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.8 2013/07/05 21:12:29 scarabeus Exp $
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml,
+  mpv-9999.ebuild:
+  Add few new useflag and enable quvi by default. Thanks to Nikoli for coop.
 
   15 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
   Raise dep on libxbcommon. Thanks to Nikoli for patch.

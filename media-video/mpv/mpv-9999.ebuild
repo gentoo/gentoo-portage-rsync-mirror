@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.7 2013/06/15 08:17:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.8 2013/07/05 21:12:29 scarabeus Exp $
 
 EAPI=5
 
@@ -19,8 +19,8 @@ SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b cddb +cdio debug +dts dvb +dvd +enca encode fbcon ftp
-+iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca lirc mng +mp3
-+network -openal +opengl oss portaudio +postproc pulseaudio pvr quvi radio samba +shm
++iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca libguess lirc mng +mp3
++network -openal +opengl oss portaudio +postproc pulseaudio pvr +quvi radio samba +shm
 v4l vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
@@ -70,6 +70,7 @@ RDEPEND+="
 		virtual/ttf-fonts
 	)
 	libcaca? ( media-libs/libcaca )
+	libguess? ( >=app-i18n/libguess-1.0 )
 	lirc? ( app-misc/lirc )
 	mng? ( media-libs/libmng )
 	mp3? ( media-sound/mpg123 )
@@ -82,7 +83,7 @@ RDEPEND+="
 		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )
-	quvi? ( >=media-libs/libquvi-0.4.1 )
+	quvi? ( >=media-libs/libquvi-0.4.1:= )
 	samba? ( net-fs/samba )
 	wayland? (
 		>=dev-libs/wayland-1.0.0
@@ -160,12 +161,12 @@ src_configure() {
 	use encode || myconf+=" --disable-encoding"
 	use network || myconf+=" --disable-networking"
 	myconf+=" $(use_enable joystick)"
-	uses="bluray enca ftp libass vcd"
+	uses="bluray enca ftp libass libguess vcd"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use ipv6 || myconf+=" --disable-inet6"
-	use quvi || myconf+=" --disable-libquvi"
+	use quvi || myconf+=" --disable-libquvi4 --disable-libquvi9"
 	use samba || myconf+=" --disable-smb"
 	if ! use lirc; then
 		myconf+="
