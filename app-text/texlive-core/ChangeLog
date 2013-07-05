@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.205 2013/07/03 16:02:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.206 2013/07/05 18:50:31 klausman Exp $
+
+  05 Jul 2013; Tobias Klausmann <klausman@gentoo.org> texlive-core-2013.ebuild:
+  Keyworded on alpha, bug #475124
 
   03 Jul 2013; Alexis Ballier <aballier@gentoo.org> texlive-core-2013.ebuild:
   Force grep -H behavior since we rely on this. Might fix bug #475626.
