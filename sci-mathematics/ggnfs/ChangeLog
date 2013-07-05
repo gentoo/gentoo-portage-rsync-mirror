@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/ggnfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ChangeLog,v 1.8 2013/07/01 06:23:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ChangeLog,v 1.9 2013/07/05 04:18:28 patrick Exp $
+
+  05 Jul 2013; Patrick Lauer <patrick@gentoo.org> ggnfs-0.77.1-r2.ebuild:
+  Add pdf documentation hidden as .tex in the source
 
   01 Jul 2013; Patrick Lauer <patrick@gentoo.org> ggnfs-0.77.1-r2.ebuild:
   Remove futile pkg_setup phase

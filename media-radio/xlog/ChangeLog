@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.34 2013/06/30 19:33:51 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.35 2013/07/05 04:06:44 tomjbe Exp $
+
+  05 Jul 2013; Thomas Beierlein <tomjbe@gentoo.org> -xlog-2.0.5.ebuild,
+  -xlog-2.0.6.ebuild, -xlog-2.0.7.ebuild, -files/xlog-2.0.7-cabrillo.patch:
+  drop old
 
   30 Jun 2013; Thomas Beierlein <tomjbe@gentoo.org> xlog-2.0.8.ebuild:
   Respect AR (bug #475322). Thanks ago.

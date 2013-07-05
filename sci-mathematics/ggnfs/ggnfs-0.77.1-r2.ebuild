@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r2.ebuild,v 1.3 2013/07/01 06:23:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r2.ebuild,v 1.4 2013/07/05 04:18:28 patrick Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ HOMEPAGE="https://github.com/radii/ggnfs"
 SRC_URI="
 	http://dev.gentooexperimental.org/~dreeevil/${P}.zip
 	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-par.txt
-	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-nm-params.txt"
+	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-nm-params.txt
+	http://gentooexperimental.org/~patrick/ggnfs-doc.pdf"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -62,4 +63,5 @@ src_install() {
 	docompress -x "/usr/share/doc/${PN}/def-par.txt"
 	docompress -x "/usr/share/doc/${PN}/def-nm-params.txt"
 	# TODO: docs? File collisions?
+	cp ${DISTDIR}/ggnfs-doc.pdf "${D}/usr/share/doc/${PN}" || die
 }
