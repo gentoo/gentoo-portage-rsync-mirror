@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-trax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.36 2013/02/05 05:54:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.37 2013/07/05 14:32:34 tomwij Exp $
+
+*ant-trax-1.9.1 (05 Jul 2013)
+
+  05 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +ant-trax-1.9.1.ebuild:
+  Version bump to 1.9.1.
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> ant-trax-1.8.4.ebuild:
   adding ~arm
