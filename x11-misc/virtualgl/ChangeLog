@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/virtualgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.14 2013/05/26 18:46:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.15 2013/07/05 17:17:29 pacho Exp $
+
+*virtualgl-2.3.2-r3 (05 Jul 2013)
+
+  05 Jul 2013; Pacho Ramos <pacho@gentoo.org> +files/vgl.service,
+  +virtualgl-2.3.2-r3.ebuild, -virtualgl-2.3.2-r1.ebuild,
+  -virtualgl-2.3.2-r2.ebuild:
+  Install unit file and drop old.
 
 *virtualgl-2.3.2-r2 (26 May 2013)
 

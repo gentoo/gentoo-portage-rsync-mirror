@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.2-r1.ebuild,v 1.1 2013/05/09 22:07:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.2-r3.ebuild,v 1.1 2013/07/05 17:17:29 pacho Exp $
 
 EAPI=5
-inherit cmake-multilib multilib
+inherit cmake-multilib multilib systemd
 
 DESCRIPTION="Run OpenGL applications remotely with full 3D hardware acceleration"
 HOMEPAGE="http://www.virtualgl.org/"
@@ -72,8 +72,9 @@ src_install() {
 	dodir /var/lib/VirtualGL
 	fowners root:video /var/lib/VirtualGL
 	fperms 0750 /var/lib/VirtualGL
-	newinitd "${FILESDIR}/vgl.initd-r1" vgl
+	newinitd "${FILESDIR}/vgl.initd-r2" vgl
 	newconfd "${FILESDIR}/vgl.confd-r1" vgl
+	systemd_dounit "${FILESDIR}/vgl.service"
 
 	# Rename glxinfo to vglxinfo to avoid conflict with x11-apps/mesa-progs
 	mv "${D}"/usr/bin/{,v}glxinfo || die
