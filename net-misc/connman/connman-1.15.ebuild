@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.15.ebuild,v 1.1 2013/06/04 10:15:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.15.ebuild,v 1.2 2013/07/05 17:31:57 pacho Exp $
 
 EAPI="5"
-inherit base
+inherit base systemd
 
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="http://connman.net"
@@ -53,10 +53,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dobin client/connmanctl || die "client installation failed"
 
-	keepdir /var/lib/${PN} || die
-	newinitd "${FILESDIR}"/${PN}.initd2 ${PN} || die
-	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
+	keepdir /var/lib/${PN}
+	newinitd "${FILESDIR}"/${PN}.initd2 ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	systemd_dounit "${FILESDIR}"/connman.service
 }

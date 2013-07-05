@@ -1,6 +1,13 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.18 2013/06/04 12:32:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.19 2013/07/05 17:46:27 cardoe Exp $
+
+*seabios-1.7.2.2 (05 Jul 2013)
+
+  05 Jul 2013; Doug Goldstein <cardoe@gentoo.org> +seabios-1.7.2.2.ebuild:
+  Version bump. Switch to python-single-r1 from python eclass. Use QEMU's pre-
+  built binary to supply the 'upstream' pre-built binary since upstream has not
+  provided one for this version.
 
   04 Jun 2013; Agostino Sarubbo <ago@gentoo.org> seabios-1.7.2.1.ebuild:
   Stable for x86, wrt bug #466092
