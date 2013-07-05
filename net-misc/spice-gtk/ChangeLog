@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.59 2013/06/30 17:56:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.61 2013/07/05 06:16:48 dev-zero Exp $
+
+  05 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> spice-gtk-0.20.ebuild:
+  ... and drop autotools eclass.
+
+*spice-gtk-0.20 (05 Jul 2013)
+
+  05 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> +spice-gtk-0.20.ebuild:
+  Version bump (bug #471964), also solves bug #419933 since we don't have to run
+  eautoreconf anymore.
 
 *spice-gtk-0.18-r1 (30 Jun 2013)
 
