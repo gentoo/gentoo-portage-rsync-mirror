@@ -27,7 +27,7 @@ ffDiaporama is an application for creating video sequences consisting of
 
 These sequences are assembled into a slide show by means of transitions to produce complete videos
 The following options are available:
- 
+
 
     - Reframing of images and photos
     - Cutting of video clips
@@ -42,5 +42,8 @@ The following options are available:
     - Image geometry (aspect ratio) : 4:3, 16:9 or 2.35:1 (cinema)
     - Possible formats for rendering : avi, mpg, mp4, mkv
 	</longdescription>
+	<use>
+		<flag name='texturemate'>Install extra backgrounds</flag>
+	</use>
 </pkgmetadata>
 
