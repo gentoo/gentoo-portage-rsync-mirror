@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.125 2013/02/05 05:29:05 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.126 2013/07/05 11:02:05 tomwij Exp $
+
+*ant-core-1.9.1 (05 Jul 2013)
+
+  05 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +ant-core-1.9.1.ebuild:
+  Version bump to 1.9.1.
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> ant-core-1.8.4-r1.ebuild,
   ant-core-1.8.4.ebuild:

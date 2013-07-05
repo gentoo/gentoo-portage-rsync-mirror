@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.8.ebuild,v 1.5 2013/07/05 05:58:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.8.ebuild,v 1.7 2013/07/05 11:04:58 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/imageworks/OpenColorIO/tarball/v${PV} \
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc opengl pdf python sse2 test"
 
 RDEPEND="opengl? (

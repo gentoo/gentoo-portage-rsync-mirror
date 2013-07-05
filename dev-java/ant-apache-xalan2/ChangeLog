@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-apache-xalan2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-xalan2/ChangeLog,v 1.18 2012/12/05 17:29:24 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-xalan2/ChangeLog,v 1.19 2013/07/05 11:19:57 tomwij Exp $
+
+*ant-apache-xalan2-1.9.1 (05 Jul 2013)
+
+  05 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +ant-apache-xalan2-1.9.1.ebuild:
+  Version bump to 1.9.1.
 
   05 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   ant-apache-xalan2-1.8.4.ebuild:

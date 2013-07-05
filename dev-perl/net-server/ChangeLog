@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.74 2013/03/02 04:08:46 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.76 2013/07/05 11:04:50 ago Exp $
+
+  05 Jul 2013; Agostino Sarubbo <ago@gentoo.org> net-server-2.7.0.ebuild:
+  Stable for x86, wrt bug #475794
+
+  05 Jul 2013; Agostino Sarubbo <ago@gentoo.org> net-server-2.7.0.ebuild:
+  Stable for amd64, wrt bug #475794
 
 *net-server-2.7.0 (02 Mar 2013)
 

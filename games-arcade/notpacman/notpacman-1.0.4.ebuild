@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/notpacman/notpacman-1.0.4.ebuild,v 1.1 2013/02/18 01:01:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/notpacman/notpacman-1.0.4.ebuild,v 1.3 2013/07/05 11:04:41 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://stabyourself.net/dl.php?file=notpacman-1004/notpacman-linux.zip 
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 LVSLOT="0.7"
 RDEPEND=">=games-engines/love-0.7.2:${LVSLOT}

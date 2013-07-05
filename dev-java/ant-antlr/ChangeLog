@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.44 2013/02/05 06:59:06 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.45 2013/07/05 11:05:19 tomwij Exp $
+
+*ant-antlr-1.9.1 (05 Jul 2013)
+
+  05 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +ant-antlr-1.9.1.ebuild:
+  Version bump to 1.9.1.
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> ant-antlr-1.8.4.ebuild:
   adding ~arm
