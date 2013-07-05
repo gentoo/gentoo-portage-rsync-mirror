@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-2.0.1.ebuild,v 1.3 2013/07/04 16:50:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-2.0.1.ebuild,v 1.5 2013/07/05 18:22:07 ago Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tuxmath/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls svg"
 
 RDEPEND="dev-games/t4k-common[svg?]

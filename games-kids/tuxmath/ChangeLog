@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/tuxmath
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.18 2013/07/04 16:50:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.20 2013/07/05 18:22:07 ago Exp $
+
+  05 Jul 2013; Agostino Sarubbo <ago@gentoo.org> tuxmath-2.0.1.ebuild:
+  Stable for x86, wrt bug #475692
+
+  05 Jul 2013; Agostino Sarubbo <ago@gentoo.org> tuxmath-2.0.1.ebuild:
+  Stable for amd64, wrt bug #475692
 
   04 Jul 2013; Michael Sterrett <mr_bones_@gentoo.org> tuxmath-2.0.1.ebuild:
   quiet gcc warning (bug #475724)
