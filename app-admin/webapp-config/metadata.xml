@@ -11,4 +11,7 @@
 		<email>twitch153@hotmail.com</email>
 		<name>Devan Franchini</name>
 	</maintainer>
+	<use>
+		<flag name="portage">Propagete python_targets dependencies to sys-apps/portage</flag>
+	</use>
 </pkgmetadata>
