@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-13.06.ebuild,v 1.1 2013/06/16 09:42:59 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-13.06.ebuild,v 1.2 2013/07/05 03:59:29 tomjbe Exp $
 
 EAPI=4
 inherit eutils multilib qt4-r2 user
@@ -38,6 +38,8 @@ src_prepare() {
 	sed -i -e "s:/etc/udev:/lib/udev:" svxlink/scripts/Makefile.default || die
 	# fix underlinking
 	sed -i -e "s:lgsm:lgsm -lspeex:" qtel/Makefile.default || die
+	# drop deprecated desktop category (bug #475730)
+	sed -i -e "s:Categories=Application;:Categories=:g" qtel/qtel.desktop || die
 }
 
 src_install() {
