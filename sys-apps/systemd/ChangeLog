@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.141 2013/07/04 13:43:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.142 2013/07/05 13:52:38 mgorny Exp $
+
+*systemd-205 (05 Jul 2013)
+
+  05 Jul 2013; Michał Górny <mgorny@gentoo.org> +systemd-205.ebuild,
+  -systemd-197-r1.ebuild, -systemd-200-r1.ebuild, -systemd-202.ebuild,
+  -systemd-203-r1.ebuild, systemd-9999.ebuild:
+  Version bump. Drop USE=static-libs since it is no longer supported. Drop old.
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> systemd-201.ebuild:
   Stable for ppc64, wrt bug #465870

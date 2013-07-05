@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/jackrabbit-webdav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jackrabbit-webdav/ChangeLog,v 1.1 2013/07/05 13:26:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jackrabbit-webdav/ChangeLog,v 1.2 2013/07/05 13:58:47 tomwij Exp $
 
 *jackrabbit-webdav-2.6.2 (05 Jul 2013)
 
@@ -9,5 +9,4 @@
   +metadata.xml:
   New ebuild for dev-java/jackrabbit-webdav, fully conforming implementation of
   the JRC API (specified in JSR 170 and 283); dependency of version bump for
-  =dev-java/commons-vfs-2.0 needed as a dependency for version bump of =dev-java
-  /ant-ivy-2.3.0.
+  =dev-java/commons-vfs-2.0.

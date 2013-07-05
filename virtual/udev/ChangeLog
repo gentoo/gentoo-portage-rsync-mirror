@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.39 2013/04/24 19:38:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.40 2013/07/05 13:56:29 mgorny Exp $
+
+  05 Jul 2013; Michał Górny <mgorny@gentoo.org> udev-197-r3.ebuild:
+  New systemd does no longer support USE=static-libs.
 
   24 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-171.ebuild:
   old
