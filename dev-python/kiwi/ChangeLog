@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.24 2013/04/16 09:24:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.25 2013/07/05 04:44:09 idella4 Exp $
+
+*kiwi-1.9.38-r1 (05 Jul 2013)
+
+  05 Jul 2013; Ian Delaney <idella4@gentoo.org> +kiwi-1.9.38-r1.ebuild:
+  revbump, migrate -> distutils-r1 according to guides from Bug #475636, closes
+  said Bug
 
 *kiwi-1.9.38 (16 Apr 2013)
 
