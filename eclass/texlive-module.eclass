@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.65 2013/06/28 12:43:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.66 2013/07/05 22:43:41 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -147,13 +147,13 @@ texlive-module_add_format() {
 	local name engine mode patterns options
 	eval $@
 	einfo "Appending to format.${PN}.cnf for $@"
-	[ -d texmf/fmtutil ] || mkdir -p texmf/fmtutil
-	[ -f texmf/fmtutil/format.${PN}.cnf ] || { echo "# Generated for ${PN} by texlive-module.eclass" > texmf/fmtutil/format.${PN}.cnf; }
+	[ -d texmf-dist/fmtutil ] || mkdir -p texmf-dist/fmtutil
+	[ -f texmf-dist/fmtutil/format.${PN}.cnf ] || { echo "# Generated for ${PN}	by texlive-module.eclass" > texmf-dist/fmtutil/format.${PN}.cnf; }
 	if [ "${mode}" = "disabled" ]; then
-		printf "#! " >> texmf/fmtutil/format.${PN}.cnf
+		printf "#! " >> texmf-dist/fmtutil/format.${PN}.cnf
 	fi
 	[ -z "${patterns}" ] && patterns="-"
-	printf "${name}\t${engine}\t${patterns}\t${options}\n" >> texmf/fmtutil/format.${PN}.cnf
+	printf "${name}\t${engine}\t${patterns}\t${options}\n" >> texmf-dist/fmtutil/format.${PN}.cnf
 }
 
 # @FUNCTION: texlive-module_make_language_def_lines
@@ -284,7 +284,7 @@ texlive-module_src_compile() {
 	done
 
 	# Build format files
-	for i in texmf/fmtutil/format*.cnf; do
+	for i in texmf-dist/fmtutil/format*.cnf; do
 		if [ -f "${i}" ]; then
 			einfo "Building format ${i}"
 			[ -d texmf-var ] || mkdir texmf-var
@@ -306,7 +306,7 @@ texlive-module_src_compile() {
 # Installs texmf and config files to the system.
 
 texlive-module_src_install() {
-	for i in texmf/fmtutil/format*.cnf; do
+	for i in texmf-dist/fmtutil/format*.cnf; do
 		[ -f "${i}" ] && etexlinks "${i}"
 	done
 
@@ -356,6 +356,7 @@ texlive-module_src_install() {
 	fi
 
 	texlive-common_handle_config_files
+	TEXMF_PATH=${TEXMF_DIST_PATH} texlive-common_handle_config_files
 }
 
 # @FUNCTION: texlive-module_pkg_postinst

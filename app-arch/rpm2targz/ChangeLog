@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.98 2013/02/18 01:26:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.99 2013/07/05 22:41:06 scarabeus Exp $
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> -rpm2targz-9.0.0.3g.ebuild,
+  -rpm2targz-9.0.0.4g.ebuild:
+  There is no reason to keep versions from 2009 and older.
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> rpm2targz-9.0.0.5g.ebuild:
   Add ~arm-linux keyword.
