@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.2.1.ebuild,v 1.2 2012/10/16 20:31:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.3.0.ebuild,v 1.1 2013/07/05 16:33:34 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit autotools-utils
 
 DESCRIPTION="Scientific library and interface for array oriented data access"
@@ -12,7 +13,7 @@ SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.gz"
 
 LICENSE="UCAR-Unidata"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+dap doc examples hdf +hdf5 mpi static-libs szip test tools"
 
 RDEPEND="
@@ -26,7 +27,7 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="test? ( tools )"
 
 src_configure() {
-	myeconfargs=(
+	local myeconfargs=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		--disable-examples
 		$(use_enable dap)
@@ -36,6 +37,10 @@ src_configure() {
 		$(use_enable tools utilities)
 	)
 	autotools-utils_src_configure
+}
+
+src_test() {
+	emake -j1 check
 }
 
 src_install() {

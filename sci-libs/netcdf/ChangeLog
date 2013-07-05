@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/netcdf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.108 2012/12/17 16:32:26 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.109 2013/07/05 16:33:34 bicatali Exp $
+
+*netcdf-4.3.0 (05 Jul 2013)
+
+  05 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +netcdf-4.3.0.ebuild,
+  -files/netcdf-3.6.3-as-needed.patch, -files/netcdf-3.6.3-parallel.patch,
+  -netcdf-4.2.1.ebuild, -netcdf-4.2.ebuild, metadata.xml:
+  Version bump
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> netcdf-4.2.1.1.ebuild:
   Add ~ppc64, wrt bug #435904
