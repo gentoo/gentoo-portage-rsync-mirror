@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/bnd-junit
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bnd-junit/ChangeLog,v 1.1 2013/07/05 13:20:20 tomwij Exp $
+
+*bnd-junit-2.1.0 (05 Jul 2013)
+
+  05 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +bnd-junit-2.1.0.ebuild,
+  +metadata.xml:
+  New ebuild for dev-java/bnd-junit, testing dependency for dev-java/libg and
+  dev-java/bndlib; not currently used due to failing tests (circular dependency
+  problem, broken tests) but added for completeness.

@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.19 2013/04/05 18:15:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.21 2013/07/05 13:30:03 scarabeus Exp $
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused metadata usedescs.
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libpostproc-0.8.0.20120229.ebuild:
+  Keep only one version around.
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   libpostproc-0.8.0.20121125.ebuild:
