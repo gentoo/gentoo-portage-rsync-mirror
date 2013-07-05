@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.20.ebuild,v 1.2 2013/07/05 06:16:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.20.ebuild,v 1.3 2013/07/05 06:55:56 dev-zero Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -105,6 +105,7 @@ src_configure() {
 		$(use_enable policykit polkit) \
 		$(use_enable vala) \
 		$(use_enable dbus) \
+		$(use_enable doc gtk-doc) \
 		--disable-werror \
 		--enable-pie"
 
@@ -148,6 +149,8 @@ src_test() {
 }
 
 src_install() {
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+
 	cd ${GTK2_BUILDDIR}
 	einfo "Running make check in ${GTK2_BUILDDIR}"
 	default
@@ -162,7 +165,6 @@ src_install() {
 	use static-libs || prune_libtool_files
 
 	use python && rm -rf "${ED}"/usr/lib*/python*/site-packages/*.la
-	use doc || rm -rf "${ED}/usr/share/gtk-doc"
 
 	make_desktop_entry spicy Spicy "utilities-terminal" "Network;RemoteAccess;"
 }
