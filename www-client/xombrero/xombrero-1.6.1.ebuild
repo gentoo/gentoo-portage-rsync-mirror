@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xombrero/xombrero-9999.ebuild,v 1.2 2013/07/05 22:20:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xombrero/xombrero-1.6.1.ebuild,v 1.1 2013/07/05 22:20:33 ago Exp $
 
 EAPI="5"
 
@@ -54,6 +54,7 @@ src_prepare() {
 	sed -i \
 		-e 's/-O2//' \
 		-e 's/-ggdb3//' \
+		-e 's,install: all,install: all\n\tinstall -m 755 -d $(DESTDIR)$(PREFIX)/share/applications,g' \
 		Makefile || die 'sed Makefile failed.'
 	sed -i \
 		-e 's#https://www\.cyphertite\.com#http://www.gentoo.org/#' \

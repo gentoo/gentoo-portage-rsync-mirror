@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.100 2013/06/16 00:04:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.101 2013/07/05 22:02:49 scarabeus Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -58,7 +58,7 @@ CAMERAS="ptp2"
 
 # Ole Markus With <olemarkus@gentoo.org> (09 Oct 2010)
 # Default PHP targets (should always be latest stable version)
-PHP_TARGETS="php5-3"
+PHP_TARGETS="php5-4"
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 Sep 2010)
 # Small default list of enabled plugins for collectd

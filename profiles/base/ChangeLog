@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.558 2013/07/03 21:21:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.559 2013/07/05 22:02:49 scarabeus Exp $
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> make.defaults:
+  Bump PHP_TARGETS to php5-4, as it should be always latest stable.
 
   03 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   Mask libcxxrt[libunwind]
