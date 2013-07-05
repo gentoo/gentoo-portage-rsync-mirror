@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/openscad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/ChangeLog,v 1.5 2013/03/02 21:38:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/ChangeLog,v 1.6 2013/07/05 05:19:10 mattm Exp $
+
+*openscad-2013.06 (05 Jul 2013)
+
+  05 Jul 2013; Matthew Marlowe <mattm@gentoo.org> +openscad-2013.06.ebuild:
+  Initial test bump for openscad-2013.06
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> openscad-2011.12.ebuild,
   openscad-2013.01.ebuild:

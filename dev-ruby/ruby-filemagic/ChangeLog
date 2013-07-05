@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-filemagic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.13 2012/08/14 18:50:53 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.14 2013/07/05 05:28:33 graaff Exp $
+
+  05 Jul 2013; Hans de Graaff <graaff@gentoo.org> ruby-filemagic-0.4.2.ebuild:
+  Add ruby19.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.
