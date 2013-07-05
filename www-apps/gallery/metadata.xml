@@ -2,14 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>web-apps</herd>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
-	</maintainer>
-	<maintainer>
-		<email>daniel.heule@gmail.com</email>
-		<name>Daniel Heule</name>
 	</maintainer>
 	<use>
 		<flag name='netpbm'>Add <pkg>media-libs/netpbm</pkg> support</flag>

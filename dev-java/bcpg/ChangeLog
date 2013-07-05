@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/bcpg
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpg/ChangeLog,v 1.1 2013/07/05 10:39:36 tomwij Exp $
+
+*bcpg-1.49 (05 Jul 2013)
+
+  05 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +bcpg-1.49.ebuild, +metadata.xml:
+  Added new ebuild for dev-java/bcpg, a dependency of =dev-java/ant-ivy-2.3.0.
