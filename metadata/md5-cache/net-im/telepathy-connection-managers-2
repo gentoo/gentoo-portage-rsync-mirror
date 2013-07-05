@@ -4,6 +4,6 @@ HOMEPAGE=http://telepathy.freedesktop.org/
 IUSE=msn irc yahoo icq jabber sip zeroconf
 KEYWORDS=alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-linux
 LICENSE=metapackage
-RDEPEND=msn? ( =net-voip/telepathy-gabble-0.16.4 ) jabber? ( >=net-voip/telepathy-gabble-0.16.4 ) sip? ( >=net-voip/telepathy-rakia-0.7.4 ) zeroconf? ( >=net-voip/telepathy-salut-0.8.1 ) icq? ( >=net-voip/telepathy-haze-0.6.0 ) yahoo? ( >=net-voip/telepathy-haze-0.6.0 ) irc? ( >=net-irc/telepathy-idle-0.1.14 )
+RDEPEND=msn? ( >=net-voip/telepathy-gabble-0.16.4 ) jabber? ( >=net-voip/telepathy-gabble-0.16.4 ) sip? ( >=net-voip/telepathy-rakia-0.7.4 ) zeroconf? ( >=net-voip/telepathy-salut-0.8.1 ) icq? ( >=net-voip/telepathy-haze-0.6.0 ) yahoo? ( >=net-voip/telepathy-haze-0.6.0 ) irc? ( >=net-irc/telepathy-idle-0.1.14 )
 SLOT=0
-_md5_=6f94f0ce91e8332de8011a7f6d78b91c
+_md5_=2b51550995c52d45ae9b71b9cd3c4052
