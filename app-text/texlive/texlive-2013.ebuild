@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2013.ebuild,v 1.1 2013/06/28 17:08:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2013.ebuild,v 1.2 2013/07/05 23:35:43 aballier Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ RDEPEND="${DEPEND}
 	context? ( >=${TEXLIVE_CAT}/texlive-context-${PV} )
 	games? ( >=${TEXLIVE_CAT}/texlive-games-${PV} )
 	humanities? ( >=${TEXLIVE_CAT}/texlive-humanities-${PV} )
-	tex4ht? ( >=dev-tex/tex4ht-20080829 )
+	tex4ht? ( >=dev-tex/tex4ht-20090611_p1038-r3 )
 	xml? (
 		>=dev-tex/xmltex-1.9-r2
 		app-text/passivetex
