@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libg/libg-2.1.0.ebuild,v 1.1 2013/07/05 12:53:41 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libg/libg-2.1.0-r1.ebuild,v 1.1 2013/07/06 08:47:57 tomwij Exp $
 
 EAPI="5"
+
+JAVA_PKG_IUSE="test"
 
 inherit java-pkg-2 java-ant-2
 
