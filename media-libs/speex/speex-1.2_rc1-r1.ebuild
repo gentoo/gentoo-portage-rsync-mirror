@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1-r1.ebuild,v 1.4 2013/04/26 17:47:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1-r1.ebuild,v 1.5 2013/07/06 17:51:03 ottxor Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.xiph.org/releases/speex/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="ogg sse static-libs"
 
 RDEPEND="ogg? ( media-libs/libogg:= )"
@@ -44,7 +44,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} install
+	emake DESTDIR="${D}" docdir="${EPREFIX}/usr/share/doc/${PF}" install
 	dodoc AUTHORS ChangeLog NEWS README* TODO
 
 	prune_libtool_files
