@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.381 2013/07/04 12:11:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.382 2013/07/06 16:53:59 blueness Exp $
+
+  06 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  tor-0.2.4.14_alpha.ebuild, tor-0.2.4.15_rc.ebuild:
+  Depend on dev-libs/libevent[ssl] when USE=bufferevents, bug #475756
 
 *tor-0.2.4.15_rc (04 Jul 2013)
 

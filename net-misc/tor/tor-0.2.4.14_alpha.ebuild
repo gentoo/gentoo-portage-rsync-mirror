@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.14_alpha.ebuild,v 1.1 2013/06/19 10:27:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.14_alpha.ebuild,v 1.2 2013/07/06 16:53:59 blueness Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy t
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
 	dev-libs/libevent
+	bufferevents? ( dev-libs/libevent[ssl] )
 	nat-pmp? ( net-libs/libnatpmp )
 	upnp? ( net-libs/miniupnpc )
 	selinux? ( sec-policy/selinux-tor )"

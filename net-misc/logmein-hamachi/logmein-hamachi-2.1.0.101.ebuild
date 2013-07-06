@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.86-r1.ebuild,v 1.1 2013/01/09 10:47:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.101.ebuild,v 1.1 2013/07/06 16:38:53 xmw Exp $
 
 EAPI=5
 

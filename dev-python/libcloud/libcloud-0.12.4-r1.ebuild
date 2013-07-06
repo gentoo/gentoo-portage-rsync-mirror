@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/libcloud-0.12.4-r1.ebuild,v 1.1 2013/07/06 15:31:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/libcloud-0.12.4-r1.ebuild,v 1.2 2013/07/06 16:34:39 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2} pypy2_0 )
+# py3 dropped due to failing tests once lockfile installed
+PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
 PYTHON_REQ_USE="ssl"
 
 inherit distutils-r1
@@ -22,8 +23,6 @@ RDEPEND=""
 DEPEND="test? ( dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/lockfile[${PYTHON_USEDEP}] )"
 
-DISTUTILS_IN_SOURCE_BUILD=1
-
 S="${WORKDIR}/apache-${P}"
 
 python_prepare_all() {
@@ -34,11 +33,13 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
-python_test() {
-	pushd "${BUILD_DIR}"/../ > /dev/null
+src_test() {
 	cp libcloud/test/secrets.py-dist libcloud/test/secrets.py || die
+	distutils-r1_src_test
+}
+
+python_test() {
 	esetup.py test
-	popd > /dev/null
 }
 
 python_install_all() {
