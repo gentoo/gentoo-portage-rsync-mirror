@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.64 2013/06/30 13:28:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.65 2013/07/06 17:08:27 ago Exp $
+
+  06 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libass-0.10.1.ebuild:
+  Stable for alpha, wrt bug #470762
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libass-0.10.1.ebuild:
   Stable for arm, wrt bug #470762

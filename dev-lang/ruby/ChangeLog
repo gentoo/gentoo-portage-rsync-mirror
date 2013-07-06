@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.604 2013/07/04 14:13:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.605 2013/07/06 17:06:50 ago Exp $
+
+  06 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ruby-1.8.7_p374.ebuild,
+  ruby-1.9.3_p448.ebuild:
+  Stable for alpha, wrt bug #475074
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ruby-1.8.7_p374.ebuild,
   ruby-1.9.3_p448.ebuild:

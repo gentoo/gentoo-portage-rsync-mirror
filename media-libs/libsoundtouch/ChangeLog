@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.69 2013/02/26 14:47:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.70 2013/07/06 17:01:56 ottxor Exp $
+
+  06 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  libsoundtouch-1.7.1.ebuild:
+  added prefix keywords
 
   26 Feb 2013; Jeroen Roovers <jer@gentoo.org> libsoundtouch-1.7.1.ebuild:
   Stable for HPPA (bug #457380).
