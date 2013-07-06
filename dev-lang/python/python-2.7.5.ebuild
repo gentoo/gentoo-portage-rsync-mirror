@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5.ebuild,v 1.8 2013/07/04 13:29:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5.ebuild,v 1.9 2013/07/06 18:44:09 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -320,10 +320,10 @@ src_install() {
 	if use build; then
 		rm -fr "${ED}usr/bin/idle${SLOT}" "${libdir}/"{bsddb,dbhash.py,idlelib,lib-tk,sqlite3,test}
 	else
-		use elibc_uclibc && rm -fr "${libdir}/"{bsddb/test,test}
 		use berkdb || rm -r "${libdir}/"{bsddb,dbhash.py,test/test_bsddb*} || die
 		use sqlite || rm -r "${libdir}/"{sqlite3,test/test_sqlite*} || die
 		use tk || rm -r "${ED}usr/bin/idle${SLOT}" "${libdir}/"{idlelib,lib-tk} || die
+		use elibc_uclibc && rm -fr "${libdir}/"{bsddb/test,test}
 	fi
 
 	use threads || rm -r "${libdir}/multiprocessing" || die

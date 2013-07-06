@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.64 2013/05/05 20:11:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.65 2013/07/06 18:49:13 ottxor Exp $
+
+  06 Jul 2013; Christoph Junghans <ottxor@gentoo.org> cmus-2.5.0-r1.ebuild:
+  added prefix support
 
   05 May 2013; Christian Faulhammer <fauli@gentoo.org> -cmus-2.4.3.ebuild,
   -cmus-2.5.0.ebuild:

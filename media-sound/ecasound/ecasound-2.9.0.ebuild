@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.9.0.ebuild,v 1.3 2012/12/11 19:12:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.9.0.ebuild,v 1.4 2013/07/06 18:53:41 ottxor Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -13,7 +13,7 @@ SRC_URI="http://ecasound.seul.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="alsa audiofile debug doc jack libsamplerate lv2 mikmod ncurses oil osc oss
 python ruby sndfile static-libs test"
 REQUIRED_USE="test? ( lv2 )"
@@ -56,8 +56,8 @@ src_configure() {
 	local pyconf
 
 	if use python ; then
-		pyconf="--with-python-includes=$(python_get_includedir)
-			--with-python-modules=$(python_get_libdir)"
+		pyconf="--with-python-includes=${EPREFIX}$(python_get_includedir)
+			--with-python-modules=${EPREFIX}$(python_get_libdir)"
 	fi
 
 	econf \
