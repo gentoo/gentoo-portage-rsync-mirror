@@ -7,7 +7,6 @@ Type=forking
 EnvironmentFile=/etc/conf.d/ntpd
 ExecStart=/usr/sbin/ntpd $NTPD_OPTS
 PrivateTmp=true
-ControlGroup=cpu:/
 
 [Install]
 WantedBy=multi-user.target
