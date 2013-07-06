@@ -1,0 +1,13 @@
+[Unit]
+Description=Network Time Service
+After=ntp-client.service sntp.service
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/conf.d/ntpd
+ExecStart=/usr/sbin/ntpd $NTPD_OPTS
+PrivateTmp=true
+ControlGroup=cpu:/
+
+[Install]
+WantedBy=multi-user.target
