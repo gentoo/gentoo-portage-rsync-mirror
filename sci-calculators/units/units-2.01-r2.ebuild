@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.01-r1.ebuild,v 1.2 2013/07/06 15:08:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.01-r2.ebuild,v 1.1 2013/07/06 15:40:41 jer Exp $
 
 EAPI=5
 inherit autotools eutils

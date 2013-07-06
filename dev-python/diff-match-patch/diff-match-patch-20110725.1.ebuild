@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/diff-match-patch-20110725.1.ebuild,v 1.5 2012/03/24 16:55:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/diff-match-patch-20110725.1.ebuild,v 1.6 2013/07/06 15:57:48 aidecoe Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

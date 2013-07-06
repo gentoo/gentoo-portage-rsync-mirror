@@ -1,5 +1,5 @@
---- a/units-2.01/units_cur
-+++ b/units-2.01/units_cur
+--- a/units_cur
++++ b/units_cur
 @@ -1,10 +1,11 @@
 -#!/usr/bin/python
 +#!/usr/bin/python2
@@ -71,7 +71,7 @@
 +for datum in data:
 +  if datum.find('code').text == 'USD':
 +    usdval = datum.find('rate').text[2:]
-+    datum.remove
++    data.remove(datum)
  
  now = datetime.datetime.now()
  output.write('\n# Currency exchange rates from Time Genie (www.timegenie.com)\n')
