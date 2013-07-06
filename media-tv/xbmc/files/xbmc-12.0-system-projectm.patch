@@ -47,7 +47,7 @@ index 78104ad..296eb4d 100644
 +      PKG_CHECK_MODULES([PROJECTM],[libprojectM],,[use_projectm="no";AC_MSG_RESULT([$projectm_disabled])])
 +    fi
 +    if test "$use_projectm" != "no"; then
-+      INCLUDES="$INCLUDES $PROJECTM_CFLAGS";LIBS="$LIBS $PROJECTM_LIBS"
++      INCLUDES="$INCLUDES $PROJECTM_CFLAGS";LIBS="$LIBS $PROJECTM_LIBS";AC_SUBST(PROJECTM_LIBS)
 +    fi
 +    DISABLE_INTERNAL_PROJECTM=1
 +  else
@@ -93,7 +93,7 @@ index 249338c..2c16306 100644
 -$(SLIB): $(OBJS) libprojectM/libprojectM.so
 -	$(CXX) $(CXXFLAGS) $(LDFLAGS) ./libprojectM/CMakeFiles/projectM.dir/*.o -fPIC -shared -o $(SLIB) $(OBJS) `cat @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.def` @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.o
 +$(SLIB): $(OBJS)
-+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -fPIC -shared $(OBJS) `cat @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.def` @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.o -o $(SLIB)
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -fPIC -shared $(OBJS) `cat @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.def` @abs_top_srcdir@/xbmc/cores/DllLoader/exports/wrapper.o @PROJECTM_LIBS@ -o $(SLIB)
  	$(MAKE) $(PRESETS)
 -
 -libprojectM/libprojectM.so: 
