@@ -1,6 +1,17 @@
-# ChangeLog for app-emacs/gentoo-syntax
+# ChangeLog for app-emacs/ebuild-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.101 2013/05/25 08:02:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.19 2013/07/06 18:19:31 ulm Exp $
+
+*ebuild-mode-1.22 (06 Jul 2013)
+
+  06 Jul 2013; Ulrich Müller <ulm@gentoo.org> -gentoo-syntax-1.21.ebuild,
+  +ebuild-mode-1.21.ebuild, +ebuild-mode-1.22.ebuild,
+  +files/50ebuild-mode-gentoo.el:
+  Version bump. Package app-emacs/gentoo-syntax split into
+  app-emacs/ebuild-mode and app-emacs/eselect-mode.
+
+  06 Jul 2013; Ulrich Müller <ulm@gentoo.org> -gentoo-syntax-1.20.ebuild:
+  Remove old.
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-syntax-1.21.ebuild:
   Stable for sparc, wrt bug #469882
