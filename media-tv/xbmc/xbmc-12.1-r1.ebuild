@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.1-r1.ebuild,v 1.2 2013/04/23 01:33:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.1-r1.ebuild,v 1.3 2013/07/06 12:12:03 scarabeus Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ case ${PV} in
 *)
 	MY_P=${P/_/-*_}
 	SRC_URI="http://mirrors.xbmc.org/releases/source/${MY_P}.tar.gz"
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~x86"
 	;;
 esac
 
@@ -149,7 +149,6 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
 	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
-	epatch "${FILESDIR}"/${PN}-12.0-system-projectm.patch
 	# The mythtv patch touches configure.ac, so force a regen
 	rm -f configure
 
@@ -234,6 +233,7 @@ src_configure() {
 		$(use_enable opengl gl) \
 		$(use_enable profile profiling) \
 		$(use_enable projectm) \
+		--with-projectm-presets-dir="${EPREFIX}/usr/share/projectM/presets/" \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr mythtv) \
 		$(use_enable rsxs) \

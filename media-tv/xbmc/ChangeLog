@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.191 2013/07/06 11:25:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.192 2013/07/06 12:12:03 scarabeus Exp $
+
+  06 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/xbmc-12.0-system-projectm.patch,
+  -files/xbmc-13.0-system-projectm.patch, xbmc-12.1-r1.ebuild,
+  xbmc-12.2-r1.ebuild, xbmc-9999.ebuild:
+  Remove the unbundling of projectM seems like 2.1 again does not work well even
+  after fixed underlinking (now it just crashes the xbmc with pretty trace).
 
   06 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   files/xbmc-12.0-system-projectm.patch, files/xbmc-13.0-system-projectm.patch:

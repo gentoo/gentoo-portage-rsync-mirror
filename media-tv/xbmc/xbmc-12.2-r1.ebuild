@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.2-r1.ebuild,v 1.4 2013/06/27 18:08:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.2-r1.ebuild,v 1.5 2013/07/06 12:12:03 scarabeus Exp $
 
 EAPI=5
 
@@ -149,7 +149,6 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
 	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
-	epatch "${FILESDIR}"/${PN}-12.0-system-projectm.patch
 	# Backported fixes
 	EPATCH_MULTI_MSG="Applying patches backported from master..." \
 		EPATCH_SUFFIX="patch" \
