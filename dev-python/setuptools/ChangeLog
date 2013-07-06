@@ -1,6 +1,19 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.191 2013/07/06 00:17:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.193 2013/07/06 01:29:52 floppym Exp $
+
+  06 Jul 2013; Mike Gilbert <floppym@gentoo.org> setuptools-0.6.30-r1.ebuild,
+  setuptools-0.6.33.ebuild, setuptools-0.6.45-r1.ebuild,
+  setuptools-0.7.2-r1.ebuild, setuptools-0.7.3.ebuild, setuptools-0.7.8.ebuild,
+  setuptools-0.8.ebuild, setuptools-9999.ebuild:
+  Restore ~m68k keyword to all ebuilds.
+
+*setuptools-0.7.8 (06 Jul 2013)
+*setuptools-0.8 (06 Jul 2013)
+
+  06 Jul 2013; Mike Gilbert <floppym@gentoo.org> +setuptools-0.7.8.ebuild,
+  +setuptools-0.8.ebuild:
+  Version bump.
 
   06 Jul 2013; Mike Gilbert <floppym@gentoo.org> -setuptools-0.6.32.ebuild,
   -setuptools-0.6.40.ebuild, setuptools-0.6.21.ebuild,
