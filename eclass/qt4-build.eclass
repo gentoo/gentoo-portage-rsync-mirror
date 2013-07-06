@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.146 2013/04/28 16:15:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.147 2013/07/06 07:57:14 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -10,7 +10,7 @@
 # This eclass contains various functions that are used when building Qt4.
 
 case ${EAPI} in
-	3|4|5)	: ;;
+	4|5)	: ;;
 	*)	die "qt4-build.eclass: unsupported EAPI=${EAPI:-0}" ;;
 esac
 
@@ -36,7 +36,7 @@ case ${QT4_BUILD_TYPE} in
 		EGIT_BRANCH=${PV%.9999}
 		;;
 	release)
-		SRC_URI="http://releases.qt-project.org/qt4/source/${MY_P}.tar.gz"
+		SRC_URI="http://download.qt-project.org/official_releases/qt/${PV%.*}/${PV}/${MY_P}.tar.gz"
 		;;
 esac
 
@@ -552,8 +552,7 @@ build_directories() {
 			CXX="$(tc-getCXX)" \
 			LINK="$(tc-getCXX)" \
 			RANLIB=":" \
-			STRIP=":" \
-			|| die "emake failed"
+			STRIP=":"
 		popd >/dev/null || die
 	done
 }
@@ -566,7 +565,7 @@ build_directories() {
 install_directories() {
 	for x in "$@"; do
 		pushd "${S}"/${x} >/dev/null || die
-		emake INSTALL_ROOT="${D}" install || die "emake install failed"
+		emake INSTALL_ROOT="${D}" install
 		popd >/dev/null || die
 	done
 }
@@ -597,7 +596,7 @@ install_qconfigs() {
 			[[ -n ${!x} ]] && echo ${x}=${!x} >> "${T}"/${PN}-qconfig.pri
 		done
 		insinto ${QTDATADIR#${EPREFIX}}/mkspecs/gentoo
-		doins "${T}"/${PN}-qconfig.pri || die "installing ${PN}-qconfig.pri failed"
+		doins "${T}"/${PN}-qconfig.pri
 	fi
 
 	if [[ -n ${QCONFIG_DEFINE} ]]; then
@@ -605,7 +604,7 @@ install_qconfigs() {
 			echo "#define ${x}" >> "${T}"/gentoo-${PN}-qconfig.h
 		done
 		insinto ${QTHEADERDIR#${EPREFIX}}/Gentoo
-		doins "${T}"/gentoo-${PN}-qconfig.h || die "installing ${PN}-qconfig.h failed"
+		doins "${T}"/gentoo-${PN}-qconfig.h
 	fi
 }
 
