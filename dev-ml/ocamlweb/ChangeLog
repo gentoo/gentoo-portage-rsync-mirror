@@ -1,6 +1,18 @@
 # ChangeLog for dev-ml/ocamlweb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.19 2012/08/07 16:35:09 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.22 2013/07/05 23:10:06 aballier Exp $
+
+*ocamlweb-1.38-r1 (05 Jul 2013)
+
+  05 Jul 2013; Alexis Ballier <aballier@gentoo.org> +ocamlweb-1.38-r1.ebuild:
+  revbump it to be sure everyone gets the changes
+
+  05 Jul 2013; Alexis Ballier <aballier@gentoo.org> ocamlweb-1.38.ebuild:
+  Install texmf files in the correct directory
+
+  05 Jul 2013; Alexis Ballier <aballier@gentoo.org> ocamlweb-1.38.ebuild:
+  eapi5 and add subslot dep on ocaml. add a src_compile phase since it seems it
+  doesnt get run otherwise
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> -ocamlweb-1.37.ebuild,
   -files/ocamlweb-1.37-tests.patch:
