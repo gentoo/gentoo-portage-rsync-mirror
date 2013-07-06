@@ -1,6 +1,12 @@
-# ChangeLog for app-xemacs/gentoo-syntax
+# ChangeLog for app-xemacs/ebuild-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.30 2013/07/06 20:52:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ebuild-mode/ChangeLog,v 1.1 2013/07/06 22:07:30 ulm Exp $
+
+*ebuild-mode-1.22 (06 Jul 2013)
+
+  06 Jul 2013; Ulrich Müller <ulm@gentoo.org> -gentoo-syntax-1.19.ebuild,
+  +ebuild-mode-1.19.ebuild, +ebuild-mode-1.22.ebuild:
+  Version bump. Move app-xemacs/gentoo-syntax to app-xemacs/ebuild-mode.
 
   06 Jul 2013; Ulrich Müller <ulm@gentoo.org> -gentoo-syntax-1.18.ebuild,
   gentoo-syntax-1.19.ebuild:

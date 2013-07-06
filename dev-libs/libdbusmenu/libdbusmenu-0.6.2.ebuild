@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2.ebuild,v 1.9 2013/05/17 14:30:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2.ebuild,v 1.10 2013/07/06 22:30:23 xmw Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION=0.16
@@ -20,7 +20,7 @@ IUSE="debug gtk +introspection"
 RDEPEND=">=dev-libs/glib-2.32
 	>=dev-libs/dbus-glib-0.100
 	dev-libs/libxml2
-	gtk? ( >=x11-libs/gtk+-3.2:3 )
+	gtk? ( >=x11-libs/gtk+-3.2:3[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 	!<${CATEGORY}/${PN}-0.5.1-r200"
 DEPEND="${RDEPEND}

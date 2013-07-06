@@ -1,6 +1,26 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.864 2013/07/04 12:46:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.867 2013/07/06 22:20:40 blueness Exp $
+
+*hardened-sources-3.9.9 (06 Jul 2013)
+
+  06 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.9.ebuild:
+  vanilla-3.9.9 + genpatches-3.9-15 + grsecurity-2.9.1-3.9.9-201307050017  May
+  fix uefi bug #471626
+
+*hardened-sources-3.2.48-r1 (06 Jul 2013)
+
+  06 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.48-r1.ebuild:
+  vanilla-3.2.48 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.48-201307050016
+
+*hardened-sources-2.6.32-r175 (06 Jul 2013)
+
+  06 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r175.ebuild:
+  vanilla-2.6.32.61 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.61-201307050015
 
   04 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
   -hardened-sources-2.6.32-r171.ebuild, -hardened-sources-2.6.32-r172.ebuild,

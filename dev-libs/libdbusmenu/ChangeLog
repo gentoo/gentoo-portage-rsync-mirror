@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.26 2013/05/17 14:30:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.27 2013/07/06 22:30:23 xmw Exp $
+
+  06 Jul 2013; Michael Weber <xmw@gentoo.org> libdbusmenu-0.6.2.ebuild:
+  Depend on gtk+ introspection (bug 475938).
 
   17 May 2013; Jeroen Roovers <jer@gentoo.org> libdbusmenu-0.6.2.ebuild:
   Marked ~hppa (bug #468984).
