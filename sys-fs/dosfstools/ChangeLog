@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.126 2013/06/15 10:03:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.127 2013/07/06 20:43:41 radhermit Exp $
+
+*dosfstools-3.0.20-r1 (06 Jul 2013)
+
+  06 Jul 2013; Tim Harder <radhermit@gentoo.org> -dosfstools-3.0.20.ebuild,
+  +dosfstools-3.0.20-r1.ebuild,
+  +files/dosfstools-3.0.20-parallel-install.patch:
+  Revision bump and remove old. Fix parallel make deps to properly install
+  legacy symlinks (bug #475976).
 
 *dosfstools-3.0.20 (15 Jun 2013)
 

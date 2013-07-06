@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.20.ebuild,v 1.1 2013/06/15 10:03:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.20-r1.ebuild,v 1.1 2013/07/06 20:43:41 radhermit Exp $
 
 EAPI="5"
 
@@ -17,6 +17,7 @@ RESTRICT="test" # there is no test target #239071
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.20-name-ext.patch
+	epatch "${FILESDIR}"/${PN}-3.0.20-parallel-install.patch
 	sed -i \
 		-e "/^PREFIX/s:=.*:= ${EPREFIX}/usr:" \
 		-e '/^OPTFLAGS/d' \
