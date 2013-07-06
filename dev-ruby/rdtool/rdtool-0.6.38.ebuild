@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.38.ebuild,v 1.2 2013/04/21 09:26:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.38.ebuild,v 1.3 2013/07/06 21:38:40 ago Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/uwabami/rdtool"
 
 LICENSE="Ruby GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="emacs"
 
 RDEPEND="${RDEPEND} emacs? ( virtual/emacs )"
