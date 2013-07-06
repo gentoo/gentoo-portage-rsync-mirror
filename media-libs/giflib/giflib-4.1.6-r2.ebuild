@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r2.ebuild,v 1.2 2012/05/09 00:23:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r2.ebuild,v 1.3 2013/07/06 04:28:59 ottxor Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/giflib/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="rle static-libs X"
 
 DEPEND="X? (
