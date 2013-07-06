@@ -66,6 +66,7 @@
 "WDC WD10EADS-00M2B0"						194 C "Western Digital Caviar Green 1TB SATA2 5400RPM 32MB"
 "WDC WD20EARS-00S8B1"						194 C "Western Digital Caviar Green 2TB SATA2 IntelliPower 64MB"
 "WDC WD3200BEKT-00F3T0"						194 C "Western Digital Scorpio Black 320GB SATA2 7200RPM 16MB"
+"WDC WD3200BEKT-75A25T0"					194 C "Western Digital Scorpio Black 320GB SATA2 7200RPM 16MB"
 "WDC WD5000AADS"						194 C "Western Digital Caviar Green 500GB SATA2 IntelliPower 32MB"
 "WDC WD7500AARX"						194 C "Western Digital Caviar Green 750GB SATA3 IntelliPower 64MB"
 "WDC WD3200AZDX"						194 C "Western Digital Caviar Green 320GB SATA3 IntelliPower 32MB"
@@ -186,6 +187,7 @@
 "TOSHIBA MK3252GSX"						194 C "Toshiba MK3252GSX"
 "SAMSUNG HM160HC"						194 C "Samsung HM160HC"
 
+"Hitachi HTS542512K9SA00"					194 C "Hitachi Travelstar 5K250 120GB SATA2 5400RPM 8MB"
 "Hitachi HTS542516K9SA00"					194 C "Hitachi Travelstar 5K250 160GB SATA2 5400RPM 8MB"
 "Hitachi HDS721680PLA380"					194 C "Hitachi Deskstar 7K160 80GB SATA2 7200RPM 8MB"
 "ST9120822AS"							194 C "Seagate Momentus 5400.3 120GB SATA 5400RPM 8MB"

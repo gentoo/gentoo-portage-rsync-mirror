@@ -1,6 +1,22 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.126 2013/05/21 18:47:52 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.127 2013/07/06 19:48:55 aidecoe Exp $
+
+*hddtemp-0.3_beta15-r23 (06 Jul 2013)
+*hddtemp-0.3_beta15-r6 (06 Jul 2013)
+
+  06 Jul 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  hddtemp-0.3_beta15-r3.ebuild, hddtemp-0.3_beta15-r5.ebuild,
+  +hddtemp-0.3_beta15-r6.ebuild, hddtemp-0.3_beta15-r22.ebuild,
+  +hddtemp-0.3_beta15-r23.ebuild, files/hddgentoo.db, +files/hddtemp.service:
+  Added systemd unit file (by Pacho Ramos <pacho@gentoo.org>)
+  - fixes bug #474458.
+
+  Removed 'nls' flag from IUSE, because it doesn't build if disabled
+  - fixes bug #457648.
+
+  Added WDC WD3200BEKT-75A25T0 and Hitachi HTS542512K9SA00 to hddgentoo.db
+  - fixes bug #470970 and bug #473686.
 
   21 May 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added new drives to hddgentoo.db. Fixes bug #467046 and bug #468816.

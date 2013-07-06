@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r5.ebuild,v 1.3 2013/07/06 19:48:55 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r6.ebuild,v 1.1 2013/07/06 19:48:55 aidecoe Exp $
 
-inherit eutils autotools
+inherit eutils autotools systemd
 
 MY_P=${P/_beta/-beta}
 DBV=20080531
@@ -52,6 +52,7 @@ src_install() {
 	update_db "${D}/usr/share/hddtemp/hddgentoo.db" "${D}/usr/share/hddtemp/hddtemp.db"
 	newconfd "${FILESDIR}"/hddtemp-conf.d hddtemp
 	newinitd "${FILESDIR}"/hddtemp-init hddtemp
+	systemd_dounit "${FILESDIR}"/hddtemp.service
 }
 
 pkg_postinst() {

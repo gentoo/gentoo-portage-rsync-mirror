@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r3.ebuild,v 1.12 2011/11/14 12:25:25 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r3.ebuild,v 1.13 2013/07/06 19:48:55 aidecoe Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/hddtemp/${MY_P}.tar.bz2 mirro
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
-IUSE="nls"
+IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -36,8 +36,6 @@ src_compile() {
 	local myconf
 
 	myconf="--with-db-path=/usr/share/hddtemp/hddtemp.db"
-	# disabling nls breaks compiling
-	use nls || myconf="--disable-nls ${myconf}"
 	econf ${myconf} || die
 	emake || die
 }
