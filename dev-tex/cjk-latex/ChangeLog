@@ -1,6 +1,14 @@
 # ChangeLog for dev-tex/cjk-latex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.59 2013/03/05 09:15:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.61 2013/07/06 00:55:58 aballier Exp $
+
+*cjk-latex-4.8.3-r1 (06 Jul 2013)
+
+  06 Jul 2013; Alexis Ballier <aballier@gentoo.org> +cjk-latex-4.8.3-r1.ebuild:
+  revbump to make sure everyone gets the texmf change
+
+  06 Jul 2013; Alexis Ballier <aballier@gentoo.org> cjk-latex-4.8.3.ebuild:
+  honour TEXMF from latex-package.eclass
 
   05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> cjk-latex-4.8.3.ebuild:
   Stable for sh, wrt bug #456624

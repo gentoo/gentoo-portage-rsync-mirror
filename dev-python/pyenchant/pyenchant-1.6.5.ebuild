@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.5.ebuild,v 1.7 2013/06/29 15:36:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.5.ebuild,v 1.8 2013/07/06 00:56:03 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python bindings for the Enchant spellchecking system"
 HOMEPAGE="http://pyenchant.sourceforge.net http://pypi.python.org/pypi/pyenchant"
@@ -20,11 +20,16 @@ IUSE=""
 
 DEPEND="
 	>=app-text/enchant-${PV%.*}
-	<dev-python/setuptools-0.7"
+	dev-python/setuptools"
 RDEPEND="${DEPEND}"
 
 DOCS="README.txt TODO.txt"
 PYTHON_MODNAME="enchant"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-setup.patch"
+	distutils_src_prepare
+}
 
 src_test() {
 	if [[ -n "$(LC_ALL="en_US.UTF-8" bash -c "" 2>&1)" ]]; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.5-r1.ebuild,v 1.1 2013/06/29 15:36:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.5-r1.ebuild,v 1.2 2013/07/06 00:56:03 floppym Exp $
 
 EAPI=5
 
@@ -19,10 +19,11 @@ IUSE=""
 
 DEPEND="
 	>=app-text/enchant-${PV%.*}
-	<dev-python/setuptools-0.7[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 DOCS=( README.txt TODO.txt )
+PATCHES=( "${FILESDIR}/${PN}-setup.patch" )
 
 python_test() {
 	if [[ -n "$(LC_ALL="en_US.UTF-8" bash -c "" 2>&1)" ]]; then

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/noweb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.63 2012/07/29 18:43:46 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.64 2013/07/06 00:57:31 aballier Exp $
+
+  06 Jul 2013; Alexis Ballier <aballier@gentoo.org> -noweb-2.11b-r1.ebuild,
+  -noweb-2.11b-r2.ebuild:
+  remove old
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> noweb-2.11b-r3.ebuild:
   alpha/ia64/sparc stable wrt #418653
