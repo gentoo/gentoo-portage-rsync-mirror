@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo eapi-5-files profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.15 2013/07/02 16:14:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.16 2013/07/06 09:12:24 ago Exp $
+
+  06 Jul 2013; Agostino Sarubbo <ago@gentoo.org> use.stable.mask:
+  Systemd is now stable, removing the mask
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> package.use.stable.mask:
   Add ocaml to app-emulation/xen-tools

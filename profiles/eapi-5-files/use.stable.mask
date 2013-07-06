@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/use.stable.mask,v 1.5 2013/04/30 13:44:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/use.stable.mask,v 1.6 2013/07/06 09:12:24 ago Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in use.mask
@@ -17,7 +17,3 @@ wayland
 # Ole Markus With <olemarkus@gentoo.org> (21 Mar 2013)
 # PHP 5.5 is not stable
 php_targets_php5-5
-
-# Michał Górny <mgorny@gentoo.org> (24 Feb 2013)
-# systemd is not stable.
-systemd

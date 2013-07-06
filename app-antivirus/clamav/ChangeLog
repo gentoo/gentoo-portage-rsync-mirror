@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.458 2013/06/12 21:13:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.459 2013/07/06 09:15:52 pacho Exp $
+
+*clamav-0.97.8-r1 (06 Jul 2013)
+
+  06 Jul 2013; Pacho Ramos <pacho@gentoo.org> +clamav-0.97.8-r1.ebuild,
+  +files/clamav-milter.service, +files/clamd.service, +files/clamd_at.service,
+  +files/tmpfiles.d/clamav.conf:
+  Add unit files (#475858, thanks to Tim Harder for his help)
 
   12 Jun 2013; Tim Harder <radhermit@gentoo.org> clamav-0.97.7.ebuild,
   clamav-0.97.8.ebuild:

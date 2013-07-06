@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=bzip2? ( app-arch/bzip2 ) clamdtop? ( sys-libs/ncurses ) iconv? ( virtual/libiconv ) milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) ) dev-libs/libtommath >=sys-libs/zlib-1.2.2 sys-devel/libtool virtual/pkgconfig virtual/pkgconfig
+DESCRIPTION=Clam Anti-Virus Scanner
+EAPI=5
+HOMEPAGE=http://www.clamav.net/
+IUSE=bzip2 clamdtop iconv ipv6 milter selinux static-libs uclibc
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=bzip2? ( app-arch/bzip2 ) clamdtop? ( sys-libs/ncurses ) iconv? ( virtual/libiconv ) milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) ) dev-libs/libtommath >=sys-libs/zlib-1.2.2 sys-devel/libtool selinux? ( sec-policy/selinux-clamav )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/clamav/clamav-0.97.8.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	systemd	3421a5715404244e4827acd1cf8ce654	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=120e89681e3293a464d1c3cf11fa3b6c
