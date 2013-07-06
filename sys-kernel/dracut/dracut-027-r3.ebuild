@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-027-r3.ebuild,v 1.1 2013/05/20 18:22:56 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-027-r3.ebuild,v 1.2 2013/07/06 21:13:41 aidecoe Exp $
 
 EAPI=4
 
-inherit eutils linux-info systemd
+inherit bash-completion-r1 eutils linux-info systemd
 
 add_req_use_for() {
 	local dep="$1"; shift
@@ -175,14 +175,7 @@ src_prepare() {
 
 src_configure() {
 	local myconf="--libdir='${MY_LIBDIR}'"
-	local bashcompletiondir=/usr/share/bash-completion
-
-	if $(tc-getPKG_CONFIG) bash-completion --exists; then
-		bashcompletiondir="$($(tc-getPKG_CONFIG) bash-completion \
-			--variable=completionsdir)"
-	fi
-
-	myconf+=" --bashcompletiondir=${bashcompletiondir}"
+	myconf+=" --bashcompletiondir=$(get_bashcompdir)"
 
 	if use dracut_modules_systemd; then
 		myconf+=" --systemdsystemunitdir='$(systemd_get_unitdir)'"

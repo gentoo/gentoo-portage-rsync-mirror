@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.123 2013/06/23 09:51:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.124 2013/07/06 21:13:41 aidecoe Exp $
+
+  06 Jul 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-027-r3.ebuild,
+  dracut-029.ebuild:
+  Use get_bashcompdir() of bash-completion-r1 eclass.
 
   23 Jun 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-014-r3.ebuild,
   -dracut-018-r3.ebuild, -dracut-019-r6.ebuild, -dracut-022-r6.ebuild,
