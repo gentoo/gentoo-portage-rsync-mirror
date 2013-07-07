@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.676 2013/07/06 18:44:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.677 2013/07/06 23:42:04 floppym Exp $
+
+  06 Jul 2013; Mike Gilbert <floppym@gentoo.org> -python-2.7.4.ebuild:
+  Remove old.
 
   06 Jul 2013; Mike Gilbert <floppym@gentoo.org> python-2.7.5.ebuild:
   Move uclibc test removal after everything else, bug 475972.
