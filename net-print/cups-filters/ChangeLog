@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.68 2013/07/07 15:16:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.69 2013/07/07 17:16:58 dilfridge Exp $
+
+  07 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.34-r1.ebuild, cups-filters-1.0.35.ebuild,
+  cups-filters-9999.ebuild:
+  Need avahi with dbus support, bug 476074
 
   07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.34-r1.ebuild:
   Stable for ia64, wrt bug #442926

@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/WWW-Dict-Leo-Org
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Dict-Leo-Org/ChangeLog,v 1.11 2013/01/06 14:49:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Dict-Leo-Org/ChangeLog,v 1.12 2013/07/07 17:12:59 jlec Exp $
+
+*WWW-Dict-Leo-Org-1.360.0 (07 Jul 2013)
+
+  07 Jul 2013; Justin Lecher <jlec@gentoo.org>
+  +WWW-Dict-Leo-Org-1.360.0.ebuild, metadata.xml:
+  Version BUmp
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org>
   -WWW-Dict-Leo-Org-1.340.0.ebuild:
