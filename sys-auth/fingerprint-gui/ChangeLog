@@ -1,6 +1,16 @@
 # ChangeLog for sys-auth/fingerprint-gui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/ChangeLog,v 1.6 2013/03/02 23:33:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/ChangeLog,v 1.7 2013/07/07 09:36:09 maksbotan Exp $
+
+*fingerprint-gui-1.05 (07 Jul 2013)
+
+  07 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +fingerprint-gui-1.05.ebuild:
+  Bump to 1.05, Upek 147e:2020 device now supported.  Improvements to ebuild:
+  - use new SRC_URI, old one returns html with tarball in frame     - unistd
+  patch is no longer needed     - libbaspi.so now has multiple versions     -
+  correct sed command for desktop, '=' was left out     - correct install path
+  for uinput udev rules using get_udevdir
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   fingerprint-gui-1.04.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.2-r1.ebuild,v 1.1 2013/06/04 20:22:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.2-r1.ebuild,v 1.2 2013/07/07 09:52:20 hd_brummy Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.tvdr.de/"
 SRC_URI="ftp://ftp.tvdr.de/vdr/${MY_P}.tar.bz2
 	http://dev.gentoo.org/~hd_brummy/distfiles/${EXT_P}.patch.bz2"
 
-KEYWORDS="~arm ~amd64 ~ppc ~x86"
+KEYWORDS="~arm amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
