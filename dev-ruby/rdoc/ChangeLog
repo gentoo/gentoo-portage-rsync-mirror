@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.112 2013/06/03 19:29:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.113 2013/07/07 08:09:52 graaff Exp $
+
+  07 Jul 2013; Hans de Graaff <graaff@gentoo.org> rdoc-4.0.1.ebuild:
+  Add ruby20 support.
 
 *rdoc-4.0.1 (03 Jun 2013)
 

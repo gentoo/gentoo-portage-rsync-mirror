@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-4.0.1.ebuild,v 1.1 2013/06/03 19:29:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-4.0.1.ebuild,v 1.2 2013/07/07 08:09:52 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
-RUBY_FAKEGEM_TASK_DOC="docs"
-
+RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="History.rdoc README.rdoc RI.rdoc TODO.rdoc"
 
@@ -24,10 +23,8 @@ IUSE=""
 
 ruby_add_bdepend "
 	dev-ruby/racc
-	doc? ( >=dev-ruby/hoe-2.7.0 )
 	test? (
-		>=dev-ruby/hoe-2.7.0
-		dev-ruby/minitest
+		virtual/ruby-minitest
 	)"
 
 ruby_add_rdepend "=dev-ruby/json-1* >=dev-ruby/json-1.4"
@@ -64,12 +61,24 @@ all_ruby_prepare() {
 	sed -i -e '/:generate/d' Rakefile || die
 }
 
+all_ruby_compile() {
+	all_fakegem_compile
+
+	if use doc ; then
+		ruby -Ilib -S bin/rdoc || die
+	fi
+}
+
 each_ruby_compile() {
 	# Generate the file inline here since the Rakefile confuses jruby
 	# into a circular dependency.
 	for file in lib/rdoc/rd/block_parser lib/rdoc/rd/inline_parser ; do
 		${RUBY} -S racc -l -o ${file}.rb ${file}.ry || die
 	done
+}
+
+each_ruby_test() {
+	${RUBY} -Ilib -S testrb test/test_*.rb || die
 }
 
 all_ruby_install() {

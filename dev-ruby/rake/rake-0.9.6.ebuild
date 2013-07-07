@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.6.ebuild,v 1.1 2013/06/23 07:59:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.6.ebuild,v 1.2 2013/07/07 08:07:11 graaff Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGES README.rdoc TODO"
@@ -24,7 +24,7 @@ DEPEND="${DEPEND} app-arch/gzip"
 RDEPEND="${RDEPEND}"
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )
-	test? ( dev-ruby/minitest )"
+	test? ( virtual/ruby-minitest )"
 
 all_ruby_prepare() {
 	# Comment out unimportant test which failes on ruby18 at least.
