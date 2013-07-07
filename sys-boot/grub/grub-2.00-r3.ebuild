@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r3.ebuild,v 1.2 2013/04/28 23:50:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r3.ebuild,v 1.3 2013/07/07 00:49:27 floppym Exp $
 
 EAPI=4
 
@@ -250,7 +250,7 @@ src_prepare() {
 	sed -i \
 		-e 's/^\* GRUB:/* GRUB2:/' \
 		-e 's/(grub)/(grub2)/' -- \
-		"${S}"/docs/grub.texi
+		"${S}"/docs/grub.texi || die
 
 	epatch_user
 
