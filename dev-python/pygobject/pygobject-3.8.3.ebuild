@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.1.ebuild,v 1.2 2013/04/27 15:58:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.3.ebuild,v 1.1 2013/07/07 12:03:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,10 @@ SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cairo examples test +threads"
 
-REQUIRED_USE="test? ( cairo )"
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
+	test? ( cairo )
+"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.31.0:2
@@ -53,9 +56,6 @@ src_prepare() {
 	# Do not build tests if unneeded, bug #226345, upstream bug #698444
 	epatch "${FILESDIR}/${PN}-3.7.90-make_check.patch"
 
-	# Run tests with older python too
-#	epatch "${FILESDIR}/${PN}-3.7.90-run-tests-with-old-python.patch"
-
 	eautoreconf
 	gnome2_src_prepare
 
@@ -66,7 +66,6 @@ src_configure() {
 	# Hard-enable libffi support since both gobject-introspection and
 	# glib-2.29.x rdepend on it anyway
 	# docs disabled by upstream default since they are very out of date
-
 	python_foreach_impl run_in_build_dir \
 		gnome2_src_configure \
 			--with-ffi \

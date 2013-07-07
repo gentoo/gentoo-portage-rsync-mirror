@@ -1,6 +1,6 @@
 # Copyright 1999- Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.2.ebuild,v 1.5 2013/07/04 14:13:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.2.ebuild,v 1.6 2013/07/07 12:06:30 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://monkey-project.com/releases/${PV:0:3}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ppc ppc64 x86"
+KEYWORDS="amd64 arm ~mips ppc ppc64 x86"
 
 # ssl is broken, so we turn it off until fixed
 IUSE="-debug php minimal uclibc monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi +monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.14 2013/04/27 15:57:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.15 2013/07/07 12:03:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,6 +16,7 @@ LICENSE="LGPL-2.1+"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples libffi test"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
 	libffi? ( virtual/libffi:= )
