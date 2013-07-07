@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.16 2013/02/22 19:37:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.17 2013/07/07 17:56:20 armin76 Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs java-pkg-opt-2
@@ -56,8 +56,6 @@ src_unpack() {
 		einfo "The 'server' USE flag will build tightvnc's server."
 		einfo "If '-server' is chosen only the client is built to save space."
 		einfo "Stop the build now if you need to add 'server' to USE flags.\n"
-		ebeep
-		epause 5
 	fi
 
 	unpack ${A}

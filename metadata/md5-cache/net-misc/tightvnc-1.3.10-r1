@@ -10,4 +10,4 @@ RDEPEND=media-fonts/font-misc-misc virtual/jpeg server? ( media-fonts/font-curso
 SLOT=0
 SRC_URI=mirror://sourceforge/vnc-tight/tightvnc-1.3.10_unixsrc.tar.bz2 mirror://gentoo/tightvnc.png java? ( mirror://sourceforge/vnc-tight/tightvnc-1.3.10_javasrc.tar.gz )
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=0ccf5834671fbc490efccbe45e351515
+_md5_=8e7e14ce0eb1a35e486c50f938ee3a89
