@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.151 2013/06/18 20:39:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.152 2013/07/07 12:45:33 ago Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (17 June 2013)
 # Fix per-arch mask of phonon[zeitgeist] #460140
@@ -81,7 +81,7 @@ dev-vcs/subversion java
 net-dns/libidn java
 =net-misc/tigervnc-1.1.0-r7 java
 =net-misc/tigervnc-1.2.0 java
-=net-print/cups-1.5.2-r4 java
+net-print/cups java
 =sys-devel/gettext-0.18.1.1-r1 java
 =sys-devel/gettext-0.18.1.1-r3 java
 =sys-devel/gettext-0.18.2 java
