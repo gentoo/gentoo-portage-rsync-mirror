@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-0.37.0.ebuild,v 1.1 2013/07/07 16:49:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-0.37.1.ebuild,v 1.1 2013/07/07 21:58:39 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="git://git.osmocom.org/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"
+	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${PN}-0.37.0.tar.xz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
@@ -35,4 +35,5 @@ pkg_setup() {
 
 src_prepare() {
 	python_convert_shebangs -q -r 2 "${S}"
+	epatch "${FILESDIR}"/add-pkgconfig-file.patch
 }

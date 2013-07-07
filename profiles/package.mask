@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14897 2013/07/07 16:48:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14898 2013/07/07 21:58:58 zerochaos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,18 +31,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Rick Farina <zerochaos@gentoo.org> (07 Jun 2013)
-# cannot detect gr-iqbal properly
-=net-wireless/gr-osmosdr-0.1.0
-
-# Rick Farina <zerochaos@gentoo.org> (07 Jun 2013)
-# installs fine but gr-osmosdr doesn't see it...
-=net-wireless/gr-iqbal-0.37.0
-
-# Rick Farina <zerochaos@gentoo.org> (07 Jun 2013)
-# incompatible with near everything available at this time
-=net-wireless/gnuradio-3.7.0
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Jun 2013)
 # Prerelease ebuild, mostly untested and held together by duct tape.
