@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycuda
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.20 2013/02/02 19:33:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.21 2013/07/07 19:15:38 jlec Exp $
+
+*pycuda-2013.1.1 (07 Jul 2013)
+
+  07 Jul 2013; Justin Lecher <jlec@gentoo.org> pycuda-2012.1.ebuild,
+  +pycuda-2013.1.1.ebuild, pycuda-9999.ebuild, metadata.xml:
+  Version Bump; fix usage of python r1 eclasses
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Assign to new maintainers per http://gentoo.2317880.n4.nabble.com/Packages-up-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-1.0.1.ebuild,v 1.1 2013/06/03 11:33:11 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/kwooty-1.0.1.ebuild,v 1.3 2013/07/07 19:18:40 ago Exp $
 
 EAPI=5
 KDE_LINGUAS="cs de fr"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="
