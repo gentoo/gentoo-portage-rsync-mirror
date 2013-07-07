@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jadetex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.63 2013/04/19 14:44:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.64 2013/07/07 15:40:25 aballier Exp $
+
+*jadetex-3.13-r5 (07 Jul 2013)
+
+  07 Jul 2013; Alexis Ballier <aballier@gentoo.org> +jadetex-3.13-r5.ebuild:
+  install texmf files in texmf-site
 
 *jadetex-3.13-r4 (19 Apr 2013)
 

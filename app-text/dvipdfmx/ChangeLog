@@ -1,6 +1,12 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.75 2013/04/27 08:32:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.76 2013/07/07 15:35:08 aballier Exp $
+
+*dvipdfmx-20110311-r1 (07 Jul 2013)
+
+  07 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +dvipdfmx-20110311-r1.ebuild:
+  install texmf files in texmf-site so that texlive 2013 finds them
 
   27 Apr 2013; Patrick Lauer <patrick@gentoo.org> dvipdfmx-20110311.ebuild:
   Automake 1.13 fix
