@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langcyrillic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/ChangeLog,v 1.64 2013/06/28 16:21:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/ChangeLog,v 1.65 2013/07/07 22:17:51 aballier Exp $
+
+  07 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  texlive-langcyrillic-2013.ebuild:
+  Block old latexextra, bug #475664 by Maciej Piechotka
 
 *texlive-langcyrillic-2013 (28 Jun 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/texlive-langcyrillic-2013.ebuild,v 1.1 2013/06/28 16:21:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcyrillic/texlive-langcyrillic-2013.ebuild,v 1.2 2013/07/07 22:17:51 aballier Exp $
 
 EAPI="5"
 
@@ -25,6 +25,7 @@ DEPEND=">=dev-texlive/texlive-basic-2013
 !<dev-texlive/texlive-langother-2013
 !dev-texlive/texlive-documentation-serbian
 !<app-text/texlive-core-2013
+!<dev-texlive/texlive-latexextra-2013
 "
 RDEPEND="${DEPEND} "
 TEXLIVE_MODULE_BINSCRIPTS="
