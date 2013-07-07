@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/denyhosts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.57 2012/12/03 13:13:31 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.58 2013/07/07 06:53:32 pacho Exp $
+
+*denyhosts-2.6-r7 (07 Jul 2013)
+
+  07 Jul 2013; Pacho Ramos <pacho@gentoo.org> +denyhosts-2.6-r7.ebuild,
+  +files/denyhosts.service:
+  Install unit file, move to distutils-r1 eclass and readme.gentoo.
 
   03 Dec 2012; Michael Palimaka <kensington@gentoo.org>
   -denyhosts-2.6-r5.ebuild:

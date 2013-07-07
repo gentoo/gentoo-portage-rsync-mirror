@@ -1,0 +1,12 @@
+[Unit]
+Description=SSH log watcher
+Before=sshd.service
+
+[Service]
+Type=forking
+ExecStartPre=/bin/rm -f /run/lock/subsys/denyhosts
+ExecStart=/usr/bin/denyhosts.py --daemon --config=/etc/denyhosts.conf
+PIDFile=/run/lock/subsys/denyhosts
+
+[Install]
+WantedBy=multi-user.target
