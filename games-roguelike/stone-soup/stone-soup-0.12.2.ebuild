@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.12.2.ebuild,v 1.1 2013/06/04 20:45:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.12.2.ebuild,v 1.2 2013/07/07 10:59:23 hasufell Exp $
 
 ## TODO
 # add sound support (no build switch, no sound files)
@@ -38,6 +38,7 @@ RDEPEND="
 	sys-libs/zlib
 	ncurses? ( sys-libs/ncurses )
 	tiles? (
+		media-fonts/dejavu
 		media-libs/freetype:2
 		media-libs/libpng:0
 		media-libs/libsdl[X,opengl,video]
