@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.16.ebuild,v 1.1 2013/01/05 07:34:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.18.ebuild,v 1.1 2013/07/07 20:37:00 radhermit Exp $
 
 EAPI=5
 
@@ -21,15 +21,16 @@ RDEPEND=">=net-libs/libpcap-0.8
 	zlib? ( sys-libs/zlib )
 	lzo? ( dev-libs/lzo )"
 DEPEND="${RDEPEND}
+	app-doc/doxygen
 	sys-devel/flex
 	virtual/yacc"
 
 src_prepare() {
-	# skip rebuilding docs when doxygen is present
-	epatch "${FILESDIR}"/${PN}-3.0.15-no-doxygen.patch
-
 	# don't build examples
 	sed -i "/^SUBDIRS/s/examples//" Makefile.am || die
+
+	# fix autoreconf with automake-1.13
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.in || die
 
 	eautoreconf
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.95 2013/06/30 12:43:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.96 2013/07/07 20:53:00 radhermit Exp $
+
+  07 Jul 2013; Tim Harder <radhermit@gentoo.org> -solfege-3.20.6.ebuild,
+  -solfege-3.20.8.ebuild, -solfege-3.21.4.ebuild:
+  Remove old.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> solfege-3.22.0.ebuild:
   Stable for x86, wrt bug #475298

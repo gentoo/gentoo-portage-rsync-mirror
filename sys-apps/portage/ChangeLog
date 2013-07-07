@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1304 2013/07/01 02:24:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1306 2013/07/07 20:54:59 zmedico Exp $
+
+*portage-2.2.0_alpha187 (07 Jul 2013)
+
+  07 Jul 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha187.ebuild,
+  -portage-2.2.0_alpha185.ebuild:
+  2.2.0_alpha187 version bump. This includes all of the fixes in 2.1.12.12. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.12.12 (07 Jul 2013)
+
+  07 Jul 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.12.12.ebuild,
+  -portage-2.1.12.10.ebuild:
+  2.1.12.12 version bump. This fixes bug #475812 (support fd_pipes parameter in
+  doebuild API function), bug #475778 (emerge --info KeyError with ROOT), and
+  bug #475496 (report specific xattr names when setting xattrs fails). Bug
+  #472632 tracks all bugs fixed since portage-2.1.12.2.
 
   01 Jul 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.11.62.ebuild,
   portage-2.1.12.10.ebuild, portage-2.1.12.11.ebuild, portage-2.1.12.2.ebuild,

@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/libtrace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/ChangeLog,v 1.8 2013/05/03 08:09:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/ChangeLog,v 1.10 2013/07/07 20:37:57 radhermit Exp $
+
+  07 Jul 2013; Tim Harder <radhermit@gentoo.org> -libtrace-3.0.14.ebuild,
+  -libtrace-3.0.15.ebuild, -libtrace-3.0.16.ebuild,
+  -files/libtrace-3.0.14-no-doxygen.patch,
+  -files/libtrace-3.0.15-no-doxygen.patch:
+  Remove old.
+
+*libtrace-3.0.18 (07 Jul 2013)
+
+  07 Jul 2013; Tim Harder <radhermit@gentoo.org> +libtrace-3.0.18.ebuild:
+  Version bump.
 
 *libtrace-3.0.17 (03 May 2013)
 
