@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/mira
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.21 2013/03/11 16:15:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.22 2013/07/07 19:41:05 jlec Exp $
+
+*mira-3.9.18 (07 Jul 2013)
+
+  07 Jul 2013; Justin Lecher <jlec@gentoo.org> +mira-3.9.18.ebuild:
+  Version BUmp; fixed compilation with dev-libs/boost-1.53.0 and some libtool
+  versions, #450322; thanks Martin Mokrejs for all his work
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
