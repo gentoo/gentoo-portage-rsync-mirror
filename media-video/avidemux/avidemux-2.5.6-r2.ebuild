@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.3 2013/03/02 22:06:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.4 2013/07/07 13:11:54 tomwij Exp $
 
-EAPI=4
+EAPI="5"
 
 inherit cmake-utils eutils flag-o-matic
 
@@ -49,7 +49,7 @@ RDEPEND="
 	)
 	vorbis? ( media-libs/libvorbis )
 	vpx? ( media-libs/libvpx )
-	x264? ( media-libs/x264 )
+	x264? ( media-libs/x264:= )
 	xv? (
 		x11-libs/libX11
 		x11-libs/libXext

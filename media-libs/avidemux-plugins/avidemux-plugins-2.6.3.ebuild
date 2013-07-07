@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.3.ebuild,v 1.2 2013/05/16 06:28:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.3.ebuild,v 1.3 2013/07/07 13:08:34 tomwij Exp $
 
 EAPI="5"
 
@@ -42,7 +42,7 @@ DEPEND="
 	oss? ( virtual/os-headers )
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	twolame? ( media-sound/twolame )
-	x264? ( media-libs/x264 )
+	x264? ( media-libs/x264:= )
 	xvid? ( media-libs/xvid )
 	vorbis? ( media-libs/libvorbis )
 	vpx? ( media-libs/libvpx )

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.668 2013/06/23 09:05:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.669 2013/07/07 13:03:07 pacho Exp $
+
+*gtk+-2.24.20 (07 Jul 2013)
+
+  07 Jul 2013; Pacho Ramos <pacho@gentoo.org> +gtk+-2.24.20.ebuild:
+  Version bump (this has various changes from upstream that affect our multilib
+  patch and behavior of immodules stuff)
 
   23 Jun 2013; Pacho Ramos <pacho@gentoo.org> -gtk+-2.24.18.ebuild,
   gtk+-2.24.19.ebuild:

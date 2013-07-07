@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.2-r1.ebuild,v 1.2 2013/05/16 07:00:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.2-r1.ebuild,v 1.3 2013/07/07 13:09:29 tomwij Exp $
 
 EAPI="5"
 
@@ -39,7 +39,7 @@ RDEPEND="
 	sdl? ( media-libs/libsdl )
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0[aac,cpudetection,mp3,theora] )
 	truetype? ( >=media-libs/freetype-2.1.5 )
-	x264? ( media-libs/x264 )
+	x264? ( media-libs/x264:= )
 	xv? ( x11-libs/libXv )
 	xvid? ( media-libs/xvid )
 	vorbis? ( media-libs/libvorbis )

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.217 2013/05/16 07:01:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.218 2013/07/07 13:11:54 tomwij Exp $
+
+  07 Jul 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.5.6-r2.ebuild:
+  Add sub slot operator for media-libs/x264 dependency.
 
 *avidemux-2.6.4 (16 May 2013)
 
