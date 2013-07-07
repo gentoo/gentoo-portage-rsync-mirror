@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/gr-osmosdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.16 2013/07/01 06:49:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.17 2013/07/07 16:52:02 zerochaos Exp $
+
+*gr-osmosdr-0.1.0 (07 Jul 2013)
+
+  07 Jul 2013; Rick Farina <zerochaos@gentoo.org> +gr-osmosdr-0.1.0.ebuild,
+  gr-osmosdr-0.0.2.ebuild:
+  adding gr-3.7 compat version p.masked due to not detecting gr-iqbal
 
   01 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove redundant osmosdr useflag description
