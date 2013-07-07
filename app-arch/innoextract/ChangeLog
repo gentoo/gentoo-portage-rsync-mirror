@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/innoextract
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/ChangeLog,v 1.8 2013/06/10 12:39:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/ChangeLog,v 1.9 2013/07/07 10:18:48 ago Exp $
+
+  07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> innoextract-1.4.ebuild:
+  Stable for x86, wrt bug #471560
 
   10 Jun 2013; Chema Alonso <nimiux@gentoo.org> innoextract-1.4.ebuild:
   Stable for amd64 wrt bug #471560

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.6 2013/06/18 18:01:47 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.7 2013/07/07 10:18:19 ago Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${DEB_P}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc gtk nls xforms xplanet"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="sys-libs/ncurses
 	gtk? ( x11-libs/gtk+:2 )

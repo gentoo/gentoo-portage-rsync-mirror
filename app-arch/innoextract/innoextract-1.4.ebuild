@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/innoextract-1.4.ebuild,v 1.2 2013/06/10 12:39:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/innoextract-1.4.ebuild,v 1.3 2013/07/07 10:18:48 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://github/dscharrer/InnoExtract/${P}.tar.gz
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="c++0x debug doc +lzma static"
 
 RDEPEND="
