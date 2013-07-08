@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.4.0.ebuild,v 1.1 2013/05/12 22:03:21 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.4.1.ebuild,v 1.1 2013/07/08 11:43:49 mschiff Exp $
 
 EAPI=4
 
@@ -48,8 +48,8 @@ REQUIRED_USE="
 PATCHES=(
 	"${FILESDIR}/${PN}-fix-localstatedir.patch"
 	"${FILESDIR}/${PN}-fix-run-dir.patch"
-	"${FILESDIR}/${PN}-drop-privileges-${PV}.patch"
-	"${FILESDIR}/${PN}-use-system-trang-${PV}.patch"
+	"${FILESDIR}/${PN}-drop-privileges.patch"
+	"${FILESDIR}/${PN}-use-system-trang.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
