@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bmf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.19 2013/01/30 13:58:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.20 2013/07/08 11:13:29 zlogene Exp $
+
+  08 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> bmf-0.9.4-r2.ebuild:
+  amd64 stable wrt bug #476110
 
   30 Jan 2013; Eray Aslan <eras@gentoo.org> -bmf-0.9.4-r1.ebuild,
   -bmf-0.9.4.ebuild:
