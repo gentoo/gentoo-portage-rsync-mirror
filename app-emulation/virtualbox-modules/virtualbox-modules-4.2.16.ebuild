@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.2.12.ebuild,v 1.1 2013/04/13 20:11:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.2.16.ebuild,v 1.1 2013/07/08 14:50:05 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
 
-EAPI=4
+EAPI=5
 
 inherit eutils linux-mod user
 

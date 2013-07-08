@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-4.2.12.ebuild,v 1.2 2013/06/18 12:09:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-4.2.16.ebuild,v 1.1 2013/07/08 14:50:31 polynomial-c Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils
 
@@ -23,6 +23,8 @@ RESTRICT="mirror"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	!=app-emulation/virtualbox-9999"
+
+S="${WORKDIR}"
 
 src_unpack() {
 	return 0

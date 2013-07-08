@@ -1,4 +1,9 @@
 
+*amd-adl-sdk-5.0 (08 Jul 2013)
+
+  08 Jul 2013; Michael Weber <xmw@gentoo.org> +amd-adl-sdk-5.0.ebuild:
+  Version bump, RESTRICT=fetch (bug 475562)
+
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
 

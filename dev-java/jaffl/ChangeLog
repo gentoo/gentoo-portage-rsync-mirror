@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jaffl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.7 2011/01/23 16:33:53 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.8 2013/07/08 14:49:10 tomwij Exp $
+
+*jaffl-0.5.11 (08 Jul 2013)
+
+  08 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +files/library-path-0.5.9.patch,
+  +jaffl-0.5.11.ebuild:
+  Version bump to 0.5.11.
 
   23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> jaffl-0.3.ebuild:
   Mark ~ppc wrt #299160
@@ -28,4 +34,3 @@
   31 Dec 2009; Alistair Bush <ali_bush@gentoo.org> +jaffl-0.3.ebuild,
   +files/library-path.patch, +metadata.xml:
   Add package as dependency of jruby
-

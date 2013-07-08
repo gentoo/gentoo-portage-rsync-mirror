@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.12.ebuild,v 1.3 2013/06/18 12:19:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.16.ebuild,v 1.1 2013/07/08 14:52:10 polynomial-c Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils linux-mod systemd user
 
@@ -102,15 +102,13 @@ src_compile() {
 		/src/VBox/Additions/linux/{sharedfolders,daemon} ; do
 				cd "${S}"${each}
 				MAKE="kmk" emake TOOL_YASM_AS=yasm \
-				KBUILD_PATH="${S}/kBuild" \
-				|| die "kmk VBoxControl failed"
+				KBUILD_PATH="${S}/kBuild"
 		done
 
 		if use X; then
 				cd "${S}"/src/VBox/Additions/x11/VBoxClient
 				MAKE="kmk" emake TOOL_YASM_AS=yasm \
-				KBUILD_PATH="${S}/kBuild" \
-				|| die "kmk VBoxClient failed"
+				KBUILD_PATH="${S}/kBuild"
 		fi
 
 		# Now creating the kernel modules. We must do this _after_

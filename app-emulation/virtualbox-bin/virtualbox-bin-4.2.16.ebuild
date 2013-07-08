@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.12.ebuild,v 1.4 2013/05/06 20:44:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.16.ebuild,v 1.1 2013/07/08 14:49:36 polynomial-c Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils unpacker fdo-mime gnome2 pax-utils udev
 
 MY_PV=${PV/beta/BETA}
 MY_PV=${MY_PV/rc/RC}
-VBOX_PV=${MY_PV}-84980
+VBOX_PV=${MY_PV}-86992
 SDK_PV=${VBOX_PV}
 EXTP_PV=${SDK_PV}
 MY_P=VirtualBox-${VBOX_PV}-Linux
@@ -208,15 +208,15 @@ src_install() {
 	doins UserManual.pdf
 
 	if use sdk ; then
-		doins -r sdk || die
+		doins -r sdk
 	fi
 
 	if use additions; then
-		doins -r additions || die
+		doins -r additions
 	fi
 
 	if use vboxwebsrv; then
-		doins vboxwebsrv || die
+		doins vboxwebsrv
 		fowners root:vboxusers /opt/VirtualBox/vboxwebsrv
 		fperms 0750 /opt/VirtualBox/vboxwebsrv
 		dosym /opt/VirtualBox/VBox.sh /opt/bin/vboxwebsrv
@@ -225,14 +225,14 @@ src_install() {
 	fi
 
 	if use rdesktop-vrdp; then
-		doins rdesktop-vrdp || die
-		doins -r rdesktop-vrdp-keymaps || die
+		doins rdesktop-vrdp
+		doins -r rdesktop-vrdp-keymaps
 		fperms 0750 /opt/VirtualBox/rdesktop-vrdp
 		dosym /opt/VirtualBox/rdesktop-vrdp /opt/bin/rdesktop-vrdp
 	fi
 
 	if ! use headless && use chm; then
-		doins kchmviewer VirtualBox.chm || die
+		doins kchmviewer VirtualBox.chm
 		fowners root:vboxusers /opt/VirtualBox/kchmviewer
 		fperms 0750 /opt/VirtualBox/kchmviewer
 	fi
@@ -241,7 +241,7 @@ src_install() {
 		local pyver
 		for pyver in 2.5 2.6 2.7; do
 			if has_version "=dev-lang/python-${pyver}*" && [ -f "${S}/VBoxPython${pyver/./_}.so" ] ; then
-				doins VBoxPython${pyver/./_}.so || die
+				doins VBoxPython${pyver/./_}.so
 			fi
 		done
 	fi
@@ -294,7 +294,7 @@ src_install() {
 	fi
 
 	exeinto /opt/VirtualBox
-	newexe "${FILESDIR}/${PN}-3-wrapper" "VBox.sh" || die
+	newexe "${FILESDIR}/${PN}-3-wrapper" "VBox.sh"
 	fowners root:vboxusers /opt/VirtualBox/VBox.sh
 	fperms 0750 /opt/VirtualBox/VBox.sh
 

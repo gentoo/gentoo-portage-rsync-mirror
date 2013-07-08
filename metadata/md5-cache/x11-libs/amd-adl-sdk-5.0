@@ -1,0 +1,13 @@
+DEFINED_PHASES=install nofetch
+DEPEND=app-arch/unzip
+DESCRIPTION=API to access display driver functionality for ATI graphics cards
+EAPI=5
+HOMEPAGE=http://developer.amd.com/sdks/adlsdk/
+IUSE=doc examples
+KEYWORDS=~amd64 ~x86
+LICENSE=AMD-ADL
+RDEPEND=x11-drivers/ati-drivers
+RESTRICT=fetch
+SLOT=0
+SRC_URI=ADL_SDK_5.0.zip
+_md5_=547094aa67b784540c12bc4c33f22200

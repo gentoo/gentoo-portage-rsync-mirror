@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.14.ebuild,v 1.1 2013/06/24 10:56:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.14.ebuild,v 1.2 2013/07/08 14:51:21 polynomial-c Exp $
 
 EAPI=5
 
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 	!headless? ( x11-libs/libXinerama )
 	pulseaudio? ( media-sound/pulseaudio )
 	vboxwebsrv? ( >=net-libs/gsoap-2.7.13 )
-	python? ( ${PYTHON_DEPS} )"
+	${PYTHON_DEPS}"
 PDEPEND="additions? ( ~app-emulation/virtualbox-additions-${PV} )
 	extensions? ( ~app-emulation/virtualbox-extpack-oracle-${PV} )"
 
@@ -112,9 +112,9 @@ REQUIRED_USE="
 	java? ( sdk )
 	python? (
 		( sdk )
-		( ${PYTHON_REQUIRED_USE} )
 	)
 	vboxwebsrv? ( java )
+	${PYTHON_REQUIRED_USE}
 "
 
 pkg_setup() {
@@ -129,6 +129,10 @@ pkg_setup() {
 	if ! use opengl ; then
 		einfo "No USE=\"opengl\" selected, this build will lack"
 		einfo "the OpenGL feature."
+	fi
+	if ! use python ; then
+		einfo "You have disabled the \"python\" USE flag. This will only"
+		einfo "disable the python bindings being installed."
 	fi
 	java-pkg-opt-2_pkg_setup
 	python-single-r1_pkg_setup
