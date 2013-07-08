@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/goobook
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/ChangeLog,v 1.3 2012/12/02 11:36:21 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/ChangeLog,v 1.4 2013/07/08 15:49:08 xmw Exp $
+
+*goobook-1.4-r1 (08 Jul 2013)
+
+  08 Jul 2013; Michael Weber <xmw@gentoo.org>
+  +files/goobook-1.4-hcs-utils-1.3.patch, +goobook-1.4-r1.ebuild:
+  Ebuild update and patch by Justin J. Snelgrove (bug 449916), slightly modified
+  by me.
 
 *goobook-1.4 (02 Dec 2012)
 

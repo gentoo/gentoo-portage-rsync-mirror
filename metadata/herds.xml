@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1034 2013/06/30 14:39:17 xarthisius Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1035 2013/07/08 15:39:16 tomwij Exp $
 
 -->
 <herds>
@@ -2177,40 +2177,48 @@
     </maintainer>
 </herd>
 <herd>
-	<name>proxy-maintainers</name>
-	<email>proxy-maint@gentoo.org</email>
-	<description>Orphaned packages maintained by Gentoo's proxy-maintainers team</description>
-	<maintainer>
-		<email>hwoarang@gentoo.org</email>
-		<name>Markos Chandras</name>
-	</maintainer>
+    <name>proxy-maintainers</name>
+    <email>proxy-maint@gentoo.org</email>
+    <description>Orphaned packages maintained by Gentoo's proxy-maintainers team</description>
+    <maintainer>
+        <email>hwoarang@gentoo.org</email>
+        <name>Markos Chandras</name>
+    </maintainer>
     <maintainer>
         <email>maksbotan@gentoo.org</email>
         <name>Maxim Koltsov</name>
     </maintainer>
-	<maintainer>
-		<email>pinkbyte@gentoo.org</email>
-		<name>Sergey Popov</name>
-	</maintainer>
-	<maintainer>
-		<email>phajdan.jr@gentoo.org</email>
-		<name>Paweł Hajdan</name>
-	</maintainer>
+    <maintainer>
+        <email>pinkbyte@gentoo.org</email>
+        <name>Sergey Popov</name>
+    </maintainer>
+    <maintainer>
+        <email>phajdan.jr@gentoo.org</email>
+        <name>Paweł Hajdan</name>
+    </maintainer>
     <maintainer>
         <email>qnikst@gentoo.org</email>
         <name>Alexander V. Vershilov</name>
     </maintainer>
-	<maintainer>
-	  <email>titanofold@gentoo.org</email>
-	  <name>Aaron W. Swenson</name>
-  </maintainer>
-  <maintainer>
-    <email>yngwin@gentoo.org</email>
-    <name>Ben de Groot</name>
-  </maintainer>
+    <maintainer>
+        <email>titanofold@gentoo.org</email>
+        <name>Aaron W. Swenson</name>
+    </maintainer>
+    <maintainer>
+        <email>yngwin@gentoo.org</email>
+        <name>Ben de Groot</name>
+    </maintainer>
     <maintainer>
         <email>xmw@gentoo.org</email>
         <name>Michael Weber</name>
+    </maintainer>
+    <maintainer>
+        <email>mrueg@gentoo.org</email>
+        <name>Manuel Rüger</name>
+    </maintainer>
+    <maintainer>
+        <email>TomWij@gentoo.org</email>
+        <name>Tom Wijsman</name>
     </maintainer>
 </herd>
 <herd>
