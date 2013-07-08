@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/Test-Output-0.16.ebuild,v 1.4 2010/06/27 17:57:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/Test-Output-0.16.ebuild,v 1.5 2013/07/08 09:41:09 vincent Exp $
 
-EAPI=2
+EAPI=5
 
 MODULE_AUTHOR=BDFOY
 inherit perl-module
