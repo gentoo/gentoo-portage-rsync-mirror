@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.582 2013/06/20 18:23:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.583 2013/07/08 10:54:00 polynomial-c Exp $
+
+*samba-4.0.7 (08 Jul 2013)
+
+  08 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> -samba-4.0.5.ebuild,
+  +samba-4.0.7.ebuild:
+  Version bump. Removed old.
 
   20 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> samba-3.6.16.ebuild:
   Added sys-libs/tevent to DEPEND. Thanks to Grzegorz {NineX} Krzystek for
