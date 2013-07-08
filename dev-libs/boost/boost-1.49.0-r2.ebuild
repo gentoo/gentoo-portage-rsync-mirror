@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r2.ebuild,v 1.5 2012/11/22 19:48:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r2.ebuild,v 1.6 2013/07/08 13:33:14 pinkbyte Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -27,6 +27,7 @@ RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	!app-admin/eselect-boost
 	elibc_glibc? ( <sys-libs/glibc-2.16 )"
 DEPEND="${RDEPEND}
+	app-arch/bzip2
 	=dev-util/boost-build-${MAJOR_V}*"
 
 S=${WORKDIR}/${MY_P}

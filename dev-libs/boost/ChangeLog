@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.291 2013/06/28 21:11:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.292 2013/07/08 13:33:14 pinkbyte Exp $
+
+  08 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> boost-1.49.0-r2.ebuild,
+  boost-1.52.0-r6.ebuild, boost-1.53.0.ebuild:
+  Add missing build-time dependency on app-arch/bzip2, wrt bug #469114, thanks
+  to Matt Whitlock and Tomáš Pružina
 
   28 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> boost-1.53.0.ebuild:
   Convert a few variables to prefix, keyword amd64-linux and x86-linux

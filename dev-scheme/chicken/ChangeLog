@@ -1,6 +1,15 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.53 2013/04/11 21:42:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.54 2013/07/08 13:41:06 xmw Exp $
+
+*chicken-4.8.0.3-r1 (08 Jul 2013)
+
+  08 Jul 2013; Michael Weber <xmw@gentoo.org> +chicken-4.8.0.3-r1.ebuild,
+  +files/chicken-4.8.0.3-CVE-2013-1874.patch,
+  +files/chicken-4.8.0.3-CVE-2013-2024.patch,
+  +files/chicken-4.8.0.3-CVE-2013-2075_1.patch,
+  +files/chicken-4.8.0.3-CVE-2013-2075_2.patch:
+  Revbump to include security patches (bugs 462458, 469392, 467966)
 
   11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> chicken-4.8.0.3.ebuild:
   Stable for amd64, wrt bug #455200
