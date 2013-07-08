@@ -1,0 +1,25 @@
+From d266f4361928778f79f8e5fbf01c5dc46dbfccd4 Mon Sep 17 00:00:00 2001
+From: Eugene Petrov <dhamp@ya.ru>
+Date: Mon, 24 Jun 2013 14:49:37 +0400
+Subject: [PATCH] Cmake: fix build sr@latin translation
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 581090b..d8bd6a7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -319,7 +319,7 @@ else (NOT DEFINED linguas)
+   elseif (linguas STREQUAL *)
+         set (LANGUAGES ${AllLanguages} CACHE STRING "Using translations" FORCE)
+   else (NOT linguas)
+-    string(REGEX MATCHALL [a-zA-Z_]+
++    string(REGEX MATCHALL [a-zA-Z_@]+
+            linguas1 ${linguas})
+     set (LANGUAGES ${linguas1} CACHE STRING "Using translations" FORCE)
+   endif (NOT linguas)
+-- 
+1.8.1.6
+
