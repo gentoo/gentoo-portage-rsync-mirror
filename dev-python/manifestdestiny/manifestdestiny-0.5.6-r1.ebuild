@@ -1,13 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/manifestdestiny-0.5.6.ebuild,v 1.1 2012/10/09 09:49:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/manifestdestiny-0.5.6-r1.ebuild,v 1.1 2013/07/08 15:18:20 idella4 Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python{2_5,2_6,2_7}  pypy2_0 )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="ManifestDestiny"
 MY_P="${MY_PN}-${PV}"
@@ -21,8 +19,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-PYTHON_MODNAME="manifestparser"

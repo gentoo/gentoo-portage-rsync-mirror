@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fxload
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.28 2013/07/08 14:59:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.29 2013/07/08 15:06:26 mrueg Exp $
+
+*fxload-20081013-r1 (08 Jul 2013)
+
+  08 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +fxload-20081013-r1.ebuild:
+  Update to a newer EAPI
 
   08 Jul 2013; Manuel Rüger <mrueg@gentoo.org>
   -files/fxload-20020411-linux-headers-2.6.19.patch,
