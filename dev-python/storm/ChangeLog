@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/storm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.12 2011/11/05 19:33:08 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.13 2013/07/08 05:35:00 patrick Exp $
+
+*storm-0.20 (08 Jul 2013)
+
+  08 Jul 2013; Patrick Lauer <patrick@gentoo.org> +storm-0.20.ebuild:
+  Bump
 
   05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> storm-0.19.ebuild:
   Fix support for Jython. Don't install C sources. Patch by Arfrever.
@@ -62,4 +67,3 @@
   10 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
   +storm-0.9.ebuild:
   Initial commit.
-
