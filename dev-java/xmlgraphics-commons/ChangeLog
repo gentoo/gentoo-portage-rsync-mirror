@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/xmlgraphics-commons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.24 2013/06/30 19:58:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.25 2013/07/08 14:10:00 tomwij Exp $
+
+*xmlgraphics-commons-1.5 (08 Jul 2013)
+
+  08 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/xmlgraphics-commons-1.5-disable-iccprofile-test.patch,
+  +xmlgraphics-commons-1.5.ebuild:
+  Version bump to 1.5. Fixes bug #440994 reported Guillaume Horel, contributed
+  together with Ivan Baidakou (dmol).
 
 *xmlgraphics-commons-1.2-r1 (30 Jun 2013)
 

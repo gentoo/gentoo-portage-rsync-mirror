@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/fop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.69 2012/10/18 08:40:33 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.70 2013/07/08 14:23:45 tomwij Exp $
+
+*fop-1.1 (08 Jul 2013)
+
+  08 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +fop-1.1.ebuild:
+  Version bump to 1.1, fixes bug #335858. Ebuild changes contributed by Ivan
+  Baidakou (dmol).
 
   18 Oct 2012; Christoph Junghans <ottxor@gentoo.org> fop-0.95.ebuild:
   added prefix support (bug #435376)

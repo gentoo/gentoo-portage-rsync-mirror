@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/java-gnome
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.115 2012/05/04 16:09:26 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.116 2013/07/08 14:09:02 tomwij Exp $
+
+*java-gnome-4.0.20 (08 Jul 2013)
+*java-gnome-4.1.3 (08 Jul 2013)
+
+  08 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/java-gnome-4.0.20-extendsboxed.patch,
+  +files/java-gnome-4.0.20-libnotify-0.7.patch, +java-gnome-4.0.20.ebuild,
+  +java-gnome-4.1.3.ebuild:
+  Version bump to 4.0.20 (includes build patch for bug #425290 and bug #472672)
+  and 4.1.3 (fixes bug #435104).
 
 *java-gnome-4.1.1 (04 May 2012)
 *java-gnome-4.0.19-r1 (04 May 2012)
