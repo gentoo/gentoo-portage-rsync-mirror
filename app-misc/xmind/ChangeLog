@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/xmind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.5 2013/06/30 12:44:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.6 2013/07/08 02:10:42 creffett Exp $
+
+  08 Jul 2013; Chris Reffett <creffett@gentoo.org>
+  xmind-3.3.1.201212250029.ebuild:
+  Make several small fixes to ebuild, credit to hasufell for suggestions
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
   xmind-3.3.1.201212250029.ebuild:

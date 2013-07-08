@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation.
+# Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.11 2012/10/15 15:58:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.12 2013/07/08 02:08:01 aballier Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -17,8 +17,8 @@ DEFAULT_ABI="amd64_fbsd"
 ABI="amd64_fbsd"
 
 # 32bit specific settings.
-CFLAGS_x86_fbsd="-m32 -DCOMPAT_32BIT"
-LDFLAGS_x86_fbsd="-m elf_i386_fbsd"
+CFLAGS_x86_fbsd="-m32 -DCOMPAT_32BIT -B/usr/lib32 -L/usr/lib32"
+LDFLAGS_x86_fbsd="-m elf_i386_fbsd -L/usr/lib32"
 
 USE="mmx sse sse2"
 

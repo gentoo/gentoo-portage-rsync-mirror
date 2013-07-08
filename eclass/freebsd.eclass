@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.28 2013/06/18 17:30:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.29 2013/07/08 02:08:44 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -144,8 +144,6 @@ freebsd_multilib_multibuild_wrapper() {
 	mymakeopts="${mymakeopts} TARGET=${target} MACHINE=${target} MACHINE_ARCH=${target} SHLIBDIR=/usr/$(get_libdir) LIBDIR=/usr/$(get_libdir)"
 	if use multilib && [ "${ABI}" != "${DEFAULT_ABI}" ] ; then
 		mymakeopts="${mymakeopts} COMPAT_32BIT="
-		# Teach gcc where to find crt* files.
-		export LDFLAGS="${LDFLAGS} -L/usr/$(get_libdir) -B/usr/$(get_libdir)"
 	fi
 
 	einfo "Building for ABI=${ABI} and TARGET=${target}"
