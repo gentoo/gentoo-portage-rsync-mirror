@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.8 2013/07/05 21:12:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.10 2013/07/08 06:05:51 scarabeus Exp $
+
+  08 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Fix repoman warning.
+
+  08 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Remove networking code switches as the code was dropped.
 
   05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml,
   mpv-9999.ebuild:

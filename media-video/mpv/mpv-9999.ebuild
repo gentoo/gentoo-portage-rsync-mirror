@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.8 2013/07/05 21:12:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.9 2013/07/08 06:03:47 scarabeus Exp $
 
 EAPI=5
 
@@ -18,13 +18,13 @@ LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa aqua bluray bs2b cddb +cdio debug +dts dvb +dvd +enca encode fbcon ftp
-+iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca libguess lirc mng +mp3
-+network -openal +opengl oss portaudio +postproc pulseaudio pvr +quvi radio samba +shm
-v4l vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
+IUSE="+alsa aqua bluray bs2b +cdio debug +dts dvb +dvd +enca encode fbcon
++iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca
+libguess lirc mng +mp3 -openal +opengl oss portaudio +postproc pulseaudio pvr
++quvi radio samba +shm v4l vcd vdpau vf-dlopen wayland +X xinerama
++xscreensaver +xv"
 
 REQUIRED_USE="
-	cddb? ( cdio network )
 	lcms? ( opengl )
 	libass? ( iconv )
 	opengl? ( || ( aqua wayland X ) )
@@ -159,9 +159,8 @@ src_configure() {
 	myconf+=" --disable-sdl --disable-sdl2"
 	use wayland || myconf+=" --disable-wayland"
 	use encode || myconf+=" --disable-encoding"
-	use network || myconf+=" --disable-networking"
 	myconf+=" $(use_enable joystick)"
-	uses="bluray enca ftp libass libguess vcd"
+	uses="bluray enca libass libguess vcd"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
@@ -178,7 +177,6 @@ src_configure() {
 	########
 	# CDDA #
 	########
-	use cddb || myconf+=" --disable-cddb"
 	use cdio || myconf+=" --disable-libcdio"
 
 	################################
