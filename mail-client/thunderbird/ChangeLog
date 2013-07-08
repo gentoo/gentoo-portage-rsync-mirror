@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.227 2013/06/29 15:29:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.228 2013/07/08 02:51:20 anarchy Exp $
+
+*thunderbird-17.0.7-r1 (08 Jul 2013)
+
+  08 Jul 2013; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-17.0.7-r1.ebuild:
+  Update to latest release of enigmail,  bug #475656
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-17.0.7.ebuild:
   Stable for arm, wrt bug #474758
