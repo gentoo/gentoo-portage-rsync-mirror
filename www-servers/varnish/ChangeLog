@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.62 2013/06/21 12:51:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.63 2013/07/08 22:11:35 blueness Exp $
+
+*varnish-3.0.4-r1 (08 Jul 2013)
+
+  08 Jul 2013; Anthony G. Basile <blueness@gentoo.org> +files/varnishd.confd-r1,
+  +files/varnishd.initd-r1, +varnish-3.0.4-r1.ebuild:
+  Add sanity test and reload functionality to init.d script, bug #475600
 
   21 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
   +files/varnish-3.0.4-fix-automake-1.13.patch, varnish-3.0.4.ebuild:
