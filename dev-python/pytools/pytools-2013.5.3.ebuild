@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/pytools-2013.5.3.ebuild,v 1.1 2013/07/07 16:25:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/pytools-2013.5.3.ebuild,v 1.2 2013/07/08 05:07:27 patrick Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ IUSE="test"
 
 DEPEND="
 	>=dev-python/setuptools-0.7.2[${PYTHON_USEDEP}]
-	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
+	test? ( dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/decorator[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
 python_test() {

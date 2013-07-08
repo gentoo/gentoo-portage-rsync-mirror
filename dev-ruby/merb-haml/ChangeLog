@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/merb-haml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-haml/ChangeLog,v 1.4 2012/08/14 18:39:31 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-haml/ChangeLog,v 1.5 2013/07/08 05:15:48 graaff Exp $
+
+  08 Jul 2013; Hans de Graaff <graaff@gentoo.org> -merb-haml-1.1.2.ebuild:
+  Cleanup.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.

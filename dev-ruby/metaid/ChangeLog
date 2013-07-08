@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaid
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/ChangeLog,v 1.13 2011/12/19 18:06:27 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/ChangeLog,v 1.14 2013/07/08 05:11:57 graaff Exp $
+
+  08 Jul 2013; Hans de Graaff <graaff@gentoo.org> -metaid-1.0-r1.ebuild:
+  Cleanup.
 
 *metaid-1.0-r2 (19 Dec 2011)
 

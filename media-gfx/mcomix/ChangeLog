@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/mcomix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.15 2013/05/26 07:19:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.16 2013/07/08 05:19:47 dirtyepic Exp $
+
+*mcomix-1.00-r1 (08 Jul 2013)
+
+  08 Jul 2013; Ryan Hill <dirtyepic@gentoo.org> -mcomix-0.99-r1.ebuild,
+  +mcomix-1.00-r1.ebuild, -files/mcomix-0.99-auto-rotate.patch:
+  Stop installing comicthumb for bug #471532. It's a leftover from comix and
+  has never actually worked properly here. Change imaging dep to virtual. If
+  you encounter blockers then try uninstalling dev-python/imaging first. Remove
+  old.
 
 *mcomix-1.00 (26 May 2013)
 
