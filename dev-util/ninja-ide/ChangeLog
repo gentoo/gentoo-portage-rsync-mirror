@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ninja-ide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.18 2013/07/04 09:13:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.19 2013/07/08 18:10:57 hasufell Exp $
+
+*ninja-ide-2.3 (08 Jul 2013)
+
+  08 Jul 2013; Julian Ospald <hasufell@gentoo.org> +ninja-ide-2.3.ebuild,
+  +files/ninja-ide-2.3-python2_6.patch, +files/ninja-ide-2.3-syntax.patch:
+  version bump wrt #476176
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ninja-ide-2.2.ebuild:
   Stable for x86, wrt bug #467132
