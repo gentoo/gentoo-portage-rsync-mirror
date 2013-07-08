@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reviewboard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.2 2013/06/28 02:52:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.3 2013/07/08 21:01:02 floppym Exp $
+
+  08 Jul 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop python herd, add idella4 and kensington as maintainers.
 
 *reviewboard-1.7.7.1-r1 (28 Jun 2013)
 
