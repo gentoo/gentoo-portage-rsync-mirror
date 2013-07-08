@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.69 2013/01/15 05:27:05 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.70 2013/07/08 18:46:51 graaff Exp $
+
+  08 Jul 2013; Hans de Graaff <graaff@gentoo.org> -bluecloth-2.0.7.ebuild:
+  Cleanup.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> bluecloth-2.2.0.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps

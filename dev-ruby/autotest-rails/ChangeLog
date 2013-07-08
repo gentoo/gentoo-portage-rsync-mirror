@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/autotest-rails
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.20 2012/08/05 20:57:35 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.21 2013/07/08 18:47:31 graaff Exp $
+
+  08 Jul 2013; Hans de Graaff <graaff@gentoo.org>
+  -autotest-rails-4.1.0-r1.ebuild:
+  Cleanup.
 
   05 Aug 2012; Agostino Sarubbo <ago@gentoo.org> autotest-rails-4.1.2.ebuild:
   Stable for amd64, wrt bug #428692
