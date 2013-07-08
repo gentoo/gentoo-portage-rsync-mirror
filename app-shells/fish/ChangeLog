@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/fish
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.55 2012/11/29 04:05:09 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.56 2013/07/08 20:29:07 polynomial-c Exp $
+
+*fish-2.0.0 (08 Jul 2013)
+
+  08 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> +fish-2.0.0.ebuild:
+  Non-maintainer commit: Version bump (bug #470144).
 
   29 Nov 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Adopt fish
