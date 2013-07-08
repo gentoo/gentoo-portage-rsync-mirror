@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.228 2013/07/08 02:51:20 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.229 2013/07/08 07:08:01 polynomial-c Exp $
+
+  08 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> Manifest:
+  Fixed enigmail checksum.
 
 *thunderbird-17.0.7-r1 (08 Jul 2013)
 
