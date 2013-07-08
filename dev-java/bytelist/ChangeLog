@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bytelist
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.17 2012/05/09 17:07:57 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.18 2013/07/08 12:59:35 tomwij Exp $
+
+*bytelist-1.0.10 (08 Jul 2013)
+
+  08 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +bytelist-1.0.10.ebuild:
+  Version bump to 1.0.10.
 
   09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bytelist-1.0.9.ebuild:
   x86 stable wrt bug #396305
@@ -66,4 +71,3 @@
   15 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org> +metadata.xml,
   +bytelist-1.0.ebuild:
   Ebuild moved from java-overlay to the main tree. Ebuild created by Chewi.
-
