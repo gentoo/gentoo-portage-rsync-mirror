@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.138 2013/06/17 06:01:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.139 2013/07/08 16:35:57 xmw Exp $
+
+# Michael Weber <xmw@gentoo.org> (08 Jul 2013)
+# missing keywords on dev-python/pydns
+net-dns/rbldnsd test
 
 # Patrick Lauer <patrick@gentoo.org> (17 June 2013)
 # Fix per-arch mask of phonon[zeitgeist] #460140

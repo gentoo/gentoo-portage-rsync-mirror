@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.01_pre6.ebuild,v 1.1 2013/07/03 15:23:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.02_pre2.ebuild,v 1.1 2013/07/08 16:45:04 chithanh Exp $
 
 EAPI=4
 

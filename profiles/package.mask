@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14902 2013/07/08 13:40:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14904 2013/07/08 16:59:18 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,7 +38,7 @@
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Jun 2013)
 # Prerelease ebuild, mostly untested and held together by duct tape.
-=sys-boot/syslinux-6.01_pre*
+=sys-boot/syslinux-6.02_pre*
 
 # Davide Pesavento <pesa@gentoo.org> (01 Jul 2013)
 # New releases, need to check reverse deps.
@@ -693,11 +693,6 @@ media-gfx/yafaray
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
 =dev-libs/openssl-1.0.1d
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (25 Jan 2013)
-# Masked for testing
->=dev-libs/boost-1.53.0_beta1
->=dev-util/boost-build-1.53.0_beta1
 
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
