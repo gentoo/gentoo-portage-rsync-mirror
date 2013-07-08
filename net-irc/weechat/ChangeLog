@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.132 2013/05/23 11:31:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.133 2013/07/08 08:57:51 scarabeus Exp $
+
+  08 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> -files/weechat-icon.patch,
+  -weechat-0.4.0.ebuild, weechat-0.4.1.ebuild:
+  Stabilise 0.4.1 on x86 ppc and amd64. Drop older. Drop unused patch.
 
 *weechat-0.4.1 (23 May 2013)
 

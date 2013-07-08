@@ -1,15 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libextractor-python/libextractor-python-0.6.ebuild,v 1.1 2012/05/11 08:35:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libextractor-python/libextractor-python-0.6-r1.ebuild,v 1.1 2013/07/08 08:32:54 idella4 Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.6"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-PYTHON_MODNAME="extractor.py"
+PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="A library used to extract metadata from files of arbitrary type"
 HOMEPAGE="http://www.gnu.org/software/libextractor/"
@@ -22,6 +19,6 @@ IUSE=""
 
 RDEPEND=">=media-libs/libextractor-0.6.3"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Extractor-${PV}
