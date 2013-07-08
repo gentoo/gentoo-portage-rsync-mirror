@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.6 2013/07/04 14:37:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.7 2013/07/08 07:42:48 idella4 Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-tests-respect-tmpdir.patch
 
 	# Skip test as root; Bug #475134
-	"{FILESDIR}"/${P}-skip-test-as-root.patch
+	"${FILESDIR}"/${P}-skip-test-as-root.patch
 )
 
 python_test() {

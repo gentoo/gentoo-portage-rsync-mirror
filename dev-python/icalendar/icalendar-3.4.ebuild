@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-3.4.ebuild,v 1.2 2013/06/23 16:52:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-3.4.ebuild,v 1.3 2013/07/08 07:56:07 idella4 Exp $
 
 EAPI="5"
 
@@ -20,12 +20,11 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="doc test"
 DOCS="README.rst"
 
-RDEPEND=""
+RDEPEND=">=dev-python/python-dateutil-1.5[${PYTHON_USEDEP}]
+	dev-python/pytz[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
-	dev-python/pytz[${PYTHON_USEDEP}] )
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}]
-	>=dev-python/python-dateutil-1.5[${PYTHON_USEDEP}] )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
 
 python_compile_all() {
 	if use doc; then
