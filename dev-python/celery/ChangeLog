@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.26 2013/05/10 03:50:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.27 2013/07/08 08:25:47 patrick Exp $
+
+*celery-3.0.21 (08 Jul 2013)
+
+  08 Jul 2013; Patrick Lauer <patrick@gentoo.org> +celery-3.0.21.ebuild:
+  Bump
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> celery-3.0.19.ebuild:
   Restricting to py2.7 until pymongo (re)gains py3 support
