@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.01-r2.ebuild,v 1.1 2013/07/06 15:40:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.01-r3.ebuild,v 1.1 2013/07/08 10:27:56 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -29,9 +29,7 @@ RDEPEND="
 DOCS=( ChangeLog NEWS README )
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-install.patch \
-		"${FILESDIR}"/${P}_cur.patch
-
+	epatch "${FILESDIR}"/${P}-install.patch
+	cp "${FILESDIR}"/${P}_cur ${PN}_cur
 	eautoreconf
 }
