@@ -1,4 +1,5 @@
 https://bugs.gentoo.org/show_bug.cgi?id=449916#c1
+reported upstream as http://code.google.com/p/goobook/issues/detail?id=39
 
 diff -uNr goobook-1.4.old/goobook/goobook.py goobook-1.4/goobook/goobook.py
 --- goobook-1.4.old/goobook/goobook.py	2012-11-10 08:00:44.000000000 -0500

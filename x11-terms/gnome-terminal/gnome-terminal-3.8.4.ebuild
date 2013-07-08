@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.8.2.ebuild,v 1.2 2013/05/18 19:42:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.8.4.ebuild,v 1.1 2013/07/08 17:25:17 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,10 +20,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~
 RDEPEND="
 	>=dev-libs/glib-2.33.2:2
 	>=x11-libs/gtk+-3.6:3[X]
-	>=x11-libs/vte-0.34.5:2.90
+	>=x11-libs/vte-0.34.6:2.90
 	>=gnome-base/gconf-2.31.3
 	>=gnome-base/dconf-0.12
 	>=gnome-base/gsettings-desktop-schemas-0.1.0
+	sys-apps/util-linux
 	x11-libs/libSM
 	x11-libs/libICE
 	nautilus? ( >=gnome-base/nautilus-3 )
@@ -47,7 +48,7 @@ src_configure() {
 	# FIXME: leave smclient configure unset until it accepts values from the
 	# switch and not from GDK_TARGET, bug #363033
 	gnome2_src_configure \
-	        --disable-static \
+		--disable-static \
 		--enable-migration \
 		$(use_with nautilus nautilus-extension)
 }

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.7.1.ebuild,v 1.2 2012/07/04 21:24:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.7.2.ebuild,v 1.1 2013/07/08 17:22:15 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils versionator
 
@@ -13,25 +13,26 @@ DESCRIPTION="Collection of scripts to access the CDS databases"
 HOMEPAGE="http://cdsweb.u-strasbg.fr/doc/cdsclient.html"
 SRC_URI="ftp://cdsarc.u-strasbg.fr/pub/sw/${MYP}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
+RESTRICT="mirror bindist"
 DEPEND=""
 RDEPEND="app-shells/tcsh"
 
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-gentoo.diff
+	epatch "${FILESDIR}"/${PN}-makefile.patch
 	# remove non standard "mantex" page
 	sed -i -e 's/aclient.tex//' configure || die
 }
 
 src_install() {
 	local bindir="${EPREFIX}/usr/bin/${PN}"
-	emake DESTDIR="${D}" SHSDIR="${bindir}" install
+	emake DESTDIR="${D}" SHSDIR="${D}${bindir}" install
 	cat <<-EOF > 99${PN}
 		PATH=${bindir}
 		ROOTPATH=${bindir}

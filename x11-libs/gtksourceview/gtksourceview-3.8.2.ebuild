@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.8.0.ebuild,v 1.1 2013/03/28 22:19:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.8.2.ebuild,v 1.1 2013/07/08 17:29:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
