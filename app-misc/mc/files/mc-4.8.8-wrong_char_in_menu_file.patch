@@ -1,0 +1,11 @@
+Index: misc/mc.menu
+===================================================================
+--- misc/mc.menu	(revision be2883dc86d01fa54003ec75b0a1fc9ed93c9358)
++++ misc/mc.menu	(revision a467bb4b6e2bec83dae4bbdd98ee529ffc45e4b1)
+@@ -66,5 +66,5 @@
+ = f \.c$ & t r
+ + f \.c$ & t r & ! t t
+-с       Compile and link current .c file
++c       Compile and link current .c file
+         make `basename %f .c` 2>/dev/null || cc -O -o `basename %f .c` %f
+ 

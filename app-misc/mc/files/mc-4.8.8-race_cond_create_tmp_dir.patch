@@ -1,0 +1,37 @@
+Index: lib/vfs/interface.c
+===================================================================
+--- lib/vfs/interface.c	(revision 2640b21bb9700aa51a70f35f9e10732c82a7366f)
++++ lib/vfs/interface.c	(revision 33c47b5734771e54f10b2e3cf42cf2ae943b09c1)
+@@ -841,18 +841,18 @@
+     canonicalize_pathname (buffer);
+ 
+-    if (lstat (buffer, &st) == 0)
+-    {
+-        /* Sanity check for existing directory */
+-        if (!S_ISDIR (st.st_mode))
+-            error = _("%s is not a directory\n");
+-        else if (st.st_uid != getuid ())
+-            error = _("Directory %s is not owned by you\n");
+-        else if (((st.st_mode & 0777) != 0700) && (chmod (buffer, 0700) != 0))
+-            error = _("Cannot set correct permissions for directory %s\n");
+-    }
+-    else
+-    {
+-        /* Need to create directory */
+-        if (mkdir (buffer, S_IRWXU) != 0)
++    /* Try to create directory */
++    if (mkdir (buffer, S_IRWXU) != 0)
++    {
++        if (errno == EEXIST && lstat (buffer, &st) == 0)
++        {
++            /* Sanity check for existing directory */
++            if (!S_ISDIR (st.st_mode))
++                error = _("%s is not a directory\n");
++            else if (st.st_uid != getuid ())
++                error = _("Directory %s is not owned by you\n");
++            else if (((st.st_mode & 0777) != 0700) && (chmod (buffer, 0700) != 0))
++                error = _("Cannot set correct permissions for directory %s\n");
++        }
++        else
+         {
+             fprintf (stderr,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.128 2013/06/22 15:59:49 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.129 2013/07/09 10:07:26 pesa Exp $
 
 # William Hubbs <williamh@gentoo.org> (22 June 2013)
 # dev-python/cython is not keyworded for alpha
@@ -63,6 +63,8 @@ gnome-extra/libgda reports
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
 # dev-qt/qtwebkit doesn't seem to work
 dev-python/PyQt4 webkit
+dev-qt/assistant webkit
+dev-qt/designer webkit
 dev-qt/qtdeclarative webkit
 dev-qt/qthelp webkit
 net-irc/kvirc webkit

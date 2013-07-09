@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14907 2013/07/09 00:37:29 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14908 2013/07/09 10:18:34 hanno Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hanno Boeck <hanno@gentoo.org> (9 Jul 2013)
+# Part of old and deprecated openvas versions,
+# removal in about 30 days
+net-analyzer/openvas-client
+net-analyzer/openvas-libnasl
+net-analyzer/openvas-plugins
+net-analyzer/openvas-server
 
 # Chris Reffett <creffett@gentoo.org> (8 Jul 2013)
 # Masked because of security problems in tg-widgets-scriptaculous

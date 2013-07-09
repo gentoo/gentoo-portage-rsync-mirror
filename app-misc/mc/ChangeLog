@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.282 2013/07/03 07:35:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.283 2013/07/09 10:11:06 polynomial-c Exp $
+
+*mc-4.8.8-r2 (09 Jul 2013)
+
+  09 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> -mc-4.8.1-r1.ebuild,
+  -mc-4.8.8.ebuild, +mc-4.8.8-r2.ebuild, mc-9999.ebuild,
+  -files/mc-4.8.1-fix-vfs-test.patch, -files/mc-4.8.1-muldefs.patch,
+  -files/mc-4.8.1-muldefs-in.patch,
+  +files/mc-4.8.8-race_cond_create_tmp_dir.patch,
+  +files/mc-4.8.8-wrong_char_in_menu_file.patch:
+  Revision bump to fix bug #403863 and bug #461284. Fixed unquoted variable in
+  live ebuild. Removed old versions.
 
   03 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org>
   +files/mc-4.8.9-unknown-opts.patch, mc-9999.ebuild:
