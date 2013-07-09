@@ -1,4 +1,7 @@
 
+  09 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20120821.ebuild:
+  Convert to distutils-r1
 
 *libnatpmp-20120821 (27 Aug 2012)
 
@@ -18,4 +21,3 @@
   +libnatpmp-20110715.ebuild, +files/link-against-system-lib.patch,
   +metadata.xml:
   Initial commit
-

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/rbldnsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.23 2013/07/08 17:08:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.24 2013/07/09 00:10:44 jer Exp $
+
+  09 Jul 2013; Jeroen Roovers <jer@gentoo.org> rbldnsd-0.997.ebuild:
+  Marked ~hppa (bug #476198).
 
 *rbldnsd-0.997 (08 Jul 2013)
 
