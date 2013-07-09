@@ -1,20 +1,20 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.24.ebuild,v 1.2 2012/06/07 21:28:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.26.ebuild,v 1.1 2013/07/09 15:34:34 bicatali Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils elisp-common multilib toolchain-funcs versionator
 
 CPV=($(get_version_components ${PV}))
 CMT_PV=v${CPV[0]}r${CPV[1]}
 
 DESCRIPTION="Cross platform configuration management environment"
-HOMEPAGE="http://www.cmtsite.org/"
-SRC_URI="http://www.cmtsite.org/${CMT_PV}/CMT${CMT_PV}.tar.gz"
+HOMEPAGE="http://www.cmtsite.net/"
+SRC_URI="http://www.cmtsite.net/${CMT_PV}/CMT${CMT_PV}.tar.gz"
 
 LICENSE="CeCILL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="emacs java doc"
 
 DEPEND="emacs? ( virtual/emacs )"
@@ -22,10 +22,6 @@ RDEPEND="${DEPEND}
 	java? ( virtual/jdk )"
 
 S="${WORKDIR}/CMT/${CMT_PV}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.22-limits.patch
-}
 
 src_configure() {
 	cd "${S}"/mgr
@@ -35,7 +31,7 @@ src_configure() {
 
 src_compile() {
 	cd "${S}"/mgr
-	emake -j1 \
+	emake \
 		cpp="$(tc-getCXX)" \
 		cppflags="${CXXFLAGS}" \
 		cpplink="$(tc-getCXX) ${LDFLAGS}"
@@ -43,22 +39,20 @@ src_compile() {
 	sed -i -e "s:${WORKDIR}:${EPREFIX}/usr/$(get_libdir):g" setup.*sh || die
 	cd "${S}"
 	mv src/demo .
-	rm -f ${CMTBIN}/*.o
+	rm ${CMTBIN}/*.o || die
 
-	if use emacs; then
-		elisp-compile doc/cmt-mode.el || die
-	fi
+	use emacs && elisp-compile doc/cmt-mode.el
 }
 
 src_install() {
-	CMTDIR="${EPREFIX}"/usr/$(get_libdir)/CMT/${CMT_PV}
+	CMTDIR=/usr/$(get_libdir)/CMT/${CMT_PV}
 	dodir ${CMTDIR}
 	cp -pPR mgr src ${CMTBIN} "${ED}"/${CMTDIR} || die
 	dodir /usr/bin
 	dosym ${CMTDIR}/${CMTBIN}/cmt.exe /usr/bin/cmt
 
 	cat > 99cmt <<-EOF
-		 CMTROOT="${CMTDIR}"
+		 CMTROOT="${EROOT%/}${CMTDIR}"
 		 CMTBIN="$(uname)-$(uname -m | sed -e 's# ##g')"
 		 CMTCONFIG="$(${CMTROOT}/mgr/cmt_system.sh)"
 	EOF

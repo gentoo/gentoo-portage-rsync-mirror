@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.10 2013/07/08 23:42:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.11 2013/07/09 15:55:57 scarabeus Exp $
 
 EAPI=5
 
@@ -18,9 +18,9 @@ LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa aqua bluray bs2b +cdio dvb +dvd +enca encode fbcon +iconv jack
-joystick jpeg ladspa lcms +libass libcaca libguess lirc mng +mp3 -openal +opengl
-oss portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vcd
+IUSE="+alsa aqua bluray bs2b +cdio dvb +dvd +enca encode +iconv jack joystick
+jpeg ladspa lcms +libass libcaca libguess lirc mng +mp3 -openal +opengl oss
+portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vcd
 vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
@@ -28,8 +28,10 @@ REQUIRED_USE="
 	lcms? ( opengl )
 	libguess? ( iconv )
 	opengl? ( || ( aqua wayland X ) )
+	portaudio? ( threads )
 	pvr? ( v4l )
 	radio? ( v4l || ( alsa oss ) )
+	v4l? ( threads )
 	vdpau? ( X )
 	wayland? ( opengl )
 	xinerama? ( X )
@@ -38,6 +40,10 @@ REQUIRED_USE="
 "
 
 RDEPEND+="
+	|| (
+		>=media-video/libav-9:=[encode?,threads?,vdpau?]
+		>=media-video/ffmpeg-1.2[encode?,threads?,vdpau?]
+	)
 	sys-libs/ncurses
 	sys-libs/zlib
 	X? (
@@ -91,7 +97,6 @@ RDEPEND+="
 		media-libs/mesa[egl,wayland]
 		>=x11-libs/libxkbcommon-0.3.0
 	)
-	|| ( >=media-video/libav-9[encode?,threads?,vdpau?] >=media-video/ffmpeg-1.2[encode?,threads?,vdpau?] )
 "
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
@@ -108,7 +113,7 @@ DEPEND="${RDEPEND}
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
 "
-DOCS=( AUTHORS Copyright README.md etc/example.conf etc/input.conf )
+DOCS=( AUTHORS Copyright README.md etc/example.conf etc/input.conf etc/encoding-example-profiles.conf )
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then

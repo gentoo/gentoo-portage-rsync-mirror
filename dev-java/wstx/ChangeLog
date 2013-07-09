@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/wstx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/ChangeLog,v 1.6 2013/03/17 15:26:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/ChangeLog,v 1.7 2013/07/09 15:34:03 tomwij Exp $
+
+*wstx-3.2.9 (09 Jul 2013)
+
+  09 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/wstx-3.2.9-build.xml.patch, +wstx-3.2.9.ebuild:
+  Version bump to 3.2.9.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

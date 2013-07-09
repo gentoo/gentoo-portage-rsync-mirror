@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_proxy_html
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.20 2013/01/02 13:23:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.21 2013/07/09 15:43:14 kensington Exp $
+
+  09 Jul 2013; Michael Palimaka <kensington@gentoo.org>
+  -mod_proxy_html-3.0.1.ebuild, mod_proxy_html-3.1.2.ebuild:
+  Remove mirror restriction. Remove old.
 
   02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mod_proxy_html-3.1.2.ebuild:
   Stable for x86, wrt bug #449506

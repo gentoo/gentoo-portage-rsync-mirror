@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/mod_proxy_html-3.1.2.ebuild,v 1.3 2013/01/02 13:23:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/mod_proxy_html-3.1.2.ebuild,v 1.4 2013/07/09 15:43:14 kensington Exp $
 
 inherit apache-module
 
 DESCRIPTION="An Apache2 module to rewrite links in html pages behind a reverse proxy."
 HOMEPAGE="http://apache.webthing.com/mod_proxy_html/"
 SRC_URI="http://apache.webthing.com/mod_proxy_html/${P}.tar.bz2"
-# Source is not currently available on the gentoo mirrors
-RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
