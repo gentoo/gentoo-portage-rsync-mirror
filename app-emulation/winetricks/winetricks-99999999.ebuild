@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-99999999.ebuild,v 1.9 2013/06/30 02:29:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-99999999.ebuild,v 1.10 2013/07/09 02:29:18 tetromino Exp $
 
 EAPI=5
 
@@ -27,13 +27,20 @@ IUSE="gtk kde"
 
 DEPEND=""
 RDEPEND="app-arch/cabextract
+	app-arch/p7zip
+	app-arch/unrar
 	app-arch/unzip
 	app-emulation/wine
+	net-misc/wget
+	x11-misc/xdg-utils
 	gtk? ( gnome-extra/zenity )
 	kde? ( kde-base/kdialog )"
 
 # Uses non-standard "Wine" category, which is provided by app-emulation/wine; #451552
 QA_DESKTOP_FILE="usr/share/applications/winetricks.desktop"
+
+# Tests require network access and run wine, which is unreliable from a portage environment
+RESTRICT="test"
 
 S="${WORKDIR}"
 

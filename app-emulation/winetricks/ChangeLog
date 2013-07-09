@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.23 2013/06/30 02:29:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.24 2013/07/09 02:29:18 tetromino Exp $
+
+  09 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  winetricks-20130629.ebuild, winetricks-99999999.ebuild:
+  Restrict tests (they require network access and try to start wine) and add
+  missing dependencies (bug #475918, thanks to Markus Oehme).
 
 *winetricks-20130629 (30 Jun 2013)
 

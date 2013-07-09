@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/emacspeak
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.47 2010/12/03 18:35:56 williamh Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.48 2013/07/09 02:25:08 williamh Exp $
+
+*emacspeak-38.0 (09 Jul 2013)
+
+  09 Jul 2013; William Hubbs <williamh@gentoo.org> +emacspeak-38.0.ebuild,
+  emacspeak-9999.ebuild:
+  Version bump for bug #476188. Thanks to Chris Brannon. Also sync live ebuild.
 
   03 Dec 2010; William Hubbs <williamh@gentoo.org> emacspeak-33.0.ebuild,
   emacspeak-9999.ebuild:

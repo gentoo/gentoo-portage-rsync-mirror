@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.88 2013/07/04 02:05:28 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.89 2013/07/09 02:07:29 patrick Exp $
+
+*bsddb3-6.0.0 (09 Jul 2013)
+
+  09 Jul 2013; Patrick Lauer <patrick@gentoo.org> +bsddb3-6.0.0.ebuild:
+  Bump
 
   04 Jul 2013; Benda Xu <heroxbd@gentoo.org> bsddb3-5.3.0-r1.ebuild:
   keyword amd64-linux and x86-linux

@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install preinst prepare unpack
 DEPEND=>=virtual/emacs-22 espeak? ( app-accessibility/espeak ) || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=the emacspeak audio desktop
-EAPI=2
+EAPI=5
 HOMEPAGE=http://emacspeak.sourceforge.net/
 IUSE=+espeak
 LICENSE=BSD GPL-2
 RDEPEND=>=virtual/emacs-22 espeak? ( app-accessibility/espeak ) >=dev-tcltk/tclx-8.4
 SLOT=0
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	subversion	869118194bbbecaa8f935e185befcdb7	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=0c6c584a4ae19d82b9c4755648e5eb45
+_md5_=e64cde12a1c33cf0211de80f7858090c
