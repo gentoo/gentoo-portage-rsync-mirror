@@ -1,6 +1,11 @@
 # ChangeLog for virtual/ruby-threads
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.19 2012/10/28 19:30:44 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.20 2013/07/09 17:45:28 graaff Exp $
+
+*ruby-threads-4 (09 Jul 2013)
+
+  09 Jul 2013; Hans de Graaff <graaff@gentoo.org> +ruby-threads-4.ebuild:
+  Add version for ruby20.
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-threads-0.ebuild,
   ruby-threads-1.ebuild:

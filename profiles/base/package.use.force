@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.35 2013/03/08 09:33:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.36 2013/07/09 17:47:25 graaff Exp $
 
 # Michał Gorny <mgorny@gentoo.org> (26 Feb 2013)
 # Meta-packages which use multilib ebuilds always install development
@@ -58,17 +58,19 @@ dev-ruby/jruby-openssl ruby_targets_jruby
 ~virtual/ruby-ssl-0 ruby_targets_ruby18
 ~virtual/ruby-ssl-1 ruby_targets_ruby19
 ~virtual/ruby-ssl-2 ruby_targets_jruby
-~virtual/ruby-ssl-3 ruby_targets_ree18
+~virtual/ruby-ssl-3 ruby_targets_ruby20
 ~virtual/ruby-rdoc-0 ruby_targets_ruby18
 ~virtual/ruby-rdoc-1 ruby_targets_ruby19
 ~virtual/ruby-rdoc-2 ruby_targets_jruby
-~virtual/ruby-rdoc-3 ruby_targets_ree18
+~virtual/ruby-rdoc-3 ruby_targets_ruby20
 ~virtual/ruby-threads-0 ruby_targets_ruby18
 ~virtual/ruby-threads-1 ruby_targets_ruby19
 ~virtual/ruby-threads-2 ruby_targets_jruby
 ~virtual/ruby-threads-3 ruby_targets_ree18
+~virtual/ruby-threads-4 ruby_targets_ruby20
 ~virtual/rubygems-1 ruby_targets_ruby18
 ~virtual/rubygems-2 ruby_targets_jruby
 ~virtual/rubygems-3 ruby_targets_ree18
 ~virtual/rubygems-4 ruby_targets_ruby19
 ~virtual/rubygems-5 ruby_targets_rbx
+~virtual/rubygems-6 ruby_targets_ruby20
