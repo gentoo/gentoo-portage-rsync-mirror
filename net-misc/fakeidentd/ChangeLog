@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.39 2013/03/13 05:16:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.40 2013/07/09 22:41:39 jer Exp $
+
+  09 Jul 2013; Jeroen Roovers <jer@gentoo.org> fakeidentd-2.6.ebuild:
+  Stable for HPPA (bug #476296).
 
   13 Mar 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop myself from metadata.

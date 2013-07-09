@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.54 2012/11/27 19:17:47 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.55 2013/07/09 22:38:20 jer Exp $
+
+  09 Jul 2013; Jeroen Roovers <jer@gentoo.org> mod_fcgid-2.3.7.ebuild:
+  Marked ~hppa (bug #475912).
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

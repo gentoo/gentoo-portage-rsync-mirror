@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for Message Passing Interface (MPI) v2.0 implementation
-EAPI=2
-IUSE=cxx fortran romio
-KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux
-RDEPEND=|| ( sys-cluster/openmpi[cxx?,fortran?,romio?] sys-cluster/mpich2[cxx?,fortran?,romio?] sys-cluster/mvapich2[fortran?,romio?] sys-cluster/native-mpi )
-SLOT=0
-_md5_=35ae80553075541997fc4a719656292b
