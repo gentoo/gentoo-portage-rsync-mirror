@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.8 2013/01/06 18:47:14 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.9 2013/07/09 22:26:38 jsbronder Exp $
 
 EAPI=4
 
@@ -27,6 +27,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/libtool"
 
 RDEPEND="${COMMON_DEPEND}
+	!sys-cluster/mpich
 	!sys-cluster/openmpi"
 
 S="${WORKDIR}"/${PN}-${MY_PV}

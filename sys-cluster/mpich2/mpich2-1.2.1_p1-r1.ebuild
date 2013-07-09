@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.17 2013/01/06 18:47:14 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.18 2013/07/09 22:26:38 jsbronder Exp $
 
 EAPI=2
 
@@ -29,6 +29,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="
 	${COMMON_DEPEND}
 	!media-sound/mpd
+	!sys-cluster/mpich
 	!sys-cluster/openmpi"
 
 S="${WORKDIR}"/${PN}-${MY_PV}

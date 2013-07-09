@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.4.ebuild,v 1.4 2012/10/16 18:43:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.4.ebuild,v 1.5 2013/07/09 22:28:16 jsbronder Exp $
 
 EAPI=3
 
@@ -27,6 +27,7 @@ RDEPEND="
 		!app-text/lcdf-typetools
 	)
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
+	!sys-cluster/mpich
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec"
 DEPEND="${RDEPEND}"

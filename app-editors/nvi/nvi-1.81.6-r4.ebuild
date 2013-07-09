@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.15 2013/07/09 22:23:51 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r4.ebuild,v 1.1 2013/07/09 22:23:51 neurogeek Exp $
 
-EAPI=5
+EAPI=4
 
 inherit autotools db-use eutils flag-o-matic
 
@@ -21,62 +21,73 @@ do
 done
 
 DESCRIPTION="Vi clone"
-HOMEPAGE="https://sites.google.com/a/bostic.com/keithbostic/nvi"
+HOMEPAGE="https://sites.google.com/a/bostic.com/keithbostic/vi"
 SRC_URI="http://garage.linux.student.kuleuven.be/~skimo/nvi/devel/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="perl tcl unicode"
 
-DEPEND="|| ( ${DBDEPENDS} )
-	>=sys-libs/ncurses-5.6-r2[tinfo]
+CDEPEND="|| ( ${DBDEPENDS} )
+	>=sys-libs/ncurses-5.6-r2
 	perl? ( dev-lang/perl )
 	tcl? ( !unicode? ( >=dev-lang/tcl-8.5 ) )"
-RDEPEND="${DEPEND}
+
+DEPEND="${CDEPEND}
+		virtual/pkgconfig"
+
+RDEPEND="${CDEPEND}
 	app-admin/eselect-vi"
 
-S=${WORKDIR}/${P}/build.unix
-
-pkg_setup() {
-	if use tcl && use unicode
-	then
-		ewarn "nvi does not support tcl+unicode. tcl support will not be included."
-		ewarn "If you need tcl support, please disable the unicode flag."
-	fi
-}
+REQUIRED_USE="tcl? ( !unicode )"
 
 src_prepare() {
+
 	epatch "${FILESDIR}"/${P}-db44.patch
 	epatch "${FILESDIR}"/${P}-db.patch
 	epatch "${FILESDIR}"/${P}-perl-as-needed.patch
 	epatch "${FILESDIR}"/${P}-perl-shortnames.patch
+	epatch "${FILESDIR}"/${P}-ac_config_header.patch
+	epatch "${FILESDIR}"/${P}-use_pkgconfig_for_ncurses.patch
+
 	cd dist || die
 	chmod +x findconfig || die
-	append-flags -I"$(db_includedir ${DBSLOTS})"
+
+	append-cppflags -I"$(db_includedir ${DBSLOTS})"
+
 	sed -i -e "s@-ldb@-l$(db_libname ${DBSLOTS})@" configure.in || die
 	rm -f configure || die
 	eautoreconf -Im4
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	use perl && myconf="${myconf} --enable-perlinterp"
-	use tcl && ! use unicode && myconf="${myconf} --enable-tclinterp"
 	use unicode && myconf="${myconf} --enable-widechar"
+	use tcl && ! use unicode && myconf="${myconf} --enable-tclinterp"
 
-	append-flags '-D_PATH_MSGCAT="\"/usr/share/vi/catalog/\""'
+	append-cppflags '-D_PATH_MSGCAT="\"/usr/share/vi/catalog/\""'
 
-	ECONF_SOURCE=../dist econf \
+	pushd dist 2>/dev/null
+	econf \
 		--program-prefix=n \
 		${myconf} \
 		|| die "configure failed"
-	emake OPTFLAG="${CFLAGS}" || die "make failed"
+	popd 2>/dev/null
+}
+
+src_compile() {
+	pushd dist 2>/dev/null
+	emake || die "make failed"
+	popd 2>/dev/null
 }
 
 src_install() {
+	pushd dist 2>/dev/null
 	emake -j1 DESTDIR="${D}" install || die "install failed"
+	popd 2>/dev/null
 }
 
 pkg_postinst() {

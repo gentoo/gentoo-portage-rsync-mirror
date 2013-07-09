@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.4-r1.ebuild,v 1.2 2013/07/02 22:53:00 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.4-r1.ebuild,v 1.3 2013/07/09 22:28:16 jsbronder Exp $
 
 EAPI=5
 
@@ -50,6 +50,7 @@ REQUIRED_USE="openmpi_rm_slurm? ( !openmpi_rm_pbs )
 	openmpi_ofed_features_failover? ( openmpi_fabrics_ofed )"
 
 RDEPEND="
+	!sys-cluster/mpich
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec
 	>=sys-apps/hwloc-1.3

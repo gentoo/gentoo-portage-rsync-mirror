@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmbscan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.14 2013/03/04 00:19:05 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.15 2013/07/09 22:27:37 jer Exp $
+
+  09 Jul 2013; Jeroen Roovers <jer@gentoo.org> nmbscan-1.2.5.ebuild:
+  Stable for HPPA (bug #392831).
 
   04 Mar 2013; Christoph Junghans <ottxor@gentoo.org> nmbscan-1.2.4.ebuild,
   nmbscan-1.2.5.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/nvi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.88 2012/08/27 15:47:49 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.89 2013/07/09 22:23:51 neurogeek Exp $
+
+*nvi-1.81.6-r4 (09 Jul 2013)
+
+  09 Jul 2013; <neurogeek@gentoo.org> nvi-1.81.6-r3.ebuild,
+  +nvi-1.81.6-r4.ebuild, +files/nvi-1.81.6-ac_config_header.patch,
+  +files/nvi-1.81.6-use_pkgconfig_for_ncurses.patch:
+  Bumped EAPI to 5, refactored the ebuild, fixed AM_CONFIG_HEADER bug and fixed
+  bug with ncurses[tinfo]. Closes bugs #459730 and #467560
 
   27 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> files/nvi-1.81.6-db44.patch:
   Fixed logic in db44 patch. Closes bug #421671. Thanks Diego
