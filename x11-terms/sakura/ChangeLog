@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.36 2013/02/25 09:56:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.37 2013/07/09 12:02:22 jer Exp $
+
+*sakura-3.1.0 (09 Jul 2013)
+
+  09 Jul 2013; Jeroen Roovers <jer@gentoo.org> sakura-3.0.4.ebuild,
+  +sakura-3.1.0.ebuild, +files/sakura-3.1.0-flags.patch:
+  base_src_prepare => cmake-utils_src_prepare. Version bump. Use strip-linguas
+  instead of hard-coded LANGS.
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> sakura-3.0.4.ebuild:
   Add ~arm-linux and ~x86-linux keywords.
