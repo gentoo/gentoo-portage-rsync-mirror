@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/goobook
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/ChangeLog,v 1.6 2013/07/09 01:58:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/ChangeLog,v 1.7 2013/07/09 15:00:27 xmw Exp $
+
+  09 Jul 2013; Michael Weber <xmw@gentoo.org> +files/goobook-1.4-setup.py.patch,
+  goobook-1.4-r1.ebuild:
+  removed version from setuptools, added patch documentation and
+  readme.gentoo.eclass.
 
   09 Jul 2013; Mike Gilbert <floppym@gentoo.org> goobook-1.4-r1.ebuild:
   Don't clobber distutils-r1_python_prepare_all.
