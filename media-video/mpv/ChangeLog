@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.13 2013/07/09 15:55:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.14 2013/07/09 16:38:16 scarabeus Exp $
+
+  09 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Do not enable debug by default. Patch from Nikoli.
 
   09 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
   Few fixes from nikoli. Put ffmpeg deps on top. Use subslot on libav.

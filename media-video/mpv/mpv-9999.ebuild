@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.11 2013/07/09 15:55:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.12 2013/07/09 16:38:16 scarabeus Exp $
 
 EAPI=5
 
@@ -233,6 +233,7 @@ src_configure() {
 	####################
 	# Advanced Options #
 	####################
+	myconf+=" --disable-debug"
 	use threads || myconf+=" --disable-pthreads"
 
 	# Platform specific flags, hardcoded on amd64 (see below)

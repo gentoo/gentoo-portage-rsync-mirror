@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libticalcs2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.8 2012/08/04 15:02:44 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.9 2013/07/09 16:50:55 bicatali Exp $
+
+*libticalcs2-1.1.8 (09 Jul 2013)
+
+  09 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +libticalcs2-1.1.8.ebuild:
+  Version bump. Switch to autototools-utils eclass
 
   04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -libticalcs2-1.1.5.ebuild,
   libticalcs2-1.1.7.ebuild:

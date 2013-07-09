@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.28 2012/06/29 12:57:41 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.29 2013/07/09 16:37:19 kensington Exp $
+
+  09 Jul 2013; Michael Palimaka <kensington@gentoo.org>
+  -libtar-1.2.11-r4.ebuild:
+  Remove old.
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org> libtar-1.2.11-r5.ebuild:
   Marking libtar-1.2.11-r5 ppc for bug 420935
