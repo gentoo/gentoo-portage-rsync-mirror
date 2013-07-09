@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.71 2013/05/21 01:31:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.72 2013/07/09 01:57:07 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -308,6 +308,12 @@ distutils_install_for_testing() {
 	esetup.py "${add_args[@]}"
 }
 
+_disable_ez_setup() {
+	local stub="def use_setuptools(*args, **kwargs): pass"
+	[[ -f ez_setup.py ]] && echo "${stub}" > ez_setup.py
+	[[ -f distribute_setup.py ]] && echo "${stub}" > distribute_setup.py
+}
+
 # @FUNCTION: distutils-r1_python_prepare_all
 # @DESCRIPTION:
 # The default python_prepare_all(). It applies the patches from PATCHES
@@ -329,6 +335,9 @@ distutils-r1_python_prepare_all() {
 			DISTUTILS_IN_SOURCE_BUILD=1
 		fi
 	fi
+
+	# Prevent packages from downloading their own copy of setuptools
+	_disable_ez_setup
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
 	then
