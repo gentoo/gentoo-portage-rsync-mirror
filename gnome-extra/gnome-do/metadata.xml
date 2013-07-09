@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>giuse88@gmail.com</email>
+		<name>Giuseppe Pes</name>
 	</maintainer>
 	<longdescription>
 	GNOME Do allows you to quickly search for many items present in your GNOME

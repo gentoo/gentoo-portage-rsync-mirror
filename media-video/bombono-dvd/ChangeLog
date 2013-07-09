@@ -1,6 +1,12 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.35 2013/06/17 07:43:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.36 2013/07/08 23:02:38 chithanh Exp $
+
+*bombono-dvd-1.2.2 (08 Jul 2013)
+
+  08 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +bombono-dvd-1.2.2.ebuild:
+  Version bump, bug #469078.
 
   17 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/bombono-dvd-1.2.1-libav9.patch, bombono-dvd-1.2.1-r1.ebuild:

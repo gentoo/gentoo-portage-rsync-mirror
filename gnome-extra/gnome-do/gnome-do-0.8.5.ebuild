@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.5.ebuild,v 1.4 2012/06/21 09:35:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.5.ebuild,v 1.5 2013/07/08 23:02:03 xmw Exp $
 
 # TODO: GNOME Do defaults to a debug build; to disable, --enable-release must
 # be passed. However, when doing this the build fails; figure out why.

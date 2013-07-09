@@ -1,6 +1,6 @@
 diff -Nur funtools-1.4.4.orig/filter/Makefile.in funtools-1.4.4/filter/Makefile.in
---- funtools-1.4.4.orig/filter/Makefile.in	2010-01-29 18:19:54.000000000 +0000
-+++ funtools-1.4.4/filter/Makefile.in	2010-01-29 18:20:07.000000000 +0000
+--- funtools-1.4.4.orig/filter/Makefile.in	2013-07-08 14:28:30.169439760 -0700
++++ funtools-1.4.4/filter/Makefile.in	2013-07-08 14:29:44.026841106 -0700
 @@ -29,6 +29,9 @@
  
  prefix =		@prefix@
@@ -46,20 +46,20 @@ diff -Nur funtools-1.4.4.orig/filter/Makefile.in funtools-1.4.4/filter/Makefile.
  		chmod 755 $$i; \
  		else true; \
  		fi; \
-@@ -230,6 +233,10 @@
- 		$(RM) swap_c.h
- 		./inc.sed SWAP_C < swap.c > swap_c.h
+@@ -228,6 +231,10 @@
  
-+swap_c.h:	swap.c inc.sed
-+		$(RM) swap_c.h
+ swap_c.h:	swap.c inc.sed
+ 		$(RM) swap_c.h
 +		./inc.sed SWAP_C < swap.c > swap_c.h
 +
++swap_c.h:	swap.c inc.sed
++		$(RM) swap_c.h
+ 		./inc.sed SWAP_C < swap.c > swap_c.h
+ 
  events_c.h:	evfilter.c inc.sed
- 		$(RM) events_c.h
- 		./inc.sed EVENTS_C < evfilter.c > events_c.h
 diff -Nur funtools-1.4.4.orig/fitsy/Makefile.in funtools-1.4.4/fitsy/Makefile.in
---- funtools-1.4.4.orig/fitsy/Makefile.in	2010-01-29 18:19:54.000000000 +0000
-+++ funtools-1.4.4/fitsy/Makefile.in	2010-01-29 18:20:07.000000000 +0000
+--- funtools-1.4.4.orig/fitsy/Makefile.in	2013-07-08 14:28:30.147439547 -0700
++++ funtools-1.4.4/fitsy/Makefile.in	2013-07-08 14:29:44.026841106 -0700
 @@ -28,6 +28,11 @@
  
  prefix =		@prefix@
@@ -99,8 +99,8 @@ diff -Nur funtools-1.4.4.orig/fitsy/Makefile.in funtools-1.4.4/fitsy/Makefile.in
  		else true; \
  		fi; \
 diff -Nur funtools-1.4.4.orig/gnu/Makefile.in funtools-1.4.4/gnu/Makefile.in
---- funtools-1.4.4.orig/gnu/Makefile.in	2010-01-29 18:19:54.000000000 +0000
-+++ funtools-1.4.4/gnu/Makefile.in	2010-01-29 18:20:07.000000000 +0000
+--- funtools-1.4.4.orig/gnu/Makefile.in	2013-07-08 14:28:30.151439619 -0700
++++ funtools-1.4.4/gnu/Makefile.in	2013-07-08 14:29:44.026841106 -0700
 @@ -21,6 +21,11 @@
  
  prefix =		@prefix@
@@ -131,9 +131,9 @@ diff -Nur funtools-1.4.4.orig/gnu/Makefile.in funtools-1.4.4/gnu/Makefile.in
  # There are just too many different versions of "install" around;
  # better to use the install-sh script that comes with the distribution,
 diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
---- funtools-1.4.4.orig/Makefile.in	2010-01-29 18:19:54.000000000 +0000
-+++ funtools-1.4.4/Makefile.in	2010-01-29 18:20:07.000000000 +0000
-@@ -28,6 +28,11 @@
+--- funtools-1.4.4.orig/Makefile.in	2013-07-08 14:28:30.170439766 -0700
++++ funtools-1.4.4/Makefile.in	2013-07-08 15:49:21.427756907 -0700
+@@ -28,28 +28,33 @@
  
  prefix =		@prefix@
  exec_prefix =		@exec_prefix@
@@ -145,8 +145,11 @@ diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
  
  # The following definition can be set to non-null for special systems
  # like AFS with replication.  It allows the pathnames used for installation
-@@ -37,19 +42,19 @@
- INSTALL_ROOT =
+ # to be different than those used for actually reference files at
+ # run-time.  INSTALL_ROOT is prepended to $prefix and $exec_prefix
+ # when installing files.
+-INSTALL_ROOT =
++INSTALL_ROOT = $(DESTDIR)
  
  # Directory in which to install the .a or .so binary for the FUNTOOLS library:
 -LIB_INSTALL_DIR =	$(INSTALL_ROOT)$(exec_prefix)/lib
@@ -170,16 +173,36 @@ diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
  
  # util files are in the util subdirectory
  UTIL_INC =		-I./util
-@@ -60,7 +65,7 @@
+@@ -60,8 +65,8 @@
  # FITSY_LIBS =		-L./fitsy -lfitsy
  
  # wcs files are in the wcs subdirectory
 -WCS_INC =		-I./wcs
-+WCS_INC =		-I/usr/include/wcs
- # WCS_LIBS =		-L./wcs -lwcs
+-# WCS_LIBS =		-L./wcs -lwcs
++#WCS_INC =		-I../wcs
++#WCS_LIBS =		-L./wcs -lwcs
  
  # filter files are in the filter subdirectory
-@@ -225,7 +230,7 @@
+ FILTER_INC =        	-I./filter
+@@ -160,7 +165,7 @@
+ 
+ # this is used in the link line
+ # LLIB =	$(LIB)
+-LLIB =		@LLIB@
++LLIB =		-L. -lfuntools
+ 
+ # libraries containing main as subroutines
+ MAINLIB =	lib$(PACKAGE)MainLib.a
+@@ -188,7 +193,7 @@
+ 
+ # Subdirectories to run make in for the primary targets.
+ 
+-SUBLIBS =	util fitsy wcs filter
++SUBLIBS =	util fitsy filter
+ 
+ SUBDIRS =	$(SUBLIBS) gnu funtest faq
+ 
+@@ -225,10 +230,10 @@
  		echo $(PROGS) | ./mkfunmainlib > funmainlib.c;
  
  shlib:		sublib $(LIBOBJS)
@@ -187,7 +210,11 @@ diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
 +		@(rm -rf $(PACKAGE)tmp; mkdir -p $(PACKAGE)tmp; \
  		(cd $(PACKAGE)tmp && ar x ../$(LIB)); \
  		CC='$(CC)' CXX=$(CXX) \
- 		./mklib -o $(PACKAGE) $(PACKAGE)tmp/*.o; \
+-		./mklib -o $(PACKAGE) $(PACKAGE)tmp/*.o; \
++		./mklib $(PACKAGE)tmp/*.o $(LIBS) -o $(PACKAGE) ; \
+ 		rm -rf $(PACKAGE)tmp;)
+ 
+ mainlib:	$(MAINLIBOBJS) funmainlib.o lex.calc.o
 @@ -237,7 +242,7 @@
  		$(RANLIB) lib$(PACKAGE)MainLib.a)
  
@@ -234,8 +261,8 @@ diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
  		    else true; \
  		fi; \
 diff -Nur funtools-1.4.4.orig/util/Makefile.in funtools-1.4.4/util/Makefile.in
---- funtools-1.4.4.orig/util/Makefile.in	2010-01-29 18:19:54.000000000 +0000
-+++ funtools-1.4.4/util/Makefile.in	2010-01-29 18:20:07.000000000 +0000
+--- funtools-1.4.4.orig/util/Makefile.in	2013-07-08 14:28:30.160439699 -0700
++++ funtools-1.4.4/util/Makefile.in	2013-07-08 14:29:44.026841106 -0700
 @@ -29,6 +29,11 @@
  
  prefix =		@prefix@
