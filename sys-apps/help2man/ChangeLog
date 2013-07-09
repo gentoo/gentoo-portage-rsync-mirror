@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.102 2013/06/15 10:23:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.103 2013/07/09 00:37:31 radhermit Exp $
+
+*help2man-1.43.3 (09 Jul 2013)
+
+  09 Jul 2013; Tim Harder <radhermit@gentoo.org> +help2man-1.43.3.ebuild:
+  Version bump.
 
 *help2man-1.43.2 (15 Jun 2013)
 

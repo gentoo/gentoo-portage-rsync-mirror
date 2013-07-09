@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8016 2013/07/08 22:40:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8018 2013/07/09 00:37:29 creffett Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jul 2013; <creffett@gentoo.org> package.mask:
+  Mask tg-widgets-scriptaculous and tg-widgets-lightbox for lastrite, bug
+  284890.
+
+  09 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Masked <net-ftp/proftpd-1.3.4c for security bug 450746, CVE-2012-6095
 
   08 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
   Masked <sys-kernel/openvz-sources-2.6.32.76.8 for security bug 469956,

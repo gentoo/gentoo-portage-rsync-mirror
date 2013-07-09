@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.48 2013/06/24 22:07:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.49 2013/07/09 00:49:22 radhermit Exp $
+
+*man-db-2.6.5 (09 Jul 2013)
+
+  09 Jul 2013; Tim Harder <radhermit@gentoo.org> +man-db-2.6.5.ebuild:
+  Version bump.
 
 *man-db-2.6.4 (24 Jun 2013)
 
