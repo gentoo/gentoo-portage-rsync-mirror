@@ -1,7 +1,14 @@
 
+
+*libnatpmp-20120821-r1 (09 Jul 2013)
+
+  09 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20120821.ebuild, +libnatpmp-20120821-r1.ebuild:
+  Rev bump to avoid in places EAPI change, bug #476166
+
   09 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
   libnatpmp-20120821.ebuild:
-  Convert to distutils-r1
+  Convert to distutils-r1, bug #476166
 
 *libnatpmp-20120821 (27 Aug 2012)
 

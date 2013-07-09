@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libnatpmp/libnatpmp-20120821.ebuild,v 1.3 2013/07/09 01:03:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libnatpmp/libnatpmp-20120821-r1.ebuild,v 1.1 2013/07/09 01:03:56 blueness Exp $
 
-EAPI=3
-PYTHON_DEPEND=2
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy2_0 )
 
-inherit eutils distutils
+inherit distutils-r1
 
 DESCRIPTION="Python module for libnatpmp, an alternative protocol to UPnP IGD."
 HOMEPAGE="http://miniupnp.free.fr/libnatpmp.html"
@@ -17,13 +16,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=net-libs/${PF}"
+DEPEND="=net-libs/${P}"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
+python_prepare_all() {
 	epatch "${FILESDIR}"/link-against-system-lib.patch
-	distutils_src_prepare
 
 	#These are installed by net-libs/libnatpmp
 	rm -f Changelog.txt README || die
+	distutils-r1_python_prepare_all
 }
