@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 extra_commands="${opts} dump reload restore"
@@ -19,15 +19,15 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 
-	if [ ! -d /var/run/smokeping/ ]; then
-		mkdir /var/run/smokeping/
+	if [ ! -d /run/smokeping/ ]; then
+		mkdir /run/smokeping/
 	fi
-	chown smokeping:smokeping /var/run/smokeping/
+	chown smokeping:smokeping /run/smokeping/
 
 	ebegin "Starting smokeping"
 	LC_ALL=C \
 	start-stop-daemon --start --name smokeping \
-		--pidfile /var/run/smokeping/smokeping.pid \
+		--pidfile /run/smokeping/smokeping.pid \
 		--exec /usr/bin/smokeping \
 		--user smokeping:smokeping
 	eend $?
@@ -36,7 +36,7 @@ start() {
 stop() {
 	ebegin "Stopping smokeping"
 	start-stop-daemon --stop \
-		--pidfile /var/run/smokeping/smokeping.pid
+		--pidfile /run/smokeping/smokeping.pid
 	eend $?
 }
 

@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.8-r1.ebuild,v 1.1 2013/07/06 06:44:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.3 2013/07/09 12:59:35 jer Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit eutils user systemd
 
 DESCRIPTION="A powerful latency measurement tool."
@@ -62,15 +61,15 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	LC_ALL=C emake
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
-	newinitd "${FILESDIR}/${PN}.init.3" ${PN} || die
-	systemd_dotmpfilesd "${FILESDIR}"/"${PN}".conf || die
-	systemd_dounit "${FILESDIR}"/"${PN}".service || die
+	newinitd "${FILESDIR}/${PN}.init.3" ${PN}
+	systemd_dotmpfilesd "${FILESDIR}"/"${PN}".conf
+	systemd_dounit "${FILESDIR}"/"${PN}".service
 
 	mv "${D}/etc/smokeping/basepage.html.dist" "${D}/etc/smokeping/basepage.html"
 	mv "${D}/etc/smokeping/config.dist" "${D}/etc/smokeping/config"
@@ -81,7 +80,7 @@ src_install() {
 	sed -e '/^imgcache/{s:\(^imgcache[ \t]*=\).*:\1 /var/lib/smokeping/.simg:}' \
 		-e '/^imgurl/{s:\(^imgurl[ \t]*=\).*:\1 ../.simg:}' \
 		-e '/^datadir/{s:\(^datadir[ \t]*=\).*:\1 /var/lib/smokeping:}' \
-		-e '/^piddir/{s:\(^piddir[ \t]*=\).*:\1 /var/run/smokeping:}' \
+		-e '/^piddir/{s:\(^piddir[ \t]*=\).*:\1 /run/smokeping:}' \
 	    -e '/^cgiurl/{s#\(^cgiurl[ \t]*=\).*#\1 http://some.place.xyz/perl/smokeping.pl#}' \
 		-e '/^smokemail/{s:\(^smokemail[ \t]*=\).*:\1 /etc/smokeping/smokemail:}' \
 		-e '/^tmail/{s:\(^tmail[ \t]*=\).*:\1 /etc/smokeping/tmail:}' \
@@ -107,7 +106,7 @@ src_install() {
 
 	if use apache2 ; then
 		insinto /etc/apache2/modules.d
-		doins "${FILESDIR}/79_${PN}.conf" || die
+		doins "${FILESDIR}/79_${PN}.conf"
 	fi
 
 	dodir /var/cache/smokeping
