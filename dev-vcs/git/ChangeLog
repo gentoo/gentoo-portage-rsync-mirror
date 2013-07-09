@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.200 2013/05/18 13:48:37 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.202 2013/07/09 08:41:23 polynomial-c Exp $
+
+*git-1.8.3.2 (09 Jul 2013)
+
+  09 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> +git-1.8.3.2.ebuild:
+  Non-maintainer commit: Version bump (bug #467856). Converted ebuild to EAPI-5
+  and python-single-r1 eclass. Added gtk -> python REQUIRED_USE (bug #451374).
+  Hopefully fixed test failure with USE=-perl (bug #470592). Added installation
+  of git-remote-hg (bug #465808) and git-remote-bzr with USE=python.
 
   18 May 2013; Fabio Erculiani <lxnay@gentoo.org> git-1.8.2.1.ebuild,
   git-9999.ebuild, +files/git-daemon.socket, +files/git-daemon_at.service:
