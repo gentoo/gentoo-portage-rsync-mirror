@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/sash
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.50 2012/07/08 17:03:32 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.51 2013/07/09 18:37:24 kensington Exp $
+
+  09 Jul 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/sash-3.6-readline.patch, -sash-3.7-r1.ebuild:
+  Remove old.
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> sash-3.7-r3.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #418451
@@ -178,4 +182,3 @@
 
   sash is always static now... previous versions were only built statically
   if 'static' USE keyword was set
-
