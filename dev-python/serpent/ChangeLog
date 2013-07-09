@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/serpent
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.1 2013/07/09 05:48:45 idella4 Exp $
+
+*serpent-1.2 (09 Jul 2013)
+
+  09 Jul 2013; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +serpent-1.2.ebuild:
+  New ebuild, new dep to pyro-4.20, ebuild written by me, closes Bug #474622
