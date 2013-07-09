@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/kapteyn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.12 2013/04/24 22:32:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.13 2013/07/08 23:32:03 bicatali Exp $
+
+  08 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> -kapteyn-2.2.ebuild:
+  Removed old
 
 *kapteyn-2.2-r1 (24 Apr 2013)
 

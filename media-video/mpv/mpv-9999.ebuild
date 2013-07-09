@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.9 2013/07/08 06:03:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.10 2013/07/08 23:42:27 tomwij Exp $
 
 EAPI=5
 
@@ -18,17 +18,18 @@ LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa aqua bluray bs2b +cdio debug +dts dvb +dvd +enca encode fbcon
-+iconv ipv6 jack joystick jpeg kernel_linux ladspa lcms +libass libcaca
-libguess lirc mng +mp3 -openal +opengl oss portaudio +postproc pulseaudio pvr
-+quvi radio samba +shm v4l vcd vdpau vf-dlopen wayland +X xinerama
-+xscreensaver +xv"
+IUSE="+alsa aqua bluray bs2b +cdio dvb +dvd +enca encode fbcon +iconv jack
+joystick jpeg ladspa lcms +libass libcaca libguess lirc mng +mp3 -openal +opengl
+oss portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vcd
+vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
+	enca? ( iconv )
 	lcms? ( opengl )
-	libass? ( iconv )
+	libguess? ( iconv )
 	opengl? ( || ( aqua wayland X ) )
-	radio? ( || ( dvb v4l ) )
+	pvr? ( v4l )
+	radio? ( v4l || ( alsa oss ) )
 	vdpau? ( X )
 	wayland? ( opengl )
 	xinerama? ( X )
@@ -90,7 +91,7 @@ RDEPEND+="
 		media-libs/mesa[egl,wayland]
 		>=x11-libs/libxkbcommon-0.3.0
 	)
-	>=virtual/ffmpeg-9[encode?]
+	|| ( >=media-video/libav-9[encode?,threads?,vdpau?] >=media-video/ffmpeg-1.2[encode?,threads?,vdpau?] )
 "
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
@@ -136,9 +137,8 @@ pkg_setup() {
 
 src_prepare() {
 	# fix path to bash executable in configure scripts
-	local bash_scripts="configure version.sh"
 	sed -i -e "1c\#!${EPREFIX}/bin/bash" \
-		${bash_scripts} || die
+		configure version.sh || die
 
 	base_src_prepare
 }
@@ -152,82 +152,55 @@ src_configure() {
 	# because if --enable is used, it will force the build of that option,
 	# regardless of whether the dependency is available or not.
 
-	###################
-	#Optional features#
-	###################
+	#####################
+	# Optional features #
+	#####################
 	# SDL output is fallback for platforms where nothing better is available
 	myconf+=" --disable-sdl --disable-sdl2"
-	use wayland || myconf+=" --disable-wayland"
 	use encode || myconf+=" --disable-encoding"
 	myconf+=" $(use_enable joystick)"
-	uses="bluray enca libass libguess vcd"
+	uses="bluray vcd"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use ipv6 || myconf+=" --disable-inet6"
 	use quvi || myconf+=" --disable-libquvi4 --disable-libquvi9"
 	use samba || myconf+=" --disable-smb"
-	if ! use lirc; then
-		myconf+="
-			--disable-lirc
-			--disable-lircc
-		"
-	fi
+	use lirc || myconf+=" --disable-lirc --disable-lircc"
 
 	########
 	# CDDA #
 	########
 	use cdio || myconf+=" --disable-libcdio"
 
-	################################
-	# DVD read                     #
-	################################
-	#
-	# dvdread - accessing a DVD
-	#
+	############
+	# DVD read #
+	############
 	use dvd || myconf+=" --disable-dvdread"
 
 	#############
 	# Subtitles #
 	#############
-	#
-	use iconv || myconf+=" --disable-iconv"
+	uses="enca iconv libass libguess"
+	for i in ${uses}; do
+		use ${i} || myconf+=" --disable-${i}"
+	done
 
 	#####################################
 	# DVB / Video4Linux / Radio support #
 	#####################################
-	if { use dvb || use v4l || use pvr || use radio; }; then
-		use dvb || myconf+=" --disable-dvb"
-		use pvr || myconf+=" --disable-pvr"
-		use v4l || myconf+=" --disable-tv-v4l2"
-		if use radio && { use dvb || use v4l; }; then
-			myconf+="
-				--enable-radio
-				--disable-radio-capture
-			"
-		else
-			myconf+="
-				--disable-radio-v4l2
-			"
-		fi
+	use dvb || myconf+=" --disable-dvb"
+	use pvr || myconf+=" --disable-pvr"
+	use v4l || myconf+=" --disable-tv --disable-tv-v4l2"
+	if use radio; then
+		myconf+=" --enable-radio --enable-radio-capture"
 	else
-		myconf+="
-			--disable-tv
-			--disable-tv-v4l2
-			--disable-radio
-			--disable-radio-v4l2
-			--disable-dvb
-			--disable-pvr"
+		myconf+=" --disable-radio-v4l2"
 	fi
 
 	##########
 	# Codecs #
 	##########
 	use mp3 || myconf+=" --disable-mpg123"
-	uses="bs2b"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-lib${i}"
-	done
 	uses="jpeg mng"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
@@ -247,18 +220,18 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
+	use bs2b || myconf+=" --disable-libbs2b"
 	use openal && myconf+=" --enable-openal"
+	use oss || myconf+=" --disable-ossaudio"
 	use pulseaudio || myconf+=" --disable-pulse"
-	if ! use radio; then
-		use oss || myconf+=" --disable-ossaudio"
-	fi
 
 	####################
 	# Advanced Options #
 	####################
+	use threads || myconf+=" --disable-pthreads"
+
 	# Platform specific flags, hardcoded on amd64 (see below)
 	use shm || myconf+=" --disable-shm"
-	use debug && myconf+=" --enable-debug=3"
 
 	if use x86 && gcc-specs-pie; then
 		filter-flags -fPIC -fPIE
@@ -269,7 +242,7 @@ src_configure() {
 	# X enabled configuration #
 	###########################
 	use X || myconf+=" --disable-x11"
-	uses="vdpau xinerama xv"
+	uses="vdpau wayland xinerama xv"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
@@ -280,14 +253,12 @@ src_configure() {
 	############################
 	# OSX (aqua) configuration #
 	############################
-	if use aqua; then
-		myconf+="
-			--enable-macosx-bundle
-		"
-	fi
+	use aqua && myconf+=" --enable-macosx-bundle"
 
-	./configure \
+	CFLAGS= LDFLAGS= ./configure \
 		--cc="$(tc-getCC)" \
+		--extra-cflags="${CFLAGS}" \
+		--extra-ldflags="${LDFLAGS}" \
 		--pkg-config="$(tc-getPKG_CONFIG)" \
 		--prefix="${EPREFIX}"/usr \
 		--bindir="${EPREFIX}"/usr/bin \
