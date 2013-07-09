@@ -4,7 +4,7 @@ DESCRIPTION=Small program to test performances of remote servers
 EAPI=4
 HOMEPAGE=http://echoping.sourceforge.net/
 IUSE=gnutls http icp idn priority smtp ssl tos postgres ldap
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=GPL-2
 RDEPEND=idn? ( net-dns/libidn ) postgres? ( dev-db/postgresql-base ) ldap? ( net-nds/openldap ) ssl? ( gnutls? ( >=net-libs/gnutls-1.0.17 ) !gnutls? ( >=dev-libs/openssl-0.9.7d ) )
 REQUIRED_USE=gnutls? ( ssl )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/echoping/echoping-6.0.2.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=b940d9a2c6876d8b1edf46e45276a72d
+_md5_=571e1dd4e07a373196844108844ded82
