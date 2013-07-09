@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/dshieldpy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.10 2012/02/24 15:24:31 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.11 2013/07/09 16:11:38 kensington Exp $
+
+  09 Jul 2013; Michael Palimaka <kensington@gentoo.org> -dshieldpy-3.2.ebuild:
+  Remove old.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dshieldpy-3.2-r1.ebuild:
   x86 stable wrt bug #404819

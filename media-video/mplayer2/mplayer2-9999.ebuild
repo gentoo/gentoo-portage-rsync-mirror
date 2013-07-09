@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.59 2013/06/13 19:32:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.60 2013/07/09 16:06:35 scarabeus Exp $
 
 EAPI=5
 
@@ -22,15 +22,14 @@ LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+a52 +alsa aqua bluray bs2b cddb +cdio cpudetection debug directfb doc
-+dts +dv dvb +dvd +dvdnav +enca +faad fbcon ftp gif +iconv ipv6 jack joystick
-jpeg kernel_linux ladspa lcms +libass libcaca lirc mad md5sum mng +mp3 +network
-nut +opengl oss png pnm portaudio +postproc pulseaudio pvr quvi radio +rar +rtc
-samba sdl +speex tga +theora +unicode v4l vcd vdpau +vorbis +X xanim xinerama
-+xscreensaver +xv xvid yuv4mpeg"
+IUSE="+alsa aqua bluray bs2b cddb +cdio cpudetection debug directfb doc dvb +dvd
++dvdnav +enca ftp gif +iconv ipv6 jack joystick jpeg ladspa lcms +libass libcaca
+lirc md5sum mng +mp3 +network +opengl oss png pnm portaudio +postproc pulseaudio
+pvr +quvi radio samba +shm tga +threads +unicode v4l vcd vdpau +X xinerama
++xscreensaver +xv yuv4mpeg"
 IUSE+=" symlink"
 
-CPU_FEATURES="3dnow 3dnowext altivec +mmx mmxext +shm sse sse2 ssse3"
+CPU_FEATURES="3dnow 3dnowext altivec +mmx mmxext sse sse2 ssse3"
 for x in ${CPU_FEATURES}; do
 	IUSE+=" ${x}"
 done
@@ -38,17 +37,19 @@ done
 REQUIRED_USE="
 	cddb? ( cdio network )
 	dvdnav? ( dvd )
+	enca? ( iconv )
 	lcms? ( opengl )
-	libass? ( iconv )
 	opengl? ( || ( aqua X ) )
-	radio? ( || ( dvb v4l ) )
+	portaudio? ( threads )
+	pvr? ( v4l )
+	radio? ( v4l || ( alsa oss ) )
+	v4l? ( threads )
 	vdpau? ( X )
 	xinerama? ( X )
 	xscreensaver? ( X )
 	xv? ( X )
 "
 
-# Rar: althrought -gpl version is nice, it cant do most functions normal rars can
 RDEPEND+="
 	sys-libs/ncurses
 	sys-libs/zlib
@@ -62,7 +63,6 @@ RDEPEND+="
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? ( x11-libs/libXv )
 	)
-	a52? ( media-libs/a52dec )
 	alsa? ( media-libs/alsa-lib )
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
@@ -73,15 +73,12 @@ RDEPEND+="
 		)
 	)
 	directfb? ( dev-libs/DirectFB )
-	dts? ( media-libs/libdca )
-	dv? ( media-libs/libdv )
 	dvb? ( virtual/linuxtv-dvb-headers )
 	dvd? (
 		>=media-libs/libdvdread-4.1.3
 		dvdnav? ( >=media-libs/libdvdnav-4.1.3 )
 	)
 	enca? ( app-i18n/enca )
-	faad? ( media-libs/faad2 )
 	gif? ( media-libs/giflib )
 	iconv? ( virtual/libiconv )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -93,10 +90,8 @@ RDEPEND+="
 	)
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
-	mad? ( media-libs/libmad )
 	mng? ( media-libs/libmng )
 	mp3? ( media-sound/mpg123 )
-	nut? ( >=media-libs/libnut-661 )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
@@ -108,20 +103,8 @@ RDEPEND+="
 	)
 	pulseaudio? ( media-sound/pulseaudio )
 	quvi? ( >=media-libs/libquvi-0.4.1 )
-	rar? (
-		|| (
-			app-arch/unrar
-			app-arch/rar
-		)
-	)
 	samba? ( net-fs/samba )
-	sdl? ( media-libs/libsdl )
-	speex? ( media-libs/speex )
-	theora? ( media-libs/libtheora )
-	vorbis? ( media-libs/libvorbis )
-	xanim? ( media-video/xanim )
-	xvid? ( media-libs/xvid )
-	>=virtual/ffmpeg-9
+	>=virtual/ffmpeg-9[threads?,vdpau?]
 	symlink? ( !media-video/mplayer )
 "
 ASM_DEP="dev-lang/yasm"
@@ -129,7 +112,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	${PYTHON_DEPS}
 	dev-python/docutils
-	sys-devel/gettext
 	X? (
 		x11-proto/videoproto
 		x11-proto/xf86vidmodeproto
@@ -138,12 +120,14 @@ DEPEND="${RDEPEND}
 	)
 	amd64? ( ${ASM_DEP} )
 	doc? (
-		dev-libs/libxslt app-text/docbook-xml-dtd
+		dev-libs/libxslt
+		app-text/docbook-xml-dtd
 		app-text/docbook-xsl-stylesheets
 	)
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
 "
+DOCS=( AUTHORS Copyright README etc/example.conf etc/input.conf etc/codecs.conf )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-py2compat.patch"
@@ -158,6 +142,11 @@ pkg_setup() {
 		elog
 	fi
 
+	if use !libass; then
+		ewarn
+		ewarn "You've disabled the libass flag. No OSD or subtitles will be displayed."
+	fi
+
 	if use cpudetection; then
 		ewarn
 		ewarn "You've enabled the cpudetection flag. This feature is"
@@ -170,11 +159,6 @@ pkg_setup() {
 		ewarn "disabling this use flag."
 	fi
 
-	if use !libass; then
-		ewarn
-		ewarn "You've disabled the libass flag. No OSD or subtitles will be displayed."
-	fi
-
 	einfo "For various format support you need to enable the support on your ffmpeg package:"
 	einfo "    media-video/libav or media-video/ffmpeg"
 
@@ -183,9 +167,12 @@ pkg_setup() {
 
 src_prepare() {
 	# fix path to bash executable in configure scripts
-	local bash_scripts="configure version.sh"
 	sed -i -e "1c\#!${EPREFIX}/bin/bash" \
-		${bash_scripts} || die
+		configure version.sh || die
+
+	sed -e 's/ $(INSTALLSTRIP)//' \
+		-e '/$(INSTALL) -d $(LIBDIR)/d' \
+		-i Makefile || die
 
 	if [[ -n ${NAMESUF} ]]; then
 		sed -e "/^EXESUF/s,= \$_exesuf$,= ${NAMESUF}\$_exesuf," \
@@ -201,36 +188,30 @@ src_configure() {
 	local myconf=""
 	local uses i
 
-	# mplayer ebuild uses "use foo || --disable-foo" to forcibly disable
+	# ebuild uses "use foo || --disable-foo" to forcibly disable
 	# compilation in almost every situation. The reason for this is
 	# because if --enable is used, it will force the build of that option,
 	# regardless of whether the dependency is available or not.
 
-	###################
-	#Optional features#
-	###################
-	# disable tremor, it needs libvorbisidec and is for FPU-less systems only
+	#####################
+	# Optional features #
+	#####################
+	# rtc is useless and /dev/rtc0 is only readable for root
+	myconf+=" --disable-rtc"
+	# SDL output is fallback for platforms where nothing better is available
+	myconf+=" --disable-sdl"
 	myconf+="
-		--disable-tremor
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
-	uses="bluray enca ftp libass rtc vcd"
+	uses="bluray ftp vcd"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use ipv6 || myconf+=" --disable-inet6"
-	use nut || myconf+=" --disable-libnut"
 	use quvi || myconf+=" --disable-libquvi"
-	use rar || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
-	if ! use lirc; then
-		myconf+="
-			--disable-lirc
-			--disable-lircc
-			--disable-apple-ir
-		"
-	fi
+	use lirc || myconf+=" --disable-lirc --disable-lircc --disable-apple-ir"
 
 	########
 	# CDDA #
@@ -253,53 +234,40 @@ src_configure() {
 	#############
 	# Subtitles #
 	#############
-	#
+	uses="enca libass"
+	for i in ${uses}; do
+		use ${i} || myconf+=" --disable-${i}"
+	done
 	# iconv optionally can use unicode
 	use iconv || myconf+=" --disable-iconv --charset=noconv"
 	use iconv && use unicode && myconf+=" --charset=UTF-8"
+	# obscure and not maintained feature
+	myconf+=" --disable-unrarexec"
 
 	#####################################
 	# DVB / Video4Linux / Radio support #
 	#####################################
-	myconf+=" --disable-tv-bsdbt848"
-	if { use dvb || use v4l || use pvr || use radio; }; then
-		use dvb || myconf+=" --disable-dvb"
-		use pvr || myconf+=" --disable-pvr"
-		use v4l || myconf+=" --disable-tv-v4l2"
-		if use radio && { use dvb || use v4l; }; then
-			myconf+="
-				--enable-radio
-				--disable-radio-capture
-			"
-		else
-			myconf+="
-				--disable-radio-v4l2
-				--disable-radio-bsdbt848
-			"
-		fi
+	# BSD legacy TV/radio support, FreeBSD actually supports V4L2, and V4L2 supports this chip.
+	myconf+=" --disable-tv-bsdbt848 --disable-radio-bsdbt848"
+	use dvb || myconf+=" --disable-dvb"
+	use pvr || myconf+=" --disable-pvr"
+	use v4l || myconf+=" --disable-tv --disable-tv-v4l2 --disable-v4l2"
+	if use radio; then
+		myconf+=" --enable-radio --enable-radio-capture"
 	else
-		myconf+="
-			--disable-tv
-			--disable-tv-v4l2
-			--disable-radio
-			--disable-radio-v4l2
-			--disable-radio-bsdbt848
-			--disable-dvb
-			--disable-v4l2
-			--disable-pvr"
+		myconf+=" --disable-radio-v4l2"
 	fi
 
 	##########
 	# Codecs #
 	##########
-	myconf+=" --disable-musepack" # deprecated, libavcodec Musepack decoder is preferred
-	use dts || myconf+=" --disable-libdca"
-	use mp3 || myconf+=" --disable-mpg123"
-	uses="a52 bs2b dv vorbis"
+	# better demuxers and decoders are provided by libav and ffmpeg
+	uses="faad liba52 libdca libdv libnut libvorbis mad musepack speex theora tremor xanim xvid"
 	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-lib${i}"
+		myconf+=" --disable-${i}"
 	done
-	uses="faad gif jpeg mad mng png pnm speex tga theora xanim xvid"
+	use mp3 || myconf+=" --disable-mpg123"
+	uses="gif jpeg mng png pnm tga"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
@@ -312,7 +280,7 @@ src_configure() {
 	################
 	# Video Output #
 	################
-	uses="directfb md5sum sdl yuv4mpeg"
+	uses="directfb md5sum yuv4mpeg"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
@@ -327,17 +295,19 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
+	use bs2b || myconf+=" --disable-libbs2b"
 	#use openal && myconf+=" --enable-openal" # build fails
+	use oss || myconf+=" --disable-ossaudio"
 	use pulseaudio || myconf+=" --disable-pulse"
-	if ! use radio; then
-		use oss || myconf+=" --disable-ossaudio"
-	fi
 
 	####################
 	# Advanced Options #
 	####################
+	use threads || myconf+=" --disable-pthreads"
+
 	# Platform specific flags, hardcoded on amd64 (see below)
 	use cpudetection && myconf+=" --enable-runtime-cpudetection"
+	use shm || myconf+=" --disable-shm"
 
 	for i in ${CPU_FEATURES//+/}; do
 		myconf+=" $(use_enable ${i})"
@@ -365,23 +335,18 @@ src_configure() {
 	############################
 	# OSX (aqua) configuration #
 	############################
-	if use aqua; then
-		myconf+="
-			--enable-macosx-finder
-			--enable-macosx-bundle
-		"
-	fi
+	use aqua && myconf+=" --enable-macosx-bundle --enable-macosx-finder"
 
-	./configure \
+	CFLAGS= LDFLAGS= ./configure \
 		--cc="$(tc-getCC)" \
+		--extra-cflags="${CFLAGS}" \
+		--extra-ldflags="${LDFLAGS}" \
 		--pkg-config="$(tc-getPKG_CONFIG)" \
 		--prefix="${EPREFIX}"/usr \
 		--bindir="${EPREFIX}"/usr/bin \
-		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--confdir="${EPREFIX}"/etc/${PN} \
 		--mandir="${EPREFIX}"/usr/share/man \
 		--localedir="${EPREFIX}"/usr/share/locale \
-		--enable-translation \
 		${myconf} || die
 
 	MAKEOPTS+=" V=1"
@@ -393,50 +358,22 @@ src_compile() {
 }
 
 src_install() {
-	local i
-
-	emake \
-		DESTDIR="${D}" \
-		INSTALLSTRIP="" \
-		install
-
-	dodoc AUTHORS Copyright README etc/codecs.conf
-
-	docinto tech/
-	dodoc DOCS/tech/{*.txt,mpsub.sub,playtree}
-	docinto TOOLS/
-	dodoc -r TOOLS
+	base_src_install
 
 	if use doc; then
-		docinto html/
-		dohtml -r "${S}"/DOCS/HTML/*
+		rm -r TOOLS/osxbundle* DOCS/tech/{Doxyfile,realcodecs} || die
+		dodoc -r TOOLS DOCS/tech
+		dohtml -r DOCS/HTML/*
 	fi
 
-	insinto /etc/${PN}
-	newins "${S}/etc/example.conf" mplayer.conf
-	cat >> "${ED}/etc/${PN}/mplayer.conf" << _EOF_
-# Config options can be section specific, global
-# options should go in the default section
-[default]
-_EOF_
-	doins "${S}/etc/input.conf"
-
-	# set unrar path when required
-	if use rar; then
-		cat >> "${ED}/etc/${PN}/mplayer.conf" << _EOF_
-unrarexec=${EPREFIX}/usr/bin/unrar
-_EOF_
-	fi
-	dosym ../../../etc/${PN}/mplayer.conf /usr/share/${PN}/mplayer.conf
-
-	newbin "${S}/TOOLS/midentify.sh" midentify${NAMESUF}
+	newbin TOOLS/midentify.sh midentify${NAMESUF}
 
 	if [[ -n ${NAMESUF} ]]; then
 		mv "${ED}/usr/share/man/man1/mplayer.1" "${ED}/usr/share/man/man1/mplayer${NAMESUF}.1" || die
 
 		if use symlink; then
-			dosym "${PN}" /usr/bin/mplayer
-			dosym "midentify${NAMESUF}" /usr/bin/midentify
+			dosym ${PN} /usr/bin/mplayer
+			dosym midentify${NAMESUF} /usr/bin/midentify
 		fi
 	fi
 }
