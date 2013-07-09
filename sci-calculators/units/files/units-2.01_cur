@@ -37,7 +37,7 @@ for currency in currencies:
     maxlen = len(currency.find('description').text)
   if currency.find('code').text == 'USD':
     usdval = currency.find('rate').text[2:]
-    currency.remove
+    currencies.remove(currency)
 
 # print rates here
 

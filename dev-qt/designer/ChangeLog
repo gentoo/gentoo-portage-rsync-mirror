@@ -1,0 +1,9 @@
+# ChangeLog for dev-qt/designer
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.1 2013/07/09 11:05:43 pesa Exp $
+
+*designer-4.8.5 (09 Jul 2013)
+
+  09 Jul 2013; Davide Pesavento <pesa@gentoo.org> +designer-4.8.5.ebuild,
+  +metadata.xml:
+  New ebuild for Designer application, split off from dev-qt/qtgui.

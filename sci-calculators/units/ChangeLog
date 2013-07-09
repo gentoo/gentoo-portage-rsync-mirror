@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.57 2013/07/08 10:27:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.58 2013/07/09 11:27:08 jer Exp $
+
+*units-2.01-r4 (09 Jul 2013)
+
+  09 Jul 2013; Jeroen Roovers <jer@gentoo.org> -units-2.01-r3.ebuild,
+  +units-2.01-r4.ebuild, files/units-2.01_cur:
+  Fix python script (remove proper node from XML tree).
 
 *units-2.01-r3 (08 Jul 2013)
 

@@ -1,0 +1,10 @@
+# ChangeLog for dev-qt/assistant
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/assistant/ChangeLog,v 1.1 2013/07/09 11:06:55 pesa Exp $
+
+*assistant-4.8.5 (09 Jul 2013)
+
+  09 Jul 2013; Davide Pesavento <pesa@gentoo.org> +assistant-4.8.5.ebuild,
+  +files/assistant-4.8.2+gcc-4.7.patch, +files/disable-webkit.patch,
+  +metadata.xml:
+  New ebuild for Assistant application, split off from dev-qt/qthelp.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>qt</herd>
+	<use>
+		<flag name="c++0x">Build Qt using the C++11 standard</flag>
+		<flag name="declarative">Build the qdeclarativeview plugin</flag>
+		<flag name="exceptions">Add support for exceptions - like catching them
+			inside the event loop (recommended by Nokia)</flag>
+		<flag name="phonon">Build the phononwidgets plugin</flag>
+		<flag name="qt3support">Build the qt3supportwidgets plugin</flag>
+		<flag name="webkit">Build the qwebview plugin</flag>
+	</use>
+	<upstream>
+		<bugs-to>https://bugreports.qt-project.org/</bugs-to>
+		<doc>http://qt-project.org/doc/</doc>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,9 @@
+# ChangeLog for dev-qt/qdbusviewer
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qdbusviewer/ChangeLog,v 1.1 2013/07/09 11:04:29 pesa Exp $
+
+*qdbusviewer-4.8.5 (09 Jul 2013)
+
+  09 Jul 2013; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qdbusviewer-4.8.5.ebuild:
+  New ebuild for qdbusviewer application, split off from dev-qt/qtgui.

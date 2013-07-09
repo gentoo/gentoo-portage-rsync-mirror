@@ -1836,6 +1836,20 @@ dev-python/ws4py:server - Install server modules
 dev-python/wxpython:doc - Install HTML wxWidgets docs and wxpython API reference.
 dev-python/wxpython:examples - Install interactive demo module browser and sample applets.
 dev-python/zsi:twisted - add support for dev-python/twisted
+dev-qt/assistant:c++0x - Build Qt using the C++11 standard
+dev-qt/assistant:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/designer:c++0x - Build Qt using the C++11 standard
+dev-qt/designer:declarative - Build the qdeclarativeview plugin
+dev-qt/designer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/designer:phonon - Build the phononwidgets plugin
+dev-qt/designer:qt3support - Build the qt3supportwidgets plugin
+dev-qt/designer:webkit - Build the qwebview plugin
+dev-qt/linguist:c++0x - Build Qt using the C++11 standard
+dev-qt/linguist:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/pixeltool:c++0x - Build Qt using the C++11 standard
+dev-qt/pixeltool:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qdbusviewer:c++0x - Build Qt using the C++11 standard
+dev-qt/qdbusviewer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 dev-qt/qt-creator:android - Build Android plugin
 dev-qt/qt-creator:autotools - Enable autotools project manager plugin
 dev-qt/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
