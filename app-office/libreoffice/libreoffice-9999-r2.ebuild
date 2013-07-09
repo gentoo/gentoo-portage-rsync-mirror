@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.183 2013/07/08 09:29:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.184 2013/07/09 13:12:39 scarabeus Exp $
 
 EAPI=5
 
@@ -423,7 +423,6 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
-	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
 	#   promote it
 	# --enable-extension-integration: enable any extension integration support
@@ -455,7 +454,6 @@ src_configure() {
 		--disable-kdeab \
 		--disable-kde \
 		--disable-online-update \
-		--disable-rpath \
 		--disable-systray \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
