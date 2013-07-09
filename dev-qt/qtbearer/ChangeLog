@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtbearer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.1 2013/03/02 15:25:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.2 2013/07/09 10:49:12 pesa Exp $
+
+*qtbearer-4.8.5 (09 Jul 2013)
+
+  09 Jul 2013; Davide Pesavento <pesa@gentoo.org> +qtbearer-4.8.5.ebuild:
+  Version bump.
 
   31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.
