@@ -6,11 +6,6 @@
     <name>Vladimir Pavljuchenkov</name>
     <description>Primary maintainer.</description>
   </maintainer>
-  <maintainer>
-    <email>TomWij@gentoo.org</email>
-    <name>Tom Wijsman</name>
-    <description>Committer, please CC him.</description>
-  </maintainer>
   <herd>proxy-maintainers</herd>
   <longdescription>
     This small program receives UDP datagrams on a given port, and resends

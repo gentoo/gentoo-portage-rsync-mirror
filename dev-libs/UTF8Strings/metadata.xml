@@ -6,11 +6,6 @@
     <name>Gorelov Grigory</name>
     <description>Maintainer and upstream developer.</description>
   </maintainer>
-  <maintainer>
-    <email>TomWij@gentoo.org</email>
-    <name>Tom Wijsman</name>
-    <description>Committer, please CC him.</description>
-  </maintainer>
   <herd>proxy-maintainers</herd>
   <longdescription>
     C++ library that provides ability to work natively with UTF8 strings in a very simple way.

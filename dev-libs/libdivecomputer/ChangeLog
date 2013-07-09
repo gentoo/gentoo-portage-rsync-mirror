@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdivecomputer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.4 2013/05/15 13:04:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.5 2013/07/09 14:25:53 tomwij Exp $
+
+  09 Jul 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Removed myself from metadata.xml to avoid duplication, as I am part of proxy-
+  maintainers herd now.
 
 *libdivecomputer-0.4.0 (15 May 2013)
 
