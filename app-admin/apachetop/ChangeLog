@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/apachetop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.52 2012/11/27 20:19:44 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.53 2013/07/09 18:29:20 neurogeek Exp $
+
+  09 Jul 2013; <neurogeek@gentoo.org> apachetop-0.12.6-r1.ebuild,
+  +files/apachetop-0.12.6-ac_config_header.patch:
+  Added patch to rename AM_CONFIG_HEADER to AC_CONFIG_HEADER. Closes bug
+  #467536
 
   27 Nov 2012; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Added myself as maintainer

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6-r1.ebuild,v 1.6 2011/03/20 18:22:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6-r1.ebuild,v 1.7 2013/07/09 18:29:20 neurogeek Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-maxpathlen.patch
+	epatch "${FILESDIR}"/${P}-ac_config_header.patch
 	eautoreconf
 }
 
