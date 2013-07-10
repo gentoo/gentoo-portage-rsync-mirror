@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.166 2013/06/18 20:39:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.167 2013/07/10 10:49:39 jer Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -127,10 +127,6 @@ dev-lang/path64 assembler
 # Markos Chandras <hwoarang@gentoo.org> (10 Jun 2011)
 # Unmask firebird on qtsql per bug #337451
 dev-qt/qtsql -firebird
-
-# Jim Ramsay <lack@gentoo.org> (14 May 2011)
-# Mask 'kde' flag for adobe-flash, since the KCM plugin in 10.3 is 32-bit only.
-<www-plugins/adobe-flash-11 kde
 
 # Markos Chandras <hwoarang@gentoo.org> (03 May 2011)
 # Unmask firebird only for php

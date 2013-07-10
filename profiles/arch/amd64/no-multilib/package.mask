@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.127 2013/06/22 12:32:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.128 2013/07/10 10:49:39 jer Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -177,7 +177,6 @@ sci-libs/ipp
 sys-apps/memtest86
 sys-apps/memtest86+
 sys-libs/lib-compat-loki
-<www-plugins/adobe-flash-11.0.1.60_beta201107131
 www-plugins/nspluginwrapper
 
 # AMD64 Team; <amd64@gentoo.org>
