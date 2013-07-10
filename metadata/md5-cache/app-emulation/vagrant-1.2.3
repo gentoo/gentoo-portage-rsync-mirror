@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/childprocess-0.3.7[ruby_targets_ruby19] >=dev-ruby/erubis-2.7.0[ruby_targets_ruby19] dev-ruby/i18n:0.6[ruby_targets_ruby19] >=dev-ruby/json-1.5.1[ruby_targets_ruby19] >=dev-ruby/log4r-1.1.9[ruby_targets_ruby19] >=dev-ruby/net-ssh-2.6.6[ruby_targets_ruby19] >=dev-ruby/net-scp-1.1.0[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-ruby/rake[ruby_targets_ruby19] test? ( dev-ruby/mocha[ruby_targets_ruby19] virtual/ruby-minitest[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=A tool for building and distributing virtual machines using VirtualBox
+EAPI=5
+HOMEPAGE=http://vagrantup.com/
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 test test
+KEYWORDS=~amd64 ~x86 ~x64-macos
+LICENSE=MIT
+RDEPEND=net-misc/curl !x64-macos? ( || ( app-emulation/virtualbox app-emulation/virtualbox-bin ) ) ruby_targets_ruby19? ( >=dev-ruby/childprocess-0.3.7[ruby_targets_ruby19] >=dev-ruby/erubis-2.7.0[ruby_targets_ruby19] dev-ruby/i18n:0.6[ruby_targets_ruby19] >=dev-ruby/json-1.5.1[ruby_targets_ruby19] >=dev-ruby/log4r-1.1.9[ruby_targets_ruby19] >=dev-ruby/net-ssh-2.6.6[ruby_targets_ruby19] >=dev-ruby/net-scp-1.1.0[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/mitchellh/vagrant/archive/v1.2.3.tar.gz -> vagrant-1.2.3.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	6e366daedf25d7020291916549562bbf	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=070265d30f65ab30d835a692b8c1ee94

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.114 2013/06/16 20:21:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.115 2013/07/10 18:51:33 blueness Exp $
+
+  10 Jul 2013; Anthony G. Basile <blueness@gentoo.org> use.mask:
+  Unmask USE=emacs, bug #476160
 
   16 Jun 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask openssl-1.0.1e-r1 per #469976

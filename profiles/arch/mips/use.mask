@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.65 2013/05/28 13:36:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.66 2013/07/10 18:51:33 blueness Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -263,7 +263,6 @@ lirc
 trusted
 voodoo3
 smartcard
-emacs
 
 #
 # Anthony G. Basile <blueness@gentoo.org> (18 Jul 2012)
