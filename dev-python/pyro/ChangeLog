@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.85 2013/06/29 18:31:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.86 2013/07/10 14:30:15 idella4 Exp $
+
+*pyro-4.20 (10 Jul 2013)
+
+  10 Jul 2013; Ian Delaney <idella4@gentoo.org> +pyro-4.20.ebuild:
+  bump, drop pypy1_9 support, add new dep serpent', addresses Bug #474624 by
+  aidecoe
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> pyro-4.17-r1.ebuild:
   Stable for ppc, wrt bug #474202

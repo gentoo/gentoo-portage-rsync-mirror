@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.559 2013/07/05 22:02:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.560 2013/07/10 14:22:22 jer Exp $
+
+  10 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove USE=java mask for =net-dns/libidn-1.27 (bug #472604).
 
   05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> make.defaults:
   Bump PHP_TARGETS to php5-4, as it should be always latest stable.
