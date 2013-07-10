@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>ki@baka.bakka.su</email>
-    <description>In baka-bakka overlay.</description>
-  </maintainer>
-  <use>
-    <flag name="adl">Enable support for controlling fans and overclocking on AMD cards with AMD Display Library</flag>
-    <flag name="avalon">Enable support for Avalon ASICs</flag>
-    <flag name="bflsc">Enable support for BFL ASICs</flag>
-    <flag name="bitforce">Enable support for mining with ButterFly Labs BitFORCE FPGAs</flag>
-    <flag name="icarus">Enable support for mining with Icarus FPGAs</flag>
-    <flag name="modminer">Enable support for mining with ModMiner FPGAs</flag>
-    <flag name="opencl">Enable support for mining with OpenCL-capable devices (GPUs)</flag>
-    <flag name="scrypt">Enable support for scrypt mining algorithm</flag>
-    <flag name="ztex">Enable support for mining with Ztex FPGAs</flag>
-  </use>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>ki@baka.bakka.su</email>
+		<description>In baka-bakka overlay.</description>
+	</maintainer>
+	<maintainer>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
+	</maintainer>
+	<use>
+		<flag name="adl">Enable support for controlling fans and overclocking on AMD cards with AMD Display Library</flag>
+		<flag name="avalon">Enable support for Avalon ASICs</flag>
+		<flag name="bflsc">Enable support for BFL ASICs</flag>
+		<flag name="bitforce">Enable support for mining with ButterFly Labs BitFORCE FPGAs</flag>
+		<flag name="icarus">Enable support for mining with Icarus FPGAs</flag>
+		<flag name="modminer">Enable support for mining with ModMiner FPGAs</flag>
+		<flag name="opencl">Enable support for mining with OpenCL-capable devices (GPUs)</flag>
+		<flag name="scrypt">Enable support for scrypt mining algorithm</flag>
+		<flag name="ztex">Enable support for mining with Ztex FPGAs</flag>
+	</use>
 </pkgmetadata>
