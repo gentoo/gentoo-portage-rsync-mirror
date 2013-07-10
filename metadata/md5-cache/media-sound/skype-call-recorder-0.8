@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=media-libs/id3lib >=media-libs/libogg-1.2.0 >=media-libs/libvorbis-1.2.0 media-sound/lame >=dev-qt/qtcore-4.4:4 >=dev-qt/qtdbus-4.4:4 >=dev-qt/qtgui-4.4:4[dbus] sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=media-libs/id3lib >=media-libs/libogg-1.2.0 >=media-libs/libvorbis-1.2.0 media-sound/lame >=dev-qt/qtcore-4.4:4 >=dev-qt/qtdbus-4.4:4 >=dev-qt/qtgui-4.4:4[dbus(+)] sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Records Skype calls to MP3/Ogg/WAV files
 EAPI=4
 HOMEPAGE=http://atdot.ch/scr/
 IUSE=debug
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( GPL-2 GPL-3 )
-RDEPEND=media-libs/id3lib >=media-libs/libogg-1.2.0 >=media-libs/libvorbis-1.2.0 media-sound/lame >=dev-qt/qtcore-4.4:4 >=dev-qt/qtdbus-4.4:4 >=dev-qt/qtgui-4.4:4[dbus] net-im/skype[-qt-static(-)]
+RDEPEND=media-libs/id3lib >=media-libs/libogg-1.2.0 >=media-libs/libvorbis-1.2.0 media-sound/lame >=dev-qt/qtcore-4.4:4 >=dev-qt/qtdbus-4.4:4 >=dev-qt/qtgui-4.4:4[dbus(+)] net-im/skype[-qt-static(-)]
 SLOT=0
 SRC_URI=http://atdot.ch/scr/files/0.8/skype-call-recorder-0.8.tar.gz
 _eclasses_=cmake-utils	4a83fb2557280cbf1418033633944bef	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=bd3e26d30b02124a957a66355c42a79c
+_md5_=574e38946d9ae6d7e990b26d347f80bf

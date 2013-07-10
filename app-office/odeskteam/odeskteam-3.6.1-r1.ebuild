@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1-r1.ebuild,v 1.1 2013/06/19 11:17:27 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.6.1-r1.ebuild,v 1.2 2013/07/10 04:48:09 patrick Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2
 		 dev-libs/libxml2
 		 dev-libs/openssl:0
 		 dev-qt/qtcore:4[ssl]
-		 dev-qt/qtgui:4[dbus]
+		 dev-qt/qtgui:4[dbus(+)]
 		 media-libs/alsa-lib
 		 media-libs/fontconfig
 		 media-libs/freetype

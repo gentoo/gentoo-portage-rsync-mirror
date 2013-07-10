@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fatrat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.1 2013/06/28 13:13:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.2 2013/07/10 04:56:44 patrick Exp $
+
+  10 Jul 2013; Patrick Lauer <patrick@gentoo.org> fatrat-1.2.0_beta2.ebuild:
+  Fixing qtgui deps for qt-4.8.5
 
 *fatrat-1.2.0_beta2 (28 Jun 2013)
 
@@ -8,4 +11,3 @@
   +fatrat-1.2.0_beta2.ebuild, +files/fatrat-1.2.0_beta2-build.patch,
   +metadata.xml:
   Initial commit. Fixes bug #220231.
-

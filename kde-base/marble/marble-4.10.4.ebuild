@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.10.4.ebuild,v 1.5 2013/07/02 08:07:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.10.4.ebuild,v 1.6 2013/07/10 04:50:21 patrick Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RESTRICT="test"
 RDEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtdeclarative:4
-	dev-qt/qtgui:4[dbus]
+	dev-qt/qtgui:4[dbus(+)]
 	dev-qt/qtscript:4
 	dev-qt/qtsql:4
 	dev-qt/qtsvg:4

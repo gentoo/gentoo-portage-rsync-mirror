@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.203 2013/07/02 16:48:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.204 2013/07/10 04:50:21 patrick Exp $
+
+  10 Jul 2013; Patrick Lauer <patrick@gentoo.org> marble-4.10.4.ebuild,
+  marble-4.10.5.ebuild:
+  Fixing qtgui deps for qt-4.8.5
 
 *marble-4.10.5 (02 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.9.ebuild,v 1.2 2013/03/02 19:41:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.9.ebuild,v 1.3 2013/07/10 04:49:10 patrick Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="debug nsplugin"
 
 RDEPEND="
 	>=app-text/djvu-3.5.22-r1
-	dev-qt/qtgui:4[dbus]"
+	dev-qt/qtgui:4[dbus(+)]"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.67
 	virtual/pkgconfig

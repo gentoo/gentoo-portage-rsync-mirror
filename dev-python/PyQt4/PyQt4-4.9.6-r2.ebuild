@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r2.ebuild,v 1.13 2013/03/11 17:51:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r2.ebuild,v 1.14 2013/07/10 04:50:15 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -43,7 +43,7 @@ RDEPEND="
 	>=dev-python/sip-4.14.2:=[${PYTHON_USEDEP}]
 	>=dev-qt/qtcore-${QT_PV}
 	X? (
-		>=dev-qt/qtgui-${QT_PV}[dbus?]
+		>=dev-qt/qtgui-${QT_PV}[dbus(+)?]
 		>=dev-qt/qttest-${QT_PV}
 	)
 	dbus? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.35 2013/06/24 08:24:55 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.36 2013/07/10 04:59:34 patrick Exp $
 
 EAPI="5"
 
@@ -70,7 +70,7 @@ RDEPEND="
 		libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	)
 	qt4? (
-		>=dev-qt/qtgui-4.6.0:4[dbus?]
+		>=dev-qt/qtgui-4.6.0:4[dbus(+)?]
 		javascript? (
 			dev-qt/qtscript:4
 			x11-libs/qtscriptgenerator
