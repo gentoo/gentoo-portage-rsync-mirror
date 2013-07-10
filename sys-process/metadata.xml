@@ -39,5 +39,9 @@
 		Kategoria sys-process zawiera programy do przeszukiwania listy procesów
 		oraz do manipulowania nimi. Znajdują się tu również demony cron.
 	</longdescription>
+	<longdescription lang="ru">
+		Категория sys-process содержит пакеты, которые работают с процессами в системе.
+		Демоны 'cron' также относятся к данной категории.
+	</longdescription>
 </catmetadata>
 

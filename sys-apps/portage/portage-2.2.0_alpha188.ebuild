@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha188.ebuild,v 1.1 2013/07/09 21:47:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha188.ebuild,v 1.2 2013/07/10 20:41:49 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_pl linguas_ru pypy2_0 python2 python3 selinux xattr"
+IUSE="build doc epydoc +ipc linguas_ru pypy2_0 python2 python3 selinux xattr"
 
 for _pyimpl in ${PYTHON_COMPAT[@]} ; do
 	IUSE+=" python_targets_${_pyimpl}"
@@ -98,9 +98,7 @@ PV_PL="2.1.2"
 PATCHVER_PL=""
 TARBALL_PV=2.2.0_alpha175
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
-	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
-	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
-		$(prefix_src_archives ${PN}-man-pl-${PV_PL}.tar.bz2) )"
+	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)"
 
 PATCHVER=
 [[ $TARBALL_PV = $PV ]] || PATCHVER=$PV
@@ -341,11 +339,6 @@ src_install() {
 
 	# Use dodoc for compression, since the Makefile doesn't do that.
 	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES} || die
-
-	if use linguas_pl; then
-		doman -i18n=pl "${S_PL}"/man/pl/*.[0-9] || die
-		doman -i18n=pl_PL.UTF-8 "${S_PL}"/man/pl_PL.UTF-8/*.[0-9] || die
-	fi
 
 	# Allow external portage API consumers to import portage python modules
 	# (this used to be done with PYTHONPATH setting in /etc/env.d).

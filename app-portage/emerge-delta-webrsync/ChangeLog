@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.41 2013/06/22 07:16:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.42 2013/07/10 20:31:31 zmedico Exp $
+
+*emerge-delta-webrsync-3.7.1 (10 Jul 2013)
+
+  10 Jul 2013; Zac Medico <zmedico@gentoo.org>
+  +emerge-delta-webrsync-3.7.1.ebuild, -emerge-delta-webrsync-3.7.0.ebuild:
+  3.7.1 version bump. This fixes bug #476416 (interference triggered by empty
+  files remaining after failed fetch attempts).
 
 *emerge-delta-webrsync-3.7.0 (22 Jun 2013)
 
