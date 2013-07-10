@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.013.ebuild,v 1.2 2013/07/04 21:01:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.013-r1.ebuild,v 1.1 2013/07/09 23:32:16 hasufell Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://www.urbanterror.info/home/"
 SRC_URI="http://cdn.urbanterror.info/urt/42/zips/UrbanTerror42_full${PREV_PV:4:3}.zip
 	http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-${PREV_PV}-to-${PV}.zip
-	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-${PREV_PV}.tar.gz -> ${PN}-${PREV_PV}.tar.gz
+	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-${PV}.tar.gz -> ${P}.tar.gz
 	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
 LICENSE="GPL-2 Q3AEULA"
@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	dedicated? ( curl? ( net-misc/curl ) )"
 
-S=${WORKDIR}/ioq3-for-UrbanTerror-4-release-${PREV_PV}
+S=${WORKDIR}/ioq3-for-UrbanTerror-4-release-${PV}
 S_DATA=${WORKDIR}/UrbanTerror42
 
 CHECKREQS_DISK_BUILD="3300M"

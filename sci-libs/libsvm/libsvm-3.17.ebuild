@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.12.ebuild,v 1.3 2012/06/26 23:49:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.17.ebuild,v 1.1 2013/07/09 23:34:04 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit eutils java-pkg-opt-2 python flag-o-matic toolchain-funcs
+inherit eutils java-pkg-opt-2 python-r1 flag-o-matic toolchain-funcs
 
 DESCRIPTION="Library for Support Vector Machines"
 HOMEPAGE="http://www.csie.ntu.edu.tw/~cjlin/libsvm/"
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="java openmp python tools"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )"
-RDEPEND="${DEPEND}
+RDEPEND="
+	java? ( >=virtual/jre-1.4 )
 	tools? ( sci-visualization/gnuplot )"
 
 pkg_setup() {
@@ -32,13 +33,12 @@ pkg_setup() {
 		fi
 		append-cxxflags -DOPENMP
 	fi
-	use python && python_pkg_setup
 }
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/3.11-openmp.patch \
-		"${FILESDIR}"/3.12-makefile.patch
+		"${FILESDIR}"/3.14-makefile.patch
 	sed -i -e "s@\.\./@${EPREFIX}/usr/bin/@g" tools/*.py \
 		|| die "Failed to fix paths in python files"
 
@@ -77,10 +77,11 @@ src_install() {
 
 	if use python ; then
 		installation() {
-			insinto $(python_get_sitedir)
-			doins python/*.py
+			touch python/__init__.py || die
+			python_moduleinto libsvm
+			python_domodule python/*.py
 		}
-		python_execute_function installation
+		python_foreach_impl installation
 		newdoc python/README README.python
 	fi
 

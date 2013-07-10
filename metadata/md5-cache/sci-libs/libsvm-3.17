@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install preinst prepare setup
+DEPEND=java? ( >=virtual/jdk-1.4 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=Library for Support Vector Machines
+EAPI=5
+HOMEPAGE=http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+IUSE=java openmp python tools elibc_FreeBSD java python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=java? ( >=virtual/jre-1.4 ) tools? ( sci-visualization/gnuplot ) java? ( >=dev-java/java-config-2.1.9-r1 )
+SLOT=0
+SRC_URI=http://www.csie.ntu.edu.tw/~cjlin/libsvm/libsvm-3.17.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	094dc7421f9aea7525b85b899f67e62a	python-utils-r1	9aa9cecaaf78644be7c0b8b8dc814dce	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=0cac35546e306f99da1ced27c5acfa3f
