@@ -5475,6 +5475,7 @@ sci-libs/fftw:fma - Use the Fused Multiply Add instruction set (fma3/fma4 either
 sci-libs/fftw:paired-single - Adds support for pair-single optimizations of mips
 sci-libs/fftw:quad - Build quadruple precision lib
 sci-libs/fftw:zbus - Adds support for ZBus cycle-counter of mips
+sci-libs/flann:cuda - Enable support for nVidia CUDA
 sci-libs/flann:octave - Add bindings for sci-mathematics/octave
 sci-libs/gdal:armadillo - Use sci-libs/armadillo for faster TPS transform computation
 sci-libs/gdal:aux_xml - Enable Portable Auxilliary Metadata generation

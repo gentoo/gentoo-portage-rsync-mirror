@@ -1,32 +1,40 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.11.ebuild,v 1.4 2011/11/11 20:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4.ebuild,v 1.1 2013/07/09 23:11:10 bicatali Exp $
 
-EAPI=3
+EAPI=5
 
-PYTHON_DEPEND="python? 2:2.5"
-
-inherit cmake-utils eutils python
+inherit cmake-utils eutils toolchain-funcs
 
 DESCRIPTION="Library for performing fast approximate nearest neighbor searches in high dimensional spaces"
 HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN/"
 SRC_URI="http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
-	test? ( http://dev.gentoo.org/~dilfridge/distfiles/${PN}-1.6.10-testdata.tar.xz )"
+	test? ( http://dev.gentoo.org/~bicatali/distfiles/${P}-testdata.tar.xz )"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc mpi octave python static-libs test"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+IUSE="cuda doc mpi openmp octave python static-libs test"
 
-RDEPEND="sci-libs/hdf5[mpi?]
+RDEPEND="
+	sci-libs/hdf5[mpi?]
 	mpi? ( dev-libs/boost[mpi] )
-	octave? ( sci-mathematics/octave )
-	python? ( dev-python/numpy )"
+	octave? ( sci-mathematics/octave )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	test? ( dev-cpp/gtest )"
+PDEPEND="python? ( ~dev-python/pyflann-${PV} )"
 
 S="${WORKDIR}"/${P}-src
+
+pkg_setup() {
+	if use openmp; then
+		if [[ $(tc-getCC) == *gcc ]] && ! tc-has-openmp ; then
+			ewarn "OpenMP is not available in your current selected gcc"
+			die "need openmp capable gcc"
+		fi
+	fi
+}
 
 src_prepare() {
 	# bug #302621
@@ -35,11 +43,6 @@ src_prepare() {
 	sed -i \
 		-e "s:share/doc/flann:share/doc/${PF}:" \
 		doc/CMakeLists.txt || die
-	# python standard installation directory respected
-	sed -i \
-		-e "/share/d" \
-		-e "/COMMAND/s:install:install --root="${ED}" --no-compile:" \
-		src/python/CMakeLists.txt || die
 	# produce pure octave files
 	# octave gentoo installation for .m files respected
 	sed -i \
@@ -57,22 +60,28 @@ src_prepare() {
 	use test || sed -i -e '/add_subdirectory.*test/d' CMakeLists.txt
 	# avoid automatic installation of pdf
 	use doc || sed -i -e '/doc/d' CMakeLists.txt
+	use cuda && cuda_src_prepare
 }
 
 src_configure() {
+	# python bindings are split
 	local mycmakeargs=(
-		"-DBUILD_C_BINDINGS=ON"
+		-DBUILD_C_BINDINGS=ON
+		-DBUILD_PYTHON_BINDINGS=OFF
+		-DPYTHON_EXECUTABLE=
+		$(cmake-utils_use_build cuda CUDA_LIB)
 		$(cmake-utils_use_build octave MATLAB_BINDINGS)
-		$(cmake-utils_use_build python PYTHON_BINDINGS)
 		$(cmake-utils_use_use mpi)
+		$(cmake-utils_use_use openmp)
 	)
 	cmake-utils_src_configure
 }
 
 src_test() {
-	cd "${CMAKE_BUILD_DIR}"
-	LD_LIBRARY_PATH="${PWD}/lib" PYTHONPATH="${S}/src/python" \
-		emake test
+	ln -s "${WORKDIR}"/testdata/* test/ || die
+	# -j1 to avoid obversubscribing jobs
+	LD_LIBRARY_PATH="${BUILD_DIR}/lib" \
+		cmake-utils_src_compile -j1 test
 }
 
 src_install() {

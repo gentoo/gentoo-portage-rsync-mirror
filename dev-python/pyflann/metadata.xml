@@ -8,12 +8,6 @@
   algorithms we found to work best for nearest neighbor search and a
   system for automatically choosing the best algorithm and optimum
   parameters depending on the dataset.
-  FLANN is written in C++ and contains bindings for the following
-  languages: C, MATLAB and Python.
+  This is the python binding package split from the main package.
 </longdescription>
-<use>
-  <flag name="octave">Add bindings for
-  <pkg>sci-mathematics/octave</pkg></flag>
-  <flag name="cuda">Enable support for nVidia CUDA</flag>
-</use>
 </pkgmetadata>

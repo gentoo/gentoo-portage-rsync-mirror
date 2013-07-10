@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.17 2013/05/12 03:22:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.18 2013/07/09 23:11:10 bicatali Exp $
+
+*flann-1.8.4 (09 Jul 2013)
+
+  09 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +flann-1.8.4.ebuild,
+  -flann-1.6.10.ebuild, -flann-1.6.11.ebuild, -flann-1.6.8.ebuild, metadata.xml:
+  Version bump. Switch to EAPI5. Split python bindings for easier maintenance of
+  multiple python ABI
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Fix metadata.xml encoding
