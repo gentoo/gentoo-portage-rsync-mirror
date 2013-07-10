@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-9999.ebuild,v 1.1 2013/07/04 18:30:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-9999.ebuild,v 1.2 2013/07/10 06:12:46 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,8 @@ src_prepare() {
 }
 
 src_install() {
-	dobin make-bcache probe-bcache bcache-super-show
+	into /
+	dosbin make-bcache probe-bcache bcache-super-show
 	doman *.8
 
 	insinto /etc/initramfs-tools/hooks/bcache

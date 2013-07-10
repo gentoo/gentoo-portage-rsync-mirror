@@ -6,4 +6,4 @@ HOMEPAGE=http://bcache.evilpiepirate.org/
 LICENSE=GPL-2
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	udev	a9a8d051efb42bfe884c1db82ce161de
-_md5_=9310dc185b372c98fa0c67e506a665bb
+_md5_=1698c96272f79de77e34e6f12cf2ba67
