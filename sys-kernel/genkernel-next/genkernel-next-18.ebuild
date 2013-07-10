@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-10.ebuild,v 1.1 2013/05/26 09:28:58 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-18.ebuild,v 1.1 2013/07/10 08:55:15 lxnay Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.gentoo.org"
 LICENSE="GPL-2"
 SLOT="0"
 RESTRICT=""
-IUSE="crypt cryptsetup ibm selinux"  # Keep 'crypt' in to keep 'use crypt' below working!
+IUSE="crypt cryptsetup dmraid gpg ibm iscsi plymouth selinux"  # Keep 'crypt' in to keep 'use crypt' below working!
 
 DEPEND="app-text/asciidoc
 	sys-fs/e2fsprogs
@@ -36,10 +36,17 @@ DEPEND="app-text/asciidoc
 RDEPEND="${DEPEND}
 	!sys-kernel/genkernel
 	cryptsetup? ( sys-fs/cryptsetup )
+	dmraid? ( sys-fs/dmraid )
+	gpg? ( app-crypt/gnupg )
+	iscsi? ( sys-block/open-iscsi )
+	plymouth? ( sys-boot/plymouth )
 	app-portage/portage-utils
 	app-arch/cpio
 	>=app-misc/pax-utils-0.2.1
-	!<sys-apps/openrc-0.9.9"
+	!<sys-apps/openrc-0.9.9
+	sys-block/thin-provisioning-tools
+	sys-fs/dmraid
+	sys-fs/lvm2"
 
 src_prepare() {
 	use selinux && sed -i 's/###//g' "${S}"/gen_compile.sh
@@ -95,11 +102,4 @@ pkg_postinst() {
 		ewarn "to have genkernel create an initramfs with LUKS support."
 		echo
 	fi
-
-	elog "Genkernel-Next depends on the following optional packages:"
-	elog "- app-crypt/gnupg: when called with --gpg"
-	elog "- sys-block/open-iscsi: when called with --iscsi"
-	elog "- sys-boot/plymouth: when called with --plymouth"
-	elog "- sys-fs/dmraid: when called with --dmraid"
-	elog "- sys-fs/lvm2: when called with --lvm"
 }

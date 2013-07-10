@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-13.1.5.192.ebuild,v 1.1 2013/07/10 08:29:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-13.1.5.192.ebuild,v 1.2 2013/07/10 08:55:49 jlec Exp $
 
 EAPI=5
 
@@ -29,9 +29,8 @@ INTEL_DAT_RPMS="compilerproc-common"
 CHECKREQS_DISK_BUILD=325M
 
 src_install() {
-	intel-sdp_src_install
-	if ! use linguas_jp; then
-		local idir=${INTEL_SDP_EDIR}/compiler/lib
-		rm -rvf "${D}"/${idir}/{ia32,intel64}/locale/ja_JP || die
+	if ! use linguas_ja; then
+		find "${S}" -type d -name ja_JP -exec rm -rf '{}' + || die
 	fi
+	intel-sdp_src_install
 }
