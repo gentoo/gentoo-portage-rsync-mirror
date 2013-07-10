@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/yaml-cpp-0.5.1.ebuild,v 1.2 2013/06/17 04:57:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/yaml-cpp/yaml-cpp-0.5.1.ebuild,v 1.3 2013/07/10 01:39:12 neurogeek Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND=""
+DEPEND=">=dev-libs/boost-1.49.0-r2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

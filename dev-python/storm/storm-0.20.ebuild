@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.20.ebuild,v 1.1 2013/07/08 05:35:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.20.ebuild,v 1.2 2013/07/10 01:32:44 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="An object-relational mapper for Python developed at Canonical."
 HOMEPAGE="https://storm.canonical.com/ http://pypi.python.org/pypi/storm"
@@ -32,6 +32,8 @@ DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 DOCS="tests/tutorial.txt"
 
 src_prepare() {
+	epatch "${FILESDIR}/storm-0.20-exclude-tests.patch"
+
 	distutils_src_prepare
 
 	preparation() {
