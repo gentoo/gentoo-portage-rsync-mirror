@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pastescript
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.12 2013/07/03 13:26:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.13 2013/07/10 01:27:37 floppym Exp $
+
+  10 Jul 2013; Mike Gilbert <floppym@gentoo.org> pastescript-1.7.5-r2.ebuild:
+  setuptools is needed at runtime as well.
 
 *pastescript-1.7.5-r2 (03 Jul 2013)
 
