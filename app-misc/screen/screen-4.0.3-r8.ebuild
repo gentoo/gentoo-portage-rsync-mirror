@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.3 2013/04/06 09:06:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.4 2013/07/10 20:11:35 grobian Exp $
 
 EAPI=4
 
@@ -131,9 +131,8 @@ src_install() {
 
 	dobin screen
 
-	if use multiuser || use prefix
-	then
-		fperms 4755 /usr/bin/screen
+	if use multiuser ; then
+		use prefix || fperms 4755 /usr/bin/screen
 		tmpfiles_perms="0755"
 		tmpfiles_group="root"
 	else

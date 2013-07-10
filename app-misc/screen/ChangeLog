@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.182 2013/04/06 09:06:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.183 2013/07/10 20:11:35 grobian Exp $
+
+  10 Jul 2013; Fabian Groffen <grobian@gentoo.org> screen-4.0.3-r8.ebuild:
+  Tweak logic to allow multiuser on Prefix, bug #475704
 
   06 Apr 2013; Justin Lecher <jlec@gentoo.org> screen-4.0.3-r6.ebuild,
   screen-4.0.3-r7.ebuild, screen-4.0.3-r8.ebuild, metadata.xml:

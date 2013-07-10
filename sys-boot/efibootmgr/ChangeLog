@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/efibootmgr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.22 2012/05/03 04:50:13 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.23 2013/07/10 20:11:28 scarabeus Exp $
+
+*efibootmgr-0.5.4-r1 (10 Jul 2013)
+
+  10 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> +efibootmgr-0.5.4-r1.ebuild,
+  +files/efibootmgr-error-reporting.patch:
+  Revision bump with error reporting patch. Now you can see error messages, not
+  just return codes.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> efibootmgr-0.5.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -78,4 +85,3 @@
   files/efibootmgr-0.4.1-makefile.patch:
   Add efibootmgr for IA-64. This program allows you to configure the EFI boot
   partition on IA-64 systems
-
