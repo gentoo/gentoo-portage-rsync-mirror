@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.0-r1.ebuild,v 1.1 2013/04/22 08:04:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.1.ebuild,v 1.1 2013/07/10 15:25:25 polynomial-c Exp $
 
 EAPI=5
 
@@ -12,16 +12,28 @@ SRC_URI="ftp://ftp.samba.org/pub/linux-cifs/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~arm-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~x86 ~arm-linux ~x86-linux"
 IUSE="acl ads +caps +caps-ng creds upcall"
 
 DEPEND="!net-fs/mount-cifs
 	!<net-fs/samba-3.6_rc1
-	ads? ( sys-libs/talloc virtual/krb5 sys-apps/keyutils )
+	acl? ( || (
+		=net-fs/samba-3.6*[winbind]
+		>=net-fs/samba-4.0.0_alpha1
+	) )
+	ads? (
+		sys-libs/talloc
+		virtual/krb5
+		sys-apps/keyutils
+	)
 	caps? ( !caps-ng? ( sys-libs/libcap ) )
 	caps? ( caps-ng? ( sys-libs/libcap-ng ) )
 	creds? ( sys-apps/keyutils )
-	upcall? ( sys-apps/keyutils sys-libs/talloc virtual/krb5 )"
+	upcall? (
+		sys-apps/keyutils
+		sys-libs/talloc
+		virtual/krb5
+	)"
 RDEPEND="${DEPEND}"
 
 REQUIRED_USE="acl? ( upcall )"
