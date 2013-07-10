@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.6.ebuild,v 1.5 2013/07/04 12:23:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.6.ebuild,v 1.6 2013/07/10 04:11:35 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
@@ -16,17 +16,17 @@ IUSE="dbus dedicated doc nls server"
 
 RDEPEND=">=media-libs/libsdl-1.2.7[joystick,video,X]
 	media-libs/sdl-net
-	>=media-libs/sdl-ttf-2.0.8
-	>=media-libs/sdl-mixer-1.2[vorbis]
-	>=media-libs/sdl-image-1.2[jpeg,png]
 	!dedicated? (
+		>=media-libs/sdl-ttf-2.0.8
+		>=media-libs/sdl-mixer-1.2[vorbis]
+		>=media-libs/sdl-image-1.2[jpeg,png]
 		dbus? ( sys-apps/dbus )
+		sys-libs/zlib
+		x11-libs/pango
+		dev-lang/lua
+		media-libs/fontconfig
 	)
 	>=dev-libs/boost-1.36
-	sys-libs/zlib
-	x11-libs/pango
-	dev-lang/lua
-	media-libs/fontconfig
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
