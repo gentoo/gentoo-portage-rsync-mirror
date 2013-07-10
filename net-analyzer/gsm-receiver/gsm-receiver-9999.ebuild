@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gsm-receiver/gsm-receiver-9999.ebuild,v 1.3 2013/06/29 23:01:54 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gsm-receiver/gsm-receiver-9999.ebuild,v 1.4 2013/07/10 11:27:17 chithanh Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="net-libs/libosmocore
-	net-wireless/gnuradio:="
+	<net-wireless/gnuradio-3.7_rc:0="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

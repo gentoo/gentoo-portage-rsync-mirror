@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/clipper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.22 2013/05/28 18:15:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.23 2013/07/10 11:29:49 jlec Exp $
+
+  10 Jul 2013; Justin Lecher <jlec@gentoo.org> -clipper-20100511-r1.ebuild,
+  -files/20100511-makefile.patch,
+  -files/clipper-20100511-outofsourcebuild.patch:
+  Drop old versioned named ebuild
 
 *clipper-2.1_p100511-r1 (28 May 2013)
 
