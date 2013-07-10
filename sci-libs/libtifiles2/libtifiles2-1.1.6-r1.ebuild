@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.6.ebuild,v 1.1 2013/07/09 16:49:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.6-r1.ebuild,v 1.1 2013/07/10 21:45:43 bicatali Exp $
 
 EAPI=5
 
@@ -26,6 +26,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS=( AUTHORS LOGO NEWS README ChangeLog docs/api.txt )
+
+src_prepare() {
+	cd src
+	sed -i -e "s|types\*.h|$(echo types*.h)|" Makefile.in || die
+	autotools-utils_src_prepare
+}
 
 src_configure() {
 	local myeconfargs=(

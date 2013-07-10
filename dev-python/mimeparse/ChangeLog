@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mimeparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.14 2013/07/10 14:55:42 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.15 2013/07/10 21:34:35 hwoarang Exp $
+
+  10 Jul 2013; Markos Chandras <hwoarang@gentoo.org> mimeparse-0.1.4-r1.ebuild:
+  Add ~mips. Bug #468268
 
   10 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
   mimeparse-0.1.3-r1.ebuild, mimeparse-0.1.4-r1.ebuild:
