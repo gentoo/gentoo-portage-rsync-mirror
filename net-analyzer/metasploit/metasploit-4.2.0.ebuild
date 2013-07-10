@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.2.0.ebuild,v 1.5 2012/08/16 03:58:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.2.0.ebuild,v 1.6 2013/07/10 13:42:29 vincent Exp $
 
 EAPI="3"
 inherit eutils
@@ -18,6 +18,7 @@ IUSE="gui mysql postgres"
 # Note we use bundled gems (see data/msfweb/vendor/rails/) as upstream voted for
 # such solution, bug #247787
 RDEPEND="dev-lang/ruby
+	dev-ruby/msgpack
 	dev-ruby/rubygems
 	gui? ( virtual/jre )
 	mysql? ( dev-ruby/mysql-ruby

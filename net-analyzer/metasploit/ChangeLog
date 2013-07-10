@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.68 2013/01/15 17:19:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.69 2013/07/10 13:42:29 vincent Exp $
+
+  10 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  metasploit-4.2.0.ebuild:
+  added dev-ruby/msgpack to RDEPEND, bug #411571
 
   15 Jan 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix maturity level.

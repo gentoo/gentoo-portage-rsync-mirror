@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ocurl-0.5.3.ebuild,v 1.4 2013/03/10 10:33:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ocurl-0.5.3.ebuild,v 1.5 2013/07/10 13:53:34 vincent Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ DEPEND=">=net-misc/curl-7.9.8
 		dev-libs/openssl
 		>=dev-lang/ocaml-3.12:=[ocamlopt]"
 RDEPEND="${DEPEND}"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 S=${WORKDIR}/${PN}
 

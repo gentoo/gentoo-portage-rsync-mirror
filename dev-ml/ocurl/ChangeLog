@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocurl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ChangeLog,v 1.12 2013/03/10 10:33:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ChangeLog,v 1.13 2013/07/10 13:53:34 vincent Exp $
+
+  10 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> ocurl-0.5.3.ebuild:
+  ppc stable, bug #460110
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> ocurl-0.5.3.ebuild:
   eapi5: define subslot and add missing dep on ocaml:=[ocamlopt]
@@ -48,4 +51,3 @@
   09 Mar 2005; Matthieu Sozeau <mattam@gentoo.org>
   +files/0.1.6-curl-helper.patch, +ocurl-0.1.6.ebuild:
   curl binding for ocaml.
-
