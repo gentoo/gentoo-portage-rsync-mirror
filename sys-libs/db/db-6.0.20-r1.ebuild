@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.3.21.ebuild,v 1.3 2013/07/10 17:10:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-6.0.20-r1.ebuild,v 1.1 2013/07/10 17:10:41 robbat2 Exp $
 
 EAPI=2
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
@@ -26,8 +26,8 @@ for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.oracle.com/technology/products/berkeley-db/db/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
-LICENSE="Sleepycat"
-SLOT="5.3"
+LICENSE="AGPL-3"
+SLOT="6.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc java cxx tcl test"
 
@@ -62,8 +62,9 @@ src_prepare() {
 	#epatch "${FILESDIR}"/${PN}-5.0.21-enable-dbm-autoconf.patch
 
 	# sqlite configure call has an extra leading ..
-	# upstreamed:5.2.36, missing in 5.3.x
-	epatch "${FILESDIR}"/${PN}-5.2.28-sqlite-configure-path.patch
+	# upstreamed:5.2.36, missing in 5.3.x/6.x
+	# still needs to be patched in 6.0.19
+	epatch "${FILESDIR}"/${PN}-6.0.19-sqlite-configure-path.patch
 
 	# The upstream testsuite copies .lib and the binaries for each parallel test
 	# core, ~300MB each. This patch uses links instead, saves a lot of space.

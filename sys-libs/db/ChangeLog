@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.335 2013/07/10 08:57:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.336 2013/07/10 17:10:41 robbat2 Exp $
+
+*db-6.0.20-r1 (10 Jul 2013)
+
+  10 Jul 2013; Robin H. Johnson <robbat2@gentoo.org> +db-6.0.20-r1.ebuild,
+  +files/db-6.0.20-test-link.patch, db-5.2.42.ebuild, db-5.3.21.ebuild:
+  Maintainer bump per #gentoo-infra discussion of July 4th. Patch massively
+  reduces storage requirement for running tests, but they still have two
+  failures: "repmgr_start:invalid argument"; "FAIL: condition {[stat_field $env
+  rep_stat \"Startup complete\"]}".
 
 *db-6.0.20 (10 Jul 2013)
 

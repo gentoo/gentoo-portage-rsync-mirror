@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.873 2013/07/09 01:57:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.874 2013/07/10 17:12:57 robbat2 Exp $
+
+  10 Jul 2013; Robin H. Johnson <robbat2@gentoo.org> db.eclass:
+  Additional change to run tests successfully on newer versions of db
 
   09 Jul 2013; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
   Stub-out ez_setup.py and distribute_setup.py to prevent packages from

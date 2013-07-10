@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.2.42.ebuild,v 1.2 2012/11/25 19:23:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.2.42.ebuild,v 1.3 2013/07/10 17:10:41 robbat2 Exp $
 
 EAPI=2
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
@@ -64,6 +64,10 @@ src_prepare() {
 	# sqlite configure call has an extra leading ..
 	# upstreamed:5.2.36
 	#epatch "${FILESDIR}"/${PN}-5.2.28-sqlite-configure-path.patch
+
+	# The upstream testsuite copies .lib and the binaries for each parallel test
+	# core, ~300MB each. This patch uses links instead, saves a lot of space.
+	epatch "${FILESDIR}"/${PN}-6.0.20-test-link.patch
 
 	# Upstream release script grabs the dates when the script was run, so lets
 	# end-run them to keep the date the same.
