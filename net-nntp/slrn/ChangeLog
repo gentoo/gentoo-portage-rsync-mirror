@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/slrn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.29 2013/04/27 01:13:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.30 2013/07/10 18:03:21 vincent Exp $
+
+  10 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  slrn-1.0.0_pre18.ebuild:
+  added ppc keyword, bug #385065
 
 *slrn-1.0.1 (27 Apr 2013)
 
