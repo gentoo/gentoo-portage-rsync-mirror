@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.15.ebuild,v 1.1 2012/12/22 08:11:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.19.ebuild,v 1.1 2013/07/10 12:28:19 mrueg Exp $
 
-EAPI=4
+EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby ree18"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc TODO"
 RUBY_FAKEGEM_DOCDIR="doc/html"
@@ -27,7 +27,12 @@ all_ruby_prepare() {
 	# that when running tests through portage. These should pass when
 	# run in a console. We should probably narrow this down more to the
 	# specific tests.
-	sed -i -e '/\(tc_highline\|tc_menu\)/ s:^:#:' test/ts_all.rb || die
+	sed -i -e '/tc_highline/ s:^:#:' test/ts_all.rb || die
+
+	sed -i -e '/test_question_options/,/^  end/ s:^:#:' \
+		-e '/test_paged_print_infinite_loop_bug/,/^  end/ s:^:#:' \
+		-e '/test_cancel_paging/,/^  end/ s:^:#:' \
+		test/tc_menu.rb || die
 }
 
 each_ruby_test() {
