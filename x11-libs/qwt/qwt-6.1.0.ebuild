@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.0.ebuild,v 1.1 2013/07/04 12:46:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.0.ebuild,v 1.2 2013/07/10 07:26:17 patrick Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="6"
 IUSE="doc examples mathml static-libs svg"
 
 DEPEND="
-	dev-qt/qtgui:4
+	|| ( <dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 )
 	doc? ( !<media-libs/coin-3.1.3[doc] )
 	svg? ( dev-qt/qtsvg:4 )"
 RDEPEND="${DEPEND}"

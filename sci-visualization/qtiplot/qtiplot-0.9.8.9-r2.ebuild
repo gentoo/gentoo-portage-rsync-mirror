@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.1 2013/07/04 12:52:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.2 2013/07/10 07:07:33 jlec Exp $
 
 EAPI=5
 
@@ -107,7 +107,6 @@ src_prepare() {
 	EMF_INCLUDEPATH = "${EPREFIX}/usr/include/libEMF
 	SYS_LIBS = -lgl2ps ${mylibs} -lGLU
 
-	PYTHON = ${PYTHON}
 	LUPDATE = lupdate
 	LRELEASE = lrelease
 
@@ -127,6 +126,7 @@ src_prepare() {
 	use bindist && echo "DEFINES         += QTIPLOT_SUPPORT" >> build.conf
 	use bindist || echo "DEFINES         += QTIPLOT_PRO" >> build.conf
 	use python && echo "SCRIPTING_LANGS += Python" >> build.conf
+	use python && echo "PYTHON = ${EPYTHON}" >> build.conf
 	use latex && echo "TEX_ENGINE_LIBS = -lQTeXEngine" >> build.conf
 
 	sed \

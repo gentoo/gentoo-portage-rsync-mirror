@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.112 2013/07/04 12:46:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.113 2013/07/10 07:26:17 patrick Exp $
+
+  10 Jul 2013; Patrick Lauer <patrick@gentoo.org> qwt-6.1.0.ebuild:
+  Fixing qtgui/designer deps for qt-4.8.5
 
 *qwt-6.1.0 (04 Jul 2013)
 
