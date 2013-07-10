@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.45 2013/04/29 18:56:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.46 2013/07/10 00:41:14 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -66,6 +66,28 @@ src_configure() {
 				myconf+=" -Darmv7=0"
 			fi
 			myconf+=" $(gyp_use neon arm_neon)" ;;
+		mips*)
+			if [[ ${CHOST} == mips*el* ]] ; then
+				myarch="mipsel"
+				myconf+=" -Dv8_target_arch=mipsel"
+			else
+				die "big-endian MIPS is not yet supported"
+			fi
+			if [[ ${CHOST} == *softfloat* ]] ; then
+				myconf+=" -Dv8_use_mips_abi_hardfloat=false"
+			else
+				myconf+=" -Dv8_use_mips_abi_hardfloat=true"
+			fi
+			if [[ ${CHOST} == *loongson* ]] ; then
+				myconf+=" -Dmips_arch_variant=loongson"
+			elif [[ ${CHOST} == mips*64* ]] ; then
+				die "generic MIPS 64bit is not yet supported"
+			elif [[ ${CHOST} == mips*r2* ]] ; then
+				myconf+=" -Dmips_arch_variant=mips32r2"
+			else
+				myconf+=" -Dmips_arch_variant=mips32"
+			fi
+			;;
 		*) die "Unrecognized CHOST: ${CHOST}"
 	esac
 
