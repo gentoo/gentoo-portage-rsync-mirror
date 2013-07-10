@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/openvas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.9 2013/07/01 10:32:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.10 2013/07/10 02:28:00 patrick Exp $
+
+  10 Jul 2013; Patrick Lauer <patrick@gentoo.org> -openvas-2.0.1.ebuild,
+  -openvas-2.0.2.ebuild:
+  Remove old versions with now masked depends. Drops ~ppc keyword.
 
 *openvas-6 (01 Jul 2013)
 
@@ -44,4 +48,3 @@
   08 Feb 2008; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
   +openvas-1.0.0.ebuild:
   Initial commit of openvas.
-
