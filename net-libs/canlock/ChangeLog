@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/canlock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/ChangeLog,v 1.5 2013/03/06 07:13:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/ChangeLog,v 1.6 2013/07/10 17:59:34 vincent Exp $
+
+  10 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> canlock-2b.ebuild:
+  ppc keyword, bug 476400
 
   06 Mar 2013; Tim Harder <radhermit@gentoo.org> canlock-2b.ebuild,
   files/canlock-2b-make.patch:
@@ -20,4 +23,3 @@
   30 Sep 2011; Tim Harder <radhermit@gentoo.org> +canlock-2b.ebuild,
   +files/canlock-2b-make.patch, +metadata.xml:
   Initial import (bug #104244).
-
