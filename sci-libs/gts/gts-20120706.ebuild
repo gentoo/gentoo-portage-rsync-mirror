@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20120706.ebuild,v 1.3 2012/12/17 20:35:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20120706.ebuild,v 1.4 2013/07/10 09:32:16 jlec Exp $
 
 EAPI=4
 
@@ -11,18 +11,22 @@ inherit autotools-utils fortran-2
 MYP=${P/-20/-snapshot-}
 
 DESCRIPTION="GNU Triangulated Surface Library"
-LICENSE="LGPL-2"
 HOMEPAGE="http://gts.sourceforge.net/"
 SRC_URI="http://gts.sourceforge.net/tarballs/${MYP}.tar.gz"
 
 SLOT="0"
+LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs test"
 
 RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc
 	virtual/pkgconfig
 	test? ( media-libs/netpbm )"
+
+# buggy
+RESTRICT=test
 
 S="${WORKDIR}/${MYP}"
 

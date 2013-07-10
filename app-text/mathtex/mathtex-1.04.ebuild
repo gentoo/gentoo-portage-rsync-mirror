@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mathtex/mathtex-1.04.ebuild,v 1.3 2011/08/24 19:49:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mathtex/mathtex-1.04.ebuild,v 1.4 2013/07/10 09:57:10 mrueg Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit toolchain-funcs
 

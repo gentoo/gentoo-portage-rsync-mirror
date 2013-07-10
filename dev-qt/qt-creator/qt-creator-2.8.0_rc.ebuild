@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.0_rc.ebuild,v 1.1 2013/06/30 23:47:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.0_rc.ebuild,v 1.2 2013/07/10 09:33:23 pesa Exp $
 
 EAPI=5
 
@@ -79,6 +79,10 @@ src_prepare() {
 	# fix translations
 	sed -i -e "/^LANGUAGES =/ s:=.*:= $(l10n_get_locales):" \
 		share/qtcreator/translations/translations.pro || die
+
+	# remove bundled qbs for now
+	# TODO: package it and re-enable the plugin
+	rm -rf src/shared/qbs || die
 }
 
 src_configure() {

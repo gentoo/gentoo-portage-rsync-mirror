@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.30 2012/12/17 20:35:43 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.31 2013/07/10 09:32:16 jlec Exp $
+
+*gts-20121130 (10 Jul 2013)
+
+  10 Jul 2013; Justin Lecher <jlec@gentoo.org> gts-20100321-r3.ebuild,
+  gts-20111025-r1.ebuild, gts-20120706.ebuild, +gts-20121130.ebuild,
+  metadata.xml:
+  Version Bump, restrict buggy tests, #277165; add missing dep, #475896
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gts-20120706.ebuild:
   Add ~ppc64, wrt bug #419621
