@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RadiusPerl/RadiusPerl-0.220.0.ebuild,v 1.1 2012/11/12 20:02:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RadiusPerl/RadiusPerl-0.220.0.ebuild,v 1.3 2013/07/10 05:18:28 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Communicate with a Radius server from Perl"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~sparc x86"
 IUSE=""
 
 DEPEND="

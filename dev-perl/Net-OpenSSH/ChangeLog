@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-OpenSSH
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-OpenSSH/ChangeLog,v 1.5 2013/02/19 16:02:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-OpenSSH/ChangeLog,v 1.7 2013/07/10 05:18:36 ago Exp $
+
+  10 Jul 2013; Agostino Sarubbo <ago@gentoo.org> Net-OpenSSH-0.600.0.ebuild:
+  Stable for x86, wrt bug #399553
+
+  10 Jul 2013; Agostino Sarubbo <ago@gentoo.org> Net-OpenSSH-0.600.0.ebuild:
+  Stable for amd64, wrt bug #399553
 
 *Net-OpenSSH-0.600.0 (19 Feb 2013)
 

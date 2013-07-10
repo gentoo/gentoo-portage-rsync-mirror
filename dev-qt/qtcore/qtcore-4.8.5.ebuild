@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.5.ebuild,v 1.1 2013/07/09 10:47:48 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.5.ebuild,v 1.2 2013/07/10 05:07:52 patrick Exp $
 
 EAPI=5
 
@@ -27,9 +27,10 @@ PDEPEND="
 	qt3support? ( ~dev-qt/qtgui-${PV}[aqua=,debug=,glib=,qt3support] )
 "
 
-PATCHES=(
-	"${FILESDIR}/moc-workaround-for-BOOST_JOIN.patch"
-)
+# Doesn't apply, partially present in the source. Check if obsolete.
+#PATCHES=(
+#	"${FILESDIR}/moc-workaround-for-BOOST_JOIN.patch"
+#)
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="

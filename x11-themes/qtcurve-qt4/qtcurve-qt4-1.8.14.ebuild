@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.8.14.ebuild,v 1.7 2013/03/02 23:58:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.8.14.ebuild,v 1.8 2013/07/10 05:05:38 patrick Exp $
 
 EAPI=4
 KDE_REQUIRED="optional"
@@ -18,7 +18,7 @@ KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
 IUSE="kde windeco"
 REQUIRED_USE="windeco? ( kde )"
 
-DEPEND="dev-qt/qtgui:4[dbus]
+DEPEND="dev-qt/qtgui:4[dbus(+)]
 	dev-qt/qtsvg:4
 	kde? (
 		$(add_kdebase_dep systemsettings)

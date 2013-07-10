@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.4 2013/07/09 22:39:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.6 2013/07/10 05:18:23 ago Exp $
 
 EAPI=5
 inherit eutils user systemd
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # dropping hppa and sparc because of way too may dependencies not having
 # keywords in those architectures.
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 
 # removing fcgi useflag as the configure script can't avoid it without patching
 IUSE="apache2 curl dig echoping ipv6 ldap radius ssh telnet"
