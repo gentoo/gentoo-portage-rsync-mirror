@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.0.ebuild,v 1.1 2013/07/01 21:10:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.0-r1.ebuild,v 1.1 2013/07/10 22:25:19 cardoe Exp $
 
 EAPI=5
 
@@ -195,6 +195,8 @@ src_prepare() {
 			git hash-object bootstrap.conf
 		) >.git-module-status
 	fi
+
+	epatch "${FILESDIR}/ibvirt-1.1.0-CVE-2013-2230.patch"
 
 	epatch_user
 
