@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.5 2013/06/22 16:21:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.6 2013/07/10 03:20:45 lu_zero Exp $
 
 EAPI=5
 inherit autotools eutils multilib flag-o-matic
@@ -26,7 +26,7 @@ RDEPEND="media-libs/a52dec
 	>=media-libs/libvorbis-1.3
 	>=media-libs/openexr-1.5
 	media-libs/tiff:0
-	media-libs/x264
+	media-libs/x264:=
 	media-sound/lame
 	>=media-video/mjpegtools-2
 	>=sci-libs/fftw-3
