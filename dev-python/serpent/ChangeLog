@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/serpent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.1 2013/07/09 05:48:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.2 2013/07/10 12:41:55 vincent Exp $
+
+  10 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> serpent-1.2.ebuild:
+  ppc keyword, bug 476346
 
 *serpent-1.2 (09 Jul 2013)
 
