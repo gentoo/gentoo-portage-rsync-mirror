@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.125 2013/04/07 17:30:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.126 2013/07/10 03:46:48 patrick Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -281,7 +281,7 @@ kdecommondepend="
 	>=dev-qt/qt3support-${QT_MINIMAL}:4[accessibility]
 	>=dev-qt/qtcore-${QT_MINIMAL}:4[qt3support,ssl]
 	>=dev-qt/qtdbus-${QT_MINIMAL}:4
-	>=dev-qt/qtgui-${QT_MINIMAL}:4[accessibility,dbus]
+	>=dev-qt/qtgui-${QT_MINIMAL}:4[accessibility,dbus(+)]
 	>=dev-qt/qtscript-${QT_MINIMAL}:4
 	>=dev-qt/qtsql-${QT_MINIMAL}:4[qt3support]
 	>=dev-qt/qtsvg-${QT_MINIMAL}:4
