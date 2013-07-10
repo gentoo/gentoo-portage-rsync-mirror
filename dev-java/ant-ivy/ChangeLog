@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-ivy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ChangeLog,v 1.17 2013/07/05 14:09:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ChangeLog,v 1.18 2013/07/10 11:51:04 tomwij Exp $
+
+*ant-ivy-1.4.1-r1 (10 Jul 2013)
+
+  10 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +ant-ivy-1.4.1-r1.ebuild,
+  -ant-ivy-1.4.1.ebuild, ant-ivy-2.0.0.ebuild, ant-ivy-2.3.0.ebuild:
+  Fixed the SLOTs of the dependencies, with the intent to ensure we depend on
+  SLOT 0 of dev-java/commons-vfs. Revision bump and EAPI 5 for 1.4.1.
 
 *ant-ivy-2.3.0 (05 Jul 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ant-ivy-2.0.0.ebuild,v 1.6 2010/01/23 14:26:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-ivy/ant-ivy-2.0.0.ebuild,v 1.7 2013/07/10 11:51:04 tomwij Exp $
 
 EAPI="2"
 
@@ -28,11 +28,11 @@ RESTRICT="test" # We cannot build tests yet as there is no org.apache.tools.ant.
 # There may be additional optional dependencies (commons-logging, commons-lang...)
 
 COMMON_DEP="
-	dev-java/ant-core
+	dev-java/ant-core:0
 	dev-java/jakarta-oro:2.0
-	dev-java/jsch
+	dev-java/jsch:0
 	dev-java/commons-httpclient:3
-	dev-java/commons-vfs"
+	dev-java/commons-vfs:0"
 
 DEPEND="
 	>=virtual/jdk-1.4

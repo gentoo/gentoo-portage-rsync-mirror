@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.30 2013/07/07 16:42:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.31 2013/07/10 11:32:21 chithanh Exp $
+
+  10 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -gnuradio-3.6.2-r1.ebuild, -gnuradio-3.6.2.ebuild, -gnuradio-3.6.3.ebuild,
+  -gnuradio-3.6.4.1-r1.ebuild, -gnuradio-3.6.4.1.ebuild,
+  -gnuradio-3.6.4.2.ebuild, -gnuradio-3.6.4.ebuild, -gnuradio-3.6.5.ebuild,
+  gnuradio-3.6.5.1.ebuild, gnuradio-3.7.0.ebuild, gnuradio-9999.ebuild:
+  Use subslot dependencies for boost. Drop some old versions.
 
 *gnuradio-3.7.0 (07 Jul 2013)
 

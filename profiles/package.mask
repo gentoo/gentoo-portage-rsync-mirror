@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14911 2013/07/10 08:45:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14912 2013/07/10 11:45:47 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -326,19 +326,9 @@ dev-util/lafilefixer
 # Waiting for final release
 =sys-libs/freeipmi-1.3*
 
-# Justin Lecher <jlec@gentoo.org> (28 May 2013)
-# Mask for new version schema, coot is a dependency
->=sci-libs/clipper-2.2
-
 # Mike Gilbert <floppym@gentoo.org (27 May 2013)
 # Masked until reverse dependencies are tested bug 401009.
 =dev-python/imaging-2.0.0
-
-# Justin Lecher <jlec@gentoo.org> (25 May 2013)
-# Upstream dropped support long ago
-# Switch to sys-fs/aufs3 or
-# sys-kernel/aufs-sources
-sys-fs/aufs2
 
 # Markos Chandras <hwoarang@gentoo.org> (25 May 2013)
 # Mask 0.7.0 release for testing

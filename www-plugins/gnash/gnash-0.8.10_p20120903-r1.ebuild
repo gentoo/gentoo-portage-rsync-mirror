@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20120903-r1.ebuild,v 1.1 2013/03/28 22:06:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20120903-r1.ebuild,v 1.2 2013/07/10 11:54:04 chithanh Exp $
 
 EAPI=5
 CMAKE_REQUIRED="never"
@@ -38,7 +38,7 @@ REQUIRED_USE="dump? ( agg ffmpeg )
 	|| ( dump fbcon gtk kde sdl )
 	"
 
-RDEPEND=">=dev-libs/boost-1.41.0
+RDEPEND=">=dev-libs/boost-1.41.0:0=
 	dev-libs/expat
 	dev-libs/libxml2
 	virtual/jpeg
