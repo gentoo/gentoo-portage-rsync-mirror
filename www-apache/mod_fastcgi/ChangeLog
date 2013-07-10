@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_fastcgi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.16 2012/11/27 20:23:56 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.17 2013/07/10 02:45:54 neurogeek Exp $
+
+*mod_fastcgi-2.4.7_pre0910052141-r1 (10 Jul 2013)
+
+  10 Jul 2013; <neurogeek@gentoo.org>
+  +files/mod_fastcgi-compile-against-apache2.4.patch,
+  -files/2.4.6-graceful.patch, +mod_fastcgi-2.4.7_pre0910052141-r1.ebuild:
+  Bumped EAPI=5, added patch to compile against apache-2.4. Closes bug #411299
 
   27 Nov 2012; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Added myself as maintainer

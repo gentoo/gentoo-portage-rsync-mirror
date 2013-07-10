@@ -23,13 +23,11 @@
 </longdescription>
 <use>
 	<flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
-	<flag name="bl">Blinkenlights video output</flag>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
 	<flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
 	<flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)</flag>
 	<flag name="dvdnav">Use forked libdvdnav, navigate menus in GUIs</flag>
-	<flag name="dxr3">Enable DXR3/H+ video output</flag>
 	<flag name="enca">Enables support for charset discovery and conversion</flag>
 	<flag name="faad">Use external faad library for AAC decoding</flag>
 	<flag name="md5sum">Enables md5sum video output</flag>
