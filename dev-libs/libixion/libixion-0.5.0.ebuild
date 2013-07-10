@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-0.5.0.ebuild,v 1.2 2013/04/19 10:46:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-0.5.0.ebuild,v 1.4 2013/07/10 07:49:25 scarabeus Exp $
 
 EAPI=5
 
@@ -20,8 +20,10 @@ SLOT="0/0.5"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="static-libs"
 
-RDEPEND=""
-DEPEND=">=dev-util/mdds-0.7.1"
+RDEPEND="dev-libs/boost:="
+DEPEND="${RDEPEND}
+	>=dev-util/mdds-0.7.1:=
+"
 
 src_prepare() {
 	[[ ${PV} == 9999 ]] && eautoreconf

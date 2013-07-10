@@ -1,12 +1,13 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=dev-util/mdds-0.7.1
+DEPEND=dev-libs/boost:= >=dev-util/mdds-0.7.1:=
 DESCRIPTION=General purpose formula parser & interpreter
 EAPI=5
 HOMEPAGE=http://gitorious.org/ixion/pages/Home
 IUSE=static-libs
 KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=MIT
+RDEPEND=dev-libs/boost:=
 SLOT=0/0.5
 SRC_URI=http://kohei.us/files/ixion/src/libixion-0.5.0.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=dda9428d08b6e1a7a4e8266fa42845de
+_md5_=6a92aad175a726638a700c0a0997958d

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-9999.ebuild,v 1.8 2013/04/19 10:48:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-9999.ebuild,v 1.9 2013/07/10 07:46:58 scarabeus Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="static-libs"
 
 RDEPEND="
-	>=dev-libs/boost-1.51.0
+	>=dev-libs/boost-1.51.0:=
 	>=dev-libs/libixion-0.5.0:=
 "
 DEPEND="${RDEPEND}
