@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/grsync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.32 2013/01/17 19:41:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.33 2013/07/11 13:24:09 voyageur Exp $
+
+*grsync-1.2.4 (11 Jul 2013)
+
+  11 Jul 2013; Bernard Cafarelli <voyageur@gentoo.org> +grsync-1.2.4.ebuild:
+  Version bump
 
 *grsync-1.2.3 (17 Jan 2013)
 
