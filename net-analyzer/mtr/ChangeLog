@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.132 2013/07/11 12:27:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.133 2013/07/11 14:24:55 jer Exp $
+
+  11 Jul 2013; Jeroen Roovers <jer@gentoo.org> mtr-0.82.ebuild,
+  +files/0.82-tinfo.patch, -files/mtr-0.82-tinfo.patch:
+  Fix filename, whitespace.
 
 *mtr-0.85 (11 Jul 2013)
 
