@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.5.1-r1.ebuild,v 1.3 2013/03/21 16:23:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.5.1-r1.ebuild,v 1.4 2013/07/11 17:02:31 jlec Exp $
 
 EAPI=5
 
@@ -37,6 +37,11 @@ src_prepare() {
 		-i ${PN}/${PN}.pro || die
 	use test || sed -e 's:qztest::g' -i ${PN}.pro || die
 	qt4-r2_src_prepare
+}
+
+src_test() {
+	cd qztest || die
+	./qztest || die
 }
 
 src_install() {
