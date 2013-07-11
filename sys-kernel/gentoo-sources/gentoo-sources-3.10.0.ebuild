@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.10.0.ebuild,v 1.3 2013/07/01 11:46:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.10.0.ebuild,v 1.4 2013/07/11 00:34:20 mpagano Exp $
 
 EAPI="5"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="3"
-K_DEBLOB_AVAILABLE="0"
+K_DEBLOB_AVAILABLE="1"
 inherit kernel-2
 detect_version
 detect_arch
@@ -26,3 +26,4 @@ pkg_postinst() {
 pkg_postrm() {
 	kernel-2_pkg_postrm
 }
+IUSE="deblob"
