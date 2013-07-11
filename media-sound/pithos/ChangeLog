@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/pithos
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/ChangeLog,v 1.1 2013/07/10 23:14:43 chutzpah Exp $
+
+*pithos-20130710 (10 Jul 2013)
+*pithos-9999 (10 Jul 2013)
+
+  10 Jul 2013; Patrick McLean <chutz@gentoo.org> +pithos-9999.ebuild,
+  +pithos-20130710.ebuild, +files/pithos-detect-datadir.patch, +files/setup.py,
+  +metadata.xml:
+  Initial import.
+
