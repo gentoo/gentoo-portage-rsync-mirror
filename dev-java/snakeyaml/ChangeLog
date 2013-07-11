@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/snakeyaml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snakeyaml/ChangeLog,v 1.3 2012/05/09 17:10:33 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snakeyaml/ChangeLog,v 1.4 2013/07/11 21:22:25 tomwij Exp $
+
+*snakeyaml-1.11 (11 Jul 2013)
+
+  11 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +snakeyaml-1.11.ebuild:
+  Version bump to 1.11.
 
   09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> snakeyaml-1.9.ebuild:
   x86 stable wrt bug #396305
@@ -14,4 +19,3 @@
   +metadata.xml:
   Import from java-overlay. Thanks to James Le Cuirot <chewi@aura-online.co.uk>
   for the ebuild. #395425
-

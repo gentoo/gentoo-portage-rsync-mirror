@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.14 2013/06/13 06:04:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.15 2013/07/11 21:20:14 vincent Exp $
+
+  11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> greenlet-0.4.1.ebuild:
+  ppc, ppc64 keywords added, bug 467248
 
 *greenlet-0.4.1 (13 Jun 2013)
 

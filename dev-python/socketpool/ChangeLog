@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/socketpool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.8 2013/05/22 06:41:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.9 2013/07/11 21:22:30 vincent Exp $
+
+  11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  socketpool-0.5.2-r1.ebuild:
+  ppc, ppc64 keywords added, bug 467248
 
   22 May 2013; Patrick Lauer <patrick@gentoo.org> socketpool-0.5.2-r1.ebuild:
   Adding python-3.3 to python_targets

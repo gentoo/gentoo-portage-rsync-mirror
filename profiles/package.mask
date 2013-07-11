@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14913 2013/07/11 12:27:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14914 2013/07/11 21:02:44 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (12 Jul 2013)
+# Probably new versions will work with hexchat too.
+# Do not lastrite this, just leave mask by Lars Wendler's request.
+net-irc/xchat-otr
 
 # Davide Pesavento <pesa@gentoo.org> (09 Jul 2013)
 # Major packaging changes to some of the modules. Need to check all revdeps.
@@ -435,16 +440,6 @@ www-plugins/chrome-binary-plugins:unstable
 # masked for removal on 20130502
 # replaced by games-emulation/sdlmess
 games-emulation/xmess
-
-# Lars Wendler <polynomial-c@gentoo.org> (02 Apr 2013)
-# Dead upstream. Masked for removal in 30 days.
-# other packages depend on xchat directly
-# Use net-irc/hexchat instead which is a fork of xchat.
-net-irc/xchat
-net-irc/cwirc
-net-irc/xchat-otr
-net-irc/xchatosd
-
 
 # Sergey Popov <pinkbyte@gentoo.org> (02 Apr 2013)
 # Masking =media-libs/ffmpegsource-2.17.4_pre753
