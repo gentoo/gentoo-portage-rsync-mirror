@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.83 2013/07/11 09:00:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.84 2013/07/11 09:05:25 scarabeus Exp $
+
+  11 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-l10n-4.1.0.2.ebuild:
+  Fix the actual install for the langpack.
 
 *libreoffice-l10n-4.1.0.2 (11 Jul 2013)
 
