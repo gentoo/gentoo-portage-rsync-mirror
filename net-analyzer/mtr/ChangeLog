@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.134 2013/07/11 14:53:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.135 2013/07/11 15:22:42 jer Exp $
+
+  11 Jul 2013; Jeroen Roovers <jer@gentoo.org> mtr-0.85.ebuild,
+  +files/0.85-gtk.patch:
+  Add GTK+ patch similar to the IPv6 patch.
 
   11 Jul 2013; Jeroen Roovers <jer@gentoo.org> mtr-0.85.ebuild,
   +files/0.85-ipv6.patch:
