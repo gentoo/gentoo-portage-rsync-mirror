@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.82 2013/06/30 21:12:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.83 2013/07/11 09:00:56 scarabeus Exp $
+
+*libreoffice-l10n-4.1.0.2 (11 Jul 2013)
+
+  11 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libreoffice-l10n-4.1.0.2.ebuild, -libreoffice-l10n-3.6.6.2.ebuild,
+  -libreoffice-l10n-4.1.0.1.ebuild:
+  Version bump to 4.1.0.2 remove 4.1older and 3.6.x series.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
   libreoffice-l10n-4.0.4.2.ebuild:

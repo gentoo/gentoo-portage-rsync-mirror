@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd-ui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.4 2013/03/29 14:16:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.5 2013/07/11 08:52:33 mgorny Exp $
+
+  11 Jul 2013; Michał Górny <mgorny@gentoo.org> systemd-ui-2.ebuild,
+  systemd-ui-9999.ebuild:
+  Use systemd_get_utildir to get the systemd path.
 
   29 Mar 2013; Michał Górny <mgorny@gentoo.org> -systemd-ui-1.ebuild,
   systemd-ui-2.ebuild, systemd-ui-9999.ebuild:

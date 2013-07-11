@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.290 2013/07/10 22:25:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.291 2013/07/11 08:50:59 jlec Exp $
+
+  11 Jul 2013; Justin Lecher <jlec@gentoo.org> libvirt-1.1.0-r1.ebuild,
+  metadata.xml:
+  Fix typo, #476466
 
 *libvirt-1.1.0-r1 (10 Jul 2013)
 

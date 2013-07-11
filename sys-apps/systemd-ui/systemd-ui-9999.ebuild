@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-9999.ebuild,v 1.2 2013/03/29 14:16:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-9999.ebuild,v 1.3 2013/07/11 08:52:33 mgorny Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ inherit git-2
 VALA_MIN_API_VERSION=0.14
 VALA_MAX_API_VERSION=0.20
 
-inherit autotools-utils vala
+inherit autotools-utils systemd vala
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -55,7 +55,7 @@ src_prepare() {
 	touch src/*.vala || die
 
 	# Fix hardcoded path in .vala.
-	sed -i -e 's:/lib/systemd:/usr&:g' src/*.vala || die
+	sed -i -e "s^/lib/systemd^$(systemd_get_utildir)^g" src/*.vala || die
 
 	autotools-utils_src_prepare
 }
