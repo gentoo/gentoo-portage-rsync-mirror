@@ -1,6 +1,12 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.33 2013/07/10 01:05:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.34 2013/07/11 03:00:30 radhermit Exp $
+
+*qpdf-5.0.0 (11 Jul 2013)
+
+  11 Jul 2013; Tim Harder <radhermit@gentoo.org> -qpdf-4.2.0.ebuild,
+  +qpdf-5.0.0.ebuild:
+  Version bump and remove old.
 
   10 Jul 2013; Tim Harder <radhermit@gentoo.org> -qpdf-3.0.1.ebuild,
   -qpdf-3.0.2.ebuild, -qpdf-4.0.0.ebuild, -qpdf-4.0.1.ebuild:
