@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacity
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.185 2013/06/29 19:40:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.186 2013/07/11 19:25:22 vincent Exp $
+
+  11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> audacity-2.0.3.ebuild:
+  ppc, ppc64 keywords added, bug 457140
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> audacity-2.0.2.ebuild:
   Stable for ppc64, wrt bug #436664

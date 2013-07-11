@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/slrn-1.0.1.ebuild,v 1.3 2013/07/11 07:29:39 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/slrn-1.0.1.ebuild,v 1.4 2013/07/11 19:04:41 vincent Exp $
 
 EAPI=5
 inherit eutils
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="canlock nls ssl uudeview"
 
 RDEPEND="virtual/mta
