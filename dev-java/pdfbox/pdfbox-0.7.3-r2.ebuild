@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.13 2012/10/10 08:49:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.14 2013/07/11 22:49:50 tomwij Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -14,14 +14,14 @@ HOMEPAGE="http://www.pdfbox.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x64-macos"
 IUSE=""
 
 CDEPEND="dev-java/fontbox:0
-	>=dev-java/bcprov-1.32:0
-	>=dev-java/bcmail-1.32
+	>=dev-java/bcprov-1.32:1.3
+	=dev-java/bcmail-1.38*:0
 	dev-java/lucene:2.1
-	dev-java/ant-core"
+	dev-java/ant-core:0"
 RDEPEND=">=virtual/jre-1.4
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.4
@@ -46,7 +46,7 @@ src_unpack() {
 
 	cd external
 	java-pkg_jar-from fontbox
-	java-pkg_jar-from bcprov
+	java-pkg_jar-from bcprov-1.3
 	java-pkg_jar-from bcmail
 	java-pkg_jar-from lucene-2.1
 	java-pkg_jar-from ant-core ant.jar
