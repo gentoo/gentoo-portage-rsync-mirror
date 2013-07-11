@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jnr-posix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.9 2013/02/07 14:23:17 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.10 2013/07/11 21:57:07 tomwij Exp $
+
+*jnr-posix-2.5.0 (11 Jul 2013)
+
+  11 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +jnr-posix-2.5.0.ebuild:
+  Version bump to 2.5.0.
 
 *jnr-posix-2.4.0 (07 Feb 2013)
 
@@ -48,4 +53,3 @@
   +metadata.xml:
   Version Bump and package rename from jna-posix. Dropped ~ppc as new 
   dependency jnr-x86asm produces x86/amd64 arch binary machine code only.
-
