@@ -1,6 +1,23 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.386 2013/06/09 22:57:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.388 2013/07/11 03:30:45 tetromino Exp $
+
+  11 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libxml2-2.9.1.ebuild:
+  Accidentally inherited unneeded versionator eclass
+
+*libxml2-2.9.1 (11 Jul 2013)
+
+  11 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libxml2-2.8.0-r3.ebuild, -libxml2-2.8.0-r4.ebuild, -libxml2-2.9.0-r1.ebuild,
+  +libxml2-2.9.1.ebuild, +files/libxml2-2.9.1-compression-detection.patch,
+  +files/libxml2-2.9.1-missing-break.patch,
+  +files/libxml2-2.9.1-non-ascii-cr-lf.patch,
+  +files/libxml2-2.9.1-python-2.6.patch, +files/libxml2-2.9.1-python3.patch:
+  Version bump. Fixes denial-of-service vulnerability (bug #476438,
+  CVE-2013-2877, thanks to Agostino Sarubbo). Drop old versions, except for
+  2.8.0-r3 which for some reason was the only revision keyworded stable on
+  m68k.
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.
