@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.14 2013/06/28 02:37:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.15 2013/07/11 06:57:18 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -336,6 +336,22 @@ multilib_install_wrappers() {
 		# it can fail if something else uses /tmp
 		rmdir "${ED}"/tmp &>/dev/null
 	fi
+}
+
+# @FUNCTION: multilib_is_native_abi
+# @DESCRIPTION:
+# Determine whether the currently built ABI is the profile native.
+# Return true status (0) if that is true, otherwise false (1).
+#
+# This is often useful for configure calls when some of the options are
+# supposed to be disabled for multilib ABIs (like those used for
+# executables only).
+multilib_is_native_abi() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${#} -eq 0 ]] || die "${FUNCNAME}: too many arguments"
+
+	[[ ${ABI} == ${DEFAULT_ABI} ]]
 }
 
 _MULTILIB_BUILD=1

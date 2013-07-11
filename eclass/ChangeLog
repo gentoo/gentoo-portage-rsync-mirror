@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.874 2013/07/10 17:12:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.876 2013/07/11 06:57:37 mgorny Exp $
+
+  11 Jul 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Fix typo in compileall call.
+
+  11 Jul 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Add multilib_is_native_abi helper.
 
   10 Jul 2013; Robin H. Johnson <robbat2@gentoo.org> db.eclass:
   Additional change to run tests successfully on newer versions of db

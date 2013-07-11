@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.27 2013/06/07 01:11:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.28 2013/07/11 06:57:37 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -630,7 +630,7 @@ python_optimize() {
 				"${PYTHON}" -OO -m compileall -q -f -d "${instpath}" "${d}"
 				;;
 			*)
-				"${PYTHON}" -m compileall -q -f -d "${instpath}" "${@}"
+				"${PYTHON}" -m compileall -q -f -d "${instpath}" "${d}"
 				;;
 		esac
 	done
