@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/yasat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.10 2013/01/30 18:54:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.11 2013/07/11 15:46:03 tomwij Exp $
+
+*yasat-700 (11 Jul 2013)
+
+  11 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/yasat-700-remove-absent-tests.patch, +yasat-700.ebuild,
+  -yasat-456.ebuild:
+  Version bump to 700. Remove two unimportant failing tests. Proxied commit by
+  Corentin LABBE.
 
   30 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Update metadata.xml

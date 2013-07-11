@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.8.ebuild,v 1.1 2013/07/11 15:17:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.8.ebuild,v 1.2 2013/07/11 15:36:09 kensington Exp $
 
 EAPI=5
 
@@ -17,20 +17,19 @@ SRC_URI="http://tellico-project.org/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="addressbook cddb debug pdf scanner semantic-desktop taglib v4l xmp yaz"
+IUSE="addressbook cddb debug pdf scanner taglib v4l xmp yaz"
 
 DEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/qjson
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
 	media-libs/qimageblitz
 	dev-qt/qtdbus:4
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	cddb? ( $(add_kdebase_dep libkcddb) )
-	pdf? ( app-text/poppler:=[qt4] )
+	pdf? ( app-text/poppler[qt4] )
 	scanner? ( $(add_kdebase_dep libksane) )
-	semantic-desktop? ( dev-libs/soprano[raptor,redland] )
 	taglib? ( >=media-libs/taglib-1.5 )
 	v4l? ( >=media-libs/libv4l-0.8.3 )
 	xmp? ( >=media-libs/exempi-2 )
