@@ -11,9 +11,5 @@
 <flag name='64bit'>For amd64-multilib, installs the native 64-bit plugin</flag>
 <!-- www-plugins/adobe-flash-10.3 and later has a KDE KCM thingy -->
 <flag name='kde'>Enables a KCM plugin for configuring flash player preferences</flag>
-<!-- www-plugins/adobe-flash-11.2 requries SSE2 instructions (Bug #410547) -->
-<flag name='sse2check'>This flag, enabled by default, will check for sse2
-support on your cpu and die if not found. If you are remote-building this
-package, you can disable this flag but you have been warned</flag>
 </use>
 </pkgmetadata>
