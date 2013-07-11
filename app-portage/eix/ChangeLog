@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.451 2013/07/10 15:01:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.452 2013/07/11 14:31:31 axs Exp $
+
+*eix-0.29.0-r1 (11 Jul 2013)
+
+  11 Jul 2013; Ian Stakenvicius <axs@gentoo.org> +eix-0.29.0-r1.ebuild,
+  -eix-0.29.0.ebuild:
+  revbump to fix bug 475564
 
   10 Jul 2013; Jeroen Roovers <jer@gentoo.org> eix-0.28.5.ebuild:
   Stable for HPPA (bug #476396).
