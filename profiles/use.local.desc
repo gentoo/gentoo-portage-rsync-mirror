@@ -4488,11 +4488,6 @@ net-irc/weechat:relay - Enable relay plugin (experimental)
 net-irc/weechat:rmodifier - Enable rmodifier plugin.
 net-irc/weechat:scripts - Build infrastructure for scripting.
 net-irc/weechat:xfer - Enable xfer plugin support.
-net-irc/xchat:fastscroll - Make scrolling of large text buffers faster by circumventing some of pango's overhead
-net-irc/xchat:hires-icons - Install custom high-resolution icons instead of the default one
-net-irc/xchat:ntlm - Enable NTLM authentication
-net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
-net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/znc:daemon - Allow znc to run as a system-wide service. Installs an init script and creates a znc user:group.
 net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
 net-libs/axtls:cgi-lua - Enables lua backed cgi for axhttpd server

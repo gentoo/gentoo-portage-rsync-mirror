@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.8.0.ebuild,v 1.1 2013/03/28 16:11:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.8.3.ebuild,v 1.1 2013/07/11 20:47:17 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -63,29 +63,34 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
+	# ????
 	ELTCONF="--portage"
-	G2CONF="${G2CONF}
-		--disable-static
-		--disable-tests
-		--enable-pdf
-		--enable-comics
-		--enable-thumbnailer
-		--with-smclient=xsmp
-		--with-platform=gnome
-		--enable-dbus
-		$(use_enable djvu)
-		$(use_enable dvi)
-		$(use_with gnome-keyring keyring)
-		$(use_enable introspection)
-		$(use_enable nautilus)
-		$(use_enable postscript ps)
-		$(use_enable t1lib)
-		$(use_enable tiff)
-		$(use_enable xps)
-		ITSTOOL=$(type -P true)"
 
 	gnome2_src_prepare
+
 	# Do not depend on gnome-icon-theme, bug #326855, #391859
 	sed -e 's/gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED//g' \
 		-i configure || die "sed failed"
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--disable-static \
+		--disable-tests \
+		--enable-pdf \
+		--enable-comics \
+		--enable-thumbnailer \
+		--with-smclient=xsmp \
+		--with-platform=gnome \
+		--enable-dbus \
+		$(use_enable djvu) \
+		$(use_enable dvi) \
+		$(use_with gnome-keyring keyring) \
+		$(use_enable introspection) \
+		$(use_enable nautilus) \
+		$(use_enable postscript ps) \
+		$(use_enable t1lib) \
+		$(use_enable tiff) \
+		$(use_enable xps) \
+		ITSTOOL=$(type -P true)
 }

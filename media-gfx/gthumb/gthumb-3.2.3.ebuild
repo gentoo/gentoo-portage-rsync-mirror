@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.1.ebuild,v 1.1 2013/04/18 19:59:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.3.ebuild,v 1.1 2013/07/11 20:36:48 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -54,7 +54,8 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	test? ( ~app-text/docbook-xml-dtd-4.1.2 )"
+	test? ( ~app-text/docbook-xml-dtd-4.1.2 )
+"
 # eautoreconf needs:
 #	gnome-base/gnome-common
 

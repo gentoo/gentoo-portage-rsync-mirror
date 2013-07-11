@@ -3,10 +3,10 @@ DEPEND=>=dev-lang/perl-5.8.2 dev-perl/Lchown >=sys-apps/util-linux-2.12-r4 >=sys
 DESCRIPTION=A filesystem backup utility based on rsync
 EAPI=4
 HOMEPAGE=http://www.rsnapshot.org
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8.2 dev-perl/Lchown >=sys-apps/util-linux-2.12-r4 >=sys-apps/coreutils-5.0.91-r4 >=net-misc/openssh-3.7.1_p2-r1 >=net-misc/rsync-2.6.0
 SLOT=0
 SRC_URI=http://www.rsnapshot.org/downloads/rsnapshot-1.3.1.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=aceeddd5ed2f4fed90a7448fbee44305
+_md5_=7b99edffdf775686a26f5ad981481818

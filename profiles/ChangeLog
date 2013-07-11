@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8025 2013/07/11 12:27:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8026 2013/07/11 20:45:39 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  targets/desktop/gnome/make.defaults:
+  Enable introspection for gnome profile as discussed with the team via mail
 
   11 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove mtr-0.83 mask.

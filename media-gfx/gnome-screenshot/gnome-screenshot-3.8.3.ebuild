@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.8.1.ebuild,v 1.1 2013/04/18 06:34:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.8.3.ebuild,v 1.1 2013/07/11 20:40:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
 inherit gnome2 readme.gentoo
 
-DESCRIPTION="Screenshot utility for GNOME 3"
+DESCRIPTION="Screenshot utility for GNOME"
 HOMEPAGE="https://live.gnome.org/GnomeUtils"
 
 LICENSE="GPL-2+"
