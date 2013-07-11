@@ -1,6 +1,6 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.208 2013/07/11 01:30:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.209 2013/07/11 16:09:50 jer Exp $
 
   11 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml
@@ -309,7 +309,7 @@
   +adobe-flash-11.2.202.238.ebuild:
   Security bump (bug #431432).
 
-  19 Jun 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  19 Jun 2012; Jim Ramsay <lack@gentoo.org>
   adobe-flash-10.3.183.18.ebuild, -adobe-flash-11.2.202.228.ebuild,
   -adobe-flash-11.2.202.233.ebuild, -adobe-flash-11.2.202.235.ebuild,
   adobe-flash-11.2.202.236.ebuild:
@@ -344,7 +344,7 @@
 
 *adobe-flash-11.2.202.233 (02 May 2012)
 
-  02 May 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  02 May 2012; Jim Ramsay <lack@gentoo.org>
   +adobe-flash-11.2.202.233.ebuild:
   Version bump (Bug #414039)
 
@@ -353,18 +353,18 @@
   Unbreak the check for SSE2. Beside, should this actually be performed for
   AMD64?
 
-  24 Apr 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  24 Apr 2012; Jim Ramsay <lack@gentoo.org>
   adobe-flash-11.2.202.228.ebuild, metadata.xml:
   On darkside's suggestion, providing a USE flag (IUSE=+sse2check) that can be
   turned off to allow binpkg users to override this check (or at least reduce
   its fatality)
 
-  24 Apr 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  24 Apr 2012; Jim Ramsay <lack@gentoo.org>
   adobe-flash-11.2.202.228.ebuild:
   Bug #410547: Fail pkg_pretend if any CPU on the local machine does not
   support SSE2, and recommend falling back to 10.3 instead
 
-  24 Apr 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  24 Apr 2012; Jim Ramsay <lack@gentoo.org>
   -adobe-flash-11.0.1.152.ebuild, -adobe-flash-11.1.102.55.ebuild,
   -adobe-flash-11.1.102.62.ebuild, -adobe-flash-11.1.102.63.ebuild,
   -adobe-flash-11.2.202.223.ebuild:
@@ -372,7 +372,7 @@
 
 *adobe-flash-10.3.183.18 (24 Apr 2012)
 
-  24 Apr 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  24 Apr 2012; Jim Ramsay <lack@gentoo.org>
   -adobe-flash-10.3.183.10.ebuild, +adobe-flash-10.3.183.18.ebuild:
   Bug #410547: Security bump of 10.3 to allow workaround for some AMD Athalon
   XP users
@@ -387,13 +387,13 @@
 
 *adobe-flash-11.2.202.228 (28 Mar 2012)
 
-  28 Mar 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  28 Mar 2012; Jim Ramsay <lack@gentoo.org>
   +adobe-flash-11.2.202.228.ebuild:
   Latest version bump
 
 *adobe-flash-11.2.202.223 (28 Mar 2012)
 
-  28 Mar 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  28 Mar 2012; Jim Ramsay <lack@gentoo.org>
   +adobe-flash-11.2.202.223.ebuild:
   Version bump for security bug #410005
 
@@ -429,7 +429,7 @@
   adobe-flash-11.1.102.55.ebuild:
   x86 stable wrt bug #390149
 
-  28 Nov 2011; Jim Ramsay <jim_ramsay@gentoo.org>
+  28 Nov 2011; Jim Ramsay <lack@gentoo.org>
   -adobe-flash-10.3.183.7.ebuild, adobe-flash-10.3.183.10.ebuild,
   adobe-flash-11.1.102.55.ebuild:
   Bug #390405: Adjusting new SRC_URI. Also changing 11.1 to drop the rpm in
@@ -437,7 +437,7 @@
 
 *adobe-flash-11.1.102.55 (28 Nov 2011)
 
-  28 Nov 2011; Jim Ramsay <jim_ramsay@gentoo.org>
+  28 Nov 2011; Jim Ramsay <lack@gentoo.org>
   +adobe-flash-11.1.102.55.ebuild:
   Bug #390149: Flash player 11.1.102.55 is released
 

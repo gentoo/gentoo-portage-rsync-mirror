@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85.ebuild,v 1.3 2013/07/11 15:22:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85.ebuild,v 1.4 2013/07/11 16:07:05 pinkbyte Exp $
 
 EAPI=5
-inherit eutils autotools flag-o-matic
+inherit eutils autotools flag-o-matic toolchain-funcs
 
 DESCRIPTION="My TraceRoute, an Excellent network diagnostic tool"
 HOMEPAGE="http://www.bitwizard.nl/mtr/"
@@ -35,8 +35,8 @@ src_prepare() {
 	mv "${WORKDIR}"/gtk-2.0-for-mtr.m4 gtk-2.0.m4 #222909
 	AT_M4DIR="." eautoreconf
 
-	append-cppflags $(pkg-config --cflags glib-2.0)
-	append-libs $(pkg-config --libs glib-2.0)
+	append-cppflags $($(tc-getPKG_CONFIG) --cflags glib-2.0)
+	append-libs $($(tc-getPKG_CONFIG) --libs glib-2.0)
 }
 src_configure() {
 	# In the source's configure script -lresolv is commented out. Apparently it
