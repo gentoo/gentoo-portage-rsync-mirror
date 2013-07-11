@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.3.2.ebuild,v 1.1 2013/07/09 08:40:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.3.2.ebuild,v 1.2 2013/07/11 07:25:56 polynomial-c Exp $
 
 EAPI=5
 
@@ -416,6 +416,7 @@ src_install() {
 	# remote-helpers
 	if use python ; then
 		python_doscript "${S}"/contrib/remote-helpers/git-remote-{bzr,hg}
+		python_optimize
 	fi
 
 	dodir /usr/share/${PN}/contrib
@@ -495,10 +496,11 @@ src_test() {
 					t9602-cvsimport-branches-tags.sh \
 					t9603-cvsimport-patchsets.sh"
 	local tests_perl="t3701-add-interactive.sh \
-					t7501-commit.sh \
 					t5502-quickfetch.sh \
 					t5512-ls-remote.sh \
-					t5520-pull.sh"
+					t5520-pull.sh \
+					t7106-reset-unborn-branch.sh \
+					t7501-commit.sh"
 	# Bug #225601 - t0004 is not suitable for root perm
 	# Bug #219839 - t1004 is not suitable for root perm
 	# t0001-init.sh - check for init notices EPERM*  fails
@@ -590,7 +592,6 @@ showpkgdeps() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	use python && python_optimize git_remote_helpers
 	einfo "Please read /usr/share/bash-completion/git for Git bash command completion"
 	einfo "Please read /usr/share/bash-completion/git-prompt for Git bash prompt"
 	einfo "Note that the prompt bash code is now in the seperate script"

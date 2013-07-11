@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.28 2013/07/11 06:57:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.29 2013/07/11 07:20:13 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -593,6 +593,15 @@ _python_ln_rel() {
 # are used (prepended with ${D}).
 python_optimize() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	if [[ ${EBUILD_PHASE} == pre* || ${EBUILD_PHASE} == post* ]]; then
+		eerror "The new Python eclasses expect the compiled Python files to"
+		eerror "be controlled by the Package Manager. For this reason,"
+		eerror "the python_optimize function can be used only during src_* phases"
+		eerror "(src_install most commonly) and not during pkg_* phases."
+		echo
+		die "python_optimize is not to be used in pre/post* phases"
+	fi
 
 	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
 

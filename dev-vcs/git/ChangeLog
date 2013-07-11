@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.202 2013/07/09 08:41:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.203 2013/07/11 07:25:56 polynomial-c Exp $
+
+  11 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> git-1.8.3.2.ebuild:
+  Non-maintainer commit: Fixed test failure when built with USE="-perl" (bug
+  #476472). Also fixed wrong located python_optimize call. Thanks to Arfrever
+  for pointing this out in IRC and mgorny for giving advice how to fix this.
 
 *git-1.8.3.2 (09 Jul 2013)
 
