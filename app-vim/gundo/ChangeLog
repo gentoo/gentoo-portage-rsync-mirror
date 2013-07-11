@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gundo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.8 2012/08/03 10:00:13 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.9 2013/07/11 17:52:14 radhermit Exp $
+
+*gundo-2.5.0 (11 Jul 2013)
+
+  11 Jul 2013; Tim Harder <radhermit@gentoo.org> +gundo-2.5.0.ebuild:
+  Version bump, migrate to python-single-r1.
 
   03 Aug 2012; Tim Harder <radhermit@gentoo.org> -gundo-2.2.0.ebuild,
   -gundo-2.2.1.ebuild:

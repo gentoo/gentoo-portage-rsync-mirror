@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5.ebuild,v 1.1 2013/07/09 10:43:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5.ebuild,v 1.2 2013/07/11 17:31:26 kensington Exp $
 
 EAPI=5
 
@@ -32,9 +32,9 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="
 		tools/assistant/lib
-		tools/assistant/qhelpgenerator
-		tools/assistant/qcollectiongenerator
-		tools/assistant/qhelpconverter
+		tools/assistant/tools/qhelpgenerator
+		tools/assistant/tools/qcollectiongenerator
+		tools/assistant/tools/qhelpconverter
 		tools/qdoc3"
 	QT4_EXTRACT_DIRECTORIES="
 		demos
