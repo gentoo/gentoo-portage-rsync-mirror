@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.104 2013/03/02 21:46:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.107 2013/07/12 13:11:34 aballier Exp $
+
+  12 Jul 2013; Alexis Ballier <aballier@gentoo.org> mlt-0.8.2.ebuild,
+  mlt-0.8.8.ebuild, mlt-0.9.0.ebuild:
+  bump jack dep, bug #451888
+
+  12 Jul 2013; Alexis Ballier <aballier@gentoo.org> -mlt-0.7.8.ebuild,
+  -mlt-0.8.6-r1.ebuild, -files/mlt-0.7.8-libavcodec54.patch,
+  -files/mlt-0.8.6-kdelibs-automagic.patch:
+  remove old
+
+*mlt-0.9.0 (12 Jul 2013)
+
+  12 Jul 2013; Alexis Ballier <aballier@gentoo.org> +mlt-0.9.0.ebuild:
+  Version bump. Set target-arch for cross-compiling, bug #447746
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mlt-0.7.8.ebuild,
   mlt-0.8.2.ebuild, mlt-0.8.6-r1.ebuild, mlt-0.8.8.ebuild:

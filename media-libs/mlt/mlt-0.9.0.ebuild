@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.6-r1.ebuild,v 1.2 2013/03/02 21:46:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.9.0.ebuild,v 1.2 2013/07/12 13:11:34 aballier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -10,7 +10,7 @@ DESCRIPTION="An open source multimedia framework, designed and developed for tel
 HOMEPAGE="http://www.mltframework.org/"
 SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde kdenlive libsamplerate melt
@@ -25,7 +25,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 	sdl? ( >=media-libs/libsdl-1.2.10[X,opengl]
 		 >=media-libs/sdl-image-1.2.4 )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.2 )
-	jack? ( media-sound/jack-audio-connection-kit
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3
 		media-libs/ladspa-sdk
 		>=dev-libs/libxml2-2.5 )
 	frei0r? ( media-plugins/frei0r-plugins )
@@ -70,20 +70,23 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.8.6-ruby-link.patch
-	epatch "${FILESDIR}"/${P}-kdelibs-automagic.patch
 
 	# respect CFLAGS LDFLAGS when building shared libraries. Bug #308873
 	for x in python lua; do
 		sed -i "/mlt.so/s: -lmlt++ :& ${CFLAGS} ${LDFLAGS} :" src/swig/$x/build || die
 	done
 	sed -i "/^LDFLAGS/s: += :& ${LDFLAGS} :" src/swig/ruby/build || die
+
+	epatch_user
 }
 
 src_configure() {
 	tc-export CC CXX
 
 	local myconf="--enable-gpl
+		--enable-gpl3
 		--enable-motion-est
+		--target-arch=$(tc-arch-kernel)
 		$(use_enable debug)
 		$(use_enable dv)
 		$(use_enable sse)

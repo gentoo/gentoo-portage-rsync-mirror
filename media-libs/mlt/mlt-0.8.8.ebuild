@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.8.ebuild,v 1.3 2013/03/02 21:46:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.8.ebuild,v 1.4 2013/07/12 13:11:34 aballier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -25,7 +25,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 	sdl? ( >=media-libs/libsdl-1.2.10[X,opengl]
 		 >=media-libs/sdl-image-1.2.4 )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.2 )
-	jack? ( media-sound/jack-audio-connection-kit
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3
 		media-libs/ladspa-sdk
 		>=dev-libs/libxml2-2.5 )
 	frei0r? ( media-plugins/frei0r-plugins )
