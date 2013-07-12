@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.18_beta4.ebuild,v 1.1 2013/05/30 09:06:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.19.ebuild,v 1.1 2013/07/12 21:09:39 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -28,9 +28,9 @@ fi
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
-PATCHFF="firefox-21.0-patches-0.1"
+PATCHFF="firefox-22.0-patches-0.2"
 PATCH="${PN}-2.14-patches-01"
-EMVER="1.5.1"
+EMVER="1.5.2"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
@@ -143,14 +143,15 @@ src_prepare() {
 		edos2unix "${file}" || die
 	done
 
-	# Allow user to apply any additional patches without modifing ebuild
-	epatch_user
-
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
-		#cd "${S}"/mailnews/extensions/enigmail || die
-		#cd "${S}"
+		pushd "${S}"/mailnews/extensions/enigmail &>/dev/null || die
+		epatch "${FILESDIR}"/enigmail_mailnews_extensions_genxpi.patch
+		popd &>/dev/null || die
 	fi
+
+	# Allow user to apply any additional patches without modifing ebuild
+	epatch_user
 
 	local ms="${S}/mozilla"
 
