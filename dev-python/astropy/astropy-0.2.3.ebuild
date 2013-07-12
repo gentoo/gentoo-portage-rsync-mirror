@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.2.3.ebuild,v 1.1 2013/05/31 12:29:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.2.3.ebuild,v 1.2 2013/07/12 22:17:51 bicatali Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit distutils-r1
+inherit distutils-r1 eutils
 
 DESCRIPTION="Core functionality for performing astrophysics with Python"
 HOMEPAGE="http://astropy.org/"
@@ -39,10 +39,14 @@ DEPEND="${RDEPEND}
 			dev-python/matplotlib[${PYTHON_USEDEP}]
 			dev-python/pytest[${PYTHON_USEDEP}]
 			sci-libs/scipy[${PYTHON_USEDEP}] )"
+python_prepare_all() {
+	has_version '>=sci-libs/cfitsio-3.350' && sed -i \
+		-e 's/->quantize_dither/->quantize_method/g' \
+		astropy/io/fits/src/compressionmodule.c
+}
 
-python_compile() {
-	distutils-r1_python_compile build \
-		--enable-legacy --use-system-libraries
+python_configure_all() {
+	mydistutilsargs=( build --enable-legacy --use-system-libraries )
 }
 
 python_compile_all() {
@@ -55,8 +59,7 @@ python_compile_all() {
 }
 
 python_test() {
-	distutils-r1_python_compile build \
-		--enable-legacy --use-system-libraries test
+	esetup.py test
 }
 
 python_install_all() {
