@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.4.ebuild,v 1.1 2013/05/16 07:01:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.4.ebuild,v 1.2 2013/07/12 18:31:12 tomwij Exp $
 
 EAPI="5"
 
@@ -19,11 +19,11 @@ LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl nls qt4 sdl vdpau xv"
 
-DEPEND="=media-libs/avidemux-core-${PV}[nls?,sdl?,vdpau?,xv?]
+DEPEND="~media-libs/avidemux-core-${PV}[nls?,sdl?,vdpau?,xv?]
 	opengl? ( virtual/opengl )
 	qt4? ( >=dev-qt/qtgui-4.8.3:4 )"
 RDEPEND="$DEPEND"
-PDEPEND="=media-libs/avidemux-plugins-${PV}"
+PDEPEND="~media-libs/avidemux-plugins-${PV}"
 
 S="${WORKDIR}/${MY_P}"
 

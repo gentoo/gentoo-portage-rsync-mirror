@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85.ebuild,v 1.5 2013/07/11 23:27:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85.ebuild,v 1.6 2013/07/12 18:27:27 zx2c4 Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic
@@ -45,6 +45,12 @@ src_configure() {
 		$(use_with gtk glib) \
 		$(use_with gtk) \
 		$(use_enable ipv6)
+
+	# It's a bit absurd to have to do this, but the package isn't
+	# actually "configured" and ready to be compiled until this is
+	# done because upstream packaged .o files with the tarball.
+	# Remember to take this out on future versions.
+	emake clean
 }
 
 src_install() {
