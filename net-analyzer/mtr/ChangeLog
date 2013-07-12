@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.136 2013/07/11 16:07:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.137 2013/07/11 23:27:33 pinkbyte Exp $
+
+  11 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> mtr-0.85.ebuild:
+  Remove workaround for glib dependency and make it optional, wrt bug #456788
 
   11 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> mtr-0.85.ebuild:
   Utilize apropriate functions from toolchain-funcs eclass instead of direct
