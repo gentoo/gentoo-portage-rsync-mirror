@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.47.11.ebuild,v 1.1 2013/07/11 05:14:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.47.11.ebuild,v 1.2 2013/07/12 03:21:35 patrick Exp $
 
 EAPI=5
 
@@ -14,10 +14,15 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="portaudio pulseaudio"
-RDEPEND="media-sound/sox
+
+RDEPEND="
+	media-sound/sox
 	pulseaudio? ( media-sound/pulseaudio )
 	portaudio? ( >=media-libs/portaudio-19_pre20071207 )"
+
+# blocker because of the pkg_preinst madness
 DEPEND="${RDEPEND}
+	!!<=app-accessibility/espeak-1.47
 	app-arch/unzip"
 
 S=${WORKDIR}/${MY_P}

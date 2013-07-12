@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst preinst prepare
-DEPEND=media-sound/sox pulseaudio? ( media-sound/pulseaudio ) portaudio? ( >=media-libs/portaudio-19_pre20071207 ) app-arch/unzip
+DEPEND=media-sound/sox pulseaudio? ( media-sound/pulseaudio ) portaudio? ( >=media-libs/portaudio-19_pre20071207 ) !!<=app-accessibility/espeak-1.47 app-arch/unzip
 DESCRIPTION=Speech synthesizer for English and other languages
 EAPI=5
 HOMEPAGE=http://espeak.sourceforge.net/
@@ -10,4 +10,4 @@ RDEPEND=media-sound/sox pulseaudio? ( media-sound/pulseaudio ) portaudio? ( >=me
 SLOT=0
 SRC_URI=mirror://sourceforge/espeak/espeak-1.47.11-source.zip
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=664f13bc5464c2cea447092a76c94b63
+_md5_=435ed84b0ccc28f200c5658cb9a0f1ae
