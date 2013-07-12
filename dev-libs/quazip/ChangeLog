@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.27 2013/07/11 17:02:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.28 2013/07/12 15:36:37 jlec Exp $
+
+  12 Jul 2013; Justin Lecher <jlec@gentoo.org> quazip-0.5.1-r1.ebuild,
+  +files/quazip-0.5.1-prll.patch:
+  Fix parallel build, #476630; prepend LD_LIBRARY_PATH during testing to test
+  new lib, #476634
 
   11 Jul 2013; Justin Lecher <jlec@gentoo.org> quazip-0.5.1-r1.ebuild:
   Enable testsuite

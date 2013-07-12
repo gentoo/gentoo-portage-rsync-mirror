@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.5.1-r1.ebuild,v 1.4 2013/07/11 17:02:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.5.1-r1.ebuild,v 1.5 2013/07/12 15:36:37 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,9 @@ HTML_DOCS=( doc/html/. )
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.4.4-zlib.patch
-	"${FILESDIR}"/${P}-zlib.patch )
+	"${FILESDIR}"/${P}-zlib.patch
+	"${FILESDIR}"/${P}-prll.patch
+)
 
 src_prepare() {
 	sed \
@@ -41,7 +43,7 @@ src_prepare() {
 
 src_test() {
 	cd qztest || die
-	./qztest || die
+	LD_LIBRARY_PATH="${S}"/${PN} ./qztest || die
 }
 
 src_install() {

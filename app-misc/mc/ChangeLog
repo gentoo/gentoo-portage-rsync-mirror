@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.283 2013/07/09 10:11:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.284 2013/07/12 15:56:18 slyfox Exp $
+
+*mc-4.8.9 (12 Jul 2013)
+
+  12 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> +mc-4.8.9.ebuild,
+  mc-9999.ebuild:
+  Version bump. With unlimited file sizes during edition!
 
 *mc-4.8.8-r2 (09 Jul 2013)
 
