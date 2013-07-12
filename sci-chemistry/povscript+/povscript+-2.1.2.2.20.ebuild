@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/povscript+/povscript+-2.1.2.2.19.ebuild,v 1.4 2013/07/12 06:03:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/povscript+/povscript+-2.1.2.2.20.ebuild,v 1.1 2013/07/12 06:03:17 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils versionator
 
@@ -18,8 +18,8 @@ DESCRIPTION="Modified molscript that uses POV-Ray, does thermal ellipsoids, and 
 HOMEPAGE="https://sites.google.com/site/timfenn/povscript"
 SRC_URI="https://sites.google.com/site/timfenn/povscript/${MY_P}.tar.gz"
 
-LICENSE="glut molscript"
 SLOT="0"
+LICENSE="glut molscript"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
@@ -39,14 +39,15 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libpng15.patch
+	epatch "${FILESDIR}"/${PN}-2.1.2.2.19-libpng15.patch
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	cd "${D}"/usr/bin
-	mv molscript povscript+
-	mv molauto povauto+
+	default
+
+	cd "${ED}"/usr/bin || die
+	mv molscript povscript+ || die
+	mv molauto povauto+ || die
 }
 
 pkg_postinst() {
