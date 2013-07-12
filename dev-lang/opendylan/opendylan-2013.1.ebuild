@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2012.1.ebuild,v 1.3 2013/07/12 03:47:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2013.1.ebuild,v 1.1 2013/07/12 03:47:54 patrick Exp $
 EAPI=4
 
 inherit autotools
@@ -10,8 +10,7 @@ RESTRICT="test"
 DESCRIPTION="OpenDylan language runtime environment"
 
 HOMEPAGE="http://opendylan.org"
-# stupid ... submodules don't get tarballed in? Thanks github.
-SRC_URI="http://dev.gentooexperimental.org/~dreeevil/opendylan-2012.1.tar.bz2"
+SRC_URI="http://opendylan.org/downloads/${PN}/${PV}/${P}-sources.tar.bz2"
 
 LICENSE="Opendylan"
 SLOT="0"
@@ -27,7 +26,7 @@ DEPEND="app-arch/unzip
 	dev-libs/boehm-gc[static-libs]
 	dev-lang/perl
 	dev-perl/XML-Parser
-	|| ( <=dev-lang/opendylan-bin-2012.1 dev-lang/opendylan )
+	|| ( dev-lang/opendylan-bin dev-lang/opendylan )
 	x86? ( <dev-libs/mps-1.108 )"
 RDEPEND="${DEPEND}"
 
@@ -48,6 +47,8 @@ NAUGHTY_HEADERS=(
 	mpsavm.h
 	)
 
+S="${WORKDIR}/${PN}"
+
 src_prepare() {
 	mkdir -p build-aux
 	elibtoolize && eaclocal || die "Fail"
@@ -64,7 +65,9 @@ src_prepare() {
 }
 
 src_configure() {
-	if has_version =dev-lang/opendylan-bin-2012.1; then
+	if has_version =dev-lang/opendylan-bin-2013.1; then
+		PATH=/opt/opendylan-2013.1/bin/:$PATH
+	elif has_version =dev-lang/opendylan-bin-2012.1; then
 		PATH=/opt/opendylan-2012.1/bin/:$PATH
 	elif has_version =dev-lang/opendylan-bin-2011.1; then
 		PATH=/opt/opendylan-2011.1/bin/:$PATH
