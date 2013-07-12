@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.44 2013/07/11 17:57:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.46 2013/07/12 00:37:21 blueness Exp $
+
+  12 Jul 2013; Anthony G. Basile <blueness@gentoo.org> eudev-1.0.ebuild,
+  eudev-1.1.ebuild, eudev-9999.ebuild:
+  Fix copyright line
+
+  12 Jul 2013; Anthony G. Basile <blueness@gentoo.org> eudev-1.1.ebuild,
+  eudev-9999.ebuild:
+  Unrestrict tests, bug #476600
 
 *eudev-1.1 (11 Jul 2013)
 

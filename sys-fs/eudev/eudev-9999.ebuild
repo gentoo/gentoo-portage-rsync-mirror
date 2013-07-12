@@ -1,6 +1,6 @@
-# Copyright 1999- Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.29 2013/06/09 11:00:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.31 2013/07/12 00:37:21 blueness Exp $
 
 EAPI="5"
 
@@ -23,8 +23,6 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
 IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs"
-
-RESTRICT="test"
 
 COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
 	kmod? ( sys-apps/kmod )
