@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.17.ebuild,v 1.1 2013/07/09 17:09:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.17-r1.ebuild,v 1.1 2013/07/12 16:51:56 bicatali Exp $
 
 EAPI=5
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit autotools-utils
 
 DESCRIPTION="Communication program for Texas Instruments calculators "
@@ -40,9 +41,4 @@ src_configure() {
 		$(use_with xinerama)
 	)
 	autotools-utils_src_configure
-}
-
-src_install() {
-	autotools-utils_src_install
-	rm "${ED}"usr/share/${PN}/{Manpage.txt,COPYING,RELEASE,AUTHORS,LICENSES} || die
 }
