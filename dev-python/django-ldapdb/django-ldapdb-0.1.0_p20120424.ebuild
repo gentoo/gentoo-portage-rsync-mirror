@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.1.0_p20120424.ebuild,v 1.3 2012/05/20 11:54:44 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.1.0_p20120424.ebuild,v 1.4 2013/07/12 16:16:07 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -17,18 +17,20 @@ IUSE="examples test"
 LICENSE="MIT"
 SLOT="0"
 PYTHON_MODNAME="ldapdb"
-S="${WORKDIR}/${PN}"
 
 RDEPEND="dev-python/django"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( dev-python/python-ldap )"
 
+S="${WORKDIR}"/${PN}
+
 src_test() {
 	# Exclude examples from test phase
 	mv examples/tests.py examples/tests
 
 	testing() {
+		export DJANGO_SETTINGS_MODULE="django.conf"
 		"$(PYTHON)" manage.py test
 	}
 
