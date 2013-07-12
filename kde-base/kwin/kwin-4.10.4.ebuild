@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.4.ebuild,v 1.5 2013/07/02 08:06:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.4.ebuild,v 1.6 2013/07/12 08:09:56 patrick Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ COMMONDEPEND="
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep libkworkspace)
 	$(add_kdebase_dep liboxygenstyle)
+	|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) )
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11

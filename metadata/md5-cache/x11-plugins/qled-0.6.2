@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=dev-qt/qtgui:4 dev-qt/qtsvg:4 app-arch/unzip
+DEPEND=|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) ) dev-qt/qtsvg:4 app-arch/unzip
 DESCRIPTION=Custom Led widget plugin for Qt-Designer
 EAPI=3
 HOMEPAGE=http://qt-apps.org/content/show.php?content=72482
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=dev-qt/qtgui:4 dev-qt/qtsvg:4
+RDEPEND=|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) ) dev-qt/qtsvg:4
 SLOT=0
 SRC_URI=http://qt-apps.org/CONTENT/content-files/72482-QLed-0.6.2.zip
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=846e6d69db4e508fccabbcafa24b3221
+_md5_=c3045251dd7a189cb0bf2b10cd63447d
