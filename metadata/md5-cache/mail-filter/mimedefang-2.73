@@ -4,11 +4,11 @@ DESCRIPTION=Antispam, antivirus and other customizable filtering for MTAs with M
 EAPI=4
 HOMEPAGE=http://www.mimedefang.org/
 IUSE=clamav +poll
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-perl/MIME-tools-5.412 dev-perl/IO-stringy virtual/perl-MIME-Base64 dev-perl/Digest-SHA1 clamav? ( app-antivirus/clamav ) || ( mail-filter/libmilter mail-mta/sendmail )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.mimedefang.org/static/mimedefang-2.73.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=bbda7da0a37a159ae92e616804be7a78
+_md5_=688f9d03fbcf00faa892d6c771ece9dd

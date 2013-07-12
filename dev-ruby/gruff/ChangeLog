@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.43 2013/07/08 18:30:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.44 2013/07/12 04:55:18 ago Exp $
+
+  12 Jul 2013; Agostino Sarubbo <ago@gentoo.org> gruff-0.3.7.ebuild:
+  Stable for amd64, wrt bug #476216
 
   08 Jul 2013; Hans de Graaff <graaff@gentoo.org> -gruff-0.3.6-r3.ebuild:
   Cleanup.
@@ -167,4 +170,3 @@
   14 Mar 2006; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
   +gruff-0.1.1.ebuild:
   Initial import
-

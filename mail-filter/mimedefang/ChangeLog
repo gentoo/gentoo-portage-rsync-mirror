@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/mimedefang
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/ChangeLog,v 1.13 2012/06/04 23:55:48 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/ChangeLog,v 1.14 2013/07/12 04:54:34 ago Exp $
+
+  12 Jul 2013; Agostino Sarubbo <ago@gentoo.org> mimedefang-2.73.ebuild:
+  Stable for amd64, wrt bug #432502
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> mimedefang-2.72.ebuild,
   mimedefang-2.73.ebuild:
@@ -65,4 +68,3 @@
   26 Jul 2006; Tuấn Văn <langthang@gentoo.org> +files/mimedefang.conf,
   +files/mimedefang.init, +metadata.xml, +mimedefang-2.57.ebuild:
   Inital commit. Thanks to everyone contributed in bug #27861.
-

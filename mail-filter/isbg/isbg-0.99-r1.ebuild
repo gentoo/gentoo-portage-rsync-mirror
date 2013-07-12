@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/isbg/isbg-0.99-r1.ebuild,v 1.1 2010/05/03 10:30:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/isbg/isbg-0.99-r1.ebuild,v 1.2 2013/07/12 04:55:26 ago Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://github.com/downloads/ook/${PN}/${MY_P}.tgz"
 # such as those listed at http://opensource.org/licenses/alphabetical
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=""
