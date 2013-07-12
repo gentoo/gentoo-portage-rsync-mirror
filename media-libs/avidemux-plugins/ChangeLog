@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.7 2013/07/07 13:08:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.8 2013/07/12 18:53:50 tomwij Exp $
+
+*avidemux-plugins-2.6.4-r1 (12 Jul 2013)
+
+  12 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
+  +avidemux-plugins-2.6.4-r1.ebuild,
+  +files/avidemux-plugins-2.6.4-optional-pulse.patch, metadata.xml:
+  Revision bump. Fix up dependencies that are enabled by default as well as
+  those that are disabled by default; they were not automagic as checks were
+  present, I just did not notice them. This was incorrect due to wrongly
+  checking the dependencies in my early developer days, as well as adding the
+  cmake arguments in a sub phase of the configure phase instead of for the whole
+  configure phase; I need to make sure I check USE="-*" and USE="*" in the
+  future and look closer at cmake files to avoid this. Fixes bug #476602,
+  reported by Nikoli.
 
   07 Jul 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-plugins-2.6.2-r2.ebuild,
   avidemux-plugins-2.6.3.ebuild, avidemux-plugins-2.6.4.ebuild:
