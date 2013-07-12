@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.108 2013/07/12 03:21:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.110 2013/07/12 06:52:31 williamh Exp $
+
+  12 Jul 2013; William Hubbs <williamh@gentoo.org> espeak-1.47.11.ebuild:
+  remove error message since "rm -rf" does not fail
+
+  12 Jul 2013; William Hubbs <williamh@gentoo.org> espeak-1.47.11.ebuild:
+  remove the blocker so someone can be running espeak when they upgrade
 
   12 Jul 2013; Patrick Lauer <patrick@gentoo.org> espeak-1.47.11.ebuild:
   Add blocker to avoid manual file deletion stupidity
