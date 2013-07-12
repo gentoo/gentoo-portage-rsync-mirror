@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.1.2-r1.ebuild,v 1.12 2013/04/05 18:11:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.1.2-r1.ebuild,v 1.13 2013/07/12 19:59:33 grobian Exp $
 
 EAPI=5
-inherit eutils libtool multilib
+inherit eutils libtool multilib toolchain-funcs
 
 DESCRIPTION="BSD tar command"
 HOMEPAGE="http://www.libarchive.org/"
@@ -47,8 +47,8 @@ src_configure() {
 	# and not liblzmadec with this version.
 	econf \
 		$(use_enable static-libs static) \
-		--enable-bsdtar=shared \
-		--enable-bsdcpio=shared \
+		--enable-bsdtar=$(tc-is-static-only && echo static || echo shared) \
+		--enable-bsdcpio=$(tc-is-static-only && echo static || echo shared) \
 		$(use_enable xattr) \
 		$(use_enable acl) \
 		$(use_with zlib) \

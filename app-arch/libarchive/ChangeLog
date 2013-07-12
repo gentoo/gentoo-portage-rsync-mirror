@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.156 2013/06/16 09:42:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.157 2013/07/12 19:59:33 grobian Exp $
+
+  12 Jul 2013; Fabian Groffen <grobian@gentoo.org> libarchive-3.1.2-r1.ebuild:
+  Don't request shared libraries on static-only systems such as FreeMiNT, bug
+  #458500
 
   16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #122207

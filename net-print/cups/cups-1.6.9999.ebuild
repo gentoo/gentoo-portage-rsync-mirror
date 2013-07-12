@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.39 2013/07/12 19:44:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.9999.ebuild,v 1.2 2013/07/12 19:33:09 dilfridge Exp $
 
 EAPI=5
 
@@ -8,10 +8,8 @@ PYTHON_DEPEND="python? 2:2.5"
 
 inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python user versionator java-pkg-opt-2 systemd
 
-MY_P=${P/_rc/rc}
-MY_P=${MY_P/_beta/b}
-MY_PV=${PV/_rc/rc}
-MY_PV=${MY_PV/_beta/b}
+MY_P=${P/_beta/b}
+MY_PV=${PV/_beta/b}
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-2
@@ -88,6 +86,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	"${FILESDIR}/${PN}-1.5.0-systemd-socket-2.patch"	# systemd support
+	"${FILESDIR}/${PN}-1.6.2-statedir.patch"
 )
 
 pkg_setup() {
@@ -166,7 +165,6 @@ src_configure() {
 	econf \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--localstatedir="${EPREFIX}"/var \
-		--with-rundir="${EPREFIX}"/run/cups \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
 		--with-docdir="${EPREFIX}"/usr/share/cups/html \
