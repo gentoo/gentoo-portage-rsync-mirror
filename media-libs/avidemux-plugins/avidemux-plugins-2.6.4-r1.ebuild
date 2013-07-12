@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.4-r1.ebuild,v 1.1 2013/07/12 18:53:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.4-r1.ebuild,v 1.2 2013/07/12 20:49:43 tomwij Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${PV}/${MY_P}.tar.gz"
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
 KEYWORDS="~amd64 ~x86"
-IUSE="aften a52 alsa amr debug dts faac faad fontconfig freetype2 fribidi jack lame libsamplerate mmx opengl oss pulseaudio qt4 vorbis truetype twolame xvid x264 vpx"
+IUSE="aften a52 alsa amr debug dts faac faad fontconfig fribidi jack lame libsamplerate mmx opengl oss pulseaudio qt4 vorbis truetype twolame xvid x264 vpx"
 
 DEPEND="
 	=media-video/avidemux-${PV}[opengl?,qt4?]
@@ -33,7 +33,6 @@ DEPEND="
 	faac? ( media-libs/faac )
 	faad? ( media-libs/faad2 )
 	fontconfig? ( media-libs/fontconfig )
-	freetype2? ( media-libs/freetype:2 )
 	fribidi? ( dev-libs/fribidi )
 	jack? (
 		media-sound/jack-audio-connection-kit
@@ -42,7 +41,7 @@ DEPEND="
 	lame? ( media-sound/lame )
 	oss? ( virtual/os-headers )
 	pulseaudio? ( media-sound/pulseaudio )
-	truetype? ( >=media-libs/freetype-2.1.5 )
+	truetype? ( media-libs/freetype:2 )
 	twolame? ( media-sound/twolame )
 	x264? ( media-libs/x264:= )
 	xvid? ( media-libs/xvid )
@@ -74,7 +73,6 @@ src_configure() {
 		$(cmake-utils_use faad FAAC)
 		$(cmake-utils_use faad FAAD)
 		$(cmake-utils_use fontconfig FONTCONFIG)
-		$(cmake-utils_use freetype2 FREETYPE2)
 		$(cmake-utils_use jack JACK)
 		$(cmake-utils_use lame LAME)
 		$(cmake-utils_use oss OSS)
