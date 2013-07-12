@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14915 2013/07/11 23:28:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14916 2013/07/11 23:34:02 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -659,11 +659,6 @@ app-text/cuneiform
 # 2.5.* has known security and other issues due to an affected
 # bundled ffmpeg, see bugs #446468 and #444262.
 <media-video/avidemux-2.6.2
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Mar 2013)
-# Does not build against modern xorg-server, dead upstream
-# Removal in 30 days
-x11-drivers/xf86-input-citron
 
 # Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
 # Unsupported and full of bundled libs. Only left
