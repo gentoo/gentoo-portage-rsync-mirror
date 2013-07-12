@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.86 2013/06/24 10:09:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.87 2013/07/12 09:16:37 patrick Exp $
+
+  12 Jul 2013; Patrick Lauer <patrick@gentoo.org> qscintilla-2.6.2.ebuild,
+  qscintilla-2.7.1.ebuild, qscintilla-2.7.2.ebuild:
+  Adapting deps for upcoming qt-4.8.5
 
 *qscintilla-2.7.2 (24 Jun 2013)
 

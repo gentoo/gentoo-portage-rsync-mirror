@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.6.2.ebuild,v 1.7 2013/03/02 23:45:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.6.2.ebuild,v 1.8 2013/07/12 09:16:37 patrick Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="doc python"
 
 DEPEND="
 	dev-qt/qtcore:4
-	dev-qt/qtgui:4
+	|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) )
 "
 RDEPEND="${DEPEND}"
 PDEPEND="python? ( ~dev-python/qscintilla-python-${PV} )"
