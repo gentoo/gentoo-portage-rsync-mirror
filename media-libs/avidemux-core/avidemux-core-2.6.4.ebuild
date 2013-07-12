@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.4.ebuild,v 1.1 2013/05/16 07:00:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.4.ebuild,v 1.2 2013/07/12 22:58:35 tomwij Exp $
 
 EAPI="5"
 
@@ -54,26 +54,25 @@ src_prepare() {
 		# Avoid existing avidemux installations from making the build process fail, bug #461496.
 		sed -i -e "s:getFfmpegLibNames(\"\${sourceDir}\"):getFfmpegLibNames(\"${S}/buildCore/ffmpeg/source/\"):g" cmake/admFFmpegUtil.cmake || die "Failed to avoid existing avidemux installation from making the build fail."
 	fi
-
 }
 
 src_configure() {
-	local x mycmakeargs
-
-	mycmakeargs="
+	local mycmakeargs="
+		-DAVIDEMUX_SOURCE_DIR='${S}'
+		-DCMAKE_INSTALL_PREFIX='/usr'
 		$(cmake-utils_use nls GETTEXT)
 		$(cmake-utils_use sdl SDL)
 		$(cmake-utils_use vdpau VDPAU)
 		$(cmake-utils_use xv XVIDEO)
 	"
-	use debug && POSTFIX="_debug" && mycmakeargs+="-DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug"
+	if use debug ; then
+		mycmakeargs+=" -DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug"
+	fi
 
-	mkdir "${S}"/buildCore || die "Can't create build folder."
-	cd "${S}"/buildCore || die "Can't enter build folder."
-
-	cmake -DAVIDEMUX_SOURCE_DIR="${S}" \
-		-DCMAKE_INSTALL_PREFIX="/usr" \
-		${mycmakeargs} -G "Unix Makefiles" ../"avidemux_core${POSTFIX}/" || die "cmake failed."
+	local build="${S}"/buildCore
+	mkdir ${build} || die "Can't create build folder."
+	cd ${build} || die "Can't enter build folder."
+	CMAKE_USE_DIR="${S}"/avidemux_core BUILD_DIR=${build} cmake-utils_src_configure
 }
 
 src_compile() {

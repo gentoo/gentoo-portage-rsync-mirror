@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.4.ebuild,v 1.2 2013/07/12 18:31:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.4.ebuild,v 1.3 2013/07/12 22:58:34 tomwij Exp $
 
 EAPI="5"
 
@@ -27,12 +27,12 @@ PDEPEND="~media-libs/avidemux-plugins-${PV}"
 
 S="${WORKDIR}/${MY_P}"
 
-PROCESSES="buildCli:avidemux/cli"
+processes="buildCli:avidemux/cli"
 
-use qt4 && PROCESSES+=" buildQt4:avidemux/qt4"
+use qt4 && processes+=" buildQt4:avidemux/qt4"
 
 src_prepare() {
-	base_src_prepare
+	default
 
 	# Fix icon name -> avidemux-2.6.png
 	sed -i -e "/^Icon/ s:${PN}:${PN}-2.6:" ${PN}2.desktop || die "Icon name fix failed."
@@ -53,25 +53,25 @@ src_prepare() {
 }
 
 src_configure() {
-	local x mycmakeargs
-
-	mycmakeargs="
+	local mycmakeargs="
+		-DAVIDEMUX_SOURCE_DIR='${S}'
+		-DCMAKE_INSTALL_PREFIX='/usr'
 		$(cmake-utils_use nls GETTEXT)
 		$(cmake-utils_use sdl SDL)
 		$(cmake-utils_use vdpau VDPAU)
 		$(cmake-utils_use xv XVIDEO)
 	"
-	use debug && POSTFIX="_debug" && mycmakeargs+="-DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug"
+	
+	if use debug ; then 
+		mycmakeargs+=" -DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug"
+	fi
 
-	for PROCESS in ${PROCESSES} ; do
-		SOURCE="${PROCESS%%:*}"
-		DEST="${PROCESS#*:}"
+	for process in ${processes} ; do
+		local build="${process%%:*}"
 
-		mkdir "${S}"/${SOURCE} || die "Can't create build folder."
-		cd "${S}"/${SOURCE} || die "Can't enter build folder."
-
-		cmake -DCMAKE_INSTALL_PREFIX="/usr" \
-			${mycmakeargs} -G "Unix Makefiles" ../"${DEST}${POSTFIX}/" || die "cmake failed."
+		mkdir "${S}"/${build} || die "Can't create build folder."
+		cd "${S}"/${build} || die "Can't enter build folder."
+		CMAKE_USE_DIR="${S}"/${process#*:} BUILD_DIR="${S}"/${build} cmake-utils_src_configure
 	done
 }
 
@@ -84,19 +84,19 @@ src_compile() {
 	# See bug 432322.
 	use x86 && replace-flags -O0 -O1
 
-	for PROCESS in ${PROCESSES} ; do
-		SOURCE="${PROCESS%%:*}"
+	for process in ${processes} ; do
+		local source="${process%%:*}"
 
-		cd "${S}/${SOURCE}" || die "Can't enter build folder."
+		cd "${S}/${source}" || die "Can't enter build folder."
 		emake CC="$(tc-getCC)" CXX="$(tc-getCXX)"
 	done
 }
 
 src_install() {
-	for PROCESS in ${PROCESSES} ; do
-		SOURCE="${PROCESS%%:*}"
+	for process in ${processes} ; do
+		local source="${process%%:*}"
 
-		cd "${S}/${SOURCE}" || die "Can't enter build folder."
+		cd "${S}/${source}" || die "Can't enter build folder."
 		emake DESTDIR="${ED}" install
 	done
 
