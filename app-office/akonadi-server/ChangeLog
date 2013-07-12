@@ -1,6 +1,14 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.117 2013/07/10 19:55:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.118 2013/07/12 14:58:14 mschiff Exp $
+
+*akonadi-server-1.10.0-r1 (12 Jul 2013)
+
+  12 Jul 2013; Marc Schiffbauer <mschiff@gentoo.org>
+  +akonadi-server-1.10.0-r1.ebuild,
+  +files/akonadi-server-1.10.0-pgsql-fix.patch:
+  Bump revision. Backported upstream fix 'fdedc830 - Unbreak akonadi on
+  Postgres'
 
 *akonadi-server-1.10.0 (10 Jul 2013)
 

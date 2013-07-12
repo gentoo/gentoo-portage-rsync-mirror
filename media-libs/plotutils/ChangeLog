@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.69 2013/05/19 19:09:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.70 2013/07/12 14:38:11 vincent Exp $
+
+  12 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  plotutils-2.6-r1.ebuild:
+  ppc, ppc64 keywords added, bug #468582
 
   19 May 2013; Alexis Ballier <aballier@gentoo.org> plotutils-2.6-r1.ebuild:
   keyword ~amd64-fbsd, bug #465136
