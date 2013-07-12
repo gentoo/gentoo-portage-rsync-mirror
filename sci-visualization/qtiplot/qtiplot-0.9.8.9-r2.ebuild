@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.2 2013/07/10 07:07:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.3 2013/07/12 15:22:16 jlec Exp $
 
 EAPI=5
 
@@ -131,12 +131,17 @@ src_prepare() {
 
 	sed \
 		-e "s:doc/${PN}/manual:doc/${PN}/html:" \
-		-e "s:/usr/local/${PN}:${EPREFIX}$(python_get_sitedir)/qtiplot:" \
 		-e '/INSTALLS.*documentation/d' \
 		-e '/INSTALLS.*manual/d' \
 		-e "/INSTALLBASE/s: /usr: ${EPREFIX}/usr:g" \
 		-e 's:/usr/local/qtiplot:$$INSTALLBASE:g' \
 		-i qtiplot/qtiplot.pro || die
+
+	if use python; then
+		sed \
+			-e "s:/usr/local/${PN}:${EPREFIX}$(python_get_sitedir)/qtiplot:" \
+			-i qtiplot/qtiplot.pro || die
+	fi
 
 	sed \
 		-e "/^target.path/s:/usr:${EPREFIX}/usr:g" \
