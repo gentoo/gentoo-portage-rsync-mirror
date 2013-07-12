@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/revtex-4.ebuild,v 1.1 2013/07/11 16:37:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/revtex-4.ebuild,v 1.2 2013/07/12 07:24:44 zmedico Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit latex-package
 DESCRIPTION="LaTeX2e macros for journals of the American Physical Society and the American Institute of Physics"
 HOMEPAGE="http://authors.aps.org/revtex4/"
 
-SRC_URI="http://authors.aps.org/revtex4/revtex4.zip"
+SRC_URI="http://publish.aps.org/files/revtex/4/revtex4.zip"
 
 LICENSE="LPPL-1.3c"
 SLOT="4"
