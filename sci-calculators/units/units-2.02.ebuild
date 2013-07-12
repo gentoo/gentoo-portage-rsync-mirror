@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.01-r4.ebuild,v 1.1 2013/07/09 11:27:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.02.ebuild,v 1.1 2013/07/12 11:48:14 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -9,7 +9,7 @@ DESCRIPTION="Unit conversion program"
 HOMEPAGE="http://www.gnu.org/software/units/units.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="FDL-1.3 GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
@@ -29,7 +29,6 @@ RDEPEND="
 DOCS=( ChangeLog NEWS README )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-install.patch
-	cp "${FILESDIR}"/${P}_cur ${PN}_cur
+	epatch "${FILESDIR}"/${PN}-2.01-install.patch
 	eautoreconf
 }
