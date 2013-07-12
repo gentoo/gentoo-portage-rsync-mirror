@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.95 2013/07/08 18:44:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.96 2013/07/12 05:24:32 graaff Exp $
+
+*capistrano-2.15.5 (12 Jul 2013)
+
+  12 Jul 2013; Hans de Graaff <graaff@gentoo.org> +capistrano-2.15.5.ebuild:
+  Version bump.
 
   08 Jul 2013; Hans de Graaff <graaff@gentoo.org> -capistrano-2.13.4.ebuild,
   -capistrano-2.13.5.ebuild, -capistrano-2.14.1.ebuild:

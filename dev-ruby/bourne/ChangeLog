@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bourne
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.8 2013/02/24 06:38:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.9 2013/07/12 05:15:22 graaff Exp $
+
+*bourne-1.5.0 (12 Jul 2013)
+
+  12 Jul 2013; Hans de Graaff <graaff@gentoo.org> +bourne-1.5.0.ebuild:
+  Version bump.
 
   24 Feb 2013; Hans de Graaff <graaff@gentoo.org> -bourne-1.1.2-r1.ebuild,
   -bourne-1.2.0.ebuild:
