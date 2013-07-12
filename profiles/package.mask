@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14917 2013/07/12 00:16:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14918 2013/07/12 08:37:35 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergei Trofimovich <slyfox@gentoo.org> (12 Jul 2013)
+# live ebuild
+=app-misc/mc-9999
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Jul 2013)
 # pwlib/openh323 masked for removal, bugs #290062 and #290063
