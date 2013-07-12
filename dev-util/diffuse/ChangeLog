@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.18 2013/07/01 11:17:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.19 2013/07/12 20:02:22 grobian Exp $
+
+  12 Jul 2013; Fabian Groffen <grobian@gentoo.org> diffuse-0.4.7-r1.ebuild:
+  Fix for Prefix, patch by igrek in bug #456720
 
 *diffuse-0.4.7-r1 (01 Jul 2013)
 
@@ -80,4 +83,3 @@
   19 Jul 2009; Andrey Grozin <grozin@gentoo.org> +diffuse-0.3.4.ebuild,
   +metadata.xml:
   Initial import
-

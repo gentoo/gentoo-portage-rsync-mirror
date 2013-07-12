@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.3.ebuild,v 1.1 2013/07/12 18:37:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.3-r1.ebuild,v 1.1 2013/07/12 20:02:55 dilfridge Exp $
 
 EAPI=5
 
@@ -11,13 +11,16 @@ inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pa
 MY_P=${P/_beta/b}
 MY_PV=${PV/_beta/b}
 
-if [[ "${PV}" != "9999" ]]; then
-	SRC_URI="http://www.cups.org/software/${MY_PV}/${MY_P}-source.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-else
+if [[ ${PV} == *9999 ]]; then
 	inherit git-2
 	EGIT_REPO_URI="http://www.cups.org/cups.git"
+	if [[ ${PV} != 9999 ]]; then
+		EGIT_BRANCH=branch-${PV/.9999}
+	fi
 	KEYWORDS=""
+else
+	SRC_URI="http://www.cups.org/software/${MY_PV}/${MY_P}-source.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 fi
 
 DESCRIPTION="The Common Unix Printing System"
@@ -84,6 +87,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	"${FILESDIR}/${PN}-1.5.0-systemd-socket-2.patch"	# systemd support
 	"${FILESDIR}/${PN}-1.6.2-statedir.patch"
+	"${FILESDIR}/${PN}-1.6.3-colord-profile.patch"
 )
 
 pkg_setup() {

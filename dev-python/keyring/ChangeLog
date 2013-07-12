@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/keyring
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/keyring/ChangeLog,v 1.6 2013/06/27 17:40:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/keyring/ChangeLog,v 1.7 2013/07/12 20:03:09 prometheanfire Exp $
+
+*keyring-1.5-r1 (12 Jul 2013)
+
+  12 Jul 2013; Matthew Thode <prometheanfire@gentoo.org> +keyring-1.5-r1.ebuild:
+  moved the pytest-runner dep to test? ()
 
 *keyring-1.5 (27 Jun 2013)
 

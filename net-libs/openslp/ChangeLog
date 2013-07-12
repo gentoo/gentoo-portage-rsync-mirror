@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/openslp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.58 2012/07/08 15:34:38 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.59 2013/07/12 20:27:49 dilfridge Exp $
+
+*openslp-2.0.0 (12 Jul 2013)
+
+  12 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org> +openslp-2.0.0.ebuild,
+  +files/openslp-2.0.0-cflags.patch:
+  Untested version bump. Builds.
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> openslp-1.2.1-r2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc wrt #419277

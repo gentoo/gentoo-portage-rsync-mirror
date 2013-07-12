@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.7-r1.ebuild,v 1.1 2013/07/01 11:17:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.7-r1.ebuild,v 1.2 2013/07/12 20:02:22 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x64-solaris"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -41,7 +41,8 @@ src_prepare() {
 
 src_install() {
 	"${PYTHON}" install.py \
-		--prefix=/usr \
+		--prefix="${EPREFIX}"/usr \
+		--sysconfdir="${EPREFIX}"/etc \
 		--files-only \
 		--destdir="${D}" \
 		|| die "Installation failed"
