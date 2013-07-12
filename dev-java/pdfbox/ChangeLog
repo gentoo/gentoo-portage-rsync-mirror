@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.23 2013/07/11 22:49:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.24 2013/07/12 02:43:33 patrick Exp $
+
+  12 Jul 2013; Patrick Lauer <patrick@gentoo.org> pdfbox-0.7.3-r2.ebuild:
+  QA: Adding ~amd64-fbsd keyword to avoid keyword removal cascade
 
   11 Jul 2013; Tom Wijsman <TomWij@gentoo.org> pdfbox-0.7.3-r2.ebuild:
   Fixed dependencies to not depend on newest versions which break compilation;

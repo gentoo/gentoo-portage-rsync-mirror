@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.36 2013/06/14 20:03:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.37 2013/07/12 02:42:30 patrick Exp $
+
+  12 Jul 2013; Patrick Lauer <patrick@gentoo.org> bcmail-1.38-r1.ebuild:
+  QA: Adding ~amd64-fbsd keyword to avoid keyword removal cascade
 
   14 Jun 2013; Alexis Ballier <aballier@gentoo.org> bcmail-1.49.ebuild:
   keyword ~amd64-fbsd, bug #472010
