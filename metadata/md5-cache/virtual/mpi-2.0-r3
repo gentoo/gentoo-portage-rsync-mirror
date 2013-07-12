@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Message Passing Interface (MPI) v2.0 implementation
+EAPI=5
+IUSE=cxx fortran romio threads
+KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux
+RDEPEND=|| ( sys-cluster/openmpi[cxx?,fortran?,romio?,threads?] sys-cluster/mpich[cxx?,fortran?,romio?,threads?] sys-cluster/mpich2[cxx?,fortran?,romio?,threads?] sys-cluster/mvapich2[fortran?,romio?,threads?] sys-cluster/native-mpi )
+SLOT=0
+_md5_=b502c1c4aa32ae0d817520ec344ee868

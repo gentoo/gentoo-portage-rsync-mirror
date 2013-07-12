@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14916 2013/07/11 23:34:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14917 2013/07/12 00:16:38 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -331,11 +331,6 @@ net-wireless/ipw3945d
 # no signs of development, no longer supports current sqlalchemy
 # builds only versions prior to current 0.8.x, see Bug #472496
 dev-python/elixir
-
-# Sergey Popov <pinkbyte@gentoo.org> (06 Jun 2013)
-# Abandoned package, most of functions incorporated in portage
-# Masked for removal in 30 days, bug #289899
-dev-util/lafilefixer
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (31 May 2013)
 # Waiting for final release
