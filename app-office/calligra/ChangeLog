@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.92 2013/07/13 07:47:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.93 2013/07/13 16:26:28 johu Exp $
+
+  13 Jul 2013; Johannes Huber <johu@gentoo.org> -calligra-2.6.3.ebuild:
+  Remove old.
 
   13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> calligra-2.6.4.ebuild:
   Stable for x86, wrt bug #476384
