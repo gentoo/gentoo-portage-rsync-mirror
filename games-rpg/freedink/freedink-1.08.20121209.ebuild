@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/freedink-1.08.20121209.ebuild,v 1.1 2013/07/11 00:11:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/freedink-1.08.20121209.ebuild,v 1.2 2013/07/13 00:12:30 hasufell Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="
 	>=media-libs/sdl-mixer-1.2[midi,vorbis,wav]
 	>=media-libs/sdl-ttf-2.0.9"
 RDEPEND="${DEPEND}
-	games-rpg/freedink-data
+	~games-rpg/freedink-data-${PV}
 	nls? ( virtual/libintl )"
 DEPEND="${DEPEND}
 	virtual/pkgconfig
