@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install nofetch postinst postrm preinst prepare pretend setup unpack
+DEPEND=>=sys-apps/sed-4
+DESCRIPTION=Leisure Suit Larry Reloaded
+EAPI=5
+HOMEPAGE=https://www.replaygamesinc.com
+KEYWORDS=~amd64 ~x86
+LICENSE=all-rights-reserved
+RESTRICT=splitdebug
+SLOT=0
+SRC_URI=LarryReloadedLinux.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b9fce7e9f00ec7780f532560b9e0b1cd
