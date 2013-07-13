@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
-DEPEND=>=net-libs/rb_libtorrent-0.14.9[python] dev-python/setuptools dev-util/intltool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DEPEND=>=net-libs/rb_libtorrent-0.14.9[python] dev-python/setuptools dev-util/intltool || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) virtual/pkgconfig
 DESCRIPTION=BitTorrent client with a client/server model.
 EAPI=3
 HOMEPAGE=http://deluge-torrent.org/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-libs/rb_libtorrent-0.14.9[python] dev-python/setuptools dev-util/intltool dev-python/chardet dev-python/pyopenssl dev-python/pyxdg || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson ) >=dev-python/twisted-8.1 >=dev-python/twisted-web-8.1 geoip? ( dev-libs/geoip ) gtk? ( sound? ( dev-python/pygame ) dev-python/pygobject:2 >=dev-python/pygtk-2.12 gnome-base/librsvg libnotify? ( dev-python/notify-python ) ) setproctitle? ( dev-python/setproctitle ) webinterface? ( dev-python/mako ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://download.deluge-torrent.org/source/deluge-1.3.6.tar.bz2
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=94f67c81bfbb404d3f21f51719fc571b
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	systemd	3421a5715404244e4827acd1cf8ce654	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=4824a13924bd8a4c33c017211acf6af4

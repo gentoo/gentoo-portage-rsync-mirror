@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.6.ebuild,v 1.2 2013/04/01 08:38:38 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.6.ebuild,v 1.3 2013/07/13 12:44:16 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
-inherit distutils eutils python
+inherit distutils eutils python systemd
 
 DESCRIPTION="BitTorrent client with a client/server model."
 HOMEPAGE="http://deluge-torrent.org/"
@@ -53,6 +53,8 @@ src_install() {
 	distutils_src_install
 	newinitd "${FILESDIR}"/deluged.init deluged
 	newconfd "${FILESDIR}"/deluged.conf deluged
+	systemd_dounit "${FILESDIR}"/deluged.service
+	systemd_dounit "${FILESDIR}"/deluge-web.service
 }
 
 pkg_postinst() {
