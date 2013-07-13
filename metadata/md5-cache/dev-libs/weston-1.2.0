@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure prepare
+DEPEND=>=dev-libs/wayland-1.1.90 gnome-base/librsvg media-libs/mesa[gles2,wayland] x11-libs/pixman clients? ( >=x11-libs/cairo-1.10.0 x11-libs/gdk-pixbuf dev-libs/glib:2 x11-libs/libxkbcommon media-libs/libpng app-text/poppler ) colord? ( x11-misc/colord ) debug? ( sys-libs/libunwind ) drm? ( >=virtual/udev-136 >=x11-libs/libdrm-2.4.30 media-libs/mesa[gbm] ) egl? ( media-libs/mesa[egl] ) gles2? ( x11-libs/cairo[gles2] ) rdp? ( >=net-misc/freerdp-1.1.0_beta1 ) x11? ( x11-libs/libxcb x11-libs/libX11 ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Wayland reference compositor
+EAPI=5
+HOMEPAGE=http://wayland.freedesktop.org/
+IUSE=+clients colord debug +drm +egl headless fbdev gles2 rdp +resize-optimization rpi +simple-clients static-libs +tablet +wayland-compositor +xwayland +x11
+KEYWORDS=~arm ~amd64 ~x86 ~arm-linux
+LICENSE=MIT CC-BY-SA-3.0
+RDEPEND=>=dev-libs/wayland-1.1.90 gnome-base/librsvg media-libs/mesa[gles2,wayland] x11-libs/pixman clients? ( >=x11-libs/cairo-1.10.0 x11-libs/gdk-pixbuf dev-libs/glib:2 x11-libs/libxkbcommon media-libs/libpng app-text/poppler ) colord? ( x11-misc/colord ) debug? ( sys-libs/libunwind ) drm? ( >=virtual/udev-136 >=x11-libs/libdrm-2.4.30 media-libs/mesa[gbm] ) egl? ( media-libs/mesa[egl] ) gles2? ( x11-libs/cairo[gles2] ) rdp? ( >=net-misc/freerdp-1.1.0_beta1 ) x11? ( x11-libs/libxcb x11-libs/libX11 )
+REQUIRED_USE=rpi? ( !drm !egl gles2 )
+SLOT=0
+SRC_URI=http://wayland.freedesktop.org/releases/weston-1.2.0.tar.xz
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=c21f979d293c483bc63a578c8ae34732

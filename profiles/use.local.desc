@@ -1597,6 +1597,21 @@ dev-libs/totem-pl-parser:introspection - Use dev-libs/gobject-introspection for 
 dev-libs/totem-pl-parser:quvi - Use media-libs/quvi for parsing video links
 dev-libs/ucommon:socks - Build with socks proxy support
 dev-libs/udis86:pic - Force shared libraries to be built as PIC
+dev-libs/weston:clients - Enable support for clients.
+dev-libs/weston:colord - Allow setting color managment.
+dev-libs/weston:drm - Enable drm compositor support.
+dev-libs/weston:egl - Enable egl acceleration.
+dev-libs/weston:fbdev - Enable fbdev compositor support.
+dev-libs/weston:gles2 - Use GLESv2 cairo instead of full GL.
+dev-libs/weston:headless - Headless backend and a noop renderer, mainly for testing purposes.
+dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support.
+dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi.
+dev-libs/weston:rpi - Raspberry Pi GPU support.
+dev-libs/weston:simple-clients - Enable simple-clients?.
+dev-libs/weston:tablet - Enable interface for tablets.
+dev-libs/weston:wayland-compositor - Enable Wayland compositor support.
+dev-libs/weston:x11 - Enable X11 compositor support.
+dev-libs/weston:xwayland - Enable ability support native X11 applications.
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:inmemory - Enabled inmemory backend db support
