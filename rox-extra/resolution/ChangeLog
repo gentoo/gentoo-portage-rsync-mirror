@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/resolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.15 2013/03/02 08:04:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.16 2013/07/13 18:19:11 ago Exp $
+
+  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> resolution-0.3.ebuild:
+  Stable for ppc, wrt bug #392821
 
   02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a

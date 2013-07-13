@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-1.2.3.ebuild,v 1.10 2013/07/07 15:19:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-1.2.3.ebuild,v 1.11 2013/07/13 18:16:15 ago Exp $
 
 EAPI=2
 
@@ -29,5 +29,5 @@ HOMEPAGE="http://test-unit.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""

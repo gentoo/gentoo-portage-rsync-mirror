@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/mime-editor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.24 2013/03/02 07:48:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.25 2013/07/13 18:19:43 ago Exp $
+
+  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> mime-editor-0.6.ebuild:
+  Stable for ppc, wrt bug #393977
 
   02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
