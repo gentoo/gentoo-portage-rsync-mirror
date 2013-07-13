@@ -1,0 +1,22 @@
+From 31de4e7eb65094bb136d220c540871f366fa22d2 Mon Sep 17 00:00:00 2001
+From: Yanko Kaneti <yaneti@declera.com>
+Date: Wed, 13 Feb 2013 19:15:13 +0000
+Subject: Fix NumberBox events configuration with latest pygobject
+
+https://bugzilla.gnome.org/show_bug.cgi?id=693736
+---
+diff --git a/src/lib/number_box.py b/src/lib/number_box.py
+index 4087de1..60b255a 100644
+--- a/src/lib/number_box.py
++++ b/src/lib/number_box.py
+@@ -130,7 +130,7 @@ class NumberBox (Gtk.DrawingArea):
+         self.bottom_note_list = []
+         self.tinfo = tracker_info.TrackerInfo()
+         self.set_property('can-focus', True)
+-        self.set_property('events', Gdk.EventMask.ALL_EVENTS_MASK)
++        self.add_events(Gdk.EventMask.ALL_EVENTS_MASK)
+         self.connect('button-press-event', self.button_press_cb)
+         self.connect('key-release-event', self.key_press_cb)
+         self.connect('enter-notify-event', self.pointer_enter_cb)
+--
+cgit v0.9.2

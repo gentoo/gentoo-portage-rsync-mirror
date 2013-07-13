@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/gnome-sudoku
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.1 2013/07/13 13:44:45 pacho Exp $
+
+*gnome-sudoku-3.8.1 (13 Jul 2013)
+
+  13 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-sudoku-3.8.1-fix-numberbox.patch, +gnome-sudoku-3.8.1.ebuild,
+  +metadata.xml:
+  Add game from splitted gnome-games

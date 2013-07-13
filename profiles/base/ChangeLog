@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.560 2013/07/10 14:22:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.562 2013/07/13 14:00:55 chithanh Exp $
+
+  13 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Remove extra =
+
+  13 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask gles2&rpi flag for dev-libs/weston.
 
   10 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove USE=java mask for =net-dns/libidn-1.27 (bug #472604).

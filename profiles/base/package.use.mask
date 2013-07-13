@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.486 2013/07/10 14:22:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.488 2013/07/13 14:00:55 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Jul 2013)
+# Needs gles support in cairo, bug #428770.
+dev-libs/weston gles2 rpi
 
 # Alexis Ballier <aballier@gentoo.org> (03 Jul 2013)
 # The idea behind using libunwind there is to avoid needing to link to libgcc_s

@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/httpcomponents-core
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-core/ChangeLog,v 1.1 2013/07/13 13:38:27 tomwij Exp $
+
+*httpcomponents-core-4.2.4 (13 Jul 2013)
+
+  13 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/httpcomponents-core-4.2.4-build.xml,
+  +files/httpcomponents-core-4.2.4-httpcore-build.xml,
+  +files/httpcomponents-core-4.2.4-httpcore-nio-build.xml,
+  +httpcomponents-core-4.2.4.ebuild, +metadata.xml:
+  New ebuild for dev-java/httpcomponents-core, a low level toolset of Java
+  components focused on HTTP and associated protocols. Needed dependency of app-
+  office/ganttproject, see bug #119276. Imported from lh-overlay, contributed by
+  Johann Schmitz (ercpe); small adjustements made.
