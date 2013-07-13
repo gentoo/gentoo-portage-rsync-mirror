@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.199 2013/07/12 19:50:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.200 2013/07/13 19:07:04 zmedico Exp $
+
+  13 Jul 2013; Zac Medico <zmedico@gentoo.org> acroread-9.5.5.ebuild:
+  Lowercase tar extension required for unpack, bug 476734.
 
   12 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -acroread-9.5.4.ebuild:

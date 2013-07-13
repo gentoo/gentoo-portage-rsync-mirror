@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5.ebuild,v 1.3 2013/07/07 19:18:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5.ebuild,v 1.4 2013/07/13 19:07:04 zmedico Exp $
 
 EAPI=5
 
@@ -87,7 +87,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	unpack ./ILINXR.TAR ./COMMON.TAR
+	# lowercase tar extension required for unpack, bug 476734
+	mv ./ILINXR.TAR ./ILINXR.tar || die
+	mv ./COMMON.TAR ./COMMON.tar || die
+	unpack ./ILINXR.tar ./COMMON.tar
 }
 
 src_prepare() {

@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>games</herd>
   <use>
-    <flag name="devil">Enable image loading via DevIL</flag>
+    <flag name="devil">Build the DevIL based ImageCodec module</flag>
+    <flag name="freeimage">Build the FreeImage based ImageCodec module</flag>
     <flag name="irrlicht">Enable the Irrlicht renderer</flag>
     <flag name="ogre">Enable the OGRE renderer</flag>
     <flag name="tinyxml">Enable the Tiny XML parser module</flag>

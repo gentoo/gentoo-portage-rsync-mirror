@@ -1178,7 +1178,8 @@ dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-games/aseprite:memleak - Enable memory-leaks detector (only for developers)
 dev-games/aseprite:static - Link against static version of C and C++ runtimes
-dev-games/cegui:devil - Enable image loading via DevIL
+dev-games/cegui:devil - Build the DevIL based ImageCodec module
+dev-games/cegui:freeimage - Build the FreeImage based ImageCodec module
 dev-games/cegui:irrlicht - Enable the Irrlicht renderer
 dev-games/cegui:ogre - Enable the OGRE renderer
 dev-games/cegui:tinyxml - Enable the Tiny XML parser module
