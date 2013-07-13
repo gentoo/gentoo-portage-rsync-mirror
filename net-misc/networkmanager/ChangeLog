@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.172 2013/06/16 11:43:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.173 2013/07/13 19:59:01 pacho Exp $
+
+*networkmanager-0.9.8.2-r1 (13 Jul 2013)
+
+  13 Jul 2013; Pacho Ramos <pacho@gentoo.org> +files/10-openrc-status-r4,
+  +networkmanager-0.9.8.2-r1.ebuild:
+  Inherit some changes from systemd-love to make it more systemd friendly
 
   16 Jun 2013; Pacho Ramos <pacho@gentoo.org> -networkmanager-0.9.8.0.ebuild,
   -networkmanager-9999.ebuild, metadata.xml:
