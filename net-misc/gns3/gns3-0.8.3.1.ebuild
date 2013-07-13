@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/gns3-0.8.3.1.ebuild,v 1.2 2013/03/02 23:00:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/gns3-0.8.3.1.ebuild,v 1.3 2013/07/13 13:13:18 pinkbyte Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ PYTHON_MODNAME="GNS3"
 
 DEPEND="dev-qt/qtgui:4
 	dev-qt/qtsvg:4
-	>=dev-python/PyQt4-4.6.1"
+	>=dev-python/PyQt4-4.6.1[X,svg]"
 RDEPEND="${DEPEND}
 	>=app-emulation/dynamips-0.2.8_rc2"
 
