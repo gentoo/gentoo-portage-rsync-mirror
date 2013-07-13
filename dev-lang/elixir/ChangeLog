@@ -1,0 +1,13 @@
+# ChangeLog for dev-lang/elixir
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/ChangeLog,v 1.2 2013/07/13 11:47:33 hasufell Exp $
+
+  13 Jul 2013; Julian Ospald <hasufell@gentoo.org> elixir-0.9.3.ebuild:
+  add x86 arch
+
+*elixir-0.9.3 (13 Jul 2013)
+
+  13 Jul 2013; Julian Ospald <hasufell@gentoo.org> +elixir-0.9.3.ebuild,
+  +files/elixir-0.9.3-makefile.patch, +metadata.xml:
+  initial import wrt #476288
+

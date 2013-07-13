@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.3_p1.ebuild,v 1.1 2013/06/30 13:31:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.3_p1.ebuild,v 1.2 2013/07/13 11:43:25 pacho Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -16,7 +16,7 @@ EAPI="4"
 PYTHON_DEPEND="python? 2:2.7 3"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit python eutils autotools toolchain-funcs flag-o-matic multilib db-use user
+inherit python eutils autotools toolchain-funcs flag-o-matic multilib db-use user systemd
 
 MY_PV="${PV/_p/-P}"
 MY_PV="${MY_PV/_rc/rc}"
@@ -304,6 +304,11 @@ src_install() {
 	fperms 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
 	fperms 0750 /etc/bind /var/bind/pri
 	fperms 0770 /var/{run,log}/named /var/bind/{,sec,dyn}
+
+	systemd_dounit "${FILESDIR}/named.service"
+	systemd_dotmpfilesd "${FILESDIR}/named.conf"
+	exeinto /usr/libexec
+	doexe "${FILESDIR}/generate-rndc-key.sh"
 }
 
 pkg_postinst() {

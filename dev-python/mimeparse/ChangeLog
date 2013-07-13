@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mimeparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.15 2013/07/10 21:34:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.16 2013/07/13 11:44:18 vincent Exp $
+
+  13 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  mimeparse-0.1.4-r1.ebuild:
+  ppc64 keyword added, bug #468468
 
   10 Jul 2013; Markos Chandras <hwoarang@gentoo.org> mimeparse-0.1.4-r1.ebuild:
   Add ~mips. Bug #468268

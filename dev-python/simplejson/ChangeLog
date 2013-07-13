@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.110 2013/07/10 21:36:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.111 2013/07/13 11:41:28 vincent Exp $
+
+  13 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  simplejson-3.3.0.ebuild:
+  ppc64 keyword added, bug #468468
 
   10 Jul 2013; Markos Chandras <hwoarang@gentoo.org> simplejson-3.3.0.ebuild:
   Add ~mips. Bug #468268

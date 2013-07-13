@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10.1.ebuild,v 1.1 2013/06/25 05:59:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10.1.ebuild,v 1.2 2013/07/13 11:48:26 pacho Exp $
 
 EAPI=5
-inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
+inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator systemd
 
 MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
@@ -255,6 +255,8 @@ src_install () {
 	# Remove unnecessary files
 	rm -f "${D}"/etc/postfix/{*LICENSE,access,aliases,canonical,generic}
 	rm -f "${D}"/etc/postfix/{header_checks,relocated,transport,virtual}
+
+	systemd_dounit "${FILESDIR}/${PN}.service"
 }
 
 pkg_preinst() {

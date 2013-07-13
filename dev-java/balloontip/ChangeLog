@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/balloontip
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/balloontip/ChangeLog,v 1.1 2013/07/13 11:45:57 tomwij Exp $
+
+*balloontip-1.2.1 (13 Jul 2013)
+
+  13 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +balloontip-1.2.1.ebuild,
+  +files/balloontip-1.2.1-build.xml, +metadata.xml:
+  New ebuild for dev-java/balloontip, a balloon tip component to spice up your
+  Java Swing applications. Needed dependency of app-office/ganttproject, see bug
+  #119276. Imported from lh-overlay, contributed by Johann Schmitz (ercpe);
+  small adjustements made, added examples USE flag.
