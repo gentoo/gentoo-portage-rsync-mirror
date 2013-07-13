@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<herd>graphics</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <herd>graphics</herd>
+  <longdescription lang="en">
   libLASi is a library written by Larry Siden that provides a C++
   stream output interface for creating Postscript documents that can
   contain characters from any of the scripts and symbol blocks
