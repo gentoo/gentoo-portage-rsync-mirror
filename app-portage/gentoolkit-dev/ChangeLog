@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.120 2013/06/30 16:50:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.121 2013/07/13 17:59:45 grobian Exp $
+
+  13 Jul 2013; Fabian Groffen <grobian@gentoo.org>
+  gentoolkit-dev-0.2.8.3-r1.ebuild:
+  Fix install for Prefix
 
 *gentoolkit-dev-0.2.8.3-r1 (30 Jun 2013)
 

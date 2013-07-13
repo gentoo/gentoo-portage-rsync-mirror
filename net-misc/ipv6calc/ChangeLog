@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.67 2013/07/10 13:38:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.68 2013/07/13 18:00:49 ago Exp $
+
+  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ipv6calc-0.94.1.ebuild:
+  Stable for ppc, wrt bug #474276
 
   10 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> ipv6calc-0.94.1.ebuild:
   Add Prefix support and some keywords for it
