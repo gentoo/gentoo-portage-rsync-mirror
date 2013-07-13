@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r2.ebuild,v 1.6 2013/07/04 12:16:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r2.ebuild,v 1.7 2013/07/13 20:32:24 jer Exp $
 
 EAPI=5
 inherit autotools eutils multilib
@@ -20,6 +20,7 @@ DOCS=( ARP AUTHORS CONTRIB ChangeLog README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnet1_2.patch
+	sed -i configure.in -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 	rm missing || die "removing of 'missing' script failed"
 	epatch_user
 

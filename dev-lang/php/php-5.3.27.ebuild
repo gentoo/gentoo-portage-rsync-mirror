@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.27.ebuild,v 1.1 2013/07/13 18:33:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.27.ebuild,v 1.2 2013/07/13 20:35:51 ago Exp $
 
 EAPI=5
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd"
 
 function php_get_uri ()
 {
