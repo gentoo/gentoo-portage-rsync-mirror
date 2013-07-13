@@ -15,9 +15,6 @@
     <flag name='perl'>
       Add support for the Perl interpeter in the web server CGIs.
     </flag>
-    <flag name='php'>
-      Add support for the PHP interpeter in the web server CGIs.
-    </flag>
     <flag name='java'>
       Add support for the Java interpeter in the web server CGIs.
     </flag>

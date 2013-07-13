@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/coffee-script-source
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/ChangeLog,v 1.13 2013/05/12 05:37:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/ChangeLog,v 1.14 2013/07/13 06:09:15 graaff Exp $
+
+*coffee-script-source-1.6.3 (13 Jul 2013)
+
+  13 Jul 2013; Hans de Graaff <graaff@gentoo.org>
+  +coffee-script-source-1.6.3.ebuild:
+  Version bump.
 
 *coffee-script-source-1.6.2 (12 May 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/color
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.19 2012/09/27 09:15:43 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.20 2013/07/13 06:09:59 graaff Exp $
+
+  13 Jul 2013; Hans de Graaff <graaff@gentoo.org> -color-1.4.1.ebuild:
+  Cleanup.
 
   27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> color-1.4.1-r1.ebuild:
   Keyword ~ppc/~ppc64 wrt #417513

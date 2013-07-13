@@ -5155,7 +5155,6 @@ net-print/cups:filters - Pull in net-print/foomatic-filters for filtering by def
 net-print/cups:java - Add support for the Java interpeter in the web server CGIs.
 net-print/cups:lprng-compat - Do not install lp... binaries so cups and lprng can coexist.
 net-print/cups:perl - Add support for the Perl interpeter in the web server CGIs.
-net-print/cups:php - Add support for the PHP interpeter in the web server CGIs.
 net-print/cups:python - Add support for the Python interpeter in the web server CGIs.
 net-print/cups:systemd - Add support for systemd socket activation.
 net-print/fax4cups:capisuite-fax - Install net-dialup/capisuite backend
