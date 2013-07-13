@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.18-r1.ebuild,v 1.2 2013/06/20 11:57:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.18-r1.ebuild,v 1.3 2013/07/13 08:18:34 grobian Exp $
 
 EAPI=5
 
@@ -32,9 +32,9 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	if [[ ${CHOST} == *-darwin* ]] ; then
-		# on Darwin we need to link with g++, like automake defaults to,
-		# but overridden by upstream because on Linux this is not
+	if [[ ${CHOST} == *-darwin* || ${CHOST} == *-solaris* ]] ; then
+		# on Darwin/Solaris we need to link with g++, like automake defaults
+		# to, but overridden by upstream because on Linux this is not
 		# necessary, bug #449126
 		sed -i \
 			-e 's/\<LINK\>/CXXLINK/' \
