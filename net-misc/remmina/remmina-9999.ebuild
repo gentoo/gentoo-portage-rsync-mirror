@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.30 2013/06/09 20:38:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.31 2013/07/13 20:12:29 floppym Exp $
 
 EAPI="4"
 
 inherit gnome2-utils cmake-utils
 
 if [[ ${PV} != 9999 ]]; then
-	SRC_URI="mirror://github/FreeRDP/Remmina/${P}.tar.gz
-		mirror://gentoo/${P}.tar.gz
-		http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz"
+	inherit vcs-snapshot
+	COMMIT="7fe29643a7564961d8f4eda50e689c1f1fbfa9cb"
+	SRC_URI="https://github.com/FreeRDP/Remmina/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 else
 	inherit git-2
@@ -34,7 +34,7 @@ RDEPEND="
 	avahi? ( net-dns/avahi[gtk3] )
 	ayatana? ( dev-libs/libappindicator )
 	crypt? ( dev-libs/libgcrypt )
-	freerdp? ( >=net-misc/freerdp-1.1.0_alpha20121004 )
+	freerdp? ( >=net-misc/freerdp-1.1.0_beta1_p20130605 )
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	ssh? ( net-libs/libssh[sftp] )
 	telepathy? ( net-libs/telepathy-glib )
