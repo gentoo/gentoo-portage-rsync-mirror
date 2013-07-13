@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.3-r2.ebuild,v 1.2 2013/02/19 05:01:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.3-r2.ebuild,v 1.3 2013/07/13 11:25:30 pacho Exp $
 
 EAPI=5
 
-inherit eutils linux-info toolchain-funcs multilib
+inherit eutils linux-info toolchain-funcs multilib systemd
 
 DESCRIPTION="Hardware Monitoring user-space utilities"
 HOMEPAGE="http://www.lm-sensors.org/"
@@ -37,6 +37,10 @@ src_prepare() {
 	# Respect LDFLAGS
 	sed -i -e 's/\$(LIBDIR)$/\$(LIBDIR) \$(LDFLAGS)/g' Makefile || die
 
+	# Fix shipped unit file paths
+	sed -i -e 's:\(^EnvironmentFile=\).*:\1/etc/conf.d/lm_sensors:' \
+		prog/init/lm_sensors.service || die
+
 	use static-libs || { sed -i -e '/^BUILD_STATIC_LIB/d' Makefile || die; }
 }
 
@@ -59,11 +63,15 @@ src_install() {
 		install
 
 	newinitd "${FILESDIR}"/${PN}-3-init.d ${PN}
+	systemd_dounit prog/init/lm_sensors.service
+
 	newinitd "${FILESDIR}"/fancontrol-init.d-2 fancontrol
+	systemd_dounit "${FILESDIR}"/fancontrol.service
 
 	if use sensord; then
 		newconfd "${FILESDIR}"/sensord-conf.d sensord
 		newinitd "${FILESDIR}"/sensord-4-init.d sensord
+		systemd_dounit "${FILESDIR}"/sensord.service
 	fi
 
 	dodoc CHANGES CONTRIBUTORS INSTALL README \

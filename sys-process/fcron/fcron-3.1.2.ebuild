@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2.ebuild,v 1.1 2013/03/24 14:06:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2.ebuild,v 1.2 2013/07/13 11:07:39 pacho Exp $
 
 EAPI=5
 
 WANT_AUTOMAKE=none
 
-inherit cron pam eutils flag-o-matic user autotools
+inherit cron pam eutils flag-o-matic user autotools systemd
 
 MY_P=${P/_/-}
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
@@ -77,7 +77,8 @@ src_configure() {
 		--with-shell=/bin/sh \
 		--without-db2man --without-dsssl-dir \
 		--with-rootname=${rootuser} \
-		--with-rootgroup=${rootgroup}
+		--with-rootgroup=${rootgroup} \
+		$(systemd_with_unitdir)
 }
 
 src_compile() {
@@ -154,6 +155,7 @@ src_install() {
 	newpamd "${T}"/fcrontab.pam fcrontab
 
 	newinitd "${FILESDIR}"/fcron.init.3 fcron
+	systemd_dounit "${S}/script/fcron.init.systemd"
 
 	dodoc MANIFEST VERSION "${FILESDIR}"/crontab \
 		doc/en/txt/{readme,thanks,faq,todo,relnotes,changes}.txt

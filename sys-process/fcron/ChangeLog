@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/fcron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.110 2013/03/24 14:06:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.111 2013/07/13 11:07:39 pacho Exp $
+
+  13 Jul 2013; Pacho Ramos <pacho@gentoo.org> fcron-3.1.2.ebuild:
+  Install unit file (#393503)
 
 *fcron-3.1.2 (24 Mar 2013)
 

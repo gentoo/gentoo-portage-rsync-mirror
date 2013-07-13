@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.135 2013/02/19 05:01:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.136 2013/07/13 11:25:30 pacho Exp $
+
+  13 Jul 2013; Pacho Ramos <pacho@gentoo.org> +files/fancontrol.service,
+  +files/sensord.service, lm_sensors-3.3.3-r2.ebuild:
+  Install unit file (#455632)
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> lm_sensors-3.3.3-r2.ebuild:
   Add ~arm-linux keyword.

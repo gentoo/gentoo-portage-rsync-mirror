@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.16.ebuild,v 1.2 2013/06/20 18:23:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.16.ebuild,v 1.3 2013/07/13 11:21:22 pacho Exp $
 
 EAPI=4
 
-inherit pam versionator multilib eutils
+inherit pam versionator multilib eutils systemd
 
 MY_PV=${PV/_/}
 MY_P="${PN}-${MY_PV}"
@@ -435,6 +435,12 @@ src_install() {
 		"${ED}/usr/share"/{man,locale,} \
 		"${ED}/var"/{run,lib/samba/private,lib/samba,lib,cache/samba,cache,} \
 	#	|| die "tried to remove non-empty dirs, this seems like a bug in the ebuild"
+
+	systemd_dotmpfilesd "${FILESDIR}"/samba.conf
+	systemd_dounit "${FILESDIR}"/nmbd.service
+	systemd_dounit "${FILESDIR}"/smbd.{service,socket}
+	systemd_newunit "${FILESDIR}"/smbd_at.service 'smbd@.service'
+	systemd_dounit "${FILESDIR}"/winbindd.service
 }
 
 pkg_postinst() {

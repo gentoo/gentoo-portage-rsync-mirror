@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20-r1.ebuild,v 1.1 2013/01/12 22:47:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20-r1.ebuild,v 1.2 2013/07/13 11:20:03 jlec Exp $
 
 EAPI="5"
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
-inherit autotools-utils bash-completion-r1 eutils flag-o-matic
+inherit autotools-utils bash-completion-r1 eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A nice command line todo list for developers"
 HOMEPAGE="http://swapoff.org/DevTodo"
@@ -30,9 +30,14 @@ PATCHES=(
 
 src_prepare() {
 	# fix regex.h issue on case-insensitive file-systems #332235
-	sed -i -e 's/Regex.h/DTRegex.h/' \
-		util/Lexer.h util/Makefile.{am,in} util/Regex.cc || die
+	sed \
+		-e 's/Regex.h/DTRegex.h/' \
+		-i util/Lexer.h util/Makefile.{am,in} util/Regex.cc || die
 	mv util/{,DT}Regex.h || die
+
+	sed \
+		-e "/^LIBS/s:$: $($(tc-getPKG_CONFIG) --libs ncursesw):g" \
+		-i src/Makefile.am  || die
 
 	autotools-utils_src_prepare
 }

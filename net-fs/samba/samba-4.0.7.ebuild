@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.7.ebuild,v 1.1 2013/07/08 10:54:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.7.ebuild,v 1.2 2013/07/13 11:21:22 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit python-r1 waf-utils multilib linux-info
+inherit python-r1 waf-utils multilib linux-info systemd
 
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
@@ -131,6 +131,12 @@ src_install() {
 	# Install init script and conf.d file
 	newinitd "${CONFDIR}/samba4.initd-r1" samba
 	newconfd "${CONFDIR}/samba4.confd" samba
+
+	systemd_dotmpfilesd "${FILESDIR}"/samba.conf
+	systemd_dounit "${FILESDIR}"/nmbd.service
+	systemd_dounit "${FILESDIR}"/smbd.{service,socket}
+	systemd_newunit "${FILESDIR}"/smbd_at.service 'smbd@.service'
+	systemd_dounit "${FILESDIR}"/winbindd.service
 }
 
 src_test() {
