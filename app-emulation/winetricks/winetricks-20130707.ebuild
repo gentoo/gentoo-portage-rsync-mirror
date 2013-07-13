@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-960.ebuild,v 1.1 2013/06/15 03:58:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-20130707.ebuild,v 1.1 2013/07/13 03:17:38 tetromino Exp $
 
 EAPI=5
 
@@ -10,8 +10,7 @@ if [[ ${PV} == "99999999" ]] ; then
 	ESVN_REPO_URI="http://winetricks.googlecode.com/svn/trunk"
 	inherit subversion
 else
-	SRC_URI="http://winetricks.googlecode.com/svn-history/r${PV}/trunk/src/winetricks -> ${P}
-		http://winetricks.googlecode.com/svn-history/r${PV}/trunk/src/winetricks.1 -> ${P}.1"
+	SRC_URI="http://winetricks.org/download/releases/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 wtg=winetricks-gentoo-2012.11.24
@@ -24,39 +23,42 @@ HOMEPAGE="http://code.google.com/p/winetricks/ http://wiki.winehq.org/winetricks
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-IUSE="gtk kde"
+IUSE="gtk kde rar"
 
 DEPEND=""
 RDEPEND="app-arch/cabextract
+	app-arch/p7zip
 	app-arch/unzip
 	app-emulation/wine
+	net-misc/wget
+	x11-misc/xdg-utils
 	gtk? ( gnome-extra/zenity )
-	kde? ( kde-base/kdialog )"
+	kde? ( kde-base/kdialog )
+	rar? ( app-arch/unrar )"
 
 # Uses non-standard "Wine" category, which is provided by app-emulation/wine; #451552
 QA_DESKTOP_FILE="usr/share/applications/winetricks.desktop"
+
+# Tests require network access and run wine, which is unreliable from a portage environment
+RESTRICT="test"
 
 S="${WORKDIR}"
 
 src_unpack() {
 	if [[ ${PV} == "99999999" ]] ; then
 		subversion_src_unpack
+		if use gtk || use kde; then
+			unpack ${wtg}.tar.bz2
+		fi
 	else
-		mkdir src
-		cp "${DISTDIR}"/${P} src/${PN} || die
-		cp "${DISTDIR}"/${P}.1 src/${PN}.1 || die
-	fi
-	if use gtk || use kde; then
-		unpack ${wtg}.tar.bz2
+		default
 	fi
 }
 
 src_install() {
-	cd src
-	dobin ${PN}
-	doman ${PN}.1
+	default
 	if use gtk || use kde; then
-		cd ../${wtg} || die
+		cd ${wtg} || die
 		domenu winetricks.desktop
 		insinto /usr/share/icons/hicolor/scalable/apps
 		doins wine-winetricks.svg
