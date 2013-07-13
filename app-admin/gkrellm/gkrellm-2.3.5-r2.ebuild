@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.3.5-r2.ebuild,v 1.1 2012/12/22 18:32:52 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.3.5-r2.ebuild,v 1.2 2013/07/13 12:13:11 pacho Exp $
 
 EAPI=4
 
-inherit eutils multilib toolchain-funcs user
+inherit eutils multilib toolchain-funcs user systemd
 
 DESCRIPTION="Single process stack of various system monitors"
 HOMEPAGE="http://www.gkrellm.net/"
@@ -113,6 +113,8 @@ src_install() {
 
 	doinitd "${FILESDIR}"/gkrellmd || die "doinitd failed"
 	newconfd "${FILESDIR}"/gkrellmd.conf gkrellmd || die "newconfd failed"
+
+	systemd_dounit "${FILESDIR}"/gkrellmd.service
 
 	insinto /etc
 	doins server/gkrellmd.conf || die "doins failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.56.ebuild,v 1.1 2013/06/16 16:04:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.56.ebuild,v 1.2 2013/07/13 12:24:04 blueness Exp $
 
 EAPI="5"
 
@@ -38,7 +38,8 @@ src_configure() {
 	econf \
 		$(use_enable ipv6) \
 		$(use_enable tcpd libwrap) \
-		--with-ssl="${EPREFIX}"/usr
+		--with-ssl="${EPREFIX}"/usr \
+		--disable-fips
 }
 
 src_install() {

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.7.ebuild,v 1.3 2013/04/13 20:02:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.7.ebuild,v 1.4 2013/07/13 12:05:51 pacho Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic multilib autotools
+inherit eutils flag-o-matic multilib autotools systemd
 
 DESCRIPTION="NFS client and server daemons"
 HOMEPAGE="http://linux-nfs.org/"
@@ -115,6 +115,9 @@ src_install() {
 	sed -i \
 		-e "/^NFS_NEEDED_SERVICES=/s:=.*:=\"${opt_need}\":" \
 		"${ED}"/etc/conf.d/nfs || die #234132
+	systemd_dounit "${FILESDIR}"/nfsd.service
+	systemd_dounit "${FILESDIR}"/rpc-statd.service
+	systemd_dounit "${FILESDIR}"/rpc-mountd.service
 }
 
 pkg_postinst() {

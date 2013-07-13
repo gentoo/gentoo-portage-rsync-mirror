@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.136 2013/06/16 16:04:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.137 2013/07/13 12:24:04 blueness Exp $
+
+  13 Jul 2013; Anthony G. Basile <blueness@gentoo.org> stunnel-4.56.ebuild:
+  Force disable fips support, bug #476674
 
 *stunnel-4.56 (16 Jun 2013)
 
