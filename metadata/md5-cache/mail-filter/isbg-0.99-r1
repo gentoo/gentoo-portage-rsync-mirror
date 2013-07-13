@@ -3,10 +3,10 @@ DEPEND==dev-lang/python-2*
 DESCRIPTION=IMAP Spam Begone: a script that makes it easy to scan an IMAP inbox for spam using SpamAssassin
 EAPI=3
 HOMEPAGE=http://redmine.ookook.fr/projects/isbg
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=mail-filter/spamassassin =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://github.com/downloads/ook/isbg/isbg_0.99_20100303.tgz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=5afe2ffd04eaf94779cd522af4652070
+_md5_=6f8e044f567a800786cefe7ba5bdf19d

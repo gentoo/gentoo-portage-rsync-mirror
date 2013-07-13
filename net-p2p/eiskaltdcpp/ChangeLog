@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.53 2013/07/12 04:54:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.54 2013/07/13 07:48:22 ago Exp $
+
+  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> eiskaltdcpp-2.2.8-r1.ebuild:
+  Stable for x86, wrt bug #476232
 
   12 Jul 2013; Agostino Sarubbo <ago@gentoo.org> eiskaltdcpp-2.2.8-r1.ebuild:
   Stable for amd64, wrt bug #476232

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.107 2013/07/10 18:28:59 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.108 2013/07/13 07:49:06 ago Exp $
+
+  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> unrealircd-3.2.10.1.ebuild:
+  Stable for x86, wrt bug #476342
 
   10 Jul 2013; Chema Alonso <nimiux@gentoo.org> unrealircd-3.2.10.1.ebuild:
   Stable for amd64 wrt bug #476342

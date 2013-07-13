@@ -1,6 +1,12 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.236 2013/03/17 15:34:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.237 2013/07/13 07:45:21 tomwij Exp $
+
+*liferea-1.10.0 (13 Jul 2013)
+
+  13 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +liferea-1.10.0.ebuild:
+  Version bump to 1.10.0. Fixes bug #455348, reported by and proxied commit for
+  Yurieni.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
