@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.2.0_p20130712.ebuild,v 1.1 2013/07/12 16:16:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.2.0_p20130712.ebuild,v 1.2 2013/07/13 10:51:07 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -23,7 +23,21 @@ RDEPEND="dev-python/django[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
-RESTRICT="test"
+
+python_prepare_all() {
+	# Disable tests requiring connecting to ldap server,
+	# until 'someone' figures how to set one in localhost
+	sed -e 's:test_update:_&:' -e 's:test_get:_&:' -e 's:test_scope:_&:' \
+		-e 's:test_values_list:_&:' -e 's:test_values:_&:' -e 's:test_slice:_&:' \
+		-e 's:test_order_by:_&:' -e 's:test_ldap_filter:_&:' -e 's:test_delete:_&:' \
+		-e 's:test_filter:_&:' -e 's:test_bulk_delete:_&:' -e 's:test_count:_&:' \
+		-e 's:test_index:_&:' -e 's:test_user_list:_&:' -e 's:test_user_detail:_&:' \
+		-e 's:test_user_delete:_&:' -e 's:test_group_list:_&:' \-e 's:test_group_detail:_&:' \
+		-e 's:test_group_search:_&:' -e 's:test_group_add:_&:' -e 's:test_group_delete:_&:' \
+		-i examples/tests.py || die
+
+	distutils-r1_python_prepare_all
+}
 
 python_compile() {
 	distutils-r1_python_compile

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-ldapdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/ChangeLog,v 1.6 2013/07/12 16:16:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/ChangeLog,v 1.7 2013/07/13 10:51:07 idella4 Exp $
+
+  13 Jul 2013; Ian Delaney <idella4@gentoo.org>
+  django-ldapdb-0.2.0_p20130712.ebuild:
+  Unrestrict test phase, disable test set demanding an ldap server to which to
+  connect
 
 *django-ldapdb-0.2.0_p20130712 (12 Jul 2013)
 
