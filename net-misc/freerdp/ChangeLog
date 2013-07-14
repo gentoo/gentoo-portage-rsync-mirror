@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.47 2013/07/14 00:07:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.48 2013/07/14 14:12:28 floppym Exp $
+
+  14 Jul 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/freerdp-1.1.0_beta1-avx.patch, freerdp-1.1.0_beta1.ebuild:
+  Fix build with -mavx, bug 476798 by Mirko Guenther.
 
   14 Jul 2013; Mike Gilbert <floppym@gentoo.org>
   -freerdp-1.0.1_p20120318.ebuild, -freerdp-1.1.0_alpha20121004-r1.ebuild:
