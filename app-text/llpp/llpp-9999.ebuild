@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.25 2013/06/26 19:55:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.26 2013/07/13 23:16:59 xmw Exp $
 
 EAPI=5
 
@@ -37,11 +37,7 @@ DEPEND="${RDEPEND}
 RESTRICT="!ocamlopt? ( strip )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-11-WM_CLASS.patch \
-		"${FILESDIR}"/${P}-mupdf_trailer.patch \
-		"${FILESDIR}"/${P}-fz_new_text_page.patch \
-		"${FILESDIR}"/${P}-mupdf-split-headers.patch \
-		"${FILESDIR}"/${P}-fz_drop_display_list.patch
+	epatch "${FILESDIR}"/${PN}-11-WM_CLASS.patch
 }
 
 src_compile() {
@@ -69,7 +65,7 @@ src_compile() {
 	fi
 
 	verbose() { echo "$@" >&2 ; "$@" || die ; }
-	verbose ocaml str.cma keystoml.ml KEYS > help.ml
+	verbose ocaml str.cma keystoml.ml < KEYS > help.ml
 	verbose printf 'let version ="%s";;\n' ${PV} >> help.ml
 	verbose ${ocaml} -c -o link.o -ccopt "${ccopt}" link.c
 	verbose ${ocaml} -c -o help.${cmo} help.ml

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.7 2013/06/16 22:26:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.8 2013/07/13 23:16:59 xmw Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+ocamlopt static"
 
 LIB_DEPEND=">=app-text/mupdf-1.2:=[static-libs]
-	<=app-text/mupdf-9999[static-libs]
+	<app-text/mupdf-9999[static-libs]
 	media-libs/openjpeg:0[static-libs]
 	media-libs/freetype:2[static-libs]
 	media-libs/jbig2dec[static-libs]
@@ -66,7 +66,7 @@ src_compile() {
 	fi
 
 	verbose() { echo "$@" >&2 ; "$@" || die ; }
-	verbose ocaml str.cma keystoml.ml KEYS > help.ml
+	verbose ocaml str.cma keystoml.ml < KEYS > help.ml
 	verbose printf 'let version ="%s";;\n' ${PV} >> help.ml
 	verbose ${ocaml} -c -o link.o -ccopt "${ccopt}" link.c
 	verbose ${ocaml} -c -o help.${cmo} help.ml
