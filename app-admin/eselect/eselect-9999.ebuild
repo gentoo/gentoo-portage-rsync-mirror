@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.11 2013/01/06 13:44:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.12 2013/07/14 11:08:32 ulm Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/eselect.git"
 EGIT_BOOTSTRAP="autogen.bash"
@@ -10,13 +10,11 @@ EGIT_BOOTSTRAP="autogen.bash"
 inherit git-2 bash-completion-r1 autotools
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
-HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
-SRC_URI=""
+HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Eselect"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-2+ || ( GPL-2+ CC-BY-SA-2.5 )"
 SLOT="0"
-KEYWORDS=""
-IUSE="doc"
+IUSE="doc emacs vim-syntax"
 
 RDEPEND="sys-apps/sed
 	|| (
@@ -31,9 +29,8 @@ RDEPEND="!app-admin/eselect-news
 	sys-apps/file
 	sys-libs/ncurses"
 
-# Commented out: only few users of eselect will edit its source
-#PDEPEND="emacs? ( app-emacs/gentoo-syntax )
-#	vim-syntax? ( app-vim/eselect-syntax )"
+PDEPEND="emacs? ( app-emacs/eselect-mode )
+	vim-syntax? ( app-vim/eselect-syntax )"
 
 src_compile() {
 	emake
@@ -48,13 +45,17 @@ src_install() {
 
 	# needed by news module
 	keepdir /var/lib/gentoo/news
-	fowners root:portage /var/lib/gentoo/news || die
-	fperms g+w /var/lib/gentoo/news || die
+	if ! use prefix; then
+		fowners root:portage /var/lib/gentoo/news
+		fperms g+w /var/lib/gentoo/news
+	fi
 }
 
 pkg_postinst() {
 	# fowners in src_install doesn't work for the portage group:
 	# merging changes the group back to root
-	chgrp portage "${EROOT}/var/lib/gentoo/news" \
-		&& chmod g+w "${EROOT}/var/lib/gentoo/news"
+	if ! use prefix; then
+		chgrp portage "${EROOT}/var/lib/gentoo/news" \
+			&& chmod g+w "${EROOT}/var/lib/gentoo/news"
+	fi
 }
