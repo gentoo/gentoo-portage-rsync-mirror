@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.142 2013/07/05 13:52:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.143 2013/07/14 00:00:50 floppym Exp $
+
+  14 Jul 2013; Mike Gilbert <floppym@gentoo.org> systemd-205.ebuild,
+  systemd-9999.ebuild:
+  Set file capabilities on systemd-detect-virt, bug 468876 by Michał
+  Bartoszkiewicz.
 
 *systemd-205 (05 Jul 2013)
 
