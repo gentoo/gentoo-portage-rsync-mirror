@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-ctags
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.65 2012/09/09 15:07:01 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.66 2013/07/14 14:55:13 ulm Exp $
+
+  14 Jul 2013; Ulrich Müller <ulm@gentoo.org> -eselect-ctags-1.13.ebuild,
+  eselect-ctags-1.14.ebuild:
+  Update HOMEPAGE. Specify LICENSE more precisely. Remove old.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> eselect-ctags-1.14.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #431206

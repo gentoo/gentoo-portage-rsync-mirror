@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.118 2013/07/12 14:58:14 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.119 2013/07/14 14:36:30 mrueg Exp $
+
+  14 Jul 2013; Manuel Rüger <mrueg@gentoo.org> akonadi-server-1.10.0-r1.ebuild,
+  akonadi-server-1.10.0.ebuild:
+  Add 'Fixing qtgui deps for qt-4.8.5' to 1.10 releases
 
 *akonadi-server-1.10.0-r1 (12 Jul 2013)
 

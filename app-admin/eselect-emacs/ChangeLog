@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-emacs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.103 2012/09/09 15:07:52 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.104 2013/07/14 14:57:33 ulm Exp $
+
+  14 Jul 2013; Ulrich Müller <ulm@gentoo.org> -eselect-emacs-1.13.ebuild,
+  eselect-emacs-1.14.ebuild:
+  Update HOMEPAGE. Specify LICENSE more precisely. Remove old.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> eselect-emacs-1.14.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #431206
