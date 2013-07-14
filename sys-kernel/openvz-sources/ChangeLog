@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.202 2013/07/13 17:55:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.203 2013/07/14 07:38:33 qnikst Exp $
+
+  14 Jul 2013; Alexander Vershilov <qnikst@gentoo.org>
+  -openvz-sources-2.6.32.78.26.ebuild:
+  remove 2.6.78.26 due to security Bug 475638 (thanks to slepnoga)
 
 *openvz-sources-2.6.32.78.28 (13 Jul 2013)
 
