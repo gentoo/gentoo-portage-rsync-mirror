@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.280 2013/07/13 12:01:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.281 2013/07/14 08:20:50 eras Exp $
+
+*cyrus-sasl-2.1.23-r7 (14 Jul 2013)
+
+  14 Jul 2013; Eray Aslan <eras@gentoo.org> +cyrus-sasl-2.1.23-r7.ebuild,
+  +files/cyrus-sasl-2.1.23-CVE-2013-4122.patch:
+  Security bump - bug #476764
 
 *cyrus-sasl-2.1.26-r2 (13 Jul 2013)
 

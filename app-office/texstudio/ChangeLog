@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.14 2013/07/12 20:39:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.15 2013/07/14 08:28:47 jlec Exp $
+
+  14 Jul 2013; Justin Lecher <jlec@gentoo.org> -texstudio-2.5.2.ebuild,
+  -texstudio-2.5.2-r1.ebuild, texstudio-2.6.0.ebuild:
+  Correct DESCRIPTION
 
   12 Jul 2013; Agostino Sarubbo <ago@gentoo.org> texstudio-2.6.0.ebuild:
   Stable for amd64, wrt bug #476558

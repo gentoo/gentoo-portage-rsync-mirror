@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/date_validator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/date_validator/ChangeLog,v 1.2 2013/05/01 05:39:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/date_validator/ChangeLog,v 1.4 2013/07/14 08:03:44 graaff Exp $
+
+*date_validator-0.7.0 (14 Jul 2013)
+
+  14 Jul 2013; Hans de Graaff <graaff@gentoo.org> +date_validator-0.7.0.ebuild:
+  Version bump.
+
+  14 Jul 2013; Hans de Graaff <graaff@gentoo.org> -date_validator-0.6.3.ebuild:
+  Cleanup.
 
 *date_validator-0.6.4 (01 May 2013)
 

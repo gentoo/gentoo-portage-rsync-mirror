@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.6.0.ebuild,v 1.2 2013/07/12 20:39:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.6.0.ebuild,v 1.3 2013/07/14 08:28:47 jlec Exp $
 
 EAPI=5
 
 inherit base fdo-mime qt4-r2
 
-DESCRIPTION="Free cross-platform LaTeX editor (former texmakerX)"
+DESCRIPTION="Free cross-platform LaTeX editor (fork from texmakerX)"
 HOMEPAGE="http://texstudio.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}/TeXstudio%20${PV}/${P}.tar.gz"
 
