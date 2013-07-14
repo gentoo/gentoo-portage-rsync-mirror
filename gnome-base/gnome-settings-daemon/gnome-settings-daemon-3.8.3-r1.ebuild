@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.2.ebuild,v 1.1 2013/05/15 07:32:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.3-r1.ebuild,v 1.1 2013/07/14 18:45:52 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,6 +10,8 @@ inherit autotools eutils gnome2 virtualx
 
 DESCRIPTION="Gnome Settings Daemon"
 HOMEPAGE="https://git.gnome.org/browse/gnome-settings-daemon"
+
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -57,8 +59,10 @@ COMMON_DEPEND="
 # Themes needed by g-s-d, gnome-shell, gtk+:3 apps to work properly
 # <gnome-color-manager-3.1.1 has file collisions with g-s-d-3.1.x
 # <gnome-power-manager-3.1.3 has file collisions with g-s-d-3.1.x
+# systemd needed for power and session management, bug #464944
 RDEPEND="${COMMON_DEPEND}
 	gnome-base/dconf
+	sys-apps/systemd
 	>=x11-themes/gnome-themes-standard-2.91
 	>=x11-themes/gnome-icon-theme-2.91
 	>=x11-themes/gnome-icon-theme-symbolic-2.91
@@ -90,14 +94,16 @@ src_prepare() {
 	# Make colord and wacom optional; requires eautoreconf
 	epatch "${FILESDIR}/${PN}-3.7.90-optional-color-wacom.patch"
 
+	# Apply patches from gnome-3.8 branch
+	epatch "${WORKDIR}"/${P}-patches/*.patch
+
+	epatch_user
 	eautoreconf
 
 	gnome2_src_prepare
 }
 
 src_configure() {
-	# README is empty
-	DOCS="AUTHORS NEWS ChangeLog MAINTAINERS"
 	gnome2_src_configure \
 		--disable-static \
 		--enable-man \
