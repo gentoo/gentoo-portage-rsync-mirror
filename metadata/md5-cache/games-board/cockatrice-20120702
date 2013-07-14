@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libgcrypt dev-libs/protobuf dev-qt/qtcore:4 dev-qt/qtsql:4 !dedicated? ( dev-qt/qtmultimedia:4 dev-qt/qtsvg:4 dev-qt/qtgui:4 )
 SLOT=0
 SRC_URI=http://cockatrice.de/files/cockatrice_source_20120702.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	4a83fb2557280cbf1418033633944bef	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	e40c43582b7ebe5daa0528b595603b29	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=5f5ca9b2f65a33c8da155e05ac758c5a

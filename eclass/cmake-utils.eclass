@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.98 2013/07/02 14:36:20 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.99 2013/07/14 12:50:16 hasufell Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -49,6 +49,13 @@ CMAKE_REMOVE_MODULES="${CMAKE_REMOVE_MODULES:-yes}"
 # Specify a makefile generator to be used by cmake.
 # At this point only "emake" and "ninja" are supported.
 CMAKE_MAKEFILE_GENERATOR="${CMAKE_MAKEFILE_GENERATOR:-emake}"
+
+# @ECLASS-VARIABLE: CMAKE_WARN_UNUSED_CLI
+# @DESCRIPTION:
+# Warn about variables that are declared on the command line
+# but not used. Might give false-positives.
+# "no" to disable (default) or anything else to enable.
+CMAKE_WARN_UNUSED_CLI="${CMAKE_WARN_UNUSED_CLI:-no}"
 
 CMAKEDEPEND=""
 case ${WANT_CMAKE} in
@@ -472,11 +479,17 @@ enable_cmake-utils_src_configure() {
 		local mycmakeargs_local=("${mycmakeargs[@]}")
 	fi
 
+	if [[ ${CMAKE_WARN_UNUSED_CLI} == no ]] ; then
+		local warn_unused_cli="--no-warn-unused-cli"
+	else
+		local warn_unused_cli=""
+	fi
+
 	# Common configure parameters (overridable)
 	# NOTE CMAKE_BUILD_TYPE can be only overriden via CMAKE_BUILD_TYPE eclass variable
 	# No -DCMAKE_BUILD_TYPE=xxx definitions will be in effect.
 	local cmakeargs=(
-		--no-warn-unused-cli
+		${warn_unused_cli}
 		-C "${common_config}"
 		-G "$(_generator_to_use)"
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}${PREFIX}"

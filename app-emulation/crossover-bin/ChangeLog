@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/crossover-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/ChangeLog,v 1.7 2013/07/14 12:23:35 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/ChangeLog,v 1.8 2013/07/14 12:44:13 ryao Exp $
+
+*crossover-bin-12.1.2-r1 (14 Jul 2013)
+*crossover-bin-12.2.0-r1 (14 Jul 2013)
+*crossover-bin-12.2.1-r1 (14 Jul 2013)
+
+  14 Jul 2013; Richard Yao <ryao@gentoo.org> +crossover-bin-12.1.2-r1.ebuild,
+  +crossover-bin-12.2.0-r1.ebuild, +crossover-bin-12.2.1-r1.ebuild,
+  -crossover-bin-12.1.2.ebuild, -crossover-bin-12.2.0.ebuild,
+  -crossover-bin-12.2.1.ebuild:
+  Add /usr/bin/crossover symlink, bug #476314
 
   14 Jul 2013; Richard Yao <ryao@gentoo.org> crossover-bin-12.1.2.ebuild,
   crossover-bin-12.2.0.ebuild, crossover-bin-12.2.1.ebuild:
