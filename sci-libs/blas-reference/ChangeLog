@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.60 2013/02/27 06:53:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.61 2013/07/14 17:34:58 ago Exp $
+
+  14 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
+  blas-reference-20070226-r2.ebuild:
+  Stable for arm, wrt bug #476224
 
 *blas-reference-20070226-r3 (27 Feb 2013)
 
