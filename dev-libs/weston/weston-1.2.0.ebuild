@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/weston-1.2.0.ebuild,v 1.1 2013/07/13 15:02:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/weston-1.2.0.ebuild,v 1.2 2013/07/14 20:56:05 chithanh Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ RDEPEND="
 		media-libs/mesa[gbm] )
 	egl? ( media-libs/mesa[egl] )
 	gles2? ( x11-libs/cairo[gles2] )
-	rdp? ( >=net-misc/freerdp-1.1.0_beta1 )
+	rdp? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 )
 	x11? ( x11-libs/libxcb
 		x11-libs/libX11 )"
 DEPEND="${RDEPEND}"
