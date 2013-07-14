@@ -3781,6 +3781,7 @@ media-video/mpv:vf-dlopen - Install additional video filters for using with -vf 
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/pgcedit:video - Add support for video preview
+media-video/qgifer:imagemagick - Use imagemagick for image operations
 media-video/rtmpdump:gnutls - Use GnuTLS library instead of the default OpenSSL
 media-video/rtmpdump:polarssl - Use PolarSSL library instead of the default OpenSSL
 media-video/smplayer2:download-subs - Enable subtitle downloader (requires QuaZip)

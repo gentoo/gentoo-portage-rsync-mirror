@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qgifer/qgifer-0.2.1.ebuild,v 1.2 2013/07/14 11:58:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qgifer/qgifer-0.2.1.ebuild,v 1.3 2013/07/14 15:49:26 tomwij Exp $
 
 EAPI="5"
 
@@ -14,12 +14,12 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="debug"
+IUSE="debug imagemagick"
 
 RDEPEND="media-libs/giflib:0
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	media-gfx/imagemagick:0
+	imagemagick? ( media-gfx/imagemagick:0 )
 	media-libs/opencv:0[ffmpeg]
 	virtual/ffmpeg:0"
 

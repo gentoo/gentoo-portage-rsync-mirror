@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14921 2013/07/13 13:42:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14922 2013/07/14 15:40:10 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -380,12 +380,6 @@ dev-python/gdl-python
 # Breaks it sole rev. dep: vlc
 # Keep it masked until fixed.
 >=media-libs/libdvbpsi-1.1.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 May 2013)
-# Requires the deprecated media-sound/alsa-headers wrt #468712
-# Queries kernel source location wrong wrt #370099
-# And fails to build with Linux 3.8+
-media-sound/line6usb
 
 # Kacper Kowalik <xarthisius@gentoo.org> (01 May 2013)
 # Removal due to licensing issue wrt #452420

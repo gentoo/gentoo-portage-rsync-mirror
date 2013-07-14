@@ -10,4 +10,7 @@
 	<longdescription lang="en">
 		QGifer is a tool for extracting part of a video to an animated GIF file.
 	</longdescription>
+	<use>
+		<flag name="imagemagick">Use imagemagick for image operations</flag>
+	</use>
 </pkgmetadata>
