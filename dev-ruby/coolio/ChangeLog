@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/coolio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/ChangeLog,v 1.5 2013/02/03 12:20:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/ChangeLog,v 1.6 2013/07/14 06:11:20 graaff Exp $
+
+*coolio-1.2.0 (14 Jul 2013)
+
+  14 Jul 2013; Hans de Graaff <graaff@gentoo.org> +coolio-1.2.0.ebuild:
+  Version bump. Unbundle iobuffer. Compile directly instead of via unspecified
+  rake-compiler. Run all non-network specs.
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900
