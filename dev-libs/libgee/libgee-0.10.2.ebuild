@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.10.0.ebuild,v 1.2 2013/03/30 22:03:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.10.2.ebuild,v 1.1 2013/07/14 19:37:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,10 +16,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-linux"
 IUSE="+introspection"
 
 # FIXME: add doc support, requires valadoc
-RDEPEND=">=dev-libs/glib-2.32:2
-	introspection? ( >=dev-libs/gobject-introspection-0.9.6:= )"
+RDEPEND="
+	>=dev-libs/glib-2.32:2
+	introspection? ( >=dev-libs/gobject-introspection-0.9.6:= )
+"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README"

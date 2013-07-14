@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r1.ebuild,v 1.1 2013/07/13 19:59:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r1.ebuild,v 1.2 2013/07/14 19:31:29 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev
+inherit autotools eutils gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
@@ -17,6 +17,7 @@ SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname versio
 IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls
 +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala
 +wext" # wimax
+
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
@@ -121,6 +122,7 @@ src_prepare() {
 		cli/completion/Makefile.in || die "sed completiondir failed"
 
 	epatch_user
+	eautoreconf
 
 	use vala && vala_src_prepare
 

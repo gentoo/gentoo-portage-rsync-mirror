@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.174 2013/07/14 06:52:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.175 2013/07/14 19:31:29 pacho Exp $
+
+  14 Jul 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.2-r1.ebuild:
+  Add missing eautoreconf call
 
   14 Jul 2013; Pacho Ramos <pacho@gentoo.org>
   +files/0001-core-runtime-detect-logind-and-ConsoleKit-3.patch:
