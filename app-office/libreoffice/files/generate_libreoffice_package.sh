@@ -12,6 +12,9 @@ USEFILE="/etc/portage/package.use/libreo"
 MYPKGDIR="$( portageq pkgdir )"
 ################################################
 
+# bug 473974
+export LC_MESSAGES=C
+
 die() {
         echo "${1}"
         exit 1

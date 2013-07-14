@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.1.ebuild,v 1.2 2013/04/17 13:26:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.1-r3.ebuild,v 1.1 2013/07/14 11:49:46 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -45,6 +45,8 @@ pkg_setup() {
 		MODULES
 		KALLSYMS
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
+		!UIDGID_STRICT_TYPE_CHECKS
+		!USER_NS
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
@@ -52,7 +54,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 9 || die "Linux 3.9 is the latest supported version."; }
+		{ kernel_is le 3 10 || die "Linux 3.10 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -65,6 +67,21 @@ src_prepare() {
 	then
 		# Be more like FreeBSD and Illumos when handling hostids
 		epatch "${FILESDIR}/${PN}-0.6.0_rc14-simplify-hostid-logic.patch"
+
+		# Block tasks properly
+		epatch "${FILESDIR}/${PN}-0.6.1-fix-delay.patch"
+
+		# Linux 3.10 Compatibility
+		epatch "${FILESDIR}/${PN}-0.6.1-linux-3.10-compat.patch"
+
+		# Fix kernel builtin support
+		epatch "${FILESDIR}/${PN}-0.6.1-builtin-fix.patch"
+
+		# Support recent hardened kernels
+		if kernel_is ge 3 8
+		then
+			epatch "${FILESDIR}/${PN}-0.6.1-constify-ctl_table.patch"
+		fi
 	fi
 
 	# splat is unnecessary unless we are debugging
@@ -93,9 +110,6 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 	dodoc AUTHORS DISCLAIMER README.markdown
-
-	# Provide /usr/src/spl symlink for lustre
-	dosym "$(basename $(echo "${ED}/usr/src/spl-"*))/${KV_FULL}" /usr/src/spl
 }
 
 pkg_postinst() {

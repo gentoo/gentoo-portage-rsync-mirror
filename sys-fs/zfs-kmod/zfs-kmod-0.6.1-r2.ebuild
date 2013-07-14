@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.1.ebuild,v 1.2 2013/04/17 13:27:54 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.1-r2.ebuild,v 1.1 2013/07/14 11:49:53 ryao Exp $
 
 EAPI="4"
 
@@ -48,6 +48,8 @@ pkg_setup() {
 		IOSCHED_NOOP
 		MODULES
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
+		!UIDGID_STRICT_TYPE_CHECKS
+		!USER_NS
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
@@ -59,12 +61,40 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 9 || die "Linux 3.9 is the latest supported version."; }
+		{ kernel_is le 3 10 || die "Linux 3.10 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
+	if [ ${PV} != "9999" ]
+	then
+		# Correctness fix for getdents
+		epatch "${FILESDIR}/${P}-fix-getdents.patch"
+
+		# Prevent possible deadlock regression
+		epatch "${FILESDIR}/${P}-fix-txg_quiesce-deadlock.patch"
+
+		# Correctness fixes for xattr
+		epatch "${FILESDIR}/${P}-fix-xattr-behavior-1.patch"
+		epatch "${FILESDIR}/${P}-fix-xattr-behavior-2.patch"
+
+		# Make certain that zvols always appear
+		epatch "${FILESDIR}/${P}-fix-zvol-initialization-r1.patch"
+
+		# Linux 3.10 Compatibility
+		epatch "${FILESDIR}/${PN}-0.6.1-linux-3.10-compat.patch"
+
+		# ARC Read Panic Fix
+		epatch "${FILESDIR}/${PN}-0.6.1-fix-arc-read-panic.patch"
+
+		# Fix zfsctl_expire_snapshot deadlock
+		epatch "${FILESDIR}/${PN}-0.6.1-fix-zfsctl_expire_snapshot-deadlock.patch"
+
+		# Fix NULL pointer dereference in zfsctl_expire_snapshot
+		epatch "${FILESDIR}/${PN}-0.6.1-fix-zfs_sb_teardown-NULL-pointer-deref.patch"
+	fi
+
 	# Remove GPLv2-licensed ZPIOS unless we are debugging
 	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
 

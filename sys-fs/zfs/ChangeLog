@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.65 2013/05/29 01:12:58 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.66 2013/07/14 11:52:50 ryao Exp $
+
+*zfs-0.6.1-r2 (14 Jul 2013)
+
+  14 Jul 2013; Richard Yao <ryao@gentoo.org>
+  +files/zfs-0.6.1-avoid-zdb-abort.patch,
+  +files/zfs-0.6.1-fix-gcc-4.8-warning.patch,
+  +files/zfs-0.6.1-fix-zvol-initialization-r1.patch, +files/zfs-init.sh.in,
+  +files/zfs.service.in, +zfs-0.6.1-r2.ebuild, zfs-9999.ebuild:
+  Systemd support (bug #475872); Add python dependency to 9999 ebuild (bug
+  #473788); Asynchronous zvol initialization; GCC 4.8 Compatibility Fix;
+  Miscellaneous zdb fixes
 
   29 May 2013; Richard Yao <ryao@gentoo.org> zfs-0.6.1-r1.ebuild:
   Add selinux USE flag

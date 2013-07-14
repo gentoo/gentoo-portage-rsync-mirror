@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.32 2013/05/29 02:00:47 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.33 2013/07/14 11:49:53 ryao Exp $
+
+*zfs-kmod-0.6.1-r2 (14 Jul 2013)
+
+  14 Jul 2013; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.1-fix-arc-read-panic.patch,
+  +files/zfs-kmod-0.6.1-fix-zfs_sb_teardown-NULL-pointer-deref.patch,
+  +files/zfs-kmod-0.6.1-fix-zfsctl_expire_snapshot-deadlock.patch,
+  +files/zfs-kmod-0.6.1-fix-zvol-initialization-r1.patch,
+  +files/zfs-kmod-0.6.1-linux-3.10-compat.patch, +zfs-kmod-0.6.1-r2.ebuild,
+  -files/zfs-kmod-0.6.1-fix-zvol-initialization.patch,
+  -zfs-kmod-0.6.1-r1.ebuild, -zfs-kmod-0.6.1.ebuild:
+  Linux 3.10 support; asynchronous zvol initialization; miscellaneous fixes for
+  panics, deadlocks and NULL pointer dereferences
 
   29 May 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.1-r1.ebuild:
   Add blocker against CONFIG_UIDGID_STRICT_TYPE_CHECKS
