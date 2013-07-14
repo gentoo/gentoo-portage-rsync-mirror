@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r7.ebuild,v 1.1 2013/07/07 06:53:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r8.ebuild,v 1.1 2013/07/14 20:16:20 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
