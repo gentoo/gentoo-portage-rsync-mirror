@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libbsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.16 2013/06/10 04:06:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.17 2013/07/14 13:01:54 ssuominen Exp $
+
+*libbsd-0.6.0 (14 Jul 2013)
+
+  14 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +libbsd-0.6.0.ebuild:
+  Version bump.
 
 *libbsd-0.5.2 (10 Jun 2013)
 

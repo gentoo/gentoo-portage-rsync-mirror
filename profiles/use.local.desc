@@ -2309,8 +2309,10 @@ games-roguelike/stone-soup:ncurses - Enable for console based build (uses ncurse
 games-roguelike/stone-soup:tiles - Enable for graphical (tiled) build.
 games-roguelike/tomenet:server - Compile server support
 games-rpg/arx-fatalis-data:gog - Extract the data from the GOG.com installer.
+games-rpg/arx-libertatis:c++0x - Build ROOT using the C++11 standard.
 games-rpg/arx-libertatis:crash-reporter - Build a dev-qt/qtgui-based tool that allows to submit crash information to the upstream backtracker.
 games-rpg/arx-libertatis:debug - Enable asserts and debug logging.
+games-rpg/arx-libertatis:static - Link libraries statically, currently only media-libs/glew
 games-rpg/arx-libertatis:tools - Build tools that can extract the game's data and save files.
 games-rpg/arx-libertatis:unity-build - Build everything in one big source file, allowing for faster build times and better optimizations at the cost of higher memory usage.
 games-rpg/bastion:bundled-libs - Use the upstream provided bundled libraries.

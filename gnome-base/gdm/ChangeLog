@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.372 2013/05/20 11:52:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.373 2013/07/14 13:19:31 pacho Exp $
+
+*gdm-3.8.3.1 (14 Jul 2013)
+
+  14 Jul 2013; Pacho Ramos <pacho@gentoo.org> +gdm-3.8.3.1.ebuild:
+  Version bump, use more upstream stuff (like exherbo pam.d files, systemd
+  units), systemd is required as upstream only cares about it (#463784) and we
+  will need systemd for other Gnome 3.8 parts (also, logind cannot be run
+  without systemd from >= 205).
 
 *gdm-3.6.2-r1 (20 May 2013)
 
