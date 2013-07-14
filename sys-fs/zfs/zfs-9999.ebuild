@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.45 2013/07/14 11:52:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.46 2013/07/14 12:16:09 ryao Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -72,6 +72,15 @@ src_prepare() {
 	then
 		# Fix OpenRC dependencies
 		epatch "${FILESDIR}/${P}-gentoo-openrc-dependencies.patch"
+
+		# Make zvol initialization asynchronous
+		epatch "${FILESDIR}/${P}-fix-zvol-initialization-r1.patch"
+
+		# Use MAXPATHLEN to silence GCC 4.8 warning
+		epatch "${FILESDIR}/${P}-fix-gcc-4.8-warning.patch"
+
+		# Avoid zdb abort
+		epatch "${FILESDIR}/${P}-avoid-zdb-abort.patch"
 	fi
 
 	# Update paths

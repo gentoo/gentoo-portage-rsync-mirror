@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.8.2.ebuild,v 1.1 2013/07/13 19:02:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.8.2.ebuild,v 1.2 2013/07/14 12:13:24 hasufell Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ RDEPEND="
 	pcre? ( dev-libs/libpcre )
 	python? (
 		${PYTHON_DEPS}
-		dev-libs/boost[python,${PYTHON_USEDEP}]
+		dev-libs/boost:=[python,${PYTHON_USEDEP}]
 	)
 	tinyxml? ( dev-libs/tinyxml )
 	truetype? ( media-libs/freetype:2 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.2.1.ebuild,v 1.1 2013/05/30 07:20:28 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.2.1.ebuild,v 1.2 2013/07/14 12:23:35 ryao Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -97,8 +97,8 @@ DEPEND="dev-lang/perl
 RDEPEND="${DEPEND}
 	!prefix? ( sys-libs/glibc )
 	>=dev-python/pygtk-2.10
+	dev-python/dbus-python
 	dev-util/desktop-file-utils
-	sys-apps/dbus
 	!app-emulation/crossover-office-pro-bin
 	!app-emulation/crossover-office-bin
 	${MLIB_DEPS}
