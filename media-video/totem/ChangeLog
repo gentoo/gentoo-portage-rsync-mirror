@@ -1,6 +1,16 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.362 2013/06/30 21:36:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.363 2013/07/14 19:09:54 pacho Exp $
+
+*totem-3.8.2-r1 (14 Jul 2013)
+
+  14 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/totem-3.8.2-vimeo-compat.patch, +totem-3.8.2-r1.ebuild,
+  -totem-3.8.0.ebuild, -totem-3.8.2.ebuild:
+  Apply upstream patch to be compatible with vimeo videos, pass configure
+  options properly (#475878 by Mark R. Pariente), USE grilo needs grilo-plugins
+  (#475886 by Mark R. Pariente, confirmed by me and seen in Fedora .spec), drop
+  old and broken versions.
 
   30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org> totem-3.8.2.ebuild:
   Apply team policy for configure and update gtk+ dependency per libgd

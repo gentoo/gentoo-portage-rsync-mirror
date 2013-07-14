@@ -1,0 +1,151 @@
+From 6d233c27c2d2c3d415a1a1bdbedf0fe65f1f4434 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Sat, 18 May 2013 13:31:01 +0000
+Subject: plugins: Add hack to allow streaming of Vimeo videos
+
+See http://thread.gmane.org/gmane.comp.web.flash.quvi/265/focus=268
+---
+diff --git a/configure.ac b/configure.ac
+index 0810f01..be7e4e6 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -79,7 +79,7 @@ AC_SUBST(TOTEM_API_VERSION)
+ AC_DEFINE_UNQUOTED(TOTEM_API_VERSION, ["$TOTEM_API_VERSION"], [Define to the Totem plugin API version])
+ 
+ # The full list of plugins
+-allowed_plugins="apple-trailers autoload-subtitles brasero-disc-recorder chapters dbusservice im-status gromit lirc media-player-keys ontop opensubtitles properties pythonconsole recent rotation save-file samplepython sample-vala screensaver screenshot sidebar-test skipto zeitgeist-dp grilo"
++allowed_plugins="apple-trailers autoload-subtitles brasero-disc-recorder chapters dbusservice im-status gromit lirc media-player-keys ontop opensubtitles properties pythonconsole recent rotation save-file samplepython sample-vala screensaver screenshot sidebar-test skipto zeitgeist-dp grilo vimeo"
+ 
+ PLUGINDIR='${libdir}/totem/plugins'
+ AC_SUBST(PLUGINDIR)
+@@ -739,6 +739,7 @@ src/plugins/brasero-disc-recorder/Makefile
+ src/plugins/chapters/Makefile
+ src/plugins/zeitgeist-dp/Makefile
+ src/plugins/grilo/Makefile
++src/plugins/vimeo/Makefile
+ src/backend/Makefile
+ browser-plugin/Makefile
+ data/Makefile
+diff --git a/src/plugins/vimeo/Makefile.am b/src/plugins/vimeo/Makefile.am
+new file mode 100644
+index 0000000..17a3892
+--- /dev/null
++++ b/src/plugins/vimeo/Makefile.am
+@@ -0,0 +1,13 @@
++include $(top_srcdir)/src/plugins/Makefile.plugins
++
++plugindir = $(PLUGINDIR)/vimeo
++plugin_LTLIBRARIES = libvimeo.la
++
++plugin_in_files = vimeo.plugin.in
++
++libvimeo_la_SOURCES = totem-vimeo.c
++libvimeo_la_LDFLAGS = $(plugin_ldflags)
++libvimeo_la_LIBADD = $(plugin_libadd)
++libvimeo_la_CFLAGS = $(plugin_cflags)
++
++-include $(top_srcdir)/git.mk
+diff --git a/src/plugins/vimeo/totem-vimeo.c b/src/plugins/vimeo/totem-vimeo.c
+new file mode 100644
+index 0000000..b7074e9
+--- /dev/null
++++ b/src/plugins/vimeo/totem-vimeo.c
+@@ -0,0 +1,81 @@
++/*
++ *  Copyright (C) 2013 Bastien Nocera <hadess@hadess.net>
++ *
++ *  This program is free software; you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation; either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  This program is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with this program; if not, write to the Free Software
++ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
++ *
++ *
++ * The Totem project hereby grant permission for non-gpl compatible GStreamer
++ * plugins to be used and distributed together with GStreamer and Totem. This
++ * permission are above and beyond the permissions granted by the GPL license
++ * Totem is covered by.
++ *
++ * Monday 7th February 2005: Christian Schaller: Add exception clause.
++ * See license_change file for details.
++ *
++ */
++
++
++#include "config.h"
++
++#include <glib-object.h>
++
++#include "totem-plugin.h"
++#include "totem.h"
++
++#define TOTEM_TYPE_VIMEO_PLUGIN	(totem_vimeo_plugin_get_type ())
++#define TOTEM_VIMEO_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_VIMEO_PLUGIN, TotemVimeoPlugin))
++
++typedef struct {
++	guint signal_id;
++	TotemObject *totem;
++} TotemVimeoPluginPrivate;
++
++TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_VIMEO_PLUGIN, TotemVimeoPlugin, totem_vimeo_plugin)
++
++static char *
++get_user_agent_cb (TotemObject *totem,
++		   const char  *mrl)
++{
++	if (g_str_has_prefix (mrl, "http://vimeo.com") ||
++	    g_str_has_prefix (mrl, "http://player.vimeo.com"))
++		return g_strdup ("Mozilla/5.0");
++	return NULL;
++}
++
++static void
++impl_activate (PeasActivatable *plugin)
++{
++	TotemVimeoPlugin *pi = TOTEM_VIMEO_PLUGIN (plugin);
++
++	pi->priv->totem = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
++	pi->priv->signal_id = g_signal_connect (G_OBJECT (pi->priv->totem), "get-user-agent",
++						G_CALLBACK (get_user_agent_cb), NULL);
++}
++
++static void
++impl_deactivate (PeasActivatable *plugin)
++{
++	TotemVimeoPlugin *pi = TOTEM_VIMEO_PLUGIN (plugin);
++
++	if (pi->priv->signal_id) {
++		g_signal_handler_disconnect (pi->priv->totem, pi->priv->signal_id);
++		pi->priv->signal_id = 0;
++	}
++
++	if (pi->priv->totem) {
++		g_object_unref (pi->priv->totem);
++		pi->priv->totem = NULL;
++	}
++}
+diff --git a/src/plugins/vimeo/vimeo.plugin.in b/src/plugins/vimeo/vimeo.plugin.in
+new file mode 100644
+index 0000000..f18b6eb
+--- /dev/null
++++ b/src/plugins/vimeo/vimeo.plugin.in
+@@ -0,0 +1,9 @@
++[Plugin]
++Module=vimeo
++IAge=1
++Builtin=true
++_Name=Vimeo
++_Description=Sets the user agent for the Vimeo site
++Authors=Bastien Nocera
++Copyright=Copyright © 2013 Bastien Nocera
++Website=http://www.gnome.org/projects/totem/
+--
+cgit v0.9.2
