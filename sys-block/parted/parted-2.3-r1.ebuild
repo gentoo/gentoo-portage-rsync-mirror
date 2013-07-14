@@ -1,10 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.3-r1.ebuild,v 1.4 2013/04/09 09:59:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.3-r1.ebuild,v 1.5 2013/07/14 22:27:14 jer Exp $
 
 EAPI="3"
-
-WANT_AUTOMAKE="1.11"
 
 inherit autotools eutils
 

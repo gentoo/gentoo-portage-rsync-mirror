@@ -1,10 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.1-r1.ebuild,v 1.5 2013/04/09 09:59:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.1-r1.ebuild,v 1.6 2013/07/14 22:27:14 jer Exp $
 
 EAPI="4"
-
-WANT_AUTOMAKE="1.11"
 
 inherit autotools eutils
 
@@ -54,13 +52,14 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_with readline) \
-		$(use_enable nls) \
 		$(use_enable debug) \
-		$(use_enable selinux) \
 		$(use_enable device-mapper) \
+		$(use_enable nls) \
+		$(use_enable selinux) \
 		$(use_enable static-libs static) \
-		--disable-rpath
+		$(use_with readline) \
+		--disable-rpath \
+		--disable-silent-rules
 }
 
 src_test() {
