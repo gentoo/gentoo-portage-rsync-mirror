@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lp_solve
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lp_solve/ChangeLog,v 1.4 2013/02/27 19:00:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lp_solve/ChangeLog,v 1.5 2013/07/15 09:04:44 idella4 Exp $
+
+  15 Jul 2013; Ian Delaney <idella4@gentoo.org> lp_solve-5.5.2.0-r1.ebuild:
+  Minor refinements
 
 *lp_solve-5.5.2.0-r1 (27 Feb 2013)
 

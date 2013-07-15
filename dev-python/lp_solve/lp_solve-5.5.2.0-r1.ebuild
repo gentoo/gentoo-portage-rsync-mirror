@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lp_solve/lp_solve-5.5.2.0-r1.ebuild,v 1.1 2013/02/27 19:00:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lp_solve/lp_solve-5.5.2.0-r1.ebuild,v 1.2 2013/07/15 09:04:44 idella4 Exp $
 
 EAPI=5
 
@@ -27,14 +27,22 @@ S="${WORKDIR}/${PN}_5.5/extra/Python/"
 
 PATCHES=( "${FILESDIR}"/${P}-setup.patch )
 
-python_test() {
-	PYTHONPATH="$(ls -d ${BUILD_DIR}/lib.*)" "${EPYTHON}" lpdemo.py || die
+python_prepare_all() {
+	if use examples; then
+		mkdir examples || die
+		mv ex*py examples || die
+	fi
+	distutils-r1_python_prepare_all	
 }
 
-src_install() {
-	distutils-r1_src_install
+python_test() {
+	"${PYTHON}" lpdemo.py || die
+}
+
+python_install_all() {
 	dodoc changes
 	use doc && dohtml Python.htm
-	insinto /usr/share/doc/${PF}/examples
-	use examples && doins ex*py
+	use examples && local EXAMPLES=( examples/. )
+
+	distutils-r1_python_install_all
 }
