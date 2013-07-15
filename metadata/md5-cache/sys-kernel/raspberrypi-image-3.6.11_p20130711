@@ -9,4 +9,4 @@ RESTRICT=binchecks strip
 SLOT=3.6.11
 SRC_URI=https://github.com/raspberrypi/firmware/tarball/ba8059e890 -> raspberrypi-firmware-ba8059e890.tar.gz
 _eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129
-_md5_=dc49331938f4967f9ed3f78abdfb79c3
+_md5_=a74da76436c9e94c2ec0068561e4753b

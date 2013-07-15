@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/raspberrypi-image-3.6.11_p20130711.ebuild,v 1.1 2013/07/15 06:28:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/raspberrypi-image-3.6.11_p20130711.ebuild,v 1.2 2013/07/15 16:39:59 xmw Exp $
 
 EAPI=5
 
@@ -16,6 +16,8 @@ LICENSE="GPL-2 raspberrypi-videocore-bin"
 SLOT="3.6.11"
 KEYWORDS="~arm -*"
 IUSE="doc"
+
+S=${WORKDIR}/raspberrypi-firmware-${MY_COMMIT}
 
 RESTRICT="binchecks strip"
 

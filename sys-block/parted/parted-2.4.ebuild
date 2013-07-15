@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.5 2013/07/15 10:25:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.6 2013/07/15 16:48:18 jer Exp $
 
 EAPI="3"
 
@@ -31,6 +31,8 @@ DEPEND="
 "
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-no-gets.patch
+
 	# Remove tests known to FAIL instead of SKIP without OS/userland support
 	sed -i libparted/tests/Makefile.am \
 		-e 's|t3000-symlink.sh||g' || die "sed failed"
