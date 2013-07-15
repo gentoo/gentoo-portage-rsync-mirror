@@ -1,0 +1,21 @@
+--- GNS3-0.8.4-srca/setup.py	2013-07-13 10:50:39.088064724 +0200
++++ GNS3-0.8.4-src/setup.py	2013-07-13 10:53:25.912067321 +0200
+@@ -235,7 +235,7 @@
+         return ' '.join(s.split())
+ 
+     if platform.system() == 'Linux':
+-      wrapper_dir = '/usr/share/gns3/'
++      wrapper_dir = '/usr/libexec/gns3/'
+     else:
+       wrapper_dir = '/usr/local/libexec/gns3/'
+ 
+@@ -283,7 +283,6 @@
+                 'GNS3.Langs'],
+           package_data = { 'GNS3': ['Langs/*.qm', 'Dynagen/configspec'] },
+           data_files = [ (wrapper_dir, ['qemuwrapper/qemuwrapper.py', 'vboxwrapper/vboxcontroller_4_1.py', 'vboxwrapper/vboxwrapper.py', 'vboxwrapper/tcp_pipe_proxy.py']),
+-                        ('/usr/local/share/examples/gns3/', ['baseconfig.txt', 'baseconfig_sw.txt']),
+-                        ('/usr/local/share/doc/gns3/', ['README', 'COPYING', 'CHANGELOG']),
+-                        ('/usr/local/share/man/man1/', ['docs/man/gns3.1'])]
++                        ('/usr/share/examples/gns3/', ['baseconfig.txt', 'baseconfig_sw.txt']),
++                        ('/usr/share/man/man1/', ['docs/man/gns3.1'])]
+     )

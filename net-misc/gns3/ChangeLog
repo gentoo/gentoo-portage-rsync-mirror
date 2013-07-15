@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/gns3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.5 2013/07/13 13:13:18 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.6 2013/07/15 16:21:21 pinkbyte Exp $
+
+*gns3-0.8.4 (15 Jul 2013)
+
+  15 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> +gns3-0.8.4.ebuild,
+  +files/gns3-0.8.4_install_path.patch:
+  Version bump, wrt bug #476700. Thanks to Aaron Bauman <bmangentoo AT
+  gmail.com> for discovering this issue and for providing initial ebuild and
+  patch for bump
 
   13 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> gns3-0.7.4.ebuild,
   gns3-0.8.2.ebuild, gns3-0.8.3.1.ebuild:
