@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.13 2013/07/15 08:38:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0_p20130715.ebuild,v 1.1 2013/07/15 08:38:08 lu_zero Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://dev.gentoo.org/~lu_zero/distfiles/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b +cdio dvb +dvd +enca encode +iconv jack joystick
 jpeg ladspa lcms +libass libcaca libguess lirc mng +mp3 -openal +opengl oss
 portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vcd
