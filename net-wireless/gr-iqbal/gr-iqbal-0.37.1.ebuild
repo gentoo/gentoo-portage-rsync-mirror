@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-0.37.1.ebuild,v 1.1 2013/07/07 21:58:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-iqbal/gr-iqbal-0.37.1.ebuild,v 1.2 2013/07/15 04:41:30 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -27,6 +27,8 @@ IUSE=""
 RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=
 	net-libs/libosmo-dsp:="
 DEPEND="${RDEPEND}"
+
+S="${WORKDIR}"/"${PN}"-0.37.0
 
 pkg_setup() {
 	python_set_active_version 2
