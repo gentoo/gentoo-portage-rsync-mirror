@@ -6,6 +6,13 @@ be a no-op thesedays.
 
 * We have just /etc/modprobe.d; Nothing to do! 
 
+however even with this patch, kmod won't work because it doesn't generate the
+required modules.pcimap (and propably modules.usbmap) files in /lib/modules
+anymore, therefore it's disabled in gentoo since 1.0.27.1
+
+editing the dummy /etc/modprobe.d/alsa.conf directly is preferred, forget this
+ever existed (was useful helper for ancient PCMCIA and ISA hardware)
+
 --- alsaconf/alsaconf.in
 +++ alsaconf/alsaconf.in
 @@ -924,7 +924,7 @@

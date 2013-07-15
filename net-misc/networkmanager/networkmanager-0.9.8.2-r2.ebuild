@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r1.ebuild,v 1.2 2013/07/14 19:31:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r2.ebuild,v 1.1 2013/07/15 18:31:46 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev
+inherit gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
@@ -49,7 +49,9 @@ COMMON_DEPEND="
 	modemmanager? ( >=net-misc/modemmanager-0.7.991 )
 	nss? ( >=dev-libs/nss-3.11:= )
 	dhclient? ( =net-misc/dhcp-4*[client] )
-	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
+	dhcpcd? (
+		>=net-misc/dhcpcd-4.0.0_rc3
+		<net-misc/dhcpcd-6 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
 	ppp? ( >=net-dialup/ppp-2.4.5[ipv6] )
 	resolvconf? ( net-dns/openresolv )
@@ -109,10 +111,6 @@ src_prepare() {
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
 	epatch "${FILESDIR}/${PN}-0.9.7.995-pre-sleep.patch"
 
-	# Runtime detect systemd || consolekit
-	# https://bugzilla.gnome.org/show_bug.cgi?id=686997
-	epatch "${FILESDIR}/0001-core-runtime-detect-logind-and-ConsoleKit-3.patch"
-
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
 		-i */tests/*.py || die
@@ -121,15 +119,10 @@ src_prepare() {
 	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
 		cli/completion/Makefile.in || die "sed completiondir failed"
 
-	epatch_user
-	eautoreconf
-
-	use vala && vala_src_prepare
-
 	# Force use of /run, avoid eautoreconf
 	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
 
-	default
+	use vala && vala_src_prepare
 }
 
 src_configure() {
@@ -161,6 +154,7 @@ src_configure() {
 }
 
 src_test() {
+	# bug #????
 	cp libnm-util/tests/certs/test_ca_cert.pem src/settings/plugins/ifnet/tests/ || die
 	Xemake check
 }

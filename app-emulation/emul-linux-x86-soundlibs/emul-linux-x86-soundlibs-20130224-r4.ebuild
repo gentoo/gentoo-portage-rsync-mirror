@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r4.ebuild,v 1.1 2013/06/27 18:46:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r4.ebuild,v 1.2 2013/07/15 18:57:42 ssuominen Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -19,7 +19,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-libs/libmodplug-0.8.8.4-r1[abi_x86_32(-)]
 		>=media-sound/gsm-1.0.13-r1[abi_x86_32(-)]
 		>=media-libs/webrtc-audio-processing-0.1-r1[abi_x86_32(-)]
-		>=media-libs/alsa-lib-1.0.27.1[abi_x86_32(-)]
+		>=media-libs/alsa-lib-1.0.27.1-r1[abi_x86_32(-)]
 		>=media-libs/flac-1.2.1-r5[abi_x86_32(-)]
 		>=media-libs/audiofile-0.3.6-r1[abi_x86_32(-)]
 		>=sci-libs/fftw-3.3.3-r1[abi_x86_32(-)]

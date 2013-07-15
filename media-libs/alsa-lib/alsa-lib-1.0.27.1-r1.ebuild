@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27-r3.ebuild,v 1.3 2013/06/26 20:09:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1-r1.ebuild,v 1.1 2013/07/15 18:45:05 ssuominen Exp $
 
 EAPI=5
 
+# no support for python3_2 or above yet wrt #471326
 PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils multilib multilib-minimal python-single-r1
@@ -28,20 +29,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# dlclose, pcm, kernel, inline, inline-2 are all from upstream
-	epatch \
-		"${FILESDIR}"/1.0.25-extraneous-cflags.diff \
-		"${FILESDIR}"/${P}-{dlclose,pcm,kernel}.patch \
-		"${FILESDIR}"/${P}-inline{,-2}.patch
-
-	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.in || die #466980
-
+	find . -name Makefile.am -exec sed -i -e '/CFLAGS/s:-g -O2::' {} + || die
 	epatch_user
-
 	eautoreconf
-	# if eautoreconf'd with recent autoconf, then epunt_cxx is
-	# unncessary wrt #460974
-#	epunt_cxx
 }
 
 multilib_src_configure() {
@@ -56,6 +46,7 @@ multilib_src_configure() {
 
 	ECONF_SOURCE=${S} \
 	econf \
+		--disable-maintainer-mode \
 		--enable-shared \
 		--disable-resmgr \
 		--enable-rawmidi \
@@ -86,5 +77,5 @@ multilib_src_install() {
 multilib_src_install_all() {
 	prune_libtool_files --all
 	find "${ED}"/usr/$(get_libdir)/alsa-lib -name '*.a' -exec rm -f {} +
-	dodoc ChangeLog TODO
+	dodoc ChangeLog doc/asoundrc.txt NOTES TODO
 }

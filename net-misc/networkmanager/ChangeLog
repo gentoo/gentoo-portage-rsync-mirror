@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.175 2013/07/14 19:31:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.176 2013/07/15 18:31:46 pacho Exp $
+
+*networkmanager-0.9.8.2-r2 (15 Jul 2013)
+
+  15 Jul 2013; Pacho Ramos <pacho@gentoo.org> +networkmanager-0.9.8.2-r2.ebuild,
+  -files/0001-core-runtime-detect-logind-and-ConsoleKit-3.patch,
+  -networkmanager-0.9.8.2-r1.ebuild:
+  Revision bump dropping runtime detect of logind as we won't be able to support
+  logind without systemd being running, and this keeps us more close to upstream
+  (preventing us from hitting any hypothetical problems that could arise from it
+  until accepted by upstream). Also force dhcpcd < 6 until upstream confirms
+  updating configure check is enough to properly work with newer versions.
 
   14 Jul 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.2-r1.ebuild:
   Add missing eautoreconf call
