@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.9.ebuild,v 1.1 2013/07/12 15:56:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.9.ebuild,v 1.2 2013/07/15 17:59:46 wired Exp $
 
 EAPI=5
 
@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.8.9-unknown-opts.patch"
+	epatch "${FILESDIR}/${PN}-4.8.9-ncurses-include-fix.patch"
 
 	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
 }

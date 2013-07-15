@@ -1,6 +1,9 @@
 # ChangeLog for virtual/lapack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/lapack/ChangeLog,v 1.8 2013/01/26 00:12:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/lapack/ChangeLog,v 1.9 2013/07/15 17:36:47 ottxor Exp $
+
+  15 Jul 2013; Christoph Junghans <ottxor@gentoo.org> lapack-3.1.ebuild:
+  stable on arm as sci-libs/lapack-reference is stable (bug #476224)
 
   26 Jan 2013; Christoph Junghans <ottxor@gentoo.org> lapack-3.1.ebuild:
   added ~arm tested by me
