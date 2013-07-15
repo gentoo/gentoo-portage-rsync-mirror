@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.4 2013/07/14 22:27:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.5 2013/07/15 10:25:18 jer Exp $
 
 EAPI="3"
 
@@ -44,14 +44,16 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_with readline) \
-		$(use_enable nls) \
 		$(use_enable debug) \
-		$(use_enable selinux) \
 		$(use_enable device-mapper) \
+		$(use_enable nls) \
+		$(use_enable selinux) \
 		$(use_enable static-libs static) \
+		$(use_with readline) \
+		--disable-Werror \
 		--disable-rpath \
-		--disable-Werror || die "Configure failed"
+		--disable-silent-rules \
+		|| die
 }
 
 src_test() {
