@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.25.ebuild,v 1.8 2013/03/13 10:57:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.25.ebuild,v 1.9 2013/07/15 14:16:15 ssuominen Exp $
 
 EAPI="4"
 
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+RDEPEND="!sys-kernel/linux-firmware"
+DEPEND="${RDEPEND}"
 
 RESTRICT="binchecks strip"
 

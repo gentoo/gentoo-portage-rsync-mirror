@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14923 2013/07/15 13:53:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14926 2013/07/15 14:23:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,11 +33,15 @@
 #--- END OF EXAMPLES ---
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Jul 2013)
-# We are in process of merging alsa-headers as part of linux-headers,
-# see http://bugs.gentoo.org/show_bug.cgi?id=468712#c7
-# Notice these are for 1.0.25
-# Unused in portage tree, but if you need them during the migration
-# simply use package.unmask as normal temporarily
+# The separate media-sound/alsa-headers package has been obsoleted
+# by letting sys-kernel/linux-headers install the required sound/
+# headers.
+#
+# The instructions to migrate follows:
+# emerge -C alsa-headers
+# emerge -1 linux-headers
+#
+# The separate package will be removed in 30 days
 media-sound/alsa-headers
 
 # Sergei Trofimovich <slyfox@gentoo.org> (12 Jul 2013)
@@ -402,13 +406,6 @@ x11-misc/pcmanfm-qt
 # Michael Weber <xmw@gentoo.org> (18 Apr 2013)
 # Masked due test failures
 =app-arch/advancecomp-1.17
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Apr 2013)
-# Broken. Should be bumped to 0.13.0 but needs a dedicated
-# maintainer to look after it. See bug #465244.
-# Removal in 30 days. Use dracut or genkernel instead.
-<sys-kernel/mkinitcpio-0.13.0
-sys-kernel/mkinitcpio-nfs-utils
 
 # Christoph Mende <angelos@gentoo.org> (09 Apr 2013)
 # Fails to build (bug #449860), abandoned by upstream.

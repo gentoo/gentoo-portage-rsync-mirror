@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.879 2013/07/14 12:50:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.880 2013/07/15 14:04:31 ssuominen Exp $
+
+  15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> kernel-2.eclass:
+  Deprecate media-sound/alsa-headers by letting sys-kernel/linux-headers
+  install the required sound/ headers wrt #468712#c6
 
   14 Jul 2013; Julian Ospald <hasufell@gentoo.org> cmake-utils.eclass:
   add CMAKE_WARN_UNUSED_CLI
