@@ -1,0 +1,9 @@
+# ChangeLog for sys-fs/bedup
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.1 2013/07/15 19:54:09 mgorny Exp $
+
+*bedup-9999 (15 Jul 2013)
+
+  15 Jul 2013; Michał Górny <mgorny@gentoo.org> +bedup-9999.ebuild,
+  +metadata.xml:
+  Introduce bedup, a btrfs deduplication tool.
