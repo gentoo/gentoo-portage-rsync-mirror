@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.9.0.ebuild,v 1.2 2013/04/09 15:41:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.9.0.ebuild,v 1.3 2013/07/15 01:08:54 prometheanfire Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://openvswitch.org/releases/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug modules monitor +pyside +ssl"
 
 RDEPEND=">=sys-apps/openrc-0.10.5
