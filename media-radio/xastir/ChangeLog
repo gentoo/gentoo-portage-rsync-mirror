@@ -1,6 +1,15 @@
 # ChangeLog for media-radio/xastir
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.35 2013/05/10 16:37:16 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.37 2013/07/15 06:12:52 tomjbe Exp $
+
+  15 Jul 2013; Thomas Beierlein <tomjbe@gentoo.org>
+  -files/xastir-1.9.8-fortify.diff, -files/xastir-2.0.0-Destdir.diff,
+  -files/xastir-2.0.0-no-builtin-shapelib.diff,
+  -files/xastir-2.0.0-proj48.diff, -files/xastir-2.0.0-scripts.diff:
+  Drop forgotten patch files
+
+  15 Jul 2013; Thomas Beierlein <tomjbe@gentoo.org> -xastir-2.0.0-r2.ebuild:
+  Drop old
 
   10 May 2013; Thomas Beierlein <tomjbe@gentoo.org>
   -files/xastir-1.9.8-Destdir.diff, -files/xastir-1.9.8-scripts.diff:

@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/raspberrypi-image
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/ChangeLog,v 1.1 2013/07/15 06:28:00 xmw Exp $
+
+*raspberrypi-image-9999 (15 Jul 2013)
+*raspberrypi-image-3.6.11_p20130711 (15 Jul 2013)
+
+  15 Jul 2013; Michael Weber <xmw@gentoo.org> +metadata.xml,
+  +raspberrypi-image-3.6.11_p20130711.ebuild, +raspberrypi-image-9999.ebuild:
+  Initial import, replaces ::xmw, bug 421681.
