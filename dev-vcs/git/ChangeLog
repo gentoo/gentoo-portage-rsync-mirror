@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.203 2013/07/11 07:25:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.204 2013/07/15 05:58:50 abcd Exp $
+
+  15 Jul 2013; Jonathan Callen <abcd@gentoo.org> git-1.8.3.2.ebuild:
+  Non-maintainer update: make ${PYTHON_REQUIRED_USE} conditional on USE=python;
+  fix pygtk and pygtksourceview deps to require that they be built with the same
+  version of python as this package; replace built_with_use calls with
+  has_version; remove python 2.5 support as none of the dependencies support it.
 
   11 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> git-1.8.3.2.ebuild:
   Non-maintainer commit: Fixed test failure when built with USE="-perl" (bug

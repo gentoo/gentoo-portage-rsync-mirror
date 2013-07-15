@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.3.2.ebuild,v 1.2 2013/07/11 07:25:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.3.2.ebuild,v 1.3 2013/07/15 05:58:50 abcd Exp $
 
 EAPI=5
 
 GENTOO_DEPEND_ON_PERL=no
 
 # bug #329479: git-remote-testgit is not multiple-version aware
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 [[ ${PV} == *9999 ]] && SCM="git-2"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
 
@@ -67,8 +67,8 @@ RDEPEND="${CDEPEND}
 			)
 	python? ( gtk?
 	(
-		>=dev-python/pygtk-2.8
-		dev-python/pygtksourceview:2
+		>=dev-python/pygtk-2.8[${PYTHON_USEDEP}]
+		dev-python/pygtksourceview:2[${PYTHON_USEDEP}]
 	)
 		${PYTHON_DEPS} )"
 
@@ -103,11 +103,11 @@ REQUIRED_USE="
 	subversion? ( perl )
 	webdav? ( curl )
 	gtk? ( python )
-	${PYTHON_REQUIRED_USE}
+	python? ( ${PYTHON_REQUIRED_USE} )
 "
 
 pkg_setup() {
-	if use subversion && has_version dev-vcs/subversion && built_with_use --missing false dev-vcs/subversion dso ; then
+	if use subversion && has_version "dev-vcs/subversion[dso]"; then
 		ewarn "Per Gentoo bugs #223747, #238586, when subversion is built"
 		ewarn "with USE=dso, there may be weird crashes in git-svn. You"
 		ewarn "have been warned."
@@ -534,7 +534,7 @@ src_test() {
 			has_version dev-vcs/cvs && \
 			let cvs=$cvs+1
 		[[ $cvs -gt 1 ]] && \
-			built_with_use dev-vcs/cvs server && \
+			has_version "dev-vcs/cvs[server]" && \
 			let cvs=$cvs+1
 		if [[ $cvs -lt 3 ]]; then
 			einfo "Disabling CVS tests (needs dev-vcs/cvs[USE=server])"
