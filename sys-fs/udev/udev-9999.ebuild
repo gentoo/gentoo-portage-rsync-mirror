@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.234 2013/07/09 10:44:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.235 2013/07/15 11:03:14 ssuominen Exp $
 
 EAPI=5
 
@@ -44,23 +44,19 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
 	!sys-apps/systemd"
-
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
+	dev-util/gperf
 	>=sys-devel/make-3.82-r4
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
-	doc? ( >=dev-util/gtk-doc-1.18 )
-	keymap? ( dev-util/gperf )"
-
+	doc? ( >=dev-util/gtk-doc-1.18 )"
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
-		dev-util/gperf
 		>=dev-util/intltool-0.50"
 fi
-
 RDEPEND="${COMMON_DEPEND}
 	openrc? ( !<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
@@ -70,7 +66,6 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25
 	!<sec-policy/selinux-base-2.20120725-r10"
-
 PDEPEND=">=virtual/udev-197-r1
 	hwdb? ( >=sys-apps/hwids-20130326.1[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-25 )"
@@ -124,12 +119,6 @@ src_prepare() {
 		# secure_getenv() disable for non-glibc systems wrt bug #443030
 		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 19 ]]; then
 			eerror "The line count for secure_getenv() failed, see bug #443030"
-			die
-		fi
-
-		# gperf disable if keymaps are not requested wrt bug #452760
-		if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
-			eerror "The line count for gperf references failed, see bug 452760"
 			die
 		fi
 	fi
@@ -202,7 +191,6 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC #463846
-	use keymap || export ac_cv_prog_ac_ct_GPERF=true #452760
 
 	local econf_args
 	econf_args=(
