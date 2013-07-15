@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.6 2013/07/07 13:05:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.7 2013/07/15 15:03:54 tomwij Exp $
 
 EAPI="5"
 
@@ -90,7 +90,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/handbrake-9999-remove-dvdnav-dup.patch
 
 	# Remove faac dependency until its compilation errors can be resolved.
-	epatch "${FILESDIR}"/handbrake-9999-remove-faac-dependency.patch
+	epatch "${FILESDIR}"/${P}-remove-faac-dependency.patch
 	sed -i 's/-lfaac//' gtk/configure.ac || die
 
 	# Make use of an older version of libmkv.

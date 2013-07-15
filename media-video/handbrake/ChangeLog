@@ -1,6 +1,17 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.11 2013/07/07 13:05:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.12 2013/07/15 15:03:54 tomwij Exp $
+
+  15 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/handbrake-0.9.9-remove-faac-dependency.patch,
+  -handbrake-0.9.9_pre5441-r1.ebuild,
+  files/handbrake-9999-remove-faac-dependency.patch, handbrake-0.9.9.ebuild,
+  handbrake-9999.ebuild:
+  Fix faac dependency removal patch for handbrake-9999, currently it still fails
+  to build due to a yasm based cpuid detection they introduced that doesn't
+  appear to work; also heavily documented that ebuild with TODOs that would be
+  nice to have for the upcoming release. Fixed up src_configure a bit. Removed
+  old snapshot version 0.9.9_pre5441-r1.
 
   07 Jul 2013; Tom Wijsman <TomWij@gentoo.org> handbrake-0.9.9.ebuild,
   handbrake-9999.ebuild:

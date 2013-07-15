@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.8 2013/07/07 13:05:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.9 2013/07/15 15:03:54 tomwij Exp $
 
 EAPI="5"
 
@@ -8,6 +8,9 @@ PYTHON_COMPAT=( python2_{5,6,7} )
 
 inherit autotools eutils gnome2-utils python-any-r1
 
+# TODO: Are KEYWORDS like these stabilization script friendly?
+#       We can opt to move the KEYWORDS from the else before the if;
+#       that way, it is listed first and the 9999 version will set it to "".
 if [[ ${PV} = *9999* ]]; then
 	ESVN_REPO_URI="svn://svn.handbrake.fr/HandBrake/trunk"
 	inherit subversion
@@ -28,8 +31,13 @@ IUSE="fdk ffmpeg gstreamer gtk"
 # Use either ffmpeg or gst-plugins/mpeg2dec for decoding MPEG-2.
 REQUIRED_USE="!ffmpeg? ( gstreamer )"
 
+# TODO: As we improve src_configure with more flags we can make more optional here.
+#       Besides that, we should list slots for all the dependencies as well as
+#       support sub slot rebuilds where they are still missing; lets avoid running
+#       into more problems while we can.
 RDEPEND="
 	media-libs/a52dec
+	media-libs/faac
 	media-libs/libass
 	media-libs/libbluray
 	media-libs/libdvdnav
@@ -75,6 +83,8 @@ pkg_setup() {
 src_prepare() {
 	# Get rid of leftover bundled library build definitions,
 	# the version 0.9.9 supports the use of system libraries.
+	# TODO: Is this still needed, does this sed still do something?
+	#       If it does; we should convert this into a patch, such that we know it fails.
 	sed -i 's:.*\(/contrib\|contrib/\).*::g' \
 		"${S}"/make/include/main.defs \
 		|| die "Contrib removal failed."
@@ -90,6 +100,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/handbrake-9999-remove-dvdnav-dup.patch
 
 	# Remove faac dependency until its compilation errors can be resolved.
+	# TODO: If --disable-faac works then this patch can be removed;
+	#       we also need to figure out if this is still needed, maybe things are patched.
 	epatch "${FILESDIR}"/handbrake-9999-remove-faac-dependency.patch
 
 	# Make use of an older version of libmkv.
@@ -98,7 +110,9 @@ src_prepare() {
 	# Make use of an unpatched version of a52 that does not make a private field public.
 	epatch "${FILESDIR}"/handbrake-9999-use-unpatched-a52.patch
 
-	# Fixup configure.ac with newer automake
+	# Fixup configure.ac with newer automake.
+	# TODO: Would like to see this shorten towards the future;
+	#       see which are still needed, put those in a patch instead of 6 lines here.
 	cd "${S}/gtk"
 	sed -i \
 		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
@@ -106,41 +120,41 @@ src_prepare() {
 		-e 's:am_cv_prog_cc_stdc:ac_cv_prog_cc_stdc:g' \
 		configure.ac || die "Fixing up configure.ac failed"
 
-	# Don't run autogen.sh
+	# Don't run autogen.sh.
+	# TODO: Document why we're not running this.
 	sed -i '/autogen.sh/d' module.rules || die "Removing autogen.sh call failed"
+
 	eautoreconf
 }
 
 src_configure() {
-	local myconf=""
-
-	if ! use gtk ; then
-		myconf+=" --disable-gtk"
-	fi
-
-	if ! use gstreamer ; then
-		myconf+=" --disable-gst"
-	fi
-
-	if use ffmpeg ; then
-		myconf+=" --enable-ff-mpeg2"
-	fi
-
-	if use fdk ; then
-		myconf+=" --enable-fdk-aac"
-	fi
-
+	# TODO: Try to make parameters avformat, libav-aac, libmkv, mp4v2 optional
+	#       as for making faac optional, see the above TODO first.
+	#
+	#       Just to be sure, check the ./configure --help before each release;
+	#       they are still in the progress of unbundling / making things optional.
+	#
+	#       Check if the Python-ish implementation supports econf style.
 	./configure \
 		--force \
 		--prefix="${EPREFIX}/usr" \
 		--disable-gtk-update-checks \
+		--disable-faac \
+		--enable-avformat \
+		--disable-libav-aac \
+		--enable-libmkv \
+		--enable-mp4v2 \
+		$(use_enable fdk fdk-aac) \
+		$(use_enable ffmpeg ff-mpeg2) \
+		$(use_enable gtk) \
+		$(use_enable gstreamer gst) \
 		${myconf} || die "Configure failed."
 }
 
 src_compile() {
 	emake -C build
 
-	# Documentation building is currently broken.
+	# TODO: Documentation building is currently broken, try to fix it.
 	#
 	# if use doc ; then
 	# 	emake -C build doc

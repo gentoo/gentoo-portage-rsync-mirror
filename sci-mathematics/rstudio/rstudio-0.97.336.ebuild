@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.97.336.ebuild,v 1.1 2013/04/18 15:55:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.97.336.ebuild,v 1.2 2013/07/15 15:21:58 hasufell Exp $
 
 EAPI=5
 
@@ -67,7 +67,8 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-prefs.patch \
 		"${FILESDIR}"/${P}-paths.patch \
-		"${FILESDIR}"/${P}-linker_flags.patch
+		"${FILESDIR}"/${P}-linker_flags.patch \
+		"${FILESDIR}"/${P}-boost-1.53.patch
 
 	# Adding -DDISTRO_SHARE=... to append-flags breaks cmake so using
 	# this sed hack for now. ~RMH
