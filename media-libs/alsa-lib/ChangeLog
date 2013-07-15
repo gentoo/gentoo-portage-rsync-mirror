@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.361 2013/06/26 20:09:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.362 2013/07/15 13:45:47 ssuominen Exp $
+
+  15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  alsa-lib-1.0.26-r1.ebuild:
+  Backport media-sound/alsa-headers dependency dropping wrt #468712
 
   26 Jun 2013; Alexis Ballier <aballier@gentoo.org> alsa-lib-1.0.27-r3.ebuild,
   alsa-lib-1.0.27.1.ebuild:

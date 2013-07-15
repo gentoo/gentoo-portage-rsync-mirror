@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14922 2013/07/14 15:40:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14923 2013/07/15 13:53:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (15 Jul 2013)
+# We are in process of merging alsa-headers as part of linux-headers,
+# see http://bugs.gentoo.org/show_bug.cgi?id=468712#c7
+# Notice these are for 1.0.25
+# Unused in portage tree, but if you need them during the migration
+# simply use package.unmask as normal temporarily
+media-sound/alsa-headers
 
 # Sergei Trofimovich <slyfox@gentoo.org> (12 Jul 2013)
 # live ebuild
