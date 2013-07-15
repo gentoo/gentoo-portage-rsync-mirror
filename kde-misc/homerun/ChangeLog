@@ -1,10 +1,14 @@
 # ChangeLog for kde-misc/homerun
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/ChangeLog,v 1.1 2013/05/28 15:57:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/ChangeLog,v 1.2 2013/07/15 21:33:02 johu Exp $
+
+*homerun-1.1.0 (15 Jul 2013)
+
+  15 Jul 2013; Johannes Huber <johu@gentoo.org> +homerun-1.1.0.ebuild:
+  Version bump.
 
 *homerun-1.0.0 (28 May 2013)
 
   28 May 2013; Johannes Huber <johu@gentoo.org> +homerun-1.0.0.ebuild,
   +metadata.xml:
   New package. Import from kde overlay.
-
