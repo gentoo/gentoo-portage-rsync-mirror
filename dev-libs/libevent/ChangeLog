@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.262 2013/06/05 00:16:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.263 2013/07/15 10:56:41 jer Exp $
+
+  15 Jul 2013; Jeroen Roovers <jer@gentoo.org> -libevent-2.1.2.ebuild:
+  Old.
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.
