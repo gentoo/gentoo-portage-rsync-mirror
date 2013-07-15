@@ -1,0 +1,80 @@
+--- Makefile.orig	2013-07-15 19:11:55.048999907 +0400
++++ Makefile	2013-07-15 19:12:14.256001068 +0400
+@@ -5,7 +5,7 @@
+ #   - Use "amd64" for a build on x86_64 (64-bits)
+ #   - Use "ppc32" for a build on powerpc (32-bits)
+ #   - Use "nojit" for unsupported architectures.
+-export DYNAMIPS_ARCH?=x86
++export DYNAMIPS_ARCH?=nojit
+ 
+ # Do you want to use lib (for 32 bit compiling) or lib64
+ export DYNAMIPS_LIB?=lib
+
+--- stable/Makefile.orig	2013-07-04 06:03:34.000000000 +0400
++++ stable/Makefile	2013-07-15 19:15:04.000000000 +0400
+@@ -3,13 +3,9 @@
+ 
+ # Replace x86 by amd64 for a build on x86_64.
+ # Use "nojit" for architectures that are not x86 or x86_64.
+-DYNAMIPS_ARCH?=x86
++DYNAMIPS_ARCH?=nojit
+ #DYNAMIPS_ARCH?=amd64
+ 
+-ifeq ($(DYNAMIPS_ARCH),ppc32)
+-DYNAMIPS_ARCH=x86
+-endif
+-
+ # Do you want to use lib (for 32 bit compiling) or lib64
+ DYNAMIPS_LIB?=lib
+ 
+@@ -51,7 +47,7 @@
+ PPC32_ARCH_INC_FILE=\"ppc32_$(DYNAMIPS_ARCH)_trans.h\"
+ OSNAME=unknown
+ 
+-CFLAGS+= $(INCLUDE) -Wall -O2 -fomit-frame-pointer \
++CFLAGS+= $(INCLUDE) -Wall \
+ 	-DJIT_ARCH=\"$(DYNAMIPS_ARCH)\" -DJIT_CPU=CPU_$(DYNAMIPS_ARCH) \
+ 	-DMIPS64_ARCH_INC_FILE=$(MIPS64_ARCH_INC_FILE) \
+ 	-DPPC32_ARCH_INC_FILE=$(PPC32_ARCH_INC_FILE) \
+@@ -247,19 +243,19 @@
+ $(PROG): mips64_microcode_dump.inc ppc32_microcode_dump.inc \
+ 	$(LEX_C) $(C_OBJS) $(A_OBJS)
+ 	@echo "Linking $@"
+-	@$(CC) $(CFLAGS) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS)
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS)
+ 
+ udp_send$(BIN_EXT): udp_send.c net.c crc.c
+ 	@echo "Linking $@"
+-	@$(CC) -Wall $(CFLAGS) -o $@ udp_send.c net.c crc.c $(LIBS)
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) -o $@ udp_send.c net.c crc.c $(LIBS)
+ 
+ udp_recv$(BIN_EXT): udp_recv.c net.c crc.c
+ 	@echo "Linking $@"
+-	@$(CC) -Wall $(CFLAGS) -o $@ udp_recv.c net.c crc.c $(LIBS)
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) -o $@ udp_recv.c net.c crc.c $(LIBS)
+ 
+ rom2c$(BIN_EXT): rom2c.c
+ 	@echo "Linking $@"
+-	@$(CC) -Wall $(CFLAGS) -o $@ $< $(LIBS)
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) -o $@ $< $(LIBS)
+ 
+ mips64_microcode_dump.inc: rom2c$(BIN_EXT) mips64_microcode
+ 	@./rom2c mips64_microcode mips64_microcode_dump.inc 0xbfc00000
+@@ -272,7 +268,7 @@
+ 
+ asmdefs$(BIN_EXT): asmdefs.c mips64.h
+ 	@echo "Linking $@"
+-	@$(CC) -Wall $(CFLAGS) -o $@ asmdefs.c
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) -o $@ asmdefs.c
+ 
+ asmdefs.h: asmdefs$(BIN_EXT)
+ 	@echo "Building assembly definitions header file"
+@@ -280,7 +276,7 @@
+ 
+ nvram_export$(BIN_EXT): nvram_export.c
+ 	@echo "Linking $@"
+-	@$(CC) -Wall $(CFLAGS) $(INCLUDE) -o $@ $<
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) $(INCLUDE) -o $@ $<
+ 
+ install: $(PROG) nvram_export
+ 	@echo "Installing"
