@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.71 2013/07/04 16:41:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.72 2013/07/15 07:52:50 ultrabug Exp $
+
+  15 Jul 2013; Ultrabug <ultrabug@gentoo.org> mongodb-2.2.4.ebuild,
+  mongodb-2.4.5.ebuild:
+  add missing dep thx to thomas coquelin, fix #474846
 
   04 Jul 2013; Ultrabug <ultrabug@gentoo.org> -mongodb-2.4.4.ebuild:
   drop CVE affected ebuilds wrt #475750

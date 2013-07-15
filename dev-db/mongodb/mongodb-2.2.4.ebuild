@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.4.ebuild,v 1.1 2013/04/05 15:30:29 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.4.ebuild,v 1.2 2013/07/15 07:52:50 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mms-agent static-libs v8"
 
-PDEPEND="mms-agent? ( dev-python/pymongo )"
+PDEPEND="mms-agent? ( dev-python/pymongo app-arch/unzip )"
 RDEPEND="
 	v8? ( dev-lang/v8 )
 	>=dev-libs/boost-1.50[threads(+)]
