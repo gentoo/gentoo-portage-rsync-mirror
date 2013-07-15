@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/raspberrypi-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/ChangeLog,v 1.1 2013/07/15 06:58:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/ChangeLog,v 1.2 2013/07/15 11:34:34 xmw Exp $
+
+  15 Jul 2013; Michael Weber <xmw@gentoo.org>
+  +files/raspberrypi-firmware-0_p20130711-cmdline.txt,
+  +files/raspberrypi-firmware-0_p20130711-config.txt,
+  +files/raspberrypi-firmware-0_p20130711-envd,
+  raspberrypi-firmware-0_p20130711.ebuild, raspberrypi-firmware-9999.ebuild:
+  Protect existing cmdline.txt & config.txt, add files dir (thanks chithead and
+  Pim Vullers, bug 476896).
 
 *raspberrypi-firmware-0_p20130711 (15 Jul 2013)
 *raspberrypi-firmware-9999 (15 Jul 2013)
