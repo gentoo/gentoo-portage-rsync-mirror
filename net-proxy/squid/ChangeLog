@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.421 2013/07/14 17:36:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.422 2013/07/15 20:11:56 eras Exp $
+
+  15 Jul 2013; Eray Aslan <eras@gentoo.org> -files/squid-3.3.3-ncsa_auth.patch,
+  -squid-3.2.10.ebuild, -squid-3.2.11.ebuild, -squid-3.2.9-r1.ebuild,
+  -squid-3.3.3-r1.ebuild, -squid-3.3.3.ebuild, -squid-3.3.4.ebuild,
+  -squid-3.3.5.ebuild, -squid-3.3.7.ebuild:
+  Remove vulnerable versions
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> squid-3.2.12.ebuild:
   Stable for arm, wrt bug #476562
