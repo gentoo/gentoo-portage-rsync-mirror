@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.22 2012/12/04 11:33:43 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.23 2013/07/15 18:22:05 wired Exp $
 
 EAPI=4
 
@@ -59,7 +59,11 @@ src_prepare() {
 
 src_compile() {
 	myconf="PREFIX=/usr DEVELOPMENT_PATHS=0"
-	use luajit && myconf+=" USE_LUAJIT=1"
+	if use luajit; then
+		myconf+=" USE_LUAJIT=1"
+	else
+		myconf+=" USE_LUAJIT=0"
+	fi
 
 	if [[ ${PV} != *9999* ]]; then
 		myconf+=" VERSION=${PV}"

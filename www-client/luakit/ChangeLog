@@ -1,6 +1,15 @@
 # ChangeLog for www-client/luakit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.32 2012/12/04 11:33:43 wired Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.33 2013/07/15 18:22:05 wired Exp $
+
+*luakit-2012.09.13_p1-r1 (15 Jul 2013)
+
+  15 Jul 2013; Alex Alexander <wired@gentoo.org> -luakit-2010.12.25_p2.ebuild,
+  -luakit-2011.04.13.ebuild, -luakit-2011.04.13_p1.ebuild,
+  -luakit-2011.07.22.ebuild, -luakit-2011.07.22_p1.ebuild,
+  -luakit-2012.03.25.ebuild, -luakit-2012.09.13_p1.ebuild,
+  +luakit-2012.09.13_p1-r1.ebuild, luakit-9999.ebuild:
+  properly toggle luajit usage, bug #471704. removed old versions.
 
   04 Dec 2012; Alex Alexander <wired@gentoo.org> luakit-2010.12.25_p2.ebuild,
   luakit-2011.04.13.ebuild, luakit-2011.04.13_p1.ebuild,

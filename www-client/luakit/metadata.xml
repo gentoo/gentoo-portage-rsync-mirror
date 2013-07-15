@@ -6,7 +6,6 @@
 		<name>Alex Alexander</name>
 	</maintainer>
 	<use>
-		<flag name="helpers">Optional tools used by luakit</flag>
 		<flag name="luajit">Use the lua just-in-time compiler
 		<pkg>dev-lang/luajit</pkg> instead of <pkg>dev-lang/lua</pkg>, which
 		should make luakit faster.</flag>

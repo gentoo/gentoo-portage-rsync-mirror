@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR-Dist
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.76 2012/11/04 12:47:08 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.77 2013/07/15 18:27:17 zlogene Exp $
+
+  15 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> PAR-Dist-0.490.0.ebuild:
+  amd64/x86 stable wrt bug #449604
 
 *PAR-Dist-0.490.0 (04 Nov 2012)
 
