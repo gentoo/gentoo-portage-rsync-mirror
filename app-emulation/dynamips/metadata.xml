@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>chainsaw@gentoo.org</email>
-  <name>Tony Vroon</name>
+	<email>pinkbyte@gentoo.org</email>
+	<name>Sergey Popov</name>
+</maintainer>
+<maintainer>
+	<email>chainsaw@gentoo.org</email>
+	<name>Tony Vroon</name>
 </maintainer>
 </pkgmetadata>

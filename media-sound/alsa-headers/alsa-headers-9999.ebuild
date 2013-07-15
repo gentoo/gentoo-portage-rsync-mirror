@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.11 2013/07/15 14:16:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.12 2013/07/15 14:55:33 ssuominen Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE=""
 
 RESTRICT="binchecks strip"
 
-RDEPEND="!sys-kernel/linux-firmware"
+RDEPEND="!sys-kernel/linux-headers"
 DEPEND="${RDEPEND}"
 
 EGIT_REPO_URI="git://git.alsa-project.org/alsa-kmirror.git

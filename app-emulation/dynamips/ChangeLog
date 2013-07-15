@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dynamips
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.6 2012/05/05 02:58:28 pva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.7 2013/07/15 14:53:01 pinkbyte Exp $
+
+  15 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add myself as primary maintainer, permission granted by Tony Vroon
 
   05 May 2012; Peter Volkov <pva@gentoo.org> dynamips-0.2.8_rc3.ebuild:
   Update HOMEPAGE.
