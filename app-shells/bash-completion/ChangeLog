@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.251 2013/06/17 13:37:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.252 2013/07/16 00:13:33 ssuominen Exp $
+
+*bash-completion-2.1-r1 (16 Jul 2013)
+
+  16 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +bash-completion-2.1-r1.ebuild:
+  Migrate to upstream build system and directory structure wrt #472938
 
   17 Jun 2013; Jeroen Roovers <jer@gentoo.org> bash-completion-2.1.ebuild:
   Remove nmcli completion (bug #472844).
