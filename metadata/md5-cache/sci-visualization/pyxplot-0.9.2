@@ -1,12 +1,13 @@
 DEFINED_PHASES=prepare setup
-DEPEND=app-text/gv dev-libs/libxml2:2 media-libs/libpng sci-libs/cfitsio sci-libs/fftw:3.0 sci-libs/gsl sci-libs/scipy virtual/latex-base || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) virtual/pkgconfig =dev-lang/python-2*
+DEPEND=app-text/gv dev-libs/libxml2:2 media-libs/libpng sci-libs/cfitsio sci-libs/fftw:3.0 sci-libs/gsl sci-libs/scipy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] virtual/latex-base || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) virtual/pkgconfig
 DESCRIPTION=Gnuplot like graphing program publication-quality figures
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.pyxplot.org.uk/
+IUSE=python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
-RDEPEND=app-text/gv dev-libs/libxml2:2 media-libs/libpng sci-libs/cfitsio sci-libs/fftw:3.0 sci-libs/gsl sci-libs/scipy virtual/latex-base || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) =dev-lang/python-2*
+RDEPEND=app-text/gv dev-libs/libxml2:2 media-libs/libpng sci-libs/cfitsio sci-libs/fftw:3.0 sci-libs/gsl sci-libs/scipy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] virtual/latex-base || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 SLOT=0
 SRC_URI=mirror://sourceforge/pyxplot/pyxplot_0.9.2.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=d6b46c7a0576a7e04c12f8c99364157b
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	68315568b6b6ec436deb87db2cd36fe8	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=0346cd7e3850601bb79b8d6a9f7bd1e6
