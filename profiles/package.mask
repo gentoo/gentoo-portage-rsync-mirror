@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14928 2013/07/16 03:13:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14929 2013/07/16 06:02:21 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (16 Jul 2013)
+# Mask for removal. Upstream dead, recommends no longer using
+# this. Nothing in the tree depends on it. dev-ruby/listen
+# can be used as an alternative.
+dev-ruby/fssm
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Jul 2013)
 # The separate media-sound/alsa-headers package has been obsoleted

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-2.0.0.ebuild,v 1.6 2013/03/02 23:11:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-2.0.0.ebuild,v 1.7 2013/07/16 06:29:57 patrick Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ RDEPEND="
 	oss? ( sys-kernel/linux-headers )
 	postgres? ( dev-db/postgresql-base )
 	qt4? ( dev-qt/qtcore:4
-		dev-qt/qtgui:4 )
+		|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) ) )
 	spandsp? ( >=media-libs/spandsp-0.0.3 )
 	speex? ( media-libs/speex )
 	ssl? ( dev-libs/openssl )"
