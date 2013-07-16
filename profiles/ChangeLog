@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8039 2013/07/16 06:02:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8040 2013/07/16 07:54:46 lxnay Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jul 2013; Fabio Erculiani <lxnay@gentoo.org> thirdpartymirrors:
+  update sabayon mirrors
 
   16 Jul 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/fssm for removal.
