@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.304 2013/07/14 17:37:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.305 2013/07/16 08:12:52 slyfox Exp $
+
+*proftpd-1.3.4c-r2 (16 Jul 2013)
+
+  16 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> +proftpd-1.3.4c-r2.ebuild:
+  Bump mod_vroot up to 0.9.3 from github repo (bug #476972 by Markus Lidel).
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> proftpd-1.3.4c.ebuild:
   Stable for arm, wrt bug #476408
