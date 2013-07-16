@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/urbanterror
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.28 2013/07/09 23:32:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.29 2013/07/15 23:52:59 hasufell Exp $
+
+*urbanterror-4.2.014 (15 Jul 2013)
+
+  15 Jul 2013; Julian Ospald <hasufell@gentoo.org> -urbanterror-4.2.009.ebuild,
+  -files/urbanterror-4.2.009-build.patch, +urbanterror-4.2.014.ebuild,
+  +files/urbanterror-4.2.014-build.patch:
+  version bump
 
 *urbanterror-4.2.013-r1 (09 Jul 2013)
 

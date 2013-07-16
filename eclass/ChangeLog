@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.880 2013/07/15 14:04:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.881 2013/07/15 23:54:03 ssuominen Exp $
+
+  15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  bash-completion-r1.eclass:
+  Support pkg-config and the new upstream completions directory structure wrt
+  #472938 and introduce new get_bashhelpersdir function to obtain the
+  helpersdir="" value.
 
   15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> kernel-2.eclass:
   Deprecate media-sound/alsa-headers by letting sys-kernel/linux-headers

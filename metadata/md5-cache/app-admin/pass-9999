@@ -7,5 +7,5 @@ IUSE=+git X zsh-completion fish-completion
 LICENSE=GPL-2
 RDEPEND=app-crypt/gnupg app-admin/pwgen app-text/tree git? ( dev-vcs/git ) X? ( x11-misc/xclip ) zsh-completion? ( app-shells/zsh ) fish-completion? ( app-shells/fish )
 SLOT=0
-_eclasses_=bash-completion-r1	5deec68e4713fd23ce30d4d9ed712908	git-2	e92e09651292b1bef5656592364550f7
+_eclasses_=bash-completion-r1	81c5f02d15a7142263afd98d4fcbf558	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=1b6656f0b40d3ba3d8c855bc9ab7285c

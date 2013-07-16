@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=javascript? ( dev-lang/spidermonkey ) perl? ( dev-lang/perl media-gfx/imagemagick[perl] ) view-captcha? ( || ( media-gfx/aview media-libs/libcaca ) ) app-shells/bash || ( app-text/recode ( dev-lang/perl dev-perl/HTML-Parser ) ) app-text/tesseract[tiff] || ( media-gfx/imagemagick[tiff] media-gfx/graphicsmagick[imagemagick,tiff] ) net-misc/curl sys-apps/util-linux
 SLOT=0
 SRC_URI=http://plowshare.googlecode.com/files/plowshare-snapshot-git20120609.tar.gz
-_eclasses_=bash-completion-r1	5deec68e4713fd23ce30d4d9ed712908
+_eclasses_=bash-completion-r1	81c5f02d15a7142263afd98d4fcbf558	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=f6405836d1698b4ece000f1908eb85d8
