@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.7 2013/05/27 16:38:29 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.8 2013/07/16 13:52:35 scarabeus Exp $
 
 EAPI=5
 
@@ -54,4 +54,7 @@ src_install() {
 		use !symlink || dosym "${i/man1\//suse-}" "/usr/${i}"
 	done
 	find . -type f -exec sed -i 's|/usr/lib/build|/usr/libexec/suse-build|' {} +
+
+	# create symlink for default build config
+	dosym /usr/libexec/suse-build/configs/sl13.1.conf /usr/libexec/suse-build/configs/default.conf
 }

@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.16 2013/06/21 12:15:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.17 2013/07/16 13:52:35 scarabeus Exp $
+
+*suse-build-2013.05.17-r1 (16 Jul 2013)
+
+  16 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +suse-build-2013.05.17-r1.ebuild, -suse-build-2013.05.17.ebuild,
+  suse-build-9999.ebuild:
+  Provide symlink for default config as otherwise some local services won't be
+  executed.
 
   21 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   -suse-build-2013.02.27.ebuild, suse-build-2013.05.17.ebuild:
