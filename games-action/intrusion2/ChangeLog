@@ -1,0 +1,10 @@
+# ChangeLog for games-action/intrusion2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/intrusion2/ChangeLog,v 1.1 2013/07/16 19:35:52 hasufell Exp $
+
+*intrusion2-1.024 (16 Jul 2013)
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org> +intrusion2-1.024.ebuild,
+  +metadata.xml:
+  initial import
+

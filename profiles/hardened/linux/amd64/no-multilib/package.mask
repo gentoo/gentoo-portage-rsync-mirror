@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.24 2013/07/16 19:31:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.25 2013/07/16 19:35:28 hasufell Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 net-misc/teamviewer
@@ -69,6 +69,7 @@ games-action/descent3
 games-action/descent3-demo
 games-action/heretic2
 games-action/heretic2-demo
+games-action/intrusion2
 games-action/lugaru
 games-action/lugaru-demo
 games-action/mutantstorm-demo

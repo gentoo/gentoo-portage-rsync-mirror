@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install nofetch postinst preinst prepare setup unpack
+DEPEND=app-arch/bzip2
+DESCRIPTION=Combines elements of adventure, jump&run and physical puzzles
+EAPI=5
+HOMEPAGE=http://www.tinyandbig.com/
+IUSE=bundled-libs
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=all-rights-reserved
+RDEPEND=virtual/opengl media-libs/openal x11-libs/libX11 !bundled-libs? ( media-gfx/nvidia-cg-toolkit )
+RESTRICT=bindist fetch bundled-libs? ( splitdebug )
+SLOT=0
+SRC_URI=tinyandbig_grandpasleftovers-retail-linux-1.4.1_1370968537.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=fa6efd13eca2fbbf39aae8152b9cc50f
