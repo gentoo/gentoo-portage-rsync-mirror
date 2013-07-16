@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/epix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.49 2012/12/05 07:48:50 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.50 2013/07/16 16:42:15 bicatali Exp $
+
+*epix-1.2.11 (16 Jul 2013)
+
+  16 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +epix-1.2.11.ebuild,
+  metadata.xml:
+  Version bump
 
   05 Dec 2012; Justin Lecher <jlec@gentoo.org> -epix-1.2.6.ebuild,
   metadata.xml:

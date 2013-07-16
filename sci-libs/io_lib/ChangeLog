@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/io_lib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.23 2012/10/15 18:59:14 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.24 2013/07/16 16:38:10 bicatali Exp $
+
+*io_lib-1.13.2 (16 Jul 2013)
+
+  16 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +io_lib-1.13.2.ebuild,
+  metadata.xml:
+  Version bump
 
   15 Oct 2012; Justin Lecher <jlec@gentoo.org> -io_lib-1.8.12b-r1.ebuild,
   -io_lib-1.12.2.ebuild, metadata.xml:
