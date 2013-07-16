@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.5.ebuild,v 1.1 2013/07/02 16:47:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.5.ebuild,v 1.2 2013/07/16 16:00:15 dilfridge Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 	scim? ( app-i18n/scim )
 	semantic-desktop? (
 		$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
-		$(add_kdebase_dep plasma-workspace 'rss')
+		$(add_kdebase_dep plasma-workspace 'rss(+)')
 	)
 "
 DEPEND="${COMMON_DEPEND}

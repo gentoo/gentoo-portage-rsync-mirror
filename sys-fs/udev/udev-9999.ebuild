@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.235 2013/07/15 11:03:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.236 2013/07/16 15:34:08 ssuominen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc +firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
+IUSE="acl doc +firmware-loader gudev hwdb introspection +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
@@ -228,7 +228,6 @@ src_configure() {
 		$(use_enable acl)
 		$(use_enable doc gtk-doc)
 		$(use_enable gudev)
-		$(use_enable keymap)
 		$(use_enable kmod)
 		$(use_enable selinux)
 		$(use_enable static-libs static)
@@ -265,7 +264,6 @@ src_compile() {
 		accelerometer
 		mtd_probe
 		)
-	use keymap && helper_targets+=( keymap )
 	emake "${helper_targets[@]}"
 
 	local man_targets=(
@@ -293,9 +291,6 @@ src_install() {
 		install-rootlibexecPROGRAMS
 		install-udevlibexecPROGRAMS
 		install-dist_udevconfDATA
-		install-dist_udevhomeSCRIPTS
-		install-dist_udevkeymapDATA
-		install-dist_udevkeymapforcerelDATA
 		install-dist_udevrulesDATA
 		install-girDATA
 		install-man7
