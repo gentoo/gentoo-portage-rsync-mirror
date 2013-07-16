@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.453 2013/07/11 15:28:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.454 2013/07/16 21:11:45 axs Exp $
+
+*eix-0.29.1 (16 Jul 2013)
+
+  16 Jul 2013; Ian Stakenvicius <axs@gentoo.org> +eix-0.29.1.ebuild,
+  -eix-0.29.0-r1.ebuild:
+  version bump for various bug fixes
 
   11 Jul 2013; Michael Sterrett <mr_bones_@gentoo.org> eix-0.29.0-r1.ebuild:
   fix sed command
