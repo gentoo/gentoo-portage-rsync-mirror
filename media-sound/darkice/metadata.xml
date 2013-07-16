@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<use>
+		<flag name="opus">Enable Opus audio codec support</flag>
 		<flag name="twolame">Build with twolame support</flag>
 	</use>
 	<upstream>

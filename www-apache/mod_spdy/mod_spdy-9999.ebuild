@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.1 2013/05/28 00:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.2 2013/07/16 10:52:21 slyfox Exp $
 
 EAPI="4"
 
@@ -38,7 +38,7 @@ EGCLIENT="${WORKDIR}/depot_tools/gclient"
 egclient() { set -- "${EGCLIENT}" "$@"; e "$@"; }
 
 src_unpack() {
-	if [[ ${PN} == "9999" ]] ; then
+	if [[ ${PV} == "9999" ]] ; then
 		git-2_src_unpack
 
 		subversion_src_unpack
