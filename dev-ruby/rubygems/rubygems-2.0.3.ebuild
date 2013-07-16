@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.3.ebuild,v 1.2 2013/07/07 08:05:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.3.ebuild,v 1.3 2013/07/16 07:21:56 graaff Exp $
 
 EAPI=5
 
@@ -22,8 +22,7 @@ RDEPEND="
 	ruby_targets_jruby? ( >=dev-java/jruby-1.5.6-r1 )
 	ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.3_rc1 )"
 
-# index_gem_repository.rb
-PDEPEND="server? ( dev-ruby/builder[ruby_targets_ruby18] )"
+PDEPEND="server? ( >=dev-ruby/builder-2.1 )"
 
 ruby_add_bdepend "
 	test? (
