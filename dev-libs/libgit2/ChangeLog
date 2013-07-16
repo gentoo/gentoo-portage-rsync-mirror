@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgit2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.14 2013/06/25 18:19:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.15 2013/07/16 09:49:54 radhermit Exp $
+
+*libgit2-0.19.0-r1 (16 Jul 2013)
+
+  16 Jul 2013; Tim Harder <radhermit@gentoo.org> +libgit2-0.19.0-r1.ebuild,
+  +files/libgit2-0.19.0-automagic-libssh2.patch, metadata.xml:
+  Use external library for http-parser and add ssh use flag to control SSH
+  transport support.
 
 *libgit2-0.19.0 (25 Jun 2013)
 

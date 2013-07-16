@@ -10,4 +10,7 @@
 		as a re-entrant linkable library with a solid API, allowing you to write native
 		speed custom Git applications in any language which supports C bindings.
 	</longdescription>
+	<use>
+		<flag name="ssh">Enable SSH transport support</flag>
+	</use>
 </pkgmetadata>
