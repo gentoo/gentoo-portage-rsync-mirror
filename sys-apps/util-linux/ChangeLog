@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.432 2013/06/11 20:58:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.433 2013/07/16 01:23:22 ssuominen Exp $
+
+  16 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> util-linux-2.23.1.ebuild,
+  util-linux-9999.ebuild:
+  Use get_bashcompdir from bash-completion-r1.eclass because complectionsdir=
+  is not static.
 
 *util-linux-2.23.1 (11 Jun 2013)
 

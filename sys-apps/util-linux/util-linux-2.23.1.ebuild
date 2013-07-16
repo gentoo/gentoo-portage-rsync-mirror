@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.23.1.ebuild,v 1.1 2013/06/11 20:58:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.23.1.ebuild,v 1.2 2013/07/16 01:23:22 ssuominen Exp $
 
 EAPI="3"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
-inherit eutils toolchain-funcs libtool flag-o-matic
+inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools
 	#KEYWORDS=""
@@ -74,7 +74,7 @@ src_configure() {
 		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
 		$(use_enable nls) \
 		--enable-agetty \
-		--with-bashcompletiondir='${datarootdir}/bash-completion' \
+		--with-bashcompletiondir="$(get_bashcompdir)" \
 		$(use_enable bash-completion) \
 		$(use_enable caps setpriv) \
 		$(use_enable cramfs) \

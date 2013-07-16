@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-CRC
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.14 2012/12/16 18:19:21 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.15 2013/07/16 01:19:47 jer Exp $
+
+  16 Jul 2013; Jeroen Roovers <jer@gentoo.org> Digest-CRC-0.180.0.ebuild:
+  Stable for HPPA (bug #476898).
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> Digest-CRC-0.180.0.ebuild:
   Add ~alpha/~ia64/~s390/~sh/~sparc wrt #443048
