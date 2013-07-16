@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/rstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.6 2013/07/15 15:21:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.7 2013/07/16 11:39:28 hasufell Exp $
+
+*rstudio-0.97.551 (16 Jul 2013)
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org> +rstudio-0.97.551.ebuild,
+  +files/rstudio-0.97.551-boost-1.53.patch,
+  +files/rstudio-0.97.551-linker_flags.patch,
+  +files/rstudio-0.97.551-paths.patch, +files/rstudio-0.97.551-prefs.patch:
+  version bump
 
   15 Jul 2013; Julian Ospald <hasufell@gentoo.org> rstudio-0.97.336.ebuild,
   +files/rstudio-0.97.336-boost-1.53.patch:

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.994.ebuild,v 1.1 2012/11/16 07:38:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.994.ebuild,v 1.2 2013/07/16 11:37:01 naota Exp $
 
 EAPI=4
 # jruby: failed
 USE_RUBY="ruby18 ruby19 ree18 rbx"
 
-inherit ruby-ng
+inherit ruby-ng toolchain-funcs
 
 IUSE=""
 
@@ -26,6 +26,7 @@ each_ruby_configure() {
 }
 
 each_ruby_compile() {
+	tc-export CXX
 	emake || die
 }
 

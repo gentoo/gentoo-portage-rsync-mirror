@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.98-r1.ebuild,v 1.2 2012/05/01 18:24:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.98-r1.ebuild,v 1.3 2013/07/16 11:37:01 naota Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
 
-inherit ruby-ng
+inherit ruby-ng toolchain-funcs
 
 IUSE=""
 
@@ -17,13 +17,15 @@ LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 
-DEPEND=">=app-text/mecab-${PV}"
+DEPEND="~app-text/mecab-${PV}"
+RDEPEND="${DEPEND}"
 
 each_ruby_configure() {
 	${RUBY} extconf.rb || die
 }
 
 each_ruby_compile() {
+	tc-export CXX
 	emake || die
 }
 

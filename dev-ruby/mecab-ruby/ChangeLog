@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mecab-ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.30 2013/07/08 05:33:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.31 2013/07/16 11:37:01 naota Exp $
+
+  16 Jul 2013; Naohiro Aota <naota@gentoo.org> mecab-ruby-0.98-r1.ebuild,
+  mecab-ruby-0.991.ebuild, mecab-ruby-0.994.ebuild:
+  Export CXX to honor it. #476686; Update mecab dependency. #476684
 
 *mecab-ruby-0.996 (08 Jul 2013)
 
