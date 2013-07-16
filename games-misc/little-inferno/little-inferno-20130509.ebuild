@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/little-inferno/little-inferno-20130509.ebuild,v 1.1 2013/07/16 15:20:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/little-inferno/little-inferno-20130509.ebuild,v 1.2 2013/07/16 16:21:35 hasufell Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="Gameplay-Group-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="bundled-libs"
-RESTRICT="bindist fetch splitdebug"
+RESTRICT="bindist fetch bundled-libs? ( splitdebug )"
 
 MYGAMEDIR=${GAMES_PREFIX_OPT}/${PN}
 QA_PREBUILT="${MYGAMEDIR#/}/LittleInferno.bin.x86
