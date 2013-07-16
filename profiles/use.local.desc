@@ -877,8 +877,6 @@ app-office/gnumeric:python - Enable python plugin loader.
 app-office/imposter:iksemel - Enable external dev-libs/iksemel parsing support
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
-app-office/libreoffice:binfilter - Enable support for legacy StarOffice 5.x and earlier file formats
-app-office/libreoffice:binfilterdebug - Generate debug info for binfilter code (not recommended, huge files result)
 app-office/libreoffice:gtk3 - Enable highly experimental gtk3 frontend
 app-office/libreoffice:jemalloc - Use dev-libs/jemalloc for allocations
 app-office/libreoffice:odk - Build the Office Development Kit
