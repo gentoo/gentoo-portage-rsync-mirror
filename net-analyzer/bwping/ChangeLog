@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/bwping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.12 2013/02/19 19:51:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.14 2013/07/16 20:35:37 pinkbyte Exp $
+
+  16 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add package to netmon herd, add upstream maintainer info
+
+*bwping-1.7-r1 (16 Jul 2013)
+
+  16 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> +bwping-1.7-r1.ebuild,
+  +files/bwping-1.7-buildsystem-configurable-ipv6.patch:
+  Revision bump: migrate to autotools-utils eclass, support for ipv6 with
+  apropriate patch for buildsystem, wrt bug #454256
 
   19 Feb 2013; Markos Chandras <hwoarang@gentoo.org> -bwping-1.5.ebuild,
   -bwping-1.6.ebuild:
