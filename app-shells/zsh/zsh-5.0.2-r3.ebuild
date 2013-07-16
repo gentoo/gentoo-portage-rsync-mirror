@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-5.0.0.ebuild,v 1.1 2012/07/22 01:34:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-5.0.2-r3.ebuild,v 1.1 2013/07/16 19:16:13 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
 # doc package for -dev version exists?
 doc_available=true
@@ -57,7 +57,9 @@ src_prepare() {
 	mv Doc/zshall.1 Doc/zshall.1.soelim
 	soelim Doc/zshall.1.soelim > Doc/zshall.1
 
-	epatch "${FILESDIR}/${PN}"-init.d-gentoo-r1.diff
+	epatch "${FILESDIR}"/${PN}-init.d-gentoo-r1.diff
+	epatch "${FILESDIR}"/${PN}-fix-parameter-modifier-crash.patch
+	epatch "${FILESDIR}"/${PN}-5.0.2-texinfo-5.1.patch
 
 	cp "${FILESDIR}"/zprofile-1 "${T}"/zprofile || die
 	eprefixify "${T}"/zprofile || die
@@ -117,8 +119,6 @@ src_configure() {
 			sed -i '/^name=zsh\/db\/gdbm/s,link=static,link=no,' \
 				"${S}"/config.modules || die
 		fi
-#	else
-#		sed -i -e "/LIBS/s%-lpcre%${EPREFIX}/usr/$(get_libdir)/libpcre.a%" Makefile
 	fi
 }
 
@@ -165,17 +165,29 @@ src_install() {
 }
 
 pkg_postinst() {
-	# should link to http://www.gentoo.org/doc/en/zsh.xml
-	elog
-	elog "If you want to enable Portage completions and Gentoo prompt,"
-	elog "emerge app-shells/zsh-completion and add"
-	elog "	autoload -U compinit promptinit"
-	elog "	compinit"
-	elog "	promptinit; prompt gentoo"
-	elog "to your ~/.zshrc"
-	elog
-	elog "Also, if you want to enable cache for the completions, add"
-	elog "	zstyle ':completion::complete:*' use-cache 1"
-	elog "to your ~/.zshrc"
-	elog
+	if [[ -z ${REPLACING_VERSIONS} ]] ; then
+		# should link to http://www.gentoo.org/doc/en/zsh.xml
+		echo
+		elog "If you want to enable Portage completions and Gentoo prompt,"
+		elog "emerge app-shells/zsh-completion and add"
+		elog "	autoload -U compinit promptinit"
+		elog "	compinit"
+		elog "	promptinit; prompt gentoo"
+		elog "to your ~/.zshrc"
+		echo
+		elog "Also, if you want to enable cache for the completions, add"
+		elog "	zstyle ':completion::complete:*' use-cache 1"
+		elog "to your ~/.zshrc"
+		echo
+		elog "Note that a system zprofile startup file is installed. This will override"
+		elog "PATH and possibly other variables that a user may set in ~/.zshenv."
+		elog "Custom PATH settings and similar overridden variables can be moved to ~/.zprofile"
+		elog "or other user startup files that are sourced after the system zprofile."
+		echo
+		elog "If PATH must be set in ~/.zshenv to affect things like non-login ssh shells,"
+		elog "one method is to use a separate path-setting file that is conditionally sourced"
+		elog "in ~/.zshenv and also sourced from ~/.zprofile. For more information, see the"
+		elog "zshenv example in ${EROOT}/usr/share/doc/${PF}/StartupFiles/."
+		echo
+	fi
 }

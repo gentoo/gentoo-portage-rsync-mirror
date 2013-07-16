@@ -1,6 +1,17 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.214 2013/06/25 19:00:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.216 2013/07/16 19:18:18 radhermit Exp $
+
+  16 Jul 2013; Tim Harder <radhermit@gentoo.org> -zsh-4.3.17.ebuild,
+  -zsh-5.0.0.ebuild, -zsh-5.0.2-r1.ebuild, -zsh-5.0.2-r2.ebuild,
+  -files/zshenv-1:
+  Remove old.
+
+*zsh-5.0.2-r3 (16 Jul 2013)
+
+  16 Jul 2013; Tim Harder <radhermit@gentoo.org> +zsh-5.0.2-r3.ebuild:
+  Revert to using a system zprofile instead of zshenv and add info for new
+  users trying to set PATH in ~/.zshenv.
 
 *zsh-5.0.2-r2 (25 Jun 2013)
 
