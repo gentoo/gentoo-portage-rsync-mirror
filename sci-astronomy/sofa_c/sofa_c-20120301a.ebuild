@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/sofa_c/sofa_c-20120301a.ebuild,v 1.1 2013/04/23 15:57:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/sofa_c/sofa_c-20120301a.ebuild,v 1.2 2013/07/16 22:46:43 bicatali Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install
+	emake DESTDIR="${ED}" -j1 install
 	cd ..
 	dodoc 00READ.ME
 	use doc && dodoc doc/*.lis doc/*.pdf

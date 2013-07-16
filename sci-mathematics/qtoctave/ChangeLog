@@ -1,6 +1,22 @@
 # ChangeLog for sci-mathematics/qtoctave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.21 2013/03/02 23:25:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.22 2013/07/16 22:42:45 bicatali Exp $
+
+*qtoctave-0.10.1-r1 (16 Jul 2013)
+
+  16 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/qtoctave-0.10.1-build-out-of-source.patch,
+  +files/qtoctave-0.10.1-build-widgetserver.patch,
+  +files/qtoctave-0.10.1-desktop-file.patch,
+  +files/qtoctave-0.10.1-doc-path.patch,
+  +files/qtoctave-0.10.1-filedialog-filters.patch,
+  +files/qtoctave-0.10.1-initial_position.patch,
+  +files/qtoctave-0.10.1-no-native-menubars.patch,
+  +files/qtoctave-0.10.1-qtinfo-octave3.4.patch,
+  +files/qtoctave-0.10.1-use_octave_htmldoc.patch, +qtoctave-0.10.1-r1.ebuild,
+  metadata.xml:
+  Import patches from Debian (upstream stalled). Fixed Qt dependencies (bug
+  #477008, thanks Patrick Lauer), switch to EAPI5
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qtoctave-0.10.1.ebuild,
   qtoctave-0.9.1-r1.ebuild:
