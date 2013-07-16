@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.139 2013/07/08 16:35:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.140 2013/07/16 02:59:28 tetromino Exp $
 
 # Michael Weber <xmw@gentoo.org> (08 Jul 2013)
 # missing keywords on dev-python/pydns
@@ -30,12 +30,6 @@ net-misc/modemmanager qmi qmi-newest
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)
 # remove mask if/when media-gfx/argyllcms is keywored here.
 x11-misc/colord extra-print-profiles
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (07 Jan 2012)
-# remove when media-libs/libquvi is stable on sparc
-=dev-libs/totem-pl-parser-2.32.6-r1 quvi
-=media-video/mplayer2-2.0_p20120828 quvi
-=media-video/totem-2.32.0-r2 youtube
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires firefox, which is not keyworded on sparc
