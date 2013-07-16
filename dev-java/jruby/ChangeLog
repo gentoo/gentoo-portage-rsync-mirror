@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.89 2013/06/14 02:41:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.90 2013/07/16 09:01:23 graaff Exp $
+
+  16 Jul 2013; Hans de Graaff <graaff@gentoo.org> jruby-1.6.8.ebuild:
+  Add back accidentally dropped jvyamlb dependency, fixing bug 474488.
 
   14 Jun 2013; Patrick Lauer <patrick@gentoo.org> jruby-1.4.1.ebuild:
   Removing ppc keyword because of missing keyword on dev-ruby/jruby-openssl

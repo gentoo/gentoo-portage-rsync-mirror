@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8.ebuild,v 1.1 2013/06/03 19:25:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8.ebuild,v 1.2 2013/07/16 09:01:23 graaff Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source test"
@@ -22,6 +22,7 @@ CDEPEND=">=dev-java/bytelist-1.0.8:0
 	>=dev-java/jline-1.0:0
 	>=dev-java/joni-1.1.3:0
 	>=dev-java/jnr-netdb-1.0:0
+	>=dev-java/jvyamlb-0.2.5:0
 	>=dev-java/asm-3.3.1:3
 	>=dev-java/jcodings-1.0.5:0
 	dev-java/jffi:1.0
