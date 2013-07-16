@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8040 2013/07/16 07:54:46 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8043 2013/07/16 15:23:05 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-rpg/dear-esther for hardened multilib
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-misc/little-inferno for hardened multilib
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org> license_groups:
+  add Gameplay-Group-EULA to EULA license group
 
   16 Jul 2013; Fabio Erculiani <lxnay@gentoo.org> thirdpartymirrors:
   update sabayon mirrors
