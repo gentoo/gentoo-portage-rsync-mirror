@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-ldapdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/ChangeLog,v 1.7 2013/07/13 10:51:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/ChangeLog,v 1.8 2013/07/16 04:20:58 floppym Exp $
+
+*django-ldapdb-0.1.0_p20130712 (16 Jul 2013)
+
+  16 Jul 2013; Mike Gilbert <floppym@gentoo.org>
+  +django-ldapdb-0.1.0_p20130712.ebuild, -django-ldapdb-0.2.0_p20130712.ebuild:
+  Fix version number; 0.2.0 has never been released and setup.py says 0.1.0.
 
   13 Jul 2013; Ian Delaney <idella4@gentoo.org>
   django-ldapdb-0.2.0_p20130712.ebuild:

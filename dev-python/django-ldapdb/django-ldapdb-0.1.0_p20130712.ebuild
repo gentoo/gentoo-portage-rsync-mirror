@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.2.0_p20130712.ebuild,v 1.2 2013/07/13 10:51:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.1.0_p20130712.ebuild,v 1.1 2013/07/16 04:20:58 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="an LDAP database backend for Django"
 HOMEPAGE="http://opensource.bolloretelecom.eu/projects/django-ldapdb/"
-SRC_URI="http://dev.gentoo.org/~idella4/tarballs/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~idella4/tarballs/${P/0.1.0/0.2.0}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="examples test"
