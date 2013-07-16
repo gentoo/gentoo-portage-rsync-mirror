@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.19 2013/05/25 11:11:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.20 2013/07/16 12:23:02 pinkbyte Exp $
+
+*ansible-1.2.1 (16 Jul 2013)
+
+  16 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> +ansible-1.2.1.ebuild,
+  ansible-9999.ebuild:
+  Version bump, wrt bug #475602. Remove examples USE-flag due to upstream
+  changes. Sync live ebuild
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> ansible-1.0.ebuild:
   Stable for x86, wrt bug #471226

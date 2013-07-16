@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/osgi-core-api
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/ChangeLog,v 1.6 2013/03/25 20:47:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/ChangeLog,v 1.7 2013/07/16 12:06:16 tomwij Exp $
+
+  16 Jul 2013; Tom Wijsman <TomWij@gentoo.org> osgi-core-api-4.3.ebuild,
+  osgi-core-api-5.0.0.ebuild:
+  Update LICENSE to include the OSGi Specification 2.0 license and introduce
+  fetch restriction as the license needs to be explicitly accepted (except for
+  osgi-foundation) to obtain the downloads.
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> osgi-core-api-5.0.0.ebuild:
   Stable for x86, wrt bug #456528

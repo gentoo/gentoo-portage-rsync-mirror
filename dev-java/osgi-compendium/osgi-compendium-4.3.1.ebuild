@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-compendium/osgi-compendium-4.3.1.ebuild,v 1.1 2013/07/05 13:05:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-compendium/osgi-compendium-4.3.1.ebuild,v 1.2 2013/07/16 12:06:03 tomwij Exp $
 
 EAPI="5"
 
@@ -12,9 +12,11 @@ DESCRIPTION="OSGi Service Platform Compendium API (Companion Code)"
 HOMEPAGE="http://www.osgi.org/Specifications/HomePage"
 SRC_URI="http://www.osgi.org/download/r4v43/osgi.cmpn-${PV}.jar"
 
-LICENSE="Apache-2.0"
+LICENSE="Apache-2.0 OSGi-Specification-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+
+RESTRICT="bindist fetch"
 
 COMMON_DEPEND="dev-java/glassfish-persistence:0
 	dev-java/osgi-core-api:0
@@ -31,6 +33,14 @@ RDEPEND="${COMMON_DEPEND}
 JAVA_SRC_DIR="OSGI-OPT/src"
 
 JAVA_GENTOO_CLASSPATH="glassfish-persistence,osgi-core-api,osgi-foundation,tomcat-servlet-api-3.0"
+
+pkg_nofetch() {
+	einfo "Please download osgi.cmpn-${PV}.jar from"
+	einfo "  http://www.osgi.org/Download/Release4V43"
+	einfo "which you can find listed as"
+	einfo "  OSGi Service Platform Release 4 Version 4.3 Compendium Companion Code"
+	einfo "after accepting the license."
+}
 
 java_prepare() {
 	rm -r org || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-foundation/osgi-foundation-1.2.0.ebuild,v 1.1 2013/07/05 13:03:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-foundation/osgi-foundation-1.2.0.ebuild,v 1.2 2013/07/16 12:06:53 tomwij Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ DESCRIPTION="OSGi R4 Foundation EE by Apache Felix"
 HOMEPAGE="http://felix.apache.org/"
 ESVN_REPO_URI="https://svn.apache.org/repos/asf/felix/releases/org.osgi.foundation-${PV}"
 
-LICENSE="Apache-2.0"
+LICENSE="Apache-2.0 OSGi-Specification-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-enterprise-api/osgi-enterprise-api-5.0.0.ebuild,v 1.1 2013/07/03 21:22:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-enterprise-api/osgi-enterprise-api-5.0.0.ebuild,v 1.2 2013/07/16 12:06:33 tomwij Exp $
 
 EAPI="5"
 
@@ -12,9 +12,11 @@ DESCRIPTION="OSGi Enterprise Release 5 Companion Code"
 SRC_URI="http://www.osgi.org/download/r5/osgi.enterprise-${PV}.jar"
 HOMEPAGE="http://www.osgi.org/Main/HomePage"
 
-LICENSE="Apache-2.0"
+LICENSE="Apache-2.0 OSGi-Specification-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+
+RESTRICT="bindist fetch"
 
 CDEPEND="dev-java/glassfish-persistence:0
 	dev-java/osgi-core-api:0
@@ -30,6 +32,14 @@ DEPEND="${CDEPEND}
 JAVA_SRC_DIR="OSGI-OPT/src"
 
 JAVA_GENTOO_CLASSPATH="glassfish-persistence,osgi-core-api,servlet-api-2.5"
+
+pkg_nofetch() {
+	einfo "Please download osgi.enterprise-${PV}.jar from"
+	einfo "  http://www.osgi.org/Download/Release5"
+	einfo "which you can find listed as"
+	einfo "  OSGi Enterprise Release 5 Companion Code"
+	einfo "after accepting the license."
+}
 
 java_prepare() {
 	rm -r org || die
