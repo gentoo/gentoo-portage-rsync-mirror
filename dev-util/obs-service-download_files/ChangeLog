@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/obs-service-download_files
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/ChangeLog,v 1.9 2013/03/18 10:45:33 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/ChangeLog,v 1.10 2013/07/16 13:20:28 scarabeus Exp $
+
+*obs-service-download_files-20130624 (16 Jul 2013)
+
+  16 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +obs-service-download_files-20130624.ebuild,
+  -obs-service-download_files-20130318.ebuild:
+  Version bump to latest fixing github urls. Without this can't submit to
+  factory.
 
   18 Mar 2013; Michal Hrusecky <miska@gentoo.org>
   -obs-service-download_files-20120824.ebuild,

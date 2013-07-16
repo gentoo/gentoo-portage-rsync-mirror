@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/obs-service-download_files-20130318.ebuild,v 1.2 2013/03/18 10:45:33 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/obs-service-download_files-20130624.ebuild,v 1.1 2013/07/16 13:20:28 scarabeus Exp $
 
 EAPI=5
 

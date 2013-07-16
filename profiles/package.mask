@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14929 2013/07/16 06:02:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14930 2013/07/16 13:25:10 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mikle Kolyada <zlogene@gentoo.org> (16 Jul 2013)
+# Upstream dead.
+# No license info (bug #381283).
+# Removal in 30 days.
+dev-perl/Date-ISO
 
 # Hans de Graaff <graaff@gentoo.org> (16 Jul 2013)
 # Mask for removal. Upstream dead, recommends no longer using
