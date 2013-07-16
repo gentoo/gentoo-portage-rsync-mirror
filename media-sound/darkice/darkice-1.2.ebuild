@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-1.2.ebuild,v 1.1 2013/07/16 10:48:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-1.2.ebuild,v 1.2 2013/07/16 14:08:20 polynomial-c Exp $
 
 EAPI=5
 inherit eutils
@@ -42,6 +42,7 @@ src_configure() {
 		$(use_with opus) \
 		$(use_with alsa) \
 		$(use_with jack) \
+		$(use_with pulseaudio) \
 		$(use_with libsamplerate samplerate)
 }
 

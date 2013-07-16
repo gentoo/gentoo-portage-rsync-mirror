@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.127 2013/03/26 13:52:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.128 2013/07/16 14:04:31 jer Exp $
+
+*xlockmore-5.43 (16 Jul 2013)
+
+  16 Jul 2013; Jeroen Roovers <jer@gentoo.org> +xlockmore-5.43.ebuild:
+  Version bump.
 
   26 Mar 2013; Jeroen Roovers <jer@gentoo.org> xlockmore-5.42.ebuild:
   --disable-use-mb -> --disable-mb by Klaus Kusche (bug #463246).
