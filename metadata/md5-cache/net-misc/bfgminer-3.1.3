@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install
+DEPEND=net-misc/curl ncurses? ( sys-libs/ncurses ) >=dev-libs/jansson-2 net-libs/libblkmaker udev? ( virtual/udev ) lm_sensors? ( sys-apps/lm_sensors ) x6500? ( virtual/libusb:1 ) ztex? ( virtual/libusb:1 ) virtual/pkgconfig >=dev-libs/uthash-1.9.2 sys-apps/sed cpumining? ( amd64? ( >=dev-lang/yasm-1.0.1 ) x86? ( >=dev-lang/yasm-1.0.1 ) )
+DESCRIPTION=Modular Bitcoin ASIC/FPGA/GPU/CPU miner in C
+EAPI=4
+HOMEPAGE=https://bitcointalk.org/?topic=168174
+IUSE=+adl avalon bitforce cpumining examples hardened icarus lm_sensors modminer ncurses +opencl scrypt +udev x6500 ztex
+KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
+LICENSE=GPL-3
+RDEPEND=net-misc/curl ncurses? ( sys-libs/ncurses ) >=dev-libs/jansson-2 net-libs/libblkmaker udev? ( virtual/udev ) lm_sensors? ( sys-apps/lm_sensors ) x6500? ( virtual/libusb:1 ) ztex? ( virtual/libusb:1 ) opencl? ( virtual/opencl )
+REQUIRED_USE=|| ( avalon bitforce cpumining icarus modminer opencl x6500 ztex ) adl? ( opencl ) lm_sensors? ( opencl ) scrypt? ( || ( cpumining opencl ) )
+SLOT=0
+SRC_URI=http://luke.dashjr.org/programs/bitcoin/files/bfgminer/3.1.3/bfgminer-3.1.3.tbz2
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=863da58b61cda4c50028b3697e2fd274

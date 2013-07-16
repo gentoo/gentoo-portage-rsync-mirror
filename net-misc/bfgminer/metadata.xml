@@ -15,7 +15,7 @@
 		<flag name='avalon'>Enable support for mining with Avalon ASIC modules</flag>
 		<flag name='bitforce'>Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs</flag>
 		<flag name='cpumining'>Enable support for mining with CPUs</flag>
-		<flag name='icarus'>Enable support for mining with Icarus FPGAs</flag>
+		<flag name='icarus'>Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)</flag>
 		<flag name='modminer'>Enable support for mining with ModMiner FPGAs</flag>
 		<flag name='opencl'>Enable support for mining with OpenCL-capable devices (GPUs)</flag>
 		<flag name='padlock'>Enable support for mining with VIA Padlock CPUs</flag>

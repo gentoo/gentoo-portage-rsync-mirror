@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.5.1.ebuild,v 1.1 2013/04/26 05:58:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.5.1-r2.ebuild,v 1.1 2013/07/16 10:14:35 graaff Exp $
 
 EAPI=5
 
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
+
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
@@ -68,8 +70,8 @@ all_ruby_install() {
 	all_fakegem_install
 
 	keepdir /etc/thin
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/${PN}.initd-1 ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd-1 ${PN}
 
 	einfo
 	elog "Thin is now shipped with init scripts."
