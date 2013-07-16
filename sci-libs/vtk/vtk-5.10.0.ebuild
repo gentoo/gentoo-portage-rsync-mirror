@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.0.ebuild,v 1.3 2013/03/02 23:24:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.0.ebuild,v 1.4 2013/07/16 05:28:33 patrick Exp $
 
 EAPI=3
 
@@ -51,7 +51,7 @@ RDEPEND="
 	python? ( dev-python/sip )
 	qt4? (
 		dev-qt/qtcore:4
-		dev-qt/qtgui:4
+		|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) )
 		dev-qt/qtopengl:4
 		dev-qt/qtsql:4
 		dev-qt/qtwebkit:4
