@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.13 2013/07/11 10:32:23 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.14 2013/07/16 17:08:33 zlogene Exp $
+
+# Mikle Kolyada <zlogene@gentoo.org> (11 Jul 2013)
+# Tests for dev-perl/Error require >=dev-perl/Test-Pod-Coverage-1.40.0 (bug #351636)
+dev-perl/Error test
 
 # Raúl Porcel <armin76@gentoo.org> (23 Jan 2013)
 # Architecture is unsupported
@@ -25,7 +29,3 @@ dev-libs/opensc nsplugin
 
 # Masking these to keep repoman happy
 media-gfx/graphviz perl
-
-# Mikle Kolyada <zlogene@gentoo.org> (11 Jul 2013)
-# Tests for dev-perl/Error require >=dev-perl/Test-Pod-Coverage-1.40.0 (bug #351636)
-dev-perl/Error test 
