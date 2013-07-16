@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=|| ( >=app-shells/bash-4.1 app-shells/zsh ) sys-apps/miscfiles !<app-shells/gentoo-bashcomp-20130101
 SLOT=0
 SRC_URI=http://bash-completion.alioth.debian.org/files/bash-completion-2.1.tar.bz2
-_md5_=da69dcd3d209f4ce1f962e2a10bcdc93
+_md5_=f38a15dc7af921d572e754f321530a72

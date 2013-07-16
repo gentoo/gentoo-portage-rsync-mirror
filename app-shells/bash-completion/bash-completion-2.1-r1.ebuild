@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.1 2013/07/16 00:13:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.2 2013/07/16 00:51:20 ssuominen Exp $
 
 EAPI=5
 
@@ -37,7 +37,13 @@ src_install() {
 }
 
 pkg_postinst() {
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		elog "If you use non-login shells you still need to source"
+		elog "/usr/share/bash-completion/bash_completion in your ~/.bashrc."
+	fi
+
 	if has_version 'app-shells/zsh'; then
+		elog
 		elog "If you are interested in using the provided bash completion functions with"
 		elog "zsh, valuable tips on the effective use of bashcompinit are available:"
 		elog "  http://www.zsh.org/mla/workers/2003/msg00046.html"
