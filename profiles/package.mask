@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14927 2013/07/15 15:06:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14928 2013/07/16 03:13:50 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1178,15 +1178,6 @@ dev-lisp/gcl
 # warned. bug 271686
 <dev-db/mysql-5.1.56
 <virtual/mysql-5.1
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (10 Jun 2009)
-# Several feature regressions that will make our users
-# go on a witchhunt if unmasked
-# * No XDMCP connection UI
-# * No configuration/theming support
-# * No support for auth backends other than PAM
-# * Many more...
-=gnome-base/gdm-2.3*
 
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)
 # pre-releases
