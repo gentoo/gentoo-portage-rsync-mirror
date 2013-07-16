@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.392 2013/06/19 05:04:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.393 2013/07/16 05:36:54 grobian Exp $
+
+  16 Jul 2013; Fabian Groffen <grobian@gentoo.org> +linux/amd64/deprecated:
+  Override deprecated message (test) for amd64 to avoid users switching to a
+  non-prefix profile
 
   19 Jun 2013; Christoph Junghans <ottxor@gentoo.org> darwin/package.mask:
   drop sys-apps/findutils mask, bug #469206 was fixed
