@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.160 2013/07/04 12:26:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.161 2013/07/16 14:35:30 prometheanfire Exp $
+
+*puppet-3.2.3 (16 Jul 2013)
+
+  16 Jul 2013; Matthew Thode <prometheanfire@gentoo.org> +puppet-3.2.3.ebuild:
+  puppet version bump from 3.2.2 to 3.2.3
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.22.ebuild:
   Stable for x86, wrt bug #473720

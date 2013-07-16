@@ -4,7 +4,7 @@ EAPI=5
 HOMEPAGE=http://bash-completion.alioth.debian.org/
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris
 LICENSE=GPL-2
-RDEPEND=|| ( >=app-shells/bash-4.1 app-shells/zsh ) sys-apps/miscfiles !<app-shells/gentoo-bashcomp-20130101
+RDEPEND=|| ( >=app-shells/bash-4.1 app-shells/zsh ) sys-apps/miscfiles
 SLOT=0
 SRC_URI=http://bash-completion.alioth.debian.org/files/bash-completion-2.1.tar.bz2
-_md5_=ce4dbde6aa4ad38690cd33ee1f60ff60
+_md5_=92ebb7ae6bc77ca474a674d9768a4ac7

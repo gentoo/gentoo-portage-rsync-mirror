@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.4 2013/07/16 01:26:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.5 2013/07/16 14:44:56 ssuominen Exp $
 
 EAPI=5
 
@@ -14,8 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 RDEPEND="|| ( >=app-shells/bash-4.1 app-shells/zsh )
-	sys-apps/miscfiles
-	!<app-shells/gentoo-bashcomp-20130101" #472938#c1
+	sys-apps/miscfiles"
 
 src_install() {
 	default
