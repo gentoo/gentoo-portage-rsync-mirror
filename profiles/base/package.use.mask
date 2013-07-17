@@ -1,13 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.489 2013/07/16 02:49:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.490 2013/07/17 15:23:53 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Jul 2013)
-# Needs gles support in cairo, bug #428770.
+# GL/GLES support in cairo is mutually exclusive, bug #428770.
+x11-libs/cairo gles2
 dev-libs/weston gles2 rpi
 
 # Alexis Ballier <aballier@gentoo.org> (03 Jul 2013)

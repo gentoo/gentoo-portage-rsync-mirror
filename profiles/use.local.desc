@@ -2246,11 +2246,13 @@ games-fps/doom-data:doomsday - Add wrapper to run it within doomsday
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
 games-fps/doomsday:demo - Install launcher dor doom1.wad from games-fps/doom-data
 games-fps/doomsday:doom - Install launcher for jdoom game
+games-fps/doomsday:fluidsynth - Build the FluidSynth sound driver
 games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/freefoom
 games-fps/doomsday:heretic - Install launcher for jheretic game
 games-fps/doomsday:hexen - Install launcher for jhexen game
 games-fps/doomsday:resources - Enable support for games-fps/doomsday-resources in jdoom launcher
 games-fps/doomsday:snowberry - Install Snowberry doomsday front-end
+games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
 games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
 games-fps/eduke32:demo - Install games-fps/duke3d-demodata as well

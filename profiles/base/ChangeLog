@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.563 2013/07/16 02:49:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.564 2013/07/17 15:23:53 chithanh Exp $
+
+  17 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Update dev-libs/weston mask for new x11-libs/cairo revision.
 
   16 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Remove obsolete introspection masks
