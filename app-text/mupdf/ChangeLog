@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.81 2013/07/13 23:04:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.82 2013/07/17 15:53:24 chithanh Exp $
+
+  17 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mupdf-1.2.ebuild:
+  Keyword ~arm.
 
   13 Jul 2013; Michael Weber <xmw@gentoo.org> mupdf-1.0.ebuild:
   Fix patch filename.
