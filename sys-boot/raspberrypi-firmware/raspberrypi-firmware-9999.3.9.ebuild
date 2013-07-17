@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/raspberrypi-firmware-9999.ebuild,v 1.2 2013/07/15 11:34:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/raspberrypi-firmware-9999.3.9.ebuild,v 1.1 2013/07/17 19:10:26 xmw Exp $
 
 EAPI=5
 
@@ -10,6 +10,7 @@ DESCRIPTION="Raspberry PI boot loader and firmware"
 HOMEPAGE="https://github.com/raspberrypi/firmware"
 EGIT_REPO_URI="https://github.com/raspberrypi/firmware.git"
 EGIT_PROJECT="raspberrypi-firmware.git"
+EGIT_BRANCH="next"
 
 LICENSE="GPL-2 raspberrypi-videocore-bin"
 SLOT="0"
@@ -31,7 +32,7 @@ pkg_preinst() {
 
 src_install() {
 	insinto /boot
-	doins bootcode.bin boot/fixup*.dat boot/start*.elf
+	doins boot/bootcode.bin boot/fixup*.dat boot/start*.elf
 	newins "${FILESDIR}"/${PN}-0_p20130711-config.txt config.txt
 	newins "${FILESDIR}"/${PN}-0_p20130711-cmdline.txt cmdline.txt
 	newenvd "${FILESDIR}"/${PN}-0_p20130711-envd 90${PN}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uglifier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.18 2013/06/10 13:08:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.19 2013/07/17 19:15:00 maekke Exp $
+
+  17 Jul 2013; Markus Meier <maekke@gentoo.org> uglifier-2.1.1.ebuild:
+  add ~arm, bug #472892
 
 *uglifier-2.1.1 (10 Jun 2013)
 

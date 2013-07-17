@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.210 2013/03/31 18:06:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.211 2013/07/17 19:17:06 maekke Exp $
+
+  17 Jul 2013; Markus Meier <maekke@gentoo.org> qbittorrent-3.0.9.ebuild:
+  add ~arm, bug #473472
 
   31 Mar 2013; Jeff Horelick <jdhore@gentoo.org> qbittorrent-3.0.8.ebuild:
   marked x86 per bug 460190

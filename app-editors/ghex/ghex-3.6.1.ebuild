@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.6.1.ebuild,v 1.5 2013/03/26 16:47:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.6.1.ebuild,v 1.6 2013/07/17 19:15:49 maekke Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://live.gnome.org/Ghex"
 
 LICENSE="GPL-2+ FDL-1.1+"
 SLOT="2"
-KEYWORDS="amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="

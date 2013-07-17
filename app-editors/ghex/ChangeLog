@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.82 2013/05/13 17:10:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.83 2013/07/17 19:15:49 maekke Exp $
+
+  17 Jul 2013; Markus Meier <maekke@gentoo.org> ghex-3.6.1.ebuild:
+  add ~arm, bug #473414
 
 *ghex-3.8.1 (13 May 2013)
 
