@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.91 2013/06/11 15:55:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.92 2013/07/17 14:44:34 jer Exp $
+
+  17 Jul 2013; Jeroen Roovers <jer@gentoo.org> ratpoison-1.4.6.ebuild,
+  files/ratpoison.el-gentoo.patch:
+  Fix path in patch, do not cd in src_prepare().
 
   11 Jun 2013; Jeroen Roovers <jer@gentoo.org>
   -files/ratpoison-1.4.4-glibc210.patch, -files/ratpoison-1.4.5-asneeded.patch,

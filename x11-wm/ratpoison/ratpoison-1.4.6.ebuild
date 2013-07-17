@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.6.ebuild,v 1.6 2013/05/25 07:49:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.6.ebuild,v 1.7 2013/07/17 14:44:34 jer Exp $
 
 EAPI=5
 
@@ -32,7 +32,6 @@ SITEFILE=50ratpoison-gentoo.el
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 src_prepare() {
-	cd "${S}/contrib"
 	epatch "${FILESDIR}/ratpoison.el-gentoo.patch"
 }
 

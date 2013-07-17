@@ -1,5 +1,5 @@
---- a/ratpoison.el
-+++ b/ratpoison.el
+--- a/contrib/ratpoison.el
++++ b/contrib/ratpoison.el
 @@ -44,6 +44,8 @@
  ;; - auto-completion of commands
  ;; - probably a bunch of other things
