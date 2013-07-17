@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/elixir
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/ChangeLog,v 1.2 2013/07/13 11:47:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/ChangeLog,v 1.3 2013/07/17 21:54:58 hasufell Exp $
+
+*elixir-0.10.0 (17 Jul 2013)
+
+  17 Jul 2013; Julian Ospald <hasufell@gentoo.org> +elixir-0.10.0.ebuild:
+  version bump
 
   13 Jul 2013; Julian Ospald <hasufell@gentoo.org> elixir-0.9.3.ebuild:
   add x86 arch

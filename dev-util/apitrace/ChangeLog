@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/apitrace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.16 2013/04/11 11:44:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.17 2013/07/17 21:55:34 radhermit Exp $
+
+  17 Jul 2013; Tim Harder <radhermit@gentoo.org> apitrace-3.0-r1.ebuild:
+  Use cmake-utils_src_prepare instead of base_src_prepare (bug #477228) and
+  replace CMAKE_BUILD_DIR with BUILD_DIR.
 
   11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> apitrace-3.0-r1.ebuild,
   +files/apitrace-3.0-memcpy.patch:

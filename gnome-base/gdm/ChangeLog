@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.373 2013/07/14 13:19:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.374 2013/07/17 21:37:00 pacho Exp $
+
+  17 Jul 2013; Pacho Ramos <pacho@gentoo.org> gdm-3.8.3.1.ebuild:
+  Changing perms of /run here doesn't make sense as they are regenerated on each
+  boot, anyway, looks like permissions are being properly handled and no
+  distribution is neither needing to change them via tmpfiles.d
 
 *gdm-3.8.3.1 (14 Jul 2013)
 
