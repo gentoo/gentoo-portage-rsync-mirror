@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.46 2013/01/13 12:28:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.47 2013/07/17 10:06:32 hanno Exp $
+
+*josm-6060 (17 Jul 2013)
+
+  17 Jul 2013; Hanno Boeck <hanno@gentoo.org> +josm-6060.ebuild,
+  josm-9999.ebuild:
+  Bump and raise jre/jdk dep for both release and svn ebuild.
 
 *josm-5608 (13 Jan 2013)
 
