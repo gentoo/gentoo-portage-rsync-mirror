@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.15 2013/07/15 08:38:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.16 2013/07/17 18:16:28 tomwij Exp $
+
+  17 Jul 2013; Tom Wijsman <TomWij@gentoo.org> mpv-0_p20130715.ebuild,
+  mpv-9999.ebuild:
+  Made ffmpeg dependency consistent; that way, it doesn't satisfy and block
+  itself at the same time if the user has a lower version installed. Discovered
+  in topic #964594 on the Gentoo Forums.
 
 *mpv-0_p20130715 (15 Jul 2013)
 

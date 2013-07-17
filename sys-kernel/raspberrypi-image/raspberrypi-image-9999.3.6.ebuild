@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/raspberrypi-image-9999.ebuild,v 1.1 2013/07/15 06:28:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/raspberrypi-image-9999.3.6.ebuild,v 1.1 2013/07/17 18:10:00 xmw Exp $
 
 EAPI=5
 
@@ -10,9 +10,10 @@ DESCRIPTION="Raspberry PI precompiled kernel and modules"
 HOMEPAGE="https://github.com/raspberrypi/firmware"
 EGIT_REPO_URI="https://github.com/raspberrypi/firmware.git"
 EGIT_PROJECT="raspberrypi-firmware.git"
+EGIT_BRANCH="master"
 
 LICENSE="GPL-2 raspberrypi-videocore-bin"
-SLOT="9999"
+SLOT="${PV}"
 KEYWORDS=""
 IUSE="doc"
 

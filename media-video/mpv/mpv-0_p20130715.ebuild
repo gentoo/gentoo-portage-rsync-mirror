@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0_p20130715.ebuild,v 1.1 2013/07/15 08:38:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0_p20130715.ebuild,v 1.2 2013/07/17 18:16:28 tomwij Exp $
 
 EAPI=5
 
@@ -86,7 +86,7 @@ RDEPEND+="
 	postproc? (
 		|| (
 			media-libs/libpostproc
-			media-video/ffmpeg
+			>=media-video/ffmpeg-1.2[encode?,threads?,vdpau?]
 		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )
