@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.3.4.ebuild,v 1.1 2012/06/20 20:48:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.3.4.ebuild,v 1.2 2013/07/17 07:32:04 jlec Exp $
 
-EAPI="4"
+EAPI=5
 
-inherit autotools eutils
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils
 
 DESCRIPTION="Assembly By Short Sequences - a de novo, parallel, paired-end sequence assembler"
 HOMEPAGE="http://www.bcgsc.ca/platform/bioinfo/software/abyss/"
@@ -23,15 +25,18 @@ RDEPEND="${DEPEND}"
 # todo: --enable-maxk=N configure option
 # todo: fix automagic mpi toggling
 
+PATCHES=( "${FILESDIR}"/${P}-gcc-4.7.patch )
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
 	sed -i -e "s/-Werror//" configure.ac || die #365195
 	sed -i -e "/dist_pkgdoc_DATA/d" Makefile.am || die
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
-	econf \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+	local myeconfargs=(
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 		$(use_enable openmp)
+	)
+	autotools-utils_src_configure
 }

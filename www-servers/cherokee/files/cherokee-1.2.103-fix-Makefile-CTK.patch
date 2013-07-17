@@ -1,0 +1,11 @@
+diff -Naur webserver-1.2.103.orig/admin/Makefile.am webserver-1.2.103/admin/Makefile.am
+--- webserver-1.2.103.orig/admin/Makefile.am	2013-01-26 17:52:44.000000000 -0500
++++ webserver-1.2.103/admin/Makefile.am	2013-07-17 03:28:32.000000000 -0400
+@@ -1,6 +1,6 @@
+ ## Cherokee: Makefile.am  -*- makefile -*-
+ 
+-SUBDIRS = plugins wizards CTK icons
++SUBDIRS = plugins wizards icons
+ 
+ if INSTALL_ADMIN
+ SUBDIRS += static
