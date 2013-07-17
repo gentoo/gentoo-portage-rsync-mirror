@@ -1,12 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.0.6.ebuild,v 1.1 2013/06/29 08:19:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.0.6.ebuild,v 1.2 2013/07/17 06:41:49 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 jruby"
-
-# Rake is the easiest way to go through this unfortunately.
-RUBY_FAKEGEM_RECIPE_TEST="rake"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 
@@ -25,10 +22,7 @@ IUSE="doc test"
 
 ruby_add_bdepend "
 	doc? ( dev-ruby/hoe dev-ruby/rdoc )
-	ruby_targets_ruby18? ( !!dev-ruby/minitest[ruby_targets_ruby18] )"
-
-# There is a nasty bug that tests fail if minitest is loaded already
-# from the system.
+	test? ( dev-ruby/hoe )"
 
 each_ruby_prepare() {
 	case ${RUBY} in
