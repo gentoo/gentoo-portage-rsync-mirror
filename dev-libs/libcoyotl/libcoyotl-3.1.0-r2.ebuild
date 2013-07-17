@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/libcoyotl-3.1.0-r1.ebuild,v 1.1 2013/04/19 02:53:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/libcoyotl-3.1.0-r2.ebuild,v 1.2 2013/07/17 09:59:37 pinkbyte Exp $
 
 EAPI="5"
 
@@ -9,27 +9,32 @@ inherit eutils autotools
 DESCRIPTION="A collection of portable C++ classes."
 HOMEPAGE="http://www.coyotegulch.com/products/libcoyotl/"
 SRC_URI="http://www.coyotegulch.com/distfiles/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND="media-libs/libpng"
+IUSE="doc static-libs"
+
+RDEPEND="media-libs/libpng:0="
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
+DOCS=( AUTHORS ChangeLog NEWS README )
+
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-gcc-4.3.patch" || die
-	epatch "${FILESDIR}/${PV}-gcc-4.7.patch" || die
+	epatch "${FILESDIR}/${PV}-gcc-4.3.patch"
+	epatch "${FILESDIR}/${PV}-gcc-4.7.patch"
+	epatch_user
 	eautoreconf
 }
 
 src_configure() {
-	ac_cv_prog_HAVE_DOXYGEN="false" econf || die "econf failed"
+	ac_cv_prog_HAVE_DOXYGEN="false" econf $(use_enable static-libs static)
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	if use doc ; then
 		cd docs
@@ -38,9 +43,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
+	prune_libtool_files
 	if use doc ; then
-		dohtml docs/html/* || die
+		dohtml docs/html/*
 	fi
 }
