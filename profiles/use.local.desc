@@ -3325,6 +3325,7 @@ media-sound/csound:samples - Install the HRTF datafiles for use with hrtfmove, h
 media-sound/csound:stk - Build the stk opcodes
 media-sound/csound:tcl - Build the tcl interface and clients
 media-sound/csound:utils - Build stand-alone executables for utilities that can also be used via `csound -U`
+media-sound/darkice:aacplus - AAC+ encoding via media-libs/libaacplus
 media-sound/darkice:opus - Enable Opus audio codec support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/decibel-audio-player:gnome - Adds Gnome media keys support, so you can control Decibel using hotkeys.

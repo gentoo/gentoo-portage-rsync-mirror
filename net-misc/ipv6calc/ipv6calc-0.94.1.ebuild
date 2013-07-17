@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.1.ebuild,v 1.6 2013/07/16 19:13:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.1.ebuild,v 1.7 2013/07/17 09:00:16 pinkbyte Exp $
 
 EAPI="4"
 inherit fixheadtails
@@ -15,10 +15,10 @@ KEYWORDS="~alpha amd64 hppa ppc ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="geoip test"
 
 RDEPEND="
-	dev-perl/URI
 	geoip? ( >=dev-libs/geoip-1.4.7 )
 "
 DEPEND="${RDEPEND}
+	dev-perl/URI
 	test? ( dev-perl/Digest-SHA1 )"
 
 src_prepare() {

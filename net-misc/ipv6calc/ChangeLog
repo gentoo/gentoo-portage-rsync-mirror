@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.69 2013/07/16 19:13:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.70 2013/07/17 09:00:16 pinkbyte Exp $
+
+  17 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> ipv6calc-0.94.1.ebuild:
+  Correct dependency on dev-perl/URI, thanks to Nikoli <nikoli AT lavabit.com>
 
   16 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> ipv6calc-0.93.1.ebuild,
   ipv6calc-0.94.1.ebuild:
