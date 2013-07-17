@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.1.ebuild,v 1.7 2013/07/17 09:00:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.1.ebuild,v 1.8 2013/07/17 09:11:53 pinkbyte Exp $
 
 EAPI="4"
 inherit fixheadtails
@@ -18,8 +18,9 @@ RDEPEND="
 	geoip? ( >=dev-libs/geoip-1.4.7 )
 "
 DEPEND="${RDEPEND}
-	dev-perl/URI
 	test? ( dev-perl/Digest-SHA1 )"
+
+#dev-perl/URI is needed for web interface, that is not installed now
 
 src_prepare() {
 	ht_fix_file configure
