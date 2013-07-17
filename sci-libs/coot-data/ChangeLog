@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/coot-data
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.13 2011/11/21 15:31:44 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.14 2013/07/17 07:18:31 jlec Exp $
+
+*coot-data-2-r1 (17 Jul 2013)
+
+  17 Jul 2013; Justin Lecher <jlec@gentoo.org> +coot-data-2-r1.ebuild,
+  metadata.xml:
+  Bump to EAPI=5
 
   21 Nov 2011; Justin Lecher <jlec@gentoo.org> coot-data-2.ebuild:
   keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/jeweler
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.20 2012/09/27 10:28:16 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.21 2013/07/17 07:18:33 graaff Exp $
+
+*jeweler-1.8.6 (17 Jul 2013)
+
+  17 Jul 2013; Hans de Graaff <graaff@gentoo.org> +jeweler-1.8.6.ebuild:
+  Version bump. Add additional dependencies listed in the gemspec.
 
   27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> jeweler-1.8.4.ebuild:
   Keyword ~ppc wrt #432830

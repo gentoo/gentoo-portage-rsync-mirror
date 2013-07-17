@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/jquery-rails-2.1.3.ebuild,v 1.2 2013/01/16 00:52:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/jquery-rails-2.3.0.ebuild,v 1.1 2013/07/17 07:22:39 graaff Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19 ree18"
+EAPI=5
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
 
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/railties-3.2.0 >=dev-ruby/thor-0.14"
+ruby_add_rdepend ">=dev-ruby/railties-3.0 >=dev-ruby/thor-0.14"
 
 all_ruby_prepare() {
 	sed -i -e '/git ls-files/d' jquery-rails.gemspec || die

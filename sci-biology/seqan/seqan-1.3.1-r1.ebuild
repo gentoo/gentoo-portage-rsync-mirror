@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.3.1-r1.ebuild,v 1.2 2013/05/29 16:07:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.3.1-r1.ebuild,v 1.3 2013/07/17 07:09:45 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ IUSE=""
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="${PYTHON_DEPS}"
+RDEPEND="${PYTHON_DEPS}
+	sci-biology/samtools"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${P}/cmake
