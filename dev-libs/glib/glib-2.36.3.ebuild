@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.3 2013/06/11 13:30:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.4 2013/07/17 04:59:44 ssuominen Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -42,6 +42,7 @@ DEPEND="${RDEPEND}
 		>=sys-apps/dbus-1.2.14 )
 	!<dev-libs/gobject-introspection-1.$(get_version_component_range 2)
 	!<dev-util/gtk-doc-1.15-r2
+	!<app-shells/bash-completion-2.1-r1
 "
 # gobject-introspection blocker to ensure people don't mix
 # different g-i and glib major versions
@@ -122,9 +123,6 @@ src_prepare() {
 
 	# gdbus-codegen is a separate package
 	epatch "${FILESDIR}/${PN}-2.35.x-external-gdbus-codegen.patch"
-
-	# bashcomp goes in /usr/share/bash-completion
-	epatch "${FILESDIR}/${PN}-2.32.4-bashcomp.patch"
 
 	# leave python shebang alone
 	sed -e '/${PYTHON}/d' \
