@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.2-r1.ebuild,v 1.3 2013/07/07 13:09:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.2-r1.ebuild,v 1.4 2013/07/16 23:58:32 tomwij Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="aften a52 alsa amr debug dts fontconfig jack lame libsamplerate mmx oss nls sdl -system-ffmpeg vorbis truetype xvid x264 xv"
 
 RDEPEND="
-	!<media-video/avidemux-2.6.2-r1
+	!<media-video/avidemux-2.6.2-r1:${SLOT}
 	>=dev-lang/spidermonkey-1.5-r2
 	dev-libs/libxml2
 	media-libs/libpng

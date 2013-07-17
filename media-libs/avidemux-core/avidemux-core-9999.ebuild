@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-9999.ebuild,v 1.1 2013/07/16 19:41:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-9999.ebuild,v 1.2 2013/07/16 23:58:32 tomwij Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ fi
 
 # Trying to use virtual; ffmpeg misses aac,cpudetection USE flags now though, are they needed?
 DEPEND="
-	!<media-video/avidemux-${PV}
+	!<media-video/avidemux-${PV}:${SLOT}
 	dev-db/sqlite:3
 	nls? ( sys-devel/gettext:0 )
 	sdl? ( media-libs/libsdl:0 )
