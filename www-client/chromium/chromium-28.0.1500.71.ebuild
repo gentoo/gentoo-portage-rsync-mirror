@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.71.ebuild,v 1.3 2013/07/10 20:10:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.71.ebuild,v 1.4 2013/07/17 22:54:41 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -137,6 +137,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-system-harfbuzz-r0.patch"
 
 	epatch "${FILESDIR}/${PN}-nss-3.15.patch"
+
+	epatch "${FILESDIR}/chromium-bug471198.patch"
 
 	epatch_user
 

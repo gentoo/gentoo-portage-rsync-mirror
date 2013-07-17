@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.913 2013/07/14 00:34:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.914 2013/07/17 22:54:41 floppym Exp $
+
+  17 Jul 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/chromium-bug471198.patch, chromium-28.0.1500.71.ebuild,
+  chromium-28.0.1500.89.ebuild:
+  Apply upstream fix for bug 471198.
 
   14 Jul 2013; Mike Gilbert <floppym@gentoo.org> chromium-28.0.1500.89.ebuild,
   chromium-29.0.1547.15.ebuild, chromium-9999-r1.ebuild:
