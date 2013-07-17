@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.54 2013/06/11 19:40:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.55 2013/07/17 20:56:54 slyfox Exp $
+
+*dosemu-1.4.1_pre20130107 (17 Jul 2013)
+
+  17 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +dosemu-1.4.1_pre20130107.ebuild, metadata.xml:
+  Bump snapshot version of dosemu (ebuild and bug #451092 by Ben Kohler). Added
+  myself as a co-maintainer.
 
   11 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
   +files/dosemu-1.4.1_pre20091009-flex.patch, dosemu-1.4.1_pre20091009.ebuild:
