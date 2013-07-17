@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.20 2013/07/13 13:53:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.21 2013/07/17 16:40:23 chithanh Exp $
+
+  17 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  wayland-1.2.0.ebuild:
+  Fix test failure and add missing pkgconfig dependency, bug #476934 by Nikoli.
 
 *wayland-1.2.0 (13 Jul 2013)
 

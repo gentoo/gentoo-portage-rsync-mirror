@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.2.0.ebuild,v 1.1 2013/07/13 13:53:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.2.0.ebuild,v 1.2 2013/07/17 16:40:23 chithanh Exp $
 
 EAPI=5
 
@@ -30,7 +30,8 @@ IUSE="doc static-libs"
 RDEPEND="dev-libs/expat
 	virtual/libffi"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	virtual/pkgconfig"
 
 src_prepare() {
 	if [[ ${PV} = 9999* ]]; then
@@ -45,4 +46,12 @@ src_configure() {
 		myconf+=" --disable-scanner"
 	fi
 	econf ${myconf}
+}
+
+src_test() {
+	export XDG_RUNTIME_DIR="${T}/runtime-dir"
+	mkdir "${XDG_RUNTIME_DIR}" || die
+	chmod 0700 "${XDG_RUNTIME_DIR}" || die
+
+	default
 }
