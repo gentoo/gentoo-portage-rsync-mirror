@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.49 2013/06/01 14:27:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.4.ebuild,v 1.1 2013/07/17 06:02:01 ssuominen Exp $
 
 EAPI=5
-VALA_MIN_API_VERSION=0.14
+VALA_MIN_API_VERSION=0.16
 
 PYTHON_COMPAT=( python2_7 )
 
@@ -14,26 +14,28 @@ if [[ ${PV} == *9999* ]]; then
 	_live_inherits=git-2
 else
 	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
-	SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
+	SRC_URI="http://www.${PN}-browser.org/downloads/${PN}_${PV}_all_.tar.bz2"
+	S=${WORKDIR}/${PN}_${PV}_all_
 fi
 
 inherit eutils fdo-mime gnome2-utils python-any-r1 waf-utils vala ${_live_inherits}
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
-HOMEPAGE="http://twotoasts.de/index.php/midori/"
+HOMEPAGE="http://www.midori-browser.org/"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="0"
-IUSE="+deprecated doc gnome libnotify nls +unique webkit2 zeitgeist"
+IUSE="+deprecated doc gnome nls +unique webkit2 zeitgeist"
 
 RDEPEND=">=dev-db/sqlite-3.6.19:3
-	>=dev-libs/glib-2.22
+	>=dev-libs/glib-2.32.3
 	dev-libs/libxml2
 	>=net-libs/libsoup-2.34:2.4
+	>=x11-libs/libnotify-0.7
 	x11-libs/libXScrnSaver
 	deprecated? (
-		net-libs/webkit-gtk:2
-		x11-libs/gtk+:2
+		>=net-libs/webkit-gtk-1.8.3:2
+		>=x11-libs/gtk+-2.24:2
 		unique? ( dev-libs/libunique:1 )
 		)
 	!deprecated? (
@@ -44,7 +46,6 @@ RDEPEND=">=dev-db/sqlite-3.6.19:3
 		webkit2? ( >=net-libs/webkit-gtk-2 )
 		)
 	gnome? ( || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34:2.4 ) )
-	libnotify? ( >=x11-libs/libnotify-0.7 )
 	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -57,7 +58,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	python-any-r1_pkg_setup
 
-	DOCS=( AUTHORS ChangeLog HACKING INSTALL TODO TRANSLATE )
+	DOCS=( AUTHORS ChangeLog HACKING README TODO TRANSLATE )
 	HTML_DOCS=( data/faq.html data/faq.css )
 }
 
@@ -86,7 +87,6 @@ src_configure() {
 		--disable-docs \
 		$(use_enable doc apidocs) \
 		$(use_enable unique) \
-		$(use_enable libnotify) \
 		--disable-granite \
 		--enable-addons \
 		$(use_enable nls) \

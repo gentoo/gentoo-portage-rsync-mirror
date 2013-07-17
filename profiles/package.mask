@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14930 2013/07/16 13:25:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14931 2013/07/17 06:26:22 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (17 Jul 2013)
+# superseeded by sci-biology/allpathslg
+# Upstream wants anybody to move over
+sci-biology/allpaths
 
 # Mikle Kolyada <zlogene@gentoo.org> (16 Jul 2013)
 # Upstream dead.
