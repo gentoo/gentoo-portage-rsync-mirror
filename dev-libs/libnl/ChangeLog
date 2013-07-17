@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.181 2013/07/16 22:46:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.182 2013/07/16 23:24:27 jer Exp $
+
+*libnl-3.2.22-r2 (16 Jul 2013)
+
+  16 Jul 2013; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.22-r1.ebuild,
+  +libnl-3.2.22-r2.ebuild, +files/libnl-3.2.22-python.patch:
+  Fix python extension linking (bug #477110 by Arfrever Frehtes Taifersar
+  Arahesis).
 
   16 Jul 2013; Jeroen Roovers <jer@gentoo.org> libnl-3.2.22-r1.ebuild:
   DEPEND on dev-lang/swig for python support by Arfrever Frehtes Taifersar
