@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.7.4.ebuild,v 1.2 2013/03/30 14:55:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.8.1.ebuild,v 1.1 2013/07/17 20:19:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,11 +10,13 @@ PYTHON_COMPAT=( python2_{6,7} )
 inherit eutils gnome2 python-r1
 
 DESCRIPTION="Tool to customize GNOME 3 options"
-HOMEPAGE="http://live.gnome.org/GnomeTweakTool"
+HOMEPAGE="https://wiki.gnome.org/GnomeTweakTool"
 
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 COMMON_DEPEND="
