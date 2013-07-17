@@ -1,26 +1,35 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.4.ebuild,v 1.4 2013/07/17 00:31:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-9999.ebuild,v 1.1 2013/07/17 00:31:34 tomwij Exp $
 
 EAPI="5"
 
 PLOCALES="ca cs de el es fr it ja pt_BR ru sr sr@latin tr"
-inherit cmake-utils eutils flag-o-matic l10n toolchain-funcs
+
+inherit cmake-utils eutils flag-o-matic l10n
 
 SLOT="2.6"
-MY_P="${PN}_${PV}"
 
 DESCRIPTION="Video editor designed for simple cutting, filtering and encoding tasks."
 HOMEPAGE="http://fixounet.free.fr/${PN}"
-SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
 
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
-KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl nls qt4 sdl vdpau xv"
+KEYWORDS="~amd64 ~x86"
 
-DEPEND="~media-libs/avidemux-core-${PV}[nls?,sdl?,vdpau?,xv?]
-	opengl? ( virtual/opengl )
+if [[ ${PV} == *9999* ]] ; then
+	KEYWORDS=""
+	EGIT_REPO_URI="git://gitorious.org/${PN}2-6/${PN}2-6.git https://git.gitorious.org/${PN}2-6/${PN}2-6.git"
+
+	inherit git-2
+else
+	MY_P="${PN}_${PV}"
+	SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
+fi
+
+DEPEND="~media-libs/avidemux-core-${PV}:${SLOT}[nls?,sdl?,vdpau?,xv?]
+	opengl? ( virtual/opengl:0 )
 	qt4? ( >=dev-qt/qtgui-4.8.3:4 )"
 RDEPEND="$DEPEND"
 PDEPEND="~media-libs/avidemux-plugins-${PV}"
@@ -28,11 +37,10 @@ PDEPEND="~media-libs/avidemux-plugins-${PV}"
 S="${WORKDIR}/${MY_P}"
 
 processes="buildCli:avidemux/cli"
-
 use qt4 && processes+=" buildQt4:avidemux/qt4"
 
 src_prepare() {
-	default
+	cmake-utils_src_prepare
 
 	# Fix icon name -> avidemux-2.6.png
 	sed -i -e "/^Icon/ s:${PN}:${PN}-2.6:" ${PN}2.desktop || die "Icon name fix failed."
@@ -55,7 +63,6 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs="
 		-DAVIDEMUX_SOURCE_DIR='${S}'
-		-DCMAKE_INSTALL_PREFIX='/usr'
 		$(cmake-utils_use nls GETTEXT)
 		$(cmake-utils_use sdl SDL)
 		$(cmake-utils_use vdpau VDPAU)
@@ -63,7 +70,7 @@ src_configure() {
 	"
 
 	if use debug ; then
-		mycmakeargs+=" -DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug"
+		mycmakeargs+=" -DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug -DADM_DEBUG=1"
 	fi
 
 	for process in ${processes} ; do
@@ -73,9 +80,7 @@ src_configure() {
 		cd "${S}"/${build} || die "Can't enter build folder."
 		CMAKE_USE_DIR="${S}"/${process#*:} BUILD_DIR="${S}"/${build} cmake-utils_src_configure
 	done
-}
 
-src_compile() {
 	# Add lax vector typing for PowerPC.
 	if use ppc || use ppc64 ; then
 		append-cflags -flax-vector-conversions
@@ -83,24 +88,20 @@ src_compile() {
 
 	# See bug 432322.
 	use x86 && replace-flags -O0 -O1
+}
 
+src_compile() {
 	for process in ${processes} ; do
-		local source="${process%%:*}"
-
-		cd "${S}/${source}" || die "Can't enter build folder."
-		emake CC="$(tc-getCC)" CXX="$(tc-getCXX)"
+		BUILD_DIR="${S}/${process%%:*}" cmake-utils_src_compile
 	done
 }
 
+DOCS=( AUTHORS README )
+
 src_install() {
 	for process in ${processes} ; do
-		local source="${process%%:*}"
-
-		cd "${S}/${source}" || die "Can't enter build folder."
-		emake DESTDIR="${ED}" install
+		BUILD_DIR="${S}/${process%%:*}" cmake-utils_src_install
 	done
-
-	cd "${S}" || die "Can't enter source folder."
 
 	if [[ -f "${ED}"/usr/bin/avidemux3_cli ]] ; then
 		fperms +x /usr/bin/avidemux3_cli
@@ -109,10 +110,12 @@ src_install() {
 	if [[ -f "${ED}"/usr/bin/avidemux3_jobs ]] ; then
 		fperms +x /usr/bin/avidemux3_jobs
 	fi
-	use qt4 && fperms +x /usr/bin/avidemux3_qt4
 
+	cd "${S}" || die "Can't enter source folder."
 	newicon ${PN}_icon.png ${PN}-2.6.png
-	use qt4 && domenu ${PN}-2.6.desktop
 
-	dodoc AUTHORS README
+	if use qt4 ; then
+		fperms +x /usr/bin/avidemux3_qt4
+		domenu ${PN}-2.6.desktop
+	fi
 }
