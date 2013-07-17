@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.936 2013/07/16 15:34:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.937 2013/07/17 04:28:55 ssuominen Exp $
+
+  17 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udev-205.ebuild,
+  udev-9999.ebuild:
+  Pull in app-text/docbook-xml-dtd:4.2 for generation of udev(7), udevadm(8)
+  and systemd-udevd(8) manpages. Move libxslt and docbook(s) behind 9999 "if" and
+  "else" block again thanks to upstream shipping manpages in tarballs again wrt
+  http://cgit.freedesktop.org/systemd/systemd/commit/?id=b31c6d8d4f33502d6060e7
+  08f5252ee2ea8648ad
 
   16 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   This commit will require 60-keyboard.hwdb file from sys-apps/hwids. Upstream

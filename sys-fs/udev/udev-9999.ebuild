@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.236 2013/07/16 15:34:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.237 2013/07/17 04:28:55 ssuominen Exp $
 
 EAPI=5
 
@@ -45,8 +45,6 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	!<sys-libs/glibc-2.11
 	!sys-apps/systemd"
 DEPEND="${COMMON_DEPEND}
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
 	dev-util/gperf
 	>=sys-devel/make-3.82-r4
 	virtual/os-headers
@@ -55,6 +53,9 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
+		app-text/docbook-xml-dtd:4.2
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt
 		>=dev-util/intltool-0.50"
 fi
 RDEPEND="${COMMON_DEPEND}

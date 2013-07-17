@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-205.ebuild,v 1.1 2013/07/04 12:11:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-205.ebuild,v 1.2 2013/07/17 04:28:55 ssuominen Exp $
 
 EAPI=5
 
@@ -44,8 +44,8 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
 	!sys-apps/systemd"
-
 DEPEND="${COMMON_DEPEND}
+	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	>=sys-devel/make-3.82-r4
@@ -54,13 +54,11 @@ DEPEND="${COMMON_DEPEND}
 	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( >=dev-util/gtk-doc-1.18 )
 	keymap? ( dev-util/gperf )"
-
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
 		dev-util/gperf
 		>=dev-util/intltool-0.50"
 fi
-
 RDEPEND="${COMMON_DEPEND}
 	openrc? ( !<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
@@ -70,7 +68,6 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25
 	!<sec-policy/selinux-base-2.20120725-r10"
-
 PDEPEND=">=virtual/udev-197-r1
 	hwdb? ( >=sys-apps/hwids-20130326.1[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-25 )"
