@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.4.ebuild,v 1.2 2011/09/24 12:36:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.4.ebuild,v 1.3 2013/07/17 08:28:02 dirtyepic Exp $
 
 EAPI="2"
 inherit autotools base
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}/${PV}-respect-ldflags-no-rpath.patch"
 	"${FILESDIR}/${P}-gcc46.patch"
+	"${FILESDIR}/${P}-gcc47.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
