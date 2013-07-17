@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=app-crypt/qca:2 >=dev-cpp/clucene-2.3.3.4 >=dev-libs/boost-1.41 >=dev-libs/libattica-0.4.0 dev-libs/qjson dev-libs/quazip >=dev-qt/qtcore-4.7.0:4 >=dev-qt/qtdbus-4.7.0:4 >=dev-qt/qtgui-4.7.0:4 >=dev-qt/qtsql-4.7.0:4[sqlite] >=dev-qt/qtsvg-4.7.0:4 >=dev-qt/qtwebkit-4.7.0:4 >=media-libs/liblastfm-1.0.1 >=media-libs/libechonest-2.0.1 >=media-libs/phonon-4.5.0 >=media-libs/taglib-1.6.0 x11-libs/libX11 jabber? ( >=net-libs/jreen-1.1.1 ) twitter? ( net-libs/qtweetlib ) sys-devel/make >=dev-util/cmake-2.8.6 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=app-crypt/qca:2 >=dev-cpp/clucene-2.3.3.4 >=dev-libs/boost-1.41 >=dev-libs/libattica-0.4.0 dev-libs/qjson dev-libs/quazip >=dev-qt/qtcore-4.7.0:4 >=dev-qt/qtdbus-4.7.0:4 || ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) ) >=dev-qt/qtsql-4.7.0:4[sqlite] >=dev-qt/qtsvg-4.7.0:4 >=dev-qt/qtwebkit-4.7.0:4 >=media-libs/liblastfm-1.0.1 >=media-libs/libechonest-2.0.1 >=media-libs/phonon-4.5.0 >=media-libs/taglib-1.6.0 x11-libs/libX11 jabber? ( >=net-libs/jreen-1.1.1 ) twitter? ( net-libs/qtweetlib ) sys-devel/make >=dev-util/cmake-2.8.6 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Qt playdar social music player
 EAPI=5
 HOMEPAGE=http://tomahawk-player.org/
 IUSE=debug jabber twitter
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3 BSD
-RDEPEND=app-crypt/qca:2 >=dev-cpp/clucene-2.3.3.4 >=dev-libs/boost-1.41 >=dev-libs/libattica-0.4.0 dev-libs/qjson dev-libs/quazip >=dev-qt/qtcore-4.7.0:4 >=dev-qt/qtdbus-4.7.0:4 >=dev-qt/qtgui-4.7.0:4 >=dev-qt/qtsql-4.7.0:4[sqlite] >=dev-qt/qtsvg-4.7.0:4 >=dev-qt/qtwebkit-4.7.0:4 >=media-libs/liblastfm-1.0.1 >=media-libs/libechonest-2.0.1 >=media-libs/phonon-4.5.0 >=media-libs/taglib-1.6.0 x11-libs/libX11 jabber? ( >=net-libs/jreen-1.1.1 ) twitter? ( net-libs/qtweetlib ) app-crypt/qca-ossl
+RDEPEND=app-crypt/qca:2 >=dev-cpp/clucene-2.3.3.4 >=dev-libs/boost-1.41 >=dev-libs/libattica-0.4.0 dev-libs/qjson dev-libs/quazip >=dev-qt/qtcore-4.7.0:4 >=dev-qt/qtdbus-4.7.0:4 || ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) ) >=dev-qt/qtsql-4.7.0:4[sqlite] >=dev-qt/qtsvg-4.7.0:4 >=dev-qt/qtwebkit-4.7.0:4 >=media-libs/liblastfm-1.0.1 >=media-libs/libechonest-2.0.1 >=media-libs/phonon-4.5.0 >=media-libs/taglib-1.6.0 x11-libs/libX11 jabber? ( >=net-libs/jreen-1.1.1 ) twitter? ( net-libs/qtweetlib ) app-crypt/qca-ossl
 SLOT=0
 SRC_URI=http://download.tomahawk-player.org/tomahawk-0.6.1.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	e40c43582b7ebe5daa0528b595603b29	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=26e92bf142f96c15af064c75c1277661
+_md5_=eb94cefa3c66cd0d76ebac08214ae024

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.7.0.ebuild,v 1.1 2013/05/03 22:09:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.7.0.ebuild,v 1.2 2013/07/17 02:20:28 patrick Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ DEPEND="
 	dev-libs/quazip
 	>=dev-qt/qtcore-${QT_MINIMAL}:4
 	>=dev-qt/qtdbus-${QT_MINIMAL}:4
-	>=dev-qt/qtgui-${QT_MINIMAL}:4
+	|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) )
 	>=dev-qt/qtsql-${QT_MINIMAL}:4[sqlite]
 	>=dev-qt/qtsvg-${QT_MINIMAL}:4
 	>=dev-qt/qtwebkit-${QT_MINIMAL}:4
