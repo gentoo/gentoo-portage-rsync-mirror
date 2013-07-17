@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/arx-libertatis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.16 2013/07/14 13:17:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.17 2013/07/17 00:31:11 hasufell Exp $
+
+*arx-libertatis-1.1-r1 (17 Jul 2013)
+
+  17 Jul 2013; Julian Ospald <hasufell@gentoo.org> -arx-libertatis-1.1.ebuild,
+  +arx-libertatis-1.1-r1.ebuild, +files/arx-libertatis-1.1-map-marker.patch:
+  hotfix for map marker regression
 
 *arx-libertatis-1.1 (14 Jul 2013)
 

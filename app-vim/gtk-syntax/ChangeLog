@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.64 2013/05/25 07:57:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.65 2013/07/17 00:28:29 radhermit Exp $
+
+*gtk-syntax-20130716 (17 Jul 2013)
+
+  17 Jul 2013; Tim Harder <radhermit@gentoo.org> +gtk-syntax-20130716.ebuild:
+  Version bump.
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> gtk-syntax-20121015.ebuild:
   Stable for sparc, wrt bug #469790

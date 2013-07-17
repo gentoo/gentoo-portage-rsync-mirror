@@ -1,0 +1,32 @@
+From e37b1efc4c2d9109625c3add80c04884ac9e2f3b Mon Sep 17 00:00:00 2001
+From: Daniel Scharrer <daniel@constexpr.org>
+Date: Wed, 17 Jul 2013 02:21:13 +0200
+Subject: [PATCH] Fix map marker labels not being saved
+
+Thanks to Eli2 for hunting down the offending change.
+
+See: commit d9662f
+---
+ src/scene/SaveFormat.h | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/scene/SaveFormat.h b/src/scene/SaveFormat.h
+index 7ffb17c..02e4b85 100644
+--- a/src/scene/SaveFormat.h
++++ b/src/scene/SaveFormat.h
+@@ -182,11 +182,12 @@ struct SavedMapMarkerData {
+ 	s32 lvl;
+ 	char name[STRING_SIZE];
+ 	
+-	/* implicit */ SavedMapMarkerData(const MiniMap::MapMarkerData &b) {
++	/* implicit */ SavedMapMarkerData(const MiniMap::MapMarkerData & b) {
+ 		x = b.m_x;
+ 		y = b.m_y;
+ 		lvl = b.m_lvl;
+ 		arx_assert(STRING_SIZE > b.m_name.length());
++		strcpy(name, b.m_name.c_str());
+ 	}
+ 	
+ };
+-- 
+1.8.1.6
