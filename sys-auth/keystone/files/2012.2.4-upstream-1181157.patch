@@ -1,0 +1,37 @@
+From edbd3ad9158f96fdc7ed621d7c72cd2e71fa5101 Mon Sep 17 00:00:00 2001
+From: Dolph Mathews <dolph.mathews@gmail.com>
+Date: Tue, 28 May 2013 08:09:49 -0500
+Subject: [PATCH] Default signing_dir to secure temp dir (bug 1181157)
+
+Change-Id: I1a29f50b07a60de3d0519bf40074dbea92fa8656
+---
+ keystone/middleware/auth_token.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/keystone/middleware/auth_token.py b/keystone/middleware/auth_token.py
+index 01e6c58..b1a4d48 100644
+--- a/keystone/middleware/auth_token.py
++++ b/keystone/middleware/auth_token.py
+@@ -99,6 +99,7 @@ import json
+ import logging
+ import os
+ import stat
++import tempfile
+ import time
+ import webob
+ import webob.exc
+@@ -213,10 +214,10 @@ class AuthProtocol(object):
+         self.cert_file = self._conf_get('certfile')
+         self.key_file = self._conf_get('keyfile')
+ 
+-        #signing
++        # signing
+         self.signing_dirname = self._conf_get('signing_dir')
+         if self.signing_dirname is None:
+-            self.signing_dirname = '%s/keystone-signing' % os.environ['HOME']
++            self.signing_dirname = tempfile.mkdtemp(prefix='keystone-signing-')
+         LOG.info('Using %s as cache directory for signing certificate' %
+                  self.signing_dirname)
+         if os.path.exists(self.signing_dirname):
+-- 
+1.8.1.5

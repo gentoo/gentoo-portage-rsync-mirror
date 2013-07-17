@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2012.2.4-r5.ebuild,v 1.1 2013/06/14 21:57:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2012.2.4-r6.ebuild,v 1.1 2013/07/17 16:30:36 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -74,6 +74,7 @@ PATCHES=(
 	"${FILESDIR}/keystone-folsom-4-CVE-2013-1977.patch"
 	"${FILESDIR}/keystone-folsom-4-CVE-2013-2104.patch"
 	"${FILESDIR}/keystone-folsom-4-CVE-2013-2157.patch"
+	"${FILESDIR}/2012.2.4-upstream-1181157.patch"
 )
 
 python_install() {
