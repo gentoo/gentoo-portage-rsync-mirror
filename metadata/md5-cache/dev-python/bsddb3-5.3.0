@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/db-4.8.30 || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =d
 SLOT=0
 SRC_URI=mirror://pypi/b/bsddb3/bsddb3-5.3.0.tar.gz
 _eclasses_=db-use	2f5d6a2718559b90a51648d8ff58be83	distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=bedb1d3e0f7c58369d16839b36188b38
+_md5_=6fc5e3c85d68e2aadef6de9e58bc465b

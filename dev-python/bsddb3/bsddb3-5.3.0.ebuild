@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.12 2013/05/28 19:00:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.13 2013/07/17 23:24:15 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2 3:3.1"
@@ -38,8 +38,8 @@ src_configure() {
 	sed -e "s/dblib = 'db'/dblib = '$(db_libname ${DB_VER})'/" -i setup2.py setup3.py || die "sed failed"
 }
 
-python_compile() {
-	distutils-r1_python_compile \
+src_compile() {
+	distutils_src_compile \
 		--berkeley-db="${EPREFIX}/usr" \
 		--berkeley-db-incdir="${EPREFIX}$(db_includedir ${DB_VER})" \
 		--berkeley-db-libdir="${EPREFIX}/usr/$(get_libdir)"
