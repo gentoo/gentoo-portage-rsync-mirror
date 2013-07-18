@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xscreensaver-app
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.10 2010/08/27 17:21:28 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.11 2013/07/18 21:23:33 jer Exp $
+
+*xscreensaver-app-2.3-r2 (18 Jul 2013)
+
+  18 Jul 2013; Jeroen Roovers <jer@gentoo.org> -xscreensaver-app-2.3-r1.ebuild,
+  +xscreensaver-app-2.3-r2.ebuild,
+  +files/xscreensaver-app-2.3-underlinking.patch:
+  Fix underlinking (bug #369049).
 
 *xscreensaver-app-2.3-r1 (27 Aug 2010)
 

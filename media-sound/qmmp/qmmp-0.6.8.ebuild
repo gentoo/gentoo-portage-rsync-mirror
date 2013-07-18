@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.8.ebuild,v 1.3 2013/04/27 18:42:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.8.ebuild,v 1.4 2013/07/18 21:11:20 creffett Exp $
 
 EAPI="5"
 
@@ -72,7 +72,7 @@ src_prepare() {
 			src/plugins/Input/cdaudio/decoder_cdaudio.cpp || die
 	fi
 
-	base_src_prepare
+	cmake-utils_src_prepare
 }
 
 src_configure() {
