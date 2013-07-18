@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psutil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.21 2013/07/10 18:35:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.22 2013/07/18 00:10:27 radhermit Exp $
+
+*psutil-1.0.1 (18 Jul 2013)
+
+  18 Jul 2013; Tim Harder <radhermit@gentoo.org> +psutil-1.0.1.ebuild:
+  Version bump.
 
   10 Jul 2013; Tim Harder <radhermit@gentoo.org> -psutil-0.3.0.ebuild,
   -psutil-0.4.0.ebuild, -psutil-0.4.1.ebuild, -psutil-0.5.1.ebuild,
