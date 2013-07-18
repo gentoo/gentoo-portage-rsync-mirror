@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14-r3.ebuild,v 1.1 2013/07/17 16:19:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14-r3.ebuild,v 1.2 2013/07/18 12:16:47 chithanh Exp $
 
 EAPI=5
 
@@ -99,8 +99,6 @@ src_configure() {
 
 	use elibc_FreeBSD && myopts+=" --disable-symbol-lookup"
 
-	# --disable-xcb-lib:
-	#	do not override good xlib backed by hardforcing rendering over xcb
 	econf \
 		--disable-dependency-tracking \
 		$(use_with X x) \
@@ -129,7 +127,6 @@ src_configure() {
 		--enable-pdf \
 		--enable-png \
 		--enable-ps \
-		--disable-xlib-xcb \
 		${myopts}
 }
 
