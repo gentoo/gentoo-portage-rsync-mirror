@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-1.2.4.ebuild,v 1.2 2013/03/02 19:29:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-1.2.4.ebuild,v 1.3 2013/07/18 21:57:13 creffett Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ PATCHES=(
 )
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	# Fix docs install path
 	sed -i -e "/DOCDIR / s:\${CMAKE_PROJECT_NAME}:${PF}:" \
