@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Proc-ProcessTable
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.59 2012/11/04 07:39:44 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.60 2013/07/18 14:12:00 zlogene Exp $
+
+*Proc-ProcessTable-0.480.0 (18 Jul 2013)
+
+  18 Jul 2013; Mikle Kolyada <zlogene@gentoo.org>
+  +Proc-ProcessTable-0.480.0.ebuild:
+  Security bump (CVE-2011-4363)
 
 *Proc-ProcessTable-0.460.0 (04 Nov 2012)
 

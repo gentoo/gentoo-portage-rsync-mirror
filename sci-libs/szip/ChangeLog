@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/szip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.24 2012/10/15 10:14:07 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.25 2013/07/18 14:14:54 chithanh Exp $
+
+  18 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  szip-2.1-r1.ebuild:
+  Keyword ~arm.
 
   15 Oct 2012;  <naota@gentoo.org> szip-2.1-r1.ebuild:
   Add ~x86-fbsd.

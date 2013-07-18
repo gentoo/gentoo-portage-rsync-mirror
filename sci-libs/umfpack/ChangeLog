@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.45 2013/07/01 06:47:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.46 2013/07/18 14:02:41 chithanh Exp $
+
+  18 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  umfpack-5.6.2.ebuild:
+  Keyword ~arm.
 
   01 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove redundant metis useflag description

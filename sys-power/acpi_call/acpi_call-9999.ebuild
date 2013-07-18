@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/acpi_call-9999.ebuild,v 1.5 2013/01/11 22:45:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/acpi_call-9999.ebuild,v 1.6 2013/07/18 14:14:47 ottxor Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ if [ "${PV}" = "9999" ]; then
 	KEYWORDS=""
 else
 	inherit vcs-snapshot
-	SRC_URI="mirror://github/mkottman/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+	SRC_URI="https://github.com/mkottman/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
@@ -21,7 +21,6 @@ HOMEPAGE="http://github.com/mkottman/acpi_call"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE=""
 
 CONFIG_CHECK="ACPI"

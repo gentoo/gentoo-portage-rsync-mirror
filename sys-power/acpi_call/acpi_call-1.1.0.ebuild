@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/acpi_call-1.0.0.ebuild,v 1.2 2013/01/11 22:45:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/acpi_call-1.1.0.ebuild,v 1.1 2013/07/18 14:14:47 ottxor Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ if [ "${PV}" = "9999" ]; then
 	KEYWORDS=""
 else
 	inherit vcs-snapshot
-	SRC_URI="mirror://github/mkottman/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+	SRC_URI="https://github.com/mkottman/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
