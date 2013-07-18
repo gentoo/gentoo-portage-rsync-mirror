@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/service-manager/service-manager-0.ebuild,v 1.1 2013/07/18 19:18:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/service-manager/service-manager-0.ebuild,v 1.2 2013/07/18 19:49:04 williamh Exp $
 
 DESCRIPTION="Virtual for various service managers"
 HOMEPAGE=""
@@ -14,5 +14,5 @@ IUSE=""
 RDEPEND="|| ( sys-apps/openrc
 	kernel_linux? ( sys-apps/systemd
 		sys-process/runit
-		vvirtual/daemontools ) )"
+		virtual/daemontools ) )"
 DEPEND=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.20.ebuild,v 1.1 2013/07/10 14:30:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.20.ebuild,v 1.2 2013/07/18 19:33:31 aidecoe Exp $
 
 EAPI=5
 
@@ -27,12 +27,18 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/coverage[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
+		python_targets_python2_6? (
+			dev-python/unittest2[python_targets_python2_6] )
+		python_targets_python3_1? (
+			dev-python/unittest2[python_targets_python3_1] )
 	)"
 
 S="${WORKDIR}/${MY_P}"
 DISTUTILS_IN_SOURCE_BUILD=1
 
 python_prepare_all() {
+	epatch "${FILESDIR}/${PV}-0001-Use-unittest2-for-older-Python-version.patch"
+
 	sed \
 		-e '/sys.path.insert/a sys.path.insert(1,"PyroTests")' \
 		-i tests/run_suite.py || die
