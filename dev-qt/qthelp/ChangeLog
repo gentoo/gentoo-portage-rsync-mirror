@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.6 2013/07/11 17:31:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.7 2013/07/18 09:35:10 patrick Exp $
+
+  18 Jul 2013; Patrick Lauer <patrick@gentoo.org> qthelp-4.8.5.ebuild:
+  Adding qtclucene broken by splitting #476614
 
   11 Jul 2013; Michael Palimaka <kensington@gentoo.org> qthelp-4.8.5.ebuild:
   Fix target directories causing configure failure wrt bug #476552.
