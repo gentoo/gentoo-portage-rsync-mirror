@@ -1,0 +1,42 @@
+From f418a6cb29aa19165f9c4dad84858cd479d89d84 Mon Sep 17 00:00:00 2001
+From: Jean Brefort <jean.brefort@normalesup.org>
+Date: Thu, 11 Jul 2013 09:57:11 +0200
+Subject: [PATCH] Fixed goffice-component.h
+
+---
+ ChangeLog                             | 5 +++++
+ goffice/component/goffice-component.h | 3 ++-
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/ChangeLog b/ChangeLog
+index 5548a65..2c45407 100644
+--- a/ChangeLog
++++ b/ChangeLog
+@@ -1,3 +1,8 @@
++2013-07-11  Jean Brefort  <jean.brefort@normalesup.org>
++
++	* goffice/component/goffice-component.h: move includes outside of 
++	G_BEGIN_DECLS/G_END_DECLS.
++
+ 2013-07-10  Morten Welinder <terra@gnome.org>
+ 
+ 	* configure.ac: Post-release bump.
+diff --git a/goffice/component/goffice-component.h b/goffice/component/goffice-component.h
+index 3ad931d..ac5a976 100644
+--- a/goffice/component/goffice-component.h
++++ b/goffice/component/goffice-component.h
+@@ -30,9 +30,10 @@ typedef struct _GOComponent GOComponent;
+ typedef struct _GOComponentType GOComponentType;
+ typedef struct _GOComponentMimeDialog GOComponentMimeDialog;
+ 
++G_END_DECLS
++
+ #include <goffice/component/go-component.h>
+ #include <goffice/component/go-component-factory.h>
+ #include <goffice/component/go-component-mime-dialog.h>
+-G_END_DECLS
+ 
+ #endif	/* GOFFICE_COMPONENT_H */
+-- 
+1.8.3.2
+

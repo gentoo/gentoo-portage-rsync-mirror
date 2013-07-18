@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.124 2013/06/26 17:05:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.125 2013/07/18 07:51:12 jlec Exp $
+
+*goffice-0.10.4 (18 Jul 2013)
+
+  18 Jul 2013; Justin Lecher <jlec@gentoo.org> +goffice-0.10.4.ebuild,
+  +files/goffice-0.10.4-component.h-backport.patch:
+  Version Bump, #476488; Add backport patch to fix build problems of
+  sci-chemistry/gnome-chemistry-utils
 
 *goffice-0.10.3 (26 Jun 2013)
 
