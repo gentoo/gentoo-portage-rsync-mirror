@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.352 2013/07/15 18:53:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.353 2013/07/18 16:49:34 ssuominen Exp $
+
+*alsa-utils-1.0.27.2 (18 Jul 2013)
+
+  18 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +alsa-utils-1.0.27.2.ebuild:
+  Version bump wrt #477282 by Naohiro Aota and Rafał Mużyło
 
   15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
   -alsa-utils-1.0.27-r1.ebuild, -alsa-utils-1.0.27.1.ebuild,

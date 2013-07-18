@@ -23,4 +23,7 @@
   <flag name='scipy'>Add support for <pkg>sci-libs/scipy</pkg></flag>
   <flag name='sphinx'>Add support for <pkg>dev-python/sphinx</pkg></flag>
 </use>
+<upstream>
+  <remote-id type="pypi">spyder</remote-id>
+</upstream>
 </pkgmetadata>
