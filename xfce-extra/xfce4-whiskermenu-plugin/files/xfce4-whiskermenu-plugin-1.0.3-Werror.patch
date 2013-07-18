@@ -1,0 +1,37 @@
+commit 51c0306de3640777fe9d5c6ab492d923c769310d
+Author: hasufell <hasufell@gentoo.org>
+Date:   Thu Jul 18 13:56:22 2013 +0200
+
+    BUILD: make -Werror optional
+    
+    "-Werror" can break the build in so many ways that it
+    should only be used for development or if it's a specific
+    "-Werror=foo" flag.
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e0c4f5c..d52a46c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,6 +5,9 @@ endif()
+ 
+ project(whiskermenu)
+ 
++# options
++option(ENABLE_WERROR "Enable -Werror flag for development" OFF)
++
+ if(NOT DEFINED LIB_INSTALL_DIR)
+     if (DEFINED CMAKE_INSTALL_LIBDIR)
+         set(LIB_INSTALL_DIR ${CMAKE_INSTALL_LIBDIR})
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index bcc2a97..26972af 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -1,4 +1,7 @@
+-set(WHISKERMENU_FLAGS "-Wall -Wextra -Werror")
++set(WHISKERMENU_FLAGS "-Wall -Wextra")
++if(ENABLE_WERROR)
++	set(WHISKERMENU_FLAGS "${WHISKERMENU_FLAGS} -Werror")
++endif()
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${WHISKERMENU_FLAGS}")
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden -std=c++0x ${WHISKERMENU_FLAGS}")
+ set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--as-needed")

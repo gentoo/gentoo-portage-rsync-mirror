@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.9.0-r1.ebuild,v 1.3 2013/02/15 19:08:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.9.0-r1.ebuild,v 1.4 2013/07/18 12:51:07 tomka Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	dobin bin/frobby
 	dolib.so bin/libfrobby.so
-	dosym libfrobby.so "${EPREFIX}/usr/$(get_libdir)/libfrobby.so.0"
+	dosym libfrobby.so "${PREFIX}/usr/$(get_libdir)/libfrobby.so.0"
 	use static-libs && dolib.a bin/libfrobby.a
 
 	insinto /usr/include

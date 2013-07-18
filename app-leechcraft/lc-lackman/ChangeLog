@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-lackman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lackman/ChangeLog,v 1.5 2013/07/03 16:04:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lackman/ChangeLog,v 1.6 2013/07/18 12:45:14 maksbotan Exp $
+
+*lc-lackman-0.5.99 (18 Jul 2013)
+
+  18 Jul 2013; <maks@gentoo.org> +lc-lackman-0.5.99.ebuild:
+  Bump app-leechcraft/lc-lackman to 0.5.99, thanks to 0xd34df00d
 
 *lc-lackman-0.5.98 (03 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lemon/lc-lemon-0.5.90.ebuild,v 1.1 2013/03/08 22:01:10 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lemon/lc-lemon-0.5.90.ebuild,v 1.2 2013/07/18 12:46:36 maksbotan Exp $
 
 EAPI="4"
 
@@ -17,6 +17,6 @@ DEPEND="~app-leechcraft/lc-core-${PV}
 	dev-qt/qtbearer:4
 	dev-qt/qtdeclarative:4
 	dev-libs/libnl:3
-	x11-libs/qwt:6
+	<x11-libs/qwt-6.1:6
 	"
 RDEPEND="${DEPEND}"

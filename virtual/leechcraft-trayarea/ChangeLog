@@ -1,6 +1,11 @@
 # ChangeLog for virtual/leechcraft-trayarea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-trayarea/ChangeLog,v 1.20 2013/07/03 16:27:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-trayarea/ChangeLog,v 1.21 2013/07/18 12:56:41 maksbotan Exp $
+
+*leechcraft-trayarea-0.5.99 (18 Jul 2013)
+
+  18 Jul 2013; <maks@gentoo.org> +leechcraft-trayarea-0.5.99.ebuild:
+  Bump virtual/leechcraft-trayarea to 0.5.99, thanks to 0xd34df00d
 
 *leechcraft-trayarea-0.5.98 (03 Jul 2013)
 

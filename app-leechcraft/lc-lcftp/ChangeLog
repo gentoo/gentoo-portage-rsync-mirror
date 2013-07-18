@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-lcftp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lcftp/ChangeLog,v 1.3 2013/05/02 15:44:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lcftp/ChangeLog,v 1.4 2013/07/18 12:46:21 maksbotan Exp $
+
+  18 Jul 2013;  <maks@gentoo.org> -lc-lcftp-0.5.85.ebuild:
+  Bump, delete old, fix qwt deps in lemon & liznoo, add vader use to azoth and
+  fix metacontacts use.
 
   02 May 2013; Sergey Popov <pinkbyte@gentoo.org> -lc-lcftp-0.5.95.ebuild,
   -lc-lcftp-9999.ebuild:

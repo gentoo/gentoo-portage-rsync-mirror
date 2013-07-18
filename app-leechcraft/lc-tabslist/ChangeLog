@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-tabslist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-tabslist/ChangeLog,v 1.5 2013/07/03 16:19:08 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-tabslist/ChangeLog,v 1.6 2013/07/18 12:52:49 maksbotan Exp $
+
+*lc-tabslist-0.5.99 (18 Jul 2013)
+
+  18 Jul 2013; <maks@gentoo.org> +lc-tabslist-0.5.99.ebuild:
+  Bump app-leechcraft/lc-tabslist to 0.5.99, thanks to 0xd34df00d
 
 *lc-tabslist-0.5.98 (03 Jul 2013)
 

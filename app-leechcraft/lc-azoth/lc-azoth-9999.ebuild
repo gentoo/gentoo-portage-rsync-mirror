@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.4 2013/05/08 12:18:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.5 2013/07/18 12:40:43 maksbotan Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ KEYWORDS=""
 IUSE="debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt +depester +embedmedia +herbicide +hili +isterique
 		+juick +keeso +lastseen	+metacontacts media +msn +latex +nativeemoticons
-		+otroid +p100q +spell shx +standardstyles +xmpp +xtazy"
+		+otroid +p100q +spell shx +standardstyles +vader +xmpp +xtazy"
 
 COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 		dev-qt/qtwebkit:4
@@ -66,7 +66,7 @@ src_configure() {
 		$(cmake-utils_use_enable juick AZOTH_JUICK)
 		$(cmake-utils_use_enable keeso AZOTH_KEESO)
 		$(cmake-utils_use_enable lastseen AZOTH_LASTSEEN)
-		$(cmake-utils_use_enable metacontacts AZOTH_LASTSEEN)
+		$(cmake-utils_use_enable metacontacts AZOTH_METACONTACTS)
 		$(cmake-utils_use_enable media MEDIACALLS)
 		$(cmake-utils_use_enable latex AZOTH_MODNOK)
 		$(cmake-utils_use_enable msn AZOTH_ZHEET)
@@ -76,6 +76,7 @@ src_configure() {
 		$(cmake-utils_use_enable spell AZOTH_ROSENTHAL)
 		$(cmake-utils_use_enable shx AZOTH_SHX)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
+		$(cmake-utils_use_enable vader AZOTH_VADER)
 		$(cmake-utils_use_enable xmpp AZOTH_XOOX)
 		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
 	)
