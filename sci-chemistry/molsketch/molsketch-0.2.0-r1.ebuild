@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.5 2013/03/02 23:18:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.6 2013/07/18 06:09:24 jlec Exp $
 
 EAPI=3
 
@@ -38,7 +38,7 @@ src_prepare() {
 		-i libmolsketch/src/CMakeLists.txt || die #351246
 	sed -e "s:doc/molsketch:doc/${PF}:g" \
 		-i molsketch/src/{CMakeLists.txt,mainwindow.cpp} || die
-	base_src_prepare
+	cmake-utils_src_prepare
 }
 
 src_configure() {

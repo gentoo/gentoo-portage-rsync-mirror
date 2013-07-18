@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.5.ebuild,v 1.6 2012/12/02 17:00:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.5.ebuild,v 1.7 2013/07/18 06:11:38 jlec Exp $
 
 EAPI=4
 
@@ -64,7 +64,7 @@ src_prepare() {
 			-i CMakeLists.txt || die
 	fi
 
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	# otherwise cmake checks for svn
 	esvn_clean
