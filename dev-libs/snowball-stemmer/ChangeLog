@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/snowball-stemmer
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/ChangeLog,v 1.1 2013/07/18 09:03:07 graaff Exp $
+
+*snowball-stemmer-0.20091122 (18 Jul 2013)
+
+  18 Jul 2013; Hans de Graaff <graaff@gentoo.org>
+  +snowball-stemmer-0.20091122.ebuild,
+  +files/libstemmer_c-shared-library.patch, +metadata.xml:
+  Initial import. Thanks for Tianon in bug 447172 for providing ebuilds and
+  patches.
+

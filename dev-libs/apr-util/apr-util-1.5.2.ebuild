@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.2.ebuild,v 1.1 2013/06/20 11:46:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.2.ebuild,v 1.2 2013/07/18 09:29:24 polynomial-c Exp $
 
 EAPI="4"
 
 # Usually apr-util has the same PV as apr, but in case of security fixes, this may change.
 # APR_PV="${PV}"
-APR_PV="1.4.5"
+APR_PV="1.4.6"
 
 inherit autotools db-use eutils libtool multilib
 
