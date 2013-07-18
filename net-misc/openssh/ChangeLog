@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.476 2013/06/27 20:30:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.478 2013/07/18 20:15:31 radhermit Exp $
+
+  18 Jul 2013; Tim Harder <radhermit@gentoo.org> -openssh-6.0_p1.ebuild,
+  -openssh-6.1_p1.ebuild, -openssh-6.2_p2.ebuild, -openssh-6.2_p2-r1.ebuild,
+  -files/openssh-5.2_p1-autoconf.patch, -files/openssh-5.2_p1-gsskex-fix.patch,
+  -files/openssh-5.2_p1-x509-hpn-glue.patch,
+  -files/openssh-5.6_p1-x509-hpn-glue.patch,
+  -files/openssh-5.7_p1-x509-hpn-glue.patch,
+  -files/openssh-5.8_p1-selinux.patch:
+  Remove old.
+
+*openssh-6.2_p2-r2 (18 Jul 2013)
+
+  18 Jul 2013; Tim Harder <radhermit@gentoo.org> +openssh-6.2_p2-r2.ebuild:
+  Fix xauth path (bug #477304 by Tobias Klausmann) and move into ~arch.
 
   27 Jun 2013; Tim Harder <radhermit@gentoo.org> Manifest:
   Update ldap patch to fix segfault issue.
