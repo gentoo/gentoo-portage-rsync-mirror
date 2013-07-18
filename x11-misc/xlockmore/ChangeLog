@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.128 2013/07/16 14:04:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.129 2013/07/18 20:44:30 jer Exp $
+
+  18 Jul 2013; Jeroen Roovers <jer@gentoo.org> -xlockmore-5.42.ebuild:
+  Old.
 
 *xlockmore-5.43 (16 Jul 2013)
 

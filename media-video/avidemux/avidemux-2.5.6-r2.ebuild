@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.4 2013/07/07 13:11:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.5 2013/07/18 20:58:17 creffett Exp $
 
 EAPI="5"
 
@@ -79,7 +79,7 @@ PATCHES=(
 )
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	local lingua= po_files= qt_ts_files= avidemux_ts_files=
 	for lingua in ${LINGUAS}; do

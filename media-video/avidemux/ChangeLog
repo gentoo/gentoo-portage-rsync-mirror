@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.221 2013/07/17 00:31:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.222 2013/07/18 20:58:17 creffett Exp $
+
+  18 Jul 2013; Chris Reffett <creffett@gentoo.org> avidemux-2.5.6-r2.ebuild,
+  avidemux-2.6.2-r1.ebuild, avidemux-2.6.3.ebuild:
+  Convert base_src_prepare to cmake-utils_src_prepare, bug 475516
 
 *avidemux-9999 (17 Jul 2013)
 

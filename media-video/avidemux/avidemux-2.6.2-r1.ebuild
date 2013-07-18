@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2-r1.ebuild,v 1.2 2013/03/24 11:11:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2-r1.ebuild,v 1.3 2013/07/18 20:58:17 creffett Exp $
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ PROCESSES="buildCli:avidemux/cli"
 use qt4 && PROCESSES+=" buildQt4:avidemux/qt4"
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	# Fix icon name -> avidemux-2.6.png
 	sed -i -e "/^Icon/ s:${PN}:${PN}-2.6:" ${PN}2.desktop || die "Icon name fix failed."

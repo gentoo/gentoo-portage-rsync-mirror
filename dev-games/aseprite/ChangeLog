@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/aseprite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/ChangeLog,v 1.3 2013/03/31 11:19:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/ChangeLog,v 1.4 2013/07/18 20:48:51 creffett Exp $
+
+  18 Jul 2013; Chris Reffett <creffett@gentoo.org> aseprite-0.9.5.ebuild,
+  aseprite-9999.ebuild:
+  Replace base_src_prepare with cmake-utils_src_prepare to fix bug 475506
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> aseprite-0.9.5.ebuild:
   Stable for x86, wrt bug #463932

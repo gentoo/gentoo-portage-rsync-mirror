@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.31 2013/06/27 16:12:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.32 2013/07/18 20:41:24 jmbsvicetto Exp $
+
+*mariadb-5.5.31-r1 (18 Jul 2013)
+
+  18 Jul 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mariadb-5.5.31-r1.ebuild:
+  Do a revision bump to avoid packages from not finding libmysqlclient.so - bug
+  474952.
 
   27 Jun 2013; Jeroen Roovers <jer@gentoo.org> mariadb-5.5.31.ebuild:
   Marked ~hppa too.
