@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rope
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.15 2012/05/29 12:07:58 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.16 2013/07/18 15:50:57 bicatali Exp $
+
+*rope-0.9.4-r1 (18 Jul 2013)
+
+  18 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +rope-0.9.4-r1.ebuild,
+  metadata.xml:
+  Move to distutils-r1
 
   29 May 2012; Agostino Sarubbo <ago@gentoo.org> rope-0.9.3.ebuild:
   Stable for amd64, wrt bug #394851
@@ -67,4 +73,3 @@
   02 Sep 2008; Rob Cakebread <pythonhead@gentoo.org> +rope-0.8.4.ebuild:
   Initial commit. Bug #202700. Thanks Matsui Tetsushi <VED03370@nifty.ne.jp>
   for the ebuild.
-
