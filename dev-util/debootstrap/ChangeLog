@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.230 2013/07/02 07:41:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.231 2013/07/18 11:52:11 jer Exp $
+
+*debootstrap-1.0.53 (18 Jul 2013)
+
+  18 Jul 2013; Jeroen Roovers <jer@gentoo.org> -debootstrap-1.0.46.ebuild,
+  -debootstrap-1.0.47.ebuild, -debootstrap-1.0.48.ebuild,
+  -debootstrap-1.0.49.ebuild, -debootstrap-1.0.50.ebuild,
+  -debootstrap-1.0.51.ebuild, +debootstrap-1.0.53.ebuild:
+  Version bump.
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> debootstrap-1.0.52.ebuild:
   Stable for sh, wrt bug #473840
