@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.15 2013/07/04 12:16:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.16 2013/07/18 10:50:47 titanofold Exp $
+
+  18 Jul 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -fossil-20111213135356.ebuild, -fossil-20121022124804.ebuild:
+  Clean out old.
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> fossil-20130216000435.ebuild:
   Stable for x86, wrt bug #472454

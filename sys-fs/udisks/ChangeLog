@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.143 2013/05/01 12:18:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.144 2013/07/18 10:36:41 ssuominen Exp $
+
+  18 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udisks-2.1.0.ebuild,
+  metadata.xml:
+  Rename IUSE="crypt" with IUSE="cryptsetup" and require USE="udev" where
+  appropiate wrt #475770 by "Ronald"
 
   01 May 2013; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.0.4-r4.ebuild,
   -udisks-2.0.91.ebuild:
