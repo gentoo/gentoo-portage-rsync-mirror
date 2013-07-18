@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/bitarray
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bitarray/ChangeLog,v 1.2 2012/10/17 02:19:16 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bitarray/ChangeLog,v 1.3 2013/07/18 01:14:10 chutzpah Exp $
+
+*bitarray-0.8.1 (18 Jul 2013)
+
+  18 Jul 2013; Patrick McLean <chutz@gentoo.org> +bitarray-0.8.1.ebuild,
+  metadata.xml:
+  Version bump, port to distutils-r1.
 
   17 Oct 2012; Patrick Lauer <patrick@gentoo.org> bitarray-0.8.0.ebuild:
   Restricting jython

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14932 2013/07/17 19:07:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14933 2013/07/18 01:12:58 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (18 Jul 2013)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-30
+>=dev-lang/v8-3.20
 
 # Michael Weber <xmw@gentoo.org> (9 Jul 2013)
 # Upstream next versions
@@ -381,12 +387,6 @@ net-wireless/ipw3945d
 # Mask -9999 ebuild per Gentoo policy
 ~dev-embedded/openocd-0.7.0
 =dev-embedded/openocd-9999
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (23 May 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-29
->=dev-lang/v8-3.19
 
 # Tim Harder <radhermit@gentoo.org> (22 May 2013)
 # masked for testing

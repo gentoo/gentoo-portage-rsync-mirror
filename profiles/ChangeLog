@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8049 2013/07/17 19:07:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8050 2013/07/18 01:12:58 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jul 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Update chromium dev channel mask for M30.
 
   17 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
   Mask Raspberry Pi upstream next versions.

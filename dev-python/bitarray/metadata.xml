@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sci</herd>
+	<herd>python</herd>
 	<longdescription>
 This module provides an object type which efficiently represents an array of 
 booleans. Bitarrays are sequence types and behave very much like usual lists. 
