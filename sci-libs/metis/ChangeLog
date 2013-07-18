@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/metis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.30 2012/10/16 20:39:01 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.31 2013/07/18 13:38:27 chithanh Exp $
+
+  18 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  metis-4.0.3.ebuild:
+  Keyword ~arm.
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> metis-4.0.1-r1.ebuild,
   metis-4.0.3.ebuild, metadata.xml:

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.39 2013/06/24 23:10:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.40 2013/07/18 13:39:01 chithanh Exp $
+
+  18 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  cholmod-2.1.2.ebuild:
+  Keyword ~arm.
 
 *cholmod-2.1.2 (24 Jun 2013)
 
