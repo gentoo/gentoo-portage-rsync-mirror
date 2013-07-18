@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.17 2013/03/13 11:03:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.18 2013/07/18 07:03:33 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -109,11 +109,13 @@ _fortran_compile_test() {
 	local fcode=${filebase}.f${fdia}
 	local ret
 
-	[[ $# -lt 1 ]] && die "_fortran_compile_test() needs at least one arguments"
+	[[ $# -lt 1 ]] && \
+		die "_fortran_compile_test() needs at least one arguments"
 
 	[[ -f ${fcode} ]] || _fortran_write_testsuite
 
-	${fcomp} "${fcode}" -o "${fcode}.x" >> "${T}"/_fortran_compile_test.log 2>&1
+	${fcomp} "${fcode}" -o "${fcode}.x" \
+		>> "${T}"/_fortran_compile_test.log 2>&1
 	ret=$?
 
 	rm -f "${fcode}.x"
@@ -138,7 +140,8 @@ _fortran-has-openmp() {
 	EOF
 
 	for flag in -fopenmp -xopenmp -openmp -mp -omp -qsmp=omp; do
-		${_fc} ${flag} "${fcode}" -o "${fcode}.x" &>> "${T}"/_fortran_compile_test.log
+		${_fc} ${flag} "${fcode}" -o "${fcode}.x" \
+			&>> "${T}"/_fortran_compile_test.log
 		ret=$?
 		(( ${ret} )) || break
 	done
@@ -164,7 +167,8 @@ _fortran_die_msg() {
 # @FUNCTION: _fortran_test_function
 # @INTERNAL
 # @DESCRIPTION:
-# Internal testfunction for working fortran compiler. It is called in fortran-2_pkg_setup
+# Internal testfunction for working fortran compiler.
+# It is called in fortran-2_pkg_setup
 _fortran_test_function() {
 	local dialect
 
@@ -173,9 +177,12 @@ _fortran_test_function() {
 	: ${FORTRAN_STANDARD:=77}
 	for dialect in ${FORTRAN_STANDARD}; do
 		case ${dialect} in
-			77) _fortran_compile_test $(tc-getF77) || _fortran_die_msg ;;
-			90|95) _fortran_compile_test $(tc-getFC) 90 || _fortran_die_msg ;;
-			2003) _fortran_compile_test $(tc-getFC) 03 || _fortran_die_msg ;;
+			77) _fortran_compile_test $(tc-getF77) || \
+				_fortran_die_msg ;;
+			90|95) _fortran_compile_test $(tc-getFC) 90 || \
+				_fortran_die_msg ;;
+			2003) _fortran_compile_test $(tc-getFC) 03 || \
+				_fortran_die_msg ;;
 			2008) die "Future" ;;
 			*) die "${dialect} is not a Fortran dialect." ;;
 		esac
@@ -190,14 +197,16 @@ _fortran_test_function() {
 		if _fortran-has-openmp; then
 			einfo "${FC} has OPENMP support"
 		else
-			die "Please install current gcc with USE=openmp or set the FC variable to a compiler that supports OpenMP"
+			die "Please install current gcc with USE=openmp or " \
+			"set the FC variable to a compiler that supports OpenMP"
 		fi
 	fi
 }
 
 # @FUNCTION: fortran-2_pkg_setup
 # @DESCRIPTION:
-# Setup functionallity, checks for a valid fortran compiler and optionally for its openmp support.
+# Setup functionallity,
+# checks for a valid fortran compiler and optionally for its openmp support.
 fortran-2_pkg_setup() {
 	for _f_use in ${FORTRAN_NEEDED}; do
    	case ${_f_use} in
