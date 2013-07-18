@@ -253,7 +253,7 @@ diff -ur -x make-sparky sparky.orig/python/spingraph.py sparky/python/spingraph.
                 'sizes, and text label positions.  Sparky provides a\n' +
                 'default layout file\n' +
 -               '\n\t/usr/local/sparky/python/spinlayout.py\n\n' +
-+               '\n\t/usr/lib/python2.4/site-packages/sparky/python/spinlayout.py\n\n' +
++               '\n\t/usr/lib/python*/site-packages/sparky/python/spinlayout.py\n\n' +
                 'You override this file by making your own copy\n' +
                 '\n\t~/Sparky/Python/spinlayout.py\n\n' +
                 'You can create the desired template on the screen\n'

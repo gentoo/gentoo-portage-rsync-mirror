@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.8.ebuild,v 1.1 2013/06/24 13:54:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.8-r1.ebuild,v 1.1 2013/07/18 11:08:11 polynomial-c Exp $
 
 EAPI="4"
 
@@ -13,12 +13,10 @@ SRC_URI="mirror://apache/apr/${P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-aix ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc elibc_FreeBSD older-kernels-compatibility static-libs +urandom +uuid"
+IUSE="doc elibc_FreeBSD older-kernels-compatibility static-libs +urandom"
 
-RDEPEND="uuid? (
-	elibc_glibc? ( >=sys-apps/util-linux-2.16 )
-	elibc_mintlib? ( >=sys-apps/util-linux-2.18 )
-)"
+RDEPEND="elibc_glibc? ( >=sys-apps/util-linux-2.16 )
+	elibc_mintlib? ( >=sys-apps/util-linux-2.18 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
@@ -81,11 +79,6 @@ src_configure() {
 			myconf="${myconf} --disable-nonportable-atomics"
 			;;
 		esac
-	fi
-
-	if ! use uuid; then
-		local apr_cv_osuuid
-		export apr_cv_osuuid="no"
 	fi
 
 	CONFIG_SHELL="${EPREFIX}"/bin/bash econf \

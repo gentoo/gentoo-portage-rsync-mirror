@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.12.ebuild,v 1.1 2013/03/04 10:48:09 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.12.ebuild,v 1.2 2013/07/18 11:22:05 naota Exp $
 
 inherit autotools base eutils
 
@@ -23,7 +23,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-PATCHES=( "${FILESDIR}/${PN}-0.5.8+gcc-4.3.patch" )
+PATCHES=( "${FILESDIR}/${PN}-0.5.8+gcc-4.3.patch"
+	"${FILESDIR}"/${P}-automake.patch )
 
 pkg_setup() {
 	elog "Not all languages are going to be compiled."

@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/sparky
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.17 2012/05/29 17:55:43 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.18 2013/07/18 11:22:37 jlec Exp $
+
+*sparky-3.115-r1 (18 Jul 2013)
+
+  18 Jul 2013; Justin Lecher <jlec@gentoo.org> +sparky-3.115-r1.ebuild,
+  +files/3.115-wrapper-r1.patch, files/fix-install.patch, metadata.xml:
+  Bump to new python eclass
 
   29 May 2012; Justin Lecher <jlec@gentoo.org> sparky-3.115.ebuild,
   metadata.xml:
