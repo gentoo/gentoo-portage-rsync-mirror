@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1-r1.ebuild,v 1.1 2012/10/02 19:27:44 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1-r1.ebuild,v 1.2 2013/07/18 22:14:09 creffett Exp $
 
 EAPI="2"
 
-inherit cmake-utils versionator eutils
+inherit cmake-utils versionator eutils user
 
 DESCRIPTION="C++ library for developing interactive web applications."
 MY_P=${P/_/-}
@@ -62,7 +62,7 @@ src_prepare() {
 			-i cmake/WtFindHaru.txt || die
 	fi
 
-	base_src_prepare
+	cmake-utils_src_prepare
 }
 
 src_configure() {

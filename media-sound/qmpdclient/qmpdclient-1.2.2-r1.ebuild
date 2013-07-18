@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.2.2-r1.ebuild,v 1.6 2013/07/10 04:51:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.2.2-r1.ebuild,v 1.7 2013/07/18 22:09:07 creffett Exp $
 
 EAPI=4
 inherit fdo-mime cmake-utils
@@ -27,7 +27,7 @@ PATCHES=( "${FILESDIR}"/${P}-qt48.patch )
 
 src_prepare() {
 	sed -i -e "/^Categories/s/Network/AudioVideo/" ${PN}.desktop || die
-	base_src_prepare
+	cmake-utils_src_prepare
 }
 
 src_configure() {
