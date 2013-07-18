@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.144 2013/07/18 10:36:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.145 2013/07/18 16:07:15 ssuominen Exp $
+
+  18 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r5.ebuild,
+  udisks-2.1.0.ebuild:
+  Check for CONFIG_USB_SUSPEND only if the kernel version is below 3.10 wrt
+  #477278 by "Coacher"
 
   18 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udisks-2.1.0.ebuild,
   metadata.xml:
