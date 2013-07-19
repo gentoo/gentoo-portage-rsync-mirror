@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14934 2013/07/18 20:45:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14935 2013/07/19 06:20:58 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -91,32 +91,6 @@ net-libs/openh323
 # Probably new versions will work with hexchat too.
 # Do not lastrite this, just leave mask by Lars Wendler's request.
 net-irc/xchat-otr
-
-# Davide Pesavento <pesa@gentoo.org> (09 Jul 2013)
-# Major packaging changes to some of the modules. Need to check all revdeps.
-=dev-qt/assistant-4.8.5*
-=dev-qt/designer-4.8.5*
-=dev-qt/linguist-4.8.5*
-=dev-qt/pixeltool-4.8.5*
-=dev-qt/qdbusviewer-4.8.5*
-=dev-qt/qt3support-4.8.5*
-=dev-qt/qtbearer-4.8.5*
-=dev-qt/qtcore-4.8.5*
-=dev-qt/qtdbus-4.8.5*
-=dev-qt/qtdeclarative-4.8.5*
-=dev-qt/qtdemo-4.8.5*
-=dev-qt/qtgui-4.8.5*
-=dev-qt/qthelp-4.8.5*
-=dev-qt/qtmultimedia-4.8.5*
-=dev-qt/qtopengl-4.8.5*
-=dev-qt/qtopenvg-4.8.5*
-=dev-qt/qtphonon-4.8.5*
-=dev-qt/qtscript-4.8.5*
-=dev-qt/qtsql-4.8.5*
-=dev-qt/qtsvg-4.8.5*
-=dev-qt/qttest-4.8.5*
-=dev-qt/qtwebkit-4.8.5*
-=dev-qt/qtxmlpatterns-4.8.5*
 
 # Hanno Boeck <hanno@gentoo.org> (9 Jul 2013)
 # Part of old and deprecated openvas versions,

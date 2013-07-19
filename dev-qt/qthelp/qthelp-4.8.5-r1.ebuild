@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5.ebuild,v 1.4 2013/07/19 03:20:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5-r1.ebuild,v 1.1 2013/07/19 06:19:38 patrick Exp $
 
 EAPI=5
 
@@ -92,7 +92,10 @@ src_compile() {
 	if use compat; then
 		# need to explicitly mangle this as we lack the toplevel makefiles
 		pushd .
-		cd src/plugins/accessible && "${S}"/bin/qmake || die
+		cd src/plugins/accessible 
+		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" && make || die
+		cd ../../../tools/assistant/compat/lib
+		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" && make || die
 		popd
 	fi
 	# ugly hack to build docs
@@ -111,10 +114,16 @@ src_install() {
 	if use compat; then
 		# need to explicitly mangle this as we lack the toplevel makefiles
 		pushd .
-		cd src/plugins/accessible && "${S}"/bin/qmake || die
+		cd src/plugins/accessible && emake INSTALL_ROOT="${D}" install || die
+		cd ../../../tools/assistant/compat/lib && emake INSTALL_ROOT="${D}" install || die
 		popd
 		insinto /usr/include/qt4/
-		doins -r include/QtAssistant || die
+		doins -r include/QtAssistant
+		insinto /usr/include/qt4/QtAssistant/
+		# this is rather confusing
+		doins -r tools/assistant/compat/lib/*.h || die
+		# collides with qtgui
+		rm "${D}"/usr/lib64/qt4/plugins/accessible/libqtaccessiblewidgets.so
 	fi
 	emake INSTALL_ROOT="${D}" install_qchdocs
 
