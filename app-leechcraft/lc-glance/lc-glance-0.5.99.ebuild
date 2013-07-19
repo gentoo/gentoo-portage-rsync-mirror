@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-glance/lc-glance-0.5.98.ebuild,v 1.1 2013/07/03 15:59:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-glance/lc-glance-0.5.99.ebuild,v 1.1 2013/07/19 02:30:49 patrick Exp $
 
 EAPI="4"
 

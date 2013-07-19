@@ -1,6 +1,14 @@
 # ChangeLog for app-leechcraft/lc-historyholder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-historyholder/ChangeLog,v 1.5 2013/07/03 16:01:05 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-historyholder/ChangeLog,v 1.6 2013/07/19 02:30:49 patrick Exp $
+
+*lc-historyholder-0.5.99 (19 Jul 2013)
+
+  19 Jul 2013; Patrick Lauer <patrick@gentoo.org>
+  +lc-historyholder-0.5.99.ebuild, -lc-historyholder-0.5.85.ebuild,
+  -lc-historyholder-0.5.95.ebuild, -lc-historyholder-0.5.96.ebuild,
+  -lc-historyholder-0.5.97.ebuild, -lc-historyholder-0.5.98.ebuild:
+  QA: Add missing ebuilds, remove unsatisfiable old
 
 *lc-historyholder-0.5.98 (03 Jul 2013)
 
