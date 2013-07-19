@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.5 2013/05/18 15:56:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.6 2013/07/19 07:50:29 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -30,6 +30,7 @@ DEPEND="
 		dev-python/scripttest
 	)
 "
+# dev-python/unittest2 may not be necessary, bug #450648
 RDEPEND="
 	app-portage/gentoolkit
 	app-portage/gentoolkit-dev
@@ -39,7 +40,7 @@ RDEPEND="
 	dev-python/jinja
 	dev-python/pygments
 	dev-python/sphinxcontrib-googleanalytics
-	virtual/python-unittest2
+	dev-python/unittest2
 	dev-python/yolk
 	virtual/python-argparse
 "

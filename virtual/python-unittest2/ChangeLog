@@ -1,6 +1,12 @@
 # ChangeLog for virtual/python-unittest2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.6 2013/06/30 15:40:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.7 2013/07/19 07:58:37 mgorny Exp $
+
+*python-unittest2-1-r2 (19 Jul 2013)
+
+  19 Jul 2013; Michał Górny <mgorny@gentoo.org> +python-unittest2-1-r2.ebuild:
+  Finally stop pulling in unittest2 for py<2.7 & py<3.2, since all dependent
+  packages have correct deps now.
 
 *python-unittest2-1-r1 (30 Jun 2013)
 
