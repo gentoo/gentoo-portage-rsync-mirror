@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/multi_json
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.27 2013/07/18 05:44:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.28 2013/07/19 08:54:03 graaff Exp $
+
+  19 Jul 2013; Hans de Graaff <graaff@gentoo.org> -multi_json-1.3.6.ebuild,
+  -multi_json-1.3.7.ebuild, -multi_json-1.4.0.ebuild:
+  Cleanup.
 
 *multi_json-1.6.1 (18 Jul 2013)
 

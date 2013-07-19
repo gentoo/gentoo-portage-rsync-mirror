@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>video</herd>
-<herd>proxy-maintainers</herd>
-<maintainer>
-	<email>media-video@gentoo.org</email>
-</maintainer>
 <maintainer>
 	<email>nikoli@lavabit.com</email>
-	<description>Maintainer. Assign bugs to him</description>
 </maintainer>
+<herd>video</herd>
+<herd>proxy-maintainers</herd>
 <use>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
