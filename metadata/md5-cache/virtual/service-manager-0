@@ -1,6 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for various service managers
+IUSE=kernel_linux
 KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
-RDEPEND=|| ( sys-apps/openrc kernel_linux? ( sys-apps/systemd sys-process/runit virtual/daemontools ) )
+RDEPEND=!kernel_linux? ( sys-apps/openrc ) kernel_linux? ( || ( sys-apps/openrc sys-apps/systemd sys-process/runit virtual/daemontools ) )
 SLOT=0
-_md5_=76874485d6dca389cde4e19100086caf
+_md5_=daeecf8772811be75b63b07146f98650

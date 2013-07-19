@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.12 2013/07/19 13:05:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.13 2013/07/19 14:00:50 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -353,7 +353,7 @@ intel-sdp_src_unpack() {
 		for r in ${INTEL_RPMS}; do
 			for subdir in ${INTEL_RPMS_DIRS}; do
 				rpmdir=${t%%.*}/${subdir}
-				debug-print "Adding ${rpmdir}/${r} to decompression list"
+				debug-print "Adding to decompression list: ${rpmdir}/${r}"
 				list+=( ${rpmdir}/${r})
 			done
 		done
