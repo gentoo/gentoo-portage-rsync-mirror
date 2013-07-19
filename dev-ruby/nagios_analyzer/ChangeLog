@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/nagios_analyzer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios_analyzer/ChangeLog,v 1.4 2012/12/02 11:04:54 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios_analyzer/ChangeLog,v 1.5 2013/07/19 05:40:16 graaff Exp $
+
+*nagios_analyzer-0.0.5 (19 Jul 2013)
+
+  19 Jul 2013; Hans de Graaff <graaff@gentoo.org>
+  +nagios_analyzer-0.0.5.ebuild:
+  Version bump.
 
   02 Dec 2012; Hans de Graaff <graaff@gentoo.org> nagios_analyzer-0.0.3.ebuild:
   Update license now that upstream has selected one. Fixes bug 445458.

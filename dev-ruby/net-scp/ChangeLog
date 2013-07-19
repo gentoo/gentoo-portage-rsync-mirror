@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.37 2013/04/12 05:51:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.38 2013/07/19 05:42:55 graaff Exp $
+
+*net-scp-1.1.2 (19 Jul 2013)
+
+  19 Jul 2013; Hans de Graaff <graaff@gentoo.org> +net-scp-1.1.2.ebuild:
+  Version bump.
 
 *net-scp-1.1.0 (12 Apr 2013)
 
