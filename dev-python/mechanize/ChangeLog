@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mechanize
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.42 2011/06/23 14:56:18 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.43 2013/07/19 11:58:10 idella4 Exp $
+
+*mechanize-0.2.5-r1 (19 Jul 2013)
+
+  19 Jul 2013; Ian Delaney <idella4@gentoo.org> +mechanize-0.2.5-r1.ebuild:
+  migrate -> distutils-r1, add IUSE doc, html doc install
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -mechanize-0.2.4.ebuild:
   Remove old ebuilds. Requested by Arfrever
@@ -165,4 +170,3 @@
   30 Jun 2007; Ali Polatel <hawking@gentoo.org> +metadata.xml,
   +mechanize-0.1.7b.ebuild:
   Initial ebuild (bug #166914)
-
