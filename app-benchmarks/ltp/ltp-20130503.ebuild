@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20130503.ebuild,v 1.1 2013/05/18 10:03:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20130503.ebuild,v 1.2 2013/07/19 14:18:39 jer Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ src_prepare() {
 src_configure() {
 	# FIXME: improve me
 	local myconf=
-	use open-posix && myconf+="--with open-posix-testsuite "
+	use open-posix && myconf+="--with-open-posix-testsuite "
 	use pm && mytconf+="--with-power-management-testsuite "
 	use rt && myconf+="--with-realtime-testsuite "
 	use perl && myconf+="--with-perl "
