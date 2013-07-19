@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/exodusii-5.24.ebuild,v 1.1 2013/07/18 07:19:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/exodusii-5.24.ebuild,v 1.2 2013/07/18 23:31:13 zmedico Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Model developed to store and retrieve transient data for finite element analyses"
 HOMEPAGE="http://sourceforge.net/projects/exodusii/"
-SRC_URI="mirror://sourceforge/projec/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/project/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
