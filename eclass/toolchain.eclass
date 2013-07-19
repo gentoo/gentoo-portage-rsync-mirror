@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.595 2013/07/18 22:33:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.596 2013/07/18 23:45:54 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -786,7 +786,7 @@ toolchain_src_unpack() {
 	fi
 
 	# Prevent libffi from being installed
-	if tc_version_is_at_least 3.0 ; then
+	if tc_version_is_at_least 3.0 && ! tc_version_is_at_least 4.8 ; then
 		sed -i -e 's/\(install.*:\) install-.*recursive/\1/' "${S}"/libffi/Makefile.in || die
 		sed -i -e 's/\(install-data-am:\).*/\1/' "${S}"/libffi/include/Makefile.in || die
 	fi

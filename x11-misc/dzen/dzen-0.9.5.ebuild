@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.9.5.ebuild,v 1.1 2013/07/18 23:22:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.9.5.ebuild,v 1.2 2013/07/18 23:43:07 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs vcs-snapshot
@@ -28,6 +28,8 @@ DEPEND="
 	x11-proto/xproto
 	xinerama? ( x11-proto/xineramaproto )
 "
+
+DOCS=( README )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-off-by-one.patch
@@ -75,7 +77,6 @@ src_compile() {
 
 src_install() {
 	default
-	dodoc README || die
 
 	if ! use minimal ; then
 		emake -C gadgets DESTDIR="${D}" install
