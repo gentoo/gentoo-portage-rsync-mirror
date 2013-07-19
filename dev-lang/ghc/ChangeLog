@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.243 2013/06/01 14:16:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.244 2013/07/19 10:21:35 slyfox Exp $
+
+  19 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3.ebuild:
+  Fix building on systems where libdir differs from the one we have built GHC
+  (it case of bug #476998 it was an amd64-linux). Thanks to tamiko and Christoph
+  Junghans.
 
 *ghc-7.6.3 (01 Jun 2013)
 
