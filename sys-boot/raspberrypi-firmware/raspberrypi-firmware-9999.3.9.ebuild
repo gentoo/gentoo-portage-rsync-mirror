@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/raspberrypi-firmware-9999.3.9.ebuild,v 1.1 2013/07/17 19:10:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/raspberrypi-firmware-9999.3.9.ebuild,v 1.2 2013/07/19 12:43:29 xmw Exp $
 
 EAPI=5
 
@@ -24,8 +24,19 @@ RESTRICT="binchecks strip"
 
 pkg_preinst() {
 	if [ -z "${REPLACING_VERSIONS}" ] ; then
-		if [ -e /boot/cmdline.txt -o -e /boot/config.txt ] ; then
-			die "Please backup and remove /boot/cmdline.txt and /boot/config.txt to and merge configs after installation."
+		local msg=""
+		if [ -e "${D}"/boot/cmdline.txt -a -e /boot/cmdline.txt ] ; then
+			msg+="/boot/cmdline.txt "
+		fi
+		if [ -e "${D}"/boot/config.txt -a -e /boot/config.txt ] ; then
+			msg+="/boot/config.txt "
+		fi
+		if [ -n "${msg}" ] ; then
+			msg="This package installs following files: ${msg}."
+			msg="${msg} Please remove(backup) your copies durning install"
+			msg="${msg} and merge settings afterwards."
+			msg="${msg} Further updates will be CONFIG_PROTECTed."
+			die "${msg}"
 		fi
 	fi
 }

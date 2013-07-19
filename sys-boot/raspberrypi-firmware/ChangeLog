@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/raspberrypi-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/ChangeLog,v 1.3 2013/07/17 19:10:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/ChangeLog,v 1.4 2013/07/19 12:43:29 xmw Exp $
+
+  19 Jul 2013; Michael Weber <xmw@gentoo.org>
+  raspberrypi-firmware-0_p20130711.ebuild,
+  raspberrypi-firmware-1_pre20130715.ebuild,
+  raspberrypi-firmware-9999.3.6.ebuild, raspberrypi-firmware-9999.3.9.ebuild:
+  Clearify message about /boot/{config,cmdline}.txt, only warn if files exist
+  (INSTALL_MASK, thanks TomWij).
 
 *raspberrypi-firmware-9999.3.9 (17 Jul 2013)
 *raspberrypi-firmware-1_pre20130715 (17 Jul 2013)
