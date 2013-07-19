@@ -682,17 +682,13 @@ app-leechcraft/lc-azoth:keeso - Build plugin for changing text into SoMEtHInG lI
 app-leechcraft/lc-azoth:lastseen - Build plugin for client-side recording of the last online/available time
 app-leechcraft/lc-azoth:media - Enable media calls
 app-leechcraft/lc-azoth:metacontacts - Build plugin for metacontacts support
-app-leechcraft/lc-azoth:modnok - Build Modnok for in-chat LaTeX formulae rendering (deprecated, use 'latex' for new versions)
 app-leechcraft/lc-azoth:nativeemoticons - Build support for native Azoth's emoticons packs
 app-leechcraft/lc-azoth:otroid - Build OTRoid, plugin for the Off-the-Record deniable encryption system
 app-leechcraft/lc-azoth:p100q - Build p100q, plugin for psto.net microblogging service
-app-leechcraft/lc-azoth:rosenthal - Build Rosenthal, the spellchecker plugin (deprecated, use 'spell' for new versions)
 app-leechcraft/lc-azoth:shx - Build shell command executor plugin
 app-leechcraft/lc-azoth:standardstyles - Build support for standard Azoth styles engine
 app-leechcraft/lc-azoth:vader - Bulid Vader, the MRIM (Mail.Ru Agent) protocol support plugin
-app-leechcraft/lc-azoth:xoox - Build Xoox, gloox-based plugin for XMPP support (deprecated, use 'xmpp' for new versions)
 app-leechcraft/lc-azoth:xtazy - Build Xtazy for publishing currently playing tune
-app-leechcraft/lc-azoth:zheet - Build Zheet, libmsn-based plugin for Windows Live Messenger support (deprecated, use 'msn' for new versions)
 app-leechcraft/lc-blogique:hestia - Allows one to keep a local blog
 app-leechcraft/lc-blogique:metida - Support for the LiveJournal blogging platform
 app-leechcraft/lc-gmailnotifier:notify - Pull in a plugin to show notifications from GMail Notiifer
@@ -712,7 +708,6 @@ app-leechcraft/lc-poshuku:fua - Build FUA for faking user agents for different h
 app-leechcraft/lc-poshuku:keywords - Build Keywords for adjusting search shortcuts.
 app-leechcraft/lc-poshuku:onlinebookmarks - Build OnlineBookmarks for syncing bookmarks with social bookmarking services like Read It Later.
 app-leechcraft/lc-poshuku:pcre - Use dev-libs/libpcre for rules matching in CleanWeb instead of slower QRegExp.
-app-leechcraft/lc-poshuku:pogooglue - Build Pogooglue for searching for selected words in Google in two clicks
 app-leechcraft/lc-poshuku:wyfv - Build WYFV for replacing Flash-based video players on some sites.
 app-leechcraft/lc-vrooby:udisks - Use sys-fs/udisks:0 for block device access (e.g., automounting)
 app-leechcraft/lc-vrooby:udisks2 - Use sys-fs/udisks:2 for block device access (e.g., automounting)

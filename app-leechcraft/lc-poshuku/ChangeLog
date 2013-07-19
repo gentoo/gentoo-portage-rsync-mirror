@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-poshuku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-poshuku/ChangeLog,v 1.6 2013/07/18 12:50:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-poshuku/ChangeLog,v 1.7 2013/07/19 02:38:12 patrick Exp $
+
+  19 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove redundant useflag descriptions
 
 *lc-poshuku-0.5.99 (18 Jul 2013)
 
