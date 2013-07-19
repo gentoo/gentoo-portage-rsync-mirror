@@ -1,10 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.37 2013/07/19 15:04:28 idella4 Exp $
-
-# Ian Delaney <idella4@gentoo.org> (17 July 2013)
-# Selection of IUSE flags for bin build.
-dev-python/pypy-bin bzip2 ncurses sqlite ssl xml
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.38 2013/07/19 17:15:40 floppym Exp $
 
 # Michał Gorny <mgorny@gentoo.org> (26 Feb 2013)
 # Meta-packages which use multilib ebuilds always install development

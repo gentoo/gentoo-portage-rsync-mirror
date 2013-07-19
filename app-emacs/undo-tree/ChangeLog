@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/undo-tree
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/ChangeLog,v 1.6 2013/07/19 06:32:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/ChangeLog,v 1.7 2013/07/19 17:17:07 ulm Exp $
+
+  19 Jul 2013; Ulrich Müller <ulm@gentoo.org> undo-tree-0.6.3.ebuild:
+  Replace elog message by DOC_CONTENTS for readme.gentoo.eclass.
 
 *undo-tree-0.6.3 (19 Jul 2013)
 
