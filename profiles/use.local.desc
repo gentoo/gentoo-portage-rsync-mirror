@@ -561,6 +561,7 @@ app-emulation/vmware-workstation:vmware-tools - Install VMware Tools images
 app-emulation/vov:gprof - build with profiling support
 app-emulation/wine:capi - Enable ISDN support via CAPI
 app-emulation/wine:custom-cflags - Bypass strip-flags; use are your own peril
+app-emulation/wine:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine:gecko - Add support for the Gecko engine when using iexplore
 app-emulation/wine:mono - Add support for .NET using Wine's Mono add-on
 app-emulation/wine:opencl - Enable OpenCL support

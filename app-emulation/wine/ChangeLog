@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.471 2013/07/13 03:17:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.472 2013/07/19 03:33:39 tetromino Exp $
+
+*wine-1.6 (19 Jul 2013)
+
+  19 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -wine-1.6_rc4.ebuild, -wine-1.6_rc5.ebuild, +wine-1.6.ebuild, metadata.xml:
+  Version bump to wine-1.6 final release and remove RCs. See
+  http://www.winehq.org/announce/1.6 for the announcement. Add dos USE flag to
+  pull in dosbox for DOS support, as recommended by upstream. Install
+  translated READMEs.
 
 *wine-1.6_rc5 (13 Jul 2013)
 
