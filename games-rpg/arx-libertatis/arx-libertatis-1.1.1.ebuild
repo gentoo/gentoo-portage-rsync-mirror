@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.1-r1.ebuild,v 1.1 2013/07/17 00:31:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.1.1.ebuild,v 1.1 2013/07/19 19:46:48 hasufell Exp $
 
 EAPI=5
 
@@ -35,8 +35,6 @@ DEPEND="${COMMON_DEPEND}
 	static? ( media-libs/glew[static-libs] )"
 
 DOCS=( README.md AUTHORS CHANGELOG )
-
-PATCHES=( "${FILESDIR}"/${P}-map-marker.patch )
 
 src_configure() {
 	# editor does not build
