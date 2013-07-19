@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.292 2013/07/19 16:29:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.293 2013/07/19 20:29:39 cardoe Exp $
+
+*libvirt-1.1.0-r3 (19 Jul 2013)
+
+  19 Jul 2013; Doug Goldstein <cardoe@gentoo.org> +libvirt-1.1.0-r3.ebuild,
+  -libvirt-1.1.0-r2.ebuild:
+  libvirt-1.1.0-r2 went out slightly too early and missed some patches, notibly
+  CVE-2013-4153 and CVE-2013-4154.
 
 *libvirt-1.1.0-r2 (19 Jul 2013)
 
