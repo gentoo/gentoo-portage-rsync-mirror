@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.176 2013/07/15 18:31:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.177 2013/07/19 19:07:13 abcd Exp $
+
+*networkmanager-0.9.8.2-r3 (19 Jul 2013)
+
+  19 Jul 2013; Jonathan Callen <abcd@gentoo.org>
+  +files/networkmanager-0.9.8.2-allow-new-dhcpcd.patch,
+  +networkmanager-0.9.8.2-r3.ebuild, networkmanager-0.9.8.2-r2.ebuild:
+  Add missing eutils inherits; add patch and bump to allow building against
+  dhcpcd 6.x (previously silently failed to use dhcpcd, but still compiled and
+  installed)
 
 *networkmanager-0.9.8.2-r2 (15 Jul 2013)
 

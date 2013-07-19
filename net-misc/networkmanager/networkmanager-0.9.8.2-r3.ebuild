@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r2.ebuild,v 1.2 2013/07/19 19:07:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r3.ebuild,v 1.1 2013/07/19 19:07:13 abcd Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev eutils
+inherit gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev eutils autotools
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
@@ -111,6 +111,10 @@ src_prepare() {
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
 	epatch "${FILESDIR}/${PN}-0.9.7.995-pre-sleep.patch"
 
+	# Allow dhcpcd newer than 5.x to be used, patch from upstream (will be
+	# included in next version)
+	epatch "${FILESDIR}/${P}-allow-new-dhcpcd.patch"
+
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
 		-i */tests/*.py || die
@@ -119,10 +123,15 @@ src_prepare() {
 	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
 		cli/completion/Makefile.in || die "sed completiondir failed"
 
-	# Force use of /run, avoid eautoreconf
-	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
+	## Force use of /run, avoid eautoreconf
+	#sed -e 's:$localstatedir/run/:/run/:' -i configure || die
+
+	# We have to eautoreconf anyway for the dhcpcd patch
+	sed -e 's:$localstatedir/run/:/run/:' -i configure.ac || die
 
 	use vala && vala_src_prepare
+
+	eautoreconf
 }
 
 src_configure() {
