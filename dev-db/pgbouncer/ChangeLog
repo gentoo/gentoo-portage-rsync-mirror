@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/pgbouncer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/ChangeLog,v 1.9 2013/03/17 15:19:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/ChangeLog,v 1.11 2013/07/19 00:55:04 titanofold Exp $
+
+  19 Jul 2013; Aaron W. Swenson <titanofold@gentoo.org> pgbouncer-1.5.4.ebuild:
+  Fix dependencies.
+
+*pgbouncer-1.5.4 (19 Jul 2013)
+
+  19 Jul 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -pgbouncer-1.4.2.ebuild, -pgbouncer-1.5.ebuild, -pgbouncer-1.5.1.ebuild,
+  -pgbouncer-1.5.2.ebuild, -pgbouncer-1.5.3.ebuild, -pgbouncer-1.5.3-r1.ebuild,
+  +pgbouncer-1.5.4.ebuild, +files/logrotate, +files/pgbouncer.confd,
+  +files/pgbouncer-dirs.patch, files/pgbouncer.initd, metadata.xml:
+  Clean out old and insecure versions. Version bump. Fixes bugs 425480, 460310,
+  477062, and 425034.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
