@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5.ebuild,v 1.3 2013/07/18 09:35:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5.ebuild,v 1.4 2013/07/19 03:20:34 patrick Exp $
 
 EAPI=5
 
@@ -89,6 +89,12 @@ src_compile() {
 
 	qt4-build_src_compile
 
+	if use compat; then
+		# need to explicitly mangle this as we lack the toplevel makefiles
+		pushd .
+		cd src/plugins/accessible && "${S}"/bin/qmake || die
+		popd
+	fi
 	# ugly hack to build docs
 	"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die
 
@@ -102,7 +108,14 @@ src_compile() {
 
 src_install() {
 	qt4-build_src_install
-
+	if use compat; then
+		# need to explicitly mangle this as we lack the toplevel makefiles
+		pushd .
+		cd src/plugins/accessible && "${S}"/bin/qmake || die
+		popd
+		insinto /usr/include/qt4/
+		doins -r include/QtAssistant || die
+	fi
 	emake INSTALL_ROOT="${D}" install_qchdocs
 
 	# do not compress .qch files
