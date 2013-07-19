@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.25 2013/01/28 13:35:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.26 2013/07/19 13:22:31 jer Exp $
+
+  19 Jul 2013; Jeroen Roovers <jer@gentoo.org> unittest2-0.5.1-r1.ebuild:
+  Stable for HPPA (bug #477360).
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> unittest2-0.5.1-r1.ebuild:
   keyword ~amd64-fbsd, bug #453136

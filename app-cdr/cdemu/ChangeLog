@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.41 2013/06/29 04:07:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.42 2013/07/19 13:27:37 tetromino Exp $
+
+*cdemu-2.1.0-r1 (19 Jul 2013)
+
+  19 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cdemu-2.1.0-r1.ebuild, +files/cdemu-2.1.0-bash-completion-dir.patch:
+  Do not use a hard-coded completion directory to fix compatibility with
+  bash-completion-2.1-r1 (bug #477378, thanks to Michał Górny).
 
   29 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -cdemu-1.5.0.ebuild,
   -files/cdemu-1.5.0-man-paragraph.patch:

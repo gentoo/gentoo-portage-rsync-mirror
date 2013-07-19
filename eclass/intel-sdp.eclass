@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.11 2013/02/14 16:29:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.12 2013/07/19 13:05:23 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -40,6 +40,18 @@
 # e.g. 2011_sp1_update2
 #
 # Must be defined before inheriting the eclass
+
+# @ECLASS-VARIABLE: INTEL_TARX
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# The package extention.
+# To find out its value, see the links to download in
+# https://registrationcenter.intel.com/RegCenter/MyProducts.aspx
+#
+# e.g. tar.gz
+#
+# Must be defined before inheriting the eclass
+: ${INTEL_TARX:=tgz}
 
 # @ECLASS-VARIABLE: INTEL_SUBDIR
 # @DEFAULT_UNSET
@@ -95,9 +107,9 @@ _INTEL_PV4=$(get_version_component_range 4)
 _INTEL_URI="http://registrationcenter-download.intel.com/irc_nas/${INTEL_DID}/${INTEL_DPN}"
 
 SRC_URI="
-	amd64? ( multilib? ( ${_INTEL_URI}_${INTEL_DPV}.tgz ) )
-	amd64? ( !multilib? ( ${_INTEL_URI}_${INTEL_DPV}_intel64.tgz ) )
-	x86?	( ${_INTEL_URI}_${INTEL_DPV}_ia32.tgz )"
+	amd64? ( multilib? ( ${_INTEL_URI}_${INTEL_DPV}.${INTEL_TARX} ) )
+	amd64? ( !multilib? ( ${_INTEL_URI}_${INTEL_DPV}_intel64.${INTEL_TARX} ) )
+	x86?	( ${_INTEL_URI}_${INTEL_DPV}_ia32.${INTEL_TARX} )"
 
 LICENSE="Intel-SDP"
 # Future work, #394411
@@ -341,10 +353,11 @@ intel-sdp_src_unpack() {
 		for r in ${INTEL_RPMS}; do
 			for subdir in ${INTEL_RPMS_DIRS}; do
 				rpmdir=${t%%.*}/${subdir}
+				debug-print "Adding ${rpmdir}/${r} to decompression list"
 				list+=( ${rpmdir}/${r})
 			done
 		done
-		tar xf "${DISTDIR}"/${t} ${list[@]}	2> /dev/null || die
+		tar xvf "${DISTDIR}"/${t} ${list[@]} &> "${T}"/rpm-extraction.log || die
 		for r in ${list[@]}; do
 			rb=$(basename ${r})
 			l=.${rb}_$(date +'%d%m%y_%H%M%S').log

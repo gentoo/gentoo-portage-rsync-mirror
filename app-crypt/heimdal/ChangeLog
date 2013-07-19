@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.213 2013/06/27 20:40:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.214 2013/07/19 13:04:28 eras Exp $
+
+*heimdal-1.5.3-r1 (19 Jul 2013)
+
+  19 Jul 2013; Eray Aslan <eras@gentoo.org> +files/heimdal_db6.patch,
+  +heimdal-1.5.3-r1.ebuild:
+  Add support for db-6 thanks to Lars Wendler bug #476362
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> heimdal-1.5.3.ebuild:
   keyword ~amd64-fbsd

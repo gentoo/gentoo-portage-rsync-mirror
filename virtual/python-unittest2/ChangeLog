@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-unittest2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.7 2013/07/19 07:58:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.8 2013/07/19 13:22:48 jer Exp $
+
+  19 Jul 2013; Jeroen Roovers <jer@gentoo.org> python-unittest2-1-r1.ebuild:
+  Stable for HPPA (bug #477360).
 
 *python-unittest2-1-r2 (19 Jul 2013)
 
