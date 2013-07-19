@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-3.4a.ebuild,v 1.1 2013/05/09 02:47:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-3.4a-r1.ebuild,v 1.1 2013/07/19 01:51:15 jer Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -39,14 +39,14 @@ src_configure() {
 src_compile() {
 	emake \
 		CC=$(tc-getCC) LD=$(tc-getCC) \
-		XAPPLOADDIR="/usr/share/X11/app-defaults" \
+		XAPPLOADDIR="/etc/X11/app-defaults" \
 		LOCAL_LDFLAGS="${LDFLAGS}" \
 		CDEBUGFLAGS="${CFLAGS}"
 }
 
 src_install() {
 	emake \
-		XAPPLOADDIR="/usr/share/X11/app-defaults" \
+		XAPPLOADDIR="/etc/X11/app-defaults" \
 		DESTDIR="${D}" \
 		install
 

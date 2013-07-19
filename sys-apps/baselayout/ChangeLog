@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.542 2013/05/20 17:56:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.543 2013/07/19 01:58:53 williamh Exp $
+
+  19 Jul 2013; William Hubbs <williamh@gentoo.org> -baselayout-2.0.3.ebuild,
+  -baselayout-2.1.ebuild:
+  remove old unstable versions
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> baselayout-2.2.ebuild:
   Stable for s390, wrt bug #455872
