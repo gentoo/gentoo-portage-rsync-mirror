@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.252 2013/06/21 17:52:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.253 2013/07/19 18:07:25 hasufell Exp $
+
+*blender-2.68 (19 Jul 2013)
+
+  19 Jul 2013; Julian Ospald <hasufell@gentoo.org> +blender-2.68.ebuild,
+  +files/01-blender-2.68-doxyfile.patch,
+  +files/06-blender-2.68-fix-install-rules.patch,
+  +files/03-blender-2.68-remove-binreloc.patch,
+  +files/07-blender-2.68-sse2.patch,
+  +files/02-blender-2.68-unbundle-colamd.patch,
+  +files/05-blender-2.68-unbundle-eigen3.patch,
+  +files/04-blender-2.68-unbundle-glog.patch:
+  version bump wrt #477408
 
   21 Jun 2013; Julian Ospald <hasufell@gentoo.org> blender-2.67b-r1.ebuild,
   +files/01-blender-2.67b-doxyfile.patch, -files/blender-2.67b-doxyfile.patch,
