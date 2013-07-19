@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.52 2013/07/17 15:08:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.53 2013/07/19 18:00:24 hasufell Exp $
+
+  19 Jul 2013; Julian Ospald <hasufell@gentoo.org> doomsday-1.10.2.ebuild:
+  simplify REQUIRED_USE
 
 *doomsday-1.10.2 (17 Jul 2013)
 
