@@ -10,4 +10,7 @@
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>
+	<use>
+	<flag name='npm'>Enable NPM package manager</flag>
+	</use>
 </pkgmetadata>

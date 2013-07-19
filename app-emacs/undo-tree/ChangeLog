@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/undo-tree
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/ChangeLog,v 1.5 2012/07/15 18:02:26 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/ChangeLog,v 1.6 2013/07/19 06:32:47 tomka Exp $
+
+*undo-tree-0.6.3 (19 Jul 2013)
+
+  19 Jul 2013; Thomas Kahle <tomka@gentoo.org> +undo-tree-0.6.3.ebuild:
+  Bump to 0.6.3 (bug 477340)
 
 *undo-tree-0.5.2 (15 Jul 2012)
 
@@ -29,4 +34,3 @@
   17 Nov 2010; Thomas Kahle <tomka@gentoo.org> +files/50undo-tree-gentoo.el,
   +undo-tree-0.1.7_pre20101117.ebuild, +metadata.xml:
   initial import.
-
