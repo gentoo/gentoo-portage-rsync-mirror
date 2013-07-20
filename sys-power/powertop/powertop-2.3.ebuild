@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.3.ebuild,v 1.4 2013/04/08 03:12:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.3.ebuild,v 1.5 2013/07/20 03:30:31 zerochaos Exp $
 
 EAPI="5"
 
@@ -50,7 +50,7 @@ pkg_setup() {
 		~HPET_TIMER
 		~CPU_FREQ_STAT
 		~CPU_FREQ_GOV_ONDEMAND
-		~USB_SUSPEND
+		~PM_RUNTIME
 		~FTRACE
 		~BLK_DEV_IO_TRACE
 		~TIMER_STATS
@@ -66,7 +66,7 @@ pkg_setup() {
 	ERROR_KERNEL_HPET_TIMER="HPET_TIMER should be enabled in the kernel for full powertop function"
 	ERROR_KERNEL_CPU_FREQ_STAT="CPU_FREQ_STAT should be enabled in the kernel for full powertop function"
 	ERROR_KERNEL_CPU_FREQ_GOV_ONDEMAND="CPU_FREQ_GOV_ONDEMAND should be enabled in the kernel for full powertop function"
-	ERROR_KERNEL_USB_SUSPEND="USB_SUSPEND should be enabled in the kernel for full powertop function"
+	ERROR_KERNEL_PM_RUNTIME="PM_RUNTIME should be enabled in the kernel for full powertop function"
 	ERROR_KERNEL_FTRACE="FTRACE needs to be turned on to enable BLK_DEV_IO_TRACE"
 	ERROR_KERNEL_BLK_DEV_IO_TRACE="BLK_DEV_IO_TRACE needs to be turned on to enable TIMER_STATS, TRACING and EVENT_POWER_TRACING_DEPRECATED"
 	ERROR_KERNEL_TIMER_STATS="TIMER_STATS should be enabled in the kernel for full powertop function"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.14.ebuild,v 1.1 2013/06/06 03:47:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.14.ebuild,v 1.2 2013/07/20 03:09:03 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -8,17 +8,9 @@ PYTHON_REQ_USE="sqlite,threads"
 
 inherit eutils gnome2-utils python-r1
 
-if [[ ${PV/_rc*/} == ${PV} ]] ; then
-	MY_PV=${PV}-odyssey-1.0-src
-	FOLDER=pyfa/stable/${PV}
-else
-	MY_PV=${PV/_rc/-stable-RC}-src
-	FOLDER=pyfa/stable/${PV/*_rc/RC}
-fi
-
 DESCRIPTION="Python Fitting Assistant - a ship fitting application for EVE Online"
-HOMEPAGE="http://www.evefit.org/static/pyfa"
-SRC_URI="http://dl.evefit.org/${FOLDER}/${PN}-${MY_PV}.tar.bz2"
+HOMEPAGE="https://github.com/DarkFenX/Pyfa"
+SRC_URI="http://go-dl.eve-files.com/media/corp/Kadesh/${P}-odyssey-1.0-src.zip"
 
 LICENSE="GPL-3+ LGPL-2.1+ CC-BY-2.5 free-noncomm"
 SLOT="0"
@@ -31,14 +23,13 @@ RDEPEND="dev-python/sqlalchemy[${PYTHON_USEDEP}]
 		dev-python/matplotlib[wxwidgets,${PYTHON_USEDEP}]
 		dev-python/numpy[${PYTHON_USEDEP}] )
 	${PYTHON_DEPS}"
-DEPEND="app-text/dos2unix
-	${PYTHON_DEPS}"
+DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${PN}
 
 src_prepare() {
 	# get rid of CRLF line endings introduced in 1.1.10 so patches work
-	dos2unix config.py pyfa.py service/settings.py || die
+	edos2unix config.py pyfa.py service/settings.py
 
 	# make staticPath settable from configforced again
 	epatch "${FILESDIR}/${PN}-1.1-staticPath.patch"
