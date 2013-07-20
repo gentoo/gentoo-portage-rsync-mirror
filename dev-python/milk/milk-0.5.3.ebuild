@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/milk-0.5.3.ebuild,v 1.1 2013/06/25 16:16:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/milk-0.5.3.ebuild,v 1.2 2013/07/20 09:08:59 idella4 Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
-RDEPEND="dev-python/numpy"
-DEPEND="dev-python/setuptools
+RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-cpp/eigen:3
 	test? ( dev-python/milksets sci-libs/scipy[${PYTHON_USEDEP}] )"

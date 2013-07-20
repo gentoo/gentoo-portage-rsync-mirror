@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/media-player-info
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.23 2012/11/28 17:53:50 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.24 2013/07/20 09:02:58 pacho Exp $
+
+*media-player-info-18 (20 Jul 2013)
+
+  20 Jul 2013; Pacho Ramos <pacho@gentoo.org> +media-player-info-18.ebuild:
+  Version bump (#477334 by teidakankan)
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   -media-player-info-16.ebuild:
@@ -111,4 +116,3 @@
   24 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
   +media-player-info-4.ebuild, +metadata.xml:
   Initial ebuild, closes bug #291417. Thanks to Giacomo Perale.
-

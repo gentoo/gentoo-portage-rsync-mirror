@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mocker
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.7 2012/11/03 18:24:32 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.8 2013/07/20 09:30:12 idella4 Exp $
+
+*mocker-1.1.1-r1 (20 Jul 2013)
+
+  20 Jul 2013; Ian Delaney <idella4@gentoo.org> +mocker-1.1.1-r1.ebuild,
+  -mocker-1.1.1.ebuild:
+  migrate -> distutils-r1, remove old
 
 *mocker-1.1.1 (04 Nov 2012)
 
