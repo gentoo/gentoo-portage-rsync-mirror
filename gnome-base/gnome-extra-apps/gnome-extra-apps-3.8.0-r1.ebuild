@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.8.0.ebuild,v 1.1 2013/04/11 19:15:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.8.0-r1.ebuild,v 1.1 2013/07/20 11:15:00 pacho Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Sub-meta package for the applications of GNOME 3"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="metapackage"
 SLOT="3.0"
-IUSE="+shotwell +tracker"
+IUSE="+games +shotwell +tracker"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -26,7 +26,6 @@ RDEPEND="
 	>=games-board/aisleriot-3.2.3.2
 	>=gnome-extra/gconf-editor-3
 	>=gnome-extra/gnome-calculator-${PV}
-	>=gnome-extra/gnome-games-3.6.1
 	>=gnome-extra/gnome-search-tool-3.6
 	>=gnome-extra/gnome-system-monitor-${PV}
 	>=gnome-extra/gnome-tweak-tool-3.7.4
@@ -43,6 +42,19 @@ RDEPEND="
 	>=sys-apps/baobab-${PV}
 	>=www-client/epiphany-${PV}
 
+	games? (
+		>=games-board/aisleriot-3.2.3.2
+		>=games-puzzle/five-or-more-${PV}
+		>=games-board/four-in-a-row-${PV}
+		>=games-board/gnome-chess-${PV}
+		>=games-puzzle/gnome-klotski-${PV}
+		>=games-board/gnome-mines-${PV}
+		>=games-arcade/gnome-robots-${PV}
+		>=games-puzzle/gnome-tetravex-${PV}
+		>=games-board/iagno-${PV}
+		>=games-puzzle/quadrapassel-${PV}
+		>=games-puzzle/swell-foop-${PV}
+		>=games-puzzle/gnome-sudoku-${PV} )
 	shotwell? ( >=media-gfx/shotwell-0.14 )
 	tracker? (
 		>=app-misc/tracker-0.16

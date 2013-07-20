@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.16.0.ebuild,v 1.1 2013/04/25 19:39:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.16.0-r1.ebuild,v 1.1 2013/07/20 11:28:41 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG=yes
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A library providing GLib serialization and deserialization support for the JSON format"
-HOMEPAGE="http://live.gnome.org/JsonGlib"
+HOMEPAGE="https://wiki.gnome.org/JsonGlib"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
@@ -24,6 +24,13 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.18
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	# Add configure option to enable -Bsymbolic (from 'master')
+	epatch "${FILESDIR}/${PN}-0.16.0-bsymbolic.patch"
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_configure() {
 	# Coverage support is useless, and causes runtime problems

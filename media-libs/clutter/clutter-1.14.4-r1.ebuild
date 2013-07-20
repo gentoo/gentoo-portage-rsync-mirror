@@ -1,15 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.14.2.ebuild,v 1.1 2013/04/17 17:18:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.14.4-r1.ebuild,v 1.1 2013/07/20 11:07:37 pacho Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
 
 # Inherit gnome2 after clutter to download sources from gnome.org
 # since clutter-project.org doesn't provide .xz tarballs
-inherit clutter gnome2 virtualx
+inherit autotools eutils clutter gnome2 virtualx
 
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
+
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0"
@@ -61,6 +63,10 @@ src_prepare() {
 		-i tests/Makefile.am || die "am tests sed failed"
 	sed -e 's/^\(SUBDIRS =\)[^\]*/\1/g' \
 		-i tests/Makefile.in || die "in tests sed failed"
+
+	# Apply patches from 1.14 branch
+	epatch "${WORKDIR}/${P}-patches/"*.patch
+	eautoreconf
 
 	gnome2_src_prepare
 }

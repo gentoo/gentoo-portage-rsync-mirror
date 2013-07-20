@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.140 2013/07/16 02:59:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.141 2013/07/20 11:18:23 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
+# Keywords pending, bug #476710
+>=gnome-base/gnome-extra-apps-3.8 games
 
 # Michael Weber <xmw@gentoo.org> (08 Jul 2013)
 # missing keywords on dev-python/pydns

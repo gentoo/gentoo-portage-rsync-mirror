@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.44 2013/06/17 00:43:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.46 2013/07/20 11:11:12 ago Exp $
+
+  20 Jul 2013; Agostino Sarubbo <ago@gentoo.org> vhba-20130607.ebuild:
+  Stable for x86, wrt bug #477004
+
+  20 Jul 2013; Agostino Sarubbo <ago@gentoo.org> vhba-20130607.ebuild:
+  Stable for amd64, wrt bug #477004
 
 *vhba-20130607 (17 Jun 2013)
 
