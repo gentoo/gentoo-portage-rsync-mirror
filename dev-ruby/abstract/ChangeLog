@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/abstract
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.11 2013/01/15 06:49:44 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.12 2013/07/20 07:53:55 graaff Exp $
+
+  20 Jul 2013; Hans de Graaff <graaff@gentoo.org> abstract-1.0.0-r1.ebuild:
+  Move ppc,ppc64 keywords forward.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> abstract-1.0.0-r1.ebuild,
   abstract-1.0.0.ebuild:
