@@ -1,17 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.1.ebuild,v 1.1 2013/06/10 18:53:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.1.ebuild,v 1.2 2013/07/20 05:15:51 jer Exp $
 
 EAPI=5
-inherit eutils
+inherit autotools eutils
 
-MY_P="${P/geoip/GeoIP}"
 GEOLITE_URI="http://geolite.maxmind.com/download/geoip/database/"
 
 DESCRIPTION="easily lookup countries by IP addresses, even when Reverse DNS entries don't exist"
 HOMEPAGE="http://dev.maxmind.com/geoip/legacy/downloadable"
 SRC_URI="
-	http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz
+	https://github.com/maxmind/${PN}-api-c/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	http://geolite.maxmind.com/download/${PN}/database/GeoLiteCountry/GeoIP.dat.gz
 	${GEOLITE_URI}asnum/GeoIPASNum.dat.gz
 	city? ( ${GEOLITE_URI}GeoLiteCity.dat.gz )
 	ipv6? (
@@ -35,15 +35,21 @@ RDEPEND="
 	)
 "
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${PN}-api-c-${PV}"
 
 src_prepare() {
+	mv "${WORKDIR}"/GeoIP.dat data || die
+
 	epatch "${FILESDIR}"/${PN}-1.5.0-pkgconfig.patch
+
 	sed -e "s:usr local share GeoIP:usr share GeoIP:" \
 		-e "s:usr local etc:etc:" \
 		-i apps/geoipupdate-pureperl.pl || die
+
 	sed -e 's|yahoo.com|98.139.183.24|g' \
 		-i test/country_test_name.txt test/region_test.txt || die
+
+	eautoreconf
 }
 
 src_configure() {
@@ -52,12 +58,14 @@ src_configure() {
 
 src_install() {
 	default
+
 	use perl-geoipupdate && dobin apps/geoipupdate-pureperl.pl
+
 	dodoc AUTHORS ChangeLog README TODO conf/GeoIP.conf.default
+
 	rm "${ED}/etc/GeoIP.conf.default"
-	if ! use static-libs; then
-		rm -f "${ED}"/usr/lib*/lib*.la
-	fi
+
+	prune_libtool_files
 
 	insinto /usr/share/GeoIP
 	doins "${WORKDIR}/GeoIPASNum.dat"

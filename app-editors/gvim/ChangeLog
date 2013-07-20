@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.401 2013/06/17 00:58:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.402 2013/07/20 05:19:48 radhermit Exp $
+
+  20 Jul 2013; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Update VIM_VERSION.
 
 *gvim-7.3.1214 (17 Jun 2013)
 
