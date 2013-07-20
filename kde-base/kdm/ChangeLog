@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.351 2013/07/02 16:48:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.352 2013/07/20 21:58:46 dilfridge Exp $
+
+*kdm-4.10.5-r1 (20 Jul 2013)
+*kdm-4.10.4-r1 (20 Jul 2013)
+
+  20 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org> +kdm-4.10.4-r1.ebuild,
+  +files/kdm-4.10.4-crypt.patch, +kdm-4.10.5-r1.ebuild:
+  Fix potential nullpointer issue (backport)
 
 *kdm-4.10.5 (02 Jul 2013)
 

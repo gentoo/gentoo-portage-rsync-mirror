@@ -1,0 +1,48 @@
+From 45b7f137fbc0b942fd2c9b4e8d8c1f0293e64ba7 Mon Sep 17 00:00:00 2001
+From: Michael Pyne <mpyne@kde.org>
+Date: Sat, 29 Jun 2013 16:13:20 -0400
+Subject: [PATCH] kdm, kcheckpass: Check for NULL return from crypt(3) and
+ friends.
+
+Potential issue noted and fixed by Mancha <mancha1@hush.com>.
+
+Patch reviewed by myself and ossi. Backported to 4.10 by myself.
+
+REVIEW:111261
+FIXED-IN:4.10.5
+---
+ kcheckpass/checkpass_etcpasswd.c   | 3 ++-
+ kcheckpass/checkpass_osfc2passwd.c | 3 ++-
+ kcheckpass/checkpass_shadow.c      | 2 +-
+ kdm/backend/client.c               | 7 +++++--
+ 4 files changed, 10 insertions(+), 5 deletions(-)
+
+diff --git a/kdm/backend/client.c b/kdm/backend/client.c
+index bdff6da..26bb0b4 100644
+--- a/kdm/backend/client.c
++++ b/kdm/backend/client.c
+@@ -540,6 +540,9 @@ verify(GConvFunc gconv, int rootok)
+ # if defined(HAVE_STRUCT_PASSWD_PW_EXPIRE) || defined(USESHADOW)
+     int tim, expir, warntime, quietlog;
+ # endif
++# if !defined(ultrix) && !defined(__ultrix__) && (defined(HAVE_PW_ENCRYPT) || defined(HAVE_CRYPT))
++    char *crpt_passwd;
++# endif
+ #endif
+ 
+     debug("verify ...\n");
+@@ -752,9 +755,9 @@ verify(GConvFunc gconv, int rootok)
+ # if defined(ultrix) || defined(__ultrix__)
+     if (authenticate_user(p, curpass, 0) < 0)
+ # elif defined(HAVE_PW_ENCRYPT)
+-    if (strcmp(pw_encrypt(curpass, p->pw_passwd), p->pw_passwd))
++    if (!(crpt_passwd = pw_encrypt(curpass, p->pw_passwd)) || strcmp(crpt_passwd, p->pw_passwd))
+ # elif defined(HAVE_CRYPT)
+-    if (strcmp(crypt(curpass, p->pw_passwd), p->pw_passwd))
++    if (!(crpt_passwd = crypt(curpass, p->pw_passwd)) || strcmp(crpt_passwd, p->pw_passwd))
+ # else
+     if (strcmp(curpass, p->pw_passwd))
+ # endif
+-- 
+1.8.3.2
+
