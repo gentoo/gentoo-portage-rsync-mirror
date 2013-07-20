@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8056 2013/07/20 17:41:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8057 2013/07/20 20:32:49 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask profile-sync-daemon
 
   20 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Raise the multilib copy of libpng from 1.6.2-r1 to 1.6.3-r1.
