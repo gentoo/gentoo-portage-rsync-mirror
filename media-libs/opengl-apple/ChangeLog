@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/opengl-apple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/ChangeLog,v 1.7 2012/12/04 08:08:05 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/ChangeLog,v 1.8 2013/07/20 18:44:01 grobian Exp $
+
+*opengl-apple-5 (20 Jul 2013)
+
+  20 Jul 2013; Fabian Groffen <grobian@gentoo.org> +opengl-apple-5.ebuild:
+  Bump to match layout used by new(er) eselect-opengl
 
   04 Dec 2012; Fabian Groffen <grobian@gentoo.org> opengl-apple-3.ebuild,
   opengl-apple-4.ebuild:
