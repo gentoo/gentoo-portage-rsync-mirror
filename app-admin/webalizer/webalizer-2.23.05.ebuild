@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.05.ebuild,v 1.9 2013/01/13 11:29:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.05.ebuild,v 1.10 2013/07/20 05:37:14 jer Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -113,7 +113,7 @@ pkg_postinst() {
 	if [[ ${#LINGUAS} -gt 2 ]] && use nls; then
 		ewarn
 		ewarn "You have more than one language in LINGUAS"
-		ewarn "Due to the limitations of this packge, it was built"
+		ewarn "Due to the limitations of this package, it was built"
 		ewarn "only with ${LINGUAS:0:2} support. If this is not what"
 		ewarn "you intended, please place the language you desire"
 		ewarn "_first_ in the list of LINGUAS in /etc/make.conf"
