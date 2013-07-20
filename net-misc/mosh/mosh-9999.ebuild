@@ -1,19 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.13 2013/03/13 19:19:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.14 2013/07/20 13:08:23 xmw Exp $
 
-EAPI=4
-EGIT_REPO_URI="https://github.com/keithw/mosh.git"
+EAPI=5
 
-inherit autotools git-2
+inherit autotools bash-completion-r1 git-2
 
 DESCRIPTION="Mobile shell that supports roaming and intelligent local echo"
 HOMEPAGE="http://mosh.mit.edu"
+EGIT_REPO_URI="https://github.com/keithw/mosh.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="bash-completion +client examples +mosh-hardening +server ufw +utempter"
+IUSE="+client examples +mosh-hardening +server ufw +utempter"
 REQUIRED_USE="|| ( client server )
 	examples? ( client )"
 
@@ -33,7 +33,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable bash-completion completion) \
+		--disable-completion \
 		$(use_enable client) \
 		$(use_enable server) \
 		$(use_enable examples) \
@@ -54,9 +54,6 @@ src_install() {
 		elog "${myprog} installed as ${PN}-$(basename ${myprog})"
 	done
 
-	if use bash-completion ; then
-		insinto /usr/share/bash-completion
-		doins "${ED}"/etc/bash_completion.d/mosh
-		rm -rf "${ED}"/etc/bash_completion.d
-	fi
+	# bug 477384
+	dobashcomp conf/bash_completion.d/mosh
 }
