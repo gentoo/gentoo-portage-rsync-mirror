@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2.ebuild,v 1.2 2013/07/13 11:07:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2-r1.ebuild,v 1.1 2013/07/20 09:56:17 pacho Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ src_configure() {
 	# bindir is used just for calling fcronsighup
 	econf \
 		--with-cflags="${CFLAGS}" \
-		--bindir=/usr/libexec \
+		--sbindir=/usr/libexec \
 		$(use_with pam) \
 		$(use_with selinux) \
 		$(use_with readline) \
@@ -155,7 +155,7 @@ src_install() {
 	newpamd "${T}"/fcrontab.pam fcrontab
 
 	newinitd "${FILESDIR}"/fcron.init.3 fcron
-	systemd_dounit "${S}/script/fcron.init.systemd"
+	systemd_newunit "${S}/script/fcron.init.systemd" fcron.service
 
 	dodoc MANIFEST VERSION "${FILESDIR}"/crontab \
 		doc/en/txt/{readme,thanks,faq,todo,relnotes,changes}.txt
