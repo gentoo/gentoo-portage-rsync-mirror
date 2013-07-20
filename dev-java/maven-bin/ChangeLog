@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/maven-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.82 2012/12/22 15:39:57 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.83 2013/07/19 23:58:10 tomwij Exp $
+
+*maven-bin-3.1.0 (19 Jul 2013)
+
+  19 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +maven-bin-3.1.0.ebuild:
+  Version bump to 3.1.0. Fixes bug #472850, reported by Joerg Schaible. Also
+  fixes up some missing dependencies, remaining dependencies are listed in bug
+  #477436.
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> maven-bin-1.1-r1.ebuild,
   maven-bin-1.1-r3.ebuild, maven-bin-2.0.11-r2.ebuild, maven-bin-2.0.11.ebuild,

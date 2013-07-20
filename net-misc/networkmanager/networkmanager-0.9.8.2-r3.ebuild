@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r3.ebuild,v 1.1 2013/07/19 19:07:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r3.ebuild,v 1.2 2013/07/19 23:51:23 abcd Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -49,9 +49,7 @@ COMMON_DEPEND="
 	modemmanager? ( >=net-misc/modemmanager-0.7.991 )
 	nss? ( >=dev-libs/nss-3.11:= )
 	dhclient? ( =net-misc/dhcp-4*[client] )
-	dhcpcd? (
-		>=net-misc/dhcpcd-4.0.0_rc3
-		<net-misc/dhcpcd-6 )
+	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
 	ppp? ( >=net-dialup/ppp-2.4.5[ipv6] )
 	resolvconf? ( net-dns/openresolv )
