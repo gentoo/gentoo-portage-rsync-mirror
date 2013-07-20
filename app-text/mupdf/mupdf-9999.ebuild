@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.38 2013/06/21 19:13:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.39 2013/07/20 10:29:40 xmw Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ LIB_DEPEND="dev-libs/openssl[static-libs?]
 	media-libs/freetype:2[static-libs?]
 	media-libs/jbig2dec[static-libs?]
 	media-libs/openjpeg:2[static-libs?]
+	net-misc/curl[static-libs?]
 	virtual/jpeg[static-libs?]
 	X? ( x11-libs/libX11[static-libs?]
 		x11-libs/libXext[static-libs?] )"
@@ -39,7 +40,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-CFLAGS.patch \
 		"${FILESDIR}"/${P}-openjpeg2.patch \
-		"${FILESDIR}"/${P}-pkg-config.patch
+		"${FILESDIR}"/${P}-pkg-config.patch \
+		"${FILESDIR}"/${P}-sys_curl.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
