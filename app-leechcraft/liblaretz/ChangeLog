@@ -1,0 +1,8 @@
+# ChangeLog for app-leechcraft/liblaretz
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/liblaretz/ChangeLog,v 1.1 2013/07/20 20:18:03 maksbotan Exp $
+
+*liblaretz-9999 (20 Jul 2013)
+
+  20 Jul 2013;  <maks@gentoo.org> +liblaretz-9999.ebuild, +metadata.xml:
+  Add app-leechcraft/liblaretz-9999, thanks to 0xd34df00d
