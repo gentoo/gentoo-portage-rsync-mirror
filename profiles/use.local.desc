@@ -3638,6 +3638,7 @@ media-video/ffmpeg:faac - Use external faac library for AAC encoding
 media-video/ffmpeg:fdk - Use external fdk-aac library for AAC encoding
 media-video/ffmpeg:flite - Adds a text-to-speech filter based on app-accessibility/flite.
 media-video/ffmpeg:frei0r - Enable frei0r wrapping in libavfilter
+media-video/ffmpeg:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.
 media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly.
 media-video/ffmpeg:iec61883 - Support for FireWire DV/HDV input device using media-libs/libiec61883.
 media-video/ffmpeg:libsoxr - Enables audio resampling through media-libs/soxr.

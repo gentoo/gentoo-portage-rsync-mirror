@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst preinst prepare setup
-DEPEND=!net-misc/openswan >=dev-libs/gmp-4.1.5 gcrypt? ( dev-libs/libgcrypt ) caps? ( sys-libs/libcap ) curl? ( net-misc/curl ) ldap? ( net-nds/openldap ) openssl? ( >=dev-libs/openssl-0.9.8[-bindist] ) mysql? ( virtual/mysql ) sqlite? ( >=dev-db/sqlite-3.3.1 ) pam? ( sys-libs/pam ) virtual/linux-sources sys-kernel/linux-headers
+DEPEND=!net-misc/openswan >=dev-libs/gmp-4.1.5 gcrypt? ( dev-libs/libgcrypt ) caps? ( sys-libs/libcap ) curl? ( net-misc/curl ) ldap? ( net-nds/openldap ) openssl? ( >=dev-libs/openssl-0.9.8[-bindist] ) mysql? ( virtual/mysql ) sqlite? ( >=dev-db/sqlite-3.3.1 ) pam? ( sys-libs/pam ) virtual/linux-sources sys-kernel/linux-headers virtual/pkgconfig
 DESCRIPTION=IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE
 EAPI=5
 HOMEPAGE=http://www.strongswan.org/
@@ -9,5 +9,5 @@ LICENSE=GPL-2 RSA DES
 RDEPEND=!net-misc/openswan >=dev-libs/gmp-4.1.5 gcrypt? ( dev-libs/libgcrypt ) caps? ( sys-libs/libcap ) curl? ( net-misc/curl ) ldap? ( net-nds/openldap ) openssl? ( >=dev-libs/openssl-0.9.8[-bindist] ) mysql? ( virtual/mysql ) sqlite? ( >=dev-db/sqlite-3.3.1 ) pam? ( sys-libs/pam ) virtual/logger sys-apps/iproute2
 SLOT=0
 SRC_URI=http://download.strongswan.org/strongswan-5.0.4.tar.bz2
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=34305883c427dbbe7369307187ce95c9
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	systemd	3421a5715404244e4827acd1cf8ce654	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=3a96b6afdb40e113df49f251e8dc4ffc

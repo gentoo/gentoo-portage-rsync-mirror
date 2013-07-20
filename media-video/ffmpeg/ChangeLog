@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.664 2013/07/14 10:41:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.665 2013/07/20 14:51:55 aballier Exp $
+
+  20 Jul 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.0.ebuild,
+  ffmpeg-9999.ebuild, metadata.xml:
+  Add gme support.
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
   Stable for alpha, wrt bug #473302

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.4-r1.ebuild,v 1.1 2013/06/30 18:04:07 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.4-r1.ebuild,v 1.2 2013/07/20 14:34:37 pacho Exp $
 
 EAPI=5
-inherit eutils linux-info user
+inherit eutils linux-info systemd user
 
 DESCRIPTION="IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE"
 HOMEPAGE="http://www.strongswan.org/"
@@ -135,6 +135,7 @@ src_configure() {
 		$(use_enable dhcp) \
 		$(use_enable farp) \
 		$(use_enable networkmanager nm) \
+		"$(systemd_with_unitdir)" \
 		${myconf}
 }
 

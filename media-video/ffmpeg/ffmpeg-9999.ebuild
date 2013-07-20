@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.133 2013/07/02 12:10:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.134 2013/07/20 14:51:55 aballier Exp $
 
 EAPI="4"
 
@@ -31,10 +31,11 @@ fi
 IUSE="
 	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
-	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k libass
-	libcaca libsoxr libv4l modplug mp3 network openal openssl opus oss pic
-	pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora threads
-	truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid +zlib
+	gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k
+	libass libcaca libsoxr libv4l modplug mp3 network openal openssl opus oss
+	pic pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora
+	threads truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid
+	+zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -74,6 +75,7 @@ RDEPEND="
 	flite? ( app-accessibility/flite )
 	fontconfig? ( media-libs/fontconfig )
 	frei0r? ( media-plugins/frei0r-plugins )
+	gme? ( media-libs/game-music-emu )
 	gnutls? ( >=net-libs/gnutls-2.12.16 )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	iconv? ( virtual/libiconv )
@@ -194,7 +196,7 @@ src_configure() {
 	# Decoders
 	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb	jpeg2k:libopenjpeg"
 	use amr && myconf="${myconf} --enable-version3"
-	for i in bluray celt gsm modplug opus quvi rtmp schroedinger speex vorbis vpx; do
+	for i in bluray celt gme gsm modplug opus quvi rtmp schroedinger speex vorbis vpx; do
 		ffuse="${ffuse} ${i}:lib${i}"
 	done
 

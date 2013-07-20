@@ -25,6 +25,7 @@
 	<flag name="fdk">Use external fdk-aac library for AAC encoding</flag>
 	<flag name="flite">Adds a text-to-speech filter based on <pkg>app-accessibility/flite</pkg>.</flag>
 	<flag name="frei0r">Enable frei0r wrapping in libavfilter</flag>
+    <flag name="gme">Enables support for <pkg>media-libs/game-music-emu</pkg> for playing various video game music formats.</flag>
     <flag name="hardcoded-tables">Use pre-calculated tables rather than calculating them on the fly.</flag>
 	<flag name="iec61883"> Support for FireWire DV/HDV input device using <pkg>media-libs/libiec61883</pkg>.</flag>
 	<flag name="libsoxr">Enables audio resampling through <pkg>media-libs/soxr</pkg>.</flag>
