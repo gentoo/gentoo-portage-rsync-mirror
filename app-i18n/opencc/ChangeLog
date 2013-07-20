@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/opencc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.12 2013/04/02 20:55:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.13 2013/07/20 07:04:29 naota Exp $
+
+*opencc-0.4.3 (20 Jul 2013)
+
+  20 Jul 2013; Naohiro Aota <naota@gentoo.org> +opencc-0.4.3.ebuild,
+  opencc-0.3.0_pre20120819-r1.ebuild:
+  Version bump wrt #476790
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   opencc-0.3.0_pre20120819-r1.ebuild:

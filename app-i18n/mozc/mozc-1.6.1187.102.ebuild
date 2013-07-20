@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-1.6.1187.102.ebuild,v 1.2 2013/03/02 19:28:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-1.6.1187.102.ebuild,v 1.3 2013/07/20 07:15:49 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ MOZC_URL="http://mozc.googlecode.com/files/${P}.tar.bz2"
 PROTOBUF_URL="http://protobuf.googlecode.com/files/protobuf-${PROTOBUF_VER}.tar.bz2"
 SRC_URI="${MOZC_URL} ${PROTOBUF_URL}"
 
-LICENSE="Apache-2.0 BSD Boost-1.0 ipadic public-domain unicode"
+LICENSE="Apache-2.0 BSD ipadic public-domain unicode"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="emacs +ibus +qt4 renderer"

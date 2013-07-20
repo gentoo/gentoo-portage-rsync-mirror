@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/mozc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.6 2013/05/10 05:27:20 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.7 2013/07/20 07:15:49 naota Exp $
+
+  20 Jul 2013; Naohiro Aota <naota@gentoo.org> mozc-1.10.1390.102.ebuild,
+  mozc-1.6.1187.102.ebuild:
+  Update license wrt #471010
 
   10 May 2013; Naohiro Aota <naota@gentoo.org> mozc-1.10.1390.102.ebuild:
   Call epatch_user
