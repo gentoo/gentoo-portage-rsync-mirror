@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.9.ebuild,v 1.14 2013/04/22 12:24:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.9.ebuild,v 1.15 2013/07/20 08:42:13 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="Subversion GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="apache2 berkdb ctypes-python debug doc +dso extras gnome-keyring java kde nls perl python ruby sasl vim-syntax +webdav-neon webdav-serf"
+IUSE="apache2 berkdb ctypes-python debug doc +dso extras gnome-keyring java kde nls perl python ruby sasl test vim-syntax +webdav-neon webdav-serf"
 
 COMMON_DEPEND=">=dev-db/sqlite-3.4[threadsafe(+)]
 	>=dev-libs/apr-1.3:1
@@ -44,7 +44,7 @@ RDEPEND="${COMMON_DEPEND}
 	perl? ( dev-perl/URI )"
 # Note: ctypesgen doesn't need PYTHON_USEDEP, it's used once
 DEPEND="${COMMON_DEPEND}
-	${PYTHON_DEPS}
+	test? ( ${PYTHON_DEPS} )
 	!!<sys-apps/sandbox-1.6
 	ctypes-python? ( dev-python/ctypesgen )
 	doc? ( app-doc/doxygen )
@@ -53,6 +53,11 @@ DEPEND="${COMMON_DEPEND}
 	kde? ( virtual/pkgconfig )
 	nls? ( sys-devel/gettext )
 	webdav-neon? ( virtual/pkgconfig )"
+
+REQUIRED_USE="
+	ctypes-python? ( ${PYTHON_REQUIRED_USE} )
+	python? ( ${PYTHON_REQUIRED_USE} )
+	test? ( ${PYTHON_REQUIRED_USE} )"
 
 want_apache
 
@@ -185,7 +190,9 @@ src_configure() {
 	myconf+=" --disable-disallowing-of-undefined-references"
 
 	# for build-time scripts
-	python_export_best
+	if use ctypes-python || use python || use test; then
+		python_export_best
+	fi
 
 	#force ruby-1.8 for bug 399105
 	#allow overriding Python include directory

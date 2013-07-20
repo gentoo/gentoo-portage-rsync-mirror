@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.8.1.ebuild,v 1.1 2013/04/16 19:32:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.8.3.ebuild,v 1.1 2013/07/20 08:43:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 VALA_MIN_API_VERSION="0.18"
 
-inherit eutils gnome2 multilib vala virtualx
+inherit gnome2 vala virtualx
 
 DESCRIPTION="A cheesy program to take pictures and videos from your webcam"
 HOMEPAGE="http://projects.gnome.org/cheese/"
