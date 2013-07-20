@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.4 2013/04/21 20:41:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.5 2013/07/20 00:45:20 abcd Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils
@@ -62,7 +62,7 @@ RDEPEND="virtual/ttf-fonts
 		!qt-static? (
 			dev-qt/qtcore:4
 			dev-qt/qtdbus:4
-			dev-qt/qtgui:4[accessibility,dbus]
+			dev-qt/qtgui:4[accessibility,dbus(+)]
 		)
 	)
 	selinux? ( sec-policy/selinux-skype )"

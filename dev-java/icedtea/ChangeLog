@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.97 2013/06/01 11:49:41 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.98 2013/07/20 00:38:43 tomwij Exp $
+
+*icedtea-7.2.4.1 (20 Jul 2013)
+
+  20 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +icedtea-7.2.4.1.ebuild:
+  Version bump to 7.2.4.1, I plan to do the 6.1.12.6 bump tomorrow; fixes bug
+  #477210, reported by wbrana. Removed zero hotspot tarball fetch due to
+  http://icedtea.classpath.org/hg/release/icedtea7-2.4/rev/08d655f1631e
 
   01 Jun 2013; Ralph Sennhauser <sera@gentoo.org> icedtea-7.2.3.9.ebuild:
   Add ant-core dep, we aren't using the java-ant-2.eclass, reported by genstorm
