@@ -1,5 +1,11 @@
 
 
+*selinux-pan-2.20130424-r2 (20 Jul 2013)
+
+  20 Jul 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20130424-r2.ebuild:
+  Pushing out rev 2
+
   16 Jun 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20130424-r1.ebuild:
   Stabilize 20130424 policies
