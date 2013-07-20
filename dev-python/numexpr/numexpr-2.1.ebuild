@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.1.ebuild,v 1.1 2013/04/28 11:23:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.1.ebuild,v 1.2 2013/07/20 16:45:07 idella4 Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="mkl"
 
-RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/numpy-1.7.1[${PYTHON_USEDEP}]
 	mkl? ( sci-libs/mkl )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
