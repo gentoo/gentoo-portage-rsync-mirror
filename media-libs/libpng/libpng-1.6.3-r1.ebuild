@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.2-r1.ebuild,v 1.1 2013/06/23 17:49:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.3-r1.ebuild,v 1.1 2013/07/20 17:42:12 ssuominen Exp $
 
 EAPI=5
 
@@ -22,8 +22,6 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-noexecstack.patch #465010#c39
-
 	if use apng; then
 		epatch "${WORKDIR}"/${PN}-*-apng.patch
 		# Don't execute symbols check with apng patch wrt #378111
@@ -35,7 +33,7 @@ src_prepare() {
 multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
 		$(use_enable static-libs static) \
-		--enable-arm-neon=$(usex neon on off)
+		--enable-arm-neon=$(usex neon)
 }
 
 multilib_src_install() {

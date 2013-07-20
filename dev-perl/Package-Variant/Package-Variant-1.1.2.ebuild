@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Variant/Package-Variant-1.1.2.ebuild,v 1.1 2012/10/07 14:22:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Variant/Package-Variant-1.1.2.ebuild,v 1.2 2013/07/20 17:37:00 grobian Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parameterizable packages"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc-aix ~x86-solaris"
 IUSE="test"
 
 RDEPEND="

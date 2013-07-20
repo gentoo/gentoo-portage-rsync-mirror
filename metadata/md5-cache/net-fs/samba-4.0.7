@@ -4,7 +4,7 @@ DESCRIPTION=Samba Suite Version 4
 EAPI=5
 HOMEPAGE=http://www.samba.org/
 IUSE=acl addns ads aio avahi client cluster cups gnutls iprint ldap pam quota selinux swat syslog test winbind python_targets_python2_5 python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=GPL-3
 RDEPEND=python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_5(-)?,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_5(-),-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-libs/iniparser dev-libs/popt sys-libs/readline virtual/libiconv dev-python/subunit sys-libs/libcap >=sys-libs/ldb-1.1.16 >=sys-libs/tdb-1.2.11[python] >=sys-libs/talloc-2.0.8[python] >=sys-libs/tevent-0.9.18 sys-libs/zlib >=app-crypt/heimdal-1.5[-ssl] addns? ( net-dns/bind-tools[gssapi] ) client? ( net-fs/cifs-utils[ads?] ) cluster? ( >=dev-db/ctdb-1.0.114_p1 ) ldap? ( net-nds/openldap ) gnutls? ( >=net-libs/gnutls-1.4.0 ) selinux? ( sec-policy/selinux-samba )
 REQUIRED_USE=ads? ( ldap )
@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://samba/stable/samba-4.0.7.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	094dc7421f9aea7525b85b899f67e62a	python-utils-r1	68315568b6b6ec436deb87db2cd36fe8	systemd	3421a5715404244e4827acd1cf8ce654	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	waf-utils	681b3e9181d1a20ad8d0c186333ddcf7
-_md5_=3ab286b3586920c7e4ed2440a9ec02c6
+_md5_=2de707e0f84f10b98b5d4f52f2ab9675

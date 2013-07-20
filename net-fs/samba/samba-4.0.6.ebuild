@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.6.ebuild,v 1.1 2013/06/07 12:53:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.6.ebuild,v 1.2 2013/07/20 17:44:20 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -16,7 +16,7 @@ if [ "${PV}" = "4.9999" ]; then
 	inherit git-2
 else
 	SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~hppa ~x86"
 fi
 
 DESCRIPTION="Samba Suite Version 4"
