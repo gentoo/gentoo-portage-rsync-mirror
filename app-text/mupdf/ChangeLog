@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.83 2013/07/20 10:29:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.84 2013/07/20 11:31:36 xmw Exp $
+
+  20 Jul 2013; Michael Weber <xmw@gentoo.org> files/mupdf-9999-sys_curl.patch:
+  Add extra -lpthread for --as-needed
 
   20 Jul 2013; Michael Weber <xmw@gentoo.org> +files/mupdf-9999-sys_curl.patch,
   mupdf-9999.ebuild:
