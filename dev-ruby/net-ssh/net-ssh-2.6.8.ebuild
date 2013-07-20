@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.6.8.ebuild,v 1.1 2013/07/19 05:47:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.6.8.ebuild,v 1.2 2013/07/20 06:58:39 graaff Exp $
 
 EAPI=5
 # no longer compatible with ruby 1.8.
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos 
 IUSE="test"
 
 ruby_add_rdepend "virtual/ruby-ssl"
-ruby_add_bdepend "test? ( dev-ruby/test-unit:2 dev-ruby/mocha )"
+ruby_add_bdepend "test? ( dev-ruby/test-unit:2 >=dev-ruby/mocha-0.13 )"
 
 each_ruby_test() {
 	${RUBY} -Ilib:test test/test_all.rb || die "Tests failed."
