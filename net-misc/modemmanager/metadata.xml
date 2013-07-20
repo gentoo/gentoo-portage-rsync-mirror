@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>nirbheek@gentoo.org</email>
-		<name>Nirbheek Chauhan</name>
-	</maintainer>
-	<maintainer>
-		<email>tetromino@gentoo.org</email>
-		<name>Alexandre Rostovtsev</name>
-	</maintainer>
+<herd>gnome</herd>
 	<use>
 		<flag name="qmi">Enable support for the QMI modem protocol used by
 			devices with Qualcomm chipsets</flag>

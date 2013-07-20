@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.53 2013/06/10 18:45:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.55 2013/07/20 19:28:22 pacho Exp $
+
+  20 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Redigest (#472866 by Albert W. Hopkins), also adopt the package
+
+*modemmanager-1.0.0 (20 Jul 2013)
+
+  20 Jul 2013; Pacho Ramos <pacho@gentoo.org> +modemmanager-1.0.0.ebuild,
+  -modemmanager-0.7.990.ebuild, -modemmanager-9999.ebuild:
+  Version bump, drop old. Also remove 9999 ebuild as nobody is really
+  maintaining it.
 
   10 Jun 2013; Pacho Ramos <pacho@gentoo.org> modemmanager-0.7.991.ebuild:
   Use just released tarball as before, not one generated from git snapshot.

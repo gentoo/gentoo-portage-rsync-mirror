@@ -1,84 +1,63 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-9999.ebuild,v 1.2 2013/01/31 06:00:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0.ebuild,v 1.1 2013/07/20 19:26:36 pacho Exp $
 
 EAPI="5"
-GNOME_ORG_MODULE="ModemManager"
-
-inherit autotools eutils git-2 gnome.org user multilib toolchain-funcs udev virtualx
+inherit eutils user multilib readme.gentoo toolchain-funcs udev virtualx
 
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="http://cgit.freedesktop.org/ModemManager/ModemManager/"
+SRC_URI="http://www.freedesktop.org/software/ModemManager/ModemManager-${PV}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0/1" # subslot = dbus interface version, i.e. N in org.freedesktop.ModemManager${N}
-KEYWORDS=
-IUSE="doc policykit +qmi qmi-newest test"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="policykit +qmi qmi-newest"
 REQUIRED_USE="qmi-newest? ( qmi )"
-SRC_URI=
-EGIT_REPO_URI="git://anongit.freedesktop.org/ModemManager/ModemManager"
 
-RDEPEND=">=dev-libs/glib-2.30.2:2
-	net-dialup/ppp
+RDEPEND="
+	>=dev-libs/glib-2.32:2
 	>=virtual/udev-147[gudev]
-	policykit? ( >=sys-auth/polkit-0.106 )
-	qmi? ( net-libs/libqmi )
+	policykit? ( >=sys-auth/polkit-0.106[introspection] )
+	qmi? ( >=net-libs/libqmi-1.4.0 )
 "
 DEPEND="${RDEPEND}
-	doc? (
-		app-office/dia
-		dev-libs/libxslt
-		dev-util/gtk-doc )
-	test? (
-		dev-lang/python:2.7
-		dev-python/dbus-python[python_targets_python2_7]
-		dev-python/pygobject:2[python_targets_python2_7] )
 	dev-util/gdbus-codegen
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
-
-	dev-util/gtk-doc-am
 "
 
-src_unpack() {
-	git-2_src_unpack
-}
+S="${WORKDIR}/ModemManager-${PV}"
 
 src_prepare() {
-	# Use python2.7 shebangs for test scripts
-	sed -e 's@\(^#!.*python\)@\12.7@' \
-		-i test/*.py || die
+	DOC_CONTENTS="If your USB modem shows up as a Flash drive when you plug it in,
+		You should install sys-apps/usb_modeswitch which will automatically
+		switch it over to USB modem mode whenever you plug it in.\n"
+
+	if use policykit; then
+		DOC_CONTENTS+="\nTo control your modem without needing to enter the root password,
+			add your user account to the 'plugdev' group."
+	fi
 
 	epatch_user
-	eautoreconf # for 9999
-	default
 }
 
 src_configure() {
-	# ppp-2.4.5 changes the plugin directory
-	if has_version '=net-dialup/ppp-2.4.4*'; then
-		pppd_plugin_dir="pppd/2.4.4"
-	elif has_version '=net-dialup/ppp-2.4.5*'; then
-		pppd_plugin_dir="pppd/2.4.5"
-	fi
-
+	# We don't have mbim in the tree
 	econf \
 		--disable-more-warnings \
 		--with-udev-base-dir="$(udev_get_udevdir)" \
 		--disable-static \
 		--with-dist-version=${PVR} \
-		--with-pppd-plugin-dir="/usr/$(get_libdir)/${pppd_plugin_dir}" \
-		$(use_with doc docs) \
 		$(use_with policykit polkit) \
 		$(use_with qmi) \
 		$(use_with qmi-newest newest-qmi-commands) \
-		$(use_with test tests)
+		--without-mbim
 }
 
 src_install() {
 	default
-	use doc && dohtml docs/spec.html
 
 	# Allow users in plugdev group full control over their modem
 	if use policykit; then
@@ -86,17 +65,13 @@ src_install() {
 		doins "${FILESDIR}"/01-org.freedesktop.ModemManager.rules
 	fi
 
-	# Remove useless .la files
 	prune_libtool_files --modules
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	if use policykit; then
-		enewgroup plugdev
-		elog "To control your modem without needing to enter the root password,"
-		elog "add your user account to the 'plugdev' group."
-		elog
-	fi
+	use policykit && enewgroup plugdev
 
 	# The polkit rules file moved to /usr/share
 	old_rules="${EROOT}etc/polkit-1/rules.d/01-org.freedesktop.ModemManager.rules"
@@ -117,7 +92,5 @@ pkg_postinst() {
 		esac
 	fi
 
-	elog "If your USB modem shows up as a Flash drive when you plug it in,"
-	elog "You should install sys-apps/usb_modeswitch which will automatically"
-	elog "switch it over to USB modem mode whenever you plug it in."
+	readme.gentoo_print_elog
 }
