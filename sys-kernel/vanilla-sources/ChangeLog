@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1200 2013/07/13 19:32:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1201 2013/07/20 16:13:28 ago Exp $
+
+  20 Jul 2013; Agostino Sarubbo <ago@gentoo.org> vanilla-sources-3.8.13.ebuild:
+  Stable for ppc64, wrt bug #469508
 
 *vanilla-sources-3.10.1 (13 Jul 2013)
 *vanilla-sources-3.4.53 (13 Jul 2013)

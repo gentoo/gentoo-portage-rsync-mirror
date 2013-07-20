@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r1.ebuild,v 1.1 2013/04/11 13:54:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r1.ebuild,v 1.2 2013/07/20 16:13:25 maksbotan Exp $
 
 EAPI=4
 
@@ -30,7 +30,6 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	"
 RDEPEND="${CDEPEND}
-	>=sys-kernel/dracut-008-r1[dracut_modules_plymouth]
 	openrc? ( sys-boot/plymouth-openrc-plugin !sys-apps/systemd )
 	"
 
@@ -39,7 +38,7 @@ DOCS=(AUTHORS README TODO)
 src_prepare() {
 	sed -i 's:/bin/systemd-tty-ask-password-agent:/usr/bin/systemd-tty-ask-password-agent:g' \
 		systemd-units/systemd-ask-password-plymouth.service.in || die \
-		'sed bin failed'
+		'ask-password sed failed'
 	autotools-utils_src_prepare
 }
 
@@ -78,4 +77,9 @@ pkg_postinst() {
 	elog "  http://dev.gentoo.org/~aidecoe/doc/en/plymouth.xml"
 	elog ""
 	elog "to set up Plymouth."
+
+	if !has_version "sys-kernel/dracut[dracut_modules_plymouth]" && !has_version "sys-kernel/genkernel-next[plymouth]"; then
+		ewarn "If you want initramfs builder with plymouth support, please emerge"
+		ewarn "sys-kernel/dracut[dracut_modules_plymouth] or sys-kernel/genkernel-next[plymouth]."
+	fi
 }

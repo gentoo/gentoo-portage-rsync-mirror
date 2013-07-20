@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.147 2013/07/06 12:12:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.148 2013/07/20 16:10:24 aballier Exp $
 
 EAPI=5
 
@@ -114,7 +114,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	vaapi? ( x11-libs/libva[opengl] )
 	vdpau? (
 		|| ( x11-libs/libvdpau >=x11-drivers/nvidia-drivers-180.51 )
-		>=virtual/ffmpeg-9[vdpau]
+		|| ( >=media-video/ffmpeg-1.2.1[vdpau] >=media-video/libav-10_alpha[vdpau] )
 	)
 	X? (
 		x11-apps/xdpyinfo
