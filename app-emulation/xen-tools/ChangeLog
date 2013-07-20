@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.166 2013/07/04 09:42:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.167 2013/07/20 17:17:36 idella4 Exp $
+
+*xen-tools-4.3.0 (20 Jul 2013)
+
+  20 Jul 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4.3-fix_dotconfig-gcc.patch, +files/xen-4.3.0-anti-download.patch,
+  +xen-tools-4.3.0.ebuild, files/xen-4-fix_dotconfig-gcc.patch,
+  files/xen-4.2.0-anti-download.patch, files/xenstored.initd:
+  bump; required culling sec patches, edit to configure and upgrading 2 patches,
+  correction to xenstored.initd wrt Bug #476572 by Spooky Ghost
 
   04 Jul 2013; Ian Delaney <idella4@gentoo.org> -xen-tools-4.2.1-r3.ebuild,
   -xen-tools-4.2.1-r4.ebuild, -xen-tools-4.2.2-r1.ebuild,
