@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85.ebuild,v 1.6 2013/07/12 18:27:27 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85.ebuild,v 1.7 2013/07/20 14:10:25 grobian Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic
@@ -31,6 +31,10 @@ src_prepare() {
 		"${FILESDIR}"/0.80-impl-dec.patch \
 		"${FILESDIR}"/0.85-ipv6.patch \
 		"${FILESDIR}"/0.85-gtk.patch
+
+	# https://github.com/traviscross/mtr/commit/2a08115f2c026232e2172db7f894d12306594d1d
+	# https://bugs.gentoo.org/show_bug.cgi?id=476736
+	sed -i -e '/#ifndef __APPLE__/s/ifndef/ifdef/' asn.c || die'
 
 	# Keep this comment and following mv, even in case ebuild does not need
 	# it: kept gtk-2.0.m4 in SRC_URI but you'll have to mv it before autoreconf

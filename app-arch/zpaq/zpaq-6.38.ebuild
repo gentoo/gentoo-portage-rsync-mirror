@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-6.10.ebuild,v 1.2 2013/07/20 14:22:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-6.38.ebuild,v 1.1 2013/07/20 14:22:19 mgorny Exp $
 
-EAPI=3
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils eutils
