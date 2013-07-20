@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/apt-cacher-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.23 2013/05/22 14:23:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.24 2013/07/20 15:13:04 jer Exp $
+
+*apt-cacher-ng-0.7.14 (20 Jul 2013)
+
+  20 Jul 2013; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.11.ebuild,
+  -apt-cacher-ng-0.7.12.ebuild, +apt-cacher-ng-0.7.14.ebuild:
+  Version bump.
 
 *apt-cacher-ng-0.7.13 (22 May 2013)
 
