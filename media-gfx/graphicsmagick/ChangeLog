@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.112 2013/07/21 13:06:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.113 2013/07/21 14:21:55 jer Exp $
+
+  21 Jul 2013; Jeroen Roovers <jer@gentoo.org> graphicsmagick-1.3.18.ebuild,
+  +files/graphicsmagick-1.3.18-powerpc.patch:
+  Fix building on HPPA (bug #438608).
 
   21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> graphicsmagick-1.3.18.ebuild:
   Stable for amd64, wrt bug #477606

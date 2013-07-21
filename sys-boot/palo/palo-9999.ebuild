@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.3 2013/07/18 14:06:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.4 2013/07/21 14:13:39 jer Exp $
 
 EAPI=5
 
@@ -17,8 +17,6 @@ IUSE=""
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.18-include.patch \
-		"${FILESDIR}"/${PN}-9999-open.patch \
 		"${FILESDIR}"/${PN}-9999-toolchain.patch
 	sed -i lib/common.h -e '/^#define PALOVERSION/{s|".*"|"'${PV}'"|g}' || die
 	sed -i palo/Makefile -e '/^LDFLAGS=/d'  || die

@@ -1,10 +1,10 @@
 # ChangeLog for x11-wm/notion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/ChangeLog,v 1.7 2013/05/29 06:32:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/ChangeLog,v 1.8 2013/07/21 14:07:01 jer Exp $
 
   29 May 2013; Michael Weber <xmw@gentoo.org> notion-3_p2013030200.ebuild,
   notion-9999.ebuild:
-  Fix arrunlib/gcc handling (bug 465260, thanks Michael Mair-Keimberger)
+  Fix ar/ranlib/gcc handling (bug 465260, thanks Michael Mair-Keimberger)
 
   11 May 2013; Patrick Lauer <patrick@gentoo.org> notion-3_p2013030200.ebuild,
   notion-9999.ebuild:
