@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.490 2013/07/17 15:23:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.491 2013/07/21 13:38:19 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (21 Jul 2013)
+# designer is pulled in by kdelibs, designer[phonon] blocks kdelibs...
+# Lots of reports on difficulties. Acked by kensington for qt team
+dev-qt/designer phonon
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Jul 2013)
 # GL/GLES support in cairo is mutually exclusive, bug #428770.
