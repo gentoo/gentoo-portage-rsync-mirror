@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.110 2013/05/09 10:13:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.111 2013/07/21 11:10:41 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> phppgadmin-5.1.ebuild:
+  Stable for amd64, wrt bug #477418
 
   09 May 2013; Tiziano Müller <dev-zero@gentoo.org> -phppgadmin-5.0.3.ebuild:
   Drop old.

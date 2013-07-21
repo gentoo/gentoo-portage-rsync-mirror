@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.4.ebuild,v 1.2 2013/06/24 21:36:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.4.ebuild,v 1.3 2013/07/21 11:10:49 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://kitenet.net/~joey/code/etckeeper/"
 SRC_URI="https://github.com/joeyh/etckeeper/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE="bazaar cron"
 REQUIRED_USE="bazaar? ( ${PYTHON_REQUIRED_USE} )"

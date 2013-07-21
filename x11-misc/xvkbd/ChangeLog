@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xvkbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.28 2013/07/19 01:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.29 2013/07/21 11:09:59 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> xvkbd-3.4a-r1.ebuild:
+  Stable for amd64, wrt bug #477346
 
 *xvkbd-3.4a-r1 (19 Jul 2013)
 
@@ -103,4 +106,3 @@
 
   25 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> xvkbd-2.5a.ebuild:
   Initial import. #26520
-

@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xlogical
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/ChangeLog,v 1.6 2012/09/04 21:11:17 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/ChangeLog,v 1.7 2013/07/21 11:11:24 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> xlogical-1.0.7.ebuild:
+  Stable for amd64, wrt bug #477426
 
   04 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> xlogical-1.0.7.ebuild:
   any mod support will do
