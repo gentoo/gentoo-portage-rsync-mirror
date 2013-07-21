@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.253 2013/07/19 18:07:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.254 2013/07/21 00:09:14 hasufell Exp $
+
+  21 Jul 2013; Julian Ospald <hasufell@gentoo.org> blender-2.68.ebuild:
+  set minimum media-video/libav version to 9, drop virtual wrt #474110
 
 *blender-2.68 (19 Jul 2013)
 
