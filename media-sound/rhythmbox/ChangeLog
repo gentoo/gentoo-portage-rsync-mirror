@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.241 2013/04/22 19:01:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.242 2013/07/21 07:50:24 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  -files/rhythmbox-2.95-fix-db-dbus-interface.patch,
+  -files/rhythmbox-2.95-port-im-status-plugin.patch,
+  -files/rhythmbox-2.95-port-rb-set-rating-py-example.patch,
+  -rhythmbox-0.13.3.ebuild, -rhythmbox-2.97.ebuild, -rhythmbox-2.98.ebuild,
+  metadata.xml:
+  drop old
 
 *rhythmbox-2.99.1 (22 Apr 2013)
 

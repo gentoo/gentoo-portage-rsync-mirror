@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.67 2013/03/31 10:10:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.68 2013/07/21 07:42:59 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -mtl-1.1.0.2.ebuild,
+  -mtl-1.1.1.1.ebuild:
+  Remove masked for removal package
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> mtl-2.1.2-r1.ebuild:
   Stable for sparc, wrt bug #456506

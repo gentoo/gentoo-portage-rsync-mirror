@@ -1,8 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=Microcode for the Intel PRO/Wireless 3945ABG miniPCI express adapter
-HOMEPAGE=http://www.bughost.org/ipw3945/
-KEYWORDS=~amd64 x86
-LICENSE=ipw3945
-SLOT=0
-SRC_URI=http://www.bughost.org/ipw3945/ipw3945-ucode-1.13.tgz
-_md5_=c966d4e381a38ec6e722177c3d809b00
