@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>sbriesen@gentoo.org</email>
-    <name>Stefan Briesenick</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription lang="en">General MultiPrecision arithmetic for Python -- i.e.,
 		Python 2.3 interface module for library GMP 4.</longdescription>

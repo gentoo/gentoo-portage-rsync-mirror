@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		TLS Lite is a free python library that implements SSL 3.0, TLS 1.0, and

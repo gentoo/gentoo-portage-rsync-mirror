@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">The pycdio (and libcdio) libraries encapsulate CD-ROM reading and
 		control. Python programs wishing to be oblivious of the OS- and

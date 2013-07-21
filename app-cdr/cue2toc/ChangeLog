@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cue2toc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cue2toc/ChangeLog,v 1.7 2009/12/31 17:45:03 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cue2toc/ChangeLog,v 1.8 2013/07/21 08:34:15 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> cue2toc-0.4.ebuild:
   Marking cue2toc-0.4 ppc64 for bug 277813
@@ -26,4 +29,3 @@
   24 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +cue2toc-0.4.ebuild:
   initial commit.
-

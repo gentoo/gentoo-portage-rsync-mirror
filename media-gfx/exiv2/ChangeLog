@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.108 2013/04/02 20:56:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.109 2013/07/21 08:54:46 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -exiv2-0.21.1-r1.ebuild,
+  -exiv2-0.21.1-r2.ebuild, -exiv2-0.23.ebuild, metadata.xml:
+  Cleanup due #92799
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> exiv2-0.23-r1.ebuild:
   Stable for ppc64, wrt bug #462890

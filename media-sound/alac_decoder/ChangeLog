@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alac_decoder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/ChangeLog,v 1.7 2010/05/07 11:57:37 sbriesen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/ChangeLog,v 1.8 2013/07/21 08:57:35 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
 *alac_decoder-0.2.0 (07 May 2010)
 
@@ -32,4 +35,3 @@
   19 Mar 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +alac_decoder-0.1.1.ebuild:
   initial commit.
-

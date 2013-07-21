@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		Image Scan! is a graphical scanner utility for people that do not need all

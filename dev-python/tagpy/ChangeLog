@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tagpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.52 2013/05/11 21:44:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.53 2013/07/21 08:51:47 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
 *tagpy-2013.1 (11 May 2013)
 

@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
-	</maintainer>
 	<longdescription lang="en">pyudev is a Python binding to libudev, the hardware management
 		library and service found in modern linux systems.</longdescription>
 	<use>

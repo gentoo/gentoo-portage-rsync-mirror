@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>video</herd>
-	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
-	</maintainer>
 	<longdescription lang="en">
 		BDSup2Sub - A tool to convert and tweak bitmap based subtitle streams.
 	</longdescription>

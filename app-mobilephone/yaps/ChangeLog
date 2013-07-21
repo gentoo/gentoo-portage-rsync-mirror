@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.26 2013/01/24 21:04:23 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.27 2013/07/21 08:35:39 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   24 Jan 2013; Stefan Briesenick <sbriesen@gentoo.org> -yaps-0.96-r2.ebuild,
   -yaps-0.96-r3.ebuild:
@@ -101,4 +104,3 @@
   +files/yaps-0.96-capiv3.patch, +files/yaps-0.96.patch, +metadata.xml,
   +yaps-0.96.ebuild:
   initial commit. Implementing CAPI, Lua and SLang support.
-

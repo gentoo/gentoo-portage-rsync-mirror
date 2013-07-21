@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/crcmod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.4 2012/02/10 04:08:57 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.5 2013/07/21 08:46:45 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -crcmod-1.7.ebuild, metadata.xml:
+  Cleanup due #92799
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> crcmod-1.7-r1.ebuild,
   crcmod-1.7.ebuild:
@@ -20,4 +23,3 @@
   22 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org> +crcmod-1.7.ebuild,
   +metadata.xml:
   initial commit.
-

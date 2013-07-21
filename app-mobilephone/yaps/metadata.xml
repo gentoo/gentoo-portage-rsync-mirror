@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile-phone</herd>
-<maintainer>
-  <email>sbriesen@gentoo.org</email>
-  <name>Stefan Briesenick</name>
-</maintainer>
 <longdescription lang="en">
   Yet Another Pager Software (optional with CAPI support).
 </longdescription>

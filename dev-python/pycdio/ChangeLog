@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycdio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/ChangeLog,v 1.9 2013/01/16 05:25:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/ChangeLog,v 1.10 2013/07/21 08:48:31 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -pycdio-0.17.ebuild, metadata.xml:
+  Cleanup due #92799
 
 *pycdio-0.18 (16 Jan 2013)
 
@@ -41,4 +44,3 @@
   16 May 2007; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +pycdio-0.12.ebuild:
   initial commit.
-

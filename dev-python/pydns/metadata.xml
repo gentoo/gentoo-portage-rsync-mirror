@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">PyDNS provides a module for performing DNS queries from python
 		applications. This was originally based on Guido van Rossum's DNS

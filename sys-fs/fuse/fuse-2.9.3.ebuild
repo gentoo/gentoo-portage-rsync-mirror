@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.8.6.ebuild,v 1.10 2013/02/17 20:27:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.3.ebuild,v 1.1 2013/07/21 08:54:32 radhermit Exp $
 
-EAPI=4
-inherit libtool linux-info
+EAPI=5
+inherit eutils libtool linux-info udev toolchain-funcs
 
 MY_P=${P/_/-}
 DESCRIPTION="An interface for filesystems implemented in userspace."
@@ -12,10 +12,11 @@ SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="kernel_linux kernel_FreeBSD static-libs"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+IUSE="examples kernel_linux kernel_FreeBSD static-libs"
 
 PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
+DEPEND="virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
@@ -31,9 +32,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fix building with glibc-2.14 #370411
-	sed -i '1i#define _GNU_SOURCE' util/fusermount.c || die
-
+	# sandbox violation with mtab writability wrt #438250
+	# don't sed configure.in without eautoreconf because of maintainer mode
+	sed -i 's:umount --fake:true --fake:' configure || die
 	elibtoolize
 }
 
@@ -41,19 +42,22 @@ src_configure() {
 	econf \
 		INIT_D_PATH="${EPREFIX}/etc/init.d" \
 		MOUNT_FUSE_PATH="${EPREFIX}/sbin" \
-		UDEV_RULES_PATH="${EPREFIX}/lib/udev/rules.d" \
+		UDEV_RULES_PATH="${EPREFIX}/$(udev_get_udevdir)/rules.d" \
 		$(use_enable static-libs static) \
 		--disable-example
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	dodoc AUTHORS ChangeLog Filesystems README \
 		README.NFS NEWS doc/how-fuse-works \
 		doc/kernel.txt FAQ
-	docinto example
-	dodoc example/*
+
+	if use examples ; then
+		docinto examples
+		dodoc example/*
+	fi
 
 	if use kernel_linux ; then
 		newinitd "${FILESDIR}"/fuse.init fuse
@@ -65,8 +69,8 @@ src_install() {
 		die "We don't know what init code install for your kernel, please file a bug."
 	fi
 
-	find "${ED}" -name "*.la" -delete
-	rm -rf "${D}/dev"
+	prune_libtool_files
+	rm -rf "${D}"/dev
 
 	dodir /etc
 	cat > "${ED}"/etc/fuse.conf <<-EOF
