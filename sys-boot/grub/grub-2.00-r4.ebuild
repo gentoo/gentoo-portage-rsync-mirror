@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.95 2013/07/21 00:37:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r4.ebuild,v 1.1 2013/07/21 00:37:11 floppym Exp $
 
 EAPI=5
 AUTOTOOLS_AUTO_DEPEND=yes

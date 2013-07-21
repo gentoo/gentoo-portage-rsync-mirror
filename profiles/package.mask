@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14940 2013/07/20 20:32:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14941 2013/07/21 00:47:06 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,13 +31,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Julian Ospald <hasufell@gentoo.org> (20 Jul 2013)
-# Unknown bug causing trouble on shutdown with OpenRC.
-# Use systemd or stop the service manually or you
-# will lose all your changes.
-# bug #398431#c8
-www-misc/profile-sync-daemon
 
 # Alexis Ballier <aballier@gentoo.org> (20 Jul 2013)
 # New major release and lots of packages fail to build.
