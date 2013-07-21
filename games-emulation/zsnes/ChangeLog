@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.58 2013/02/07 22:31:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.59 2013/07/20 23:41:02 mr_bones_ Exp $
+
+  20 Jul 2013; Michael Sterrett <mr_bones_@gentoo.org> zsnes-1.51-r4.ebuild:
+  use BUILD_CXX (bug #475946)
 
   07 Feb 2013; Mike Frysinger <vapier@gentoo.org>
   +files/zsnes-1.51-cross-compile.patch, zsnes-1.51-r4.ebuild:

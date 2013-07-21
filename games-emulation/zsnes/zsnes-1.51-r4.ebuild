@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.5 2013/02/07 22:31:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.6 2013/07/20 23:41:02 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic toolchain-funcs multilib pax-utils games
@@ -67,6 +67,7 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC
+	export BUILD_CXX=$(tc-getBUILD_CXX)
 	use amd64 && multilib_toolchain_setup x86
 	use custom-cflags || strip-flags
 
