@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.72 2013/07/09 01:57:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.73 2013/07/21 19:00:56 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -441,8 +441,7 @@ distutils-r1_python_install() {
 	debug-print "${FUNCNAME}: [${EPYTHON}] flags: ${flags}"
 
 	# enable compilation for the install phase.
-	local PYTHONDONTWRITEBYTECODE
-	export PYTHONDONTWRITEBYTECODE
+	local -x PYTHONDONTWRITEBYTECODE
 
 	# python likes to compile any module it sees, which triggers sandbox
 	# failures if some packages haven't compiled their modules yet.

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.885 2013/07/21 09:23:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.886 2013/07/21 19:00:56 mgorny Exp $
+
+  21 Jul 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Replace local+export with "local -x".
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> db.eclass, db-use.eclass:
   Cleanup due #231248
