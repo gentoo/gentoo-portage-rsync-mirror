@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/color
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.20 2013/07/13 06:09:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.21 2013/07/21 17:40:50 mrueg Exp $
+
+*color-1.4.2 (21 Jul 2013)
+
+  21 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +color-1.4.2.ebuild:
+  Version bump
 
   13 Jul 2013; Hans de Graaff <graaff@gentoo.org> -color-1.4.1.ebuild:
   Cleanup.
@@ -74,4 +79,3 @@
   22 Jan 2008; Richard Brown <rbrown@gentoo.org> +metadata.xml,
   +color-1.4.0.ebuild:
   Initial import. For latest version of pdf-writer
-

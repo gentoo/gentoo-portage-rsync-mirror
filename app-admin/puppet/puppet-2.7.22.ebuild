@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.22.ebuild,v 1.5 2013/07/04 12:26:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.22.ebuild,v 1.6 2013/07/21 17:55:12 ago Exp $
 
 EAPI="4"
 USE_RUBY="ruby18 ruby19"
@@ -18,7 +18,7 @@ SRC_URI="http://www.puppetlabs.com/downloads/puppet/${P}.tar.gz"
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 IUSE="augeas diff doc emacs ldap minimal rrdtool selinux shadow sqlite3 vim-syntax xemacs"
-KEYWORDS="amd64 hppa ppc ~sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 
 ruby_add_rdepend "
 	>=dev-ruby/facter-1.5.6

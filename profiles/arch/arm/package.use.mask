@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.155 2013/07/20 11:18:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.156 2013/07/21 17:35:50 ago Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords pending, bug #476710
@@ -70,6 +70,8 @@ media-gfx/pstoedit emf
 # Eray Aslan <eras@gentoo.org> (16 Feb 2013)
 # Mask further java flag
 =dev-libs/cyrus-sasl-2.1.25-r4 java
+=dev-libs/cyrus-sasl-2.1.26-r3 java
+=dev-libs/cyrus-sasl-2.1.23-r7 java
 
 # Rick Farina <zerochaos@gentoo.org> (05 Feb 2013)
 # masking all stable packages with java use flag

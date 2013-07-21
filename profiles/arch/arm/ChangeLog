@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.252 2013/07/16 03:05:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.253 2013/07/21 17:35:50 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  add =dev-libs/cyrus-sasl-2.1.26-r3 and =dev-libs/cyrus-sasl-2.1.23-r7
+  to the existing mask
 
   16 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Remove obsolete masks from gnome-3.2 era

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/bloomfilter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.5 2013/04/02 04:34:33 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.6 2013/07/21 17:46:36 ottxor Exp $
+
+  21 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  bloomfilter-1.2.6.10-r1.ebuild:
+  added ~amd64-linux (tested by me)
 
   02 Apr 2013; Mark Wright <gienah@gentoo.org> bloomfilter-1.2.6.10-r1.ebuild:
   Loosen bloomfilter test dep to allow quickcheck 2.6

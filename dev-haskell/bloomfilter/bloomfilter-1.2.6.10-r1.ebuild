@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/bloomfilter-1.2.6.10-r1.ebuild,v 1.2 2013/04/02 04:34:33 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/bloomfilter-1.2.6.10-r1.ebuild,v 1.3 2013/07/21 17:46:36 ottxor Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="dev-haskell/deepseq:=[profile?]

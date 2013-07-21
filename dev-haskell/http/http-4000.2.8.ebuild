@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/http-4000.2.8.ebuild,v 1.8 2013/06/29 16:29:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/http-4000.2.8.ebuild,v 1.9 2013/07/21 17:45:31 ottxor Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-fbsd ~ppc-macos ~x86-macos"
 # hackport-args: --always-disabled='mtl1 network23 old-base warn-as-error'
 IUSE=""
 

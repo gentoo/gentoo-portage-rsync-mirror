@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.6.ebuild,v 1.8 2013/06/29 16:32:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.6.ebuild,v 1.9 2013/07/21 17:44:15 ottxor Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="2/${PV}"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux"
 IUSE="+template_haskell"
 
 RDEPEND="dev-haskell/extensible-exceptions:=[profile?]
