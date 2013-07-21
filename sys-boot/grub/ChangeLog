@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.266 2013/07/21 00:37:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.267 2013/07/21 19:22:48 floppym Exp $
+
+  21 Jul 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00-r4.ebuild,
+  grub-9999.ebuild:
+  Let configure auto-detect efiemu support.
 
 *grub-2.00-r4 (21 Jul 2013)
 

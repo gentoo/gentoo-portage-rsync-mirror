@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r4.ebuild,v 1.1 2013/07/21 00:37:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r4.ebuild,v 1.2 2013/07/21 19:22:48 floppym Exp $
 
 EAPI=5
 AUTOTOOLS_AUTO_DEPEND=yes
@@ -181,13 +181,15 @@ grub_configure() {
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html
 		$(use_enable debug mm-debug)
 		$(use_enable debug grub-emu-usb)
-		$(use_enable efiemu)
 		$(use_enable mount grub-mount)
 		$(use_enable nls)
 		$(use_enable truetype grub-mkfont)
 		$(use_enable libzfs)
 		$(use sdl && use_enable debug grub-emu-sdl)
 		${platform:+--with-platform=}${platform}
+
+		# Let configure detect this where supported
+		$(usex efiemu '' --disable-efiemu) 
 	)
 
 	if use multislot; then
