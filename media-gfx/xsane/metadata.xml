@@ -4,12 +4,7 @@
 <herd>printing</herd>
 <herd>graphics</herd>
 <maintainer>
-	<email>phosphan@gentoo.org</email>
-	<description>Package free for adoption</description>
-</maintainer>
-<maintainer>
 	<email>pacho@gentoo.org</email>
-	<description>Taking care until somebody wants to also help</description> 
 </maintainer>
 <use>
         <flag name='ocr'>Enable support for Optical Character Recognition reader</flag>

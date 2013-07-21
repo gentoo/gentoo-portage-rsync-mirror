@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci</herd>
-  <maintainer>
-    <email>phosphan@gentoo.org</email>
-    <description>Added this as requirement for OpenDX, free for adoption</description>
-  </maintainer>
 </pkgmetadata>

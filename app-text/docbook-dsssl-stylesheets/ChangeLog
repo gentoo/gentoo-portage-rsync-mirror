@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.44 2012/12/08 08:42:52 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.45 2013/07/21 09:58:28 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  -docbook-dsssl-stylesheets-1.77-r2.ebuild, metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   08 Dec 2012; Ulrich Müller <ulm@gentoo.org>
   docbook-dsssl-stylesheets-1.77-r2.ebuild,

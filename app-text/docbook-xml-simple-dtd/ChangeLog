@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.57 2012/12/13 16:23:27 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.58 2013/07/21 10:00:32 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   13 Dec 2012; Mike Gilbert <floppym@gentoo.org>
   docbook-xml-simple-dtd-1.0-r2.ebuild,

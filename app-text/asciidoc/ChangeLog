@@ -1,6 +1,11 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.88 2013/06/30 15:34:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.89 2013/07/21 09:57:17 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -asciidoc-8.2.6.ebuild,
+  -asciidoc-8.6.7.ebuild, -asciidoc-8.6.8.ebuild, metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   30 Jun 2013; Justin Lecher <jlec@gentoo.org> asciidoc-8.6.8-r1.ebuild,
   asciidoc-9999.ebuild:

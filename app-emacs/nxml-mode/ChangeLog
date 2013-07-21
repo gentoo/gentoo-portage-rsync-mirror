@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-mode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.37 2012/09/25 14:01:47 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.38 2013/07/21 09:55:24 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   25 Sep 2012; Ulrich Müller <ulm@gentoo.org> nxml-mode-20041004-r3.ebuild:
   Fix LICENSE, see etc/schema/README in Emacs repository.
@@ -149,4 +153,3 @@
   13 Feb 2004; <mkennedy@gentoo.org> metadata.xml, nxml-mode-20031031.ebuild,
   files/20031031-info-gentoo.patch, files/80nxml-mode-gentoo.el:
   Initial port.  Ebuild contributed by Dan Pomohaci <d.pomohaci@moodmedia.ro>
-

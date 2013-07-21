@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1039 2013/07/21 09:19:17 pacho Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1040 2013/07/21 09:45:56 pacho Exp $
 
 -->
 <herds>
@@ -678,11 +678,6 @@
     <name>George Shapovalov</name>
   </maintainer>
   <maintainer>
-    <email>phosphan@gentoo.org</email>
-    <name>Patrick Kursawe</name>
-    <role>bugzilla scanner with not much time</role>
-  </maintainer>
-  <maintainer>
   <email>je_fro@gentoo.org</email>
   <name>Jeff Gardner</name>
   </maintainer>
@@ -754,11 +749,6 @@
   <maintainer>
     <email>dberkholz@gentoo.org</email>
     <name>Donnie Berkholz</name>
-  </maintainer>
-  <maintainer>
-    <email>phosphan@gentoo.org</email>
-    <name>Patrick Kursawe</name>
-    <role>bugzilla scanner with not much time</role>
   </maintainer>
   <maintainer>
     <email>je_fro@gentoo.org</email>
@@ -1169,11 +1159,6 @@
   <name>video</name>
   <email>media-video@gentoo.org</email>
   <description>Video related programs that don't fit into media-tv</description>
-  <maintainer>
-    <email>phosphan@gentoo.org</email>
-    <name>Patrick Kursawe</name>
-    <role>Can test webcam related stuff if needed</role>
-  </maintainer>
   <maintainer>
     <email>lu_zero@gentoo.org</email>
     <name>Luca Barbato</name>

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-frontends
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.41 2009/06/23 22:30:56 phosphan Exp $
+# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.42 2013/07/21 09:40:48 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
   23 Jun 2009; Patrick Kursawe <phosphan@gentoo.org>
   +files/MissingCapsFlag.patch, sane-frontends-1.0.14.ebuild:

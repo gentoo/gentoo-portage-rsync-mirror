@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.117 2013/07/20 08:42:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.118 2013/07/21 09:39:18 tommy Exp $
+
+*subversion-1.7.10 (21 Jul 2013)
+
+  21 Jul 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +subversion-1.7.10.ebuild:
+  Version bump
 
   20 Jul 2013; Michał Górny <mgorny@gentoo.org> subversion-1.7.9.ebuild:
   Lower the build-time requirement of Python to Python bindings or USE=test. Add

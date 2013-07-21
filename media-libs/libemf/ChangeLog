@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.36 2013/05/03 14:23:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.37 2013/07/21 09:42:12 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
 *libemf-1.0.4-r1 (03 May 2013)
 
@@ -129,4 +132,3 @@
   metadata.xml, files/libEMF-1.0-gcc3.patch:
   Initial import, used by chemtool-1.6 - patch for gcc3 by Stanislav Brabec
   <sbrabec@users.sourceforge.net>
-

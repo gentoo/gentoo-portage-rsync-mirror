@@ -1,6 +1,10 @@
 # ChangeLog for app-office/passepartout
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.19 2012/06/14 21:59:38 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.20 2013/07/21 09:55:57 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   14 Jun 2012; Mike Gilbert <floppym@gentoo.org> -passepartout-0.6_p1.ebuild:
   Remove broken version for bug 387789.
@@ -74,4 +78,3 @@
   +passepartout-0.5.ebuild:
   Initial import. Ebuild submitted by Patrik Kullman <patrik@yes.nu>;
   bug #59352.
-

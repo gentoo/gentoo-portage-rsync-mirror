@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cdecl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.21 2011/11/06 17:12:02 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.22 2013/07/21 09:36:56 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -cdecl-2.5-r1.ebuild,
+  metadata.xml:
+  Cleanup due #473480
 
   06 Nov 2011; Raúl Porcel <armin76@gentoo.org> cdecl-2.5-r1.ebuild,
   cdecl-2.5-r2.ebuild:
@@ -69,4 +73,3 @@
   30 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> cdecl-2.5.ebuild,
   metadata.xml, files/cdecl-2.5.patch:
   Initial import, suggested in bug 29836
-

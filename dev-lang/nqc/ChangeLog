@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.21 2012/08/21 18:33:20 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.22 2013/07/21 09:58:29 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> nqc-3.1_p6.ebuild:
+  Stable for amd64, wrt bug #477156
 
   21 Aug 2012; Julian Ospald <hasufell@gentoo.org> nqc-3.1_p6.ebuild,
   +files/nqc-3.1_p6-flags.patch:
@@ -26,4 +29,3 @@
   +nqc-3.1_p6.ebuild:
   Version bump. Respect LDFLAGS (bug #338168), CXX. Marked ~ppc again. Set
   RDEPEND.
-

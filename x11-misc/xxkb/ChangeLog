@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xxkb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.25 2012/10/04 21:41:54 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.26 2013/07/21 09:45:28 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
   04 Oct 2012; Brent Baude <ranger@gentoo.org> xxkb-1.11-r2.ebuild:
   Marking xxkb-1.11-r2 ppc for bug 429242
@@ -87,4 +90,3 @@
   Initial import. Added german and polish flag xpms and a hint for XKB
   documentation. Ebuild was provided by Andrew Kirilenko <icedank@gmx.net>
   in bug 20991.
-

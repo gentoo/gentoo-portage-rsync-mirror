@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tinycobol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.22 2012/03/01 19:53:02 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.23 2013/07/21 09:36:16 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -files/tinycobol-0.64.patch,
+  -tinycobol-0.64.ebuild, metadata.xml:
+  Cleanup due #473480
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> tinycobol-0.65.9.ebuild:
   Marking tinycobol-0.65.9 ppc for bug 384499
@@ -90,4 +94,3 @@
 
   12 May 2003; Patrick Kursawe <phosphan@gentoo.org> tinycobol-0.60.ebuild:
   Initial import, suggestion by Rigo Ketelings <rigo@home.nl> in bug 15686
-

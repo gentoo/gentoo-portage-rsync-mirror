@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.103 2012/12/16 17:47:09 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.104 2013/07/21 09:41:31 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -xsane-0.998.ebuild, metadata.xml:
+  Cleanup due #473480
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> xsane-0.998-r1.ebuild:
   alpha/sparc stable wrt #442440

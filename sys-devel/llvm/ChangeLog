@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.115 2013/06/24 14:43:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.116 2013/07/21 10:00:50 mgorny Exp $
+
+*llvm-9999-r1 (21 Jul 2013)
+*llvm-3.3-r1 (21 Jul 2013)
+
+  21 Jul 2013; Michał Górny <mgorny@gentoo.org>
+  +files/clang-3.3-gentoo-install.patch, +files/llvm-3.3-gentoo-install.patch,
+  +files/llvm-3.4-gentoo-install.patch, +llvm-3.3-r1.ebuild,
+  +llvm-9999-r1.ebuild, metadata.xml:
+  Include the improved ebuild from ::mgorny. Integrate clang, introduce multilib
+  support, fix rpath issues. Bug #477432.
 
   24 Jun 2013; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.3.ebuild,
   +files/llvm-3.3-R600_debug.patch:

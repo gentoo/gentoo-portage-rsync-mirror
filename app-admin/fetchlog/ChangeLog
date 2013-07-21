@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fetchlog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.14 2013/02/01 12:39:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.15 2013/07/21 09:32:05 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
 *fetchlog-1.4 (01 Feb 2013)
 

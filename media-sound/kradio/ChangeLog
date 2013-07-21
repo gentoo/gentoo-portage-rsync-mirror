@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kradio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.36 2013/04/01 11:47:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.37 2013/07/21 09:42:31 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
   01 Apr 2013; Michael Palimaka <kensington@gentoo.org> -kradio-4.0.4.ebuild,
   -kradio-4.0.6.ebuild:

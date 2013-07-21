@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/prelude-nessus
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nessus/ChangeLog,v 1.5 2012/10/07 13:07:33 ago Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nessus/ChangeLog,v 1.6 2013/07/21 09:43:02 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
   07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> prelude-nessus-20021107.ebuild:
   EAPI4 - ~amd64

@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>phosphan@gentoo.org</email>
-  <description>Needed for dev-lang/tinycobol. Feel free to adopt it.</description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 </pkgmetadata>

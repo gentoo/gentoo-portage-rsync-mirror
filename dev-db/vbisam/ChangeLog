@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/vbisam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/vbisam/ChangeLog,v 1.4 2012/02/28 22:21:14 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/vbisam/ChangeLog,v 1.5 2013/07/21 09:35:23 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> vbisam-2.0.ebuild:
   Marking vbisam-2.0 ppc for bug 384499
@@ -15,4 +18,3 @@
 
   23 Jan 2010; Patrick Kursawe <phosphan@gentoo.org> +vbisam-2.0.ebuild:
   Initial version, needed for dev-lang/tinycobol 0.65 up.
-

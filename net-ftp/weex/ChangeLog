@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/weex
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.11 2007/02/09 04:14:16 flameeyes Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.12 2013/07/21 09:43:27 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #473480
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
@@ -49,4 +52,3 @@
   weex-3.0.0_pre20030508.ebuild:
   Initial import. Orphaned project, but I don't know a replacement and find it
   useful.
-

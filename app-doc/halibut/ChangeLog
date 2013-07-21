@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/halibut
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.12 2012/09/18 04:32:05 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.13 2013/07/21 09:54:40 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -halibut-0.9.ebuild, metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -40,4 +44,3 @@
   +halibut-0.9.ebuild:
   Initial import. Ebuild submitted by Sven Wegener <swegener@gentoo.org>,
   closing bug #50884.
-

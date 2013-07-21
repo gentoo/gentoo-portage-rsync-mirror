@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coot-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.14 2013/07/17 07:18:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.15 2013/07/21 09:52:54 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> coot-data-2-r1.ebuild:
+  Stable for amd64, wrt bug #477184
 
 *coot-data-2-r1 (17 Jul 2013)
 
@@ -54,4 +57,3 @@
   +coot-data-1.ebuild:
   Add rarely-changing data for sci-chemistry/coot, so we don't reinstall it on
   every Coot upgrade.
-

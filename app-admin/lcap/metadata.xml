@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>phosphan@gentoo.org</email>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='lids'>If you have the Linux Intrusion Detection System</flag>

@@ -1,6 +1,19 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.225 2013/05/08 19:35:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.226 2013/07/21 09:40:32 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -files/1.0.20-unbreak-udev.diff,
+  -files/broken_coolscan.patch, -files/epson2fixes-1.0.19.patch,
+  -files/fujitsu_DBG_LEVEL.patch, -files/genesys_io.patch,
+  -files/sane-backends-1.0.22-freebsd.patch,
+  -files/sane-backends-1.0.22-libv4l-0.8.3.patch,
+  -files/sane-backends-1.0.22-xerox_mfp-usb.patch, -files/udev-rule-4.patch,
+  -files/udev-rule-5.patch, -files/udev-rule-6.patch, -files/xerox-grey.patch,
+  -sane-backends-1.0.17.ebuild, -sane-backends-1.0.18-r6.ebuild,
+  -sane-backends-1.0.19-r2.ebuild, -sane-backends-1.0.20-r3.ebuild,
+  -sane-backends-1.0.21-r1.ebuild, -sane-backends-1.0.22-r1.ebuild,
+  -sane-backends-1.0.22-r2.ebuild, metadata.xml:
+  Cleanup due #473480
 
   08 May 2013; Mike Frysinger <vapier@gentoo.org>
   sane-backends-1.0.23-r1.ebuild, sane-backends-1.0.23.ebuild:
