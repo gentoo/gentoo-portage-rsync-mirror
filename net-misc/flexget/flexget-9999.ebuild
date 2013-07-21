@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.39 2013/07/21 02:30:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.40 2013/07/21 02:33:33 floppym Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ RDEPEND="${DEPEND}"
 DEPEND+=" test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 if [[ ${PV} == 9999 ]]; then
-	DEPEND+=" dev-python/paver"
+	DEPEND+=" dev-python/paver[${PYTHON_USEDEP}]"
 else
 	S="${WORKDIR}/${MY_P}"
 fi
