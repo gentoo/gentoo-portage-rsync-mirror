@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/isdn-firmware
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.16 2006/11/18 11:10:21 mrness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.17 2013/07/21 09:04:55 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   18 Nov 2006; Alin Nastac <mrness@gentoo.org>
   -isdn-firmware-2005.3.21.3.ebuild:
@@ -79,4 +82,3 @@
   +isdn-firmware-2004.4.5.ebuild:
   Rename capi4k-firmware to isdn-firmware, which seems to be a better name for
   this.
-

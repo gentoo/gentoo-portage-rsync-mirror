@@ -1,10 +1,12 @@
 # ChangeLog for net-print/adobeps
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/adobeps/ChangeLog,v 1.1 2008/02/17 22:38:44 sbriesen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/adobeps/ChangeLog,v 1.2 2013/07/21 09:06:51 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
 *adobeps-1.0.6 (17 Feb 2008)
 
   17 Feb 2008; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +adobeps-1.0.6.ebuild:
   initial commit.
-

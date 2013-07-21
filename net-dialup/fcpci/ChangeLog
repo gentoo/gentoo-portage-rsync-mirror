@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/fcpci
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.24 2012/03/19 19:05:20 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.25 2013/07/21 09:04:33 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   19 Mar 2012; Ulrich Müller <ulm@gentoo.org> fcpci-0.1-r2.ebuild:
   Non-maintainer commit: Add mirror restriction, bug 398711.
@@ -84,6 +87,3 @@
 
   Initial version, just in time for our Gentoo 1.4 release :o)
   This version will be included on our bootcd.
-
-
-

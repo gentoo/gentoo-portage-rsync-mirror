@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ziproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.31 2013/01/08 16:19:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.32 2013/07/21 09:07:15 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
 *ziproxy-3.3.0 (08 Jan 2013)
 
@@ -158,4 +161,3 @@
   07 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org> +files/ziproxy.confd,
   +files/ziproxy.initd, +metadata.xml, +ziproxy-1.5.1.ebuild:
   initial commit, solving bug #63731.
-

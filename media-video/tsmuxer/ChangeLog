@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tsmuxer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.9 2013/03/02 22:43:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.10 2013/07/21 09:03:24 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
   Move Qt dependencies to the new category

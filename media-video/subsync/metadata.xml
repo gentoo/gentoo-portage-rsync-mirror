@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>video</herd>
-	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
-	</maintainer>
 	<longdescription lang="en">
 		Subtitle Synchronizer is a easy command-line utility that synchronizes
 		subrip(srt) subtitles that use time format to given timings.

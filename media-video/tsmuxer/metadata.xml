@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>video</herd>
-	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
-	</maintainer>
 	<longdescription lang="en">
 		SmartLabs tsMuxeR - the software utility to create TS and M2TS files for
 		IP broadcasting as well as for viewing at hardware video players (i.e.,

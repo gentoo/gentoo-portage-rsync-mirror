@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/itund
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/ChangeLog,v 1.6 2006/10/01 20:44:01 sbriesen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/ChangeLog,v 1.7 2013/07/21 09:05:06 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   01 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org>
   -files/itund-0.3-capiv3.patch, -itund-0.3.ebuild, itund-0.3.1.ebuild:
@@ -25,4 +28,3 @@
   29 Jul 2005; Stefan Briesenick <sbriesen@gentoo.org>
   +files/itund-0.3-capiv3.patch, +metadata.xml, +itund-0.3.ebuild:
   initial commit. Includes CAPI 2.0 V3 patches.
-

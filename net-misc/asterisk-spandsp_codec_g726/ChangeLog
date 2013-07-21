@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-spandsp_codec_g726
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/ChangeLog,v 1.4 2009/08/29 17:41:22 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/ChangeLog,v 1.5 2013/07/21 09:06:08 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   29 Aug 2009; Robin H. Johnson <robbat2@gentoo.org>
   asterisk-spandsp_codec_g726-0.0.2_pre26.ebuild:
@@ -21,4 +24,3 @@
   07 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +asterisk-spandsp_codec_g726-0.0.2_pre26.ebuild:
   initial commit.
-

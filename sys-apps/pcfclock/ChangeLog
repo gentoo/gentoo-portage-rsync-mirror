@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcfclock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.18 2012/12/11 18:10:28 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.19 2013/07/21 09:08:23 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #92799
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> pcfclock-0.44-r6.ebuild:
   use udev.eclass to determine udevdir for virtual/udev support

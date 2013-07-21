@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.48 2013/07/10 17:12:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.49 2013/07/21 09:23:45 pacho Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
-# Bugs: pauldv@gentoo.org
+# Bugs: maintainer-needed@gentoo.org
 
 inherit eutils multilib
 

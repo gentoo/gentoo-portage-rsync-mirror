@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>video</herd>
 	<maintainer>
-		<email>sbriesen@gentoo.org</email>
-		<name>Stefan Briesenick</name>
-	</maintainer>
-	<maintainer>
 		<email>billie@gentoo.org</email>
 		<name>Daniel Pielmeier</name>
 	</maintainer>
