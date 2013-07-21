@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/devilspie2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.6 2013/06/25 13:00:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.7 2013/07/21 12:07:23 hasufell Exp $
+
+*devilspie2-0.30 (21 Jul 2013)
+
+  21 Jul 2013; Julian Ospald <hasufell@gentoo.org> +devilspie2-0.30.ebuild:
+  version bump
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> devilspie2-0.29.ebuild:
   Stable for amd64, wrt bug #474392
