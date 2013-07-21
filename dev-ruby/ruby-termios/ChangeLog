@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-termios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.35 2013/07/04 09:13:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.36 2013/07/21 06:27:12 graaff Exp $
+
+  21 Jul 2013; Hans de Graaff <graaff@gentoo.org>
+  -ruby-termios-0.9.6-r1.ebuild:
+  Cleanup.
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ruby-termios-0.9.6-r2.ebuild:
   Stable for x86, wrt bug #475582
