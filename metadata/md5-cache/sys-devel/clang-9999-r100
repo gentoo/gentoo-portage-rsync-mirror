@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=C language family frontend for LLVM (meta-ebuild)
+EAPI=5
+HOMEPAGE=http://clang.llvm.org/
+IUSE=debug multitarget python +static-analyzer
+LICENSE=UoI-NCSA
+RDEPEND=~sys-devel/llvm-9999[clang(-),debug=,multitarget=,python=,static-analyzer=]
+SLOT=0
+_md5_=0fe652e04f06178c65d59f70d30cc629

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/html401
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.21 2012/03/28 09:59:20 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.22 2013/07/21 10:04:55 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> html401-19991224-r2.ebuild:
   Stable for amd64, wrt bug #276400

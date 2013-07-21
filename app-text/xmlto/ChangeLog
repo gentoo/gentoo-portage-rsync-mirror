@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmlto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.78 2012/04/26 17:23:43 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.79 2013/07/21 10:13:03 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> xmlto-0.0.25.ebuild:
   keyword ~amd64-fbsd
@@ -275,4 +279,3 @@
   First version of xmlto. This version does not currently support tetex output
   to pdf/ps/dvi as we need a working passivetex/xmltex implementation before we
   can do that. Tex/pdf support is planned for the first revision of this package
-

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.478 2013/07/18 20:15:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.479 2013/07/21 10:02:17 radhermit Exp $
+
+*openssh-6.2_p2-r3 (21 Jul 2013)
+
+  21 Jul 2013; Tim Harder <radhermit@gentoo.org> -openssh-6.2_p2-r2.ebuild,
+  +openssh-6.2_p2-r3.ebuild:
+  Fix hpn support when pseudo-tty allocation is disabled (bug #477506).
 
   18 Jul 2013; Tim Harder <radhermit@gentoo.org> -openssh-6.0_p1.ebuild,
   -openssh-6.1_p1.ebuild, -openssh-6.2_p2.ebuild, -openssh-6.2_p2-r1.ebuild,

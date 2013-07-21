@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmlformat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/ChangeLog,v 1.11 2010/08/07 13:23:52 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/ChangeLog,v 1.12 2013/07/21 10:12:16 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -xmlformat-1.03.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   07 Aug 2010; Hans de Graaff <graaff@gentoo.org> xmlformat-1.03.ebuild,
   xmlformat-1.04.ebuild:
@@ -39,4 +44,3 @@
   +xmlformat-1.03.ebuild:
   Initial import. Ebuild submitted by Dennis Nienhüser <fragfred@gmx.de>,
   closing bug #52440.
-

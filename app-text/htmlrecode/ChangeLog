@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmlrecode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/ChangeLog,v 1.10 2012/04/18 19:12:31 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/ChangeLog,v 1.11 2013/07/21 10:05:12 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
 *htmlrecode-1.3.1 (18 Apr 2012)
 
@@ -45,4 +49,3 @@
   +htmlrecode-1.2.0.ebuild:
   Initial import. Ebuild submitted by Joel Yliluoma <bisqwit@iki.fi>,
   closing bug #28454.
-

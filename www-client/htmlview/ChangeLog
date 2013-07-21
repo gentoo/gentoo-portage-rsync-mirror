@@ -1,6 +1,10 @@
 # ChangeLog for www-client/htmlview
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.14 2011/01/25 17:36:13 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.15 2013/07/21 10:13:33 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   25 Jan 2011; Jeremy Olexa <darkside@gentoo.org> -htmlview-3.0.0.ebuild,
   htmlview-3.0.0-r1.ebuild, +files/htmlview-3.0.0-prefix.patch:
@@ -58,4 +62,3 @@
   +htmlview-3.0.0.ebuild:
   Initial import. Ebuild submitted by Jose Romildo Malaquias
   <romildo@uber.com.br>; bug #62737.
-

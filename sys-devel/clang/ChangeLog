@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.91 2013/06/18 22:20:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.92 2013/07/21 10:03:46 mgorny Exp $
+
+*clang-3.3-r100 (21 Jul 2013)
+*clang-9999-r100 (21 Jul 2013)
+
+  21 Jul 2013; Michał Górny <mgorny@gentoo.org> +clang-3.3-r100.ebuild,
+  +clang-9999-r100.ebuild:
+  Add clang meta-package pulling in llvm[clang].
 
 *clang-3.3 (18 Jun 2013)
 

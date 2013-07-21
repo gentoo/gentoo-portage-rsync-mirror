@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xml2doc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.27 2012/06/19 03:28:39 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.28 2013/07/21 10:11:49 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   19 Jun 2012; Mike Gilbert <floppym@gentoo.org> xml2doc-20030510-r1.ebuild:
   Respect CC, bug 243764.
@@ -87,4 +91,3 @@
   16 Oct 2003; Mike Gardiner <obz@gentoo.org> xml2doc-20030510.ebuild:
   First version in portage. Thanks to <brainlinux@softhome.net> for the initial
   ideas on bug #20501.
-

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/html2text
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.46 2012/08/19 15:58:50 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.47 2013/07/21 10:04:45 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -html2text-1.3.2.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> html2text-1.3.2a.ebuild:
   alpha/sparc stable wrt #366813
@@ -159,4 +164,3 @@
   12 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> html2text-1.3.1.ebuild,
   metadata.xml:
   Initial import, ebuild by Thomas Schuetz <murray_b@gentoo.org> in bug 18248.
-

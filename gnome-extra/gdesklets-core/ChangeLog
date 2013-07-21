@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.156 2013/06/16 09:34:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.157 2013/07/21 10:19:58 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://www.gossamer-threads.com/lists/gentoo/dev/273644
 
   16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #79409

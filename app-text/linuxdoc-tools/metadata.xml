@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sgml</herd>
+<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
   <longdescription>
     Linuxdoc-Tools is a small bug-fix version of SGML-Tools 1.0.9, and
     is a toolset for processing LinuxDoc DTD SGML files.  This system

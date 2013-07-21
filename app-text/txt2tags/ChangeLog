@@ -1,6 +1,10 @@
 # ChangeLog for app-text/txt2tags
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.48 2012/03/22 21:49:41 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.49 2013/07/21 10:10:41 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   22 Mar 2012; Mike Gilbert <floppym@gentoo.org> -txt2tags-2.3-r1.ebuild,
   -txt2tags-2.5.ebuild, txt2tags-2.6.ebuild:
@@ -183,4 +187,3 @@
 
   28 Apr 2003; Alastair Tse <liquidx@gentoo.org> txt2tags-1.4.ebuild:
   Initial ebuild submitted by Bardur Arantsson (#18687)
-

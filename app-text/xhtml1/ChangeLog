@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xhtml1
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.23 2011/03/05 20:38:22 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.24 2013/07/21 10:10:56 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
+  again-td259655.html
 
   05 Mar 2011; Joseph Jezak <josejx@gentoo.org> -xhtml1-20020801-r3.ebuild,
   xhtml1-20020801-r4.ebuild:
