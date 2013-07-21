@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.92 2013/06/05 19:04:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.93 2013/07/21 13:06:56 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> nettle-2.7.1.ebuild:
+  Stable for amd64, wrt bug #477612
 
 *nettle-2.7.1 (05 Jun 2013)
 

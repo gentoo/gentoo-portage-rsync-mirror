@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.105 2013/06/09 21:19:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.106 2013/07/21 13:06:33 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> sendmail-8.14.7.ebuild:
+  Stable for amd64, wrt bug #477622
 
   09 Jun 2013; Markos Chandras <hwoarang@gentoo.org> sendmail-8.14.7.ebuild:
   Add ~mips

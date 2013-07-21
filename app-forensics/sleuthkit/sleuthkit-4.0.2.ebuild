@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-4.0.2.ebuild,v 1.1 2013/02/10 20:54:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-4.0.2.ebuild,v 1.2 2013/07/21 13:05:58 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 IBM"
 SLOT="0/9" # subslot = major soname version
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~x86"
 IUSE="aff ewf static-libs"
 
 DEPEND="dev-db/sqlite:3

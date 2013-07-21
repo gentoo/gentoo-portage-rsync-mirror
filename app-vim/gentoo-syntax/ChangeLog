@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.147 2013/06/19 08:09:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.148 2013/07/21 13:07:22 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-syntax-20130619.ebuild:
+  Stable for amd64, wrt bug #477584
 
 *gentoo-syntax-20130619 (19 Jun 2013)
 

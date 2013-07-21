@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-1.6.ebuild,v 1.2 2013/07/05 21:56:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-1.6.ebuild,v 1.3 2013/07/21 13:29:40 hasufell Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 DOCS=( authors.txt )
+PATCHES=( "${FILESDIR}"/${P}-ffmpeg-2.0.patch )
 
 src_unpack() {
 	# S=${WORKDIR} would result in unremoved files in

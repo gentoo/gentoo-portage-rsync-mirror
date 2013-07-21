@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.80 2013/04/04 18:17:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.81 2013/07/21 13:06:06 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> diffutils-3.3.ebuild:
+  Stable for amd64, wrt bug #477570
 
   04 Apr 2013; Mike Frysinger <vapier@gentoo.org> diffutils-3.3.ebuild:
   Hack around bad upstream packaging w/gettext #464604 by Arfrever Frehtes
