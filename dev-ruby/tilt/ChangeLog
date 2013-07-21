@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tilt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.26 2013/04/21 05:14:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.27 2013/07/21 15:19:08 mrueg Exp $
+
+*tilt-1.4.1 (21 Jul 2013)
+
+  21 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +tilt-1.4.1.ebuild:
+  Version bump
 
   21 Apr 2013; Hans de Graaff <graaff@gentoo.org> -tilt-1.3.2.ebuild:
   Cleanup.
