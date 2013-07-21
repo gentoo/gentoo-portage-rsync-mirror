@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1156 2013/07/21 01:16:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1157 2013/07/21 21:03:40 tomwij Exp $
+
+*gentoo-sources-3.9.11 (21 Jul 2013)
+
+  21 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.9.11.ebuild,
+  -gentoo-sources-3.0.82.ebuild, -gentoo-sources-3.4.49.ebuild,
+  -gentoo-sources-3.7.10-r1.ebuild, -gentoo-sources-3.9.10.ebuild,
+  -gentoo-sources-3.9.6.ebuild, -gentoo-sources-3.9.7.ebuild,
+  -gentoo-sources-3.9.8.ebuild, -gentoo-sources-3.9.9.ebuild:
+  Linux patch 3.9.11; security fixes for CVE-2013-4125 and CVE-2013-4129, see
+  bugs #477464 and #477468 respectively. Removed old.
 
   21 Jul 2013; Matt Turner <mattst88@gentoo.org> gentoo-sources-3.10.1.ebuild:
   Added ~mips.
