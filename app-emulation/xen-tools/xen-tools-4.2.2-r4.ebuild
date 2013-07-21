@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.2 2013/07/21 15:38:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r4.ebuild,v 1.1 2013/07/21 15:38:26 idella4 Exp $
 
 EAPI=5
 
@@ -8,8 +8,8 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE='xml,threads'
 
 IPXE_TARBALL_URL="http://dev.gentoo.org/~idella4/tarballs/ipxe.tar.gz"
-XEN_SEABIOS_URL="http://dev.gentoo.org/~idella4/tarballs/seabios-dir-remote-20130720.tar.gz"
-
+XEN_SEABIOS_URL="http://dev.gentoo.org/~idella4/tarballs/seabios-0-20121121.tar.bz2"
+XSAPATCHES="http://dev.gentoo.org/~idella4/"
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
 	REPO="xen-unstable.hg"
@@ -20,7 +20,8 @@ else
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 	$IPXE_TARBALL_URL
-	$XEN_SEABIOS_URL"
+	$XEN_SEABIOS_URL
+	$XSAPATCHES/patches/XSA-55patches.tar.gz"
 	S="${WORKDIR}/xen-${PV}"
 fi
 
@@ -123,7 +124,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Drop .config, fixes to gcc-4.6
-	epatch "${FILESDIR}"/${PN/-tools/}-4.3-fix_dotconfig-gcc.patch
+	epatch "${FILESDIR}"/${PN/-tools/}-4-fix_dotconfig-gcc.patch
 
 	# Xend
 	if ! use xend; then
@@ -172,7 +173,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
 
 	# Prevent the downloading of ipxe, seabios
-	epatch "${FILESDIR}"/${P/-tools/}-anti-download.patch
+	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-anti-download.patch
 	cp "${DISTDIR}"/ipxe.tar.gz tools/firmware/etherboot/ || die
 	mv ../seabios-dir-remote tools/firmware/ || die
 	pushd tools/firmware/ > /dev/null
@@ -194,24 +195,39 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-jserver.patch
 
 	# add missing header
-	epatch "${FILESDIR}"/xen-4-ulong.patch
+	epatch "${FILESDIR}"/xen-4-ulong.patch \
+		"${FILESDIR}"/${PN}-4.2-xen_disk_leak.patch
 
 	# Set dom0-min-mem to kb; Bug #472982
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
 
 	#Security patches, currently valid
 	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
-		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch
+		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA-49.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
+		"${WORKDIR}"/files/xen-4.2-CVE-2013-8-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
+		"${WORKDIR}"/files/xen-4.2-CVE-2013-11-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
+		"${WORKDIR}"/files/xen-4.2-CVE-2013-15-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
+		"${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch \
+		"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch \
+		"${FILESDIR}"/xen-4.2-CVE-XSA-57.patch
 
 	# Bug 472438
 	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
 		-i Config.mk || die
 
 	epatch_user
-}
-
-src_configure() {
-	econf --prefix=/usr
 }
 
 src_compile() {
@@ -241,11 +257,10 @@ src_install() {
 	local PYTHONDONTWRITEBYTECODE
 	export PYTHONDONTWRITEBYTECODE
 
-	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" \
+	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" install-tools \
 		XEN_PYTHON_NATIVE_INSTALL=y install-tools
-
 	# Fix the remaining Python shebangs.
-	python_fix_shebang "${D}"
+	python_fix_shebang "${ED}"
 
 	# Remove RedHat-specific stuff
 	rm -rf "${D}"tmp || die
@@ -282,14 +297,14 @@ src_install() {
 	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled
 
 	if use screen; then
-		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains || die
-		cp "${FILESDIR}"/xen-consoles.logrotate "${D}"/etc/xen/ || die
+		cat "${FILESDIR}"/xendomains-screen.confd >> "${ED}"/etc/conf.d/xendomains || die
+		cp "${FILESDIR}"/xen-consoles.logrotate "${ED}"/etc/xen/ || die
 		keepdir /var/log/xen-consoles
 	fi
 
 	if [[ "${ARCH}" == 'amd64' ]] && use qemu; then
 		mkdir -p "${D}"usr/$(get_libdir)/xen/bin || die
-		mv "${D}"usr/lib/xen/bin/{qemu*,vscclient,virtfs-proxy-helper} "${D}"usr/$(get_libdir)/xen/bin/ || die
+		mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/$(get_libdir)/xen/bin/ || die
 	fi
 
 	# For -static-libs wrt Bug 384355
@@ -311,11 +326,19 @@ src_install() {
 	# Remove files failing QA AFTER emake installs them, avoiding seeking absent files
 	find "${D}" \( -name openbios-sparc32 -o -name openbios-sparc64 \
 		-o -name openbios-ppc -o -name palcode-clipper \) -delete || die
+
+	if use qemu; then
+		mv "${D}"usr/local/etc/qemu "${D}"etc/ || die
+		mv "${D}"usr/local/share/doc/qemu "${D}"usr/share/doc/{$PF}/ || die
+		mv "${D}"usr/local/share/man/man1/* "${D}"usr/share/man/man1/ || die
+		mv "${D}"usr/local/share/man/man8/* "${D}"usr/share/man/man8/ || die
+		rm -r "${D}"usr/local/ || die
+	fi
 }
 
 pkg_postinst() {
 	elog "Official Xen Guide and the unoffical wiki page:"
-	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog " http://www.gentoo.org/doc/en/xen-gu"${D}"usr/ide.xml"
 	elog " http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
 	if [[ "$(scanelf -s __guard -q "${PYTHON}")" ]] ; then

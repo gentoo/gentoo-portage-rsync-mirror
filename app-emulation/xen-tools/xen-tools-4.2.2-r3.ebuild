@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r3.ebuild,v 1.4 2013/07/02 16:15:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r3.ebuild,v 1.5 2013/07/21 15:38:26 idella4 Exp $
 
 EAPI=5
 
@@ -259,7 +259,6 @@ src_install() {
 
 	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" \
 		XEN_PYTHON_NATIVE_INSTALL=y install-tools
-
 	# Fix the remaining Python shebangs.
 	python_fix_shebang "${ED}"
 
