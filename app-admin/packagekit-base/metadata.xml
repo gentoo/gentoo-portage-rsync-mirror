@@ -6,7 +6,6 @@
 		<name>Fabio Erculiani</name>
 	</maintainer>
 	<use>
-		<flag name="connman">Add support for <pkg>net-misc/connman</pkg></flag>
 		<flag name="cron">Install cron script for auto-update</flag>
 		<flag name="entropy">
 			Enable Entropy backend

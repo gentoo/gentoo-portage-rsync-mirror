@@ -5,8 +5,6 @@
 	<use>
 		<flag name="bogofilter">Build <pkg>mail-filter/bogofilter</pkg> plugin</flag>
 		<flag name="clutter">Build with clutter support for animation effects</flag>
-		<flag name="connman">Enable <pkg>net-misc/connman</pkg>	support (requires 
-		'networkmanager' USE flag to be disabled).</flag>
 		<flag name="crypt">Enable GPG encryption support using
 			<pkg>app-crypt/gnupg</pkg> and <pkg>app-crypt/pinentry</pkg></flag>
 		<flag name="gnome-online-accounts">Enable using

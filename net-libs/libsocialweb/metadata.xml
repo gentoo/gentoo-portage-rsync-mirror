@@ -6,9 +6,6 @@
 	<flag name="connman">Use <pkg>net-misc/connman</pkg> for getting network
 		connection status information</flag>
 	<flag name="gnome">Extract proxy information using
-		<pkg>net-libs/libsoup-gnome</pkg></flag>
-	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-		for introspection</flag>
-	<flag name="vala">Build bindings for <pkg>dev-lang/vala</pkg></flag>
+		<pkg>net-libs/libsoup</pkg></flag>
   </use>
 </pkgmetadata>

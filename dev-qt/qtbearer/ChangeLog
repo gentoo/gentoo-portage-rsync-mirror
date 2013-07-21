@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtbearer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.2 2013/07/09 10:49:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.3 2013/07/21 10:43:32 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  connman is a global USE flag now
 
 *qtbearer-4.8.5 (09 Jul 2013)
 

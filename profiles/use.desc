@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.504 2013/06/16 10:13:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.505 2013/07/21 10:40:45 pacho Exp $
 
 # Keep them sorted
 
@@ -53,6 +53,7 @@ cdr - Adds support for CD writer hardware
 cgi - Add CGI script support
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 clamav - Adds support for Clam AntiVirus software (usually with a plugin)
+connman - Add support for net-misc/connman
 coreaudio - Build the CoreAudio driver on Mac OS X systems
 cracklib - Support for cracklib strong password checking
 crypt - Add support for encryption -- using mcrypt or gpg where applicable

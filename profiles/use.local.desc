@@ -165,7 +165,6 @@ app-admin/logrotate:selinux - Installs Security Enhanced Linux support
 app-admin/matter:entropy - Add Entropy support
 app-admin/mcollective:client - Install client utilities
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
-app-admin/packagekit-base:connman - Add support for net-misc/connman
 app-admin/packagekit-base:cron - Install cron script for auto-update
 app-admin/packagekit-base:entropy - Enable Entropy backend
 app-admin/packagekit-base:introspection - Use dev-libs/gobject-introspection Enable introspection
@@ -729,7 +728,6 @@ app-misc/freemind:svg - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/gcstar:stats - Enable statistics reporting
 app-misc/gcstar:tellico - Enable support for kde-misc/tellico files
 app-misc/geneweb:ocamlopt - Enable ocamlopt support (dev-lang/ocaml native code compiler)
-app-misc/geoclue:connman - Add support for net-misc/connman
 app-misc/geoclue:geonames - Install geonames.org provider
 app-misc/geoclue:gsmloc - Install GSM location provider
 app-misc/geoclue:gtk - Install gtk-based geoclue-test-gui
@@ -1463,7 +1461,6 @@ dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/dbus-c++:ecore - Use Ecore integration
 dev-libs/dbus-c++:glib - Use glib integration
 dev-libs/e_dbus:bluetooth - Enable interfacing with net-wireless/bluez DBus API.
-dev-libs/e_dbus:connman - Enable interfacing with net-misc/connman DBus API.
 dev-libs/e_dbus:ofono - Enable interfacing with net-misc/ofono DBus API.
 dev-libs/e_dbus:test-binaries - Enable building of test binaries for enabled features
 dev-libs/ecore:ares - Enables support for asynchronous DNS using the net-dns/c-ares library
@@ -1907,9 +1904,7 @@ dev-qt/qt-mobility:versit - Build the QtVersit module
 dev-qt/qt3support:c++0x - Build Qt using the C++11 standard
 dev-qt/qt3support:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 dev-qt/qtbearer:c++0x - Build Qt using the C++11 standard
-dev-qt/qtbearer:connman - Enable ConnMan-based bearer plugin
 dev-qt/qtbearer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-dev-qt/qtbearer:networkmanager - Enable NetworkManager-based bearer plugin
 dev-qt/qtcore:c++0x - Build Qt using the C++11 standard
 dev-qt/qtcore:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
@@ -2683,7 +2678,6 @@ mail-client/claws-mail:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/claws-mail:valgrind - Add support for memory debugging using valgrind
 mail-client/evolution:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/evolution:clutter - Build with clutter support for animation effects
-mail-client/evolution:connman - Enable net-misc/connman support (requires 'networkmanager' USE flag to be disabled).
 mail-client/evolution:crypt - Enable GPG encryption support using app-crypt/gnupg and app-crypt/pinentry
 mail-client/evolution:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization
 mail-client/evolution:highlight - Enable text highlighting plugin
@@ -4377,7 +4371,6 @@ net-im/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this
 net-im/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
 net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
-net-im/telepathy-mission-control:connman - Add support for net-misc/connman
 net-im/telepathy-mission-control:upower - Use sys-power/upower to detect suspend and resume
 net-im/tkabber:extras - Enables extra non official patches
 net-im/tkabber:plugins - Enables installation the extra plugins
@@ -4588,8 +4581,6 @@ net-libs/gssdp:introspection - Use dev-libs/gobject-introspection for introspect
 net-libs/gtk-vnc:gtk3 - Build the gtk3 gtk-vnc library and other gtk3 assets
 net-libs/gtk-vnc:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gtk-vnc:vala - Enable bindings for dev-lang/vala
-net-libs/gupnp:connman - Add support for net-misc/connman
-net-libs/gupnp:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp-av:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp-igd:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/h323plus:aec - Enable acoustic echo cancellation
@@ -4622,9 +4613,7 @@ net-libs/libproxy:kde - Enable support for reading proxy settings from KDE
 net-libs/libproxy:spidermonkey - Use libmozjs from dev-lang/spidermonkey for PAC parsing
 net-libs/libproxy:webkit - Use libjavascriptcoregtk from net-libs/webkit-gtk for PAC parsing
 net-libs/libsocialweb:connman - Use net-misc/connman for getting network connection status information
-net-libs/libsocialweb:gnome - Extract proxy information using net-libs/libsoup-gnome
-net-libs/libsocialweb:introspection - Use dev-libs/gobject-introspection for introspection
-net-libs/libsocialweb:vala - Build bindings for dev-lang/vala
+net-libs/libsocialweb:gnome - Extract proxy information using net-libs/libsoup
 net-libs/libsoup:samba - Use net-fs/samba for NTLM Single Sign-On
 net-libs/libsrtp:aesicm - Use AES ICM cryptographic algorithm
 net-libs/libsrtp:console - Use /dev/console instead of stdout for error messages

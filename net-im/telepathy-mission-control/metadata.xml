@@ -9,7 +9,6 @@ managers, to provide a simple way to manipulate a bunch of connection managers
 at once, and to remove the need to have in each program the account
 definitions and credentials.</longdescription>
 <use>
-	<flag name="connman">Add support for <pkg>net-misc/connman</pkg></flag>
 	<flag name="upower">Use <pkg>sys-power/upower</pkg> to detect suspend and resume</flag>
 </use>
 </pkgmetadata>

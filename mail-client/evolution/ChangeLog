@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.397 2013/06/15 21:34:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.398 2013/07/21 10:44:26 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  connman is a global USE flag now
 
   15 Jun 2013; Pacho Ramos <pacho@gentoo.org> evolution-3.8.3.ebuild:
   eautoreconf is needed (#473354 by Helmut Jarausch)

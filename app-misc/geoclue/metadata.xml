@@ -3,7 +3,6 @@
 <pkgmetadata>
   <herd>desktop-misc</herd>
   <use>
-    <flag name="connman">Add support for net-misc/connman</flag>
     <flag name="geonames">Install geonames.org provider</flag>
     <flag name="gsmloc">Install GSM location provider</flag>
     <flag name="gtk">Install gtk-based geoclue-test-gui</flag>
