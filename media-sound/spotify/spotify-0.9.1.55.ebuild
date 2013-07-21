@@ -1,23 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.0.133.ebuild,v 1.1 2013/05/03 02:50:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.1.55.ebuild,v 1.1 2013/07/21 04:24:01 prometheanfire Exp $
 
 EAPI=4
-inherit eutils pax-utils unpacker
+inherit eutils fdo-mime gnome2-utils pax-utils unpacker
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
-MY_PV="${PV}.gd18ed58.259-1"
+MY_PV="${PV}.gbdd3b79.203-1"
 MY_P="${PN}-client_${MY_PV}"
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
-#SRC_BASE="http://download.spotify.com/preview/"
 SRC_URI="
 	x86?   ( ${SRC_BASE}${MY_P}_i386.deb )
 	amd64? ( ${SRC_BASE}${MY_P}_amd64.deb )
 	"
 LICENSE="Spotify"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+#amd64 and x86 keywords removed due to security concerns, see bug 474010
+KEYWORDS=""
 IUSE="gnome pax_kernel pulseaudio"
 RESTRICT="mirror strip"
 
@@ -143,8 +143,22 @@ src_install() {
 		${ED}/usr/bin/spotify
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
+	gnome2_icon_cache_update
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
+
 	ewarn "If Spotify crashes after an upgrade its cache may be corrupt."
 	ewarn "To remove the cache:"
 	ewarn "rm -rf ~/.cache/spotify"
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
 }
