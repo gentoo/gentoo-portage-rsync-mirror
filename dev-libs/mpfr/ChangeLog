@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.166 2013/04/29 16:08:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.167 2013/07/21 21:52:36 ottxor Exp $
+
+  21 Jul 2013; Christoph Junghans <ottxor@gentoo.org> mpfr-2.4.2_p3-r1.ebuild,
+  mpfr-3.1.2.ebuild:
+  added prefix support (bug #476336)
 
   29 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> mpfr-3.1.2.ebuild:
   Keyword amd64-linux

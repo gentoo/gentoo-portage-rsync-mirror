@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libid3tag
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.46 2012/09/07 22:37:15 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.47 2013/07/21 21:37:15 ottxor Exp $
+
+*libid3tag-0.15.1b-r3 (21 Jul 2013)
+
+  21 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  +libid3tag-0.15.1b-r3.ebuild:
+  added prefix support (bug #475968)
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

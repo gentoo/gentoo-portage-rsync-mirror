@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.2.ebuild,v 1.2 2013/04/29 16:08:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.2.ebuild,v 1.3 2013/07/21 21:52:36 ottxor Exp $
 
 EAPI="3"
 
 # NOTE: we cannot depend on autotools here starting with gcc-4.3.x
-inherit eutils multilib
+inherit eutils libtool multilib
 
 MY_PV=${PV/_p*}
 MY_P=${PN}-${MY_PV}
@@ -16,7 +16,7 @@ SRC_URI="http://www.mpfr.org/mpfr-${MY_PV}/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~sparc-fbsd ~x86-fbsd ~ppc-aix ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/gmp-4.1.4-r2[static-libs?]"
@@ -39,11 +39,16 @@ src_prepare() {
 	done
 	sed -i '/if test/s:==:=:' configure #261016
 	find . -type f -print0 | xargs -0 touch -r configure
+
+	# needed for FreeMiNT
+	[[ ${CHOST} == *-mint* ]] && elibtoolize
 }
 
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--with-gmp-lib="${EPREFIX}"/usr/$(get_libdir) \
+		--with-gmp-include="${EPREFIX}"/usr/include \
 		$(use_enable static-libs static)
 }
 
@@ -61,9 +66,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/libmpfr.so.1
+	preserve_old_lib /usr/$(get_libdir)/libmpfr$(get_libname 1)
 }
 
 pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/libmpfr.so.1
+	preserve_old_lib_notify /usr/$(get_libdir)/libmpfr$(get_libname 1)
 }
