@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ruby
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.20 2012/11/27 19:30:18 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.21 2013/07/21 06:58:05 graaff Exp $
+
+  21 Jul 2013; Hans de Graaff <graaff@gentoo.org> -mod_ruby-1.2.6.ebuild:
+  Cleanup.
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

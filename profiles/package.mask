@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14941 2013/07/21 00:47:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14942 2013/07/21 06:38:22 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,53 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (21 Jul 2013)
+# Mask ruby18-only packages in dev-ruby for removal in 30 days.
+# ruby18 is EOL and no longer supported upstream. These packages
+# are only marked for ruby18 and most have not seen releases in
+# a long time. All of them don't have reverse dependencies.
+# All will be removed unless it can be verified that they do
+# work with newer ruby versions.
+dev-ruby/autotest-rails
+dev-ruby/canny
+dev-ruby/cgikit
+dev-ruby/color-tools
+dev-ruby/diff
+dev-ruby/eruby
+dev-ruby/extensions
+dev-ruby/fusefs
+dev-ruby/imlib2-ruby
+dev-ruby/IO-Reactor
+dev-ruby/jabber4r
+dev-ruby/mega-modules
+dev-ruby/merb-slices
+dev-ruby/nano-methods
+dev-ruby/needle
+dev-ruby/net-geoip
+dev-ruby/nora
+dev-ruby/osmlib-base
+dev-ruby/piston
+dev-ruby/plruby
+dev-ruby/quixml
+dev-ruby/rbbr
+dev-ruby/rflickr
+dev-ruby/ruby-breakpoint
+dev-ruby/ruby-chasen
+dev-ruby/ruby-eb
+dev-ruby/rubyfilter
+dev-ruby/ruby-freedb
+dev-ruby/ruby-gd
+dev-ruby/ruby-gsl
+dev-ruby/ruby-irc
+dev-ruby/ruby-password
+dev-ruby/ruby-pcap
+dev-ruby/shipping
+dev-ruby/stompserver
+dev-ruby/tclink
+dev-ruby/webrat
+dev-ruby/xml-mapping
+dev-ruby/xmpp4r
 
 # Alexis Ballier <aballier@gentoo.org> (20 Jul 2013)
 # New major release and lots of packages fail to build.
