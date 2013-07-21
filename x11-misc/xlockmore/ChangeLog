@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.133 2013/07/21 15:35:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.134 2013/07/21 16:05:41 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> xlockmore-5.43.ebuild:
+  Stable for ppc64, wrt bug #477328
 
   21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> xlockmore-5.43.ebuild:
   Stable for alpha, wrt bug #477328

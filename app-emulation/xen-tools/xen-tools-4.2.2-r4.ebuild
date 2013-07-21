@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r4.ebuild,v 1.1 2013/07/21 15:38:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r4.ebuild,v 1.2 2013/07/21 16:09:11 idella4 Exp $
 
 EAPI=5
 
@@ -68,7 +68,8 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? (  x11-proto/xproto )"
+	hvm? (  x11-proto/xproto
+		!net-libs/libiscsi )"
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
@@ -366,8 +367,6 @@ pkg_postinst() {
 		elog "HVM (VT-x and AMD-V) support has been disabled. If you need hvm"
 		elog "support enable the hvm use flag."
 		elog "An x86 or amd64 multilib system is required to build HVM support."
-		echo
-		elog "The qemu use flag has been removed and replaced with hvm."
 	fi
 
 	if use xend; then

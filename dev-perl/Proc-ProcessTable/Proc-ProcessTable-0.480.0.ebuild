@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.480.0.ebuild,v 1.5 2013/07/21 15:39:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/Proc-ProcessTable-0.480.0.ebuild,v 1.6 2013/07/21 16:07:14 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Unix process table information"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 SRC_TEST="do"
