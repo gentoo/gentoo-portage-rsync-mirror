@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llfuse/llfuse-0.39.ebuild,v 1.2 2013/07/08 10:37:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llfuse/llfuse-0.39.ebuild,v 1.3 2013/07/21 08:27:22 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} pypy2_0 )
@@ -20,6 +20,11 @@ RDEPEND=">=sys-fs/fuse-2.8.0"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/pkgconfig"
+
+python_prepare_all() {
+	# use system setuptools
+	sed -i '/use_setuptools/d' setup.py || die
+}
 
 python_install_all() {
 	use doc && local HTML_DOCS=( doc/html/. )

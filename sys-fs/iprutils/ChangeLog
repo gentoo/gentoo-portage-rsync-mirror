@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.38 2013/02/27 20:54:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.39 2013/07/21 08:27:44 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #88306
 
 *iprutils-2.3.13 (27 Feb 2013)
 
@@ -179,4 +182,3 @@
   Initial version
 
 *iprutils-2.0.13.7-r1 (06 Mar 2005)
-

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/librtas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.18 2013/02/27 20:49:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.19 2013/07/21 08:28:00 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #88306
 
 *librtas-1.3.8 (27 Feb 2013)
 
@@ -80,4 +83,3 @@
   25 Feb 2006; Brent Baude <ranger@gentoo.org>
   +files/librtas-2.0.0-remove-doc.patch, +librtas-2.0.0.ebuild:
   New application librtas-2; added to support line of new powerpc-utils packages
-

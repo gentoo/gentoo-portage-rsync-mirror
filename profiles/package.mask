@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14943 2013/07/21 07:50:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14944 2013/07/21 08:05:39 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,36 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
+# Doesn't compile with gcc-4.7 (#414143), lib is no longer
+# opensource or free. Removal in a month.
+media-libs/openinventor
+
+# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
+# Doesn't compile with boost-1.50 and with automake-1.13
+# (#425448). Removal in a month.
+dev-cpp/libebt
+
+# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
+# Doesn't compile and not useful with kernel >= 2.6 (#428728).
+# Removal in a month.
+sys-kernel/ksymoops
+
+# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
+# Fails to build with glibc-2.16 (#428738), upstream dead.
+# Removal in a month.
+net-p2p/bitstormlite
+
+# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
+# Fails to build with gcc-4.7, upstream dead (#429362).
+# Removal in a month.
+net-p2p/mutella
+
+# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
+# Doesn't build with gcc-4.7, nothing requires it.
+# (#465896). Removal in a month.
+dev-cpp/IceE
 
 # Hans de Graaff <graaff@gentoo.org> (21 Jul 2013)
 # Mask ruby18-only packages in dev-ruby for removal in 30 days.

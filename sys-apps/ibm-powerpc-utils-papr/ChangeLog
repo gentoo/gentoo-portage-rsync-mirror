@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils-papr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ChangeLog,v 1.16 2010/03/21 19:19:40 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ChangeLog,v 1.17 2013/07/21 08:27:04 pacho Exp $
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #88306
 
 *ibm-powerpc-utils-papr-1.1.6 (21 Mar 2010)
 
@@ -114,4 +117,3 @@
   +files/ibmvscsis, +metadata.xml, +ibm-powerpc-utils-papr-1.0.1.ebuild:
   Adding new package ibm-powerpc-utils-papr which supports ibm-powerpc-utils
   package
-

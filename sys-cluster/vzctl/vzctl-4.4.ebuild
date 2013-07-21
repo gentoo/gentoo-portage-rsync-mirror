@@ -1,22 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.16 2013/07/21 08:19:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.4.ebuild,v 1.1 2013/07/21 08:19:29 maksbotan Exp $
 
 EAPI="5"
 
-AUTOTOOLS_AUTORECONF=1
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
-inherit bash-completion-r1 autotools-utils git-2 toolchain-funcs udev
+inherit base bash-completion-r1 eutils toolchain-funcs udev
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
-EGIT_REPO_URI="git://git.openvz.org/pub/${PN}
-	http://git.openvz.org/pub/${PN}"
+SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="ploop vanilla-kernel vz-kernel"
 
 RDEPEND="net-firewall/iptables
@@ -28,7 +24,12 @@ RDEPEND="net-firewall/iptables
 		"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	"
+
+PDEPEND="
+	app-misc/vzstats
+"
 
 REQUIRED_USE="^^ ( vz-kernel vanilla-kernel )"
 
@@ -38,24 +39,18 @@ src_prepare() {
 	sed -i -e 's:=redhat-:=gentoo-:' etc/dists/default || die 'sed on etc/dists/default failed'
 	# Set proper udev directory
 	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" src/lib/dev.c || die 'sed on src/lib/dev.c failed'
-
-	#provide user_epatch
-	autotools-utils_src_prepare
 }
 
 src_configure() {
 
-	local myeconfargs=(
-		--localstatedir=/var
-		--enable-udev
-		--enable-bashcomp
-		--enable-logrotate
-		--with-vz
-		$(use_with ploop)
+	econf \
+		--localstatedir=/var \
+		--enable-udev \
+		--enable-bashcomp \
+		--enable-logrotate \
+		--with-vz \
+		$(use_with ploop) \
 		$(use_with vanilla-kernel cgroup)
-		)
-
-	autotools-utils_src_configure
 }
 
 src_install() {
@@ -72,7 +67,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	ewarn "To avoid loosing network to CTs on iface down/up, please, add the"
 	ewarn "following code to /etc/conf.d/net:"
 	ewarn " postup() {"
