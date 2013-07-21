@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/syb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.19 2013/04/02 13:25:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.20 2013/07/21 17:20:33 ottxor Exp $
+
+  21 Jul 2013; Christoph Junghans <ottxor@gentoo.org> syb-0.4.0.ebuild:
+  added ~amd64-linux (tested by me)
 
 *syb-0.4.0 (02 Apr 2013)
 

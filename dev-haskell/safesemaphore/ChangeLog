@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/safesemaphore
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/safesemaphore/ChangeLog,v 1.1 2012/12/16 12:37:45 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/safesemaphore/ChangeLog,v 1.2 2013/07/21 17:30:36 ottxor Exp $
+
+  21 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  safesemaphore-0.9.0.ebuild:
+  added ~amd64-linux (tested by me)
 
 *safesemaphore-0.9.0 (16 Dec 2012)
 

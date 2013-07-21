@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/syb-0.4.0.ebuild,v 1.1 2013/04/02 13:25:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/syb-0.4.0.ebuild,v 1.2 2013/07/21 17:20:33 ottxor Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.10.4:="

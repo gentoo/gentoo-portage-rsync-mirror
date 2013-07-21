@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/transformers-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers-base/ChangeLog,v 1.3 2013/03/17 16:11:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers-base/ChangeLog,v 1.4 2013/07/21 17:25:22 ottxor Exp $
+
+  21 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
+  transformers-base-0.4.1.ebuild:
+  added ~amd64-linux (tested by me)
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
