@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.162 2013/07/02 11:00:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.163 2013/07/22 13:11:25 ago Exp $
+
+*scite-3.3.4 (22 Jul 2013)
+
+  22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> +scite-3.3.4.ebuild:
+  Version bump to 3.3.4
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> -scite-3.2.5.ebuild,
   -scite-3.3.1.ebuild:
