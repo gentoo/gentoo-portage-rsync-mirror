@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/miniupnpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.11 2013/03/17 15:58:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.12 2013/07/22 10:10:08 mgorny Exp $
+
+  22 Jul 2013; Michał Górny <mgorny@gentoo.org> -miniupnpc-1.7.ebuild:
+  Drop the old version using long-deprecated python-distutils-ng.eclass.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
