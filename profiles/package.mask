@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14947 2013/07/21 16:35:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14948 2013/07/22 15:46:00 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Weber <xmw@gentoo.org> (22 Jul 2013)
+# Missing _emergency image
+=sys-kernel/raspberrypi-image-3.10.1_pre-r20130719
 
 # Julian Ospald <hasufell@gentoo.org> (21 Jul 2013)
 # Mask all unfetchable versions and those with tons of random
@@ -131,11 +135,11 @@ dev-ruby/xmpp4r
 >=www-client/chromium-30
 >=dev-lang/v8-3.20
 
-# Michael Weber <xmw@gentoo.org> (9 Jul 2013)
+# Michael Weber <xmw@gentoo.org> (17 Jul 2013)
 # Upstream next versions
-=sys-kernel/raspberrypi-image-3.9*
-=sys-kernel/raspberrypi-sources-3.9*
-=sys-boot/raspberrypi-firmware-1*
+>=sys-kernel/raspberrypi-image-3.7_pre
+>=sys-kernel/raspberrypi-sources-3.7_pre
+>=sys-boot/raspberrypi-firmware-1_pre
 
 # Justin Lecher <jlec@gentoo.org> (17 Jul 2013)
 # superseeded by sci-biology/allpathslg
