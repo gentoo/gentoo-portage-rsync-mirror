@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-mpg123
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpg123/ChangeLog,v 1.2 2013/07/22 01:04:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpg123/ChangeLog,v 1.4 2013/07/22 13:56:48 vincent Exp $
+
+  22 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  eselect-mpg123-0.1.ebuild:
+  amd64 stable, bug #477588
 
   22 Jul 2013; Jeroen Roovers <jer@gentoo.org> eselect-mpg123-0.1.ebuild:
   Stable for HPPA (bug #477588).
@@ -10,4 +14,3 @@
   15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   +files/mpg123.eselect-0.1, +eselect-mpg123-0.1.ebuild:
   Initial commit.
-

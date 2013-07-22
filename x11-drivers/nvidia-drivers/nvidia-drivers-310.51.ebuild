@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-310.51.ebuild,v 1.4 2013/07/03 14:42:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-310.51.ebuild,v 1.5 2013/07/22 13:52:21 jer Exp $
 
 EAPI=5
 
@@ -428,7 +428,7 @@ pkg_postinst() {
 	elog "To use the NVIDIA CUDA/OpenCL, run \"eselect opencl set nvidia\""
 	elog
 	elog "NVIDIA has requested that any bug reports submitted have the"
-	elog "output of /opt/bin/nvidia-bug-report.sh included."
+	elog "output of nvidia-bug-report.sh included."
 	elog
 	if ! use X; then
 		elog "You have elected to not install the X.org driver. Along with"
