@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/mozprofile-0.6.ebuild,v 1.1 2013/04/02 08:00:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/mozprofile-0.11-r1.ebuild,v 1.1 2013/07/22 06:19:39 idella4 Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-PYTHON_USE_WITH=sqlite
+EAPI=5
+PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy2_0 )
 
-inherit distutils
+inherit distutils-r1
+PYTHON_REQ_USE=sqlite
+
+inherit distutils-r1
 
 DESCRIPTION="Handling of Mozilla XUL app profiles"
 HOMEPAGE="http://github.com/mozautomation/mozmill http://pypi.python.org/pypi/mozprofile"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-python/manifestdestiny
-	dev-python/simplejson
-	dev-python/setuptools"
+DEPEND="dev-python/manifestdestiny[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"

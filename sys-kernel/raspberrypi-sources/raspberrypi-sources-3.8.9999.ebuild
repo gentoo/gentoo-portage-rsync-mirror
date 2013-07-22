@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-sources/raspberrypi-sources-9999.3.6.ebuild,v 1.1 2013/07/19 14:33:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-sources/raspberrypi-sources-3.8.9999.ebuild,v 1.1 2013/07/22 06:12:32 xmw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ detect_arch
 inherit git-2 versionator
 EGIT_REPO_URI=https://github.com/raspberrypi/linux.git
 EGIT_PROJECT="raspberrypi-linux.git"
-EGIT_BRANCH="rpi-$(get_version_component_range 2-3).y"
+EGIT_BRANCH="rpi-$(get_version_component_range 1-2).y"
 
 DESCRIPTION="Raspberry PI kernel sources"
 HOMEPAGE="https://github.com/raspberrypi/linux"

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mozprofile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/ChangeLog,v 1.12 2013/06/19 08:56:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/ChangeLog,v 1.13 2013/07/22 06:19:39 idella4 Exp $
+
+*mozprofile-0.11-r1 (22 Jul 2013)
+
+  22 Jul 2013; Ian Delaney <idella4@gentoo.org> +mozprofile-0.11-r1.ebuild,
+  -mozprofile-0.4.ebuild, -mozprofile-0.5.ebuild, -mozprofile-0.6.ebuild,
+  -mozprofile-0.7.ebuild:
+  migrate -> distutils-r1, remove some old
 
 *mozprofile-0.11 (19 Jun 2013)
 

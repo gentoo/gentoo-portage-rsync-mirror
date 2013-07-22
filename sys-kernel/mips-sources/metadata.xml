@@ -8,7 +8,7 @@
 	</maintainer>
 
 	<longdescription>
-		mips-sources are CVS Snapshots from the Linux-Mips.org CVS server for MIPS-Based machines
+		mips-sources are git snapshots from the Linux-Mips.org git server for MIPS-Based machines
 	</longdescription>
 	<use>
 		<flag name='cobalt'>Enables support for Cobalt Microserver hardware

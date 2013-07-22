@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.33 2013/07/22 01:21:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.34 2013/07/22 06:06:47 jlec Exp $
 
 EAPI=5
 
@@ -70,7 +70,7 @@ REQUIRED_USE="
 	drm? ( X )
 	gallium? ( drm )
 	gles2? ( !opengl )
-	openvg ( || ( gles2 opengl ) )
+	openvg? ( || ( gles2 opengl ) )
 	xlib-xcb? ( xcb )
 "
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mozprocess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprocess/ChangeLog,v 1.9 2013/06/06 02:52:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprocess/ChangeLog,v 1.10 2013/07/22 06:02:25 idella4 Exp $
+
+*mozprocess-0.11-r1 (22 Jul 2013)
+
+  22 Jul 2013; Ian Delaney <idella4@gentoo.org> +mozprocess-0.11-r1.ebuild,
+  -mozprocess-0.5.ebuild, -mozprocess-0.7.ebuild, -mozprocess-0.8.ebuild:
+  migrate -> distutils-r1, remove some old
 
 *mozprocess-0.11 (06 Jun 2013)
 
