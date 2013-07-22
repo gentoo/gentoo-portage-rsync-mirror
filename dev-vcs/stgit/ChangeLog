@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/stgit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.17 2013/03/17 15:09:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.18 2013/07/22 02:44:40 patrick Exp $
+
+  22 Jul 2013; Patrick Lauer <patrick@gentoo.org> -stgit-0.15-r1.ebuild,
+  -stgit-0.16.ebuild:
+  QA: Punt old versions that depend on removed asciidoc version
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

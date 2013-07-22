@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.110 2013/07/21 10:51:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.111 2013/07/22 02:40:30 patrick Exp $
+
+  22 Jul 2013; Patrick Lauer <patrick@gentoo.org> exiv2-0.23-r1.ebuild:
+  QA: Restore ~amd64-fbsd keyword to existing version
 
   21 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Add to kde herd
