@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.80 2013/07/21 16:42:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.81 2013/07/22 03:13:45 zmedico Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -277,9 +277,12 @@ src_prepare() {
 
 		einfo "Adjusting make.globals ..."
 		sed -e 's|^SYNC=.*|SYNC="rsync://rsync.prefix.freens.org/gentoo-portage-prefix"|' \
-			-e "s|^\(PORTDIR=\)\(/usr/portage\)|\\1\"${EPREFIX}\\2\"|" \
 			-e "s|^\(PORTAGE_TMPDIR=\)\(/var/tmp\)|\\1\"${EPREFIX}\\2\"|" \
 			-i cnf/make.globals || die "sed failed"
+
+		einfo "Adjusting repos.conf ..."
+		sed -e "s|^\(location = \)\(/usr/portage\)|\\1\"${EPREFIX}\\2\"|" \
+			-i cnf/repos.conf || die "sed failed"
 
 		einfo "Adding FEATURES=force-prefix to make.globals ..."
 		echo -e '\nFEATURES="${FEATURES} force-prefix"' >> cnf/make.globals \
