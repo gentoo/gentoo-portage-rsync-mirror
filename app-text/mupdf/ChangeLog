@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.85 2013/07/20 14:11:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.86 2013/07/22 19:44:33 xmw Exp $
+
+  22 Jul 2013; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  Update live ebuild for new binary name.
 
   20 Jul 2013; Michael Weber <xmw@gentoo.org> mupdf-1.1.ebuild:
   Fix desktop-integration.patch, thanks Balint SZENTE (bug 477490)

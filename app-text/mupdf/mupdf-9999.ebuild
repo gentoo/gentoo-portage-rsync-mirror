@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.39 2013/07/20 10:29:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.40 2013/07/22 19:44:33 xmw Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ src_prepare() {
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
-		-i platform/debian/mupdf.pc || die
+		-i platform/debian/${PN}.pc || die
 
 	use vanilla || epatch \
 		"${FILESDIR}"/${P}-zoom-2.patch \
@@ -113,8 +113,9 @@ src_install() {
 		dolib.a "${S}"-static/build/debug/libmupdf{,-js-none}.a
 	if use static ; then
 		dobin "${S}"-static/build/debug/mu{tool,draw}
-		use X && dobin "${S}"-static/build/debug/mupdf
+		use X && dobin "${S}"-static/build/debug/mupdf-x11
 	fi
+	use X && dosym mupdf-x11 /usr/bin/mupdf
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins platform/debian/mupdf.pc
