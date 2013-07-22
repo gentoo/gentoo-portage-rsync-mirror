@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-sources/raspberrypi-sources-3.9.10_pre-r20130715.ebuild,v 1.1 2013/07/19 14:33:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-sources/raspberrypi-sources-3.9.10_pre-r20130715.ebuild,v 1.2 2013/07/22 06:53:57 xmw Exp $
 
 EAPI=5
 
 ETYPE=sources
-K_DEFCONFIG="bcmrpi_cutdown_defconfig"
+K_DEFCONFIG="bcmrpi_defconfig"
 K_SECURITY_UNSUPPORTED=1
 UNIPATCH_LIST="${DISTDIR}/${PF}.patch.xz"
 CKV="3.9.10"

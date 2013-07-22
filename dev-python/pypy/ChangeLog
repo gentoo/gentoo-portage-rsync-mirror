@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.45 2013/07/21 20:46:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.46 2013/07/22 06:54:59 mgorny Exp $
+
+  22 Jul 2013; Michał Górny <mgorny@gentoo.org> pypy-1.9-r2.ebuild,
+  pypy-2.0.2.ebuild:
+  Clean up and drop meaningless USE flags (bug #477514). Drop USE=ssl (automagic
+  dep, bug #477642). Add sphinx to deps. Add USE=sse2 to control JIT backend on
+  x86. No revbump since this will not cause changes in install unless USE flags
+  are changed.
 
   21 Jul 2013; Michał Górny <mgorny@gentoo.org>
   -files/2.0-distutils-fix_handling_of_executables_and_flags.patch,

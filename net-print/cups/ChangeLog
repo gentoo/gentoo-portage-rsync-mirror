@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.554 2013/07/13 06:03:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.555 2013/07/22 06:35:26 ago Exp $
+
+  22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.2-r5.ebuild:
+  Stable for sh, wrt bug #442926
 
   13 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

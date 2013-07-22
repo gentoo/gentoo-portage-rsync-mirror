@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/aufs-headers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/ChangeLog,v 1.6 2013/04/27 09:52:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/ChangeLog,v 1.7 2013/07/22 06:34:05 jlec Exp $
+
+*aufs-headers-3.10_p20130722 (22 Jul 2013)
+
+  22 Jul 2013; Justin Lecher <jlec@gentoo.org>
+  +aufs-headers-3.10_p20130722.ebuild:
+  Version BUmp
 
 *aufs-headers-3.8_p20130422-r1 (27 Apr 2013)
 
