@@ -1,6 +1,17 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.244 2013/03/23 18:00:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.245 2013/07/22 19:00:53 grobian Exp $
+
+*exim-4.80.1-r1 (22 Jul 2013)
+
+  22 Jul 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.80.1-r1.ebuild,
+  files/exim.logrotate:
+  Move pid-file to /run, bug #455346
+  Drop unnecessary (and sometimes errors producing) postrotate SIGHUP, thanks
+  Alexander Tsoy, bug #477748
+  Add dlfunc USE-flag to allow external dlfunc libraries to be compiled,
+  based on patch by Marcin Mirosław, bug #436406
+  Bump to EAPI4 to use REQUIRED_USE for spf and srs USE-flags, bug #447418
 
   23 Mar 2013; Fabian Groffen <grobian@gentoo.org> exim-4.80.1.ebuild:
   Set sensible default for relay_from_hosts when IPv6 is enabled, bug #448314
