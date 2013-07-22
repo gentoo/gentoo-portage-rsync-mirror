@@ -1,2 +1,3 @@
 move app-emacs/gentoo-syntax app-emacs/ebuild-mode
 move app-xemacs/gentoo-syntax app-xemacs/ebuild-mode
+move dev-ml/zero dev-ml/core_kernel
