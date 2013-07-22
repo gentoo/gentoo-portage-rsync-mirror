@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/utop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/utop/ChangeLog,v 1.4 2013/03/03 14:38:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/utop/ChangeLog,v 1.5 2013/07/22 12:31:51 aballier Exp $
+
+*utop-1.5 (22 Jul 2013)
+
+  22 Jul 2013; Alexis Ballier <aballier@gentoo.org> +utop-1.5.ebuild:
+  version bump
 
   03 Mar 2013; Alexis Ballier <aballier@gentoo.org> utop-1.2.ebuild:
   eapi5, use slotdeps and define subslot
