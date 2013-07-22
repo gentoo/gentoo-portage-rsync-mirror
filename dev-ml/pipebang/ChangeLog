@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pipebang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pipebang/ChangeLog,v 1.9 2013/04/11 11:40:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pipebang/ChangeLog,v 1.10 2013/07/22 02:20:25 aballier Exp $
+
+*pipebang-109.28.00 (22 Jul 2013)
+
+  22 Jul 2013; Alexis Ballier <aballier@gentoo.org> +pipebang-109.28.00.ebuild:
+  version bump
 
 *pipebang-109.15.00 (11 Apr 2013)
 
