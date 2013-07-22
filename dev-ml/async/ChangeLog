@@ -1,6 +1,15 @@
 # ChangeLog for dev-ml/async
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/async/ChangeLog,v 1.3 2013/06/10 15:11:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/async/ChangeLog,v 1.5 2013/07/22 17:42:52 aballier Exp $
+
+*async-109.34.00 (22 Jul 2013)
+
+  22 Jul 2013; Alexis Ballier <aballier@gentoo.org> +async-109.34.00.ebuild:
+  version bump
+
+  22 Jul 2013; Alexis Ballier <aballier@gentoo.org> -async-109.11.00.ebuild,
+  -async-109.22.00.ebuild:
+  remove old
 
 *async-109.27.00 (10 Jun 2013)
 

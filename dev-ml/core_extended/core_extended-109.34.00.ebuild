@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-109.11.00.ebuild,v 1.1 2013/03/06 16:38:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-109.34.00.ebuild,v 1.1 2013/07/22 17:59:46 aballier Exp $
 
 EAPI="5"
 
@@ -22,12 +22,14 @@ IUSE=""
 RDEPEND="dev-ml/pcre-ocaml:=
 	dev-ml/res:=
 	>=dev-ml/core-${PV}:=
-	>=dev-ml/sexplib-${PV}:=
-	>=dev-ml/bin-prot-${PV}:=
-	>=dev-ml/fieldslib-${PV}:=
-	>=dev-ml/pa_ounit-${PV}:=
-	>=dev-ml/variantslib-${PV}:=
-	>=dev-ml/comparelib-${PV}:=
-	>=dev-ml/pipebang-${PV}:="
+	>=dev-ml/sexplib-109.20.00:=
+	>=dev-ml/bin-prot-109.15.00:=
+	>=dev-ml/fieldslib-109.20.00:=
+	>=dev-ml/pa_ounit-109.27.00:=
+	>=dev-ml/comparelib-109.27.00:=
+	>=dev-ml/custom_printf-109.27.00:=
+	>=dev-ml/pipebang-109.15.00:=
+	>=dev-ml/textutils-109.24.00:=
+	"
 DEPEND="${RDEPEND}
 	test? ( >=dev-ml/ounit-1.1.0 )"

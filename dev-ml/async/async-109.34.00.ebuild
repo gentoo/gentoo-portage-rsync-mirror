@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/async/async-109.22.00.ebuild,v 1.1 2013/05/24 17:15:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/async/async-109.34.00.ebuild,v 1.1 2013/07/22 17:42:52 aballier Exp $
 
 EAPI="5"
 
@@ -21,9 +21,9 @@ KEYWORDS="~amd64"
 IUSE="examples"
 
 RDEPEND=">=dev-lang/ocaml-4.00.0:=
-	>=dev-ml/async_core-109.22.00:=
-	>=dev-ml/async_unix-109.21.00:=
-	>=dev-ml/async_extra-109.22.00:=
+	>=dev-ml/async_core-${PV}:=
+	>=dev-ml/async_unix-${PV}:=
+	>=dev-ml/async_extra-${PV}:=
 	"
 DEPEND="${RDEPEND}
 	test? ( >=dev-ml/ounit-1.0.2 )"
