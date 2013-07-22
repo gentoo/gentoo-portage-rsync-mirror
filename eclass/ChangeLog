@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.886 2013/07/21 19:00:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.887 2013/07/22 11:28:42 ssuominen Exp $
+
+  22 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  bash-completion-r1.eclass:
+  Remove use of EPREFIX wrt #477692 to avoid collision with Portage helpers
 
   21 Jul 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Replace local+export with "local -x".

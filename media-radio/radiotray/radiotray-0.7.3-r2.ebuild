@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3-r1.ebuild,v 1.4 2012/12/02 16:57:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3-r2.ebuild,v 1.1 2013/07/22 11:07:29 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_COMPAT='python2_6 python2_7'
-inherit base python-distutils-ng
+PYTHON_COMPAT=( python2_6 python2_7 )
+inherit distutils-r1
 
 DESCRIPTION="Online radio streaming player"
 HOMEPAGE="http://radiotray.sourceforge.net/"
@@ -16,13 +16,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/dbus-python
-	dev-python/gst-python:0.10
-	dev-python/pygtk
-	dev-python/lxml
-	dev-python/pyxdg
-	dev-python/pygobject:2
-	dev-python/notify-python
+RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
+	dev-python/gst-python:0.10[${PYTHON_USEDEP}]
+	dev-python/pygtk[${PYTHON_USEDEP}]
+	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/pyxdg[${PYTHON_USEDEP}]
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/notify-python[${PYTHON_USEDEP}]
 	media-libs/gst-plugins-good:0.10
 	media-libs/gst-plugins-ugly:0.10
 	media-plugins/gst-plugins-alsa:0.10
@@ -33,4 +33,4 @@ RDEPEND="dev-python/dbus-python
 	media-plugins/gst-plugins-soup:0.10
 	media-plugins/gst-plugins-vorbis:0.10"
 
-DEPEND="dev-python/pyxdg"
+DEPEND="dev-python/pyxdg[${PYTHON_USEDEP}]"

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.939 2013/07/02 16:47:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.940 2013/07/22 11:16:13 dilfridge Exp $
+
+*kdelibs-4.10.5-r1 (22 Jul 2013)
+
+  22 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/kdelibs-4.10.5-home.patch, +kdelibs-4.10.5-r1.ebuild:
+  Backport fix for bug 451454
 
 *kdelibs-4.10.5 (02 Jul 2013)
 

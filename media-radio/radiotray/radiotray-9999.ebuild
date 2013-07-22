@@ -1,11 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.8 2012/12/27 19:01:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.9 2013/07/22 11:07:29 mgorny Exp $
 
-EAPI=4
-PYTHON_COMPAT='python2_6 python2_7'
+EAPI=5
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit mercurial python-distutils-ng
+DISTUTILS_NO_PARALLEL_BUILD=1
+
+inherit distutils-r1 mercurial
 
 DESCRIPTION="Online radio streaming player"
 HOMEPAGE="http://radiotray.sourceforge.net/"
@@ -24,12 +26,12 @@ for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"
 done
 
-RDEPEND="dev-python/gst-python:0.10
-	dev-python/pygtk
-	dev-python/lxml
-	dev-python/pyxdg
-	dev-python/pygobject:2
-	dev-python/notify-python
+RDEPEND="dev-python/gst-python:0.10[${PYTHON_USEDEP}]
+	dev-python/pygtk[${PYTHON_USEDEP}]
+	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/pyxdg[${PYTHON_USEDEP}]
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/notify-python[${PYTHON_USEDEP}]
 	media-libs/gst-plugins-good:0.10
 	media-libs/gst-plugins-ugly:0.10
 	media-plugins/gst-plugins-alsa:0.10
@@ -42,15 +44,15 @@ RDEPEND="dev-python/gst-python:0.10
 
 DEPEND="${RDEPEND}"
 
-DOCS="AUTHORS CONTRIBUTORS NEWS README"
+DOCS=( AUTHORS CONTRIBUTORS NEWS README )
 
-src_prepare() {
-	python_convert_shebangs -r 2 .
-	distutils_src_prepare
+python_prepare_all() {
 	# remove LINUGAS file so we can create our
 	rm "${S}"/po/LINGUAS
 	for x in ${LANGS}; do
 		use "linguas_${x}" && echo "${x}" >> "${S}"/po/LINGUAS
 		! use "linguas_${x}" && rm "${S}"/po/${x}.po
 	done
+
+	distutils-r1_python_prepare_all
 }

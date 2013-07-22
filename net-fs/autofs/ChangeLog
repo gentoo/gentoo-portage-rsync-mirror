@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.153 2013/06/13 15:03:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.154 2013/07/22 11:05:44 tomwij Exp $
+
+  22 Jul 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Drop Dustin from metadata.xml, make Dennis (dlan) Lan primary maintainer;
+  sorted and clarified / extended descriptions.
 
   13 Jun 2013; Robin H. Johnson <robbat2@gentoo.org> autofs-9999.ebuild:
   Remove forced mount-locking for live ebuild.
