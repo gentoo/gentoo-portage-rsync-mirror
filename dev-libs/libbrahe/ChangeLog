@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbrahe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbrahe/ChangeLog,v 1.6 2013/07/21 09:59:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbrahe/ChangeLog,v 1.7 2013/07/22 20:35:41 ago Exp $
+
+  22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libbrahe-1.1.0-r1.ebuild:
+  Stable for ppc, wrt bug #477206
 
   21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libbrahe-1.1.0-r1.ebuild:
   Stable for amd64, wrt bug #477206

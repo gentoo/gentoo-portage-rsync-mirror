@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.49 2013/02/22 21:15:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.50 2013/07/22 20:41:36 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit git-2 eutils gnome2 fdo-mime multilib python
+inherit git-2 autotools eutils gnome2 fdo-mime multilib python
 
 EGIT_REPO_URI="git://git.gnome.org/gimp"
 
@@ -119,6 +119,11 @@ src_prepare() {
 	    myconf="${myconf} --disable-gtk-doc"
 	fi
 	./autogen.sh ${myconf} || die
+
+	# Fix "libtoolize --force" of autogen.sh (bug #476626)
+	rm install-sh ltmain.sh || die
+	_elibtoolize --copy --install || die
+
 	gnome2_src_prepare
 }
 

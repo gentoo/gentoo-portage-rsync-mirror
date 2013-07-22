@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.8.1.ebuild,v 1.1 2013/06/18 19:18:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.8.1.ebuild,v 1.2 2013/07/22 20:33:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit eutils gnome2 multilib python-r1 virtualx
 

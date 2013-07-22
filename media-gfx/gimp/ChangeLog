@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.404 2013/06/22 18:41:33 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.405 2013/07/22 20:41:36 sping Exp $
+
+  22 Jul 2013; Sebastian Pipping <sping@gentoo.org> gimp-9999.ebuild:
+  Fix src_prepare sandbox violation (#476626)
 
 *gimp-2.8.6 (22 Jun 2013)
 
