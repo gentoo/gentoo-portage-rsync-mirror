@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.233 2013/07/18 13:26:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.234 2013/07/22 03:57:12 patrick Exp $
+
+*apache-2.4.6 (22 Jul 2013)
+
+  22 Jul 2013; Patrick Lauer <patrick@gentoo.org> +apache-2.4.6.ebuild:
+  Bump
 
 *apache-2.2.25 (18 Jul 2013)
 
