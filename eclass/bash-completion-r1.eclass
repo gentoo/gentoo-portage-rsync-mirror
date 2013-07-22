@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.7 2013/07/22 11:38:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.8 2013/07/22 20:06:31 grobian Exp $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:
@@ -41,7 +41,10 @@ _bash-completion-r1_get_bashdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if $(tc-getPKG_CONFIG) --exists bash-completion; then
-		echo "$($(tc-getPKG_CONFIG) --variable=$1 bash-completion)"
+		local pcbc="$($(tc-getPKG_CONFIG) --variable=$1 bash-completion)"
+		# we need to return unprefixed, so strip from what pkg-config returns
+		# to us, bug #477692
+		echo "${pcdb#${EPREFIX}}"
 	else
 		echo $2
 	fi
@@ -77,7 +80,7 @@ _bash-completion-r1_get_bashhelpersdir() {
 get_bashcompdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	echo "$(_bash-completion-r1_get_bashcompdir)"
+	echo "${EPREFIX}$(_bash-completion-r1_get_bashcompdir)"
 }
 
 # @FUNCTION: get_bashhelpersdir
@@ -87,7 +90,7 @@ get_bashcompdir() {
 get_bashhelpersdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	echo "$(_bash-completion-r1_get_bashhelpersdir)"
+	echo "${EPREFIX}$(_bash-completion-r1_get_bashhelpersdir)"
 }
 
 # @FUNCTION: dobashcomp

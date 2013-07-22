@@ -5,4 +5,7 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
+	<use>
+		<flag name="transmission">Support comminucation with <pkg>net-p2p/transmission</pkg></flag>
+	</use>
 </pkgmetadata>

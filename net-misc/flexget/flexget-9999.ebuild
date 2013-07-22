@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.40 2013/07/21 02:33:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.41 2013/07/22 20:06:27 floppym Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://flexget.com/"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="test"
+IUSE="test transmission"
 
 DEPEND="
 	>=dev-python/feedparser-5.1.3[${PYTHON_USEDEP}]
@@ -49,7 +49,9 @@ DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	transmission? ( dev-python/transmissionrpc[${PYTHON_USEDEP}] )
+"
 DEPEND+=" test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 if [[ ${PV} == 9999 ]]; then
