@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.117 2013/07/21 10:02:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.118 2013/07/22 12:01:53 mgorny Exp $
+
+  22 Jul 2013; Michał Górny <mgorny@gentoo.org>
+  +files/llvm-3.3-insecure-rpath.patch:
+  Add missing llvm-3.3-insecure-rpath.patch.
 
   21 Jul 2013; Michał Górny <mgorny@gentoo.org>
   +files/clang-3.1-gentoo-runtime-gcc-detection-v3.patch:

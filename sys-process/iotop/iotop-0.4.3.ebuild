@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.4.3.ebuild,v 1.8 2012/02/16 13:37:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.4.3.ebuild,v 1.9 2013/07/22 12:25:48 mgorny Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.5"
-PYTHON_USE_WITH="ncurses"
+PYTHON_USE_WITH="ncurses(+)"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3-r1.ebuild,v 1.1 2013/07/11 09:10:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3-r1.ebuild,v 1.2 2013/07/22 12:25:07 kensington Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_DOC_DIRS="docs/%lingua"
 KDE_HANDBOOK="optional"
 KDE_LINGUAS="es fr lt"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
-inherit python-r1 kde4-base
+inherit python-r1 kde4-base multilib
 
 MY_P="${P/-/_}"
 
@@ -38,5 +38,5 @@ PATCHES=( "${FILESDIR}/${P}-linguas.patch" )
 
 src_install() {
 	kde4-base_src_install
-	python_replicate_script "${D}"/usr/lib64/kde4/libexec/kcm_ufw_helper.py
+	python_replicate_script "${D}"/usr/$(get_libdir)/kde4/libexec/kcm_ufw_helper.py
 }

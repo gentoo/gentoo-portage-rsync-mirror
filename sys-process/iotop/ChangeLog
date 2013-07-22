@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.60 2013/06/18 06:24:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.61 2013/07/22 12:25:48 mgorny Exp $
+
+  22 Jul 2013; Michał Górny <mgorny@gentoo.org> iotop-0.4.3.ebuild,
+  iotop-0.4.4.ebuild, iotop-0.5-r1.ebuild, iotop-0.5.ebuild, iotop-0.6.ebuild:
+  Add 'ncurses(+)' USE default for future pypy-bin.
 
 *iotop-0.6 (18 Jun 2013)
 
@@ -227,4 +231,3 @@
   +iotop-0.2.ebuild:
   New package: Iotop is a Python program with a top like UI used to show of
   behalf of which process is the I/O going on.
-
