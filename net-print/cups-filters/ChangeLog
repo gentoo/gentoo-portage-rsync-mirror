@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.69 2013/07/07 17:16:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.70 2013/07/22 08:54:27 ago Exp $
+
+  22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.34-r1.ebuild:
+  Stable for sparc, wrt bug #442926
 
   07 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   cups-filters-1.0.34-r1.ebuild, cups-filters-1.0.35.ebuild,

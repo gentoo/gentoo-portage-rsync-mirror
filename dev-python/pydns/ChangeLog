@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.17 2013/07/21 08:49:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.18 2013/07/22 08:59:04 djc Exp $
+
+  22 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Add python herd.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -pydns-2.3.5-r1.ebuild,
   -pydns-2.3.6.ebuild, -pydns-3.0.2.ebuild, metadata.xml:

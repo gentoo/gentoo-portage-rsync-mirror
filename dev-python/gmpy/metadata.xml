@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
-  </maintainer>
+  <herd>python</herd>
   <longdescription lang="en">General MultiPrecision arithmetic for Python -- i.e.,
 		Python 2.3 interface module for library GMP 4.</longdescription>
   <upstream>
