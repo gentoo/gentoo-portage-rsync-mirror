@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-1.0.1-r1.ebuild,v 1.1 2013/03/13 15:42:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-1.0.1-r1.ebuild,v 1.2 2013/07/22 11:54:52 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{5,6,7} pypy2_0 )
-PYTHON_REQ_USE="ssl"
+PYTHON_REQ_USE="ssl(+)"
 # pypy has no spwd.so
 
 inherit distutils-r1

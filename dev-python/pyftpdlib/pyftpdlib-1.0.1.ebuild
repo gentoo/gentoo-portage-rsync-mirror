@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-1.0.1.ebuild,v 1.1 2013/03/11 06:27:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-1.0.1.ebuild,v 1.2 2013/07/22 11:54:52 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
-PYTHON_USE_WITH="ssl"
+PYTHON_USE_WITH="ssl(+)"
 PYTHON_USE_WITH_OPT="ssl"
 SUPPORT_PYTHON_ABIS="1"
 # pypy has no spwd.so

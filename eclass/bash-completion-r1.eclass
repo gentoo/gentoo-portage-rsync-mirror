@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.6 2013/07/22 11:28:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.7 2013/07/22 11:38:59 ssuominen Exp $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:
@@ -40,8 +40,8 @@ esac
 _bash-completion-r1_get_bashdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	if $($(tc-getPKG_CONFIG) --exists bash-completion); then
-	echo "$($(tc-getPKG_CONFIG) --variable=$1 bash-completion)"
+	if $(tc-getPKG_CONFIG) --exists bash-completion; then
+		echo "$($(tc-getPKG_CONFIG) --variable=$1 bash-completion)"
 	else
 		echo $2
 	fi

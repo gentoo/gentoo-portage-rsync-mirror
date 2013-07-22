@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/trash-cli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.17 2013/02/14 20:18:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.18 2013/07/22 11:45:22 mgorny Exp $
+
+  22 Jul 2013; Michał Górny <mgorny@gentoo.org> -trash-cli-0.12.4.ebuild,
+  -trash-cli-0.12.7.ebuild, -trash-cli-0.12.9.14-r1.ebuild,
+  -trash-cli-0.12.9.14.ebuild:
+  Drop old.
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> trash-cli-0.12.9.14-r2.ebuild:
   Stable for x86, wrt bug #457248
