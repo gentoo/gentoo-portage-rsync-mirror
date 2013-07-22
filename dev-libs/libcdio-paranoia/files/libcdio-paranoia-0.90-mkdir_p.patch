@@ -1,4 +1,6 @@
-Use MKDIR_P instead of mkdir_p for compability with modern autotools wrt #477732
+http://bugs.gentoo.org/455374
+http://github.com/rocky/libcdio-paranoia/issues/1
+http://savannah.gnu.org/bugs/index.php?38273
 
 --- configure.ac
 +++ configure.ac
