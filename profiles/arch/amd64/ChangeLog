@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.226 2013/06/22 12:32:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.227 2013/07/22 07:19:34 mgorny Exp $
+
+  22 Jul 2013; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Mask USE=sse2 on dev-python/pypy since it controls only 32-bit JIT.
 
   22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   no-multilib/package.mask:
