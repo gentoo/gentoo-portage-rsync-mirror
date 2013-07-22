@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.4 2013/07/22 11:38:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.5 2013/07/22 17:05:21 idella4 Exp $
 
 EAPI=5
 
@@ -212,7 +212,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --prefix=/usr
+	econf --prefix=/usr --disable-werror
 }
 
 src_compile() {

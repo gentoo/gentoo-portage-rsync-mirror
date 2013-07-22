@@ -218,3 +218,285 @@ diff -ur xen-4.3.0.orig/tools/firmware/Rules.mk xen-4.3.0/tools/firmware/Rules.m
  $(call cc-options-add,CFLAGS,CC,$(EMBEDDED_EXTRA_CFLAGS))
  
  # Extra CFLAGS suitable for an embedded type of environment.
+diff -ur xen-4.3.0.orig/tools/memshr/Makefile xen-4.3.0/tools/memshr/Makefile
+--- tools/memshr/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/memshr/Makefile	2013-07-22 23:04:20.165369499 +0800
+@@ -3,7 +3,6 @@
+ 
+ LIBMEMSHR-BUILD := libmemshr.a
+ 
+-CFLAGS          += -Werror
+ CFLAGS          += -Wno-unused
+ CFLAGS          += $(CFLAGS_xeninclude)
+ CFLAGS          += $(CFLAGS_libxenctrl)
+diff -ur xen-4.3.0.orig/tools/misc/Makefile xen-4.3.0/tools/misc/Makefile
+--- tools/misc/Makefile	2013-07-22 23:01:09.019357104 +0800
++++ tools/misc/Makefile	2013-07-22 23:03:43.645367131 +0800
+@@ -1,8 +1,6 @@
+ XEN_ROOT=$(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS += -Werror
+-
+ CFLAGS += $(CFLAGS_libxenctrl)
+ CFLAGS += $(CFLAGS_xeninclude)
+ CFLAGS += $(CFLAGS_libxenstore)
+diff -ur xen-4.3.0.orig/tools/xenpaging/Makefile xen-4.3.0/tools/xenpaging/Makefile
+--- tools/xenpaging/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/xenpaging/Makefile	2013-07-22 23:04:51.893371557 +0800
+@@ -11,7 +11,6 @@
+ SRCS     += file_ops.c xenpaging.c policy_$(POLICY).c
+ SRCS     += pagein.c
+ 
+-CFLAGS   += -Werror
+ CFLAGS   += -Wno-unused
+ CFLAGS   += -g
+ 
+diff -ur xen-4.3.0.orig/tools/xenpmd/Makefile xen-4.3.0/tools/xenpmd/Makefile
+--- tools/xenpmd/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/xenpmd/Makefile	2013-07-22 23:05:13.357372949 +0800
+@@ -1,7 +1,6 @@
+ XEN_ROOT=$(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS += -Werror
+ CFLAGS += $(CFLAGS_libxenstore)
+ 
+ LDLIBS += $(LDLIBS_libxenstore)
+
+diff -ur xen-4.3.0.orig/tools/blktap2/control/Makefile xen-4.3.0/tools/blktap2/control/Makefile
+--- tools/blktap2/control/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/blktap2/control/Makefile	2013-07-22 23:31:55.225476829 +0800
+@@ -8,7 +8,6 @@
+ 
+ IBIN               = tap-ctl
+ 
+-CFLAGS            += -Werror
+ CFLAGS            += -Wno-unused
+ CFLAGS            += -I../include -I../drivers
+ CFLAGS            += $(CFLAGS_xeninclude)
+diff -ur xen-4.3.0.orig/tools/blktap2/lvm/Makefile xen-4.3.0/tools/blktap2/lvm/Makefile
+--- tools/blktap2/lvm/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/blktap2/lvm/Makefile	2013-07-22 23:31:02.329473398 +0800
+@@ -6,7 +6,6 @@
+ TEST              := lvm-util
+ endif
+ 
+-CFLAGS            += -Werror
+ CFLAGS            += -Wno-unused
+ CFLAGS            += -I../include
+ CFLAGS            += -D_GNU_SOURCE
+diff -ur xen-4.3.0.orig/tools/blktap2/vhd/lib/Makefile xen-4.3.0/tools/blktap2/vhd/lib/Makefile
+--- tools/blktap2/vhd/lib/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/blktap2/vhd/lib/Makefile	2013-07-22 23:32:23.889478688 +0800
+@@ -12,7 +12,6 @@
+ 
+ INST-DIR         = $(LIBDIR)
+ 
+-CFLAGS          += -Werror
+ CFLAGS          += -Wno-unused
+ CFLAGS          += -I../../include
+ CFLAGS          += -D_GNU_SOURCE
+diff -ur xen-4.3.0.orig/tools/blktap2/vhd/Makefile xen-4.3.0/tools/blktap2/vhd/Makefile
+--- tools/blktap2/vhd/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/blktap2/vhd/Makefile	2013-07-22 23:31:21.641474651 +0800
+@@ -8,7 +8,6 @@
+ IBIN               = vhd-util vhd-update
+ INST_DIR           = $(SBINDIR)
+ 
+-CFLAGS            += -Werror
+ CFLAGS            += -Wno-unused
+ CFLAGS            += -I../include
+ CFLAGS            += -D_GNU_SOURCE
+diff -ur xen-4.3.0.orig/tools/console/Makefile xen-4.3.0/tools/console/Makefile
+--- tools/console/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/console/Makefile	2013-07-22 23:30:14.392470290 +0800
+@@ -1,8 +1,6 @@
+ XEN_ROOT=$(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS  += -Werror
+-
+ CFLAGS  += $(CFLAGS_libxenctrl)
+ CFLAGS  += $(CFLAGS_libxenstore)
+ LDLIBS += $(LDLIBS_libxenctrl)
+diff -ur xen-4.3.0.orig/tools/libxen/Makefile.dist xen-4.3.0/tools/libxen/Makefile.dist
+--- tools/libxen/Makefile.dist	2013-07-09 18:46:56.000000000 +0800
++++ tools/libxen/Makefile.dist	2013-07-22 23:29:08.184465996 +0800
+@@ -22,7 +22,7 @@
+ CFLAGS = -Iinclude                     \
+          $(shell xml2-config --cflags) \
+          $(shell curl-config --cflags) \
+-         -W -Wall -Wmissing-prototypes -Werror -std=c99 -O2 -fPIC
++         -W -Wall -Wmissing-prototypes -std=c99 -O2 -fPIC
+ 
+ LDFLAGS = $(shell xml2-config --libs) \
+           $(shell curl-config --libs)
+diff -ur xen-4.3.0.orig/tools/ocaml/common.make xen-4.3.0/tools/ocaml/common.make
+--- tools/ocaml/common.make	2013-07-09 18:46:56.000000000 +0800
++++ tools/ocaml/common.make	2013-07-22 23:28:35.280463862 +0800
+@@ -9,7 +9,7 @@
+ OCAMLYACC ?= ocamlyacc
+ OCAMLFIND ?= ocamlfind
+ 
+-CFLAGS += -fPIC -Werror -I$(shell ocamlc -where)
++CFLAGS += -fPIC -I$(shell ocamlc -where)
+ 
+ OCAMLOPTFLAG_G := $(shell $(OCAMLOPT) -h 2>&1 | sed -n 's/^  *\(-g\) .*/\1/p')
+ OCAMLOPTFLAGS = $(OCAMLOPTFLAG_G) -ccopt "$(LDFLAGS)" -dtypes $(OCAMLINCLUDE) -cc $(CC) -w F -warn-error F
+diff -ur xen-4.3.0.orig/tools/python/setup.py xen-4.3.0/tools/python/setup.py
+--- tools/python/setup.py	2013-07-09 18:46:56.000000000 +0800
++++ tools/python/setup.py	2013-07-22 23:32:49.305480336 +0800
+@@ -4,7 +4,7 @@
+ 
+ XEN_ROOT = "../.."
+ 
+-extra_compile_args  = [ "-fno-strict-aliasing", "-Werror" ]
++extra_compile_args  = [ "-fno-strict-aliasing" ]
+ 
+ PATH_XEN      = XEN_ROOT + "/tools/include"
+ PATH_LIBXC    = XEN_ROOT + "/tools/libxc"
+diff -ur xen-4.3.0.orig/tools/xcutils/Makefile xen-4.3.0/tools/xcutils/Makefile
+--- tools/xcutils/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/xcutils/Makefile	2013-07-22 23:29:45.024468385 +0800
+@@ -13,8 +13,6 @@
+ 
+ PROGRAMS = xc_restore xc_save readnotes lsevtchn
+ 
+-CFLAGS += -Werror
+-
+ CFLAGS_xc_restore.o := $(CFLAGS_libxenctrl) $(CFLAGS_libxenguest)
+ CFLAGS_xc_save.o    := $(CFLAGS_libxenctrl) $(CFLAGS_libxenguest) $(CFLAGS_libxenstore)
+ CFLAGS_readnotes.o  := $(CFLAGS_libxenctrl) $(CFLAGS_libxenguest)
+diff -ur xen-4.3.0.orig/tools/xentrace/Makefile xen-4.3.0/tools/xentrace/Makefile
+--- tools/xentrace/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/xentrace/Makefile	2013-07-22 23:30:28.216471186 +0800
+@@ -1,8 +1,6 @@
+ XEN_ROOT=$(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS += -Werror
+-
+ CFLAGS += $(CFLAGS_libxenctrl)
+ LDLIBS += $(LDLIBS_libxenctrl)
+ 
+diff -ur xen-4.3.0.orig/tools/pygrub/setup.py xen-4.3.0/tools/pygrub/setup.py
+--- tools/pygrub/setup.py	2013-07-09 18:46:56.000000000 +0800
++++ tools/pygrub/setup.py	2013-07-22 23:47:45.664538464 +0800
+@@ -3,7 +3,7 @@
+ import os
+ import sys
+ 
+-extra_compile_args  = [ "-fno-strict-aliasing", "-Werror" ]
++extra_compile_args  = [ "-fno-strict-aliasing" ]
+ 
+ XEN_ROOT = "../.."
+ 
+diff -ur xen-4.3.0.orig/tools/blktap/drivers/Makefile xen-4.3.0/tools/blktap/drivers/Makefile
+--- tools/blktap/drivers/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/blktap/drivers/Makefile	2013-07-23 00:40:47.810744824 +0800
+@@ -4,7 +4,6 @@
+ IBIN         = blktapctrl tapdisk
+ QCOW_UTIL    = img2qcow qcow2raw qcow-create
+ 
+-CFLAGS   += -Werror
+ CFLAGS   += -Wno-unused
+ CFLAGS   += -I../lib
+ CFLAGS   += $(CFLAGS_libxenctrl)
+diff -ur xen-4.3.0.orig/tools/blktap/lib/Makefile xen-4.3.0/tools/blktap/lib/Makefile
+--- tools/blktap/lib/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/blktap/lib/Makefile	2013-07-23 00:41:56.513749279 +0800
+@@ -13,7 +13,6 @@
+ SRCS     :=
+ SRCS     += xenbus.c blkif.c xs_api.c
+ 
+-CFLAGS   += -Werror
+ CFLAGS   += -Wno-unused
+ CFLAGS   += -fPIC
+ # get asprintf():
+diff -ur xen-4.3.0.orig/tools/configure xen-4.3.0/tools/configure
+--- tools/configure	2013-07-09 18:46:56.000000000 +0800
++++ tools/configure	2013-07-23 00:39:37.435740260 +0800
+@@ -7621,7 +7621,6 @@
+ 
+     saved_CPPFLAGS="$CPPFLAGS"
+ 
+-    CPPFLAGS="$CPPFLAGS -Werror"
+     ac_fn_c_check_header_mongrel "$LINENO" "libutil.h" "ac_cv_header_libutil_h" "$ac_includes_default"
+ if test "x$ac_cv_header_libutil_h" = x""yes; then :
+ 
+diff -ur xen-4.3.0.orig/tools/flask/utils/Makefile xen-4.3.0/tools/flask/utils/Makefile
+--- ools/flask/utils/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/flask/utils/Makefile	2013-07-23 00:40:03.929741978 +0800
+@@ -1,7 +1,7 @@
+ XEN_ROOT=$(CURDIR)/../../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS += -Wall -g -Werror
++CFLAGS += -Wall
+ CFLAGS += $(CFLAGS_libxenctrl)
+ 
+ TESTDIR  = testsuite/tmp
+diff -ur xen-4.3.0.orig/tools/misc/lomount/Makefile xen-4.3.0/tools/misc/lomount/Makefile
+--- tools/misc/lomount/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/misc/lomount/Makefile	2013-07-23 00:42:05.378749854 +0800
+@@ -1,8 +1,6 @@
+ XEN_ROOT=$(CURDIR)/../../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS  += -Werror
+-
+ .PHONY: all
+ all: build
+ 
+@@ -20,4 +18,4 @@
+ lomount: lomount.o
+ 	$(CC) $(CFLAGS) -o $@ $< 
+ 
+--include $(DEPS)
+\ No newline at end of file
++-include $(DEPS)
+diff -ur xen-4.3.0.orig/tools/qemu-xen-traditional/configure xen-4.3.0/tools/qemu-xen-traditional/configure
+--- tools/qemu-xen-traditional/configure	2013-06-18 00:39:51.000000000 +0800
++++ tools/qemu-xen-traditional/configure	2013-07-23 00:43:39.570755962 +0800
+@@ -1150,7 +1150,6 @@
+ echo "sparse enabled    $sparse"
+ echo "profiler          $profiler"
+ echo "static build      $static"
+-echo "-Werror enabled   $werror"
+ if test "$darwin" = "yes" ; then
+     echo "Cocoa support     $cocoa"
+ fi
+diff -ur xen-4.3.0.orig/tools/xenbackendd/Makefile xen-4.3.0/tools/xenbackendd/Makefile
+--- tools/xenbackendd/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/xenbackendd/Makefile	2013-07-23 00:44:16.410758351 +0800
+@@ -12,7 +12,6 @@
+ XEN_ROOT=$(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS  += -Werror
+ CFLAGS  += $(CFLAGS_libxenstore)
+ CPPFLAGS += -DXEN_SCRIPT_DIR="\"$(XEN_SCRIPT_DIR)\""
+ LDLIBS  += $(LDLIBS_libxenstore)
+diff -ur xen-4.3.0.orig/tools/xenmon/Makefile xen-4.3.0/tools/xenmon/Makefile
+--- tools/xenmon/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/xenmon/Makefile	2013-07-23 00:44:51.114760602 +0800
+@@ -13,7 +13,6 @@
+ XEN_ROOT=$(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS  += -Werror
+ CFLAGS  += $(CFLAGS_libxenctrl)
+ LDLIBS  += $(LDLIBS_libxenctrl)
+ 
+diff -ur xen-4.3.0.orig/tools/xenstore/Makefile xen-4.3.0/tools/xenstore/Makefile
+--- ools/xenstore/Makefile	2013-07-09 18:46:56.000000000 +0800
++++ tools/xenstore/Makefile	2013-07-23 00:45:25.938762860 +0800
+@@ -4,7 +4,6 @@
+ MAJOR = 3.0
+ MINOR = 3
+ 
+-CFLAGS += -Werror
+ CFLAGS += -I.
+ CFLAGS += $(CFLAGS_libxenctrl)
+ 
