@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.39 2013/02/16 11:58:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.40 2013/07/22 09:24:10 mgorny Exp $
+
+  22 Jul 2013; Michał Górny <mgorny@gentoo.org> -files/pkgcore-0.8.1-api.patch,
+  -gentoopm-0.2.5-r2.ebuild, -gentoopm-0.2.7.ebuild:
+  Drop old.
 
 *gentoopm-0.2.8 (16 Feb 2013)
 

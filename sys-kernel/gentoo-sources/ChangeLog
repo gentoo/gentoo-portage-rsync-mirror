@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1157 2013/07/21 21:03:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1158 2013/07/22 09:14:00 tomwij Exp $
+
+*gentoo-sources-3.10.2 (22 Jul 2013)
+*gentoo-sources-3.4.54 (22 Jul 2013)
+*gentoo-sources-3.9.11-r1 (22 Jul 2013)
+*gentoo-sources-3.0.87 (22 Jul 2013)
+
+  22 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.0.87.ebuild,
+  +gentoo-sources-3.10.2.ebuild, +gentoo-sources-3.4.54.ebuild,
+  +gentoo-sources-3.9.11-r1.ebuild, -gentoo-sources-3.0.83.ebuild,
+  -gentoo-sources-3.4.50.ebuild:
+  Linux patches 3.0.87, 3.4.54 and 3.10.2. Removed 1600_CVE-2013-4129-bridge-
+  fix-kernel-multicast-timer-BUG.patch from branches 3.8, 3.9 and 3.10 since it
+  was introduced in 3.11-rc1; causing a revision bump to 3.9.11-r1, as we want a
+  revision we can guarantee to be stable. Removed old.
 
 *gentoo-sources-3.9.11 (21 Jul 2013)
 

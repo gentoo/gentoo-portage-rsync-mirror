@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>djc@gentoo.org</email>
-    <name>Dirkjan Ochtman</name>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
   </maintainer>
 </pkgmetadata>

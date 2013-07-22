@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.1.ebuild,v 1.1 2013/07/20 00:38:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.1.ebuild,v 1.2 2013/07/22 09:23:39 tomwij Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,7 +9,9 @@
 
 EAPI="5"
 
-inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx flag-o-matic
+CHECKREQS_DISK_BUILD="9G"
+
+inherit check-reqs java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx flag-o-matic
 
 ICEDTEA_VER=$(get_version_component_range 2-)
 ICEDTEA_BRANCH=$(get_version_component_range 2-3)
@@ -150,7 +152,13 @@ PDEPEND="webstart? ( dev-java/icedtea-web:7 )
 
 S="${WORKDIR}"/${ICEDTEA_PKG}
 
+pkg_pretend() {
+	check-reqs_pkg_pretend
+}
+
 pkg_setup() {
+	check-reqs_pkg_setup
+
 	JAVA_PKG_WANT_BUILD_VM="
 		icedtea-7 icedtea-bin-7 icedtea7
 		gcj-jdk"

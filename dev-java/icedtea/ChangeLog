@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.99 2013/07/20 19:44:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.100 2013/07/22 09:23:39 tomwij Exp $
+
+  22 Jul 2013; Tom Wijsman <TomWij@gentoo.org> icedtea-7.2.4.1.ebuild,
+  metadata.xml:
+  Check for at least 9G of build space, current version is close to 8G without
+  debug information and LTO.
 
 *icedtea-6.1.12.6 (20 Jul 2013)
 

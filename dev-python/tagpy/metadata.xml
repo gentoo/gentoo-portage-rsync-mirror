@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
+	<herd>python</herd>
 	<longdescription lang="en">TagPy is a Python crust (or a set of Python bindings) for Scott
 		Wheeler's TagLib. It builds upon Boost.Python, a wrapper generation
 		library which is part of the Boost set of C++ libraries.</longdescription>
