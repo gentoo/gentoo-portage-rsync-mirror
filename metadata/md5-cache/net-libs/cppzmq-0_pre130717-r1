@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND=net-libs/zeromq
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/cppzmq-0_pre130717.tar.xz
-_md5_=4f91e04fcaca912b4980d12f6f19411a
+_md5_=31e31130efdddd7bf5dea8bd515ca752
