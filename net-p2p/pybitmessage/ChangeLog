@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/pybitmessage
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/ChangeLog,v 1.1 2013/07/22 22:02:09 hasufell Exp $
+
+*pybitmessage-9999 (22 Jul 2013)
+
+  22 Jul 2013; Julian Ospald <hasufell@gentoo.org> +pybitmessage-9999.ebuild,
+  +metadata.xml:
+  initial import wrt #477080
+
