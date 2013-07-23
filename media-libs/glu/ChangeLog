@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.15 2013/03/03 11:51:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.16 2013/07/23 08:36:44 mgorny Exp $
+
+*glu-9.0.0-r1 (23 Jul 2013)
+
+  23 Jul 2013; Michał Górny <mgorny@gentoo.org> +glu-9.0.0-r1.ebuild:
+  Switch to autotools-multilib for USE-flag-based multilib support.
 
   03 Mar 2013; Mike Frysinger <vapier@gentoo.org> glu-9.0.0.ebuild:
   Add s390 lovin.
