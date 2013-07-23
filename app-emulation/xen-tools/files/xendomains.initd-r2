@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.6 2013/02/24 10:39:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.7 2013/07/23 05:35:54 idella4 Exp $
 
 extra_commands="status"
 
@@ -13,7 +13,7 @@ depend() {
 get_domname() {
 	local name_from_file=$(sed -rn 's/^name\W*=\W*\"?([[:alnum:]_\.-]+)\"?\W*;?/\1/p' "${1}" | tail -n 1)
 
-	if [[ -z ${name_from_file} ]] ; then
+	if [ -z ${name_from_file} ] ; then
 		basename "${1}"
 	else
 		echo ${name_from_file}	
@@ -25,7 +25,7 @@ is_running() {
 }
 
 using_screen() {
-	[[ "${SCREEN}" == "yes" || "${SCREEN}" == "YES" ]]	
+	[ "${SCREEN}" == "yes" || "${SCREEN}" == "YES" ]	
 }
 
 set_screen_cmd() {
@@ -46,7 +46,7 @@ start() {
 		&& ${screen_cmd} logfile flush ${SCREEN_LOG_INTERVAL:-1} \
 		&& ${screen_cmd} log on \
 		&& ${screen_cmd} deflog on ) >/dev/null
-		if [[ $? -ne 0 ]] ; then
+		if [ $? -ne 0 ] ; then
 			eend 1
 			return 1
 		else
@@ -77,7 +77,7 @@ stop() {
 	# Stop all domains with config files in AUTODIR.
 	DOMAINS="$(ls "${AUTODIR:=/etc/xen/auto}/"* 2>/dev/null | sort -r)"
 
-	if [[ "$PARALLEL_SHUTDOWN" = "yes" ]] ; then
+	if [[ "$PARALLEL_SHUTDOWN" == "yes" ]] ; then
 		for dom in $DOMAINS ; do
 			name=$(get_domname ${dom})
 			if is_running ${name} ; then

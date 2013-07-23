@@ -1,6 +1,11 @@
 # ChangeLog for media-video/guvcview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.38 2012/12/23 12:51:50 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.39 2013/07/23 05:33:18 radhermit Exp $
+
+*guvcview-1.7.1 (23 Jul 2013)
+
+  23 Jul 2013; Tim Harder <radhermit@gentoo.org> +guvcview-1.7.1.ebuild:
+  Version bump.
 
   23 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> guvcview-1.6.1.ebuild:
   Set !<sys-kernel/linux-headers-3.4-r2 in attempt to ensure linux/uvcvideo.h
