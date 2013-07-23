@@ -1,6 +1,11 @@
 # ChangeLog for app-text/htmlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/ChangeLog,v 1.5 2013/01/23 00:50:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/ChangeLog,v 1.6 2013/07/23 19:14:32 aballier Exp $
+
+*htmlc-2.40.0 (23 Jul 2013)
+
+  23 Jul 2013; Alexis Ballier <aballier@gentoo.org> +htmlc-2.40.0.ebuild:
+  version bump: eapi5 and add slot deps, remove useless || die.
 
   23 Jan 2013; Alexis Ballier <aballier@gentoo.org> htmlc-2.21.0.ebuild,
   +files/htmlc-2.21.0-werror.patch:
