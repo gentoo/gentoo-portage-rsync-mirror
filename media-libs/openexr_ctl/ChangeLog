@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openexr_ctl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.25 2013/03/21 04:01:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.26 2013/07/23 09:42:23 ssuominen Exp $
+
+*openexr_ctl-1.0.1-r2 (23 Jul 2013)
+
+  23 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +openexr_ctl-1.0.1-r2.ebuild, +files/openexr_ctl-1.0.1-namespace.patch:
+  Fix namespace handling with OpenEXR >= 2.0.1 wrt
+  http://lists.gnu.org/archive/html/openexr-devel/2013-04/msg00031.html
 
   21 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
   openexr_ctl-1.0.1-r1.ebuild:

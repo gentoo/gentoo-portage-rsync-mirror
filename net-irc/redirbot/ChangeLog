@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/redirbot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/redirbot/ChangeLog,v 1.1 2013/06/25 12:37:27 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/redirbot/ChangeLog,v 1.2 2013/07/23 09:37:37 yac Exp $
+
+*redirbot-0.0.5 (23 Jul 2013)
+
+  23 Jul 2013; Jan Matejka <yac@gentoo.org> +redirbot-0.0.5.ebuild,
+  -redirbot-0.0.4.ebuild:
+  bump
 
 *redirbot-0.0.4 (25 Jun 2013)
 

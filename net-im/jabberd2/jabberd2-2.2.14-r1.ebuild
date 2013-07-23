@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.14.ebuild,v 1.1 2013/02/02 09:53:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.14-r1.ebuild,v 1.1 2013/07/23 09:56:13 pinkbyte Exp $
+
+EAPI=5
 
 inherit db-use eutils flag-o-matic pam
 
@@ -8,9 +10,10 @@ DESCRIPTION="Open Source Jabber Server"
 HOMEPAGE="http://jabberd2.org"
 SRC_URI="http://ftp.xiaoka.com/${PN}/releases/jabberd-${PV}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+
 IUSE="berkdb debug memdebug mysql ldap pam postgres sqlite ssl zlib"
 
 DEPEND="dev-libs/expat
@@ -26,34 +29,27 @@ DEPEND="dev-libs/expat
 	sqlite? ( >=dev-db/sqlite-3 )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
-	>=net-im/jabber-base-0.01
-	!net-im/jabberd"
+	>=net-im/jabber-base-0.01"
 
 S="${WORKDIR}/jabberd-${PV}"
 
-src_compile() {
+REQUIRED_USE="memdebug? ( debug )"
 
+DOCS=( AUTHORS README UPGRADE )
+
+src_configure() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=207655#c3
 	replace-flags -O[3s] -O2
 
 	use berkdb && myconf="${myconf} --with-extra-include-path=$(db_includedir)"
 
-	if use debug; then
-		myconf="${myconf} --enable-debug"
-		# --enable-pool-debug is currently broken
-		use memdebug && myconf="${myconf} --enable-nad-debug"
-	else
-		if use memdebug; then
-			ewarn
-			ewarn '"memdebug" requires "debug" enabled.'
-			ewarn
-		fi
-	fi
-
+	# --enable-pool-debug is currently broken
 	econf \
 		--sysconfdir=/etc/jabber \
 		--enable-fs --enable-pipe --enable-anon \
 		${myconf} \
+		$(use debug && echo '--enable-debug') \
+		$(use memdebug && echo '--enable-nad-debug') \
 		$(use_enable berkdb db) \
 		$(use_enable ldap) \
 		$(use_enable mysql) \
@@ -62,25 +58,23 @@ src_compile() {
 		$(use_enable sqlite) \
 		$(use_enable ssl) \
 		$(use_with zlib)
-	emake || die "make failed"
-
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	default
+	prune_libtool_files --modules
 
 	fowners jabber:jabber /usr/bin/{jabberd,router,sm,c2s,s2s}
 	fperms 750 /usr/bin/{jabberd,router,sm,c2s,s2s}
 
-	newinitd "${FILESDIR}/${PN}-2.2.8.init" jabberd || die "newinitd failed"
-	newpamd "${FILESDIR}/${PN}-2.2.8.pamd" jabberd || die "newpamd failed"
+	newinitd "${FILESDIR}/${PN}-2.2.8.init" jabberd
+	newpamd "${FILESDIR}/${PN}-2.2.8.pamd" jabberd
 
-	dodoc AUTHORS README UPGRADE
 	docinto tools
 	dodoc tools/db-setup{.mysql,.pgsql,.sqlite}
-	dodoc tools/{migrate.pl,pipe-auth.pl}
+	dodoc tools/{migrate-jd14dir-2-sqlite.pl,pipe-auth.pl}
 
-	cd "${D}/etc/jabber/"
+	pushd "${D}/etc/jabber/" &>/dev/null || die
 	sed -i \
 		-e 's,/var/lib/jabberd/pid/,/var/run/jabber/,g' \
 		-e 's,/var/lib/jabberd/log/,/var/log/jabber/,g' \
@@ -92,7 +86,7 @@ src_install() {
 	sed -i \
 		-e 's,<driver>mysql</driver>,<driver>db</driver>,' \
 		sm.xml* || die "sed failed"
-
+	popd
 }
 
 pkg_postinst() {
@@ -104,7 +98,6 @@ pkg_postinst() {
 		ewarn 'is likely to change in future versions of jabberd-2. It may'
 		ewarn 'be advisable to avoid PAM authentication for the time being.'
 		echo
-		ebeep
 	fi
 
 }

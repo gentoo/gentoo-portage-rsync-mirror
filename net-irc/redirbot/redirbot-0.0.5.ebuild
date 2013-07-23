@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/redirbot/redirbot-0.0.4.ebuild,v 1.1 2013/06/25 12:37:27 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/redirbot/redirbot-0.0.5.ebuild,v 1.1 2013/07/23 09:37:37 yac Exp $
 
 EAPI=5
 
