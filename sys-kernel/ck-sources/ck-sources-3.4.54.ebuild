@@ -1,17 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.8.11.ebuild,v 1.1 2013/05/06 10:33:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.4.54.ebuild,v 1.1 2013/07/23 15:46:47 tomwij Exp $
 
 EAPI="5"
 ETYPE="sources"
 KEYWORDS="~amd64 ~x86"
-IUSE="bfsonly"
+IUSE="bfsonly experimental urwlocks"
 
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="14"
+K_GENPATCHES_VER="36"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -30,8 +30,8 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="1"
-BFS_VERSION="428"
+CK_VERSION="3"
+BFS_VERSION="424"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
 BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
@@ -58,26 +58,23 @@ if [ -n "${XTRA_INCP_MIN}" ]; then
 	done
 fi
 
-#-- CK needs sometimes to patch itself... (4.7)--------------------------------
+#-- CK needs sometimes to patch itself... -------------------------------------
 
 CK_INCP_URI=""
 CK_INCP_LIST=""
 
-#-- Local patches needed for the ck-patches to apply smoothly (3.4/3.5) -------
+#-- Local patches needed for the ck-patches to apply smoothly -----------------
 
-PRE_CK_FIX=""
-POST_CK_FIX=""
+PRE_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch"
+POST_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch ${FILESDIR}/${PN}-3.4.9-calc_load_idle-aCOSwt_P3.patch"
 
 #--
 
 SRC_URI="${KERNEL_URI} ${LX_INCP_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_INCP_URI}
 	!bfsonly? ( ${CK_URI} )
-	bfsonly? ( ${BFS_URI} )"
-
-#-- The urw-locks experimental patch is not available for 3.8 yet -------------
-
-#	experimental? (
-#		urwlocks? ( ${XPR_1_URI} ${XPR_2_URI} ) )"
+	bfsonly? ( ${BFS_URI} )
+	experimental? (
+		urwlocks? ( ${XPR_1_URI} ${XPR_2_URI} ) )"
 
 UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${DISTDIR}"
 
@@ -89,13 +86,11 @@ fi
 
 UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_INCP_LIST} ${POST_CK_FIX}"
 
-#-- The urw-locks experimental patch is not available for 3.8 yet -------------
-
-#if use experimental ; then
-#	if use urwlocks ; then
-#		UNIPATCH_LIST="${UNIPATCH_LIST} ${DISTDIR}/${XPR_1_FILE} ${DISTDIR}/${XPR_2_FILE}:1"
-#	fi
-#fi
+if use experimental ; then
+	if use urwlocks ; then
+		UNIPATCH_LIST="${UNIPATCH_LIST} ${DISTDIR}/${XPR_1_FILE} ${DISTDIR}/${XPR_2_FILE}:1"
+	fi
+fi
 
 UNIPATCH_STRICTORDER="yes"
 
