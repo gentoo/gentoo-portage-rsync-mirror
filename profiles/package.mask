@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14948 2013/07/22 15:46:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14949 2013/07/23 07:05:26 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -343,10 +343,6 @@ media-plugins/vdr-channelscan
 # Upstream stalled, improper rendering (#470818),
 # use app-editors/efte instead.
 app-editors/fte
-
-# Tim Harder <radhermit@gentoo.org> (15 Jun 2013)
-# masked for testing
-=sys-fs/s3ql-2*
 
 # Aaron W. Swenson <titanofold@gentoo.org> (12 Jun 2013)
 # Beta and rc packages are pre-release and not considered production
