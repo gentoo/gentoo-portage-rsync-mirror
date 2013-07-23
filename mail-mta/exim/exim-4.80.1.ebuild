@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.13 2013/03/23 18:00:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.14 2013/07/23 17:32:39 grobian Exp $
 
 EAPI="3"
 
@@ -232,14 +232,14 @@ src_configure() {
 
 	if use mysql; then
 		sed -i "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" Makefile
-		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/mysql"
-		LOOKUP_LIBS="$LOOKUP_LIBS -lmysqlclient"
+		LOOKUP_INCLUDE="$LOOKUP_INCLUDE $(mysql_config --include)"
+		LOOKUP_LIBS="$LOOKUP_LIBS $(mysql_config --libs)"
 	fi
 
 	if use postgres; then
 		sed -i "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" Makefile
-		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/postgresql"
-		LOOKUP_LIBS="$LOOKUP_LIBS -lpq"
+		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I$(pg_config --includedir)"
+		LOOKUP_LIBS="$LOOKUP_LIBS -L$(pg_config --libdir) -lpq"
 	fi
 
 	if use sqlite; then

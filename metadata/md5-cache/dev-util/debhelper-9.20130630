@@ -4,10 +4,10 @@ DESCRIPTION=Collection of programs that can be used to automate common tasks in 
 EAPI=5
 HOMEPAGE=http://packages.qa.debian.org/d/debhelper.html http://joeyh.name/code/debhelper/
 IUSE=test linguas_de linguas_es linguas_fr
-KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux
+KEYWORDS=~alpha ~amd64 arm hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.10 app-arch/dpkg dev-perl/TimeDate virtual/perl-Getopt-Long
 SLOT=0
 SRC_URI=mirror://debian/pool/main/d/debhelper/debhelper_9.20130630.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7790a15676e74da3db79106d42f97488
+_md5_=4431310502040c951ddd80c49edf0483

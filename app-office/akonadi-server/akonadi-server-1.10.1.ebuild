@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.0.ebuild,v 1.2 2013/07/14 14:36:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.1.ebuild,v 1.1 2013/07/23 17:39:21 johu Exp $
 
 EAPI=5
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/tyxml-2.2.0.ebuild,v 1.2 2013/07/23 16:42:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/tyxml-2.2.0.ebuild,v 1.3 2013/07/23 17:47:39 aballier Exp $
 
 EAPI=5
 
@@ -17,11 +17,12 @@ IUSE="doc ocamlduce +ocamlopt"
 
 DEPEND="
 	>=dev-lang/ocaml-3.12:=[ocamlopt?]
-	dev-ml/ocamlnet:=
+	>=dev-ml/ocamlnet-3.6:=[pcre]
 	ocamlduce? ( dev-ml/ocamlduce:= )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}/pcre.patch"
 	export myopts="OCAMLDUCE=$(usex ocamlduce yes no)"
 }
 

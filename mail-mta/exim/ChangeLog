@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.247 2013/07/23 17:16:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.248 2013/07/23 17:32:39 grobian Exp $
+
+  23 Jul 2013; Fabian Groffen <grobian@gentoo.org> exim-4.80.1-r1.ebuild,
+  exim-4.80.1.ebuild:
+  Fix/improve locating MySQL and PostgreSQL libraries, patch by Alexander Tsoy
+  in bug #477792
 
   23 Jul 2013; Fabian Groffen <grobian@gentoo.org> files/exim.logrotate:
   Remove now useless sharedscripts from logrotate, thanks Alexander Tsoy

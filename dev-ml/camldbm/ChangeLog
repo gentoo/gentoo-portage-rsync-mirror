@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camldbm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/ChangeLog,v 1.7 2013/01/03 15:21:35 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/ChangeLog,v 1.8 2013/07/23 17:59:00 aballier Exp $
+
+  23 Jul 2013; Alexis Ballier <aballier@gentoo.org> camldbm-1.0.ebuild:
+  eapi5, define subslot and add slot deps
 
   03 Jan 2013; Andreas Schuerch <nativemad@gentoo.org> camldbm-1.0.ebuild:
   ~x86 keyword set, see bug 440760

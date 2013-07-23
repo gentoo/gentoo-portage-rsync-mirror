@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/tyxml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.8 2013/07/23 16:42:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.10 2013/07/23 17:49:24 aballier Exp $
+
+  23 Jul 2013; Alexis Ballier <aballier@gentoo.org> tyxml-2.2.0.ebuild,
+  +files/pcre.patch:
+  fix build with ocamlnet built without -compat-pcre since thats what we ship.
+  Bug #473746.
 
   23 Jul 2013; Alexis Ballier <aballier@gentoo.org> tyxml-2.2.0.ebuild:
   eapi5, define subslot and add slot deps

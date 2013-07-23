@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigenserver/ocsigenserver-2.2.0.ebuild,v 1.1 2013/01/13 19:57:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigenserver/ocsigenserver-2.2.0.ebuild,v 1.3 2013/07/23 17:56:47 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib findlib user
 
@@ -11,26 +11,30 @@ HOMEPAGE="http://www.ocsigen.org"
 SRC_URI="http://ocsigen.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1-with-linking-exception"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE="debug doc dbm +ocamlopt +sqlite zlib"
 REQUIRED_USE="|| ( sqlite dbm )"
 RESTRICT="strip installsources"
 
-DEPEND=">=dev-ml/lwt-2.3.0[react,ssl]
-		zlib? ( >=dev-ml/camlzip-1.03-r1 )
-		dev-ml/cryptokit
-		>=dev-ml/ocamlnet-2.2.9
-		>=dev-ml/pcre-ocaml-6.0.1
-		>=dev-ml/tyxml-2.1
-		>=dev-lang/ocaml-3.12[ocamlopt?]
-		dbm? ( || ( dev-ml/camldbm >=dev-lang/ocaml-3.12[gdbm] ) )
-		sqlite? ( dev-ml/ocaml-sqlite3 )"
+DEPEND=">=dev-ml/lwt-2.3.0:=[react,ssl]
+		zlib? ( >=dev-ml/camlzip-1.03-r1:= )
+		dev-ml/cryptokit:=
+		>=dev-ml/ocamlnet-3.6:=[pcre]
+		>=dev-ml/pcre-ocaml-6.0.1:=
+		>=dev-ml/tyxml-2.1:=
+		>=dev-lang/ocaml-3.12:=[ocamlopt?]
+		dbm? ( || ( dev-ml/camldbm:= >=dev-lang/ocaml-3.12:=[gdbm] ) )
+		sqlite? ( dev-ml/ocaml-sqlite3:= )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewgroup ocsigenserver
 	enewuser ocsigenserver -1 -1 /var/www ocsigenserver
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/pcre.patch"
 }
 
 src_configure() {

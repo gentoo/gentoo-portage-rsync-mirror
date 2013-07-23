@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=|| ( >=sys-libs/gdbm-1.9.1-r2[berkdb] <sys-libs/gdbm-1.9.1-r2 ) >=dev-lang/ocaml-3.12[ocamlopt] !<dev-lang/ocaml-4[gdbm]
+DEPEND=|| ( >=sys-libs/gdbm-1.9.1-r2[berkdb] <sys-libs/gdbm-1.9.1-r2 ) >=dev-lang/ocaml-3.12:=[ocamlopt] !<dev-lang/ocaml-4[gdbm]
 DESCRIPTION=OCaml binding to the NDBM/GDBM Unix databases
-EAPI=4
+EAPI=5
 HOMEPAGE=http://forge.ocamlcore.org/projects/camldbm/
 KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=LGPL-2-with-linking-exception
-RDEPEND=|| ( >=sys-libs/gdbm-1.9.1-r2[berkdb] <sys-libs/gdbm-1.9.1-r2 ) >=dev-lang/ocaml-3.12[ocamlopt] !<dev-lang/ocaml-4[gdbm]
-SLOT=0
+RDEPEND=|| ( >=sys-libs/gdbm-1.9.1-r2[berkdb] <sys-libs/gdbm-1.9.1-r2 ) >=dev-lang/ocaml-3.12:=[ocamlopt] !<dev-lang/ocaml-4[gdbm]
+SLOT=0/1.0
 SRC_URI=http://forge.ocamlcore.org/frs/download.php/728/camldbm-1.0.tgz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d1ec396acfc8f6a6b80f2c59c14184e3
+_md5_=7743cd11558531f8fa75f0fb8902dbe9
