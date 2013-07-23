@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/mozfile
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozfile/ChangeLog,v 1.1 2013/07/23 11:44:11 idella4 Exp $
+
+*mozfile-0.9 (23 Jul 2013)
+
+  23 Jul 2013; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +mozfile-0.9.ebuild:
+  New package, ebuild written by me, rdep to mozrunner

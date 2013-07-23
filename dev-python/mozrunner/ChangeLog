@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mozrunner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.25 2013/06/19 06:16:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.26 2013/07/23 11:54:39 idella4 Exp $
+
+*mozrunner-5.18-r1 (23 Jul 2013)
+
+  23 Jul 2013; Ian Delaney <idella4@gentoo.org> +mozrunner-5.18-r1.ebuild,
+  -mozrunner-2.5.4.ebuild, -mozrunner-5.10.ebuild, -mozrunner-5.12.ebuild,
+  -mozrunner-5.14.ebuild, -mozrunner-5.18.ebuild, -mozrunner-5.2.ebuild:
+  migrate -> distutils-r1, add missing rdep and correct deps, drop some old
 
 *mozrunner-5.18 (19 Jun 2013)
 

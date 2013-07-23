@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-14-r1.ebuild,v 1.2 2013/07/23 11:02:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-14-r1.ebuild,v 1.3 2013/07/23 11:54:33 ssuominen Exp $
 
 EAPI=5
 
@@ -111,7 +111,7 @@ pkg_postinst() {
 	fi
 
 	if use openrc; then
-		#  Add kmod to the boot runlevel automatically if this is the first install of this package.
+		# Add kmod to the boot runlevel automatically if this is the first install of this package.
 		if [[ -z ${REPLACING_VERSIONS} ]]; then
 			if [[ -x "${ROOT}"etc/init.d/static-nodes && -d "${ROOT}"etc/runlevels/boot ]]; then
 				ln -s /etc/init.d/static-nodes "${ROOT}"/etc/runlevels/boot/static-nodes
