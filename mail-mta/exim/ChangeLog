@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.245 2013/07/22 19:00:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.246 2013/07/23 09:17:44 grobian Exp $
+
+  23 Jul 2013; Fabian Groffen <grobian@gentoo.org> exim-4.80.1-r1.ebuild:
+  Fix header installation, not bumping due to no current consumers
 
 *exim-4.80.1-r1 (22 Jul 2013)
 

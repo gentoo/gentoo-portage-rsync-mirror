@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.453 2013/05/20 20:42:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.454 2013/07/23 09:21:04 chainsaw Exp $
+
+*asterisk-11.5.0 (23 Jul 2013)
+*asterisk-1.8.23.0 (23 Jul 2013)
+
+  23 Jul 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.23.0.ebuild,
+  +asterisk-11.5.0.ebuild, +files/1.8.0/asterisk.initd6:
+  Bugfix releases on both branches. Completely revised init script by Jaco
+  Kroon that supports running multiple Asterisk instances on a single host,
+  closes bug #473224.
 
 *asterisk-1.8.22.0 (20 May 2013)
 

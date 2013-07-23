@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openexr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.89 2013/03/12 07:05:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.90 2013/07/23 09:29:29 ssuominen Exp $
+
+*openexr-2.0.1 (23 Jul 2013)
+
+  23 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +openexr-2.0.1.ebuild:
+  Version bump.
 
   12 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> openexr-2.0.0.ebuild:
   Use subslot 0/20 based on SONAME.
@@ -328,4 +333,3 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-

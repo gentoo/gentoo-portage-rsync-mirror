@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1-r1.ebuild,v 1.1 2013/07/22 19:00:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1-r1.ebuild,v 1.2 2013/07/23 09:17:44 grobian Exp $
 
 EAPI="4"
 
@@ -343,7 +343,7 @@ src_install () {
 			-e '/#include "\(config\|store\|mytypes\).h"/s:"\(.\+\)":<exim/\1>:' \
 			local_scan.h || die
 		insinto /usr/include/exim
-		doins {config,mytypes,store,local_scan}.h
+		doins {config,local_scan}.h ../src/{mytypes,store}.h
 	fi
 
 	insinto /etc/logrotate.d

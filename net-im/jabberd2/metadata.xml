@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>marko.durkovic@gmail.com</email>
-		<name>Marko Durkovic</name>
-	</maintainer>
-	<herd>proxy-maintainers</herd>
 	<herd>net-im</herd>
 	<use>
 		<flag name='memdebug'>Enable nad and pool debug. Requires USE="debug" to
