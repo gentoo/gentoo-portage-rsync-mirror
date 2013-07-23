@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.246 2013/07/23 09:17:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.247 2013/07/23 17:16:27 grobian Exp $
+
+  23 Jul 2013; Fabian Groffen <grobian@gentoo.org> files/exim.logrotate:
+  Remove now useless sharedscripts from logrotate, thanks Alexander Tsoy
 
   23 Jul 2013; Fabian Groffen <grobian@gentoo.org> exim-4.80.1-r1.ebuild:
   Fix header installation, not bumping due to no current consumers

@@ -6,5 +6,4 @@
 	delaycompress
 	notifempty
 	create 640 mail mail
-	sharedscripts
 }

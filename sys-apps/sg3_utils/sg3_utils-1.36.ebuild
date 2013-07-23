@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.36.ebuild,v 1.5 2013/07/22 21:12:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.36.ebuild,v 1.6 2013/07/23 17:11:53 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://sg.danny.cz/sg/p/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc ~x86"
 IUSE="static-libs"
 
 DEPEND="sys-devel/libtool"

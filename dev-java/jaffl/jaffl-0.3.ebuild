@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.3.ebuild,v 1.4 2011/01/23 16:33:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.3.ebuild,v 1.5 2013/07/23 17:23:34 vincent Exp $
 
-EAPI="2"
+EAPI="5"
 
 JAVA_PKG_IUSE="doc source"
 

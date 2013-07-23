@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaffl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.8 2013/07/08 14:49:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.9 2013/07/23 17:23:34 vincent Exp $
+
+  23 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> jaffl-0.3.ebuild,
+  jaffl-0.5.1.ebuild, jaffl-0.5.11.ebuild:
+  added ppc keyword, bug #476182
 
 *jaffl-0.5.11 (08 Jul 2013)
 
