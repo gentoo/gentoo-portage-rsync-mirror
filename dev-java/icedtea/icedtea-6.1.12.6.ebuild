@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.6.ebuild,v 1.1 2013/07/20 19:44:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.6.ebuild,v 1.2 2013/07/23 21:19:41 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -116,8 +116,8 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	${X_DEPEND}
 	pax_kernel? ( sys-apps/paxctl )"
 
-PDEPEND="webstart? ( dev-java/icedtea-web:6 )
-	nsplugin? ( dev-java/icedtea-web:6[nsplugin] )"
+PDEPEND="webstart? ( >=dev-java/icedtea-web-1.3.2:6 )
+	nsplugin? ( >=dev-java/icedtea-web-1.3.2:6[nsplugin] )"
 
 S="${WORKDIR}"/${ICEDTEA_PKG}
 

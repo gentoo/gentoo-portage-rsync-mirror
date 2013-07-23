@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.3-r7.ebuild,v 1.1 2012/09/25 13:56:20 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.3.2.ebuild,v 1.1 2013/07/23 21:08:15 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="4"
@@ -12,20 +12,15 @@ HOMEPAGE="http://icedtea.classpath.org"
 SRC_URI="http://icedtea.classpath.org/download/source/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
-SLOT="7"
-KEYWORDS="~amd64 ~ia64 ~x86"
+SLOT="6"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
 
-IUSE="build doc gtk2 gtk3 javascript +nsplugin test"
+IUSE="build doc javascript +nsplugin test"
 
 COMMON_DEP="
 	dev-java/icedtea:${SLOT}
 	nsplugin? (
 		>=dev-libs/glib-2.16
-		gtk2? (
-			!gtk3? ( >=x11-libs/gtk+-2.6:2 )
-			gtk3? ( x11-libs/gtk+:3 )
-		)
-		!gtk2? ( x11-libs/gtk+:3 )
 	)"
 RDEPEND="${COMMON_DEP}"
 # Need system junit 4.8+. Bug #389795
@@ -49,6 +44,7 @@ pkg_setup() {
 src_prepare() {
 	# bug #356645
 	epatch "${FILESDIR}"/0002-Respect-LDFLAGS.patch
+	epatch "${FILESDIR}"/${P}-openjdk-build-25.patch
 	eautoreconf
 }
 
@@ -69,10 +65,6 @@ src_configure() {
 	einfo "Installing IcedTea-Web in '${installdir}'"
 	einfo "Installing IcedTea-Web for IcedTea${SLOT} in '${icedteadir}'"
 
-	local gtk_ver=3
-	use gtk2 && gtk_ver=2
-	use gtk3 && gtk_ver=3
-
 	local myconf=(
 		# we need to override all *dir variables that econf sets.
 		# man page (javaws) is installed directly to icedteadir because it's
@@ -83,7 +75,6 @@ src_configure() {
 		--infodir="${installdir}"/share/info
 		--datadir="${installdir}"/share
 		--with-jdk-home="${icedteadir}"
-		--with-gtk=${gtk_ver}
 		$(use_enable doc docs)
 		$(use_enable nsplugin plugin)
 		$(use_with javascript rhino)
@@ -99,7 +90,8 @@ src_compile() {
 }
 
 src_install() {
-	default
+	# bug #440906
+	MAKEOPTS+=" -j1" default
 
 	if use nsplugin; then
 		install_mozilla_plugin "${installdir}/$(get_libdir)/IcedTeaPlugin.so";

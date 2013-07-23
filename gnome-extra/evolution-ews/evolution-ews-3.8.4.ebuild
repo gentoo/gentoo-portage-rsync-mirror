@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-ews/evolution-ews-3.8.2.ebuild,v 1.1 2013/05/12 16:25:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-ews/evolution-ews-3.8.4.ebuild,v 1.1 2013/07/23 21:02:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -37,5 +37,8 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_configure() {
-	gnome2_src_configure $(use_with kerberos krb5)
+	# We don't have libmspack, needing internal lzx
+	gnome2_src_configure \
+		--with-internal-lzx \
+		$(use_with kerberos krb5)
 }
