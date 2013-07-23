@@ -1,6 +1,11 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.129 2013/05/24 20:37:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.130 2013/07/23 01:08:37 tetromino Exp $
+
+  23 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  empathy-2.34.0-r2.ebuild:
+  empathy-2.x requires gcr-0, which only exists in gnome-keyring-2.x (bug
+  #477394).
 
 *empathy-3.8.3 (24 May 2013)
 
