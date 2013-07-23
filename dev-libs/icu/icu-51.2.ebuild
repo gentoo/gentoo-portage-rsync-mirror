@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50.1-r2.ebuild,v 1.6 2013/03/06 21:41:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-51.2.ebuild,v 1.1 2013/07/23 18:14:43 scarabeus Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.icu-project.org/"
 SRC_URI="http://download.icu-project.org/files/icu4c/${PV/_/}/icu4c-${PV//./_}-src.tgz"
 
 LICENSE="BSD"
-SLOT="0/50.1"
+SLOT="0/51.2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -amd64-fbsd -x86-fbsd"
 IUSE="debug doc examples static-libs"
 
@@ -26,7 +26,6 @@ S="${WORKDIR}/${PN}/source"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.8.1-fix_binformat_fonts.patch"
 	"${FILESDIR}/${PN}-4.8.1.1-fix_ltr.patch"
-	"${FILESDIR}/${PN}-50.1-char16_t.patch"
 )
 
 src_prepare() {

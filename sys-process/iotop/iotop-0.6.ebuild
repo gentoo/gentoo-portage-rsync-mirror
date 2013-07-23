@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.6.ebuild,v 1.4 2013/07/22 20:43:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/iotop-0.6.ebuild,v 1.5 2013/07/23 18:07:02 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://guichaz.free.fr/iotop//files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ia64 ~mips ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 arm hppa ~ia64 ~mips ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 CONFIG_CHECK="~TASK_IO_ACCOUNTING ~TASK_DELAY_ACCT ~TASKSTATS ~VM_EVENT_COUNTERS"

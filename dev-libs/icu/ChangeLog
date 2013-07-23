@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.242 2013/05/20 18:03:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.243 2013/07/23 18:14:43 scarabeus Exp $
+
+*icu-51.2 (23 Jul 2013)
+
+  23 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> +icu-51.2.ebuild,
+  -files/icu-49.1.2-platforms.patch, -files/icu-50.1-char16_t.patch,
+  -files/icu-50.1.2-bsd.patch, -files/icu.7601.Indic-ccmp.patch,
+  -files/icu.8198.revert.icu5431.patch, -icu-49.1.2.ebuild, -icu-50.1-r2.ebuild,
+  -icu-50.1.2.ebuild:
+  Version bump to latest release, yay changed api/abi again without bump. Remove
+  overshadowed versions to keep life simpler.
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> icu-51.1.ebuild:
   Stable for s390, wrt bug #467452

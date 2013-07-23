@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999-r1.ebuild,v 1.1 2013/07/21 10:00:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999-r1.ebuild,v 1.2 2013/07/23 18:20:41 mgorny Exp $
 
 EAPI=5
 
@@ -87,7 +87,7 @@ src_unpack() {
 
 		# Force version match between LLVM, compiler-rt & clang
 		# but first work-around subversion.eclass smartness, bug #282486.
-		subversion_wc_info "http://llvm.org/svn/llvm-project/compiler-rt/trunk"
+		ESVN_PROJECT=compiler-rt subversion_wc_info "http://llvm.org/svn/llvm-project/compiler-rt/trunk"
 		local ESVN_REVISION=${ESVN_WC_REVISION}
 
 		ESVN_PROJECT=clang S="${S}"/tools/clang subversion_fetch "http://llvm.org/svn/llvm-project/cfe/trunk"

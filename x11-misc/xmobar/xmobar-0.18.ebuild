@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.18.ebuild,v 1.1 2013/07/21 21:03:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.18.ebuild,v 1.2 2013/07/23 18:24:08 slyfox Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ KEYWORDS="~amd64 ~x86"
 #hackport: rename-use with_datezone timezone
 #hackport: rename-use with_threaded threaded
 #hackport: rename-use with_dbus dbus
-IUSE="alsa timezone threaded dbus inotify wifi mpd mpris mail xft"
+#hackport: rename-use with_inotify mail
+IUSE="alsa timezone threaded dbus wifi mpd mpris mail xft"
 
 #	xft? ( net-wireless/iw )
 RDEPEND="x11-libs/libXrandr
@@ -60,7 +61,7 @@ src_configure() {
 		$(cabal_flag alsa with_alsa) \
 		$(cabal_flag timezone with_datezone) \
 		$(cabal_flag dbus with_dbus) \
-		$(cabal_flag inotify with_inotify) \
+		$(cabal_flag mail with_inotify) \
 		$(cabal_flag wifi with_iwlib) \
 		$(cabal_flag mpd with_mpd) \
 		$(cabal_flag mpris with_mpris) \

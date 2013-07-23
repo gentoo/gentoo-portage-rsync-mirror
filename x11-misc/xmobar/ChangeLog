@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xmobar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.23 2013/07/21 21:03:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.24 2013/07/23 18:24:08 slyfox Exp $
+
+  23 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> xmobar-0.18.ebuild:
+  Remove USE=inotify as USE=mail always did mail notifications via hinotify (bug
+  #477838 by Brandon Dimcheff).
 
 *xmobar-0.18 (21 Jul 2013)
 
