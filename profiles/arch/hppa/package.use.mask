@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.125 2013/06/19 18:00:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.126 2013/07/23 00:55:48 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -123,18 +123,10 @@ dev-python/PyQt4 multimedia
 # sys-devel/gcc-4.3[openmp] (bug #225917).
 media-gfx/imagemagick openmp
 
-# Jeroen Roovers <jer@gentoo.org> (06 May 2009)
-# Mask webkit-gtk dependency for net-libs/libproxy:
-net-libs/libproxy webkit
-
 # Jeroen Roovers <jer@gentoo.org> (15 Apr 2008)
 # media-sound/fluidsynth fails to build with stable libtool, so it can't be
 # tested for ~hppa keywording right now
 media-sound/mpd fluidsynth
-
-# Jeroen Roovers <jer@gentoo.org> (2 Apr 2008)
-# Help browsing through webkit doesn't seem to work really well yet
-media-gfx/gimp webkit
 
 # Jeroen Roovers <jer@gentoo.org> (16 Sep 2008)
 # cpudetection and custom-cpuopts does not apply

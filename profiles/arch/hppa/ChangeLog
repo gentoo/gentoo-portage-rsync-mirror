@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.190 2013/06/19 18:00:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.191 2013/07/23 00:55:48 jer Exp $
+
+  23 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove package-specific USE=webkit masks.
 
   19 Jun 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove old USE mask.
