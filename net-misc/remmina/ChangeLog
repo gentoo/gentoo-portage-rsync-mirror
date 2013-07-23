@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.55 2013/07/14 00:06:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.56 2013/07/23 03:19:45 floppym Exp $
+
+*remmina-1.0.0_p20130723 (23 Jul 2013)
+
+  23 Jul 2013; Mike Gilbert <floppym@gentoo.org>
+  +remmina-1.0.0_p20130723.ebuild, remmina-1.0.0_p20130625.ebuild,
+  remmina-9999.ebuild:
+  New snapshot, resolves bug 476950 by Ben Kohler.
 
   14 Jul 2013; Mike Gilbert <floppym@gentoo.org>
   -remmina-1.0.0_p20121004.ebuild:

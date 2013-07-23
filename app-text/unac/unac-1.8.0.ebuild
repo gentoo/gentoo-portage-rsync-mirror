@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unac/unac-1.8.0.ebuild,v 1.3 2012/05/25 11:35:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unac/unac-1.8.0.ebuild,v 1.4 2013/07/23 03:19:22 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Library and command-line tool for removing accents from characters"
 HOMEPAGE="http://www.nongnu.org/unac/"
 SRC_URI="mirror://debian/pool/main/u/unac/${P/-/_}.orig.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="static-libs test"
@@ -21,10 +21,9 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P}.orig"
 
-DOCS="AUTHORS ChangeLog NEWS README THANKS"
-
 src_prepare() {
 	epatch "${FILESDIR}/${P}-debian-gcc-4.4-bug-556379.patch"
+	epatch "${FILESDIR}/${P}-automake-1.13.1.patch"
 	# otherwise automake will fail
 	touch config.rpath
 	eautoreconf
@@ -35,8 +34,9 @@ src_configure() {
 }
 
 src_install() {
+	DOCS="AUTHORS ChangeLog NEWS README THANKS"
 	default
-	find "${D}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files
 }
 
 pkg_postinst() {

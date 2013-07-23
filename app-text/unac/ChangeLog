@@ -1,6 +1,11 @@
 # ChangeLog for app-text/unac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unac/ChangeLog,v 1.3 2012/05/25 11:35:40 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unac/ChangeLog,v 1.4 2013/07/23 03:19:22 tetromino Exp $
+
+  23 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> unac-1.8.0.ebuild,
+  +files/unac-1.8.0-automake-1.13.1.patch:
+  Fix building with automake-1.13.1 and >1.14 (bug #467618, thanks to Ian
+  Stakenvicius). Clean up the ebuild a bit.
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> unac-1.8.0.ebuild:
   Stable for amd64, wrt bug #417359
