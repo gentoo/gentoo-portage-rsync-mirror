@@ -1,6 +1,14 @@
 # ChangeLog for dev-ml/xml-light
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.7 2012/06/10 04:52:42 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.8 2013/07/23 18:46:17 aballier Exp $
+
+*xml-light-2.2-r2 (23 Jul 2013)
+
+  23 Jul 2013; Alexis Ballier <aballier@gentoo.org> +xml-light-2.2-r2.ebuild:
+  Non maintainer update: Install it in a proper subdir not to pollute ocaml
+  namespace, bug #454660. Eapi-5: Define subslot and add slot deps on ocaml.
+  Install a META file for findlib. Remove useless dep on the OCaml reference
+  manual.
 
   10 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xml-light-2.2-r1.ebuild:
   marked x86 per bug 419417

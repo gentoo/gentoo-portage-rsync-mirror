@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/odns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/ChangeLog,v 1.6 2013/03/10 10:54:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/ChangeLog,v 1.7 2013/07/23 18:49:35 aballier Exp $
+
+  23 Jul 2013; Alexis Ballier <aballier@gentoo.org> odns-0.3.ebuild:
+  disable parallel build, bug #453434
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> odns-0.3.ebuild:
   eapi5: define subslot, slot dep on ocaml, remove useless || die
