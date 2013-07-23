@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.5.1-r1.ebuild,v 1.10 2013/07/14 17:35:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.5.1-r1.ebuild,v 1.11 2013/07/23 14:31:12 kensington Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	sys-libs/zlib[minizip]
 	dev-qt/qtcore:4"
 DEPEND="${RDEPEND}
-	test? ( dev-qt/qttest )"
+	test? ( dev-qt/qttest:4 )"
 
 S="${WORKDIR}"/${P}
 

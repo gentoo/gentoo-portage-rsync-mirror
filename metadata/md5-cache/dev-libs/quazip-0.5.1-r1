@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=sys-libs/zlib[minizip] dev-qt/qtcore:4 test? ( dev-qt/qttest )
+DEPEND=sys-libs/zlib[minizip] dev-qt/qtcore:4 test? ( dev-qt/qttest:4 )
 DESCRIPTION=A simple C++ wrapper over Gilles Vollant's ZIP/UNZIP package
 EAPI=5
 HOMEPAGE=http://quazip.sourceforge.net/
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/zlib[minizip] dev-qt/qtcore:4
 SLOT=0
 SRC_URI=mirror://sourceforge/quazip/quazip-0.5.1.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=a7f8393d3dfaacc13bfb68a080e9978a
+_md5_=3ac05cb3d28df817a069a2ad48a6db73
