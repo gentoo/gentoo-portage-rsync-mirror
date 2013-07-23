@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-14-r1.ebuild,v 1.1 2013/07/23 10:31:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-14-r1.ebuild,v 1.2 2013/07/23 11:02:35 ssuominen Exp $
 
 EAPI=5
 
@@ -118,7 +118,7 @@ pkg_postinst() {
 			fi
 		fi
 
-		if [[ -e "${ROOT}"etc/runlevels/sysinit ]]; then
+		if [[ -e "${ROOT}"etc/runlevels/boot ]]; then
 			if [[ ! -e "${ROOT}"etc/runlevels/boot/static-nodes ]]; then
 				ewarn
 				ewarn "You need to add static-nodes to the boot runlevel."

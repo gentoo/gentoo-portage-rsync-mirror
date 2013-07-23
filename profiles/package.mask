@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14950 2013/07/23 08:28:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14951 2013/07/23 11:16:14 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -641,13 +641,6 @@ media-gfx/yablex
 # Tim Harder <radhermit@gentoo.org> (07 Mar 2013)
 # Masked for testing
 =dev-java/jython-2.7*
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2013)
-# Masked in favour of sys-apps/kmod. Now is the time to file
-# bugs against sys-apps/kmod if you have issues with it you
-# didn't with module-init-tools.
-# Later removal at 01-01-2014 by request from eudev maintainers
-sys-apps/module-init-tools
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Mar 2013)
 # Fails to compile unless system has previously installed copy

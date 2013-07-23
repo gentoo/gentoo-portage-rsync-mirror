@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.145 2013/07/23 08:25:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.146 2013/07/23 11:01:58 mgorny Exp $
+
+  23 Jul 2013; Michał Górny <mgorny@gentoo.org> systemd-206.ebuild:
+  Bump kmod dep per bug #477886.
 
 *systemd-206 (23 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206.ebuild,v 1.1 2013/07/23 08:25:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206.ebuild,v 1.2 2013/07/23 11:01:58 mgorny Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	gudev? ( >=dev-libs/glib-2 )
 	http? ( net-libs/libmicrohttpd )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	kmod? ( >=sys-apps/kmod-12 )
+	kmod? ( >=sys-apps/kmod-14-r1 )
 	lzma? ( app-arch/xz-utils )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )

@@ -1,0 +1,12 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Raspberry PI precompiled kernel and modules
+EAPI=5
+HOMEPAGE=https://github.com/raspberrypi/firmware
+IUSE=doc
+KEYWORDS=~arm -*
+LICENSE=GPL-2 raspberrypi-videocore-bin
+RESTRICT=binchecks strip
+SLOT=3.9.10
+SRC_URI=https://github.com/raspberrypi/firmware/tarball/c26501f38b -> raspberrypi-firmware-c26501f38b.tar.gz
+_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129
+_md5_=317cff7bc9324c0579d8c46aa0d3d5ce
