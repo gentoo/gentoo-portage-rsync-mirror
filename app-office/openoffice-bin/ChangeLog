@@ -1,6 +1,16 @@
 # ChangeLog for app-office/openoffice-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.261 2012/09/25 01:14:55 chithanh Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.263 2013/07/23 22:58:46 chithanh Exp $
+
+  23 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  openoffice-bin-4.0.0.ebuild:
+  Fix printeradmin, bug #437530. Remove javaldx again if not needed.
+
+*openoffice-bin-4.0.0 (23 Jul 2013)
+
+  23 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +openoffice-bin-4.0.0.ebuild:
+  Version bump. Also fixes bug #456066 and bug #476088.
 
   25 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -openoffice-bin-3.4.0-r2.ebuild:
