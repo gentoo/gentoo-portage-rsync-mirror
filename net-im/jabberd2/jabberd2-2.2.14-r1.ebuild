@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.14-r1.ebuild,v 1.1 2013/07/23 09:56:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.14-r1.ebuild,v 1.2 2013/07/23 10:01:35 pinkbyte Exp $
 
 EAPI=5
 
@@ -76,7 +76,7 @@ src_install() {
 
 	pushd "${D}/etc/jabber/" &>/dev/null || die
 	sed -i \
-		-e 's,/var/lib/jabberd/pid/,/var/run/jabber/,g' \
+		-e 's,/var/lib/jabberd/pid/,/run/jabber/,g' \
 		-e 's,/var/lib/jabberd/log/,/var/log/jabber/,g' \
 		-e 's,/var/lib/jabberd/db,/var/spool/jabber/,g' \
 		*.xml *.xml.dist || die "sed failed"

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.172 2013/07/23 05:35:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.173 2013/07/23 10:07:30 idella4 Exp $
+
+  23 Jul 2013; Ian Delaney <idella4@gentoo.org> +files/xen-tools-4.3-ar.patch,
+  xen-tools-4.3.0.ebuild:
+  patch to correct AR use wrt Bug #477676
 
   23 Jul 2013; Ian Delaney <idella4@gentoo.org> files/xendomains.initd-r1,
   files/xendomains.initd-r2:

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.98 2013/07/04 18:52:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.99 2013/07/23 10:31:20 ssuominen Exp $
+
+*kmod-14-r1 (23 Jul 2013)
+
+  23 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +kmod-14-r1.ebuild,
+  kmod-9999.ebuild, metadata.xml, +files/static-nodes:
+  Import support for kmod tmpfiles.d static device node creation wrt #477856 by
+  Alexander Vershilov
 
   04 Jul 2013; William Hubbs <williamh@gentoo.org> -kmod-13.ebuild:
   remove old version
