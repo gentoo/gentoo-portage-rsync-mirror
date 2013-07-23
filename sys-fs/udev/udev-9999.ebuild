@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.237 2013/07/17 04:28:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.238 2013/07/23 05:00:21 ssuominen Exp $
 
 EAPI=5
 
@@ -67,8 +67,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25
 	!<sec-policy/selinux-base-2.20120725-r10"
-PDEPEND=">=virtual/udev-197-r1
-	hwdb? ( >=sys-apps/hwids-20130326.1[udev] )
+PDEPEND=">=virtual/udev-206
+	hwdb? ( >=sys-apps/hwids-20130717-r1[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-25 )"
 
 S=${WORKDIR}/systemd-${PV}
@@ -204,7 +204,6 @@ src_configure() {
 		--with-html-dir=/usr/share/doc/${PF}/html
 		--with-rootprefix=
 		--with-rootlibdir=/$(get_libdir)
-		--with-bashcompletiondir=/usr/share/bash-completion
 		--without-python
 		--disable-audit
 		--disable-coredump

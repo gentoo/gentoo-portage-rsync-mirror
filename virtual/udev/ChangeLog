@@ -1,6 +1,11 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.41 2013/07/06 07:40:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.42 2013/07/23 05:01:27 ssuominen Exp $
+
+*udev-206 (23 Jul 2013)
+
+  23 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-206.ebuild:
+  Version bump for the new keyboard hwdb.
 
 *udev-200 (06 Jul 2013)
 
