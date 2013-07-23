@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.6 2013/07/23 10:07:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.7 2013/07/23 15:02:03 idella4 Exp $
 
 EAPI=5
 
@@ -209,7 +209,7 @@ src_prepare() {
 		-i Config.mk || die
 
 	# Bug 477676
-	epatch "${FILESDIR}"/${PN}-4.3-ar.patch
+	epatch "${FILESDIR}"/${PN}-4.3-ar-cc.patch
 
 	epatch_user
 }
