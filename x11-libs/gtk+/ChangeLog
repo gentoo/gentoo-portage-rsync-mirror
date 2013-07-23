@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.670 2013/07/23 20:10:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.671 2013/07/23 20:37:49 grobian Exp $
+
+  23 Jul 2013; Fabian Groffen <grobian@gentoo.org>
+  +files/gtk+-3.6.3-darwin-gtksettings.patch, gtk+-3.6.3-r2.ebuild:
+  Fix installation on Darwin, bug #422541
 
   23 Jul 2013; Fabian Groffen <grobian@gentoo.org>
   +files/gtk+-2.24.20-darwin-quartz-pasteboard.patch, gtk+-2.24.20.ebuild:

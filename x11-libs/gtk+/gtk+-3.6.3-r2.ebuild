@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.3-r2.ebuild,v 1.4 2013/02/22 19:52:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.3-r2.ebuild,v 1.5 2013/07/23 20:37:49 grobian Exp $
 
 EAPI="5"
 
@@ -103,6 +103,9 @@ src_prepare() {
 
 	# Crashes when opening various dialogs, bug #450370; fixed in 3.6.4
 	epatch "${FILESDIR}/${P}-stylecontext-font-crash.patch"
+
+	# Fix QA violation, bug #422541, upstream bug #704767
+	epatch "${FILESDIR}/${P}-darwin-gtksettings.patch"
 
 	# Non-working test in gentoo's env
 	sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \

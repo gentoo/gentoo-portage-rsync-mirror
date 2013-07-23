@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.2.ebuild,v 1.3 2013/05/12 19:38:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.4.ebuild,v 1.1 2013/07/23 20:44:36 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3,3} )
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit db-use eutils flag-o-matic gnome2 python-any-r1 vala versionator virtualx
+inherit db-use flag-o-matic gnome2 python-any-r1 vala virtualx
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://projects.gnome.org/evolution/arch.shtml"
@@ -38,9 +38,7 @@ RDEPEND="
 	virtual/libiconv
 
 	gtk? ( >=x11-libs/gtk+-3.2:3 )
-	gnome-online-accounts? (
-		>=net-libs/gnome-online-accounts-3.7.90
-		)
+	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.90 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	kerberos? ( virtual/krb5:= )
 	ldap? ( >=net-nds/openldap-2:= )
@@ -58,9 +56,6 @@ DEPEND="${RDEPEND}
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2
 
-# FIXME
-#RESTRICT="test"
-
 pkg_setup() {
 	python-any-r1_pkg_setup
 }
@@ -73,7 +68,7 @@ src_prepare() {
 	# so include the right dir in CPPFLAGS
 	append-cppflags "-I$(db_includedir)"
 
-	# FIXME: Fix compilation flags crazyness
+	# Fix compilation flags crazyness
 	# Touch configure.ac if doing eautoreconf
 	sed 's/^\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
 		-i configure || die "sed failed"

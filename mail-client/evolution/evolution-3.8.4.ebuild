@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.2.ebuild,v 1.1 2013/05/12 16:19:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.4.ebuild,v 1.1 2013/07/23 20:56:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils flag-o-matic readme.gentoo gnome2
+inherit eutils flag-o-matic readme.gentoo gnome2 #autotools
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="https://live.gnome.org/Evolution http://projects.gnome.org/evolution/"
@@ -98,8 +98,12 @@ x-scheme-handler/https=firefox.desktop
 file from /usr/share/applications if you use a different browser)."
 
 src_prepare() {
+	# Reason?
 	ELTCONF="--reverse-deps"
+
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
+
+	#eautoreconf # See https://bugzilla.gnome.org/701904
 
 	gnome2_src_prepare
 
