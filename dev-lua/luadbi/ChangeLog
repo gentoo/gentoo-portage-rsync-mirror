@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.13 2013/02/26 11:10:27 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.14 2013/07/22 23:33:10 mrueg Exp $
+
+  22 Jul 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Taking up maintainership
 
   26 Feb 2013; Michael Palimaka <kensington@gentoo.org>
   -files/0.5-Makefile.patch, -luadbi-0.5-r1.ebuild:
