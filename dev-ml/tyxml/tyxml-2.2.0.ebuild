@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/tyxml-2.2.0.ebuild,v 1.1 2013/01/13 19:50:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/tyxml-2.2.0.ebuild,v 1.2 2013/07/23 16:42:00 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils findlib
 
@@ -11,14 +11,14 @@ HOMEPAGE="http://ocsigen.org/tyxml/"
 SRC_URI="http://www.ocsigen.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1-with-linking-exception"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE="doc ocamlduce +ocamlopt"
 
 DEPEND="
-	>=dev-lang/ocaml-3.12[ocamlopt?]
-	dev-ml/ocamlnet
-	ocamlduce? ( dev-ml/ocamlduce )"
+	>=dev-lang/ocaml-3.12:=[ocamlopt?]
+	dev-ml/ocamlnet:=
+	ocamlduce? ( dev-ml/ocamlduce:= )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

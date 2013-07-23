@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/tyxml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.6 2013/01/13 19:50:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.8 2013/07/23 16:42:00 aballier Exp $
+
+  23 Jul 2013; Alexis Ballier <aballier@gentoo.org> tyxml-2.2.0.ebuild:
+  eapi5, define subslot and add slot deps
+
+  23 Jul 2013; Alexis Ballier <aballier@gentoo.org> -tyxml-2.1-r1.ebuild:
+  remove old
 
 *tyxml-2.2.0 (13 Jan 2013)
 
