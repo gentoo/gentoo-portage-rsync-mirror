@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=sys-libs/glibc alsa? ( media-libs/alsa-lib ) gsm? ( media-sound/gsm ) h323? ( dev-libs/pwlib net-libs/openh323 ) ilbc? ( dev-libs/ilbc-rfc3951 ) mysql? ( virtual/mysql ) oss? ( sys-kernel/linux-headers ) postgres? ( dev-db/postgresql-base ) qt4? ( dev-qt/qtcore:4 || ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) ) ) spandsp? ( >=media-libs/spandsp-0.0.3 ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl ) virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=sys-libs/glibc alsa? ( media-libs/alsa-lib ) gsm? ( media-sound/gsm ) h323? ( dev-libs/pwlib net-libs/openh323 ) ilbc? ( dev-libs/ilbc-rfc3951 ) mysql? ( virtual/mysql ) oss? ( sys-kernel/linux-headers ) postgres? ( dev-db/postgresql-base ) qt4? ( dev-qt/qtcore:4 || ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 ) ) spandsp? ( >=media-libs/spandsp-0.0.3 ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl ) virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Yet Another Telephony Engine
 EAPI=2
 HOMEPAGE=http://yate.null.ro/
 IUSE=alsa debug doc gsm h323 ilbc mysql oss postgres qt4 sctp spandsp speex ssl
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=sys-libs/glibc alsa? ( media-libs/alsa-lib ) gsm? ( media-sound/gsm ) h323? ( dev-libs/pwlib net-libs/openh323 ) ilbc? ( dev-libs/ilbc-rfc3951 ) mysql? ( virtual/mysql ) oss? ( sys-kernel/linux-headers ) postgres? ( dev-db/postgresql-base ) qt4? ( dev-qt/qtcore:4 || ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) ) ) spandsp? ( >=media-libs/spandsp-0.0.3 ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl )
+RDEPEND=sys-libs/glibc alsa? ( media-libs/alsa-lib ) gsm? ( media-sound/gsm ) h323? ( dev-libs/pwlib net-libs/openh323 ) ilbc? ( dev-libs/ilbc-rfc3951 ) mysql? ( virtual/mysql ) oss? ( sys-kernel/linux-headers ) postgres? ( dev-db/postgresql-base ) qt4? ( dev-qt/qtcore:4 || ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 ) ) spandsp? ( >=media-libs/spandsp-0.0.3 ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://yate.null.ro/tarballs/yate2/yate-2.0.0-1.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7985aa30a85bf15b550bc992dec72eed
+_md5_=ae1d21dbb1cdc96ae581308e38ed9824

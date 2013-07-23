@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.18 2013/07/21 13:16:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.19 2013/07/23 14:07:55 kensington Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ DEPEND="
 	dev-libs/qtkeychain
 	>=dev-qt/qtcore-${QT_MINIMAL}:4
 	>=dev-qt/qtdbus-${QT_MINIMAL}:4
-	|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) )
+	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
 	>=dev-qt/qtsql-${QT_MINIMAL}:4[sqlite]
 	>=dev-qt/qtsvg-${QT_MINIMAL}:4
 	>=dev-qt/qtwebkit-${QT_MINIMAL}:4

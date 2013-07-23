@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.343 2013/07/20 15:04:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.344 2013/07/23 14:02:34 kensington Exp $
+
+  23 Jul 2013; Michael Palimaka <kensington@gentoo.org> kwin-4.10.4.ebuild,
+  kwin-4.10.5.ebuild:
+  Fix Qt dependencies.
 
   20 Jul 2013; Johannes Huber <johu@gentoo.org> kwin-4.10.4.ebuild,
   kwin-4.10.5.ebuild:

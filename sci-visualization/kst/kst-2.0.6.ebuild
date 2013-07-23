@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.6.ebuild,v 1.4 2013/07/16 03:28:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.6.ebuild,v 1.5 2013/07/23 14:19:51 kensington Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="
 	sci-libs/gsl
 	sci-libs/netcdf[cxx]
 	dev-qt/qtcore:4
-	|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) )
+	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
 	dev-qt/qtopengl:4
 	dev-qt/qtsvg:4
 "

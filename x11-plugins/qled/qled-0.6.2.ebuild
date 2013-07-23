@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/qled/qled-0.6.2.ebuild,v 1.5 2013/07/12 08:26:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/qled/qled-0.6.2.ebuild,v 1.6 2013/07/23 14:24:52 kensington Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
-	|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) )
+	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
 	dev-qt/qtsvg:4"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
