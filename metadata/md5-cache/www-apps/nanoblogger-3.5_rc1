@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash
 SLOT=0
 SRC_URI=mirror://sourceforge/nanoblogger/nanoblogger-3.5-rc1.tar.gz
-_eclasses_=bash-completion-r1	98ebbe51b4fb663d1a37a2f9ab8b8c89	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=bash-completion-r1	cccf36bdb93b54baafea3b9d97abb0bf	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=0122d8a54abdeaba7ebc231bc0ca4451

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/asciidoc sys-fs/e2fsprogs selinux? ( sys-libs/libselinux ) !sys-kernel/genkernel cryptsetup? ( sys-fs/cryptsetup ) dmraid? ( sys-fs/dmraid ) gpg? ( app-crypt/gnupg ) iscsi? ( sys-block/open-iscsi ) plymouth? ( sys-boot/plymouth ) app-portage/portage-utils app-arch/cpio >=app-misc/pax-utils-0.2.1 !<sys-apps/openrc-0.9.9 sys-block/thin-provisioning-tools sys-fs/dmraid sys-fs/lvm2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~lxnay/genkernel-next/genkernel-next-18.tar.xz http://www.busybox.net/downloads/busybox-1.20.2.tar.bz2
-_eclasses_=bash-completion-r1	98ebbe51b4fb663d1a37a2f9ab8b8c89	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion-r1	cccf36bdb93b54baafea3b9d97abb0bf	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=5adf7e7c3a4b9c7909306864fd6c18fa

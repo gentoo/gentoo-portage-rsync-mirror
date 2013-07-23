@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.8 2013/07/22 20:06:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.9 2013/07/23 13:48:00 mgorny Exp $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:
@@ -41,10 +41,10 @@ _bash-completion-r1_get_bashdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if $(tc-getPKG_CONFIG) --exists bash-completion; then
-		local pcbc="$($(tc-getPKG_CONFIG) --variable=$1 bash-completion)"
+		local path="$($(tc-getPKG_CONFIG) --variable=$1 bash-completion)"
 		# we need to return unprefixed, so strip from what pkg-config returns
 		# to us, bug #477692
-		echo "${pcdb#${EPREFIX}}"
+		echo "${path#${EPREFIX}}"
 	else
 		echo $2
 	fi
