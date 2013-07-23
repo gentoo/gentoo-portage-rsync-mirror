@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.11.1-r1.ebuild,v 1.10 2013/07/23 13:56:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.11.1-r1.ebuild,v 1.11 2013/07/23 20:00:22 johu Exp $
 
 EAPI=4
 
@@ -24,7 +24,6 @@ COMMON_DEPEND="
 	>=app-office/akonadi-server-1.3.1
 	dev-libs/libxml2:2
 	dev-libs/libxslt
-	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4[-phonon] ) <dev-qt/qtgui-4.8.5:4 )
 	$(add_kdebase_dep kdelibs 'semantic-desktop(+)' 4.6)
 	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)' 4.6)
 	$(add_kdebase_dep libkdepim)

@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.156 2013/07/21 17:35:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.157 2013/07/23 20:00:08 ago Exp $
+
+# Agostino Sarubbo <ago@gentoo.org> (23 Jul 2013)
+# java is not stable on arm
+dev-libs/protobuf java
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords pending, bug #476710

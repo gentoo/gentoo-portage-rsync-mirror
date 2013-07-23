@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.4.1.ebuild,v 1.1 2013/07/08 11:43:49 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.4.1-r1.ebuild,v 1.1 2013/07/23 20:00:56 mschiff Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P="${P/_}"
 PKCS11_IUSE="+softhsm opensc external-hsm"
