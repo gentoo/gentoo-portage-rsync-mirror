@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.237 2013/07/22 13:44:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.238 2013/07/23 20:02:10 ago Exp $
+
+  23 Jul 2013; Agostino Sarubbo <ago@gentoo.org> apache-2.2.25.ebuild:
+  Stable for arm, wrt bug #476568
 
   22 Jul 2013; Jeroen Roovers <jer@gentoo.org> apache-2.2.25.ebuild:
   Stable for HPPA (bug #476568).

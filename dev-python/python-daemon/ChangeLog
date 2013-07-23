@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.9 2013/05/31 22:31:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.10 2013/07/23 20:02:42 ago Exp $
+
+  23 Jul 2013; Agostino Sarubbo <ago@gentoo.org> python-daemon-1.6-r1.ebuild:
+  Stable for arm, wrt bug #477628
 
 *python-daemon-1.6-r1 (31 May 2013)
 
@@ -39,4 +42,3 @@
 
   22 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> +python-daemon-1.5.2.ebuild:
   Initial version (contributed by Priit Laes; bug 289496).
-

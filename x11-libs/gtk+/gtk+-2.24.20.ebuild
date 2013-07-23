@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.20.ebuild,v 1.1 2013/07/07 13:03:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.20.ebuild,v 1.2 2013/07/23 20:10:49 grobian Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome2-utils gnome.org multilib virtualx autotools readme.gentoo
@@ -99,8 +99,8 @@ src_prepare() {
 	# Don't break inclusion of gtkclist.h, upstream bug #536767
 	epatch "${FILESDIR}/${PN}-2.14.3-limit-gtksignal-includes.patch"
 
-	# fix building with gir #372953, upstream bug #642085
-	epatch "${FILESDIR}"/${PN}-2.24.7-darwin-quartz-introspection.patch
+	# Fix building due to moved definition, upstream bug #704766
+	epatch "${FILESDIR}"/${PN}-2.24.20-darwin-quartz-pasteboard.patch
 
 	# marshalers code was pre-generated with glib-2.31, upstream bug #671763
 	rm -v gdk/gdkmarshalers.c gtk/gtkmarshal.c gtk/gtkmarshalers.c \
