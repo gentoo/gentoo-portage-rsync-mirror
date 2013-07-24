@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20121127.ebuild,v 1.2 2013/02/25 21:07:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20130712.ebuild,v 1.1 2013/07/24 16:22:53 phajdan.jr Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib multilib-build toolchain-funcs
 
 DESCRIPTION="An efficent, principled regular expression library"
 HOMEPAGE="http://code.google.com/p/re2/"
@@ -19,29 +19,36 @@ IUSE=""
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	# Fix problems with FilteredRE2 symbols not being exported.
-	epatch "${FILESDIR}/${PN}-symbols-r0.patch"
+	multilib_copy_sources
 }
 
-src_compile() {
-	makeopts=(
+mymake() {
+	cd "${BUILD_DIR}" || die
+	local makeopts=(
 		AR="$(tc-getAR)"
 		CXX="$(tc-getCXX)"
 		CXXFLAGS="${CXXFLAGS} -pthread"
 		LDFLAGS="${LDFLAGS} -pthread"
 		NM="$(tc-getNM)"
 	)
-	emake "${makeopts[@]}"
+	emake "${makeopts[@]}" "$@"
+}
+
+src_compile() {
+	multilib_foreach_abi mymake
 }
 
 src_test() {
-	emake "${makeopts[@]}" shared-test
+	multilib_foreach_abi mymake static-test
 }
 
 src_install() {
-	emake DESTDIR="${ED}" prefix=usr libdir=usr/$(get_libdir) install
-	# TODO: the upstream should not build static library at all.
-	rm "${ED}/usr/$(get_libdir)/libre2.a" || die
+	myinstall() {
+		cd "${BUILD_DIR}" || die
+		emake DESTDIR="${ED}" prefix=usr libdir=usr/$(get_libdir) install
+		multilib_check_headers
+	}
+	multilib_foreach_abi myinstall
 	dodoc AUTHORS CONTRIBUTORS README doc/syntax.txt
 	dohtml doc/syntax.html
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.27 2013/06/19 13:38:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.28 2013/07/24 16:07:01 phajdan.jr Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs base flag-o-matic
@@ -63,7 +63,12 @@ src_configure() {
 	MAKEOPTS="${MAKEOPTS} verbose=yes"
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
+	# https://bugs.gentoo.org/show_bug.cgi?id=465988
+	# copied from php-pear-r1.eclass
 	addpredict /usr/share/snmp/mibs/.index
+	addpredict /var/lib/net-snmp/
+	addpredict /var/lib/net-snmp/mib_indexes
+	addpredict /session_mm_cli0.sem
 
 	# Build with correct toolchain.
 	tc-export CC AR NM
