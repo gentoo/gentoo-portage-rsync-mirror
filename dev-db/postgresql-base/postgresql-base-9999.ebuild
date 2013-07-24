@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.5 2013/04/04 16:21:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.6 2013/07/24 08:45:18 patrick Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ inherit autotools eutils flag-o-matic multilib prefix versionator base git-2
 KEYWORDS=""
 
 # Fix if needed
-SLOT="9.3"
+SLOT="9.4"
 
 EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
 SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2"

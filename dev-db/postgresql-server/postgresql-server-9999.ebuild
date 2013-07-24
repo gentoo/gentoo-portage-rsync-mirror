@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.8 2013/04/04 16:24:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.9 2013/07/24 08:45:58 patrick Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user 
 
 KEYWORDS=""
 
-SLOT="9.3"
+SLOT="9.4"
 
 EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
 

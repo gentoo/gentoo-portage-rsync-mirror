@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.5-r1.ebuild,v 1.1 2013/06/09 21:17:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.7.ebuild,v 1.1 2013/07/24 08:31:40 xmw Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+clipboard pulseaudio +rencode server vpx webp x264"
+IUSE="+clipboard opengl pulseaudio +rencode server sound vpx webp x264"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -28,6 +28,11 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libXtst
+	opengl? ( dev-python/pygtkglext )
+	pulseaudio? ( media-sound/pulseaudio )
+	sound? ( media-libs/gstreamer
+		media-libs/gst-plugins-base
+		dev-python/gst-python )
 	vpx? ( media-libs/libvpx
 		virtual/ffmpeg )
 	webp? ( media-libs/libwebp )
@@ -38,6 +43,7 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/ipython[${PYTHON_USEDEP}]
+	dev-python/numpy[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]
 	virtual/ssh
 	x11-apps/setxkbmap
@@ -54,7 +60,7 @@ python_prepare_all() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch \
 		"${FILESDIR}"/${PN}-0.8.0-prefix.patch \
-		"${FILESDIR}"/${PN}-0.9.5-PIL.patch
+		"${FILESDIR}"/${PN}-0.9.5-opengl-auto.patch
 
 	#assuming ffmpeg and libav mutual exclusive installs
 	if has_version "media-video/libav" ; then
@@ -62,14 +68,26 @@ python_prepare_all() {
 			epatch patches/old-libav.patch
 		fi
 	fi
+}
 
-	use clipboard  || epatch patches/disable-clipboard.patch
-	use pulseaudio || epatch patches/disable-pulseaudio.patch
-	use rencode    || epatch patches/disable-rencode.patch
-	use server     || epatch patches/disable-posix-server.patch
-	use vpx        || epatch patches/disable-vpx.patch
-	use webp       || epatch patches/disable-webp.patch
-	use x264       || epatch patches/disable-x264.patch
+python_configure_all() {
+	mydistutilsargs=(
+		$(use_with clipboard)
+		$(use_with opengl)
+		$(use_with rencode)
+		$(use_with server)
+		$(use_with sound)
+		$(use_with vpx)
+		$(use_with webp)
+		$(use_with x264)
+		--with-cymaths
+		--with-cyxor
+		--with-parti
+		--with-shadow
+		--with-strict
+		--with-warn
+		--without-PIC
+		--without-debug )
 }
 
 src_install() {
