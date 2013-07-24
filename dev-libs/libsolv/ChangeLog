@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsolv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/ChangeLog,v 1.3 2013/07/23 17:43:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/ChangeLog,v 1.4 2013/07/24 20:15:37 scarabeus Exp $
+
+  24 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libsolv-0.3.0.ebuild:
+  Fix S declaration, respect LDFLAGS on one more lib, fix mandir placement.
 
   23 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libsolv-0.3.0.ebuild:
   Allow the scripting extensions to build, add comment about the second sed.

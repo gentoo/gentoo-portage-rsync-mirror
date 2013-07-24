@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.3.0.ebuild,v 1.3 2013/07/23 17:43:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.3.0.ebuild,v 1.4 2013/07/24 20:15:37 scarabeus Exp $
 
 EAPI=5
 
@@ -43,6 +43,9 @@ DEPEND="${DEPEND}
 	sys-devel/gettext
 "
 
+# ruby eclass :/
+S="${WORKDIR}/${P}/"
+
 pkg_setup() {
 	use python && python-any-r1_pkg_setup
 	use perl && perl-module_pkg_setup
@@ -50,14 +53,20 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# enabling suse features also mess up headers detection
+	# Enabling suse features also mess up headers detection
+	# Can't be fixed upstream
 	sed -i \
 		-e "s:include <rpm/db.h>:include <db.h>:g" \
 		ext/repo_rpmdb.c || die
 	# respect ldflags ; fixed in next release
-	sed -i \
+	sed \
 		-e 's:LINK_FLAGS}:LINK_FLAGS} ${CMAKE_SHARED_LINKER_FLAGS}:g' \
-		src/CMakeLists.txt || die
+		-i src/CMakeLists.txt \
+		-i ext/CMakeLists.txt || die
+	# mandir install ; won't be fixed upstream :-/
+	sed -i \
+		-e 's:MAN_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/man":MAN_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/man":g' \
+		CMakeLists.txt || die
 }
 
 src_configure() {
