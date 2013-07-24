@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.146 2013/07/23 11:01:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.147 2013/07/24 18:48:29 floppym Exp $
+
+  24 Jul 2013; Mike Gilbert <floppym@gentoo.org> systemd-204.ebuild:
+  Add missing inherit bash-completion-r1, bug 478038.
 
   23 Jul 2013; Michał Górny <mgorny@gentoo.org> systemd-206.ebuild:
   Bump kmod dep per bug #477886.
