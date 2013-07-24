@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/files/opendnssec.initd-1.3.x,v 1.1 2013/07/23 20:06:48 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/files/opendnssec.initd-1.3.x,v 1.2 2013/07/24 22:11:40 mschiff Exp $
 
 description="An open-source turn-key solution for DNSSEC"
 
@@ -11,6 +11,10 @@ depend() {
 }
 
 checkconfig() {
+	if [ -z "${CHECKCONFIG_BIN}" ]; then
+		# no config checker configured, skip config check
+		return 0
+	fi
 	if [ -x "${CHECKCONFIG_BIN}" ]; then
 		output=$(${CHECKCONFIG_BIN} 2>&1| grep -v -E "^/etc/opendnssec/(conf|kasp).xml validates")
 		if [ -n "$output" ]; then
@@ -27,7 +31,6 @@ checkconfig() {
 	# can't validate config, just die
 	return 1
 }
-
 
 start_enforcer() {
 	if [ -n "${ENFORCER_BIN}" ] && [ -x "${ENFORCER_BIN}" ]; then

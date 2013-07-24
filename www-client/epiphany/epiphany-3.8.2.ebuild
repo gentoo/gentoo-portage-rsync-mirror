@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.8.2.ebuild,v 1.1 2013/06/01 07:35:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.8.2.ebuild,v 1.2 2013/07/24 22:09:17 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -24,7 +24,6 @@ RDEPEND="
 	>=dev-libs/glib-2.35.6:2
 	>=dev-libs/libxml2-2.6.12:2
 	>=dev-libs/libxslt-1.1.7
-	>=gnome-base/gnome-keyring-2.26.0
 	>=gnome-base/gsettings-desktop-schemas-0.0.1
 	>=net-dns/avahi-0.6.22[dbus]
 	>=net-libs/webkit-gtk-1.11.92:3[jit?]
@@ -45,7 +44,6 @@ RDEPEND="
 # paxctl needed for bug #407085
 # eautoreconf requires gnome-common-3.5.5
 DEPEND="${RDEPEND}
-	>=dev-util/gtk-doc-am-1
 	>=dev-util/intltool-0.50
 	sys-apps/paxctl
 	sys-devel/gettext

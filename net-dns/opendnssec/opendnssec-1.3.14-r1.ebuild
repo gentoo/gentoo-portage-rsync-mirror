@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.14.ebuild,v 1.1 2013/07/23 20:06:48 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.14-r1.ebuild,v 1.1 2013/07/24 22:11:40 mschiff Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.${PN}.org/files/source/${MY_P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="auditor +curl debug doc eppclient mysql +signer +sqlite test ${PKCS11_IUSE}"
+IUSE="+auditor +curl debug doc eppclient mysql +signer +sqlite test ${PKCS11_IUSE}"
 
 RDEPEND="
 	dev-lang/perl
@@ -178,8 +178,9 @@ src_install() {
 	fowners opendnssec:opendnssec /run/opendnssec
 
 	# install conf/init script
-	newinitd "${FILESDIR}"/opendnssec.initd opendnssec
-	newconfd "${FILESDIR}"/opendnssec.confd opendnssec
+	newinitd "${FILESDIR}"/opendnssec.initd-1.3.x opendnssec
+	newconfd "${FILESDIR}"/opendnssec.confd-1.3.x opendnssec
+	use auditor || sed -i 's/^CHECKCONFIG_BIN=.*/CHECKCONFIG_BIN=/' "${D}"/etc/conf.d/opendnssec
 }
 
 pkg_postinst() {

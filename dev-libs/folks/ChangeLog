@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.31 2013/07/24 19:20:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.32 2013/07/24 22:16:48 eva Exp $
+
+  24 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> folks-0.9.2.ebuild:
+  libzeitgeist has no vala USE flag.
 
   24 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> folks-0.9.2.ebuild:
   Update build dependencies with USE=vala, properly handle ofono backend with
