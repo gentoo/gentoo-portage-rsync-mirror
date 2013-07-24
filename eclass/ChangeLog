@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.890 2013/07/23 19:55:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.891 2013/07/24 01:34:38 dirtyepic Exp $
+
+  24 Jul 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Add back LICENSE (bug #477836).
 
   23 Jul 2013; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
   Handle dev-qt/desinger split from dev-qt/gui, see bug #477934.

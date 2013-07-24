@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.19 2013/07/24 01:05:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.21 2013/07/24 01:44:58 aballier Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ fi
 IUSE="elibc_glibc +libcxxrt static-libs test"
 
 RDEPEND="libcxxrt? ( >=sys-libs/libcxxrt-0.0_p20130530[static-libs?,${MULTILIB_USEDEP}] )
-	!libcxxrt? ( sys-devel/gcc[cxx] )"
+	!libcxxrt? ( >=sys-devel/gcc-4.7[cxx] )"
 DEPEND="${RDEPEND}
 	test? ( sys-devel/clang )
 	app-arch/xz-utils"
@@ -49,9 +49,22 @@ src_configure() {
 	else
 		# Very hackish, see $HOMEPAGE
 		# If someone has a clever idea, please share it!
-		local includes="$(echo | "$(tc-getCXX)" -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | sed -e 's/^ /-I/' | tr '\n' ' ')"
+		local includes="$(echo | ${CHOST}-g++ -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | sed -e 's/^ /-I/' | tr '\n' ' ')"
+		local libcxx_gcc_dirs="$(echo | ${CHOST}-g++ -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | tr '\n' ' ')"
 		append-cppflags -D__GLIBCXX__ ${includes}
 		LIBS="-lsupc++ ${LIBS}"
+		local libsupcxx_includes="cxxabi.h bits/c++config.h bits/os_defines.h bits/cpu_defines.h bits/cxxabi_tweaks.h bits/cxxabi_forced.h"
+		for i in ${libsupcxx_includes} ; do
+			local found=""
+			[ -d "${S}/include/$(dirname ${i})/" ] || mkdir -p "${S}/include/$(dirname ${i})"
+			for j in ${libcxx_gcc_dirs} ; do
+				if [ -f "${j}/${i}" ] ; then
+					cp "${j}/${i}" "${S}/include/$(dirname ${i})/" || die
+					found=yes
+				fi
+			done
+			[ -n "${found}" ] || die "Header not found: ${i}"
+		done
 	fi
 
 	tc-export AR CC CXX
