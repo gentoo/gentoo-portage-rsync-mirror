@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r2.ebuild,v 1.7 2013/02/12 20:21:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r2.ebuild,v 1.8 2013/07/24 16:43:03 billie Exp $
 
 EAPI=5
 
@@ -105,7 +105,7 @@ src_configure() {
 src_install() {
 	default
 
-	dohtml doc/{config_settings.html,docs.html,lua.html,variables.html}
+	dohtml doc/*.html
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/ftdetect
@@ -123,7 +123,7 @@ src_install() {
 
 pkg_postinst() {
 	if [[ -z "${REPLACING_VERSIONS}" ]]; then
-		elog "You can find sample configurations at ${ROOT%/}/usr/share/doc/${PF}."
+		elog "You can find sample configurations at ${ROOT%/}/etc/conky."
 		elog "To customize, copy to ~/.conkyrc and edit it to your liking."
 		elog
 		elog "There are pretty html docs available at the conky homepage"

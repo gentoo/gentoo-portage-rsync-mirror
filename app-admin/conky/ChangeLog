@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.208 2013/03/23 16:48:21 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.209 2013/07/24 16:43:03 billie Exp $
+
+  24 Jul 2013; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0-r2.ebuild:
+  Fix bug #477726. Thanks to Marckus J. for the report.
 
   23 Mar 2013; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
   Remove proxy-maintainers. They are not required if the user in metadata is
