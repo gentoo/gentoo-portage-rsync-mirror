@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.244 2013/07/24 02:12:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.245 2013/07/24 03:17:36 gienah Exp $
+
+  24 Jul 2013; Mark Wright <gienah@gentoo.org>
+  +files/icu-51.2-fix_binformat_fonts.patch, icu-51.2.ebuild:
+  Bump icu-51.2-fix_binformat_fonts.patch for bug # 381327 upstream bug
+  http://bugs.icu-project.org/trac/ticket/8320
 
   24 Jul 2013; Patrick Lauer <patrick@gentoo.org> icu-51.2.ebuild:
   QA: Rekeywording for ~amd64-fbsd as all old versions were punted and #454796

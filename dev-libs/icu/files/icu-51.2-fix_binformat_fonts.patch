@@ -1,0 +1,13 @@
+--- icu-51.2-orig/layout/LookupProcessor.cpp	2013-05-24 06:06:26.000000000 +1000
++++ icu-51.2/layout/LookupProcessor.cpp	2013-07-24 13:03:42.310439000 +1000
+@@ -220,7 +220,9 @@
+ 
+     if (requiredFeatureIndex != 0xFFFF) {
+       requiredFeatureTable = featureListTable->getFeatureTable(featureListTable, requiredFeatureIndex, &requiredFeatureTag, success);
+-      featureReferences += SWAPW(featureTable->lookupCount);
++      if (requiredFeatureTable.isValid()) {
++        featureReferences += SWAPW(requiredFeatureTable->lookupCount);
++      }
+     }
+ 
+     lookupOrderArray = LE_NEW_ARRAY(le_uint16, featureReferences);

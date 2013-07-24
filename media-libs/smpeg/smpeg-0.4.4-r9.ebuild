@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r9.ebuild,v 1.15 2012/11/14 02:52:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r9.ebuild,v 1.16 2013/07/24 03:21:27 ottxor Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs autotools
+inherit eutils toolchain-funcs autotools flag-o-matic
 
 DESCRIPTION="SDL MPEG Player Library"
 HOMEPAGE="http://icculus.org/smpeg/"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="X debug mmx opengl static-libs"
 
 DEPEND=">=media-libs/libsdl-1.2.0
@@ -50,6 +50,7 @@ src_prepare() {
 }
 
 src_configure() {
+	[[ ${CHOST} == *-solaris* ]] && append-libs -lnsl -lsocket
 	tc-export CC CXX RANLIB AR
 
 	# the debug option is bogus ... all it does is add extra
