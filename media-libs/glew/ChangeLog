@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.93 2013/07/22 20:43:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.94 2013/07/23 23:48:01 radhermit Exp $
+
+*glew-1.10.0-r1 (23 Jul 2013)
+
+  23 Jul 2013; Tim Harder <radhermit@gentoo.org> -glew-1.10.0.ebuild,
+  +glew-1.10.0-r1.ebuild:
+  Fix pkg-config files (bug #477948).
 
 *glew-1.10.0 (22 Jul 2013)
 

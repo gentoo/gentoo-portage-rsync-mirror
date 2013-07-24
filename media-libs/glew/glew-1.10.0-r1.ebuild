@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.10.0.ebuild,v 1.1 2013/07/22 20:43:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.10.0-r1.ebuild,v 1.1 2013/07/23 23:48:01 radhermit Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs versionator
@@ -38,6 +38,7 @@ src_prepare() {
 	sed -i \
 		-e '/INSTALL/s:-s::' \
 		-e '/$(CC) $(CFLAGS) -o/s:$(CFLAGS):$(CFLAGS) $(LDFLAGS):' \
+		-e '/^.PHONY: .*\.pc$/d' \
 		Makefile || die
 
 	if ! use static-libs ; then
@@ -55,7 +56,7 @@ src_prepare() {
 }
 
 src_compile(){
-	emake GLEW_DEST="${EPREFIX}/usr" "${myglewopts[@]}"
+	emake GLEW_DEST="${EPREFIX}/usr" LIBDIR="${EPREFIX}/usr/$(get_libdir)" "${myglewopts[@]}"
 }
 
 src_install() {
