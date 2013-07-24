@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=app-arch/unzip
+DESCRIPTION=Tree generator for POVray based on TOMTREE macro
+EAPI=5
+HOMEPAGE=http://propro.ru/go/Wshop/povtree/povtree.html
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+LICENSE=as-is
+RDEPEND=>=virtual/jre-1.3
+SLOT=0
+SRC_URI=http://propro.ru/go/Wshop/povtree/povtree1.5.zip
+_md5_=b7441ad3e60cb54e8d66cd7815cbd80d
