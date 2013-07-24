@@ -3,12 +3,10 @@
 <pkgmetadata>
   <herd>gnome</herd>
   <use>
-    <flag name="coverage">Enable code coverage support</flag>
-    <flag name="geoloc">Enable geolocation support through
-			<pkg>app-misc/geoclue</pkg></flag>
-    <flag name="webgl">Build support for the WebGL HTML API using
-			<pkg>virtual/opengl</pkg></flag>
-    <flag name="webkit2">Enable WebKit2 API that splits web content rendering
-			and application UI into separate processes</flag>
+  	<flag name="coverage">Enable code coverage support</flag>
+	<flag name="geoloc">Enable geolocation support through <pkg>app-misc/geoclue</pkg></flag>
+	<flag name="libsecret">Enable libsecret support to store login credentials</flag>
+	<flag name="webgl">Build support for the WebGL HTML API using <pkg>virtual/opengl</pkg></flag>
+	<flag name="webkit2">Enable WebKit2 API that splits web content rendering and application UI into separate processes</flag>
   </use>
 </pkgmetadata>

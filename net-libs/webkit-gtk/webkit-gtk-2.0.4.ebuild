@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.2.ebuild,v 1.4 2013/06/18 06:10:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.4.ebuild,v 1.1 2013/07/24 05:31:22 pacho Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
 LICENSE="LGPL-2+ BSD"
 SLOT="3/25" # soname version
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
-IUSE="aqua coverage debug +geoloc +gstreamer +introspection +jit spell +webgl"
+IUSE="aqua coverage debug +geoloc +gstreamer libsecret +introspection +jit spell +webgl"
 # bugs 372493, 416331
 REQUIRED_USE="introspection? ( geoloc gstreamer )"
 
@@ -25,14 +25,13 @@ REQUIRED_USE="introspection? ( geoloc gstreamer )"
 # gtk2 is needed for plugin process support
 # TODO: There's 3 acceleration backends: opengl, egl and gles2
 RDEPEND="
-	app-crypt/libsecret
 	dev-libs/libxml2:2
 	dev-libs/libxslt
 	media-libs/harfbuzz:=[icu(+)]
 	media-libs/libwebp
 	virtual/jpeg:=
 	>=media-libs/libpng-1.4:0=
-	>=x11-libs/cairo-1.10:=
+	>=x11-libs/cairo-1.10:=[X]
 	>=dev-libs/glib-2.36.0:2
 	>=x11-libs/gtk+-3.6.0:3[aqua=,introspection?]
 	>=dev-libs/icu-3.8.1-r1:=
@@ -47,13 +46,16 @@ RDEPEND="
 		>=media-libs/gstreamer-1.0.3:1.0
 		>=media-libs/gst-plugins-base-1.0.3:1.0 )
 	introspection? ( >=dev-libs/gobject-introspection-1.32.0 )
+	libsecret? ( app-crypt/libsecret )
 	spell? ( >=app-text/enchant-0.22:= )
 	webgl? (
 		virtual/opengl
 		x11-libs/libXcomposite
 		x11-libs/libXdamage )
 "
+
 # paxctl needed for bug #407085
+# Need real bison, not yacc
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	dev-lang/perl
@@ -76,7 +78,6 @@ DEPEND="${RDEPEND}
 		x11-themes/hicolor-icon-theme
 		jit? ( sys-apps/paxctl ) )
 "
-# Need real bison, not yacc
 
 S="${WORKDIR}/${MY_P}"
 
@@ -157,9 +158,6 @@ src_prepare() {
 	# garbage collection test fails intermittently if icedtea-web is installed, bug #????
 	epatch "${FILESDIR}/${PN}-1.7.90-test_garbage_collection.patch"
 
-	# Fix linking with harfbuzz-0.9.18; in 2.1.x
-	epatch "${FILESDIR}/${PN}-2.0.2-harfbuzz-0.9.18.patch"
-
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC
 
@@ -180,14 +178,15 @@ src_configure() {
 	# https://bugs.webkit.org/show_bug.cgi?id=42070 , #301634
 	use ppc64 && append-flags "-mminimal-toc"
 
+	# Try to use less memory, bug #469942
+	append-ldflags "-Wl,--no-keep-memory"
+
 	local myconf
 	# TODO: Check Web Audio support
 	# TODO: There's 3 acceleration backends: opengl, egl and gles2
 	# should somehow let user select between them?
 	#
 	# * dependency-tracking is required so parallel builds won't fail
-	# * libsecret dep was made optional for compatibility with Windows, not sure
-	# if we really want to make credential storage optional
 	myconf="
 		$(use_enable coverage)
 		$(use_enable debug)
@@ -196,12 +195,12 @@ src_configure() {
 		$(use_enable introspection)
 		$(use_enable gstreamer video)
 		$(use_enable jit)
+		$(use_enable libsecret credential_storage)
 		$(use_enable webgl)
 		--disable-egl
 		--disable-gles2
 		--with-gtk=3.0
 		--enable-accelerated-compositing
-		--enable-credential_storage
 		--enable-dependency-tracking
 		--disable-gtk-doc
 		"$(usex aqua "--with-font-backend=pango --with-target=quartz" "")
@@ -216,11 +215,11 @@ src_configure() {
 	econf ${myconf}
 }
 
-src_compile() {
+#src_compile() {
 	# Avoid parallel make failure with -j9, bug #????
-	emake DerivedSources/WebCore/JSNode.h
-	default
-}
+#	emake DerivedSources/WebCore/JSNode.h
+#	default
+#}
 
 src_test() {
 	# Tests expect an out-of-source build in WebKitBuild
