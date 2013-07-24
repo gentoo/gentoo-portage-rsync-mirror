@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=ssl? ( dev-libs/libgcrypt net-libs/gnutls ) test? ( ssl? ( >=net-misc/curl-7.25.0-r1[ssl] ) )
+DESCRIPTION=A small C library that makes it easy to run an HTTP server as part of another application.
+EAPI=5
+HOMEPAGE=http://www.gnu.org/software/libmicrohttpd/
+IUSE=messages ssl static-libs test
+KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=ssl? ( dev-libs/libgcrypt net-libs/gnutls )
+SLOT=0
+SRC_URI=mirror://gnu/libmicrohttpd/libmicrohttpd-0.9.28.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=dfb392d210e4d94726fe6506476685f0

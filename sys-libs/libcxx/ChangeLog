@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.26 2013/07/24 01:01:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.27 2013/07/24 01:05:39 aballier Exp $
+
+  24 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild:
+  expose libcxxrt headers in the libcxx tree as upstream does
 
   24 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild:
   fix typo in comment

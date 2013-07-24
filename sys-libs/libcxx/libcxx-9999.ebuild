@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.18 2013/07/24 01:01:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.19 2013/07/24 01:05:39 aballier Exp $
 
 EAPI=5
 
@@ -45,6 +45,7 @@ src_configure() {
 	if use libcxxrt ; then
 		append-cppflags -DLIBCXXRT "-I${EPREFIX}/usr/include/libcxxrt/"
 		LIBS="-lcxxrt ${LIBS}"
+		cp "${EPREFIX}/usr/include/libcxxrt/"*.h "${S}/include"
 	else
 		# Very hackish, see $HOMEPAGE
 		# If someone has a clever idea, please share it!

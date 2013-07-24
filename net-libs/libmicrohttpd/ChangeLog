@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.38 2013/07/20 15:34:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.39 2013/07/24 01:16:19 blueness Exp $
+
+*libmicrohttpd-0.9.28 (24 Jul 2013)
+
+  24 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/libmicrohttpd-0.9.28-fix-no-messages.patch,
+  +libmicrohttpd-0.9.28.ebuild:
+  Version bump
 
   20 Jul 2013; Jeroen Roovers <jer@gentoo.org> libmicrohttpd-0.9.27.ebuild:
   Marked ~hppa too.
