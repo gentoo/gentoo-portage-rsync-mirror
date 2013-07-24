@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.186 2013/06/30 18:04:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.187 2013/07/24 15:16:24 miska Exp $
+
+*rpm-4.11.1 (24 Jul 2013)
+
+  24 Jul 2013; Michal Hrusecky <miska@gentoo.org> +rpm-4.11.1.ebuild,
+  -files/rpm-4.10.2-autotools.patch, -rpm-4.10.2.ebuild:
+  version bump to latest, removing the oldest
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> rpm-4.11.0.1.ebuild:
   Stable for s390, wrt bug #471456

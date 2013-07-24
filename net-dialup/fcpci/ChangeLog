@@ -1,6 +1,18 @@
 # ChangeLog for net-dialup/fcpci
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.25 2013/07/21 09:04:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.26 2013/07/24 15:13:41 pinkbyte Exp $
+
+*fcpci-0.1-r3 (24 Jul 2013)
+
+  24 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> -fcpci-0.1-r2.ebuild,
+  +fcpci-0.1-r3.ebuild, -files/fcpci-linux-2.6.34.diff,
+  +files/fcpci-kernel-2.6.34.patch, +files/kernel-2.6.34.patch,
+  +files/fcpci-kernel-2.6.39-amd64.patch, +files/fcpci-kernel-2.6.39.patch,
+  +files/kernel-2.6.39.patch, +files/fcpci-kernel-3.2.0.patch,
+  +files/fcpci-kernel-3.4.0.patch, +files/fcpci-kernel-3.8.0.patch,
+  +files/fcpci-kernel-3.10.0.patch:
+  Revision bump: EAPI 5, epatch_user, add patches to support new kernels.
+  Patches are borrowed from dfreise overlay. Drop old revision
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799

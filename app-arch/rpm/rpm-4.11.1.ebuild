@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.10.2.ebuild,v 1.10 2013/02/08 14:46:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.11.1.ebuild,v 1.1 2013/07/24 15:16:24 miska Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils autotools flag-o-matic perl-module python versionator
+inherit eutils autotools flag-o-matic perl-module python-single-r1 versionator
 
 DESCRIPTION="Red Hat Package Management Utils"
 HOMEPAGE="http://www.rpm.org"
@@ -14,7 +14,7 @@ SRC_URI="http://rpm.org/releases/rpm-$(get_version_component_range 1-2).x/${P}.t
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 IUSE="nls python doc caps lua acl selinux"
 
@@ -28,7 +28,7 @@ RDEPEND="!app-arch/rpm5
 	virtual/libintl
 	>=dev-lang/perl-5.8.8
 	dev-libs/nss
-	python? ( >=dev-lang/python-2.3 )
+	python? ( ${PYTHON_DEPS} )
 	nls? ( virtual/libintl )
 	lua? ( >=dev-lang/lua-5.1.0[deprecated] )
 	acl? ( virtual/acl )
@@ -39,14 +39,13 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+"
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${P}-autotools.patch \
+		"${FILESDIR}"/${PN}-4.11.0-autotools.patch \
 		"${FILESDIR}"/${PN}-4.8.1-db-path.patch \
 		"${FILESDIR}"/${PN}-4.9.1.2-libdir.patch
 
@@ -60,9 +59,11 @@ src_prepare() {
 }
 
 src_configure() {
+	append-cppflags -I"${EPREFIX}/usr/include/nss" -I"${EPREFIX}/usr/include/nspr"
 	econf \
 		--without-selinux \
 		--with-external-db \
+		--without-beecrypt \
 		$(use_enable python) \
 		$(use_with doc hackingdocs) \
 		$(use_enable nls) \
@@ -79,7 +80,7 @@ src_install() {
 	default
 
 	# remove la files
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 
 	mv "${ED}"/bin/rpm "${ED}"/usr/bin
 	rmdir "${ED}"/bin
@@ -114,10 +115,4 @@ pkg_postinst() {
 		einfo "No RPM database found... Creating database..."
 		"${EROOT}"/usr/bin/rpmdb --initdb --root="${EROOT}"
 	fi
-
-	use python && python_mod_optimize rpm
-}
-
-pkg_postrm() {
-	use python && python_mod_cleanup rpm
 }
