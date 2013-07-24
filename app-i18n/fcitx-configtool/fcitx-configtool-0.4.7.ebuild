@@ -1,32 +1,30 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.4-r1.ebuild,v 1.1 2012/07/19 09:07:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.7.ebuild,v 1.1 2013/07/24 10:32:22 yngwin Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="A GTK+ GUI to edit fcitx settings"
-HOMEPAGE="http://fcitx.googlecode.com/"
-SRC_URI="${HOMEPAGE}files/${P}.tar.xz"
+DESCRIPTION="A GTK+ GUI configuration tool for fcitx"
+HOMEPAGE="http://fcitx-im.org/"
+SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+gtk gtk3"
+IUSE="gtk +gtk3"
 REQUIRED_USE="|| ( gtk gtk3 )"
 
-RDEPEND=">=app-i18n/fcitx-4.2.4
+RDEPEND=">=app-i18n/fcitx-4.2.8
 	dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3	)"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
 	app-text/iso-codes
 	dev-libs/libunique:1
 	dev-util/intltool
-	virtual/pkgconfig
-	sys-devel/gettext"
+	virtual/pkgconfig"
 
 src_configure() {
 	local mycmakeargs="
