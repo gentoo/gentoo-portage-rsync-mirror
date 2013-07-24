@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.58 2013/02/22 17:13:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.59 2013/07/24 00:17:30 chithanh Exp $
+
+*imake-1.0.6 (24 Jul 2013)
+
+  24 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +imake-1.0.6.ebuild:
+  Version bump.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> imake-1.0.5.ebuild:
   Add ~arm-linux keyword.

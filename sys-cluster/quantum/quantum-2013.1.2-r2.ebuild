@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2013.1.2-r2.ebuild,v 1.1 2013/07/15 01:28:01 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2013.1.2-r2.ebuild,v 1.2 2013/07/24 00:28:42 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -44,6 +44,7 @@ RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
 		>=dev-python/kombu-1.0.4-r1[${PYTHON_USEDEP}]
 		dev-python/netaddr
+		=dev-python/pyparsing-1.5.7[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.2.0[${PYTHON_USEDEP}]
 		dev-python/python-novaclient[${PYTHON_USEDEP}]
 		>=dev-python/python-quantumclient-2.2.0[${PYTHON_USEDEP}]
@@ -54,7 +55,7 @@ RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/webob-1.2[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]
-		net-misc/openvswitch[${PYTHON_USEDEP}]"
+		net-misc/openvswitch"
 
 python_install() {
 	distutils-r1_python_install

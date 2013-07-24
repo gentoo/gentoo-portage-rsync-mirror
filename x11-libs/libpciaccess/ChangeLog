@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.87 2013/02/27 05:56:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.88 2013/07/24 00:16:37 chithanh Exp $
+
+*libpciaccess-0.13.2 (24 Jul 2013)
+
+  24 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libpciaccess-0.13.2.ebuild:
+  Version bump.
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> libpciaccess-0.13.1-r1.ebuild:
   Add ~arm-linux keyword.

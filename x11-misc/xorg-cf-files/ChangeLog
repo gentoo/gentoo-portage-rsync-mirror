@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.48 2013/05/28 21:17:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.49 2013/07/24 00:18:06 chithanh Exp $
+
+*xorg-cf-files-1.0.5 (24 Jul 2013)
+
+  24 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-cf-files-1.0.5.ebuild:
+  Version bump.
 
 *xorg-cf-files-1.0.4-r1 (28 May 2013)
 
