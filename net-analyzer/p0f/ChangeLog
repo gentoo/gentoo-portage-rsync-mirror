@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.51 2013/02/21 00:24:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.52 2013/07/24 12:23:00 jer Exp $
+
+*p0f-3.06_beta (24 Jul 2013)
+
+  24 Jul 2013; Jeroen Roovers <jer@gentoo.org> +p0f-3.06_beta.ebuild:
+  Version bump by Marcin Mirosław (bug #477982).
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> p0f-3.05_beta.ebuild:
   Add ~arm-linux keyword.
