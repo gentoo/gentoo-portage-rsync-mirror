@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2 dev-libs/gobject-introspection dev-libs/libgee:0 x11-libs/gtk+:3
 SLOT=0
 SRC_URI=http://launchpad.net/granite/0.x/0.1/+download/granite-0.1.0.tar.gz
-_eclasses_=cmake-utils	e40c43582b7ebe5daa0528b595603b29	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vala	aa890daf29e67d32e9bff8e12ef653ca
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vala	aa890daf29e67d32e9bff8e12ef653ca
 _md5_=8a5668f0fa5513e6cef82f4a29e1e2f3

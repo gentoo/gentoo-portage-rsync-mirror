@@ -10,5 +10,5 @@ RDEPEND=python_single_target_python2_6? ( dev-lang/python:2.6 ) python_single_ta
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=http://download.tuxfamily.org/hatari/1.6.1/hatari-1.6.1.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	e40c43582b7ebe5daa0528b595603b29	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	68315568b6b6ec436deb87db2cd36fe8	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	68315568b6b6ec436deb87db2cd36fe8	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=1eda07efa48e5ff010ba8e1fce0d50c8

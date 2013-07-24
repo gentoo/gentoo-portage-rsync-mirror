@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.99 2013/07/14 12:50:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.100 2013/07/24 20:57:38 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -531,7 +531,7 @@ ninja_src_make() {
 	fi
 }
 
-# @FUNCTION: make_src_make
+# @FUNCTION: emake_src_make
 # @INTERNAL
 # @DESCRIPTION:
 # Build the package using make generator

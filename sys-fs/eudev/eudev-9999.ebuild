@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.32 2013/07/24 17:09:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.33 2013/07/24 20:49:11 axs Exp $
 
 EAPI="5"
 
@@ -51,7 +51,6 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/udev-init-scripts-18"
 
 PDEPEND=">=virtual/udev-180
-	<virtual/udev-206
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 pkg_pretend()
