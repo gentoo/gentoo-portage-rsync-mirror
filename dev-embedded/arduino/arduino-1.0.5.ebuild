@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.5.ebuild,v 1.1 2013/06/13 09:45:41 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.5.ebuild,v 1.2 2013/07/24 09:23:53 ago Exp $
 
 EAPI=4
 JAVA_PKG_IUSE="doc examples"
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}-src.tar.gz
 mirror://gentoo/arduino-icons.tar.bz2"
 LICENSE="GPL-2 GPL-2+ LGPL-2 CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 RESTRICT="strip binchecks"
 IUSE=""
 
