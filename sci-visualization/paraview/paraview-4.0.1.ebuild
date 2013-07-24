@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.0.1.ebuild,v 1.1 2013/07/01 23:33:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.0.1.ebuild,v 1.2 2013/07/24 11:16:23 hasufell Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="boost cg coprocessing development doc examples ffmpeg mpi mysql nvcontrol plugins python qt4 sqlite tcl test tk"
 
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )
+	mysql? ( sqlite )" # "vtksqlite, needed by vtkIOSQL" and "vtkIOSQL, needed by vtkIOMySQL"
 
 RDEPEND="
 	dev-libs/expat
@@ -148,6 +149,8 @@ src_configure() {
 		-DVTK_USE_FFMPEG_ENCODER=OFF
 		-DPROTOC_LOCATION=$(type -P protoc)
 		-DVTK_Group_StandAlone=ON
+		-DMYSQL_INCLUDE_DIRECTORIES="$(usex mysql "$(mysql_config --variable=pkgincludedir)" "")"
+		-DMYSQL_LIBRARY="$(usex mysql "$(mysql_config --variable=pkglibdir)/libmysqlclient.so" "")"
 		# force this module due to incorrect build system deps
 		# wrt bug 460528
 		-DModule_vtkUtilitiesProcessXML=ON
@@ -185,7 +188,7 @@ src_configure() {
 		$(cmake-utils_use python Module_Twisted)
 		$(cmake-utils_use python Module_ZopeInterface)
 		$(cmake-utils_use python Module_vtkmpi4py)
-		$(cmake-utils_use python Module_pqPython)
+		$(usex qt4 "$(cmake-utils_use python Module_pqPython)" "-DModule_pqPython=OFF")
 		$(cmake-utils_use doc BUILD_DOCUMENTATION)
 		$(cmake-utils_use doc PARAVIEW_BUILD_WEB_DOCUMENTATION)
 		$(cmake-utils_use examples BUILD_EXAMPLES)
