@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/spellutils-0.7.ebuild,v 1.12 2013/07/24 02:24:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/spellutils-0.7.ebuild,v 1.13 2013/07/24 02:46:56 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -15,9 +15,11 @@ KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa amd64"
 IUSE="nls"
 
 DEPEND="
-	nls? ( sys-devel/gettext)
+	nls? ( sys-devel/gettext )
 "
-DEPEND=""
+DEPEND="
+	nls? ( virtual/libintl )
+"
 
 DOCS=( NEWS README )
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-office/plan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.23 2012/12/26 13:52:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.24 2013/07/24 02:56:36 jer Exp $
 
   26 Dec 2012; Ulrich Müller <ulm@gentoo.org> plan-1.9-r1.ebuild:
   Fix LICENSE, bug 448646.
@@ -17,8 +17,7 @@
 
   12 Nov 2009; Markos Chandras <hwoarang@gentoo.org> -plan-1.9.ebuild,
   +plan-1.9-r1.ebuild, +files/ldflags.patch, +files/nostrip.patch:
-  Fix pre-stripped files issue ( bug 251868 ) and respect LDFLAGS. Remove
-  old
+  Fix pre-stripped files issue ( bug 251868 ) and respect LDFLAGS. Remove old
   ebuild
 
   29 Oct 2008; Jeroen Roovers <jer@gentoo.org> plan-1.9.ebuild:

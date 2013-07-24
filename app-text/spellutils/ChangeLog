@@ -1,6 +1,9 @@
 # ChangeLog for app-text/spellutils
 # Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/ChangeLog,v 1.14 2013/07/24 02:24:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/ChangeLog,v 1.15 2013/07/24 02:46:56 jer Exp $
+
+  24 Jul 2013; Jeroen Roovers <jer@gentoo.org> spellutils-0.7.ebuild:
+  Add missing dep.
 
   24 Jul 2013; Jeroen Roovers <jer@gentoo.org> spellutils-0.7.ebuild,
   +files/spellutils-0.7-nls.patch:

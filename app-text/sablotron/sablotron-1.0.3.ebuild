@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.3.ebuild,v 1.14 2010/05/25 15:33:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.3.ebuild,v 1.15 2013/07/24 02:34:53 jer Exp $
 
 EAPI="3"
 
@@ -28,6 +28,7 @@ PATCHES=( "${FILESDIR}/1.0.3-libsablot-expat.patch" )
 
 src_prepare() {
 	base_src_prepare
+	sed -i configure.in -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 	eautoreconf
 	elibtoolize
 }
