@@ -1,0 +1,19 @@
+commit f7bf081598dd58667751df0c1a3b601e095e6dfb
+Author: Andras Mantia <amantia@kde.org>
+Date:   Wed Jul 24 12:48:05 2013 +0300
+
+    Fix (again) Akonadi for PostgreSql.
+    (cherry picked from commit 5b606c460834d63cf2953137748b66834c9ddb55)
+
+diff --git a/server/src/storage/datastore.cpp b/server/src/storage/datastore.cpp
+index 553d963..41a0927 100644
+--- a/server/src/storage/datastore.cpp
++++ b/server/src/storage/datastore.cpp
+@@ -238,6 +238,7 @@ bool DataStore::doAppendItemsFlag( const PimItem::List &items, const Flag &flag,
+   QueryBuilder qb2( PimItemFlagRelation::tableName(), QueryBuilder::Insert );
+   qb2.setColumnValue( PimItemFlagRelation::leftColumn(), appendIds );
+   qb2.setColumnValue( PimItemFlagRelation::rightColumn(), flagIds );
++  qb2.setIdentificationColumn( QString() );
+   if ( !qb2.exec() ) {
+     akDebug() << "Failed to execute query:" << qb2.query().lastError();
+     return false;
