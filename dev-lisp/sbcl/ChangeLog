@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.191 2013/06/18 19:03:29 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.192 2013/07/24 13:47:55 grozin Exp $
+
+*sbcl-1.1.9 (24 Jul 2013)
+
+  24 Jul 2013; Andrey Grozin <grozin@gentoo.org> +sbcl-1.1.9.ebuild:
+  Version bump
 
 *sbcl-1.1.8 (18 Jun 2013)
 

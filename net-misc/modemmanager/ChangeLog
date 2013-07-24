@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.56 2013/07/24 05:40:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.57 2013/07/24 13:40:30 tetromino Exp $
+
+*modemmanager-1.0.0-r2 (24 Jul 2013)
+
+  24 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +modemmanager-1.0.0-r2.ebuild, +files/01-org.freedesktop.ModemManager1.rules:
+  Update plugdev polkit rules for modemmanager's dbus interface changes.
 
 *modemmanager-1.0.0-r1 (24 Jul 2013)
 
