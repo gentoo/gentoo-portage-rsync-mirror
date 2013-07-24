@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0.ebuild,v 1.1 2013/07/20 19:26:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0-r1.ebuild,v 1.1 2013/07/24 05:40:11 pacho Exp $
 
 EAPI="5"
-inherit eutils user multilib readme.gentoo toolchain-funcs udev virtualx
+inherit autotools eutils user multilib readme.gentoo toolchain-funcs udev virtualx
 
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="http://cgit.freedesktop.org/ModemManager/ModemManager/"
@@ -40,7 +40,14 @@ src_prepare() {
 			add your user account to the 'plugdev' group."
 	fi
 
+	# Fix dbus activation file generation, bug #477710
+	epatch "${FILESDIR}/${P}-dbus-generation.patch"
+
+	# Add logging to serial port open failures (from 1.0 branch)
+	epatch "${FILESDIR}/${P}-logging-serial.patch"
+
 	epatch_user
+	eautoreconf
 }
 
 src_configure() {

@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Net-SMTPS
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTPS/ChangeLog,v 1.1 2013/07/24 05:46:41 dev-zero Exp $
+
+*Net-SMTPS-0.30.0 (24 Jul 2013)
+
+  24 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> +Net-SMTPS-0.30.0.ebuild,
+  +metadata.xml:
+  Initial commit. Modern/maintained replacement for Net-SMTP-SSL, Net-SMTP-TLS
+  or Net-SMTP-TLS-ButMaintained.
