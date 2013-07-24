@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/fcitx-unikey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-unikey/ChangeLog,v 1.1 2013/01/31 14:21:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-unikey/ChangeLog,v 1.2 2013/07/24 14:31:00 yngwin Exp $
+
+*fcitx-unikey-0.2.2 (24 Jul 2013)
+
+  24 Jul 2013; Ben de Groot <yngwin@gentoo.org> +fcitx-unikey-0.2.2.ebuild:
+  Version bump
 
 *fcitx-unikey-0.2.0 (31 Jan 2013)
 

@@ -1,0 +1,13 @@
+DEFINED_PHASES=postinst setup
+DEPEND=>=virtual/udev-196[hwdb] || ( dev-lang/python:3.3 dev-lang/python:3.2 ) virtual/pkgconfig
+DESCRIPTION=A repository of data files describing media player capabilities
+EAPI=5
+HOMEPAGE=http://cgit.freedesktop.org/media-player-info/
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86
+LICENSE=BSD
+RDEPEND=>=virtual/udev-196[hwdb]
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=http://www.freedesktop.org/software/media-player-info/media-player-info-21.tar.gz
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	7ed4a8181d62a098eaa6c8eeacf190c9	python-utils-r1	68315568b6b6ec436deb87db2cd36fe8	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=f882ebce50e27e7f39d5367af0cf3fb2

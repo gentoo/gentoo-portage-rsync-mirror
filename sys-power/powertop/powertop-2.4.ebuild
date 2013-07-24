@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.3.ebuild,v 1.6 2013/07/24 14:09:16 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.4.ebuild,v 1.1 2013/07/24 14:09:16 zerochaos Exp $
 
 EAPI="5"
 
@@ -93,14 +93,6 @@ src_prepare() {
 src_configure() {
 	export ac_cv_search_delwin=$(usex unicode -lncursesw -lncurses)
 	default
-}
-
-src_compile() {
-	#maintainer note: there is no csstoh dir in this version, any needed changes for cross are permitted
-	# This fixes cross-compiling.  Please verify before deleting.
-	#emake -C src csstoh
-	#cp "${FILESDIR}"/csstoh src/ || die
-	emake
 }
 
 src_install() {

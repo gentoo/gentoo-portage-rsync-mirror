@@ -10,4 +10,4 @@ RDEPEND=>=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=me
 SLOT=0
 SRC_URI=http://spice-space.org/download/releases/spice-0.12.3.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	7ed4a8181d62a098eaa6c8eeacf190c9	python-utils-r1	68315568b6b6ec436deb87db2cd36fe8	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=f8952abaf9d76e4f9d7d519ebfa81698
+_md5_=7981030fd3eb60ed413e773fc4c73c0e

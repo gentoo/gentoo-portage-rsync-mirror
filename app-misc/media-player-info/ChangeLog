@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/media-player-info
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.25 2013/07/23 17:06:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.27 2013/07/24 14:22:27 tetromino Exp $
+
+  24 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  media-player-info-21.ebuild:
+  Forgot to add python dependency.
+
+*media-player-info-21 (24 Jul 2013)
+
+  24 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +media-player-info-21.ebuild:
+  Version bump, fixes build failure in non-utf8 locales (bug #477964, thanks to
+  Taahir Ahmed).
 
 *media-player-info-19 (23 Jul 2013)
 
