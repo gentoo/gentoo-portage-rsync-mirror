@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.2.ebuild,v 1.1 2013/06/09 11:00:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.2.ebuild,v 1.2 2013/07/24 19:20:51 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -49,21 +49,23 @@ DEPEND="${COMMON_DEPEND}
 	test? ( sys-apps/dbus )
 	vala? (
 		$(vala_depend)
-		>=net-libs/telepathy-glib-0.13.1[vala]
-		eds? ( >=gnome-extra/evolution-data-server-3.5.4:=[vala] ) )
+		eds? ( >=gnome-extra/evolution-data-server-3.8.1:=[vala] )
+		telepathy? ( >=net-libs/telepathy-glib-0.19[vala] )
+		zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14:=[vala] ) )
 "
 # the inspect tool requires --enable-vala
 REQUIRED_USE="utils? ( vala )"
 
 src_prepare() {
-	gnome2_src_prepare
 	use vala && vala_src_prepare
+	gnome2_src_prepare
 }
 
 src_configure() {
 	# Rebuilding docs needs valadoc, which has no release
 	gnome2_src_configure \
 		$(use_enable eds eds-backend) \
+		$(use_enable eds ofono-backend) \
 		$(use_enable socialweb libsocialweb-backend) \
 		$(use_enable telepathy telepathy-backend) \
 		$(use_enable tracker tracker-backend) \

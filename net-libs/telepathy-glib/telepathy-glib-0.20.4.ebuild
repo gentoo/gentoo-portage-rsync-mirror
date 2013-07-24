@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.20.2.ebuild,v 1.1 2013/04/06 20:21:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.20.4.ebuild,v 1.1 2013/07/24 19:02:01 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -16,12 +16,18 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="debug +introspection +vala"
-REQUIRED_USE="vala? ( introspection )"
 
-RDEPEND=">=dev-libs/glib-2.32.0:2
+IUSE="debug +introspection +vala"
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
+	vala? ( introspection )
+"
+
+RDEPEND="
+	>=dev-libs/glib-2.32.0:2
 	>=dev-libs/dbus-glib-0.90
-	introspection? ( >=dev-libs/gobject-introspection-1.30 )"
+	introspection? ( >=dev-libs/gobject-introspection-1.30 )
+"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/gtk-doc-am
@@ -32,7 +38,9 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	python_export_best
-	econf --disable-static \
+
+	econf \
+		--disable-static \
 		--disable-installed-tests \
 		$(use_enable debug backtrace) \
 		$(use_enable debug debug-cache) \
