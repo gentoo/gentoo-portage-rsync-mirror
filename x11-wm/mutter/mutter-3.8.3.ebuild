@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.3.ebuild,v 1.1 2013/06/09 18:58:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.3.ebuild,v 1.2 2013/07/24 22:49:57 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -38,13 +38,14 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
-	>=x11-libs/libXi-1.6.2
+	>=x11-libs/libXi-1.7
 
 	gnome-extra/zenity
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 "
 DEPEND="${COMMON_DEPEND}
+	>=dev-util/gtk-doc-am-1.15
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
 	virtual/pkgconfig
