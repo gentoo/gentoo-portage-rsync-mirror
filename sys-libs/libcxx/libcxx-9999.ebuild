@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.16 2013/07/03 21:52:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.18 2013/07/24 01:01:27 aballier Exp $
 
 EAPI=5
 
@@ -76,33 +76,45 @@ multilib_src_test() {
 		./testit || die
 }
 
+# Usage: deps
+gen_ldscript() {
+	local output_format
+	output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
+	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
+
+	cat <<-END_LDSCRIPT
+/* GNU ld script
+   Include missing dependencies
+*/
+${output_format}
+GROUP ( $@ )
+END_LDSCRIPT
+}
+
 gen_static_ldscript() {
 	if use libcxxrt ; then
 		# Move it first.
-		mv "${D}/${EPREFIX}/usr/$(get_libdir)/libc++.a"	"${D}/${EPREFIX}/usr/$(get_libdir)/libc++_static.a" || die
+		mv "${ED}/usr/$(get_libdir)/libc++.a" "${ED}/usr/$(get_libdir)/libc++_static.a" || die
 
 		# Generate libc++.a ldscript for inclusion of its dependencies so that
 		# clang++ -stdlib=libc++ -static works out of the box.
-		# Taken from toolchain-funcs.eclass:
-		local output_format
-		output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
-		[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
-
 		local deps="${EPREFIX}/usr/$(get_libdir)/libc++_static.a ${EPREFIX}/usr/$(get_libdir)/libcxxrt.a"
 		# On Linux/glibc it does not link without libpthread or libdl. It is
 		# fine on FreeBSD.
 		use elibc_glibc && deps="${deps} ${EPREFIX}/usr/$(get_libdir)/libpthread.a ${EPREFIX}/usr/$(get_libdir)/libdl.a"
 
-		cat > "${D}/${EPREFIX}/usr/$(get_libdir)/libc++.a" <<-END_LDSCRIPT
-/* GNU ld script
-   Include libc++.a dependencies for 'clang++ -stdlib=libc++ -static' to work
-   out of the box.
- */
-${output_format}
-GROUP ( ${deps} )
-END_LDSCRIPT
+		gen_ldscript "${deps}" > "${ED}/usr/$(get_libdir)/libc++.a"
 	fi
 	# TODO: Generate a libc++.a ldscript when building against libsupc++
+}
+
+gen_shared_ldscript() {
+	if use libcxxrt ; then
+		mv "${ED}/usr/$(get_libdir)/libc++.so" "${ED}/usr/$(get_libdir)/libc++_shared.so" || die
+		local deps="${EPREFIX}/usr/$(get_libdir)/libc++_shared.so ${EPREFIX}/usr/$(get_libdir)/libcxxrt.so"
+		gen_ldscript "${deps}" > "${ED}/usr/$(get_libdir)/libc++.so"
+	fi
+	# TODO: Generate the linker script for other confiurations too.
 }
 
 multilib_src_install() {
@@ -112,6 +124,7 @@ multilib_src_install() {
 		gen_static_ldscript
 	fi
 	dolib.so libc++.so*
+	gen_shared_ldscript
 }
 
 multilib_src_install_all() {
