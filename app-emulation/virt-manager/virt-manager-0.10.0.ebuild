@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.7 2013/07/05 19:01:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.8 2013/07/24 15:38:22 cardoe Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ IUSE="gnome-keyring policykit sasl"
 RDEPEND="!app-emulation/virtinst
 	x11-libs/gtk+:3[introspection]
 	>=app-emulation/libvirt-0.7.0[python,${PYTHON_USEDEP}]
-	>=app-emulation/libvirt-glib-0.0.9
+	>=app-emulation/libvirt-glib-0.0.9[introspection,python,${PYTHON_USEDEP}]
 	${PYTHON_DEPS}
 	dev-libs/libxml2[python,${PYTHON_USEDEP}]
 	dev-python/ipaddr[${PYTHON_USEDEP}]

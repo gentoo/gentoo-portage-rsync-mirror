@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/pybitmessage-9999.ebuild,v 1.1 2013/07/22 22:02:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/pybitmessage-9999.ebuild,v 1.2 2013/07/24 15:57:27 hasufell Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
-inherit python-r1 git-2
+inherit eutils python-r1 gnome2-utils git-2
 
 DESCRIPTION="P2P communications protocol"
 HOMEPAGE="https://bitmessage.org"
@@ -51,5 +51,22 @@ src_install () {
 
 	python_foreach_impl install_python
 
-	dodoc README.md debian/changelog
+	nonfatal dodoc README.md debian/changelog
+	nonfatal doman man/*
+
+	nonfatal newicon -s 24 desktop/icon24.png ${PN}.png
+	nonfatal newicon -s scalable desktop/can-icon.svg ${PN}.svg
+	nonfatal domenu desktop/${PN}.desktop
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
