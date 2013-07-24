@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.2.ebuild,v 1.1 2013/05/13 20:45:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.2.ebuild,v 1.2 2013/07/24 21:32:44 eva Exp $
 
 EAPI="5"
+
 inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
 
 DESCRIPTION="Gimp ToolKit +"
@@ -41,9 +42,9 @@ COMMON_DEPEND="
 		xinerama? ( x11-libs/libXinerama )
 	)
 	wayland? (
-		>=dev-libs/wayland-1.0.0
+		>=dev-libs/wayland-1.0
 		media-libs/mesa[wayland]
-		>=x11-libs/libxkbcommon-0.2.0
+		>=x11-libs/libxkbcommon-0.2
 	)
 	>=dev-libs/glib-2.35.3:2
 	>=x11-libs/pango-1.32.4[introspection?]
@@ -133,29 +134,30 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="$(use_enable aqua quartz-backend)
-		$(use_enable colord)
-		$(use_enable cups cups auto)
-		$(use_enable introspection)
-		$(use_enable packagekit)
-		$(use_enable wayland wayland-backend)
-		$(use_enable X x11-backend)
-		$(use_enable X xcomposite)
-		$(use_enable X xdamage)
-		$(use_enable X xfixes)
-		$(use_enable X xkb)
-		$(use_enable X xrandr)
-		$(use_enable xinerama)
-		--disable-papi
-		--enable-man
-		--enable-gtk2-dependency"
-
 	# Passing --disable-debug is not recommended for production use
-	use debug && myconf="${myconf} --enable-debug=yes"
-
 	# need libdir here to avoid a double slash in a path that libtool doesn't
 	# grok so well during install (// between $EPREFIX and usr ...)
-	econf --libdir="${EPREFIX}/usr/$(get_libdir)" ${myconf}
+	econf \
+		$(use_enable aqua quartz-backend) \
+		$(use_enable colord) \
+		$(use_enable cups cups auto) \
+		$(usex debug --enable-debug=yes "") \
+		$(use_enable introspection) \
+		$(use_enable packagekit) \
+		$(use_enable wayland wayland-backend) \
+		$(use_enable X x11-backend) \
+		$(use_enable X xcomposite) \
+		$(use_enable X xdamage) \
+		$(use_enable X xfixes) \
+		$(use_enable X xkb) \
+		$(use_enable X xrandr) \
+		$(use_enable xinerama) \
+		--disable-gtk-doc \
+		--disable-papi \
+		--enable-man \
+		--enable-gtk2-dependency \
+		--with-xml-catalog="${EPREFIX}"/etc/xml/catalog \
+		--libdir="${EPREFIX}/usr/$(get_libdir)"
 }
 
 src_test() {
