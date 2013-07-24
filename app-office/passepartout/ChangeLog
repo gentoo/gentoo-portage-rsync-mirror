@@ -1,6 +1,11 @@
 # ChangeLog for app-office/passepartout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.21 2013/07/24 01:32:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.22 2013/07/24 02:04:23 jer Exp $
+
+*passepartout-0.7.0-r1 (24 Jul 2013)
+
+  24 Jul 2013; Jeroen Roovers <jer@gentoo.org> +passepartout-0.7.0-r1.ebuild:
+  Fix docdir. Fix desktop file.
 
   24 Jul 2013; Jeroen Roovers <jer@gentoo.org>
   +files/passepartout-0.7.0-automake-1.13.patch, passepartout-0.7.0.ebuild:

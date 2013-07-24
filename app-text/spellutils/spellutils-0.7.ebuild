@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/spellutils-0.7.ebuild,v 1.11 2009/01/03 15:37:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/spellutils-0.7.ebuild,v 1.12 2013/07/24 02:24:17 jer Exp $
 
-inherit toolchain-funcs
+EAPI=5
+inherit eutils toolchain-funcs
 
 DESCRIPTION="spellutils includes 'newsbody' (useful for spellchecking in mails, etc.)"
 HOMEPAGE="http://home.worldonline.dk/byrial/spellutils/"
@@ -13,12 +14,21 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa amd64"
 IUSE="nls"
 
-src_compile() {
-	econf $(use_enable nls)
-	emake CC="$(tc-getCC)" || die "emake failed"
+DEPEND="
+	nls? ( sys-devel/gettext)
+"
+DEPEND=""
+
+DOCS=( NEWS README )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nls.patch
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc NEWS README
+src_configure() {
+	econf $(use_enable nls)
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.243 2013/07/23 18:14:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.244 2013/07/24 02:12:48 patrick Exp $
+
+  24 Jul 2013; Patrick Lauer <patrick@gentoo.org> icu-51.2.ebuild:
+  QA: Rekeywording for ~amd64-fbsd as all old versions were punted and #454796
+  claims to be fixed
 
 *icu-51.2 (23 Jul 2013)
 
