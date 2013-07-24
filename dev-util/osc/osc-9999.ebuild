@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.12 2013/05/29 14:33:49 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.13 2013/07/24 17:40:50 miska Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ PDEPEND="${DEPEND}
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-out-of-tree-build.patch
+	epatch "${FILESDIR}"/${PN}-0.139.2-out-of-tree-build.patch
 	distutils-r1_src_prepare
 }
 
