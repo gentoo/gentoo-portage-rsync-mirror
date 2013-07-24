@@ -1,0 +1,11 @@
+# ChangeLog for app-vim/syntastic
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/syntastic/ChangeLog,v 1.1 2013/07/24 08:12:23 radhermit Exp $
+
+*syntastic-9999 (24 Jul 2013)
+*syntastic-3.0.0 (24 Jul 2013)
+
+  24 Jul 2013; Tim Harder <radhermit@gentoo.org> +syntastic-3.0.0.ebuild,
+  +syntastic-9999.ebuild, +metadata.xml:
+  Initial import (bug #450946 by Rustam Karimov).
+

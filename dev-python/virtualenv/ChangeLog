@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.86 2013/06/04 01:59:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.89 2013/07/24 08:04:32 djc Exp $
+
+  24 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> -virtualenv-1.8.2.ebuild,
+  -virtualenv-1.8.4.ebuild, -virtualenv-1.9.1.ebuild:
+  Remove old versions.
+
+  24 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> virtualenv-1.10.ebuild:
+  Remove unused patches.
+
+*virtualenv-1.10 (24 Jul 2013)
+
+  24 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> +virtualenv-1.10.ebuild:
+  Version bump virtualenv to 1.10.
 
   04 Jun 2013; Tim Harder <radhermit@gentoo.org> virtualenv-1.9.1-r1.ebuild:
   Use multiline PATCHES array and drop unnecessary directory argument for

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-4.0.0.ebuild,v 1.2 2013/07/23 22:58:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-4.0.0-r1.ebuild,v 1.1 2013/07/24 08:18:39 chithanh Exp $
 
 EAPI="4"
 
@@ -126,7 +126,7 @@ src_install () {
 			use java || { rm javafilter.desktop; continue; }
 		fi
 		mv ${desk}.desktop ${NM}-${desk}.desktop
-		sed -i -e 's/${NM2} /ooffice /g' ${NM}-${desk}.desktop || die
+		sed -i -e "s/${NM2} /ooffice /g" ${NM}-${desk}.desktop || die
 		domenu ${NM}-${desk}.desktop
 	done
 	insinto /usr/share
