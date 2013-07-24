@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2-r2.ebuild,v 1.1 2013/02/10 11:02:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2-r2.ebuild,v 1.2 2013/07/24 17:09:41 axs Exp $
 
 EAPI=5
 
@@ -53,6 +53,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/udev-init-scripts-18"
 
 PDEPEND=">=virtual/udev-180
+	<virtual/udev-200
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 udev_check_KV()
