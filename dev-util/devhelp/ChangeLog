@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.154 2013/06/30 16:41:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.155 2013/07/25 18:39:56 pacho Exp $
+
+  25 Jul 2013; Pacho Ramos <pacho@gentoo.org> devhelp-3.8.2.ebuild:
+  Fix python dependencies, this needs python3 (thanks to jlec for reporting on
+  IRC)
 
   30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org> devhelp-3.8.2.ebuild:
   Fix gtk+ dependency from libgd and add missing python required USE.
