@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.9.ebuild,v 1.1 2013/06/05 00:28:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.9.ebuild,v 1.2 2013/07/25 22:01:08 pinkbyte Exp $
 
 EAPI=5
 
@@ -25,12 +25,12 @@ RDEPEND="app-i18n/opencc
 DEPEND="${RDEPEND}
 	test? ( dev-cpp/gtest )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-test.patch
-	epatch "${FILESDIR}"/${PN}-dictionary.patch
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-test.patch"
+	"${FILESDIR}/${PN}-dictionary.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(

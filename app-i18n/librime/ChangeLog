@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/librime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.6 2013/02/05 10:25:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.7 2013/07/25 22:01:08 pinkbyte Exp $
+
+  25 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> librime-0.9.9.ebuild:
+  QA: utilize default src_prepare from cmake-utils eclass
 
 *librime-0.9.8 (05 Feb 2013)
 

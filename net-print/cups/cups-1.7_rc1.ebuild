@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7_rc1.ebuild,v 1.2 2013/07/12 20:02:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7_rc1.ebuild,v 1.3 2013/07/25 22:14:53 mgorny Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="python? 2:2.5"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python user versionator java-pkg-opt-2 systemd
+inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info \
+	multilib pam python-single-r1 user versionator java-pkg-opt-2 systemd
 
 MY_P=${P/_rc/rc}
 MY_P=${MY_P/_beta/b}
@@ -51,6 +52,7 @@ RDEPEND="
 	kerberos? ( virtual/krb5 )
 	!lprng-compat? ( !net-print/lprng )
 	pam? ( virtual/pam )
+	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-cups )
 	ssl? (
 		gnutls? (
@@ -76,7 +78,8 @@ PDEPEND="
 	filters? ( net-print/foomatic-filters )
 "
 
-REQUIRED_USE="gnutls? ( ssl )"
+REQUIRED_USE="gnutls? ( ssl )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 # upstream includes an interactive test which is a nono for gentoo
 RESTRICT="test"
@@ -96,11 +99,7 @@ pkg_setup() {
 	enewuser lp -1 -1 -1 lp
 	enewgroup lpadmin 106
 
-	# python 3 is no-go
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use python && python-single-r1_pkg_setup
 
 	if use kernel_linux; then
 		linux-info_pkg_setup
@@ -187,7 +186,7 @@ src_configure() {
 		$(use_with java) \
 		--without-perl \
 		--without-php \
-		$(use_with python) \
+		$(use_with python python "${PYTHON}") \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
 		--with-systemdsystemunitdir="$(systemd_get_unitdir)" \
