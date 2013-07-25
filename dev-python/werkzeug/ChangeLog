@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.40 2013/06/27 00:48:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.41 2013/07/25 05:37:46 patrick Exp $
+
+*werkzeug-0.9.2 (25 Jul 2013)
+
+  25 Jul 2013; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.9.2.ebuild:
+  Bump
 
   27 Jun 2013; Mike Gilbert <floppym@gentoo.org> werkzeug-0.9.1.ebuild:
   Drop lxml test dep and enable pypy, thanks Arfrever.
