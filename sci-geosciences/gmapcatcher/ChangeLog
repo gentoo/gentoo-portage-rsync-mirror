@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gmapcatcher
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmapcatcher/ChangeLog,v 1.1 2013/07/25 02:04:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmapcatcher/ChangeLog,v 1.2 2013/07/25 14:46:26 mrueg Exp $
+
+  25 Jul 2013; Manuel Rüger <mrueg@gentoo.org> gmapcatcher-0.8.0.4.ebuild:
+  Change dep to virtual/python-imaging. Fixes bug #478088
 
 *gmapcatcher-0.8.0.4 (25 Jul 2013)
 

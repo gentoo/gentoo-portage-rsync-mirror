@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmapcatcher/gmapcatcher-0.8.0.4.ebuild,v 1.1 2013/07/25 02:04:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmapcatcher/gmapcatcher-0.8.0.4.ebuild,v 1.2 2013/07/25 14:46:26 mrueg Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/gtk+:2
 	dev-python/pygtk[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/pycairo[${PYTHON_USEDEP}]
-	dev-python/imaging[${PYTHON_USEDEP}]"
+	virtual/python-imaging[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/mapcatcher-${PV}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.1.0.2.ebuild,v 1.2 2013/07/11 09:05:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.1.0.4.ebuild,v 1.1 2013/07/25 14:50:29 scarabeus Exp $
 
 EAPI=4
 
@@ -27,13 +27,13 @@ ss st sw_TZ ta te th tn ts tt uz ve xh zu"
 for lang in ${LANGUAGES_HELP}; do
 	helppack=""
 	[[ ${lang} == en ]] && lang2=${lang/en/en_US} || lang2=${lang}
-	helppack="offlinehelp? ( ${BASE_SRC_URI}/x86/LibreOffice_${PV}.0_Linux_x86_rpm_helppack_${lang2/_/-}.tar.gz )"
+	helppack="offlinehelp? ( ${BASE_SRC_URI}/x86/LibreOffice_${PV}_Linux_x86_rpm_helppack_${lang2/_/-}.tar.gz )"
 	SRC_URI+=" linguas_${lang}? ( ${helppack} )"
 done
 for lang in ${LANGUAGES}; do
 	langpack=""
 	[[ ${lang} == en ]] \
-		|| langpack="${BASE_SRC_URI}/x86/LibreOffice_${PV}.0_Linux_x86_rpm_langpack_${lang/_/-}.tar.gz"
+		|| langpack="${BASE_SRC_URI}/x86/LibreOffice_${PV}_Linux_x86_rpm_langpack_${lang/_/-}.tar.gz"
 	[[ -z ${langpack} ]] || SRC_URI+=" linguas_${lang}? ( ${langpack} )"
 	IUSE+=" linguas_${lang}"
 done
@@ -59,7 +59,7 @@ src_unpack() {
 
 		# for english we provide just helppack, as translation is always there
 		if [[ ${lang} != en ]]; then
-			rpmdir="LibreOffice_${PV}.0_Linux_x86_rpm_langpack_${dir}/RPMS/"
+			rpmdir="LibreOffice_${PV}_Linux_x86_rpm_langpack_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			# First remove dictionaries, we want to use system ones.
 			rm -rf "${S}/${rpmdir}/"*dict*.rpm
@@ -67,7 +67,7 @@ src_unpack() {
 		fi
 		if [[ "${LANGUAGES_HELP}" =~ "${lang}" ]] && use offlinehelp; then
 			[[ ${lang} == en ]] && dir="en-US"
-			rpmdir="LibreOffice_${PV}.0_Linux_x86_rpm_helppack_${dir}/RPMS/"
+			rpmdir="LibreOffice_${PV}_Linux_x86_rpm_helppack_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			rpm_unpack ./"${rpmdir}/"*.rpm
 		fi
