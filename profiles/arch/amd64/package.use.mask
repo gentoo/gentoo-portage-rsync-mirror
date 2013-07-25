@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.168 2013/07/22 07:19:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.169 2013/07/25 11:57:09 jer Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -161,8 +161,8 @@ media-libs/mesa -llvm
 # due to lack of atomic ops, bug 325185
 www-client/firefox -ipc
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)$
-# x86 platforms works$
+# Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)
+# x86 platforms works
 sys-power/pm-utils -video_cards_intel -video_cards_radeon
 
 # Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)

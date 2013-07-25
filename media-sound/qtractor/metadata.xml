@@ -4,7 +4,6 @@
   <herd>proaudio</herd>
   <use>
     <flag name="dssi">Enable support for DSSI Soft Synth Interface</flag>
-	<flag name="suil">Enable LV2 Plug-in UI instantiation support via <pkg>media-libs/suil</pkg>.</flag>
     <flag name="rubberband">Enable support for in-place audio clip pitch-shifting through the rubberband library</flag>
   </use>
 </pkgmetadata>

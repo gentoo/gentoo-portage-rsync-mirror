@@ -3456,7 +3456,6 @@ media-sound/qmmp:tray - Build tray icon
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
-media-sound/qtractor:suil - Enable LV2 Plug-in UI instantiation support via media-libs/suil.
 media-sound/qtscrobbler:cli - Build commandline client
 media-sound/quark:gnome - Provides tray-icon and enables gconf support
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers

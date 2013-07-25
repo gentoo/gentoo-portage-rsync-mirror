@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.9 2013/05/12 15:52:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.10 2013/07/25 11:50:21 dilfridge Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2
 		http://dev.gentoo.org/~dilfridge/distfiles/${P}-avahi.patch.bz2
 	"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="~m68k ~s390"
 else
 	inherit subversion
 	ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
