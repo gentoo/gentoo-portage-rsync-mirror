@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/rime-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.7 2013/02/05 10:53:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.8 2013/07/25 21:50:46 pinkbyte Exp $
+
+  25 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> -rime-data-0.18.ebuild,
+  -files/Makefile:
+  Drop old version, wrt bug #478022, thanks to Dennis 'dlan' Lan <dennis.yxun
+  AT gmail.com>
 
   05 Feb 2013; Ben de Groot <yngwin@gentoo.org> -rime-data-0.9.6.ebuild:
   remove old

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.3.0.ebuild,v 1.4 2013/06/05 10:38:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.3.0.ebuild,v 1.5 2013/07/25 21:48:34 johu Exp $
 
 EAPI=5
 
@@ -32,7 +32,10 @@ DEPEND="
 		dev-libs/qoauth
 	)
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	$(add_kdebase_dep keditbookmarks)
+"
 
 src_prepare() {
 	# KDE_LINGUAS is also used to install appropriate handbooks

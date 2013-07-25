@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.94 2013/05/13 20:48:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.95 2013/07/25 21:39:02 eva Exp $
+
+  25 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> libgweather-3.8.2.ebuild:
+  Raise gtk-doc-am dependency per configure. changelog & configure states that
+  it is not using libsoup-gnome at all anymore.
 
 *libgweather-3.8.2 (13 May 2013)
 
