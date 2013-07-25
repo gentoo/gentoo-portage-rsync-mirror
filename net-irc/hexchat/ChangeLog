@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.66 2013/07/11 20:19:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.67 2013/07/25 02:15:57 mrueg Exp $
+
+  25 Jul 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Update name in metadata.xml as requested by Denis M. (Phr33d0m)
 
   11 Jul 2013; Julian Ospald <hasufell@gentoo.org> hexchat-2.9.5.ebuild,
   hexchat-2.9.5-r1.ebuild, hexchat-2.9.5_p20130525.ebuild:
