@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.131 2013/07/25 06:16:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.132 2013/07/25 17:17:39 pacho Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (25 Jul 2013)
 # Missing keywords, bug #444688
 >=gnome-base/gnome-control-center-3.8 cups
+>=gnome-base/gnome-core-apps-3.8 cups
+>=gnome-base/gnome-3.8 cups
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords pending, bug #476710

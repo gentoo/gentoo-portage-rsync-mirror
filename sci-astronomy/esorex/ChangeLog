@@ -1,6 +1,18 @@
 # ChangeLog for sci-astronomy/esorex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/ChangeLog,v 1.9 2013/06/11 17:43:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/ChangeLog,v 1.10 2013/07/25 17:26:47 bicatali Exp $
+
+*esorex-3.10-r1 (25 Jul 2013)
+
+  25 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +esorex-3.10-r1.ebuild,
+  +files/esorex-3.10-fix-autotools.patch,
+  +files/esorex-3.10-fix_format_strings.patch,
+  +files/esorex-3.10-generate-manpage.patch,
+  +files/esorex-3.10-remove-empty-configdir.patch,
+  +files/esorex-3.10-remove-private-ltdl.patch,
+  +files/esorex-3.10-set-default-plugin-path.patch:
+  Add patches from Debian to use system libtool, respect proper directory, and a
+  man page
 
   11 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -esorex-3.9.6-r1.ebuild,
   -files/esorex-3.9.6-autoconf-26.patch,
