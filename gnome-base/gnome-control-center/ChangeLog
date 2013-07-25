@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.129 2013/06/09 19:12:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.130 2013/07/25 17:55:12 pacho Exp $
+
+*gnome-control-center-3.8.4.1 (25 Jul 2013)
+
+  25 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  +gnome-control-center-3.8.4.1.ebuild, -gnome-control-center-3.8.2.ebuild:
+  Version bump, disable kerberos optional patch as it looks to be broken until
+  we have a new one (#475526 by Paolo Stivanin), refix bash-completion dir using
+  eclass (#477390 by Alphat-PC), include epatch_user as eautoreconf will be
+  needed as much time as we carry the optional patches, be sure eautoreconf is
+  also run for egg-list-box stuff, ensure timedated.c and .h files are dropped
+  completely (upstream bug #704822). Drop old
 
 *gnome-control-center-3.8.3 (09 Jun 2013)
 

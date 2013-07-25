@@ -1,19 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.2.ebuild,v 1.1 2013/05/14 20:56:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.4.1.ebuild,v 1.1 2013/07/25 17:55:12 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen
 
-inherit autotools eutils gnome2
+inherit autotools bash-completion-r1 eutils gnome2
 
-DESCRIPTION="GNOME Desktop Configuration Tool"
+DESCRIPTION="GNOME's main interface to configure various aspects of the desktop"
 HOMEPAGE="https://git.gnome.org/browse/gnome-control-center/"
 
 LICENSE="GPL-2+"
 SLOT="2"
-IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom kerberos modemmanager +socialweb systemd v4l"
+
+# kerberos optional patch is broken, bug #475526
+IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom modemmanager +socialweb systemd v4l" #kerberos
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 # False positives caused by nested configure scripts
@@ -21,13 +23,16 @@ QA_CONFIGURE_OPTIONS=".*"
 
 # gnome-session-2.91.6-r1 is needed so that 10-user-dirs-update is run at login
 # g-s-d[policykit] needed for bug #403527
+#
+# gnome-shell/gnome-control-center/mutter/gnome-settings-daemon better to be in sync for 3.8.3
+# https://mail.gnome.org/archives/gnome-announce-list/2013-June/msg00005.html
 COMMON_DEPEND="
 	>=dev-libs/glib-2.35.1:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
 	>=x11-libs/gtk+-3.7.7:3
 	>=gnome-base/gsettings-desktop-schemas-3.7.2.2
 	>=gnome-base/gnome-desktop-3.7.5:3=
-	>=gnome-base/gnome-settings-daemon-3.7.3[colord?,policykit]
+	>=gnome-base/gnome-settings-daemon-3.8.3[colord?,policykit]
 	>=gnome-base/libgnomekbd-2.91.91
 
 	app-text/iso-codes
@@ -51,6 +56,8 @@ COMMON_DEPEND="
 	x11-libs/libXxf86misc
 	>=x11-libs/libXi-1.2
 
+	virtual/krb5
+
 	bluetooth? ( >=net-wireless/gnome-bluetooth-3.5.5:= )
 	colord? ( >=x11-misc/colord-0.1.29 )
 	cups? (
@@ -58,7 +65,6 @@ COMMON_DEPEND="
 		>=net-fs/samba-3.6.14-r1[smbclient] )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.8.1 )
 	i18n? ( >=app-i18n/ibus-1.4.99 )
-	kerberos? ( virtual/krb5 )
 	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	socialweb? ( net-libs/libsocialweb )
 	systemd? ( >=sys-apps/systemd-31 )
@@ -70,6 +76,7 @@ COMMON_DEPEND="
 		>=dev-libs/libwacom-0.6
 		>=x11-libs/libXi-1.2 )
 "
+# kerberos? ( virtual/krb5 )
 # <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
 RDEPEND="${COMMON_DEPEND}
 	|| ( ( app-admin/openrc-settingsd sys-auth/consolekit ) >=sys-apps/systemd-31 )
@@ -110,8 +117,8 @@ DEPEND="${COMMON_DEPEND}
 #	gnome-base/gnome-common
 
 src_prepare() {
-	# Gentoo handles completions in a different directory, bug #465094
-	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
+	# Gentoo handles completions in a different directory, bugs #465094 and #
+	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
 		shell/Makefile.am || die "sed completiondir failed"
 
 	# Make some panels optional; requires eautoreconf
@@ -119,7 +126,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.8.0-optional-r1.patch"
 
 	# https://bugzilla.gnome.org/686840
-	epatch "${FILESDIR}/${PN}-3.7.4-optional-kerberos.patch"
+	# Broken: https://bugs.gentoo.org/show_bug.cgi?id=475526
+#	epatch "${FILESDIR}/${PN}-3.7.4-optional-kerberos.patch"
 
 	# Fix some absolute paths to be appropriate for Gentoo
 	epatch "${FILESDIR}/${PN}-3.8.0-paths-makefiles.patch"
@@ -128,19 +136,22 @@ src_prepare() {
 	# Make modemmanager optional, bug 463852, upstream bug #700145
 	epatch "${FILESDIR}/${PN}-3.8.1.5-optional-modemmanager.patch"
 
+	epatch_user
 	eautoreconf
-	gnome2_src_prepare
+	cd egg-list-box/ && eautoreconf && cd ..
 
 	# panels/datetime/Makefile.am gets touched as a result of something in our
 	# src_prepare(). We need to touch timedated{c,h} to prevent them from being
 	# regenerated (bug #415901)
-	[[ -f panels/datetime/timedated.h ]] && touch panels/datetime/timedated.h
-	[[ -f panels/datetime/timedated.c ]] && touch panels/datetime/timedated.c
+	# Upstream think they should be removed, preventing compilation errors too
+	# (https://bugzilla.gnome.org/704822)
+	[[ -f panels/datetime/timedated.h ]] && rm -f panels/datetime/timedated.h
+	[[ -f panels/datetime/timedated.c ]] && rm -f panels/datetime/timedated.c
 }
 
 src_configure() {
 	# FIXME: add $(use_with kerberos) support?
-	! use kerberos && G2CONF+=" KRB5_CONFIG=$(type -P true)"
+#	! use kerberos && G2CONF+=" KRB5_CONFIG=$(type -P true)"
 
 	gnome2_src_configure \
 		--disable-update-mimedb \
