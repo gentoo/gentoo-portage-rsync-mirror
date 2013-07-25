@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.239 2013/07/23 10:57:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.240 2013/07/25 08:55:08 ssuominen Exp $
 
 EAPI=5
 
@@ -266,12 +266,14 @@ src_compile() {
 		)
 	emake "${helper_targets[@]}"
 
-	local man_targets=(
-		man/udev.7
-		man/udevadm.8
-		man/systemd-udevd.service.8
-	)
-	emake "${man_targets[@]}"
+	if [[ ${PV} = 9999* ]]; then
+		local man_targets=(
+			man/udev.7
+			man/udevadm.8
+			man/systemd-udevd.service.8
+		)
+		emake "${man_targets[@]}"
+	fi
 
 	if use doc; then
 		emake -C docs/libudev
