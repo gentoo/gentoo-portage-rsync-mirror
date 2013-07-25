@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14951 2013/07/23 11:16:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14952 2013/07/24 23:04:20 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -788,6 +788,7 @@ dev-ml/ocamlduce
 
 # Michael Palimaka <kensington@gentoo.org> (19 Oct 2012)
 # New major release breaks almost all existing consumers.
+# Bug #478052
 # Masked until each package can update its dependencies.
 >=net-libs/libotr-4.0.0
 >=x11-plugins/pidgin-otr-4.0.0
