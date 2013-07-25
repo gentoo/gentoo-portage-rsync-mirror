@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8072 2013/07/25 05:46:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8074 2013/07/25 06:27:10 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jul 2013; Pacho Ramos <pacho@gentoo.org> arch/amd64-fbsd/package.use.mask:
+  Mask gnome-base/gvfs gnome-online-accounts mtp USEs due missing keywords
+
+  25 Jul 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/sparc/package.use.mask:
+  Mask cups USE for g-c-c 3.8 due missing keywords #444688
 
   25 Jul 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
   Unmask Gnome 3.8
