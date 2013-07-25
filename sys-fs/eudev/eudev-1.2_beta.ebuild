@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2_beta.ebuild,v 1.1 2013/07/24 20:49:11 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2_beta.ebuild,v 1.2 2013/07/25 07:52:16 patrick Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs"
+IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs test"
 
 COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
 	kmod? ( sys-apps/kmod )
@@ -40,7 +40,8 @@ DEPEND="${COMMON_DEPEND}
 	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( dev-util/gtk-doc )
 	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt"
+	dev-libs/libxslt
+	test? ( app-text/tree )"
 
 RDEPEND="${COMMON_DEPEND}
 	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )

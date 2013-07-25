@@ -8,5 +8,5 @@ PDEPEND=media-libs/freetype[infinality]
 RDEPEND=app-admin/eselect
 SLOT=0
 SRC_URI=https://github.com/yngwin/eselect-lcdfilter/tarball/v1 -> eselect-lcdfilter-1.tar.gz
-_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=ddf1fb085580f787f74958e500a08e35

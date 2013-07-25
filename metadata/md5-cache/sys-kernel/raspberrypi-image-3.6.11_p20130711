@@ -8,5 +8,5 @@ LICENSE=GPL-2 raspberrypi-videocore-bin
 RESTRICT=binchecks strip
 SLOT=3.6.11
 SRC_URI=https://github.com/raspberrypi/firmware/tarball/ba8059e890 -> raspberrypi-firmware-ba8059e890.tar.gz
-_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=a74da76436c9e94c2ec0068561e4753b

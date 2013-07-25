@@ -8,5 +8,5 @@ LICENSE=vim
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=https://github.com/kien/ctrlp.vim/archive/1.79.tar.gz -> ctrlp-1.79.tar.gz
-_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
+_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
 _md5_=c9e07c314e653c291ceb31084e2aa32f

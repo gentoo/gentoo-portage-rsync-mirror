@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/qconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.22 2013/03/02 23:35:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.23 2013/07/25 07:39:07 pva Exp $
+
+  25 Jul 2013; Peter Volkov <pva@gentoo.org> metadata.xml:
+  Took maintaining back
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qconf-1.5_pre717-r1.ebuild:
   Move Qt dependencies to the new category

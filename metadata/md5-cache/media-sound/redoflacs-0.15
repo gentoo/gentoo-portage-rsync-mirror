@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash media-libs/flac sys-apps/coreutils sys-apps/findutils
 SLOT=0
 SRC_URI=https://github.com/sirjaren/redoflacs/tarball/v0.15 -> redoflacs-0.15.tar.gz
-_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=28e6aea6f7c5f013e1812d8b50e8a964
