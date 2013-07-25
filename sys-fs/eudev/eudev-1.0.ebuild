@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.0.ebuild,v 1.3 2013/07/24 17:09:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.0.ebuild,v 1.4 2013/07/25 15:31:49 axs Exp $
 
 EAPI="5"
 
@@ -195,7 +195,9 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
+	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+	fi
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"

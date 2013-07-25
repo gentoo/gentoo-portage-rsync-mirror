@@ -1,0 +1,10 @@
+--- content/content_renderer.gypi.orig	2013-07-24 21:53:10.005389471 +0000
++++ content/content_renderer.gypi	2013-07-24 21:53:30.755521603 +0000
+@@ -5,6 +5,7 @@
+ {
+   'dependencies': [
+     '../jingle/jingle.gyp:jingle_glue',
++    '../media/media.gyp:media',
+     '../net/net.gyp:net',
+     '../skia/skia.gyp:skia',
+     '../third_party/WebKit/public/blink.gyp:blink',

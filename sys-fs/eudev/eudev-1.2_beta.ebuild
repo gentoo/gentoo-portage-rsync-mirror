@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2_beta.ebuild,v 1.2 2013/07/25 07:52:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2_beta.ebuild,v 1.3 2013/07/25 15:31:49 axs Exp $
 
 EAPI="5"
 
@@ -41,10 +41,11 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc )
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
-	test? ( app-text/tree )"
+	test? ( app-text/tree dev-lang/perl )"
 
 RDEPEND="${COMMON_DEPEND}
 	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
+	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
 	!sys-fs/udev
 	!sys-apps/coldplug
 	!sys-apps/systemd
@@ -54,6 +55,8 @@ RDEPEND="${COMMON_DEPEND}
 
 PDEPEND=">=virtual/udev-180
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
+
+REQUIRED_USE="keymap? ( hwdb )"
 
 S="${WORKDIR}/${PN}-1.1"
 
@@ -124,10 +127,6 @@ src_configure()
 	local econf_args
 
 	econf_args=(
-		ac_cv_search_cap_init=
-		ac_cv_header_sys_capability_h=yes
-		DBUS_CFLAGS=' '
-		DBUS_LIBS=' '
 		--with-rootprefix=
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
@@ -147,6 +146,17 @@ src_configure()
 		$(use_enable rule-generator)
 	)
 	econf "${econf_args[@]}"
+}
+
+src_test() {
+	# make sandbox get out of the way
+	# these are safe because there is a fake root filesystem put in place,
+	# but sandbox seems to evaluate the paths of the test i/o instead of the
+	# paths of the actual i/o that results.
+	addread /sys
+	addwrite /dev
+	addwrite /run
+	default_src_test
 }
 
 src_install()
@@ -200,7 +210,9 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
+	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+	fi
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"

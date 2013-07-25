@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.4 2013/07/24 17:09:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.5 2013/07/25 15:31:49 axs Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs"
+IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs test"
 
 COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
 	kmod? ( sys-apps/kmod )
@@ -39,7 +39,8 @@ DEPEND="${COMMON_DEPEND}
 	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( dev-util/gtk-doc )
 	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt"
+	dev-libs/libxslt
+	test? ( app-text/tree dev-lang/perl )"
 
 RDEPEND="${COMMON_DEPEND}
 	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
@@ -142,6 +143,17 @@ src_configure()
 	econf "${econf_args[@]}"
 }
 
+src_test() {
+	# make sandbox get out of the way
+	# these are safe because there is a fake root filesystem put in place,
+	# but sandbox seems to evaluate the paths of the test i/o instead of the
+	# paths of the actual i/o that results.
+	addread /sys
+	addwrite /dev
+	addwrite /run
+	default_src_test
+}
+
 src_install()
 {
 	emake DESTDIR="${D}" install
@@ -193,7 +205,9 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
+	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+	fi
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"
