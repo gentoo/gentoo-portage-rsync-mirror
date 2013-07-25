@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.5.ebuild,v 1.1 2013/07/09 10:47:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.5-r1.ebuild,v 1.1 2013/07/25 09:07:41 pesa Exp $
 
 EAPI=4
 
@@ -13,29 +13,29 @@ if [[ ${QT4_BUILD_TYPE} == live ]]; then
 else
 	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x64-macos"
 fi
-IUSE="dbus declarative kde multimedia opengl openvg qt3support webkit xmlpatterns"
+IUSE="dbus declarative kde multimedia opengl openvg phonon qt3support webkit xmlpatterns"
 
 DEPEND="
-	~dev-qt/qtcore-${PV}:4[aqua=,debug=,qt3support?]
-	~dev-qt/qtgui-${PV}:4[aqua=,debug=,qt3support?]
-	~dev-qt/qthelp-${PV}:4[aqua=,debug=]
-	~dev-qt/qtscript-${PV}:4[aqua=,debug=]
-	~dev-qt/qtsql-${PV}:4[aqua=,debug=,qt3support?]
-	~dev-qt/qtsvg-${PV}:4[aqua=,debug=]
-	~dev-qt/qttest-${PV}:4[aqua=,debug=]
-	dbus? ( ~dev-qt/qtdbus-${PV}:4[aqua=,debug=] )
-	declarative? ( ~dev-qt/qtdeclarative-${PV}:4[aqua=,debug=,webkit?] )
-	kde? ( media-libs/phonon[aqua=] )
-	!kde? ( || (
-		~dev-qt/qtphonon-${PV}:4[aqua=,debug=]
-		media-libs/phonon[aqua=]
-	) )
-	multimedia? ( ~dev-qt/qtmultimedia-${PV}:4[aqua=,debug=] )
-	opengl? ( ~dev-qt/qtopengl-${PV}:4[aqua=,debug=,qt3support?] )
-	openvg? ( ~dev-qt/qtopenvg-${PV}:4[aqua=,debug=,qt3support?] )
-	qt3support? ( ~dev-qt/qt3support-${PV}:4[aqua=,debug=] )
-	webkit? ( ~dev-qt/qtwebkit-${PV}:4[aqua=,debug=] )
-	xmlpatterns? ( ~dev-qt/qtxmlpatterns-${PV}:4[aqua=,debug=] )
+	~dev-qt/designer-${PV}[aqua=,debug=]
+	~dev-qt/qtcore-${PV}[aqua=,debug=,qt3support?]
+	~dev-qt/qtgui-${PV}[aqua=,debug=,qt3support?]
+	~dev-qt/qthelp-${PV}[aqua=,debug=]
+	~dev-qt/qtscript-${PV}[aqua=,debug=]
+	~dev-qt/qtsql-${PV}[aqua=,debug=,qt3support?]
+	~dev-qt/qtsvg-${PV}[aqua=,debug=]
+	~dev-qt/qttest-${PV}[aqua=,debug=]
+	dbus? ( ~dev-qt/qtdbus-${PV}[aqua=,debug=] )
+	declarative? ( ~dev-qt/qtdeclarative-${PV}[aqua=,debug=,webkit?] )
+	multimedia? ( ~dev-qt/qtmultimedia-${PV}[aqua=,debug=] )
+	opengl? ( ~dev-qt/qtopengl-${PV}[aqua=,debug=,qt3support?] )
+	openvg? ( ~dev-qt/qtopenvg-${PV}[aqua=,debug=,qt3support?] )
+	phonon? (
+		kde? ( media-libs/phonon[aqua=] )
+		!kde? ( || ( ~dev-qt/qtphonon-${PV}[aqua=,debug=] media-libs/phonon[aqua=] ) )
+	)
+	qt3support? ( ~dev-qt/qt3support-${PV}[aqua=,debug=] )
+	webkit? ( ~dev-qt/qtwebkit-${PV}[aqua=,debug=] )
+	xmlpatterns? ( ~dev-qt/qtxmlpatterns-${PV}[aqua=,debug=] )
 "
 RDEPEND="${DEPEND}"
 
@@ -49,8 +49,8 @@ pkg_setup() {
 		examples"
 	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
 		doc/src/images
-		src
 		include
+		src
 		tools"
 
 	qt4-build_pkg_setup
@@ -66,6 +66,7 @@ src_prepare() {
 		'multimedia:spectrum'
 		'opengl:boxes|glhypnotizer'
 		'openvg'
+		'phonon:mediaplayer'
 		'webkit:browser'
 		'xmlpatterns'
 	)
@@ -99,6 +100,7 @@ src_configure() {
 		$(qt_use multimedia)
 		$(qt_use opengl)
 		$(qt_use openvg)
+		$(qt_use phonon)
 		$(qt_use qt3support)
 		$(qt_use webkit)
 		$(qt_use xmlpatterns)"
