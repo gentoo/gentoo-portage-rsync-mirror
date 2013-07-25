@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0.2.ebuild,v 1.4 2013/07/22 06:54:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0.2.ebuild,v 1.5 2013/07/25 20:45:28 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 pypy{1_8,1_9,2_0} )
-inherit check-reqs eutils flag-o-matic multilib multiprocessing pax-utils python-any-r1 toolchain-funcs versionator
+inherit check-reqs eutils multilib multiprocessing pax-utils \
+	python-any-r1 toolchain-funcs versionator
 
 DESCRIPTION="A fast, compliant alternative implementation of the Python language"
 HOMEPAGE="http://pypy.org/"
@@ -124,7 +125,6 @@ src_install() {
 	fperms a+x ${INSDESTTREE}/pypy-c
 	use jit && pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
-	dosym ../$(get_libdir)/pypy${SLOT}/include /usr/include/pypy${SLOT}
 	dodoc README.rst
 
 	if ! use sqlite; then

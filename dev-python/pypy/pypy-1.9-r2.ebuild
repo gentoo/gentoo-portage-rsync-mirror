@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r2.ebuild,v 1.5 2013/07/22 06:54:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r2.ebuild,v 1.6 2013/07/25 20:45:28 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 pypy{1_8,1_9,2_0} )
-inherit check-reqs eutils multilib multiprocessing python-any-r1 toolchain-funcs vcs-snapshot versionator
+inherit check-reqs eutils multilib multiprocessing pax-utils \
+	python-any-r1 toolchain-funcs vcs-snapshot versionator
 
 DESCRIPTION="A fast, compliant alternative implementation of the Python language"
 HOMEPAGE="http://pypy.org/"
@@ -130,6 +131,7 @@ src_install() {
 	insinto "/usr/$(get_libdir)/pypy${SLOT}"
 	doins -r include lib_pypy lib-python pypy-c
 	fperms a+x ${INSDESTTREE}/pypy-c
+	use jit && pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
 	dodoc README
 
