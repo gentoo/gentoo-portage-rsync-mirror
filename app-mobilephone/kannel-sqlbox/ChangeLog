@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kannel-sqlbox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel-sqlbox/ChangeLog,v 1.3 2012/12/02 08:26:23 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel-sqlbox/ChangeLog,v 1.4 2013/07/25 01:53:56 creffett Exp $
+
+  25 Jul 2013; Chris Reffett <creffett@gentoo.org> kannel-sqlbox-0.7.2.ebuild:
+  Fix LICENSE wrt bug 425914.
 
   02 Dec 2012; Ulrich Müller <ulm@gentoo.org> kannel-sqlbox-0.7.2.ebuild:
   Update LICENSE, this is identical with the Apache-1.1 license, bug 444848.
@@ -16,4 +19,3 @@
   +files/kannel-sqlbox.initd, +metadata.xml:
   Initial import from bug 285246, thanks to Travis Hansen <travisghansen at
   yahoo dot com>.
-

@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.34 2013/04/01 11:53:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.35 2013/07/25 01:42:15 creffett Exp $
+
+*kanyremote-6.2 (25 Jul 2013)
+
+  25 Jul 2013; Chris Reffett <creffett@gentoo.org> +kanyremote-6.2.ebuild:
+  Version bump, migrate to python-single-r1
 
   01 Apr 2013; Michael Palimaka <kensington@gentoo.org>
   -kanyremote-6.0.1.ebuild:
