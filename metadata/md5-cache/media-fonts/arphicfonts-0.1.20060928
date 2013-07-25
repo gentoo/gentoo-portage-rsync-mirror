@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst postrm setup unpack
-DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Chinese TrueType Arphic Fonts
 HOMEPAGE=http://www.arphic.com.tw/ http://www.freedesktop.org/wiki/Software_2fCJKUnifonts
 IUSE=X X
@@ -8,5 +8,5 @@ LICENSE=Arphic
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=mirror://gnu/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz mirror://gnu/non-gnu/chinese-fonts-truetype/bkai00mp.ttf.gz mirror://gnu/non-gnu/chinese-fonts-truetype/bsmi00lp.ttf.gz mirror://gnu/non-gnu/chinese-fonts-truetype/gbsn00lp.ttf.gz mirror://debian/pool/main/t/ttf-arphic-uming/ttf-arphic-uming_0.1.20060928.orig.tar.gz mirror://debian/pool/main/t/ttf-arphic-ukai/ttf-arphic-ukai_0.1.20060928.orig.tar.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	40ddec3cfe74f743af20f4578c1f7230	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	37271e0911f39dd15a28adcaf94f6956	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b3d09cadf836a746b6439b9771cae7ac

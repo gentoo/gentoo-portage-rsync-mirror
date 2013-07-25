@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.893 2013/07/25 07:51:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.894 2013/07/25 13:13:18 pva Exp $
+
+  25 Jul 2013; Peter Volkov <pva@gentoo.org> font.eclass:
+  Droped media-libs/fontconfig dependency, bug 446012.
 
   25 Jul 2013; Michał Górny <mgorny@gentoo.org> vcs-snapshot.eclass:
   Add some debug.

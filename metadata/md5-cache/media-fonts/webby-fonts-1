@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst postrm setup
-DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A small proportional bitmap font for use in webpages
 HOMEPAGE=http://www.proggyfonts.com/
 IUSE=X
@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 ia64 sparc x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://dl.liveforge.org/fonts/webby-fonts-1.tar.bz2
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	40ddec3cfe74f743af20f4578c1f7230	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	37271e0911f39dd15a28adcaf94f6956	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6efc14e6e78100dcad2fc07afcaca035

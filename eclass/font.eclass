@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.56 2013/06/09 02:08:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.57 2013/07/25 13:13:18 pva Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
@@ -54,8 +54,7 @@ IUSE="X"
 DEPEND="X? (
 		x11-apps/mkfontdir
 		media-fonts/encodings
-	)
-	>=media-libs/fontconfig-2.4.0"
+	)"
 RDEPEND=""
 
 # @FUNCTION: font_xfont_config
@@ -215,6 +214,8 @@ font_pkg_postinst() {
 		ebegin "Updating global fontcache"
 		fc-cache -fs
 		eend $?
+	else
+		einfo "Skipping fontcache update (media-libs/fontconfig is not installed or ROOT != /)"
 	fi
 }
 
@@ -232,5 +233,7 @@ font_pkg_postrm() {
 		ebegin "Updating global fontcache"
 		fc-cache -fs
 		eend $?
+	else
+		einfo "Skipping fontcache update (media-libs/fontconfig is not installed or ROOT != /)"
 	fi
 }

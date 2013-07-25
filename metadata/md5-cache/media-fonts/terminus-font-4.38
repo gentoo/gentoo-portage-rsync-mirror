@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup
-DEPEND=app-arch/gzip dev-lang/perl virtual/awk pcf? ( x11-apps/bdftopcf ) X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+DEPEND=app-arch/gzip dev-lang/perl virtual/awk pcf? ( x11-apps/bdftopcf ) X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A clean fixed font for the console and X11
 EAPI=4
 HOMEPAGE=http://terminus-font.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=OFL-1.1 GPL-2
 REQUIRED_USE=X? ( pcf )
 SLOT=0
 SRC_URI=mirror://sourceforge/terminus-font/terminus-font-4.38/terminus-font-4.38.tar.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	40ddec3cfe74f743af20f4578c1f7230	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	37271e0911f39dd15a28adcaf94f6956	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3c1fd7792804e72cade6e0f798a0d264

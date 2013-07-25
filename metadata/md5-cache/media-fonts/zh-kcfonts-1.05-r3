@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
-DEPEND=x11-apps/bdftopcf X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+DEPEND=x11-apps/bdftopcf X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Kuo Chauo Chinese Fonts collection in BIG5 encoding
 HOMEPAGE=http://freebsd.sinica.edu.tw/
 IUSE=X
@@ -8,5 +8,5 @@ LICENSE=freedist
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=ftp://freebsd.sinica.edu.tw/pub/distfiles/kcfonts-1.05.tar.gz ftp://wm28.csie.ncu.edu.tw/pub/distfiles/kcfonts-1.05.tar.gz mirror://gentoo/kcfonts-1.05-freebsd-aa_ad.patch.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	40ddec3cfe74f743af20f4578c1f7230	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	37271e0911f39dd15a28adcaf94f6956	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8c9e7ac501217f409a13ae614b762fc9
