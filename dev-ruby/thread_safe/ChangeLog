@@ -1,10 +1,14 @@
 # ChangeLog for dev-ruby/thread_safe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/ChangeLog,v 1.1 2012/12/26 20:18:36 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/ChangeLog,v 1.2 2013/07/25 15:04:14 mrueg Exp $
+
+*thread_safe-0.1.2 (25 Jul 2013)
+
+  25 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +thread_safe-0.1.2.ebuild:
+  Version bump
 
 *thread_safe-0.1.0 (26 Dec 2012)
 
   26 Dec 2012; Hans de Graaff <graaff@gentoo.org> +thread_safe-0.1.0.ebuild,
   +metadata.xml:
   Initial import. Dependency for forthcoming dev-ruby/rails:4.
-

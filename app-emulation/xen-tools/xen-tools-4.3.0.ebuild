@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.10 2013/07/24 09:19:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.11 2013/07/25 15:09:55 idella4 Exp $
 
 EAPI=5
 
@@ -68,7 +68,8 @@ DEPEND="${CDEPEND}
 	)
 	hvm? ( x11-proto/xproto
 		!net-libs/libiscsi )
-	qemu? ( x11-libs/pixman )"
+	qemu? ( x11-libs/pixman
+		!app-emulation/qemu )"
 
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
