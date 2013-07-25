@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/anyremote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.32 2013/05/18 10:15:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.33 2013/07/25 00:49:45 creffett Exp $
+
+*anyremote-6.3.1 (25 Jul 2013)
+
+  25 Jul 2013; Chris Reffett <creffett@gentoo.org> +anyremote-6.3.1.ebuild,
+  -anyremote-5.5.ebuild, -anyremote-6.1.1.ebuild, -anyremote-6.1.ebuild,
+  -anyremote-6.2.ebuild:
+  Version bump, remove old
 
 *anyremote-6.3 (18 May 2013)
 

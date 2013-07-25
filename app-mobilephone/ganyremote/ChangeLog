@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/ganyremote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.24 2013/03/14 09:00:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.26 2013/07/25 00:57:50 creffett Exp $
+
+*ganyremote-6.2 (25 Jul 2013)
+
+  25 Jul 2013; Chris Reffett <creffett@gentoo.org> +ganyremote-6.2.ebuild:
+  Version bump wrt bug 473318
+
+  25 Jul 2013; Chris Reffett <creffett@gentoo.org> metadata.xml:
+  Add to mobile-phone herd.
 
 *ganyremote-6.1 (14 Mar 2013)
 
