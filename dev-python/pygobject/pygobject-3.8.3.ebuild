@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.3.ebuild,v 1.1 2013/07/07 12:03:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.3.ebuild,v 1.2 2013/07/25 20:26:23 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -40,7 +40,9 @@ DEPEND="${COMMON_DEPEND}
 		x11-libs/gdk-pixbuf:2[introspection]
 		x11-libs/gtk+:3[introspection]
 		x11-libs/pango[introspection] )
+	gnome-base/gnome-common
 "
+# gnome-base/gnome-common required by eautoreconf
 
 # We now disable introspection support in slot 2 per upstream recommendation
 # (see https://bugzilla.gnome.org/show_bug.cgi?id=642048#c9); however,

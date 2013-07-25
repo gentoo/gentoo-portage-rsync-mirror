@@ -71,6 +71,7 @@
 "WDC WD7500AARX"						194 C "Western Digital Caviar Green 750GB SATA3 IntelliPower 64MB"
 "WDC WD3200AZDX"						194 C "Western Digital Caviar Green 320GB SATA3 IntelliPower 32MB"
 "WDC WD5000AZDX"						194 C "Western Digital Caviar Green 500GB SATA3 IntelliPower 32MB"
+"WDC WD5000AZRX-00A8LB0"                                        194 C "Western Digital Caviar Green 500GB SATA3 IntelliPower 64MB"
 "WDC WD7500AZRX"						194 C "Western Digital Caviar Green 750GB SATA3 IntelliPower 64MB"
 "WDC WD10EARS"							194 C "Western Digital Caviar Green 1TB SATA2 IntelliPower 64MB"
 "WDC WD20EARS"							194 C "Western Digital Caviar Green 2TB SATA2 IntelliPower 64MB"
@@ -201,3 +202,4 @@
 "SAMSUNG HD203WI"						194 C "Samsung SpinPoint F3 EcoGreen 2TB SATA2 5400RPM 32MB"
 "SAMSUNG SSD 830 Series"					190 C "Samsung SSD 830 Series"
 "SanDisk SDSSDH2128G"						194 C "Sandisk SSD Ultra Plus 128GB"
+"OCZ-VERTEX3"                                                   194 C "OCZ Vertex 3 120GB SATA3"

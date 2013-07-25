@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.128 2013/07/08 21:05:57 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.129 2013/07/25 20:15:04 aidecoe Exp $
+
+  25 Jul 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added OCZ Vertex 3 and WDC WD5000AZRX-00A8LB0 to hddgentoo.db. Fixes bug
+  #476458.
 
   08 Jul 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
   hddtemp-0.3_beta15-r3.ebuild, hddtemp-0.3_beta15-r5.ebuild,
