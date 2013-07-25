@@ -1,6 +1,32 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.125 2013/07/23 11:47:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.126 2013/07/25 21:21:52 aidecoe Exp $
+
+*dracut-030 (25 Jul 2013)
+
+  25 Jul 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-030.ebuild,
+  +files/030-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/030-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/030-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch:
+  Version bump. dash dependency is dropped as well as the module which is no
+  longer supported.
+
+  NEWS
+  ~~~~
+  (from Dracut NEWS file)
+  - support new persistent network interface names
+  - fix findmnt calls, prevents hang on stale NFS mounts
+  - add systemd.slice and slice.target units
+  - major shell cleanup
+  - support root=PARTLABEL= and root=PARTUUID=
+  - terminfo: only install l/linux v/vt100 and v/vt220
+  - unset all LC_* and LANG, 10% faster
+  - fixed dependency loop for dracut-cmdline.service
+  - do not wait_for_dev for the root devices
+  - do not wait_for_dev for devices, if dracut-initqueue is not needed
+  - support early microcode loading with --early-microcode
+  - dmraid, let dmraid setup its own partitions
+  - sosreport renamed to rdsosreport
 
   23 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> dracut-026-r2.ebuild,
   dracut-027-r3.ebuild, dracut-029.ebuild:

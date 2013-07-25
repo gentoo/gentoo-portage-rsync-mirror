@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.8.2.ebuild,v 1.1 2013/05/14 21:31:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.8.2.ebuild,v 1.2 2013/07/25 21:23:02 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="
-	>=app-misc/tracker-0.16
+	>=app-misc/tracker-0.16:=
 	>=dev-libs/glib-2.35.1:2
 	gnome-base/gnome-desktop:3=
 	>=gnome-base/librsvg-2.26.0
@@ -27,10 +27,15 @@ RDEPEND="
 	>=media-libs/libexif-0.6.14
 	net-libs/gnome-online-accounts
 	x11-libs/cairo
-	x11-libs/gdk-pixbuf
+	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.8.0:3
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig
 "
+
+src_install() {
+	default
+	rm -r "${D}/usr/share/doc/${PN}" || die
+}

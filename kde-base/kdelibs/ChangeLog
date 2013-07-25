@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.940 2013/07/22 11:16:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.941 2013/07/25 21:14:52 johu Exp $
+
+  25 Jul 2013; Johannes Huber <johu@gentoo.org> -kdelibs-4.10.5.ebuild:
+  Remove old.
 
 *kdelibs-4.10.5-r1 (22 Jul 2013)
 

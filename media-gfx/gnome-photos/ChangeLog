@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnome-photos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/ChangeLog,v 1.2 2013/05/14 21:31:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/ChangeLog,v 1.3 2013/07/25 21:23:02 eva Exp $
+
+  25 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-photos-3.8.2.ebuild:
+  Add some slot information. Drop redundant installation of docs.
 
 *gnome-photos-3.8.2 (14 May 2013)
 
