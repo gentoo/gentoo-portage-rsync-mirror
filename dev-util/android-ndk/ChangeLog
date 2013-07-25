@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/android-ndk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.6 2013/07/24 15:45:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.7 2013/07/25 06:33:37 patrick Exp $
+
+  25 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  QA: Fixing herd
 
 *android-ndk-8e (24 Jul 2013)
 
