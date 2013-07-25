@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.3-r1.ebuild,v 1.1 2013/07/24 15:58:24 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.3-r1.ebuild,v 1.2 2013/07/25 19:18:16 nativemad Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs waf-utils
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="3"
 KEYWORDS="~amd64 ~x86"
-IUSE="altivec curl debug doc nls lv2 sse"
+IUSE="altivec debug doc nls lv2 sse"
 
 RDEPEND="media-libs/aubio
 	media-libs/liblo
@@ -47,7 +47,7 @@ RDEPEND="media-libs/aubio
 	virtual/libusb:0
 	dev-libs/boost
 	>=media-libs/taglib-1.7
-	curl? ( net-misc/curl )
+	net-misc/curl
 	lv2? (
 		>=media-libs/slv2-0.6.1
 		media-libs/lilv
@@ -64,6 +64,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-syslibs.patch
+	epatch "${FILESDIR}"/curlfix.patch
 	sed 's/python/python2/' -i waf
 }
 
@@ -78,7 +79,6 @@ src_configure() {
 		$(use nls && echo "--nls" || echo "--no-nls") \
 		$(use debug && echo "--stl-debug") \
 		$((use altivec || use sse) && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
-		$(use curl || echo "--no-freesound") \
 		$(use doc && echo "--docs")
 }
 

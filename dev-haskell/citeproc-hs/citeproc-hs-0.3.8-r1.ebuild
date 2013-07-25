@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/citeproc-hs-0.3.8.ebuild,v 1.2 2013/07/24 13:08:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/citeproc-hs-0.3.8-r1.ebuild,v 1.1 2013/07/25 19:10:53 slyfox Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE="+bibutils +hexpat +network +small_base embed_data_files"
 
-RDEPEND="dev-haskell/json:=[profile?]
+RDEPEND="dev-haskell/json:=[generic,profile?]
 		dev-haskell/mtl:=[profile?]
 		>=dev-haskell/pandoc-types-1.8:=[profile?]
 		<dev-haskell/pandoc-types-1.11:=[profile?]

@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/citeproc-hs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/ChangeLog,v 1.9 2013/07/24 13:08:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/ChangeLog,v 1.10 2013/07/25 19:10:53 slyfox Exp $
+
+*citeproc-hs-0.3.8-r1 (25 Jul 2013)
+
+  25 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +citeproc-hs-0.3.8-r1.ebuild, -citeproc-hs-0.3.8.ebuild:
+  Added lost json[generic] depend. Bug #475490 by siebz0r.
 
   24 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org>
   +files/citeproc-hs-0.3.8-preproc.patch, citeproc-hs-0.3.8.ebuild:
