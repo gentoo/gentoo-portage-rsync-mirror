@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst prepare test unpack
-DEPEND=test? ( dev-vcs/subversion ) app-text/asciidoc python_targets_python2_6? ( dev-lang/python:2.6[xml] ) python_targets_python2_7? ( dev-lang/python:2.7[xml] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-vcs/git
+DEPEND=test? ( dev-vcs/subversion ) app-text/asciidoc python_targets_python2_6? ( dev-lang/python:2.6[xml(+)] ) python_targets_python2_7? ( dev-lang/python:2.7[xml(+)] ) python_targets_pypy2_0? ( dev-python/pypy:2.0[xml(+)] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)] dev-vcs/git
 DESCRIPTION=Tool to manage Gentoo overlays
 EAPI=5
 HOMEPAGE=http://layman.sourceforge.net
-IUSE=bazaar cvs darcs +git gpg mercurial subversion test python_targets_python2_6 python_targets_python2_7
+IUSE=bazaar cvs darcs +git gpg mercurial subversion test python_targets_python2_6 python_targets_python2_7 python_targets_pypy2_0
 LICENSE=GPL-2
-RDEPEND=bazaar? ( dev-vcs/bzr ) cvs? ( dev-vcs/cvs ) darcs? ( dev-vcs/darcs ) git? ( dev-vcs/git ) mercurial? ( dev-vcs/mercurial ) subversion? ( || ( >=dev-vcs/subversion-1.5.4[webdav-neon] >=dev-vcs/subversion-1.5.4[webdav-serf] ) ) gpg? ( =dev-python/pyGPG-9999 ) virtual/python-argparse[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] python_targets_python2_6? ( dev-lang/python:2.6[xml] ) python_targets_python2_7? ( dev-lang/python:2.7[xml] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
-REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
+RDEPEND=bazaar? ( dev-vcs/bzr ) cvs? ( dev-vcs/cvs ) darcs? ( dev-vcs/darcs ) git? ( dev-vcs/git ) mercurial? ( dev-vcs/mercurial ) subversion? ( || ( >=dev-vcs/subversion-1.5.4[webdav-neon] >=dev-vcs/subversion-1.5.4[webdav-serf] ) ) gpg? ( =dev-python/pyGPG-9999 ) virtual/python-argparse[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)] python_targets_python2_6? ( dev-lang/python:2.6[xml(+)] ) python_targets_python2_7? ( dev-lang/python:2.7[xml(+)] ) python_targets_pypy2_0? ( dev-python/pypy:2.0[xml(+)] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)]
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_pypy2_0 )
 SLOT=0
 _eclasses_=distutils-r1	6bd583b2b71339e0f43259242b9d0733	eutils	63afaaed8aa819fdcb814c7cd39495a2	git-2	e92e09651292b1bef5656592364550f7	multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	prefix	21058c21ca48453d771df15500873ede	python-r1	094dc7421f9aea7525b85b899f67e62a	python-utils-r1	68315568b6b6ec436deb87db2cd36fe8	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=a16ee9b103746d09ad44f76756459382
+_md5_=8194e4780344d1b65710010d21a5eb69

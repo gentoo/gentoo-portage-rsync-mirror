@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.26 2013/02/24 06:41:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.27 2013/07/25 16:38:09 jlec Exp $
+
+*haveged-1.7a-r1 (25 Jul 2013)
+
+  25 Jul 2013; Justin Lecher <jlec@gentoo.org> +haveged-1.7a-r1.ebuild,
+  +files/haveged.conf, +files/service.gentoo:
+  Add systemd support, #478148
 
 *haveged-1.7a (24 Feb 2013)
 

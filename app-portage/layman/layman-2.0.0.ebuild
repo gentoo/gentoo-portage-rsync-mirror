@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0.ebuild,v 1.13 2013/06/17 04:27:34 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0.ebuild,v 1.14 2013/07/25 16:51:22 hasufell Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7} )
-PYTHON_REQ_USE="xml"
+PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+PYTHON_REQ_USE="xml(+)"
 
 inherit eutils distutils-r1 prefix
 

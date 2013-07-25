@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.179 2013/06/17 04:27:34 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.180 2013/07/25 16:51:22 hasufell Exp $
+
+  25 Jul 2013; Julian Ospald <hasufell@gentoo.org> layman-2.0.0.ebuild,
+  layman-9999.ebuild:
+  add pypy2_0 support
 
   17 Jun 2013; Brian Dolbec <dolsen@gentoo.org> layman-2.0.0.ebuild,
   layman-9999.ebuild:
