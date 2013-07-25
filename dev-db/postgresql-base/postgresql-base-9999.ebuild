@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.6 2013/07/24 08:45:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.7 2013/07/25 03:44:43 patrick Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ KEYWORDS=""
 SLOT="9.4"
 
 EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2"
+SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-patches-9.3-r1.tbz2"
 
 # Comment the following five lines when not a beta or rc.
 #MY_PV="${PV//_}"
@@ -82,6 +82,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	# silly version changes
+	sed -i -e 's/2012/2013/' -e 's/9.3beta2/9.4devel/' "${WORKDIR}/autoconf.patch" || die 
+	
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/base.patch" \
 		"${WORKDIR}/bool.patch"
@@ -162,7 +165,7 @@ src_install() {
 	# Don't use ${PF} here as three packages
 	# (dev-db/postgresql-{docs,base,server}) have the same set of docs.
 	insinto /usr/share/doc/postgresql-${SLOT}
-	doins README HISTORY doc/{README.*,TODO,bug.template}
+	doins README doc/{TODO,bug.template}
 
 	cd "${S}/contrib"
 	emake DESTDIR="${D}" install

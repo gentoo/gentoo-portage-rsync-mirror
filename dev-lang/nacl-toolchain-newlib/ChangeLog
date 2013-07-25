@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/nacl-toolchain-newlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.24 2013/04/03 18:26:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.25 2013/07/25 03:56:22 phajdan.jr Exp $
+
+*nacl-toolchain-newlib-0_p11846 (25 Jul 2013)
+
+  25 Jul 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +nacl-toolchain-newlib-0_p11846.ebuild:
+  Version bump.
 
   03 Apr 2013; Mike Gilbert <floppym@gentoo.org>
   +files/binutils-texinfo-r0.patch, +files/gcc-texinfo-r0.patch,
