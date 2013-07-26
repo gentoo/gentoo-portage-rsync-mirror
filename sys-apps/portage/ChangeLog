@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1317 2013/07/26 07:10:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1318 2013/07/26 07:46:57 zmedico Exp $
+
+  26 Jul 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.13.ebuild,
+  portage-2.2.0_alpha189.ebuild:
+  Fix usersync upgrade to exclude DISTDIR.
 
 *portage-2.2.0_alpha189 (26 Jul 2013)
 

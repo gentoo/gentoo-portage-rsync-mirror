@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.21.ebuild,v 1.14 2013/03/05 09:14:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.21.ebuild,v 1.15 2013/07/26 07:57:32 patrick Exp $
 
 EAPI=4
 
@@ -16,11 +16,10 @@ SRC_URI="mirror://samba/stable/${P}.tar.gz
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
+IUSE="acl addns ads +aio avahi caps +client cluster debug doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"
 
-# upstream doesn't support cups 1.6 for samba 3.5
 DEPEND="dev-libs/popt
 	!net-fs/samba-client
 	!net-fs/samba-libs
@@ -36,7 +35,6 @@ DEPEND="dev-libs/popt
 	client? ( !net-fs/mount-cifs
 		dev-libs/iniparser )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
-	cups? ( <net-print/cups-1.6 )
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam
@@ -91,7 +89,6 @@ pkg_setup() {
 		use ads && SBINPROGS="${SBINPROGS} bin/cifs.upcall"
 	fi
 
-	use cups && BINPROGS="${BINPROGS} bin/smbspool"
 	use ldb && BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename";
 
 	if use winbind ; then
@@ -170,7 +167,7 @@ src_configure() {
 		--enable-socket-wrapper \
 		--enable-nss-wrapper \
 		$(use_enable swat) \
-		$(use_enable cups) \
+		--disable-cups \
 		--disable-iprint \
 		$(use_enable fam) \
 		--enable-shared-libs \
@@ -395,11 +392,6 @@ src_install() {
 		into /
 		dosbin bin/{u,}mount.cifs
 		doman ../docs/manpages/{u,}mount.cifs.8
-	fi
-
-	# install the spooler to cups
-	if use cups ; then
-		dosym /usr/bin/smbspool $(cups-config --serverbin)/backend/smb
 	fi
 
 	# install misc files

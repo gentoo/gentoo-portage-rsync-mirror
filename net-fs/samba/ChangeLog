@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.585 2013/07/20 17:44:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.586 2013/07/26 07:57:32 patrick Exp $
+
+  26 Jul 2013; Patrick Lauer <patrick@gentoo.org> samba-3.5.21.ebuild:
+  Disable cups in samba-3.5 since it depends on old versions that were removed.
+  Upgrade to 3.6 recommended for those that need printing
 
   20 Jul 2013; Jeroen Roovers <jer@gentoo.org> samba-4.0.6.ebuild,
   samba-4.0.7.ebuild:
