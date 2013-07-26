@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-2.14.0.ebuild,v 1.2 2013/07/20 12:22:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-2.14.0.ebuild,v 1.3 2013/07/26 21:15:38 mrueg Exp $
 
 EAPI=5
 
@@ -33,7 +33,6 @@ ruby_add_rdepend "=dev-ruby/activesupport-3*
 # requiring ammeter will load it, and we need a consistent set of rspec
 # and rspec-rails for that to work.
 ruby_add_bdepend "test? ( =dev-ruby/mocha-0.10* >=dev-ruby/ammeter-0.2.5 ~dev-ruby/rspec-rails-${PV} )"
-
 
 all_ruby_prepare() {
 	# Remove .rspec options to avoid dependency on newer rspec when
