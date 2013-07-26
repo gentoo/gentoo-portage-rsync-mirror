@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/highlighting-kate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/highlighting-kate/ChangeLog,v 1.10 2013/06/22 22:22:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/highlighting-kate/ChangeLog,v 1.11 2013/07/26 07:23:41 slyfox Exp $
+
+*highlighting-kate-0.5.5 (26 Jul 2013)
+
+  26 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +highlighting-kate-0.5.5.ebuild, -highlighting-kate-0.2.9-r1.ebuild,
+  -highlighting-kate-0.5.0.5.ebuild, -highlighting-kate-0.5.1.ebuild,
+  -highlighting-kate-0.5.3.3.ebuild, -highlighting-kate-0.5.3.4.ebuild,
+  -highlighting-kate-0.5.3.5.ebuild, -highlighting-kate-0.5.3.8.ebuild:
+  Version bump.
 
 *highlighting-kate-0.5.3.9 (22 Jun 2013)
 

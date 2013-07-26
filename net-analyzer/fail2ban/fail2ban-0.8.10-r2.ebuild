@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.10-r1.ebuild,v 1.1 2013/07/25 16:56:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.10-r2.ebuild,v 1.1 2013/07/26 07:06:52 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -29,7 +29,7 @@ src_prepare() {
 }
 
 src_test() {
-	./fail2ban-testcases-all
+	./${PN}-testcases-all
 }
 
 DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
@@ -37,12 +37,13 @@ DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
 src_install() {
 	distutils-r1_src_install
 
-	rm -rf "${D}"/usr/share/doc/fail2ban
+	rm -rf "${D}"/usr/share/doc/${PN}
 
 	# not FILESDIR
-	newconfd files/gentoo-confd fail2ban
-	newinitd files/gentoo-initd fail2ban
+	newconfd files/gentoo-confd ${PN}
+	newinitd files/gentoo-initd ${PN}
 	systemd_dounit files/${PN}.service
+	systemd_dotmpfilesd files/${PN}-tmpfiles.conf
 	doman man/*.1
 
 	# Use INSTALL_MASK  if you do not want to touch /etc/logrotate.d.
