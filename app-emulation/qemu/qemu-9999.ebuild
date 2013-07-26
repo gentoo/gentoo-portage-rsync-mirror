@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.54 2013/06/22 16:24:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.55 2013/07/26 15:32:58 slyfox Exp $
 
 EAPI=5
 
@@ -287,7 +287,6 @@ qemu_src_configure() {
 		conf_opts+=" $(use_enable iscsi libiscsi)"
 		conf_opts+=" $(use_enable jpeg vnc-jpeg)"
 		conf_opts+=" $(use_enable kernel_linux kvm)"
-		conf_opts+=" $(use_enable kernel_linux nptl)"
 		conf_opts+=" $(use_enable ncurses curses)"
 		conf_opts+=" $(use_enable opengl glx)"
 		conf_opts+=" $(use_enable png vnc-png)"
