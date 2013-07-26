@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/heredoc_unindent
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heredoc_unindent/ChangeLog,v 1.1 2013/07/26 20:22:38 mrueg Exp $
+
+*heredoc_unindent-1.1.2 (26 Jul 2013)
+
+  26 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +heredoc_unindent-1.1.2.ebuild,
+  +metadata.xml:
+  Initial version, dependency of safe_yaml

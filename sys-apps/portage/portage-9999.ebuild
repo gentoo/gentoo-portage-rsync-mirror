@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.85 2013/07/26 08:05:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.86 2013/07/26 20:07:49 zmedico Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -396,40 +396,5 @@ pkg_preinst() {
 	# This is allowed to fail if the user/group are invalid for prefix users.
 	if chown portage:portage "${ED}"var/log/portage{,/elog} 2>/dev/null ; then
 		chmod g+s,ug+rwx "${ED}"var/log/portage{,/elog}
-	fi
-
-	has_version "<=${CATEGORY}/${PN}-2.2_pre5" \
-		&& WORLD_MIGRATION_UPGRADE=true || WORLD_MIGRATION_UPGRADE=false
-
-	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
-	# assume that the NEEDED.ELF.2 files have already been generated.
-	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! { [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
-		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ; } \
-		&& NEEDED_REBUILD_UPGRADE=true || NEEDED_REBUILD_UPGRADE=false
-}
-
-pkg_postinst() {
-	if $WORLD_MIGRATION_UPGRADE && \
-		grep -q "^@" "${EROOT}/var/lib/portage/world"; then
-		einfo "moving set references from the worldfile into world_sets"
-		cd "${EROOT}/var/lib/portage/"
-		grep "^@" world >> world_sets
-		sed -i -e '/^@/d' world
-	fi
-
-	if ${NEEDED_REBUILD_UPGRADE} ; then
-		einfo "rebuilding NEEDED.ELF.2 files"
-		local cpv filename line newline
-		for cpv in "${EROOT}/var/db/pkg"/*/*; do
-			[[ -f "${cpv}/NEEDED" && ! -f "${cpv}/NEEDED.ELF.2" ]] || continue
-			while read -r line; do
-				filename=${line% *}
-				newline=$(scanelf -BF "%a;%F;%S;%r;%n" "${ROOT%/}${filename}")
-				newline=${newline//  -  }
-				[[ ${#ROOT} -gt 1 ]] && newline=${newline/${ROOT%/}}
-				echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
-			done < "${cpv}/NEEDED"
-		done
 	fi
 }
