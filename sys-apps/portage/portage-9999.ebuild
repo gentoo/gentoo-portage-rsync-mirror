@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.84 2013/07/25 22:09:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.85 2013/07/26 08:05:39 zmedico Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -45,13 +45,12 @@ python_dep="${python_dep}
 	python_targets_python3_4? ( dev-lang/python:3.4 )
 "
 
-# The pysqlite blocker is for bug #282760.
 # make-3.82 is for bug #455858
 DEPEND="${python_dep}
 	>=sys-devel/make-3.82
 	>=sys-apps/sed-4.0.5 sys-devel/patch
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
-	epydoc? ( >=dev-python/epydoc-2.0 !<=dev-python/pysqlite-2.4.1 )"
+	epydoc? ( >=dev-python/epydoc-2.0 )"
 # Require sandbox-2.2 for bug #288863.
 # For xattr, we can spawn getfattr and setfattr from sys-apps/attr, but that's
 # quite slow, so it's not considered in the dependencies as an alternative to

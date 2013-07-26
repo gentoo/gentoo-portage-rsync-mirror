@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2_beta.ebuild,v 1.3 2013/07/25 15:31:49 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2_beta.ebuild,v 1.4 2013/07/26 08:11:06 patrick Exp $
 
 EAPI="5"
 
@@ -44,8 +44,6 @@ DEPEND="${COMMON_DEPEND}
 	test? ( app-text/tree dev-lang/perl )"
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
-	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
 	!sys-fs/udev
 	!sys-apps/coldplug
 	!sys-apps/systemd
@@ -54,6 +52,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/udev-init-scripts-18"
 
 PDEPEND=">=virtual/udev-180
+	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
+	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
