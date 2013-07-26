@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=selinux? ( sec-policy/selinux-apm ) virtual/pkgconfig
+DESCRIPTION=Daemon for Advanced Configuration and Power Interface
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/acpid2
+IUSE=selinux
+KEYWORDS=~amd64 ~ia64 -ppc ~x86
+LICENSE=GPL-2
+RDEPEND=selinux? ( sec-policy/selinux-apm )
+SLOT=0
+SRC_URI=mirror://sourceforge/acpid2/acpid-2.0.19.tar.xz
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	systemd	3421a5715404244e4827acd1cf8ce654	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=4ba01953067b188e4773d6258e5ab5d5
