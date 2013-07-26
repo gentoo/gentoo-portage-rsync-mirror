@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.543 2013/07/19 01:58:53 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.544 2013/07/26 17:53:22 williamh Exp $
+
+  26 Jul 2013; William Hubbs <williamh@gentoo.org> baselayout-2.2.ebuild:
+  Three months into the stabilization process and after attempting to get the
+  m68k team to respond with a status, I am stabilizing since there are no m68k
+  specific changes. See bug #455872.
 
   19 Jul 2013; William Hubbs <williamh@gentoo.org> -baselayout-2.0.3.ebuild,
   -baselayout-2.1.ebuild:
