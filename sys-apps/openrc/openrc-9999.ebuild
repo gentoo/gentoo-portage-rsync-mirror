@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.121 2013/04/25 21:04:45 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.122 2013/07/26 02:05:21 williamh Exp $
 
 EAPI=5
 
@@ -205,8 +205,11 @@ pkg_preinst() {
 		add_boot_init tmpfiles.setup boot
 	fi
 
-	# loopback was added in 0.12 and needed in boot (february 2012)
-	has_version ">=sys-apps/openrc-0.12" || add_boot_init loopback
+	# these were added in 0.12.
+	if ! has_version ">=sys-apps/openrc-0.12"; then
+		add_boot_init loopback
+		add_boot_init tmpfiles.dev sysinit
+	fi
 }
 
 # >=OpenRC-0.11.3 requires udev-mount to be in the sysinit runlevel with udev.
@@ -294,7 +297,4 @@ pkg_postinst() {
 
 	elog "You should now update all files in /etc, using etc-update"
 	elog "or equivalent before restarting any services or this host."
-	elog
-	elog "Please read the migration guide available at:"
-	elog "http://www.gentoo.org/doc/en/openrc-migration.xml"
 }
