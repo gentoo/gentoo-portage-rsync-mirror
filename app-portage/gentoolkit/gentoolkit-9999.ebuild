@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.26 2013/01/02 22:56:29 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.27 2013/07/26 02:44:07 floppym Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=(python{2_6,2_7,3_1,3_2,3_3} pypy1_9 )
-PYTHON_REQ_USE="xml"
+PYTHON_COMPAT=(python{2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0})
+PYTHON_REQ_USE="xml(+)"
 
 EGIT_MASTER="gentoolkit"
 EGIT_BRANCH="gentoolkit"
