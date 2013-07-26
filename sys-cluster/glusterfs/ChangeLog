@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/glusterfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.46 2013/04/03 15:03:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.47 2013/07/26 11:43:00 dev-zero Exp $
+
+*glusterfs-3.4.0 (26 Jul 2013)
+
+  26 Jul 2013; Tiziano Müller <dev-zero@gentoo.org> +files/glusterd-r1.initd,
+  +files/glusterfs-3.4.0-build-shared-only.patch,
+  +files/glusterfs-3.4.0-parallel-build.patch,
+  +files/glusterfs-3.4.0-silent_rules.patch, +glusterfs-3.4.0.ebuild,
+  metadata.xml:
+  Version bump (bug #477904), use python-single-r1.eclass and EAPI-5, add USE
+  flags for systemtap, debug, bd-xlator, georeplication, fix the license and
+  install more extras (if requested). Rewrote glusterd init.d-script, including
+  comments from bug #413417. Fix deps (bug #455328) and parallel build issues.
 
 *glusterfs-3.3.1-r2 (03 Apr 2013)
 

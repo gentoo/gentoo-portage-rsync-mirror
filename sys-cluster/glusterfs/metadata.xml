@@ -6,9 +6,12 @@
 		GlusterFS is a cluster file-system capable of scaling to several peta-bytes. It aggregates various storage bricks over Infiniband RDMA or TCP/IP interconnect into one large parallel network file system. GlusterFS is based on a stackable user space design without compromising performance.
 	</longdescription>
 	<use>
+		<flag name='bd-xlator'>Enable the blockdevice translator (requires <pkg>sys-fs/lvm2</pkg>)</flag>
 		<flag name='fuse'>Add FUSE mount helper</flag>
+		<flag name='georeplication'>Enable support for georeplication (requires <pkg>dev-lang/python</pkg>)</flag>
 		<flag name='extras'>Install extra helper scripts</flag>
 		<flag name='infiniband'>Add support for Infiniband ibverbs transport.
 			Libraries can be found in science overlay</flag>
+		<flag name='systemtap'>Enable support for <pkg>dev-util/systemtap</pkg></flag>
 	</use>
 </pkgmetadata>
