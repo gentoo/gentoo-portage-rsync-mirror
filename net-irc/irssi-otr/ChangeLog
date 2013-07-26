@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/irssi-otr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.12 2013/06/01 14:42:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.13 2013/07/25 23:34:32 pinkbyte Exp $
+
+*irssi-otr-0.3-r1 (25 Jul 2013)
+
+  25 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> -irssi-otr-0.3.ebuild,
+  +irssi-otr-0.3-r1.ebuild:
+  Revision bump: EAPI 5, proper handling of python-related stuff, wrt bug
+  #315307, drop old revision
 
   01 Jun 2013; Chris Reffett <creffett@gentoo.org> irssi-otr-0.2.ebuild:
   EAPI bump wrt bug 460572
