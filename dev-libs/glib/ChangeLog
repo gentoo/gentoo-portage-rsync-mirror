@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.564 2013/07/17 04:59:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.565 2013/07/26 20:39:10 pacho Exp $
+
+*glib-2.36.3-r1 (26 Jul 2013)
+
+  26 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/glib-2.36.3-revert-ext34.patch, +glib-2.36.3-r1.ebuild,
+  -glib-2.36.2.ebuild:
+  Apply upstream patch reverting a change that could cause problems with some
+  ext3/4 setups, adapt bash-completion dir relying on eclass. Drop old.
 
   17 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> glib-2.36.3.ebuild:
   Stop applying glib-2.32.4-bashcomp.patch because the upstream default of

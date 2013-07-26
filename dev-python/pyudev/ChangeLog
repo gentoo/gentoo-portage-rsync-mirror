@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.20 2013/07/21 08:50:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.21 2013/07/26 20:45:09 mgorny Exp $
+
+*pyudev-0.16.1-r1 (26 Jul 2013)
+
+  26 Jul 2013; Michał Górny <mgorny@gentoo.org> +pyudev-0.16.1-r1.ebuild:
+  Convert to distutils-r1.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799
