@@ -1,6 +1,30 @@
 # ChangeLog for mail-client/alot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.16 2013/04/18 13:15:13 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.18 2013/07/26 18:27:15 aidecoe Exp $
+
+*alot-0.3.5 (26 Jul 2013)
+
+  26 Jul 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +alot-0.3.5.ebuild,
+  +files/0.3.5-0001-Use-Unicode-strings-when-dealing-with-.patch:
+  Version bump and EAPI bump. Because of configobj it can be installed only
+  with python2_7 target.
+
+  NEWS
+  ~~~~
+  * full support for PGP/MIME [de|en]cryption and signatures
+  * add missing "unattach" command in envelope buffer
+  * honour 'Mail-Followup-To' header and set if for selected mailinglists
+  * better handling of replies to self-sent messages
+  * make auto_remove_unread configurable
+  * rewrite thread buffer
+  * improved global move commands: first/last line, half-page up/down
+  * tree-based movement in threads (first/last reply, next/previous
+    unfolded/sibling, parent)
+  * fold/unfold messages based on query string in thread mode
+  * respect mailcap commands that expect stdin
+  * Support different libmagic APIs
+  * new hooks called before/aftr buffer open/close/focus
+  * new global repeat command
 
 *alot-0.3.4 (18 Apr 2013)
 
