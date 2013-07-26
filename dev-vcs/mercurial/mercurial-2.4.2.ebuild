@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.2.ebuild,v 1.11 2013/02/10 14:40:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.2.ebuild,v 1.12 2013/07/26 10:54:22 polynomial-c Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -56,7 +56,7 @@ src_install() {
 	distutils_src_install
 	python_convert_shebangs 2 contrib/hg-ssh
 
-	newbashcomp contrib/bash_completion ${PN} || die
+	newbashcomp contrib/bash_completion hg || die
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions

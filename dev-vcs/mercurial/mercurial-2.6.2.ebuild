@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.6.2.ebuild,v 1.1 2013/06/07 13:45:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.6.2.ebuild,v 1.2 2013/07/26 10:54:22 polynomial-c Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ python_compile_all() {
 python_install_all() {
 	distutils-r1_python_install_all
 
-	newbashcomp contrib/bash_completion ${PN}
+	newbashcomp contrib/bash_completion hg
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
