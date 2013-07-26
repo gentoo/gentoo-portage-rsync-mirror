@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/smssend-3.4.ebuild,v 1.9 2010/09/03 20:25:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/smssend-3.4.ebuild,v 1.10 2013/07/26 01:42:59 creffett Exp $
+
+EAPI=5
 
 inherit eutils autotools
 
@@ -16,20 +18,13 @@ IUSE=""
 DEPEND=">=dev-libs/skyutils-2.7"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 	# Patch for Verizon Wireless support
 	# absinthe@gentoo.org 12/16
 	epatch "${FILESDIR}/${P}-verizon.diff"
 
 	eautoreconf
-}
-
-src_compile() {
-	econf || die
-	emake || die
 }
 
 src_install () {

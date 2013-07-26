@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.8-r2.ebuild,v 1.6 2012/06/06 03:50:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.8-r2.ebuild,v 1.7 2013/07/26 01:33:13 creffett Exp $
 
+EAPI=5
 inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Library of assorted C utility functions."
@@ -15,18 +16,15 @@ IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 	epatch "${FILESDIR}"/${P}-libs.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	append-flags -D_GNU_SOURCE
 	econf `use_enable ssl` || die "./configure failed"
-	emake || die "make failed"
 }
 
 src_install () {
