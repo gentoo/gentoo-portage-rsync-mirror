@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/rdd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/ChangeLog,v 1.5 2013/05/10 05:41:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/ChangeLog,v 1.6 2013/07/26 17:12:53 zerochaos Exp $
+
+*rdd-3.0.4-r1 (26 Jul 2013)
+
+  26 Jul 2013; Rick Farina <zerochaos@gentoo.org>
+  +files/rdd-3.0.4-sandbox-fix.patch, +rdd-3.0.4-r1.ebuild, rdd-2.0.7.ebuild:
+  add USE=doc, disable html doc generation due to failure, fix sandbox issue
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> rdd-3.0.4.ebuild:
   Whitespace
