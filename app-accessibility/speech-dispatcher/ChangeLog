@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.89 2013/06/30 14:59:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.90 2013/07/26 03:43:14 teiresias Exp $
+
+  26 Jul 2013; Christopher Brannon <teiresias@gentoo.org>
+  speech-dispatcher-0.7.1-r2.ebuild, -files/speech-dispatcher-0.7.1-doc.patch:
+  Remove a patch, because speech-dispatcher-0.7.1-r2 fails to build with
+  texinfo 5.1 when it is applied. See bug #465806.
 
   30 Jun 2013; Justin Lecher <jlec@gentoo.org>
   speech-dispatcher-0.7.1-r2.ebuild, speech-dispatcher-0.8-r1.ebuild,

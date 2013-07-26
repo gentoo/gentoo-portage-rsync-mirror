@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.7.1-r2.ebuild,v 1.2 2013/06/30 14:59:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.7.1-r2.ebuild,v 1.3 2013/07/26 03:43:14 teiresias Exp $
 
 EAPI=5
 
@@ -35,7 +35,6 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${P}-pthread.patch
-	"${FILESDIR}"/${P}-doc.patch
 	"${FILESDIR}"/${P}-gold.patch
 	)
 
