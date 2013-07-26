@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libcxxrt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.14 2013/07/03 21:30:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.15 2013/07/26 00:48:53 aballier Exp $
+
+*libcxxrt-0.0_p20130725 (26 Jul 2013)
+
+  26 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +libcxxrt-0.0_p20130725.ebuild:
+  bump a new snapshot with multilib support.
 
   03 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxxrt-9999.ebuild:
   Go multilib, based on a patch by Yuta SATOH in bug #475294
