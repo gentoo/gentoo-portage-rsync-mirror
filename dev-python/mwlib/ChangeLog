@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.27 2013/07/03 12:06:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.28 2013/07/26 14:25:40 idella4 Exp $
+
+*mwlib-0.15.10 (26 Jul 2013)
+
+  26 Jul 2013; Ian Delaney <idella4@gentoo.org> +mwlib-0.15.10.ebuild:
+  bump; rm 1 test wrt Bug #474874, usual upgrade of deps
 
 *mwlib-0.15.8-r3 (03 Jul 2013)
 
