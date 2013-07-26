@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.3.ebuild,v 1.1 2013/06/09 19:12:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.3.ebuild,v 1.2 2013/07/26 07:01:05 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="https://git.gnome.org/browse/gnome-control-center/"
 
 LICENSE="GPL-2+"
 SLOT="2"
-IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom kerberos modemmanager +socialweb systemd v4l"
+IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom kerberos modemmanager +socialweb v4l"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 # False positives caused by nested configure scripts
@@ -27,13 +27,12 @@ QA_CONFIGURE_OPTIONS=".*"
 COMMON_DEPEND="
 	>=dev-libs/glib-2.35.1:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
-	>=x11-libs/gtk+-3.7.7:3
+	>=x11-libs/gtk+-3.7.10:3
 	>=gnome-base/gsettings-desktop-schemas-3.7.2.2
 	>=gnome-base/gnome-desktop-3.7.5:3=
 	>=gnome-base/gnome-settings-daemon-3.8.3[colord?,policykit]
 	>=gnome-base/libgnomekbd-2.91.91
 
-	app-text/iso-codes
 	dev-libs/libpwquality
 	dev-libs/libxml2:2
 	gnome-base/gnome-menus:3
@@ -44,11 +43,12 @@ COMMON_DEPEND="
 	>=media-sound/pulseaudio-2[glib]
 	>=sys-auth/polkit-0.97
 	>=sys-power/upower-0.9.1
-	>=x11-libs/libnotify-0.7.3
+	>=x11-libs/libnotify-0.7.3:0=
 
 	>=gnome-extra/nm-applet-0.9.7.995
 	>=net-misc/networkmanager-0.9.8[modemmanager?]
 
+	virtual/opengl
 	x11-apps/xmodmap
 	x11-libs/libX11
 	x11-libs/libXxf86misc
@@ -64,13 +64,12 @@ COMMON_DEPEND="
 	kerberos? ( virtual/krb5 )
 	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	socialweb? ( net-libs/libsocialweb )
-	systemd? ( >=sys-apps/systemd-31 )
 	v4l? (
 		media-libs/gstreamer:1.0
 		media-libs/clutter-gtk:1.0
 		>=media-video/cheese-3.5.91 )
 	input_devices_wacom? (
-		>=dev-libs/libwacom-0.6
+		>=dev-libs/libwacom-0.7
 		>=x11-libs/libXi-1.2 )
 "
 # <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
@@ -78,8 +77,10 @@ RDEPEND="${COMMON_DEPEND}
 	|| ( ( app-admin/openrc-settingsd sys-auth/consolekit ) >=sys-apps/systemd-31 )
 	>=sys-apps/accountsservice-0.6.30
 	x11-themes/gnome-icon-theme-symbolic
-	colord? ( >=gnome-extra/gnome-color-manager-3
-		  >=x11-misc/colord-0.1.29 )
+	colord? (
+		>=gnome-extra/gnome-color-manager-3
+		>=x11-misc/colord-0.1.29
+		>=x11-libs/colord-gtk-0.1.24 )
 	cups? (
 		>=app-admin/system-config-printer-gnome-1.3.5
 		net-print/cups-pk-helper )
@@ -156,7 +157,6 @@ src_configure() {
 		$(use_enable i18n ibus) \
 		$(use_enable modemmanager) \
 		$(use_with socialweb libsocialweb) \
-		$(use_enable systemd) \
 		$(use_with v4l cheese) \
 		$(use_enable input_devices_wacom wacom)
 }

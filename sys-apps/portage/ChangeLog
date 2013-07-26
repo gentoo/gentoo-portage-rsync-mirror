@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1315 2013/07/25 22:09:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1316 2013/07/26 06:52:03 zmedico Exp $
+
+*portage-2.1.13 (26 Jul 2013)
+
+  26 Jul 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.13.ebuild:
+  2.1.13 version bump. This fixes bug #277970 (document usersync permission
+  requirements for PORTDIR), bug #475496 (add system.nfs4_acl to default
+  PORTAGE_XATTR_EXCLUDE), bug #476830 (add portageq repos_config), bug #477664
+  (enable userpriv by default in FEATURES), bug #477682 (enable usersync by
+  default in FEATURES), bug #477764 (sanitize PYTHONPATH for internal ebuild
+  helpers), and bug #478156 (automatically disable repoman --without-mask for
+  commit mode). Bug #472632 tracks all bugs fixed since portage-2.1.12.2.
 
   25 Jul 2013; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Adjust make.globals for prefix support.
