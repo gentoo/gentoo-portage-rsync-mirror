@@ -1,6 +1,12 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.43 2013/07/24 20:51:59 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.45 2013/07/26 14:50:45 ssuominen Exp $
+
+  26 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-197-r3.ebuild:
+  old
+
+  26 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udev-200.ebuild:
+  Stabilize for everyone.
 
   24 Jul 2013; Ian Stakenvicius <axs@gentoo.org> udev-206.ebuild:
   adjusted eudev dependency to force keymaps on, so that consistency is held

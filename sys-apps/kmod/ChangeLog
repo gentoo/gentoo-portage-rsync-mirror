@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.101 2013/07/26 06:49:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.103 2013/07/26 14:54:02 ssuominen Exp $
+
+  26 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> -kmod-12-r1.ebuild,
+  -kmod-14.ebuild:
+  old
+
+  26 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-13-r1.ebuild:
+  m68k stable wrt #470580
 
   26 Jul 2013; William Hubbs <williamh@gentoo.org> files/static-nodes:
   Style fixes for init script, convert multiple spaces at the start of lines to

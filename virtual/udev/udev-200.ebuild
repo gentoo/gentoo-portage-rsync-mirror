@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-200.ebuild,v 1.1 2013/07/06 07:40:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-200.ebuild,v 1.2 2013/07/26 14:50:02 ssuominen Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 # These default enabled IUSE flags should follow defaults of sys-fs/udev.
 IUSE="gudev hwdb introspection keymap +kmod selinux static-libs"
 
