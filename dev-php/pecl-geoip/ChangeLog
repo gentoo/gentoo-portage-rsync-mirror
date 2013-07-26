@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-geoip/ChangeLog,v 1.6 2013/03/05 11:07:37 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-geoip/ChangeLog,v 1.7 2013/07/26 13:38:16 olemarkus Exp $
+
+*pecl-geoip-1.0.8-r2 (26 Jul 2013)
+
+  26 Jul 2013; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-geoip-1.0.8-r2.ebuild:
+  Adding 5.5 support, removing 5.3 support
 
   05 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
   -pecl-geoip-1.0.7-r1.ebuild:
