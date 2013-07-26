@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.472 2013/06/30 18:08:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.473 2013/07/26 00:02:47 radhermit Exp $
+
+*gnupg-1.4.14 (26 Jul 2013)
+
+  26 Jul 2013; Tim Harder <radhermit@gentoo.org> +gnupg-1.4.14.ebuild:
+  Security bump (bug #478184).
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gnupg-2.0.20.ebuild:
   Stable for s390, wrt bug #471404
