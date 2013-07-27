@@ -1,6 +1,17 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.190 2013/07/03 22:21:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.192 2013/07/27 16:25:55 aballier Exp $
+
+  27 Jul 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-9.1.ebuild,
+  -freebsd-lib-9.1-r1.ebuild, -freebsd-lib-9.1-r2.ebuild,
+  -freebsd-lib-9.1-r3.ebuild, -freebsd-lib-9.1-r4.ebuild,
+  -freebsd-lib-9.1-r5.ebuild, -freebsd-lib-9.1-r6.ebuild,
+  -freebsd-lib-9.1-r7.ebuild, -freebsd-lib-9.1-r8.ebuild,
+  -freebsd-lib-9.1-r9.ebuild:
+  remove old
+
+  27 Jul 2013; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.1-r10.ebuild:
+  Install libusb-1.0.pc under the correct name, bug #478352 by Yuta SATOH
 
 *freebsd-lib-9.1-r10 (03 Jul 2013)
 

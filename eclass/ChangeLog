@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.898 2013/07/27 11:17:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.899 2013/07/27 16:18:00 pacho Exp $
+
+  27 Jul 2013; Pacho Ramos <pacho@gentoo.org> go-mono.eclass:
+  Don't block mono-3
 
   27 Jul 2013; Michał Górny <mgorny@gentoo.org> python.eclass,
   python-distutils-ng.eclass, python-utils-r1.eclass:
