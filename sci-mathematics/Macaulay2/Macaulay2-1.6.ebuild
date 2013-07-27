@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.6.ebuild,v 1.2 2013/06/28 07:10:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.6.ebuild,v 1.3 2013/07/27 14:58:13 tomka Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="https://github.com/Macaulay2/M2/archive/${GITHUBTAG}.tar.gz -> ${P}.tar
 	ftp://www.mathematik.uni-kl.de/pub/Math/Singular/Factory/factory-gftables.tar.gz
 	http://www.math.uiuc.edu/Macaulay2/Downloads/OtherSourceCode/trunk/${FACTORY}.tar.gz
 	http://www.math.uiuc.edu/Macaulay2/Extra/gtest-1.6.0.tar.gz
-	http://www.mathematik.uni-osnabrueck.de/normaliz/Normaliz2.10/Normaliz2.10.zip"
+	http://www.mathematik.uni-osnabrueck.de/normaliz/Normaliz2.10.1/Normaliz2.10.1.zip"
 # Need normaliz for an up to date normaliz.m2
 
 SLOT="0"
@@ -45,7 +45,7 @@ RDEPEND="
 	sci-mathematics/frobby
 	sci-mathematics/4ti2
 	sci-mathematics/nauty
-	=sci-mathematics/normaliz-2.10
+	>=sci-mathematics/normaliz-2.10
 	sci-mathematics/gfan
 	sci-libs/mpir[cxx]
 	dev-libs/mpfr
