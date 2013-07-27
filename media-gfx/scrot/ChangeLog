@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.23 2013/01/04 15:21:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.24 2013/07/27 20:19:02 aballier Exp $
+
+  27 Jul 2013; Alexis Ballier <aballier@gentoo.org> scrot-0.8.ebuild:
+  keyword ~amd64-fbsd thanks to Yuta SATOH, bug #477644
 
   04 Jan 2013; Ulrich Müller <ulm@gentoo.org> scrot-0.8.ebuild:
   Fix LICENSE, see COPYING, bug 448184.

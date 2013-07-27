@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.46 2013/06/28 01:55:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.47 2013/07/27 20:24:41 alonbl Exp $
+
+*p11-kit-0.19.3 (27 Jul 2013)
+
+  27 Jul 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/p11-kit-0.19.3-build.patch, +p11-kit-0.19.3.ebuild:
+  Version bump, fixes bug#471956, bug#477486
 
 *p11-kit-0.18.4 (28 Jun 2013)
 

@@ -1,0 +1,21 @@
+[PATCH] do not assume dead code existence in autoconf checks
+
+when compiler optimize source, it removes dead code so a linkage error
+in these cases are not visisble.
+
+Signed-off-by: Alon Bar-Lev <alon.barlev@gmail.com>
+
+--- p11-kit-0.19.3/configure.ac	2013-07-24 11:13:03.000000000 +0300
++++ p11-kit-0.19.3.new/configure.ac	2013-07-27 23:05:53.470534878 +0300
+@@ -100,9 +100,9 @@ if test "$os_unix" = "yes"; then
+ 	                AC_MSG_RESULT([yes])],
+ 	               [AC_MSG_RESULT([no])])
+ 	AC_CHECK_DECLS([__progname])
+-	AC_LINK_IFELSE([AC_LANG_SOURCE([extern char *__progname; void main() { }])],
++	AC_LINK_IFELSE([AC_LANG_PROGRAM([[extern char *__progname;]], [[__progname=(char*)0;]])],
+ 		[AC_DEFINE(HAVE___PROGNAME, [1], [Whether __progname available])])
+-	AC_LINK_IFELSE([AC_LANG_SOURCE([extern int __libc_enable_secure; void main() { }])],
++	AC_LINK_IFELSE([AC_LANG_PROGRAM([[extern int __libc_enable_secure;]], [[__libc_enable_secure = 0;]])],
+ 		[AC_DEFINE(HAVE___LIBC_ENABLE_SECURE, [1], [Whether __libc_enable_secure available])])
+ fi
+ 
