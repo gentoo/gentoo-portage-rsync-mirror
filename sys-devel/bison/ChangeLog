@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.124 2013/04/17 04:23:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.125 2013/07/26 23:49:19 radhermit Exp $
+
+*bison-3.0 (26 Jul 2013)
+
+  26 Jul 2013; Tim Harder <radhermit@gentoo.org> +bison-3.0.ebuild:
+  Version bump.
 
 *bison-2.7.1 (17 Apr 2013)
 

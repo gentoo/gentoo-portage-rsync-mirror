@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8077 2013/07/26 12:48:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8078 2013/07/26 23:47:53 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jul 2013; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask =sys-devel/bison-3* for testing.
 
   26 Jul 2013; Marien Zwart <marienz@gentoo.org> package.mask:
   Mask sys-kernel/gentoo-sources-3.10.3 for unapplied patch (installs 3.10.2)
