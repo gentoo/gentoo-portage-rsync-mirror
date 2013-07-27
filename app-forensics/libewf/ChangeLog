@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.51 2013/07/27 08:16:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.52 2013/07/27 21:08:47 zerochaos Exp $
+
+*libewf-20130416-r1 (27 Jul 2013)
+
+  27 Jul 2013; Rick Farina <zerochaos@gentoo.org> +libewf-20130416-r1.ebuild,
+  metadata.xml:
+  new optional dep on libbfio
 
   27 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Removing unneeded useflag description from metadata.xml

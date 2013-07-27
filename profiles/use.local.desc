@@ -594,6 +594,7 @@ app-forensics/afflib:s3 - Enable support for Amazon S3
 app-forensics/aide:audit - Enable support for sys-process/audit
 app-forensics/aide:prelink - Enable support for sys-devel/prelink
 app-forensics/chkrootkit:cron - Install cron script for weekly rootkit scans
+app-forensics/libewf:bfio - Enables libbfio for chaining file in file handling
 app-forensics/libewf:ewf - Enables the v1 API
 app-forensics/libewf:fuse - Enable fuse support for ewfmount
 app-forensics/libewf:rawio - Enables raw IO handling

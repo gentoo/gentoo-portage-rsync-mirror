@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/granite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/ChangeLog,v 1.3 2013/05/12 11:56:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/ChangeLog,v 1.4 2013/07/27 21:29:21 jlec Exp $
+
+*granite-0.2.1 (27 Jul 2013)
+
+  27 Jul 2013; Justin Lecher <jlec@gentoo.org> granite-0.1.0.ebuild,
+  +granite-0.2.1.ebuild:
+  Version BUmp
 
   12 May 2013; Pacho Ramos <pacho@gentoo.org> granite-0.1.0.ebuild:
   Use vala.eclass (#467384)

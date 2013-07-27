@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>forensics</herd>
 <use>
+	<flag name="bfio">Enables libbfio for chaining file in file handling</flag>
 	<flag name="rawio">Enables raw IO handling</flag>
 	<flag name="ewf">Enables the v1 API</flag>
 	<flag name="fuse">Enable fuse support for ewfmount</flag>
