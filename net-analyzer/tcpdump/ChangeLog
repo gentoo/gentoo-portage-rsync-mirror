@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.172 2013/06/04 08:09:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.173 2013/07/27 17:11:03 jer Exp $
+
+  27 Jul 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove duplicate description.
 
   04 Jun 2013; Zac Medico <zmedico@gentoo.org> tcpdump-4.4.0-r1.ebuild:
   Fix chroot -> drop-root in pkg_preinst.
