@@ -1,0 +1,32 @@
+changeset:   55523:a9a8faa76bca
+parent:      55518:f0daafccddc5
+user:        Armin Rigo <arigo@tunes.org>
+date:        Fri Jun 08 19:55:01 2012 +0200
+summary:     Add more instructions to ignore by copying from Intel docs.
+
+diff -r f0daafccddc5 -r a9a8faa76bca pypy/translator/c/gcc/trackgcroot.py
+--- a/pypy/translator/c/gcc/trackgcroot.py	Fri Jun 08 18:30:54 2012 +0200
++++ b/pypy/translator/c/gcc/trackgcroot.py	Fri Jun 08 19:55:01 2012 +0200
+@@ -483,8 +483,10 @@
+         'inc', 'dec', 'not', 'neg', 'or', 'and', 'sbb', 'adc',
+         'shl', 'shr', 'sal', 'sar', 'rol', 'ror', 'mul', 'imul', 'div', 'idiv',
+         'bswap', 'bt', 'rdtsc',
+-        'punpck', 'pshufd', 'pcmp', 'pand', 'psllw', 'pslld', 'psllq',
+-        'paddq', 'pinsr', 'pmul', 'psrl',
++        'pabs', 'pack', 'padd', 'palign', 'pand', 'pavg', 'pcmp', 'pextr',
++        'phadd', 'phsub', 'pinsr', 'pmadd', 'pmax', 'pmin', 'pmovmsk',
++        'pmul', 'por', 'psadb', 'pshuf', 'psign', 'psll', 'psra', 'psrl',
++        'psub', 'punpck', 'pxor',
+         # all vectors don't produce pointers
+         'v',
+         # sign-extending moves should not produce GC pointers
+@@ -492,7 +494,7 @@
+         # zero-extending moves should not produce GC pointers
+         'movz', 
+         # locked operations should not move GC pointers, at least so far
+-        'lock',
++        'lock', 'pause',
+         ])
+ 
+     # a partial list is hopefully good enough for now; it's all to support
+

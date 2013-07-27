@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install prepare setup test
+DEPEND=doc? ( dev-python/sphinx ) test? ( ~app-arch/bzip2-1.0.6 ~dev-libs/expat-2.1.0 || ( ~dev-libs/libffi-3.0.13 ~dev-libs/libffi-3.0.12 ~dev-libs/libffi-3.0.11 ) || ( ~dev-libs/openssl-1.0.1e ~dev-libs/openssl-1.0.1d ~dev-libs/openssl-1.0.1c ) || ( ~sys-libs/glibc-2.17 ~sys-libs/glibc-2.16.0 ~sys-libs/glibc-2.15 ) ~sys-libs/ncurses-5.9 || ( ~sys-libs/zlib-1.2.8 ~sys-libs/zlib-1.2.7 ) sqlite? ( dev-db/sqlite:3 ) !dev-python/pypy:2.0 )
+DESCRIPTION=A fast, compliant alternative implementation of the Python language (binary package)
+EAPI=5
+HOMEPAGE=http://pypy.org/
+IUSE=doc +jit shadowstack sqlite sse2 test
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+PDEPEND=app-admin/python-updater
+RDEPEND=~app-arch/bzip2-1.0.6 ~dev-libs/expat-2.1.0 || ( ~dev-libs/libffi-3.0.13 ~dev-libs/libffi-3.0.12 ~dev-libs/libffi-3.0.11 ) || ( ~dev-libs/openssl-1.0.1e ~dev-libs/openssl-1.0.1d ~dev-libs/openssl-1.0.1c ) || ( ~sys-libs/glibc-2.17 ~sys-libs/glibc-2.16.0 ~sys-libs/glibc-2.15 ) ~sys-libs/ncurses-5.9 || ( ~sys-libs/zlib-1.2.8 ~sys-libs/zlib-1.2.7 ) sqlite? ( dev-db/sqlite:3 ) !dev-python/pypy:2.0
+REQUIRED_USE=!jit? ( !shadowstack ) x86? ( !sse2? ( !jit !shadowstack ) )
+SLOT=2.0
+SRC_URI=mirror://bitbucket/pypy/pypy/downloads/pypy-2.0.2-src.tar.bz2 amd64? ( jit? ( shadowstack? ( http://dev.gentoo.org/~mgorny/dist/pypy-bin/pypy-bin-2.0.2-amd64+bzip2+jit+ncurses+shadowstack.tar.xz ) ) jit? ( !shadowstack? ( http://dev.gentoo.org/~mgorny/dist/pypy-bin/pypy-bin-2.0.2-amd64+bzip2+jit+ncurses.tar.xz ) ) !jit? ( !shadowstack? ( http://dev.gentoo.org/~mgorny/dist/pypy-bin/pypy-bin-2.0.2-amd64+bzip2+ncurses.tar.xz ) ) ) x86? ( sse2? ( jit? ( shadowstack? ( http://dev.gentoo.org/~mgorny/dist/pypy-bin/pypy-bin-2.0.2-x86+bzip2+jit+ncurses+shadowstack+sse2.tar.xz ) ) jit? ( !shadowstack? ( http://dev.gentoo.org/~mgorny/dist/pypy-bin/pypy-bin-2.0.2-x86+bzip2+jit+ncurses+sse2.tar.xz ) ) !jit? ( !shadowstack? ( http://dev.gentoo.org/~mgorny/dist/pypy-bin/pypy-bin-2.0.2-x86+bzip2+ncurses+sse2.tar.xz ) ) ) !sse2? ( !jit? ( !shadowstack? ( http://dev.gentoo.org/~mgorny/dist/pypy-bin/pypy-bin-2.0.2-x86+bzip2+ncurses.tar.xz ) ) ) )
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	python-any-r1	be3acf497433d6ff87b861634fd38bb5	python-utils-r1	e3288ba49a9a4406c283001e4d284aad	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=764475c0bd6b85248bcc5422a9ad95e4

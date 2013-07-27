@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.11 2013/05/10 22:03:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.12 2013/07/27 11:16:48 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -118,25 +118,13 @@ _python_build_set_globals() {
 	[[ ${PYTHON_REQ_USE} ]] && usestr="[${PYTHON_REQ_USE}]"
 
 	PYTHON_DEPS=
-	local i
+	local i PYTHON_PKG_DEP
 	for i in "${_PYTHON_ALL_IMPLS[@]}"; do
-		if has "${i}" "${PYTHON_COMPAT[@]}"
-		then
-			local d
-			case ${i} in
-				python*)
-					d='dev-lang/python';;
-				jython*)
-					d='dev-java/jython';;
-				pypy*)
-					d='dev-python/pypy';;
-				*)
-					die "Invalid implementation: ${i}"
-			esac
+		has "${i}" "${PYTHON_COMPAT[@]}" || continue
 
-			local v=${i##*[a-z]}
-			PYTHON_DEPS="${d}:${v/_/.}${usestr} ${PYTHON_DEPS}"
-		fi
+		python_export "${i}" PYTHON_PKG_DEP
+
+		PYTHON_DEPS="${PYTHON_PKG_DEP} ${PYTHON_DEPS}"
 	done
 	PYTHON_DEPS="|| ( ${PYTHON_DEPS})"
 }

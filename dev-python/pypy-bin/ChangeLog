@@ -1,0 +1,23 @@
+# ChangeLog for dev-python/pypy-bin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.3 2013/07/27 11:19:19 mgorny Exp $
+
+*pypy-bin-1.9 (27 Jul 2013)
+*pypy-bin-2.0.2 (27 Jul 2013)
+
+  27 Jul 2013; Michał Górny <mgorny@gentoo.org>
+  +files/1.9-distutils-fix_handling_of_executables_and_flags.patch, +files/1.9-d
+  istutils.unixccompiler.UnixCCompiler.runtime_library_dir_option.patch,
+  +files/1.9-get_python_lib_standard_lib-04ea518e5b71.patch,
+  +files/1.9-getargs-freelist-c26dc70ee340.patch,
+  +files/1.9-more-ignored-ops-146ddf82a279.patch,
+  +files/1.9-more-ignored-ops-a9a8faa76bca.patch,
+  +files/1.9-no-bytecode-4151f9c406b6.patch, +files/1.9-no-static-hack.patch,
+  +files/1.9-pybuffer-release-double-decref-4ec2a5b49386.patch,
+  +files/1.9-scripts-location.patch, +files/1.9-signal-a33052b17f4e.patch,
+  +files/1.9-ssl-errors-25d3418150d2.patch,
+  +files/1.9-ssl-threads-1-34b3b5aac082.patch,
+  +files/1.9-ssl-threads-2-25cd11066d95.patch,
+  +files/2.0.2-distutils-fix_handling_of_executables_and_flags.patch,
+  +metadata.xml, +pypy-bin-1.9.ebuild, +pypy-bin-2.0.2.ebuild:
+  Initial versions of pypy binary packages.

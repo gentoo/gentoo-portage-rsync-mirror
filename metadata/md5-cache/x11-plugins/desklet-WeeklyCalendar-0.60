@@ -6,5 +6,5 @@ LICENSE=GPL-3
 RDEPEND=>=x11-plugins/desklet-iCalendarEvent-0.4 >=gnome-extra/gdesklets-core-0.36.1-r3
 SLOT=0
 SRC_URI=http://gdesklets.de/files/desklets/WeeklyCalendar/WeeklyCalendar-0.60.tar.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	gdesklets	f4d993afddca34073713cc2a27e45c0a	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	gdesklets	f4d993afddca34073713cc2a27e45c0a	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=4b7cb63aa2a78cbc8b86978451802a2e

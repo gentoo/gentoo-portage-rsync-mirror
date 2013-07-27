@@ -10,5 +10,5 @@ RDEPEND=dev-python/dbus-python >=media-libs/mutagen-1.10 >=dev-python/pygtk-2.17
 RESTRICT=test
 SLOT=0
 SRC_URI=http://launchpad.net/exaile/0.3.2/0.3.2.0/+download/exaile-0.3.2.0.tar.gz
-_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=be36fcbe4cf1f61ad383b8859895612f

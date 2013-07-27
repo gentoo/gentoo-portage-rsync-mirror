@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=app-pda/synce-core-0.16[python?] >=dev-libs/libmimedir-0.5.1 python? ( >=dev-python/pyrex-0.9.6 ) python? ( =dev-lang/python-2.7* )
 SLOT=0
 SRC_URI=mirror://sourceforge/synce/librra-0.16.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=5f9ef80e00d2d0b9306c3f1af46585ae

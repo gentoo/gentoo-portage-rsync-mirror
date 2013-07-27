@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.29 2013/07/11 07:20:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.30 2013/07/27 11:17:44 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -343,7 +343,7 @@ python_export() {
 					jython*)
 						PYTHON_PKG_DEP='dev-java/jython';;
 					pypy*)
-						PYTHON_PKG_DEP='dev-python/pypy';;
+						PYTHON_PKG_DEP='virtual/pypy';;
 					*)
 						die "Invalid implementation: ${impl}"
 				esac

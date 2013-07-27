@@ -1,0 +1,143 @@
+changeset:   55575:34b3b5aac082
+parent:      55569:fa8262a5746a
+user:        Armin Rigo <arigo@tunes.org>
+date:        Mon Jun 11 14:38:35 2012 +0200
+summary:     Move the callback logic to C code instead of using RPython code
+
+diff -r fa8262a5746a -r 34b3b5aac082 pypy/module/_ssl/__init__.py
+--- a/pypy/module/_ssl/__init__.py	Mon Jun 11 11:04:53 2012 +0200
++++ b/pypy/module/_ssl/__init__.py	Mon Jun 11 14:38:35 2012 +0200
+@@ -31,5 +31,6 @@
+     def startup(self, space):
+         from pypy.rlib.ropenssl import init_ssl
+         init_ssl()
+-        from pypy.module._ssl.interp_ssl import setup_ssl_threads
+-        setup_ssl_threads()
++        if space.config.objspace.usemodules.thread:
++            from pypy.module._ssl.thread_lock import setup_ssl_threads
++            setup_ssl_threads()
+diff -r fa8262a5746a -r 34b3b5aac082 pypy/module/_ssl/interp_ssl.py
+--- a/pypy/module/_ssl/interp_ssl.py	Mon Jun 11 11:04:53 2012 +0200
++++ b/pypy/module/_ssl/interp_ssl.py	Mon Jun 11 14:38:35 2012 +0200
+@@ -880,38 +880,3 @@
+             libssl_X509_free(x)
+     finally:
+         libssl_BIO_free(cert)
+-
+-# this function is needed to perform locking on shared data
+-# structures. (Note that OpenSSL uses a number of global data
+-# structures that will be implicitly shared whenever multiple threads
+-# use OpenSSL.) Multi-threaded applications will crash at random if
+-# it is not set.
+-#
+-# locking_function() must be able to handle up to CRYPTO_num_locks()
+-# different mutex locks. It sets the n-th lock if mode & CRYPTO_LOCK, and
+-# releases it otherwise.
+-#
+-# filename and line are the file number of the function setting the
+-# lock. They can be useful for debugging.
+-_ssl_locks = []
+-
+-def _ssl_thread_locking_function(mode, n, filename, line):
+-    n = intmask(n)
+-    if n < 0 or n >= len(_ssl_locks):
+-        return
+-
+-    if intmask(mode) & CRYPTO_LOCK:
+-        _ssl_locks[n].acquire(True)
+-    else:
+-        _ssl_locks[n].release()
+-
+-def _ssl_thread_id_function():
+-    from pypy.module.thread import ll_thread
+-    return rffi.cast(rffi.LONG, ll_thread.get_ident())
+-
+-def setup_ssl_threads():
+-    from pypy.module.thread import ll_thread
+-    for i in range(libssl_CRYPTO_num_locks()):
+-        _ssl_locks.append(ll_thread.allocate_lock())
+-    libssl_CRYPTO_set_locking_callback(_ssl_thread_locking_function)
+-    libssl_CRYPTO_set_id_callback(_ssl_thread_id_function)
+diff -r fa8262a5746a -r 34b3b5aac082 pypy/module/_ssl/thread_lock.py
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/pypy/module/_ssl/thread_lock.py	Mon Jun 11 14:38:35 2012 +0200
+@@ -0,0 +1,78 @@
++from pypy.rlib.ropenssl import *
++from pypy.rpython.lltypesystem import lltype, rffi
++from pypy.translator.tool.cbuild import ExternalCompilationInfo
++
++# CRYPTO_set_locking_callback:
++#
++# this function is needed to perform locking on shared data
++# structures. (Note that OpenSSL uses a number of global data
++# structures that will be implicitly shared whenever multiple threads
++# use OpenSSL.) Multi-threaded applications will crash at random if
++# it is not set.
++#
++# locking_function() must be able to handle up to CRYPTO_num_locks()
++# different mutex locks. It sets the n-th lock if mode & CRYPTO_LOCK, and
++# releases it otherwise.
++#
++# filename and line are the file number of the function setting the
++# lock. They can be useful for debugging.
++
++
++# This logic is moved to C code so that the callbacks can be invoked
++# without caring about the GIL.
++
++separate_module_source = """
++
++#include <openssl/crypto.h>
++
++static unsigned int _ssl_locks_count = 0;
++static struct RPyOpaque_ThreadLock *_ssl_locks;
++
++static unsigned long _ssl_thread_id_function(void) {
++    return RPyThreadGetIdent();
++}
++
++static void _ssl_thread_locking_function(int mode, int n, const char *file,
++                                         int line) {
++    if ((_ssl_locks == NULL) ||
++        (n < 0) || ((unsigned)n >= _ssl_locks_count))
++        return;
++
++    if (mode & CRYPTO_LOCK) {
++        RPyThreadAcquireLock(_ssl_locks[n], 1);
++    } else {
++        RPyThreadReleaseLock(_ssl_locks[n]);
++    }
++}
++
++int _PyPy_SSL_SetupThreads(void)
++{
++    unsigned int i;
++    _ssl_locks_count = CRYPTO_num_locks();
++    _ssl_locks = calloc(_ssl_locks_count, sizeof(struct RPyOpaque_ThreadLock));
++    if (_ssl_locks == NULL)
++        return 0;
++    for (i=0; i<_ssl_locks_count; i++) {
++        if (RPyThreadLockInit(_ssl_locks + i) == 0)
++            return 0;
++    }
++    CRYPTO_set_locking_callback(_ssl_thread_locking_function);
++    CRYPTO_set_id_callback(_ssl_thread_id_function);
++    return 1;
++}
++"""
++
++
++eci = ExternalCompilationInfo(
++    separate_module_sources=[separate_module_source],
++    export_symbols=['_PyPy_SSL_SetupThreads'],
++)
++
++_PyPy_SSL_SetupThreads = rffi.llexternal('_PyPy_SSL_SetupThreads',
++                                         [], rffi.INT,
++                                         compilation_info=eci)
++
++def setup_ssl_threads():
++    result = _PyPy_SSL_SetupThreads()
++    if rffi.cast(lltype.Signed, result) == 0:
++        raise MemoryError
+

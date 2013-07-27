@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.30:2 >=sys-apps/dbus-0.60 >=dev-libs/dbus-glib-0.60 >=net-libs/telepathy-glib-0.17.5 >=net-libs/farstream-0.1.0:0.1 python? ( >=dev-python/pygobject-2.12.0:2 >=dev-python/gst-python-0.10.10 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) ) python? ( || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] ) )
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-farstream/telepathy-farstream-0.4.0.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=35b956fef0c0379929176651ced67879

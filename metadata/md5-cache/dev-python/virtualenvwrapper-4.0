@@ -10,5 +10,5 @@ RDEPEND=dev-python/virtualenv dev-python/stevedore dev-python/virtualenv-clone |
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://pypi/v/virtualenvwrapper/virtualenvwrapper-4.0.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=cd0821fc5a61f117d97cb8fc594c6db2

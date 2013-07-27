@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.80-r1.ebuild,v 1.1 2013/07/24 14:22:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.81.ebuild,v 1.1 2013/07/27 11:06:36 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
@@ -58,7 +58,7 @@ src_prepare() {
 	sed -i -e 's|noinst\(_PROGRAMS = $(TESTS)\)|check\1|' lib${PN}/Makefile.am || die
 
 	# fix for broken translations path
-	epatch "${FILESDIR}"/${P}-translations-path-fix.patch
+	epatch "${FILESDIR}"/${PN}-2.80-translations-path-fix.patch
 
 	eautoreconf
 }

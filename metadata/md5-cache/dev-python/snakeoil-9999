@@ -6,5 +6,5 @@ HOMEPAGE=http://snakeoil.googlecode.com/
 LICENSE=BSD
 RDEPEND=!<sys-apps/pkgcore-0.4.7.8 dev-lang/python
 SLOT=0
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=735abec363cd7eb950c9e9e64f4198ae

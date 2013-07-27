@@ -1,0 +1,212 @@
+# HG changeset patch
+# User Armin Rigo <arigo@tunes.org>
+# Date 1339595299 -7200
+# Node ID c26dc70ee34018efeec8b789d40ec78478304bc0
+# Parent  c7dff5469611f03946466caed17c567c4ea5d8d0
+Fix for the issue of abuse of PyCapsules, relying on immediate
+destruction, as CPython does.  This problem was first described in
+https://bazaar.launchpad.net/~exarkun/pyopenssl/trunk/revision/166.
+The fix is rather obvious and consist in a *negative* total amount
+of lines :-/
+
+diff -r c7dff5469611f03946466caed17c567c4ea5d8d0 -r c26dc70ee34018efeec8b789d40ec78478304bc0 pypy/module/cpyext/src/getargs.c
+--- a/pypy/module/cpyext/src/getargs.c	Wed Jun 13 13:19:05 2012 +0200
++++ b/pypy/module/cpyext/src/getargs.c	Wed Jun 13 15:48:19 2012 +0200
+@@ -24,14 +24,15 @@
+ 
+ 
+ /* Forward */
++typedef struct freelist_s freelist_t;
+ static int vgetargs1(PyObject *, const char *, va_list *, int);
+ static void seterror(int, const char *, int *, const char *, const char *);
+ static char *convertitem(PyObject *, const char **, va_list *, int, int *,
+-                         char *, size_t, PyObject **);
++                         char *, size_t, freelist_t **);
+ static char *converttuple(PyObject *, const char **, va_list *, int,
+-                          int *, char *, size_t, int, PyObject **);
++                          int *, char *, size_t, int, freelist_t **);
+ static char *convertsimple(PyObject *, const char **, va_list *, int, char *,
+-                           size_t, PyObject **);
++                           size_t, freelist_t **);
+ static Py_ssize_t convertbuffer(PyObject *, void **p, char **);
+ static int getbuffer(PyObject *, Py_buffer *, char**);
+ 
+@@ -128,72 +129,45 @@
+ 
+ /* Handle cleanup of allocated memory in case of exception */
+ 
+-#define GETARGS_CAPSULE_NAME_CLEANUP_PTR "getargs.cleanup_ptr"
+-#define GETARGS_CAPSULE_NAME_CLEANUP_BUFFER "getargs.cleanup_buffer"
++typedef void (*cleanup_fn)(void *);
+ 
+-static void
+-cleanup_ptr(PyObject *self)
+-{
+-    void *ptr = PyCapsule_GetPointer(self, GETARGS_CAPSULE_NAME_CLEANUP_PTR);
+-    if (ptr) {
+-      PyMem_FREE(ptr);
+-    }
+-}
++struct freelist_s {
++    void *ptr;
++    cleanup_fn destr;
++    struct freelist_s *next;
++};
+ 
+-static void
+-cleanup_buffer(PyObject *self)
+-{
+-    Py_buffer *ptr = (Py_buffer *)PyCapsule_GetPointer(self, GETARGS_CAPSULE_NAME_CLEANUP_BUFFER);
+-    if (ptr) {
+-        PyBuffer_Release(ptr);
+-    }
+-}
++#define cleanup_ptr ((cleanup_fn)PyMem_FREE)
++#define cleanup_buffer ((cleanup_fn)PyBuffer_Release)
+ 
+ static int
+-addcleanup(void *ptr, PyObject **freelist, PyCapsule_Destructor destr)
++addcleanup(void *ptr, freelist_t **freelist, cleanup_fn destr)
+ {
+-    PyObject *cobj;
+-    const char *name;
+-
+-    if (!*freelist) {
+-        *freelist = PyList_New(0);
+-        if (!*freelist) {
+-            destr(ptr);
+-            return -1;
+-        }
+-    }
+-
+-    if (destr == cleanup_ptr) {
+-        name = GETARGS_CAPSULE_NAME_CLEANUP_PTR;
+-    } else if (destr == cleanup_buffer) {
+-        name = GETARGS_CAPSULE_NAME_CLEANUP_BUFFER;
+-    } else {
+-        return -1;
+-    }
+-    cobj = PyCapsule_New(ptr, name, destr);
+-    if (!cobj) {
++    freelist_t *node = PyMem_MALLOC(sizeof(freelist_t));
++    if (!node) {
+         destr(ptr);
+         return -1;
+     }
+-    if (PyList_Append(*freelist, cobj)) {
+-        Py_DECREF(cobj);
+-        return -1;
+-    }
+-    Py_DECREF(cobj);
++    node->ptr = ptr;
++    node->destr = destr;
++    node->next = *freelist;
++    *freelist = node;
+     return 0;
+ }
+ 
+ static int
+-cleanreturn(int retval, PyObject *freelist)
++cleanreturn(int retval, freelist_t *freelist)
+ {
+-    if (freelist && retval != 0) {
+-        /* We were successful, reset the destructors so that they
+-           don't get called. */
+-        Py_ssize_t len = PyList_GET_SIZE(freelist), i;
+-        for (i = 0; i < len; i++)
+-            PyCapsule_SetDestructor(PyList_GET_ITEM(freelist, i), NULL);
++    freelist_t *next;
++    while (freelist != NULL) {
++        if (retval == 0) {
++            /* Leaving with an error */
++            freelist->destr(freelist->ptr);
++        }
++        next = freelist->next;
++        PyMem_FREE(freelist);
++        freelist = next;
+     }
+-    Py_XDECREF(freelist);
+     return retval;
+ }
+ 
+@@ -212,7 +186,7 @@
+     const char *formatsave = format;
+     Py_ssize_t i, len;
+     char *msg;
+-    PyObject *freelist = NULL;
++    freelist_t *freelist = NULL;
+     int compat = flags & FLAG_COMPAT;
+ 
+     assert(compat || (args != (PyObject*)NULL));
+@@ -412,7 +386,7 @@
+ static char *
+ converttuple(PyObject *arg, const char **p_format, va_list *p_va, int flags,
+              int *levels, char *msgbuf, size_t bufsize, int toplevel,
+-             PyObject **freelist)
++             freelist_t **freelist)
+ {
+     int level = 0;
+     int n = 0;
+@@ -488,7 +462,7 @@
+ 
+ static char *
+ convertitem(PyObject *arg, const char **p_format, va_list *p_va, int flags,
+-            int *levels, char *msgbuf, size_t bufsize, PyObject **freelist)
++            int *levels, char *msgbuf, size_t bufsize, freelist_t **freelist)
+ {
+     char *msg;
+     const char *format = *p_format;
+@@ -569,7 +543,7 @@
+ 
+ static char *
+ convertsimple(PyObject *arg, const char **p_format, va_list *p_va, int flags,
+-              char *msgbuf, size_t bufsize, PyObject **freelist)
++              char *msgbuf, size_t bufsize, freelist_t **freelist)
+ {
+     /* For # codes */
+ #define FETCH_SIZE      int *q=NULL;Py_ssize_t *q2=NULL;\
+@@ -1534,7 +1508,8 @@
+     const char *fname, *msg, *custom_msg, *keyword;
+     int min = INT_MAX;
+     int i, len, nargs, nkeywords;
+-    PyObject *freelist = NULL, *current_arg;
++    freelist_t *freelist = NULL;
++    PyObject *current_arg;
+ 
+     assert(args != NULL && PyTuple_Check(args));
+     assert(keywords == NULL || PyDict_Check(keywords));
+diff -r c7dff5469611f03946466caed17c567c4ea5d8d0 -r c26dc70ee34018efeec8b789d40ec78478304bc0 pypy/module/cpyext/test/test_getargs.py
+--- a/pypy/module/cpyext/test/test_getargs.py	Wed Jun 13 13:19:05 2012 +0200
++++ b/pypy/module/cpyext/test/test_getargs.py	Wed Jun 13 15:48:19 2012 +0200
+@@ -144,6 +144,31 @@
+         assert 'foo\0bar\0baz' == pybuffer(buffer('foo\0bar\0baz'))
+ 
+ 
++    def test_pyarg_parse_string_fails(self):
++        """
++        Test the failing case of PyArg_ParseTuple(): it must not keep
++        a reference on the PyObject passed in.
++        """
++        pybuffer = self.import_parser(
++            '''
++            Py_buffer buf1, buf2, buf3;
++            PyObject *result;
++            if (!PyArg_ParseTuple(args, "s*s*s*", &buf1, &buf2, &buf3)) {
++                return NULL;
++            }
++            Py_FatalError("should not get there");
++            return NULL;
++            ''')
++        freed = []
++        class freestring(str):
++            def __del__(self):
++                freed.append('x')
++        raises(TypeError, pybuffer,
++               freestring("string"), freestring("other string"), 42)
++        import gc; gc.collect()
++        assert freed == ['x', 'x']
++
++
+     def test_pyarg_parse_charbuf_and_length(self):
+         """
+         The `t#` format specifier can be used to parse a read-only 8-bit
