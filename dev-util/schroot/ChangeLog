@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.39 2013/03/06 20:22:29 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.40 2013/07/27 06:18:36 jcallen Exp $
+
+  27 Jul 2013; Jonathan Callen <jcallen@gentoo.org> metadata.xml:
+  Update metadata.xml to reflect new email address
 
   06 Mar 2013; Steev Klimaszewski <steev@gentoo.org> schroot-1.6.5.ebuild:
   Add ~arm keyword. Tested on cortex a15,a9 and a8 machines.

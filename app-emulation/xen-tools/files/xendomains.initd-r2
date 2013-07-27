@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.7 2013/07/23 05:35:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.8 2013/07/27 06:11:03 idella4 Exp $
 
 extra_commands="status"
 
@@ -25,7 +25,7 @@ is_running() {
 }
 
 using_screen() {
-	[ "${SCREEN}" == "yes" || "${SCREEN}" == "YES" ]	
+	[ "${SCREEN}" = "yes" -o "${SCREEN}" = "YES" ]
 }
 
 set_screen_cmd() {
