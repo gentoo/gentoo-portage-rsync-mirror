@@ -1,0 +1,13 @@
+[Unit]
+Description=Courier IMAP Daemon
+After=network.target
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/courier-imap/imapd
+ExecStart=/usr/lib/courier-imap/gentoo-imapd.rc
+ExecStop=/bin/kill $MAINPID
+PIDFile=/var/run/imapd.pid
+
+[Install]
+WantedBy=multi-user.target

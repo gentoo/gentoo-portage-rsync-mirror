@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.191 2012/05/13 11:31:08 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.192 2013/07/27 08:20:52 pacho Exp $
+
+*courier-imap-4.8.0-r1 (27 Jul 2013)
+
+  27 Jul 2013; Pacho Ramos <pacho@gentoo.org> +courier-imap-4.8.0-r1.ebuild,
+  +files/courier-authdaemond.service, +files/courier-imapd-ssl.service,
+  +files/courier-imapd.service:
+  Install unit file #470746
 
   13 May 2012; <swift@gentoo.org> courier-imap-4.0.6-r3.ebuild,
   courier-imap-4.5.0.ebuild, courier-imap-4.6.0.ebuild,

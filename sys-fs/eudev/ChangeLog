@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.51 2013/07/26 08:11:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.52 2013/07/27 08:19:00 patrick Exp $
+
+  27 Jul 2013; Patrick Lauer <patrick@gentoo.org> -eudev-1.0.ebuild,
+  -eudev-1_beta2-r2.ebuild, -eudev-1_beta4-r1.ebuild:
+  Punting old versions that depend on removed virtual/udev versions
 
   26 Jul 2013; Patrick Lauer <patrick@gentoo.org> eudev-1.2_beta.ebuild:
   Move bits from RDEP to PDEP to give portage a chance at resolving
