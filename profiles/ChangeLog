@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8078 2013/07/26 23:47:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8079 2013/07/27 07:01:10 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2013; Matt Turner <mattst88@gentoo.org> default/linux/packages.build:
+  Add app-arch/xz-utils to stage1.
 
   26 Jul 2013; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask =sys-devel/bison-3* for testing.
