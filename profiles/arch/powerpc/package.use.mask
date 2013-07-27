@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.169 2013/07/20 11:18:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.170 2013/07/27 01:50:43 zerochaos Exp $
+
+# Rick Farina <zerochaos@gentoo.org> (26 Jul 2013)
+# keywords pending, bug 478308
+app-forensics/libewf bfio
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords pending, bug #476710
