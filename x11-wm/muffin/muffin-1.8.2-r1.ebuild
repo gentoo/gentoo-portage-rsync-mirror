@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.8.2.ebuild,v 1.1 2013/07/27 09:52:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.8.2-r1.ebuild,v 1.1 2013/07/27 13:11:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
 
-inherit autotools gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Compositing window manager forked from Mutter for use with Cinnamon"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
@@ -62,6 +61,9 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
+	# Fix maximized windows jumping to a different monitor
+	epatch "${FILESDIR}/${PN}-1.8.2-maximized-jump.patch"
+
 	# Regenerate obsolete Makefile.in
 	eautoreconf
 	gnome2_src_prepare

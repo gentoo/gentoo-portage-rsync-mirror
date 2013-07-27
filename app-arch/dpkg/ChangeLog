@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.230 2013/07/02 07:41:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.231 2013/07/27 13:21:53 jer Exp $
+
+*dpkg-1.17.0 (27 Jul 2013)
+
+  27 Jul 2013; Jeroen Roovers <jer@gentoo.org> +dpkg-1.17.0.ebuild,
+  +files/dpkg-1.17.0-gzip-rsyncable.patch, metadata.xml:
+  Version bump.
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> dpkg-1.16.10.ebuild:
   Stable for sh, wrt bug #473840

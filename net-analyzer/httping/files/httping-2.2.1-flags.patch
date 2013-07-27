@@ -1,5 +1,5 @@
---- httping-2.2.1/Makefile
-+++ httping-2.2.1/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -84,8 +84,7 @@
  endif
  

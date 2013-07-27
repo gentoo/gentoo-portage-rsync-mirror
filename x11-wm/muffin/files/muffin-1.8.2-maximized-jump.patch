@@ -1,0 +1,29 @@
+From 00fdf6c3078b3cf34707f7d740bf797d1ca77414 Mon Sep 17 00:00:00 2001
+From: Albert Pool <albertpool@solcon.nl>
+Date: Tue, 9 Jul 2013 16:08:59 +0200
+Subject: [PATCH] Fix maximized windows jumping to a different monitor
+
+Commit e5b46747d67f6f75ef06272d91f7f8cfc36af058 upstream
+---
+ src/core/constraints.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/core/constraints.c b/src/core/constraints.c
+index 4c4dedd..630c41c 100644
+--- a/src/core/constraints.c
++++ b/src/core/constraints.c
+@@ -567,6 +567,11 @@ typedef gboolean (* ConstraintFunc) (MetaWindow         *window,
+                        .083 * info->work_area_monitor.height;
+             }
+ 
++          /* idle_move_resize() uses the user_rect,
++           * so make sure it uses the placed coordinates.
++           */
++          window->user_rect = info->current;
++
+           if (window->maximize_horizontally_after_placement ||
+               window->maximize_vertically_after_placement)
+             meta_window_maximize_internal (window,   
+-- 
+1.8.1.6
+

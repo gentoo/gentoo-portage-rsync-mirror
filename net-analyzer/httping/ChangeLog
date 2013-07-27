@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.115 2013/07/14 22:15:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.116 2013/07/27 13:26:58 jer Exp $
+
+  27 Jul 2013; Jeroen Roovers <jer@gentoo.org> files/httping-2.2.1-flags.patch:
+  Fix patch.
 
   14 Jul 2013; Jeroen Roovers <jer@gentoo.org> -httping-2.2.1.ebuild,
   -files/httping-2.0-flags.patch:

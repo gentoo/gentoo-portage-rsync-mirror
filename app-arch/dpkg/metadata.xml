@@ -4,5 +4,6 @@
 <herd>deb-tools</herd>
 <use>
 <flag name="dselect">Build the dselect package-management frontend</flag>
+<flag name="update-alternatives">Install update-alternatives</flag>
 </use>
 </pkgmetadata>

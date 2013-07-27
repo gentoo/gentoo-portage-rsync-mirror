@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/muffin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.12 2013/07/27 09:52:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.13 2013/07/27 13:11:21 pacho Exp $
+
+*muffin-1.8.2-r1 (27 Jul 2013)
+
+  27 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/muffin-1.8.2-maximized-jump.patch, +muffin-1.8.2-r1.ebuild,
+  -muffin-1.8.2.ebuild:
+  Fix maximized windows jumping to a different monitor (#470248#c37 by kisak42)
 
 *muffin-1.8.2 (27 Jul 2013)
 
