@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libbfio/libbfio-0.0.20130609_alpha.ebuild,v 1.1 2013/07/27 00:50:54 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libbfio/libbfio-0.0.20130609_alpha.ebuild,v 1.2 2013/07/27 15:04:07 zerochaos Exp $
 
 EAPI=5
 
@@ -16,9 +16,6 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="unicode"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_DATE}"
 
