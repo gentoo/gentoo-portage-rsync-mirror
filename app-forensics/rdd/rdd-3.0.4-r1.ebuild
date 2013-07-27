@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-3.0.4-r1.ebuild,v 1.1 2013/07/26 17:12:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-3.0.4-r1.ebuild,v 1.2 2013/07/27 03:13:35 zerochaos Exp $
 
 EAPI="5"
 
@@ -36,6 +36,10 @@ src_configure() {
 	econf --disable-doxygen-html \
 		$(use_enable debug tracing) \
 		$(use_enable doc doxygen-doc)
+}
+
+src_compile() {
+	emake -j1
 }
 
 src_install() {
