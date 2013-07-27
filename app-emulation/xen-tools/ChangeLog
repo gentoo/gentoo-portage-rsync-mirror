@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.181 2013/07/27 06:11:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.182 2013/07/27 15:50:36 idella4 Exp $
+
+  27 Jul 2013; Ian Delaney <idella4@gentoo.org> +files/xen-4.3-jserver.patch,
+  files/xenconsoled.initd, files/xend.initd-r1, files/xend.initd-r2,
+  files/xenstored.initd, xen-tools-4.3.0.ebuild:
+  for 4.3.0; upgrade jserver.patch, substitute with correct code to set IUSE
+  api, flask capable builds, rm whitespace in init script, thanks for support
+  from mva
 
   27 Jul 2013; Ian Delaney <idella4@gentoo.org> files/xendomains.initd-r1,
   files/xendomains.initd-r2:

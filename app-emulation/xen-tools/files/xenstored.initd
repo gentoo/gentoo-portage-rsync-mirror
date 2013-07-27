@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.9 2013/07/25 15:09:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.10 2013/07/27 15:50:36 idella4 Exp $
 
 depend() {
 	before xendomains xend sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp 
@@ -30,4 +30,3 @@ stop() {
 		--pidfile /var/run/xenstored.pid
 	eend $?
 }
-

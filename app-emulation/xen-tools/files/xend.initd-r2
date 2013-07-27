@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xend.initd-r2,v 1.2 2011/09/10 17:22:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xend.initd-r2,v 1.3 2013/07/27 15:50:36 idella4 Exp $
 
 opts="start stop status restart"
 
