@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.7.1.ebuild,v 1.1 2013/06/03 08:01:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.0.ebuild,v 1.1 2013/07/27 07:49:01 pesa Exp $
 
 EAPI=5
 
-PLOCALES="cs de es fr hu it ja pl ru sl uk zh_CN zh_TW"
+PLOCALES="cs de es fr it ja pl ru sl uk zh_CN zh_TW"
 
 inherit eutils l10n multilib qt4-r2
 
@@ -39,7 +39,10 @@ CDEPEND="
 	=dev-libs/botan-1.10*
 	>=dev-qt/qtcore-${QT_PV}[ssl]
 	>=dev-qt/qtdeclarative-${QT_PV}
-	>=dev-qt/qtgui-${QT_PV}
+	|| (
+		( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 )
+		( >=dev-qt/qtgui-${QT_PV} <dev-qt/qtgui-4.8.5:4 )
+	)
 	>=dev-qt/qthelp-${QT_PV}[doc?]
 	>=dev-qt/qtscript-${QT_PV}
 	>=dev-qt/qtsql-${QT_PV}
@@ -71,20 +74,24 @@ src_prepare() {
 	for plugin in "${QTC_PLUGINS[@]#[+-]}"; do
 		if ! use ${plugin%:*}; then
 			einfo "Disabling ${plugin%:*} plugin"
-			sed -i -re "/(^|SUBDIRS\s+\+=)\s+plugin_${plugin#*:}\>/d" src/plugins/plugins.pro \
-				|| die "failed to disable ${plugin} plugin"
+			sed -i -re "/^\s+${plugin#*:}\>/d" src/plugins/plugins.pro \
+				|| die "failed to disable ${plugin%:*} plugin"
 		fi
 	done
 
 	# fix translations
 	sed -i -e "/^LANGUAGES =/ s:=.*:= $(l10n_get_locales):" \
 		share/qtcreator/translations/translations.pro || die
+
+	# remove bundled qbs for now
+	# TODO: package it and re-enable the plugin
+	rm -rf src/shared/qbs || die
 }
 
 src_configure() {
-	EQMAKE4_EXCLUDE="share/qtcreator/templates/*" \
-	eqmake4 qtcreator.pro \
-		IDE_LIBRARY_BASENAME="$(get_libdir)" \
+	EQMAKE4_EXCLUDE="share/qtcreator/templates/*
+			tests/*"
+	eqmake4 IDE_LIBRARY_BASENAME="$(get_libdir)" \
 		IDE_PACKAGE_MODE=1 \
 		TEST=$(use test && echo 1 || echo 0) \
 		USE_SYSTEM_BOTAN=1
@@ -93,7 +100,10 @@ src_configure() {
 src_test() {
 	echo ">>> Test phase [QTest]: ${CATEGORY}/${PF}"
 	cd tests/auto || die
+
+	EQMAKE4_EXCLUDE="valgrind/*"
 	eqmake4 IDE_LIBRARY_BASENAME="$(get_libdir)"
+
 	emake check
 }
 

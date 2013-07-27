@@ -1,6 +1,17 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.14 2013/07/10 09:33:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.16 2013/07/27 07:49:01 pesa Exp $
+
+*qt-creator-2.7.2 (27 Jul 2013)
+*qt-creator-2.8.0 (27 Jul 2013)
+
+  27 Jul 2013; Davide Pesavento <pesa@gentoo.org> +qt-creator-2.7.2.ebuild,
+  +qt-creator-2.8.0.ebuild, -qt-creator-2.6.2.ebuild, -qt-creator-2.7.1.ebuild,
+  -qt-creator-2.8.0_rc.ebuild:
+  Version bump for both 2.7 and 2.8 series.
+
+  27 Jul 2013; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Put myself as primary maintainer.
 
   10 Jul 2013; Davide Pesavento <pesa@gentoo.org> qt-creator-2.8.0_rc.ebuild:
   Remove bundled qbs (bug 476256).
