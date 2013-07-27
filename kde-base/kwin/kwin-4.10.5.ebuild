@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.5.ebuild,v 1.6 2013/07/23 19:58:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.5.ebuild,v 1.7 2013/07/27 11:45:00 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ OPENGL_REQUIRED="always"
 inherit flag-o-matic kde4-meta
 
 DESCRIPTION="KDE window manager"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug gles opengl"
 
 COMMONDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.345 2013/07/23 19:58:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.346 2013/07/27 11:45:01 ago Exp $
+
+  27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> kwin-4.10.5.ebuild:
+  Stable for amd64, wrt to bug #477634
 
   23 Jul 2013; Johannes Huber <johu@gentoo.org> kwin-4.10.4.ebuild,
   kwin-4.10.5.ebuild:

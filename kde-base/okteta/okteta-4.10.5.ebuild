@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/okteta-4.10.5.ebuild,v 1.1 2013/07/02 16:48:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/okteta-4.10.5.ebuild,v 1.2 2013/07/27 11:44:39 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ fi
 inherit ${eclass}
 
 DESCRIPTION="KDE hexeditor"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

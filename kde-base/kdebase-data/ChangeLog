@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.279 2013/07/02 16:48:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.280 2013/07/27 11:45:26 ago Exp $
+
+  27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> kdebase-data-4.10.5.ebuild:
+  Stable for amd64, wrt to bug #477634
 
 *kdebase-data-4.10.5 (02 Jul 2013)
 

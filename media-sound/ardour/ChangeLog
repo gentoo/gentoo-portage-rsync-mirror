@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.118 2013/07/25 19:18:16 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.119 2013/07/27 11:31:55 nativemad Exp $
+
+  27 Jul 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.3-r1.ebuild:
+  removed the unused patch. See bug 478046. Thanks knasan. I had a bad day...
 
   25 Jul 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.3-r1.ebuild:
   Removed the curl useflag for now. See bug 478046. Thanks Mike Limansky for

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/krossruby-4.10.5.ebuild,v 1.2 2013/07/04 17:30:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/krossruby-4.10.5.ebuild,v 1.3 2013/07/27 11:45:35 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ USE_RUBY="ruby19"
 inherit kde4-meta ruby-ng
 
 DESCRIPTION="Kross scripting framework: Ruby interpreter"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND=""

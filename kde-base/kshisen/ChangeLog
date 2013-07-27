@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.261 2013/07/02 16:48:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.262 2013/07/27 11:44:34 ago Exp $
+
+  27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> kshisen-4.10.5.ebuild:
+  Stable for amd64, wrt to bug #477634
 
 *kshisen-4.10.5 (02 Jul 2013)
 

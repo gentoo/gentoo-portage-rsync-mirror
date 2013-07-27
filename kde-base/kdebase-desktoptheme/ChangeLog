@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.167 2013/07/02 16:47:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.168 2013/07/27 11:44:49 ago Exp $
+
+  27 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
+  kdebase-desktoptheme-4.10.5.ebuild:
+  Stable for amd64, wrt to bug #477634
 
 *kdebase-desktoptheme-4.10.5 (02 Jul 2013)
 
