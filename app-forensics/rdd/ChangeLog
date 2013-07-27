@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/rdd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/ChangeLog,v 1.6 2013/07/26 17:12:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/ChangeLog,v 1.7 2013/07/27 00:31:51 zerochaos Exp $
+
+  27 Jul 2013; Rick Farina <zerochaos@gentoo.org> -rdd-2.0.7.ebuild,
+  -rdd-3.0.4.ebuild, metadata.xml:
+  remove old, outdated, etc
 
 *rdd-3.0.4-r1 (26 Jul 2013)
 

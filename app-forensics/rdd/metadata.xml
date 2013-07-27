@@ -6,7 +6,8 @@
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>
- 	<use>
-		<flag name="rawio">Enables raw IO handling</flag>
-	</use>
+	<maintainer>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
+	</maintainer>
 </pkgmetadata>

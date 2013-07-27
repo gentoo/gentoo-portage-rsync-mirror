@@ -1,0 +1,12 @@
+# ChangeLog for app-forensics/libbfio
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libbfio/ChangeLog,v 1.1 2013/07/27 00:50:55 zerochaos Exp $
+
+*libbfio-0.0.20130721 (27 Jul 2013)
+*libbfio-0.0.20120425_alpha (27 Jul 2013)
+*libbfio-0.0.20130609_alpha (27 Jul 2013)
+
+  27 Jul 2013; Rick Farina <zerochaos@gentoo.org>
+  +libbfio-0.0.20120425_alpha.ebuild, +libbfio-0.0.20130609_alpha.ebuild,
+  +libbfio-0.0.20130721.ebuild, +metadata.xml:
+  initial commit of libbfio, imported from pentoo for use with libewf
