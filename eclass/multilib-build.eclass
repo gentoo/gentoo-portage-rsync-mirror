@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.15 2013/07/11 06:57:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.16 2013/07/27 17:31:47 aballier Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -33,6 +33,8 @@ _MULTILIB_FLAGS=(
 	abi_x86_32:x86
 	abi_x86_64:amd64
 	abi_x86_x32:x32
+	abi_x86_32:x86_fbsd
+	abi_x86_64:amd64_fbsd
 )
 
 # @ECLASS-VARIABLE: MULTILIB_USEDEP
@@ -293,9 +295,9 @@ _EOF_
 		# XXX: get abi_* directly
 		local abi_flag
 		case "${ABI}" in
-			amd64)
+			amd64|amd64_fbsd)
 				abi_flag=abi_x86_64;;
-			x86)
+			x86|x86_fbsd)
 				abi_flag=abi_x86_32;;
 			x32)
 				abi_flag=abi_x86_x32;;

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.10.806.50.ebuild,v 1.1 2011/04/30 07:31:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.10.806.50.ebuild,v 1.2 2013/07/27 17:53:26 zlogene Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=ILYAZ
 MODULE_SECTION=modules
 MODULE_VERSION=2.01080605
 MY_PN=Math-Pari
-inherit perl-module
+inherit perl-module toolchain-funcs
 
 PARI_VER=2.3.5
 
@@ -56,4 +56,8 @@ src_configure() {
 	use sparc && myconf="${myconf} machine=none"
 
 	perl-module_src_configure
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)" OTHERLDFLAGS="${LDFLAGS}"
 }

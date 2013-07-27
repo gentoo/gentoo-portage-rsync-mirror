@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.0.4.2.ebuild,v 1.1 2013/07/20 22:12:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.0.4.2.ebuild,v 1.2 2013/07/27 17:41:49 dilfridge Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ SRC_URI="
 	x86? ( ${SRC_URI_X86} )
 "
 
-IUSE="+cups debug gnome java kde"
+IUSE="debug gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
@@ -112,7 +112,7 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
-	cups? ( net-print/cups )
+	net-print/cups
 	>=dev-libs/dbus-glib-0.92
 	gnome? ( gnome-extra/evolution-data-server )
 	gnome? ( gnome-base/gconf:2 )
@@ -191,9 +191,6 @@ pkg_postinst() {
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin
-
-	use cups && ! has_version net-print/cups || \
-		ewarn 'You will need net-print/cups to be able to print and export to PDF with libreoffice.'
 
 	use java || \
 		ewarn 'If you plan to use lbase application you should enable java or you will get various crashes.'
