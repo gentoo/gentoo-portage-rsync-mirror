@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.248 2013/07/23 17:32:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.249 2013/07/27 20:00:22 pacho Exp $
+
+*exim-4.80.1-r2 (27 Jul 2013)
+
+  27 Jul 2013; Pacho Ramos <pacho@gentoo.org> +exim-4.80.1-r2.ebuild,
+  +files/exim-submission.socket, +files/exim-submission_at.service,
+  +files/exim.service, +files/exim.socket, +files/exim_at.service:
+  Install unit file #470754 by Alexander Tsoy
 
   23 Jul 2013; Fabian Groffen <grobian@gentoo.org> exim-4.80.1-r1.ebuild,
   exim-4.80.1.ebuild:
