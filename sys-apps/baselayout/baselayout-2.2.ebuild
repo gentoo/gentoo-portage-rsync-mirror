@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.2.ebuild,v 1.15 2013/07/26 17:53:22 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.2.ebuild,v 1.16 2013/07/27 22:56:21 williamh Exp $
 
 inherit eutils multilib
 
@@ -13,8 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="build kernel_linux"
-
-PDEPEND="sys-apps/openrc"
 
 pkg_setup() {
 	multilib_layout

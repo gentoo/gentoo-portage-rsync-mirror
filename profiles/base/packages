@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation.
+# Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.63 2012/05/18 00:20:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.64 2013/07/27 22:52:03 williamh Exp $
 
 # Gentoo Base Profile
 
@@ -71,5 +71,6 @@
 *virtual/os-headers
 *virtual/package-manager
 *virtual/pager
+*virtual/service-manager
 *virtual/shadow
 *virtual/ssh
