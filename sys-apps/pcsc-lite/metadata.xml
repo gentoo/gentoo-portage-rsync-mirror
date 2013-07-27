@@ -7,17 +7,6 @@
   </longdescription>
 
   <use>
-    <flag name='usb' restrict="&lt;sys-apps/pcsc-lite-1.7.0">
-      Use <pkg>dev-libs/libusb</pkg> detection to hotplug new
-      smartcard readers.
-    </flag>
-
-    <flag name='usb' restrict="&gt;=sys-apps/pcsc-lite-1.7.0">
-      Use <pkg>dev-libs/libusb</pkg> detection to hotplug new
-      smartcard readers. This flag only makes sense on non-Linux
-      systems, as on Linux, <pkg>sys-fs/udev</pkg> is used instead.
-    </flag>
-
     <flag name='libusb' restrict="&gt;=sys-apps/pcsc-lite-1.8.0">
       Use <pkg>dev-libs/libusb</pkg> detection to hotplug new
       smartcard readers. This flag should only be enabled if you're
