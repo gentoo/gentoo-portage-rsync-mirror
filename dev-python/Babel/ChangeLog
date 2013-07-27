@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.48 2013/07/27 11:12:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.49 2013/07/27 16:44:17 djc Exp $
+
+  27 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> Babel-1.2.ebuild:
+  Fix documentation, bug 478362 (thanks bkohler@gmail.com).
 
 *Babel-1.2 (27 Jul 2013)
 

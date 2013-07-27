@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/Babel-1.2.ebuild,v 1.1 2013/07/27 11:12:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/Babel-1.2.ebuild,v 1.2 2013/07/27 16:44:17 djc Exp $
 
 EAPI=5
 
@@ -14,20 +14,20 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="test"
+IUSE="doc test"
 
 RDEPEND="dev-python/pytz[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${DEPEND}
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( >=dev-python/pytest-2.3.5 )"
-
-HTML_DOCS=( doc/. )
 
 python_prepare_all() {
 	# Make the tests use implementation-specific datadir,
 	# because they try to write in it.
 	sed -e '/datadir =/s:os\.path\.dirname(__file__):os.environ["BUILD_DIR"]:' \
 		-i tests/messages/test_frontend.py || die
+	sed -e '/^intersphinx_mapping/,+3d' -i docs/conf.py || die
 	distutils-r1_python_prepare_all
 }
 
@@ -36,4 +36,13 @@ python_test() {
 	cp -R -l tests/messages/data "${BUILD_DIR}"/ || die
 	export BUILD_DIR
 	py.test
+}
+
+python_compile_all() {
+	use doc && emake -C docs html
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
 }
