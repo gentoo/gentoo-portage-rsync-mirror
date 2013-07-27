@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20130416.ebuild,v 1.5 2013/06/25 12:48:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20130416.ebuild,v 1.6 2013/07/27 02:01:23 zerochaos Exp $
 
 EAPI=5
 
@@ -39,6 +39,8 @@ src_configure() {
 		$(use_with zlib)
 		# autodetects bzip2 but does not use
 		--without-bzip2
+		#if we don't force disable this then it fails to build against new libbfio
+		--without-libbfio
 		$(use_with ssl openssl)
 		$(use_with uuid libuuid)
 		$(use_with fuse libfuse)
