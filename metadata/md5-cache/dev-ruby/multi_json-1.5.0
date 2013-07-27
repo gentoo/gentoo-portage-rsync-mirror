@@ -4,11 +4,11 @@ DESCRIPTION=A gem to provide swappable JSON backends
 EAPI=5
 HOMEPAGE=http://github.com/intridea/multi_json
 IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 ruby_targets_jruby doc test test
-KEYWORDS=amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=amd64 ~arm ~hppa ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=MIT
 RDEPEND=ruby_targets_ruby18? ( || ( >=dev-ruby/json-1.4[ruby_targets_ruby18] >=dev-ruby/yajl-ruby-0.7[ruby_targets_ruby18] =dev-ruby/activesupport-3*[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( || ( >=dev-ruby/json-1.4[ruby_targets_ruby19] >=dev-ruby/yajl-ruby-0.7[ruby_targets_ruby19] =dev-ruby/activesupport-3*[ruby_targets_ruby19] ) ) ruby_targets_ree18? ( || ( >=dev-ruby/json-1.4[ruby_targets_ree18] >=dev-ruby/yajl-ruby-0.7[ruby_targets_ree18] =dev-ruby/activesupport-3*[ruby_targets_ree18] ) ) ruby_targets_jruby? ( || ( >=dev-ruby/json-1.4[ruby_targets_jruby] >=dev-ruby/yajl-ruby-0.7[ruby_targets_jruby] =dev-ruby/activesupport-3*[ruby_targets_jruby] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ree18? ( virtual/rubygems[ruby_targets_ree18] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] )
 REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 ruby_targets_jruby )
 SLOT=0
 SRC_URI=mirror://rubygems/multi_json-1.5.0.gem
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	6e366daedf25d7020291916549562bbf	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=fc21b73a52184b8bbf0b07fdd4eb8bf2
+_md5_=94a652eb9149c93e20f482357e5cfae8

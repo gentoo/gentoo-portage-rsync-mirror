@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.5.ebuild,v 1.2 2013/07/21 13:08:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.5.ebuild,v 1.3 2013/07/27 22:23:43 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/nelhage/${PN}/archive/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 
 src_prepare() {
 	# respect CFLAGS

@@ -3,10 +3,10 @@ DEPEND=>=dev-libs/boost-1.42 media-libs/netpbm x11-libs/fltk:1 app-text/ghostscr
 DESCRIPTION=Interactive plotting program
 EAPI=4
 HOMEPAGE=http://kavli.nano.tudelft.nl/~gsteele/spyview/
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=>=dev-libs/boost-1.42 media-libs/netpbm x11-libs/fltk:1 app-text/ghostscript-gpl virtual/glu sci-visualization/gnuplot
 SLOT=0
 SRC_URI=http://kavli.nano.tudelft.nl/~gsteele/spyview/versions/spyview-20111018.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=1646568e5ab041b57a16e541070c0fec
+_md5_=8a6a7636d41689e027f386f42b07cddb

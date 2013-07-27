@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.23 2013/07/21 11:10:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.24 2013/07/27 22:21:54 ago Exp $
+
+  27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> erubis-2.7.0.ebuild:
+  Stable for x86, wrt bug #477454
 
   21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> erubis-2.7.0.ebuild:
   Stable for amd64, wrt bug #477454

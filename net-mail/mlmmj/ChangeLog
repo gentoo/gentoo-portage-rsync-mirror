@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mlmmj
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.43 2013/07/22 20:34:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.44 2013/07/27 22:08:34 ago Exp $
+
+  27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> mlmmj-1.2.18.0.ebuild:
+  Stable for x86, wrt bug #477578
 
   22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> mlmmj-1.2.18.0.ebuild:
   Stable for ppc, wrt bug #477578
