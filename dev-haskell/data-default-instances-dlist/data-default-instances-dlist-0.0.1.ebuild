@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/data-default-instances-dlist/data-default-instances-dlist-0.0.1.ebuild,v 1.1 2013/04/03 11:28:50 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/data-default-instances-dlist/data-default-instances-dlist-0.0.1.ebuild,v 1.2 2013/07/27 21:54:32 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~sparc ~x86 ~amd64-linux ~ppc64 ~ppc-macos ~x86-linux"
+KEYWORDS="amd64 ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND="dev-haskell/data-default-class:=[profile?]

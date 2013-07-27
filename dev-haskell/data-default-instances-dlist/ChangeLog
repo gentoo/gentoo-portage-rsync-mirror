@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/data-default-instances-dlist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/data-default-instances-dlist/ChangeLog,v 1.1 2013/04/03 11:28:50 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/data-default-instances-dlist/ChangeLog,v 1.2 2013/07/27 21:54:32 ago Exp $
+
+  27 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
+  data-default-instances-dlist-0.0.1.ebuild:
+  Stable for amd64, wrt bug #478288
 
 *data-default-instances-dlist-0.0.1 (03 Apr 2013)
 
