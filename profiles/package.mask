@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14956 2013/07/26 23:47:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14957 2013/07/27 04:13:40 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -230,11 +230,10 @@ dev-python/tg-widgets-lightbox
 
 # Doug Goldstein <cardoe@gentoo.org> (30 Jun 2013)
 # Masked for dev work
-# You can follow the patchset at http://git.cardoe.com/?p=qemu.git;a=summary
-# or git://git.cardoe.com/qemu.git
-# This will move to Github in the not too distant future. Additionally,
-# these branches get rebased often
+# You can follow the patchset at https://github.com/cardoe/qemu/tree/qemu-1.5-gentoo
+# Warning: These branches get rebased often.
 =app-emulation/qemu-1.5.1
+=app-emulation/qemu-1.5.2
 
 # Tom Wijsman <TomWij@gentoo.org> (30 Jun 2013)
 # Sun JDK and JRE contain critical vulnerabilities and receive no further
