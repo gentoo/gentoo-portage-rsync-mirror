@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.25 2013/04/13 22:49:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.26 2013/07/27 10:36:55 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -251,4 +251,26 @@ systemd_update_catalog() {
 	else
 		debug-print "${FUNCNAME}: journalctl not found."
 	fi
+}
+
+# @FUNCTION: systemd_is_booted
+# @DESCRIPTION:
+# Check whether the system was booted using systemd.
+#
+# This should be used purely for informational purposes, e.g. warning
+# user that he needs to use systemd. Installed files or application
+# behavior *must not* rely on this. Please remember to check MERGE_TYPE
+# to not trigger the check on binary package build hosts!
+#
+# Returns 0 if systemd is used to boot the system, 1 otherwise.
+#
+# See: man sd_booted
+systemd_is_booted() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ -d /run/systemd/system ]]
+	local ret=${?}
+
+	debug-print "${FUNCNAME}: [[ -d /run/systemd/system ]] -> ${ret}"
+	return ${ret}
 }

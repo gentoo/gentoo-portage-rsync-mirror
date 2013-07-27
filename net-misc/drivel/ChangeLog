@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.55 2013/03/30 17:06:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.56 2013/07/27 10:49:20 pacho Exp $
+
+*drivel-3.0.5 (27 Jul 2013)
+
+  27 Jul 2013; Pacho Ramos <pacho@gentoo.org> +drivel-3.0.5.ebuild:
+  Version bump
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -drivel-3.0.0.ebuild,
   -files/drivel-3.0.0-compile-warnings.patch:

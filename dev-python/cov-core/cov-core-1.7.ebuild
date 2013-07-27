@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/cov-core-1.7.ebuild,v 1.3 2012/12/17 19:56:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/cov-core-1.7.ebuild,v 1.4 2013/07/27 10:32:05 djc Exp $
 
 EAPI="5"
 
@@ -16,6 +16,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="dev-python/pytest[${PYTHON_USEDEP}]
-		dev-python/coverage[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/coverage[${PYTHON_USEDEP}]"
 DEPEND=""

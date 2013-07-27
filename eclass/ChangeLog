@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.895 2013/07/27 10:18:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.896 2013/07/27 10:36:55 mgorny Exp $
+
+  27 Jul 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
+  Introduce systemd_is_booted() to allow ebuilds to warn consistently for
+  things that require systemd. Bug #478342.
 
   27 Jul 2013; Michał Górny <mgorny@gentoo.org> subversion.eclass:
   Export working copy information after the update rather than in
