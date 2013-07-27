@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.204 2013/07/15 05:58:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.205 2013/07/26 23:04:25 williamh Exp $
+
+  26 Jul 2013; William Hubbs <williamh@gentoo.org> git-9999.ebuild:
+  non-maintainer commit: sync live ebuild with git-1.8.3.2.
 
   15 Jul 2013; Jonathan Callen <abcd@gentoo.org> git-1.8.3.2.ebuild:
   Non-maintainer update: make ${PYTHON_REQUIRED_USE} conditional on USE=python;

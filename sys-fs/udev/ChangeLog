@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.941 2013/07/26 14:47:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.942 2013/07/26 23:26:31 radhermit Exp $
+
+  26 Jul 2013; Tim Harder <radhermit@gentoo.org> Manifest:
+  Fix manifest (bug #478266).
 
   26 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udev-204.ebuild:
   m68k stable wrt #470580
