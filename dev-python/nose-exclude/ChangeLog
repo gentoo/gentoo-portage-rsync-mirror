@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/nose-exclude
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-exclude/ChangeLog,v 1.1 2013/03/11 00:27:15 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-exclude/ChangeLog,v 1.2 2013/07/27 08:37:43 idella4 Exp $
+
+  27 Jul 2013; Ian Delaney <idella4@gentoo.org> nose-exclude-0.1.9.ebuild:
+  Add comprehensive support
 
 *nose-exclude-0.1.9 (11 Mar 2013)
 
   11 Mar 2013; Matthew Thode <prometheanfire@gentoo.org>
   +nose-exclude-0.1.9.ebuild, +metadata.xml:
   initial add of nose-exclude for keystoneclient test support
-
