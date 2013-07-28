@@ -1,6 +1,11 @@
 # ChangeLog for virtual/libiconv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.10 2013/02/17 19:55:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.11 2013/07/28 20:17:18 aballier Exp $
+
+*libiconv-0-r1 (28 Jul 2013)
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> +libiconv-0-r1.ebuild:
+  Add a new revision propagating the multilib deps to the providers.
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> libiconv-0.ebuild:
   Add ~arm-linux keyword.

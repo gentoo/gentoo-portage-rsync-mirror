@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.2.ebuild,v 1.1 2013/05/15 07:44:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.3-r1.ebuild,v 1.1 2013/07/28 20:08:54 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -9,6 +9,8 @@ inherit eutils gnome2
 
 DESCRIPTION="GNOME 3 compositing window manager based on Clutter"
 HOMEPAGE="http://git.gnome.org/browse/mutter/"
+
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -21,7 +23,7 @@ COMMON_DEPEND="
 	x11-libs/gdk-pixbuf:2[introspection?]
 	>=x11-libs/gtk+-3.3.7:3[X,introspection?]
 	>=dev-libs/glib-2.36.0:2
-	>=media-libs/clutter-1.13.5:1.0[introspection?]
+	>=media-libs/clutter-1.14.3:1.0[introspection?]
 	>=media-libs/cogl-1.13.3:1.0=[introspection?]
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/startup-notification-0.7
@@ -38,13 +40,14 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
-	>=x11-libs/libXi-1.6.2
+	>=x11-libs/libXi-1.7
 
 	gnome-extra/zenity
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 "
 DEPEND="${COMMON_DEPEND}
+	>=dev-util/gtk-doc-am-1.15
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
 	virtual/pkgconfig
@@ -54,13 +57,17 @@ DEPEND="${COMMON_DEPEND}
 	test? ( app-text/docbook-xml-dtd:4.5 )
 "
 RDEPEND="${COMMON_DEPEND}
-	!x11-misc/expocity"
+	!x11-misc/expocity
+"
 
 src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README *.txt doc/*.txt"
 
 	# Compat with Ubuntu metacity themes (e.g. x11-themes/light-themes)
 	epatch "${FILESDIR}/${PN}-3.2.1-ignore-shadow-and-padding.patch"
+
+	# Apply patches from gnome-3.8 branch
+	epatch "${WORKDIR}/${P}-patches/"*.patch
 
 	gnome2_src_prepare
 }
@@ -73,7 +80,6 @@ src_configure() {
 		--enable-startup-notification \
 		--enable-xsync \
 		--enable-verbose-mode \
-		--enable-compile-warnings=maximum \
 		--with-libcanberra \
 		$(use_enable introspection)
 }
