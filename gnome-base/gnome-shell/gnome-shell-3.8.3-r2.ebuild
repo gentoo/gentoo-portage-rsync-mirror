@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r2.ebuild,v 1.2 2013/07/25 06:08:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r2.ebuild,v 1.3 2013/07/28 00:02:23 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+bluetooth +i18n +networkmanager"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # libXfixes-5.0 needed for pointer barriers
 # TODO: gstreamer support is currently automagical:
@@ -26,6 +26,7 @@ KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86"
 # gnome-shell/gnome-control-center/mutter/gnome-settings-daemon better to be in sync for 3.8.3
 # https://mail.gnome.org/archives/gnome-announce-list/2013-June/msg00005.html
 COMMON_DEPEND="
+	app-crypt/libsecret
 	>=app-accessibility/at-spi2-atk-2.5.3
 	>=dev-libs/atk-2[introspection]
 	>=app-crypt/gcr-3.7.5[introspection]
@@ -35,7 +36,7 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-3.7.9:3[introspection]
 	>=media-libs/clutter-1.13.4:1.0[introspection]
 	>=dev-libs/json-glib-0.13.2
-	>=dev-libs/libcroco-0.6.2:0.6
+	>=dev-libs/libcroco-0.6.8:0.6
 	>=gnome-base/gnome-desktop-3.7.90:3=[introspection]
 	>=gnome-base/gsettings-desktop-schemas-3.7.4
 	>=gnome-base/gnome-keyring-3.3.90
