@@ -4,10 +4,10 @@ DESCRIPTION=A set of utilities for converting to/from the netpbm (and related) f
 EAPI=4
 HOMEPAGE=http://netpbm.sourceforge.net/
 IUSE=doc jbig jpeg jpeg2k png rle svga tiff X xml zlib
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~amd64-linux ~x86 ~x86-fbsd ~x86-linux
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=jbig? ( media-libs/jbigkit ) jpeg? ( virtual/jpeg ) jpeg2k? ( media-libs/jasper ) png? ( >=media-libs/libpng-1.4:0 ) rle? ( media-libs/urt ) svga? ( media-libs/svgalib ) tiff? ( >=media-libs/tiff-3.5.5:0 ) xml? ( dev-libs/libxml2 ) zlib? ( sys-libs/zlib ) X? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=mirror://gentoo/netpbm-10.61.00.tar.xz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6709d1b1f6a1d70cd9c85b8c929ef2b4
+_md5_=2473577f865f17a9640e05a2e1729a0c

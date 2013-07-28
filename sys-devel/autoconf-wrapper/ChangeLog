@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.98 2013/04/16 18:48:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.99 2013/07/28 19:45:34 ago Exp $
+
+  28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> autoconf-wrapper-13.ebuild:
+  Stable for arm, wrt bug #470574
 
 *autoconf-wrapper-13 (16 Apr 2013)
 

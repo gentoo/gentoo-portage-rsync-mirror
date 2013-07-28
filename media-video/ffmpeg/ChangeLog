@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.668 2013/07/21 15:58:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.669 2013/07/28 19:43:59 aballier Exp $
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.0.ebuild,
+  ffmpeg-9999.ebuild:
+  define subslot and add := dep on x264
 
   21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
   Stable for ia64, wrt bug #473302

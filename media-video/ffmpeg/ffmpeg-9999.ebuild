@@ -1,8 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.134 2013/07/20 14:51:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.135 2013/07/28 19:43:59 aballier Exp $
 
-EAPI="4"
+EAPI="5"
+
+# Subslot: libavutil major.libavcodec major.libavformat major
+# Since FFmpeg ships several libraries, subslot is kind of limited here.
+# Most consumers will use those three libraries, if a "less used" library
+# changes its soname, consumers will have to be rebuilt the old way
+# (preserve-libs).
+# If, for example, a package does not link to libavformat and only libavformat
+# changes its ABI then this package will be rebuilt needlessly. Hence, such a
+# package is free _not_ to := depend on FFmpeg but I would strongly encourage
+# doing so since such a case is unlikely.
+FFMPEG_SUBSLOT=52.55.55
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
@@ -24,7 +35,7 @@ fi
 FFMPEG_REVISION="${PV#*_p}"
 
 LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
-SLOT="0"
+SLOT="0/${FFMPEG_SUBSLOT}"
 if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
@@ -69,7 +80,7 @@ RDEPEND="
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		twolame? ( media-sound/twolame )
 		wavpack? ( media-sound/wavpack )
-		x264? ( >=media-libs/x264-0.0.20111017 )
+		x264? ( >=media-libs/x264-0.0.20111017:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	flite? ( app-accessibility/flite )
