@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/optcomplete
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/ChangeLog,v 1.9 2012/05/15 16:24:51 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/ChangeLog,v 1.10 2013/07/28 14:36:55 idella4 Exp $
+
+*optcomplete-1.2-r1 (28 Jul 2013)
+
+  28 Jul 2013; Ian Delaney <idella4@gentoo.org> +optcomplete-1.2-r1.ebuild:
+  migrate -> distutils-r1, keep -1.2 stable
 
   15 May 2012; Jeremy Olexa <darkside@gentoo.org> optcomplete-1.2.ebuild:
   add ~x86-linux, bug 416007 by Dan Wallis
@@ -34,4 +39,3 @@
   25 Jun 2008; Ali Polatel <hawking@gentoo.org> +metadata.xml,
   +optcomplete-1.2.ebuild:
   Initial ebuild for optcomplete.
-
