@@ -1,4 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.66 2013/07/10 18:51:33 blueness Exp $
+# Copyright 2008-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.67 2013/07/28 02:41:57 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips

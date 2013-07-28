@@ -6071,7 +6071,6 @@ sys-fs/eudev:hwdb - read vendor/device string database and add it to udev databa
 sys-fs/eudev:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/eudev:keymap - map custom hardware's multimedia keys
 sys-fs/eudev:kmod - enable module loading through libkmod (requires modules)
-sys-fs/eudev:legacy-libudev - install libudev.so.0 to help with migration from udev-179 or older
 sys-fs/eudev:modutils - enable module loading support
 sys-fs/eudev:openrc - install the OpenRC init scripts
 sys-fs/eudev:rule-generator - install legacy rule generator rules and support scripts - note that the functionality within was dropped from sys-fs/udev as it is not stable in all cases; use at your own risk
