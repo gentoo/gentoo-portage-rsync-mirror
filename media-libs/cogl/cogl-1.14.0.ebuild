@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.14.0.ebuild,v 1.2 2013/04/01 09:28:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.14.0.ebuild,v 1.3 2013/07/27 23:57:28 eva Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -27,6 +27,7 @@ COMMON_DEPEND="
 	x11-libs/libXdamage
 	x11-libs/libXext
 	>=x11-libs/libXfixes-3
+	>=x11-libs/libXrandr-1.2
 	virtual/opengl
 	gles2? ( media-libs/mesa[gles2] )
 

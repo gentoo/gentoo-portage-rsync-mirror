@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.899 2013/07/27 16:18:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.900 2013/07/27 23:47:20 pesa Exp $
+
+  27 Jul 2013; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Rewrite sed expression in qt_nolibx11() to work on both 4.8.4 and 4.8.5.
+  Fixes bug 478018.
 
   27 Jul 2013; Pacho Ramos <pacho@gentoo.org> go-mono.eclass:
   Don't block mono-3

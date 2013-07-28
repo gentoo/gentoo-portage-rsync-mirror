@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.147 2013/07/06 07:57:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.148 2013/07/27 23:47:20 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -804,10 +804,9 @@ qt_mkspecs_dir() {
 # @FUNCTION: qt_nolibx11
 # @INTERNAL
 # @DESCRIPTION:
-# Ignore X11 tests for packages that don't need X libraries installed.
+# Skip X11 tests for packages that don't need X libraries installed.
 qt_nolibx11() {
-	sed -i "/unixtests\/compile.test.*config.tests\/x11\/xlib/,/fi$/d" "${S}"/configure ||
-		die "x11 check sed failed"
+	sed -i -e '/^if.*PLATFORM_X11.*CFG_GUI/,/^fi$/d' "${S}"/configure || die
 }
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_install src_test pkg_postrm pkg_postinst

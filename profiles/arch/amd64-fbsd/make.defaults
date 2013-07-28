@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.12 2013/07/08 02:08:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.13 2013/07/27 23:57:56 aballier Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -33,3 +33,6 @@ VIDEO_CARDS="apm ark chips cirrus cyrix dummy i128 intel mach64 mga \
 LIBDIR_amd64_fbsd="lib"
 MULTILIB_STRICT_DIRS="/lib32 /usr/lib32 /usr/kde/*/lib32 /usr/qt/*/lib32 /usr/X11R6/lib32"
 SYMLINK_LIB="no"
+
+# Unmask multilib ABIs use expands.
+USE_EXPAND_HIDDEN="-ABI_X86"

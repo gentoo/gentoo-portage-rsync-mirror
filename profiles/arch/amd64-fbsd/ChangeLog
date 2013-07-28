@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.39 2013/07/08 02:08:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.40 2013/07/27 23:57:56 aballier Exp $
+
+  27 Jul 2013; Alexis Ballier <aballier@gentoo.org> make.defaults, use.force,
+  use.mask:
+  add support for multilib eclasses, bug #475294 by Yuta SATOH
 
   08 Jul 2013; Alexis Ballier <aballier@gentoo.org> make.defaults:
   Add CFLAGS and LDFLAGS so that gcc finds the needed files and libraries when
