@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/backintime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.18 2013/06/27 13:15:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.19 2013/07/28 08:12:45 jcallen Exp $
+
+  28 Jul 2013; Jonathan Callen <jcallen@gentoo.org> backintime-1.0.24-r1.ebuild:
+  Fix dependencies, add REQUIRED_USE
 
 *backintime-1.0.24-r1 (27 Jun 2013)
 

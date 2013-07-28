@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-weather
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-weather/ChangeLog,v 1.3 2013/06/29 21:01:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-weather/ChangeLog,v 1.4 2013/07/28 08:25:55 eva Exp $
+
+  28 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-weather-3.8.2-r1.ebuild:
+  Add more precise glib/gtk+ dependency.
 
 *gnome-weather-3.8.2-r1 (29 Jun 2013)
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.1.2-r1.ebuild,v 1.1 2013/07/14 12:44:13 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.1.2-r1.ebuild,v 1.2 2013/07/28 08:20:32 jcallen Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="threads"
 
 inherit python-single-r1 unpacker
@@ -92,18 +92,21 @@ X86_DEPS="x86? (
 	)"
 
 DEPEND="dev-lang/perl
-	app-arch/unzip"
+	app-arch/unzip
+	${PYTHON_DEPS}"
 
 RDEPEND="${DEPEND}
 	!prefix? ( sys-libs/glibc )
-	>=dev-python/pygtk-2.10
-	dev-python/dbus-python
+	>=dev-python/pygtk-2.10[${PYTHON_USEDEP}]
+	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-util/desktop-file-utils
 	!app-emulation/crossover-office-pro-bin
 	!app-emulation/crossover-office-bin
 	${MLIB_DEPS}
 	${X86_DEPS}
 	"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 pkg_nofetch() {
 	einfo "Please visit ${HOMEPAGE}"

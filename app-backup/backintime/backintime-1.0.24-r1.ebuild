@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24-r1.ebuild,v 1.1 2013/06/27 13:15:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24-r1.ebuild,v 1.2 2013/07/28 08:12:45 jcallen Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils python-single-r1
 
@@ -17,12 +17,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="kde gnome"
 
-RDEPEND="dev-python/keyring
-	dev-python/notify-python
+RDEPEND="${PYTHON_DEPEND}
+	dev-python/keyring[${PYTHON_USEDEP}]
+	dev-python/notify-python[${PYTHON_USEDEP}]
 	net-misc/rsync[xattr,acl]
 	kde? (
 		>=kde-base/kdelibs-4
-		kde-base/pykde4
+		kde-base/pykde4[${PYTHON_USEDEP}]
 		kde-base/kompare
 		kde-base/kdesu
 		)
@@ -32,11 +33,13 @@ RDEPEND="dev-python/keyring
 		gnome-base/gnome-session
 		dev-python/gnome-vfs-python
 		dev-python/libgnome-python
-		dev-python/pygobject:2
-		dev-python/pygtk
+		dev-python/pygobject:2[${PYTHON_USEDEP}]
+		dev-python/pygtk[${PYTHON_USEDEP}]
 		)"
 
 DEPEND="${RDEPEND}"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 S=${WORKDIR}
 
