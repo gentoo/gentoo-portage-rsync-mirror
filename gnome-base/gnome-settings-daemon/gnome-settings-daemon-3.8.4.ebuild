@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.4.ebuild,v 1.2 2013/07/25 06:23:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.4.ebuild,v 1.3 2013/07/28 12:46:23 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2 virtualx
+inherit autotools eutils gnome2 systemd virtualx
 
 DESCRIPTION="Gnome Settings Daemon"
 HOMEPAGE="https://git.gnome.org/browse/gnome-settings-daemon"
@@ -116,4 +116,13 @@ src_configure() {
 
 src_test() {
 	Xemake check
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	if ! systemd_is_booted; then
+		ewarn "${PN} needs Systemd to be *running* for working"
+		ewarn "properly. Please follow the this guide to migrate:"
+		ewarn "http://wiki.gentoo.org/wiki/Systemd"
+	fi
 }

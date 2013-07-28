@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.122 2013/07/25 06:23:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.123 2013/07/28 12:46:23 pacho Exp $
+
+  28 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  gnome-settings-daemon-3.8.4.ebuild:
+  Tell people that they need to run systemd
 
 *gnome-settings-daemon-3.8.3 (25 Jul 2013)
 

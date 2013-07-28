@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.3.1.ebuild,v 1.3 2013/07/25 06:11:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.3.1.ebuild,v 1.4 2013/07/28 12:38:23 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -219,5 +219,11 @@ pkg_postinst() {
 		elog "You had /etc/X11/gdm/gdm.conf which is the old configuration"
 		elog "file.  It has been moved to /etc/X11/gdm/gdm-pre-gnome-2.16"
 		mv /etc/X11/gdm/gdm.conf /etc/X11/gdm/gdm-pre-gnome-2.16
+	fi
+
+	if ! systemd_is_booted; then
+		ewarn "${PN} needs Systemd to be *running* for working"
+		ewarn "properly. Please follow the this guide to migrate:"
+		ewarn "http://wiki.gentoo.org/wiki/Systemd"
 	fi
 }
