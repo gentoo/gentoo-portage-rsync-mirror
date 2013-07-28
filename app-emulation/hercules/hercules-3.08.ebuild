@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.08.ebuild,v 1.1 2012/12/24 07:35:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.08.ebuild,v 1.2 2013/07/28 12:01:18 grobian Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.hercules-390.eu/${P}.tar.gz"
 
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x64-macos ~x86-macos"
 IUSE="bzip2 custom-cflags +suid"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
