@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.4.ebuild,v 1.2 2013/07/28 00:12:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.4.ebuild,v 1.3 2013/07/28 10:19:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python{2_7,3,3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy{1_9,2_0})
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
@@ -76,7 +76,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# pĥonenumber does not exist in tree
+	# phonenumber does not exist in tree
 	gnome2_src_configure \
 		$(use_enable api-doc-extras gtk-doc) \
 		$(use_with api-doc-extras private-docs) \

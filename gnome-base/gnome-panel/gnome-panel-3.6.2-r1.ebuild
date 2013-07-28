@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-3.6.2-r1.ebuild,v 1.1 2013/05/12 15:07:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-3.6.2-r1.ebuild,v 1.2 2013/07/28 10:06:52 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -45,6 +45,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
+	app-text/yelp-tools
 	>=dev-lang/perl-5
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40

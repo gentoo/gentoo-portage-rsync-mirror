@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-netload-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/ChangeLog,v 1.32 2012/11/28 12:24:57 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/ChangeLog,v 1.33 2013/07/28 10:21:02 ssuominen Exp $
+
+*xfce4-netload-plugin-1.2.0-r1 (28 Jul 2013)
+
+  28 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-netload-plugin-1.2.0-r1.ebuild,
+  +files/xfce4-netload-plugin-1.2.0-interface_name_length.patch:
+  Increase the max. length of the interface names wrt #478454 by Florian Berger
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-netload-plugin-1.2.0.ebuild:
