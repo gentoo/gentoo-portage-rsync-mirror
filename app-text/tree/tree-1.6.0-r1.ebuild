@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.6.0-r1.ebuild,v 1.12 2013/02/01 14:53:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.6.0-r1.ebuild,v 1.13 2013/07/28 11:08:58 grobian Exp $
 
 EAPI=4
 inherit toolchain-funcs flag-o-matic bash-completion-r1
@@ -11,7 +11,7 @@ SRC_URI="ftp://mama.indstate.edu/linux/tree/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="!=sci-biology/meme-4.8.1"
@@ -22,6 +22,10 @@ src_prepare() {
 		-e 's:LINUX:__linux__:' tree.c \
 		|| die "sed failed"
 	mv doc/tree.1.fr doc/tree.fr.1
+	if use !elibc_glibc ; then
+		# 433972, also previously done only for elibc_uclibc
+		sed -i -e '/^OBJS=/s/$/ strverscmp.o/' Makefile || die
+	fi
 }
 
 src_compile() {
@@ -29,8 +33,7 @@ src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} ${CPPFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		XOBJS="$(use elibc_uclibc && echo strverscmp.o)"
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {

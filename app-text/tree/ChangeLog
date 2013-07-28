@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.105 2013/02/01 14:53:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.106 2013/07/28 11:08:58 grobian Exp $
+
+  28 Jul 2013; Fabian Groffen <grobian@gentoo.org> tree-1.6.0-r1.ebuild:
+  Fix compilation on non-glibc platforms, bug #433972
 
   01 Feb 2013; Justin Lecher <jlec@gentoo.org> tree-1.6.0-r1.ebuild,
   metadata.xml:
