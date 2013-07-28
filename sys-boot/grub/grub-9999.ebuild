@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.97 2013/07/28 17:27:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.98 2013/07/28 17:32:59 floppym Exp $
 
 EAPI=5
 
@@ -77,7 +77,6 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-apps/help2man
 	sys-apps/texinfo
-	>=sys-devel/autogen-5.10
 	static? (
 		truetype? (
 			app-arch/bzip2[static-libs(+)]
@@ -97,6 +96,10 @@ RDEPEND+="
 	)
 	!multislot? ( !sys-boot/grub:0 )
 "
+
+if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
+	DEPEND+=" >=sys-devel/autogen-5.10"
+fi
 
 STRIP_MASK="*/grub/*/*.{mod,img}"
 RESTRICT="test"

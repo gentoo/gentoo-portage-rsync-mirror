@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.376 2013/07/28 12:38:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.377 2013/07/28 17:35:18 eva Exp $
+
+  28 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> gdm-3.8.3.1.ebuild:
+  Add missing configure switch to handle fallback mode.
 
   28 Jul 2013; Pacho Ramos <pacho@gentoo.org> gdm-3.8.3.1.ebuild:
   Tell people that they need to run systemd

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.2.1-r1.ebuild,v 1.1 2013/06/11 11:18:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.2.1-r1.ebuild,v 1.2 2013/07/28 17:37:17 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -25,6 +25,7 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-2.90.7:3
 	>=dev-libs/json-glib-0.10
 	>=dev-libs/dbus-glib-0.76
+	>=gnome-base/gnome-desktop-3.7.90:3
 	>=sys-power/upower-0.9.0
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 
@@ -52,7 +53,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gsettings-desktop-schemas-0.1.7
 	>=x11-themes/gnome-themes-standard-2.91.92
 	sys-apps/dbus[X]
-	>=gnome-base/gnome-desktop-3.7.90:3
 	systemd? ( >=sys-apps/systemd-183 )
 	!systemd? ( sys-auth/consolekit )
 "
@@ -60,7 +60,6 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
 	>=sys-devel/gettext-0.10.40
 	>=dev-util/intltool-0.40.6
-	x11-libs/pango[X]
 	virtual/pkgconfig
 	!<gnome-base/gdm-2.20.4
 	doc? (

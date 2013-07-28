@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.308 2013/07/27 20:47:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.309 2013/07/28 17:37:17 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -174,9 +174,6 @@ x11-base/xorg-drivers video_cards_tdfx
 # x11-drivers/xf86-video-vmware
 # x11-libs/libdrm[libkms,video_cards_vmware]
 x11-base/xorg-drivers video_cards_vmware
-
-# >=media-plugins/gst-plugins-ffmpeg-0.10
-media-plugins/gst-plugins-meta ffmpeg
 
 # media-plugins/gst-plugins-taglib
 media-plugins/gst-plugins-meta taglib

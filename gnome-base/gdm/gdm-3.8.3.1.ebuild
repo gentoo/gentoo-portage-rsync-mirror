@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.3.1.ebuild,v 1.4 2013/07/28 12:38:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.3.1.ebuild,v 1.5 2013/07/28 17:35:18 eva Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -167,6 +167,7 @@ src_configure() {
 		--without-console-kit \
 		$(use_with accessibility xevie) \
 		$(use_with audit libaudit) \
+		$(use_enable fallback fallback-greeter) \
 		$(use_enable ipv6) \
 		$(use_with plymouth) \
 		$(use_with selinux) \
