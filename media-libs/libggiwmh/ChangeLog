@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggiwmh
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.13 2008/02/19 17:50:50 dertobi123 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggiwmh/ChangeLog,v 1.14 2013/07/28 19:21:15 aballier Exp $
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> libggiwmh-0.3.2.ebuild:
+  keyword ~amd64-fbsd, bug #477750
 
   19 Feb 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   libggiwmh-0.3.2.ebuild:

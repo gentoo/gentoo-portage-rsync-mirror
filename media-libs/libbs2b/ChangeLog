@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbs2b
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.17 2012/07/11 23:05:01 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.18 2013/07/28 19:26:02 aballier Exp $
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> libbs2b-3.1.0.ebuild:
+  keyword ~amd64-fbsd, bug #477750
 
   11 Jul 2012; Tim Harder <radhermit@gentoo.org> -libbs2b-3.0.0.ebuild,
   -files/libbs2b-3.0.0-freebsd.patch:
