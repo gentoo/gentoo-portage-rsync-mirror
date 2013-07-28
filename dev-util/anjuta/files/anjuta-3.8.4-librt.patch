@@ -1,0 +1,47 @@
+From cefee2f5dff25d56f55c195291fae15cf2254c3f Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sun, 28 Jul 2013 12:48:52 -0400
+Subject: [PATCH] symbol-db: link with librt on Linux
+
+Fixes underlinking failure when using GNU gold
+
+https://bugzilla.gnome.org/show_bug.cgi?id=704985
+---
+ configure.ac                  | 6 ++++++
+ plugins/symbol-db/Makefile.am | 3 ++-
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index ba17c93..e68f99d 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -758,6 +758,12 @@ fi
+ 
+ AC_SUBST(SYMBOL_DB_SHM)
+ 
++dnl On Linux, need librt for shm_open/shm_unlink
++bck_LIBS="$LIBS"
++AC_SEARCH_LIBS(shm_open, rt, [SHM_LIBS="$LIBS"], [AC_MSG_ERROR([Failed to find library with shm_open()])])
++AC_SUBST(SHM_LIBS)
++LIBS="$bck_LIBS"
++
+ dnl Test using autotest
+ dnl -----------------------------
+ AC_CONFIG_TESTDIR(plugins/am-project/tests)
+diff --git a/plugins/symbol-db/Makefile.am b/plugins/symbol-db/Makefile.am
+index 4be13c6..baff48d 100644
+--- a/plugins/symbol-db/Makefile.am
++++ b/plugins/symbol-db/Makefile.am
+@@ -84,7 +84,8 @@ libanjuta_symbol_db_la_LDFLAGS = $(ANJUTA_PLUGIN_LDFLAGS)
+ # Plugin dependencies
+ libanjuta_symbol_db_la_LIBADD = \
+ 	$(GDA_LIBS) \
+-	$(LIBANJUTA_LIBS)
++	$(LIBANJUTA_LIBS) \
++	$(SHM_LIBS)
+ 
+ BUILT_SOURCES=symbol-db-marshal.c symbol-db-marshal.h
+ 
+-- 
+1.8.3.2
+

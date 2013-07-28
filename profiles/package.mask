@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14960 2013/07/28 14:06:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14961 2013/07/28 17:23:36 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (28 Jul 2013)
+# Masked for testing, bug 468136.
+~sys-boot/grub-2.00_p4946
 
 # Justin Lecher <jlec@gentoo.org> (28 Jul 2013)
 # First alpha for testing

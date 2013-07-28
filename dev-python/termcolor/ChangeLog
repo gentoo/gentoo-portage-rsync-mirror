@@ -1,10 +1,15 @@
 # ChangeLog for dev-python/termcolor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/termcolor/ChangeLog,v 1.1 2013/01/21 08:57:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/termcolor/ChangeLog,v 1.2 2013/07/28 17:30:13 prometheanfire Exp $
+
+*termcolor-1.1.0-r1 (28 Jul 2013)
+
+  28 Jul 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +termcolor-1.1.0-r1.ebuild, -termcolor-1.1.0.ebuild:
+  added more valid python usedeps
 
 *termcolor-1.1.0 (21 Jan 2013)
 
   21 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
   +termcolor-1.1.0.ebuild, +metadata.xml:
   inital add of termcolor for openstack-nose-plugins
-

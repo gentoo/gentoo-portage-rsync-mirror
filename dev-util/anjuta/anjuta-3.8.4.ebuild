@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.2 2013/06/30 15:38:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.3 2013/07/28 17:30:49 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 VALA_MIN_API_VERSION="0.20"
 VALA_MAX_API_VERSION="${VALA_MIN_API_VERSION}"
 
-inherit gnome2 flag-o-matic readme.gentoo python-single-r1 vala
+inherit autotools gnome2 flag-o-matic readme.gentoo python-single-r1 vala
 
 DESCRIPTION="A versatile IDE for GNOME"
 HOMEPAGE="http://projects.gnome.org/anjuta/"
@@ -99,6 +99,11 @@ will need to:
 	# python2.7-configure in Fedora vs. python-configure in Gentoo
 	sed -e 's:$PYTHON-config:$PYTHON$PYTHON_VERSION-config:g' \
 		-i plugins/am-project/tests/anjuta.lst || die "sed failed"
+
+	# fix linking with gold, bug #468620, https://bugzilla.gnome.org/show_bug.cgi?id=704985
+	epatch "${FILESDIR}/${PN}-3.8.4-librt.patch"
+
+	eautoreconf # for the librtpatch
 
 	use vala && vala_src_prepare
 	gnome2_src_prepare

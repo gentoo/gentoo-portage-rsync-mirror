@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.29-r1.ebuild,v 1.1 2013/04/07 00:11:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.29-r1.ebuild,v 1.2 2013/07/28 17:26:27 nimiux Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="${DEBIAN_URI}/${DEBIAN_PATCH}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/sed"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.164 2013/06/30 15:38:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.165 2013/07/28 17:30:49 tetromino Exp $
+
+  28 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> anjuta-3.8.4.ebuild,
+  +files/anjuta-3.8.4-librt.patch:
+  Fix underlinking failure with gold (bug #468620, thanks to Justin Lecher).
 
   30 Jun 2013; Justin Lecher <jlec@gentoo.org> anjuta-3.6.2-r1.ebuild,
   anjuta-3.8.3.ebuild, anjuta-3.8.4.ebuild, metadata.xml:
