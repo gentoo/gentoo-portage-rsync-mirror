@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.53 2013/07/22 08:53:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.54 2013/07/28 07:28:59 olemarkus Exp $
+
+*eselect-php-0.6.2 (28 Jul 2013)
+
+  28 Jul 2013; Ole Markus With <olemarkus@gentoo.org> +eselect-php-0.6.2.ebuild:
+  Revert a really bad cleanup
 
   22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> eselect-php-0.7.1.ebuild:
   Stable for sparc, wrt bug #472558
