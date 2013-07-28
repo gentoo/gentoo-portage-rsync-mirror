@@ -3,10 +3,10 @@ DESCRIPTION=LibreOffice, a full office productivity suite. Binary package, debug
 EAPI=5
 HOMEPAGE=http://www.libreoffice.org
 IUSE=gnome java kde
-KEYWORDS=-* ~amd64 ~x86
+KEYWORDS=-* amd64 x86
 LICENSE=LGPL-3
 RDEPEND==app-office/libreoffice-bin-4.0.4.2[gnome=,java=,kde=]
 RESTRICT=test strip
 SLOT=0
 SRC_URI=amd64? ( kde? ( !java? ( mirror://gentoo/amd64-debug-libreoffice-kde-4.0.4.2.tar.xz ) java? ( mirror://gentoo/amd64-debug-libreoffice-kde-java-4.0.4.2.tar.xz ) ) gnome? ( !java? ( mirror://gentoo/amd64-debug-libreoffice-gnome-4.0.4.2.tar.xz ) java? ( mirror://gentoo/amd64-debug-libreoffice-gnome-java-4.0.4.2.tar.xz ) ) !kde? ( !gnome? ( !java? ( mirror://gentoo/amd64-debug-libreoffice-base-4.0.4.2.tar.xz ) java? ( mirror://gentoo/amd64-debug-libreoffice-base-java-4.0.4.2.tar.xz ) ) ) ) x86? ( kde? ( !java? ( mirror://gentoo/x86-debug-libreoffice-kde-4.0.4.2.tar.xz ) java? ( mirror://gentoo/x86-debug-libreoffice-kde-java-4.0.4.2.tar.xz ) ) gnome? ( !java? ( mirror://gentoo/x86-debug-libreoffice-gnome-4.0.4.2.tar.xz ) java? ( mirror://gentoo/x86-debug-libreoffice-gnome-java-4.0.4.2.tar.xz ) ) !kde? ( !gnome? ( !java? ( mirror://gentoo/x86-debug-libreoffice-base-4.0.4.2.tar.xz ) java? ( mirror://gentoo/x86-debug-libreoffice-base-java-4.0.4.2.tar.xz ) ) ) )
-_md5_=84ef430b2cbc081ff643fc9c687f0470
+_md5_=2575cbd2f97e862c62a4a580df438d55

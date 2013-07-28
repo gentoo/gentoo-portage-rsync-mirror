@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.374 2013/06/09 22:58:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.375 2013/07/28 14:21:02 aballier Exp $
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> freetype-2.4.12.ebuild:
+  use proper MULTILIB_USEDEP instead of emul libs
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

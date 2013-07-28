@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.88 2013/07/24 00:16:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.89 2013/07/28 14:14:13 aballier Exp $
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> libpciaccess-0.13.2.ebuild:
+  use the proper MULTILIB_USEDEP on zlib
 
 *libpciaccess-0.13.2 (24 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.12.ebuild,v 1.1 2013/06/02 07:41:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.12.ebuild,v 1.2 2013/07/28 14:21:02 aballier Exp $
 
 EAPI=5
 
@@ -23,14 +23,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
 IUSE="X auto-hinter bindist bzip2 adobe-cff debug doc fontforge infinality
 static-libs utils"
 
-# Note: replace emul-linux dep when bzip2 becomes multilib-aware
-# (and all [${MULTILIB_USEDEP}] on it then!)
-DEPEND="sys-libs/zlib
-	amd64? ( abi_x86_32? ( app-emulation/emul-linux-x86-baselibs ) )
-	bzip2? ( app-arch/bzip2 )
-	X?	( x11-libs/libX11
-		  x11-libs/libXau
-		  x11-libs/libXdmcp )"
+DEPEND="sys-libs/zlib[${MULTILIB_USEDEP}]
+	bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
+	X?	( x11-libs/libX11[${MULTILIB_USEDEP}]
+		  x11-libs/libXau[${MULTILIB_USEDEP}]
+		  x11-libs/libXdmcp[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
 	infinality? ( media-libs/fontconfig-infinality )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-xlibs-20130224 )"

@@ -1,0 +1,12 @@
+lib32/libz.so.1
+lib32/libz.so.1.2.7
+usr/lib32/libz.so
+usr/lib32/pkgconfig/zlib.pc
+usr/lib32/libminizip.so
+usr/lib32/libminizip.so.1
+usr/lib32/libminizip.so.1.0.0
+usr/lib32/pkgconfig/minizip.pc
+lib32/libbz2.so.1
+lib32/libbz2.so.1.0
+lib32/libbz2.so.1.0.6
+usr/lib32/libbz2.so

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.8-r1.ebuild,v 1.1 2013/06/23 07:43:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.8-r1.ebuild,v 1.2 2013/07/28 14:01:51 aballier Exp $
 
 EAPI=4
 AUTOTOOLS_AUTO_DEPEND="no"
@@ -19,7 +19,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="minizip static-libs"
 
 DEPEND="minizip? ( ${AUTOTOOLS_DEPEND} )"
-RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224 )
+RDEPEND="abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)
 	!<dev-libs/libxml2-2.7.7" #309623
 
 src_prepare() {

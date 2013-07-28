@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.140 2013/03/16 15:18:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.141 2013/07/28 14:06:48 aballier Exp $
+
+*emul-linux-x86-baselibs-20130224-r1 (28 Jul 2013)
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +emul-linux-x86-baselibs-20130224-r1.ebuild, +files/remove-native:
+  New revision that can use multilib enabled zlib and bzip2.
 
   16 Mar 2013; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-baselibs-20130224.ebuild:
