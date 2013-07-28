@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/ChangeLog,v 1.9 2013/06/19 20:13:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/amd64/9.1/clang/ChangeLog,v 1.10 2013/07/27 23:27:39 aballier Exp $
+
+  27 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.use.force:
+  build libcxx multilib, patch by Yuta SATOH in bug #475294
 
   19 Jun 2013; Alexis Ballier <aballier@gentoo.org> +make.defaults:
   add default cflags, esp. CXXFLAGS=-stdlib=libc++ ...

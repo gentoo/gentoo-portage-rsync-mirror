@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdbackup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.31 2012/03/02 20:17:35 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.32 2013/07/27 23:17:19 sping Exp $
+
+*dvdbackup-0.4.2 (27 Jul 2013)
+
+  27 Jul 2013; Sebastian Pipping <sping@gentoo.org> +dvdbackup-0.4.2.ebuild:
+  Bump to 0.4.2, looks trivial
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/0.1.1-debian-FPE.patch, -dvdbackup-0.1.1-r1.ebuild,
