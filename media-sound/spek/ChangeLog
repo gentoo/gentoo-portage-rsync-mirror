@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/spek
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.8 2012/10/06 10:24:22 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.9 2013/07/28 02:07:08 xmw Exp $
+
+*spek-0.8.3 (28 Jul 2013)
+
+  28 Jul 2013; Michael Weber <xmw@gentoo.org> +spek-0.8.3.ebuild,
+  -spek-0.7.ebuild, -spek-0.8.0.ebuild, -spek-0.8.1.ebuild:
+  Version bump (requested by eternalfuzzy1@gmail.com, bug 478306), inherit
+  wxwidgets eclass (reported by boxcars@gmx.net, bug 475372), drop old versions.
 
 *spek-0.8.1 (06 Oct 2012)
 
