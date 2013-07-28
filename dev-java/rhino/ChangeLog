@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.73 2013/02/05 07:31:02 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.74 2013/07/28 09:38:57 grobian Exp $
+
+  28 Jul 2013; Fabian Groffen <grobian@gentoo.org> rhino-1.7.2-r2.ebuild:
+  Marked ~x64-macos, bug #435528
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> rhino-1.7.2-r2.ebuild:
   adding ~arm

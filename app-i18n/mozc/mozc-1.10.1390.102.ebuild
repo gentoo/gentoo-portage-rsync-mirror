@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-1.10.1390.102.ebuild,v 1.3 2013/07/20 07:15:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-1.10.1390.102.ebuild,v 1.4 2013/07/28 09:42:56 naota Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -38,7 +38,6 @@ RDEPEND="dev-libs/glib:2
 	)
 	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
-	~dev-libs/protobuf-2.4.1
 	virtual/pkgconfig"
 
 BUILDTYPE="${BUILDTYPE:-Release}"

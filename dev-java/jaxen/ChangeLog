@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.58 2013/02/05 07:29:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.59 2013/07/28 09:40:22 grobian Exp $
+
+  28 Jul 2013; Fabian Groffen <grobian@gentoo.org> jaxen-1.1.4.ebuild:
+  Marked ~x64-macos, bug #435528
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> jaxen-1.1.1.ebuild,
   jaxen-1.1.4.ebuild:
