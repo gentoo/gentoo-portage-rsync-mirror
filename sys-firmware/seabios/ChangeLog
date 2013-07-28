@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.19 2013/07/05 17:46:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.20 2013/07/28 09:27:54 jcallen Exp $
+
+  28 Jul 2013; Jonathan Callen <jcallen@gentoo.org> seabios-1.7.2.2.ebuild:
+  Add missing python dependency, switch to using python-any-r1 as it is usually
+  more appropriate when the package does not install anything that would depend
+  on python at runtime.
 
 *seabios-1.7.2.2 (05 Jul 2013)
 

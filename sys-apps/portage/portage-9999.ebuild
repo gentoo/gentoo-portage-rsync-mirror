@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.86 2013/07/26 20:07:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.87 2013/07/28 09:21:49 mgorny Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -28,15 +28,15 @@ python_dep_ssl="python3? ( =dev-lang/python-3*[ssl] )
 	!pypy2_0? ( !python2? ( !python3? (
 		|| ( >=dev-lang/python-2.7[ssl] dev-lang/python:2.6[threads,ssl] )
 	) ) )
-	pypy2_0? ( !python2? ( !python3? ( dev-python/pypy:2.0[bzip2,ssl] ) ) )
+	pypy2_0? ( !python2? ( !python3? ( virtual/pypy:2.0[bzip2] ) ) )
 	python2? ( !python3? ( || ( dev-lang/python:2.7[ssl] dev-lang/python:2.6[ssl,threads] ) ) )"
 python_dep="${python_dep_ssl//\[ssl\]}"
 python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
 
 python_dep="${python_dep}
-	python_targets_pypy1_9? ( dev-python/pypy:1.9 )
-	python_targets_pypy2_0? ( dev-python/pypy:2.0 )
+	python_targets_pypy1_9? ( virtual/pypy:1.9 )
+	python_targets_pypy2_0? ( virtual/pypy:2.0 )
 	python_targets_python2_6? ( dev-lang/python:2.6 )
 	python_targets_python2_7? ( dev-lang/python:2.7 )
 	python_targets_python3_1? ( dev-lang/python:3.1 )

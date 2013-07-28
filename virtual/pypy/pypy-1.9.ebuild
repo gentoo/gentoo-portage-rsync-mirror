@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/pypy-1.9.ebuild,v 1.1 2013/07/27 11:15:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/pypy-1.9.ebuild,v 1.2 2013/07/28 09:18:55 mgorny Exp $
 
 EAPI=5
 
 inherit versionator
 
 DESCRIPTION="A virtual for PyPy Python implementation"
-HOMEPAGE="http://pypy.org/"
+HOMEPAGE=""
 SRC_URI=""
 
 LICENSE=""
@@ -17,6 +17,6 @@ IUSE="bzip2 ncurses sqlite"
 
 RDEPEND="
 	|| (
-		dev-python/pypy:${SLOT}[bzip2?,ncurses?,sqlite?]
+		dev-python/pypy:${SLOT}[bzip2?,ncurses?,sqlite?,ssl(+)]
 		dev-python/pypy-bin:${SLOT}[sqlite?]
 	)"

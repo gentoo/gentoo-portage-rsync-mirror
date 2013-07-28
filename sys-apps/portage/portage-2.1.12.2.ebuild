@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.12.2.ebuild,v 1.14 2013/07/01 02:24:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.12.2.ebuild,v 1.15 2013/07/28 09:21:49 mgorny Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -30,15 +30,15 @@ python_dep_ssl="python3? ( =dev-lang/python-3*[ssl] )
 	!pypy2_0? ( !python2? ( !python3? (
 		|| ( >=dev-lang/python-2.7[ssl] dev-lang/python:2.6[threads,ssl] )
 	) ) )
-	pypy2_0? ( !python2? ( !python3? ( dev-python/pypy:2.0[bzip2,ssl] ) ) )
+	pypy2_0? ( !python2? ( !python3? ( virtual/pypy:2.0[bzip2] ) ) )
 	python2? ( !python3? ( || ( dev-lang/python:2.7[ssl] dev-lang/python:2.6[ssl,threads] ) ) )"
 python_dep="${python_dep_ssl//\[ssl\]}"
 python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
 
 python_dep="${python_dep}
-	python_targets_pypy1_9? ( dev-python/pypy:1.9 )
-	python_targets_pypy2_0? ( dev-python/pypy:2.0 )
+	python_targets_pypy1_9? ( virtual/pypy:1.9 )
+	python_targets_pypy2_0? ( virtual/pypy:2.0 )
 	python_targets_python2_6? ( dev-lang/python:2.6 )
 	python_targets_python2_7? ( dev-lang/python:2.7 )
 	python_targets_python3_1? ( dev-lang/python:3.1 )

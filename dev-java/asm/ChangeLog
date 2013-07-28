@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.80 2013/06/27 21:48:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.81 2013/07/28 09:30:03 grobian Exp $
+
+  28 Jul 2013; Fabian Groffen <grobian@gentoo.org> asm-4.0.ebuild:
+  Marked ~x64-macos, bug #435528
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> asm-1.4.3-r3.ebuild,
   asm-1.5.3.ebuild, asm-3.3.1.ebuild:

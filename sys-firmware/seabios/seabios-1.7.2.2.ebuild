@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.2.ebuild,v 1.1 2013/07/05 17:46:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.2.ebuild,v 1.2 2013/07/28 09:27:54 jcallen Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils python-single-r1
+inherit eutils python-any-r1
 
 #BACKPORTS=1
 
@@ -39,7 +39,12 @@ IUSE="+binary"
 REQUIRED_USE="ppc? ( binary )
 	ppc64? ( binary )"
 
-DEPEND="!binary? ( >=sys-power/iasl-20060912 )"
+DEPEND="
+	!binary? (
+		>=sys-power/iasl-20060912
+		${PYTHON_DEPS}
+	)
+"
 RDEPEND=""
 
 pkg_pretend() {
@@ -52,6 +57,12 @@ pkg_pretend() {
 		ewarn "you will not receive any support if you have compiled your"
 		ewarn "own SeaBIOS. Virtual machines subtly fail based on changes"
 		ewarn "in SeaBIOS."
+	fi
+}
+
+pkg_setup() {
+	if ! use binary; then
+		python-any-r1_pkg_setup
 	fi
 }
 

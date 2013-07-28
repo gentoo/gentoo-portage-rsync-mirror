@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.185 2013/06/13 05:51:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.186 2013/07/28 09:16:02 jlec Exp $
+
+*gajim-0.16_alpha1 (28 Jul 2013)
+
+  28 Jul 2013; Justin Lecher <jlec@gentoo.org> +gajim-0.16_alpha1.ebuild:
+  Add alpha version
 
   13 Jun 2013; Justin Lecher <jlec@gentoo.org> gajim-0.15.4.ebuild:
   Make gnome-keyring support accessible with complete gnome desktop, #472930;
