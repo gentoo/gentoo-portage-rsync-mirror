@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/httpclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.46 2013/05/04 15:59:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.47 2013/07/28 20:39:43 mrueg Exp $
+
+*httpclient-2.3.4.1 (28 Jul 2013)
+
+  28 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +httpclient-2.3.4.1.ebuild:
+  Version bump
 
 *httpclient-2.3.3 (04 May 2013)
 
