@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.8.0.ebuild,v 1.1 2013/03/28 16:55:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.8.0.ebuild,v 1.2 2013/07/28 18:37:21 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,11 +16,13 @@ LICENSE="LGPL-2 GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="" # test
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # test suite is obsolete (at-spi-1.x era) and unpassable
 RESTRICT="test"
 
-COMMON_DEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
+COMMON_DEPEND="
+	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-2.90.1:3[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}
 "
@@ -56,10 +58,4 @@ src_install() {
 		python_doscript examples/magFocusTracker.py
 	}
 	python_foreach_impl run_in_build_dir installing
-}
-
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
 }

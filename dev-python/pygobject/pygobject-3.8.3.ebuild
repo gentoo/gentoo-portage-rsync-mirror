@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.3.ebuild,v 1.2 2013/07/25 20:26:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.8.3.ebuild,v 1.3 2013/07/28 18:40:08 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,8 +23,8 @@ REQUIRED_USE="
 "
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.31.0:2
-	>=dev-libs/gobject-introspection-1.34.1.1
+	>=dev-libs/glib-2.34.2:2
+	>=dev-libs/gobject-introspection-1.34.2
 	virtual/libffi:=
 	cairo? ( >=dev-python/pycairo-1.10.0[${PYTHON_USEDEP}] )
 	${PYTHON_DEPS}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.218 2013/07/25 20:26:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.219 2013/07/28 18:40:08 eva Exp $
+
+  28 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> pygobject-3.8.3.ebuild:
+  Fix dependencies per configure.
 
   25 Jul 2013; Pacho Ramos <pacho@gentoo.org> -pygobject-3.8.2.ebuild,
   pygobject-3.8.3.ebuild:

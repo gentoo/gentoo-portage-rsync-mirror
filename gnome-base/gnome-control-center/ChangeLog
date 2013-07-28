@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.132 2013/07/26 20:20:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.133 2013/07/28 18:44:53 tetromino Exp $
+
+*gnome-control-center-3.8.4.1-r1 (28 Jul 2013)
+
+  28 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-control-center-3.8.4.1-r1.ebuild,
+  +files/gnome-control-center-3.8.4-optional-kerberos.patch:
+  Fix optional-kerberos patch (bug #458668, thanks to SN (Enlik)). Require
+  mit-krb5 when USE=kerberos, since building against heimdal fails.
 
   26 Jul 2013; Pacho Ramos <pacho@gentoo.org>
   gnome-control-center-3.8.4.1.ebuild:

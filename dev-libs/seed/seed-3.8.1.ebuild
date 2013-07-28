@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-3.8.1.ebuild,v 1.1 2013/04/25 18:45:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-3.8.1.ebuild,v 1.2 2013/07/28 18:33:06 eva Exp $
 
 EAPI=5
 GNOME2_LA_PUNT="yes"
@@ -14,6 +14,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug profile test"
+REQUIRED_USE="profile? ( debug )"
 
 RDEPEND="
 	>=dev-libs/gobject-introspection-1
@@ -50,16 +51,14 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf=""
 	# configure behaves very strangely and enables profiling if we pass either
 	# --disable-profile or --enable-profile
 	if use profile; then
-		G2CONF="${G2CONF}
+		myconf="${myconf}
 			--enable-profile
-			--enable-profile-modules"
-		if ! use debug; then
-			einfo "USE=profile needs debug, auto-enabling..."
-			G2CONF="${G2CONF} --enable-debug"
-		fi
+			--enable-profile-modules
+			--enable-debug"
 	fi
 
 	gnome2_src_configure \
@@ -76,7 +75,8 @@ src_configure() {
 		--enable-sqlite-module \
 		--enable-libxml-module \
 		--enable-xorg-module \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}/html"
+		--docdir="${EPREFIX}/usr/share/doc/${PF}/html" \
+		${myconf}
 }
 
 src_test() {
