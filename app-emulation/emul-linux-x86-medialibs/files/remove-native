@@ -30,3 +30,9 @@ usr/lib32/libtheoraenc.so.1.1.2
 usr/lib32/pkgconfig/theora.pc
 usr/lib32/pkgconfig/theoradec.pc
 usr/lib32/pkgconfig/theoraenc.pc
+usr/lib32/libcuefile.so
+usr/lib32/libcuefile.so.0
+usr/lib32/libcuefile.so.0.0.0
+usr/lib32/libreplaygain.so
+usr/lib32/libreplaygain.so.1
+usr/lib32/libreplaygain.so.1.0.0

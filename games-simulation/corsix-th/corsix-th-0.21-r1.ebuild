@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/corsix-th/corsix-th-0.21-r1.ebuild,v 1.1 2013/07/27 11:41:13 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/corsix-th/corsix-th-0.21-r1.ebuild,v 1.2 2013/07/28 21:02:57 miknix Exp $
 
-EAPI=3
+EAPI=5
 
-inherit games cmake-utils
+inherit eutils cmake-utils games
 
 MY_P="CorsixTH-${PV}-Source"
 
@@ -15,14 +15,16 @@ SRC_URI="http://corsix-th.googlecode.com/files/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+ffmpeg truetype opengl +sdl +sound"
+IUSE="+ffmpeg truetype opengl +sdl +sound +midi"
+REQUIRED_USE="|| ( sdl opengl )"
 
 RDEPEND=">=dev-lang/lua-5.1
-	media-libs/libsdl
+	media-libs/libsdl[X]
 	ffmpeg? ( virtual/ffmpeg )
 	truetype? ( media-libs/freetype:2 )
 	opengl? ( virtual/opengl )
-	sound? ( media-libs/sdl-mixer[timidity] )"
+	sound? ( media-libs/sdl-mixer )
+	midi? ( media-libs/sdl-mixer[timidity] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -45,7 +47,13 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+src_compile() {
+	cmake-utils_src_compile
+}
+
 src_install() {
+	cmake-utils_src_install
+
 	DOCS="CorsixTH/README.txt CorsixTH/changelog.txt" cmake-utils_src_install
 	games_make_wrapper ${PN} "${GAMES_DATADIR}/${PN}/CorsixTH" || die
 	make_desktop_entry ${PN} ${PN} \

@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/corsix-th
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/corsix-th/ChangeLog,v 1.1 2013/07/27 11:41:13 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/corsix-th/ChangeLog,v 1.2 2013/07/28 21:02:57 miknix Exp $
+
+  28 Jul 2013; Angelo Arrifano <miknix@gentoo.org> corsix-th-0.21-r1.ebuild,
+  metadata.xml:
+  Update ebuild to EAPI5 and a few other improvements based on suggestions by
+  Julian Ospald (hasufell).
 
 *corsix-th-0.21-r1 (27 Jul 2013)
 

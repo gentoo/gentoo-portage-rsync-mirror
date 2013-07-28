@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r4.ebuild,v 1.2 2013/07/15 18:57:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r5.ebuild,v 1.1 2013/07/28 21:08:09 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -28,6 +28,8 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-plugins/swh-plugins-0.4.15-r3[abi_x86_32(-)]
 		>=media-libs/libmikmod-3.2.0-r1[abi_x86_32(-)]
 		>=media-plugins/alsaequal-0.6-r1[abi_x86_32(-)]
+		>=media-sound/cdparanoia-3.10.2-r6[abi_x86_32(-)]
+		>=media-sound/wavpack-4.60.1-r1[abi_x86_32(-)]
 	)"
 
 src_prepare() {

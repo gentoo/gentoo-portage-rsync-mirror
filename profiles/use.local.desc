@@ -2336,9 +2336,10 @@ games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/sumwars:tools - Builds editor tools
 games-rpg/valyriatear:editor - Compile the Qt editor along with the game
 games-simulation/corsix-th:ffmpeg - Use ffmpeg for playing in-game cutscenes.
+games-simulation/corsix-th:midi - Use SDL mixer and timidity for in-game music.
 games-simulation/corsix-th:opengl - Use OpenGL for rendering.
 games-simulation/corsix-th:sdl - Use SDL for rendering.
-games-simulation/corsix-th:sound - Use SDL mixer for MIDI sound.
+games-simulation/corsix-th:sound - Use SDL mixer for in-game sound.
 games-simulation/corsix-th:truetype - Use high quality fonts.
 games-simulation/flightgear:fgpanel - Enables standalone lightweight 2D-panel rendering utility
 games-simulation/flightgear:jsbsim - Enables JSBSim Flight Dynamics Model (default)
@@ -2468,6 +2469,7 @@ gnome-extra/libgda:bindist - Disable support for dev-db/firebird database which 
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
 gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
 gnome-extra/libgda:json - Enable support for JSON format
+gnome-extra/libgda:libsecret - Enable app-crypt/libsecret support to store login credentials
 gnome-extra/libgda:mdb - Enable support for Microsoft Access database using app-office/mdbtools
 gnome-extra/libgda:reports - Install tools for generating graphical reports
 gnome-extra/libgda:sourceview - Enable support for x11-libs/gtksourceview

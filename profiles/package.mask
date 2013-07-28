@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14961 2013/07/28 17:23:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14962 2013/07/28 21:05:54 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -472,15 +472,11 @@ app-text/cuneiform
 # - libv4l depends on emul-linux for jpeg
 # - portaudio is not commited yet: bug #468706
 # - twolame depends on libsndfile
-# - wavpack multilib ebuild is in theory broken as it requires a multilib
-#           libiconv and is lacking the usedep on it since it has not been
-#           converted
 >=media-libs/libsamplerate-0.1.8-r1
 >=media-libs/libsndfile-1.0.25-r1
 >=media-libs/libv4l-0.9.5-r1
 >=media-sound/portaudio-19_pre20111121-r1
 >=media-sound/twolame-0.3.13-r1
->=media-sound/wavpack-4.60.1-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (13 Mar 2013)
 # Mask because breaking updates out of the blue is bad
