@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.146 2013/05/20 18:43:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.147 2013/07/28 18:05:56 nimiux Exp $
+
+  28 Jul 2013; Chema Alonso <nimiux@gentoo.org> attr-2.4.46-r2.ebuild:
+  Stable for amd64 wrt bug #470570
 
 *attr-2.4.47 (20 May 2013)
 
