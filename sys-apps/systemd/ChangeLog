@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.148 2013/07/27 11:40:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.149 2013/07/28 13:52:55 ago Exp $
+
+  28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204.ebuild:
+  Stable for ppc, wrt bug #477910
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204.ebuild:
   Stable for amd64, wrt bug #477910

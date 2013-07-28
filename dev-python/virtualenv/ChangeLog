@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.90 2013/07/24 18:43:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.91 2013/07/28 13:48:11 ago Exp $
+
+  28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> virtualenv-1.9.1-r1.ebuild:
+  Stable for ppc, wrt bug #477970
 
   24 Jul 2013; Agostino Sarubbo <ago@gentoo.org> virtualenv-1.9.1-r1.ebuild:
   Stable for amd64, wrt bug #477970

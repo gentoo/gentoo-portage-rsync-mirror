@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.23 2013/07/27 22:22:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.24 2013/07/28 13:36:28 ago Exp $
+
+  28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> nqc-3.1_p6.ebuild:
+  Stable for ppc, wrt bug #477156
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> nqc-3.1_p6.ebuild:
   Stable for x86, wrt bug #477156
