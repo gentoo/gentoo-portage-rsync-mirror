@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.68 2013/07/11 21:42:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.69 2013/07/28 10:39:27 grobian Exp $
+
+  28 Jul 2013; Fabian Groffen <grobian@gentoo.org> xom-1.2.10.ebuild:
+  Marked ~x64-macos, bug #435528
 
 *xom-1.2.10 (11 Jul 2013)
 

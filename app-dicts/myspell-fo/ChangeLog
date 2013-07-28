@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-fo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.21 2013/03/06 20:08:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.22 2013/07/28 10:41:46 ago Exp $
+
+  28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> myspell-fo-0.4.2.ebuild:
+  Stable for amd64, wrt bug #470306
 
 *myspell-fo-0.4.2 (06 Mar 2013)
 

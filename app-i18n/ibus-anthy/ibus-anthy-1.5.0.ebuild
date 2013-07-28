@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.5.0.ebuild,v 1.3 2013/04/29 12:13:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.5.0.ebuild,v 1.4 2013/07/28 10:49:28 naota Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.5"
@@ -48,6 +48,8 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 
 	find "${ED}" -name '*.la' -type f -delete || die
+
+	python_optimize
 }
 
 pkg_preinst() {
@@ -60,8 +62,6 @@ pkg_postinst() {
 	elog
 	elog "# emerge app-dicts/kasumi"
 	elog
-
-	python_optimize
 }
 
 pkg_postrm() {

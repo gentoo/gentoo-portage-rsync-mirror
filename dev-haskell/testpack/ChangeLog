@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/testpack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/testpack/ChangeLog,v 1.9 2013/04/02 13:01:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/testpack/ChangeLog,v 1.10 2013/07/28 10:44:29 ago Exp $
+
+  28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> testpack-2.1.2.1.ebuild:
+  Stable for amd64, wrt bug #470374
 
 *testpack-2.1.2.1 (02 Apr 2013)
 

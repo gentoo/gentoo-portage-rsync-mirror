@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-File
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/ChangeLog,v 1.52 2013/03/24 20:46:25 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/ChangeLog,v 1.53 2013/07/28 10:41:09 ago Exp $
+
+  28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-File-1.4.1.ebuild:
+  Stable for amd64, wrt bug #470424
 
 *PEAR-File-1.4.1 (24 Mar 2013)
 
