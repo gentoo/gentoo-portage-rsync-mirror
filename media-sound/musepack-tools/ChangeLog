@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.67 2013/06/01 23:49:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.68 2013/07/28 21:34:04 aballier Exp $
+
+*musepack-tools-465-r1 (28 Jul 2013)
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +musepack-tools-465-r1.ebuild:
+  go multilib and slat it for soundlibs -r6
 
   01 Jun 2013; Tim Harder <radhermit@gentoo.org> -musepack-tools-444-r1.ebuild,
   -files/musepack-tools-444-gentoo.patch:

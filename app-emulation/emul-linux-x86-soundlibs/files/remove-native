@@ -174,3 +174,6 @@ usr/lib32/libwavpack.so
 usr/lib32/libwavpack.so.1
 usr/lib32/libwavpack.so.1.1.4
 usr/lib32/pkgconfig/wavpack.pc
+usr/lib32/libmpcdec.so
+usr/lib32/libmpcdec.so.7
+usr/lib32/libmpcdec.so.7.0.1
