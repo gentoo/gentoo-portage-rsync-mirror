@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.73 2013/06/25 12:53:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.74 2013/07/29 14:26:58 keri Exp $
+
+  29 Jul 2013; <keri@gentoo.org> -files/gprolog-1.4.0-ldflags.patch,
+  -files/gprolog-1.4.0-links.patch, -files/gprolog-1.4.0-ma2asm-pllong.patch,
+  -files/gprolog-1.4.0-nodocs.patch, -files/gprolog-1.4.0-txt-file.patch,
+  -files/gprolog-1.4.1-ldflags.patch, -files/gprolog-1.4.1-links.patch,
+  -files/gprolog-1.4.1-nodocs.patch, -files/gprolog-1.4.1-txt-file.patch,
+  -gprolog-1.4.2.ebuild, -files/gprolog-1.4.2-ldflags.patch,
+  -files/gprolog-1.4.2-links.patch, -files/gprolog-1.4.2-nodocs.patch,
+  -files/gprolog-1.4.2-txt-file.patch, -gprolog-1.4.3.ebuild,
+  -files/gprolog-1.4.3-ldflags.patch, -files/gprolog-1.4.3-links.patch,
+  -files/gprolog-1.4.3-nodocs.patch, -files/gprolog-1.4.3-txt-file.patch:
+  Remove old versions
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gprolog-1.4.4.ebuild:
   Stable for amd64, wrt bug #473778
