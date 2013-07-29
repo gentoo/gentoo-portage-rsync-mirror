@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14962 2013/07/28 21:05:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14963 2013/07/29 22:32:50 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -467,16 +467,10 @@ app-text/cuneiform
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
 # Reasons to keep them masked:
-# - libsamplerate depends on libsndfile
-# - libsndfile depends on emul-linux for sqlite which doesn't scale
 # - libv4l depends on emul-linux for jpeg
 # - portaudio is not commited yet: bug #468706
-# - twolame depends on libsndfile
->=media-libs/libsamplerate-0.1.8-r1
->=media-libs/libsndfile-1.0.25-r1
 >=media-libs/libv4l-0.9.5-r1
 >=media-sound/portaudio-19_pre20111121-r1
->=media-sound/twolame-0.3.13-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (13 Mar 2013)
 # Mask because breaking updates out of the blue is bad

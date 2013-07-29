@@ -177,3 +177,15 @@ usr/lib32/pkgconfig/wavpack.pc
 usr/lib32/libmpcdec.so
 usr/lib32/libmpcdec.so.7
 usr/lib32/libmpcdec.so.7.0.1
+usr/lib32/libsndfile.so
+usr/lib32/libsndfile.so.1
+usr/lib32/libsndfile.so.1.0.25
+usr/lib32/pkgconfig/sndfile.pc
+usr/lib32/libsamplerate.so
+usr/lib32/libsamplerate.so.0
+usr/lib32/libsamplerate.so.0.1.7
+usr/lib32/pkgconfig/samplerate.pc
+usr/lib32/libtwolame.so
+usr/lib32/libtwolame.so.0
+usr/lib32/libtwolame.so.0.0.0
+usr/lib32/pkgconfig/twolame.pc

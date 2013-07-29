@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r6.ebuild,v 1.1 2013/07/28 21:36:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224-r7.ebuild,v 1.1 2013/07/29 22:33:05 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -31,6 +31,9 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-sound/cdparanoia-3.10.2-r6[abi_x86_32(-)]
 		>=media-sound/wavpack-4.60.1-r1[abi_x86_32(-)]
 		>=media-sound/musepack-tools-465-r1[abi_x86_32(-)]
+		>=media-libs/libsndfile-1.0.25-r1[abi_x86_32(-)]
+		>=media-libs/libsamplerate-0.1.8-r1[abi_x86_32(-)]
+		>=media-sound/twolame-0.3.13-r1[abi_x86_32(-)]
 	)"
 
 src_prepare() {

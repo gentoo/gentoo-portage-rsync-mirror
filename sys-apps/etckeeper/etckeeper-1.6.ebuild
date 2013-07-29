@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.5.ebuild,v 1.1 2013/07/29 20:45:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.6.ebuild,v 1.1 2013/07/29 22:32:42 mrueg Exp $
 
 EAPI=5
 
@@ -18,8 +18,7 @@ SLOT="0"
 IUSE="bazaar cron"
 REQUIRED_USE="bazaar? ( ${PYTHON_REQUIRED_USE} )"
 
-VCS_DEPEND="
-	dev-vcs/git
+VCS_DEPEND="dev-vcs/git
 	dev-vcs/mercurial
 	dev-vcs/darcs"
 DEPEND="bazaar? ( dev-vcs/bzr )"
@@ -30,7 +29,7 @@ RDEPEND="${DEPEND}
 	!bazaar? ( || ( ${VCS_DEPEND} ) )"
 
 src_prepare(){
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-1.5-gentoo.patch
 }
 
 src_compile() {
