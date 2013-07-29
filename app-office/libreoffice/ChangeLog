@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.496 2013/07/29 09:28:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.497 2013/07/29 13:26:35 scarabeus Exp $
+
+  29 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Use firebird configure switch.
 
   29 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.1.0.4.ebuild,
   libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild:

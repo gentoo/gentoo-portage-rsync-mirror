@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.491 2013/07/21 13:38:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.492 2013/07/29 13:09:40 olemarkus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -182,11 +182,6 @@ sys-auth/pam_mktemp prevent-removal
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
 # fontconfig-infinality dependency not yet keyworded on most arches
 media-libs/freetype infinality
-
-# Ole Markus With <olemarkus@gentoo.org> (20 Jul 2012)
-# Kolab support broken with newer c-client. Masking use flag until either
-# problem is solved or the kolab patch is removed. Bug #416859
-dev-lang/php kolab
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Requires masked eclipse-sdk.
