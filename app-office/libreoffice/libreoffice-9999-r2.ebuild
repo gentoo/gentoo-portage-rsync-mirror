@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.186 2013/07/16 16:43:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.187 2013/07/29 09:28:03 scarabeus Exp $
 
 EAPI=5
 
@@ -119,7 +119,7 @@ COMMON_DEPEND="
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
-	>=dev-libs/redland-1.0.14[ssl]
+	>=dev-libs/redland-1.0.16[ssl]
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
