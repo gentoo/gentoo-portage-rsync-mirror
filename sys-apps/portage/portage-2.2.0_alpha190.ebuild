@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha190.ebuild,v 1.2 2013/07/28 09:21:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha190.ebuild,v 1.3 2013/07/29 17:53:18 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -414,9 +414,6 @@ pkg_preinst() {
 		chmod g+s,ug+rwx "${ED}"var/log/portage{,/elog}
 	fi
 
-	has_version "<=${CATEGORY}/${PN}-2.2_pre5" \
-		&& WORLD_MIGRATION_UPGRADE=true || WORLD_MIGRATION_UPGRADE=false
-
 	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
 	# assume that the NEEDED.ELF.2 files have already been generated.
 	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
@@ -473,50 +470,6 @@ new_config_protect() {
 }
 
 pkg_postinst() {
-	if $WORLD_MIGRATION_UPGRADE && \
-		grep -q "^@" "${EROOT}/var/lib/portage/world"; then
-		einfo "moving set references from the worldfile into world_sets"
-		cd "${EROOT}/var/lib/portage/"
-		grep "^@" world >> world_sets
-		sed -i -e '/^@/d' world
-	fi
-
-	if ${NEEDED_REBUILD_UPGRADE} ; then
-		einfo "rebuilding NEEDED.ELF.2 files"
-		local cpv filename line newline
-		for cpv in "${EROOT}/var/db/pkg"/*/*; do
-			[[ -f "${cpv}/NEEDED" && ! -f "${cpv}/NEEDED.ELF.2" ]] || continue
-			while read -r line; do
-				filename=${line% *}
-				newline=$(scanelf -BF "%a;%F;%S;%r;%n" "${ROOT%/}${filename}")
-				newline=${newline//  -  }
-				[[ ${#ROOT} -gt 1 ]] && newline=${newline/${ROOT%/}}
-				echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
-			done < "${cpv}/NEEDED"
-		done
-	fi
-
-	local distdir=${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}
-	if ${USERPRIV_UPGRADE} && \
-		[[ -d ${distdir} && -w ${distdir} ]] ; then
-		local ownership=$(get_ownership "${distdir}")
-		if [[ ${ownership#*:} == portage ]] ; then
-			einfo "Adjusting DISTDIR permissions for userpriv"
-			find "${distdir}" -maxdepth 1 -type d -uid 0 \
-				-exec chown -R portage:portage {} +
-		fi
-	fi
-
-	if ${USERSYNC_UPGRADE} && \
-		[[ -d ${PORTDIR} && -w ${PORTDIR} ]] ; then
-		local ownership=$(get_ownership "${PORTDIR}")
-		if [[ -n ${ownership} ]] ; then
-			einfo "Adjusting PORTDIR permissions for usersync"
-			find "${PORTDIR}" -path "${distdir%/}" -prune -o \
-				! \( -user "${ownership%:*}" -a -group "${ownership#*:}" \) \
-				-exec chown "${ownership}" {} +
-		fi
-	fi
 
 	if ${REPOS_CONF_UPGRADE} ; then
 		einfo "Generating repos.conf"
@@ -541,5 +494,46 @@ pkg_postinst() {
 			dest=${EROOT}/etc/portage/repos.conf/${repo_name:-gentoo}.conf
 		fi
 		mv "${T}/repos.conf" "$(new_config_protect "${dest}")"
+	fi
+
+	if ${NEEDED_REBUILD_UPGRADE} ; then
+		einfo "rebuilding NEEDED.ELF.2 files"
+		local cpv filename line newline
+		for cpv in "${EROOT}/var/db/pkg"/*/*; do
+			[[ -f "${cpv}/NEEDED" && ! -f "${cpv}/NEEDED.ELF.2" ]] || continue
+			while read -r line; do
+				filename=${line% *}
+				newline=$(scanelf -BF "%a;%F;%S;%r;%n" "${ROOT%/}${filename}")
+				newline=${newline//  -  }
+				[[ ${#ROOT} -gt 1 ]] && newline=${newline/${ROOT%/}}
+				echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
+			done < "${cpv}/NEEDED"
+		done
+	fi
+
+	local distdir=${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}
+
+	if ${USERSYNC_UPGRADE} && \
+		[[ -d ${PORTDIR} && -w ${PORTDIR} ]] ; then
+		local ownership=$(get_ownership "${PORTDIR}")
+		if [[ -n ${ownership} ]] ; then
+			einfo "Adjusting PORTDIR permissions for usersync"
+			find "${PORTDIR}" -path "${distdir%/}" -prune -o \
+				! \( -user "${ownership%:*}" -a -group "${ownership#*:}" \) \
+				-exec chown "${ownership}" {} +
+		fi
+	fi
+
+	# Do this last, since it could take a long time if there
+	# are lots of live sources, and the user may be tempted
+	# to kill emerge while it is running.
+	if ${USERPRIV_UPGRADE} && \
+		[[ -d ${distdir} && -w ${distdir} ]] ; then
+		local ownership=$(get_ownership "${distdir}")
+		if [[ ${ownership#*:} == portage ]] ; then
+			einfo "Adjusting DISTDIR permissions for userpriv"
+			find "${distdir}" -maxdepth 1 -type d -uid 0 \
+				-exec chown -R portage:portage {} +
+		fi
 	fi
 }

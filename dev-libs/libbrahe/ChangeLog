@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbrahe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbrahe/ChangeLog,v 1.8 2013/07/27 22:08:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbrahe/ChangeLog,v 1.9 2013/07/29 18:00:49 pinkbyte Exp $
+
+  29 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> -libbrahe-1.1.0.ebuild:
+  Drop old revision
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libbrahe-1.1.0-r1.ebuild:
   Stable for x86, wrt bug #477206

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.9.ebuild,v 1.1 2013/07/29 13:12:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.9.ebuild,v 1.2 2013/07/29 17:35:14 zmedico Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit gnome2 mono-env
 
 DESCRIPTION="GNOME Do allows you to get things done quickly"
 HOMEPAGE="http://do.davebsd.com/"
-SRC_URI="https://launchpad.net/do/trunk/${PVC}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/do/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

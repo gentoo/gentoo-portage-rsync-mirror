@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libemf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.38 2013/07/29 16:30:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.39 2013/07/29 17:55:02 pinkbyte Exp $
+
+  29 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> libemf-1.0.4.ebuild,
+  libemf-1.0.4-r1.ebuild:
+  No upstream support for arm
 
   29 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> libemf-1.0.4-r1.ebuild:
   Stable on amd64 and x86, wrt bug #474242

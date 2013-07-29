@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1164 2013/07/29 16:44:04 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1165 2013/07/29 17:49:27 mpagano Exp $
+
+*gentoo-sources-3.0.88 (29 Jul 2013)
+
+  29 Jul 2013; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.0.88.ebuild:
+  Linux patch 3.0.88. Support for namespace user.pax.* on tmpfs. Patch to
+  initialize satype in key_notify_policy_flush(). Patch to fix zcache build
+  error. ALPS Touchpad patches: Add PSMOUSE_CMD_RESET_WRAP; Move the protocol
+  information to Documentation for the ALPS Touchpad; Add protocol version
+  field in alps_model_info; Remove assumptions about packet size; Add support
+  for protocol versions 3 and 4; Add documentation for protocol versions 3 and
+  4; Add semi-MT support for v3 protocol and dump raw packet data. ACPI patch
+  to disable Windows 8 compatibility for some Lenovo ThinkPads. fbcondecor
+  console decoration patch.
 
 *gentoo-sources-3.4.55 (29 Jul 2013)
 
