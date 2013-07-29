@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/customizable-weather
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/ChangeLog,v 1.55 2013/07/27 11:50:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/ChangeLog,v 1.56 2013/07/29 07:50:28 ago Exp $
+
+  29 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
+  customizable-weather-1.7.3.ebuild:
+  Stable for x86, wrt bug #477634
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
   customizable-weather-1.7.3.ebuild:
