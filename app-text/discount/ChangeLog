@@ -1,0 +1,12 @@
+# ChangeLog for app-text/discount
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/discount/ChangeLog,v 1.1 2013/07/29 04:55:01 binki Exp $
+
+*discount-2.1.6 (29 Jul 2013)
+
+  29 Jul 2013; Nathan Phillip Brink <binki@gentoo.org> +discount-2.1.6.ebuild,
+  +files/discount-2.1.6-portage-multilib-CFLAGS.patch, +metadata.xml:
+  Add app-text/discount for bug #294000 by Egil Hanger and jauhien. Imported
+  from sunrise with fixes including CFLAGS, LDFLAGS, CPPFLAGS, sandbox, and
+  shared/dynamic library support. Prefixed some generically-named binaries with
+  'mkd'.
