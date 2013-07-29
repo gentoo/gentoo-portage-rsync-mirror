@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2_p1.ebuild,v 1.12 2013/04/08 05:41:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.5_p2.ebuild,v 1.1 2013/07/29 19:31:14 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -13,10 +13,7 @@
 
 EAPI="4"
 
-PYTHON_DEPEND="python? 2:2.7 3"
-SUPPORT_PYTHON_ABIS="1"
-
-inherit python eutils autotools toolchain-funcs flag-o-matic multilib db-use user
+inherit eutils autotools toolchain-funcs flag-o-matic multilib db-use user
 
 MY_PV="${PV/_p/-P}"
 MY_PV="${MY_PV/_rc/rc}"
@@ -27,13 +24,13 @@ SDB_LDAP_VER="1.1.0-fc14"
 # bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.9.2"
+GEOIP_PV_AGAINST="9.8.3-P1"
 GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
 GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
 
-RRL_PV="9.9.2"
+RRL_PV="${MY_PV}"
 
 # GeoIP: http://bind-geoip.googlecode.com/
 # DNS RRL: http://www.redbarn.org/dns/ratelimits/
@@ -48,13 +45,13 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	sdb-ldap? (
 		http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2
 	)
-	rrl? ( http://ss.vix.com/~vixie/rl-${RRL_PV}.patch )"
+	rrl? ( http://ss.vix.su/~vjs/rl-${RRL_PV}.patch )"
 
 LICENSE="ISC BSD BSD-2 HPND JNIC openssl"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc
-postgres python rpz rrl sdb-ldap selinux ssl static-libs threads urandom xml"
+postgres rpz rrl sdb-ldap selinux ssl static-libs threads urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
 REQUIRED_USE="postgres? ( dlz )
@@ -77,8 +74,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )
 	sdb-ldap? ( net-nds/openldap )
-	gost? ( >=dev-libs/openssl-1.0.0[-bindist] )
-	python? ( virtual/python-argparse )"
+	gost? ( >=dev-libs/openssl-1.0.0[-bindist] )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -91,10 +87,6 @@ pkg_setup() {
 	enewgroup named 40
 	enewuser named 40 -1 /etc/bind named
 	eend ${?}
-
-	if use python; then
-		python_pkg_setup
-	fi
 }
 
 src_prepare() {
@@ -134,18 +126,19 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
-			-e 's:RELEASEVER=:RELEASEVER=1:' \
+#		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+#			-e 's:RELEASEVER=:RELEASEVER=1:' \
+#			${GEOIP_PATCH_A} || die
+		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' \
 			${GEOIP_PATCH_A} || die
-#		sed -i -e 's:RELEASEVER=2:RELEASEVER=3:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
 	if use rrl; then
 		cp "${DISTDIR}"/rl-${RRL_PV}.patch "${S}" || die
-		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
-			-e 's:^ RELEASEVER=: RELEASEVER=1:' \
-			rl-${RRL_PV}.patch || die
+#		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+#			-e 's:^ RELEASEVER=: RELEASEVER=1:' \
+#			rl-${RRL_PV}.patch || die
 
 		# Response Rate Limiting (DNS RRL) - bug 434650
 		epatch rl-${RRL_PV}.patch
@@ -155,7 +148,8 @@ src_prepare() {
 	sed -i '/^SUBDIRS/s:tests::' bin/Makefile.in lib/Makefile.in || die
 
 	# bug #220361
-	rm {aclocal,libtool}.m4
+	rm aclocal.m4
+	rm -rf libtool.m4/
 	eautoreconf
 }
 
@@ -191,6 +185,7 @@ src_configure() {
 		$(use_with ldap dlz-ldap) \
 		$(use_with odbc dlz-odbc) \
 		$(use_with ssl openssl "${EPREFIX}"/usr) \
+		$(use_with ssl ecdsa) \
 		$(use_with idn) \
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
@@ -200,11 +195,7 @@ src_configure() {
 		$(use_enable caps linux-caps) \
 		$(use_with gost) \
 		$(use_enable filter-aaaa) \
-		$(use_with python) \
-		--without-readline \
 		${myconf}
-
-	# $(use_enable static-libs static) \
 
 	# bug #151839
 	echo '#undef SO_BSDCOMPAT' >> config.h
@@ -242,7 +233,7 @@ src_install() {
 	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
 
 	insinto /etc/bind
-	newins "${FILESDIR}"/named.conf-r5 named.conf
+	newins "${FILESDIR}"/named.conf-r6 named.conf
 
 	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
@@ -274,19 +265,9 @@ src_install() {
 		find "${D}" -type f -name '*.la' -delete || die
 	fi
 
-	if use python; then
-		install_python_tools() {
-			python_convert_shebangs $PYTHON_ABI bin/python/dnssec-checkds
-			exeinto /usr/sbin
-			newexe bin/python/dnssec-checkds dnssec-checkds-${PYTHON_ABI}
-		}
-		python_execute_function install_python_tools
+	# bug 450406
+	dosym named.cache /var/bind/root.cache
 
-		rm -f "${D}/usr/sbin/dnssec-checkds"
-		python_generate_wrapper_scripts "${D}usr/sbin/dnssec-checkds"
-	fi
-
-	dosym /var/bind/named.cache /var/bind/root.cache
 	dosym /var/bind/pri /etc/bind/pri
 	dosym /var/bind/sec /etc/bind/sec
 	dosym /var/bind/dyn /etc/bind/dyn

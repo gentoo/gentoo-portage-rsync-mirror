@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.5_p1.ebuild,v 1.1 2013/06/30 13:31:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.3_p2.ebuild,v 1.1 2013/07/29 19:31:14 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -13,7 +13,10 @@
 
 EAPI="4"
 
-inherit eutils autotools toolchain-funcs flag-o-matic multilib db-use user
+PYTHON_DEPEND="python? 2:2.7 3"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit python eutils autotools toolchain-funcs flag-o-matic multilib db-use user systemd
 
 MY_PV="${PV/_p/-P}"
 MY_PV="${MY_PV/_rc/rc}"
@@ -24,7 +27,7 @@ SDB_LDAP_VER="1.1.0-fc14"
 # bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.8.3-P1"
+GEOIP_PV_AGAINST="9.9.2"
 GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
@@ -51,7 +54,7 @@ LICENSE="ISC BSD BSD-2 HPND JNIC openssl"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc
-postgres rpz rrl sdb-ldap selinux ssl static-libs threads urandom xml"
+postgres python rpz rrl sdb-ldap selinux ssl static-libs threads urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
 REQUIRED_USE="postgres? ( dlz )
@@ -74,7 +77,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )
 	sdb-ldap? ( net-nds/openldap )
-	gost? ( >=dev-libs/openssl-1.0.0[-bindist] )"
+	gost? ( >=dev-libs/openssl-1.0.0[-bindist] )
+	python? ( virtual/python-argparse )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -87,6 +91,10 @@ pkg_setup() {
 	enewgroup named 40
 	enewuser named 40 -1 /etc/bind named
 	eend ${?}
+
+	if use python; then
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -126,11 +134,10 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-#		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
-#			-e 's:RELEASEVER=:RELEASEVER=1:' \
-#			${GEOIP_PATCH_A} || die
-#		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' \
-#			${GEOIP_PATCH_A} || die
+		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+			-e 's:RELEASEVER=:RELEASEVER=2:' \
+			${GEOIP_PATCH_A} || die
+#		sed -i -e 's:RELEASEVER=2:RELEASEVER=3:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
@@ -189,13 +196,18 @@ src_configure() {
 		$(use_with idn) \
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
+		$(use_enable xml newstats) \
 		$(use_with gssapi) \
 		$(use_enable rpz rpz-nsip) \
 		$(use_enable rpz rpz-nsdname) \
 		$(use_enable caps linux-caps) \
 		$(use_with gost) \
 		$(use_enable filter-aaaa) \
+		$(use_with python) \
+		--without-readline \
 		${myconf}
+
+	# $(use_enable static-libs static) \
 
 	# bug #151839
 	echo '#undef SO_BSDCOMPAT' >> config.h
@@ -265,6 +277,18 @@ src_install() {
 		find "${D}" -type f -name '*.la' -delete || die
 	fi
 
+	if use python; then
+		install_python_tools() {
+			python_convert_shebangs $PYTHON_ABI bin/python/dnssec-checkds
+			exeinto /usr/sbin
+			newexe bin/python/dnssec-checkds dnssec-checkds-${PYTHON_ABI}
+		}
+		python_execute_function install_python_tools
+
+		rm -f "${D}/usr/sbin/dnssec-checkds"
+		python_generate_wrapper_scripts "${D}usr/sbin/dnssec-checkds"
+	fi
+
 	# bug 450406
 	dosym named.cache /var/bind/root.cache
 
@@ -280,6 +304,11 @@ src_install() {
 	fperms 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
 	fperms 0750 /etc/bind /var/bind/pri
 	fperms 0770 /var/{run,log}/named /var/bind/{,sec,dyn}
+
+	systemd_dounit "${FILESDIR}/named.service"
+	systemd_dotmpfilesd "${FILESDIR}/named.conf"
+	exeinto /usr/libexec
+	doexe "${FILESDIR}/generate-rndc-key.sh"
 }
 
 pkg_postinst() {
