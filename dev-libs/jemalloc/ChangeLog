@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.32 2013/04/14 21:24:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.33 2013/07/29 12:28:53 grobian Exp $
+
+  29 Jul 2013; Fabian Groffen <grobian@gentoo.org> jemalloc-3.3.1.ebuild:
+  Fix install on Darwin by Hugh Nowlan, bug #437362
 
   14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> jemalloc-3.3.1.ebuild:
   Stable for ppc64, wrt bug #465676
