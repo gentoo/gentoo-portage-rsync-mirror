@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/twolame-0.3.13-r1.ebuild,v 1.1 2013/05/07 12:56:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/twolame-0.3.13-r1.ebuild,v 1.2 2013/07/29 22:30:54 aballier Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fb
 IUSE="static-libs"
 
 RDEPEND=">=media-libs/libsndfile-1[${MULTILIB_USEDEP}]
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20121202 )"
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r6
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

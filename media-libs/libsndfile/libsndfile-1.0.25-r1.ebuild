@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.1 2013/05/05 08:04:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.2 2013/07/29 22:05:21 aballier Exp $
 
 EAPI=5
 
@@ -28,14 +28,10 @@ RDEPEND="
 	!minimal? ( >=media-libs/flac-1.2.1[${MULTILIB_USEDEP}]
 		>=media-libs/libogg-1.1.3[${MULTILIB_USEDEP}]
 		>=media-libs/libvorbis-1.2.3[${MULTILIB_USEDEP}] )
-	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
-	sqlite? (
-		>=dev-db/sqlite-3.2
-		amd64? ( abi_x86_32? (
-			app-emulation/emul-linux-x86-baselibs[development]
-		) )
-	)
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224 )"
+	alsa? ( media-libs/alsa-lib )
+	sqlite? ( >=dev-db/sqlite-3.2 )
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r6
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( ${PYTHON_DEPS} )"
@@ -58,19 +54,39 @@ src_prepare() {
 }
 
 src_configure() {
-	local myeconfargs=(
-		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html
+	my_configure() {
+		local myeconfargs=(
+			--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html
+			$(use_enable static-libs static)
+			$(use_enable !minimal external-libs)
+			--disable-octave
+			--disable-gcc-werror
+			--disable-gcc-pipe
+			)
 
-		$(use_enable sqlite)
-		$(use_enable static-libs static)
-		$(use_enable alsa)
-		$(use_enable !minimal external-libs)
-		--disable-octave
-		--disable-gcc-werror
-		--disable-gcc-pipe
-	)
+		if [ "${ABI}" = "${DEFAULT_ABI}" ] ; then
+			myeconfargs+=(
+				$(use_enable alsa)
+				$(use_enable sqlite)
+			)
+		else
+			myeconfargs+=(
+				--disable-alsa
+				--disable-sqlite
+			)
+		fi
 
-	autotools-multilib_src_configure
+		autotools-utils_src_configure
+
+		if [ "${ABI}" != "${DEFAULT_ABI}" ] ; then
+			# Do not build useless stuff.
+			for i in man doc examples regtest programs ; do
+				sed -i -e "s/ ${i}//" "${BUILD_DIR}/Makefile" || die
+			done
+		fi
+	}
+
+	multilib_parallel_foreach_abi my_configure
 }
 
 src_install() {

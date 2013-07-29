@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.150 2013/07/28 19:46:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.151 2013/07/29 22:11:19 mgorny Exp $
+
+*systemd-9999-r1 (29 Jul 2013)
+
+  29 Jul 2013; Michał Górny <mgorny@gentoo.org> +systemd-9999-r1.ebuild,
+  -systemd-9999.ebuild:
+  Move the Gentoo-specific files from the live ebuild to gentoo-systemd-
+  integration. Revbump to ensure smooth migration.
 
   28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204.ebuild:
   Stable for arm, wrt bug #477910

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.8-r1.ebuild,v 1.1 2013/05/07 12:49:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.8-r1.ebuild,v 1.2 2013/07/29 22:19:12 aballier Exp $
 
 EAPI=5
 
@@ -17,8 +17,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="sndfile static-libs"
 
-RDEPEND="sndfile? ( >=media-libs/libsndfile-1.0.2[${MULTILIB_USEDEP}] )
-	abi_x86_32? ( !<=app-emultaion/emul-linux-x86-soundlibs-20130224 )"
+RDEPEND="sndfile? ( >=media-libs/libsndfile-1.0.2 )
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r6
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -35,11 +36,24 @@ src_prepare() {
 }
 
 src_configure() {
-	local myeconfargs=(
-		--disable-fftw
-		$(use_enable sndfile)
-	)
-	autotools-multilib_src_configure
+	my_configure() {
+		local myeconfargs=(
+			--disable-fftw
+		)
+
+		if [ "${ABI}" = "${DEFAULT_ABI}" ] ; then
+			myeconfargs+=( $(use_enable sndfile) )
+		else
+			myeconfargs+=( --disable-sndfile )
+		fi
+
+		autotools-utils_src_configure
+
+		if [ "${ABI}" != "${DEFAULT_ABI}" ] ; then
+			sed -i -e "s/ doc examples//" "${BUILD_DIR}/Makefile" || die
+		fi
+	}
+	multilib_parallel_foreach_abi my_configure
 }
 
 src_install() {

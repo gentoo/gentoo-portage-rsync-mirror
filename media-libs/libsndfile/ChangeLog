@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.135 2013/05/05 08:04:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.136 2013/07/29 22:05:21 aballier Exp $
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  libsndfile-1.0.25-r1.ebuild:
+  Improve multilib support: alsa and sqlite are actually only needed for
+  installed binaries, hence useless for non native ABIs. Do not build binaries
+  for non native ABIs and drop now uselss MULTILIB_USEDEP on their deps. Slat
+  it for emul-linux-x86-soundlibs-20130224-r7.
 
 *libsndfile-1.0.25-r1 (05 May 2013)
 

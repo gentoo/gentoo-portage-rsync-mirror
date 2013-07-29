@@ -1,6 +1,11 @@
 # ChangeLog for games-action/cs2d
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/ChangeLog,v 1.5 2012/09/07 15:14:46 maksbotan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/ChangeLog,v 1.6 2013/07/29 22:07:03 hasufell Exp $
+
+*cs2d-0122 (29 Jul 2013)
+
+  29 Jul 2013; Julian Ospald <hasufell@gentoo.org> +cs2d-0122.ebuild:
+  version bump wrt #475426
 
 *cs2d-0121 (07 Sep 2012)
 
