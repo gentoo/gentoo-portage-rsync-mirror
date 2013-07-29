@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.900 2013/07/27 23:47:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.902 2013/07/29 09:53:36 jlec Exp $
+
+  29 Jul 2013; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
+  Fortran-2.eclass: enhance support for binary packages, #477070
+
+  29 Jul 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  Intel-sdp.eclass: Allow single package downloads, custom suffix, full
+  specified rpm target location
 
   27 Jul 2013; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Rewrite sed expression in qt_nolibx11() to work on both 4.8.4 and 4.8.5.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.18 2013/07/18 07:03:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.19 2013/07/29 09:53:36 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -168,7 +168,7 @@ _fortran_die_msg() {
 # @INTERNAL
 # @DESCRIPTION:
 # Internal testfunction for working fortran compiler.
-# It is called in fortran-2_pkg_setup
+# It is called in fortran-2_pkg_setup.
 _fortran_test_function() {
 	local dialect
 
@@ -203,11 +203,11 @@ _fortran_test_function() {
 	fi
 }
 
-# @FUNCTION: fortran-2_pkg_setup
+# @FUNCTION: _fortran-2_pkg_setup
+# @INTERNAL
 # @DESCRIPTION:
-# Setup functionallity,
-# checks for a valid fortran compiler and optionally for its openmp support.
-fortran-2_pkg_setup() {
+# _The_ fortran-2_pkg_setup() code
+_fortran-2_pkg_setup() {
 	for _f_use in ${FORTRAN_NEEDED}; do
    	case ${_f_use} in
       	always)
@@ -229,7 +229,29 @@ fortran-2_pkg_setup() {
 	done
 }
 
+
+# @FUNCTION: fortran-2_pkg_setup
+# @DESCRIPTION:
+# Setup functionallity,
+# checks for a valid fortran compiler and optionally for its openmp support.
+fortran-2_pkg_setup() {
+	case ${EAPI:-0} in
+		0|1|2|3)
+			eqawarn "Support for EAPI < 4 will be removed from the"
+			eqawarn "fortran-2.eclass in until Sep 31. 2013."
+			eqawarn "Please migrate your package to a higher EAPI"
+			eqawarn "or file a bug at https://bugs.gentoo.org"
+			_fortran-2_pkg_setup ;;
+		4|5)
+			if [[ ${MERGE_TYPE} != binary ]]; then
+				_fortran-2_pkg_setup
+			fi
+			;;
+	esac
+}
+
 case ${EAPI:-0} in
 	0|1|2|3|4|5) EXPORT_FUNCTIONS pkg_setup ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
+

@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.150 2013/07/22 06:16:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.151 2013/07/29 09:59:34 kumba Exp $
+
+*mips-sources-3.10.4 (29 Jul 2013)
+
+  29 Jul 2013; Joshua Kinard <kumba@gentoo.org> -mips-sources-3.10.1.ebuild,
+  +mips-sources-3.10.4.ebuild:
+  Update to 3.10.4.
 
 *mips-sources-3.10.1 (22 Jul 2013)
 *mips-sources-3.9.11 (22 Jul 2013)
