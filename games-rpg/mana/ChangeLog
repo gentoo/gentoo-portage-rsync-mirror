@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/mana
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.14 2012/08/05 11:55:24 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.15 2013/07/29 21:25:23 hasufell Exp $
+
+  29 Jul 2013; Julian Ospald <hasufell@gentoo.org> mana-0.6.1.ebuild,
+  +files/mana-0.6.1-Fix-missing-virtual-destructors-and-guichan-use.patch,
+  +files/mana-0.6.1-Import-cstdint-for-int64_t.patch,
+  +files/mana-0.6.1-Trick-gcc-into-importing-C99-stdint.h-when-C-11-is-n.patch:
+  fix bug 428316
 
   05 Aug 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   add myself as maintainer

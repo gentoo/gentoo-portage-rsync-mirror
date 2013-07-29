@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.1.ebuild,v 1.3 2012/07/13 13:58:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.1.ebuild,v 1.4 2013/07/29 21:25:23 hasufell Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils cmake-utils games
 
 DESCRIPTION="A fully free and open source MMORPG game client"
@@ -36,7 +36,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
-PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-gentoo.patch
+	"${FILESDIR}"/${P}-Fix-missing-virtual-destructors-and-guichan-use.patch
+	"${FILESDIR}"/${P}-Trick-gcc-into-importing-C99-stdint.h-when-C-11-is-n.patch
+	"${FILESDIR}"/${P}-Import-cstdint-for-int64_t.patch
+	)
 
 src_prepare() {
 	base_src_prepare
@@ -59,6 +64,7 @@ src_configure() {
 		-DPKG_DATADIR="${GAMES_DATADIR}/${PN}"
 		-DPKG_BINDIR="${GAMES_BINDIR}"
 		-DWITH_BUNDLEDHEADERS=OFF
+		-DENABLE_CPP0X=OFF
 	)
 	cmake-utils_src_configure
 }
