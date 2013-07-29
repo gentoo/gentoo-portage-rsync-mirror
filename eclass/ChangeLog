@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.902 2013/07/29 09:53:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.903 2013/07/29 12:31:35 slyfox Exp $
+
+  29 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
+  ask user to run haskell-updater for old packages (like in bug
+  http://bugs.gentoo.org/474840)
 
   29 Jul 2013; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
   Fortran-2.eclass: enhance support for binary packages, #477070

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.40 2013/05/11 12:46:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.41 2013/07/29 12:31:35 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -242,22 +242,33 @@ cabal-hscolour-haddock() {
 	./setup "$@" --hyperlink-source || die "setup haddock --hyperlink-source failed"
 }
 
+cabal-die-if-nonempty() {
+	local breakage_type=$1
+	shift
+
+	[[ "${#@}" == 0 ]] && return 0
+	eerror "Detected ${breakage_type} packages: ${@}"
+	die "//==-- Please, run 'haskell-updater' to fix ${breakage_type} packages --==//"
+}
+
 cabal-show-brokens() {
 	# pretty-printer
 	$(ghc-getghcpkg) check 2>&1 \
 		| egrep -v '^Warning: haddock-(html|interfaces): ' \
 		| egrep -v '^Warning: include-dirs: '
 
-	set -- $($(ghc-getghcpkg) check --simple-output)
-	[[ "${#@}" == 0 ]] && return 0
+	cabal-die-if-nonempty 'broken' \
+		$($(ghc-getghcpkg) check --simple-output)
+}
 
-	eerror "Detected broken packages: ${@}"
-
-	die "//==-- Please, run 'haskell-updater' to fix broken packages --==//"
+cabal-show-old() {
+	cabal-die-if-nonempty 'outdated' \
+		$("${EPREFIX}"/usr/sbin/haskell-updater --quiet --upgrade --list-only)
 }
 
 cabal-show-brokens-and-die() {
 	cabal-show-brokens
+	cabal-show-old
 
 	die "$@"
 }
