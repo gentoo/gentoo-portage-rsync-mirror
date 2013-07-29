@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.0.1_pre20130524.ebuild,v 1.1 2013/06/19 15:22:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.0.1_pre20130524.ebuild,v 1.2 2013/07/29 15:10:29 chithanh Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-EGIT_REPO_URI="git://people.freedesktop.org/~tstellar/${PN}"
+EGIT_REPO_URI="http://llvm.org/git/${PN}.git"
 
 if [[ ${PV} = 9999* ]]; then
 	GIT_ECLASS="git-2"
@@ -15,7 +15,7 @@ fi
 inherit base python-any-r1 $GIT_ECLASS
 
 DESCRIPTION="OpenCL C library"
-HOMEPAGE="http://libclc.llvm.org/ http://cgit.freedesktop.org/~tstellar/libclc/"
+HOMEPAGE="http://libclc.llvm.org/"
 
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"

@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.73 2013/07/27 23:53:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.74 2013/07/29 15:04:55 hasufell Exp $
+
+*paraview-4.0.1-r1 (29 Jul 2013)
+
+  29 Jul 2013; Julian Ospald <hasufell@gentoo.org> +paraview-4.0.1-r1.ebuild,
+  +files/paraview-4.0.1-Protobuf.patch:
+  use system protobuf, potentially fixing bug 471130
 
   28 Jul 2013; Julian Ospald <hasufell@gentoo.org> paraview-4.0.1.ebuild:
   fix build with stable dev-db/mysql wrt #478250
