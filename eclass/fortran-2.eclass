@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.19 2013/07/29 09:53:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.20 2013/07/29 20:13:57 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -44,8 +44,8 @@
 # @ECLASS-VARIABLE: FORTRAN_NEEDED
 # @DESCRIPTION:
 # If your package has an optional fortran support, set this variable
-# to the space seperated list of USE triggering the fortran
-# dependence.
+# to the space separated list of USE triggering the fortran
+# dependency.
 #
 # e.g. FORTRAN_NEEDED=lapack would result in
 #
@@ -110,7 +110,7 @@ _fortran_compile_test() {
 	local ret
 
 	[[ $# -lt 1 ]] && \
-		die "_fortran_compile_test() needs at least one arguments"
+		die "_fortran_compile_test() needs at least one argument"
 
 	[[ -f ${fcode} ]] || _fortran_write_testsuite
 
@@ -123,7 +123,7 @@ _fortran_compile_test() {
 }
 
 # @FUNCTION: _fortran-has-openmp
-# @RETURN: compilers return value
+# @RETURN: return code of the compiler
 # @INTERNAL
 # @DESCRIPTION:
 # See if the fortran supports OpenMP.
@@ -158,8 +158,8 @@ _fortran_die_msg() {
 	echo
 	eerror "Please install currently selected gcc version with USE=fortran."
 	eerror "If you intend to use a different compiler then gfortran, please"
-	eerror "set FC variable accordingly and take care that the neccessary"
-	eerror "fortran dialects are support."
+	eerror "set FC variable accordingly and take care that the necessary"
+	eerror "fortran dialects are supported."
 	echo
 	die "Currently no working fortran compiler is available"
 }
@@ -167,7 +167,7 @@ _fortran_die_msg() {
 # @FUNCTION: _fortran_test_function
 # @INTERNAL
 # @DESCRIPTION:
-# Internal testfunction for working fortran compiler.
+# Internal test function for working fortran compiler.
 # It is called in fortran-2_pkg_setup.
 _fortran_test_function() {
 	local dialect
@@ -197,8 +197,7 @@ _fortran_test_function() {
 		if _fortran-has-openmp; then
 			einfo "${FC} has OPENMP support"
 		else
-			die "Please install current gcc with USE=openmp or " \
-			"set the FC variable to a compiler that supports OpenMP"
+			die "Please install current gcc with USE=openmp or set the FC variable to a compiler that supports OpenMP"
 		fi
 	fi
 }
@@ -232,13 +231,13 @@ _fortran-2_pkg_setup() {
 
 # @FUNCTION: fortran-2_pkg_setup
 # @DESCRIPTION:
-# Setup functionallity,
+# Setup functionality,
 # checks for a valid fortran compiler and optionally for its openmp support.
 fortran-2_pkg_setup() {
 	case ${EAPI:-0} in
 		0|1|2|3)
 			eqawarn "Support for EAPI < 4 will be removed from the"
-			eqawarn "fortran-2.eclass in until Sep 31. 2013."
+			eqawarn "fortran-2.eclass in until 2013-09-30."
 			eqawarn "Please migrate your package to a higher EAPI"
 			eqawarn "or file a bug at https://bugs.gentoo.org"
 			_fortran-2_pkg_setup ;;

@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r2.ebuild,v 1.4 2013/07/28 12:43:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r2.ebuild,v 1.5 2013/07/29 20:24:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit autotools eutils gnome2 multilib pax-utils python-r1
+inherit autotools eutils gnome2 multilib pax-utils python-r1 systemd
 
 DESCRIPTION="Provides core UI functions for the GNOME 3 desktop"
 HOMEPAGE="http://live.gnome.org/GnomeShell"

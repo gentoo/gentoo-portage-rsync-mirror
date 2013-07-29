@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst prepare unpack
+DEFINED_PHASES=compile install postinst prepare pretend unpack
 DESCRIPTION=Free Pascal Compiler
 EAPI=5
 HOMEPAGE=http://www.freepascal.org/
@@ -9,4 +9,5 @@ RDEPEND=ide? ( !dev-lang/fpc-ide )
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://sourceforge/freepascal/fpcbuild-2.6.2.tar.gz amd64? ( mirror://sourceforge/freepascal/fpc-2.6.2.x86_64-linux.tar ) arm? ( mirror://sourceforge/freepascal/fpc-2.6.2.arm-linux.tar ) ppc? ( mirror://sourceforge/freepascal/fpc-2.6.2.powerpc-linux.tar ) ppc64? ( mirror://sourceforge/freepascal/fpc-2.6.2.powerpc64-linux.tar ) sparc? ( mirror://sourceforge/freepascal/fpc-2.2.4.sparc-linux.tar ) x86? ( mirror://sourceforge/freepascal/fpc-2.6.2.i386-linux.tar ) doc? ( mirror://sourceforge/freepascal/Documentation/2.6.2/doc-html.tar.gz -> fpc-2.6.2-doc-html.tar.gz http://dev.gentoo.org/~radhermit/distfiles/fpc-2.6.2-fpctoc.htx.bz2 )
-_md5_=ed9ea0c5ae6ffff85764b25cb77e1fc3
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=6ac68a895dfbf11b490ebf27044e6c31

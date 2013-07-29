@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.60 2013/06/26 22:47:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.61 2013/07/29 20:11:12 hasufell Exp $
+
+  29 Jul 2013; Julian Ospald <hasufell@gentoo.org> fpc-2.6.2.ebuild:
+  die hard on gnu gold linker wrt #475210
 
 *fpc-2.6.0-r1 (26 Jun 2013)
 

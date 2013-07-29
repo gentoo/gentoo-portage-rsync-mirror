@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.1 2013/06/26 22:20:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.2 2013/07/29 20:11:12 hasufell Exp $
 
 EAPI=5
+
+inherit toolchain-funcs
 
 HOMEPAGE="http://www.freepascal.org/"
 DESCRIPTION="Free Pascal Compiler"
@@ -26,6 +28,17 @@ RDEPEND="ide? ( !dev-lang/fpc-ide )"
 RESTRICT="strip" #269221
 
 S=${WORKDIR}/fpcbuild-${PV}/fpcsrc
+
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		# Bug 475210
+		if $(tc-getLD) --version | grep -q "GNU gold"; then
+			eerror "fpc does not function correctly when built with the gold linker."
+			eerror "Please select the bfd linker with binutils-config."
+			die "GNU gold detected"
+		fi
+	fi
+}
 
 src_unpack() {
 	case ${ARCH} in

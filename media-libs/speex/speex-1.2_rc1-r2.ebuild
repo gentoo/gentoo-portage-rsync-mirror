@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1-r2.ebuild,v 1.1 2013/07/28 22:29:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1-r2.ebuild,v 1.2 2013/07/29 20:13:47 aballier Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib-minimal
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="ogg sse static-libs"
 
-RDEPEND="ogg? ( media-libs/libogg:=[${MULTILIB_USEDEP}] )
+RDEPEND="ogg? ( media-libs/libogg:= )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r3
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
@@ -44,7 +44,8 @@ multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
 		$(use_enable static-libs static) \
 		$(use_enable sse) \
-		$(use_enable ogg)
+		$( [ "${ABI}" = "${DEFAULT_ABI}" ] && echo $(use_enable ogg))
+	# ogg is only for speexdec/speexenc binaries, useless for non native ABIs
 }
 
 multilib_src_install() {

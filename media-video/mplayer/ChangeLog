@@ -1,6 +1,16 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.901 2013/07/29 20:00:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.904 2013/07/29 20:17:17 aballier Exp $
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  do not default enable rtc, by Nikoli, bug #476316
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  remove comment about win32codecs
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  Sort alphabetically REQUIRED_USE entries and make enca require iconv, by
+  Nikoli, bug #476322.
 
   29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   EAPI5, add slot dep on ffmpeg, x264 and libav. Fix ffmpeg dep.
