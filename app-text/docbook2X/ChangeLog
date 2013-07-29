@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.45 2013/07/21 10:01:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.46 2013/07/29 10:14:37 pinkbyte Exp $
+
+  29 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> docbook2X-0.8.8-r2.ebuild:
+  Automake 1.12 can be used for building instead of old 1.9
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
