@@ -1,6 +1,13 @@
 # ChangeLog for www-misc/profile-sync-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.13 2013/07/21 00:45:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.14 2013/07/29 20:55:52 hasufell Exp $
+
+*profile-sync-daemon-5.38.2 (29 Jul 2013)
+
+  29 Jul 2013; Julian Ospald <hasufell@gentoo.org>
+  -profile-sync-daemon-5.36.4_p20130721.ebuild,
+  +profile-sync-daemon-5.38.2.ebuild:
+  version bump
 
 *profile-sync-daemon-5.36.4_p20130721 (21 Jul 2013)
 

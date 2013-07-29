@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.149 2013/07/29 20:17:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.152 2013/07/29 20:55:00 aballier Exp $
 
 EAPI=5
 
@@ -10,15 +10,15 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua bidi bindist bl bluray
+IUSE="3dnow 3dnowext a52 aalib +alsa altivec aqua bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection debug dga
-directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode faac +faad fbcon
+directfb doc dts dv dvb +dvd +dvdnav dxr3 +enca +encode faac faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
-+libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
-+network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr
-radio +rar rtc rtmp samba +shm sdl +speex sse sse2 ssse3
-tga +theora tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
-+vorbis +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
++libass libcaca libmpeg2 lirc live lzo mad md5sum +mmx mmxext mng mp3 nas
++network nut openal opengl +osdmenu oss png pnm pulseaudio pvr
+radio rar rtc rtmp samba +shm sdl speex sse sse2 ssse3
+tga theora tremor +truetype toolame twolame +unicode v4l vdpau vidix
+vorbis +X x264 xanim xinerama +xscreensaver +xv xvid xvmc zoran"
 
 VIDEO_CARDS="s3virge mga tdfx"
 for x in ${VIDEO_CARDS}; do
@@ -32,7 +32,7 @@ FONT_URI="
 "
 if [[ ${PV} == *9999* ]]; then
 	RELEASE_URI=""
-elif [ "${PV%_rc*}" = "${PV}" ]; then
+elif [ "${PV%_rc*}" = "${PV}" -a "${PV%_pre*}" = "${PV}" ]; then
 	MY_P="MPlayer-${PV}"
 	S="${WORKDIR}/${MY_P}"
 	RELEASE_URI="mirror://mplayer/releases/${MY_P}.tar.xz"
@@ -206,6 +206,12 @@ pkg_setup() {
 		ewarn "You won't need this turned on if you are only building"
 		ewarn "mplayer for this system. Also, if your compile fails, try"
 		ewarn "disabling this use flag."
+	fi
+
+	if has_version 'media-video/libav' ; then
+		ewarn "Please note that upstream uses media-video/ffmpeg."
+		ewarn "media-video/libav should be fine in theroy but if you"
+		ewarn "experience any problem, try to move to media-video/ffmpeg."
 	fi
 }
 
