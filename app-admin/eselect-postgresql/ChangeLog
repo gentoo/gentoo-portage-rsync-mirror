@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-postgresql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.30 2013/06/16 20:58:36 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.31 2013/07/29 11:32:19 titanofold Exp $
+
+*eselect-postgresql-1.2.0 (29 Jul 2013)
+
+  29 Jul 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +eselect-postgresql-1.2.0.ebuild:
+  Add x32 support. Now only reports slots with pg_config to avoid false
+  positives.
 
 *eselect-postgresql-1.1.2 (16 Jun 2013)
 
