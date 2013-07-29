@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.12 2012/08/19 19:07:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.3.ebuild,v 1.1 2013/07/29 22:00:38 ultrabug Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -9,29 +9,34 @@ inherit autotools-utils eutils systemd
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more"
 HOMEPAGE="http://www.rsyslog.com/"
-SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
-	zeromq?	( https://github.com/aggregateknowledge/rsyslog-zeromq/tarball/44b551abc29dd5b541884bd51b45b413855a93d8 -> ${PN}-zeromq.tar.gz )"
+SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-3 LGPL-3"
-KEYWORDS="amd64 ~arm hppa x86"
+LICENSE="GPL-3 LGPL-3 Apache-2.0"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 SLOT="0"
-IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp static-libs zeromq zlib"
+IUSE="dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs zeromq zlib"
 
-RDEPEND="dbi? ( dev-db/libdbi )
+RDEPEND="
+	dev-libs/json-c
+	dev-libs/libee
+	>=dev-libs/libestr-0.1.5
+	dev-libs/liblognorm
+	net-misc/curl
+	dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
-	gnutls? ( net-libs/gnutls dev-libs/libgcrypt )
 	kerberos? ( virtual/krb5 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	oracle? ( dev-db/oracle-instantclient-basic )
-	relp? ( >=dev-libs/librelp-0.1.3 )
+	relp? ( >=dev-libs/librelp-1.0.1 )
 	snmp? ( net-analyzer/net-snmp )
-	zeromq? ( net-libs/zeromq )
+	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
+	zeromq? ( net-libs/czmq )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-BRANCH="5-stable"
+BRANCH="7-stable"
 
 # need access to certain device nodes
 RESTRICT="test"
@@ -42,20 +47,10 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
 
-src_prepare() {
-	# Maintainer notes:
-	# ZeroMQ support, for now it is done by hand until upstream process bug.
-	# Bugzilla : http://bugzilla.adiscon.com/show_bug.cgi?id=277
-	if use zeromq; then
-		local ZEROPATH=${WORKDIR}/aggregateknowledge-rsyslog-zeromq-44b551a
-		epatch ${ZEROPATH}/rsyslog-zeromq.patch
-		cp -r ${ZEROPATH}/{i,o}mzeromq "${S}/plugins"
-	fi
-
-	# Don't force '-g' CFLAG
-	sed -i 's/CFLAGS="\(.*\) -g"/CFLAGS="\1"/g' configure.ac || die
-	autotools-utils_src_prepare
-}
+PATCHES=(
+	"${FILESDIR}"/${BRANCH}/${PN}-7.4.3-json-c-pkgconfig.patch
+	"${FILESDIR}"/${BRANCH}/${PN}-7.4.3-fix-runtime.patch
+)
 
 src_configure() {
 	# Maintainer notes:
@@ -64,51 +59,51 @@ src_configure() {
 	# * About the java GUI:
 	#   The maintainer says there is no real installation support
 	#   for the java GUI, so we disable it for now.
+	# * mongodb : doesnt work with mongo-c-driver ?
 	local myeconfargs=(
+		--enable-cached-man-pages
 		--disable-gui
 		--disable-rfc3195
-		--enable-largefile
-		--enable-unlimited-select
 		--enable-imdiag
 		--enable-imfile
 		--enable-impstats
-		--enable-imtemplate
 		--enable-imptcp
+		--enable-largefile
 		--enable-mail
+		--enable-mmnormalize
+		--enable-mmjsonparse
+		--enable-mmaudit
+		--enable-mmanon
 		--enable-omprog
 		--enable-omstdout
-		--enable-omtemplate
-		--enable-omdbalerting
 		--enable-omuxsock
 		--enable-pmlastmsg
 		--enable-pmrfc3164sd
 		--enable-pmcisconames
 		--enable-pmaixforwardedfrom
 		--enable-pmsnare
-		$(use_enable extras omudpspoof)
-		$(use_enable zlib)
-		$(use_enable mysql)
+		--enable-sm_cust_bindcdr
+		--enable-unlimited-select
+		--enable-uuid
 		$(use_enable dbi libdbi)
-		$(use_enable postgres pgsql)
-		$(use_enable oracle oracle)
-		$(use_enable gnutls)
-		$(use_enable kerberos gssapi-krb5)
-		$(use_enable relp)
-		$(use_enable snmp)
-		$(use_enable snmp mmsnmptrapd)
 		$(use_enable debug)
 		$(use_enable debug rtinst)
 		$(use_enable debug diagtools)
 		$(use_enable debug memcheck)
 		$(use_enable debug valgrind)
+		$(use_enable extras omudpspoof)
+		$(use_enable kerberos gssapi-krb5)
+		$(use_enable mysql)
+		$(use_enable oracle)
+		$(use_enable postgres pgsql)
+		$(use_enable relp)
+		$(use_enable snmp)
+		$(use_enable snmp mmsnmptrapd)
+		$(use_enable ssl gnutls)
+		$(use_enable zlib)
+		$(use_enable zeromq imzmq3)
+		$(use_enable zeromq omzmq3)
 	)
-
-	use zeromq && myeconfargs=(
-		${myeconfargs[@]-}
-		$(use_enable zeromq imzeromq)
-		$(use_enable zeromq omzeromq)
-	)
-
 	systemd_to_myeconfargs
 	autotools-utils_src_configure
 }
@@ -148,7 +143,7 @@ pkg_postinst() {
 		elog "  /usr/share/doc/${PF}/scripts"
 	fi
 
-	if use gnutls; then
+	if use ssl; then
 		echo
 		elog "To create a default CA and certificates for your server and clients, run:"
 		elog "  emerge --config =${PF}"
@@ -159,9 +154,9 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	if ! use gnutls ; then
+	if ! use ssl ; then
 		einfo "There is nothing to configure for rsyslog unless you"
-		einfo "used USE=gnutls to build it."
+		einfo "used USE=ssl to build it."
 		return 0
 	fi
 
@@ -179,12 +174,12 @@ pkg_config() {
 			--outfile "${CERTDIR}/${PN}_ca.privkey.pem" &>/dev/null
 		chmod 400 "${CERTDIR}/${PN}_ca.privkey.pem"
 
-		cat > "${T}/${PF}.$$" <<_EOF
+		cat > "${T}/${PF}.$$" <<- _EOF
 		cn = Portage automated CA
 		ca
 		cert_signing_key
 		expiration_days = 3650
-_EOF
+		_EOF
 
 		certtool --generate-self-signed \
 			--load-privkey "${CERTDIR}/${PN}_ca.privkey.pem" \
@@ -202,12 +197,12 @@ _EOF
 			--outfile "${CERTDIR}/${PN}_${CN}.key.pem" &>/dev/null
 		chmod 400 "${CERTDIR}/${PN}_${CN}.key.pem"
 
-		cat > "${T}/${PF}.$$" <<_EOF
+		cat > "${T}/${PF}.$$" <<- _EOF
 		cn = ${CN}
 		tls_www_server
 		dns_name = ${CN}
 		expiration_days = 3650
-_EOF
+		_EOF
 
 		certtool --generate-certificate \
 			--outfile "${CERTDIR}/${PN}_${CN}.cert.pem" \
@@ -231,12 +226,12 @@ _EOF
 		--outfile "${CERTDIR}/${PN}_${CN}.key.pem" &>/dev/null
 	chmod 400 "${CERTDIR}/${PN}_${CN}.key.pem"
 
-	cat > "${T}/${PF}.$$" <<_EOF
+	cat > "${T}/${PF}.$$" <<- _EOF
 	cn = ${CN}
 	tls_www_client
 	dns_name = ${CN}
 	expiration_days = 3650
-_EOF
+	_EOF
 
 	certtool --generate-certificate \
 		--outfile "${CERTDIR}/${PN}_${CN}.cert.pem" \

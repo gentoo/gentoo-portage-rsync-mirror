@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20111019.ebuild,v 1.11 2013/07/25 14:05:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20111019.ebuild,v 1.12 2013/07/29 21:40:27 hasufell Exp $
 
 EAPI=2
 inherit autotools fdo-mime eutils
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-desktopfile.patch
 	eautopoint
 	eautoreconf
 }

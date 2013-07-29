@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.95 2013/06/27 18:09:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.96 2013/07/29 22:00:38 ultrabug Exp $
+
+*rsyslog-7.4.3 (29 Jul 2013)
+
+  29 Jul 2013; Ultrabug <ultrabug@gentoo.org> -rsyslog-5.8.5.ebuild,
+  -rsyslog-6.2.2.ebuild, -rsyslog-7.2.2-r1.ebuild, -rsyslog-7.2.5.ebuild,
+  +rsyslog-7.4.3.ebuild, +files/7-stable/rsyslog-7.4.3-fix-runtime.patch,
+  +files/7-stable/rsyslog-7.4.3-json-c-pkgconfig.patch:
+  Version bump fix #472484, drop old fix #454564
 
   27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> rsyslog-7.2.7.ebuild:
   Stable for x86, wrt bug #472564
