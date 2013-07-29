@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/tumbler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.53 2013/05/05 21:14:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.54 2013/07/29 16:01:59 ssuominen Exp $
+
+  29 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> tumbler-0.1.29.ebuild:
+  Pull in the gst-plugins-meta package with USE="gstreamer" by Calchan
 
   05 May 2013; Samuli Suominen <ssuominen@gentoo.org> -tumbler-0.1.28.ebuild:
   old

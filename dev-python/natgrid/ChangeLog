@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/natgrid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/natgrid/ChangeLog,v 1.8 2013/07/29 15:50:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/natgrid/ChangeLog,v 1.9 2013/07/29 16:16:07 idella4 Exp $
+
+*natgrid-0.2.1-r2 (29 Jul 2013)
+
+  29 Jul 2013; Ian Delaney <idella4@gentoo.org> +natgrid-0.2.1-r2.ebuild,
+  natgrid-0.2.1-r1.ebuild:
+  revert 0.2.1-r1, revbump, corrected correction applied in revbumped -r2 wrt
+  Bug 478326
 
   29 Jul 2013; Ian Delaney <idella4@gentoo.org> natgrid-0.2.1-r1.ebuild:
   Reset order in python_install, fixes Bug #478326
