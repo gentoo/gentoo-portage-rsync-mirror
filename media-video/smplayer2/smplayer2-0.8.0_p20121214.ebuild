@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/smplayer2-0.8.0_p20121214.ebuild,v 1.3 2013/07/10 04:54:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/smplayer2-0.8.0_p20121214.ebuild,v 1.4 2013/07/29 08:29:41 pinkbyte Exp $
 
 EAPI="4"
 LANGS="bg ca cs da de en_US es et eu fi fr gl hu it ja ka ko ku lt mk nl pl pt pt_BR sk sr sv tr zh_CN zh_TW"
@@ -24,7 +24,8 @@ for x in ${LANGSLONG}; do
 done
 
 DEPEND="
-	dev-qt/qtgui:4[dbus(+)?]
+	dev-qt/qtgui:4
+	dbus? ( dev-qt/qtdbus:4 )
 	download-subs? ( dev-libs/quazip )
 "
 RDEPEND="${DEPEND}

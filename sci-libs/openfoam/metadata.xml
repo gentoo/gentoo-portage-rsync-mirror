@@ -12,5 +12,6 @@
  </maintainer>
 	<use>
 		<flag name="opendx"> Install opendx visualisation tool</flag>
+		<flag name="src"> Install source files</flag>
 	</use>
 </pkgmetadata>

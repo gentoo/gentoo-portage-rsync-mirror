@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.35 2013/05/30 11:20:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.36 2013/07/29 08:17:56 pinkbyte Exp $
+
+  29 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> make.defaults:
+  Drop MISDN_CARDS, wrt bug #471796
 
   30 May 2013; Michał Górny <mgorny@gentoo.org> make.defaults:
   Drop stale ALSA_PCM_PLUGINS from USE_EXPAND. Bug #471792.
