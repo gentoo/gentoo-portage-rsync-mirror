@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/dlist-0.5-r1.ebuild,v 1.3 2013/07/27 21:54:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/dlist-0.5-r1.ebuild,v 1.4 2013/07/29 05:28:20 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.10.4:="

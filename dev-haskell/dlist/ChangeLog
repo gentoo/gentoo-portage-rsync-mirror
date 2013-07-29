@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/dlist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/ChangeLog,v 1.5 2013/07/27 21:54:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/ChangeLog,v 1.6 2013/07/29 05:28:20 ago Exp $
+
+  29 Jul 2013; Agostino Sarubbo <ago@gentoo.org> dlist-0.5-r1.ebuild:
+  Stable for x86, wrt bug #478288
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> dlist-0.5-r1.ebuild:
   Stable for amd64, wrt bug #478288

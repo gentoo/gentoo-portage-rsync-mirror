@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-3.8.2.ebuild,v 1.1 2013/06/14 18:40:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-3.8.2.ebuild,v 1.2 2013/07/29 05:11:24 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -37,7 +37,7 @@ src_configure() {
 	# itstool is only needed for rebuilding translations
 	# xmllint is only needed for tests
 	gnome2_src_configure \
-		$(usex test XMLLINT=$(type -P true)) \
+		$(usex test "" XMLLINT=$(type -P true)) \
 		ITSTOOL=$(type -P true)
 }
 
