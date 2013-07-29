@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.99 2013/07/02 07:43:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.100 2013/07/29 07:16:44 idella4 Exp $
+
+  29 Jul 2013; Ian Delaney <idella4@gentoo.org> paramiko-1.10.1.ebuild:
+  minor 'tidy' to install phase
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> paramiko-1.10.1.ebuild:
   Stable for sh, wrt bug #474190

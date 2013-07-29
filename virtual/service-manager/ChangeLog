@@ -1,6 +1,9 @@
 # ChangeLog for virtual/service-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/service-manager/ChangeLog,v 1.4 2013/07/27 23:44:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/service-manager/ChangeLog,v 1.5 2013/07/29 07:29:39 grobian Exp $
+
+  29 Jul 2013; Fabian Groffen <grobian@gentoo.org> service-manager-0.ebuild:
+  Fix deps for Prefix, add Prefix keywords
 
   27 Jul 2013; William Hubbs <williamh@gentoo.org> service-manager-0.ebuild:
   Only list OpenRc once in the dependencies for this virtual since it is the
