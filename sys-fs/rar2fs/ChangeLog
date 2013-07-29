@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/rar2fs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/ChangeLog,v 1.8 2013/05/09 18:17:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/ChangeLog,v 1.10 2013/07/29 17:14:50 ssuominen Exp $
+
+  29 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/rar2fs-1.16.0-destdir.patch,
+  -files/rar2fs-1.16.0_p20130509-destdir.patch, -rar2fs-1.16.0.ebuild,
+  -rar2fs-1.16.0_p20130509.ebuild:
+  old
+
+*rar2fs-1.17.2 (29 Jul 2013)
+
+  29 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +rar2fs-1.17.2.ebuild:
+  Version bump.
 
 *rar2fs-1.16.0_p20130509 (09 May 2013)
 
@@ -34,4 +45,3 @@
 
   15 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +rar2fs-1.14.0.ebuild:
   Initial commit.
-

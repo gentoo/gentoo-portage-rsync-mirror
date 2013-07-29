@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.204 2013/07/28 19:48:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.205 2013/07/29 17:13:46 ssuominen Exp $
+
+*unrar-5.0.8 (29 Jul 2013)
+
+  29 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +unrar-5.0.8.ebuild:
+  Version bump.
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> unrar-5.0.7.ebuild:
   keyword ~amd64-fbsd, bug #477750
