@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/libdca-0.0.5-r3.ebuild,v 1.1 2013/07/28 22:10:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/libdca-0.0.5-r3.ebuild,v 1.2 2013/07/29 19:57:38 aballier Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib multilib-minimal
@@ -38,6 +38,11 @@ multilib_src_configure() {
 		$(use_enable debug) \
 		$(use_enable static-libs static) \
 		$(use_enable oss)
+
+	# Those are thrown away afterwards, don't build them in the first place
+	if [ "${ABI}" != "${DEFAULT_ABI}" ] ; then
+		sed -i -e 's/ libao src//' Makefile || die
+	fi
 }
 
 multilib_src_compile() {

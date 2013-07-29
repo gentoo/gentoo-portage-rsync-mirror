@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.145 2013/07/28 21:13:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.146 2013/07/29 20:00:11 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://git.videolan.org/ffmpeg.git"
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
@@ -60,7 +60,7 @@ RDEPEND+="
 	sys-libs/ncurses
 	app-arch/bzip2
 	sys-libs/zlib
-	|| ( >=media-video/ffmpeg-1.1 >=media-video/libav-9 )
+	|| ( >=media-video/ffmpeg-2.0:= >=media-video/libav-9:= )
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -81,7 +81,7 @@ RDEPEND+="
 		twolame? ( media-sound/twolame )
 		faac? ( media-libs/faac )
 		mp3? ( media-sound/lame )
-		x264? ( >=media-libs/x264-0.0.20100423 )
+		x264? ( >=media-libs/x264-0.0.20100423:= )
 		xvid? ( media-libs/xvid )
 	)
 	enca? ( app-i18n/enca )

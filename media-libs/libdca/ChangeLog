@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.32 2013/07/28 22:10:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.33 2013/07/29 19:57:38 aballier Exp $
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> libdca-0.0.5-r3.ebuild:
+  Do not build the binaries for non native ABIs: They will be thrown away
+  after.
 
 *libdca-0.0.5-r3 (28 Jul 2013)
 
