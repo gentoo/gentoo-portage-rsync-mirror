@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.46 2013/05/11 22:00:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.47 2013/07/30 16:43:35 ssuominen Exp $
+
+  30 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  libimobiledevice-1.1.5.ebuild, +files/libimobiledevice-1.1.5-cython.patch:
+  Fix building of Cython based python bindings by backporting patch from
+  upstream wrt #471620 by Brett Royles and Martin Cyr
 
   11 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -libimobiledevice-1.1.4-r2.ebuild, -libimobiledevice-1.1.4-r3.ebuild,

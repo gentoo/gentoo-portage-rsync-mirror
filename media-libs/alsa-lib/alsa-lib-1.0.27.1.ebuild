@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1.ebuild,v 1.6 2013/07/30 13:05:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1.ebuild,v 1.7 2013/07/30 16:36:19 ssuominen Exp $
 
 EAPI=5
 
@@ -51,6 +51,7 @@ src_configure() {
 		--enable-aload \
 		$(use_with debug) \
 		$(use_enable alisp) \
+		$(use_enable python) \
 		${myconf}
 }
 
