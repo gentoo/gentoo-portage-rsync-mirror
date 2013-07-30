@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.53 2013/03/05 16:44:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.54 2013/07/30 09:07:41 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libosip-4.0.0.ebuild:
+  Stable for amd64, wrt bug #470554
 
 *libosip-4.0.0 (05 Mar 2013)
 

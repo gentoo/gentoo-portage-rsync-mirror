@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/alsa-firmware-1.0.27.ebuild,v 1.1 2013/04/23 10:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/alsa-firmware-1.0.27.ebuild,v 1.2 2013/07/30 09:07:57 ago Exp $
 
 EAPI=5
 inherit udev
@@ -11,7 +11,7 @@ SRC_URI="mirror://alsaproject/firmware/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 
 ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20 alsa_cards_layla20
 alsa_cards_darla24 alsa_cards_gina24 alsa_cards_layla24 alsa_cards_mona

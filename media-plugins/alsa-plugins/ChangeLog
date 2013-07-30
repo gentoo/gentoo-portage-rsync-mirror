@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.172 2013/07/30 03:19:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.173 2013/07/30 09:08:13 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> alsa-plugins-1.0.27.ebuild:
+  Stable for amd64, wrt bug #473404
 
   30 Jul 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

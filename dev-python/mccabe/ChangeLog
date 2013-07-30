@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mccabe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.1 2013/05/31 07:53:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.2 2013/07/30 09:07:05 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> mccabe-0.2.1.ebuild:
+  Stable for amd64, wrt bug #450086
 
 *mccabe-0.2.1 (31 May 2013)
 
