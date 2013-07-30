@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.183 2013/07/27 17:33:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.185 2013/07/30 06:38:21 idella4 Exp $
+
+  30 Jul 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.3.0.ebuild:
+  verbosity level hard set in src_compile, fixes Bug #477678 by hasufell
+
+  30 Jul 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.2-r4.ebuild,
+  xen-tools-4.3.0.ebuild:
+  previous mentioned fix to #445986 appears not to have gone through, repeat +
+  applied to 4.2.2-r4
 
   27 Jul 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.3.0.ebuild:
   Add dep markdown, make dep transfig unconditional, sed statement to correct
