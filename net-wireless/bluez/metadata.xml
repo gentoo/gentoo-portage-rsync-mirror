@@ -12,4 +12,8 @@
     <flag name="test-programs">Install tools for testing of
 			various Bluetooth functions</flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:bluez:bluez</remote-id>
+    <remote-id type="cpe">cpe:/a:bluez:bluez-libs</remote-id>
+  </upstream>
 </pkgmetadata>

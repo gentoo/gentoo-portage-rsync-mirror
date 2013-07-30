@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-m17n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.24 2013/01/15 08:43:46 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.25 2013/07/30 03:14:09 vapier Exp $
+
+  30 Jul 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
 
 *ibus-m17n-1.3.4 (15 Jan 2013)
 
