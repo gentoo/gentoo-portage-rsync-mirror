@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/libkexiv2-4.10.5.ebuild,v 1.4 2013/07/30 10:41:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/libkexiv2-4.10.5.ebuild,v 1.5 2013/07/30 19:41:35 johu Exp $
 
 EAPI=5
 
@@ -12,7 +12,6 @@ IUSE="debug"
 
 DEPEND="
 	>=media-gfx/exiv2-0.20
-	media-libs/lcms:0
 	virtual/jpeg
 "
 RDEPEND="${DEPEND}"
