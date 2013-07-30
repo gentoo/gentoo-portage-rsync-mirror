@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.186 2013/07/30 07:08:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.187 2013/07/30 10:14:30 idella4 Exp $
+
+  30 Jul 2013; Ian Delaney <idella4@gentoo.org> files/xendomains-screen.confd:
+  Take out duplicate AUTODIR && PARALLEL_SHUTDOWN from xendomains-screen.confd
+  wrt Bug #478234
 
   30 Jul 2013; Ian Delaney <idella4@gentoo.org>
   +files/xen-tools-4.2.2-install.patch, xen-tools-4.2.2-r4.ebuild:

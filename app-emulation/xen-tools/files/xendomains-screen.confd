@@ -2,11 +2,11 @@
 
 # Directory of domains to boot. AUTODIR should contain one or more symlinks
 # to domain config files in /etc/xen
-AUTODIR=/etc/xen/auto
+# AUTODIR=/etc/xen/auto
 
 # Send shutdown commands to all domains in parallel instead of waiting for
 # each to shutdown individually
-PARALLEL_SHUTDOWN=yes
+# PARALLEL_SHUTDOWN=yes
 
 # When SCREEN="yes", domains in AUTODIR have their consoles connected to a
 # screen session named SCREEN_NAME, with output logged to individual files 

@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.55 2013/07/28 19:24:57 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.56 2013/07/30 10:10:09 olemarkus Exp $
+
+*eselect-php-0.7.1-r2 (30 Jul 2013)
+
+  30 Jul 2013; Ole Markus With <olemarkus@gentoo.org>
+  +eselect-php-0.7.1-r2.ebuild, +files/php-fpm-r1.init:
+  Fix fpm restart issue
 
   28 Jul 2013; Ole Markus With <olemarkus@gentoo.org> eselect-php-0.6.2.ebuild,
   files/php-fpm.conf:
