@@ -1,6 +1,14 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.9 2013/07/19 06:19:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.10 2013/07/30 18:10:30 pesa Exp $
+
+*qthelp-4.8.5-r2 (30 Jul 2013)
+
+  30 Jul 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/qthelp-4.8.5-fix-compat.patch, +qthelp-4.8.5-r2.ebuild,
+  -qthelp-4.8.5-r1.ebuild:
+  Properly fix bug 477316, also fixing bug 478034 that was caused by the ugly
+  hacks in -r1.
 
 *qthelp-4.8.5-r1 (19 Jul 2013)
 
