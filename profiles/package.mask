@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14964 2013/07/29 23:56:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14965 2013/07/30 19:01:58 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -469,12 +469,6 @@ app-text/cuneiform
 # Reasons to keep them masked:
 # - libv4l depends on emul-linux for jpeg
 >=media-libs/libv4l-0.9.5-r1
-
-# Markos Chandras <hwoarang@gentoo.org> (13 Mar 2013)
-# Mask because breaking updates out of the blue is bad
-# See 461608. Unmask it only if you want abi_x86_32
-# which means you have ABI_X86=32 set in your make.conf
-=app-emulation/emul-linux-x86-xlibs-20130224-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (12 Mar 2013)
 # 2.5.* has known security and other issues due to an affected

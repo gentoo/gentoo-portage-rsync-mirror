@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8092 2013/07/30 01:28:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8093 2013/07/30 19:01:58 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jul 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Pure-multilib emul-linux-x86-xlibs has been removed, drop the mask as well.
 
   30 Jul 2013; Matt Turner <mattst88@gentoo.org> releases/make.defaults:
   Drop gpm from default release USE flags, bug 449364.
