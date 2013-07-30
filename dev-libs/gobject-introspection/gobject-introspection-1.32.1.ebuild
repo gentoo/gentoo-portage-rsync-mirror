@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.15 2012/12/09 18:33:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.16 2013/07/30 03:33:09 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -19,7 +19,10 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbs
 
 IUSE="doc doctool test"
 
-RDEPEND=">=dev-libs/gobject-introspection-common-${PV}
+# 1.35.9 introduced the --cflags-begin argument
+RDEPEND="
+	>=dev-libs/gobject-introspection-common-${PV}
+	<dev-libs/gobject-introspection-common-1.35.9
 	>=dev-libs/glib-2.31.22:2
 	<dev-libs/glib-2.33:2
 	doctool? ( dev-python/mako )
