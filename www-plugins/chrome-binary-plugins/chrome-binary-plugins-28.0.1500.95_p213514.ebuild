@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-30.0.1573.2_alpha1.ebuild,v 1.1 2013/07/23 23:44:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-28.0.1500.95_p213514.ebuild,v 1.1 2013/07/30 22:22:05 floppym Exp $
 
 EAPI=4
 
@@ -12,15 +12,15 @@ HOMEPAGE="http://www.google.com/chrome"
 case ${PV} in
 	*_alpha*)
 		SLOT="unstable"
-		MY_PV=${PV/_alpha/-}
+		MY_PV=${PV/_alpha/-r}
 		;;
 	*_beta*)
 		SLOT="beta"
-		MY_PV=${PV/_beta/-}
+		MY_PV=${PV/_beta/-r}
 		;;
 	*_p*)
 		SLOT="stable"
-		MY_PV=${PV/_p/-}
+		MY_PV=${PV/_p/-r}
 		;;
 	*)
 		die "Invalid value for \${PV}: ${PV}"

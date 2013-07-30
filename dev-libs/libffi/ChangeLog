@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.170 2013/07/15 15:09:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.171 2013/07/30 22:20:18 aballier Exp $
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org> libffi-3.0.13-r1.ebuild:
+  improve the emul-libs blocker so that it is stacked for baselibs -r2.
 
 *libffi-3.0.13-r1 (15 Jul 2013)
 

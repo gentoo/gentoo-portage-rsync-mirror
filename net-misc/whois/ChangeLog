@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.191 2013/07/30 12:27:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.192 2013/07/30 22:27:46 jer Exp $
+
+  30 Jul 2013; Jeroen Roovers <jer@gentoo.org> whois-5.0.25.ebuild:
+  Stable for HPPA (bug #478528).
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> whois-5.0.25.ebuild:
   Stable for alpha, wrt bug #478528

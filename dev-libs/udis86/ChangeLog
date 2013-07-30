@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/udis86
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.18 2013/07/11 22:44:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.19 2013/07/30 22:14:29 aballier Exp $
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org> udis86-1.7-r2.ebuild:
+  improve the emul-libs blocker so that it is stacked for baselibs -r2.
 
 *udis86-1.7-r2 (11 Jul 2013)
 

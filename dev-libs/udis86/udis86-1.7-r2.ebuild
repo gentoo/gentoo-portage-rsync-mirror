@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/udis86-1.7-r2.ebuild,v 1.1 2013/07/11 22:44:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/udis86-1.7-r2.ebuild,v 1.2 2013/07/30 22:14:29 aballier Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ DEPEND="test? (
 		x86? ( dev-lang/yasm )
 		x86-fbsd? ( dev-lang/yasm )
 	)"
-RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224 )"
+RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r1
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-yasm.patch

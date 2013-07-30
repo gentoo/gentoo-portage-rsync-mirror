@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.3-r1.ebuild,v 1.1 2013/07/20 17:42:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.3-r1.ebuild,v 1.2 2013/07/30 22:07:48 aballier Exp $
 
 EAPI=5
 
@@ -16,8 +16,9 @@ SLOT="0/16"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="apng neon static-libs"
 
-RDEPEND=">=sys-libs/zlib-1.2.8-r1:=[abi_x86_32?]
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224 )"
+RDEPEND=">=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}]
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r1
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
@@ -34,10 +35,6 @@ multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
 		$(use_enable static-libs static) \
 		--enable-arm-neon=$(usex neon)
-}
-
-multilib_src_install() {
-	emake DESTDIR="${D}" install
 }
 
 multilib_src_install_all() {
