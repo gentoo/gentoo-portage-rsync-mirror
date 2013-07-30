@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/netaddr-0.7.10-r1.ebuild,v 1.1 2013/07/27 08:12:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/netaddr-0.7.10-r1.ebuild,v 1.2 2013/07/30 05:28:16 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -21,11 +21,4 @@ RDEPEND="cli? ( >=dev-python/ipython-0.13.1-r1[${PYTHON_USEDEP}] )"
 
 python_test() {
 	"${PYTHON}" netaddr/tests/__init__.py
-}
-
-pkg_postinst() {
-	distutils_pkg_postinst
-	if ! use cli; then
-		ewarn "If you intend to use netaddr shell in terminal, enable cli USE flag"
-	fi
 }
