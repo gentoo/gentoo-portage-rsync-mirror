@@ -1,6 +1,6 @@
-# Copyright 2011-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/mips64/multilib/make.defaults,v 1.9 2013/07/28 02:41:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/mips64/multilib/make.defaults,v 1.10 2013/07/30 01:33:44 mattst88 Exp $
 
 PROFILE_ARCH="mips64"
 
@@ -20,3 +20,5 @@ CFLAGS_n64="-mabi=64"
 CHOST_n64=${CHOST}
 
 SYMLINK_LIB="no"
+
+USE_EXPAND_HIDDEN="-ABI_MIPS"
