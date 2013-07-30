@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r2.ebuild,v 1.4 2013/05/04 07:25:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r2.ebuild,v 1.5 2013/07/30 18:59:40 mgorny Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="sys-libs/zlib
 		  x11-libs/libXdmcp )"
 RDEPEND="${DEPEND}
 	infinality? ( media-libs/fontconfig-infinality )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-xlibs-20130224 )"
+	abi_x86_32? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )"
 
 src_prepare() {
 	enable_option() {

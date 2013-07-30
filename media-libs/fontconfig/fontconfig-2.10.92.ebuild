@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.92.ebuild,v 1.1 2013/05/12 17:56:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.92.ebuild,v 1.2 2013/07/30 18:59:51 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-libs/expat-1.95.3
 	abi_x86_32? (
 		amd64? ( app-emulation/emul-linux-x86-baselibs[development] )
-		!<=app-emulation/emul-linux-x86-xlibs-20130224 )
+		!app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

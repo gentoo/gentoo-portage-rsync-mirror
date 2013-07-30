@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.13.2.ebuild,v 1.2 2013/07/30 07:01:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.13.2.ebuild,v 1.3 2013/07/30 18:38:29 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -457,13 +457,16 @@ pkg_postinst() {
 			REPOS_CONF_SYNC=$(grep "^sync-uri =" "${ROOT}/usr/share/portage/config/repos.conf")
 			REPOS_CONF_SYNC=${REPOS_CONF_SYNC##* }
 		fi
+		local sync_type=
+		[[ ${REPOS_CONF_SYNC} == git://* ]] && sync_type=git
+
 		cat <<-EOF > "${T}/repos.conf"
 		[DEFAULT]
 		main-repo = ${repo_name:-gentoo}
 
 		[${repo_name:-gentoo}]
 		location = ${PORTDIR:-/usr/portage}
-		sync-type = rsync
+		sync-type = ${sync_type:-rsync}
 		sync-uri = ${REPOS_CONF_SYNC}
 		EOF
 		local dest=${ROOT}/etc/portage/repos.conf

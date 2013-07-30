@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.28 2013/05/14 14:40:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.29 2013/07/30 18:59:24 mgorny Exp $
+
+  30 Jul 2013; Michał Górny <mgorny@gentoo.org> libvdpau-0.5-r1.ebuild,
+  libvdpau-0.6.ebuild:
+  Update the emul-linux blocker to support abi_x86_32 flag on emul-linux.
 
 *libvdpau-0.6 (14 May 2013)
 

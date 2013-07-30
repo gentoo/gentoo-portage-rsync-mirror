@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.6.ebuild,v 1.1 2013/05/14 14:40:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.6.ebuild,v 1.2 2013/07/30 18:59:24 mgorny Exp $
 
 EAPI=5
 inherit autotools-multilib
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libX11[${MULTILIB_USEDEP}]
 	!=x11-drivers/nvidia-drivers-180*
 	!=x11-drivers/nvidia-drivers-185*
 	!=x11-drivers/nvidia-drivers-190*
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-xlibs-20130224 )"
+	abi_x86_32? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
