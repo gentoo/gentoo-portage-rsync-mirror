@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206.ebuild,v 1.2 2013/07/23 11:01:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206.ebuild,v 1.3 2013/07/30 08:48:24 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
 	+kmod lzma openrc pam policykit python qrcode selinux tcpd test
 	vanilla xattr"
 
-MINKV="2.6.39"
+MINKV="3.0"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	>=sys-apps/util-linux-2.20
