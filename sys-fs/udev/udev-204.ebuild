@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-204.ebuild,v 1.15 2013/07/26 14:47:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-204.ebuild,v 1.16 2013/07/30 17:37:35 ssuominen Exp $
 
 EAPI=5
 
@@ -453,8 +453,8 @@ pkg_postinst() {
 	elog
 	elog "For more information on udev on Gentoo, upgrading, writing udev rules, and"
 	elog "         fixing known issues visit:"
+	elog "         http://wiki.gentoo.org/wiki/Udev"
 	elog "         http://wiki.gentoo.org/wiki/Udev/upgrade"
-	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 
 	# Update hwdb database in case the format is changed by udev version.
 	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
