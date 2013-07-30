@@ -1,9 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/biosdisk-0_p20100611.ebuild,v 1.1 2012/09/16 10:01:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/biosdisk-0_p20100611-r1.ebuild,v 1.1 2013/07/30 01:24:40 floppym Exp $
 
-EAPI="4"
-inherit versionator
+EAPI="5"
+
+PYTHON_COMPAT=( python2_{6,7} )
+
+inherit versionator python-single-r1
 
 MY_PV=$(get_version_component_range 2)
 MY_PV_YEAR=${MY_PV:1:4}
@@ -20,11 +23,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="
-	|| ( app-text/unix2dos >=app-text/dos2unix-5.0 )
-	sys-boot/syslinux"
+RDEPEND="|| ( app-text/unix2dos >=app-text/dos2unix-5.0 )
+	sys-boot/syslinux
+	${PYTHON_DEPS}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_install() {
+	python_fix_shebang blconf
+
 	dosbin biosdisk blconf
 
 	dodoc AUTHORS README README.dosdisk TODO VERSION

@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8091 2013/07/30 00:31:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8092 2013/07/30 01:28:31 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -18,9 +18,6 @@
 
   29 Jul 2013; Matt Turner <mattst88@gentoo.org> +desc/abi_mips.desc:
   Add abi_mips.desc.
-
-  29 Jul 2013; Matt Turner <mattst88@gentoo.org> base/use.mask:
-  Mask MIPS multilib flags.
 
   29 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove mask on multilib libsamplerate, libsndfile and twolame
