@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.173 2013/06/16 00:04:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.174 2013/07/29 23:04:15 mattst88 Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -329,6 +329,10 @@ python_single_target_pypy2_0
 abi_x86_32
 abi_x86_64
 abi_x86_x32
+# Matt Turner <mattst88@gentoo.org> (29 Jul 2013)
+abi_mips_o32
+abi_mips_n32
+abi_mips_n64
 
 # Zac Medico <zmedico@gentoo.org> (21 Mar 2013)
 # Python 3.4 pre-releases not available in main tree yet.
