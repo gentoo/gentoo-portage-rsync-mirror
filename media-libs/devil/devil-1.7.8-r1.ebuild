@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r1.ebuild,v 1.8 2013/02/09 22:49:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r1.ebuild,v 1.9 2013/07/30 14:25:08 pinkbyte Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/openil/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86"
 IUSE="allegro gif glut jpeg jpeg2k lcms mng nvtt openexr opengl png sdl sse sse2 sse3 static-libs tiff xpm X"
 
 RDEPEND="allegro? ( media-libs/allegro:0 )

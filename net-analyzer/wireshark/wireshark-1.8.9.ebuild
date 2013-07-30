@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.0.ebuild,v 1.2 2013/06/10 03:38:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.9.ebuild,v 1.1 2013/07/30 14:20:09 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -15,19 +15,17 @@ LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	adns +caps crypt doc doc-pdf geoip gtk ipv6 kerberos libadns lua
-	+netlink +pcap portaudio profile python selinux smi ssl zlib
+	adns +caps crypt doc doc-pdf geoip gtk ipv6 kerberos libadns lua +pcap
+	portaudio profile python selinux smi ssl zlib
 "
 REQUIRED_USE="
 	ssl? ( crypt )
 "
-
 RDEPEND="
 	>=dev-libs/glib-2.14:2
-	netlink? ( dev-libs/libnl )
 	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
-	crypt? ( dev-libs/libgcrypt )
 	caps? ( sys-libs/libcap )
+	crypt? ( dev-libs/libgcrypt )
 	geoip? ( dev-libs/geoip )
 	gtk? (
 		>=x11-libs/gtk+-2.4.0:2
@@ -37,8 +35,8 @@ RDEPEND="
 	)
 	kerberos? ( virtual/krb5 )
 	libadns? ( net-libs/adns )
-	lua? ( >=dev-lang/lua-5.1 )
-	pcap? ( net-libs/libpcap[-netlink] )
+	lua? ( <dev-lang/lua-5.2 )
+	pcap? ( net-libs/libpcap )
 	portaudio? ( media-libs/portaudio )
 	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-wireshark )
@@ -51,11 +49,9 @@ DEPEND="
 	${RDEPEND}
 	doc? (
 		app-doc/doxygen
-		app-text/asciidoc
 		dev-libs/libxml2
 		dev-libs/libxslt
 		doc-pdf? ( dev-java/fop )
-		www-client/lynx
 	)
 	>=virtual/perl-Pod-Simple-3.170.0
 	sys-devel/bison
@@ -82,8 +78,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-1.6.13-ldflags.patch
+
+	sed -i -e '/^Icon/s|.png||g' ${PN}.desktop || die
 
 	eautoreconf
 }
@@ -115,7 +112,7 @@ src_configure() {
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
 	if use kerberos; then
-		case $(krb5-config --libs) in
+		case `krb5-config --libs` in
 			*-lcrypto*)
 				ewarn "Kerberos was built with ssl support: linkage with openssl is enabled."
 				ewarn "Note there are annoying license incompatibilities between the OpenSSL"
@@ -136,7 +133,6 @@ src_configure() {
 		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
-		$(use_with netlink libnl) \
 		$(use_with crypt gcrypt) \
 		$(use_with caps libcap) \
 		$(use_with geoip) \
@@ -157,7 +153,7 @@ src_configure() {
 
 src_compile() {
 	default
-	use doc && emake -j1 -C docbook
+	use doc && emake -C docbook
 }
 
 src_install() {

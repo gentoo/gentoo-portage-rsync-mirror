@@ -44,20 +44,12 @@ index f0c542b..db252f7 100644
    endif
    endif
  
-@@ -601,7 +601,6 @@ endif
- ifdef SHARED_LIBRARY
- ifneq ($(HOST_OS), $(filter $(HOST_OS), Cygwin MingW))
- ifneq ($(HOST_OS),Darwin)
--  LD.Flags += $(RPATH) -Wl,'$$ORIGIN'
- endif
- endif
- endif
 @@ -639,7 +638,7 @@ endif
  ifneq ($(HOST_OS), $(filter $(HOST_OS), Cygwin MingW))
    ifneq ($(HOST_OS), Darwin)
      ifdef TOOLNAME
 -      LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
-+      LD.Flags += $(RPATH) -Wl,'$(PROJ_libdir)'
++      LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib' $(RPATH) -Wl,'$(PROJ_libdir)'
        ifdef EXAMPLE_TOOL
          LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(DynamicFlag)
        else
@@ -66,7 +58,7 @@ index f0c542b..db252f7 100644
  else
    ifneq ($(DARWIN_MAJVERS),4)
 -    LD.Flags += $(RPATH) -Wl,@executable_path/../lib
-+    LD.Flags += $(RPATH) -Wl,'$(PROJ_libdir)'
++    LD.Flags += $(RPATH) -Wl,@executable_path/../lib -Wl,'$(PROJ_libdir)'
    endif
    ifeq ($(RC_XBS),YES)
      TempFile := $(shell mkdir -p ${OBJROOT}/dSYMs ; mktemp ${OBJROOT}/dSYMs/llvm-lto.XXXXXX)

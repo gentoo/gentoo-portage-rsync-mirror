@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.120 2013/07/28 15:59:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.121 2013/07/30 14:04:12 mgorny Exp $
+
+  30 Jul 2013; Michał Górny <mgorny@gentoo.org>
+  files/llvm-3.3-gentoo-install.patch, files/llvm-3.4-gentoo-install.patch,
+  llvm-3.3-r1.ebuild, llvm-9999-r1.ebuild:
+  Revert the RPATH changes and LD_LIBRARY_PATH hack as it resulted in system
+  clang using build tree libraries, bug #478348. Instead, alter the RPATH after
+  installing the libs. Fix installing libLTO and libprofile_rt.
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> llvm-3.3.ebuild,
   llvm-3.3-r1.ebuild, llvm-9999.ebuild, llvm-9999-r1.ebuild:

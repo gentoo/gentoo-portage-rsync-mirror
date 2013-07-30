@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/love
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.15 2013/07/04 09:13:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.16 2013/07/30 14:26:40 pinkbyte Exp $
+
+  30 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> love-0.8.0.ebuild:
+  Add ~arm keyword
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> love-0.7.2-r1.ebuild:
   Stable for x86, wrt bug #475630

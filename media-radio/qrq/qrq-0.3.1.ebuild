@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/qrq-0.3.1.ebuild,v 1.3 2013/03/19 10:33:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/qrq-0.3.1.ebuild,v 1.4 2013/07/30 14:25:52 tomjbe Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit toolchain-funcs
 
@@ -34,6 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	emake $CONF DESTDIR="${D}/usr" install || die
-	dodoc AUTHORS ChangeLog README || die
+	emake $CONF DESTDIR="${D}/usr" install
+	dodoc AUTHORS ChangeLog README
 }

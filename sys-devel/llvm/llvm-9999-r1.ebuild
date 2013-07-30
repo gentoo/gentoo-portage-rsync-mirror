@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999-r1.ebuild,v 1.3 2013/07/28 15:59:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999-r1.ebuild,v 1.4 2013/07/30 14:04:12 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,8 @@ KEYWORDS=""
 IUSE="clang debug doc gold +libffi multitarget ocaml python
 	+static-analyzer test udis86 video_cards_radeon"
 
-DEPEND="dev-lang/perl
+DEPEND="app-admin/chrpath
+	dev-lang/perl
 	dev-python/sphinx
 	>=sys-devel/make-3.79
 	>=sys-devel/flex-2.5.4
@@ -129,19 +130,6 @@ src_prepare() {
 	epatch_user
 }
 
-llvm_add_ldpath() {
-	# Add LLVM built libraries to LD_LIBRARY_PATH.
-	# This way we don't have to hack RPATHs of executables.
-	local libpath
-	if use debug; then
-		libpath=${BUILD_DIR}/Debug+Asserts+Checks/lib
-	else
-		libpath=${BUILD_DIR}/Release/lib
-	fi
-
-	export LD_LIBRARY_PATH=${libpath}${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-}
-
 multilib_src_configure() {
 	local CONF_FLAGS="--enable-keep-symbols
 		--enable-shared
@@ -203,9 +191,6 @@ multilib_src_compile() {
 		GENTOO_LIBDIR="$(get_libdir)"
 	)
 
-	local -x LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
-	llvm_add_ldpath
-
 	# Tests need all the LLVM built.
 	if multilib_is_native_abi || use test; then
 		emake "${mymakeopts[@]}"
@@ -237,9 +222,6 @@ multilib_src_compile() {
 }
 
 multilib_src_test() {
-	local -x LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
-	llvm_add_ldpath
-
 	default
 
 	use clang && emake -C tools/clang test
@@ -264,24 +246,18 @@ multilib_src_install() {
 		GENTOO_LIBDIR="$(get_libdir)"
 	)
 
-	local -x LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
-	llvm_add_ldpath
+	emake "${mymakeopts[@]}" install
+
+	# Fix rpaths.
+	chrpath -r "${EPREFIX}"/usr/$(get_libdir)/llvm \
+		"${ED}"/usr/bin/* || die
 
 	if multilib_is_native_abi; then
-		emake "${mymakeopts[@]}" install
-
 		# Move files back.
 		if path_exists -o "${ED}"/tmp/llvm-config.*; then
 			mv "${ED}"/tmp/llvm-config.* "${ED}"/usr/bin || die
 		fi
 	else
-		# we need to install libs for llvm, then whole clang
-		# since libs-only omits clang dir
-		# and clang install-libs doesn't install headers and stuff
-		# (we build it anyway, so install is not a problem)
-		emake "${mymakeopts[@]}" install-libs
-		use clang && emake -C tools/clang "${mymakeopts[@]}" install
-
 		# Preserve ABI-variant of llvm-config,
 		# then drop all the executables since LLVM doesn't like to
 		# clobber when installing.

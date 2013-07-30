@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.59 2013/02/09 22:49:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.60 2013/07/30 14:25:08 pinkbyte Exp $
+
+  30 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> devil-1.7.8-r1.ebuild:
+  Add ~arm keyword
 
   09 Feb 2013; Julian Ospald <hasufell@gentoo.org> devil-1.7.8-r1.ebuild:
   add jpeg2k useflag wrt #455438

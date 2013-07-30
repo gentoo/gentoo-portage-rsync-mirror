@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.8 2013/03/21 13:43:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.9 2013/07/30 14:26:40 pinkbyte Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ if [[ ${PV} == 9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://bitbucket/rude/${PN}/downloads/${P}-linux-src.tar.gz"
-	KEYWORDS="amd64 ~ppc x86"
+	KEYWORDS="amd64 ~arm ~ppc x86"
 fi
 
 DESCRIPTION="A framework for 2D games in Lua"
