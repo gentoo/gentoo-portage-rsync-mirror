@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-mp3info
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.25 2012/09/16 08:40:28 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.26 2013/07/30 05:49:34 graaff Exp $
+
+*ruby-mp3info-0.8 (30 Jul 2013)
+
+  30 Jul 2013; Hans de Graaff <graaff@gentoo.org> +ruby-mp3info-0.8.ebuild:
+  Version bump. Drop ruby18 since tests no longer pass.
 
   16 Sep 2012; Hans de Graaff <graaff@gentoo.org> -ruby-mp3info-0.6.15.ebuild,
   -ruby-mp3info-0.6.16.ebuild:
