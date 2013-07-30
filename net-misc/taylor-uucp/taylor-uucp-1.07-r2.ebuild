@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r2.ebuild,v 1.3 2009/03/06 18:48:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07-r2.ebuild,v 1.4 2013/07/30 15:26:27 vapier Exp $
+
+EAPI="4"
 
 inherit eutils flag-o-matic autotools
 
@@ -8,28 +10,23 @@ DESCRIPTION="Taylor UUCP"
 HOMEPAGE="http://www.airs.com/ian/uucp.html"
 SRC_URI="mirror://gnu/uucp/uucp-${PV}.tar.gz"
 
-IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm ia64 ppc sparc x86"
+IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
-RDEPEND=""
+S="${WORKDIR}/uucp-${PV}"
 
-S="${WORKDIR}/uucp-1.07"
-
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	mv configure.{in,ac} || die
+	sed -i 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 	eautoreconf
 }
 
-src_compile() {
-	append-flags -D_GNU_SOURCE -fno-strict-aliasing
-	econf --with-newconfigdir=/etc/uucp || die "configure failed"
-	make || die "make failed"
+src_configure() {
+	append-cppflags -D_GNU_SOURCE -fno-strict-aliasing
+	econf --with-newconfigdir=/etc/uucp
 }
 
 src_install() {
@@ -42,7 +39,7 @@ src_install() {
 	diropts -o uucp -g uucp -m 0775
 	keepdir /var/spool/uucppublic
 
-	make \
+	emake \
 		"prefix=${D}/usr" \
 		"sbindir=${D}/usr/sbin" \
 		"bindir=${D}/usr/bin" \
@@ -50,9 +47,9 @@ src_install() {
 		"man8dir=${D}/usr/share/man/man8" \
 		"newconfigdir=${D}/etc/uucp" \
 		"infodir=${D}/usr/share/info" \
-		install install-info || die "make install failed"
+		install install-info
 	sed -i -e 's:/usr/spool:/var/spool:g' sample/config
-	cp sample/* "${D}/etc/uucp"
+	cp sample/* "${ED}/etc/uucp" || die
 	dodoc ChangeLog NEWS README TODO
 }
 

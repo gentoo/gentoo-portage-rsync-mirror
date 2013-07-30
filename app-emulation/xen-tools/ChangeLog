@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.188 2013/07/30 13:40:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.189 2013/07/30 15:01:40 idella4 Exp $
+
+  30 Jul 2013; Ian Delaney <idella4@gentoo.org> files/xend.initd-r1,
+  files/xend.initd-r2:
+  Add var extra_commands matching xendomain init scripts, requested by mva
 
   30 Jul 2013; Ian Delaney <idella4@gentoo.org>
   files/xen-tools-4.2.2-install.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.32 2013/07/10 09:46:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.33 2013/07/30 15:07:51 vapier Exp $
+
+  30 Jul 2013; Mike Frysinger <vapier@gentoo.org> ddccontrol-0.4.2-r2.ebuild:
+  Fix building with automake-1.13 #467574 by Ian Stakenvicius.
 
 *ddccontrol-0.4.2-r2 (10 Jul 2013)
 

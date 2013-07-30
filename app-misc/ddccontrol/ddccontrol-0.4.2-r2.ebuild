@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2-r2.ebuild,v 1.1 2013/07/10 09:46:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2-r2.ebuild,v 1.2 2013/07/30 15:07:51 vapier Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-automake.patch \
 		"${FILESDIR}"/${P}-no-ddcpci.patch \
 		"${FILESDIR}"/${P}-support-fglrx.patch
+	sed -i 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467574
 
 	sed -i '/^htmldir/d' doc/Makefile.am || die
 
