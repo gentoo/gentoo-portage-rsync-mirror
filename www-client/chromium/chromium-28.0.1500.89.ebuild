@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.89.ebuild,v 1.4 2013/07/17 23:01:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1500.89.ebuild,v 1.5 2013/07/30 04:22:18 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -79,6 +79,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	!arm? (
 		>=dev-lang/nacl-toolchain-newlib-0_p9093
+		<=dev-lang/nacl-toolchain-newlib-0_p10915
 		dev-lang/yasm
 	)
 	dev-lang/perl

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.919 2013/07/26 16:17:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.920 2013/07/30 04:22:18 phajdan.jr Exp $
+
+  30 Jul 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-28.0.1500.89.ebuild:
+  Add an upper bound for nacl-toolchain-newlib dependency, bug #478460 by
+  Johannes Hirte.
 
   26 Jul 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   files/chromium-nss-3.15.patch:
