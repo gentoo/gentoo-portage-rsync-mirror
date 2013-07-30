@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.11.ebuild,v 1.8 2013/03/02 23:49:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.11.ebuild,v 1.9 2013/07/30 13:51:58 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam virtualx
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:3
 		x11-themes/gnome-themes-standard
 		x11-themes/gnome-icon-theme )
-	introspection? ( dev-libs/gobject-introspection )
+	introspection? ( <dev-libs/gobject-introspection-1.36.0 )
 	qt4? ( dev-qt/qtcore:4
 		dev-qt/qtdbus:4 )
 	sys-apps/accountsservice"

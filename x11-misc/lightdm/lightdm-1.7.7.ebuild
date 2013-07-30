@@ -1,20 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.3.3.ebuild,v 1.2 2013/03/02 23:49:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.7.7.ebuild,v 1.1 2013/07/30 13:51:58 hwoarang Exp $
 
-EAPI=4
-inherit autotools eutils pam
+EAPI=5
+inherit autotools eutils pam readme.gentoo systemd
 
-TRUNK_VERSION="1.4"
+TRUNK_VERSION="1.8"
 DESCRIPTION="A lightweight display manager"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/LightDM"
-SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.gz
+SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.xz
 	mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+introspection qt4"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
+IUSE="+gtk +introspection kde qt4 razor"
+REQUIRED_USE="|| ( gtk kde razor )"
 
 COMMON_DEPEND=">=dev-libs/glib-2.32.3:2
 	dev-libs/libxml2
@@ -36,6 +37,9 @@ DEPEND="${COMMON_DEPEND}
 	gnome-base/gnome-common
 	sys-devel/gettext
 	virtual/pkgconfig"
+PDEPEND="gtk? ( x11-misc/lightdm-gtk-greeter )
+	kde? ( x11-misc/lightdm-kde )
+	razor? ( razorqt-base/razorqt-lightdm-greeter )"
 
 DOCS=( NEWS )
 
@@ -43,8 +47,7 @@ src_prepare() {
 	sed -i -e 's:getgroups:lightdm_&:' tests/src/libsystem.c || die #412369
 	sed -i -e '/minimum-uid/s:500:1000:' data/users.conf || die
 
-	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
-	epatch "${FILESDIR}"/${PN}-1.2.0-fix-configure.patch
+	epatch "${FILESDIR}"/${P}-session-wrapper.patch
 	epatch_user
 
 	# Remove bogus Makefile statement. This needs to go upstream
@@ -92,20 +95,8 @@ src_install() {
 
 	pamd_mimic system-local-login ${PN} auth account session #372229
 	dopamd "${FILESDIR}"/${PN}-autologin #390863, #423163
-}
 
-pkg_postinst() {
-	elog
-	elog "You will need to install a greeter as actual GUI for LightDM."
-	elog
-	elog "Even though the default /etc/${PN}/${PN}.conf will work for"
-	elog "most users, make sure you configure it to suit your needs"
-	elog "before using ${PN} for the first time."
-	elog "You can test the configuration file using the following"
-	elog "command: ${PN} --test-mode -c /etc/${PN}/${PN}.conf. This"
-	elog "requires xorg-server to be built with the 'kdrive' useflag."
-	elog
-	elog "You can also set your own default values for LIGHTDM_GREETER,"
-	elog "LIGHTDM_SESSION, LIGHTDM_USER in /etc/make.conf"
-	elog
+	readme.gentoo_create_doc
+
+	systemd_dounit "${FILESDIR}/${PN}.service"
 }
