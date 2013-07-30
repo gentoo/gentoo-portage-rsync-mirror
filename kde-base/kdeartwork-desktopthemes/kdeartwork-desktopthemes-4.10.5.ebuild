@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-desktopthemes/kdeartwork-desktopthemes-4.10.5.ebuild,v 1.3 2013/07/29 07:47:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-desktopthemes/kdeartwork-desktopthemes-4.10.5.ebuild,v 1.4 2013/07/30 10:41:46 ago Exp $
 
 EAPI=5
 
@@ -10,5 +10,5 @@ KDE_SCM="svn"
 inherit kde4-meta
 
 DESCRIPTION="Additional KDE4 Plasma themes"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""

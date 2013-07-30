@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.10.5.ebuild,v 1.4 2013/07/29 07:46:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.10.5.ebuild,v 1.5 2013/07/30 10:41:15 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit kde4-meta
 
 DESCRIPTION="System settings utility"
 IUSE="debug gtk +semantic-desktop +usb"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 COMMONDEPEND="
 	app-misc/strigi

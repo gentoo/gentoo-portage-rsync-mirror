@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klickety
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.199 2013/07/29 07:46:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.200 2013/07/30 10:41:02 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> klickety-4.10.5.ebuild:
+  Stable for ppc, wrt to bug #477634
 
   29 Jul 2013; Agostino Sarubbo <ago@gentoo.org> klickety-4.10.5.ebuild:
   Stable for x86, wrt to bug #477634

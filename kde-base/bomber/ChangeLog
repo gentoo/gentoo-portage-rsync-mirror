@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bomber
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.157 2013/07/29 07:46:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.158 2013/07/30 10:41:13 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> bomber-4.10.5.ebuild:
+  Stable for ppc, wrt to bug #477634
 
   29 Jul 2013; Agostino Sarubbo <ago@gentoo.org> bomber-4.10.5.ebuild:
   Stable for x86, wrt to bug #477634

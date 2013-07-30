@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetattach
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.272 2013/07/29 07:46:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.273 2013/07/30 10:41:14 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> knetattach-4.10.5.ebuild:
+  Stable for ppc, wrt to bug #477634
 
   29 Jul 2013; Agostino Sarubbo <ago@gentoo.org> knetattach-4.10.5.ebuild:
   Stable for x86, wrt to bug #477634
