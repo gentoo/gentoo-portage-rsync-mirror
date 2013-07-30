@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.94 2013/01/04 18:46:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.95 2013/07/29 23:59:57 aballier Exp $
+
+*portaudio-19_pre20111121-r1 (29 Jul 2013)
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +portaudio-19_pre20111121-r1.ebuild:
+  Migrate to multilib, by Michał Górny in bug #468706
 
   04 Jan 2013; Tim Harder <radhermit@gentoo.org>
   -portaudio-19_pre20110326.ebuild:

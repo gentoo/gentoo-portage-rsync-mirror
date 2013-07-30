@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.150 2013/05/13 03:40:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.151 2013/07/29 23:39:25 aballier Exp $
+
+*jack-audio-connection-kit-0.121.3-r1 (29 Jul 2013)
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +jack-audio-connection-kit-0.121.3-r1.ebuild:
+  Migrate to multilib and fix the ncurses dep when readline gets picked up by
+  default.
 
   13 May 2013; Anthony G. Basile <blueness@gentoo.org>
   jack-audio-connection-kit-0.121.3.ebuild:

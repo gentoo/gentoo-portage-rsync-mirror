@@ -1,0 +1,11 @@
+# Copyright 2013-2013 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/abi_mips.desc,v 1.1 2013/07/29 23:52:24 mattst88 Exp $
+
+# This file contains descriptions of ABI_MIPS USE_EXPAND flags.
+
+# Keep it sorted. Please do not add anything without prior discussion
+# on gentoo-dev.
+n32
+n64
+o32
