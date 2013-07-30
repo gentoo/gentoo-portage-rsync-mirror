@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/wspr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.12 2013/06/09 18:15:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.13 2013/07/30 13:22:04 tomjbe Exp $
+
+  30 Jul 2013; Thomas Beierlein <tomjbe@gentoo.org> -wspr-2.00.ebuild:
+  Drop pre EAPI=4 version wrt bug #478576
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> wspr-2.00-r2.ebuild:
   Depend on virtual/python-imaging.

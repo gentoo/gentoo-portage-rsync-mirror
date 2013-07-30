@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.2.ebuild,v 1.1 2013/07/18 16:42:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.2.ebuild,v 1.2 2013/07/30 13:05:57 ssuominen Exp $
 
 EAPI=5
 
@@ -32,6 +32,9 @@ pkg_setup() {
 
 src_prepare() {
 	find . -name Makefile.am -exec sed -i -e '/CFLAGS/s:-g -O2::' {} + || die
+	if [[ ${ABI} == ${DEFAULT_ABI} ]]; then
+		use python && { sed -i -e "s:python-config:$EPYTHON-config:" configure.in || die; }
+	fi
 	epatch_user
 	eautoreconf
 }
