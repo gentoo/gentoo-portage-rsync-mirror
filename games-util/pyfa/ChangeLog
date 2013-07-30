@@ -1,6 +1,9 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.21 2013/07/20 03:09:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.22 2013/07/30 08:16:50 pinkbyte Exp $
+
+  30 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> pyfa-1.1.15.ebuild:
+  Add ~arm keyword, wrt bug #478340
 
 *pyfa-1.1.15 (20 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.15.ebuild,v 1.1 2013/07/20 03:09:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.15.ebuild,v 1.2 2013/07/30 08:16:50 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -14,7 +14,7 @@ SRC_URI="http://go-dl.eve-files.com/media/corp/Kadesh/${P}-odyssey-1.0-src.zip"
 
 LICENSE="GPL-3+ LGPL-2.1+ CC-BY-2.5 free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+graph"
 
 RDEPEND="dev-python/sqlalchemy[${PYTHON_USEDEP}]
