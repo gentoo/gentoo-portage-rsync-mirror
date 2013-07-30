@@ -32,7 +32,7 @@
 <flag name='libadns'>Use <pkg>net-lib/adns</pkg> (DEPRECATED) instead of <pkg>net-dns/c-ares</pkg> to resolve DNS names</flag>
 <flag name='netlink'>Use <pkg>dev-libs/libnl</pkg></flag>
 <flag name='pcap'>Use <pkg>net-libs/libpcap</pkg> for network packet capturing (build dumpcap, rawshark)</flag>
-<flag name='qt4'>Build the wireshark executable with a Qt UI.</flag>
+<flag name='qt4'>Build the wireshark executable with an experimental Qt UI instead of GTK+.</flag>
 <flag name='smi'>Use <pkg>net-libs/libsmi</pkg> to resolve numeric OIDs into human readable format</flag>
 </use>
 </pkgmetadata>

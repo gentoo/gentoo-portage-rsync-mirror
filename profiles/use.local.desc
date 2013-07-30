@@ -4087,7 +4087,7 @@ net-analyzer/wireshark:gtk - Build the wireshark executable with a GTK+ UI.
 net-analyzer/wireshark:libadns - Use net-lib/adns (DEPRECATED) instead of net-dns/c-ares to resolve DNS names
 net-analyzer/wireshark:netlink - Use dev-libs/libnl
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
-net-analyzer/wireshark:qt4 - Build the wireshark executable with a Qt UI.
+net-analyzer/wireshark:qt4 - Build the wireshark executable with an experimental Qt UI instead of GTK+.
 net-analyzer/wireshark:smi - Use net-libs/libsmi to resolve numeric OIDs into human readable format
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
 net-analyzer/zabbix:frontend - Enable zabbix web frontend

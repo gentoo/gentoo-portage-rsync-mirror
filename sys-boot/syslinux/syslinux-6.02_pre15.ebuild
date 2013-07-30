@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.02_pre2.ebuild,v 1.1 2013/07/08 16:45:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.02_pre15.ebuild,v 1.1 2013/07/30 14:48:26 chithanh Exp $
 
 EAPI=4
 
@@ -66,8 +66,9 @@ src_compile() {
 }
 
 src_install() {
+	# parallel install fails sometimes
 	einfo "loaderarch=${loaderarch}"
-	emake LD=$(tc-getLD) INSTALLROOT="${D}" MANDIR=/usr/share/man bios ${loaderarch} install
+	emake -j1 LD=$(tc-getLD) INSTALLROOT="${D}" MANDIR=/usr/share/man bios ${loaderarch} install
 	dodoc README NEWS doc/*.txt
 }
 

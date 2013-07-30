@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/gpredict
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/ChangeLog,v 1.14 2012/06/18 09:00:08 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/ChangeLog,v 1.15 2013/07/30 14:40:49 tomjbe Exp $
+
+  30 Jul 2013; Thomas Beierlein <tomjbe@gentoo.org> gpredict-1.3.ebuild:
+  Bump EAPI
 
   18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -gpredict-1.1.ebuild,
   -gpredict-1.2.ebuild:

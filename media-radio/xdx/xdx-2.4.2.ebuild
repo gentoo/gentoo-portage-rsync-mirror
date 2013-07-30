@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.8 2012/05/03 03:48:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.9 2013/07/30 14:36:01 tomjbe Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils
 
@@ -29,6 +29,9 @@ src_prepare() {
 	# Drop DEPRECATED flags, bug #391091
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
 		src/Makefile.am src/Makefile.in || die
+
+	# Fix desktop file
+	sed -i -e "s/Network;HamRadio/Network;HamRadio;/" Xdx.desktop || die
 }
 
 src_configure() {
@@ -36,8 +39,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
 pkg_postinst() {

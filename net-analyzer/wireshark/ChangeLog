@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.519 2013/07/30 14:20:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.520 2013/07/30 15:01:23 jer Exp $
+
+  30 Jul 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Clarify experimental status of USE=qt4 (e.g. bug #478824).
 
 *wireshark-1.10.1 (30 Jul 2013)
 *wireshark-1.8.9 (30 Jul 2013)
