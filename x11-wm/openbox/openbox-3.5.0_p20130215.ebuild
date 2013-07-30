@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20130215.ebuild,v 1.8 2013/07/25 14:05:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20130215.ebuild,v 1.9 2013/07/30 12:32:35 ago Exp $
 
 EAPI="4"
 inherit multilib autotools python eutils
@@ -12,7 +12,7 @@ branding? ( http://dev.gentoo.org/~hwoarang/distfiles/surreal-gentoo.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha amd64 arm hppa ppc ppc64 ~sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 ~sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="branding debug imlib nls python session startup-notification static-libs"
 
 RDEPEND="dev-libs/glib:2

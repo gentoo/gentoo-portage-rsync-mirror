@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20111019.ebuild,v 1.12 2013/07/29 21:40:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20111019.ebuild,v 1.13 2013/07/30 12:32:44 ago Exp $
 
 EAPI=2
 inherit autotools fdo-mime eutils
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="nls"
 
 RDEPEND="gnome-base/libglade:2.0

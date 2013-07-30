@@ -1,32 +1,47 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-9999.ebuild,v 1.4 2011/10/10 22:57:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-9999.ebuild,v 1.5 2013/07/30 12:48:06 aballier Exp $
 
-EAPI=4
-WANT_AUTOCONF=2.5
+EAPI=5
 
-inherit autotools libtool multilib subversion
+AUTOTOOLS_AUTORECONF=1
+AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
+
+SCM=""
+
+if [ "${PV#9999}" != "${PV}" ] ; then
+	SCM="subversion"
+	ESVN_REPO_URI="svn://svn.mplayerhq.hu/dvdnav/trunk/libdvdread"
+	ESVN_PROJECT="libdvdread"
+	SRC_URI=""
+else
+	SRC_URI="http://dvdnav.mplayerhq.hu/releases/${P}.tar.bz2"
+fi
+
+inherit autotools-multilib ${SCM}
 
 DESCRIPTION="Library for DVD navigation tools"
 HOMEPAGE="http://dvdnav.mplayerhq.hu/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+
+if [ "${PV#9999}" = "${PV}" ] ; then
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+else
+	KEYWORDS=""
+fi
 IUSE="+css"
 
-ESVN_REPO_URI="svn://svn.mplayerhq.hu/dvdnav/trunk/libdvdread"
-ESVN_PROJECT="libdvdread"
+RDEPEND="!<media-libs/libdvdnav-4.2.0
+	css? ( media-libs/libdvdcss[${MULTILIB_USEDEP}] )
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r4
+		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
+DEPEND="${RDEPEND}"
 
-DOCS=( AUTHORS DEVELOPMENT-POLICY.txt ChangeLog TODO README )
+DOCS=( AUTHORS ChangeLog DEVELOPMENT-POLICY.txt NEWS TODO README )
 
 src_prepare() {
-	subversion_src_prepare
-	elibtoolize
-	eautoreconf
-}
-
-src_install() {
-	default
-	rm -f "${ED}"usr/lib*/${PN}.la
+	[ "${PV#9999}" != "${PV}" ] && subversion_src_prepare
+	autotools-multilib_src_prepare
 }

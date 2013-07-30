@@ -53,3 +53,15 @@ usr/lib32/libspeexdsp.so.1
 usr/lib32/libspeexdsp.so.1.5.0
 usr/lib32/pkgconfig/speex.pc
 usr/lib32/pkgconfig/speexdsp.pc
+usr/lib32/libdvdread.so
+usr/lib32/libdvdread.so.4
+usr/lib32/libdvdread.so.4.1.2
+usr/lib32/pkgconfig/dvdread.pc
+usr/lib32/libdvdnav.so
+usr/lib32/libdvdnav.so.4
+usr/lib32/libdvdnav.so.4.1.2
+usr/lib32/libdvdnavmini.so
+usr/lib32/libdvdnavmini.so.4
+usr/lib32/libdvdnavmini.so.4.1.2
+usr/lib32/pkgconfig/dvdnav.pc
+usr/lib32/pkgconfig/dvdnavmini.pc

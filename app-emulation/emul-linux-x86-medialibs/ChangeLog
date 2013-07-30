@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.72 2013/07/28 22:31:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.73 2013/07/30 12:49:26 aballier Exp $
+
+*emul-linux-x86-medialibs-20130224-r5 (30 Jul 2013)
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-medialibs-20130224-r4.ebuild,
+  +emul-linux-x86-medialibs-20130224-r5.ebuild, files/remove-native:
+  new revision featuring migration of libdvdread/nav
 
 *emul-linux-x86-medialibs-20130224-r4 (28 Jul 2013)
 

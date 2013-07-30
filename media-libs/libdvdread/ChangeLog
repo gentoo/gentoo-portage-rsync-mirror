@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdvdread
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.87 2012/07/26 20:09:07 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.88 2013/07/30 12:48:06 aballier Exp $
+
+*libdvdread-4.2.0-r1 (30 Jul 2013)
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +libdvdread-4.2.0-r1.ebuild, libdvdread-9999.ebuild:
+  Migrate to multilib, modernize -9999 ebuild and slat it for medialibs-r5.
 
   26 Jul 2012; Fabian Groffen <grobian@gentoo.org> libdvdread-4.2.0.ebuild:
   Marked ~x64-macos

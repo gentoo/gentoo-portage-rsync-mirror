@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/unix-compat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.20 2013/07/28 13:00:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.21 2013/07/30 12:32:20 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> unix-compat-0.4.1.1.ebuild:
+  Stable for alpha, wrt bug #470376
 
   28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> unix-compat-0.4.1.1.ebuild:
   Stable for ppc, wrt bug #470376

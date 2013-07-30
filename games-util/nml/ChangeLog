@@ -1,6 +1,11 @@
 # ChangeLog for games-util/nml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.15 2013/07/20 16:09:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.16 2013/07/30 12:39:47 hasufell Exp $
+
+*nml-0.2.4-r2 (30 Jul 2013)
+
+  30 Jul 2013; Julian Ospald <hasufell@gentoo.org> +nml-0.2.4-r2.ebuild:
+  revbump wrt #477448, don't overwrite distutils-r1_src_prepare
 
   20 Jul 2013; Michael Sterrett <mr_bones_@gentoo.org>
   +files/nml-0.2.4-pillow.patch, nml-0.2.4-r1.ebuild:

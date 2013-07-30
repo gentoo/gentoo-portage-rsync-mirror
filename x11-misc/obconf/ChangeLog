@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.106 2013/07/29 21:40:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.107 2013/07/30 12:32:44 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> obconf-2.0.3_p20111019.ebuild:
+  Stable for alpha, wrt bug #477744
 
   29 Jul 2013; Julian Ospald <hasufell@gentoo.org>
   obconf-2.0.3_p20111019.ebuild,
