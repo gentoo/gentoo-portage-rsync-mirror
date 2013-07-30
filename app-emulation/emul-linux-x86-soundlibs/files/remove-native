@@ -204,3 +204,11 @@ usr/lib32/libjackserver.so
 usr/lib32/libjackserver.so.0
 usr/lib32/libjackserver.so.0.0.28
 usr/lib32/pkgconfig/jack.pc
+usr/lib32/libportaudio.so
+usr/lib32/libportaudio.so.2
+usr/lib32/libportaudio.so.2.0.0
+usr/lib32/libportaudiocpp.so
+usr/lib32/libportaudiocpp.so.0
+usr/lib32/libportaudiocpp.so.0.0.12
+usr/lib32/pkgconfig/portaudio-2.0.pc
+usr/lib32/pkgconfig/portaudiocpp.pc

@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8089 2013/07/29 23:56:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8091 2013/07/30 00:31:00 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jul 2013; Matt Turner <mattst88@gentoo.org> releases/make.defaults:
+  Drop gpm from default release USE flags, bug 449364.
+
+  30 Jul 2013; Matt Turner <mattst88@gentoo.org> default/linux/packages.build:
+  Drop sys-apps/texinfo from packages.build, bug 471192.
+  default/linux/packages.build
 
   29 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove useless mask on portaudio since its not in tree
