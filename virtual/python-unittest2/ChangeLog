@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-unittest2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.12 2013/07/23 18:07:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.13 2013/07/30 12:24:17 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> python-unittest2-1-r1.ebuild:
+  Stable for alpha, wrt bug #477360
 
   23 Jul 2013; Agostino Sarubbo <ago@gentoo.org> python-unittest2-1-r1.ebuild:
   Stable for arm, wrt bug #477360

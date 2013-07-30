@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-CRC
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.18 2013/07/23 17:59:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.19 2013/07/30 12:27:30 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> Digest-CRC-0.180.0.ebuild:
+  Stable for alpha, wrt bug #476898
 
   23 Jul 2013; Agostino Sarubbo <ago@gentoo.org> Digest-CRC-0.180.0.ebuild:
   Stable for arm, wrt bug #476898

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/test-framework-hunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/ChangeLog,v 1.20 2013/07/28 13:00:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/ChangeLog,v 1.21 2013/07/30 12:30:45 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
+  test-framework-hunit-0.3.0.ebuild:
+  Stable for alpha, wrt bug #470372
 
   28 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
   test-framework-hunit-0.3.0.ebuild:

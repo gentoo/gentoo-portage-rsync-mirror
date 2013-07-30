@@ -212,3 +212,13 @@ usr/lib32/libportaudiocpp.so.0
 usr/lib32/libportaudiocpp.so.0.0.12
 usr/lib32/pkgconfig/portaudio-2.0.pc
 usr/lib32/pkgconfig/portaudiocpp.pc
+usr/lib32/libmpg123.so
+usr/lib32/libmpg123.so.0
+usr/lib32/libmpg123.so.0.36.6
+usr/lib32/mpg123/output_alsa.so
+usr/lib32/mpg123/output_dummy.so
+usr/lib32/mpg123/output_jack.so
+usr/lib32/mpg123/output_oss.so
+usr/lib32/mpg123/output_portaudio.so
+usr/lib32/mpg123/output_pulse.so
+usr/lib32/pkgconfig/libmpg123.pc

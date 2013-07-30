@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Math_Stats
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.23 2013/07/28 12:55:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/ChangeLog,v 1.24 2013/07/30 12:21:47 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-Math_Stats-0.9.1.ebuild:
+  Stable for alpha, wrt bug #470430
 
   28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-Math_Stats-0.9.1.ebuild:
   Stable for ppc, wrt bug #470430

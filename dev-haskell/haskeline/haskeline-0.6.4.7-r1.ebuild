@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/haskeline-0.6.4.7-r1.ebuild,v 1.3 2013/07/28 12:58:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/haskeline-0.6.4.7-r1.ebuild,v 1.4 2013/07/30 12:29:14 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=">=dev-haskell/extensible-exceptions-0.1.1.0:=[profile?]

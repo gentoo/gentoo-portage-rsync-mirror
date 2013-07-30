@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.289 2013/07/28 19:40:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.290 2013/07/30 12:11:55 aballier Exp $
+
+*mpg123-1.15.4-r1 (30 Jul 2013)
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org> +mpg123-1.15.4-r1.ebuild:
+  Migrate to multilib: Build only libmpg123 for non native ABIs, skip the
+  output modules only used by the mpg123 binary. Slat if for soundlibs-r10.
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> mpg123-1.15.4.ebuild:
   keyword ~amd64-fbsd, bug #477750

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.68 2013/07/28 19:46:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.69 2013/07/30 12:19:18 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> pytest-2.3.5.ebuild:
+  Stable for alpha, wrt bug #478344
 
   28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> pytest-2.3.5.ebuild:
   Stable for arm, wrt bug #478344

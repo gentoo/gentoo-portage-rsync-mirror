@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.102 2013/07/30 00:01:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.103 2013/07/30 12:12:59 aballier Exp $
+
+*emul-linux-x86-soundlibs-20130224-r10 (30 Jul 2013)
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-soundlibs-20130224-r9.ebuild,
+  +emul-linux-x86-soundlibs-20130224-r10.ebuild, files/remove-native:
+  new revision featuring migrated mpg123
 
 *emul-linux-x86-soundlibs-20130224-r9 (30 Jul 2013)
 

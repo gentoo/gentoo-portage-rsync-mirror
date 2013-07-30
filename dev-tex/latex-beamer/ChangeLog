@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.147 2013/07/23 20:01:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.148 2013/07/30 12:22:14 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> latex-beamer-3.27.ebuild:
+  Stable for alpha, wrt bug #477616
 
   23 Jul 2013; Agostino Sarubbo <ago@gentoo.org> latex-beamer-3.27.ebuild:
   Stable for arm, wrt bug #477616

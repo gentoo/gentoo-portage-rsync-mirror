@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/unifdef-2.9.ebuild,v 1.6 2013/07/23 18:07:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/unifdef-2.9.ebuild,v 1.7 2013/07/30 12:18:40 ago Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://dotat.at/prog/unifdef/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 -sparc-fbsd -x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 -sparc-fbsd -x86-fbsd ~amd64-linux ~x86-linux"
 
 DOCS=( README )
 

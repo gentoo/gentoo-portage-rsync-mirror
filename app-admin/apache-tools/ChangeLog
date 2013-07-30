@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.161 2013/07/28 01:36:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.162 2013/07/30 12:21:10 ago Exp $
+
+  30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.25.ebuild:
+  Stable for alpha, wrt bug #476568
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> apache-tools-2.4.6.ebuild:
   keyword ~amd64-fbsd
