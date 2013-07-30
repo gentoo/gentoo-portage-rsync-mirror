@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.0-r1.ebuild,v 1.1 2013/07/30 06:21:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.0-r1.ebuild,v 1.2 2013/07/30 21:15:33 polynomial-c Exp $
 
 EAPI=5
 
@@ -43,6 +43,11 @@ DEPEND="${RDEPEND}
 
 #overwrite ruby-ng.eclass default
 S="${WORKDIR}/${P}"
+
+pkg_setup() {
+	# prevent ruby-ng.eclass from messing with src_unpack
+	:;
+}
 
 src_unpack() {
 	# prevent ruby-ng.eclass from messing with src_unpack

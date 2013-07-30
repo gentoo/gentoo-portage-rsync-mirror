@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.2 2013/07/29 20:11:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.3 2013/07/30 21:16:06 radhermit Exp $
 
 EAPI=5
 
@@ -88,13 +88,13 @@ src_compile() {
 	# Using the bootstrap compiler.
 	set_pp bootstrap
 
-	emake -j1 PP="${pp}" compiler_cycle
+	emake -j1 PP="${pp}" compiler_cycle AS="$(tc-getAS)"
 
 	# Save new compiler from cleaning...
 	cp "${S}"/compiler/ppc${FPC_ARCH} "${S}"/ppc${FPC_ARCH}.new || die
 
 	# ...rebuild with current version...
-	emake -j1 PP="${S}"/ppc${FPC_ARCH}.new compiler_cycle
+	emake -j1 PP="${S}"/ppc${FPC_ARCH}.new AS="$(tc-getAS)" compiler_cycle
 
 	# ..and clean up afterwards
 	rm "${S}"/ppc${FPC_ARCH}.new || die
@@ -102,13 +102,13 @@ src_compile() {
 	# Using the new compiler.
 	set_pp new
 
-	emake -j1 PP="${pp}" rtl_clean
+	emake -j1 PP="${pp}" AS="$(tc-getAS)" rtl_clean
 
-	emake -j1 PP="${pp}" rtl packages_all utils
+	emake -j1 PP="${pp}" AS="$(tc-getAS)" rtl packages_all utils
 
 	if use ide ; then
 		cd "${S}"/ide || die
-		emake -j1 PP="${pp}"
+		emake -j1 PP="${pp}" AS="$(tc-getAS)"
 	fi
 }
 
