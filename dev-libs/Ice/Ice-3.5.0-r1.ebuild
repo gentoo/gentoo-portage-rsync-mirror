@@ -1,22 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2-r1.ebuild,v 1.3 2012/12/10 07:21:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.0-r1.ebuild,v 1.1 2013/07/30 06:21:51 polynomial-c Exp $
 
-EAPI="4"
+EAPI=5
 
-PYTHON_DEPEND="python? 2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby18"
 
-inherit toolchain-funcs versionator python mono ruby-ng db-use
+inherit toolchain-funcs versionator python-r1 mono-env ruby-ng db-use
 
 DESCRIPTION="ICE middleware C++ library and generator tools"
 HOMEPAGE="http://www.zeroc.com/"
 SRC_URI="http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.tar.gz
-	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf.gz )
-	http://dev.gentoo.org/~ssuominen/${P}-gcc47.patch.bz2"
+	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf )"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~x86 ~x64-macos ~x86-linux"
@@ -25,15 +22,16 @@ IUSE="doc examples +ncurses mono python ruby test debug"
 RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.5
 	>=dev-libs/openssl-0.9.8o:0
-	>=sys-libs/db-4.8.30[cxx]
+	<sys-libs/db-6.0[cxx]
 	~dev-cpp/libmcpp-2.7.2
+	python? ( ${PYTHON_DEPS} )
 	ruby? ( $(ruby_implementation_depend ruby18) )
 	mono? ( dev-lang/mono )
 	!dev-python/IcePy
 	!dev-ruby/IceRuby"
 DEPEND="${RDEPEND}
 	ncurses? ( sys-libs/ncurses sys-libs/readline )
-	test? ( =dev-lang/python-2* )"
+	test? ( ${PYTHON_DEPS} )"
 
 # Maintainer notes:
 # - yes, we have to do the trickery with the move for the python functions
@@ -46,23 +44,12 @@ DEPEND="${RDEPEND}
 #overwrite ruby-ng.eclass default
 S="${WORKDIR}/${P}"
 
-pkg_setup() {
-	if use python || use test; then
-		python_pkg_setup
-	fi
-}
-
 src_unpack() {
 	# prevent ruby-ng.eclass from messing with src_unpack
 	default
 }
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-3.4.1-db5.patch \
-		"${FILESDIR}"/${PN}-3.4.2-gcc46.patch \
-		"${WORKDIR}"/${PN}-3.4.2-gcc47.patch
-
 	sed -i \
 		-e 's|\(install_docdir[[:space:]]*\):=|\1?=|' \
 		-e 's|\(install_configdir[[:space:]]*\):=|\1?=|' \
@@ -76,6 +63,7 @@ src_prepare() {
 
 	sed -i \
 		-e 's|-O2 ||g' \
+		-e 's|-Werror ||g' \
 		cpp/config/Make.rules.Linux || die "sed failed"
 
 	sed -i \
@@ -114,8 +102,10 @@ src_configure() {
 		cpp/config/Make.rules{,.Linux} py/config/Make.rules || die "sed failed"
 
 	if use python ; then
-		python_copy_sources py
-		mv py py.orig
+		S=${S}/py python_copy_sources
+
+		# make a place for the symlink
+		rm -r py/python || die
 	fi
 
 	if use ruby ; then
@@ -131,6 +121,7 @@ src_configure() {
 
 	MAKE_RULES_CS="GACINSTALL=yes GAC_ROOT=\"${ED}/usr/$(get_libdir)\" GAC_DIR=${EPREFIX}/usr/$(get_libdir)"
 
+	use test && python_export_best
 }
 
 src_compile() {
@@ -146,11 +137,9 @@ src_compile() {
 
 	if use python ; then
 		building() {
-			mv py-${PYTHON_ABI} py
-			emake -C py ${MAKE_RULES} || die "emake py failed (for py-${PYTHON_ABI})"
-			mv py py-${PYTHON_ABI}
+			emake -C "${BUILD_DIR}" ${MAKE_RULES} || die "emake py-${EPYTHON} failed"
 		}
-		python_execute_function building
+		BUILD_DIR=py python_foreach_impl building
 	fi
 
 	if use ruby ; then
@@ -181,30 +170,27 @@ src_install() {
 
 	if use doc ; then
 		dohtml -r cpp/doc/reference/*
-		dodoc "${WORKDIR}/${P}.pdf"
+		dodoc "${DISTDIR}/${P}.pdf"
 	fi
 
 	if use python ; then
 		installation() {
-			dodir $(python_get_sitedir)
-			mv py-${PYTHON_ABI} py
-			emake -C py ${MAKE_RULES} install_pythondir="\"${D}/$(python_get_sitedir)\"" install_libdir="\"${D}/$(python_get_sitedir)\"" install || die "emake py install failed (for py-${PYTHON_ABI})"
-			mv py py-${PYTHON_ABI}
+			mkdir -p "${D}/$(python_get_sitedir)" || die
+
+			emake -C "${BUILD_DIR}" ${MAKE_RULES} \
+				install_pythondir="\"${D}/$(python_get_sitedir)\"" \
+				install_libdir="\"${D}/$(python_get_sitedir)\"" \
+				install || die "emake py-${EPYTHON} install failed"
 		}
-		python_execute_function installation
+		BUILD_DIR=py python_foreach_impl installation
 
 		docinto py
-		dodoc py.orig/CHANGES py.orig/README
+		dodoc py/CHANGES py/README
 
 		if use examples ; then
 			insinto /usr/share/doc/${PF}/examples-py
-			doins -r py.orig/demo/*
+			doins -r py/demo/*
 		fi
-
-		cd "${ED}/$(python_get_sitedir -f)"
-		PYTHON_MODULES=(*.py)
-		PYTHON_MODULES+=(IceBox IceGrid IcePatch2 IceStorm)
-		cd "${S}"
 	fi
 
 	if use ruby ; then
@@ -236,32 +222,36 @@ src_install() {
 	fi
 }
 
+run_tests() {
+	# Run tests through the script interface since Python test runner
+	# fails to exit with non-zero code for some reason.
+
+	pushd "${1}" >/dev/null || die
+	./allTests.py --script | sh
+	ret=${?}
+	popd >/dev/null || die
+
+	return ${ret}
+}
+
 src_test() {
-	emake -C cpp ${MAKE_RULES} test || die "emake test failed"
+	run_tests cpp || die "emake cpp test failed"
 
 	if use python ; then
 		testing() {
-			mv py-${PYTHON_ABI} py
-			emake -C py ${MAKE_RULES} test || die "emake py test failed (for py-${PYTHON_ABI})"
-			mv py py-${PYTHON_ABI}
+			# tests require that the directory is named 'py'
+			ln -f -s ../"${BUILD_DIR}"/python py/python || die
+			run_tests py || die "emake py-${EPYTHON} test failed"
 		}
-		python_execute_function testing
+		BUILD_DIR=py python_foreach_impl testing
 	fi
 
 	if use ruby ; then
-		emake -C rb ${MAKE_RULES} ${MAKE_RULES_RB} test || die "emake rb test failed"
+		run_tests rb || die "emake rb test failed"
 	fi
 
 	if use mono ; then
 #		ewarn "Tests for C# are currently disabled."
-		emake -C cs ${MAKE_RULES} ${MAKE_RULES_CS} test || die "emake cs test failed"
+		run_tests cs || die "emake cs test failed"
 	fi
-}
-
-pkg_postinst() {
-	use python && python_mod_optimize "${PYTHON_MODULES[@]}"
-}
-
-pkg_postrm() {
-	use python && python_mod_cleanup "${PYTHON_MODULES[@]}"
 }

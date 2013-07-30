@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.9 2012/11/16 13:40:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.10 2013/07/30 06:21:51 polynomial-c Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ IUSE="doc examples +ncurses mono python ruby test debug"
 RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.5
 	>=dev-libs/openssl-0.9.8o:0
-	>=sys-libs/db-4.8.30[cxx]
+	<sys-libs/db-6.0[cxx]
 	~dev-cpp/libmcpp-2.7.2
 	ruby? ( $(ruby_implementation_depend ruby18) )
 	mono? ( dev-lang/mono )

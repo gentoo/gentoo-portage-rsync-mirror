@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.1_p2.ebuild,v 1.8 2012/11/04 20:45:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.3_p2.ebuild,v 1.1 2013/07/30 06:04:23 idl0r Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="ISC BSD BSD-2 HPND JNIC RSA openssl"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc gssapi idn ipv6 readline ssl urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
@@ -58,9 +58,10 @@ src_configure() {
 	tc-export BUILD_CC
 	econf \
 		--localstatedir=/var \
+		--without-python \
 		$(use_enable ipv6) \
 		$(use_with idn) \
-		$(use_with ssl openssl) \
+		$(use_with ssl openssl "${EPREFIX}"/usr) \
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
 		$(use_with readline) \
@@ -71,10 +72,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake -C lib/ || die "emake lib failed"
-	emake -C bin/dig/ || die "emake bin/dig failed"
-	emake -C bin/nsupdate/ || die "emake bin/nsupdate failed"
-	emake -C bin/dnssec/ || die "emake bin/dnssec failed"
+	local AR=$(tc-getAR)
+
+	emake AR=$AR -C lib/ || die "emake lib failed"
+	emake AR=$AR -C bin/dig/ || die "emake bin/dig failed"
+	emake AR=$AR -C bin/nsupdate/ || die "emake bin/nsupdate failed"
+	emake AR=$AR -C bin/dnssec/ || die "emake bin/dnssec failed"
 }
 
 src_install() {

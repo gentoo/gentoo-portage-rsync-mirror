@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.22 2013/06/12 14:55:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.23 2013/07/30 06:21:51 polynomial-c Exp $
+
+*Ice-3.5.0-r1 (30 Jul 2013)
+
+  30 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> Ice-3.4.2.ebuild,
+  -Ice-3.4.2-r1.ebuild, -Ice-3.5.0.ebuild, +Ice-3.5.0-r1.ebuild:
+  Non-maintainer commit: Converted ebuild to python-r1 eclass. Thanks to mgorny
+  for his expensive work with the conversion. Changed dependencies to not use
+  >=sys-libs/db-6.0 due to upstream not supporting this version because of
+  license issues (bug #476378). Removed old.
 
   12 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> Ice-3.5.0.ebuild:
   Fixed installation with "doc" USE flag being enabled. Thanks to Martin von
