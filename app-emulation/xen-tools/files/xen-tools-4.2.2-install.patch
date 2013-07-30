@@ -1,0 +1,15 @@
+fix invalid installs of docs/man and config into /usr/local
+
+--- xen-4.2.2-orig/tools/Makefile	2013-04-23 18:42:55.000000000 +0200
++++ xen-4.2.2/tools/Makefile	2013-07-29 17:01:33.764093405 +0200
+@@ -199,6 +199,9 @@
+ 		--bindir=$(LIBEXEC) \
+ 		--datadir=$(SHAREDIR)/qemu-xen \
+ 		--disable-kvm \
++		--mandir=/usr/share/man \
++		--docdir=/usr/share/doc/xen \
++		--sysconfdir=/etc \
+ 		--python=$(PYTHON) \
+ 		$(IOEMU_CONFIGURE_CROSS); \
+ 	$(MAKE) all
+

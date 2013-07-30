@@ -1,21 +1,26 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-9999.ebuild,v 1.3 2013/07/30 07:31:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r3.ebuild,v 1.1 2013/07/30 07:31:20 maksbotan Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/storage/autofs/autofs.git"
-inherit autotools-utils linux-info multilib git-2
+inherit autotools-utils linux-info multilib
+
+PATCH_VER=3
+[[ -n ${PATCH_VER} ]] && \
+	PATCHSET_URI="http://dev.gentoo.org/~jlec/distfiles/${P}-patches-${PATCH_VER}.tar.lzma"
 
 DESCRIPTION="Kernel based automounter"
 HOMEPAGE="http://www.linux-consulting.com/Amd_AutoFS/autofs.html"
+SRC_URI="
+	mirror://kernel/linux/daemons/${PN}/v5/${P}.tar.bz2
+	${PATCHSET_URI}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="-dmalloc hesiod ldap libtirpc mount-locking sasl"
 
 # USE="sasl" adds SASL support to the LDAP module which will not be build. If
@@ -41,6 +46,38 @@ DEPEND="${RDEPEND}
 
 CONFIG_CHECK="~AUTOFS4_FS"
 
+PATCHES=(
+	# Fix for bug #210762
+	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/4203
+	"${FILESDIR}"/${PN}-5.0.3-heimdal.patch
+
+	# Accumulated fixes for bugs
+	#    #154797: Respect CC and CFLAGS
+	#    #253412: Respect LDFLAGS
+	#    #247969: Link order for --as-needed
+	"${FILESDIR}"/${PN}-5.0.7-respect-user-flags-and-fix-asneeded-r3.patch
+
+	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/5371
+	"${FILESDIR}"/${PN}-5.0.5-fix-install-deadlink.patch
+
+	"${FILESDIR}"/${P}-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch #361899, #468606
+	"${FILESDIR}"/${PN}-5.0.6-revert-ldap.patch #381315
+	"${FILESDIR}"/${PN}-5.0.7-sasl-def.patch #469324
+	"${FILESDIR}"/${PN}-5.0.7-libtirpc-link.patch #464120
+	"${FILESDIR}"/${PN}-5.0.7-parallel-make.patch
+	)
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+src_prepare() {
+	# Upstream's patchset
+	if [[ -n ${PATCH_VER} ]]; then
+		EPATCH_SUFFIX="patch" \
+			epatch "${WORKDIR}"/patches
+	fi
+	autotools-utils_src_prepare
+}
+
 src_configure() {
 	# --with-confdir is for bug #361481
 	# --with-mapdir is for bug #385113
@@ -57,15 +94,11 @@ src_configure() {
 		$(use_with hesiod)
 		$(use_enable mount-locking)
 		--disable-ext-env
-		--enable-sloppy-mount
-		--enable-force-shutdown
+		--enable-sloppy-mount # bug #453778
+		--enable-forced-shutdown
 		--enable-ignore-busy
 	)
 	autotools-utils_src_configure
-}
-
-src_compile() {
-	autotools-utils_src_compile DONTSTRIP=1
 }
 
 src_install() {

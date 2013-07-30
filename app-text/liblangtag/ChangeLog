@@ -1,6 +1,11 @@
 # ChangeLog for app-text/liblangtag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.19 2013/06/25 12:49:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.20 2013/07/30 07:09:38 scarabeus Exp $
+
+  30 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/liblangtag-0.5.1-gcc45.patch, liblangtag-0.5.1.ebuild:
+  Fix liblangtag build on older gccs wrt bug#475494. Thanks to Fabio Rossi for
+  finding the patch.
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> liblangtag-0.5.1.ebuild:
   Stable for amd64, wrt bug #474156
