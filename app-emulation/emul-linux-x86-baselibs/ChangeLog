@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.141 2013/07/28 14:06:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.142 2013/07/30 22:49:49 aballier Exp $
+
+*emul-linux-x86-baselibs-20130224-r2 (30 Jul 2013)
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r1.ebuild,
+  +emul-linux-x86-baselibs-20130224-r2.ebuild, files/remove-native:
+  new revision featuring migration of libpng, udis86 and libffi. libpng files
+  removed from the bundle are only the .so.pc: newly built packages will use
+  libpng16 while the rest of emul-libs can still work while linked to libpng15.
 
 *emul-linux-x86-baselibs-20130224-r1 (28 Jul 2013)
 
