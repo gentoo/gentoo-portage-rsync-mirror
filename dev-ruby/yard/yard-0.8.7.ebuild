@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.8.7.ebuild,v 1.1 2013/07/27 14:40:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.8.7.ebuild,v 1.2 2013/07/31 07:12:05 mrueg Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd6
 IUSE=""
 
 ruby_add_bdepend "doc? ( || ( dev-ruby/bluecloth dev-ruby/maruku dev-ruby/rdiscount dev-ruby/kramdown ) )
-	test? ( <dev-ruby/rspec-2.14:2 dev-ruby/ruby-gettext )"
+	test? ( dev-ruby/ruby-gettext )"
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/ s:^:#:' spec/spec_helper.rb || die

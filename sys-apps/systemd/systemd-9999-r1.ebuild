@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.2 2013/07/30 08:48:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.3 2013/07/31 07:09:02 mgorny Exp $
 
 EAPI=5
 
@@ -99,22 +99,6 @@ pkg_pretend() {
 		~SYSFS ~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 #		~!FW_LOADER_USER_HELPER"
 
-	# read null-terminated argv[0] from PID 1
-	# and see which path to systemd was used (if any)
-	local init_path
-	IFS= read -r -d '' init_path < /proc/1/cmdline
-	if [[ ${init_path} == */bin/systemd ]]; then
-		eerror "You are using a compatibility symlink to run systemd. The symlink"
-		eerror "has been removed. Please update your bootloader to use:"
-		eerror
-		eerror "	init=/usr/lib/systemd/systemd"
-		eerror
-		eerror "and reboot your system. We are sorry for the inconvenience."
-		if [[ ${MERGE_TYPE} != buildonly ]]; then
-			die "Compatibility symlink used to boot systemd."
-		fi
-	fi
-
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		if [[ $(gcc-major-version) -lt 4
 			|| ( $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 6 ) ]]
@@ -212,22 +196,9 @@ src_install() {
 		udevlibexecdir="${MY_UDEVDIR}" \
 		dist_udevhwdb_DATA=
 
-	# keep udev working without initramfs, for openrc compat
-	dodir /bin /sbin
-	mv "${D}"/usr/lib/systemd/systemd-udevd "${D}"/sbin/udevd || die
-	mv "${D}"/usr/bin/udevadm "${D}"/bin/udevadm || die
-	dosym ../../../sbin/udevd /usr/lib/systemd/systemd-udevd
-	dosym ../../bin/udevadm /usr/bin/udevadm
-
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
 	newins shell-completion/systemd-zsh-completion.zsh "_${PN}"
-
-	# compat for init= use
-	dosym ../usr/lib/systemd/systemd /bin/systemd
-	dosym ../lib/systemd/systemd /usr/bin/systemd
-	# rsyslog.service depends on it...
-	dosym ../usr/bin/systemctl /bin/systemctl
 
 	# we just keep sysvinit tools, so no need for the mans
 	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
@@ -240,14 +211,6 @@ src_install() {
 	# Preserve empty dirs in /etc & /var, bug #437008
 	keepdir /etc/binfmt.d /etc/modules-load.d /etc/tmpfiles.d \
 		/etc/systemd/ntp-units.d /etc/systemd/user /var/lib/systemd
-
-	# Check whether we won't break user's system.
-	local x
-	for x in /bin/systemd /usr/bin/systemd \
-		/usr/bin/udevadm /usr/lib/systemd/systemd-udevd
-	do
-		[[ -x ${D}${x} ]] || die "${x} symlink broken, aborting."
-	done
 }
 
 optfeature() {

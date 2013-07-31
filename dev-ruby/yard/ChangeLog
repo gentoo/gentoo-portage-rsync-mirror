@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.52 2013/07/27 14:40:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.53 2013/07/31 07:12:05 mrueg Exp $
+
+  31 Jul 2013; Manuel Rüger <mrueg@gentoo.org> yard-0.8.7.ebuild:
+  Drop dependency on <rspec-2.14, as tests are working again with rspec-
+  mocks-2.14.2
 
 *yard-0.8.7 (27 Jul 2013)
 
