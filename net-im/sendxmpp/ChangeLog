@@ -1,6 +1,11 @@
 # ChangeLog for net-im/sendxmpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/ChangeLog,v 1.15 2012/10/22 10:08:55 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/ChangeLog,v 1.16 2013/07/31 01:22:42 mattst88 Exp $
+
+*sendxmpp-1.23 (31 Jul 2013)
+
+  31 Jul 2013; Matt Turner <mattst88@gentoo.org> +sendxmpp-1.23.ebuild:
+  Version bump to 1.23. Bump to EAPI=5.
 
   22 Oct 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -60,4 +65,3 @@
   23 Nov 2004; Don Seiler <rizzo@gentoo.org> +metadata.xml,
   +sendxmpp-0.0.4.ebuild:
   Initial add, closes bug #71568.  Thanks to Daniel Webert
-
