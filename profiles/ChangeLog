@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8095 2013/07/31 00:43:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8096 2013/07/31 06:28:05 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Temporarily mask new libjpeg-turbo revision with initial conversion to the
+  new multilib format.
 
   31 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask net-analyzer/nmap-6.40 as it needs masked >=dev-lang/lua-5.2.

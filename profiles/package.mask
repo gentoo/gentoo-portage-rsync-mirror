@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14967 2013/07/31 00:43:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14968 2013/07/31 06:28:05 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -466,8 +466,8 @@ media-tv/tvtime
 app-text/cuneiform
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
-# Reasons to keep them masked:
-# - libv4l depends on emul-linux for jpeg
+# Missing some blockers, deps, revision bumped emul-
+>=media-libs/libjpeg-turbo-1.3.0-r1
 >=media-libs/libv4l-0.9.5-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (12 Mar 2013)
