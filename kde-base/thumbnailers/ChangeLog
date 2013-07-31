@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/thumbnailers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.146 2013/07/30 10:41:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.147 2013/07/31 18:40:01 kensington Exp $
+
+  31 Jul 2013; Michael Palimaka <kensington@gentoo.org>
+  thumbnailers-4.10.4.ebuild, thumbnailers-4.10.5.ebuild:
+  Remove unused lcms dependency wrt bug #478410.
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> thumbnailers-4.10.5.ebuild:
   Stable for ppc, wrt to bug #477634

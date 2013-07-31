@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/wakeonlan-0.41-r1.ebuild,v 1.11 2013/02/17 21:39:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/wakeonlan-0.41-r1.ebuild,v 1.12 2013/07/31 18:47:15 axs Exp $
+
+EAPI=5
 
 inherit eutils perl-app
 
@@ -13,8 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 arm ~ppc sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DEPEND="virtual/perl-ExtUtils-MakeMaker"
+
+src_prepare() {
 	epatch "${FILESDIR}"/"${P}"-ethers-lookup.patch
 }

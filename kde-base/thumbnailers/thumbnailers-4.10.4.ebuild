@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/thumbnailers-4.10.4.ebuild,v 1.5 2013/07/02 08:06:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/thumbnailers-4.10.4.ebuild,v 1.6 2013/07/31 18:40:01 kensington Exp $
 
 EAPI=5
 
@@ -14,7 +14,6 @@ IUSE="debug"
 DEPEND="
 	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2)
-	media-libs/lcms:0
 "
 RDEPEND="${DEPEND}"
 
