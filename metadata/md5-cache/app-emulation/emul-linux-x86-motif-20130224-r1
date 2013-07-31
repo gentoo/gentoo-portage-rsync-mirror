@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=abi_x86_32 +development
+KEYWORDS=-* ~amd64
+LICENSE=!abi_x86_32? ( LGPL-2+ MIT MOTIF ) abi_x86_32? ( metapackage )
+RDEPEND=!<app-emulation/emul-linux-x86-xlibs-20110129 !abi_x86_32? ( !x11-libs/motif[abi_x86_32(-)] ~app-emulation/emul-linux-x86-xlibs-20130224 ) abi_x86_32? ( x11-libs/motif:0[abi_x86_32(-)] x11-libs/motif:2.2[abi_x86_32(-)] )
+RESTRICT=strip
+SLOT=0
+SRC_URI=!abi_x86_32? ( http://dev.gentoo.org/~pacho/emul/emul-linux-x86-motif-20130224.tar.xz )
+_eclasses_=emul-linux-x86	849070907fe4e8553daad52137b99265	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=9d212dbe8f0c55a2dc43d2aae7c8305a

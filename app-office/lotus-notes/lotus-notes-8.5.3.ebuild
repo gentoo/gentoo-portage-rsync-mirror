@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.4 2013/06/22 13:30:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.5 2013/07/31 14:10:38 ulm Exp $
 
 EAPI=5
 
@@ -14,15 +14,10 @@ SRC_URI="lotus_notes853_linux_RI_en.tar
 
 LICENSE="lotus-notes"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-	amd64? (
-		app-emulation/emul-linux-x86-gtklibs
-		app-emulation/emul-linux-x86-motif
-		app-emulation/emul-linux-x86-xlibs
-	)
 	x86? (
 		dev-libs/dbus-glib
 		dev-libs/libcroco
@@ -58,6 +53,11 @@ RDEPEND="
 	dev-libs/icu
 	sys-apps/dbus[X]
 "
+#	amd64? (
+#		app-emulation/emul-linux-x86-gtklibs
+#		app-emulation/emul-linux-x86-motif
+#		app-emulation/emul-linux-x86-xlibs
+#	)
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror fetch strip"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r1.ebuild,v 1.2 2013/07/20 16:13:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r1.ebuild,v 1.3 2013/07/31 14:03:51 maksbotan Exp $
 
 EAPI=4
 
@@ -78,7 +78,7 @@ pkg_postinst() {
 	elog ""
 	elog "to set up Plymouth."
 
-	if !has_version "sys-kernel/dracut[dracut_modules_plymouth]" && !has_version "sys-kernel/genkernel-next[plymouth]"; then
+	if ! has_version "sys-kernel/dracut[dracut_modules_plymouth]" && ! has_version "sys-kernel/genkernel-next[plymouth]"; then
 		ewarn "If you want initramfs builder with plymouth support, please emerge"
 		ewarn "sys-kernel/dracut[dracut_modules_plymouth] or sys-kernel/genkernel-next[plymouth]."
 	fi
