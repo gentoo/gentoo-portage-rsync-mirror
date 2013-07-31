@@ -26,3 +26,9 @@ usr/lib32/llvm/LLVMHello.so
 usr/lib32/llvm/libLLVM-3.1.so
 usr/lib32/llvm/libLTO.so
 usr/lib32/llvm/libprofile_rt.so
+usr/lib32/libpng12.so.0
+usr/lib32/pkgconfig/libpng15.pc
+usr/lib32/libjpeg.so.8
+usr/lib32/libjpeg.so.8.0.2
+usr/lib32/libjpeg.so
+usr/lib32/libturbojpeg.so

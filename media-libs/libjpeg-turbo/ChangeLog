@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.62 2013/07/31 10:07:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.63 2013/07/31 16:07:28 aballier Exp $
+
+  31 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  libjpeg-turbo-1.3.0-r1.ebuild:
+  add the blocker on emul-linux so that it is stacked for baselibs -r4
 
   31 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
   libjpeg-turbo-1.3.0-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.2 2013/07/31 10:07:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.3 2013/07/31 16:07:28 aballier Exp $
 
 EAPI=5
 
@@ -28,7 +28,9 @@ IUSE="java static-libs"
 ASM_DEPEND="|| ( dev-lang/nasm dev-lang/yasm )"
 COMMON_DEPEND="!media-libs/jpeg:0"
 RDEPEND="${COMMON_DEPEND}
-	java? ( >=virtual/jre-1.5 )"
+	java? ( >=virtual/jre-1.5 )
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r3
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 DEPEND="${COMMON_DEPEND}
 	amd64? ( ${ASM_DEPEND} )
 	x86? ( ${ASM_DEPEND} )

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.15 2013/07/02 16:14:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.16 2013/07/31 16:05:15 phajdan.jr Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -24,10 +24,6 @@ net-libs/libkolabxml php
 # Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2013)
 # Waiting for >=app-cdr/brasero-3 stabilization
 app-pda/gtkpod cdr
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (11 Apr 2013)
-# Usually requires recent ffmpeg/libav, not ready for stable.
-www-client/chromium system-ffmpeg
 
 # Pacho Ramos <pacho@gentoo.org> (01 Apr 2013)
 # Needed to stabilize anjuta-3.6

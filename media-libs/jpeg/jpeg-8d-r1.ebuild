@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-8d-r1.ebuild,v 1.1 2013/07/31 10:04:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-8d-r1.ebuild,v 1.2 2013/07/31 16:10:51 aballier Exp $
 
 EAPI=5
 inherit eutils libtool toolchain-funcs multilib-minimal
@@ -17,6 +17,8 @@ LICENSE="IJG"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="static-libs"
+RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r3
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7-maxmem_sysconf.patch
