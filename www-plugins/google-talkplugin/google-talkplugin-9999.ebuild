@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.15 2013/06/21 04:38:15 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.16 2013/07/31 15:20:03 ottxor Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
 #GoogleTalkPlugin binary contains openssl and celt
-LICENSE="Google-TOS openssl BSD"
+LICENSE="Google-TOS openssl BSD system-libCg? ( NVIDIA-r1 )"
 RESTRICT="strip mirror"
 
 RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
