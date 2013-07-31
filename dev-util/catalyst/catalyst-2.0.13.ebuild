@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.13.ebuild,v 1.1 2013/07/31 04:34:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.13.ebuild,v 1.2 2013/07/31 10:07:51 xmw Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		http://dev.gentoo.org/~jmbsvicetto/distfiles/${P}.tar.bz2"
+		http://dev.gentoo.org/~mattst88/distfiles/${P}.tar.bz2"
 	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 fi
 inherit eutils multilib python

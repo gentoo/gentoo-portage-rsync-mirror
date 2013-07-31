@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.91 2013/07/13 22:15:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.92 2013/07/31 10:18:57 ssuominen Exp $
+
+  31 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> libv4l-0.9.5-r1.ebuild:
+  Missing multilib depend for virtual/jpeg.
 
   13 Jul 2013; Michał Górny <mgorny@gentoo.org> libv4l-0.9.5-r1.ebuild:
   Add abi_x86_32 blockers for emul-linux.

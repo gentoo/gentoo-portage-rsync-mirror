@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.1 2013/07/31 06:28:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.2 2013/07/31 10:07:13 ssuominen Exp $
 
 EAPI=5
 
@@ -78,7 +78,7 @@ multilib_src_compile() {
 	use java && _java_makeopts="-j1"
 	emake ${_java_makeopts}
 
-	if ! [[ ${ABI} == ${DEFAULT_ABI} ]]; then
+	if [[ ${ABI} == ${DEFAULT_ABI} ]]; then
 		ebegin "Building exifautotran and jpegexiforient extra tools"
 		pushd ../debian/extra >/dev/null
 		emake CC="$(tc-getCC)" CFLAGS="${LDFLAGS} ${CFLAGS}"

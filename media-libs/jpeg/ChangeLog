@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.137 2013/01/14 11:00:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.138 2013/07/31 10:04:15 ssuominen Exp $
+
+*jpeg-8d-r1 (31 Jul 2013)
+
+  31 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> +jpeg-8d-r1.ebuild,
+  jpeg-9.ebuild:
+  Convert to the new multilib format.
 
 *jpeg-9 (14 Jan 2013)
 
