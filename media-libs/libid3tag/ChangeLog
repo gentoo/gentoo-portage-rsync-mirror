@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libid3tag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.47 2013/07/21 21:37:15 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.48 2013/07/31 17:35:01 aballier Exp $
+
+*libid3tag-0.15.1b-r4 (31 Jul 2013)
+
+  31 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +libid3tag-0.15.1b-r4.ebuild:
+  convert to multilib and stack it for medialibs -r7
 
 *libid3tag-0.15.1b-r3 (21 Jul 2013)
 

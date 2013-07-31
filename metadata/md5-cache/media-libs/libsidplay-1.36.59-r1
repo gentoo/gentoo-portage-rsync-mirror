@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=C64 SID player library
+EAPI=4
+HOMEPAGE=http://critical.ch/distfiles/
+IUSE=static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_x86_32 abi_x86_64 abi_mips_n32 abi_mips_n64 abi_mips_o32
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r6 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
+SLOT=1
+SRC_URI=http://critical.ch/distfiles/libsidplay-1.36.59.tgz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	c5cb10d9ab5fcd1081c8bd043ae6e555	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=8f4d4f193966dbf334d9606f536e616b

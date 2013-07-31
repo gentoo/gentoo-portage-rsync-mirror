@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libshout
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.46 2012/10/05 09:14:45 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.47 2013/07/31 17:35:07 aballier Exp $
+
+*libshout-2.3.1-r1 (31 Jul 2013)
+
+  31 Jul 2013; Alexis Ballier <aballier@gentoo.org> +libshout-2.3.1-r1.ebuild:
+  convert to multilib and stack it for medialibs r7
 
   05 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> libshout-2.3.1.ebuild:
   Fix LICENSE from GPL-2 to LGPL-2 as per COPYING file.
