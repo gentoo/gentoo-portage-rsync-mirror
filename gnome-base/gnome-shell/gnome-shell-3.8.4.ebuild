@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r1.ebuild,v 1.2 2013/06/14 18:57:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4.ebuild,v 1.1 2013/07/31 03:35:45 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit autotools eutils gnome2 multilib pax-utils python-r1
+inherit autotools eutils gnome2 multilib pax-utils python-r1 systemd
 
 DESCRIPTION="Provides core UI functions for the GNOME 3 desktop"
 HOMEPAGE="http://live.gnome.org/GnomeShell"
@@ -15,7 +15,7 @@ HOMEPAGE="http://live.gnome.org/GnomeShell"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+bluetooth +i18n +networkmanager"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # libXfixes-5.0 needed for pointer barriers
 # TODO: gstreamer support is currently automagical:
@@ -24,6 +24,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # gnome-shell/gnome-control-center/mutter/gnome-settings-daemon better to be in sync for 3.8.3
 # https://mail.gnome.org/archives/gnome-announce-list/2013-June/msg00005.html
 COMMON_DEPEND="
+	app-crypt/libsecret
 	>=app-accessibility/at-spi2-atk-2.5.3
 	>=dev-libs/atk-2[introspection]
 	>=app-crypt/gcr-3.7.5[introspection]
@@ -33,7 +34,7 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-3.7.9:3[introspection]
 	>=media-libs/clutter-1.13.4:1.0[introspection]
 	>=dev-libs/json-glib-0.13.2
-	>=dev-libs/libcroco-0.6.2:0.6
+	>=dev-libs/libcroco-0.6.8:0.6
 	>=gnome-base/gnome-desktop-3.7.90:3=[introspection]
 	>=gnome-base/gsettings-desktop-schemas-3.7.4
 	>=gnome-base/gnome-keyring-3.3.90
@@ -74,10 +75,11 @@ COMMON_DEPEND="
 # 2. Introspection stuff needed via imports.gi.*
 # 3. gnome-session is needed for gnome-session-quit
 # 4. Control shell settings
-# 5. xdg-utils needed for xdg-open, used by extension tool
-# 6. gnome-icon-theme-symbolic and dejavu font neeed for various icons & arrows
-# 7. IBus is needed for i18n integration
-# 8. mobile-broadband-provider-info, timezone-data for shell-mobile-providers.c
+# 5. Systemd needed for suspending support
+# 6. xdg-utils needed for xdg-open, used by extension tool
+# 7. gnome-icon-theme-symbolic and dejavu font neeed for various icons & arrows
+# 8. IBus is needed for i18n integration
+# 9. mobile-broadband-provider-info, timezone-data for shell-mobile-providers.c
 RDEPEND="${COMMON_DEPEND}
 	>=sys-auth/polkit-0.101[introspection]
 
@@ -92,12 +94,13 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gnome-settings-daemon-3.8.3
 	>=gnome-base/gnome-control-center-3.8.3[bluetooth(+)?]
 
+	>=sys-apps/systemd-31
+
 	x11-misc/xdg-utils
 
 	media-fonts/dejavu
 	x11-themes/gnome-icon-theme-symbolic
 
-	|| ( sys-auth/consolekit >=sys-apps/systemd-31 )
 	i18n? ( >=app-i18n/ibus-1.4.99[dconf,gtk3,introspection] )
 	networkmanager? (
 		net-misc/mobile-broadband-provider-info
@@ -123,9 +126,6 @@ src_prepare() {
 
 	# Make networkmanager optional, bug #398593
 	epatch "${FILESDIR}/${PN}-3.8.3-networkmanager-flag.patch"
-
-	# Revert suspend break, upstream bug #693162 (from Debian)
-	epatch "${FILESDIR}/${PN}-3.8.0-suspend.patch"
 
 	# Re-lock the screen if we're restarted from a previously crashed shell (from 'master')
 	epatch "${FILESDIR}/${PN}-3.8.3-relock-screen.patch"
@@ -208,5 +208,11 @@ pkg_postinst() {
 		if ! has_version "media-libs/mesa[classic]"; then
 			ewarn "You will need to emerge media-libs/mesa with USE=classic."
 		fi
+	fi
+
+	if ! systemd_is_booted; then
+		ewarn "${PN} needs Systemd to be *running* for working"
+		ewarn "properly. Please follow the this guide to migrate:"
+		ewarn "http://wiki.gentoo.org/wiki/Systemd"
 	fi
 }

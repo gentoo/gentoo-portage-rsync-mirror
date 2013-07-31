@@ -1,6 +1,13 @@
 # ChangeLog for app-text/discount
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/discount/ChangeLog,v 1.1 2013/07/29 04:55:01 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/discount/ChangeLog,v 1.2 2013/07/31 04:00:20 binki Exp $
+
+*discount-2.1.6-r1 (31 Jul 2013)
+
+  31 Jul 2013; Nathan Phillip Brink <binki@gentoo.org>
+  +discount-2.1.6-r1.ebuild, -discount-2.1.6.ebuild:
+  Use prefix of “discount-” instead of “mkd” for overly-generic binary names to
+  match the prefix chosen in fedora.
 
 *discount-2.1.6 (29 Jul 2013)
 

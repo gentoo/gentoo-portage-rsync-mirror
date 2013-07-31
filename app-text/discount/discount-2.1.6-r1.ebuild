@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/discount/discount-2.1.6.ebuild,v 1.1 2013/07/29 04:55:00 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/discount/discount-2.1.6-r1.ebuild,v 1.1 2013/07/31 04:00:20 binki Exp $
 
 EAPI=5
 
@@ -51,10 +51,10 @@ src_install() {
 	DISCOUNT_EBUILD_RENAMED_BINARIES=()
 	local bin
 	for bin in "${ED}"usr/bin/*; do
-		[[ ${bin} = */markdown || ${bin} = */mkd* ]] && continue
+		[[ ${bin} = */markdown || ${bin} =~ ${PN}[^/]*$ ]] && continue
 		DISCOUNT_EBUILD_RENAMED_BINARIES+=(${bin##*/})
-		mv "${bin}" "${bin%/*}/mkd${bin##*/}" || die
-		mv "${ED}"usr/share/man/man1/{,mkd}${bin##*/}.1 || die
+		mv "${bin}" "${bin%/*}/${PN}-${bin##*/}" || die
+		mv "${ED}"usr/share/man/man1/{,${PN}-}${bin##*/}.1 || die
 	done
 }
 
@@ -65,7 +65,7 @@ pkg_postinst() {
 		elog "prefixed. Please see"
 		elog "https://github.com/Orc/discount/issues/81 for discussion."
 		for bin in "${DISCOUNT_EBUILD_RENAMED_BINARIES[@]}"; do
-			elog "  Renamed '${bin}' to 'mkd${bin}'."
+			elog "  Renamed '${bin}' to '${PN}-${bin}'."
 		done
 	fi
 }
