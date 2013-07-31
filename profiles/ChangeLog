@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8097 2013/07/31 09:48:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8098 2013/07/31 15:44:40 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove llvm multilib mask
 
   31 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Temporarily mask new libjpeg-turbo revision and libpng12 revision with

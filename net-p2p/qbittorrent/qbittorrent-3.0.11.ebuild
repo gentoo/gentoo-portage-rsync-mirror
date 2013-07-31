@@ -1,28 +1,26 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.9 2013/07/31 15:33:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-3.0.11.ebuild,v 1.1 2013/07/31 15:33:00 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-EGIT_REPO_URI="git://github.com/${PN}/qBittorrent.git
-https://github.com/${PN}/qBittorrent.git"
+inherit python-r1 qt4-r2
 
-inherit python-r1 qt4-r2 git-2
-
+MY_P="${P/_/}"
 DESCRIPTION="BitTorrent client in C++ and Qt"
 HOMEPAGE="http://www.qbittorrent.org/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="dbus +X geoip"
 
 # python-2 is a runtime dep only, for the search engine (see INSTALL file)
 CDEPEND="dev-libs/boost
 	dev-qt/qtcore:4
-	net-libs/rb_libtorrent
+	>=net-libs/rb_libtorrent-0.16.3
 	X? ( dev-qt/qtgui:4 )
 	dbus? ( dev-qt/qtdbus:4 )"
 DEPEND="${CDEPEND}
@@ -32,6 +30,7 @@ RDEPEND="${CDEPEND}
 	geoip? ( dev-libs/geoip )"
 
 DOCS="AUTHORS Changelog NEWS README TODO"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# Respect LDFLAGS
@@ -43,7 +42,7 @@ src_configure() {
 	local myconf
 	use X         || myconf+=" --disable-gui"
 	use geoip     || myconf+=" --disable-geoip-database"
-	use dbus      || myconf+=" --disable-qt-dbus"
+	use dbus 	  || myconf+=" --disable-qt-dbus"
 
 	# econf fails, since this uses qconf
 	./configure --prefix=/usr --qtdir=/usr \

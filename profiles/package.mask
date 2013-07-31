@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14970 2013/07/31 10:03:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14971 2013/07/31 15:44:40 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -340,14 +340,6 @@ dev-java/sun-jre-bin
 # depends on wrt bug 474480 155253 414177
 # use as alternative the console tool media-tv/w_scan
 media-plugins/vdr-channelscan
-
-# Pacho Ramos <pacho@gentoo.org> (23 Jun 2013)
-# Mask for packages currently included in emul-linux-x86-baselibs
-# that are incorporating native multilib support.
->=sys-devel/llvm-3.3-r1
->=sys-devel/llvm-9999-r1
->=sys-devel/clang-3.3-r100
->=sys-devel/clang-9999-r100
 
 # Sebastien Fabbro <bicatali@gentoo.org> (18 Jun 2013)
 # Masked for some API incompatibility with previous versions

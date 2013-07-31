@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.923 2013/07/31 08:47:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.924 2013/07/31 15:40:26 phajdan.jr Exp $
+
+*chromium-30.0.1581.2 (31 Jul 2013)
+
+  31 Jul 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-icu-r0.patch, +files/chromium-system-ply-r0.patch,
+  +chromium-30.0.1581.2.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump.
 
   31 Jul 2013; Agostino Sarubbo <ago@gentoo.org> chromium-28.0.1500.95.ebuild:
   Stable for x86, wrt bug #479048

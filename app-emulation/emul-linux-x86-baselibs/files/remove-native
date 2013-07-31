@@ -21,3 +21,8 @@ usr/lib32/libffi.so
 usr/lib32/libffi.so.6
 usr/lib32/libffi.so.6.0.0
 usr/lib32/pkgconfig/libffi.pc
+usr/lib32/llvm/BugpointPasses.so
+usr/lib32/llvm/LLVMHello.so
+usr/lib32/llvm/libLLVM-3.1.so
+usr/lib32/llvm/libLTO.so
+usr/lib32/llvm/libprofile_rt.so
