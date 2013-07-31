@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999-r1.ebuild,v 1.4 2013/07/30 14:04:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999-r1.ebuild,v 1.5 2013/07/30 23:10:46 aballier Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ RDEPEND="dev-lang/perl
 	clang? ( python? ( ${PYTHON_DEPS} ) )
 	udis86? ( dev-libs/udis86[pic(+),${MULTILIB_USEDEP}] )
 	clang? ( !<=sys-devel/clang-9999-r99 )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
 # pypy gives me around 1700 unresolved tests due to open file limit
