@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.6.14.ebuild,v 1.3 2013/05/24 18:26:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.18.5.14.ebuild,v 1.1 2013/07/31 00:03:37 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -15,7 +15,7 @@ LICENSE="BSD"
 
 soname_version="${PV}"
 SLOT="0/${soname_version}"
-KEYWORDS="amd64 ~arm x86 ~x86-fbsd ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
 IUSE="neon readline"
 
 RDEPEND="readline? ( sys-libs/readline:0 )"
@@ -33,14 +33,19 @@ src_configure() {
 
 	# Use target arch detection logic from bug #354601.
 	case ${CHOST} in
-		i?86-*) myconf+=" -Dv8_target_arch=ia32" ;;
+		i?86-*)
+			myarch="ia32"
+			myconf+=" -Dv8_target_arch=ia32" ;;
 		x86_64-*)
 			if [[ $ABI = x86 ]] ; then
+				myarch="ia32"
 				myconf+=" -Dv8_target_arch=ia32"
 			else
+				myarch="x64"
 				myconf+=" -Dv8_target_arch=x64"
 			fi ;;
 		arm*-*)
+			myarch="arm"
 			myconf+=" -Dv8_target_arch=arm -Darm_fpu="
 			if [[ ${CHOST} == *-hardfloat-* ]] ; then
 				myconf+=" -Dv8_use_arm_eabi_hardfloat=true"
@@ -82,12 +87,12 @@ src_compile() {
 	)
 
 	# Build mksnapshot so we can pax-mark it.
-	emake "${makeargs[@]}" mksnapshot
-	pax-mark m out/Release/mksnapshot
+	emake "${makeargs[@]}" mksnapshot.${myarch}
+	pax-mark m out/Release/mksnapshot.${myarch}
 
 	# Build everything else.
 	emake "${makeargs[@]}"
-	pax-mark m out/Release/{cctest,d8}
+	pax-mark m out/Release/{cctest,d8,preparser}
 }
 
 src_test() {
@@ -127,7 +132,7 @@ src_install() {
 	dolib out/Release/lib.target/libv8$(get_libname ${soname_version})
 	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname)
 
-	dodoc AUTHORS ChangeLog || die
+	dodoc AUTHORS ChangeLog
 }
 
 # TODO: remove functions below after they are removed from chromium.eclass'
