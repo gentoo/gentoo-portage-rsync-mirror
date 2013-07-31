@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.203 2013/07/30 10:41:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.204 2013/07/31 18:12:41 johu Exp $
+
+  31 Jul 2013; Johannes Huber <johu@gentoo.org> okular-4.10.4.ebuild,
+  okular-4.10.5.ebuild:
+  Update HOMEPAGE wrt bug #478872.
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> okular-4.10.5.ebuild:
   Stable for ppc, wrt to bug #477634
