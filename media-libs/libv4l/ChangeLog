@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.92 2013/07/31 10:18:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.93 2013/07/31 10:39:40 ssuominen Exp $
+
+  31 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> libv4l-0.9.5-r1.ebuild:
+  Remove now unnecessary emul- baselibs USE="development" requirement now that
+  we have multilib virtual/jpeg.
 
   31 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> libv4l-0.9.5-r1.ebuild:
   Missing multilib depend for virtual/jpeg.
