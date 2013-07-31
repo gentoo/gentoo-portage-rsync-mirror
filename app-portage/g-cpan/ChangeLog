@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.76 2013/03/01 19:33:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.77 2013/07/30 23:39:43 zlogene Exp $
+
+  30 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> -g-cpan-0.13.02.ebuild,
+  -g-cpan-0.14.0.ebuild, -g-cpan-0.15.0-r1.ebuild, -g-cpan-0.16.2.ebuild,
+  -g-cpan-0.16.3.ebuild, -g-cpan-0.16.4.ebuild:
+  drop old wrt bug #478762
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> g-cpan-0.16.4-r1.ebuild:
   Stable for amd64, wrt bug #456962
