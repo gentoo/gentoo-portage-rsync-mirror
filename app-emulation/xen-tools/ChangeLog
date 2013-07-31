@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.189 2013/07/30 15:01:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.190 2013/07/31 05:01:51 idella4 Exp $
+
+  31 Jul 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.2-r4.ebuild:
+  upgrade emake in complile phase to match 4.3.0
 
   30 Jul 2013; Ian Delaney <idella4@gentoo.org> files/xend.initd-r1,
   files/xend.initd-r2:

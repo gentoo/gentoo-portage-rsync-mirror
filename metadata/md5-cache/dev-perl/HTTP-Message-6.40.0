@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=!<dev-perl/libwww-perl-6 virtual/perl-Compress-Raw-Zlib >=dev-perl/URI-1.10 >=virtual/perl-Encode-2.210.0 >=dev-perl/HTTP-Date-6.0.0 dev-perl/IO-HTML >=dev-perl/Encode-Locale-1.0.0 >=dev-perl/LWP-MediaTypes-6.0.0 >=virtual/perl-IO-Compress-2.021 >=virtual/perl-MIME-Base64-2.1 dev-lang/perl[-build]
+DEPEND=!<dev-perl/libwww-perl-6 virtual/perl-Compress-Raw-Zlib >=dev-perl/URI-1.10 >=virtual/perl-Encode-2.210.0 >=dev-perl/HTTP-Date-6.0.0 dev-perl/IO-HTML >=dev-perl/Encode-Locale-1.0.0 >=dev-perl/LWP-MediaTypes-6.0.0 >=virtual/perl-IO-Compress-2.021 >=virtual/perl-MIME-Base64-2.1 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Base class for Request/Response
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/HTTP-Message/
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~s390 ~sh ~sparc ~x86 ~x86-fbsd
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=!<dev-perl/libwww-perl-6 virtual/perl-Compress-Raw-Zlib >=dev-perl/URI-1.10 >=virtual/perl-Encode-2.210.0 >=dev-perl/HTTP-Date-6.0.0 dev-perl/IO-HTML >=dev-perl/Encode-Locale-1.0.0 >=dev-perl/LWP-MediaTypes-6.0.0 >=virtual/perl-IO-Compress-2.021 >=virtual/perl-MIME-Base64-2.1 dev-lang/perl[-build]
+RDEPEND=!<dev-perl/libwww-perl-6 virtual/perl-Compress-Raw-Zlib >=dev-perl/URI-1.10 >=virtual/perl-Encode-2.210.0 >=dev-perl/HTTP-Date-6.0.0 dev-perl/IO-HTML >=dev-perl/Encode-Locale-1.0.0 >=dev-perl/LWP-MediaTypes-6.0.0 >=virtual/perl-IO-Compress-2.021 >=virtual/perl-MIME-Base64-2.1 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GA/GAAS/HTTP-Message-6.04.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	ba21eba2562fc2643deeea95fd28665d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=9d72ac5877fb5a6fe58fb5ae7c21d3fa

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/Cache dev-perl/IO-Socket-SSL dev-perl/Log-Log4perl dev-perl/libwww-perl dev-perl/Math-Random-MT >=dev-perl/Net-OAuth-0.27 >=dev-perl/SOAP-WSDL-2.00.10 dev-perl/URI dev-perl/XML-Simple dev-perl/XML-XPath test? ( virtual/perl-Test-Simple dev-perl/Test-MockObject virtual/perl-Getopt-Long dev-perl/Config-Properties ) virtual/perl-Module-Build dev-lang/perl[-build]
+DEPEND=dev-perl/Cache dev-perl/IO-Socket-SSL dev-perl/Log-Log4perl dev-perl/libwww-perl dev-perl/Math-Random-MT >=dev-perl/Net-OAuth-0.27 >=dev-perl/SOAP-WSDL-2.00.10 dev-perl/URI dev-perl/XML-Simple dev-perl/XML-XPath test? ( virtual/perl-Test-Simple dev-perl/Test-MockObject virtual/perl-Getopt-Long dev-perl/Config-Properties ) virtual/perl-Module-Build || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Google AdWords API Perl Client
 EAPI=4
 HOMEPAGE=http://code.google.com/p/google-api-adwords-perl/
 IUSE=test
 KEYWORDS=~amd64
 LICENSE=Apache-2.0
-RDEPEND=dev-perl/Cache dev-perl/IO-Socket-SSL dev-perl/Log-Log4perl dev-perl/libwww-perl dev-perl/Math-Random-MT >=dev-perl/Net-OAuth-0.27 >=dev-perl/SOAP-WSDL-2.00.10 dev-perl/URI dev-perl/XML-Simple dev-perl/XML-XPath dev-lang/perl[-build]
+RDEPEND=dev-perl/Cache dev-perl/IO-Socket-SSL dev-perl/Log-Log4perl dev-perl/libwww-perl dev-perl/Math-Random-MT >=dev-perl/Net-OAuth-0.27 >=dev-perl/SOAP-WSDL-2.00.10 dev-perl/URI dev-perl/XML-Simple dev-perl/XML-XPath || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://google-api-adwords-perl.googlecode.com/files/awapi_perl_lib_2_5_6.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	ba21eba2562fc2643deeea95fd28665d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=a40a5b93f0799bb7e3721047bfa51d62
