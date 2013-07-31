@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.218 2013/07/30 12:19:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.219 2013/07/31 14:40:10 jer Exp $
+
+  31 Jul 2013; Jeroen Roovers <jer@gentoo.org>
+  DateTime-TimeZone-1.580.0.ebuild:
+  Stable for HPPA (bug #470406).
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
   DateTime-TimeZone-1.580.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-SOAP
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.42 2013/07/30 12:29:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.43 2013/07/31 14:48:12 jer Exp $
+
+  31 Jul 2013; Jeroen Roovers <jer@gentoo.org> PEAR-SOAP-0.13.0.ebuild:
+  Stable for HPPA (bug #470436).
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-SOAP-0.13.0.ebuild:
   Stable for alpha, wrt bug #470436

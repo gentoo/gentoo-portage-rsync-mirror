@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-en
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.34 2013/07/30 12:22:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.35 2013/07/31 14:36:19 jer Exp $
+
+  31 Jul 2013; Jeroen Roovers <jer@gentoo.org> aspell-en-7.1.0.ebuild:
+  Stable for HPPA (bug #470304).
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> aspell-en-7.1.0.ebuild:
   Stable for alpha, wrt bug #470304

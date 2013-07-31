@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.81.ebuild,v 1.1 2013/07/27 11:06:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.81.ebuild,v 1.2 2013/07/31 14:51:45 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
@@ -23,7 +23,7 @@ RDEPEND="
 	sys-libs/zlib:=
 	gtk? (
 		>=dev-libs/dbus-glib-0.100:=
-		>=dev-libs/glib-2.28:2=
+		>=dev-libs/glib-2.36:2=
 		>=x11-libs/gtk+-3.4:3=
 		ayatana? ( >=dev-libs/libappindicator-0.4.90:3= )
 		)

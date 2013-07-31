@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-pl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pl/ChangeLog,v 1.27 2013/07/30 12:22:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pl/ChangeLog,v 1.28 2013/07/31 14:37:10 jer Exp $
+
+  31 Jul 2013; Jeroen Roovers <jer@gentoo.org> myspell-pl-20130306.ebuild:
+  Stable for HPPA (bug #470308).
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> myspell-pl-20130306.ebuild:
   Stable for alpha, wrt bug #470308
