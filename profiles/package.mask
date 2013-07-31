@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14966 2013/07/30 22:48:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14967 2013/07/31 00:43:54 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (31 Jul 2013)
+# Needs >=dev-lang/lua-5.2
+=net-analyzer/nmap-6.40
 
 # Mike Gilbert <floppym@gentoo.org> (28 Jul 2013)
 # Masked for testing, bug 468136.
