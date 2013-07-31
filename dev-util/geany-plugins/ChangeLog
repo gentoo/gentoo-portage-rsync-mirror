@@ -1,6 +1,22 @@
 # ChangeLog for dev-util/geany-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.26 2013/03/07 04:18:39 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.29 2013/07/31 05:00:15 binki Exp $
+
+  31 Jul 2013; Nathan Phillip Brink <binki@gentoo.org>
+  -geany-plugins-0.21.1.ebuild:
+  Drop old geany-plugins-0.21.1.
+
+  31 Jul 2013; Nathan Phillip Brink <binki@gentoo.org>
+  geany-plugins-1.22-r1.ebuild:
+  Restrict geany-plugins-1.22*[lua] to geany-1.22 regarding bug #467624 comment
+  2 by mrueg, as many other plugins are compatible with geany-1.23.
+
+*geany-plugins-1.23 (31 Jul 2013)
+
+  31 Jul 2013; Nathan Phillip Brink <binki@gentoo.org>
+  +geany-plugins-1.23.ebuild, metadata.xml:
+  Add geany-plugins-1.23 for bug #467624 with new plugins commander, markdown,
+  and scope.
 
   07 Mar 2013; Nathan Phillip Brink <binki@gentoo.org>
   -files/geany-plugins-0.20-config.h.patch,

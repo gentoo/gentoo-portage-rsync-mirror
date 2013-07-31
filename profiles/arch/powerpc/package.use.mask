@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.171 2013/07/27 20:52:59 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.172 2013/07/31 04:41:13 binki Exp $
+
+# Nathan Phillip Brink <binki@gentoo.org> (31 Jul 2013)
+# app-text/discount missing ~ppc.
+dev-util/geany-plugins markdown
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords pending, bug #476710

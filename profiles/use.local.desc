@@ -2067,12 +2067,15 @@ dev-util/devhelp:gedit - Install plugin for app-editors/gedit
 dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/fatrace:powertop - Add powetop integration
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
+dev-util/geany-plugins:commander - Enable the commander plugin which provides a command panel for rapid access to any action.
 dev-util/geany-plugins:debugger - Enable the debugger plugin which interfaces with sys-devel/gdb
 dev-util/geany-plugins:devhelp - Enable the devhelp plugin which integrates dev-util/devhelp
 dev-util/geany-plugins:enchant - Enable spell checking using enchant
 dev-util/geany-plugins:gpg - Enable geanypg plugin which integrates GPG using app-crypt/gpgme
 dev-util/geany-plugins:gtkspell - Use gtkspell for dictionary support
+dev-util/geany-plugins:markdown - Enable the markdown plugin which uses app-text/discount and net-libs/webkit-gtk to display a realtime preview markdown.
 dev-util/geany-plugins:multiterm - Enable the multiterm plugin
+dev-util/geany-plugins:scope - Enable the scope plugin which is a graphical GDB front-end
 dev-util/geany-plugins:soup - Enable updatechecker and geniuspaste plugins which require net-libs/libsoup
 dev-util/geany-plugins:webkit - Enable webhelper plugin which requires net-libs/webkit-gtk
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim

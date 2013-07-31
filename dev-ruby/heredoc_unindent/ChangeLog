@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/heredoc_unindent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heredoc_unindent/ChangeLog,v 1.1 2013/07/26 20:22:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heredoc_unindent/ChangeLog,v 1.2 2013/07/31 04:45:48 mrueg Exp $
+
+*heredoc_unindent-1.1.2-r1 (31 Jul 2013)
+
+  31 Jul 2013; Manuel Rüger <mrueg@gentoo.org>
+  +heredoc_unindent-1.1.2-r1.ebuild, -heredoc_unindent-1.1.2.ebuild:
+  Fix USE=doc
 
 *heredoc_unindent-1.1.2 (26 Jul 2013)
 

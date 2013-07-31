@@ -1,32 +1,27 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.47 2013/07/31 04:34:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.20.8.2.ebuild,v 1.1 2013/07/31 04:34:22 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
 
 inherit chromium eutils multilib multiprocessing pax-utils python-any-r1 \
-	subversion toolchain-funcs
+	toolchain-funcs versionator
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-ESVN_REPO_URI="http://v8.googlecode.com/svn/trunk"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 LICENSE="BSD"
 
-SLOT="0"
-KEYWORDS=""
-IUSE="icu readline neon"
+soname_version="${PV}"
+SLOT="0/${soname_version}"
+KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
+IUSE="icu neon readline"
 
 RDEPEND="icu? ( dev-libs/icu:= )
 	readline? ( sys-libs/readline:0 )"
 DEPEND="${PYTHON_DEPS}
 	${RDEPEND}"
-
-src_unpack() {
-	subversion_src_unpack
-	cd "${S}"
-	make dependencies || die
-}
 
 src_prepare() {
 	# Make sure no bundled libraries are used.
@@ -38,9 +33,6 @@ src_configure() {
 	export LINK=${CXX}
 
 	local myconf=""
-
-	subversion_wc_info
-	soname_version="${PV}.${ESVN_WC_REVISION}"
 
 	# Always build v8 as a shared library with proper SONAME.
 	myconf+=" -Dcomponent=shared_library -Dsoname_version=${soname_version}"
@@ -108,6 +100,13 @@ src_configure() {
 	# Depending on GCC version the warnings are different and we don't
 	# want the build to fail because of that.
 	myconf+=" -Dwerror="
+
+	# gyp does this only for linux, but we always want to use "out" dir, or
+	# all else below fails due to not finding "out" dir
+	myconf+=" --generator-output=out"
+	# gyp defaults to whatever makes the most sense on the platform at hand,
+	# but we want to build using Makefiles, so force that
+	myconf+=" -f make"
 
 	EGYP_CHROMIUM_COMMAND=build/gyp_v8 egyp_chromium ${myconf} || die
 }
