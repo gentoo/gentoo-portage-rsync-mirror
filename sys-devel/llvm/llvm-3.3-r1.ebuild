@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.4 2013/07/30 23:10:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.5 2013/07/31 06:57:18 mgorny Exp $
 
 EAPI=5
 
@@ -41,7 +41,13 @@ DEPEND="app-admin/chrpath
 	${PYTHON_DEPS}"
 RDEPEND="dev-lang/perl
 	libffi? ( virtual/libffi[${MULTILIB_USEDEP}] )
-	clang? ( python? ( ${PYTHON_DEPS} ) )
+	clang? (
+		python? ( ${PYTHON_DEPS} )
+		static-analyzer? (
+			dev-lang/perl
+			${PYTHON_DEPS}
+		)
+	)
 	udis86? ( dev-libs/udis86[pic(+),${MULTILIB_USEDEP}] )
 	clang? ( !<=sys-devel/clang-3.3-r99
 		!>=sys-devel/clang-9999 )
