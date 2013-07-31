@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.300 2013/07/30 13:22:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.301 2013/07/31 13:53:46 cardoe Exp $
+
+  31 Jul 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.1.1.ebuild:
+  Add a dodir to potentially fix bug #478830
 
   30 Jul 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-9999.ebuild:
   Update live ebuild to latest iteration of the ebuild

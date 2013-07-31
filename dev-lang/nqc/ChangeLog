@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nqc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.25 2013/07/31 13:00:27 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.26 2013/07/31 13:49:55 kensington Exp $
+
+  31 Jul 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/nqc-2.5.1-gcc34-fix.patch, -files/nqc-3.1_p4-amd64.patch,
+  -files/nqc-3.1_p4-usb.patch, -nqc-2.5.1.ebuild:
+  Remove old.
 
   28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> nqc-3.1_p6.ebuild:
   Stable for ppc, wrt bug #477156
