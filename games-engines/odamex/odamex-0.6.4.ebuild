@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/odamex-0.6.1.ebuild,v 1.3 2012/09/23 08:04:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/odamex-0.6.4.ebuild,v 1.1 2013/07/31 01:45:09 hasufell Exp $
 
-EAPI=4
+EAPI=5
 WX_GTK_VER="2.8"
 inherit cmake-utils eutils gnome2-utils wxwidgets games
 
@@ -13,22 +13,29 @@ SRC_URI="mirror://sourceforge/${PN}/Odamex/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="dedicated +odalaunch master portmidi server"
 
 RDEPEND="
+	dedicated? ( >=net-libs/miniupnpc-1.8 )
 	!dedicated? (
 		>=media-libs/libsdl-1.2.9[X,audio,joystick,video]
 		>=media-libs/sdl-mixer-1.2.6
 		odalaunch? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
 		portmidi? ( media-libs/portmidi )
+		server? ( >=net-libs/miniupnpc-1.8 )
 	)"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/1-${P}-install-rules.patch \
+		"${FILESDIR}"/2-${P}-cmake-options.patch \
+		"${FILESDIR}"/3-${P}-wad-search-path.patch \
+		"${FILESDIR}"/4-${P}-odalauncher-bin-path.patch
+
+	epatch_user
 }
 
 src_configure() {
