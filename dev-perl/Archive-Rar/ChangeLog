@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Rar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.34 2013/07/31 13:01:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Rar/ChangeLog,v 1.35 2013/07/31 13:10:54 zlogene Exp $
+
+  31 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> -Archive-Rar-1.9.3.ebuild:
+  drop old wrt bug #478736
 
   31 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> Archive-Rar-2.20.0.ebuild:
   amd64/x86 stable wrt bug #478734
