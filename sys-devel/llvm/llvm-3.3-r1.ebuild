@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.6 2013/07/31 09:29:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.7 2013/07/31 22:08:14 mgorny Exp $
 
 EAPI=5
 
@@ -214,7 +214,8 @@ multilib_src_compile() {
 	emake VERBOSE=1 REQUIRES_RTTI=1 GENTOO_LIBDIR=$(get_libdir)
 
 	if multilib_is_native_abi && use doc; then
-		emake -C "${S}"/docs -f Makefile.sphinx man html
+		emake -C "${S}"/docs -f Makefile.sphinx man
+		emake -C "${S}"/docs -f Makefile.sphinx html
 	fi
 
 	if use debug; then

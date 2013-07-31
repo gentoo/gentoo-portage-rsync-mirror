@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.924 2013/07/31 15:40:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.926 2013/07/31 22:31:02 floppym Exp $
+
+  31 Jul 2013; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Apply src_test change to live ebuild.
+
+  31 Jul 2013; Mike Gilbert <floppym@gentoo.org> chromium-29.0.1547.32.ebuild,
+  chromium-30.0.1581.2.ebuild:
+  Adjust src_test so that we always run all tests instead of dying on the first
+  failure.
 
 *chromium-30.0.1581.2 (31 Jul 2013)
 

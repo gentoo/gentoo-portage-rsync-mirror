@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.174 2013/07/29 23:04:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.175 2013/07/31 22:03:53 aballier Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -307,10 +307,6 @@ ipmi
 # Diego Elio Pettenò <flameeyes@gentoo.org> (27 Aug 2012)
 # netlink is a Linux-specific interface
 netlink
-
-# Luca barbato <lu_zero@gentoo.org> (14 Oct 2012)
-# Pending keywording on arches
-fdk
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (09 Dec 2012)
 # dev-lang/orc is useful only for some specific arches (amd64/x86/arm/...)

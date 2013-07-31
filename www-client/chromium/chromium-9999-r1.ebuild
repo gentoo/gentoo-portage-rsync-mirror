@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.205 2013/07/31 15:40:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.206 2013/07/31 22:31:02 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -474,26 +474,40 @@ src_compile() {
 
 src_test() {
 	# For more info see bug #350349.
-	local mylocale='en_US.utf8'
-	if ! locale -a | grep -q "$mylocale"; then
-		eerror "${PN} requires ${mylocale} locale for tests"
+	local LC_ALL="en_US.utf8"
+
+	if ! locale -a | grep -q "${LC_ALL}"; then
+		eerror "${PN} requires ${LC_ALL} locale for tests"
 		eerror "Please read the following guides for more information:"
 		eerror "  http://www.gentoo.org/doc/en/guide-localization.xml"
 		eerror "  http://www.gentoo.org/doc/en/utf-8.xml"
-		die "locale ${mylocale} is not supported"
+		die "locale ${LC_ALL} is not supported"
 	fi
+
+	# If we have the right locale, export it to the environment
+	export LC_ALL
 
 	# For more info see bug #370957.
 	if [[ $UID -eq 0 ]]; then
 		die "Tests must be run as non-root. Please use FEATURES=userpriv."
 	fi
 
+	# virtualmake dies on failure, so we run our tests in a function
+	VIRTUALX_COMMAND="chromium_test" virtualmake
+}
+
+chromium_test() {
+	# Keep track of the cumulative exit status for all tests
+	local exitstatus=0
+
 	runtest() {
 		local cmd=$1
 		shift
-		local filter="--gtest_filter=$(IFS=:; echo "-${*}")"
-		einfo "${cmd}" "${filter}"
-		LC_ALL="${mylocale}" VIRTUALX_COMMAND="${cmd}" virtualmake "${filter}"
+		local IFS=:
+		set -- "${cmd}" "--gtest_filter=-$*"
+		einfo "$@"
+		"$@"
+		(( exitstatus |= $? ))
 	}
 
 	local excluded_base_unittests=(
@@ -537,6 +551,8 @@ src_test() {
 		"SQLiteFeaturesTest.FTS2" # bug #461286
 	)
 	runtest out/Release/sql_unittests "${excluded_sql_unittests[@]}"
+
+	return ${exitstatus}
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.2.3-r12.ebuild,v 1.6 2013/05/04 16:53:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.2.3-r12.ebuild,v 1.7 2013/07/31 22:24:16 ulm Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/libX11[${MULTILIB_USEDEP}]
 	x11-libs/libXt[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		amd64? ( app-emulation/emul-linux-x86-baselibs )
-		!app-emulation/emul-linux-x86-motif
+		!app-emulation/emul-linux-x86-motif[-abi_x86_32(-)]
 	)"
 
 DEPEND="${RDEPEND}

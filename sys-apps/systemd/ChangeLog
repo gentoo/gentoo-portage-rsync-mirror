@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.153 2013/07/31 07:09:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.154 2013/07/31 22:23:50 mgorny Exp $
+
+*systemd-206-r1 (31 Jul 2013)
+
+  31 Jul 2013; Michał Górny <mgorny@gentoo.org>
+  +files/206-0001-logind-update-state-file-after-generating-the-sessio.patch,
+  +files/206-0002-Add-usr-share-keymaps-to-localectl-supported-locatio.patch,
+  +files/206-0003-tmpfiles-support-passing-prefix-multiple-times.patch,
+  +files/206-0004-tmpfiles-introduce-exclude-prefix.patch,
+  +files/206-0005-tmpfiles-setup-exclude-dev-prefixes-files.patch,
+  +systemd-206-r1.ebuild, -systemd-205.ebuild, -systemd-206.ebuild,
+  systemd-9999-r1.ebuild:
+  Fix gnome-shell<->logind race condition, bug #477954. Fix missing keymap
+  location, bug #474946. Fix broken device permissions due to static-nodes, bug
+  #478198. Check for CONFIG_AUDITSYSCALL, bug #478032. Add >=binutils-2.32.1
+  dep, bug #479038.
 
   31 Jul 2013; Michał Górny <mgorny@gentoo.org> systemd-9999-r1.ebuild:
   Finally drop compatibility symlinks. This time for real.
