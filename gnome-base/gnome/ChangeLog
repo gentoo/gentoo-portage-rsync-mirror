@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.453 2013/04/11 19:13:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.454 2013/07/31 12:34:30 tetromino Exp $
+
+  31 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> gnome-3.8.0.ebuild:
+  Drop keywords for arches that don't have systemd or gnome-shell-3.8.4
+  keyworded (bug #479102, thanks to Patrick Lauer).
 
 *gnome-3.8.0 (11 Apr 2013)
 

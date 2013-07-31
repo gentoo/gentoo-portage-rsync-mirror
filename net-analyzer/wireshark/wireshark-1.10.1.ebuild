@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.1.ebuild,v 1.2 2013/07/30 22:26:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.1.ebuild,v 1.3 2013/07/31 12:40:05 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps flag-o-matic user
@@ -78,7 +78,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch
+		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
+		"${FILESDIR}"/${PN}-1.10.1-pod.patch
 
 	eautoreconf
 }

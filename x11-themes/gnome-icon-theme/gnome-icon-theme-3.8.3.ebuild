@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.8.0.ebuild,v 1.1 2013/03/28 22:29:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.8.3.ebuild,v 1.1 2013/07/31 12:56:24 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -24,17 +24,12 @@ DEPEND="${RDEPEND}
 	>=x11-misc/icon-naming-utils-0.8.7
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
-	virtual/pkgconfig"
-
+	virtual/pkgconfig
+"
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"
 
-# FIXME: double check potential LINGUAS problem
 src_prepare() {
-	G2CONF="${G2CONF}
-		--enable-icon-mapping
-		GTK_UPDATE_ICON_CACHE=$(type -P true)"
-
 	if use branding; then
 		for i in 16 22 24 32 48; do
 			cp "${WORKDIR}"/tango-gentoo-v1.1/${i}x${i}/gentoo.png \
@@ -44,4 +39,10 @@ src_prepare() {
 	fi
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--enable-icon-mapping \
+		GTK_UPDATE_ICON_CACHE=$(type -P true)
 }

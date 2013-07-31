@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.522 2013/07/30 22:26:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.523 2013/07/31 12:40:05 jer Exp $
+
+  31 Jul 2013; Jeroen Roovers <jer@gentoo.org>
+  +files/wireshark-1.10.1-pod.patch, wireshark-1.10.1.ebuild:
+  Fix reordercap.pod (bug #479098).
 
   30 Jul 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.1.ebuild:
   Stable for HPPA (bug #478694).

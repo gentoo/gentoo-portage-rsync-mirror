@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/nqc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.24 2013/07/28 13:36:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.25 2013/07/31 13:00:27 kensington Exp $
 
   28 Jul 2013; Agostino Sarubbo <ago@gentoo.org> nqc-3.1_p6.ebuild:
   Stable for ppc, wrt bug #477156
@@ -35,3 +35,51 @@
   +nqc-3.1_p6.ebuild:
   Version bump. Respect LDFLAGS (bug #338168), CXX. Marked ~ppc again. Set
   RDEPEND.
+
+  23 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> nqc-2.5.1.ebuild:
+  Adding die to make install
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> nqc-2.5.1.ebuild,
+  nqc-3.1_p4.ebuild:
+  Remove virtual/libc
+
+  29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Lars Weiler (Pylon) from metadata.xml (as per #215644). Assigning
+  to maintainer-needed.
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  31 Jan 2007; Marius Mauch <genone@gentoo.org> nqc-2.5.1.ebuild,
+  nqc-3.1_p4.ebuild:
+  Replacing einfo with elog
+
+*nqc-3.1_p4 (18 Jun 2006)
+
+  18 Jun 2006; Lars Weiler <pylon@gentoo.org> +files/nqc-3.1_p4-amd64.patch,
+  +files/nqc-3.1_p4-usb.patch, +metadata.xml, +nqc-3.1_p4.ebuild:
+  Version bump; thanks to all contributors in bug #89257.
+
+  14 Dec 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +files/nqc-2.5.1-gcc34-fix.patch, nqc-2.5.1.ebuild:
+  Fixed compilation with gcc 3.4.4, closing bug #115474. What this package 
+  really needs is an up-to-date ebuild (see bug #89257).
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> nqc-2.5.1.ebuild:
+  Stable on ppc.
+
+  22 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> nqc-2.5.1.ebuild:
+  Fix einfo, bug #70854
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nqc-2.5.1.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jan 2004; Luca Barbato <lu_zero@gentoo.org> nqc-2.5.1.ebuild:
+  Marked ~ppc
+
+*nqc-2.5.1 (20 Jun 2003)
+
+  20 Jun 2003; George Shapovalov <george@gentoo.org> Manifest, nqc-2.5.1.ebuild, files/{digest-nqc-2.5.1} :
+  initial release (#12343)
+  Not Quite C - C-like compiler for Lego Mindstorms
+  ebuild submitted by Alexander Holler <aholler@gentoo.de>
