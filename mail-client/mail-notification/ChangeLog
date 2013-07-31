@@ -1,6 +1,17 @@
 # ChangeLog for mail-client/mail-notification
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.114 2012/10/06 15:12:51 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.115 2013/07/31 20:29:36 pacho Exp $
+
+*mail-notification-5.4-r7 (31 Jul 2013)
+
+  31 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/mail-notification-aarch64.patch,
+  +files/mail-notification-jb-gcc-format.patch,
+  +mail-notification-5.4-r7.ebuild, -mail-notification-5.4-r5.ebuild:
+  Revision bump: uses updated snapshot, also applies fedora patches, drops
+  -Werror completely (#450468 by flameeyes and #479108 by Juergen Rose),
+  rekeyword again on sparc as it was dropped until evo-3 was keyworded (that is
+  already the case, bug #437372). Drop old
 
   06 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   mail-notification-5.4-r6.ebuild:
