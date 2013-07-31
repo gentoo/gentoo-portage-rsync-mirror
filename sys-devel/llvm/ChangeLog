@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.124 2013/07/31 06:57:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.125 2013/07/31 09:29:45 mgorny Exp $
+
+  31 Jul 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r1.ebuild,
+  llvm-9999-r1.ebuild:
+  Make build & install simpler. Since we're calling 'install' for non-native
+  ABIs already, we should also do a full build.
 
   31 Jul 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r1.ebuild,
   llvm-9999-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.5 2013/07/31 06:57:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.6 2013/07/31 09:29:45 mgorny Exp $
 
 EAPI=5
 
@@ -211,22 +211,7 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
-	local mymakeopts=(
-		VERBOSE=1
-		REQUIRES_RTTI=1
-		GENTOO_LIBDIR="$(get_libdir)"
-	)
-
-	# Tests need all the LLVM built.
-	if multilib_is_native_abi || use test; then
-		emake "${mymakeopts[@]}"
-	else
-		# we need to build libs for llvm, then whole clang,
-		# since libs-only omits clang dir
-		# and clang fails to sub-compile with libs-only.
-		emake "${mymakeopts[@]}" libs-only
-		use clang && emake -C tools/clang "${mymakeopts[@]}"
-	fi
+	emake VERBOSE=1 REQUIRES_RTTI=1 GENTOO_LIBDIR=$(get_libdir)
 
 	if multilib_is_native_abi && use doc; then
 		emake -C "${S}"/docs -f Makefile.sphinx man html
@@ -269,12 +254,7 @@ src_install() {
 }
 
 multilib_src_install() {
-	local mymakeopts=(
-		DESTDIR="${D}"
-		GENTOO_LIBDIR="$(get_libdir)"
-	)
-
-	emake "${mymakeopts[@]}" install
+	emake DESTDIR="${D}" GENTOO_LIBDIR=$(get_libdir) install
 
 	# Fix rpaths.
 	chrpath -r "${EPREFIX}"/usr/$(get_libdir)/llvm \
