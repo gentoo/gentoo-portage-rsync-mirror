@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.39.ebuild,v 1.4 2012/05/29 19:32:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.39.ebuild,v 1.5 2013/07/31 21:44:27 vincent Exp $
 
 inherit perl-app
 
@@ -17,6 +17,7 @@ DEPEND=">=dev-lang/perl-5.6.0
 	dev-perl/Proc-ProcessTable
 	dev-perl/Unix-Syslog
 	virtual/perl-Getopt-Long"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	perl-module_src_install

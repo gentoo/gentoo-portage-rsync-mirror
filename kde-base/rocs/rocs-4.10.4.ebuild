@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.10.4.ebuild,v 1.4 2013/07/01 09:08:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.10.4.ebuild,v 1.5 2013/07/31 21:36:25 johu Exp $
 
 EAPI=5
 
@@ -8,6 +8,8 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="KDE4 interface to work with Graph Theory"
+HOMEPAGE="http://kde.org/applications/education/rocs
+http://edu.kde.org/applications/mathematics/rocs"
 KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 

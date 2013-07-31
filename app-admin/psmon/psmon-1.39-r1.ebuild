@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.39-r1.ebuild,v 1.1 2013/07/31 04:37:18 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.39-r1.ebuild,v 1.2 2013/07/31 21:44:27 vincent Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.psmon.com/"
 SRC_URI="http://www.psmon.com/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.0
