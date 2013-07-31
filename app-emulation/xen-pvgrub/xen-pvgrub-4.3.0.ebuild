@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.3.0.ebuild,v 1.1 2013/07/21 09:19:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.3.0.ebuild,v 1.2 2013/07/31 08:26:21 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7"
@@ -84,7 +84,10 @@ src_prepare() {
 	epatch 	"${FILESDIR}"/${PN/-pvgrub/}-4.3-fix_dotconfig-gcc.patch
 
 	# fix jobserver in Makefile
-	epatch "${FILESDIR}"/${PN/-pvgrub/}-4.2.0-jserver.patch
+	epatch "${FILESDIR}"/${PN}-4.2-jserver.patch
+
+	# gcc warnings/QA fix
+	epatch "${FILESDIR}"/${PN}-4-qa.patch
 
 	# Sec patch
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4-CVE-2012-6075-XSA-41.patch \
