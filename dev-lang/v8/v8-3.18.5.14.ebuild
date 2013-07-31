@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.18.5.14.ebuild,v 1.1 2013/07/31 00:03:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.18.5.14.ebuild,v 1.2 2013/07/31 08:00:51 ago Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -15,7 +15,7 @@ LICENSE="BSD"
 
 soname_version="${PV}"
 SLOT="0/${soname_version}"
-KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
 IUSE="neon readline"
 
 RDEPEND="readline? ( sys-libs/readline:0 )"
