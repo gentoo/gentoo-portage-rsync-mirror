@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.10.4.ebuild,v 1.6 2013/07/10 04:50:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.10.4.ebuild,v 1.7 2013/07/31 16:39:20 johu Exp $
 
 EAPI=5
 
@@ -11,6 +11,7 @@ PYTHON_DEPEND="python? 2"
 inherit kde4-base python
 
 DESCRIPTION="Generic geographical map widget"
+HOMEPAGE="http://marble.kde.org/"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug designer-plugin gps +kde plasma python shapefile test"
 

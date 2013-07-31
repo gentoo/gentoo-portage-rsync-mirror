@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14972 2013/07/31 16:21:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14973 2013/07/31 16:35:57 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -456,10 +456,6 @@ media-tv/tvtime
 # but should not be fed untrusted input (eg from strangers).
 # Masked to ensure users are aware before they install.
 app-text/cuneiform
-
-# Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
-# libv4l: missing dep on virtual/jpeg, missing blockers to emul-
->=media-libs/libv4l-0.9.5-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (12 Mar 2013)
 # 2.5.* has known security and other issues due to an affected

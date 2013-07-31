@@ -65,3 +65,16 @@ usr/lib32/libdvdnavmini.so.4
 usr/lib32/libdvdnavmini.so.4.1.2
 usr/lib32/pkgconfig/dvdnav.pc
 usr/lib32/pkgconfig/dvdnavmini.pc
+usr/lib32/libv4l/ov511-decomp
+usr/lib32/libv4l/ov518-decomp
+usr/lib32/libv4l/v4l1compat.so
+usr/lib32/libv4l/v4l2convert.so
+usr/lib32/libv4l1.so
+usr/lib32/libv4l1.so.0
+usr/lib32/libv4l2.so
+usr/lib32/libv4l2.so.0
+usr/lib32/libv4lconvert.so
+usr/lib32/libv4lconvert.so.0
+usr/lib32/pkgconfig/libv4l1.pc
+usr/lib32/pkgconfig/libv4l2.pc
+usr/lib32/pkgconfig/libv4lconvert.pc

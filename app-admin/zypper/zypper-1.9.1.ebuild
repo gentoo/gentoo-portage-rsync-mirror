@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zypper/zypper-1.9.1.ebuild,v 1.1 2013/07/25 15:36:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zypper/zypper-1.9.1.ebuild,v 1.2 2013/07/31 16:32:05 miska Exp $
 
 EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="World's most powerful command line package manager"
+DESCRIPTION="Command line RPM package manager developed by SUSE"
 HOMEPAGE="http://en.opensuse.org/Portal:Zypper"
 SRC_URI="http://github.com/openSUSE/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
