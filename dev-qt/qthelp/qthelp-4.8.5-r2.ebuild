@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5-r2.ebuild,v 1.1 2013/07/30 18:10:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5-r2.ebuild,v 1.2 2013/08/01 06:44:09 pesa Exp $
 
 EAPI=5
 
@@ -84,7 +84,7 @@ src_configure() {
 		-system-libpng -system-libjpeg -system-zlib
 		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite2 -no-sql-odbc
 		-sm -xshape -xsync -xcursor -xfixes -xrandr -xrender -mitshm -xinput -xkb
-		-no-multimedia -no-opengl -no-phonon -no-svg -no-webkit -no-xmlpatterns
+		-no-multimedia -no-opengl -no-phonon -no-qt3support -no-svg -no-webkit -no-xmlpatterns
 		-no-nas-sound -no-cups -no-nis -fontconfig"
 
 	qt4-build_src_configure
