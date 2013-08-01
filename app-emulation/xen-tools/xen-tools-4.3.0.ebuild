@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.16 2013/07/30 06:38:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.17 2013/08/01 08:16:07 idella4 Exp $
 
 EAPI=5
 
@@ -54,12 +54,12 @@ DEPEND="${CDEPEND}
 	dev-lang/perl
 	app-misc/pax-utils
 	dev-python/markdown
-	media-gfx/transfig
 	doc? (
 		app-doc/doxygen
 		dev-tex/latex2html[png,gif]
 		media-gfx/graphviz
 		dev-tex/xcolor
+		media-gfx/transfig
 		dev-texlive/texlive-latexextra
 		virtual/latex-base
 		dev-tex/latexmk

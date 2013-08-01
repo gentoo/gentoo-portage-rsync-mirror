@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.27 2013/05/31 12:01:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.28 2013/08/01 08:20:27 klausman Exp $
+
+  01 Aug 2013; Tobias Klausmann <klausman@gentoo.org> lib_users-0.6.ebuild:
+  Revert to python.eclass and stabilize on Alpha.  Since python-r1.eclass
+  provides no python_execute_nosetests() function and coding it myself seems a
+  waste of time, revert to using python.eclass.  Also stabilize on Alpha for bug
+  479342.
 
 *lib_users-0.6 (31 May 2013)
 

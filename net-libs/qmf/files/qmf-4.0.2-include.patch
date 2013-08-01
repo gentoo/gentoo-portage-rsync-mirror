@@ -1,0 +1,34 @@
+From f3ef1f7f6eb9e456465924c63ade2a036079c85f Mon Sep 17 00:00:00 2001
+From: Davide Pesavento <davidepesa@gmail.com>
+Date: Sun, 28 Jul 2013 21:27:16 -0700
+Subject: [PATCH] Add missing include.
+
+Fixes the following compilation errors with gcc 4.7 and later.
+
+messageserver.cpp: In static member function 'static void MessageServer::hupSignalHandler(int)':
+messageserver.cpp:501:5: error: '::write' has not been declared
+messageserver.cpp: In member function 'void MessageServer::handleSigHup()':
+messageserver.cpp:508:5: error: '::read' has not been declared
+
+Change-Id: I6fbcf2cba884f5e285c0259e020c60f4a44173b4
+Reviewed-by: Valerio Valerio <valerio.valerio@jollamobile.com>
+Reviewed-by: Robin Burchell <robin+qt@viroteck.net>
+---
+ src/tools/messageserver/messageserver.cpp |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/tools/messageserver/messageserver.cpp b/src/tools/messageserver/messageserver.cpp
+index b749f03..5fbedf9 100644
+--- a/src/tools/messageserver/messageserver.cpp
++++ b/src/tools/messageserver/messageserver.cpp
+@@ -61,6 +61,7 @@ extern "C" {
+ }
+ 
+ #if defined(Q_OS_UNIX)
++#include <unistd.h>
+ int MessageServer::sighupFd[2];
+ #endif
+ 
+-- 
+1.7.1
+

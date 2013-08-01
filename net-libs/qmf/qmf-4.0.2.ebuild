@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.2.ebuild,v 1.1 2013/07/01 10:12:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.2.ebuild,v 1.2 2013/08/01 08:08:27 pesa Exp $
 
 EAPI=5
 
@@ -40,6 +40,8 @@ DEPEND="${RDEPEND}
 DOCS=(CHANGES)
 PATCHES=(
 	"${FILESDIR}/${PN}-4.0.2-tests.patch"
+	"${FILESDIR}/${P}-include.patch"
+	"${FILESDIR}/${P}-visibility.patch"
 )
 
 src_prepare() {

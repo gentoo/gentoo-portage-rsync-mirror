@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14974 2013/07/31 19:38:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14975 2013/08/01 08:25:30 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -240,10 +240,6 @@ dev-python/tg-widgets-lightbox
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Jun 2013)
 # Prerelease ebuild, mostly untested and held together by duct tape.
 =sys-boot/syslinux-6.02_pre*
-
-# Davide Pesavento <pesa@gentoo.org> (01 Jul 2013)
-# New releases, need to check reverse deps.
->=net-libs/qmf-4
 
 # Doug Goldstein <cardoe@gentoo.org> (30 Jun 2013)
 # Masked for dev work
