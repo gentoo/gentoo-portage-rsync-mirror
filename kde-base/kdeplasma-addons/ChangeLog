@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.206 2013/07/30 10:41:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.207 2013/08/01 10:25:37 kensington Exp $
+
+  01 Aug 2013; Michael Palimaka <kensington@gentoo.org>
+  kdeplasma-addons-4.10.5.ebuild:
+  Fix automagic dependencies wrt bug #478832.
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> kdeplasma-addons-4.10.5.ebuild:
   Stable for ppc, wrt to bug #477634
