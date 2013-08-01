@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.4-r1.ebuild,v 1.2 2013/07/20 14:34:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.0.ebuild,v 1.1 2013/08/01 15:41:58 gurligebis Exp $
 
 EAPI=5
 inherit eutils linux-info systemd user

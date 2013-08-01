@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.144 2013/07/31 16:21:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.145 2013/08/01 15:55:32 aballier Exp $
+
+*emul-linux-x86-baselibs-20130224-r5 (01 Aug 2013)
+
+  01 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r4.ebuild,
+  +emul-linux-x86-baselibs-20130224-r5.ebuild, files/remove-native:
+  new revision featuring migratied jpeg6b and lib{raw,avc}1394
 
 *emul-linux-x86-baselibs-20130224-r4 (31 Jul 2013)
 

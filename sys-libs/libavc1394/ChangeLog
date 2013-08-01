@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libavc1394
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.42 2013/06/29 15:30:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.43 2013/08/01 15:53:37 aballier Exp $
+
+*libavc1394-0.5.4-r1 (01 Aug 2013)
+
+  01 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +libavc1394-0.5.4-r1.ebuild:
+  Go multilib and stack it for baselibs -r5, ebuild based on Karl Lindéns one
+  in bug
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libavc1394-0.5.4.ebuild:
   Stable for arm, wrt bug #473302

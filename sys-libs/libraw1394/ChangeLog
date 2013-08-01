@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.70 2013/04/11 12:18:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.71 2013/08/01 15:51:59 aballier Exp $
+
+*libraw1394-2.1.0-r1 (01 Aug 2013)
+
+  01 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +libraw1394-2.1.0-r1.ebuild:
+  Go multilib and stack it for baselibs -r5. Ebuild based on Karl Lindéns one
+  in bug
 
   11 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -libraw1394-2.0.4.ebuild,
   -libraw1394-2.0.5.ebuild, -libraw1394-2.0.7.ebuild:

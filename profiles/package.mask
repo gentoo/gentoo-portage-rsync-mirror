@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14977 2013/08/01 15:12:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14978 2013/08/01 15:54:08 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,10 +35,6 @@
 # Ian Delaney <idella4@gentoo.org> (01 Aug 2013)
 # Mask while awaiting bump to dep Djblets-0.7.16
 =dev-util/reviewboard-1.7.12
-
-# Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2013)
-# Temporary mask, pending on bumped emul- and blockers
-=media-libs/jpeg-6b-r10
 
 # Matt Turner <mattst88@gentoo.org> (31 Jul 2013)
 # Masked for removal. Bug 478720.
