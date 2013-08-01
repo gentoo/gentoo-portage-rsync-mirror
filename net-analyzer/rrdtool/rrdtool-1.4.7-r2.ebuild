@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r2.ebuild,v 1.4 2013/03/09 17:18:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r2.ebuild,v 1.6 2013/08/01 13:24:16 jer Exp $
 
 EAPI="5"
 
@@ -50,8 +50,8 @@ python_install() {
 }
 
 src_prepare() {
-	epatch	"${FILESDIR}"/0001_"${P}"-configure.ac.patch
-	epatch	"${FILESDIR}/${PN}"-1.4.5-automake-1.11.2.patch
+	epatch	"${FILESDIR}"/${PN}-1.4.5-automake-1.11.2.patch
+	epatch	"${FILESDIR}"/${P}-configure.ac.patch
 
 	# bug 281694
 	# bug 456810

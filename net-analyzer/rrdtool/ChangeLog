@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.246 2013/03/09 17:18:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.248 2013/08/01 13:24:16 jer Exp $
+
+  01 Aug 2013; Jeroen Roovers <jer@gentoo.org> -rrdtool-1.4.5-r1.ebuild,
+  -rrdtool-1.4.5-r2.ebuild, -files/rrdtool-1.4.3-ruby-ldflags.patch:
+  More old.
+
+  01 Aug 2013; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.7-r1.ebuild,
+  rrdtool-1.4.7-r2.ebuild, -files/rrdtool-1.3.8-configure.ac.patch,
+  -files/rrdtool-1.4.4-dont-link-system-lib.patch,
+  -files/0001_rrdtool-1.4.7-configure.ac.patch,
+  +files/rrdtool-1.4.7-configure.ac.patch:
+  Old.
 
   09 Mar 2013; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.7-r2.ebuild:
   Fix USE=static-libs by Alphat-PC (bug #460576).

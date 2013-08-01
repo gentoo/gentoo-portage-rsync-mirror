@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.244 2013/07/19 10:21:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.245 2013/08/01 13:15:33 slyfox Exp $
+
+*ghc-7.6.3-r1 (01 Aug 2013)
+
+  01 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.6.3-trac-3333-weak-syms.patch, +ghc-7.6.3-r1.ebuild:
+  Fixed CFLAGS=-Os ghci failure (bug #452442 by Jason Mours). Added weak symbol
+  processing into ghci. Limit maximum parallel job count down to 4 workers (-j1
+  is too slow on mmodern boxes, but -j12 kills the build almost always). Does
+  not eliminate failures completely, but reduces them significantly (bug
+  #456386).
 
   19 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3.ebuild:
   Fix building on systems where libdir differs from the one we have built GHC

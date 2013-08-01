@@ -1,6 +1,22 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.527 2013/08/01 13:01:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.531 2013/08/01 13:10:00 jer Exp $
+
+  01 Aug 2013; Jeroen Roovers <jer@gentoo.org>
+  -files/wireshark-1.6.6-gtk-pcap.patch, -wireshark-1.8.8.ebuild:
+  Old.
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for x86, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for sparc, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for ppc, wrt bug #478694
 
   01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
   wireshark-1.8.9.ebuild:

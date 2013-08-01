@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.73 2013/07/21 19:00:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.74 2013/08/01 13:02:32 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -344,6 +344,8 @@ distutils-r1_python_prepare_all() {
 		# create source copies for each implementation
 		python_copy_sources
 	fi
+
+	_DISTUTILS_DEFAULT_CALLED=1
 }
 
 # @FUNCTION: distutils-r1_python_prepare
@@ -494,6 +496,8 @@ distutils-r1_python_install_all() {
 		doins -r "${EXAMPLES[@]}"
 		docompress -x "${INSDESTTREE}"
 	fi
+
+	_DISTUTILS_DEFAULT_CALLED=1
 }
 
 # @FUNCTION: distutils-r1_run_phase
@@ -586,11 +590,17 @@ _distutils-r1_run_foreach_impl() {
 distutils-r1_src_prepare() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	local _DISTUTILS_DEFAULT_CALLED
+
 	# common preparations
 	if declare -f python_prepare_all >/dev/null; then
 		python_prepare_all
 	else
 		distutils-r1_python_prepare_all
+	fi
+
+	if [[ ! ${_DISTUTILS_DEFAULT_CALLED} ]]; then
+		eqawarn "QA warning: python_prepare_all() didn't call distutils-r1_python_prepare_all"
 	fi
 
 	if declare -f python_prepare >/dev/null; then
@@ -643,10 +653,16 @@ distutils-r1_src_install() {
 		_distutils-r1_run_foreach_impl distutils-r1_python_install
 	fi
 
+	local _DISTUTILS_DEFAULT_CALLED
+
 	if declare -f python_install_all >/dev/null; then
 		_distutils-r1_run_common_phase python_install_all
 	else
 		_distutils-r1_run_common_phase distutils-r1_python_install_all
+	fi
+
+	if [[ ! ${_DISTUTILS_DEFAULT_CALLED} ]]; then
+		eqawarn "QA warning: python_install_all() didn't call distutils-r1_python_install_all"
 	fi
 }
 

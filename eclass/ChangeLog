@@ -1,9 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.908 2013/08/01 12:49:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.910 2013/08/01 13:03:22 mgorny Exp $
+
+  01 Aug 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Shout QA warnings when _all() phases do not call the default impls.
 
   01 Aug 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass:
-  python-any-r1: bail out on invalid PYTHON_COMPAT.
+  python-any-r1: bail out on invalid PYTHON_COMPAT. Bug #478442.
 
   31 Jul 2013; Julian Ospald <hasufell@gentoo.org> kernel-2.eclass:
   reword security-deblob-thing acked by keytoaster

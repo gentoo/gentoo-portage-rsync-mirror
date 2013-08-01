@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.16.1.ebuild,v 1.1 2013/07/17 20:11:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.16.1.ebuild,v 1.2 2013/08/01 13:22:33 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -27,6 +27,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
+	dev-util/gdbus-codegen
 	>=dev-util/gtk-doc-am-1.15
 	>=dev-util/intltool-0.50
 	sys-devel/gettext
