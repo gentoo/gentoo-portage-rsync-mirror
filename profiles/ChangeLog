@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8104 2013/08/01 08:25:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8105 2013/08/01 13:56:51 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Temporarily mask =media-libs/jpeg-6b-r10 with multilib conversion.
 
   01 Aug 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
   Unmask >=net-libs/qmf-4

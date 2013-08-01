@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.237 2013/07/13 07:45:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.238 2013/08/01 13:40:40 slyfox Exp $
+
+*liferea-1.10.1a (01 Aug 2013)
+
+  01 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org> +liferea-1.10.1a.ebuild:
+  Version bump (fixes #477052 upstream).
 
 *liferea-1.10.0 (13 Jul 2013)
 
