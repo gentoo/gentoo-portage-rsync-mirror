@@ -1,10 +1,10 @@
 DEFINED_PHASES=install
-DESCRIPTION=CPPZMQ - High-level C Binding for ZeroMQ
+DESCRIPTION=CPPZMQ - High-level CPP Binding for ZeroMQ
 EAPI=5
 HOMEPAGE=https://github.com/zeromq/cppzmq
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
-RDEPEND=net-libs/zeromq
+RDEPEND=>=net-libs/zeromq-3
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/cppzmq-0_pre130717.tar.xz
-_md5_=31e31130efdddd7bf5dea8bd515ca752
+_md5_=e2b3f0de7b20562e873588ff60b18435

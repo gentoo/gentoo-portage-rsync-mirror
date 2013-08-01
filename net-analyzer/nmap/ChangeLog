@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.301 2013/07/31 00:57:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.303 2013/08/01 16:50:08 jer Exp $
+
+  01 Aug 2013; Jeroen Roovers <jer@gentoo.org> nmap-6.40.ebuild,
+  +files/nmap-6.40-uninstaller.patch:
+  Do not install uninstall_zenmap.
+
+  01 Aug 2013; Jeroen Roovers <jer@gentoo.org> nmap-6.40.ebuild:
+  Make sure we use the system libpcre.
 
   31 Jul 2013; Jeroen Roovers <jer@gentoo.org> nmap-6.40.ebuild:
   Fix USE=-lua.

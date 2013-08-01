@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.92 2013/08/01 16:16:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.94 2013/08/01 16:59:00 aballier Exp $
+
+  01 Aug 2013; Alexis Ballier <aballier@gentoo.org> x264-9999.ebuild,
+  +files/x264-cflags.patch:
+  Do not mess too much with CFLAGS. Should fix bug #413661 and bug #351219.
+
+  01 Aug 2013; Alexis Ballier <aballier@gentoo.org> x264-9999.ebuild:
+  drop custom-cflags useflag, bug #473816
 
   01 Aug 2013; Alexis Ballier <aballier@gentoo.org> x264-9999.ebuild:
   inherit eutils for the x32 patch

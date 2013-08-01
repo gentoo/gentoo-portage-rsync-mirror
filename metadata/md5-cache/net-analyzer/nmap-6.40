@@ -10,4 +10,4 @@ RDEPEND=dev-libs/apr dev-libs/libpcre net-libs/libpcap[ipv6?] gtk? ( >=x11-libs/
 SLOT=0
 SRC_URI=http://nmap.org/dist/nmap-6.40.tar.bz2 http://dev.gentoo.org/~jer/nmap-logo-64.png
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4694231f78cc49667eb1511f6f69ba9f
+_md5_=eddc9fc6088fc2f8a260930247dce1f0
