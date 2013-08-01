@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.10.5.ebuild,v 1.4 2013/07/30 10:41:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.10.5.ebuild,v 1.5 2013/08/01 00:17:01 johu Exp $
 
 EAPI=5
 
@@ -8,6 +8,7 @@ KDE_HANDBOOK=optional
 inherit kde4-base
 
 DESCRIPTION="KDE PIM internationalization package"
+HOMEPAGE="http://l10n.kde.org"
 
 DEPEND="
 	sys-devel/gettext

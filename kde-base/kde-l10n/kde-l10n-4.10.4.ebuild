@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.10.4.ebuild,v 1.5 2013/07/02 08:06:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.10.4.ebuild,v 1.6 2013/08/01 00:13:48 johu Exp $
 
 EAPI=5
 
 inherit kde4-base
 
 DESCRIPTION="KDE internationalization package"
+HOMEPAGE="http://l10n.kde.org"
 
 DEPEND="
 	sys-devel/gettext
