@@ -103,3 +103,9 @@ usr/lib32/pkgconfig/libsidutils.pc
 usr/lib32/libsidplay.so
 usr/lib32/libsidplay.so.1
 usr/lib32/libsidplay.so.1.0.3
+usr/lib32/libx264.so
+usr/lib32/pkgconfig/x264.pc
+usr/lib32/libiec61883.so
+usr/lib32/libiec61883.so.0
+usr/lib32/libiec61883.so.0.1.0
+usr/lib32/pkgconfig/libiec61883.pc

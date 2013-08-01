@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.75 2013/07/31 17:36:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.76 2013/08/01 17:43:26 aballier Exp $
+
+*emul-linux-x86-medialibs-20130224-r8 (01 Aug 2013)
+
+  01 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-medialibs-20130224-r7.ebuild,
+  +emul-linux-x86-medialibs-20130224-r8.ebuild, files/remove-native:
+  new revision featuring migrated x264 abd libiec61883. x264.so.abi is left for
+  binary compatibility with the rest of emul libs.
 
 *emul-linux-x86-medialibs-20130224-r7 (31 Jul 2013)
 
