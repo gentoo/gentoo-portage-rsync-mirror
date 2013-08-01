@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.97.ebuild,v 1.4 2013/06/19 13:51:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99.ebuild,v 1.1 2013/08/01 19:02:35 ssuominen Exp $
 
-EAPI=3
-inherit eutils multilib toolchain-funcs autotools linux-info
+EAPI=5
+inherit eutils multilib toolchain-funcs autotools linux-info udev systemd
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -16,12 +16,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 
 IUSE="readline static static-libs clvm cman +lvm1 selinux +udev +thin"
 
-DEPEND_COMMON="!!sys-fs/device-mapper
-	readline? ( sys-libs/readline )
+DEPEND_COMMON="readline? ( sys-libs/readline )
 	clvm? ( =sys-cluster/libdlm-3*
 			cman? ( =sys-cluster/cman-3* ) )
 	udev? ( virtual/udev[static-libs?] )"
-
 # /run is now required for locking during early boot. /var cannot be assumed to
 # be available.
 RDEPEND="${DEPEND_COMMON}
@@ -31,17 +29,15 @@ RDEPEND="${DEPEND_COMMON}
 	!!sys-fs/clvm
 	>=sys-apps/util-linux-2.16
 	thin? ( sys-block/thin-provisioning-tools )"
-
 # Upgrading to this LVM will break older cryptsetup
 RDEPEND="${RDEPEND}
-		!<sys-fs/cryptsetup-1.1.2"
-
+	!<sys-fs/cryptsetup-1.1.2"
 DEPEND="${DEPEND_COMMON}
-		virtual/pkgconfig
-		>=sys-devel/binutils-2.20.1-r1
-		static? ( udev? ( virtual/udev[static-libs] ) )"
+	virtual/pkgconfig
+	>=sys-devel/binutils-2.20.1-r1
+	static? ( udev? ( virtual/udev[static-libs] ) )"
 
-S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
+S=${WORKDIR}/${PN/lvm/LVM}.${PV}
 
 pkg_setup() {
 	local CONFIG_CHECK="~SYSVIPC"
@@ -55,54 +51,26 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-}
-
 src_prepare() {
-	epatch "${FILESDIR}"/lvm.conf-2.02.67.patch
+	# Gentoo specific modification(s)
+	epatch "${FILESDIR}"/${PN}-2.02.99-example.conf.in.patch
 
-	# Should not be needed due to upstream re-arrangement of build
-	#epatch "${FILESDIR}"/${PN}-2.02.56-dmeventd.patch
-	# Should not be need with new upstream udev rules
-	#epatch "${FILESDIR}"/${PN}-2.02.56-device-mapper-export-format.patch
+	# Not merged upstream, should be reviewed and forwarded:
+	epatch \
+		"${FILESDIR}"/${PN}-2.02.63-always-make-static-libdm.patch \
+		"${FILESDIR}"/${PN}-2.02.56-lvm2create_initrd.patch \
+		"${FILESDIR}"/${PN}-2.02.88-respect-cc.patch
+	epatch "${FILESDIR}"/${PN}-2.02.67-createinitrd.patch #301331
+	epatch "${FILESDIR}"/${PN}-2.02.99-locale-muck.patch #330373
+	epatch "${FILESDIR}"/${PN}-2.02.70-asneeded.patch # -Wl,--as-needed
+	epatch "${FILESDIR}"/${PN}-2.02.92-dynamic-static-ldflags.patch #332905
+	epatch "${FILESDIR}"/${PN}-2.02.97-udev-static.patch #370217
 
-	# Merged upstream:
-	#epatch "${FILESDIR}"/${PN}-2.02.51-as-needed.patch
-	# Merged upstream:
-	#epatch "${FILESDIR}"/${PN}-2.02.48-fix-pkgconfig.patch
-	# Merged upstream:
-	#epatch "${FILESDIR}"/${PN}-2.02.51-fix-pvcreate.patch
-	# Fixed differently upstream:
-	#epatch "${FILESDIR}"/${PN}-2.02.51-dmsetup-selinux-linking-fix-r3.patch
-
-	epatch "${FILESDIR}"/${PN}-2.02.63-always-make-static-libdm.patch
-	epatch "${FILESDIR}"/lvm2-2.02.56-lvm2create_initrd.patch
-	# bug 318513 - merged upstream
-	#epatch "${FILESDIR}"/${PN}-2.02.64-dmeventd-libs.patch
-	# bug 301331
-	epatch "${FILESDIR}"/${PN}-2.02.67-createinitrd.patch
-	# bug 330373
-	epatch "${FILESDIR}"/${PN}-2.02.92-locale-muck.patch
-	# --as-needed
-	epatch "${FILESDIR}"/${PN}-2.02.70-asneeded.patch
-	# bug 332905
-	epatch "${FILESDIR}"/${PN}-2.02.92-dynamic-static-ldflags.patch
-	# bug 361429 - merged upstream in .85
-	#epatch "${FILESDIR}"/${PN}-2.02.84-udev-pkgconfig.patch
-
-	# Merged upstream
-	#epatch "${FILESDIR}"/${PN}-2.02.73-asneeded.patch
-
-	epatch "${FILESDIR}"/${PN}-2.02.88-respect-cc.patch
-
-	# Upstream bug of LVM path
-	# Merged upstream
-	#epatch "${FILESDIR}"/${PN}-2.02.95-lvmpath.patch
-
-	# Upstream patch for http://bugs.gentoo.org/424810
-	# Merged upstream
-	#epatch "${FILESDIR}"/${PN}-2.02.95-udev185.patch
+	# Fix calling AR directly with USE static, bug #444082, convert to patch and forward to upstream
+	if use static ; then
+		sed -i -e "s:\$(AR) rs \$@ \$(OBJECTS) lvmcmdlib.o lvm2cmd-static.o:$(tc-getAR) rs \$@ \$(OBJECTS) lvmcmdlib.o lvm2cmd-static.o:" \
+			tools/Makefile.in || die
+	fi
 
 	eautoreconf
 }
@@ -172,7 +140,7 @@ src_configure() {
 	fi
 
 	local udevdir="${EPREFIX}/lib/udev/rules.d"
-	use udev && udevdir="${EPREFIX}$($(tc-getPKG_CONFIG) --variable=udevdir udev)/rules.d"
+	use udev && udevdir="${EPREFIX}/$(get_udevdir)/rules.d"
 
 	econf \
 		$(use_enable readline) \
@@ -189,35 +157,40 @@ src_configure() {
 		$(use_enable udev udev_rules) \
 		$(use_enable udev udev_sync) \
 		$(use_with udev udevdir "${udevdir}") \
+		"$(systemd_with_unitdir)" \
 		${myconf} \
 		CLDFLAGS="${LDFLAGS}"
 }
 
 src_compile() {
 	einfo "Doing symlinks"
-	pushd include
-	emake || die "Failed to prepare symlinks"
-	popd
+	pushd include >/dev/null
+	emake
+	popd >/dev/null
 
 	einfo "Starting main build"
-	emake || die "compile fail"
+	emake AR="$(tc-getAR)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Failed to emake install"
+	local inst
+	for inst in install install_systemd_units install_systemd_generators install_tmpfiles_configuration; do
+		emake DESTDIR="${D}" ${inst}
+	done
 
-	dodoc README VERSION* WHATS_NEW WHATS_NEW_DM doc/*.{conf,c,txt}
-	newinitd "${FILESDIR}"/lvm.rc-2.02.95-r2 lvm || die
-	newinitd "${FILESDIR}"/lvm-monitoring.initd-2.02.67-r2 lvm-monitoring || die
-	newconfd "${FILESDIR}"/lvm.confd-2.02.28-r2 lvm || die
+	dodoc README VERSION* WHATS_NEW WHATS_NEW_DM doc/*.{c,txt} conf/*.conf
+	newinitd "${FILESDIR}"/lvm.rc-2.02.95-r2 lvm
+	newinitd "${FILESDIR}"/lvm-monitoring.initd-2.02.67-r2 lvm-monitoring
+	newconfd "${FILESDIR}"/lvm.confd-2.02.28-r2 lvm
 	if use clvm; then
-		newinitd "${FILESDIR}"/clvmd.rc-2.02.39 clvmd || die
-		newconfd "${FILESDIR}"/clvmd.confd-2.02.39 clvmd || die
+		newinitd "${FILESDIR}"/clvmd.rc-2.02.39 clvmd
+		newconfd "${FILESDIR}"/clvmd.confd-2.02.39 clvmd
 	fi
 
 	# move shared libs to /lib(64)
 	if use static-libs; then
-		dolib.a libdm/ioctl/libdevmapper.a || die "dolib.a libdevmapper.a"
+		dolib.a libdm/ioctl/libdevmapper.a
+		dolib.a libdaemon/client/libdaemonclient.a #462908
 		#gen_usr_ldscript libdevmapper.so
 	fi
 
@@ -229,13 +202,12 @@ src_install() {
 	doins "${FILESDIR}"/dmtab
 
 	# Device mapper stuff
-	newinitd "${FILESDIR}"/device-mapper.rc-2.02.95-r2 device-mapper || die
-	newconfd "${FILESDIR}"/device-mapper.conf-1.02.22-r3 device-mapper || die
+	newinitd "${FILESDIR}"/device-mapper.rc-2.02.95-r2 device-mapper
+	newconfd "${FILESDIR}"/device-mapper.conf-1.02.22-r3 device-mapper
 
-	newinitd "${FILESDIR}"/dmeventd.initd-2.02.67-r1 dmeventd || die
+	newinitd "${FILESDIR}"/dmeventd.initd-2.02.67-r1 dmeventd
 	if use static-libs; then
-		dolib.a daemons/dmeventd/libdevmapper-event.a \
-		|| die "dolib.a libdevmapper-event.a"
+		dolib.a daemons/dmeventd/libdevmapper-event.a
 		#gen_usr_ldscript libdevmapper-event.so
 	fi
 
@@ -243,7 +215,7 @@ src_install() {
 	rm -f "${D}"/usr/$(get_libdir)/{libdevmapper-event,liblvm2cmd,liblvm2app,libdevmapper}.a
 
 	#insinto /etc/udev/rules.d/
-	#newins "${FILESDIR}"/64-device-mapper.rules-2.02.56-r3 64-device-mapper.rules || die
+	#newins "${FILESDIR}"/64-device-mapper.rules-2.02.56-r3 64-device-mapper.rules
 
 	# do not rely on /lib -> /libXX link
 	sed -i \

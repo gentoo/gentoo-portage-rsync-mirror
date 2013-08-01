@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.304 2013/08/01 00:10:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.306 2013/08/01 19:11:15 ssuominen Exp $
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> -lvm2-2.02.95-r4.ebuild,
+  -lvm2-2.02.97.ebuild:
+  old
+
+*lvm2-2.02.99 (01 Aug 2013)
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.99.ebuild,
+  +files/lvm2-2.02.99-example.conf.in.patch,
+  +files/lvm2-2.02.99-locale-muck.patch:
+  Version bump wrt #478452. Include upstream systemd files wrt #453594 by
+  Enrico Tagliavini. Install libdaemonclient.a with USE="static-libs" wrt
+  #462908 by Oleksii Shevchuk.
 
   01 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
   +files/lvm2-2.02.97-udev-static.patch, lvm2-2.02.97-r1.ebuild,
