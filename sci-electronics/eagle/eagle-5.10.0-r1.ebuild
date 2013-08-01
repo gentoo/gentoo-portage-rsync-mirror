@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.10.0-r1.ebuild,v 1.5 2012/09/24 00:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.10.0-r1.ebuild,v 1.6 2013/08/01 20:52:21 ssuominen Exp $
 
 EAPI="1"
 
@@ -27,7 +27,7 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
-	x86? ( media-libs/jpeg:62
+	x86? ( || ( virtual/jpeg:62 media-libs/jpeg:62 )
 		media-libs/libpng:1.2
 		=dev-libs/openssl-0.9.8* )
 	amd64? ( app-emulation/emul-linux-x86-baselibs

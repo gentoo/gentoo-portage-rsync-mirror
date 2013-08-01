@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.65 2013/07/31 21:28:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.67 2013/08/01 20:43:27 ssuominen Exp $
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -libjpeg-turbo-1.2.90.ebuild, -libjpeg-turbo-1.3.0-r1.ebuild:
+  old
+
+*libjpeg-turbo-1.3.0-r2 (01 Aug 2013)
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +libjpeg-turbo-1.3.0-r2.ebuild:
+  Revert back to .so.62 with 2 functions backported from .so.8, namely
+  jpeg_mem_dest() and jpeg_mem_src(). ABIs .so.7 and .so.8 are dead and
+  shouldn't be used anywhere anymore.
 
   31 Jul 2013; Alexis Ballier <aballier@gentoo.org>
   libjpeg-turbo-1.3.0-r1.ebuild:

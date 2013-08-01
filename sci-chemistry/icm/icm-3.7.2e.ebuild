@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2e.ebuild,v 1.2 2013/04/21 19:58:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2e.ebuild,v 1.3 2013/08/01 20:54:01 ssuominen Exp $
 
 EAPI="5"
 
@@ -36,7 +36,7 @@ DEPEND="!sci-chemistry/icm-browser
 					app-crypt/mit-krb5
 					app-arch/bzip2
 					media-libs/libpng:1.2
-					media-libs/jpeg:62
+					|| ( virtual/jpeg:62 media-libs/jpeg:62 )
 					x11-libs/libdrm
 					x11-libs/libX11
 					sys-apps/keyutils

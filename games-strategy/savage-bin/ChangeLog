@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/savage-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.15 2011/10/15 01:04:17 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.16 2013/08/01 20:55:44 ssuominen Exp $
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> savage-bin-2.00e.ebuild:
+  Fix libjpeg.so.62 dependency.
 
   15 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> savage-bin-2.00e.ebuild:
   work around opengl issue (bug #369135)
@@ -56,4 +59,3 @@
   +savage-bin-2.00c.ebuild:
   Initial import. Ebuild originally by Anton Romanov <theli@ukr.net> and
   edited by me. Closing bug #146161.
-

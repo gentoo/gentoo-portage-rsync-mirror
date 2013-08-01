@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.5 2013/03/13 19:17:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.6 2013/08/01 20:51:04 ssuominen Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="gimp"
 
 RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	|| ( media-libs/jpeg:62 media-libs/libjpeg-turbo )
+	|| ( virtual/jpeg:62 media-libs/jpeg:62 )
 	media-gfx/exiv2
 	media-libs/cimg
 	media-libs/lcms:2

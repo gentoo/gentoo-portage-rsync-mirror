@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.56 2013/06/16 09:37:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.57 2013/08/01 20:52:21 ssuominen Exp $
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> eagle-5.10.0-r1.ebuild,
+  eagle-5.11.0.ebuild:
+  Fix libjpeg.so.62 dependency.
 
   16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #79409

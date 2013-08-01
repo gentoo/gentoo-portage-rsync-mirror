@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/photivo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.5 2013/03/13 19:17:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.6 2013/08/01 20:51:04 ssuominen Exp $
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> photivo-9999.ebuild:
+  Fix libjpeg.so.62 dependency.
 
   13 Mar 2013; Markos Chandras <hwoarang@gentoo.org> photivo-9999.ebuild:
   Fix sed pattern. Thanks to Alexander Stein <alexander.stein@informatik.tu-

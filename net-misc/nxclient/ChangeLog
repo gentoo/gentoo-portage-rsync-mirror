@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxclient
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.95 2011/09/23 09:47:17 voyageur Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.96 2013/08/01 20:54:56 ssuominen Exp $
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> nxclient-3.5.0.7.ebuild:
+  Fix libjpeg.so.62 dependency.
 
   23 Sep 2011; Bernard Cafarelli <voyageur@gentoo.org>
   -nxclient-3.4.0.5.ebuild, -nxclient-3.4.0.7.ebuild,
@@ -443,4 +446,3 @@
 
   27 Aug 2003; stuart nxclient-1.2.2.ebuild, files/1.2.2/50nxclient:
   Initial import
-

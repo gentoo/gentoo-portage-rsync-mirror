@@ -1,24 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.5 2013/07/31 21:28:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r2.ebuild,v 1.2 2013/08/01 20:37:01 ssuominen Exp $
 
 EAPI=5
 
-JPEG_ABI=8
-
-if [[ ${PV} == *_p20* ]]; then
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
-	inherit autotools
-elif [[ ${PV} != "9999" ]]; then
-	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-fi
-
-inherit eutils java-pkg-opt-2 libtool toolchain-funcs multilib-minimal
+inherit autotools eutils java-pkg-opt-2 libtool toolchain-funcs multilib-minimal
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
 HOMEPAGE="http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/"
-SRC_URI="${SRC_URI}
-	mirror://debian/pool/main/libj/libjpeg${JPEG_ABI}/libjpeg${JPEG_ABI}_${JPEG_ABI}d-1.debian.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8d-1.debian.tar.gz"
 
 LICENSE="BSD IJG"
 SLOT="0"
@@ -26,11 +17,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="java static-libs"
 
 ASM_DEPEND="|| ( dev-lang/nasm dev-lang/yasm )"
-COMMON_DEPEND="!media-libs/jpeg:0"
-RDEPEND="${COMMON_DEPEND}
-	java? ( >=virtual/jre-1.5 )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r3
+COMMON_DEPEND="!media-libs/jpeg:0
+	!media-libs/jpeg:62
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r5
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
+RDEPEND="${COMMON_DEPEND}
+	java? ( >=virtual/jre-1.5 )"
 DEPEND="${COMMON_DEPEND}
 	amd64? ( ${ASM_DEPEND} )
 	x86? ( ${ASM_DEPEND} )
@@ -73,7 +65,7 @@ multilib_src_configure() {
 	ECONF_SOURCE=${S} \
 	econf \
 		$(use_enable static-libs static) \
-		--with-jpeg${JPEG_ABI} \
+		--with-mem-srcdst \
 		"${myconf[@]}"
 }
 
