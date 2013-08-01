@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.20 2013/07/31 22:24:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.21 2013/08/01 19:47:33 ulm Exp $
 
 EAPI=5
 
@@ -17,22 +17,41 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples jpeg +motif22-compatibility png static-libs unicode xft"
 
-RDEPEND="x11-libs/libX11[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]
-	x11-libs/libXmu[${MULTILIB_USEDEP}]
-	x11-libs/libXp[${MULTILIB_USEDEP}]
-	x11-libs/libXt[${MULTILIB_USEDEP}]
-	unicode? ( virtual/libiconv )
-	xft? (
-		media-libs/fontconfig[${MULTILIB_USEDEP}]
-		x11-libs/libXft[${MULTILIB_USEDEP}]
+RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-motif[-abi_x86_32(-)] )
+	|| ( (
+		x11-libs/libX11[${MULTILIB_USEDEP}]
+		x11-libs/libXext[${MULTILIB_USEDEP}]
+		x11-libs/libXmu[${MULTILIB_USEDEP}]
+		x11-libs/libXp[${MULTILIB_USEDEP}]
+		x11-libs/libXt[${MULTILIB_USEDEP}]
+		xft? (
+			media-libs/fontconfig[${MULTILIB_USEDEP}]
+			x11-libs/libXft[${MULTILIB_USEDEP}]
+		)
 	)
-	jpeg? ( virtual/jpeg )
-	png? ( >=media-libs/libpng-1.4:0= )
-	abi_x86_32? (
-		amd64? ( app-emulation/emul-linux-x86-baselibs )
-		!app-emulation/emul-linux-x86-motif[-abi_x86_32(-)]
-	)"
+	(
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXmu
+		x11-libs/libXp
+		x11-libs/libXt
+		xft? ( media-libs/fontconfig x11-libs/libXft )
+		abi_x86_32? ( amd64? ( app-emulation/emul-linux-x86-xlibs ) )
+	) )
+	|| ( (
+		unicode? ( virtual/libiconv[${MULTILIB_USEDEP}] )
+		jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
+		png? ( >=media-libs/libpng-1.4:0=[${MULTILIB_USEDEP}] )
+	)
+	(
+		unicode? ( virtual/libiconv )
+		jpeg? ( virtual/jpeg )
+		png? ( >=media-libs/libpng-1.4:0= )
+		abi_x86_32? ( amd64? (
+			jpeg? ( app-emulation/emul-linux-x86-baselibs )
+			png? ( app-emulation/emul-linux-x86-baselibs )
+		) )
+	) )"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.8.1.ebuild,v 1.1 2013/04/19 18:00:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.8.3.ebuild,v 1.1 2013/08/01 19:47:23 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ VALA_MIN_API_VERSION=0.18
 inherit gnome2 vala
 
 DESCRIPTION="VNC client for the GNOME desktop"
-HOMEPAGE="http://live.gnome.org/Vinagre"
+HOMEPAGE="https://wiki.gnome.org/Vinagre"
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -43,6 +43,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	$(vala_depend)
 "
+
+src_prepare() {
+	gnome2_src_prepare
+	vala_src_prepare
+}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog ChangeLog.pre-git NEWS README"

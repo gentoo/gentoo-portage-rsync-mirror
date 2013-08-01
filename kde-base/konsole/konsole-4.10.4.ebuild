@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-4.10.4.ebuild,v 1.5 2013/07/02 08:06:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-4.10.4.ebuild,v 1.6 2013/08/01 20:00:19 johu Exp $
 
 EAPI=5
 
@@ -10,6 +10,7 @@ VIRTUALX_REQUIRED="test"
 inherit kde4-base
 
 DESCRIPTION="X terminal for use with KDE"
+HOMEPAGE="http://kde.org/applications/system/konsole http://konsole.kde.org"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 

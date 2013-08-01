@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/geocode-glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/ChangeLog,v 1.10 2013/03/31 19:07:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/ChangeLog,v 1.11 2013/08/01 19:59:04 pacho Exp $
+
+*geocode-glib-0.99.1 (01 Aug 2013)
+
+  01 Aug 2013; Pacho Ramos <pacho@gentoo.org> +geocode-glib-0.99.1.ebuild:
+  Version bump and skip tests as they need network (#424719 by flameeyes)
 
   31 Mar 2013; Pacho Ramos <pacho@gentoo.org> geocode-glib-0.99.0.ebuild:
   Adapt to libsoup-2.42 dropping gnome USE and splitting (#463702)
