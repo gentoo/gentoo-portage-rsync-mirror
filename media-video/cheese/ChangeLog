@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.72 2013/07/20 08:43:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.73 2013/08/01 02:43:12 tetromino Exp $
+
+  01 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org> cheese-3.8.2.ebuild,
+  cheese-3.8.3.ebuild:
+  Depend on >=clutter-gst-2.0.6 to avoid GLSL errors (bug #478702, thanks to
+  Jan Vesely).
 
 *cheese-3.8.3 (20 Jul 2013)
 

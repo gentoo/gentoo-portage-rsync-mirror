@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.8.2.ebuild,v 1.1 2013/05/15 08:02:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.8.2.ebuild,v 1.2 2013/08/01 02:34:24 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -22,7 +22,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebs
 # atk used in libview
 # gdk-pixbuf used all over the place
 # libX11 used for totem-screensaver
-RDEPEND="
+COMMON_DEPEND="
 	dev-libs/atk
 	>=dev-libs/glib-2.33:2
 	>=dev-libs/libxml2-2.5:2
@@ -50,13 +50,20 @@ RDEPEND="
 	tiff? ( >=media-libs/tiff-3.6:0= )
 	xps? ( >=app-text/libgxps-0.2.1:= )
 "
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	|| (
+		>=x11-themes/gnome-icon-theme-2.17.1
+		>=x11-themes/hicolor-icon-theme-0.10 )
+	x11-themes/gnome-icon-theme-symbolic
+"
+DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.3
 	dev-util/gdbus-codegen
 	sys-devel/gettext
 	>=dev-util/gtk-doc-am-1.13
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 # Needs dogtail and pyspi from http://fedorahosted.org/dogtail/
 # Releases: http://people.redhat.com/zcerza/dogtail/releases/
