@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/async_extra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/async_extra/ChangeLog,v 1.5 2013/07/22 17:38:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/async_extra/ChangeLog,v 1.6 2013/08/01 14:33:16 aballier Exp $
+
+*async_extra-109.35.00 (01 Aug 2013)
+
+  01 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +async_extra-109.35.00.ebuild:
+  version bump
 
 *async_extra-109.34.00 (22 Jul 2013)
 
