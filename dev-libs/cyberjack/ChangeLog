@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cyberjack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.34 2012/12/16 17:49:25 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.36 2013/08/01 12:17:07 ssuominen Exp $
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  cyberjack-3.99.5_p03-r1.ebuild:
+  Rename USE="kernel_linux" to USE="udev" for eg. mdev users.
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -cyberjack-3.99.5_p03.ebuild:
+  old
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cyberjack-3.99.5_p03-r1.ebuild:
   Stable for x86, wrt bug #447478

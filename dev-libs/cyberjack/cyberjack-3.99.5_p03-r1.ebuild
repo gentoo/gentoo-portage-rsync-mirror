@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03-r1.ebuild,v 1.4 2012/12/16 17:49:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03-r1.ebuild,v 1.5 2013/08/01 12:17:07 ssuominen Exp $
 
 EAPI=5
 inherit eutils linux-info toolchain-funcs udev
@@ -14,14 +14,14 @@ SRC_URI="http://support.reiner-sct.de/downloads/LINUX/V${PV/_p/_SP}/${MY_P}.tar.
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="fox kernel_linux xml"
+IUSE="fox udev xml"
 
 COMMON_DEPEND="sys-apps/pcsc-lite
 	virtual/libusb:1
 	fox? ( >=x11-libs/fox-1.6 )
 	xml? ( dev-libs/libxml2 )"
 RDEPEND="${COMMON_DEPEND}
-	kernel_linux? ( virtual/udev )"
+	udev? ( virtual/udev )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
@@ -30,10 +30,8 @@ S=${WORKDIR}/${MY_P/_/-}
 DOCS="ChangeLog NEWS doc/*.txt"
 
 pkg_setup() {
-	if use kernel_linux; then
-		CONFIG_CHECK="~USB_SERIAL_CYBERJACK"
-		linux-info_pkg_setup
-	fi
+	CONFIG_CHECK="~USB_SERIAL_CYBERJACK"
+	linux-info_pkg_setup
 }
 
 src_prepare() {
@@ -57,7 +55,7 @@ src_install() {
 	rm -f "${ED}"/usr/lib*/${PN}/pcscd_init.diff
 	prune_libtool_files --all
 
-	use kernel_linux && udev_newrules "${FILESDIR}"/${PN}.rules 92-${PN}.rules #388329
+	use udev && udev_newrules "${FILESDIR}"/${PN}.rules 92-${PN}.rules #388329
 }
 
 pkg_postinst() {
