@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.8.0-r1.ebuild,v 1.1 2013/07/20 11:15:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.8.0-r1.ebuild,v 1.2 2013/08/01 18:34:46 pacho Exp $
 
 EAPI="5"
 
@@ -43,18 +43,19 @@ RDEPEND="
 	>=www-client/epiphany-${PV}
 
 	games? (
+		>=games-arcade/gnome-robots-${PV}
 		>=games-board/aisleriot-3.2.3.2
-		>=games-puzzle/five-or-more-${PV}
 		>=games-board/four-in-a-row-${PV}
 		>=games-board/gnome-chess-${PV}
-		>=games-puzzle/gnome-klotski-${PV}
+		>=games-board/gnome-mahjongg-${PV}
 		>=games-board/gnome-mines-${PV}
-		>=games-arcade/gnome-robots-${PV}
-		>=games-puzzle/gnome-tetravex-${PV}
 		>=games-board/iagno-${PV}
+		>=games-puzzle/five-or-more-${PV}
+		>=games-puzzle/gnome-klotski-${PV}
+		>=games-puzzle/gnome-tetravex-${PV}
+		>=games-puzzle/gnome-sudoku-${PV}
 		>=games-puzzle/quadrapassel-${PV}
-		>=games-puzzle/swell-foop-${PV}
-		>=games-puzzle/gnome-sudoku-${PV} )
+		>=games-puzzle/swell-foop-${PV} )
 	shotwell? ( >=media-gfx/shotwell-0.14 )
 	tracker? (
 		>=app-misc/tracker-0.16

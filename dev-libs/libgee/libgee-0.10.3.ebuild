@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.10.1.ebuild,v 1.1 2013/04/14 19:15:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.10.3.ebuild,v 1.1 2013/08/01 18:55:10 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome2
 
 DESCRIPTION="GObject-based interfaces and classes for commonly used data structures"
-HOMEPAGE="https://live.gnome.org/Libgee"
+HOMEPAGE="https://wiki.gnome.org/Libgee"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.8"

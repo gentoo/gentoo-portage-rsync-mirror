@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.47 2013/08/01 18:30:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.48 2013/08/01 18:31:58 pinkbyte Exp $
+
+  01 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> -blitz-0.9.ebuild,
+  -blitz-0.9-r3.ebuild, -files/blitz-0.9-gcc-4.3-missing-includes.patch:
+  Drop old versions, wrt bug #478574
 
 *blitz-0.10-r1 (01 Aug 2013)
 

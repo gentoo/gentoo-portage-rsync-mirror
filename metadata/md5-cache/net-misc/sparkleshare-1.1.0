@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=>=dev-lang/mono-2.8 >=dev-dotnet/glib-sharp-2.12.7 >=dev-dotnet/gtk-sharp-2.12.10 dev-dotnet/notify-sharp dev-dotnet/webkit-sharp virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Git-based collaboration and file sharing tool
+EAPI=5
+HOMEPAGE=http://www.sparkleshare.org
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=dev-lang/mono-2.8 >=dev-dotnet/glib-sharp-2.12.7 >=dev-dotnet/gtk-sharp-2.12.10 dev-dotnet/notify-sharp dev-dotnet/webkit-sharp >=dev-vcs/git-1.7.12 gnome-base/gvfs net-misc/curl[ssl] net-misc/openssh
+SLOT=0
+SRC_URI=https://bitbucket.org/hbons/sparkleshare/downloads/sparkleshare-linux-1.1.0-tar.gz -> sparkleshare-1.1.0.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	7976d3f4d0c0816c67033d3dcd4d9472	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	b1c8688e60f9580bcb9bb46e08737eb1	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=917c4215449c9b2149d6ff34b34ae75e

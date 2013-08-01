@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/kcachegrind-4.10.4.ebuild,v 1.5 2013/07/02 08:06:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/kcachegrind-4.10.4.ebuild,v 1.6 2013/08/01 18:56:57 johu Exp $
 
 EAPI=5
 
@@ -14,6 +14,8 @@ fi
 inherit ${eclass}
 
 DESCRIPTION="KDE Frontend for Cachegrind"
+HOMEPAGE="http://kde.org/applications/development/kcachegrind
+http://kcachegrind.sourceforge.net"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 

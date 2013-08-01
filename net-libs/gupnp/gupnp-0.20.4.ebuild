@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.2.ebuild,v 1.1 2013/04/06 09:28:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.4.ebuild,v 1.1 2013/08/01 18:49:36 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 VALA_MIN_API_VERSION="0.14"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome.org vala
+inherit gnome2 vala
 
 DESCRIPTION="An object-oriented framework for creating UPnP devs and control points"
 HOMEPAGE="http://gupnp.org/"
@@ -40,6 +41,7 @@ DEPEND="${RDEPEND}
 "
 src_prepare() {
 	use introspection && vala_src_prepare
+	gnome2_src_prepare
 }
 
 src_configure() {
@@ -48,15 +50,8 @@ src_configure() {
 	use connman && backend=connman
 	use networkmanager && backend=network-manager
 
-	econf \
+	gnome2_src_configure \
 		$(use_enable introspection) \
 		--disable-static \
-		--disable-gtk-doc \
 		--with-context-manager=${backend}
-}
-
-src_install() {
-	DOCS="AUTHORS ChangeLog NEWS README"
-	default
-	prune_libtool_files
 }

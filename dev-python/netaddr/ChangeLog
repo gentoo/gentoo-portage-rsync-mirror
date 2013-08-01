@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/netaddr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.15 2013/07/30 05:28:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.16 2013/08/01 18:58:45 chutzpah Exp $
+
+*netaddr-0.7.10_p20130801 (01 Aug 2013)
+
+  01 Aug 2013; Patrick McLean <chutzpah@gentoo.org>
+  +netaddr-0.7.10_p20130801.ebuild:
+  Version bump to a snapshot version, add python 3.2 and 3.3 since the
+  testsuite now passes on them.
 
   30 Jul 2013; Ian Delaney <idella4@gentoo.org> netaddr-0.7.10-r1.ebuild:
   -r1 doesn't have a pkg_postinst correction
