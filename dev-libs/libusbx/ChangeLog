@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libusbx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.13 2013/07/15 08:42:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.14 2013/08/01 12:32:23 ssuominen Exp $
+
+*libusbx-1.0.16-r1 (01 Aug 2013)
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +libusbx-1.0.16-r1.ebuild:
+  Move the shared library to / for hid2hci binary from net-wireless/bluez wrt
+  #478878 by Alexis Ballier
 
 *libusbx-1.0.16 (15 Jul 2013)
 

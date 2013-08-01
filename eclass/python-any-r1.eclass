@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.12 2013/07/27 11:16:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.13 2013/08/01 12:49:42 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -114,11 +114,16 @@ fi
 # @CODE
 
 _python_build_set_globals() {
-	local usestr
+	local usestr i PYTHON_PKG_DEP
 	[[ ${PYTHON_REQ_USE} ]] && usestr="[${PYTHON_REQ_USE}]"
 
+	# check for invalid PYTHON_COMPAT
+	for i in "${PYTHON_COMPAT[@]}"; do
+		# the function simply dies on invalid impl
+		_python_impl_supported "${i}"
+	done
+
 	PYTHON_DEPS=
-	local i PYTHON_PKG_DEP
 	for i in "${_PYTHON_ALL_IMPLS[@]}"; do
 		has "${i}" "${PYTHON_COMPAT[@]}" || continue
 

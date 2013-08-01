@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycups
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.66 2012/12/20 16:47:42 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.67 2013/08/01 12:47:43 mgorny Exp $
+
+*pycups-1.9.63 (01 Aug 2013)
+
+  01 Aug 2013; Michał Górny <mgorny@gentoo.org> +pycups-1.9.63.ebuild:
+  Version bump. Convert to distutils-r1. Bug #474692.
 
   20 Dec 2012; Michael Palimaka <kensington@gentoo.org> -pycups-1.9.61.ebuild:
   Remove old.
