@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.7.ebuild,v 1.1 2013/07/31 21:06:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.7.ebuild,v 1.2 2013/07/31 23:28:23 hasufell Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 	!bazaar? ( || ( ${VCS_DEPEND} ) )"
 
 src_prepare(){
-	epatch "${FILESDIR}"/${PN}-1.5-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
