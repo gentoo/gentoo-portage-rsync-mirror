@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/blitz
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.46 2012/11/13 06:27:36 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.47 2013/08/01 18:30:06 pinkbyte Exp $
+
+*blitz-0.10-r1 (01 Aug 2013)
+
+  01 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> +blitz-0.10-r1.ebuild:
+  Revision bump: EAPI 5, respect LDFLAGS, some cosmetic changes, drop unused
+  inherit of multilib eclass
 
   13 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> blitz-0.10.ebuild:
   Split doc building and compiling, resolving bug #442504

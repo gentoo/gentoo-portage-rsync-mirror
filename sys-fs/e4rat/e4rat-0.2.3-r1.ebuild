@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.3-r1.ebuild,v 1.6 2013/07/28 12:36:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.3-r1.ebuild,v 1.7 2013/08/01 18:04:07 pacho Exp $
 
 EAPI=5
 
@@ -32,9 +32,8 @@ PATCHES=(
 
 pkg_setup() {
 	check_extra_config
-	DOC_CONTENTS="Please consult the following link if you need help
-		configuring your system: http://en.gentoo-wiki.com/wiki/E4rat\n
-		\nTo launch systemd from e4rat you simply need to edit /etc/e4rat.conf
+	DOC_CONTENTS="
+		To launch systemd from e4rat you simply need to edit /etc/e4rat.conf
 		and set:\n
 		; path to init process binary (DEFAULT: /sbin/init)\n
 		init /usr/lib/systemd/systemd"

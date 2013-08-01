@@ -1,0 +1,9 @@
+# ChangeLog for games-board/gnome-mahjongg
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/ChangeLog,v 1.1 2013/08/01 18:31:05 pacho Exp $
+
+*gnome-mahjongg-3.8.0 (01 Aug 2013)
+
+  01 Aug 2013; Pacho Ramos <pacho@gentoo.org> +gnome-mahjongg-3.8.0.ebuild,
+  +metadata.xml:
+  Add game from old gnome-games (#478880 by Maciej Piechotka)
