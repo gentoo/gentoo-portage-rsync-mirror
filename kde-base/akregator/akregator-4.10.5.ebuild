@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-4.10.5.ebuild,v 1.4 2013/07/30 10:40:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-4.10.5.ebuild,v 1.5 2013/08/01 20:06:46 johu Exp $
 
 EAPI=5
 
@@ -9,6 +9,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="KDE news feed aggregator."
+HOMEPAGE="http://www.kde.org/applications/internet/akregator"
 KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 

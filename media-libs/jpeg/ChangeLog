@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.141 2013/08/01 15:47:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.142 2013/08/01 20:24:09 ssuominen Exp $
+
+*jpeg-6b-r11 (01 Aug 2013)
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +jpeg-6b-r11.ebuild,
+  jpeg-9.ebuild:
+  Release libjpeg.so.9 into the wild and cope with the libjpeg-turbo reverting
+  back to .so.62
 
   01 Aug 2013; Alexis Ballier <aballier@gentoo.org> jpeg-6b-r10.ebuild:
   add blockers on emul libs and stack it for baselibs -r5

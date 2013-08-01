@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-motif
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.20 2013/07/31 14:02:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.21 2013/08/01 20:20:48 ulm Exp $
+
+  01 Aug 2013; Ulrich Müller <ulm@gentoo.org>
+  emul-linux-x86-motif-20130224.ebuild,
+  emul-linux-x86-motif-20130224-r1.ebuild:
+  Add missing dependency on baselibs, needed for libjpeg and libpng.
 
 *emul-linux-x86-motif-20130224-r1 (31 Jul 2013)
 

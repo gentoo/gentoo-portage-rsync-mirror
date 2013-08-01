@@ -1,6 +1,13 @@
 # ChangeLog for virtual/jpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.12 2013/07/31 16:17:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.13 2013/08/01 20:27:39 ssuominen Exp $
+
+*jpeg-62 (01 Aug 2013)
+*jpeg-0-r2 (01 Aug 2013)
+
+  01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +jpeg-0-r2.ebuild,
+  +jpeg-62.ebuild:
+  Adapt to the media-libs/jpeg and media-libs/libjpeg-turbo ABI change.
 
   31 Jul 2013; Alexis Ballier <aballier@gentoo.org> jpeg-0-r1.ebuild:
   Fix deps on the providers by using MULTILIB_USEDEP
