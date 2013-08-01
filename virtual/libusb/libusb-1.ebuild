@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/libusb-1.ebuild,v 1.24 2013/05/12 15:38:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/libusb-1.ebuild,v 1.25 2013/08/01 16:21:16 ssuominen Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Virtual for libusb"
 HOMEPAGE=""
