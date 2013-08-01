@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r1.ebuild,v 1.1 2013/08/01 14:20:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r1.ebuild,v 1.2 2013/08/01 17:20:39 hasufell Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit distutils-r1
 MY_PN="allmydata-tahoe"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A secure, decentralized, data store"
+DESCRIPTION="Secure, decentralized, data store"
 HOMEPAGE="http://tahoe-lafs.org/trac/tahoe-lafs"
 SRC_URI="http://tahoe-lafs.org/source/tahoe-lafs/releases/${MY_P}.tar.bz2"
 

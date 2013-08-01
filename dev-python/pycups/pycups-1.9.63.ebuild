@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.63.ebuild,v 1.1 2013/08/01 12:47:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.63.ebuild,v 1.2 2013/08/01 17:10:37 mgorny Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc[$(python_gen_usedep 'python2*')] )
 "
 
-REQUIRED_USE="doc? ( $(python_gen_useflags 'python2*') )"
+REQUIRED_USE="doc? ( || ( $(python_gen_useflags 'python2*') ) )"
 
 python_compile_all() {
 	if use doc; then

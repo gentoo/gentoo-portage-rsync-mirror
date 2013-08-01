@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.13 2013/08/01 16:59:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.14 2013/08/01 17:24:02 aballier Exp $
 
 EAPI=5
 
-inherit flag-o-matic multilib toolchain-funcs eutils
+inherit flag-o-matic multilib toolchain-funcs eutils multilib-minimal
 
 DESCRIPTION="A free library for encoding X264/AVC streams"
 HOMEPAGE="http://www.videolan.org/developers/x264.html"
@@ -26,10 +26,10 @@ LICENSE="GPL-2"
 IUSE="10bit +interlaced pic static-libs sse +threads"
 
 ASM_DEP=">=dev-lang/yasm-1.2.0"
-DEPEND="amd64? ( ${ASM_DEP} )
-	amd64-fbsd? ( ${ASM_DEP} )
-	x86? ( ${ASM_DEP} )
-	x86-fbsd? ( ${ASM_DEP} )"
+DEPEND="abi_x86_32? ( ${ASM_DEP} )
+	abi_x86_64? ( ${ASM_DEP} )"
+RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r7
+		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 
 DOCS="AUTHORS doc/*.txt"
 
@@ -39,18 +39,18 @@ src_prepare() {
 	epatch "${FILESDIR}"/x264-cflags.patch
 }
 
-src_configure() {
+multilib_src_configure() {
 	tc-export CC
 	local asm_conf=""
 
-	if use x86 && use pic || [[ ${ABI} == "x32" ]]; then
+	if [[ ${ABI} == x86* ]] && use pic || [[ ${ABI} == "x32" ]]; then
 		asm_conf=" --disable-asm"
 	fi
 
 	# Upstream uses this, see the cflags patch
 	use sse && append-flags "-msse" "-mfpmath=sse"
 
-	./configure \
+	"${S}/configure" \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--disable-cli \
