@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0.ebuild,v 1.1 2013/08/01 13:02:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r1.ebuild,v 1.1 2013/08/01 14:20:33 hasufell Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}"/${P}-setup.patch )
+PATCHES=( "${FILESDIR}"/${P}-{setup,ifconfig}.patch )
 
 src_prepare() {
 	rm -r setuptools* setup.cfg || die

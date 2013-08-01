@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/tahoe-lafs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.1 2013/08/01 13:02:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.2 2013/08/01 14:20:33 hasufell Exp $
+
+*tahoe-lafs-1.10.0-r1 (01 Aug 2013)
+
+  01 Aug 2013; Julian Ospald <hasufell@gentoo.org> -tahoe-lafs-1.10.0.ebuild,
+  +tahoe-lafs-1.10.0-r1.ebuild, +files/tahoe-lafs-1.10.0-ifconfig.patch:
+  fix hardcoded path to /sbin/ifconfig
 
 *tahoe-lafs-1.10.0 (01 Aug 2013)
 
