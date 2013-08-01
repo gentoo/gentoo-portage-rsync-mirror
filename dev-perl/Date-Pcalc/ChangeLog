@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Pcalc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.21 2012/06/24 12:58:56 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.22 2013/08/01 05:20:28 mattst88 Exp $
+
+  01 Aug 2013; Matt Turner <mattst88@gentoo.org> -Date-Pcalc-1.2.ebuild:
+  Drop old version 1.2, bugs 478752 and 478754.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

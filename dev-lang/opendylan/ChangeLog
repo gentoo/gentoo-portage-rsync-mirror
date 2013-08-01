@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/opendylan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.9 2013/07/12 03:47:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.10 2013/08/01 05:16:42 patrick Exp $
+
+  01 Aug 2013; Patrick Lauer <patrick@gentoo.org> -opendylan-2011.1-r1.ebuild,
+  -opendylan-2012.1.ebuild:
+  Remove old
 
 *opendylan-2013.1 (12 Jul 2013)
 
