@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.6 2013/06/22 21:32:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.7 2013/08/01 15:17:11 blueness Exp $
+
+  01 Aug 2013; Anthony G. Basile <blueness@gentoo.org>
+  +linux/arm/armv7a/selinux/eapi, +linux/arm/armv7a/selinux/parent:
+  linux/arm/armv7a/selinux: add hardened selinux for hardened armv7a
 
   22 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
   +linux/musl/amd64/make.defaults, +linux/musl/amd64/package.mask,

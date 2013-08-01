@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reviewboard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.4 2013/08/01 14:05:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.5 2013/08/01 15:25:01 idella4 Exp $
+
+  01 Aug 2013; Ian Delaney <idella4@gentoo.org> reviewboard-1.7.12.ebuild:
+  correct updated rdeps, masked while awaiting bump of Djblets
 
 *reviewboard-1.7.12 (01 Aug 2013)
 

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14976 2013/08/01 13:56:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14977 2013/08/01 15:12:07 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (01 Aug 2013)
+# Mask while awaiting bump to dep Djblets-0.7.16
+=dev-util/reviewboard-1.7.12
 
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2013)
 # Temporary mask, pending on bumped emul- and blockers
