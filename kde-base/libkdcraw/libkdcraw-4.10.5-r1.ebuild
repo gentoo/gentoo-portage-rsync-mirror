@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/libkdcraw-4.10.5-r1.ebuild,v 1.5 2013/07/30 10:40:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/libkdcraw-4.10.5-r1.ebuild,v 1.6 2013/08/01 06:21:41 kensington Exp $
 
 EAPI=5
 
@@ -12,7 +12,6 @@ IUSE="debug jasper"
 
 DEPEND="
 	>=media-libs/libraw-0.15:=
-	virtual/jpeg
 	jasper? ( media-libs/jasper )
 "
 RDEPEND="${DEPEND}"
