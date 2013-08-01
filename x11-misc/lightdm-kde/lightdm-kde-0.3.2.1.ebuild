@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/lightdm-kde-0.3.2.1.ebuild,v 1.1 2013/07/31 01:15:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/lightdm-kde-0.3.2.1.ebuild,v 1.2 2013/08/01 12:00:01 kensington Exp $
 
 EAPI=5
 
@@ -27,3 +27,5 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN/-kde}-${PV}
+
+PATCHES=( "${FILESDIR}/${P}-lightdm-1.7.patch" )
