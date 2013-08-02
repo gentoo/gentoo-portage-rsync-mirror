@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.1.7.ebuild,v 1.1 2013/07/09 00:18:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.1.7.ebuild,v 1.3 2013/08/02 19:41:21 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -27,6 +27,7 @@ RDEPEND="dev-libs/libxml2:2
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
+	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )"
 
