@@ -1,9 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.910 2013/08/01 13:03:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.911 2013/08/02 08:29:37 mgorny Exp $
 
   01 Aug 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Shout QA warnings when _all() phases do not call the default impls.
+  Bug #478804.
 
   01 Aug 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass:
   python-any-r1: bail out on invalid PYTHON_COMPAT. Bug #478442.

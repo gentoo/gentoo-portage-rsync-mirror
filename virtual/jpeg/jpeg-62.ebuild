@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-62.ebuild,v 1.1 2013/08/01 20:27:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-62.ebuild,v 1.2 2013/08/02 08:30:55 ssuominen Exp $
 
 EAPI=5
 
 inherit multilib-build
 
-DESCRIPTION="A virtual for the JPEG implementation"
+DESCRIPTION="A virtual for the libjpeg.so.62 ABI for binary-only programs"
 HOMEPAGE=""
 SRC_URI=""
 

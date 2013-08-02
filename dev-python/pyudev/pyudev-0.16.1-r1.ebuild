@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1-r1.ebuild,v 1.1 2013/07/26 20:45:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1-r1.ebuild,v 1.2 2013/08/02 08:23:23 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ RDEPEND="virtual/udev
 	pyside? ( dev-python/pyside[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/mock[${PYTHON_USEDEP}] )"
+	test? ( dev-python/mock[${PYTHON_USEDEP}]
+		dev-python/pytest[${PYTHON_USEDEP}] )"
 
 DOCS=( CHANGES.rst README.rst )
 
