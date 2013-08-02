@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-3.0.5.ebuild,v 1.9 2013/06/29 16:19:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-3.0.5.ebuild,v 1.10 2013/08/02 07:12:20 slyfox Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 		>=dev-libs/libxslt-1.1.2 )"
 
 src_prepare() {
-	HCFLAGS+=-XBangPatterns #fixes build failure on BE platforms; bug 466778
+	HCFLAGS+=" -XBangPatterns" #fixes build failure on BE platforms; bug 466778
 
 	cabal_chdeps \
 		'build-depends: process' 'build-depends: process, base'
