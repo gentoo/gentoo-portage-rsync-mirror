@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.148 2013/06/05 00:16:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.149 2013/08/02 00:19:12 ssuominen Exp $
+
+*expat-2.1.0-r3 (02 Aug 2013)
+
+  02 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +expat-2.1.0-r3.ebuild:
+  Convert to the new multilib format wrt #478468 by Julian Ospald
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.
