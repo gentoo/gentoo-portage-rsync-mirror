@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libkscreen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.1 2013/06/23 10:54:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/ChangeLog,v 1.2 2013/08/02 05:44:01 mrueg Exp $
+
+*libkscreen-1.0.1 (02 Aug 2013)
+
+  02 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +libkscreen-1.0.1.ebuild:
+  Version bump
 
 *libkscreen-1.0 (23 Jun 2013)
 
@@ -9,4 +14,3 @@
   New package. Import from kde overlay. Initial ebuild by Elias Probst
   <mail@eliasprobst.eu>. Changes by Manuel Rüger <gentoo@rueg.eu> and me.
   Needed for bug #474106.
-

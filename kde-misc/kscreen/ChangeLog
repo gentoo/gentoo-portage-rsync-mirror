@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kscreen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.1 2013/06/23 11:59:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.2 2013/08/02 05:47:50 mrueg Exp $
+
+*kscreen-1.0.1 (02 Aug 2013)
+
+  02 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +kscreen-1.0.1.ebuild:
+  Version bump
 
 *kscreen-1.0 (23 Jun 2013)
 
@@ -9,4 +14,3 @@
   New package. Import from kde overlay. Initial ebuild by Elias Probst
   <mail@eliasprobst.eu>. Changes by Manuel Rüger <gentoo@rueg.eu> and me. Bug
   #474106.
-

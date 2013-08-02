@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/thread_safe-0.1.2.ebuild,v 1.1 2013/07/25 15:04:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/thread_safe-0.1.2.ebuild,v 1.2 2013/08/02 05:57:54 mrueg Exp $
 
 EAPI=5
 # jruby → there is code for this in ext but that requires compiling java.
@@ -20,3 +20,5 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+
+ruby_add_rdepend "dev-ruby/atomic"

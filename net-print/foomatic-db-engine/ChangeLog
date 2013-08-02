@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db-engine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.56 2012/03/09 01:23:39 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.57 2013/08/02 05:51:51 mrueg Exp $
+
+*foomatic-db-engine-4.0.9 (02 Aug 2013)
+
+  02 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +foomatic-db-engine-4.0.9.ebuild:
+  Non-maintainer commit wrt bug #469124
 
   09 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -foomatic-db-engine-3.0.20060720.ebuild:
@@ -256,4 +261,3 @@
 
   16 Jul 2003; Heinrich Wendel <lanius@gentoo.org> files/perl-module.diff:
   initial release
-
