@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-9999.ebuild,v 1.4 2013/08/02 18:17:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.9999.ebuild,v 1.1 2013/08/02 18:17:27 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,11 +11,11 @@ DESCRIPTION="Provides services for discovering, registering, and retrieving
 virtual machine images with Openstack"
 HOMEPAGE="https://launchpad.net/glance"
 EGIT_REPO_URI="https://github.com/openstack/glance.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="stable/grizzly"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="ldap mysql postgres +sqlite +swift"
 REQUIRED_USE="|| ( ldap mysql postgres sqlite )"
 

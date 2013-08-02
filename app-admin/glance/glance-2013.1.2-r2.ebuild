@@ -1,21 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-9999.ebuild,v 1.4 2013/08/02 18:17:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.2-r2.ebuild,v 1.3 2013/08/02 18:17:27 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit git-2 distutils-r1
+inherit distutils-r1
 
 DESCRIPTION="Provides services for discovering, registering, and retrieving
 virtual machine images with Openstack"
 HOMEPAGE="https://launchpad.net/glance"
-EGIT_REPO_URI="https://github.com/openstack/glance.git"
-EGIT_BRANCH="master"
+SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="ldap mysql postgres +sqlite +swift"
 REQUIRED_USE="|| ( ldap mysql postgres sqlite )"
 
@@ -47,12 +46,16 @@ RDEPEND="${DEPEND}
 		<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
 	)
 	sqlite? ( >=dev-python/sqlalchemy-0.7[sqlite]
-	          <=dev-python/sqlalchemy-0.8[sqlite] )
+	          <dev-python/sqlalchemy-0.8[sqlite] )
 	mysql? ( >=dev-python/sqlalchemy-0.7[mysql]
-	         <=dev-python/sqlalchemy-0.8[mysql] )
+	         <dev-python/sqlalchemy-0.8[mysql] )
 	postgres? ( >=dev-python/sqlalchemy-0.7[postgres]
-	            <=dev-python/sqlalchemy-0.8[postgres] )
+	            <dev-python/sqlalchemy-0.8[postgres] )
 	ldap? ( dev-python/python-ldap )"
+
+PATCHES=(
+		"${FILESDIR}/glance-gbug-474064-grizzly.patch"
+)
 
 python_install() {
 	distutils-r1_python_install
@@ -64,11 +67,8 @@ python_install() {
 	done
 
 	diropts -m 0750
-	dodir /var/run/glance /var/log/glance /var/lib/glance/images /var/lib/glance/scrubber
+	dodir /var/run/glance /var/log/nova /var/lock/nova
 	keepdir /etc/glance
-	keepdir /var/log/glance
-	keepdir /var/lib/glance/images
-	keepdir /var/lib/glance/scrubber
 	insinto /etc/glance
 
 	doins "etc/glance-api-paste.ini"
