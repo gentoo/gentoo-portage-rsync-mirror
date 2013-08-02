@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-mysql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.128 2012/06/24 12:59:30 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.129 2013/08/02 11:38:00 maekke Exp $
+
+  02 Aug 2013; Markus Meier <maekke@gentoo.org> DBD-mysql-4.20.0.ebuild:
+  arm stable, bug #478748
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.173 2013/07/30 09:08:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.174 2013/08/02 11:35:14 maekke Exp $
+
+  02 Aug 2013; Markus Meier <maekke@gentoo.org> alsa-plugins-1.0.27.ebuild:
+  arm stable, bug #473404
 
   30 Jul 2013; Agostino Sarubbo <ago@gentoo.org> alsa-plugins-1.0.27.ebuild:
   Stable for amd64, wrt bug #473404

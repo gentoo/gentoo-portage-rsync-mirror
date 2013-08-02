@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r5.ebuild,v 1.6 2013/01/26 09:56:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r5.ebuild,v 1.7 2013/08/02 11:35:17 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mars.org/pub/hfs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~arm ppc ppc64 sparc x86"
 IUSE="tcl tk"
 
 DEPEND="tcl? ( dev-lang/tcl )

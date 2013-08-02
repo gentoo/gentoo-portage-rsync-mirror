@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1.ebuild,v 1.7 2013/07/30 16:36:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1.ebuild,v 1.8 2013/08/02 11:34:11 maekke Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc debug alisp python"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )"

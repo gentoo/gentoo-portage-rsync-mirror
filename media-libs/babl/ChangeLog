@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.51 2013/07/04 18:19:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.52 2013/08/02 11:37:08 maekke Exp $
+
+  02 Aug 2013; Markus Meier <maekke@gentoo.org> babl-0.1.10-r1.ebuild:
+  add ~arm, bug #473606
 
 *babl-0.1.10-r1 (04 Jul 2013)
 

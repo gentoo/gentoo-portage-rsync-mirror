@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.126 2013/07/23 14:18:29 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.127 2013/08/02 11:35:51 maekke Exp $
+
+  02 Aug 2013; Markus Meier <maekke@gentoo.org> gparted-0.16.1.ebuild:
+  add ~arm, bug #473474
 
   23 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> gparted-0.16.1.ebuild:
   added ppc keyword, bug #473474

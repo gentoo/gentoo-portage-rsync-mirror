@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/pbnj-2.04.ebuild,v 1.4 2008/06/27 21:10:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pbnj/pbnj-2.04.ebuild,v 1.5 2013/08/02 11:53:16 jer Exp $
 
+EAPI=5
 inherit perl-module
 
 DESCRIPTION="A tool for running Nmap scans and diff'ing the results"
@@ -13,14 +14,17 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="net-analyzer/nmap
-	dev-lang/perl
-	dev-perl/yaml
-	dev-perl/DBI
+DEPEND="
 	dev-perl/DBD-SQLite
-	dev-perl/XML-Twig
-	dev-perl/File-Which
+	dev-perl/DBI
 	dev-perl/File-HomeDir
+	dev-perl/File-Which
+	dev-perl/Nmap-Parser
 	dev-perl/Text-CSV_XS
-	dev-perl/Nmap-Parser"
-RDEPEND="${DEPEND}"
+	dev-perl/XML-Twig
+	dev-perl/yaml
+"
+RDEPEND="
+	${DEPEND}
+	net-analyzer/nmap
+"

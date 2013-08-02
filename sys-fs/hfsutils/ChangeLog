@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/hfsutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.19 2013/01/26 09:56:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.20 2013/08/02 11:35:17 maekke Exp $
+
+  02 Aug 2013; Markus Meier <maekke@gentoo.org> hfsutils-3.2.6-r5.ebuild:
+  add ~arm, bug #473474
 
   26 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> hfsutils-3.2.6-r5.ebuild,
   +files/hfsutils-3.2.6-fix-tcl-8.6.patch:
