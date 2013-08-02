@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.147 2013/06/22 11:00:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.148 2013/08/02 16:40:51 radhermit Exp $
+
+*wordpress-3.6 (02 Aug 2013)
+
+  02 Aug 2013; Tim Harder <radhermit@gentoo.org> +wordpress-3.6.ebuild:
+  Version bump (bug #479514).
 
 *wordpress-3.5.2 (22 Jun 2013)
 

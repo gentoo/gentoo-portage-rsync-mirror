@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib >=dev-libs/libpcre-7.6 >=dev-libs/botan-1.8.0 >=dev-db/sqlite-3.3.8 >=dev-lang/lua-5.1 net-dns/libidn
 SLOT=1
 SRC_URI=http://monotone.ca/downloads/1.0/monotone-1.0.tar.bz2
-_eclasses_=bash-completion-r1	cccf36bdb93b54baafea3b9d97abb0bf	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion-r1	cccf36bdb93b54baafea3b9d97abb0bf	elisp-common	e458159843970583a1bef608e88aa55a	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=5eeab6fc99b566c15d409d887db85302

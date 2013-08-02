@@ -9,5 +9,5 @@ LICENSE=BSD-2 X? ( LGPL-2.1 )
 RDEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) gnuplot? ( sci-visualization/gnuplot ) emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=mirror://sourceforge/reduce-algebra/reduce-src-20110414.tar.bz2
-_eclasses_=elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=elisp-common	e458159843970583a1bef608e88aa55a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=a20438e9efde718b0ca14ab0ce459387

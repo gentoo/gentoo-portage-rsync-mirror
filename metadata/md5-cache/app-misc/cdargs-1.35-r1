@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=http://www.skamphausen.de/software/cdargs/cdargs-1.35.tar.gz
-_eclasses_=elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7
+_eclasses_=elisp-common	e458159843970583a1bef608e88aa55a
 _md5_=e36e10624e67e0d84e2108fcc79a6bd0

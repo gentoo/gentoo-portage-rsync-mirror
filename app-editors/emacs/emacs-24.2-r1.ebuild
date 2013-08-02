@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2-r1.ebuild,v 1.14 2013/08/02 16:14:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2-r1.ebuild,v 1.15 2013/08/02 16:32:56 ulm Exp $
 
 EAPI=4
 
@@ -318,7 +318,7 @@ pkg_postinst() {
 		elog "You need to install some fonts for Emacs."
 		elog "Installing media-fonts/font-adobe-{75,100}dpi on the X server's"
 		elog "machine would satisfy basic Emacs requirements under X11."
-		elog "See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml"
+		elog "See also https://wiki.gentoo.org/wiki/Project:Emacs/Xft_support"
 		elog "for how to enable anti-aliased fonts."
 		elog
 	fi

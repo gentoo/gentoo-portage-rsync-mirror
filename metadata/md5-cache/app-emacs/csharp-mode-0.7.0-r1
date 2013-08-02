@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/emacs-22
 SLOT=0
 SRC_URI=http://mfgames.com/releases/csharp-mode/csharp-mode-0.7.0.tar.bz2
-_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	e458159843970583a1bef608e88aa55a	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c3639c5ed4bc0052d9425e2b460eecd5

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=emacs? ( virtual/emacs ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_rbx? ( dev-lang/rubinius )
 SLOT=0
 SRC_URI=http://prime.sourceforge.jp/src/suikyo-2.1.0.tar.gz
-_eclasses_=elisp-common	090a78f3eaf8f79b5c038c950c6fbaf7	eutils	63afaaed8aa819fdcb814c7cd39495a2	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=elisp-common	e458159843970583a1bef608e88aa55a	eutils	63afaaed8aa819fdcb814c7cd39495a2	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=6f95e07958e4c5abad86897d21448e89
