@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/powerdevil-4.10.5.ebuild,v 1.5 2013/08/01 17:51:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/powerdevil-4.10.5.ebuild,v 1.6 2013/08/02 14:29:16 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde4-meta
 
 DESCRIPTION="PowerDevil is an utility for KDE4 for Laptop Powermanagement."
 HOMEPAGE="http://solid.kde.org"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug +pm-utils"
 
 DEPEND="

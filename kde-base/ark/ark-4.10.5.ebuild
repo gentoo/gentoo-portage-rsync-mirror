@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.10.5.ebuild,v 1.5 2013/07/31 22:25:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.10.5.ebuild,v 1.6 2013/08/02 14:29:50 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit kde4-base
 DESCRIPTION="KDE Archiving tool"
 HOMEPAGE="http://kde.org/applications/utilities/ark
 http://utils.kde.org/projects/ark"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="+archive +bzip2 debug lzma"
 
 DEPEND="
