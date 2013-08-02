@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.12 2013/03/18 22:45:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.13 2013/08/02 16:02:27 ulm Exp $
 
 EAPI=4
 
@@ -20,8 +20,8 @@ RDEPEND="x11-libs/libXmu
 	x11-libs/libXp
 	unicode? ( virtual/libiconv )
 	xft? ( x11-libs/libXft )
-	jpeg? ( virtual/jpeg )
-	png? ( >=media-libs/libpng-1.4 )"
+	jpeg? ( virtual/jpeg:0 )
+	png? ( >=media-libs/libpng-1.4:0 )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	|| ( dev-util/byacc sys-freebsd/freebsd-ubin )

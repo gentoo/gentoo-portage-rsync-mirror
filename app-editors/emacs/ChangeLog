@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.590 2013/07/14 17:37:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.591 2013/08/02 16:14:53 ulm Exp $
+
+  02 Aug 2013; Ulrich Müller <ulm@gentoo.org> emacs-21.4-r24.ebuild,
+  emacs-22.3-r10.ebuild, emacs-23.4-r6.ebuild, emacs-24.2-r1.ebuild,
+  emacs-24.3-r1.ebuild, emacs-24.3-r2.ebuild:
+  Update dependency on virtual/jpeg.
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r2.ebuild:
   Stable for arm, wrt bug #476702
