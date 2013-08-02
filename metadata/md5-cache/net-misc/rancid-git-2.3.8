@@ -1,0 +1,15 @@
+DEFINED_PHASES=configure install postinst preinst prepare
+DEPEND=!app-arch/par dev-lang/perl dev-lang/tcl dev-tcltk/expect sys-apps/diffutils git? ( dev-vcs/git ) cvs? ( dev-vcs/cvs ) subversion? ( dev-vcs/subversion ) || ( net-misc/netkit-telnetd net-misc/telnet-bsd ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Really Awesome New Cisco confIg Differ with git extensions and support for colorized emails!
+EAPI=5
+HOMEPAGE=http://dotwaffle.github.com/rancid-git
+IUSE=+git cvs subversion
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-4
+RDEPEND=!app-arch/par dev-lang/perl dev-lang/tcl dev-tcltk/expect sys-apps/diffutils git? ( dev-vcs/git ) cvs? ( dev-vcs/cvs ) subversion? ( dev-vcs/subversion ) || ( net-misc/netkit-telnetd net-misc/telnet-bsd )
+REQUIRED_USE=^^ ( git cvs subversion )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/dotwaffle/rancid-git/archive/2.3.8.tar.gz -> rancid-git-2.3.8.tar.gz
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=85ea31f5fcef2f86ad1fb2e2b7e395e1

@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/rancid-git
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid-git/ChangeLog,v 1.1 2013/08/02 22:45:58 xmw Exp $
+
+*rancid-git-2.3.8 (02 Aug 2013)
+
+  02 Aug 2013; Michael Weber <xmw@gentoo.org>
+  +files/rancid-2.3.8-buildsystem.patch, +files/rancid-2.3.8-config.patch,
+  +files/rancid-2.3.8-mailprefix.patch, +metadata.xml, +rancid-git-2.3.8.ebuild:
+  Initial import, request and ebuild by robbat2 (bug 478852).
