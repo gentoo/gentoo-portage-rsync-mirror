@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.0.5.ebuild,v 1.1 2013/08/02 21:46:52 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.0.5.ebuild,v 1.3 2013/08/02 22:08:34 williamh Exp $
 
 EAPI=5
 
@@ -73,6 +73,11 @@ pkg_postinst()
 	elog "This behaviour can be controlled with the noipv4ll configuration"
 	elog "file option or the -L command line switch."
 	elog "See the dhcpcd and dhcpcd.conf man pages for more details."
+
+	elog
+	elog "Dhcpcd has duid enabled by default, and this may cause issues"
+	elog "with some dhcp servers. For more information, see"
+	elog "https://bugs.gentoo.org/show_bug.cgi?id=477356"
 
 	if ! has_version net-dns/bind-tools; then
 		elog

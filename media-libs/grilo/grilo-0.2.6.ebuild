@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.6.ebuild,v 1.1 2013/05/26 11:20:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.6.ebuild,v 1.2 2013/08/02 22:29:55 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -10,7 +10,7 @@ VALA_MIN_API_VERSION="0.12"
 VALA_MAX_API_VERSION="0.20" # explicitly specified in configure
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome2 vala python-single-r1
+inherit eutils gnome2 python-any-r1 vala
 
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
@@ -24,24 +24,31 @@ REQUIRED_USE="test? ( introspection )"
 RDEPEND="
 	>=dev-libs/glib-2.29.10:2
 	dev-libs/libxml2:2
+	net-libs/liboauth
 	gtk? ( >=x11-libs/gtk+-3:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9 )
 	network? ( >=net-libs/libsoup-2.41.3:2.4 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.10
+	>=dev-util/intltool-0.40
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
 	test? (
 		${PYTHON_DEPS}
-		dev-python/pygobject:2[${PYTHON_USEDEP}]
-		dev-python/pygobject:3[${PYTHON_USEDEP}]
+		dev-python/pygobject:2
+		dev-python/pygobject:3
 		media-plugins/grilo-plugins:0.2 )
 "
 # eautoreconf requires gnome-common
 
+python_check_deps() {
+	has_version "dev-python/pygobject:2[${PYTHON_USEDEP}]" && \
+		has_version "dev-python/pygobject:3[${PYTHON_USEDEP}]"
+}
+
 pkg_setup() {
-	use test && python-single-r1_pkg_setup
+	use test && python-any-r1_pkg_setup
 }
 
 src_prepare() {
@@ -66,6 +73,10 @@ src_configure() {
 		$(use_enable network grl-net) \
 		$(use_enable test tests) \
 		$(use_enable vala)
+}
+
+src_test() {
+	emake check PYTHON=$(PYTHON -2)
 }
 
 src_install() {
