@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/launchy
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/launchy/ChangeLog,v 1.1 2013/08/02 06:15:15 mrueg Exp $
+
+*launchy-2.3.0 (02 Aug 2013)
+
+  02 Aug 2013; Manuel Rüger <mrueg@gentoo.org>
+  +files/launchy-2.3.0-drop-failing-test.patch, +launchy-2.3.0.ebuild,
+  +metadata.xml:
+  Initial version, taken from ruby-overlay

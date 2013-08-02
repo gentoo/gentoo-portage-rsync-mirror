@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mpeg-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.29 2012/06/04 01:29:35 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.30 2013/08/02 06:14:18 ssuominen Exp $
+
+*mpeg-tools-1.5b-r5 (02 Aug 2013)
+
+  02 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +mpeg-tools-1.5b-r5.ebuild, +files/mpeg-tools-1.5b-jpeg.patch:
+  Use if and else to support both libjpeg.so.62, libjpeg.so.8 and
+  libjpeg.so.9 wrt #479462 by Juergen Rose
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> mpeg-tools-1.5b-r4.ebuild:
   ppc stable (bug 366229)
