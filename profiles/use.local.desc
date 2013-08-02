@@ -3558,7 +3558,6 @@ media-tv/mythtv:vaapi - Enables VAAPI (Video Acceleration API) for hardware deco
 media-tv/mythtv:xmltv - Pulls in the media-tv/xmltv TV listing grabbers for users not using Schedules Direct.
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/tvheadend:xmltv - Use media-tv/xmltv
-media-tv/tvtime:alsa - Enables an EXPERIMENTAL ALSA patch by the Ubuntu maintainers. Several problems were reported, use with care.
 media-tv/v4l-dvb-saa716x:firmware - Install firmware
 media-tv/xawtv:xext - Enable use of XFree extensions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping

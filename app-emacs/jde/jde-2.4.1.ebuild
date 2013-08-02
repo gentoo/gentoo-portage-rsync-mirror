@@ -1,40 +1,44 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1_pre20110622.ebuild,v 1.1 2011/12/13 17:29:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1.ebuild,v 1.1 2013/08/02 19:15:19 ulm Exp $
 
-EAPI=4
+EAPI=5
 NEED_EMACS=23
-WANT_ANT_TASKS="ant-nodeps ant-contrib"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 elisp eutils
 
 DESCRIPTION="Java Development Environment for Emacs"
 HOMEPAGE="http://jdee.sourceforge.net/"
-# taken from: http://jdee.svn.sourceforge.net/viewvc/jdee/trunk/jdee/?view=tar&pathrev=254
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+# snapshot of svn://svn.code.sf.net/p/jdee/code/branches/2.4.1 (rev 292)
+# (upstream's distfile misses build.xml)
+SRC_URI="mirror://gentoo/jdee-${PV}.tar.xz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE=""
 
-DEPEND=">=virtual/jdk-1.3
+RDEPEND=">=virtual/jdk-1.3
 	app-emacs/elib
 	virtual/emacs-cedet
-	dev-java/bsh
+	dev-java/bsh:0
 	dev-java/junit:0
-	dev-util/checkstyle"
-RDEPEND="${DEPEND}"
+	dev-util/checkstyle:0"
+DEPEND="${RDEPEND}
+	dev-java/ant-contrib:0"
 
-S="${WORKDIR}/jdee"
+S="${WORKDIR}/jdee-${PV}"
 SITEFILE="70${PN}-gentoo.el"
+
+pkg_setup() {
+	java-pkg-2_pkg_setup
+	elisp_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.4.0.1-fix-paths-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-2.4.0.1-classpath-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-2.4.1-doc-directory.patch"
-	epatch "${FILESDIR}/${PN}-2.4.1-semantic-emacs-24.patch"
 
 	local bshjar csjar
 	bshjar=$(java-pkg_getjar --build-only bsh bsh.jar) || die
@@ -49,8 +53,9 @@ src_prepare() {
 }
 
 src_compile() {
-	eant bindist -Delib.dir="${EPREFIX}${SITELISP}/elib"
-	use doc && eant source-doc
+	ANT_TASKS="ant-contrib" \
+		eant -Delib.dir="${EPREFIX}${SITELISP}/elib" \
+		bindist $(usex doc source-doc "")
 }
 
 src_install() {
@@ -63,8 +68,8 @@ src_install() {
 	use source && java-pkg_dosrc java/src/*
 	use doc && java-pkg_dojavadoc ${dist}/doc/java/api
 
-	elisp-install ${PN} ${dist}/lisp/*.{el,elc} || die
-	elisp-site-file-install "${SITEFILE}" || die
+	elisp-install ${PN} ${dist}/lisp/*.{el,elc}
+	elisp-site-file-install "${SITEFILE}"
 
 	dobin ${dist}/lisp/jtags
 

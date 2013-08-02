@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/swift
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.10 2013/07/02 14:34:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.11 2013/08/02 19:02:15 prometheanfire Exp $
+
+*swift-2013.1.9999 (02 Aug 2013)
+
+  02 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/CVE-2013-4155-grizzly.patch, +files/CVE-2013-4155-havana.patch,
+  +swift-2013.1.9999.ebuild, -swift-1.7.6-r2.ebuild, -swift-1.7.6-r3.ebuild,
+  swift-9999.ebuild:
+  stable/grizzly for swift
 
 *swift-1.9.0 (02 Jul 2013)
 

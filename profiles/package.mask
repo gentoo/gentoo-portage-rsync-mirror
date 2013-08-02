@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14981 2013/08/02 17:09:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14982 2013/08/02 19:20:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -451,13 +451,6 @@ www-plugins/chrome-binary-plugins:unstable
 net-im/kmess
 net-im/amsn
 x11-themes/amsn-skins
-
-# Markos Chandras <hwoarang@gentoo.org> (22 Mar 2013)
-# Fails with automake-1.12 (#424289)
-# Problems with the alsa patches (#403389)
-# Herd has not interest in it and needs a maintainer
-# Alternatives: media-tv/me-tv, media-tv/mythtv
-media-tv/tvtime
 
 # Richard Freeman <rich0@gentoo.org> (24 Mar 2013)
 # Contains known buffer overflows.  Package generally works
