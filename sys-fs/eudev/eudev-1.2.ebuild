@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2.ebuild,v 1.1 2013/08/01 21:26:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2.ebuild,v 1.2 2013/08/02 00:31:49 blueness Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
-	SRC_URI="http://dev.gentoo.org/~blueness/distfiles/${P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~blueness/eudev/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 fi
 
