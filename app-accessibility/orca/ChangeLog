@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.120 2013/06/08 23:03:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.121 2013/08/02 20:49:29 eva Exp $
+
+*orca-3.8.2 (02 Aug 2013)
+
+  02 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> +orca-3.8.2.ebuild:
+  Version bump.
 
   08 Jun 2013; Zac Medico <zmedico@gentoo.org> orca-3.6.3-r1.ebuild,
   orca-3.8.1.ebuild:

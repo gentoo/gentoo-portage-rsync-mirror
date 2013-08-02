@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.40.ebuild,v 1.1 2013/07/21 17:11:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.42.ebuild,v 1.1 2013/08/02 20:40:43 zmedico Exp $
 
 EAPI=5
 
@@ -184,6 +184,9 @@ src_install() {
 	mv "${HOME}"/.local/share/icons/* "${ED}"usr/share/icons/ ||
 		die "failed to install icon files"
 
+	sed -e 's:^Name=calibre %F$:Name=calibre:' \
+		-e 's:^Exec=calibre$:Exec=calibre %F:' \
+		-i "${HOME}"/.local/share/applications/calibre-gui.desktop || die
 	domenu "${HOME}"/.local/share/applications/*.desktop ||
 		die "failed to install .desktop menu files"
 
