@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2_pre20130619.ebuild,v 1.2 2013/06/22 20:35:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2_pre20130725.ebuild,v 1.1 2013/08/02 13:16:03 chithanh Exp $
 
 EAPI=5
 
@@ -77,7 +77,7 @@ REQUIRED_USE="
 	video_cards_vmware? ( gallium )
 "
 
-LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.45"
+LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.46"
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
 RDEPEND="
@@ -125,7 +125,7 @@ DEPEND="${RDEPEND}
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
-				>=sys-devel/llvm-3.3[video_cards_radeon]
+				>=sys-devel/llvm-3.3-r1[video_cards_radeon]
 				>=sys-devel/clang-3.3
 				>=sys-devel/gcc-4.6
 	)
@@ -173,7 +173,7 @@ src_prepare() {
 	fi
 
 	# relax the requirement that r300 must have llvm, bug 380303
-	epatch "${FILESDIR}"/${PN}-8.1-dont-require-llvm-for-r300.patch
+	epatch "${FILESDIR}"/${PN}-9.2-dont-require-llvm-for-r300.patch
 
 	# fix for hardened pax_kernel, bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch

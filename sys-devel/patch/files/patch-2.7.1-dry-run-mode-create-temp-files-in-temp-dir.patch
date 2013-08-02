@@ -1,0 +1,24 @@
+From afdfa9ec8e5f9acea4afaa0db758a4ed752dbe65 Mon Sep 17 00:00:00 2001
+From: Andreas Gruenbacher <agruen@linbit.com>
+Date: Tue, 30 Jul 2013 10:46:19 +0000
+Subject: In dry-run mode, create temporary files in a temporary directory
+
+* src/util.c (make_tempfile): Do not create temporary files in the final output
+directory when in dry-run mode: the path may be read-only.  In addition, we do
+not want to leave intermediary empty output directories around.
+---
+diff --git a/src/util.c b/src/util.c
+index 1cc1a68..0af6013 100644
+--- a/src/util.c
++++ b/src/util.c
+@@ -1599,7 +1599,7 @@ make_tempfile (char const **name, char letter, char const *real_name,
+   int try_makedirs_errno = ENOENT;
+   char *template;
+ 
+-  if (real_name)
++  if (real_name && ! dry_run)
+     {
+       char *dirname, *basename;
+ 
+--
+cgit v0.9.0.2

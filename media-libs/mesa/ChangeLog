@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.492 2013/08/02 12:52:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.493 2013/08/02 13:16:03 chithanh Exp $
+
+*mesa-9.2_pre20130725 (02 Aug 2013)
+
+  02 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/mesa-9.2-dont-require-llvm-for-r300.patch,
+  +mesa-9.2_pre20130725.ebuild, -mesa-9.2_pre20130515.ebuild,
+  -mesa-9.2_pre20130528.ebuild, -mesa-9.2_pre20130619.ebuild:
+  New snapshot. Drop some old ones.
 
 *mesa-9.1.6 (02 Aug 2013)
 

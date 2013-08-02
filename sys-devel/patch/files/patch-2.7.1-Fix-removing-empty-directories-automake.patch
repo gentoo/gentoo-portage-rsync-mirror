@@ -1,0 +1,25 @@
+Simple patch to prevent sys-devel/patch needing to depend on autotools to
+be built, which would likely make stage1 people unhappy.
+
+By: Doug Goldstein <cardoe@gentoo.org>
+Ref: bug #478548
+---
+--- a/tests/Makefile.in	2012-09-28 11:41:32.000000000 -0500
++++ b/tests/Makefile.in	2013-07-31 07:55:44.879904245 -0500
+@@ -1104,6 +1104,7 @@
+ 	reject-format \
+ 	remember-backup-files \
+ 	remember-reject-files \
++	remove-directories \
+ 	symlinks \
+ 	unmodified-files
+ 
+@@ -1352,6 +1353,8 @@
+ 	@p='remember-backup-files'; $(am__check_pre) $(LOG_COMPILE) "$$tst" $(am__check_post)
+ remember-reject-files.log: remember-reject-files
+ 	@p='remember-reject-files'; $(am__check_pre) $(LOG_COMPILE) "$$tst" $(am__check_post)
++remove-directories.log: remove-directories
++	@p='remove-directories'; $(am__check_pre) $(LOG_COMPILE) "$$tst" $(am__check_post)
+ symlinks.log: symlinks
+ 	@p='symlinks'; $(am__check_pre) $(LOG_COMPILE) "$$tst" $(am__check_post)
+ unmodified-files.log: unmodified-files

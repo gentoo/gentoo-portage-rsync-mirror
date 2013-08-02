@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.90 2013/07/24 15:38:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.91 2013/08/02 13:13:31 cardoe Exp $
+
+  02 Aug 2013; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.10.0.ebuild:
+  Add dconf as a runtime depend to save configuration. bug #477528
 
   24 Jul 2013; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.10.0.ebuild:
   libvirt-glib needs USE=introspection and USE=python

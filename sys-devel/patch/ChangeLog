@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.63 2013/05/21 17:35:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.64 2013/08/02 13:25:34 cardoe Exp $
+
+*patch-2.7.1-r2 (02 Aug 2013)
+
+  02 Aug 2013; Doug Goldstein <cardoe@gentoo.org>
+  +files/patch-2.7.1-Fix-removing-empty-directories-automake.patch,
+  +files/patch-2.7.1-Fix-removing-empty-directories.patch,
+  +files/patch-2.7.1-dry-run-mode-create-temp-files-in-temp-dir.patch,
+  +patch-2.7.1-r2.ebuild:
+  Fixes to prevent leaving empty directories around when the wrong patch level
+  is used or if --dry-run is specified. bug #478548
 
   21 May 2013; Mike Frysinger <vapier@gentoo.org> patch-2.7.1-r1.ebuild:
   Do not let $ED from the EAPI mess up the search for `ed` #470210 by Roman
