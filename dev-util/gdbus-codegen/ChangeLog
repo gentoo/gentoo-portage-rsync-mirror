@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.48 2013/06/10 09:27:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.49 2013/08/02 12:43:21 mgorny Exp $
+
+*gdbus-codegen-2.32.4-r1 (02 Aug 2013)
+
+  02 Aug 2013; Michał Górny <mgorny@gentoo.org> +gdbus-codegen-2.32.4-r1.ebuild:
+  Backport the distutils-r1 conversion.
 
 *gdbus-codegen-2.36.3 (10 Jun 2013)
 
