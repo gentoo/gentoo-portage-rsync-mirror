@@ -1,0 +1,18 @@
+diff -urNp skype-4.2.0.11-orig/skype.desktop skype-4.2.0.11/skype.desktop
+--- skype-4.2.0.11-orig/skype.desktop	2013-08-02 21:15:00.097090892 +0530
++++ skype-4.2.0.11/skype.desktop	2013-08-02 21:16:57.711093392 +0530
+@@ -1,11 +1,11 @@
+ [Desktop Entry]
+ Name=Skype
+ Comment=Skype Internet Telephony
+-Exec=skype %U
+-Icon=skype.png
++Exec=env PULSE_LATENCY_MSEC=60 skype %U
++Icon=skype
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
+-Categories=Network;Application;
++Categories=Network;InstantMessaging;Telephony;
+ MimeType=x-scheme-handler/skype;
+ X-KDE-Protocols=skype

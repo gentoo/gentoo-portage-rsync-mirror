@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99.ebuild,v 1.3 2013/08/02 06:59:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99.ebuild,v 1.5 2013/08/02 15:53:33 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev systemd
@@ -16,9 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 
 IUSE="readline static static-libs clvm cman +lvm1 selinux +udev +thin"
 
-DEPEND_COMMON="readline? ( sys-libs/readline )
-	clvm? ( =sys-cluster/libdlm-3*
-			cman? ( =sys-cluster/cman-3* ) )
+DEPEND_COMMON="clvm? ( cman? ( =sys-cluster/cman-3* ) =sys-cluster/libdlm-3* )
+	readline? ( sys-libs/readline )
 	udev? ( >=virtual/udev-200[static-libs?] )"
 # /run is now required for locking during early boot. /var cannot be assumed to
 # be available.
@@ -35,9 +34,11 @@ RDEPEND="${RDEPEND}
 DEPEND="${DEPEND_COMMON}
 	virtual/pkgconfig
 	>=sys-devel/binutils-2.20.1-r1
-	static? ( udev? ( virtual/udev[static-libs] ) )"
+	static? ( udev? ( >=virtual/udev-200[static-libs] ) )"
 
 S=${WORKDIR}/${PN/lvm/LVM}.${PV}
+
+#QA_MULTILIB_PATHS="usr/lib/systemd/system-generators/.*" #479520
 
 pkg_setup() {
 	local CONFIG_CHECK="~SYSVIPC"
