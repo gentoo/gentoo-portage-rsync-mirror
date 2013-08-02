@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.47 2013/08/02 09:30:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.48 2013/08/02 12:25:46 mgorny Exp $
 
 EAPI=5
 
@@ -88,12 +88,12 @@ pkg_pretend() {
 	local abis=( $(multilib_get_enabled_abis) )
 	(( build_size *= ${#abis[@]} ))
 
-	CHECKREQS_DISK_BUILD=${build_size}M
+	local CHECKREQS_DISK_BUILD=${build_size}M
 	check-reqs_pkg_pretend
 }
 
 pkg_setup() {
-	check-reqs_pkg_setup
+	pkg_pretend
 
 	# need to check if the active compiler is ok
 
