@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.0-r3.ebuild,v 1.2 2013/07/30 11:39:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.0-r3.ebuild,v 1.3 2013/08/02 13:39:00 cardoe Exp $
 
 EAPI=5
 
@@ -109,6 +109,7 @@ RDEPEND="sys-libs/readline
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
+	dev-lang/perl
 	dev-libs/libxslt"
 
 LXC_CONFIG_CHECK="

@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/kvm-kmod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.24 2012/06/14 05:26:46 cardoe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.25 2013/08/02 13:33:37 cardoe Exp $
+
+*kvm-kmod-3.10.1 (02 Aug 2013)
+*kvm-kmod-3.6 (02 Aug 2013)
+*kvm-kmod-3.8 (02 Aug 2013)
+
+  02 Aug 2013; Doug Goldstein <cardoe@gentoo.org> +kvm-kmod-3.10.1.ebuild,
+  +kvm-kmod-3.6.ebuild, +kvm-kmod-3.8.ebuild, -kvm-kmod-2.6.32.27.ebuild:
+  Version bumps to provide more options. bug #451718
 
 *kvm-kmod-3.4 (13 Jun 2012)
 *kvm-kmod-3.3.6 (13 Jun 2012)
@@ -143,4 +151,3 @@
   28 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> +metadata.xml,
   +kvm-kmod-85.ebuild:
   New kvm modules package; upstream split them up
-
