@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzypp/libzypp-13.3.0.ebuild,v 1.2 2013/07/24 21:24:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzypp/libzypp-13.3.0.ebuild,v 1.3 2013/08/02 05:26:44 miska Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ RDEPEND="
 	libproxy? ( net-libs/libproxy )
 "
 DEPEND="${DEPEND}
+	dev-libs/libsolv
 	sys-devel/gettext
 	doc? ( app-doc/doxygen[dot] )
 "
