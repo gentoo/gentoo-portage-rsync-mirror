@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.147 2013/07/21 17:54:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.148 2013/08/02 15:16:04 ulm Exp $
+
+  02 Aug 2013; Ulrich Müller <ulm@gentoo.org> +stunnel-3.26.ebuild,
+  +files/stunnel-3.26-gentoo.diff:
+  Restore ebuild for 3.x branch (again), see bug 193770 why this is still
+  useful. Update ebuild to EAPI 5.
 
   21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> stunnel-4.56-r1.ebuild:
   Stable for sparc, wrt bug #460278
