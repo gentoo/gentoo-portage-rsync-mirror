@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/qshare
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.22 2013/07/19 09:04:33 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.24 2013/08/02 01:34:41 zlogene Exp $
+
+  02 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> qshare-2.1.5-r1.ebuild:
+  x86 stable wrt bug #477058
 
   19 Jul 2013; Chema Alonso <nimiux@gentoo.org> qshare-2.1.5-r1.ebuild:
   Stable for amd64 wrt bug #477058
