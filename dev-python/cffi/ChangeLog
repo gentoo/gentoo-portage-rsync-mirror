@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.9 2013/05/09 12:22:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.10 2013/08/02 09:14:59 djc Exp $
+
+*cffi-0.7 (02 Aug 2013)
+
+  02 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> +cffi-0.7.ebuild,
+  -cffi-0.2.1.ebuild, -cffi-0.3.ebuild, -cffi-0.5-r1.ebuild, -cffi-0.5.ebuild:
+  Version bump cffi to 0.7.
 
   09 May 2013; Markus Meier <maekke@gentoo.org> cffi-0.6.ebuild:
   add ~arm, bug #462506

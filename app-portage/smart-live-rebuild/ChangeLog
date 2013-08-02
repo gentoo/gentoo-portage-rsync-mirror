@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.50 2013/04/12 00:51:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.51 2013/08/02 09:23:56 mgorny Exp $
+
+  02 Aug 2013; Michał Górny <mgorny@gentoo.org>
+  -smart-live-rebuild-1.2.5.ebuild:
+  Drop old.
 
   12 Apr 2013; Mike Gilbert <floppym@gentoo.org> smart-live-rebuild-9999.ebuild:
   Add python3.3.

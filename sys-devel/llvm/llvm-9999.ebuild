@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.46 2013/07/31 22:47:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.47 2013/08/02 09:30:59 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
 
 inherit subversion eutils flag-o-matic multilib multilib-minimal \
-	python-r1 toolchain-funcs pax-utils
+	python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -56,7 +56,45 @@ RDEPEND="dev-lang/perl
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	test? ( || ( $(python_gen_useflags 'python*') ) )"
 
+pkg_pretend() {
+	# in megs
+	# !clang !debug !multitarget -O2       400
+	# !clang !debug  multitarget -O2       550
+	#  clang !debug !multitarget -O2       950
+	#  clang !debug  multitarget -O2      1200
+	# !clang  debug  multitarget -O2      5G
+	#  clang !debug  multitarget -O0 -g  12G
+	#  clang  debug  multitarget -O2     16G
+	#  clang  debug  multitarget -O0 -g  14G
+
+	local build_size=550
+	use clang && build_size=1200
+
+	if use debug; then
+		ewarn "USE=debug is known to increase the size of package considerably"
+		ewarn "and cause the tests to fail."
+		ewarn
+
+		(( build_size *= 14 ))
+	elif is-flagq -g || is-flagq -ggdb; then
+		ewarn "The C++ compiler -g option is known to increase the size of the package"
+		ewarn "considerably. If you run out of space, please consider removing it."
+		ewarn
+
+		(( build_size *= 10 ))
+	fi
+
+	# Multiply by number of ABIs :).
+	local abis=( $(multilib_get_enabled_abis) )
+	(( build_size *= ${#abis[@]} ))
+
+	CHECKREQS_DISK_BUILD=${build_size}M
+	check-reqs_pkg_pretend
+}
+
 pkg_setup() {
+	check-reqs_pkg_setup
+
 	# need to check if the active compiler is ok
 
 	broken_gcc=" 3.2.2 3.2.3 3.3.2 4.1.1 "
