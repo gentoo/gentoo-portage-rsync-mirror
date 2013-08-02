@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horizon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.5 2013/06/09 02:42:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.6 2013/08/02 18:43:39 prometheanfire Exp $
+
+*horizon-2013.1.9999 (02 Aug 2013)
+
+  02 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +horizon-2013.1.9999.ebuild, horizon-9999.ebuild:
+  stable/grizzly for everyone's favorite bastard child, grizzly :D
 
   09 Jun 2013; Zac Medico <zmedico@gentoo.org> horizon-9999.ebuild:
   Remove stray line.

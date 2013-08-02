@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-9999.ebuild,v 1.2 2013/08/02 18:33:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/quantum/quantum-2013.1.9999.ebuild,v 1.1 2013/08/02 18:33:11 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,11 +12,11 @@ RESTRICT="test"
 DESCRIPTION="Quantum is a virtual network service for Openstack."
 HOMEPAGE="https://launchpad.net/quantum"
 EGIT_REPO_URI="https://github.com/openstack/quantum.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="stable/grizzly"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
