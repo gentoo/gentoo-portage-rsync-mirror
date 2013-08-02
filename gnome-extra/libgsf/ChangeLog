@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.225 2013/06/25 17:29:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.226 2013/08/02 21:11:31 eva Exp $
+
+*libgsf-1.14.28 (02 Aug 2013)
+
+  02 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> +libgsf-1.14.28.ebuild:
+  Version bump.
 
 *libgsf-1.14.27 (25 Jun 2013)
 
