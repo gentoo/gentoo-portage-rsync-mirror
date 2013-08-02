@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/psmon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.22 2013/07/31 21:44:27 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.23 2013/08/02 17:54:08 zlogene Exp $
+
+  02 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -psmon-1.39.ebuild:
+  drop old
 
   31 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> psmon-1.39-r1.ebuild,
   psmon-1.39.ebuild:

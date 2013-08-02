@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.16 2013/08/02 16:36:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.17 2013/08/02 17:54:55 ulm Exp $
 
 EAPI=5
 
@@ -12,9 +12,10 @@ if [[ ${PV##*.} = 9999 ]]; then
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
 	# "Nosmart" is much faster for initial branching.
 	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
+	EBZR_UNPACK_DIR="${WORKDIR}/emacs"
 	EBZR_WORKDIR_CHECKOUT="t"	#434746
 	inherit bzr
-	SRC_URI=""
+	S="${EBZR_UNPACK_DIR}"
 else
 	SRC_URI="mirror://gentoo/emacs-${PV}.tar.xz
 		mirror://gnu-alpha/emacs/pretest/emacs-${PV}.tar.xz"

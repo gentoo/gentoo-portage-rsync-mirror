@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gnat-gcc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.55 2012/09/26 13:40:52 george Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.58 2013/08/02 18:00:55 george Exp $
+
+  02 Aug 2013;  George Shapovalov <george@gentoo.org> -gnat-gcc-4.3.2.ebuild,
+  -gnat-gcc-4.3.3.ebuild:
+  removed stale versions
+
+  02 Aug 2013;  George Shapovalov <george@gentoo.org> gnat-gcc-3.4.6.ebuild,
+  gnat-gcc-4.3.5.ebuild, gnat-gcc-4.3.6.ebuild:
+  old gcc does not play kindly with new texinfo. Fixing #468108
 
 *gnat-gcc-4.5.4 (26 Sep 2012)
 
