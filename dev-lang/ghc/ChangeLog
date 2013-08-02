@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.245 2013/08/01 13:15:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.246 2013/08/02 11:29:49 slyfox Exp $
+
+  02 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
+  unbreak ghci on 7.6.3-r1 on x86 arch.  libc_nonshared.a contains PIC objects
+  while ghci needs non-PIC. They are in libc.a. Picked that.
 
 *ghc-7.6.3-r1 (01 Aug 2013)
 
