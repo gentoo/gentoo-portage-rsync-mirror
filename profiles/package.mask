@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14980 2013/08/02 13:49:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14981 2013/08/02 17:09:13 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -677,8 +677,12 @@ dev-ml/ocamlduce
 =net-print/cups-9999
 
 # Ian Stakenvicius <axs@gentoo.org> (19 Jun 2012)
-# Mask new spidermonkey until rdeps can accept it
+# Mask new spidermonkeys until rdeps can accept it
+# 1.8.7 will be masked indefinitely and will be removed
+# from the tree once spidermonkey-17 is unmasked.
+# See tracker bug 463924
 ~dev-lang/spidermonkey-1.8.7
+~dev-lang/spidermonkey-17.0.0
 
 # Michael Weber <xmw@gentoo.org> (13 Jun 2012)
 # Mask beta versions for testing

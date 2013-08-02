@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qguiplatformplugin_kde
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.127 2013/08/02 14:29:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.128 2013/08/02 17:20:32 johu Exp $
+
+  02 Aug 2013; Johannes Huber <johu@gentoo.org>
+  -qguiplatformplugin_kde-4.10.4.ebuild:
+  Remove KDE SC 4.10.4
 
   02 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   qguiplatformplugin_kde-4.10.5.ebuild:

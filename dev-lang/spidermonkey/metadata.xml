@@ -6,6 +6,7 @@
 		Stand-alone JavaScript C library
 	</longdescription>
 	<use>
+		<flag name='debug'>Enable assertions to allow for easier debugging of programs that link to spidemronkey -- note this will often crash software on regular end-user systems</flag>
 		<flag name='threadsafe'>Build a threadsafe version of spidermonkey</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.16.0.ebuild,v 1.1 2013/07/10 00:02:54 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.16.0.ebuild,v 1.2 2013/08/02 17:25:31 chutzpah Exp $
 
 EAPI=5
 
@@ -34,6 +34,7 @@ RDEPEND=">=dev-python/pyzmq-2.1.9[${PYTHON_USEDEP}]
 		dev-python/pycryptopp[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/setuptools[${PYTHON_USEDEP}]
+		sys-apps/pciutils
 		mako? ( dev-python/mako[${PYTHON_USEDEP}] )
 		ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 		openssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
