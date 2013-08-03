@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.60 2013/08/02 19:11:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.61 2013/08/03 04:58:50 george Exp $
+
+  03 Aug 2013; george <george@gentoo.org> gnat-gcc-4.3.5.ebuild,
+  gnat-gcc-4.3.6.ebuild:
+  adding ~ppc to fixed versions, as per #479582
 
   02 Aug 2013; george <george@gentoo.org> +files/patches/4.3/01-siginfo.patch:
   added patch fixing linux-unwind.h problem - #468112. Thanks to Alexander

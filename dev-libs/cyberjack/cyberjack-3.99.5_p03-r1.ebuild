@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03-r1.ebuild,v 1.5 2013/08/01 12:17:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03-r1.ebuild,v 1.6 2013/08/03 04:43:41 ssuominen Exp $
 
 EAPI=5
 inherit eutils linux-info toolchain-funcs udev
@@ -59,7 +59,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	local conf="${EROOT}/etc/${PN}/${PN}.conf"
+	local conf="${EROOT}etc/${PN}/${PN}.conf"
 	elog
 	elog "To configure logging, key beep behaviour etc. you need to"
 	elog "copy ${conf}.default"

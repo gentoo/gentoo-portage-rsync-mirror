@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.141 2013/07/05 06:57:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.142 2013/08/03 04:48:32 tomka Exp $
+
+  03 Aug 2013; Thomas Kahle <tomka@gentoo.org> wicd-1.7.2.4-r3.ebuild:
+  add warning about missing wireless extensions (bug 479590), remove nonworking
+  translations
 
   05 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org> wicd-1.7.2.4-r3.ebuild:
   Depend on slot 2 of pygobject, wicd directly import 'gobject' module

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.51 2013/04/02 13:23:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.52 2013/08/03 04:49:27 mattst88 Exp $
+
+*Try-Tiny-0.160.0 (03 Aug 2013)
+
+  03 Aug 2013; Matt Turner <mattst88@gentoo.org> +Try-Tiny-0.160.0.ebuild:
+  Version bump to 0.160.0.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> Try-Tiny-0.120.0.ebuild:
   Stable for s390, wrt bug #457318

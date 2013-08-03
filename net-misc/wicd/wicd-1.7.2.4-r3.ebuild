@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.2 2013/07/05 06:57:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.3 2013/08/03 04:48:32 tomka Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 PYTHON_REQ_USE="ncurses?,xml"
 
-inherit eutils distutils-r1 systemd
+inherit eutils distutils-r1 linux-info systemd
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="https://launchpad.net/wicd"
@@ -54,6 +54,11 @@ RDEPEND="${PYTHON_DEPS}
 #DOCS="CHANGES NEWS AUTHORS README"
 
 src_prepare() {
+	CONFIG_CHECK="~CFG80211_WEXT"
+	local WARNING_CFG80211_WEXT="Wireless extensions have not been \
+	configured in your kernel.  Wicd will not work unless CFG80211_WEXT is set."
+	check_extra_config
+
 	# Fix bug 441966 (urwid-1.1.0 compatibility)
 	epatch "${FILESDIR}"/${P}-urwid.patch
 	epatch "${FILESDIR}"/${P}-second-urwid.patch
@@ -79,6 +84,8 @@ src_prepare() {
 	  # Asturian is faulty with PyBabel
 	  # (https://bugs.launchpad.net/wicd/+bug/928589)
 	  rm po/ast.po
+	  # zh_CN fails with newer PyBabel (Aug 2013)
+	  rm po/zh_CN.po
 	else
 	  # nuke translations
 	  rm po/*.po
