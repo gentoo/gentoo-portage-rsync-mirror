@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/spek-0.8.3.ebuild,v 1.1 2013/07/28 02:07:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/spek-0.8.3.ebuild,v 1.2 2013/08/03 09:25:19 xmw Exp $
 
 EAPI=5
 WX_GTK_VER="2.8"
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.8.1-disable-updates.patch
+	epatch \
+		"${FILESDIR}"/${PN}-0.8.1-disable-updates.patch
+		"${FILESDIR}"/${P}-replace-gnu+11-with-c++11.patch
 	eautoreconf
 }

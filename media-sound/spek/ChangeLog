@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spek
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.9 2013/07/28 02:07:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.10 2013/08/03 09:25:19 xmw Exp $
+
+  03 Aug 2013; Michael Weber <xmw@gentoo.org>
+  +files/spek-0.8.3-replace-gnu+11-with-c++11.patch, spek-0.8.3.ebuild:
+  Replace -std=gnu+11 with -srd=c++11 for bug 479500.
 
 *spek-0.8.3 (28 Jul 2013)
 

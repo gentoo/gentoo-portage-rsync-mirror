@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r2.ebuild,v 1.1 2013/07/04 18:20:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r2.ebuild,v 1.2 2013/08/03 09:04:09 maekke Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 IUSE="cairo debug ffmpeg jpeg jpeg2k lensfun mmx openexr png raw sdl sse svg umfpack" # +introspection vala
 

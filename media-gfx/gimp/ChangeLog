@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.406 2013/07/24 03:34:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.407 2013/08/03 09:04:46 maekke Exp $
+
+  03 Aug 2013; Markus Meier <maekke@gentoo.org> gimp-2.8.6.ebuild:
+  add ~arm, bug #473608
 
   24 Jul 2013; Christoph Junghans <ottxor@gentoo.org> gimp-2.8.6.ebuild,
   gimp-9999.ebuild:

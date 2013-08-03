@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.995.ebuild,v 1.1 2013/01/29 08:14:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/mecab-ruby-0.995.ebuild,v 1.2 2013/08/03 09:11:34 hattya Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -17,7 +17,7 @@ LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 
-DEPEND=">=app-text/mecab-${PV}"
+DEPEND="~app-text/mecab-${PV}"
 RDEPEND="${DEPEND}"
 
 each_ruby_configure() {
