@@ -1,0 +1,12 @@
+# ChangeLog for dev-perl/ExtUtils-LibBuilder
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-LibBuilder/ChangeLog,v 1.2 2013/08/03 20:17:50 mrueg Exp $
+
+  03 Aug 2013; Manuel Rüger <mrueg@gentoo.org> ExtUtils-LibBuilder-0.04.ebuild:
+  Drop mirror restriction
+
+*ExtUtils-LibBuilder-0.04 (03 Aug 2013)
+
+  03 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +ExtUtils-LibBuilder-0.04.ebuild,
+  +metadata.xml:
+  Initial version. Ebuild by Christopher Schwan. Fixes bug #386803
