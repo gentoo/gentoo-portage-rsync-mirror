@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.6.ebuild,v 1.9 2013/07/14 17:35:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.6.ebuild,v 1.10 2013/08/03 06:56:04 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.guru-group.fi/~too/sw/identd.readme -> ${P}.readme
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh sparc x86"
 IUSE=""
 
 echoit() {

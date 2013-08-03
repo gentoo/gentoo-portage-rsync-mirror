@@ -1,6 +1,13 @@
 # ChangeLog for app-text/namazu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.42 2013/03/01 09:47:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.44 2013/08/03 06:48:17 hattya Exp $
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org> namazu-2.0.21.ebuild,
+  namazu-2.0.22_p1.ebuild:
+  remove unnecessary die for elisp-common functions
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org> namazu-2.0.21.ebuild:
+  update to EAPI 5
 
 *namazu-2.0.22_p1 (01 Mar 2013)
 

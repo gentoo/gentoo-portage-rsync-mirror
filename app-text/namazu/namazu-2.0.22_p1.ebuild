@@ -1,20 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.22_p1.ebuild,v 1.1 2013/03/01 09:47:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.22_p1.ebuild,v 1.2 2013/08/03 06:48:17 hattya Exp $
 
-EAPI=5
+EAPI="5"
 
 inherit autotools-utils eutils elisp-common
-
-IUSE="emacs nls tk linguas_ja"
 
 DESCRIPTION="Namazu is a full-text search engine"
 HOMEPAGE="http://www.namazu.org/"
 SRC_URI="http://www.namazu.org/test/${P/_p/pre}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS=""
 SLOT="0"
+KEYWORDS=""
+IUSE="emacs nls tk linguas_ja"
 
 RDEPEND=">=dev-perl/File-MMagic-1.20
 	emacs? ( virtual/emacs )
@@ -32,16 +31,14 @@ RDEPEND=">=dev-perl/File-MMagic-1.20
 		dev-lang/tk
 		www-client/lynx
 	)"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+S="${WORKDIR}"/${P/_p/pre}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.0.19-gentoo.patch"
 )
 DOCS=(AUTHORS CREDITS NEWS THANKS TODO)
-
-S="${WORKDIR}"/${P/_p/pre}
 
 src_configure() {
 	local myeconfargs=(
@@ -62,7 +59,7 @@ src_compile() {
 
 	if use emacs; then
 		cd lisp
-		elisp-compile gnus-nmz-1.el namazu.el || die
+		elisp-compile gnus-nmz-1.el namazu.el
 	fi
 }
 
@@ -72,8 +69,8 @@ src_install () {
 	dohtml -r doc/*
 	rm -r "${ED}"/usr/share/namazu/doc || die
 	if use emacs; then
-		elisp-install ${PN} lisp/gnus-nmz-1.el* lisp/namazu.el* || die
-		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el || die
+		elisp-install ${PN} lisp/gnus-nmz-1.el* lisp/namazu.el*
+		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el
 
 		docinto lisp
 		dodoc lisp/ChangeLog*

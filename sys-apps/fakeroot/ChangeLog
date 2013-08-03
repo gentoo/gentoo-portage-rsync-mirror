@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.95 2013/05/21 07:23:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.96 2013/08/03 06:54:48 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> fakeroot-1.19.ebuild:
+  Stable for sparc, wrt bug #479332
 
   21 May 2013; Tim Harder <radhermit@gentoo.org> -fakeroot-1.18.2.ebuild,
   -fakeroot-1.18.3.ebuild:

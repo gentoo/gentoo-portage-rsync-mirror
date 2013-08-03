@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fakeidentd
 # Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.46 2013/07/14 17:35:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.47 2013/08/03 06:56:04 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> fakeidentd-2.6.ebuild:
+  Stable for sparc, wrt bug #476296
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> fakeidentd-2.6.ebuild:
   Stable for arm, wrt bug #476296

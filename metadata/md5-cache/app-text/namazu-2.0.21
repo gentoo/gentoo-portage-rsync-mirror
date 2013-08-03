@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install postinst postrm unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare
 DEPEND=>=dev-perl/File-MMagic-1.20 emacs? ( virtual/emacs ) linguas_ja? ( app-i18n/nkf || ( dev-perl/Text-Kakasi app-i18n/kakasi app-text/chasen app-text/mecab ) ) nls? ( virtual/libintl ) tk? ( dev-lang/tk www-client/lynx ) nls? ( sys-devel/gettext )
 DESCRIPTION=Namazu is a full-text search engine
+EAPI=5
 HOMEPAGE=http://www.namazu.org/
 IUSE=emacs nls tk linguas_ja
 KEYWORDS=amd64 ~ppc ~ppc64 x86
@@ -9,4 +10,4 @@ RDEPEND=>=dev-perl/File-MMagic-1.20 emacs? ( virtual/emacs ) linguas_ja? ( app-i
 SLOT=0
 SRC_URI=http://www.namazu.org/stable/namazu-2.0.21.tar.gz
 _eclasses_=elisp-common	e458159843970583a1bef608e88aa55a	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=754ef8641eba17f943f2fd2db49a5dda
+_md5_=4ccdf63b2f986768258f032b6f0d1475
