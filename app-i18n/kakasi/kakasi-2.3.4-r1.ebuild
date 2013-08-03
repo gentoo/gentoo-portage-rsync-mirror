@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/kakasi-2.3.4-r1.ebuild,v 1.5 2011/12/18 20:12:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/kakasi-2.3.4-r1.ebuild,v 1.6 2013/08/03 05:37:54 hattya Exp $
+
+EAPI="5"
 
 inherit toolchain-funcs
 
@@ -14,13 +16,12 @@ KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc
 IUSE=""
 
 src_compile() {
-	econf || die
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	doman doc/kakasi.1 || die
-	dodoc AUTHORS ChangeLog NEWS ONEWS README README-ja THANKS TODO || die
-	dodoc doc/ChangeLog.lib doc/JISYO doc/README.lib || die
+	emake DESTDIR="${D}" install
+	doman doc/kakasi.1
+	dodoc AUTHORS ChangeLog NEWS ONEWS README README-ja THANKS TODO
+	dodoc doc/ChangeLog.lib doc/JISYO doc/README.lib
 }

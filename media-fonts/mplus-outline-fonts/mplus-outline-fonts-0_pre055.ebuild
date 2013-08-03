@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre055.ebuild,v 1.4 2013/08/03 04:32:42 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre055.ebuild,v 1.5 2013/08/03 05:40:03 hattya Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit font
 
