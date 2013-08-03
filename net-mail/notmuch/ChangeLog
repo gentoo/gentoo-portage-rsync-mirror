@@ -1,6 +1,42 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.73 2013/03/10 09:39:51 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.75 2013/08/03 20:41:16 aidecoe Exp $
+
+*notmuch-0.16 (03 Aug 2013)
+
+  03 Aug 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +notmuch-0.16.ebuild:
+  Version bump.
+
+  Bumped EAPI to 5 and migrated to distutils-r1 (thanks to Mike
+  Gilbert <floppym@gentoo.org> for help with that).
+
+  Notmuch 0.16 has new Vim UI which needs Ruby bindings. Unfortunatelly the
+  ebuild doesn't support Ruby bindings until somebody add it. Patches with
+  support for Ruby bindings using ruby-ng eclass are welcome.  See bug #475624.
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  Command-Line Interface
+  ----------------------
+  - Support for delivering messages to Maildir (new command `insert`)
+  - `notmuch count --batch` option
+  - `notmuch tag` option to remove all tags from matching messages (`notmuch
+  tag --remove-all`)
+  - Decrypting commands explicitly expect a gpg-agent
+  - Configuration file saves follow symbolic links
+  - Top level option to specify configuration file (`notmuch --config=FILE`)
+  - Bash command-line completion improved
+  - Deprecated commands "part" and "search-tags" are removed.
+
+  Emacs Interface
+  ---------------
+  - New keymap to view/save parts; removed s/v/o/| part button bindings
+  - Default part save directory is now `mm-default-directory`
+  - Key bindings for next/previous thread (M-n and M-p)
+  - Better handling of errors in search buffers
+  - Faster search and show
 
   10 Mar 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.15.ebuild,
   -notmuch-0.15.1.ebuild:
