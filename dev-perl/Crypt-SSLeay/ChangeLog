@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.76 2013/01/20 12:27:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.77 2013/08/03 03:55:57 mattst88 Exp $
+
+  03 Aug 2013; Matt Turner <mattst88@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Add missing dependency on dev-perl/Try-Tiny, bug 478746.
 
 *Crypt-SSLeay-0.640.0 (20 Jan 2013)
 
