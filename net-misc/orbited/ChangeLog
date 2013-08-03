@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/orbited
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.10 2012/07/12 15:57:18 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.11 2013/08/03 09:45:51 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> orbited-0.7.10-r1.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> orbited-0.7.10-r1.ebuild:
   added GPL-2 to LICENSE per bug 426088

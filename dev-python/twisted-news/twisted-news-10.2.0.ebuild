@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/twisted-news-10.2.0.ebuild,v 1.7 2012/10/05 14:45:58 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/twisted-news-10.2.0.ebuild,v 1.8 2013/08/03 09:45:48 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ DESCRIPTION="Twisted News is an NNTP server and programming library."
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="=dev-python/twisted-$(get_version_component_range 1-2)*
+DEPEND="=dev-python/twisted-core-$(get_version_component_range 1-2)*
 	=dev-python/twisted-mail-$(get_version_component_range 1-2)*"
 RDEPEND="${DEPEND}"
 

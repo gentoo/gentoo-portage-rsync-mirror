@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/redirbot/redirbot-0.0.5.ebuild,v 1.1 2013/07/23 09:37:37 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/redirbot/redirbot-0.0.5.ebuild,v 1.2 2013/08/03 09:45:40 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
-	>=dev-python/twisted-11.1.0
+	>=dev-python/twisted-core-11.1.0
 	dev-python/twisted-words
 "
 RDEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.16 2013/06/09 18:41:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.17 2013/08/03 09:45:47 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -20,7 +20,7 @@ IUSE="directfb cdparanoia doc dvd encode fbcon flac gphoto2 jpeg lame lirc matro
 RDEPEND="dev-python/beautifulsoup:python-2
 	virtual/python-imaging
 	dev-python/pygame
-	>=dev-python/twisted-2.5
+	>=dev-python/twisted-core-2.5
 	>=dev-python/twisted-web-0.6
 	net-zope/zope-interface
 

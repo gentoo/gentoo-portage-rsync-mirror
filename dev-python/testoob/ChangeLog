@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testoob
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.22 2012/05/22 09:26:30 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.23 2013/08/03 09:45:51 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> testoob-1.15.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> testoob-1.15.ebuild:
   Remove masked dev-python/4suite dependency because it's optional according to

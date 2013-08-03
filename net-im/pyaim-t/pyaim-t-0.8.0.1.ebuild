@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8.0.1.ebuild,v 1.4 2013/05/28 03:39:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8.0.1.ebuild,v 1.5 2013/08/03 09:45:43 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ IUSE="webinterface"
 
 DEPEND="net-im/jabber-base"
 RDEPEND="${DEPEND}
-	>=dev-python/twisted-2.2.0
+	>=dev-python/twisted-core-2.2.0
 	>=dev-python/twisted-words-0.1.0
 	>=dev-python/twisted-web-0.5.0
 	webinterface? ( >=dev-python/nevow-0.4.1 )

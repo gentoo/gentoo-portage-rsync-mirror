@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/alot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.18 2013/07/26 18:27:15 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.19 2013/08/03 09:45:43 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> alot-0.3.2.ebuild,
+  alot-0.3.3.ebuild, alot-0.3.4.ebuild, alot-0.3.5.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
 *alot-0.3.5 (26 Jul 2013)
 

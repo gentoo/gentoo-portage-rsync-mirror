@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-10.2.0-r1.ebuild,v 1.5 2012/10/05 14:46:45 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-10.2.0-r1.ebuild,v 1.6 2013/08/03 09:45:43 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ DESCRIPTION="Twisted Words contains Instant Messaging implementations."
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND="=dev-python/twisted-$(get_version_component_range 1)*
+DEPEND="=dev-python/twisted-core-$(get_version_component_range 1)*
 	=dev-python/twisted-web-$(get_version_component_range 1)*"
 RDEPEND="${DEPEND}"
 

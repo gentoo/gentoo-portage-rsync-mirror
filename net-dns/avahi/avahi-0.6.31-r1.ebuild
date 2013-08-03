@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r1.ebuild,v 1.2 2013/05/26 23:53:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r1.ebuild,v 1.3 2013/08/03 09:45:41 mgorny Exp $
 
 EAPI="3"
 
@@ -45,7 +45,7 @@ COMMON_DEPEND=">=dev-libs/libdaemon-0.14
 		gtk? ( >=dev-python/pygtk-2 )
 	)
 	bookmarks? (
-		dev-python/twisted
+		dev-python/twisted-core
 		dev-python/twisted-web
 	)
 	kernel_linux? ( sys-libs/libcap )"

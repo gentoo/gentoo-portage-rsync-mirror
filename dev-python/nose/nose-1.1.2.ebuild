@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.1.2.ebuild,v 1.10 2012/05/09 00:06:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.1.2.ebuild,v 1.11 2013/08/03 09:45:39 mgorny Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,7 +20,7 @@ RDEPEND="coverage? ( dev-python/coverage )
 	dev-python/setuptools"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.6 )
-	test? ( dev-python/twisted )"
+	test? ( dev-python/twisted-core )"
 
 DOCS="AUTHORS"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/winswitch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.7 2013/06/17 07:41:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.8 2013/08/03 09:45:45 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> winswitch-0.12.18.ebuild,
+  winswitch-0.12.18-r1.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   17 Jun 2013; Michael Weber <xmw@gentoo.org> files/winswitch-0.12.18-PIL.patch:
   Add upstream ticket

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/telepathy-rakia-0.7.4.ebuild,v 1.9 2013/04/01 18:25:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/telepathy-rakia-0.7.4.ebuild,v 1.10 2013/08/03 09:45:49 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -27,7 +27,7 @@ RDEPEND="${COMMON_DEPEND}
 # telepathy-rakia was formerly known as telepathy-sofiasip
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
-	test? ( dev-python/twisted )
+	test? ( dev-python/twisted-core )
 	dev-util/gtk-doc-am"
 # eautoreconf requires: gtk-doc-am
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/supybot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.43 2012/05/14 21:31:01 marienz Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.44 2013/08/03 09:45:45 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> supybot-0.83.4.1-r2.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   14 May 2012; Marien Zwart <marienz@gentoo.org> supybot-0.83.4.1-r2.ebuild:
   Remove sqlite USE flag to facilitate sqlite 2 deprecation (bug #408839).

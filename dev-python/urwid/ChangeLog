@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.60 2013/03/14 19:25:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.61 2013/08/03 09:45:46 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> urwid-0.9.9.1.ebuild,
+  urwid-1.0.2.ebuild, urwid-1.1.0.ebuild, urwid-1.1.1.ebuild,
+  urwid-1.1.1-r1.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
 *urwid-1.1.1-r1 (14 Mar 2013)
 

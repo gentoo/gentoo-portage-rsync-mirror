@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.10 2011/12/03 19:37:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.11 2013/08/03 09:45:47 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ IUSE="doc examples twisted"
 
 DEPEND="dev-python/setuptools
 	twisted? (
-		dev-python/twisted
+		dev-python/twisted-core
 		dev-python/twisted-web
 	)"
 RDEPEND="${DEPEND}"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.73 2013/04/08 06:47:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.74 2013/08/03 09:45:44 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> twisted-mail-10.2.0.ebuild,
+  twisted-mail-11.0.0.ebuild, twisted-mail-11.1.0.ebuild,
+  twisted-mail-12.0.0.ebuild, twisted-mail-12.2.0.ebuild,
+  twisted-mail-12.3.0.ebuild, twisted-mail-13.0.0.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
 *twisted-mail-13.0.0 (08 Apr 2013)
 

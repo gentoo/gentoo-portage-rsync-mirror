@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18-r1.ebuild,v 1.1 2013/06/17 07:32:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18-r1.ebuild,v 1.2 2013/08/03 09:45:45 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="dev-python/gst-python[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/pygtk[${PYTHON_USEDEP}]
-	dev-python/twisted
+	dev-python/twisted-core
 	dev-python/twisted-conch
 	media-gfx/xloadimage
 	virtual/python-imaging[${PYTHON_USEDEP}]

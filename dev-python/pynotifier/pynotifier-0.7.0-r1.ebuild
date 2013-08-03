@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0-r1.ebuild,v 1.6 2011/10/24 05:37:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0-r1.ebuild,v 1.7 2013/08/03 09:45:37 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="qt4 gtk"
 
 DEPEND=""
-RDEPEND="dev-python/twisted
+RDEPEND="dev-python/twisted-core
 	gtk? ( dev-python/pygobject:2 )
 	qt4? ( dev-python/PyQt4[X] )"
 

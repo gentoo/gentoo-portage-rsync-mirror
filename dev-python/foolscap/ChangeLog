@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/foolscap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.44 2012/09/15 01:48:40 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.45 2013/08/03 09:45:47 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> foolscap-0.6.0.ebuild,
+  foolscap-0.6.1.ebuild, foolscap-0.6.3.ebuild, foolscap-0.6.4.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   15 Sep 2012; Anthony G. Basile <blueness@gentoo.org> foolscap-0.6.4.ebuild:
   Stable ppc ppc64, bug #429030

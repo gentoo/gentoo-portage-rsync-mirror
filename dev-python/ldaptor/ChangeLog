@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.38 2013/01/27 07:30:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.39 2013/08/03 09:45:40 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> ldaptor-0.0.43.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   27 Jan 2013; Ian Delaney <idella4@gentoo.org> +files/ldaptor-prem_test.patch,
   ldaptor-0.0.43.ebuild:

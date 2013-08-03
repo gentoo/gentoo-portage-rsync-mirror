@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgasync
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgasync/ChangeLog,v 1.6 2011/01/08 16:30:29 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgasync/ChangeLog,v 1.7 2013/08/03 09:45:44 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> pgasync-2.01.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pgasync-2.01.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.40 2013/05/12 18:32:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.41 2013/08/03 09:45:38 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> axiom-0.6.0.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   12 May 2013; Mike Gilbert <floppym@gentoo.org> axiom-0.6.0.ebuild:
   Remove dependency on pysqlite.

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/pyosd-0.2.14.ebuild,v 1.11 2012/05/19 20:20:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/pyosd-0.2.14.ebuild,v 1.12 2013/08/03 09:45:50 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -37,6 +37,6 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 
-	elog "If you want to run the included daemon, you will need to install dev-python/twisted."
+	elog "If you want to run the included daemon, you will need to install dev-python/twisted-core."
 	elog "Also note that the volume plugin requires media-sound/aumix."
 }

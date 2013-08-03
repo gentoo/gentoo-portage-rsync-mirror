@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.7 2012/10/17 09:16:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.8 2013/08/03 09:45:38 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -30,7 +30,7 @@ IUSE=""
 DEPEND=">=dev-libs/openssl-0.9.7
 	>=dev-python/epsilon-0.5.0
 	>=dev-python/pyopenssl-0.6
-	>=dev-python/twisted-2.4"
+	>=dev-python/twisted-core-2.4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

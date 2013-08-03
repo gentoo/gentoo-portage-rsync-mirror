@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.18 2013/01/27 07:30:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.19 2013/08/03 09:45:40 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -22,7 +22,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="doc samba web"
 
 DEPEND="virtual/pyparsing
-	>=dev-python/twisted-2
+	>=dev-python/twisted-core-2
 	dev-python/twisted-mail
 	dev-python/twisted-names
 	doc? (

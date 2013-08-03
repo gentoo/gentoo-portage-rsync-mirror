@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.71 2013/05/13 02:53:11 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.72 2013/08/03 09:45:48 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> ganeti-1.2.9.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   13 May 2013; Lance Albertson <ramereth@gentoo.org> -ganeti-2.4.5.ebuild,
   -ganeti-2.5.1.ebuild, -ganeti-2.5.2.ebuild, -ganeti-2.5.2-r1.ebuild:

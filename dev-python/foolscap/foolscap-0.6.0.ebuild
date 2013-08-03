@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/foolscap-0.6.0.ebuild,v 1.8 2012/08/26 18:50:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/foolscap-0.6.0.ebuild,v 1.9 2013/08/03 09:45:47 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc ssl"
 
-RDEPEND=">=dev-python/twisted-2.4.0
+RDEPEND=">=dev-python/twisted-core-2.4.0
 	dev-python/twisted-web
 	ssl? ( dev-python/pyopenssl )"
 DEPEND="${DEPEND}

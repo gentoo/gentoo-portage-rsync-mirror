@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8111 2013/08/03 07:01:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8113 2013/08/03 09:45:51 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> updates/3Q-2013:
+  Move dev-python/twisted to dev-python/twisted-core.
+
+  03 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> desc/linguas.desc:
+  Add English locale for Australia
 
   03 Aug 2013; Hans de Graaff <graaff@gentoo.org> updates/3Q-2013:
   Move builder 3.2.2 to the 3.2 slot as it should have been from the start.

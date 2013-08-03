@@ -1,6 +1,10 @@
 # ChangeLog for media-video/coherence
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.16 2013/05/26 06:38:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.17 2013/08/03 09:45:37 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> coherence-0.6.6.1.ebuild,
+  coherence-0.6.6.2.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   26 May 2013; Patrick Lauer <patrick@gentoo.org> coherence-0.6.6.1.ebuild,
   coherence-0.6.6.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webut
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.12 2010/03/13 18:59:15 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.13 2013/08/03 09:45:41 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> webut-0.1.0.2.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   13 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   webut-0.1.0.2.ebuild:

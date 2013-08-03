@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/carbon/carbon-0.9.10-r1.ebuild,v 1.1 2013/05/09 15:50:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/carbon/carbon-0.9.10-r1.ebuild,v 1.2 2013/08/03 09:45:48 mgorny Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	dev-python/twisted
+	dev-python/twisted-core
 	dev-python/whisper[${PYTHON_USEDEP}]
 	dev-python/txAMQP[${PYTHON_USEDEP}]"
 

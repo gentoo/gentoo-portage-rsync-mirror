@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.16.4.ebuild,v 1.10 2013/05/10 22:07:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.16.4.ebuild,v 1.11 2013/08/03 09:45:46 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	>=dev-util/gtk-doc-am-1.17
 	dev-libs/libxslt
-	test? ( >=dev-python/twisted-0.8.2
+	test? ( >=dev-python/twisted-core-0.8.2
 		>=dev-python/twisted-words-0.8.2
 		>=dev-python/dbus-python-0.83 )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.9.1.ebuild,v 1.5 2012/11/05 22:10:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.9.1.ebuild,v 1.6 2013/08/03 09:45:46 mgorny Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-interix ~amd64-linux ~ia64-linux
 IUSE="examples test"
 
 DEPEND="dev-python/setuptools
-	test? ( dev-python/twisted )"
+	test? ( dev-python/twisted-core )"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 

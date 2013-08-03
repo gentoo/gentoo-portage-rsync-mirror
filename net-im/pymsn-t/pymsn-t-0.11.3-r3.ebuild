@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11.3-r3.ebuild,v 1.4 2013/05/28 03:40:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11.3-r3.ebuild,v 1.5 2013/08/03 09:45:38 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND="net-im/jabber-base"
 RDEPEND="${DEPEND}
-	>=dev-python/twisted-2.5.0
+	>=dev-python/twisted-core-2.5.0
 	>=dev-python/twisted-words-0.5.0
 	>=dev-python/twisted-web-0.7.0
 	>=dev-python/imaging-1.1"

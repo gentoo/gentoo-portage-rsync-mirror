@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.3.ebuild,v 1.1 2013/06/14 18:46:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.3.ebuild,v 1.2 2013/08/03 09:45:40 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,7 +62,7 @@ DEPEND="${RDEPEND}
 	dev-util/gdbus-codegen
 	dev-util/gtk-doc-am
 	test? (
-		>=dev-python/twisted-12.3.0
+		>=dev-python/twisted-core-12.3.0
 		net-analyzer/netcat )
 	!udev? ( >=dev-libs/libgcrypt-1.2.2 )
 "

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-python/setuptools doc? ( dev-python/sphinx ) test? ( dev-python/twisted ) dev-lang/python[ncurses] dev-lang/python
+DEPEND=dev-python/setuptools doc? ( dev-python/sphinx ) test? ( dev-python/twisted-core ) dev-lang/python[ncurses] dev-lang/python
 DESCRIPTION=Urwid is a curses-based user interface library for Python
 EAPI=4
 HOMEPAGE=http://excess.org/urwid/ http://pypi.python.org/pypi/urwid
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/python[ncurses] dev-lang/python
 SLOT=0
 SRC_URI=http://excess.org/urwid/urwid-1.1.0.tar.gz
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4635d4c68a2733a977f77946873782e6
+_md5_=beac19a24c09a92176cb8d1ec8426f2d

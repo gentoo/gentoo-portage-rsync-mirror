@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-9999.ebuild,v 1.2 2013/01/08 18:40:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-9999.ebuild,v 1.3 2013/08/03 09:45:39 mgorny Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="dev-python/coverage[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.6 )
-	test? ( dev-python/twisted )"
+	test? ( dev-python/twisted-core )"
 
 #if LIVE
 SRC_URI=

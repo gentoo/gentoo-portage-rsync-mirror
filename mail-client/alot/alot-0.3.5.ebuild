@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.5.ebuild,v 1.1 2013/07/26 18:19:49 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.5.ebuild,v 1.2 2013/08/03 09:45:43 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="
 RDEPEND="
 	>=dev-python/configobj-4.6.0[${PYTHON_USEDEP}]
 	dev-python/pygpgme[${PYTHON_USEDEP}]
-	>=dev-python/twisted-10.2.0
+	>=dev-python/twisted-core-10.2.0
 	>=dev-python/urwid-1.1.0[${PYTHON_USEDEP}]
 	net-mail/mailbase
 	>=net-mail/notmuch-0.13[crypt,python]

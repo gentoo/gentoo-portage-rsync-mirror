@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.36.ebuild,v 1.3 2012/12/11 17:06:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.36.ebuild,v 1.4 2013/08/03 09:45:42 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/pep8
 		dev-python/pyflakes
-		dev-python/twisted
+		dev-python/twisted-core
 	)
 "
 

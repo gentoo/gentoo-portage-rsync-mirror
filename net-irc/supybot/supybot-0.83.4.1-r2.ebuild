@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.4.1-r2.ebuild,v 1.4 2012/05/14 21:31:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.4.1-r2.ebuild,v 1.5 2013/08/03 09:45:45 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ KEYWORDS="amd64 ~arm ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
 IUSE="twisted"
 
 DEPEND="twisted? (
-		>=dev-python/twisted-8.1.0[crypt]
+		>=dev-python/twisted-core-8.1.0[crypt]
 		>=dev-python/twisted-names-8.1.0
 	)
 	!<net-irc/supybot-plugins-20060723-r1"

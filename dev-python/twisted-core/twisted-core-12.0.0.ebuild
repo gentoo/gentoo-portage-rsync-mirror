@@ -1,14 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-12.2.0.ebuild,v 1.2 2012/10/08 13:49:11 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-12.0.0.ebuild,v 1.1 2013/08/03 09:34:50 mgorny Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
-# A couple of failures (refcounting, version-checking), but sufficiently
-# functional to be useful, so restrict just the tests.
-PYTHON_TESTS_RESTRICTED_ABIS="*-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 MY_PACKAGE="Core"
 
 inherit eutils twisted versionator
@@ -24,11 +21,8 @@ DEPEND="net-zope/zope-interface
 	crypt? ( >=dev-python/pyopenssl-0.10 )
 	gtk? ( dev-python/pygtk:2 )
 	serial? ( dev-python/pyserial )"
-RDEPEND="${DEPEND}"
-
-# Needed to make the sendmsg extension work
-# (see http://twistedmatrix.com/trac/ticket/5701 )
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+RDEPEND="${DEPEND}
+	!dev-python/twisted"
 
 DOCS="CREDITS NEWS README"
 
@@ -38,12 +32,11 @@ src_prepare(){
 	# Give a load-sensitive test a better chance of succeeding.
 	epatch "${FILESDIR}/${PN}-2.1.0-echo-less.patch"
 
-	# Skip a test if twisted conch is not available
-	# (see Twisted ticket #5703)
-	epatch "${FILESDIR}/twisted-12.1.0-remove-tests-conch-dependency.patch"
-
 	# Respect TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE variable.
 	epatch "${FILESDIR}/${PN}-9.0.0-respect_TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE.patch"
+
+	# Fix a test that fails in some timezones.
+	epatch "${FILESDIR}/${P}-fix-test-timeFormatting.patch"
 
 	if [[ "${EUID}" -eq 0 ]]; then
 		# Disable tests failing with root permissions.
@@ -57,9 +50,9 @@ src_prepare(){
 src_test() {
 	testing() {
 		local exit_status="0"
-		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${T}/tests-${PYTHON_ABI}" --no-compile || die "Installation of tests failed with $(python_get_implementation_and_version)"
+		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${T}/tests" --no-compile || die "Installation of tests failed with $(python_get_implementation_and_version)"
 
-		pushd "${T}/tests-${PYTHON_ABI}${EPREFIX}$(python_get_sitedir)" > /dev/null || die
+		pushd "${T}/tests${EPREFIX}$(python_get_sitedir)" > /dev/null || die
 
 		# Skip broken tests.
 		sed -e "s/test_buildAllTarballs/_&/" -i twisted/python/test/test_release.py || die "sed failed"
@@ -67,17 +60,13 @@ src_test() {
 		# http://twistedmatrix.com/trac/ticket/5375
 		sed -e "/class ZshIntegrationTestCase/,/^$/d" -i twisted/scripts/test/test_scripts.py || die "sed failed"
 
-		# tap2rpm is already skipped if rpm is not installed, but fails for me on a Gentoo box with it present.
-		# I currently lack the cycles to track this failure down.
-		rm twisted/scripts/test/test_tap2rpm.py
-
 		# Prevent it from pulling in plugins from already installed twisted packages.
 		rm -f twisted/plugins/__init__.py
 
 		# An empty file doesn't work because the tests check for doc strings in all packages.
 		echo "'''plugins stub'''" > twisted/plugins/__init__.py || die
 
-		if ! PYTHONPATH="." "${T}/tests-${PYTHON_ABI}${EPREFIX}/usr/bin/trial" twisted; then
+		if ! PYTHONPATH="." "${T}/tests${EPREFIX}/usr/bin/trial" twisted; then
 			if [[ -n "${TWISTED_DEBUG_TESTS}" ]]; then
 				die "Tests failed with $(python_get_implementation_and_version)"
 			else
@@ -86,6 +75,7 @@ src_test() {
 		fi
 
 		popd > /dev/null || die
+		rm -fr "${T}/tests"
 		return "${exit_status}"
 	}
 	python_execute_function testing

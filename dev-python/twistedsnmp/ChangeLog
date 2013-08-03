@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twistedsnmp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/ChangeLog,v 1.6 2009/11/28 17:54:40 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/ChangeLog,v 1.7 2013/08/03 09:45:50 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> twistedsnmp-0.3.13.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
 *twistedsnmp-0.3.13 (28 Nov 2009)
 

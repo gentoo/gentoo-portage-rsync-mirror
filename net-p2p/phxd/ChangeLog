@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/phxd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/ChangeLog,v 1.9 2008/09/10 13:51:01 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/ChangeLog,v 1.10 2013/08/03 09:45:37 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org>
+  phxd-0.1.0_pre23092005.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   10 Sep 2008; Raúl Porcel <armin76@gentoo.org>
   phxd-0.1.0_pre23092005.ebuild:

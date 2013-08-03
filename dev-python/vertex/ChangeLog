@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vertex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.15 2012/10/17 09:16:30 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.16 2013/08/03 09:45:38 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> vertex-0.3.0.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   17 Oct 2012; Patrick Lauer <patrick@gentoo.org> vertex-0.3.0.ebuild:
   Restricting py 2.5

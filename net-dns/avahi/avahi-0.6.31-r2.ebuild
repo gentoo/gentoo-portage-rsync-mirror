@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r2.ebuild,v 1.9 2013/08/03 06:51:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r2.ebuild,v 1.10 2013/08/03 09:45:41 mgorny Exp $
 
 EAPI="5"
 
@@ -48,7 +48,7 @@ COMMON_DEPEND="
 		dbus? ( dev-python/dbus-python )
 	)
 	bookmarks? (
-		dev-python/twisted
+		dev-python/twisted-core
 		dev-python/twisted-web
 	)
 "

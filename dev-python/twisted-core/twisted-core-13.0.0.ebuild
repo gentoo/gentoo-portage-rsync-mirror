@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-13.0.0.ebuild,v 1.1 2013/04/08 06:40:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-13.0.0.ebuild,v 1.1 2013/08/03 09:34:50 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -24,7 +24,8 @@ DEPEND="net-zope/zope-interface
 	crypt? ( >=dev-python/pyopenssl-0.10 )
 	gtk? ( dev-python/pygtk:2 )
 	serial? ( dev-python/pyserial )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!dev-python/twisted"
 
 # Needed to make the sendmsg extension work
 # (see http://twistedmatrix.com/trac/ticket/5701 )

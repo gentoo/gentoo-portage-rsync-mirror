@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/hellanzb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/ChangeLog,v 1.18 2011/04/05 21:00:58 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/ChangeLog,v 1.19 2013/08/03 09:45:50 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> hellanzb-0.13-r8.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   hellanzb-0.13-r8.ebuild:

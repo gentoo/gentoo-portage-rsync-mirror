@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.220 2013/06/14 18:46:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.221 2013/08/03 09:45:40 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> gvfs-1.16.2.ebuild,
+  gvfs-1.16.3.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
 *gvfs-1.16.3 (14 Jun 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.15.ebuild,v 1.6 2012/05/22 09:26:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.15.ebuild,v 1.7 2013/08/03 09:45:51 mgorny Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,7 @@ IUSE="pdf threads"
 
 DEPEND=""
 RDEPEND="pdf? ( dev-python/reportlab )
-	threads? ( dev-python/twisted )"
+	threads? ( dev-python/twisted-core )"
 RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="docs/*"

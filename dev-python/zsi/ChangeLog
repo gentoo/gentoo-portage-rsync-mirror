@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/zsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.24 2013/06/04 12:46:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.25 2013/08/03 09:45:47 mgorny Exp $
+
+  03 Aug 2013; Michał Górny <mgorny@gentoo.org> zsi-2.1_alpha1.ebuild,
+  zsi-2.1_alpha1-r1.ebuild:
+  Move dev-python/twisted to dev-python/twisted-core.
 
   04 Jun 2013; Justin Lecher <jlec@gentoo.org> zsi-2.1_alpha1-r1.ebuild:
   Fix for correct usage of new python eclasses
