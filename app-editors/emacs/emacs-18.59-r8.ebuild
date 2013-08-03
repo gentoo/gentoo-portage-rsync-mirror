@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.9 2013/03/18 23:13:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.10 2013/08/03 22:56:46 ulm Exp $
 
 EAPI=4
 
@@ -21,7 +21,8 @@ RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
 	amd64? ( !abi_x86_x32? ( app-emulation/emul-linux-x86-baselibs ) )"
 #	X? ( x11-libs/libX11[-xcb] )
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${WORKDIR}/${P}-linux22x-elf-glibc21.diff"
@@ -58,6 +59,7 @@ src_configure() {
 	END
 
 	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
+		-e "s:-lncurses:$("$(tc-getPKG_CONFIG)" --libs ncurses):" \
 		src/s-linux.h || die
 
 	# -O3 and -finline-functions cause segmentation faults at run time.
