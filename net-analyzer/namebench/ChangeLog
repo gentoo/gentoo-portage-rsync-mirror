@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/namebench
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/ChangeLog,v 1.7 2012/10/08 12:36:43 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/ChangeLog,v 1.8 2013/08/03 08:25:33 pinkbyte Exp $
+
+*namebench-1.3.1-r1 (03 Aug 2013)
+
+  03 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> -namebench-1.3.1.ebuild,
+  +namebench-1.3.1-r1.ebuild:
+  Revision bump: EAPI 5, port to distutils-r1 eclass, fix bug #473632. Drop old
+  revision
 
   08 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Assigning package to netmon herd
