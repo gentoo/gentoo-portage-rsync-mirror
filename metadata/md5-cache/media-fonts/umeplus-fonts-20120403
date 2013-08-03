@@ -1,12 +1,13 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=UmePlus fonts are modified Ume and M+ fonts for Japanese
+EAPI=5
 HOMEPAGE=http://www.geocities.jp/ep3797/modified_fonts_01.html
 IUSE=X
-KEYWORDS=~amd64 ~x86 ~ppc-macos ~x86-macos
+KEYWORDS=amd64 x86 ~ppc-macos ~x86-macos
 LICENSE=mplus-fonts public-domain
-RESTRICT=strip binchecks
+RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://sourceforge/mdk-ut/umeplus-fonts-20120403.tar.lzma
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	font	37271e0911f39dd15a28adcaf94f6956	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2aa1860bcd875d600ba0dc28f4b25893
+_md5_=e7b3204f6e619aabb2608b64c25a5e08

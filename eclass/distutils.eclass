@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.83 2013/02/08 03:38:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.84 2013/08/03 13:28:22 patrick Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
@@ -98,7 +98,7 @@ if [[ -z "${DISTUTILS_DISABLE_TEST_DEPENDENCY}" ]]; then
 	# trial requires an argument, which is usually equal to "${PN}".
 	elif [[ "${DISTUTILS_SRC_TEST}" =~ ^trial(\ .*)?$ ]]; then
 		IUSE="test"
-		DEPEND+="${DEPEND:+ }test? ( dev-python/twisted )"
+		DEPEND+="${DEPEND:+ }test? ( dev-python/twisted-core )"
 	fi
 fi
 

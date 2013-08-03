@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-python/setuptools =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/c/cssutils/cssutils-0.9.10b1.zip
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=1c5e843525d1615fb5195c8dd8ccaa1c

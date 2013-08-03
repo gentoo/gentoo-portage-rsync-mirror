@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.913 2013/08/02 16:48:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.914 2013/08/03 13:28:22 patrick Exp $
+
+  03 Aug 2013; Patrick Lauer <patrick@gentoo.org> distutils.eclass:
+  Migrate twisted deps in distutils eclass
 
   02 Aug 2013; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
   Sync from Emacs overlay: Make elisp-emacs-version() more robust.
