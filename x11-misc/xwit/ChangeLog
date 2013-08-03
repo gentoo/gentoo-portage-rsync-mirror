@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xwit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.11 2012/12/23 20:30:14 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.13 2013/08/03 17:04:30 jer Exp $
+
+  03 Aug 2013; Jeroen Roovers <jer@gentoo.org> xwit-3.4-r1.ebuild:
+  Install README.
+
+*xwit-3.4-r1 (03 Aug 2013)
+
+  03 Aug 2013; Jeroen Roovers <jer@gentoo.org> +xwit-3.4-r1.ebuild,
+  +files/xwit-3.4-malloc-includes.patch, files/Makefile:
+  Simplify Makefile. Add some includes, treat realloc the same as malloc.
 
   23 Dec 2012; Ulrich Müller <ulm@gentoo.org> xwit-3.4.ebuild:
   Fix LICENSE, see README and notices in source files, bug 446764.
@@ -36,4 +45,3 @@
   13 Dec 2003; Ian Leitch <port001@gentoo.org> xwit-3.4.ebuild:
   Initial commit. Thanks to Mathias Gumz <gumz@cs.uni-magdeburg.de> for the
   ebuild. #29339
-
