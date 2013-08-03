@@ -46,15 +46,16 @@ index cf80986..520b5df 100644
  # regenerate src/build.h
  !win32|contains(USE_BUILD_INFO, 1) {
 diff --git a/src/leveldb.cpp b/src/leveldb.cpp
-index b41764f..f71e801 100644
+index b41764f..30c524d 100644
 --- a/src/leveldb.cpp
 +++ b/src/leveldb.cpp
 @@ -8,7 +8,9 @@
  #include <leveldb/env.h>
  #include <leveldb/cache.h>
  #include <leveldb/filter_policy.h>
+-#include <memenv/memenv.h>
 +#ifndef LEVELDB_WITHOUT_MEMENV
- #include <memenv/memenv.h>
++#include <memenv.h>
 +#endif
  
  #include <boost/filesystem.hpp>
@@ -73,7 +74,7 @@ index b41764f..f71e801 100644
          if (fWipe) {
              printf("Wiping LevelDB in %s\n", path.string().c_str());
 diff --git a/src/makefile.unix b/src/makefile.unix
-index 081edaf..1735b89 100644
+index 081edaf..27f2199 100644
 --- a/src/makefile.unix
 +++ b/src/makefile.unix
 @@ -104,8 +104,7 @@ xCXXFLAGS=-O2 -pthread -Wall -Wextra -Wformat -Wformat-security -Wno-unused-para
@@ -129,7 +130,8 @@ index 081edaf..1735b89 100644
 +LIBS += $(CURDIR)/leveldb/libleveldb.a
 +TESTLIBS += $(CURDIR)/leveldb/libmemenv.a
  DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
- DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
+-DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
++DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers/memenv)
  leveldb/libleveldb.a:
 -	@echo "Building LevelDB ..." && cd leveldb && $(MAKE) CC=$(CC) CXX=$(CXX) OPT="$(xCXXFLAGS)" libleveldb.a libmemenv.a && cd ..
 +	@echo "Building LevelDB ..." && cd leveldb && $(MAKE) CC=$(CC) CXX=$(CXX) OPT="$(xCXXFLAGS)" libleveldb.a && cd ..

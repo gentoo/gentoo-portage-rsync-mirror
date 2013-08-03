@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.1-r1.ebuild,v 1.1 2013/08/03 13:37:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.1-r1.ebuild,v 1.2 2013/08/03 16:17:19 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps flag-o-matic user
+inherit autotools eutils fcaps user
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -15,7 +15,7 @@ SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk2 gtk3 ipv6 kerberos libadns lua
-	+netlink +pcap portaudio profile qt4 selinux smi ssl zlib
+	+netlink +pcap portaudio qt4 selinux smi ssl zlib
 "
 REQUIRED_USE="
 	^^ ( gtk2 gtk3 qt4 )
@@ -94,13 +94,6 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	# profile and pie are incompatible #215806, #292991
-	if use profile; then
-		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
-		ewarn "Also ignore \"unrecognized option '-nopie'\" gcc warning #358101."
-		append-flags $(test-flags-CC -nopie)
-	fi
-
 	if use adns; then
 		if use libadns; then
 			myconf+=( "--with-adns --without-c-ares" )
@@ -140,11 +133,11 @@ src_configure() {
 	use doc-pdf || export ac_cv_prog_HAVE_FOP=false
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
+	# --disable-profile-build bugs #215806, #292991, #479602
 	econf \
 		$(use pcap && use_enable !caps setuid-install) \
 		$(use pcap && use_enable caps setcap-install) \
 		$(use_enable ipv6) \
-		$(use_enable profile profile-build) \
 		$(use_with caps libcap) \
 		$(use_with crypt gcrypt) \
 		$(use_with geoip) \
@@ -160,6 +153,7 @@ src_configure() {
 		$(use_with zlib) \
 		$(usex gtk3 --with-gtk3=yes --with-gtk3=no) \
 		--disable-extra-gcc-checks \
+		--disable-profile-build \
 		--disable-usr-local \
 		--sysconfdir="${EPREFIX}"/etc/wireshark \
 		${myconf[@]}

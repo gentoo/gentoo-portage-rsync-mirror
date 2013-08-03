@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/sflphone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.14 2013/05/08 09:36:18 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.15 2013/08/03 16:13:58 elvanor Exp $
+
+*sflphone-1.2.3 (03 Aug 2013)
+
+  03 Aug 2013; <elvanor@gentoo.org> +sflphone-1.2.3.ebuild:
+  Bump to 1.2.3. KDE support added.
 
   08 May 2013; <elvanor@gentoo.org> sflphone-1.2.2.ebuild:
   Fix for #468740.
