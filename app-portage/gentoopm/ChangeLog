@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.40 2013/07/22 09:24:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.41 2013/08/03 21:42:07 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gentoopm-0.2.8.ebuild:
+  Stable for amd64, wrt bug #479482
 
   22 Jul 2013; Michał Górny <mgorny@gentoo.org> -files/pkgcore-0.8.1-api.patch,
   -gentoopm-0.2.5-r2.ebuild, -gentoopm-0.2.7.ebuild:

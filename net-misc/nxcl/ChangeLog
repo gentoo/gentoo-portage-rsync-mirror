@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxcl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.12 2012/06/18 15:17:36 voyageur Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.13 2013/08/03 21:41:23 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> nxcl-0.9-r2.ebuild:
+  Stable for amd64, wrt bug #477132
 
   18 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> nxcl-0.9-r2.ebuild,
   +files/nxcl-0.9-gcc47.patch:
@@ -47,4 +50,3 @@
   14 Mar 2008; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
   +nxcl-0.9.ebuild:
   Initial version, from NX overlay and bug #213208
-

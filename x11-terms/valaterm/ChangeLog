@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/valaterm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/ChangeLog,v 1.9 2013/05/12 12:03:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/ChangeLog,v 1.10 2013/08/03 21:42:24 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> valaterm-0.6.ebuild:
+  Stable for amd64, wrt bug #478270
 
   12 May 2013; Pacho Ramos <pacho@gentoo.org> valaterm-0.6.ebuild:
   Use vala.eclass (#467406)
