@@ -1,6 +1,30 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.126 2013/07/25 21:21:52 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.127 2013/08/03 21:07:51 aidecoe Exp $
+
+*dracut-031 (03 Aug 2013)
+
+  03 Aug 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-031.ebuild,
+  +files/031-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/031-0002-gentoo.conf-let-udevdir-be-handled-by-.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - do not include the resume dracut module in hostonly mode,
+    if no swap is present
+  - don't warn twice about omitted modules
+  - use systemd-cat for logging on systemd systems, if logfile is unset
+  - fixed PARTUUID parsing
+  - support kernel module signing keys
+  - do not install the usrmount dracut module in hostonly mode,
+    if /sbin/init does not live in /usr
+  - add debian udev rule files
+  - add support for bcache
+  - network: handle bootif style interfaces
+    e.g. ip=77-77-6f-6f-64-73:dhcp
+  - add support for kmod static devnodes
+  - add vlan support for iBFT
 
 *dracut-030 (25 Jul 2013)
 
