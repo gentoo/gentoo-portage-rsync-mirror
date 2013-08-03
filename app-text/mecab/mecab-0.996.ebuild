@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.996.ebuild,v 1.9 2013/08/03 07:49:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.996.ebuild,v 1.10 2013/08/03 12:41:27 hattya Exp $
 
 EAPI="5"
+
 inherit autotools eutils
 
 DESCRIPTION="Yet Another Part-of-Speech and Morphological Analyzer"
@@ -18,7 +19,7 @@ DEPEND="dev-lang/perl
 	virtual/libiconv"
 RDEPEND=""
 PDEPEND="|| (
-		>=app-dicts/mecab-ipadic-2.7.0.20070610[unicode=]
+		app-dicts/mecab-ipadic[unicode=]
 		app-dicts/mecab-naist-jdic[unicode=]
 	)"
 
@@ -32,22 +33,15 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
-	use unicode && myconf="${myconf} --with-charset=utf8"
-
 	econf \
 		$(use_enable static-libs static) \
-		${myconf}
+		$(use_with unicode charset UTF-8)
 }
 
 src_install() {
 	default
-
-	if ! use static-libs ; then
-		find "${ED}" -name '*.la' -delete
-	fi
-
 	dodoc AUTHORS README
 	dohtml -r doc/*
+
+	use static-libs || find "${ED}" -name '*.la' -delete
 }
