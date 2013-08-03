@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.26.0_p20130207.ebuild,v 1.1 2013/02/14 12:08:15 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.26.0_p20130729.ebuild,v 1.1 2013/08/03 11:34:06 rich0 Exp $
 
-EAPI=4
+EAPI=5
 
 PYTHON_DEPEND="2:2.6"
-BACKPORTS="012ebe9de7e20a0bae1920cfc55199ad63937636"
+BACKPORTS="7367cbc46553f565006ef0dc9c1e719276f2a969"
 MY_P=${P%_p*}
 
 inherit eutils python
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 MYTHPLUGINS="mytharchive mythbrowser mythgallery mythgame \
-mythmusic mythnetvision mythnews mythweather"
+mythmusic mythnetvision mythnews mythweather mythzoneminder"
 
 IUSE="${MYTHPLUGINS} cdda cdr exif fftw raw"
 
@@ -33,39 +33,39 @@ DEPEND="!media-plugins/mytharchive
 	!media-plugins/mythnetvision
 	!media-plugins/mythnews
 	!media-plugins/mythweather
-	=media-tv/mythtv-${PV}*[python]
+	=media-tv/mythtv-${PV}*:=[python]
 	mytharchive? (
 		app-cdr/dvd+rw-tools
-		dev-python/imaging
+		virtual/python-imaging:=
 		media-video/dvdauthor
 		media-video/mjpegtools[png]
 		media-video/transcode
 		virtual/cdrtools
 	)
 	mythgallery? (
-		media-libs/tiff
+		media-libs/tiff:=
 		virtual/opengl
-		exif? ( >media-libs/libexif-0.6.9 )
+		exif? ( >media-libs/libexif-0.6.9:= )
 		raw? ( media-gfx/dcraw )
 	)
 	mythmusic? (
-		>=media-libs/flac-1.1.2
-		>=media-libs/libvorbis-1.0
-		>=media-libs/taglib-1.6
+		>=media-libs/flac-1.1.2:=
+		>=media-libs/libvorbis-1.0:=
+		>=media-libs/taglib-1.6:=
 		media-sound/lame
 		virtual/opengl
 		cdda? (
-			dev-libs/libcdio
+			dev-libs/libcdio:=
 			cdr? ( virtual/cdrtools )
 		)
-		fftw? ( sci-libs/fftw )
+		fftw? ( sci-libs/fftw:= )
 	)
 	mythnetvision? (
-		=dev-lang/python-2*[xml]
-		dev-python/lxml
-		dev-python/mysql-python
-		dev-python/oauth
-		dev-python/pycurl
+		=dev-lang/python-2*:=[xml]
+		dev-python/lxml:=
+		dev-python/mysql-python:=
+		dev-python/oauth:=
+		dev-python/pycurl:=
 	)
 	mythweather? (
 		dev-perl/DateManip
@@ -108,7 +108,7 @@ src_configure() {
 		--prefix=/usr \
 		--python=python2 \
 		--enable-opengl \
-		--disable-mythzoneminder \
+		$(use_enable mythzoneminder) \
 		$(use_enable mytharchive) \
 		$(use_enable mythbrowser) \
 		$(use_enable mythgallery) \

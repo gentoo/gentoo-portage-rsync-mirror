@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/mecab-ipadic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.27 2012/05/17 16:37:30 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.29 2013/08/03 11:52:48 hattya Exp $
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org>
+  mecab-ipadic-2.7.0.20070801.ebuild, metadata.xml:
+  update to EAPI 5
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org>
+  -mecab-ipadic-2.7.0.20060707.ebuild, -mecab-ipadic-2.7.0.20070610.ebuild:
+  remove old ebuilds
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   mecab-ipadic-2.7.0.20070801.ebuild:
@@ -118,4 +126,3 @@
   16 May 2006; Akinori Hattori <hattya@gentoo.org>
   +mecab-ipadic-2.7.0.20060408.ebuild:
   Initial revision
-
