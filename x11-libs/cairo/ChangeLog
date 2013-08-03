@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.344 2013/07/22 06:06:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.345 2013/08/03 00:21:07 chithanh Exp $
+
+  03 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  cairo-9999.ebuild:
+  Drop failing patches, bug #478248.
 
   22 Jul 2013; Justin Lecher <jlec@gentoo.org> cairo-1.12.14-r4.ebuild,
   cairo-9999.ebuild, metadata.xml:
