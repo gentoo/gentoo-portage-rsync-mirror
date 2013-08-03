@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/mecab-ipadic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.29 2013/08/03 11:52:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.30 2013/08/03 12:07:11 hattya Exp $
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org>
+  mecab-ipadic-2.7.0.20070801.ebuild:
+  check unicode USE flag of mecab
 
   03 Aug 2013; Akinori Hattori <hattya@gentoo.org>
   mecab-ipadic-2.7.0.20070801.ebuild, metadata.xml:

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.6 2013/02/18 16:43:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.7 2013/08/03 12:14:14 hattya Exp $
 
-EAPI=4
+EAPI="5"
 
-inherit multilib autotools-utils
+inherit autotools-utils multilib
 
 DESCRIPTION="mecab-skkserv is a Kana-Kanji conversion server using MeCab."
 HOMEPAGE="http://chasen.org/~taku/software/mecab-skkserv/"
@@ -13,7 +13,6 @@ SRC_URI="http://chasen.org/~taku/software/mecab-skkserv/${P}.tar.gz"
 LICENSE="GPL-2 ipadic"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 IUSE=""
 
 DEPEND=">=app-text/mecab-0.91"
@@ -38,5 +37,5 @@ src_install() {
 	autotools-utils_src_install
 
 	# for running skkserv from xinetd
-	insinto /etc/xinetd.d; doins "${FILESDIR}"/mecab-skkserv || die
+	insinto /etc/xinetd.d; doins "${FILESDIR}"/mecab-skkserv
 }
