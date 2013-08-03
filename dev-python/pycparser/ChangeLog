@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.8 2013/05/09 12:19:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.10 2013/08/03 15:55:38 djc Exp $
+
+*pycparser-2.10 (03 Aug 2013)
+
+  03 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> +pycparser-2.10.ebuild:
+  Version bump pycparser to 2.10.
+
+  03 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> -pycparser-2.07.ebuild,
+  -pycparser-2.08.ebuild:
+  Remove old versions.
 
   09 May 2013; Markus Meier <maekke@gentoo.org> pycparser-2.09.1-r1.ebuild:
   add ~arm, bug #462506

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r4.ebuild,v 1.2 2012/05/31 03:03:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r4.ebuild,v 1.4 2013/08/03 15:45:34 pinkbyte Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/a/arj/${P/-/_}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
 src_prepare() {
@@ -45,12 +45,11 @@ src_compile() {
 
 	emake CC=$(tc-getCC) libdir="${ARJLIBDIR}" \
 		ADD_LDFLAGS="${LDFLAGS}" \
-		pkglibdir="${ARJLIBDIR}" all || die "emake failed."
+		pkglibdir="${ARJLIBDIR}" all
 }
 
 src_install() {
-	emake pkglibdir="${ARJLIBDIR}" \
-		DESTDIR="${D}" install || die "emake install failed."
+	emake pkglibdir="${ARJLIBDIR}" DESTDIR="${D}" install
 
 	dodoc doc/rev_hist.txt
 }

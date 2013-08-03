@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/arj
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.50 2012/09/11 10:42:52 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.52 2013/08/03 15:45:34 pinkbyte Exp $
+
+  03 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> arj-3.10.22-r4.ebuild:
+  Remove reduntant 'die' calls
+
+  03 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> arj-3.10.22-r4.ebuild:
+  Add ~arm keyword, wrt bug #477246, thanks to Michael Kurinnoy <viewizard AT
+  viewizard.com> for testing
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
