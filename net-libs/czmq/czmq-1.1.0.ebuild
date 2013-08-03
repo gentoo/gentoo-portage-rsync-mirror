@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-1.1.0.ebuild,v 1.1 2011/11/24 13:07:17 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-1.1.0.ebuild,v 1.2 2013/08/03 19:51:58 pinkbyte Exp $
 
 DESCRIPTION="CZMQ - High-level C Binding for ZeroMQ"
 HOMEPAGE="http://czmq.zeromq.org"
@@ -8,7 +8,7 @@ SRC_URI="http://download.zeromq.org/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc static-libs"
 
 RDEPEND=""

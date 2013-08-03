@@ -3,8 +3,8 @@ DEPEND=doc? ( app-text/asciidoc app-text/xmlto ) >=net-libs/zeromq-2.1
 DESCRIPTION=CZMQ - High-level C Binding for ZeroMQ
 HOMEPAGE=http://czmq.zeromq.org
 IUSE=doc static-libs
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=LGPL-3
 SLOT=0
 SRC_URI=http://download.zeromq.org/czmq-1.1.0.tar.gz
-_md5_=155db75d36fce4bce5f65e665aa3064c
+_md5_=fef1821db45665b0492c18d941f9e95d

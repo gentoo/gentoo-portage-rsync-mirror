@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.228 2013/07/27 04:14:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.229 2013/08/03 19:47:09 cardoe Exp $
+
+*qemu-1.5.2-r1 (03 Aug 2013)
+
+  03 Aug 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.5.2-r1.ebuild,
+  metadata.xml:
+  Version bump to include my tested stable patchset. Add support for GlusterFS,
+  bug #468726
 
 *qemu-1.5.2 (27 Jul 2013)
 
