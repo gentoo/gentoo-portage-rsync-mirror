@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_SmartIRC
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.38 2013/07/31 14:47:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.39 2013/08/03 07:46:58 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_SmartIRC-1.0.2.ebuild:
+  Stable for sparc, wrt bug #470432
 
   31 Jul 2013; Jeroen Roovers <jer@gentoo.org> PEAR-Net_SmartIRC-1.0.2.ebuild:
   Stable for HPPA (bug #470432).

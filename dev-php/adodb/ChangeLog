@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.135 2013/07/31 14:49:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.136 2013/08/03 07:49:32 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> adodb-5.18.ebuild:
+  Stable for sparc, wrt bug #470438
 
   31 Jul 2013; Jeroen Roovers <jer@gentoo.org> adodb-5.18.ebuild:
   Stable for HPPA (bug #470438).

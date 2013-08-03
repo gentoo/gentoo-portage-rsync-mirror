@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.114 2013/07/22 05:35:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.115 2013/08/03 07:39:55 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ruby-gettext-2.3.3.ebuild:
+  Stable for sparc, wrt bug #472910
 
   22 Jul 2013; Hans de Graaff <graaff@gentoo.org>
   -ruby-gettext-2.1.0_p20100728-r3.ebuild:

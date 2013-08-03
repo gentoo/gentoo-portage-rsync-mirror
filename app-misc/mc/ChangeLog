@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.285 2013/07/15 17:59:46 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.286 2013/08/03 07:54:15 slyfox Exp $
+
+*mc-4.8.10 (03 Aug 2013)
+
+  03 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org> +mc-4.8.10.ebuild:
+  Version bump.
 
   15 Jul 2013; Alex Alexander <wired@gentoo.org> mc-4.8.9.ebuild,
   +files/mc-4.8.9-ncurses-include-fix.patch:

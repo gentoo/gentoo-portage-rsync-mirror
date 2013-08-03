@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/PEAR-File-1.4.1.ebuild,v 1.6 2013/07/31 14:44:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File/PEAR-File-1.4.1.ebuild,v 1.7 2013/08/03 07:46:10 ago Exp $
 
 EAPI="4"
 
@@ -10,5 +10,5 @@ DESCRIPTION="Common file and directory routines"
 
 LICENSE="PHP-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ~ppc64 ~s390 ~sh sparc ~x86"
 IUSE=""

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mecab-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.18 2013/01/29 08:12:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.19 2013/08/03 08:00:27 hattya Exp $
+
+*mecab-python-0.996 (03 Aug 2013)
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org> +mecab-python-0.996.ebuild:
+  new upstream release
 
 *mecab-python-0.995 (29 Jan 2013)
 

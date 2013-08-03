@@ -4,10 +4,10 @@ DESCRIPTION=Utilities to deal with user accounts
 EAPI=2
 HOMEPAGE=http://shadow.pld.org.pl/ http://pkg-shadow.alioth.debian.org/
 IUSE=acl audit cracklib nls pam selinux skey xattr
-KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86
+KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86
 LICENSE=BSD GPL-2
 RDEPEND=acl? ( sys-apps/acl ) audit? ( sys-process/audit ) cracklib? ( >=sys-libs/cracklib-2.7-r3 ) pam? ( virtual/pam ) skey? ( sys-auth/skey ) selinux? ( >=sys-libs/libselinux-1.28 sys-libs/libsemanage ) nls? ( virtual/libintl ) xattr? ( sys-apps/attr ) pam? ( >=sys-auth/pambase-20120417 )
 SLOT=0
 SRC_URI=http://pkg-shadow.alioth.debian.org/releases/shadow-4.1.5.1.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fc4c92f53ebaa73f1cb6664fddf69476
+_md5_=441d1bf425314eade6977f271ef5084a

@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.37 2013/07/14 17:38:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.38 2013/08/03 07:43:52 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> cronie-1.4.9-r5.ebuild:
+  Stable for sparc, wrt bug #476030
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> cronie-1.4.9-r5.ebuild:
   Stable for arm, wrt bug #476030

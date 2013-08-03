@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.80 2013/08/03 07:14:09 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.81 2013/08/03 07:49:57 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> mecab-0.996.ebuild:
+  Stable for sparc, wrt bug #476154
 
   03 Aug 2013; Akinori Hattori <hattya@gentoo.org> mecab-0.996.ebuild:
   ia64 stable wrt bug #476154

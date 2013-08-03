@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.242 2013/08/01 07:16:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.243 2013/08/03 07:45:10 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> apache-2.2.25.ebuild:
+  Stable for sparc, wrt bug #476568
 
 *apache-2.4.6-r2 (01 Aug 2013)
 
