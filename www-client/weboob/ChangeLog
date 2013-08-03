@@ -1,6 +1,14 @@
 # ChangeLog for www-client/weboob
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/ChangeLog,v 1.4 2013/03/25 03:42:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/ChangeLog,v 1.5 2013/08/03 15:08:29 floppym Exp $
+
+*weboob-0g (03 Aug 2013)
+
+  03 Aug 2013; Mike Gilbert <floppym@gentoo.org> +weboob-0g.ebuild,
+  -weboob-0d.ebuild, -weboob-0e-r2.ebuild, weboob-9998.ebuild,
+  weboob-9999.ebuild:
+  Version bump based on ebuild by Laurent Bachelier, bug 463396. Convert to
+  distutils-r1.
 
 *weboob-0e-r2 (25 Mar 2013)
 

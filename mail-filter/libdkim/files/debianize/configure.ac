@@ -3,6 +3,7 @@
 
 AC_PREREQ(2.61)
 AC_INIT(libdkim, 1.0.21)
+LT_INIT
 AC_CONFIG_SRCDIR([dkim.cpp])
 ##AC_CONFIG_HEADER([config.h])
 
