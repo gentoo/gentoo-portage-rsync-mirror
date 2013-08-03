@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.129 2013/07/13 19:11:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.130 2013/08/03 07:30:55 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> smartmontools-6.1.ebuild:
+  Stable for sparc, wrt bug #475894
 
   13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> smartmontools-6.1.ebuild:
   Stable for ppc64, wrt bug #475894

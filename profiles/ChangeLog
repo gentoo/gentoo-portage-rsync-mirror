@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8110 2013/08/02 19:20:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8111 2013/08/03 07:01:39 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Aug 2013; Hans de Graaff <graaff@gentoo.org> updates/3Q-2013:
+  Move builder 3.2.2 to the 3.2 slot as it should have been from the start.
+  Fixes bug 479338.
 
   02 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove entry for media-tv/tvtime because it was removed from tree.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.684 2013/07/22 08:52:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.685 2013/08/03 07:29:42 ago Exp $
+
+  03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> python-2.7.5.ebuild:
+  Stable for sparc, wrt bug #475424
 
   22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> python-3.2.5-r1.ebuild:
   Stable for sparc, wrt bug #469988

@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/mecab-perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/ChangeLog,v 1.18 2013/01/29 08:11:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/ChangeLog,v 1.20 2013/08/03 07:30:58 hattya Exp $
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org> -mecab-perl-0.97.ebuild,
+  -mecab-perl-0.991.ebuild, -mecab-perl-0.994.ebuild, -mecab-perl-0.995.ebuild:
+  remove old ebuilds
+
+*mecab-perl-0.996 (03 Aug 2013)
+
+  03 Aug 2013; Akinori Hattori <hattya@gentoo.org> +mecab-perl-0.996.ebuild:
+  new upstream release
 
 *mecab-perl-0.995 (29 Jan 2013)
 
