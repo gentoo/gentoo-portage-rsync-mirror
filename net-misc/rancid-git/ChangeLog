@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rancid-git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid-git/ChangeLog,v 1.1 2013/08/02 22:45:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid-git/ChangeLog,v 1.2 2013/08/03 08:36:15 xmw Exp $
+
+  03 Aug 2013; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Fix herd.
 
 *rancid-git-2.3.8 (02 Aug 2013)
 
