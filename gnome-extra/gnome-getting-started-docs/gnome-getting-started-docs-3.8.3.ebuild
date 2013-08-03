@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-getting-started-docs/gnome-getting-started-docs-3.8.3.ebuild,v 1.1 2013/06/18 19:07:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-getting-started-docs/gnome-getting-started-docs-3.8.3.ebuild,v 1.2 2013/08/03 14:42:48 maekke Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="https://help.gnome.org/"
 
 LICENSE="CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE=""
 
 RDEPEND="gnome-extra/gnome-user-docs"
