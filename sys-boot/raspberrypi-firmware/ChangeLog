@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/raspberrypi-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/ChangeLog,v 1.6 2013/07/23 06:20:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/ChangeLog,v 1.7 2013/08/02 23:03:08 xmw Exp $
+
+*raspberrypi-firmware-1_pre20130801 (02 Aug 2013)
+
+  02 Aug 2013; Michael Weber <xmw@gentoo.org>
+  +raspberrypi-firmware-1_pre20130801.ebuild,
+  -raspberrypi-firmware-0_p20130711.ebuild,
+  -raspberrypi-firmware-1_pre20130715.ebuild,
+  -raspberrypi-firmware-1_pre20130720.ebuild:
+  Version bump, drop old versions
 
 *raspberrypi-firmware-1_pre20130720 (23 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/raspberrypi-firmware-1_pre20130715.ebuild,v 1.2 2013/07/19 12:43:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/raspberrypi-firmware-1_pre20130801.ebuild,v 1.1 2013/08/02 23:03:08 xmw Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit readme.gentoo
 
 DESCRIPTION="Raspberry PI boot loader and firmware"
 HOMEPAGE="https://github.com/raspberrypi/firmware"
-MY_COMMIT="9e9acf8978"
+MY_COMMIT="128fa52bbc"
 SRC_URI=""
 for my_src_uri in bootcode.bin fixup{,_cd,_x}.dat start{,_cd,_x}.elf ; do
 	SRC_URI="${SRC_URI} https://github.com/raspberrypi/firmware/raw/${MY_COMMIT}/boot/${my_src_uri} -> ${PN}-${MY_COMMIT}-${my_src_uri}"
