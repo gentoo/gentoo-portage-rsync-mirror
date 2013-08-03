@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.191 2013/08/02 17:21:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.192 2013/08/03 01:25:21 jcallen Exp $
+
+*gwenview-4.10.5-r1 (03 Aug 2013)
+
+  03 Aug 2013; Jonathan Callen <jcallen@gentoo.org> +gwenview-4.10.5-r1.ebuild:
+  Revision bump to fix build with multilib libjpeg-turbo
 
   02 Aug 2013; Johannes Huber <johu@gentoo.org> -gwenview-4.10.4.ebuild:
   Remove KDE SC 4.10.4
