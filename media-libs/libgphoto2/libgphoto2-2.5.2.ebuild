@@ -1,23 +1,24 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.14.ebuild,v 1.8 2012/10/28 16:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.2.ebuild,v 1.1 2013/08/03 18:00:52 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
 #	http://sourceforge.net/tracker/index.php?func=detail&aid=1643870&group_id=8874&atid=108874
 
-EAPI="4"
+EAPI="5"
 
-inherit autotools eutils multilib user
+inherit autotools eutils multilib udev user
 
 DESCRIPTION="Library that implements support for numerous digital cameras"
 HOMEPAGE="http://www.gphoto.org/"
 SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="doc examples exif gd jpeg nls kernel_linux zeroconf"
+SLOT="0/6" # libgphoto2.so soname version
+
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux"
+IUSE="doc examples exif gd jpeg nls zeroconf"
 
 # By default, drivers for all supported cameras will be compiled.
 # If you want to only compile for specific camera(s), set CAMERAS
@@ -48,26 +49,29 @@ for camera in ${IUSE_CAMERAS}; do
 done
 
 # libgphoto2 actually links to libtool
-RDEPEND="virtual/libusb:0
-	cameras_ax203? ( media-libs/gd )
-	cameras_st2205? ( media-libs/gd )
-	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
-	exif? ( >=media-libs/libexif-0.5.9 )
+RDEPEND="
+	sys-devel/libtool
+	virtual/libusb:0
+	cameras_ax203? ( media-libs/gd:= )
+	cameras_st2205? ( media-libs/gd:= )
+	exif? ( >=media-libs/libexif-0.5.9:= )
 	gd? ( media-libs/gd[jpeg=] )
 	jpeg? ( virtual/jpeg )
-	sys-devel/libtool"
+	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
+"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
 	sys-devel/flex
-	>=sys-devel/gettext-0.18.1
-	doc? ( app-doc/doxygen )"
+	>=sys-devel/gettext-0.14.1
+	virtual/pkgconfig
+	doc? ( app-doc/doxygen )
+"
 # FIXME: gtk-doc is broken
 #		>=dev-util/gtk-doc-1.10 )"
 
 RDEPEND="${RDEPEND}
 	!<sys-fs/udev-136"
 
-pkg_setup() {
+pkg_pretend() {
 	if ! echo "${USE}" | grep "cameras_" > /dev/null 2>&1; then
 		einfo "No camera drivers will be built since you did not specify any."
 	fi
@@ -75,7 +79,9 @@ pkg_setup() {
 	if use cameras_template || use cameras_sipix_blink; then
 		einfo "Upstream considers sipix_blink & template driver as obsolete"
 	fi
+}
 
+pkg_setup() {
 	enewgroup plugdev
 }
 
@@ -89,14 +95,14 @@ src_prepare() {
 		sed -i "s/, @REQUIREMENTS_FOR_LIBEXIF@//" libgphoto2.pc.in || die " libgphoto2.pc sed failed"
 	fi
 
+	# Leave GCC debug builds under user control
+	sed -r '/(C|LD)FLAGS/ s/ -g( |")/\1/' \
+		-i configure.ac libgphoto2_port/configure.ac || die
+
+	sed -e 's/sleep 2//' -i m4m/gp-camlibs.m4 || die
+
 	# Fix USE=zeroconf, bug #283332
 	epatch "${FILESDIR}/${PN}-2.4.7-respect-bonjour.patch"
-
-	# Do not build test if not running make check, bug #226241
-	epatch "${FILESDIR}/${PN}-2.4.7-no-test-build.patch"
-
-	# Increase max entries from 1024 to 8192 to fix bug #291049
-	epatch "${FILESDIR}/${PN}-2.4.8-increase_max_entries.patch"
 
 	eautoreconf
 }
@@ -134,11 +140,11 @@ src_configure() {
 		$(use_with gd) \
 		$(use_with jpeg) \
 		--with-drivers=${cameras} \
-		--with-doc-dir=/usr/share/doc/${PF} \
-		--with-html-dir=/usr/share/doc/${PF}/html \
-		--with-hotplug-doc-dir=/usr/share/doc/${PF}/hotplug \
+		--with-doc-dir="${EPREFIX}"/usr/share/doc/${PF} \
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		--with-hotplug-doc-dir="${EPREFIX}"/usr/share/doc/${PF}/hotplug \
 		--with-rpmbuild=$(type -P true) \
-		udevscriptdir=/lib/udev \
+		udevscriptdir="$(udev_get_udevdir)" \
 		${myconf}
 
 # FIXME: gtk-doc is currently broken
@@ -146,7 +152,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	default
 
 	if use doc; then
 		doxygen doc/Doxyfile || die "Documentation generation failed"
@@ -154,13 +160,13 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	# Empty dependency_libs in .la files, bug #386665
 	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
 
 	# Clean up unwanted files
-	rm "${D}/usr/share/doc/${PF}/"{ABOUT-NLS,COPYING} || die "rm failed"
+	rm "${ED}/usr/share/doc/${PF}/"{ABOUT-NLS,COPYING} || die "rm failed"
 	dodoc ChangeLog NEWS* README* AUTHORS TESTERS MAINTAINERS HACKING
 
 	if use examples; then
@@ -169,40 +175,44 @@ src_install() {
 	fi
 
 	# FIXME: fixup autoconf bug
-	if ! use doc && [ -d "${D}/usr/share/doc/${PF}/apidocs.html" ]; then
-		rm -fr "${D}/usr/share/doc/${PF}/apidocs.html"
+	if ! use doc && [ -d "${ED}/usr/share/doc/${PF}/apidocs.html" ]; then
+		rm -fr "${ED}/usr/share/doc/${PF}/apidocs.html"
 	fi
 	# end fixup
 
-	UDEV_RULES="/lib/udev/rules.d/70-libgphoto2.rules"
-	CAM_LIST="/usr/$(get_libdir)/libgphoto2/print-camera-list"
+	local udev_rules cam_list
+	udev_rules="$(udev_get_udevdir)/rules.d/70-libgphoto2.rules"
+	cam_list="/usr/$(get_libdir)/libgphoto2/print-camera-list"
 
-	if [ -x "${D}"${CAM_LIST} ]; then
+	if [ -x "${ED}"${cam_list} ]; then
 		# Let print-camera-list find libgphoto2.so
-		export LD_LIBRARY_PATH="${D}/usr/$(get_libdir)"
+		export LD_LIBRARY_PATH="${ED}/usr/$(get_libdir)"
 		# Let libgphoto2 find its camera-modules
-		export CAMLIBS="${D}/usr/$(get_libdir)/libgphoto2/${PV}"
+		export CAMLIBS="${ED}/usr/$(get_libdir)/libgphoto2/${PV}"
 
 		einfo "Generating UDEV-rules ..."
-		mkdir -p "${D}"/${UDEV_RULES%/*}
+		mkdir -p "${ED}"/${udev_rules%/*}
 		echo -e "# do not edit this file, it will be overwritten on update\n#" \
-			> "${D}"/${UDEV_RULES}
-		"${D}"${CAM_LIST} udev-rules version 136 group plugdev >> "${D}"/${UDEV_RULES} \
+			> "${ED}"/${udev_rules}
+		"${ED}"${cam_list} udev-rules version 136 group plugdev >> "${ED}"/${udev_rules} \
 			|| die "failed to create udev-rules"
 	else
 		eerror "Unable to find print-camera-list"
 		eerror "and therefore unable to generate hotplug usermap."
 		eerror "You will have to manually generate it by running:"
-		eerror " ${CAM_LIST} udev-rules version 136 group plugdev > ${UDEV_RULES}"
+		eerror " ${cam_list} udev-rules version 136 group plugdev > ${udev_rules}"
 	fi
 
 }
 
 pkg_postinst() {
-	elog "Don't forget to add yourself to the plugdev group "
-	elog "if you want to be able to access your camera."
-	local OLD_UDEV_RULES="${ROOT}"etc/udev/rules.d/99-libgphoto2.rules
-	if [[ -f ${OLD_UDEV_RULES} ]]; then
-		rm -f "${OLD_UDEV_RULES}"
+	if ! has_version "sys-auth/consolekit[acl]" ; then
+		elog "Don't forget to add yourself to the plugdev group "
+		elog "if you want to be able to access your camera."
+	fi
+
+	local old_udev_rules="${EROOT}"etc/udev/rules.d/99-libgphoto2.rules
+	if [[ -f ${old_udev_rules} ]]; then
+		rm -f "${old_udev_rules}"
 	fi
 }
