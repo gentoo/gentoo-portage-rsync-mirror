@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.18 2013/07/10 04:56:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.19 2013/08/04 17:32:29 hasufell Exp $
 
 EAPI="4"
 
-LANGS="ar be bg br ca cs da de ee el eo es et fi fr hr hu it ja mk nl pl pt pt_BR ru se sk sl sr sr@latin sv sw uk ur_PK vi zh_CN zh_TW"
+LANGS="be bg ca cs de en eo es et fi fr hu it ja mk nl pl pt pt_BR ru sk sl sr@latin sv sw uk ur_PK vi zh_CN zh_TW"
 
 EGIT_REPO_URI="git://github.com/psi-im/psi.git"
 EGIT_HAS_SUBMODULES=1
-LANGS_URI="git://pv.et-inf.fho-emden.de/git/psi-l10n"
+LANGS_REPO_URI="git://github.com/psi-plus/psi-plus-l10n.git"
 
 PSI_PLUS_URI="git://github.com/psi-plus/main.git"
 PSI_PLUS_RESOURCES_URI="git://github.com/psi-plus/resources.git"
@@ -93,22 +93,9 @@ src_unpack() {
 
 	# fetch translations
 	mkdir "${WORKDIR}/psi-l10n"
-	for x in ${LANGS}; do
-		if use linguas_${x}; then
-			if use extras && [ "${x}" = "ru" ]; then
-				ESVN_PROJECT="psiplus/psi-l10n/${x}" \
-				S="${WORKDIR}" \
-				subversion_fetch \
-					"http://psi-ru.googlecode.com/svn/branches/psi-plus/" \
-					"psi-l10n/${x}"
-			else
-				unset EGIT_MASTER EGIT_BRANCH EGIT_COMMIT
-				EGIT_REPO_URI="${LANGS_URI}-${x}" \
-				EGIT_DIR="${EGIT_STORE_DIR}/psi-l10n/${x}" \
-				EGIT_SOURCEDIR="${WORKDIR}/psi-l10n/${x}" git-2_src_unpack
-			fi
-		fi
-	done
+	unset EGIT_MASTER EGIT_BRANCH EGIT_COMMIT
+	EGIT_REPO_URI="${LANGS_REPO_URI}" \
+	EGIT_SOURCEDIR="${WORKDIR}/psi-l10n" git-2_src_unpack
 
 	if use extras; then
 		EGIT_DIR="${EGIT_STORE_DIR}/psi-plus/main" \
@@ -137,8 +124,6 @@ src_prepare() {
 
 		qconf || die "Failed to create ./configure."
 	fi
-
-	rm -rf third-party/qca # We use system libraries. Remove after patching, some patches may affect qca.
 }
 
 src_configure() {
@@ -203,15 +188,12 @@ src_install() {
 	use doc && dohtml -r doc/api
 
 	# install translations
-	cd "${WORKDIR}/psi-l10n"
+	cd "${WORKDIR}/psi-l10n/translations"
 	insinto /usr/share/${MY_PN}
 	for x in ${LANGS}; do
 		if use linguas_${x}; then
-			lrelease "${x}/${PN}_${x}.ts" || die "lrelease ${x} failed"
-			doins "${x}/${PN}_${x}.qm"
-			[ -f "${x}/qt_${x}.qm" ] && doins "${x}/qt_${x}.qm"
-			[ -f "${x}/qt/qt_${x}.qm" ] && doins "${x}/qt/qt_${x}.qm"
-			[ -f "${x}/INFO" ] && newins "${x}/INFO" "${PN}_${x}.INFO"
+			lrelease "${PN}_${x}.ts" || die "lrelease ${x} failed"
+			doins "${PN}_${x}.qm"
 		fi
 	done
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.235 2013/07/10 04:56:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.236 2013/08/04 17:32:29 hasufell Exp $
+
+  04 Aug 2013; Julian Ospald <hasufell@gentoo.org> psi-9999.ebuild:
+  fix live ebuild wrt #418361
 
   10 Jul 2013; Patrick Lauer <patrick@gentoo.org> psi-0.14-r4.ebuild,
   psi-0.15.ebuild, psi-9999.ebuild:
