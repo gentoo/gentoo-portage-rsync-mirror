@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1333 2013/08/03 22:44:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1335 2013/08/04 22:40:53 zmedico Exp $
+
+*portage-2.2.0_alpha194 (04 Aug 2013)
+
+  04 Aug 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha194.ebuild,
+  -portage-2.2.0_alpha193.ebuild:
+  2.2.0_alpha194 version bump. This includes all of the fixes in 2.1.13.5. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.13.5 (04 Aug 2013)
+
+  04 Aug 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.13.5.ebuild,
+  -portage-2.1.13.4.ebuild:
+  2.1.13.5 version bump. This fixes bug #469616 (add repoman check for
+  deprecated RUBY_TARGETS). This also fixes emerge --backtrack=0 to work
+  correctly when there are rebuilds needed for slot-operator deps. Bug #472632
+  tracks all bugs fixed since portage-2.1.12.2.
 
 *portage-2.2.0_alpha193 (03 Aug 2013)
 
