@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.ebuild,v 1.2 2013/08/04 05:08:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.0.ebuild,v 1.1 2013/08/04 05:08:59 tetromino Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ fi
 
 GV="2.21"
 MV="0.0.8"
-PULSE_PATCHES="winepulse-patches-1.6-rc1"
+PULSE_PATCHES="winepulse-patches-1.7.0"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
@@ -79,7 +79,7 @@ NATIVE_DEPEND="
 	gsm? ( media-sound/gsm:= )
 	jpeg? ( virtual/jpeg:= )
 	ldap? ( net-nds/openldap:= )
-	lcms? ( media-libs/lcms:0= )
+	lcms? ( media-libs/lcms:2= )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
 	nls? ( sys-devel/gettext )
 	odbc? ( dev-db/unixODBC:= )
