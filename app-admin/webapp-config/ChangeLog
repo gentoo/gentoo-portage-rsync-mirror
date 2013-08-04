@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.93 2013/08/03 14:10:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.94 2013/08/04 00:28:55 blueness Exp $
+
+  04 Aug 2013; Anthony G. Basile <blueness@gentoo.org>
+  webapp-config-1.51.ebuild, webapp-config-9999.ebuild:
+  Add python-3.3 to PYTHON_COMPAT
 
   03 Aug 2013; Anthony G. Basile <blueness@gentoo.org>
   webapp-config-1.51.ebuild, webapp-config-9999.ebuild:
