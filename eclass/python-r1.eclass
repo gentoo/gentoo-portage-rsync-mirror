@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.55 2013/05/21 01:31:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.56 2013/08/04 08:24:28 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -67,11 +67,7 @@ inherit multibuild python-utils-r1
 # PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 # @CODE
 if ! declare -p PYTHON_COMPAT &>/dev/null; then
-	if [[ ${CATEGORY}/${PN} == dev-python/python-exec ]]; then
-		PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
-	else
-		die 'PYTHON_COMPAT not declared.'
-	fi
+	die 'PYTHON_COMPAT not declared.'
 fi
 
 # @ECLASS-VARIABLE: PYTHON_COMPAT_OVERRIDE
