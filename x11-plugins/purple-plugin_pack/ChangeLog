@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.45 2012/08/24 14:57:33 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.47 2013/08/03 23:04:01 mrueg Exp $
+
+*purple-plugin_pack-2.7.0-r1 (03 Aug 2013)
+
+  03 Aug 2013; Manuel Rüger <mrueg@gentoo.org>
+  +purple-plugin_pack-2.7.0-r1.ebuild, -purple-plugin_pack-2.5.1-r1.ebuild,
+  -purple-plugin_pack-2.6.2-r1.ebuild, -purple-plugin_pack-2.6.3.ebuild:
+  Migrate to python-any-r1, add missing dependency on json-glib. Fixes bug
+  #430042. Cleanup old.
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> purple-plugin_pack-2.7.0.ebuild:
   ppc stable (bug 422399).
