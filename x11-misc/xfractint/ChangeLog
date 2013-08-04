@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfractint
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.63 2012/08/29 13:32:29 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.64 2013/08/04 06:49:00 zmedico Exp $
+
+  04 Aug 2013; Zac Medico <zmedico@gentoo.org> xfractint-20.04_p12.ebuild:
+  Add x11-libs/libXft to DEPEND (fixes missing include of X11/Xft/Xft.h).
 
   29 Aug 2012; Michael Palimaka <kensington@gentoo.org>
   -files/xfractint-20.04_p07-Makefile.patch,

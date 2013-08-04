@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p12.ebuild,v 1.5 2012/08/27 18:01:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p12.ebuild,v 1.6 2013/08/04 06:49:00 zmedico Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-libs/libXft"
 #	x86? ( dev-lang/nasm )"
 
 S="${WORKDIR}/${MY_P}"
