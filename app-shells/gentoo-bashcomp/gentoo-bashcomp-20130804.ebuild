@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20130804.ebuild,v 1.1 2013/08/04 19:38:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20130804.ebuild,v 1.2 2013/08/04 20:27:30 dirtyepic Exp $
 
 EAPI="5"
 inherit bash-completion-r1 eutils prefix
 
 DESCRIPTION="Gentoo-specific bash command-line completions (emerge, ebuild, equery, repoman, layman, etc)"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}-r1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
