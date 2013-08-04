@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.23 2013/05/07 00:32:24 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.24 2013/08/04 15:07:08 chithanh Exp $
+
+  04 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lxdm-0.4.1-r7.ebuild:
+  Keyword ~ppc
 
   07 May 2013; Victor Ostorga lxdm-0.4.1-r7.ebuild:
   Updating elog message
