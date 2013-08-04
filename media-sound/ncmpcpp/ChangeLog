@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ncmpcpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.77 2012/12/31 17:30:59 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.78 2013/08/04 16:08:40 jer Exp $
+
+*ncmpcpp-9999 (04 Aug 2013)
+
+  04 Aug 2013; Jeroen Roovers <jer@gentoo.org> +ncmpcpp-9999.ebuild:
+  Add git ebuild.
 
   31 Dec 2012; Jeroen Roovers <jer@gentoo.org> ncmpcpp-0.5.10.ebuild:
   New HOMEPAGE and SRC_URI.
