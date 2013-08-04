@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.17 2013/08/01 08:16:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.18 2013/08/04 12:22:18 idella4 Exp $
 
 EAPI=5
 
@@ -73,7 +73,8 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
-	ocaml? ( >=dev-lang/ocaml-4 )
+	ocaml? ( >=dev-lang/ocaml-4
+		dev-ml/findlib )
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -227,7 +228,15 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --prefix=/usr --disable-werror
+	local myconf="--prefix=/usr --disable-werror"
+	if use ocaml
+	then
+		myconf="${myconf} $(use_enable ocaml ocamltools)"
+	else
+		myconf="${myconf} --disable-ocamltools"
+	fi
+
+	econf ${myconf}
 }
 
 src_compile() {

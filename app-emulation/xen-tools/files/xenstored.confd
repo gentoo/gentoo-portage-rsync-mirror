@@ -1,2 +1,52 @@
-# /etc/conf.d/xenstored
-XENSTORED_OPTS=""
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+is_privileged_domain() {
+	# [ -e /proc/xen/capabilities ]
+	! [ -z /proc/xen/capabilities ] && return 0
+        return 1
+}
+
+depend() {
+	before xendomains xend sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp
+}
+
+start() {
+	[ -x /run/xen ] || mkdir -p /run/xen
+	ebegin "Starting xenstored daemon"
+
+	if [ -e /proc/xen/privcmd ] && is_privileged_domain
+	then
+		eend 1 "Not running on a privileged domain. xenstored not started"
+		return 1
+	fi
+
+	start-stop-daemon --start --exec /usr/sbin/xenstored \
+		--pidfile /var/run/xenstored.pid \
+		-- --pid-file=/var/run/xenstored.pid \
+		$XENSTORED_OPTS || return 1
+
+	einfo "Waiting (upto 10 seconds) for xenstore to come up"
+
+	for i in {0..20}; do
+		sleep .5
+		! xenstore-exists / 2> /dev/null || break
+	done
+
+	if ! xenstore-exists / 2> /dev/null; then
+		eend 1 "xenstore not up within 10 seconds"
+	else
+		einfo "Setting domain0 name record"
+		xenstore-write "/local/domain/0/name" "Domain-0"
+		eend $?
+	fi
+}
+
+stop() {
+	ebegin "Stopping xenstored daemon"
+	start-stop-daemon --stop --exec /usr/sbin/xenstored \
+		--pidfile /var/run/xenstored.pid
+	eend $?
+}
+
