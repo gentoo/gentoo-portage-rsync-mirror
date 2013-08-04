@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.310 2013/08/02 15:53:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.311 2013/08/04 21:05:20 ssuominen Exp $
+
+*lvm2-2.02.99-r1 (04 Aug 2013)
+
+  04 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.99-r1.ebuild,
+  metadata.xml:
+  Create USE="lvm2create_initrd" and pull in sys-apps/makedev when required wrt
+  #401933 by Scott Alfter. The correct path to the lvm command is /sbin instead
+  of /usr/sbin wrt #479626 by Alexander Tsoy. Correct /run directory of
+  dmeventd wrt #479632 by Alexander Tsoy.
 
   02 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.99.ebuild:
   Revert last modification as useless wrt #479520#c6. Thanks to Michał Górny.
