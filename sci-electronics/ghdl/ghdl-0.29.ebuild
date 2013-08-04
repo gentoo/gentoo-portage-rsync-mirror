@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.29.ebuild,v 1.3 2011/05/14 14:34:21 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.29.ebuild,v 1.4 2013/08/04 09:10:43 tomjbe Exp $
 
 EAPI="3"
 
-inherit multilib
+inherit eutils multilib
 
 GCC_VERSION="4.3.4"
 GNATGCC_SLOT="4.3"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-DEPEND=">=sys-apps/portage-2.1.2.10
+DEPEND="<sys-apps/texinfo-5.1
 	dev-lang/gnat-gcc:${GNATGCC_SLOT}"
 RDEPEND=""
 S="${WORKDIR}/gcc-${GCC_VERSION}"
@@ -49,6 +49,9 @@ src_prepare() {
 			|| die "sed for ${T_LINUX64} failed. :("
 		done
 	fi
+
+	# fix for bug #477552 backported from bug #424970
+	epatch "${FILESDIR}"/${P}-gcc.patch
 }
 
 src_configure() {

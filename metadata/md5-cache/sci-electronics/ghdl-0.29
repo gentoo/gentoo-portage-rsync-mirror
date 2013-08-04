@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=>=sys-apps/portage-2.1.2.10 dev-lang/gnat-gcc:4.3
+DEPEND=<sys-apps/texinfo-5.1 dev-lang/gnat-gcc:4.3
 DESCRIPTION=Complete VHDL simulator using the GCC technology
 EAPI=3
 HOMEPAGE=http://ghdl.free.fr
@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://ghdl.free.fr/ghdl-0.29.tar.bz2 mirror://gnu/gcc/releases/gcc-4.3.4/gcc-core-4.3.4.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=b93be41200976649c34512ce3fa0bb46
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=a2fa1c3a66a7e6568f93b0789b06e511

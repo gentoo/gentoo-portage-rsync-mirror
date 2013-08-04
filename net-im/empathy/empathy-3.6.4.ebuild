@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.4.ebuild,v 1.1 2013/03/31 14:57:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.4.ebuild,v 1.2 2013/08/04 09:02:37 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -50,7 +50,7 @@ COMMON_DEPEND="
 	net-libs/libsoup:2.4
 	x11-libs/libX11
 
-	geocode? ( sci-geosciences/geocode-glib )
+	geocode? ( ~sci-geosciences/geocode-glib-0.99.0 )
 	geoloc? ( >=app-misc/geoclue-0.12 )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.5.1 )
 	map? (
