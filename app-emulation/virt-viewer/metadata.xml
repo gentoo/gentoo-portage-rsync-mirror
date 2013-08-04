@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>virtualization</herd>
 	<use>
-		<flag name="gtk3">Link against <pkg>x11-libs/gtk+:3</pkg> instead of
-			<pkg>x11-libs/gtk+:2</pkg></flag>
 		<flag name="spice">Support connecting to SPICE-enabled virtual
 			machines.</flag>
 		<flag name="vnc">Support connecting to VNC-enabled virtual

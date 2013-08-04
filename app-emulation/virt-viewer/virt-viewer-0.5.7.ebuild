@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.5.6.ebuild,v 1.2 2013/08/04 02:16:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.5.7.ebuild,v 1.1 2013/08/04 02:16:04 cardoe Exp $
 
 EAPI=5
 inherit eutils gnome2 toolchain-funcs
@@ -17,7 +17,7 @@ IUSE="sasl +spice +vnc"
 RDEPEND=">=app-emulation/libvirt-0.10.0[sasl?]
 	>=dev-libs/libxml2-2.6
 	x11-libs/gtk+:3
-	spice? ( >=net-misc/spice-gtk-0.18[sasl?,gtk3] )
+	spice? ( >=net-misc/spice-gtk-0.20[sasl?,gtk3] )
 	vnc? ( >=net-libs/gtk-vnc-0.5.0[sasl?,gtk3] )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
