@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.3.ebuild,v 1.2 2013/06/15 21:34:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.3.ebuild,v 1.3 2013/08/04 08:48:48 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -53,7 +53,7 @@ COMMON_DEPEND="
 		>=media-libs/libchamplain-0.12:0.12
 		>=media-libs/clutter-1.0.0:1.0
 		>=media-libs/clutter-gtk-0.90:1.0
-		>=sci-geosciences/geocode-glib-0.99.0
+		~sci-geosciences/geocode-glib-0.99.0
 		x11-libs/mx:1.0 )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.2 )
 	gstreamer? ( || (

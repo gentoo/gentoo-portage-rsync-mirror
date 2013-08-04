@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14984 2013/08/03 19:48:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14985 2013/08/04 08:47:34 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (04 Aug 2013)
+# API break, reverse dependencies need patching; bug #479458.
+>=sci-geosciences/geocode-glib-0.99.1
 
 # Doug Goldstein <cardoe@gentoo.org> (03 Aug 2013)
 # Masked due to mirgration breakage.
