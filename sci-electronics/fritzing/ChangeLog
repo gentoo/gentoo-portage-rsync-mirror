@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/fritzing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/ChangeLog,v 1.8 2013/04/15 18:04:27 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/ChangeLog,v 1.9 2013/08/04 04:46:58 mrueg Exp $
+
+*fritzing-0.8.3b (04 Aug 2013)
+
+  04 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +fritzing-0.8.3b.ebuild:
+  Non maintainer commit: Version bump
 
   15 Apr 2013; Christian Ruppert <idl0r@gentoo.org> fritzing-0.7.12b.ebuild:
   Fritzing doesn't need minizip
