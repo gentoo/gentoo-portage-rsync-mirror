@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/jimtcl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.6 2012/08/17 22:23:51 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.7 2013/08/04 19:52:14 maekke Exp $
+
+  04 Aug 2013; Markus Meier <maekke@gentoo.org> jimtcl-0.73.ebuild:
+  add ~arm, bug #474626
 
 *jimtcl-0.73 (17 Aug 2012)
 
