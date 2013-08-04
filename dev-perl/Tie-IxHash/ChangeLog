@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.45 2013/08/03 07:44:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.46 2013/08/04 11:35:41 ago Exp $
+
+  04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> Tie-IxHash-1.230.0.ebuild:
+  Stable for ia64, wrt bug #470416
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> Tie-IxHash-1.230.0.ebuild:
   Stable for sparc, wrt bug #470416

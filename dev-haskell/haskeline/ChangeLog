@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haskeline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.28 2013/08/03 07:49:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.29 2013/08/04 11:42:10 ago Exp $
+
+  04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> haskeline-0.6.4.7-r1.ebuild:
+  Stable for ia64, wrt bug #470356
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> haskeline-0.6.4.7-r1.ebuild:
   Stable for sparc, wrt bug #470356

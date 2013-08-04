@@ -4,10 +4,10 @@ DESCRIPTION=The open source, cross platform, free C++ IDE.
 EAPI=5
 HOMEPAGE=http://www.codeblocks.org/
 IUSE=contrib debug pch static-libs
-KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~x86-fbsd
 LICENSE=GPL-3
 RDEPEND=app-arch/zip x11-libs/wxGTK:2.8[X] contrib? ( app-text/hunspell dev-libs/boost:= dev-libs/libgamin )
 SLOT=0
 SRC_URI=mirror://berlios/codeblocks/codeblocks_12.11-1.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
-_md5_=ebebfbb2dd9bdb359750440916913d78
+_md5_=9dbd2334c8df304d51b55a78e13d80f0
