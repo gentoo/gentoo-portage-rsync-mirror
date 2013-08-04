@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.98 2013/07/28 17:32:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.99 2013/08/04 20:42:32 floppym Exp $
 
 EAPI=5
 
@@ -8,19 +8,20 @@ if [[ ${PV} == 9999 ]]; then
 	AUTOTOOLS_AUTORECONF=1
 fi
 
-inherit autotools-utils bash-completion-r1 eutils flag-o-matic multibuild pax-utils toolchain-funcs
+inherit autotools-utils bash-completion-r1 eutils flag-o-matic multibuild pax-utils toolchain-funcs versionator
 
 if [[ ${PV} != 9999 ]]; then
-	MY_P=${P/_/\~}
 	if [[ ${PV} == *_alpha* || ${PV} == *_beta* || ${PV} == *_rc* ]]; then
+		MY_P=${P/_/~}
 		SRC_URI="mirror://gnu-alpha/${PN}/${MY_P}.tar.xz"
+		S=${WORKDIR}/${MY_P}
 	else
-		SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
-			mirror://gentoo/${MY_P}.tar.xz
-			http://dev.gentoo.org/~floppym/dist/${MY_P}.tar.xz"
+		SRC_URI="mirror://gnu/${PN}/${P}.tar.xz
+			mirror://gentoo/${P}.tar.xz
+			http://dev.gentoo.org/~floppym/dist/${P}.tar.xz"
+		S=${WORKDIR}/${P%_*}
 	fi
 	KEYWORDS="~amd64 ~x86"
-	S=${WORKDIR}/${MY_P}
 	PATCHES=()
 else
 	inherit bzr
@@ -126,7 +127,8 @@ QA_PRESTRIPPED="
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		# Bug 439082
-		if $(tc-getLD) --version | grep -q "GNU gold"; then
+		if ! version_is_at_least 4.8 "$(gcc-version)" &&
+			$(tc-getLD) --version | grep -q "GNU gold"; then
 			eerror "GRUB does not function correctly when built with the gold linker."
 			eerror "Please select the bfd linker with binutils-config."
 			die "GNU gold detected"
@@ -185,7 +187,7 @@ grub_configure() {
 		${platform:+--with-platform=}${platform}
 
 		# Let configure detect this where supported
-		$(usex efiemu '' --disable-efiemu) 
+		$(usex efiemu '' '--disable-efiemu') 
 	)
 
 	if use multislot; then
@@ -201,6 +203,10 @@ grub_configure() {
 src_configure() {
 	use custom-cflags || unset CCASFLAGS CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
+
+	if version_is_at_least 4.8 "$(gcc-version)"; then
+		export TARGET_LDFLAGS+=" -fuse-ld=bfd"
+	fi
 
 	tc-export CC NM OBJCOPY STRIP
 	export TARGET_CC=${TARGET_CC:-${CC}}

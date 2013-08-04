@@ -1,6 +1,16 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.269 2013/07/28 17:32:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.271 2013/08/04 20:43:43 floppym Exp $
+
+  04 Aug 2013; Mike Gilbert <floppym@gentoo.org> -grub-2.00_p4946.ebuild:
+  Remove old snapshot.
+
+*grub-2.00_p5086 (04 Aug 2013)
+
+  04 Aug 2013; Mike Gilbert <floppym@gentoo.org> +grub-2.00_p5086.ebuild,
+  grub-9999.ebuild:
+  New snapshot, resolves bug 468136. Append -fuse-ld=bfd to LDFLAGS for gcc-4.8+
+  as a workaround for bug 439082.
 
   28 Jul 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p4946.ebuild,
   grub-9999.ebuild:
