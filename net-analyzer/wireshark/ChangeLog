@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.534 2013/08/04 11:59:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.535 2013/08/04 13:28:08 jer Exp $
+
+  04 Aug 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.10.1-r1.ebuild:
+  Remove dev-libs/atk dependency by Nikoli (bug #479618). Add
+  x11-libs/gdk-pixbuf dependency.
 
   04 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> wireshark-1.10.1-r1.ebuild:
   Restore ability to build wireshark GUI-less, wrt bug #479692. Thanks to

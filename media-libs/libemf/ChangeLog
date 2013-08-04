@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.40 2013/08/03 06:55:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.41 2013/08/04 13:29:54 ago Exp $
+
+  04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libemf-1.0.4-r1.ebuild:
+  Stable for ppc64, wrt bug #474242
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libemf-1.0.4-r1.ebuild:
   Stable for sparc, wrt bug #474242
