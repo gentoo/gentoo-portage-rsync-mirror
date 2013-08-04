@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/google2srt/google2srt-0.5.2.ebuild,v 1.2 2011/07/10 02:18:34 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/google2srt/google2srt-0.5.6.ebuild,v 1.1 2013/08/04 21:52:24 sbriesen Exp $
 
-EAPI="2"
+EAPI=5
 
 JAVA_PKG_IUSE="doc source"
 
