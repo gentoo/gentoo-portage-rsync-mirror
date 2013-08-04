@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.10 2013/05/04 17:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.11 2013/08/04 18:36:44 ago Exp $
+
+  04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> glog-0.3.3.ebuild:
+  Stable for amd64, wrt bug #478210
 
 *glog-0.3.3 (04 May 2013)
 

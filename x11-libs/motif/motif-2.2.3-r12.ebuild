@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.2.3-r12.ebuild,v 1.8 2013/08/01 19:47:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.2.3-r12.ebuild,v 1.9 2013/08/04 18:36:09 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.ics.com/openmotif/2.2/${PV}/src/${MY_P}.tar.gz
 
 LICENSE="MOTIF MIT"
 SLOT="2.2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-motif[-abi_x86_32(-)] )
 	|| ( (

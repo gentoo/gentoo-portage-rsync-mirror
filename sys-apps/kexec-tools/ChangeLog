@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.49 2013/04/01 13:17:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.50 2013/08/04 18:36:18 ago Exp $
+
+  04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> kexec-tools-2.0.4-r1.ebuild:
+  Stable for amd64, wrt bug #478070
 
   01 Apr 2013; Justin Lecher <jlec@gentoo.org> files/kexec.init-2.0.4:
   Fix bashism in init script, #463752
@@ -273,4 +276,3 @@
   Justus Winter <justus@sunny-winter.de>, Radoslaw -AstralStorm- Szkodzinski
   <astralstorm@gmail.com>, Daniel Webert <rockoo@gmail.com> and Carlos Silva
   <r3pek@r3pek.homelinux.org> in bug 50313
-
