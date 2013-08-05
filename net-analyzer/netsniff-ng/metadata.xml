@@ -5,9 +5,5 @@
 <email>xmw@gentoo.org</email>
 <name>Michael Weber</name>
 </maintainer>
-<use>
-	<flag name="curvetun">Build curvetun utility</flag>
-	<flag name="mausezahn">Build mausezahn utility</flag>
-</use>
 </pkgmetadata>
 

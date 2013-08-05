@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/htpdate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.43 2012/02/09 10:46:53 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.44 2013/08/05 07:31:52 pinkbyte Exp $
+
+  05 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Package will be maintained by Pavel Kazakov <nullishzero AT gmail.com>
+  through proxy maintainers
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> -htpdate-1.0.0.ebuild,
   metadata.xml:

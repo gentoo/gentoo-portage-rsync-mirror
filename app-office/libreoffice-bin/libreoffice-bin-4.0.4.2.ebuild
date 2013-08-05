@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.0.4.2.ebuild,v 1.4 2013/07/28 14:08:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.0.4.2.ebuild,v 1.5 2013/08/05 07:31:30 dilfridge Exp $
 
 EAPI=5
 
@@ -64,6 +64,7 @@ BIN_COMMON_DEPEND="
 	=media-libs/libpng-1.5*
 	>=sys-libs/glibc-2.15-r3
 	kde? ( >=kde-base/kdelibs-4.10.4:4 >=dev-qt/qtcore-4.8.4-r5:4 )
+	|| ( <media-libs/libjpeg-turbo-1.3.0-r2 =media-libs/jpeg-8* )
 "
 
 # PLEASE place any restrictions that are specific to the binary builds
