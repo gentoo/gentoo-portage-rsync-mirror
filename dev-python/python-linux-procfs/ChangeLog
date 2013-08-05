@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-linux-procfs
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-linux-procfs/ChangeLog,v 1.1 2013/08/05 16:07:59 xmw Exp $
+
+*python-linux-procfs-9999 (05 Aug 2013)
+*python-linux-procfs-0.4.6 (05 Aug 2013)
+
+  05 Aug 2013; Michael Weber <xmw@gentoo.org> +metadata.xml,
+  +python-linux-procfs-0.4.6.ebuild, +python-linux-procfs-9999.ebuild:
+  Initial import
