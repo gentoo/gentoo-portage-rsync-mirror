@@ -1,0 +1,10 @@
+# ChangeLog for games-action/minetest_build
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_build/ChangeLog,v 1.1 2013/08/05 22:34:52 hasufell Exp $
+
+*minetest_build-0.4.6 (05 Aug 2013)
+
+  05 Aug 2013; Julian Ospald <hasufell@gentoo.org>
+  +minetest_build-0.4.6.ebuild, +metadata.xml:
+  initial import wrt #399867
+

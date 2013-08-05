@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.7.ebuild,v 1.1 2013/08/05 22:31:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.7.ebuild,v 1.2 2013/08/05 22:56:45 hasufell Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils vcs-snapshot user games
 
 DESCRIPTION="An InfiniMiner/Minecraft inspired game"
-HOMEPAGE="http://c55.me/minetest/"
+HOMEPAGE="http://minetest.net/"
 SRC_URI="http://github.com/minetest/minetest/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
