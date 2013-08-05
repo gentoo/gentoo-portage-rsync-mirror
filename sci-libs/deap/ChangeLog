@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/deap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/deap/ChangeLog,v 1.2 2013/07/08 06:59:32 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/deap/ChangeLog,v 1.3 2013/08/05 05:35:00 slis Exp $
+
+*deap-1.0.0_rc2 (05 Aug 2013)
+
+  05 Aug 2013; Sławek Lis <slis@gentoo.org> +deap-1.0.0_rc2.ebuild:
+  version bump
 
 *deap-1.0.0_rc1 (08 Jul 2013)
 
