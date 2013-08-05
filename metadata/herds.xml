@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1048 2013/08/03 21:22:52 mrueg Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1049 2013/08/05 13:52:30 mrueg Exp $
 
 -->
 <herds>
@@ -1006,6 +1006,10 @@
   <maintainer>
     <email>dilfridge@gentoo.org</email>
     <name>Andreas K. Huettel</name>
+  </maintainer>
+  <maintainer>
+    <email>mrueg@gentoo.org</email>
+    <name>Manuel Rüger</name>
   </maintainer>
 </herd>
 <herd>
