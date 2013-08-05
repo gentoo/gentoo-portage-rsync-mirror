@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.23 2013/08/04 18:36:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.24 2013/08/05 21:27:45 ulm Exp $
 
 EAPI=5
 
@@ -79,9 +79,17 @@ src_prepare() {
 	# feel free to fix properly if you care
 	append-flags -fno-strict-aliasing
 
-	# For Solaris Xos_r.h :(
+	# for Solaris Xos_r.h :(
 	[[ ${CHOST} == *-solaris2.11 ]] \
 		&& append-cppflags -DNEED_XOS_R_H -DHAVE_READDIR_R_3
+
+	# workaround for missing pkgconfig files in emul-linux-x86-xlibs #479876
+	if use xft && use amd64 && use abi_x86_32 \
+		&& has_version "app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]"
+	then
+		append-cppflags -I/usr/include/freetype2
+		append-ldflags -lXft
+	fi
 
 	if use !elibc_glibc && use !elibc_uclibc && use unicode; then
 		# libiconv detection in configure script doesn't always work

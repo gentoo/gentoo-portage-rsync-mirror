@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.9 2013/03/28 20:14:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.10 2013/08/05 21:15:11 chutzpah Exp $
+
+*lldpd-0.7.6 (05 Aug 2013)
+
+  05 Aug 2013; Patrick McLean <chutz@gentoo.org> +lldpd-0.7.6.ebuild,
+  +files/lldpd-0.7.6-include-unistd.patch:
+  Version bump. Add static-libs USE flag (bug #461724), remove unnecessary .la
+  files.
 
   28 Mar 2013; Patrick McLean <chutzpah@gentoo.org> -lldpd-0.5.6.ebuild,
   -lldpd-0.5.7.ebuild, lldpd-0.7.1.ebuild:

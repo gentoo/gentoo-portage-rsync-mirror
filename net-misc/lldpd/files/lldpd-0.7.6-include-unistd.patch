@@ -1,0 +1,12 @@
+diff --git a/src/daemon/priv-linux.c b/src/daemon/priv-linux.c
+index 68eee70..d17ec38 100644
+--- a/src/daemon/priv-linux.c
++++ b/src/daemon/priv-linux.c
+@@ -17,6 +17,7 @@
+ 
+ #include "lldpd.h"
+ 
++#include <unistd.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
