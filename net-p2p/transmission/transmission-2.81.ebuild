@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.81.ebuild,v 1.2 2013/07/31 14:51:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.81.ebuild,v 1.3 2013/08/05 15:23:01 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
@@ -30,7 +30,8 @@ RDEPEND="
 	systemd? ( sys-apps/systemd )
 	qt4? (
 		dev-qt/qtcore:4=
-		dev-qt/qtgui:4=[dbus(+)]
+		dev-qt/qtgui:4=
+		dev-qt/qtdbus:4=
 		)"
 
 DEPEND="${RDEPEND}
