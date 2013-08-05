@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.41 2013/08/03 21:42:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.42 2013/08/05 15:59:08 mgorny Exp $
+
+  05 Aug 2013; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.8.ebuild,
+  gentoopm-9999.ebuild:
+  Enable pypy2.0. Add USEDEP for portage since it supports PYTHON_TARGETS now.
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gentoopm-0.2.8.ebuild:
   Stable for amd64, wrt bug #479482
