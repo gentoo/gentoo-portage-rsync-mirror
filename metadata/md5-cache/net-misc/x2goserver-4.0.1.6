@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst prepare setup
+DEPEND=sys-apps/man
+DESCRIPTION=The X2Go server
+EAPI=4
+HOMEPAGE=http://www.x2go.org
+IUSE=+fuse postgres +sqlite
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-perl/Config-Simple media-fonts/font-cursor-misc media-fonts/font-misc-misc net-misc/nx virtual/ssh x11-apps/xauth fuse? ( sys-fs/sshfs-fuse ) postgres? ( dev-perl/DBD-Pg ) sqlite? ( dev-perl/DBD-SQLite )
+REQUIRED_USE=|| ( postgres sqlite )
+SLOT=0
+SRC_URI=http://code.x2go.org/releases/source/x2goserver/x2goserver-4.0.1.6.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=652e7c3198a52c4d6cdda953c117898c
