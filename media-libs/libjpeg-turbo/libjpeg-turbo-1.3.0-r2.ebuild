@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r2.ebuild,v 1.3 2013/08/05 06:13:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r2.ebuild,v 1.4 2013/08/05 18:14:51 ssuominen Exp $
 
 EAPI=5
 
@@ -102,7 +102,7 @@ multilib_src_install() {
 
 		if use java; then
 			rm -rf "${ED}"/usr/classes
-			java-pkg_dojar "${S}"/java/turbojpeg.jar
+			java-pkg_dojar java/turbojpeg.jar
 		fi
 	fi
 }

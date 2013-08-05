@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[ncurses] ) python_single_target_python2_7? ( dev-lang/python:2.7[ncurses] ) python_single_target_python3_1? ( dev-lang/python:3.1[ncurses] ) python_single_target_python3_2? ( dev-lang/python:3.2[ncurses] ) python_single_target_python3_3? ( dev-lang/python:3.3[ncurses] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_1(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?,python_single_target_python3_1(+)?,python_single_target_python3_2(+)?,python_single_target_python3_3(+)?]
+DESCRIPTION=A tool to display color charts for 8, 16, 88, and 256 color terminals
+EAPI=5
+HOMEPAGE=http://zhar.net/projects/shell/terminal-colors
+IUSE=python_targets_python2_6 python_targets_python2_7 python_targets_python3_1 python_targets_python3_2 python_targets_python3_3 python_single_target_python2_6 python_single_target_python2_7 python_single_target_python3_1 python_single_target_python3_2 python_single_target_python3_3
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[ncurses] ) python_single_target_python2_7? ( dev-lang/python:2.7[ncurses] ) python_single_target_python3_1? ( dev-lang/python:3.1[ncurses] ) python_single_target_python3_2? ( dev-lang/python:3.2[ncurses] ) python_single_target_python3_3? ( dev-lang/python:3.3[ncurses] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_1(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?,python_single_target_python3_1(+)?,python_single_target_python3_2(+)?,python_single_target_python3_3(+)?]
+REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) python_single_target_python3_1? ( python_targets_python3_1 ) python_single_target_python3_2? ( python_targets_python3_2 ) python_single_target_python3_3? ( python_targets_python3_3 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 python_single_target_python3_1 python_single_target_python3_2 python_single_target_python3_3 )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~radhermit/distfiles/terminal-colors-2.0.bz2
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	7e219c03c7f3c029a5d1030f38aeafef	python-utils-r1	e3288ba49a9a4406c283001e4d284aad	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=555768e8ef20e160b5714dcfea9b06c8

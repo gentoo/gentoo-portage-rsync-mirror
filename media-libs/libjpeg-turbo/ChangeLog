@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.73 2013/08/05 06:13:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.74 2013/08/05 18:14:51 ssuominen Exp $
+
+  05 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  libjpeg-turbo-1.3.0-r2.ebuild:
+  Fix the java-pkg_dojar line again wrt #479300#c5 by "DaggyStyle"
 
   05 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
   libjpeg-turbo-1.3.0-r2.ebuild:
