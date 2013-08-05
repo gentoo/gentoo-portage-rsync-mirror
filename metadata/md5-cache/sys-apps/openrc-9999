@@ -8,4 +8,4 @@ LICENSE=BSD-2
 RDEPEND=virtual/init kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) ) elibc_glibc? ( >=sys-libs/glibc-2.5 ) ncurses? ( sys-libs/ncurses ) pam? ( sys-auth/pambase ) tools? ( dev-lang/perl ) >=sys-apps/baselayout-2.1-r1 kernel_linux? ( sys-process/psmisc ) selinux? ( sec-policy/selinux-openrc ) !<sys-fs/udev-init-scripts-17 !<sys-fs/udev-133
 SLOT=0
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=93a4f1fcef358889bd06426b015f2d62
+_md5_=85da67980cc142a3450fc540ed8138b0
