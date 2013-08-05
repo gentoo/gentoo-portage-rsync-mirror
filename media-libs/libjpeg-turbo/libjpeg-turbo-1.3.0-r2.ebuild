@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r2.ebuild,v 1.2 2013/08/01 20:37:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r2.ebuild,v 1.3 2013/08/05 06:13:08 ssuominen Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ src_prepare() {
 
 multilib_src_configure() {
 	local myconf=()
-	if [[ ${ABI} == ${DEFAULT_ABI} ]]; then
+	if multilib_is_native_abi; then
 		myconf+=( $(use_with java) )
 		if use java; then
 			export JAVACFLAGS="$(java-pkg_javac-args)"
@@ -74,12 +74,10 @@ multilib_src_compile() {
 	use java && _java_makeopts="-j1"
 	emake ${_java_makeopts}
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]]; then
-		ebegin "Building exifautotran and jpegexiforient extra tools"
+	if multilib_is_native_abi; then
 		pushd ../debian/extra >/dev/null
 		emake CC="$(tc-getCC)" CFLAGS="${LDFLAGS} ${CFLAGS}"
 		popd >/dev/null
-		eend $?
 	fi
 }
 
@@ -94,13 +92,18 @@ multilib_src_install() {
 		exampledir="${EPREFIX}"/usr/share/doc/${PF} \
 		install
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] && use java; then
-		insinto /usr/share/doc/${PF}/html/java
-		doins -r "${S}/"java/doc/*
-		newdoc "${S}/"java/README README.java
+	if multilib_is_native_abi; then
+		pushd "${WORKDIR}"/debian/extra >/dev/null
+		emake \
+			DESTDIR="${D}" prefix="${EPREFIX}"/usr \
+			INSTALL="install -m755" INSTALLDIR="install -d -m755" \
+			install
+		popd >/dev/null
 
-		rm -rf "${ED}"usr/classes
-		java-pkg_dojar java/turbojpeg.jar
+		if use java; then
+			rm -rf "${ED}"/usr/classes
+			java-pkg_dojar "${S}"/java/turbojpeg.jar
+		fi
 	fi
 }
 
@@ -108,16 +111,11 @@ multilib_src_install_all() {
 	prune_libtool_files
 
 	insinto /usr/share/doc/${PF}/html
-	doins -r doc/html/*
-
-	ebegin "Installing exifautotran and jpegexiforient extra tools"
-	pushd ../debian/extra >/dev/null
-	newdoc ../changelog changelog.debian
-
-	emake \
-		DESTDIR="${D}" prefix="${EPREFIX}"/usr \
-		INSTALL="install -m755" INSTALLDIR="install -d -m755" \
-		install
-	popd >/dev/null
-	eend $?
+	doins -r "${S}"/doc/html/*
+	newdoc "${WORKDIR}"/debian/changelog changelog.debian
+	if use java; then
+		insinto /usr/share/doc/${PF}/html/java
+		doins -r "${S}"/java/doc/*
+		newdoc "${S}"/java/README README.java
+	fi
 }

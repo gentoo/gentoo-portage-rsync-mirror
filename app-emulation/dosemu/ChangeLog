@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.55 2013/07/17 20:56:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.56 2013/08/05 06:08:53 slyfox Exp $
+
+*dosemu-1.4.1_pre20130107-r1 (05 Aug 2013)
+
+  05 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +dosemu-1.4.1_pre20130107-r1.ebuild:
+  Picked FluidR3_GM.sf2 from media-sound/fluid-soundfont as a default soundfont
+  (bug #479534 by Michelangelo Scopelliti)
 
 *dosemu-1.4.1_pre20130107 (17 Jul 2013)
 
