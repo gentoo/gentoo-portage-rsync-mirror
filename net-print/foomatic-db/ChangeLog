@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.79 2012/08/31 11:31:31 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.80 2013/08/05 14:19:07 mrueg Exp $
+
+*foomatic-db-4.0.20130805 (05 Aug 2013)
+
+  05 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +foomatic-db-4.0.20130805.ebuild:
+  Version bump
 
 *foomatic-db-4.0.20120831 (31 Aug 2012)
 
@@ -346,4 +351,3 @@
 
   16 Jul 2003; Heinrich Wendel <lanius@gentoo.org> files/perl-module.diff:
   initial release
-

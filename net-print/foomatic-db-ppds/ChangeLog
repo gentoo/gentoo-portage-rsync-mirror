@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic-db-ppds
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/ChangeLog,v 1.32 2012/08/31 11:38:23 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/ChangeLog,v 1.33 2013/08/05 14:17:50 mrueg Exp $
+
+*foomatic-db-ppds-4.0.20130805 (05 Aug 2013)
+
+  05 Aug 2013; Manuel Rüger <mrueg@gentoo.org>
+  +foomatic-db-ppds-4.0.20130805.ebuild:
+  Version bump
 
 *foomatic-db-ppds-4.0.20120831 (31 Aug 2012)
 
@@ -160,4 +166,3 @@
   04 Jun 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +foomatic-db-ppds-20060601.ebuild:
   Split up foomatic-db
-

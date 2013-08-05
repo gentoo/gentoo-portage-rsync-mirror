@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/python_targets.desc,v 1.8 2013/03/21 23:02:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/python_targets.desc,v 1.9 2013/08/05 14:20:47 floppym Exp $
 
 # This file contains descriptions of PYTHON_TARGETS USE_EXPAND flags.
 
@@ -15,3 +15,4 @@ jython2_5 - Build with Jython 2.5
 jython2_7 - Build with Jython 2.7
 pypy1_9 - Build with PyPy 1.9
 pypy2_0 - Build with PyPy 2.0
+pypy2_1 - Build with PyPy 2.1
