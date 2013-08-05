@@ -1,6 +1,9 @@
 # ChangeLog for games-board/kaya
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/ChangeLog,v 1.7 2012/09/11 10:35:12 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/ChangeLog,v 1.8 2013/08/05 03:12:18 patrick Exp $
+
+  05 Aug 2013; Patrick Lauer <patrick@gentoo.org> kaya-0.4.ebuild:
+  Bump ruby deps for #479584
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
@@ -27,4 +30,3 @@
   18 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org> +kaya-0.3.ebuild,
   +metadata.xml:
   New game, fixes bug 275943.
-

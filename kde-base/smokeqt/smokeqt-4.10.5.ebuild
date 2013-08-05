@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.10.5.ebuild,v 1.5 2013/08/02 14:29:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.10.5.ebuild,v 1.6 2013/08/05 03:04:39 patrick Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="
 	$(add_kdebase_dep smokegen)
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
-	dev-qt/qtgui:4
+	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
 	dev-qt/qtscript:4
 	dev-qt/qtsql:4
 	dev-qt/qtsvg:4
