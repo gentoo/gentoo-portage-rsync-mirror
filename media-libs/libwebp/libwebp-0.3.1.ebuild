@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.3.1.ebuild,v 1.1 2013/06/28 04:27:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.3.1.ebuild,v 1.2 2013/08/05 09:45:25 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -16,7 +16,7 @@ IUSE="experimental gif +jpeg opengl +png static-libs swap-16bit-csp tiff"
 
 # TODO: dev-lang/swig bindings in swig/ subdirectory
 RDEPEND="gif? ( media-libs/giflib:= )
-	jpeg? ( virtual/jpeg:= )
+	jpeg? ( virtual/jpeg:0= )
 	opengl? (
 		media-libs/freeglut
 		virtual/opengl

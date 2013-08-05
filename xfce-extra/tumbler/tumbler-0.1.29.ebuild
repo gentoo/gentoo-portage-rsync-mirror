@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.29.ebuild,v 1.2 2013/07/29 16:01:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.29.ebuild,v 1.3 2013/08/05 09:47:17 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100:=
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
 		)
-	jpeg? ( virtual/jpeg:= )
+	jpeg? ( virtual/jpeg:0= )
 	odf? ( >=gnome-extra/libgsf-1.14.20:= )
 	pdf? ( >=app-text/poppler-0.12.4[cairo] )
 	raw? ( >=media-libs/libopenraw-0.0.8:=[gtk] )"

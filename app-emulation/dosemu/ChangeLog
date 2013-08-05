@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.56 2013/08/05 06:08:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.58 2013/08/05 09:55:20 slyfox Exp $
+
+  05 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  dosemu-1.4.1_pre20130107-r2.ebuild:
+  Fixed typos.
+
+*dosemu-1.4.1_pre20130107-r2 (05 Aug 2013)
+
+  05 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +dosemu-1.4.1_pre20130107-r2.ebuild, -dosemu-1.4.1_pre20130107-r1.ebuild:
+  Added basic hardened support (bug #392261 by Daniel Keyhani).
 
 *dosemu-1.4.1_pre20130107-r1 (05 Aug 2013)
 

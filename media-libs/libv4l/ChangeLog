@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.94 2013/07/31 16:34:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.95 2013/08/05 09:46:43 ssuominen Exp $
+
+  05 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> libv4l-0.9.5-r1.ebuild,
+  libv4l-0.9.5.ebuild:
+  Pull in correct SLOT of libjpeg for headers.
 
   31 Jul 2013; Alexis Ballier <aballier@gentoo.org> libv4l-0.9.5-r1.ebuild:
   add emul blocker so that it is stacked for medialibs -r6

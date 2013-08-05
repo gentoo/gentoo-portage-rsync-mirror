@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-2.0-r1.ebuild,v 1.1 2013/06/21 03:40:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-2.0-r1.ebuild,v 1.2 2013/08/05 09:37:08 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -29,7 +29,7 @@ RDEPEND="dev-db/sqlite:3
 	sci-libs/fftw:3.0
 	sys-apps/dbus
 	sys-libs/zlib:=
-	virtual/jpeg:=
+	virtual/jpeg:0=
 	x11-libs/gtk+:2
 	x11-libs/libX11"
 DEPEND="${RDEPEND}

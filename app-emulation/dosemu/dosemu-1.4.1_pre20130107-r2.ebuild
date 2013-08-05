@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20130107-r1.ebuild,v 1.1 2013/08/05 06:08:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20130107-r2.ebuild,v 1.2 2013/08/05 09:55:20 slyfox Exp $
 
 EAPI=5
 
-inherit flag-o-matic
+inherit flag-o-matic pax-utils
 
 P_FD="dosemu-freedos-1.0-bin"
 COMMIT="15cfb41ff20a052769d753c3262c57ecb050ad71"
@@ -47,9 +47,6 @@ src_prepare() {
 	# Has problems with -O3 on some systems
 	replace-flags -O[3-9] -O2
 
-	# Fix compilation on hardened
-	append-flags -fno-pic
-
 	# This one is from media-sound/fluid-soundfont (bug #479534)
 	sed "s,/usr/share/soundfonts/default.sf2,${EPREFIX}/usr/share/sounds/sf2/FluidR3_GM.sf2,"\
 		-i src/plugin/fluidsynth/mid_o_flus.c || die
@@ -66,4 +63,13 @@ src_configure() {
 		--with-fdtarball="${DISTDIR}"/${P_FD}.tgz \
 		--sysconfdir="${EPREFIX}"/etc/dosemu/ \
 		--with-docdir="${EPREFIX}"/usr/share/doc/${PF}
+}
+
+src_install() {
+	default
+
+	# r - randmmap: dosemu tries to get address mapping
+	#     exactly where asked, loops otherwise.
+	# m - allow RWX mapping: as it's an emulator / code loader
+	pax-mark -mr "${ED}/usr/bin/dosemu.bin"
 }

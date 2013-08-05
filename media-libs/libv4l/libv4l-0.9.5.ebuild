@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.9.5.ebuild,v 1.3 2013/05/05 01:16:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.9.5.ebuild,v 1.4 2013/08/05 09:46:43 ssuominen Exp $
 
 EAPI=5
 inherit eutils linux-info udev
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="virtual/jpeg:=
+RDEPEND="virtual/jpeg:0=
 	virtual/glu
 	virtual/opengl
 	x11-libs/libX11:=

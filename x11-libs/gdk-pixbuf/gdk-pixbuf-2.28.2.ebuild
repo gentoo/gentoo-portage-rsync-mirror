@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.28.2.ebuild,v 1.1 2013/06/09 11:11:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.28.2.ebuild,v 1.2 2013/08/05 09:48:12 ssuominen Exp $
 
 EAPI="5"
 inherit gnome.org multilib libtool
@@ -17,7 +17,7 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.34.0:2
 	>=media-libs/libpng-1.4:0=
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
-	jpeg? ( virtual/jpeg:= )
+	jpeg? ( virtual/jpeg:0= )
 	jpeg2k? ( media-libs/jasper:= )
 	tiff? ( >=media-libs/tiff-3.9.2:0= )
 	X? ( x11-libs/libX11 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.9 2013/04/14 20:02:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.10 2013/08/05 09:32:31 ssuominen Exp $
 
 EAPI=5
 inherit cmake-utils flag-o-matic multilib toolchain-funcs
@@ -16,11 +16,11 @@ IUSE="+boost idn debug test"
 
 RDEPEND="dev-lang/lua:=
 	idn? ( net-dns/libidn:= )
-	dev-libs/openssl:=
+	dev-libs/openssl:0=
 	media-libs/fontconfig:=
 	media-libs/freetype:2=
-	virtual/jpeg:=
-	>=media-libs/libpng-1.4:0=
+	virtual/jpeg:0=
+	media-libs/libpng:0=
 	media-libs/tiff:0=
 	sys-libs/zlib:="
 DEPEND="${RDEPEND}

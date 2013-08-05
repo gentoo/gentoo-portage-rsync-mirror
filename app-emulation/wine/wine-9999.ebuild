@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.148 2013/08/04 05:08:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.149 2013/08/05 09:31:06 ssuominen Exp $
 
 EAPI="5"
 
@@ -77,7 +77,7 @@ NATIVE_DEPEND="
 		virtual/opengl
 	)
 	gsm? ( media-sound/gsm:= )
-	jpeg? ( virtual/jpeg:= )
+	jpeg? ( virtual/jpeg:0= )
 	ldap? ( net-nds/openldap:= )
 	lcms? ( media-libs/lcms:2= )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
