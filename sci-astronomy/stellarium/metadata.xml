@@ -13,5 +13,6 @@
 </longdescription>
   <use>
     <flag name="stars">Install extra star catalogs</flag>
+    <flag name="sound">Enable sound support</flag>
   </use>
 </pkgmetadata>
