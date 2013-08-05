@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.20120823-r1.ebuild,v 1.2 2013/06/29 15:01:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.20130805.ebuild,v 1.1 2013/08/05 22:01:57 jer Exp $
 
 EAPI="4"
 
 inherit autotools eutils gnome2-utils toolchain-funcs versionator
 
-MY_PV="$(get_version_component_range 1-2)-2012-08-23"
+MY_PV="$(get_version_component_range 1-2)-2013-08-05"
 DESCRIPTION="UNIX port of the famous Telnet and SSH client"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~sgtatham/putty/"
 SRC_URI="
@@ -37,10 +37,11 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	cd "${S}"/unix || die
-	sed \
-		-i configure.ac \
+	sed -i \
 		-e '/AM_PATH_GTK(/d' \
-		-e 's|-Wall -Werror||g' || die
+		-e 's|-Wall -Werror||g' \
+		configure.ac || die
+
 	eautoreconf
 }
 
@@ -51,12 +52,13 @@ src_configure() {
 
 src_compile() {
 	cd "${S}"/unix || die
-	emake $(usex ipv6 '' COMPAT=-DNO_IPV6)
+	emake AR=$(tc-getAR) $(usex ipv6 '' COMPAT=-DNO_IPV6)
 }
 
 src_install() {
+	dodoc doc/puttydoc.txt
+
 	if use doc; then
-		dodoc doc/puttydoc.txt
 		dohtml doc/*.html
 	fi
 

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.73 2013/06/29 15:01:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.74 2013/08/05 22:01:57 jer Exp $
+
+*putty-0.62.20130805 (05 Aug 2013)
+
+  05 Aug 2013; Jeroen Roovers <jer@gentoo.org> -putty-0.62.20120823.ebuild,
+  -putty-0.62.20120823-r1.ebuild, +putty-0.62.20130805.ebuild:
+  Version bump (bug #479872).
 
   29 Jun 2013; Jeroen Roovers <jer@gentoo.org> putty-0.62.20120823-r1.ebuild:
   Package new icons separately (bug #473022).
