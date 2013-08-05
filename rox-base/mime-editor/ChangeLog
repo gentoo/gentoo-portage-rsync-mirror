@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/mime-editor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.27 2013/08/03 07:31:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.28 2013/08/05 11:07:01 kensington Exp $
+
+  05 Aug 2013; Michael Palimaka <kensington@gentoo.org>
+  -mime-editor-0.5-r2.ebuild:
+  Remove old.
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> mime-editor-0.6.ebuild:
   Stable for sparc, wrt bug #393977
