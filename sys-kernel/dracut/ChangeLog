@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.127 2013/08/03 21:07:51 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.128 2013/08/05 17:40:50 aidecoe Exp $
+
+*dracut-031-r1 (05 Aug 2013)
+
+  05 Aug 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-031-r1.ebuild,
+  +files/031-0003-Revert-base-setup-correct-system-time-.patch:
+  Added patch reverting addition of hwclock. Fixes bug #479828.
 
 *dracut-031 (03 Aug 2013)
 

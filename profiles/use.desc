@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.505 2013/07/21 10:40:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.506 2013/08/05 18:00:58 ulm Exp $
 
 # Keep them sorted
 
@@ -166,7 +166,6 @@ joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
 jpeg2k - Support for JPEG 2000, a wavelet-based image compression format
 kde - Adds support for KDE (K Desktop Environment)
-kdeprefix - Makes a KDE prefixed install into /usr/kde/${SLOT} if enabled or into /usr (FHS compatible) otherwise
 kerberos - Adds kerberos support
 kolab - Adds support for the Kolab groupware server
 kontact - Enable support for the KDE personal information manager (kde-base/kdepim*)

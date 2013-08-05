@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.175 2013/07/31 22:03:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.176 2013/08/05 18:00:59 ulm Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -261,10 +261,6 @@ pam_console
 # Jeremy Olexa <darkside@gentoo.org>
 # The prefix USE flag should never be used on non prefix profiles
 prefix
-
-# Alexey Shvetsov <alexxy@gentoo.org>
-# Mask kdeprefix since its broken by now
-kdeprefix
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (6 Dec 2009)
 #  on behalf of QA Team

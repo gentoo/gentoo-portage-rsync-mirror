@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.5 2013/06/30 04:43:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.6 2013/08/05 17:34:14 mgorny Exp $
 
 EAPI=5
 
@@ -23,8 +23,9 @@ PY2_USEDEP=$(python_gen_usedep 'python2*')
 
 CDEPEND="dev-python/decorator[${PYTHON_USEDEP}]
 	dev-python/pexpect[${PY2_USEDEP}]
-	virtual/pyparsing[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/simplegeneric[${PYTHON_USEDEP}]
+	virtual/pyparsing[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
 	emacs? ( app-emacs/python-mode virtual/emacs )
 	matplotlib? ( dev-python/matplotlib[${PYTHON_USEDEP}] )
@@ -40,7 +41,6 @@ RDEPEND="${CDEPEND}
 			dev-python/pygments[${PYTHON_USEDEP}]
 			dev-python/pyzmq[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 PY2_REQUSE="|| ( $(python_gen_useflags python2* ) )"

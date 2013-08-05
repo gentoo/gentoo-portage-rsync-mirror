@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/smdk-dltool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/ChangeLog,v 1.6 2012/05/22 02:23:48 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/ChangeLog,v 1.7 2013/08/05 18:00:31 vapier Exp $
+
+*smdk-dltool-0.20-r4 (05 Aug 2013)
+
+  05 Aug 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/smdk-dltool-0.20-libusb-1.0-r1.patch, +smdk-dltool-0.20-r4.ebuild:
+  Add fix by Julius Werner from ChromiumOS for sending large images.
 
 *smdk-dltool-0.20-r3 (22 May 2012)
 
@@ -33,4 +39,3 @@
   +files/smdk-dltool-0.20-add-S3C64xx-support.patch,
   +files/smdk-dltool-0.20-build.patch, +metadata.xml:
   Initial ebuild by Doug Anderson.
-

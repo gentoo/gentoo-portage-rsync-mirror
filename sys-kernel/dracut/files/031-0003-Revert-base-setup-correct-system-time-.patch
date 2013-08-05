@@ -1,0 +1,61 @@
+From 744e0fded21d048f191b5dedb6d15ebb03318a20 Mon Sep 17 00:00:00 2001
+From: Harald Hoyer <harald@redhat.com>
+Date: Wed, 31 Jul 2013 15:55:13 +0200
+Subject: [PATCH 3/3] Revert "base: setup correct system time and time zone in
+ initrd"
+
+This reverts commit 77364fd6bb01ea184db73b1a5ad05da984752293.
+
+Too many problems with adjtime in the initramfs
+
+https://bugzilla.redhat.com/show_bug.cgi?id=981617
+---
+ modules.d/99base/init.sh         |  9 ---------
+ modules.d/99base/module-setup.sh | 11 -----------
+ 2 files changed, 20 deletions(-)
+
+diff --git a/modules.d/99base/init.sh b/modules.d/99base/init.sh
+index 0e4cac5..ae73fd2 100755
+--- a/modules.d/99base/init.sh
++++ b/modules.d/99base/init.sh
+@@ -48,15 +48,6 @@ if ! ismounted /dev; then
+     exit 1
+ fi
+ 
+-# setup system time
+-if [ -f /etc/adjtime ]; then
+-    if strstr "$(cat /etc/adjtime)" LOCAL; then
+-        hwclock --hctosys --localtime
+-    else
+-        hwclock --hctosys --utc
+-    fi
+-fi
+-
+ # prepare the /dev directory
+ [ ! -h /dev/fd ] && ln -s /proc/self/fd /dev/fd >/dev/null 2>&1
+ [ ! -h /dev/stdin ] && ln -s /proc/self/fd/0 /dev/stdin >/dev/null 2>&1
+diff --git a/modules.d/99base/module-setup.sh b/modules.d/99base/module-setup.sh
+index c9ee838..842dde6 100755
+--- a/modules.d/99base/module-setup.sh
++++ b/modules.d/99base/module-setup.sh
+@@ -29,17 +29,6 @@ install() {
+     egrep '^root:' "$initdir/etc/passwd" 2>/dev/null || echo  'root:x:0:0::/root:/bin/sh' >> "$initdir/etc/passwd"
+     egrep '^nobody:' /etc/passwd >> "$initdir/etc/passwd"
+ 
+-    # install /etc/adjtime and time zone data
+-    if [[ $hostonly ]]; then
+-        dracut_install -o /etc/adjtime \
+-                          /etc/localtime
+-
+-        # Our init.sh script needs hwclock to set system time
+-        if ! dracut_module_included "systemd"; then
+-            dracut_install -o hwclock
+-        fi
+-    fi
+-
+     # install our scripts and hooks
+     inst_script "$moddir/init.sh" "/init"
+     inst_script "$moddir/initqueue.sh" "/sbin/initqueue"
+-- 
+1.8.3.2
+

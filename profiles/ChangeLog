@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8116 2013/08/05 14:20:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8117 2013/08/05 18:00:58 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Aug 2013; Ulrich Müller <ulm@gentoo.org> use.desc:
+  Remove unused kdeprefix flag.
 
   05 Aug 2013; Mike Gilbert <floppym@gentoo.org>
   desc/python_single_target.desc, desc/python_targets.desc:
