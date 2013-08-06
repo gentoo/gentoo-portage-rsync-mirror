@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/turtlearena/turtlearena-0.6.1.ebuild,v 1.4 2013/06/25 12:55:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/turtlearena/turtlearena-0.6.1.ebuild,v 1.5 2013/08/06 08:26:53 ssuominen Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	!dedicated? (
 		media-libs/freetype:2
 		media-libs/libsdl[X,audio,joystick,opengl,video]
-		virtual/jpeg
+		virtual/jpeg:0
 		virtual/opengl
 		curl? ( net-misc/curl )
 		openal? ( media-libs/openal )
@@ -41,7 +41,13 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}-0-src
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-freetype.patch
+
+	sed -i \
+		-e 's:JPEG_LIB_VERSION < 80:JPEG_LIB_VERSION < 62:' \
+		engine/code/renderer/tr_image_jpg.c || die #479822
 
 	rm -r engine/code/{AL,libcurl,libogg,libspeex,libtheora,libvorbis,SDL12,zlib} \
 		engine/code/freetype* engine/code/jpeg-* \

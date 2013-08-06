@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r2.ebuild,v 1.9 2012/10/24 19:18:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r2.ebuild,v 1.10 2013/08/06 08:09:36 ssuominen Exp $
 
 EAPI=1
 
@@ -96,19 +96,18 @@ src_compile() {
 		$(use_enable lirc) \
 		$(use_enable opengl gl) \
 		$(use_enable zvbi) \
-		$(use_enable aalib aa) \
-		|| die " xawtv configure failed"
+		$(use_enable aalib aa)
 
-	emake verbose=yes || die "Make failed"
+	emake verbose=yes || die
 
 	if use X; then
 		cd "${WORKDIR}/${MY_FONT}"
-		emake -j1 DISPLAY= || die "tvfonts failed"
+		emake -j1 DISPLAY= || die
 	fi
 }
 
 src_install() {
-	make install DESTDIR="${D}" resdir="${D}"/etc/X11 || die "make install failed"
+	make install DESTDIR="${D}" resdir="${D}"/usr/share/X11 || die
 
 	# v4lctl is only installed automatically if the X USE flag is enabled
 	use X || \
