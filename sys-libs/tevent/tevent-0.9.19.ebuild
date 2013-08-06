@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.19.ebuild,v 1.1 2013/08/06 11:55:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.19.ebuild,v 1.2 2013/08/06 12:22:41 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -35,4 +35,5 @@ src_install() {
 	waf-utils_src_install
 	insinto $(python_get_sitedir)
 	doins tevent.py
+	python_optimize
 }
