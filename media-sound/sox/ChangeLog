@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.153 2013/03/10 09:52:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.154 2013/08/06 21:41:05 aballier Exp $
+
+  06 Aug 2013; Alexis Ballier <aballier@gentoo.org> sox-14.4.1.ebuild,
+  +files/sox-14.4.1-ffmpeg2.patch:
+  fix build with ffmpeg-2, bug #478080
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> -sox-14.3.2-r1.ebuild,
   -files/sox-14.3.2-ffmpeg.patch, -files/sox-14.3.2-uclibc.patch,

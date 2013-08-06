@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.4.1.ebuild,v 1.9 2013/03/09 13:35:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.4.1.ebuild,v 1.10 2013/08/06 21:41:05 aballier Exp $
 
 EAPI=4
 inherit eutils flag-o-matic autotools
@@ -45,6 +45,13 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-14.4.0-ffmpeg.patch \
 		"${FILESDIR}"/${PN}-14.4.0-avcodec54.patch \
 		"${FILESDIR}"/${PN}-14.4.0-libav-9.patch
+
+	if has_version '>=media-video/ffmpeg-2' ; then
+		epatch "${FILESDIR}"/${PN}-14.4.1-ffmpeg2.patch
+		sed -i -e 's/ CODEC_ID/ AV_CODEC_ID/g' \
+			   -e 's/ CodecID/ AVCodecID/g' \
+			   src/ffmpeg.c || die
+	fi
 	eautoreconf
 }
 
