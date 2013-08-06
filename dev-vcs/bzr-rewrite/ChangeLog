@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/bzr-rewrite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/ChangeLog,v 1.20 2013/01/30 19:01:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/ChangeLog,v 1.22 2013/08/06 19:10:30 fauli Exp $
+
+  06 Aug 2013; Christian Faulhammer <fauli@gentoo.org>
+  bzr-rewrite-0.6.3.ebuild:
+  convert to distutils-r1.eclass
+
+  06 Aug 2013; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-rewrite-0.6.2.ebuild:
+  clean up
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bzr-rewrite-0.6.3.ebuild:
   Stable for x86, wrt bug #418969

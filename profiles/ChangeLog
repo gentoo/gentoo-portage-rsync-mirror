@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8119 2013/08/06 13:46:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8120 2013/08/06 19:21:28 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Aug 2013; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  mask dev-vcs/bzr-svn for removal, see bug 474518
 
   06 Aug 2013; Ulrich Müller <ulm@gentoo.org> use.desc:
   Remove unused nocxx flag.
