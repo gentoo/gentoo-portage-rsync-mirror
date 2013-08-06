@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/edje
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.24 2013/05/20 10:25:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.25 2013/08/06 19:38:13 tommy Exp $
+
+*edje-1.7.8 (06 Aug 2013)
+
+  06 Aug 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +edje-1.7.8.ebuild:
+  Version bump
 
 *edje-1.7.7 (20 May 2013)
 

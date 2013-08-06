@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/efreet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efreet/ChangeLog,v 1.14 2013/04/10 19:50:03 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efreet/ChangeLog,v 1.15 2013/08/06 19:47:07 tommy Exp $
+
+*efreet-1.7.8 (06 Aug 2013)
+
+  06 Aug 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +efreet-1.7.8.ebuild,
+  -efreet-1.7.5.ebuild:
+  Version bump, drop old
 
 *efreet-1.7.6 (10 Apr 2013)
 

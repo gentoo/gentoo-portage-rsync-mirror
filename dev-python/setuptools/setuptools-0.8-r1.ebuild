@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.8.ebuild,v 1.2 2013/07/06 01:29:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.8-r1.ebuild,v 1.1 2013/08/06 19:37:24 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
@@ -22,6 +22,10 @@ DISTUTILS_IN_SOURCE_BUILD=1
 DOCS=( README.txt docs/{easy_install.txt,pkg_resources.txt,setuptools.txt} )
 
 python_prepare_all() {
+	local PATCHES=(
+		"${FILESDIR}"/${PN}-0.9.8-install_scripts-overwrite.patch
+	)
+
 	# Disable tests requiring network connection.
 	rm -f setuptools/tests/test_packageindex.py
 
