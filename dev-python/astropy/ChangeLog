@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/astropy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.12 2013/07/12 22:17:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.13 2013/08/06 21:19:33 bicatali Exp $
+
+*astropy-0.2.4 (06 Aug 2013)
+
+  06 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> +astropy-0.2.4.ebuild:
+  Version bump
 
   12 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> -astropy-0.1-r1.ebuild,
   astropy-0.2.3.ebuild, metadata.xml:

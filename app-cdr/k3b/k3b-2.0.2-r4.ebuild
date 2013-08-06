@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r4.ebuild,v 1.6 2013/04/23 23:54:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r4.ebuild,v 1.7 2013/08/06 21:29:26 aballier Exp $
 
 EAPI=4
 
@@ -65,6 +65,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-ffmpeg.patch"
 	"${FILESDIR}/${P}-libavformat54.patch"
 	"${FILESDIR}/${P}-libav9.patch"
+	"${FILESDIR}/${P}-ffmpeg2.patch"
 )
 
 REQUIRED_USE="

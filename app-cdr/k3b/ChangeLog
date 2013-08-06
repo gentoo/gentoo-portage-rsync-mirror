@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.280 2013/04/23 23:54:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.281 2013/08/06 21:29:26 aballier Exp $
+
+  06 Aug 2013; Alexis Ballier <aballier@gentoo.org> k3b-2.0.2-r4.ebuild,
+  +files/k3b-2.0.2-ffmpeg2.patch:
+  Fix build with ffmpeg 2, bug #476494
 
   23 Apr 2013; Luca Barbato <lu_zero@gentoo.org> k3b-2.0.2-r4.ebuild,
   +files/k3b-2.0.2-libav9.patch:
