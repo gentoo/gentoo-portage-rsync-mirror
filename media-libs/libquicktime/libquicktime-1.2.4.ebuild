@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4.ebuild,v 1.11 2013/02/02 22:49:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4.ebuild,v 1.12 2013/08/06 22:32:44 aballier Exp $
 
 EAPI=4
 inherit libtool eutils
@@ -51,7 +51,8 @@ REQUIRED_USE="opengl? ( X )"
 DOCS="ChangeLog README TODO"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}+libav-9.patch
+	epatch "${FILESDIR}"/${P}+libav-9.patch \
+		"${FILESDIR}"/${P}-ffmpeg2.patch
 	elibtoolize # Required for .so versioning on g/fbsd
 }
 

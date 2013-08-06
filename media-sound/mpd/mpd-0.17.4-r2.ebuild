@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.4-r2.ebuild,v 1.9 2013/07/04 13:44:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.4-r2.ebuild,v 1.10 2013/08/06 22:42:58 aballier Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -93,7 +93,8 @@ src_prepare() {
 
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
 	epatch "${FILESDIR}"/${PN}-0.16.conf.patch \
-		"${FILESDIR}"/${P}-mikmod-crash.patch
+		"${FILESDIR}"/${P}-mikmod-crash.patch \
+		"${FILESDIR}"/${P}-ffmpeg2.patch
 
 	if has_version dev-libs/libcdio-paranoia; then
 		sed -i \
