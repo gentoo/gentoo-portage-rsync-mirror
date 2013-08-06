@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.40 2013/07/27 06:18:36 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.41 2013/08/06 06:20:55 jcallen Exp $
+
+*schroot-1.6.5-r1 (06 Aug 2013)
+
+  06 Aug 2013; Jonathan Callen <jcallen@gentoo.org> +schroot-1.6.5-r1.ebuild:
+  Update bash-completion directory
 
   27 Jul 2013; Jonathan Callen <jcallen@gentoo.org> metadata.xml:
   Update metadata.xml to reflect new email address

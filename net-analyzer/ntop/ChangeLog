@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.116 2013/07/04 12:47:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.117 2013/08/06 06:28:07 polynomial-c Exp $
+
+*ntop-5.0.1-r1 (06 Aug 2013)
+
+  06 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> -ntop-5.0.1.ebuild,
+  +ntop-5.0.1-r1.ebuild, +files/ntop-initd-r1:
+  Non-maintainer commit: Revbump to make use of rewritten init script.
 
 *ntop-5.0.1 (04 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1.ebuild,v 1.1 2013/07/04 12:47:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1-r1.ebuild,v 1.1 2013/08/06 06:28:07 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -40,6 +40,8 @@ RDEPEND="${COMMON_DEPEND}
 	app-arch/gzip
 	dev-libs/glib:2
 	dev-python/mako"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 pkg_setup() {
 	enewgroup ntop
@@ -103,7 +105,7 @@ src_install() {
 	dodoc AUTHORS CONTENTS ChangeLog MANIFESTO NEWS
 	dodoc PORTING README SUPPORT_NTOP.txt THANKS $(find docs -type f)
 
-	newinitd "${FILESDIR}"/ntop-initd ntop
+	newinitd "${FILESDIR}"/ntop-initd-r1 ntop
 	newconfd "${FILESDIR}"/ntop-confd ntop
 
 	exeinto /etc/cron.monthly
