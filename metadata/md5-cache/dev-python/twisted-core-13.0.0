@@ -10,4 +10,4 @@ RDEPEND=net-zope/zope-interface crypt? ( >=dev-python/pyopenssl-0.10 ) gtk? ( de
 SLOT=0
 SRC_URI=http://twistedmatrix.com/Releases/Core/13.0/TwistedCore-13.0.0.tar.bz2
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	twisted	fcb518bd0ad842f8f6ed16168341f5d4	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=a8856189bfcc4675f1c4e6dea3557a76
+_md5_=8ea8919a834dd8becdd8b0b9ef9d61bd

@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.59 2013/07/12 11:48:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.60 2013/08/06 17:11:37 jer Exp $
+
+  06 Aug 2013; Jeroen Roovers <jer@gentoo.org> units-2.02.ebuild:
+  Stable for HPPA (bug #479732).
 
 *units-2.02 (12 Jul 2013)
 
