@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.5.8.ebuild,v 1.1 2013/05/04 11:14:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.6.9.ebuild,v 1.1 2013/08/06 22:02:54 xmw Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 
-inherit eutils python-r1 python-utils-r1 vcs-snapshot
+inherit python-r1 python-utils-r1 vcs-snapshot
 
 DESCRIPTION="change directory command that learns"
 HOMEPAGE="http://github.com/joelthelion/autojump"
@@ -23,7 +23,8 @@ RDEPEND="bash-completion? ( >=app-shells/bash-4 )
 DEPEND="test? ( ${PYTHON_DEPS} )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-eprefix.patch
+	sed -e "s: \(/etc/profile.d\): \"${EPREFIX}\1\":" \
+		-i bin/autojump.sh || die
 }
 
 src_compile() {

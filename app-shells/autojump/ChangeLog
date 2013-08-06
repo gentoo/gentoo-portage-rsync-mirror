@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/autojump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.12 2013/05/04 11:14:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.13 2013/08/06 22:02:54 xmw Exp $
+
+*autojump-21.5.8-r1 (06 Aug 2013)
+*autojump-21.6.9 (06 Aug 2013)
+
+  06 Aug 2013; Michael Weber <xmw@gentoo.org> +autojump-21.5.8-r1.ebuild,
+  +autojump-21.6.9.ebuild, -autojump-21.5.8.ebuild,
+  -files/autojump-21.5.8-eprefix.patch:
+  Fix EPREFIX handling (thanks Leho Kraav, bug 465226), version bump.
 
 *autojump-21.5.8 (04 May 2013)
 
