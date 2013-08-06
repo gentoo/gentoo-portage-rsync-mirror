@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.6.ebuild,v 1.4 2012/05/21 20:08:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.6.ebuild,v 1.5 2013/08/06 13:32:53 ssuominen Exp $
 
-EAPI=3
+EAPI=5
 
-inherit eutils base games
+inherit eutils games
 
 DESCRIPTION="A cartoon style multiplayer first-person shooter"
 HOMEPAGE="http://worldofpadman.com/"
@@ -19,7 +19,7 @@ IUSE="+curl dedicated maps +openal +theora +vorbis"
 RDEPEND="sys-libs/zlib
 	!dedicated? (
 		media-libs/speex
-		virtual/jpeg
+		virtual/jpeg:0
 		media-libs/libsdl
 		virtual/opengl
 		openal? ( media-libs/openal )
@@ -33,13 +33,18 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}"/${P}_svn2178-src
-
-PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
+S=${WORKDIR}/${P}_svn2178-src
 
 src_unpack() {
 	unpack ${A}
 	unzip XTRAS/"editing files"/${P}-src.zip
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	sed -i \
+		-e 's:JPEG_LIB_VERSION < 80:JPEG_LIB_VERSION < 62:' \
+		code/renderer/tr_image_jpg.c || die #479652
 }
 
 src_compile() {
@@ -66,28 +71,24 @@ src_compile() {
 		USE_RENDERER_DLOPEN=0 \
 		USE_INTERNAL_ZLIB=0 \
 		USE_INTERNAL_JPEG=0 \
-		USE_INTERNAL_SPEEX=0 \
-		|| die "died running emake"
+		USE_INTERNAL_SPEEX=0
 }
 
 src_install() {
-	newgamesbin build/release-*/wopded.* ${PN}-ded \
-		|| die "newgamesbin ${PN}-ded failed"
+	newgamesbin build/release-*/wopded.* ${PN}-ded
 	if ! use dedicated ; then
-		newgamesbin build/release-*/wop.* ${PN} \
-			|| die "newgamesbin ${PN} failed"
-		newicon misc/quake3.png ${PN}.png || die "newicon failed"
+		newgamesbin build/release-*/wop.* ${PN}
+		newicon misc/quake3.png ${PN}.png
 		make_desktop_entry ${PN} "World of Padman"
 	fi
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r ../wop || die "doins failed"
+	doins -r ../wop
 
 	dodoc id-readme.txt \
 		IOQ3-README \
 		voip-readme.txt \
 		../XTRAS/changelog.txt \
-		../XTRAS/sounds_readme.txt \
-		|| die "dodoc failed"
-	dohtml -r ../XTRAS/readme{,.html} || die "dohtml failed"
+		../XTRAS/sounds_readme.txt
+	dohtml -r ../XTRAS/readme{,.html}
 	prepgamesdirs
 }
