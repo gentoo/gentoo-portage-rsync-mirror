@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.51.ebuild,v 1.3 2013/08/04 00:28:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.51-r1.ebuild,v 1.1 2013/08/06 11:09:00 blueness Exp $
 
 EAPI="5"
 
@@ -19,6 +19,8 @@ IUSE="+portage"
 
 DEPEND="app-text/xmlto"
 RDEPEND="portage? ( sys-apps/portage[${PYTHON_USEDEP}] )"
+
+PATCHES=( "${FILESDIR}"/${P}-fix-indentation.patch )
 
 python_compile_all() {
 	emake -C doc/

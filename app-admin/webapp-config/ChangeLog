@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.94 2013/08/04 00:28:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.95 2013/08/06 11:09:00 blueness Exp $
+
+*webapp-config-1.51-r1 (06 Aug 2013)
+
+  06 Aug 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/webapp-config-1.51-fix-indentation.patch,
+  +webapp-config-1.51-r1.ebuild, -webapp-config-1.51.ebuild:
+  Fix indentation, bug #479884
 
   04 Aug 2013; Anthony G. Basile <blueness@gentoo.org>
   webapp-config-1.51.ebuild, webapp-config-9999.ebuild:
