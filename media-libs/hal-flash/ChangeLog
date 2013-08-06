@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/hal-flash
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hal-flash/ChangeLog,v 1.1 2013/08/06 16:53:22 ssuominen Exp $
+
+*hal-flash-0.2.0_rc1 (06 Aug 2013)
+
+  06 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +hal-flash-0.2.0_rc1.ebuild:
+  Initial commit wrt #478480 by Alex Busenius
+
