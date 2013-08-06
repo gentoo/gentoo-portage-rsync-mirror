@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/pspp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.22 2012/12/30 17:47:06 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.23 2013/08/06 18:36:10 bicatali Exp $
+
+*pspp-0.8.0 (06 Aug 2013)
+
+  06 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/pspp-0.8.0-as-needed.patch, +files/pspp-0.8.0-gettext.patch,
+  +pspp-0.8.0.ebuild:
+  Version bump
 
   30 Dec 2012; Thomas Kahle <tomka@gentoo.org> pspp-0.6.2-r1.ebuild:
   Fix doc install per bug 449312

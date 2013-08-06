@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/bzr-fastimport-0.13.0.ebuild,v 1.3 2012/08/11 09:29:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/bzr-fastimport-0.13.0.ebuild,v 1.4 2013/08/06 18:55:03 fauli Exp $
 
-EAPI="4"
+EAPI="5"
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Plugin providing fast loading of revision control data into Bazaar"
 HOMEPAGE="https://launchpad.net/bzr-fastimport http://wiki.bazaar.canonical.com/BzrFastImport"
@@ -22,17 +22,7 @@ RDEPEND=">=dev-vcs/bzr-1.18
 DEPEND=""
 
 PYTHON_MODNAME="bzrlib/plugins/fastimport"
-
-pkg_setup() {
-	DOCS="NEWS README.txt doc/notes.txt"
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	python_convert_shebangs -r 2 .
-	distutils_src_prepare
-}
+DOCS=( NEWS README.txt doc/notes.txt )
 
 pkg_postinst() {
 	distutils_pkg_postinst

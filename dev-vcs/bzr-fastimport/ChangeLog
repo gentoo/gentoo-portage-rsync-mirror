@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/bzr-fastimport
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.6 2012/08/11 09:29:58 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.8 2013/08/06 18:55:03 fauli Exp $
+
+  06 Aug 2013; Christian Faulhammer <fauli@gentoo.org>
+  bzr-fastimport-0.13.0.ebuild:
+  convert to distutils-r1.eclass
+
+  06 Aug 2013; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-fastimport-0.12.0.ebuild:
+  clean up
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> bzr-fastimport-0.13.0.ebuild:
   Stable for amd64, wrt bug #427522

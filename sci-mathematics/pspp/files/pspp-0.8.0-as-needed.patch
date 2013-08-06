@@ -1,0 +1,11 @@
+--- src/ui/terminal/automake.mk.orig	2013-08-06 09:28:53.517642699 -0700
++++ src/ui/terminal/automake.mk	2013-08-06 10:04:37.403409602 -0700
+@@ -24,7 +24,7 @@
+ 	src/libpspp-core.la \
+ 	$(CAIRO_LIBS) \
+ 	$(NCURSES_LIBS) \
+-	$(LIBREADLINE) \
++	$(LTLIBREADLINE) \
+ 	$(GSL_LIBS)
+ 
+ 
