@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.10.5-r1.ebuild,v 1.1 2013/08/03 01:25:21 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.10.5-r1.ebuild,v 1.2 2013/08/06 07:40:16 kensington Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="
 	>=media-gfx/exiv2-0.19
 	media-libs/lcms:2
 	media-libs/libpng:0=
-	virtual/jpeg
+	virtual/jpeg:0
 	x11-libs/libX11
 	kipi? ( $(add_kdebase_dep libkipi) )
 "
