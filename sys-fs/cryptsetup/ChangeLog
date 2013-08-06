@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.152 2013/06/04 22:14:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.153 2013/08/06 20:14:54 axs Exp $
+
+  06 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
+  +files/cryptsetup-1.6.1-openssl-static.patch, cryptsetup-1.6.1.ebuild:
+  fixed compilation error when USE='openssl static', bug 472692; dropped
+  IUSE=selinux as there is no direct dep, selinux support comes from
+  libdevmapper via sys-fs/lvm2[selinux]
 
   04 Jun 2013; Diego E. Pettenò <flameeyes@gentoo.org> cryptsetup-1.6.1.ebuild:
   Fix broken dependencies.

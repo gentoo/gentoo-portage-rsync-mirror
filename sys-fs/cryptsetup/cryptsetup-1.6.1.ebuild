@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.1.ebuild,v 1.3 2013/06/04 22:14:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.1.ebuild,v 1.4 2013/08/06 20:14:54 axs Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit python-single-r1 linux-info libtool eutils
+inherit autotools python-single-r1 linux-info libtool eutils
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
 HOMEPAGE="http://code.google.com/p/cryptsetup/"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 CRYPTO_BACKENDS="+gcrypt kernel nettle openssl"
 # we don't support nss since it doesn't allow cryptsetup to be built statically
 # and it's missing ripemd160 support so it can't provide full backward compatibility
-IUSE="${CRYPTO_BACKENDS} nls python reencrypt selinux static static-libs udev urandom"
+IUSE="${CRYPTO_BACKENDS} nls python reencrypt static static-libs udev urandom"
 REQUIRED_USE="^^ ( ${CRYPTO_BACKENDS//+/} )
 	python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -35,7 +35,6 @@ LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 # these other packages. #414665
 RDEPEND="static-libs? ( ${LIB_DEPEND} )
 	${LIB_DEPEND//\[static-libs\(+\)\]}
-	selinux? ( sys-libs/libselinux )
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -53,7 +52,8 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i '/^LOOPDEV=/s:$: || exit 0:' tests/{compat,mode}-test || die
-	elibtoolize
+	epatch "${FILESDIR}"/${P}-openssl-static.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -71,7 +71,6 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable python) \
 		$(use_enable reencrypt cryptsetup-reencrypt) \
-		$(use_enable selinux) \
 		$(use_enable udev) \
 		$(use_enable !urandom dev-random) \
 		--with-crypto_backend=$(for x in ${CRYPTO_BACKENDS//+/}; do use ${x} && echo ${x} ; done)
