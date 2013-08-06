@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.587 2013/08/05 04:41:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.588 2013/08/06 11:31:36 polynomial-c Exp $
+
+*samba-4.0.8 (06 Aug 2013)
+
+  06 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> -samba-4.0.6.ebuild,
+  +samba-4.0.8.ebuild, -files/samba-4.0.5-fix_linking_to_heimdal.patch,
+  -files/samba-4.0.6-add-missing-new-line-to-fix-python-shebang.patch:
+  Version bump. Removed old.
 
 *samba-4.1.0_rc1 (05 Aug 2013)
 

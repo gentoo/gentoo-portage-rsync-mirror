@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.6.ebuild,v 1.2 2013/07/20 17:44:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.8.ebuild,v 1.1 2013/08/06 11:31:36 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit python-r1 waf-utils multilib linux-info
+inherit python-r1 waf-utils multilib linux-info systemd
 
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
@@ -35,7 +35,7 @@ RDEPEND="${PYTHON_DEPS}
 	virtual/libiconv
 	dev-python/subunit
 	sys-libs/libcap
-	>=sys-libs/ldb-1.1.15-r1
+	>=sys-libs/ldb-1.1.16
 	>=sys-libs/tdb-1.2.11[python]
 	>=sys-libs/talloc-2.0.8[python]
 	>=sys-libs/tevent-0.9.18
@@ -59,11 +59,6 @@ S="${WORKDIR}/${MY_P}"
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
-
-PATCHES=(
-	"${FILESDIR}/${PN}-4.0.5-fix_linking_to_heimdal.patch"
-	"${FILESDIR}/${P}-add-missing-new-line-to-fix-python-shebang.patch"
-)
 
 pkg_setup() {
 	python_export_best
@@ -136,6 +131,12 @@ src_install() {
 	# Install init script and conf.d file
 	newinitd "${CONFDIR}/samba4.initd-r1" samba
 	newconfd "${CONFDIR}/samba4.confd" samba
+
+	systemd_dotmpfilesd "${FILESDIR}"/samba.conf
+	systemd_dounit "${FILESDIR}"/nmbd.service
+	systemd_dounit "${FILESDIR}"/smbd.{service,socket}
+	systemd_newunit "${FILESDIR}"/smbd_at.service 'smbd@.service'
+	systemd_dounit "${FILESDIR}"/winbindd.service
 }
 
 src_test() {
