@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.10.5.ebuild,v 1.5 2013/08/02 14:29:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.10.5.ebuild,v 1.6 2013/08/06 07:18:04 kensington Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="debug jpeg rdesktop vnc zeroconf telepathy"
 #nx? ( >=net-misc/nxcl-0.9-r1 ) disabled upstream, last checked 4.3.61
 
 DEPEND="
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	vnc? ( >=net-libs/libvncserver-0.9 )
 	zeroconf? ( net-dns/avahi )
 	telepathy? ( >=net-libs/telepathy-qt-0.9 )

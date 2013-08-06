@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.5-r1.ebuild,v 1.5 2013/08/02 14:30:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.5-r1.ebuild,v 1.6 2013/08/06 07:31:19 kensington Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ COMMONDEPEND="
 	media-libs/libpng:0=
 	>=media-libs/phonon-4.4.3
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	>=x11-misc/shared-mime-info-0.60
 	acl? ( virtual/acl )
 	alsa? ( media-libs/alsa-lib )

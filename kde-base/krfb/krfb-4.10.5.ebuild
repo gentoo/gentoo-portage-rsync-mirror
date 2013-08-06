@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.10.5.ebuild,v 1.5 2013/08/02 14:29:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/krfb-4.10.5.ebuild,v 1.6 2013/08/06 07:27:18 kensington Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="debug telepathy"
 
 DEPEND="
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	!aqua? (
 		x11-libs/libX11
 		x11-libs/libXdamage

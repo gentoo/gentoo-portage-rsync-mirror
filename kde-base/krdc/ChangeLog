@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.283 2013/08/02 17:20:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.284 2013/08/06 07:18:04 kensington Exp $
+
+  06 Aug 2013; Michael Palimaka <kensington@gentoo.org> krdc-4.10.5.ebuild:
+  Pin virtual/jpeg SLOT to 0.
 
   02 Aug 2013; Johannes Huber <johu@gentoo.org> -krdc-4.10.4.ebuild:
   Remove KDE SC 4.10.4
