@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.4.ebuild,v 1.1 2013/08/02 21:36:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.4.ebuild,v 1.2 2013/08/06 09:34:29 polynomial-c Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -24,7 +24,7 @@ RDEPEND="
 	>=dev-libs/glib-2.31:2
 	>=dev-libs/libxml2-2:2
 	>=net-libs/liboauth-0.9.4
-	>=net-libs/libsoup-2.37.91:2.4[introspection?]
+	>=net-libs/libsoup-2.42.0:2.4[introspection?]
 	>=x11-libs/gdk-pixbuf-2.14:2
 	gnome? (
 		app-crypt/gcr:=
