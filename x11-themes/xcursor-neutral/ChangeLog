@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xcursor-neutral
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.13 2010/05/22 11:27:00 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.14 2013/08/06 18:11:00 maekke Exp $
+
+  06 Aug 2013; Markus Meier <maekke@gentoo.org> xcursor-neutral-1.20.ebuild:
+  add ~arm, bug #476124
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)

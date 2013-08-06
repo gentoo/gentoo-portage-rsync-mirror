@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99-r1.ebuild,v 1.1 2013/08/04 21:05:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99-r1.ebuild,v 1.2 2013/08/06 18:08:30 axs Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev systemd
@@ -35,7 +35,10 @@ RDEPEND="${RDEPEND}
 DEPEND="${DEPEND_COMMON}
 	virtual/pkgconfig
 	>=sys-devel/binutils-2.20.1-r1
-	static? ( udev? ( >=virtual/udev-200[static-libs] ) )"
+	static? (
+		udev? ( virtual/udev[static-libs] )
+		selinux? ( sys-libs/libselinux[static-libs] )
+	)"
 
 S=${WORKDIR}/${PN/lvm/LVM}.${PV}
 
@@ -67,6 +70,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.70-asneeded.patch # -Wl,--as-needed
 	epatch "${FILESDIR}"/${PN}-2.02.92-dynamic-static-ldflags.patch #332905
 	epatch "${FILESDIR}"/${PN}-2.02.97-udev-static.patch #370217
+	epatch "${FILESDIR}"/${PN}-2.02.99-selinux-static.patch #439414
 
 	sed -i -e 's:/usr/sbin/lvm:/sbin/lvm:' scripts/lvm2_activation_generator_systemd_red_hat.c || die #479626
 

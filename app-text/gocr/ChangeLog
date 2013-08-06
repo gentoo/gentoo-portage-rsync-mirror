@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.69 2013/05/20 14:13:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.70 2013/08/06 18:07:16 maekke Exp $
+
+  06 Aug 2013; Markus Meier <maekke@gentoo.org> gocr-0.50.ebuild:
+  add ~arm, bug #473828
 
 *gocr-0.50 (20 May 2013)
 

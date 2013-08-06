@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.97-r1.ebuild,v 1.16 2013/08/01 00:10:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.97-r1.ebuild,v 1.17 2013/08/06 18:08:30 axs Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev
@@ -39,7 +39,10 @@ RDEPEND="${RDEPEND}
 DEPEND="${DEPEND_COMMON}
 		virtual/pkgconfig
 		>=sys-devel/binutils-2.20.1-r1
-		static? ( udev? ( virtual/udev[static-libs] ) )"
+		static? (
+			udev? ( virtual/udev[static-libs] )
+			selinux? ( sys-libs/libselinux[static-libs] )
+		)"
 
 S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 
@@ -109,6 +112,8 @@ src_prepare() {
 
 	# for https://bugs.gentoo.org/370217
 	epatch "${FILESDIR}"/${P}-udev-static.patch
+	# for https://bugs.gentoo.org/439414
+	epatch "${FILESDIR}"/${P}-selinux-static.patch
 
 	# Fix calling AR directly with USE static, bug #444082
 	if use static ; then
