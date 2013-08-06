@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.35 2013/07/22 08:54:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.36 2013/08/06 12:34:30 ago Exp $
+
+  06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> qpdf-4.1.0.ebuild:
+  Stable for s390, wrt bug #442926
 
   22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> qpdf-4.1.0.ebuild:
   Stable for sparc, wrt bug #442926

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mplus-outline-fonts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/ChangeLog,v 1.48 2013/08/03 05:40:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/ChangeLog,v 1.49 2013/08/06 12:45:40 jer Exp $
+
+  06 Aug 2013; Jeroen Roovers <jer@gentoo.org>
+  mplus-outline-fonts-0_pre055.ebuild:
+  Stable for HPPA (bug #479592).
 
   03 Aug 2013; Akinori Hattori <hattya@gentoo.org>
   mplus-outline-fonts-0_pre055.ebuild, mplus-outline-fonts-0_pre056.ebuild:
