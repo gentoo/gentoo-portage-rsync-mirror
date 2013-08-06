@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.3.1.ebuild,v 1.1 2013/08/06 01:42:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.3.1-r1.ebuild,v 1.1 2013/08/06 14:34:47 blueness Exp $
 
 EAPI="5"
 
@@ -44,7 +44,7 @@ src_configure() {
 	use chert || myconf="${myconf} --disable-backend-chert"
 	use inmemory || myconf="${myconf} --disable-backend-inmemory"
 
-	myconf="${myconf} --enable-backend-remote"
+	myconf="${myconf} --enable-backend-remote --program-suffix="
 
 	econf $myconf
 }
