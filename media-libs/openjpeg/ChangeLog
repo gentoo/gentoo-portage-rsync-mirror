@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.84 2013/08/04 11:42:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.85 2013/08/06 13:12:13 ago Exp $
+
+  06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> openjpeg-1.5.1.ebuild:
+  Stable for s390, wrt bug #472536
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> openjpeg-1.5.1.ebuild:
   Stable for ia64, wrt bug #472536

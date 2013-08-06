@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_Socket
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.69 2013/08/04 13:36:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.70 2013/08/06 13:09:09 ago Exp $
+
+  06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_Socket-1.0.10.ebuild:
+  Stable for s390, wrt bug #470434
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_Socket-1.0.10.ebuild:
   Stable for ppc64, wrt bug #470434

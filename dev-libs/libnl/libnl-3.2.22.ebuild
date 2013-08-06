@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.22.ebuild,v 1.12 2013/08/03 06:54:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.22.ebuild,v 1.13 2013/08/06 13:12:27 ago Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -13,7 +13,7 @@ SRC_URI="
 "
 LICENSE="LGPL-2.1 doc? ( GPL-3 ) utils? ( GPL-2 )"
 SLOT="3"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc static-libs utils"
 
 DEPEND="

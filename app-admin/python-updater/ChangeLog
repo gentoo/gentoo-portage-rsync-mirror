@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.87 2013/08/04 13:42:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.88 2013/08/06 13:14:03 ago Exp $
+
+  06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> python-updater-0.11.ebuild:
+  Stable for s390, wrt bug #477950
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> python-updater-0.11.ebuild:
   Stable for ppc64, wrt bug #477950

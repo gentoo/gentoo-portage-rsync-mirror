@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415.ebuild,v 1.5 2013/04/21 19:21:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415.ebuild,v 1.6 2013/08/06 13:25:38 ulm Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE="mdns-bundled +qt-bundled"
 GCC_NEEDED="4.2"
 QA_PREBUILT="*"
 
-RDEPEND="|| ( >=sys-devel/gcc-${GCC_NEEDED}[cxx] >=sys-devel/gcc-${GCC_NEEDED}[-nocxx] )
+RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[cxx]
 	x86? (
 		media-libs/fontconfig
 		media-libs/freetype

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-en
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.38 2013/08/04 13:33:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.39 2013/08/06 13:08:45 ago Exp $
+
+  06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> aspell-en-7.1.0.ebuild:
+  Stable for s390, wrt bug #470304
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> aspell-en-7.1.0.ebuild:
   Stable for ppc64, wrt bug #470304

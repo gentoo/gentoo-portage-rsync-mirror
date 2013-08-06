@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-unittest2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.15 2013/08/04 11:40:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.16 2013/08/06 13:10:41 ago Exp $
+
+  06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> python-unittest2-1-r1.ebuild:
+  Stable for s390, wrt bug #477360
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> python-unittest2-1-r1.ebuild:
   Stable for ia64, wrt bug #477360

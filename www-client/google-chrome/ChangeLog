@@ -1,6 +1,12 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.303 2013/08/02 01:21:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.304 2013/08/06 13:17:01 ulm Exp $
+
+  06 Aug 2013; Ulrich Müller <ulm@gentoo.org>
+  google-chrome-28.0.1500.95_p213514.ebuild,
+  google-chrome-29.0.1547.41_beta214871.ebuild,
+  google-chrome-30.0.1581.2_alpha1.ebuild:
+  Remove gcc[-nocxx] from dependencies, the nocxx flag is gone.
 
 *google-chrome-29.0.1547.41_beta214871 (02 Aug 2013)
 
