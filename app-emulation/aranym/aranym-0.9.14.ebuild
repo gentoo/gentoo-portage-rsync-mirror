@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.9.14.ebuild,v 1.1 2013/04/02 19:19:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.9.14.ebuild,v 1.2 2013/08/07 15:23:17 armin76 Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+fullmmu +lilo opengl usbhost X"
 
 RDEPEND="games-emulation/emutos
+	media-libs/libsdl
 	opengl? ( virtual/opengl )
 	X? ( media-libs/libsdl[X] )"
 DEPEND="${RDEPEND}
