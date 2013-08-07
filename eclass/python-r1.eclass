@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.56 2013/08/04 08:24:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.57 2013/08/07 16:37:32 floppym Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -96,6 +96,8 @@ fi
 # implementations, formed as a USE-dependency string. It should be valid
 # for all implementations in PYTHON_COMPAT, so it may be necessary to
 # use USE defaults.
+#
+# This should be set before calling `inherit'.
 #
 # Example:
 # @CODE

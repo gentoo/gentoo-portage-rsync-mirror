@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.915 2013/08/04 08:24:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.916 2013/08/07 16:37:32 floppym Exp $
+
+  07 Aug 2013; Mike Gilbert <floppym@gentoo.org> python-r1.eclass,
+  python-single-r1.eclass:
+  Mention that PYTHON_REQ_USE should be set before calling inherit.
 
   04 Aug 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Drop the old PYTHON_COMPAT hack for python-exec.

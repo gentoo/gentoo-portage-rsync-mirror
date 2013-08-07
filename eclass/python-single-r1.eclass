@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.18 2013/05/21 01:31:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.19 2013/08/07 16:37:32 floppym Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -81,6 +81,8 @@ fi
 # implementations, formed as a USE-dependency string. It should be valid
 # for all implementations in PYTHON_COMPAT, so it may be necessary to
 # use USE defaults.
+#
+# This should be set before calling `inherit'.
 #
 # Example:
 # @CODE
