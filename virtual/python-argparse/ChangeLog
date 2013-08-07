@@ -1,6 +1,10 @@
 # ChangeLog for virtual/python-argparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.11 2013/02/17 20:49:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.12 2013/08/07 11:55:08 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> python-argparse-0.ebuild,
+  python-argparse-1.ebuild:
+  Drop removed Python implementations from PYTHON_COMPAT.
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> python-argparse-1.ebuild:
   Add ~arm-linux keyword.

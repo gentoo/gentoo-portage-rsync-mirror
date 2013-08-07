@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/girara-0.1.6-r200.ebuild,v 1.1 2013/06/13 22:32:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/girara-0.1.6-r200.ebuild,v 1.2 2013/08/07 11:50:15 ssuominen Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 # Pull in SLOT="3" for headers
-RDEPEND="${CATEGORY}/${PN}:3
+RDEPEND=">=${CATEGORY}/${P}:3
 	>=x11-libs/gtk+-2.18.6:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext

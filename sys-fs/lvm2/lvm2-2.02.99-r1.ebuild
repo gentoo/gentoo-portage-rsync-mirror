@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99-r1.ebuild,v 1.2 2013/08/06 18:08:30 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99-r1.ebuild,v 1.3 2013/08/07 11:31:59 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev systemd
@@ -42,12 +42,22 @@ DEPEND="${DEPEND_COMMON}
 
 S=${WORKDIR}/${PN/lvm/LVM}.${PV}
 
-#QA_MULTILIB_PATHS="usr/lib/systemd/system-generators/.*" #479520
-
 pkg_setup() {
 	local CONFIG_CHECK="~SYSVIPC"
-	use udev && local WARNING_SYSVIPC="CONFIG_SYSVIPC:\tis not set (required for udev sync)\n"
+
+	if use udev; then
+		local WARNING_SYSVIPC="CONFIG_SYSVIPC:\tis not set (required for udev sync)\n"
+		if linux_config_exists; then
+			local uevent_helper_path=$(linux_chkconfig_string UEVENT_HELPER_PATH)
+			if [ -n "${uevent_helper_path}" ] && [ "${uevent_helper_path}" != '""' ]; then
+				ewarn "It's recommended to set an empty value to the following kernel config option:"
+				ewarn "CONFIG_UEVENT_HELPER_PATH=${uevent_helper_path}"
+			fi
+		fi
+	fi
+
 	check_extra_config
+
 	# 1. Genkernel no longer copies /sbin/lvm blindly.
 	if use static; then
 		elog "Warning, we no longer overwrite /sbin/lvm and /sbin/dmsetup with"
@@ -97,14 +107,10 @@ src_configure() {
 	# The build options are tristate, and --without is NOT supported
 	# options: 'none', 'internal', 'shared'
 	if use static ; then
-		einfo "Building static LVM, for usage inside genkernel"
 		buildmode="internal"
 		# This only causes the .static versions to become available
-		# We explicitly provide the .static versions so that they can be included in
-		# initramfs environments.
 		myconf="${myconf} --enable-static_link"
 	else
-		ewarn "Building shared LVM, it will not work inside genkernel!"
 		buildmode="shared"
 	fi
 
@@ -224,9 +230,6 @@ src_install() {
 
 	use static-libs || \
 	rm -f "${D}"/usr/$(get_libdir)/{libdevmapper-event,liblvm2cmd,liblvm2app,libdevmapper}.a
-
-	#insinto /etc/udev/rules.d/
-	#newins "${FILESDIR}"/64-device-mapper.rules-2.02.56-r3 64-device-mapper.rules
 
 	# do not rely on /lib -> /libXX link
 	sed -i \

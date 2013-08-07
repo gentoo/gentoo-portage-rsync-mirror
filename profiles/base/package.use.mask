@@ -1,10 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.495 2013/08/07 08:55:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.496 2013/08/07 11:45:36 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Samuli Suominen <ssuominen@gentoo.org> (07 Aug 2013)
+# There is no support for recent app-pda/libimobiledevice wrt bug #471920
+# Upstream removed entire support in future release:
+# http://code.google.com/p/clementine-player/source/detail?r=3d434f1c881890dd77fea6d0e3de3afc86971196
+# Remove this entry once <=media-sound/clementine-1.1.1 has left the building
+media-sound/clementine ios ipod
 
 # Ben de Groot <yngwin@gentoo.org> (07 Aug 2013)
 # Newer lightdm doesn't work with current razorqt-lightdm-greeter, bug 479734

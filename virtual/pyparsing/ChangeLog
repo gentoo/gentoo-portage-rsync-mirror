@@ -1,6 +1,10 @@
 # ChangeLog for virtual/pyparsing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pyparsing/ChangeLog,v 1.4 2013/03/30 13:09:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pyparsing/ChangeLog,v 1.5 2013/08/07 11:55:07 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> pyparsing-0.ebuild,
+  pyparsing-1.ebuild, pyparsing-2.ebuild:
+  Drop removed Python implementations from PYTHON_COMPAT.
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> pyparsing-2.ebuild:
   Quote patterns for python_gen_usedep.

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.2-r3.ebuild,v 1.4 2013/05/24 14:31:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.2-r3.ebuild,v 1.5 2013/08/07 11:55:06 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} pypy{1_8,1_9} )
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} pypy1_9 )
 
 inherit bash-completion-r1 distutils-r1
 

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare setup
-DEPEND=dev-libs/girara:3 >=x11-libs/gtk+-2.18.6:2 sys-devel/gettext virtual/pkgconfig
+DEPEND=>=dev-libs/girara-0.1.6:3 >=x11-libs/gtk+-2.18.6:2 sys-devel/gettext virtual/pkgconfig
 DESCRIPTION=A library that implements a user interface that focuses on simplicity and minimalism
 EAPI=5
 HOMEPAGE=http://pwmt.org/projects/girara/
 IUSE=static-libs
 KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux
 LICENSE=ZLIB
-RDEPEND=dev-libs/girara:3 >=x11-libs/gtk+-2.18.6:2
+RDEPEND=>=dev-libs/girara-0.1.6:3 >=x11-libs/gtk+-2.18.6:2
 SLOT=2
 SRC_URI=http://pwmt.org/projects/girara/download/girara-0.1.6.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=a357822c6bda88b72dcce438e4149b92
+_md5_=35f52e8bb44aa9dada538feb067dc7ff
