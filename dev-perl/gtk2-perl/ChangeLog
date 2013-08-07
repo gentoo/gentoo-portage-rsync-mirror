@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.147 2013/08/04 13:31:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.148 2013/08/07 13:21:24 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gtk2-perl-1.247.0.ebuild:
+  Stable for x86, wrt bug #470418
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gtk2-perl-1.247.0.ebuild:
   Stable for ppc64, wrt bug #470418

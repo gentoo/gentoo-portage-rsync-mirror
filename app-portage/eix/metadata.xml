@@ -9,7 +9,10 @@
   </maintainer>
   <maintainer>
     <email>axs@gentoo.org</email>
-	<description>Proxy committer, CC bugs</description>
+  </maintainer>
+  <maintainer>
+    <email>xmw@gentoo.org</email>
+	<name>Michael Weber</name>
   </maintainer>
   <use>
 	<flag name="clang">Use sys-devel/clang for building</flag>

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ucarp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.22 2013/03/25 10:32:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.23 2013/08/07 13:25:54 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ucarp-1.5.2-r3.ebuild:
+  Stable for x86, wrt bug #470564
 
 *ucarp-1.5.2-r3 (25 Mar 2013)
 

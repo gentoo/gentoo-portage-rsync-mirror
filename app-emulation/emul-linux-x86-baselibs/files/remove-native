@@ -42,3 +42,15 @@ usr/lib32/librom1394.so
 usr/lib32/librom1394.so.0
 usr/lib32/librom1394.so.0.3.0
 usr/lib32/libjpeg.so.62
+usr/lib32/libexpat.so
+usr/lib32/libexpat.so.1
+usr/lib32/libexpat.so.1.6.0
+usr/lib32/libexpatu.so
+usr/lib32/libexpatu.so.1
+usr/lib32/libexpatu.so.1.6.0
+usr/lib32/libexpatw.so
+usr/lib32/libexpatw.so.1
+usr/lib32/libexpatw.so.1.6.0
+usr/lib32/pkgconfig/expat.pc
+usr/lib32/pkgconfig/expatu.pc
+usr/lib32/pkgconfig/expatw.pc

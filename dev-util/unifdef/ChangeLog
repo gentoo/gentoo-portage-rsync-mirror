@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.37 2013/08/06 13:06:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.38 2013/08/07 13:21:10 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> unifdef-2.9.ebuild:
+  Stable for x86, wrt bug #477592
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> unifdef-2.9.ebuild:
   Stable for s390, wrt bug #477592

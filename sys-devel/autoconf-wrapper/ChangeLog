@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.106 2013/08/06 13:10:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.107 2013/08/07 13:25:40 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> autoconf-wrapper-13.ebuild:
+  Stable for x86, wrt bug #470574
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> autoconf-wrapper-13.ebuild:
   Stable for s390, wrt bug #470574

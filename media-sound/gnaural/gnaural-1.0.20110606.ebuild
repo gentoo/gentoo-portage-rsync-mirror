@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnaural/gnaural-1.0.20110606.ebuild,v 1.2 2013/07/19 08:42:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnaural/gnaural-1.0.20110606.ebuild,v 1.3 2013/08/07 13:27:15 ago Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/Gnaural/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND="

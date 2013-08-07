@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openproj-bin/openproj-bin-1.4-r1.ebuild,v 1.2 2013/07/27 11:40:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openproj-bin/openproj-bin-1.4-r1.ebuild,v 1.3 2013/08/07 13:22:59 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/openproj/${MY_P}.tar.gz
 
 LICENSE="CPAL-1.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5"

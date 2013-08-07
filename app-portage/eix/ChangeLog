@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.455 2013/08/07 08:15:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.456 2013/08/07 13:15:10 xmw Exp $
+
+  07 Aug 2013; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Add myself as maintainer
 
 *eix-0.29.3 (07 Aug 2013)
 
