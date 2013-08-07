@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ccsm-0.8.4-r4.ebuild,v 1.1 2013/05/13 16:48:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ccsm-0.8.4-r4.ebuild,v 1.2 2013/08/07 14:20:03 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -32,6 +32,15 @@ python_prepare_all() {
 		-e '/Categories/s/Compiz/X-\0/' \
 		-e '/Encoding/d' \
 		ccsm.desktop.in || die 'sed on ccsm.desktop.in failed'
+
+	# correct gettext behavior
+	if [[ -n "${LINGUAS+x}" ]] ; then
+		for i in $(cd po ; echo *po | sed 's/\.po//g') ; do
+		if ! has ${i} ${LINGUAS} ; then
+			rm po/${i}.po || die
+		fi
+		done
+	fi
 
 	distutils-r1_python_prepare_all
 }
