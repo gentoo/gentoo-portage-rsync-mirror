@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.4.ebuild,v 1.2 2012/12/16 17:35:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.6.ebuild,v 1.1 2013/08/07 19:35:30 xarthisius Exp $
 
-EAPI=4
+EAPI=5
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An improved dynamic tiling window manager"
 HOMEPAGE="http://i3wm.org/"
@@ -28,13 +28,7 @@ CDEPEND="dev-libs/libev
 		>=x11-libs/cairo-1.12.2[X,xcb]
 	)"
 DEPEND="${CDEPEND}
-	virtual/pkgconfig
-	sys-devel/flex
-	sys-devel/bison"
-#docs? ( perl-core/Pod-Simple
-#	app-text/xmlto
-#	app-text/asciidoc
-#)
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	x11-apps/xmessage"
 
@@ -45,17 +39,16 @@ src_prepare() {
 		sed -i common.mk -e '/PANGO/d' || die
 	fi
 
-	sed -e "s/ar rcs/$(tc-getAR) rcs/" \
-		-i libi3/libi3.mk || die #447496
-
 	cat <<- EOF > "${T}"/i3wm
 		#!/bin/sh
 		exec /usr/bin/i3
 	EOF
+
+	epatch_user #471716
 }
 
 src_compile() {
-	emake V=1 CC="$(tc-getCC)"
+	emake V=1 CC="$(tc-getCC)" AR="$(tc-getAR)"
 }
 
 src_install() {
