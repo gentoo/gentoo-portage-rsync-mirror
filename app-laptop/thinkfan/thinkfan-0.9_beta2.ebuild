@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/thinkfan-0.9_beta2.ebuild,v 1.2 2013/02/13 22:34:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/thinkfan-0.9_beta2.ebuild,v 1.3 2013/08/07 12:13:19 xmw Exp $
 
 EAPI=4
 
-inherit cmake-utils systemd
+inherit cmake-utils readme.gentoo systemd
 
 DESCRIPTION="simple fan control program for thinkpads"
 HOMEPAGE="http://thinkfan.sourceforge.net"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="atasmart systemd"
+IUSE="atasmart"
 
 DEPEND="atasmart? ( dev-libs/libatasmart )"
 RDEPEND="${DEPEND}"
@@ -42,9 +42,8 @@ src_install() {
 	doman ${PN}.1
 	dodoc ChangeLog NEWS README \
 		examples/${PN}.conf.{complex,simple}
+	readme.gentoo_create_doc
 }
 
-pkg_postinst() {
-	elog "Please read the documentation and copy an"
-	elog "appropriate file to /etc/thinkfan.conf."
-}
+DOC_CONTENTS="Please read the documentation and copy an
+appropriate file to /etc/thinkfan.conf."
