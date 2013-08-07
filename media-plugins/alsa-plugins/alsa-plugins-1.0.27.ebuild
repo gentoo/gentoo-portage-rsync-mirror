@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27.ebuild,v 1.4 2013/08/02 11:35:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27.ebuild,v 1.5 2013/08/07 02:15:23 aballier Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib
@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.0.19-missing-avutil.patch \
-		"${FILESDIR}"/${PN}-1.0.23-automagic.patch
+		"${FILESDIR}"/${PN}-1.0.23-automagic.patch \
+		"${FILESDIR}"/${PN}-1.0.27-ffmpeg-version-check.patch
 
 	epatch_user
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/hiredis-0.11.0.ebuild,v 1.1 2013/02/01 00:06:49 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/hiredis-0.11.0.ebuild,v 1.2 2013/08/07 02:06:32 neurogeek Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Minimalistic C client library for the Redis database"
 HOMEPAGE="http://github.com/redis/hiredis"
@@ -38,6 +38,6 @@ src_test() {
 }
 
 src_install() {
-	emake PREFIX="${ED}/usr" install
+	emake PREFIX="${ED}/usr" LIBRARY_PATH="$(get_libdir)"  install
 	dodoc ${DOCS}
 }
