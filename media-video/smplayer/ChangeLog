@@ -1,6 +1,12 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.138 2013/07/04 14:48:31 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.139 2013/08/07 08:24:29 yngwin Exp $
+
+*smplayer-0.8.5-r1 (07 Aug 2013)
+
+  07 Aug 2013; Ben de Groot <yngwin@gentoo.org> +smplayer-0.8.5-r1.ebuild:
+  Turn off update checker (bug #479902); prefer mplayer over mplayer2 again,
+  since the latter is unmaintained
 
   04 Jul 2013; Michael Palimaka <kensington@gentoo.org> -smplayer-0.8.3.ebuild,
   -smplayer-0.8.4-r1.ebuild:
