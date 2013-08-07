@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.129 2013/08/04 13:41:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.130 2013/08/07 13:34:36 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libmtp-1.1.6.ebuild:
+  Stable for x86, wrt bug #470512
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libmtp-1.1.6.ebuild:
   Stable for ppc64, wrt bug #470512

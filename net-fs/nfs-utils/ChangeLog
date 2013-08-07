@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.218 2013/07/26 04:23:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.219 2013/08/07 13:54:00 xarthisius Exp $
+
+  07 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> nfs-utils-1.2.7-r1.ebuild,
+  nfs-utils-1.2.8-r1.ebuild:
+  Adjust dependency on rpcbind so that version with systemd units is pulled in
+  for packages that require it. Fixes #480006 by redneb <redneb@gmx.com>
 
 *nfs-utils-1.2.8-r1 (26 Jul 2013)
 *nfs-utils-1.2.7-r1 (26 Jul 2013)

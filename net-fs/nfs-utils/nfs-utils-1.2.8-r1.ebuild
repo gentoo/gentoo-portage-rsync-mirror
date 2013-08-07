@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.8-r1.ebuild,v 1.1 2013/07/26 04:23:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.8-r1.ebuild,v 1.2 2013/08/07 13:54:00 xarthisius Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RESTRICT="test" #315573
 DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 	caps? ( sys-libs/libcap )
 	sys-libs/e2fsprogs-libs
-	net-nds/rpcbind
+	>=net-nds/rpcbind-0.2.0-r1
 	net-libs/libtirpc
 	nfsdcld? ( >=dev-db/sqlite-3.3 )
 	nfsv4? (

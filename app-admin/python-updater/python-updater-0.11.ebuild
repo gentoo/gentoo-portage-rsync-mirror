@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.11.ebuild,v 1.10 2013/08/06 13:14:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.11.ebuild,v 1.11 2013/08/07 13:36:20 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/python-updater.git"
 else
 	SRC_URI="http://dev.gentoo.org/~floppym/dist/${P}.tar.bz2"
-	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 ~sh sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 LICENSE="GPL-2"

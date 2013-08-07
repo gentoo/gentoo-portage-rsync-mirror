@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.312 2013/07/28 21:11:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.313 2013/08/07 13:52:57 chithanh Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -155,6 +155,8 @@ media-libs/mesa d3d
 
 # sys-fs/udev
 media-libs/mesa gbm
+x11-base/xorg-drivers video_cards_radeonsi
+x11-drivers/xf86-video-ati glamor
 x11-drivers/xf86-video-intel glamor
 
 # does not build

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/test-framework-hunit-0.3.0.ebuild,v 1.7 2013/08/04 13:39:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/test-framework-hunit-0.3.0.ebuild,v 1.8 2013/08/07 13:31:52 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-haskell/extensible-exceptions-0.1.1:=[profile?]

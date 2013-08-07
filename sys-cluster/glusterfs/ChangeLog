@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/glusterfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.47 2013/07/26 11:43:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.48 2013/08/07 13:32:56 dev-zero Exp $
+
+*glusterfs-3.4.0-r1 (07 Aug 2013)
+
+  07 Aug 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/glusterfs-3.4.0-gfapi-handle-failures-in-graph-switches.patch,
+  +files/glusterfs-3.4.0-glusterfsd-Use-dynamic-volfile-buffer.patch,
+  +files/glusterfs-3.4.0-nfs-exit-when-all-volumes-are-disabled.patch,
+  +glusterfs-3.4.0-r1.ebuild:
+  Add some patches from upstream.
 
 *glusterfs-3.4.0 (26 Jul 2013)
 

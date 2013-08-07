@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.14.ebuild,v 1.2 2013/03/12 16:56:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.14.ebuild,v 1.3 2013/08/07 13:54:04 chithanh Exp $
 
 EAPI=5
 
@@ -53,6 +53,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_qxl
 	video_cards_r128
 	video_cards_radeon
+	video_cards_radeonsi
 	video_cards_rendition
 	video_cards_s3virge
 	video_cards_savage
@@ -122,6 +123,7 @@ PDEPEND="
 	video_cards_fglrx?         ( x11-drivers/ati-drivers )
 	video_cards_r128?          ( x11-drivers/xf86-video-r128 )
 	video_cards_radeon?        ( x11-drivers/xf86-video-ati )
+	video_cards_radeonsi?      ( x11-drivers/xf86-video-ati[glamor] )
 	video_cards_rendition?     ( x11-drivers/xf86-video-rendition )
 	video_cards_s3virge?       ( x11-drivers/xf86-video-s3virge )
 	video_cards_savage?        ( x11-drivers/xf86-video-savage )

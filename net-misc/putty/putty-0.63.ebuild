@@ -1,16 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.20130805.ebuild,v 1.3 2013/08/07 13:14:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.63.ebuild,v 1.2 2013/08/07 13:49:27 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools eutils gnome2-utils toolchain-funcs versionator
 
-MY_PV="$(get_version_component_range 1-2)-2013-08-05"
-DESCRIPTION="UNIX port of the famous Telnet and SSH client"
+DESCRIPTION="A Free Telnet/SSH Client"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~sgtatham/putty/"
 SRC_URI="
-	http://tartarus.org/~simon/${PN}-snapshots/${PN}-${MY_PV}.tar.gz
+	http://the.earth.li/~sgtatham/${PN}/latest/${P}.tar.gz
 	http://dev.gentoo.org/~jer/${PN}-icons.tar.bz2"
 LICENSE="MIT"
 
@@ -32,8 +31,6 @@ DEPEND="
 	dev-lang/perl
 	virtual/pkgconfig
 "
-
-S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	cd "${S}"/unix || die
