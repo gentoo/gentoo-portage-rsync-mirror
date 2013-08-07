@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.149 2013/07/28 19:42:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.150 2013/08/07 21:10:06 aballier Exp $
+
+  07 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask video_cards_tdfx for mplayer, bug #477750 by Yuta SATOH
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask mplayer[joystick], bug #477750 by Yuta SATOH

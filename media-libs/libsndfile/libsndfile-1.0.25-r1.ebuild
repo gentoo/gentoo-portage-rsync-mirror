@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.2 2013/07/29 22:05:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.3 2013/08/07 21:05:42 aballier Exp $
 
 EAPI=5
 
@@ -46,6 +46,7 @@ src_prepare() {
 
 	local PATCHES=(
 		"${FILESDIR}"/${PN}-1.0.17-regtests-need-sqlite.patch
+		"${FILESDIR}"/${PN}-1.0.25-make.patch
 	)
 
 	AT_M4DIR=M4 \

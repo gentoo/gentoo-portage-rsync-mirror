@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.136 2013/07/29 22:05:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.137 2013/08/07 21:05:42 aballier Exp $
+
+  07 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  libsndfile-1.0.25-r1.ebuild, +files/libsndfile-1.0.25-make.patch:
+  Fix build on fbsd by honouring the MAKE variable.
 
   29 Jul 2013; Alexis Ballier <aballier@gentoo.org>
   libsndfile-1.0.25-r1.ebuild:
