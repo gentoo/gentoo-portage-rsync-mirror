@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.55 2013/08/02 00:31:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.57 2013/08/07 20:18:37 axs Exp $
+
+  07 Aug 2013; Ian Stakenvicius <axs@gentoo.org> eudev-9999.ebuild:
+  Initial multilib-minimal.eclass conversion (to build libudev.so.1)
+
+*eudev-1.2-r1 (07 Aug 2013)
+
+  07 Aug 2013; Ian Stakenvicius <axs@gentoo.org> +eudev-1.2-r1.ebuild:
+  Initial multilib-minimal.eclass conversion (to build libudev.so.1)
 
   02 Aug 2013; Anthony G. Basile <blueness@gentoo.org> eudev-1.2.ebuild:
   Fix SRC_URI and Manifest

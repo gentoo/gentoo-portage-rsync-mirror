@@ -23,5 +23,7 @@
     <flag name="linguas_sa">Language support for sa</flag>
     <flag name="linguas_sk_SK">Language support for sk_SK</flag>
     <flag name="linguas_th_TH">Language support for th_TH</flag>
+    <flag name="scripts">Install the scripts</flag>
+    <flag name="tk">Install tk based scripts e.g. FontSample.py</flag>
   </use>
 </pkgmetadata>

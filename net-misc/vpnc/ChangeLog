@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.116 2013/06/05 14:38:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.117 2013/08/07 20:20:46 jlec Exp $
+
+*vpnc-0.5.3_p527-r1 (07 Aug 2013)
+
+  07 Aug 2013; Justin Lecher <jlec@gentoo.org> +vpnc-0.5.3_p527-r1.ebuild,
+  +files/vpnc.service, +files/vpnc-tmpfiles.conf:
+  Add systemD support, #479354
 
   05 Jun 2013; Justin Lecher <jlec@gentoo.org> vpnc-0.5.3_p527.ebuild:
   Drop USE=-caps restriction for libgcrypt as it was removed, #472392; this

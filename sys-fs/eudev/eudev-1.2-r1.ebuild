@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.35 2013/08/07 20:18:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2-r1.ebuild,v 1.1 2013/08/07 20:11:25 axs Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
-	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~blueness/eudev/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 fi
 
@@ -43,8 +43,6 @@ DEPEND="${COMMON_DEPEND}
 	test? ( app-text/tree dev-lang/perl )"
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
-	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
 	!sys-fs/udev
 	!sys-apps/coldplug
 	!sys-apps/systemd
@@ -53,6 +51,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/udev-init-scripts-18"
 
 PDEPEND=">=virtual/udev-180
+	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
+	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
@@ -121,10 +121,6 @@ multilib_src_configure()
 	local econf_args
 
 	econf_args=(
-		ac_cv_search_cap_init=
-		ac_cv_header_sys_capability_h=yes
-		DBUS_CFLAGS=' '
-		DBUS_LIBS=' '
 		--with-rootprefix=
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
@@ -226,7 +222,9 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
+	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+	fi
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"
