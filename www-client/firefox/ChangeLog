@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.255 2013/06/29 15:29:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.256 2013/08/07 02:49:31 anarchy Exp $
+
+*firefox-17.0.8 (07 Aug 2013)
+*firefox-23.0 (07 Aug 2013)
+
+  07 Aug 2013;  <anarchy@gentoo.org> +firefox-17.0.8.ebuild,
+  +firefox-23.0.ebuild, -firefox-21.0.ebuild, -firefox-22.0.ebuild:
+  Security bump, bug #479968
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.7.ebuild:
   Stable for arm, wrt bug #474758

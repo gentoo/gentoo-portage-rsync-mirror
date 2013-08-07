@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.64 2013/07/10 03:20:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.65 2013/08/07 02:35:20 aballier Exp $
+
+  07 Aug 2013; Alexis Ballier <aballier@gentoo.org> cinelerra-20120707.ebuild,
+  +files/cinelerra-ffmpeg2.patch:
+  Fix build with ffmpeg2, patch by Helmut Jarausch, cleaned up by me. Bug
+  #479394.
 
   10 Jul 2013; Luca Barbato <lu_zero@gentoo.org> cinelerra-20120707.ebuild:
   Add subslot support for x264, thanks to Nikoli for the patch

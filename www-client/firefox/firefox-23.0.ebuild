@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-22.0.ebuild,v 1.2 2013/06/28 14:09:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-23.0.ebuild,v 1.1 2013/08/07 02:49:31 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -25,7 +25,7 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${PN}-22.0-patches-0.2"
+PATCH="${PN}-23.0-patches-0.1"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -36,7 +36,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist gstreamer +jit +minimal pgo pulseaudio selinux system-cairo system-jpeg system-sqlite"
@@ -144,12 +144,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Discard system cairo patch if support is not requested
-	if ! use system-cairo ; then
-		export EPATCH_EXCLUDE="6009_fix_system_cairo_support.patch"
-	fi
-
 	# Apply our patches
+	EPATCH_EXCLUDE="$(use system-cairo || echo "6009_fix_system_cairo_support.patch")" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
@@ -230,7 +226,7 @@ src_configure() {
 	mozconfig_use_enable jit methodjit
 	mozconfig_use_enable jit tracejit
 	mozconfig_use_enable jit ion
-	mozconfig_use_enable system-cairo
+	mozconfig_use_enable system-cairo 
 
 	# Allow for a proper pgo build
 	if use pgo; then

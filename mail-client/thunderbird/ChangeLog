@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.229 2013/07/08 07:08:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.230 2013/08/07 02:38:40 anarchy Exp $
+
+*thunderbird-17.0.8 (07 Aug 2013)
+
+  07 Aug 2013;  <anarchy@gentoo.org> +thunderbird-17.0.8.ebuild:
+  Security bump, bug #479968
 
   08 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> Manifest:
   Fixed enigmail checksum.
