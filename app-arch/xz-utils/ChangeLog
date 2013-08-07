@@ -1,6 +1,16 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.62 2013/06/30 19:26:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.64 2013/08/07 22:47:41 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> xz-utils-5.0.5-r1.ebuild,
+  xz-utils-9999.ebuild:
+  Remove the unnecessary emul-linux blocker. My bad.
+
+*xz-utils-5.0.5-r1 (07 Aug 2013)
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> +xz-utils-5.0.5-r1.ebuild,
+  xz-utils-9999.ebuild:
+  Support multilib. Bug #474940, patch by Alexis Ballier.
 
 *xz-utils-5.0.5 (30 Jun 2013)
 

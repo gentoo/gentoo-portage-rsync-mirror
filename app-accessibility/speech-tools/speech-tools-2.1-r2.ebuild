@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r2.ebuild,v 1.3 2013/02/02 22:19:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r2.ebuild,v 1.4 2013/08/07 22:46:11 neurogeek Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 MY_P=${P/speech-/speech_}
-PATCHSET="r2"
+PATCHSET="r3"
 
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
 HOMEPAGE="http://www.cstr.ed.ac.uk/projects/speech_tools/"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nas X"
 
-DEPEND="nas? ( media-libs/nas )
+PDEPEND="nas? ( media-libs/nas )
 	X? ( x11-libs/libX11
 		x11-libs/libXt )
 	>=media-libs/alsa-lib-1.0.20-r1
@@ -27,7 +27,10 @@ DEPEND="nas? ( media-libs/nas )
 	!sys-power/powerman
 	>=sys-libs/ncurses-5.6-r2"
 
-RDEPEND=${DEPEND}
+DEPEND="${PDEPEND}
+		virtual/pkgconfig"
+
+RDEPEND=${PDEPEND}
 
 S="${WORKDIR}/speech_tools"
 

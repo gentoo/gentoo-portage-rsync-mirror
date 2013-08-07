@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.84 2013/02/02 22:19:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.85 2013/08/07 22:46:11 neurogeek Exp $
+
+  07 Aug 2013; <neurogeek@gentoo.org> speech-tools-2.1-r2.ebuild:
+  Bumped rev on patchset and added a patch to fix ncurses[tinfo]. Closes
+  #457562 and #459556
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> speech-tools-2.1-r2.ebuild:
   Add ~arm, wrt bug #449220
