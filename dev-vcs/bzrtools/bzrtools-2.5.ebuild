@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.5.ebuild,v 1.8 2013/08/06 19:36:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.5.ebuild,v 1.9 2013/08/07 00:47:15 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,26 +25,4 @@ RESTRICT="test"
 
 S="${WORKDIR}/${PN}"
 
-DOCS="AUTHORS CREDITS NEWS NEWS.Shelf README README.Shelf TODO TODO.heads TODO.Shelf"
-PYTHON_MODNAME="bzrlib/plugins/bzrtools"
-
-src_test() {
-	testing() {
-		local return_status="0"
-
-		# put a linked copy of the bzr core into the build directory to properly
-		# test the "built" version of bzrtools
-		find "$(python_get_libdir)/site-packages/bzrlib/" \
-			-mindepth 1 -maxdepth 1 \
-			\( \( -type d -and -not -name "plugins" \) -or -name "*.py" \) \
-			-exec ln -s '{}' "${S}/build-${PYTHON_ABI}/lib/bzrlib/" \;
-		touch "${S}/build-${PYTHON_ABI}/lib/bzrlib/plugins/__init__.py"
-		"${S}/test.py" "${S}/build-${PYTHON_ABI}/lib" || return_status="1"
-		# remove the "shadow" copy so it doesn't get installed
-		rm "${S}/build-${PYTHON_ABI}/lib/bzrlib/plugins/__init__.py"
-		find "${S}/build-${PYTHON_ABI}/lib/bzrlib/" -mindepth 1 -maxdepth 1 -type l -exec rm '{}' \;
-
-		return "${return_status}"
-	}
-	python_execute_function testing
-}
+DOCS=( AUTHORS CREDITS NEWS NEWS.Shelf README README.Shelf TODO TODO.heads TODO.Shelf )
