@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.48 2013/06/30 16:56:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.49 2013/08/07 07:41:59 polynomial-c Exp $
+
+  07 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> -talloc-1.3.0.ebuild,
+  -talloc-1.3.1.ebuild, -talloc-2.0.0.ebuild, -talloc-2.0.0-r1.ebuild,
+  -talloc-2.0.1.ebuild, -talloc-2.0.1-r1.ebuild, -talloc-2.0.1-r2.ebuild,
+  -talloc-2.0.5.ebuild, -files/talloc-2.0.0-without-doc.patch,
+  -files/talloc-2.0.1-respect-ldflags.patch:
+  Removed old versions.
 
 *talloc-2.0.8-r1 (30 Jun 2013)
 
