@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-0-r2.ebuild,v 1.2 2013/08/02 08:30:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-0-r2.ebuild,v 1.3 2013/08/07 18:37:37 ssuominen Exp $
 
 EAPI=5
 
@@ -17,6 +17,6 @@ IUSE="static-libs"
 
 RDEPEND="|| (
 		>=media-libs/libjpeg-turbo-1.3.0-r2:0[static-libs?,${MULTILIB_USEDEP}]
-		>=media-libs/jpeg-9:0[static-libs?,${MULTILIB_USEDEP}]
+		>=media-libs/jpeg-9-r1:0[static-libs?,${MULTILIB_USEDEP}]
 		)"
 DEPEND=""
