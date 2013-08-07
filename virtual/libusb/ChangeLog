@@ -1,6 +1,13 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.33 2013/08/01 16:21:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.34 2013/08/07 16:11:21 ssuominen Exp $
+
+*libusb-0-r1 (07 Aug 2013)
+*libusb-1-r1 (07 Aug 2013)
+
+  07 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +libusb-0-r1.ebuild,
+  +libusb-1-r1.ebuild:
+  Virtual for the new multilib copies of libusb, libusbx and libusb-compat.
 
   01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> libusb-0.ebuild:
   Use dev-libs/libusb-compat exclusively (instead of old libusb) for
