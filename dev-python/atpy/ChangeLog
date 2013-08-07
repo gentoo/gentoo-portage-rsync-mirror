@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/atpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.12 2013/04/24 22:45:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.13 2013/08/07 19:18:26 bicatali Exp $
+
+*atpy-0.9.7 (07 Aug 2013)
+
+  07 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> +atpy-0.9.7.ebuild:
+  Version bump
 
 *atpy-0.9.6-r1 (24 Apr 2013)
 
