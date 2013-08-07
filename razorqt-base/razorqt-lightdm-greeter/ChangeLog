@@ -1,6 +1,13 @@
 # ChangeLog for razorqt-base/razorqt-lightdm-greeter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-lightdm-greeter/ChangeLog,v 1.9 2013/04/05 14:40:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-lightdm-greeter/ChangeLog,v 1.10 2013/08/07 08:35:26 yngwin Exp $
+
+*razorqt-lightdm-greeter-0.5.2-r1 (07 Aug 2013)
+
+  07 Aug 2013; Ben de Groot <yngwin@gentoo.org>
+  +razorqt-lightdm-greeter-0.5.2-r1.ebuild:
+  Make lightdm dependency more specific, since newer versions don't work, bug
+  #479734
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   razorqt-lightdm-greeter-0.5.2.ebuild:

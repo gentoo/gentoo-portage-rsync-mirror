@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8120 2013/08/06 19:21:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8121 2013/08/07 08:55:52 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Aug 2013; Ben de Groot <yngwin@gentoo.org> base/package.use.mask:
+  Mask razor useflag on newer lightdm, bug #479734
 
   06 Aug 2013; Christian Faulhammer <fauli@gentoo.org> package.mask:
   mask dev-vcs/bzr-svn for removal, see bug 474518
