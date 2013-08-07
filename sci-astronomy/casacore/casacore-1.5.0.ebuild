@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0.ebuild,v 1.3 2012/10/19 10:44:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0.ebuild,v 1.4 2013/08/07 17:42:53 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils eutils toolchain-funcs fortran-2
 
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="+data doc fftw hdf5 openmp threads test"
 
-RDEPEND="sci-libs/cfitsio
+RDEPEND="
+	sci-libs/cfitsio
 	sci-astronomy/wcslib
 	sys-libs/readline
 	virtual/blas
@@ -45,7 +46,7 @@ pkg_setup() {
 
 src_configure() {
 	has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
-	mycmakeargs+=(
+	local mycmakeargs=(
 		-DENABLE_SHARED=ON
 		-DDATA_DIR="${EPREFIX}/usr/share/casa/data"
 		$(cmake-utils_use_build test TESTING)
@@ -64,5 +65,5 @@ src_compile() {
 
 src_install(){
 	cmake-utils_src_install
-	use doc && dohtml -r doc/html
+	use doc && dohtml -r doc/html/*
 }
