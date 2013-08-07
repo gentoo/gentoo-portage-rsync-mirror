@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.48 2013/07/25 22:09:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.49 2013/08/07 11:21:51 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> pypy-1.9-r2.ebuild,
+  pypy-2.0.2.ebuild, pypy-9999.ebuild:
+  Drop removed Python implementations from PYTHON_COMPAT.
 
 *pypy-9999 (25 Jul 2013)
 

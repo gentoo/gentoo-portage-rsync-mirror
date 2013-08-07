@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.49 2013/07/27 16:44:17 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.50 2013/08/07 11:21:51 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> Babel-0.9.6-r1.ebuild,
+  Babel-1.2.ebuild:
+  Drop removed Python implementations from PYTHON_COMPAT.
 
   27 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> Babel-1.2.ebuild:
   Fix documentation, bug 478362 (thanks bkohler@gmail.com).

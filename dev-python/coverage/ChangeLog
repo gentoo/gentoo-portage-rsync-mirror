@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.104 2013/04/02 13:23:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.105 2013/08/07 11:21:51 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> coverage-3.5.3-r1.ebuild,
+  coverage-3.6.ebuild:
+  Drop removed Python implementations from PYTHON_COMPAT.
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> coverage-3.6.ebuild:
   Stable for s390, wrt bug #457322

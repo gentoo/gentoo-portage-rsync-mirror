@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.117 2013/08/03 09:45:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.118 2013/08/07 11:21:50 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> nose-1.1.2-r1.ebuild,
+  nose-1.2.1.ebuild, nose-1.2.1_p2012.ebuild, nose-9999.ebuild:
+  Drop removed Python implementations from PYTHON_COMPAT.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> nose-1.1.2.ebuild,
   nose-1.1.2-r1.ebuild, nose-1.2.1.ebuild, nose-1.2.1_p2012.ebuild,

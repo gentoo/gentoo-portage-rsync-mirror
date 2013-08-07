@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.157 2013/07/02 07:45:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.158 2013/08/07 11:21:50 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> pytz-2012j.ebuild,
+  pytz-2013b.ebuild:
+  Drop removed Python implementations from PYTHON_COMPAT.
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> pytz-2013b.ebuild:
   Stable for sh, wrt bug #472860
