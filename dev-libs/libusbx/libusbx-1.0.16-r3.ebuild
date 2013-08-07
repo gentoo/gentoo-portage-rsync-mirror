@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.16-r3.ebuild,v 1.1 2013/08/07 15:47:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.16-r3.ebuild,v 1.2 2013/08/07 18:25:51 ssuominen Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib-minimal
@@ -14,8 +14,7 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="debug doc examples static-libs test udev"
 
-# multilib dependency for udev, and multilib libudev.so itself missing still:
-RDEPEND="udev? ( >=virtual/udev-200 )
+RDEPEND="udev? ( >=virtual/udev-200[${MULTILIB_USEDEP}] )
 	!dev-libs/libusb:1"
 #	abi_x86_32? (
 #		!<=app-emulation/emul-linux-x86-baselibs-2013

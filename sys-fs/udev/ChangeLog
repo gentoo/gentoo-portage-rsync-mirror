@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.944 2013/07/30 17:37:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.945 2013/08/07 18:24:04 ssuominen Exp $
+
+*udev-206-r1 (07 Aug 2013)
+
+  07 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-206-r1.ebuild,
+  udev-9999.ebuild:
+  Initial multilib-minimal.eclass conversion (to build libudev.so.1)
 
   30 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> udev-204.ebuild,
   udev-206.ebuild, udev-9999.ebuild:
