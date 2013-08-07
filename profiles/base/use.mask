@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.176 2013/08/05 18:00:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.177 2013/08/07 22:11:07 mgorny Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -311,9 +311,7 @@ orc
 # Mike Gilbert <floppym@gentoo.org> (02 Jan 2013)
 # PyPy is unkeyworded on most arches. If you are running amd64 or x86,
 # please switch to one of the testing 13.0 profiles to get it.
-python_targets_pypy1_9
 python_targets_pypy2_0
-python_single_target_pypy1_9
 python_single_target_pypy2_0
 
 # Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
@@ -345,3 +343,18 @@ systemd
 # Mask until Qt 5 is in portage. (The flag is here already
 # to permit the neccessary package preparation.)
 qt5
+
+# Michał Górny <mgorny@gentoo.org> (07 Aug 2013)
+# These outdated versions of Python are no longer updated or maintained
+# properly. Python 2.5 started to become a blocker for Python 3.3.
+# Python 3.1 has proved to become unfriendly to writing portable code.
+# PyPy is still experimental and we're in process of bringing 2.1.
+# The masked packages will be removed in 30 days. Afterwards, ebuild
+# and eclass support for those implementations will be removed.
+# Bug #480070.
+python_targets_python2_5
+python_targets_python3_1
+python_targets_pypy1_9
+python_single_target_python2_5
+python_single_target_python3_1
+python_single_target_pypy1_9
