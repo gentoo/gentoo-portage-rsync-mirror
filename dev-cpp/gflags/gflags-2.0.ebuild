@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-2.0.ebuild,v 1.4 2013/08/04 13:41:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-2.0.ebuild,v 1.5 2013/08/07 09:24:24 pinkbyte Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ SRC_URI="http://gflags.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 src_configure() {
