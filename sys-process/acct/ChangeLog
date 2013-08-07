@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.64 2013/01/06 11:13:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.65 2013/08/07 17:09:18 bicatali Exp $
+
+  07 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> acct-6.5.5-r2.ebuild:
+  Keyword amd64-linux and x86-linux
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> acct-6.5.5-r2.ebuild:
   Add ~sparc, wrt bug #449220

@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/glances
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.7 2013/07/10 06:32:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.8 2013/08/07 17:05:06 bicatali Exp $
+
+  07 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> glances-1.6.1.ebuild:
+  Keyword amd64-linux and x86-linux
 
   10 Jul 2013; Kacper Kowalik <xarthisius@gentoo.org> glances-1.6.1.ebuild:
   Add python3.x to PYTHON_COMPAT wrt #475986 by CBke <cb@linux.be>
