@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pymountboot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/ChangeLog,v 1.8 2012/12/17 19:59:50 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/ChangeLog,v 1.9 2013/08/07 09:52:45 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> pymountboot-0.2.2.ebuild,
+  pymountboot-9999.ebuild:
+  Enable pypy2.0.
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> pymountboot-0.2.1.ebuild,
   pymountboot-0.2.2.ebuild, pymountboot-9999.ebuild:

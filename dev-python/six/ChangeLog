@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.26 2013/07/14 10:23:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.27 2013/08/07 09:52:40 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> six-9999.ebuild:
+  Enable pypy2.0.
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> six-1.3.0.ebuild:
   Stable for alpha, wrt bug #469994

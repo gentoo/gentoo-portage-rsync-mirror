@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eclean-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.10 2013/04/14 20:53:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.11 2013/08/07 09:52:58 mgorny Exp $
+
+  07 Aug 2013; Michał Górny <mgorny@gentoo.org> eclean-kernel-0.4.ebuild,
+  eclean-kernel-9999.ebuild:
+  Enable pypy2.0.
 
 *eclean-kernel-0.4 (14 Apr 2013)
 
