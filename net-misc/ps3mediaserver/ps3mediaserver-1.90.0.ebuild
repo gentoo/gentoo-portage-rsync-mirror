@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.72.0.ebuild,v 1.1 2012/11/24 23:01:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.90.0.ebuild,v 1.1 2013/08/06 23:36:05 floppym Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils
 
 DESCRIPTION="DLNA compliant UPNP server for streaming media to Playstation 3"
 HOMEPAGE="http://code.google.com/p/ps3mediaserver"
-SRC_URI="http://ps3mediaserver.googlecode.com/files/pms-generic-linux-unix-${PV}.tgz"
+SRC_URI="mirror://sourceforge/project/ps3mediaserver/pms-${PV}-generic-linux-unix.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -78,12 +78,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Don't forget to disable transcoding engines for software"
-	ewarn "that you don't have installed (such as having the VLC"
-	ewarn "transcoding engine enabled when you only have mencoder)."
-	if use multiuser; then
-		echo
-		ewarn "Make sure to refresh the .${PN} in your home directory if you are"
-		ewarn "upgrading from a previous version."
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		ewarn "Don't forget to disable transcoding engines for software"
+		ewarn "that you don't have installed (such as having the VLC"
+		ewarn "transcoding engine enabled when you only have mencoder)."
+	elif use multiuser; then
+		ewarn "Remember to refresh the files in ~/.ps3mediaserver/"
 	fi
 }
