@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.129 2013/06/22 15:56:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.130 2013/08/07 14:35:11 teiresias Exp $
+
+  07 Aug 2013; Christopher Brannon <teiresias@gentoo.org> brltty-4.5.ebuild:
+  brltty 4.5 builds with parallel make.
+  We can remove the -j1 and close bug #340903.
 
   22 Jun 2013; William Hubbs <williamh@gentoo.org> brltty-4.5.ebuild,
   files/brltty.rc:

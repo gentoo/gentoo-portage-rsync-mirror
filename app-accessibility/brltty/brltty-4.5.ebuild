@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5.ebuild,v 1.2 2013/06/22 15:56:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5.ebuild,v 1.3 2013/08/07 14:35:11 teiresias Exp $
 
 EAPI=5
 
@@ -96,7 +96,7 @@ src_compile() {
 	fi
 
 	# workaround for parallel build failure, bug #340903.
-	emake -j1 JAVA_JNI_FLAGS="${OUR_JNI_FLAGS}" JAVAC="${JAVAC_CONF}"
+	emake JAVA_JNI_FLAGS="${OUR_JNI_FLAGS}" JAVAC="${JAVAC_CONF}"
 }
 
 src_install() {

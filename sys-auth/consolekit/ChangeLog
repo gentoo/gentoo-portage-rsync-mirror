@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.156 2013/08/07 10:48:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.157 2013/08/07 14:59:46 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> consolekit-0.4.6.ebuild:
+  Stable for amd64, wrt bug #480028
 
   07 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> consolekit-0.4.6.ebuild:
   Stop blocking sys-apps/systemd (to let users switch between OpenRC and

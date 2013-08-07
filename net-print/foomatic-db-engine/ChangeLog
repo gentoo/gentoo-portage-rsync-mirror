@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.57 2013/08/02 05:51:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.58 2013/08/07 14:58:51 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
+  foomatic-db-engine-4.0.8.ebuild:
+  Stable for amd64, wrt bug #442442
 
 *foomatic-db-engine-4.0.9 (02 Aug 2013)
 

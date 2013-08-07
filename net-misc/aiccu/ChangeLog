@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.44 2013/05/27 05:23:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.45 2013/08/07 14:59:31 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> aiccu-2007.01.15-r4.ebuild:
+  Stable for amd64, wrt bug #480088
 
 *aiccu-2007.01.15-r4 (27 May 2013)
 

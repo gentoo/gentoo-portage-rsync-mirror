@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/rawstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.30 2013/08/05 09:37:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.31 2013/08/07 14:57:58 ago Exp $
+
+  07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> rawstudio-2.0-r1.ebuild:
+  Stable for amd64, wrt bug #479810
 
   05 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> rawstudio-2.0-r1.ebuild:
   Update the libjpeg dependency to use correct SLOT.
@@ -131,4 +134,3 @@
   +files/rawstudio-0.6-desktop-entry.patch, +rawstudio-0.6.ebuild:
   Initial commit wrt #144237. Thanks to Jonas Pedersen, Lasse Bigum, Bolek
   Tekielski and Torsten Rehn.
-
