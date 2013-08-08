@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14999 2013/08/08 05:27:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15000 2013/08/08 08:52:45 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -61,6 +61,7 @@ dev-python/tg-widgets-lightbox
 >=sys-fs/udev-206-r1
 >=virtual/udev-206-r1
 =sys-fs/eudev-1.2-r1
+>=sys-apps/systemd-206-r2
 
 # Christian Faulhammer <fauli@gentoo.org> (06 Aug 2013)
 # Masked for removal, dead upstream, bug #474518
