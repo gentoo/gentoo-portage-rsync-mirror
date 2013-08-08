@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8127 2013/08/07 22:47:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8128 2013/08/08 01:02:29 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Aug 2013; Tim Harder <radhermit@gentoo.org> package.mask:
+  Revert dev-python/futures mask.
 
   07 Aug 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask Python 2.5, 3.1 and PyPy 1.9. Bug #480070.
