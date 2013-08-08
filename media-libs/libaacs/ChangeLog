@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.20 2013/04/08 05:18:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.21 2013/08/08 09:45:25 ago Exp $
+
+  08 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libaacs-0.5.0.ebuild:
+  Stable for sparc, wrt bug #473302
 
 *libaacs-0.6.0 (08 Apr 2013)
 
