@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r1.ebuild,v 1.4 2013/08/08 12:45:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r1.ebuild,v 1.5 2013/08/08 15:03:19 ssuominen Exp $
 
 EAPI=5
 
@@ -230,6 +230,7 @@ multilib_src_configure() {
 		--disable-polkit
 		--disable-tmpfiles
 		--disable-machined
+		--disable-xattr
 	)
 	if multilib_is_native_abi; then
 		econf_args+=(

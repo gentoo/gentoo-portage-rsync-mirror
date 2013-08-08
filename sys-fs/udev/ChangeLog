@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.948 2013/08/08 12:45:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.949 2013/08/08 15:03:19 ssuominen Exp $
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> udev-206-r1.ebuild,
+  udev-9999.ebuild:
+  Pass explicit --disable-xattr because it's only used by systemd-only files
+  src/core/socket.c (used only for systemd-core target at Makefile.am) and
+  src/journal/journal-*.c to avoid build failure when sys-apps/attr headers are
+  installed, but the 32bit library is missing. Thanks to Alexis Ballier for
+  detecting this.
 
   08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> udev-206-r1.ebuild,
   udev-9999.ebuild:

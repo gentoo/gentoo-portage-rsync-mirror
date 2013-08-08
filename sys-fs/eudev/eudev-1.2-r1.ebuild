@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2-r1.ebuild,v 1.2 2013/08/08 12:54:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2-r1.ebuild,v 1.3 2013/08/08 15:19:47 axs Exp $
 
 EAPI="5"
 
@@ -103,6 +103,8 @@ src_prepare()
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
+
+	epatch "${FILESDIR}"/${PN}-selinux-timespan.patch
 
 	epatch_user
 
