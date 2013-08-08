@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15-r4.ebuild,v 1.2 2013/08/07 14:59:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15-r4.ebuild,v 1.3 2013/08/08 13:56:08 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.sixxs.net/archive/sixxs/aiccu/unix/${PN}_${PV//\./}.tar.gz"
 
 LICENSE="SixXS"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm hppa ~ppc ~sparc ~x86"
 IUSE="systemd"
 
 RDEPEND="net-libs/gnutls

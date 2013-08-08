@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.45 2013/08/07 14:59:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.46 2013/08/08 13:56:08 jer Exp $
+
+  08 Aug 2013; Jeroen Roovers <jer@gentoo.org> aiccu-2007.01.15-r4.ebuild:
+  Stable for HPPA (bug #480088).
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> aiccu-2007.01.15-r4.ebuild:
   Stable for amd64, wrt bug #480088
