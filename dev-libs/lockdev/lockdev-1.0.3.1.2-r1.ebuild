@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r1.ebuild,v 1.4 2013/03/06 20:20:49 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r1.ebuild,v 1.5 2013/08/08 20:13:15 jcallen Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ KEYWORDS="amd64 ~arm x86"
 IUSE="perl"
 
 DEPEND="
-	perl? ( dev-lang/perl[-build] )
+	perl? ( || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] ) )
 "
 RDEPEND="${DEPEND}"
 
