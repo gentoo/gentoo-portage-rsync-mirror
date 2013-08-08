@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.202 2013/08/08 13:59:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.203 2013/08/08 22:21:18 mgorny Exp $
+
+  08 Aug 2013; Michał Górny <mgorny@gentoo.org>
+  -files/setuptools-0.6.40-no-exes.patch,
+  -files/setuptools-0.7.2-test-easy.patch, -setuptools-0.7.2-r1.ebuild,
+  -setuptools-0.7.3.ebuild, -setuptools-0.7.8.ebuild, -setuptools-0.9.6.ebuild,
+  -setuptools-0.9.7.ebuild:
+  Drop most of the old versions.
 
   08 Aug 2013; Jeroen Roovers <jer@gentoo.org> setuptools-0.8-r1.ebuild:
   Stable for HPPA (bug #479980).

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.917 2013/08/08 10:20:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.918 2013/08/08 22:29:21 mgorny Exp $
+
+  08 Aug 2013; Michał Górny <mgorny@gentoo.org> +twisted-r1.eclass:
+  Introduce a twisted-r1.eclass to join the python-r1 suite and replace
+  twisted.eclass.
 
   08 Aug 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Allow wrapping headers that are installed only for some of the ABIs.
