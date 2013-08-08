@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.916 2013/08/07 16:37:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.917 2013/08/08 10:20:15 mgorny Exp $
+
+  08 Aug 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Allow wrapping headers that are installed only for some of the ABIs.
 
   07 Aug 2013; Mike Gilbert <floppym@gentoo.org> python-r1.eclass,
   python-single-r1.eclass:

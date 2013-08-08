@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.17 2013/07/30 02:08:54 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.18 2013/08/08 10:20:15 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -268,10 +268,6 @@ multilib_prepare_wrappers() {
 
 		local dir=${f%/*}
 
-		# $CHOST shall be set by multilib_toolchain_setup
-		dodir "/tmp/multilib-include/${CHOST}${dir}"
-		mv "${root}/usr/include${f}" "${ED}/tmp/multilib-include/${CHOST}${dir}/" || die
-
 		if [[ ! -f ${ED}/tmp/multilib-include${f} ]]; then
 			dodir "/tmp/multilib-include${dir}"
 			# a generic template
@@ -303,28 +299,35 @@ multilib_prepare_wrappers() {
 _EOF_
 		fi
 
-		# XXX: get abi_* directly
-		local abi_flag
-		case "${ABI}" in
-			amd64|amd64_fbsd)
-				abi_flag=abi_x86_64;;
-			x86|x86_fbsd)
-				abi_flag=abi_x86_32;;
-			x32)
-				abi_flag=abi_x86_x32;;
-			n32)
-				abi_flag=abi_mips_n32;;
-			n64)
-				abi_flag=abi_mips_n64;;
-			o32)
-				abi_flag=abi_mips_o32;;
-			*)
-				die "Header wrapping for ${ABI} not supported yet";;
-		esac
+		# Some ABIs may have install less files than others.
+		if [[ -f ${root}/usr/include${f} ]]; then
+			# $CHOST shall be set by multilib_toolchain_setup
+			dodir "/tmp/multilib-include/${CHOST}${dir}"
+			mv "${root}/usr/include${f}" "${ED}/tmp/multilib-include/${CHOST}${dir}/" || die
 
-		# Note: match a space afterwards to avoid collision potential.
-		sed -e "/${abi_flag} /s&error.*&include <${CHOST}${f}>&" \
-			-i "${ED}/tmp/multilib-include${f}" || die
+			# XXX: get abi_* directly
+			local abi_flag
+			case "${ABI}" in
+				amd64|amd64_fbsd)
+					abi_flag=abi_x86_64;;
+				x86|x86_fbsd)
+					abi_flag=abi_x86_32;;
+				x32)
+					abi_flag=abi_x86_x32;;
+				n32)
+					abi_flag=abi_mips_n32;;
+				n64)
+					abi_flag=abi_mips_n64;;
+				o32)
+					abi_flag=abi_mips_o32;;
+				*)
+					die "Header wrapping for ${ABI} not supported yet";;
+			esac
+
+			# Note: match a space afterwards to avoid collision potential.
+			sed -e "/${abi_flag} /s&error.*&include <${CHOST}${f}>&" \
+				-i "${ED}/tmp/multilib-include${f}" || die
+		fi
 	done
 }
 
