@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.3.0_p130801.ebuild,v 1.1 2013/08/01 10:43:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.3.1.ebuild,v 1.1 2013/08/08 06:51:10 jlec Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
 HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
-SRC_URI="http://www-old.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}r3.tar.gz"
+SRC_URI="http://www-old.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}r2.tar.gz -> analysis${MY_PV}.tar.gz"
 [[ -n ${PATCHSET} ]] \
 	&& SRC_URI+=" http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
 

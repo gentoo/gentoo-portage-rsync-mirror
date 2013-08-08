@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.3.0_p130705.ebuild,v 1.1 2013/07/05 15:18:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.3.1.ebuild,v 1.1 2013/08/08 06:48:11 jlec Exp $
 
 EAPI=5
 
@@ -8,14 +8,14 @@ PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
 inherit eutils portability python-r1 versionator
 
-PATCHSET="${PV##*_p}"
+#PATCHSET="${PV##*_p}"
 MY_PN="${PN/-data}mr"
 MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR - Data"
 HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
-SRC_URI="http://www2.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}r2.tar.gz -> analysis${MY_PV}.tar.gz"
+SRC_URI="http://www2.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}.tar.gz"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
 
 SLOT="0"
@@ -50,7 +50,7 @@ src_install() {
 
 	pydocs="$(find python -name doc -type d)"
 
-	linking() {
+	symlinking() {
 		in_path=$(python_get_sitedir)/ccpn
 		ein_path="${in_path#${EPREFIX}}"
 		dosym ../../../../share/doc/${PF}/html ${ein_path}/doc
@@ -60,7 +60,7 @@ src_install() {
 		dosym /usr/share/ccpn/data ${ein_path}/data
 		dosym /usr/share/ccpn/model ${ein_path}/model
 	}
-	python_foreach_impl linking
+	python_foreach_impl symlinking
 
 	dohtml -r doc/*
 	insinto /usr/share/ccpn
