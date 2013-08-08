@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1049 2013/08/05 13:52:30 mrueg Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1050 2013/08/07 23:09:51 radhermit Exp $
 
 -->
 <herds>
@@ -1580,6 +1580,10 @@
     <email>vapier@gentoo.org</email>
     <role>help with portmap/nfs-utils/etc...</role>
   </maintainer>
+  <maintainer>
+    <email>radhermit@gentoo.org</email>
+    <name>Tim Harder</name>
+  </maintainer>
 </herd>
 <herd>
   <name>prolog</name>
@@ -1647,11 +1651,15 @@
 <herd>
   <name>lang-misc</name>
   <email>lang-misc@gentoo.org</email>
-  <description>Programming language related packages (mostly under dev-lang) that do not easilly fall under individual category</description>
+  <description>Programming language related packages (mostly under dev-lang) that do not easily fall under individual category</description>
   <maintainer>
     <email>george@gentoo.org</email>
     <name>George Shapovalov</name>
     <role>initiator of the herd, maintain some of the packages (see individual metadata)</role>
+  </maintainer>
+  <maintainer>
+    <email>radhermit@gentoo.org</email>
+    <name>Tim Harder</name>
   </maintainer>
 </herd>
 <herd>
