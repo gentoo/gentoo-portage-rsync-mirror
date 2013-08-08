@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.7.2.ebuild,v 1.3 2013/08/07 13:15:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.7.2.ebuild,v 1.4 2013/08/08 12:29:59 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}_src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="aqua dbus nls test"
 
 RDEPEND=">=app-admin/eselect-wxwidgets-0.7-r1

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15000 2013/08/08 08:52:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15001 2013/08/08 12:05:37 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,6 +44,8 @@
 dev-lang/python:2.5
 dev-lang/python:3.1
 dev-python/pypy:1.9
+dev-python/pypy-bin:1.9
+virtual/pypy:1.9
 dev-python/multiprocessing
 dev-python/turbogears
 dev-python/tg-widgets-scriptaculous
