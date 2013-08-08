@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psutil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.22 2013/07/18 00:10:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.23 2013/08/08 07:32:49 pinkbyte Exp $
+
+  08 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> psutil-1.0.1.ebuild:
+  Add ~arm keyword, wrt bug #477832
 
 *psutil-1.0.1 (18 Jul 2013)
 
