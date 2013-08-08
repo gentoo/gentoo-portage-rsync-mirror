@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.16b-r2.ebuild,v 1.12 2013/08/08 19:42:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.17b.ebuild,v 1.1 2013/08/08 19:42:32 mr_bones_ Exp $
 
 EAPI=4
 inherit flag-o-matic eutils toolchain-funcs
@@ -16,7 +16,7 @@ SRC_URI="http://ezix.org/software/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="gtk sqlite static"
 
 REQUIRED_USE="static? ( !gtk )"
@@ -37,7 +37,7 @@ src_prepare() {
 	if [[ -n "${LINGUAS+x}" ]] ; then
 		local langs
 
-		for i in $(cd po ; echo *.po | sed 's/\.po//') ; do
+		for i in $(cd src/po ; echo *.po | sed 's/\.po//') ; do
 			if has ${i} ${LINGUAS} ; then
 				langs += " ${i}"
 			fi

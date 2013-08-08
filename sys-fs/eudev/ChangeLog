@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.60 2013/08/08 15:19:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.61 2013/08/08 19:47:52 axs Exp $
+
+  08 Aug 2013; Ian Stakenvicius <axs@gentoo.org> eudev-1.2-r1.ebuild,
+  eudev-9999.ebuild:
+  fixed configure options for non-native abi, bug 480288
 
   08 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
   +files/eudev-selinux-timespan.patch, -files/eudev-fix-selinux.patch,

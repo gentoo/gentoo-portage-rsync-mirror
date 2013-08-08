@@ -1,6 +1,5 @@
-diff -ur lshw-B.02.15.orig/src/core/Makefile lshw-B.02.15/src/core/Makefile
---- lshw-B.02.15.orig/src/core/Makefile	2010-10-05 02:34:27.000000000 -0700
-+++ lshw-B.02.15/src/core/Makefile	2010-10-27 22:52:25.417069825 -0700
+--- lshw-B.02.15.orig/src/core/Makefile
++++ lshw-B.02.15/src/core/Makefile
 @@ -1,10 +1,10 @@
  PACKAGENAME?=lshw
  
@@ -15,9 +14,8 @@ diff -ur lshw-B.02.15.orig/src/core/Makefile lshw-B.02.15/src/core/Makefile
  LDSTATIC=
  LIBS=
  
-diff -ur lshw-B.02.15.orig/src/gui/Makefile lshw-B.02.15/src/gui/Makefile
---- lshw-B.02.15.orig/src/gui/Makefile	2010-10-05 02:34:27.000000000 -0700
-+++ lshw-B.02.15/src/gui/Makefile	2010-10-27 22:54:54.870258929 -0700
+--- lshw-B.02.15.orig/src/gui/Makefile
++++ lshw-B.02.15/src/gui/Makefile
 @@ -8,11 +8,11 @@
  DEFINES=-DPREFIX=\"$(PREFIX)\" -DSBINDIR=\"$(SBINDIR)\" -DMANDIR=\"$(MANDIR)\" -DDATADIR=\"$(DATADIR)\"
  GTKINCLUDES=$(shell pkg-config gtk+-2.0 --cflags)
@@ -40,9 +38,8 @@ diff -ur lshw-B.02.15.orig/src/gui/Makefile lshw-B.02.15/src/gui/Makefile
  	
  clean:
  	rm -f $(OBJS) gtk-$(PACKAGENAME) gtk-lshw.glade.bak gtk-lshw.gladep.bak interface.c.bak interface.h.bak callbacks.c.bak callbacks.h.bak Makefile.bak
-diff -ur lshw-B.02.15.orig/src/Makefile lshw-B.02.15/src/Makefile
---- lshw-B.02.15.orig/src/Makefile	2010-10-05 02:34:27.000000000 -0700
-+++ lshw-B.02.15/src/Makefile	2010-10-27 22:53:26.010552033 -0700
+--- lshw-B.02.15.orig/src/Makefile
++++ lshw-B.02.15/src/Makefile
 @@ -21,11 +21,13 @@
  CXX?=c++
  INCLUDES=-I./core/

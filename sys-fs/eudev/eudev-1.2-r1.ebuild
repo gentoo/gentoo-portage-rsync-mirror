@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2-r1.ebuild,v 1.3 2013/08/08 15:19:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2-r1.ebuild,v 1.4 2013/08/08 19:47:52 axs Exp $
 
 EAPI="5"
 
@@ -134,28 +134,42 @@ multilib_src_configure()
 		--with-html-dir="/usr/share/doc/${PF}/html"
 		--enable-split-usr
 		--exec-prefix=/
+	)
+	# Only build libudev for non-native_abi, and only install it to libdir,
+	# that means all options only apply to native_abi
+	if multilib_is_native_abi; then econf_args+=(
+		--with-rootlibdir=/$(get_libdir)
 		$(use_enable doc gtk-doc)
+		$(use_enable gudev)
+		$(use_enable introspection)
 		$(use_enable keymap)
 		$(use_enable kmod libkmod)
 		$(use_enable modutils modules)
+		$(use_enable static-libs static)
 		$(use_enable selinux)
 		$(use_enable rule-generator)
-	)
-	# only install libs to /lib and build gudev for native abi
-	# also non-native-abi only need dynamic libs, so skip static
-	if multilib_is_native_abi; then econf_args+=(
-		--with-rootlibdir=/$(get_libdir)
-		$(use_enable gudev)
-		$(use_enable introspection)
-		$(use_enable static-libs static)
 		)
 	else econf_args+=(
-		--disable-gudev
-		--disable-introspection
-		--disable-static
+		$(echo --disable-{gtk-doc,gudev,introspection,keymap,libkmod,modules,static,selinux,rule-generator})
 		)
 	fi
 	ECONF_SOURCE="${S}" econf "${econf_args[@]}"
+}
+
+multilib_src_compile()
+{
+	if ! multilib_is_native_abi; then
+		cd src/libudev || die "Could not change directory"
+	fi
+	emake
+}
+
+multilib_src_install()
+{
+	if ! multilib_is_native_abi; then
+		cd src/libudev || die "Could not change directory"
+	fi
+	emake DESTDIR="${D}" install
 }
 
 multilib_src_test()

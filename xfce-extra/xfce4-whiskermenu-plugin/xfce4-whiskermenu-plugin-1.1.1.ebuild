@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/xfce4-whiskermenu-plugin-1.0.3.ebuild,v 1.1 2013/07/18 12:56:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/xfce4-whiskermenu-plugin-1.1.1.ebuild,v 1.1 2013/08/08 19:37:40 hasufell Exp $
 
 EAPI=5
 
-inherit eutils gnome2-utils cmake-utils
+inherit gnome2-utils cmake-utils
 
 DESCRIPTION="Alternate application launcher for Xfce"
 HOMEPAGE="http://gottcode.org/xfce4-whiskermenu-plugin/"
@@ -28,10 +28,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	# merged upstream
-	# https://github.com/gottcode/xfce4-whiskermenu-plugin/pull/18
-	epatch "${FILESDIR}"/${P}-{Werror,ldflags,reorder-flags}.patch
-
 	local i
 	if [[ -n "${LINGUAS+x}" ]] ; then
 		for i in $(grep add_subdirectory po/CMakeLists.txt | sed 's/add_subdirectory(//;s/)$//') ; do

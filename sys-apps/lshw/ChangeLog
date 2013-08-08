@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.114 2013/06/26 13:41:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.115 2013/08/08 19:42:32 mr_bones_ Exp $
+
+*lshw-02.17b (08 Aug 2013)
+
+  08 Aug 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/lshw-02.17b-gentoo.patch, +lshw-02.17b.ebuild,
+  files/lshw-02.15b-build.patch, files/lshw-02.16b-gentoo.patch,
+  lshw-02.16b-r2.ebuild:
+  version bump; also fixes bug #402313
 
   26 Jun 2013; Jeroen Roovers <jer@gentoo.org> lshw-02.16b-r2.ebuild:
   Stable for HPPA too.
