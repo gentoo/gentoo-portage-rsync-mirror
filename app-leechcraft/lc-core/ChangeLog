@@ -1,10 +1,13 @@
 # ChangeLog for app-leechcraft/lc-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.9 2013/07/18 12:41:32 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.11 2013/08/08 17:48:48 pinkbyte Exp $
+
+  08 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> lc-core-9999.ebuild:
+  Add dev-qt/qtwebkit dependency
 
 *lc-core-0.5.99 (18 Jul 2013)
 
-  18 Jul 2013; <maks@gentoo.org> +lc-core-0.5.99.ebuild:
+  18 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-core-0.5.99.ebuild:
   Bump app-leechcraft/lc-core to 0.5.99, thanks to 0xd34df00d
 
 *lc-core-0.5.98 (03 Jul 2013)
