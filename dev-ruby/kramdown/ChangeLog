@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/kramdown
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.23 2013/07/14 16:10:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.24 2013/08/08 19:30:13 maekke Exp $
+
+  08 Aug 2013; Markus Meier <maekke@gentoo.org> kramdown-1.1.0.ebuild:
+  add ~arm, bug #477648
 
 *kramdown-1.1.0 (14 Jul 2013)
 

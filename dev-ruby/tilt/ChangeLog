@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tilt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.27 2013/07/21 15:19:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.28 2013/08/08 19:31:09 maekke Exp $
+
+  08 Aug 2013; Markus Meier <maekke@gentoo.org> tilt-1.4.1.ebuild:
+  add ~arm, bug #477648
 
 *tilt-1.4.1 (21 Jul 2013)
 

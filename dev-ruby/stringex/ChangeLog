@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/stringex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.11 2013/07/31 04:33:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.12 2013/08/08 19:29:45 maekke Exp $
+
+  08 Aug 2013; Markus Meier <maekke@gentoo.org> stringex-2.0.7.ebuild:
+  add ~arm, bug #477648
 
 *stringex-2.0.7 (31 Jul 2013)
 
