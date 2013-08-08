@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.60 2013/08/07 14:57:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.61 2013/08/08 14:08:47 jer Exp $
+
+  08 Aug 2013; Jeroen Roovers <jer@gentoo.org> denyhosts-2.6-r8.ebuild:
+  Stable for HPPA (bug #480032).
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> denyhosts-2.6-r8.ebuild:
   Stable for amd64, wrt bug #480032
