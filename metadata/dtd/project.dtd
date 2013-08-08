@@ -6,6 +6,8 @@
 <!ELEMENT body      (%body.class;)*>
 
 <!ELEMENT project (name, longname?, date?, author*, description, longdescription, goals?, recruitment?, (dev | resource | subproject | plannedproject |extraproject | extrachapter |  herd | task | author)* )>
+<!ATTLIST project	disclaimer (draft|obsolete) #IMPLIED
+			redirect CDATA #IMPLIED>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT longname (#PCDATA)>
 <!ELEMENT description (#PCDATA)>

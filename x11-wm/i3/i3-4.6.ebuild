@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.6.ebuild,v 1.1 2013/08/07 19:35:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.6.ebuild,v 1.2 2013/08/08 18:56:58 xarthisius Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ src_prepare() {
 		exec /usr/bin/i3
 	EOF
 
+	epatch "${FILESDIR}"/${P}-missing_include.patch #480272
 	epatch_user #471716
 }
 
