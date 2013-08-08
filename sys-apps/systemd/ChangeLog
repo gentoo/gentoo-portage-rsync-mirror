@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.160 2013/08/08 09:03:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.161 2013/08/08 18:23:11 ssuominen Exp $
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> systemd-206-r2.ebuild,
+  systemd-9999-r1.ebuild:
+  Raise the emul-linux-x86-baselibs block from -r7 to -r8 in order to avoid
+  file collision w/ libsystemd-daemon wrt #480274 by "nE0sIghT"
 
 *systemd-206-r2 (08 Aug 2013)
 

@@ -66,3 +66,7 @@ lib32/libudev.so.1
 lib32/libudev.so.1.2.1
 usr/lib32/libudev.so
 usr/lib32/pkgconfig/libudev.pc
+lib32/libsystemd-daemon.so.0.0.7
+lib32/libsystemd-daemon.so.0
+usr/lib32/libsystemd-daemon.so
+usr/lib32/pkgconfig/libsystemd-daemon.pc

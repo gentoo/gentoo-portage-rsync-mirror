@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r2.ebuild,v 1.1 2013/08/08 09:03:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r2.ebuild,v 1.2 2013/08/08 18:23:11 ssuominen Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xattr? ( sys-apps/attr )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r7
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r8
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
 # baselayout-2.2 has /run

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.15 2013/05/04 12:14:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.16 2013/08/08 18:08:49 bicatali Exp $
+
+*pandas-0.12.0 (08 Aug 2013)
+
+  08 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> +pandas-0.12.0.ebuild,
+  -pandas-0.10.0.ebuild, -pandas-0.10.1.ebuild, metadata.xml:
+  Version bump
 
   04 May 2013; Justin Lecher <jlec@gentoo.org> pandas-0.11.0.ebuild:
   Add correct python USEDEP strings, thanks mgorny for helping

@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.151 2013/08/08 13:03:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.153 2013/08/08 18:21:05 ssuominen Exp $
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r8.ebuild:
+  old
+
+*emul-linux-x86-baselibs-20130224-r9 (08 Aug 2013)
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +emul-linux-x86-baselibs-20130224-r9.ebuild, files/remove-native:
+  Remove libsystemd-daemon because it's now provided by
+  >=sys-apps/systemd-206-r2 wrt #480274 by "nE0sIghT"
 
   08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
   -emul-linux-x86-baselibs-20130224-r7.ebuild:
