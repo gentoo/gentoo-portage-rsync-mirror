@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.4.ebuild,v 1.1 2013/07/24 14:09:16 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.4.ebuild,v 1.2 2013/08/08 03:04:35 zerochaos Exp $
 
 EAPI="5"
 
@@ -54,7 +54,6 @@ pkg_setup() {
 		~FTRACE
 		~BLK_DEV_IO_TRACE
 		~TIMER_STATS
-		~EVENT_POWER_TRACING_DEPRECATED
 		~TRACING
 	"
 	ERROR_KERNEL_X86_MSR="X86_MSR is not enabled in the kernel, you almost certainly need it"
@@ -70,7 +69,6 @@ pkg_setup() {
 	ERROR_KERNEL_FTRACE="FTRACE needs to be turned on to enable BLK_DEV_IO_TRACE"
 	ERROR_KERNEL_BLK_DEV_IO_TRACE="BLK_DEV_IO_TRACE needs to be turned on to enable TIMER_STATS, TRACING and EVENT_POWER_TRACING_DEPRECATED"
 	ERROR_KERNEL_TIMER_STATS="TIMER_STATS should be enabled in the kernel for full powertop function"
-	ERROR_KERNEL_EVENT_POWER_TRACING_DEPRECATED="EVENT_POWER_TRACING_DEPRECATED should be enabled in the kernel for full powertop function"
 	ERROR_KERNEL_TRACING="TRACING should be enabled in the kernel for full powertop function"
 	linux-info_pkg_setup
 	if linux_config_exists; then
@@ -80,6 +78,11 @@ pkg_setup() {
 				ERROR_KERNEL_SND_HDA_POWER_SAVE="SND_HDA_POWER_SAVE should be enabled in the kernel for full powertop function"
 				check_extra_config
 			fi
+		fi
+		if kernel_is -lt 3 9 0; then
+			CONFIG_CHECK="~EVENT_POWER_TRACING_DEPRECATED"
+			ERROR_KERNEL_EVENT_POWER_TRACING_DEPRECATED="EVENT_POWER_TRACING_DEPRECATED should be enabled in the kernel for full powertop function"
+			check_extra_config
 		fi
 	fi
 }
