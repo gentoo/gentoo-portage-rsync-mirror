@@ -17,7 +17,7 @@
     <flag name="dmalloc">Enable debugging with the dmalloc library</flag>
     <flag name="hesiod">Install hesiod module</flag>
     <flag name="ldap">Install LDAP module</flag>
-    <flag name="libtirpc">Use libtirpc lib support</flag>
+    <flag name="libtirpc">Use TiRPC library instead of SunRPC</flag>
     <flag name="mount-locking">
 		Enable locking to prevent corruption of /etc/mtab in the presence of
 		concurrent auto-mounting. If enabled, recursive auto-mounting (eg. using
