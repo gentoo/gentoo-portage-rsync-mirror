@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.118 2013/08/02 17:16:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.119 2013/08/08 20:49:55 axs Exp $
+
+  08 Aug 2013; Ian Stakenvicius <axs@gentoo.org> -spidermonkey-1.8.5-r1.ebuild,
+  -spidermonkey-1.8.5-r2.ebuild, -spidermonkey-1.8.5-r3.ebuild,
+  -spidermonkey-1.8.7-r2.ebuild, -spidermonkey-1.8.7.ebuild,
+  spidermonkey-1.8.2.15-r2.ebuild, spidermonkey-1.8.5-r4.ebuild,
+  spidermonkey-1.8.7-r3.ebuild, spidermonkey-17.0.0.ebuild:
+  Slotted spidermonkey-17, all newer versions of spidermonkey will now be
+  slotted; converted most ebuilds to python-any-r1; dropped old versions of
+  1.8.5 and 1.8.7
 
 *spidermonkey-17.0.0 (02 Aug 2013)
 

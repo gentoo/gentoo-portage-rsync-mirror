@@ -1,9 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.2.15-r2.ebuild,v 1.1 2012/10/23 19:07:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.2.15-r2.ebuild,v 1.2 2013/08/08 20:49:55 axs Exp $
 
 EAPI="5"
-inherit eutils toolchain-funcs multilib python
+PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_REQ_USE="threads"
+inherit eutils toolchain-funcs multilib python-any-r1
 
 MY_PV="${PV}"
 MY_PV="${MY_PV/1.8.2/3.6}"
@@ -23,14 +25,9 @@ BUILDDIR="${S}/js/src"
 RDEPEND="threadsafe? ( >=dev-libs/nspr-4.8.6 )"
 
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	app-arch/zip
-	=dev-lang/python-2*[threads]
 	virtual/pkgconfig"
-
-pkg_setup(){
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.9.2.13-as-needed.patch"
@@ -56,7 +53,7 @@ src_configure() {
 
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
 	AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" \
-	LD="$(tc-getLD)" PYTHON="$(PYTHON)" econf \
+	LD="$(tc-getLD)" econf \
 		${myconf}
 }
 

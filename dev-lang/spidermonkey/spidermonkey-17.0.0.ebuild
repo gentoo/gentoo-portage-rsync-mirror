@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0.ebuild,v 1.1 2013/08/02 17:16:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0.ebuild,v 1.2 2013/08/08 20:49:55 axs Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
-inherit eutils toolchain-funcs multilib python versionator pax-utils
+PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_REQ_USE="threads"
+inherit eutils toolchain-funcs multilib python-any-r1 versionator pax-utils
 
 MY_PN="mozjs"
 MY_P="${MY_PN}${PV}"
@@ -13,7 +15,7 @@ HOMEPAGE="http://www.mozilla.org/js/spidermonkey/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/js/${MY_PN}${PV}.tar.gz"
 
 LICENSE="NPL-1.1"
-SLOT="0/mozjs17.0.0"
+SLOT="17"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug jit minimal static-libs test"
 
@@ -25,14 +27,13 @@ BUILDDIR="${S}/js/src"
 RDEPEND=">=dev-libs/nspr-4.9.4
 	virtual/libffi"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	app-arch/zip
-	=dev-lang/python-2*[threads]
 	virtual/pkgconfig"
 
 pkg_setup(){
 	if [[ ${MERGE_TYPE} != "binary" ]]; then
-		python_set_active_version 2
-		python_pkg_setup
+		python-any-r1_pkg_setup
 		export LC_ALL="C"
 	fi
 }
@@ -51,7 +52,7 @@ src_configure() {
 
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
 	AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" \
-	LD="$(tc-getLD)" PYTHON="$(PYTHON)" \
+	LD="$(tc-getLD)" \
 	econf \
 		${myopts} \
 		--enable-jemalloc \
@@ -106,10 +107,10 @@ src_install() {
 
 	if ! use minimal; then
 		if use jit; then
-			pax-mark m "${ED}/usr/bin/js1*"
+			pax-mark m "${ED}/usr/bin/js${SLOT}*"
 		fi
 	else
-		rm -f "${ED}/usr/bin/js1*"
+		rm -f "${ED}/usr/bin/js${SLOT}"
 	fi
 
 	if ! use static-libs; then
