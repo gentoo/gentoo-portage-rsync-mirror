@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.243 2013/08/08 10:59:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.244 2013/08/08 11:02:38 ssuominen Exp $
 
 EAPI=5
 
@@ -407,7 +407,6 @@ pkg_preinst() {
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
-	preserve_old_lib /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 }
 
 pkg_postinst() {
@@ -492,15 +491,13 @@ pkg_postinst() {
 	if has_version sys-apps/biosdevname; then
 		ewarn
 		ewarn "You can replace the functionality of sys-apps/biosdevname which has been"
-		ewaen "detected to be installed with the new predictable network interface names."
+		ewarn "detected to be installed with the new predictable network interface names."
 	fi
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
-
-	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 
 	elog
 	elog "For more information on udev on Gentoo, upgrading, writing udev rules, and"
