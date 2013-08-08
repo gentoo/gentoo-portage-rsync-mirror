@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.5-r2.ebuild,v 1.12 2013/08/07 17:09:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.5-r2.ebuild,v 1.13 2013/08/08 02:01:18 mr_bones_ Exp $
 
-EAPI="2"
-
+EAPI=3
 inherit eutils autotools
 
 DESCRIPTION="GNU system accounting utilities"
@@ -16,8 +15,9 @@ KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~amd64-linux ~
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-6.5.5-cross-compile.patch
-	epatch "${FILESDIR}"/${PN}-6.5.5-no-gets.patch
+	epatch \
+		"${FILESDIR}"/${PN}-6.5.5-cross-compile.patch \
+		"${FILESDIR}"/${PN}-6.5.5-no-gets.patch
 	eautoreconf
 }
 
