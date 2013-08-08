@@ -1,9 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.0.ebuild,v 1.2 2012/08/03 22:14:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.2.ebuild,v 1.1 2013/08/08 21:48:11 bicatali Exp $
 
-EAPI=4
-inherit autotools eutils
+EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
+inherit autotools-utils eutils
 
 DESCRIPTION="Library for reading and writing matlab files"
 HOMEPAGE="http://sourceforge.net/projects/matio/"
@@ -17,28 +19,25 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-	eautoreconf
-}
+PATCHES=( "${FILESDIR}"/${PN}-1.5.0-asneeded.patch )
 
 src_configure() {
-	econf \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		--enable-shared \
-		$(use_enable hdf5 mat73) \
-		$(use_enable sparse extended-sparse) \
-		$(use_enable static-libs static)
+	local myeconfargs=(
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
+		$(use_enable hdf5 mat73)
+		$(use_enable sparse extended-sparse)
+	)
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	emake
-	use doc && emake -C documentation pdf
+	autotools-utils_src_compile
+	use doc && 	autotools-utils_src_compile -C documentation pdf
 }
 
 src_install() {
-	default
-	use doc && dodoc documentation/matio_user_guide.pdf
+	autotools-utils_src_install
+	use doc && dodoc "${WORKDIR}"/${P}_build/documentation/matio_user_guide.pdf
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins test/test*
