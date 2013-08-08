@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.5 2013/02/10 02:49:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.6 2013/08/08 16:34:44 lxnay Exp $
 
 EAPI="3"
 
@@ -36,7 +36,7 @@ RDEPEND="net-wireless/bluez
 	python? ( >=dev-lang/python-2.4 )"
 
 pkg_setup() {
-	CONFIG_CHECK="BT_L2CAP INPUT_UINPUT"
+	CONFIG_CHECK="~BT_L2CAP ~INPUT_UINPUT"
 	linux-mod_pkg_setup
 }
 

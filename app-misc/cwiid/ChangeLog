@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cwiid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/ChangeLog,v 1.7 2013/03/17 15:01:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/ChangeLog,v 1.8 2013/08/08 16:34:44 lxnay Exp $
+
+  08 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> cwiid-20110107-r1.ebuild:
+  do not die() on CONFIG_CHECK failures, fix bug #480130
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
