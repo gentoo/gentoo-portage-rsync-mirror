@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.20 2013/07/24 14:47:16 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.21 2013/08/08 05:44:12 radhermit Exp $
+
+*pip-1.4.1 (08 Aug 2013)
+
+  08 Aug 2013; Tim Harder <radhermit@gentoo.org> -pip-1.2.1.ebuild,
+  +pip-1.4.1.ebuild, -files/pip-1.0.1-unversioned.patch:
+  Version bump and remove old.
 
   24 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> pip-1.4.ebuild:
   Fix pip docs (bug 478008).
