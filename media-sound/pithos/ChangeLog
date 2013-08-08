@@ -1,10 +1,19 @@
 # ChangeLog for media-sound/pithos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/ChangeLog,v 1.2 2013/07/11 17:06:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/ChangeLog,v 1.3 2013/08/08 21:24:48 chutzpah Exp $
+
+*pithos-20130808 (08 Aug 2013)
+
+  08 Aug 2013; Patrick McLean <chutzpah@gentoo.org> pithos-20130710.ebuild,
+  +pithos-20130808.ebuild, pithos-99999999.ebuild,
+  +files/pithos-20130808-detect-datadir.patch,
+  +files/pithos-20130808-dont-notify-volume.patch:
+  Version bump, add PYTHON_USEDEP dependencies (bug #479930). Add patch to
+  disable annoying volume notifications (bug #480286).
 
 *pithos-99999999 (11 Jul 2013)
 
-  11 Jul 2013; Patrick McLean <chutz@gentoo.org> -pithos-9999.ebuild,
+  11 Jul 2013; Patrick McLean <chutzpah@gentoo.org> -pithos-9999.ebuild,
   +pithos-99999999.ebuild:
   Rename pithos-9999 to pithos-99999999 so the live will have a higher version
   that the release.
@@ -12,7 +21,7 @@
 *pithos-20130710 (10 Jul 2013)
 *pithos-9999 (10 Jul 2013)
 
-  10 Jul 2013; Patrick McLean <chutz@gentoo.org> +pithos-9999.ebuild,
+  10 Jul 2013; Patrick McLean <chutzpah@gentoo.org> +pithos-9999.ebuild,
   +pithos-20130710.ebuild, +files/pithos-detect-datadir.patch, +files/setup.py,
   +metadata.xml:
   Initial import.
