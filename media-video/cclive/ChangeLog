@@ -1,6 +1,17 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.63 2013/06/25 05:24:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.65 2013/08/08 07:27:27 radhermit Exp $
+
+  08 Aug 2013; Tim Harder <radhermit@gentoo.org> -cclive-0.7.10-r1.ebuild,
+  -cclive-0.7.11.ebuild:
+  Remove old.
+
+*cclive-0.9.1 (08 Aug 2013)
+*cclive-0.7.15 (08 Aug 2013)
+
+  08 Aug 2013; Tim Harder <radhermit@gentoo.org> +cclive-0.7.15.ebuild,
+  +cclive-0.9.1.ebuild:
+  Version bumps.
 
 *cclive-0.9.0 (25 Jun 2013)
 *cclive-0.7.13 (25 Jun 2013)

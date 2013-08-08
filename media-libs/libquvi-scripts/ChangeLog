@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libquvi-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.52 2013/08/08 06:59:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.53 2013/08/08 07:01:40 radhermit Exp $
+
+  08 Aug 2013; Tim Harder <radhermit@gentoo.org>
+  -libquvi-scripts-0.4.10.ebuild, -libquvi-scripts-0.4.11.ebuild,
+  -libquvi-scripts-0.4.12.ebuild, -libquvi-scripts-0.4.13.ebuild,
+  -libquvi-scripts-0.9.20130520.ebuild:
+  Remove old.
 
 *libquvi-scripts-0.9.20130805 (08 Aug 2013)
 *libquvi-scripts-0.4.17 (08 Aug 2013)
