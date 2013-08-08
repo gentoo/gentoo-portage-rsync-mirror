@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.35 2013/08/07 20:18:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.36 2013/08/08 12:54:37 ssuominen Exp $
 
 EAPI="5"
 
@@ -29,7 +29,11 @@ COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
 	>=sys-apps/util-linux-2.20
-	!<sys-libs/glibc-2.11"
+	!<sys-libs/glibc-2.11
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )

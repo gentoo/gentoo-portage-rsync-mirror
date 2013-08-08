@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb-compat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.38 2013/08/07 16:12:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.39 2013/08/08 12:41:49 ssuominen Exp $
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  libusb-compat-0.1.5-r2.ebuild:
+  Block revision of emul-linux-x86-baselibs that dropped the colliding files.
 
   07 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
   libusb-compat-0.1.5-r2.ebuild:

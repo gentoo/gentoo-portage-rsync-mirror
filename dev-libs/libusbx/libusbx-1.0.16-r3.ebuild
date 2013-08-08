@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.16-r3.ebuild,v 1.2 2013/08/07 18:25:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.16-r3.ebuild,v 1.3 2013/08/08 12:41:08 ssuominen Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib-minimal
@@ -15,11 +15,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="debug doc examples static-libs test udev"
 
 RDEPEND="udev? ( >=virtual/udev-200[${MULTILIB_USEDEP}] )
-	!dev-libs/libusb:1"
-#	abi_x86_32? (
-#		!<=app-emulation/emul-linux-x86-baselibs-2013
-#		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-#	)"
+	!dev-libs/libusb:1
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	!udev? ( virtual/os-headers )"

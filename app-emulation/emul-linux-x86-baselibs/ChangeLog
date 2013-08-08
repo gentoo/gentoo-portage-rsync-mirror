@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.149 2013/08/07 13:25:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.150 2013/08/08 12:49:20 ssuominen Exp $
+
+*emul-linux-x86-baselibs-20130224-r8 (08 Aug 2013)
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +emul-linux-x86-baselibs-20130224-r8.ebuild, files/remove-native:
+  libusb, libusbx, libusb-compat and udev were converted to the new multilib
+  format.
 
 *emul-linux-x86-baselibs-20130224-r7 (07 Aug 2013)
 

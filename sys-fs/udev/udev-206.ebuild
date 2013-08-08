@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206.ebuild,v 1.4 2013/07/30 17:37:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206.ebuild,v 1.5 2013/08/08 12:45:29 ssuominen Exp $
 
 EAPI=5
 
@@ -446,7 +446,7 @@ pkg_postinst() {
 	if has_version sys-apps/biosdevname; then
 		ewarn
 		ewarn "You can replace the functionality of sys-apps/biosdevname which has been"
-		ewaen "detected to be installed with the new predictable network interface names."
+		ewarn "detected to be installed with the new predictable network interface names."
 	fi
 
 	ewarn

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gamin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.103 2012/04/26 17:34:06 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.104 2013/08/08 12:56:28 aballier Exp $
+
+*gamin-0.1.10-r1 (08 Aug 2013)
+
+  08 Aug 2013; Alexis Ballier <aballier@gentoo.org> +gamin-0.1.10-r1.ebuild:
+  revision bump to forward multilib deps to libgamin
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gamin-0.1.10.ebuild:
   keyword ~amd64-fbsd

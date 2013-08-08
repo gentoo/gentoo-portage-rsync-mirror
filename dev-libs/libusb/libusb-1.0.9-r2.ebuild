@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-1.0.9-r2.ebuild,v 1.1 2013/08/07 15:55:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-1.0.9-r2.ebuild,v 1.2 2013/08/08 12:40:30 ssuominen Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib-minimal
@@ -14,11 +14,11 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -amd64-fbsd -x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="debug doc examples static-libs"
 
-RDEPEND="!dev-libs/libusbx:1"
-#	abi_x86_32? (
-#		!<=app-emulation/emul-linux-x86-baselibs-2013
-#		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-#	)"
+RDEPEND="!dev-libs/libusbx:1
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="doc? ( app-doc/doxygen )"
 
 multilib_src_configure() {
