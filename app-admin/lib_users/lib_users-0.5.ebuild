@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/lib_users-0.5.ebuild,v 1.7 2012/08/10 07:47:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/lib_users-0.5.ebuild,v 1.8 2013/08/09 15:44:41 jlec Exp $
 
 EAPI=3
+
 PYTHON_DEPEND="2"
 
 inherit python
 
-DESCRIPTION="Goes through /proc and finds all cases of libraries being mapped
-but marked as deleted"
+DESCRIPTION="Checks /proc for libraries being mapped but marked as deleted"
 HOMEPAGE="http://schwarzvogel.de/software-misc.shtml"
 SRC_URI="http://schwarzvogel.de/pkgs/${P}.tar.gz"
 

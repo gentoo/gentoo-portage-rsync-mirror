@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.30 2013/08/03 21:41:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.31 2013/08/09 15:44:41 jlec Exp $
+
+*lib_users-0.6-r1 (09 Aug 2013)
+
+  09 Aug 2013; Justin Lecher <jlec@gentoo.org> lib_users-0.5.ebuild,
+  lib_users-0.6.ebuild, +lib_users-0.6-r1.ebuild, metadata.xml:
+  Bump to python-r1.eclass; add py3.3 support; Clean DESCRIPTION
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> lib_users-0.6.ebuild:
   Stable for amd64, wrt bug #479342

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.1.ebuild,v 1.3 2013/06/27 20:43:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.1.ebuild,v 1.4 2013/08/09 15:39:56 aballier Exp $
 
 EAPI=2
 
@@ -83,7 +83,7 @@ REMOVE_SUBDIRS="
 	tcpdump ndp inetd
 	wpa/wpa_supplicant wpa/hostapd wpa/hostapd_cli wpa/wpa_cli wpa/wpa_passphrase
 	zic amd
-	pkg pkg_install freebsd-update"
+	pkg pkg_install freebsd-update service"
 
 src_prepare() {
 	if ! use build; then

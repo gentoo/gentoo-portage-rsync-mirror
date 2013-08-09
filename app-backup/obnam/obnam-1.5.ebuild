@@ -1,14 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.3.ebuild,v 1.2 2013/02/28 23:55:37 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.5.ebuild,v 1.1 2013/08/09 15:40:34 mschiff Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.6:2.7"
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="threads"
 PYTHON_MODNAME="${PN}lib"
 MY_P="${PN}_${PV}.orig"
 
-inherit eutils distutils python
+inherit eutils distutils-r1
 
 DESCRIPTION="A backup program that supports encryption and deduplication"
 HOMEPAGE="http://liw.fi/obnam/"
@@ -19,29 +20,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/cliapp
-	dev-python/larch
+DEPEND="${PYTHON_DEPS}
+	dev-python/cliapp
+	>=dev-python/larch-1.20130808
 	dev-python/paramiko
 	dev-python/tracing
 	dev-python/ttystatus
 	"
 RDEPEND="${DEPEND}"
 
-# S="${WORKDIR}/${MY_P}"
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	addpredict /proc/self/comm
-	distutils_src_prepare
+src_compile() {
+	addwrite /proc/self/comm
+	distutils-r1_src_compile
 }
 
 src_install() {
-	distutils_src_install
-	rm "${D}"/usr/bin/obnam-{benchmark,viewprof}
+	distutils-r1_src_install
+	rm "${D}"/usr/bin/obnam-{benchmark,viewprof}*
 	rm "${D}"/usr/share/man/man1/obnam-{benchmark,viewprof}*
 	insinto /etc
 	doins "${FILESDIR}"/obnam.conf
