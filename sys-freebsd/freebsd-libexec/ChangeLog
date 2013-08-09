@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.56 2013/08/09 14:28:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.57 2013/08/09 15:05:40 aballier Exp $
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-libexec-9.0.ebuild, -freebsd-libexec-9.1.ebuild,
+  -freebsd-libexec-9.1-r1.ebuild:
+  remove old
 
 *freebsd-libexec-9.1-r2 (09 Aug 2013)
 

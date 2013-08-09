@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.28.ebuild,v 1.1 2013/07/26 22:44:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.29.ebuild,v 1.2 2013/08/09 15:17:01 jer Exp $
 
 EAPI=5
 inherit eutils systemd toolchain-funcs
@@ -14,11 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="caps ipv6 +readline +rtc"
 
-DEPEND="
+RDEPEND="
 	caps? ( sys-libs/libcap )
 	readline? ( >=sys-libs/readline-4.1-r4 )
 "
-RDEPEND="${REPEND}"
+DEPEND="
+	${RDEPEND}
+	sys-apps/texinfo
+"
 
 S="${WORKDIR}/${P/_/-}"
 DOCS=( examples/chrony.{conf,keys}.example )

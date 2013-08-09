@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.52 2013/06/18 23:38:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.53 2013/08/09 15:04:07 aballier Exp $
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-mk-defs-9.0-r1.ebuild, -files/freebsd-mk-defs-9.0-gentoo.patch,
+  -files/freebsd-mk-defs-9.0-gnu.patch:
+  remove old
 
   18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
   -freebsd-mk-defs-7.2.ebuild, -freebsd-mk-defs-8.0.ebuild,
