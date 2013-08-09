@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15003 2013/08/08 21:09:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15004 2013/08/09 02:39:52 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -266,12 +266,6 @@ net-analyzer/openvas-server
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Jun 2013)
 # Prerelease ebuild, mostly untested and held together by duct tape.
 =sys-boot/syslinux-6.02_pre*
-
-# Doug Goldstein <cardoe@gentoo.org> (30 Jun 2013)
-# Masked for dev work
-# You can follow the patchset at https://github.com/cardoe/qemu/tree/qemu-1.5-gentoo
-# Warning: These branches get rebased often.
-=app-emulation/qemu-1.5.2-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (30 Jun 2013)
 # Sun JDK and JRE contain critical vulnerabilities and receive no further
