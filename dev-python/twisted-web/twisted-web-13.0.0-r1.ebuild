@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-13.0.0-r1.ebuild,v 1.1 2013/08/09 12:13:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-13.0.0-r1.ebuild,v 1.2 2013/08/09 13:05:28 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit twisted-r1 versionator
+inherit twisted-r1
 
 DESCRIPTION="Twisted web server, programmable in Python"
 
