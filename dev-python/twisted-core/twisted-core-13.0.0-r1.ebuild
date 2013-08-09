@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-13.0.0-r1.ebuild,v 1.1 2013/08/09 10:48:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-13.0.0-r1.ebuild,v 1.2 2013/08/09 12:16:47 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -31,8 +31,6 @@ PATCHES=(
 )
 
 python_prepare_all() {
-	distutils-r1_python_prepare_all
-
 	if [[ "${EUID}" -eq 0 ]]; then
 		# Disable tests failing with root permissions.
 		sed \
@@ -40,6 +38,8 @@ python_prepare_all() {
 			-e "s/test_deployedMode/_&/" \
 			-i twisted/test/test_plugin.py
 	fi
+
+	distutils-r1_python_prepare_all
 }
 
 python_compile() {

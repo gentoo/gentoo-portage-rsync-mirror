@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.63 2013/08/03 09:45:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.64 2013/08/09 12:24:21 mgorny Exp $
+
+*twisted-lore-13.0.0-r1 (09 Aug 2013)
+
+  09 Aug 2013; Michał Górny <mgorny@gentoo.org> +twisted-lore-13.0.0-r1.ebuild:
+  Migrate to twisted-r1.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> twisted-lore-10.2.0.ebuild,
   twisted-lore-11.0.0.ebuild, twisted-lore-11.1.0.ebuild,
