@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gpyutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.2 2013/08/05 15:50:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.3 2013/08/08 23:02:16 mgorny Exp $
+
+*gpyutils-0.1 (08 Aug 2013)
+
+  08 Aug 2013; Michał Górny <mgorny@gentoo.org> +gpyutils-0.1.ebuild,
+  gpyutils-9999.ebuild:
+  Introduce the initial release version of my Python maintenance utilities.
 
   05 Aug 2013; Michał Górny <mgorny@gentoo.org> gpyutils-9999.ebuild:
   Add missing PYTHON_USEDEP.

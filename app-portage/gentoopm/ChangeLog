@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.43 2013/08/07 11:55:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.44 2013/08/08 23:02:11 mgorny Exp $
+
+*gentoopm-0.2.9 (08 Aug 2013)
+
+  08 Aug 2013; Michał Górny <mgorny@gentoo.org> +gentoopm-0.2.9.ebuild:
+  Version bump. Brings bugfixes for Python 3 support and environment file
+  sourcing.
 
   07 Aug 2013; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.8.ebuild,
   gentoopm-9999.ebuild:
