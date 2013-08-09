@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/emacs-updater-1.13.ebuild,v 1.14 2013/07/14 14:50:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/emacs-updater-1.13.ebuild,v 1.15 2013/08/09 06:21:12 ulm Exp $
 
 EAPI=5
 
 DESCRIPTION="Rebuild Emacs packages"
-HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Emacs"
+HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Emacs"
 SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2+"

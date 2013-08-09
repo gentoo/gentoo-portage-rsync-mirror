@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.12 2013/07/14 11:08:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.13 2013/08/09 06:26:02 ulm Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EGIT_BOOTSTRAP="autogen.bash"
 inherit git-2 bash-completion-r1 autotools
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
-HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Eselect"
+HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Eselect"
 
 LICENSE="GPL-2+ || ( GPL-2+ CC-BY-SA-2.5 )"
 SLOT="0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ebuild-mode-1.21.ebuild,v 1.3 2013/07/14 14:42:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ebuild-mode-1.21.ebuild,v 1.4 2013/08/09 06:17:16 ulm Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit readme.gentoo elisp
 
 MY_PN="gentoo-syntax"
 DESCRIPTION="Emacs modes for editing ebuilds and other Gentoo specific files"
-HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Emacs"
+HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Emacs"
 SRC_URI="mirror://gentoo/${MY_PN}-${PV}.tar.xz"
 
 LICENSE="GPL-2+"

@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.14.ebuild,v 1.9 2013/07/14 14:57:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.14.ebuild,v 1.10 2013/08/09 06:23:06 ulm Exp $
 
 EAPI=4
 
 DESCRIPTION="Manage multiple Emacs versions on one system"
-HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Emacs"
+HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Emacs"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2+"

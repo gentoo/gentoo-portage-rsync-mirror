@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/eselect-ctags-1.14.ebuild,v 1.13 2013/07/14 14:55:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/eselect-ctags-1.14.ebuild,v 1.14 2013/08/09 06:24:10 ulm Exp $
 
 EAPI=4
 
 MY_P="eselect-emacs-${PV}"
 DESCRIPTION="Manages ctags implementations"
-HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Emacs"
+HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Emacs"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2+"
