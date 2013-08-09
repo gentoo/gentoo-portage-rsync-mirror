@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.31 2013/08/09 15:48:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.32 2013/08/09 16:28:26 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -121,7 +121,7 @@ freebsd_src_compile() {
 		mkmake obj || die
 	fi
 
-	bsdmk_src_compile
+	bsdmk_src_compile "$@"
 }
 
 # Helper function to make a multilib build with FreeBSD Makefiles.
