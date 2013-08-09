@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.52 2013/06/18 23:32:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.53 2013/08/09 15:00:22 aballier Exp $
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-share-9.0.ebuild,
+  -files/freebsd-share-9.0-gentoowaydir.patch:
+  remove old
 
   18 Jun 2013; Alexis Ballier <aballier@gentoo.org>
   -freebsd-share-7.2-r1.ebuild, -freebsd-share-8.0.ebuild,

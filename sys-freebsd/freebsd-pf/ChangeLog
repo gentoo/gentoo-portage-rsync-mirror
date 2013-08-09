@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.42 2013/06/18 23:36:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.44 2013/08/09 14:48:00 aballier Exp $
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-pf-9.0.ebuild:
+  remove old
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org> freebsd-pf-9.1.ebuild:
+  depend on the same version of mk-defs, bug #476646 by Yuta SATOH
 
   18 Jun 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-pf-7.2.ebuild,
   -freebsd-pf-8.0.ebuild:

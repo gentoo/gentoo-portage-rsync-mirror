@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.89 2013/06/27 20:43:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.90 2013/08/09 14:55:09 aballier Exp $
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-usbin-9.0.ebuild:
+  remove old
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> freebsd-usbin-9.1.ebuild:
   Add kerberos useflag and properly disable it if not requested. Bug #473458 by

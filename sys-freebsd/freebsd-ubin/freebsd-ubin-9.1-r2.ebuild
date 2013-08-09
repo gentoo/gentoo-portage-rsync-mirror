@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.1-r2.ebuild,v 1.1 2013/08/09 14:29:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.1-r2.ebuild,v 1.2 2013/08/09 14:57:57 aballier Exp $
 
 EAPI=5
 
@@ -75,8 +75,6 @@ REMOVE_SUBDIRS="bzip2 bzip2recover tar cpio
 	c99 c89
 	bc dc
 	whois tftp man"
-
-MULTIBUILD_VARIANTS=( $(get_all_abis) )
 
 pkg_setup() {
 	use atm || mymakeopts="${mymakeopts} WITHOUT_ATM= "

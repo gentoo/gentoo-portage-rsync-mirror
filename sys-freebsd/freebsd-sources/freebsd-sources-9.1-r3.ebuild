@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1-r3.ebuild,v 1.1 2013/07/27 17:16:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1-r3.ebuild,v 1.2 2013/08/09 14:49:22 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -12,7 +12,7 @@ IUSE="symlink"
 
 SRC_URI="mirror://gentoo/${SYS}.tar.bz2"
 
-RDEPEND=">=sys-freebsd/freebsd-mk-defs-8.0"
+RDEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*"
 DEPEND=""
 
 RESTRICT="strip binchecks"

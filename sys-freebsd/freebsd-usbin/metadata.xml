@@ -4,7 +4,6 @@
   <herd>bsd</herd>
   <use>
     <flag name='floppy'>Enable floppy disk utilities (fdcontrol, fdformat, fdread, fdwrite).</flag>
-    <flag name='isdn'>Enable ISDN support.</flag>
     <flag name='audit'>
       Build auditing tools.
     </flag>

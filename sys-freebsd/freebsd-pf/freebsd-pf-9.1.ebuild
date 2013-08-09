@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-9.1.ebuild,v 1.2 2013/01/27 21:36:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-9.1.ebuild,v 1.3 2013/08/09 14:46:27 aballier Exp $
 
 inherit bsdmk freebsd user
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://gentoo/${USBIN}.tar.bz2
 RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}
 	dev-libs/libevent
-	sys-freebsd/freebsd-mk-defs
+	=sys-freebsd/freebsd-mk-defs-${RV}*
 	=sys-freebsd/freebsd-sources-${RV}*"
 
 S="${WORKDIR}"
