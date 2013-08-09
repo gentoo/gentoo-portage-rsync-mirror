@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.206 2013/07/31 22:31:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.207 2013/08/09 03:45:46 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -507,7 +507,9 @@ chromium_test() {
 		set -- "${cmd}" "--gtest_filter=-$*"
 		einfo "$@"
 		"$@"
-		(( exitstatus |= $? ))
+		local st=$?
+		(( st )) && eerror "${cmd} failed"
+		(( exitstatus |= st ))
 	}
 
 	local excluded_base_unittests=(
