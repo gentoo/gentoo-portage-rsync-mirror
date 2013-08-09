@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.13 2012/12/30 14:21:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.14 2013/08/09 13:47:57 axs Exp $
 
 EAPI=4
 inherit eutils autotools flag-o-matic
@@ -32,7 +32,7 @@ DEPEND="dev-libs/boehm-gc
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby dev-ruby/rubygems )
 	samba? ( net-fs/samba )
-	javascript? ( dev-lang/spidermonkey )"
+	javascript? ( dev-lang/spidermonkey:0 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

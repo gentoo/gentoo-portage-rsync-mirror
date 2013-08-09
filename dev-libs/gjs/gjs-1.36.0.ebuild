@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.36.0.ebuild,v 1.1 2013/03/28 16:44:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.36.0.ebuild,v 1.2 2013/08/09 13:53:18 axs Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.36.0:2
 
 	dev-libs/dbus-glib
 	sys-libs/readline
-	>=dev-lang/spidermonkey-1.8.5
+	>=dev-lang/spidermonkey-1.8.5:0
 	virtual/libffi
 	cairo? ( x11-libs/cairo )"
 DEPEND="${RDEPEND}

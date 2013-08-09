@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r6.ebuild,v 1.1 2013/05/30 16:45:36 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r6.ebuild,v 1.2 2013/08/09 13:43:50 axs Exp $
 
 EAPI=5
 inherit autotools eutils linux-info user
@@ -25,7 +25,7 @@ REQUIRED_USE="
 
 DEPEND="mysql? ( virtual/mysql )
 	id3tag? ( media-libs/id3lib )
-	javascript? ( >=dev-lang/spidermonkey-1.8.5 )
+	javascript? ( >=dev-lang/spidermonkey-1.8.5:0 )
 	dev-libs/expat
 	taglib? ( media-libs/taglib )
 	sqlite? ( >=dev-db/sqlite-3 )

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=!x11-libs/qwt[doc] media-libs/fontconfig media-libs/freetype virtual/opengl virtual/glu x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXt x11-libs/libXext javascript? ( dev-lang/spidermonkey ) openal? ( media-libs/openal ) doc? ( app-doc/doxygen ) virtual/pkgconfig
+DEPEND=!x11-libs/qwt[doc] media-libs/fontconfig media-libs/freetype virtual/opengl virtual/glu x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXt x11-libs/libXext javascript? ( dev-lang/spidermonkey:0 ) openal? ( media-libs/openal ) doc? ( app-doc/doxygen ) virtual/pkgconfig
 DESCRIPTION=a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1.
 EAPI=2
 HOMEPAGE=http://www.coin3d.org/
 IUSE=debug doc javascript openal
 KEYWORDS=~amd64 ppc x86
 LICENSE=|| ( GPL-2 PEL )
-RDEPEND=!x11-libs/qwt[doc] media-libs/fontconfig media-libs/freetype virtual/opengl virtual/glu x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXt x11-libs/libXext javascript? ( dev-lang/spidermonkey ) openal? ( media-libs/openal )
+RDEPEND=!x11-libs/qwt[doc] media-libs/fontconfig media-libs/freetype virtual/opengl virtual/glu x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXt x11-libs/libXext javascript? ( dev-lang/spidermonkey:0 ) openal? ( media-libs/openal )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~xarthisius/distfiles/Coin-3.1.0.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=74afc79f180665066943d7eb60acdf59
+_md5_=f49517a74028ad93874afe8246dc4e96

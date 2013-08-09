@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.1 2013/05/29 20:40:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.2 2013/08/09 13:42:13 axs Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ COMMONDEPEND="x11-libs/libXau
 	media-libs/fontconfig
 	curl? ( net-misc/curl )
 	osc? ( media-libs/liblo )
-	dev-lang/spidermonkey:="
+	dev-lang/spidermonkey:0="
 DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.4 )

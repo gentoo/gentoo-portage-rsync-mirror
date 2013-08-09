@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.29 2013/07/08 02:08:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.30 2013/08/09 13:58:47 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -124,12 +124,11 @@ freebsd_src_compile() {
 #
 # Important note: To use this function you _have_ to:
 # - inherit multilib.eclass and multibuild.eclass
-# - set MULTILIB_VARIANTS
-# - have a multilib useflag in IUSE
+# - set MULTIBUILD_VARIANTS
 
 freebsd_multilib_multibuild_wrapper() {
 	# Get the ABI from multibuild.eclass
-	# This assumes MULTILIB_VARIANTS contains only valid ABIs.
+	# This assumes MULTIBUILD_VARIANTS contains only valid ABIs.
 	local ABI=${MULTIBUILD_VARIANT}
 
 	# First, save the variables: CFLAGS, CXXFLAGS, LDFLAGS, LDADD and mymakeopts.
@@ -142,7 +141,7 @@ freebsd_multilib_multibuild_wrapper() {
 
 	local target="$(tc-arch-kernel ${CHOST})"
 	mymakeopts="${mymakeopts} TARGET=${target} MACHINE=${target} MACHINE_ARCH=${target} SHLIBDIR=/usr/$(get_libdir) LIBDIR=/usr/$(get_libdir)"
-	if use multilib && [ "${ABI}" != "${DEFAULT_ABI}" ] ; then
+	if [ "${ABI}" != "${DEFAULT_ABI}" ] ; then
 		mymakeopts="${mymakeopts} COMPAT_32BIT="
 	fi
 

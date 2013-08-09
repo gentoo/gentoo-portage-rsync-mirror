@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-20130520.ebuild,v 1.2 2013/06/15 23:49:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-20130520.ebuild,v 1.3 2013/08/09 13:44:07 axs Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	|| ( media-gfx/imagemagick[tiff] media-gfx/graphicsmagick[imagemagick,tiff] )
 	net-misc/curl
 	sys-apps/util-linux
-	javascript? ( || ( dev-lang/spidermonkey dev-java/rhino ) )
+	javascript? ( || ( dev-lang/spidermonkey:0 dev-java/rhino ) )
 	view-captcha? ( || ( media-gfx/aview media-libs/libcaca ) )"
 DEPEND=""
 

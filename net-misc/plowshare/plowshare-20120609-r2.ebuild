@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-20120609-r2.ebuild,v 1.1 2012/07/11 15:35:41 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-20120609-r2.ebuild,v 1.2 2013/08/09 13:44:07 axs Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="bash-completion +javascript +perl scripts view-captcha"
 
 RDEPEND="
-	javascript? ( dev-lang/spidermonkey )
+	javascript? ( dev-lang/spidermonkey:0 )
 	perl? ( dev-lang/perl
 		media-gfx/imagemagick[perl] )
 	view-captcha? ( || ( media-gfx/aview media-libs/libcaca ) )

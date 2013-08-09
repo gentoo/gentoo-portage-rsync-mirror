@@ -1,0 +1,2 @@
+# Multilib flag for the libc
+sys-freebsd/freebsd-lib abi_x86_32

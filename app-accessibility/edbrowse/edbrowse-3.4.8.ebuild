@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.8.ebuild,v 1.2 2012/06/19 17:45:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.8.ebuild,v 1.3 2013/08/09 13:41:24 axs Exp $
 
 EAPI="4"
 inherit eutils
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="linguas_fr odbc"
-COMMON_DEPEND=">=dev-lang/spidermonkey-1.8.5
+COMMON_DEPEND=">=dev-lang/spidermonkey-1.8.5:0
 	>=sys-libs/readline-6.0
 	>=net-misc/curl-7.17.0
 	>=dev-libs/libpcre-7.8

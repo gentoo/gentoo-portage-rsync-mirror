@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.66 2013/04/25 15:29:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.67 2013/08/09 13:36:26 jer Exp $
+
+*pv-1.4.12 (09 Aug 2013)
+
+  09 Aug 2013; Jeroen Roovers <jer@gentoo.org> +pv-1.4.12.ebuild:
+  Version bump.
 
   25 Apr 2013; Jeroen Roovers <jer@gentoo.org> pv-1.4.6.ebuild:
   Remove faux dependency (test suite will take slightly longer) (bug #467216).

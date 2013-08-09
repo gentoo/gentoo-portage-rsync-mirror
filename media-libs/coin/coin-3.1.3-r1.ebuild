@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.6 2012/05/05 08:02:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.7 2013/08/09 13:42:58 axs Exp $
 
 EAPI=2
 
@@ -30,7 +30,7 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXext
 	bzip2? ( app-arch/bzip2 )
-	javascript? ( dev-lang/spidermonkey )
+	javascript? ( dev-lang/spidermonkey:0 )
 	openal? ( media-libs/openal )
 	simage? ( media-libs/simage )
 	zlib? ( sys-libs/zlib )

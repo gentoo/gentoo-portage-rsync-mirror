@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.8 2012/12/11 14:43:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.9 2013/08/09 13:43:14 axs Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -17,7 +17,7 @@ IUSE="gnome-screensaver linguas_cs linguas_de lirc nls nsplugin udev +xcb xinera
 COMMON_DEPEND=">=media-libs/xine-lib-1.1.20
 	x11-libs/gtk+:2
 	>=dev-libs/glib-2
-	>=dev-lang/spidermonkey-1.8.2.15
+	>=dev-lang/spidermonkey-1.8.2.15:0
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
