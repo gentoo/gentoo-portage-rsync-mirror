@@ -338,6 +338,7 @@ app-doc/csound-manual:html - Install HTML documentation
 app-doc/doxygen:dot - allow to create dot graphs using media-gfx/graphviz
 app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
 app-doc/linuxfromscratch:htmlsingle - Install all-on-one-page HTML version.
+app-doc/pms:binary - Install pre-made PDF file instead of building from sources
 app-doc/pms:html - Generate PMS as .html as well
 app-doc/tldp-howto:html - Install the docs in multipage HTML format (default)
 app-doc/tldp-howto:htmlsingle - Install the docs in single page HTML format

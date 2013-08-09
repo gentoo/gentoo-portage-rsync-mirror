@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.36 2013/02/07 21:34:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.37 2013/08/09 21:07:47 ulm Exp $
+
+*pms-5-r1 (09 Aug 2013)
+
+  09 Aug 2013; Ulrich Müller <ulm@gentoo.org> -pms-4_p20110118.ebuild,
+  +pms-5-r1.ebuild, pms-9999.ebuild, metadata.xml:
+  Build from source, unless USE=binary is specified. Install EAPI cheat sheet.
+  Add missing dependency on recode. Remove old.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> pms-4_p20110118.ebuild,
   pms-5.ebuild, pms-9999.ebuild:
