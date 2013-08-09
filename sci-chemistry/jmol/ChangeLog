@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/jmol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.15 2012/06/21 14:41:23 je_fro Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.16 2013/08/09 11:56:40 jlec Exp $
+
+  09 Aug 2013; Justin Lecher <jlec@gentoo.org> -jmol-11.0.3-r1.ebuild,
+  jmol-12.0.45.ebuild, jmol-12.2.27.ebuild, metadata.xml:
+  Straigthen out ebuild style
 
   21 Jun 2012; Jeff Gardner <je_fro@gentoo.org> jmol-12.2.27.ebuild:
   Add --build-only to saxon, fix bug 422757 thanks to Diego Elio Petteno

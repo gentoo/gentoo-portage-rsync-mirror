@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.0.45.ebuild,v 1.2 2012/01/26 17:34:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.0.45.ebuild,v 1.3 2013/08/09 11:56:40 jlec Exp $
 
 EAPI=1
 WEBAPP_OPTIONAL="yes"
@@ -21,7 +21,8 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="LGPL-2.1"
 IUSE="client-only vhosts"
 
-COMMON_DEP="dev-java/commons-cli:1
+COMMON_DEP="
+	dev-java/commons-cli:1
 	dev-java/itext:0
 	sci-libs/jmol-acme:0
 	sci-libs/vecmath-objectclub:0"
@@ -80,23 +81,16 @@ src_install() {
 		--java_args "-Xmx512m"
 
 	if ! use client-only ; then
-		webapp_src_preinst || die "Failed webapp_src_preinst."
-		cmd="cp Jmol.js build/Jmol.jar "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp build/JmolApplet*.jar "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp applet.classes "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp -r build/classes/* "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp -r build/appletjars/* "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp "${FILESDIR}"/caffeine.xyz "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp "${FILESDIR}"/index.html "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
+		webapp_src_preinst
+		cp Jmol.js build/Jmol.jar "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp build/JmolApplet*.jar "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp applet.classes "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp -r build/classes/* "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp -r build/appletjars/* "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp "${FILESDIR}"/caffeine.xyz "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp "${FILESDIR}"/index.html "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
 
-		webapp_src_install || die "Failed running webapp_src_install"
+		webapp_src_install
 	fi
 }
 

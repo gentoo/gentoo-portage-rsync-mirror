@@ -1,32 +1,32 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.2.27.ebuild,v 1.3 2012/06/21 14:41:23 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.2.27.ebuild,v 1.4 2013/08/09 11:56:40 jlec Exp $
 
 EAPI=1
 WEBAPP_OPTIONAL="yes"
 
 inherit eutils webapp java-pkg-2 java-ant-2
 
-MY_P="Jmol"
+MY_P=Jmol
 
-DESCRIPTION="Jmol is a java molecular viever for 3-D chemical structures."
+DESCRIPTION="Java molecular viever for 3-D chemical structures"
+HOMEPAGE="http://jmol.sourceforge.net/"
 SRC_URI="
 	mirror://sourceforge/${PN}/${MY_P}-${PV}-full.tar.gz
 	http://dev.gentoo.org/~jlec/distfiles/${PN}-selfSignedCertificate.store.tar"
 
-HOMEPAGE="http://jmol.sourceforge.net/"
-KEYWORDS="~x86 ~amd64"
 LICENSE="LGPL-2.1"
-
+KEYWORDS="~x86 ~amd64"
 IUSE="+client-only vhosts"
 
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
 
-COMMON_DEP="dev-java/commons-cli
+COMMON_DEP="
+	dev-java/commons-cli:1
 	dev-java/itext:0
-	sci-libs/jmol-acme
-	sci-libs/vecmath-objectclub
+	sci-libs/jmol-acme:0
+	sci-libs/vecmath-objectclub:0
 	sci-libs/naga"
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
@@ -36,13 +36,11 @@ DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}"
 
 pkg_setup() {
-
 	use client-only || webapp_pkg_setup
 	java-pkg-2_pkg_setup
 }
 
 src_unpack() {
-
 	unpack ${A}
 	cd "${S}"
 
@@ -74,7 +72,6 @@ src_compile() {
 }
 
 src_install() {
-
 	java-pkg_dojar build/Jmol.jar
 	dohtml -r  build/doc/* || die "Failed to install html docs."
 	dodoc *.txt doc/*license* || die "Failed to install licenses."
@@ -83,38 +80,23 @@ src_install() {
 		--java_args "-Xmx512m"
 
 	if ! use client-only ; then
-		webapp_src_preinst || die "Failed webapp_src_preinst."
-		cmd="cp Jmol.js build/Jmol.jar "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp build/JmolApplet*.jar "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp applet.classes "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp -r build/classes/* "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp -r build/appletjars/* "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp "${FILESDIR}"/caffeine.xyz "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
-		cmd="cp "${FILESDIR}"/index.html "${D}${MY_HTDOCSDIR}"" ; ${cmd} \
-		|| die "${cmd} failed."
+		webapp_src_preinst
+		cp Jmol.js build/Jmol.jar "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp build/JmolApplet*.jar "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp applet.classes "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp -r build/classes/* "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp -r build/appletjars/* "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp "${FILESDIR}"/caffeine.xyz "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
+		cp "${FILESDIR}"/index.html "${ED}"${MY_HTDOCSDIR} || die "${cmd} failed."
 
-		webapp_src_install || die "Failed running webapp_src_install"
+		webapp_src_install
 	fi
 }
 
 pkg_postinst() {
-
-	if ! use client-only ; then
-		webapp_pkg_postinst || die "webapp_pkg_postinst failed"
-	fi
-
+	use client-only || webapp_pkg_postinst
 }
 
 pkg_prerm() {
-
-	if ! use client-only ; then
-		webapp_pkg_prerm || die "webapp_pkg_prerm failed"
-	fi
-
+	use client-only || webapp_pkg_prerm
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.6.2.ebuild,v 1.8 2013/02/02 22:37:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.6.2.ebuild,v 1.9 2013/08/09 11:43:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ IUSE="v4l"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 VALA_DEPEND="$(vala_depend)
-	dev-libs/folks[vala]
+	dev-libs/folks[vala(+)]
 	gnome-base/gnome-desktop[introspection]
 	gnome-extra/evolution-data-server[vala]
 	net-libs/telepathy-glib[vala]
