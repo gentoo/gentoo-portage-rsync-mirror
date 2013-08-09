@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/vertex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.16 2013/08/03 09:45:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.17 2013/08/09 17:21:29 mgorny Exp $
+
+*vertex-0.3.0-r1 (09 Aug 2013)
+
+  09 Aug 2013; Michał Górny <mgorny@gentoo.org> +vertex-0.3.0-r1.ebuild:
+  Migrate to twisted-r1.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> vertex-0.3.0.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.

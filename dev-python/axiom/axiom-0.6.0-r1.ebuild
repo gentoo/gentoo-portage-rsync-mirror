@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0-r1.ebuild,v 1.1 2013/08/09 16:08:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0-r1.ebuild,v 1.2 2013/08/09 17:28:24 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -28,6 +28,12 @@ PATCHES=(
 )
 
 TWISTED_PLUGINS+=( axiom.plugins )
+
+python_install() {
+	distutils-r1_python_install
+
+	touch "${D}$(python_get_sitedir)"/axiom/plugins/dropin.cache || die
+}
 
 python_install_all() {
 	dodoc NAME.txt
