@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.3.ebuild,v 1.3 2013/08/04 08:48:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.8.4-r1.ebuild,v 1.1 2013/08/09 17:35:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils flag-o-matic readme.gentoo gnome2
+inherit eutils flag-o-matic readme.gentoo gnome2 #autotools
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="https://live.gnome.org/Evolution http://projects.gnome.org/evolution/"
@@ -40,7 +40,7 @@ COMMON_DEPEND="
 	>=x11-misc/shared-mime-info-0.22
 	>=x11-themes/gnome-icon-theme-2.30.2.1
 	>=dev-libs/libgdata-0.10:=
-	>=net-libs/webkit-gtk-1.10.0
+	>=net-libs/webkit-gtk-1.10.0:3
 
 	x11-libs/libSM
 	x11-libs/libICE
@@ -50,18 +50,15 @@ COMMON_DEPEND="
 		=app-crypt/gnupg-1.4* ) )
 	map? (
 		>=app-misc/geoclue-0.12.0
-		>=media-libs/libchamplain-0.12:0.12
+		>=media-libs/libchamplain-0.12:0.12[gtk]
 		>=media-libs/clutter-1.0.0:1.0
 		>=media-libs/clutter-gtk-0.90:1.0
 		~sci-geosciences/geocode-glib-0.99.0
 		x11-libs/mx:1.0 )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.2 )
-	gstreamer? ( || (
-		 ( media-libs/gstreamer:1.0
-		   media-libs/gst-plugins-base:1.0 )
-		 ( media-libs/gstreamer:0.10
-		   media-libs/gst-plugins-base:0.10 )
-	) )
+	gstreamer? (
+		media-libs/gstreamer:1.0
+		media-libs/gst-plugins-base:1.0 )
 	kerberos? ( virtual/krb5:= )
 	ldap? ( >=net-nds/openldap-2:= )
 	ssl? (
@@ -98,10 +95,15 @@ x-scheme-handler/https=firefox.desktop
 file from /usr/share/applications if you use a different browser)."
 
 src_prepare() {
+	# Reason?
 	ELTCONF="--reverse-deps"
+
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 
-	eautoreconf # See https://bugzilla.gnome.org/701904
+	# Old POP3 mails can be removed before getting them, upstream bug #705446
+	epatch "${FILESDIR}/${P}-pop3-removal.patch"
+
+	#eautoreconf # See https://bugzilla.gnome.org/701904
 
 	gnome2_src_prepare
 

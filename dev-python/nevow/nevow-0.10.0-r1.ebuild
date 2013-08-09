@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0-r1.ebuild,v 1.1 2013/08/09 16:34:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0-r1.ebuild,v 1.2 2013/08/09 17:36:54 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,6 +25,12 @@ TWISTED_PLUGINS=( nevow.plugins )
 
 python_test() {
 	trial formless nevow || die "tests failed with ${EPYTHON}"
+}
+
+python_install() {
+	distutils-r1_python_install
+
+	touch "${D}$(python_get_sitedir)"/nevow/plugins/dropin.cache || die
 }
 
 python_install_all() {

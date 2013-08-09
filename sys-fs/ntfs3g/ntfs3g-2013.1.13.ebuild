@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.3 2013/02/22 17:35:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.4 2013/08/09 17:47:34 chutzpah Exp $
 
 EAPI=5
 inherit eutils linux-info udev
@@ -78,4 +78,15 @@ src_install() {
 	rmdir "${D}"/sbin
 
 	dosym mount.ntfs-3g /usr/sbin/mount.ntfs #374197
+}
+
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		# Bug 450024
+		if $(tc-getLD) --version | grep -q "GNU gold"; then
+			eerror "ntfs-3g does not function correctly when built with the gold linker."
+			eerror "Please select the bfd linker with binutils-config."
+			die "GNU gold detected"
+		fi
+	fi
 }

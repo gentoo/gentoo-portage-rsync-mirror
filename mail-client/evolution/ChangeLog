@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.401 2013/08/04 08:48:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.402 2013/08/09 17:35:13 pacho Exp $
+
+*evolution-3.8.4-r1 (09 Aug 2013)
+
+  09 Aug 2013; Pacho Ramos <pacho@gentoo.org> +evolution-3.8.4-r1.ebuild,
+  +files/evolution-3.8.4-pop3-removal.patch, -evolution-3.8.3.ebuild:
+  Fix 'Old POP3 mails can be removed before getting them, upstream bug #705446',
+  drop old
 
   04 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   evolution-3.8.3.ebuild, evolution-3.8.4.ebuild:
