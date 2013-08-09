@@ -1,6 +1,18 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.66 2013/07/25 19:10:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.68 2013/08/09 16:45:11 robbat2 Exp $
+
+*nullmailer-1.11-r2 (09 Aug 2013)
+
+  09 Aug 2013; Robin H. Johnson <robbat2@gentoo.org> +nullmailer-1.11-r2.ebuild,
+  nullmailer-1.13-r1.ebuild:
+  Bump to fix security bug #480376, /etc/nullmailer/remotes world-readable
+  (backport to stable)
+
+*nullmailer-1.13-r1 (09 Aug 2013)
+
+  09 Aug 2013; Robin H. Johnson <robbat2@gentoo.org> +nullmailer-1.13-r1.ebuild:
+  Bump to fix security bug #480376, /etc/nullmailer/remotes world-readable
 
 *nullmailer-1.13 (25 Jul 2013)
 
