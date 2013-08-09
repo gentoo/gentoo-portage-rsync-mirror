@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.4 2013/06/13 19:57:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.5 2013/08/09 00:50:50 blueness Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.musl-libc.org/"
 if [[ ${PV} != "9999" ]] ; then
 	PATCH_VER=""
 	SRC_URI="http://www.musl-libc.org/releases/${P}.tar.gz"
-	KEYWORDS="-* ~amd64 ~arm ~mips"
+	KEYWORDS="-* ~amd64 ~arm ~mips ~x86"
 fi
 
 LICENSE="MIT"
