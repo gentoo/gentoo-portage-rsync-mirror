@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/media-player-info
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.28 2013/07/24 16:13:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.29 2013/08/09 19:10:26 ssuominen Exp $
+
+  09 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  media-player-info-21.ebuild:
+  If USE="hwdb" is missing from virtual/udev, it's always enabled.
 
   24 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
   -media-player-info-18.ebuild, -media-player-info-19.ebuild:

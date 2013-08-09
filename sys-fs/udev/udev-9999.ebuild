@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.246 2013/08/08 15:03:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.247 2013/08/09 19:22:36 ssuominen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc +firmware-loader gudev +hwdb introspection +kmod +openrc selinux static-libs"
+IUSE="acl doc +firmware-loader gudev introspection +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
@@ -71,8 +71,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25
 	!<sec-policy/selinux-base-2.20120725-r10"
-PDEPEND=">=virtual/udev-206
-	hwdb? ( >=sys-apps/hwids-20130717-r1[udev] )
+PDEPEND=">=virtual/udev-206-r2
+	>=sys-apps/hwids-20130717-r1[udev]
 	openrc? ( >=sys-fs/udev-init-scripts-25 )"
 
 S=${WORKDIR}/systemd-${PV}
@@ -511,7 +511,7 @@ pkg_postinst() {
 	elog "http://wiki.gentoo.org/wiki/Udev/upgrade"
 
 	# Update hwdb database in case the format is changed by udev version.
-	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
+	if has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
 	fi
 }

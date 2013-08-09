@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.1.0.ebuild,v 1.14 2013/07/18 16:07:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.1.0.ebuild,v 1.15 2013/08/09 19:17:15 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils linux-info systemd udev
@@ -19,7 +19,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.32
 	>=dev-libs/libatasmart-0.19
 	>=sys-auth/polkit-0.110
 	virtual/acl
-	>=virtual/udev-${UDEV_VERSION}[gudev,hwdb]
+	>=virtual/udev-${UDEV_VERSION}[gudev,hwdb(+)]
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )
 	selinux? ( sec-policy/selinux-devicekit )
 	systemd? ( >=sys-apps/systemd-${UDEV_VERSION} )"
