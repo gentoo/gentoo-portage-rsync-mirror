@@ -1,6 +1,11 @@
 # ChangeLog for net-print/libinklevel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.25 2012/05/21 19:19:29 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.26 2013/08/09 07:02:31 mrueg Exp $
+
+  09 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -libinklevel-0.6.3.ebuild,
+  -libinklevel-0.6.5_rc1.ebuild, -libinklevel-0.7.1.ebuild,
+  -libinklevel-0.8.0.ebuild:
+  Cleanup old
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   libinklevel-0.8.0-r1.ebuild:
@@ -108,4 +113,3 @@
   21 Sep 2003; Heinrich Wendel <lanius@gentoo.org> libinklevel-0.5.ebuild,
   metadata.xml:
   initial release, thx to Marcin Wisnicki <wisnia21@freeshell.org> for the ebuild
-
