@@ -4,7 +4,6 @@
 	<herd>python</herd>
 	<use>
 		<flag name="bazaar">Add support for Bazaar</flag>
-		<flag name="git">Add support for Git</flag>
 		<flag name="mercurial">Add support for Mercurial</flag>
 	</use>
 	<upstream>

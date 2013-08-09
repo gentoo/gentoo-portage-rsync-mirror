@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pnm2ppa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.19 2012/07/03 08:32:18 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.20 2013/08/09 07:00:02 mrueg Exp $
+
+  09 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -pnm2ppa-1.12.ebuild:
+  Cleanup old
 
 *pnm2ppa-1.13-r1 (03 Jul 2012)
 

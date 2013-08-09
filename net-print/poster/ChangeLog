@@ -1,6 +1,10 @@
 # ChangeLog for net-print/poster
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.13 2011/12/13 23:26:30 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.14 2013/08/09 06:55:21 mrueg Exp $
+
+  09 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -poster-0.1.ebuild,
+  -poster-20050907.ebuild, poster-20060221.ebuild:
+  Update to EAPI, cleanup old
 
   13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> poster-20060221.ebuild:
   Stable for AMD64, wrt bug #392809
@@ -46,4 +50,3 @@
 
   08 Jan 2004; Heinrich Wendel <lanius@gentoo.org> poster-0.1.ebuild:
   initial ebuild, contributed by Jan Schubert <Jan.Schubert@GMX.li>
-

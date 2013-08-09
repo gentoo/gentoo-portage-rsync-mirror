@@ -12,7 +12,6 @@
 <flag name='diff'>Use for diff command <pkg>dev-util/meld</pkg></flag>
 <flag name='cli'>Eanble console based frontend</flag>
 <flag name='gedit'>Enable plugin for <pkg>app-editors/gedit</pkg></flag>
-<flag name='git'>Enable plugin for <pkg>dev-vcs/git</pkg></flag>
 <flag name='nautilus'>Enable extension for <pkg>gnome-base/nautilus</pkg></flag>
 <flag name='thunar'>Enable extension for <pkg>xfce-base/thunar</pkg></flag>
 </use>

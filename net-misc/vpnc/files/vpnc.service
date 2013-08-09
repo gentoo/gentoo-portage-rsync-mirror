@@ -10,12 +10,11 @@ Type=forking
 EnvironmentFile=/etc/vpnc/%i.conf
 PIDFile=/run/vpnc/%i.pid
 
-ExecPreStart=/etc/vpnc/scripts.d/%i-preup.sh
+ExecStartPre=-/etc/vpnc/scripts.d/%i-preup.sh
 ExecStart=/usr/sbin/vpnc --pid-file /run/vpnc/%i.pid
-ExecPostStart=/etc/vpnc/scripts.d/%i-postup.sh
+ExecStartPost=-/etc/vpnc/scripts.d/%i-postup.sh
 
-ExecPreStop=/etc/vpnc/scripts.d/%i-predown.sh
-ExecPostStop=/etc/vpnc/scripts.d/%i-postdown.sh
+ExecStopPost=-/etc/vpnc/scripts.d/%i-postdown.sh
 
 [Install]
 WantedBy=multi-user.target

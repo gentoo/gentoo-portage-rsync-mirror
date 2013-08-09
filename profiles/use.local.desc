@@ -1750,7 +1750,6 @@ dev-python/PyQtMobility:systeminfo - Build bindings for the QtSystemInfo module
 dev-python/PyQtMobility:versit - Build bindings for the QtVersit module
 dev-python/amqplib:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/anyvc:bazaar - Add support for Bazaar
-dev-python/anyvc:git - Add support for Git
 dev-python/anyvc:mercurial - Add support for Mercurial
 dev-python/atpy:fits - Enable support for reading and FITS with dev-python/pyfits.
 dev-python/atpy:votable - Enable support for reading and VOTABLE with dev-python/vo.
@@ -1883,7 +1882,6 @@ dev-qt/qt-creator:botan-bundled - Use the bundled copy of dev-libs/botan
 dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
 dev-qt/qt-creator:cmake - Enable cmake project manager plugin
 dev-qt/qt-creator:fakevim - Enable support for vim-like key bindings
-dev-qt/qt-creator:git - Add support for dev-vcs/git version control system
 dev-qt/qt-creator:madde - Enable integration with MADDE (Maemo Application Development and Debugging Environment)
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
 dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
@@ -2100,7 +2098,6 @@ dev-util/metro:git - Enable support for git snapshots
 dev-util/metro:threads - Enable support for pbzip2 tarball packing/unpacking
 dev-util/molecule:plugins - Add plugins provided by dev-util/molecule-plugins
 dev-util/monkeystudio:plugins - Build and install additional plugins
-dev-util/monodevelop:git - Enable Git version control support
 dev-util/nemiver:memoryview - Enable the optional hexadecimal memory inspection with app-editors/ghex.
 dev-util/nsis:config-log - Enable the logging facility (useful in debugging installers)
 dev-util/nvidia-cuda-sdk:cuda - Build CUDA binaries.
@@ -2134,7 +2131,6 @@ dev-vcs/bzr-gtk:nautilus - Integrate with Nautilus file manager
 dev-vcs/bzr-gtk:sourceview - Enable GtkSourceView support
 dev-vcs/cvs:server - Enable server support
 dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
-dev-vcs/cvs2svn:git - Support for dev-vcs/git
 dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
 dev-vcs/fossil:sqlite - Use the system SQLite instead of the bundled one
 dev-vcs/fromcvs:git - Add support for conversion to dev-vcs/git repositories
@@ -2164,7 +2160,6 @@ dev-vcs/qct:monotone - Support for dev-vcs/monotone
 dev-vcs/rabbitvcs:cli - Eanble console based frontend
 dev-vcs/rabbitvcs:diff - Use for diff command dev-util/meld
 dev-vcs/rabbitvcs:gedit - Enable plugin for app-editors/gedit
-dev-vcs/rabbitvcs:git - Enable plugin for dev-vcs/git
 dev-vcs/rabbitvcs:nautilus - Enable extension for gnome-base/nautilus
 dev-vcs/rabbitvcs:thunar - Enable extension for xfce-base/thunar
 dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
@@ -2549,7 +2544,6 @@ kde-base/cantor:analitza - Enable kde-base/analitza backend support
 kde-base/cantor:qalculate - Enable sci-libs/libqalculate backend support
 kde-base/dolphin:thumbnail - Enables video thumbnails generation for kde-base/dolphin file manager.
 kde-base/dolphin-plugins:bazaar - Enable support for the bazaar VCS
-kde-base/dolphin-plugins:git - Enable support for the git VCS
 kde-base/dolphin-plugins:mercurial - Enable support for the mercurial VCS
 kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
@@ -6749,7 +6743,6 @@ xfce-base/xfce4-session:gnome-keyring - Enable password storage support using gn
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
 xfce-base/xfce4-settings:xklavier - Enable keyboard layout selection support using x11-libs/libxklavier
 xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launchers and folders)
-xfce-extra/thunar-vcs-plugin:git - Enable dev-vcs/git support
 xfce-extra/tumbler:odf - Enable support for .odf thumbnailers by using gnome-extra/libgsf
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support

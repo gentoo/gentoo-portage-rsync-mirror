@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.508 2013/08/06 13:46:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.509 2013/08/09 06:48:02 xmw Exp $
 
 # Keep them sorted
 
@@ -114,6 +114,7 @@ geoip - Add geoip support for country and city lookup based on IPs
 ggi - Add support for media-libs/libggi (non-X video api/drivers)
 gif - Add GIF image support
 gimp - Build a plugin for the GIMP
+git - Enable git (version control system) support
 glut - Build an OpenGL plugin using the GLUT library
 gmp - Add support for dev-libs/gmp (GNU MP library)
 gnome - Add GNOME support
