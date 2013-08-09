@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.45 2012/11/18 11:39:25 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.46 2013/08/09 19:46:03 maekke Exp $
+
+  09 Aug 2013; Markus Meier <maekke@gentoo.org> Text-CSV-1.210.0.ebuild:
+  add ~arm
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.
