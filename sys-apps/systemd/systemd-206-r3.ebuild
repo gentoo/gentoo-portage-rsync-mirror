@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r2.ebuild,v 1.2 2013/08/08 18:23:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r3.ebuild,v 1.1 2013/08/09 09:01:15 mgorny Exp $
 
 EAPI=5
 
@@ -233,7 +233,7 @@ multilib_src_compile() {
 	if multilib_is_native_abi; then
 		emake "${mymakeopts[@]}"
 	else
-		echo 'gentoo: $(lib_LTLIBRARIES) $(pkgconfigdata_DATA)' | \
+		echo 'gentoo: $(lib_LTLIBRARIES) $(pkgconfiglib_DATA)' | \
 		emake "${mymakeopts[@]}" -f Makefile -f - gentoo
 	fi
 }
@@ -268,7 +268,7 @@ multilib_src_install() {
 	else
 		mymakeopts+=(
 			install-libLTLIBRARIES
-			install-pkgconfigdataDATA
+			install-pkgconfiglibDATA
 			install-includeHEADERS
 			install-pkgincludeHEADERS
 		)

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.3.ebuild,v 1.1 2013/08/02 20:39:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.3.ebuild,v 1.2 2013/08/09 08:31:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -16,11 +16,11 @@ LICENSE="LGPL-2.1+"
 SLOT="0/25" # subslot = libfolks soname version
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 # TODO: --enable-profiling
-IUSE="eds socialweb +telepathy test tracker utils vala zeitgeist"
-# the inspect tool requires --enable-vala
-REQUIRED_USE="utils? ( vala )"
+# Vala isn't really optional, https://bugzilla.gnome.org/show_bug.cgi?id=701099
+IUSE="eds socialweb +telepathy test tracker utils zeitgeist"
 
 COMMON_DEPEND="
+	$(vala_depend)
 	>=dev-libs/glib-2.32:2
 	dev-libs/dbus-glib
 	>=dev-libs/libgee-0.10:0.8[introspection]
@@ -28,9 +28,9 @@ COMMON_DEPEND="
 	sys-libs/ncurses:=
 	sys-libs/readline:=
 
-	eds? ( >=gnome-extra/evolution-data-server-3.8.1:= )
+	eds? ( >=gnome-extra/evolution-data-server-3.8.1:=[vala] )
 	socialweb? ( >=net-libs/libsocialweb-0.25.20 )
-	telepathy? ( >=net-libs/telepathy-glib-0.19 )
+	telepathy? ( >=net-libs/telepathy-glib-0.19[vala] )
 	tracker? ( >=app-misc/tracker-0.16:= )
 	zeitgeist? ( >=gnome-extra/zeitgeist-0.9.14 )
 "
@@ -49,14 +49,13 @@ DEPEND="${COMMON_DEPEND}
 
 	socialweb? ( >=net-libs/libsocialweb-0.25.15[vala] )
 	test? ( sys-apps/dbus )
-	vala? (
-		$(vala_depend)
-		eds? ( >=gnome-extra/evolution-data-server-3.8.1:=[vala] )
-		telepathy? ( >=net-libs/telepathy-glib-0.19[vala] ) )
 "
 
 src_prepare() {
-	use vala && vala_src_prepare
+	# Regenerate C files until folks-0.9.4 lands the tree, bug #479600
+	touch backends/telepathy/lib/tpf-persona.vala || die
+
+	vala_src_prepare
 	gnome2_src_prepare
 }
 
@@ -69,9 +68,9 @@ src_configure() {
 		$(use_enable telepathy telepathy-backend) \
 		$(use_enable tracker tracker-backend) \
 		$(use_enable utils inspect-tool) \
-		$(use_enable vala) \
 		$(use_enable test tests) \
 		$(use_enable zeitgeist) \
+		--enable-vala \
 		--enable-import-tool \
 		--disable-docs \
 		--disable-fatal-warnings
