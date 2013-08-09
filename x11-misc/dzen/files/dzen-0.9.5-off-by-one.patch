@@ -5,7 +5,7 @@
  	}
  	while(off < len) {
 -		if(i > MAX_LINE_LEN) {
-+		if(i = MAX_LINE_LEN - 1) {
++		if(i == MAX_LINE_LEN - 1) {
  			outbuf[i] = '\0';
  			return ++off;
  		}

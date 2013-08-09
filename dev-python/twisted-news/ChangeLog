@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.61 2013/08/03 09:45:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.62 2013/08/09 12:57:59 mgorny Exp $
+
+*twisted-news-13.0.0-r1 (09 Aug 2013)
+
+  09 Aug 2013; Michał Górny <mgorny@gentoo.org> +twisted-news-13.0.0-r1.ebuild:
+  Migrate to twisted-r1.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> twisted-news-10.2.0.ebuild,
   twisted-news-11.0.0.ebuild, twisted-news-11.1.0.ebuild,
