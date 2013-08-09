@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-99999999.ebuild,v 1.2 2013/08/08 21:24:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-99999999.ebuild,v 1.3 2013/08/09 00:27:32 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -37,8 +37,8 @@ RDEPEND="dev-python/pyxdg[${PYTHON_USEDEP}]
 	!gnome? ( dev-libs/keybinder[python] )"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-detect-datadir.patch
-	"${FILESDIR}"/${P}-dont-notify-volume.patch
+	"${FILESDIR}"/${PN}-20130808-detect-datadir.patch
+	"${FILESDIR}"/${PN}-20130808-dont-notify-volume.patch
 )
 
 src_prepare() {
