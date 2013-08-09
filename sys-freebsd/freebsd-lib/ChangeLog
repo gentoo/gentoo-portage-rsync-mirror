@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.192 2013/07/27 16:25:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.193 2013/08/09 14:27:27 aballier Exp $
+
+*freebsd-lib-9.1-r11 (09 Aug 2013)
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-lib-9.1-r11.ebuild:
+  Migrate to multilib-build and install 32bits libusb.
 
   27 Jul 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-9.1.ebuild,
   -freebsd-lib-9.1-r1.ebuild, -freebsd-lib-9.1-r2.ebuild,

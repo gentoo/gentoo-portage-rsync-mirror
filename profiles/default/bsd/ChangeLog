@@ -1,6 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.150 2013/08/07 21:10:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.151 2013/08/09 14:15:30 aballier Exp $
+
+  09 Aug 2013; Alexis Ballier <aballier@gentoo.org> -fbsd/amd64/8.2/deprecated,
+  -fbsd/amd64/8.2/make.defaults, -fbsd/amd64/8.2/parent,
+  -fbsd/amd64/9.0/deprecated, -fbsd/amd64/9.0/make.defaults,
+  -fbsd/amd64/9.0/parent, -fbsd/x86/8.2/deprecated,
+  -fbsd/x86/8.2/make.defaults, -fbsd/x86/8.2/parent, -fbsd/x86/9.0/deprecated,
+  -fbsd/x86/9.0/make.defaults, -fbsd/x86/9.0/parent:
+  Remove EOL fbsd 8.2 and 9.0 profiles
 
   07 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask video_cards_tdfx for mplayer, bug #477750 by Yuta SATOH
