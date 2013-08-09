@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.121 2013/07/25 17:17:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.122 2013/08/09 09:02:17 xarthisius Exp $
 
 # This file requires >=portage-2.1.1
+
+# Kacper Kowalik <xarthisius@gentoo.org> (09 Aug 2013)
+# Works on x86
+sys-apps/hwloc -cuda -gl -opencl
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords missing, bug #478104

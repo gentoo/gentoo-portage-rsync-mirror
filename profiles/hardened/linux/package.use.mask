@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.use.mask,v 1.14 2013/05/04 17:12:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.use.mask,v 1.15 2013/08/09 09:02:17 xarthisius Exp $
+
+sys-apps/hwloc gl
 
 sys-devel/gcc -hardened
 sys-libs/glibc -hardened

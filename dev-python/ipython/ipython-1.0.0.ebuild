@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.1 2013/08/09 05:36:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.2 2013/08/09 09:16:03 xarthisius Exp $
 
 EAPI=5
 
@@ -51,8 +51,6 @@ REQUIRED_USE="
 	notebook? ( ${PY2_REQUSE} )
 	octave? ( ${PY2_REQUSE} )
 	wxwidgets? ( ${PY2_REQUSE} )"
-
-S="${WORKDIR}/${PN}-rel-${PV}"
 
 python_prepare_all() {
 	# fix for gentoo python scripts

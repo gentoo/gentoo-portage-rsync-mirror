@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.496 2013/08/07 11:45:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.497 2013/08/09 09:02:17 xarthisius Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Kacper Kowalik <xarthisius@gentoo.org> (09 Aug 2013)
+# Doesn't work on most profiles. Easier to mask here and 
+# unmask in particular profiles
+sys-apps/hwloc cuda gl opencl
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 Aug 2013)
 # There is no support for recent app-pda/libimobiledevice wrt bug #471920
