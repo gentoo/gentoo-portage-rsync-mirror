@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.918 2013/08/08 22:29:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.919 2013/08/10 04:25:37 dirtyepic Exp $
+
+  10 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Append -Wl,--no-relax to LDFLAGS on alpha for 4.6 (bug #454426 again).
 
   08 Aug 2013; Michał Górny <mgorny@gentoo.org> +twisted-r1.eclass:
   Introduce a twisted-r1.eclass to join the python-r1 suite and replace

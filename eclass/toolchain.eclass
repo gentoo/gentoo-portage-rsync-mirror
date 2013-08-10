@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.597 2013/07/24 01:34:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.598 2013/08/10 04:25:37 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1379,15 +1379,11 @@ gcc_do_make() {
 }
 
 gcc_do_filter_flags() {
-
 	strip-flags
 
-	# In general gcc does not like optimization, and add -O2 where
+	# In general gcc does not like optimization, and adds -O2 where
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
-
-	# ... sure, why not?
-	strip-unsupported-flags
 
 	# dont want to funk ourselves
 	filter-flags '-mabi*' -m31 -m32 -m64
@@ -1431,12 +1427,22 @@ gcc_do_filter_flags() {
 
 	case ${GCC_BRANCH_VER} in
 	4.6)
-		# https://bugs.gentoo.org/411333
-		# https://bugs.gentoo.org/466454
-		replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
+		case $(tc-arch) in
+			alpha)
+			# https://bugs.gentoo.org/454426
+			append-ldflags -Wl,--no-relax
+			;;
+			amd64|x86)
+			# https://bugs.gentoo.org/411333
+			# https://bugs.gentoo.org/466454
+			replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
+			;;
+		esac
 		;;
 	esac
 
+	strip-unsupported-flags
+	
 	# TODO: Move to gcc_do_make()
 
 	# CFLAGS logic (verified with 3.4.3):
