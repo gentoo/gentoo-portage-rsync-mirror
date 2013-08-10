@@ -1,7 +1,10 @@
-# ChangeLog for Gentoo/ia64 profile
+# ChangeLog for Gentoo/m68k profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.26 2013/07/16 17:08:33 zlogene Exp $
- 
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.27 2013/08/10 07:36:44 ulm Exp $
+
+  10 Aug 2013; Ulrich Müller <ulm@gentoo.org> package.use.force:
+  P.use.force app-doc/pms binary because of unkeyworded texlive dependency.
+
   11 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> package.use.mask:
   P.use.mask dev-perl/Error test due to unkeyworded dependency
 

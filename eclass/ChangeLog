@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.919 2013/08/10 04:25:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.920 2013/08/10 07:41:19 dirtyepic Exp $
+
+  10 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Clean up gcc_do_filter_flags a bit more. Drop ppc64 workaround for 3.2/3.3
+  as neither is keyworded. Also stop replacing -march=i686 with x86-64 (?!) for
+  those versions.
 
   10 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Append -Wl,--no-relax to LDFLAGS on alpha for 4.6 (bug #454426 again).

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.598 2013/08/10 04:25:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.599 2013/08/10 07:41:19 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1389,56 +1389,58 @@ gcc_do_filter_flags() {
 	filter-flags '-mabi*' -m31 -m32 -m64
 
 	case ${GCC_BRANCH_VER} in
-	3.2|3.3)
-		replace-cpu-flags k8 athlon64 opteron i686 x86-64
-		replace-cpu-flags pentium-m pentium3m pentium3
-		case $(tc-arch) in
-			amd64|x86) filter-flags '-mtune=*' ;;
-			# in gcc 3.3 there is a bug on ppc64 where if -mcpu is used,
-			# the compiler wrongly assumes a 32bit target
-			ppc64) filter-flags "-mcpu=*";;
-		esac
-		case $(tc-arch) in
-			amd64) replace-cpu-flags core2 nocona;;
-			x86)   replace-cpu-flags core2 prescott;;
-		esac
+		3.2|3.3)
+			replace-cpu-flags k8 athlon64 opteron x86-64
+			replace-cpu-flags pentium-m pentium3m pentium3
+			replace-cpu-flags G3 750
+			replace-cpu-flags G4 7400
+			replace-cpu-flags G5 7400
+	
+			case $(tc-arch) in
+				amd64)
+					replace-cpu-flags core2 nocona
+					filter-flags '-mtune=*'
+					;;
+				x86)
+					replace-cpu-flags core2 prescott
+					filter-flags '-mtune=*'
+					;;
+			esac
 
-		replace-cpu-flags G3 750
-		replace-cpu-flags G4 7400
-		replace-cpu-flags G5 7400
-
-		# XXX: should add a sed or something to query all supported flags
-		#      from the gcc source and trim everything else ...
-		filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
-		filter-flags -f{no-,}stack-protector{,-all}
-		filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
-		;;
-	3.4|4.*)
-		case $(tc-arch) in
-			x86|amd64) filter-flags '-mcpu=*';;
-			*-macos)
-				# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=25127
-				[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER}  == 4.1 ]] && \
-					filter-flags '-mcpu=*' '-march=*' '-mtune=*'
+			# XXX: should add a sed or something to query all supported flags
+			#      from the gcc source and trim everything else ...
+			filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
+			filter-flags -f{no-,}stack-protector{,-all}
+			filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
 			;;
-		esac
-		;;
+		3.4|4.*)
+			case $(tc-arch) in
+				amd64|x86)
+					filter-flags '-mcpu=*'
+					;;
+				*-macos)
+					# http://gcc.gnu.org/PR25127
+					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER}  == 4.1 ]] && \
+						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
+					;;
+			esac
+			;;
 	esac
 
 	case ${GCC_BRANCH_VER} in
-	4.6)
-		case $(tc-arch) in
-			alpha)
-			# https://bugs.gentoo.org/454426
-			append-ldflags -Wl,--no-relax
+		4.6)
+			case $(tc-arch) in
+				alpha)
+					# https://bugs.gentoo.org/454426
+					append-ldflags -Wl,--no-relax
+					;;
+				amd64|x86)
+					# https://bugs.gentoo.org/411333
+					# https://bugs.gentoo.org/466454
+					replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
+					;;
+			esac
 			;;
-			amd64|x86)
-			# https://bugs.gentoo.org/411333
-			# https://bugs.gentoo.org/466454
-			replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
-			;;
-		esac
-		;;
 	esac
 
 	strip-unsupported-flags
