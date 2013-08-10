@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.1 2013/08/07 09:46:39 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.2 2013/08/10 11:06:46 ryao Exp $
+
+  10 Aug 2013; Richard Yao <ryao@gentoo.org> lz4-9999.ebuild:
+  Drop ~amd64 keyboard from app-arch/lz4-9999: It should never have been
+  keyworded in the first place. Thanks to radhermit for pointing that out.
 
 *lz4-9999 (07 Aug 2013)
 

@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.83 2013/07/19 23:58:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.84 2013/08/10 11:15:09 tomwij Exp $
+
+*maven-bin-3.1.0-r1 (10 Aug 2013)
+
+  10 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +maven-bin-3.1.0-r1.ebuild:
+  Revision bump, because package.env could possible change. A first step to fix
+  up dependencies for bug #472850, cuts 2 or more optional dependencies; after
+  which we need to deal with bug #477436 as well as unbundle more dependencies
+  where possible. Thanks to wojtek for reporting and researching the situation.
 
 *maven-bin-3.1.0 (19 Jul 2013)
 

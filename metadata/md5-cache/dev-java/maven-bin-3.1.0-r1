@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup
+DEPEND=|| ( app-admin/eselect-java app-admin/eselect-maven ) || ( dev-java/commons-logging:0 dev-java/log4j:0 dev-java/avalon-logkit:2.0 ) dev-java/avalon-framework:4.1 dev-java/commons-io:1 dev-java/juel:0 dev-java/osgi-core-api:0 java-virtuals/servlet-api:2.4 >=dev-java/java-config-2.1.9-r1
+DESCRIPTION=Project Management and Comprehension Tool for Java
+EAPI=5
+HOMEPAGE=http://maven.apache.org/
+IUSE=elibc_FreeBSD
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/jdk-1.5 || ( app-admin/eselect-java app-admin/eselect-maven ) || ( dev-java/commons-logging:0 dev-java/log4j:0 dev-java/avalon-logkit:2.0 ) dev-java/avalon-framework:4.1 dev-java/commons-io:1 dev-java/juel:0 dev-java/osgi-core-api:0 java-virtuals/servlet-api:2.4 >=dev-java/java-config-2.1.9-r1
+SLOT=3.1
+SRC_URI=mirror://apache/maven/maven-3/3.1.0/binaries/apache-maven-3.1.0-bin.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=13158d520bcfb63f876ab95569127681
