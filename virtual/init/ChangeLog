@@ -1,6 +1,9 @@
 # ChangeLog for virtual/init
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.16 2012/05/16 07:40:58 heroxbd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.17 2013/08/10 16:45:45 williamh Exp $
+
+  10 Aug 2013; William Hubbs <williamh@gentoo.org> init-0.ebuild:
+  add sys-apps/systemd as an init provider on Linux.
 
   16 May 2012; Benda Xu <heroxbd@gentoo.org> init-0.ebuild:
   tune dep for prefix. bug 415897, thanks to vapier.
@@ -49,4 +52,3 @@
   12 Dec 2006; Roy Marples <uberlord@gentoo.org> +metadata.xml,
   +init-0.ebuild:
   New virtual for init systems.
-
