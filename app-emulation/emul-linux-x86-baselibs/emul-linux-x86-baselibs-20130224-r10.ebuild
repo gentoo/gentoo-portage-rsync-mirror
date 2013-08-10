@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20130224-r9.ebuild,v 1.1 2013/08/08 18:19:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20130224-r10.ebuild,v 1.1 2013/08/10 17:51:30 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -30,6 +30,9 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=virtual/libusb-0-r1:0[abi_x86_32(-)]
 		>=virtual/libusb-1-r1:1[abi_x86_32(-)]
 		>=virtual/udev-206-r1[abi_x86_32(-)]
+		>=media-libs/tiff-4.0.3-r3:0[abi_x86_32(-)]
+		>=sys-apps/attr-2.4.47-r1[abi_x86_32(-)]
+		>=dev-libs/glib-2.36.3-r2:2[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.15" # bug 340613
 

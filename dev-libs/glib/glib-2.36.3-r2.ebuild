@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3-r2.ebuild,v 1.1 2013/08/10 14:24:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3-r2.ebuild,v 1.2 2013/08/10 17:44:41 aballier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -28,6 +28,10 @@ RDEPEND="
 	utils? (
 		${PYTHON_DEPS}
 		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}] )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r9
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
