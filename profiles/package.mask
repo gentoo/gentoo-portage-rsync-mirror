@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15007 2013/08/10 02:42:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15008 2013/08/10 08:11:32 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ole Markus With <olemarkus@olemarkus.org> (10 Aug 2013)
+# About a year since upstream stopped maintaining this package.
+# Masked for removal in 30 days
+dev-php/symfony
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (9 Aug 2013)
 # Mask upcoming poppler-0.24 until stuff builds with it

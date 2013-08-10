@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.10 2013/08/09 17:41:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.11 2013/08/10 08:08:23 mgorny Exp $
 
 EAPI=5
 
@@ -273,6 +273,8 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
+	prune_libtool_files --modules
+
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
 	doins shell-completion/zsh/_*

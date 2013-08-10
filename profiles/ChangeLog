@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8137 2013/08/10 02:42:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8138 2013/08/10 08:11:32 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Aug 2013; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Masking dev-php/symfony for removal
 
   10 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask upcoming poppler-0.24 until stuff builds with it
