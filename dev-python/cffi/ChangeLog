@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.11 2013/08/07 09:52:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.12 2013/08/10 10:04:04 patrick Exp $
+
+*cffi-0.7.2 (10 Aug 2013)
+
+  10 Aug 2013; Patrick Lauer <patrick@gentoo.org> +cffi-0.7.2.ebuild:
+  Bump
 
   07 Aug 2013; Michał Górny <mgorny@gentoo.org> cffi-0.7.ebuild:
   Enable pypy2.0.

@@ -1,0 +1,34 @@
+From a0ed8e8e80dcba96e5c35888c01f3f9b39aef02f Mon Sep 17 00:00:00 2001
+From: Andreas Henriksson <andreas@fatal.se>
+Date: Fri, 5 Apr 2013 12:30:55 +0200
+Subject: [PATCH] Bump required version of gnome-settings-daemon to 3.8
+
+Reported by Pacho Ramos in https://bugzilla.gnome.org/697146
+and from the references gentoo bug report:
+
+With gnome-base/gnome-settings-daemon-3.6.4:
+
+gdusdmanager.c: At top level:
+gdusdmanager.c:42:1: error: unknown type name 'GduSdClass'
+gdusdmanager.c:80:1: warning: 'gdu_sd_manager_start' defined but not used [-Wunused-function]
+gdusdmanager.c:124:1: warning: 'gdu_sd_manager_new' defined but not used [-Wunused-function]
+make[3]: *** [libgdu_sd_la-gdusdmanager.lo] Error 1
+---
+ configure.ac |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index b40d58f..9cf1011 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -88,7 +88,7 @@ LIBSECRET1_REQUIRED=0.7
+ PWQUALITY_REQUIRED=1.0.0
+ CANBERRA_REQUIRED=0.1
+ LIBDVDREAD_REQUIRED=4.2.0
+-GSD_PLUGIN_REQUIRED=3.6
++GSD_PLUGIN_REQUIRED=3.8
+ LIBNOTIFY_REQUIRED=0.7
+ 
+ PKG_CHECK_MODULES(GLIB2, [gmodule-2.0 gio-unix-2.0 >= $GLIB2_REQUIRED])
+-- 
+1.7.10.4

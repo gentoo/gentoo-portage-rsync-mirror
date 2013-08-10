@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.306 2013/08/03 22:20:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.307 2013/08/10 10:08:26 eva Exp $
+
+  10 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> librsvg-2.37.0.ebuild:
+  Add mistakenly removed GNOME2_LA_PUNT, bug #480166.
 
   03 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> librsvg-2.37.0.ebuild:
   Clean up trailing whitespace.

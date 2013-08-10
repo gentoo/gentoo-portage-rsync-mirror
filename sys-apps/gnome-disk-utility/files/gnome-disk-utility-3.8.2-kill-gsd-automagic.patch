@@ -1,0 +1,45 @@
+From 57936f7012688af08328a5f5ffc9cd5e4b5c041f Mon Sep 17 00:00:00 2001
+From: Andreas Henriksson <andreas@fatal.se>
+Date: Fri, 5 Apr 2013 12:42:06 +0200
+Subject: [PATCH] Avoid needing gsd during build when --disable-gsd-plugin is
+ used
+
+PKG_CHECK_MODULES was previously unconditionally requiring
+gnome-settings-daemon to be available, even when it was later
+not going to be used because the --disable-gsd-plugin configure
+switch was passed.
+
+Move the check to only require g-s-d when it's actually going to be
+used.
+
+While at it, also fix the indentation of the msg_gsd_plugin=yes line.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=697146
+---
+ configure.ac |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 9cf1011..054d9d7 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -98,7 +98,6 @@ PKG_CHECK_MODULES(LIBSECRET1, [libsecret-1 >= $LIBSECRET1_REQUIRED])
+ PKG_CHECK_MODULES(PWQUALITY, [pwquality >= $PWQUALITY_REQUIRED])
+ PKG_CHECK_MODULES(CANBERRA, [libcanberra-gtk3 >= $CANBERRA_REQUIRED])
+ PKG_CHECK_MODULES(LIBDVDREAD, [dvdread >= $LIBDVDREAD_REQUIRED])
+-PKG_CHECK_MODULES(GSD_PLUGIN, [gnome-settings-daemon >= GSD_PLUGIN_REQUIRED])
+ PKG_CHECK_MODULES(LIBNOTIFY, [libnotify >= LIBNOTIFY_REQUIRED])
+ 
+ gsd_plugindir='${libdir}/gnome-settings-daemon-3.0'
+@@ -134,7 +133,8 @@ dnl *************************************
+ AC_ARG_ENABLE(gsd_plugin, AS_HELP_STRING([--disable-gsd-plugin],[don't build gnome-settings-daemon plug-in]))
+ msg_gsd_plugin=no
+ if test "x$enable_gsd_plugin" != "xno"; then
+-   msg_gsd_plugin=yes
++  msg_gsd_plugin=yes
++  PKG_CHECK_MODULES(GSD_PLUGIN, [gnome-settings-daemon >= GSD_PLUGIN_REQUIRED])
+ fi
+ AM_CONDITIONAL(USE_GSD_PLUGIN, [test "$msg_gsd_plugin" = "yes"])
+ 
+-- 
+1.7.10.4

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.8.2.ebuild,v 1.4 2013/07/27 13:45:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.8.2.ebuild,v 1.5 2013/08/10 10:28:50 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Disk Utility for GNOME using udisks"
 HOMEPAGE="http://git.gnome.org/browse/gnome-disk-utility"
@@ -37,6 +37,15 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	# Fix USE=-gnome, bug #478820
+	epatch "${FILESDIR}"/${PN}-3.8.2-kill-gsd-automagic.patch
+	epatch "${FILESDIR}"/${PN}-3.8.2-raise-gsd-dependency.patch
+
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_configure() {
 	gnome2_src_configure \
