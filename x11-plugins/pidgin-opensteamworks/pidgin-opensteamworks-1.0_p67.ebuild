@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/pidgin-opensteamworks-1.0_p38.ebuild,v 1.1 2013/01/29 19:34:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/pidgin-opensteamworks-1.0_p67.ebuild,v 1.1 2013/08/10 15:43:44 mrueg Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Steam protocol plugin for pidgin"
 HOMEPAGE="http://code.google.com/p/pidgin-opensteamworks/"
-SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz
+SRC_URI="http://dev.gentoo.org/~mrueg/distfiles/${P}.tar.xz
 	http://pidgin-opensteamworks.googlecode.com/files/icons.zip
 	-> ${PN}-icons.zip"
 
@@ -19,6 +19,8 @@ IUSE=""
 
 RDEPEND="dev-libs/glib:2
 	dev-libs/json-glib
+	dev-libs/nss
+	gnome-base/libgnome-keyring
 	net-im/pidgin"
 DEPEND="${RDEPEND}
 	app-arch/unzip
@@ -31,7 +33,7 @@ pkg_setup() {
 
 src_prepare() {
 	# see http://code.google.com/p/pidgin-opensteamworks/issues/detail?id=31
-	cp "${FILESDIR}"/${PN}-1.0_p32-Makefile "${S}"/Makefile || die
+	cp "${FILESDIR}"/${P}-Makefile "${S}"/Makefile || die
 }
 
 src_install() {
