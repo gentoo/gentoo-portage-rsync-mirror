@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.252 2013/07/04 12:17:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.253 2013/08/10 20:12:57 halcy0n Exp $
+
+  10 Aug 2013; Mark Loeser <halcy0n@gentoo.org> doxygen-1.7.6.1.ebuild,
+  doxygen-1.8.3.1.ebuild, doxygen-1.8.4-r2.ebuild:
+  Revert workaround for ppc64 now that we have gcc-4.6; bug #263641
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> doxygen-1.8.3.1.ebuild:
   Stable for x86, wrt bug #471692

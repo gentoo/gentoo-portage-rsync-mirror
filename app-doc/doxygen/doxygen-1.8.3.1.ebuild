@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.3.1.ebuild,v 1.16 2013/07/04 12:17:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.3.1.ebuild,v 1.17 2013/08/10 20:12:57 halcy0n Exp $
 
 EAPI=4
 
@@ -144,8 +144,6 @@ src_configure() {
 	else
 		my_conf="${my_conf} --release "
 	fi
-
-	use ppc64 && my_conf="${my_conf} --english-only" #263641
 
 	use qt4 && my_conf="${my_conf} --with-doxywizard"
 

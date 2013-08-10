@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.108 2013/08/08 09:41:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.110 2013/08/10 20:23:22 cardoe Exp $
+
+  10 Aug 2013; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  Add the virtualization herd as a co-maintainer
+
+  10 Aug 2013; Doug Goldstein <cardoe@gentoo.org> -gtk-vnc-0.5.0-r1.ebuild,
+  gtk-vnc-0.5.2.ebuild:
+  Remove older version and enable USE=gtk3 to be on by default from 0.5.2 and
+  on.
 
   08 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gtk-vnc-0.5.2.ebuild:
   Stable for amd64, wrt bug #480150
