@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.11 2013/08/10 08:08:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.12 2013/08/10 21:49:40 mgorny Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6 )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5 )
-	gudev? ( >=dev-libs/glib-2 )
+	gudev? ( >=dev-libs/glib-2[${MULTILIB_USEDEP}] )
 	http? ( net-libs/libmicrohttpd )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	kmod? ( >=sys-apps/kmod-14-r1 )
@@ -49,7 +49,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xattr? ( sys-apps/attr )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r8
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
 # baselayout-2.2 has /run
@@ -197,7 +197,6 @@ multilib_src_configure() {
 			--disable-audit
 			--disable-gcrypt
 			--disable-gtk-doc
-			--disable-gudev
 			--disable-introspection
 			--disable-kmod
 			--disable-libcryptsetup
@@ -228,27 +227,12 @@ multilib_src_compile() {
 	if multilib_is_native_abi; then
 		emake "${mymakeopts[@]}"
 	else
+		# prerequisites for gudev
+		use gudev && emake src/gudev/gudev{enumtypes,marshal}.{c,h}
+
 		echo 'gentoo: $(lib_LTLIBRARIES) $(pkgconfiglib_DATA)' | \
 		emake "${mymakeopts[@]}" -f Makefile -f - gentoo
 	fi
-}
-
-src_install() {
-	MULTILIB_WRAPPED_HEADERS=()
-
-	if use gudev; then
-		MULTILIB_WRAPPED_HEADERS+=(
-			/usr/include/gudev-1.0/gudev/gudev.h
-			/usr/include/gudev-1.0/gudev/gudevclient.h
-			/usr/include/gudev-1.0/gudev/gudevdevice.h
-			/usr/include/gudev-1.0/gudev/gudevenumerator.h
-			/usr/include/gudev-1.0/gudev/gudevenums.h
-			/usr/include/gudev-1.0/gudev/gudevenumtypes.h
-			/usr/include/gudev-1.0/gudev/gudevtypes.h
-		)
-	fi
-
-	multilib-minimal_src_install
 }
 
 multilib_src_install() {
@@ -265,6 +249,8 @@ multilib_src_install() {
 			install-libLTLIBRARIES
 			install-pkgconfiglibDATA
 			install-includeHEADERS
+			# safe to call unconditionally, 'installs' empty list
+			install-libgudev_includeHEADERS
 			install-pkgincludeHEADERS
 		)
 
