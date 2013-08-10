@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.1-r1.ebuild,v 1.2 2013/08/07 14:58:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.1-r1.ebuild,v 1.3 2013/08/10 03:11:29 cardoe Exp $
 
 EAPI=5
 
@@ -149,7 +149,9 @@ VIRTNET_CONFIG_CHECK="
 	~NETFILTER_XT_MARK
 "
 
-MACVTAP_CONFIG_CHECK="~MACVTAP"
+MACVTAP_CONFIG_CHECK=" ~MACVTAP"
+
+LVM_CONFIG_CHECK=" ~BLK_DEV_DM ~DM_SNAPSHOT ~DM_MULTIPATH"
 
 pkg_setup() {
 	enewgroup qemu 77
@@ -171,8 +173,9 @@ pkg_setup() {
 
 	CONFIG_CHECK=""
 	use fuse && CONFIG_CHECK+=" ~FUSE_FS"
+	use lvm && CONFIG_CHECK+="${LVM_CONFIG_CHECK}"
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
-	use macvtap && CONFIG_CHECK+="${MACVTAP}"
+	use macvtap && CONFIG_CHECK+="${MACVTAP_CONFIG_CHECK}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
 	if [[ -n ${CONFIG_CHECK} ]]; then
 		linux-info_pkg_setup

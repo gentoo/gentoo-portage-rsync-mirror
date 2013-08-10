@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.180 2013/07/03 01:26:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.181 2013/08/10 03:09:45 anarchy Exp $
+
+*seamonkey-bin-2.20 (10 Aug 2013)
+
+  10 Aug 2013;  <anarchy@gentoo.org> +seamonkey-bin-2.20.ebuild:
+  Security bump, bug #479968
 
 *seamonkey-bin-2.19 (03 Jul 2013)
 

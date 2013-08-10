@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.50 2013/07/30 13:22:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.51 2013/08/10 03:11:29 cardoe Exp $
 
 EAPI=5
 
-#BACKPORTS=cafcec2f
+#BACKPORTS=864bcb0e
 AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
@@ -24,7 +24,7 @@ else
 		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
 			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
 
@@ -149,7 +149,9 @@ VIRTNET_CONFIG_CHECK="
 	~NETFILTER_XT_MARK
 "
 
-MACVTAP_CONFIG_CHECK="~MACVTAP"
+MACVTAP_CONFIG_CHECK=" ~MACVTAP"
+
+LVM_CONFIG_CHECK=" ~BLK_DEV_DM ~DM_SNAPSHOT ~DM_MULTIPATH"
 
 pkg_setup() {
 	enewgroup qemu 77
@@ -171,8 +173,9 @@ pkg_setup() {
 
 	CONFIG_CHECK=""
 	use fuse && CONFIG_CHECK+=" ~FUSE_FS"
+	use lvm && CONFIG_CHECK+="${LVM_CONFIG_CHECK}"
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
-	use macvtap && CONFIG_CHECK+="${MACVTAP}"
+	use macvtap && CONFIG_CHECK+="${MACVTAP_CONFIG_CHECK}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
 	if [[ -n ${CONFIG_CHECK} ]]; then
 		linux-info_pkg_setup
@@ -375,6 +378,7 @@ pkg_preinst() {
 	fi
 
 	# Only sysctl files ending in .conf work
+	dodir /etc/sysctl.d
 	mv "${D}"/usr/lib/sysctl.d/libvirtd.conf "${D}"/etc/sysctl.d/libvirtd.conf
 }
 

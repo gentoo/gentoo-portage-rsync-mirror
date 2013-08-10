@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.387 2013/07/12 20:34:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.388 2013/08/10 03:01:33 dilfridge Exp $
+
+*poppler-0.24.0 (10 Aug 2013)
+
+  10 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +poppler-0.24.0.ebuild:
+  Masked version bump for testing. Likely still has automagic dep on Qt5.
 
   12 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   poppler-0.22.2-r2.ebuild, poppler-0.22.5.ebuild:
