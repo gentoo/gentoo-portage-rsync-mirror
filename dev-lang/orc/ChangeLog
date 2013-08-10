@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.31 2013/04/29 13:49:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.32 2013/08/10 16:04:59 aballier Exp $
+
+*orc-0.4.17-r1 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +orc-0.4.17-r1.ebuild:
+  convert to multilib, bug #479936
 
 *orc-0.4.17 (29 Apr 2013)
 
