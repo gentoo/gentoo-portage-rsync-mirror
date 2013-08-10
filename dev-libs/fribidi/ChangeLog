@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.80 2013/02/03 12:13:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.81 2013/08/10 22:08:07 aballier Exp $
+
+*fribidi-0.19.5-r2 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +fribidi-0.19.5-r2.ebuild:
+  Convert to multilib and stack it for medialibs r11.
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900
