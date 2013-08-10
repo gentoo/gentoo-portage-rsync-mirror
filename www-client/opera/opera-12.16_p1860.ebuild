@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.16_p1860.ebuild,v 1.4 2013/07/05 18:21:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.16_p1860.ebuild,v 1.5 2013/08/10 14:43:28 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -85,7 +85,6 @@ GSTRDEPEND="
 RDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype
-	sys-apps/util-linux
 	sys-libs/zlib
 	virtual/opengl
 	x11-libs/libICE

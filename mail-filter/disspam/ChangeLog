@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/disspam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/ChangeLog,v 1.14 2011/06/10 11:58:26 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/ChangeLog,v 1.15 2013/08/10 14:55:45 ago Exp $
+
+  10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> disspam-0.14.ebuild:
+  Add ~amd64, wrt bug #476112
 
   10 Jun 2011; Eray Aslan <eras@gentoo.org> -disspam-0.10.ebuild,
   -disspam-0.12.ebuild, -disspam-0.12-r1.ebuild, disspam-0.14.ebuild:

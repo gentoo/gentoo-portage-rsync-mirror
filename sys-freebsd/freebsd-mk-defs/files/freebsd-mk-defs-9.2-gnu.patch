@@ -1,8 +1,29 @@
-diff --git a/share/mk/bsd.lib.mk b/share/mk/bsd.lib.mk
-index 131b90e..60c7207 100644
---- a/share/mk/bsd.lib.mk
-+++ b/share/mk/bsd.lib.mk
-@@ -153,11 +153,7 @@ _LIBS=		lib${LIB}.a
+Index: work/share/mk/bsd.lib.mk
+===================================================================
+--- work.orig/share/mk/bsd.lib.mk
++++ work/share/mk/bsd.lib.mk
+@@ -33,20 +33,6 @@ CFLAGS+= -DNDEBUG
+ NO_WERROR=
+ .endif
+ 
+-.if defined(DEBUG_FLAGS)
+-CFLAGS+= ${DEBUG_FLAGS}
+-
+-.if ${MK_CTF} != "no" && ${DEBUG_FLAGS:M-g} != ""
+-CTFFLAGS+= -g
+-.endif
+-.endif
+-
+-.if ${MK_DEBUG_FILES} != "no" && empty(DEBUG_FLAGS:M-g) && \
+-    empty(DEBUG_FLAGS:M-gdwarf*)
+-CFLAGS+= -g
+-CTFFLAGS+= -g
+-.endif
+-
+ .include <bsd.libnames.mk>
+ 
+ # prefer .s to a .c, add .po, remove stuff not used in the BSD libraries
+@@ -153,11 +139,7 @@ _LIBS=		lib${LIB}.a
  lib${LIB}.a: ${OBJS} ${STATICOBJS}
  	@${ECHO} building static ${LIB} library
  	@rm -f ${.TARGET}
@@ -15,7 +36,7 @@ index 131b90e..60c7207 100644
  	${RANLIB} ${.TARGET}
  .endif
  
-@@ -170,11 +166,7 @@ POBJS+=		${OBJS:.o=.po} ${STATICOBJS:.o=.po}
+@@ -170,11 +152,7 @@ POBJS+=		${OBJS:.o=.po} ${STATICOBJS:.o=
  lib${LIB}_p.a: ${POBJS}
  	@${ECHO} building profiled ${LIB} library
  	@rm -f ${.TARGET}
@@ -28,24 +49,24 @@ index 131b90e..60c7207 100644
  	${RANLIB} ${.TARGET}
  .endif
  
-@@ -201,15 +193,9 @@ ${SHLIB_NAME_FULL}: ${SOBJS}
+@@ -201,15 +179,9 @@ ${SHLIB_NAME_FULL}: ${SOBJS}
  .if defined(SHLIB_LINK)
  	@${INSTALL_SYMLINK} ${SHLIB_NAME} ${SHLIB_LINK}
  .endif
 -.if !defined(NM)
- 	@${CC} ${LDFLAGS} ${SSP_CFLAGS} ${SOLINKOPTS} \
- 	    -o ${.TARGET} -Wl,-soname,${SONAME} \
--	    `lorder ${SOBJS} | tsort -q` ${LDADD}
--.else
 -	@${CC} ${LDFLAGS} ${SSP_CFLAGS} ${SOLINKOPTS} \
 -	    -o ${.TARGET} -Wl,-soname,${SONAME} \
+-	    `lorder ${SOBJS} | tsort -q` ${LDADD}
+-.else
+ 	@${CC} ${LDFLAGS} ${SSP_CFLAGS} ${SOLINKOPTS} \
+ 	    -o ${.TARGET} -Wl,-soname,${SONAME} \
 -	    `NM='${NM}' lorder ${SOBJS} | tsort -q` ${LDADD}
 -.endif
 +	    `echo ${SOBJS} | xargs -n 1 echo | sort -u` ${LDADD}
  .if ${MK_CTF} != "no"
  	${CTFMERGE} ${CTFFLAGS} -o ${.TARGET} ${SOBJS}
  .endif
-@@ -267,13 +253,6 @@ _EXTRADEPEND:
+@@ -267,13 +239,6 @@ _EXTRADEPEND:
  
  .if !target(install)
  
@@ -59,11 +80,24 @@ index 131b90e..60c7207 100644
  _INSTALLFLAGS:=	${INSTALLFLAGS}
  .for ie in ${INSTALLFLAGS_EDIT}
  _INSTALLFLAGS:=	${_INSTALLFLAGS${ie}}
-diff --git a/share/mk/bsd.prog.mk b/share/mk/bsd.prog.mk
-index 3c8fe5e..7916787 100644
---- a/share/mk/bsd.prog.mk
-+++ b/share/mk/bsd.prog.mk
-@@ -176,13 +176,6 @@ _EXTRADEPEND:
+Index: work/share/mk/bsd.prog.mk
+===================================================================
+--- work.orig/share/mk/bsd.prog.mk
++++ work/share/mk/bsd.prog.mk
+@@ -36,12 +36,6 @@ MK_DEBUG_FILES=	no
+ 
+ .if defined(CRUNCH_CFLAGS)
+ CFLAGS+=${CRUNCH_CFLAGS}
+-.else
+-.if ${MK_DEBUG_FILES} != "no" && empty(DEBUG_FLAGS:M-g) && \
+-    empty(DEBUG_FLAGS:M-gdwarf-*)
+-CFLAGS+= -g
+-CTFFLAGS+= -g
+-.endif
+ .endif
+ 
+ .if defined(NO_SHARED) && (${NO_SHARED} != "no" && ${NO_SHARED} != "NO")
+@@ -176,13 +170,6 @@ _EXTRADEPEND:
  
  .if !target(install)
  
@@ -77,3 +111,16 @@ index 3c8fe5e..7916787 100644
  _INSTALLFLAGS:=	${INSTALLFLAGS}
  .for ie in ${INSTALLFLAGS_EDIT}
  _INSTALLFLAGS:=	${_INSTALLFLAGS${ie}}
+Index: work/share/mk/bsd.obj.mk
+===================================================================
+--- work.orig/share/mk/bsd.obj.mk
++++ work/share/mk/bsd.obj.mk
+@@ -44,8 +44,6 @@ __<bsd.obj.mk>__:
+ 
+ .if defined(MAKEOBJDIRPREFIX)
+ CANONICALOBJDIR:=${MAKEOBJDIRPREFIX}${.CURDIR}
+-.elif defined(MAKEOBJDIR) && ${MAKEOBJDIR:M/*} != ""
+-CANONICALOBJDIR:=${MAKEOBJDIR}
+ .else
+ CANONICALOBJDIR:=/usr/obj${.CURDIR}
+ .endif

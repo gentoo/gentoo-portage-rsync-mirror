@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.420 2013/08/06 13:08:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.421 2013/08/10 14:49:21 jer Exp $
+
+  10 Aug 2013; Jeroen Roovers <jer@gentoo.org> -lftp-4.4.5.ebuild,
+  -lftp-4.4.6.ebuild, -lftp-4.4.7.ebuild:
+  Old.
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> lftp-4.4.8.ebuild:
   Stable for s390, wrt bug #475676

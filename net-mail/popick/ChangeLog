@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/popick
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.5 2007/02/08 13:34:41 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.6 2013/08/10 14:57:11 ago Exp $
+
+  10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> popick-0.1.ebuild:
+  Add ~amd64, wrt bug #476750
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
@@ -20,4 +23,3 @@
   +popick-0.1.ebuild:
   Initial import. Closes #73364, ebuild submitted by Mina Naguib
   <webmaster@topfx.com>.
-

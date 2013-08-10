@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.1 2013/08/09 21:17:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.2 2013/08/10 14:52:22 aballier Exp $
 
 EAPI=5
 
@@ -494,6 +494,8 @@ do_install() {
 		fi
 	else
 		CHOST=${CTARGET} gen_libc_ldscript "usr/${CTARGET}/usr/lib" "usr/${CTARGET}/usr/lib" "usr/${CTARGET}/usr/lib"
+		# We're done for the cross libc here.
+		return 0
 	fi
 
 	# Install a libusb.pc for better compat with Linux's libusb

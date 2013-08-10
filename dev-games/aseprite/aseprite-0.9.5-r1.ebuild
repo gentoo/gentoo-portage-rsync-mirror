@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/aseprite-9999.ebuild,v 1.3 2013/08/10 15:00:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/aseprite/aseprite-0.9.5-r1.ebuild,v 1.1 2013/08/10 15:00:11 tomwij Exp $
 
 EAPI="5"
 
-inherit cmake-utils flag-o-matic git-2
+inherit cmake-utils flag-o-matic
 
 DESCRIPTION="Animated sprite editor & pixel art tool"
 HOMEPAGE="http://www.aseprite.org"
-EGIT_REPO_URI="git://github.com/dacap/${PN}.git"
+SRC_URI="http://aseprite.googlecode.com/files/aseprite-${PV}.tar.xz"
 
 LICENSE="GPL-2 FTL"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE="debug memleak static test"
 
@@ -26,6 +26,8 @@ RDEPEND="dev-libs/tinyxml
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	test? ( dev-cpp/gtest )"
+
+PATCHES=( "${FILESDIR}"/aseprite-0.9.5-as-needed.patch )
 
 DOCS=( docs/quickref.odt
 	docs/files/ase.txt
@@ -54,6 +56,10 @@ src_prepare() {
 		sed -i '/include_directories(.*third_party\/gtest.*)/d' src/CMakeLists.txt || die
 		sed -i '/add_subdirectory(gtest)/d' third_party/CMakeLists.txt || die
 	fi
+
+	# Fix from https://465450.bugs.gentoo.org/attachment.cgi?id=345154
+	# for "error: ‘png_sizeof’ was not declared in this scope".
+	sed -i 's/png_\(sizeof\)/\1/g' src/file/png_format.cpp || die
 }
 
 src_configure() {
