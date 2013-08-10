@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/testdisk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.51 2012/09/08 09:51:48 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.52 2013/08/10 05:28:20 radhermit Exp $
+
+*testdisk-6.14 (10 Aug 2013)
+
+  10 Aug 2013; Tim Harder <radhermit@gentoo.org> +testdisk-6.14.ebuild:
+  Version bump.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> testdisk-6.12.ebuild,
   testdisk-6.13.ebuild:
