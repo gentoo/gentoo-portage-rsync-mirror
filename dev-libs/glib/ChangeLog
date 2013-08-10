@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.565 2013/07/26 20:39:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.566 2013/08/10 14:24:32 aballier Exp $
+
+*glib-2.36.3-r2 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +glib-2.36.3-r2.ebuild:
+  migrate to multilib, bug #479282
 
 *glib-2.36.3-r1 (26 Jul 2013)
 

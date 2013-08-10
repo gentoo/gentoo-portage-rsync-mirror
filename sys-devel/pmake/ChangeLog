@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/pmake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.46 2012/09/11 01:30:35 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.47 2013/08/10 14:28:40 aballier Exp $
+
+*pmake-1.111.3.3 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +pmake-1.111.3.3.ebuild:
+  version bump
 
   11 Sep 2012; Christoph Junghans <ottxor@gentoo.org> pmake-1.111.3.1.ebuild:
   add prefix support (bug #434530)
