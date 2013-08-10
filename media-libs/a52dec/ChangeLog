@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.67 2013/05/02 04:09:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.68 2013/08/10 19:09:34 aballier Exp $
+
+*a52dec-0.7.4-r7 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +a52dec-0.7.4-r7.ebuild:
+  Convert to multilib, stop installing a52_internal that shouldnt be needed nor
+  used, stack it for medialibs r9
 
   02 May 2013; Samuli Suominen <ssuominen@gentoo.org> a52dec-0.7.4-r6.ebuild:
   Fix automake-1.13 compability wrt #466978 by Alphat-PC and Thomas. Remove

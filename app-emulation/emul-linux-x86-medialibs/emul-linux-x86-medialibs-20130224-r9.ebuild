@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20130224-r8.ebuild,v 1.1 2013/08/01 17:43:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20130224-r9.ebuild,v 1.1 2013/08/10 19:10:20 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -36,6 +36,9 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-libs/libsidplay-1.36.59-r1:1[abi_x86_32(-)]
 		>=media-libs/x264-0.0.20130731[abi_x86_32(-)]
 		>=media-libs/libiec61883-1.2.0-r1[abi_x86_32(-)]
+		>=media-libs/a52dec-0.7.4-r7[abi_x86_32(-)]
+		>=media-libs/libmimic-1.0.4-r2[abi_x86_32(-)]
+		>=media-libs/libmms-0.6.2-r1[abi_x86_32(-)]
 	)
 	"
 PDEPEND="~app-emulation/emul-linux-x86-soundlibs-${PV}"

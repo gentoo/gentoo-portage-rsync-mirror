@@ -684,6 +684,7 @@ app-leechcraft/lc-azoth:keeso - Build plugin for changing text into SoMEtHInG lI
 app-leechcraft/lc-azoth:lastseen - Build plugin for client-side recording of the last online/available time
 app-leechcraft/lc-azoth:media - Enable media calls
 app-leechcraft/lc-azoth:metacontacts - Build plugin for metacontacts support
+app-leechcraft/lc-azoth:murm - Build Murm, the VKontakte messaging support via their native API (instead of XMPP)
 app-leechcraft/lc-azoth:nativeemoticons - Build support for native Azoth's emoticons packs
 app-leechcraft/lc-azoth:otroid - Build OTRoid, plugin for the Off-the-Record deniable encryption system
 app-leechcraft/lc-azoth:p100q - Build p100q, plugin for psto.net microblogging service

@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-lang
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.66 2011/12/19 12:18:25 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.67 2013/08/10 19:12:07 tomwij Exp $
+
+*commons-lang-3.1 (10 Aug 2013)
+
+  10 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +commons-lang-3.1.ebuild:
+  Version bump to 3.1, new slot because of API incompatibility with previous
+  versions.
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-lang-2.0-r2.ebuild:
   Fix homepage wrt #202445.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.5 2013/07/18 12:40:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.6 2013/08/10 19:11:44 maksbotan Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt +depester +embedmedia +herbicide +hili +isterique
-		+juick +keeso +lastseen	+metacontacts media +msn +latex +nativeemoticons
+		+juick +keeso +lastseen	+metacontacts media +msn +murm +latex +nativeemoticons
 		+otroid +p100q +spell shx +standardstyles +vader +xmpp +xtazy"
 
 COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
@@ -70,6 +70,7 @@ src_configure() {
 		$(cmake-utils_use_enable media MEDIACALLS)
 		$(cmake-utils_use_enable latex AZOTH_MODNOK)
 		$(cmake-utils_use_enable msn AZOTH_ZHEET)
+		$(cmake-utils_use_enable murm AZOTH_MURM)
 		$(cmake-utils_use_enable nativeemoticons AZOTH_NATIVEEMOTICONS)
 		$(cmake-utils_use_enable otroid AZOTH_OTROID)
 		$(cmake-utils_use_enable p100q AZOTH_P100Q)
