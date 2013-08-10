@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-celery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/ChangeLog,v 1.13 2013/07/22 10:07:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/ChangeLog,v 1.14 2013/08/10 12:50:21 patrick Exp $
+
+*django-celery-3.0.21 (10 Aug 2013)
+
+  10 Aug 2013; Patrick Lauer <patrick@gentoo.org> +django-celery-3.0.21.ebuild:
+  Bump
 
   22 Jul 2013; Michał Górny <mgorny@gentoo.org> -django-celery-3.0.17.ebuild:
   Drop the old version using long-deprecated python-distutils-ng.eclass.

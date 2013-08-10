@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/adjtimex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.30 2013/08/07 13:26:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.31 2013/08/10 12:48:49 ago Exp $
+
+  10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> adjtimex-1.29-r1.ebuild:
+  Stable for ppc, wrt bug #470558
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> adjtimex-1.29-r1.ebuild:
   Stable for x86, wrt bug #470558

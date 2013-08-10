@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mozrunner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.26 2013/07/23 11:54:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.27 2013/08/10 12:56:07 patrick Exp $
+
+*mozrunner-5.23 (10 Aug 2013)
+
+  10 Aug 2013; Patrick Lauer <patrick@gentoo.org> +mozrunner-5.23.ebuild:
+  Bump
 
 *mozrunner-5.18-r1 (23 Jul 2013)
 

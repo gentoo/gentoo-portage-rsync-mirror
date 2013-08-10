@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.37 2013/06/17 04:25:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.38 2013/08/10 12:36:03 patrick Exp $
+
+*fabric-1.7.0 (10 Aug 2013)
+
+  10 Aug 2013; Patrick Lauer <patrick@gentoo.org> +fabric-1.7.0.ebuild:
+  Bump
 
   17 Jun 2013; Mike Gilbert <floppym@gentoo.org> fabric-1.6.1-r1.ebuild:
   Don't depend on mulitprocessing for python2.6, thanks Arfrever.

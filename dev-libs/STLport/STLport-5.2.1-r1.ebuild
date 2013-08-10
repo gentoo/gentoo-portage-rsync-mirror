@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.2.1-r1.ebuild,v 1.5 2013/08/07 13:30:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.2.1-r1.ebuild,v 1.6 2013/08/10 12:53:20 ago Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/stlport/${P}.tar.bz2
 
 LICENSE="boehm-gc HPND"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="boost debug static static-libs threads"
 
 DEPEND="boost? ( >=dev-libs/boost-1.35.0-r5 )"
