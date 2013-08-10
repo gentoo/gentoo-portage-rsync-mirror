@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.127 2013/06/26 01:34:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.128 2013/08/10 10:00:25 patrick Exp $
+
+*logilab-common-0.60.0 (10 Aug 2013)
+
+  10 Aug 2013; Patrick Lauer <patrick@gentoo.org> +logilab-common-0.60.0.ebuild:
+  Bump
 
   26 Jun 2013; Patrick McLean <chutz@gentoo.org> logilab-common-0.59.1.ebuild:
   Restore ~arm keyword dropped in 0.59.0 bump.
