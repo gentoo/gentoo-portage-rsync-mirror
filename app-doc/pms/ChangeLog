@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.37 2013/08/09 21:07:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.38 2013/08/10 06:55:52 ulm Exp $
+
+*pms-5-r2 (10 Aug 2013)
+
+  10 Aug 2013; Ulrich Müller <ulm@gentoo.org> -pms-5-r1.ebuild,
+  +pms-5-r2.ebuild:
+  Install the same set of files with and without USE=binary. Remove old.
 
 *pms-5-r1 (09 Aug 2013)
 
