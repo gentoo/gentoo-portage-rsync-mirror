@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/djbfft
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.20 2013/01/14 10:05:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.21 2013/08/10 18:29:14 aballier Exp $
+
+*djbfft-0.76-r2 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +djbfft-0.76-r2.ebuild:
+  convert to multilib
 
   14 Jan 2013; Justin Lecher <jlec@gentoo.org> -djbfft-0.76.ebuild,
   metadata.xml:
