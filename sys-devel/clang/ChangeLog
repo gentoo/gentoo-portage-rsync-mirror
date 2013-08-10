@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.93 2013/07/31 21:51:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.94 2013/08/10 22:35:01 mgorny Exp $
+
+  10 Aug 2013; Michał Górny <mgorny@gentoo.org> clang-3.3-r100.ebuild,
+  clang-9999-r100.ebuild:
+  Add multilib flags. Make the deps weaker (no need to enforce disabling
+  everything in LLVM).
 
   31 Jul 2013; Alexis Ballier <aballier@gentoo.org> clang-3.3-r100.ebuild:
   remove ppc keywords that were added by mistake
