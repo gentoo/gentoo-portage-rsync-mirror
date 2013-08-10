@@ -1,6 +1,15 @@
 # ChangeLog for app-text/pdftk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.42 2013/07/03 16:32:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.43 2013/08/10 17:24:20 tomwij Exp $
+
+*pdftk-2.02 (10 Aug 2013)
+
+  10 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +files/pdftk-2.02-flags.patch,
+  +pdftk-2.02.ebuild:
+  Version bump to 2.02. Fixes bug #450080, reported by Adam Randall,
+  7v5w7go9ub0o and Jeroen Roovers; applied patch by Ondrej Grover with small
+  fixes to make it work with 2.02 instead of 2.01 as well as to not turn
+  warnings into errors to avoid breakage without purpose.
 
   03 Jul 2013; Christoph Junghans <ottxor@gentoo.org> pdftk-1.45.ebuild:
   Added ~amd64-linux (tested by me)

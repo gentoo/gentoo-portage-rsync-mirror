@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.30 2013/07/25 16:51:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.31 2013/08/10 17:14:01 dolsen Exp $
 
 EAPI="5"
 
@@ -36,10 +36,14 @@ RDEPEND="
 	)
 	gpg? ( =dev-python/pyGPG-9999 )
 	virtual/python-argparse[${PYTHON_USEDEP}]
+	>=dev-python/requests-1.2.1
+	dev-python/ndg-httpsclient
+	dev-python/pyasn1
+	>=dev-python/pyopenssl-0.13
 	"
 
 python_prepare_all()  {
-	python_export_best
+	distutils-r1_python_prepare_all
 	eprefixify etc/layman.cfg layman/config.py
 }
 
