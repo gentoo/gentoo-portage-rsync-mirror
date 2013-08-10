@@ -1,6 +1,6 @@
 diff -Naur gradm2.orig/Makefile gradm2/Makefile
---- gradm2.orig/Makefile	2013-08-02 17:44:44.000000000 -0400
-+++ gradm2/Makefile	2013-08-03 08:40:34.000000000 -0400
+--- gradm2.orig/Makefile	2013-08-09 16:28:37.000000000 -0400
++++ gradm2/Makefile	2013-08-10 07:57:12.000000000 -0400
 @@ -18,18 +18,18 @@
  BISON=/usr/bin/bison
  #YACC := $(shell if [ -x $(BYACC) ]; then echo $(BYACC); else echo $(BISON); fi)
@@ -14,9 +14,9 @@ diff -Naur gradm2.orig/Makefile gradm2/Makefile
 -STRIP=/usr/bin/strip
 +STRIP=true
  LIBS := $(shell if [ "`uname -m`" != "sparc64" -a "`uname -m`" != "x86_64" ]; then echo "-lfl" ; else echo "" ; fi)
- # OPT_FLAGS := -O2
+ OPT_FLAGS := -O2
  # for older versions of grsecurity, comment the above line and uncomment the below:
- OPT_FLAGS := $(shell if [ "`uname -m`" != "sparc64" ] && [ "`uname -m`" != "x86_64" ]; then echo "-O2" ; else echo "-O2 -m64" ; fi)
+ #OPT_FLAGS := $(shell if [ "`uname -m`" != "sparc64" ] && [ "`uname -m`" != "x86_64" ]; then echo "-O2" ; else echo "-O2 -m64" ; fi)
 -CFLAGS := $(OPT_FLAGS) -Wcast-qual -DGRSEC_DIR=\"$(GRSEC_DIR)\" -D_LARGEFILE64_SOURCE
 -LDFLAGS=
 +CFLAGS := $(OPT_FLAGS) -Wcast-qual -DGRSEC_DIR=\"$(GRSEC_DIR)\" -D_LARGEFILE64_SOURCE $(CFLAGS)

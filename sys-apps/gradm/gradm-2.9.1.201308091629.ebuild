@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.9.1.201308021745.ebuild,v 1.1 2013/08/03 12:40:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.9.1.201308091629.ebuild,v 1.1 2013/08/10 11:56:27 blueness Exp $
 
 EAPI="5"
 inherit flag-o-matic toolchain-funcs versionator eutils udev
@@ -25,7 +25,7 @@ DEPEND="
 S=${WORKDIR}/${PN}2
 
 src_prepare() {
-	epatch "${FILESDIR}"/respect-gentoo-env-r1.patch
+	epatch "${FILESDIR}"/respect-gentoo-env-r2.patch
 	sed -i -e "s:/lib/udev:$(get_udevdir):" Makefile || die
 }
 
