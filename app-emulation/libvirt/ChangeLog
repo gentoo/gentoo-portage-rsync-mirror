@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.307 2013/08/10 03:19:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.309 2013/08/10 03:53:09 cardoe Exp $
+
+  10 Aug 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.1.1-r2.ebuild:
+  Start using readme.gentoo
+
+*libvirt-1.1.1-r2 (10 Aug 2013)
+
+  10 Aug 2013; Doug Goldstein <cardoe@gentoo.org> +libvirt-1.1.1-r2.ebuild:
+  Fix crash in remoteDomainCreateWithFlags(). Example of the crash can be seen
+  with 'virsh start domain --paused'. rhbz#994855
 
   10 Aug 2013; Doug Goldstein <cardoe@gentoo.org>
   -files/libvirt-1.0.6-CVE-2013-2218.patch,
