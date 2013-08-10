@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/powder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.16 2013/02/07 22:11:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.17 2013/08/10 15:03:55 ago Exp $
+
+  10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> powder-117.ebuild:
+  amd64 really stable now, wrt bug #450058
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> powder-116.ebuild,
   powder-117.ebuild:

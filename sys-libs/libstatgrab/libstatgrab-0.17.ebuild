@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.17.ebuild,v 1.3 2012/08/24 13:40:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.17.ebuild,v 1.4 2013/08/10 15:09:45 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libsta
 
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT=0
-KEYWORDS="~amd64 ~ia64 ppc x86"
+KEYWORDS="amd64 ~ia64 ppc x86"
 IUSE="static-libs"
 
 RDEPEND="sys-libs/ncurses"
