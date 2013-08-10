@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.48 2013/01/22 17:45:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.49 2013/08/10 13:57:40 jer Exp $
+
+*whowatch-1.8.4 (10 Aug 2013)
+
+  10 Aug 2013; Jeroen Roovers <jer@gentoo.org> +whowatch-1.8.4.ebuild,
+  +files/whowatch-1.8.4-tinfo.patch:
+  Version bump (bug #480490).
 
   22 Jan 2013; Jeroen Roovers <jer@gentoo.org> -whowatch-1.8.3.ebuild:
   Old.
