@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0.ebuild,v 1.2 2013/08/08 20:49:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r1.ebuild,v 1.1 2013/08/10 02:43:06 axs Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -39,6 +39,7 @@ pkg_setup(){
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-${SLOT}-js-config-shebang.patch
 	epatch_user
 
 	if [[ ${CHOST} == *-freebsd* ]]; then
@@ -107,7 +108,7 @@ src_install() {
 
 	if ! use minimal; then
 		if use jit; then
-			pax-mark m "${ED}/usr/bin/js${SLOT}*"
+			pax-mark m "${ED}/usr/bin/js${SLOT}"
 		fi
 	else
 		rm -f "${ED}/usr/bin/js${SLOT}"

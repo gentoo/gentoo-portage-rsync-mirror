@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.119 2013/08/08 20:49:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.120 2013/08/10 02:43:06 axs Exp $
+
+*spidermonkey-17.0.0-r1 (10 Aug 2013)
+
+  10 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
+  +files/spidermonkey-17-js-config-shebang.patch,
+  +spidermonkey-17.0.0-r1.ebuild, -spidermonkey-17.0.0.ebuild:
+  fixed improper pax-marking, and patched build system to keep it from stripping
+  shebang from js-config
 
   08 Aug 2013; Ian Stakenvicius <axs@gentoo.org> -spidermonkey-1.8.5-r1.ebuild,
   -spidermonkey-1.8.5-r2.ebuild, -spidermonkey-1.8.5-r3.ebuild,
