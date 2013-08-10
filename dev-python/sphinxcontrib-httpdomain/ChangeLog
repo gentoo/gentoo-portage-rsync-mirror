@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sphinxcontrib-httpdomain
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-httpdomain/ChangeLog,v 1.1 2013/06/10 09:07:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-httpdomain/ChangeLog,v 1.2 2013/08/10 12:26:11 patrick Exp $
+
+*sphinxcontrib-httpdomain-1.1.9 (10 Aug 2013)
+
+  10 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +sphinxcontrib-httpdomain-1.1.9.ebuild:
+  Bump
 
 *sphinxcontrib-httpdomain-1.1.8 (10 Jun 2013)
 
