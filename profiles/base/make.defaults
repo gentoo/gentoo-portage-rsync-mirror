@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.103 2013/07/30 01:26:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.104 2013/08/10 09:15:20 mgorny Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -126,3 +126,11 @@ BOOTSTRAP_USE="cxx unicode python_targets_python3_2 python_targets_python2_7"
 # Default target(s) for python-r1.eclass
 PYTHON_TARGETS="python2_7 python3_2"
 PYTHON_SINGLE_TARGET="python2_7"
+
+# Michał Górny <mgorny@gentoo.org> (10 Aug 2013)
+# Moved from portage's make.globals.
+# 1) do not uninstall kernel modules and therefore allow replacing them,
+# 2) allow replacing unowned compiled Python modules (python-r1 migration),
+# 3) allow replacing unowned dropin.cache files (twisted-r1 migration).
+COLLISION_IGNORE="/lib/modules/* *.py[co] *\$py.class */dropin.cache"
+UNINSTALL_IGNORE="/lib/modules/*"

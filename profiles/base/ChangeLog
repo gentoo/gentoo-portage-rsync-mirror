@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.579 2013/08/07 22:11:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.580 2013/08/10 09:15:20 mgorny Exp $
+
+  10 Aug 2013; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Move COLLISION_IGNORE and UNINSTALL_IGNORE from make.globals.
 
   07 Aug 2013; Michał Górny <mgorny@gentoo.org> use.mask:
   Mask Python 2.5, 3.1 and PyPy 1.9. Bug #480070.
