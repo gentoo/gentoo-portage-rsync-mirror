@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.299 2013/03/26 03:47:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.300 2013/08/10 06:07:51 dirtyepic Exp $
+
+*wxGTK-2.9.4.1-r1 (10 Aug 2013)
+*wxGTK-2.9.3.1-r1 (10 Aug 2013)
+*wxGTK-2.8.12.1-r1 (10 Aug 2013)
+
+  10 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> +wxGTK-2.8.12.1-r1.ebuild,
+  +wxGTK-2.9.3.1-r1.ebuild, +wxGTK-2.9.4.1-r1.ebuild:
+  Port to EAPI 5. Fix x32 build again (bug #421851). Add epatch_user. Restore
+  missing removal of wxmsw.mo to 2.9 ebuilds to prevent file collisions.
 
   26 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.9.3.1.ebuild,
   wxGTK-2.9.4.1.ebuild:
