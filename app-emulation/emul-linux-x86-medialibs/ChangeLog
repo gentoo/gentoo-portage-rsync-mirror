@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.77 2013/08/10 19:10:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.78 2013/08/10 20:37:27 aballier Exp $
+
+*emul-linux-x86-medialibs-20130224-r10 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-medialibs-20130224-r9.ebuild,
+  +emul-linux-x86-medialibs-20130224-r10.ebuild, files/remove-native:
+  new revision featuring migrated libvisual, libmpeg2, liboil and libieee1284
 
 *emul-linux-x86-medialibs-20130224-r9 (10 Aug 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/liboil
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.92 2012/10/29 00:56:43 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.93 2013/08/10 20:36:54 aballier Exp $
+
+*liboil-0.3.17-r2 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +liboil-0.3.17-r2.ebuild:
+  Convert to multilib and stack it for medialibs r10
 
 *liboil-0.3.17-r1 (29 Oct 2012)
 
