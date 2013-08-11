@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.193 2013/07/23 01:05:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.194 2013/08/11 12:41:43 jer Exp $
+
+  11 Aug 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove USE=zeromq mask for app-admin/rsyslog.
 
   23 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=graphite for sys-devel/gcc.
