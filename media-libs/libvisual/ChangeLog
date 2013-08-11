@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.49 2013/08/10 20:36:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.50 2013/08/11 03:11:49 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> libvisual-0.4.0-r3.ebuild,
+  +files/libvisual-0.4.0-cond.patch, +files/libvisual-0.4.0-conditions.patch,
+  +files/libvisual-0.4.0-detect_amd64.patch:
+  Fix broken cpp check, bug #431066. Fix amd64 detection. Fix broken threads
+  AC_ARG_ENABLE.
 
 *libvisual-0.4.0-r3 (10 Aug 2013)
 
