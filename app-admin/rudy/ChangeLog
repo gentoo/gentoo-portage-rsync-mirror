@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rudy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.20 2011/08/07 12:30:17 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.21 2013/08/11 06:59:02 graaff Exp $
+
+  11 Aug 2013; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Drop package from ruby herd as per 2013-07-21 announcement.
 
   07 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> rudy-0.9.8.016.ebuild:
   Add missing dependency over virtual/ruby-ssl.

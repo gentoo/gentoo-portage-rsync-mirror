@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.124 2013/08/11 06:27:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.125 2013/08/11 06:56:36 ssuominen Exp $
 
 EAPI=5
 
@@ -38,7 +38,10 @@ DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	ncurses? ( virtual/pkgconfig )"
 RDEPEND="${COMMON_DEPEND}
-	virtual/init"
+	!prefix? (
+		kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) )
+		kernel_FreeBSD? ( sys-freebsd/freebsd-sbin )
+	)"
 
 src_prepare() {
 	sed -i 's:0444:0644:' mk/sys.mk || die

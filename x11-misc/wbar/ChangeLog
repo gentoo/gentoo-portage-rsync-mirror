@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.30 2013/04/27 14:44:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.31 2013/08/11 06:51:54 ssuominen Exp $
+
+  11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> wbar-2.3.0.ebuild,
+  wbar-2.3.1.ebuild, wbar-2.3.3.ebuild, wbar-2.3.4-r1.ebuild:
+  Remove virtual/init from build and runtime dependencies wrt #480576
 
   27 Apr 2013; Julian Ospald <hasufell@gentoo.org> wbar-2.3.4-r1.ebuild,
   +files/wbar-2.3.4-automake-1.13.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.8.ebuild,v 1.12 2013/08/11 06:27:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.8.ebuild,v 1.13 2013/08/11 06:56:36 ssuominen Exp $
 
 EAPI=4
 
@@ -36,7 +36,10 @@ DEPEND="${COMMON_DEPEND}
 	ncurses? ( sys-libs/ncurses[-tinfo] )
 	virtual/os-headers"
 RDEPEND="${COMMON_DEPEND}
-	virtual/init
+	!prefix? (
+		kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) )
+		kernel_FreeBSD? ( sys-freebsd/freebsd-sbin )
+	)
 	ncurses? ( sys-libs/ncurses )"
 
 src_prepare() {

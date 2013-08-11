@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.270 2013/08/11 06:27:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.271 2013/08/11 06:56:36 ssuominen Exp $
+
+  11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> openrc-0.11.8.ebuild,
+  openrc-9999.ebuild:
+  Replace virtual/init with direct dependencies for || ( sysvinit rinit )
+  because sys-apps/openrc is the only consumer of the virtual.
 
   11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> openrc-0.11.8.ebuild,
   openrc-9999.ebuild:
