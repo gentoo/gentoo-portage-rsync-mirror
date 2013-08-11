@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.567 2013/08/10 17:44:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.568 2013/08/11 20:42:09 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> glib-2.32.4-r1.ebuild,
+  glib-2.34.3.ebuild, glib-2.36.3.ebuild, glib-2.36.3-r1.ebuild,
+  glib-2.36.3-r2.ebuild:
+  freebsd-lib provides its own libelf now, adjust the deps, bug #479494 by Yuta
+  SATOH
 
   10 Aug 2013; Alexis Ballier <aballier@gentoo.org> glib-2.36.3-r2.ebuild:
   Add blockers on emul-libs so that it is stacked for baselibs r10

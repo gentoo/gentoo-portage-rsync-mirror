@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.2_rc1.ebuild,v 1.2 2013/08/10 12:41:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.2_rc1.ebuild,v 1.3 2013/08/11 20:33:13 aballier Exp $
 
 EAPI=4
 
@@ -27,8 +27,7 @@ fi
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
-	build? ( sys-apps/baselayout )
-	dev-libs/libelf"
+	build? ( sys-apps/baselayout )"
 
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*

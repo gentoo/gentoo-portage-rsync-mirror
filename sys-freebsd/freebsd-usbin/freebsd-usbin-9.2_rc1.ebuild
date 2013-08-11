@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.2_rc1.ebuild,v 1.2 2013/08/11 19:52:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.2_rc1.ebuild,v 1.3 2013/08/11 20:37:26 aballier Exp $
 
 EAPI=2
 
@@ -32,7 +32,6 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?,netware?]
 	>=app-arch/libarchive-3
 	sys-apps/tcp-wrappers
 	dev-util/dialog
-	dev-libs/libelf
 	>=dev-libs/libedit-20120311.3.0-r1
 	net-libs/libpcap
 	kerberos? ( app-crypt/heimdal )"
