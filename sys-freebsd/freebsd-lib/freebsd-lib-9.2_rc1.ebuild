@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.3 2013/08/11 14:26:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.4 2013/08/11 19:51:40 aballier Exp $
 
 EAPI=5
 
@@ -173,7 +173,7 @@ src_prepare() {
 	fi
 
 	if ! is_crosscompile ; then
-		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys" || die "Couldn't make sys symlink!"
+		ln -s "/usr/src/sys" "${WORKDIR}/sys" || die "Couldn't make sys symlink!"
 	else
 		sed -i.bak -e "s:/usr/include:/usr/${CTARGET}/usr/include:g" \
 			"${S}/libc/rpc/Makefile.inc" \

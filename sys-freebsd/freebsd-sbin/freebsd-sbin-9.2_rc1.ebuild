@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.2_rc1.ebuild,v 1.1 2013/08/09 21:24:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.2_rc1.ebuild,v 1.2 2013/08/11 19:54:30 aballier Exp $
 
 EAPI=2
 
@@ -55,7 +55,7 @@ PATCHES=( "${FILESDIR}/${PN}-setXid.patch"
 	"${FILESDIR}/${PN}-bsdxml2expat.patch" )
 
 src_prepare() {
-	use build || ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
+	use build || ln -s "/usr/src/sys" "${WORKDIR}/sys"
 }
 
 src_install() {

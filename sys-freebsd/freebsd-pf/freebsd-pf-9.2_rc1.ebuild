@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-9.2_rc1.ebuild,v 1.1 2013/08/10 02:27:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-9.2_rc1.ebuild,v 1.2 2013/08/11 19:53:39 aballier Exp $
 
 inherit bsdmk freebsd user
 
@@ -43,7 +43,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-9.0-bpf.patch"
 	epatch "${FILESDIR}/${PN}-9.0-getline.patch"
 	# Link in kernel sources
-	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
+	ln -s "/usr/src/sys" "${WORKDIR}/sys"
 }
 
 src_compile() {

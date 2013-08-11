@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.2_rc1.ebuild,v 1.1 2013/08/10 02:25:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.2_rc1.ebuild,v 1.2 2013/08/11 19:55:37 aballier Exp $
 
 inherit bsdmk freebsd
 
@@ -75,7 +75,7 @@ src_unpack() {
 			"${S}/${sdir}/Makefile" || \
 			die "Error fixing ${sdir}/Makefile"
 	done
-	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys" || die "failed to set sys symlink"
+	ln -s "/usr/src/sys" "${WORKDIR}/sys" || die "failed to set sys symlink"
 }
 
 src_compile() {

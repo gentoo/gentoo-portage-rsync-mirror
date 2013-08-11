@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.2_rc1.ebuild,v 1.1 2013/08/09 21:32:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.2_rc1.ebuild,v 1.2 2013/08/11 19:52:47 aballier Exp $
 
 EAPI=2
 
@@ -89,7 +89,7 @@ REMOVE_SUBDIRS="
 
 src_prepare() {
 	if ! use build; then
-		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
+		ln -s "/usr/src/sys" "${WORKDIR}/sys"
 		ln -s "/usr/include" "${WORKDIR}/include"
 	else
 		dummy_mk mount_smbfs
