@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.123 2013/08/05 20:19:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.124 2013/08/11 06:27:15 ssuominen Exp $
 
 EAPI=5
 
@@ -22,13 +22,12 @@ SLOT="0"
 IUSE="debug elibc_glibc ncurses pam newnet prefix selinux static-libs tools
 	unicode kernel_linux kernel_FreeBSD"
 
-COMMON_DEPEND="virtual/init
+COMMON_DEPEND=">=sys-apps/baselayout-2.1-r1
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( sys-auth/pambase )
 	tools? ( dev-lang/perl )
-	>=sys-apps/baselayout-2.1-r1
 	kernel_linux? (
 		sys-process/psmisc
 	)
@@ -38,7 +37,8 @@ COMMON_DEPEND="virtual/init
 DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	ncurses? ( virtual/pkgconfig )"
-RDEPEND="${COMMON_DEPEND}"
+RDEPEND="${COMMON_DEPEND}
+	virtual/init"
 
 src_prepare() {
 	sed -i 's:0444:0644:' mk/sys.mk || die

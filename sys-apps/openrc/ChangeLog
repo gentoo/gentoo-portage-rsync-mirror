@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.269 2013/08/05 20:19:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.270 2013/08/11 06:27:15 ssuominen Exp $
+
+  11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> openrc-0.11.8.ebuild,
+  openrc-9999.ebuild:
+  Move virtual/init from COMMON_DEPEND to RDEPEND.
 
   05 Aug 2013; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Install the documention for incompatibilities with busybox, and optionally,
