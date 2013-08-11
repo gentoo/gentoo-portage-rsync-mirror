@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0.0.ebuild,v 1.2 2013/02/20 00:01:07 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0.0.ebuild,v 1.3 2013/08/11 21:48:08 aballier Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ RDEPEND="
 	media-libs/mutagen
 	bpd? ( dev-python/bluelet )
 	chroma? ( dev-python/pyacoustid )
-	convert? ( media-video/ffmpeg[encode] )
+	convert? ( media-video/ffmpeg:0[encode] )
 	doc? ( dev-python/sphinx )
 	echonest_tempo? ( dev-python/pyechonest )
 	lastgenre? ( dev-python/pylast )

@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.125 2013/07/26 10:54:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.126 2013/08/11 21:34:44 polynomial-c Exp $
+
+*mercurial-2.7 (11 Aug 2013)
+
+  11 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> -mercurial-2.6.2.ebuild,
+  +mercurial-2.7.ebuild:
+  Version bump (bug #480500). Removed old.
 
   26 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> mercurial-2.4.2.ebuild,
   mercurial-2.5.4.ebuild, mercurial-2.6.2.ebuild, mercurial-2.6.3.ebuild,

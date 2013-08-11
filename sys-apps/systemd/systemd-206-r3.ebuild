@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r3.ebuild,v 1.4 2013/08/10 08:08:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r3.ebuild,v 1.5 2013/08/11 21:34:00 floppym Exp $
 
 EAPI=5
 
@@ -359,6 +359,10 @@ pkg_postinst() {
 	# when required. Despite that this file is owned by sys-apps/hwids.
 	if has_version "sys-apps/hwids[udev]"; then
 		udevadm hwdb --update --root="${ROOT%/}"
+	fi
+
+	if [[ ${ROOT} == "" || ${ROOT} == "/" ]]; then
+		udevadm control --reload
 	fi
 
 	# Bug 468876

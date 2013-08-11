@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.167 2013/08/06 15:34:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.168 2013/08/11 21:48:04 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-ffmpeg-0.10.13_p201211.ebuild,
+  gst-plugins-ffmpeg-0.10.13_p201211-r1.ebuild:
+  depend on slot 0 for ffmpeg
 
 *gst-plugins-ffmpeg-0.10.13_p201211-r1 (06 Aug 2013)
 

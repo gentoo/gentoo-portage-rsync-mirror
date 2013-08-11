@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211.ebuild,v 1.14 2013/07/28 17:35:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211.ebuild,v 1.15 2013/08/11 21:48:04 aballier Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ S=${WORKDIR}/${MY_P}
 RDEPEND=">=media-libs/gstreamer-0.10.31:0.10
 	>=media-libs/gst-plugins-base-0.10.31:0.10
 	>=virtual/ffmpeg-0.10
-	|| ( media-video/ffmpeg media-libs/libpostproc )
+	|| ( media-video/ffmpeg:0 media-libs/libpostproc )
 	orc? ( >=dev-lang/orc-0.4.6 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

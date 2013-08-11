@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.21 2013/07/05 13:30:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.22 2013/08/11 21:46:37 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  libpostproc-0.8.0.20121125.ebuild, libpostproc-9999.ebuild:
+  only block ffmpeg:0
 
   05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused metadata usedescs.

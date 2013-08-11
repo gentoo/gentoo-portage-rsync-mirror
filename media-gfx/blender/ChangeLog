@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.255 2013/07/23 17:04:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.256 2013/08/11 21:40:25 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> blender-2.68.ebuild,
+  blender-2.68a.ebuild:
+  depend on slot 0 for ffmpeg
 
 *blender-2.68a (23 Jul 2013)
 

@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/qemu-guest-agent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.11 2013/08/09 16:56:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.12 2013/08/11 21:36:56 cardoe Exp $
+
+*qemu-guest-agent-1.5.2-r1 (11 Aug 2013)
+
+  11 Aug 2013; Doug Goldstein <cardoe@gentoo.org> +files/qemu-ga.conf-r1,
+  +files/qemu-ga.init-r1, +qemu-guest-agent-1.5.2-r1.ebuild,
+  -files/qemu-ga.conf, -files/qemu-ga.init, -qemu-guest-agent-1.2.0.ebuild,
+  -qemu-guest-agent-1.4.2.ebuild, -qemu-guest-agent-1.5.2.ebuild:
+  Fix issue with paths being prefixed with /usr/local. Correctly move everything
+  to /run from /var/run. Fix issue with daemon not starting up correctly due to
+  missing options. Add GA_OPTIONS to init script config for other options like a
+  --fsfreeze-hook. bug #480438. bug #480370.
 
 *qemu-guest-agent-1.5.2 (09 Aug 2013)
 

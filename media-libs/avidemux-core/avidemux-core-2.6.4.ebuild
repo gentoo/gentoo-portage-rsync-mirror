@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.4.ebuild,v 1.3 2013/07/16 23:58:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.4.ebuild,v 1.4 2013/08/11 21:42:55 aballier Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ DEPEND="
 	dev-db/sqlite
 	nls? ( sys-devel/gettext )
 	sdl? ( media-libs/libsdl )
-	system-ffmpeg? ( >=media-video/ffmpeg-1.0[aac,cpudetection,mp3,theora] )
+	system-ffmpeg? ( >=media-video/ffmpeg-1.0:0[aac,cpudetection,mp3,theora] )
 	xv? ( x11-libs/libXv )
 	vdpau? ( x11-libs/libvdpau )
 "

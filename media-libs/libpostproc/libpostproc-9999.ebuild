@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.7 2013/02/10 21:49:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.8 2013/08/11 21:46:37 aballier Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ done
 DEPEND=">=virtual/ffmpeg-0.10.2-r2"
 RDEPEND="${DEPEND}
 	!<media-video/libav-0.8.2-r2
-	!media-video/ffmpeg
+	!media-video/ffmpeg:0
 "
 
 src_configure() {

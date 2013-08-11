@@ -1,13 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.4.2.ebuild,v 1.1 2013/06/03 02:16:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.5.2-r1.ebuild,v 1.1 2013/08/11 21:36:56 cardoe Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit systemd udev python-r1
+inherit eutils systemd udev python-r1
 
+BACKPORTS=e26b4ba6
 MY_PN="qemu"
 MY_P="${MY_PN}-${PV}"
 
@@ -17,7 +18,9 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://wiki.qemu.org/download/${MY_P}.tar.bz2"
+	SRC_URI="http://wiki.qemu.org/download/${MY_P}.tar.bz2
+	${BACKPORTS:+
+		http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
@@ -39,8 +42,27 @@ pkg_setup() {
 	python_export_best
 }
 
+src_prepare() {
+	[[ -n ${BACKPORTS} ]] && \
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
+
+	epatch_user
+}
+
 src_configure() {
-	./configure --python=${PYTHON}
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libdir=/usr/$(get_libdir) \
+		--localstatedir=/ \
+		--disable-bsd-user \
+		--disable-linux-user \
+		--disable-system \
+		--disable-strip \
+		--disable-werror \
+		--enable-guest-agent \
+		--python=${PYTHON}
 }
 
 src_compile() {
@@ -51,8 +73,8 @@ src_install() {
 	dobin qemu-ga
 
 	# Normal init stuff
-	newinitd "${FILESDIR}/qemu-ga.init" qemu-guest-agent
-	newconfd "${FILESDIR}/qemu-ga.conf" qemu-guest-agent
+	newinitd "${FILESDIR}/qemu-ga.init-r1" qemu-guest-agent
+	newconfd "${FILESDIR}/qemu-ga.conf-r1" qemu-guest-agent
 
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}/qemu-ga.logrotate" qemu-guest-agent
