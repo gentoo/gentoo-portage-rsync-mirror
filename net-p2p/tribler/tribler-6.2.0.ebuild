@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.2.0.ebuild,v 1.1 2013/08/02 13:31:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.2.0.ebuild,v 1.2 2013/08/11 22:59:17 aballier Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -30,7 +30,7 @@ RDEPEND="
 	net-libs/rb_libtorrent
 	vlc? (
 			media-video/vlc
-			media-video/ffmpeg
+			media-video/ffmpeg:0
 		)"
 
 DEPEND="${RDEPEND}

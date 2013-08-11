@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/homer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.8 2013/03/17 19:33:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.9 2013/08/11 22:59:21 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> homer-0.24.1.ebuild,
+  homer-0.25.ebuild, homer-9999.ebuild:
+  depend on ffmpeg:0
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> homer-0.24.1.ebuild,
   homer-0.25.ebuild, homer-9999.ebuild:

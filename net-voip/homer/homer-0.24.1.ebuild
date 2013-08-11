@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.24.1.ebuild,v 1.6 2013/03/17 19:33:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.24.1.ebuild,v 1.7 2013/08/11 22:59:22 aballier Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ DEPEND=">=dev-libs/openssl-1.0
 	media-libs/sdl-sound
 	media-libs/x264
 	net-libs/sofia-sip
-	virtual/ffmpeg[X]
+	virtual/ffmpeg:0[X]
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtmultimedia:4

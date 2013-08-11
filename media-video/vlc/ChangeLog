@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.845 2013/07/10 03:16:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.846 2013/08/11 22:57:34 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> vlc-2.0.5.ebuild,
+  vlc-2.0.6.ebuild, vlc-2.0.7.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  depend on ffmpeg:0
 
   10 Jul 2013; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.5.ebuild,
   vlc-2.0.6.ebuild, vlc-2.0.7.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:

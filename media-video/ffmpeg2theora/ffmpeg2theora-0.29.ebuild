@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29.ebuild,v 1.5 2013/05/14 09:37:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29.ebuild,v 1.6 2013/08/11 22:51:04 aballier Exp $
 
 EAPI=4
 inherit eutils scons-utils
@@ -16,7 +16,7 @@ IUSE="debug kate"
 
 RDEPEND="
     || ( media-libs/libpostproc
-		 <media-video/libav-0.8.2-r1 media-video/ffmpeg )
+		 <media-video/libav-0.8.2-r1 media-video/ffmpeg:0 )
 	>=virtual/ffmpeg-0.10
 	>=media-libs/libvorbis-1.1
 	>=media-libs/libogg-1.1

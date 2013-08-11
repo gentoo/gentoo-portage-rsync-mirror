@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.0.3.ebuild,v 1.5 2013/03/23 19:46:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.0.3.ebuild,v 1.6 2013/08/11 22:59:17 aballier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -30,7 +30,7 @@ RDEPEND="
 	dev-python/wxpython
 	vlc? (
 			media-video/vlc
-			media-video/ffmpeg
+			media-video/ffmpeg:0
 		)"
 
 DEPEND="${RDEPEND}

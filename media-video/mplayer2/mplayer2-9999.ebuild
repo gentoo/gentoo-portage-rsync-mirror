@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.60 2013/07/09 16:06:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.61 2013/08/11 22:54:24 aballier Exp $
 
 EAPI=5
 
@@ -98,7 +98,7 @@ RDEPEND+="
 	postproc? (
 		|| (
 			media-libs/libpostproc
-			media-video/ffmpeg
+			media-video/ffmpeg:0
 		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )

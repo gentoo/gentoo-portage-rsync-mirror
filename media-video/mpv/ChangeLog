@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.17 2013/07/19 08:47:38 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.18 2013/08/11 22:55:03 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> mpv-0_p20130715.ebuild,
+  mpv-9999.ebuild:
+  depend on ffmpeg:0=
 
   19 Jul 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Clean up of metadata.xml. Do not express assignment in description for normal

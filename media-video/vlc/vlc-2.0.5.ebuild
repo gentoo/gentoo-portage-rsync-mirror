@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.5.ebuild,v 1.8 2013/07/10 03:16:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.5.ebuild,v 1.9 2013/08/11 22:57:34 aballier Exp $
 
 EAPI="5"
 
@@ -115,7 +115,7 @@ RDEPEND="
 		opus? ( media-libs/opus )
 		png? ( media-libs/libpng sys-libs/zlib )
 		portaudio? ( >=media-libs/portaudio-19_pre )
-		postproc? ( || ( media-video/ffmpeg media-libs/libpostproc ) )
+		postproc? ( || ( media-video/ffmpeg:0 media-libs/libpostproc ) )
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
 		qt4? ( dev-qt/qtgui:4 dev-qt/qtcore:4 )

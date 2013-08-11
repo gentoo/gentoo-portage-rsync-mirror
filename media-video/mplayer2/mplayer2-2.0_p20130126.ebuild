@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130126.ebuild,v 1.15 2013/06/29 19:19:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130126.ebuild,v 1.16 2013/08/11 22:54:24 aballier Exp $
 
 EAPI=4
 
@@ -99,7 +99,7 @@ RDEPEND+="
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
-	postproc? ( || ( media-libs/libpostproc <media-video/libav-0.8.2-r1 media-video/ffmpeg ) )
+	postproc? ( || ( media-libs/libpostproc <media-video/libav-0.8.2-r1	media-video/ffmpeg:0 ) )
 	pulseaudio? ( media-sound/pulseaudio )
 	quvi? ( >=media-libs/libquvi-0.4.1 )
 	rar? (
