@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.4.ebuild,v 1.1 2013/07/17 06:02:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.4.ebuild,v 1.2 2013/08/11 08:17:25 ssuominen Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION=0.16
@@ -18,7 +18,7 @@ else
 	S=${WORKDIR}/${PN}_${PV}_all_
 fi
 
-inherit eutils fdo-mime gnome2-utils python-any-r1 waf-utils vala ${_live_inherits}
+inherit eutils fdo-mime gnome2-utils pax-utils python-any-r1 waf-utils vala ${_live_inherits}
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.midori-browser.org/"
@@ -93,6 +93,18 @@ src_configure() {
 		$(use_enable !deprecated gtk3) \
 		$(use_enable zeitgeist) \
 		${myconf}
+}
+
+src_install() {
+	waf-utils_src_install
+
+	local jit_is_enabled
+	if use deprecated; then
+		has_version 'net-libs/webkit-gtk:2[jit]' && jit_is_enabled=yes
+	else
+		has_version 'net-libs/webkit-gtk:3[jit]' && jit_is_enabled=yes
+	fi
+	[[ ${jit_is_enabled} == yes ]] && pax-mark -m "${ED}"/usr/bin/${PN} #480290
 }
 
 pkg_preinst() {
