@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/ChangeLog,v 1.6 2013/06/27 06:33:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/ChangeLog,v 1.7 2013/08/11 07:28:32 graaff Exp $
+
+  11 Aug 2013; Hans de Graaff <graaff@gentoo.org> -flog-2.5.3.ebuild:
+  Cleanup.
 
 *flog-3.2.3 (27 Jun 2013)
 

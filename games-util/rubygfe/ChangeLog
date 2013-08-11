@@ -1,6 +1,9 @@
 # ChangeLog for games-util/rubygfe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/rubygfe/ChangeLog,v 1.4 2010/05/22 20:11:44 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/rubygfe/ChangeLog,v 1.5 2013/08/11 07:08:13 graaff Exp $
+
+  11 Aug 2013; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Drop package from ruby herd as per 2013-07-21 announcement.
 
 *rubygfe-0.3.4-r1 (22 May 2010)
 

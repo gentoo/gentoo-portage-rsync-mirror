@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.25 2013/07/16 10:14:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.26 2013/08/11 07:12:25 graaff Exp $
+
+  11 Aug 2013; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Drop package from ruby herd as per 2013-07-21 announcement.
 
 *thin-1.5.1-r2 (16 Jul 2013)
 

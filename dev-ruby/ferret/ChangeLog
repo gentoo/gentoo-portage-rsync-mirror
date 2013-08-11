@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ferret
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ChangeLog,v 1.6 2012/12/26 14:42:27 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ChangeLog,v 1.7 2013/08/11 07:26:36 graaff Exp $
+
+  11 Aug 2013; Hans de Graaff <graaff@gentoo.org> -ferret-0.11.8.4.ebuild,
+  -ferret-0.11.8.5.ebuild:
+  Cleanup.
 
   26 Dec 2012; Hans de Graaff <graaff@gentoo.org> ferret-0.11.8.5-r1.ebuild:
   bzip2 is also a built-time dependency.

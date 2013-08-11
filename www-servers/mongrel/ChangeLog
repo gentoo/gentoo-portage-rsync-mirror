@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.50 2013/01/15 05:15:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.51 2013/08/11 07:10:55 graaff Exp $
+
+  11 Aug 2013; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Drop package from ruby herd as per 2013-07-21 announcement.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> mongrel-1.1.5-r3.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps

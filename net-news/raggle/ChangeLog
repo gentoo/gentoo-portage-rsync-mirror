@@ -1,6 +1,9 @@
 # ChangeLog for net-news/raggle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.21 2012/09/23 09:02:58 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.22 2013/08/11 07:09:12 graaff Exp $
+
+  11 Aug 2013; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Drop package from ruby herd as per 2013-07-21 announcement.
 
   23 Sep 2012; Hans de Graaff <graaff@gentoo.org> -raggle-0.4.4-r1.ebuild:
   Cleanup.
