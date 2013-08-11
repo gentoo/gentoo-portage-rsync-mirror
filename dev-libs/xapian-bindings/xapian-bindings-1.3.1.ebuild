@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.3.1.ebuild,v 1.1 2013/08/10 15:15:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.3.1.ebuild,v 1.2 2013/08/11 00:58:20 blueness Exp $
 
 EAPI="5"
 
@@ -48,11 +48,6 @@ pkg_setup() {
 
 src_prepare() {
 	java-pkg-opt-2_src_prepare
-	if use java; then
-		sed \
-			-e 's/$(JAVAC)/$(JAVAC) $(JAVACFLAGS)/' \
-			-i java/Makefile.in || die "sed failed"
-	fi
 
 	if use python; then
 		sed \
