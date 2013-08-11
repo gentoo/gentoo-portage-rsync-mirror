@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.2 2013/08/10 14:52:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.3 2013/08/11 14:26:27 aballier Exp $
 
 EAPI=5
 
@@ -192,6 +192,14 @@ src_prepare() {
 	fi
 }
 
+bootstrap_lib() {
+	for i ; do
+		cd "${WORKDIR}/${i}" || die "missing ${i}"
+		freebsd_src_compile
+		append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/${i}"
+	done
+}
+
 get_csudir() {
 	if [ -d "${WORKDIR}/lib/csu/$1-elf" ]; then
 		echo "lib/csu/$1-elf"
@@ -203,14 +211,13 @@ get_csudir() {
 bootstrap_csu() {
 	local csudir="$(get_csudir $(tc-arch-kernel ${CTARGET}))"
 	export RAW_LDFLAGS=$(raw-ldflags)
-	cd "${WORKDIR}/${csudir}" || die "Missing ${csudir}."
-	freebsd_src_compile
+	bootstrap_lib "${csudir}"
 
 	CFLAGS="${CFLAGS} -B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
 	append-ldflags "-B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
 
-	cd "${WORKDIR}/gnu/lib/csu" || die
-	freebsd_src_compile
+	bootstrap_lib "gnu/lib/csu"
+
 	cd "${MAKEOBJDIRPREFIX}/${WORKDIR}/gnu/lib/csu"
 	for i in *.So ; do
 		ln -s $i ${i%.So}S.o
@@ -221,36 +228,20 @@ bootstrap_csu() {
 
 # Compile libssp_nonshared.a and add it's path to LDFLAGS.
 bootstrap_libssp_nonshared() {
-	cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
-	freebsd_src_compile
-	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
+	bootstrap_lib "gnu/lib/libssp/libssp_nonshared"
 	export LDADD="-lssp_nonshared"
 }
 
-bootstrap_libc() {
-	cd "${WORKDIR}/lib/libc" || die
-	freebsd_src_compile
-	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/lib/libc"
-}
-
 bootstrap_libgcc() {
-	cd "${WORKDIR}/lib/libcompiler_rt" || die
-	freebsd_src_compile
+	bootstrap_lib "lib/libcompiler_rt"
 	cd "${MAKEOBJDIRPREFIX}/${WORKDIR}/lib/libcompiler_rt" || die
 	ln -s libcompiler_rt.a libgcc.a || die
-	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/lib/libcompiler_rt"
 
-	bootstrap_libc
-
-	cd "${WORKDIR}/gnu/lib/libgcc" || die
-	freebsd_src_compile
-	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/gnu/lib/libgcc"
+	bootstrap_lib "lib/libc" "gnu/lib/libgcc"
 }
 
 bootstrap_libthr() {
-	cd "${WORKDIR}/lib/libthr" || die
-	freebsd_src_compile
-	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/lib/libthr"
+	bootstrap_lib "lib/libthr"
 	cd "${MAKEOBJDIRPREFIX}/${WORKDIR}/lib/libthr" || die
 	ln -s libthr.so libpthread.so
 }
@@ -260,7 +251,7 @@ bootstrap_libthr() {
 CROSS_SUBDIRS="lib/libc lib/msun gnu/lib/libssp/libssp_nonshared lib/libthr lib/libutil lib/librt"
 
 # What to build for non-default ABIs.
-NON_NATIVE_SUBDIRS="${CROSS_SUBDIRS} gnu/lib/csu lib/libcompiler_rt gnu/lib/libgcc lib/libmd lib/libcrypt"
+NON_NATIVE_SUBDIRS="${CROSS_SUBDIRS} gnu/lib/csu lib/libcompiler_rt gnu/lib/libgcc lib/libmd lib/libcrypt lib/libsbuf lib/libcam"
 
 # Subdirs for a native build:
 NATIVE_SUBDIRS="lib gnu/lib/libssp/libssp_nonshared gnu/lib/libregex gnu/lib/csu gnu/lib/libgcc"
@@ -312,9 +303,10 @@ do_bootstrap() {
 	fi
 	bootstrap_csu
 	bootstrap_libssp_nonshared
-	is_crosscompile && bootstrap_libc
+	is_crosscompile && bootstrap_lib "lib/libc"
 	is_crosscompile || is_native_abi || bootstrap_libgcc
 	is_native_abi   || bootstrap_libthr
+	is_native_abi   || bootstrap_lib "lib/libsbuf"
 }
 
 # Compile it. Assume we have the toolchain setup correctly.
