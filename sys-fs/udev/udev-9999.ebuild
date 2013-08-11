@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.249 2013/08/11 18:29:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.250 2013/08/11 19:01:21 ssuominen Exp $
 
 EAPI=5
 
@@ -514,6 +514,9 @@ pkg_postinst() {
 	if has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
 		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
+			return 0
+		fi
 		udevadm control --reload
 	fi
 }

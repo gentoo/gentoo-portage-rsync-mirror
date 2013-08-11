@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.954 2013/08/11 18:29:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.955 2013/08/11 19:01:21 ssuominen Exp $
+
+  11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> udev-206-r3.ebuild,
+  udev-9999.ebuild:
+  Don't reload the /etc/udev/hwdb.bin when $ROOT isn't set or when it isn't /
 
   11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> udev-206-r3.ebuild,
   udev-9999.ebuild:
