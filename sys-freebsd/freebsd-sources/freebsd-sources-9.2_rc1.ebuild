@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.2 2013/08/10 13:27:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.3 2013/08/11 14:34:25 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
 DESCRIPTION="FreeBSD kernel sources"
 SLOT="0"
 
-IUSE="symlink"
+IUSE=""
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
@@ -60,21 +60,14 @@ src_compile() {
 }
 
 src_install() {
-	insinto "/usr/src/sys-${RV}"
+	insinto "/usr/src/sys"
 	doins -r "${S}/"*
 }
 
-pkg_postinst() {
-	if [[ ! -L "${ROOT}/usr/src/sys" ]]; then
-		einfo "/usr/src/sys symlink doesn't exist; creating symlink to sys-${RV}..."
-		ln -sf "sys-${RV}" "${ROOT}/usr/src/sys" || \
-			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
-	elif use symlink; then
-		einfo "Updating /usr/src/sys symlink to sys-${RV}..."
-		rm "${ROOT}/usr/src/sys" || \
-			eerror "Couldn't remove previous symlinks, please fix manually."
-		ln -sf "sys-${RV}" "${ROOT}/usr/src/sys" || \
-			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
+pkg_preinst() {
+	if [[ -L "${ROOT}/usr/src/sys" ]]; then
+		einfo "/usr/src/sys is a symlink, removing it..."
+		rm -f "${ROOT}/usr/src/sys"
 	fi
 
 	if use sparc-fbsd ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.3.4.ebuild,v 1.2 2013/07/17 07:32:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.3.4.ebuild,v 1.3 2013/08/11 14:55:22 jlec Exp $
 
 EAPI=5
 
@@ -25,9 +25,13 @@ RDEPEND="${DEPEND}"
 # todo: --enable-maxk=N configure option
 # todo: fix automagic mpi toggling
 
-PATCHES=( "${FILESDIR}"/${P}-gcc-4.7.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-gcc-4.7.patch
+	"${FILESDIR}"/${PN}-1.3.3-ac_prog_ar.patch
+	)
 
 src_prepare() {
+	tc-export AR
 	sed -i -e "s/-Werror//" configure.ac || die #365195
 	sed -i -e "/dist_pkgdoc_DATA/d" Makefile.am || die
 	autotools-utils_src_prepare
