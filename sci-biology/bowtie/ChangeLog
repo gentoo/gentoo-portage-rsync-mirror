@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bowtie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/ChangeLog,v 1.18 2013/07/27 22:19:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/ChangeLog,v 1.19 2013/08/11 13:32:35 jlec Exp $
+
+  11 Aug 2013; Justin Lecher <jlec@gentoo.org> -bowtie-0.12.3.ebuild,
+  -bowtie-0.12.5.ebuild, -bowtie-0.12.7.ebuild:
+  Drop old
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> bowtie-0.12.8.ebuild:
   Stable for x86, wrt bug #477134
