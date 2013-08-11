@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.4 2013/08/11 19:14:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.5 2013/08/11 21:23:03 aballier Exp $
 
 EAPI=5
 
@@ -37,7 +37,6 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
 	"${FILESDIR}/${PN}-7.1-includes.patch"
 	"${FILESDIR}/${PN}-9.0-sysctluint.patch"
-	"${FILESDIR}/${PN}-9.2-no_ctf.patch"
 	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch"
 	"${FILESDIR}/${PN}-7.0-tmpfs_whiteout_stub.patch" )
 

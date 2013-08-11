@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-0.10.3.ebuild,v 1.10 2012/12/05 13:34:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-0.10.3.ebuild,v 1.11 2013/08/11 21:26:15 aballier Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE="X +encode gsm jpeg2k mp3 sdl speex theora threads truetype vaapi vdpau x26
 
 RDEPEND="
 	|| (
-		>=media-video/ffmpeg-0.10.3[X?,encode?,gsm?,jpeg2k?,mp3?,sdl?,speex?,theora?,threads?,truetype?,vaapi?,vdpau?,x264?]
+		>=media-video/ffmpeg-0.10.3:0[X?,encode?,gsm?,jpeg2k?,mp3?,sdl?,speex?,theora?,threads?,truetype?,vaapi?,vdpau?,x264?]
 		>=media-video/libav-0.8.4[X?,encode?,gsm?,jpeg2k?,mp3?,sdl?,speex?,theora?,threads?,truetype?,vaapi?,vdpau?,x264?]
 	)
 "

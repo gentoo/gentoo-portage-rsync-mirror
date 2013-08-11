@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.2.ebuild,v 1.2 2013/05/14 21:41:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.4.ebuild,v 1.1 2013/08/11 21:10:41 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -35,7 +35,7 @@ RDEPEND="
 		>=dev-db/sqlite-3.5:3
 		dev-libs/libunistring
 	)
-	tracker? ( >=app-misc/tracker-0.14:= )
+	tracker? ( >=app-misc/tracker-0.16:= )
 	transcode? (
 		media-libs/gst-plugins-bad:1.0
 		media-plugins/gst-plugins-twolame:1.0
