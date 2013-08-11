@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subdl/subdl-1.0.3.ebuild,v 1.1 2010/11/02 21:15:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subdl/subdl-1.0.3.ebuild,v 1.2 2013/08/11 10:24:45 ssuominen Exp $
 
-EAPI=2
-PYTHON_DEPEND="2:2.6"
-inherit python
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit python-single-r1
 
 DESCRIPTION="A command-line tool for downloading subs from opensubtitles.org"
 HOMEPAGE="http://code.google.com/p/subdl/"
@@ -15,16 +15,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="app-arch/unzip"
+RDEPEND="${PYTHON_DEPS}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}
 
 src_prepare() {
-	python_convert_shebangs 2 ${PN}
+	python_fix_shebang ${PN}
 }
 
 src_install() {
-	dobin ${PN} || die
+	dobin ${PN}
 	dodoc README.txt
 }

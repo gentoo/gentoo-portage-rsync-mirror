@@ -1,12 +1,13 @@
-DEFINED_PHASES=install prepare
-DEPEND=app-arch/unzip || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DEFINED_PHASES=install prepare setup
+DEPEND=python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] app-arch/unzip
 DESCRIPTION=A command-line tool for downloading subs from opensubtitles.org
-EAPI=2
+EAPI=5
 HOMEPAGE=http://code.google.com/p/subdl/
+IUSE=python_targets_python2_7 python_single_target_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+RDEPEND=python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
 SLOT=0
 SRC_URI=http://subdl.googlecode.com/files/subdl-1.0.3.zip
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=6d578bee28847e3d1d3e091e99dfdd16
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	b13f5baea5da0da5a5dcc6b8b79706a2	python-utils-r1	e3288ba49a9a4406c283001e4d284aad	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=b0f516a7ce60207623c5e8ed8f8b7a27
