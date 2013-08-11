@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/pdb-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.16 2013/08/07 11:55:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.17 2013/08/11 12:14:34 jlec Exp $
+
+*pdb-tools-0.2.1-r2 (11 Aug 2013)
+
+  11 Aug 2013; Justin Lecher <jlec@gentoo.org> -pdb-tools-0.1.4-r3.ebuild,
+  -pdb-tools-0.1.4-r4.ebuild, -pdb-tools-0.2.1.ebuild,
+  +pdb-tools-0.2.1-r2.ebuild:
+  Drop old, #478590; mv generic helper modules to PN subdir, #480026
 
   07 Aug 2013; Michał Górny <mgorny@gentoo.org> pdb-tools-0.1.4-r4.ebuild,
   pdb-tools-0.2.1-r1.ebuild, pdb-tools-0.2.1.ebuild:

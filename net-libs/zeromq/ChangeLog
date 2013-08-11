@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.36 2013/05/10 06:08:02 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.37 2013/08/11 12:02:38 jer Exp $
+
+  11 Aug 2013; Jeroen Roovers <jer@gentoo.org> zeromq-2.2.0.ebuild:
+  Stable for HPPA too.
 
   10 May 2013;  <qnikst@gentoo.org> zeromq-3.2.3.ebuild:
   fix parrallel test failure #468748 thanks to eroen@faith.eroen.eu
