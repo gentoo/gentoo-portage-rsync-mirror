@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8146 2013/08/11 13:08:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8147 2013/08/11 16:55:40 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> arch/arm/ChangeLog,
+  arch/arm/package.mask, arch/ia64/ChangeLog, arch/ia64/package.mask,
+  arch/powerpc/ChangeLog, arch/powerpc/package.mask, arch/s390/ChangeLog,
+  arch/s390/package.mask, arch/sparc/ChangeLog, +arch/sparc/package.mask,
+  arch/x86/ChangeLog, arch/x86/package.mask, package.mask:
+  move texlive mask from global to arch profiles, bug #475124
 
   11 Aug 2013; Justin Lecher <jlec@gentoo.org> ChangeLog:
   Masked sci-libs/mccp4 for removal

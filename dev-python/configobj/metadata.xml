@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>python</herd>
-<longdescription lang="en">
+  <herd>python</herd>
+  <longdescription lang="en">
   ConfigObj is a simple but powerful config file reader and writer: an
   ini file round tripper. Its main feature is that it is very easy to
   use, with a straightforward programmer's interface and a simple syntax

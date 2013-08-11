@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.257 2013/08/04 19:51:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.258 2013/08/11 16:55:41 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  move texlive mask from global to arch profiles, bug #475124
 
   04 Aug 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask app-admin/conky flags with unkeyworded deps for bug #474026

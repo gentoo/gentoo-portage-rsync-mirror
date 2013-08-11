@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.59 2013/08/11 16:55:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.34 2013/08/11 16:55:41 aballier Exp $
 
 # Alexis Ballier <aballier@gentoo.org> (27 Jun 2013)
 # TeX Live 2013 mask.
@@ -53,23 +53,3 @@
 >=dev-texlive/texlive-genericrecommended-2013
 >=dev-texlive/texlive-publishers-2013
 
-# Brent Baude <ranger@gentoo.org> (20 Nov 2012)
-# Masking kgcc64 now that toolchain is biarch
-sys-devel/kgcc64
-
-# Ben de Groot <yngwin@gentoo.org> (2 Jun 2012)
-# Since there is no longer a working keyworded version of
-# media-video/smplayer (see bug 383945)
-x11-themes/smplayer-themes
-
-# Alexey Shvetsov <alexxy@gentoo.org> (21 May 2012)
-# Need deps pecl-apc and pecl-uploadprogress bug #416897
->=www-apps/drupal-7.14
-
-# Justin Lecher <jlec@gentoo.org> (9 Mar 2011)
-# sci-libs/plplot needs keywords #358035
-=sci-biology/emboss-6.3.1*
-
-# Doug Goldstein <cardoe@gentoo.org> (11 Jan 2013)
-# Masked due to depends on bug #438780
->=app-emulation/qemu-1.2.0

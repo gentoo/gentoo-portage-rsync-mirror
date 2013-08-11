@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.14 2013/05/31 05:48:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.15 2013/08/11 16:37:40 swift Exp $
 
 EAPI="4"
 
@@ -22,7 +22,10 @@ SLOT="0"
 IUSE="caps minimal selinux static"
 
 DEPEND="caps? ( sys-libs/libcap-ng )
-	selinux? ( sys-libs/libselinux )"
+	selinux? (
+		sys-libs/libselinux
+		sec-policy/selinux-smartmon
+	)"
 RDEPEND="${DEPEND}
 	!minimal? ( virtual/mailx )"
 
