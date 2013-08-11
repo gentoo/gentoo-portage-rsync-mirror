@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.17.1.ebuild,v 1.1 2013/07/29 00:30:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.17.1.ebuild,v 1.2 2013/08/11 15:27:55 jer Exp $
 
 EAPI=5
 inherit eutils multilib autotools toolchain-funcs
@@ -30,7 +30,7 @@ DEPEND="
 	virtual/pkgconfig
 	nls? (
 		app-text/po4a
-		sys-devel/gettext
+		>=sys-devel/gettext-0.18.2
 	)
 	test? (
 		dev-perl/DateTime-Format-DateParse
