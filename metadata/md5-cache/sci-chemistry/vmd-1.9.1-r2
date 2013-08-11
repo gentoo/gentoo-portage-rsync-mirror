@@ -10,5 +10,5 @@ RDEPEND==dev-lang/tk-8.5*:0=[-truetype] dev-lang/perl dev-python/numpy sci-libs/
 RESTRICT=fetch
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distifles/vmd-1.9.1-gentoo-patches-2.tar.xz vmd-1.9.1.src.tar.gz
-_eclasses_=cuda	da3a28833feb3c7959a26b3a2d61d629	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=68b36d5f24716ff0c76da966b520e158

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cuda.eclass,v 1.2 2013/06/22 12:37:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cuda.eclass,v 1.3 2013/08/11 16:20:23 jlec Exp $
 
-inherit toolchain-funcs versionator
+inherit flag-o-matic toolchain-funcs versionator
 
 # @ECLASS: cuda.eclass
 # @MAINTAINER:
@@ -96,14 +96,17 @@ cuda_gccdir() {
 # Correct NVCCFLAGS by adding the necessary reference to gcc bindir and
 # passing CXXFLAGS to underlying compiler without disturbing nvcc.
 cuda_sanitize() {
+	local rawldflags=$(raw-ldflags)
 	# Be verbose if wanted
 	[[ "${CUDA_VERBOSE}" == true ]] && NVCCFLAGS+=" -v"
 
 	# Tell nvcc where to find a compatible compiler
-	NVCCFLAGS+=" $(cuda_gccdir -f)"
+	if has_version \<=dev-util/nvidia-cuda-toolkit-5.5; then
+		NVCCFLAGS+=" $(cuda_gccdir -f)"
+	fi
 
 	# Tell nvcc which flags should be used for underlying C compiler
-	NVCCFLAGS+=" --compiler-options=\"${CXXFLAGS}\""
+	NVCCFLAGS+=" --compiler-options=\"${CXXFLAGS}\" --linker-options=\"${rawldflags// /,}\""
 
 	debug-print "Using ${NVCCFLAGS} for cuda"
 	export NVCCFLAGS
