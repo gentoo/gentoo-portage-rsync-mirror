@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ndg-httpsclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ndg-httpsclient/ChangeLog,v 1.1 2013/08/09 03:20:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ndg-httpsclient/ChangeLog,v 1.2 2013/08/11 13:15:02 jer Exp $
+
+  11 Aug 2013; Jeroen Roovers <jer@gentoo.org> ndg-httpsclient-0.3.2.ebuild:
+  Marked ~hppa too.
 
 *ndg-httpsclient-0.3.2 (09 Aug 2013)
 

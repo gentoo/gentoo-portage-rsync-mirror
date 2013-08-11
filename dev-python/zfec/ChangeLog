@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/zfec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/ChangeLog,v 1.1 2013/08/01 01:54:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/ChangeLog,v 1.2 2013/08/11 13:06:39 hasufell Exp $
+
+  11 Aug 2013; Julian Ospald <hasufell@gentoo.org> zfec-1.4.24.ebuild:
+  fix deps wrt #480332
 
 *zfec-1.4.24 (01 Aug 2013)
 
   01 Aug 2013; Julian Ospald <hasufell@gentoo.org> +zfec-1.4.24.ebuild,
   +metadata.xml:
   initial import
-
