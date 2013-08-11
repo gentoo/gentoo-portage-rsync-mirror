@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15015 2013/08/11 16:55:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15016 2013/08/11 18:23:14 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -793,12 +793,6 @@ sci-chemistry/webmo
 # Torsten Veller <tove@gentoo.org> (18 Jun 2011)
 # Mask perl-5.14. See tracker bug #356171
 =dev-lang/perl-5.14*
-
-# Alexis Ballier <aballier@gentoo.org> (20 Apr 2011)
-# Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
-# Breaks net-voip/sflphone, non maintainer update, but is needed by
-# media-video/ffmpeg
->=media-libs/celt-0.8.1
 
 # Marijn Schouten <hkBst@gentoo.org> (07 April 2011)
 # Masked for number of issues, but can be used to

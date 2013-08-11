@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.497 2013/08/09 09:02:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.498 2013/08/11 18:24:46 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -506,7 +506,5 @@ media-video/vlc audioqueue ios-vout macosx macosx-audio macosx-dialog-provider m
 media-video/vlc media-library
 
 # Alexis Ballier <aballier@gentoo.org> <28 Apr 2011>
-# Requires masked libcelt
-# Leave it unmasked for live ebuild, people should know what they do if they use
-# it anyway
-<media-video/ffmpeg-9999 celt
+# Requires ~arch libcelt and keywording
+<media-video/ffmpeg-2.0 celt

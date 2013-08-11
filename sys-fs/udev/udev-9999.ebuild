@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.248 2013/08/11 17:47:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.249 2013/08/11 18:29:21 ssuominen Exp $
 
 EAPI=5
 
@@ -359,6 +359,14 @@ multilib_src_install() {
 			emake -C docs/libudev DESTDIR="${D}" install
 			use gudev && emake -C docs/gudev DESTDIR="${D}" install
 		fi
+
+		# install udevadm compatibility symlink
+		dosym {../bin,sbin}/udevadm
+
+		# install udevd to /sbin and remove empty and redudant directory
+		# /lib/systemd because systemd is installed to /usr wrt #462750
+		mv "${D}"/{lib/systemd/systemd-,sbin/}udevd || die
+		rm -r "${D}"/lib/systemd
 	else
 		local lib_LTLIBRARIES="libudev.la" \
 			pkgconfiglib_DATA="src/libudev/libudev.pc" \
@@ -391,14 +399,6 @@ multilib_src_install_all() {
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
 	doman "${T}"/{systemd-,}udevd.8
-
-	# install udevadm compatibility symlink
-	dosym {../bin,sbin}/udevadm
-
-	# install udevd to /sbin and remove empty and redudant directory
-	# /lib/systemd because systemd is installed to /usr wrt #462750
-	mv "${D}"/{lib/systemd/systemd-,sbin/}udevd || die
-	rm -r "${D}"/lib/systemd
 }
 
 pkg_preinst() {
