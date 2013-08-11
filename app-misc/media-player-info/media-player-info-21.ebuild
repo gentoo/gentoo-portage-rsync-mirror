@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21.ebuild,v 1.3 2013/08/09 19:10:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21.ebuild,v 1.4 2013/08/11 17:49:17 ssuominen Exp $
 
 EAPI=5
 
@@ -31,4 +31,6 @@ RESTRICT="binchecks strip"
 pkg_postinst() {
 	# Run for /lib/udev/hwdb.d/20-usb-media-players.hwdb
 	udevadm hwdb --update --root="${ROOT%/}"
+	# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+	udevadm control --reload
 }

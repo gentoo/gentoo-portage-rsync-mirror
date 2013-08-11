@@ -1,0 +1,245 @@
+diff -ruN cups-filters-1.0.35.orig/filter/pdf.cxx cups-filters-1.0.35/filter/pdf.cxx
+--- cups-filters-1.0.35.orig/filter/pdf.cxx	2012-08-20 02:29:46.000000000 +0200
++++ cups-filters-1.0.35/filter/pdf.cxx	2013-08-11 19:40:52.375948401 +0200
+@@ -17,6 +17,10 @@
+ #include "pdf.h"
+ 
+ #include <PDFDoc.h>
++#include <config.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ 
+ 
+ extern "C" pdf_t * pdf_load_template(const char *filename)
+@@ -343,7 +347,11 @@
+     {
+     }
+ 
++#if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 23
++    Goffset getPos()
++#else
+     int getPos()
++#endif
+     {
+         return this->pos;
+     }
+diff -ruN cups-filters-1.0.35.orig/filter/pdftoijs.cxx cups-filters-1.0.35/filter/pdftoijs.cxx
+--- cups-filters-1.0.35.orig/filter/pdftoijs.cxx	2012-09-21 18:36:53.000000000 +0200
++++ cups-filters-1.0.35/filter/pdftoijs.cxx	2013-08-11 19:41:15.935947917 +0200
+@@ -70,11 +70,20 @@
+ }
+ 
+ #if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 19
++#if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 23
++void CDECL myErrorFun(void *data, ErrorCategory category,
++    Goffset pos, char *msg)
++#else
+ void CDECL myErrorFun(void *data, ErrorCategory category,
+     int pos, char *msg)
++#endif
+ {
+   if (pos >= 0) {
++#if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 23
++    fprintf(stderr, "ERROR (%lld): ", pos);
++#else
+     fprintf(stderr, "ERROR (%d): ", pos);
++#endif
+   } else {
+     fprintf(stderr, "ERROR: ");
+   }
+@@ -297,19 +306,15 @@
+   if (argc == 6) {
+     /* stdin */
+     int fd;
+-    Object obj;
+-    BaseStream *str;
+-    FILE *fp;
++    char name[BUFSIZ];
+     char buf[BUFSIZ];
+     int n;
+ 
+-    fd = cupsTempFd(buf,sizeof(buf));
++    fd = cupsTempFd(name,sizeof(name));
+     if (fd < 0) {
+       pdfError(-1,"Can't create temporary file");
+       exit(1);
+     }
+-    /* remove name */
+-    unlink(buf);
+ 
+     /* copy stdin to the tmp file */
+     while ((n = read(0,buf,BUFSIZ)) > 0) {
+@@ -319,23 +324,10 @@
+ 	exit(1);
+       }
+     }
+-    if (lseek(fd,0,SEEK_SET) < 0) {
+-        pdfError(-1,"Can't rewind temporary file");
+-        close(fd);
+-	exit(1);
+-    }
+-
+-    if ((fp = fdopen(fd,"rb")) == 0) {
+-        pdfError(-1,"Can't fdopen temporary file");
+-        close(fd);
+-	exit(1);
+-    }
+-
+-    obj.initNull();
+-//    parsePDFTOPDFComment(fp); // TODO?
+-    rewind(fp);
+-    str = new FileStream(fp,0,gFalse,0,&obj);
+-    doc = new PDFDoc(str);
++    close(fd);
++    doc = new PDFDoc(new GooString(name));
++    /* remove name */
++    unlink(name);
+   } else {
+     GooString *fileName = new GooString(argv[6]);
+     /* argc == 7 filenmae is specified */
+diff -ruN cups-filters-1.0.35.orig/filter/pdftoopvp/pdftoopvp.cxx cups-filters-1.0.35/filter/pdftoopvp/pdftoopvp.cxx
+--- cups-filters-1.0.35.orig/filter/pdftoopvp/pdftoopvp.cxx	2012-07-20 10:22:23.000000000 +0200
++++ cups-filters-1.0.35/filter/pdftoopvp/pdftoopvp.cxx	2013-08-11 19:41:22.735947778 +0200
+@@ -112,11 +112,20 @@
+ #define MAX_OPVP_OPTIONS 20
+ 
+ #if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 19
++#if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 23
++void CDECL myErrorFun(void *data, ErrorCategory category,
++    Goffset pos, char *msg)
++#else
+ void CDECL myErrorFun(void *data, ErrorCategory category,
+     int pos, char *msg)
++#endif
+ {
+   if (pos >= 0) {
++#if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 23
++    fprintf(stderr, "ERROR (%lld): ", pos);
++#else
+     fprintf(stderr, "ERROR (%d): ", pos);
++#endif
+   } else {
+     fprintf(stderr, "ERROR: ");
+   }
+@@ -619,9 +628,6 @@
+     char *s;
+     GooString name;
+     int fd;
+-    Object obj;
+-    BaseStream *str;
+-    FILE *fp;
+     char buf[4096];
+     int n;
+ 
+@@ -633,8 +639,6 @@
+     }
+     name.append("/XXXXXX");
+     fd = mkstemp(name.getCString());
+-    /* remove name */
+-    unlink(name.getCString());
+     if (fd < 0) {
+       opvpError(-1,"Can't create temporary file");
+       exitCode = 2;
+@@ -675,23 +679,10 @@
+ 	goto err0;
+       }
+     }
+-    if (lseek(fd,0,SEEK_SET) < 0) {
+-	opvpError(-1,"Can't rewind temporary file");
+-	close(fd);
+-	exitCode = 2;
+-	goto err0;
+-    }
+-
+-    if ((fp = fdopen(fd,"rb")) == 0) {
+-	opvpError(-1,"Can't fdopen temporary file");
+-	close(fd);
+-	exitCode = 2;
+-	goto err0;
+-    }
+-
+-    obj.initNull();
+-    str = new FileStream(fp,0,gFalse,0,&obj);
+-    doc = new PDFDoc(str);
++    close(fd);
++    doc = new PDFDoc(&name);
++    /* remove name */
++    unlink(name.getCString());
+   } else {
+     /* no jcl check */
+     doc = new PDFDoc(fileName.copy());
+diff -ruN cups-filters-1.0.35.orig/filter/pdftoraster.cxx cups-filters-1.0.35/filter/pdftoraster.cxx
+--- cups-filters-1.0.35.orig/filter/pdftoraster.cxx	2013-06-26 17:05:04.000000000 +0200
++++ cups-filters-1.0.35/filter/pdftoraster.cxx	2013-08-11 19:41:15.936947917 +0200
+@@ -185,11 +185,20 @@
+ }
+ 
+ #if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 19
++#if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 23
++void CDECL myErrorFun(void *data, ErrorCategory category,
++    Goffset pos, char *msg)
++#else
+ void CDECL myErrorFun(void *data, ErrorCategory category,
+     int pos, char *msg)
++#endif
+ {
+   if (pos >= 0) {
++#if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 23
++    fprintf(stderr, "ERROR (%lld): ", pos);
++#else
+     fprintf(stderr, "ERROR (%d): ", pos);
++#endif
+   } else {
+     fprintf(stderr, "ERROR: ");
+   }
+@@ -1762,19 +1771,15 @@
+   if (argc == 6) {
+     /* stdin */
+     int fd;
+-    Object obj;
+-    BaseStream *str;
+-    FILE *fp;
++    char name[BUFSIZ];
+     char buf[BUFSIZ];
+     int n;
+ 
+-    fd = cupsTempFd(buf,sizeof(buf));
++    fd = cupsTempFd(name,sizeof(name));
+     if (fd < 0) {
+       pdfError(-1,const_cast<char *>("Can't create temporary file"));
+       exit(1);
+     }
+-    /* remove name */
+-    unlink(buf);
+ 
+     /* copy stdin to the tmp file */
+     while ((n = read(0,buf,BUFSIZ)) > 0) {
+@@ -1784,23 +1789,10 @@
+ 	exit(1);
+       }
+     }
+-    if (lseek(fd,0,SEEK_SET) < 0) {
+-        pdfError(-1,const_cast<char *>("Can't rewind temporary file"));
+-        close(fd);
+-	exit(1);
+-    }
+-
+-    if ((fp = fdopen(fd,"rb")) == 0) {
+-        pdfError(-1,const_cast<char *>("Can't fdopen temporary file"));
+-        close(fd);
+-	exit(1);
+-    }
+-
+-    obj.initNull();
+-    parsePDFTOPDFComment(fp);
+-    rewind(fp);
+-    str = new FileStream(fp,0,gFalse,0,&obj);
+-    doc = new PDFDoc(str);
++    close(fd);
++    doc = new PDFDoc(new GooString(name));
++    /* remove name */
++    unlink(name);
+   } else {
+     GooString *fileName = new GooString(argv[6]);
+     /* argc == 7 filenmae is specified */

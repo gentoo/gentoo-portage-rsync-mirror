@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.6.1.ebuild,v 1.2 2013/07/18 14:46:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.6.1-r1.ebuild,v 1.1 2013/08/11 17:55:45 jlec Exp $
 
 EAPI=5
 
@@ -24,6 +24,13 @@ RDEPEND="${PYTHON_DEPS}
 	dev-qt/qtgui:4
 	zeromq? ( net-libs/cppzmq )"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	sed \
+		-e 's:@LIB_SUFFIX@::g' \
+		-i cmake/MoleQueueConfig.cmake.in || die
+	cmake-utils_src_prepare
+}
 
 src_configure() {
 	local mycmakeargs=(

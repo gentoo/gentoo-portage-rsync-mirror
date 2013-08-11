@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r3.ebuild,v 1.1 2013/08/09 19:22:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r3.ebuild,v 1.2 2013/08/11 17:47:52 ssuominen Exp $
 
 EAPI=5
 
@@ -513,5 +513,7 @@ pkg_postinst() {
 	# Update hwdb database in case the format is changed by udev version.
 	if has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
+		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		udevadm control --reload
 	fi
 }

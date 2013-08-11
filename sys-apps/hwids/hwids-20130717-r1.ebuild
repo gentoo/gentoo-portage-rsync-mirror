@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20130717-r1.ebuild,v 1.1 2013/07/23 05:00:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20130717-r1.ebuild,v 1.2 2013/08/11 17:45:16 ssuominen Exp $
 
 EAPI=5
 inherit udev eutils
@@ -43,5 +43,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	use udev && udevadm hwdb --update --root="${ROOT%/}"
+	if use udev; then
+		udevadm hwdb --update --root="${ROOT%/}"
+		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		udevadm control --reload
+	fi
 }

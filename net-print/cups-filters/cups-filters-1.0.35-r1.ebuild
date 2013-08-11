@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.35.ebuild,v 1.3 2013/08/11 17:51:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.35-r1.ebuild,v 1.1 2013/08/11 17:51:16 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ IUSE="jpeg perl png static-libs tiff zeroconf"
 
 RDEPEND="
 	app-text/ghostscript-gpl
-	<app-text/poppler-0.24:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
+	app-text/poppler:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
 	>=app-text/qpdf-3.0.2:=
 	media-libs/fontconfig
 	media-libs/freetype:2
@@ -41,6 +41,8 @@ RDEPEND="
 	zeroconf? ( net-dns/avahi[dbus] )
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-poppler24.patch" )
 
 src_prepare() {
 	base_src_prepare
