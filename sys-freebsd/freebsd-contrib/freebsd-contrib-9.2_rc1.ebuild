@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-9.2_rc1.ebuild,v 1.1 2013/08/09 21:35:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-9.2_rc1.ebuild,v 1.2 2013/08/11 19:21:09 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic multilib
 
@@ -19,20 +19,6 @@ DEPEND="=sys-freebsd/freebsd-sources-${RV}*
 	=sys-freebsd/freebsd-mk-defs-${RV}*"
 
 S="${WORKDIR}/gnu"
-
-src_unpack() {
-	if [[ ${PV} == *9999* ]]; then
-		freebsd_src_unpack
-	else
-		echo ">>> Unpacking needed parts of ${GNU}.tar.bz2 to ${WORKDIR}"
-		tar -jxpf "${DISTDIR}/${GNU}.tar.bz2" gnu/lib/libodialog gnu/usr.bin/sort gnu/usr.bin/patch
-		echo ">>> Unpacking needed parts of ${CONTRIB}.tar.bz2 to ${WORKDIR}"
-		tar -jxpf "${DISTDIR}/${CONTRIB}.tar.bz2" contrib/gnu-sort
-
-		freebsd_do_patches
-		freebsd_rename_libraries
-	fi
-}
 
 src_compile() {
 	cd "${S}/lib/libodialog"

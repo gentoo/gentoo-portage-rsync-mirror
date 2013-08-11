@@ -1,13 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.3 2013/08/11 14:34:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.4 2013/08/11 19:14:57 aballier Exp $
 
-inherit bsdmk freebsd flag-o-matic
+EAPI=5
+
+inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
 DESCRIPTION="FreeBSD kernel sources"
 SLOT="0"
 
-IUSE=""
+IUSE="+build-generic profile"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
@@ -16,11 +18,16 @@ fi
 
 RDEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*
 	!sys-freebsd/virtio-kmod"
-DEPEND=""
+DEPEND="build-generic? (
+		=sys-freebsd/freebsd-usbin-${RV}*
+		=sys-freebsd/freebsd-mk-defs-${RV}*
+	)"
 
 RESTRICT="strip binchecks"
 
 S="${WORKDIR}/sys"
+
+KERN_BUILD=GENERIC
 
 PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-9.2-gentoo.patch"
@@ -34,9 +41,7 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch"
 	"${FILESDIR}/${PN}-7.0-tmpfs_whiteout_stub.patch" )
 
-src_unpack() {
-	freebsd_src_unpack
-
+src_prepare() {
 	# This replaces the gentoover patch, it doesn't need reapply every time.
 	sed -i -e 's:^REVISION=.*:REVISION="'${PVR}'":' \
 		-e 's:^BRANCH=.*:BRANCH="Gentoo":' \
@@ -53,13 +58,37 @@ src_unpack() {
 	sed -e "s:-Werror:-Wno-error:g" \
 		-i "${S}/conf/kern.pre.mk" \
 		-i "${S}/conf/kmod.mk" || die
+
+	# Only used with USE=build-generic, let the kernel build with its own flags, its safer.
+	unset LDFLAGS CFLAGS CXXFLAGS ASFLAGS KERNEL
+}
+
+src_configure() {
+	if use build-generic ; then
+		tc-export CC
+		cd "${S}/$(tc-arch-kernel)/conf" || die
+		config ${KERN_BUILD} || die
+	fi
 }
 
 src_compile() {
-	einfo "Nothing to compile.."
+	if use build-generic ; then
+		cd "${S}/$(tc-arch-kernel)/compile/${KERN_BUILD}" || die
+		freebsd_src_compile depend
+		freebsd_src_compile
+	else
+		einfo "Nothing to compile.."
+	fi
 }
 
 src_install() {
+	if use build-generic ; then
+		cd "${S}/$(tc-arch-kernel)/compile/${KERN_BUILD}" || die
+		freebsd_src_install
+		rm -rf "${S}/$(tc-arch-kernel)/compile/${KERN_BUILD}"
+		cd "${S}"
+	fi
+
 	insinto "/usr/src/sys"
 	doins -r "${S}/"*
 }
