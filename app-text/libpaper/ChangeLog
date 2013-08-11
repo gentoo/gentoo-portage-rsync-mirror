@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.57 2013/05/03 07:51:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.58 2013/08/10 23:13:09 aballier Exp $
+
+*libpaper-1.1.24-r2 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +libpaper-1.1.24-r2.ebuild:
+  Convert to multilib and stack it for baselib r11
 
   03 May 2013; Patrick Lauer <patrick@gentoo.org> libpaper-1.1.24-r1.ebuild:
   Automake 1.13 fix

@@ -104,3 +104,14 @@ usr/lib32/pkgconfig/gthread-2.0.pc
 usr/lib32/pkgconfig/gio-unix-2.0.pc
 usr/lib32/pkgconfig/gmodule-export-2.0.pc
 usr/lib32/pkgconfig/gmodule-no-export-2.0.pc
+usr/lib32/liblcms2.so
+usr/lib32/liblcms2.so.2
+usr/lib32/liblcms2.so.2.0.3
+usr/lib32/pkgconfig/lcms2.pc
+usr/lib32/libpaper.so
+usr/lib32/libpaper.so.1
+usr/lib32/libpaper.so.1.1.2
+usr/lib32/libtiff.so.3
+usr/lib32/libtiff.so.4
+usr/lib32/libtiffxx.so.3
+usr/lib32/libtiffxx.so.4

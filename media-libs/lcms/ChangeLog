@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.153 2013/07/03 10:10:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.154 2013/08/10 23:13:05 aballier Exp $
+
+*lcms-2.5-r1 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +lcms-2.5-r1.ebuild:
+  Convert to multilib (only slot 2) and stack it for baselib r11
 
 *lcms-2.5 (03 Jul 2013)
 

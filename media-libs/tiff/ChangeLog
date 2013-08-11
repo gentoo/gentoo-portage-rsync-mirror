@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.237 2013/08/10 17:15:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.238 2013/08/10 23:13:32 aballier Exp $
+
+*tiff-3.9.7-r1 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org> +tiff-3.9.7-r1.ebuild:
+  Convert to multilib and stack it for baselib r11
 
   10 Aug 2013; Alexis Ballier <aballier@gentoo.org> tiff-4.0.3-r3.ebuild:
   Add blockers on emul-libs so that it is stacked for baselibs r10
