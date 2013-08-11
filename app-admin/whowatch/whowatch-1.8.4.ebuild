@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.8.4.ebuild,v 1.1 2013/08/10 13:57:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.8.4.ebuild,v 1.2 2013/08/11 11:54:08 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -19,6 +19,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-tinfo.patch
+	epatch "${FILESDIR}"/${P}-select.patch
 	eautoreconf
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.4 2013/03/07 11:43:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.5 2013/08/11 11:50:05 ago Exp $
 EAPI=2
 
 inherit games
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/tinyfugue/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="+atcp debug doc +gmcp ipv6 +option102 ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
