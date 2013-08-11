@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libwacom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.12 2013/03/28 16:50:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.13 2013/08/11 02:03:42 patrick Exp $
+
+*libwacom-0.7.1 (11 Aug 2013)
+
+  11 Aug 2013; Patrick Lauer <patrick@gentoo.org> +libwacom-0.7.1.ebuild:
+  Bump
 
 *libwacom-0.7 (28 Mar 2013)
 
