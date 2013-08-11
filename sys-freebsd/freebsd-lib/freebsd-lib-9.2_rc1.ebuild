@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.4 2013/08/11 19:51:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2_rc1.ebuild,v 1.5 2013/08/11 20:31:07 aballier Exp $
 
 EAPI=5
 
@@ -34,6 +34,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		zfs? ( =sys-freebsd/freebsd-cddl-${RV}* )
 		>=dev-libs/expat-2.0.1
 		!sys-libs/libutempter
+		!dev-libs/libelf
 		!sys-freebsd/freebsd-headers"
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2
@@ -87,7 +88,7 @@ pkg_setup() {
 PATCHES=(
 	"${FILESDIR}/${PN}-6.0-pmc.patch"
 	"${FILESDIR}/${PN}-6.1-csu.patch"
-	"${FILESDIR}/${PN}-9.0-liblink.patch"
+	"${FILESDIR}/${PN}-9.2-liblink.patch"
 	"${FILESDIR}/${PN}-bsdxml2expat.patch"
 	"${FILESDIR}/${PN}-9.0-netware.patch"
 	"${FILESDIR}/${PN}-9.0-bluetooth.patch"
@@ -113,7 +114,7 @@ REMOVE_SUBDIRS="ncurses \
 	libbegemot libbsnmp \
 	libpam libpcap bind libwrap libmagic \
 	libcom_err
-	libelf libedit
+	libedit
 	libstand
 	libgssapi"
 
@@ -251,7 +252,7 @@ bootstrap_libthr() {
 CROSS_SUBDIRS="lib/libc lib/msun gnu/lib/libssp/libssp_nonshared lib/libthr lib/libutil lib/librt"
 
 # What to build for non-default ABIs.
-NON_NATIVE_SUBDIRS="${CROSS_SUBDIRS} gnu/lib/csu lib/libcompiler_rt gnu/lib/libgcc lib/libmd lib/libcrypt lib/libsbuf lib/libcam"
+NON_NATIVE_SUBDIRS="${CROSS_SUBDIRS} gnu/lib/csu lib/libcompiler_rt gnu/lib/libgcc lib/libmd lib/libcrypt lib/libsbuf lib/libcam lib/libelf"
 
 # Subdirs for a native build:
 NATIVE_SUBDIRS="lib gnu/lib/libssp/libssp_nonshared gnu/lib/libregex gnu/lib/csu gnu/lib/libgcc"
@@ -500,7 +501,7 @@ do_install() {
 	# Generate ldscripts for core libraries that will go in /
 	multilib_is_native_abi && \
 		gen_usr_ldscript -a alias cam geom ipsec jail kiconv \
-			kvm m md procstat sbuf thr ufs util
+			kvm m md procstat sbuf thr ufs util elf
 
 	if [[ ${#MULTIBUILD_VARIANTS[@]} -gt 1 ]] ; then
 		cd "${D}/usr/include"

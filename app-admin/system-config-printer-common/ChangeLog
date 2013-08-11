@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/system-config-printer-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.96 2013/04/09 16:40:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.97 2013/08/11 20:02:07 eva Exp $
+
+*system-config-printer-common-1.4.1 (11 Aug 2013)
+
+  11 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +system-config-printer-common-1.4.1.ebuild,
+  +files/system-config-printer-common-1.4.1-split.patch:
+  464958 478656 Version bump, bug #464958. Move to python-single-r1 and EAPI=5.
+  Always install systemd unit files and fix path to udev helpers with an
+  updated 'split' patch, bug #478656.
 
   09 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   system-config-printer-common-1.3.12.ebuild:

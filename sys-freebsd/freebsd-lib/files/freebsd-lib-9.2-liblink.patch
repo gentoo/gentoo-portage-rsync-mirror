@@ -1,0 +1,55 @@
+diff --git a/lib/libdwarf/Makefile b/lib/libdwarf/Makefile
+index 87ce8d4..77d0535 100644
+--- a/lib/libdwarf/Makefile
++++ b/lib/libdwarf/Makefile
+@@ -21,6 +21,7 @@ SRCS=	\
+ INCS=	dwarf.h libdwarf.h
+ 
+ CFLAGS+=	-I${.CURDIR}
++CFLAGS+=	-I${.CURDIR}/../libelf
+ 
+ SHLIB_MAJOR=	3
+ 
+diff --git a/lib/libproc/Makefile b/lib/libproc/Makefile
+index e20e00a..77d46d7 100644
+--- a/lib/libproc/Makefile
++++ b/lib/libproc/Makefile
+@@ -12,9 +12,13 @@ SRCS=	proc_bkpt.c		\
+ INCS=	libproc.h
+ 
+ CFLAGS+=	-I${.CURDIR}
++CFLAGS+=	-I${.CURDIR}/../libelf
+ 
+ SHLIB_MAJOR=	2
+ 
+ WITHOUT_MAN=
+ 
++LDADD+=		-lelf
++LDFLAGS+=	-L${.OBJDIR}/../libelf
++
+ .include <bsd.lib.mk>
+diff --git a/lib/librtld_db/Makefile b/lib/librtld_db/Makefile
+index 783fb8b..62e7c60 100644
+--- a/lib/librtld_db/Makefile
++++ b/lib/librtld_db/Makefile
+@@ -10,5 +10,8 @@ SRCS=		rtld_db.c
+ INCS=		rtld_db.h
+ 
+ CFLAGS+= -I${.CURDIR}
++CFLAGS+= -I${.CURDIR}/../libelf
++LDADD+= -lutil -lproc
++LDFLAGS+= -L${.OBJDIR}/../libutil -L${.OBJDIR}/../libproc
+ 
+ .include <bsd.lib.mk>
+diff -uNr lib.old/libprocstat/Makefile lib/libprocstat/Makefile
+--- a/lib/libprocstat/Makefile	2013-08-11 16:00:47.000000000 -0400
++++ b/lib/libprocstat/Makefile	2013-08-11 16:18:19.000000000 -0400
+@@ -17,6 +17,8 @@
+ SYMBOL_MAPS=	${.CURDIR}/Symbol.map
+ 
+ INCS=		libprocstat.h
++CFLAGS+=	-I${.CURDIR}/../libelf
++LDFLAGS+=       -L${.OBJDIR}/../libelf
+ CFLAGS+=	-I. -I${.CURDIR} -D_KVM_VNODE
+ SHLIB_MAJOR=	1
+ 

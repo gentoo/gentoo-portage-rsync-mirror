@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.73 2013/05/28 19:13:30 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.74 2013/08/11 20:05:15 eva Exp $
+
+*system-config-printer-gnome-1.4.1 (11 Aug 2013)
+
+  11 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +system-config-printer-gnome-1.4.1.ebuild,
+  +files/system-config-printer-gnome-1.4.1-split.patch:
+  Version bump, bug #464958. Switch to python-single-r1 and EAPI=5.
 
   28 May 2013; Maciej Mrozowski <reavertm@gentoo.org>
   system-config-printer-gnome-1.3.12.ebuild:
