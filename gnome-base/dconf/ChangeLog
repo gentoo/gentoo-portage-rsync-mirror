@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.48 2013/08/01 13:22:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.49 2013/08/11 09:44:32 eva Exp $
+
+  11 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> -dconf-0.14.1.ebuild,
+  -dconf-0.16.0.ebuild:
+  Clean up old revisions.
 
   01 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org> dconf-0.16.0.ebuild,
   dconf-0.16.1.ebuild:
