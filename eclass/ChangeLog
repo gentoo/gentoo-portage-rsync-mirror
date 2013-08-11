@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.920 2013/08/10 07:41:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.921 2013/08/11 02:42:54 floppym Exp $
+
+  11 Aug 2013; Mike Gilbert <floppym@gentoo.org> chromium.eclass:
+  Don't call EXPORT_FUNCTONS if CHROMIUM_EXPORT_PHASES is set to 'no'.
 
   10 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Clean up gcc_do_filter_flags a bit more. Drop ppc64 workaround for 3.2/3.3
