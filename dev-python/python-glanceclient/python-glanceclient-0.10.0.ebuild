@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/python-glanceclient-0.8.0.ebuild,v 1.1 2013/03/11 03:02:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/python-glanceclient-0.10.0.ebuild,v 1.1 2013/08/11 01:43:36 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -28,11 +28,15 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 #				>=dev-python/testrepository-0.0.13		#not packaged
 #				>=dev-python/testtools-0.9.22 )"
 RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/python-keystoneclient-0.1.2[${PYTHON_USEDEP}]
+		>=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
+		<dev-python/d2to1-0.3[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.5[${PYTHON_USEDEP}]
+		<dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		>=dev-python/python-keystoneclient-0.2.1[${PYTHON_USEDEP}]
 		<dev-python/python-keystoneclient-1[${PYTHON_USEDEP}]
-		>=dev-python/prettytable-0.6
-		<dev-python/prettytable-0.7
-		dev-python/pyopenssl
+		>=dev-python/prettytable-0.6[${PYTHON_USEDEP}]
+		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
+		dev-python/pyopenssl[${PYTHON_USEDEP}]
 		>=dev-python/warlock-0.7.0[${PYTHON_USEDEP}]
 		<dev-python/warlock-2[${PYTHON_USEDEP}]"
 
