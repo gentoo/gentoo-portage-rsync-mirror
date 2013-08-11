@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r4.ebuild,v 1.1 2013/05/25 00:49:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.18.ebuild,v 1.1 2013/08/11 17:16:02 dilfridge Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/linux-gpib/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="pcmcia static debug guile perl php python tcl doc firmware"
 
 COMMONDEPEND="
@@ -56,11 +56,6 @@ pkg_setup () {
 src_prepare () {
 	base_src_prepare
 	eautoreconf
-
-	# http://sourceforge.net/tracker/?func=detail&aid=3530207&group_id=42378&atid=432940
-	if kernel_is -ge 3 4 0; then
-		epatch "${FILESDIR}"/${P}-kernel-3.4-asm-includes.patch
-	fi
 }
 
 src_configure() {
