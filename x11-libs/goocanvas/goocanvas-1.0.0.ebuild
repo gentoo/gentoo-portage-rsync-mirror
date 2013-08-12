@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.11 2013/04/22 17:08:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.12 2013/08/12 04:06:56 tetromino Exp $
 
 EAPI="3"
 
 GCONF_DEBUG=no
 GNOME2_LA_PUNT=yes
 
-inherit gnome2 libtool
+inherit eutils gnome2 libtool
 
 DESCRIPTION="Canvas widget for GTK+ using the cairo 2D library for drawing"
 HOMEPAGE="http://live.gnome.org/GooCanvas"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples"
@@ -30,6 +30,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=671766
+	epatch "${FILESDIR}"/${P}-gold.patch
+
 	# Fails to build with recent GTK+
 	sed -e "s/-D.*_DISABLE_DEPRECATED//g" \
 		-i src/Makefile.am src/Makefile.in demo/Makefile.am demo/Makefile.in \

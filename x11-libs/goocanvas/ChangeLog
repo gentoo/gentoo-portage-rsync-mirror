@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.42 2013/04/22 17:08:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.43 2013/08/12 04:06:56 tetromino Exp $
+
+*goocanvas-2.0.1-r1 (12 Aug 2013)
+
+  12 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  goocanvas-0.14.ebuild, goocanvas-1.0.0.ebuild, goocanvas-2.0.0.ebuild,
+  goocanvas-2.0.1.ebuild, +goocanvas-2.0.1-r1.ebuild,
+  +files/goocanvas-1.0.0-gold.patch:
+  Add upstream patches to fix compatibility with modern gobject-introspection
+  and pygobject versions (bug #480494, thanks to Harris Landgarten) and
+  modernize ebuild. Fix 1.0.0's underlinking failure with gold (bug #464734,
+  thanks to cmuelle8). Fix license information (LGPL, not GPL).
 
   22 Apr 2013; Agostino Sarubbo <ago@gentoo.org> goocanvas-1.0.0.ebuild:
   Stable for sparc, wrt bug #465664
