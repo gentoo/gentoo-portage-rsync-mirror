@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8148 2013/08/11 18:23:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8149 2013/08/12 01:32:07 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  advertise fbsd 9.2 profiles now that they are bumped to rc1
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask latest celt, it should be ok now
