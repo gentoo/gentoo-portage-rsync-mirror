@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.6 2013/08/12 12:10:58 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.7 2013/08/12 12:33:55 pinkbyte Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ inherit eutils base flag-o-matic pax-utils toolchain-funcs ${GIT_ECLASS}
 MY_P=${P/-user/}
 
 if [[ ${PV} != *9999 ]]; then
-SRC_URI="http://wiki.qemu.org/download/${MY_P}-1.tar.bz2
-		 http://dev.gentoo.org/~lu_zero/distfiles/qemu-1.1.0-r1-patches.tar.xz"
+SRC_URI="http://wiki.qemu.org/download/${MY_P}.tar.bz2
+		 http://dev.gentoo.org/~lu_zero/distfiles/qemu-${PVR}-patches.tar.xz"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
 S="${WORKDIR}/${MY_P}"
 fi
@@ -78,6 +78,11 @@ src_prepare() {
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
+
+	if [[ ${PV} != *9999 ]]; then
+		EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" epatch
+	fi
 
 	epatch_user
 }
