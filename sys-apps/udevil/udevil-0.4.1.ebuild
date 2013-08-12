@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.4.1.ebuild,v 1.4 2013/05/14 09:41:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.4.1.ebuild,v 1.5 2013/08/12 02:10:45 hasufell Exp $
 
 EAPI=5
 
@@ -13,14 +13,13 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="systemd"
+IUSE=""
 
 RDEPEND=">=app-shells/bash-4.0
 	dev-libs/glib:2
 	sys-apps/util-linux
 	virtual/acl
-	>=virtual/udev-143
-	systemd? ( sys-apps/systemd )"
+	>=virtual/udev-143"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
@@ -38,7 +37,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-setfacl-prog="$(type -P setfacl)" \
-		$(use_enable systemd)
+		--enable-systemd
 }
 
 src_install() {
