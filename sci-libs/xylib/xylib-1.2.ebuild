@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/xylib-1.0.ebuild,v 1.1 2012/08/04 15:29:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/xylib-1.2.ebuild,v 1.1 2013/08/12 20:55:18 bicatali Exp $
 
-EAPI=4
+EAPI=5
+
+inherit autotools-utils
 
 DESCRIPTION="Experimental x-y data reading library"
 HOMEPAGE="http://www.unipress.waw.pl/fityk/xylib/"
@@ -21,8 +23,9 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_configure() {
-	econf \
-		$(use_enable static-libs static) \
-		$(use_with bzip2 bzlib) \
+	local myeconfargs=(
+		$(use_with bzip2 bzlib)
 		$(use_with zlib)
+	)
+	autotools-utils_src_configure
 }

@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/compton
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.12 2013/01/29 11:19:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.13 2013/08/12 20:47:00 hasufell Exp $
+
+*compton-0.1_beta1 (12 Aug 2013)
+
+  12 Aug 2013; Julian Ospald <hasufell@gentoo.org>
+  -compton-0_pre20120330.ebuild, -compton-0_pre20120913.ebuild,
+  -compton-0_pre20121114.ebuild, +compton-0.1_beta1.ebuild,
+  compton-9999.ebuild:
+  version bump, remove old, update live ebuild
 
   29 Jan 2013; Julian Ospald <hasufell@gentoo.org> compton-9999.ebuild:
   update live ebuild: install additional examples

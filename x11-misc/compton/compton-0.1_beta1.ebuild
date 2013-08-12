@@ -1,21 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.7 2013/08/12 20:47:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0.1_beta1.ebuild,v 1.1 2013/08/12 20:47:00 hasufell Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python3_2 python3_3 )
-inherit toolchain-funcs python-r1 git-2
+inherit toolchain-funcs python-r1
 
 DESCRIPTION="A compositor for X, and a fork of xcompmgr-dana"
 HOMEPAGE="http://github.com/chjj/compton"
-SRC_URI=""
-
-EGIT_REPO_URI="git://github.com/chjj/compton.git"
+SRC_URI="https://github.com/chjj/compton/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="dbus +drm opengl +pcre"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -65,6 +63,6 @@ src_install() {
 	NO_REGEX_PCRE=$(nobuildit pcre) \
 		default
 	docinto examples
-	nonfatal dodoc compton.sample.conf dbus-examples/*
+	dodoc compton.sample.conf dbus-examples/*
 	python_foreach_impl python_newscript bin/compton-convgen.py compton-convgen
 }
