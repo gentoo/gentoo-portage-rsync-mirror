@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_timeseries/scikits_timeseries-0.91.3-r1.ebuild,v 1.1 2013/02/09 19:38:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_timeseries/scikits_timeseries-0.91.3-r1.ebuild,v 1.2 2013/08/12 22:19:01 bicatali Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="
 
 LICENSE="BSD eGenixPublic-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 DEPEND="
@@ -29,7 +29,7 @@ RDEPEND="
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	sci-libs/scikits[${PYTHON_USEDEP}]
 	dev-python/matplotlib[${PYTHON_USEDEP}]
-	dev-python/pytables"
+	dev-python/pytables[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -39,7 +39,7 @@ python_test() {
 
 python_install() {
 	distutils-r1_python_install
-	rm -f "${ED}"$(python_get_sitedir)/scikits/__init__.py || die
+	rm "${D}"$(python_get_sitedir)/scikits/__init__.py || die
 }
 
 python_install_all() {

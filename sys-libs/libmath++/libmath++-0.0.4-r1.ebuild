@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4-r1.ebuild,v 1.2 2013/06/22 19:43:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4-r1.ebuild,v 1.4 2013/08/12 22:21:11 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://upstream.rm-rf.in/libmath%2B%2B/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~s390 ~x86"
+KEYWORDS="amd64 ~ppc ~s390 x86"
 IUSE="doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"

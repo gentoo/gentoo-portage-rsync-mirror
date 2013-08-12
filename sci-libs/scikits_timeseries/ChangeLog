@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scikits_timeseries
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_timeseries/ChangeLog,v 1.4 2013/05/31 14:19:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_timeseries/ChangeLog,v 1.5 2013/08/12 22:19:02 bicatali Exp $
+
+  12 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  -scikits_timeseries-0.91.3.ebuild, metadata.xml,
+  scikits_timeseries-0.91.3-r1.ebuild:
+  Fixed for prefix
 
   31 May 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop dead maintainer email timcera@earthlink.net

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20120527.ebuild,v 1.2 2013/02/07 22:42:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20130711.ebuild,v 1.1 2013/08/12 22:09:33 ulm Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs fdo-mime
 
@@ -17,9 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 ) CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
 
-DEPEND=""
 RDEPEND="|| ( >=www-client/firefox-5.0 >=www-client/firefox-bin-5.0 )"
 
 S="${WORKDIR}/${PN}"
@@ -44,7 +42,7 @@ src_install() {
 	dosym ../../libexec/${PN}/conkeror-spawn-helper \
 		/usr/share/${PN}/conkeror-spawn-helper
 
-	newbin "${FILESDIR}/conkeror.sh" conkeror
+	newbin "${FILESDIR}/conkeror-r1.sh" conkeror
 	domenu "${FILESDIR}/conkeror.desktop"
 	doicon "${WORKDIR}/conkeror.png"
 

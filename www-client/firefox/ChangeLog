@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.257 2013/08/08 13:42:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.259 2013/08/12 22:19:47 ago Exp $
+
+  12 Aug 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.8.ebuild:
+  Stable for x86, wrt bug #479968
+
+  12 Aug 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.8.ebuild:
+  Stable for amd64, wrt bug #479968
 
   08 Aug 2013; Jeroen Roovers <jer@gentoo.org> firefox-23.0.ebuild:
   Marked ~hppa too.

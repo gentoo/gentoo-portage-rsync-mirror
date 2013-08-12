@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/scikits_optimization-0.3.ebuild,v 1.1 2013/05/13 06:44:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/scikits_optimization-0.3.ebuild,v 1.2 2013/08/12 22:24:34 bicatali Exp $
 
 EAPI=5
 
@@ -30,9 +30,4 @@ S="${WORKDIR}/${MY_P}"
 python_test() {
 	PYTHONPATH="${BUILD_DIR}/lib/" \
 		esetup.py test || die
-}
-
-python_install() {
-	distutils-r1_python_install
-	rm -f "${ED}"$(python_get_sitedir)/scikits/__init__.py || die
 }

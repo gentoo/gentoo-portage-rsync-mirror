@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.1_p1-r1.ebuild,v 1.1 2013/05/31 02:03:09 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.1_p1-r1.ebuild,v 1.2 2013/08/12 22:03:01 bicatali Exp $
 
 EAPI=5
 
@@ -30,14 +30,14 @@ src_prepare(){
 	if [[ -n ${HOTFIX} ]]; then
 		epatch "${DISTDIR}/${HOTFIX}"
 	fi
-	sed -i 's,PREFIX= /usr/local,PREFIX= /usr,' Makefile || die 'sed failed.'
-	sed -i 's,/lib,/'$(get_libdir)',' etc/${PN}.pc || die 'sed2 failed.'
+	sed -i "s,PREFIX= /usr/local,PREFIX= ${EPREFIX}/usr," Makefile || die 'sed failed.'
+	sed -i "s,/lib,/$(get_libdir)," etc/${PN}.pc || die 'sed2 failed.'
 }
 
 src_compile() {
 	emake \
 		Q= \
-		PREFIX=/usr \
+		PREFIX="${EPREFIX}/usr" \
 		DESTDIR="${D}" \
 		HOST_CC="$(tc-getBUILD_CC)" \
 		STATIC_CC="$(tc-getCC)" \
@@ -45,7 +45,7 @@ src_compile() {
 		TARGET_LD="$(tc-getCC)" \
 		TARGET_AR="$(tc-getAR) rcus" \
 		TARGET_STRIP="true" \
-		INSTALL_LIB="${D%/}/usr/$(get_libdir)" \
+		INSTALL_LIB="${ED%/}/usr/$(get_libdir)" \
 		XCFLAGS="$(usex lua52compat "-DLUAJIT_ENABLE_LUA52COMPAT" "")"
 }
 
@@ -58,7 +58,7 @@ src_install(){
 		TARGET_LD="$(tc-getCC)" \
 		TARGET_AR="$(tc-getAR) rcus" \
 		TARGET_STRIP="true" \
-		INSTALL_LIB="${D%/}/usr/$(get_libdir)"
+		INSTALL_LIB="${ED%/}/usr/$(get_libdir)"
 
 	pax-mark m "${ED}usr/bin/luajit-${MY_PV}"
 
