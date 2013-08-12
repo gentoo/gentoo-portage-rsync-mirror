@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/qmf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.9 2013/08/01 08:29:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.10 2013/08/11 23:35:42 pesa Exp $
+
+*qmf-4.0.3 (11 Aug 2013)
+
+  11 Aug 2013; Davide Pesavento <pesa@gentoo.org> +qmf-4.0.3.ebuild,
+  -files/qmf-4.0.2-include.patch, -files/qmf-4.0.2-visibility.patch,
+  -qmf-4.0.2.ebuild:
+  Version bump.
 
   01 Aug 2013; Davide Pesavento <pesa@gentoo.org> -files/qmf-tests.patch,
   -qmf-2.0_p201209-r1.ebuild:

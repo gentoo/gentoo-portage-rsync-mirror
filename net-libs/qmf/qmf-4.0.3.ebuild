@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.2.ebuild,v 1.2 2013/08/01 08:08:27 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.3.ebuild,v 1.1 2013/08/11 23:35:41 pesa Exp $
 
 EAPI=5
 
@@ -40,19 +40,18 @@ DEPEND="${RDEPEND}
 DOCS=(CHANGES)
 PATCHES=(
 	"${FILESDIR}/${PN}-4.0.2-tests.patch"
-	"${FILESDIR}/${P}-include.patch"
-	"${FILESDIR}/${P}-visibility.patch"
 )
 
 src_prepare() {
 	qt4-r2_src_prepare
 
-	sed -i	-e '/benchmarks/d' \
-		-e '/tests/d' \
-		messagingframework.pro || die
+	sed -i -e '/SUBDIRS.*=/s/benchmarks//' messagingframework.pro || die
 
 	if ! use examples; then
-		sed -i -e '/examples/d' messagingframework.pro || die
+		sed -i -e '/SUBDIRS.*=/s/examples//' messagingframework.pro || die
+	fi
+	if ! use test; then
+		sed -i -e '/SUBDIRS.*=/s/tests//' messagingframework.pro || die
 	fi
 
 	# disable automagic deps
@@ -80,11 +79,6 @@ src_test() {
 	echo ">>> Test phase [QTest]: ${CATEGORY}/${PF}"
 	cd "${S}"/tests
 
-	einfo "Building tests"
-	eqmake4 QMF_INSTALL_ROOT="${EPREFIX}/usr"
-	emake
-
-	einfo "Running tests"
 	export QMF_DATA=${T}
 	local fail=false test=
 	for test in tst_*; do
@@ -97,6 +91,7 @@ src_test() {
 		fi
 		echo
 	done
+
 	${fail} && die "some tests have failed!"
 }
 
