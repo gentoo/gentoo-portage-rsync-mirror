@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/quadrapassel-3.8.2.ebuild,v 1.1 2013/07/28 19:50:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/quadrapassel-3.8.2.ebuild,v 1.2 2013/08/12 21:15:53 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,9 +18,9 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/glib:2
-	>=gnome-base/librsvg-2.32.0
-	>=media-libs/clutter-1.0.0
-	>=media-libs/clutter-gtk-0.91.6
+	>=gnome-base/librsvg-2.32.0:2
+	>=media-libs/clutter-1:1.0
+	>=media-libs/clutter-gtk-0.91.6:1.0
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/gtk+-3.4.0:3
 "

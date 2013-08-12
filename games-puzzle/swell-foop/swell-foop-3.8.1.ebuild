@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/swell-foop/swell-foop-3.8.1.ebuild,v 1.1 2013/06/30 12:28:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/swell-foop/swell-foop-3.8.1.ebuild,v 1.2 2013/08/12 21:19:26 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,8 +18,8 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/glib:2
-	>=media-libs/clutter-1.0.0
-	>=media-libs/clutter-gtk-0.91.6
+	>=media-libs/clutter-1:1.0
+	>=media-libs/clutter-gtk-0.91.6:1.0
 	>=x11-libs/gtk+-3.4.0:3
 "
 DEPEND="${RDEPEND}

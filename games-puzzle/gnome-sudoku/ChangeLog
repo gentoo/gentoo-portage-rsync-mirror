@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gnome-sudoku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.1 2013/07/13 13:44:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.2 2013/08/12 21:12:08 eva Exp $
+
+  12 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-sudoku-3.8.1.ebuild:
+  Add missing dependencies per checking imports.
 
 *gnome-sudoku-3.8.1 (13 Jul 2013)
 
