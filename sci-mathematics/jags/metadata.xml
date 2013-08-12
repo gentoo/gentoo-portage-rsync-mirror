@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci-mathematics</herd>
-  <longdescription lang="en">
+<herd>sci-mathematics</herd>
+<longdescription lang="en">
   JAGS is Just Another Gibbs Sampler. It is a program for analysis of
   Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC)
   simulation not wholly unlike BUGS.

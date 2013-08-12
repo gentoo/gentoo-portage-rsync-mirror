@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.3.0.ebuild,v 1.4 2013/02/21 13:32:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.3.0.ebuild,v 1.5 2013/08/12 21:47:33 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools-utils toolchain-funcs
 
 MYP="JAGS-${PV}"
 
 DESCRIPTION="Just Another Gibbs Sampler for Bayesian MCMC simulation"
-HOMEPAGE="http://www-fis.iarc.fr/~martyn/software/jags/"
+HOMEPAGE="http://mcmc-jags.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/mcmc-jags/JAGS/3.x/Source/${MYP}.tar.gz"
 LICENSE="GPL-2"
 IUSE="doc"
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYP}"
 
 src_configure() {
-	myeconfargs=(
+	local myeconfargs=(
 		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)"
 	)
@@ -43,5 +43,5 @@ src_compile() {
 
 src_install() {
 	autotools-utils_src_install
-	use doc && dodoc ${AUTOTOOLS_BUILD_DIR}/doc/manual/*.pdf
+	use doc && dodoc ${BUILD_DIR}/doc/manual/*.pdf
 }

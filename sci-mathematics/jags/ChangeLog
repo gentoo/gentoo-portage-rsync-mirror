@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/jags
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.12 2013/02/21 13:32:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.13 2013/08/12 21:47:33 bicatali Exp $
+
+  12 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> jags-3.3.0.ebuild,
+  metadata.xml:
+  Fix homepage and build directory
 
   21 Feb 2013; Justin Lecher <jlec@gentoo.org> -jags-3.2.0.ebuild,
   jags-3.3.0.ebuild, metadata.xml:
