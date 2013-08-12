@@ -1,6 +1,10 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.12 2013/07/15 15:03:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.13 2013/08/11 23:06:02 aballier Exp $
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> handbrake-0.9.9.ebuild,
+  handbrake-9999.ebuild:
+  write proper ffmpeg/libav deps
 
   15 Jul 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/handbrake-0.9.9-remove-faac-dependency.patch,

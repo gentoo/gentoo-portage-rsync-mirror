@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.9999.ebuild,v 1.8 2013/07/10 03:07:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.9999.ebuild,v 1.9 2013/08/11 23:17:55 aballier Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ done
 TOOLS="aviocat graph2dot ismindex pktdumper qt-faststart trasher"
 
 RDEPEND="
-	!media-video/ffmpeg
+	!media-video/ffmpeg:0
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	bzip2? ( app-arch/bzip2 )

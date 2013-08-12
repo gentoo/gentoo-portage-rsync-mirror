@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.5-r2.ebuild,v 1.1 2013/06/24 15:41:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.5-r2.ebuild,v 1.2 2013/08/11 23:02:34 aballier Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 		virtual/ffmpeg )
 	webp? ( media-libs/libwebp )
 	x264? ( media-libs/x264
-		|| ( >=media-video/ffmpeg-1.0.4 media-video/libav )
+		|| ( >=media-video/ffmpeg-1.0.4:0 media-video/libav )
 		virtual/ffmpeg )"
 
 RDEPEND="${COMMON_DEPEND}

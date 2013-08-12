@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.9 2013/07/15 15:03:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.10 2013/08/11 23:06:03 aballier Exp $
 
 EAPI="5"
 
@@ -50,7 +50,7 @@ RDEPEND="
 	media-libs/libvorbis
 	media-libs/x264:=
 	media-sound/lame
-	ffmpeg? ( =virtual/ffmpeg-9 !<media-video/ffmpeg-1.2.1 )
+	ffmpeg? ( >=media-video/libav-9:= >=media-video/ffmpeg-1.2.1:0= )
 	sys-libs/zlib
 	gstreamer? (
 		media-libs/gstreamer:1.0
