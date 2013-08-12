@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.192 2013/07/27 08:20:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.193 2013/08/12 17:41:12 chutzpah Exp $
+
+  12 Aug 2013; Patrick McLean <chutzpah@gentoo.org> metadata.xml:
+  Set package to maintainer-needed as I no longer use or care about this
+  package.
 
 *courier-imap-4.8.0-r1 (27 Jul 2013)
 

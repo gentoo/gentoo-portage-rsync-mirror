@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15016 2013/08/11 18:23:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15017 2013/08/12 17:52:08 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,7 +44,6 @@ sci-libs/mccp4
 dev-ruby/cerberus
 dev-ruby/delocalize
 dev-ruby/linecache
-dev-ruby/pry:0
 dev-ruby/rubigen
 dev-ruby/ruby-bz2
 dev-ruby/ruby-debug-base

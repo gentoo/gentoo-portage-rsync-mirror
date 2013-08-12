@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-pool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.63 2011/07/17 20:30:50 halcy0n Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.64 2013/08/12 18:00:41 tomwij Exp $
+
+*commons-pool-1.6 (12 Aug 2013)
+
+  12 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +commons-pool-1.6.ebuild:
+  Version bump to 1.6, API compatible with previous version.
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> commons-pool-1.5.6.ebuild:
   Stable for ppc/ppc64; bug #371811
@@ -252,4 +257,3 @@
   31 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> commons-pool-1.0.1.ebuild files/digest-commons-pool-1.0.1 :
   Initial import.  Ebuild submitted by Adrian Almenar
   <aalmenar@conectium.com>.
-

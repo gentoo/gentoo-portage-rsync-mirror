@@ -3,8 +3,7 @@
 <pkgmetadata>
 	<herd>net-mail</herd>
 	<maintainer>
-		<email>chutzpah@gentoo.org</email>
-		<name>Patrick McLean</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name="trashquota">include deleted messages, and the Trash folder, in the estimated quota usage for maildirs</flag>
