@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.5 2013/02/25 16:35:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.6 2013/08/12 12:10:58 pinkbyte Exp $
 
 EAPI=4
 
@@ -79,8 +79,7 @@ src_prepare() {
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
 
-	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" epatch
+	epatch_user
 }
 
 src_configure() {
@@ -93,7 +92,7 @@ src_configure() {
 		user_targets="${user_targets} ${target}-linux-user"
 	done
 
-	conf_opts="--enable-linux-user --disable-strip"
+	conf_opts="--enable-linux-user"
 	conf_opts+=" --disable-bsd-user"
 	conf_opts+=" --disable-system"
 	conf_opts+=" --disable-vnc-tls"
@@ -101,9 +100,16 @@ src_configure() {
 	conf_opts+=" --disable-sdl"
 	conf_opts+=" --disable-seccomp"
 	conf_opts+=" --disable-vde"
-	conf_opts+=" --prefix=/usr --disable-bluez --disable-kvm"
+	conf_opts+=" --disable-bluez"
+	conf_opts+=" --disable-kvm"
+	conf_opts+=" --disable-guest-agent"
+	conf_opts+=" --disable-tools"
+	conf_opts+=" --without-pixman"
+	conf_opts+=" --prefix=/usr"
+	conf_opts+=" --sysconfdir=/etc"
+	conf_opts+=" --localstatedir=/run"
 	conf_opts+=" --cc=$(tc-getCC) --host-cc=$(tc-getBUILD_CC)"
-	conf_opts+=" --disable-smartcard --disable-smartcard-nss"
+	conf_opts+=" --disable-smartcard-nss"
 	conf_opts+=" --extra-ldflags=-Wl,-z,execheap"
 	conf_opts+=" --disable-strip --disable-werror"
 	conf_opts+=" --static"
