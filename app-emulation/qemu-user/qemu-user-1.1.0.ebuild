@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0.ebuild,v 1.2 2012/06/20 19:48:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0.ebuild,v 1.3 2013/08/12 14:45:44 pinkbyte Exp $
 
 EAPI=4
 
@@ -112,7 +112,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake qemu failed"
+	# enable verbose build, bug #444346
+	emake V=1
 }
 
 src_install() {

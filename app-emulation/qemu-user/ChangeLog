@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.56 2013/08/12 12:33:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.57 2013/08/12 14:45:44 pinkbyte Exp $
+
+  12 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> qemu-user-0.12.2.ebuild,
+  qemu-user-1.0.ebuild, qemu-user-1.1.0.ebuild, qemu-user-1.1.0-r1.ebuild,
+  qemu-user-1.2.2.ebuild, qemu-user-1.4.0.ebuild, qemu-user-9999.ebuild:
+  Enable verbose build, wrt bug #444346. Thanks to Agostino Sarubbo for
+  discovering this issue
 
   12 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> qemu-user-9999.ebuild:
   Update SRC_URI links, apply patchset only in non-live ebuilds

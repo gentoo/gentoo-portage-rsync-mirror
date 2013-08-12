@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.12.2.ebuild,v 1.1 2010/02/14 23:53:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-0.12.2.ebuild,v 1.2 2013/08/12 14:45:44 pinkbyte Exp $
 
 inherit eutils flag-o-matic pax-utils toolchain-funcs
 
@@ -54,7 +54,8 @@ src_compile() {
 
 	./configure ${conf_opts} || die "econf failed"
 
-	emake || die "emake qemu failed"
+	# enable verbose build, bug #444346
+	emake V=1 || die "emake qemu failed"
 
 }
 

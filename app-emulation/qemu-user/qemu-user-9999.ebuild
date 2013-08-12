@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.7 2013/08/12 12:33:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.8 2013/08/12 14:45:44 pinkbyte Exp $
 
 EAPI=4
 
@@ -120,6 +120,11 @@ src_configure() {
 	conf_opts+=" --static"
 
 	./configure ${conf_opts} --target-list="${user_targets}" || die "econf failed"
+}
+
+src_compile() {
+	# enable verbose build, bug #444346
+	emake V=1
 }
 
 src_install() {

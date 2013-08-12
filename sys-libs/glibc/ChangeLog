@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.944 2013/06/29 03:22:33 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.945 2013/08/12 14:56:24 klausman Exp $
+
+  12 Aug 2013; Tobias Klausmann <klausman@gentoo.org> glibc-2.17.ebuild:
+  De-keyword glibc-2.17 on alpha due to bug 480740
 
   29 Jun 2013; Benda Xu <heroxbd@gentoo.org> files/eblits/common.eblit,
   files/eblits/pkg_preinst.eblit, files/eblits/pkg_setup.eblit,

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.175 2013/07/09 10:07:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.176 2013/08/12 14:56:24 klausman Exp $
+
+  12 Aug 2013; Tobias Klausmann <klausman@gentoo.org> package.mask:
+  Mask glibc-2.17 on alpha due to bug 480740
 
   09 Jul 2013; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Extend masking of USE=webkit to dev-qt/assistant and dev-qt/designer.
