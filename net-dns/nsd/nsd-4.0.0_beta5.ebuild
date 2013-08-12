@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta4-r1.ebuild,v 1.1 2013/04/03 19:10:39 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta5.ebuild,v 1.1 2013/08/12 11:23:45 wschlich Exp $
 
 EAPI=4
 
-inherit user
+inherit user eutils
 
 DESCRIPTION="An authoritative only, high performance, open source name server"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/nsd"
@@ -35,6 +35,11 @@ DEPEND="
 pkg_setup() {
 	enewgroup nsd
 	enewuser nsd -1 -1 -1 nsd
+}
+
+src_prepare() {
+	# Fix the paths in the munin plugin to match our install
+	epatch "${FILESDIR}"/nsd_munin_.patch
 }
 
 src_configure() {

@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/nsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/ChangeLog,v 1.6 2013/04/03 21:06:18 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/ChangeLog,v 1.7 2013/08/12 11:23:45 wschlich Exp $
+
+*nsd-3.2.16 (12 Aug 2013)
+*nsd-4.0.0_beta5 (12 Aug 2013)
+
+  12 Aug 2013; Wolfram Schlich <wschlich@gentoo.org> +files/nsd_munin_.patch,
+  +nsd-3.2.16.ebuild, +nsd-4.0.0_beta5.ebuild, -nsd-3.2.15-r1.ebuild,
+  -nsd-4.0.0_beta4-r1.ebuild:
+  version bump by tom@whyscream.net
 
 *nsd-3.2.15-r1 (03 Apr 2013)
 
