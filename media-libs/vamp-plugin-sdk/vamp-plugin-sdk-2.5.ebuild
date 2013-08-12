@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.5.ebuild,v 1.6 2013/06/26 12:19:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.5.ebuild,v 1.7 2013/08/12 16:19:04 aballier Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake
+	emake AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)"
 	if use doc; then
 		cd build
 		doxygen || die "creating doxygen doc failed"
