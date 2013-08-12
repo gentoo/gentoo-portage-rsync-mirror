@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.98 2013/02/22 18:38:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.99 2013/08/12 18:55:20 ssuominen Exp $
+
+*cdrkit-1.1.11-r2 (12 Aug 2013)
+
+  12 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +cdrkit-1.1.11-r2.ebuild:
+  Move from old Fedora patch for using external cdparanoia to new Fedora patch
+  for using external libcdio-paranoia.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> cdrkit-1.1.11-r1.ebuild:
   Add ~arm-linux and ~x86-linux keywords.

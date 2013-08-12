@@ -5,4 +5,7 @@
     <email>robbat2@gentoo.org</email>
     <name>Robin H. Johnson</name>
   </maintainer>
+  <use>
+    <flag name="ipmi">Support IPMI-based UPSes.</flag>
+  </use>
 </pkgmetadata>
