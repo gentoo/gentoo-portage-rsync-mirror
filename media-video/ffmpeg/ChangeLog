@@ -1,6 +1,22 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.672 2013/08/11 13:28:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.675 2013/08/12 00:11:31 aballier Exp $
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.7.ebuild,
+  -ffmpeg-1.2.1.ebuild, -ffmpeg-2.0.ebuild:
+  remove old
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-1.0.7.ebuild,
+  ffmpeg-1.2.1.ebuild, ffmpeg-1.2.2.ebuild, ffmpeg-2.0.ebuild,
+  ffmpeg-2.0.1.ebuild, ffmpeg-9999.ebuild:
+  Add missing openssl dep
+
+*ffmpeg-0.10.8 (11 Aug 2013)
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.10.8.ebuild:
+  Add a slotted 0.10 version for binary compatibility and multilib. This is
+  outdated and has known vulnerabilities but much less than the version bundled
+  with emul-libs.
 
 *ffmpeg-2.0.1 (11 Aug 2013)
 

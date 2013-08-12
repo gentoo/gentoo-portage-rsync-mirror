@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.7.ebuild,v 1.11 2013/06/13 12:35:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.8.ebuild,v 1.1 2013/08/12 00:03:06 aballier Exp $
 
-EAPI="4"
+EAPI="5"
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
@@ -10,7 +10,7 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	EGIT_REPO_URI="git://git.videolan.org/ffmpeg.git"
 fi
 
-inherit eutils flag-o-matic multilib toolchain-funcs ${SCM}
+inherit eutils flag-o-matic multilib toolchain-funcs ${SCM} multilib-minimal
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
 HOMEPAGE="http://ffmpeg.org/"
@@ -24,9 +24,9 @@ fi
 FFMPEG_REVISION="${PV#*_p}"
 
 LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
-SLOT="0"
+SLOT="0.10"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
 	aac aacplus alsa amr bindist +bzip2 cdio celt cpudetection debug
@@ -44,54 +44,51 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-FFTOOLS="aviocat cws2fws ffeval graph2dot ismindex pktdumper qt-faststart trasher"
-
-for i in ${FFTOOLS}; do
-	IUSE="${IUSE} +fftools_$i"
-done
-
 RDEPEND="
-	alsa? ( media-libs/alsa-lib )
-	amr? ( media-libs/opencore-amr )
-	bzip2? ( app-arch/bzip2 )
-	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
-	celt? ( >=media-libs/celt-0.11.1 )
-	dirac? ( media-video/dirac )
+	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
+	amr? ( media-libs/opencore-amr[${MULTILIB_USEDEP}] )
+	bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
+	cdio? ( dev-libs/libcdio-paranoia[${MULTILIB_USEDEP}] )
+	celt? ( >=media-libs/celt-0.11.1[${MULTILIB_USEDEP}] )
+	dirac? ( media-video/dirac[${MULTILIB_USEDEP}] )
 	encode? (
-		aac? ( media-libs/vo-aacenc )
-		aacplus? ( media-libs/libaacplus )
-		amr? ( media-libs/vo-amrwbenc )
-		faac? ( media-libs/faac )
-		mp3? ( >=media-sound/lame-3.98.3 )
-		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
-		vorbis? ( media-libs/libvorbis media-libs/libogg )
-		x264? ( >=media-libs/x264-0.0.20111017 )
-		xvid? ( >=media-libs/xvid-1.1.0 )
+		aac? ( media-libs/vo-aacenc[${MULTILIB_USEDEP}] )
+		aacplus? ( media-libs/libaacplus[${MULTILIB_USEDEP}] )
+		amr? ( media-libs/vo-amrwbenc[${MULTILIB_USEDEP}] )
+		faac? ( media-libs/faac[${MULTILIB_USEDEP}] )
+		mp3? ( >=media-sound/lame-3.98.3[${MULTILIB_USEDEP}] )
+		theora? ( >=media-libs/libtheora-1.1.1[encode,${MULTILIB_USEDEP}] media-libs/libogg[${MULTILIB_USEDEP}] )
+		vorbis? ( media-libs/libvorbis[${MULTILIB_USEDEP}] media-libs/libogg[${MULTILIB_USEDEP}] )
+		x264? ( >=media-libs/x264-0.0.20111017:=[${MULTILIB_USEDEP}] )
+		xvid? ( >=media-libs/xvid-1.1.0[${MULTILIB_USEDEP}] )
 	)
-	frei0r? ( media-plugins/frei0r-plugins )
-	gnutls? ( >=net-libs/gnutls-2.12.16 )
-	gsm? ( >=media-sound/gsm-1.0.12-r1 )
-	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
-	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0 )
-	libass? ( media-libs/libass )
-	libv4l? ( media-libs/libv4l )
-	modplug? ( media-libs/libmodplug )
-	openal? ( >=media-libs/openal-1.1 )
-	pulseaudio? ( media-sound/pulseaudio )
-	rtmp? ( >=media-video/rtmpdump-2.2f )
-	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
-	schroedinger? ( media-libs/schroedinger )
-	speex? ( >=media-libs/speex-1.2_beta3 )
-	truetype? ( media-libs/freetype:2 )
-	vaapi? ( >=x11-libs/libva-0.32 )
-	vdpau? ( x11-libs/libvdpau )
-	vpx? ( >=media-libs/libvpx-0.9.6 )
-	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes )
-	zlib? ( sys-libs/zlib )
-	!media-video/qt-faststart
-	!media-libs/libpostproc
-"
+	frei0r? ( media-plugins/frei0r-plugins[${MULTILIB_USEDEP}] )
+	gnutls? ( >=net-libs/gnutls-2.12.16[${MULTILIB_USEDEP}] )
+	gsm? ( >=media-sound/gsm-1.0.12-r1[${MULTILIB_USEDEP}] )
+	ieee1394? ( media-libs/libdc1394[${MULTILIB_USEDEP}] sys-libs/libraw1394[${MULTILIB_USEDEP}] )
+	jack? ( media-sound/jack-audio-connection-kit[${MULTILIB_USEDEP}] )
+	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0[${MULTILIB_USEDEP}] )
+	libass? ( media-libs/libass[${MULTILIB_USEDEP}] )
+	libv4l? ( media-libs/libv4l[${MULTILIB_USEDEP}] )
+	modplug? ( media-libs/libmodplug[${MULTILIB_USEDEP}] )
+	openal? ( >=media-libs/openal-1.1[${MULTILIB_USEDEP}] )
+	openssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
+	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
+	rtmp? ( >=media-video/rtmpdump-2.2f[${MULTILIB_USEDEP}] )
+	schroedinger? ( media-libs/schroedinger[${MULTILIB_USEDEP}] )
+	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video,${MULTILIB_USEDEP}] )
+	speex? ( >=media-libs/speex-1.2_beta3[${MULTILIB_USEDEP}] )
+	truetype? ( media-libs/freetype:2[${MULTILIB_USEDEP}] )
+	vaapi? ( >=x11-libs/libva-0.32[${MULTILIB_USEDEP}] )
+	vdpau? ( x11-libs/libvdpau[${MULTILIB_USEDEP}] )
+	vpx? ( >=media-libs/libvpx-0.9.6[${MULTILIB_USEDEP}] )
+	X? ( x11-libs/libX11[${MULTILIB_USEDEP}] x11-libs/libXext[${MULTILIB_USEDEP}] x11-libs/libXfixes[${MULTILIB_USEDEP}] )
+	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
+	!<media-video/ffmpeg-1.2
+	!<media-video/libav-9
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r11
+		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
+# !media-libs/libpostproc
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
@@ -110,10 +107,15 @@ DEPEND="${RDEPEND}
 # faac is license-incompatible with ffmpeg
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	libv4l? ( v4l )
-	fftools_cws2fws? ( zlib )
 	test? ( encode zlib )"
 
 S=${WORKDIR}/${P/_/-}
+
+pkg_setup() {
+	ewarn "This version is _terribly_ outdated with known security issues and"
+	ewarn "bugs. It is provided only for binary compatibility."
+	ewarn "Use at your own risks."
+}
 
 src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
@@ -130,7 +132,7 @@ src_prepare() {
 	fi
 }
 
-src_configure() {
+multilib_src_configure() {
 	local myconf="${EXTRA_FFMPEG_CONF}"
 	# Set to --enable-version3 if (L)GPL-3 is required
 	local version3=""
@@ -140,7 +142,6 @@ src_configure() {
 		use ${i} || myconf="${myconf} --disable-${i}"
 	done
 	use bzip2 || myconf="${myconf} --disable-bzlib"
-	use sdl || myconf="${myconf} --disable-ffplay"
 
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
 	use openssl && myconf="${myconf} --enable-openssl --enable-nonfree"
@@ -204,7 +205,7 @@ src_configure() {
 		myconf="${myconf} --enable-pic"
 		# disable asm code if PIC is required
 		# as the provided asm decidedly is not PIC for x86.
-		use x86 && myconf="${myconf} --disable-asm"
+		[[ ${ABI} == x86* ]] && myconf="${myconf} --disable-asm"
 	fi
 	[[ ${ABI} == "x32" ]] && myconf+=" --disable-asm" #427004
 
@@ -223,7 +224,6 @@ src_configure() {
 	myconf="
 		--enable-gpl
 		${version3}
-		--enable-postproc
 		--enable-avfilter
 		--disable-stripping
 		${myconf}"
@@ -247,8 +247,7 @@ src_configure() {
 	# Misc stuff
 	use hardcoded-tables && myconf="${myconf} --enable-hardcoded-tables"
 
-	cd "${S}"
-	./configure \
+	"${S}"/configure \
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		--shlibdir="${EPREFIX}/usr/$(get_libdir)" \
@@ -260,34 +259,13 @@ src_configure() {
 		--optflags="${CFLAGS}" \
 		--extra-cflags="${CFLAGS}" \
 		--extra-cxxflags="${CXXFLAGS}" \
-		$(use_enable static-libs static) \
+		--disable-static \
+		--disable-{ffplay,ffmpeg,ffprobe,ffserver} \
+		--disable-{swresample,postproc,swscale,avdevice} \
 		${myconf} || die
 }
 
-src_compile() {
-	emake
-
-	for i in ${FFTOOLS} ; do
-		if use fftools_$i ; then
-			emake tools/$i
-		fi
-	done
-}
-
-src_install() {
-	emake DESTDIR="${D}" install install-man
-
-	dodoc Changelog README INSTALL
-	dodoc -r doc/*
-
-	for i in ${FFTOOLS} ; do
-		if use fftools_$i ; then
-			dobin tools/$i
-		fi
-	done
-}
-
-src_test() {
-	LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libswresample:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
-		emake fate
+multilib_src_install() {
+	emake DESTDIR="${D}" install-libs
+	rm -f "${ED}"/usr/$(get_libdir)/*.so
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20130224-r11.ebuild,v 1.1 2013/08/10 22:09:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20130224-r12.ebuild,v 1.1 2013/08/12 00:03:04 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -46,6 +46,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=dev-libs/fribidi-0.19.5-r2[abi_x86_32(-)]
 		>=dev-libs/libcdio-0.90-r1[abi_x86_32(-)]
 		>=dev-libs/libcdio-paranoia-0.90_p1-r1[abi_x86_32(-)]
+		>=media-video/ffmpeg-0.10.8:0.10[abi_x86_32(-)]
 	)
 	"
 PDEPEND="~app-emulation/emul-linux-x86-soundlibs-${PV}"

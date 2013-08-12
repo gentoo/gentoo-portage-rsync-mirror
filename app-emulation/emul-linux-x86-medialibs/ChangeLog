@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.79 2013/08/10 22:09:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.80 2013/08/12 00:03:04 aballier Exp $
+
+*emul-linux-x86-medialibs-20130224-r12 (11 Aug 2013)
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-medialibs-20130224-r11.ebuild,
+  +emul-linux-x86-medialibs-20130224-r12.ebuild, files/remove-native:
+  New revision with ffmpeg:0.10 migrated for libavutil,avcodec,avformat and
+  avfilter. This version is outdated and has known vulnerabilities but much
+  less than the one shipped here. Remove the .pc/.so anyway since those
+  versions cannot be used properly with our current headers from the ebuilds.
 
 *emul-linux-x86-medialibs-20130224-r11 (10 Aug 2013)
 

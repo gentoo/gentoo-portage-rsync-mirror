@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.1 2013/03/02 15:25:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-mobility/qt-mobility-1.2.2_p20130703.ebuild,v 1.1 2013/08/12 00:02:16 pesa Exp $
 
 EAPI=4
 
 inherit multilib qt4-r2 toolchain-funcs
 
 DESCRIPTION="Additional Qt APIs for mobile devices and desktop platforms"
-HOMEPAGE="http://qt.nokia.com/products/qt-addons/mobility"
-SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${P}.tar.gz"
+HOMEPAGE="http://qt-project.org/wiki/Category:Developing_with_Qt::QtMobility"
+SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${P}.tar.xz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -111,12 +111,6 @@ src_configure() {
 		use ${mod} && modules+="${mod} "
 	done
 
-	if use messaging; then
-		# tell qmake where QMF is installed
-		export QMF_INCLUDEDIR=$($(tc-getPKG_CONFIG) --variable includedir qmfclient)
-		export QMF_LIBDIR=$($(tc-getPKG_CONFIG) --variable libdir qmfclient)
-	fi
-
 	# custom configure script
 	local myconf=(
 		./configure
@@ -136,10 +130,12 @@ src_configure() {
 	if ! use bluetooth; then
 		sed -i -e '/^bluez_enabled =/s:yes:no:' config.pri || die
 	fi
+
 	# fix automagic dependency on networkmanager
 	if ! use networkmanager; then
 		sed -i -e '/^networkmanager_enabled =/s:yes:no:' config.pri || die
 	fi
+
 	# fix automagic dependency on pulseaudio
 	if ! use pulseaudio; then
 		sed -i -e '/^pulseaudio_enabled =/s:yes:no:' config.pri || die
