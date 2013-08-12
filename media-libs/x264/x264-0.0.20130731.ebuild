@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130731.ebuild,v 1.1 2013/08/01 17:41:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130731.ebuild,v 1.2 2013/08/12 15:27:04 aballier Exp $
 
 EAPI=5
 
@@ -64,7 +64,7 @@ multilib_src_configure() {
 		--host="${CHOST}" \
 		$(usex 10bit "--bit-depth=10" "") \
 		$(usex interlaced "" "--disable-interlaced") \
-		$(usex static-libs "" "--enable-static") \
+		$(usex static-libs "--enable-static" "") \
 		$(usex threads "" "--disable-thread") \
 		${asm_conf} || die
 }

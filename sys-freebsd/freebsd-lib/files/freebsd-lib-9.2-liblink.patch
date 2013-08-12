@@ -53,3 +53,15 @@ diff -uNr lib.old/libprocstat/Makefile lib/libprocstat/Makefile
  CFLAGS+=	-I. -I${.CURDIR} -D_KVM_VNODE
  SHLIB_MAJOR=	1
  
+diff --git a/lib/libcam/Makefile b/lib/libcam/Makefile
+index fcb16de..6d0312b 100644
+--- a/lib/libcam/Makefile
++++ b/lib/libcam/Makefile
+@@ -8,6 +8,7 @@ INCS=		camlib.h
+ 
+ DPADD=		${LIBSBUF}
+ LDADD=		-lsbuf
++LDFLAGS+=	-L${.OBJDIR}/../libsbuf
+ 
+ MAN=		cam.3 cam_cdbparse.3
+ 

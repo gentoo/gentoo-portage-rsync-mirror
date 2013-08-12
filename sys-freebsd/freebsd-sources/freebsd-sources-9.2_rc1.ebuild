@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.5 2013/08/11 21:23:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.6 2013/08/12 15:05:44 aballier Exp $
 
 EAPI=5
 
@@ -16,9 +16,11 @@ if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://gentoo/${SYS}.tar.bz2"
 fi
 
-RDEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*
+RDEPEND="=sys-freebsd/freebsd-cddl-${RV}*
+	=sys-freebsd/freebsd-mk-defs-${RV}*
 	!sys-freebsd/virtio-kmod"
 DEPEND="build-generic? (
+		=sys-freebsd/freebsd-cddl-${RV}*
 		=sys-freebsd/freebsd-usbin-${RV}*
 		=sys-freebsd/freebsd-mk-defs-${RV}*
 	)"

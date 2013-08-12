@@ -1,6 +1,17 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.108 2013/06/14 02:31:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.109 2013/08/12 15:11:30 grozin Exp $
+
+*clisp-2.49-r8 (12 Aug 2013)
+
+  12 Aug 2013; Andrey Grozin <grozin@gentoo.org> -clisp-2.49-r7.ebuild,
+  +clisp-2.49-r8.ebuild, -files/2.38/README.Gentoo, -files/2.38/clisp.sh,
+  -files/2.38/fastcgi-Makefile-gentoo.patch, -files/2.38/install-clc.lisp,
+  -files/2.39/README.Gentoo, -files/2.39/clisp.sh,
+  -files/2.39/fastcgi-Makefile-gentoo.patch, -files/2.39/install-clc.lisp,
+  -files/2.41-fastcgi-Makefile-gentoo.patch, -files/2.41-fastcgi-build.patch,
+  -files/2.41-linux-headers.patch:
+  Fixed doc installation (bug #479526), added subslot, old files cleaned
 
   14 Jun 2013; Patrick Lauer <patrick@gentoo.org> clisp-2.49-r7.ebuild:
   Removing alpha and ia64 keywords until dependency dev-lisp/asdf catches up
