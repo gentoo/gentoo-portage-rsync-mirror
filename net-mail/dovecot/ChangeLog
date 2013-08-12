@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.439 2013/07/04 10:17:33 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.440 2013/08/12 07:42:23 eras Exp $
+
+*dovecot-2.2.5 (12 Aug 2013)
+
+  12 Aug 2013; Eray Aslan <eras@gentoo.org> +dovecot-2.2.5.ebuild:
+  Version bump
 
 *dovecot-2.2.4-r2 (04 Jul 2013)
 

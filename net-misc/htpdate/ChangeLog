@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.44 2013/08/05 07:31:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.46 2013/08/12 07:50:18 pinkbyte Exp $
+
+  12 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> htpdate-1.0.5.ebuild:
+  Add ~amd64-linux and ~x86-linux keywords
+
+*htpdate-1.0.5 (12 Aug 2013)
+
+  12 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> +htpdate-1.0.5.ebuild,
+  +files/htpdate.init-r1:
+  Version bump, wrt bug #479790. Thanks to Pavel Kazakov for ebuild and Lars
+  Wendler for updated init script
 
   05 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Package will be maintained by Pavel Kazakov <nullishzero AT gmail.com>
