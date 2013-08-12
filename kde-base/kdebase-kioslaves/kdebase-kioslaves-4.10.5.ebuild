@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.10.5.ebuild,v 1.5 2013/08/02 14:30:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.10.5.ebuild,v 1.6 2013/08/12 13:08:25 kensington Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ IUSE="+bzip2 exif debug lzma openexr samba +sftp"
 RESTRICT="test"
 
 DEPEND="
+	virtual/jpeg:0
 	!aqua? ( x11-libs/libXcursor )
 	bzip2? ( app-arch/bzip2 )
 	exif? ( media-gfx/exiv2 )
