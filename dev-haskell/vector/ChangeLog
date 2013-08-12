@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/vector
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.12 2013/08/11 08:46:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.13 2013/08/12 07:21:11 pinkbyte Exp $
+
+  12 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Correct metadata, wrt bug #480568. Thanks to Tom Wijsman for discovering this
+  issue
 
   11 Aug 2013; Agostino Sarubbo <ago@gentoo.org> vector-0.10.0.1.ebuild:
   Stable for amd64, wrt bug #480568
