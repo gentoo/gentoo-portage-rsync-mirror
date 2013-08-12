@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.97 2013/08/12 15:27:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.98 2013/08/12 15:54:33 aballier Exp $
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> x264-0.0.20130731.ebuild,
+  x264-9999.ebuild, metadata.xml:
+  Add opencl useflag and disable it on snapshot
 
   12 Aug 2013; Alexis Ballier <aballier@gentoo.org> x264-0.0.20130731.ebuild,
   x264-9999.ebuild:

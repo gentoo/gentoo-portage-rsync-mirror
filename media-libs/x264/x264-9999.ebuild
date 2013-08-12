@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.15 2013/08/12 15:27:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.16 2013/08/12 15:54:33 aballier Exp $
 
 EAPI=5
 
@@ -23,12 +23,14 @@ SONAME="135"
 SLOT="0/${SONAME}"
 
 LICENSE="GPL-2"
-IUSE="10bit +interlaced pic static-libs sse +threads"
+IUSE="10bit +interlaced opencl pic static-libs sse +threads"
 
 ASM_DEP=">=dev-lang/yasm-1.2.0"
 DEPEND="abi_x86_32? ( ${ASM_DEP} )
-	abi_x86_64? ( ${ASM_DEP} )"
-RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r7
+	abi_x86_64? ( ${ASM_DEP} )
+	opencl? ( dev-lang/perl )"
+RDEPEND="opencl? ( virtual/opencl )
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r7
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 
 DOCS="AUTHORS doc/*.txt"
@@ -64,6 +66,7 @@ multilib_src_configure() {
 		--host="${CHOST}" \
 		$(usex 10bit "--bit-depth=10" "") \
 		$(usex interlaced "" "--disable-interlaced") \
+		$(usex opencl "" "--disable-opencl") \
 		$(usex static-libs "--enable-static" "") \
 		$(usex threads "" "--disable-thread") \
 		${asm_conf} || die

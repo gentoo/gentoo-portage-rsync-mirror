@@ -1,0 +1,56 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.2-r1.ebuild,v 1.1 2013/08/12 15:38:30 aballier Exp $
+
+EAPI=5
+inherit autotools eutils multilib-minimal
+
+DESCRIPTION="Open Source video codec"
+HOMEPAGE="http://dirac.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+LICENSE="MPL-1.1"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+IUSE="debug doc mmx static-libs"
+
+RDEPEND=""
+DEPEND="
+	doc? (
+		app-doc/doxygen
+		virtual/latex-base
+		media-gfx/graphviz
+		app-text/dvipdfm
+	)"
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.5.2-doc.patch
+	AT_M4DIR="m4" eautoreconf
+	export VARTEXFONTS="${T}/fonts"
+}
+
+multilib_src_configure() {
+	ECONF_SOURCE="${S}" econf \
+		$(use_enable static-libs static) \
+		$(use_enable mmx) \
+		$(use_enable debug) \
+		$(multilib_is_native_abi && echo $(use_enable doc))
+	if ! multilib_is_native_abi ; then
+		sed -i -e 's/ encoder decoder util//' Makefile || die
+	fi
+}
+
+multilib_src_install() {
+	emake \
+		DESTDIR="${D}" \
+		htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
+		latexdir="${EPREFIX}/usr/share/doc/${PF}/programmers" \
+		algodir="${EPREFIX}/usr/share/doc/${PF}/algorithm" \
+		faqdir="${EPREFIX}/usr/share/doc/${PF}" \
+		install
+}
+
+multilib_src_install_all() {
+	find "${ED}"usr -name '*.la' -exec rm -f {} +
+}
