@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.20.ebuild,v 1.1 2013/08/10 03:09:45 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.20-r1.ebuild,v 1.1 2013/08/12 17:25:32 axs Exp $
 
 EAPI="4"
 
@@ -75,7 +75,7 @@ EOF
 	fperms 0755 /usr/bin/seamonkey-bin
 
 	# Install icon and .desktop for menu entry
-	newicon "${D}${MOZILLA_FIVE_HOME}"/chrome/icons/default/default48.png ${PN}-icon.png
+	newicon "${D}${MOZILLA_FIVE_HOME}"/chrome/icons/default/default48.png ${PN}.png
 	domenu "${FILESDIR}/icon/${PN}.desktop"
 
 	if use startup-notification; then

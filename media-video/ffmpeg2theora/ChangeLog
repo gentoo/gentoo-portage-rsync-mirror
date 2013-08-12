@@ -1,6 +1,16 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.62 2013/08/12 16:32:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.63 2013/08/12 17:07:25 aballier Exp $
+
+*ffmpeg2theora-0.29-r1 (12 Aug 2013)
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +ffmpeg2theora-0.29-r1.ebuild, +files/ffmpeg2theora-0.29-ffmpeg2.patch,
+  +files/ffmpeg2theora-0.29-swr.patch:
+  Use upstream patch for swr, backport upstream fix for ffmpeg2 compat, bug
+  #476532, move myesconsargs setup to src_configure, drop debug useflag that
+  only adds debug cflags. Use correct order in the ffmpeg/libav dep since
+  upstream uses ffmpeg.
 
   12 Aug 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg2theora-0.28.ebuild,
   -ffmpeg2theora-0.28-r1.ebuild, -files/ffmpeg2theora-0.28-ffmpeg-0.10.patch:

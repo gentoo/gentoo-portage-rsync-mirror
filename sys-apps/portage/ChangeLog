@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1340 2013/08/08 18:50:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1341 2013/08/12 17:21:23 zmedico Exp $
+
+  12 Aug 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.13.7.ebuild,
+  portage-2.2.0_alpha196.ebuild:
+  Use find -mindepth 1 for userpriv DISTDIR update.
 
 *portage-2.2.0_alpha196 (08 Aug 2013)
 
