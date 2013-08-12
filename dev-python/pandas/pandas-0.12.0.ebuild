@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.1 2013/08/08 18:08:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.2 2013/08/12 18:22:55 bicatali Exp $
 
 EAPI=5
 
@@ -103,7 +103,7 @@ python_install_all() {
 		# example python modules not to be compressed
 		docompress -x /usr/share/doc/${PF}/examples
 		insinto /usr/share/doc/${PF}
-		doins -r examples
+		doins -r "${S}"/examples
 	fi
 	distutils-r1_python_install_all
 }

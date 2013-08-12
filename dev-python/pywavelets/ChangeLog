@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pywavelets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/ChangeLog,v 1.12 2013/01/16 19:55:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/ChangeLog,v 1.13 2013/08/12 18:31:13 bicatali Exp $
+
+*pywavelets-0.2.2-r1 (12 Aug 2013)
+
+  12 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +pywavelets-0.2.2-r1.ebuild, -pywavelets-0.2.0.ebuild,
+  -pywavelets-0.2.2.ebuild, metadata.xml:
+  Move to distutils-r1
 
   16 Jan 2013; Justin Lecher <jlec@gentoo.org> pywavelets-0.2.2.ebuild,
   metadata.xml:

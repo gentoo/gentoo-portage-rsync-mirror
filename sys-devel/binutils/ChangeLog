@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.491 2013/08/06 13:10:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.492 2013/08/12 18:02:34 vapier Exp $
+
+  12 Aug 2013; Mike Frysinger <vapier@gentoo.org> binutils-2.23.2.ebuild:
+  Unmask again since we know better what is failing (the packages themselves)
+  #464152.
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> binutils-2.23.1.ebuild:
   Stable for s390, wrt bug #475570
