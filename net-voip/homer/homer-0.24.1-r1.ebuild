@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-9999.ebuild,v 1.7 2013/08/12 19:45:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.24.1-r1.ebuild,v 1.1 2013/08/12 19:45:35 hwoarang Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="pulseaudio"
+IUSE=""
 
 DEPEND=">=dev-libs/openssl-1.0
 	media-libs/alsa-lib
@@ -32,25 +32,19 @@ DEPEND=">=dev-libs/openssl-1.0
 	media-libs/sdl-mixer
 	media-libs/sdl-sound
 	media-libs/x264:*
-	media-video/ffmpeg:0[X]
 	net-libs/sofia-sip
+	virtual/ffmpeg:0[X]
+	|| ( <media-video/ffmpeg-2 media-video/libav )
 	dev-qt/qtcore:4
-	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
 	dev-qt/qtmultimedia:4
-	dev-qt/qtwebkit:4
-	pulseaudio? ( media-sound/pulseaudio )"
-
+	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
-	if use pulseaudio; then
-		sed -i \
-			-e "/^set(FEATURE_PULSEAUDIO/s:OFF:ON:" \
-			HomerBuild/config/HomerFeatures.txt || die "sed failed"
-	fi
+	epatch "${FILESDIR}/${P}-libav-9.patch"
 }
 
 src_compile() {

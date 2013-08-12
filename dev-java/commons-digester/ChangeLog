@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/commons-digester
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.62 2010/11/05 18:39:24 halcy0n Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.63 2013/08/12 19:45:23 tomwij Exp $
+
+*commons-digester-3.2 (12 Aug 2013)
+*commons-digester-2.1 (12 Aug 2013)
+
+  12 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +commons-digester-2.1.ebuild,
+  +commons-digester-3.2.ebuild, +files/commons-digester-2.1-build.xml:
+  Version bumps to 2.1 and 3.2, both slotted as they are API incompatible; fixes
+  bug #310357 reported by Petteri Räty (Betelgeuse) and Ivan Baidakou (dmol),
+  tests still need to be fixed as per bug #480758.
 
   05 Nov 2010; Mark Loeser <halcy0n@gentoo.org>
   commons-digester-1.8.1-r1.ebuild:

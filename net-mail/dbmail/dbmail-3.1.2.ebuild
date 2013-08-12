@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.0.2.ebuild,v 1.4 2013/08/12 19:48:52 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.1.2.ebuild,v 1.1 2013/08/12 19:48:52 lordvan Exp $
 
 EAPI="4"
-inherit eutils multilib python versionator
+inherit eutils multilib versionator
 
 DESCRIPTION="DBMail is an open-source project that enables storage of mail messages in a relational database."
 HOMEPAGE="http://www.dbmail.org/"
@@ -11,13 +11,12 @@ SRC_URI="http://www.dbmail.org/download/$(get_version_component_range 1-2)/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="ldap sieve +sqlite ssl static python"
+KEYWORDS="~amd64 ~x86"
+IUSE="ldap sieve +sqlite ssl static"
 
 DEPEND="dev-db/libzdb
 	sieve? ( >=mail-filter/libsieve-2.2.1 )
 	ldap? ( >=net-nds/openldap-2.3.33 )
-	python? ( net-zope/zope-interface )
 	app-text/asciidoc
 	app-text/xmlto
 	app-crypt/mhash
@@ -30,7 +29,6 @@ DEPEND="dev-db/libzdb
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	python_pkg_setup
 	enewgroup dbmail
 	enewuser dbmail -1 -1 /var/lib/dbmail dbmail
 }
@@ -55,20 +53,6 @@ src_install() {
 
 	dodoc AUTHORS BUGS ChangeLog README* INSTALL NEWS THANKS UPGRADING
 
-#	docinto sql/mysql
-#	dodoc sql/mysql/*
-#	docinto sql/postgresql
-#	dodoc sql/postgresql/*
-#	docinto sql/sqlite
-#	dodoc sql/sqlite/*
-#	docinto test-scripts
-#	dodoc test-scripts/*
-#	docinto contrib/sql2sql
-#	dodoc contrib/sql2sql/*
-#	docinto contrib/mailbox2dbmail
-#	dodoc contrib/mailbox2dbmail/README
-#	docinto contrib
-#	dodoc contrib/dbmailclient.php
 	dodoc -r sql
 	dodoc -r test-scripts
 	dodoc -r contrib
@@ -99,19 +83,6 @@ src_install() {
 	   doins "${S}/dbmail.schema"
 	fi
 
-	if use python; then
-	   insinto $(python_get_sitedir)/dbmail
-	   doins python/*.py
-	   insinto $(python_get_sitedir)/dbmail/app
-	   doins python/app/*.py
-	   insinto $(python_get_sitedir)/dbmail/bin
-	   doins python/bin/*.py
-	   insinto $(python_get_sitedir)/dbmail/lib
-	   doins python/lib/*.py
-	   insinto $(python_get_sitedir)/dbmail/tests
-	   doins python/tests/*.py
-	fi
-
 	keepdir /var/lib/dbmail
 	fperms 750 /var/lib/dbmail
 	fowners dbmail:dbmail /var/lib/dbmail
@@ -120,9 +91,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use python; then
-	   python_mod_optimize dbmail
-	fi
 	elog "Please read the INSTALL file in /usr/share/doc/${PF}/"
 	elog "for remaining instructions on setting up dbmail users and "
 	elog "for finishing configuration to connect to your MTA and "
@@ -152,8 +120,10 @@ pkg_postinst() {
 	elog "Changed pid directory to /var/run/dbmail (see"
 	elog "http://www.dbmail.org/mantis/view.php?id=949 for details)"
 	echo
-}
-
-pkg_postrm() {
-	     python_mod_cleanup dbmail
+	ewarn "The database config has changed to support libzdb db URI"
+	ewarn "Please check the documentation (or Bug #479664)"
+	echo
+	ewarn "The database schema has changed since 3.0.x make sure"
+	ewarn "to run the migration script"
+	echo
 }

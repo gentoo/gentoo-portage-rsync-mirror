@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-9999.ebuild,v 1.7 2013/08/12 19:45:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.25-r1.ebuild,v 1.1 2013/08/12 19:45:35 hwoarang Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://github.com/${MY_PN}/${MY_PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/V${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
+	SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/V${PV}.tar.gz -> ${PN}-${PV}.tar.gz
+	http://dev.gentoo.org/distfiles/${P}-ffmpeg2.patch"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -46,6 +47,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
+	epatch "${DISTDIR}/${P}-ffmpeg2.patch"
+
 	if use pulseaudio; then
 		sed -i \
 			-e "/^set(FEATURE_PULSEAUDIO/s:OFF:ON:" \

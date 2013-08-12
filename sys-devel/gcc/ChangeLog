@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.952 2013/06/04 05:25:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.954 2013/08/12 19:41:03 dirtyepic Exp $
+
+  12 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.7.3.ebuild:
+  4.7.3 p1.1: Fixes bug #463796 (parallel build failure), bug #467418 (missing
+  plugin headers on arm targets), and bug #475350 (implement --disable-werror
+  for libitm).
 
 *gcc-4.8.1 (04 Jun 2013)
 

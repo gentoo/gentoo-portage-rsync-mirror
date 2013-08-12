@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/homer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.9 2013/08/11 22:59:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.10 2013/08/12 19:45:35 hwoarang Exp $
+
+*homer-0.24.1-r1 (12 Aug 2013)
+*homer-0.25-r1 (12 Aug 2013)
+
+  12 Aug 2013; Markos Chandras <hwoarang@gentoo.org> +homer-0.24.1-r1.ebuild,
+  +homer-0.25-r1.ebuild, homer-9999.ebuild:
+  Add patch for ffmpeg2 support. Bug #476536. Also use subslots for x264 dep.
+  Bug #476076. Thanks to Marcel Pennewiß <gentoo@pennewiss.de> for the patches
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org> homer-0.24.1.ebuild,
   homer-0.25.ebuild, homer-9999.ebuild:
