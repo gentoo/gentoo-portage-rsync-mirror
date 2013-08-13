@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.142 2013/02/22 19:05:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.143 2013/08/13 09:02:45 voyageur Exp $
+
+*rdesktop-1.8.0 (13 Aug 2013)
+
+  13 Aug 2013; Bernard Cafarelli <voyageur@gentoo.org> +rdesktop-1.8.0.ebuild,
+  metadata.xml:
+  Version bump, includes features regarding authentication and security
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> rdesktop-1.7.1.ebuild:
   Add ~arm-linux keyword.
