@@ -11,11 +11,6 @@
     <name>Aaron Bauman</name>
     <description>Proxy maintainer. Please CC bugs to him.</description>
   </maintainer>
-  <maintainer>
-    <email>TomWij@gentoo.org</email>
-    <name>Tom Wijsman</name>
-    <description>Committer. Please CC bugs to him.</description>
-  </maintainer>
   <herd>proxy-maintainers</herd>
   <longdescription lang="en">
     An open source dive log program.
