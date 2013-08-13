@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7-r1.ebuild,v 1.1 2013/08/10 23:13:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7-r1.ebuild,v 1.2 2013/08/13 11:41:49 ssuominen Exp $
 
 EAPI=5
 
@@ -27,6 +27,8 @@ RDEPEND="jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 DEPEND="${RDEPEND}"
+
+DOCS=""
 
 src_prepare() {
 	epatch \

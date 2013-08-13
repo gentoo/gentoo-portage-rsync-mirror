@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.238 2013/08/10 23:13:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.239 2013/08/13 11:41:49 ssuominen Exp $
+
+  13 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> tiff-3.9.7-r1.ebuild:
+  Set empty DOCS to avoid any useless documentation from being installed as this
+  is binary-only SLOT.
 
 *tiff-3.9.7-r1 (10 Aug 2013)
 
