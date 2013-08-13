@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.8.ebuild,v 1.1 2013/08/12 00:03:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.8.ebuild,v 1.2 2013/08/13 12:32:04 aballier Exp $
 
 EAPI="5"
 
@@ -43,6 +43,8 @@ CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ss
 for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
+
+DOCS=""
 
 RDEPEND="
 	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
