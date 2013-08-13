@@ -1,18 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.8 2012/09/09 22:15:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r1.ebuild,v 1.1 2013/08/13 05:52:57 radhermit Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2:2.6"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.*"
-PYTHON_MODNAME="caca"
-DISTUTILS_SETUP_FILES=("python|setup.py")
-
-inherit autotools flag-o-matic mono multilib java-pkg-opt-2 distutils
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
+inherit autotools eutils flag-o-matic mono multilib java-pkg-opt-2 python-single-r1
 
 MY_P=${P/_/.}
-
 DESCRIPTION="A library that creates colored ASCII-art graphics"
 HOMEPAGE="http://libcaca.zoy.org/"
 SRC_URI="http://libcaca.zoy.org/files/${PN}/${MY_P}.tar.gz"
@@ -20,7 +14,8 @@ SRC_URI="http://libcaca.zoy.org/files/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2 ISC LGPL-2.1 WTFPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="cxx doc imlib java mono ncurses opengl python ruby slang static-libs truetype X"
+IUSE="cxx doc imlib java mono ncurses opengl python ruby slang static-libs test truetype X"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 COMMON_DEPEND="imlib? ( media-libs/imlib2 )
 	mono? ( dev-lang/mono )
@@ -31,6 +26,7 @@ COMMON_DEPEND="imlib? ( media-libs/imlib2 )
 		media-libs/freeglut
 		truetype? ( >=media-libs/ftgl-2.1.3_rc5 )
 	)
+	python? ( ${PYTHON_DEPS} )
 	ruby? ( =dev-lang/ruby-1.8* )
 	slang? ( >=sys-libs/slang-2 )
 	X? ( x11-libs/libX11 x11-libs/libXt )"
@@ -45,16 +41,15 @@ DEPEND="${COMMON_DEPEND}
 		dev-texlive/texlive-latexextra
 		dev-tex/xcolor
 	)
-	java? ( >=virtual/jdk-1.5 )"
+	java? ( >=virtual/jdk-1.5 )
+	test? ( dev-util/cppunit )"
 
 S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS ChangeLog NEWS NOTES README THANKS )
 
 pkg_setup() {
-	if use python; then
-		python_pkg_setup
-	fi
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -62,6 +57,7 @@ src_prepare() {
 
 	sed -i \
 		-e 's:-g -O2 -fno-strength-reduce -fomit-frame-pointer::' \
+		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
 		configure.ac || die
 
 	sed -i \
@@ -91,9 +87,7 @@ src_configure() {
 	use mono && export CSC="$(type -P gmcs)" #329651
 	export VARTEXFONTS="${T}/fonts" #44128
 
-	# python bindings are built via distutils
 	econf \
-		--disable-python \
 		$(use_enable static-libs static) \
 		$(use_enable slang) \
 		$(use_enable ncurses) \
@@ -102,42 +96,25 @@ src_configure() {
 		$(use_enable mono csharp) \
 		$(use_enable java) \
 		$(use_enable cxx) \
+		$(use_enable python) \
 		$(use_enable ruby) \
 		$(use_enable imlib imlib2) \
-		$(use_enable doc)
+		$(use_enable doc) \
+		$(use_enable test cppunit)
 }
 
-src_compile() {
-	default
-
-	if use python; then
-		distutils_src_compile
-	fi
+src_test() {
+	emake -j1 check
 }
 
 src_install() {
 	default
-
-	if use python; then
-		distutils_src_install
-	fi
 
 	if use java; then
 		java-pkg_newjar java/libjava.jar
 	fi
 
 	rm -rf "${D}"/usr/share/java
-	find "${D}" -name '*.la' -exec rm -f {} +
-}
 
-pkg_postinst() {
-	if use python; then
-		distutils_pkg_postinst
-	fi
-}
-
-pkg_postrm() {
-	if use python; then
-		distutils_pkg_postrm
-	fi
+	prune_libtool_files --modules
 }
