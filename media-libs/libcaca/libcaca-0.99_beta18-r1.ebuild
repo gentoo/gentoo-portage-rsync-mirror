@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r1.ebuild,v 1.1 2013/08/13 05:52:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r1.ebuild,v 1.2 2013/08/13 10:15:26 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -101,6 +101,12 @@ src_configure() {
 		$(use_enable imlib imlib2) \
 		$(use_enable doc) \
 		$(use_enable test cppunit)
+}
+
+src_compile() {
+	local _java_makeopts
+	use java && _java_makeopts="-j1" #480864
+	emake ${_java_makeopts}
 }
 
 src_test() {

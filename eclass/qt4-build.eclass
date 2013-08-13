@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.148 2013/07/27 23:47:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.150 2013/08/13 10:17:54 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -101,6 +101,8 @@ qt4-build_src_unpack() {
 
 	if ! version_is_at_least 4.1 $(gcc-version); then
 		ewarn "Using a GCC version lower than 4.1 is not supported."
+	elif use_if_iuse c++0x && ! version_is_at_least 4.4 $(gcc-version); then
+		ewarn "USE=c++0x requires GCC 4.4 or later."
 	fi
 
 	if [[ ${CATEGORY}/${PN} == dev-qt/qtwebkit ]]; then
@@ -179,35 +181,25 @@ qt4-build_src_prepare() {
 		symlink_binaries_to_buildtree
 	fi
 
-	if [[ ${CHOST} == *86*-apple-darwin* ]]; then
-		# qmake bus errors with -O2 or -O3 but -O1 works
-		# Bug 373061
-		replace-flags -O[23] -O1
-	fi
-
-	# Bug 178652
-	if [[ $(gcc-major-version) == 3 ]] && use amd64; then
-		ewarn "Appending -fno-gcse to CFLAGS/CXXFLAGS"
-		append-flags -fno-gcse
-	fi
-
 	if use_if_iuse c++0x; then
 		append-cxxflags -std=c++0x
 	fi
 
-	# Unsupported old gcc versions - hardened needs this :(
-	if [[ $(gcc-major-version) -lt 4 ]]; then
-		ewarn "Appending -fno-stack-protector to CXXFLAGS"
-		append-cxxflags -fno-stack-protector
-		# Bug 253127
-		sed -e "/^QMAKE_CFLAGS\t/ s:$: -fno-stack-protector-all:" \
-			-i mkspecs/common/g++.conf || die
-	fi
-
 	# Bug 261632
 	if use ppc64; then
-		ewarn "Appending -mminimal-toc to CFLAGS/CXXFLAGS"
 		append-flags -mminimal-toc
+	fi
+
+	# Bug 373061
+	# qmake bus errors with -O2 or -O3 but -O1 works
+	if [[ ${CHOST} == *86*-apple-darwin* ]]; then
+		replace-flags -O[23] -O1
+	fi
+
+	# Bug 417105
+	# graphite on gcc 4.7 causes miscompilations
+	if [[ $(gcc-version) == "4.7" ]]; then
+		filter-flags -fgraphite-identity
 	fi
 
 	# Respect CC, CXX, {C,CXX,LD}FLAGS in .qmake.cache
