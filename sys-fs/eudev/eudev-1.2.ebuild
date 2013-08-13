@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2.ebuild,v 1.3 2013/08/08 15:19:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2.ebuild,v 1.4 2013/08/13 17:05:39 axs Exp $
 
 EAPI="5"
 
@@ -207,6 +207,14 @@ pkg_postinst()
 
 	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
+
+                # http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		# reload database after it has be rebuilt, but only if we are not upgrading
+		# also pass if we are -9999 since who knows what hwdb related changes there might be
+		if [[ ${REPLACING_VERSIONS%-r*} == ${PV} || -z ${REPLACING_VERSIONS} ]] && \
+		[[ ${ROOT%/} == "" ]] && [[ ${PV} != "9999" ]]; then
+			udevadm control --reload
+                fi
 	fi
 
 	ewarn

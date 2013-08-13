@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.37 2013/08/08 19:47:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.38 2013/08/13 17:05:39 axs Exp $
 
 EAPI="5"
 
@@ -60,7 +60,6 @@ PDEPEND=">=virtual/udev-180
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
-DOCS=""
 
 pkg_pretend()
 {
@@ -244,7 +243,17 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
+	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+
+		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		# reload database after it has be rebuilt, but only if we are not upgrading
+		# also pass if we are -9999 since who knows what hwdb related changes there might be
+		if [[ ${REPLACING_VERSIONS%-r*} == ${PV} || -z ${REPLACING_VERSIONS} ]] && \
+		[[ ${ROOT%/} == "" ]] && [[ ${PV} != "9999" ]]; then
+			udevadm control --reload
+		fi
+	fi
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"
