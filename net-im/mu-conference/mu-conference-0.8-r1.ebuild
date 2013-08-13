@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.8.ebuild,v 1.1 2013/08/12 23:24:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.8-r1.ebuild,v 1.1 2013/08/13 08:01:33 mrueg Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Multi-User Chat for jabberd"
 HOMEPAGE="https://gna.org/projects/mu-conference/"
@@ -13,6 +13,7 @@ SRC_URI="http://download.gna.org/mu-conference/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
+IUSE="mysql"
 
 RDEPEND="dev-libs/expat
 	>=dev-libs/glib-2
@@ -21,9 +22,8 @@ RDEPEND="dev-libs/expat
 	mysql? ( virtual/mysql )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-IUSE="mysql"
 
-S="${WORKDIR}/${PN}_${PV}"
+S=${WORKDIR}/${PN}_${PV}
 
 src_prepare() {
 	# Fix missing header in src/conference_user.c in order to
@@ -56,6 +56,7 @@ src_install() {
 	docinto scripts
 	dodoc scripts/*
 
+	local i
 	for i in log spool; do
 		dodir /var/${i}/jabber/mu-conference
 		keepdir /var/${i}/jabber/mu-conference
@@ -67,7 +68,6 @@ src_install() {
 	newins muc-default.xml mu-conference.xml
 	doins style.css
 
-	cd "${D}/etc/jabber/"
 	sed -i \
 		-e 's,./spool/chat.localhost,/var/spool/jabber/mu-conference,g' \
 		-e 's,./syslogs,/var/log/jabber,g' \
@@ -75,7 +75,7 @@ src_install() {
 		-e 's,./mu-conference.pid,/var/run/jabber/mu-conference.pid,g' \
 		-e "s,../style.css,/etc/jabber/style.css,g" \
 		-e "s,7009,5347,g" \
-		mu-conference.xml || die "sed failed"
+		"${D}"/etc/jabber/mu-conference.xml || die "sed failed"
 }
 
 pkg_postinst() {
