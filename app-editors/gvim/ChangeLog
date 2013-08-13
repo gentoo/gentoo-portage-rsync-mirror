@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.404 2013/08/13 22:29:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.405 2013/08/13 22:33:49 radhermit Exp $
+
+  13 Aug 2013; Tim Harder <radhermit@gentoo.org> gvim-7.4.ebuild,
+  gvim-9999.ebuild:
+  Fix KEYWORDS.
 
   13 Aug 2013; Tim Harder <radhermit@gentoo.org> gvim-7.3.762.ebuild:
   Drop arches which shouldn't have been stabilized.
