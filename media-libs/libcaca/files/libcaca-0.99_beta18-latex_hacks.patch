@@ -1,0 +1,16 @@
+Hack it a bit differently so that it works with texlive 2013.
+https://bugs.gentoo.org/show_bug.cgi?id=480862
+
+Index: libcaca-0.99.beta18/doc/Makefile.am
+===================================================================
+--- libcaca-0.99.beta18.orig/doc/Makefile.am
++++ libcaca-0.99.beta18/doc/Makefile.am
+@@ -29,7 +29,7 @@ if BUILD_DOCUMENTATION
+ if USE_LATEX
+ 	rm -f latex/libcaca.tex latex/libcaca.pdf
+ 	mv latex/refman.tex latex/libcaca.tex
+-	sed 's/setlength{/renewcommand{/' latex/libcaca.tex \
++	sed 's/\\setlength{/%\0/' latex/libcaca.tex \
+ 	  | sed 's/.*usepackage.*times.*//' > latex/refman.tex
+ 	cd latex && $(MAKE) $(AM_CFLAGS) refman.pdf || (cat refman.log; exit 1)
+ 	mv latex/refman.pdf latex/libcaca.pdf
