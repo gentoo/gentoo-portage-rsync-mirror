@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.2.ebuild,v 1.1 2013/07/25 21:07:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.2-r1.ebuild,v 1.1 2013/08/13 21:35:45 reavertm Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ else
 	S="${WORKDIR}/${P/-server/}"
 fi
 
-inherit cmake-utils ${scm_eclass}
+inherit cmake-utils ${scm_eclass} eutils
 
 DESCRIPTION="The server part of Akonadi"
 HOMEPAGE="http://pim.kde.org/akonadi"
@@ -58,6 +58,10 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	postgres? ( dev-db/postgresql-server )
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-datastore_query_fix.patch
+)
 
 pkg_setup() {
 	# Set default storage backend in order: MySQL, SQLite PostgreSQL

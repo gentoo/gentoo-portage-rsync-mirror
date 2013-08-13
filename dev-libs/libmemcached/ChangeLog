@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.55 2013/05/12 11:01:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.57 2013/08/13 21:55:39 ago Exp $
+
+  13 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libmemcached-1.0.14.ebuild:
+  Stable for x86, wrt bug #480460
+
+  13 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libmemcached-1.0.14.ebuild:
+  Stable for amd64, wrt bug #480460
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove obsolete useflag from metadata.xml

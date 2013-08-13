@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.35-r1.ebuild,v 1.1 2013/08/11 17:51:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36.ebuild,v 1.1 2013/08/13 21:37:05 dilfridge Exp $
 
 EAPI=5
 
@@ -41,8 +41,6 @@ RDEPEND="
 	zeroconf? ( net-dns/avahi[dbus] )
 "
 DEPEND="${RDEPEND}"
-
-PATCHES=( "${FILESDIR}/${P}-poppler24.patch" )
 
 src_prepare() {
 	base_src_prepare

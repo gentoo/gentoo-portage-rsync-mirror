@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r3.ebuild,v 1.6 2013/08/13 16:08:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r3.ebuild,v 1.7 2013/08/13 21:49:54 ssuominen Exp $
 
 EAPI=5
 
@@ -252,6 +252,7 @@ multilib_src_configure() {
 			--disable-kmod
 			--disable-selinux
 			--disable-static
+			--disable-manpages
 			--enable-introspection=no
 		)
 	fi
