@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.101 2013/07/30 15:10:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.102 2013/08/13 06:50:17 robbat2 Exp $
+
+*syslinux-6.02_pre16 (13 Aug 2013)
+
+  13 Aug 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +syslinux-6.02_pre16.ebuild:
+  Bump.
 
 *syslinux-4.07 (30 Jul 2013)
 

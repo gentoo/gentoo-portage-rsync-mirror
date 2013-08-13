@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.456 2013/08/12 22:20:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.457 2013/08/13 06:55:36 polynomial-c Exp $
+
+  13 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.17.ebuild,
+  -seamonkey-2.17.1.ebuild, -seamonkey-2.19.ebuild:
+  Removed old (vulnerable) versions.
 
   12 Aug 2013; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.20.ebuild:
   Stable for x86, wrt bug #479968
