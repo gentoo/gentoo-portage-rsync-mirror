@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.24 2013/03/09 11:45:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.25 2013/08/12 23:53:21 aballier Exp $
 
 EAPI=2
 inherit autotools flag-o-matic mono multilib java-pkg-opt-2
@@ -34,6 +34,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen
 		virtual/latex-base
+		dev-tex/xcolor
 		dev-texlive/texlive-fontsrecommended )
 	java? ( >=virtual/jdk-1.5 )"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.106 2013/03/09 11:45:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.107 2013/08/12 23:53:21 aballier Exp $
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> libcaca-0.99_beta17.ebuild:
+  depend on xcolor in beta17 too for doc useflag, bug #365977
 
   09 Mar 2013; Alexis Ballier <aballier@gentoo.org> libcaca-0.99_beta17.ebuild:
   keyword amd64-fbsd, untested because beta18 has been masked recently and this
