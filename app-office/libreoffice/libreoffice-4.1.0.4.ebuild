@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.0.4.ebuild,v 1.2 2013/07/29 09:28:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.0.4.ebuild,v 1.3 2013/08/13 05:24:47 patrick Exp $
 
 EAPI=5
 
@@ -355,6 +355,7 @@ src_prepare() {
 		# hack...
 		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
+	epatch "${FILESDIR}/libreoffice-4.1.0.4-neon-build.patch" || die "Failed patching for neon"
 }
 
 src_configure() {
