@@ -1,8 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.122 2013/08/09 09:02:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.123 2013/08/13 22:09:17 radhermit Exp $
 
 # This file requires >=portage-2.1.1
+
+# Tim Harder <radhermit@gentoo.org> (13 Aug 2013)
+# dev-lang/luajit keyworded for x86 (masked in base)
+app-editors/vim -luajit
+app-editors/gvim -luajit
 
 # Kacper Kowalik <xarthisius@gentoo.org> (09 Aug 2013)
 # Works on x86

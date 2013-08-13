@@ -379,7 +379,8 @@ app-editors/gedit-plugins:charmap - Insert special characters just by clicking o
 app-editors/gedit-plugins:git - Shows document changes related to git's HEAD
 app-editors/gedit-plugins:synctex - Synchronize between LaTeX and PDF with gedit and evince
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
-app-editors/gvim:netbeans - Include netbeans externaleditor integration support
+app-editors/gvim:luajit - Use dev-lang/luajit instead of dev-lang/lua
+app-editors/gvim:netbeans - Include netbeans external editor integration support
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/latexila:latexmk - Install dev-tex/latexmk (used by default for the build tools)
@@ -392,6 +393,7 @@ app-editors/nano:minimal - Disable all fancy features, including ones that other
 app-editors/tea:aspell - Enable spellchecking using app-text/aspell
 app-editors/tea:hunspell - Enable spellchecking using app-text/hunspell
 app-editors/vim:X - Link console vim against X11 libraries to enable title and clipboard features in xterm
+app-editors/vim:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library

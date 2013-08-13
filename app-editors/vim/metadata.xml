@@ -3,8 +3,9 @@
 <pkgmetadata>
 <herd>vim</herd>
 <use>
-  <flag name='vim-pager'>Install vimpager and vimmanpager links</flag>
-  <flag name='X'>Link console vim against X11 libraries to enable title and
+  <flag name="luajit">Use <pkg>dev-lang/luajit</pkg> instead of <pkg>dev-lang/lua</pkg></flag>
+  <flag name="vim-pager">Install vimpager and vimmanpager links</flag>
+  <flag name="X">Link console vim against X11 libraries to enable title and
 	  clipboard features in xterm</flag>
 </use>
 <upstream>

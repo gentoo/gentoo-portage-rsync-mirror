@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.145 2013/08/11 16:55:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.146 2013/08/13 22:09:17 radhermit Exp $
+
+  13 Aug 2013; Tim Harder <radhermit@gentoo.org> package.use.mask:
+  Unmask luajit USE flag for app-editors/(g)vim.
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   move texlive mask from global to arch profiles, bug #475124
