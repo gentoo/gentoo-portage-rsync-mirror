@@ -1,6 +1,26 @@
 # ChangeLog for media-tv/tvbrowser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.36 2012/11/12 21:38:13 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.37 2013/08/13 20:58:08 tomwij Exp $
+
+*tvbrowser-3.2.1-r1 (13 Aug 2013)
+
+  13 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +files/tvbrowser-3.2.1-build.xml,
+  +tvbrowser-3.2.1-r1.ebuild, metadata.xml:
+  Revision bump. EAPI 5. Use virtualx for tests. Slotted all dependencies; added
+  swt and test? ( dev-java/ant-junit:0 ) dependency, the latter fixes tests
+  together with setting the test classpath. Renamed src_prepare to java_prepare
+  such that the preparation from the Java eclasses runs. Dropped dependency on
+  class files from build.xml as well as parts that are unnecessary for Linux
+  packaging, including fetching of dependencies. Made use of
+  EANT_GENTOO_CLASSPATH and EANT_TEST_GENTOO_CLASSPATH and build.xml rewriting
+  to simplify java_prepare. Replaced src_compile by EANT_BUILD_TARGET and
+  EANT_DOC_TARGET. Reordered and shortened src_install, moved categories from
+  sed to make_desktop_entry call. Sorted variables. Removed redundancy. Fixing
+  up of dependencies fixes bug #480652 filed by Heiko Baums and Nils Kneuper.
+  Removal of dependency fetching from build.xml fixes bug #451788 filed by Diego
+  Elio Pettenò (flameeyes). Next steps should be unbundling as well as bumping
+  more dependencies (filed bug #480922 for this purpose), perhaps best done as
+  part of the next version bump.
 
 *tvbrowser-3.2.1 (12 Nov 2012)
 
