@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.64 2013/08/12 20:41:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.65 2013/08/13 15:57:50 bicatali Exp $
+
+  13 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> cln-1.3.3.ebuild:
+  Fix sandbox violation in doc building (bug #480844), more cleanup
 
 *cln-1.3.3 (12 Aug 2013)
 
@@ -100,7 +103,7 @@
 *cln-1.3.1 (14 Oct 2009)
 
   14 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> +cln-1.3.1.ebuild:
-  Version bump, thanks RSebastian Mingramm for his testing.
+  Version bump, thanks Sebastian Mingramm for his testing.
 
 *cln-1.3.0 (14 Jul 2009)
 
@@ -257,7 +260,7 @@
   Don't assign default to S; header fix
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *cln-1.1.5 (31 Aug 2002)
 
   28 Oct 2002; George Shapovalov <george@gentoo.org> cln-1.1.15.ebuild, ChangeLog :
@@ -265,4 +268,4 @@
   cleaned app (KEYWORDS, SLOT..., C[XX]FLAGS filters) and added to portage
 
   31 Aug 2002; Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr> Changelog :
-  ebuild submitted by Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr> 
+  ebuild submitted by Pierre-Henri Jondot <Pierre-Henri.Jondot@wanadoo.fr>

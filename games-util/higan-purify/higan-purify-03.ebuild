@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/higan-purify/higan-purify-03.ebuild,v 1.1 2013/06/09 19:18:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/higan-purify/higan-purify-03.ebuild,v 1.2 2013/08/13 15:41:46 hasufell Exp $
 
 EAPI=5
 
@@ -25,6 +25,15 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}/purify
+
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		if [[ $(gcc-major-version) == 4 && $(gcc-minor-version) -lt 7 || $(gcc-major-version) -lt 4 ]] ; then
+			eerror "You need at least sys-devel/gcc-4.7.0"
+			die "You need at least sys-devel/gcc-4.7.0"
+		fi
+	fi
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-QA.patch

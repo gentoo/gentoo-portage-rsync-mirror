@@ -1,6 +1,9 @@
 # ChangeLog for games-util/higan-purify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/higan-purify/ChangeLog,v 1.1 2013/06/09 19:18:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/higan-purify/ChangeLog,v 1.2 2013/08/13 15:41:46 hasufell Exp $
+
+  13 Aug 2013; Julian Ospald <hasufell@gentoo.org> higan-purify-03.ebuild:
+  add gcc-4.7 version check wrt #480874
 
 *higan-purify-03 (09 Jun 2013)
 
