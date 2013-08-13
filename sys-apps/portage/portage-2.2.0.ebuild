@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0.ebuild,v 1.1 2013/08/12 23:49:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0.ebuild,v 1.2 2013/08/13 00:59:44 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
-EAPI=3
+EAPI=2
 PYTHON_COMPAT=(
 	pypy1_9 pypy2_0
 	python3_1 python3_2 python3_3 python3_4
@@ -146,10 +146,10 @@ get_python_interpreter() {
 get_python_sitedir() {
 	[ $# -eq 1 ] || die "expected 1 argument, got $#: $*"
 	local impl=$1
-	local site_dir=/usr/$(get_libdir)/${impl/_/.}/site-packages
-	[[ -d ${EROOT}${site_dir} ]] || \
-		ewarn "site-packages dir missing for ${impl}: ${EROOT}${site_dir}"
-	echo "${site_dir}"
+	local site_dir=usr/$(get_libdir)/${impl/_/.}/site-packages
+	[[ -d ${EROOT:-${ROOT}}${site_dir} ]] || \
+		ewarn "site-packages dir missing for ${impl}: ${EROOT:-${ROOT}}${site_dir}"
+	echo "/${site_dir}"
 }
 
 python_compileall() {
@@ -360,7 +360,7 @@ src_install() {
 			continue
 		fi
 		while read -r mod_dir ; do
-			cd "${ED}/usr/lib/portage/pym/${mod_dir}" || die
+			cd "${ED:-${D}}usr/lib/portage/pym/${mod_dir}" || die
 			files=$(echo *.py)
 			if [ -z "${files}" ] || [ "${files}" = "*.py" ]; then
 				# __pycache__ directories contain no py files
@@ -378,7 +378,7 @@ src_install() {
 				dosym "${relative_path}/${x}" \
 					"${dest_mod_dir}/${x}" || die
 			done
-		done < <(cd "${ED}"/usr/lib/portage/pym || die ; find * -type d ! -path "portage/tests*")
+		done < <(cd "${ED:-${D}}"usr/lib/portage/pym || die ; find * -type d ! -path "portage/tests*")
 		cd "${S}" || die
 		EPYTHON=$(get_python_interpreter ${impl}) \
 		python_compileall "$(get_python_sitedir ${impl})"
@@ -392,7 +392,7 @@ src_install() {
 pkg_preinst() {
 	if [[ $ROOT == / ]] ; then
 		# Run some minimal tests as a sanity check.
-		local test_runner=$(find "$ED" -name runTests)
+		local test_runner=$(find "${ED:-${D}}" -name runTests)
 		if [[ -n $test_runner && -x $test_runner ]] ; then
 			einfo "Running preinst sanity tests..."
 			"$test_runner" || die "preinst sanity tests failed"
@@ -410,14 +410,14 @@ pkg_preinst() {
 	# portage:portage to root:root which happens after src_install.
 	keepdir /var/log/portage/elog
 	# This is allowed to fail if the user/group are invalid for prefix users.
-	if chown portage:portage "${ED}"var/log/portage{,/elog} 2>/dev/null ; then
-		chmod g+s,ug+rwx "${ED}"var/log/portage{,/elog}
+	if chown portage:portage "${ED:-${D}}"var/log/portage{,/elog} 2>/dev/null ; then
+		chmod g+s,ug+rwx "${ED:-${D}}"var/log/portage{,/elog}
 	fi
 
 	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
 	# assume that the NEEDED.ELF.2 files have already been generated.
 	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! { [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
+		! { [ -e "${EROOT:-${ROOT}}"var/lib/portage/preserved_libs_registry ] && \
 		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ; } \
 		&& NEEDED_REBUILD_UPGRADE=true || NEEDED_REBUILD_UPGRADE=false
 
@@ -477,7 +477,7 @@ pkg_postinst() {
 		[[ -f ${PORTDIR}/profiles/repo_name ]] && \
 			repo_name=$(< "${PORTDIR}/profiles/repo_name")
 		if [[ -z ${REPOS_CONF_SYNC} ]] ; then
-			REPOS_CONF_SYNC=$(grep "^sync-uri =" "${EROOT}/usr/share/portage/config/repos.conf")
+			REPOS_CONF_SYNC=$(grep "^sync-uri =" "${EROOT:-${ROOT}}usr/share/portage/config/repos.conf")
 			REPOS_CONF_SYNC=${REPOS_CONF_SYNC##* }
 		fi
 		local sync_type=
@@ -500,19 +500,19 @@ pkg_postinst() {
 
 		[[ ${sync_type} == cvs ]] && echo "sync-cvs-repo = $(<"${PORTDIR}/CVS/Repository")" >> "${T}/repos.conf"
 
-		local dest=${EROOT}/etc/portage/repos.conf
+		local dest=${EROOT:-${ROOT}}etc/portage/repos.conf
 		if [[ ! -f ${dest} ]] && mkdir -p "${dest}" 2>/dev/null ; then
-			dest=${EROOT}/etc/portage/repos.conf/${repo_name:-gentoo}.conf
+			dest=${EROOT:-${ROOT}}etc/portage/repos.conf/${repo_name:-gentoo}.conf
 		fi
 		# Don't install the config update if the desired repos.conf directory
 		# and config file exist, since users may accept it blindly and break
 		# their config (bug #478726).
-		[[ -e ${EROOT}/etc/portage/repos.conf/${repo_name:-gentoo}.conf ]] || \
+		[[ -e ${EROOT:-${ROOT}}etc/portage/repos.conf/${repo_name:-gentoo}.conf ]] || \
 			mv "${T}/repos.conf" "$(new_config_protect "${dest}")"
 
 		if [[ ${PORTDIR} == ${EPREFIX}/usr/portage ]] ; then
 			einfo "Generating make.conf PORTDIR setting for backward compatibility"
-			for dest in "${EROOT}/etc/make.conf" "${EROOT}/etc/portage/make.conf" ; do
+			for dest in "${EROOT:-${ROOT}}etc/make.conf" "${EROOT:-${ROOT}}etc/portage/make.conf" ; do
 				[[ -e ${dest} ]] && break
 			done
 			[[ -d ${dest} ]] && dest=${dest}/portdir.conf
@@ -534,7 +534,7 @@ pkg_postinst() {
 	if ${NEEDED_REBUILD_UPGRADE} ; then
 		einfo "rebuilding NEEDED.ELF.2 files"
 		local cpv filename line newline
-		for cpv in "${EROOT}/var/db/pkg"/*/*; do
+		for cpv in "${EROOT:-${ROOT}}var/db/pkg"/*/*; do
 			[[ -f "${cpv}/NEEDED" && ! -f "${cpv}/NEEDED.ELF.2" ]] || continue
 			while read -r line; do
 				filename=${line% *}
