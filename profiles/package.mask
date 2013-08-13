@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15017 2013/08/12 17:52:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15018 2013/08/13 00:14:02 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -455,13 +455,6 @@ media-gfx/yablex
 # Tim Harder <radhermit@gentoo.org> (07 Mar 2013)
 # Masked for testing
 =dev-java/jython-2.7*
-
-# Samuli Suominen <ssuominen@gentoo.org> (05 Mar 2013)
-# Fails to compile unless system has previously installed copy
-# wrt bugs 411443 and 413753
-# Masked temporarily until fixed
-=media-libs/libcaca-0.99_beta18
-=app-misc/toilet-0.3
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Mar 2013)
 # MySQL 5.6 is not yet GA.

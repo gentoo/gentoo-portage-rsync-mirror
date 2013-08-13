@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8150 2013/08/12 17:52:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8151 2013/08/13 00:14:02 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask libcaca/toilet, relevant bugs seem fixed here
 
   12 Aug 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove dev-ruby/pry:0 from the ruby18 mask for now since adhearsion still
