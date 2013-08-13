@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/profile-sync-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.14 2013/07/29 20:55:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.15 2013/08/13 14:18:36 ago Exp $
+
+  13 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
+  profile-sync-daemon-5.38.2.ebuild:
+  Stable for amd64, wrt bug #480780
 
 *profile-sync-daemon-5.38.2 (29 Jul 2013)
 
@@ -94,4 +98,3 @@
   19 Sep 2012; Julian Ospald <hasufell@gentoo.org>
   +profile-sync-daemon-3.13.ebuild, +metadata.xml:
   initial import wrt #398431
-

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/cbatticon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/ChangeLog,v 1.9 2013/07/24 20:29:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/ChangeLog,v 1.10 2013/08/13 14:18:43 ago Exp $
+
+  13 Aug 2013; Agostino Sarubbo <ago@gentoo.org> cbatticon-1.3.2.ebuild:
+  Stable for amd64, wrt bug #480782
 
 *cbatticon-1.3.2 (24 Jul 2013)
 
