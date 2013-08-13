@@ -1,6 +1,12 @@
 # ChangeLog for net-im/mu-conference
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.26 2012/05/13 17:13:55 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.28 2013/08/12 23:27:45 mrueg Exp $
+
+*mu-conference-0.8 (12 Aug 2013)
+
+  12 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +mu-conference-0.8.ebuild:
+  Version bump. Respect CC, LDFLAGS, AR, RANLIB. Add missing dep on pkgconfig.
+  Fixes bug #331895 bug #269970.
 
   13 May 2012; Pacho Ramos <pacho@gentoo.org> -mu-conference-0.6.0-r1.ebuild,
   -mu-conference-0.6.0-r2.ebuild, mu-conference-0.7.ebuild:
@@ -114,4 +120,3 @@
   files/mu-conference-makefile.patch, files/muctrans.xml:
   Initial check-in of separate mu-conference transport for jabberd. Thanks to
   Gustavo Felisberto
-
