@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.13.ebuild,v 1.1 2013/03/11 12:18:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.15.ebuild,v 1.1 2013/08/13 14:59:11 jer Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake OPTFLAGS="${CXXFLAGS}"
+	emake OPTFLAGS=''
 }
 
 src_install() {
