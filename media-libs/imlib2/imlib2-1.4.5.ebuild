@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5.ebuild,v 1.9 2012/09/29 18:40:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5.ebuild,v 1.10 2013/08/13 07:56:56 ssuominen Exp $
 
 EAPI=4
 inherit enlightenment toolchain-funcs
@@ -16,7 +16,7 @@ RDEPEND="=media-libs/freetype-2*
 	zlib? ( sys-libs/zlib )
 	gif? ( >=media-libs/giflib-4.1.0 )
 	png? ( media-libs/libpng:0 )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	tiff? ( media-libs/tiff:0 )
 	X? (
 		x11-libs/libX11
