@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.39 2013/08/06 12:22:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.40 2013/08/13 09:54:31 zmedico Exp $
+
+  13 Aug 2013; Zac Medico <zmedico@gentoo.org> tevent-0.9.19.ebuild:
+  Fix for prefix and add ~arm-linux + ~x86-linux keywords.
 
   06 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> tevent-0.9.19.ebuild:
   Added python_optimize call.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r8.ebuild,v 1.5 2013/08/10 13:01:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r8.ebuild,v 1.6 2013/08/13 09:38:18 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
