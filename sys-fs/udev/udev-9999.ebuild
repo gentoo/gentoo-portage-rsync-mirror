@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.251 2013/08/12 13:50:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.252 2013/08/13 16:08:07 ssuominen Exp $
 
 EAPI=5
 
@@ -503,6 +503,10 @@ pkg_postinst() {
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
+	if has_version 'sys-apps/openrc'; then
+		ewarn "For sys-apps/openrc users it is:"
+		ewarn "# /etc/init.d/udev --nodeps restart"
+	fi
 
 	elog
 	elog "For more information on udev on Gentoo, upgrading, writing udev rules, and"

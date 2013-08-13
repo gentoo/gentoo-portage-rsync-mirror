@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.928 2013/08/11 23:02:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.929 2013/08/13 16:17:25 phajdan.jr Exp $
+
+*chromium-30.0.1588.0 (13 Aug 2013)
+
+  13 Aug 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-30.0.1568.0.ebuild, +chromium-30.0.1588.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Fix bug #479418 by floppym. Fix bug #473260 by Vladimir.
+  Exclude a failing test (bug #478168). Stop using system mesa. Temporarily use
+  bundled openssl. Remove old.
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   chromium-28.0.1500.71.ebuild, chromium-28.0.1500.89.ebuild,

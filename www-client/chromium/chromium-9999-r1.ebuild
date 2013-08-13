@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.208 2013/08/11 23:02:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.209 2013/08/13 16:17:25 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,7 @@ ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="bindist cups gnome gnome-keyring gps kerberos pulseaudio selinux +system-ffmpeg system-sqlite tcmalloc"
+IUSE="bindist cups gnome gnome-keyring gps kerberos neon pulseaudio selinux +system-ffmpeg system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -59,7 +59,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/libpng:0=
 	media-libs/libvpx:=
 	>=media-libs/libwebp-0.3.1:=
-	!arm? ( !x86? ( >=media-libs/mesa-9.1:=[gles2] ) )
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
@@ -216,7 +215,6 @@ src_prepare() {
 		\! -path 'third_party/ffmpeg/*' \
 		\! -path 'third_party/flot/*' \
 		\! -path 'third_party/hunspell/*' \
-		\! -path 'third_party/hyphen/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jstemplate/*' \
 		\! -path 'third_party/khronos/*' \
@@ -235,7 +233,7 @@ src_prepare() {
 		\! -path 'third_party/mongoose/*' \
 		\! -path 'third_party/mt19937ar/*' \
 		\! -path 'third_party/npapi/*' \
-		\! -path 'third_party/openmax/*' \
+		\! -path 'third_party/openssl/*' \
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/pywebsocket/*' \
 		\! -path 'third_party/qcms/*' \
@@ -248,7 +246,6 @@ src_prepare() {
 		\! -path 'third_party/trace-viewer/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/usrsctp/*' \
-		\! -path 'third_party/v8-i18n/*' \
 		\! -path 'third_party/webdriver/*' \
 		\! -path 'third_party/webrtc/*' \
 		\! -path 'third_party/widevine/*' \
@@ -319,12 +316,6 @@ src_configure() {
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1
 		$(gyp_use system-ffmpeg use_system_ffmpeg)"
-
-	# TODO: Use system mesa on x86, bug #457130 .
-	if ! use x86 && ! use arm; then
-		myconf+="
-			-Duse_system_mesa=1"
-	fi
 
 	# TODO: patch gyp so that this arm conditional is not needed.
 	if ! use arm; then
@@ -406,10 +397,22 @@ src_configure() {
 		myconf+=" -Dtarget_arch=ia32"
 	elif [[ $myarch = arm ]] ; then
 		# TODO: re-enable NaCl (NativeClient).
+		local CTARGET=${CTARGET:-${CHOST}}
+		if [[ $(tc-is-softfloat) == "no" ]]; then
+
+			myconf+=" -Darm_float_abi=hard"
+		fi
+		filter-flags "-mfpu=*"
+		use neon || myconf+=" -Darm_fpu=${ARM_FPU:-vfpv3-d16}"
+
+		if [[ ${CTARGET} == armv[78]* ]]; then
+			myconf+=" -Darmv7=1"
+		else
+			myconf+=" -Darmv7=0"
+		fi
 		myconf+=" -Dtarget_arch=arm
 			-Dsysroot=
-			-Darmv7=0
-			-Darm_neon=0
+			$(gyp_use neon arm_neon)
 			-Ddisable_nacl=1"
 	else
 		die "Failed to determine target arch, got '$myarch'."
@@ -451,7 +454,7 @@ src_compile() {
 	# TODO: add media_unittests after fixing compile (bug #462546).
 	local test_targets=""
 	for x in base cacheinvalidation content crypto \
-		googleurl gpu net printing sql; do
+		gpu net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
 
@@ -527,7 +530,6 @@ chromium_test() {
 	runtest out/Release/content_unittests "${excluded_content_unittests[@]}"
 
 	runtest out/Release/crypto_unittests
-	runtest out/Release/googleurl_unittests
 	runtest out/Release/gpu_unittests
 
 	# TODO: add media_unittests after fixing compile (bug #462546).
@@ -543,6 +545,7 @@ chromium_test() {
 		"HTTPSOCSPTest.*" # bug #426630
 		"HTTPSEVCRLSetTest.*" # see above
 		"HTTPSCRLSetTest.*" # see above
+		"SpdyFramerTests/SpdyFramerTest.CreatePushPromiseCompressed/2" # bug #478168
 		"*SpdyFramerTest.BasicCompression*" # bug #465444
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"

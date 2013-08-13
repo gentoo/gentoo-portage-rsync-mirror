@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.9.0.ebuild,v 1.1 2013/07/02 14:34:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.9.1.ebuild,v 1.1 2013/08/13 16:07:23 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -22,9 +22,11 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				dev-python/nosexcover[${PYTHON_USEDEP}]
 				dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
 				dev-python/nosehtmloutput[${PYTHON_USEDEP}]
-				=dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
-				>=dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
-				>=dev-python/flake8-2.0[${PYTHON_USEDEP}]
+				~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
+				~dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
+				~dev-python/flake8-2.0[${PYTHON_USEDEP}]
+				>=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
+				<dev-python/hacking-0.6[${PYTHON_USEDEP}]
 				>=dev-python/mock-0.8.0[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}] )"
 
@@ -38,9 +40,6 @@ RDEPEND=">=dev-python/eventlet-0.9.15[${PYTHON_USEDEP}]
 		dev-python/python-swiftclient[${PYTHON_USEDEP}]
 		memcache? ( net-misc/memcached )
 		net-misc/rsync[xattr]"
-#		dev-python/configobj[${PYTHON_USEDEP}]
-#		>=dev-python/webob-1.0.8[${PYTHON_USEDEP}]
-#		<dev-python/webob-1.3[${PYTHON_USEDEP}]
 
 REQUIRED_USE="|| ( proxy account container object )"
 

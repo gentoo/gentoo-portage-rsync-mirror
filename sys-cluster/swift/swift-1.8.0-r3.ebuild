@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.8.0-r2.ebuild,v 1.1 2013/06/14 22:11:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.8.0-r3.ebuild,v 1.1 2013/08/13 16:07:23 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -47,6 +47,7 @@ CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 
 PATCHES=(
 	"${FILESDIR}/CVE-2013-2161.patch"
+	"${FILESDIR}/CVE-2013-4155-grizzly.patch"
 )
 
 src_test () {
