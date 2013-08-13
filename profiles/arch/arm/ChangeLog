@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.258 2013/08/11 16:55:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.259 2013/08/13 21:30:50 maekke Exp $
+
+  13 Aug 2013; Markus Meier <maekke@gentoo.org> package.mask:
+  remove texive-2013 mask, as dev-texlive/texlive-langeuropean-2013 is
+  keyworded now, bug #475124
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   move texlive mask from global to arch profiles, bug #475124

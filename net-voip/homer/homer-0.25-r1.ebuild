@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.25-r1.ebuild,v 1.1 2013/08/12 19:45:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.25-r1.ebuild,v 1.2 2013/08/13 21:06:55 hwoarang Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/V${PV}.tar.gz -> ${PN}-${PV}.tar.gz
-	http://dev.gentoo.org/distfiles/${P}-ffmpeg2.patch"
+	http://dev.gentoo.org/~hwoarang/distfiles/${P}-ffmpeg2.patch"
 	KEYWORDS="~amd64 ~x86"
 fi
 
