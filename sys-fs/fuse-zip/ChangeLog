@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse-zip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.5 2011/10/19 20:05:18 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.6 2013/08/13 18:40:16 hwoarang Exp $
+
+*fuse-zip-0.3.0 (13 Aug 2013)
+
+  13 Aug 2013; Markos Chandras <hwoarang@gentoo.org> +fuse-zip-0.3.0.ebuild:
+  Version bump
 
   19 Oct 2011; Markos Chandras <hwoarang@gentoo.org> fuse-zip-0.2.13.ebuild,
   +files/libzip-fix-0.10.patch:
@@ -35,4 +40,3 @@
   +metadata.xml:
   Initial commit, bug #241202. Thanks to Sergey Dryabzhinsky for proposal of
   ebuild.
-
