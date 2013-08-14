@@ -1,19 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.23 2013/08/14 18:05:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.2.ebuild,v 1.1 2013/08/14 18:05:31 hwoarang Exp $
 
-EAPI="2"
-inherit multilib autotools eutils python git-2
+EAPI="5"
+inherit multilib autotools python eutils
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
 HOMEPAGE="http://openbox.org/"
-SRC_URI="branding? (
-http://dev.gentoo.org/~hwoarang/distfiles/surreal-gentoo.tar.gz )"
-EGIT_REPO_URI="git://git.openbox.org/dana/openbox"
+SRC_URI="http://openbox.org/dist/openbox/${P}.tar.gz
+branding? ( http://dev.gentoo.org/~hwoarang/distfiles/surreal-gentoo.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="branding debug imlib nls python session startup-notification static-libs"
 
 RDEPEND="dev-libs/glib:2
@@ -29,7 +28,6 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	app-text/docbook2X
 	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
@@ -38,20 +36,18 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	use python && python_convert_shebangs -r 2 .
 	epatch "${FILESDIR}"/${P}-gnome-session.patch
-	# Lets try to replace docbook-to-man with docbook2man.pl since
-	# Gentoo does not provide (why?) a docbook-to-man package
-	sed -i -e "s:docbook-to-man:docbook2man.pl:" "${S}"/Makefile.am
 	sed -i \
+		-e "s:-O0 -ggdb ::" \
 		-e 's/-fno-strict-aliasing//' \
-		m4/openbox.m4 || die
+		"${S}"/m4/openbox.m4 || die
 	epatch_user
 	eautoreconf
 }
 
 src_configure() {
 	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--disable-silent-rules \
-		--docdir=/usr/share/doc/${PF} \
 		$(use_enable debug) \
 		$(use_enable imlib imlib2) \
 		$(use_enable nls) \
@@ -63,9 +59,9 @@ src_configure() {
 
 src_install() {
 	dodir /etc/X11/Sessions
-	echo "/usr/bin/openbox-session" > "${D}/etc/X11/Sessions/${PN}"
+	echo "/usr/bin/openbox-session" > "${ED}/etc/X11/Sessions/${PN}"
 	fperms a+x /etc/X11/Sessions/${PN}
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	if use branding; then
 		insinto /usr/share/themes
 		doins -r "${WORKDIR}"/Surreal_Gentoo
@@ -75,6 +71,6 @@ src_install() {
 			"${D}"/etc/xdg/openbox/rc.xml \
 			|| die "failed to set Surreal Gentoo as the default theme"
 	fi
-	! use static-libs && rm "${D}"/usr/$(get_libdir)/lib{obt,obrender}.la
-	! use python && rm "${D}"/usr/libexec/openbox-xdg-autostart
+	! use static-libs && rm "${ED}"/usr/$(get_libdir)/lib{obt,obrender}.la
+	! use python && rm "${ED}"/usr/libexec/openbox-xdg-autostart
 }
