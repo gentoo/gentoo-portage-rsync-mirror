@@ -1,6 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.161 2013/08/04 19:51:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.163 2013/08/14 19:43:42 dilfridge Exp $
+
+# Andreas K. Huettell <dilfridge@gentoo.org> (14 Aug 2013)
+# Unkeyworded deps
+kde-base/kdepim-runtime facebook
+kde-base/nepomuk-core epub
 
 # Markus Meier <maekke@gentoo.org> (04 Aug 2013)
 # Unkeyworded deps, bug #474026

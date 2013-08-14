@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.106 2013/08/07 02:09:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.107 2013/08/14 19:56:44 aballier Exp $
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild:
+  depend on virtual/glu, bug #466632 by andcycle-gentoo.bugs@andcycle.idv.tw
 
   07 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild,
   +files/gpac-0.5.0-ffmpeg2.patch:

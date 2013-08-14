@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.49 2013/08/14 12:59:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.50 2013/08/14 19:50:28 grobian Exp $
 
 EAPI=5
 
@@ -18,9 +18,9 @@ LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="clang debug doc gold +libffi multitarget ocaml python
-	+static-analyzer test udis86 video_cards_radeon"
+	+static-analyzer test udis86 video_cards_radeon kernel_Darwin"
 
-DEPEND="app-admin/chrpath
+DEPEND="!kernel_Darwin? ( app-admin/chrpath )
 	dev-lang/perl
 	dev-python/sphinx
 	>=sys-devel/make-3.79
@@ -273,8 +273,10 @@ multilib_src_install() {
 	emake DESTDIR="${D}" GENTOO_LIBDIR=$(get_libdir) install
 
 	# Fix rpaths.
-	chrpath -r "${EPREFIX}"/usr/$(get_libdir)/llvm \
-		"${ED}"/usr/bin/* || die
+	if use !kernel_Darwin ; then
+		chrpath -r "${EPREFIX}"/usr/$(get_libdir)/llvm \
+			"${ED}"/usr/bin/* || die
+	fi
 
 	if multilib_is_native_abi; then
 		# Move files back.

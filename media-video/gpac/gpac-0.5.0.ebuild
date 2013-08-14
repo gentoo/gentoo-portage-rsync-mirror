@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.5 2013/08/07 02:09:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.6 2013/08/14 19:56:43 aballier Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( virtual/jpeg )
 	mad? ( >=media-libs/libmad-0.15.1b )
-	opengl? ( virtual/opengl media-libs/freeglut )
+	opengl? ( virtual/opengl media-libs/freeglut virtual/glu )
 	>=media-libs/libogg-1.1
 	png? ( >=media-libs/libpng-1.4 )
 	vorbis? ( >=media-libs/libvorbis-1.1 )

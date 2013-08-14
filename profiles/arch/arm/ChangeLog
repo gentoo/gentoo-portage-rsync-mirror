@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.259 2013/08/13 21:30:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.261 2013/08/14 19:43:42 dilfridge Exp $
+
+  14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  mask ebook support of nepomuk-core until keyworded
+
+  14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  mask facebook support of kdepim-runtime until keyworded
 
   13 Aug 2013; Markus Meier <maekke@gentoo.org> package.mask:
   remove texive-2013 mask, as dev-texlive/texlive-langeuropean-2013 is
