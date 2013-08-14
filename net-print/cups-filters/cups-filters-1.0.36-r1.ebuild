@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36.ebuild,v 1.1 2013/08/13 21:37:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36-r1.ebuild,v 1.1 2013/08/14 10:37:28 dilfridge Exp $
 
 EAPI=5
 
@@ -84,6 +84,9 @@ src_install() {
 		fixlocalpod
 		popd > /dev/null
 	fi
+
+	# remove duplicate files until they are gone in ghostscript, bug 480942
+	rm -fv "${ED}"/usr/libexec/cups/filter/{gstoraster,gstopxl}
 
 	prune_libtool_files --all
 
