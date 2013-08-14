@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.1.0-r1.ebuild,v 1.1 2013/08/10 11:15:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.1.0-r1.ebuild,v 1.2 2013/08/14 15:25:11 tomwij Exp $
 
 EAPI="5"
 
@@ -46,7 +46,8 @@ java_prepare() {
 	chmod 644 "${S}"/boot/*.jar "${S}"/lib/*.jar "${S}"/conf/settings.xml || die
 
 	# Register jars.
-	java-pkg_getjars avalon-framework-4.1,commons-io-1,commons-logging,juel,osgi-core-api,servlet-api-2.4 > /dev/null
+	java-pkg_getjars avalon-framework-4.1,commons-io-1,juel,osgi-core-api,servlet-api-2.4 > /dev/null
+	has_version dev-java/commons-logging:0 && java-pkg_getjars commons-logging > /dev/null
 	has_version dev-java/avalon-logkit:2.0 && java-pkg_getjars avalon-logkit-2.0 > /dev/null
 	has_version dev-java/log4j:0 && java-pkg_getjars log4j > /dev/null
 }

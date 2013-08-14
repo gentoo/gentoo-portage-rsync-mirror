@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.36 2013/05/14 09:15:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.37 2013/08/14 15:18:55 jer Exp $
+
+  14 Aug 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix e-mail address.
 
   14 May 2013; Peter Volkov <pva@gentoo.org> metadata.xml:
   Added Ilya Tumaykin to metadata.xml per e-mail request.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.84 2013/08/10 11:15:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.85 2013/08/14 15:25:11 tomwij Exp $
+
+  14 Aug 2013; Tom Wijsman <TomWij@gentoo.org> maven-bin-3.1.0-r1.ebuild:
+  Move commons-logging under a has_version check just like the other two
+  choices. Fixes bug #480700, reported by spyder on IRC as well as Maciej
+  Piechotka on the bug.
 
 *maven-bin-3.1.0-r1 (10 Aug 2013)
 
