@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/man-pages-it
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.14 2012/09/29 14:00:44 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.15 2013/08/14 13:56:21 jer Exp $
+
+*man-pages-it-2.80-r1 (14 Aug 2013)
+
+  14 Aug 2013; Jeroen Roovers <jer@gentoo.org> -man-pages-it-2.80.ebuild,
+  +man-pages-it-2.80-r1.ebuild:
+  Do not install man pages owned by app-arch/dpkg (bug #480970 by Cédric
+  Jeanneret).
 
   29 Sep 2012; Ulrich Müller <ulm@gentoo.org> man-pages-it-2.65.ebuild,
   man-pages-it-2.80.ebuild:
