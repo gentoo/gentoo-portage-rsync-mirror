@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.63 2013/08/13 09:40:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.64 2013/08/14 17:45:02 grobian Exp $
+
+  14 Aug 2013; Fabian Groffen <grobian@gentoo.org>
+  gentoo-bashcomp-20130804.ebuild:
+  Fix for Prefix, bug #480278
 
   13 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   gentoo-bashcomp-20121024.ebuild:

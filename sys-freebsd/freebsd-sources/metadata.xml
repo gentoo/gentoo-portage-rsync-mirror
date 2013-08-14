@@ -4,5 +4,6 @@
 <herd>bsd</herd>
   <use>
     <flag name='build-generic'>Build and install a generic kernel (recommended).</flag>
+    <flag name='dtrace'>Enable DTrace support.</flag>
   </use>
 </pkgmetadata>

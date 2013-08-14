@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.96 2013/08/12 15:05:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.97 2013/08/14 17:33:34 aballier Exp $
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  freebsd-sources-9.2_rc1.ebuild, metadata.xml:
+  Make dtrace (and CDDL) support optional, bug #481024 by Yuta SATOH
 
   12 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   freebsd-sources-9.2_rc1.ebuild:

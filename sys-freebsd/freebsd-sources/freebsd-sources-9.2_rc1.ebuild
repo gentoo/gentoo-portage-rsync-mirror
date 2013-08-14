@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.6 2013/08/12 15:05:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.2_rc1.ebuild,v 1.7 2013/08/14 17:33:34 aballier Exp $
 
 EAPI=5
 
@@ -9,19 +9,19 @@ inherit bsdmk freebsd flag-o-matic toolchain-funcs
 DESCRIPTION="FreeBSD kernel sources"
 SLOT="0"
 
-IUSE="+build-generic profile"
+IUSE="+build-generic dtrace profile"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 	SRC_URI="mirror://gentoo/${SYS}.tar.bz2"
 fi
 
-RDEPEND="=sys-freebsd/freebsd-cddl-${RV}*
+RDEPEND="dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )
 	=sys-freebsd/freebsd-mk-defs-${RV}*
 	!sys-freebsd/virtio-kmod"
 DEPEND="build-generic? (
-		=sys-freebsd/freebsd-cddl-${RV}*
-		=sys-freebsd/freebsd-usbin-${RV}*
+		dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )
+		>=sys-freebsd/freebsd-usbin-9.1
 		=sys-freebsd/freebsd-mk-defs-${RV}*
 	)"
 
@@ -74,9 +74,12 @@ src_configure() {
 
 src_compile() {
 	if use build-generic ; then
+		local myconf
+		use dtrace || myconf="-DNO_CTF "
+
 		cd "${S}/$(tc-arch-kernel)/compile/${KERN_BUILD}" || die
-		freebsd_src_compile depend
-		freebsd_src_compile
+		freebsd_src_compile depend ${myconf}
+		freebsd_src_compile ${myconf}
 	else
 		einfo "Nothing to compile.."
 	fi

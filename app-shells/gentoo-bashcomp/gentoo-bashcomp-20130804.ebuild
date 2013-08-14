@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20130804.ebuild,v 1.2 2013/08/04 20:27:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20130804.ebuild,v 1.3 2013/08/14 17:45:02 grobian Exp $
 
 EAPI="5"
 inherit bash-completion-r1 eutils prefix
@@ -27,6 +27,7 @@ src_install() {
 	local sym bashcompdir
 
 	bashcompdir="$(get_bashcompdir)"
+	bashcompdir="${bashcompdir#${EPREFIX}}"
 	insinto "${bashcompdir}"
 	doins gentoo repoman layman
 	for sym in emerge ebuild rc rc-status rc-update gcc-config \
