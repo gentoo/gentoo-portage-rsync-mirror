@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.271 2013/08/11 06:56:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.272 2013/08/14 03:56:38 williamh Exp $
+
+  14 Aug 2013; William Hubbs <williamh@gentoo.org> metadata.xml,
+  openrc-9999.ebuild:
+  adjustments for separating netifrc: add a temporary pdepend with a use flag to
+  bring it in and add warnings about both network use flags missing.
 
   11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> openrc-0.11.8.ebuild,
   openrc-9999.ebuild:

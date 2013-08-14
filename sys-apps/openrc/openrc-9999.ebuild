@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.125 2013/08/11 06:56:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.126 2013/08/14 03:56:38 williamh Exp $
 
 EAPI=5
 
@@ -19,8 +19,8 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="debug elibc_glibc ncurses pam newnet prefix selinux static-libs tools
-	unicode kernel_linux kernel_FreeBSD"
+IUSE="debug elibc_glibc ncurses pam newnet prefix +netifrc selinux static-libs
+	tools unicode kernel_linux kernel_FreeBSD"
 
 COMMON_DEPEND=">=sys-apps/baselayout-2.1-r1
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
@@ -43,9 +43,10 @@ RDEPEND="${COMMON_DEPEND}
 		kernel_FreeBSD? ( sys-freebsd/freebsd-sbin )
 	)"
 
+PDEPEND="netifrc? ( net-misc/netifrc )"
+
 src_prepare() {
 	sed -i 's:0444:0644:' mk/sys.mk || die
-	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile || die #241342
 
 	if [[ ${PV} == "9999" ]] ; then
 		local ver="git-${EGIT_VERSION:0:6}"
@@ -119,9 +120,6 @@ src_install() {
 	cp -PR "${ED}"/etc/runlevels "${ED}"/usr/share/${PN} || die
 	rm -rf "${ED}"/etc/runlevels
 
-	# Install the default net configuration
-	doconfd conf.d/net
-
 	# Setup unicode defaults for silly unicode users
 	set_config_yes_no /etc/rc.conf unicode use unicode
 
@@ -177,14 +175,6 @@ add_boot_init_mit_config() {
 
 pkg_preinst() {
 	local f LIBDIR=$(get_libdir)
-
-	# default net script is just comments, so no point in biting people
-	# in the ass by accident.  we save in preinst so that the package
-	# manager doesnt go throwing etc-update crap at us -- postinst is
-	# too late to prevent that.  this behavior also lets us keep the
-	# file in the CONTENTS for binary packages.
-	[[ -e "${EROOT}"etc/conf.d/net ]] && \
-		cp "${EROOT}"etc/conf.d/net "${ED}"/etc/conf.d/
 
 	# avoid default thrashing in conf.d files when possible #295406
 	if [[ -e "${EROOT}"etc/conf.d/hostname ]] ; then
@@ -276,14 +266,18 @@ pkg_postinst() {
 	# update the dependency tree after touching all files #224171
 	[[ "${EROOT}" = "/" ]] && "${EROOT}/${LIBDIR}"/rc/bin/rc-depend -u
 
-	if use newnet; then
-		local netscript=network
-	else
-		local netscript=net.lo
+	if ! use newnet && ! use netifrc; then
+		ewarn "You have emerged OpenRc without network support. This"
+		ewarn "means you need to SET UP a network manager such as"
+	ewarn "	net-misc/netifrc, net-misc/dhcpcd, net-misc/wicd,"
+	ewarn "net-misc/NetworkManager, or net-misc/badvpn."
+	ewarn "Or, you have the option of emerging openrc with the newnet"
+	ewarn "use flag and configuring /etc/conf.d/network and"
+	ewarn "/etc/conf.d/staticroute if you only use static interfaces."
 	fi
 
-	if [ ! -e "${EROOT}"etc/runlevels/boot/${netscript} ]; then
-		ewarn "Please add the $netscript script to your boot runlevel"
+	if use newnet && [ ! -e "${EROOT}"etc/runlevels/boot/network ]; then
+		ewarn "Please add the network service to your boot runlevel"
 		ewarn "as soon as possible. Not doing so could leave you with a system"
 		ewarn "without networking."
 	fi

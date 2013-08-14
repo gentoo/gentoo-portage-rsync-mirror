@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.396 2013/08/09 02:39:14 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.397 2013/08/14 03:49:42 patrick Exp $
+
+*perl-5.18.1 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-5.18.1.ebuild:
+  Initial perl-5.18.1 ebuild borrowed from the perl-experimental overlay
 
   09 Aug 2013; Matt Turner <mattst88@gentoo.org> perl-5.16.2-r1.ebuild,
   perl-5.16.2.ebuild, perl-5.16.3.ebuild:

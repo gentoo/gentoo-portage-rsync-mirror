@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.405 2013/08/13 22:33:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.406 2013/08/14 03:40:22 radhermit Exp $
+
+  14 Aug 2013; Tim Harder <radhermit@gentoo.org> gvim-7.4.ebuild,
+  gvim-9999.ebuild:
+  Fix gvimrc and gvim.desktop file installs (bug #480938).
 
   13 Aug 2013; Tim Harder <radhermit@gentoo.org> gvim-7.4.ebuild,
   gvim-9999.ebuild:

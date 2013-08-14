@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.4 2013/08/13 22:33:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.5 2013/08/14 03:40:22 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -346,11 +346,11 @@ src_install() {
 	echo ".so vimdiff.1" > "${ED}"/usr/share/man/man1/gvimdiff.1
 
 	insinto /etc/vim
-	newins "${FILESDIR}"/gvimrc${GVIMRC_FILE_SUFFIX} gvimrc
+	newins "${FILESDIR}"/gvimrc-r1 gvimrc
 	eprefixify "${ED}"/etc/vim/gvimrc
 
 	insinto /usr/share/applications
-	newins "${FILESDIR}"/gvim.desktop${GVIM_DESKTOP_SUFFIX} gvim.desktop
+	newins "${FILESDIR}"/gvim.desktop-r2 gvim.desktop
 	insinto /usr/share/pixmaps
 	doins "${FILESDIR}"/gvim.xpm
 
