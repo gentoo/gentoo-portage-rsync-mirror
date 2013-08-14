@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.15.ebuild,v 1.1 2013/06/07 12:53:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.18.ebuild,v 1.1 2013/08/14 08:20:45 polynomial-c Exp $
 
 EAPI=4
 
-inherit pam versionator multilib eutils
+inherit pam versionator multilib eutils systemd
 
 MY_PV=${PV/_/}
 MY_P="${PN}-${MY_PV}"
@@ -22,6 +22,7 @@ IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc example
 DEPEND="dev-libs/popt
 	>=sys-libs/talloc-2.0.5
 	>=sys-libs/tdb-1.2.9
+	>=sys-libs/tevent-0.9.18
 	virtual/libiconv
 	ads? ( virtual/krb5 sys-fs/e2fsprogs
 		client? ( sys-apps/keyutils
@@ -434,6 +435,12 @@ src_install() {
 		"${ED}/usr/share"/{man,locale,} \
 		"${ED}/var"/{run,lib/samba/private,lib/samba,lib,cache/samba,cache,} \
 	#	|| die "tried to remove non-empty dirs, this seems like a bug in the ebuild"
+
+	systemd_dotmpfilesd "${FILESDIR}"/samba.conf
+	systemd_dounit "${FILESDIR}"/nmbd.service
+	systemd_dounit "${FILESDIR}"/smbd.{service,socket}
+	systemd_newunit "${FILESDIR}"/smbd_at.service 'smbd@.service'
+	systemd_dounit "${FILESDIR}"/winbindd.service
 }
 
 pkg_postinst() {
