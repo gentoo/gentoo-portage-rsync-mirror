@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8157 2013/08/14 05:55:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8158 2013/08/14 06:09:34 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Aug 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask app-dicts/fantasdic and associated deprecated ruby-gnome2 components.
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
   Add more perl virtuals to mask

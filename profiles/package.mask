@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15025 2013/08/14 05:55:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15026 2013/08/14 06:09:35 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (14 Aug 2013)
+# Last release in 2009. ruby18-only. Uses deprecated
+# ruby-gnome2 components that have been removed upstream
+# quite some time ago. No maintainer.
+# Also remove the deprecated ruby-gnome2 components.
+# Masked for removal in 30 days.
+app-dicts/fantasdic
+dev-ruby/ruby-gconf2
+dev-ruby/ruby-gnomecanvas2
+dev-ruby/ruby-libart2
+dev-ruby/ruby-libglade2
+
 
 # Patrick Lauer <patrick@gentoo.org> (14 Aug 2013)
 # Untested / unconfirmed major bump of perl #479064

@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/net-ping
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.21 2012/06/24 15:39:04 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.22 2013/08/14 06:02:05 patrick Exp $
+
+*net-ping-2.41 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +net-ping-2.41.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
