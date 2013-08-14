@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/prey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.13 2013/03/17 16:16:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.14 2013/08/14 15:49:24 tomwij Exp $
+
+  14 Aug 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Dropped herds and maintainers, assigned to maintainer-needed; as per
+  confirmation from all maintainers, see bug #451882.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
