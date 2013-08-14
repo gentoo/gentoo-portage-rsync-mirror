@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.07.ebuild,v 1.1 2013/06/17 07:21:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.07.ebuild,v 1.2 2013/08/14 12:51:40 patrick Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ S=${WORKDIR}
 
 RESTRICT="mirror fetch"
 QA_PREBUILT="/opt/${PN}/${PN}
-   /opt/${PN}/lib/*"
+	/opt/${PN}/lib/*"
 
 pkg_nofetch() {
 	einfo "Upstream has implement a mandatory clickthrough EULA for distfile download"

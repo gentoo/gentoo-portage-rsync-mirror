@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.48 2013/08/02 12:25:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.49 2013/08/14 12:59:43 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI=""
 ESVN_REPO_URI="http://llvm.org/svn/llvm-project/llvm/trunk"
 
 LICENSE="UoI-NCSA"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="clang debug doc gold +libffi multitarget ocaml python
 	+static-analyzer test udis86 video_cards_radeon"

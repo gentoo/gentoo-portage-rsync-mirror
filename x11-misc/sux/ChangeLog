@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/sux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.26 2013/06/26 20:03:59 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.27 2013/08/14 12:35:14 jer Exp $
+
+*sux-1.0-r4 (14 Aug 2013)
+
+  14 Aug 2013; Jeroen Roovers <jer@gentoo.org> +sux-1.0-r4.ebuild,
+  +files/sux-1.0-dash.patch, files/sux-1.0-r1.patch, files/sux-X11R6.patch,
+  metadata.xml:
+  Remove -l option to exec(1p) for POSIX conformance (e.g. dash, bug #473200).
+  Clean up metadata.xml.
 
   26 Jun 2013; Patrick Kursawe <phosphan@gentoo.org> metadata.xml:
   Dropping maintainership, see bug #473480

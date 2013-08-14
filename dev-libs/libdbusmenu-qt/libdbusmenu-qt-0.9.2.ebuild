@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.2.ebuild,v 1.10 2013/07/10 04:41:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.2.ebuild,v 1.11 2013/08/14 12:31:24 kensington Exp $
 
 EAPI=4
 
@@ -28,7 +28,8 @@ IUSE="debug doc"
 
 RDEPEND="
 	>=dev-qt/qtcore-${QT_DEPEND}:4
-	>=dev-qt/qtgui-${QT_DEPEND}:4[dbus(+)]
+	>=dev-qt/qtdbus-${QT_DEPEND}:4
+	>=dev-qt/qtgui-${QT_DEPEND}:4
 "
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )

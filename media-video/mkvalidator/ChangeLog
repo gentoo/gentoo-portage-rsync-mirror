@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mkvalidator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvalidator/ChangeLog,v 1.9 2013/07/21 09:02:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvalidator/ChangeLog,v 1.10 2013/08/14 12:55:37 patrick Exp $
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> mkvalidator-0.4.0.ebuild:
+  Whitespace
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffdiaporama
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.12 2013/08/11 22:49:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.13 2013/08/14 12:56:48 patrick Exp $
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> ffdiaporama-1.6.ebuild:
+  Whitespace
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org> ffdiaporama-1.6.ebuild:
   depend on ffmpeg:0

@@ -1,5 +1,5 @@
---- a/sux 2001-08-22 18:09:06.000000000 +0200
-+++ b/sux  2003-04-28 16:25:09.000000000 +0200
+--- a/sux
++++ b/sux
 @@ -29,7 +29,6 @@
  # are on NFS. In such a case, change the default to copy-cookies.
  sux_root_cookie_transfer="c"

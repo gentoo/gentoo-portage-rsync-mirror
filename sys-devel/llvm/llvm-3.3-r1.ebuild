@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.9 2013/08/02 12:25:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.10 2013/08/14 12:59:43 mgorny Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
 	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="clang debug doc gold kernel_FreeBSD +libffi multitarget ocaml python
 	+static-analyzer test udis86 video_cards_radeon"

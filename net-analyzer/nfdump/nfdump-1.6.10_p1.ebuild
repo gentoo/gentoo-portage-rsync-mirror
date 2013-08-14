@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.8.ebuild,v 1.2 2012/11/05 12:53:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.10_p1.ebuild,v 1.1 2013/08/14 12:48:31 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils
 
 MY_P="${P/_/}"
@@ -13,16 +13,14 @@ SRC_URI="mirror://sourceforge/nfdump/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-# Fails to build readpcap:
-# https://sourceforge.net/tracker/?func=detail&aid=2996582&group_id=119350&atid=683752
-IUSE="compat15 debug ftconv nfprofile nftrack sflow"
+IUSE="compat15 debug ftconv nfprofile nftrack readpcap sflow"
 
 CDEPEND="
 	ftconv? ( sys-libs/zlib net-analyzer/flow-tools )
 	nfprofile? ( net-analyzer/rrdtool )
 	nftrack? ( net-analyzer/rrdtool )
+	readpcap? ( net-libs/libpcap )
 "
-#	readpcap? ( net-libs/libpcap )"
 DEPEND="
 	${CDEPEND}
 	sys-devel/flex
@@ -57,5 +55,6 @@ src_configure() {
 		$(use nftrack && echo --enable-nftrack) \
 		$(use_enable compat15) \
 		$(use_enable debug devel) \
+		$(use_enable readpcap) \
 		$(use_enable sflow)
 }
