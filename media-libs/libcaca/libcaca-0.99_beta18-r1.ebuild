@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r1.ebuild,v 1.3 2013/08/13 15:12:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r1.ebuild,v 1.4 2013/08/14 18:51:15 aballier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -37,8 +37,8 @@ DEPEND="${COMMON_DEPEND}
 	doc? (
 		app-doc/doxygen
 		virtual/latex-base
-		dev-texlive/texlive-fontsrecommended
-		dev-texlive/texlive-latexextra
+		>=dev-texlive/texlive-fontsrecommended-2012
+		>=dev-texlive/texlive-latexextra-2012
 		dev-tex/xcolor
 	)
 	java? ( >=virtual/jdk-1.5 )
@@ -73,7 +73,7 @@ src_prepare() {
 		append-cflags -DX_DISPLAY_MISSING
 	fi
 
-	epatch "${FILESDIR}/${P}-latex_hacks.patch"
+	has_version '>=dev-texlive/texlive-latex-2013' && epatch "${FILESDIR}/${P}-latex_hacks.patch"
 
 	eautoreconf
 
