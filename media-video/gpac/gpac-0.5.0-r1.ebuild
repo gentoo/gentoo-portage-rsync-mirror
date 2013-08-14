@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.11 2013/08/14 21:00:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0-r1.ebuild,v 1.2 2013/08/14 21:28:09 aballier Exp $
 
 EAPI=4
 
@@ -58,7 +58,6 @@ my_use() {
 
 src_prepare() {
 	epatch	"${FILESDIR}"/110_all_implicitdecls.patch \
-		"${FILESDIR}"/160_all_externalamr.patch \
 		"${FILESDIR}"/210_all_system_libogg.patch \
 		"${FILESDIR}"/${P}-build-fixes.patch \
 		"${FILESDIR}"/${P}-libav9.patch \
