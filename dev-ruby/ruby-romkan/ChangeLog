@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-romkan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.38 2013/08/03 06:50:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.39 2013/08/14 06:53:54 graaff Exp $
+
+  14 Aug 2013; Hans de Graaff <graaff@gentoo.org> -ruby-romkan-0.4-r2.ebuild:
+  Cleanup.
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ruby-romkan-0.4-r4.ebuild:
   Stable for sparc, wrt bug #475650

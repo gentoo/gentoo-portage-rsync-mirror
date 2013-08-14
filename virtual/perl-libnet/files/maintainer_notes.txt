@@ -1,0 +1,60 @@
+Tracking perl5 vs libnet is hard, because the dist itself doesn't contain
+any modules that track the libnet version.
+
+So to work out which version of libnet "perl" ships, you have to compare a
+list of modules.
+
+Net::Cmd
+Net::Config
+Net::Domain
+Net::FTP
+Net::NNTP
+Net::Netrc
+Net::POP3
+Net::SMTP
+Net::Time
+
+Perl 5.16:
+
+  Net::Cmd 2.29
+  Net::Config 1.11
+  Net::Domain 2.20
+  Net::FTP 2.77
+  Net::FTP::dataconn 0.11
+  Net::NNTP 2.24
+  Net::Netrc 2.12
+  Net::POP3 2.29
+  Net::SMTP 2.31
+  Net::Time 2.10
+
+Perl 5.18:
+
+  Net::Cmd 2.29
+  Net::Config 1.11
+  Net::Domain 2.20
+  Net::FTP 2.77
+  Net::FTP::dataconn 0.11
+  Net::NNTP 2.24
+  Net::Netrc 2.12
+  Net::POP3 2.29
+  Net::SMTP 2.31
+  Net::Time 2.10
+
+
+libnet-1.23 vs libnet-1.22:
+
+  Net::Cmd 2.30 <=> 2.29
+  Net::Config 1.12 <=> 1.11
+  Net::Domain 2.22 <=> 2.20
+  Net::FTP::dataconn 0.12 <=> 0.11
+  Net::FTP 2.78 <=> 2.77
+  Net::NNTP 2.25 <=> 2.24
+  Net::Netrc 2.14 <=> 2.12
+  Net::POP3 2.30 <=> 2.29
+  Net::SMTP 2.32 <=> 2.31
+
+
+Therefor:
+
+  perl-5.16* == libnet-1.22
+  perl-5.18* == libnet-1.22

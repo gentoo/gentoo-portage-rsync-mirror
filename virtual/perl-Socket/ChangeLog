@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Socket
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.8 2012/12/27 18:52:07 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.9 2013/08/14 06:34:22 patrick Exp $
+
+*perl-Socket-2.9.0 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-Socket-2.9.0.ebuild:
+  Bump
 
 *perl-Socket-2.8.0 (27 Dec 2012)
 

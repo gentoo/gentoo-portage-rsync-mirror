@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-libnet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.42 2013/08/14 05:38:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.43 2013/08/14 06:46:21 patrick Exp $
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +files/maintainer_notes.txt:
+  Adding maintainer notes from perl-exp overlay
 
 *perl-libnet-1.220.0-r2 (14 Aug 2013)
 
