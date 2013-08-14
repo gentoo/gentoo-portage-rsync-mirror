@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.313 2013/08/07 11:31:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.315 2013/08/14 16:17:19 ssuominen Exp $
+
+  14 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/lvm2-2.02.95-udev185.patch, -lvm2-2.02.98.ebuild,
+  -lvm2-2.02.99-r1.ebuild, -lvm2-2.02.99.ebuild:
+  old
+
+*lvm2-2.02.99-r2 (14 Aug 2013)
+
+  14 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +files/lvm2-2.02.99-fix-mda-offset-size-overflow-4g-with-lvmetad.patch,
+  +lvm2-2.02.99-r2.ebuild:
+  Upstream patch for "Fix metadata area offset/size overflow if it's >= 4g and
+  while using lvmetad."
 
   07 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.99-r1.ebuild:
   Include check for value of UEVENT_HELPER_PATH wrt #479756 by Alexander Tsoy.

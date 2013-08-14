@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99-r1.ebuild,v 1.3 2013/08/07 11:31:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99-r2.ebuild,v 1.1 2013/08/14 16:14:29 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev systemd
@@ -83,6 +83,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.99-selinux-static.patch #439414
 
 	sed -i -e 's:/usr/sbin/lvm:/sbin/lvm:' scripts/lvm2_activation_generator_systemd_red_hat.c || die #479626
+
+	# From upstream:
+	epatch "${FILESDIR}"/${PN}-2.02.99-fix-mda-offset-size-overflow-4g-with-lvmetad.patch
 
 	# Fix calling AR directly with USE static, bug #444082, convert to patch and forward to upstream
 	if use static ; then
