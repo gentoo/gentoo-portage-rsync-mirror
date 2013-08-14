@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5086.ebuild,v 1.1 2013/08/04 20:42:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5086.ebuild,v 1.2 2013/08/14 09:16:56 patrick Exp $
 
 EAPI=5
 
@@ -187,7 +187,7 @@ grub_configure() {
 		${platform:+--with-platform=}${platform}
 
 		# Let configure detect this where supported
-		$(usex efiemu '' '--disable-efiemu') 
+		$(usex efiemu '' '--disable-efiemu')
 	)
 
 	if use multislot; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.7.ebuild,v 1.1 2013/07/08 14:29:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.7.ebuild,v 1.2 2013/08/14 09:30:34 patrick Exp $
 
 EAPI="5"
 
@@ -49,7 +49,7 @@ src_install() {
 	java-pkg_dojar "lib/${PN}.jar"
 
 	dodoc doc/*.txt
-	
+
 	if use doc; then
 		dohtml -r doc/manual doc/tutorial
 		java-pkg_dojavadoc doc/api

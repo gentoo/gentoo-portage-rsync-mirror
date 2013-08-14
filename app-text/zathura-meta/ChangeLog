@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.9 2013/06/23 13:06:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.10 2013/08/14 09:27:31 patrick Exp $
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> zathura-meta-9999.ebuild:
+  Whitespace
 
 *zathura-meta-9999 (23 Jun 2013)
 

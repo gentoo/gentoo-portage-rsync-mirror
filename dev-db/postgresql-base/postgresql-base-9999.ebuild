@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.7 2013/07/25 03:44:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.8 2013/08/14 09:28:16 patrick Exp $
 
 EAPI="4"
 
@@ -83,8 +83,8 @@ src_unpack() {
 
 src_prepare() {
 	# silly version changes
-	sed -i -e 's/2012/2013/' -e 's/9.3beta2/9.4devel/' "${WORKDIR}/autoconf.patch" || die 
-	
+	sed -i -e 's/2012/2013/' -e 's/9.3beta2/9.4devel/' "${WORKDIR}/autoconf.patch" || die
+
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/base.patch" \
 		"${WORKDIR}/bool.patch"

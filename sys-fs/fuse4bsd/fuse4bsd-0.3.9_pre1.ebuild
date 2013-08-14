@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.9_pre1.ebuild,v 1.1 2013/05/04 12:41:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.9_pre1.ebuild,v 1.2 2013/08/14 09:16:12 patrick Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ src_compile() {
 		KMODDIR=/boot/modules BINDIR=/usr/sbin MANDIR=/usr/share/man/man \
 		MOUNT="${WORKDIR}/sbin/mount" \
 		|| die "$(get_bmake) failed"
-	
+
 	if use doc; then
 		cd "${S}"/doc
 		$(get_bmake) all || die "$(get_bmake) failed"

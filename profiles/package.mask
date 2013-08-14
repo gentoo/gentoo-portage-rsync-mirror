@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15026 2013/08/14 06:09:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15027 2013/08/14 09:09:55 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,6 +38,7 @@
 # Also remove the deprecated ruby-gnome2 components.
 # Masked for removal in 30 days.
 app-dicts/fantasdic
+rox-extra/rox-rename
 dev-ruby/ruby-gconf2
 dev-ruby/ruby-gnomecanvas2
 dev-ruby/ruby-libart2

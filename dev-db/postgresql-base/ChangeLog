@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.249 2013/07/25 03:44:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.250 2013/08/14 09:28:16 patrick Exp $
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> postgresql-base-9999.ebuild:
+  Whitespace
 
   25 Jul 2013; Patrick Lauer <patrick@gentoo.org> postgresql-base-9999.ebuild:
   Make -9999 compile again

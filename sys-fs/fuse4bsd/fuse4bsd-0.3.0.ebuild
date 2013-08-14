@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.5 2007/03/02 12:44:36 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.6 2013/08/14 09:16:12 patrick Exp $
 
 inherit portability toolchain-funcs eutils flag-o-matic
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.3 2013/04/25 19:46:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.4 2013/08/14 09:23:47 patrick Exp $
 
 EAPI=5
 
@@ -26,17 +26,17 @@ RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
 		x11-libs/libXinerama[${MULTILIB_USEDEP}] )
 	!amd64? (
 		dev-libs/libxml2
-		cairo? ( x11-libs/cairo ) 
+		cairo? ( x11-libs/cairo )
 		cups? ( net-print/cups )
 		qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
 		raw? ( media-libs/libraw )
 		)
-	amd64? ( 
+	amd64? (
 		abi_x86_64? (
 			dev-libs/libxml2
 			|| ( media-libs/lcms:0 media-libs/lcms:2 )
 			media-libs/libpng:0
-			cairo? ( x11-libs/cairo ) 
+			cairo? ( x11-libs/cairo )
 			cups? ( net-print/cups )
 			qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
 			raw? ( media-libs/libraw )
@@ -55,7 +55,7 @@ DEPEND="${RDEPEND}
 	app-doc/doxygen"
 
 RESTRICT="test"
-REQUIRED_USE="amd64? ( exif? ( !abi_x86_32 ) 
+REQUIRED_USE="amd64? ( exif? ( !abi_x86_32 )
 	raw? ( !abi_x86_32 ) )"
 CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindXcm FindCUPS"
 

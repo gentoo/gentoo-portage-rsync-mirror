@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.1.ebuild,v 1.1 2013/07/14 21:28:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.1.ebuild,v 1.2 2013/08/14 09:18:44 patrick Exp $
 
 EAPI=5
 
@@ -36,6 +36,6 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" MANDIR=/usr/share/man
 	#dosbin cache_check # For testsuite, not use yet
-	dobin thin-provisioning/thin_metadata_size 
+	dobin thin-provisioning/thin_metadata_size
 	dodoc README.md TODO.org
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.5.2-r1.ebuild,v 1.1 2013/08/03 19:47:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.5.2-r1.ebuild,v 1.2 2013/08/14 09:12:44 patrick Exp $
 
 EAPI=5
 
@@ -521,7 +521,7 @@ pkg_postinst() {
 		ewarn "It is recommended that you migrate any VMs that may be running"
 		ewarn "on qemu-kvm to a host with a newer qemu and regenerate"
 		ewarn "any saved states with a newer qemu."
-		ewarn 
+		ewarn
 		ewarn "qemu-kvm was the primary qemu provider in Gentoo through 1.2.x"
 	fi
 
