@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.153 2013/08/06 20:14:54 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.155 2013/08/14 04:50:22 radhermit Exp $
+
+*cryptsetup-1.6.2 (14 Aug 2013)
+
+  14 Aug 2013; Tim Harder <radhermit@gentoo.org> +cryptsetup-1.6.2.ebuild:
+  Version bump.
+
+  14 Aug 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Simplify USE flag descriptions.
 
   06 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
   +files/cryptsetup-1.6.1-openssl-static.patch, cryptsetup-1.6.1.ebuild:

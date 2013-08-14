@@ -1,0 +1,9 @@
+# ChangeLog for virtual/perl-Filter-Simple
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter-Simple/ChangeLog,v 1.1 2013/08/14 04:46:41 patrick Exp $
+
+*perl-Filter-Simple-0.890.0 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +perl-Filter-Simple-0.890.0.ebuild:
+  Import from perl-experimental overlay

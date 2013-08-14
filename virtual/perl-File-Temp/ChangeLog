@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.59 2013/02/18 23:19:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.60 2013/08/14 04:43:59 patrick Exp $
+
+*perl-File-Temp-0.230.0 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +perl-File-Temp-0.230.0.ebuild:
+  Import from perl-experimental overlay
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> perl-File-Temp-0.220.0-r2.ebuild:
   Add ~arm-linux keyword.
