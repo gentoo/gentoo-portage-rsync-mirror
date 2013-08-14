@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.37 2013/06/17 14:04:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.38 2013/08/14 13:03:23 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI=""
 ESVN_REPO_URI="http://llvm.org/svn/llvm-project/cfe/trunk"
 
 LICENSE="UoI-NCSA"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="debug multitarget python +static-analyzer test"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999-r100.ebuild,v 1.3 2013/08/11 00:46:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999-r100.ebuild,v 1.4 2013/08/14 13:03:23 mgorny Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://clang.llvm.org/"
 SRC_URI=""
 
 LICENSE="UoI-NCSA"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="debug multitarget python +static-analyzer"
 
