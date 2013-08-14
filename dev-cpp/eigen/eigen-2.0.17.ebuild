@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.17.ebuild,v 1.9 2013/03/02 19:49:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.17.ebuild,v 1.11 2013/08/14 09:45:21 kensington Exp $
 
 EAPI=4
 
@@ -26,6 +26,9 @@ RDEPEND="${COMMON_DEPEND}
 	!dev-cpp/eigen:0"
 
 MAKEOPTS+=" -j1"
+
+# bugs 426236, 455460, 467288
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}

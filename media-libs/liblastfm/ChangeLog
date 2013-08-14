@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/liblastfm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.23 2013/05/01 12:07:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.25 2013/08/14 09:58:19 jlec Exp $
+
+  14 Aug 2013; Justin Lecher <jlec@gentoo.org> liblastfm-1.0.7.ebuild,
+  -files/liblastfm-1.0.7-QT4_BUILD.patch:
+  Drop patch in favour of cmake-utils.eclass function, thanks kensington for
+  the hint
+
+*liblastfm-1.0.7 (14 Aug 2013)
+
+  14 Aug 2013; Justin Lecher <jlec@gentoo.org> +liblastfm-1.0.7.ebuild,
+  +files/liblastfm-1.0.7-QT4_BUILD.patch, metadata.xml:
+  Version Bump
 
   01 May 2013; Johannes Huber <johu@gentoo.org> -liblastfm-1.0.2.ebuild:
   Remove old.

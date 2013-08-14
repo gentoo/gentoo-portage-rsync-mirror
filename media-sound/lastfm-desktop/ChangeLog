@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/lastfm-desktop
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-desktop/ChangeLog,v 1.1 2013/08/14 10:00:29 jlec Exp $
+
+*lastfm-desktop-2.1.35 (14 Aug 2013)
+
+  14 Aug 2013; Justin Lecher <jlec@gentoo.org> +lastfm-desktop-2.1.35.ebuild,
+  +metadata.xml:
+  New version of the lastfm player, #453566
+
