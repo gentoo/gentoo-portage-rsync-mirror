@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.20 2013/07/25 11:50:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.21 2013/08/14 11:48:21 dilfridge Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="m68k s390"
+KEYWORDS="m68k"
 IUSE="acl avahi dbus debug +filters gnutls java +jpeg kerberos ldap pam perl
 	+png python selinux slp +ssl static-libs +threads +tiff usb X xinetd"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/outwiker-1.7.0.ebuild,v 1.1 2012/12/26 09:32:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/outwiker-1.7.0.ebuild,v 1.2 2013/08/14 11:31:49 patrick Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.7"
@@ -34,5 +34,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-        python_mod_cleanup "${ED}/usr/share/${PN}"
+	python_mod_cleanup "${ED}/usr/share/${PN}"
 }

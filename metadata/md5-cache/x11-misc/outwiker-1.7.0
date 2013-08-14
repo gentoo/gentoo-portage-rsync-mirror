@@ -9,4 +9,4 @@ RDEPEND=dev-python/pywebkitgtk dev-python/wxpython =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=http://jenyay.net/uploads/Soft/Outwiker/outwiker-1.7.0-src-full.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=2587a29d9f01af6be8339af231aa7944
+_md5_=5f84093a00ca862e187ee4f35c27e37e
