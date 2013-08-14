@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.2.ebuild,v 1.9 2013/07/13 08:43:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.2.ebuild,v 1.10 2013/08/14 20:22:30 grobian Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cryptopp/cryptopp${PV//.}.zip"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86 ~x64-macos"
 IUSE="static-libs"
 
 DEPEND="app-arch/unzip
@@ -22,14 +22,23 @@ S=${WORKDIR}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make.patch
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		sed -i \
+			-e '/^LIBTOOL =/s/= /= g/' \
+			-e 's/libcrypto++\.so\.0\.0\.0/libcrypto++.0.0.0.dylib/' \
+			-e 's/libcryptopp\.so\([\.0]\+\)\?/libcryptopp\1.dylib/' \
+			GNUmakefile || die # 479554
+	fi
 }
 
 src_compile() {
 	# higher optimizations cause problems
 	replace-flags -O? -O1
 	filter-flags -fomit-frame-pointer
+	# ASM isn't Darwin/Mach-O ready, #479554, buildsys doesn't grok CPPFLAGS
+	[[ ${CHOST} == *-darwin* ]] && append-flags -DCRYPTOPP_DISABLE_X86ASM
 
-	emake -f GNUmakefile CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LIBDIR="$(get_libdir)"
+	emake -f GNUmakefile CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LIBDIR="$(get_libdir)" PREFIX="${EPREFIX}/usr"
 }
 
 src_test() {
@@ -47,6 +56,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="$(get_libdir)" install
+	emake DESTDIR="${D}" LIBDIR="$(get_libdir)" PREFIX="${EPREFIX}/usr" install
 	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.{a,la}
 }

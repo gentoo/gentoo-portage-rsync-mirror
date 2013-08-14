@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.85 2013/07/13 08:43:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.86 2013/08/14 20:22:30 grobian Exp $
+
+  14 Aug 2013; Fabian Groffen <grobian@gentoo.org> crypto++-5.6.2.ebuild:
+  Fixed and marked for ~x64-macos, bug #479554
 
   13 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> crypto++-5.6.2.ebuild:
   Add ~arm keyword, wrt bug #469294

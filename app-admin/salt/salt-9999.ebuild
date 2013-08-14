@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.6 2013/08/02 17:25:31 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.7 2013/08/14 20:14:36 chutzpah Exp $
 
 EAPI=5
 
@@ -52,6 +52,8 @@ python_prepare() {
 }
 
 python_install_all() {
+	distutils-r1_python_install_all
+
 	for s in minion master syndic; do
 		newinitd "${FILESDIR}"/${s}-initd-1 salt-${s}
 		newconfd "${FILESDIR}"/${s}-confd-1 salt-${s}

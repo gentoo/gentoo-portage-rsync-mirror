@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND=>=kde-base/smokeqt-4.11.0:4[aqua=,declarative?,opengl,phonon?,qscintilla?,qwt?,webkit?] >=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) declarative? ( >=dev-qt/qtdeclarative-4.8.0:4 ) >=dev-qt/qtopengl-4.8.0:4 ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+DESCRIPTION=Qt Ruby bindings
+EAPI=5
+HOMEPAGE=http://techbase.kde.org/Development/Languages/Ruby
+IUSE=debug phonon qscintilla qwt webkit declarative aqua elibc_FreeBSD ruby_targets_ruby19
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=>=kde-base/smokeqt-4.11.0:4[aqua=,declarative?,opengl,phonon?,qscintilla?,qwt?,webkit?] declarative? ( >=dev-qt/qtdeclarative-4.8.0:4 ) >=dev-qt/qtopengl-4.8.0:4 ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+SLOT=4
+SRC_URI=mirror://kde/stable/4.11.0/src/qtruby-4.11.0.tar.xz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	63afaaed8aa819fdcb814c7cd39495a2	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	gnome2-utils	794d2847b4af390a1e020924876c8297	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	kde4-base	684548af88a5862d20f84ed8a7bd6771	kde4-functions	15a03918f0eeff5a485782ae76d5b639	multilib	892e597faee02a5b94eb02ab512e7622	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=67593907a7633324d0152c8f467b2c93

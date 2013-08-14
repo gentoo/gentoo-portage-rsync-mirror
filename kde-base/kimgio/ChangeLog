@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/kimgio
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimgio/ChangeLog,v 1.1 2013/08/14 20:23:26 dilfridge Exp $
+
+*kimgio-4.11.0 (14 Aug 2013)
+
+  14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> +kimgio-4.11.0.ebuild:
+  Package split out in KDE SC 4.11
+

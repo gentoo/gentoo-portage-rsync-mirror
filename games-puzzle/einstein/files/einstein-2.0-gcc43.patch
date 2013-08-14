@@ -1,5 +1,5 @@
---- ../orig/einstein-2.0.dfsg.2/convert.h	2005-08-14 04:40:58.000000000 +0200
-+++ convert.h	2007-08-31 11:33:06.000000000 +0200
+--- einstein-2.0.orig/convert.h
++++ einstein-2.0/convert.h
 @@ -5,6 +5,7 @@
  #include <iostream>
  #include <sstream>
@@ -9,8 +9,8 @@
  #include "exceptions.h"
  #include "unicode.h"
 
---- ../orig/einstein-2.0.dfsg.2/unicode.cpp	2005-08-14 04:40:58.000000000 +0200
-+++ ./unicode.cpp	2008-01-26 11:49:10.000000000 +0100
+--- einstein-2.0.orig/unicode.cpp
++++ einstein-2.0/unicode.cpp
 @@ -1,5 +1,6 @@
  #include <wchar.h>
  #include <stdlib.h>

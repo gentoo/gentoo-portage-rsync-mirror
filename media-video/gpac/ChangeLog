@@ -1,6 +1,13 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.107 2013/08/14 19:56:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.109 2013/08/14 20:25:17 aballier Exp $
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild:
+  Pass extra-cflags to configure instead, bug #449238 by Stef Simoens.
+  Simplifies the ebuild.
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild:
+  factorize some code and sort alphabetically econf args
 
   14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild:
   depend on virtual/glu, bug #466632 by andcycle-gentoo.bugs@andcycle.idv.tw

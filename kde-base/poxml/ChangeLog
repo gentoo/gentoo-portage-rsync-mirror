@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/poxml
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/ChangeLog,v 1.3 2013/08/14 20:24:05 dilfridge Exp $
+
+*poxml-4.11.0 (14 Aug 2013)
+
+  14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> +poxml-4.11.0.ebuild:
+  Package split out in KDE SC 4.11
+

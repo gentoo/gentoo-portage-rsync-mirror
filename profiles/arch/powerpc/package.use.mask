@@ -1,11 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.174 2013/08/14 19:50:39 dilfridge Exp $
-
-# Andreas K. Huettell <dilfridge@gentoo.org> (14 Aug 2013)
-# Unkeyworded deps
-kde-base/kdepim-runtime facebook
->=kde-base/krdc-4.11.0 rdesktop
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.175 2013/08/14 20:21:47 ago Exp $
 
 # Nathan Phillip Brink <binki@gentoo.org> (31 Jul 2013)
 # app-text/discount missing ~ppc.

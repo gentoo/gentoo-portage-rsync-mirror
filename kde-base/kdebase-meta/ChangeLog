@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.286 2013/08/02 17:21:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.287 2013/08/14 20:24:00 dilfridge Exp $
+
+*kdebase-meta-4.11.0 (14 Aug 2013)
+
+  14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdebase-meta-4.11.0.ebuild:
+  Version bump KDE SC 4.11.0
 
   02 Aug 2013; Johannes Huber <johu@gentoo.org> -kdebase-meta-4.10.4.ebuild:
   Remove KDE SC 4.10.4
