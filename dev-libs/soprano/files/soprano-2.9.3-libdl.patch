@@ -1,0 +1,28 @@
+From 4dc66bee545e1aeb4e61a9fdcc35b28ddfeee141 Mon Sep 17 00:00:00 2001
+From: Yuta SATOH <nigoro.gentoo@0x100.com>
+Date: Thu, 15 Aug 2013 02:27:20 +1000
+Subject: [PATCH] Use CMAKE_DL_LIBS instead of hardcoding dl.
+
+This fixes build on systems that do not provide a separate libdl.
+
+REVIEW: 111813
+---
+ cmake/modules/FindRedland.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/modules/FindRedland.cmake b/cmake/modules/FindRedland.cmake
+index 4eddb84..b5b74f6 100644
+--- a/cmake/modules/FindRedland.cmake
++++ b/cmake/modules/FindRedland.cmake
+@@ -108,7 +108,7 @@ if(NOT WIN32)
+     try_run(_TEST_EXITCODE _TEST_COMPILED
+       "${CMAKE_CURRENT_BINARY_DIR}"
+       "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/CheckLibraryLoads.c"
+-      CMAKE_FLAGS "-DLINK_LIBRARIES=dl"
++      CMAKE_FLAGS "-DLINK_LIBRARIES=${CMAKE_DL_LIBS}"
+       RUN_OUTPUT_VARIABLE _OUTPUT
+       ARGS ${_REDLAND_STORAGE_LIBS}
+     )
+-- 
+1.8.3.2
+

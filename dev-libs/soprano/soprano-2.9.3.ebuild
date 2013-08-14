@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.9.3.ebuild,v 1.1 2013/07/12 17:02:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.9.3.ebuild,v 1.2 2013/08/14 16:58:35 kensington Exp $
 
 EAPI=5
 
@@ -47,6 +47,7 @@ CMAKE_IN_SOURCE_BUILD="1"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.4.4-make-broken-redland-fatal.cmake"
+	"${FILESDIR}/${P}-libdl.patch"
 )
 
 pkg_setup() {
