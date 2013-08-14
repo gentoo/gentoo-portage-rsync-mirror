@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.74 2013/05/04 02:08:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.75 2013/08/14 05:55:19 graaff Exp $
+
+  14 Aug 2013; Hans de Graaff <graaff@gentoo.org> -ruby-atk-1.0.3.ebuild,
+  -ruby-atk-1.1.4.ebuild, -ruby-atk-1.1.5.ebuild, -ruby-atk-1.1.6.ebuild:
+  Cleanup.
 
 *ruby-atk-1.2.6 (04 May 2013)
 

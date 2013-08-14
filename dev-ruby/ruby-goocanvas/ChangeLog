@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-goocanvas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ChangeLog,v 1.23 2013/05/04 03:24:18 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ChangeLog,v 1.24 2013/08/14 05:49:39 graaff Exp $
+
+  14 Aug 2013; Hans de Graaff <graaff@gentoo.org> -ruby-goocanvas-1.0.3.ebuild,
+  -ruby-goocanvas-1.1.4.ebuild, -ruby-goocanvas-1.1.5.ebuild,
+  -ruby-goocanvas-1.1.6.ebuild:
+  Cleanup.
 
 *ruby-goocanvas-1.2.6 (04 May 2013)
 

@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for digest-base
+KEYWORDS=~amd64 ~x86
+RDEPEND=|| ( =dev-lang/perl-5.18* =dev-lang/perl-5.16* ~perl-core/digest-base-1.170.0 )
+SLOT=0
+_md5_=ba3f31b11fe1d17112765eaf8f87c138

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15023 2013/08/14 05:28:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15025 2013/08/14 05:55:04 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -61,6 +61,10 @@
 =virtual/perl-libnet-1.220.0-r2
 =virtual/perl-parent-0.225.0-r4
 =virtual/perl-threads-1.860.0-r2
+=virtual/perl-ExtUtils-CBuilder-0.280.210
+=virtual/perl-IO-1.280.0
+=virtual/perl-Module-CoreList-2.900.0
+
 
 # Justin Lecher <jlec@gentoo.org> (11 Aug 2013)
 # Not needed anymore

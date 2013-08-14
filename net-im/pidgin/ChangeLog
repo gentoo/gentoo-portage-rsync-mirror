@@ -1,6 +1,15 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.311 2013/08/10 02:08:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.312 2013/08/14 05:45:02 polynomial-c Exp $
+
+*pidgin-2.10.7-r5 (14 Aug 2013)
+*pidgin-2.10.7-r4 (14 Aug 2013)
+
+  14 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> -pidgin-2.10.7-r1.ebuild,
+  -pidgin-2.10.7-r2.ebuild, -pidgin-2.10.7-r3.ebuild, +pidgin-2.10.7-r4.ebuild,
+  +pidgin-2.10.7-r5.ebuild:
+  Revbumps for perl stabilization. Committed -r4 with correct perl dependencies
+  straight to stable.
 
 *pidgin-2.10.7-r3 (10 Aug 2013)
 

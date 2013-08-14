@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-parent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.25 2013/02/18 20:30:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.26 2013/08/14 05:39:07 patrick Exp $
+
+*perl-parent-0.225.0-r4 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +perl-parent-0.225.0-r4.ebuild:
+  Import from perl-experimental overlay
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-parent-0.225.0-r3.ebuild:
   Stable for ppc, wrt bug #458146

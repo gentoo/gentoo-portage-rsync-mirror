@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-net-ping
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.21 2011/06/28 19:55:13 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.22 2013/08/14 05:56:01 patrick Exp $
+
+*perl-net-ping-2.410.0 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-net-ping-2.410.0.ebuild:
+  Bump for perl 5.18
 
   28 Jun 2011; Torsten Veller <tove@gentoo.org> perl-net-ping-2.36.ebuild:
   Add perl-5.12.4 virtual
@@ -74,4 +79,3 @@
   07 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +perl-net-ping-2.31.ebuild:
   New virtual for perl-core/net-ping
-
