@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Encode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.56 2013/03/12 04:34:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.57 2013/08/14 07:14:43 patrick Exp $
+
+*perl-Encode-2.510.0 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-Encode-2.510.0.ebuild:
+  Bump
 
 *perl-Encode-2.490.0 (12 Mar 2013)
 

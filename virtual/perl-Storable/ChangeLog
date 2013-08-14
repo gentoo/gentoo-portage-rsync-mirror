@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Storable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/ChangeLog,v 1.55 2013/03/02 16:36:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/ChangeLog,v 1.56 2013/08/14 07:20:51 patrick Exp $
+
+*perl-Storable-2.450.0 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-Storable-2.450.0.ebuild:
+  Bump
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org> perl-Storable-2.390.0.ebuild:
   Stable for sh, wrt bug #458122

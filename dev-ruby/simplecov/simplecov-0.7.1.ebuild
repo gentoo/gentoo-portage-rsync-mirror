@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/simplecov-0.7.1.ebuild,v 1.1 2013/04/30 13:52:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/simplecov-0.7.1.ebuild,v 1.2 2013/08/14 07:30:43 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -12,8 +12,8 @@ RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem
 
-DESCRIPTION="Generates universally unique identifiers (UUIDs) for use in distributed applications"
-HOMEPAGE="http://github.com/assaf/uuid"
+DESCRIPTION="Code coverage with a configuration library and automatic merging of coverage across test suites"
+HOMEPAGE="https://www.ruby-toolbox.com/projects/simplecov https://github.com/colszowka/simplecov"
 LICENSE="MIT"
 
 KEYWORDS="~amd64"

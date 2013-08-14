@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/cgminer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.36 2013/08/13 12:22:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.38 2013/08/14 07:03:59 blueness Exp $
+
+  14 Aug 2013; Anthony G. Basile <blueness@gentoo.org> -cgminer-3.3.0.ebuild,
+  -cgminer-3.3.1.ebuild, -cgminer-3.3.2.ebuild:
+  Remove older unstable versions
+
+*cgminer-3.3.4 (14 Aug 2013)
+
+  14 Aug 2013; Anthony G. Basile <blueness@gentoo.org> +cgminer-3.3.4.ebuild,
+  cgminer-3.3.3.ebuild:
+  Version bump
 
 *cgminer-3.3.3 (13 Aug 2013)
 *cgminer-3.3.2 (13 Aug 2013)
