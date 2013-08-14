@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2x
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.29 2013/01/03 09:02:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.30 2013/08/14 12:09:36 xmw Exp $
+
+  14 Aug 2013; Michael Weber <xmw@gentoo.org> x2x-1.27-r3.ebuild:
+  Adding ~arm keywords
 
   03 Jan 2013; Jeroen Roovers <jer@gentoo.org> -x2x-1.27-r1.ebuild,
   -x2x-1.27-r2.ebuild, x2x-1.27-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r3.ebuild,v 1.7 2013/01/03 09:02:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r3.ebuild,v 1.8 2013/08/14 12:09:36 xmw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.digital.com/pub/Digital/SRC/x2x/${P}.tar.gz
 	mirror://gentoo/${P}-license.patch.gz
 	mirror://gentoo/${P}-keymap.diff.gz"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc x86"
+KEYWORDS="amd64 ~arm ~mips ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
