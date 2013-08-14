@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4-r1.ebuild,v 1.14 2013/08/11 20:42:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4-r1.ebuild,v 1.15 2013/08/14 04:19:30 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2" # Avoid runtime dependency on python when USE=test
@@ -26,6 +26,7 @@ RDEPEND="virtual/libiconv
 		>=dev-libs/libelf-0.8.12
 		>=sys-freebsd/freebsd-lib-9.2_rc1
 		)
+	selinux? ( sys-libs/libselinux )
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )
 	utils? ( >=dev-util/gdbus-codegen-${PV} )"

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.929 2013/08/13 16:17:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.930 2013/08/14 04:03:20 phajdan.jr Exp $
+
+  14 Aug 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-29.0.1547.41.ebuild:
+  Switch back to make build (ninja build has issues like bug #471272). Also do
+  not use system mesa, bug #475444 .
 
 *chromium-30.0.1588.0 (13 Aug 2013)
 

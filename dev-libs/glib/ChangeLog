@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.568 2013/08/11 20:42:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.569 2013/08/14 04:19:30 tetromino Exp $
+
+  14 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-2.32.4-r1.ebuild, glib-2.34.3.ebuild, glib-2.36.3.ebuild,
+  glib-2.36.3-r1.ebuild, glib-2.36.3-r2.ebuild:
+  Add missing libselinux dependency when USE=selinux. Disable selinux GIO
+  support for non-native multilib builds until libselinux gets a multilib
+  version (bug #480946, thanks to Alphat-PC).
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org> glib-2.32.4-r1.ebuild,
   glib-2.34.3.ebuild, glib-2.36.3.ebuild, glib-2.36.3-r1.ebuild,

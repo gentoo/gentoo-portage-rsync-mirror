@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3-r2.ebuild,v 1.3 2013/08/11 20:42:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3-r2.ebuild,v 1.4 2013/08/14 04:19:30 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -16,6 +16,7 @@ SLOT="2"
 IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
+# FIXME: want libselinux[${MULTILIB_USEDEP}] - bug #480960
 RDEPEND="
 	virtual/libiconv[${MULTILIB_USEDEP}]
 	virtual/libffi[${MULTILIB_USEDEP}]
@@ -25,6 +26,7 @@ RDEPEND="
 		>=dev-libs/libelf-0.8.12
 		>=sys-freebsd/freebsd-lib-9.2_rc1
 		)
+	selinux? ( sys-libs/libselinux )
 	xattr? ( sys-apps/attr[${MULTILIB_USEDEP}] )
 	fam? ( virtual/fam[${MULTILIB_USEDEP}] )
 	utils? (
@@ -175,6 +177,13 @@ multilib_src_configure() {
 
 	# Only used by the gresource bin
 	multilib_is_native_abi || myconf="${myconf} --disable-libelf"
+
+	# FIXME: change to "$(use_enable selinux)" when libselinux is multilibbed, bug #480960
+	if multilib_is_native_abi; then
+		myconf="${myconf} $(use_enable selinux)"
+	else
+		myconf="${myconf} --disable-selinux"
+	fi
 
 	# Always use internal libpcre, bug #254659
 	ECONF_SOURCE="${S}" econf ${myconf} \

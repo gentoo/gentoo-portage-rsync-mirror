@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-29.0.1547.41.ebuild,v 1.2 2013/08/11 23:02:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-29.0.1547.41.ebuild,v 1.3 2013/08/14 04:03:20 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -60,7 +60,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/libpng:0=
 	media-libs/libvpx:=
 	>=media-libs/libwebp-0.2.0_rc1:=
-	!arm? ( !x86? ( >=media-libs/mesa-9.1:=[gles2] ) )
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
@@ -91,10 +90,10 @@ DEPEND="${RDEPEND}
 	dev-python/ply
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
-	dev-util/ninja
 	sys-apps/hwids
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
+	>=sys-devel/make-3.81-r2
 	virtual/pkgconfig
 	test? ( dev-python/pyftpdlib )"
 RDEPEND+="
@@ -129,11 +128,11 @@ pkg_setup() {
 
 src_prepare() {
 	if ! use arm; then
-		mkdir -p out/Release/gen/sdk/toolchain || die
+		mkdir -p out/Release/obj/gen/sdk/toolchain || die
 		# Do not preserve SELinux context, bug #460892 .
 		cp -a --no-preserve=context /usr/$(get_libdir)/nacl-toolchain-newlib \
-			out/Release/gen/sdk/toolchain/linux_x86_newlib || die
-		touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
+			out/Release/obj/gen/sdk/toolchain/linux_x86_newlib || die
+		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
@@ -250,12 +249,6 @@ src_configure() {
 		-Duse_system_zlib=1
 		$(gyp_use system-ffmpeg use_system_ffmpeg)"
 
-	# TODO: Use system mesa on x86, bug #457130 .
-	if ! use x86 && ! use arm; then
-		myconf+="
-			-Duse_system_mesa=1"
-	fi
-
 	# TODO: patch gyp so that this arm conditional is not needed.
 	if ! use arm; then
 		myconf+="
@@ -367,7 +360,7 @@ src_configure() {
 	export LD_host=${CXX_host}
 
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
-	egyp_chromium ${myconf} || die
+	egyp_chromium -f make ${myconf} || die
 }
 
 src_compile() {
@@ -378,14 +371,13 @@ src_compile() {
 		test_targets+=" ${x}_unittests"
 	done
 
-	local ninja_targets="chrome chrome_sandbox chromedriver"
+	local make_targets="chrome chrome_sandbox chromedriver"
 	if use test; then
-		ninja_targets+=" $test_targets"
+		make_targets+=" $test_targets"
 	fi
 
-	# Even though ninja autodetects number of CPUs, we respect
-	# user's options, for debugging with -j 1 or any other reason.
-	ninja -C out/Release -v -j $(makeopts_jobs) ${ninja_targets} || die
+	# See bug #410883 for more info about the .host mess.
+	emake ${make_targets} BUILDTYPE=Release V=1 || die
 
 	pax-mark m out/Release/chrome
 	if use test; then

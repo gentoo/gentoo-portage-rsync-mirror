@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.230 2013/08/04 18:28:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.232 2013/08/14 04:15:29 cardoe Exp $
+
+  14 Aug 2013; Doug Goldstein <cardoe@gentoo.org> -qemu-1.5.2.ebuild:
+  Remove older version
+
+*qemu-1.5.2-r2 (14 Aug 2013)
+
+  14 Aug 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.5.2-r2.ebuild,
+  -qemu-1.4.1.ebuild, -qemu-1.4.2-r1.ebuild:
+  Bump the stable patchset.
 
   04 Aug 2013; Doug Goldstein <cardoe@gentoo.org> qemu-9999.ebuild:
   Fix libseccomp depend for master. bug #479562
