@@ -1,6 +1,18 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.109 2013/08/14 20:25:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.112 2013/08/14 21:00:49 aballier Exp $
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild:
+  Drop wxwidgets useflag since it is disabled upstream
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild,
+  +files/gpac-0.5.0-respect_ldflags.patch:
+  Respect LDFLAGS and fix underlinkage of the pulse module. Ported from bug
+  #331067
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild,
+  +files/gpac-0.5.0-mp42ts.patch:
+  install mp42ts since we build it, bug #459630 by Reuben Martin
 
   14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild:
   Pass extra-cflags to configure instead, bug #449238 by Stef Simoens.
