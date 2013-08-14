@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.4 2013/07/03 16:02:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.5 2013/08/14 17:28:22 aballier Exp $
 
 EAPI=5
 
@@ -96,7 +96,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	>=x11-libs/cairo-1.12
 	>=x11-libs/pixman-0.18
 	xetex? (
-		>=media-libs/harfbuzz-0.9.10
+		>=media-libs/harfbuzz-0.9.10[icu]
 		>=dev-libs/icu-50
 		app-text/teckit
 		media-libs/fontconfig

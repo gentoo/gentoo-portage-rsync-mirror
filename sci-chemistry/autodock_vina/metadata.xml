@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-chemistry</herd>
-	<maintainer>
-		<email>jlec@gentoo.org</email>
-	</maintainer>
-	<longdescription>
+  <herd>sci-chemistry</herd>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+  </maintainer>
+  <longdescription>
 AutoDock Vina is a new open-source program for drug discovery, molecular
 docking and virtual screening, offering multi-core capability, high
 performance and enhanced accuracy and ease of use. [1]
@@ -17,7 +17,7 @@ of docking with a new scoring function, efficient optimization and
 multithreading
 Journal of Computational Chemistry 31 (2010) 455-461
 </longdescription>
-	<!--
+  <!--
 <use>
   <flag name='flag'>Description of how USE='flag' affects this package</flag>
   <flag name='userland_GNU'>Description of how USERLAND='GNU' affects this
