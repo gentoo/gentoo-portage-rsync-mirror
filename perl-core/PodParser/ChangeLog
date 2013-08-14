@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/PodParser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.67 2013/03/02 16:21:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.68 2013/08/14 07:38:03 patrick Exp $
+
+*PodParser-1.610.0 (14 Aug 2013)
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> +PodParser-1.610.0.ebuild:
+  Bump
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org> PodParser-1.510.0.ebuild:
   Stable for sh, wrt bug #458122
