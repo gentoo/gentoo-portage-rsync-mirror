@@ -1,6 +1,9 @@
 # ChangeLog for games-action/descent3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.30 2012/02/05 05:22:29 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.31 2013/08/14 11:27:41 patrick Exp $
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> descent3-1.4.0b-r1.ebuild:
+  Whitespace / syntax fix
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> descent3-1.4.0b-r1.ebuild:
   Move to new unpacker eclass for unpack_makeself.
@@ -111,4 +114,3 @@
   28 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org> descent3-1.4.0b.ebuild,
   files/descent3:
   Initial import.  Ebuild by me.
-

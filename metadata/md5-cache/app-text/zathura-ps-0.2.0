@@ -9,4 +9,4 @@ RDEPEND=>=app-text/libspectre-0.2.6 >=app-text/zathura-0.2.0 >=dev-libs/girara-0
 SLOT=0
 SRC_URI=http://pwmt.org/projects/zathura/plugins/download/zathura-ps-0.2.0.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=2d5702941b848e5b3a71997624283442
+_md5_=288e918aca99eedd3e47e239f4c766a7

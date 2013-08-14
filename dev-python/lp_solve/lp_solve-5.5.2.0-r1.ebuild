@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lp_solve/lp_solve-5.5.2.0-r1.ebuild,v 1.2 2013/07/15 09:04:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lp_solve/lp_solve-5.5.2.0-r1.ebuild,v 1.3 2013/08/14 11:21:02 patrick Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ python_prepare_all() {
 		mkdir examples || die
 		mv ex*py examples || die
 	fi
-	distutils-r1_python_prepare_all	
+	distutils-r1_python_prepare_all
 }
 
 python_test() {

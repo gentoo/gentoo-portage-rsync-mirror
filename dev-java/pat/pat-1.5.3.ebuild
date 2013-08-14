@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pat/pat-1.5.3.ebuild,v 1.3 2013/07/08 12:11:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pat/pat-1.5.3.ebuild,v 1.4 2013/08/14 11:18:05 patrick Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -39,6 +39,6 @@ src_install() {
 		dohtml docs/*.{html,jpg}
 		java-pkg_dojavadoc docs/javadoc
 	fi
-	
+
 	use source && java-pkg_dosrc com
 }

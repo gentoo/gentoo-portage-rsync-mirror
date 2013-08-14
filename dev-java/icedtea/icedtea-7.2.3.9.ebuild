@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.9.ebuild,v 1.2 2013/06/01 11:49:41 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.9.ebuild,v 1.3 2013/08/14 11:17:16 patrick Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -225,7 +225,7 @@ src_configure() {
 			config+=" --enable-zero"
 			HOTSPOT_GENTOO_TARBALL=${ZERO_GENTOO_TARBALL}
 			;;
-	esac 
+	esac
 
 	# OpenJDK-specific parallelism support. Bug #389791, #337827
 	# Implementation modified from waf-utils.eclass

@@ -1,6 +1,14 @@
 # ChangeLog for app-text/zathura-ps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.16 2013/08/14 01:58:01 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.18 2013/08/14 11:15:04 heroxbd Exp $
+
+  14 Aug 2013; Benda Xu <heroxbd@gentoo.org> zathura-ps-9999.ebuild:
+  Prefix support
+
+  14 Aug 2013; Benda Xu <heroxbd@gentoo.org> zathura-ps-0.2.0.ebuild,
+  zathura-ps-0.2.1.ebuild, zathura-ps-0.2.2.ebuild:
+  revert previous D to ED commit and use PREFIX variable to make a better
+  support for Prefix
 
   14 Aug 2013; Benda Xu <heroxbd@gentoo.org> zathura-ps-0.2.1.ebuild,
   zathura-ps-0.2.2.ebuild:

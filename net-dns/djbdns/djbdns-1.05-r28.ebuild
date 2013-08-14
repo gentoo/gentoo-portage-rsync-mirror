@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r28.ebuild,v 1.1 2013/07/08 23:49:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r28.ebuild,v 1.2 2013/08/14 11:30:23 patrick Exp $
 
 EAPI=5
 inherit eutils flag-o-matic readme.gentoo toolchain-funcs user
@@ -29,7 +29,7 @@ src_prepare() {
 		"${FILESDIR}/headtail.patch" \
 		"${FILESDIR}/dnsroots.patch" \
 		"${FILESDIR}/dnstracesort.patch" \
-		"${FILESDIR}/string_length_255.patch" \
+		"${FILESDIR}/string_length_255.patch"
 
 	# Fix CVE2009-0858
 	epatch "${FILESDIR}/CVE2009-0858_0001-check-response-domain-name-length.patch"

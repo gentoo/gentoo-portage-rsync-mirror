@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/zathura-ps-9999.ebuild,v 1.1 2013/06/23 12:59:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/zathura-ps-9999.ebuild,v 1.2 2013/08/14 11:15:04 heroxbd Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	#does not render w/o cairo
 	myzathuraconf=(
+		PREFIX="${EPREFIX}"/usr
 		WITH_CAIRO=1
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"

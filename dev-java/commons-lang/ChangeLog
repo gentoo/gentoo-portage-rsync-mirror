@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.67 2013/08/10 19:12:07 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.68 2013/08/14 11:15:44 patrick Exp $
+
+  14 Aug 2013; Patrick Lauer <patrick@gentoo.org> commons-lang-3.1.ebuild:
+  Whitespace
 
 *commons-lang-3.1 (10 Aug 2013)
 

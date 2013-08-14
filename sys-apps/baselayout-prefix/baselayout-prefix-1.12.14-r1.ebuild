@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14-r1.ebuild,v 1.2 2012/08/11 10:19:18 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14-r1.ebuild,v 1.3 2013/08/14 11:29:33 patrick Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ src_prepare() {
 	cd "${S}"
 	eprefixify \
 		etc/env.d/00basic \
-		etc/profile \
+		etc/profile
 
 	# add the host OS MANPATH
 	echo 'MANPATH="/usr/share/man"' > etc/env.d/99basic || die "can't make file"

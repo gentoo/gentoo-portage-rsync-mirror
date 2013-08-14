@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/zathura-ps-0.2.0.ebuild,v 1.5 2013/01/11 16:38:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/zathura-ps-0.2.0.ebuild,v 1.6 2013/08/14 11:13:10 heroxbd Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -24,10 +24,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	myzathuraconf=(
+		PREFIX="${EPREFIX}"/usr
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"
 		VERBOSE=1
-		DESTDIR="${ED}"
+		DESTDIR="${D}"
 		)
 }
 

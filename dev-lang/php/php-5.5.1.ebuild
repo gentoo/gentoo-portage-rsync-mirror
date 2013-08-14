@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.1.ebuild,v 1.3 2013/08/13 21:55:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.1.ebuild,v 1.4 2013/08/14 11:22:41 patrick Exp $
 
 EAPI=5
 
@@ -228,7 +228,6 @@ php_install_ini() {
 	# Set the include path to point to where we want to find PEAR packages
 	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:'"${EPREFIX}"'/usr/share/php'${PHP_MV}':'"${EPREFIX}"'/usr/share/php"|' -i "${phpinisrc}"
 
-	
 	dodir "${PHP_INI_DIR#${EPREFIX}}"
 	insinto "${PHP_INI_DIR#${EPREFIX}}"
 	newins "${phpinisrc}" "${PHP_INI_FILE}"
@@ -452,7 +451,7 @@ src_configure() {
 	local mysqlilib="mysqlnd"
 	use libmysqlclient && mysqllib="${EPREFIX}/usr"
 	use libmysqlclient && mysqlilib="${EPREFIX}/usr/bin/mysql_config"
-	
+
 	my_conf+=" $(use_with mysql mysql $mysqllib)"
 	my_conf+=" $(use_with mysqli mysqli $mysqlilib)"
 

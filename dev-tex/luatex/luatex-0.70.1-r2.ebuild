@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r2.ebuild,v 1.11 2013/04/19 20:04:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r2.ebuild,v 1.12 2013/08/14 11:24:49 patrick Exp $
 
 EAPI=5
 
@@ -73,7 +73,7 @@ src_configure() {
 		--with-system-xpdf \
 		--with-system-poppler \
 		--with-system-zziplib \
-	    --disable-multiplatform \
+	    --disable-multiplatform
 
 	for i in ${PRELIBS} ; do
 		einfo "Configuring $i"

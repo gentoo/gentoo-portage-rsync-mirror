@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-3.1.ebuild,v 1.1 2013/08/10 19:12:07 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-3.1.ebuild,v 1.2 2013/08/14 11:15:44 patrick Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc source test"
@@ -30,7 +30,7 @@ src_install() {
 	java-pkg_newjar target/${MY_P}.jar ${PN}.jar
 
 	dodoc RELEASE-NOTES.txt NOTICE.txt
-	
+
 	use doc && java-pkg_dojavadoc target/apidocs
 	use source && java-pkg_dosrc src/main/java/*
 }
