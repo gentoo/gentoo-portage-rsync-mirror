@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.118 2013/07/30 01:33:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.119 2013/08/15 17:02:55 tomwij Exp $
+
+  15 Aug 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  =sys-kernel/gentoo-sources-3.4.58: Broken due to not building patches that
+  upstream slipped through.
 
   30 Jul 2013; Matt Turner <mattst88@gentoo.org> mips64/multilib/make.defaults,
   mipsel/mips64el/multilib/make.defaults:
