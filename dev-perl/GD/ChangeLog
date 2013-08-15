@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GD
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.111 2012/11/30 06:01:53 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.112 2013/08/15 06:53:07 patrick Exp $
+
+*GD-2.500.0 (15 Aug 2013)
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> +GD-2.500.0.ebuild:
+  Bump
 
   30 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> GD-2.460.0.ebuild:
   Keyworded amd64-linux and x86-linux

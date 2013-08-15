@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-automount
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-automount/ChangeLog,v 1.29 2013/07/20 21:30:18 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-automount/ChangeLog,v 1.30 2013/08/15 07:00:42 swift Exp $
+
+  15 Aug 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-automount-2.20130424-r2.ebuild:
+  Stabilize r2 of policies
 
 *selinux-automount-2.20130424-r2 (20 Jul 2013)
 

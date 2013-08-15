@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dracut/ChangeLog,v 1.26 2013/07/20 21:30:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dracut/ChangeLog,v 1.27 2013/08/15 07:00:14 swift Exp $
+
+  15 Aug 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-dracut-2.20130424-r2.ebuild:
+  Stabilize r2 of policies
 
 *selinux-dracut-2.20130424-r2 (20 Jul 2013)
 

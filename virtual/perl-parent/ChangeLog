@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-parent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.26 2013/08/14 05:39:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.27 2013/08/15 06:47:41 patrick Exp $
+
+*perl-parent-0.226 (15 Aug 2013)
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-parent-0.226.ebuild:
+  Bump
 
 *perl-parent-0.225.0-r4 (14 Aug 2013)
 

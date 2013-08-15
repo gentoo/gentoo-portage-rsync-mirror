@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-nut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-nut/ChangeLog,v 1.30 2013/07/20 21:30:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-nut/ChangeLog,v 1.31 2013/08/15 07:00:19 swift Exp $
+
+  15 Aug 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-nut-2.20130424-r2.ebuild:
+  Stabilize r2 of policies
 
 *selinux-nut-2.20130424-r2 (20 Jul 2013)
 

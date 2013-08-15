@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-dnsmasq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dnsmasq/ChangeLog,v 1.38 2013/07/20 21:30:19 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dnsmasq/ChangeLog,v 1.39 2013/08/15 07:00:18 swift Exp $
+
+  15 Aug 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-dnsmasq-2.20130424-r2.ebuild:
+  Stabilize r2 of policies
 
 *selinux-dnsmasq-2.20130424-r2 (20 Jul 2013)
 

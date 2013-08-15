@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Data-Dump-Streamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/ChangeLog,v 1.26 2013/04/16 17:58:21 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/ChangeLog,v 1.27 2013/08/15 06:59:30 patrick Exp $
+
+*Data-Dump-Streamer-2.360.0 (15 Aug 2013)
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +Data-Dump-Streamer-2.360.0.ebuild:
+  Bump
 
   16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
   Data-Dump-Streamer-2.340.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-googletalk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-googletalk/ChangeLog,v 1.8 2013/07/20 21:30:21 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-googletalk/ChangeLog,v 1.9 2013/08/15 07:00:47 swift Exp $
+
+  15 Aug 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-googletalk-2.20130424-r2.ebuild:
+  Stabilize r2 of policies
 
 *selinux-googletalk-2.20130424-r2 (20 Jul 2013)
 
