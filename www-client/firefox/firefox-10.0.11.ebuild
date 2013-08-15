@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.11.ebuild,v 1.9 2013/03/25 14:07:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.11.ebuild,v 1.10 2013/08/15 18:56:39 armin76 Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -27,7 +27,7 @@ fi
 # Changeset for alpha snapshot
 CHANGESET="e56ecd8b3a68"
 # Patch version
-PATCH="${PN}-10.0-patches-0.9"
+PATCH="${PN}-10.0-patches-0.10"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"

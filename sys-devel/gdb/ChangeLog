@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.241 2013/06/23 02:16:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.243 2013/08/15 18:36:42 vapier Exp $
+
+  15 Aug 2013; Mike Frysinger <vapier@gentoo.org> gdb-7.5.1.ebuild:
+  Mark m68k stable #457796.
+
+  15 Aug 2013; Mike Frysinger <vapier@gentoo.org> gdb-7.6.ebuild:
+  Redo cpuid patch to work with older versions of patch (and not require up-to-
+  date git format support) #477276 by Another Mortal.
 
   23 Jun 2013; Mike Frysinger <vapier@gentoo.org> gdb-7.6.ebuild:
   Apply fix from upstream for cpuid on x86 on hardened systems #467806.
