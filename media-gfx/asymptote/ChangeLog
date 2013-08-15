@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.105 2013/06/09 18:28:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.106 2013/08/15 17:38:06 grozin Exp $
+
+*asymptote-2.24 (15 Aug 2013)
+
+  15 Aug 2013; Andrey Grozin <grozin@gentoo.org> +asymptote-2.24.ebuild,
+  +files/asymptote-2.24-configure-ac.patch, +files/asymptote-2.24-info.patch,
+  +files/asymptote-2.24-xdg-utils.patch:
+  Version bump
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> asymptote-2.23.ebuild:
   Depend on virtual/python-imaging.
