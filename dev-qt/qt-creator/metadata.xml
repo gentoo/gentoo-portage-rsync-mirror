@@ -5,10 +5,6 @@
 	<email>pesa@gentoo.org</email>
 	<name>Davide Pesavento</name>
 </maintainer>
-<maintainer>
-	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
-</maintainer>
 <herd>qt</herd>
 <use>
 	<flag name="android">Build Android plugin</flag>

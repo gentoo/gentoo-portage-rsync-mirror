@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.0.ebuild,v 1.1 2013/07/27 07:49:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.0.ebuild,v 1.2 2013/08/15 08:04:02 pesa Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ IUSE="debug doc examples test ${QTC_PLUGINS[@]%:*}"
 QT_PV="4.8.0:4"
 
 CDEPEND="
-	=dev-libs/botan-1.10*
+	=dev-libs/botan-1.10*[threads]
 	>=dev-qt/qtcore-${QT_PV}[ssl]
 	>=dev-qt/qtdeclarative-${QT_PV}
 	|| (

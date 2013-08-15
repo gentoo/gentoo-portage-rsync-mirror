@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/jp2a-1.0.6-r1.ebuild,v 1.9 2010/11/08 18:41:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/jp2a-1.0.6-r1.ebuild,v 1.10 2013/08/15 08:12:39 grobian Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86 ~x64-macos ~x86-macos ~x64-solaris"
 IUSE="curl"
 
 RDEPEND="sys-libs/ncurses

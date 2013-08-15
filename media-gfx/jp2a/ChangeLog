@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jp2a
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/ChangeLog,v 1.11 2010/11/08 18:41:26 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jp2a/ChangeLog,v 1.12 2013/08/15 08:12:39 grobian Exp $
+
+  15 Aug 2013; Fabian Groffen <grobian@gentoo.org> jp2a-1.0.6-r1.ebuild:
+  Keyworded for ~x64-solaris, ~x64-macos and ~x86-macos
 
   08 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> jp2a-1.0.6-r1.ebuild:
   Use virtual/jpeg wrt #327487. Missing sys-libs/ncurses RDEPEND.
@@ -43,4 +46,3 @@
   +jp2a-1.0.6.ebuild:
   Initial commit, ebuild by Nadim Kobeissi <nadim@keihatsu.org> with some
   final tweaks from me. Closes bug #205004.
-

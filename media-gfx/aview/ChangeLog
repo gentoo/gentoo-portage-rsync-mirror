@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/aview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.18 2012/08/06 01:09:29 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.19 2013/08/15 08:29:37 grobian Exp $
+
+  15 Aug 2013; Fabian Groffen <grobian@gentoo.org> aview-1.3.0_rc1-r3.ebuild:
+  Marked ~x64-solaris
 
 *aview-1.3.0_rc1-r3 (06 Aug 2012)
 
