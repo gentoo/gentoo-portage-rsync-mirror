@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.18 2013/08/02 18:55:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.19 2013/08/15 13:08:06 tetromino Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (15 Aug 2013)
+# Remove when app-crypt/libsecret is stable
+=gnome-base/gvfs-1.14.2 gnome-keyring
 
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2013)
 # The dependencies for these flags are still in ~arch.

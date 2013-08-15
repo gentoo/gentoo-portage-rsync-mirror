@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8159 2013/08/14 09:09:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8160 2013/08/15 13:22:07 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Aug 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Masked dev-java/itext:5: Dependencies are unable to satisfy current version,
+  broken; needs a version bump from bug #475552.
 
   14 Aug 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Also mask rox-extra/rox-rename for using obsolete ruby-gnome2 packages.
