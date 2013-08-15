@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.162 2013/07/21 17:55:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.163 2013/08/15 15:43:32 prometheanfire Exp $
+
+*puppet-2.7.23 (15 Aug 2013)
+*puppet-3.2.4 (15 Aug 2013)
+
+  15 Aug 2013; Matthew Thode <prometheanfire@gentoo.org> +puppet-2.7.23.ebuild,
+  +puppet-3.2.4.ebuild, -files/50puppet-mode-gentoo.el,
+  -files/puppet-2.7.18-eix_fix.patch, -files/puppet.init-CVE-2012-6120,
+  -files/puppetmaster-2.7.6.confd, -files/puppetmaster-2.7.6.init,
+  -files/puppetmaster-2.7.6.init-CVE-2012-6120, -puppet-2.7.21-r1.ebuild,
+  -puppet-2.7.21.ebuild, -puppet-3.2.2.ebuild, -puppet-3.2.3.ebuild,
+  puppet-3.1.1-r3.ebuild:
+  masking puppet 3.1 for removal and updating puppet for bug 481186
 
   21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.22.ebuild:
   Stable for sparc, wrt bug #473720

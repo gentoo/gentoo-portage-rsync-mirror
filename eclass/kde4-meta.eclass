@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.72 2013/08/15 15:29:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.73 2013/08/15 15:36:26 kensington Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -276,11 +276,13 @@ kde4-meta_create_extractlists() {
 			;;
 		kde-runtime)
 			KMEXTRACTONLY+="
+				cmake/modules/
 				CTestConfig.cmake
 				config-runtime.h.cmake"
 			;;
 		kde-workspace)
 			KMEXTRACTONLY+="
+				cmake/modules/
 				config-unix.h.cmake
 				ConfigureChecks.cmake
 				config-workspace.h.cmake
@@ -305,22 +307,6 @@ kde4-meta_create_extractlists() {
 			fi
 			;;
 	esac
-	# Don't install cmake modules for split ebuilds, to avoid collisions.
-	# note: kdegraphics >= 4.6.2 does not even have code to do that, so we
-	#   should not try in that case
-	# note2: kdeedu 4.6.4 does not have a cmake/modules/ subdir anymore :(
-	#   it may be possible to formulate this shorter, but it should also
-	#   still be understandable...
-	if [[ ${KMNAME} != kdegraphics || ( ( $(get_kde_version) != 4.6 || ${PV} < 4.6.2 ) && $(get_kde_version) < 4.7 ) ]] \
-		&& ! [[ ${KMNAME} == kdeedu && ( ${PV} == 4.6.4 || ${PV} == 4.6.5 ) ]] \
-		&& ! [[ ${KMNAME} == kdegames && ${PV} > 4.9.0 ]]; then
-		case ${KMNAME} in
-			kdebase-runtime|kde-runtime|kdebase-workspace|kde-workspace|kdeedu|kdegames|kdegraphics)
-				KMEXTRACTONLY+="
-					cmake/modules/"
-			;;
-		esac
-	fi
 
 	debug-print "line ${LINENO} ${ECLASS} ${FUNCNAME}: KMEXTRACTONLY ${KMEXTRACTONLY}"
 }
@@ -499,10 +485,15 @@ kde4-meta_change_cmakelists() {
 				sed -e '/install(FILES ${CMAKE_CURRENT_BINARY_DIR}\/KDE4WorkspaceConfig.cmake/,/^[[:space:]]*FILE KDE4WorkspaceLibraryTargets.cmake )[[:space:]]*^/d' \
 					-i CMakeLists.txt || die "${LINENO}: sed died in kde-workspace strip config install and fix EXPORT section"
 			fi
+			# <KDE/4.11
 			if [[ ${PN} != plasma-workspace ]]; then
 				sed -e '/KActivities/s/REQUIRED//' \
 					-i CMakeLists.txt || die "${LINENO}: sed died in kde-workspace dep reduction section"
 			fi
+			# >=KDE/4.11
+			sed -e 's/TYPE REQUIRED/TYPE OPTIONAL/' -e 's/XCB REQUIRED/XCB/' -e 's/X11 REQUIRED/X11/' \
+				-e 's/message(FATAL_ERROR/message(/' -i CMakeLists.txt \
+				|| die "${LINENO}: sed died in kde-workspace dep reduction section"
 			if [[ "${PN}" != "kwin" ]]; then
 				sed -i -e "/^    macro_log_feature(OPENGL_OR_ES_FOUND/s/TRUE/FALSE/" \
 					"${S}"/CMakeLists.txt || die "${LINENO}: sed died removing kde-workspace opengl dependency"

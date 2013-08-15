@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.929 2013/08/15 15:29:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.930 2013/08/15 15:36:26 kensington Exp $
+
+  15 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass,
+  kde4-meta.eclass:
+  Fixes for KDE 4.11 and other small improvements.
 
   15 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass,
   kde4-meta.eclass:

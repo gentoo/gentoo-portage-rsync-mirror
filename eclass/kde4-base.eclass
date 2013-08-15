@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.130 2013/08/15 15:29:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.131 2013/08/15 15:36:26 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -336,6 +336,7 @@ if [[ ${PN} != oxygen-icons ]]; then
 	kderdepend+=" $(add_kdebase_dep oxygen-icons)"
 fi
 
+# add a dependency over kde-l10n
 if [[ ${KDEBASE} != "kde-base" && -n ${KDE_LINGUAS} ]]; then
 	for _lingua in ${KDE_LINGUAS}; do
 		# if our package has lignuas, pull in kde-l10n with selected lingua enabled,
