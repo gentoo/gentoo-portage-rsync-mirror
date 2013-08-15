@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.8 2013/08/12 14:45:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.9 2013/08/15 08:33:57 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999 ]]; then
 	GIT_ECLASS="git-2"
 fi
 
-inherit eutils base flag-o-matic pax-utils toolchain-funcs ${GIT_ECLASS}
+inherit eutils flag-o-matic pax-utils toolchain-funcs ${GIT_ECLASS}
 
 MY_P=${P/-user/}
 
@@ -29,7 +29,7 @@ SLOT="0"
 IUSE=""
 RESTRICT="test"
 
-COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
+COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mips64 mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
 IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 for target in ${IUSE_USER_TARGETS}; do
@@ -62,6 +62,7 @@ QA_WX_LOAD="
 	usr/bin/qemu-static-armeb-binfmt
 	usr/bin/qemu-static-microblaze-binfmt
 	usr/bin/qemu-static-mips-binfmt
+	usr/bin/qemu-static-mips64-binfmt
 	usr/bin/qemu-static-mipsel-binfmt
 	usr/bin/qemu-static-sh4-binfmt
 	usr/bin/qemu-static-s390x-binfmt
