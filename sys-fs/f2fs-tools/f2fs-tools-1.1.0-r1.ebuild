@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/f2fs-tools/f2fs-tools-1.1.0.ebuild,v 1.4 2013/07/23 14:17:10 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/f2fs-tools/f2fs-tools-1.1.0-r1.ebuild,v 1.1 2013/08/15 12:33:06 blueness Exp $
 
 EAPI=4
 
@@ -12,3 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE=""
+
+src_configure () { 		
+	#This is required to install to /sbin, bug #481110
+	econf --prefix=/ 		
+}
