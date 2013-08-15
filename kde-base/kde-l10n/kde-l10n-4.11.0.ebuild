@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.11.0.ebuild,v 1.1 2013/08/14 20:23:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.11.0.ebuild,v 1.2 2013/08/15 19:20:10 kensington Exp $
 
 EAPI=5
 
@@ -64,6 +64,9 @@ src_prepare() {
 		-exec sed -i -e 's:^ *add_subdirectory( *kdepim-runtime *):# no kdepim-runtime:g' {} +
 	find "${S}" -name CMakeLists.txt -type f \
 		-exec sed -i -e 's:^ *add_subdirectory( *kdepim *):# no kdepim:g' {} +
+
+	# bug 481106, please remove in 4.11.1 and later
+	use linguas_pl && rm "${S}"/${PN}-pl-${PV}/messages/kde-runtime/{accountwizard*,akonadi_*}.po
 
 	kde4-base_src_prepare
 }
