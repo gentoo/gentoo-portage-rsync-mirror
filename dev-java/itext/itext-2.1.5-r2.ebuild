@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5-r1.ebuild,v 1.1 2012/05/08 12:20:43 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5-r2.ebuild,v 1.1 2013/08/15 13:45:51 tomwij Exp $
 
 EAPI="4"
 
@@ -23,9 +23,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cjk rtf rups"
 
+BCV="1.45"
+
 COMMON_DEPEND="
-	dev-java/bcmail:0
-	dev-java/bcprov:0
+	dev-java/bcmail:${BCV}
+	dev-java/bcprov:${BCV}
 	rups? (
 		dev-java/dom4j:1
 		dev-java/pdf-renderer:0
@@ -54,7 +56,7 @@ JAVA_ANT_REWRITE_CLASSPATH="true"
 JAVA_ANT_ENCODING="utf8"
 
 src_compile() {
-	EANT_GENTOO_CLASSPATH="bcmail,bcprov"
+	EANT_GENTOO_CLASSPATH="bcmail-${BCV},bcprov-${BCV}"
 	use rups && EANT_GENTOO_CLASSPATH+=",dom4j-1,pdf-renderer"
 
 	java-pkg-2_src_compile \

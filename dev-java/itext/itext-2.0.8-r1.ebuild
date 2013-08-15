@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.8.ebuild,v 1.8 2010/03/28 21:18:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.0.8-r1.ebuild,v 1.1 2013/08/15 13:45:51 tomwij Exp $
 
 EAPI=1
 
@@ -24,8 +24,8 @@ IUSE="cjk"
 
 BCV="1.38"
 
-COMMON_DEPEND=">=dev-java/bcmail-${BCV}
-	>=dev-java/bcprov-${BCV}:0"
+COMMON_DEPEND="dev-java/bcmail:${BCV}
+	dev-java/bcprov:${BCV}"
 DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	cjk? ( app-arch/unzip )
 	${COMMON_DEPEND}"
@@ -47,8 +47,8 @@ src_unpack() {
 
 	mkdir -p "${WORKDIR}/lib" || die "Failed to create ${WORKDIR}/lib"
 	cd "${WORKDIR}/lib" || die "Could not cd ${WORKDIR}/lib"
-	java-pkg_jar-from bcmail bcmail.jar "bcmail-jdk14-${BCV/./}.jar"
-	java-pkg_jar-from bcprov bcprov.jar "bcprov-jdk14-${BCV/./}.jar"
+	java-pkg_jar-from bcmail-${BCV} bcmail.jar "bcmail-jdk14-${BCV/./}.jar"
+	java-pkg_jar-from bcprov-${BCV} bcprov.jar "bcprov-jdk14-${BCV/./}.jar"
 }
 
 EANT_BUILD_XML="src/build.xml"

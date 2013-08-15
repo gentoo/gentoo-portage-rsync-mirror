@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/itext
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.93 2012/05/08 12:20:43 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.94 2013/08/15 13:45:51 tomwij Exp $
+
+*itext-2.1.5-r2 (15 Aug 2013)
+*itext-2.0.8-r1 (15 Aug 2013)
+
+  15 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +itext-2.0.8-r1.ebuild,
+  +itext-2.1.5-r2.ebuild, -itext-2.0.8.ebuild, -itext-2.1.5-r1.ebuild:
+  Revision bump. Slotted bcmail and bcprov dependencies. Punted old and broken
+  version.
 
 *itext-2.1.5-r1 (08 May 2012)
 
