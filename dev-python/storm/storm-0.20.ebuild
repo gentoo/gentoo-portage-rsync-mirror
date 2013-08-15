@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.20.ebuild,v 1.2 2013/07/10 01:32:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.20.ebuild,v 1.3 2013/08/15 05:29:13 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -23,7 +23,7 @@ RDEPEND="mysql? ( dev-python/mysql-python )
 	postgres? ( =dev-python/psycopg-2* )
 	sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )"
 DEPEND="dev-python/setuptools
-	test? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) 
+	test? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 )
 		dev-python/fixtures )"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")

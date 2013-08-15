@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/yasr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.27 2010/09/29 06:29:06 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.28 2013/08/15 05:21:58 teiresias Exp $
+
+  15 Aug 2013; Christopher Brannon <teiresias@gentoo.org> yasr-0.6.9-r1.ebuild,
+  +files/yasr-0.6.9-automake113.patch, +files/yasr-0.6.9-gettext018.patch:
+  Added a patch to replace the AM_CONFIG_HEADER
+  and remove the AM_PROG_CC_STDC macro calls.
+  Fixes bug #467522.
+  Also fixed bug #422621 (build failure due to autotools issue) by
+  patching the call to AM_GNU_GETTEXT_VERSION.
+  This was a reccurrence of bug #330879 (build fails with gettext 0.18).
 
   29 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> yasr-0.6.9-r1.ebuild:
   Replace po/Makefile.in.in with a system copy wrt #330879 by Diego E.

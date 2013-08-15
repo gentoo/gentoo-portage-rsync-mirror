@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9-r1.ebuild,v 1.5 2010/09/29 06:29:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9-r1.ebuild,v 1.6 2013/08/15 05:21:58 teiresias Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -21,7 +21,9 @@ src_prepare() {
 	local x=/usr/share/gettext/po/Makefile.in.in
 	[[ -e $x ]] && cp -f $x po/ #330879
 
-	epatch "${FILESDIR}"/${P}-gcc43.patch \
+	epatch "${FILESDIR}"/${P}-automake113.patch \
+		"${FILESDIR}"/${P}-gettext018.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-remove-m4.patch
 
 	rm -r "${S}"/m4

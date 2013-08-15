@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/storm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.14 2013/07/10 01:32:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.15 2013/08/15 05:29:13 patrick Exp $
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> storm-0.20.ebuild:
+  Whitespace
 
   10 Jul 2013; Mike Gilbert <floppym@gentoo.org>
   +files/storm-0.20-exclude-tests.patch, storm-0.20.ebuild:
