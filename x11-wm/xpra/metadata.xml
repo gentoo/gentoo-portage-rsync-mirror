@@ -9,6 +9,7 @@
 	<bugs-to>https://www.xpra.org/trac/report</bugs-to>
 </upstream>
 <use>
+	<flag name='client'>Build client-side code</flag>
 	<flag name='server'>Build server-side code</flag>
 	<flag name='clipboard'>Enable clipboard support</flag>
 	<flag name='rencode'>Enable rencode support</flag>

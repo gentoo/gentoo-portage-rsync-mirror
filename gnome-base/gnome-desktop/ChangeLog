@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.313 2013/06/09 19:34:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.314 2013/08/15 11:40:05 tetromino Exp $
+
+*gnome-desktop-2.32.1-r2 (15 Aug 2013)
+
+  15 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-desktop-2.32.1-r2.ebuild,
+  +files/gnome-desktop-2.32.1-thumbnails.patch:
+  Fix thumbnailing failure with glib-2.34 (bug #450930, thanks to Matthew
+  Turnbull and Pacho Ramos for the patch). Update to EAPI5 and
+  python-r1.eclass.
 
 *gnome-desktop-3.8.3 (09 Jun 2013)
 

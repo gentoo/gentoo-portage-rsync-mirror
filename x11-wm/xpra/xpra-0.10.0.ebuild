@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.5-r2.ebuild,v 1.2 2013/08/11 23:02:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.10.0.ebuild,v 1.1 2013/08/15 11:50:37 xmw Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+clipboard opengl pulseaudio +rencode server sound vpx webp x264"
+IUSE="+client +clipboard gtk opengl pulseaudio qt4 +rencode server sound vpx webp x264"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -59,9 +59,7 @@ DEPEND="${COMMON_DEPEND}
 python_prepare_all() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch \
-		"${FILESDIR}"/${PN}-0.8.0-prefix.patch \
-		"${FILESDIR}"/${PN}-0.9.5-PIL.patch \
-		"${FILESDIR}"/${PN}-0.9.5-opengl-auto.patch
+		"${FILESDIR}"/${PN}-0.8.0-prefix.patch
 
 	#assuming ffmpeg and libav mutual exclusive installs
 	if has_version "media-video/libav" ; then
@@ -73,29 +71,29 @@ python_prepare_all() {
 
 python_configure_all() {
 	mydistutilsargs=(
+		$(use_with client)
 		$(use_with clipboard)
+		$(use_with gtk gtk2)
 		$(use_with opengl)
+		$(use_with qt4)
 		$(use_with rencode)
 		$(use_with server)
 		$(use_with sound)
 		$(use_with vpx)
 		$(use_with webp)
-		$(use_with x264)
+		$(use_with x264 enc_x264)
+		--with-Xdummy
+		--with-argb
+		--with-csc_swscale
+		--without-csc_nvcuda
 		--with-cymaths
 		--with-cyxor
-		--with-parti
+		--with-dec_avcodec
+		--with-nvenc
 		--with-shadow
 		--with-strict
 		--with-warn
+		--with-x11
 		--without-PIC
 		--without-debug )
-}
-
-src_install() {
-	distutils-r1_src_install
-
-	rm -vf "${ED}"usr/share/parti/{parti.,}README \
-		"${ED}"usr/share/xpra/{webm/LICENSE,xpra.README} \
-		"${ED}"usr/share/wimpiggy/wimpiggy.README || die
-	dodoc {parti.,wimpiggy.,xpra.,}README
 }
