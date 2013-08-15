@@ -1,6 +1,16 @@
 # ChangeLog for sys-power/nvclock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.12 2012/09/05 08:12:47 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.13 2013/08/15 21:47:24 vapier Exp $
+
+*nvclock-0.8_p20110102-r2 (15 Aug 2013)
+
+  15 Aug 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/nvclock-0.8_p20110102-buffers.patch,
+  +files/nvclock-0.8_p20110102-desktop.patch,
+  +files/nvclock-0.8_p20110102-r1-make.patch, +nvclock-0.8_p20110102-r2.ebuild,
+  files/nvclock-0.8_p20110102-usleep.patch:
+  Fix gtk linkage against X libs.  Respect $AR settings.  Fix .desktop warnings.
+  Fix buffers overflows in random messages #364667 by Diego Elio Pettenò.
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> nvclock-0.8_beta4-r4.ebuild,
   nvclock-0.8_p20110102-r1.ebuild:
