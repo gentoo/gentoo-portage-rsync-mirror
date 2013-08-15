@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/DB_File-1.821.ebuild,v 1.1 2011/01/13 10:41:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/DB_File-1.821.ebuild,v 1.2 2013/08/15 02:38:19 patrick Exp $
 
 EAPI=3
 
@@ -19,8 +19,7 @@ DEPEND="${RDEPEND}"
 
 SRC_TEST="do"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i "s:^LIB.*:LIB = /usr/$(get_libdir):" "${S}"/config.in || die
 	fi

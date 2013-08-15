@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.6 2012/05/03 07:27:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.7 2013/08/15 02:40:49 patrick Exp $
 
 EAPI="2"
 inherit gnome2 eutils flag-o-matic
@@ -51,7 +51,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+}
 
+src_prepare() {
 	# Fix configure to install schemafile into the proper directory
 	epatch "${FILESDIR}"/${PN}-1.99.0-configure.patch
 

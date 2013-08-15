@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-2.0.0.ebuild,v 1.1 2013/07/12 20:27:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-2.0.0.ebuild,v 1.2 2013/08/15 02:47:15 patrick Exp $
 
 EAPI=5
 
@@ -19,9 +19,7 @@ RESTRICT="test"
 DEPEND="dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.0-cflags.patch
 	eautoreconf
 }

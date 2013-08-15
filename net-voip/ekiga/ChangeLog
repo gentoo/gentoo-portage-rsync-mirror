@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.51 2013/04/16 20:22:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.52 2013/08/15 02:40:49 patrick Exp $
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> ekiga-2.0.12.ebuild:
+  Fixing src_unpack / src_prepare
 
   16 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org> ekiga-3.2.7.ebuild:
   Bump EAPI to 4

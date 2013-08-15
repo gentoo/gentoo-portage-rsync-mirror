@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/comix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.59 2012/09/14 10:33:16 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.60 2013/08/15 02:43:36 tetromino Exp $
+
+*comix-4.0.4-r1 (15 Aug 2013)
+
+  15 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +comix-4.0.4-r1.ebuild, +files/comix-4.0.4-pillow.patch:
+  Non-maintainer commit (bug #471522): fix compatibility with
+  virtual/python-imaging; update to EAPI5 and python-single-r1.eclass; update
+  mime, icon, .desktop etc. databases in postinst/postrm.
 
   14 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> comix-4.0.4.ebuild:
   Use python.eclass for forcing python2 instead of python3 wrt #363765 by
