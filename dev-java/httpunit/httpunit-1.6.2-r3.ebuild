@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.6.2-r3.ebuild,v 1.4 2013/08/15 03:28:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.6.2-r3.ebuild,v 1.5 2013/08/15 09:27:38 tomwij Exp $
 
 EAPI="2"
 inherit java-pkg-2 java-ant-2
@@ -28,7 +28,8 @@ RDEPEND=">=virtual/jre-1.5
 DEPEND=">=virtual/jdk-1.5
 	${CDEPEND}"
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
 	find "${S}" -name "*.jar" | xargs rm -v
 	cd "${S}"
 	epatch "${FILESDIR}/rhino-fix-${PV}.diff"
