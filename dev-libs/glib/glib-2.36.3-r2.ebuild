@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3-r2.ebuild,v 1.4 2013/08/14 04:19:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3-r2.ebuild,v 1.5 2013/08/15 01:24:32 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -10,6 +10,8 @@ inherit autotools bash-completion-r1 gnome.org libtool eutils flag-o-matic gnome
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
+SRC_URI="${SRC_URI}
+	http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2+"
 SLOT="2"
@@ -74,6 +76,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Prevent build failure in stage3 where pkgconfig is not available, bug #481056
+	mv -f "${WORKDIR}"/pkg-config-*/pkg.m4 "${S}"/m4macros/ || die
+
 	# Fix gmodule issues on fbsd; bug #184301, upstream bug #107626
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
 

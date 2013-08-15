@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.569 2013/08/14 04:19:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.570 2013/08/15 01:24:32 tetromino Exp $
+
+  15 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-2.36.3-r2.ebuild:
+  Restore the pkg.m4 hack from 2.34.x to prevent stage3 build failure (bug
+  #481056, thanks to Markos Chandras).
 
   14 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   glib-2.32.4-r1.ebuild, glib-2.34.3.ebuild, glib-2.36.3.ebuild,
