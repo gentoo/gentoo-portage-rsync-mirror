@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.599 2013/08/10 07:41:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.600 2013/08/15 04:39:24 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1418,6 +1418,10 @@ gcc_do_filter_flags() {
 				amd64|x86)
 					filter-flags '-mcpu=*'
 					;;
+				alpha)
+					# https://bugs.gentoo.org/454426
+					append-ldflags -Wl,--no-relax
+					;;
 				*-macos)
 					# http://gcc.gnu.org/PR25127
 					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER}  == 4.1 ]] && \
@@ -1430,10 +1434,6 @@ gcc_do_filter_flags() {
 	case ${GCC_BRANCH_VER} in
 		4.6)
 			case $(tc-arch) in
-				alpha)
-					# https://bugs.gentoo.org/454426
-					append-ldflags -Wl,--no-relax
-					;;
 				amd64|x86)
 					# https://bugs.gentoo.org/411333
 					# https://bugs.gentoo.org/466454

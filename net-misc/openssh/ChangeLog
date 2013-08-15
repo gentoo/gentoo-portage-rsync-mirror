@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.479 2013/07/21 10:02:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.480 2013/08/15 04:56:36 radhermit Exp $
+
+*openssh-6.2_p2-r4 (15 Aug 2013)
+
+  15 Aug 2013; Tim Harder <radhermit@gentoo.org> +openssh-6.2_p2-r4.ebuild,
+  +files/openssh-6.2_p2-x509-hpn14v1-glue.patch:
+  Update to hpn14v1 patch that fixes the multi-threaded AES-CTR cipher when the
+  process forks to the background or when using the rlimit sandbox.
 
 *openssh-6.2_p2-r3 (21 Jul 2013)
 
