@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.52 2013/08/15 10:25:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.53 2013/08/15 12:07:13 tomwij Exp $
+
+*bcprov-1.38-r3 (15 Aug 2013)
+*bcprov-1.40-r1 (15 Aug 2013)
+
+  15 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +bcprov-1.38-r3.ebuild,
+  +bcprov-1.40-r1.ebuild:
+  Split 1.3 slot into 1.38 and 1.40 slots as they don't both work with reverse
+  dependencies. The mess in this folder will be dealt with after the reverse
+  dependencies have been fixed.
 
 *bcprov-1.45-r1 (15 Aug 2013)
 *bcprov-1.48-r1 (15 Aug 2013)
