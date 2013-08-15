@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.6 2013/05/07 09:21:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.7 2013/08/15 09:39:28 swift Exp $
 EAPI="4"
 
 inherit eutils git-2
@@ -31,6 +31,7 @@ src_unpack() {
 
 src_prepare() {
 	cd "${S}/refpolicy"
+	make bare
 	# Fix bug 257111 - Correct the initial sid for cron-started jobs in the
 	# system_r role
 	sed -i -e 's:system_crond_t:system_cronjob_t:g' \

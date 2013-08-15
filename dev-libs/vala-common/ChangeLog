@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vala-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.29 2013/04/14 10:47:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.30 2013/08/15 09:47:28 grobian Exp $
+
+  15 Aug 2013; Fabian Groffen <grobian@gentoo.org> vala-common-0.20.1.ebuild:
+  Marked ~x64-solaris
 
 *vala-common-0.20.1 (14 Apr 2013)
 

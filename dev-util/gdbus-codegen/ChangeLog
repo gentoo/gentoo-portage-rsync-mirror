@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.54 2013/08/14 15:08:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.55 2013/08/15 09:54:54 tetromino Exp $
+
+  15 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gdbus-codegen-2.34.3.ebuild:
+  Don't patch twice (bug #481142, thanks to Patrick Lauer).
 
   14 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   gdbus-codegen-2.32.4-r1.ebuild, gdbus-codegen-2.34.3.ebuild,

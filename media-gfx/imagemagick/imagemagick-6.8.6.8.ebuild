@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.6.8.ebuild,v 1.1 2013/08/10 11:37:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.6.8.ebuild,v 1.2 2013/08/15 09:57:38 grobian Exp $
 
 EAPI=5
-inherit multilib toolchain-funcs versionator libtool eutils
+inherit multilib toolchain-funcs versionator libtool flag-o-matic eutils
 
 MY_P=ImageMagick-$(replace_version_separator 3 '-')
 
@@ -78,6 +78,8 @@ src_configure() {
 
 	local openmp=disable
 	use openmp && { tc-has-openmp && openmp=enable; }
+
+	[[ ${CHOST} == *-solaris* ]] && append-ldflags -lnsl -lsocket
 
 	econf \
 		$(use_enable static-libs static) \
