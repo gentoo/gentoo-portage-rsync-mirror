@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Devel-NYTProf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-NYTProf/ChangeLog,v 1.25 2013/02/10 10:00:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-NYTProf/ChangeLog,v 1.26 2013/08/15 06:20:53 patrick Exp $
+
+*Devel-NYTProf-5.50.0 (15 Aug 2013)
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> +Devel-NYTProf-5.50.0.ebuild:
+  Bump
 
 *Devel-NYTProf-4.250.0 (10 Feb 2013)
 
