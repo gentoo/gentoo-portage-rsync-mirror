@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/pecl-apc-3.1.13.ebuild,v 1.3 2013/07/03 14:20:39 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/pecl-apc-3.1.13.ebuild,v 1.4 2013/08/15 10:35:34 olemarkus Exp $
 
 EAPI=4
 
@@ -27,8 +27,7 @@ DEPEND="
 	!dev-php/eaccelerator
 	!dev-php/xcache
 	!dev-php/pecl-apcu
-	!dev-php/pecl-zendopcache
-	dev-lang/php[-opcache(-)]"
+	!dev-php/pecl-zendopcache"
 RDEPEND="${DEPEND}"
 
 LOCKS="pthreadmutex pthreadrw spinlock semaphore"
