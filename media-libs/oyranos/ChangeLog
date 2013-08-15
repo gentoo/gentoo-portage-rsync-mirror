@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.20 2013/08/14 09:23:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.21 2013/08/15 03:38:17 patrick Exp $
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> oyranos-0.9.4-r1.ebuild,
+  oyranos-9999.ebuild:
+  Whitespace
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> oyranos-0.9.4-r1.ebuild:
   Whitespace

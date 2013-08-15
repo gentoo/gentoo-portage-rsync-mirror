@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/imediff2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.6 2012/06/06 08:49:01 dev-zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.7 2013/08/15 03:44:36 patrick Exp $
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> imediff2-1.1.2-r2.ebuild:
+  Whitespace
 
 *imediff2-1.1.2-r2 (06 Jun 2012)
 
@@ -31,4 +34,3 @@
   18 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
   +imediff2-1.1.1.1.ebuild:
   Initial ebuild for bug #116161
-

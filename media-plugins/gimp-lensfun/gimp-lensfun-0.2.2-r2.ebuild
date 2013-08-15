@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lensfun/gimp-lensfun-0.2.2-r2.ebuild,v 1.1 2012/10/28 17:30:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lensfun/gimp-lensfun-0.2.2-r2.ebuild,v 1.2 2013/08/15 03:35:02 patrick Exp $
 
 EAPI="4"
 
@@ -27,9 +27,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-        if use openmp ; then
-                tc-has-openmp || die "Please switch to an openmp compatible compiler"
-        fi
+	if use openmp ; then
+		tc-has-openmp || die "Please switch to an openmp compatible compiler"
+	fi
 }
 
 src_prepare() {

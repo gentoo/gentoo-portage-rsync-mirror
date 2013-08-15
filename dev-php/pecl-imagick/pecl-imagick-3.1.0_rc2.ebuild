@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.1.0_rc2.ebuild,v 1.4 2013/06/25 12:53:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.1.0_rc2.ebuild,v 1.5 2013/08/15 03:50:45 patrick Exp $
 
 EAPI=4
 
@@ -34,10 +34,10 @@ SRC_URI="http://pecl.php.net/get/${FILENAME}"
 my_conf="--with-imagick=/usr"
 
 src_prepare() {
-    local slot
-    for slot in $(php_get_slots) ; do
-        cd "${WORKDIR}/${slot}"
-        epatch "${FILESDIR}/remove-header-check.patch"
-    done
-    php-ext-source-r2_src_prepare
+	local slot
+	for slot in $(php_get_slots) ; do
+		cd "${WORKDIR}/${slot}"
+		epatch "${FILESDIR}/remove-header-check.patch"
+	done
+	php-ext-source-r2_src_prepare
 }

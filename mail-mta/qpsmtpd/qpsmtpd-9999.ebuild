@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.6 2013/04/15 23:19:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.7 2013/08/15 03:39:45 patrick Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="qpsmtpd is a flexible smtpd daemon written in Perl"
 HOMEPAGE="http://smtpd.develooper.com"
 # This is a spotted development fork with many improvements
 EGIT_REPO_URI="git://github.com/qpsmtpd-dev/qpsmtpd-dev.git
-       https://github.com/qpsmtpd-dev/qpsmtpd-dev.git"
+	https://github.com/qpsmtpd-dev/qpsmtpd-dev.git"
 
 LICENSE="MIT"
 SLOT="0"

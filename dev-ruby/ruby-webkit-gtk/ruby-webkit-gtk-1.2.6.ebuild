@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-webkit-gtk/ruby-webkit-gtk-1.2.6.ebuild,v 1.1 2013/05/09 01:42:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-webkit-gtk/ruby-webkit-gtk-1.2.6.ebuild,v 1.2 2013/08/15 03:46:38 patrick Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -21,13 +21,13 @@ ruby_add_rdepend ">=dev-ruby/ruby-gobject-introspection-${PV}
 	>=dev-ruby/ruby-gtk3-${PV}"
 
 each_ruby_configure() {
-    :
+	:
 }
 
 each_ruby_compile() {
-    :
+	:
 }
 
 each_ruby_install() {
-    each_fakegem_install
+	each_fakegem_install
 }

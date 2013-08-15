@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qpsmtpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.20 2013/05/12 08:12:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.21 2013/08/15 03:39:45 patrick Exp $
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> qpsmtpd-9999.ebuild:
+  Whitespace
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove obsolete useflag from metadata.xml

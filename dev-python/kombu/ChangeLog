@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.25 2013/06/27 17:31:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.26 2013/08/15 03:47:53 patrick Exp $
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> kombu-2.5.10.ebuild:
+  Whitespace
 
   27 Jun 2013; Ian Delaney <idella4@gentoo.org> +files/kombu-2.5.10-tests.patch,
   kombu-2.5.10.ebuild:

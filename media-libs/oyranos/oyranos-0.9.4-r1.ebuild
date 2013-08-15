@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.4 2013/08/14 09:23:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.5 2013/08/15 03:38:17 patrick Exp $
 
 EAPI=5
 
@@ -64,7 +64,7 @@ src_prepare() {
 	rm -rf elektra* yajl || die
 
 	epatch "${FILESDIR}/${P}"-buildsystem-r1.patch
- 
+
 	#upstream(ed) fixes, be more verbose, better xrandr handling
 	epatch "${FILESDIR}/${P}"-fix-array-access.patch \
 		"${FILESDIR}/${P}"-fix-oyRankMap-helper-functions-crashes.patch \

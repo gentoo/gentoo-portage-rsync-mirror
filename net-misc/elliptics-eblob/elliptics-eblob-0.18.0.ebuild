@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/elliptics-eblob/elliptics-eblob-0.18.0.ebuild,v 1.1 2013/01/28 07:53:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elliptics-eblob/elliptics-eblob-0.18.0.ebuild,v 1.2 2013/08/15 03:34:26 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT="python2_7"
@@ -16,7 +16,7 @@ IUSE="python"
 RDEPEND="
 	app-arch/snappy
 	dev-libs/openssl
-        dev-libs/boost[python]"
+	dev-libs/boost[python]"
 DEPEND="${RDEPEND}"
 
 MY_PN="eblob"
@@ -25,8 +25,8 @@ SRC_URI="http://dev.gentoo.org/~patrick/${MY_PN}-${PV}.tar.bz2"
 S=${WORKDIR}/${MY_PN}-${PV}
 
 src_configure(){
-        # 'checking trying to link with boost::python... no' due '-Wl,--as-needed'
-        use python && filter-ldflags -Wl,--as-needed
+	# 'checking trying to link with boost::python... no' due '-Wl,--as-needed'
+	use python && filter-ldflags -Wl,--as-needed
 	cmake-utils_src_configure
 }
 

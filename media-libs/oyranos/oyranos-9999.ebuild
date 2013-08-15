@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.3 2013/04/25 11:40:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.4 2013/08/15 03:38:17 patrick Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ src_prepare() {
 	rm -rf elektra* yajl || die
 
 	epatch "${FILESDIR}/${PN}"-9999-buildsystem.patch
- 
+
 	if use fltk ; then
 		#src/examples does not include fltk flags
 		append-cflags $(fltk-config --cflags)

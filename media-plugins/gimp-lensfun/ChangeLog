@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gimp-lensfun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lensfun/ChangeLog,v 1.4 2012/10/28 17:30:19 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lensfun/ChangeLog,v 1.5 2013/08/15 03:35:02 patrick Exp $
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org> gimp-lensfun-0.2.2-r2.ebuild:
+  Whitespace
 
 *gimp-lensfun-0.2.2-r2 (28 Oct 2012)
 

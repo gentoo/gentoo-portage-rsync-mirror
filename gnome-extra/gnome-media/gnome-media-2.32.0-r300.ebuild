@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.32.0-r300.ebuild,v 1.6 2013/04/26 06:31:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.32.0-r300.ebuild,v 1.7 2013/08/15 03:42:44 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -60,7 +60,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-disable-gnome-audio-profile-properties.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
-        sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 
