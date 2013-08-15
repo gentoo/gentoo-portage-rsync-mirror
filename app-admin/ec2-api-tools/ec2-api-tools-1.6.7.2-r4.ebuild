@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.7.2-r3.ebuild,v 1.1 2013/06/01 06:26:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.7.2-r4.ebuild,v 1.1 2013/08/15 15:14:02 tomwij Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
-CDEPEND="dev-java/bcprov:0
+CDEPEND="dev-java/bcprov:1.45
 	dev-java/commons-cli:1
 	dev-java/commons-codec:0
 	dev-java/commons-discovery:0
@@ -60,7 +60,7 @@ src_install() {
 	local libs="/usr/share/${PN}/lib"
 	insinto ${libs}
 	doins lib/*.jar
-	dosym $(java-pkg_getjar bcprov{,.jar}) ${libs}/bcprov-jdk15-145.jar
+	dosym $(java-pkg_getjar bcprov{-1.45,.jar}) ${libs}/bcprov-jdk15-145.jar
 	dosym $(java-pkg_getjar commons-cli{-1,.jar}) ${libs}/commons-cli-1.1.jar
 	dosym $(java-pkg_getjar commons-codec{,.jar}) ${libs}/commons-codec-1.4.jar
 	dosym $(java-pkg_getjar commons-discovery{,.jar}) ${libs}/commons-discovery.jar

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.128 2013/08/15 14:52:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.130 2013/08/15 15:29:58 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -378,28 +378,6 @@ case ${KDE_SELINUX_MODULE} in
 		;;
 esac
 
-# These dependencies are added as they are unconditionally required by kde-workspace.
-# They are not necessarily required by individual applications but are pulled in to prevent
-# bugs like bug #444438. This list is subject to change in the future so do not rely on it
-# in ebuilds - always set correct dependencies.
-case ${KMNAME} in
-	kde-workspace)
-		kdedepend+="
-			x11-libs/xcb-util
-			x11-libs/libX11
-			x11-libs/libXcomposite
-			x11-libs/libXcursor
-			x11-libs/libXdamage
-			x11-libs/libXfixes
-			x11-libs/libxkbfile
-			x11-libs/libXrandr
-			x11-libs/libXrender
-		"
-		;;
-	*)
-		;;
-esac
-
 # We always need the aqua useflag because otherwise we cannot = refer to it inside
 # add_kdebase_dep. This was always kind of a bug, but came to light with EAPI=5
 # (where referring to a use flag not in IUSE masks the ebuild).
@@ -444,13 +422,7 @@ _calculate_src_uri() {
 
 	# calculate tarball module name
 	if [[ -n ${KMNAME} ]]; then
-		# fixup kdebase-apps name
-		case ${KMNAME} in
-			kdebase-apps)
-				_kmname="kdebase" ;;
-			*)
-				_kmname="${KMNAME}" ;;
-		esac
+		_kmname="${KMNAME}"
 	else
 		_kmname=${PN}
 	fi
@@ -647,7 +619,6 @@ kde4-base_src_unpack() {
 	if [[ ${KDE_BUILD_TYPE} = live ]]; then
 		case ${KDE_SCM} in
 			svn)
-				migrate_store_dir
 				subversion_src_unpack
 				;;
 			git)
