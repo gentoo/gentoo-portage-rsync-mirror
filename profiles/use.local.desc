@@ -1810,8 +1810,9 @@ dev-python/pypy:shadowstack - Use a shadow stack for finding GC roots
 dev-python/pypy-bin:shadowstack - Use a shadow stack for finding GC roots
 dev-python/pyquery:beautifulsoup3 - Support BeautifulSoup 3
 dev-python/pyrax:keyring - adds support for the keyring auth backend
-dev-python/pyside:X - Build QtGui, QtDesigner, QtTest and QtUiTools modules
+dev-python/pyside:X - Build QtGui and QtTest modules
 dev-python/pyside:declarative - Build QtDeclarative module
+dev-python/pyside:designer - Build QtDesigner and QtUiTools modules
 dev-python/pyside:help - Build QtHelp module
 dev-python/pyside:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
 dev-python/pyside:multimedia - Build QtMultimedia module

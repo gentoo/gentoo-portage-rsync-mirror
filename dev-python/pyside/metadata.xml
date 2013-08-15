@@ -3,8 +3,9 @@
 <pkgmetadata>
 	<herd>qt</herd>
 	<use>
-		<flag name="X">Build QtGui, QtDesigner, QtTest and QtUiTools modules</flag>
+		<flag name="X">Build QtGui and QtTest modules</flag>
 		<flag name="declarative">Build QtDeclarative module</flag>
+		<flag name="designer">Build QtDesigner and QtUiTools modules</flag>
 		<flag name="help">Build QtHelp module</flag>
 		<flag name="kde">Select <pkg>media-libs/phonon</pkg> as Phonon variant (needed for KDE)</flag>
 		<flag name="multimedia">Build QtMultimedia module</flag>

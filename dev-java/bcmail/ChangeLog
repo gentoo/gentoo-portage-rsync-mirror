@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.37 2013/07/12 02:42:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.38 2013/08/15 10:11:10 tomwij Exp $
+
+*bcmail-1.45-r1 (15 Aug 2013)
+*bcmail-1.38-r2 (15 Aug 2013)
+
+  15 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +bcmail-1.38-r2.ebuild,
+  +bcmail-1.45-r1.ebuild:
+  Slot dev-java/bcmail to resolve blockers.
 
   12 Jul 2013; Patrick Lauer <patrick@gentoo.org> bcmail-1.38-r1.ebuild:
   QA: Adding ~amd64-fbsd keyword to avoid keyword removal cascade
