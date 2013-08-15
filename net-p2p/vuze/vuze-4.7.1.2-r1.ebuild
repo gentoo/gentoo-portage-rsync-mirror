@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.8.1.2.ebuild,v 1.1 2013/02/14 04:45:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.1.2-r1.ebuild,v 1.1 2013/08/15 16:23:14 tomwij Exp $
 
-EAPI=5
+EAPI=2
 
 JAVA_PKG_IUSE="source"
 
@@ -29,10 +29,11 @@ IUSE=""
 # bundles parts of http://www.programmers-friend.org/
 RDEPEND="
 	dev-java/json-simple:0
-	dev-java/bcprov:1.3
+	dev-java/bcprov:1.40
 	>=dev-java/commons-cli-1.0:1
 	>=dev-java/log4j-1.2.8:0
 	dev-java/swt:3.7[cairo]
+	!net-p2p/azureus-bin
 	>=virtual/jre-1.5"
 
 DEPEND="${RDEPEND}
@@ -47,32 +48,32 @@ src_unpack() {
 	mkdir "${S}" && cd "${S}" || die
 	unpack ${SRC_TARBALL}
 	# this is no longer needed
-	rm "${WORKDIR}"/${PATCHSET_DIR}/0006-Remove-the-use-of-windows-only-Tree2-widget.patch || die
+	rm "${WORKDIR}/${PATCHSET_DIR}/0006-Remove-the-use-of-windows-only-Tree2-widget.patch" || die
 }
 
 java_prepare() {
 	# build.xml disappeared from 4.4.0.0 although it was there in 4.3.1.4
 	# hopefully that's just a packaging mistake
 	[[ -f build.xml ]] && die "upstream has build.xml again, don't overwrite"
-	cp "${FILESDIR}"/build.xml . || die "failed to copy build.xml"
+	cp "${FILESDIR}/build.xml" . || die "failed to copy build.xml"
 
-	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/${PATCHSET_DIR}/
+	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PATCHSET_DIR}/"
 
 	### Removes OS X files and entries.
-	rm -rf "org/gudy/azureus2/platform/macosx" \
+	rm -rv "org/gudy/azureus2/platform/macosx" \
 		   "org/gudy/azureus2/ui/swt/osx" || die
 
 	### Removes Windows files.
-	rm -rf ./org/gudy/azureus2/ui/swt/win32/Win32UIEnhancer.java || die
+	rm -v ./org/gudy/azureus2/ui/swt/win32/Win32UIEnhancer.java || die
 
 	### Removes test files.
-	rm -rf org/gudy/azureus2/ui/console/multiuser/TestUserManager.java || die
+	rm -rv org/gudy/azureus2/ui/console/multiuser/TestUserManager.java || die
 
 	### Removes bouncycastle (we use our own bcprov).
-	rm -rf "org/bouncycastle" || die
+	rm -rv "org/bouncycastle" || die
 
 	### Removes bundled json
-	rm -rf "org/json" || die
+	rm -rv "org/json" || die
 
 	### The Tree2 file does not compile against Linux SWT and is used only on Windows.
 	### It's runtime-conditional use is thus patched out in the patchset.
@@ -82,7 +83,7 @@ java_prepare() {
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
-EANT_GENTOO_CLASSPATH="swt-3.7,bcprov-1.3,json-simple,log4j,commons-cli-1"
+EANT_GENTOO_CLASSPATH="swt-3.7,bcprov-1.40,json-simple,log4j,commons-cli-1"
 
 src_compile() {
 	local mem
@@ -100,7 +101,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/Azureus2.jar
-	dodoc ChangeLog.txt
+	dodoc ChangeLog.txt || die
 
 	java-pkg_dolauncher "${PN}" \
 		--main org.gudy.azureus2.ui.common.Main -pre "${FILESDIR}/${PN}-4.1.0.0-pre" \
@@ -112,7 +113,7 @@ src_install() {
 	java-pkg_register-environment-variable MOZ_PLUGIN_PATH /usr/lib/nsbrowser/plugins
 
 	newicon "${S}"/org/gudy/azureus2/ui/icons/a32.png vuze.png
-	domenu "${FILESDIR}"/${PN}.desktop
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	use source && java-pkg_dosrc "${S}"/{com,edu,org}
 }
