@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-MIME-ContentType
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/ChangeLog,v 1.30 2012/06/24 12:58:40 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/ChangeLog,v 1.31 2013/08/15 07:30:16 patrick Exp $
+
+*Email-MIME-ContentType-1.16.0 (15 Aug 2013)
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +Email-MIME-ContentType-1.16.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

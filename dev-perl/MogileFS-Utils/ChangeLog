@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MogileFS-Utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Utils/ChangeLog,v 1.23 2012/08/16 21:29:17 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Utils/ChangeLog,v 1.24 2013/08/15 07:03:24 patrick Exp $
+
+*MogileFS-Utils-2.280.0 (15 Aug 2013)
+
+  15 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +MogileFS-Utils-2.280.0.ebuild:
+  Bump
 
 *MogileFS-Utils-2.260.0 (16 Aug 2012)
 
