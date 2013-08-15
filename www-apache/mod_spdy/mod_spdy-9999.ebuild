@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.2 2013/07/16 10:52:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.4 2013/08/15 16:39:18 klausman Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ else
 fi
 
 DESCRIPTION="Apache module for rewriting web pages to reduce latency and bandwidth"
-HOMEPAGE="http://code.google.com/p/modpagespeed"
+HOMEPAGE="http://code.google.com/p/mod-spdy"
 
 LICENSE="Apache-2.0"
 SLOT="0"
