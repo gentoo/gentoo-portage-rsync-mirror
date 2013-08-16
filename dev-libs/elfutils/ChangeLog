@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.166 2013/02/19 04:50:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.167 2013/08/16 12:36:03 aballier Exp $
+
+*elfutils-0.155-r1 (16 Aug 2013)
+
+  16 Aug 2013; Alexis Ballier <aballier@gentoo.org> +elfutils-0.155-r1.ebuild:
+  Convert to multilib, bug #480262. Stack it for emul-baselibs r12
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> elfutils-0.155.ebuild:
   Add ~arm-linux keyword.

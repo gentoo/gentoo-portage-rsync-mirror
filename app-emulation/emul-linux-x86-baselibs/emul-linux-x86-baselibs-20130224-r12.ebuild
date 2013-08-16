@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20130224-r11.ebuild,v 1.1 2013/08/10 23:13:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20130224-r12.ebuild,v 1.1 2013/08/16 12:36:26 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -36,6 +36,10 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=media-libs/lcms-2.5-r1:2[abi_x86_32(-)]
 		>=app-text/libpaper-1.1.24-r2[abi_x86_32(-)]
 		>=media-libs/tiff-3.9.7-r1:3[abi_x86_32(-)]
+		|| (
+			>=dev-libs/elfutils-0.155-r1[abi_x86_32(-)]
+			>=dev-libs/libelf-0.8.13-r2[abi_x86_32(-)]
+		)
 	)
 	>=sys-libs/glibc-2.15" # bug 340613
 
