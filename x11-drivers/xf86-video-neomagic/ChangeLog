@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-neomagic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.51 2013/08/16 18:29:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.52 2013/08/16 19:00:13 chithanh Exp $
+
+  16 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-neomagic-1.2.8.ebuild:
+  Use EAPI 5 for subslot dependencies.
 
 *xf86-video-neomagic-1.2.8 (16 Aug 2013)
 

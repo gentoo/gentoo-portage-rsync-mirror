@@ -1,12 +1,12 @@
 # Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.3.ebuild,v 1.1 2013/07/16 10:18:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.3.ebuild,v 1.2 2013/08/16 18:39:15 blueness Exp $
 
 EAPI="4"
 
 DB_VER="4.8"
 
-inherit db-use eutils versionator toolchain-funcs
+inherit bash-completion-r1 db-use eutils versionator toolchain-funcs
 
 MyPV="${PV/_/}"
 MyPN="bitcoin"
@@ -106,8 +106,7 @@ src_install() {
 	doman contrib/debian/manpages/{bitcoind.1,bitcoin.conf.5}
 
 	if use bash-completion; then
-		insinto /usr/share/bash-completion
-		newins contrib/bitcoind.bash-completion bitcoind
+		newbashcomp contrib/${PN}.bash-completion ${PN}
 	fi
 
 	if use examples; then

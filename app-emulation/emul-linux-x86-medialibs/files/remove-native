@@ -185,3 +185,7 @@ usr/lib32/libavutil.so
 usr/lib32/libavutil.so.51
 usr/lib32/libavutil.so.51.35.100
 usr/lib32/pkgconfig/libavutil.pc
+usr/lib32/libdv.so
+usr/lib32/libdv.so.4
+usr/lib32/libdv.so.4.0.3
+usr/lib32/pkgconfig/libdv.pc
