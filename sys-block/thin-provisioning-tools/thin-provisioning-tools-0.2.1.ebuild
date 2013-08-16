@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.1.ebuild,v 1.2 2013/08/14 09:18:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.1.ebuild,v 1.3 2013/08/16 05:48:22 patrick Exp $
 
 EAPI=5
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="A suite of tools for thin provisioning on Linux."
 HOMEPAGE="https://github.com/jthornber/thin-provisioning-tools"
@@ -20,6 +20,12 @@ RDEPEND="dev-libs/expat
 		 dev-lang/ruby"
 DEPEND="${RDEPEND}
 		dev-libs/boost"
+
+pkg_pretend() {
+	if [[ `gcc-version` < 4.7 ]]; then
+		die "Need gcc 4.7 or later to build, current version is `gcc-fullversion`"
+	fi
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-LDFLAGS.patch

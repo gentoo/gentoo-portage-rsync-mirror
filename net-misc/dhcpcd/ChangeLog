@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.366 2013/08/02 22:08:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.367 2013/08/16 05:59:09 williamh Exp $
+
+  16 Aug 2013; William Hubbs <williamh@gentoo.org> dhcpcd-6.0.5.ebuild,
+  dhcpcd-9999.ebuild:
+  add support for ipv6 use flag for bug #481134 and sync live ebuild.
 
   02 Aug 2013; William Hubbs <williamh@gentoo.org> dhcpcd-6.0.5.ebuild:
   Add messages for bug #477356.

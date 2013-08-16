@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.0.5.ebuild,v 1.3 2013/08/02 22:08:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.0.5.ebuild,v 1.4 2013/08/16 05:59:09 williamh Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DESCRIPTION="A fully featured, yet light weight RFC2131 compliant DHCP client"
 HOMEPAGE="http://roy.marples.name/projects/dhcpcd/"
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="elibc_glibc"
+IUSE="elibc_glibc ipv6"
 
 DEPEND=""
 RDEPEND=""
@@ -41,6 +41,7 @@ src_configure()
 			--libexecdir="${EPREFIX}/lib/dhcpcd" \
 			--dbdir="${EPREFIX}/var/lib/dhcpcd" \
 		--localstatedir="${EPREFIX}/var" \
+		$(use_enable ipv6) \
 		${hooks}
 }
 
