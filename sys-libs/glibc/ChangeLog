@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.945 2013/08/12 14:56:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.946 2013/08/16 21:30:26 vapier Exp $
+
+  16 Aug 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild:
+  Mark as -alpha so that we know it missing is expected.
 
   12 Aug 2013; Tobias Klausmann <klausman@gentoo.org> glibc-2.17.ebuild:
   De-keyword glibc-2.17 on alpha due to bug 480740
