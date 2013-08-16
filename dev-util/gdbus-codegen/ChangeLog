@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.56 2013/08/16 10:42:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.57 2013/08/16 15:28:01 jer Exp $
+
+  16 Aug 2013; Jeroen Roovers <jer@gentoo.org> gdbus-codegen-2.32.4-r1.ebuild:
+  Stable for HPPA (bug #479506).
 
 *gdbus-codegen-2.36.4 (16 Aug 2013)
 

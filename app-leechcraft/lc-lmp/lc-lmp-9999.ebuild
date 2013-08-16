@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/lc-lmp-9999.ebuild,v 1.1 2013/03/08 22:02:05 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/lc-lmp-9999.ebuild,v 1.2 2013/08/16 15:24:02 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,12 +10,12 @@ DESCRIPTION="LeechCraft Media Player, Phonon-based audio/video player."
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug +graffiti kde +mpris +mp3tunes"
+IUSE="debug +graffiti +mpris +mp3tunes"
 
+# depend on gstreamer:0.10 to match current Qt deps
 DEPEND="~app-leechcraft/lc-core-${PV}
 		graffiti? ( media-libs/flac )
-		kde? ( media-libs/phonon )
-		!kde? ( dev-qt/qtphonon:4 )
+		media-libs/gstreamer:0.10
 		media-libs/taglib
 		mpris? ( dev-qt/qtdbus:4 )
 		dev-qt/qtdeclarative:4"

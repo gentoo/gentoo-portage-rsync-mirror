@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.44 2013/08/16 13:38:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.45 2013/08/16 15:23:05 aballier Exp $
+
+  16 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  remove useless gvfs[gnome-keyring] mask
 
   16 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   unmask nepomuk-core[epub], bug #481092
