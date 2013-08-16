@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/cvmfs-2.1.10.ebuild,v 1.1 2013/06/17 23:03:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/cvmfs-2.1.14.ebuild,v 1.1 2013/08/16 21:46:43 bicatali Exp $
 
 EAPI=5
+
+CMAKE_IN_SOURCE_BUILD=1
 
 inherit cmake-utils
 
@@ -36,8 +38,8 @@ DEPEND="${CDEPEND}
 	doc? ( app-doc/doxygen[dot] )"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-no-config.patch
-	"${FILESDIR}"/${P}-openrc.patch
+	"${FILESDIR}"/${PN}-2.1.10-no-config.patch
+	"${FILESDIR}"/${PN}-2.1.10-openrc.patch
 )
 
 src_prepare() {

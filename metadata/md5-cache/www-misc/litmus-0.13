@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure
+DEPEND=gnutls? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) openssl? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) !gnutls? ( !openssl? ( <net-libs/neon-0.30:0/0[zlib] ) ) || ( dev-libs/expat:0 dev-libs/libxml2:2 ) gnutls? ( net-libs/gnutls:0 ) gssapi? ( dev-perl/GSSAPI:0 ) libproxy? ( net-libs/libproxy:0 ) pkcs11? ( dev-libs/pakchois:0 ) openssl? ( dev-libs/openssl:0 )
+DESCRIPTION=WebDAV server protocol compliance test suite
+EAPI=5
+HOMEPAGE=http://www.webdav.org/neon/litmus
+IUSE=debug gnutls gssapi libproxy openssl pkcs11
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=gnutls? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) openssl? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) !gnutls? ( !openssl? ( <net-libs/neon-0.30:0/0[zlib] ) ) || ( dev-libs/expat:0 dev-libs/libxml2:2 ) gnutls? ( net-libs/gnutls:0 ) gssapi? ( dev-perl/GSSAPI:0 ) libproxy? ( net-libs/libproxy:0 ) pkcs11? ( dev-libs/pakchois:0 ) openssl? ( dev-libs/openssl:0 )
+REQUIRED_USE=openssl? ( !gnutls ) gnutls? ( !openssl )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.webdav.org/neon/litmus/litmus-0.13.tar.gz
+_md5_=74df3eaf634f776940712ea7161db7bf
