@@ -1,6 +1,9 @@
 # ChangeLog for net-print/splix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.27 2012/03/12 19:10:48 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.28 2013/08/16 09:30:33 mrueg Exp $
+
+  16 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -splix-2.0.0_p20110219-r1.ebuild:
+  Cleanup.
 
   12 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   splix-2.0.0_p20111206.ebuild:
@@ -150,4 +153,3 @@
   07 Dec 2006; jakobdettner <gentoo@dettner.de> +splix-0.0.2.ebuild,
   +files/fixMakefile.patch, +metadata.xml:
   New Ebuild for bug 157302 thanks.
-

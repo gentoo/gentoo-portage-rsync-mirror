@@ -1,6 +1,10 @@
 # ChangeLog for net-print/ink
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ChangeLog,v 1.20 2012/02/24 14:15:53 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ChangeLog,v 1.21 2013/08/16 09:25:57 mrueg Exp $
+
+  16 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -files/ink-0.4.1-asneeded.patch,
+  -files/ink-0.5.0-asneeded.patch, -ink-0.5.0.ebuild:
+  Cleanup.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ink-0.5.1.ebuild:
   x86 stable wrt bug #400459
@@ -78,4 +82,3 @@
 
   21 Sep 2003; Heinrich Wendel <h_wendel@gentoo.org> ink-0.2.ebuild:
   initial release, thx to Marcin Wisnicki <wisnia21@freeshell.org>
-

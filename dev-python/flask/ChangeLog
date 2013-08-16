@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/flask
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.24 2013/06/27 02:24:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.25 2013/08/16 09:07:32 idella4 Exp $
+
+*flask-0.10.1-r1 (16 Aug 2013)
+
+  16 Aug 2013; Ian Delaney <idella4@gentoo.org>
+  +files/flask-0.10.1-is_package.patch, +flask-0.10.1-r1.ebuild:
+  revbump; Re-set test phase, patch from upstream (issues/487) impacting flask-
+  script
 
   27 Jun 2013; Mike Gilbert <floppym@gentoo.org> flask-9999.ebuild:
   Ditto live ebuild.
