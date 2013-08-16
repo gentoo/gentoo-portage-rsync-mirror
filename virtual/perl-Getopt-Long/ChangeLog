@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Getopt-Long
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.50 2013/03/13 07:48:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.51 2013/08/16 03:14:40 patrick Exp $
+
+*perl-Getopt-Long-2.410.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +perl-Getopt-Long-2.410.0.ebuild:
+  Bump
 
 *perl-Getopt-Long-2.390.0 (13 Mar 2013)
 

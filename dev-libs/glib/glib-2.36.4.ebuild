@@ -1,36 +1,43 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3.ebuild,v 1.6 2013/08/14 04:19:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4.ebuild,v 1.1 2013/08/16 03:20:25 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
 # Avoid runtime dependency on python when USE=test
 
-inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs versionator virtualx linux-info
+inherit autotools bash-completion-r1 gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs versionator virtualx linux-info multilib-minimal
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
+SRC_URI="${SRC_URI}
+	http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2+"
 SLOT="2"
 IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
+# FIXME: want libselinux[${MULTILIB_USEDEP}] - bug #480960
 RDEPEND="
-	virtual/libiconv
-	virtual/libffi
-	sys-libs/zlib
+	virtual/libiconv[${MULTILIB_USEDEP}]
+	virtual/libffi[${MULTILIB_USEDEP}]
+	sys-libs/zlib[${MULTILIB_USEDEP}]
 	|| (
 		>=dev-libs/elfutils-0.142
 		>=dev-libs/libelf-0.8.12
 		>=sys-freebsd/freebsd-lib-9.2_rc1
 		)
 	selinux? ( sys-libs/libselinux )
-	xattr? ( sys-apps/attr )
-	fam? ( virtual/fam )
+	xattr? ( sys-apps/attr[${MULTILIB_USEDEP}] )
+	fam? ( virtual/fam[${MULTILIB_USEDEP}] )
 	utils? (
 		${PYTHON_DEPS}
 		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}] )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r9
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
@@ -45,7 +52,6 @@ DEPEND="${RDEPEND}
 		>=sys-apps/dbus-1.2.14 )
 	!<dev-libs/gobject-introspection-1.$(get_version_component_range 2)
 	!<dev-util/gtk-doc-1.15-r2
-	!<app-shells/bash-completion-2.1-r1
 "
 # gobject-introspection blocker to ensure people don't mix
 # different g-i and glib major versions
@@ -70,6 +76,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Prevent build failure in stage3 where pkgconfig is not available, bug #481056
+	mv -f "${WORKDIR}"/pkg-config-*/pkg.m4 "${S}"/m4macros/ || die
+
 	# Fix gmodule issues on fbsd; bug #184301, upstream bug #107626
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
 
@@ -131,6 +140,10 @@ src_prepare() {
 	sed -e '/${PYTHON}/d' \
 		-i glib/Makefile.{am,in} || die
 
+	# Gentoo handles completions in a different directory
+	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
+		gio/Makefile.am || die
+
 	epatch_user
 
 	# Needed for the punt-python-check patch, disabling timeout test
@@ -144,7 +157,7 @@ src_prepare() {
 	epunt_cxx
 }
 
-src_configure() {
+multilib_src_configure() {
 	# Avoid circular depend with dev-util/pkgconfig and
 	# native builds (cross-compiles won't need pkg-config
 	# in the target ROOT to work here)
@@ -164,8 +177,18 @@ src_configure() {
 	# convert this to the use_enable form, as it results in a broken build.
 	use debug && myconf="--enable-debug"
 
+	# Only used by the gresource bin
+	multilib_is_native_abi || myconf="${myconf} --disable-libelf"
+
+	# FIXME: change to "$(use_enable selinux)" when libselinux is multilibbed, bug #480960
+	if multilib_is_native_abi; then
+		myconf="${myconf} $(use_enable selinux)"
+	else
+		myconf="${myconf} --disable-selinux"
+	fi
+
 	# Always use internal libpcre, bug #254659
-	econf ${myconf} \
+	ECONF_SOURCE="${S}" econf ${myconf} \
 		$(use_enable xattr) \
 		$(use_enable fam) \
 		$(use_enable selinux) \
@@ -179,9 +202,7 @@ src_configure() {
 		--with-xml-catalog="${EPREFIX}/etc/xml/catalog"
 }
 
-src_install() {
-	default
-
+multilib_src_install_all() {
 	if use utils ; then
 		python_replicate_script "${ED}"/usr/bin/gtester-report
 	else
@@ -200,7 +221,7 @@ src_install() {
 	prune_libtool_files --modules
 }
 
-src_test() {
+multilib_src_test() {
 	gnome2_environment_reset
 
 	unset DBUS_SESSION_BUS_ADDRESS
@@ -217,7 +238,7 @@ src_test() {
 
 	# Hardened: gdb needs this, bug #338891
 	if host-is-pax ; then
-		pax-mark -mr "${S}"/tests/.libs/assert-msg-test \
+		pax-mark -mr "${BUILD_DIR}"/tests/.libs/assert-msg-test \
 			|| die "Hardened adjustment failed"
 	fi
 
@@ -225,29 +246,7 @@ src_test() {
 	Xemake check
 }
 
-#pkg_preinst() {
-	# Only give the introspection message if:
-	# * The user has gobject-introspection
-	# * Has glib already installed
-	# * Previous version was different from new version
-	# TODO: add a subslotted virtual to trigger this automatically
-	# * Replaced with the use of blockers to ensure people don't mix
-	#   different gobject-introspection and glib major versions
-#	if has_version "dev-libs/gobject-introspection" && ! has_version "=${CATEGORY}/${PF}"; then
-#		ewarn "You must rebuild gobject-introspection so that the installed"
-#		ewarn "typelibs and girs are regenerated for the new APIs in glib"
-#	fi
-#}
-
 pkg_postinst() {
-	# Inform users about possible breakage when updating glib and not dbus-glib, bug #297483
-	# TODO: add a subslotted virtual to trigger this automatically
-	# * Disabled for now as looks to not break for a long time
-	#if has_version dev-libs/dbus-glib; then
-	#	ewarn "If you experience a breakage after updating dev-libs/glib try"
-	#	ewarn "rebuilding dev-libs/dbus-glib"
-	#fi
-
 	if has_version '<x11-libs/gtk+-3.0.12:3'; then
 		# To have a clear upgrade path for gtk+-3.0.x users, have to resort to
 		# a warning instead of a blocker

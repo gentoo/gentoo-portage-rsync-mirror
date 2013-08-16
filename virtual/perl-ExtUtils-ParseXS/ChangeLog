@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-ExtUtils-ParseXS
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/ChangeLog,v 1.52 2013/08/13 09:39:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/ChangeLog,v 1.53 2013/08/16 03:10:28 patrick Exp $
+
+*perl-ExtUtils-ParseXS-3.210.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +perl-ExtUtils-ParseXS-3.210.0.ebuild:
+  Bump
 
   13 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-ExtUtils-ParseXS-3.180.0.ebuild:
