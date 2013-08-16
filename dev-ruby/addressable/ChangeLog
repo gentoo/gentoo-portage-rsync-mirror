@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.32 2013/04/27 06:15:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.33 2013/08/16 05:07:03 mrueg Exp $
+
+*addressable-2.3.5 (16 Aug 2013)
+
+  16 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +addressable-2.3.5.ebuild:
+  Version bump
 
 *addressable-2.3.4 (27 Apr 2013)
 
