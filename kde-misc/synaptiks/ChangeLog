@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.39 2013/05/02 20:08:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.40 2013/08/16 09:54:19 mrueg Exp $
+
+*synaptiks-0.8.1-r3 (16 Aug 2013)
+
+  16 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +synaptiks-0.8.1-r3.ebuild:
+  Migrate to distutils-r1
 
   02 May 2013; Johannes Huber <johu@gentoo.org> -synaptiks-0.8.1.ebuild:
   Remove old.

@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1050 2013/08/07 23:09:51 radhermit Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1051 2013/08/16 09:42:43 pinkbyte Exp $
 
 -->
 <herds>
@@ -2151,46 +2151,7 @@
     <name>proxy-maintainers</name>
     <email>proxy-maint@gentoo.org</email>
     <description>Orphaned packages maintained by Gentoo's proxy-maintainers team</description>
-    <maintainer>
-        <email>hwoarang@gentoo.org</email>
-        <name>Markos Chandras</name>
-    </maintainer>
-    <maintainer>
-        <email>maksbotan@gentoo.org</email>
-        <name>Maxim Koltsov</name>
-    </maintainer>
-    <maintainer>
-        <email>pinkbyte@gentoo.org</email>
-        <name>Sergey Popov</name>
-    </maintainer>
-    <maintainer>
-        <email>phajdan.jr@gentoo.org</email>
-        <name>Paweł Hajdan</name>
-    </maintainer>
-    <maintainer>
-        <email>qnikst@gentoo.org</email>
-        <name>Alexander V. Vershilov</name>
-    </maintainer>
-    <maintainer>
-        <email>titanofold@gentoo.org</email>
-        <name>Aaron W. Swenson</name>
-    </maintainer>
-    <maintainer>
-        <email>yngwin@gentoo.org</email>
-        <name>Ben de Groot</name>
-    </maintainer>
-    <maintainer>
-        <email>xmw@gentoo.org</email>
-        <name>Michael Weber</name>
-    </maintainer>
-    <maintainer>
-        <email>mrueg@gentoo.org</email>
-        <name>Manuel Rüger</name>
-    </maintainer>
-    <maintainer>
-        <email>TomWij@gentoo.org</email>
-        <name>Tom Wijsman</name>
-    </maintainer>
+    <maintainingproject>/proj/en/qa/proxy-maintainers/index.xml</maintainingproject>
 </herd>
 <herd>
     <name>radio</name>
