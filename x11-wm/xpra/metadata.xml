@@ -15,5 +15,7 @@
 	<flag name='rencode'>Enable rencode support</flag>
 	<flag name='vpx'>Enable vpx image format support</flag>
 	<flag name='webp'>Enable webp image format support</flag>
+	<flag name='csc'>Enable csc softscaler support</flag>
+	<flag name='dec_av'>Enable dec_avcodec support</flag>
 </use>
 </pkgmetadata>

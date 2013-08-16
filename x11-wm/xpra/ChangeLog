@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.77 2013/08/15 11:50:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.78 2013/08/16 19:26:43 xmw Exp $
+
+  16 Aug 2013; Michael Weber <xmw@gentoo.org> metadata.xml, xpra-0.10.0.ebuild:
+  Required use, add gtk+:2 dep. Building against gtk+:3 or qt4 doesn't work.
 
 *xpra-0.10.0 (15 Aug 2013)
 

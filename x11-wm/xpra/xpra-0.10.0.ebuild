@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.10.0.ebuild,v 1.1 2013/08/15 11:50:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.10.0.ebuild,v 1.2 2013/08/16 19:26:43 xmw Exp $
 
 EAPI=5
 
@@ -14,31 +14,35 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+client +clipboard gtk opengl pulseaudio qt4 +rencode server sound vpx webp x264"
+IUSE="+client +clipboard csc dec_av opengl pulseaudio +rencode server sound vpx webp x264"
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
+	clipboard? ( || ( server client ) )
+	opengl? ( client )
+	|| ( client server )"
 
 # x264/old-libav.path situation see bug 459218
 COMMON_DEPEND=""${PYTHON_DEPS}"
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pygtk:2[${PYTHON_USEDEP}]
+	x11-libs/gtk+:2
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libXtst
+	csc? ( || ( >=media-video/ffmpeg-1.2.2 media-video/libav ) )
+	dec_av? ( || ( >=media-video/ffmpeg-1.2.2 media-video/libav ) )
 	opengl? ( dev-python/pygtkglext )
 	pulseaudio? ( media-sound/pulseaudio )
 	sound? ( media-libs/gstreamer
 		media-libs/gst-plugins-base
 		dev-python/gst-python )
-	vpx? ( media-libs/libvpx
-		virtual/ffmpeg )
+	vpx? ( media-libs/libvpx virtual/ffmpeg )
 	webp? ( media-libs/libwebp )
 	x264? ( media-libs/x264
-		|| ( >=media-video/ffmpeg-1.0.4:0 media-video/libav )
-		virtual/ffmpeg )"
+		|| ( >=media-video/ffmpeg-1.0.4:0 media-video/libav ) )"
 
 RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
@@ -73,10 +77,12 @@ python_configure_all() {
 	mydistutilsargs=(
 		$(use_with client)
 		$(use_with clipboard)
-		$(use_with gtk gtk2)
+		$(use_with csc csc_swscale)
+		$(use_with dec_av dec_avcodec)
 		$(use_with opengl)
-		$(use_with qt4)
 		$(use_with rencode)
+		$(use_with server cymaths)
+		$(use_with server shadow)
 		$(use_with server)
 		$(use_with sound)
 		$(use_with vpx)
@@ -84,13 +90,12 @@ python_configure_all() {
 		$(use_with x264 enc_x264)
 		--with-Xdummy
 		--with-argb
-		--with-csc_swscale
 		--without-csc_nvcuda
-		--with-cymaths
 		--with-cyxor
-		--with-dec_avcodec
+		--with-gtk2
+		--without-gtk3
+		--without-qt4
 		--with-nvenc
-		--with-shadow
 		--with-strict
 		--with-warn
 		--with-x11
