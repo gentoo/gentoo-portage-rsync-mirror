@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.272 2013/08/14 09:16:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.273 2013/08/16 00:54:18 floppym Exp $
+
+*grub-2.00_p5107 (16 Aug 2013)
+
+  16 Aug 2013; Mike Gilbert <floppym@gentoo.org> +grub-2.00_p5107.ebuild:
+  New snapshot, resolves multiboot build failure, bug 479764.
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> grub-2.00-r4.ebuild,
   grub-2.00_p5086.ebuild, grub-9999.ebuild:
