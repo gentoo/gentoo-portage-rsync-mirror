@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-14-r1.ebuild,v 1.5 2013/08/09 20:29:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-14-r1.ebuild,v 1.7 2013/08/16 14:25:19 ssuominen Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://git.kernel.org/?p=utils/kernel/kmod/kmod.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="debug doc lzma +openrc static-libs +tools zlib"
+IUSE="debug doc lzma static-libs +tools zlib"
 
 # Upstream does not support running the test suite with custom configure flags.
 # I was also told that the test suite is intended for kmod developers.
@@ -98,14 +98,6 @@ src_install() {
 
 	insinto /lib/modprobe.d
 	doins "${T}"/usb-load-ehci-first.conf #260139
-
-	if use openrc; then
-		if has_version '>=sys-apps/openrc-0.12'; then
-			doinitd "${FILESDIR}"/kmod-static-nodes
-		else
-			doinitd "${FILESDIR}"/static-nodes
-		fi
-	fi
 }
 
 pkg_postinst() {
@@ -113,50 +105,6 @@ pkg_postinst() {
 	if [[ -d ${ROOT}/lib/modules/${KV_FULL} ]]; then
 		if [[ -z ${REPLACING_VERSIONS} ]]; then
 			update_depmod
-		fi
-	fi
-
-	if use openrc; then
-		# Add kmod to the runlevel automatically if this is the first install of this package.
-		if has_version '>=sys-apps/openrc-0.12'; then
-			if [[ -L ${ROOT}etc/runlevels/boot/static-nodes ]]; then
-				ewarn "Removing deprecated static-nodes init script from the boot runlevel"
-				rm -f "${ROOT}"etc/runlevels/boot/static-nodes
-			fi
-
-			if [[ -z ${REPLACING_VERSIONS} ]]; then
-				if [[ -x ${ROOT}etc/init.d/kmod-static-nodes && -d ${ROOT}etc/runlevels/sysinit ]]; then
-					ln -s /etc/init.d/kmod-static-nodes "${ROOT}"/etc/runlevels/sysinit/kmod-static-nodes
-				fi
-			fi
-
-			if [[ -e ${ROOT}etc/runlevels/sysinit ]]; then
-				if [[ ! -e ${ROOT}etc/runlevels/sysinit/kmod-static-nodes ]]; then
-					ewarn
-					ewarn "You need to add kmod-static-nodes to the boot runlevel."
-					ewarn "If you do not do this,"
-					ewarn "your system will not necessarily have the required static nodes!"
-					ewarn "Run this command:"
-					ewarn "\trc-update add kmod-static-nodes sysinit"
-				fi
-			fi
-		else
-			if [[ -z ${REPLACING_VERSIONS} ]]; then
-				if [[ -x ${ROOT}etc/init.d/static-nodes && -d ${ROOT}etc/runlevels/boot ]]; then
-					ln -s /etc/init.d/static-nodes "${ROOT}"/etc/runlevels/boot/static-nodes
-				fi
-			fi
-
-			if [[ -e ${ROOT}etc/runlevels/boot ]]; then
-				if [[ ! -e ${ROOT}etc/runlevels/boot/static-nodes ]]; then
-					ewarn
-					ewarn "You need to add static-nodes to the boot runlevel."
-					ewarn "If you do not do this,"
-					ewarn "your system will not necessarily have the required static nodes!"
-					ewarn "Run this command:"
-					ewarn "\trc-update add static-nodes boot"
-				fi
-			fi
 		fi
 	fi
 }

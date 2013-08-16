@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-guest-agent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.12 2013/08/11 21:36:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.13 2013/08/16 14:02:08 cardoe Exp $
+
+*qemu-guest-agent-1.6.0 (16 Aug 2013)
+
+  16 Aug 2013; Doug Goldstein <cardoe@gentoo.org>
+  +qemu-guest-agent-1.6.0.ebuild:
+  Version bump
 
 *qemu-guest-agent-1.5.2-r1 (11 Aug 2013)
 

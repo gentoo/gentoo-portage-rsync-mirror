@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15032 2013/08/16 10:49:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15035 2013/08/16 14:26:36 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Stakenvicius <axs@gentoo.org> (16 Aug 2013)
+# Mask openrc-0.12 and netifrc until packaging can be re-worked
+# so that upgrade paths do not kill existing network setups.
+# There are AT LEAST known multi-NIC issues with it.
+=sys-apps/openrc-0.12*
+net-misc/netifrc
+>=sys-apps/kmod-14-r2
+
+# Doug Goldstein <cardoe@gentoo.org> (16 Aug 2013)
+# Masked for dev
+=app-emulation/qemu-1.6.0
 
 # Michał Górny <mgorny@gentoo.org> (16 Aug 2013)
 # Getting more broken every day. No commit for 5 years. Nothing
@@ -150,11 +162,6 @@ dev-vcs/bzr-svn
 # Alexandre Rostovtsev <tetromino@gentoo.org> (04 Aug 2013)
 # API break, reverse dependencies need patching; bug #479458.
 >=sci-geosciences/geocode-glib-0.99.1
-
-# Doug Goldstein <cardoe@gentoo.org> (03 Aug 2013)
-# Masked due to mirgration breakage.
-=app-emulation/qemu-1.5.2
-=app-emulation/qemu-1.4.2-r1
 
 # Ian Delaney <idella4@gentoo.org> (01 Aug 2013)
 # Mask while awaiting bump to dep Djblets-0.7.16
@@ -530,10 +537,6 @@ media-gfx/yablex
 # Depends on blender, which is masked.
 media-gfx/yafaray
 
-# Doug Goldstein <cardoe@gentoo.org> (24 Feb 2013)
-# Working on the next stable patchset
-=app-emulation/qemu-1.2.2-r4
-
 # Eray Aslan <eras@gentoo.org> (13 Feb 2013)
 # Mask experimental software
 =mail-mta/postfix-2.11*
@@ -551,10 +554,6 @@ media-gfx/yafaray
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
 =sys-block/open-iscsi-2.0.873
-
-# Marien Zwart <marienz@gentoo.org>
-# Patch tarball is broken, meaning this builds 1.2.0 (bug #452918)
-=app-emulation/qemu-1.2.2-r1
 
 # Mike Gilbert <floppym@gentoo.org (18 Jan 2013)
 # Release made by unofficial maintainer. Drops support for Python 3 with

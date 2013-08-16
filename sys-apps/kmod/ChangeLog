@@ -1,6 +1,28 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.105 2013/08/09 19:08:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.109 2013/08/16 14:25:19 ssuominen Exp $
+
+*kmod-14-r1 (16 Aug 2013)
+
+  16 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +kmod-14-r1.ebuild:
+  Restore crippled version to tree because sys-apps/openrc >= 0.12 was
+  hardmasked for other reasons.
+
+  16 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> -files/static-nodes,
+  -kmod-14-r1.ebuild:
+  old
+
+  16 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-14-r2.ebuild,
+  kmod-9999.ebuild:
+  Block old OpenRC instead of depending on new one to prevent circular
+  dependency.
+
+*kmod-14-r2 (16 Aug 2013)
+
+  16 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +kmod-14-r2.ebuild,
+  kmod-9999.ebuild:
+  Revision bump for OpenRC >= 0.12 to make the "static-nodes" -> "kmod-static-
+  nodes" switch for everyone.
 
   09 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-14-r1.ebuild,
   kmod-9999.ebuild, +files/kmod-static-nodes:
