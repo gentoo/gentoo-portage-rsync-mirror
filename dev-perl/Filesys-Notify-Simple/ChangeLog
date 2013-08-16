@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Filesys-Notify-Simple
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-Notify-Simple/ChangeLog,v 1.4 2013/02/01 20:29:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-Notify-Simple/ChangeLog,v 1.5 2013/08/16 07:49:43 patrick Exp $
+
+*Filesys-Notify-Simple-0.120.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +Filesys-Notify-Simple-0.120.0.ebuild:
+  Bump
 
 *Filesys-Notify-Simple-0.100.0 (01 Feb 2013)
 
