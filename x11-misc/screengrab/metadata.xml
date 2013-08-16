@@ -5,4 +5,10 @@
 	<upstream>
 		<remote-id type="google-code">screengrab-qt</remote-id>
 	</upstream>
+<upstream>
+	<maintainer status="active">
+	<email>doomer3d@gmail.com</email>
+	<name>Artem Galichkin</name>
+	</maintainer>
+</upstream>
 </pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/screengrab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.29 2013/06/12 18:07:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.30 2013/08/16 17:49:46 hwoarang Exp $
+
+*screengrab-1.0 (16 Aug 2013)
+
+  16 Aug 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/screengrab-1.0-detect-lib64.patch, +screengrab-1.0.ebuild,
+  metadata.xml:
+  Version bump. Thanks to upstream maintainer Artem Galichkin
+  <doomer3d@gmail.com> for the ebuild
 
   12 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> screengrab-0.9.96.ebuild:
   Stable on amd64 and x86, wrt bug #473098
