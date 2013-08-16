@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-ICal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ICal/ChangeLog,v 1.14 2013/01/06 20:59:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ICal/ChangeLog,v 1.15 2013/08/16 08:17:58 patrick Exp $
+
+*Data-ICal-0.210.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org> +Data-ICal-0.210.0.ebuild:
+  Bump
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Data-ICal-0.180.0.ebuild:
   Cleanup

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Log-Any
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Any/ChangeLog,v 1.8 2012/06/24 12:58:14 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Any/ChangeLog,v 1.9 2013/08/16 08:02:36 patrick Exp $
+
+*Log-Any-0.150.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org> +Log-Any-0.150.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

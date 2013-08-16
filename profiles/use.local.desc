@@ -4292,6 +4292,7 @@ net-ftp/pure-ftpd:paranoidmsg - Display paranoid messages instead of normal ones
 net-ftp/pure-ftpd:resolveids - Resolve UIDs/GIDs
 net-ftp/pure-ftpd:sysquota - Enables system quota support (needs sys-fs/quota)
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risk)
+net-ftp/yafc:ssh - Build with SFTP support
 net-im/ayttm:irc - Enable Internet Relay Chat support
 net-im/ayttm:lj - Enable livejournal.com support
 net-im/ayttm:smtp - Adds support for sending messages via RFC2821 SMTP
