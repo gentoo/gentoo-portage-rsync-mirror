@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.2 2013/08/12 18:22:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.3 2013/08/15 23:27:56 bicatali Exp $
 
 EAPI=5
 
@@ -28,12 +28,21 @@ CDEPEND="
 	dev-python/python-dateutil[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}
 	doc? (
+		dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
 		dev-python/ipython[${PYTHON_USEDEP}]
-		dev-python/rpy[$(python_gen_usedep 'python2_7')]
-		dev-python/sphinx[${PYTHON_USEDEP}]
-		sci-libs/scikits_timeseries[$(python_gen_usedep 'python2*')]
+		dev-python/html5lib[${PYTHON_USEDEP}]
+		dev-python/lxml[${PYTHON_USEDEP}]
 		dev-python/matplotlib[${PYTHON_USEDEP}]
-		)
+		>=dev-python/openpyxl-1.6.1[${PYTHON_USEDEP}]
+		dev-python/pytables[${PYTHON_USEDEP}]
+		dev-python/pytz[${PYTHON_USEDEP}]
+		dev-python/rpy[$(python_gen_usedep 'python2_7')]
+		sci-libs/scipy[${PYTHON_USEDEP}]
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		dev-python/xlrd[$(python_gen_usedep 'python2*')]
+		dev-python/xlwt[$(python_gen_usedep 'python2*')]
+		sci-libs/scikits_timeseries[$(python_gen_usedep 'python2*')]
+		x11-misc/xclip )
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 # sci-libs/scikits_statsmodels invokes a circular dep
 #  hence rm from doc? ( ), again
@@ -70,12 +79,12 @@ python_prepare_all() {
 
 python_compile_all() {
 	python_export_best
-
-	# To build docs the need be located in $BUILD_DIR, else PYTHONPATH points to unusable modules.
+	# To build docs the need be located in $BUILD_DIR,
+	# else PYTHONPATH points to unusable modules.
 	if use doc; then
-		cd "${BUILD_DIR}"/lib/ || die
+		cd "${BUILD_DIR}"/lib || die
 		cp -ar "${S}"/doc . && cd doc || die
-		PYTHONPATH=. "${EPYTHON}" make.py html || die
+		LANG=C PYTHONPATH=. "${EPYTHON}" make.py html || die
 	fi
 }
 
@@ -84,7 +93,7 @@ python_test() {
 	if [[ ${EPYTHON} == "python2.6" ]]; then
 		rm $(find "${BUILD_DIR}" -name test_array.py) || die
 	fi
-	cd "${BUILD_DIR}"/lib/ || die
+	cd "${BUILD_DIR}"/lib || die
 	PYTHONPATH=. MPLCONFIGDIR=. HOME=. \
 		VIRTUALX_COMMAND="nosetests --verbosity=3 pandas" \
 		virtualmake || die
@@ -92,7 +101,7 @@ python_test() {
 
 python_install_all() {
 	if use doc; then
-		cd  "${BUILD_DIR}"/lib/ || die
+		cd  "${BUILD_DIR}"/lib || die
 		dohtml -r doc/build/html/*
 		einfo "An initial build of docs is absent of references to scikits_statsmodels"
 		einfo "due to circular dependency. To have them included, emerge"
