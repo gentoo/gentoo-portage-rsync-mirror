@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Data-Dumper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Data-Dumper/ChangeLog,v 1.14 2013/02/19 10:09:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Data-Dumper/ChangeLog,v 1.15 2013/08/16 07:02:43 patrick Exp $
+
+*perl-Data-Dumper-2.145.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +perl-Data-Dumper-2.145.0.ebuild:
+  Bump
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-Data-Dumper-2.139.0.ebuild:

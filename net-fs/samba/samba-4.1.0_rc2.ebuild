@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0_rc2.ebuild,v 1.2 2013/08/16 04:39:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0_rc2.ebuild,v 1.3 2013/08/16 07:13:48 polynomial-c Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python2_{5,6,7} )
 
 inherit python-r1 waf-utils multilib linux-info systemd
 
@@ -79,6 +79,7 @@ src_configure() {
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--with-modulesdir=/usr/$(get_libdir)/samba \
+		--with-pammodulesdir=/$(get_libdir)/security \
 		--disable-rpath \
 		--disable-rpath-install \
 		--nopyc \
