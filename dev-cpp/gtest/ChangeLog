@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.32 2013/06/19 18:44:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.33 2013/08/16 14:44:49 mgorny Exp $
+
+  16 Aug 2013; Michał Górny <mgorny@gentoo.org> gtest-1.6.0-r2.ebuild:
+  Convert to python-any-r1.
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> gtest-1.6.0-r2.ebuild:
   Keyword amd64-linux and x86-linux
