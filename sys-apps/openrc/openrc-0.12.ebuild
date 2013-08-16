@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.12.ebuild,v 1.2 2013/08/14 18:41:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.12.ebuild,v 1.3 2013/08/16 16:13:14 axs Exp $
 
 EAPI=5
 
@@ -208,6 +208,14 @@ pkg_preinst() {
 	if ! has_version ">=sys-apps/openrc-0.12"; then
 		add_boot_init loopback
 		add_boot_init tmpfiles.dev sysinit
+
+		# ensure existing /etc/conf.d/net is not removed
+		# undoes the hack to get around CONFIG_PROTECT in openrc-0.11.8 and earlier
+		# this needs to stay in openrc ebuilds for a long time. :(
+		if [[ -f "${EROOT}"etc/conf.d/net ]]; then
+			einfo "Modifying conf.d/net to keep it from being removed"
+			cat "${FILESDIR}"/net.confd.comment >>"${EROOT}"etc/conf.d/net
+		fi
 	fi
 }
 
@@ -269,11 +277,11 @@ pkg_postinst() {
 	if ! use newnet && ! use netifrc; then
 		ewarn "You have emerged OpenRc without network support. This"
 		ewarn "means you need to SET UP a network manager such as"
-	ewarn "	net-misc/netifrc, net-misc/dhcpcd, net-misc/wicd,"
-	ewarn "net-misc/NetworkManager, or net-misc/badvpn."
-	ewarn "Or, you have the option of emerging openrc with the newnet"
-	ewarn "use flag and configuring /etc/conf.d/network and"
-	ewarn "/etc/conf.d/staticroute if you only use static interfaces."
+		ewarn "	net-misc/netifrc, net-misc/dhcpcd, net-misc/wicd,"
+		ewarn "net-misc/NetworkManager, or net-misc/badvpn."
+		ewarn "Or, you have the option of emerging openrc with the newnet"
+		ewarn "use flag and configuring /etc/conf.d/network and"
+		ewarn "/etc/conf.d/staticroute if you only use static interfaces."
 	fi
 
 	if use newnet && [ ! -e "${EROOT}"etc/runlevels/boot/network ]; then

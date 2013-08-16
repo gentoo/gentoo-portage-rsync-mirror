@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/herbstluftwm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.11 2013/06/28 22:04:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.12 2013/08/16 16:12:45 radhermit Exp $
+
+  16 Aug 2013; Tim Harder <radhermit@gentoo.org> -herbstluftwm-0.4.1.ebuild,
+  -herbstluftwm-0.5.0.ebuild, -herbstluftwm-0.5.1.ebuild,
+  herbstluftwm-0.5.2.ebuild, herbstluftwm-9999.ebuild:
+  Update HOMEPAGE and SRC_URI (bug #481308) and remove old.
 
 *herbstluftwm-0.5.2 (28 Jun 2013)
 

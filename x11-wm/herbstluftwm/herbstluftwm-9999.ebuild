@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.7 2013/06/28 22:04:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.8 2013/08/16 16:12:45 radhermit Exp $
 
 EAPI=5
 
@@ -9,8 +9,7 @@ inherit toolchain-funcs bash-completion-r1 git-2
 EGIT_REPO_URI="git://git.informatik.uni-erlangen.de/re06huxa/herbstluftwm"
 
 DESCRIPTION="A manual tiling window manager for X"
-HOMEPAGE="http://wwwcip.cs.fau.de/~re06huxa/herbstluftwm/"
-SRC_URI=""
+HOMEPAGE="http://herbstluftwm.org"
 
 LICENSE="BSD-2"
 SLOT="0"

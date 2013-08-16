@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r3.ebuild,v 1.7 2013/08/13 21:49:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-206-r3.ebuild,v 1.8 2013/08/16 16:28:40 ssuominen Exp $
 
 EAPI=5
 
@@ -232,6 +232,12 @@ multilib_src_configure() {
 		--disable-machined
 		--disable-xattr
 	)
+	# Use pregenerated copies when possible wrt #480924
+	if ! [[ ${PV} = 9999* ]]; then
+		econf_args+=(
+			--disable-manpages
+		)
+	fi
 	if multilib_is_native_abi; then
 		econf_args+=(
 			--with-rootlibdir=/$(get_libdir)
@@ -325,8 +331,6 @@ multilib_src_install() {
 			install-dist_udevconfDATA
 			install-dist_udevrulesDATA
 			install-girDATA
-			install-man7
-			install-man8
 			install-pkgconfiglibDATA
 			install-sharepkgconfigDATA
 			install-typelibsDATA
@@ -346,9 +350,6 @@ multilib_src_install() {
 			rootlibexec_PROGRAMS=systemd-udevd
 			rootbin_PROGRAMS=udevadm
 			lib_LTLIBRARIES="${lib_LTLIBRARIES}"
-			MANPAGES="man/udev.7 man/udevadm.8 \
-					man/systemd-udevd.service.8"
-			MANPAGES_ALIAS=""
 			pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 			INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
 					$(sysconfdir)/udev/hwdb.d'
@@ -395,6 +396,9 @@ multilib_src_install_all() {
 	rm -f \
 		"${D}"/lib/udev/rules.d/99-systemd.rules \
 		"${D}"/usr/share/doc/${PF}/LICENSE.*
+
+	# install-man7, install-man8 targets are unreliable wrt #480924
+	doman man/{udev.7,udevadm.8,systemd-udevd.service.8}
 
 	# see src_prepare() for content of these files
 	insinto /lib/udev/rules.d

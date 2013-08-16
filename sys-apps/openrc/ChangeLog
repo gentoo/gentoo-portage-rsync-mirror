@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.274 2013/08/14 18:41:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.275 2013/08/16 16:13:14 axs Exp $
+
+  16 Aug 2013; Ian Stakenvicius <axs@gentoo.org> +files/net.confd.comment,
+  openrc-0.12.ebuild:
+  stop the removal of /etc/conf.d/net when upgrading from 0.11.8 and previous,
+  bug 481336
 
   14 Aug 2013; Ian Stakenvicius <axs@gentoo.org> openrc-0.12.ebuild:
   fixed dodoc README.net to README.newnet to match distfile, bug 481078

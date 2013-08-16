@@ -2,10 +2,10 @@ DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-libs/glib-2.24:2 x11-libs/libX11 xinerama? ( x11-libs/libXinerama ) app-text/asciidoc virtual/pkgconfig dev-vcs/git
 DESCRIPTION=A manual tiling window manager for X
 EAPI=5
-HOMEPAGE=http://wwwcip.cs.fau.de/~re06huxa/herbstluftwm/
+HOMEPAGE=http://herbstluftwm.org
 IUSE=examples xinerama zsh-completion
 LICENSE=BSD-2
 RDEPEND=>=dev-libs/glib-2.24:2 x11-libs/libX11 xinerama? ( x11-libs/libXinerama ) app-shells/bash zsh-completion? ( app-shells/zsh )
 SLOT=0
 _eclasses_=bash-completion-r1	cccf36bdb93b54baafea3b9d97abb0bf	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=9ee28f798b2f83d2869da8f24b1f1e63
+_md5_=4065d5ecca2cdb0ac51d475b4eb45eff

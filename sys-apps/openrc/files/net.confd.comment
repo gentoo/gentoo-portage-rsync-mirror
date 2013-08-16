@@ -1,0 +1,5 @@
+
+# The network scripts are now part of net-misc/netifrc
+# In order to avoid sys-apps/${P} from removing this file, this comment was
+# added; you can safely remove this comment.  Please see
+# /usr/share/doc/netifrc*/README* for more information.
