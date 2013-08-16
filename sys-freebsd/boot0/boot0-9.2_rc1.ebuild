@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.2_rc1.ebuild,v 1.1 2013/08/10 02:30:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.2_rc1.ebuild,v 1.2 2013/08/16 13:24:27 aballier Exp $
 
 EAPI=2
 
@@ -62,4 +62,11 @@ src_compile() {
 src_install() {
 	dodir /boot/defaults
 	mkinstall FILESDIR=/boot || die "mkinstall failed"
+
+	cd "${WORKDIR}/sys/$(tc-arch-kernel)/conf" || die
+	insinto /boot
+	newins GENERIC.hints device.hints
+
+	echo 'CONFIG_PROTECT="/boot/device.hints"' > "${T}"/50boot0
+	doenvd "${T}"/50boot0
 }
