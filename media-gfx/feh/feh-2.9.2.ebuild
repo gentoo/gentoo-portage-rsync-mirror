@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-2.9.2.ebuild,v 1.4 2013/06/25 10:39:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-2.9.2.ebuild,v 1.5 2013/08/16 11:33:39 ssuominen Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -22,7 +22,7 @@ COMMON_DEPEND=">=media-libs/giblib-1.2.4
 	exif? ( media-libs/libexif )
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${COMMON_DEPEND}
-	virtual/jpeg"
+	virtual/jpeg:0"
 DEPEND="${COMMON_DEPEND}
 	x11-libs/libXt
 	x11-proto/xproto

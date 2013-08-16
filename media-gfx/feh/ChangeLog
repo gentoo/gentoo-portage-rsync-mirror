@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.134 2013/07/21 10:40:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.135 2013/08/16 11:33:39 ssuominen Exp $
+
+  16 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> feh-2.9.2.ebuild,
+  feh-2.9.3.ebuild:
+  Pull in SLOT="0" of virtual/jpeg to ensure tools are installed.
 
 *feh-2.9.3 (21 Jul 2013)
 
