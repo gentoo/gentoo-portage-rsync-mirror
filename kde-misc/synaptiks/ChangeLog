@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.40 2013/08/16 09:54:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.42 2013/08/16 10:10:25 mrueg Exp $
+
+  16 Aug 2013; Manuel Rüger <mrueg@gentoo.org> synaptiks-0.8.1-r3.ebuild:
+  Fix the conversion. Committed to early.
 
 *synaptiks-0.8.1-r3 (16 Aug 2013)
 
