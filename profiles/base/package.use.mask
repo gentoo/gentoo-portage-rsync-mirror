@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.501 2013/08/13 22:03:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.502 2013/08/16 15:35:01 jer Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -85,7 +85,7 @@ app-doc/doxygen sqlite
 # Lyx is currently not working with subversion 1.7 and needs 1.6.
 app-office/lyx subversion
 
-# Christian Faulhammer <fauli@gentoo.org> (0 May 2013)
+# Christian Faulhammer <fauli@gentoo.org> (08 May 2013)
 # Will not build successfully yet
 mail-client/claws-mail gtk3
 

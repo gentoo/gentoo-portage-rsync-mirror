@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.244 2013/06/09 16:02:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.245 2013/08/16 15:47:07 swift Exp $
+
+  16 Aug 2013; Sven Vermeulen <swift@gentoo.org> dnsmasq-2.63-r1.ebuild,
+  dnsmasq-2.63.ebuild, dnsmasq-2.65.ebuild, dnsmasq-2.66.ebuild:
+  Adding dependency on selinux-dnsmasq if USE=selinux is set
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> dnsmasq-2.66.ebuild:
   Stable for sh, wrt bug #453170
