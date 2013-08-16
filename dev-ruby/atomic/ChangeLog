@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/atomic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.5 2013/08/03 17:41:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.6 2013/08/16 06:12:06 mrueg Exp $
+
+*atomic-1.1.13 (16 Aug 2013)
+
+  16 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +atomic-1.1.13.ebuild,
+  -atomic-1.1.10.ebuild, -atomic-1.1.8.ebuild:
+  Version bump. Cleanup.
 
 *atomic-1.1.12 (03 Aug 2013)
 
