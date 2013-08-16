@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.589 2013/08/14 08:20:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.590 2013/08/16 04:39:27 patrick Exp $
+
+*samba-4.0.8-r1 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org> +samba-4.0.8-r1.ebuild,
+  samba-4.1.0_rc2.ebuild:
+  Fixing USE=ads #481210
 
 *samba-4.1.0_rc2 (14 Aug 2013)
 *samba-3.6.18 (14 Aug 2013)

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0_rc2.ebuild,v 1.2 2013/08/16 04:39:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.8-r1.ebuild,v 1.1 2013/08/16 04:39:27 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -10,8 +10,14 @@ inherit python-r1 waf-utils multilib linux-info systemd
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="mirror://samba/rc/${MY_P}.tar.gz"
-KEYWORDS="~amd64 ~hppa ~x86"
+if [ "${PV}" = "4.9999" ]; then
+	EGIT_REPO_URI="git://git.samba.org/samba.git"
+	KEYWORDS=""
+	inherit git-2
+else
+	SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
+	KEYWORDS="~amd64 ~hppa ~x86"
+fi
 
 DESCRIPTION="Samba Suite Version 4"
 HOMEPAGE="http://www.samba.org/"
@@ -20,7 +26,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="acl addns ads aio avahi client cluster cups gnutls iprint
-ldap pam quota selinux syslog test winbind"
+ldap pam quota selinux swat syslog test winbind"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-libs/iniparser
@@ -83,8 +89,9 @@ src_configure() {
 		--disable-rpath-install \
 		--nopyc \
 		--nopyo \
-		--bundled-libraries=ntdb \
-		--builtin-libraries=ntdb \
+		--disable-ntdb \
+		--bundled-libraries=NONE \
+		--builtin-libraries=NONE \
 		$(use_with addns dnsupdate) \
 		$(use_with acl) \
 		$(use_with ads) \
@@ -99,6 +106,7 @@ src_configure() {
 		$(use_with pam pam_smbpass) \
 		$(use_with quota) \
 		$(use_with syslog) \
+		$(use_with swat) \
 		$(use_with winbind)
 		"
 	use "ads" && myconf+=" --with-shared-modules=idmap_ad"
