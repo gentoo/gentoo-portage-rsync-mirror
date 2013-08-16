@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.127 2013/08/16 17:39:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.128 2013/08/16 18:19:03 williamh Exp $
 
 EAPI=5
 
@@ -208,6 +208,21 @@ pkg_preinst() {
 	if ! has_version ">=sys-apps/openrc-0.12"; then
 		add_boot_init loopback
 		add_boot_init tmpfiles.dev sysinit
+
+		# ensure existing /etc/conf.d/net is not removed
+		# undoes the hack to get around CONFIG_PROTECT in openrc-0.11.8 and earlier
+		# this needs to stay in openrc ebuilds for a long time. :(
+		# Added in 0.12.
+		if [[ -f "${EROOT}"etc/conf.d/net ]]; then
+			einfo "Modifying conf.d/net to keep it from being removed"
+			cat <<-EOF >>"${EROOT}"etc/conf.d/net
+
+# The network scripts are now part of net-misc/netifrc
+# In order to avoid sys-apps/${P} from removing this file, this comment was
+# added; you can safely remove this comment.  Please see
+# /usr/share/doc/netifrc*/README* for more information.
+EOF
+		fi
 	fi
 }
 
