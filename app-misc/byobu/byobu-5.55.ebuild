@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.41.ebuild,v 1.2 2013/05/29 15:28:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.55.ebuild,v 1.1 2013/08/16 04:14:02 radhermit Exp $
 
 EAPI=5
-
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit python-single-r1
@@ -16,14 +15,12 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="screen"
-
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-libs/newt[${PYTHON_USEDEP}]
 	screen? ( app-misc/screen )
 	!screen? ( app-misc/tmux )"
-DEPEND=""
 
 src_prepare() {
 	python_fix_shebang .
@@ -40,4 +37,6 @@ src_install() {
 	# Create symlinks for backends
 	dosym ${PN} /usr/bin/${PN}-screen
 	dosym ${PN} /usr/bin/${PN}-tmux
+
+	docompress -x /usr/share/doc/${PN}
 }
