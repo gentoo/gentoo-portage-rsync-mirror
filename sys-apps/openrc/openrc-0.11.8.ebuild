@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.8.ebuild,v 1.13 2013/08/11 06:56:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.8.ebuild,v 1.14 2013/08/16 20:31:21 axs Exp $
 
 EAPI=4
 
@@ -31,7 +31,8 @@ COMMON_DEPEND=">=sys-apps/baselayout-2.1-r1
 	)
 	selinux? ( sec-policy/selinux-openrc )
 	!<sys-fs/udev-init-scripts-17
-	!<sys-fs/udev-133"
+	!<sys-fs/udev-133
+	!net-misc/netifrc"
 DEPEND="${COMMON_DEPEND}
 	ncurses? ( sys-libs/ncurses[-tinfo] )
 	virtual/os-headers"
