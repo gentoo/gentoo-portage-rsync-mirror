@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.96 2013/07/29 22:00:38 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.97 2013/08/16 08:46:07 ultrabug Exp $
+
+  16 Aug 2013; Ultrabug <ultrabug@gentoo.org> rsyslog-7.4.3.ebuild:
+  fix #480894 thx to Conway S. Smith
 
 *rsyslog-7.4.3 (29 Jul 2013)
 

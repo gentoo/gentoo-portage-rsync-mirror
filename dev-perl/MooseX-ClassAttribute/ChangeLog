@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MooseX-ClassAttribute
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-ClassAttribute/ChangeLog,v 1.20 2012/06/24 12:59:13 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-ClassAttribute/ChangeLog,v 1.21 2013/08/16 08:53:05 patrick Exp $
+
+*MooseX-ClassAttribute-0.270.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +MooseX-ClassAttribute-0.270.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

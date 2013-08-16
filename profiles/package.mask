@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15030 2013/08/16 05:14:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15031 2013/08/16 08:52:28 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (16 Aug 2013)
+# Getting more broken every day. No commit for 5 years. Nothing
+# in the tree uses it. Please consider dev-python/pygpgme instead.
+# Bug #339409. Masked for removal in 30 days.
+dev-python/pyme
 
 # Patrick Lauer <patrick@gentoo.org> (16 Aug 2013)
 # Missing dependencies
