@@ -1,6 +1,10 @@
 # ChangeLog for app-office/teapot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/ChangeLog,v 1.5 2013/05/31 13:49:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/ChangeLog,v 1.6 2013/08/16 13:48:13 jer Exp $
+
+  16 Aug 2013; Jeroen Roovers <jer@gentoo.org>
+  files/teapot-2.3.0-doc-dir.patch:
+  Fix one more docdir destination.
 
 *teapot-2.3.0 (31 May 2013)
 

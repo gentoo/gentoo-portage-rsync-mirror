@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.77 2012/09/13 18:26:04 keri Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.78 2013/08/16 13:42:27 keri Exp $
+
+  16 Aug 2013; <keri@gentoo.org> yap-6.3.2.ebuild:
+  Respect LDFLAGS, DESTDIR
 
   13 Sep 2012; <keri@gentoo.org> yap-6.3.2.ebuild:
   Tidy up determination of kernel flags during configure

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convertlit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.24 2011/03/23 19:58:03 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.25 2013/08/16 13:31:13 aballier Exp $
+
+  16 Aug 2013; Alexis Ballier <aballier@gentoo.org> convertlit-1.8-r1.ebuild:
+  keyword ~amd64-fbsd, bug #481092
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> convertlit-1.8-r1.ebuild:
   ppc64 stable wrt #355133

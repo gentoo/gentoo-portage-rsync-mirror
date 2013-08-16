@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.54 2013/03/17 15:13:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.55 2013/08/16 13:44:40 pinkbyte Exp $
+
+  16 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> libev-4.15.ebuild:
+  Add ~mips keyword, wrt bug #412489
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
