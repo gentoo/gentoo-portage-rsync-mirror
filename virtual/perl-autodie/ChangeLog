@@ -1,10 +1,14 @@
 # ChangeLog for virtual/perl-autodie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-autodie/ChangeLog,v 1.1 2013/03/02 08:39:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-autodie/ChangeLog,v 1.2 2013/08/16 07:00:28 patrick Exp $
+
+*perl-autodie-2.200.0 (16 Aug 2013)
+
+  16 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-autodie-2.200.0.ebuild:
+  Bump
 
 *perl-autodie-2.160.0 (02 Mar 2013)
 
   02 Mar 2013; Torsten Veller <tove@gentoo.org> +perl-autodie-2.160.0.ebuild,
   +metadata.xml:
   Initial commit
-

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pointless
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.36 2013/08/15 11:05:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.37 2013/08/16 06:48:51 jlec Exp $
+
+  16 Aug 2013; Justin Lecher <jlec@gentoo.org> pointless-1.6.14-r1.ebuild:
+  Add back python eclass
 
 *pointless-1.6.14-r1 (15 Aug 2013)
 
