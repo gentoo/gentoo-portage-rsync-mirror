@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.21 2013/03/06 10:26:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.22 2013/08/16 17:04:28 pinkbyte Exp $
+
+  16 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> libverto-0.2.5.ebuild:
+  Add ~mips keyword, wrt bug #412489
 
   06 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libverto-0.2.5.ebuild:
   Stable for sh, wrt bug #458712
