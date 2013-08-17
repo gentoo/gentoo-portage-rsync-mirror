@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-3.10.ebuild,v 1.2 2013/08/17 01:25:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-3.10.ebuild,v 1.3 2013/08/17 01:35:06 patrick Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 
 DEPEND="app-arch/xz-utils
 	dev-lang/perl
-	!media-sound/alsa-headers"
+	!!media-sound/alsa-headers"
 RDEPEND=""
 
 S=${WORKDIR}/gentoo-headers-base-${PV}
