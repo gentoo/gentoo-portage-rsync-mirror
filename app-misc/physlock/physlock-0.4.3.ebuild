@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/physlock/physlock-0.4.3.ebuild,v 1.1 2012/10/24 03:51:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/physlock/physlock-0.4.3.ebuild,v 1.2 2013/08/17 01:03:08 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://github/muennich/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 src_prepare() {

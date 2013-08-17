@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/propel-runtime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/ChangeLog,v 1.14 2013/05/15 17:55:17 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/ChangeLog,v 1.15 2013/08/17 01:13:00 patrick Exp $
+
+  17 Aug 2013; Patrick Lauer <patrick@gentoo.org> -propel-runtime-1.5.1.ebuild:
+  QA: Punt version with broken deps
 
   15 May 2013; Ole Markus With <olemarkus@gentoo.org>
   propel-runtime-1.6.4.ebuild:
