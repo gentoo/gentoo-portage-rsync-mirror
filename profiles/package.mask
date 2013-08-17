@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15037 2013/08/17 02:26:24 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15038 2013/08/17 10:52:47 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -136,8 +136,8 @@ dev-ruby/ruby-debug
 dev-ruby/zoom
 
 # Ole Markus With <olemarkus@olemarkus.org> (10 Aug 2013)
-# About a year since upstream stopped maintaining this package.
-# Masked for removal in 30 days
+# About a year since upstream stopped maintaining symfony 1.x.
+# Will be removed on the 17th of Sept.
 dev-php/symfony
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (9 Aug 2013)

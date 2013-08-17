@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby18? ( ~dev-ruby/actionpack-3.2.14[ruby_targets_ruby18] >=dev-ruby/mail-2.5.4:2.5[ruby_targets_ruby18] ) ruby_targets_ruby19? ( ~dev-ruby/actionpack-3.2.14[ruby_targets_ruby19] >=dev-ruby/mail-2.5.4:2.5[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/test-unit:2[ruby_targets_ruby18] dev-ruby/mocha:0.13[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/test-unit:2[ruby_targets_ruby19] dev-ruby/mocha:0.13[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( test? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=Framework for designing email-service layers
+EAPI=4
+HOMEPAGE=http://rubyforge.org/projects/actionmailer/
+IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 test test
+KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby18? ( ~dev-ruby/actionpack-3.2.14[ruby_targets_ruby18] >=dev-ruby/mail-2.5.4:2.5[ruby_targets_ruby18] ) ruby_targets_ruby19? ( ~dev-ruby/actionpack-3.2.14[ruby_targets_ruby19] >=dev-ruby/mail-2.5.4:2.5[ruby_targets_ruby19] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
+SLOT=3.2
+SRC_URI=http://github.com/rails/rails/archive/v3.2.14.tar.gz -> rails-3.2.14.tgz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	6e366daedf25d7020291916549562bbf	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=54d96cd1f8dcab5bc9e43128b7793489
