@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/jnr-posix-1.1.8.ebuild,v 1.3 2012/05/09 17:09:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/jnr-posix-1.1.8-r1.ebuild,v 1.1 2013/08/17 08:21:16 tomwij Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 COMMON_DEP="
-	dev-java/jnr-constants:0
+	dev-java/jnr-constants:0.8.2
 	dev-java/jnr-ffi:0.5"
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.5"
@@ -42,7 +42,7 @@ JAVA_ANT_REWRITE_CLASSPATH="yes"
 JAVA_ANT_CLASSPATH_TAGS="${JAVA_ANT_CLASSPATH_TAGS} javadoc"
 JAVA_ANT_ENCODING="UTF-8"
 
-EANT_GENTOO_CLASSPATH="jnr-constants,jnr-ffi-0.5"
+EANT_GENTOO_CLASSPATH="jnr-constants-0.8.2,jnr-ffi-0.5"
 EANT_EXTRA_ARGS="-Dmaven.build.finalName=${PN} -Dmaven.build.srcDir.0=src"
 
 EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},junit-4"
