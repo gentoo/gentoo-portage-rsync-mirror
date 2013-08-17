@@ -1,13 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozinfo/mozinfo-0.4.ebuild,v 1.1 2012/10/30 07:03:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozinfo/mozinfo-0.6.ebuild,v 1.1 2013/08/17 15:46:17 idella4 Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="File for interface to transform introspected system information to a format pallatable to Mozilla"
 HOMEPAGE="https://wiki.mozilla.org/Auto-tools http://pypi.python.org/pypi/mozinfo"
@@ -18,6 +16,6 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-python/setuptools
-	dev-python/simplejson"
-RDEPEND="${DEPEND}"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/mozfile-0.6[${PYTHON_USEDEP}]"

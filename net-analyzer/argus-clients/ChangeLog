@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.56 2013/07/11 23:13:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.58 2013/08/17 15:59:04 jer Exp $
+
+  17 Aug 2013; Jeroen Roovers <jer@gentoo.org>
+  -files/argus-clients-3.0.7.12-strncasecmp.patch,
+  argus-clients-3.0.7.12.ebuild:
+  Drop bad patch.
+
+*argus-clients-3.0.7.12 (17 Aug 2013)
+
+  17 Aug 2013; Jeroen Roovers <jer@gentoo.org> +argus-clients-3.0.7.12.ebuild,
+  +files/argus-clients-3.0.7.12-strncasecmp.patch:
+  Version bump.
 
 *argus-clients-3.0.7.11 (11 Jul 2013)
 
