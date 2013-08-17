@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/higan/higan-092.ebuild,v 1.1 2013/06/09 19:15:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/higan/higan-092.ebuild,v 1.2 2013/08/17 09:45:41 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://higan.googlecode.com/files/${MY_P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="ao +alsa openal opengl oss profile_accuracy +profile_balanced profile_performance pulseaudio qt4 +sdl xv"
 REQUIRED_USE="|| ( ao openal alsa pulseaudio oss )
 	|| ( xv opengl sdl )

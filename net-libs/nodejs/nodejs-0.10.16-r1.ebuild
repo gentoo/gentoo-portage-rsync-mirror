@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.16.ebuild,v 1.1 2013/08/17 09:21:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.16-r1.ebuild,v 1.1 2013/08/17 09:35:58 patrick Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://nodejs.org/dist/v${PV}/node-v${PV}.tar.gz"
 LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
-IUSE="+npm"
+IUSE="+npm +snapshot"
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}
@@ -41,6 +41,7 @@ src_prepare() {
 src_configure() {
 	local myconf=""
 	! use npm && myconf="--without-npm"
+	! use snapshot && myconf="${myconf} --without-snapshot"
 
 	"${PYTHON}" configure --prefix="${EPREFIX}"/usr \
 		--openssl-use-sys --shared-zlib --without-dtrace ${myconf} || die

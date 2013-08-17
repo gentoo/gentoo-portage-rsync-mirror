@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.27 2013/06/04 17:48:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.28 2013/08/17 09:35:01 tomwij Exp $
+
+*jline-2.11-r1 (17 Aug 2013)
+
+  17 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +jline-2.11-r1.ebuild:
+  Revision bump. Slot dev-java/jansi dependency. Thanks to gienah on IRC for
+  reporting.
 
 *jline-2.11 (04 Jun 2013)
 

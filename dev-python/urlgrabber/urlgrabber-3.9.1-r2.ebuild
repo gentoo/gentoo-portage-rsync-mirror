@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/urlgrabber-3.9.1-r2.ebuild,v 1.1 2013/03/26 19:06:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/urlgrabber-3.9.1-r2.ebuild,v 1.2 2013/08/17 09:43:03 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://urlgrabber.baseurl.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-python/pycurl[${PYTHON_USEDEP}]"
