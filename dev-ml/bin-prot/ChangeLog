@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/bin-prot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.25 2013/07/22 02:20:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.26 2013/08/16 23:04:33 aballier Exp $
+
+  16 Aug 2013; Alexis Ballier <aballier@gentoo.org> -bin-prot-109.08.00.ebuild,
+  -bin-prot-109.11.00.ebuild, -bin-prot-109.15.00.ebuild:
+  remove old
 
 *bin-prot-109.30.00 (22 Jul 2013)
 

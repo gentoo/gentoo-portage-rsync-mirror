@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/cairo-ocaml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cairo-ocaml/ChangeLog,v 1.1 2012/06/18 20:01:27 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cairo-ocaml/ChangeLog,v 1.2 2013/08/16 23:08:51 aballier Exp $
+
+  16 Aug 2013; Alexis Ballier <aballier@gentoo.org> cairo-ocaml-1.2.0.ebuild:
+  eapi5, define subslot and add := deps on ocaml/lablgtk
 
 *cairo-ocaml-1.2.0 (18 Jun 2012)
 

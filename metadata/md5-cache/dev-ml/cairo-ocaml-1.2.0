@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=dev-lang/ocaml x11-libs/cairo gtk? ( dev-ml/lablgtk:2 ) pango? ( x11-libs/pango ) svg? ( x11-libs/libsvg-cairo ) >=dev-ml/findlib-1.0.4-r1 || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-lang/ocaml:= x11-libs/cairo gtk? ( dev-ml/lablgtk:2= ) pango? ( x11-libs/pango ) svg? ( x11-libs/libsvg-cairo ) >=dev-ml/findlib-1.0.4-r1 || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Ocaml bindings for the cairo vector graphics library
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.cairographics.org/cairo-ocaml/
 IUSE=doc examples gtk pango svg
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=LGPL-2.1
-RDEPEND=dev-lang/ocaml x11-libs/cairo gtk? ( dev-ml/lablgtk:2 ) pango? ( x11-libs/pango ) svg? ( x11-libs/libsvg-cairo )
-SLOT=0
+RDEPEND=dev-lang/ocaml:= x11-libs/cairo gtk? ( dev-ml/lablgtk:2= ) pango? ( x11-libs/pango ) svg? ( x11-libs/libsvg-cairo )
+SLOT=0/1.2.0
 SRC_URI=http://cgit.freedesktop.org/cairo-ocaml/snapshot/cairo-ocaml-1.2.0.tar.bz2
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	findlib	9cf6020ee5481f39f1aa566a323f9868	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=790a1e1b9682f99554ddd7b126c62eff
+_md5_=b38288ebbea802ee08594d4a85642d47
