@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.0.5.ebuild,v 1.4 2013/08/16 05:59:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.0.5.ebuild,v 1.5 2013/08/17 19:55:14 williamh Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ RDEPEND=""
 
 src_prepare()
 {
+	epatch "${FILESDIR}"/${P}-fix-build-without-ipv6.patch
 	epatch_user
 }
 

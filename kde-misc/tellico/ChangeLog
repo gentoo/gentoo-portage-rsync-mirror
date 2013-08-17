@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.123 2013/07/11 15:36:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.124 2013/08/17 19:47:53 ago Exp $
+
+  17 Aug 2013; Agostino Sarubbo <ago@gentoo.org> tellico-2.3.8.ebuild:
+  Stable for amd64, wrt bug #481010
 
   11 Jul 2013; Michael Palimaka <kensington@gentoo.org> tellico-2.3.8.ebuild:
   Remove semantic-desktop USE flag. Remove poppler subslot dependency since this

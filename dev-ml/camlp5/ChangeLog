@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.74 2013/08/15 23:57:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.75 2013/08/17 19:47:41 ago Exp $
+
+  17 Aug 2013; Agostino Sarubbo <ago@gentoo.org> camlp5-6.07_p1.ebuild:
+  Stable for amd64, wrt bug #481230
 
 *camlp5-6.11 (15 Aug 2013)
 
@@ -307,4 +310,3 @@
   +files/install_destdir.dpatch, +metadata.xml, +camlp5-4.07.ebuild:
   Initial import, old school camlp4 released as a standalone version called
   camlp5 as it has been removed in ocaml 3.10
-

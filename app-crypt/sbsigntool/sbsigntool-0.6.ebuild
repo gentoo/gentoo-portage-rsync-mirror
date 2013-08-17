@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sbsigntool/sbsigntool-0.6.ebuild,v 1.1 2012/12/24 00:25:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sbsigntool/sbsigntool-0.6.ebuild,v 1.2 2013/08/17 19:48:00 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/${PN}_${PV}.orig.t
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl

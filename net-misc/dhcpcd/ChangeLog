@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.367 2013/08/16 05:59:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.368 2013/08/17 19:55:14 williamh Exp $
+
+  17 Aug 2013; William Hubbs <williamh@gentoo.org>
+  +files/dhcpcd-6.0.5-fix-build-without-ipv6.patch, dhcpcd-6.0.5.ebuild:
+  apply upstream patch for bug #481330.
 
   16 Aug 2013; William Hubbs <williamh@gentoo.org> dhcpcd-6.0.5.ebuild,
   dhcpcd-9999.ebuild:

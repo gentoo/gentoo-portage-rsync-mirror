@@ -1,0 +1,25 @@
+From 37708a7001c287ea0d86baf8110e2531a1057326 Mon Sep 17 00:00:00 2001
+From: Roy Marples <roy@marples.name>
+Date: Sat, 17 Aug 2013 11:00:07 +0100
+Subject: [PATCH] Fix build without IPv6
+
+---
+ platform.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/platform.h b/platform.h
+index 36086b5..46797c1 100644
+--- a/platform.h
++++ b/platform.h
+@@ -33,7 +33,7 @@ char *hardware_platform(void);
+ int check_ipv6(const char *, int);
+ int ipv6_dadtransmits(const char *);
+ #else
+-#define check_ipv6(a) 0
++#define check_ipv6(a, b) -1
+ #endif
+ 
+ #endif
+-- 
+1.8.1.5
+

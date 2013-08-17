@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pdfpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pdfpc/ChangeLog,v 1.3 2013/07/09 19:58:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pdfpc/ChangeLog,v 1.4 2013/08/17 19:47:34 ago Exp $
+
+  17 Aug 2013; Agostino Sarubbo <ago@gentoo.org> pdfpc-3.1.1.ebuild:
+  Stable for amd64, wrt bug #481260
 
 *pdfpc-3.1.1 (03 Jul 2013)
 
