@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.6-r2.ebuild,v 1.9 2013/03/29 16:55:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.6-r2.ebuild,v 1.10 2013/08/17 20:30:45 calchan Exp $
 
 EAPI=4
 
@@ -22,8 +22,8 @@ done
 unset L
 
 RDEPEND="
-	>=dev-games/cegui-0.7.6-r1[ogre]
-	!>=dev-games/cegui-0.8
+	!<dev-games/cegui-0.7.6-r1
+	<dev-games/cegui-0.8[ogre]
 	>=dev-games/ogre-1.7.4-r1[freeimage,opengl]
 	!>=dev-games/ogre-1.9
 	dev-games/ois
