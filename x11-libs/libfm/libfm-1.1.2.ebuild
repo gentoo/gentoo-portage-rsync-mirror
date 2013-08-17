@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-1.0.1.ebuild,v 1.1 2012/09/22 16:32:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-1.1.2.ebuild,v 1.1 2013/08/17 11:51:24 hwoarang Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools fdo-mime vala
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.gz"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/4.3.1" #copy ABI_VERSION because it seems upstream change it randomly
 IUSE="debug doc examples vala"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
@@ -33,11 +33,26 @@ DEPEND="${COMMON_DEPEND}
 S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
-	sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
-	sed -i -e '/^[[:space:]]*docs/d' -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" \
+	if ! use doc; then
+		sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
+		sed -ie '/^[[:space:]]*docs/d' configure.ac || die "sed failed"
+	fi
+	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" \
 		configure.ac || die "sed failed"
 	#Remove -Werror for automake-1.12. Bug #421101
 	sed -i "s:-Werror::" configure.ac || die
+
+	# subslot sanity check
+	local sub_slot=${SLOT#*/}
+	local libfm_major_abi=$(sed -rne '/ABI_VERSION/s:.*=::p' src/Makefile.am | tr ':' '.')
+
+	if [[ ${sub_slot} != ${libfm_major_abi} ]]; then
+		eerror "Ebuild sub-slot (${sub_slot}) does not match ABI_VERSION(${libfm_major_abi})"
+		eerror "Please update SLOT variable as follows:"
+		eerror "    SLOT=\"${SLOT%%/*}/${libfm_major_abi}\""
+		eerror
+		die "sub-slot sanity check failed"
+	fi
 	eautoreconf
 	use vala && export VALAC="$(type -p valac-$(vala_best_api_version))"
 }
@@ -58,6 +73,23 @@ src_configure() {
 src_install() {
 	default
 	find "${D}" -name '*.la' -exec rm -f '{}' +
+	# Remove broken symlink #439570
+	# Sometimes a directory is created instead of a symlink. No idea why...
+	# It is wrong anyway. We expect a libfm-1.0 directory and then a libfm
+	# symlink to it.
+	if [[ -h ${D}/usr/include/${PN} || -d ${D}/usr/include/${PN} ]]; then
+		rm -r "${D}"/usr/include/${PN}
+	fi
+}
+
+pkg_preinst() {
+	# Resolve the symlink mess. Bug #439570
+	[[ -d "${ROOT}"/usr/include/${PN} ]] && \
+		rm -rf "${ROOT}"/usr/include/${PN}
+	if [[ -d "${D}"/usr/include/${PN}-1.0 ]]; then
+		cd "${D}"/usr/include
+		ln -s --force ${PN}-1.0 ${PN}
+	fi
 }
 
 pkg_postinst() {
