@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8166 2013/08/17 11:34:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8167 2013/08/17 14:59:12 creffett Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Aug 2013; <creffett@gentoo.org> package.mask:
+  Remove tg-widgets-* from package.mask as they are now gone from the tree
 
   17 Aug 2013; Markos Chandras <hwoarang@gentoo.org> profiles.desc:
   Bump all MIPS profiles to 'dev' status apart from the n64 ones
