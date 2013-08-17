@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.345 2013/04/27 07:47:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.347 2013/08/17 17:55:02 vapier Exp $
+
+*busybox-1.21.1 (17 Aug 2013)
+
+  17 Aug 2013; Mike Frysinger <vapier@gentoo.org> +busybox-1.21.1.ebuild:
+  Version bump #477718 by teidakankan.
+
+  17 Aug 2013; Mike Frysinger <vapier@gentoo.org> files/ginit.c:
+  Fix applet setup #479940 by Matt Whitlock.
 
   27 Apr 2013; Mike Frysinger <vapier@gentoo.org> files/watchdog.initd:
   Drop provide watchdog since no other init.d actually depends on this #461818

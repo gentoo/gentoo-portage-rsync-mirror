@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.947 2013/08/16 21:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.948 2013/08/17 17:37:57 vapier Exp $
+
+  17 Aug 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.18.ebuild:
+  Re-add mips librt patch to exclude list #481438 by Manuel Lauss.
 
 *glibc-2.18 (16 Aug 2013)
 

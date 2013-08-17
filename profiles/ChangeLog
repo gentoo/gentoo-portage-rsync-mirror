@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8167 2013/08/17 14:59:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8168 2013/08/17 17:45:40 zlogene Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> package.mask:
+  Remove obsolete mask on dev-perl/Date-ISO
+  
 
   17 Aug 2013; <creffett@gentoo.org> package.mask:
   Remove tg-widgets-* from package.mask as they are now gone from the tree

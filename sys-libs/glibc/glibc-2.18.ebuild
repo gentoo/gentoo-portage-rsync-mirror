@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18.ebuild,v 1.1 2013/08/16 21:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18.ebuild,v 1.2 2013/08/17 17:37:57 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -152,7 +152,7 @@ for x in setup {pre,post}inst ; do
 done
 
 eblit-src_unpack-pre() {
-	GLIBC_PATCH_EXCLUDE+=" 6600_mips_librt-mips.patch" #456912
+	GLIBC_PATCH_EXCLUDE+=" 00_all_0012-mips-add-clock_-g-s-ettime-symbol-compat-hacks.patch" #456912 #481438
 }
 
 eblit-src_unpack-post() {
