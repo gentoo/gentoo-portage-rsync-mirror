@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Lingua-EN-NameParse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/ChangeLog,v 1.34 2012/06/24 12:59:46 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-NameParse/ChangeLog,v 1.35 2013/08/17 14:18:02 patrick Exp $
+
+*Lingua-EN-NameParse-1.310.0 (17 Aug 2013)
+
+  17 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +Lingua-EN-NameParse-1.310.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

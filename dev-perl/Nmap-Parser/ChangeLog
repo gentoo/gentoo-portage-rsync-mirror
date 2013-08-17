@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Nmap-Parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nmap-Parser/ChangeLog,v 1.24 2013/05/15 14:16:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nmap-Parser/ChangeLog,v 1.25 2013/08/17 14:25:27 patrick Exp $
+
+*Nmap-Parser-1.310.0 (17 Aug 2013)
+
+  17 Aug 2013; Patrick Lauer <patrick@gentoo.org> +Nmap-Parser-1.310.0.ebuild:
+  Bump
 
   15 May 2013; Agostino Sarubbo <ago@gentoo.org> Nmap-Parser-1.300.0.ebuild:
   Stable for x86, wrt bug #461132
