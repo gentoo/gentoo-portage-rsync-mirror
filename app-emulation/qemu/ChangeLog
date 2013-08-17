@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.234 2013/08/16 14:05:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.235 2013/08/17 21:32:54 slyfox Exp $
+
+  17 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
+  Conditionalize '--enable-migration-from-qemu-kvm' (not an upstream option).
 
 *qemu-1.6.0 (16 Aug 2013)
 
