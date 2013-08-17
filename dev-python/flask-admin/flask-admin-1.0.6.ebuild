@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-admin/flask-admin-1.0.6.ebuild,v 1.1 2013/08/17 04:41:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-admin/flask-admin-1.0.6.ebuild,v 1.2 2013/08/17 09:11:45 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-RESTRICT="test" # we're still missing some of the dependencies
+#RESTRICT="test" # we're still missing some of the dependencies
 
 MY_PN="Flask-Admin"
 MY_P="${MY_PN}-${PV}"
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 		dev-python/flask-wtf[${PYTHON_USEDEP}]
 		dev-python/flask-pymongo[${PYTHON_USEDEP}]
 		dev-python/flask-peewee[${PYTHON_USEDEP}]
+		dev-python/flask-mongoengine[${PYTHON_USEDEP}]
+		dev-python/flask-sqlalchemy[${PYTHON_USEDEP}]
 	)
 	"
 
