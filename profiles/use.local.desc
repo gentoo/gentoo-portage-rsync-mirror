@@ -6577,7 +6577,6 @@ x11-misc/lightdm:gtk - Pull in the gtk+ greeter
 x11-misc/lightdm:introspection - Use dev-libs/gobject-introspection for introspection
 x11-misc/lightdm:kde - Pull in the kde greeter
 x11-misc/lightdm:razor - Pull in the razorqt greeter
-x11-misc/obconf:lxde - Add wrapper for LXDE environment
 x11-misc/openbox-menu:icons - Turn on to let icons appear in menus
 x11-misc/rednotebook:libyaml - enable libyaml support
 x11-misc/rednotebook:spell - enable gtk-spell support

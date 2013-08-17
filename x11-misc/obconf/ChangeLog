@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.109 2013/08/04 13:35:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.110 2013/08/17 12:02:14 hwoarang Exp $
+
+*obconf-2.0.4 (17 Aug 2013)
+
+  17 Aug 2013; Markos Chandras <hwoarang@gentoo.org> +obconf-2.0.4.ebuild,
+  -files/obconf-2.0.3-hardened.patch,
+  -files/obconf-2.0.3_p20110314-config-path.patch, -files/obconf-lxde,
+  -obconf-2.0.3_p20110314-r1.ebuild, -obconf-2.0.3_p20110314.ebuild,
+  metadata.xml:
+  Version bump. Clean up old patches and ebuilds
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> obconf-2.0.3_p20111019.ebuild:
   Stable for ppc64, wrt bug #477744

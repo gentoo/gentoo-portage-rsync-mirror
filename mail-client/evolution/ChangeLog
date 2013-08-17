@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.402 2013/08/09 17:35:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.403 2013/08/17 12:30:37 pacho Exp $
+
+  17 Aug 2013; Pacho Ramos <pacho@gentoo.org> evolution-3.8.4-r1.ebuild:
+  No gnome-extra/evolution-exchange is compatible with evo-3.8
 
 *evolution-3.8.4-r1 (09 Aug 2013)
 

@@ -6,7 +6,4 @@
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
   </maintainer>
-<use>
-<flag name='lxde'>Add wrapper for LXDE environment</flag>
-</use>
 </pkgmetadata>
