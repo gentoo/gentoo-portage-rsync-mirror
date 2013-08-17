@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20130711.ebuild,v 1.1 2013/08/12 22:09:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20130711.ebuild,v 1.2 2013/08/17 20:49:51 ulm Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 ) CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND="|| ( >=www-client/firefox-5.0 >=www-client/firefox-bin-5.0 )"
+RDEPEND="|| ( >=www-client/firefox-5.0 >=www-client/firefox-bin-23.0 )"
 
 S="${WORKDIR}/${PN}"
 

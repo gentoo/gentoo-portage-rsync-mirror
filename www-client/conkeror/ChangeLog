@@ -1,6 +1,9 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.35 2013/08/12 22:09:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.36 2013/08/17 20:49:51 ulm Exp $
+
+  17 Aug 2013; Ulrich Müller <ulm@gentoo.org> conkeror-1.0_pre20130711.ebuild:
+  Require >=firefox-bin-23.0, bug 481406.
 
 *conkeror-1.0_pre20130711 (12 Aug 2013)
 
