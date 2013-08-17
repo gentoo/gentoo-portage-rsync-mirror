@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/manifestdestiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.8 2013/07/08 15:18:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.9 2013/08/17 08:58:14 idella4 Exp $
+
+*manifestdestiny-0.5.7 (17 Aug 2013)
+
+  17 Aug 2013; Ian Delaney <idella4@gentoo.org> +manifestdestiny-0.5.7.ebuild,
+  -manifestdestiny-0.5.5.ebuild:
+  bump, drop old
 
 *manifestdestiny-0.5.6-r1 (08 Jul 2013)
 
