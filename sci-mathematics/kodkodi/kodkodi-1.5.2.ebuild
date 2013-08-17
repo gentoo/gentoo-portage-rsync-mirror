@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkodi/kodkodi-1.5.2.ebuild,v 1.1 2012/12/05 10:44:14 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkodi/kodkodi-1.5.2.ebuild,v 1.2 2013/08/17 02:59:08 gienah Exp $
 
 EAPI="5"
 
@@ -17,13 +17,12 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE="isabelle examples"
 
-COMMON_DEP=""
+COMMON_DEP="dev-java/antlr:3
+	=sci-mathematics/kodkod-1.5*:="
 RDEPEND="${COMMON_DEP}
-	=dev-java/antlr-3*:3
 	isabelle? (
 		>=sci-mathematics/isabelle-2011-r1:=
 	)
-	=sci-mathematics/kodkod-1.5*:=
 	>=virtual/jre-1.6"
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.6
@@ -31,20 +30,16 @@ DEPEND="${COMMON_DEP}
 
 S="${WORKDIR}/${P}"
 
-java_prepare() {
-	find \( -name 'kodkod*.jar' -o -name 'sat4j*.jar' \) -exec rm -v {} + || die
-}
+JAVA_GENTOO_CLASSPATH="kodkod,antlr-3"
 
-src_prepare() {
+java_prepare() {
 	sed -e 's@exec "$ISABELLE_TOOL" java $KODKODI_JAVA_OPT@java@' \
 		-i "${S}/bin/kodkodi" || die "Could not patch bin/kodkodi"
+	rm -f jar/*.jar || die "Could not rm jar files"
 }
 
 src_compile() {
 	JAVA_SRC_DIR="src"
-	JAVA_GENTOO_CLASSPATH="kodkod"
-	JAVA_CLASSPATH_EXTRA="$(java-config --classpath=antlr:3)"
-
 	TARGETDIR="/usr/share/${P}"
 	KODKOD_LIBDIR="/usr/"$(get_libdir)"/kodkod"
 
