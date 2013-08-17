@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-1.0.0-r3.ebuild,v 1.1 2013/08/16 18:53:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-1.0.0-r3.ebuild,v 1.2 2013/08/17 06:01:27 ulm Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fb
 IUSE="static-libs"
 
 RDEPEND="dev-libs/popt
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r11
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r12
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
