@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langeuropean/texlive-langeuropean-2013.ebuild,v 1.4 2013/08/13 21:25:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langeuropean/texlive-langeuropean-2013.ebuild,v 1.5 2013/08/18 14:07:53 hwoarang Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Other European languages"
 
 LICENSE=" GPL-1 GPL-2 LPPL-1.2 LPPL-1.3 public-domain TeX-other-free "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2013
 !dev-texlive/texlive-langarmenian

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.0.ebuild,v 1.5 2012/03/18 15:32:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.1-r1.ebuild,v 1.1 2013/08/18 14:23:08 mrueg Exp $
 
-inherit eutils
+EAPI=5
 
-DESCRIPTION="Tkabber is a Free and Open Source client for the Jabber instant messaging system, written in Tcl/Tk."
+DESCRIPTION="A jabber client written in Tcl/Tk"
 HOMEPAGE="http://tkabber.jabber.ru/"
 SRC_URI="http://files.jabber.ru/tkabber/${P}.tar.gz
 	plugins? ( http://files.jabber.ru/tkabber/tkabber-plugins-${PV}.tar.gz )"
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 #	crypt? ( >=dev-tcltk/tclgpgme-1.0 )
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 
 src_compile() {
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" PREFIX=/usr \
+	emake install DESTDIR="${D}" PREFIX=/usr \
 		DOCDIR="/usr/share/doc/${P}"
 
 	dodoc AUTHORS ChangeLog INSTALL README
@@ -41,7 +41,7 @@ src_install() {
 
 	if use plugins; then
 		cd "${WORKDIR}/tkabber-plugins-${PV}"
-		make install DESTDIR="${D}" PREFIX=/usr \
+		emake install DESTDIR="${D}" PREFIX=/usr \
 			DOCDIR="/usr/share/doc/${P}"
 	fi
 }
