@@ -1,7 +1,7 @@
-diff -Naurw postgis-2.1.0beta3.orig/configure.ac postgis-2.1.0beta3/configure.ac
---- postgis-2.1.0beta3.orig/configure.ac	2013-06-21 15:45:40.000000000 +0000
-+++ postgis-2.1.0beta3/configure.ac	2013-06-23 22:47:31.914947086 +0000
-@@ -743,65 +743,14 @@
+diff -Naruw postgis-2.1.0.orig/configure.ac postgis-2.1.0/configure.ac
+--- postgis-2.1.0.orig/configure.ac	2013-07-09 03:36:15.000000000 +0000
++++ postgis-2.1.0/configure.ac	2013-08-18 18:14:23.263697970 +0000
+@@ -745,65 +745,21 @@
  dnl Detect if json-c installed
  dnl ===========================================================================
  
@@ -62,33 +62,36 @@ diff -Naurw postgis-2.1.0beta3.orig/configure.ac postgis-2.1.0beta3/configure.ac
 +                      HAVE_JSON=yes
  	AC_DEFINE([HAVE_LIBJSON], 1, [Define to 1 if libjson is present])
 -fi
-+                  ],
-+                  [HAVE_JSON=no])
- 
+-
 -AC_SUBST([JSON_CPPFLAGS])
 -AC_SUBST([JSON_LDFLAGS])
--
++                  ],
++                  [
++                      PKG_CHECK_MODULES([JSON], [json-c],
++                      [
++                          HAVE_JSON=yes
++	                  AC_DEFINE([HAVE_LIBJSON], 1, [Define to 1 if libjson is present])
++                      ],
++                      [HAVE_JSON=no])
++                  ])
+ 
 -fi dnl }
 +AC_SUBST([HAVE_JSON])
  
  dnl ===========================================================================
  dnl Detect GTK+2.0 for GUI
-@@ -892,10 +841,10 @@
- AC_DEFINE_UNQUOTED([POSTGIS_USE_STATS], [1], [Enable use of ANALYZE statistics])
- 
- 
--CPPFLAGS="$PGSQL_CPPFLAGS $GEOS_CPPFLAGS $PROJ_CPPFLAGS $XML2_CPPFLAGS $SFCGAL_CPPFLAGS"
-+CPPFLAGS="$PGSQL_CPPFLAGS $GEOS_CPPFLAGS $PROJ_CPPFLAGS $XML2_CPPFLAGS $SFCGAL_CPPFLAGS $JSON_CFLAGS"
- dnl AC_MSG_RESULT([CPPFLAGS: $CPPFLAGS])
+@@ -896,7 +852,7 @@
+ CPPFLAGS="$PGSQL_CPPFLAGS $GEOS_CPPFLAGS $PROJ_CPPFLAGS $XML2_CPPFLAGS $SFCGAL_CPPFLAGS $CPPFLAGS"
+ AC_MSG_RESULT([CPPFLAGS: $CPPFLAGS])
  
 -SHLIB_LINK="$PGSQL_LDFLAGS $GEOS_LDFLAGS $PROJ_LDFLAGS -lgeos_c -lproj $JSON_LDFLAGS $XML2_LDFLAGS $SFCGAL_LDFLAGS"
 +SHLIB_LINK="$PGSQL_LDFLAGS $GEOS_LDFLAGS $PROJ_LDFLAGS -lgeos_c -lproj $JSON_LIBS $XML2_LDFLAGS $SFCGAL_LDFLAGS"
  AC_SUBST([SHLIB_LINK])
  dnl AC_MSG_RESULT([SHLIB_LINK: $SHLIB_LINK])
  
-diff -Naurw postgis-2.1.0beta3.orig/liblwgeom/lwin_geojson.c postgis-2.1.0beta3/liblwgeom/lwin_geojson.c
---- postgis-2.1.0beta3.orig/liblwgeom/lwin_geojson.c	2013-02-28 17:42:49.000000000 +0000
-+++ postgis-2.1.0beta3/liblwgeom/lwin_geojson.c	2013-06-23 22:49:06.427947772 +0000
+diff -Naruw postgis-2.1.0.orig/liblwgeom/lwin_geojson.c postgis-2.1.0/liblwgeom/lwin_geojson.c
+--- postgis-2.1.0.orig/liblwgeom/lwin_geojson.c	2013-02-28 17:42:49.000000000 +0000
++++ postgis-2.1.0/liblwgeom/lwin_geojson.c	2013-08-18 18:11:52.473943571 +0000
 @@ -17,8 +17,8 @@
  
  #ifdef HAVE_LIBJSON
@@ -106,9 +109,9 @@ diff -Naurw postgis-2.1.0beta3.orig/liblwgeom/lwin_geojson.c postgis-2.1.0beta3/
  }
 -
 -
-diff -Naurw postgis-2.1.0beta3.orig/liblwgeom/Makefile.in postgis-2.1.0beta3/liblwgeom/Makefile.in
---- postgis-2.1.0beta3.orig/liblwgeom/Makefile.in	2013-05-09 19:38:17.000000000 +0000
-+++ postgis-2.1.0beta3/liblwgeom/Makefile.in	2013-06-23 22:53:56.715076184 +0000
+diff -Naruw postgis-2.1.0.orig/liblwgeom/Makefile.in postgis-2.1.0/liblwgeom/Makefile.in
+--- postgis-2.1.0.orig/liblwgeom/Makefile.in	2013-05-09 19:38:17.000000000 +0000
++++ postgis-2.1.0/liblwgeom/Makefile.in	2013-08-18 18:11:52.477943594 +0000
 @@ -11,8 +11,8 @@
  # **********************************************************************
  

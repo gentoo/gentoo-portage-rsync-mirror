@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.11.0.ebuild,v 1.1 2013/08/14 20:23:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.11.0.ebuild,v 1.2 2013/08/18 19:04:32 creffett Exp $
 
 EAPI=5
 
@@ -30,6 +30,7 @@ DEPEND="
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdepim-icons)
 	!kde-misc/akonadi-google
+	!kde-misc/akonadi-facebook
 "
 
 src_configure() {

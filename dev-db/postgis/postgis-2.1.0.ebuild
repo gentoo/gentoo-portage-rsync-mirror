@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.0_beta3.ebuild,v 1.1 2013/06/26 10:59:19 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.0.ebuild,v 1.1 2013/08/18 19:18:15 titanofold Exp $
 
-EAPI="4"
-
-PG_SLOT_MIN="9.0"
+EAPI="5"
+POSTGRES_COMPAT=( 9.{0,1,2,3} )
 
 inherit autotools eutils versionator
 
@@ -18,7 +17,7 @@ SRC_URI="http://download.osgeo.org/postgis/source/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc gtk static-libs"
+IUSE="doc gtk"
 
 RDEPEND="
 		|| (
@@ -62,57 +61,37 @@ QA_FLAGS_IGNORED="usr/lib(64)?/(rt)?postgis-${PGIS}\.so"
 MAKEOPTS="-j1"
 
 postgres_check_slot() {
-	local pg_slot="$(postgresql-config show) 2> /dev/null"
+	if ! declare -p POSTGRES_COMPAT &>/dev/null; then
+		die 'POSTGRES_COMPAT not declared.'
+	fi
 
-	# If app-admin/eselect-postgresql is not installed, or the slot
-	# hasn't been set before pkg_pretend is called, skip the rest of
-	# this function.
-	if [[ -z ${pg_slot} || "${pg_slot}" = "(none)" ]] ; then
-		if [[ "$EBUILD_PHASE" = "pretend" ]] ; then
+# Don't die because we can't run postgresql-config during pretend.
+[[ "$EBUILD_PHASE" = "pretend" \
+	&& -z "$(which postgresql-config 2> /dev/null)" ]] && return 0
+
+	local res=$(echo ${POSTGRES_COMPAT[@]} \
+		| grep -c $(postgresql-config show 2> /dev/null) 2> /dev/null)
+
+	if [[ "$res" -eq "0" ]] ; then
+			eerror "PostgreSQL slot must be set to one of: "
+			eerror "    ${POSTGRES_COMPAT[@]}"
 			return 1
-		else
-			if [[ "${pg_slot}" = "(none)" ]] ; then
-				die "Please set a default slot with postgresql-config"
-			elif [[ -z ${pg_slot} ]] ; then
-				die "This isn't supposed to happen."
-			fi
-		fi
 	fi
 
-	if [[ -n $PG_SLOT_MIN && $PG_SLOT_MIN != -1 ]] ; then
-		if [[ ${pg_slot//.} < ${PG_SLOT_MIN//.} ]] ; then
-			eerror "You must build ${CATEGORY}/${PN} against PostgreSQL ${PG_SLOT_MIN} or higher."
-			eerror "Set an appropriate slot with postgresql-config."
-			die
-		fi
-	fi
-
-	if [[ -n $PG_SLOT_MAX && $PG_SLOT_MAX != -1 ]] ; then
-		if [[ ${pg_slot//.} > ${PG_SLOT_MAX//.} ]] ; then
-			eerror "You must build ${CATEGORY}/${PN} against PostgreSQL ${PG_SLOT_MAX} or lower."
-			eerror "Set an appropriate slot with postgresql-config."
-		fi
-	fi
-
-	if [[ -n $PG_SLOT_SOFT_MAX ]] ; then
-		if [[ ${pg_slot//.} > ${PG_SLOT_SOFT_MAX//.} ]] ; then
-			ewarn "You are building ${CATEGORY}/${PN} against a version of PostgreSQL greater than ${PG_SLOT_SOFT_MAX}."
-			ewarn "This is not supported here."
-			ewarn "Any bugs you encounter should be reported upstream."
-		fi
-	fi
+	return 0
 }
 
 pkg_pretend() {
-	postgres_check_slot
+	postgres_check_slot || die
 }
+
 pkg_setup() {
-	postgres_check_slot
+	postgres_check_slot || die
 	export PGSLOT="$(postgresql-config show)"
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.0-ldflags.patch" \
+	epatch "${FILESDIR}/${PN}-2.1-ldflags.patch" \
 		"${FILESDIR}/${PN}-2.0-arflags.patch" \
 		"${FILESDIR}/${PN}-2.1-pkgconfig-json.patch"
 
@@ -123,7 +102,9 @@ src_prepare() {
 src_configure() {
 	local myargs=""
 	use gtk && myargs+=" --with-gui"
-	econf ${myargs}
+	econf \
+		--with-pgconfig="/usr/lib/postgresql-${PGSLOT}/bin/pg_config" \
+		${myargs}
 }
 
 src_compile() {

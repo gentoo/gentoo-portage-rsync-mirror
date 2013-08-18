@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.2-r2.ebuild,v 1.2 2013/08/18 19:28:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.5-r2.ebuild,v 1.1 2013/08/18 19:28:02 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 WANT_AUTOMAKE="none"
 WANT_LIBTOOL="none"
 
 inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs multiprocessing
 
 MY_P="Python-${PV}"
-PATCHSET_REVISION="2"
+PATCHSET_REVISION="0"
 
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
@@ -17,9 +17,9 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
 	mirror://gentoo/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.xz"
 
 LICENSE="PSF-2"
-SLOT="3.3"
+SLOT="3.2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk wininst +xml"
+IUSE="build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
 # Do not add a dependency on dev-lang/python to this ebuild.
 # If you need to apply a patch which requires python for bootstrapping, please
@@ -43,8 +43,7 @@ RDEPEND="app-arch/bzip2
 			dev-tcltk/blt
 		)
 		xml? ( >=dev-libs/expat-2.1 )
-	)
-	!!<sys-apps/sandbox-2.6-r1"
+	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-devel/autoconf-2.65
@@ -56,15 +55,29 @@ PDEPEND="app-admin/eselect-python
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	if [[ "${PV}" =~ ^3\.2(\.[1234])?(_pre)? ]]; then
+		rm -f "${EROOT}usr/$(get_libdir)/llibpython3.so"
+	else
+		die "Deprecated code not deleted"
+	fi
+}
+
 src_prepare() {
 	# Ensure that internal copies of expat, libffi and zlib are not used.
-	rm -fr Modules/expat
-	rm -fr Modules/_ctypes/libffi*
-	rm -fr Modules/zlib
+	rm -r Modules/expat
+	rm -r Modules/_ctypes/libffi*
+	rm -r Modules/zlib
 
-	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PV}-${PATCHSET_REVISION}"
+	local excluded_patches
+	if ! tc-is-cross-compiler; then
+		excluded_patches="*_all_crosscompile.patch"
+	fi
 
-	epatch "${FILESDIR}/python-3.3-CVE-2013-2099.patch"
+	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_SUFFIX="patch" \
+		epatch "${WORKDIR}/${PV}-${PATCHSET_REVISION}"
+
+	epatch "${FILESDIR}/python-3.2-CVE-2013-2099.patch"
 	epatch "${FILESDIR}/CVE-2013-4238_py33.patch"
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
@@ -172,6 +185,7 @@ src_configure() {
 		--enable-shared \
 		$(use_enable ipv6) \
 		$(use_with threads) \
+		$(use_with wide-unicode) \
 		--infodir='${prefix}/share/info' \
 		--mandir='${prefix}/share/man' \
 		--with-computed-gotos \
@@ -207,7 +221,7 @@ src_compile() {
 		) \
 		PTHON_DISABLE_SSL="1" \
 		SYSROOT= \
-		emake || die "cross-make failed"
+		emake
 		# See comment in src_configure about these.
 		ln python ../${CHOST}/hostpython || die
 		ln Parser/pgen ../${CHOST}/Parser/hostpgen || die
@@ -215,7 +229,7 @@ src_compile() {
 	fi
 
 	cd "${WORKDIR}"/${CHOST}
-	emake CPPFLAGS="" CFLAGS="" LDFLAGS="" || die "emake failed"
+	emake CPPFLAGS="" CFLAGS="" LDFLAGS=""
 
 	# Work around bug 329499. See also bug 413751 and 457194.
 	if has_version dev-libs/libffi[pax_kernel]; then
@@ -267,7 +281,7 @@ src_install() {
 	local libdir=${ED}/usr/$(get_libdir)/python${SLOT}
 
 	cd "${WORKDIR}"/${CHOST}
-	emake DESTDIR="${D}" altinstall || die "emake altinstall failed"
+	emake DESTDIR="${D}" altinstall
 
 	sed \
 		-e "s/\(CONFIGURE_LDFLAGS=\).*/\1/" \
@@ -275,10 +289,10 @@ src_install() {
 		-i "${libdir}/config-${SLOT}/Makefile" || die "sed failed"
 
 	# Backwards compat with Gentoo divergence.
-	dosym python${SLOT}-config /usr/bin/python-config-${SLOT} || die
+	dosym python${SLOT}-config /usr/bin/python-config-${SLOT}
 
 	# Fix collisions between different slots of Python.
-	rm -f "${ED}usr/$(get_libdir)/libpython3.so"
+	rm "${ED}usr/$(get_libdir)/libpython3.so" || die
 
 	if use build; then
 		rm -fr "${ED}usr/bin/idle${SLOT}" "${libdir}/"{idlelib,sqlite3,test,tkinter}
@@ -291,20 +305,20 @@ src_install() {
 	use threads || rm -fr "${libdir}/multiprocessing"
 	use wininst || rm -f "${libdir}/distutils/command/"wininst-*.exe
 
-	dodoc "${S}"/Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
+	dodoc "${S}"/Misc/{ACKS,HISTORY,NEWS}
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		find "${S}"/Tools -name __pycache__ -print0 | xargs -0 rm -fr
-		doins -r "${S}"/Tools || die "doins failed"
+		doins -r "${S}"/Tools
 	fi
 	insinto /usr/share/gdb/auto-load/usr/$(get_libdir) #443510
 	local libname=$(printf 'e:\n\t@echo $(INSTSONAME)\ninclude Makefile\n' | \
 		emake --no-print-directory -s -f - 2>/dev/null)
 	newins "${S}"/Tools/gdb/libpython.py "${libname}"-gdb.py
 
-	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
-	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
+	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
+	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
 	sed \
 		-e "s:@PYDOC_PORT_VARIABLE@:PYDOC${SLOT/./_}_PORT:" \
 		-e "s:@PYDOC@:pydoc${SLOT}:" \
