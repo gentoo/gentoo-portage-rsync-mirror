@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.210 2013/08/17 23:31:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.211 2013/08/18 02:33:26 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -363,11 +363,6 @@ src_configure() {
 	myconf+="
 		-Dlogging_like_official_build=1"
 
-	# Enable SUID sandbox.
-	myconf+="
-		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
-		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
-
 	# Never use bundled gold binary. Disable gold linker flags for now.
 	myconf+="
 		-Dlinux_use_gold_binary=0
@@ -563,8 +558,8 @@ src_install() {
 	exeinto "${CHROMIUM_HOME}"
 	doexe out/Release/chrome || die
 
-	doexe out/Release/chrome_sandbox || die
-	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
+	newexe out/Release/chrome_sandbox chrome-sandbox || die
+	fperms 4755 "${CHROMIUM_HOME}/chrome-sandbox"
 
 	doexe out/Release/chromedriver || die
 
