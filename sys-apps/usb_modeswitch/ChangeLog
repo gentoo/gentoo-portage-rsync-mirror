@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usb_modeswitch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.46 2013/08/12 11:27:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.47 2013/08/18 12:24:05 ago Exp $
+
+  18 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
+  usb_modeswitch-1.2.6_p20130610.ebuild:
+  Stable for amd64, wrt bug #480710
 
 *usb_modeswitch-1.2.7_p20130807 (12 Aug 2013)
 
