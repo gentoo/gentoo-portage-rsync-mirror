@@ -1,6 +1,12 @@
 # ChangeLog for games-action/solar2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/ChangeLog,v 1.2 2013/05/09 14:11:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/ChangeLog,v 1.4 2013/08/18 00:25:18 hasufell Exp $
+
+  18 Aug 2013; Julian Ospald <hasufell@gentoo.org> solar2-1.10.ebuild:
+  stable amd64, x86 wrt #480808
+
+  18 Aug 2013; Julian Ospald <hasufell@gentoo.org> solar2-1.10.ebuild:
+  fix typo affecting x86 build
 
   09 May 2013; Julian Ospald <hasufell@gentoo.org> solar2-1.10.ebuild:
   restrict splitdebug

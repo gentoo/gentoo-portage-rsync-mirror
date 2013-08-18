@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/avadon/avadon-1.0.4.ebuild,v 1.1 2013/06/24 20:34:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/avadon/avadon-1.0.4.ebuild,v 1.2 2013/08/18 00:20:16 hasufell Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="avadon-black-fortress_${PV}_all.run"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="fetch bindist"
 

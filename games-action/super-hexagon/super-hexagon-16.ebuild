@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-16.ebuild,v 1.1 2013/05/10 18:47:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-16.ebuild,v 1.2 2013/08/18 00:30:09 hasufell Exp $
 
 # we use bundled glew, cause slotting 1.6 does not give us
 # much benefit for one consumer
@@ -15,7 +15,7 @@ SRC_URI="${PN}-linux-${PV}-bin-1366677959"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="bindist fetch splitdebug"
 
