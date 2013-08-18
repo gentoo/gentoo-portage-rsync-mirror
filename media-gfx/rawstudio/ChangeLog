@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/rawstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.32 2013/08/18 13:27:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.33 2013/08/18 15:58:06 ssuominen Exp $
+
+  18 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/rawstudio-1.2-glibc-2.10.patch, -rawstudio-1.2.ebuild,
+  -rawstudio-2.0.ebuild:
+  old
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> rawstudio-2.0-r1.ebuild:
   Stable for x86, wrt bug #479810
