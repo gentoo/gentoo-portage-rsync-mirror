@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.5.4.1.ebuild,v 1.4 2011/10/27 06:40:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.5.4.1-r1.ebuild,v 1.1 2013/08/18 14:36:27 mrueg Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="kf is a simple Jabber messenger."
@@ -15,8 +15,9 @@ DEPEND="x11-libs/gtk+:2
 	>=net-libs/loudmouth-0.16
 	>=gnome-base/libglade-2
 	spell? ( >=app-text/gtkspell-2.0.4:2 )"
+RDEPEND="${DEPEND}"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ~x86 ~ppc ~sparc"
 
 src_prepare() {
 	# wrong use of typedef struct _KfJispManager
@@ -25,14 +26,10 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable spell gtkspell) \
-		  $(use_enable debug) || die 'econf failed'
-}
-
-src_compile() {
-	emake || die 'emake failed'
+		  $(use_enable debug)
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die 'make install failed'
+	emake install DESTDIR="${D}"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
