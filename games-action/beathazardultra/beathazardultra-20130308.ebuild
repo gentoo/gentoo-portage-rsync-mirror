@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.4 2013/05/09 14:11:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.5 2013/08/18 00:48:51 hasufell Exp $
 
-# TODO: unbundle allegro on amd64 when multilib support
+# TODO: unbundle allegro[gtk...] (no multilib on amd64 and 5.0.9 soname)
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="beathazard-installer_03-08-13"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="bindist fetch splitdebug"
 
@@ -31,15 +31,14 @@ RDEPEND="
 		app-emulation/emul-linux-x86-xlibs
 	)
 	x86? (
+		x11-libs/gtk+:2
 		x11-libs/libX11
 		x11-libs/libXcursor
 		x11-libs/libXinerama
 		x11-libs/libXrandr
 		!bundled-libs? (
-			media-libs/allegro:5
 			media-libs/libpng:1.2
 			virtual/jpeg
-			x11-libs/gtk+:2
 		)
 	)"
 
@@ -59,7 +58,6 @@ src_unpack() {
 src_prepare() {
 	if ! use bundled-libs ; then
 		einfo "Removing bundled libs..."
-		use x86 && { rm -v all/hge_lib/liballegro* || die ; }
 		rm -v all/hge_lib/libjpeg.so* all/hge_lib/libpng12.so*
 	fi
 }
