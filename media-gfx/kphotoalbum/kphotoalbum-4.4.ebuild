@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.4 2013/06/06 22:07:45 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.5 2013/08/18 19:46:25 creffett Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="4"
 IUSE="debug +exif +geolocation +kipi +raw +semantic-desktop"
 
 DEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop=')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
 	>=dev-qt/qtsql-4.4:4[sqlite]
 	virtual/jpeg
 	exif? ( >=media-gfx/exiv2-0.17 )
