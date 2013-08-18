@@ -1,6 +1,16 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.53 2013/08/18 13:26:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.54 2013/08/18 15:27:36 ssuominen Exp $
+
+  18 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/CVE-2009-1297.patch, -files/iscsid-2.0.871-r1.init.d,
+  -files/iscsid-conf.d, -files/iscsid-init.d,
+  -files/open-iscsi-2.0.871-makefile-cleanup.patch,
+  -files/open-iscsi-2.0.871.3-glibc212.patch, -files/open-iscsi-2.0.872-init.d,
+  -open-iscsi-2.0.870.3-r1.ebuild, -open-iscsi-2.0.871-r1.ebuild,
+  -open-iscsi-2.0.871.3.ebuild, -open-iscsi-2.0.871.ebuild,
+  -open-iscsi-2.0.872-r1.ebuild, -open-iscsi-2.0.872.ebuild, metadata.xml:
+  old
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> open-iscsi-2.0.872-r2.ebuild:
   Stable for x86, wrt bug #479786

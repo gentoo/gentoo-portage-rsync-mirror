@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i3status
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.19 2013/08/18 13:46:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.20 2013/08/18 15:20:48 xarthisius Exp $
+
+  18 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> -i3status-2.6.ebuild:
+  drop old
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> i3status-2.7.ebuild:
   Stable for x86, wrt bug #480338
