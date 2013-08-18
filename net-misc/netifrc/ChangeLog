@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.1 2013/08/14 06:37:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.2 2013/08/18 03:54:54 axs Exp $
+
+  18 Aug 2013; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
+  added myself to metadata as tertiary maintainer
 
 *netifrc-9999 (14 Aug 2013)
 *netifrc-0.1 (14 Aug 2013)
@@ -8,4 +11,3 @@
   14 Aug 2013; William Hubbs <williamh@gentoo.org> +netifrc-0.1.ebuild,
   +netifrc-9999.ebuild, +metadata.xml:
   initial commit
-
