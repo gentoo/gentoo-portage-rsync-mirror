@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/logbook
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.9 2013/06/30 14:50:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.10 2013/08/18 08:46:32 idella4 Exp $
+
+*logbook-0.5.0 (18 Aug 2013)
+
+  18 Aug 2013; Ian Delaney <idella4@gentoo.org>
+  +files/logbook-0.5-pypy-test-fix.patch, +logbook-0.5.0.ebuild:
+  bump; Drop py2.5, add pypy2_0 support, updated deps, test phase
 
 *logbook-0.4.2 (30 Jun 2013)
 
