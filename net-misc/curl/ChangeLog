@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.292 2013/08/18 12:49:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.293 2013/08/18 13:17:05 blueness Exp $
+
+  18 Aug 2013; Anthony G. Basile <blueness@gentoo.org> curl-7.31.0.ebuild:
+  Stable for arm, bug #474354
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> curl-7.31.0.ebuild:
   Stable for x86, wrt bug #474354

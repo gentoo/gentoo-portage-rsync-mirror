@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.6.ebuild,v 1.3 2013/08/03 21:42:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.6.ebuild,v 1.4 2013/08/18 13:26:27 ago Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION="0.16"
@@ -13,7 +13,7 @@ SRC_URI="http://gitorious.org/${PN}/${PN}/archive-tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/glib-2

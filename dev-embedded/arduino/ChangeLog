@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/arduino
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.18 2013/07/24 09:23:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.19 2013/08/18 13:27:35 ago Exp $
+
+  18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> arduino-1.0.5.ebuild:
+  Stable for x86, wrt bug #477092
 
   24 Jul 2013; Agostino Sarubbo <ago@gentoo.org> arduino-1.0.5.ebuild:
   Stable for amd64, wrt bug #477092

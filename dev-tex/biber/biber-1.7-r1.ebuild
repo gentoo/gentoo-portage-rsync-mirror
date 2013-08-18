@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/biber-1.7.ebuild,v 1.1 2013/08/06 00:05:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/biber-1.7-r1.ebuild,v 1.1 2013/08/18 13:03:27 mrueg Exp $
 
 EAPI=5
 
@@ -38,9 +38,11 @@ RDEPEND=">=dev-lang/perl-5.16
 	dev-perl/Readonly
 	dev-perl/Readonly-XS
 	>=dev-perl/Text-BibTeX-0.66
+	dev-perl/URI
 	dev-perl/Unicode-LineBreak
 	dev-perl/XML-LibXML-Simple
 	dev-perl/XML-LibXSLT
+	dev-perl/XML-SAX-Base
 	dev-perl/XML-Writer
 	>=dev-tex/biblatex-2.7
 	virtual/perl-IPC-Cmd"

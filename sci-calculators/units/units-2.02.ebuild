@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.02.ebuild,v 1.5 2013/08/13 15:25:10 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.02.ebuild,v 1.6 2013/08/18 13:26:14 ago Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="FDL-1.3 GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ppc ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="

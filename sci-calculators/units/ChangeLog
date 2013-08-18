@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.63 2013/08/13 15:25:10 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.64 2013/08/18 13:26:14 ago Exp $
+
+  18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> units-2.02.ebuild:
+  Stable for x86, wrt bug #479732
 
   13 Aug 2013; Chema Alonso <nimiux@gentoo.org> units-2.02.ebuild:
   Stable for amd64 wrt bug #479732
