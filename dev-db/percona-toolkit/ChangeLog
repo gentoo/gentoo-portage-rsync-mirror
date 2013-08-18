@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/percona-toolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.3 2013/01/06 21:33:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.4 2013/08/18 12:45:02 wschlich Exp $
+
+  18 Aug 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  removed myself from metadata.xml
 
 *percona-toolkit-2.1.7 (06 Jan 2013)
 

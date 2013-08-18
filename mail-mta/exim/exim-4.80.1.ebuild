@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.14 2013/07/23 17:32:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.15 2013/08/18 12:52:41 grobian Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
-	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )
+	sasl? ( >=dev-libs/cyrus-sasl-2.1.26-r2 )
 	selinux? ( sec-policy/selinux-exim )
 	spf? ( >=mail-filter/libspf2-1.2.5-r1 )
 	srs? ( mail-filter/libsrs_alt )
@@ -178,7 +178,7 @@ src_configure() {
 		myconf="${myconf} -lpam"
 	fi
 	if use sasl; then
-		sed -i "s:# CYRUS_SASLAUTHD_SOCKET=${EPREFIX}/var/state/saslauthd/mux:CYRUS_SASLAUTHD_SOCKET=${EPREFIX}/var/lib/sasl2/mux:"  Makefile
+		sed -i "s:# CYRUS_SASLAUTHD_SOCKET=${EPREFIX}/var/state/saslauthd/mux:CYRUS_SASLAUTHD_SOCKET=${EPREFIX}/run/saslauthd/mux:"  Makefile
 		sed -i "s:# AUTH_CYRUS_SASL=yes:AUTH_CYRUS_SASL=yes:" Makefile
 		myconf="${myconf} -lsasl2"
 	fi

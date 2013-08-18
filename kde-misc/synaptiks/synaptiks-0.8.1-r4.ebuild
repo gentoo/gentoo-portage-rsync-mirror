@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1-r3.ebuild,v 1.2 2013/08/16 10:08:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1-r4.ebuild,v 1.1 2013/08/18 12:52:09 mrueg Exp $
 
 EAPI=5
 
 KDE_HANDBOOK=optional
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python{2_6,2_7} )
 inherit kde4-base distutils-r1
 
 DESCRIPTION="Touchpad configuration and management tool for KDE"
@@ -37,16 +37,13 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	doc? (
 		dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/sphinxcontrib-issuetracker[${PYTHON_USEDEP}]
+		>=dev-python/sphinxcontrib-issuetracker-0.11-r1[${PYTHON_USEDEP}]
 	)"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-templatesfix.patch"\
-		"${FILESDIR}/${PN}-0.8.1-removedfeatures.patch"
-}
+PATCHES=( "${FILESDIR}/${P}-templatesfix.patch"
+	"${FILESDIR}/${PN}-0.8.1-removedfeatures.patch" )
 
-src_compile() {
-	distutils-r1_src_compile
+python_compile_all() {
 	if use doc; then
 		einfo "Generation of documentation"
 		pushd doc > /dev/null
@@ -55,9 +52,7 @@ src_compile() {
 	fi
 }
 
-src_install() {
-	distutils-r1_src_install
-	if use doc; then
-		dohtml -r doc/_build/*
-	fi
+python_install_all() {
+	use doc && local HTML_DOCS=( doc/_build/. )
+	distutils-r1_python_install_all
 }
