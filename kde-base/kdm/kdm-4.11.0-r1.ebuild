@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.0.ebuild,v 1.1 2013/08/14 20:24:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.0-r1.ebuild,v 1.1 2013/08/18 10:21:34 dilfridge Exp $
 
 EAPI=5
 
@@ -98,9 +98,7 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/kdm-logrotate kdm
 
-	if use systemd; then
-		systemd_dounit "${FILESDIR}"/kdm.service
-	fi
+	systemd_dounit "${FILESDIR}"/kdm.service
 }
 
 pkg_postinst() {
