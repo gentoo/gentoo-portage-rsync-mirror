@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.3.0.ebuild,v 1.15 2013/08/03 09:45:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.3.0.ebuild,v 1.16 2013/08/18 07:50:19 mgorny Exp $
 
 EAPI=5
 
@@ -78,11 +78,10 @@ python_install() {
 }
 
 python_install_all() {
+	local EXAMPLES=( examples/. )
+	distutils-r1_python_install_all
+
 	if use doc; then
-		dohtml -r -A txt doc/.build/html/*
-	fi
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
+		dohtml -r -A txt doc/.build/html/.
 	fi
 }
