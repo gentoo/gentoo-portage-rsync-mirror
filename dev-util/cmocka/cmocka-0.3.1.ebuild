@@ -1,18 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/cmocka-0.2.0_p20121129.ebuild,v 1.1 2012/12/14 17:04:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/cmocka-0.3.1.ebuild,v 1.1 2013/08/18 17:42:01 creffett Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils
-DESCRIPTION="The lightweight C unit testing library"
-HOMEPAGE="https://open.cryptomilk.org/projects/cmocka"
-SRC_URI="http://dev.gentoo.org/~creffett/distfiles/${P}.tar.xz"
+DESCRIPTION="A unit testing framework for C"
+HOMEPAGE="http://cmocka.org/"
+SRC_URI="https://open.cryptomilk.org/attachments/download/19/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc static-libs"
+IUSE="doc static-libs test"
 
 DEPEND="
 	doc? ( app-doc/doxygen[latex] )
@@ -32,7 +32,7 @@ src_configure() {
 
 src_install() {
 	if use doc; then
-		pushd ${BUILD_DIR}/doc/
+		pushd "${BUILD_DIR}/doc/"
 		doxygen doxy.config
 		rm html/*.md5 latex/*.md5 latex/Manifest man/man3/_*
 		dohtml html/*
