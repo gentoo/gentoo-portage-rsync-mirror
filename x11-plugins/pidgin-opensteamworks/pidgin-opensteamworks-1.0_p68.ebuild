@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/pidgin-opensteamworks-1.0_p67.ebuild,v 1.1 2013/08/10 15:43:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/pidgin-opensteamworks-1.0_p68.ebuild,v 1.1 2013/08/18 23:01:36 hasufell Exp $
 
 EAPI=5
 
@@ -9,6 +9,7 @@ inherit toolchain-funcs
 DESCRIPTION="Steam protocol plugin for pidgin"
 HOMEPAGE="http://code.google.com/p/pidgin-opensteamworks/"
 SRC_URI="http://dev.gentoo.org/~mrueg/distfiles/${P}.tar.xz
+	http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz
 	http://pidgin-opensteamworks.googlecode.com/files/icons.zip
 	-> ${PN}-icons.zip"
 
@@ -28,7 +29,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	tc-export CC
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		tc-export CC PKG_CONFIG
+	fi
 }
 
 src_prepare() {
