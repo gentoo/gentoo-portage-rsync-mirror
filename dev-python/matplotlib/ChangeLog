@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.152 2013/06/09 17:47:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.153 2013/08/17 23:27:32 floppym Exp $
+
+*matplotlib-1.3.0 (17 Aug 2013)
+
+  17 Aug 2013; Mike Gilbert <floppym@gentoo.org> +matplotlib-1.3.0.ebuild:
+  Version bump, bug 479970. Thanks to Bertrand Jacquin and Ian Delaney.
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> matplotlib-1.2.0-r2.ebuild,
   matplotlib-1.2.1.ebuild:

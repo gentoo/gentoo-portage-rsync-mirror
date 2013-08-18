@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/numpydoc
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpydoc/ChangeLog,v 1.1 2013/08/17 23:19:36 floppym Exp $
+
+*numpydoc-0.4 (17 Aug 2013)
+
+  17 Aug 2013; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +numpydoc-0.4.ebuild:
+  New ebuild, dependency of matplotlib. Adding relevent keywords since this is
+  small, pure-python package.
