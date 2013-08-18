@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.06.ebuild,v 1.6 2013/08/10 12:51:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.06.ebuild,v 1.7 2013/08/18 13:45:57 ago Exp $
 
 EAPI="4"
 inherit eutils toolchain-funcs flag-o-matic systemd user
@@ -13,7 +13,7 @@ SRC_URI="http://www.maradns.org/download/${PV%.*}/${PV}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc ~x86"
+KEYWORDS="amd64 ~mips ppc x86"
 IUSE="authonly ipv6"
 
 DEPEND=""

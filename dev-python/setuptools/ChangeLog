@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.207 2013/08/13 09:38:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.208 2013/08/18 13:46:40 ago Exp $
+
+  18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> setuptools-0.8-r1.ebuild:
+  Stable for x86, wrt bug #479980
 
   13 Aug 2013; Agostino Sarubbo <ago@gentoo.org> setuptools-0.8-r1.ebuild:
   Stable for alpha, wrt bug #479980

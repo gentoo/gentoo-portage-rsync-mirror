@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.91 2013/08/11 08:42:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.92 2013/08/18 13:45:31 ago Exp $
+
+  18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> network-2.4.1.2.ebuild:
+  Stable for x86, wrt bug #480562
 
   11 Aug 2013; Agostino Sarubbo <ago@gentoo.org> network-2.4.1.2.ebuild:
   Stable for amd64, wrt bug #480562

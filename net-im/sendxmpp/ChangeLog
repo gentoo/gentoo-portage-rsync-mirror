@@ -1,6 +1,10 @@
 # ChangeLog for net-im/sendxmpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/ChangeLog,v 1.16 2013/07/31 01:22:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/ChangeLog,v 1.17 2013/08/18 13:40:31 mrueg Exp $
+
+  18 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -sendxmpp-0.0.6.ebuild,
+  -sendxmpp-1.20.ebuild:
+  Cleanup.
 
 *sendxmpp-1.23 (31 Jul 2013)
 
