@@ -22,15 +22,26 @@ prep() {
         checkpath -o postgres:postgres -m 0775 -d "${UNIX_SOCKET_DIR}" \
             || return 1
     fi
+    checkpath -o pgbouncer:postgres -m 0755 -d "$(dirname ${PIDFILE})" \
+        || return 1
     checkpath -o pgbouncer:postgres -m 0644 -f "${PIDFILE}" \
+        || return 1
+    checkpath -o pgbouncer:postgres -m 0755 -d "$(dirname $(get_config logfile))" \
         || return 1
     checkpath -o pgbouncer:postgres -m 0640 -f "$(get_config logfile)" \
         || return 1
+
+    return 0
 }
 
 start() {
     ebegin "Starting PgBouncer"
-    prep || eend 1
+    prep
+    local ret=$?
+    if [ $ret -ne 0 ] ; then
+        eend $ret
+        exit $ret
+    fi
     start-stop-daemon --start \
         --pidfile ${PIDFILE} \
         --user pgbouncer \
@@ -39,14 +50,14 @@ start() {
 }
 
 stop() {
-    local seconds=$(( ${NICE_TIMEOUT} + ${FORCE_TIMEOUT} ))
+    local seconds=$(( ${NICE_TIMEOUT} + ${FORCE_QUIT_TIMEOUT} ))
     ebegin "Stopping PgBouncer (this can take up to ${seconds} seconds)"
 
     local retries=SIGINT/${NICE_TIMEOUT}
 
     if [ "${FORCE_QUIT}" = "YES" ] ; then
         einfo "FORCE_QUIT enabled."
-        retries="${retries}/SIGTERM/${FORCE_TIMEOUT}"
+        retries="${retries}/SIGTERM/${FORCE_QUIT_TIMEOUT}"
     fi
 
     # Loops through nice and force quit in one go.
