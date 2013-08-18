@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/expect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.91 2012/04/26 16:18:17 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.92 2013/08/18 11:31:36 tomk Exp $
+
+*expect-5.44.1.15-r1 (18 Aug 2013)
+
+  18 Aug 2013; Tom Knight <tomk@gentoo.org> +expect-5.44.1.15-r1.ebuild,
+  expect-5.45.ebuild:
+  Ensure examples get installed with USE=doc, fixes bug #41130 Thanks to
+  Alexander Tsoy for patches
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> expect-5.45.ebuild:
   keyword ~amd64-fbsd

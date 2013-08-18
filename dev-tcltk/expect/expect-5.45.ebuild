@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.45.ebuild,v 1.5 2012/04/26 16:18:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.45.ebuild,v 1.6 2013/08/18 11:31:36 tomk Exp $
 
 EAPI="3"
 
@@ -27,9 +27,9 @@ src_prepare() {
 	sed -i "s:/usr/local/bin:${EPREFIX}/usr/bin:" expect.man || die
 	# stops any example scripts being installed by default
 	sed -i \
-		-e 's/^SCRIPT_LIST/_&/' \
-		-e 's/^SCRIPTS/_&/' \
-		-e 's/^SCRIPTS_MANPAGES = /_&/' \
+		-e 's/^SCRIPT_LIST[[:space:]]*=/_&/' \
+		-e 's/^SCRIPTS[[:space:]]*=/_&/' \
+		-e 's/^SCRIPTS_MANPAGES[[:space:]]*=/_&/' \
 		Makefile.in
 
 	epatch "${FILESDIR}"/${PN}-5.45-gfbsd.patch
@@ -76,7 +76,7 @@ src_install() {
 		docinto examples
 		dodoc \
 			example/README \
-			$(printf 'example/%s ' $(expect_make_var SCRIPTS)) \
+			$(printf 'example/%s ' $(expect_make_var _SCRIPTS)) \
 			$(printf 'example/%s.man ' $(expect_make_var _SCRIPTS_MANPAGES)) \
 			|| die
 	fi
