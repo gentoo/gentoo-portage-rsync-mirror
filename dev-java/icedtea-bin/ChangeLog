@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.50 2013/07/27 22:04:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.51 2013/08/18 21:35:01 caster Exp $
+
+*icedtea-bin-7.2.4.1 (18 Aug 2013)
+*icedtea-bin-6.1.12.6-r1 (18 Aug 2013)
+
+  18 Aug 2013; Vlastimil Babka <caster@gentoo.org>
+  +icedtea-bin-6.1.12.6-r1.ebuild, +icedtea-bin-7.2.4.1.ebuild:
+  Version bump (slot 7), security bug #477210 / revbump (slot 6). Built against
+  libjpeg.so.62, bug #479442. Also upgraded the build environment, which bumped
+  most of the runtime deps (gcc 4.5.4, glibc-2.15 etc).
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-6.1.12.6.ebuild:
   Stable for x86, wrt bug #477210
