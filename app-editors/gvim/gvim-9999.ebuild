@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.5 2013/08/14 03:40:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.6 2013/08/18 18:34:46 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -355,11 +355,8 @@ src_install() {
 	doins "${FILESDIR}"/gvim.xpm
 
 	# bash completion script, bug #79018.
-	if [[ ${PN} == "vim-core" ]] ; then
-		newbashcomp "${FILESDIR}"/xxd-completion xxd
-	else
-		newbashcomp "${FILESDIR}"/${PN}-completion ${PN}
-	fi
+	newbashcomp "${FILESDIR}"/${PN}-completion ${PN}
+
 	# We shouldn't be installing the ex or view man page symlinks, as they
 	# are managed by eselect-vi
 	rm -f "${ED}"/usr/share/man/man1/{ex,view}.1

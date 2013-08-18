@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8169 2013/08/18 03:40:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8170 2013/08/18 18:46:33 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Aug 2013; Hans de Graaff <graaff@gentoo.org> updates/3Q-2013:
+  Move minitest 5.x to a separate slot because rails will depend on a specific
+  major version now.
 
   18 Aug 2013; William Hubbs <williamh@gentoo.org> package.mask:
   remove mask on sys-apps/openrc

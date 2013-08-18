@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.125 2013/07/17 06:41:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.127 2013/08/18 18:45:05 graaff Exp $
+
+  18 Aug 2013; Hans de Graaff <graaff@gentoo.org> minitest-5.0.6.ebuild:
+  Move minitest 5.x to a separate slot because rails will depend on a specific
+  major version now.
+
+  18 Aug 2013; Hans de Graaff <graaff@gentoo.org> -minitest-4.5.0.ebuild,
+  -minitest-4.7.0.ebuild, -minitest-5.0.3.ebuild:
+  Cleanup.
 
   17 Jul 2013; Hans de Graaff <graaff@gentoo.org> minitest-5.0.6.ebuild:
   Drop ruby18 blocker since the problem cannot be reproduced. Add missing hoe

@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.439 2013/08/18 18:21:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.440 2013/08/18 18:43:12 radhermit Exp $
+
+  18 Aug 2013; Tim Harder <radhermit@gentoo.org> -vim-7.3.266.ebuild,
+  -vim-7.3.409.ebuild, -vim-7.3.444.ebuild, -vim-7.3.456.ebuild,
+  -vim-7.3.462.ebuild, -vim-7.3.487.ebuild, -vim-7.3.498.ebuild,
+  -vim-7.3.502.ebuild, -vim-7.3.515.ebuild, -vim-7.3.537.ebuild,
+  -vim-7.3.556.ebuild, -vim-7.3.566.ebuild, -vim-7.3.600.ebuild,
+  -vim-7.3.646.ebuild, -vim-7.3.905.ebuild, -vim-7.3.931.ebuild,
+  -vim-7.3.1163.ebuild, -files/vim-7.1.319-interix-cflags.patch,
+  -files/vim-python3.patch, -files/vim-7.1-interix-link.patch:
+  Remove old, drop m68k to ~arch.
 
 *vim-7.4.5 (18 Aug 2013)
 

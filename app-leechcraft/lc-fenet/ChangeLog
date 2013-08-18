@@ -1,0 +1,9 @@
+# ChangeLog for app-leechcraft/lc-fenet
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-fenet/ChangeLog,v 1.1 2013/08/18 18:34:37 maksbotan Exp $
+
+*lc-fenet-9999 (18 Aug 2013)
+
+  18 Aug 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-fenet-9999.ebuild,
+  +metadata.xml:
+  Add lc-fenet-9999, thanks to 0xd34df00d.

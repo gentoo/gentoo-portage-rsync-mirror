@@ -1,6 +1,20 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.407 2013/08/18 18:24:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.409 2013/08/18 18:34:46 radhermit Exp $
+
+  18 Aug 2013; Tim Harder <radhermit@gentoo.org> gvim-7.4.ebuild,
+  gvim-7.4.5.ebuild, gvim-9999.ebuild:
+  Remove old vim-core related completion install.
+
+  18 Aug 2013; Tim Harder <radhermit@gentoo.org> -gvim-7.3.266.ebuild,
+  -gvim-7.3.409.ebuild, -gvim-7.3.444.ebuild, -gvim-7.3.456.ebuild,
+  -gvim-7.3.462.ebuild, -gvim-7.3.487.ebuild, -gvim-7.3.498.ebuild,
+  -gvim-7.3.502.ebuild, -gvim-7.3.515.ebuild, -gvim-7.3.537.ebuild,
+  -gvim-7.3.556.ebuild, -gvim-7.3.566.ebuild, -gvim-7.3.600.ebuild,
+  -gvim-7.3.646.ebuild, -gvim-7.3.905.ebuild, -gvim-7.3.931.ebuild,
+  -gvim-7.3.1163.ebuild, -files/gvim.desktop, -files/gvim.desktop-r1,
+  -files/gvim-python3.patch:
+  Remove old.
 
 *gvim-7.4.5 (18 Aug 2013)
 

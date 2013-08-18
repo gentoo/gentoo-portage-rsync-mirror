@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.0.6.ebuild,v 1.2 2013/07/17 06:41:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.0.6.ebuild,v 1.3 2013/08/18 18:45:05 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 jruby"
@@ -16,7 +16,7 @@ DESCRIPTION="minitest/unit is a small and fast replacement for ruby's huge and s
 HOMEPAGE="https://github.com/seattlerb/minitest"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="5"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc test"
 

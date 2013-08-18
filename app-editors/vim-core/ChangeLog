@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.424 2013/08/18 18:12:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.425 2013/08/18 18:46:03 radhermit Exp $
+
+  18 Aug 2013; Tim Harder <radhermit@gentoo.org> -vim-core-7.3.266.ebuild,
+  -vim-core-7.3.409.ebuild, -vim-core-7.3.444.ebuild, -vim-core-7.3.456.ebuild,
+  -vim-core-7.3.462.ebuild, -vim-core-7.3.487.ebuild, -vim-core-7.3.498.ebuild,
+  -vim-core-7.3.502.ebuild, -vim-core-7.3.515.ebuild, -vim-core-7.3.537.ebuild,
+  -vim-core-7.3.556.ebuild, -vim-core-7.3.566.ebuild, -vim-core-7.3.600.ebuild,
+  -vim-core-7.3.646.ebuild, -vim-core-7.3.905.ebuild, -vim-core-7.3.931.ebuild,
+  -vim-core-7.3.1163.ebuild, -files/vimrc-r3:
+  Remove old, drop m68k to ~arch.
 
 *vim-core-7.4.5 (18 Aug 2013)
 
