@@ -693,6 +693,10 @@ app-leechcraft/lc-azoth:shx - Build shell command executor plugin
 app-leechcraft/lc-azoth:standardstyles - Build support for standard Azoth styles engine
 app-leechcraft/lc-azoth:vader - Bulid Vader, the MRIM (Mail.Ru Agent) protocol support plugin
 app-leechcraft/lc-azoth:xtazy - Build Xtazy for publishing currently playing tune
+app-leechcraft/lc-blasq:deathnote - Support LiveJournal FotoBilder service
+app-leechcraft/lc-blasq:rappor - Support VKontakte service
+app-leechcraft/lc-blasq:spegnersi - Support Flickr service
+app-leechcraft/lc-blasq:vangog - Support Picasa service
 app-leechcraft/lc-blogique:hestia - Allows one to keep a local blog
 app-leechcraft/lc-blogique:metida - Support for the LiveJournal blogging platform
 app-leechcraft/lc-gmailnotifier:notify - Pull in a plugin to show notifications from GMail Notiifer

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smokeqt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/ChangeLog,v 1.89 2013/08/14 20:23:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/ChangeLog,v 1.90 2013/08/18 18:09:37 creffett Exp $
+
+  18 Aug 2013; Chris Reffett <creffett@gentoo.org> smokeqt-4.10.5.ebuild,
+  smokeqt-4.11.0.ebuild:
+  Add dep on x11-libs/qwt:5[svg] wrt bug 479358
 
 *smokeqt-4.11.0 (14 Aug 2013)
 

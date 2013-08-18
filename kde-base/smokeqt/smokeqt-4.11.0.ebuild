@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.11.0.ebuild,v 1.1 2013/08/14 20:23:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.11.0.ebuild,v 1.2 2013/08/18 18:09:37 creffett Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ DEPEND="
 	phonon? ( >=media-libs/phonon-4.4.3 )
 	qimageblitz? ( >=media-libs/qimageblitz-0.0.4 )
 	qscintilla? ( x11-libs/qscintilla:= )
-	qwt? ( x11-libs/qwt:5 )
+	qwt? ( x11-libs/qwt:5[svg] )
 	webkit? ( dev-qt/qtwebkit:4 )
 "
 RDEPEND="${DEPEND}"
