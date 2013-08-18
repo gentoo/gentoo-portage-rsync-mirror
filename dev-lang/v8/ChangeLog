@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.334 2013/08/18 03:01:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.335 2013/08/18 03:12:49 steev Exp $
+
+  18 Aug 2013; Steev Klimaszewski <steev@gentoo.org> v8-3.18.5.14.ebuild,
+  v8-3.19.18.18.ebuild, v8-3.19.18.19.ebuild, v8-3.20.12.1.ebuild,
+  v8-3.20.15.5.ebuild, v8-9999.ebuild:
+  v8: Add default to arm_fpu so that build doesn't fail when mfpu=(anything but
+  neon)
 
 *v8-3.19.18.19 (18 Aug 2013)
 

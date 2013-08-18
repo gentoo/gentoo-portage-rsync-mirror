@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.3.1.ebuild,v 1.5 2013/07/28 17:35:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.3.1.ebuild,v 1.6 2013/08/18 03:08:44 patrick Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -99,7 +99,7 @@ DOC_CONTENTS="
 	To make GDM start at boot, run:\n
 	# systemctl enable gdm.service\n
 	\n
-	For passwordless login to unlock your keyring, you need to install 
+	For passwordless login to unlock your keyring, you need to install
 	sys-auth/pambase with USE=gnome-keyring and set an empty password
 	on your keyring. Use app-crypt/seahorse for that.
 "

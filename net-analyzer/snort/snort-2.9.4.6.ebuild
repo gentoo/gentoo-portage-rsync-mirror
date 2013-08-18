@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.4.6.ebuild,v 1.1 2013/05/31 03:09:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.4.6.ebuild,v 1.2 2013/08/18 03:06:45 patrick Exp $
 
 EAPI="5"
 inherit autotools multilib user
@@ -117,7 +117,7 @@ src_install() {
 	# perserving them incase the user needs upstream support.
 	dodoc RELEASE.NOTES ChangeLog \
 		doc/* \
-		tools/u2boat/README.u2boat \
+		tools/u2boat/README.u2boat
 
 	insinto /etc/snort
 	doins etc/attribute_table.dtd \

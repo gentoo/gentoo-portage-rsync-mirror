@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.19.18.18.ebuild,v 1.1 2013/08/09 03:44:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.19.18.18.ebuild,v 1.2 2013/08/18 03:12:49 steev Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -46,7 +46,7 @@ src_configure() {
 			fi ;;
 		arm*-*)
 			myarch="arm"
-			myconf+=" -Dv8_target_arch=arm -Darm_fpu="
+			myconf+=" -Dv8_target_arch=arm -Darm_fpu=default"
 			if [[ ${CHOST} == *-hardfloat-* ]] ; then
 				myconf+=" -Dv8_use_arm_eabi_hardfloat=true"
 			else
