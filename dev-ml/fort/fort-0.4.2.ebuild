@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/fort/fort-0.4.2.ebuild,v 1.5 2012/10/10 12:16:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/fort/fort-0.4.2.ebuild,v 1.6 2013/08/19 13:27:14 aballier Exp $
 
-EAPI=2
+EAPI=5
 
 inherit multilib eutils
 
@@ -11,12 +11,13 @@ HOMEPAGE="http://fort.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="ZLIB"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="dev-lang/ocaml"
+DEPEND="dev-lang/ocaml:="
 RDEPEND="${DEPEND}"
+DOCS=( README )
 
 src_prepare() {
 	has_version '>=dev-lang/ocaml-4' && epatch "${FILESDIR}/${P}-ocaml4.patch"
@@ -26,9 +27,4 @@ src_prepare() {
 
 src_configure() {
 	./configure --bindir /usr/bin --libdir /usr/$(get_libdir)/ocaml || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README || die
 }

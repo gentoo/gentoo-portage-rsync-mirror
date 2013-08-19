@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/eliom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/eliom/ChangeLog,v 1.3 2013/08/19 12:58:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/eliom/ChangeLog,v 1.4 2013/08/19 13:21:14 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> eliom-3.0.3.ebuild:
+  EAPI5, define subslot and add := deps
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -eliom-2.2.2.ebuild:
   remove old

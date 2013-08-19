@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.3.ebuild,v 1.2 2013/03/03 14:25:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.3.ebuild,v 1.3 2013/08/19 13:06:38 aballier Exp $
 
 EAPI=5
 
@@ -28,6 +28,7 @@ LICENSE="LGPL-2.1-with-linking-exception"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 DOCS=( "CHANGES" "CHANGES.darcs" "README" )
+PATCHES=( "${FILESDIR}/${P}-ocaml-4.01.patch" )
 
 src_configure() {
 	oasis_configure_opts="$(use_enable gtk glib)

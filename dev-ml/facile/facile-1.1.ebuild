@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.19 2012/10/10 13:04:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.20 2013/08/19 13:26:14 aballier Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils
 
@@ -11,12 +11,12 @@ HOMEPAGE="http://www.recherche.enac.fr/log/facile/"
 SRC_URI="http://www.recherche.enac.fr/log/facile/distrib/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/${PV}"
 
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="+ocamlopt"
 
-RDEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
+RDEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt?]"
 DEPEND="${RDEPEND}
 	 sys-apps/sed"
 
@@ -38,15 +38,15 @@ src_prepare() {
 
 src_configure(){
 	# This is a custom configure script and it does not support standard options
-	./configure --faciledir "${D}"$(ocamlc -where)/facile/
+	./configure --faciledir "${D}"$(ocamlc -where)/facile/ || die
 }
 
 src_test() {
-	emake check || die "emake check failed"
+	emake check
 }
 
 src_install(){
 	dodir $(ocamlc -where)
-	emake install || die "Installation failed"
-	dodoc README || die "installing docs failed"
+	emake install
+	dodoc README
 }
