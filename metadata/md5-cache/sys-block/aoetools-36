@@ -1,10 +1,10 @@
-DEFINED_PHASES=compile prepare
+DEFINED_PHASES=prepare
 DESCRIPTION=tools for ATA over Ethernet (AoE) network storage protocol
-EAPI=4
+EAPI=5
 HOMEPAGE=http://aoetools.sourceforge.net/
 KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 SLOT=0
-SRC_URI=mirror://sourceforge/aoetools/aoetools-34.tar.gz
+SRC_URI=mirror://sourceforge/aoetools/aoetools-36.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=b1d5a9de2f1736dd95d9d119bd8d4d13
+_md5_=d8970da3e2e0272eabf7a00c69dc4174

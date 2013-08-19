@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-34.ebuild,v 1.1 2012/07/31 09:03:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/aoetools-36.ebuild,v 1.1 2013/08/18 23:33:48 radhermit Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="tools for ATA over Ethernet (AoE) network storage protocol"
@@ -18,9 +18,5 @@ DOCS="NEWS README"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-32-build.patch
-}
-
-src_compile() {
 	tc-export CC
-	emake
 }
