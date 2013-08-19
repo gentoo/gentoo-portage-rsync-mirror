@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/omake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.24 2012/08/22 23:49:11 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.26 2013/08/19 14:08:27 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> omake-0.9.8.6.0_rc1.ebuild:
+  eapi5 and add := dep on ocaml
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -omake-0.9.8.5.ebuild,
+  -files/omake-0.9.8.5-caml_sync.patch, -files/omake-0.9.8.5-lm_printf.patch:
+  remove old
 
   22 Aug 2012; Michael Weber <xmw@gentoo.org> omake-0.9.8.6.0_rc1.ebuild:
   ppc stable (bug 425742).

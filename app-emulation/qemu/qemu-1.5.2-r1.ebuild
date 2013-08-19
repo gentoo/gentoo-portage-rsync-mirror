@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.5.2-r1.ebuild,v 1.2 2013/08/14 09:12:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.5.2-r1.ebuild,v 1.3 2013/08/19 14:07:08 cardoe Exp $
 
 EAPI=5
 
@@ -71,7 +71,7 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	aio? ( dev-libs/libaio[static-libs(+)] )
 	caps? ( sys-libs/libcap-ng[static-libs(+)] )
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
-	fdt? ( >=sys-apps/dtc-1.2.0[static-libs(+)] )
+	fdt? ( >=sys-apps/dtc-1.2.0[static-libs(+)] <sys-apps/dtc-1.4.0[static-libs(+)] )
 	glusterfs? ( >=sys-cluster/glusterfs-3.4.0[static-libs(+)] )
 	jpeg? ( virtual/jpeg[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )

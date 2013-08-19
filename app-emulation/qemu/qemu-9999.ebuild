@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.58 2013/08/17 21:32:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.59 2013/08/19 14:08:33 cardoe Exp $
 
 EAPI=5
 
@@ -90,15 +90,15 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	static-user? ( >=dev-libs/glib-2.0[static-libs(+)] )
 	qemu_softmmu_targets_i386? (
 		>=sys-firmware/ipxe-1.0.0_p20130624
-		>=sys-firmware/seabios-1.7.3
-		>=sys-firmware/sgabios-0.1_pre8
-		>=sys-firmware/vgabios-0.7a
+		sys-firmware/seabios
+		sys-firmware/sgabios
+		sys-firmware/vgabios
 	)
 	qemu_softmmu_targets_x86_64? (
 		>=sys-firmware/ipxe-1.0.0_p20130624
-		>=sys-firmware/seabios-1.7.3
-		>=sys-firmware/sgabios-0.1_pre8
-		>=sys-firmware/vgabios-0.7a
+		sys-firmware/seabios
+		sys-firmware/sgabios
+		sys-firmware/vgabios
 	)
 	accessibility? ( app-accessibility/brltty )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )

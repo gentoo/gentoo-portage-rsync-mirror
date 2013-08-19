@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.459 2013/08/18 14:06:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.460 2013/08/19 14:29:44 mrueg Exp $
+
+*amarok-2.7.1-r1 (19 Aug 2013)
+
+  19 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +amarok-2.7.1-r1.ebuild:
+  Straight to stable revision bump, as KDE SC 4.11.0 and <amarok-2.8 don't work
+  well together
 
   18 Aug 2013; Manuel Rüger <mrueg@gentoo.org> amarok-2.8.0.ebuild:
   Style fixes

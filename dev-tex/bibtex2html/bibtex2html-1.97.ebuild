@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.97.ebuild,v 1.3 2012/05/21 21:09:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.97.ebuild,v 1.4 2013/08/19 14:02:21 aballier Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RESTRICT="test"
 # With use doc we need a latex compiler to generate manual.pdf
 # hevea is used for manual.html
 # manual.tex needs fullpage.sty
-DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]
+DEPEND=">=dev-lang/ocaml-3.10:=[ocamlopt?]
 	doc? ( virtual/latex-base
 		dev-texlive/texlive-latexextra
 		dev-tex/hevea )"
@@ -39,20 +39,20 @@ src_prepare() {
 src_compile() {
 	export VARTEXFONTS="${T}/fonts"
 	if use ocamlopt ; then
-		emake opt || die
+		emake opt
 	else
-		emake byte || die
+		emake byte
 	fi
 	if use doc; then
-		emake doc || die "failed to create doc"
+		emake doc
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "failed to install"
-	dodoc README CHANGES || die
+	emake DESTDIR="${D}" install
+	dodoc README CHANGES
 	if use doc; then
-		dodoc manual.pdf || die
-		dohtml manual.html || die
+		dodoc manual.pdf
+		dohtml manual.html
 	fi
 }

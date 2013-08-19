@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.30 2013/05/30 06:04:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.31 2013/08/19 14:05:30 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  coccinelle-1.0.0_rc17.ebuild:
+  add := dep on ocaml pacakges
 
   30 May 2013; Tim Harder <radhermit@gentoo.org>
   -coccinelle-1.0.0_rc15-r1.ebuild, -coccinelle-1.0.0_rc16.ebuild,

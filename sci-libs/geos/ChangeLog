@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.78 2013/04/12 07:08:26 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.79 2013/08/19 14:24:56 titanofold Exp $
+
+*geos-3.4.1 (19 Aug 2013)
+
+  19 Aug 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +files/3.4.1-solaris-isnan.patch, -files/3.2.0-multipy.patch,
+  -files/3.2.0-swig2.0.patch, +geos-3.4.1.ebuild,
+  -files/3.2.2-disable_static_modules.patch, -files/3.2.2-gcc46.patch,
+  -geos-3.2.2.ebuild, -geos-3.3.3.ebuild, -geos-3.3.4.ebuild,
+  -geos-3.3.5.ebuild, -geos-3.3.7.ebuild:
+  Version bump. Clean out old versions and related patch files.
 
   12 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org> geos-3.3.8-r1.ebuild:
   x86 stable, wrt bug #436432

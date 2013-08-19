@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.11.0.ebuild,v 1.1 2013/08/14 20:23:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.11.0.ebuild,v 1.2 2013/08/19 14:05:33 kensington Exp $
 
 EAPI=5
 
@@ -28,6 +28,8 @@ COMMONDEPEND="
 	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libxcb
+	x11-libs/xcb-util-image
+	x11-libs/xcb-util-keysyms
 	x11-libs/libXcomposite
 	x11-libs/libXcursor
 	x11-libs/libXdamage

@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.6.0_rc1.ebuild,v 1.3 2012/08/22 23:49:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.6.0_rc1.ebuild,v 1.4 2013/08/19 14:08:27 aballier Exp $
 
-EAPI=2
+EAPI=5
+
 inherit toolchain-funcs multilib versionator eutils
 
 MY_PV=$(replace_version_separator 5 '.' "$(replace_version_separator 4 '-' )")
@@ -15,10 +16,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="doc fam ncurses +ocamlopt readline"
-DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
+DEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt?]
 	ncurses? ( >=sys-libs/ncurses-5.3 )
 	fam? ( virtual/fam )
 	readline? ( >=sys-libs/readline-4.3 )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}-${MY_PV%-*}
 
@@ -64,11 +66,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake all || die "compilation failed"
+	emake all
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	emake INSTALL_ROOT="${D}" install
 	dodoc CHANGELOG.txt
 	if use doc; then
 		dodoc doc/ps/omake-doc.{pdf,ps} doc/txt/omake-doc.txt
