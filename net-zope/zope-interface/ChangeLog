@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.47 2013/05/06 08:58:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.48 2013/08/19 12:03:26 djc Exp $
+
+  19 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> zope-interface-4.0.5.ebuild:
+  Fix CFLAGS (bug 480446, thanks to AlphatPC@gmail.com).
 
   06 May 2013; Dirkjan Ochtman <djc@gentoo.org> -zope-interface-3.6.2.ebuild,
   -zope-interface-3.7.0.ebuild, -zope-interface-4.0.3-r1.ebuild,

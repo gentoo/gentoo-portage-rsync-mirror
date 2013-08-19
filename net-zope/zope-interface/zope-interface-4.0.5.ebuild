@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/zope-interface-4.0.5.ebuild,v 1.2 2013/03/30 13:06:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/zope-interface-4.0.5.ebuild,v 1.3 2013/08/19 12:03:26 djc Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ S="${WORKDIR}/${MY_P}"
 
 python_compile() {
 	if [[ ${EPYTHON} != python3* ]]; then
-		local CFLAGS CXXFLAGS
+		local CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 		append-flags -fno-strict-aliasing
 	fi
 
