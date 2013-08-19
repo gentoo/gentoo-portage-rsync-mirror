@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.138 2013/08/18 15:05:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.139 2013/08/19 05:14:39 patrick Exp $
+
+*DBD-mysql-4.01.7 (19 Aug 2013)
+
+  19 Aug 2013; Patrick Lauer <patrick@gentoo.org> +DBD-mysql-4.01.7.ebuild:
+  Restore last version with stable s390 keyword
 
   18 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -DBD-mysql-4.01.7.ebuild:
   drop old wrt bug #478750
