@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.12 2013/08/10 13:07:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.13 2013/08/19 15:47:00 idella4 Exp $
+
+*irc-8.5 (19 Aug 2013)
+
+  19 Aug 2013; Ian Delaney <idella4@gentoo.org> +irc-8.5.ebuild:
+  bump; Drop py3.1 support, update deps., re-add test phase which was seemingly
+  dropped post irc-8.0, add IUSE test
 
 *irc-8.4 (10 Aug 2013)
 
