@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/semantik
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.9 2013/03/02 21:30:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.10 2013/08/19 17:09:24 kensington Exp $
+
+*semantik-0.8.4 (19 Aug 2013)
+
+  19 Aug 2013; Michael Palimaka <kensington@gentoo.org> +semantik-0.8.4.ebuild:
+  Version bump.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> semantik-0.8.3.ebuild:
   Move Qt dependencies to the new category
