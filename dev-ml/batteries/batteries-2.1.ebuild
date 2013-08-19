@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/batteries/batteries-2.1.ebuild,v 1.1 2013/07/22 01:00:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/batteries/batteries-2.1.ebuild,v 1.2 2013/08/19 19:37:02 aballier Exp $
 
 EAPI=5
 
@@ -20,3 +20,4 @@ DEPEND="${RDEPEND}
 	test? ( dev-ml/ounit dev-ml/iTeML )"
 
 DOCS=( "ChangeLog" "FAQ" "README.folders" "README.md" )
+PATCHES=( "${FILESDIR}/${P}-ocaml-4.01.patch" )
