@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.2 2013/08/02 18:20:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.3 2013/08/19 03:26:04 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -17,7 +17,7 @@ EGIT_BRANCH="stable/grizzly"
 
 LICENSE="Apache-2.0"
 SLOT="grizzly"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="+sqlite mysql postgres ldap"
 #IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( ldap mysql postgres sqlite )"

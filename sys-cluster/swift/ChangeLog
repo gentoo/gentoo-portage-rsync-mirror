@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/swift
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.12 2013/08/13 16:07:23 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.13 2013/08/19 03:30:25 prometheanfire Exp $
+
+  19 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
+  swift-2013.1.9999.ebuild:
+  removed keywords from live ebuild
 
 *swift-1.9.1 (13 Aug 2013)
 *swift-1.8.0-r3 (13 Aug 2013)

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.14 2013/08/11 01:00:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.15 2013/08/19 03:23:53 prometheanfire Exp $
+
+  19 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
+  glance-2013.1.9999.ebuild:
+  removing keywords from live ebuild
 
 *glance-2013.1.3 (11 Aug 2013)
 
