@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.132 2013/08/14 19:50:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.133 2013/08/19 11:33:13 mgorny Exp $
+
+  19 Aug 2013; Michał Górny <mgorny@gentoo.org>
+  files/llvm-3.4-gentoo-install.patch:
+  Update the LLVM Gentoo patch for live version.
 
   14 Aug 2013; Fabian Groffen <grobian@gentoo.org> llvm-3.3-r1.ebuild,
   llvm-9999.ebuild:
