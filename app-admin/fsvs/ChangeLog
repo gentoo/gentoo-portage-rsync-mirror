@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/fsvs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/ChangeLog,v 1.8 2012/11/01 17:08:14 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/ChangeLog,v 1.9 2013/08/19 09:57:46 pinkbyte Exp $
+
+*fsvs-1.2.5-r1 (19 Aug 2013)
+
+  19 Aug 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -files/fsvs-1.2.4-as-needed.patch, -fsvs-1.2.5.ebuild, +fsvs-1.2.5-r1.ebuild,
+  +files/fsvs-1.2.5-as-needed.patch:
+  Revision bump: EAPI 5, epatch_user, fix underlinking wrt bug #463684, enable
+  verbose ebuild, respect compiler. Drop old revision
 
   01 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> -fsvs-1.2.4.ebuild:
   Drop old
