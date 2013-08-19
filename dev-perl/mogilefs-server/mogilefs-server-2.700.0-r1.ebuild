@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.700.0.ebuild,v 1.1 2013/08/19 03:37:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.700.0-r1.ebuild,v 1.1 2013/08/19 18:29:23 robbat2 Exp $
 
 EAPI=4
 
@@ -27,8 +27,8 @@ RDEPEND="dev-perl/Net-Netmask
 		>=dev-perl/Perlbal-1.790
 		>=dev-perl/IO-AIO-4
 		dev-perl/libwww-perl
-		>=dev-perl/MogileFS-Client-1.160.0
-		>=dev-perl/MogileFS-Utils-2.250.0
+		>=dev-perl/MogileFS-Client-1.170.0
+		>=dev-perl/MogileFS-Utils-2.280.0
 		dev-perl/Cache-Memcached
 		mysql? ( dev-perl/DBD-mysql )
 		postgres? ( dev-perl/DBD-Pg )
