@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/textutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/textutils/ChangeLog,v 1.2 2013/08/01 13:41:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/textutils/ChangeLog,v 1.3 2013/08/19 13:57:45 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -textutils-109.24.00.ebuild:
+  remove old
 
 *textutils-109.35.00 (01 Aug 2013)
 

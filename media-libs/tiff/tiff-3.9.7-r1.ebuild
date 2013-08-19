@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7-r1.ebuild,v 1.2 2013/08/13 11:41:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7-r1.ebuild,v 1.3 2013/08/19 13:57:44 ssuominen Exp $
 
 EAPI=5
 
@@ -27,8 +27,6 @@ RDEPEND="jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 DEPEND="${RDEPEND}"
-
-DOCS=""
 
 src_prepare() {
 	epatch \
@@ -66,4 +64,10 @@ multilib_src_install() {
 	fi
 
 	rm -rf "${ED}"/tmp
+}
+
+src_install() {
+	multilib-minimal_src_install
+	# Setting DOCS="" is broken wrt bug #481642
+	rm -rf "${ED}"/usr/share
 }

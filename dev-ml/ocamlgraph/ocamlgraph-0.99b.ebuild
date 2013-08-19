@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.99b.ebuild,v 1.5 2009/09/28 16:51:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.99b.ebuild,v 1.6 2013/08/19 13:46:39 aballier Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit findlib eutils
 
@@ -10,11 +10,12 @@ DESCRIPTION="O'Caml Graph library"
 HOMEPAGE="http://www.lri.fr/~filliatr/ocamlgraph/"
 SRC_URI="http://www.lri.fr/~filliatr/ftp/ocamlgraph/${P}.tar.gz"
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ppc x86"
-DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
-	doc? ( dev-tex/hevea dev-ml/ocamlweb )
-	gtk? ( dev-ml/lablgtk[gnomecanvas,ocamlopt?] )"
+RDEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt?]
+	gtk? ( dev-ml/lablgtk:=[gnomecanvas,ocamlopt?] )"
+DEPEND="${RDEPEND}
+	doc? ( dev-tex/hevea dev-ml/ocamlweb )"
 IUSE="doc examples gtk +ocamlopt"
 
 src_prepare() {
@@ -22,33 +23,34 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -j1 || die "failed to build"
+	emake -j1
 
 	if use doc;	then
-		emake doc || die "making documentation failed"
+		emake doc
 	fi
 	if use gtk; then
-		emake -j1 editor || die "compiling editor failed"
+		emake -j1 editor
 	fi
 }
 
 src_install() {
 	findlib_src_preinst
-	emake install-findlib || die "make install failed"
+	emake install-findlib
 
 	if use gtk; then
 		if use ocamlopt; then
-			newbin editor/editor.opt ocamlgraph_editor || die "failed to install ocamlgraph_editor"
+			newbin editor/editor.opt ocamlgraph_editor
 		else
-			newbin editor/editor.byte ocamlgraph_editor || die "failed to install ocamlgraph_editor"
+			newbin editor/editor.byte ocamlgraph_editor
 		fi
 	fi
-	dodoc README CREDITS FAQ CHANGES || die
+	dodoc README CREDITS FAQ CHANGES
 	if use doc; then
 		dohtml doc/*
 	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.15 2013/08/11 22:55:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.16 2013/08/19 13:32:56 scarabeus Exp $
 
 EAPI=5
 
@@ -12,12 +12,12 @@ inherit toolchain-funcs flag-o-matic multilib base
 DESCRIPTION="Video player based on MPlayer/mplayer2"
 HOMEPAGE="http://mpv.io/"
 [[ ${PV} == *9999* ]] || \
-SRC_URI="http://dev.gentoo.org/~lu_zero/distfiles/${P}.tar.xz"
+SRC_URI="https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b +cdio dvb +dvd +enca encode +iconv jack joystick
 jpeg ladspa lcms +libass libcaca libguess lirc mng +mp3 -openal +opengl oss
 portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vcd

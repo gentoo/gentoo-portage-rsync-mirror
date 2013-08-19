@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlgraph
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.12 2009/09/28 16:51:57 betelgeuse Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.13 2013/08/19 13:46:39 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> ocamlgraph-0.99b.ebuild:
+  eapi5, define subslot and add := dep on ocaml
 
   28 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
   ocamlgraph-0.99b.ebuild:

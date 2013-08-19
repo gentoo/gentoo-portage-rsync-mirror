@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgsl/ocamlgsl-0.6.0.ebuild,v 1.5 2011/02/12 16:02:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgsl/ocamlgsl-0.6.0.ebuild,v 1.6 2013/08/19 13:51:29 aballier Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit base findlib
 
@@ -11,11 +11,11 @@ HOMEPAGE="http://oandrieu.nerim.net/ocaml/gsl/"
 SRC_URI="http://oandrieu.nerim.net/ocaml/gsl/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="doc test"
 
-RDEPEND=">=dev-lang/ocaml-3.10
+RDEPEND=">=dev-lang/ocaml-3.10:=
 	  sci-libs/gsl"
 DEPEND="${RDEPEND}
 	  test? ( dev-ml/fort )"
@@ -23,16 +23,16 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}/${P}-ocaml311.patch" )
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CFLAGS="${CFLAGS}"
 }
 
 src_install() {
 	findlib_src_preinst
-	emake install-findlib || die "emake install failed"
+	emake install-findlib
 
 	dodoc README NEWS NOTES
-	doinfo *.info* || die "info install failed"
+	doinfo *.info*
 	if use doc; then
-		dohtml doc/* || die "html docs install failed"
+		dohtml doc/*
 	fi
 }

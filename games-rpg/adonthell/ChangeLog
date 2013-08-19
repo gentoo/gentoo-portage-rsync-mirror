@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/adonthell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.27 2013/08/18 13:45:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.28 2013/08/19 13:59:28 ago Exp $
+
+  19 Aug 2013; Agostino Sarubbo <ago@gentoo.org> adonthell-0.3.5-r1.ebuild:
+  Stable for ppc, wrt bug #480552
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> adonthell-0.3.5-r1.ebuild:
   Stable for x86, wrt bug #480552
