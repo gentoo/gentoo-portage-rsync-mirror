@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.7.ebuild,v 1.2 2013/08/14 09:58:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.7.ebuild,v 1.3 2013/08/19 14:39:30 kensington Exp $
 
 EAPI=5
 
@@ -11,10 +11,10 @@ DESCRIPTION="A Qt C++ library for the Last.fm webservices"
 HOMEPAGE="https://github.com/lastfm/liblastfm"
 SRC_URI="https://github.com/lastfm/liblastfm/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-3"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="examples fingerprint qt4 test"
+IUSE="fingerprint test"
 
 COMMON_DEPEND="
 	>=dev-qt/qtcore-${QT_MINIMAL}:4
@@ -32,15 +32,18 @@ RDEPEND="${COMMON_DEPEND}
 	!<media-libs/lastfmlib-0.4.0
 "
 
-# 1 of 2 is failing, last checked 2012-06-22 / version 1.0.1
+# 1 of 2 is failing, last checked version 1.0.7
 RESTRICT="test"
 
 src_configure() {
+	# demos not working
+	# qt5 support broken
 	local mycmakeargs=(
-		$(cmake-utils_use_find_package !qt4 Qt5Core)
-		$(cmake-utils_use_build examples DEMOS)
-		$(cmake-utils_use_build fingerprint FINGERPRINT)
+		-DBUILD_DEMOS=OFF
+		-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Core=ON
+		$(cmake-utils_use_build fingerprint)
 		$(cmake-utils_use_build test TESTS)
 	)
+
 	cmake-utils_src_configure
 }
