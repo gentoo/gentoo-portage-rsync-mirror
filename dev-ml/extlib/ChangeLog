@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/extlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.27 2013/06/25 16:58:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.28 2013/08/19 13:00:57 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -extlib-1.5.3.ebuild:
+  remove old
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> extlib-1.5.4.ebuild:
   Stable for amd64, wrt bug #474170

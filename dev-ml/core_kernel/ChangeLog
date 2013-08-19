@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/core_kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/ChangeLog,v 1.3 2013/08/01 14:24:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/ChangeLog,v 1.4 2013/08/19 12:53:40 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -core_kernel-109.27.00.ebuild, -core_kernel-109.34.00.ebuild:
+  remove old
 
 *core_kernel-109.35.01 (01 Aug 2013)
 
