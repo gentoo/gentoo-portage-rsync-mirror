@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/network_interface
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/network_interface/ChangeLog,v 1.1 2013/08/19 22:41:53 zerochaos Exp $
+
+*network_interface-0.0.1 (19 Aug 2013)
+
+  19 Aug 2013; Rick Farina <zerochaos@gentoo.org> +metadata.xml,
+  +network_interface-0.0.1.ebuild:
+  initial commit of network_interface, required by metasploit
