@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/obrowser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.10 2013/03/10 10:53:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.11 2013/08/19 20:54:42 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> obrowser-1.1.1.ebuild,
+  +files/obrowser-1.1.1-ocaml41.patch:
+  fix build with ocaml 4.01
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> obrowser-1.1.1.ebuild:
   define subslot for real this time

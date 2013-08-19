@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/msgpack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.18 2013/02/03 12:23:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.19 2013/08/19 20:43:42 mrueg Exp $
+
+*msgpack-0.5.5 (19 Aug 2013)
+
+  19 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +msgpack-0.5.5.ebuild:
+  Version bump. Tests work with ruby18, but might take a long time.
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900
