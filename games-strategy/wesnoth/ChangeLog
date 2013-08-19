@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.227 2013/07/10 04:11:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.228 2013/08/19 18:54:25 mr_bones_ Exp $
+
+*wesnoth-1.10.7 (19 Aug 2013)
+
+  19 Aug 2013; Michael Sterrett <mr_bones_@gentoo.org> +wesnoth-1.10.7.ebuild:
+  version bump
 
   10 Jul 2013; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.10.6.ebuild:
   hide more packages behind the dedicated use flag
