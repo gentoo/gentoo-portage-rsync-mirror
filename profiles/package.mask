@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15044 2013/08/19 03:49:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15045 2013/08/19 09:23:42 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+
+# Manuel Rüger <mrueg@gentoo.org> (19 Aug 2013)
+# Last release in 2005, Homepage dead, unclear license situation
+# Various other issues see bug #481560
+# Masked for removal in 30 days.
+net-im/kf
 
 # Patrick Lauer <patrick@gentoo.org> (19 Aug 2013)
 # Masking live ebuilds

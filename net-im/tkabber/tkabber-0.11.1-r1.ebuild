@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.1-r1.ebuild,v 1.1 2013/08/18 14:23:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.1-r1.ebuild,v 1.2 2013/08/19 09:14:22 mrueg Exp $
 
 EAPI=5
 
@@ -37,7 +37,6 @@ src_install() {
 		DOCDIR="/usr/share/doc/${P}"
 
 	dodoc AUTHORS ChangeLog INSTALL README
-	dohtml README.html
 
 	if use plugins; then
 		cd "${WORKDIR}/tkabber-plugins-${PV}"
