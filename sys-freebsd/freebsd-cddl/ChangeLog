@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.36 2013/08/11 20:33:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.37 2013/08/19 15:10:41 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  files/freebsd-cddl-9.2-underlink.patch:
+  Fix build without a previous version installed, bug #481334. Fix by Yuta
+  SATOH
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   freebsd-cddl-9.2_rc1.ebuild:

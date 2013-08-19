@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p2.ebuild,v 1.1 2013/08/03 12:06:54 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p2.ebuild,v 1.2 2013/08/19 15:06:15 aballier Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils multilib
 
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk debug +ocamlopt doc camlp5"
 
-RDEPEND=">=dev-lang/ocaml-3.11.2[ocamlopt?]
-	camlp5? ( >=dev-ml/camlp5-6.02.3[ocamlopt?] )
-	gtk? ( >=dev-ml/lablgtk-2.10.1[ocamlopt?] )"
+RDEPEND=">=dev-lang/ocaml-3.11.2:=[ocamlopt?]
+	camlp5? ( >=dev-ml/camlp5-6.02.3:=[ocamlopt?] )
+	gtk? ( >=dev-ml/lablgtk-2.10.1:=[ocamlopt?] )"
 DEPEND="${RDEPEND}
 	doc? (
 		media-libs/netpbm[png,zlib]

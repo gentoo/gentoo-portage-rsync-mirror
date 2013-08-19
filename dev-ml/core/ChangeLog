@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.24 2013/08/19 12:53:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.25 2013/08/19 15:28:17 aballier Exp $
+
+*core-109.38.00 (19 Aug 2013)
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> +core-109.38.00.ebuild,
+  +files/core-ocaml-4.01.patch:
+  version bump and fix build with ocaml 4.01
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -core-109.27.00.ebuild,
   -core-109.34.00.ebuild:

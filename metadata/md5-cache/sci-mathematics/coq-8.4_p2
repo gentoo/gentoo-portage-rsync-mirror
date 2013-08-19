@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install
-DEPEND=>=dev-lang/ocaml-3.11.2[ocamlopt?] camlp5? ( >=dev-ml/camlp5-6.02.3[ocamlopt?] ) gtk? ( >=dev-ml/lablgtk-2.10.1[ocamlopt?] ) doc? ( media-libs/netpbm[png,zlib] virtual/latex-base dev-tex/hevea dev-tex/xcolor dev-texlive/texlive-pictures dev-texlive/texlive-mathextra dev-texlive/texlive-latexextra )
+DEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?] camlp5? ( >=dev-ml/camlp5-6.02.3:=[ocamlopt?] ) gtk? ( >=dev-ml/lablgtk-2.10.1:=[ocamlopt?] ) doc? ( media-libs/netpbm[png,zlib] virtual/latex-base dev-tex/hevea dev-tex/xcolor dev-texlive/texlive-pictures dev-texlive/texlive-mathextra dev-texlive/texlive-latexextra )
 DESCRIPTION=Coq is a proof assistant written in O'Caml
-EAPI=4
+EAPI=5
 HOMEPAGE=http://coq.inria.fr/
 IUSE=gtk debug +ocamlopt doc camlp5
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=LGPL-2.1
-RDEPEND=>=dev-lang/ocaml-3.11.2[ocamlopt?] camlp5? ( >=dev-ml/camlp5-6.02.3[ocamlopt?] ) gtk? ( >=dev-ml/lablgtk-2.10.1[ocamlopt?] )
+RDEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?] camlp5? ( >=dev-ml/camlp5-6.02.3:=[ocamlopt?] ) gtk? ( >=dev-ml/lablgtk-2.10.1:=[ocamlopt?] )
 SLOT=0
 SRC_URI=http://coq.inria.fr/V8.4pl2/files/coq-8.4pl2.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=bf55371ef83a534a6b93b8482cc93b43
+_md5_=8ed91591a6801881e83759c0611e70ad

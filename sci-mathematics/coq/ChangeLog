@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.80 2013/08/19 14:13:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.81 2013/08/19 15:06:15 aballier Exp $
+
+  19 Aug 2013; Alexis Ballier <aballier@gentoo.org> coq-8.4_p1.ebuild,
+  coq-8.4_p2.ebuild:
+  eapi5 and add := dep on ocaml pacakges
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -coq-8.3_p2.ebuild,
   -coq-8.3_p3.ebuild, -coq-8.3_p4.ebuild, -coq-8.4.ebuild,
