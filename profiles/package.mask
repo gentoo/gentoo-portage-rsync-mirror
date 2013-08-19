@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15042 2013/08/18 03:40:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15043 2013/08/19 02:47:03 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrick Lauer <patrick@gentoo.org> (19 Aug 2013)
+# Masking live ebuilds
+=app-admin/glance-2013.1.9999
+=sys-auth/keystone-2013.1.9999
+=sys-cluster/cinder-2013.1.9999
+=sys-cluster/nova-2013.1.9999
+=sys-cluster/quantum-2013.1.9999
+=sys-cluster/swift-2013.1.9999
+=www-apps/horizon-2013.1.9999
+=www-apps/trac-mercurial-1.0.0.3_pre20130206
 
 # Manuel Rüger <mrueg@gentoo.org> (16 Aug 2013)
 # Outdated documentation as ruby18 will be removed soon.
