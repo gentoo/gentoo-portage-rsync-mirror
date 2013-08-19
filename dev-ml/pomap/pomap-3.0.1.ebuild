@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-3.0.1.ebuild,v 1.5 2013/02/12 16:58:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-3.0.1.ebuild,v 1.6 2013/08/19 16:19:50 aballier Exp $
 
 EAPI=5
 
 OASIS_BUILD_DOCS=1
 
-inherit oasis
+inherit eutils oasis
 
 DESCRIPTION="Partially Ordered Map ADT for O'Caml"
 HOMEPAGE="http://bitbucket.org/mmottl/pomap"
@@ -20,6 +20,10 @@ KEYWORDS="amd64 ppc x86"
 IUSE="examples"
 
 DOCS=( "AUTHORS.txt" "CHANGES.txt" "README.md" )
+
+src_prepare() {
+	has_version '>=dev-lang/ocaml-4.01_beta' && epatch "${FILESDIR}/${P}-ocaml-4.01.patch"
+}
 
 src_install() {
 	oasis_src_install
