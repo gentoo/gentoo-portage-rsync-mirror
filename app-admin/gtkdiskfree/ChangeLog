@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gtkdiskfree
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.38 2012/07/26 20:48:25 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.39 2013/08/19 16:39:32 pinkbyte Exp $
+
+*gtkdiskfree-2.0.1-r1 (19 Aug 2013)
+
+  19 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> +gtkdiskfree-2.0.1-r1.ebuild,
+  +files/gtkdiskfree-2.0.1-desktop-file.patch:
+  Revision bump: EAPI 5, port to autotools-utils eclass, fix desktop file, fix
+  underlinking wrt bug #463578, drop GTK2 support
 
   26 Jul 2012; Michael Weber <xmw@gentoo.org> gtkdiskfree-2.0.1.ebuild,
   metadata.xml:

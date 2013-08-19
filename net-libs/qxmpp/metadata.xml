@@ -6,4 +6,7 @@
 	<remote-id type="google-code">qxmpp</remote-id>
 	<changelog>http://code.google.com/p/qxmpp/source/browse/CHANGELOG</changelog>
 </upstream>
+<use>
+	<flag name="vpx">Enable VP8 codec support via <pkg>media-libs/libvpx</pkg></flag>
+</use>
 </pkgmetadata>
