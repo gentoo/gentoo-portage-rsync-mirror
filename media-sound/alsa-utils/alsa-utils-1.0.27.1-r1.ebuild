@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.27.1-r1.ebuild,v 1.5 2013/08/10 13:06:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.27.1-r1.ebuild,v 1.6 2013/08/20 14:36:47 jer Exp $
 
 EAPI=5
 inherit eutils systemd udev
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86"
 IUSE="doc +libsamplerate +ncurses nls selinux"
 
 RDEPEND=">=media-libs/alsa-lib-1.0.27-r2

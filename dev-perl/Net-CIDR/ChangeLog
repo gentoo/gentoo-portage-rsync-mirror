@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-CIDR
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.47 2013/08/19 19:33:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.48 2013/08/20 14:44:09 jer Exp $
+
+  20 Aug 2013; Jeroen Roovers <jer@gentoo.org> Net-CIDR-0.170.0.ebuild:
+  Stable for HPPA (bug #449596).
 
   19 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> Net-CIDR-0.170.0.ebuild:
   amd64/x86 stable wrt bug #449596
