@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opengtl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.20 2013/04/20 15:42:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.21 2013/08/20 02:07:05 creffett Exp $
+
+  20 Aug 2013; Chris Reffett <creffett@gentoo.org> opengtl-0.9.18.ebuild:
+  Add conditional patch for building with llvm-3.3, bug 474818
 
   20 Apr 2013; Johannes Huber <johu@gentoo.org>
   -files/opengtl-0.9.17-gcc-4.7.patch, -files/opengtl-0.9.17-ldflags.patch,
