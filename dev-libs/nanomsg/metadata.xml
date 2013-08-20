@@ -5,4 +5,8 @@
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>
+	<maintainer>
+		<email>djc@gentoo.org</email>
+		<name>Dirkjan Ochtman</name>
+	</maintainer>
 </pkgmetadata>

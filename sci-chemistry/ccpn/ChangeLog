@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.116 2013/08/19 14:47:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.117 2013/08/20 08:32:52 jlec Exp $
+
+  20 Aug 2013; Justin Lecher <jlec@gentoo.org> ChangeLog:
+  Fix checksums
 
 *ccpn-2.3.1_p130819 (19 Aug 2013)
 
