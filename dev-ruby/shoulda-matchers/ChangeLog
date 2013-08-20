@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/shoulda-matchers
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-matchers/ChangeLog,v 1.1 2013/08/20 04:11:15 zerochaos Exp $
+
+*shoulda-matchers-2.3.0 (20 Aug 2013)
+
+  20 Aug 2013; Rick Farina <zerochaos@gentoo.org> +metadata.xml,
+  +shoulda-matchers-2.3.0.ebuild:
+  initial commit of shoulda-matchers, a dep for metasploit
