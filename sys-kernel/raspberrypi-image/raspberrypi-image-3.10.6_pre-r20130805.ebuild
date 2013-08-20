@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/raspberrypi-image-3.10.6_pre-r20130805.ebuild,v 1.1 2013/08/14 14:38:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/raspberrypi-image-3.10.6_pre-r20130805.ebuild,v 1.2 2013/08/19 23:37:49 xmw Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/raspberrypi/firmware"
 SRC_URI="https://dev.gentoo.org/~xmw/${PN}/${PF}.tar.xz"
 
 LICENSE="GPL-2"
-SLOT="3.10.1-raspberrypi-${PR}"
+SLOT="${PVR}"
 KEYWORDS="~arm -*"
 IUSE=""
 
