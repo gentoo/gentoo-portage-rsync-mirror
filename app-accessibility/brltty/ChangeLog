@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.130 2013/08/07 14:35:11 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.131 2013/08/20 06:08:37 vapier Exp $
+
+  20 Aug 2013; Mike Frysinger <vapier@gentoo.org> files/brltty.rc:
+  Fix excessive indent.
 
   07 Aug 2013; Christopher Brannon <teiresias@gentoo.org> brltty-4.5.ebuild:
   brltty 4.5 builds with parallel make.
