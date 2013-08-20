@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.4-r4.ebuild,v 1.1 2013/08/11 03:48:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.4-r4.ebuild,v 1.2 2013/08/20 16:33:00 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -41,7 +41,7 @@ RDEPEND="=dev-python/amqplib-0.6.1
 		>=dev-python/setuptools-git-0.4[${PYTHON_USEDEP}]
 		>=dev-python/python-glanceclient-0.5.0[${PYTHON_USEDEP}]
 		<dev-python/python-glanceclient-2[${PYTHON_USEDEP}]
-		>=dev-python/python-quantumclient-2.1[${PYTHON_USEDEP}]"
+		>=dev-python/python-neutronclient-2.1[${PYTHON_USEDEP}]"
 
 PATCHES=(
 	"${FILESDIR}/nova-folsom-4-CVE-2013-2030.patch"

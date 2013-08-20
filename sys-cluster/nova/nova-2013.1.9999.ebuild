@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.2 2013/08/19 03:27:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.3 2013/08/20 16:33:00 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -45,8 +45,8 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/python-cinderclient-1.0.1[${PYTHON_USEDEP}]
 		>=dev-python/python-glanceclient-0.5.0[${PYTHON_USEDEP}]
 		<dev-python/python-glanceclient-2[${PYTHON_USEDEP}]
-		>=dev-python/python-quantumclient-2.2.0[${PYTHON_USEDEP}]
-		<=dev-python/python-quantumclient-3.0.0[${PYTHON_USEDEP}]
+		>=dev-python/python-neutronclient-2.2.0[${PYTHON_USEDEP}]
+		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.2.0[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.7
 		<dev-python/websockify-0.4[${PYTHON_USEDEP}]

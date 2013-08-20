@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-9999.ebuild,v 1.4 2013/08/02 18:43:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-9999.ebuild,v 1.5 2013/08/20 16:34:24 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -36,8 +36,8 @@ RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
 		<dev-python/python-keystoneclient-0.3[${PYTHON_USEDEP}]
 		>=dev-python/python-novaclient-2.12.0[${PYTHON_USEDEP}]
 		<dev-python/python-novaclient-3[${PYTHON_USEDEP}]
-		>=dev-python/python-quantumclient-2.2.0[${PYTHON_USEDEP}]
-		<dev-python/python-quantumclient-3.0.0[${PYTHON_USEDEP}]
+		>=dev-python/python-neutronclient-2.2.0[${PYTHON_USEDEP}]
+		<dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
 		>=dev-python/python-swiftclient-1.1[${PYTHON_USEDEP}]
 		<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]

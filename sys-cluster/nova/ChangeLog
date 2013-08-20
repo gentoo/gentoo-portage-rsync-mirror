@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.20 2013/08/19 03:27:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.21 2013/08/20 16:33:00 prometheanfire Exp $
+
+  20 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
+  nova-2012.2.4-r4.ebuild, nova-2013.1.3.ebuild, nova-2013.1.9999.ebuild,
+  nova-9999.ebuild:
+  changing quantum to neutron
 
   19 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
   nova-2013.1.9999.ebuild:
