@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.64 2013/06/26 12:26:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.65 2013/08/20 09:46:53 pinkbyte Exp $
+
+*conntrack-tools-1.4.2 (20 Aug 2013)
+
+  20 Aug 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +conntrack-tools-1.4.2.ebuild, +files/conntrackd.confd-r2,
+  +files/conntrackd.initd-r3:
+  Version bump: drop redundant src_configure, fix path to lock directory, wrt
+  bug #474858. Thanks to Jeroen Roovers for discovering this issue
 
   26 Jun 2013; Jeroen Roovers <jer@gentoo.org> conntrack-tools-1.4.1.ebuild:
   Stable for HPPA (bug #474268).
