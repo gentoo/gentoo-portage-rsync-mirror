@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.3 2013/08/15 23:27:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.4 2013/08/20 21:11:16 bicatali Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ DEPEND="${CDEPEND}
 		sci-libs/scikits_timeseries[$(python_gen_usedep 'python2*')]
 		x11-misc/xclip )
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
-# sci-libs/scikits_statsmodels invokes a circular dep
+# dev-python/statsmodels invokes a circular dep
 #  hence rm from doc? ( ), again
 RDEPEND="${CDEPEND}
 	dev-python/numexpr[${PYTHON_USEDEP}]
@@ -103,9 +103,9 @@ python_install_all() {
 	if use doc; then
 		cd  "${BUILD_DIR}"/lib || die
 		dohtml -r doc/build/html/*
-		einfo "An initial build of docs is absent of references to scikits_statsmodels"
+		einfo "An initial build of docs is absent of references to statsmodels"
 		einfo "due to circular dependency. To have them included, emerge"
-		einfo "scikits_statsmodels next and re-emerge pandas with USE doc"
+		einfo "statsmodels next and re-emerge pandas with USE doc"
 	fi
 
 	if use examples; then

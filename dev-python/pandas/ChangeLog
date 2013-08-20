@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.18 2013/08/15 23:27:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.19 2013/08/20 21:11:16 bicatali Exp $
+
+  20 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> -pandas-0.11.0.ebuild,
+  pandas-0.12.0.ebuild:
+  Removed old, fixed references to dev-python/statsmodels
 
   15 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> pandas-0.12.0.ebuild:
   Adjust documentation dependencies
