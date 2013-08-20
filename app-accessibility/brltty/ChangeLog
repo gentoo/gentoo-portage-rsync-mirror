@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.131 2013/08/20 06:08:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.132 2013/08/20 13:47:27 teiresias Exp $
+
+*brltty-4.5-r1 (20 Aug 2013)
+
+  20 Aug 2013; Christopher Brannon <teiresias@gentoo.org> -brltty-4.5.ebuild,
+  +brltty-4.5-r1.ebuild, +files/brltty-4.5-udev.patch:
+  Fix bug #478658. Two of brltty's udev rules were conflicting with
+  rules for USB-to-serial converters. These are now commented out, per
+  the suggestion on the brltty mailing list.
 
   20 Aug 2013; Mike Frysinger <vapier@gentoo.org> files/brltty.rc:
   Fix excessive indent.
