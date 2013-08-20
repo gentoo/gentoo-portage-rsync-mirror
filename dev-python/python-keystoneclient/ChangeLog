@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.13 2013/08/11 01:54:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.14 2013/08/20 18:59:34 prometheanfire Exp $
+
+  20 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
+  python-keystoneclient-0.3.1.ebuild:
+  now with better manifests
 
 *python-keystoneclient-0.3.1 (11 Aug 2013)
 *python-keystoneclient-0.2.5 (11 Aug 2013)
