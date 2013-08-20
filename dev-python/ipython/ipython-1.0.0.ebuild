@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.2 2013/08/09 09:16:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.3 2013/08/20 19:31:53 grobian Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://ipython.org/"
 SRC_URI="https://github.com/${PN}/${PN}/releases/download/rel-${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc emacs examples matplotlib mongodb notebook octave
 	qt4 +smp test wxwidgets"
 

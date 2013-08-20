@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.114 2013/08/09 09:16:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.115 2013/08/20 19:31:53 grobian Exp $
+
+  20 Aug 2013; Fabian Groffen <grobian@gentoo.org> ipython-1.0.0.ebuild:
+  Marked *-macos, bug #481462
 
   09 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> ipython-1.0.0.ebuild:
   Fix S for latest tarball
