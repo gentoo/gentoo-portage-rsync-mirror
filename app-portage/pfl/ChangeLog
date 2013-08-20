@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.53 2013/03/23 16:51:09 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.54 2013/08/20 22:08:33 bicatali Exp $
+
+  20 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> pfl-2.3-r3.ebuild:
+  Keyword amd64-linux and x86-linux
 
   23 Mar 2013; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
   Remove proxy-maintainers. They are not required if the user in metadata is

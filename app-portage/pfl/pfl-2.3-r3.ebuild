@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3-r3.ebuild,v 1.1 2013/02/21 19:43:45 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3-r3.ebuild,v 1.2 2013/08/20 22:08:33 bicatali Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://files.portagefilelist.de/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~amd64-fbsd ~x64-freebsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x64-freebsd ~x86-linux"
 IUSE="+network-cron"
 
 DEPEND=""
@@ -34,6 +34,7 @@ python_install_all() {
 	fi
 
 	keepdir /var/lib/${PN}
+	distutils-r1_python_install_all
 }
 
 pkg_postinst() {
