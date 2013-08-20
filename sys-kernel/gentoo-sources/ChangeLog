@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1173 2013/08/19 21:37:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1174 2013/08/20 14:21:48 tomwij Exp $
+
+*gentoo-sources-3.9.11-r1 (20 Aug 2013)
+
+  20 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.9.11-r1.ebuild:
+  Temporarily brought back 3.9.11-r1 under limited architectures for some NVIDIA
+  users, until fixed; for some users, the 3.10 branch does still appear to be
+  problematic due to an "NVRM: os_pci_init_handle: invalid context!" error. For
+  those that seek more upstream support, this is tracked in NVIDIA internal bug
+  id 1341332 (discovered at
+  https://devtalk.nvidia.com/default/topic/567297/linux/linux-3-10-driver-
+  crash/2/). Thanks for Calchan to report on IRC the ongoing problem(s) that
+  some NVIDIA users are experiencing.
 
   19 Aug 2013; Tom Wijsman <TomWij@gentoo.org> -gentoo-sources-3.9.11-r1.ebuild:
   Remove 3.9.11-r1 as it is no longer a stable candidate and we people will want

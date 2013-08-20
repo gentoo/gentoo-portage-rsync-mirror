@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 LGPL-2.1 BSD-2
 RDEPEND=dev-libs/gmp:0 >=net-im/bitlbee-3.2[plugins]
 SLOT=0
-SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/bitlbee-steam-0.1.0_pre20130814.tar.xz
-_md5_=ef92155008d3066d2fb5b6c9d255cbe2
+SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/bitlbee-steam-0.1.0_pre20130814.tar.bz2
+_md5_=45b3f97e5e4bb257627a6e23d3e9eea0

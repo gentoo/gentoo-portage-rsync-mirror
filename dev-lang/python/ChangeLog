@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.689 2013/08/18 19:28:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.690 2013/08/20 14:24:57 jer Exp $
+
+  20 Aug 2013; Jeroen Roovers <jer@gentoo.org> python-2.6.8-r3.ebuild,
+  python-2.7.5-r2.ebuild, python-3.2.5-r2.ebuild:
+  Stable for HPPA (bug #480856).
 
 *python-2.7.5-r2 (18 Aug 2013)
 *python-3.2.5-r2 (18 Aug 2013)
