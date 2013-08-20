@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/eliom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/eliom/ChangeLog,v 1.4 2013/08/19 13:21:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/eliom/ChangeLog,v 1.5 2013/08/20 12:21:08 patrick Exp $
+
+  20 Aug 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Removing unneeded useflag description
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> eliom-3.0.3.ebuild:
   EAPI5, define subslot and add := deps
@@ -19,4 +22,3 @@
   +metadata.xml:
   initial import, ebuild by Guillaume Horel and Jacques-Pascal Deplaix, bug
   #406661
-
