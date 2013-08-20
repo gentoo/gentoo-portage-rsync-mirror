@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.473 2013/08/06 17:05:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.474 2013/08/20 15:23:10 jer Exp $
+
+*nvidia-drivers-319.49 (20 Aug 2013)
+
+  20 Aug 2013; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-319.49.ebuild:
+  Version bump.
 
   06 Aug 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-325.15.ebuild:
   Do not apply nvidia-drivers-pax-const.patch (bug #479944 by Martin Väth).
