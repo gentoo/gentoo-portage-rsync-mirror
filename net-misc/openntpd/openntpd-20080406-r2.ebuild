@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r1.ebuild,v 1.1 2013/06/22 14:46:38 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r2.ebuild,v 1.1 2013/08/20 15:34:33 ottxor Exp $
 
 EAPI=5
 
@@ -54,6 +54,6 @@ src_configure() {
 src_install() {
 	default
 
-	newinitd "${FILESDIR}/openntpd.init.d-20080406-r1" ntpd
+	newinitd "${FILESDIR}/openntpd.init.d-20080406-r2" ntpd
 	newconfd "${FILESDIR}/openntpd.conf.d-3.9_p1-r4" ntpd
 }

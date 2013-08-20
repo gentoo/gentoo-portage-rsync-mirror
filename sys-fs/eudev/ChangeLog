@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.66 2013/08/15 03:31:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.67 2013/08/20 15:37:30 blueness Exp $
+
+  20 Aug 2013; Anthony G. Basile <blueness@gentoo.org> eudev-1.1.ebuild:
+  Stable arm, bug #463910
 
   15 Aug 2013; Patrick Lauer <patrick@gentoo.org> eudev-1.2-r1.ebuild,
   eudev-1.2.ebuild:
