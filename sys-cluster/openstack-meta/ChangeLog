@@ -1,0 +1,9 @@
+# ChangeLog for sys-cluster/openstack-meta
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openstack-meta/ChangeLog,v 1.1 2013/08/20 18:17:49 prometheanfire Exp $
+
+*openstack-meta-2013.1.9999 (20 Aug 2013)
+
+  20 Aug 2013; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +openstack-meta-2013.1.9999.ebuild:
+  Initial commit of openstack-meta
