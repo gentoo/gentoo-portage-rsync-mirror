@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15046 2013/08/19 14:28:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15047 2013/08/20 02:39:17 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,9 @@
 
 #--- END OF EXAMPLES ---
 
+# Doug Goldstein <cardoe@gentoo.org> (19 Aug 2013)
+# Masked for development (not complete, do not use)
+=sys-firmware/seabios-1.7.3
 
 # Manuel Rüger <mrueg@gentoo.org> (19 Aug 2013)
 # Last release in 2005, Homepage dead, unclear license situation
@@ -48,7 +51,7 @@ net-im/kf
 dev-ruby/programming-ruby
 
 # Doug Goldstein <cardoe@gentoo.org> (16 Aug 2013)
-# Masked for dev
+# Masked for development (not complete, do not use)
 =app-emulation/qemu-1.6.0
 
 # Michał Górny <mgorny@gentoo.org> (16 Aug 2013)
