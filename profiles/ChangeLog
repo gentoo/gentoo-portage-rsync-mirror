@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8173 2013/08/20 14:41:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8174 2013/08/20 20:34:56 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> updates/3Q-2013:
+  Move sci-libs/scikits_statsmodels to dev-python/statsmodels
 
   20 Aug 2013; Michael Palimaka <kensington@gentoo.org>
   +targets/desktop/kde/package.use.force, targets/desktop/kde/use.force:
