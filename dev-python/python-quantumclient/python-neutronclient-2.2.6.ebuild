@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-quantumclient/python-quantumclient-2.2.6.ebuild,v 1.1 2013/08/11 03:34:55 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-quantumclient/python-neutronclient-2.2.6.ebuild,v 1.1 2013/08/20 16:26:40 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -8,9 +8,8 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="A client for the OpenStack Quantum API"
-HOMEPAGE="https://launchpad.net/quantum"
-SRC_URI="mirror://pypi/${PN:0:1}/python-neutronclient/python-neutronclient-${PV}.tar.gz"
-S="${WORKDIR}/python-neutronclient-${PV}"
+HOMEPAGE="https://launchpad.net/neutron"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
