@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/manifestdestiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.10 2013/08/17 11:42:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.11 2013/08/21 14:57:09 floppym Exp $
+
+  21 Aug 2013; Mike Gilbert <floppym@gentoo.org> -manifestdestiny-0.5.7.ebuild,
+  manifestdestiny-0.5.7-r1.ebuild:
+  Drop the python3 support; thanks to Arfrever for the correction.
 
 *manifestdestiny-0.5.7-r1 (17 Aug 2013)
 

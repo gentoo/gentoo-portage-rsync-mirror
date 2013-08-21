@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.6 2013/06/17 09:10:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.7 2013/08/21 14:40:48 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
 DESCRIPTION="Metapackage containing all ready-to-use LeechCraft plugins"
 HOMEPAGE="http://leechcraft.org/"
@@ -10,7 +10,7 @@ HOMEPAGE="http://leechcraft.org/"
 SLOT="0"
 KEYWORDS=""
 LICENSE="GPL-3"
-IUSE=""
+IUSE="de"
 
 RDEPEND="
 		~app-leechcraft/lc-popishu-${PV}
@@ -60,7 +60,13 @@ RDEPEND="
 		~app-leechcraft/lc-tpi-${PV}
 		~app-leechcraft/lc-gmailnotifier-${PV}
 		~app-leechcraft/lc-nacheku-${PV}
-		~app-leechcraft/lc-kbswitch-${PV}
 		~app-leechcraft/lc-xtazy-${PV}
+		de? (
+			~app-leechcraft/lc-fenet-${PV}
+			~app-leechcraft/lc-kbswitch-${PV}
+			~app-leechcraft/lc-krigstask-${PV}
+			~app-leechcraft/lc-laughty-${PV}
+			~app-leechcraft/lc-mellonetray-${PV}
+		)
 		"
 DEPEND=""

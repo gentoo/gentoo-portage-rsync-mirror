@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.43 2013/08/21 11:11:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.44 2013/08/21 14:36:29 zlogene Exp $
+
+  21 Aug 2013; Mikle Kolyada <zlogene@gentoo.org>
+  -Module-Signature-0.680.0.ebuild, -Module-Signature-0.700.0.ebuild:
+  drop old
 
   21 Aug 2013; Mikle Kolyada <zlogene@gentoo.org>
   Module-Signature-0.730.0.ebuild:
