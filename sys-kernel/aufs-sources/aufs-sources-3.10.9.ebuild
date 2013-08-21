@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.8.13.ebuild,v 1.2 2013/07/04 07:22:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.9.ebuild,v 1.1 2013/08/21 13:19:03 jlec Exp $
 
 EAPI=5
 
@@ -12,9 +12,9 @@ inherit kernel-2 eutils
 detect_version
 detect_arch
 
-AUFS_VERSION=3.8_p20130519
+AUFS_VERSION=3.10_p20130821
 AUFS_TARBALL="aufs-sources-${AUFS_VERSION}.tar.xz"
-# git archive -v --remote=git://aufs.git.sourceforge.net/gitroot/aufs/aufs3-standalone.git aufs3.8 > aufs-sources-${AUFS_VERSION}.tar
+# git archive -v --remote=git://git.code.sf.net/p/aufs/aufs3-standalone aufs${AUFS_VERSION/_p*} > aufs-sources-${AUFS_VERSION}.tar
 AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
 
 KEYWORDS="~amd64 ~x86"
@@ -28,7 +28,7 @@ UNIPATCH_LIST="
 	"${WORKDIR}"/aufs3-kbuild.patch
 	"${WORKDIR}"/aufs3-base.patch"
 
-PDEPEND=">=sys-fs/aufs-util-3.8"
+PDEPEND=">=sys-fs/aufs-util-3.9"
 
 src_unpack() {
 	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.7.ebuild,v 1.1 2013/08/16 05:50:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.7.ebuild,v 1.2 2013/08/21 13:19:03 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ UNIPATCH_LIST="
 	"${WORKDIR}"/aufs3-kbuild.patch
 	"${WORKDIR}"/aufs3-base.patch"
 
-PDEPEND=">=sys-fs/aufs-util-3.10"
+PDEPEND=">=sys-fs/aufs-util-3.9"
 
 src_unpack() {
 	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"
