@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.16 2013/08/07 07:01:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.17 2013/08/21 07:49:15 jlec Exp $
+
+*aufs-util-3.9_p20130821 (21 Aug 2013)
+*aufs-util-3.2_p20130821 (21 Aug 2013)
+
+  21 Aug 2013; Justin Lecher <jlec@gentoo.org> +aufs-util-3.2_p20130821.ebuild,
+  -aufs-util-3.6.ebuild, -aufs-util-3.7.ebuild, -aufs-util-3.7-r1.ebuild,
+  -aufs-util-3.7.6.ebuild, -aufs-util-3.8_p20130318.ebuild,
+  -aufs-util-3.8_p20130422.ebuild, +aufs-util-3.9_p20130821.ebuild,
+  -aufs-util-3.10_p20130722.ebuild, -aufs-util-3.10_p20130807.ebuild:
+  Bump to latest, drop old; version schema is now following upstreams branches
 
 *aufs-util-3.10_p20130807 (07 Aug 2013)
 
