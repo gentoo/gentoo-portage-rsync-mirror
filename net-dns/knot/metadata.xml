@@ -4,4 +4,7 @@
 	<maintainer>
 		<email>scarabeus@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name="fastparser">Enables fast DNS zone parser.</flag>
+	</use>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.114 2013/05/15 08:03:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.115 2013/08/21 08:13:44 scarabeus Exp $
+
+*libwpd-0.9.9 (21 Aug 2013)
+
+  21 Aug 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libwpd-0.9.9.ebuild:
+  Version bump to latest.
 
 *libwpd-0.9.8 (15 May 2013)
 

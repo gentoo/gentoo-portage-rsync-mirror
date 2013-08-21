@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.1.3.ebuild,v 1.2 2013/01/04 13:27:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.3.0.ebuild,v 1.1 2013/08/21 08:21:18 scarabeus Exp $
 
 EAPI=5
 
-inherit eutils autotools
+inherit eutils autotools user
 
 DESCRIPTION="High-performance authoritative-only DNS server"
 HOMEPAGE="http://www.knot-dns.cz/"
@@ -13,23 +13,24 @@ SRC_URI="http://public.nic.cz/files/knot-dns/${P/_/-}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug caps +fastparser"
 
 RDEPEND="
 	dev-libs/openssl
 	dev-libs/userspace-rcu
+	caps? ( sys-libs/libcap-ng )
 "
 #	sys-libs/glibc
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/flex
 	virtual/yacc
+	fastparser? ( dev-util/ragel )
 "
 
 S="${WORKDIR}/${P/_/-}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-move-pidfile-to-var.patch
 	sed -i \
 		-e 's:-Werror::g' \
 		configure.ac || die
@@ -38,25 +39,21 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--sysconfdir="${EPREFIX}/etc/${PN}" \
-		--libexecdir="${EPREFIX}/usr/libexec/${PN}" \
+		--with-storage="${EPREFIX}/var/lib/${PN}" \
+		--with-rundir="${EPREFIX}/var/run/${PN}" \
 		--disable-lto \
 		--enable-recvmmsg \
+		$(use_enable fastparser) \
 		$(use_enable debug debug server,zones,xfr,packet,dname,rr,ns,hash,compiler) \
 		$(use_enable debug debuglevel details)
 }
 
 src_install() {
 	default
-
-	newinitd "${FILESDIR}/knot.init" knot-dns
+	newinitd "${FILESDIR}/knot.init" knot
 }
 
 pkg_postinst() {
-	if [[ -n ${REPLACING_VERSIONS} ]] ; then
-		elog "Remember to recompile all zones after update. Run:"
-		elog "    # knotc stop"
-		elog "    # knotc compile"
-		elog "    # knotc start"
-	fi
+	enewgroup knot 53
+	enewuser knot 53 -1 /var/lib/knot knot
 }

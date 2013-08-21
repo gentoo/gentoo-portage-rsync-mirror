@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.92.ebuild,v 1.4 2013/08/12 17:38:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.92.ebuild,v 1.5 2013/08/21 08:19:48 yngwin Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -19,21 +19,18 @@ IUSE="doc static-libs"
 # Purposefully dropped the xml USE flag and libxml2 support.  Expat is the
 # default and used by every distro.  See bug #283191.
 
-RDEPEND="
+RDEPEND=">=dev-libs/expat-1.95.3[${MULTILIB_USEDEP}]
 	>=media-libs/freetype-2.2.1[${MULTILIB_USEDEP}]
-	>=dev-libs/expat-1.95.3[${MULTILIB_USEDEP}]
-	abi_x86_32? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )
-"
+	abi_x86_32? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
-		app-text/docbook-sgml-utils[jadetex]
 		=app-text/docbook-sgml-dtd-3.1*
-	)
-"
+		app-text/docbook-sgml-utils[jadetex]
+	)"
 PDEPEND="app-admin/eselect-fontconfig
-	virtual/ttf-fonts
-"
+	virtual/ttf-fonts"
+
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.7.1-latin-reorder.patch	# 130466
 	"${FILESDIR}"/${PN}-2.10.2-docbook.patch	# 310157
