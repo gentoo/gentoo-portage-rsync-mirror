@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-1.4.20.2_p20130103.ebuild,v 1.2 2013/08/21 14:29:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-1.4.20.2_p20130103.ebuild,v 1.3 2013/08/21 15:15:06 ryao Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ if [ ${PV} == "9999" ] ; then
 	ESVN_REPO_URI="http://svn.code.sf.net/p/iscsitarget/code/trunk"
 else
 	SRC_URI="http://dev.gentoo.org/~ryao/dist/${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ~ppc ~x86"
 fi
 
 DESCRIPTION="Open Source iSCSI target with professional features"

@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>accessibility</herd>
 <maintainer>
-  <email>williamh@gentoo.org</email>
-  <name>William Hubbs</name>
+  <email>teiresias@gentoo.org</email>
+  <name>Chris Brannon</name>
 </maintainer>
  <use>
   <flag name="api">build brltty's application program interface</flag>

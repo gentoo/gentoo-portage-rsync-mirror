@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.8.4.ebuild,v 1.2 2013/08/11 11:54:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.8.4.ebuild,v 1.3 2013/08/21 15:12:47 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -14,8 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 
-DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	sys-libs/ncurses
+"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-tinfo.patch

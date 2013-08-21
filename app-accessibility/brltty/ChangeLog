@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.133 2013/08/20 23:25:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.134 2013/08/21 15:23:11 williamh Exp $
+
+  21 Aug 2013; William Hubbs <williamh@gentoo.org> metadata.xml:
+  Assign maintainership to Chris.
 
   20 Aug 2013; Mike Frysinger <vapier@gentoo.org>
   +files/brltty-4.5-fix-mk4build-cross.patch, brltty-4.5-r1.ebuild:
