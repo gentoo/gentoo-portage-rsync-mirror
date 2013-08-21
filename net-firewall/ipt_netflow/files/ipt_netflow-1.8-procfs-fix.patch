@@ -1,0 +1,41 @@
+Patch from http://sourceforge.net/p/ipt-netflow/bugs-requests-patches/71/
+
+--- ipt_NETFLOW.c.orig	2013-08-21 13:20:25.606323000 +0400
++++ ipt_NETFLOW.c	2013-08-21 13:23:04.249323000 +0400
+@@ -854,9 +854,14 @@
+ ipt_netflow_find(const struct ipt_netflow_tuple *tuple, unsigned int hash)
+ {
+ 	struct ipt_netflow *nf;
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3,9,0)
++#define BEFORE390(x,y) x,y
+ 	struct hlist_node *pos;
++#else /* since 3.9.0 */
++#define BEFORE390(x,y)
++#endif
+ 
+-	hlist_for_each_entry(nf, pos, &ipt_netflow_hash[hash], hlist) {
++	hlist_for_each_entry(nf, BEFORE390(pos,) &ipt_netflow_hash[hash], hlist) {
+ 		if (ipt_netflow_tuple_equal(tuple, &nf->tuple) &&
+ 		    nf->nr_bytes < FLOW_FULL_WATERMARK) {
+ 			NETFLOW_STAT_INC(found);
+@@ -1434,12 +1439,20 @@
+ 	}
+ 
+ #ifdef CONFIG_PROC_FS
++
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3,10,0)
+ 	proc_stat = create_proc_entry("ipt_netflow", S_IRUGO, INIT_NET(proc_net_stat));
++#else
++	proc_stat = proc_create("ipt_netflow", S_IRUGO, INIT_NET(proc_net_stat), &nf_seq_fops);
++#endif
+ 	if (!proc_stat) {
+ 		printk(KERN_ERR "Unable to create /proc/net/stat/ipt_netflow entry\n");
+ 		goto err_free_netflow_slab;
+ 	}
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3,10,0)
+ 	proc_stat->proc_fops = &nf_seq_fops;
++#endif
++
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30)
+ 	proc_stat->owner = THIS_MODULE;
+ #endif
