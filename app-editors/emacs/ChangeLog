@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.597 2013/08/14 06:25:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.598 2013/08/21 21:07:48 ulm Exp $
+
+  21 Aug 2013; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
+  Add ncurses[abi_x86_32] as alternative dependency on amd64.
 
   14 Aug 2013; Ulrich Müller <ulm@gentoo.org> emacs-24.3-r2.ebuild:
   Don't call configure with --program-transform-name, upstream bug #15091.
