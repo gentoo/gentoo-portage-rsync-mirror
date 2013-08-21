@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflann/pyflann-1.8.4.ebuild,v 1.1 2013/07/09 23:08:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflann/pyflann-1.8.4.ebuild,v 1.2 2013/08/21 22:03:34 bicatali Exp $
 
 EAPI=5
 
@@ -26,13 +26,14 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/flann-${PV}-src/src/python"
 
-src_prepare() {
+python_prepare_all() {
 	sed -e "s/@FLANN_VERSION@/${PV}/" \
 		-e '/package_d/d' \
 		-e "s/,.*'pyflann.lib'//" \
 		setup.py.tpl >> setup.py
 
 	use test && ln -s "${WORKDIR}"/testdata/* "${WORKDIR}"/flann-${PV}-src/test/
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
