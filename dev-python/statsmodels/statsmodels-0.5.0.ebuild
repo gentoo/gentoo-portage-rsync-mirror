@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/statsmodels-0.5.0.ebuild,v 1.2 2013/08/21 16:29:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/statsmodels-0.5.0.ebuild,v 1.3 2013/08/21 17:46:35 bicatali Exp $
 
 EAPI=5
 
@@ -34,15 +34,14 @@ DEPEND="
 		dev-python/ipython )
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
-python_compile() {
-	MPLCONFIGDIR="${BUILD_DIR}" HOME="${T}" \
-		distutils-r1_python_compile
+pkg_setup() {
+	export MPLCONFIGDIR="${T}" HOME="${T}"
 }
 
 python_compile_all() {
 	if use doc; then
 		python_export_best
-		${EPYTHON} setup.py build_sphinx || die
+		VARTEXFONTS="${T}"/fonts ${EPYTHON} setup.py build_sphinx || die
 	fi
 }
 

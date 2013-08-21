@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.8 2012/10/16 20:31:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.9 2013/08/21 17:51:56 ottxor Exp $
 
 EAPI=4
 
@@ -57,6 +57,7 @@ src_prepare() {
 		sed -i -e '/$(NC_TEST4) /s/man4//' "${S}"/Makefile.am || die
 	fi
 	autotools-utils_src_prepare
+	sed -i 's:test $p = "-R":test $p = "-R" || test $p = "-l":' configure || die
 }
 
 src_configure() {
