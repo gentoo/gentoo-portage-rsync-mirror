@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2_pre20130725.ebuild,v 1.1 2013/08/02 13:16:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0_rc1.ebuild,v 1.1 2013/08/21 16:19:10 chithanh Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ MY_PN="${PN/m/M}"
 MY_P="${MY_PN}-${PV/_/-}"
 MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
 
-FOLDER="${PV/_rc*/}"
+# Why put 9.2.0-rc1 tarball in a directory named 9.2?
+FOLDER="${PV/.0_rc*/}"
 
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
@@ -30,7 +31,7 @@ HOMEPAGE="http://mesa3d.sourceforge.net/"
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 else
-	SRC_URI="mirror://gentoo/${P}.tar.xz
+	SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/${FOLDER}/${MY_SRC_P}.tar.bz2
 		${SRC_PATCHES}"
 fi
 
@@ -160,7 +161,6 @@ pkg_setup() {
 src_unpack() {
 	default
 	[[ $PV = 9999* ]] && git-2_src_unpack
-	mv "${WORKDIR}"/${PN}-* "${WORKDIR}/${MY_P}" || die
 }
 
 src_prepare() {
