@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-9999.ebuild,v 1.1 2013/01/03 11:09:58 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-9999.ebuild,v 1.2 2013/08/21 14:29:48 ryao Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit linux-mod eutils flag-o-matic
 
 if [ ${PV} == "9999" ] ; then
 	inherit subversion
-	ESVN_REPO_URI="http://iscsitarget.svn.sourceforge.net/svnroot/iscsitarget/trunk"
+	ESVN_REPO_URI="http://svn.code.sf.net/p/iscsitarget/code/trunk"
 else
 	SRC_URI="http://dev.gentoo.org/~ryao/dist/${P}.tar.gz"
 	KEYWORDS="~amd64 ~ppc ~x86"
@@ -43,15 +43,17 @@ src_prepare() {
 		# Fix build system to apply proper patches
 		epatch "${FILESDIR}/${PN}-1.4.20.2_p20130103-fix-3.2-support.patch"
 
-		# Apply kernel-specific patches
-		emake KSRC="${KERNEL_DIR}" patch || die
-
 		# Respect LDFLAGS. Bug #365735
 		epatch "${FILESDIR}/${PN}-1.4.20.2-respect-flags-v2.patch"
 
 		# Avoid use of WRITE_SAME_16 in Linux 2.6.32 and earlier
 		epatch "${FILESDIR}/${PN}-1.4.20.2_p20130103-restore-linux-2.6.32-support.patch"
 	fi
+
+	# Apply kernel-specific patches
+	emake KSRC="${KERNEL_DIR}" patch || die
+
+	epatch_user
 }
 
 src_compile() {

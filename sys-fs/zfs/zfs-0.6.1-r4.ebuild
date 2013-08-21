@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.1-r3.ebuild,v 1.1 2013/07/14 12:16:09 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.1-r4.ebuild,v 1.1 2013/08/21 14:18:48 ryao Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ else
 	KEYWORDS="~amd64"
 fi
 
-inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev
+inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev systemd
 
 DESCRIPTION="Userland utilities for ZFS Linux kernel module"
 HOMEPAGE="http://zfsonlinux.org/"

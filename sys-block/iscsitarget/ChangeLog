@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.42 2013/01/07 20:54:52 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.43 2013/08/21 14:29:48 ryao Exp $
+
+  21 Aug 2013; Richard Yao <ryao@gentoo.org>
+  iscsitarget-1.4.20.2_p20130103.ebuild, iscsitarget-9999.ebuild:
+  Fix ESVN_REPO_URI in 9999 ebuild; Apply upstream kernel patches on 9999
+  ebuild; Use epatch_user on 9999 ebuild; Merge back changes from 9999 build to
+  iscsitarget-1.4.20.2_p20130103
 
   07 Jan 2013; Richard Yao <ryao@gentoo.org>
   +files/iscsitarget-1.4.20.2-respect-flags-v2.patch,

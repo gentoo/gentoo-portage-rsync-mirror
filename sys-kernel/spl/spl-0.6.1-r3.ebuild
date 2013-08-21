@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.1-r3.ebuild,v 1.1 2013/07/14 11:49:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.1-r3.ebuild,v 1.2 2013/08/21 14:11:23 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -46,7 +46,6 @@ pkg_setup() {
 		KALLSYMS
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
 		!UIDGID_STRICT_TYPE_CHECKS
-		!USER_NS
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"

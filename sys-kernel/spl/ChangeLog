@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.60 2013/07/14 11:49:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.61 2013/08/21 14:11:23 ryao Exp $
+
+  21 Aug 2013; Richard Yao <ryao@gentoo.org> spl-0.6.1-r3.ebuild:
+  Drop !USER_NS because !UIDGID_STRICT_TYPE_CHECKS is sufficient
 
 *spl-0.6.1-r3 (14 Jul 2013)
 

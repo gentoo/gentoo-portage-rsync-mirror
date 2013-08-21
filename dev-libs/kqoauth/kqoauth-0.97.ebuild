@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kqoauth/kqoauth-0.97.ebuild,v 1.1 2013/05/22 08:50:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kqoauth/kqoauth-0.97.ebuild,v 1.2 2013/08/21 14:27:39 pinkbyte Exp $
 
 EAPI=5
 
@@ -21,3 +21,9 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	# prevent tests from beeing built at src_compile
+	sed -i -e '/SUBDIRS/s/ tests//' ${PN}.pro || die "sed on ${PN}.pro failed"
+
+	qt4-r2_src_prepare
+}

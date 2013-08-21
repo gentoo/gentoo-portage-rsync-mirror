@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.0-r1.ebuild,v 1.11 2013/04/13 07:20:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.0-r1.ebuild,v 1.12 2013/08/21 14:30:54 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -27,7 +27,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xrdb
 	x11-misc/xdg-user-dirs
-	consolekit? ( || ( sys-auth/consolekit >=sys-apps/systemd-40 ) )
+	consolekit? ( sys-auth/consolekit )
 	policykit? ( >=sys-auth/polkit-0.104-r1 )
 	udev? ( >=sys-power/upower-0.9.15 )
 	xscreensaver? ( || (

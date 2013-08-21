@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.183 2013/05/09 14:20:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.184 2013/08/21 14:30:54 ssuominen Exp $
+
+  21 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-session-4.10.0-r1.ebuild:
+  Punt sys-apps/systemd from || ( ) dependency behind USE="consolekit" wrt
+  #478258
 
   09 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-session-4.10.1.ebuild:
