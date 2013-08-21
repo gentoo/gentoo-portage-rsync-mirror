@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.132 2013/08/20 13:47:27 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.133 2013/08/20 23:25:35 vapier Exp $
+
+  20 Aug 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/brltty-4.5-fix-mk4build-cross.patch, brltty-4.5-r1.ebuild:
+  Fix path var collisions when cross-compiling.
 
 *brltty-4.5-r1 (20 Aug 2013)
 

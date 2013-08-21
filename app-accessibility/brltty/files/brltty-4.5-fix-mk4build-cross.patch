@@ -1,0 +1,21 @@
+this script generates forbuild.mk.  it takes config.mk and adds a "_FOR_BUILD"
+suffix to every variable it finds in there.  but it only matches vars that are
+all uppercase and miss things like "libdir".  normally this isn't a problem as
+the vars have the same value.  but when you cross-compile, this script will
+produce a different config.mk file which will have different paths (such as
+config.mk:libdir=/usr/lib64 but forbuild.mk:libdir=/usr/lib).  so update the
+script to convert all vars including lowercase ones.
+
+Patch by Peter Nilsson Lundblad
+
+--- a/mk4build
++++ b/mk4build
+@@ -106,7 +106,7 @@
+ 
+ sedScript="${outputName}.${sedExtension}"
+ sed -n -e '
+-s/^ *\([A-Z][A-Z_]*\) *=.*$/\1/
++s/^ *\([[:alpha:]][[:alpha:]_]*\) *=.*$/\1/
+ t found
+ d
+ :found

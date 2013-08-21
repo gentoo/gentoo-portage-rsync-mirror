@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r1.ebuild,v 1.1 2013/08/20 13:47:27 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r1.ebuild,v 1.2 2013/08/20 23:25:35 vapier Exp $
 
 EAPI=5
 
@@ -43,7 +43,8 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-ldflags.patch \
-		"${FILESDIR}"/${P}-udev.patch
+		"${FILESDIR}"/${P}-udev.patch \
+		"${FILESDIR}"/${P}-fix-mk4build-cross.patch
 
 	java-pkg-opt-2_src_prepare
 
