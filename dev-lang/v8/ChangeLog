@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.335 2013/08/18 03:12:49 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.337 2013/08/21 21:39:44 ago Exp $
+
+  21 Aug 2013; Agostino Sarubbo <ago@gentoo.org> v8-3.19.18.19.ebuild:
+  Stable for x86, wrt bug #481990
+
+  21 Aug 2013; Agostino Sarubbo <ago@gentoo.org> v8-3.19.18.19.ebuild:
+  Stable for amd64, wrt bug #481990
 
   18 Aug 2013; Steev Klimaszewski <steev@gentoo.org> v8-3.18.5.14.ebuild,
   v8-3.19.18.18.ebuild, v8-3.19.18.19.ebuild, v8-3.20.12.1.ebuild,

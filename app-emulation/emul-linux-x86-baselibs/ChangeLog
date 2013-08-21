@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.157 2013/08/21 15:57:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.158 2013/08/21 21:39:01 mgorny Exp $
+
+  21 Aug 2013; Michał Górny <mgorny@gentoo.org> files/remove-native:
+  Add /usr/lib32/terminfo to the removal list.
 
 *emul-linux-x86-baselibs-20130224-r13 (21 Aug 2013)
 
